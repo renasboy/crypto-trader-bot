@@ -1,0 +1,39 @@
+version: '3'
+
+services:
+    influxdb:
+        image: influxdb:latest
+        container_name: influxdb
+        ports:
+            - "8086:8086"
+        volumes:
+            - /var/data/crypto-trader-bot/influxdb:/var/lib/influxdb
+        environment:
+            - INFLUXDB_ADMIN_ENABLED="true"
+            - INFLUXDB_DB=crypto_trader_bot
+            - INFLUXDB_ADMIN_USER=root
+            - INFLUXDB_ADMIN_PASSWORD=root
+        restart: always
+
+    grafana:
+        image: grafana/grafana:latest
+        container_name: grafana
+        ports:
+            - "3000:3000"
+        volumes:
+            - /var/data/crypto-trader-bot/grafana:/var/lib/grafana
+        environment:
+            - GF_SECURITY_ADMIN_PASSWORD=s3cr3t
+        restart: always
+        depends_on:
+            - influxdb
+
+    crypto_trader_bot:
+        build: .
+        container_name: crypto_trader_bot
+        volumes:
+            - .:/crypto-trader-bot
+        depends_on:
+            - influxdb
+            - grafana
+        restart: always

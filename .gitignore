@@ -1,0 +1,5 @@
+/venv
+/*.log
+/*.bak
+/*.backup
+/ws_sample*
