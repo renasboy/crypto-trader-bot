@@ -1,32 +1,33 @@
-import json
-import websocket
 from influxdb import InfluxDBClient
+from bl3p import bl3p
+
+
+DRY_RUN = True
 
 def on_message(ws, message):
     global prev_price
+    global macd_prev
     global last_trade_session
     global last_trade_price
     global last_trade_action 
+    global exchange
+    global active_order_id
 
     print('websocket message {}'.format(message))
-    msg = json.loads(message)
 
-    price = msg['price_int'] * 0.00001
-    volume = msg['amount_int'] * 0.000000001
-    fee = price * 0.0025 * 2
+    time, type, price, volume, fee = exchange.parse_ws_msg(message)
 
     trend_up = price - prev_price if prev_price and price > prev_price else 0
     trend_down = prev_price - price if prev_price and price < prev_price else 0
+    prev_price = price 
 
     influx.write_points([dict(
         measurement='price_volume',
         tags=dict(
-            type=msg['type']
+            type=type
         ),
         fields=dict(
-            timestamp=msg['date'],
-            price_src=msg['price_int'],
-            volume_src=msg['amount_int'],
+            timestamp=time,
             price=float(price),
             volume=float(volume),
             trend_up=float(trend_up),
@@ -45,7 +46,6 @@ def on_message(ws, message):
     result = influx.query(query_macd)
     results = list(result.get_points())
     macd_last = results[-1]['macd'] if results else 0
-    macd_prev = results[-2]['macd'] if results and len(results) > 1 else 0
     macd_trend = None
     if macd_prev < macd_last:
         macd_trend = 'up'
@@ -55,6 +55,8 @@ def on_message(ws, message):
         macd_trend = 'down'
         if macd_prev > 0 and macd_last <= 0:
             macd_trend = 'breakdown'
+
+    macd_prev = macd_last
 
     print('macd trend {} macd {} rsi {} trend up {} trend down {}'.format(macd_trend, macd_last, rsi, trend_up, trend_down))
 
@@ -94,29 +96,50 @@ def on_message(ws, message):
     action = None
     if last_trade_action != 'buy' and macd_trend == 'breakup' and rsi < 80 and price == min([price, hour_avg, day_avg]):
         action = 'buy'
-        last_trade_session += 1
-    elif last_trade_action == 'buy' and macd_trend == 'breakdown' and rsi > 20 and price > last_trade_price + fee:
+    elif last_trade_action == 'buy' and macd_trend == 'breakdown' and rsi > 20 and price > last_trade_price + (fee * 5):
         action = 'sell'
 
     if action != None:
-        volume = 1.0
-        print('action {} price {} session {}'.format(action, price, last_trade_session))
-        influx.write_points([dict(
-            measurement='trade',
-            tags=dict(
-                type=action,
-                session=str(last_trade_session).rjust(30, '0')
-            ),
-            fields=dict(
-                price=float(price),
-                volume=float(volume),
-                fee=float(fee),
-            )
-        )])
-        last_trade_action = action
-        last_trade_price = float(price)
+        if not active_order_id:
+            if action == 'buy':
+                volume = exchange.balance_eur() / price
+                highest_bid = exchange.highest_bid()
+                if price < highest_bid:
+                    price = highest_bid + 0.01
+            elif action == 'sell':
+                volume = exchange.balance_btc()
+                lowest_ask = exchange.lowest_ask()
+                if price > lowest_ask:
+                    price = lowest_ask - 0.01 
 
-    prev_price = price 
+            print('order action {} price {} volume {} session {}'.format(action, price, volume, last_trade_session))
+            if not DRY_RUN:
+                active_order_id = exchange.add_order(action, volume, price)
+            else:
+                active_order_id = last_trade_session
+
+    # AFTER CONFIRMATION
+    if active_order_id and not exchange.orders():
+        if not DRY_RUN:
+            action, price, volume, fee = exchange.get_order(active_order_id)
+        if action:
+            if action == 'buy': 
+                last_trade_session += 1
+            influx.write_points([dict(
+                measurement='trade',
+                tags=dict(
+                    type=action,
+                    session=str(last_trade_session).rjust(30, '0')
+                ),
+                fields=dict(
+                    price=float(price),
+                    volume=float(volume),
+                    fee=float(fee),
+                )
+            )])
+            last_trade_action = action
+            last_trade_price = float(price)
+            active_order_id = None
 
 def on_error(ws, error):
     print('websocket error {}'.format(error))
@@ -134,6 +157,11 @@ if __name__ == '__main__':
     results = list(result.get_points())
     prev_price = results[0]['price'] if results else 0
 
+    query_macd =  'SELECT mean(proper) - moving_average(mean(proper), 9) as macd FROM (SELECT moving_average(mean(price), 12) - moving_average(mean(price), 26) as proper FROM price_volume WHERE time > now() - 5h GROUP BY time(1m) fill(linear)) WHERE time > now() - 1d GROUP BY time(1m) fill(linear)'
+    result = influx.query(query_macd)
+    results = list(result.get_points())
+    macd_prev = results[-1]['macd'] if results else 0
+
     result = influx.query('SELECT price, type, session FROM trade ORDER BY time DESC limit 1')
     results = list(result.get_points())
     last_trade_session = int(results[0]['session']) if results else 0
@@ -141,12 +169,6 @@ if __name__ == '__main__':
     last_trade_price = float(results[0]['price']) if results else 0
     print('started session {} action {} price {}'.format(last_trade_session, last_trade_action, last_trade_price))
 
-    websocket.enableTrace(True)
-    ws = websocket.WebSocketApp(
-        'wss://api.bl3p.eu/1/BTCEUR/trades',
-        on_message = on_message,
-        on_error = on_error,
-        on_close = on_close
-    )
-    ws.on_open = on_open
-    ws.run_forever()
+    exchange = bl3p()
+    active_order_id = exchange.active_order_id()
+    exchange.start_listener(on_message, on_error, on_open, on_close)
