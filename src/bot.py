@@ -118,7 +118,7 @@ def on_message(ws, message):
     # AFTER CONFIRMATION
     if active_order_id and not exchange.orders():
         if not DRY_RUN:
-            action, price, volume, fee = exchange.get_order(active_order_id)
+            action, price, volume, fee = exchange.get_closed_order(active_order_id)
         if action:
             if action == 'buy':
                 last_trade_session += 1

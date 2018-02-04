@@ -83,10 +83,10 @@ class bl3p(object):
         orderbook = self.orderbook()
         return int(orderbook['data']['asks'][1]['price_int']) * self.PRICE_MULTIPLIER
 
-    def get_order(self, id):
+    def get_closed_order(self, id):
         types = dict(bid='buy', ask='sell')
         order = self.call('BTCEUR/money/order/result', {'order_id': id})
-        if order['result'] == 'success':
+        if order['result'] == 'success' and order['data']['status'] == 'closed':
             price = float(int(order['data']['price']['value_int']) * self.PRICE_MULTIPLIER)
             volume = float(int(order['data']['total_amount']['value_int']) * self.VOLUME_MULTIPLIER)
             fee = float(int(order['data']['total_fee']['value_int']) * self.PRICE_MULTIPLIER)
@@ -135,6 +135,6 @@ class bl3p(object):
     #print(exchange.orderbook())
     #print(exchange.highest_bid())
     #print(exchange.lowest_ask())
-    #print(exchange.get_order(ID))
+    #print(exchange.get_closed_order(ID))
     #print(exchange.add_order('sell', PRICE_INT, VOLUME_INT))
     #print(exchange.cancel_order(ID))
