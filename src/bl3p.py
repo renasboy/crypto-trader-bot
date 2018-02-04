@@ -10,7 +10,7 @@ import websocket
 class bl3p(object):
 
     PRICE_MULTIPLIER = 0.00001
-    VOLUME_MULTIPLER =  0.00000001
+    VOLUME_MULTIPLIER =  0.00000001
     FEE = 0.0025
     ANTISPAM_FEE = 0.01
 
@@ -22,7 +22,7 @@ class bl3p(object):
     def __init__(self):
         self.public_key = 'CHAVES_CHAVES_CHAVES'
         self.private_key = 'CHAVES_CHAVES_CHAVES'
-        self.url = 'https://api.bl3p.eu/1/' 
+        self.url = 'https://api.bl3p.eu/1/'
         self.websocket = 'wss://api.bl3p.eu/1/BTCEUR/trades'
 
     def start_listener(self, on_msg, on_err, on_open, on_close):
@@ -35,20 +35,20 @@ class bl3p(object):
         )
         ws.on_open = on_open
         ws.run_forever()
-    
+
     def parse_ws_msg(self, message):
         msg = json.loads(message)
         price = int(msg['price_int']) * self.PRICE_MULTIPLIER
-        volume = int(msg['amount_int']) * self.VOLUME_MULTIPLER
+        volume = int(msg['amount_int']) * self.VOLUME_MULTIPLIER
         fee = price * self.FEE + self.ANTISPAM_FEE
         return msg['date'], msg['type'], float(price), float(volume), float(fee)
-        
+
     def balances(self):
         return self.call('GENMKT/money/info', {})
 
     def balance_btc(self):
         balances = self.balances()
-        return float(int(balances['data']['wallets']['BTC']['available']['value_int']) * self.VOLUME_MULTIPLER)
+        return float(int(balances['data']['wallets']['BTC']['available']['value_int']) * self.VOLUME_MULTIPLIER)
 
     def balance_eur(self):
         balances = self.balances()
@@ -77,19 +77,19 @@ class bl3p(object):
 
     def highest_bid(self):
         orderbook = self.orderbook()
-        return int(orderbook['data']['bids'][0]['price_int']) * self.PRICE_MULTIPLIER
+        return int(orderbook['data']['bids'][1]['price_int']) * self.PRICE_MULTIPLIER
 
     def lowest_ask(self):
         orderbook = self.orderbook()
-        return int(orderbook['data']['asks'][0]['price_int']) * self.PRICE_MULTIPLIER
+        return int(orderbook['data']['asks'][1]['price_int']) * self.PRICE_MULTIPLIER
 
     def get_order(self, id):
         types = dict(bid='buy', ask='sell')
         order = self.call('BTCEUR/money/order/result', {'order_id': id})
         if order['result'] == 'success':
-            price = float(order['data']['price']['value_int'] * self.PRICE_MULTIPLIER)
-            volume = float(order['data']['total_amount']['value_int'] * self.VOLUME_MULTIPLER)
-            fee = float(order['data']['total_fee']['value_int'] * self.PRICE_MULTIPLER)
+            price = float(int(order['data']['price']['value_int']) * self.PRICE_MULTIPLIER)
+            volume = float(int(order['data']['total_amount']['value_int']) * self.VOLUME_MULTIPLIER)
+            fee = float(int(order['data']['total_fee']['value_int']) * self.PRICE_MULTIPLIER)
             type = types[order['data']['type']]
             return type, price, volume, fee
         return None, None, None, None
@@ -98,14 +98,15 @@ class bl3p(object):
         types = dict(buy='bid', sell='ask')
         data = dict(
             type=types[type],
-            amount_int=int(volume / self.VOLUME_MULTIPLER),
+            amount_int=int(volume / self.VOLUME_MULTIPLIER),
             price_int=int(price / self.PRICE_MULTIPLIER),
             fee_currency='EUR'
         )
         print(data)
         add_order = {'data':{'order_id':1}}
         #add_order = self.call('BTCEUR/money/order/add', data)
-        return add_order['data']['order_id']
+        if add_order:
+            return add_order['data']['order_id']
 
     def cancel_order(self, id):
         return self.call('BTCEUR/money/order/cancel', {'order_id': id})
@@ -135,5 +136,5 @@ class bl3p(object):
     #print(exchange.highest_bid())
     #print(exchange.lowest_ask())
     #print(exchange.get_order(ID))
-    #print(exchange.add_order('sell', PRICE_INT, VOLUME_INT)) 
+    #print(exchange.add_order('sell', PRICE_INT, VOLUME_INT))
     #print(exchange.cancel_order(ID))

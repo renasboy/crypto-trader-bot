@@ -9,7 +9,7 @@ def on_message(ws, message):
     global macd_prev
     global last_trade_session
     global last_trade_price
-    global last_trade_action 
+    global last_trade_action
     global exchange
     global active_order_id
 
@@ -19,7 +19,7 @@ def on_message(ws, message):
 
     trend_up = price - prev_price if prev_price and price > prev_price else 0
     trend_down = prev_price - price if prev_price and price < prev_price else 0
-    prev_price = price 
+    prev_price = price
 
     influx.write_points([dict(
         measurement='price_volume',
@@ -102,19 +102,16 @@ def on_message(ws, message):
     if action != None:
         if not active_order_id:
             if action == 'buy':
+                price = exchange.lowest_ask()
                 volume = exchange.balance_eur() / price
-                highest_bid = exchange.highest_bid()
-                if price < highest_bid:
-                    price = highest_bid + 0.01
             elif action == 'sell':
+                price = exchange.highest_bid()
                 volume = exchange.balance_btc()
-                lowest_ask = exchange.lowest_ask()
-                if price > lowest_ask:
-                    price = lowest_ask - 0.01 
 
             print('order action {} price {} volume {} session {}'.format(action, price, volume, last_trade_session))
             if not DRY_RUN:
                 active_order_id = exchange.add_order(action, volume, price)
+                print('order id {} '.format(active_order_id))
             else:
                 active_order_id = last_trade_session
 
@@ -123,13 +120,14 @@ def on_message(ws, message):
         if not DRY_RUN:
             action, price, volume, fee = exchange.get_order(active_order_id)
         if action:
-            if action == 'buy': 
+            if action == 'buy':
                 last_trade_session += 1
             influx.write_points([dict(
                 measurement='trade',
                 tags=dict(
                     type=action,
-                    session=str(last_trade_session).rjust(30, '0')
+                    session=str(last_trade_session).rjust(30, '0'),
+                    order_id=active_order_id,
                 ),
                 fields=dict(
                     price=float(price),
@@ -139,7 +137,7 @@ def on_message(ws, message):
             )])
             last_trade_action = action
             last_trade_price = float(price)
-            active_order_id = None
+        active_order_id = None
 
 def on_error(ws, error):
     print('websocket error {}'.format(error))
@@ -171,4 +169,5 @@ if __name__ == '__main__':
 
     exchange = bl3p()
     active_order_id = exchange.active_order_id()
+    print('started order id {} '.format(active_order_id))
     exchange.start_listener(on_message, on_error, on_open, on_close)
