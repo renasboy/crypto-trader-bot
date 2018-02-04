@@ -3,3 +3,4 @@
 /*.bak
 /*.backup
 /ws_sample*
+/src/__pycache__

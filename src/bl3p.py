@@ -20,8 +20,8 @@ class bl3p(object):
     websocket = None
 
     def __init__(self):
-        self.public_key = 'CHAVES_CHAVES_CHAVES'
-        self.private_key = 'CHAVES_CHAVES_CHAVES'
+        self.public_key = 'CHAVES CHAVES CHAVES'
+        self.private_key = 'CHAVES CHAVES CHAVES'
         self.url = 'https://api.bl3p.eu/1/'
         self.websocket = 'wss://api.bl3p.eu/1/BTCEUR/trades'
 
