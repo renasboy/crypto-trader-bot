@@ -35,6 +35,13 @@ or
 # chmod 755 /usr/bin/docker-compose
 ```
 
+on raspberry PI
+
+```shell
+apt-get install python-pip
+pip install docker-compose
+```
+
 ## Installing and starting the bot
 
 ```shell
