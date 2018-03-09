@@ -4,3 +4,4 @@
 /*.backup
 /ws_sample*
 /src/__pycache__
+/data
