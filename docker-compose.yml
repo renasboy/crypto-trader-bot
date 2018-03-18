@@ -7,7 +7,7 @@ services:
         ports:
             - "8086:8086"
         volumes:
-            - /var/data/crypto-trader-bot/influxdb:/var/lib/influxdb
+            - ./data/influxdb:/var/lib/influxdb
         environment:
             - INFLUXDB_ADMIN_ENABLED="true"
             - INFLUXDB_DB=crypto_trader_bot
@@ -21,7 +21,7 @@ services:
         ports:
             - "3000:3000"
         volumes:
-            - /var/data/crypto-trader-bot/grafana:/var/lib/grafana
+            - ./data/grafana:/var/lib/grafana
         environment:
             - GF_SECURITY_ADMIN_PASSWORD=s3cr3t
         restart: always
