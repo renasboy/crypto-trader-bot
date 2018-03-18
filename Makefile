@@ -6,8 +6,11 @@
 # 
 #
 
-all: deps start import
+all: conf deps start import
 	@echo make all
+
+conf:
+	@test -n "`uname -m | fgrep arm`" && sed -i 's@grafana/grafana:latest@fg2it/grafana-armhf:v5.0.3@g' docker-compose.yml || echo
 
 deps:
 	@echo install requirements
