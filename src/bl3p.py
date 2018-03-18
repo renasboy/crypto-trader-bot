@@ -20,8 +20,8 @@ class bl3p(object):
     websocket = None
 
     def __init__(self):
-        self.public_key = 'CHAVES CHAVES CHAVES'
-        self.private_key = 'CHAVES CHAVES CHAVES'
+        self.public_key = 'CHAVES_CHAVES_CHAVES'
+        self.private_key = 'CHAVES_CHAVES_CHAVES'
         self.url = 'https://api.bl3p.eu/1/'
         self.websocket = 'wss://api.bl3p.eu/1/BTCEUR/trades'
 
@@ -69,9 +69,6 @@ class bl3p(object):
         if orders:
             return orders[0]['order_id']
 
-    def history(self):
-        return self.call('GENMKT/money/wallet/history', {'currency': 'EUR', 'recs_per_page': 10})
-
     def orderbook(self):
         return self.call('BTCEUR/money/depth/full', {})
 
@@ -108,9 +105,6 @@ class bl3p(object):
         if add_order:
             return add_order['data']['order_id']
 
-    def cancel_order(self, id):
-        return self.call('BTCEUR/money/order/cancel', {'order_id': id})
-
     def call(self, path, data):
         post_data = urllib.parse.urlencode(data)
         body = '%s%c%s' % (path, 0x00, post_data)
@@ -131,10 +125,8 @@ class bl3p(object):
     #print(exchange.balance_btc())
     #print(exchange.balance_eur())
     #print(exchange.orders())
-    #print(exchange.history())
     #print(exchange.orderbook())
     #print(exchange.highest_bid())
     #print(exchange.lowest_ask())
     #print(exchange.get_closed_order(ID))
     #print(exchange.add_order('sell', PRICE_INT, VOLUME_INT))
-    #print(exchange.cancel_order(ID))
