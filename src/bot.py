@@ -96,7 +96,7 @@ def on_message(ws, message):
 
     # TAKE ACTION
     action = None
-    if last_trade_action != 'buy' and macd_trend == 'breakup' and rsi < 80 and price == min([price, hour_avg, day_avg]):
+    if last_trade_action != 'buy' and macd_trend == 'breakup' and rsi < 80 and price == min([price, week_avg]):
         action = 'buy'
     elif last_trade_action == 'buy' and macd_trend == 'breakdown' and rsi > 20 and price > last_trade_price + (fee * 5):
         action = 'sell'
