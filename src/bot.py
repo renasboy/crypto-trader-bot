@@ -1,7 +1,9 @@
 from influxdb import InfluxDBClient
 from bl3p import bl3p
+from binance import binance
 
 
+EXCHANGE = 'bl3p'
 DRY_RUN = True
 
 def on_message(ws, message):
@@ -167,7 +169,11 @@ if __name__ == '__main__':
     last_trade_price = float(results[0]['price']) if results else 0
     print('started session {} action {} price {}'.format(last_trade_session, last_trade_action, last_trade_price))
 
-    exchange = bl3p()
+    if EXCHANGE == 'bl3p':
+        exchange = bl3p()
+    elif EXCHANGE == 'binance':
+        exchange = binance()
+
     active_order_id = exchange.active_order_id()
     print('started order id {} '.format(active_order_id))
     exchange.start_listener(on_message, on_error, on_open, on_close)
