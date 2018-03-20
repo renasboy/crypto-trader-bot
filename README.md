@@ -64,7 +64,7 @@ vim src/bot.py
 # set the constant EXCHANGE to the desired exchange (bl3p, binance or kraken)
 ```
 
-## Congigure the exchange and set the API keys
+## Configure the exchange and set the API keys
 ```shell
 vim src/bl3p.py
 vim src/binance.py
