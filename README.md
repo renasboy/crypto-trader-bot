@@ -13,13 +13,6 @@ Well debian is not really required but this s what I used
 Refer to [docs.docker.com](https://docs.docker.com)
 
 ```shell
-$ curl -fsSL get.docker.com -o get-docker.sh
-$ sudo sh get-docker.sh
-```
-
-or 
-
-```shell
 # curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add -
 # apt-get install apt-transport-https ca-certificates curl gnupg2 software-properties-common
 # add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian stretch stable"
@@ -28,6 +21,17 @@ or
 # usermod -aG docker $USER
 ```
 
+or
+
+docker on raspberry PI
+
+```shell
+$ curl -fsSL get.docker.com -o get-docker.sh
+$ sudo sh get-docker.sh
+# usermod -aG docker $USER
+```
+
+
 ### Installing docker compose
 
 ```shell
@@ -35,7 +39,9 @@ or
 # chmod 755 /usr/bin/docker-compose
 ```
 
-on raspberry PI
+or
+
+docker compose on raspberry PI
 
 ```shell
 apt-get install python-pip
