@@ -50,9 +50,31 @@ $ sudo pip install docker-compose
 
 ## Installing and starting the bot
 
+
+## Clone the repo
+
 ```shell
 git clone REPO
 cd crypto-trader-bot
+```
+
+## Configure the bot and choose the exchange
+```shell
+vim src/bot.py
+# set the constant EXCHANGE to the desired exchange (bl3p, binance or kraken)
+```
+
+## Congigure the exchange and set the API keys
+```shell
+vim src/bl3p.py
+vim src/binance.py
+vim src/kraken.py
+# set the public and private API key
+```
+
+## Install and start up containers
+
+```shell
 make
 tail -f bot.log
 ```
