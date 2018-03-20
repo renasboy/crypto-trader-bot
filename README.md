@@ -28,7 +28,7 @@ docker on raspberry PI
 ```shell
 $ curl -fsSL get.docker.com -o get-docker.sh
 $ sudo sh get-docker.sh
-# usermod -aG docker $USER
+$ sudo usermod -aG docker $USER
 ```
 
 
@@ -44,8 +44,8 @@ or
 docker compose on raspberry PI
 
 ```shell
-apt-get install python-pip
-pip install docker-compose
+$ sudo apt-get install python-pip
+$ sudo pip install docker-compose
 ```
 
 ## Installing and starting the bot
