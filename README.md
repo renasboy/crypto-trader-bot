@@ -54,7 +54,7 @@ $ sudo pip install docker-compose
 ## Clone the repo
 
 ```shell
-git clone REPO
+git clone https://github.com/renasboy/crypto-trader-bot
 cd crypto-trader-bot
 ```
 
