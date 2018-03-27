@@ -27,13 +27,3 @@ services:
         restart: always
         depends_on:
             - influxdb
-
-    crypto_trader_bot:
-        build: .
-        container_name: crypto_trader_bot
-        volumes:
-            - .:/crypto-trader-bot
-        depends_on:
-            - influxdb
-            - grafana
-        restart: always

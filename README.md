@@ -1,16 +1,18 @@
 ## Requirements
 
-- Debian 9
+- Debian 9 / Raspbian
 - Docker
 - Docker Compose
 
-### Debian
+### Debian / Raspbian
 
-Well debian is not really required but this s what I used
+Well debian/raspbian is not really required but this s what I used
 
 ### Installing docker
 
 Refer to [docs.docker.com](https://docs.docker.com)
+
+docker on debian
 
 ```shell
 # curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add -
@@ -23,7 +25,7 @@ Refer to [docs.docker.com](https://docs.docker.com)
 
 or
 
-docker on raspberry PI
+docker on raspbian
 
 ```shell
 $ curl -fsSL get.docker.com -o get-docker.sh
@@ -34,6 +36,8 @@ $ sudo usermod -aG docker $USER
 
 ### Installing docker compose
 
+docker compose on debian
+
 ```shell
 # curl -L https://github.com/docker/compose/releases/download/1.18.0/docker-compose-Linux-x86_64 -o /usr/bin/docker-compose
 # chmod 755 /usr/bin/docker-compose
@@ -41,7 +45,7 @@ $ sudo usermod -aG docker $USER
 
 or
 
-docker compose on raspberry PI
+docker compose on raspbian
 
 ```shell
 $ sudo apt-get install python-pip
@@ -60,49 +64,27 @@ cd crypto-trader-bot
 
 ## Configure the bot and choose the exchange
 ```shell
-vim src/bot.py
-# set the constant EXCHANGE to the desired exchange (bl3p, binance or kraken)
-```
+cp conf/bl3p_example_conf conf/bl3p_eur_btc.conf
 
-## Configure the exchange and set the API keys
-```shell
-vim src/bl3p.py
-vim src/binance.py
-vim src/kraken.py
-# set the public and private API key
+vim src/bl3p_eur_btc.conf
+
+# set the EXCHANGE to the desired exchange (bl3p, binance or cobinhood)
+# set the PUBLIC and PRIVATE keys when available
+# set SYMBOL_X to available symbols in the exchange
+# set MAX_SYMBOL_X_PERCENTAGE to percentage amount from available to use
+# set DRY_RUN to 1 in order to only show what the bot would do
+# set BOT_ALGO to on of the available algos (boring_but_safe, ro_cano)
 ```
 
 ## Install and start up containers
 
 ```shell
 make
-tail -f bot.log
 ```
 
-## Stopping the bot
+## Check what is going on in the logs
 
 ```shell
-make stop
+tail -f log/bot.log
 ```
 
-## Restarting the bot
-
-```shell
-make restart
-```
-
-# Reset bot by cleaning local trades 
-```shell
-make reset
-```
-
-# Export grafana datasources and dashboard
-```shell
-make export
-```
-
-# Import grafana datasources and dashboard
-```shell
-make import
-make restart
-```

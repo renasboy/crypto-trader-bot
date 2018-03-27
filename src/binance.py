@@ -10,23 +10,17 @@ import websocket
 
 class binance(object):
 
-    FIAT_SYMBOL = 'BTC'
-    CRYPTO_SYMBOL = 'TRX'
-    SYMBOL = CRYPTO_SYMBOL + FIAT_SYMBOL
     FEE = 0.001
 
-    trade_fee = FEE
-    public_key = None
-    private_key = None
-    url = None
-    websocket = None
-
-    def __init__(self):
-        self.public_key = 'CHAVES_CHAVES_CHAVES'
-        self.private_key = 'CHAVES_CHAVES_CHAVES'
+    def __init__(self, symbol_1, symbol_2, public_key, private_key):
+        self.symbol_1 = symbol_1.upper()
+        self.symbol_2 = symbol_2.upper()
+        self.symbol = self.symbol_2 + self.symbol_1
+        self.public_key = public_key
+        self.private_key = private_key
         self.private_url = 'https://api.binance.com/api/v3/'
         self.public_url = 'https://api.binance.com/api/v1/'
-        self.websocket = 'wss://stream.binance.com:9443/ws/' + self.SYMBOL.lower() + '@trade'
+        self.websocket = 'wss://stream.binance.com:9443/ws/' + self.symbol.lower() + '@trade'
 
     def start_listener(self, on_msg, on_err, on_open, on_close):
         websocket.enableTrace(True)
@@ -50,28 +44,15 @@ class binance(object):
     def balances(self):
         return self.call('get', 'account', {})
 
-    def balance_btc(self):
+    def balance(self, symbol):
         balances = self.balances()
         for balance in balances['balances']:
-            if balance['asset'] == self.CRYPTO_SYMBOL:
+            if balance['asset'] == symbol:
                 return float(balance['free'])
         return 0.0
-
-    def balance_eur(self):
-        balances = self.balances()
-        for balance in balances['balances']:
-            if balance['asset'] == self.FIAT_SYMBOL:
-                return float(balance['free'])
-        return 0.0
-
-    def fee(self):
-        if not self.trade_fee:
-            balances = self.balances()
-            self.trade_fee = float(int(balances['makerCommission']) * 0.0001)
-        return self.trade_fee
 
     def orders(self):
-        return self.call('get', 'openOrders', {'symbol': self.SYMBOL})
+        return self.call('get', 'openOrders', {'symbol': self.symbol})
 
     def active_order_id(self):
         orders = self.orders()
@@ -79,7 +60,7 @@ class binance(object):
             return orders[0]['orderId']
 
     def orderbook(self):
-        return self.call('get', 'depth', {'symbol': self.SYMBOL, 'limit': 5})
+        return self.call('get', 'depth', {'symbol': self.symbol, 'limit': 5})
 
     def highest_bid(self):
         orderbook = self.orderbook()
@@ -89,9 +70,9 @@ class binance(object):
         orderbook = self.orderbook()
         return float(orderbook['asks'][1][0])
 
-    def get_closed_order(self, id):
+    def closed_order(self, id):
         types = dict(BUY='buy', SELL='sell')
-        order = self.call('get', 'order', {'symbol': self.SYMBOL,'orderId': id})
+        order = self.call('get', 'order', {'symbol': self.symbol,'orderId': id})
         if order and order['status'] == 'FILLED':
             price = float(order['price'])
             volume = float(order['origQty'])
@@ -103,7 +84,7 @@ class binance(object):
     def add_order(self, type, volume, price):
         types = dict(buy='BUY', sell='SELL')
         data = dict(
-            symbol=self.SYMBOL,
+            symbol=self.symbol,
             side=types[type],
             type='LIMIT', # MARKET
             timeInForce='GTC',
@@ -145,13 +126,13 @@ class binance(object):
         return json.loads(response.content)
 
 #if __name__ == '__main__':
-    #exchange = binance()
-    #print(exchange.fee() / 100)
-    #print(exchange.balance_btc())
-    #print(exchange.balance_eur())
+    #exchange = binance('ETH', 'TRX')
+    #print(exchange.balance('ETH'))
+    #print(exchange.balance('TRX'))
     #print(exchange.orders())
     #print(exchange.orderbook())
     #print(exchange.highest_bid())
     #print(exchange.lowest_ask())
-    #print(exchange.get_closed_order('17391295'))
+    #print(exchange.closed_order('17391295'))
+    #print(exchange.active_order_id())
     #print(exchange.add_order('sell', 1, 1))

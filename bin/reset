@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo reset influx trade
+curl -X POST "http://localhost:8086/query?u=root&p=root&db=crypto_trader_bot&q=DROP+measurement+trade" -H "Content-Type: application/json" -H "Accept: application/json"
+curl -X POST "http://localhost:8086/query?u=root&p=root&db=crypto_trader_bot&q=DROP+measurement+session" -H "Content-Type: application/json" -H "Accept: application/json"

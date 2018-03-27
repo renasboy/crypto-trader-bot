@@ -1,0 +1,12 @@
+
+    CONTAINER_NAME:
+        build: .
+        container_name: CONTAINER_NAME
+        volumes:
+            - .:/crypto-trader-bot
+        environment:
+            - CONF=CONTAINER_NAME
+        depends_on:
+            - influxdb
+            - grafana
+        restart: always

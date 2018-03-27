@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo starting up docker
+docker-compose -f docker-compose.yml up -d

@@ -1,7 +1,11 @@
 /venv
-/*.log
-/*.bak
-/*.backup
 /ws_sample*
 /src/__pycache__
-/data
+/data/grafana
+/data/influxdb
+/src/*_keys
+/conf/*.conf
+/log/*.log
+/data/dashboards/*.tmp
+/data/dashboards/*.bak
+/data/datasources/*.bak

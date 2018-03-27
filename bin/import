@@ -1,0 +1,30 @@
+#!/bin/bash
+
+echo delete old datasource from grafana
+curl -s -X DELETE "http://admin:s3cr3t@localhost:3000/api/datasources/name/influx" -H "Content-Type: application/json" -H "Accept: application/json"
+echo
+
+echo import datasource to grafana
+curl -s -X POST "http://admin:s3cr3t@localhost:3000/api/datasources" -H "Content-Type: application/json" -H "Accept: application/json" --data-binary @data/datasources/datasource.json
+echo
+
+for conf_file in conf/*.conf; do
+    container_name=$(basename $conf_file .conf)
+    exchange=$(awk -F '=' '/EXCHANGE=/{print $2}' $conf_file | sed -e 's/"//g' -e "s/'//g")
+    symbol_1=$(awk -F '=' '/SYMBOL_1=/{print $2}' $conf_file | sed -e 's/"//g' -e "s/'//g")
+    symbol_2=$(awk -F '=' '/SYMBOL_2=/{print $2}' $conf_file | sed -e 's/"//g' -e "s/'//g")
+    bot_algo=$(awk -F '=' '/BOT_ALGO=/{print $2}' $conf_file | sed -e 's/"//g' -e "s/'//g")
+
+    echo delete old dashboard from grafana $container_name
+    curl -s -X DELETE "http://admin:s3cr3t@localhost:3000/api/dashboards/db/${container_name//_/-}" -H "Content-Type: application/json" -H "Accept: application/json"
+    echo
+
+    echo import dashboard to grafana $container_name
+    sed -e "s/EXCHANGE/$exchange/g" \
+        -e "s/SYMBOL_1/$symbol_1/g" \
+        -e "s/SYMBOL_2/$symbol_2/g" \
+        -e "s/TITLE/${container_name//_/ }/g" \
+        -e "s/SLUG/${container_name//_/-}/g" data/dashboards/dashboard-${bot_algo//_/-}.json > data/dashboards/dashboard.json.tmp
+    curl -s -X POST "http://admin:s3cr3t@localhost:3000/api/dashboards/db" -H "Content-Type: application/json" -H "Accept: application/json" --data-binary @data/dashboards/dashboard.json.tmp
+    echo
+done

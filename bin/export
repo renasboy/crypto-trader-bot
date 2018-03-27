@@ -1,0 +1,18 @@
+#!/bin/bash
+
+echo MAKING A BACKUP OF PREVIOUS FILES
+cp data/datasources/datasource.json data/datasources/datasource.json.bak
+cp data/dashboards/dashboard-boring-but-safe.json data/dashboards/dashboard-boring-but-safe.json.bak
+cp data/dashboards/dashboard-ro-cano.json data/dashboards/dashboard-ro-cano.json.bak
+echo
+
+echo EXPORT DATASOURCE FROM GRAFANA
+curl -s "http://admin:s3cr3t@localhost:3000/api/datasources/name/influx" > data/datasources/datasource.json
+echo
+
+echo EXPORT DASHBOARD FROM GRAFANA
+curl -s "http://admin:s3cr3t@localhost:3000/api/dashboards/db/boring-but-safe" | sed -e 's/"id":[0-9]*/"id":null/' -e 's/bl3p/EXCHANGE/g' -e 's/BTC/SYMBOL_1/g' -e 's/EUR/SYMBOL_2/g' -e 's/boring-but-safe/SLUG/g' -e 's/Boring but Safe/TITLE/g' > data/dashboards/dashboard-boring-but-safe.json
+echo
+
+echo export dashboard from grafana
+curl -s "http://admin:s3cr3t@localhost:3000/api/dashboards/db/ro-cano" | sed -e 's/"id":[0-9]*/"id":null/' -e 's/bl3p/EXCHANGE/g' -e 's/BTC/SYMBOL_1/g' -e 's/EUR/SYMBOL_2/g' -e 's/ro-cano/SLUG/g' -e 's/RO CANO/TITLE/g' > data/dashboards/dashboard-ro-cano.json

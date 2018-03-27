@@ -1,0 +1,1 @@
+{"id":13,"orgId":1,"name":"influx","type":"influxdb","typeLogoUrl":"","access":"direct","url":"http://localhost:8086","password":"root","user":"root","database":"crypto_trader_bot","basicAuth":false,"basicAuthUser":"","basicAuthPassword":"","withCredentials":false,"isDefault":true,"jsonData":{"timeInterval":"1m"},"secureJsonFields":{}}

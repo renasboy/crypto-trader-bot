@@ -14,16 +14,14 @@ class bl3p(object):
     FEE = 0.0025
     ANTISPAM_FEE = 0.01
 
-    public_key = None
-    private_key = None
-    url = None
-    websocket = None
-
-    def __init__(self):
-        self.public_key = 'CHAVES_CHAVES_CHAVES'
-        self.private_key = 'CHAVES_CHAVES_CHAVES'
+    def __init__(self, symbol_1, symbol_2, public_key, private_key):
+        self.symbol_1 = symbol_1.upper()
+        self.symbol_2 = symbol_2.upper()
+        self.symbol = self.symbol_1 + self.symbol_2
+        self.public_key = public_key
+        self.private_key = private_key
         self.url = 'https://api.bl3p.eu/1/'
-        self.websocket = 'wss://api.bl3p.eu/1/BTCEUR/trades'
+        self.websocket = 'wss://api.bl3p.eu/1/' + self.symbol + '/trades'
 
     def start_listener(self, on_msg, on_err, on_open, on_close):
         websocket.enableTrace(True)
@@ -46,22 +44,15 @@ class bl3p(object):
     def balances(self):
         return self.call('GENMKT/money/info', {})
 
-    def balance_btc(self):
+    def balance(self, symbol):
         balances = self.balances()
-        return float(int(balances['data']['wallets']['BTC']['available']['value_int']) * self.VOLUME_MULTIPLIER)
-
-    def balance_eur(self):
-        balances = self.balances()
-        return float(int(balances['data']['wallets']['EUR']['available']['value_int']) * self.PRICE_MULTIPLIER)
-
-    def fee(self):
-        if not self.trade_fee:
-            balances = self.balances()
-            self.trade_fee = float(balances['data']['trade_fee']) / 100
-        return self.trade_fee
+        multiplier = self.PRICE_MULTIPLIER
+        if symbol == self.symbol_1:
+            multiplier = self.VOLUME_MULTIPLIER
+        return float(int(balances['data']['wallets'][symbol]['available']['value_int']) * multiplier)
 
     def orders(self):
-        orders = self.call('BTCEUR/money/orders', {})
+        orders = self.call(self.symbol + '/money/orders', {})
         return orders['data']['orders']
 
     def active_order_id(self):
@@ -70,7 +61,7 @@ class bl3p(object):
             return orders[0]['order_id']
 
     def orderbook(self):
-        return self.call('BTCEUR/money/depth/full', {})
+        return self.call(self.symbol + '/money/depth/full', {})
 
     def highest_bid(self):
         orderbook = self.orderbook()
@@ -80,9 +71,9 @@ class bl3p(object):
         orderbook = self.orderbook()
         return int(orderbook['data']['asks'][1]['price_int']) * self.PRICE_MULTIPLIER
 
-    def get_closed_order(self, id):
+    def closed_order(self, id):
         types = dict(bid='buy', ask='sell')
-        order = self.call('BTCEUR/money/order/result', {'order_id': id})
+        order = self.call(self.symbol + '/money/order/result', {'order_id': id})
         if order['result'] == 'success' and order['data']['status'] == 'closed':
             price = float(int(order['data']['price']['value_int']) * self.PRICE_MULTIPLIER)
             volume = float(int(order['data']['total_amount']['value_int']) * self.VOLUME_MULTIPLIER)
@@ -101,12 +92,13 @@ class bl3p(object):
         )
         print(data)
         add_order = {'data':{'order_id':1}}
-        #add_order = self.call('BTCEUR/money/order/add', data)
+        #add_order = self.call(self.symbol + '/money/order/add', data)
         if add_order:
             return add_order['data']['order_id']
 
     def call(self, path, data):
         post_data = urllib.parse.urlencode(data)
+        #post_data = urllib.urlencode(data)
         body = '%s%c%s' % (path, 0x00, post_data)
         signature = base64.b64encode(hmac.new(base64.b64decode(self.private_key), body.encode('utf-8'), hashlib.sha512).digest())
         full_path = '%s%s' % (self.url, path)
@@ -120,13 +112,13 @@ class bl3p(object):
         return json.loads(response.content)
 
 #if __name__ == '__main__':
-    #exchange = bl3p()
-    #print(exchange.fee() / 100)
-    #print(exchange.balance_btc())
-    #print(exchange.balance_eur())
+    #exchange = bl3p('BTC', 'EUR')
+    #print(exchange.balance('BTC'))
+    #print(exchange.balance('EUR'))
     #print(exchange.orders())
     #print(exchange.orderbook())
     #print(exchange.highest_bid())
     #print(exchange.lowest_ask())
-    #print(exchange.get_closed_order(ID))
+    #print(exchange.closed_order(25293373))
+    #print(exchange.active_order_id())
     #print(exchange.add_order('sell', PRICE_INT, VOLUME_INT))

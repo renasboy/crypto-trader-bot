@@ -81,7 +81,7 @@ class kraken(object):
         orderbook = self.orderbook()
         return float(orderbook['result']['XXBTZEUR']['asks'][1][0])
 
-    def get_closed_order(self, id):
+    def closed_order(self, id):
         types = dict(bid='buy', ask='sell')
         order = self.call('/0/private/QueryOrders', {'txid': id})
         if order['result'] and order['result'][id] and order['result'][id]['status'] == 'closed':
@@ -142,5 +142,5 @@ if __name__ == '__main__':
     #print(exchange.orderbook())
     #print(exchange.highest_bid())
     #print(exchange.lowest_ask())
-    #print(exchange.get_closed_order('07120101'))
+    #print(exchange.closed_order('07120101'))
     #print(exchange.add_order('sell', PRICE_INT, VOLUME_INT))
