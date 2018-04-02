@@ -66,7 +66,7 @@ cd crypto-trader-bot
 ```shell
 cp conf/bl3p_example_conf conf/bl3p_eur_btc.conf
 
-vim src/bl3p_eur_btc.conf
+vim conf/bl3p_eur_btc.conf
 
 # set the EXCHANGE to the desired exchange (bl3p, binance or cobinhood)
 # set the PUBLIC and PRIVATE keys when available
