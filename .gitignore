@@ -1,6 +1,6 @@
 /venv
 /ws_sample*
-/src/__pycache__
+__pycache__
 /data/grafana
 /data/influxdb
 /src/*_keys
@@ -9,3 +9,4 @@
 /data/dashboards/*.tmp
 /data/dashboards/*.bak
 /data/datasources/*.bak
+/docker-compose.yml
