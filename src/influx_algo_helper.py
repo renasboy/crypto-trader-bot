@@ -134,7 +134,7 @@ class influx_algo_helper(object):
         session = results[0]['session'] if results else 0
         action = results[0]['type'] if results else None
         price = results[0]['price'] if results else 0
-        self.log('session {} action {} price {}'.format(session, action, price))
+        self.log('last trade session {} action {} price {}'.format(session, action, price))
         return date_time, int(session), action, float(price)
 
     def log(self, message):
