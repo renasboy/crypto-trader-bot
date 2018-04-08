@@ -16,3 +16,9 @@ echo
 
 echo export dashboard from grafana
 curl -s "http://admin:s3cr3t@localhost:3000/api/dashboards/db/ro-cano" | sed -e 's/"id":[0-9]*/"id":null/' -e 's/bl3p/EXCHANGE/g' -e 's/BTC/SYMBOL_1/g' -e 's/EUR/SYMBOL_2/g' -e 's/ro-cano/SLUG/g' -e 's/RO CANO/TITLE/g' > data/dashboards/dashboard-ro-cano.json
+
+echo export dashboard from grafana
+curl -s "http://admin:s3cr3t@localhost:3000/api/dashboards/db/ro-cano-che-gira" | sed -e 's/"id":[0-9]*/"id":null/' -e 's/bl3p/EXCHANGE/g' -e 's/BTC/SYMBOL_1/g' -e 's/EUR/SYMBOL_2/g' -e 's/ro-cano-che-gira/SLUG/g' -e 's/RO CANO CHE GIRA/TITLE/g' > data/dashboards/dashboard-ro-cano-che-gira.json
+
+echo export dashboard from grafana
+curl -s "http://admin:s3cr3t@localhost:3000/api/dashboards/db/ro-cano-quando-esce" | sed -e 's/"id":[0-9]*/"id":null/' -e 's/bl3p/EXCHANGE/g' -e 's/BTC/SYMBOL_1/g' -e 's/EUR/SYMBOL_2/g' -e 's/ro-cano-quando-esce/SLUG/g' -e 's/RO CANO QUANDO ESCE/TITLE/g' > data/dashboards/dashboard-ro-cano-quando-esce.json

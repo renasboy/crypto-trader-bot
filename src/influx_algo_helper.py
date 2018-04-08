@@ -26,9 +26,9 @@ class influx_algo_helper(object):
         self.influx.write_points(data)
 
     def ma_last_prev(self, period):
-        query_ma =  "SELECT moving_average(mean(price), {}) as ma FROM price_volume WHERE exchange = '{}' and symbol_1 = '{}' and symbol_2 = '{}' and time > now() - 1h GROUP BY time(1m) fill(linear) ORDER BY time DESC limit 2".format(period, self.exchange, self.symbol_1, self.symbol_2)
+        query_ma =  "SELECT moving_average(mean(price), {}) as ma FROM price_volume WHERE exchange = '{}' and symbol_1 = '{}' and symbol_2 = '{}' and time > now() - 1h GROUP BY time(1m) fill(previous) ORDER BY time DESC limit 2".format(period, self.exchange, self.symbol_1, self.symbol_2)
         if period == 1:
-            query_ma =  "SELECT mean(price) as ma FROM price_volume WHERE exchange = '{}' and symbol_1 = '{}' and symbol_2 = '{}' and time > now() - 1h GROUP BY time(1m) fill(linear) ORDER BY time DESC limit 2".format(self.exchange, self.symbol_1, self.symbol_2)
+            query_ma =  "SELECT mean(price) as ma FROM price_volume WHERE exchange = '{}' and symbol_1 = '{}' and symbol_2 = '{}' and time > now() - 1h GROUP BY time(1m) fill(previous) ORDER BY time DESC limit 2".format(self.exchange, self.symbol_1, self.symbol_2)
         result = self.influx.query(query_ma)
         results = list(result.get_points())
         ma_last = results[0]['ma'] if results and len(results) == 2 and results[0]['ma'] is not None else 0
@@ -60,7 +60,7 @@ class influx_algo_helper(object):
     @property
     def macd(self):
         # MACD 12, 26, 9
-        query_macd =  "SELECT mean(proper) - moving_average(mean(proper), 9) as macd FROM (SELECT moving_average(mean(price), 12) - moving_average(mean(price), 26) as proper FROM price_volume WHERE exchange = '{}' and symbol_1 = '{}' and symbol_2 = '{}' and time > now() - 5h GROUP BY time(1m) fill(linear)) WHERE time > now() - 1d GROUP BY time(1m) fill(linear)".format(self.exchange, self.symbol_1, self.symbol_2)
+        query_macd =  "SELECT mean(proper) - moving_average(mean(proper), 9) as macd FROM (SELECT moving_average(mean(price), 12) - moving_average(mean(price), 26) as proper FROM price_volume WHERE exchange = '{}' and symbol_1 = '{}' and symbol_2 = '{}' and time > now() - 5h GROUP BY time(1m) fill(previous)) WHERE time > now() - 1d GROUP BY time(1m) fill(previous)".format(self.exchange, self.symbol_1, self.symbol_2)
         result = self.influx.query(query_macd)
         results = list(result.get_points())
         macd = results[-1]['macd'] if results else 0
@@ -86,7 +86,7 @@ class influx_algo_helper(object):
 
     def min_mean_max(self, period1, period2):
         # HOURLY, DAILY, WEEKLY and MONTHLY AVERAGES
-        query_min_mean_max = "SELECT min(price), mean(price), max(price) FROM price_volume WHERE exchange = '{}' and symbol_1 = '{}' and symbol_2 = '{}' and time >= now() - {} GROUP BY time({}) fill(linear) ORDER BY time DESC LIMIT 1"
+        query_min_mean_max = "SELECT min(price), mean(price), max(price) FROM price_volume WHERE exchange = '{}' and symbol_1 = '{}' and symbol_2 = '{}' and time >= now() - {} GROUP BY time({}) fill(previous) ORDER BY time DESC LIMIT 1"
         query = query_min_mean_max.format(self.exchange, self.symbol_1, self.symbol_2, period1, period2)
         result = self.influx.query(query)
         results = list(result.get_points())
