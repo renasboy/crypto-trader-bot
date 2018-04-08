@@ -41,6 +41,12 @@ class cobinhood(object):
         fee = 0
         return msg['1'], type, price, volume, fee
 
+    def ticker(self):
+        ticker = self.call('get', '/v1/market/tickers/' + self.symbol, {})
+        price = float(ticker['result']['ticker']['last_trade_price'])
+        fee = 0
+        return float(price), float(fee)
+
     def balances(self):
         return self.call('get', '/v1/wallet/balances', {})
 
@@ -120,6 +126,7 @@ class cobinhood(object):
 
 #if __name__ == '__main__':
     #exchange = cobinhood('BTC', 'ETH')
+    #print(exchange.ticker())
     #print(exchange.balance('BTC'))
     #print(exchange.balance('ETH'))
     #print(exchange.orders())

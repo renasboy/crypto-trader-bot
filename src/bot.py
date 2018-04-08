@@ -10,16 +10,13 @@ def log(message):
     string_date = cur_date_time()
     print('{} {}-{}-{}: {}'.format(string_date, EXCHANGE, SYMBOL_1, SYMBOL_2, message))
 
-def on_message(ws, message):
+def run():
     global algo_helper
     global algo
     global exchange
     global active_order_id
-    global running
 
-    log('websocket message {}'.format(message))
-
-    date_time, type, price, volume, fee = exchange.parse_ws_msg(message)
+    price, fee = exchange.ticker()
 
     algo_helper.set_fee(fee)
     algo_helper.set_price(price)
@@ -32,21 +29,14 @@ def on_message(ws, message):
         tags=dict(
             exchange=EXCHANGE,
             symbol_1=SYMBOL_1,
-            symbol_2=SYMBOL_2,
-            type=type
+            symbol_2=SYMBOL_2
         ),
         fields=dict(
-            timestamp=date_time,
             price=float(price),
-            volume=float(volume),
             trend_up=float(trend_up),
             trend_down=float(trend_down)
         )
     )])
-
-    if running:
-        return
-    running = True
 
     # ALGO TAKE ACTION
     action = algo.action
@@ -110,24 +100,12 @@ def on_message(ws, message):
                 )])
             algo_helper.update_last_trade()
         active_order_id = None
-    running = False
-
-def on_error(ws, error):
-    log('websocket error {}'.format(error))
-
-def on_close(ws):
-    log('websocket closed')
-
-def on_open(ws):
-    log('websocket open')
 
 if __name__ == '__main__':
 
     CONF = os.environ['CONF']
     #execfile('conf/{}.conf'.format(CONF))
     exec(compile(open('conf/{}.conf'.format(CONF), "rb").read(), 'conf/{}.conf'.format(CONF), 'exec'))
-
-    running = False
 
     algo_helper = influx_algo_helper(EXCHANGE, SYMBOL_1, SYMBOL_2)
     algo_helper.update_last_trade()
@@ -142,4 +120,6 @@ if __name__ == '__main__':
 
     active_order_id = exchange.active_order_id()
     log('started order id {} '.format(active_order_id))
-    exchange.start_listener(on_message, on_error, on_open, on_close)
+    while True:
+        run()
+        time.sleep(5)

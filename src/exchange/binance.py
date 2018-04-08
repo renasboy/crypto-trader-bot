@@ -41,6 +41,12 @@ class binance(object):
         fee = float(price * self.FEE)
         return msg['T'], type, price, volume, fee
 
+    def ticker(self):
+        ticker = self.call('get', 'ticker/price', {'symbol': self.symbol})
+        price = float(ticker['price'])
+        fee = float(price * self.FEE)
+        return float(price), float(fee)
+
     def balances(self):
         return self.call('get', 'account', {})
 
@@ -111,7 +117,7 @@ class binance(object):
         }
 
         full_path = '%s%s' % (self.private_url, path)
-        if path in ('depth', ):
+        if path in ('depth', 'ticker/price'):
             del(data['timestamp'])
             full_path = '%s%s' % (self.public_url, path)
             response = requests.get(full_path, data)
@@ -127,6 +133,7 @@ class binance(object):
 
 #if __name__ == '__main__':
     #exchange = binance('ETH', 'TRX')
+    #print(exchange.ticker())
     #print(exchange.balance('ETH'))
     #print(exchange.balance('TRX'))
     #print(exchange.orders())

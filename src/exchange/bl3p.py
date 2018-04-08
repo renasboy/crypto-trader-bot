@@ -41,6 +41,12 @@ class bl3p(object):
         fee = price * self.FEE + self.ANTISPAM_FEE
         return msg['date'], msg['type'], float(price), float(volume), float(fee)
 
+    def ticker(self):
+        ticker = self.call(self.symbol + '/ticker', {})
+        price = float(ticker['last'])
+        fee = price * self.FEE + self.ANTISPAM_FEE
+        return float(price), float(fee)
+
     def balances(self):
         return self.call('GENMKT/money/info', {})
 
@@ -113,6 +119,7 @@ class bl3p(object):
 
 #if __name__ == '__main__':
     #exchange = bl3p('BTC', 'EUR')
+    #print(exchange.ticker())
     #print(exchange.balance('BTC'))
     #print(exchange.balance('EUR'))
     #print(exchange.orders())
