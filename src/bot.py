@@ -122,4 +122,4 @@ if __name__ == '__main__':
     log('started order id {} '.format(active_order_id))
     while True:
         run()
-        time.sleep(5)
+        time.sleep(PING_INTERVAL)
