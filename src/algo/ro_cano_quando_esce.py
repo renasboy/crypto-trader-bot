@@ -92,9 +92,10 @@ class ro_cano_quando_esce(object):
 
         # se chiude la gabbia, vende subito
         # subito dopo l'incrocio della ma8 X ma30 la m8 < ma30 
-        elif last_trade_action == 'buy' and ma8_prev >= ma30_prev and ma8_last < ma30_last:
+        elif ma8_prev >= ma30_prev and ma8_last < ma30_last:
             self.algo_helper.log('session {}: closed segment'.format(self.session))
             self.session = 0
-            action = 'sell'
+            if last_trade_action == 'buy':
+                action = 'sell'
 
         return action
