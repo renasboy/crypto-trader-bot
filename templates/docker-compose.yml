@@ -9,6 +9,7 @@ services:
         volumes:
             - ./data/influxdb:/var/lib/influxdb
         environment:
+            - TZ=Europe/Amsterdam
             - INFLUXDB_ADMIN_ENABLED="true"
             - INFLUXDB_DB=crypto_trader_bot
             - INFLUXDB_ADMIN_USER=root
@@ -23,6 +24,7 @@ services:
         volumes:
             - ./data/grafana:/var/lib/grafana
         environment:
+            - TZ=Europe/Amsterdam
             - GF_SECURITY_ADMIN_PASSWORD=s3cr3t
         restart: always
         depends_on:

@@ -5,6 +5,7 @@
         volumes:
             - .:/crypto-trader-bot
         environment:
+            - TZ=Europe/Amsterdam
             - CONF=CONTAINER_NAME
         depends_on:
             - influxdb
