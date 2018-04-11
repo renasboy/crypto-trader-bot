@@ -1,4 +1,4 @@
-
+from datetime import datetime
 
 class ro_cano_quando_esce(object):
 
@@ -21,6 +21,7 @@ class ro_cano_quando_esce(object):
         # LAST TRADE
         last_trade_action = self.algo_helper.last_trade_action
         last_trade_price = self.algo_helper.last_trade_price
+        last_trade_time = self.algo_helper.last_trade_time
 
         # CURRENT PRICE
         price = self.algo_helper.price
@@ -62,12 +63,12 @@ class ro_cano_quando_esce(object):
 
                 # vende sessione UNO solo se
                 # subito dopo l'incrocio della ma2 X ma10 la ma2 < ma10
-                if self.session == 1 and ma2_prev > ma10_prev and ma2_last < ma10_last:
+                if self.session == 1 and ma2_prev > ma10_prev and ma2_last < ma10_last and (datetime.now() - datetime.strptime(last_trade_time[:-11], '%Y-%m-%dT%H:%M:%S')).seconds > 60:
                     action = 'sell'
 
                 # vende sessione DUE solo se
                 # subito dopo l'incrocio prezzo X ma11 il prezzo < ma11
-                elif self.session == 2 and ma1_prev > ma11_prev and ma1_last < ma11_last:
+                elif self.session == 2 and ma1_prev > ma11_prev and ma1_last < ma11_last and (datetime.now() - datetime.strptime(last_trade_time[:-11], '%Y-%m-%dT%H:%M:%S')).seconds > 60:
                     action = 'sell'
 
                 # vende session X solo se
