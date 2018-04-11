@@ -117,14 +117,18 @@ class binance(object):
         }
 
         full_path = '%s%s' % (self.private_url, path)
-        if path in ('depth', 'ticker/price'):
-            del(data['timestamp'])
-            full_path = '%s%s' % (self.public_url, path)
-            response = requests.get(full_path, data)
-        elif method == 'post':
-            response = requests.post(full_path, data=post_data, headers=headers)
-        else:
-            response = requests.get(full_path, post_data, headers=headers)
+        try:
+            if path in ('depth', 'ticker/price'):
+                del(data['timestamp'])
+                full_path = '%s%s' % (self.public_url, path)
+                response = requests.get(full_path, data)
+            elif method == 'post':
+                response = requests.post(full_path, data=post_data, headers=headers)
+            else:
+                response = requests.get(full_path, post_data, headers=headers)
+        except requests.exceptions.ConnectionError:
+            print('API failure connection error')
+            return False
         if response.status_code != 200:
             print('API failure: {} {}'.format(response.status_code, response.content))
             return False
