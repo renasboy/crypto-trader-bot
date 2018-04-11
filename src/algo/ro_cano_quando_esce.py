@@ -29,7 +29,7 @@ class ro_cano_quando_esce(object):
         action = None
 
         # apre la gabbia, se subito dopo l'incrocio della ma8 X ma31 la ma8 >= ma30
-        if ma8_prev < ma30_prev and ma8_last >= ma30_last:
+        if ma30_prev and ma30_last and ma8_prev < ma30_prev and ma8_last >= ma30_last:
             self.session = 1
             self.algo_helper.log('session {}: open segment'.format(self.session))
 
