@@ -15,7 +15,7 @@ class ro_cano_quando_esce(object):
         ma2_last, ma2_prev = self.algo_helper.ma_last_prev(2)
         ma3_last, ma3_prev = self.algo_helper.ma_last_prev(3)
         ma5_last, ma5_prev = self.algo_helper.ma_last_prev(5)
-        ma6_last, ma6_prev = self.algo_helper.ma_last_prev(6)
+        ma7_last, ma7_prev = self.algo_helper.ma_last_prev(7)
         ma8_last, ma8_prev = self.algo_helper.ma_last_prev(8)
         ma9_last, ma9_prev = self.algo_helper.ma_last_prev(9)
         ma10_last, ma10_prev = self.algo_helper.ma_last_prev(10)
@@ -53,8 +53,8 @@ class ro_cano_quando_esce(object):
                     action = 'buy'
 
                 # compra sessione DUE solo se
-                # subito dopo l'incrocio del ma3 X ma10 il ma3 > ma10
-                elif self.session == 2 and ma3_prev < ma10_prev and ma3_last > ma10_last:
+                # subito dopo l'incrocio del ma3 X ma11 il ma3 > ma11
+                elif self.session == 2 and ma3_prev < ma11_prev and ma3_last > ma11_last:
                     action = 'buy'
                 
                 # compra sessione X solo se
@@ -65,13 +65,13 @@ class ro_cano_quando_esce(object):
         # vende
         elif last_trade_action == 'buy':
 
-            # salvagente, vende subito se il prezzo < last_trade_price - 0.35%
-            if last_trade_action == 'buy' and price < last_trade_price - last_trade_price * 0.0035:
+            # salvagente, vende subito se il prezzo < last_trade_price - 0.50%
+            if last_trade_action == 'buy' and price < last_trade_price - last_trade_price * 0.0050:
                 action = 'sell'
 
             # vende sessione UNO solo se
-            # subito dopo l'incrocio della ma1 X ma6 la ma1 < ma6
-            if self.session == 1 and ma1_prev > ma6_prev and ma1_last < ma6_last and (datetime.now() - datetime.strptime(last_trade_time[:-11], '%Y-%m-%dT%H:%M:%S')).seconds > 60:
+            # subito dopo l'incrocio della ma1 X ma7 la ma1 < ma7
+            if self.session == 1 and ma1_prev > ma7_prev and ma1_last < ma7_last and (datetime.now() - datetime.strptime(last_trade_time[:-11], '%Y-%m-%dT%H:%M:%S')).seconds > 60:
                 action = 'sell'
 
             # vende sessione DUE solo se
@@ -81,16 +81,16 @@ class ro_cano_quando_esce(object):
 
             # vende session X solo se
             # subito dopo l'incrocio prezzo X ma11 il prezzo < ma11
-            elif self.session > 2 and ma1_prev > ma11_prev and ma1_last < ma11_last:
+            elif self.session > 2 and ma1_prev > ma11_prev and ma1_last < ma11_last and (datetime.now() - datetime.strptime(last_trade_time[:-11], '%Y-%m-%dT%H:%M:%S')).seconds > 60:
                 action = 'sell'
 
             # fascia di non vendita
             if action == 'sell':
-                # ma anche solo se guadagno > 0.09%
-                if price - last_trade_price >= 0 and price - last_trade_price < last_trade_price * 0.0009:
+                # ma anche solo se guadagno > 0.10%
+                if price - last_trade_price >= 0 and price - last_trade_price < last_trade_price * 0.0010:
                     action = None
-                # perdita < -0.33%
-                elif price - last_trade_price <= 0 and last_trade_price - price < last_trade_price * 0.0033:
+                # perdita < -0.43%
+                elif price - last_trade_price <= 0 and last_trade_price - price < last_trade_price * 0.0043:
                     action = None
 
         self.algo_helper.log('session {}: action {}'.format(self.session, action))
