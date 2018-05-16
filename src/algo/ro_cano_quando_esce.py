@@ -75,13 +75,13 @@ class ro_cano_quando_esce(object):
                 action = 'sell'
 
             # vende sessione DUE solo se
-            # subito dopo l'incrocio prezzo X ma11 il prezzo < ma11
-            elif self.session == 2 and ma1_prev > ma11_prev and ma1_last < ma11_last and (datetime.now() - datetime.strptime(last_trade_time[:-11], '%Y-%m-%dT%H:%M:%S')).seconds > 60:
+            # subito dopo l'incrocio prezzo X ma7 il prezzo < ma7
+            elif self.session == 2 and ma1_prev > ma7_prev and ma1_last < ma7_last and (datetime.now() - datetime.strptime(last_trade_time[:-11], '%Y-%m-%dT%H:%M:%S')).seconds > 60:
                 action = 'sell'
 
             # vende session X solo se
-            # subito dopo l'incrocio prezzo X ma11 il prezzo < ma11
-            elif self.session > 2 and ma1_prev > ma11_prev and ma1_last < ma11_last and (datetime.now() - datetime.strptime(last_trade_time[:-11], '%Y-%m-%dT%H:%M:%S')).seconds > 60:
+            # subito dopo l'incrocio prezzo X ma7 il prezzo < ma7
+            elif self.session > 2 and ma1_prev > ma7_prev and ma1_last < ma7_last and (datetime.now() - datetime.strptime(last_trade_time[:-11], '%Y-%m-%dT%H:%M:%S')).seconds > 60:
                 action = 'sell'
 
             # fascia di non vendita
