@@ -14,7 +14,7 @@ class bl3p(object):
     FEE = 0.0025
     ANTISPAM_FEE = 0.01
 
-    def __init__(self, symbol_1, symbol_2, public_key, private_key):
+    def __init__(self, symbol_1, symbol_2, public_key, private_key, *args, **kwargs):
         self.symbol_1 = symbol_1.upper()
         self.symbol_2 = symbol_2.upper()
         self.symbol = self.symbol_1 + self.symbol_2

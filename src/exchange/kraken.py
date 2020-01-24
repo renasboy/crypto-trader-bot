@@ -20,7 +20,7 @@ class kraken(object):
     url = None
     websocket = None
 
-    def __init__(self):
+    def __init__(self, *args, **kwargs):
         self.public_key = 'CHAVES_CHAVES_CHAVES'
         self.private_key = 'CHAVES_CHAVES_CHAVES'
         self.url = 'https://api.kraken.com'

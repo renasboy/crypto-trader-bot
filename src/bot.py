@@ -114,9 +114,9 @@ if __name__ == '__main__':
         module = __import__('algo.{}'.format(ALGO), fromlist=[ALGO])
         algo = getattr(module, ALGO)(algo_helper)
 
-    if EXCHANGE in ('bl3p', 'binance', 'cobinhood'):
+    if EXCHANGE in ('bl3p', 'binance', 'cobinhood', 'coinbasepro'):
         module = __import__('exchange.{}'.format(EXCHANGE), fromlist=[EXCHANGE])
-        exchange = getattr(module, EXCHANGE)(SYMBOL_1, SYMBOL_2, PUBLIC_KEY, PRIVATE_KEY)
+        exchange = getattr(module, EXCHANGE)(SYMBOL_1, SYMBOL_2, PUBLIC_KEY, PRIVATE_KEY, PASSPHRASE)
 
     active_order_id = exchange.active_order_id()
     log('started order id {} '.format(active_order_id))

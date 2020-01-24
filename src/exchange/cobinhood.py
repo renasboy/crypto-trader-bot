@@ -10,7 +10,7 @@ import websocket
 
 class cobinhood(object):
 
-    def __init__(self, symbol_1, symbol_2, public_key, private_key):
+    def __init__(self, symbol_1, symbol_2, public_key, private_key, *args, **kwargs):
         self.symbol_1 = symbol_1.upper()
         self.symbol_2 = symbol_2.upper()
         self.symbol = self.symbol_2 + '-' + self.symbol_1
