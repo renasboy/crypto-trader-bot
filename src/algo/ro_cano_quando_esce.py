@@ -84,11 +84,11 @@ class ro_cano_quando_esce(object):
 
             # fascia di non vendita
             if action == 'sell':
-                # ma anche solo se guadagno > 0.10%
-                if price - last_trade_price >= 0 and price - last_trade_price < last_trade_price * 0.0010:
+                # ma anche solo se guadagno > 0.13%
+                if price - last_trade_price >= 0 and price - last_trade_price < last_trade_price * 0.0013:
                     action = None
-                # perdita < -0.10%
-                elif price - last_trade_price <= 0 and last_trade_price - price < last_trade_price * 0.0010:
+                # perdita < -0.15%
+                elif price - last_trade_price <= 0 and last_trade_price - price < last_trade_price * 0.0015:
                     action = None
 
         self.algo_helper.log('session {}: action {}'.format(self.session, action))
