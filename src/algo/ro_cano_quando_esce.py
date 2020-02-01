@@ -65,9 +65,7 @@ class ro_cano_quando_esce(object):
         # vende
         elif last_trade_action == 'buy':
 
-            # salvagente, vende subito se il prezzo < last_trade_price - 0.50%
-            if last_trade_action == 'buy' and price < last_trade_price - last_trade_price * 0.0050:
-                action = 'sell'
+            
 
             # vende sessione UNO solo se
             # subito dopo l'incrocio della ma1 X ma7 la ma1 < ma7
