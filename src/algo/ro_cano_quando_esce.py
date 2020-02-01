@@ -32,20 +32,20 @@ class ro_cano_quando_esce(object):
 
         action = None
 
-        # apre la gabbia, se subito dopo l'incrocio della ma8 X ma31 la ma8 = ma31
-        if ma31_prev and ma31_last and ma8_prev < ma31_prev and ma8_last = ma31_last:
+        # apre la gabbia, se subito dopo l'incrocio della ma8 X ma33 la ma8 = ma33
+        if ma33_prev and ma31_last and ma8_prev < ma33_prev and ma8_last = ma33_last:
             self.open = True
             if not self.session:
                 self.session = 1
             self.algo_helper.log('session {}: open segment'.format(self.session))
         # se chiude la gabbia, vende subito
-        # subito dopo l'incrocio della ma8 X ma31 la m8 < ma31
-        elif ma31_prev and ma31_last and ma8_prev >= ma31_prev and ma8_last < ma31_last:
+        # subito dopo l'incrocio della ma8 X ma33 la m8 < ma33
+        elif ma33_prev and ma33_last and ma8_prev >= ma33_prev and ma8_last < ma33_last:
             self.open = False
             self.algo_helper.log('session {}: closed segment'.format(self.session))
 
-        # compra o vende solo se ma8 >= ma31
-        if self.open and self.session and last_trade_action != 'buy' and ma8_last >= ma31_last:
+        # compra o vende solo se ma8 >= ma33
+        if self.open and self.session and last_trade_action != 'buy' and ma8_last >= ma33_last:
 
                 # compra sessione UNO solo se
                 # subito
