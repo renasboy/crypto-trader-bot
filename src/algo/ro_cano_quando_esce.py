@@ -32,8 +32,8 @@ class ro_cano_quando_esce(object):
 
         action = None
 
-        # apre la gabbia, se subito dopo l'incrocio della ma8 X ma31 la ma8 >= ma31
-        if ma31_prev and ma31_last and ma8_prev < ma31_prev and ma8_last >= ma31_last:
+        # apre la gabbia, se subito dopo l'incrocio della ma8 X ma31 la ma8 = ma31
+        if ma31_prev and ma31_last and ma8_prev < ma31_prev and ma8_last = ma31_last:
             self.open = True
             if not self.session:
                 self.session = 1
