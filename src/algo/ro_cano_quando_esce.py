@@ -21,6 +21,7 @@ class ro_cano_quando_esce(object):
         ma10_last, ma10_prev = self.algo_helper.ma_last_prev(10)
         ma11_last, ma11_prev = self.algo_helper.ma_last_prev(11)
         ma31_last, ma31_prev = self.algo_helper.ma_last_prev(31)
+        ma33_last, ma33_prev = self.algo_helper.ma_last_prev(33)
 
         # LAST TRADE
         last_trade_action = self.algo_helper.last_trade_action
@@ -33,7 +34,7 @@ class ro_cano_quando_esce(object):
         action = None
 
         # apre la gabbia, se subito dopo l'incrocio della ma8 X ma33 la ma8 = ma33
-        if ma33_prev and ma33_last and ma8_prev < ma33_prev and ma8_last = ma33_last:
+        if ma33_prev and ma33_last and ma8_prev < ma33_prev and ma8_last >= ma33_last:
             self.open = True
             if not self.session:
                 self.session = 1
