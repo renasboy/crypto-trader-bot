@@ -85,8 +85,8 @@ class ro_cano_quando_esce(object):
 
             # fascia di non vendita
             if action == 'sell':
-                # ma anche solo se guadagno > 0.09%
-                if price - last_trade_price >= 0 and price - last_trade_price < last_trade_price * 0.0009:
+                # ma anche solo se guadagno > 0.13%
+                if price - last_trade_price >= 0 and price - last_trade_price < last_trade_price * 0.0013:
                     action = None
                 # perdita < -0.45%
                 elif price - last_trade_price <= 0 and last_trade_price - price < last_trade_price * 0.0045:
