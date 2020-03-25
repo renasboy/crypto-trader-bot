@@ -10,8 +10,8 @@ class ro_cano_quando_esce(object):
     @property
     def action(self):
 
-        # MAC TREND
-        macd_trend = self.algo_helper.macd_trend
+        # MACD
+        macd = self.algo_helper.macd
 
         # MAs
         ma1_last, ma1_prev = self.algo_helper.ma_last_prev(1)
@@ -50,8 +50,8 @@ class ro_cano_quando_esce(object):
             self.open = False
             self.algo_helper.log('session {}: closed segment'.format(self.session))
 
-        # compra o vende solo se ma8 >= ma33
-        if self.open and self.session and last_trade_action != 'buy' and ma8_last >= ma33_last and macd_trend == 'breakup':
+        # compra o vende solo se ma8 >= ma33 ed anche macd proper > 3.5
+        if self.open and self.session and last_trade_action != 'buy' and ma8_last >= ma33_last and macd > 3.5:
 
                 # compra sessione UNO solo se
                 # subito
@@ -69,7 +69,7 @@ class ro_cano_quando_esce(object):
                     action = 'buy'
 
         # vende
-        elif last_trade_action == 'buy' and macd_trend == 'breakdown':
+        elif last_trade_action == 'buy':
 
             # vende sessione UNO solo se
             # subito dopo l'incrocio della ma1 X ma7 la ma1 < ma7
