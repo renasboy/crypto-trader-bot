@@ -38,7 +38,7 @@ class ro_cano_quando_esce(object):
 
         action = None
 
-        # apre la gabbia, se subito dopo l'incrocio della ma8 X ma33 la ma8 = ma33
+        # apre la gabbia, se subito dopo l'incrocio della ma8 X ma33 la ma8 >= ma33
         if ma33_prev and ma33_last and ma8_prev < ma33_prev and ma8_last >= ma33_last:
             self.open = True
             if not self.session:
@@ -49,9 +49,14 @@ class ro_cano_quando_esce(object):
         elif ma33_prev and ma33_last and ma8_prev >= ma33_prev and ma8_last < ma33_last:
             self.open = False
             self.algo_helper.log('session {}: closed segment'.format(self.session))
+        # se chiude la gabbia, vende subito
+        # perdita > -0.35%
+        elif price - last_trade_price <= 0 and last_trade_price - price >= last_trade_price * 0.0035:
+            self.open = False
+            self.algo_helper.log('session {}: closed segment'.format(self.session))
 
-        # compra o vende solo se ma8 >= ma33 ed anche macd proper > 3.6
-        if self.open and self.session and last_trade_action != 'buy' and ma8_last >= ma33_last and macd > 3.6:
+        # compra o vende solo se ma8 >= ma33 ed anche (macd proper > 3.6 oppure se ((ma8 / ma33 - 1) * 100 > 0.27) and macd > 0)
+        if self.open and self.session and last_trade_action != 'buy' and ma8_last >= ma33_last and (macd > 3.6 or ((ma8_last / ma33_last - 1) * 100 > 0.27) and macd > 0):
 
                 # compra sessione UNO solo se
                 # subito
@@ -71,9 +76,12 @@ class ro_cano_quando_esce(object):
         # vende
         elif last_trade_action == 'buy':
 
+            # vende subito se la gabbia e' chiusa
+            if not self.open:
+                action = 'sell'
             # vende sessione UNO solo se
             # subito dopo l'incrocio della ma1 X ma7 la ma1 < ma7
-            if self.session == 1 and ma1_prev > ma7_prev and ma1_last < ma7_last and (datetime.now() - datetime.strptime(last_trade_time[:last_trade_time.index('.')], '%Y-%m-%dT%H:%M:%S')).seconds > 60:
+            elif self.session == 1 and ma1_prev > ma7_prev and ma1_last < ma7_last and (datetime.now() - datetime.strptime(last_trade_time[:last_trade_time.index('.')], '%Y-%m-%dT%H:%M:%S')).seconds > 60:
                 action = 'sell'
 
             # vende sessione DUE solo se
