@@ -73,8 +73,8 @@ class ro_cano_quando_esce(object):
 
                 # fascia di non compra
                 if action == 'buy':
-                    # ma anche solo se ma33_now > ma33_min_ago
-                    if ma33_min_ago > ma33_last:
+                    # ma anche solo se ma50_now > ma50_min_ago
+                    if ma50_min_ago > ma50_last:
                         action = None
 
         # vende
