@@ -35,6 +35,15 @@ class influx_algo_helper(object):
         ma_prev = results[1]['ma'] if results and len(results) == 2 and results[1]['ma'] is not None else 0
         return float(ma_last), float(ma_prev)
 
+    def ma_minutes_ago(self, period, minutes):
+        query_ma =  "SELECT moving_average(mean(price), {}) as ma FROM price_volume WHERE exchange = '{}' and symbol_1 = '{}' and symbol_2 = '{}' and time > now() - 1h GROUP BY time(1m) fill(previous) ORDER BY time DESC limit {}".format(period, self.exchange, self.symbol_1, self.symbol_2, minutes + 1)
+        if period == 1:
+            query_ma =  "SELECT mean(price) as ma FROM price_volume WHERE exchange = '{}' and symbol_1 = '{}' and symbol_2 = '{}' and time > now() - 1h GROUP BY time(1m) fill(previous) ORDER BY time DESC limit 2".format(self.exchange, self.symbol_1, self.symbol_2)
+        result = self.influx.query(query_ma)
+        results = list(result.get_points())
+        ma = results[minutes]['ma'] if results and len(results) == minutes + 1 and results[minutes]['ma'] is not None else 0
+        return float(ma)
+
     @property
     def rsi_trend_up(self):
         rsi_trend_up = self.price - self.prev_price if self.prev_price and self.price > self.prev_price else 0

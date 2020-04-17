@@ -15,18 +15,16 @@ class ro_cano_quando_esce(object):
 
         # MAs
         ma1_last, ma1_prev = self.algo_helper.ma_last_prev(1)
-        ma2_last, ma2_prev = self.algo_helper.ma_last_prev(2)
         ma3_last, ma3_prev = self.algo_helper.ma_last_prev(3)
         ma4_last, ma4_prev = self.algo_helper.ma_last_prev(4)
-        ma5_last, ma5_prev = self.algo_helper.ma_last_prev(5)
         ma7_last, ma7_prev = self.algo_helper.ma_last_prev(7)
         ma8_last, ma8_prev = self.algo_helper.ma_last_prev(8)
-        ma9_last, ma9_prev = self.algo_helper.ma_last_prev(9)
-        ma10_last, ma10_prev = self.algo_helper.ma_last_prev(10)
         ma11_last, ma11_prev = self.algo_helper.ma_last_prev(11)
         ma12_last, ma12_prev = self.algo_helper.ma_last_prev(12)
-        ma31_last, ma31_prev = self.algo_helper.ma_last_prev(31)
         ma33_last, ma33_prev = self.algo_helper.ma_last_prev(33)
+
+        # MA da tanti minuti passati (MA33 3 minuti)
+        ma33_min_ago = self.algo_helper.ma_minutes_ago(33, 3)
 
         # LAST TRADE
         last_trade_action = self.algo_helper.last_trade_action
@@ -40,9 +38,9 @@ class ro_cano_quando_esce(object):
 
         # apre la gabbia, se subito dopo l'incrocio della ma8 X ma33 la ma8 >= ma33
         if ma33_prev and ma33_last and ma8_prev < ma33_prev and ma8_last >= ma33_last:
-            self.open = True
-            if not self.session:
+            if not self.session or not self.open:
                 self.session = 1
+            self.open = True
             self.algo_helper.log('session {}: open segment'.format(self.session))
         # se chiude la gabbia, vende subito
         # subito dopo l'incrocio della ma8 X ma33 la m8 < ma33
@@ -72,6 +70,12 @@ class ro_cano_quando_esce(object):
                 # subito dopo l'incrocio ma3 X ma11 la ma3 > ma11
                 elif self.session > 2 and ma3_prev < ma11_prev and ma3_last > ma11_last:
                     action = 'buy'
+
+                # fascia di non compra
+                if action == 'buy':
+                    # ma anche solo se ma33_now > ma33_min_ago
+                    if ma33_min_ago > ma33_last:
+                        action = None
 
         # vende
         elif last_trade_action == 'buy':
@@ -109,6 +113,8 @@ class ro_cano_quando_esce(object):
             self.algo_helper.log('session {}: closed session'.format(self.session))
             self.session = self.session + 1
             if not self.open:
+                self.algo_helper.log('session {}: restart segment'.format(self.session))
                 self.session = 0
+                self.algo_helper.log('session {}: restart segment'.format(self.session))
 
         return action
