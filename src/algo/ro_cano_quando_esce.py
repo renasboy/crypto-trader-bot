@@ -22,7 +22,7 @@ class ro_cano_quando_esce(object):
         ma11_last, ma11_prev = self.algo_helper.ma_last_prev(11)
         ma12_last, ma12_prev = self.algo_helper.ma_last_prev(12)
         ma33_last, ma33_prev = self.algo_helper.ma_last_prev(33)
-
+        ma50_last, ma50_prev = self.algo_helper.ma_last_prev(50)
         # MA da tanti minuti passati (MA33 3 minuti)
         ma33_min_ago = self.algo_helper.ma_minutes_ago(33, 3)
 
