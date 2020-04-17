@@ -48,8 +48,8 @@ class ro_cano_quando_esce(object):
             self.open = False
             self.algo_helper.log('session {}: closed segment'.format(self.session))
         # se chiude la gabbia, vende subito
-        # perdita > -0.35%
-        elif price - last_trade_price <= 0 and last_trade_price - price >= last_trade_price * 0.0035:
+        # perdita > -0.46%
+        elif price - last_trade_price <= 0 and last_trade_price - price >= last_trade_price * 0.0046:
             self.open = False
             self.algo_helper.log('session {}: closed segment'.format(self.session))
 
@@ -100,11 +100,11 @@ class ro_cano_quando_esce(object):
 
             # fascia di non vendita
             if action == 'sell':
-                # ma anche solo se guadagno > 0.13%
-                if price - last_trade_price >= 0 and price - last_trade_price < last_trade_price * 0.0013:
+                # ma anche solo se guadagno > 0.14%
+                if price - last_trade_price >= 0 and price - last_trade_price < last_trade_price * 0.0014:
                     action = None
-                # perdita < -0.35%
-                elif price - last_trade_price <= 0 and last_trade_price - price < last_trade_price * 0.0035:
+                # perdita < -0.46%
+                elif price - last_trade_price <= 0 and last_trade_price - price < last_trade_price * 0.0046:
                     action = None
 
         self.algo_helper.log('session {}: action {}'.format(self.session, action))
