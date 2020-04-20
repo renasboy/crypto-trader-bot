@@ -27,8 +27,8 @@ class ro_cano_quando_esce(object):
         ma43_last, ma43_prev = self.algo_helper.ma_last_prev(43)
         
         
-        # MA da tanti minuti passati (MA50 3 minuti)
-        ma50_min_ago = self.algo_helper.ma_minutes_ago(50, 3)
+        # MA da tanti minuti passati (MA43 3 minuti)
+        ma43_min_ago = self.algo_helper.ma_minutes_ago(43, 3)
 
         # LAST TRADE
         last_trade_action = self.algo_helper.last_trade_action
