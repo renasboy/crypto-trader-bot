@@ -107,8 +107,8 @@ class ro_cano_quando_esce(object):
                 # ma anche solo se guadagno > 0.14%
                 if price - last_trade_price >= 0 and price - last_trade_price < last_trade_price * 0.0014:
                     action = None
-                # perdita < -0.46%
-                elif price - last_trade_price <= 0 and last_trade_price - price < last_trade_price * 0.0046:
+                # perdita < -0.59%
+                elif price - last_trade_price <= 0 and last_trade_price - price < last_trade_price * 0.0059:
                     action = None
 
         self.algo_helper.log('session {}: action {}'.format(self.session, action))
