@@ -88,8 +88,8 @@ class ro_cano_quando_esce(object):
             if not self.open:
                 action = 'sell'
             # vende sessione UNO solo se
-            # subito dopo l'incrocio della ma1 X ma8 la ma1 < ma8
-            elif self.session == 1 and ma1_prev > ma8_prev and ma1_last < ma8_last and (datetime.now() - datetime.strptime(last_trade_time[:last_trade_time.index('.')], '%Y-%m-%dT%H:%M:%S')).seconds > 60:
+            # subito dopo l'incrocio della ma1 X ma7 la ma1 < ma7
+            elif self.session == 1 and ma1_prev > ma7_prev and ma1_last < ma7_last and (datetime.now() - datetime.strptime(last_trade_time[:last_trade_time.index('.')], '%Y-%m-%dT%H:%M:%S')).seconds > 60:
                 action = 'sell'
 
             # vende sessione DUE solo se
