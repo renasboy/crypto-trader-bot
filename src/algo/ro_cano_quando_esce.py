@@ -58,7 +58,7 @@ class ro_cano_quando_esce(object):
             self.algo_helper.log('session {}: closed segment'.format(self.session))
 
         # compra o vende solo se ma8 >= ma34 ed anche (macd proper < 1.2 oppure se ((ma7 / ma34 - 1) * 100 > 0.26) and macd > 1)
-        if self.open and self.session and last_trade_action != 'buy' and ma8_last >= ma34_last and macd < 1.2 or ((ma7_last / ma34_last - 1) * 100 > 0.26) and macd > 1) and ma1_last > ma34_last:
+        if self.open and self.session and last_trade_action != 'buy' and ma8_last >= ma34_last and (macd < 1.2 or ((ma7_last / ma34_last - 1) * 100 > 0.26) and macd > 1) and ma1_last > ma34_last:
 
                 # compra sessione UNO solo se
                 # subito
