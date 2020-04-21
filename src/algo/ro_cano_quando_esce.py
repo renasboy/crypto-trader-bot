@@ -51,16 +51,16 @@ class ro_cano_quando_esce(object):
         elif ma34_prev and ma34_last and ma8_prev >= ma34_prev and ma8_last < ma34_last:
             self.open = False
             self.algo_helper.log('session {}: closed segment'.format(self.session))
-        # se chiude la gabbia, vende subito se la perdita > 0,59
-        # perdita > -0.59%
-        elif price - last_trade_price <= 0 and last_trade_price - price >= last_trade_price * 0.0046:
+        # se chiude la gabbia, vende subito se la perdita > -1,20
+        # perdita > -1.20%
+        elif price - last_trade_price <= 0 and last_trade_price - price >= last_trade_price * 0.0120:
             self.open = False
             self.algo_helper.log('session {}: closed segment'.format(self.session))
 
         # compra o vende solo se ma8 >= ma34 ed anche (macd proper < 1.2 oppure se ((ma7 / ma34 - 1) * 100 > 0.26) and macd > 1)
         if (self.open and self.session and last_trade_action != 'buy'
             and ma8_last >= ma34_last
-            and (macd < 1.2 or ((ma7_last / ma34_last - 1) * 100 > 0.26) and macd > 1)
+            and (macd < -1.0 or ((ma7_last / ma34_last - 1) * 100 > 0.26) and macd > 1)
             and ma1_last > ma34_last):
 
                 # compra sessione UNO solo se
@@ -110,8 +110,8 @@ class ro_cano_quando_esce(object):
                 # ma anche solo se guadagno > 0.14%
                 if price - last_trade_price >= 0 and price - last_trade_price < last_trade_price * 0.0014:
                     action = None
-                # perdita < -0.59%
-                elif price - last_trade_price <= 0 and last_trade_price - price < last_trade_price * 0.0059:
+                # perdita < -1.20%
+                elif price - last_trade_price <= 0 and last_trade_price - price < last_trade_price * 0.0120:
                     action = None
 
         self.algo_helper.log('session {}: action {}'.format(self.session, action))
