@@ -69,13 +69,13 @@ class ro_cano_quando_esce(object):
                     action = 'buy'
 
                 # compra sessione DUE solo se
-                # subito dopo l'incrocio del ma4 X ma12 il ma4 > ma12
-                elif self.session == 2 and ma4_prev < ma12_prev and ma4_last > ma12_last:
+                # subito dopo l'incrocio del ma5 X ma14 il ma5 > ma14
+                elif self.session == 2 and ma5_prev < ma14_prev and ma5_last > ma14_last:
                     action = 'buy'
                 
                 # compra sessione X solo se
-                # subito dopo l'incrocio ma3 X ma11 la ma3 > ma11
-                elif self.session > 2 and ma3_prev < ma11_prev and ma3_last > ma11_last:
+                # subito dopo l'incrocio ma5 X ma14 la ma5 > ma14
+                elif self.session > 2 and ma5_prev < ma14_prev and ma5_last > ma14_last:
                     action = 'buy'
 
                 # fascia di non compra
