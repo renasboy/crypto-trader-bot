@@ -59,6 +59,7 @@ class ro_cano_quando_esce(object):
 
         # compra o vende solo se ma8 >= ma34 ed anche (macd proper < 1.2 oppure se ((ma8 / ma34 - 1) * 100 > 0.37) and macd > 1)
         # TODO speciale: macd_now > macd_3_min_ago e ma7_now > ma7_3min_ago
+        # TODO cambiare macd < -1.0 a macd < -2.0
         if (self.open and self.session and last_trade_action != 'buy'
             and ma8_last >= ma34_last
             and (macd < -1.0 or ((ma7_last / ma34_last - 1) * 100 > 0.37) and macd > 1)
