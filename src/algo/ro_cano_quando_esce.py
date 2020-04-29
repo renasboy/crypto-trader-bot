@@ -58,6 +58,7 @@ class ro_cano_quando_esce(object):
             self.algo_helper.log('session {}: closed segment'.format(self.session))
 
         # compra o vende solo se ma8 >= ma34 ed anche (macd proper < 1.2 oppure se ((ma8 / ma34 - 1) * 100 > 0.37) and macd > 1)
+        # TODO speciale: macd_now > macd_3_min_ago e ma7_now > ma7_3min_ago
         if (self.open and self.session and last_trade_action != 'buy'
             and ma8_last >= ma34_last
             and (macd < -1.0 or ((ma7_last / ma34_last - 1) * 100 > 0.37) and macd > 1)
@@ -70,6 +71,9 @@ class ro_cano_quando_esce(object):
 
                 # compra sessione DUE solo se
                 # subito dopo l'incrocio del ma5 X ma14 il ma5 > ma14
+                # TODO ma8 > ma34 e macd < -2
+                # TODO il prezzo del BUY deve essere > di 0,15% del prezzo piu' alto registrato nella fascia degli ultimi 10 minuti
+                # TODO macd_now > macd_2_min_ago
                 elif self.session == 2 and ma5_prev < ma14_prev and ma5_last > ma14_last:
                     action = 'buy'
                 
@@ -97,6 +101,7 @@ class ro_cano_quando_esce(object):
 
             # vende sessione DUE solo se
             # subito dopo l'incrocio prezzo X ma7 il prezzo < ma7
+            # TODO ma1 e ma8 invece di ma1 e ma7
             elif self.session == 2 and ma1_prev > ma7_prev and ma1_last < ma7_last and (datetime.now() - datetime.strptime(last_trade_time[:last_trade_time.index('.')], '%Y-%m-%dT%H:%M:%S')).seconds > 60:
                 action = 'sell'
 
