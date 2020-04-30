@@ -13,27 +13,32 @@ class ro_cano_quando_esce(object):
         # MACD
         macd = self.algo_helper.macd
 
+        # MACD da anti minuti passati (3 minuti)
+        macd_3_min_ago = self.algo_helper.macd_minutes_ago(3)
+        macd_2_min_ago = self.algo_helper.macd_minutes_ago(2)
+
         # MAs
         ma1_last, ma1_prev = self.algo_helper.ma_last_prev(1)
-        ma3_last, ma3_prev = self.algo_helper.ma_last_prev(3)
-        ma4_last, ma4_prev = self.algo_helper.ma_last_prev(4)
         ma7_last, ma7_prev = self.algo_helper.ma_last_prev(7)
         ma8_last, ma8_prev = self.algo_helper.ma_last_prev(8)
-        ma11_last, ma11_prev = self.algo_helper.ma_last_prev(11)
-        ma12_last, ma12_prev = self.algo_helper.ma_last_prev(12)
-        ma33_last, ma33_prev = self.algo_helper.ma_last_prev(33)
-        ma50_last, ma50_prev = self.algo_helper.ma_last_prev(50)
         ma34_last, ma34_prev = self.algo_helper.ma_last_prev(34)
         ma43_last, ma43_prev = self.algo_helper.ma_last_prev(43)
         
-        
-        # MA da tanti minuti passati (MA43 3 minuti)
-        ma43_min_ago = self.algo_helper.ma_minutes_ago(43, 3)
+        # MA da tanti minuti passati (MA43 3 minuti e MA7 3 minuti)
+        ma43_3_min_ago = self.algo_helper.ma_minutes_ago(43, 3)
+        ma7_3_min_ago = self.algo_helper.ma_minutes_ago(7, 3)
 
         # LAST TRADE
         last_trade_action = self.algo_helper.last_trade_action
         last_trade_price = self.algo_helper.last_trade_price
         last_trade_time = self.algo_helper.last_trade_time
+
+        seconds_since_last_trade = 0
+        if last_trade_time:
+            seconds_since_last_trade = (datetime.now() - datetime.strptime(last_trade_time[:last_trade_time.index('.')], '%Y-%m-%dT%H:%M:%S')).seconds
+
+        # HIGHER PRICE MIN AGO (10)
+        highest_price_10_min_ago = self.algo_helper.highest_price_minutes_ago(10)
 
         # CURRENT PRICE
         price = self.algo_helper.price
@@ -58,11 +63,14 @@ class ro_cano_quando_esce(object):
             self.algo_helper.log('session {}: closed segment'.format(self.session))
 
         # compra o vende solo se ma8 >= ma34 ed anche (macd proper < 1.2 oppure se ((ma8 / ma34 - 1) * 100 > 0.37) and macd > 1)
-        # TODO speciale: macd_now > macd_3_min_ago e ma7_now > ma7_3min_ago
-        # TODO cambiare macd < -1.0 a macd < -2.0
+        # speciale: macd > macd_3_min_ago e ma7_last > ma7_3_min_ago
+        # macd < -1.0 a macd < -2.0
+        # and (macd < -2.0 or ((ma7_last / ma34_last - 1) * 100 > 0.37) and macd < -2)
         if (self.open and self.session and last_trade_action != 'buy'
+            and macd > macd_3_min_ago
+            and ma7_last > ma7_3_min_ago
             and ma8_last >= ma34_last
-            and (macd < -1.0 or ((ma7_last / ma34_last - 1) * 100 > 0.37) and macd > 1)
+            and (macd < -2.0 or ((ma7_last / ma34_last - 1) * 100 > 0.37) and macd < 2)
             and ma1_last > ma34_last):
 
                 # compra sessione UNO solo se
@@ -72,10 +80,14 @@ class ro_cano_quando_esce(object):
 
                 # compra sessione DUE solo se
                 # subito dopo l'incrocio del ma5 X ma14 il ma5 > ma14
-                # TODO ma8 > ma34 e macd < -2
-                # TODO il prezzo del BUY deve essere > di 0,15% del prezzo piu' alto registrato nella fascia degli ultimi 10 minuti
-                # TODO macd_now > macd_2_min_ago
-                elif self.session == 2 and ma5_prev < ma14_prev and ma5_last > ma14_last:
+                # ma8 > ma34 e macd < -2
+                # macd_now > macd_2_min_ago
+                # il prezzo (del BUY) deve essere > di 0,15% del prezzo piu' alto registrato nella fascia degli ultimi 10 minuti (highest_price_10_min_ago)
+                elif (self.session == 2 and ma5_prev < ma14_prev and ma5_last > ma14_last
+                    and ma8_last > ma43_last
+                    and macd < -2
+                    and macd > macd_2_min_ago
+                    and price > (highest_price_10_min_ago + highest_price_10_min_ago * 0.0015)):
                     action = 'buy'
                 
                 # compra sessione X solo se
@@ -85,30 +97,33 @@ class ro_cano_quando_esce(object):
 
                 # fascia di non compra
                 if action == 'buy':
-                    # ma anche solo se ma43_now > ma43_min_ago
-                    if ma43_min_ago > ma43_last:
+                    # ma anche solo se ma43_now > ma43_3_min_ago
+                    if ma43_3_min_ago > ma43_last:
                         action = None
 
         # vende
         elif last_trade_action == 'buy':
 
             # vende subito se la gabbia e' chiusa
-            if not self.open:
+            # "condiizione corona" se MACD >20 vendi subito
+            if not self.open or macd > 20:
                 action = 'sell'
             # vende sessione UNO solo se
             # subito dopo l'incrocio della ma1 X ma7 la ma1 < ma7
-            elif self.session == 1 and ma1_prev > ma7_prev and ma1_last < ma7_last and (datetime.now() - datetime.strptime(last_trade_time[:last_trade_time.index('.')], '%Y-%m-%dT%H:%M:%S')).seconds > 60:
+            # e dopo passato 60 secondi dal last trade
+            elif self.session == 1 and ma1_prev > ma7_prev and ma1_last < ma7_last and seconds_since_last_trade > 60:
                 action = 'sell'
 
             # vende sessione DUE solo se
-            # subito dopo l'incrocio prezzo X ma7 il prezzo < ma7
-            # TODO ma1 e ma8 invece di ma1 e ma7
-            elif self.session == 2 and ma1_prev > ma7_prev and ma1_last < ma7_last and (datetime.now() - datetime.strptime(last_trade_time[:last_trade_time.index('.')], '%Y-%m-%dT%H:%M:%S')).seconds > 60:
+            # subito dopo l'incrocio prezzo X ma7 il prezzo < ma8
+            # e dopo passato 60 secondi dal last trade
+            elif self.session == 2 and ma1_prev > ma8_prev and ma1_last < ma8_last and seconds_since_last_trade > 60:
                 action = 'sell'
 
             # vende session X solo se
             # subito dopo l'incrocio prezzo X ma7 il prezzo < ma7
-            elif self.session > 2 and ma1_prev > ma7_prev and ma1_last < ma7_last and (datetime.now() - datetime.strptime(last_trade_time[:last_trade_time.index('.')], '%Y-%m-%dT%H:%M:%S')).seconds > 60:
+            # e dopo passato 60 secondi dal last trade
+            elif self.session > 2 and ma1_prev > ma7_prev and ma1_last < ma7_last and seconds_since_last_trade > 60:
                 action = 'sell'
 
             # fascia di non vendita

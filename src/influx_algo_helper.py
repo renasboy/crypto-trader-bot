@@ -76,6 +76,15 @@ class influx_algo_helper(object):
         self.log('macd {}'.format(macd))
         return macd
 
+    def macd_minutes_ago(self, minutes):
+        # MACD 12, 26, 9
+        query_macd =  "SELECT mean(proper) - moving_average(mean(proper), 9) as macd FROM (SELECT moving_average(mean(price), 12) - moving_average(mean(price), 26) as proper FROM price_volume WHERE exchange = '{}' and symbol_1 = '{}' and symbol_2 = '{}' and time > now() - 5h GROUP BY time(1m) fill(previous)) WHERE time > now() - 1d GROUP BY time(1m) fill(previous)".format(self.exchange, self.symbol_1, self.symbol_2)
+        result = self.influx.query(query_macd)
+        results = list(result.get_points())
+        macd = results[-minutes]['macd'] if results else 0
+        self.log('macd {} minutes ago {}'.format(minutes, macd))
+        return macd
+
     @property
     def macd_trend(self):
         macd_last = self.macd
@@ -131,6 +140,12 @@ class influx_algo_helper(object):
         result = self.influx.query("SELECT price FROM price_volume WHERE exchange = '{}' and symbol_1 = '{}' and symbol_2 = '{}' ORDER BY time DESC limit 1".format(self.exchange, self.symbol_1, self.symbol_2))
         results = list(result.get_points())
         price = results[0]['price'] if results else 0
+        return price
+
+    def highest_price_minutes_ago(self, minutes):
+        result = self.influx.query("SELECT price FROM price_volume WHERE exchange = '{}' and symbol_1 = '{}' and symbol_2 = '{}' ORDER BY time DESC limit {}".format(self.exchange, self.symbol_1, self.symbol_2, minutes + 1))
+        results = list(result.get_points())
+        price = results[minutes]['price'] if len(results) == minutes + 1 and results[minutes]['price'] is not None else 0
         return price
 
     def update_last_trade(self):
