@@ -56,9 +56,9 @@ class ro_cano_quando_esce(object):
         elif ma34_prev and ma34_last and ma8_prev >= ma34_prev and ma8_last < ma34_last:
             self.open = False
             self.algo_helper.log('session {}: closed segment'.format(self.session))
-        # se chiude la gabbia, vende subito se la perdita > -0,60
-        # perdita > -0.60%
-        elif price - last_trade_price <= 0 and last_trade_price - price >= last_trade_price * 0.0060:
+        # se chiude la gabbia, vende subito se la perdita > -0,80
+        # perdita > -0.80%
+        elif price - last_trade_price <= 0 and last_trade_price - price >= last_trade_price * 0.0080:
             self.open = False
             self.algo_helper.log('session {}: closed segment'.format(self.session))
 
@@ -105,8 +105,8 @@ class ro_cano_quando_esce(object):
         elif last_trade_action == 'buy':
 
             # vende subito se la gabbia e' chiusa
-            # "condiizione corona" se MACD >20 vendi subito
-            if not self.open or macd > 20:
+            # "condiizione corona" se MACD >25 vendi subito
+            if not self.open or macd > 25:
                 action = 'sell'
             # vende sessione UNO solo se
             # subito dopo l'incrocio della ma1 X ma7 la ma1 < ma7
@@ -128,11 +128,11 @@ class ro_cano_quando_esce(object):
 
             # fascia di non vendita
             if action == 'sell':
-                # ma anche solo se guadagno > 0.14%
-                if price - last_trade_price >= 0 and price - last_trade_price < last_trade_price * 0.0014:
+                # ma anche solo se guadagno > 0.12%
+                if price - last_trade_price >= 0 and price - last_trade_price < last_trade_price * 0.0012:
                     action = None
-                # perdita < -0.60%
-                elif price - last_trade_price <= 0 and last_trade_price - price < last_trade_price * 0.0060:
+                # perdita < -0.80%
+                elif price - last_trade_price <= 0 and last_trade_price - price < last_trade_price * 0.0080:
                     action = None
 
         self.algo_helper.log('session {}: action {}'.format(self.session, action))
