@@ -80,12 +80,12 @@ class ro_cano_quando_esce(object):
 
                 # compra sessione DUE solo se
                 # subito dopo l'incrocio del ma5 X ma14 il ma5 > ma14
-                # ma8 > ma34 e macd < +1
+                # ma8 > ma34 e macd < 1
                 # macd_now > macd_2_min_ago
                 # il prezzo (del BUY) deve essere > di 0,15% del prezzo piu' alto registrato nella fascia degli ultimi 10 minuti (highest_price_10_min_ago)
                 elif (self.session == 2 and ma5_prev < ma14_prev and ma5_last > ma14_last
                     and ma8_last > ma43_last
-                    and macd < +1
+                    and macd < 1
                     and macd > macd_2_min_ago
                     and price > (highest_price_10_min_ago + highest_price_10_min_ago * 0.0015)):
                     action = 'buy'
