@@ -22,13 +22,17 @@ class ro_cano_quando_esce(object):
         ma1_last, ma1_prev = self.algo_helper.ma_last_prev(1)
         ma7_last, ma7_prev = self.algo_helper.ma_last_prev(7)
         ma8_last, ma8_prev = self.algo_helper.ma_last_prev(8)
+        ma9_last, ma9_prev = self.algo_helper.ma_last_prev(9)
         ma34_last, ma34_prev = self.algo_helper.ma_last_prev(34)
         ma43_last, ma43_prev = self.algo_helper.ma_last_prev(43)
         
+        
         # MA da tanti minuti passati (MA43 3 minuti e MA7 3 minuti)
         ma43_3_min_ago = self.algo_helper.ma_minutes_ago(43, 3)
+        ma8_10_min_ago = self.algo_helper.ma_minutes_ago(8, 10)
         ma7_3_min_ago = self.algo_helper.ma_minutes_ago(7, 3)
 
+        
         # LAST TRADE
         last_trade_action = self.algo_helper.last_trade_action
         last_trade_price = self.algo_helper.last_trade_price
@@ -63,15 +67,15 @@ class ro_cano_quando_esce(object):
             self.open = False
             self.algo_helper.log('session {}: closed segment'.format(self.session))
 
-        # compra o vende solo se ma8 >= ma34 ed anche (macd proper < 1.2 oppure se ((ma8 / ma34 - 1) * 100 > 0.37) and macd > 1)
-        # speciale: macd > macd_3_min_ago e ma7_last > ma7_3_min_ago
+        # compra o vende solo se ma8 >= ma34 ed anche (macd proper < -2.0 oppure se ((ma8 / ma34 - 1) * 100 > 0.37) and macd < -2.0)
+        # speciale: macd > macd_3_min_ago e ma8_last > ma8_10_min_ago
         # macd < -1.0 a macd < -2.0
-        # and (macd < -2.0 or ((ma7_last / ma34_last - 1) * 100 > 0.37) and macd < -2)
+        # and (macd < -1.0 or ((ma7_last / ma34_last - 1) * 100 > 0.37) and macd < -2)
         if (self.open and self.session and last_trade_action != 'buy'
             and macd > macd_4_min_ago
-            and ma7_last > ma7_3_min_ago
+            and ma8_last > ma8_10_min_ago
             and ma8_last >= ma34_last
-            and (macd < -2.0 or ((ma7_last / ma34_last - 1) * 100 > 0.37) and macd < 2)
+            and (macd < -1.0 or ((ma7_last / ma34_last - 1) * 100 > 0.37) and macd < -2.0)
             and ma1_last > ma34_last):
 
                 # compra sessione UNO solo se
@@ -106,13 +110,13 @@ class ro_cano_quando_esce(object):
         elif last_trade_action == 'buy':
 
             # vende subito se la gabbia e' chiusa
-            # "condiizione corona" se MACD >25 vendi subito
+            # "condizione corona" se MACD >25 vendi subito
             if not self.open or macd > 25:
                 action = 'sell'
             # vende sessione UNO solo se
-            # subito dopo l'incrocio della ma1 X ma8 la ma1 < ma8
+            # subito dopo l'incrocio della ma1 X ma9 la ma1 < ma9
             # e dopo passato 60 secondi dal last trade
-            elif self.session == 1 and ma1_prev > ma8_prev and ma1_last < ma8_last and seconds_since_last_trade > 60:
+            elif self.session == 1 and ma1_prev > ma9_prev and ma1_last < ma9_last and seconds_since_last_trade > 60:
                 action = 'sell'
 
             # vende sessione DUE solo se
