@@ -16,7 +16,7 @@ class ro_cano_quando_esce(object):
         # MACD da anti minuti passati (3 minuti)
         macd_3_min_ago = self.algo_helper.macd_minutes_ago(3)
         macd_2_min_ago = self.algo_helper.macd_minutes_ago(2)
-macd_4_min_ago = self.algo_helper.macd_minutes_ago(4)
+        macd_4_min_ago = self.algo_helper.macd_minutes_ago(4)
         
         # MAs
         ma1_last, ma1_prev = self.algo_helper.ma_last_prev(1)
