@@ -56,9 +56,9 @@ class ro_cano_quando_esce(object):
         elif ma34_prev and ma34_last and ma8_prev >= ma34_prev and ma8_last < ma34_last:
             self.open = False
             self.algo_helper.log('session {}: closed segment'.format(self.session))
-        # se chiude la gabbia, vende subito se la perdita > -0,80
-        # perdita > -0.80%
-        elif price - last_trade_price <= 0 and last_trade_price - price >= last_trade_price * 0.0080:
+        # se chiude la gabbia, vende subito se la perdita > -0,90
+        # perdita > -0.90%
+        elif price - last_trade_price <= 0 and last_trade_price - price >= last_trade_price * 0.0090:
             self.open = False
             self.algo_helper.log('session {}: closed segment'.format(self.session))
 
@@ -109,9 +109,9 @@ class ro_cano_quando_esce(object):
             if not self.open or macd > 25:
                 action = 'sell'
             # vende sessione UNO solo se
-            # subito dopo l'incrocio della ma1 X ma7 la ma1 < ma7
+            # subito dopo l'incrocio della ma1 X ma8 la ma1 < ma8
             # e dopo passato 60 secondi dal last trade
-            elif self.session == 1 and ma1_prev > ma7_prev and ma1_last < ma7_last and seconds_since_last_trade > 60:
+            elif self.session == 1 and ma1_prev > ma8_prev and ma1_last < ma8_last and seconds_since_last_trade > 60:
                 action = 'sell'
 
             # vende sessione DUE solo se
@@ -128,11 +128,11 @@ class ro_cano_quando_esce(object):
 
             # fascia di non vendita
             if action == 'sell':
-                # ma anche solo se guadagno > 0.12%
-                if price - last_trade_price >= 0 and price - last_trade_price < last_trade_price * 0.0012:
+                # ma anche solo se guadagno > 0.14%
+                if price - last_trade_price >= 0 and price - last_trade_price < last_trade_price * 0.0014:
                     action = None
-                # perdita < -0.80%
-                elif price - last_trade_price <= 0 and last_trade_price - price < last_trade_price * 0.0080:
+                # perdita < -0.90%
+                elif price - last_trade_price <= 0 and last_trade_price - price < last_trade_price * 0.0090:
                     action = None
 
         self.algo_helper.log('session {}: action {}'.format(self.session, action))
