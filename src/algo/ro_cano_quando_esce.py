@@ -16,7 +16,8 @@ class ro_cano_quando_esce(object):
         # MACD da anti minuti passati (3 minuti)
         macd_3_min_ago = self.algo_helper.macd_minutes_ago(3)
         macd_2_min_ago = self.algo_helper.macd_minutes_ago(2)
-
+macd_4_min_ago = self.algo_helper.macd_minutes_ago(4)
+        
         # MAs
         ma1_last, ma1_prev = self.algo_helper.ma_last_prev(1)
         ma7_last, ma7_prev = self.algo_helper.ma_last_prev(7)
@@ -67,7 +68,7 @@ class ro_cano_quando_esce(object):
         # macd < -1.0 a macd < -2.0
         # and (macd < -2.0 or ((ma7_last / ma34_last - 1) * 100 > 0.37) and macd < -2)
         if (self.open and self.session and last_trade_action != 'buy'
-            and macd > macd_3_min_ago
+            and macd > macd_4_min_ago
             and ma7_last > ma7_3_min_ago
             and ma8_last >= ma34_last
             and (macd < -2.0 or ((ma7_last / ma34_last - 1) * 100 > 0.37) and macd < 2)
