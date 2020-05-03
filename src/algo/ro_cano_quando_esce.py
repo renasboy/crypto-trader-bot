@@ -116,7 +116,7 @@ class ro_cano_quando_esce(object):
 
             # vende subito se la gabbia e' chiusa
             # "condizione corona" se MACD >25 vendi subito
-            # vende subito anche se dopo 50 minuti ma8<ma34 e ma34>ma43
+            # vende subito anche se dopo 50 minuti ma8<ma34 e ma34<ma43
             
             if not self.open or macd > 25:
                 action = 'sell'
