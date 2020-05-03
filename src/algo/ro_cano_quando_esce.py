@@ -71,14 +71,14 @@ class ro_cano_quando_esce(object):
         # compra o vende solo se ma8 >= ma34 ed anche (macd proper < -2.0 oppure se ((ma8 / ma34 - 1) * 100 > 0.37) and macd < -2.0)
         # speciale: macd > macd_3_min_ago e ma8_last > ma8_10_min_ago
         # macd < -1.0 a macd < -2.0
-        # and (macd < -1.0 or ((ma7_last / ma34_last - 1) * 100 > 0.37) and macd < -2)
+        # and (macd < -1.0 or ((ma7_last / ma34_last - 1) * 100 > 0.37) and macd < -30)
         if (self.open and self.session and last_trade_action != 'buy'
             and macd > macd_4_min_ago
             and ma8_last > ma8_10_min_ago
             and ma8_last > ma8_2_min_ago
             and ma8_last >= ma34_last
             and ma1_last > ma8_last
-            and (macd < -1.0 or ((ma7_last / ma34_last - 1) * 100 > 0.37) and macd < -2.0)
+            and (macd < -1.0 or ((ma7_last / ma34_last - 1) * 100 > 0.37) and macd < -30.0)
             and ma1_last > ma34_last):
 
                 # compra sessione UNO solo se
