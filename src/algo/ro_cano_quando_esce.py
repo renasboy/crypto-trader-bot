@@ -131,7 +131,9 @@ class ro_cano_quando_esce(object):
             
             elif self.session == 1 and ma1_prev > ma9_prev and ma1_last < ma9_last and seconds_since_last_trade > 60:
                 action = 'sell'
-
+            # "ma1_prev > ma9_prev" compa e' giusto questo ? la compra 1 non funziona bene
+            
+            
             # vende sessione DUE solo se
             # subito dopo l'incrocio prezzo X ma7 il prezzo < ma8
             # e dopo passato 60 secondi dal last trade
