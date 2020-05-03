@@ -123,6 +123,12 @@ class ro_cano_quando_esce(object):
             # vende sessione UNO solo se
             # subito dopo l'incrocio della ma1 X ma9 la ma1 < ma9
             # e dopo passato 60 secondi dal last trade
+            
+            # vende sessione UNO
+            # se subito dopo l'incrocio della ma1 X ma9 la ma1 < ma9 - da 0 a 10 minuti dal buy 1
+            # se subito dopo l'incrocio della ma1 X ma10 la ma1 < ma10 - da 10 a 20 minuti dal buy 1
+            # se subito dopo l'incrocio della ma8 X ma34 la ma8 < ma34 - da 20 minuti dal buy 1
+            
             elif self.session == 1 and ma1_prev > ma9_prev and ma1_last < ma9_last and seconds_since_last_trade > 60:
                 action = 'sell'
 
