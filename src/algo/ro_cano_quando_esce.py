@@ -91,6 +91,8 @@ class ro_cano_quando_esce(object):
                 # ma8 > ma34 e macd < 1
                 # macd_now > macd_2_min_ago
                 # il prezzo (del BUY) deve essere > di 0,15% del prezzo piu' alto registrato nella fascia degli ultimi 10 minuti (highest_price_10_min_ago)
+                # modifica ultimi 10 minuti - i 10 minuti vanno da sell 1 a sell +10 minuti 
+                
                 elif (self.session == 2 and ma5_prev < ma14_prev and ma5_last > ma14_last
                     and ma8_last > ma43_last
                     and macd < 1
