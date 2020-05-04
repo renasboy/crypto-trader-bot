@@ -90,8 +90,7 @@ class ro_cano_quando_esce(object):
                 # subito dopo l'incrocio del ma5 X ma14 il ma5 > ma14
                 # ma8 > ma34 e macd < 1
                 # macd_now > macd_2_min_ago
-                # il prezzo (del BUY) deve essere > di 0,15% del prezzo piu' alto registrato nella fascia degli ultimi 10 minuti (highest_price_10_min_ago)
-                # modifica ultimi 10 minuti - i 10 minuti vanno da sell 1 a sell +10 minuti 
+                # TODO: Se subito dopo l'incrocio del ma5 X ma14 il ma5 > ma14 e il prezzo (del BUY) e' > di 0,15% del prezzo piu' alto registrato nella fascia degli ultimi 10 minuti (highest_price_10_min_ago) dal punto di incrocio 5-14
                 
                 elif (self.session == 2 and ma5_prev < ma14_prev and ma5_last > ma14_last
                     and ma8_last > ma43_last
@@ -116,7 +115,8 @@ class ro_cano_quando_esce(object):
 
             # vende subito se la gabbia e' chiusa
             # "condizione corona" se MACD >25 vendi subito
-            # vende subito anche se dopo 40 minuti ma8<ma34 e ma34<ma43
+            # TODO: vende subito anche se vende subito se ma8<ma34 e ma34<ma43 e ((ma8/ma34)-1*100 < -0,2
+            # TODO: vende subito se dopo 40 minuti ma8<ma34 e ma34<ma43
             
             if not self.open or macd > 25:
                 action = 'sell'
