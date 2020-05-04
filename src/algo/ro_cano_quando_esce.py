@@ -14,7 +14,6 @@ class ro_cano_quando_esce(object):
         macd = self.algo_helper.macd
 
         # MACD da anti minuti passati (3 minuti)
-        macd_3_min_ago = self.algo_helper.macd_minutes_ago(3)
         macd_2_min_ago = self.algo_helper.macd_minutes_ago(2)
         macd_4_min_ago = self.algo_helper.macd_minutes_ago(4)
         
@@ -32,8 +31,6 @@ class ro_cano_quando_esce(object):
         ma43_3_min_ago = self.algo_helper.ma_minutes_ago(43, 3)
         ma8_10_min_ago = self.algo_helper.ma_minutes_ago(8, 10)
         ma8_2_min_ago = self.algo_helper.ma_minutes_ago(8, 2)
-        ma7_3_min_ago = self.algo_helper.ma_minutes_ago(7, 3)
-
         
         # LAST TRADE
         last_trade_action = self.algo_helper.last_trade_action
@@ -70,7 +67,7 @@ class ro_cano_quando_esce(object):
             self.algo_helper.log('session {}: closed segment'.format(self.session))
 
         # compra o vende solo se ma8 >= ma34 ed anche (macd proper < -2.0 oppure se ((ma8 / ma34 - 1) * 100 > 0.37) and macd < -2.0)
-        # speciale: macd > macd_3_min_ago e ma8_last > ma8_10_min_ago
+        # speciale: macd > macd_4_min_ago e ma8_last > ma8_10_min_ago
         # macd < -1.0 a macd < -2.0
         # and (macd < -1.0 or ((ma7_last / ma34_last - 1) * 100 > 0.37) and macd < -30)
         if (self.open and self.session and last_trade_action != 'buy'
