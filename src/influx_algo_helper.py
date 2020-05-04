@@ -140,6 +140,7 @@ class influx_algo_helper(object):
         result = self.influx.query("SELECT price FROM price_volume WHERE exchange = '{}' and symbol_1 = '{}' and symbol_2 = '{}' ORDER BY time DESC limit 1".format(self.exchange, self.symbol_1, self.symbol_2))
         results = list(result.get_points())
         price = results[0]['price'] if results else 0
+        self.log('last price {}'.format(price))
         return price
 
     def highest_price_minutes_ago(self, minutes):
