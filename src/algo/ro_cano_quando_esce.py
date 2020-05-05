@@ -19,6 +19,7 @@ class ro_cano_quando_esce(object):
         
         # MAs
         ma1_last, ma1_prev = self.algo_helper.ma_last_prev(1)
+        TODO: ma2_last, ma2_prev = self.algo_helper.ma_last_prev(2)
         ma7_last, ma7_prev = self.algo_helper.ma_last_prev(7)
         ma5_last, ma5_prev = self.algo_helper.ma_last_prev(5)
         ma8_last, ma8_prev = self.algo_helper.ma_last_prev(8)
@@ -31,6 +32,8 @@ class ro_cano_quando_esce(object):
         ma43_3_min_ago = self.algo_helper.ma_minutes_ago(43, 3)
         ma8_10_min_ago = self.algo_helper.ma_minutes_ago(8, 10)
         ma8_2_min_ago = self.algo_helper.ma_minutes_ago(8, 2)
+        #TODO ma5_3_min_ago = self.algo_helper.ma_minutes_ago(5, 3)
+        #TODO ma2_1_min_ago = self.algo_helper.ma_minutes_ago(2, 1)
         
         # LAST TRADE
         last_trade_action = self.algo_helper.last_trade_action
@@ -75,6 +78,8 @@ class ro_cano_quando_esce(object):
             and ma8_last > ma8_10_min_ago
             and ma8_last > ma8_2_min_ago
             #TODO and ma8_last > ma8_3_min_ago
+            #TODO and ma2_last > ma2_1_min_ago
+            #TODO and ma5_last > ma5_3_min_ago
             and ma8_last >= ma34_last
             and ma1_last > ma8_last
             and (macd < -1.0 or ((ma7_last / ma34_last - 1) * 100 > 0.37) and macd < -30.0)
