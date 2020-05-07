@@ -21,10 +21,11 @@ class ro_cano_quando_esce(object):
         # MAs
         ma1_last, ma1_prev = self.algo_helper.ma_last_prev(1)
         TODO: ma2_last, ma2_prev = self.algo_helper.ma_last_prev(2)
+        ma5_last, ma5_prev = self.algo_helper.ma_last_prev(5)  
         ma7_last, ma7_prev = self.algo_helper.ma_last_prev(7)
-        ma5_last, ma5_prev = self.algo_helper.ma_last_prev(5)
         ma8_last, ma8_prev = self.algo_helper.ma_last_prev(8)
         ma9_last, ma9_prev = self.algo_helper.ma_last_prev(9)
+        #TODO: ma20_last, ma20_prev = self.algo_helper.ma_last_prev(20)
         ma34_last, ma34_prev = self.algo_helper.ma_last_prev(34)
         ma43_last, ma43_prev = self.algo_helper.ma_last_prev(43)
         
@@ -131,9 +132,10 @@ class ro_cano_quando_esce(object):
             # e dopo passato 60 secondi dal last trade
             
             # vende sessione UNO
-            # se subito dopo l'incrocio della ma1 X ma9 la ma1 < ma9 - da 0 a 10 minuti dal buy 1
-            # se subito dopo l'incrocio della ma1 X ma10 la ma1 < ma10 - da 10 a 20 minuti dal buy 1
-            # se subito dopo l'incrocio della ma8 X ma34 la ma8 < ma34 - da 20 minuti dal buy 1
+            #TODO: da 0 a 10 minuti dal buy 1 se subito dopo l'incrocio della ma1 X ma9 la ma1 < ma9 
+            #TODO: da 10 a 20 minuti dal buy 1 se subito dopo l'incrocio della ma1 X ma10 la ma1 < ma10 
+            #TODO: da 20 a 30 minuti dal buy 1 se subito dopo l'incrocio della ma1 X ma20 la ma1 < ma20 
+            #TODO: da 30 a 60 minuti dal buy 1 se subito dopo l'incrocio della ma8 X ma34 la ma8 < ma34 
             
             elif self.session == 1 and ma1_prev > ma9_prev and ma1_last < ma9_last and seconds_since_last_trade > 60:
                 action = 'sell'
