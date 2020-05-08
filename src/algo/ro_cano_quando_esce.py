@@ -120,6 +120,10 @@ class ro_cano_quando_esce(object):
         # vende
         elif last_trade_action == 'buy':
 
+            
+
+            
+            
             # vende subito se la gabbia e' chiusa
             # "condizione corona" se MACD >25 vendi subito
             # TODO: vende subito anche se vende subito se ma8<ma34 e ma34<ma43 e ((ma8/ma34)-1*100 < -0,2
@@ -132,10 +136,10 @@ class ro_cano_quando_esce(object):
             # e dopo passato 60 secondi dal last trade
             
             # vende sessione UNO
-            #TODO: da 0 a 10 minuti dal buy 1 se subito dopo l'incrocio della ma1 X ma9 la ma1 < ma9 
-            #TODO: da 10 a 20 minuti dal buy 1 se subito dopo l'incrocio della ma1 X ma10 la ma1 < ma10 
-            #TODO: da 20 a 30 minuti dal buy 1 se subito dopo l'incrocio della ma1 X ma20 la ma1 < ma20 
-            #TODO: da 30 a 60 minuti dal buy 1 se subito dopo l'incrocio della ma8 X ma34 la ma8 < ma34 
+            #TODO: da  0 a 16 minuti dal buy 1 se subito dopo l'incrocio della ma1 X ma9 la ma1 < ma9 ma non vendere se il guadagno e' < 0,15%            
+            #TODO: da 16 a 30 minuti dal buy 1 se subito dopo l'incrocio della ma1 X ma10 la ma1 < ma10 ma non vendere se il guadagno e' < 0,35%       
+            #TODO: da 30 a 60 minuti dal buy 1 se subito dopo l'incrocio della ma1 X ma25 la ma1 < ma25 ma non vendere se il guadagno e' < 0,60% 
+            
             
             elif self.session == 1 and ma1_prev > ma9_prev and ma1_last < ma9_last and seconds_since_last_trade > 60:
                 action = 'sell'
@@ -155,6 +159,11 @@ class ro_cano_quando_esce(object):
                 action = 'sell'
 
             # fascia di non vendita
+            #TODO fasce di non vendita
+            #TODO: da  0 a 16 minuti  non vendere se il guadagno e' < 0,15%    se la perdita e' < 0,90 %  
+            #TODO: da 16 a 30 minuti  non vendere se il guadagno e' < 0,35%    se la perdita e' < 0,90 %
+            #TODO: da 16 a 30 minuti  non vendere se il guadagno e' < 0,60 %   se la perdita e' < 0,90 %
+            
             if action == 'sell':
                 # ma anche solo se guadagno > 0.14%
                 if price - last_trade_price >= 0 and price - last_trade_price < last_trade_price * 0.0014:
