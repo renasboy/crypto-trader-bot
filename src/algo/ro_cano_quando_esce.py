@@ -25,7 +25,9 @@ class ro_cano_quando_esce(object):
         ma7_last, ma7_prev = self.algo_helper.ma_last_prev(7)
         ma8_last, ma8_prev = self.algo_helper.ma_last_prev(8)
         ma9_last, ma9_prev = self.algo_helper.ma_last_prev(9)
+        #TODO: ma10_last, ma10_prev = self.algo_helper.ma_last_prev(10)
         #TODO: ma20_last, ma20_prev = self.algo_helper.ma_last_prev(20)
+        #TODO: ma25_last, ma25_prev = self.algo_helper.ma_last_prev(25)
         ma34_last, ma34_prev = self.algo_helper.ma_last_prev(34)
         ma43_last, ma43_prev = self.algo_helper.ma_last_prev(43)
         
