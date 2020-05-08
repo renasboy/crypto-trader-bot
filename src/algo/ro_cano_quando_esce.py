@@ -34,7 +34,7 @@ class ro_cano_quando_esce(object):
         
         # MA da tanti minuti passati (MA43 3 minuti e MA7 3 minuti)
         ma43_3_min_ago = self.algo_helper.ma_minutes_ago(43, 3)
-        ma8_10_min_ago = self.algo_helper.ma_minutes_ago(8, 10)
+        ma8_7_min_ago = self.algo_helper.ma_minutes_ago(8, 7)
         ma8_2_min_ago = self.algo_helper.ma_minutes_ago(8, 2)
         #TODO ma5_3_min_ago = self.algo_helper.ma_minutes_ago(5, 3)
         #TODO ma2_1_min_ago = self.algo_helper.ma_minutes_ago(2, 1)
@@ -80,7 +80,7 @@ class ro_cano_quando_esce(object):
         if (self.open and self.session and last_trade_action != 'buy'
             and macd > macd_4_min_ago
             #TODO: and macd > macd_5_min_ago
-            and ma8_last > ma8_10_min_ago
+            and ma8_last > ma8_7_min_ago
             and ma8_last > ma8_2_min_ago
             #TODO and ma8_last > ma8_3_min_ago
             #TODO and ma2_last > ma2_1_min_ago
