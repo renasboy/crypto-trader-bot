@@ -124,10 +124,6 @@ class ro_cano_quando_esce(object):
         # vende
         elif last_trade_action == 'buy':
 
-            
-
-            
-            
             # vende subito se la gabbia e' chiusa
             # "condizione corona" se MACD >25 vendi subito
             # TODO: vende subito anche se vende subito se ma8<ma34 e ma34<ma43 e ((ma8/ma34)-1*100 < -0,2
@@ -135,20 +131,18 @@ class ro_cano_quando_esce(object):
             
             if not self.open or macd > 25:
                 action = 'sell'
+
             # vende sessione UNO solo se
-            # subito dopo l'incrocio della ma1 X ma9 la ma1 < ma9
-            # e dopo passato 60 secondi dal last trade
-            
-            # vende sessione UNO
-            #TODO: da  0 a 16 minuti dal buy 1 se subito dopo l'incrocio della ma1 X ma9 la ma1 < ma9 ma non vendere se il guadagno e' < 0,15%            
-            #TODO: da 16 a 30 minuti dal buy 1 se subito dopo l'incrocio della ma1 X ma10 la ma1 < ma10 ma non vendere se il guadagno e' < 0,35%       
-            #TODO: da 30 a 60 minuti dal buy 1 se subito dopo l'incrocio della ma1 X ma25 la ma1 < ma25 ma non vendere se il guadagno e' < 0,60% 
-            
-            
-            elif self.session == 1 and ma1_prev > ma9_prev and ma1_last < ma9_last and seconds_since_last_trade > 60:
-                action = 'sell'
-            # "ma1_prev > ma9_prev" compa e' giusto questo ? la compra 1 non funziona bene -PROBLEMA VENDE 1 forse non dobbiamo mettere "se subito dopo" ma appena ma1<ma9
-            
+            elif self.session == 1:
+                # da  1 a 16 minuti dal buy 1 se subito dopo l'incrocio della ma1 X ma9 la ma1 < ma9
+                if ma1_prev > ma9_prev and ma1_last < ma9_last and seconds_since_last_trade >= 60 and seconds_since_last_trade < 60 * 16:
+                    action = 'sell'
+                # da 16 a 30 minuti dal buy 1 se subito dopo l'incrocio della ma1 X ma10 la ma1 < ma10
+                elif ma1_prev > ma10_prev and ma1_last < ma10_last and seconds_since_last_trade >= 60 * 16 and seconds_since_last_trade < 60 * 30:
+                    action = 'sell'
+                # da 30 a 60 minuti dal buy 1 se subito dopo l'incrocio della ma1 X ma25 la ma1 < ma25
+                elif ma1_prev > ma25_prev and ma1_last < ma25_last and seconds_since_last_trade >= 60 * 30:
+                    action = 'sell'
             
             # vende sessione DUE solo se
             # subito dopo l'incrocio prezzo X ma7 il prezzo < ma8
@@ -163,18 +157,30 @@ class ro_cano_quando_esce(object):
                 action = 'sell'
 
             # fascia di non vendita
-            #TODO fasce di non vendita
-            #TODO: da  0 a 16 minuti  non vendere se il guadagno e' < 0,15%    se la perdita e' < 0,90 %  
-            #TODO: da 16 a 30 minuti  non vendere se il guadagno e' < 0,35%    se la perdita e' < 0,90 %
-            #TODO: da 16 a 30 minuti  non vendere se il guadagno e' < 0,60 %   se la perdita e' < 0,90 %
-            
             if action == 'sell':
-                # ma anche solo se guadagno > 0.14%
-                if price - last_trade_price >= 0 and price - last_trade_price < last_trade_price * 0.0014:
-                    action = None
-                # perdita < -0.90%
-                elif price - last_trade_price <= 0 and last_trade_price - price < last_trade_price * 0.0090:
-                    action = None
+                # da 1 a 16 minuti  non vendere se il guadagno e' < 0,15% o se la perdita e' < 0,90 %  
+                if seconds_since_last_trade >= 60 and seconds_since_last_trade < 60 * 16:
+                    if price - last_trade_price >= 0 and price - last_trade_price < last_trade_price * 0.0015:
+                        action = None
+                    # perdita < -0.90%
+                    elif price - last_trade_price <= 0 and last_trade_price - price < last_trade_price * 0.0090:
+                        action = None
+                # da 16 a 30 minuti  non vendere se il guadagno e' < 0,35% o se la perdita e' < 0,90 %
+                elif seconds_since_last_trade >= 60 * 16 and seconds_since_last_trade < 60 * 30:
+                    # ma anche solo se guadagno > 0.14%
+                    if price - last_trade_price >= 0 and price - last_trade_price < last_trade_price * 0.0035:
+                        action = None
+                    # perdita < -0.90%
+                    elif price - last_trade_price <= 0 and last_trade_price - price < last_trade_price * 0.0090:
+                        action = None
+                # da 16 a 30 minuti  non vendere se il guadagno e' < 0,60% o se la perdita e' < 0,90 %
+                elif seconds_since_last_trade >= 60 * 30:
+                    # ma anche solo se guadagno > 0.14%
+                    if price - last_trade_price >= 0 and price - last_trade_price < last_trade_price * 0.0060:
+                        action = None
+                    # perdita < -0.90%
+                    elif price - last_trade_price <= 0 and last_trade_price - price < last_trade_price * 0.0090:
+                        action = None
 
         self.algo_helper.log('session {}: action {}'.format(self.session, action))
 
