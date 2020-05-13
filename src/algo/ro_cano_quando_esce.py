@@ -15,20 +15,20 @@ class ro_cano_quando_esce(object):
 
         # MACD da anti minuti passati (3 minuti)
         macd_2_min_ago = self.algo_helper.macd_minutes_ago(2)
-        #TODO: macd_3_min_ago = self.algo_helper.macd_minutes_ago(3)
+        macd_3_min_ago = self.algo_helper.macd_minutes_ago(3)
         macd_4_min_ago = self.algo_helper.macd_minutes_ago(4)
         
         
         # MAs
         ma1_last, ma1_prev = self.algo_helper.ma_last_prev(1)
-        #TODO: ma2_last, ma2_prev = self.algo_helper.ma_last_prev(2)
+        ma2_last, ma2_prev = self.algo_helper.ma_last_prev(2)
         ma5_last, ma5_prev = self.algo_helper.ma_last_prev(5)  
         ma7_last, ma7_prev = self.algo_helper.ma_last_prev(7)
         ma8_last, ma8_prev = self.algo_helper.ma_last_prev(8)
         ma9_last, ma9_prev = self.algo_helper.ma_last_prev(9)
-        #TODO: ma10_last, ma10_prev = self.algo_helper.ma_last_prev(10)
-        #TODO: ma20_last, ma20_prev = self.algo_helper.ma_last_prev(20)
-        #TODO: ma25_last, ma25_prev = self.algo_helper.ma_last_prev(25)
+        ma10_last, ma10_prev = self.algo_helper.ma_last_prev(10)
+        ma20_last, ma20_prev = self.algo_helper.ma_last_prev(20)
+        ma25_last, ma25_prev = self.algo_helper.ma_last_prev(25)
         ma34_last, ma34_prev = self.algo_helper.ma_last_prev(34)
         ma43_last, ma43_prev = self.algo_helper.ma_last_prev(43)
         
@@ -37,8 +37,8 @@ class ro_cano_quando_esce(object):
         ma43_3_min_ago = self.algo_helper.ma_minutes_ago(43, 3)
         ma8_7_min_ago = self.algo_helper.ma_minutes_ago(8, 7)
         ma8_2_min_ago = self.algo_helper.ma_minutes_ago(8, 2)
-        #TODO ma5_3_min_ago = self.algo_helper.ma_minutes_ago(5, 3)
-        #TODO ma2_1_min_ago = self.algo_helper.ma_minutes_ago(2, 1)
+        ma5_3_min_ago = self.algo_helper.ma_minutes_ago(5, 3)
+        ma2_1_min_ago = self.algo_helper.ma_minutes_ago(2, 1)
         
         # LAST TRADE
         last_trade_action = self.algo_helper.last_trade_action
@@ -80,13 +80,13 @@ class ro_cano_quando_esce(object):
         # and (macd < -1.0 or ((ma7_last / ma34_last - 1) * 100 > 0.37) and macd < -30)
         if (self.open and self.session and last_trade_action != 'buy'
             and macd > macd_4_min_ago
-            #TODO: and macd >= macd_4_min_ago
-            #TODO: and macd > macd_3_min_ago
+            and macd >= macd_4_min_ago
+            and macd > macd_3_min_ago
             and ma8_last > ma8_7_min_ago
             and ma8_last > ma8_2_min_ago
-            #TODO and ma8_last > ma8_3_min_ago
-            #TODO and ma2_last > ma2_1_min_ago
-            #TODO and ma5_last > ma5_3_min_ago
+            and ma8_last > ma8_3_min_ago
+            and ma2_last > ma2_1_min_ago
+            and ma5_last > ma5_3_min_ago
             and ma8_last >= ma34_last
             and ma1_last > ma8_last
             and (macd < -1.0 or ((ma7_last / ma34_last - 1) * 100 > 0.37) and macd < -30.0)
