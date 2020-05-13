@@ -124,11 +124,8 @@ class ro_cano_quando_esce(object):
         # vende
         elif last_trade_action == 'buy':
 
-            # vende subito se la gabbia e' chiusa
-            # "condizione corona" se MACD >25 vendi subito
-            # TODO: vende subito anche se vende subito se ma8<ma34 e ma34<ma43 e ((ma8/ma34)-1*100 < -0,2
-            # TODO: vende subito se dopo 40 minuti ma8<ma34 e ma34<ma43
-            
+            # vende subito (rispetando la fascia di non vendita) se la gabbia e' chiusa
+            # "condizione corona" se MACD >25 vendi subito 
             if not self.open or macd > 25:
                 action = 'sell'
 
@@ -181,6 +178,14 @@ class ro_cano_quando_esce(object):
                     # perdita < -0.90%
                     elif price - last_trade_price <= 0 and last_trade_price - price < last_trade_price * 0.0090:
                         action = None
+
+            # vende subito (senza rispettare la fascia di non vendita)
+            # vende subito se ma8 < ma34 e ma34 < ma43 e (( ma8 / ma34 ) -1 * 100 < -0,2
+            # vende subito se dopo 120 minuti ma8<ma34 e ma34<ma43
+            if ma8_last < ma34_last and ma34_last < ma43_last and (ma8_last / ma34_last - 1) * 100 < -0.2:
+                action = 'sell'
+            elif seconds_since_last_trade > 60 * 120 and ma8_last < ma34_last and ma34_last < ma43_last:
+                action = 'sell'
 
         self.algo_helper.log('session {}: action {}'.format(self.session, action))
 
