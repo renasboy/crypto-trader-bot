@@ -79,7 +79,7 @@ class ro_cano_quando_esce(object):
         # macd < -1.0 a macd < -2.0
         # and (macd < -1.0 or ((ma7_last / ma34_last - 1) * 100 > 0.37) and macd < -30)
         if (self.open and self.session and last_trade_action != 'buy'
-            and macd > macd_4_min_ago
+          
             and macd >= macd_4_min_ago
             and macd > macd_3_min_ago
             and ma8_last > ma8_7_min_ago
