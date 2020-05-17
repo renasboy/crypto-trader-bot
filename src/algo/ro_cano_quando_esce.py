@@ -142,8 +142,8 @@ class ro_cano_quando_esce(object):
                 # da 16 a 30 minuti dal buy 1 se subito dopo l'incrocio della ma1 X ma10 la ma1 < ma10
                 elif ma1_prev > ma10_prev and ma1_last < ma10_last and seconds_since_last_trade >= 60 * 16 and seconds_since_last_trade < 60 * 30:
                     action = 'sell'
-                # da 30 a 60 minuti dal buy 1 se subito dopo l'incrocio della ma1 X ma25 la ma1 < ma25
-                elif ma1_prev > ma25_prev and ma1_last < ma25_last and seconds_since_last_trade >= 60 * 30:
+                # da 30 a 60 minuti dal buy 1 se subito dopo l'incrocio della ma1 X ma20 la ma1 < ma20
+                elif ma1_prev > ma20_prev and ma1_last < ma20_last and seconds_since_last_trade >= 60 * 30:
                     action = 'sell'
             
             # vende sessione DUE solo se
