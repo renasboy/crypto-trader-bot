@@ -91,7 +91,7 @@ class ro_cano_quando_esce(object):
             and ma2_last >= ma2_1_min_ago
             and ma5_last >= ma5_3_min_ago
             and ma8_last >= ma34_last
-            and ma1_last > ma8_last
+            and ma1_last > ma34_last
             and (macd <= -1.0 or ((ma7_last / ma34_last - 1) * 100 > 0.37) and macd < -30.0)
             and ma1_last > ma34_last):
 
