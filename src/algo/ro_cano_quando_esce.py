@@ -185,9 +185,12 @@ class ro_cano_quando_esce(object):
                         action = None
 
             # vende subito (senza rispettare la fascia di non vendita)
-            # vende subito se ma8 < ma34 e ma34 < ma43 e (( ma8 / ma34 ) -1 * 100 < -0,80 e (( ma34 / ma43 ) -1 * 100 < -0,40
+            # vende subito se ma1<ma8 e ma8 < ma34 e ma34 < ma43 e (( ultimo prezzo / prezzo ultimo buy ) -1 * 100 < -0,70
             # vende subito se dopo 120 minuti ma8<ma34 e ma34<ma43
-            if ma8_last < ma34_last and ma34_last < ma43_last and (ma34_last / ma43_last - 1) * 100 < -0.40 and (ma8_last / ma34_last - 1) * 100 < -0.80:
+            if ma1_last < ma8_last
+            and ma8_last < ma34_last
+            and ma34_last < ma43_last
+            and (last_price/last_trade_price - 1) * 100 = < -0,70:    
                 action = 'sell'
             elif seconds_since_last_trade > 60 * 120 and ma8_last < ma34_last and ma34_last < ma43_last:
                 action = 'sell'
