@@ -190,7 +190,7 @@ class ro_cano_quando_esce(object):
             if ma1_last < ma8_last
             and ma8_last < ma34_last
             and ma34_last < ma43_last
-            and (last_price/last_trade_price - 1) * 100 = < -0,70:    
+            and (last_trade_action/last_trade_price - 1) * 100 = < -0,70:    
                 action = 'sell'
             elif seconds_since_last_trade > 60 * 120 and ma8_last < ma34_last and ma34_last < ma43_last:
                 action = 'sell'
