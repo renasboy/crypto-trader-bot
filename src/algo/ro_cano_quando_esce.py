@@ -192,7 +192,9 @@ class ro_cano_quando_esce(object):
                 and ma34_last < ma43_last
                 and (float(price) / float(last_trade_price) - 1) * 100 <= -0.70):
                 action = 'sell'
-            elif seconds_since_last_trade > 60 * 120 and ma8_last < ma34_last and ma34_last < ma43_last:
+            elif seconds_since_last_trade > 60 * 120 
+            and ma8_last < ma34_last 
+            and ma34_last < ma43_last:
                 action = 'sell'
 
         self.algo_helper.log('session {}: action {}'.format(self.session, action))
