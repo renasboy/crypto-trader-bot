@@ -133,6 +133,17 @@ class ro_cano_quando_esce(object):
             # "condizione corona" se MACD >25 vendi subito 
             if not self.open or macd > 25:
                 action = 'sell'
+            # vende subito se ma1<ma8 e ma8 < ma34 e ma34 < ma43 e (( ultimo prezzo / prezzo ultimo buy ) -1 * 100 < -0.70
+            elif (ma1_last < ma8_last
+                and ma8_last < ma34_last
+                and ma34_last < ma43_last
+                and (float(price) / float(last_trade_price) - 1) * 100 <= -0.70):
+                action = 'sell'
+            # vende subito se dopo 70 minuti ma8<ma34 e ma34<ma43
+            elif (seconds_since_last_trade > 60 * 70
+                  and ma8_last < ma34_last 
+                  and ma34_last < ma43_last):
+                  action = 'sell'
 
             # vende sessione UNO solo se
             elif self.session == 1:
@@ -183,31 +194,7 @@ class ro_cano_quando_esce(object):
                     # perdita < -0.90%
                     elif price - last_trade_price <= 0 and last_trade_price - price < last_trade_price * 0.0090:
                         action = None
-
-            # vende subito (senza rispettare la fascia di non vendita)
-            # vende subito se ma1<ma8 e ma8 < ma34 e ma34 < ma43 e (( ultimo prezzo / prezzo ultimo buy ) -1 * 100 < -0.70
-            # vende subito se dopo 70 minuti ma8<ma34 e ma34<ma43
-            if (ma1_last < ma8_last
-                and ma8_last < ma34_last
-                and ma34_last < ma43_last
-                and (float(price) / float(last_trade_price) - 1) * 100 <= -0.70):
-                action = 'sell'
-            elif (seconds_since_last_trade > 60 * 70
-                  and ma8_last < ma34_last 
-                  and ma34_last < ma43_last):
-                  action = 'sell'
-                    
-                    
-            # fascia di non vendita delle "condizioni senza rispetto "
-            if action == 'sell':
-            # da 1 a 90 minuti  non vendere se il guadagno e' < 0,15% o se la perdita e' < 0,70 %  
-            if seconds_since_last_trade >= 60 and seconds_since_last_trade < 60 * 90:
-            if price - last_trade_price >= 0 and price - last_trade_price < last_trade_price * 0.0015:
-                        action = None
-            # perdita < -0.70%
-                    elif price - last_trade_price <= 0 and last_trade_price - price < last_trade_price * 0.0070:
-                        action = None
-                        
+ 
         self.algo_helper.log('session {}: action {}'.format(self.session, action))
 
         if action == 'sell':
