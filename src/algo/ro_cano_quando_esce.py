@@ -196,7 +196,18 @@ class ro_cano_quando_esce(object):
                   and ma8_last < ma34_last 
                   and ma34_last < ma43_last):
                   action = 'sell'
-
+                    
+                    
+            # fascia di non vendita delle "condizioni senza rispetto "
+            if action == 'sell':
+            # da 1 a 90 minuti  non vendere se il guadagno e' < 0,15% o se la perdita e' < 0,70 %  
+            if seconds_since_last_trade >= 60 and seconds_since_last_trade < 60 * 90:
+            if price - last_trade_price >= 0 and price - last_trade_price < last_trade_price * 0.0015:
+                        action = None
+            # perdita < -0.70%
+                    elif price - last_trade_price <= 0 and last_trade_price - price < last_trade_price * 0.0070:
+                        action = None
+                        
         self.algo_helper.log('session {}: action {}'.format(self.session, action))
 
         if action == 'sell':
