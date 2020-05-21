@@ -72,9 +72,9 @@ class ro_cano_quando_esce(object):
         elif ma34_prev and ma34_last and ma8_prev >= ma34_prev and ma8_last < ma34_last:
             self.open = False
             self.algo_helper.log('session {}: closed segment'.format(self.session))
-        # se chiude la gabbia, vende subito se la perdita > -0,90
-        # perdita > -0.90%
-        elif price - last_trade_price <= 0 and last_trade_price - price >= last_trade_price * 0.0090:
+        # se chiude la gabbia, vende subito se la perdita > -1,20
+        # perdita > -1.20%
+        elif price - last_trade_price <= 0 and last_trade_price - price >= last_trade_price * 0.0120:
             self.open = False
             self.algo_helper.log('session {}: closed segment'.format(self.session))
 
