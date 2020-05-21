@@ -173,28 +173,28 @@ class ro_cano_quando_esce(object):
 
             # fascia di non vendita
             if action == 'sell':
-                # da 1 a 16 minuti  non vendere se il guadagno e' < 0,15% o se la perdita e' < 0,90 %  
-                if seconds_since_last_trade >= 60 and seconds_since_last_trade < 60 * 16:
+                # da 1 a 30 minuti  non vendere se il guadagno e' < 0,08% o se la perdita e' < -1,20 %  
+                if seconds_since_last_trade >= 60 and seconds_since_last_trade < 60 * 30:
+                    if price - last_trade_price >= 0 and price - last_trade_price < last_trade_price * 0.0008:
+                        action = None
+                    # perdita < -1.20%
+                    elif price - last_trade_price <= 0 and last_trade_price - price < last_trade_price * 0.0120:
+                        action = None
+                # da 30 a 45 minuti  non vendere se il guadagno e' < 0,15% o se la perdita e' < -1,20 %
+                elif seconds_since_last_trade >= 60 * 30 and seconds_since_last_trade < 60 * 45:
+                    # ma anche solo se guadagno > 0.15%
                     if price - last_trade_price >= 0 and price - last_trade_price < last_trade_price * 0.0015:
                         action = None
-                    # perdita < -0.90%
-                    elif price - last_trade_price <= 0 and last_trade_price - price < last_trade_price * 0.0090:
+                    # perdita < -1.20%
+                    elif price - last_trade_price <= 0 and last_trade_price - price < last_trade_price * 0.0120:
                         action = None
-                # da 16 a 30 minuti  non vendere se il guadagno e' < 0,35% o se la perdita e' < 0,90 %
-                elif seconds_since_last_trade >= 60 * 16 and seconds_since_last_trade < 60 * 30:
-                    # ma anche solo se guadagno > 0.14%
-                    if price - last_trade_price >= 0 and price - last_trade_price < last_trade_price * 0.0035:
+                # da 45 a 60 minuti  non vendere se il guadagno e' < 0,50% o se la perdita e' < -1,20 %
+                elif seconds_since_last_trade >= 60 * 45:
+                    # ma anche solo se guadagno > 0.50%
+                    if price - last_trade_price >= 0 and price - last_trade_price < last_trade_price * 0.0050:
                         action = None
-                    # perdita < -0.90%
-                    elif price - last_trade_price <= 0 and last_trade_price - price < last_trade_price * 0.0090:
-                        action = None
-                # da 16 a 30 minuti  non vendere se il guadagno e' < 0,60% o se la perdita e' < 0,90 %
-                elif seconds_since_last_trade >= 60 * 30:
-                    # ma anche solo se guadagno > 0.14%
-                    if price - last_trade_price >= 0 and price - last_trade_price < last_trade_price * 0.0060:
-                        action = None
-                    # perdita < -0.90%
-                    elif price - last_trade_price <= 0 and last_trade_price - price < last_trade_price * 0.0090:
+                    # perdita < -1.20%
+                    elif price - last_trade_price <= 0 and last_trade_price - price < last_trade_price * 0.0120:
                         action = None
  
         self.algo_helper.log('session {}: action {}'.format(self.session, action))
