@@ -135,14 +135,14 @@ class ro_cano_quando_esce(object):
             # "condizione corona" se MACD >25 vendi subito 
             if not self.open or macd > 25:
                 action = 'sell'
-            # vende subito se ma1<ma8 e ma8 < ma34 e ma34 < ma43 e (( ultimo prezzo / prezzo ultimo buy ) -1 * 100 < -0.70
+            # vende subito se ma1<ma8 e ma8 < ma34 e ma34 < ma43 e (( ultimo prezzo / prezzo ultimo buy ) -1 * 100 < -0.75
             elif (ma1_last < ma8_last
                 and ma8_last < ma34_last
                 and ma34_last < ma43_last
-                and (float(price) / float(last_trade_price) - 1) * 100 <= -0.70):
+                and (float(price) / float(last_trade_price) - 1) * 100 <= -0.75):
                 action = 'sell'
-            # vende subito se dopo 70 minuti ma8<ma34 e ma34<ma43
-            elif (seconds_since_last_trade > 60 * 70
+            # vende subito se dopo 60 minuti ma8<ma34 e ma34<ma43
+            elif (seconds_since_last_trade > 60 * 60
                   and ma8_last < ma34_last 
                   and ma34_last < ma43_last):
                   action = 'sell'
