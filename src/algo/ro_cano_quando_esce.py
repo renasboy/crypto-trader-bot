@@ -188,10 +188,10 @@ class ro_cano_quando_esce(object):
                     # perdita < -1.20%
                     elif price - last_trade_price <= 0 and last_trade_price - price < last_trade_price * 0.0120:
                         action = None
-                # da 45 a 60 minuti  non vendere se il guadagno e' < 0,50% o se la perdita e' < -1,20 %
+                # da 45 a 60 minuti  non vendere se il guadagno e' < 0,30% o se la perdita e' < -1,20 %
                 elif seconds_since_last_trade >= 60 * 45:
-                    # ma anche solo se guadagno > 0.50%
-                    if price - last_trade_price >= 0 and price - last_trade_price < last_trade_price * 0.0050:
+                    # ma anche solo se guadagno > 0.30%
+                    if price - last_trade_price >= 0 and price - last_trade_price < last_trade_price * 0.0030:
                         action = None
                     # perdita < -1.20%
                     elif price - last_trade_price <= 0 and last_trade_price - price < last_trade_price * 0.0120:
