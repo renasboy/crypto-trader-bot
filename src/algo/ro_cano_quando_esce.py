@@ -137,16 +137,15 @@ class ro_cano_quando_esce(object):
                 action = 'sell'
             # vende subito se ma1<ma8 e ma8 < ma34 e ma34 < ma43 e (( ultimo prezzo / prezzo ultimo buy ) -1 * 100 < -0.75
             elif (ma1_last < ma8_last
-                and ma8_last < ma34_last
-                and ma34_last < ma43_last
-                and (float(price) / float(last_trade_price) - 1) * 100 <= -0.75):
+                    and ma8_last < ma34_last
+                    and ma34_last < ma43_last
+                    and (float(price) / float(last_trade_price) - 1) * 100 <= -0.75):
                 action = 'sell'
             # vende subito se dopo 60 minuti ma8<ma34 e ma34<ma43
             elif (seconds_since_last_trade > 60 * 60
-                  and ma8_last < ma34_last 
-                  and ma34_last < ma43_last):
-                  action = 'sell'
-
+                    and ma8_last < ma34_last 
+                    and ma34_last < ma43_last):
+                action = 'sell'
             # vende sessione UNO solo se
             elif self.session == 1:
                 # da  1 a 30 minuti dal buy 1 se subito dopo l'incrocio della ma1 X ma5 la ma1 < ma5
