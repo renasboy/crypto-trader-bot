@@ -97,7 +97,6 @@ class ro_cano_quando_esce(object):
             and ma2_last >= ma2_1_min_ago
             and ma5_last >= ma5_3_min_ago
             and ma8_last >= ma34_last
-            and ma1_last > ma34_last
             and (macd <= 8.0 or ((ma7_last / ma34_last - 1) * 100 > 0.37) and macd < -30.0)
             and ma1_last > ma34_last):
 
@@ -126,8 +125,8 @@ class ro_cano_quando_esce(object):
 
                 # fascia di non compra
                 if action == 'buy':
-                    # ma anche solo se ma43_2_min_ago > ma43_now 
-                    if ma43_2_min_ago > ma43_last:
+                    # ma anche solo se ma43_last < ma43_2_min_ago
+                    if ma43_last < ma43_2_min_ago:
                         action = None
 
         # vende
