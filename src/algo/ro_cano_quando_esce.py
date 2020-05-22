@@ -52,8 +52,7 @@ class ro_cano_quando_esce(object):
         seconds_since_last_trade = 0
         if last_trade_time:
             seconds_since_last_trade = (datetime.now() - datetime.strptime(last_trade_time[:last_trade_time.index('.')], '%Y-%m-%dT%H:%M:%S')).seconds
-
-        self.algo_helper.log('last trade time {}: seconds since last trade: {}'.format(last_trade_time, seconds_since_last_trade))
+            self.algo_helper.log('last trade time {}: seconds since last trade: {}'.format(last_trade_time, seconds_since_last_trade))
 
         # HIGHER PRICE MIN AGO (10)
         highest_price_10_min_ago = self.algo_helper.highest_price_minutes_ago(10)
