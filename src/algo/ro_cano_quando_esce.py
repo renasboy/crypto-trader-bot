@@ -85,21 +85,24 @@ class ro_cano_quando_esce(object):
         # macd <= 8.0 a macd < -2.0
         # and (macd < 8.0 or ((ma7_last / ma34_last - 1) * 100 > 0.37) and macd < -30)
         if (self.open and self.session and last_trade_action != 'buy'
-            and macd >= macd_4_min_ago
-            and macd > macd_3_min_ago
+            and ma1_last > ma34_last
+            and ma8_last >= ma34_last
+            and ma2_last >= ma2_1_min_ago
+            and ma5_last >= ma5_3_min_ago
+            and ma8_last > ma8_2_min_ago
+            and ma8_last > ma8_3_min_ago
+            and ma8_last > ma8_5_min_ago
             and ma43_last > ma43_2_min_ago
             and ma43_last >= ma43_5_min_ago
             and ma100_last >= ma100_2_min_ago
             and ma100_last >= ma100_3_min_ago
-            and ma8_last > ma8_5_min_ago
-            and ma8_last > ma8_2_min_ago
-            and ma8_last > ma8_3_min_ago
-            and ma2_last >= ma2_1_min_ago
-            and ma5_last >= ma5_3_min_ago
-            and ma8_last >= ma34_last
-            and (macd <= 8.0 or ((ma7_last / ma34_last - 1) * 100 > 0.37) and macd < -30.0)
-            and ma1_last > ma34_last):
-
+            and macd > macd_3_min_ago
+            and macd >= macd_4_min_ago 
+            and macd <= 8.0 ):
+            or ((ma7_last / ma34_last - 1) * 100 > 0.37) and macd < -30.0)
+            #TODO: separare la condizione speciale
+            
+            
                 # compra sessione UNO solo se
                 # subito
                 if self.session == 1:
