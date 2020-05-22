@@ -98,8 +98,8 @@ class ro_cano_quando_esce(object):
             and ma100_last >= ma100_3_min_ago
             and macd > macd_3_min_ago
             and macd >= macd_4_min_ago 
-            and macd <= 8.0 ):
-            or ((ma7_last / ma34_last - 1) * 100 > 0.37) and macd < -30.0)
+            and macd <= 8.0
+            or ((ma7_last / ma34_last - 1) * 100 > 0.37) and macd < -30.0):
             #TODO: separare la condizione speciale
             
             
