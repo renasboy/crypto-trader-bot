@@ -39,7 +39,6 @@ class ro_cano_quando_esce(object):
         ma8_3_min_ago = self.algo_helper.ma_minutes_ago(8, 3)
         ma8_2_min_ago = self.algo_helper.ma_minutes_ago(8, 2)
         ma5_3_min_ago = self.algo_helper.ma_minutes_ago(5, 3)
-        ma2_1_min_ago = self.algo_helper.ma_minutes_ago(2, 1)
         ma100_2_min_ago = self.algo_helper.ma_minutes_ago(100, 2)
         ma100_3_min_ago = self.algo_helper.ma_minutes_ago(100, 3)
         ma34_2_min_ago = self.algo_helper.ma_minutes_ago(34, 2)
@@ -86,7 +85,6 @@ class ro_cano_quando_esce(object):
         if (self.open and self.session and last_trade_action != 'buy'
             and ma1_last > ma34_last
             and ma8_last >= ma34_last
-            and ma2_last >= ma2_1_min_ago
             and ma5_last >= ma5_3_min_ago
             and ma8_last > ma8_2_min_ago
             and ma8_last > ma8_3_min_ago
