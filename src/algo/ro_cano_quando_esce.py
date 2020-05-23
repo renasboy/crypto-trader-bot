@@ -13,13 +13,13 @@ class ro_cano_quando_esce(object):
         # MACD
         macd = self.algo_helper.macd
 
-        # MACD da anti minuti passati (3 minuti)
+        # tempo del MACD ( da tanti minuti passati (3 minuti )
         macd_2_min_ago = self.algo_helper.macd_minutes_ago(2)
         macd_3_min_ago = self.algo_helper.macd_minutes_ago(3)
         macd_4_min_ago = self.algo_helper.macd_minutes_ago(4)
         
         
-        # MAs
+        # ( medie mobili utilizzate ) MAs
         ma1_last, ma1_prev = self.algo_helper.ma_last_prev(1)
         ma2_last, ma2_prev = self.algo_helper.ma_last_prev(2)
         ma5_last, ma5_prev = self.algo_helper.ma_last_prev(5)  
@@ -33,7 +33,7 @@ class ro_cano_quando_esce(object):
         ma43_last, ma43_prev = self.algo_helper.ma_last_prev(43)
         ma100_last, ma100_prev = self.algo_helper.ma_last_prev(100)
         
-        # MA da tanti minuti passati (per es. ma43 2 minuti)
+        # tempo delle medie mobili (MA da tanti minuti passati (per es. ma43 2 minuti))
         ma43_2_min_ago = self.algo_helper.ma_minutes_ago(43, 2)
         ma43_5_min_ago = self.algo_helper.ma_minutes_ago(43, 5)
         ma8_5_min_ago = self.algo_helper.ma_minutes_ago(8, 5)
