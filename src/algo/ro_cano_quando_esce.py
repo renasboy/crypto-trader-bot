@@ -13,7 +13,7 @@ class ro_cano_quando_esce(object):
         # MACD
         macd = self.algo_helper.macd
 
-        # tempo del MACD ( da tanti minuti passati (3 minuti )
+        # tempo del MACD ( da tanti minuti passati (3 minuti ))
         macd_2_min_ago = self.algo_helper.macd_minutes_ago(2)
         macd_3_min_ago = self.algo_helper.macd_minutes_ago(3)
         macd_4_min_ago = self.algo_helper.macd_minutes_ago(4)
