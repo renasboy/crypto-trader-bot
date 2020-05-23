@@ -36,7 +36,6 @@ class ro_cano_quando_esce(object):
         # tempo delle medie mobili (MA da tanti minuti passati (per es. ma43 2 minuti))
         ma43_2_min_ago = self.algo_helper.ma_minutes_ago(43, 2)
         ma43_5_min_ago = self.algo_helper.ma_minutes_ago(43, 5)
-        ma8_5_min_ago = self.algo_helper.ma_minutes_ago(8, 5)
         ma8_3_min_ago = self.algo_helper.ma_minutes_ago(8, 3)
         ma8_2_min_ago = self.algo_helper.ma_minutes_ago(8, 2)
         ma5_3_min_ago = self.algo_helper.ma_minutes_ago(5, 3)
@@ -91,7 +90,6 @@ class ro_cano_quando_esce(object):
             and ma5_last >= ma5_3_min_ago
             and ma8_last > ma8_2_min_ago
             and ma8_last > ma8_3_min_ago
-            and ma8_last > ma8_5_min_ago
             and ma34_last > ma34_2_min_ago
             and ma43_last > ma43_2_min_ago
             and ma43_last >= ma43_5_min_ago
