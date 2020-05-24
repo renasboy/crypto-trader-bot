@@ -85,6 +85,7 @@ class ro_cano_quando_esce(object):
         if (self.open and self.session and last_trade_action != 'buy'
             and ma1_last > ma34_last
             and ma8_last >= ma34_last
+            and ma8_last > ma100_last
             and ma5_last >= ma5_3_min_ago
             and ma8_last > ma8_2_min_ago
             and ma8_last > ma8_3_min_ago
