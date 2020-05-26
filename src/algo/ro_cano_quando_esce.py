@@ -86,6 +86,7 @@ class ro_cano_quando_esce(object):
             and ma1_last > ma34_last
             and ma8_last >= ma34_last
             and ma8_last > ma100_last
+            and ma34_last > ma43_last
             and ma5_last >= ma5_3_min_ago
             and ma8_last > ma8_2_min_ago
             and ma8_last > ma8_3_min_ago
