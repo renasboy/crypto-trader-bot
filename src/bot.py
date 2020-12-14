@@ -110,7 +110,7 @@ if __name__ == '__main__':
     algo_helper = influx_algo_helper(EXCHANGE, SYMBOL_1, SYMBOL_2)
     algo_helper.update_last_trade()
 
-    if ALGO in ('ro_cano', 'ro_cano_che_gira', 'ro_cano_quando_esce', 'boring_but_safe'):
+    if ALGO in ('ro_cano', 'ro_cano_che_gira', 'ro_cano_quando_esce', 'ro_cano_che_ritorna', 'boring_but_safe'):
         module = __import__('algo.{}'.format(ALGO), fromlist=[ALGO])
         algo = getattr(module, ALGO)(algo_helper)
 
