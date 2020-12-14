@@ -20,7 +20,7 @@ class coinbasepro(object):
         self.public_key = public_key
         self.private_key = private_key
         self.passphrase = passphrase
-        self.url = 'https://api.pro.coinbase.com/'
+        self.url = 'https://api.pro.coinbase.com'
         self.websocket = 'wss://ws-feed.pro.coinbase.com/'
 
     def start_listener(self, on_msg, on_err, on_open, on_close):
