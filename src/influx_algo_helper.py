@@ -154,7 +154,7 @@ class influx_algo_helper(object):
         self.last_trade_time, self.last_trade_session, self.last_trade_action, self.last_trade_price = self.last_trade()
 
     def last_trade(self):
-        result = self.influx.query("SELECT price, type, session FROM trade WHERE exchange = '{}' and symbol_1 = '{}' and symbol_2 = '{}' ORDER BY time DESC limit 1".format(self.exchange, self.symbol_1, self.symbol_2))
+        result = self.influx.query("SELECT price, type, session FROM trade WHERE exchange = '{}' and symbol_1 = '{}' and symbol_2 = '{}' ORDER BY time DESC limit 1 tz('Europe/Amsterdam')".format(self.exchange, self.symbol_1, self.symbol_2))
         results = list(result.get_points())
         date_time = results[0]['time'] if results else None
         session = results[0]['session'] if results else 0
