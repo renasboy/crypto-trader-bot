@@ -50,43 +50,10 @@ class ro_cano_che_ritorna(object):
         
         # LAST TRADE
         last_trade_action = self.algo_helper.last_trade_action
-        last_trade_price = self.algo_helper.last_trade_price
         last_trade_time = self.algo_helper.last_trade_time
         
-        
-        # questa non la capisco compa !
-                seconds_since_last_trade = 0
-        if last_trade_time:
-            seconds_since_last_trade = (datetime.now() - datetime.strptime(last_trade_time[:last_trade_time.index('.')], '%Y-%m-%dT%H:%M:%S')).seconds
-        
-        
-          # CURRENT PRICE
-        price = self.algo_helper.price
-
-        action = None
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        # LAST TRADE
-        last_trade_action = self.algo_helper.last_trade_action
-        last_trade_time = self.algo_helper.last_trade_time
+        # QUESTA NEL NUOVO NON L'HAI MESSA COMPA  FORSE DA TOGLIERE ?
+        # last_trade_price = self.algo_helper.last_trade_price
 
         seconds_since_last_trade = 0
         if last_trade_time:
@@ -94,11 +61,37 @@ class ro_cano_che_ritorna(object):
             self.algo_helper.log('last trade time {}'.format(last_trade_time)) 
             self.algo_helper.log('seconds since last trade: {}'.format(seconds_since_last_trade))
 
+        
         # CURRENT PRICE
         price = self.algo_helper.price
-
         action = None
-
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         # compra sempre e subito
         if last_trade_action != 'buy':
             action = 'buy'
