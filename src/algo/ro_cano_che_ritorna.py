@@ -60,7 +60,10 @@ class ro_cano_che_ritorna(object):
             seconds_since_last_trade = (datetime.now() - datetime.strptime(last_trade_time[:last_trade_time.index('.')], '%Y-%m-%dT%H:%M:%S')).seconds
         
         
-        
+          # CURRENT PRICE
+        price = self.algo_helper.price
+
+        action = None
         
         
         
