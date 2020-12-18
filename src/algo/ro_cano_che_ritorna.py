@@ -54,6 +54,10 @@ class ro_cano_che_ritorna(object):
         last_trade_time = self.algo_helper.last_trade_time
         
         
+        # questa non la capisco compa !
+                seconds_since_last_trade = 0
+        if last_trade_time:
+            seconds_since_last_trade = (datetime.now() - datetime.strptime(last_trade_time[:last_trade_time.index('.')], '%Y-%m-%dT%H:%M:%S')).seconds
         
         
         
