@@ -59,8 +59,8 @@ class ro_cano_che_ritorna(object):
         # vende
         if last_trade_action == 'buy':
 
-            # solo se secondi passati della compra > 6060 (60 minuti)
-            if seconds_since_last_trade > 6060:
+            # solo se secondi passati della compra > 3600 (60 minuti)
+            if seconds_since_last_trade > 3600:
                 action = 'sell'
 
         self.algo_helper.log('action {}'.format(action))
