@@ -70,7 +70,7 @@ class ro_cano_che_ritorna(object):
         
         
         #compa, prega per me
-        
+        #compa, pieta' di me. qua si e' gia' rotto ! ma non credevo di aver commesso errori.
         
         
         
