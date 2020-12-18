@@ -9,6 +9,34 @@ class ro_cano_che_ritorna(object):
     @property
     def action(self):
 
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         # LAST TRADE
         last_trade_action = self.algo_helper.last_trade_action
         last_trade_time = self.algo_helper.last_trade_time
