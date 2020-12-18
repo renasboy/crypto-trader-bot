@@ -11,7 +11,47 @@ class ro_cano_che_ritorna(object):
 
         
         
+ #TIME dopo quanto tempo ro cano ritorna
+           60 minuti x 60 = 3600 secondi
+
+        # MACD
+        macd = self.algo_helper.macd
+
+        # MACD di 2-3-4 minuti prima
+        macd_2_min_ago = self.algo_helper.macd_minutes_ago(2)
+        macd_3_min_ago = self.algo_helper.macd_minutes_ago(3)
+        macd_4_min_ago = self.algo_helper.macd_minutes_ago(4)
         
+        
+        # MAs
+        ma1_last, ma1_prev = self.algo_helper.ma_last_prev(1)
+        ma2_last, ma2_prev = self.algo_helper.ma_last_prev(2)
+        ma5_last, ma5_prev = self.algo_helper.ma_last_prev(5)  
+        ma7_last, ma7_prev = self.algo_helper.ma_last_prev(7)
+        ma8_last, ma8_prev = self.algo_helper.ma_last_prev(8)
+        ma9_last, ma9_prev = self.algo_helper.ma_last_prev(9)
+        ma10_last, ma10_prev = self.algo_helper.ma_last_prev(10)
+        ma20_last, ma20_prev = self.algo_helper.ma_last_prev(20)
+        ma25_last, ma25_prev = self.algo_helper.ma_last_prev(25)
+        ma34_last, ma34_prev = self.algo_helper.ma_last_prev(34)
+        ma43_last, ma43_prev = self.algo_helper.ma_last_prev(43)
+        
+        
+        # MA (2-5-8-43) di  x minuti prima
+        ma2_1_min_ago = self.algo_helper.ma_minutes_ago(2, 1)
+        ma5_3_min_ago = self.algo_helper.ma_minutes_ago(5, 3)
+        ma8_2_min_ago = self.algo_helper.ma_minutes_ago(8, 2)
+        ma8_3_min_ago = self.algo_helper.ma_minutes_ago(8, 3)
+        ma8_7_min_ago = self.algo_helper.ma_minutes_ago(8, 7)
+        ma43_3_min_ago = self.algo_helper.ma_minutes_ago(43, 3)
+        ma43_7_min_ago = self.algo_helper.ma_minutes_ago(43, 7)
+        
+        
+        
+        # LAST TRADE
+        last_trade_action = self.algo_helper.last_trade_action
+        last_trade_price = self.algo_helper.last_trade_price
+        last_trade_time = self.algo_helper.last_trade_time
         
         
         
