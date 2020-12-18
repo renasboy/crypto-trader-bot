@@ -69,7 +69,7 @@ class ro_cano_che_ritorna(object):
         
         
         
-        
+        #compa, prega per me
         
         
         
