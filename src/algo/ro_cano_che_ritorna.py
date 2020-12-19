@@ -8,11 +8,8 @@ class ro_cano_che_ritorna(object):
 
     @property
     def action(self):
-
         
-        
- #TIME dopo quanto tempo ro cano ritorna
-           60 minuti x 60 = 3600 secondi
+        # TIME dopo quanto tempo ro cano ritorna 60 minuti x 60 = 3600 secondi
 
         # MACD
         macd = self.algo_helper.macd
@@ -21,7 +18,6 @@ class ro_cano_che_ritorna(object):
         macd_2_min_ago = self.algo_helper.macd_minutes_ago(2)
         macd_3_min_ago = self.algo_helper.macd_minutes_ago(3)
         macd_4_min_ago = self.algo_helper.macd_minutes_ago(4)
-        
         
         # MAs
         ma1_last, ma1_prev = self.algo_helper.ma_last_prev(1)
@@ -36,7 +32,6 @@ class ro_cano_che_ritorna(object):
         ma34_last, ma34_prev = self.algo_helper.ma_last_prev(34)
         ma43_last, ma43_prev = self.algo_helper.ma_last_prev(43)
         
-        
         # MA (2-5-8-43) di  x minuti prima
         ma2_1_min_ago = self.algo_helper.ma_minutes_ago(2, 1)
         ma5_3_min_ago = self.algo_helper.ma_minutes_ago(5, 3)
@@ -46,51 +41,19 @@ class ro_cano_che_ritorna(object):
         ma43_3_min_ago = self.algo_helper.ma_minutes_ago(43, 3)
         ma43_7_min_ago = self.algo_helper.ma_minutes_ago(43, 7)
         
-        
-        
         # LAST TRADE
         last_trade_action = self.algo_helper.last_trade_action
         last_trade_time = self.algo_helper.last_trade_time
-        
-        # QUESTA NEL NUOVO NON L'HAI MESSA COMPA  FORSE DA TOGLIERE ?
-        # last_trade_price = self.algo_helper.last_trade_price
 
         seconds_since_last_trade = 0
         if last_trade_time:
             seconds_since_last_trade = (datetime.now() - datetime.strptime(last_trade_time[:last_trade_time.index('.')], '%Y-%m-%dT%H:%M:%S')).seconds
             self.algo_helper.log('last trade time {}'.format(last_trade_time)) 
             self.algo_helper.log('seconds since last trade: {}'.format(seconds_since_last_trade))
-
         
         # CURRENT PRICE
         price = self.algo_helper.price
         action = None
-        
-        
-        
-        
-        #compa, prega per me
-        #compa, pieta' di me. qua si e' gia' rotto ! ma non credevo di aver commesso errori.
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         
         # compra sempre e subito
         if last_trade_action != 'buy':
