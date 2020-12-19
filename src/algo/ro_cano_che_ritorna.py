@@ -55,6 +55,27 @@ class ro_cano_che_ritorna(object):
         price = self.algo_helper.price
         action = None
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         # compra sempre e subito
         if last_trade_action != 'buy':
             action = 'buy'
