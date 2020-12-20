@@ -58,33 +58,49 @@ class ro_cano_che_ritorna(object):
         action = None
         
         
-        # SI APRE LA GABBIA se ma100_last> ma100_5_min_ago
-        
-        # COMPRA 1
-        # se macd > macd_3_min_ago 
         
         
         
         
         
         
+        # SI APRE LA GABBIA se ma100_last>ma100_5_min_ago
+        if ma100_last>ma100_5_min_ago
+            if not self.session or not self.open:
+               self.session = 1
+               self.open = True
+               self.algo_helper.log('session {}: open segment'.format(self.session))
         
         
         
+        # COMPRA sessione 1
+        #se ma100_last>ma100_5_min_ago
+        #e se macd > macd_3_min_ago 
+        
+        if (self.open and self.session and last_trade_action != 'buy'
+        and macd > macd_3_min_ago):
         
         
+                if self.session == 1:
+                    action = 'buy'
         
         
+     
         
-        
-        
-        
-        
-        
-        # compra sempre e subito
-        if last_trade_action != 'buy':
-            action = 'buy'
 
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
         # vende
         if last_trade_action == 'buy':
 
