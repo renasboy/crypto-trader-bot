@@ -5,6 +5,7 @@ class ro_cano_che_ritorna(object):
     def __init__(self, helper):
         self.algo_helper = helper
         self.session = 0
+        self.open = False
 
     @property
     def action(self):
@@ -65,7 +66,7 @@ class ro_cano_che_ritorna(object):
         
         
         # SI APRE LA GABBIA se ma100_last>ma100_5_min_ago
-        if ma100_last>ma100_5_min_ago
+        if ma100_last > ma100_5_min_ago:
             if not self.session or not self.open:
                self.session = 1
                self.open = True
