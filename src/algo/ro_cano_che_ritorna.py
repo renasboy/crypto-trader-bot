@@ -121,14 +121,27 @@ class ro_cano_che_ritorna(object):
         
         # vende
         if last_trade_action == 'buy':
-            if macd < macd_3_min_ago:
-                 action = 'sell'
+           
+            if self.session == 1:
+                if macd < macd_3_min_ago:
+                    action = 'sell'
+            elif self.session == 2:
+                if macd < macd_3_min_ago:
+                    action = 'sell' 
+            else:
+                if macd < macd_3_min_ago:
+                    action = 'sell' 
+            
+            
+            
+            
+           
             if seconds_since_last_trade > 1200:
                  action = 'sell'
 
         self.algo_helper.log('action {}'.format(action))
 
-        if action == 'buy':
+        if action == 'sell':
             self.session += 1
 
         return action
