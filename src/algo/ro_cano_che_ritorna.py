@@ -94,19 +94,7 @@ class ro_cano_che_ritorna(object):
                     action = 'buy' 
         
      
-        
-
-
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+ 
             
             
         # vende
