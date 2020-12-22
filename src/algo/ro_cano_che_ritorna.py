@@ -10,7 +10,7 @@ class ro_cano_che_ritorna(object):
     @property
     def action(self):
         
-        # TIME dopo quanto tempo ro cano ritorna 60 minuti x 60 = 3600 secondi
+        # TIME dopo quanto tempo ro cano ritorna ( per esempio 60 minuti x 60 = 3600 secondi )
 
         # MACD
         macd = self.algo_helper.macd
@@ -112,8 +112,8 @@ class ro_cano_che_ritorna(object):
         # vende
         if last_trade_action == 'buy':
 
-            # solo se secondi passati della compra > 600 (10 minuti)
-            if seconds_since_last_trade > 600:
+            # solo se secondi passati della compra > 1200 (20 minuti)
+            if seconds_since_last_trade > 1200:
                 action = 'sell'
 
         self.algo_helper.log('action {}'.format(action))
