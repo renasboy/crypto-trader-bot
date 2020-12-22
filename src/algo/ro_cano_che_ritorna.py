@@ -65,8 +65,12 @@ class ro_cano_che_ritorna(object):
         
         
         
-        # SI APRE LA GABBIA se ma100_last>ma100_5_min_ago
-        if ma100_last > ma100_5_min_ago:
+        
+        
+        
+        
+        # SI APRE LA GABBIA se macd > macd_3_min_ago
+        if macd > macd_3_min_ago:
             if not self.session or not self.open:
                self.session = 1
                self.open = True
@@ -75,8 +79,8 @@ class ro_cano_che_ritorna(object):
         
         
         # COMPRA sessione 1
-        #se ma100_last>ma100_5_min_ago
-        #e se macd > macd_3_min_ago 
+      
+        # se macd > macd_3_min_ago 
         
         if (self.open and self.session and last_trade_action != 'buy'
         and macd > macd_3_min_ago):
