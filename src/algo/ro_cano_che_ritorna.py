@@ -97,6 +97,18 @@ class ro_cano_che_ritorna(object):
  
 
 
+
+
+
+
+        # SI CHIUDE LA GABBIA se macd < macd_3_min_ago
+
+    
+    
+    
+    
+    
+    
         # VENDE sessione 1
         
         # se secondi passati della compra > 1200 (20 minuti)
