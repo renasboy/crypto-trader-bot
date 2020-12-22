@@ -102,7 +102,7 @@ class ro_cano_che_ritorna(object):
 
 
         # SI CHIUDE LA GABBIA se macd < macd_3_min_ago
-
+       #if macd < macd_3_min_ago:
     
     
     
