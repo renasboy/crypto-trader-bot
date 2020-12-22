@@ -95,12 +95,20 @@ class ro_cano_che_ritorna(object):
         
      
  
+
+
+        # VENDE sessione 1
+        
+        # se secondi passati della compra > 1200 (20 minuti)
+        
+        # ma vende anche se (oppure se) macd < macd_3min_ago
+    
             
-            
+        
         # vende
         if last_trade_action == 'buy':
 
-            # solo se secondi passati della compra > 1200 (20 minuti)
+            # se secondi passati della compra > 1200 (20 minuti)
             if seconds_since_last_trade > 1200:
                 action = 'sell'
 
