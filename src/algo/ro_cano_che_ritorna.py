@@ -88,7 +88,10 @@ class ro_cano_che_ritorna(object):
         
                 if self.session == 1:
                     action = 'buy'
-        
+                elif self.session == 2:
+                    action = 'buy' 
+                else:
+                    action = 'buy' 
         
      
         
