@@ -74,6 +74,8 @@ class ro_cano_che_ritorna(object):
         # e se ma20_last>ma20_3_min_ago
         
         if macd > macd_3_min_ago:
+            #"and if" ma20_last>ma20_3_min_ago
+            
             if not self.session or not self.open:
                self.session = 1
                self.open = True
@@ -88,6 +90,7 @@ class ro_cano_che_ritorna(object):
         
         if (self.open and self.session and last_trade_action != 'buy'
         and macd > macd_3_min_ago):
+            #"and if" ma20_last>ma20_3_min_ago
         
         
                 if self.session == 1:
