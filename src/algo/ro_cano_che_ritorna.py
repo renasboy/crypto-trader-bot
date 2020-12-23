@@ -71,6 +71,8 @@ class ro_cano_che_ritorna(object):
         
         
         # SI APRE LA GABBIA se macd > macd_3_min_ago
+        # e ma20_last>ma20_3_min_ago
+        
         if macd > macd_3_min_ago:
             if not self.session or not self.open:
                self.session = 1
