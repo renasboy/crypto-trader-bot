@@ -120,7 +120,7 @@ class ro_cano_che_ritorna(object):
             
         
         # vende
-        if last_trade_action == 'buy':
+        elif last_trade_action == 'buy':
            
             if self.session == 1:
                 if macd < macd_3_min_ago:
