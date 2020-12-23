@@ -33,6 +33,8 @@ class ro_cano_che_ritorna(object):
         #ma34_last, ma34_prev = self.algo_helper.ma_last_prev(34)
         #ma43_last, ma43_prev = self.algo_helper.ma_last_prev(43)
         ma100_last, ma100_prev = self.algo_helper.ma_last_prev(100)
+        #ma200_last, ma200_prev = self.algo_helper.ma_last_prev(200)
+        
         
         # MA (2-5-8-20-43-100) di  x minuti prima
         #ma2_1_min_ago = self.algo_helper.ma_minutes_ago(2, 1)
@@ -74,7 +76,7 @@ class ro_cano_che_ritorna(object):
         # se macd > macd_3_min_ago
         # e se ma20_last > ma20_3_min_ago
         # e se ma100_last > ma100_5_min_ago
-        
+        # e se ma200_prev and ma200_last and ma20_prev < ma200_prev and ma20_last >= ma200_last:
         
         if macd > macd_3_min_ago:
             #"and if" ma20_last>ma20_3_min_ago
