@@ -77,11 +77,12 @@ class ro_cano_che_ritorna(object):
         # e se ma20_last > ma20_3_min_ago
         # e se ma100_last > ma100_5_min_ago
         # e se ma200_prev and ma200_last and ma20_prev < ma200_prev and ma20_last >= ma200_last:
+   
         
         if macd > macd_3_min_ago:
-            #"and if" ma20_last>ma20_3_min_ago
-            #"and if" ma100_last >ma100_5_min_ago
-            
+            #"and if" ma20_last > ma20_3_min_ago
+            #"and if" ma100_last > ma100_5_min_ago
+            #"and if" ma200_prev and ma200_last and ma20_prev < ma200_prev and ma20_last >= ma200_last:
             
             if not self.session or not self.open:
                self.session = 1
@@ -95,12 +96,15 @@ class ro_cano_che_ritorna(object):
         # se macd > macd_3_min_ago 
         # e se ma20_last > ma20_3_min_ago
         # e se ma100_last > ma100_5_min_ago
+        # e se ma200_prev and ma200_last and ma20_prev < ma200_prev and ma20_last >= ma200_last:
         
         if (self.open and self.session and last_trade_action != 'buy'
         and macd > macd_3_min_ago):
             #"and if" ma20_last>ma20_3_min_ago
-        
-        
+            #"and if" ma100_last > ma100_5_min_ago
+            #"and if" ma200_prev and ma200_last and ma20_prev < ma200_prev and ma20_last >= ma200_last:
+            
+            
                 if self.session == 1:
                     action = 'buy'
                 elif self.session == 2:
