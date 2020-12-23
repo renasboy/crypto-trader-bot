@@ -34,12 +34,13 @@ class ro_cano_che_ritorna(object):
         #ma43_last, ma43_prev = self.algo_helper.ma_last_prev(43)
         #ma100_last, ma100_prev = self.algo_helper.ma_last_prev(100)
         
-        # MA (2-5-8-43-100) di  x minuti prima
+        # MA (2-5-8-20-43-100) di  x minuti prima
         #ma2_1_min_ago = self.algo_helper.ma_minutes_ago(2, 1)
         #ma5_3_min_ago = self.algo_helper.ma_minutes_ago(5, 3)
         #ma8_2_min_ago = self.algo_helper.ma_minutes_ago(8, 2)
         #ma8_3_min_ago = self.algo_helper.ma_minutes_ago(8, 3)
         #ma8_7_min_ago = self.algo_helper.ma_minutes_ago(8, 7)
+        ma20_3_min_ago = self.algo_helper.ma_minutes_ago(20, 3)
         #ma43_3_min_ago = self.algo_helper.ma_minutes_ago(43, 3)
         #ma43_7_min_ago = self.algo_helper.ma_minutes_ago(43, 7)
         #ma100_5_min_ago = self.algo_helper.ma_minutes_ago(100, 5)
