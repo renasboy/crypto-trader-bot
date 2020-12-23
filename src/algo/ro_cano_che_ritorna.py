@@ -46,6 +46,7 @@ class ro_cano_che_ritorna(object):
         #ma43_3_min_ago = self.algo_helper.ma_minutes_ago(43, 3)
         #ma43_7_min_ago = self.algo_helper.ma_minutes_ago(43, 7)
         ma100_5_min_ago = self.algo_helper.ma_minutes_ago(100, 5)
+        #ma200_3_min_ago = self.algo_helper.ma_minutes_ago(200, 3)
         
         # LAST TRADE
         last_trade_action = self.algo_helper.last_trade_action
@@ -76,13 +77,15 @@ class ro_cano_che_ritorna(object):
         # se macd > macd_3_min_ago
         # e se ma20_last > ma20_3_min_ago
         # e se ma100_last > ma100_5_min_ago
-        # e se ma200_prev and ma200_last and ma20_prev < ma200_prev and ma20_last >= ma200_last:
+        # e se ma200_last > ma200_3_min_ago
+        # ( questa in un secondo momento ) e se ma200_prev and ma200_last and ma20_prev < ma200_prev and ma20_last >= ma200_last:
    
         
         if macd > macd_3_min_ago:
             #"and if" ma20_last > ma20_3_min_ago
             #"and if" ma100_last > ma100_5_min_ago
-            #"and if" ma200_prev and ma200_last and ma20_prev < ma200_prev and ma20_last >= ma200_last:
+            #"and if" ma200_last > ma200_3_min_ago
+            # ( questa in un secondo momento ) "and if" ma200_prev and ma200_last and ma20_prev < ma200_prev and ma20_last >= ma200_last:
             
             if not self.session or not self.open:
                self.session = 1
@@ -96,13 +99,15 @@ class ro_cano_che_ritorna(object):
         # se macd > macd_3_min_ago 
         # e se ma20_last > ma20_3_min_ago
         # e se ma100_last > ma100_5_min_ago
-        # e se ma200_prev and ma200_last and ma20_prev < ma200_prev and ma20_last >= ma200_last:
+        # e se ma200_last > ma200_3_min_ago
+        # ( questa in un secondo momento ) e se ma200_prev and ma200_last and ma20_prev < ma200_prev and ma20_last >= ma200_last:
         
         if (self.open and self.session and last_trade_action != 'buy'
         and macd > macd_3_min_ago):
             #"and if" ma20_last>ma20_3_min_ago
             #"and if" ma100_last > ma100_5_min_ago
-            #"and if" ma200_prev and ma200_last and ma20_prev < ma200_prev and ma20_last >= ma200_last:
+            #"and if" ma200_last > ma200_3_min_ago
+            # ( questa in un secondo momento ) "and if" ma200_prev and ma200_last and ma20_prev < ma200_prev and ma20_last >= ma200_last:
             
             
                 if self.session == 1:
