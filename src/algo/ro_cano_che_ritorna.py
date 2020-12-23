@@ -21,13 +21,13 @@ class ro_cano_che_ritorna(object):
         #macd_4_min_ago = self.algo_helper.macd_minutes_ago(4)
         
         # MAs
-        #ma1_last, ma1_prev = self.algo_helper.ma_last_prev(1)
+        ma1_last, ma1_prev = self.algo_helper.ma_last_prev(1)
         #ma2_last, ma2_prev = self.algo_helper.ma_last_prev(2)
         #ma5_last, ma5_prev = self.algo_helper.ma_last_prev(5)  
         #ma7_last, ma7_prev = self.algo_helper.ma_last_prev(7)
         #ma8_last, ma8_prev = self.algo_helper.ma_last_prev(8)
         #ma9_last, ma9_prev = self.algo_helper.ma_last_prev(9)
-        #ma10_last, ma10_prev = self.algo_helper.ma_last_prev(10)
+        ma10_last, ma10_prev = self.algo_helper.ma_last_prev(10)
         #ma20_last, ma20_prev = self.algo_helper.ma_last_prev(20)
         #ma25_last, ma25_prev = self.algo_helper.ma_last_prev(25)
         #ma34_last, ma34_prev = self.algo_helper.ma_last_prev(34)
