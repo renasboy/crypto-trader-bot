@@ -18,7 +18,7 @@ class ro_cano_che_ritorna(object):
         # MACD di 2-3-4 minuti prima
         #macd_2_min_ago = self.algo_helper.macd_minutes_ago(2)
         #macd_3_min_ago = self.algo_helper.macd_minutes_ago(3)
-         macd_4_min_ago = self.algo_helper.macd_minutes_ago(4)
+        macd_4_min_ago = self.algo_helper.macd_minutes_ago(4)
         
         # MAs
         #ma1_last, ma1_prev = self.algo_helper.ma_last_prev(1)
