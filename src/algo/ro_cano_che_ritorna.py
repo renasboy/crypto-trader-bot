@@ -2,7 +2,7 @@ from datetime import datetime
 
 class ro_cano_che_ritorna(object):
 
-    def __init__(self, helper):
+    def__init__(self, helper):
         self.algo_helper = helper
         self.session = 0
         self.open = False
