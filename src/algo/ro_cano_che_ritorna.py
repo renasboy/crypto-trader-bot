@@ -2,7 +2,7 @@ from datetime import datetime
 
 class ro_cano_che_ritorna(object):
 
-    def__init__(self, helper):
+    def __init__(self, helper):
         self.algo_helper = helper
         self.session = 0
         self.open = False
@@ -17,7 +17,7 @@ class ro_cano_che_ritorna(object):
 
         # MACD di 2-3-4 minuti prima
         #macd_2_min_ago = self.algo_helper.macd_minutes_ago(2)
-        #macd_3_min_ago = self.algo_helper.macd_minutes_ago(3)
+        macd_3_min_ago = self.algo_helper.macd_minutes_ago(3)
         macd_4_min_ago = self.algo_helper.macd_minutes_ago(4)
         
         # MAs
