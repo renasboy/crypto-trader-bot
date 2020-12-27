@@ -84,7 +84,7 @@ class ro_cano_che_ritorna(object):
    
         
         if macd_2_min_ago and macd > macd_2_min_ago:
-            if ma8_last > ma8_3_min_ago:
+           and ma8_last > ma8_3_min_ago:
             #"and if" ma20_last > ma20_3_min_ago
             #"and if" ma100_last > ma100_5_min_ago
             #"and if" ma200_last > ma200_3_min_ago
@@ -107,8 +107,8 @@ class ro_cano_che_ritorna(object):
         # ( questa in un secondo momento ) e se ma200_prev and ma200_last and ma20_prev < ma200_prev and ma20_last >= ma200_last:
         
         if (self.open and self.session and last_trade_action != 'buy'
-        and macd > macd_2_min_ago):
-            if ma8_last > ma8_3_min_ago:
+            and macd > macd_2_min_ago):
+            and ma8_last > ma8_3_min_ago:
             #"and if" ma20_last>ma20_3_min_ago
             #"and if" ma100_last > ma100_5_min_ago
             #"and if" ma200_last > ma200_3_min_ago
@@ -155,15 +155,15 @@ class ro_cano_che_ritorna(object):
            
             if self.session == 1:
                 if macd < macd_2_min_ago:
-                    if macd_1_min_ago < macd_2_min_ago:
+                   and macd_1_min_ago < macd_2_min_ago:
                     action = 'sell'
             elif self.session == 2:
                 if macd < macd_2_min_ago:
-                    if macd_1_min_ago < macd_2_min_ago:
+                   and macd_1_min_ago < macd_2_min_ago:
                     action = 'sell' 
             else:
                 if macd < macd_2_min_ago:
-                    if macd_1_min_ago < macd_2_min_ago:
+                   and macd_1_min_ago < macd_2_min_ago:
                     action = 'sell' 
             
             
