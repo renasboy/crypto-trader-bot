@@ -15,7 +15,8 @@ class ro_cano_che_ritorna(object):
         # MACD
         macd = self.algo_helper.macd
 
-        # MACD di 2-3-4 minuti prima
+        # MACD di 1-2-3-4 minuti prima
+        macd_1_min_ago = self.algo_helper.macd_minutes_ago(1)
         macd_2_min_ago = self.algo_helper.macd_minutes_ago(2)
         macd_3_min_ago = self.algo_helper.macd_minutes_ago(3)
         macd_4_min_ago = self.algo_helper.macd_minutes_ago(4)
@@ -75,6 +76,7 @@ class ro_cano_che_ritorna(object):
         
         # SI APRE LA GABBIA 
         # se macd > macd_2_min_ago
+        # e se ma8_last > ma8_3_min_ago
         # e se ma20_last > ma20_3_min_ago
         # e se ma100_last > ma100_5_min_ago
         # e se ma200_last > ma200_3_min_ago
@@ -82,6 +84,7 @@ class ro_cano_che_ritorna(object):
    
         
         if macd_2_min_ago and macd > macd_2_min_ago:
+            else ma8_last > ma8_3_min_ago:
             #"and if" ma20_last > ma20_3_min_ago
             #"and if" ma100_last > ma100_5_min_ago
             #"and if" ma200_last > ma200_3_min_ago
@@ -96,7 +99,8 @@ class ro_cano_che_ritorna(object):
         
         # COMPRA sessione 1
       
-        # se macd > macd_3_min_ago 
+        # se macd > macd_2_min_ago 
+        # e se ma8_last > ma8_3_min_ago
         # e se ma20_last > ma20_3_min_ago
         # e se ma100_last > ma100_5_min_ago
         # e se ma200_last > ma200_3_min_ago
@@ -104,6 +108,7 @@ class ro_cano_che_ritorna(object):
         
         if (self.open and self.session and last_trade_action != 'buy'
         and macd > macd_2_min_ago):
+            else ma8_last > ma8_3_min_ago:
             #"and if" ma20_last>ma20_3_min_ago
             #"and if" ma100_last > ma100_5_min_ago
             #"and if" ma200_last > ma200_3_min_ago
@@ -125,7 +130,8 @@ class ro_cano_che_ritorna(object):
 
 
 
-        # SI CHIUDE LA GABBIA se macd < macd_2_min_ago
+        # SI CHIUDE LA GABBIA 
+ 
         #if macd < macd_2_min_ago:
         #or seconds_since_last_trade > 1200:
             #self.open = False
@@ -139,6 +145,7 @@ class ro_cano_che_ritorna(object):
         
         
         # vende anche se (oppure se) macd < macd_2_min_ago
+        # vende anche se macd_1_min_ago < macd_2_min_ago
         # anche se secondi passati della compra > 1200 (20 minuti)
     
             
@@ -148,12 +155,15 @@ class ro_cano_che_ritorna(object):
            
             if self.session == 1:
                 if macd < macd_2_min_ago:
+                    else macd_1_min_ago < macd_2_min_ago:
                     action = 'sell'
             elif self.session == 2:
                 if macd < macd_2_min_ago:
+                    else macd_1_min_ago < macd_2_min_ago:
                     action = 'sell' 
             else:
                 if macd < macd_2_min_ago:
+                    else macd_1_min_ago < macd_2_min_ago:
                     action = 'sell' 
             
             
