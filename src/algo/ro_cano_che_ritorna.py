@@ -84,7 +84,7 @@ class ro_cano_che_ritorna(object):
    
         
         if macd_2_min_ago and macd > macd_2_min_ago
-           and ma8_last > ma8_3_min_ago:
+            and ma8_last > ma8_3_min_ago:
             #"and if" ma20_last > ma20_3_min_ago
             #"and if" ma100_last > ma100_5_min_ago
             #"and if" ma200_last > ma200_3_min_ago
