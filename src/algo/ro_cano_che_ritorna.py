@@ -173,20 +173,20 @@ class ro_cano_che_ritorna(object):
             if self.session == 1:
                 if (macd < macd_1_min_ago
                     and macd < macd_3_min_ago
-                    and macd_1_min_ago < macd_2_min_ago
-                    and macd_4_min_ago < macd_5_min_ago):
+                    and macd_1_min_ago < macd_2_min_ago):
+                    
                     action = 'sell'
             elif self.session == 2:
                 if (macd < macd_1_min_ago
                     and macd < macd_3_min_ago
-                    and macd_1_min_ago < macd_2_min_ago
-                    and macd_4_min_ago < macd_5_min_ago):
+                    and macd_1_min_ago < macd_2_min_ago):
+                    
                     action = 'sell' 
             else:
                 if (macd < macd_1_min_ago
                     and macd < macd_3_min_ago
-                    and macd_1_min_ago < macd_2_min_ago
-                    and macd_4_min_ago < macd_5_min_ago):
+                    and macd_1_min_ago < macd_2_min_ago):
+           
                     action = 'sell' 
             
             
