@@ -84,6 +84,7 @@ class ro_cano_che_ritorna(object):
         
         # SI APRE LA GABBIA 
         # se macd > macd_2_min_ago
+        # e se ma4_last > ma4_2_min_ago
         # e se ma8_last > ma8_3_min_ago
         # e se ma20_last > ma20_3_min_ago
         # e se ma100_last > ma100_5_min_ago
@@ -93,6 +94,7 @@ class ro_cano_che_ritorna(object):
         
         if (macd_2_min_ago and macd > macd_2_min_ago
             and ma4_last > ma4_2_min_ago):
+            #"and if" ma8_last > ma8_3_min_ago
             #"and if" ma20_last > ma20_3_min_ago
             #"and if" ma100_last > ma100_5_min_ago
             #"and if" ma200_last > ma200_3_min_ago
@@ -109,6 +111,7 @@ class ro_cano_che_ritorna(object):
       
         # se macd > macd_2_min_ago 
         # e se ma4_last > ma4_2_min_ago
+        # e se ma8_last > ma8_3_min_ago
         # e se ma20_last > ma20_3_min_ago
         # e se ma100_last > ma100_5_min_ago
         # e se ma200_last > ma200_3_min_ago
@@ -117,6 +120,7 @@ class ro_cano_che_ritorna(object):
         if (self.open and self.session and last_trade_action != 'buy'
             and macd > macd_2_min_ago
             and ma4_last > ma4_2_min_ago):
+            #"and if" ma8_last>ma8_3_min_ago
             #"and if" ma20_last>ma20_3_min_ago
             #"and if" ma100_last > ma100_5_min_ago
             #"and if" ma200_last > ma200_3_min_ago
