@@ -20,6 +20,8 @@ class ro_cano_che_ritorna(object):
         macd_2_min_ago = self.algo_helper.macd_minutes_ago(2)
         macd_3_min_ago = self.algo_helper.macd_minutes_ago(3)
         macd_4_min_ago = self.algo_helper.macd_minutes_ago(4)
+        macd_5_min_ago = self.algo_helper.macd_minutes_ago(5)
+        
         
         # MAs
         #ma1_last, ma1_prev = self.algo_helper.ma_last_prev(1)
@@ -167,15 +169,15 @@ class ro_cano_che_ritorna(object):
            
             if self.session == 1:
                 if (macd < macd_3_min_ago
-                    and macd_3_min_ago < macd_4_min_ago):
+                    and macd_4_min_ago < macd_5_min_ago):
                     action = 'sell'
             elif self.session == 2:
                 if (macd < macd_3_min_ago
-                    and macd_3_min_ago < macd_4_min_ago):
+                    and macd_4_min_ago < macd_5_min_ago):
                     action = 'sell' 
             else:
                 if (macd < macd_3_min_ago
-                    and macd_3_min_ago < macd_4_min_ago):
+                    and macd_4_min_ago < macd_5_min_ago):
                     action = 'sell' 
             
             
