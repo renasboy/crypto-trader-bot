@@ -24,6 +24,7 @@ class ro_cano_che_ritorna(object):
         # MAs
         #ma1_last, ma1_prev = self.algo_helper.ma_last_prev(1)
         #ma2_last, ma2_prev = self.algo_helper.ma_last_prev(2)
+        ma4_last, ma4_prev = self.algo_helper.ma_last_prev(4)
         #ma5_last, ma5_prev = self.algo_helper.ma_last_prev(5)  
         #ma7_last, ma7_prev = self.algo_helper.ma_last_prev(7)
         ma8_last, ma8_prev = self.algo_helper.ma_last_prev(8)
@@ -37,8 +38,9 @@ class ro_cano_che_ritorna(object):
         #ma200_last, ma200_prev = self.algo_helper.ma_last_prev(200)
         
         
-        # MA (2-5-8-20-43-100) di  x minuti prima
+        # MA (2-4-5-8-20-43-100) di  x minuti prima
         #ma2_1_min_ago = self.algo_helper.ma_minutes_ago(2, 1)
+        ma4_2_min_ago = self.algo_helper.ma_minutes_ago(4, 2)
         #ma5_3_min_ago = self.algo_helper.ma_minutes_ago(5, 3)
         #ma8_2_min_ago = self.algo_helper.ma_minutes_ago(8, 2)
         ma8_3_min_ago = self.algo_helper.ma_minutes_ago(8, 3)
@@ -61,6 +63,12 @@ class ro_cano_che_ritorna(object):
         
         # CURRENT PRICE
         price = self.algo_helper.price
+        
+        
+        
+        
+        
+        
         action = None
         
         
@@ -84,7 +92,7 @@ class ro_cano_che_ritorna(object):
    
         
         if (macd_2_min_ago and macd > macd_2_min_ago
-            and ma8_last > ma8_3_min_ago):
+            and ma4_last > ma4_2_min_ago):
             #"and if" ma20_last > ma20_3_min_ago
             #"and if" ma100_last > ma100_5_min_ago
             #"and if" ma200_last > ma200_3_min_ago
@@ -100,7 +108,7 @@ class ro_cano_che_ritorna(object):
         # COMPRA sessione 1
       
         # se macd > macd_2_min_ago 
-        # e se ma8_last > ma8_3_min_ago
+        # e se ma4_last > ma4_2_min_ago
         # e se ma20_last > ma20_3_min_ago
         # e se ma100_last > ma100_5_min_ago
         # e se ma200_last > ma200_3_min_ago
@@ -108,7 +116,7 @@ class ro_cano_che_ritorna(object):
         
         if (self.open and self.session and last_trade_action != 'buy'
             and macd > macd_2_min_ago
-            and ma8_last > ma8_3_min_ago):
+            and ma4_last > ma4_2_min_ago):
             #"and if" ma20_last>ma20_3_min_ago
             #"and if" ma100_last > ma100_5_min_ago
             #"and if" ma200_last > ma200_3_min_ago
