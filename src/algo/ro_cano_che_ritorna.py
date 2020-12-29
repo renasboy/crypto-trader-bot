@@ -28,7 +28,7 @@ class ro_cano_che_ritorna(object):
         #ma2_last, ma2_prev = self.algo_helper.ma_last_prev(2)
         ma4_last, ma4_prev = self.algo_helper.ma_last_prev(4)
         #ma5_last, ma5_prev = self.algo_helper.ma_last_prev(5)  
-        #ma7_last, ma7_prev = self.algo_helper.ma_last_prev(7)
+        ma7_last, ma7_prev = self.algo_helper.ma_last_prev(7)
         ma8_last, ma8_prev = self.algo_helper.ma_last_prev(8)
         #ma9_last, ma9_prev = self.algo_helper.ma_last_prev(9)
         #ma10_last, ma10_prev = self.algo_helper.ma_last_prev(10)
@@ -40,10 +40,11 @@ class ro_cano_che_ritorna(object):
         #ma200_last, ma200_prev = self.algo_helper.ma_last_prev(200)
         
         
-        # MA (2-4-5-8-20-43-100) di  x minuti prima
+        # MA (2-4-5--7-8-20-43-100) di  x minuti prima
         #ma2_1_min_ago = self.algo_helper.ma_minutes_ago(2, 1)
         ma4_2_min_ago = self.algo_helper.ma_minutes_ago(4, 2)
         #ma5_3_min_ago = self.algo_helper.ma_minutes_ago(5, 3)
+        ma7_2_min_ago = self.algo_helper.ma_minutes_ago(7, 2)
         #ma8_2_min_ago = self.algo_helper.ma_minutes_ago(8, 2)
         ma8_3_min_ago = self.algo_helper.ma_minutes_ago(8, 3)
         #ma8_7_min_ago = self.algo_helper.ma_minutes_ago(8, 7)
@@ -166,7 +167,7 @@ class ro_cano_che_ritorna(object):
         # vende anche se macd_4_min_ago < macd_5_min_ago
         # anche se secondi passati della compra > 3600 (60 minuti)
     
-        #"oppure" se ma4_last < ma4_2_min_ago
+        #"oppure" se ma7_last < ma7_2_min_ago
         
         # vende
         elif last_trade_action == 'buy':
@@ -178,7 +179,7 @@ class ro_cano_che_ritorna(object):
                     
                     action = 'sell'
                 
-                #elif ma4_last < ma4_2_min_ago:
+                #elif ma7_last < ma7_2_min_ago:
                      #action = 'sell'
                         
                         
