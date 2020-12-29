@@ -166,7 +166,7 @@ class ro_cano_che_ritorna(object):
         # vende anche se macd_4_min_ago < macd_5_min_ago
         # anche se secondi passati della compra > 3600 (60 minuti)
     
-            
+        #"oppure" se ma4_last < ma4_2_min_ago
         
         # vende
         elif last_trade_action == 'buy':
