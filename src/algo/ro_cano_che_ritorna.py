@@ -147,7 +147,7 @@ class ro_cano_che_ritorna(object):
         # SI CHIUDE LA GABBIA 
  
         #if macd < macd_2_min_ago:
-        #or seconds_since_last_trade > 1200:
+        #or seconds_since_last_trade > 3600:
             #self.open = False
             #self.algo_helper.log('session {}: closed segment'.format(self.session))
     
@@ -159,11 +159,12 @@ class ro_cano_che_ritorna(object):
         
         
         # vende anche se (oppure se) macd < macd_2_min_ago
+        
         # vende anche se macd < macd_1_min_ago
         # vende anche se macd < macd_3_min_ago
         # vende anche se macd_1_min_ago < macd_2_min_ago
         # vende anche se macd_4_min_ago < macd_5_min_ago
-        # anche se secondi passati della compra > 1200 (20 minuti)
+        # anche se secondi passati della compra > 3600 (60 minuti)
     
             
         
@@ -193,7 +194,7 @@ class ro_cano_che_ritorna(object):
             
             
            
-            if seconds_since_last_trade > 1200:
+            if seconds_since_last_trade > 3600:
                  action = 'sell'
 
         self.algo_helper.log('action {}'.format(action))
