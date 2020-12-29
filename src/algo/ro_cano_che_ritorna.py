@@ -170,7 +170,7 @@ class ro_cano_che_ritorna(object):
         
         # vende
         elif last_trade_action == 'buy':
-           
+            self.algo_helper.log('MACD: {}'.format(macd)) 
             if self.session == 1:
                 if (macd < macd_1_min_ago
                     and macd < macd_3_min_ago
