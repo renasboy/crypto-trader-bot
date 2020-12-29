@@ -16,7 +16,7 @@ class ro_cano_che_ritorna(object):
         macd = self.algo_helper.macd
 
         # MACD di 1-2-3-4 minuti prima
-        macd_1_min_ago = self.algo_helper.macd_minutes_ago(1)
+        #macd_1_min_ago = self.algo_helper.macd_minutes_ago(1) NON METTERE MAI
         macd_2_min_ago = self.algo_helper.macd_minutes_ago(2)
         macd_3_min_ago = self.algo_helper.macd_minutes_ago(3)
         macd_4_min_ago = self.algo_helper.macd_minutes_ago(4)
@@ -160,7 +160,7 @@ class ro_cano_che_ritorna(object):
         
         # vende anche se (oppure se) macd < macd_2_min_ago
         
-        # vende anche se macd < macd_1_min_ago
+        # vende anche se macd < macd_1_min_ago NON METTERE !
         # vende anche se macd < macd_3_min_ago
         # vende anche se macd_1_min_ago < macd_2_min_ago
         # vende anche se macd_4_min_ago < macd_5_min_ago
@@ -172,9 +172,9 @@ class ro_cano_che_ritorna(object):
         elif last_trade_action == 'buy':
             #self.algo_helper.log('MACD: {}'.format(macd)) questa riga fa comparire la variabile sul log
             if self.session == 1:
-                if (macd < macd_1_min_ago
+                if (macd < macd_2_min_ago
                     and macd < macd_3_min_ago
-                    and macd_1_min_ago < macd_2_min_ago):
+                    and macd_2_min_ago < macd_3_min_ago):
                     
                     action = 'sell'
                 
@@ -183,15 +183,15 @@ class ro_cano_che_ritorna(object):
                         
                         
             elif self.session == 2:
-                if (macd < macd_1_min_ago
+                if (macd < macd_2_min_ago
                     and macd < macd_3_min_ago
-                    and macd_1_min_ago < macd_2_min_ago):
+                    and macd_2_min_ago < macd_3_min_ago):
                     
                     action = 'sell' 
             else:
-                if (macd < macd_1_min_ago
+                if (macd < macd_2_min_ago
                     and macd < macd_3_min_ago
-                    and macd_1_min_ago < macd_2_min_ago):
+                    and macd_2_min_ago < macd_3_min_ago):
            
                     action = 'sell' 
             
