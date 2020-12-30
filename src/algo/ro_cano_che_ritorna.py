@@ -178,27 +178,35 @@ class ro_cano_che_ritorna(object):
                 if (ma5_last < ma5_2_min_ago
                     and ma3_last < ma3_2_min_ago):
                     #and macd < macd_2_min_ago
-                    #and macd < macd_3_min_ago):  lettera a di and allineata con la m di ma5 di sopra e togli la parentesei sopra 
-                    
+                    #and macd < macd_3_min_ago  lettera a di and allineata con la m di ma5 di sopra e togli la parentesei e i ":" sopra 
+                    #and macd_2_min_ago < macd_3_min_ago
                     
                     action = 'sell'
                 
-                #elif (macd_2_min_ago < macd_3_min_ago
-                       #and macd < macd_3_min_ago):
+                #elif (ma5_last < ma5_2_min_ago
+                       and ma3_last < ma3_2_min_ago):
+                       #macd < macd_2_min_ago
+                       #and macd < macd_3_min_ago
+                       #macd_2_min_ago < macd_3_min_ago):
+                       
                 
                     #action = 'sell'
                         
                         
             elif self.session == 2:
-                if (macd < macd_2_min_ago
-                    and macd < macd_3_min_ago
-                    and macd_2_min_ago < macd_3_min_ago):
+                if (ma5_last < ma5_2_min_ago
+                    and ma3_last < ma3_2_min_ago):
+                    #macd < macd_2_min_ago
+                    #and macd < macd_3_min_ago
+                    #and macd_2_min_ago < macd_3_min_ago):
                     
                     action = 'sell' 
             else:
-                if (macd < macd_2_min_ago
-                    and macd < macd_3_min_ago
-                    and macd_2_min_ago < macd_3_min_ago):
+                if (ma5_last < ma5_2_min_ago
+                    and ma3_last < ma3_2_min_ago):
+                    #macd < macd_2_min_ago
+                    #and macd < macd_3_min_ago
+                    #and macd_2_min_ago < macd_3_min_ago):
            
                     action = 'sell' 
             
