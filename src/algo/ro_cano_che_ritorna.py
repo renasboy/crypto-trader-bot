@@ -27,7 +27,7 @@ class ro_cano_che_ritorna(object):
         #ma1_last, ma1_prev = self.algo_helper.ma_last_prev(1)
         #ma2_last, ma2_prev = self.algo_helper.ma_last_prev(2)
         ma4_last, ma4_prev = self.algo_helper.ma_last_prev(4)
-        #ma5_last, ma5_prev = self.algo_helper.ma_last_prev(5)  
+        ma5_last, ma5_prev = self.algo_helper.ma_last_prev(5)  
         ma7_last, ma7_prev = self.algo_helper.ma_last_prev(7)
         ma8_last, ma8_prev = self.algo_helper.ma_last_prev(8)
         #ma9_last, ma9_prev = self.algo_helper.ma_last_prev(9)
@@ -43,7 +43,7 @@ class ro_cano_che_ritorna(object):
         # MA (2-4-5--7-8-20-43-100) di  x minuti prima
         #ma2_1_min_ago = self.algo_helper.ma_minutes_ago(2, 1)
         ma4_2_min_ago = self.algo_helper.ma_minutes_ago(4, 2)
-        #ma5_3_min_ago = self.algo_helper.ma_minutes_ago(5, 3)
+        ma5_2_min_ago = self.algo_helper.ma_minutes_ago(5, 2)
         ma7_2_min_ago = self.algo_helper.ma_minutes_ago(7, 2)
         #ma8_2_min_ago = self.algo_helper.ma_minutes_ago(8, 2)
         ma8_3_min_ago = self.algo_helper.ma_minutes_ago(8, 3)
@@ -173,14 +173,16 @@ class ro_cano_che_ritorna(object):
         elif last_trade_action == 'buy':
             #self.algo_helper.log('MACD: {}'.format(macd)) questa riga fa comparire la variabile sul log
             if self.session == 1:
-                if (macd < macd_2_min_ago
-                    and macd < macd_3_min_ago
-                    and macd_2_min_ago < macd_3_min_ago):
+                if (ma5_last < ma5_2_min_ago
+                    and macd < macd_2_min_ago):
+                    
                     
                     action = 'sell'
                 
-                #elif ma7_last < ma7_2_min_ago:
-                     #action = 'sell'
+                #elif (macd_2_min_ago < macd_3_min_ago
+                       #and macd < macd_3_min_ago):
+                
+                    #action = 'sell'
                         
                         
             elif self.session == 2:
