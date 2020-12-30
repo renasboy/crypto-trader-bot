@@ -23,35 +23,37 @@ class ro_cano_che_ritorna(object):
         macd_5_min_ago = self.algo_helper.macd_minutes_ago(5)
         
         
-        # MAs
+        # moving average (2-3-4-5-x)
         #ma1_last, ma1_prev = self.algo_helper.ma_last_prev(1)
         #ma2_last, ma2_prev = self.algo_helper.ma_last_prev(2)
+        ma3_last, ma3_prev = self.algo_helper.ma_last_prev(3)
         ma4_last, ma4_prev = self.algo_helper.ma_last_prev(4)
         ma5_last, ma5_prev = self.algo_helper.ma_last_prev(5)  
         ma7_last, ma7_prev = self.algo_helper.ma_last_prev(7)
-        ma8_last, ma8_prev = self.algo_helper.ma_last_prev(8)
+        #ma8_last, ma8_prev = self.algo_helper.ma_last_prev(8)
         #ma9_last, ma9_prev = self.algo_helper.ma_last_prev(9)
         #ma10_last, ma10_prev = self.algo_helper.ma_last_prev(10)
-        ma20_last, ma20_prev = self.algo_helper.ma_last_prev(20)
+        #ma20_last, ma20_prev = self.algo_helper.ma_last_prev(20)
         #ma25_last, ma25_prev = self.algo_helper.ma_last_prev(25)
         #ma34_last, ma34_prev = self.algo_helper.ma_last_prev(34)
         #ma43_last, ma43_prev = self.algo_helper.ma_last_prev(43)
-        ma100_last, ma100_prev = self.algo_helper.ma_last_prev(100)
+        #ma100_last, ma100_prev = self.algo_helper.ma_last_prev(100)
         #ma200_last, ma200_prev = self.algo_helper.ma_last_prev(200)
         
         
-        # MA (2-4-5--7-8-20-43-100) di  x minuti prima
+        # moving average (2-3-4-5-7-8-20-43-100) di  x minuti prima
         #ma2_1_min_ago = self.algo_helper.ma_minutes_ago(2, 1)
+        ma3_2_min_ago = self.algo_helper.ma_minutes_ago(3, 2)
         ma4_2_min_ago = self.algo_helper.ma_minutes_ago(4, 2)
         ma5_2_min_ago = self.algo_helper.ma_minutes_ago(5, 2)
         ma7_2_min_ago = self.algo_helper.ma_minutes_ago(7, 2)
         #ma8_2_min_ago = self.algo_helper.ma_minutes_ago(8, 2)
-        ma8_3_min_ago = self.algo_helper.ma_minutes_ago(8, 3)
+        #ma8_3_min_ago = self.algo_helper.ma_minutes_ago(8, 3)
         #ma8_7_min_ago = self.algo_helper.ma_minutes_ago(8, 7)
-        ma20_3_min_ago = self.algo_helper.ma_minutes_ago(20, 3)
+        #ma20_3_min_ago = self.algo_helper.ma_minutes_ago(20, 3)
         #ma43_3_min_ago = self.algo_helper.ma_minutes_ago(43, 3)
         #ma43_7_min_ago = self.algo_helper.ma_minutes_ago(43, 7)
-        ma100_5_min_ago = self.algo_helper.ma_minutes_ago(100, 5)
+        #ma100_5_min_ago = self.algo_helper.ma_minutes_ago(100, 5)
         #ma200_3_min_ago = self.algo_helper.ma_minutes_ago(200, 3)
         
         # LAST TRADE
@@ -174,8 +176,9 @@ class ro_cano_che_ritorna(object):
             #self.algo_helper.log('MACD: {}'.format(macd)) questa riga fa comparire la variabile sul log
             if self.session == 1:
                 if (ma5_last < ma5_2_min_ago
-                    and macd < macd_2_min_ago):
-                    #and macd < macd_2_min_ago):  lettera a di and allineata con la m di ma5 di sopra e togli la parentesei sopra 
+                    and ma3_last < ma3_2_min_ago):
+                    #and macd < macd_2_min_ago
+                    #and macd < macd_3_min_ago):  lettera a di and allineata con la m di ma5 di sopra e togli la parentesei sopra 
                     
                     
                     action = 'sell'
