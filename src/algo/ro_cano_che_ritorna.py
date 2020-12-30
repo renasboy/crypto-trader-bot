@@ -33,7 +33,7 @@ class ro_cano_che_ritorna(object):
         #ma8_last, ma8_prev = self.algo_helper.ma_last_prev(8)
         #ma9_last, ma9_prev = self.algo_helper.ma_last_prev(9)
         #ma10_last, ma10_prev = self.algo_helper.ma_last_prev(10)
-        #ma20_last, ma20_prev = self.algo_helper.ma_last_prev(20)
+        ma20_last, ma20_prev = self.algo_helper.ma_last_prev(20)
         #ma25_last, ma25_prev = self.algo_helper.ma_last_prev(25)
         #ma34_last, ma34_prev = self.algo_helper.ma_last_prev(34)
         #ma43_last, ma43_prev = self.algo_helper.ma_last_prev(43)
@@ -50,7 +50,7 @@ class ro_cano_che_ritorna(object):
         #ma8_2_min_ago = self.algo_helper.ma_minutes_ago(8, 2)
         #ma8_3_min_ago = self.algo_helper.ma_minutes_ago(8, 3)
         #ma8_7_min_ago = self.algo_helper.ma_minutes_ago(8, 7)
-        #ma20_3_min_ago = self.algo_helper.ma_minutes_ago(20, 3)
+        ma20_2_min_ago = self.algo_helper.ma_minutes_ago(20, 2)
         #ma43_3_min_ago = self.algo_helper.ma_minutes_ago(43, 3)
         #ma43_7_min_ago = self.algo_helper.ma_minutes_ago(43, 7)
         #ma100_5_min_ago = self.algo_helper.ma_minutes_ago(100, 5)
@@ -88,7 +88,9 @@ class ro_cano_che_ritorna(object):
         
         
         # SI APRE LA GABBIA 
-        # se macd > macd_2_min_ago
+        # if ma20_last > ma20_2_min_ago
+        
+        # e se macd > macd_2_min_ago
         # e se ma4_last > ma4_2_min_ago
         # e se ma8_last > ma8_3_min_ago
         # e se ma20_last > ma20_3_min_ago
@@ -97,8 +99,9 @@ class ro_cano_che_ritorna(object):
         # ( questa in un secondo momento ) e se ma200_prev and ma200_last and ma20_prev < ma200_prev and ma20_last >= ma200_last:
    
         
-        if (macd > macd_2_min_ago
-            and ma4_last > ma4_2_min_ago):
+        if (ma20_last > ma20_2_min_ago):  
+            #macd > macd_2_min_ago
+            #and ma4_last > ma4_2_min_ago
             #"and if" ma8_last > ma8_3_min_ago
             #"and if" ma20_last > ma20_3_min_ago
             #"and if" ma100_last > ma100_5_min_ago
