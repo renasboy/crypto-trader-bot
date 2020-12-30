@@ -173,7 +173,8 @@ class ro_cano_che_ritorna(object):
         elif last_trade_action == 'buy':
             #self.algo_helper.log('MACD: {}'.format(macd)) questa riga fa comparire la variabile sul log
             if self.session == 1:
-                if (ma5_last < ma5_2_min_ago):
+                if (ma5_last < ma5_2_min_ago
+                    and macd < macd_2_min_ago):
                     #and macd < macd_2_min_ago):  lettera a di and allineata con la m di ma5 di sopra e togli la parentesei sopra 
                     
                     
