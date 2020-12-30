@@ -184,7 +184,7 @@ class ro_cano_che_ritorna(object):
                     action = 'sell'
                 
                 #elif (ma5_last < ma5_2_min_ago
-                       and ma3_last < ma3_2_min_ago):
+                       #and ma3_last < ma3_2_min_ago):
                        #macd < macd_2_min_ago
                        #and macd < macd_3_min_ago
                        #macd_2_min_ago < macd_3_min_ago):
