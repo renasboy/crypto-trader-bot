@@ -25,7 +25,7 @@ class ro_cano_che_ritorna(object):
         
         # moving average (2-3-4-5-x)
         #ma1_last, ma1_prev = self.algo_helper.ma_last_prev(1)
-        #ma2_last, ma2_prev = self.algo_helper.ma_last_prev(2)
+        ma2_last, ma2_prev = self.algo_helper.ma_last_prev(2)
         ma3_last, ma3_prev = self.algo_helper.ma_last_prev(3)
         ma4_last, ma4_prev = self.algo_helper.ma_last_prev(4)
         ma5_last, ma5_prev = self.algo_helper.ma_last_prev(5)  
@@ -42,7 +42,7 @@ class ro_cano_che_ritorna(object):
         
         
         # moving average (2-3-4-5-7-8-20-43-100) di  x minuti prima
-        #ma2_1_min_ago = self.algo_helper.ma_minutes_ago(2, 1)
+        #ma2_1_min_ago = self.algo_helper.ma_minutes_ago(2, 1) NON METTERE MAI 1 min !
         ma3_2_min_ago = self.algo_helper.ma_minutes_ago(3, 2)
         ma4_2_min_ago = self.algo_helper.ma_minutes_ago(4, 2)
         ma5_2_min_ago = self.algo_helper.ma_minutes_ago(5, 2)
@@ -160,9 +160,9 @@ class ro_cano_che_ritorna(object):
     
         # VENDE sessione 1
         
+        # VENDE CON INCROCIO ma2 - ma5
         
         # vende anche se (oppure se) macd < macd_2_min_ago
-        
         # vende anche se macd < macd_1_min_ago NON METTERE !
         # vende anche se macd < macd_3_min_ago
         # vende anche se macd_1_min_ago < macd_2_min_ago
