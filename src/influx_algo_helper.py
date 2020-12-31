@@ -33,6 +33,7 @@ class influx_algo_helper(object):
         results = list(result.get_points())
         ma_last = results[0]['ma'] if results and len(results) == 2 and results[0]['ma'] is not None else 0
         ma_prev = results[1]['ma'] if results and len(results) == 2 and results[1]['ma'] is not None else 0
+        self.log('ma last {} ma prev {}'.format(ma_last, ma_prev))
         return float(ma_last), float(ma_prev)
 
     def ma_minutes_ago(self, period, minutes):
@@ -42,6 +43,7 @@ class influx_algo_helper(object):
         result = self.influx.query(query_ma)
         results = list(result.get_points())
         ma = results[minutes]['ma'] if results and len(results) == minutes + 1 and results[minutes]['ma'] is not None else 0
+        self.log('ma{} {} minutes ago {}'.format(period, minutes, ma))
         return float(ma)
 
     @property
