@@ -129,6 +129,7 @@ class ro_cano_che_ritorna(object):
         if (self.open and self.session and last_trade_action != 'buy'
             and macd > macd_2_min_ago
             and ma2_last > ma2_2_min_ago):
+            
             #"and if" ma8_last>ma8_3_min_ago
             #"and if" ma20_last>ma20_3_min_ago
             #"and if" ma100_last > ma100_5_min_ago
@@ -151,7 +152,7 @@ class ro_cano_che_ritorna(object):
 
 
 
-        # SI CHIUDE LA GABBIA 
+        # SI CHIUDE LA GABBIA ( non e' necessario chiuderla )
  
         #if macd < macd_2_min_ago:
         #or seconds_since_last_trade > 3600:
@@ -164,7 +165,7 @@ class ro_cano_che_ritorna(object):
     
         # VENDE sessione 1
         
-        # VENDE CON INCROCIO ma2 - ma5
+        # VENDE CON INCROCIO ma2 - ma4
         
         # vende anche se (oppure se) macd < macd_2_min_ago
         # vende anche se macd < macd_1_min_ago NON METTERE !
@@ -179,7 +180,7 @@ class ro_cano_che_ritorna(object):
         elif last_trade_action == 'buy':
             #self.algo_helper.log('MACD: {}'.format(macd)) questa riga fa comparire la variabile sul log
             if self.session == 1:
-                if (ma2_prev > ma5_prev and ma2_last < ma5_last):
+                if (ma2_prev > ma4_prev and ma2_last < ma4_last):
                    
                     #(ma5_last < ma5_2_min_ago
                     #and ma3_last < ma3_2_min_ago):
@@ -203,7 +204,7 @@ class ro_cano_che_ritorna(object):
                         
                         
             elif self.session == 2:
-                if (ma2_prev > ma5_prev and ma2_last < ma5_last):
+                if (ma2_prev > ma4_prev and ma2_last < ma4_last):
                     #(ma5_last < ma5_2_min_ago
                     #and ma3_last < ma3_2_min_ago):
                     
@@ -213,7 +214,7 @@ class ro_cano_che_ritorna(object):
                     
                     action = 'sell' 
             else:
-                if (ma2_prev > ma5_prev and ma2_last < ma5_last):
+                if (ma2_prev > ma4_prev and ma2_last < ma4_last):
                     #(ma5_last < ma5_2_min_ago
                     #and ma3_last < ma3_2_min_ago):
                     
