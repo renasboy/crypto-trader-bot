@@ -30,7 +30,7 @@ class ro_cano_che_ritorna(object):
         ma4_last, ma4_prev = self.algo_helper.ma_last_prev(4)
         ma5_last, ma5_prev = self.algo_helper.ma_last_prev(5)  
         ma7_last, ma7_prev = self.algo_helper.ma_last_prev(7)
-        #ma8_last, ma8_prev = self.algo_helper.ma_last_prev(8)
+        ma8_last, ma8_prev = self.algo_helper.ma_last_prev(8)
         #ma9_last, ma9_prev = self.algo_helper.ma_last_prev(9)
         #ma10_last, ma10_prev = self.algo_helper.ma_last_prev(10)
         ma20_last, ma20_prev = self.algo_helper.ma_last_prev(20)
@@ -41,17 +41,17 @@ class ro_cano_che_ritorna(object):
         #ma200_last, ma200_prev = self.algo_helper.ma_last_prev(200)
         
         
-        # moving average (2-3-4-5-7-8-20-43-100) di  x minuti prima
-        #ma2_1_min_ago = self.algo_helper.ma_minutes_ago(2, 1) NON METTERE MAI 1 min !
-        ma3_2_min_ago = self.algo_helper.ma_minutes_ago(3, 2)
+        # moving average (2-3-4-5-7-8-20-43-100) di x minuti prima (NON METTERE MAI 1 min !)
+        ma2_2_min_ago = self.algo_helper.ma_minutes_ago(2, 2) 
+        #ma3_2_min_ago = self.algo_helper.ma_minutes_ago(3, 2)
         ma4_2_min_ago = self.algo_helper.ma_minutes_ago(4, 2)
         ma5_2_min_ago = self.algo_helper.ma_minutes_ago(5, 2)
-        ma7_2_min_ago = self.algo_helper.ma_minutes_ago(7, 2)
-        #ma8_2_min_ago = self.algo_helper.ma_minutes_ago(8, 2)
+        #ma7_2_min_ago = self.algo_helper.ma_minutes_ago(7, 2)
+        ma8_2_min_ago = self.algo_helper.ma_minutes_ago(8, 2)
         #ma8_3_min_ago = self.algo_helper.ma_minutes_ago(8, 3)
         #ma8_7_min_ago = self.algo_helper.ma_minutes_ago(8, 7)
         #ma20_2_min_ago = self.algo_helper.ma_minutes_ago(20, 2)
-        ma20_10_min_ago = self.algo_helper.ma_minutes_ago(20, 10)
+        #ma20_10_min_ago = self.algo_helper.ma_minutes_ago(20, 10)
         #ma43_3_min_ago = self.algo_helper.ma_minutes_ago(43, 3)
         #ma43_7_min_ago = self.algo_helper.ma_minutes_ago(43, 7)
         #ma100_5_min_ago = self.algo_helper.ma_minutes_ago(100, 5)
@@ -89,7 +89,7 @@ class ro_cano_che_ritorna(object):
         
         
         # SI APRE LA GABBIA 
-        # if ma20_last > ma20_2_min_ago
+        # if ma8_last > ma8_2_min_ago
         
         # e se macd > macd_2_min_ago
         # e se ma4_last > ma4_2_min_ago
@@ -100,7 +100,7 @@ class ro_cano_che_ritorna(object):
         # ( questa in un secondo momento ) e se ma200_prev and ma200_last and ma20_prev < ma200_prev and ma20_last >= ma200_last:
    
         
-        if (ma20_last > ma20_10_min_ago):  
+        if (ma8_last > ma8_2_min_ago):  
             #macd > macd_2_min_ago
             #and ma4_last > ma4_2_min_ago
             #"and if" ma8_last > ma8_3_min_ago
@@ -128,7 +128,7 @@ class ro_cano_che_ritorna(object):
         
         if (self.open and self.session and last_trade_action != 'buy'
             and macd > macd_2_min_ago
-            and ma4_last > ma4_2_min_ago):
+            and ma2_last > ma2_2_min_ago):
             #"and if" ma8_last>ma8_3_min_ago
             #"and if" ma20_last>ma20_3_min_ago
             #"and if" ma100_last > ma100_5_min_ago
