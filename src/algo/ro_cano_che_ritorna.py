@@ -16,7 +16,7 @@ class ro_cano_che_ritorna(object):
         macd = self.algo_helper.macd
 
         # MACD di 1-2-3-4 minuti prima
-        #macd_1_min_ago = self.algo_helper.macd_minutes_ago(1) NON METTERE MAI
+        #macd_1_min_ago = self.algo_helper.macd_minutes_ago(1) NON METTERE MAI !
         macd_2_min_ago = self.algo_helper.macd_minutes_ago(2)
         macd_3_min_ago = self.algo_helper.macd_minutes_ago(3)
         macd_4_min_ago = self.algo_helper.macd_minutes_ago(4)
@@ -24,7 +24,7 @@ class ro_cano_che_ritorna(object):
         
         
         # moving average (2-3-4-5-x)
-        #ma1_last, ma1_prev = self.algo_helper.ma_last_prev(1)
+        #ma1_last, ma1_prev = self.algo_helper.ma_last_prev(1) NON METTERE MAI !
         ma2_last, ma2_prev = self.algo_helper.ma_last_prev(2)
         ma3_last, ma3_prev = self.algo_helper.ma_last_prev(3)
         ma4_last, ma4_prev = self.algo_helper.ma_last_prev(4)
@@ -45,7 +45,7 @@ class ro_cano_che_ritorna(object):
         ma2_2_min_ago = self.algo_helper.ma_minutes_ago(2, 2) 
         #ma3_2_min_ago = self.algo_helper.ma_minutes_ago(3, 2)
         ma4_2_min_ago = self.algo_helper.ma_minutes_ago(4, 2)
-        ma5_2_min_ago = self.algo_helper.ma_minutes_ago(5, 2)
+        #ma5_2_min_ago = self.algo_helper.ma_minutes_ago(5, 2)
         #ma7_2_min_ago = self.algo_helper.ma_minutes_ago(7, 2)
         ma8_2_min_ago = self.algo_helper.ma_minutes_ago(8, 2)
         #ma8_3_min_ago = self.algo_helper.ma_minutes_ago(8, 3)
@@ -88,7 +88,7 @@ class ro_cano_che_ritorna(object):
         
         
         
-        # SI APRE LA GABBIA 
+        # SI APRE LA GABBIA ( NON FUNZIONA ne sono certo ) 
         # if ma8_last > ma8_2_min_ago
         
         # e se macd > macd_2_min_ago
@@ -128,7 +128,9 @@ class ro_cano_che_ritorna(object):
         
         if (self.open and self.session and last_trade_action != 'buy'
             and macd > macd_2_min_ago
-            and ma2_last > ma2_2_min_ago):
+            and ma2_last > ma2_2_min_ago
+            and ma4_last > ma4_2_min_ago
+            and ma8_last > ma8_2_min_ago):
             
             #"and if" ma8_last>ma8_3_min_ago
             #"and if" ma20_last>ma20_3_min_ago
@@ -180,7 +182,7 @@ class ro_cano_che_ritorna(object):
         elif last_trade_action == 'buy':
             #self.algo_helper.log('MACD: {}'.format(macd)) questa riga fa comparire la variabile sul log
             if self.session == 1:
-                if (ma2_prev > ma4_prev and ma2_last < ma4_last):
+                if (ma2_prev > ma5_prev and ma2_last < ma5_last):
                    
                     #(ma5_last < ma5_2_min_ago
                     #and ma3_last < ma3_2_min_ago):
@@ -192,6 +194,7 @@ class ro_cano_che_ritorna(object):
                     action = 'sell'
                 
                 #elif (ma2_prev > ma5_prev and ma2_last < ma5_last):
+                
                        #(ma5_last < ma5_2_min_ago
                        #and ma3_last < ma3_2_min_ago):
                         
@@ -204,7 +207,8 @@ class ro_cano_che_ritorna(object):
                         
                         
             elif self.session == 2:
-                if (ma2_prev > ma4_prev and ma2_last < ma4_last):
+                if (ma2_prev > ma5_prev and ma2_last < ma5_last):
+                    
                     #(ma5_last < ma5_2_min_ago
                     #and ma3_last < ma3_2_min_ago):
                     
@@ -214,7 +218,8 @@ class ro_cano_che_ritorna(object):
                     
                     action = 'sell' 
             else:
-                if (ma2_prev > ma4_prev and ma2_last < ma4_last):
+                if (ma2_prev > ma5_prev and ma2_last < ma5_last):
+                    
                     #(ma5_last < ma5_2_min_ago
                     #and ma3_last < ma3_2_min_ago):
                     
