@@ -147,10 +147,17 @@ class ro_cano_che_ritorna(object):
             # ( questa in un secondo momento ) "and if" ma200_prev and ma200_last and ma20_prev < ma200_prev and ma20_last >= ma200_last:
             
             
+            
                 if self.session == 1:
                     action = 'buy'
+                    
+                    
+                    
                 elif self.session == 2:
                     action = 'buy' 
+                    
+                    
+                    
                 else:
                     action = 'buy' 
         
