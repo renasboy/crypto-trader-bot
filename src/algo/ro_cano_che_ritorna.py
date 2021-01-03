@@ -190,7 +190,7 @@ class ro_cano_che_ritorna(object):
         elif last_trade_action == 'buy':
             #self.algo_helper.log('MACD: {}'.format(macd)) questa riga fa comparire la variabile sul log
             if self.session == 1:
-                if (ma2_prev > ma5_prev and ma2_last < ma5_last):
+                if (ma2_prev > ma4_prev and ma2_last < ma4_last):
                    
                     #(ma5_last < ma5_2_min_ago
                     #and ma3_last < ma3_2_min_ago):
@@ -201,8 +201,10 @@ class ro_cano_che_ritorna(object):
                     
                     action = 'sell'
                 
-                #elif (ma2_prev > ma5_prev and ma2_last < ma5_last):
+                #elif (ma2_prev > ma4_prev and ma2_last < ma4_last):
                 
+                
+                       #ma2_prev > ma5_prev and ma2_last < ma5_last):
                        #(ma5_last < ma5_2_min_ago
                        #and ma3_last < ma3_2_min_ago):
                         
@@ -215,8 +217,10 @@ class ro_cano_che_ritorna(object):
                         
                         
             elif self.session == 2:
-                if (ma2_prev > ma5_prev and ma2_last < ma5_last):
+                if (ma2_prev > ma4_prev and ma2_last < ma4_last):
                     
+                    
+                    #ma2_prev > ma5_prev and ma2_last < ma5_last):
                     #(ma5_last < ma5_2_min_ago
                     #and ma3_last < ma3_2_min_ago):
                     
@@ -226,8 +230,10 @@ class ro_cano_che_ritorna(object):
                     
                     action = 'sell' 
             else:
-                if (ma2_prev > ma5_prev and ma2_last < ma5_last):
+                if (ma2_prev > ma4_prev and ma2_last < ma4_last):
                     
+                    
+                    #ma2_prev > ma5_prev and ma2_last < ma5_last):
                     #(ma5_last < ma5_2_min_ago
                     #and ma3_last < ma3_2_min_ago):
                     
