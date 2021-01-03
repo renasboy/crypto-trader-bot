@@ -34,6 +34,7 @@ class ro_cano_che_ritorna(object):
         ma8_last, ma8_prev = self.algo_helper.ma_last_prev(8)
         #ma9_last, ma9_prev = self.algo_helper.ma_last_prev(9)
         #ma10_last, ma10_prev = self.algo_helper.ma_last_prev(10)
+        ma13_last, ma13_prev = self.algo_helper.ma_last_prev(13)
         #ma20_last, ma20_prev = self.algo_helper.ma_last_prev(20)
         #ma25_last, ma25_prev = self.algo_helper.ma_last_prev(25)
         #ma34_last, ma34_prev = self.algo_helper.ma_last_prev(34)
@@ -52,6 +53,7 @@ class ro_cano_che_ritorna(object):
         ma8_2_min_ago = self.algo_helper.ma_minutes_ago(8, 2)
         #ma8_3_min_ago = self.algo_helper.ma_minutes_ago(8, 3)
         #ma8_7_min_ago = self.algo_helper.ma_minutes_ago(8, 7)
+        #ma13_2_min_ago = self.algo_helper.ma_minutes_ago(13, 2)
         #ma20_2_min_ago = self.algo_helper.ma_minutes_ago(20, 2)
         #ma20_10_min_ago = self.algo_helper.ma_minutes_ago(20, 10)
         #ma43_3_min_ago = self.algo_helper.ma_minutes_ago(43, 3)
@@ -132,8 +134,8 @@ class ro_cano_che_ritorna(object):
         if (self.open and self.session and last_trade_action != 'buy'    
             and ma2_last > ma2_2_min_ago
             and ma4_last > ma4_2_min_ago
-            and ma5_last > ma5_2_min_ago):
-            
+            and ma5_last > ma5_2_min_ago
+            and ma13_last > ma13_2_min_ago):
             
             #and ma2_last > ma2_3_min_ago
             #and ma8_last > ma8_2_min_ago):
@@ -159,8 +161,8 @@ class ro_cano_che_ritorna(object):
                     action = 'buy' 
                     #if ma2_last > ma2_2_min_ago
                     #and ma4_last > ma4_2_min_ago
-                    #and ma8_last > ma8_2_min_ago):
-                    
+                    #and ma8_last > ma8_2_min_ago
+                    #and ma13_last > ma13_2_min_ago):
                     
                 else:
                     action = 'buy' 
