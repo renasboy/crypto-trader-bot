@@ -205,7 +205,7 @@ class ro_cano_che_ritorna(object):
                     #and [(price / last_trade_price)-1]*100 > 0,20):  ( VENDITA MENTRE SALE ) (AIUTO COMPA !)
                     
                 #else (ma2_prev > ma4_prev and ma2_last < ma4_last
-                       #and[(price / last_trade_price)-1]*100 < 0,50): ( VENDITA MENTRE SCENDE )  (AIUTO COMPA !)
+                       #and[(price / last_trade_price)-1]*100 < -0,60): ( VENDITA MENTRE SCENDE )  (AIUTO COMPA !)
                 
                     
                     #(ma5_last < ma5_2_min_ago
