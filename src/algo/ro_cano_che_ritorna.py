@@ -191,7 +191,12 @@ class ro_cano_che_ritorna(object):
             #self.algo_helper.log('MACD: {}'.format(macd)) questa riga fa comparire la variabile sul log
             if self.session == 1:
                 if (ma2_prev > ma4_prev and ma2_last < ma4_last):
-                   
+                    #and [(price / last_trade_price)-1]*100 > 0,20):  ( VENDITA MENTRE SALE ) (AIUTO COMPA !)
+                    
+                #else (ma2_prev > ma4_prev and ma2_last < ma4_last
+                       #and[(price / last_trade_price)-1]*100 < 0,50): ( VENDITA MENTRE SCENDE )  (AIUTO COMPA !)
+                
+                    
                     #(ma5_last < ma5_2_min_ago
                     #and ma3_last < ma3_2_min_ago):
                     
@@ -202,6 +207,7 @@ class ro_cano_che_ritorna(object):
                     action = 'sell'
                 
                 #elif (ma2_prev > ma4_prev and ma2_last < ma4_last):
+                
                 
                 
                        #ma2_prev > ma5_prev and ma2_last < ma5_last):
