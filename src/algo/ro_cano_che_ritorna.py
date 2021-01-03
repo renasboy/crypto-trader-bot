@@ -90,7 +90,7 @@ class ro_cano_che_ritorna(object):
         
         
         
-        # SI APRE LA GABBIA ( NON FUNZIONA ne sono certo ) 
+        # SI APRE LA GABBIA (PENSAVO CHE NON FUNZIONASSE) ( E INVECE HO CAMBIATO LA "if (ma8_last > ma8_2_min_ago):" E IL CANO NON FUNZIONAVA PIU' !)
         # if ma8_last > ma8_2_min_ago
         
         # e se macd > macd_2_min_ago
