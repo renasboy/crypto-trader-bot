@@ -245,7 +245,7 @@ class ro_cano_che_ritorna(object):
             elif self.session == 2:   
                 if ma2_prev > ma4_prev and ma2_last < ma4_last:
                     if deviation > 0.20 or deviation < -0.60: 
-                        
+                        action = 'sell'     
                     
                     
                     #ma2_prev > ma5_prev and ma2_last < ma5_last):
@@ -256,11 +256,11 @@ class ro_cano_che_ritorna(object):
                     #and macd < macd_3_min_ago
                     #and macd_2_min_ago < macd_3_min_ago):
                     
-                        action = 'sell' 
+                        
             else:
                 if (ma2_prev > ma4_prev and ma2_last < ma4_last):
                     if deviation > 0.20 or deviation < -0.60: 
-                    
+                        action = 'sell'
                     
                     #ma2_prev > ma5_prev and ma2_last < ma5_last):
                     #(ma5_last < ma5_2_min_ago
@@ -270,7 +270,7 @@ class ro_cano_che_ritorna(object):
                     #and macd < macd_3_min_ago
                     #and macd_2_min_ago < macd_3_min_ago):
            
-                        action = 'sell' 
+                         
             
             
             
