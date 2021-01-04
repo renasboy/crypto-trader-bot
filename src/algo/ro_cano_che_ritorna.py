@@ -77,6 +77,7 @@ class ro_cano_che_ritorna(object):
         
         # deviation
         deviation = (price / last_trade_price - 1) * 100 if last_trade_price else 0
+        self.algo_helper.log('deviation: {}'.format(deviation))
         
         
         
