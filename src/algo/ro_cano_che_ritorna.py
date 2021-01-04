@@ -64,7 +64,8 @@ class ro_cano_che_ritorna(object):
         # LAST TRADE
         last_trade_action = self.algo_helper.last_trade_action
         last_trade_time = self.algo_helper.last_trade_time
-
+        last_trade_price = self.algo_helper.last_trade_price
+        
         seconds_since_last_trade = 0
         if last_trade_time:
             seconds_since_last_trade = (datetime.now() - datetime.strptime(last_trade_time[:last_trade_time.index('.')], '%Y-%m-%dT%H:%M:%S')).seconds
@@ -74,7 +75,8 @@ class ro_cano_che_ritorna(object):
         # CURRENT PRICE
         price = self.algo_helper.price
         
-        
+        # deviation
+        deviation = (price / last_trade_price - 1) * 100
         
         
         
@@ -203,13 +205,17 @@ class ro_cano_che_ritorna(object):
         elif last_trade_action == 'buy':
             #self.algo_helper.log('MACD: {}'.format(macd)) questa riga fa comparire la variabile sul log
             if self.session == 1:
-                if (ma2_prev > ma4_prev and ma2_last < ma4_last):
-                    #and [(price / last_trade_price)-1]*100 > 0,20):  ( VENDITA MENTRE SALE ) (AIUTO COMPA !)
+                if ma2_prev > ma4_prev and ma2_last < ma4_last:
+                    if deviation > 0.20 or deviation < -0.60: 
+                        
+                        action = 'sell'
                     
-                #else (ma2_prev > ma4_prev and ma2_last < ma4_last
-                       #and[(price / last_trade_price)-1]*100 < -0,60): ( VENDITA MENTRE SCENDE )  (AIUTO COMPA !)
+                    #(VENDITA MENTRE SALE e VENDITA MENTRE SCENDE) 
+                    
+                    
+               
+                    
                 
-                    
                     #(ma5_last < ma5_2_min_ago
                     #and ma3_last < ma3_2_min_ago):
                     
@@ -217,7 +223,7 @@ class ro_cano_che_ritorna(object):
                     #and macd < macd_3_min_ago  lettera a di and allineata con la m di ma5 di sopra e togli la parentesei e i ":" sopra 
                     #and macd_2_min_ago < macd_3_min_ago
                     
-                    action = 'sell'
+                    
                 
                 #elif (ma2_prev > ma4_prev and ma2_last < ma4_last):
                 
