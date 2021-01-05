@@ -170,14 +170,15 @@ class ro_cano_che_ritorna(object):
                     
                     
                 elif (self.open and self.session and last_trade_action != 'buy'
+                    macd > macd_3_min_ago
                     and ma2_last > ma2_2_min_ago
                     and ma2_last > ma2_3_min_ago
                     and ma4_last > ma4_2_min_ago
                     and ma5_last > ma5_2_min_ago
-                    and ma8_last > ma8_2_min_ago
-                    and ma11_last > ma11_2_min_ago
-                    and ma24_last > ma24_2_min_ago
-                    and macd > macd_2_min_ago):
+                    #and ma8_last > ma8_2_min_ago
+                    #and ma11_last > ma11_2_min_ago
+                    #and ma24_last > ma24_2_min_ago):
+                    
                       
                     action = 'buy' 
                       
