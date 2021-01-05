@@ -167,7 +167,7 @@ class ro_cano_che_ritorna(object):
                     
                     
                     
-                elif (self.open and self.session and last_trade_action != 'buy'  
+                elif (self.open and self.session and last_trade_action != 'buy'
                     and ma2_last > ma2_2_min_ago
                     and ma2_last > ma2_3_min_ago
                     and ma4_last > ma4_2_min_ago
@@ -177,6 +177,7 @@ class ro_cano_che_ritorna(object):
                     and ma24_last > ma24_2_min_ago
                     and macd > macd_2_min_ago):
                       
+                    action = 'buy' 
                       
                     #and ma8_last > ma8_2_min_ago (LA MA8 DALLA SECONDA SESSIONE IN POI PER RENDERE L' ACQUISTO UN PO' PIU' DIFFICILE MA, FORSE, PIU' SICURO.)
                     #and ma2_last > ma2_3_min_ago (LA MA2 > MA 3 min AGO DALLA SECONDA SESSIONE IN POI PER RENDERE L' ACQUISTO UN PO' PIU' DIFFICILE MA, FORSE, PIU' SICURO.)
