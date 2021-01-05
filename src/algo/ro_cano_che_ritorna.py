@@ -187,8 +187,8 @@ class ro_cano_che_ritorna(object):
                     #and ma13_last > ma13_2_min_ago):
                     
                     
-                        elif self.session == 2:
-                            action = 'buy' 
+                elif self.session == 2:
+                    action = 'buy' 
                     
                     
                     
