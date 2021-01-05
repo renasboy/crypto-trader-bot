@@ -35,11 +35,11 @@ class ro_cano_che_ritorna(object):
         #ma9_last, ma9_prev = self.algo_helper.ma_last_prev(9)
         #ma10_last, ma10_prev = self.algo_helper.ma_last_prev(10)
         ma11_last, ma11_prev = self.algo_helper.ma_last_prev(11)
-        #ma13_last, ma13_prev = self.algo_helper.ma_last_prev(13)
+        ma16_last, ma16_prev = self.algo_helper.ma_last_prev(16)
         #ma20_last, ma20_prev = self.algo_helper.ma_last_prev(20)
         ma24_last, ma24_prev = self.algo_helper.ma_last_prev(24)
         ma34_last, ma34_prev = self.algo_helper.ma_last_prev(34)
-        #ma43_last, ma43_prev = self.algo_helper.ma_last_prev(43)
+        ma43_last, ma43_prev = self.algo_helper.ma_last_prev(43)
         #ma100_last, ma100_prev = self.algo_helper.ma_last_prev(100)
         #ma200_last, ma200_prev = self.algo_helper.ma_last_prev(200)
         
@@ -55,11 +55,11 @@ class ro_cano_che_ritorna(object):
         #ma8_3_min_ago = self.algo_helper.ma_minutes_ago(8, 3)
         #ma8_7_min_ago = self.algo_helper.ma_minutes_ago(8, 7)
         ma11_2_min_ago = self.algo_helper.ma_minutes_ago(11, 2)
-        #ma13_2_min_ago = self.algo_helper.ma_minutes_ago(13, 2)
+        ma16_2_min_ago = self.algo_helper.ma_minutes_ago(16, 2)
         #ma20_2_min_ago = self.algo_helper.ma_minutes_ago(20, 2)
         ma24_2_min_ago = self.algo_helper.ma_minutes_ago(24, 2)
         ma34_2_min_ago = self.algo_helper.ma_minutes_ago(34, 2)
-        #ma43_3_min_ago = self.algo_helper.ma_minutes_ago(43, 3)
+        ma43_2_min_ago = self.algo_helper.ma_minutes_ago(43, 2)
         #ma43_7_min_ago = self.algo_helper.ma_minutes_ago(43, 7)
         #ma100_5_min_ago = self.algo_helper.ma_minutes_ago(100, 5)
         #ma200_3_min_ago = self.algo_helper.ma_minutes_ago(200, 3)
@@ -143,7 +143,9 @@ class ro_cano_che_ritorna(object):
             and ma5_last > ma5_2_min_ago
             and ma11_last > ma11_2_min_ago
             and ma24_last > ma24_2_min_ago
-            and ma34_last > ma34_2_min_ago):
+            and ma16_last > ma16_2_min_ago
+            and ma34_last > ma34_2_min_ago
+            and ma43_last > ma43_2_min_ago):
             #and ma11_prev < ma24_prev and ma11_last > ma24_last): CON QUESTA NON COMPRA MAI MA BUONO CHE LA ma11 STA SOPRA LA ma24
             
             
