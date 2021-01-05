@@ -141,8 +141,8 @@ class ro_cano_che_ritorna(object):
             and ma4_last > ma4_2_min_ago
             and ma5_last > ma5_2_min_ago
             and ma11_last > ma11_2_min_ago
-            and ma24_last > ma24_2_min_ago
-            and ma11_prev < ma24_prev and ma11_last > ma24_last):
+            and ma24_last > ma24_2_min_ago):
+            #and ma11_prev < ma24_prev and ma11_last > ma24_last): CON QUESTA NON COMPRA MAI MA BUONO CHE LA ma11 STA SOPRA LA ma24
             
             
             #and ma2_last > ma2_3_min_ago
