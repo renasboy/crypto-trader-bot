@@ -110,7 +110,7 @@ class ro_cano_che_ritorna(object):
         # ( questa in un secondo momento ) e se ma200_prev and ma200_last and ma20_prev < ma200_prev and ma20_last >= ma200_last:
    
         
-        if (ma2_last > ma2_2_min_ago):  
+        if (ma43_last > ma43_2_min_ago):  
             #macd > macd_2_min_ago
             #and ma4_last > ma4_2_min_ago
             #"and if" ma8_last > ma8_3_min_ago
