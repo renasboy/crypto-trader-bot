@@ -236,7 +236,7 @@ class ro_cano_che_ritorna(object):
         elif last_trade_action == 'buy':
             #self.algo_helper.log('MACD: {}'.format(macd)) questa riga fa comparire la variabile sul log
             if self.session == 1:
-                if ma2_prev > ma4_prev and ma2_last < ma4_last:
+                if ma2_prev > ma5_prev and ma2_last < ma5_last:
                     if deviation > 0.25 or deviation < -0.70: 
                         
                         action = 'sell'
