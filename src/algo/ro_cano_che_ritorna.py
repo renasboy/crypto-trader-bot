@@ -22,8 +22,7 @@ class ro_cano_che_ritorna(object):
         
         ma2_last, ma2_prev = self.algo_helper.ma_last_prev(2)
         ma4_last, ma4_prev = self.algo_helper.ma_last_prev(4)
-        ma5_last, ma5_prev = self.algo_helper.ma_last_prev(5)  
-        ma6_last, ma6_prev = self.algo_helper.ma_last_prev(6)  
+        ma5_last, ma5_prev = self.algo_helper.ma_last_prev(5)
         ma7_last, ma7_prev = self.algo_helper.ma_last_prev(7)  
         ma11_last, ma11_prev = self.algo_helper.ma_last_prev(11)
         ma16_last, ma16_prev = self.algo_helper.ma_last_prev(16)
@@ -68,12 +67,10 @@ class ro_cano_che_ritorna(object):
         
         action = None
       
-       
+    
         # SI APRE LA GABBIA SE 
-        
         if (ma43_last > ma43_2_min_ago):  
            
-            
             if not self.session or not self.open:
                self.session = 1
                self.open = True
@@ -95,13 +92,11 @@ class ro_cano_che_ritorna(object):
             
             #and ma100_last > ma100_2_min_ago
             #and ma11_prev < ma24_prev and ma11_last > ma24_last): CON QUESTA NON COMPRA MAI MA BUONO CHE LA ma11 STA SOPRA LA ma24
-            
                
                 
                 if self.session == 1:
                     action = 'buy'
-                    
-                    
+                        
                     
                 elif (self.open and self.session and last_trade_action != 'buy'
                     and ma2_last > ma2_2_min_ago
@@ -118,15 +113,12 @@ class ro_cano_che_ritorna(object):
                     action = 'buy'
                       
                     
-                  
-                    
                 elif self.session == 2:
                     action = 'buy' 
                   
                 else:
                     action = 'buy' 
        
-    
     
         # VENDE sessione 1
         # VENDE CON INCROCIO ma2 - ma7
@@ -139,7 +131,7 @@ class ro_cano_che_ritorna(object):
                         
                         action = 'sell'
                     
-                    # la deviaton stabilisce i termini della VENDITA MENTRE SALE e della VENDITA MENTRE SCENDE.
+                    # la deviaton stabilisce i limiti della VENDITA MENTRE SALE e della VENDITA MENTRE SCENDE.
                     
                      
                         
