@@ -86,38 +86,21 @@ class ro_cano_che_ritorna(object):
         
         
         action = None
+      
+        
+    
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        # SI APRE LA GABBIA (PENSAVO CHE NON FUNZIONASSE) ( E INVECE HO CAMBIATO LA "if (ma8_last > ma8_2_min_ago):" E IL CANO NON FUNZIONAVA PIU' !)
-        # if ma8_last > ma8_2_min_ago
-        
-        # e se macd > macd_2_min_ago
-        # e se ma4_last > ma4_2_min_ago
-        # e se ma8_last > ma8_3_min_ago
-        # e se ma20_last > ma20_3_min_ago
-        # e se ma100_last > ma100_5_min_ago
-        # e se ma200_last > ma200_3_min_ago
-        # ( questa in un secondo momento ) e se ma200_prev and ma200_last and ma20_prev < ma200_prev and ma20_last >= ma200_last:
-   
+        # SI APRE LA GABBIA SE 
         
         if (ma43_last > ma43_2_min_ago):  
-            #macd > macd_2_min_ago
-            #and ma4_last > ma4_2_min_ago
-            #"and if" ma8_last > ma8_3_min_ago
-            #"and if" ma20_last > ma20_3_min_ago
-            #"and if" ma100_last > ma100_5_min_ago
-            #"and if" ma200_last > ma200_3_min_ago
-            # ( questa in un secondo momento ) "and if" ma200_prev and ma200_last and ma20_prev < ma200_prev and ma20_last >= ma200_last:
+           
+            
+           
+            
+         
+            
+            
             
             if not self.session or not self.open:
                self.session = 1
