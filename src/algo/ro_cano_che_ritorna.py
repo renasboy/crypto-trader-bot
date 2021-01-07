@@ -148,13 +148,15 @@ class ro_cano_che_ritorna(object):
                         
             # VENDE sessione 3 in poi
             else:
-                if (ma2_prev > ma7_prev and ma2_last < ma7_last):
+                if ma2_prev > ma7_prev and ma2_last < ma7_last:
                     if deviation > 0.21 or deviation < -0.6:
                         action = 'sell'
+
+            # SE LA PERDITA E' TROPPA VENDE SUBITO (SALVAGENTE)
+            if deviation < -1:
+                action = 'sell'
                     
-            #FORSE QUI GLI DOBBIAMO DIRE CHE DEVE CHIUDERE LA GABBIA ) (?)
-           
-            # ATTESA max hold time
+            # ATTESA max hold time, ALTRIMENTE VENDE SUBITO
             if seconds_since_last_trade > max_hold_time_in_seconds:
                  action = 'sell'
 
