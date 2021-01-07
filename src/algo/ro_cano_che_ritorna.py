@@ -1,4 +1,3 @@
-from datetime import datetime
 
 class ro_cano_che_ritorna(object):
 
@@ -41,13 +40,8 @@ class ro_cano_che_ritorna(object):
         # LAST TRADE
         last_trade_action = self.algo_helper.last_trade_action
         last_trade_time = self.algo_helper.last_trade_time
-        last_trade_price = self.algo_helper.last_trade_price
-        
-        seconds_since_last_trade = 0
-        if last_trade_time:
-            seconds_since_last_trade = (datetime.now() - datetime.strptime(last_trade_time[:last_trade_time.index('.')], '%Y-%m-%dT%H:%M:%S')).seconds
-            self.algo_helper.log('last trade time {}'.format(last_trade_time)) 
-            self.algo_helper.log('seconds since last trade: {}'.format(seconds_since_last_trade))
+        last_trade_price = self.algo_helper.last_trade_price 
+        seconds_since_last_trade = self.algo_helper.seconds_since_last_trade
         
         # CURRENT PRICE
         price = self.algo_helper.price

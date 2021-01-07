@@ -1,4 +1,4 @@
-import datetime
+from datetime import datetime
 import time
 
 from influxdb import InfluxDBClient
@@ -165,6 +165,15 @@ class influx_algo_helper(object):
         self.log('last trade date: {} session: {} action: {} price: {}'.format(date_time, session, action, price))
         return date_time, int(session), action, float(price)
 
+    @property
+    def seconds_since_last_trade(self):
+        if self.last_trade_time:
+            seconds_since_last_trade = (datetime.now() - datetime.strptime(self.last_trade_time[:self.last_trade_time.index('.')], '%Y-%m-%dT%H:%M:%S')).seconds
+            self.log('last trade time {}'.format(self.last_trade_time)) 
+            self.log('seconds since last trade: {}'.format(seconds_since_last_trade))
+            return seconds_since_last_trade
+        return 0
+
     def log(self, message):
-        string_date = datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%dT%H:%M:%S.%fZ')
+        string_date = datetime.fromtimestamp(time.time()).strftime('%Y-%m-%dT%H:%M:%S.%fZ')
         print('{} {}: {}'.format(string_date, self.label, message))
