@@ -111,43 +111,23 @@ class ro_cano_che_ritorna(object):
         
         # COMPRA sessione 1
       
-        # se macd > macd_2_min_ago 
-        # e se ma4_last > ma4_2_min_ago
-        # e se ma8_last > ma8_3_min_ago
-        # e se ma20_last > ma20_3_min_ago
-        # e se ma100_last > ma100_5_min_ago
-        # e se ma200_last > ma200_3_min_ago
-        # ( questa in un secondo momento ) e se ma200_prev and ma200_last and ma20_prev < ma200_prev and ma20_last >= ma200_last:
-        
-       
         if (self.open and self.session and last_trade_action != 'buy'    
             and ma2_last > ma2_2_min_ago
             and ma4_last > ma4_2_min_ago
             and ma5_last > ma5_2_min_ago
             and ma11_last > ma11_2_min_ago
-            and ma24_last > ma24_2_min_ago
             and ma16_last > ma16_2_min_ago
+            and ma24_last > ma24_2_min_ago
             and ma34_last > ma34_2_min_ago
             and ma43_last > ma43_2_min_ago
             and macd < 60):
             
+            
+            #and ma100_last > ma100_2_min_ago
             #and ma11_prev < ma24_prev and ma11_last > ma24_last): CON QUESTA NON COMPRA MAI MA BUONO CHE LA ma11 STA SOPRA LA ma24
             
             
-            #and ma2_last > ma2_3_min_ago
-            #and ma8_last > ma8_2_min_ago):
-            
-            #and ma8_last>ma8_3_min_ago
-            #and ma100_last > ma100_5_min_ago
-            
-            #and macd > macd_2_min_ago
-            
-            #"and if" ma20_last>ma20_3_min_ago
-            
-            #"and if" ma200_last > ma200_3_min_ago
-            # ( questa in un secondo momento ) "and if" ma200_prev and ma200_last and ma20_prev < ma200_prev and ma20_last >= ma200_last:
-            
-            
+           
             
                 if self.session == 1:
                     action = 'buy'
