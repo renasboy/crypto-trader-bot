@@ -24,8 +24,7 @@ class ro_cano_che_ritorna(object):
         ma4_last, ma4_prev = self.algo_helper.ma_last_prev(4)
         ma5_last, ma5_prev = self.algo_helper.ma_last_prev(5)  
         ma6_last, ma6_prev = self.algo_helper.ma_last_prev(6)  
-        ma7_last, ma7_prev = self.algo_helper.ma_last_prev(7)
-        ma8_last, ma8_prev = self.algo_helper.ma_last_prev(8)
+        ma7_last, ma7_prev = self.algo_helper.ma_last_prev(7)  
         ma11_last, ma11_prev = self.algo_helper.ma_last_prev(11)
         ma16_last, ma16_prev = self.algo_helper.ma_last_prev(16)
         ma34_last, ma34_prev = self.algo_helper.ma_last_prev(34)
@@ -40,7 +39,6 @@ class ro_cano_che_ritorna(object):
         ma4_2_min_ago = self.algo_helper.ma_minutes_ago(4, 2)
         ma5_2_min_ago = self.algo_helper.ma_minutes_ago(5, 2)
         ma7_2_min_ago = self.algo_helper.ma_minutes_ago(7, 2)
-        ma8_2_min_ago = self.algo_helper.ma_minutes_ago(8, 2)
         ma11_2_min_ago = self.algo_helper.ma_minutes_ago(11, 2)
         ma16_2_min_ago = self.algo_helper.ma_minutes_ago(16, 2)
         ma34_2_min_ago = self.algo_helper.ma_minutes_ago(34, 2)
@@ -68,25 +66,18 @@ class ro_cano_che_ritorna(object):
         self.algo_helper.log('deviation: {}'.format(deviation))
         
         
-        
-        
         action = None
       
-        
-    
-        
-        
+       
         # SI APRE LA GABBIA SE 
         
         if (ma43_last > ma43_2_min_ago):  
            
             
-            
             if not self.session or not self.open:
                self.session = 1
                self.open = True
                self.algo_helper.log('session {}: open segment'.format(self.session))
-        
         
         
         # COMPRA sessione 1
@@ -95,7 +86,7 @@ class ro_cano_che_ritorna(object):
             and ma2_last > ma2_2_min_ago
             and ma4_last > ma4_2_min_ago
             and ma5_last > ma5_2_min_ago
-            and ma8_last > ma8_2_min_ago
+            and ma7_last > ma7_2_min_ago
             and ma11_last > ma11_2_min_ago
             and ma16_last > ma16_2_min_ago
             and ma24_last > ma24_2_min_ago
@@ -115,11 +106,15 @@ class ro_cano_che_ritorna(object):
                     
                 elif (self.open and self.session and last_trade_action != 'buy'
                     and ma2_last > ma2_2_min_ago
-                    and ma2_last > ma2_3_min_ago
                     and ma4_last > ma4_2_min_ago
                     and ma5_last > ma5_2_min_ago
-                    and ma8_last > ma8_2_min_ago 
-                    and macd > macd_2_min_ago):  
+                    and ma7_last > ma7_2_min_ago
+                    and ma11_last > ma11_2_min_ago
+                    and ma16_last > ma16_2_min_ago
+                    and ma24_last > ma24_2_min_ago
+                    and ma34_last > ma34_2_min_ago
+                    and ma43_last > ma43_2_min_ago
+                    and macd < 60):
                     
                     
                     action = 'buy'
