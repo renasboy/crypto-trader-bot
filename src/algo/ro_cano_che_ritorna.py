@@ -311,7 +311,7 @@ class ro_cano_che_ritorna(object):
             
             
            
-            if seconds_since_last_trade > 3600:
+            if seconds_since_last_trade > 7200:
                  action = 'sell'
 
         self.algo_helper.log('action {}'.format(action))
