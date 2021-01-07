@@ -125,15 +125,7 @@ class ro_cano_che_ritorna(object):
                     action = 'buy'
                       
                     
-                      
-                    
-                    #and ma2_last > ma2_3_min_ago (LA MA2 > MA 3 min AGO DALLA SECONDA SESSIONE IN POI PER RENDERE L' ACQUISTO UN PO' PIU' DIFFICILE MA, FORSE, PIU' SICURO.)
-                    #and macd > macd_2_min_ago ( IL MACD >MACD 2 min AGO DALLA SECONDA SESSIONE IN POI PER RENDERE L' ACQUISTO UN PO' PIU' DIFFICILE MA, FORSE, PIU' SICURO.)
-                    #if ma2_last > ma2_2_min_ago
-                    #and ma4_last > ma4_2_min_ago
-                    
-                    #and ma13_last > ma13_2_min_ago):
-                    
+                  
                     
                 elif self.session == 2:
                     action = 'buy' 
@@ -142,20 +134,10 @@ class ro_cano_che_ritorna(object):
                     action = 'buy' 
        
     
-        # VENDE sessione 1
-        
-        # VENDE CON INCROCIO ma2 - ma4
-        
-        # vende anche se (oppure se) macd < macd_2_min_ago
-        # vende anche se macd < macd_1_min_ago NON METTERE !
-        # vende anche se macd < macd_3_min_ago
-        # vende anche se macd_1_min_ago < macd_2_min_ago
-        # vende anche se macd_4_min_ago < macd_5_min_ago
-        # anche se secondi passati della compra > 3600 (60 minuti)
     
-        #"oppure" se ma7_last < ma7_2_min_ago
+        # VENDE sessione 1
+        # VENDE CON INCROCIO ma2 - ma7
         
-        # vende
         elif last_trade_action == 'buy':
             #self.algo_helper.log('MACD: {}'.format(macd)) questa riga fa comparire la variabile sul log
             if self.session == 1:
@@ -164,7 +146,7 @@ class ro_cano_che_ritorna(object):
                         
                         action = 'sell'
                     
-                    #(VENDITA MENTRE SALE e VENDITA MENTRE SCENDE) 
+                    # la deviaton stabilisce i termini della VENDITA MENTRE SALE e della VENDITA MENTRE SCENDE.
                     
                      
                         
