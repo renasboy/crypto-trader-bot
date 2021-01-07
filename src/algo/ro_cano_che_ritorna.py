@@ -12,57 +12,52 @@ class ro_cano_che_ritorna(object):
         
         # TIME dopo quanto tempo ro cano ritorna ( per esempio 60 minuti x 60 = 3600 secondi )
 
-        # MACD
-        macd = self.algo_helper.macd
-
         # MACD di 1-2-3-4 minuti prima
-        #macd_1_min_ago = self.algo_helper.macd_minutes_ago(1) NON METTERE MAI !
+        macd = self.algo_helper.macd
+        
         macd_2_min_ago = self.algo_helper.macd_minutes_ago(2)
-        #macd_3_min_ago = self.algo_helper.macd_minutes_ago(3)
-        #macd_4_min_ago = self.algo_helper.macd_minutes_ago(4)
-        #macd_5_min_ago = self.algo_helper.macd_minutes_ago(5)
-        
-        
+       
+      
         # moving average (2-3-4-5-x)
-        #ma1_last, ma1_prev = self.algo_helper.ma_last_prev(1) NON METTERE MAI !
+        
         ma2_last, ma2_prev = self.algo_helper.ma_last_prev(2)
-        #ma3_last, ma3_prev = self.algo_helper.ma_last_prev(3)
+        
         ma4_last, ma4_prev = self.algo_helper.ma_last_prev(4)
         ma5_last, ma5_prev = self.algo_helper.ma_last_prev(5)  
         ma6_last, ma6_prev = self.algo_helper.ma_last_prev(6)  
         ma7_last, ma7_prev = self.algo_helper.ma_last_prev(7)
         ma8_last, ma8_prev = self.algo_helper.ma_last_prev(8)
-        #ma9_last, ma9_prev = self.algo_helper.ma_last_prev(9)
-        #ma10_last, ma10_prev = self.algo_helper.ma_last_prev(10)
+        
         ma11_last, ma11_prev = self.algo_helper.ma_last_prev(11)
         ma16_last, ma16_prev = self.algo_helper.ma_last_prev(16)
-        #ma20_last, ma20_prev = self.algo_helper.ma_last_prev(20)
-        ma24_last, ma24_prev = self.algo_helper.ma_last_prev(24)
+        
+        
         ma34_last, ma34_prev = self.algo_helper.ma_last_prev(34)
         ma43_last, ma43_prev = self.algo_helper.ma_last_prev(43)
+        
         #ma100_last, ma100_prev = self.algo_helper.ma_last_prev(100)
-        #ma200_last, ma200_prev = self.algo_helper.ma_last_prev(200)
+        
         
         
         # moving average (2-3-4-5-7-8-20-43-100) di x minuti prima (NON METTERE MAI 1 min !)
         ma2_2_min_ago = self.algo_helper.ma_minutes_ago(2, 2) 
-        ma2_3_min_ago = self.algo_helper.ma_minutes_ago(2, 3)
-        #ma3_2_min_ago = self.algo_helper.ma_minutes_ago(3, 2)
+        
+        
         ma4_2_min_ago = self.algo_helper.ma_minutes_ago(4, 2)
         ma5_2_min_ago = self.algo_helper.ma_minutes_ago(5, 2)
         ma7_2_min_ago = self.algo_helper.ma_minutes_ago(7, 2)
         ma8_2_min_ago = self.algo_helper.ma_minutes_ago(8, 2)
-        #ma8_3_min_ago = self.algo_helper.ma_minutes_ago(8, 3)
-        #ma8_7_min_ago = self.algo_helper.ma_minutes_ago(8, 7)
+        
+        
         ma11_2_min_ago = self.algo_helper.ma_minutes_ago(11, 2)
         ma16_2_min_ago = self.algo_helper.ma_minutes_ago(16, 2)
-        #ma20_2_min_ago = self.algo_helper.ma_minutes_ago(20, 2)
-        ma24_2_min_ago = self.algo_helper.ma_minutes_ago(24, 2)
+        
+        
         ma34_2_min_ago = self.algo_helper.ma_minutes_ago(34, 2)
         ma43_2_min_ago = self.algo_helper.ma_minutes_ago(43, 2)
-        #ma43_7_min_ago = self.algo_helper.ma_minutes_ago(43, 7)
-        #ma100_5_min_ago = self.algo_helper.ma_minutes_ago(100, 5)
-        #ma200_3_min_ago = self.algo_helper.ma_minutes_ago(200, 3)
+        
+        #ma100_2_min_ago = self.algo_helper.ma_minutes_ago(100, 2)
+        
         
         # LAST TRADE
         last_trade_action = self.algo_helper.last_trade_action
@@ -115,6 +110,7 @@ class ro_cano_che_ritorna(object):
             and ma2_last > ma2_2_min_ago
             and ma4_last > ma4_2_min_ago
             and ma5_last > ma5_2_min_ago
+            and ma8_last > ma8_2_min_ago
             and ma11_last > ma11_2_min_ago
             and ma16_last > ma16_2_min_ago
             and ma24_last > ma24_2_min_ago
@@ -139,11 +135,12 @@ class ro_cano_che_ritorna(object):
                     and ma2_last > ma2_3_min_ago
                     and ma4_last > ma4_2_min_ago
                     and ma5_last > ma5_2_min_ago
-                    and macd > macd_2_min_ago  
-                    and macd > macd_3_min_ago):
+                    and ma8_last > ma8_2_min_ago 
+                    and macd > macd_2_min_ago):  
                     
                     
-                    #and ma8_last > ma8_2_min_ago
+                    
+                    #
                     #and ma11_last > ma11_2_min_ago
                     #and ma24_last > ma24_2_min_ago
                     
