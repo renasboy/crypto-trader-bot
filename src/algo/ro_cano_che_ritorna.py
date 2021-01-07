@@ -30,7 +30,7 @@ class ro_cano_che_ritorna(object):
         ma4_last, ma4_prev = self.algo_helper.ma_last_prev(4)
         ma5_last, ma5_prev = self.algo_helper.ma_last_prev(5)  
         ma6_last, ma6_prev = self.algo_helper.ma_last_prev(6)  
-        #ma7_last, ma7_prev = self.algo_helper.ma_last_prev(7)
+        ma7_last, ma7_prev = self.algo_helper.ma_last_prev(7)
         ma8_last, ma8_prev = self.algo_helper.ma_last_prev(8)
         #ma9_last, ma9_prev = self.algo_helper.ma_last_prev(9)
         #ma10_last, ma10_prev = self.algo_helper.ma_last_prev(10)
@@ -50,7 +50,7 @@ class ro_cano_che_ritorna(object):
         #ma3_2_min_ago = self.algo_helper.ma_minutes_ago(3, 2)
         ma4_2_min_ago = self.algo_helper.ma_minutes_ago(4, 2)
         ma5_2_min_ago = self.algo_helper.ma_minutes_ago(5, 2)
-        #ma7_2_min_ago = self.algo_helper.ma_minutes_ago(7, 2)
+        ma7_2_min_ago = self.algo_helper.ma_minutes_ago(7, 2)
         ma8_2_min_ago = self.algo_helper.ma_minutes_ago(8, 2)
         #ma8_3_min_ago = self.algo_helper.ma_minutes_ago(8, 3)
         #ma8_7_min_ago = self.algo_helper.ma_minutes_ago(8, 7)
@@ -241,7 +241,7 @@ class ro_cano_che_ritorna(object):
         elif last_trade_action == 'buy':
             #self.algo_helper.log('MACD: {}'.format(macd)) questa riga fa comparire la variabile sul log
             if self.session == 1:
-                if ma2_prev > ma5_prev and ma2_last < ma5_last:
+                if ma2_prev > ma7_prev and ma2_last < ma7_last:
                     if deviation > 0.25 or deviation < -0.70: 
                         
                         action = 'sell'
@@ -278,7 +278,7 @@ class ro_cano_che_ritorna(object):
                         
                         
             elif self.session == 2:   
-                if ma2_prev > ma4_prev and ma2_last < ma4_last:
+                if ma2_prev > ma7_prev and ma2_last < ma7_last:
                     if deviation > 0.25 or deviation < -0.60: 
                         action = 'sell'     
                     
@@ -293,7 +293,7 @@ class ro_cano_che_ritorna(object):
                     
                         
             else:
-                if (ma2_prev > ma4_prev and ma2_last < ma4_last):
+                if (ma2_prev > ma7_prev and ma2_last < ma7_last):
                     if deviation > 0.25 or deviation < -0.50: 
                         action = 'sell'
                     
