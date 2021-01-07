@@ -89,7 +89,6 @@ class ro_cano_che_ritorna(object):
             and ma7_last > ma7_2_min_ago
             and ma11_last > ma11_2_min_ago
             and ma16_last > ma16_2_min_ago
-            and ma24_last > ma24_2_min_ago
             and ma34_last > ma34_2_min_ago
             and ma43_last > ma43_2_min_ago
             and macd < 60):
@@ -111,7 +110,6 @@ class ro_cano_che_ritorna(object):
                     and ma7_last > ma7_2_min_ago
                     and ma11_last > ma11_2_min_ago
                     and ma16_last > ma16_2_min_ago
-                    and ma24_last > ma24_2_min_ago
                     and ma34_last > ma34_2_min_ago
                     and ma43_last > ma43_2_min_ago
                     and macd < 60):
