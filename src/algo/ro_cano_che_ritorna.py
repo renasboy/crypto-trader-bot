@@ -127,7 +127,7 @@ class ro_cano_che_ritorna(object):
             #self.algo_helper.log('MACD: {}'.format(macd)) questa riga fa comparire la variabile sul log
             if self.session == 1:
                 if ma2_prev > ma7_prev and ma2_last < ma7_last:
-                    if deviation > 0.21 or deviation < -0.70: 
+                    if deviation > 0.21 or deviation < -0.80: 
                         
                         action = 'sell'
                     
@@ -137,13 +137,13 @@ class ro_cano_che_ritorna(object):
                         
             elif self.session == 2:   
                 if ma2_prev > ma7_prev and ma2_last < ma7_last:
-                    if deviation > 0.21 or deviation < -0.60: 
+                    if deviation > 0.21 or deviation < -0.70: 
                         action = 'sell'     
                      
                         
             else:
                 if (ma2_prev > ma7_prev and ma2_last < ma7_last):
-                    if deviation > 0.21 or deviation < -0.50: 
+                    if deviation > 0.21 or deviation < -0.60: 
                         action = 'sell'
                     
                     
