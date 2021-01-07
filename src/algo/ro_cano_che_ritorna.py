@@ -16,22 +16,18 @@ class ro_cano_che_ritorna(object):
         macd = self.algo_helper.macd
         
         macd_2_min_ago = self.algo_helper.macd_minutes_ago(2)
-       
+        
       
         # moving average (2-3-4-5-x)
         
         ma2_last, ma2_prev = self.algo_helper.ma_last_prev(2)
-        
         ma4_last, ma4_prev = self.algo_helper.ma_last_prev(4)
         ma5_last, ma5_prev = self.algo_helper.ma_last_prev(5)  
         ma6_last, ma6_prev = self.algo_helper.ma_last_prev(6)  
         ma7_last, ma7_prev = self.algo_helper.ma_last_prev(7)
         ma8_last, ma8_prev = self.algo_helper.ma_last_prev(8)
-        
         ma11_last, ma11_prev = self.algo_helper.ma_last_prev(11)
         ma16_last, ma16_prev = self.algo_helper.ma_last_prev(16)
-        
-        
         ma34_last, ma34_prev = self.algo_helper.ma_last_prev(34)
         ma43_last, ma43_prev = self.algo_helper.ma_last_prev(43)
         
@@ -41,18 +37,12 @@ class ro_cano_che_ritorna(object):
         
         # moving average (2-3-4-5-7-8-20-43-100) di x minuti prima (NON METTERE MAI 1 min !)
         ma2_2_min_ago = self.algo_helper.ma_minutes_ago(2, 2) 
-        
-        
         ma4_2_min_ago = self.algo_helper.ma_minutes_ago(4, 2)
         ma5_2_min_ago = self.algo_helper.ma_minutes_ago(5, 2)
         ma7_2_min_ago = self.algo_helper.ma_minutes_ago(7, 2)
         ma8_2_min_ago = self.algo_helper.ma_minutes_ago(8, 2)
-        
-        
         ma11_2_min_ago = self.algo_helper.ma_minutes_ago(11, 2)
         ma16_2_min_ago = self.algo_helper.ma_minutes_ago(16, 2)
-        
-        
         ma34_2_min_ago = self.algo_helper.ma_minutes_ago(34, 2)
         ma43_2_min_ago = self.algo_helper.ma_minutes_ago(43, 2)
         
@@ -91,11 +81,6 @@ class ro_cano_che_ritorna(object):
         if (ma43_last > ma43_2_min_ago):  
            
             
-           
-            
-         
-            
-            
             
             if not self.session or not self.open:
                self.session = 1
@@ -118,13 +103,11 @@ class ro_cano_che_ritorna(object):
             and ma43_last > ma43_2_min_ago
             and macd < 60):
             
-            
             #and ma100_last > ma100_2_min_ago
             #and ma11_prev < ma24_prev and ma11_last > ma24_last): CON QUESTA NON COMPRA MAI MA BUONO CHE LA ma11 STA SOPRA LA ma24
             
-            
-           
-            
+               
+                
                 if self.session == 1:
                     action = 'buy'
                     
@@ -139,16 +122,11 @@ class ro_cano_che_ritorna(object):
                     and macd > macd_2_min_ago):  
                     
                     
-                    
-                    #
-                    #and ma11_last > ma11_2_min_ago
-                    #and ma24_last > ma24_2_min_ago
-                    
                     action = 'buy'
                       
                     
                       
-                    #and ma8_last > ma8_2_min_ago (LA MA8 DALLA SECONDA SESSIONE IN POI PER RENDERE L' ACQUISTO UN PO' PIU' DIFFICILE MA, FORSE, PIU' SICURO.)
+                    
                     #and ma2_last > ma2_3_min_ago (LA MA2 > MA 3 min AGO DALLA SECONDA SESSIONE IN POI PER RENDERE L' ACQUISTO UN PO' PIU' DIFFICILE MA, FORSE, PIU' SICURO.)
                     #and macd > macd_2_min_ago ( IL MACD >MACD 2 min AGO DALLA SECONDA SESSIONE IN POI PER RENDERE L' ACQUISTO UN PO' PIU' DIFFICILE MA, FORSE, PIU' SICURO.)
                     #if ma2_last > ma2_2_min_ago
@@ -159,30 +137,10 @@ class ro_cano_che_ritorna(object):
                     
                 elif self.session == 2:
                     action = 'buy' 
-                    
-                    
-                    
+                  
                 else:
                     action = 'buy' 
-        
-     
- 
-
-
-
-
-
-
-        # SI CHIUDE LA GABBIA ( non e' necessario chiuderla )
- 
-        #if macd < macd_2_min_ago:
-        #or seconds_since_last_trade > 3600:
-            #self.open = False
-            #self.algo_helper.log('session {}: closed segment'.format(self.session))
-    
-    
-    
-    
+       
     
         # VENDE sessione 1
         
@@ -208,67 +166,22 @@ class ro_cano_che_ritorna(object):
                     
                     #(VENDITA MENTRE SALE e VENDITA MENTRE SCENDE) 
                     
-                    
-               
-                    
-                
-                    #(ma5_last < ma5_2_min_ago
-                    #and ma3_last < ma3_2_min_ago):
-                    
-                    #and macd < macd_2_min_ago
-                    #and macd < macd_3_min_ago  lettera a di and allineata con la m di ma5 di sopra e togli la parentesei e i ":" sopra 
-                    #and macd_2_min_ago < macd_3_min_ago
-                    
-                    
-                
-                #elif (ma2_prev > ma4_prev and ma2_last < ma4_last):
-                
-                
-                
-                       #ma2_prev > ma5_prev and ma2_last < ma5_last):
-                       #(ma5_last < ma5_2_min_ago
-                       #and ma3_last < ma3_2_min_ago):
-                        
-                       #macd < macd_2_min_ago
-                       #and macd < macd_3_min_ago
-                       #macd_2_min_ago < macd_3_min_ago):
-                       
-                
-                    #action = 'sell'
-                        
+                     
                         
             elif self.session == 2:   
                 if ma2_prev > ma7_prev and ma2_last < ma7_last:
                     if deviation > 0.21 or deviation < -0.60: 
                         action = 'sell'     
-                    
-                    
-                    #ma2_prev > ma5_prev and ma2_last < ma5_last):
-                    #(ma5_last < ma5_2_min_ago
-                    #and ma3_last < ma3_2_min_ago):
-                    
-                    #macd < macd_2_min_ago
-                    #and macd < macd_3_min_ago
-                    #and macd_2_min_ago < macd_3_min_ago):
-                    
+                     
                         
             else:
                 if (ma2_prev > ma7_prev and ma2_last < ma7_last):
                     if deviation > 0.21 or deviation < -0.50: 
                         action = 'sell'
                     
-                    #ma2_prev > ma5_prev and ma2_last < ma5_last):
-                    #(ma5_last < ma5_2_min_ago
-                    #and ma3_last < ma3_2_min_ago):
                     
-                    #macd < macd_2_min_ago
-                    #and macd < macd_3_min_ago
-                    #and macd_2_min_ago < macd_3_min_ago):
-           
-                         
-            
-            
-            
+                   
+            #FORSE QUI GLI DOBBIAMO DIRE CHE DEVE CHIUDERE LA GABBIA ) (?)
             
            
             if seconds_since_last_trade > 7200:
