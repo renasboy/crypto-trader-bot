@@ -121,8 +121,7 @@ class coinbasepro(object):
         else:
             response = requests.post(full_path, data=post_data, headers=headers)
         if response.status_code != 200:
-            print('API failure: {} {}'.format(response.status_code, response.content))
-            return False
+            raise Exception('API failure: {} {}'.format(response.status_code, response.content))
         return json.loads(response.content)
 
 #if __name__ == '__main__':
