@@ -72,9 +72,8 @@ class ro_cano_che_ritorna(object):
         # NON TOCCARE QUESTA CONDIZIONE (QUESTA DICE CHE STA IN MODO BUY, DEVO COMPRARE)
         if self.open and self.session and last_trade_action != 'buy':
             
-            #and ma100_last > ma100_2_min_ago
-            #and ma11_prev < ma24_prev and ma11_last > ma24_last): CON QUESTA NON COMPRA MAI MA BUONO CHE LA ma11 STA SOPRA LA ma24
-                
+            
+            
             # COMPRA sessione 1
             if self.session == 1:
                 if (ma2_last > ma2_2_min_ago
@@ -131,23 +130,23 @@ class ro_cano_che_ritorna(object):
             # VENDE sessione 1
             if self.session == 1:
                 if ma2_prev > ma7_prev and ma2_last < ma7_last:
-                    if deviation > 0.21 or deviation < -0.8:
+                    if deviation > 0.24 or deviation < -0.8:
                         action = 'sell'
 
             # VENDE sessione 2
             elif self.session == 2:   
                 if ma2_prev > ma7_prev and ma2_last < ma7_last:
-                    if deviation > 0.21 or deviation < -0.7:
+                    if deviation > 0.24 or deviation < -0.7:
                         action = 'sell'     
                         
             # VENDE sessione 3 in poi
             else:
                 if ma2_prev > ma7_prev and ma2_last < ma7_last:
-                    if deviation > 0.21 or deviation < -0.6:
+                    if deviation > 0.24 or deviation < -0.6:
                         action = 'sell'
 
             # SE LA PERDITA E' TROPPA VENDE SUBITO (SALVAGENTE)
-            if deviation < -1:
+            if deviation < -0.75:
                 action = 'sell'
                     
             # ATTESA max hold time, ALTRIMENTE VENDE SUBITO
