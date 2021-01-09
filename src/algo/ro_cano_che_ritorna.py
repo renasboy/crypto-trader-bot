@@ -11,7 +11,7 @@ class ro_cano_che_ritorna(object):
         
         # TIME dopo quanto tempo ro cano ritorna ( per esempio 60 minuti x 60 = 3600 secondi )
         max_hold_time_in_seconds = 7200
-        min_buy_delay_in_seconds = 180
+        min_buy_delay_in_seconds = 480
 
         # MACD di 1-2-3-4 minuti prima
         macd = self.algo_helper.macd
@@ -73,7 +73,7 @@ class ro_cano_che_ritorna(object):
         # NON TOCCARE QUESTA CONDIZIONE (QUESTA DICE CHE STA IN MODO BUY, DEVO COMPRARE)
         if self.open and self.session and last_trade_action != 'buy':
 
-            if ((seconds_since_last_trade > 0 and seconds_since_last_trade <= min_buy_delay_in_seconds and deviation > 0.23)
+            if ((seconds_since_last_trade > 0 and seconds_since_last_trade <= min_buy_delay_in_seconds and deviation > 0.44)
                 or (seconds_since_last_trade == 0 or seconds_since_last_trade > min_buy_delay_in_seconds)):
 
                 # COMPRA sessione 1
@@ -148,7 +148,7 @@ class ro_cano_che_ritorna(object):
                         action = 'sell'
 
             # SE LA PERDITA E' TROPPA VENDE SUBITO (SALVAGENTE)
-            if deviation < -0.85:
+            if deviation < -0.92:
                 action = 'sell'
                     
             # ATTESA max hold time, ALTRIMENTE VENDE SUBITO
