@@ -11,6 +11,7 @@ class ro_cano_che_ritorna(object):
         
         # TIME dopo quanto tempo ro cano ritorna ( per esempio 60 minuti x 60 = 3600 secondi )
         max_hold_time_in_seconds = 7200
+        min_buy_delay_in_seconds = 180
 
         # MACD di 1-2-3-4 minuti prima
         macd = self.algo_helper.macd
@@ -71,47 +72,48 @@ class ro_cano_che_ritorna(object):
         # COMPRA
         # NON TOCCARE QUESTA CONDIZIONE (QUESTA DICE CHE STA IN MODO BUY, DEVO COMPRARE)
         if self.open and self.session and last_trade_action != 'buy':
-            
-            
-            
-            # COMPRA sessione 1
-            if self.session == 1:
-                if (ma2_last > ma2_2_min_ago
-                    and ma4_last > ma4_2_min_ago
-                    and ma5_last > ma5_2_min_ago
-                    and ma7_last > ma7_2_min_ago
-                    and ma11_last > ma11_2_min_ago
-                    and ma16_last > ma16_2_min_ago
-                    and ma34_last > ma34_2_min_ago
-                    and ma43_last > ma43_2_min_ago
-                    and macd < 60):
-                    action = 'buy'
-                
-            # COMPRA sessione 2
-            elif self.session == 2:
-                if (ma2_last > ma2_2_min_ago
-                    and ma4_last > ma4_2_min_ago
-                    and ma5_last > ma5_2_min_ago
-                    and ma7_last > ma7_2_min_ago
-                    and ma11_last > ma11_2_min_ago
-                    and ma16_last > ma16_2_min_ago
-                    and ma34_last > ma34_2_min_ago
-                    and ma43_last > ma43_2_min_ago
-                    and macd < 60):
-                    action = 'buy'
-              
-            # COMPRA sessione 3 in poi
-            else:
-                if (ma2_last > ma2_2_min_ago
-                    and ma4_last > ma4_2_min_ago
-                    and ma5_last > ma5_2_min_ago
-                    and ma7_last > ma7_2_min_ago
-                    and ma11_last > ma11_2_min_ago
-                    and ma16_last > ma16_2_min_ago
-                    and ma34_last > ma34_2_min_ago
-                    and ma43_last > ma43_2_min_ago
-                    and macd < 60):
-                    action = 'buy'
+
+            if ((seconds_since_last_trade > 0 and seconds_since_last_trade <= min_buy_delay_in_seconds and deviation > 0.23)
+                or (seconds_since_last_trade == 0 or seconds_since_last_trade > min_buy_delay_in_seconds)):
+
+                # COMPRA sessione 1
+                if self.session == 1:
+                    if (ma2_last > ma2_2_min_ago
+                        and ma4_last > ma4_2_min_ago
+                        and ma5_last > ma5_2_min_ago
+                        and ma7_last > ma7_2_min_ago
+                        and ma11_last > ma11_2_min_ago
+                        and ma16_last > ma16_2_min_ago
+                        and ma34_last > ma34_2_min_ago
+                        and ma43_last > ma43_2_min_ago
+                        and macd < 60):
+                        action = 'buy'
+                    
+                # COMPRA sessione 2
+                elif self.session == 2:
+                    if (ma2_last > ma2_2_min_ago
+                        and ma4_last > ma4_2_min_ago
+                        and ma5_last > ma5_2_min_ago
+                        and ma7_last > ma7_2_min_ago
+                        and ma11_last > ma11_2_min_ago
+                        and ma16_last > ma16_2_min_ago
+                        and ma34_last > ma34_2_min_ago
+                        and ma43_last > ma43_2_min_ago
+                        and macd < 60):
+                        action = 'buy'
+                  
+                # COMPRA sessione 3 in poi
+                else:
+                    if (ma2_last > ma2_2_min_ago
+                        and ma4_last > ma4_2_min_ago
+                        and ma5_last > ma5_2_min_ago
+                        and ma7_last > ma7_2_min_ago
+                        and ma11_last > ma11_2_min_ago
+                        and ma16_last > ma16_2_min_ago
+                        and ma34_last > ma34_2_min_ago
+                        and ma43_last > ma43_2_min_ago
+                        and macd < 60):
+                        action = 'buy'
     
         #######################################################################
         # VENDA
