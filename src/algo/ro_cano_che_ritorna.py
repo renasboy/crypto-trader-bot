@@ -132,23 +132,23 @@ class ro_cano_che_ritorna(object):
             # VENDE sessione 1
             if self.session == 1:
                 if ma2_prev > ma7_prev and ma2_last < ma7_last:
-                    if deviation > 0.24 or deviation < -0.8:
+                    if deviation > 0.24:
                         action = 'sell'
 
             # VENDE sessione 2
             elif self.session == 2:   
                 if ma2_prev > ma7_prev and ma2_last < ma7_last:
-                    if deviation > 0.24 or deviation < -0.7:
+                    if deviation > 0.24:
                         action = 'sell'     
                         
             # VENDE sessione 3 in poi
             else:
                 if ma2_prev > ma7_prev and ma2_last < ma7_last:
-                    if deviation > 0.24 or deviation < -0.6:
+                    if deviation > 0.24:
                         action = 'sell'
 
             # SE LA PERDITA E' TROPPA VENDE SUBITO (SALVAGENTE)
-            if deviation < -0.75:
+            if deviation < -0.85:
                 action = 'sell'
                     
             # ATTESA max hold time, ALTRIMENTE VENDE SUBITO
