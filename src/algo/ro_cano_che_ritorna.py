@@ -151,7 +151,7 @@ class ro_cano_che_ritorna(object):
             if deviation < -0.9:
                 action = 'sell'
                     
-            # ATTESA DI 1 ORA =3600 SECONDI "max hold time, ALTRIMENTE VENDE SUBITO" ( ma aggiungere E SE incrocio ma8<ma43 E SE DEVIATION <-0,3 )
+            # ATTESA DI 1 ORA =3600 SECONDI "max hold time, ALTRIMENTE VENDE SUBITO" ( ma aggiungere E SE incrocio ma43 (di un' ora avanti) < ma43 3min ago ( di 57 min avanti )  E SE DEVIATION <-0,3 )
             if seconds_since_last_trade > max_hold_time_in_seconds:
                  action = 'sell'
 
