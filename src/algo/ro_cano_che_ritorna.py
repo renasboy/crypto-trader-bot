@@ -62,7 +62,7 @@ class ro_cano_che_ritorna(object):
         #######################################################################
         # APRE E CHIUDE GABBIA
         # SI APRE LA GABBIA SE 
-        if ma43_last > ma43_2_min_ago:  
+        if ma50_last > ma50_2_min_ago:  
             # NON TOCCARE QUESTA CONDIZIONE SERVE PER APERTURA DI GABBIA
             if not self.session or not self.open:
                self.session = 1
