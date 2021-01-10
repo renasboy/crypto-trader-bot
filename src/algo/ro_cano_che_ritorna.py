@@ -10,7 +10,7 @@ class ro_cano_che_ritorna(object):
     def action(self):
         
         # TIME dopo quanto tempo ro cano ritorna ( per esempio 60 minuti x 60 = 3600 secondi )
-        max_hold_time_in_seconds = 7200
+        max_hold_time_in_seconds = 3600
         min_buy_delay_in_seconds = 2100
 
         # MACD di 1-2-3-4 minuti prima
@@ -151,7 +151,7 @@ class ro_cano_che_ritorna(object):
             if deviation < -0.9:
                 action = 'sell'
                     
-            # ATTESA max hold time, ALTRIMENTE VENDE SUBITO
+            # ATTESA DI 1 ORA =3600 SECONDI "max hold time, ALTRIMENTE VENDE SUBITO" ( ma aggiungere E SE incrocio ma8<ma43 E SE DEVIATION <-0,3 )
             if seconds_since_last_trade > max_hold_time_in_seconds:
                  action = 'sell'
 
