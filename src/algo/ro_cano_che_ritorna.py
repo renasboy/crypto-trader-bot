@@ -91,7 +91,8 @@ class ro_cano_che_ritorna(object):
                         and ma16_last > ma16_2_min_ago
                         and ma34_last > ma34_2_min_ago
                         and ma43_last > ma43_2_min_ago
-                        and macd < 60):
+                        and ma50_last > ma50_2_min_ago
+                        and macd < 50):
                         action = 'buy'
                     
                 # COMPRA sessione 2
@@ -104,7 +105,8 @@ class ro_cano_che_ritorna(object):
                         and ma16_last > ma16_2_min_ago
                         and ma34_last > ma34_2_min_ago
                         and ma43_last > ma43_2_min_ago
-                        and macd < 60):
+                        and ma50_last > ma50_2_min_ago
+                        and macd < 50):
                         action = 'buy'
                   
                 # COMPRA sessione 3 in poi
@@ -117,7 +119,8 @@ class ro_cano_che_ritorna(object):
                         and ma16_last > ma16_2_min_ago
                         and ma34_last > ma34_2_min_ago
                         and ma43_last > ma43_2_min_ago
-                        and macd < 60):
+                        and ma50_last > ma50_2_min_ago
+                        and macd < 50):
                         action = 'buy'
     
         #######################################################################
@@ -156,7 +159,7 @@ class ro_cano_che_ritorna(object):
             if deviation < -0.9:
                 action = 'sell'
                     
-            # ATTESA DI 1 ORA =3600 SECONDI "max hold time, ALTRIMENTE VENDE SUBITO" ( ma aggiungere E SE incrocio ma43 (di un' ora avanti) < ma43 3min ago ( di 57 min avanti )  E SE DEVIATION <-0,3 )
+            # ATTESA DI 1 ORA =3600 SECONDI "max hold time, ALTRIMENTE VENDE SUBITO" ( ( attesa di 15 minuti) ma aggiungere "E SE" DEVIATION <-0,4 "E SE" ma7<ma7 3min ago + ma11<ma11 3min ago + ma16<ma16 3min ago ))
             if seconds_since_last_trade > max_hold_time_in_seconds:
                  action = 'sell'
 
