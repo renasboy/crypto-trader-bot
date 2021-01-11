@@ -9,7 +9,7 @@ class ro_cano_che_ritorna(object):
     @property
     def action(self):
         
-        # TIME dopo quanto tempo ro cano ritorna ( per esempio 60 minuti x 60 = 3600 secondi )
+        # TIME dopo quanto tempo ro cano ritorna automaticamente ( per esempio 60 minuti x 60 = 3600 secondi ) e durata segmento in cui si aggiunge una condizione per il BUY
         max_hold_time_in_seconds = 3600
         min_buy_delay_in_seconds = 2100
 
@@ -79,6 +79,7 @@ class ro_cano_che_ritorna(object):
         # NON TOCCARE QUESTA CONDIZIONE (QUESTA DICE CHE STA IN MODO BUY, DEVO COMPRARE)
         if self.open and self.session and last_trade_action != 'buy':
 
+            # COMPRA UN PO' PIU' SOPRA DELL' ULTIMO SELL ( aggiungere compra un po' piu' sopra dell' ultimo BUY deviation > 0.27 )
             if ((seconds_since_last_trade > 0 and seconds_since_last_trade <= min_buy_delay_in_seconds and deviation > 0.4)
                 or (seconds_since_last_trade == 0 or seconds_since_last_trade > min_buy_delay_in_seconds)):
 
@@ -162,8 +163,11 @@ class ro_cano_che_ritorna(object):
             # SE LA PERDITA E' TROPPA VENDE SUBITO (SALVAGENTE)
             if deviation < -0.9:
                 action = 'sell'
-                    
-            # ATTESA DI 1 ORA =3600 SECONDI "max hold time, ALTRIMENTE VENDE SUBITO" ( ( attesa di 15 minuti) ma aggiungere "E SE" DEVIATION <-0,4 "E SE" ma7<ma7 3min ago + ma11<ma11 3min ago + ma16<ma16 3min ago ))
+            
+            # RO CANO TORNA A CASA
+            # 1) ATTESA DI 1 ORA = 3600 SECONDI "max hold time" " DOPO UN' ORA VENDE SUBITO " 
+            # 2) ma aggiungere VENDI SE DIMINUISCE LA FORZA! ( DOPO 15 MINUTI VENDE SE deviation <-0,4 "E SE" ma7 < ma7 3 min ago "E SE" ma11 < ma11 3 min ago "E SE" ma16 < ma16 3 min ago )
+            
             if seconds_since_last_trade > max_hold_time_in_seconds:
                  action = 'sell'
 
