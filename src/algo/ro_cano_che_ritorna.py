@@ -165,9 +165,10 @@ class ro_cano_che_ritorna(object):
                 action = 'sell'
             
             # compa qua aiutami tu a capire ! " salvagente piu' lontano e salvagente piu' vicino "
-            # da 0 a 240 secondi dal buy VENDI se ma2 < ma7 "E SE" deviation < -0,9
-            # da 241 secondi dal buy VENDI se ma2 < ma7 "E SE" deviation < -1,8 
-            # ( c'e' stata una grande vendita al 3° minuto dopo il buy ! ) - ( forse si puo' risolvere con ma2 al posto del price nella deviation )
+            # ( compa, una volta c'e' stata una grande vendita al 3° minuto dopo il buy ! ) - ( forse si puo' risolvere con ma2 al posto del price nella deviation )
+            # da 0 a 240 secondi dal buy VENDI se ma2 < ma7 "E SE" deviation < -1.8
+            # da 241 secondi dal buy VENDI se ma2 < ma16 "E SE" deviation < -0.5 ( provo a ridurre le perdite nel ribasso improvviso e improbabile ) 
+            
             
             
             
