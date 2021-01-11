@@ -164,6 +164,13 @@ class ro_cano_che_ritorna(object):
             if deviation < -0.9:
                 action = 'sell'
             
+            # compa qua aiutami tu a capire ! " salvagente piu' lontano e salvagente piu' vicino "
+            # da 0 a 240 secondi dal buy VENDI se ma2 < ma7 "E SE" deviation < -0,9
+            # da 241 secondi dal buy VENDI se ma2 < ma7 "E SE" deviation < -1,8 
+            # ( c'e' stata una grande vendita al 3° minuto dopo il buy ! ) - ( forse si puo' risolvere con ma2 al posto del price nella deviation )
+            
+            
+            
             # RO CANO TORNA A CASA
             # 1) ATTESA DI 1 ORA = 3600 SECONDI "max hold time" " DOPO UN' ORA VENDE SUBITO " 
             # 2) ma aggiungere VENDI SE DIMINUISCE LA FORZA! ( DOPO 15 MINUTI VENDE SE deviation <-0,4 "E SE" ma7 < ma7 3 min ago "E SE" ma11 < ma11 3 min ago "E SE" ma16 < ma16 3 min ago )
