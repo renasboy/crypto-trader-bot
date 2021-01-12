@@ -83,11 +83,11 @@ class ro_cano_che_ritorna(object):
         # NON TOCCARE QUESTA CONDIZIONE (QUESTA DICE CHE STA IN MODO BUY, DEVO COMPRARE)
         if self.open and self.session and last_trade_action != 'buy':
 
-            # COMPRA UN PO' PIU' SOPRA DELL' ULTIMO SELL SE DEVIATION > 0.37
+            # COMPRA UN PO' PIU' SOPRA DELL' ULTIMO SELL SE DEVIATION > 0.27
             if ((seconds_since_last_trade > 0 and seconds_since_last_trade <= min_buy_delay_in_seconds and deviation > 0.4)
                 or (seconds_since_last_trade == 0 or seconds_since_last_trade > min_buy_delay_in_seconds)):
                 
-            # COMPRA UN PO' PIU' SOPRA DELL' ULTIMO BUY SE DEVIATION > 0.27
+            # COMPRA UN PO' PIU' SOPRA DELL' ULTIMO BUY SE DEVIATION > 0.20
             #if ((seconds_since_last_trade > 0 and seconds_since_last_trade >= min_buy_delay_in_seconds and deviation > 0.27)
                 #or (seconds_since_last_trade == 0 or seconds_since_last_trade > min_buy_delay_in_seconds)):
             
@@ -105,7 +105,7 @@ class ro_cano_che_ritorna(object):
                         and ma34_last > ma34_2_min_ago
                         and ma43_last >= ma43_2_min_ago
                         and ma50_last >= ma50_2_min_ago
-                        and macd < 50):
+                        and macd < 60):
                         action = 'buy'
                     
                 # COMPRA sessione 2
@@ -120,7 +120,7 @@ class ro_cano_che_ritorna(object):
                         and ma34_last > ma34_2_min_ago
                         and ma43_last >= ma43_2_min_ago
                         and ma50_last >= ma50_2_min_ago
-                        and macd < 50):
+                        and macd < 60):
                         action = 'buy'
                   
                 # COMPRA sessione 3 in poi
@@ -135,7 +135,7 @@ class ro_cano_che_ritorna(object):
                         and ma34_last > ma34_2_min_ago
                         and ma43_last >= ma43_2_min_ago
                         and ma50_last >= ma50_2_min_ago
-                        and macd < 50):
+                        and macd < 60):
                         action = 'buy'
     
         #######################################################################
