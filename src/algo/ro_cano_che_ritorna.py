@@ -9,8 +9,12 @@ class ro_cano_che_ritorna(object):
     @property
     def action(self):
         
-        # TIME dopo quanto tempo ro cano ritorna automaticamente ( per esempio 60 minuti x 60 = 3600 secondi ) e durata segmento in cui si aggiunge una condizione per il BUY
+        # TIME dopo quanto tempo ro cano ritorna automaticamente ( per esempio 60 minuti x 60 = 3600 secondi ) e 
         max_hold_time_in_seconds = 660
+        
+        #durata segmento in cui a tutte le condizioni buy PER COMPRARE si aggiunge la deviation 
+        # per il BUY UN PO' PIU' SOPRA DELL' ULTIMO SELL
+        # e per il BUY UN PO' PIU' SOPRA DELL' ULTIMO BUY ( ma adesso a 660 secondi ro cano vende automaticamente !)
         min_buy_delay_in_seconds = 2100
 
         # MACD di 1-2-3-4 minuti prima
