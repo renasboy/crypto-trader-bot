@@ -79,9 +79,14 @@ class ro_cano_che_ritorna(object):
         # NON TOCCARE QUESTA CONDIZIONE (QUESTA DICE CHE STA IN MODO BUY, DEVO COMPRARE)
         if self.open and self.session and last_trade_action != 'buy':
 
-            # COMPRA UN PO' PIU' SOPRA DELL' ULTIMO SELL ( aggiungere compra un po' piu' sopra dell' ultimo BUY deviation > 0.27 )
+            # COMPRA UN PO' PIU' SOPRA DELL' ULTIMO SELL SE DEVIATION > 0.37
             if ((seconds_since_last_trade > 0 and seconds_since_last_trade <= min_buy_delay_in_seconds and deviation > 0.4)
                 or (seconds_since_last_trade == 0 or seconds_since_last_trade > min_buy_delay_in_seconds)):
+                
+            # COMPRA UN PO' PIU' SOPRA DELL' ULTIMO BUY SE DEVIATION > 0.27
+            
+            
+            
 
                 # COMPRA sessione 1
                 if self.session == 1:
