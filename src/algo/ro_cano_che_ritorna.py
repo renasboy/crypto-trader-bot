@@ -10,7 +10,7 @@ class ro_cano_che_ritorna(object):
     def action(self):
         
         # TIME dopo quanto tempo ro cano ritorna automaticamente ( per esempio 60 minuti x 60 = 3600 secondi ) e durata segmento in cui si aggiunge una condizione per il BUY
-        max_hold_time_in_seconds = 3600
+        max_hold_time_in_seconds = 660
         min_buy_delay_in_seconds = 2100
 
         # MACD di 1-2-3-4 minuti prima
@@ -174,11 +174,20 @@ class ro_cano_che_ritorna(object):
             
             # RO CANO TORNA A CASA 
             # 1) (salvagente 1) ATTESA DI 1 ORA = 3600 SECONDI "max hold time" " DOPO UN' ORA VENDE SUBITO " 
-            # 2) (salvagente2 ) ma aggiungere VENDI SE DIMINUISCE LA FORZA! ( DOPO 11 MINUTI VENDE SE deviation <-0,4 "E SE" ma1 < ma16  ( aggiungi dopo )"E SE" ma7 < ma7 3 min ago "E SE" ma11 < ma11 3 min ago "E SE" ma16 < ma16 3 min ago )
+            # 2) (salvagente 2 ) ma aggiungere VENDI SE DIMINUISCE LA FORZA! ( DOPO 11 MINUTI VENDE SE deviation <-0,4 "E SE" ma1 < ma16  ( aggiungi dopo )"E SE" ma7 < ma7 3 min ago "E SE" ma11 < ma11 3 min ago "E SE" ma16 < ma16 3 min ago )
             
             if seconds_since_last_trade > max_hold_time_in_seconds:
-                 action = 'sell'
+                
+                action = 'sell'
+                
+                
+            if (seconds_since_last_trade > max_hold_time_in_seconds
+                and deviation < -0.4
+                and ma1 < ma16):
+                
+                action = 'sell'
 
+                
         self.algo_helper.log('action {}'.format(action))
 
         if action == 'sell':
