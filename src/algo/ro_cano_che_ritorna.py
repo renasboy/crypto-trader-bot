@@ -220,10 +220,11 @@ class ro_cano_che_ritorna(object):
             
             
             
-            # RO CANO TORNA A CASA 
-            # 1) (salvagente 1) ATTESA DI 1 ORA = 3600 SECONDI "max hold time" " DOPO UN' ORA VENDE SUBITO " 
+            # RO CANO TORNA A CASA ( VENDE !) 
+            # 1) VENDE SE DIMINUISCE LA FORZA ! ( vende dopo 11 minuti SE deviation <-0,4 "E SE" ma1 < ma16  ( dopo, se vuoi, puoi aggiungere ) "E SE" ma7 < ma7 3 min ago "E SE" ma11 < ma11 3 min ago "E SE" ma16 < ma16 3 min ago )
+            # 2) VENDE " DOPO UN' ORA " "max hold time" 
            
-            # 2) (salvagente 2 ) ma aggiungere VENDI SE DIMINUISCE LA FORZA! ( DOPO 11 MINUTI VENDE SE deviation <-0,4 "E SE" ma1 < ma16  ( aggiungi dopo )"E SE" ma7 < ma7 3 min ago "E SE" ma11 < ma11 3 min ago "E SE" ma16 < ma16 3 min ago )
+            
             
             if (seconds_since_last_trade > max_hold_without_force_time_in_seconds
                 and deviation < -0.65
