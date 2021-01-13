@@ -57,6 +57,15 @@ class ro_cano_che_ritorna(object):
         last_trade_price = self.algo_helper.last_trade_price 
         seconds_since_last_trade = self.algo_helper.seconds_since_last_trade
         
+        
+        # compa
+        # forse bisogna fare questo LAST SELL
+        # last_sell_time = self.algo_helper.last_sell_time
+        
+        # forse bisogna fare questo LAST BUY
+        # last_buy_time = self.algo_helper.last_buy_time
+        
+        
         # CURRENT PRICE
         price = self.algo_helper.price
         
@@ -71,9 +80,12 @@ class ro_cano_che_ritorna(object):
         # SOTTO I QUALI VENDE IMMEDIATAMENTE ( SALVAGENTE )
         
         deviation = (price / last_trade_price - 1) * 100 if last_trade_price else 0
+        
         self.algo_helper.log('deviation: {}'.format(deviation))
         
         
+        
+        # deviation buy = (price / last_buy - 1) * 100 if last_buy else 0
         
         
         
@@ -108,6 +120,8 @@ class ro_cano_che_ritorna(object):
             # COMPRA UN PO' PIU' SOPRA anche DELL' ULTIMO BUY SE DEVIATION > 0.20 ( qua ho fatto il casino )
             #if ((seconds_since_last_trade > 0 and seconds_since_last_trade >= min_buy_delay_in_seconds and deviation > 0.27)
                 #or (seconds_since_last_trade == 0 or seconds_since_last_trade > min_buy_delay_in_seconds)):
+                
+                #compa aiutooooooooo    and deviation > (highest_price_5_min_ago + highest_price_10_min_ago * 0.0015)):
                
                 # compa, forse, ci deve essere 
                 # una attesa che comincia dall' ULTIMO SELL
