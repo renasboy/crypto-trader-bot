@@ -59,7 +59,13 @@ class ro_cano_che_ritorna(object):
         # CURRENT PRICE
         price = self.algo_helper.price
         
-        # la deviaton stabilisce i limiti SOPRA I QUALI VENDE (guadagno minimo mentre sale) e i limiti SOTTO I QUALI VENDE (perdita massimna mentre scende).
+        # la "deviaton" stabilisce i limiti 
+        # SOPRA I QUALI ro cano VENDE (guadagno minimo mentre sale) 
+        # SOPRA I QUALI ro cano COMPRA ( deve dimostrare una certa forza )
+        
+        # SOTTO I QUALI ro cano VENDE (perdita massima mentre scende).
+        # SOTTO I QUALI ro cano VENDE ( se comincia a perdere forza ).
+        
         deviation = (price / last_trade_price - 1) * 100 if last_trade_price else 0
         self.algo_helper.log('deviation: {}'.format(deviation))
         
