@@ -36,8 +36,8 @@ class ro_cano_che_ritorna(object):
         ma11_last, ma11_prev = self.algo_helper.ma_last_prev(11)
         ma16_last, ma16_prev = self.algo_helper.ma_last_prev(16)
         ma34_last, ma34_prev = self.algo_helper.ma_last_prev(34)
-        ma43_last, ma43_prev = self.algo_helper.ma_last_prev(43)
-        ma50_last, ma50_prev = self.algo_helper.ma_last_prev(50)
+        ma42_last, ma42_prev = self.algo_helper.ma_last_prev(42)
+        ma49_last, ma49_prev = self.algo_helper.ma_last_prev(49)
         
         # moving average (2-3-4-5-7-8-20-43-100) di x minuti prima (NON METTERE MAI 1 min !) ( GRANDE IDEA : in futuro metti invece di ma50 2min ago ma49 2min ago e testa - invece di ma49 2min ago ma48 2min ago e testa - adesso compra un po' troppo tardi,,,)
         ma2_2_min_ago = self.algo_helper.ma_minutes_ago(2, 2) 
@@ -46,13 +46,15 @@ class ro_cano_che_ritorna(object):
         ma5_3_min_ago = self.algo_helper.ma_minutes_ago(5, 3)
         ma7_2_min_ago = self.algo_helper.ma_minutes_ago(7, 2)
         ma7_3_min_ago = self.algo_helper.ma_minutes_ago(7, 3)
+        ma7_3_min_ago = self.algo_helper.ma_minutes_ago(7, 3)
         ma11_2_min_ago = self.algo_helper.ma_minutes_ago(11, 2)
         ma11_3_min_ago = self.algo_helper.ma_minutes_ago(11, 3)
         ma16_2_min_ago = self.algo_helper.ma_minutes_ago(16, 2)
         ma16_3_min_ago = self.algo_helper.ma_minutes_ago(16, 3)
         ma34_2_min_ago = self.algo_helper.ma_minutes_ago(34, 2)
-        ma43_2_min_ago = self.algo_helper.ma_minutes_ago(43, 2)
-        ma50_2_min_ago = self.algo_helper.ma_minutes_ago(50, 2)
+        ma42_2_min_ago = self.algo_helper.ma_minutes_ago(42, 2)
+        ma49_2_min_ago = self.algo_helper.ma_minutes_ago(49, 2)
+        
         
         # LAST TRADE
         last_trade_action = self.algo_helper.last_trade_action
@@ -100,7 +102,7 @@ class ro_cano_che_ritorna(object):
         #######################################################################
         # APRE E CHIUDE GABBIA
         # SI APRE LA GABBIA SE 
-        if ma50_last > ma50_2_min_ago:  
+        if ma49_last > ma49_2_min_ago:  
             # NON TOCCARE QUESTA CONDIZIONE SERVE PER APERTURA DI GABBIA
             if not self.session or not self.open:
                self.session = 1
@@ -141,8 +143,8 @@ class ro_cano_che_ritorna(object):
                         and ma11_last > ma11_2_min_ago
                         and ma16_last > ma16_2_min_ago
                         and ma34_last > ma34_2_min_ago
-                        and ma43_last >= ma43_2_min_ago
-                        and ma50_last >= ma50_2_min_ago
+                        and ma42_last >= ma42_2_min_ago
+                        and ma49_last >= ma49_2_min_ago
                         and macd < 60):
                         action = 'buy'
                     
@@ -156,8 +158,8 @@ class ro_cano_che_ritorna(object):
                         and ma11_last > ma11_2_min_ago
                         and ma16_last > ma16_2_min_ago
                         and ma34_last > ma34_2_min_ago
-                        and ma43_last >= ma43_2_min_ago
-                        and ma50_last >= ma50_2_min_ago
+                        and ma42_last >= ma42_2_min_ago
+                        and ma49_last >= ma49_2_min_ago
                         and macd < 60):
                         action = 'buy'
                   
@@ -171,8 +173,8 @@ class ro_cano_che_ritorna(object):
                         and ma11_last > ma11_2_min_ago
                         and ma16_last > ma16_2_min_ago
                         and ma34_last > ma34_2_min_ago
-                        and ma43_last >= ma43_2_min_ago
-                        and ma50_last >= ma50_2_min_ago
+                        and ma42_last >= ma42_2_min_ago
+                        and ma49_last >= ma49_2_min_ago
                         and macd < 60):
                         action = 'buy'
     
@@ -227,11 +229,13 @@ class ro_cano_che_ritorna(object):
             
             
             if (seconds_since_last_trade > max_hold_without_force_time_in_seconds
-                and deviation < -0.65
+                and deviation < -0.70
                 and ma2_last < ma16_last):
                 
                 action = 'sell'
+            
             elif seconds_since_last_trade > max_hold_time_in_seconds:
+                and ma7_last > ma7_3_min_ago):
                 
                 action = 'sell'
                 
