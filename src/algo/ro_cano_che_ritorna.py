@@ -124,7 +124,7 @@ class ro_cano_che_ritorna(object):
             #if ((seconds_since_last_trade > 0 and seconds_since_last_trade >= min_buy_delay_in_seconds and deviation > 0.27)
                 #or (seconds_since_last_trade == 0 or seconds_since_last_trade > min_buy_delay_in_seconds)):
                 
-                #compa aiutooooooooo    and deviation > (highest_price_5_min_ago + highest_price_10_min_ago * 0.0015)): (compa, NEL VECCHIO CANO C'ERA UNA COSA DEL GENERE)
+                
                
                 # compa, forse, ci deve essere 
                 # una attesa che comincia dall' ULTIMO SELL
