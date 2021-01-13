@@ -28,7 +28,7 @@ class ro_cano_che_ritorna(object):
         
         macd_2_min_ago = self.algo_helper.macd_minutes_ago(2)
       
-        # moving average (2-3-4-5-x)
+        # moving average (2-3-4-5-x) ( GRANDE IDEA : in futuro metti invece di ma50 ma49 e testa - invece di ma49 ma48 e testa - adesso compra un po' troppo tardi,,,)
         ma2_last, ma2_prev = self.algo_helper.ma_last_prev(2)
         ma4_last, ma4_prev = self.algo_helper.ma_last_prev(4)
         ma5_last, ma5_prev = self.algo_helper.ma_last_prev(5)
@@ -39,7 +39,7 @@ class ro_cano_che_ritorna(object):
         ma43_last, ma43_prev = self.algo_helper.ma_last_prev(43)
         ma50_last, ma50_prev = self.algo_helper.ma_last_prev(50)
         
-        # moving average (2-3-4-5-7-8-20-43-100) di x minuti prima (NON METTERE MAI 1 min !)
+        # moving average (2-3-4-5-7-8-20-43-100) di x minuti prima (NON METTERE MAI 1 min !) ( GRANDE IDEA : in futuro metti invece di ma50 2min ago ma49 2min ago e testa - invece di ma49 2min ago ma48 2min ago e testa - adesso compra un po' troppo tardi,,,)
         ma2_2_min_ago = self.algo_helper.ma_minutes_ago(2, 2) 
         ma4_2_min_ago = self.algo_helper.ma_minutes_ago(4, 2)
         ma5_2_min_ago = self.algo_helper.ma_minutes_ago(5, 2)
