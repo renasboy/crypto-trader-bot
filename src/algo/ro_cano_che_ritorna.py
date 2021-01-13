@@ -171,7 +171,7 @@ class ro_cano_che_ritorna(object):
                         action = 'sell'
 
             # SE LA PERDITA E' TROPPA VENDE SUBITO (SALVAGENTE)
-            if deviation < -0.9:
+            if deviation < -1.6:
                 action = 'sell'
             
             # compa qua aiutami tu a capire !  " vendita piu' lontana e vendita piu' vicina "
