@@ -233,7 +233,7 @@ class ro_cano_che_ritorna(object):
                 
                 action = 'sell'
             
-            elif seconds_since_last_trade > max_hold_time_in_seconds
+            elif (seconds_since_last_trade > max_hold_time_in_seconds
                 and ma7_last < ma7_3_min_ago):
                 
                 action = 'sell'
