@@ -10,7 +10,10 @@ class ro_cano_che_ritorna(object):
     def action(self):
         
         # TIME dopo quanto tempo ro cano ritorna automaticamente ( per esempio 11 minuti x 60 = 3600 secondi )
-        max_hold_time_in_seconds = 660
+        max_hold_time_in_seconds = 3600
+        
+        # tempo di attesa "quaqndo comincia a perdere la forza" ( adesso 11 minuti )
+        max_hold_without_force_time_in_seconds = 660
         
         # DURATA SEGMENTO ( 5 minuti * 60 = 300 secondi 5 ) 
         # in cui,
@@ -113,7 +116,7 @@ class ro_cano_che_ritorna(object):
         # NON TOCCARE QUESTA CONDIZIONE (QUESTA DICE CHE STA IN MODO BUY, DEVO COMPRARE)
         if self.open and self.session and last_trade_action != 'buy':
 
-            # COMPRA UN PO' PIU' SOPRA DELL' ULTIMO SELL SE DEVIATION > 0.27
+            # COMPRA UN PO' PIU' SOPRA DELL' ULTIMO SELL SE DEVIATION > 0.40
             if ((seconds_since_last_trade > 0 and seconds_since_last_trade <= min_buy_delay_in_seconds and deviation > 0.4)
                 or (seconds_since_last_trade == 0 or seconds_since_last_trade > min_buy_delay_in_seconds)):
                 
@@ -219,18 +222,20 @@ class ro_cano_che_ritorna(object):
             
             # RO CANO TORNA A CASA 
             # 1) (salvagente 1) ATTESA DI 1 ORA = 3600 SECONDI "max hold time" " DOPO UN' ORA VENDE SUBITO " 
+           
             # 2) (salvagente 2 ) ma aggiungere VENDI SE DIMINUISCE LA FORZA! ( DOPO 11 MINUTI VENDE SE deviation <-0,4 "E SE" ma1 < ma16  ( aggiungi dopo )"E SE" ma7 < ma7 3 min ago "E SE" ma11 < ma11 3 min ago "E SE" ma16 < ma16 3 min ago )
             
-            if seconds_since_last_trade > max_hold_time_in_seconds:
-                
-                action = 'sell'
-                
-                
-            if (seconds_since_last_trade > max_hold_time_in_seconds
+            if (seconds_since_last_trade > max_hold_without_force_time_in_seconds
                 and deviation < -0.4
-                and ma1 < ma16):
+                and ma2_last < ma16_last):
                 
                 action = 'sell'
+            elif seconds_since_last_trade > max_hold_time_in_seconds:
+                
+                action = 'sell'
+                
+                
+            
 
                 
         self.algo_helper.log('action {}'.format(action))
