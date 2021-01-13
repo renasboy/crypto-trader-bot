@@ -21,6 +21,10 @@ class influx_algo_helper(object):
         self.last_trade_session = None
         self.last_trade_action = None
         self.last_trade_price = None
+        self.prev_trade_time = None
+        self.prev_trade_session = None
+        self.prev_trade_action = None
+        self.prev_trade_price = None
 
     def write(self, data):
         self.influx.write_points(data)
@@ -154,6 +158,7 @@ class influx_algo_helper(object):
 
     def update_last_trade(self):
         self.last_trade_time, self.last_trade_session, self.last_trade_action, self.last_trade_price = self.last_trade()
+        self.prev_trade_time, self.prev_trade_session, self.prev_trade_action, self.prev_trade_price = self.prev_trade()
 
     def last_trade(self):
         result = self.influx.query("SELECT price, type, session FROM trade WHERE exchange = '{}' and symbol_1 = '{}' and symbol_2 = '{}' ORDER BY time DESC limit 1 tz('Europe/Amsterdam')".format(self.exchange, self.symbol_1, self.symbol_2))
@@ -165,6 +170,16 @@ class influx_algo_helper(object):
         self.log('last trade date: {} session: {} action: {} price: {}'.format(date_time, session, action, price))
         return date_time, int(session), action, float(price)
 
+    def prev_trade(self):
+        result = self.influx.query("SELECT price, type, session FROM trade WHERE exchange = '{}' and symbol_1 = '{}' and symbol_2 = '{}' ORDER BY time DESC limit 2 tz('Europe/Amsterdam')".format(self.exchange, self.symbol_1, self.symbol_2))
+        results = list(result.get_points())
+        date_time = results[1]['time'] if len(results) == 2 else None
+        session = results[1]['session'] if len(results) == 2 else 0
+        action = results[1]['type'] if len(results) == 2 else None
+        price = results[1]['price'] if len(results) else 0
+        self.log('prev trade date: {} session: {} action: {} price: {}'.format(date_time, session, action, price))
+        return date_time, int(session), action, float(price)
+
     @property
     def seconds_since_last_trade(self):
         if self.last_trade_time:
@@ -172,6 +187,15 @@ class influx_algo_helper(object):
             self.log('last trade time {}'.format(self.last_trade_time)) 
             self.log('seconds since last trade: {}'.format(seconds_since_last_trade))
             return seconds_since_last_trade
+        return 0
+
+    @property
+    def seconds_since_prev_trade(self):
+        if self.prev_trade_time:
+            seconds_since_prev_trade = (datetime.now() - datetime.strptime(self.prev_trade_time[:self.prev_trade_time.index('.')], '%Y-%m-%dT%H:%M:%S')).seconds
+            self.log('prev trade time {}'.format(self.prev_trade_time)) 
+            self.log('seconds since prev trade: {}'.format(seconds_since_prev_trade))
+            return seconds_since_prev_trade
         return 0
 
     def log(self, message):

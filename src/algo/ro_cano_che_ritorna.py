@@ -60,6 +60,12 @@ class ro_cano_che_ritorna(object):
         last_trade_time = self.algo_helper.last_trade_time
         last_trade_price = self.algo_helper.last_trade_price 
         seconds_since_last_trade = self.algo_helper.seconds_since_last_trade
+
+        # PREV TRADE
+        prev_trade_action = self.algo_helper.prev_trade_action
+        prev_trade_time = self.algo_helper.prev_trade_time
+        prev_trade_price = self.algo_helper.prev_trade_price 
+        seconds_since_prev_trade = self.algo_helper.seconds_since_prev_trade
         
         
         # compa
