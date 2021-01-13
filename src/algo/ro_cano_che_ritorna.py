@@ -12,9 +12,10 @@ class ro_cano_che_ritorna(object):
         # TIME dopo quanto tempo ro cano ritorna automaticamente ( per esempio 11 minuti x 60 = 3600 secondi )
         max_hold_time_in_seconds = 660
         
-        # durata segmento ( 5 minuti * 60 = 300 secondi 5 ) in cui,
+        # DURATA SEGMENTO ( 5 minuti * 60 = 300 secondi 5 ) 
+        # in cui,
         # se ro cano deve comprare :
-        # a tutte le condizioni stabilite PER COMPRARE si aggiunge la "deviation" 
+        # a tutte le condizioni gia' stabilite per comprare SI AGGIUNGE la "deviation" 
         # sia per il BUY UN PO' PIU' SOPRA DELL' ULTIMO SELL
         # che per il BUY UN PO' PIU' SOPRA DELL' ULTIMO BUY ( ma qua ho fatto casino !)
         min_buy_delay_in_seconds = 300
