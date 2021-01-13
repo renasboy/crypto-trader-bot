@@ -107,7 +107,10 @@ class ro_cano_che_ritorna(object):
             # COMPRA UN PO' PIU' SOPRA anche DELL' ULTIMO BUY SE DEVIATION > 0.20 ( qua ho fatto il casino )
             #if ((seconds_since_last_trade > 0 and seconds_since_last_trade >= min_buy_delay_in_seconds and deviation > 0.27)
                 #or (seconds_since_last_trade == 0 or seconds_since_last_trade > min_buy_delay_in_seconds)):
-            
+               
+                # compa, forse, ci deve essere 
+                # una attesa che comincia dall' ULTIMO SELL
+                # e una attesa che comincia dall' ULTIMO BUY
             
 
                 # COMPRA sessione 1
