@@ -226,7 +226,7 @@ class ro_cano_che_ritorna(object):
             # 2) (salvagente 2 ) ma aggiungere VENDI SE DIMINUISCE LA FORZA! ( DOPO 11 MINUTI VENDE SE deviation <-0,4 "E SE" ma1 < ma16  ( aggiungi dopo )"E SE" ma7 < ma7 3 min ago "E SE" ma11 < ma11 3 min ago "E SE" ma16 < ma16 3 min ago )
             
             if (seconds_since_last_trade > max_hold_without_force_time_in_seconds
-                and deviation < -0.4
+                and deviation < -0.65
                 and ma2_last < ma16_last):
                 
                 action = 'sell'
