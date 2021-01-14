@@ -85,7 +85,7 @@ class ro_cano_che_ritorna(object):
         
         # formula DEVIATION prev_trade (qualche volta il BUY ) per comprare UN PO' PIU' SOPRA DEL PREV TRADE (eccezionalmente ultimo buy)
         
-        #deviation 2 = (price / prev_trade_price - 1) * 100 if prev_trade_price else 0
+        deviation 2 = (price / prev_trade_price - 1) * 100 if prev_trade_price else 0
         
         #self.algo_helper.log('deviation 2: {}'.format(deviation 2))
         
