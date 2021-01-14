@@ -9,16 +9,16 @@ class ro_cano_che_ritorna(object):
     @property
     def action(self):
         
-        # TEMPO DOPO IL QUALE (se perdita grande e se incrocio 2-16) e ro cano ritorna automaticamente a casa ( SE C'E' UN CROLLO IMPROVVISO ! )
+        # TEMPO DOPO IL QUALE ro cano ritorna a casa (se perdita grande e se incrocio 2-16)
         max_hold_time_in_seconds = 1800
         
-        # tempo di attesa DOPO IL QUALE " se ro cano COMINCIA A PERDERE LA FORZA " vende ! ( adesso 10 minuti (10 * 60 = 600 secondi ))
+        # TEMPO DOPO IL QUALE " se ro cano COMINCIA A PERDERE LA FORZA " vende ! ( adesso 10 minuti (10 * 60 = 600 secondi ))
         max_hold_without_force_time_in_seconds = 600
         
-        # tempo in cui ( 9 minuti * 60 = 540 secondi ) SI AGGIUNGE LA DEVIATION !
-        # in cui, se ro cano VUOLE COMPRARE DEVE AGGIUNGERE la "deviation"  (a tutte le condizioni gia' stabilite per comprare) 
+        # tempo in cui se ro cano vuole comprare ( 9 minuti * 60 = 540 secondi ) SI AGGIUNGE LA DEVIATION ! (a tutte le altre condizioni gia' stabilite per comprare) 
         # per comprare UN PO' PIU' SOPRA DELL' ULTIMO SELL
         # ma anche per comprare UN PO' PIU' SOPRA DELL' ULTIMO BUY
+        
         
         min_buy_delay_in_seconds = 540
         # forse bisogna mettere un contatore per il prev
