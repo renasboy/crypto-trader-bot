@@ -219,7 +219,7 @@ class ro_cano_che_ritorna(object):
             # SE LA PERDITA E' TROPPA VENDE SUBITO (SALVAGENTE)
             if deviation < -1.6
                 and ma2_prev > ma16_prev and ma2_last < ma16_last:
-                action = 'sell'
+                    action = 'sell'
                 
             # ( compa, una volta c'e' stata una grande vendita al 3° minuto dopo il buy ! )
             
