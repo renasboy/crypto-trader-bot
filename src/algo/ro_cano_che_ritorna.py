@@ -58,7 +58,7 @@ class ro_cano_che_ritorna(object):
         seconds_since_prev_trade = self.algo_helper.seconds_since_prev_trade
         
         
-        # CURRENT PRICE
+        # PREZZO DI MERCATO - CURRENT PRICE
         price = self.algo_helper.price
         
         
