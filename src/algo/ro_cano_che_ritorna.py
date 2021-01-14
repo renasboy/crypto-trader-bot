@@ -9,24 +9,24 @@ class ro_cano_che_ritorna(object):
     @property
     def action(self):
         
-        # TIME dopo quanto tempo ro cano ritorna automaticamente ( per esempio 11 minuti x 60 = 3600 secondi )
-        max_hold_time_in_seconds = 3600
+        # TEMPO DOPO IL QUALE BUTTO IL SALVAGENTE e ro cano ritorna automaticamente a casa ( per esempio 30 minuti x 60 = 1800 secondi )
+        max_hold_time_in_seconds = 1800
         
-        # tempo di attesa "quaqndo comincia a perdere la forza" ( adesso 11 minuti )
-        max_hold_without_force_time_in_seconds = 660
+        # tempo di attesa DOPO IL QUALE " se ro cano COMINCIA A PERDERE LA FORZA " vende ! ( adesso 10 minuti (10 * 60 = 600 secondi ))
+        max_hold_without_force_time_in_seconds = 600
         
-        # DURATA SEGMENTO ( 5 minuti * 60 = 300 secondi 5 ) 
-        # in cui,
-        # se ro cano deve comprare :
-        # a tutte le condizioni gia' stabilite per comprare SI AGGIUNGE la "deviation" 
-        # sia per il BUY UN PO' PIU' SOPRA DELL' ULTIMO SELL
-        # che per il BUY UN PO' PIU' SOPRA DELL' ULTIMO BUY ( ma qua ho fatto casino !)
-        min_buy_delay_in_seconds = 300
+        # tempo di attesa ( 9 minuti * 60 = 540 secondi ) 
+        # in cui, se ro cano VUOLE COMPRARE DEVE AGGIUNGERE la "deviation"  (a tutte le condizioni gia' stabilite per comprare) 
+        # per comprare UN PO' PIU' SOPRA DELL' ULTIMO SELL
+        # ma anche per comprare UN PO' PIU' SOPRA DELL' ULTIMO BUY
+        
+        min_buy_delay_in_seconds = 540
+        
         
         # MACD di 1-2-3-4 minuti prima
         macd = self.algo_helper.macd
         
-        # macd_1_min_ago = self.algo_helper.macd_minutes_ago(1) NON UTILIZZARLO ! E' UGUALE AL MACD.
+        # macd_1_min_ago = self.algo_helper.macd_minutes_ago(1) NON UTILIZZARLO ! E' UGUALE AL MACD !
         macd_2_min_ago = self.algo_helper.macd_minutes_ago(2)
       
         # moving average (2-3-4-5-x) ( GRANDE IDEA : in futuro metti invece di ma50 ma49 e testa - invece di ma49 ma48 e testa - adesso compra un po' troppo tardi,,,)
@@ -69,7 +69,7 @@ class ro_cano_che_ritorna(object):
         seconds_since_prev_trade = self.algo_helper.seconds_since_prev_trade
         
         
-        # compa
+        # (QUESTO E' STATO RISOLTO CON
         # forse bisogna fare questo LAST SELL
         # last_sell_time = self.algo_helper.last_sell_time
         
@@ -217,25 +217,27 @@ class ro_cano_che_ritorna(object):
                         action = 'sell'
 
             # SE LA PERDITA E' TROPPA VENDE SUBITO (SALVAGENTE)
-            if deviation < -1.6:
+            if deviation < -1.6
+                and ma2_prev > ma7_prev and ma2_last < ma7_last:
                 action = 'sell'
+                
+            # ( compa, una volta c'e' stata una grande vendita al 3° minuto dopo il buy ! )
             
-            # compa qua aiutami tu a capire !  " vendita piu' lontana e vendita piu' vicina "
-            # ( compa, una volta c'e' stata una grande vendita al 3° minuto dopo il buy ! ) - ( forse si puo' risolvere con ma2 al posto del price nella deviation )
+            
+            
             # da 0 a 240 secondi dal buy VENDI se ma2 < ma7 "E SE" deviation < -1.8
             # da 241 secondi dal buy VENDI se ma2 < ma16 "E SE" deviation < -0.5 ( provo a ridurre le perdite nel ribasso improvviso e improbabile ) 
             
             
-            
-            
-            # RO CANO TORNA A CASA ( VENDE !) 
-            # 1) VENDE SE DIMINUISCE LA FORZA ! ( vende dopo 11 minuti SE deviation <-0,4 "E SE" ma1 < ma16  ( dopo, se vuoi, puoi aggiungere ) "E SE" ma7 < ma7 3 min ago "E SE" ma11 < ma11 3 min ago "E SE" ma16 < ma16 3 min ago )
-            # 2) VENDE " DOPO UN' ORA " "max hold time" 
            
-            
+            # RO CANO TORNA A CASA ( VENDE ! ) 
+            # 1) VENDE SE DIMINUISCE LA FORZA ! ( vende dopo 10 minuti SE deviation <-0,7 "E SE" ma2 < ma16  ( dopo, se vuoi, puoi aggiungere SE" ma11 < ma11 3 min ago "E SE" ma16 < ma16 3 min ago )
+            # 2) VENDE " DOPO UN' ORA " "max hold time" 
             
             if (seconds_since_last_trade > max_hold_without_force_time_in_seconds
-                and deviation < -0.70
+                and deviation < -0.60
+                and ma7_last < ma7_3_min_ago
+                and ma11_last < ma11_3_min_ago
                 and ma2_last < ma16_last):
                 
                 action = 'sell'
