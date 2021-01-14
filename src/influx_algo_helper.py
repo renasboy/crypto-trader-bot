@@ -176,7 +176,7 @@ class influx_algo_helper(object):
         date_time = results[1]['time'] if len(results) == 2 else None
         session = results[1]['session'] if len(results) == 2 else 0
         action = results[1]['type'] if len(results) == 2 else None
-        price = results[1]['price'] if len(results) else 0
+        price = results[1]['price'] if len(results) == 2 else 0
         self.log('prev trade date: {} session: {} action: {} price: {}'.format(date_time, session, action, price))
         return date_time, int(session), action, float(price)
 
