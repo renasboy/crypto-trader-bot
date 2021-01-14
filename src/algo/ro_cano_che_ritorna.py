@@ -15,10 +15,10 @@ class ro_cano_che_ritorna(object):
         # TEMPO DOPO IL QUALE " se ro cano COMINCIA A PERDERE LA FORZA " vende ! ( adesso 10 minuti (10 * 60 = 600 secondi ))
         max_hold_without_force_time_in_seconds = 600
         
-        # tempo in cui se ro cano vuole comprare ( 9 minuti * 60 = 540 secondi ) SI AGGIUNGE LA DEVIATION ! (a tutte le altre condizioni gia' stabilite per comprare) 
-        # per comprare UN PO' PIU' SOPRA DELL' ULTIMO SELL
-        # ma anche per comprare UN PO' PIU' SOPRA DELL' ULTIMO BUY
-        
+        # TEMPO in cui SI AGGIUNGE LA DEVIATION ! ( 9 minuti * 60 = 540 secondi ) (a tutte le altre condizioni gia' stabilite per comprare)  
+        # per comprare UN PO' PIU' SOPRA DEL LAST TRADE (di solito ultimo sell)
+        # e per comprare UN PO' PIU' SOPRA DEL PREV TRADE (eccezionalmente ultimo buy)
+      
         
         min_buy_delay_in_seconds = 540
         # forse bisogna mettere un contatore per il prev
@@ -26,7 +26,7 @@ class ro_cano_che_ritorna(object):
         # MACD di 1-2-3-4 minuti prima
         macd = self.algo_helper.macd
         
-        # macd_1_min_ago = self.algo_helper.macd_minutes_ago(1) NON UTILIZZARLO ! E' UGUALE AL MACD !
+        # macd_1_min_ago = self.algo_helper.macd_minutes_ago(1) (NON UTILIZZARLO ! e' uguale al macd !)
         macd_2_min_ago = self.algo_helper.macd_minutes_ago(2)
       
         # moving average (2-3-4-5-x) ( GRANDE IDEA : in futuro metti invece di ma50 ma49 e testa - invece di ma49 ma48 e testa - adesso compra un po' troppo tardi,,,)
@@ -40,7 +40,7 @@ class ro_cano_che_ritorna(object):
         ma41_last, ma41_prev = self.algo_helper.ma_last_prev(41)
         ma48_last, ma48_prev = self.algo_helper.ma_last_prev(48)
         
-        # moving average (2-3-4-5-7-8-20-43-100) di x minuti prima (NON METTERE MAI 1 min !) ( GRANDE IDEA : in futuro metti invece di ma50 2min ago ma49 2min ago e testa - invece di ma49 2min ago ma48 2min ago e testa - adesso compra un po' troppo tardi,,,)
+        # moving average (2-3-4-5-7-8-20-43-100) di x minuti prima (NON METTERE MAI 1 min !)
         ma2_2_min_ago = self.algo_helper.ma_minutes_ago(2, 2) 
         ma4_2_min_ago = self.algo_helper.ma_minutes_ago(4, 2)
         ma5_2_min_ago = self.algo_helper.ma_minutes_ago(5, 2)
@@ -69,37 +69,23 @@ class ro_cano_che_ritorna(object):
         seconds_since_prev_trade = self.algo_helper.seconds_since_prev_trade
         
         
-        # (QUESTO E' STATO RISOLTO CON il # PREV TRADE !
-        # forse bisogna fare questo LAST SELL
-        # last_sell_time = self.algo_helper.last_sell_time
-        
-        # forse bisogna fare questo LAST BUY
-        # last_buy_time = self.algo_helper.last_buy_time
-        
-        
         # CURRENT PRICE
         price = self.algo_helper.price
         
         
+        # DEVIATION last_trade (di solito il SELL)
         
-        
-        
-        
-        
-        
-        
-        
-        #deviation last_trade (di solito il SELL)
         deviation = (price / last_trade_price - 1) * 100 if last_trade_price else 0
         
         self.algo_helper.log('deviation: {}'.format(deviation))
         
         
         
-        # deviation prev_trade (qualche volta il BUY - CASO ECCEZIONALE ) vedi riga 131
-        # deviation = (price / prev_trade_price - 1) * 100 if prev_trade_price else 0
+        # DEVIATION prev_trade (qualche volta il BUY ) vedi riga 131
         
+        deviation 2 = (price / prev_trade_price - 1) * 100 if prev_trade_price else 0
         
+        self.algo_helper.log('deviation 2: {}'.format(deviation 2))
         
         
         action = None
