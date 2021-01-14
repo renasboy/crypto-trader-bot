@@ -9,8 +9,8 @@ class ro_cano_che_ritorna(object):
     @property
     def action(self):
         
-        # TEMPO DOPO IL QUALE BUTTO IL SALVAGENTE (se perdita grande e se incrocio 2-16) e ro cano ritorna automaticamente a casa ( SE C'E' UN CROLLO IMPROVVISO ! )
-        max_hold_time_in_seconds = 60
+        # TEMPO DOPO IL QUALE (se perdita grande e se incrocio 2-16) e ro cano ritorna automaticamente a casa ( SE C'E' UN CROLLO IMPROVVISO ! )
+        max_hold_time_in_seconds = 1800
         
         # tempo di attesa DOPO IL QUALE " se ro cano COMINCIA A PERDERE LA FORZA " vende ! ( adesso 10 minuti (10 * 60 = 600 secondi ))
         max_hold_without_force_time_in_seconds = 600
