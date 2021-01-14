@@ -26,7 +26,7 @@ class ro_cano_che_ritorna(object):
         # MACD di 1-2-3-4 minuti prima
         macd = self.algo_helper.macd
         
-        macd_1_min_ago = self.algo_helper.macd_minutes_ago(1)
+        # macd_1_min_ago = self.algo_helper.macd_minutes_ago(1) NON UTILIZZARLO ! E' UGUALE AL MACD.
         macd_2_min_ago = self.algo_helper.macd_minutes_ago(2)
       
         # moving average (2-3-4-5-x) ( GRANDE IDEA : in futuro metti invece di ma50 ma49 e testa - invece di ma49 ma48 e testa - adesso compra un po' troppo tardi,,,)
