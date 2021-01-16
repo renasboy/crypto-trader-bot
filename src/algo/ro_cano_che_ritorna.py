@@ -235,7 +235,7 @@ class ro_cano_che_ritorna(object):
             # 2) VENDE " DOPO UN' ORA " "max hold time" 
             
             if (seconds_since_last_trade > max_hold_without_force_time_in_seconds
-                and deviation < -0.60
+                and deviation < -0.94
                 and ma7_last < ma7_3_min_ago
                 and ma11_last < ma11_3_min_ago
                 and ma2_last < ma16_last):
