@@ -243,9 +243,6 @@ class ro_cano_che_ritorna(object):
             if (deviation < -1.6
                 and ma2_prev > ma16_prev and ma2_last < ma16_last):
                     action = 'sell'
-                
-            # ( compa, una volta c'e' stata una grande vendita al 3° minuto dopo il buy ! )
-            
             
             
             # da 0 a 240 secondi dal buy VENDI se ma2 < ma7 "E SE" deviation < -1.8
