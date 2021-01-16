@@ -66,8 +66,8 @@ class ro_cano_che_ritorna(object):
         price = self.algo_helper.price
         
         
-        # TEMPO DOPO IL QUALE ro cano ritorna a casa (se perdita grande e se incrocio 2-16)
-        max_hold_time_in_seconds = 1800
+        # TEMPO DOPO IL QUALE ro cano ritorna a casa ( e se ma7 < ma7 3 min ago)
+        max_hold_time_in_seconds = 3600
         
         # TEMPO DOPO IL QUALE " se ro cano COMINCIA A PERDERE LA FORZA " vende ! ( adesso 10 minuti (10 * 60 = 600 secondi ))
         max_hold_without_force_time_in_seconds = 600
