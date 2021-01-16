@@ -69,8 +69,8 @@ class ro_cano_che_ritorna(object):
         # TEMPO DOPO IL QUALE ro cano ritorna a casa ( e se ma7 < ma7 3 min ago)
         max_hold_time_in_seconds = 3600
         
-        # TEMPO DOPO IL QUALE " se ro cano COMINCIA A PERDERE LA FORZA " vende ! ( adesso 10 minuti (10 * 60 = 600 secondi ))
-        max_hold_without_force_time_in_seconds = 600
+        # TEMPO DOPO IL QUALE "se ro cano COMINCIA A PERDERE LA FORZA" vende ! ( 20 minuti = 20 * 60 = 1200 secondi ) ( ma anche alcune ma devono incrociare al ribasso )
+        max_hold_without_force_time_in_seconds = 1200
         
         
         
