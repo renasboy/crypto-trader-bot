@@ -92,6 +92,15 @@ class ro_cano_che_ritorna(object):
         #self.algo_helper.log('deviation 2: {}'.format(deviation 2))
         
         
+        # 1) ro cano VENDE SE DIMINUISCE LA FORZA !
+        
+        # 2) ro cano VENDE " DOPO UN' ORA " "max hold time" 
+        
+        # 3) ro cano VENDE SE LA PERDITA E' TROPPA ( CROLLO IMPROVVISO ) VENDE SUBITO ! (SALVAGENTE)
+        
+        
+        
+        
         
         
         
