@@ -18,7 +18,7 @@ class ro_cano_che_ritorna(object):
         # macd_1_min_ago = self.algo_helper.macd_minutes_ago(1) (NON UTILIZZARLO ! e' uguale al macd !)
         macd_2_min_ago = self.algo_helper.macd_minutes_ago(2)
       
-        # moving average (2-3-4-5-x) ( GRANDE IDEA : in futuro metti invece di ma50 ma49 e testa - invece di ma49 ma48 e testa - adesso compra un po' troppo tardi,,,)
+        # moving average (2-3-4-5-x) 
         ma2_last, ma2_prev = self.algo_helper.ma_last_prev(2)
         ma4_last, ma4_prev = self.algo_helper.ma_last_prev(4)
         ma5_last, ma5_prev = self.algo_helper.ma_last_prev(5)
@@ -66,7 +66,7 @@ class ro_cano_che_ritorna(object):
         price = self.algo_helper.price
         
         
-        # TEMPO DOPO IL QUALE ro cano ritorna a casa ( e se ma7 < ma7 3 min ago)
+        # TEMPO DOPO IL QUALE ro cano ritorna a casa ( 60 minuti = 60 * 60 = 3600 secondi ) ) (E SE ma7 < ma7 3 min ago)
         max_hold_time_in_seconds = 3600
         
         # TEMPO DOPO IL QUALE "se ro cano COMINCIA A PERDERE LA FORZA" vende ! ( 20 minuti = 20 * 60 = 1200 secondi ) ( ma anche alcune ma devono incrociare al ribasso )
@@ -74,7 +74,9 @@ class ro_cano_che_ritorna(object):
         
         
         
-        # TEMPO in cui SI AGGIUNGE LA DEVIATION ! ( 9 minuti * 60 = 540 secondi ) (a tutte le altre condizioni gia' stabilite per comprare)  
+        # TEMPO in cui SI AGGIUNGE LA DEVIATION !  (a tutte le altre condizioni gia' stabilite per comprare)  
+        # per ULTIMO trade ( 9 minuti = 9 * 60 = 540 secondi )
+        # per PENULTIMO trade ( 7 minuti = 7 * 60 = 420 secondi )
         min_buy_delay_in_seconds = 540
         min_prev_buy_delay_in_seconds = 420
       
@@ -91,7 +93,7 @@ class ro_cano_che_ritorna(object):
         
         deviation_prev = (price / prev_trade_price - 1) * 100 if prev_trade_price else 0
         
-        #self.algo_helper.log('deviation 2: {}'.format(deviation 2))
+        #self.algo_helper.log('deviation_prev: {}'.format(deviation_prev))
         
         
         
@@ -241,7 +243,7 @@ class ro_cano_che_ritorna(object):
                     if deviation > 0.27:
                         action = 'sell'
 
-            # SE LA PERDITA E' TROPPA VENDE SUBITO (SALVAGENTE)
+            # SE LA PERDITA E' TROPPA VENDE SUBITO (SALVAGENTE) (stop loss)
             if (deviation < -1.6
                 and ma2_prev > ma16_prev and ma2_last < ma16_last):
                     action = 'sell'
@@ -252,10 +254,10 @@ class ro_cano_che_ritorna(object):
             
             
            
-            # RO CANO TORNA A CASA ( VENDE ! ) 
-            # 1) VENDE SE DIMINUISCE LA FORZA ! ( vende dopo 10 minuti SE deviation <-0,7 "E SE" ma2 < ma16  ( dopo, se vuoi, puoi aggiungere SE" ma11 < ma11 3 min ago "E SE" ma16 < ma16 3 min ago )
-            # 2) VENDE " DOPO UN' ORA " "max hold time" 
+            # RO CANO TORNA A CASA.
             
+            # 1) ro cano VENDE SE DIMINUISCE LA FORZA ! (vende se perdita  < -0.94 e se etc.)
+          
             if (seconds_since_last_trade > max_hold_without_force_time_in_seconds
                 and deviation < -0.94
                 and ma7_last < ma7_3_min_ago
@@ -263,6 +265,10 @@ class ro_cano_che_ritorna(object):
                 and ma2_last < ma16_last):
                 
                 action = 'sell'
+                
+                
+                
+            # 2) ro cano VENDE " DOPO UN' ORA " "max hold time" (vende dopo 1 ora e se ma7_last < ma7_3_min_ago)   
             
             elif (seconds_since_last_trade > max_hold_time_in_seconds
                   and ma7_last < ma7_3_min_ago):
