@@ -94,6 +94,15 @@ class ro_cano_che_ritorna(object):
         #self.algo_helper.log('deviation 2: {}'.format(deviation 2))
         
         
+        
+        
+        # 1) ro cano COMPRA UN PO' PIU' SOPRA DELL' ULTIMO TRADE
+        
+        # 2) ro cano COMPRA UN PO' PIU' SOPRA anche DEL PENULTIMO TRADE 
+        
+        
+        
+        
         # 1) ro cano VENDE SE DIMINUISCE LA FORZA !
         
         # 2) ro cano VENDE " DOPO UN' ORA " "max hold time" 
