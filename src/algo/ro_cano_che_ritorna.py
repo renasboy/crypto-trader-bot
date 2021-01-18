@@ -263,6 +263,7 @@ class ro_cano_che_ritorna(object):
                 and deviation < -0.94
                 and ma7_last < ma7_3_min_ago
                 and ma11_last < ma11_3_min_ago
+                and ma16_last < ma16_3_min_ago
                 and ma2_last < ma16_last):
                 
                 action = 'sell'
