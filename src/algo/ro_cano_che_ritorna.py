@@ -45,7 +45,7 @@ class ro_cano_che_ritorna(object):
         ma18_2_min_ago = self.algo_helper.ma_minutes_ago(18, 2)
         ma34_2_min_ago = self.algo_helper.ma_minutes_ago(34, 2)
         ma41_2_min_ago = self.algo_helper.ma_minutes_ago(41, 2)
-        #ma41_18_min_ago = self.algo_helper.ma_minutes_ago(41, 18)
+        ma41_18_min_ago = self.algo_helper.ma_minutes_ago(41, 18)
         ma48_2_min_ago = self.algo_helper.ma_minutes_ago(48, 2)
         ma78_2_min_ago = self.algo_helper.ma_minutes_ago(78, 2)
         
@@ -168,7 +168,7 @@ class ro_cano_che_ritorna(object):
                         and ma18_last > ma18_2_min_ago
                         and ma34_last > ma34_2_min_ago
                         and ma41_last >= ma41_2_min_ago
-                        #and ma41_last >= ma41_18_min_ago
+                        and ma41_last >= ma41_18_min_ago
                         and ma48_last >= ma48_2_min_ago
                         and ma78_last >= ma78_2_min_ago
                         and macd < 50):
@@ -186,7 +186,7 @@ class ro_cano_che_ritorna(object):
                         and ma18_last > ma18_2_min_ago
                         and ma34_last > ma34_2_min_ago
                         and ma41_last >= ma41_2_min_ago
-                        #and ma41_last >= ma41_18_min_ago
+                        and ma41_last >= ma41_18_min_ago
                         and ma48_last >= ma48_2_min_ago
                         and ma78_last >= ma78_2_min_ago
                         and macd < 50):
@@ -204,7 +204,7 @@ class ro_cano_che_ritorna(object):
                         and ma18_last > ma18_2_min_ago
                         and ma34_last > ma34_2_min_ago
                         and ma41_last >= ma41_2_min_ago
-                        #and ma41_last >= ma41_18_min_ago
+                        and ma41_last >= ma41_18_min_ago
                         and ma48_last >= ma48_2_min_ago
                         and ma78_last >= ma78_2_min_ago
                         and macd < 50):
