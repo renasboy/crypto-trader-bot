@@ -114,13 +114,12 @@ class ro_cano_che_ritorna(object):
         
         
         
-        # 1) ro cano VENDE SE DIMINUISCE LA FORZA !
         
-        # 2) ro cano VENDE " DOPO UN' ORA " "max hold time" 
+        # 1) ro cano VENDE SE LA PERDITA E' TROPPA ( CROLLO IMPROVVISO ) VENDE SUBITO ! (SALVAGENTE) riga 261
         
-        # 3) ro cano VENDE SE LA PERDITA E' TROPPA ( CROLLO IMPROVVISO ) VENDE SUBITO ! (SALVAGENTE)
+        # 2) ro cano VENDE SE DIMINUISCE LA FORZA ! riga 274
         
-        
+        # 3) ro cano VENDE " DOPO UN' ORA " "max hold time" riga 288
         
         
         
@@ -285,11 +284,11 @@ class ro_cano_che_ritorna(object):
                 
                 
                 
-            # 2) ro cano VENDE " DOPO UN' ORA " "max hold time" (vende dopo 1 ora e se ma7_last < ma7_3_min_ago)   
+            # 2) ro cano VENDE " DOPO UN' ORA " "max hold time" (vende dopo 1 ora "e se" ma7_last < ma7_3_min_ago)   
             
             elif (seconds_since_last_trade > max_hold_time_in_seconds
-                  and ma7_last < ma7_3_min_ago):
-                
+                  and ma7_last < ma7_2_min_ago
+                  and ma2_last < ma11_last):
                 action = 'sell'
                 
                 
