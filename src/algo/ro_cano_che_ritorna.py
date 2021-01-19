@@ -267,10 +267,10 @@ class ro_cano_che_ritorna(object):
            
             # RO CANO TORNA A CASA.
             
-            # 1) ro cano VENDE SE DIMINUISCE LA FORZA ! (vende se perdita  < -0.94 e se etc.)
+            # 1) ro cano VENDE SE DIMINUISCE LA FORZA ! (vende se perdita  < -0.84 e se etc.)
           
             if (seconds_since_last_trade > max_hold_without_force_time_in_seconds
-                and deviation < -0.94
+                and deviation < -0.84
                 and ma7_last < ma7_3_min_ago
                 and ma11_last < ma11_3_min_ago
                 and ma16_last < ma16_3_min_ago
