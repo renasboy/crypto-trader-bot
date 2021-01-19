@@ -25,6 +25,7 @@ class ro_cano_che_ritorna(object):
         ma7_last, ma7_prev = self.algo_helper.ma_last_prev(7)  
         ma11_last, ma11_prev = self.algo_helper.ma_last_prev(11)
         ma13_last, ma13_prev = self.algo_helper.ma_last_prev(13)
+        ma15_last, ma15_prev = self.algo_helper.ma_last_prev(15)
         ma16_last, ma16_prev = self.algo_helper.ma_last_prev(16)
         ma18_last, ma18_prev = self.algo_helper.ma_last_prev(18)
         ma25_last, ma25_prev = self.algo_helper.ma_last_prev(25)
@@ -237,19 +238,19 @@ class ro_cano_che_ritorna(object):
 
             # VENDE sessione 1
             if self.session == 1:
-                if ma2_prev > ma13_prev and ma2_last < ma11_last:
+                if ma2_prev > ma15_prev and ma2_last < ma15_last:
                     if deviation > 0.27:
                         action = 'sell'
 
             # VENDE sessione 2
             elif self.session == 2:   
-                if ma2_prev > ma13_prev and ma2_last < ma11_last:
+                if ma2_prev > ma15_prev and ma2_last < ma15_last:
                     if deviation > 0.27:
                         action = 'sell'     
                         
             # VENDE sessione 3 in poi
             else:
-                if ma2_prev > ma13_prev and ma2_last < ma11_last:
+                if ma2_prev > ma15_prev and ma2_last < ma15_last:
                     if deviation > 0.27:
                         action = 'sell'
 
