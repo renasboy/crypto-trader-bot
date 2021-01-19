@@ -180,7 +180,10 @@ class ro_cano_che_ritorna(object):
                         and ma41_last >= ma41_18_min_ago
                         and ma48_last >= ma48_2_min_ago
                         and ma78_last >= ma78_2_min_ago
+                        and ma15_last >= ma78_last
                         and macd < 50):
+                        
+                        
                         action = 'buy'
                     
                 # COMPRA sessione 2
@@ -200,6 +203,7 @@ class ro_cano_che_ritorna(object):
                         and ma41_last >= ma41_18_min_ago
                         and ma48_last >= ma48_2_min_ago
                         and ma78_last >= ma78_2_min_ago
+                        and ma15_last >= ma78_last
                         and macd < 50):
                         action = 'buy'
                   
@@ -220,6 +224,7 @@ class ro_cano_che_ritorna(object):
                         and ma41_last >= ma41_18_min_ago
                         and ma48_last >= ma48_2_min_ago
                         and ma78_last >= ma78_2_min_ago
+                        and ma15_last >= ma78_last
                         and macd < 50):
                         action = 'buy'
     
