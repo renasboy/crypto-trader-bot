@@ -60,10 +60,10 @@ class ro_cano_che_ritorna(object):
         seconds_since_last_trade = self.algo_helper.seconds_since_last_trade
 
         # PREV TRADE
-        prev_trade_action = self.algo_helper.prev_trade_action
-        prev_trade_time = self.algo_helper.prev_trade_time
-        prev_trade_price = self.algo_helper.prev_trade_price 
-        seconds_since_prev_trade = self.algo_helper.seconds_since_prev_trade
+        #prev_trade_action = self.algo_helper.prev_trade_action
+        #prev_trade_time = self.algo_helper.prev_trade_time
+        #prev_trade_price = self.algo_helper.prev_trade_price 
+        #seconds_since_prev_trade = self.algo_helper.seconds_since_prev_trade
         
         
        
@@ -83,7 +83,7 @@ class ro_cano_che_ritorna(object):
         # per ULTIMO trade ( 50 minuti = 50 * 60 = 3000 secondi )
         # per PENULTIMO trade ( 40 minuti = 40 * 60 = 2400 secondi )
         min_buy_delay_in_seconds = 3000
-        min_prev_buy_delay_in_seconds = 2400
+        #min_prev_buy_delay_in_seconds = 2400
       
         
         # formula DEVIATION last_trade (di solito il SELL) per comprare UN PO' PIU' SOPRA DEL LAST TRADE (di solito ultimo sell)
@@ -96,7 +96,7 @@ class ro_cano_che_ritorna(object):
         
         # formula DEVIATION prev_trade (qualche volta il BUY ) per comprare UN PO' PIU' SOPRA DEL PREV TRADE (eccezionalmente ultimo buy)
         
-        deviation_prev = (price / prev_trade_price - 1) * 100 if prev_trade_price else 0
+        #deviation_prev = (price / prev_trade_price - 1) * 100 if prev_trade_price else 0
         
         #self.algo_helper.log('deviation_prev: {}'.format(deviation_prev))
         
@@ -108,7 +108,7 @@ class ro_cano_che_ritorna(object):
         # di questa altezza ( RIGA 156 adesso +0.27 prima era troppo alto +0.35 ) 
         
         
-        # 2) ro cano COMPRA UN PO' PIU' SOPRA anche DEL PENULTIMO TRADE  
+        # 2) ro cano COMPRA UN PO' PIU' SOPRA anche DEL PENULTIMO TRADE .............." in sospeso ! " 
         #( RIGA 86 nei 40 min dal BUY -"prev trade" )
         #( RIGA 157 adesso +0.60 prima era troppo basso +0.35 )
         
@@ -153,7 +153,7 @@ class ro_cano_che_ritorna(object):
             # COMPRA UN PO' PIU' SOPRA anche DEL PENULTIMO TRADE SE DEVIATION > 0.27 nei 540 secondi (ci vorrebbe un altro tempo ) dal PENULTIMO TRADE ( qualche volta IL BUY)
             
             if ((seconds_since_last_trade > 0 and seconds_since_last_trade <= min_buy_delay_in_seconds and deviation > 0.27)
-                or (seconds_since_prev_trade > 0 and seconds_since_prev_trade <= min_prev_buy_delay_in_seconds and deviation_prev > 0.60)
+                #or (seconds_since_prev_trade > 0 and seconds_since_prev_trade <= min_prev_buy_delay_in_seconds and deviation_prev > 0.60)
                 or (seconds_since_last_trade == 0 or seconds_since_last_trade > min_buy_delay_in_seconds)):
                 
             
@@ -268,9 +268,9 @@ class ro_cano_che_ritorna(object):
             
             
            
-            # RO CANO TORNA A CASA.
+            # RO CANO TORNA A CASA. (significa che ro cano VENDE !!!)
             
-            # 1) ro cano VENDE SE DIMINUISCE LA FORZA ! (vende se perdita  < -0.84 e se etc.)
+            # 1) ro cano VENDE SE DIMINUISCE LA FORZA ! ( vende se perdita  < -0.84 e se etc.)
           
             if (seconds_since_last_trade > max_hold_without_force_time_in_seconds
                 and deviation < -0.84
@@ -284,7 +284,7 @@ class ro_cano_che_ritorna(object):
                 
                 
                 
-            # 2) ro cano VENDE " DOPO UN' ORA " "max hold time" (vende dopo 1 ora "e se" ma7_last < ma7_3_min_ago)   
+            # 2) ro cano VENDE " DOPO UN' ORA " "max hold time" ( vende dopo 1 ora "e se" ma7_last < ma7_2_min_ago "e se" ma2 < ma11 )   
             
             elif (seconds_since_last_trade > max_hold_time_in_seconds
                   and ma7_last < ma7_2_min_ago
