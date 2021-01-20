@@ -57,7 +57,7 @@ class ro_cano_che_ritorna(object):
         ma48_2_min_ago = self.algo_helper.ma_minutes_ago(48, 2)
         ma78_2_min_ago = self.algo_helper.ma_minutes_ago(78, 2)
         ma100_2_min_ago = self.algo_helper.ma_minutes_ago(100, 2)
-        ma100_10_min_ago = self.algo_helper.ma_minutes_ago(100, 10)
+        ma100_16_min_ago = self.algo_helper.ma_minutes_ago(100, 16)
         
         
         # LAST TRADE
@@ -139,7 +139,7 @@ class ro_cano_che_ritorna(object):
         
         # APRE E CHIUDE GABBIA
         # SI APRE LA GABBIA SE 
-        if ma100_last > ma100_10_min_ago:  
+        if ma100_last > ma100_16_min_ago:  
             # NON TOCCARE QUESTA CONDIZIONE SERVE PER APERTURA DI GABBIA
             if not self.session or not self.open:
                self.session = 1
@@ -190,7 +190,7 @@ class ro_cano_che_ritorna(object):
                         and ma48_last >= ma48_2_min_ago
                         and ma78_last >= ma78_2_min_ago
                         and ma100_last >= ma100_2_min_ago
-                        and ma100_last >= ma100_10_min_ago
+                        and ma100_last >= ma100_16_min_ago
                         #and ma15_last >= ma78_last
                         and macd < 50):
                         
@@ -219,7 +219,7 @@ class ro_cano_che_ritorna(object):
                         and ma48_last >= ma48_2_min_ago
                         and ma78_last >= ma78_2_min_ago
                         and ma100_last >= ma100_2_min_ago
-                        and ma100_last >= ma100_10_min_ago
+                        and ma100_last >= ma100_16_min_ago
                         #and ma15_last >= ma78_last
                         and macd < 50):
                         action = 'buy'
@@ -244,7 +244,7 @@ class ro_cano_che_ritorna(object):
                         and ma48_last >= ma48_2_min_ago
                         and ma78_last >= ma78_2_min_ago
                         and ma100_last >= ma100_2_min_ago
-                        and ma100_last >= ma100_10_min_ago
+                        and ma100_last >= ma100_16_min_ago
                         #and ma15_last >= ma78_last
                         and macd < 50):
                         action = 'buy'
