@@ -75,8 +75,8 @@ class ro_cano_che_ritorna(object):
         price = self.algo_helper.price
         
         
-        # TEMPO DOPO IL QUALE ro cano ritorna a casa ( 60 minuti = 60 * 60 = 3600 secondi ) ) ("E SE" ma7 < ma7 3 min ago)
-        max_hold_time_in_seconds = 3600
+        # VENDE DOPO 1 ORA ! (TEMPO DOPO IL QUALE ro cano ritorna a casa) ( 60 minuti = 60 * 60 = 3600 secondi ) ) ("E SE" ma7 < ma7 3 min ago) ( SOSPESA !)
+        #max_hold_time_in_seconds = 3600
         
         # TEMPO DOPO IL QUALE "se ro cano COMINCIA A PERDERE LA FORZA" vende ! ( 20 minuti = 20 * 60 = 1200 secondi ) ( ma anche alcune ma devono incrociare al ribasso )
         max_hold_without_force_time_in_seconds = 1200
@@ -299,13 +299,13 @@ class ro_cano_che_ritorna(object):
                 
                 
                 
-            # 2) ro cano VENDE " DOPO UN' ORA " "max hold time" ( vende dopo 1 ora "e se" ma7_last < ma7_2_min_ago "e se" ma2 < ma11 )   
+            # 2) ro cano VENDE " DOPO UN' ORA " "max hold time" ( vende dopo 1 ora "e se" ma7_last < ma7_2_min_ago "e se" ma2 < ma11 )  ( SOSPESA ! ) 
             
-            elif (seconds_since_last_trade > max_hold_time_in_seconds
-                  and ma7_last < ma7_2_min_ago
-                  and ma2_last < ma11_last):
+            #elif (seconds_since_last_trade > max_hold_time_in_seconds
+                  #and ma7_last < ma7_2_min_ago
+                  #and ma2_last < ma11_last):
                 
-                action = 'sell'
+                #action = 'sell'
                 
             
 
