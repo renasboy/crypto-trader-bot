@@ -33,6 +33,7 @@ class ro_cano_che_ritorna(object):
         ma41_last, ma41_prev = self.algo_helper.ma_last_prev(41)
         ma48_last, ma48_prev = self.algo_helper.ma_last_prev(48)
         ma78_last, ma78_prev = self.algo_helper.ma_last_prev(78)
+        ma100_last, ma100_prev = self.algo_helper.ma_last_prev(100)
         
         # moving average (2-3-4-5-7-8-20-43-100) di x minuti prima (NON METTERE MAI 1 min !)
         ma2_2_min_ago = self.algo_helper.ma_minutes_ago(2, 2) 
@@ -45,6 +46,8 @@ class ro_cano_che_ritorna(object):
         ma11_3_min_ago = self.algo_helper.ma_minutes_ago(11, 3)
         ma16_2_min_ago = self.algo_helper.ma_minutes_ago(16, 2)
         ma16_3_min_ago = self.algo_helper.ma_minutes_ago(16, 3)
+        ma16_16_min_ago = self.algo_helper.ma_minutes_ago(16, 16)
+        ma16_19_min_ago = self.algo_helper.ma_minutes_ago(16, 19)
         ma18_2_min_ago = self.algo_helper.ma_minutes_ago(18, 2)
         ma25_2_min_ago = self.algo_helper.ma_minutes_ago(25, 2)
         ma34_2_min_ago = self.algo_helper.ma_minutes_ago(34, 2)
@@ -52,6 +55,7 @@ class ro_cano_che_ritorna(object):
         ma41_18_min_ago = self.algo_helper.ma_minutes_ago(41, 18)
         ma48_2_min_ago = self.algo_helper.ma_minutes_ago(48, 2)
         ma78_2_min_ago = self.algo_helper.ma_minutes_ago(78, 2)
+        ma100_2_min_ago = self.algo_helper.ma_minutes_ago(100, 2)
         
         # LAST TRADE
         last_trade_action = self.algo_helper.last_trade_action
@@ -132,7 +136,7 @@ class ro_cano_che_ritorna(object):
         
         # APRE E CHIUDE GABBIA
         # SI APRE LA GABBIA SE 
-        if ma78_last > ma78_2_min_ago:  
+        if ma100_last > ma100_2_min_ago:  
             # NON TOCCARE QUESTA CONDIZIONE SERVE PER APERTURA DI GABBIA
             if not self.session or not self.open:
                self.session = 1
@@ -173,13 +177,15 @@ class ro_cano_che_ritorna(object):
                         and ma11_last > ma11_2_min_ago
                         and ma16_last > ma16_2_min_ago
                         and ma16_2_min_ago > ma16_3_min_ago
+                        and ma16_16_min_ago > ma16_19_min_ago
                         and ma18_last > ma18_2_min_ago
                         and ma25_last > ma25_2_min_ago
                         and ma34_last > ma34_2_min_ago
-                        and ma41_last >= ma41_2_min_ago
+                        and ma41_last > ma41_2_min_ago
                         and ma41_last >= ma41_18_min_ago
-                        and ma48_last >= ma48_2_min_ago
-                        and ma78_last >= ma78_2_min_ago
+                        and ma48_last > ma48_2_min_ago
+                        and ma78_last > ma78_2_min_ago
+                        and ma100_last >= ma100_2_min_ago
                         and ma15_last >= ma78_last
                         and macd < 50):
                         
@@ -196,13 +202,15 @@ class ro_cano_che_ritorna(object):
                         and ma11_last > ma11_2_min_ago
                         and ma16_last > ma16_2_min_ago
                         and ma16_2_min_ago > ma16_3_min_ago
+                        and ma16_16_min_ago > ma16_19_min_ago
                         and ma18_last > ma18_2_min_ago
                         and ma25_last > ma25_2_min_ago
                         and ma34_last > ma34_2_min_ago
-                        and ma41_last >= ma41_2_min_ago
+                        and ma41_last > ma41_2_min_ago
                         and ma41_last >= ma41_18_min_ago
-                        and ma48_last >= ma48_2_min_ago
-                        and ma78_last >= ma78_2_min_ago
+                        and ma48_last > ma48_2_min_ago
+                        and ma78_last > ma78_2_min_ago
+                        and ma100_last > ma100_2_min_ago
                         and ma15_last >= ma78_last
                         and macd < 50):
                         action = 'buy'
@@ -217,13 +225,15 @@ class ro_cano_che_ritorna(object):
                         and ma11_last > ma11_2_min_ago
                         and ma16_last > ma16_2_min_ago
                         and ma16_2_min_ago > ma16_3_min_ago
+                        and ma16_16_min_ago > ma16_19_min_ago
                         and ma18_last > ma18_2_min_ago
                         and ma25_last > ma25_2_min_ago
                         and ma34_last > ma34_2_min_ago
-                        and ma41_last >= ma41_2_min_ago
+                        and ma41_last > ma41_2_min_ago
                         and ma41_last >= ma41_18_min_ago
-                        and ma48_last >= ma48_2_min_ago
-                        and ma78_last >= ma78_2_min_ago
+                        and ma48_last > ma48_2_min_ago
+                        and ma78_last > ma78_2_min_ago
+                        and ma100_last >= ma100_2_min_ago
                         and ma15_last >= ma78_last
                         and macd < 50):
                         action = 'buy'
@@ -275,10 +285,10 @@ class ro_cano_che_ritorna(object):
            
             # RO CANO TORNA A CASA. (significa che ro cano VENDE !!!)
             
-            # 1) ro cano VENDE SE DIMINUISCE LA FORZA ! ( vende se perdita  < -0.84 e se etc.)
+            # 1) ro cano VENDE SE DIMINUISCE LA FORZA ! ( vende se perdita  < -1.20 e se etc.)
           
             if (seconds_since_last_trade > max_hold_without_force_time_in_seconds
-                and deviation < -0.84
+                and deviation < -1.20
                 and ma7_last < ma7_3_min_ago
                 and ma11_last < ma11_3_min_ago
                 and ma16_last < ma16_3_min_ago
