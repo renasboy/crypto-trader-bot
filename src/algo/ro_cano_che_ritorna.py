@@ -52,6 +52,7 @@ class ro_cano_che_ritorna(object):
         ma25_2_min_ago = self.algo_helper.ma_minutes_ago(25, 2)
         ma34_2_min_ago = self.algo_helper.ma_minutes_ago(34, 2)
         ma41_2_min_ago = self.algo_helper.ma_minutes_ago(41, 2)
+        ma41_3_min_ago = self.algo_helper.ma_minutes_ago(41, 3)
         #ma41_18_min_ago = self.algo_helper.ma_minutes_ago(41, 18)
         ma48_2_min_ago = self.algo_helper.ma_minutes_ago(48, 2)
         ma78_2_min_ago = self.algo_helper.ma_minutes_ago(78, 2)
@@ -109,7 +110,7 @@ class ro_cano_che_ritorna(object):
         
         # 1) ro cano COMPRA UN PO' PIU' SOPRA DELL' ULTIMO TRADE 
         # nel segmento di tempo ( RIGA 85 nei 50 min dal SELL - "ultimo trade" )
-        # di questa altezza ( RIGA 156 adesso +0.27 prima era troppo alto +0.35 ) 
+        # di questa altezza ( RIGA 156 adesso +0.29 prima era troppo alto +0.35 ) 
         
         
         # 2) ro cano COMPRA UN PO' PIU' SOPRA anche DEL PENULTIMO TRADE .............." in sospeso ! " 
@@ -156,7 +157,7 @@ class ro_cano_che_ritorna(object):
             # COMPRA UN PO' PIU' SOPRA DELL' ULTIMO TRADE SE DEVIATION > 0.27 nei 540 secondi dall' ultimo trade ( quasi sempre IL SELL )
             # COMPRA UN PO' PIU' SOPRA anche DEL PENULTIMO TRADE SE DEVIATION > 0.27 nei 540 secondi (ci vorrebbe un altro tempo ) dal PENULTIMO TRADE ( qualche volta IL BUY)
             
-            if ((seconds_since_last_trade > 0 and seconds_since_last_trade <= min_buy_delay_in_seconds and deviation > 0.27)
+            if ((seconds_since_last_trade > 0 and seconds_since_last_trade <= min_buy_delay_in_seconds and deviation > 0.29)
                 #or (seconds_since_prev_trade > 0 and seconds_since_prev_trade <= min_prev_buy_delay_in_seconds and deviation_prev > 0.60)
                 or (seconds_since_last_trade == 0 or seconds_since_last_trade > min_buy_delay_in_seconds)):
                 
@@ -182,6 +183,7 @@ class ro_cano_che_ritorna(object):
                         and ma25_last > ma25_2_min_ago
                         and ma34_last > ma34_2_min_ago
                         and ma41_last >= ma41_2_min_ago
+                        and ma41_2_min_ago > ma41_3_min_ago
                         #and ma41_last >= ma41_18_min_ago
                         and ma48_last >= ma48_2_min_ago
                         and ma78_last >= ma78_2_min_ago
@@ -207,6 +209,7 @@ class ro_cano_che_ritorna(object):
                         and ma25_last > ma25_2_min_ago
                         and ma34_last > ma34_2_min_ago
                         and ma41_last >= ma41_2_min_ago
+                        and ma41_2_min_ago > ma41_3_min_ago
                         #and ma41_last >= ma41_18_min_ago
                         and ma48_last >= ma48_2_min_ago
                         and ma78_last >= ma78_2_min_ago
@@ -230,6 +233,7 @@ class ro_cano_che_ritorna(object):
                         and ma25_last > ma25_2_min_ago
                         and ma34_last > ma34_2_min_ago
                         and ma41_last >= ma41_2_min_ago
+                        and ma41_2_min_ago > ma41_3_min_ago
                         #and ma41_last >= ma41_18_min_ago
                         and ma48_last >= ma48_2_min_ago
                         and ma78_last >= ma78_2_min_ago
