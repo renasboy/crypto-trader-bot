@@ -46,8 +46,8 @@ class ro_cano_che_ritorna(object):
         ma11_3_min_ago = self.algo_helper.ma_minutes_ago(11, 3)
         ma16_2_min_ago = self.algo_helper.ma_minutes_ago(16, 2)
         ma16_3_min_ago = self.algo_helper.ma_minutes_ago(16, 3)
-        ma16_16_min_ago = self.algo_helper.ma_minutes_ago(16, 16)
-        ma16_19_min_ago = self.algo_helper.ma_minutes_ago(16, 19)
+        #ma16_16_min_ago = self.algo_helper.ma_minutes_ago(16, 16)
+        #ma16_19_min_ago = self.algo_helper.ma_minutes_ago(16, 19)
         ma18_2_min_ago = self.algo_helper.ma_minutes_ago(18, 2)
         ma25_2_min_ago = self.algo_helper.ma_minutes_ago(25, 2)
         ma34_2_min_ago = self.algo_helper.ma_minutes_ago(34, 2)
@@ -177,7 +177,7 @@ class ro_cano_che_ritorna(object):
                         and ma11_last > ma11_2_min_ago
                         and ma16_last > ma16_2_min_ago
                         and ma16_2_min_ago > ma16_3_min_ago
-                        and ma16_16_min_ago > ma16_19_min_ago
+                        #and ma16_16_min_ago > ma16_19_min_ago
                         and ma18_last > ma18_2_min_ago
                         and ma25_last > ma25_2_min_ago
                         and ma34_last > ma34_2_min_ago
@@ -202,7 +202,7 @@ class ro_cano_che_ritorna(object):
                         and ma11_last > ma11_2_min_ago
                         and ma16_last > ma16_2_min_ago
                         and ma16_2_min_ago > ma16_3_min_ago
-                        and ma16_16_min_ago > ma16_19_min_ago
+                        #and ma16_16_min_ago > ma16_19_min_ago
                         and ma18_last > ma18_2_min_ago
                         and ma25_last > ma25_2_min_ago
                         and ma34_last > ma34_2_min_ago
@@ -225,7 +225,7 @@ class ro_cano_che_ritorna(object):
                         and ma11_last > ma11_2_min_ago
                         and ma16_last > ma16_2_min_ago
                         and ma16_2_min_ago > ma16_3_min_ago
-                        and ma16_16_min_ago > ma16_19_min_ago
+                        #and ma16_16_min_ago > ma16_19_min_ago
                         and ma18_last > ma18_2_min_ago
                         and ma25_last > ma25_2_min_ago
                         and ma34_last > ma34_2_min_ago
@@ -289,11 +289,12 @@ class ro_cano_che_ritorna(object):
           
             if (seconds_since_last_trade > max_hold_without_force_time_in_seconds
                 and deviation < -1.20
+                and ma2_last < ma16_last
                 and ma7_last < ma7_3_min_ago
                 and ma11_last < ma11_3_min_ago
                 and ma16_last < ma16_3_min_ago
-                and ma11_last < ma16_last
-                and ma2_last < ma16_last):
+                and ma11_last < ma16_last):
+                
                 
                 action = 'sell'
                 
