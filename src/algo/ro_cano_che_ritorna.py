@@ -52,7 +52,7 @@ class ro_cano_che_ritorna(object):
         ma25_2_min_ago = self.algo_helper.ma_minutes_ago(25, 2)
         ma34_2_min_ago = self.algo_helper.ma_minutes_ago(34, 2)
         ma41_2_min_ago = self.algo_helper.ma_minutes_ago(41, 2)
-        ma41_18_min_ago = self.algo_helper.ma_minutes_ago(41, 18)
+        #ma41_18_min_ago = self.algo_helper.ma_minutes_ago(41, 18)
         ma48_2_min_ago = self.algo_helper.ma_minutes_ago(48, 2)
         ma78_2_min_ago = self.algo_helper.ma_minutes_ago(78, 2)
         ma100_2_min_ago = self.algo_helper.ma_minutes_ago(100, 2)
@@ -181,10 +181,10 @@ class ro_cano_che_ritorna(object):
                         and ma18_last > ma18_2_min_ago
                         and ma25_last > ma25_2_min_ago
                         and ma34_last > ma34_2_min_ago
-                        and ma41_last > ma41_2_min_ago
-                        and ma41_last >= ma41_18_min_ago
-                        and ma48_last > ma48_2_min_ago
-                        and ma78_last > ma78_2_min_ago
+                        and ma41_last >= ma41_2_min_ago
+                        #and ma41_last >= ma41_18_min_ago
+                        and ma48_last >= ma48_2_min_ago
+                        and ma78_last >= ma78_2_min_ago
                         and ma100_last >= ma100_2_min_ago
                         and ma15_last >= ma78_last
                         and macd < 50):
@@ -206,11 +206,11 @@ class ro_cano_che_ritorna(object):
                         and ma18_last > ma18_2_min_ago
                         and ma25_last > ma25_2_min_ago
                         and ma34_last > ma34_2_min_ago
-                        and ma41_last > ma41_2_min_ago
-                        and ma41_last >= ma41_18_min_ago
-                        and ma48_last > ma48_2_min_ago
-                        and ma78_last > ma78_2_min_ago
-                        and ma100_last > ma100_2_min_ago
+                        and ma41_last >= ma41_2_min_ago
+                        #and ma41_last >= ma41_18_min_ago
+                        and ma48_last >= ma48_2_min_ago
+                        and ma78_last >= ma78_2_min_ago
+                        and ma100_last >= ma100_2_min_ago
                         and ma15_last >= ma78_last
                         and macd < 50):
                         action = 'buy'
@@ -229,10 +229,10 @@ class ro_cano_che_ritorna(object):
                         and ma18_last > ma18_2_min_ago
                         and ma25_last > ma25_2_min_ago
                         and ma34_last > ma34_2_min_ago
-                        and ma41_last > ma41_2_min_ago
-                        and ma41_last >= ma41_18_min_ago
-                        and ma48_last > ma48_2_min_ago
-                        and ma78_last > ma78_2_min_ago
+                        and ma41_last >= ma41_2_min_ago
+                        #and ma41_last >= ma41_18_min_ago
+                        and ma48_last >= ma48_2_min_ago
+                        and ma78_last >= ma78_2_min_ago
                         and ma100_last >= ma100_2_min_ago
                         and ma15_last >= ma78_last
                         and macd < 50):
