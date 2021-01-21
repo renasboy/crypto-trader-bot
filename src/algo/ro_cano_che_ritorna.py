@@ -281,18 +281,50 @@ class ro_cano_che_ritorna(object):
 
             # VENDE CON INCROCIO ma2 - ma7 ( + DEVIATION BUY )
 
-            # VENDE sessione 1
+            # VENDE sessione 1 
             if self.session == 1:
                 if ma2_prev > ma18_prev and ma2_last < ma18_last:
                     if deviation > 0.29:
                         action = 'sell'
 
+                # da 0 a 180 min
+                # if ma2_prev > ma18_prev and ma2_last < ma18_last:( gia' abbiamo )
+                # if deviation > 0.29: ( gia' abbiamo )
+                       #action = 'sell'
+
+                
+                # da 181 a 600 min
+                # if ma2_prev > ma18_prev and ma2_last < ma18_last:( gia' abbiamo )
+                # if deviation > 0.29: ( gia' abbiamo )
+                       #action = 'sell'
+
+                
+                # da 601 a 6000 sec
+                # if ma2_prev > ma18_prev and ma2_last < ma18_last:( gia' abbiamo )
+                # if deviation > 0.29: ( gia' abbiamo )
+                       #action = 'sell'
+
+                
+                        
             # VENDE sessione 2
             elif self.session == 2:   
                 if ma2_prev > ma18_prev and ma2_last < ma18_last:
                     if deviation > 0.29:
                         action = 'sell'     
                         
+                # da 0 a 3 min
+                # if ma2_prev > ma18_prev and ma2_last < ma18_last:( gia' abbiamo )
+                # if deviation > 0.29: ( gia' abbiamo )
+                       #action = 'sell'  
+                        
+                        
+                     
+                    
+                    
+                    
+                    
+                    
+                    
             # VENDE sessione 3 in poi
             else:
                 if ma2_prev > ma18_prev and ma2_last < ma18_last:
