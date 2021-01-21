@@ -385,6 +385,7 @@ class ro_cano_che_ritorna(object):
                 
             
 
+            
                 
         self.algo_helper.log('action {}'.format(action))
 
