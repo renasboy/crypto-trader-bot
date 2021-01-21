@@ -289,14 +289,14 @@ class ro_cano_che_ritorna(object):
                         action = 'sell'
 
             if self.session == 1:
-                if seconds_since_last_trade > 181 and seconds_since_last_trade <= 600:
+                if seconds_since_last_trade > 180 and seconds_since_last_trade <= 600:
                     if ma2_prev > ma11_prev and ma2_last < ma11_last and deviation > 0.30:
                     
                         action = 'sell'        
                         
                         
             if self.session == 1:
-                if seconds_since_last_trade > 601 and seconds_since_last_trade <= 6000:
+                if seconds_since_last_trade > 600 and seconds_since_last_trade <= 6000:
                     if ma2_prev > ma15_prev and ma2_last < ma15_last and deviation > 0.40:
                     
                         action = 'sell'        
