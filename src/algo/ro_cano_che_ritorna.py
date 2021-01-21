@@ -50,7 +50,7 @@ class ro_cano_che_ritorna(object):
         #ma16_19_min_ago = self.algo_helper.ma_minutes_ago(16, 19)
         ma18_2_min_ago = self.algo_helper.ma_minutes_ago(18, 2)
         ma25_2_min_ago = self.algo_helper.ma_minutes_ago(25, 2)
-        ma34_2_min_ago = self.algo_helper.ma_minutes_ago(34, 2)
+        #ma34_2_min_ago = self.algo_helper.ma_minutes_ago(34, 2)
         #ma41_2_min_ago = self.algo_helper.ma_minutes_ago(41, 2)
         #ma41_3_min_ago = self.algo_helper.ma_minutes_ago(41, 3)
         #ma41_18_min_ago = self.algo_helper.ma_minutes_ago(41, 18)
@@ -183,7 +183,7 @@ class ro_cano_che_ritorna(object):
                         #and ma16_16_min_ago > ma16_19_min_ago
                         and ma18_last > ma18_2_min_ago
                         and ma25_last > ma25_2_min_ago
-                        and ma34_last > ma34_2_min_ago
+                        #and ma34_last > ma34_2_min_ago
                         #and ma41_last >= ma41_2_min_ago
                         #and ma41_2_min_ago > ma41_3_min_ago
                         #and ma41_last >= ma41_18_min_ago
@@ -212,7 +212,7 @@ class ro_cano_che_ritorna(object):
                         #and ma16_16_min_ago > ma16_19_min_ago
                         and ma18_last > ma18_2_min_ago
                         and ma25_last > ma25_2_min_ago
-                        and ma34_last > ma34_2_min_ago
+                        #and ma34_last > ma34_2_min_ago
                         #and ma41_last >= ma41_2_min_ago
                         #and ma41_2_min_ago > ma41_3_min_ago
                         #and ma41_last >= ma41_18_min_ago
@@ -237,7 +237,7 @@ class ro_cano_che_ritorna(object):
                         #and ma16_16_min_ago > ma16_19_min_ago
                         and ma18_last > ma18_2_min_ago
                         and ma25_last > ma25_2_min_ago
-                        and ma34_last > ma34_2_min_ago
+                        #and ma34_last > ma34_2_min_ago
                         #and ma41_last >= ma41_2_min_ago
                         #and ma41_2_min_ago > ma41_3_min_ago
                         #and ma41_last >= ma41_18_min_ago
