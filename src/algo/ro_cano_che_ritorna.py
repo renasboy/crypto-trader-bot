@@ -23,7 +23,7 @@ class ro_cano_che_ritorna(object):
         # moving average (2-3-4-5-x) 
         ma2_last, ma2_prev = self.algo_helper.ma_last_prev(2)
         ma4_last, ma4_prev = self.algo_helper.ma_last_prev(4)
-        #ma5_last, ma5_prev = self.algo_helper.ma_last_prev(5)
+        ma5_last, ma5_prev = self.algo_helper.ma_last_prev(5)
         ma7_last, ma7_prev = self.algo_helper.ma_last_prev(7)  
         ma11_last, ma11_prev = self.algo_helper.ma_last_prev(11)
         #ma13_last, ma13_prev = self.algo_helper.ma_last_prev(13)
@@ -283,10 +283,26 @@ class ro_cano_che_ritorna(object):
 
             # VENDE sessione 1 
             if self.session == 1:
-                if ma2_prev > ma18_prev and ma2_last < ma18_last:
-                    if deviation > 0.29:
+                if seconds_since_last_trade > 0 and seconds_since_last_trade <= 180:
+                if ma2_prev > ma5_prev and ma2_last < ma18_last:
+                    if deviation > 0.28:
                         action = 'sell'
 
+            if self.session == 1:
+                if seconds_since_last_trade > 181 and seconds_since_last_trade <= 600:
+                if ma2_prev > ma11_prev and ma2_last < ma11_last:
+                    if deviation > 0.30:
+                        action = 'sell'        
+                        
+                        
+            if self.session == 1:
+                if seconds_since_last_trade > 601 and seconds_since_last_trade <= 6000:
+                if ma2_prev > ma15_prev and ma2_last < ma15_last:
+                    if deviation > 0.32:
+                        action = 'sell'        
+                                  
+                        
+                        
                 # da 0 a 180 sec
                 # if ma2_prev > ma18_prev and ma2_last < ma18_last:( gia' abbiamo )
                 # if deviation > 0.29: ( gia' abbiamo )
