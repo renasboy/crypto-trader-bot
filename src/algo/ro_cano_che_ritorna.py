@@ -17,7 +17,9 @@ class ro_cano_che_ritorna(object):
         
         # macd_1_min_ago = self.algo_helper.macd_minutes_ago(1) (NON UTILIZZARLO ! e' uguale al macd !)
         macd_2_min_ago = self.algo_helper.macd_minutes_ago(2)
-      
+        macd_3_min_ago = self.algo_helper.macd_minutes_ago(3)
+    
+    
         # moving average (2-3-4-5-x) 
         ma2_last, ma2_prev = self.algo_helper.ma_last_prev(2)
         ma4_last, ma4_prev = self.algo_helper.ma_last_prev(4)
@@ -195,6 +197,7 @@ class ro_cano_che_ritorna(object):
                         #and ma100_last >= ma100_2_min_ago
                         #and ma100_last >= ma100_59_min_ago
                         #and ma15_last >= ma78_last
+                        and macd_3_min_ago < 35
                         and macd < 34):
                         
                         
@@ -226,6 +229,7 @@ class ro_cano_che_ritorna(object):
                         #and ma100_last >= ma100_2_min_ago
                         #and ma100_last >= ma100_59_min_ago
                         #and ma15_last >= ma78_last
+                        and macd_3_min_ago < 35
                         and macd < 34):
                         action = 'buy'
                   
@@ -253,6 +257,7 @@ class ro_cano_che_ritorna(object):
                         #and ma100_last >= ma100_2_min_ago
                         #and ma100_last >= ma100_59_min_ago
                         #and ma15_last >= ma78_last
+                        and macd_3_min_ago < 35
                         and macd < 34):
                         action = 'buy'
     
