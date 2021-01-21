@@ -274,19 +274,19 @@ class ro_cano_che_ritorna(object):
 
             # VENDE sessione 1
             if self.session == 1:
-                if ma2_prev > ma15_prev and ma2_last < ma15_last:
+                if ma2_prev > ma11_prev and ma2_last < ma11_last:
                     if deviation > 0.29:
                         action = 'sell'
 
             # VENDE sessione 2
             elif self.session == 2:   
-                if ma2_prev > ma15_prev and ma2_last < ma15_last:
+                if ma2_prev > ma11_prev and ma2_last < ma11_last:
                     if deviation > 0.29:
                         action = 'sell'     
                         
             # VENDE sessione 3 in poi
             else:
-                if ma2_prev > ma15_prev and ma2_last < ma15_last:
+                if ma2_prev > ma11_prev and ma2_last < ma11_last:
                     if deviation > 0.29:
                         action = 'sell'
 
