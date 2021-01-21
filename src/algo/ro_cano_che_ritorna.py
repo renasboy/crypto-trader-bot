@@ -21,43 +21,44 @@ class ro_cano_che_ritorna(object):
         # moving average (2-3-4-5-x) 
         ma2_last, ma2_prev = self.algo_helper.ma_last_prev(2)
         ma4_last, ma4_prev = self.algo_helper.ma_last_prev(4)
-        ma5_last, ma5_prev = self.algo_helper.ma_last_prev(5)
+        #ma5_last, ma5_prev = self.algo_helper.ma_last_prev(5)
         ma7_last, ma7_prev = self.algo_helper.ma_last_prev(7)  
         ma11_last, ma11_prev = self.algo_helper.ma_last_prev(11)
-        ma13_last, ma13_prev = self.algo_helper.ma_last_prev(13)
+        #ma13_last, ma13_prev = self.algo_helper.ma_last_prev(13)
         ma15_last, ma15_prev = self.algo_helper.ma_last_prev(15)
-        ma16_last, ma16_prev = self.algo_helper.ma_last_prev(16)
-        ma18_last, ma18_prev = self.algo_helper.ma_last_prev(18)
-        ma25_last, ma25_prev = self.algo_helper.ma_last_prev(25)
-        ma34_last, ma34_prev = self.algo_helper.ma_last_prev(34)
+        #ma16_last, ma16_prev = self.algo_helper.ma_last_prev(16)
+        #ma18_last, ma18_prev = self.algo_helper.ma_last_prev(18)
+        #ma25_last, ma25_prev = self.algo_helper.ma_last_prev(25)
+        #ma34_last, ma34_prev = self.algo_helper.ma_last_prev(34)
         #ma41_last, ma41_prev = self.algo_helper.ma_last_prev(41)
         #ma48_last, ma48_prev = self.algo_helper.ma_last_prev(48)
         #ma78_last, ma78_prev = self.algo_helper.ma_last_prev(78)
-        ma100_last, ma100_prev = self.algo_helper.ma_last_prev(100)
+        #ma100_last, ma100_prev = self.algo_helper.ma_last_prev(100)
         
         # moving average (2-3-4-5-7-8-20-43-100) di x minuti prima (NON METTERE MAI 1 min !)
         ma2_2_min_ago = self.algo_helper.ma_minutes_ago(2, 2) 
         ma4_2_min_ago = self.algo_helper.ma_minutes_ago(4, 2)
-        ma5_2_min_ago = self.algo_helper.ma_minutes_ago(5, 2)
-        ma5_3_min_ago = self.algo_helper.ma_minutes_ago(5, 3)
+        #ma5_2_min_ago = self.algo_helper.ma_minutes_ago(5, 2)
+        #ma5_3_min_ago = self.algo_helper.ma_minutes_ago(5, 3)
         ma7_2_min_ago = self.algo_helper.ma_minutes_ago(7, 2)
-        ma7_3_min_ago = self.algo_helper.ma_minutes_ago(7, 3)
+        #ma7_3_min_ago = self.algo_helper.ma_minutes_ago(7, 3)
         ma11_2_min_ago = self.algo_helper.ma_minutes_ago(11, 2)
         ma11_3_min_ago = self.algo_helper.ma_minutes_ago(11, 3)
-        ma16_2_min_ago = self.algo_helper.ma_minutes_ago(16, 2)
-        ma16_3_min_ago = self.algo_helper.ma_minutes_ago(16, 3)
+        ma15_2_min_ago = self.algo_helper.ma_minutes_ago(15, 2)
+        #ma16_2_min_ago = self.algo_helper.ma_minutes_ago(16, 2)
+        #ma16_3_min_ago = self.algo_helper.ma_minutes_ago(16, 3)
         #ma16_16_min_ago = self.algo_helper.ma_minutes_ago(16, 16)
         #ma16_19_min_ago = self.algo_helper.ma_minutes_ago(16, 19)
-        ma18_2_min_ago = self.algo_helper.ma_minutes_ago(18, 2)
-        ma25_2_min_ago = self.algo_helper.ma_minutes_ago(25, 2)
+        #ma18_2_min_ago = self.algo_helper.ma_minutes_ago(18, 2)
+        #ma25_2_min_ago = self.algo_helper.ma_minutes_ago(25, 2)
         #ma34_2_min_ago = self.algo_helper.ma_minutes_ago(34, 2)
         #ma41_2_min_ago = self.algo_helper.ma_minutes_ago(41, 2)
         #ma41_3_min_ago = self.algo_helper.ma_minutes_ago(41, 3)
         #ma41_18_min_ago = self.algo_helper.ma_minutes_ago(41, 18)
         #ma48_2_min_ago = self.algo_helper.ma_minutes_ago(48, 2)
         #ma78_2_min_ago = self.algo_helper.ma_minutes_ago(78, 2)
-        ma100_2_min_ago = self.algo_helper.ma_minutes_ago(100, 2)
-        ma100_59_min_ago = self.algo_helper.ma_minutes_ago(100, 59)
+        #ma100_2_min_ago = self.algo_helper.ma_minutes_ago(100, 2)
+        #ma100_59_min_ago = self.algo_helper.ma_minutes_ago(100, 59)
         
         
         # LAST TRADE
@@ -139,7 +140,7 @@ class ro_cano_che_ritorna(object):
         
         # APRE E CHIUDE GABBIA
         # SI APRE LA GABBIA SE 
-        if ma100_last > ma100_16_min_ago:  
+        if ma15_last > ma15_2_min_ago:  
             # NON TOCCARE QUESTA CONDIZIONE SERVE PER APERTURA DI GABBIA
             if not self.session or not self.open:
                self.session = 1
@@ -174,15 +175,17 @@ class ro_cano_che_ritorna(object):
                 if self.session == 1:
                     if (ma2_last > ma2_2_min_ago
                         and ma4_last > ma4_2_min_ago
-                        and ma5_last > ma5_2_min_ago
-                        and ma5_2_min_ago > ma5_3_min_ago
-                        and ma7_last > ma7_2_min_ago
+                        #and ma5_last > ma5_2_min_ago
+                        #and ma5_2_min_ago > ma5_3_min_ago
+                        #and ma7_last > ma7_2_min_ago
                         and ma11_last > ma11_2_min_ago
-                        and ma16_last > ma16_2_min_ago
-                        and ma16_2_min_ago > ma16_3_min_ago
+                        and ma11_2_min_ago > ma11_3_min_ago
+                        and ma15_last > ma15_2_min_ago
+                        #and ma16_last > ma16_2_min_ago
+                        #and ma16_2_min_ago > ma16_3_min_ago
                         #and ma16_16_min_ago > ma16_19_min_ago
-                        and ma18_last > ma18_2_min_ago
-                        and ma25_last > ma25_2_min_ago
+                        #and ma18_last > ma18_2_min_ago
+                        #and ma25_last > ma25_2_min_ago
                         #and ma34_last > ma34_2_min_ago
                         #and ma41_last >= ma41_2_min_ago
                         #and ma41_2_min_ago > ma41_3_min_ago
@@ -190,7 +193,7 @@ class ro_cano_che_ritorna(object):
                         #and ma48_last >= ma48_2_min_ago
                         #and ma78_last >= ma78_2_min_ago
                         and ma100_last >= ma100_2_min_ago
-                        and ma100_last >= ma100_59_min_ago
+                        #and ma100_last >= ma100_59_min_ago
                         #and ma15_last >= ma78_last
                         and macd < 50):
                         
@@ -203,23 +206,25 @@ class ro_cano_che_ritorna(object):
                 elif self.session == 2:
                     if (ma2_last > ma2_2_min_ago
                         and ma4_last > ma4_2_min_ago
-                        and ma5_last > ma5_2_min_ago
-                        and ma5_2_min_ago > ma5_3_min_ago
-                        and ma7_last > ma7_2_min_ago
+                        #and ma5_last > ma5_2_min_ago
+                        #and ma5_2_min_ago > ma5_3_min_ago
+                        #and ma7_last > ma7_2_min_ago
                         and ma11_last > ma11_2_min_ago
-                        and ma16_last > ma16_2_min_ago
-                        and ma16_2_min_ago > ma16_3_min_ago
+                        and ma11_2_min_ago > ma11_3_min_ago
+                        and ma15_last > ma15_2_min_ago
+                        #and ma16_last > ma16_2_min_ago
+                        #and ma16_2_min_ago > ma16_3_min_ago
                         #and ma16_16_min_ago > ma16_19_min_ago
-                        and ma18_last > ma18_2_min_ago
-                        and ma25_last > ma25_2_min_ago
+                        #and ma18_last > ma18_2_min_ago
+                        #and ma25_last > ma25_2_min_ago
                         #and ma34_last > ma34_2_min_ago
                         #and ma41_last >= ma41_2_min_ago
                         #and ma41_2_min_ago > ma41_3_min_ago
                         #and ma41_last >= ma41_18_min_ago
                         #and ma48_last >= ma48_2_min_ago
                         #and ma78_last >= ma78_2_min_ago
-                        and ma100_last >= ma100_2_min_ago
-                        and ma100_last >= ma100_59_min_ago
+                        #and ma100_last >= ma100_2_min_ago
+                        #and ma100_last >= ma100_59_min_ago
                         #and ma15_last >= ma78_last
                         and macd < 50):
                         action = 'buy'
@@ -228,23 +233,25 @@ class ro_cano_che_ritorna(object):
                 else:
                     if (ma2_last > ma2_2_min_ago
                         and ma4_last > ma4_2_min_ago
-                        and ma5_last > ma5_2_min_ago
-                        and ma5_2_min_ago > ma5_3_min_ago
-                        and ma7_last > ma7_2_min_ago
+                        #and ma5_last > ma5_2_min_ago
+                        #and ma5_2_min_ago > ma5_3_min_ago
+                        #and ma7_last > ma7_2_min_ago
                         and ma11_last > ma11_2_min_ago
-                        and ma16_last > ma16_2_min_ago
-                        and ma16_2_min_ago > ma16_3_min_ago
+                        and ma11_2_min_ago > ma11_3_min_ago
+                        and ma15_last > ma15_2_min_ago
+                        #and ma16_last > ma16_2_min_ago
+                        #and ma16_2_min_ago > ma16_3_min_ago
                         #and ma16_16_min_ago > ma16_19_min_ago
-                        and ma18_last > ma18_2_min_ago
-                        and ma25_last > ma25_2_min_ago
+                        #and ma18_last > ma18_2_min_ago
+                        #and ma25_last > ma25_2_min_ago
                         #and ma34_last > ma34_2_min_ago
                         #and ma41_last >= ma41_2_min_ago
                         #and ma41_2_min_ago > ma41_3_min_ago
                         #and ma41_last >= ma41_18_min_ago
                         #and ma48_last >= ma48_2_min_ago
                         #and ma78_last >= ma78_2_min_ago
-                        and ma100_last >= ma100_2_min_ago
-                        and ma100_last >= ma100_59_min_ago
+                        #and ma100_last >= ma100_2_min_ago
+                        #and ma100_last >= ma100_59_min_ago
                         #and ma15_last >= ma78_last
                         and macd < 50):
                         action = 'buy'
@@ -285,7 +292,7 @@ class ro_cano_che_ritorna(object):
 
             # SE LA PERDITA E' TROPPA VENDE SUBITO (SALVAGENTE) (stop loss)
             if (deviation < -1.6
-                and ma2_prev > ma16_prev and ma2_last < ma16_last):
+                and ma2_prev > ma15_prev and ma2_last < ma15_last):
                     action = 'sell'
             
             
@@ -300,11 +307,11 @@ class ro_cano_che_ritorna(object):
           
             if (seconds_since_last_trade > max_hold_without_force_time_in_seconds
                 and deviation < -1.20
-                and ma2_last < ma16_last
-                and ma7_last < ma7_3_min_ago
+                and ma2_last < ma15_last
+                #and ma7_last < ma7_3_min_ago
                 and ma11_last < ma11_3_min_ago
-                and ma16_last < ma16_3_min_ago
-                and ma11_last < ma16_last):
+                and ma11_last < ma15_last
+                and ma15_last < ma15_2_min_ago):
                 
                 
                 action = 'sell'
@@ -314,7 +321,7 @@ class ro_cano_che_ritorna(object):
             # 2) ro cano VENDE " DOPO 100 MINUTI " "max hold time" ( vende dopo 100 MINUTI "e se" ma7_last < ma7_2_min_ago "e se" ma2 < ma11 )
             
             elif (seconds_since_last_trade > max_hold_time_in_seconds
-                  and ma7_last < ma7_2_min_ago
+                  #and ma7_last < ma7_2_min_ago
                   and ma2_last < ma11_last):
                 
                 action = 'sell'
