@@ -199,7 +199,7 @@ class ro_cano_che_ritorna(object):
                         #and ma100_last >= ma100_2_min_ago
                         #and ma100_last >= ma100_59_min_ago
                         #and ma15_last >= ma78_last
-                        and macd_3_min_ago < 60
+                        and macd_3_min_ago < 39
                         and macd < 40):
                         
                         
@@ -232,7 +232,7 @@ class ro_cano_che_ritorna(object):
                         #and ma100_last >= ma100_2_min_ago
                         #and ma100_last >= ma100_59_min_ago
                         #and ma15_last >= ma78_last
-                        and macd_3_min_ago < 60
+                        and macd_3_min_ago < 39
                         and macd < 40):
                         action = 'buy'
                   
@@ -261,7 +261,7 @@ class ro_cano_che_ritorna(object):
                         #and ma100_last >= ma100_2_min_ago
                         #and ma100_last >= ma100_59_min_ago
                         #and ma15_last >= ma78_last
-                        and macd_3_min_ago < 60
+                        and macd_3_min_ago < 39
                         and macd < 40):
                         action = 'buy'
     
@@ -319,7 +319,7 @@ class ro_cano_che_ritorna(object):
                 and ma2_last < ma15_last
                 #and ma7_last < ma7_3_min_ago
                 #and ma11_last < ma11_3_min_ago
-                and ma11_last < ma15_last
+                and ma11_last < ma15_last):
                 #and ma15_last < ma15_2_min_ago):
                 
                 
