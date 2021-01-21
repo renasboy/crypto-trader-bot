@@ -30,9 +30,9 @@ class ro_cano_che_ritorna(object):
         ma18_last, ma18_prev = self.algo_helper.ma_last_prev(18)
         ma25_last, ma25_prev = self.algo_helper.ma_last_prev(25)
         ma34_last, ma34_prev = self.algo_helper.ma_last_prev(34)
-        ma41_last, ma41_prev = self.algo_helper.ma_last_prev(41)
-        ma48_last, ma48_prev = self.algo_helper.ma_last_prev(48)
-        ma78_last, ma78_prev = self.algo_helper.ma_last_prev(78)
+        #ma41_last, ma41_prev = self.algo_helper.ma_last_prev(41)
+        #ma48_last, ma48_prev = self.algo_helper.ma_last_prev(48)
+        #ma78_last, ma78_prev = self.algo_helper.ma_last_prev(78)
         ma100_last, ma100_prev = self.algo_helper.ma_last_prev(100)
         
         # moving average (2-3-4-5-7-8-20-43-100) di x minuti prima (NON METTERE MAI 1 min !)
@@ -51,11 +51,11 @@ class ro_cano_che_ritorna(object):
         ma18_2_min_ago = self.algo_helper.ma_minutes_ago(18, 2)
         ma25_2_min_ago = self.algo_helper.ma_minutes_ago(25, 2)
         ma34_2_min_ago = self.algo_helper.ma_minutes_ago(34, 2)
-        ma41_2_min_ago = self.algo_helper.ma_minutes_ago(41, 2)
-        ma41_3_min_ago = self.algo_helper.ma_minutes_ago(41, 3)
+        #ma41_2_min_ago = self.algo_helper.ma_minutes_ago(41, 2)
+        #ma41_3_min_ago = self.algo_helper.ma_minutes_ago(41, 3)
         #ma41_18_min_ago = self.algo_helper.ma_minutes_ago(41, 18)
-        ma48_2_min_ago = self.algo_helper.ma_minutes_ago(48, 2)
-        ma78_2_min_ago = self.algo_helper.ma_minutes_ago(78, 2)
+        #ma48_2_min_ago = self.algo_helper.ma_minutes_ago(48, 2)
+        #ma78_2_min_ago = self.algo_helper.ma_minutes_ago(78, 2)
         ma100_2_min_ago = self.algo_helper.ma_minutes_ago(100, 2)
         ma100_59_min_ago = self.algo_helper.ma_minutes_ago(100, 59)
         
@@ -184,11 +184,11 @@ class ro_cano_che_ritorna(object):
                         and ma18_last > ma18_2_min_ago
                         and ma25_last > ma25_2_min_ago
                         and ma34_last > ma34_2_min_ago
-                        and ma41_last >= ma41_2_min_ago
-                        and ma41_2_min_ago > ma41_3_min_ago
+                        #and ma41_last >= ma41_2_min_ago
+                        #and ma41_2_min_ago > ma41_3_min_ago
                         #and ma41_last >= ma41_18_min_ago
-                        and ma48_last >= ma48_2_min_ago
-                        and ma78_last >= ma78_2_min_ago
+                        #and ma48_last >= ma48_2_min_ago
+                        #and ma78_last >= ma78_2_min_ago
                         and ma100_last >= ma100_2_min_ago
                         and ma100_last >= ma100_59_min_ago
                         #and ma15_last >= ma78_last
@@ -213,11 +213,11 @@ class ro_cano_che_ritorna(object):
                         and ma18_last > ma18_2_min_ago
                         and ma25_last > ma25_2_min_ago
                         and ma34_last > ma34_2_min_ago
-                        and ma41_last >= ma41_2_min_ago
-                        and ma41_2_min_ago > ma41_3_min_ago
+                        #and ma41_last >= ma41_2_min_ago
+                        #and ma41_2_min_ago > ma41_3_min_ago
                         #and ma41_last >= ma41_18_min_ago
-                        and ma48_last >= ma48_2_min_ago
-                        and ma78_last >= ma78_2_min_ago
+                        #and ma48_last >= ma48_2_min_ago
+                        #and ma78_last >= ma78_2_min_ago
                         and ma100_last >= ma100_2_min_ago
                         and ma100_last >= ma100_59_min_ago
                         #and ma15_last >= ma78_last
@@ -238,11 +238,11 @@ class ro_cano_che_ritorna(object):
                         and ma18_last > ma18_2_min_ago
                         and ma25_last > ma25_2_min_ago
                         and ma34_last > ma34_2_min_ago
-                        and ma41_last >= ma41_2_min_ago
-                        and ma41_2_min_ago > ma41_3_min_ago
+                        #and ma41_last >= ma41_2_min_ago
+                        #and ma41_2_min_ago > ma41_3_min_ago
                         #and ma41_last >= ma41_18_min_ago
-                        and ma48_last >= ma48_2_min_ago
-                        and ma78_last >= ma78_2_min_ago
+                        #and ma48_last >= ma48_2_min_ago
+                        #and ma78_last >= ma78_2_min_ago
                         and ma100_last >= ma100_2_min_ago
                         and ma100_last >= ma100_59_min_ago
                         #and ma15_last >= ma78_last
