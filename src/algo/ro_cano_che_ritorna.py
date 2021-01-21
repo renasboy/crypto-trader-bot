@@ -47,6 +47,7 @@ class ro_cano_che_ritorna(object):
         ma11_2_min_ago = self.algo_helper.ma_minutes_ago(11, 2)
         ma11_3_min_ago = self.algo_helper.ma_minutes_ago(11, 3)
         ma15_2_min_ago = self.algo_helper.ma_minutes_ago(15, 2)
+        ma15_3_min_ago = self.algo_helper.ma_minutes_ago(15, 3)
         #ma16_2_min_ago = self.algo_helper.ma_minutes_ago(16, 2)
         #ma16_3_min_ago = self.algo_helper.ma_minutes_ago(16, 3)
         #ma16_16_min_ago = self.algo_helper.ma_minutes_ago(16, 16)
@@ -183,6 +184,7 @@ class ro_cano_che_ritorna(object):
                         and ma11_last > ma11_2_min_ago
                         and ma11_2_min_ago > ma11_3_min_ago
                         and ma15_last > ma15_2_min_ago
+                        and ma15_2_min_ago > ma15_3_min_ago
                         #and ma16_last > ma16_2_min_ago
                         #and ma16_2_min_ago > ma16_3_min_ago
                         #and ma16_16_min_ago > ma16_19_min_ago
@@ -215,6 +217,7 @@ class ro_cano_che_ritorna(object):
                         and ma11_last > ma11_2_min_ago
                         and ma11_2_min_ago > ma11_3_min_ago
                         and ma15_last > ma15_2_min_ago
+                        and ma15_2_min_ago > ma15_3_min_ago
                         #and ma16_last > ma16_2_min_ago
                         #and ma16_2_min_ago > ma16_3_min_ago
                         #and ma16_16_min_ago > ma16_19_min_ago
@@ -243,6 +246,7 @@ class ro_cano_che_ritorna(object):
                         and ma11_last > ma11_2_min_ago
                         and ma11_2_min_ago > ma11_3_min_ago
                         and ma15_last > ma15_2_min_ago
+                        and ma15_2_min_ago > ma15_3_min_ago
                         #and ma16_last > ma16_2_min_ago
                         #and ma16_2_min_ago > ma16_3_min_ago
                         #and ma16_16_min_ago > ma16_19_min_ago
