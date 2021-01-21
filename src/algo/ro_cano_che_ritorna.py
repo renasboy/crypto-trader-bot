@@ -195,7 +195,7 @@ class ro_cano_che_ritorna(object):
                         #and ma100_last >= ma100_2_min_ago
                         #and ma100_last >= ma100_59_min_ago
                         #and ma15_last >= ma78_last
-                        and macd < 50):
+                        and macd < 40):
                         
                         
                         action = 'buy'
@@ -226,7 +226,7 @@ class ro_cano_che_ritorna(object):
                         #and ma100_last >= ma100_2_min_ago
                         #and ma100_last >= ma100_59_min_ago
                         #and ma15_last >= ma78_last
-                        and macd < 50):
+                        and macd < 40):
                         action = 'buy'
                   
                 # COMPRA sessione 3 in poi
@@ -253,7 +253,7 @@ class ro_cano_che_ritorna(object):
                         #and ma100_last >= ma100_2_min_ago
                         #and ma100_last >= ma100_59_min_ago
                         #and ma15_last >= ma78_last
-                        and macd < 50):
+                        and macd < 40):
                         action = 'buy'
     
     
