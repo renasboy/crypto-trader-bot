@@ -185,7 +185,7 @@ class ro_cano_che_ritorna(object):
                         #and ma7_last > ma7_2_min_ago
                         and ma11_last > ma11_2_min_ago
                         and ma11_2_min_ago >= ma11_3_min_ago
-                        and ma15_last > ma15_2_min_ago
+                        and ma15_last > ma15_2_min_ago):
                         #and ma15_2_min_ago > ma15_3_min_ago):
                         #and ma16_last > ma16_2_min_ago
                         #and ma16_2_min_ago > ma16_3_min_ago
@@ -219,7 +219,7 @@ class ro_cano_che_ritorna(object):
                         #and ma7_last > ma7_2_min_ago
                         and ma11_last > ma11_2_min_ago
                         and ma11_2_min_ago >= ma11_3_min_ago
-                        and ma15_last > ma15_2_min_ago
+                        and ma15_last > ma15_2_min_ago):
                         #and ma15_2_min_ago > ma15_3_min_ago):
                         #and ma16_last > ma16_2_min_ago
                         #and ma16_2_min_ago > ma16_3_min_ago
@@ -249,7 +249,7 @@ class ro_cano_che_ritorna(object):
                         #and ma7_last > ma7_2_min_ago
                         and ma11_last > ma11_2_min_ago
                         and ma11_2_min_ago >= ma11_3_min_ago
-                        and ma15_last > ma15_2_min_ago
+                        and ma15_last > ma15_2_min_ago):
                         #and ma15_2_min_ago > ma15_3_min_ago):
                         #and ma16_last > ma16_2_min_ago
                         #and ma16_2_min_ago > ma16_3_min_ago
