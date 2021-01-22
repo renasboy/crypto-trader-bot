@@ -159,8 +159,8 @@ class ro_cano_che_ritorna(object):
                         #and ma5_2_min_ago > ma5_3_min_ago
                         #and ma7_last > ma7_2_min_ago
                         and ma11_last > ma11_2_min_ago
-                        and ma11_2_min_ago >= ma11_3_min_ago
-                        and ma15_last > ma15_2_min_ago):
+                        and ma11_2_min_ago >= ma11_3_min_ago):
+                        #and ma15_last > ma15_2_min_ago
                     
                         
                         action = 'buy'
