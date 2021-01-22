@@ -221,14 +221,14 @@ class ro_cano_che_ritorna(object):
 
            
                 elif (seconds_since_last_trade > 240 and seconds_since_last_trade <= 900
-                    and ma2_prev > ma7_prev and ma2_last < ma7_last and deviation > 0.2):
+                    and ma2_prev > ma7_prev and ma2_last < ma7_last and deviation > 0.1):
                     
                         action = 'sell'        
                         
                         
             
                 elif (seconds_since_last_trade > 900 and seconds_since_last_trade <= 6000
-                    and ma2_prev > ma15_prev and ma2_last < ma15_last and deviation > 0.40):
+                    and ma2_prev > ma11_prev and ma2_last < ma11_last and deviation > 0.20):
                     
                         action = 'sell'        
                                   
@@ -237,8 +237,8 @@ class ro_cano_che_ritorna(object):
                         
             # VENDE sessione 2
             elif self.session == 2:   
-                if ma2_prev > ma15_prev and ma2_last < ma15_last:
-                    if deviation > 0.29:
+                if ma2_prev > ma11_prev and ma2_last < ma11_last:
+                    if deviation > 0.10:
                         
                         action = 'sell'     
                 
@@ -248,8 +248,8 @@ class ro_cano_che_ritorna(object):
                     
             # VENDE sessione 3 in poi
             else:
-                if ma2_prev > ma15_prev and ma2_last < ma15_last:
-                    if deviation > 0.29:
+                if ma2_prev > ma11_prev and ma2_last < ma11_last:
+                    if deviation > 0.20:
                         
                         action = 'sell'
 
