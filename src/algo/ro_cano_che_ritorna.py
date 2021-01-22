@@ -154,7 +154,7 @@ class ro_cano_che_ritorna(object):
                 if self.session == 1:
                     if (ma2_last > ma2_2_min_ago
                         and ma4_last > ma4_2_min_ago
-                        and ma4_2_min_ago > ma4_3_min_ago
+                        #and ma4_2_min_ago > ma4_3_min_ago
                         #and ma5_last > ma5_2_min_ago
                         #and ma5_2_min_ago > ma5_3_min_ago
                         #and ma7_last > ma7_2_min_ago
@@ -171,7 +171,7 @@ class ro_cano_che_ritorna(object):
                 elif self.session == 2:
                     if (ma2_last > ma2_2_min_ago
                         and ma4_last > ma4_2_min_ago
-                        and ma4_2_min_ago > ma4_3_min_ago
+                        #and ma4_2_min_ago > ma4_3_min_ago
                         #and ma5_last > ma5_2_min_ago
                         #and ma5_2_min_ago > ma5_3_min_ago
                         #and ma7_last > ma7_2_min_ago
@@ -186,7 +186,7 @@ class ro_cano_che_ritorna(object):
                 else:
                     if (ma2_last > ma2_2_min_ago
                         and ma4_last > ma4_2_min_ago
-                        and ma4_2_min_ago > ma4_3_min_ago
+                        #and ma4_2_min_ago > ma4_3_min_ago
                         #and ma5_last > ma5_2_min_ago
                         #and ma5_2_min_ago > ma5_3_min_ago
                         #and ma7_last > ma7_2_min_ago
