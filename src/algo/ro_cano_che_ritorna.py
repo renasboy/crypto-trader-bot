@@ -293,15 +293,15 @@ class ro_cano_che_ritorna(object):
                         action = 'sell'
 
            
-                elif seconds_since_last_trade > 240 and seconds_since_last_trade <= 900:
-                    if ma2_prev > ma7_prev and ma2_last < ma7_last and deviation > 0.2:
+                elif (seconds_since_last_trade > 240 and seconds_since_last_trade <= 900
+                    if ma2_prev > ma7_prev and ma2_last < ma7_last and deviation > 0.2):
                     
                         action = 'sell'        
                         
                         
             
-                elif seconds_since_last_trade > 900 and seconds_since_last_trade <= 6000:
-                    if ma2_prev > ma15_prev and ma2_last < ma15_last and deviation > 0.40:
+                elif (seconds_since_last_trade > 900 and seconds_since_last_trade <= 6000
+                    if ma2_prev > ma15_prev and ma2_last < ma15_last and deviation > 0.40):
                     
                         action = 'sell'        
                                   
@@ -330,6 +330,7 @@ class ro_cano_che_ritorna(object):
             elif self.session == 2:   
                 if ma2_prev > ma18_prev and ma2_last < ma18_last:
                     if deviation > 0.29:
+                        
                         action = 'sell'     
                         
                 # da 0 a 3 min
@@ -349,11 +350,13 @@ class ro_cano_che_ritorna(object):
             else:
                 if ma2_prev > ma18_prev and ma2_last < ma18_last:
                     if deviation > 0.29:
+                        
                         action = 'sell'
 
             # SE LA PERDITA E' TROPPA VENDE SUBITO (SALVAGENTE) (stop loss)
             if (deviation < -1.6
                 and ma2_prev > ma15_prev and ma2_last < ma15_last):
+                
                     action = 'sell'
             
             
