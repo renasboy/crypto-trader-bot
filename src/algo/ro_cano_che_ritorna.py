@@ -293,15 +293,15 @@ class ro_cano_che_ritorna(object):
                         action = 'sell'
 
            
-                elif seconds_since_last_trade > 240 and seconds_since_last_trade <= 900
-                    if ma2_prev > ma7_prev and ma2_last < ma7_last and deviation > 0.2:
+                elif (seconds_since_last_trade > 240 and seconds_since_last_trade <= 900
+                    and ma2_prev > ma7_prev and ma2_last < ma7_last and deviation > 0.2):
                     
                         action = 'sell'        
                         
                         
             
-                elif seconds_since_last_trade > 900 and seconds_since_last_trade <= 6000
-                    if ma2_prev > ma15_prev and ma2_last < ma15_last and deviation > 0.40:
+                elif (seconds_since_last_trade > 900 and seconds_since_last_trade <= 6000
+                    and ma2_prev > ma15_prev and ma2_last < ma15_last and deviation > 0.40):
                     
                         action = 'sell'        
                                   
