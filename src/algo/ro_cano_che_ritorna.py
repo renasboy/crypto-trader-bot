@@ -40,6 +40,7 @@ class ro_cano_che_ritorna(object):
         # moving average (2-3-4-5-7-8-20-43-100) di x minuti prima (NON METTERE MAI 1 min !)
         ma2_2_min_ago = self.algo_helper.ma_minutes_ago(2, 2) 
         ma4_2_min_ago = self.algo_helper.ma_minutes_ago(4, 2)
+        ma4_3_min_ago = self.algo_helper.ma_minutes_ago(4, 3)
         #ma5_2_min_ago = self.algo_helper.ma_minutes_ago(5, 2)
         #ma5_3_min_ago = self.algo_helper.ma_minutes_ago(5, 3)
         ma7_2_min_ago = self.algo_helper.ma_minutes_ago(7, 2)
@@ -47,7 +48,7 @@ class ro_cano_che_ritorna(object):
         ma11_2_min_ago = self.algo_helper.ma_minutes_ago(11, 2)
         ma11_3_min_ago = self.algo_helper.ma_minutes_ago(11, 3)
         ma15_2_min_ago = self.algo_helper.ma_minutes_ago(15, 2)
-        ma15_3_min_ago = self.algo_helper.ma_minutes_ago(15, 3)
+        #ma15_3_min_ago = self.algo_helper.ma_minutes_ago(15, 3)
         #ma16_2_min_ago = self.algo_helper.ma_minutes_ago(16, 2)
         #ma16_3_min_ago = self.algo_helper.ma_minutes_ago(16, 3)
         #ma16_16_min_ago = self.algo_helper.ma_minutes_ago(16, 16)
@@ -91,9 +92,9 @@ class ro_cano_che_ritorna(object):
         
         
         # TEMPO in cui SI AGGIUNGE LA DEVIATION !  (a tutte le altre condizioni gia' stabilite per comprare)  
-        # per ULTIMO trade ( 50 minuti = 50 * 60 = 3000 secondi )
+        # per ULTIMO trade ( 30 minuti = 30 * 60 = 1800 secondi )
         # per PENULTIMO trade ( 40 minuti = 40 * 60 = 2400 secondi )
-        min_buy_delay_in_seconds = 3000
+        min_buy_delay_in_seconds = 1800
         #min_prev_buy_delay_in_seconds = 2400
       
         
@@ -178,13 +179,14 @@ class ro_cano_che_ritorna(object):
                 if self.session == 1:
                     if (ma2_last > ma2_2_min_ago
                         and ma4_last > ma4_2_min_ago
+                        and ma4_2_min_ago > ma4_3_min_ago
                         #and ma5_last > ma5_2_min_ago
                         #and ma5_2_min_ago > ma5_3_min_ago
                         #and ma7_last > ma7_2_min_ago
                         and ma11_last > ma11_2_min_ago
                         and ma11_2_min_ago >= ma11_3_min_ago
                         and ma15_last > ma15_2_min_ago
-                        and ma15_2_min_ago > ma15_3_min_ago):
+                        #and ma15_2_min_ago > ma15_3_min_ago):
                         #and ma16_last > ma16_2_min_ago
                         #and ma16_2_min_ago > ma16_3_min_ago
                         #and ma16_16_min_ago > ma16_19_min_ago
@@ -211,13 +213,14 @@ class ro_cano_che_ritorna(object):
                 elif self.session == 2:
                     if (ma2_last > ma2_2_min_ago
                         and ma4_last > ma4_2_min_ago
+                        and ma4_2_min_ago > ma4_3_min_ago
                         #and ma5_last > ma5_2_min_ago
                         #and ma5_2_min_ago > ma5_3_min_ago
                         #and ma7_last > ma7_2_min_ago
                         and ma11_last > ma11_2_min_ago
                         and ma11_2_min_ago >= ma11_3_min_ago
                         and ma15_last > ma15_2_min_ago
-                        and ma15_2_min_ago > ma15_3_min_ago):
+                        #and ma15_2_min_ago > ma15_3_min_ago):
                         #and ma16_last > ma16_2_min_ago
                         #and ma16_2_min_ago > ma16_3_min_ago
                         #and ma16_16_min_ago > ma16_19_min_ago
@@ -240,13 +243,14 @@ class ro_cano_che_ritorna(object):
                 else:
                     if (ma2_last > ma2_2_min_ago
                         and ma4_last > ma4_2_min_ago
+                        and ma4_2_min_ago > ma4_3_min_ago
                         #and ma5_last > ma5_2_min_ago
                         #and ma5_2_min_ago > ma5_3_min_ago
                         #and ma7_last > ma7_2_min_ago
                         and ma11_last > ma11_2_min_ago
                         and ma11_2_min_ago >= ma11_3_min_ago
                         and ma15_last > ma15_2_min_ago
-                        and ma15_2_min_ago > ma15_3_min_ago):
+                        #and ma15_2_min_ago > ma15_3_min_ago):
                         #and ma16_last > ma16_2_min_ago
                         #and ma16_2_min_ago > ma16_3_min_ago
                         #and ma16_16_min_ago > ma16_19_min_ago
@@ -283,20 +287,20 @@ class ro_cano_che_ritorna(object):
 
             # VENDE sessione 1 
             if self.session == 1:
-                if (seconds_since_last_trade > 0 and seconds_since_last_trade <= 180
-                    and ma2_prev > ma5_prev and ma2_last < ma5_last and deviation > 0.28):
+                if (seconds_since_last_trade > 0 and seconds_since_last_trade <= 240
+                    and ma2_prev > ma5_prev and ma2_last < ma5_last and deviation > 0.01):
                     
                         action = 'sell'
 
            
-                elif seconds_since_last_trade > 180 and seconds_since_last_trade <= 600:
-                    if ma2_prev > ma11_prev and ma2_last < ma11_last and deviation > 0.30:
+                elif seconds_since_last_trade > 240 and seconds_since_last_trade <= 900:
+                    if ma2_prev > ma7_prev and ma2_last < ma7_last and deviation > 0.2:
                     
                         action = 'sell'        
                         
                         
             
-                elif seconds_since_last_trade > 600 and seconds_since_last_trade <= 6000:
+                elif seconds_since_last_trade > 900 and seconds_since_last_trade <= 6000:
                     if ma2_prev > ma15_prev and ma2_last < ma15_last and deviation > 0.40:
                     
                         action = 'sell'        
@@ -363,7 +367,7 @@ class ro_cano_che_ritorna(object):
             # 1) ro cano VENDE SE DIMINUISCE LA FORZA ! ( vende se perdita  < -1.0 e se etc.)
           
             if (seconds_since_last_trade > max_hold_without_force_time_in_seconds
-                and deviation < -1.00
+                and deviation < -0.75
                 and ma2_last < ma15_last
                 #and ma7_last < ma7_3_min_ago
                 #and ma11_last < ma11_3_min_ago
