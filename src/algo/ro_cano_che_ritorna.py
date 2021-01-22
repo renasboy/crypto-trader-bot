@@ -151,7 +151,7 @@ class ro_cano_che_ritorna(object):
                self.open = True
                self.algo_helper.log('session {}: open segment'.format(self.session))
         # SI CHIUDE LA GABBIA SE
-        else:
+        elif self.open:
            self.open = False
            self.algo_helper.log('session {}: closed segment'.format(self.session))
         
