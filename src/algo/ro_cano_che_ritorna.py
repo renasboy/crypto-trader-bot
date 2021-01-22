@@ -397,3 +397,5 @@ class ro_cano_che_ritorna(object):
             self.session += 1
 
         return action
+
+                        
