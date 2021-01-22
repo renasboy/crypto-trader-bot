@@ -124,7 +124,7 @@ class ro_cano_che_ritorna(object):
         
         # APRE E CHIUDE GABBIA
         # SI APRE LA GABBIA SE 
-        if ma11_last > ma11_2_min_ago:  
+        if ma15_last > ma15_2_min_ago:  
             # NON TOCCARE QUESTA CONDIZIONE SERVE PER APERTURA DI GABBIA
             if not self.session or not self.open:
                self.session = 1
@@ -237,7 +237,7 @@ class ro_cano_che_ritorna(object):
                         
             # VENDE sessione 2
             elif self.session == 2:   
-                if ma2_prev > ma18_prev and ma2_last < ma18_last:
+                if ma2_prev > ma15_prev and ma2_last < ma15_last:
                     if deviation > 0.29:
                         
                         action = 'sell'     
@@ -248,7 +248,7 @@ class ro_cano_che_ritorna(object):
                     
             # VENDE sessione 3 in poi
             else:
-                if ma2_prev > ma18_prev and ma2_last < ma18_last:
+                if ma2_prev > ma15_prev and ma2_last < ma15_last:
                     if deviation > 0.29:
                         
                         action = 'sell'
