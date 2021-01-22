@@ -215,7 +215,7 @@ class ro_cano_che_ritorna(object):
             # VENDE sessione 1 
             if self.session == 1:
                 if (seconds_since_last_trade > 0 and seconds_since_last_trade <= 240
-                    or ma2_prev > ma5_prev and ma2_last < ma5_last or deviation < -0.51):
+                    or ma2_last < ma5_last or deviation < -0.51):
                     
                         action = 'sell'
 
