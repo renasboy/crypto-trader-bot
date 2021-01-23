@@ -61,9 +61,9 @@ class ro_cano_che_ritorna(object):
         max_hold_without_force_time_in_seconds = 1200
         
         # TEMPO in cui SI AGGIUNGE LA DEVIATION !  (a tutte le altre condizioni gia' stabilite per comprare)  
-        # per ULTIMO trade ( 15 minuti = 15 * 60 = 900 secondi )
+        # per ULTIMO trade ( 10 minuti = 10 * 60 = 600 secondi )
         # per PENULTIMO trade ( 10 minuti = 10 * 60 = 600 secondi )
-        min_buy_delay_in_seconds = 900
+        min_buy_delay_in_seconds = 600
         #min_prev_buy_delay_in_seconds = 600
         
         # formula DEVIATION last_trade (di solito il SELL) per comprare UN PO' PIU' SOPRA DEL LAST TRADE (di solito ultimo sell)
