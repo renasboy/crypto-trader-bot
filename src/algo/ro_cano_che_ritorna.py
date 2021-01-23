@@ -145,7 +145,7 @@ class ro_cano_che_ritorna(object):
                         action = 'buy'
     
     
-        ######################################################################
+        #####################################################################
         # VENDA
         # NON TOCCARE QUESTA CONDIZIONE (QUESTA DICE CHE STA IN MODO SELL, DEVO VENDERE)
         elif last_trade_action == 'buy':
