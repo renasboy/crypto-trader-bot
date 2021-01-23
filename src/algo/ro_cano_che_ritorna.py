@@ -25,6 +25,8 @@ class ro_cano_che_ritorna(object):
         ma11_last, ma11_prev = self.algo_helper.ma_last_prev(11)
         ma14_last, ma11_prev = self.algo_helper.ma_last_prev(14)
         ma15_last, ma15_prev = self.algo_helper.ma_last_prev(15)
+        ma18_last, ma18_prev = self.algo_helper.ma_last_prev(18)
+        
         
         # moving average (2-3-4-5-7-8-20-43-100) di x minuti prima (NON METTERE MAI 1 min !)
         ma2_2_min_ago = self.algo_helper.ma_minutes_ago(2, 2) 
@@ -34,7 +36,9 @@ class ro_cano_che_ritorna(object):
         ma11_3_min_ago = self.algo_helper.ma_minutes_ago(11, 3)
         ma14_2_min_ago = self.algo_helper.ma_minutes_ago(14, 2)
         ma15_2_min_ago = self.algo_helper.ma_minutes_ago(15, 2)
-     
+        
+        
+        
         # LAST TRADE
         last_trade_action = self.algo_helper.last_trade_action
         last_trade_time = self.algo_helper.last_trade_time
@@ -60,7 +64,7 @@ class ro_cano_che_ritorna(object):
         # per ULTIMO trade ( 15 minuti = 15 * 60 = 900 secondi )
         # per PENULTIMO trade ( 10 minuti = 10 * 60 = 600 secondi )
         min_buy_delay_in_seconds = 900
-        #min_prev_buy_delay_in_seconds = 2400
+        #min_prev_buy_delay_in_seconds = 600
         
         # formula DEVIATION last_trade (di solito il SELL) per comprare UN PO' PIU' SOPRA DEL LAST TRADE (di solito ultimo sell)
         deviation = (ma2_last / last_trade_price - 1) * 100 if last_trade_price else 0
@@ -170,12 +174,17 @@ class ro_cano_che_ritorna(object):
                     and ma2_last < ma7_last):
                     action = 'sell'        
             
-                elif (seconds_since_last_trade > 600 and seconds_since_last_trade <= 1800
+                elif (seconds_since_last_trade > 600 and seconds_since_last_trade <= 900
                     and ma2_last < ma11_last):
-                    action = 'sell'        
+                    action = 'sell'     
+                
+                elif (seconds_since_last_trade > 900 and seconds_since_last_trade <= 1800
+                    and ma2_last < ma15_last):
+                    action = 'sell'   
+                 
                         
                 elif (seconds_since_last_trade > 1800 and seconds_since_last_trade <= 6000
-                    and ma2_last < ma15_last):
+                    and ma2_last < ma18_last):
                     
                     action = 'sell'            
                         
@@ -196,13 +205,17 @@ class ro_cano_che_ritorna(object):
                 elif (seconds_since_last_trade > 300 and seconds_since_last_trade <= 600
                     and ma2_last < ma7_last):
                     action = 'sell'        
-            
-                elif (seconds_since_last_trade > 600 and seconds_since_last_trade <= 1200
+                
+                elif (seconds_since_last_trade > 600 and seconds_since_last_trade <= 900
                     and ma2_last < ma11_last):
+                    action = 'sell'  
+                
+                elif (seconds_since_last_trade > 900 and seconds_since_last_trade <= 1800
+                    and ma2_last < ma15_last):
                     action = 'sell'        
                         
-                elif (seconds_since_last_trade > 1200 and seconds_since_last_trade <= 6000
-                    and ma2_last < ma15_last):
+                elif (seconds_since_last_trade > 1800 and seconds_since_last_trade <= 6000
+                    and ma2_last < ma18_last):
                     
                     
                     action = 'sell'     
@@ -223,14 +236,17 @@ class ro_cano_che_ritorna(object):
                 elif (seconds_since_last_trade > 300 and seconds_since_last_trade <= 600
                     and ma2_last < ma7_last):
                     action = 'sell'
-            
-            
-                elif (seconds_since_last_trade > 600 and seconds_since_last_trade <= 1200
+           
+                elif (seconds_since_last_trade > 600 and seconds_since_last_trade <= 900
                     and ma2_last < ma11_last):
+                    action = 'sell' 
+                
+                elif (seconds_since_last_trade > 900 and seconds_since_last_trade <= 1800
+                    and ma2_last < ma15_last):
                     action = 'sell'        
                         
-                elif (seconds_since_last_trade > 1200 and seconds_since_last_trade <= 6000
-                    and ma2_last < ma15_last):
+                elif (seconds_since_last_trade > 1800 and seconds_since_last_trade <= 6000
+                    and ma2_last < ma18_last):
                     
                     
                     action = 'sell'
