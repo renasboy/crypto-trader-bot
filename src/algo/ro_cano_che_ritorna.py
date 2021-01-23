@@ -182,7 +182,7 @@ class ro_cano_che_ritorna(object):
                 
                 
                 if (seconds_since_last_trade > 0 and seconds_since_last_trade <= 180
-                    and ma2_last < ma5_last):
+                    and ma2_last < ma7_last):
                     action = 'sell'
            
                 elif (seconds_since_last_trade > 180 and seconds_since_last_trade <= 480
@@ -205,7 +205,7 @@ class ro_cano_che_ritorna(object):
             # VENDE SESSIONE 3 IN POI
             else:
                 if (seconds_since_last_trade > 0 and seconds_since_last_trade <= 180
-                    and ma2_last < ma5_last):
+                    and ma2_last < ma7_last):
                     action = 'sell'
            
                 elif (seconds_since_last_trade > 180 and seconds_since_last_trade <= 480
