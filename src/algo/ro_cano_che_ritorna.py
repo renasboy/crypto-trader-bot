@@ -189,6 +189,7 @@ class ro_cano_che_ritorna(object):
             if (seconds_since_last_trade > max_hold_without_force_time_in_seconds
                 and deviation < -0.75
                 and ma2_last < ma15_last
+                and ma7_last < ma11_last
                 and ma11_last < ma15_last):
                 action = 'sell'
                 
