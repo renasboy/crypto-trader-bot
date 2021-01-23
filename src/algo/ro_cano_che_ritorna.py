@@ -172,21 +172,62 @@ class ro_cano_che_ritorna(object):
                         
                 elif (seconds_since_last_trade > 1800 and seconds_since_last_trade <= 6000
                     and ma2_prev > ma15_prev and ma2_last < ma15_last and deviation > 0.20):
+                    
                     action = 'sell'            
                         
                         
                         
             # VENDE SESSIONE 2
-            elif self.session == 2:   
-                if ma2_prev > ma11_prev and ma2_last < ma11_last and deviation > 0.10:
+            elif self.session == 2: 
+                
+                
+                if (seconds_since_last_trade > 0 and seconds_since_last_trade <= 180
+                    and ma2_last < ma5_last and deviation < -0.51):
+                    action = 'sell'
+           
+                elif (seconds_since_last_trade > 180 and seconds_since_last_trade <= 480
+                    and ma2_prev > ma7_prev and ma2_last < ma7_last and deviation > 0.1):
+                    action = 'sell'        
+            
+                elif (seconds_since_last_trade > 480 and seconds_since_last_trade <= 1200
+                    and ma2_prev > ma11_prev and ma2_last < ma11_last and deviation > 0.20):
+                    action = 'sell'        
+                        
+                elif (seconds_since_last_trade > 1200 and seconds_since_last_trade <= 6000
+                    and ma2_prev > ma15_prev and ma2_last < ma15_last and deviation > 0.20):
+                    
+                    
                     action = 'sell'     
+                    
+                    
                     
                     
             # VENDE SESSIONE 3 IN POI
             else:
-                if ma2_prev > ma11_prev and ma2_last < ma11_last and deviation > 0.20:
+                if (seconds_since_last_trade > 0 and seconds_since_last_trade <= 180
+                    and ma2_last < ma5_last and deviation < -0.51):
+                    action = 'sell'
+           
+                elif (seconds_since_last_trade > 180 and seconds_since_last_trade <= 480
+                    and ma2_prev > ma7_prev and ma2_last < ma7_last and deviation > 0.1):
+                    action = 'sell'        
+            
+                elif (seconds_since_last_trade > 480 and seconds_since_last_trade <= 1200
+                    and ma2_prev > ma11_prev and ma2_last < ma11_last and deviation > 0.20):
+                    action = 'sell'        
+                        
+                elif (seconds_since_last_trade > 1200 and seconds_since_last_trade <= 6000
+                    and ma2_prev > ma15_prev and ma2_last < ma15_last and deviation > 0.20):
+                    
+                    
                     action = 'sell'
 
+                    
+                    
+                    
+                    
+                    
+                    
             # SE LA PERDITA E' TROPPA VENDE SUBITO (SALVAGENTE) (stop loss)
             if deviation < -1.6 and ma2_prev > ma15_prev and ma2_last < ma15_last:
                 action = 'sell'
