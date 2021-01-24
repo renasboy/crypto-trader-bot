@@ -6,10 +6,6 @@ from influx_algo_helper import influx_algo_helper
 def cur_date_time():
     return datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%dT%H:%M:%S.%fZ')
 
-def log(message):
-    string_date = cur_date_time()
-    print('{} {}-{}-{}-{}: {}'.format(string_date, ALGO, EXCHANGE, SYMBOL_1, SYMBOL_2, message))
-
 def run():
     global algo_helper
     global algo
@@ -32,10 +28,10 @@ def run():
                 price = exchange.highest_bid()
                 volume = exchange.balance(SYMBOL_1) * (float(MAX_SYMBOL_1_PERCENTAGE) / 100.0)
 
-            log('order action {} price {} volume {} session {}'.format(action, price, volume, algo_helper.last_trade_session))
+            algo_helper.log('order action {} price {} volume {} session {}'.format(action, price, volume, algo_helper.last_trade_session))
             if not DRY_RUN:
                 active_order_id = exchange.add_order(action, volume, price)
-                log('order id {} '.format(active_order_id))
+                algo_helper.log('order id {} '.format(active_order_id))
             else:
                 active_order_id = 1
 
@@ -103,7 +99,7 @@ if __name__ == '__main__':
         exchange = getattr(module, EXCHANGE)(SYMBOL_1, SYMBOL_2, PUBLIC_KEY, PRIVATE_KEY, PASSPHRASE)
 
     active_order_id = exchange.active_order_id()
-    log('started order id {} '.format(active_order_id))
+    algo_helper.log('started order id {} '.format(active_order_id))
     while True:
         run()
         time.sleep(PING_INTERVAL)

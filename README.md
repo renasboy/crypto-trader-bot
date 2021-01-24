@@ -69,6 +69,7 @@ cp conf/bl3p_example_conf conf/bl3p_eur_btc.conf
 vim conf/bl3p_eur_btc.conf
 
 # set the EXCHANGE to the desired exchange (bl3p, binance or cobinhood)
+# set the DATA_RETRIEVAL to the desired mode (ticker, websocket)
 # set the PUBLIC and PRIVATE keys when available
 # set SYMBOL_X to available symbols in the exchange
 # set MAX_SYMBOL_X_PERCENTAGE to percentage amount from available to use
