@@ -6,9 +6,17 @@ cp templates/docker-compose.yml .
 echo checking for arm arch
 test -n "`uname -m | fgrep arm`" && sed -i 's@grafana/grafana:latest@fg2it/grafana-armhf:v5.0.3@g' docker-compose.yml
 
+echo add crypto-trader-bot-listener containers
+for conf_file in conf/*.conf; do
+    conf_file_name=$(basename $conf_file .conf)
+    container_name=$(awk -F '=' '/EXCHANGE=/{print $2}' $conf_file | sed -e 's/"//g' -e "s/'//g")_listener
+    test -z "`fgrep $container_name docker-compose.yml`" && sed templates/crypto-trader-bot-listener.yml -e "s/CONTAINER_NAME/$container_name/g" -e "s/CONF_FILE_NAME/$conf_file_name/g" >> docker-compose.yml
+done
+
 echo add crypto-trader-bot containers
 for conf_file in conf/*.conf; do
     container_name=$(basename $conf_file .conf)
-    sed templates/crypto-trader-bot.yml -e "s/CONTAINER_NAME/$container_name/g" >> docker-compose.yml
+    conf_file_name=$(basename $conf_file .conf)
+    sed templates/crypto-trader-bot.yml -e "s/CONTAINER_NAME/$container_name/g" -e "s/CONF_FILE_NAME/$conf_file_name/g" >> docker-compose.yml
 done
 

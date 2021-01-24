@@ -21,23 +21,6 @@ def run():
     algo_helper.set_fee(fee)
     algo_helper.set_price(price)
 
-    trend_up = algo_helper.rsi_trend_up
-    trend_down = algo_helper.rsi_trend_down 
-
-    algo_helper.write([dict(
-        measurement='price_volume',
-        tags=dict(
-            exchange=EXCHANGE,
-            symbol_1=SYMBOL_1,
-            symbol_2=SYMBOL_2
-        ),
-        fields=dict(
-            price=float(price),
-            trend_up=float(trend_up),
-            trend_down=float(trend_down)
-        )
-    )])
-
     # ALGO TAKE ACTION
     action = algo.action
 
