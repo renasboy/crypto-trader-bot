@@ -23,6 +23,7 @@ class ro_cano_che_ritorna(object):
         ma7_last, ma7_prev = self.algo_helper.ma_last_prev(7)  
         ma10_last, ma10_prev = self.algo_helper.ma_last_prev(10)
         ma11_last, ma11_prev = self.algo_helper.ma_last_prev(11)
+        ma12_last, ma12_prev = self.algo_helper.ma_last_prev(12)
         ma14_last, ma11_prev = self.algo_helper.ma_last_prev(14)
         ma15_last, ma15_prev = self.algo_helper.ma_last_prev(15)
         ma18_last, ma18_prev = self.algo_helper.ma_last_prev(18)
@@ -98,7 +99,7 @@ class ro_cano_che_ritorna(object):
         
         # APRE E CHIUDE GABBIA
         # SI APRE LA GABBIA SE 
-        if ma11_last > ma15_last:  
+        if ma12_last > ma15_last:  
             # NON TOCCARE QUESTA CONDIZIONE SERVE PER APERTURA DI GABBIA
             if not self.session or not self.open:
                self.session = 1
@@ -127,7 +128,7 @@ class ro_cano_che_ritorna(object):
                     if (ma2_last > ma2_2_min_ago
                         and ma4_last > ma4_2_min_ago
                         and ma10_last > ma10_2_min_ago
-                        and ma11_last > ma15_last
+                        and ma12_last > ma15_last
                         and price > prev_price_2_min_ago):
                         action = 'buy'
                     
@@ -137,7 +138,7 @@ class ro_cano_che_ritorna(object):
                         and ma4_last > ma4_2_min_ago
                         and ma10_last > ma10_2_min_ago
                         and ma11_2_min_ago >= ma11_3_min_ago
-                        and ma11_last > ma15_last):
+                        and ma12_last > ma15_last):
                         action = 'buy'
                         
                   
@@ -147,7 +148,7 @@ class ro_cano_che_ritorna(object):
                         and ma4_last > ma4_2_min_ago
                         and ma10_last > ma10_2_min_ago
                         and ma11_2_min_ago >= ma11_3_min_ago
-                        and ma11_last > ma15_last):
+                        and ma12_last > ma15_last):
                         action = 'buy'
     
                         
