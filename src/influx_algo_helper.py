@@ -6,16 +6,16 @@ from influxdb import InfluxDBClient
 
 class influx_algo_helper(object):
 
-    def __init__(self, exchange, symbol_1, symbol_2):
+    def __init__(self, algo, exchange, symbol_1, symbol_2):
+        self.algo = algo
         self.exchange = exchange
         self.symbol_1 = symbol_1
         self.symbol_2 = symbol_2
-        self.label = '{}-{}-{}'.format(exchange, symbol_1, symbol_2)
+        self.label = '{}-{}-{}-{}'.format(algo, exchange, symbol_1, symbol_2)
 
         self.influx = InfluxDBClient('influxdb', 8086, 'root', 'root', 'crypto_trader_bot')
         self.fee = None
         self.price = None
-        self.prev_price = None
         self.prev_macd = self.macd
         self.last_trade_time = None
         self.last_trade_session = None
@@ -37,7 +37,7 @@ class influx_algo_helper(object):
         results = list(result.get_points())
         ma_last = results[0]['ma'] if results and len(results) == 2 and results[0]['ma'] is not None else 0
         ma_prev = results[1]['ma'] if results and len(results) == 2 and results[1]['ma'] is not None else 0
-        self.log('ma{} last {} ma{} prev {}'.format(period, ma_last, period, ma_prev))
+        self.log('ma{} last: {} ma{} prev: {}'.format(period, ma_last, period, ma_prev))
         return float(ma_last), float(ma_prev)
 
     def ma_minutes_ago(self, period, minutes):
@@ -47,19 +47,21 @@ class influx_algo_helper(object):
         result = self.influx.query(query_ma)
         results = list(result.get_points())
         ma = results[minutes]['ma'] if results and len(results) == minutes + 1 and results[minutes]['ma'] is not None else 0
-        self.log('ma{} {} minutes ago {}'.format(period, minutes, ma))
+        self.log('ma{} {} minutes ago: {}'.format(period, minutes, ma))
         return float(ma)
 
     @property
     def rsi_trend_up(self):
-        rsi_trend_up = self.price - self.prev_price if self.prev_price and self.price > self.prev_price else 0
-        self.log('rsi trend up {}'.format(rsi_trend_up))
+        prev_price = self.price_minutes_ago(1)
+        rsi_trend_up = self.price - prev_price if prev_price and self.price > prev_price else 0
+        self.log('rsi trend up: {}'.format(rsi_trend_up))
         return rsi_trend_up
 
     @property
     def rsi_trend_down(self):
-        rsi_trend_down = self.prev_price - self.price if self.prev_price and self.price < self.prev_price else 0
-        self.log('rsi trend down {}'.format(rsi_trend_down))
+        prev_price = self.price_minutes_ago(1)
+        rsi_trend_down = prev_price - self.price if prev_price and self.price < prev_price else 0
+        self.log('rsi trend down: {}'.format(rsi_trend_down))
         return rsi_trend_down
 
     @property
@@ -69,7 +71,7 @@ class influx_algo_helper(object):
         result = self.influx.query(query_rsi)
         results = list(result.get_points())
         rsi = results[-1]['rsi'] if results else 50
-        self.log('rsi {}'.format(rsi))
+        self.log('rsi: {}'.format(rsi))
         return rsi
 
     @property
@@ -79,7 +81,7 @@ class influx_algo_helper(object):
         result = self.influx.query(query_macd)
         results = list(result.get_points())
         macd = results[-1]['macd'] if results else 0
-        self.log('macd {}'.format(macd))
+        self.log('macd: {}'.format(macd))
         return macd
 
     def macd_minutes_ago(self, minutes):
@@ -88,7 +90,7 @@ class influx_algo_helper(object):
         result = self.influx.query(query_macd)
         results = list(result.get_points())
         macd = results[-minutes]['macd'] if results else 0
-        self.log('macd {} minutes ago {}'.format(minutes, macd))
+        self.log('macd {} minutes ago: {}'.format(minutes, macd))
         return macd
 
     @property
@@ -104,7 +106,7 @@ class influx_algo_helper(object):
             if self.prev_macd > 0 and macd_last <= 0:
                 macd_trend = 'breakdown'
         self.prev_macd = macd_last
-        self.log('macd trend {}'.format(macd_trend))
+        self.log('macd trend: {}'.format(macd_trend))
         return macd_trend
 
 
@@ -131,29 +133,29 @@ class influx_algo_helper(object):
     def month_min_mean_max(self):
         return self.min_mean_max('60d', '30d')
 
-    def set_price(self, price):
-        if self.price:
-            self.prev_price = self.price
-        else:
-            self.prev_price = self.last_price
-        self.price = price
+    def set_price(self):
+        self.price = self.last_price
 
-    def set_fee(self, fee):
-        self.fee = fee
+    def price_minutes_ago(self, minutes):
+        result = self.influx.query("SELECT price FROM price_volume WHERE exchange = '{}' and symbol_1 = '{}' and symbol_2 = '{}' ORDER BY time DESC limit {}".format(self.exchange, self.symbol_1, self.symbol_2, minutes + 1))
+        results = list(result.get_points())
+        price = results[minutes]['price'] if len(results) == minutes + 1 else 0
+        self.log('price {} minutes ago: {}'.format(minutes, price))
+        return price
 
     @property
     def last_price(self):
         result = self.influx.query("SELECT price FROM price_volume WHERE exchange = '{}' and symbol_1 = '{}' and symbol_2 = '{}' ORDER BY time DESC limit 1".format(self.exchange, self.symbol_1, self.symbol_2))
         results = list(result.get_points())
         price = results[0]['price'] if results else 0
-        self.log('last price {}'.format(price))
+        self.log('last price: {}'.format(price))
         return price
 
     def highest_price_minutes_ago(self, minutes):
         result = self.influx.query("SELECT max(price) FROM price_volume WHERE exchange = '{}' and symbol_1 = '{}' and symbol_2 = '{}' and time >= now() - {}m GROUP BY time({}m) fill(previous) ORDER BY time DESC LIMIT 1".format(self.exchange, self.symbol_1, self.symbol_2, minutes * 3, minutes))
         results = list(result.get_points())
         max = results[0]['max'] if results else 0
-        self.log('max price {} minutes ago {}'.format(minutes, max))
+        self.log('max price {} minutes ago: {}'.format(minutes, max))
         return float(max)
 
     def update_last_trade(self):
@@ -161,7 +163,7 @@ class influx_algo_helper(object):
         self.prev_trade_time, self.prev_trade_session, self.prev_trade_action, self.prev_trade_price = self.prev_trade()
 
     def last_trade(self):
-        result = self.influx.query("SELECT price, type, session FROM trade WHERE exchange = '{}' and symbol_1 = '{}' and symbol_2 = '{}' ORDER BY time DESC limit 1 tz('Europe/Amsterdam')".format(self.exchange, self.symbol_1, self.symbol_2))
+        result = self.influx.query("SELECT price, type, session FROM trade WHERE algo = '{}' and exchange = '{}' and symbol_1 = '{}' and symbol_2 = '{}' ORDER BY time DESC limit 1 tz('Europe/Amsterdam')".format(self.algo, self.exchange, self.symbol_1, self.symbol_2))
         results = list(result.get_points())
         date_time = results[0]['time'] if results else None
         session = results[0]['session'] if results else 0
@@ -171,7 +173,7 @@ class influx_algo_helper(object):
         return date_time, int(session), action, float(price)
 
     def prev_trade(self):
-        result = self.influx.query("SELECT price, type, session FROM trade WHERE exchange = '{}' and symbol_1 = '{}' and symbol_2 = '{}' ORDER BY time DESC limit 2 tz('Europe/Amsterdam')".format(self.exchange, self.symbol_1, self.symbol_2))
+        result = self.influx.query("SELECT price, type, session FROM trade WHERE algo = '{}' and exchange = '{}' and symbol_1 = '{}' and symbol_2 = '{}' ORDER BY time DESC limit 2 tz('Europe/Amsterdam')".format(self.algo, self.exchange, self.symbol_1, self.symbol_2))
         results = list(result.get_points())
         date_time = results[1]['time'] if len(results) == 2 else None
         session = results[1]['session'] if len(results) == 2 else 0

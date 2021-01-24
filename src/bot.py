@@ -8,7 +8,7 @@ def cur_date_time():
 
 def log(message):
     string_date = cur_date_time()
-    print('{} {}-{}-{}: {}'.format(string_date, EXCHANGE, SYMBOL_1, SYMBOL_2, message))
+    print('{} {}-{}-{}-{}: {}'.format(string_date, ALGO, EXCHANGE, SYMBOL_1, SYMBOL_2, message))
 
 def run():
     global algo_helper
@@ -16,10 +16,9 @@ def run():
     global exchange
     global active_order_id
 
-    price, fee = exchange.ticker()
-
-    algo_helper.set_fee(fee)
-    algo_helper.set_price(price)
+    algo_helper.set_price()
+    price = algo_helper.price
+    fee = algo_helper.fee
 
     # ALGO TAKE ACTION
     action = algo.action
@@ -50,6 +49,7 @@ def run():
             algo_helper.write([dict(
                 measurement='trade',
                 tags=dict(
+                    algo=ALGO,
                     exchange=EXCHANGE,
                     symbol_1=SYMBOL_1,
                     symbol_2=SYMBOL_2,
@@ -69,6 +69,7 @@ def run():
                 algo_helper.write([dict(
                     measurement='session',
                     tags=dict(
+                        algo=ALGO,
                         exchange=EXCHANGE,
                         symbol_1=SYMBOL_1,
                         symbol_2=SYMBOL_2,
@@ -90,7 +91,7 @@ if __name__ == '__main__':
     #execfile('conf/{}.conf'.format(CONF))
     exec(compile(open('conf/{}.conf'.format(CONF), "rb").read(), 'conf/{}.conf'.format(CONF), 'exec'))
 
-    algo_helper = influx_algo_helper(EXCHANGE, SYMBOL_1, SYMBOL_2)
+    algo_helper = influx_algo_helper(ALGO, EXCHANGE, SYMBOL_1, SYMBOL_2)
     algo_helper.update_last_trade()
 
     if ALGO in ('ro_cano', 'ro_cano_che_gira', 'ro_cano_quando_esce', 'ro_cano_che_ritorna', 'boring_but_safe'):

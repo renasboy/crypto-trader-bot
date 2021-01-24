@@ -20,7 +20,8 @@ for conf_file in conf/*.conf; do
     echo
 
     echo import dashboard to grafana $container_name
-    sed -e "s/EXCHANGE/$exchange/g" \
+    sed -e "s/ALGO/$algo/g" \
+        -e "s/EXCHANGE/$exchange/g" \
         -e "s/SYMBOL_1/$symbol_1/g" \
         -e "s/SYMBOL_2/$symbol_2/g" \
         -e "s/TITLE/${container_name//_/ }/g" \
