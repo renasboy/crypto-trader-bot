@@ -52,11 +52,11 @@ class ro_cano_che_ritorna(object):
         # prev_trade_price = self.algo_helper.prev_trade_price 
         # seconds_since_prev_trade = self.algo_helper.seconds_since_prev_trade
        
-        # PREZZO DI MERCATO - CURRENT PRICE
+        # PREZZO DI ADESSO (di mercato) - CURRENT PRICE
         price = self.algo_helper.price
         
-        # PREZZO DI MERCATO - PREV PRICE
-        #prev_price = self.algo_helper.prev_price                 ----------------------------------
+        # PREZZO PRECEDENTE (di mercato) - PREV PRICE
+        prev_price = self.algo_helper.prev_price                 ----------------------------------
         
         # PREZZO DI MERCATO DI 2 MINUTI FA
         #prev_price_2_min_ago = self.algo_helper.prev_price_minutes_ago(prev_price, 2)           -------------------------------
