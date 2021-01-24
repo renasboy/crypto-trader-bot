@@ -45,10 +45,6 @@ class ro_cano_che_ritorna(object):
         last_trade_time = self.algo_helper.last_trade_time
         last_trade_price = self.algo_helper.last_trade_price 
         seconds_since_last_trade = self.algo_helper.seconds_since_last_trade
-         
-        # PREZZO DI ADESSO (di mercato) - CURRENT PRICE
-        price = self.algo_helper.price  
-        
         
         
         # PREV TRADE
@@ -56,10 +52,14 @@ class ro_cano_che_ritorna(object):
         # prev_trade_time = self.algo_helper.prev_trade_time
         # prev_trade_price = self.algo_helper.prev_trade_price 
         # seconds_since_prev_price = self.algo_helper.seconds_since_prev_price
+      
         
-    
-    
         
+        # PREZZO DI ADESSO (di mercato) - CURRENT PRICE
+        price = self.algo_helper.price  
+        
+        
+        #################################################################################
         
         # PREZZO PRECEDENTE (di mercato) - PREV PRICE
         # prev_price_action = self.algo_helper.prev_price_action
@@ -70,12 +70,12 @@ class ro_cano_che_ritorna(object):
         # PREZZO DI MERCATO DI 2 MINUTI FA
         #prev_price_2_min_ago = self.algo_helper.prev_price_minutes_ago(prev_price, 2)
         
+        #####################################################################################################
         
         
         
         
-        
-        #VENDE DOPO 100 minuti (TEMPO DOPO IL QUALE ro cano ritorna a casa) ( 100 minuti = 100 * 60 = 6000 secondi ) ) ("E SE" ma7 < ma7 3 min ago)
+        # VENDE DOPO 100 minuti (TEMPO DOPO IL QUALE ro cano ritorna a casa) ( 100 minuti = 100 * 60 = 6000 secondi ) ) ("E SE" ma7 < ma7 3 min ago)
         max_hold_time_in_seconds = 6000
         
         # TEMPO DOPO IL QUALE "se ro cano COMINCIA A PERDERE LA FORZA" vende ! ( 20 minuti = 20 * 60 = 1200 secondi ) ( ma anche alcune ma devono incrociare al ribasso )
