@@ -143,8 +143,8 @@ class ro_cano_che_ritorna(object):
                     if (ma2_last > ma2_2_min_ago
                         and ma4_last > ma4_2_min_ago
                         and ma10_last > ma10_2_min_ago
-                        and ma12_last > ma15_last):
-                        and price > price_2_min_ago
+                        and ma12_last > ma15_last
+                        and price > price_2_min_ago):
                         action = 'buy'
                     
                 # COMPRA sessione 2
