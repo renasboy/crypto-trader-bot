@@ -53,6 +53,8 @@ class ro_cano_che_ritorna(object):
        
         # PREZZO DI MERCATO - CURRENT PRICE
         price = self.algo_helper.price
+        price_2_min_ago = self.algo_helper.price_minutes_ago(price, 2)
+        
         
         #VENDE DOPO 100 minuti (TEMPO DOPO IL QUALE ro cano ritorna a casa) ( 100 minuti = 100 * 60 = 6000 secondi ) ) ("E SE" ma7 < ma7 3 min ago)
         max_hold_time_in_seconds = 6000
@@ -122,16 +124,18 @@ class ro_cano_che_ritorna(object):
                 if self.session == 1:
                     if (ma2_last > ma2_2_min_ago
                         and ma4_last > ma4_2_min_ago
-                        and ma10_last > ma10_2_min_ago):
+                        and ma10_last > ma10_2_min_ago
+                        and ma11_last > ma15_last
+                        and price > price_2_min_ago):
                         action = 'buy'
-                        
                     
                 # COMPRA sessione 2
                 elif self.session == 2:
                     if (ma2_last > ma2_2_min_ago
                         and ma4_last > ma4_2_min_ago
                         and ma10_last > ma10_2_min_ago
-                        and ma11_2_min_ago >= ma11_3_min_ago):
+                        and ma11_2_min_ago >= ma11_3_min_ago
+                        and ma11_last > ma15_last):
                         action = 'buy'
                         
                   
@@ -140,7 +144,8 @@ class ro_cano_che_ritorna(object):
                     if (ma2_last > ma2_2_min_ago
                         and ma4_last > ma4_2_min_ago
                         and ma10_last > ma10_2_min_ago
-                        and ma11_2_min_ago >= ma11_3_min_ago):
+                        and ma11_2_min_ago >= ma11_3_min_ago
+                        and ma11_last > ma15_last):
                         action = 'buy'
     
                         
