@@ -14,17 +14,17 @@ class influx_algo_helper(object):
         self.label = '{}-{}-{}-{}'.format(algo, exchange, symbol_1, symbol_2)
 
         self.influx = InfluxDBClient('influxdb', 8086, 'root', 'root', 'crypto_trader_bot')
-        self.fee = None
-        self.price = None
+        self.fee = 0
+        self.price = 0
         self.prev_macd = self.macd
-        self.last_trade_time = None
-        self.last_trade_session = None
+        self.last_trade_time = 0
+        self.last_trade_session = 0
         self.last_trade_action = None
-        self.last_trade_price = None
-        self.prev_trade_time = None
-        self.prev_trade_session = None
+        self.last_trade_price = 0
+        self.prev_trade_time = 0
+        self.prev_trade_session = 0
         self.prev_trade_action = None
-        self.prev_trade_price = None
+        self.prev_trade_price = 0
 
     def write(self, data):
         self.influx.write_points(data)
