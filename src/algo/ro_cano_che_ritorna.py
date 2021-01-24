@@ -56,7 +56,7 @@ class ro_cano_che_ritorna(object):
         price = self.algo_helper.price
         prev_price = self.algo_helper.prev_price
         
-        prev_price_2_min_ago = self.algo_helper.prev_price_minutes_ago(2)
+        prev_price_2_min_ago = self.algo_helper.prev_price_minutes_ago(prev_price, 2)
         
         
         #VENDE DOPO 100 minuti (TEMPO DOPO IL QUALE ro cano ritorna a casa) ( 100 minuti = 100 * 60 = 6000 secondi ) ) ("E SE" ma7 < ma7 3 min ago)
