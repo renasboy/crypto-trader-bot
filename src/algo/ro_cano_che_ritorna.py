@@ -246,32 +246,42 @@ class ro_cano_che_ritorna(object):
                     action = 'sell'     
                 
                 
-                if (seconds_since_last_trade > 300 and seconds_since_last_trade <= 720
+                if (seconds_since_last_trade > 720 and seconds_since_last_trade <= 1200
                     and deviation < -0.19 and ma2_last < ma15_last):
                     action = 'sell' 
                 
-                #################################################################################################
                 
+                
+                
+                #################################################################################################
+                # VENDITA 1 - da 20 a 30 minuti
                 ###################################################################################################
                 
                 
-                elif (seconds_since_last_trade > 900 and seconds_since_last_trade <= 1800
-                    and ma2_last < ma15_last and deviation > 0.35):
+                elif (seconds_since_last_trade > 1200 and seconds_since_last_trade <= 1800
+                    and deviation > 0.35 and ma2_last < ma15_last):
                     action = 'sell'   
                  
-                        
+                if (seconds_since_last_trade > 1200 and seconds_since_last_trade <= 1800
+                    and deviation < -0.09 and ma2_last < ma15_last):
+                    action = 'sell'         
+                    
+                    
+                    
                     
                     
                 ################################################################################################## 
                 
-                
+                # VENDITA 1 - da 30 minuti
                 ####################################################################################################
                     
                 elif (seconds_since_last_trade > 1800 
-                    and ma2_last < ma18_last):
-                    
-                    action = 'sell'            
-                        
+                    and deviation > 0.45 and ma2_last < ma18_last):
+                    action = 'sell'
+                                
+                if (seconds_since_last_trade > 1800
+                    and deviation < -0.01 and ma2_last < ma18_last):
+                    action = 'sell'         
                  
                 
                 
