@@ -60,8 +60,8 @@ class ro_cano_che_ritorna(object):
         
         
         #################################################################################
-        
         # PREZZO PRECEDENTE (di mercato) - PREV PRICE
+        price_1_min_ago = self.algo_helper.price_minutes_ago(1)
         price_2_min_ago = self.algo_helper.price_minutes_ago(2)
         
         
