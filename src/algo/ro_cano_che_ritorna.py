@@ -188,6 +188,8 @@ class ro_cano_che_ritorna(object):
             if self.session == 1:
                 
                 ##################################################################################
+                # 0 - 3
+                ################################################################################
 
                 if (seconds_since_last_trade > 0 and seconds_since_last_trade <= 180
                     and deviation > 0.01 and ma2_last < ma5_last):
@@ -198,13 +200,14 @@ class ro_cano_che_ritorna(object):
                 if (seconds_since_last_trade > 0 and seconds_since_last_trade <= 180
                     and deviation < -0.49 and ma2_last < ma15_last):
                     action = 'sell'      
-                 ##################################################################################   
+                  
                     
                     
-                    
+                 ###################################################################################
+                # 3 -5
                 #####################################################################################
                 elif (seconds_since_last_trade > 180 and seconds_since_last_trade <= 300
-                    and ma2_last < ma10_last and deviation < -0.39):
+                    and deviation < -0.39 and ma2_last < ma10_last):
                     action = 'sell'        
                 
                 
