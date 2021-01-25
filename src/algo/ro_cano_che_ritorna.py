@@ -59,20 +59,12 @@ class ro_cano_che_ritorna(object):
         price = self.algo_helper.price  
         
         
-        #################################################################################
+        
         # PREZZO PRECEDENTE (di mercato) - PREV PRICE
         price_1_min_ago = self.algo_helper.price_minutes_ago(1)
         price_2_min_ago = self.algo_helper.price_minutes_ago(2)
         
-        
-        
       
-        
-        
-        #####################################################################################################
-        
-        
-        
         
         # VENDE DOPO 100 minuti (TEMPO DOPO IL QUALE ro cano ritorna a casa) ( 100 minuti = 100 * 60 = 6000 secondi ) ) ("E SE" ma7 < ma7 3 min ago)
         max_hold_time_in_seconds = 6000
@@ -100,7 +92,9 @@ class ro_cano_che_ritorna(object):
         # DEFAULT ACTION DICE DI NON FARE NIENTE (=None, NON TOCCARE)
         action = None
     
+    
         #######################################################################
+        
         
         # APRE E CHIUDE GABBIA
         # SI APRE LA GABBIA SE 
@@ -165,6 +159,7 @@ class ro_cano_che_ritorna(object):
                         
     
         #####################################################################
+        
         # VENDA
         # NON TOCCARE QUESTA CONDIZIONE (QUESTA DICE CHE STA IN MODO SELL, DEVO VENDERE)
         elif last_trade_action == 'buy':
@@ -257,7 +252,7 @@ class ro_cano_che_ritorna(object):
                 
                 ####################################################################################################
                     
-                elif (seconds_since_last_trade > 1800 and seconds_since_last_trade <= 6000
+                elif (seconds_since_last_trade > 1800 
                     and ma2_last < ma18_last):
                     
                     action = 'sell'            
@@ -294,7 +289,7 @@ class ro_cano_che_ritorna(object):
                     and ma2_last < ma15_last and deviation > 0.35):
                     action = 'sell'        
                         
-                elif (seconds_since_last_trade > 1800 and seconds_since_last_trade <= 6000
+                elif (seconds_since_last_trade > 1800
                     and ma2_last < ma18_last):
                     
                     
@@ -325,7 +320,7 @@ class ro_cano_che_ritorna(object):
                     and ma2_last < ma15_last and deviation > 0.35):
                     action = 'sell'        
                         
-                elif (seconds_since_last_trade > 1800 and seconds_since_last_trade <= 6000
+                elif (seconds_since_last_trade > 1800
                     and ma2_last < ma18_last):
                     
                     
