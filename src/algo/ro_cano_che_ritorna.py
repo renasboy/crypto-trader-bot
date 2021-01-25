@@ -94,17 +94,7 @@ class ro_cano_che_ritorna(object):
         #deviation_prev = (price / prev_trade_price - 1) * 100 if prev_trade_price else 0
         #self.algo_helper.log('deviation_prev: {}'.format(deviation_prev))
         
-        # 1) ro cano COMPRA UN PO' PIU' SOPRA DELL' ULTIMO TRADE 
-        # nel segmento di tempo ( RIGA 85 nei 50 min dal SELL - "ultimo trade" )
-        # di questa altezza ( RIGA 156 adesso +0.29 prima era troppo alto +0.35 ) 
         
-        # 2) ro cano COMPRA UN PO' PIU' SOPRA anche DEL PENULTIMO TRADE .............." in sospeso ! " 
-        #( RIGA 86 nei 40 min dal BUY -"prev trade" )
-        #( RIGA 157 adesso +0.60 prima era troppo basso +0.35 )
-        
-        # 1) ro cano VENDE SE LA PERDITA E' TROPPA ( CROLLO IMPROVVISO ) VENDE SUBITO ! (SALVAGENTE) riga 261
-        # 2) ro cano VENDE SE DIMINUISCE LA FORZA ! riga 274
-        # 3) ro cano VENDE " DOPO UN' ORA " "max hold time" riga 288
         
         
         # DEFAULT ACTION DICE DI NON FARE NIENTE (=None, NON TOCCARE)
@@ -154,7 +144,6 @@ class ro_cano_che_ritorna(object):
                     if (ma2_last > ma2_2_min_ago
                         and ma4_last > ma4_2_min_ago
                         and ma10_last > ma10_2_min_ago
-                        and ma11_2_min_ago >= ma11_3_min_ago
                         and ma12_last > ma15_last
                         and price > price_1_min_ago
                         and price > price_2_min_ago):
@@ -167,7 +156,6 @@ class ro_cano_che_ritorna(object):
                     if (ma2_last > ma2_2_min_ago
                         and ma4_last > ma4_2_min_ago
                         and ma10_last > ma10_2_min_ago
-                        and ma11_2_min_ago >= ma11_3_min_ago
                         and ma12_last > ma15_last
                         and price > price_1_min_ago
                         and price > price_2_min_ago):
@@ -193,12 +181,12 @@ class ro_cano_che_ritorna(object):
             # VENDE SESSIONE 1 - con fasce di tempo !
             
             #minuti
-            #  0-3
-            #  3-5 
-            #  5-12
-            # 12-20
-            # 20-30
-            # 30-100
+            #   0 -   3
+            #   3 -   5 
+            #   5 -  12
+            #  12 -  20
+            #  20 -  30
+            #     >30 
             
             
             
@@ -210,7 +198,7 @@ class ro_cano_che_ritorna(object):
                     and deviation > 0.01 and ma2_last < ma5_last):
                     action = 'sell'
                     
-                    # compa, questa e' una cosa fondamentale !
+                   
                     
                 if (seconds_since_last_trade > 0 and seconds_since_last_trade <= 180
                     and deviation < -0.49 and ma2_last < ma15_last and ma11_last < ma11_2_min_ago):
