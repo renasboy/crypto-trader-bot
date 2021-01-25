@@ -188,10 +188,23 @@ class ro_cano_che_ritorna(object):
             self.algo_helper.log('deviation: {}'.format(deviation))
             self.algo_helper.log('session: {}'.format(self.session))
 
-            # VENDE CON INCROCIO ma2 - ma7 ( + DEVIATION BUY )
+            
 
-            # VENDE SESSIONE 1 
+            # VENDE SESSIONE 1 - con fasce di tempo !
+            
+            #minuti
+            #  0-3
+            #  3-5 
+            #  5-12
+            # 12-20
+            # 20-30
+            # 30-100
+            
+            
+            
             if self.session == 1:
+                
+                ##################################################################################
 
                 if (seconds_since_last_trade > 0 and seconds_since_last_trade <= 180
                     and deviation > 0.01 and ma2_last < ma5_last):
@@ -202,34 +215,72 @@ class ro_cano_che_ritorna(object):
                 if (seconds_since_last_trade > 0 and seconds_since_last_trade <= 180
                     and deviation < -0.49 and ma2_last < ma15_last and ma11_last < ma11_2_min_ago):
                     action = 'sell'      
+                 ##################################################################################   
                     
                     
                     
-                    
-   
+                #####################################################################################
                 elif (seconds_since_last_trade > 180 and seconds_since_last_trade <= 300
                     and ma2_last < ma10_last and ma11_last < ma11_2_min_ago and deviation < -0.39):
                     action = 'sell'        
-            
+                
+                
+                
+                
+                ########################################################################################
+                
+                
+                ########################################################################################
+                
                 elif (seconds_since_last_trade > 300 and seconds_since_last_trade <= 600
                     and ma2_last < ma7_last and ma11_last < ma11_2_min_ago and deviation < -0.29):
                     action = 'sell'        
-            
+                
+                
+                
+                
+                
+                ############################################################################################
+                
+                
+                ############################################################################################
+                
                 elif (seconds_since_last_trade > 600 and seconds_since_last_trade <= 900
                     and ma2_last < ma11_last and deviation > 0.25):
                     action = 'sell'     
+                
+                
+                
+                
+                #################################################################################################
+                
+                ###################################################################################################
+                
                 
                 elif (seconds_since_last_trade > 900 and seconds_since_last_trade <= 1800
                     and ma2_last < ma15_last and deviation > 0.35):
                     action = 'sell'   
                  
                         
+                    
+                    
+                ################################################################################################## 
+                
+                
+                ####################################################################################################
+                    
                 elif (seconds_since_last_trade > 1800 and seconds_since_last_trade <= 6000
                     and ma2_last < ma18_last):
                     
                     action = 'sell'            
                         
-                        
+                 
+                
+                
+                
+                
+                ######################################################################################################
+                
                         
             # VENDE SESSIONE 2
             elif self.session == 2: 
