@@ -238,15 +238,17 @@ class ro_cano_che_ritorna(object):
                 
                 ############################################################################################
                 
-                
+                # VENDITA 1 - da 12 a 20 minuti
                 ############################################################################################
                 
-                elif (seconds_since_last_trade > 600 and seconds_since_last_trade <= 900
-                    and ma2_last < ma11_last and deviation > 0.25):
+                elif (seconds_since_last_trade > 720 and seconds_since_last_trade <= 1200
+                    and deviation > 0.25 and ma2_last < ma11_last):
                     action = 'sell'     
                 
                 
-                
+                if (seconds_since_last_trade > 300 and seconds_since_last_trade <= 720
+                    and deviation < -0.19 and ma2_last < ma15_last):
+                    action = 'sell' 
                 
                 #################################################################################################
                 
