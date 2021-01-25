@@ -160,7 +160,7 @@ class ro_cano_che_ritorna(object):
     
         #####################################################################
         
-        # VENDA
+        # VENDITA
         # NON TOCCARE QUESTA CONDIZIONE (QUESTA DICE CHE STA IN MODO SELL, DEVO VENDERE)
         elif last_trade_action == 'buy':
 
@@ -173,9 +173,9 @@ class ro_cano_che_ritorna(object):
 
             
 
-            # VENDE SESSIONE 1 - con fasce di tempo !
+            # VENDITA 1 - con fasce di tempo !
             
-            #minuti
+            #    minuti
             #   0 -   3
             #   3 -   5 
             #   5 -  12
@@ -188,7 +188,7 @@ class ro_cano_che_ritorna(object):
             if self.session == 1:
                 
                 ##################################################################################
-                # 0 - 3
+                # VENDITA 1 - da 0 a 3 minuti
                 ################################################################################
 
                 if (seconds_since_last_trade > 0 and seconds_since_last_trade <= 180
@@ -204,7 +204,7 @@ class ro_cano_che_ritorna(object):
                     
                     
                  ###################################################################################
-                # 3 -5
+                # VENDITA 1 - da 3 a 5 minuti
                 #####################################################################################
                 elif (seconds_since_last_trade > 180 and seconds_since_last_trade <= 300
                       and deviation > 0.10 and ma2_last < ma10_last):
@@ -215,15 +215,23 @@ class ro_cano_che_ritorna(object):
                     and deviation < -0.39 and ma2_last < ma10_last):
                     action = 'sell' 
                 
-                ########################################################################################
+                
+                
                 
                 
                 ########################################################################################
                 
-                elif (seconds_since_last_trade > 300 and seconds_since_last_trade <= 600
-                      and ma2_last < ma7_last and deviation < -0.29):
+                # VENDITA 1 - da 5 a 12 minuti
+                ########################################################################################
+                
+                elif (seconds_since_last_trade > 300 and seconds_since_last_trade <= 720
+                      and deviation < 0.20 and ma2_last < ma7_last):
                       action = 'sell'        
                 
+                
+                if (seconds_since_last_trade > 300 and seconds_since_last_trade <= 720
+                    and deviation < -0.29 and ma2_last < ma11_last):
+                    action = 'sell' 
                 
                 
                 
