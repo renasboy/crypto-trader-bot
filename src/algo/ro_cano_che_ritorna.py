@@ -196,7 +196,7 @@ class ro_cano_che_ritorna(object):
                    
                     
                 if (seconds_since_last_trade > 0 and seconds_since_last_trade <= 180
-                    and deviation < -0.49 and ma2_last < ma15_last and ma11_last < ma11_2_min_ago):
+                    and deviation < -0.49 and ma2_last < ma15_last):
                     action = 'sell'      
                  ##################################################################################   
                     
@@ -204,7 +204,7 @@ class ro_cano_che_ritorna(object):
                     
                 #####################################################################################
                 elif (seconds_since_last_trade > 180 and seconds_since_last_trade <= 300
-                    and ma2_last < ma10_last and ma11_last < ma11_2_min_ago and deviation < -0.39):
+                    and ma2_last < ma10_last and deviation < -0.39):
                     action = 'sell'        
                 
                 
@@ -216,7 +216,7 @@ class ro_cano_che_ritorna(object):
                 ########################################################################################
                 
                 elif (seconds_since_last_trade > 300 and seconds_since_last_trade <= 600
-                    and ma2_last < ma7_last and ma11_last < ma11_2_min_ago and deviation < -0.29):
+                    and ma2_last < ma7_last and deviation < -0.29):
                     action = 'sell'        
                 
                 
@@ -270,15 +270,15 @@ class ro_cano_che_ritorna(object):
                 
                 
                 if (seconds_since_last_trade > 0 and seconds_since_last_trade <= 180
-                    and ma2_last < ma15_last and ma11_last < ma11_2_min_ago and deviation < -0.49):
+                    and ma2_last < ma15_last and deviation < -0.49):
                     action = 'sell'
            
                 elif (seconds_since_last_trade > 180 and seconds_since_last_trade <= 300
-                    and ma2_last < ma10_last and ma11_last < ma11_2_min_ago and deviation < -0.39):
+                    and ma2_last < ma10_last and deviation < -0.39):
                     action = 'sell' 
         
                 elif (seconds_since_last_trade > 300 and seconds_since_last_trade <= 600
-                    and ma2_last < ma7_last and ma11_last < ma11_2_min_ago and deviation < -0.29):
+                    and ma2_last < ma7_last and deviation < -0.29):
                     action = 'sell'        
                 
                 elif (seconds_since_last_trade > 600 and seconds_since_last_trade <= 900
@@ -301,15 +301,15 @@ class ro_cano_che_ritorna(object):
             # VENDE SESSIONE 3 IN POI
             else:
                 if (seconds_since_last_trade > 0 and seconds_since_last_trade <= 180
-                    and ma2_last < ma15_last and ma11_last < ma11_2_min_ago and deviation < -0.49):
+                    and ma2_last < ma15_last and deviation < -0.49):
                     action = 'sell'
            
                 elif (seconds_since_last_trade > 180 and seconds_since_last_trade <= 300
-                    and ma2_last < ma10_last and ma11_last < ma11_2_min_ago and deviation < -0.39):
+                    and ma2_last < ma10_last and deviation < -0.39):
                     action = 'sell'        
             
                 elif (seconds_since_last_trade > 300 and seconds_since_last_trade <= 600
-                    and ma2_last < ma7_last and ma11_last < ma11_2_min_ago and deviation < -0.29):
+                    and ma2_last < ma7_last and deviation < -0.29):
                     action = 'sell'
            
                 elif (seconds_since_last_trade > 600 and seconds_since_last_trade <= 900
