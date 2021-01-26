@@ -1,3 +1,4 @@
+import os
 from datetime import datetime
 from dateutil import parser, tz
 import time
@@ -29,7 +30,7 @@ class influx_algo_helper(object):
 
     def utc2local(self, str_date):
         utc = parser.parse(str_date)
-        return str(utc.astimezone(tz.gettz('Europe/Amsterdam')))
+        return str(utc.astimezone(tz.gettz(os.environ['TZ'])))
 
     def write(self, data):
         self.influx.write_points(data)
