@@ -67,8 +67,8 @@ def run():
                         symbol_1=SYMBOL_1,
                         symbol_2=SYMBOL_2,
                         session=str(algo_helper.last_trade_session).rjust(30, '0'),
-                        buy_time=algo_helper.last_trade_time.strftime('%Y-%m-%dT%H:%M:%S.%fZ'),
-                        sell_time=datetime.now(tz.gettz(os.environ['TZ'])).strftime('%Y-%m-%dT%H:%M:%S.%fZ')
+                        buy_time=algo_helper.last_trade_time.strftime('%Y-%m-%dT%H:%M:%S'),
+                        sell_time=datetime.now(tz.gettz(os.environ['TZ'])).strftime('%Y-%m-%dT%H:%M:%S')
                     ),
                     fields=dict(
                         buy_price=float(algo_helper.last_trade_price),
