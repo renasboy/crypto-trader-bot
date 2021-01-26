@@ -189,7 +189,7 @@ class ro_cano_che_ritorna(object):
             
             
             
-            if self.session == 1:
+            if self.session:
                 
                 ##################################################################################
                 # VENDITA 1 - da 0 a 3 minuti
@@ -355,65 +355,7 @@ class ro_cano_che_ritorna(object):
                 
                 ######################################################################################################
                 
-                        
-            # VENDE SESSIONE 2
-            elif self.session == 2: 
-                
-                
-                if (seconds_since_last_trade > 0 and seconds_since_last_trade <= 180
-                    and ma2_last < ma15_last and deviation < -0.49):
-                    action = 'sell'
-           
-                elif (seconds_since_last_trade > 180 and seconds_since_last_trade <= 300
-                    and ma2_last < ma10_last and deviation < -0.39):
-                    action = 'sell' 
-        
-                elif (seconds_since_last_trade > 300 and seconds_since_last_trade <= 600
-                    and ma2_last < ma7_last and deviation < -0.29):
-                    action = 'sell'        
-                
-                elif (seconds_since_last_trade > 600 and seconds_since_last_trade <= 900
-                    and ma2_last < ma11_last and deviation > 0.25):
-                    action = 'sell'  
-                
-                elif (seconds_since_last_trade > 900 and seconds_since_last_trade <= 1800
-                    and ma2_last < ma15_last and deviation > 0.35):
-                    action = 'sell'        
-                        
-                elif (seconds_since_last_trade > 1800
-                    and ma2_last < ma18_last):
-                    
-                    
-                    action = 'sell'     
-                    
-                    
-                    
-                    
-            # VENDE SESSIONE 3 IN POI
-            else:
-                if (seconds_since_last_trade > 0 and seconds_since_last_trade <= 180
-                    and ma2_last < ma15_last and deviation < -0.49):
-                    action = 'sell'
-           
-                elif (seconds_since_last_trade > 180 and seconds_since_last_trade <= 300
-                    and ma2_last < ma10_last and deviation < -0.39):
-                    action = 'sell'        
             
-                elif (seconds_since_last_trade > 300 and seconds_since_last_trade <= 600
-                    and ma2_last < ma7_last and deviation < -0.29):
-                    action = 'sell'
-           
-                elif (seconds_since_last_trade > 600 and seconds_since_last_trade <= 900
-                    and ma2_last < ma11_last and deviation > 0.25):
-                    action = 'sell' 
-                
-                elif (seconds_since_last_trade > 900 and seconds_since_last_trade <= 1800
-                    and ma2_last < ma15_last and deviation > 0.35):
-                    action = 'sell'        
-                        
-                elif (seconds_since_last_trade > 1800
-                    and ma2_last < ma18_last):
-                    
                     
                     action = 'sell'
 
