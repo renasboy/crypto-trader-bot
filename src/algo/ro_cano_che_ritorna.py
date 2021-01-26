@@ -114,7 +114,7 @@ class ro_cano_che_ritorna(object):
         # NON TOCCARE QUESTA CONDIZIONE (QUESTA DICE CHE STA IN MODO BUY, DEVO COMPRARE)
         if self.open and self.session and last_trade_action != 'buy':
 
-            # COMPRA UN PO' PIU' SOPRA DELL' ULTIMO TRADE SE DEVIATION > 0.27 nei 540 secondi dall' ultimo trade ( quasi sempre IL SELL )
+            # COMPRA UN PO' PIU' SOPRA DELL' ULTIMO TRADE SE DEVIATION > 0.15 nei 540 secondi dall' ultimo trade ( quasi sempre IL SELL )
             # COMPRA UN PO' PIU' SOPRA anche DEL PENULTIMO TRADE SE DEVIATION > 0.1 nei 300 secondi dal PENULTIMO TRADE ( qualche volta IL BUY)
             
             if ((seconds_since_last_trade > 0 and seconds_since_last_trade <= min_buy_delay_in_seconds and deviation > 0.15)
@@ -139,8 +139,9 @@ class ro_cano_che_ritorna(object):
                         and ma10_last > ma10_2_min_ago
                         and ma12_last > ma15_last
                         and price > price_1_min_ago
-                        #and deviation_prev > 0.10 gia' attiva !
                         and price > price_2_min_ago):
+                        #and deviation_prev > 0.10 nei 10 minuti dall' ultimo verde
+                        #and deviation > 0.15 nei 9 minuti dall' ultimo rosso
                         
                         action = 'buy'
                         
@@ -152,10 +153,12 @@ class ro_cano_che_ritorna(object):
                         and ma10_last > ma10_2_min_ago
                         and ma12_last > ma15_last
                         and price > price_1_min_ago
-                        #and deviation_prev > 0.10 gia' attiva
                         and price > price_2_min_ago):
+                        #and deviation_prev > 0.10 nei 10 minuti dall' ultimo verde
+                        #and deviation > 0.15 nei 9 minuti dall' ultimo rosso
                         
                         action = 'buy'
+                        
     
                         
     
