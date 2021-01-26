@@ -1,4 +1,5 @@
 from datetime import datetime
+from dateutil import parser, tz
 import time
 
 from influxdb import InfluxDBClient
@@ -25,6 +26,10 @@ class influx_algo_helper(object):
         self.prev_trade_session = 0
         self.prev_trade_action = None
         self.prev_trade_price = 0
+
+    def utc2local(self, str_date):
+        utc = parser.parse(str_date)
+        return str(utc.astimezone(tz.gettz('Europe/Amsterdam')))
 
     def write(self, data):
         self.influx.write_points(data)
@@ -163,9 +168,9 @@ class influx_algo_helper(object):
         self.prev_trade_time, self.prev_trade_session, self.prev_trade_action, self.prev_trade_price = self.prev_trade()
 
     def last_trade(self):
-        result = self.influx.query("SELECT price, type, session FROM trade WHERE algo = '{}' and exchange = '{}' and symbol_1 = '{}' and symbol_2 = '{}' ORDER BY time DESC limit 1 tz('Europe/Amsterdam')".format(self.algo, self.exchange, self.symbol_1, self.symbol_2))
+        result = self.influx.query("SELECT price, type, session FROM trade WHERE algo = '{}' and exchange = '{}' and symbol_1 = '{}' and symbol_2 = '{}' ORDER BY time DESC limit 1".format(self.algo, self.exchange, self.symbol_1, self.symbol_2))
         results = list(result.get_points())
-        date_time = results[0]['time'] if results else None
+        date_time = self.utc2local(results[0]['time']) if results else None
         session = results[0]['session'] if results else 0
         action = results[0]['type'] if results else None
         price = results[0]['price'] if results else 0
@@ -173,9 +178,9 @@ class influx_algo_helper(object):
         return date_time, int(session), action, float(price)
 
     def prev_trade(self):
-        result = self.influx.query("SELECT price, type, session FROM trade WHERE algo = '{}' and exchange = '{}' and symbol_1 = '{}' and symbol_2 = '{}' ORDER BY time DESC limit 2 tz('Europe/Amsterdam')".format(self.algo, self.exchange, self.symbol_1, self.symbol_2))
+        result = self.influx.query("SELECT price, type, session FROM trade WHERE algo = '{}' and exchange = '{}' and symbol_1 = '{}' and symbol_2 = '{}' ORDER BY time DESC limit 2".format(self.algo, self.exchange, self.symbol_1, self.symbol_2))
         results = list(result.get_points())
-        date_time = results[1]['time'] if len(results) == 2 else None
+        date_time = self.utc2local(results[1]['time']) if len(results) == 2 else None
         session = results[1]['session'] if len(results) == 2 else 0
         action = results[1]['type'] if len(results) == 2 else None
         price = results[1]['price'] if len(results) == 2 else 0
@@ -185,7 +190,7 @@ class influx_algo_helper(object):
     @property
     def seconds_since_last_trade(self):
         if self.last_trade_time:
-            seconds_since_last_trade = (datetime.now() - datetime.strptime(self.last_trade_time[:self.last_trade_time.index('.')], '%Y-%m-%dT%H:%M:%S')).seconds
+            seconds_since_last_trade = (datetime.now() - datetime.strptime(self.last_trade_time[:self.last_trade_time.index('.')], '%Y-%m-%d %H:%M:%S')).seconds
             self.log('last trade time {}'.format(self.last_trade_time)) 
             self.log('seconds since last trade: {}'.format(seconds_since_last_trade))
             return seconds_since_last_trade
