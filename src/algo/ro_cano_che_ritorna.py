@@ -48,10 +48,10 @@ class ro_cano_che_ritorna(object):
         
         
         # PREV TRADE
-        # prev_trade_action = self.algo_helper.prev_trade_action
-        # prev_trade_time = self.algo_helper.prev_trade_time
-        # prev_trade_price = self.algo_helper.prev_trade_price 
-        # seconds_since_prev_price = self.algo_helper.seconds_since_prev_price
+        prev_trade_action = self.algo_helper.prev_trade_action
+        prev_trade_time = self.algo_helper.prev_trade_time
+        prev_trade_price = self.algo_helper.prev_trade_price 
+        seconds_since_prev_price = self.algo_helper.seconds_since_prev_price
       
         
         
@@ -74,17 +74,17 @@ class ro_cano_che_ritorna(object):
         
         # TEMPO in cui SI AGGIUNGE LA DEVIATION !  (a tutte le altre condizioni gia' stabilite per comprare)  
         # per ULTIMO trade ( 10 minuti = 10 * 60 = 600 secondi )
-        # per PENULTIMO trade ( 10 minuti = 10 * 60 = 600 secondi )
+        # per PENULTIMO trade ( 5 minuti = 5 * 60 = 300 secondi )
         min_buy_delay_in_seconds = 600
-        #min_prev_buy_delay_in_seconds = 600
+        min_prev_buy_delay_in_seconds = 300
         
         # formula DEVIATION last_trade (di solito il SELL) per comprare UN PO' PIU' SOPRA DEL LAST TRADE (di solito ultimo sell)
         deviation = (ma2_last / last_trade_price - 1) * 100 if last_trade_price else 0
         self.algo_helper.log('deviation: {}'.format(deviation))
         
         #formula DEVIATION prev_trade (qualche volta il BUY ) per comprare UN PO' PIU' SOPRA DEL PREV TRADE (eccezionalmente ultimo buy)
-        #deviation_prev = (price / prev_trade_price - 1) * 100 if prev_trade_price else 0
-        #self.algo_helper.log('deviation_prev: {}'.format(deviation_prev))
+        deviation_prev = (price / prev_trade_price - 1) * 100 if prev_trade_price else 0
+        self.algo_helper.log('deviation_prev: {}'.format(deviation_prev))
         
         
         
@@ -116,10 +116,10 @@ class ro_cano_che_ritorna(object):
         if self.open and self.session and last_trade_action != 'buy':
 
             # COMPRA UN PO' PIU' SOPRA DELL' ULTIMO TRADE SE DEVIATION > 0.27 nei 540 secondi dall' ultimo trade ( quasi sempre IL SELL )
-            # COMPRA UN PO' PIU' SOPRA anche DEL PENULTIMO TRADE SE DEVIATION > 0.27 nei 540 secondi (ci vorrebbe un altro tempo ) dal PENULTIMO TRADE ( qualche volta IL BUY)
+            # COMPRA UN PO' PIU' SOPRA anche DEL PENULTIMO TRADE SE DEVIATION > 0.1 nei 300 secondi dal PENULTIMO TRADE ( qualche volta IL BUY)
             
             if ((seconds_since_last_trade > 0 and seconds_since_last_trade <= min_buy_delay_in_seconds and deviation > 0.15)
-                #or (seconds_since_prev_trade > 0 and seconds_since_prev_trade <= min_prev_buy_delay_in_seconds and deviation_prev > 0.60)
+                or (seconds_since_prev_trade > 0 and seconds_since_prev_trade <= min_prev_buy_delay_in_seconds and deviation_prev > 0.10)
                 or (seconds_since_last_trade == 0 or seconds_since_last_trade > min_buy_delay_in_seconds)):
 
                 # COMPRA sessione 1
@@ -140,6 +140,7 @@ class ro_cano_che_ritorna(object):
                         and ma10_last > ma10_2_min_ago
                         and ma12_last > ma15_last
                         and price > price_1_min_ago
+                        #and deviation_prev > 0.10
                         and price > price_2_min_ago):
                         
                         action = 'buy'
@@ -152,6 +153,7 @@ class ro_cano_che_ritorna(object):
                         and ma10_last > ma10_2_min_ago
                         and ma12_last > ma15_last
                         and price > price_1_min_ago
+                        #and deviation_prev > 0.10
                         and price > price_2_min_ago):
                         
                         action = 'buy'
