@@ -27,6 +27,7 @@ class ro_cano_che_ritorna(object):
         ma14_last, ma11_prev = self.algo_helper.ma_last_prev(14)
         ma15_last, ma15_prev = self.algo_helper.ma_last_prev(15)
         ma18_last, ma18_prev = self.algo_helper.ma_last_prev(18)
+        ma30_last, ma30_prev = self.algo_helper.ma_last_prev(30)
         ma43_last, ma43_prev = self.algo_helper.ma_last_prev(43)
         
         # moving average (2-3-4-5-7-8-20-43-100) di x minuti prima (NON METTERE MAI 1 min !)
@@ -37,6 +38,7 @@ class ro_cano_che_ritorna(object):
         ma11_3_min_ago = self.algo_helper.ma_minutes_ago(11, 3)
         ma14_2_min_ago = self.algo_helper.ma_minutes_ago(14, 2)
         ma15_2_min_ago = self.algo_helper.ma_minutes_ago(15, 2)
+        ma30_2_min_ago = self.algo_helper.ma_minutes_ago(30, 2)
         ma43_2_min_ago = self.algo_helper.ma_minutes_ago(43, 2)
         
         
@@ -198,21 +200,21 @@ class ro_cano_che_ritorna(object):
                 
                     
                 if (seconds_since_last_trade > 0 and seconds_since_last_trade <= 180
-                    and deviation > 0.10 and ma2_last < ma5_last and ma43 > ma43_2min_ago):
+                    and deviation > 0.10 and ma2_last < ma5_last and ma30 > ma30_2min_ago):
                     action = 'sell' 
                 
                 if (seconds_since_last_trade > 0 and seconds_since_last_trade <= 180
-                    and deviation > 0.01 and ma2_last < ma5_last and ma43 < ma43_2min_ago):
+                    and deviation > 0.01 and ma2_last < ma5_last and ma30 < ma30_2min_ago):
                     action = 'sell'   
                   
                   
                   
                 if (seconds_since_last_trade > 0 and seconds_since_last_trade <= 180
-                    and deviation < -0.80 and ma2_last < ma7_last and ma43 > ma43_2min_ago):
+                    and deviation < -0.50 and ma2_last < ma7_last and ma30 > ma30_2min_ago):
                     action = 'sell'      
                 
                 if (seconds_since_last_trade > 0 and seconds_since_last_trade <= 180
-                    and deviation < -0.7 and ma2_last < ma7_last and ma43 < ma43_2min_ago):
+                    and deviation < -0.6 and ma2_last < ma7_last and ma30 < ma30_2min_ago):
                     action = 'sell'
                 
                     
@@ -222,22 +224,22 @@ class ro_cano_che_ritorna(object):
                 #####################################################################################
                 
                 elif (seconds_since_last_trade > 180 and seconds_since_last_trade <= 300
-                      and deviation > 0.10 and ma2_last < ma7_last and ma43 > ma43_2min_ago):
+                      and deviation > 0.10 and ma2_last < ma7_last and ma30 > ma30_2min_ago):
                       action = 'sell'        
                     
                 if (seconds_since_last_trade > 180 and seconds_since_last_trade <= 300
-                    and deviation > 0.02 and ma2_last < ma7_last and ma43 < ma43_2min_ago):
+                    and deviation > 0.02 and ma2_last < ma7_last and ma30 < ma30_2min_ago):
                     action = 'sell'    
                     
                     
                     
                 if (seconds_since_last_trade > 180 and seconds_since_last_trade <= 300
-                    and deviation < -0.70 and ma2_last < ma7_last and ma43 > ma43_2min_ago):
+                    and deviation < -0.50 and ma2_last < ma7_last and ma30 > ma30_2min_ago):
                     action = 'sell' 
                 
                 
                 if (seconds_since_last_trade > 180 and seconds_since_last_trade <= 300
-                    and deviation < -0.60 and ma2_last < ma7_last and ma43 < ma43_2min_ago):
+                    and deviation < -0.60 and ma2_last < ma7_last and ma30 < ma30_2min_ago):
                     action = 'sell' 
                 
                 
@@ -247,21 +249,21 @@ class ro_cano_che_ritorna(object):
                 ########################################################################################
                 
                 elif (seconds_since_last_trade > 300 and seconds_since_last_trade <= 720
-                      and deviation > 0.10 and ma2_last < ma7_last and ma43 > ma43_2min_ago):
+                      and deviation > 0.10 and ma2_last < ma7_last and ma30 > ma30_2min_ago):
                       action = 'sell'        
                 
                 
                 if (seconds_since_last_trade > 300 and seconds_since_last_trade <= 720
-                    and deviation > 0.03 and ma2_last < ma7_last and ma43 < ma43_2min_ago):
+                    and deviation > 0.03 and ma2_last < ma7_last and ma30 < ma30_2min_ago):
                     action = 'sell'  
                 
                 
                 if (seconds_since_last_trade > 300 and seconds_since_last_trade <= 720
-                    and deviation < -0.60 and ma2_last < ma11_last and ma43 > ma43_2min_ago):
+                    and deviation < -0.50 and ma2_last < ma11_last and ma30 > ma30_2min_ago):
                     action = 'sell' 
                 
                 if (seconds_since_last_trade > 300 and seconds_since_last_trade <= 720
-                    and deviation < -0.50 and ma2_last < ma11_last and ma43 < ma43_2min_ago):
+                    and deviation < -0.60 and ma2_last < ma11_last and ma30 < ma30_2min_ago):
                     action = 'sell'
                 
                 
@@ -271,22 +273,22 @@ class ro_cano_che_ritorna(object):
                 ############################################################################################
                 
                 elif (seconds_since_last_trade > 720 and seconds_since_last_trade <= 1200
-                    and deviation > 0.20 and ma2_last < ma11_last and ma43 > ma43_2min_ago):
+                    and deviation > 0.20 and ma2_last < ma11_last and ma30 > ma30_2min_ago):
                     action = 'sell'     
                 
                 if (seconds_since_last_trade > 720 and seconds_since_last_trade <= 1200
-                    and deviation > 0.04 and ma2_last < ma11_last and ma43 < ma43_2min_ago):
+                    and deviation > 0.04 and ma2_last < ma11_last and ma30 < ma30_2min_ago):
                     action = 'sell'
                 
                 
                 
                 if (seconds_since_last_trade > 720 and seconds_since_last_trade <= 1200
-                    and deviation < -0.60 and ma2_last < ma11_last and ma43 > ma43_2min_ago):
+                    and deviation < -0.50 and ma2_last < ma11_last and ma30 > ma30_2min_ago):
                     action = 'sell' 
                 
                 
                 if (seconds_since_last_trade > 720 and seconds_since_last_trade <= 1200
-                    and deviation < -0.50 and ma2_last < ma11_last and ma43 < ma43_2min_ago):
+                    and deviation < -0.60 and ma2_last < ma11_last and ma30 < ma30_2min_ago):
                     action = 'sell' 
                 
                 
@@ -296,22 +298,22 @@ class ro_cano_che_ritorna(object):
                 
                 
                 elif (seconds_since_last_trade > 1200 and seconds_since_last_trade <= 1800
-                    and deviation > 0.30 and ma2_last < ma15_last and ma43 > ma43_2min_ago):
+                    and deviation > 0.30 and ma2_last < ma15_last and ma30 > ma30_2min_ago):
                     action = 'sell'   
                 
                 if (seconds_since_last_trade > 1200 and seconds_since_last_trade <= 1800
-                    and deviation > 0.05 and ma2_last < ma15_last and ma43 < ma43_2min_ago):
+                    and deviation > 0.05 and ma2_last < ma15_last and ma30 < ma30_2min_ago):
                     action = 'sell'
                 
                 
                 
                 if (seconds_since_last_trade > 1200 and seconds_since_last_trade <= 1800
-                    and deviation < -0.50 and ma2_last < ma15_last and ma43 > ma43_2min_ago):
+                    and deviation < -0.50 and ma2_last < ma15_last and ma30 > ma30_2min_ago):
                     action = 'sell'         
                     
                     
                 if (seconds_since_last_trade > 1200 and seconds_since_last_trade <= 1800
-                    and deviation < -0.40 and ma2_last < ma15_last and ma43 < ma43_2min_ago):
+                    and deviation < -0.60 and ma2_last < ma15_last and ma30 < ma30_2min_ago):
                     action = 'sell'    
                     
                     
@@ -322,22 +324,22 @@ class ro_cano_che_ritorna(object):
                 ####################################################################################################
                     
                 elif (seconds_since_last_trade > 1800 
-                    and deviation > 0.40 and ma2_last < ma18_last and ma43 > ma43_2min_ago):
+                    and deviation > 0.40 and ma2_last < ma18_last and ma30 > ma30_2min_ago):
                     action = 'sell'
                     
                     
                 if (seconds_since_last_trade > 1800
-                    and deviation > 0.06 and ma2_last < ma18_last and ma43 < ma43_2min_ago):
+                    and deviation > 0.06 and ma2_last < ma18_last and ma30 < ma30_2min_ago):
                     action = 'sell'    
                     
                     
                 if (seconds_since_last_trade > 1800
-                    and deviation < -0.40 and ma2_last < ma18_last and ma43 > ma43_2min_ago):
+                    and deviation < -0.30 and ma2_last < ma18_last and ma30 > ma30_2min_ago):
                     action = 'sell'         
                     
                     
                 if (seconds_since_last_trade > 1800
-                    and deviation < -0.30 and ma2_last < ma18_last and ma43 < ma43_2min_ago):
+                    and deviation < -0.40 and ma2_last < ma18_last and ma30 < ma30_2min_ago):
                     action = 'sell'
                 
                 
