@@ -208,11 +208,11 @@ class ro_cano_che_ritorna(object):
                   
                   
                 if (seconds_since_last_trade > 0 and seconds_since_last_trade <= 180
-                    and deviation < -0.49 and ma2_last < ma15_last and ma43 > ma43_2min_ago):
+                    and deviation < -0.60 and ma2_last < ma15_last and ma43 > ma43_2min_ago):
                     action = 'sell'      
                 
                 if (seconds_since_last_trade > 0 and seconds_since_last_trade <= 180
-                    and deviation < -0.39 and ma2_last < ma15_last and ma43 < ma43_2min_ago):
+                    and deviation < -0.50 and ma2_last < ma15_last and ma43 < ma43_2min_ago):
                     action = 'sell'
                 
                     
