@@ -51,8 +51,7 @@ class ro_cano_che_ritorna(object):
         prev_trade_action = self.algo_helper.prev_trade_action
         prev_trade_time = self.algo_helper.prev_trade_time
         prev_trade_price = self.algo_helper.prev_trade_price 
-        seconds_since_prev_price = self.algo_helper.seconds_since_prev_price
-      
+        seconds_since_prev_trade = self.algo_helper.seconds_since_prev_trade
         
         
         # PREZZO DI ADESSO (di mercato) - CURRENT PRICE
