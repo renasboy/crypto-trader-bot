@@ -199,7 +199,7 @@ class influx_algo_helper(object):
     @property
     def seconds_since_prev_trade(self):
         if self.prev_trade_time:
-            seconds_since_prev_trade = (datetime.now() - datetime.strptime(self.prev_trade_time[:self.prev_trade_time.index('.')], '%Y-%m-%dT%H:%M:%S')).seconds
+            seconds_since_prev_trade = (datetime.now() - datetime.strptime(self.prev_trade_time[:self.prev_trade_time.index('.')], '%Y-%m-%d %H:%M:%S')).seconds
             self.log('prev trade time {}'.format(self.prev_trade_time)) 
             self.log('seconds since prev trade: {}'.format(seconds_since_prev_trade))
             return seconds_since_prev_trade
