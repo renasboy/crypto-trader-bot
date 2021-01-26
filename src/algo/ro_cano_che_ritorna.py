@@ -28,7 +28,7 @@ class ro_cano_che_ritorna(object):
         ma15_last, ma15_prev = self.algo_helper.ma_last_prev(15)
         ma18_last, ma18_prev = self.algo_helper.ma_last_prev(18)
         ma30_last, ma30_prev = self.algo_helper.ma_last_prev(30)
-        ma43_last, ma43_prev = self.algo_helper.ma_last_prev(43)
+        #ma43_last, ma43_prev = self.algo_helper.ma_last_prev(43)
         
         # moving average (2-3-4-5-7-8-20-43-100) di x minuti prima (NON METTERE MAI 1 min !)
         ma2_2_min_ago = self.algo_helper.ma_minutes_ago(2, 2) 
@@ -39,7 +39,7 @@ class ro_cano_che_ritorna(object):
         ma14_2_min_ago = self.algo_helper.ma_minutes_ago(14, 2)
         ma15_2_min_ago = self.algo_helper.ma_minutes_ago(15, 2)
         ma30_2_min_ago = self.algo_helper.ma_minutes_ago(30, 2)
-        ma43_2_min_ago = self.algo_helper.ma_minutes_ago(43, 2)
+        #ma43_2_min_ago = self.algo_helper.ma_minutes_ago(43, 2)
         
         
         # LAST TRADE
