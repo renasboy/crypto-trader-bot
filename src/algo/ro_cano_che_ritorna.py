@@ -345,6 +345,16 @@ class ro_cano_che_ritorna(object):
                 
                 ######################################################################################################
                 
+                # rena' ho finito.
+                
+                # devi dire solO che  "VENDE SESSIONE 2" e "VENDE SESSIONE 3 IN POI" sono uguali alla VENDE SESSIONE 1 (# RIGA 192 )
+                
+                
+                # riga 357
+                # riga 390
+                
+                ######################################################################################################
+                
                         
             # VENDE SESSIONE 2
             elif self.session == 2: 
@@ -408,10 +418,11 @@ class ro_cano_che_ritorna(object):
                     action = 'sell'
 
                     
+            #######################################################################################      
                     
+                    # roma 26 gennaio 2021 - renato cavallari e mario barone
                     
-                    
-                    
+            #########################################################################################          
                     
             # SE LA PERDITA E' TROPPA VENDE SUBITO (SALVAGENTE) (stop loss)
             if deviation < -1.6 and ma2_prev > ma15_prev and ma2_last < ma15_last:
