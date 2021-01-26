@@ -1,10 +1,7 @@
 import time
 import os
-import datetime
+from datetime import datetime
 from influx_algo_helper import influx_algo_helper
-
-def cur_date_time():
-    return datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%dT%H:%M:%S.%fZ')
 
 def run():
     global algo_helper
@@ -70,8 +67,8 @@ def run():
                         symbol_1=SYMBOL_1,
                         symbol_2=SYMBOL_2,
                         session=str(algo_helper.last_trade_session).rjust(30, '0'),
-                        buy_time=algo_helper.last_trade_time,
-                        sell_time=cur_date_time()
+                        buy_time=algo_helper.last_trade_time.strftime('%Y-%m-%dT%H:%M:%S.%fZ'),
+                        sell_time=datetime.now(tz.gettz(os.environ['TZ'])).strftime('%Y-%m-%dT%H:%M:%S.%fZ')
                     ),
                     fields=dict(
                         buy_price=float(algo_helper.last_trade_price),

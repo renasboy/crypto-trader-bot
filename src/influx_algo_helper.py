@@ -1,7 +1,6 @@
 import os
 from datetime import datetime
 from dateutil import parser, tz
-import time
 
 from influxdb import InfluxDBClient
 
@@ -29,8 +28,7 @@ class influx_algo_helper(object):
         self.prev_trade_price = 0
 
     def utc2local(self, str_date):
-        utc = parser.parse(str_date)
-        return str(utc.astimezone(tz.gettz(os.environ['TZ'])))
+        return parser.parse(str_date).astimezone(tz.gettz(os.environ['TZ']))
 
     def write(self, data):
         self.influx.write_points(data)
@@ -191,8 +189,8 @@ class influx_algo_helper(object):
     @property
     def seconds_since_last_trade(self):
         if self.last_trade_time:
-            seconds_since_last_trade = (datetime.now() - datetime.strptime(self.last_trade_time[:self.last_trade_time.index('.')], '%Y-%m-%d %H:%M:%S')).seconds
-            self.log('last trade time {}'.format(self.last_trade_time)) 
+            self.log('last trade time: {}'.format(self.last_trade_time)) 
+            seconds_since_last_trade = (datetime.now(tz.gettz(os.environ['TZ'])) - self.last_trade_time).seconds
             self.log('seconds since last trade: {}'.format(seconds_since_last_trade))
             return seconds_since_last_trade
         return 0
@@ -200,12 +198,12 @@ class influx_algo_helper(object):
     @property
     def seconds_since_prev_trade(self):
         if self.prev_trade_time:
-            seconds_since_prev_trade = (datetime.now() - datetime.strptime(self.prev_trade_time[:self.prev_trade_time.index('.')], '%Y-%m-%d %H:%M:%S')).seconds
-            self.log('prev trade time {}'.format(self.prev_trade_time)) 
+            self.log('prev trade time: {}'.format(self.prev_trade_time)) 
+            seconds_since_prev_trade = (datetime.now(tz.gettz(os.environ['TZ'])) - self.prev_trade_time).seconds
             self.log('seconds since prev trade: {}'.format(seconds_since_prev_trade))
             return seconds_since_prev_trade
         return 0
 
     def log(self, message):
-        string_date = datetime.fromtimestamp(time.time()).strftime('%Y-%m-%dT%H:%M:%S.%fZ')
+        string_date = datetime.now(tz.gettz(os.environ['TZ'])).strftime('%Y-%m-%dT%H:%M:%S.%fZ')
         print('{} {}: {}'.format(string_date, self.label, message))
