@@ -195,12 +195,29 @@ class ro_cano_che_ritorna(object):
                     and deviation > 0.10 and ma2_last < ma5_last):
                     action = 'sell'
                     
-                   
+                if (seconds_since_last_trade > 0 and seconds_since_last_trade <= 180
+                    and deviation > 0.20 and ma2_last < ma5_last and ma43 > ma43_2min_ago):
+                    action = 'sell' 
+                
+                if (seconds_since_last_trade > 0 and seconds_since_last_trade <= 180
+                    and deviation > 0.01 and ma2_last < ma5_last and ma43 < ma43_2min_ago):
+                    action = 'sell'   
+                    
+                    
+                    
                     
                 if (seconds_since_last_trade > 0 and seconds_since_last_trade <= 180
-                    and deviation < -0.49 and ma2_last < ma15_last):
+                    and deviation < -0.59 and ma2_last < ma15_last):
                     action = 'sell'      
                   
+                if (seconds_since_last_trade > 0 and seconds_since_last_trade <= 180
+                    and deviation < -0.49 and ma2_last < ma15_last and ma43 > ma43_2min_ago):
+                    action = 'sell'      
+                
+                if (seconds_since_last_trade > 0 and seconds_since_last_trade <= 180
+                    and deviation < -0.39 and ma2_last < ma15_last and ma43 < ma43_2min_ago):
+                    action = 'sell'
+                
                     
                     
                  ###################################################################################
