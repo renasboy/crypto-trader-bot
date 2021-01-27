@@ -1,5 +1,15 @@
 #!/bin/bash
 
+usage() {
+    echo "Usage $0 ALGO"
+    exit 1
+}
+
+[[ -n "$1" ]] || usage
+
+algo=$1
+
 echo reset influx trade
-curl -X POST "http://localhost:8086/query?u=root&p=root&db=crypto_trader_bot&q=DROP+measurement+trade" -H "Content-Type: application/json" -H "Accept: application/json"
-curl -X POST "http://localhost:8086/query?u=root&p=root&db=crypto_trader_bot&q=DROP+measurement+session" -H "Content-Type: application/json" -H "Accept: application/json"
+#curl -X POST "http://localhost:8086/query?u=root&p=root&db=crypto_trader_bot&q=DROP+measurement+trade" -H "Content-Type: application/json" -H "Accept: application/json"
+#curl -X POST "http://localhost:8086/query?u=root&p=root&db=crypto_trader_bot&q=DROP+measurement+session" -H "Content-Type: application/json" -H "Accept: application/json"
+curl -X POST "http://localhost:8086/query?u=root&p=root&db=crypto_trader_bot&q=DROP+SERIES+FROM+trade,session+WHERE+algo='$1'" -H "Content-Type: application/json" -H "Accept: application/json"
