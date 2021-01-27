@@ -9,7 +9,10 @@ test -n "`uname -m | fgrep arm`" && sed -i 's@grafana/grafana:latest@fg2it/grafa
 echo add crypto-trader-bot-listener containers
 for conf_file in conf/*.conf; do
     conf_file_name=$(basename $conf_file .conf)
-    container_name=$(awk -F '=' '/EXCHANGE=/{print $2}' $conf_file | sed -e 's/"//g' -e "s/'//g")_listener
+    exchange=$(awk -F '=' '/EXCHANGE=/{print $2}' $conf_file | sed -e 's/"//g' -e "s/'//g")
+    symbol_1=$(awk -F '=' '/SYMBOL_1=/{print $2}' $conf_file | sed -e 's/"//g' -e "s/'//g" | tr A-Z a-z)
+    symbol_2=$(awk -F '=' '/SYMBOL_2=/{print $2}' $conf_file | sed -e 's/"//g' -e "s/'//g" | tr A-Z a-z)
+    container_name=${exchange}_${symbol_1}_${symbol_2}_listener
     test -z "`fgrep $container_name docker-compose.yml`" && sed templates/crypto-trader-bot-listener.yml -e "s/CONTAINER_NAME/$container_name/g" -e "s/CONF_FILE_NAME/$conf_file_name/g" >> docker-compose.yml
 done
 
