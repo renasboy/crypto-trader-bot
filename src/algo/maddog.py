@@ -60,8 +60,8 @@ class maddog(object):
         price_2_min_ago = self.algo_helper.price_minutes_ago(2)
         
         
-        # la deviaton stabilisce i limiti della VENDITA MENTRE SALE e della VENDITA MENTRE SCENDE.
-        deviation = (price / last_trade_price - 1) * 100 if last_trade_price else 0
+        # formula deviation per comprare un po' piu' sopra del SELL
+        deviation = (ma2_last / last_trade_price - 1) * 100 if last_trade_price else 0
         self.algo_helper.log('deviation: {}'.format(deviation))
         
         action = None
@@ -86,8 +86,8 @@ class maddog(object):
         # NON TOCCARE QUESTA CONDIZIONE (QUESTA DICE CHE STA IN MODO BUY, DEVO COMPRARE)
         if self.open and self.session and last_trade_action != 'buy':
 
-            # COMPRA UN PO' PIU' SOPRA DELL' ULTIMO SELL ( aggiungere compra un po' piu' sopra dell' ultimo BUY deviation > 0.27 )
-            if ((seconds_since_last_trade > 0 and seconds_since_last_trade <= min_buy_delay_in_seconds and deviation > 0.4)
+            # COMPRA UN PO' PIU' SOPRA DELL' ULTIMO SELL ( aggiungere compra un po' piu' sopra dell' ultimo BUY deviation > 0.20 )
+            if ((seconds_since_last_trade > 0 and seconds_since_last_trade <= min_buy_delay_in_seconds and deviation > 0.2)
                 or (seconds_since_last_trade == 0 or seconds_since_last_trade > min_buy_delay_in_seconds)):
 
                 # COMPRA sessione 1
