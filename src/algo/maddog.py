@@ -52,8 +52,13 @@ class maddog(object):
         last_trade_price = self.algo_helper.last_trade_price 
         seconds_since_last_trade = self.algo_helper.seconds_since_last_trade
         
-        # CURRENT PRICE
+        # PREZZO DI ADESSO (di mercato) - CURRENT PRICE
         price = self.algo_helper.price
+        
+        # PREZZO PRECEDENTE (di mercato) - PREV PRICE
+        price_1_min_ago = self.algo_helper.price_minutes_ago(1)
+        price_2_min_ago = self.algo_helper.price_minutes_ago(2)
+        
         
         # la deviaton stabilisce i limiti della VENDITA MENTRE SALE e della VENDITA MENTRE SCENDE.
         deviation = (price / last_trade_price - 1) * 100 if last_trade_price else 0
@@ -98,7 +103,9 @@ class maddog(object):
                         #and ma34_last > ma34_2_min_ago
                         #and ma43_last > ma43_2_min_ago
                         #and ma50_last > ma50_2_min_ago
-                        and macd < 50):
+                        and macd < 50
+                        and price > price_1_min_ago
+                        and price > price_2_min_ago):
                         action = 'buy'
                     
                 # COMPRA sessione 2
@@ -114,7 +121,9 @@ class maddog(object):
                         #and ma34_last > ma34_2_min_ago
                         #and ma43_last > ma43_2_min_ago
                         #and ma50_last > ma50_2_min_ago
-                        and macd < 50):
+                        and macd < 50
+                        and price > price_1_min_ago
+                        and price > price_2_min_ago):
                         action = 'buy'
                   
                 # COMPRA sessione 3 in poi
@@ -129,7 +138,9 @@ class maddog(object):
                         #and ma34_last > ma34_2_min_ago
                         #and ma43_last > ma43_2_min_ago
                         #and ma50_last > ma50_2_min_ago
-                        and macd < 50):
+                        and macd < 50
+                        and price > price_1_min_ago
+                        and price > price_2_min_ago):
                         action = 'buy'
     
         #######################################################################
