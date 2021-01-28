@@ -44,7 +44,7 @@ class maddog(object):
         ma16_3_min_ago = self.algo_helper.ma_minutes_ago(16, 3)
         ma34_2_min_ago = self.algo_helper.ma_minutes_ago(34, 2)
         ma43_2_min_ago = self.algo_helper.ma_minutes_ago(43, 2)
-        ma50_2_min_ago = self.algo_helper.ma_minutes_ago(50, 2)
+        #ma50_2_min_ago = self.algo_helper.ma_minutes_ago(50, 2)
         
         # LAST TRADE
         last_trade_action = self.algo_helper.last_trade_action
