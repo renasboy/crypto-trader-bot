@@ -126,12 +126,12 @@ class ro_cano_che_ritorna(object):
                 or (seconds_since_prev_trade > 0 and seconds_since_prev_trade <= min_prev_buy_delay_in_seconds and deviation_prev > 0.10)
                 or (seconds_since_last_trade == 0 or seconds_since_last_trade > min_buy_delay_in_seconds)):
 
-                # COMPRA sessione 1
+                # COMPRA sessione 1   - ma7 - ma15 fondamentale
                 if self.session == 1:
                     if (ma2_last > ma2_2_min_ago
                         and ma4_last > ma4_2_min_ago
                         and ma10_last > ma10_2_min_ago
-                        and ma12_last >= ma15_last
+                        and ma7_last >= ma15_last
                         #and ma18_last > ma21_last
                         #and ma2 > ma18 di 0.16
                         and price > price_1_min_ago
@@ -139,12 +139,12 @@ class ro_cano_che_ritorna(object):
                        
                         action = 'buy'
                     
-                # COMPRA sessione 2
+                # COMPRA sessione 2   - ma7 - ma15 fondamentale
                 elif self.session == 2:
                     if (ma2_last > ma2_2_min_ago
                         and ma4_last > ma4_2_min_ago
                         and ma10_last > ma10_2_min_ago
-                        and ma12_last >= ma15_last
+                        and ma7_last >= ma15_last
                         #and ma18_last > ma21_last
                         #and (( ma2_last / ma18_last ) -1 ) > 0.3
                         and price > price_1_min_ago
@@ -155,12 +155,12 @@ class ro_cano_che_ritorna(object):
                         action = 'buy'
                         
                   
-                # COMPRA sessione 3 in poi
+                # COMPRA sessione 3 in poi   - ma7 - ma15 fondamentale
                 else:
                     if (ma2_last > ma2_2_min_ago
                         and ma4_last > ma4_2_min_ago
-                        and ma10_last > ma10_2_min_ago
-                        #and ma12_last > ma15_last
+                        #and ma10_last > ma10_2_min_ago
+                        and ma7_last > ma15_last   
                         #and ma18_last > ma21_last
                         #and ma2 > ma18 di 0.16
                         and price > price_1_min_ago
