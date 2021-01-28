@@ -94,8 +94,9 @@ class maddog(object):
                         and ma7_last > ma7_2_min_ago
                         and ma11_last > ma11_2_min_ago
                         and ma16_last > ma16_2_min_ago
-                        and ma34_last > ma34_2_min_ago
-                        and ma43_last > ma43_2_min_ago
+                        and ma18_last > ma21_last
+                        #and ma34_last > ma34_2_min_ago
+                        #and ma43_last > ma43_2_min_ago
                         #and ma50_last > ma50_2_min_ago
                         and macd < 50):
                         action = 'buy'
@@ -109,8 +110,9 @@ class maddog(object):
                         and ma7_last > ma7_2_min_ago
                         and ma11_last > ma11_2_min_ago
                         and ma16_last > ma16_2_min_ago
-                        and ma34_last > ma34_2_min_ago
-                        and ma43_last > ma43_2_min_ago
+                        and ma18_last > ma21_last
+                        #and ma34_last > ma34_2_min_ago
+                        #and ma43_last > ma43_2_min_ago
                         #and ma50_last > ma50_2_min_ago
                         and macd < 50):
                         action = 'buy'
@@ -124,8 +126,8 @@ class maddog(object):
                         and ma7_last > ma7_2_min_ago
                         and ma11_last > ma11_2_min_ago
                         and ma16_last > ma16_2_min_ago
-                        and ma34_last > ma34_2_min_ago
-                        and ma43_last > ma43_2_min_ago
+                        #and ma34_last > ma34_2_min_ago
+                        #and ma43_last > ma43_2_min_ago
                         #and ma50_last > ma50_2_min_ago
                         and macd < 50):
                         action = 'buy'
