@@ -193,34 +193,34 @@ class ro_cano_che_ritorna(object):
             # VENDITA 1 - da 0 a 3 minuti
             ################################################################################
             if seconds_since_last_trade > 0 and seconds_since_last_trade <= 180:
-                if deviation > 0.10 and ma2_last < ma5_last and ma30_last > ma30_2_min_ago:
+                if deviation > 0.10 and ma2_last < ma5_last and ma33_last > ma33_3_min_ago:
                     action = 'sell'
             
-                elif deviation > 0.01 and ma2_last < ma7_last and ma30_last < ma30_2_min_ago:
+                elif deviation > 0.01 and ma2_last < ma7_last and ma33_last < ma33_3_min_ago:
                     action = 'sell'
               
-                elif deviation < -0.50 and ma2_last < ma7_last and ma30_last > ma30_2_min_ago:
+                elif deviation < -0.50 and ma2_last < ma7_last and ma33_last > ma33_3_min_ago:
                     action = 'sell'
             
-                elif deviation < -0.33 and ma2_last < ma7_last and ma30_last < ma30_2_min_ago:
+                elif deviation < -0.33 and ma2_last < ma7_last and ma33_last < ma33_3_min_ago:
                     action = 'sell'
                 
                 
             #####################################################################################
             # VENDITA 1 - da 3 a 5 minuti
             #####################################################################################
-            
             elif seconds_since_last_trade > 180 and seconds_since_last_trade <= 300:
-                if deviation > 0.10 and ma2_last < ma7_last and ma30_last > ma30_2_min_ago:
+                
+                if deviation > 0.10 and ma2_last < ma7_last and ma33_last > ma33_3_min_ago:
                    action = 'sell'        
                 
-                elif deviation > 0.01 and ma2_last < ma7_last and ma30_last < ma30_2_min_ago:
+                elif deviation > 0.01 and ma2_last < ma7_last and ma33_last < ma33_3_min_ago:
                     action = 'sell'    
                 
-                elif deviation < -0.50 and ma2_last < ma7_last and ma30_last > ma30_2_min_ago:
+                elif deviation < -0.50 and ma2_last < ma7_last and ma33_last > ma33_3_min_ago:
                     action = 'sell' 
             
-                elif deviation < -0.33 and ma2_last < ma7_last and ma30_last < ma30_2_min_ago:
+                elif deviation < -0.33 and ma2_last < ma7_last and ma33_last < ma33_3_min_ago:
                     action = 'sell' 
             
             ########################################################################################
@@ -228,64 +228,67 @@ class ro_cano_che_ritorna(object):
             ########################################################################################
             elif seconds_since_last_trade > 300 and seconds_since_last_trade <= 720:
                 
-                if deviation > 0.10 and ma2_last < ma10_last and ma30_last > ma30_2_min_ago:
+                if deviation > 0.10 and ma2_last < ma10_last and ma33_last > ma33_3_min_ago:
                     action = 'sell'        
             
-                elif deviation > 0.01 and ma2_last < ma7_last and ma30_last < ma30_2_min_ago:
+                elif deviation > 0.01 and ma2_last < ma7_last and ma33_last < ma33_3_min_ago:
                     action = 'sell'  
             
-                elif deviation < -0.50 and ma2_last < ma10_last and ma30_last > ma30_2_min_ago:
+                elif deviation < -0.50 and ma2_last < ma10_last and ma33_last > ma33_3_min_ago:
                     action = 'sell' 
             
-                elif deviation < -0.33 and ma2_last < ma8_last and ma30_last < ma30_2_min_ago:
+                elif deviation < -0.33 and ma2_last < ma8_last and ma33_last < ma33_3_min_ago:
                     action = 'sell'
             
             ############################################################################################
             # VENDITA 1 - da 12 a 20 minuti
             ############################################################################################
             elif seconds_since_last_trade > 720 and seconds_since_last_trade <= 1200:
-                if deviation > 0.20 and ma2_last < ma11_last and ma30_last > ma30_2_min_ago:
+                
+                if deviation > 0.20 and ma2_last < ma11_last and ma33_last > ma33_3_min_ago:
                     action = 'sell' 
             
-                elif deviation > 0.01 and ma2_last < ma7_last and ma30_last < ma30_2_min_ago:
+                elif deviation > 0.01 and ma2_last < ma7_last and ma33_last < ma33_3_min_ago:
                     action = 'sell'
             
-                elif deviation < -0.50 and ma2_last < ma11_last and ma30_last > ma30_2_min_ago:
+                elif deviation < -0.50 and ma2_last < ma11_last and ma33_last > ma33_3_min_ago:
                     action = 'sell' 
             
-                elif deviation < -0.33 and ma2_last < ma11_last and ma30_last < ma30_2_min_ago:
+                elif deviation < -0.33 and ma2_last < ma11_last and ma33_last < ma33_3_min_ago:
                     action = 'sell' 
             
             #################################################################################################
             # VENDITA 1 - da 20 a 30 minuti
             ###################################################################################################
             elif seconds_since_last_trade > 1200 and seconds_since_last_trade <= 1800:
-                if deviation > 0.30 and ma2_last < ma15_last and ma30_last > ma30_2_min_ago:
+                
+                if deviation > 0.30 and ma2_last < ma15_last and ma33_last > ma33_3_min_ago:
                     action = 'sell'   
             
-                elif deviation > 0.01 and ma2_last < ma10_last and ma30_last < ma30_2_min_ago:
+                elif deviation > 0.01 and ma2_last < ma10_last and ma33_last < ma33_3_min_ago:
                     action = 'sell'
             
-                elif deviation < -0.50 and ma2_last < ma15_last and ma30_last > ma30_2_min_ago:
+                elif deviation < -0.50 and ma2_last < ma15_last and ma33_last > ma33_3_min_ago:
                     action = 'sell'         
                 
-                elif deviation < -0.33 and ma2_last < ma15_last and ma30_last < ma30_2_min_ago:
+                elif deviation < -0.33 and ma2_last < ma15_last and ma33_last < ma33_3_min_ago:
                     action = 'sell'    
                 
             ################################################################################################## 
             # VENDITA 1 - da 30 minuti
             ####################################################################################################
             elif seconds_since_last_trade > 1800:
-                if deviation > 0.40 and ma2_last < ma18_last and ma30_last > ma30_2_min_ago:
+                
+                if deviation > 0.40 and ma2_last < ma18_last and ma33_last > ma33_3_min_ago:
                     action = 'sell'
                 
-                elif deviation > 0.01 and ma2_last < ma10_last and ma30_last < ma30_2_min_ago:
+                elif deviation > 0.01 and ma2_last < ma10_last and ma33_last < ma33_3_min_ago:
                     action = 'sell'    
                 
-                elif deviation < -0.30 and ma2_last < ma18_last and ma30_last > ma30_2_min_ago:
+                elif deviation < -0.30 and ma2_last < ma18_last and ma33_last > ma33_3_min_ago:
                     action = 'sell'         
                 
-                elif deviation < -0.29 and ma2_last < ma18_last and ma30_last < ma30_2_min_ago:
+                elif deviation < -0.29 and ma2_last < ma18_last and ma33_last < ma33_3_min_ago:
                     action = 'sell'
                 
                     
