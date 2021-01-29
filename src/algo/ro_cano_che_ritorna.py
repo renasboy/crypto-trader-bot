@@ -76,8 +76,8 @@ class ro_cano_che_ritorna(object):
         # VENDE DOPO 100 minuti (TEMPO DOPO IL QUALE ro cano ritorna a casa) ( 100 minuti = 100 * 60 = 6000 secondi ) ) ("E SE" ma7 < ma7 3 min ago)
         max_hold_time_in_seconds = 6000
         
-        # TEMPO DOPO IL QUALE "se ro cano COMINCIA A PERDERE LA FORZA" vende ! ( 20 minuti = 20 * 60 = 1200 secondi ) ( ma anche alcune ma devono incrociare al ribasso )
-        max_hold_without_force_time_in_seconds = 1200
+        # TEMPO DOPO IL QUALE "se ro cano COMINCIA A PERDERE LA FORZA" vende! vedi riga 315 (10 minuti = 10 * 60 = 600 secondi) (ma anche alcune ma devono incrociare al ribasso)
+        max_hold_without_force_time_in_seconds = 600
         
         # TEMPO in cui SI AGGIUNGE LA DEVIATION !  (a tutte le altre condizioni gia' stabilite per comprare)  
         # per ULTIMO trade ( 10 minuti = 10 * 60 = 600 secondi )
@@ -312,7 +312,7 @@ class ro_cano_che_ritorna(object):
            
             # RO CANO TORNA A CASA. (significa che ro cano VENDE !!!)
             
-            # 1) ro cano VENDE SE DIMINUISCE LA FORZA ! ( vende se perdita  < -1.0 e se etc.)
+            # 1) ro cano VENDE SE DIMINUISCE LA FORZA ! ( vende se perdita  < -0.50 e se etc.)
             if (seconds_since_last_trade > max_hold_without_force_time_in_seconds
                 and deviation < -0.50
                 and ma2_last < ma15_last
