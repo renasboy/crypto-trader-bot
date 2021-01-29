@@ -305,7 +305,7 @@ class ro_cano_che_ritorna(object):
             #########################################################################################          
                     
             # SE LA PERDITA E' TROPPA VENDE SUBITO (SALVAGENTE) (stop loss)
-            if deviation < -1.6 and ma2_prev > ma15_prev and ma2_last < ma15_last:
+            if deviation < -0.8 and ma2_prev > ma15_prev and ma2_last < ma15_last:
                 action = 'sell'
             
             # IDEA da 241 secondi dal buy VENDI se ma2 < ma16 ( SI ALZA LA MEDIA )
