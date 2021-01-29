@@ -143,17 +143,10 @@ class ro_cano_che_ritorna(object):
                        
                         action = 'buy'
                         
-                 if self.session == 1:
-                    if (ma2_last > ma2_2_min_ago
-                        and ma4_last > ma4_2_min_ago
-                        and ma10_last > ma10_2_min_ago
-                        and ma7_last >= ma15_last
-                        #and ma18_last > ma21_last
-                        and (( ma2_last / ma18_last ) - 1 ) * 100 > 0.29
-                        and ma32_last < ma32_3_min_ago
-                        and price > price_1_min_ago
-                        and price > price_2_min_ago):
-                       
+                
+                    elif (( ma2_last / ma18_last ) - 1 ) * 100 > 0.29
+                        and ma32_last < ma32_3_min_ago):
+                     
                         action = 'buy'       
                         
                         
@@ -174,17 +167,9 @@ class ro_cano_che_ritorna(object):
                         action = 'buy'
                         
                         
-                     if (ma2_last > ma2_2_min_ago
-                        and ma4_last > ma4_2_min_ago
-                        and ma10_last > ma10_2_min_ago
-                        and ma7_last >= ma15_last
-                        #and ma18_last > ma21_last
-                        and (( ma2_last / ma18_last ) - 1 ) * 100 > 0.29
-                        and ma32_last < ma32_3_min_ago 
-                        and price > price_1_min_ago
-                        and price > price_2_min_ago):
-                        #and deviation_prev > 0.10 nei 10 minuti dall' ultimo verde
-                        #and deviation > 0.15 nei 9 minuti dall' ultimo rosso
+                     elif self.session == 2:
+                        elif (( ma2_last / ma18_last ) - 1 ) * 100 > 0.29
+                        and ma32_last < ma32_3_min_ago):
                         
                         action = 'buy'
                            
@@ -193,7 +178,7 @@ class ro_cano_che_ritorna(object):
                         
                   
                 # COMPRA sessione 3 in poi   - ma7 - ma15 fondamentale
-                else:
+                elif self.session == 3:
                     if (ma2_last > ma2_2_min_ago
                         and ma4_last > ma4_2_min_ago
                         #and ma10_last > ma10_2_min_ago
@@ -207,18 +192,11 @@ class ro_cano_che_ritorna(object):
                         action = 'buy'
                         
     
-                     if (ma2_last > ma2_2_min_ago
-                        and ma4_last > ma4_2_min_ago
-                        #and ma10_last > ma10_2_min_ago
-                        and ma7_last > ma15_last   
-                        #and ma18_last > ma21_last
-                        and (( ma2_last / ma18_last ) - 1 ) * 100 > 0.29
-                        and ma32_last < ma32_3_min_ago 
-                        and price > price_1_min_ago
-                        and price > price_2_min_ago):
-                        #and deviation_prev > 0.10 nei 10 minuti dall' ultimo verde
-                        #and deviation > 0.15 nei 9 minuti dall' ultimo rosso
+                    elif self.session == 3:
+                        elif (( ma2_last / ma18_last ) - 1 ) * 100 > 0.29
+                        and ma32_last < ma32_3_min_ago):
                         
+                       
                         action = 'buy'   
                         
                         
