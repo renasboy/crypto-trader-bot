@@ -289,13 +289,13 @@ class ro_cano_che_ritorna(object):
             ####################################################################################################
             elif seconds_since_last_trade > 1800:
                 
-                if deviation > 0.40 and ma2_last < ma18_last and ma32_last > ma32_3_min_ago:
+                if deviation > 0.40 and ma2_last < ma15_last and ma32_last > ma32_3_min_ago:
                     action = 'sell'
                 
                 elif deviation > 0.01 and ma2_last < ma11_last and ma32_last < ma32_3_min_ago:
                     action = 'sell'    
                 
-                elif deviation < -0.30 and ma2_last < ma18_last and ma32_last > ma32_3_min_ago:
+                elif deviation < -0.30 and ma2_last < ma15_last and ma32_last > ma32_3_min_ago:
                     action = 'sell'         
                 
                 elif deviation < -0.29 and ma2_last < ma11_last and ma32_last < ma32_3_min_ago:
