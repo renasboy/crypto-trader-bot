@@ -129,7 +129,8 @@ class ro_cano_che_ritorna(object):
                 or (seconds_since_prev_trade > 0 and seconds_since_prev_trade <= min_prev_buy_delay_in_seconds and deviation_prev > 0.10)
                 or (seconds_since_last_trade == 0 or seconds_since_last_trade > min_buy_delay_in_seconds)):
 
-                # COMPRA sessione 1   - ma7 - ma15 fondamentale
+               
+                # COMPRA sessione 1   - ma7 - ma15 fondamentale ( qua rompo, compa caro, dalla 133 alla 222 )
                 if self.session == 1:
                     if (ma2_last > ma2_2_min_ago
                         and ma4_last > ma4_2_min_ago
@@ -141,6 +142,22 @@ class ro_cano_che_ritorna(object):
                         and price > price_2_min_ago):
                        
                         action = 'buy'
+                        
+                 if self.session == 1:
+                    if (ma2_last > ma2_2_min_ago
+                        and ma4_last > ma4_2_min_ago
+                        and ma10_last > ma10_2_min_ago
+                        and ma7_last >= ma15_last
+                        #and ma18_last > ma21_last
+                        and (( ma2_last / ma18_last ) - 1 ) * 100 > 0.29
+                        and ma32_last < ma32_3_min_ago
+                        and price > price_1_min_ago
+                        and price > price_2_min_ago):
+                       
+                        action = 'buy'       
+                        
+                        
+                        
                     
                 # COMPRA sessione 2   - ma7 - ma15 fondamentale
                 elif self.session == 2:
@@ -149,13 +166,30 @@ class ro_cano_che_ritorna(object):
                         and ma10_last > ma10_2_min_ago
                         and ma7_last >= ma15_last
                         #and ma18_last > ma21_last
-                        #and (( ma2_last / ma18_last ) -1 ) > 0.3
                         and price > price_1_min_ago
                         and price > price_2_min_ago):
                         #and deviation_prev > 0.10 nei 10 minuti dall' ultimo verde
                         #and deviation > 0.15 nei 9 minuti dall' ultimo rosso
                         
                         action = 'buy'
+                        
+                        
+                     if (ma2_last > ma2_2_min_ago
+                        and ma4_last > ma4_2_min_ago
+                        and ma10_last > ma10_2_min_ago
+                        and ma7_last >= ma15_last
+                        #and ma18_last > ma21_last
+                        and (( ma2_last / ma18_last ) - 1 ) * 100 > 0.29
+                        and ma32_last < ma32_3_min_ago 
+                        and price > price_1_min_ago
+                        and price > price_2_min_ago):
+                        #and deviation_prev > 0.10 nei 10 minuti dall' ultimo verde
+                        #and deviation > 0.15 nei 9 minuti dall' ultimo rosso
+                        
+                        action = 'buy'
+                           
+                        
+                        
                         
                   
                 # COMPRA sessione 3 in poi   - ma7 - ma15 fondamentale
@@ -165,7 +199,6 @@ class ro_cano_che_ritorna(object):
                         #and ma10_last > ma10_2_min_ago
                         and ma7_last > ma15_last   
                         #and ma18_last > ma21_last
-                        #and ma2 > ma18 di 0.16
                         and price > price_1_min_ago
                         and price > price_2_min_ago):
                         #and deviation_prev > 0.10 nei 10 minuti dall' ultimo verde
@@ -174,6 +207,21 @@ class ro_cano_che_ritorna(object):
                         action = 'buy'
                         
     
+                     if (ma2_last > ma2_2_min_ago
+                        and ma4_last > ma4_2_min_ago
+                        #and ma10_last > ma10_2_min_ago
+                        and ma7_last > ma15_last   
+                        #and ma18_last > ma21_last
+                        and (( ma2_last / ma18_last ) - 1 ) * 100 > 0.29
+                        and ma32_last < ma32_3_min_ago 
+                        and price > price_1_min_ago
+                        and price > price_2_min_ago):
+                        #and deviation_prev > 0.10 nei 10 minuti dall' ultimo verde
+                        #and deviation > 0.15 nei 9 minuti dall' ultimo rosso
+                        
+                        action = 'buy'   
+                        
+                        
                         
     
         #####################################################################
