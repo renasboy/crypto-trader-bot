@@ -15,6 +15,7 @@ class ro_cano_che_ritorna(object):
         ma8_last, ma8_prev = self.algo_helper.ma_last_prev(8)
         ma10_last, ma10_prev = self.algo_helper.ma_last_prev(10)
         ma12_last, ma12_prev = self.algo_helper.ma_last_prev(12)
+        ma13_last, ma13_prev = self.algo_helper.ma_last_prev(13)
         ma15_last, ma15_prev = self.algo_helper.ma_last_prev(15)
         ma28_last, ma28_prev = self.algo_helper.ma_last_prev(28)
         ma32_last, ma32_prev = self.algo_helper.ma_last_prev(32)
@@ -208,28 +209,28 @@ class ro_cano_che_ritorna(object):
                 if (
                     deviation > 0.10
                     and ma2_last < ma7_last
-                    and ma32_last > ma33_3_min_ago
+                    and ma32_last > ma32_3_min_ago
                 ):
                     action = "sell"
 
                 elif (
                     deviation > 0.01
                     and ma2_last < ma5_last
-                    and ma32_last < ma33_3_min_ago
+                    and ma32_last < ma32_3_min_ago
                 ):
                     action = "sell"
 
                 elif (
                     deviation < -0.50
                     and ma2_last < ma7_last
-                    and ma32_last > ma33_3_min_ago
+                    and ma32_last > ma32_3_min_ago
                 ):
                     action = "sell"
 
                 elif (
                     deviation < -0.34
                     and ma2_last < ma5_last
-                    and ma32_last < ma33_3_min_ago
+                    and ma32_last < ma32_3_min_ago
                 ):
                     action = "sell"
 
