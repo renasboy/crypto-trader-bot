@@ -9,7 +9,7 @@ import requests
 import websocket
 
 
-class coinbasepro(object):
+class coinbasepro:
 
     # NOTE this FEE is until 10K
     FEE = 0.005

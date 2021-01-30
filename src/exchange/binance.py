@@ -9,7 +9,7 @@ import requests
 import websocket
 
 
-class binance(object):
+class binance:
 
     FEE = 0.001
 

@@ -1,4 +1,4 @@
-class maddog(object):
+class maddog:
     def __init__(self, helper):
         self.algo_helper = helper
         self.session = 0

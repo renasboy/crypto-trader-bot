@@ -9,7 +9,7 @@ import requests
 import websocket
 
 
-class kraken(object):
+class kraken:
 
     PRICE_MULTIPLIER = 0.00001
     VOLUME_MULTIPLIER = 0.00000001

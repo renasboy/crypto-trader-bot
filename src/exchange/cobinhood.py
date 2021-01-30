@@ -9,7 +9,7 @@ import requests
 import websocket
 
 
-class cobinhood(object):
+class cobinhood:
     def __init__(self, symbol_1, symbol_2, public_key, private_key, *args, **kwargs):
         self.symbol_1 = symbol_1.upper()
         self.symbol_2 = symbol_2.upper()

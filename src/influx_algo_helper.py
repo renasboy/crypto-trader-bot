@@ -5,7 +5,7 @@ from dateutil import parser, tz
 from influxdb import InfluxDBClient
 
 
-class influx_algo_helper(object):
+class influx_algo_helper:
     def __init__(self, algo, exchange, symbol_1, symbol_2):
         self.algo = algo
         self.exchange = exchange

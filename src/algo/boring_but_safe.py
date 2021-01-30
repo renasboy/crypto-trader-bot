@@ -1,4 +1,4 @@
-class boring_but_safe(object):
+class boring_but_safe:
     def __init__(self, helper):
         self.algo_helper = helper
 

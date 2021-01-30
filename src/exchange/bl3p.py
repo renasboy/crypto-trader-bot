@@ -8,7 +8,7 @@ import requests
 import websocket
 
 
-class bl3p(object):
+class bl3p:
 
     PRICE_MULTIPLIER = 0.00001
     VOLUME_MULTIPLIER = 0.00000001

@@ -1,4 +1,4 @@
-class ro_cano_che_ritorna(object):
+class ro_cano_che_ritorna:
     def __init__(self, helper):
         self.algo_helper = helper
         self.session = 0

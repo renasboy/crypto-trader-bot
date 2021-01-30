@@ -1,7 +1,7 @@
 from datetime import datetime
 
 
-class ro_cano_quando_esce(object):
+class ro_cano_quando_esce:
     def __init__(self, helper):
         self.algo_helper = helper
         self.session = 0
