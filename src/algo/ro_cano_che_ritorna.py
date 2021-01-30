@@ -14,6 +14,7 @@ class ro_cano_che_ritorna(object):
         ma7_last, ma7_prev = self.algo_helper.ma_last_prev(7)
         ma8_last, ma8_prev = self.algo_helper.ma_last_prev(8)
         ma10_last, ma10_prev = self.algo_helper.ma_last_prev(10)
+        ma11_last, ma11_prev = self.algo_helper.ma_last_prev(11)
         ma12_last, ma12_prev = self.algo_helper.ma_last_prev(12)
         ma13_last, ma13_prev = self.algo_helper.ma_last_prev(13)
         ma15_last, ma15_prev = self.algo_helper.ma_last_prev(15)
@@ -24,19 +25,17 @@ class ro_cano_che_ritorna(object):
         ma2_2_min_ago = self.algo_helper.ma_minutes_ago(2, 2)
         ma4_2_min_ago = self.algo_helper.ma_minutes_ago(4, 2)
         ma10_2_min_ago = self.algo_helper.ma_minutes_ago(10, 2)
-        ma30_2_min_ago = self.algo_helper.ma_minutes_ago(30, 2)
         ma32_3_min_ago = self.algo_helper.ma_minutes_ago(32, 3)
         ma33_3_min_ago = self.algo_helper.ma_minutes_ago(33, 3)
 
         # LAST TRADE
         last_trade_action = self.algo_helper.last_trade_action
-        last_trade_time = self.algo_helper.last_trade_time
         last_trade_price = self.algo_helper.last_trade_price
         seconds_since_last_trade = self.algo_helper.seconds_since_last_trade
 
         # PREV TRADE
-        prev_trade_action = self.algo_helper.prev_trade_action
-        prev_trade_time = self.algo_helper.prev_trade_time
+        # prev_trade_action = self.algo_helper.prev_trade_action
+        # prev_trade_time = self.algo_helper.prev_trade_time
         prev_trade_price = self.algo_helper.prev_trade_price
         seconds_since_prev_trade = self.algo_helper.seconds_since_prev_trade
 

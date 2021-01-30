@@ -12,9 +12,9 @@ class maddog(object):
         min_buy_delay_in_seconds = 2100
 
         # MACD di 1-2-3-4 minuti prima
-        macd = self.algo_helper.macd
+        # macd = self.algo_helper.macd
 
-        macd_2_min_ago = self.algo_helper.macd_minutes_ago(2)
+        # macd_2_min_ago = self.algo_helper.macd_minutes_ago(2)
 
         # moving average (2-3-4-5-x)
         ma2_last, ma2_prev = self.algo_helper.ma_last_prev(2)
@@ -36,18 +36,12 @@ class maddog(object):
         ma5_2_min_ago = self.algo_helper.ma_minutes_ago(5, 2)
         ma5_3_min_ago = self.algo_helper.ma_minutes_ago(5, 3)
         ma7_2_min_ago = self.algo_helper.ma_minutes_ago(7, 2)
-        ma7_3_min_ago = self.algo_helper.ma_minutes_ago(7, 3)
         ma11_2_min_ago = self.algo_helper.ma_minutes_ago(11, 2)
-        ma11_3_min_ago = self.algo_helper.ma_minutes_ago(11, 3)
         ma16_2_min_ago = self.algo_helper.ma_minutes_ago(16, 2)
-        ma16_3_min_ago = self.algo_helper.ma_minutes_ago(16, 3)
-        ma34_2_min_ago = self.algo_helper.ma_minutes_ago(34, 2)
-        ma43_2_min_ago = self.algo_helper.ma_minutes_ago(43, 2)
-        # ma50_2_min_ago = self.algo_helper.ma_minutes_ago(50, 2)
 
         # LAST TRADE
         last_trade_action = self.algo_helper.last_trade_action
-        last_trade_time = self.algo_helper.last_trade_time
+        # last_trade_time = self.algo_helper.last_trade_time
         last_trade_price = self.algo_helper.last_trade_price
         seconds_since_last_trade = self.algo_helper.seconds_since_last_trade
 
