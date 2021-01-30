@@ -57,23 +57,28 @@ class ro_cano_che_ritorna(object):
         
       
         
-        # VENDE DOPO 100 minuti (TEMPO DOPO IL QUALE ro cano ritorna a casa) ( 100 minuti = 100 * 60 = 6000 secondi ) ) ("E SE" ma7 < ma7 3 min ago)
+        # VENDE DOPO 6000 secondi = 100 minuti ("e se") ro cano torna a casa riga 331
         max_hold_time_in_seconds = 6000
         
-        # TEMPO DOPO IL QUALE "se ro cano COMINCIA A PERDERE LA FORZA" vende! vedi riga 315 (10 minuti = 10 * 60 = 600 secondi) (ma anche alcune ma devono incrociare al ribasso)
+        # VENDE DOPO 600 secondi = 10 minuti ("e se") - ro cano perde la forza - riga 323
         max_hold_without_force_time_in_seconds = 600
         
-        # TEMPO in cui SI AGGIUNGE LA DEVIATION !  (a tutte le altre condizioni gia' stabilite per comprare)  
+        
+        
+        # TEMPO in cui (PER COMPRARE) (a tutte le condizioni gia' attive) SI AGGIUNGE una condizione aggiuntiva LA DEVIATION !   
+        
         # per ULTIMO trade ( 10 minuti = 10 * 60 = 600 secondi )
-        # per PENULTIMO trade ( 5 minuti = 5 * 60 = 300 secondi )
         min_buy_delay_in_seconds = 600
+       
+        # per PENULTIMO trade ( 5 minuti = 5 * 60 = 300 secondi )
         min_prev_buy_delay_in_seconds = 300
         
-        # formula DEVIATION last_trade (di solito il SELL) per comprare UN PO' PIU' SOPRA DEL LAST TRADE (di solito ultimo sell)
+        
+        # formula DEVIATION last_trade (di solito l' ultimo SELL) per comprare UN PO' PIU' SOPRA DEL LAST TRADE
         deviation = (ma2_last / last_trade_price - 1) * 100 if last_trade_price else 0
         self.algo_helper.log('deviation: {}'.format(deviation))
         
-        #formula DEVIATION prev_trade (qualche volta il BUY ) per comprare UN PO' PIU' SOPRA DEL PREV TRADE (eccezionalmente ultimo buy)
+        #formula DEVIATION prev_trade (qualche volta l' ultimo BUY ) per comprare UN PO' PIU' SOPRA DEL PREV TRADE
         deviation_prev = (price / prev_trade_price - 1) * 100 if prev_trade_price else 0
         self.algo_helper.log('deviation_prev: {}'.format(deviation_prev))
         
@@ -90,6 +95,7 @@ class ro_cano_che_ritorna(object):
         
         
         # APRE E CHIUDE GABBIA
+        
         # SI APRE LA GABBIA SE 
         if ma12_last > ma15_last:  
             # NON TOCCARE QUESTA CONDIZIONE SERVE PER APERTURA DI GABBIA
@@ -97,6 +103,7 @@ class ro_cano_che_ritorna(object):
                self.session = 1
                self.open = True
                self.algo_helper.log('session {}: open segment'.format(self.session))
+            
         # SI CHIUDE LA GABBIA SE
         elif self.open:
            self.open = False
@@ -197,6 +204,9 @@ class ro_cano_che_ritorna(object):
             self.algo_helper.log('deviation: {}'.format(deviation))
             self.algo_helper.log('session: {}'.format(self.session))
 
+            
+            ##################################################################################
+            
             # VENDITA 1 - con fasce di tempo !
             
             #    minuti
@@ -208,8 +218,10 @@ class ro_cano_che_ritorna(object):
             #     >30 
             
             ##################################################################################
-            # VENDITA 1 - da 0 a 3 minuti
-            ################################################################################
+            
+            
+            # VENDITA 1 - da 0 a 3 minuti = da 0 a 180 secondi
+            
             if seconds_since_last_trade > 0 and seconds_since_last_trade <= 180:
                 if deviation > 0.10 and ma2_last < ma7_last and ma32_last > ma33_3_min_ago:
                     action = 'sell'
@@ -224,9 +236,10 @@ class ro_cano_che_ritorna(object):
                     action = 'sell'
                 
                 
-            #####################################################################################
-            # VENDITA 1 - da 3 a 5 minuti
-            #####################################################################################
+            
+            
+            # VENDITA 1 - da 3 a 5 minuti = da 180 a 300 secondi
+            
             elif seconds_since_last_trade > 180 and seconds_since_last_trade <= 300:
                 
                 if deviation > 0.10 and ma2_last < ma7_last and ma32_last > ma32_3_min_ago:
@@ -241,9 +254,11 @@ class ro_cano_che_ritorna(object):
                 elif deviation < -0.34 and ma2_last < ma5_last and ma32_last < ma32_3_min_ago:
                     action = 'sell' 
             
-            ########################################################################################
-            # VENDITA 1 - da 5 a 12 minuti
-            ########################################################################################
+            
+            
+            
+            # VENDITA 1 - da 5 a 12 minuti = da 300 a 720 secondi
+            
             elif seconds_since_last_trade > 300 and seconds_since_last_trade <= 720:
                 
                 if deviation > 0.10 and ma2_last < ma10_last and ma32_last > ma32_3_min_ago:
@@ -258,9 +273,11 @@ class ro_cano_che_ritorna(object):
                 elif deviation < -0.34 and ma2_last < ma7_last and ma32_last < ma32_3_min_ago:
                     action = 'sell'
             
-            ############################################################################################
-            # VENDITA 1 - da 12 a 20 minuti
-            ############################################################################################
+            
+            
+            
+            # VENDITA 1 - da 12 a 20 minuti = da 720 a 1200 secondi
+            
             elif seconds_since_last_trade > 720 and seconds_since_last_trade <= 1200:
                 
                 if deviation > 0.20 and ma2_last < ma11_last and ma32_last > ma32_3_min_ago:
@@ -275,9 +292,11 @@ class ro_cano_che_ritorna(object):
                 elif deviation < -0.34 and ma2_last < ma8_last and ma32_last < ma32_3_min_ago:
                     action = 'sell' 
             
-            #################################################################################################
-            # VENDITA 1 - da 20 a 30 minuti
-            ###################################################################################################
+            
+            
+            
+            # VENDITA 1 - da 20 a 30 minuti = da 1200 a 1800 secondi
+            
             elif seconds_since_last_trade > 1200 and seconds_since_last_trade <= 1800:
                 
                 if deviation > 0.30 and ma2_last < ma15_last and ma32_last > ma32_3_min_ago:
@@ -292,9 +311,10 @@ class ro_cano_che_ritorna(object):
                 elif deviation < -0.34 and ma2_last < ma10_last and ma32_last < ma32_3_min_ago:
                     action = 'sell'    
                 
-            ################################################################################################## 
-            # VENDITA 1 - da 30 minuti
-            ####################################################################################################
+                
+          
+            # VENDITA 1 - da 30 minutiin poi = da 1800 secondi in poi
+          
             elif seconds_since_last_trade > 1800:
                 
                 if deviation > 0.40 and ma2_last < ma15_last and ma32_last > ma32_3_min_ago:
@@ -309,16 +329,14 @@ class ro_cano_che_ritorna(object):
                 elif deviation < -0.34 and ma2_last < ma11_last and ma32_last < ma32_3_min_ago:
                     action = 'sell'
                 
+                  
                     
             #########################################################################################          
                     
-            # SE LA PERDITA E' TROPPA VENDE SUBITO (SALVAGENTE) (stop loss)
+            # (stop loss) (salvagente)  SE LA PERDITA E' TROPPA VENDE SUBITO !
             if deviation < -0.8 and ma2_prev > ma15_prev and ma2_last < ma15_last:
                 action = 'sell'
             
-            # IDEA da 241 secondi dal buy VENDI se ma2 < ma16 ( SI ALZA LA MEDIA )
-           
-            # RO CANO TORNA A CASA. (significa che ro cano VENDE !!!)
             
             # 1) ro cano VENDE SE DIMINUISCE LA FORZA ! ( vende se perdita  < -0.50 e se etc.)
             if (seconds_since_last_trade > max_hold_without_force_time_in_seconds
@@ -343,3 +361,4 @@ class ro_cano_che_ritorna(object):
         return action
 
                         
+        # ave comparo meo !
