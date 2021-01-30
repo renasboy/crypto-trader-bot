@@ -1,10 +1,11 @@
-import time
 import base64
 import hashlib
 import hmac
 import json
-import requests
+import time
 import urllib
+
+import requests
 import websocket
 
 

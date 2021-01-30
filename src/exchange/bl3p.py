@@ -2,8 +2,9 @@ import base64
 import hashlib
 import hmac
 import json
-import requests
 import urllib
+
+import requests
 import websocket
 
 

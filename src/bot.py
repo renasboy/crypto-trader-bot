@@ -1,9 +1,11 @@
-import time
 import os
+import time
 from datetime import datetime
+
 from dateutil import tz
 
 from influx_algo_helper import influx_algo_helper
+
 
 def run():
     global algo_helper

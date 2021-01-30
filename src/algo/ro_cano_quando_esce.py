@@ -1,5 +1,6 @@
 from datetime import datetime
 
+
 class ro_cano_quando_esce(object):
 
     def __init__(self, helper):

@@ -1,7 +1,8 @@
-import time
 import os
+import time
 
 from influx_algo_helper import influx_algo_helper
+
 
 # TICKER POOLING
 def run():

@@ -1,7 +1,7 @@
 import os
 from datetime import datetime
-from dateutil import parser, tz
 
+from dateutil import parser, tz
 from influxdb import InfluxDBClient
 
 
