@@ -18,6 +18,7 @@ class ro_cano_che_ritorna(object):
         ma8_last, ma8_prev = self.algo_helper.ma_last_prev(8)  
         ma10_last, ma10_prev = self.algo_helper.ma_last_prev(10)
         ma15_last, ma15_prev = self.algo_helper.ma_last_prev(15)
+        ma28_last, ma28_prev = self.algo_helper.ma_last_prev(28)
         ma32_last, ma32_prev = self.algo_helper.ma_last_prev(32)
         
         
