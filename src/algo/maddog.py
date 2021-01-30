@@ -105,7 +105,7 @@ class maddog(object):
                         and ma11_last > ma11_2_min_ago
                         and ma16_last > ma16_2_min_ago
                         and ma18_last > ma21_last
-                        and deviation_trend > 0.29
+                        and deviation_ma > 0.29
                         #and ma34_last > ma34_2_min_ago
                         #and ma43_last > ma43_2_min_ago
                         #and ma50_last > ma50_2_min_ago
@@ -123,7 +123,7 @@ class maddog(object):
                         and ma11_last > ma11_2_min_ago
                         and ma16_last > ma16_2_min_ago
                         and ma18_last > ma21_last
-                        and deviation_trend > 0.29
+                        and deviation_ma > 0.29
                         #and ma34_last > ma34_2_min_ago
                         #and ma43_last > ma43_2_min_ago
                         #and ma50_last > ma50_2_min_ago
@@ -139,7 +139,7 @@ class maddog(object):
                         and ma5_2_min_ago > ma5_3_min_ago
                         and ma7_last > ma7_2_min_ago
                         and ma11_last > ma11_2_min_ago
-                        and deviation_trend > 0.29
+                        and deviation_ma > 0.29
                         #and ma16_last > ma16_2_min_ago
                         #and ma34_last > ma34_2_min_ago
                         #and ma43_last > ma43_2_min_ago
