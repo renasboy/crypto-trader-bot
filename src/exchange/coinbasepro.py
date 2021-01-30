@@ -116,13 +116,16 @@ class coinbasepro(object):
             'CB-ACCESS-PASSPHRASE': self.passphrase,
             'Content-Type': 'application/json'
         }
-        if method == 'GET':
-            response = requests.get(full_path, data=post_data, headers=headers)
-        else:
-            response = requests.post(full_path, data=post_data, headers=headers)
-        if response.status_code != 200:
-            raise Exception('API failure: {} {}'.format(response.status_code, response.content))
-        return json.loads(response.content)
+        try:
+            if method == 'GET':
+                response = requests.get(full_path, data=post_data, headers=headers)
+            else:
+                response = requests.post(full_path, data=post_data, headers=headers)
+            if response.status_code != 200:
+                raise Exception('API failure: {} {}'.format(response.status_code, response.content))
+            return json.loads(response.content)
+        except:
+            pass
 
 #if __name__ == '__main__':
     #exchange = coinbasepro('BTC', 'EUR', coinbasepro.PUBLIC_KEY, coinbasepro.PRIVATE_KEY, coinbasepro.PASSPHRASE)
