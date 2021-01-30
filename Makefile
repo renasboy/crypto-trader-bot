@@ -23,3 +23,6 @@ export:
 
 reset:
 	./bin/reset
+
+logrotate:
+	./bin/logrotate

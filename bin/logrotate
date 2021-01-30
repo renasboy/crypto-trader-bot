@@ -1,0 +1,11 @@
+#!/bin/bash
+
+date=$(date +%Y-%m-%d-%H-%M)
+log_file=log/bot.log
+archive_file=log/bot-$date.log
+
+mv $log_file $archive_file
+docker ps --format "{{.Names}} {{.Image}}" | fgrep crypto | awk '{ print $1 }' | while read container; do
+    docker exec $container "killall5"
+done
+bzip2 $archive_file
