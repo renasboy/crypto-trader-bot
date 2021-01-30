@@ -27,6 +27,7 @@ class maddog(object):
         ma16_last, ma16_prev = self.algo_helper.ma_last_prev(16)
         ma18_last, ma18_prev = self.algo_helper.ma_last_prev(18)
         ma21_last, ma21_prev = self.algo_helper.ma_last_prev(21)
+        ma28_last, ma28_prev = self.algo_helper.ma_last_prev(28)
         ma34_last, ma34_prev = self.algo_helper.ma_last_prev(34)
         ma43_last, ma43_prev = self.algo_helper.ma_last_prev(43)
         ma50_last, ma50_prev = self.algo_helper.ma_last_prev(50)
@@ -64,6 +65,10 @@ class maddog(object):
         deviation = (ma2_last / last_trade_price - 1) * 100 if last_trade_price else 0
         self.algo_helper.log('deviation: {}'.format(deviation))
         
+        # formula DEVIATION_ma (per comprare durante il TREND RIBASSISTA)
+        deviation_ma = (ma2 / ma28 -1) * 100 if ma28 else 0
+        self.algo_helper.log('deviation_ma: {}'.format(deviation_ma))
+        
         action = None
       
     
@@ -100,7 +105,7 @@ class maddog(object):
                         and ma11_last > ma11_2_min_ago
                         and ma16_last > ma16_2_min_ago
                         and ma18_last > ma21_last
-                        and (( ma2_last / ma18_last ) - 1 ) * 100 > 0.29
+                        and deviation_trend > 0.29
                         #and ma34_last > ma34_2_min_ago
                         #and ma43_last > ma43_2_min_ago
                         #and ma50_last > ma50_2_min_ago
@@ -118,7 +123,7 @@ class maddog(object):
                         and ma11_last > ma11_2_min_ago
                         and ma16_last > ma16_2_min_ago
                         and ma18_last > ma21_last
-                        and (( ma2_last / ma18_last ) - 1 ) * 100 > 0.29
+                        and deviation_trend > 0.29
                         #and ma34_last > ma34_2_min_ago
                         #and ma43_last > ma43_2_min_ago
                         #and ma50_last > ma50_2_min_ago
@@ -134,7 +139,7 @@ class maddog(object):
                         and ma5_2_min_ago > ma5_3_min_ago
                         and ma7_last > ma7_2_min_ago
                         and ma11_last > ma11_2_min_ago
-                        and (( ma2_last / ma18_last ) - 1 ) * 100 > 0.29
+                        and deviation_trend > 0.29
                         #and ma16_last > ma16_2_min_ago
                         #and ma34_last > ma34_2_min_ago
                         #and ma43_last > ma43_2_min_ago
