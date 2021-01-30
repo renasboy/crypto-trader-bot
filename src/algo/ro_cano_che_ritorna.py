@@ -9,12 +9,6 @@ class ro_cano_che_ritorna(object):
     @property
     def action(self):
         
-        # MACD di 1-2-3-4 minuti prima
-        # macd = self.algo_helper.macd
-        
-        # macd_1_min_ago = self.algo_helper.macd_minutes_ago(1) (NON UTILIZZARLO ! e' uguale al macd !)
-        # macd_2_min_ago = self.algo_helper.macd_minutes_ago(2)
-        # macd_3_min_ago = self.algo_helper.macd_minutes_ago(3)
     
         # moving average (2-3-4-5-x) 
         ma2_last, ma2_prev = self.algo_helper.ma_last_prev(2)
@@ -23,29 +17,19 @@ class ro_cano_che_ritorna(object):
         ma7_last, ma7_prev = self.algo_helper.ma_last_prev(7)  
         ma8_last, ma8_prev = self.algo_helper.ma_last_prev(8)  
         ma10_last, ma10_prev = self.algo_helper.ma_last_prev(10)
-        ma11_last, ma11_prev = self.algo_helper.ma_last_prev(11)
-        ma12_last, ma12_prev = self.algo_helper.ma_last_prev(12)
-        ma14_last, ma11_prev = self.algo_helper.ma_last_prev(14)
         ma15_last, ma15_prev = self.algo_helper.ma_last_prev(15)
-        ma18_last, ma18_prev = self.algo_helper.ma_last_prev(18)
-        ma21_last, ma21_prev = self.algo_helper.ma_last_prev(21)
-        ma30_last, ma30_prev = self.algo_helper.ma_last_prev(30)
         ma32_last, ma32_prev = self.algo_helper.ma_last_prev(32)
-        ma33_last, ma33_prev = self.algo_helper.ma_last_prev(33)
-        #ma43_last, ma43_prev = self.algo_helper.ma_last_prev(43)
         
-        # moving average (2-3-4-5-7-8-20-43-100) di x minuti prima (NON METTERE MAI 1 min !)
+        
+        
+        # moving average (2-3-4-5-7-8-20-43-100) di x minuti prima 
         ma2_2_min_ago = self.algo_helper.ma_minutes_ago(2, 2) 
         ma4_2_min_ago = self.algo_helper.ma_minutes_ago(4, 2)
         ma10_2_min_ago = self.algo_helper.ma_minutes_ago(10, 2)
-        ma11_2_min_ago = self.algo_helper.ma_minutes_ago(11, 2)
-        ma11_3_min_ago = self.algo_helper.ma_minutes_ago(11, 3)
-        ma14_2_min_ago = self.algo_helper.ma_minutes_ago(14, 2)
-        ma15_2_min_ago = self.algo_helper.ma_minutes_ago(15, 2)
         ma30_2_min_ago = self.algo_helper.ma_minutes_ago(30, 2)
         ma32_3_min_ago = self.algo_helper.ma_minutes_ago(32, 3)
         ma33_3_min_ago = self.algo_helper.ma_minutes_ago(33, 3)
-        #ma43_2_min_ago = self.algo_helper.ma_minutes_ago(43, 2)
+        
         
         
         # LAST TRADE
@@ -93,7 +77,7 @@ class ro_cano_che_ritorna(object):
         deviation_prev = (price / prev_trade_price - 1) * 100 if prev_trade_price else 0
         self.algo_helper.log('deviation_prev: {}'.format(deviation_prev))
         
-        # formula DEVIATION_ma (di solito il SELL) per comprare durante il TREND RIBASSISTA
+        # formula DEVIATION_ma (per comprare durante il TREND RIBASSISTA)
         deviation_ma = (ma2 / ma28 -1) * 100 if ma28 else 0
         self.algo_helper.log('deviation_ma: {}'.format(deviation_ma))
                         
@@ -139,7 +123,6 @@ class ro_cano_che_ritorna(object):
                         and ma10_last > ma10_2_min_ago
                         and ma7_last >= ma15_last
                         #and ma18_last > ma21_last
-                        #and ma2 > ma18 di 0.16
                         and price > price_1_min_ago
                         and price > price_2_min_ago):
                        
@@ -182,7 +165,6 @@ class ro_cano_che_ritorna(object):
                 elif self.session == 3:
                     if (ma2_last > ma2_2_min_ago
                         and ma4_last > ma4_2_min_ago
-                        #and ma10_last > ma10_2_min_ago
                         and ma7_last > ma15_last   
                         #and ma18_last > ma21_last
                         and price > price_1_min_ago
