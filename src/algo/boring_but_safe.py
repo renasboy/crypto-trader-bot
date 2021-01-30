@@ -1,7 +1,4 @@
-
-
 class boring_but_safe(object):
-
     def __init__(self, helper):
         self.algo_helper = helper
 
@@ -24,8 +21,18 @@ class boring_but_safe(object):
         fee = self.algo_helper.fee
 
         action = None
-        if last_trade_action != 'buy' and macd_trend == 'breakup' and rsi < 80 and price == min([price, week_mean]):
-            action = 'buy'
-        elif last_trade_action == 'buy' and macd_trend == 'breakdown' and rsi > 20 and price > last_trade_price + (fee * 5):
-            action = 'sell'
+        if (
+            last_trade_action != "buy"
+            and macd_trend == "breakup"
+            and rsi < 80
+            and price == min([price, week_mean])
+        ):
+            action = "buy"
+        elif (
+            last_trade_action == "buy"
+            and macd_trend == "breakdown"
+            and rsi > 20
+            and price > last_trade_price + (fee * 5)
+        ):
+            action = "sell"
         return action
