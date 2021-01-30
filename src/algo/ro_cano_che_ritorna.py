@@ -144,7 +144,7 @@ class ro_cano_che_ritorna(object):
                         action = 'buy'
                         
                 
-                    elif (( ma2_last / ma18_last ) - 1 ) * 100 > 0.29
+                    elif ((( ma2_last / ma18_last ) - 1 ) * 100 > 0.29
                         and ma32_last < ma32_3_min_ago):
                      
                         action = 'buy'       
@@ -167,8 +167,7 @@ class ro_cano_che_ritorna(object):
                         action = 'buy'
                         
                         
-                     elif self.session == 2:
-                        elif (( ma2_last / ma18_last ) - 1 ) * 100 > 0.29
+                    elif ((( ma2_last / ma18_last ) - 1 ) * 100 > 0.29
                         and ma32_last < ma32_3_min_ago):
                         
                         action = 'buy'
@@ -192,8 +191,7 @@ class ro_cano_che_ritorna(object):
                         action = 'buy'
                         
     
-                    elif self.session == 3:
-                        elif (( ma2_last / ma18_last ) - 1 ) * 100 > 0.29
+                    elif ((( ma2_last / ma18_last ) - 1 ) * 100 > 0.29
                         and ma32_last < ma32_3_min_ago):
                         
                        
