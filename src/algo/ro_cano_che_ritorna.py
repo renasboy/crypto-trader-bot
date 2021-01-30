@@ -117,14 +117,19 @@ class ro_cano_che_ritorna(object):
         # NON TOCCARE QUESTA CONDIZIONE (QUESTA DICE CHE STA IN MODO BUY, DEVO COMPRARE)
         if self.open and self.session and last_trade_action != 'buy':
 
-            # COMPRA UN PO' PIU' SOPRA DELL' ULTIMO TRADE SE DEVIATION > 0.23 nei 540 secondi dall' ultimo trade ( quasi sempre IL SELL )
-            # COMPRA UN PO' PIU' SOPRA anche DEL PENULTIMO TRADE SE DEVIATION > 0.15 nei 300 secondi dal PENULTIMO TRADE ( qualche volta IL BUY)
             
+            
+            # COMPRA UN PO' PIU' SOPRA DELL' ULTIMO TRADE SE DEVIATION > 0.23 nei 540 secondi  ( quasi sempre IL SELL )
+            # COMPRA UN PO' PIU' SOPRA DEL PENULTIMO TRADE SE DEVIATION > 0.15 nei 300 secondi ( qualche volta IL BUY)
+        
             if ((seconds_since_last_trade > 0 and seconds_since_last_trade <= min_buy_delay_in_seconds and deviation > 0.15)
                 or (seconds_since_prev_trade > 0 and seconds_since_prev_trade <= min_prev_buy_delay_in_seconds and deviation_prev > 0.10)
                 or (seconds_since_last_trade == 0 or seconds_since_last_trade > min_buy_delay_in_seconds)):
 
                
+            
+            
+            
                 # COMPRA sessione 1   - ma7 - ma15 fondamentale ( qua rompo, compa caro, dalla 133 alla 222 )
                 if self.session == 1:
                     if (ma2_last > ma2_2_min_ago
@@ -334,13 +339,14 @@ class ro_cano_che_ritorna(object):
                   
                     
             #########################################################################################          
-                    
-            # (stop loss) (salvagente)  SE LA PERDITA E' TROPPA VENDE SUBITO !
+                
+                
+            # 1) (stop loss) (salvagente)  VENDE SUBITO ( se la perdita e' troppa and incrocio al ribasso ma2-ma15 )
             if deviation < -0.8 and ma2_prev > ma15_prev and ma2_last < ma15_last:
                 action = 'sell'
             
             
-            # 1) ro cano VENDE SE DIMINUISCE LA FORZA ! ( vende se perdita  < -0.50 e se etc.)
+            # 2) ro cano VENDE SE DIMINUISCE LA FORZA ! ( vende se perdita  < -0.50 e se etc.)
             if (seconds_since_last_trade > max_hold_without_force_time_in_seconds
                 and deviation < -0.50
                 and ma2_last < ma15_last
@@ -348,9 +354,11 @@ class ro_cano_che_ritorna(object):
                 and ma11_last < ma15_last):
                 action = 'sell'
                 
-            # 2) ro cano VENDE " DOPO 100 MINUTI " "max hold time" ( vende dopo 100 MINUTI "e se" ma7_last < ma7_2_min_ago "e se" ma2 < ma11 )
+                
+            # 3) ro cano VENDE " DOPO 100 MINUTI " "max hold time" ( vende dopo 100 MINUTI "e se" ma7_last < ma7_2_min_ago "e se" ma2 < ma11 )
             elif seconds_since_last_trade > max_hold_time_in_seconds and ma2_last < ma11_last:
                 action = 'sell'
+            
             
 
         ############### FINE ALGORITH #################
