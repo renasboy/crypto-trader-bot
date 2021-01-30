@@ -69,7 +69,7 @@ class ro_cano_che_ritorna:
         self.algo_helper.log("deviation_prev: {}".format(deviation_prev))
 
         # formula DEVIATION_ma (per comprare durante il TREND RIBASSISTA)
-        deviation_ma = (ma2_last / ma28_last - 1) * 100 if ma28_last else 0
+        deviation_ma = (ma2_last / ma18_last - 1) * 100 if ma18_last else 0
         self.algo_helper.log("deviation_ma: {}".format(deviation_ma))
 
         # DEFAULT ACTION DICE DI NON FARE NIENTE (=None, NON TOCCARE)
@@ -132,7 +132,7 @@ class ro_cano_che_ritorna:
 
                         action = "buy"
 
-                    elif deviation_ma > 0.29 and ma32_last < ma32_3_min_ago:
+                    elif deviation_ma > 0.20 and ma32_last < ma32_3_min_ago:
 
                         action = "buy"
 
@@ -152,7 +152,7 @@ class ro_cano_che_ritorna:
 
                         action = "buy"
 
-                    elif deviation_ma > 0.29 and ma32_last < ma32_3_min_ago:
+                    elif deviation_ma > 0.20 and ma32_last < ma32_3_min_ago:
 
                         action = "buy"
 
@@ -171,7 +171,7 @@ class ro_cano_che_ritorna:
 
                         action = "buy"
 
-                    elif deviation_ma > 0.29 and ma32_last < ma32_3_min_ago:
+                    elif deviation_ma > 0.20 and ma32_last < ma32_3_min_ago:
 
                         action = "buy"
 
