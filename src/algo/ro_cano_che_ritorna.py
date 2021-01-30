@@ -133,7 +133,7 @@ class ro_cano_che_ritorna:
 
                         action = "buy"
 
-                    elif deviation_ma > 0.20 and ma32_last < ma32_3_min_ago:
+                    elif deviation_ma > 0.30 and ma32_last < ma32_3_min_ago:
 
                         action = "buy"
 
@@ -153,7 +153,7 @@ class ro_cano_che_ritorna:
 
                         action = "buy"
 
-                    elif deviation_ma > 0.20 and ma32_last < ma32_3_min_ago:
+                    elif deviation_ma > 0.30 and ma32_last < ma32_3_min_ago:
 
                         action = "buy"
 
@@ -172,7 +172,7 @@ class ro_cano_che_ritorna:
 
                         action = "buy"
 
-                    elif deviation_ma > 0.20 and ma32_last < ma32_3_min_ago:
+                    elif deviation_ma > 0.30 and ma32_last < ma32_3_min_ago:
 
                         action = "buy"
 
