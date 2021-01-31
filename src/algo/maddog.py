@@ -100,9 +100,9 @@ class maddog:
                         and ma5_last > ma5_2_min_ago
                         and ma5_2_min_ago > ma5_3_min_ago
                         and ma7_last > ma7_2_min_ago
-                        and ma11_last > ma11_2_min_ago
-                        and ma16_last > ma16_2_min_ago
-                        and ma18_last > ma21_last
+                        and ma11_last >= ma11_2_min_ago
+                        and ma16_last >= ma16_2_min_ago
+                        and ma18_last >= ma21_last
                         and deviation_ma > 0.29
                         # and ma34_last > ma34_2_min_ago
                         # and ma43_last > ma43_2_min_ago
@@ -119,9 +119,9 @@ class maddog:
                         and ma5_last > ma5_2_min_ago
                         and ma5_2_min_ago > ma5_3_min_ago
                         and ma7_last > ma7_2_min_ago
-                        and ma11_last > ma11_2_min_ago
-                        and ma16_last > ma16_2_min_ago
-                        and ma18_last > ma21_last
+                        and ma11_last >= ma11_2_min_ago
+                        and ma16_last >= ma16_2_min_ago
+                        and ma18_last >= ma21_last
                         and deviation_ma > 0.29
                         # and ma34_last > ma34_2_min_ago
                         # and ma43_last > ma43_2_min_ago
@@ -139,7 +139,7 @@ class maddog:
                         and ma5_last > ma5_2_min_ago
                         and ma5_2_min_ago > ma5_3_min_ago
                         and ma7_last > ma7_2_min_ago
-                        and ma11_last > ma11_2_min_ago
+                        and ma11_last >= ma11_2_min_ago
                         and deviation_ma > 0.29
                         # and ma16_last > ma16_2_min_ago
                         # and ma34_last > ma34_2_min_ago
@@ -183,7 +183,7 @@ class maddog:
                         action = "sell"
 
             # SE LA PERDITA E' TROPPA VENDE SUBITO (SALVAGENTE)
-            if deviation < -0.8:
+            if deviation < -0.7:
                 action = "sell"
 
             # compa qua aiutami tu a capire ! " salvagente piu' lontano e salvagente piu' vicino "
