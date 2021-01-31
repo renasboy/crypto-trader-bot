@@ -133,9 +133,15 @@ class ro_cano_che_ritorna:
 
                         action = "buy"
 
-                    elif deviation_ma > 0.35 and ma2_last >= ma32_last and ma32_last < ma32_3_min_ago:
-
+                    #elif deviation_ma > 0.35 and ma2_last >= ma32_last and ma32_last < ma32_3_min_ago:
+                    elif deviation_ma > 0.35:
+                        
+                        
                         action = "buy"
+                        
+                        
+                        
+                        
 
                 # COMPRA sessione 2   - ma7 - ma15 fondamentale
                 elif self.session == 2:
