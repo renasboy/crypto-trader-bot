@@ -60,8 +60,8 @@ class ro_cano_che_ritorna:
         # per ULTIMO trade ( 10 minuti = 10 * 60 = 600 secondi )
         min_buy_delay_in_seconds = 600
 
-        # per PENULTIMO trade ( 5 minuti = 5 * 60 = 300 secondi )
-        min_prev_buy_delay_in_seconds = 300
+        # per PENULTIMO trade ( 15 minuti = 15 * 60 = 900 secondi )
+        min_prev_buy_delay_in_seconds = 900
 
         # formula DEVIATION last_trade (di solito l' ultimo SELL) per comprare UN PO' PIU' SOPRA DEL LAST TRADE
         deviation = (ma2_last / last_trade_price - 1) * 100 if last_trade_price else 0
@@ -113,7 +113,7 @@ class ro_cano_che_ritorna:
                 or (
                     seconds_since_prev_trade > 0
                     and seconds_since_prev_trade <= min_prev_buy_delay_in_seconds
-                    and deviation_prev > 0.10
+                    and deviation_prev > 0.15
                 )
                 or (
                     seconds_since_last_trade == 0
@@ -408,7 +408,7 @@ class ro_cano_che_ritorna:
             #########################################################################################
 
             # 1) (stop loss) (salvagente)  VENDE SUBITO ( se la perdita e' troppa and incrocio al ribasso ma2-ma15 )
-            if deviation < -0.7 and ma2_last < ma25_last:
+            if deviation < -0.85 and ma2_last < ma25_last:
                 action = "sell"
 
             # 2) ro cano VENDE SE DIMINUISCE LA FORZA ! ( vende se perdita  < -0.50 e se etc.)
