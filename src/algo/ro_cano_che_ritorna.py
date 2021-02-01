@@ -232,14 +232,14 @@ class ro_cano_che_ritorna:
                     action = "sell"
 
                 elif (
-                    deviation < -0.50
+                    deviation < -0.60
                     and ma2_last < ma7_last
                     and ma32_last > ma32_3_min_ago
                 ):
                     action = "sell"
 
                 elif (
-                    deviation < -0.34
+                    deviation < -0.40
                     and ma2_last < ma7_last
                     and ma32_last < ma32_3_min_ago
                 ):
@@ -264,14 +264,14 @@ class ro_cano_che_ritorna:
                     action = "sell"
 
                 elif (
-                    deviation < -0.50
+                    deviation < -0.60
                     and ma2_last < ma7_last
                     and ma32_last > ma32_3_min_ago
                 ):
                     action = "sell"
 
                 elif (
-                    deviation < -0.34
+                    deviation < -0.40
                     and ma2_last < ma7_last
                     and ma32_last < ma32_3_min_ago
                 ):
@@ -296,14 +296,14 @@ class ro_cano_che_ritorna:
                     action = "sell"
 
                 elif (
-                    deviation < -0.50
+                    deviation < -0.60
                     and ma2_last < ma10_last
                     and ma32_last > ma32_3_min_ago
                 ):
                     action = "sell"
 
                 elif (
-                    deviation < -0.34
+                    deviation < -0.40
                     and ma2_last < ma7_last
                     and ma32_last < ma32_3_min_ago
                 ):
@@ -335,7 +335,7 @@ class ro_cano_che_ritorna:
                     action = "sell"
 
                 elif (
-                    deviation < -0.34
+                    deviation < -0.40
                     and ma2_last < ma8_last
                     and ma32_last < ma32_3_min_ago
                 ):
@@ -367,7 +367,7 @@ class ro_cano_che_ritorna:
                     action = "sell"
 
                 elif (
-                    deviation < -0.34
+                    deviation < -0.40
                     and ma2_last < ma10_last
                     and ma32_last < ma32_3_min_ago
                 ):
@@ -392,14 +392,14 @@ class ro_cano_che_ritorna:
                     action = "sell"
 
                 elif (
-                    deviation < -0.30
+                    deviation < -0.50
                     and ma2_last < ma15_last
                     and ma32_last > ma32_3_min_ago
                 ):
                     action = "sell"
 
                 elif (
-                    deviation < -0.34
+                    deviation < -0.40
                     and ma2_last < ma11_last
                     and ma32_last < ma32_3_min_ago
                 ):
@@ -408,13 +408,13 @@ class ro_cano_che_ritorna:
             #########################################################################################
 
             # 1) (stop loss) (salvagente)  VENDE SUBITO ( se la perdita e' troppa and incrocio al ribasso ma2-ma15 )
-            if deviation < -0.4 and ma2_last < ma25_last:
+            if deviation < -0.7 and ma2_last < ma25_last:
                 action = "sell"
 
             # 2) ro cano VENDE SE DIMINUISCE LA FORZA ! ( vende se perdita  < -0.50 e se etc.)
             if (
                 seconds_since_last_trade > max_hold_without_force_time_in_seconds
-                and deviation < -0.50
+                and deviation < -0.60
                 and ma2_last < ma18_last
                 and ma7_last < ma11_last
                 and ma11_last < ma15_last
