@@ -302,37 +302,51 @@ class ro_cano_che_ritorna:
                     
                     
                     
+                    
             # VENDITA 1 - da 5 a 12 minuti = da 300 a 720 secondi
 
             elif seconds_since_last_trade > 300 and seconds_since_last_trade <= 720:
+                
+                
+                
 
                 if (
-                    deviation > 0.10
+                    ma100_last > ma100_13_min_ago
                     and ma2_last < ma10_last
-                    and ma100_last > ma100_13_min_ago
+                    and deviation > 0.10
                 ):
                     action = "sell"
-
+                    
+                    
+                    
                 elif (
-                    deviation > 0.01
-                    and ma2_last < ma7_last
-                    and ma100_last < ma100_13_min_ago
-                ):
-                    action = "sell"
-
-                elif (
-                    deviation < -0.60
+                    ma100_last > ma100_13_min_ago
                     and ma2_last < ma10_last
-                    and ma100_last > ma100_13_min_ago
+                    and deviation < -0.60
                 ):
                     action = "sell"
+                    
+                    
+                    
+                elif (
+                    ma100_last < ma100_13_min_ago
+                    and ma2_last < ma7_last
+                    and deviation > 0.01
+                ):
+                    action = "sell"
+                    
+                
 
                 elif (
-                    deviation < -0.40
+                    ma100_last < ma100_13_min_ago
                     and ma2_last < ma7_last
-                    and ma100_last < ma100_13_min_ago
+                    and deviation < -0.40
                 ):
                     action = "sell"
+                    
+                    
+                    
+                    
 
             # VENDITA 1 - da 12 a 20 minuti = da 720 a 1200 secondi
 
