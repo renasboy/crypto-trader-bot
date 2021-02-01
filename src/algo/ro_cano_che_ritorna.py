@@ -127,7 +127,7 @@ class ro_cano_che_ritorna:
                         and ma4_last > ma4_2_min_ago
                         and ma10_last >= ma10_2_min_ago
                         and ma12_last >= ma15_last
-                        and deviation_ma > 0.23
+                        and deviation_ma > 0.28
                         #and ma7_last >= ma15_last
                         # and ma18_last > ma21_last
                         and price > price_1_min_ago
@@ -153,7 +153,7 @@ class ro_cano_che_ritorna:
                         and ma4_last > ma4_2_min_ago
                         and ma10_last >= ma10_2_min_ago
                         and ma12_last >= ma15_last
-                        and deviation_ma > 0.23
+                        and deviation_ma > 0.28
                         # and ma7_last >= ma15_last
                         # and ma18_last > ma21_last
                         and price > price_1_min_ago
