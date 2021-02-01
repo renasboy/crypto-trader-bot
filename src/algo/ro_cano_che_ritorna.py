@@ -353,32 +353,43 @@ class ro_cano_che_ritorna:
             elif seconds_since_last_trade > 720 and seconds_since_last_trade <= 1200:
 
                 if (
-                    deviation > 0.20
+                    ma100_last > ma100_13_min_ago
                     and ma2_last < ma11_last
-                    and ma100_last > ma100_13_min_ago
+                    and deviation > 0.20
                 ):
                     action = "sell"
-
+                    
+                    
+                    
+                    
                 elif (
-                    deviation > 0.01
-                    and ma2_last < ma8_last
-                    and ma100_last < ma100_13_min_ago
-                ):
-                    action = "sell"
-
-                elif (
-                    deviation < -0.50
+                    ma100_last > ma100_13_min_ago
                     and ma2_last < ma11_last
-                    and ma100_last > ma100_13_min_ago
+                    and deviation < -0.50
                 ):
                     action = "sell"
+                    
+                    
+                    
+                    
+                elif (
+                    ma100_last < ma100_13_min_ago
+                    and ma2_last < ma8_last
+                    and deviation > 0.01
+                ):
+                    action = "sell"
+                    
+                    
 
                 elif (
-                    deviation < -0.40
+                    ma100_last < ma100_13_min_ago
                     and ma2_last < ma8_last
-                    and ma100_last < ma100_13_min_ago
+                    and deviation < -0.40
                 ):
                     action = "sell"
+                    
+                    
+                    
 
             # VENDITA 1 - da 20 a 30 minuti = da 1200 a 1800 secondi
 
