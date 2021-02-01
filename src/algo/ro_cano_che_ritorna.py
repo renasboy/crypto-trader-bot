@@ -125,7 +125,9 @@ class ro_cano_che_ritorna:
                         ma2_last > ma2_2_min_ago
                         and ma4_last > ma4_2_min_ago
                         and ma10_last >= ma10_2_min_ago
-                        and ma7_last >= ma15_last
+                        and ma12_last >= ma15_last
+                        and deviation_ma > 0.23
+                        #and ma7_last >= ma15_last
                         # and ma18_last > ma21_last
                         and price > price_1_min_ago
                         and price > price_2_min_ago
@@ -134,10 +136,10 @@ class ro_cano_che_ritorna:
                         action = "buy"
 
                     #elif deviation_ma > 0.35 and ma2_last >= ma32_last and ma32_last < ma32_3_min_ago:
-                    elif deviation_ma > 0.35:
+                    #elif deviation_ma > 0.35:
                         
                         
-                        action = "buy"
+                        #action = "buy"
                         
                         
                         
@@ -149,7 +151,9 @@ class ro_cano_che_ritorna:
                         ma2_last > ma2_2_min_ago
                         and ma4_last > ma4_2_min_ago
                         and ma10_last >= ma10_2_min_ago
-                        and ma7_last >= ma15_last
+                        and ma12_last >= ma15_last
+                        and deviation_ma > 0.23
+                        # and ma7_last >= ma15_last
                         # and ma18_last > ma21_last
                         and price > price_1_min_ago
                         and price > price_2_min_ago
@@ -159,9 +163,9 @@ class ro_cano_che_ritorna:
 
                         action = "buy"
 
-                    elif deviation_ma > 0.35 and ma2_last >= ma32_last and ma32_last < ma32_3_min_ago:
+                    #elif deviation_ma > 0.35 and ma2_last >= ma32_last and ma32_last < ma32_3_min_ago:
 
-                        action = "buy"
+                        #action = "buy"
 
                 # COMPRA sessione 3 in poi   - ma7 - ma15 fondamentale
                 elif self.session == 3:
@@ -169,7 +173,6 @@ class ro_cano_che_ritorna:
                         ma2_last > ma2_2_min_ago
                         and ma4_last > ma4_2_min_ago
                         and ma7_last > ma15_last
-                        # and ma18_last > ma21_last
                         and price > price_1_min_ago
                         and price > price_2_min_ago
                     ):
@@ -178,9 +181,9 @@ class ro_cano_che_ritorna:
 
                         action = "buy"
 
-                    elif deviation_ma > 0.35 and ma2_last >= ma32_last and ma32_last < ma32_3_min_ago:
+                    #elif deviation_ma > 0.35 and ma2_last >= ma32_last and ma32_last < ma32_3_min_ago:
 
-                        action = "buy"
+                        #action = "buy"
 
         #####################################################################
 
@@ -403,14 +406,14 @@ class ro_cano_che_ritorna:
             #########################################################################################
 
             # 1) (stop loss) (salvagente)  VENDE SUBITO ( se la perdita e' troppa and incrocio al ribasso ma2-ma15 )
-            if deviation < -0.8 and ma2_prev > ma15_prev and ma2_last < ma15_last:
+            if deviation < -0.8 and ma2_last < ma18_last:
                 action = "sell"
 
             # 2) ro cano VENDE SE DIMINUISCE LA FORZA ! ( vende se perdita  < -0.50 e se etc.)
             if (
                 seconds_since_last_trade > max_hold_without_force_time_in_seconds
                 and deviation < -0.50
-                and ma2_last < ma15_last
+                and ma2_last < ma18_last
                 and ma7_last < ma11_last
                 and ma11_last < ma15_last
             ):
