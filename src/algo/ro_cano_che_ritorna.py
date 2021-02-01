@@ -406,7 +406,7 @@ class ro_cano_che_ritorna:
             #########################################################################################
 
             # 1) (stop loss) (salvagente)  VENDE SUBITO ( se la perdita e' troppa and incrocio al ribasso ma2-ma15 )
-            if deviation < -0.8 and ma2_last < ma18_last:
+            if deviation < -0.4 and ma2_last < ma18_last:
                 action = "sell"
 
             # 2) ro cano VENDE SE DIMINUISCE LA FORZA ! ( vende se perdita  < -0.50 e se etc.)
