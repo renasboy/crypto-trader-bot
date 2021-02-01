@@ -103,7 +103,7 @@ class maddog:
                         and ma11_last >= ma11_2_min_ago
                         and ma16_last >= ma16_2_min_ago
                         and ma18_last >= ma21_last
-                        and deviation_ma > 0.23
+                        and deviation_ma > 0.25
                         # and ma34_last > ma34_2_min_ago
                         # and ma43_last > ma43_2_min_ago
                         and price > price_1_min_ago
@@ -122,7 +122,7 @@ class maddog:
                         and ma11_last >= ma11_2_min_ago
                         and ma16_last >= ma16_2_min_ago
                         and ma18_last >= ma21_last
-                        and deviation_ma > 0.23
+                        and deviation_ma > 0.25
                         # and ma34_last > ma34_2_min_ago
                         # and ma43_last > ma43_2_min_ago
                         # and ma50_last > ma50_2_min_ago
@@ -140,7 +140,7 @@ class maddog:
                         and ma5_2_min_ago > ma5_3_min_ago
                         and ma7_last > ma7_2_min_ago
                         and ma11_last >= ma11_2_min_ago
-                        and deviation_ma > 0.23
+                        and deviation_ma > 0.25
                         # and ma16_last > ma16_2_min_ago
                         # and ma34_last > ma34_2_min_ago
                         # and ma43_last > ma43_2_min_ago
@@ -182,8 +182,8 @@ class maddog:
                     if deviation > 0.15:
                         action = "sell"
 
-            # SE LA PERDITA E' TROPPA VENDE SUBITO (SALVAGENTE)
-            if deviation < -0.85:
+            # STOP LOSS (salvagente)
+            if deviation < -0.60 and ma2_last < ma28_last:
                 action = "sell"
 
             # compa qua aiutami tu a capire ! " salvagente piu' lontano e salvagente piu' vicino "
