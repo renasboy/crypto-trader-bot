@@ -19,6 +19,7 @@ class ro_cano_che_ritorna:
         ma13_last, ma13_prev = self.algo_helper.ma_last_prev(13)
         ma15_last, ma15_prev = self.algo_helper.ma_last_prev(15)
         ma18_last, ma18_prev = self.algo_helper.ma_last_prev(18)
+        ma21_last, ma21_prev = self.algo_helper.ma_last_prev(21)
         ma28_last, ma28_prev = self.algo_helper.ma_last_prev(28)
         ma32_last, ma32_prev = self.algo_helper.ma_last_prev(32)
 
@@ -406,7 +407,7 @@ class ro_cano_che_ritorna:
             #########################################################################################
 
             # 1) (stop loss) (salvagente)  VENDE SUBITO ( se la perdita e' troppa and incrocio al ribasso ma2-ma15 )
-            if deviation < -0.4 and ma2_last < ma18_last:
+            if deviation < -0.4 and ma2_last < ma21_last:
                 action = "sell"
 
             # 2) ro cano VENDE SE DIMINUISCE LA FORZA ! ( vende se perdita  < -0.50 e se etc.)
