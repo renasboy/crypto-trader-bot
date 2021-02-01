@@ -86,7 +86,7 @@ class maddog:
             if (
                 seconds_since_last_trade > 0
                 and seconds_since_last_trade <= min_buy_delay_in_seconds
-                and deviation > 0.2
+                and deviation > 0.18
             ) or (
                 seconds_since_last_trade == 0
                 or seconds_since_last_trade > min_buy_delay_in_seconds
@@ -103,7 +103,7 @@ class maddog:
                         and ma11_last >= ma11_2_min_ago
                         and ma16_last >= ma16_2_min_ago
                         and ma18_last >= ma21_last
-                        and deviation_ma > 0.29
+                        and deviation_ma > 0.23
                         # and ma34_last > ma34_2_min_ago
                         # and ma43_last > ma43_2_min_ago
                         and price > price_1_min_ago
@@ -122,7 +122,7 @@ class maddog:
                         and ma11_last >= ma11_2_min_ago
                         and ma16_last >= ma16_2_min_ago
                         and ma18_last >= ma21_last
-                        and deviation_ma > 0.29
+                        and deviation_ma > 0.23
                         # and ma34_last > ma34_2_min_ago
                         # and ma43_last > ma43_2_min_ago
                         # and ma50_last > ma50_2_min_ago
@@ -140,7 +140,7 @@ class maddog:
                         and ma5_2_min_ago > ma5_3_min_ago
                         and ma7_last > ma7_2_min_ago
                         and ma11_last >= ma11_2_min_ago
-                        and deviation_ma > 0.29
+                        and deviation_ma > 0.23
                         # and ma16_last > ma16_2_min_ago
                         # and ma34_last > ma34_2_min_ago
                         # and ma43_last > ma43_2_min_ago
@@ -167,23 +167,23 @@ class maddog:
             # VENDE sessione 1
             if self.session == 1:
                 if ma2_prev > ma7_prev and ma2_last < ma7_last:
-                    if deviation > 0.24:
+                    if deviation > 0.20:
                         action = "sell"
 
             # VENDE sessione 2
             elif self.session == 2:
                 if ma2_prev > ma7_prev and ma2_last < ma7_last:
-                    if deviation > 0.24:
+                    if deviation > 0.20:
                         action = "sell"
 
             # VENDE sessione 3 in poi
             else:
                 if ma2_prev > ma7_prev and ma2_last < ma7_last:
-                    if deviation > 0.24:
+                    if deviation > 0.15:
                         action = "sell"
 
             # SE LA PERDITA E' TROPPA VENDE SUBITO (SALVAGENTE)
-            if deviation < -0.7:
+            if deviation < -0.85:
                 action = "sell"
 
             # compa qua aiutami tu a capire ! " salvagente piu' lontano e salvagente piu' vicino "
