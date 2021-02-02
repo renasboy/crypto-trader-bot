@@ -258,7 +258,7 @@ class ro_cano_che_ritorna:
                         
                           and deviation_ma > 0.28
                     
-                          ma2_last > ma2_2_min_ago
+                          and ma2_last > ma2_2_min_ago
                           and ma4_last > ma4_2_min_ago
                           and ma7_last >= ma15_last
                           and ma10_last >= ma10_2_min_ago
