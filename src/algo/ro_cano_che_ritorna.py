@@ -52,6 +52,7 @@ class ro_cano_che_ritorna:
         # PREZZO PRECEDENTE (di mercato) - PREV PRICE
         price_1_min_ago = self.algo_helper.price_minutes_ago(1)
         price_2_min_ago = self.algo_helper.price_minutes_ago(2)
+        price_3_min_ago = self.algo_helper.price_minutes_ago(3)
 
         # VENDE DOPO 6000 secondi = 100 minuti ("e se") ro cano torna a casa riga 331
         max_hold_time_in_seconds = 6000
@@ -145,6 +146,7 @@ class ro_cano_che_ritorna:
                         
                         and price > price_1_min_ago
                         and price > price_2_min_ago
+                        and price > price_3_min_ago
                  
                     ):
 
@@ -167,6 +169,7 @@ class ro_cano_che_ritorna:
                         
                           and price > price_1_min_ago
                           and price > price_2_min_ago
+                          and price > price_3_min_ago
                  
                     ):
 
@@ -193,6 +196,7 @@ class ro_cano_che_ritorna:
                         
                         and price > price_1_min_ago
                         and price > price_2_min_ago
+                        and price > price_3_min_ago
                  
                     ):
 
@@ -215,6 +219,7 @@ class ro_cano_che_ritorna:
                         
                           and price > price_1_min_ago
                           and price > price_2_min_ago
+                          and price > price_3_min_ago
                  
                     ):
 
@@ -245,6 +250,7 @@ class ro_cano_che_ritorna:
                         
                         and price > price_1_min_ago
                         and price > price_2_min_ago
+                        and price > price_3_min_ago
                  
                     ):
 
@@ -267,6 +273,7 @@ class ro_cano_che_ritorna:
                         
                           and price > price_1_min_ago
                           and price > price_2_min_ago
+                          and price > price_3_min_ago
                  
                     ):
 
