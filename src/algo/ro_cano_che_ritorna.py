@@ -88,7 +88,7 @@ class ro_cano_che_ritorna:
         # APRE E CHIUDE GABBIA
 
         # SI APRE LA GABBIA SE
-        if ma12_last > ma15_last:
+        if ma11_last > ma15_last:
             # NON TOCCARE QUESTA CONDIZIONE SERVE PER APERTURA DI GABBIA
             if not self.session or not self.open:
                 self.session = 1
@@ -142,7 +142,7 @@ class ro_cano_che_ritorna:
                         and ma4_last > ma4_2_min_ago
                         and ma7_last >= ma15_last
                         and ma10_last >= ma10_2_min_ago
-                        and ma12_last > ma15_last
+                        and ma11_last > ma15_last
                         
                         and price > price_1_min_ago
                         and price > price_2_min_ago
@@ -159,7 +159,7 @@ class ro_cano_che_ritorna:
                           ma100_last < ma100_13_min_ago
                           and ma2_last > ma7_last
                         
-                          and deviation_ma > 0.28
+                          and deviation_ma > 0.27
                     
                           and ma2_last > ma2_2_min_ago
                           and ma4_last > ma4_2_min_ago
@@ -192,7 +192,7 @@ class ro_cano_che_ritorna:
                         and ma4_last > ma4_2_min_ago
                         and ma7_last >= ma15_last
                         and ma10_last >= ma10_2_min_ago
-                        and ma12_last > ma15_last
+                        and ma11_last > ma15_last
                         
                         and price > price_1_min_ago
                         and price > price_2_min_ago
@@ -209,7 +209,7 @@ class ro_cano_che_ritorna:
                           ma100_last < ma100_13_min_ago
                           and ma2_last > ma7_last
                         
-                          and deviation_ma > 0.28
+                          and deviation_ma > 0.27
                     
                           and ma2_last > ma2_2_min_ago
                           and ma4_last > ma4_2_min_ago
