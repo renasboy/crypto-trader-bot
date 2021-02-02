@@ -170,19 +170,19 @@ class maddog:
 
             # VENDE sessione 1
             if self.session == 1:
-                if ma2_prev > ma7_prev and ma2_last < ma7_last:
+                if ma2_last < ma11_last:
                     if deviation > 0.20:
                         action = "sell"
 
             # VENDE sessione 2
             elif self.session == 2:
-                if ma2_prev > ma7_prev and ma2_last < ma7_last:
+                if ma2_last < ma11_last:
                     if deviation > 0.20:
                         action = "sell"
 
             # VENDE sessione 3 in poi
             else:
-                if ma2_prev > ma7_prev and ma2_last < ma7_last:
+                if ma2_last < ma16_last:
                     if deviation > 0.15:
                         action = "sell"
 
