@@ -30,6 +30,12 @@ class maddog:
         ma34_last, ma34_prev = self.algo_helper.ma_last_prev(34)
         ma43_last, ma43_prev = self.algo_helper.ma_last_prev(43)
         ma50_last, ma50_prev = self.algo_helper.ma_last_prev(50)
+        #
+        ma20_last, ma20_prev = self.algo_helper.ma_last_prev(20)
+        ma60_last, ma60_prev = self.algo_helper.ma_last_prev(60)
+        ma100_last, ma100_prev = self.algo_helper.ma_last_prev(100)
+        #
+        
 
         # moving average (2-3-4-5-7-8-20-43-100) di x minuti prima (NON METTERE MAI 1 min !)
         ma2_2_min_ago = self.algo_helper.ma_minutes_ago(2, 2)
@@ -39,7 +45,9 @@ class maddog:
         ma7_2_min_ago = self.algo_helper.ma_minutes_ago(7, 2)
         ma11_2_min_ago = self.algo_helper.ma_minutes_ago(11, 2)
         ma16_2_min_ago = self.algo_helper.ma_minutes_ago(16, 2)
-
+        ma100_13_min_ago = self.algo_helper.ma_minutes_ago(100, 13)
+        
+        
         # LAST TRADE
         last_trade_action = self.algo_helper.last_trade_action
         # last_trade_time = self.algo_helper.last_trade_time
@@ -67,7 +75,7 @@ class maddog:
         #######################################################################
         # APRE E CHIUDE GABBIA
         # SI APRE LA GABBIA SE
-        if ma18_last > ma21_last:
+        if ma100_last > ma100_13_min_ago:
             # NON TOCCARE QUESTA CONDIZIONE SERVE PER APERTURA DI GABBIA
             if not self.session or not self.open:
                 self.session = 1
@@ -110,6 +118,13 @@ class maddog:
                         and price > price_1_min_ago
                         and price > price_2_min_ago
                         and price > price_7_min_ago
+                        
+                        and ma20_last >= ma20_last
+                        and ma60_last >= ma60_last
+                        and ma100_last >= ma100_13_min_ago
+                        
+                        and ma20_last >= ma60_last
+                        
                     ):
                         action = "buy"
 
@@ -131,9 +146,20 @@ class maddog:
                         and price > price_1_min_ago
                         and price > price_2_min_ago
                         and price > price_7_min_ago
+                        
+                        and ma20_last >= ma20_last
+                        and ma60_last >= ma60_last
+                        and ma100_last >= ma100_13_min_ago
+                        
+                        and ma20_last >= ma60_last
+                        
+                        
                     ):
                         action = "buy"
 
+                        
+                        
+                        
                 # COMPRA sessione 3 in poi
                 else:
                     if (
@@ -151,6 +177,14 @@ class maddog:
                         and price > price_1_min_ago
                         and price > price_2_min_ago
                         and price > price_7_min_ago
+                        
+                        and ma20_last >= ma20_last
+                        and ma60_last >= ma60_last
+                        and ma100_last >= ma100_13_min_ago
+                        
+                        and ma20_last >= ma60_last
+                        
+                        
                     ):
                         action = "buy"
 
@@ -183,11 +217,11 @@ class maddog:
             # VENDE sessione 3 in poi
             else:
                 if ma2_last < ma16_last:
-                    if deviation > 0.15:
+                    if deviation > 0.20:
                         action = "sell"
 
             # STOP LOSS (salvagente)
-            if deviation < -0.60 and ma2_last < ma21_last:
+            if deviation < -0.80 and ma2_last < ma21_last:
                 action = "sell"
 
             # compa qua aiutami tu a capire ! " salvagente piu' lontano e salvagente piu' vicino "
