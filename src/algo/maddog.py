@@ -33,6 +33,7 @@ class maddog:
         #
         ma20_last, ma20_prev = self.algo_helper.ma_last_prev(20)
         ma60_last, ma60_prev = self.algo_helper.ma_last_prev(60)
+        ma85_last, ma85_prev = self.algo_helper.ma_last_prev(85)
         ma100_last, ma100_prev = self.algo_helper.ma_last_prev(100)
         #
         
@@ -45,6 +46,7 @@ class maddog:
         ma7_2_min_ago = self.algo_helper.ma_minutes_ago(7, 2)
         ma11_2_min_ago = self.algo_helper.ma_minutes_ago(11, 2)
         ma16_2_min_ago = self.algo_helper.ma_minutes_ago(16, 2)
+        ma85_3_min_ago = self.algo_helper.ma_minutes_ago(85, 3)
         ma100_13_min_ago = self.algo_helper.ma_minutes_ago(100, 13)
         
         
@@ -121,6 +123,8 @@ class maddog:
                         
                         and ma20_last >= ma20_last
                         and ma60_last >= ma60_last
+                        and ma85_last >= ma100_last
+                        and ma85_last >= ma85_3_min_ago
                         and ma100_last >= ma100_13_min_ago
                         
                         and ma20_last >= ma60_last
@@ -149,6 +153,8 @@ class maddog:
                         
                         and ma20_last >= ma20_last
                         and ma60_last >= ma60_last
+                        and ma85_last >= ma100_last
+                        and ma85_last >= ma85_3_min_ago
                         and ma100_last >= ma100_13_min_ago
                         
                         and ma20_last >= ma60_last
@@ -180,6 +186,8 @@ class maddog:
                         
                         and ma20_last >= ma20_last
                         and ma60_last >= ma60_last
+                        and ma85_last >= ma100_last
+                        and ma85_last >= ma85_3_min_ago
                         and ma100_last >= ma100_13_min_ago
                         
                         and ma20_last >= ma60_last
