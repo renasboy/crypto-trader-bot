@@ -124,72 +124,154 @@ class ro_cano_che_ritorna:
                 )
             ):
 
-                # COMPRA sessione 1   - ma7 - ma15 fondamentale ( qua rompo, compa caro, dalla 133 alla 222 )
+  
+###################################################################################################################################################
+
+                # COMPRA sessione 1   ( qua rompo, compa caro, )
+          
                 if self.session == 1:
+               
                     if (
-                        ma2_last > ma2_2_min_ago
+                    
+                        ma100_last >= ma100_13_min_ago
+                        and ma2_last > ma7_last
+                      
+                        and ma2_last > ma2_2_min_ago
                         and ma4_last > ma4_2_min_ago
+                        and ma7_last >= ma15_last
                         and ma10_last >= ma10_2_min_ago
-                        and ma12_last > ma15_last
-                        #and deviation_ma > 0.28
-                        #and ma7_last >= ma15_last
-                        # and ma18_last > ma21_last
+                        and ma18_last > ma21_last
+                        
                         and price > price_1_min_ago
                         and price > price_2_min_ago
+                 
                     ):
 
                         action = "buy"
 
-                    #elif deviation_ma > 0.35 and ma2_last >= ma32_last and ma32_last < ma32_3_min_ago:
-                    #elif deviation_ma > 0.35:
                         
                         
-                        #action = "buy"
+                    elif (
+                    
+                          ma100_last < ma100_13_min_ago
+                          and ma2_last > ma7_last
                         
+                          and deviation_ma > 0.28
+                    
+                          and ma2_last > ma2_2_min_ago
+                          and ma4_last > ma4_2_min_ago
+                          and ma7_last >= ma15_last
+                          and ma10_last >= ma10_2_min_ago
+                          and ma12_last > ma15_last
                         
-                        
+                          and price > price_1_min_ago
+                          and price > price_2_min_ago
+                 
+                    ):
+
+                        action = "buy"
+                    
+                  
+##############################################################################################################################
                         
 
-                # COMPRA sessione 2   - ma7 - ma15 fondamentale
+                # COMPRA sessione 2
+        
                 elif self.session == 2:
+              
                     if (
-                        ma2_last > ma2_2_min_ago
+                    
+                        ma100_last >= ma100_13_min_ago
+                        and ma2_last > ma7_last
+                      
+                        and ma2_last > ma2_2_min_ago
                         and ma4_last > ma4_2_min_ago
+                        and ma7_last >= ma15_last
                         and ma10_last >= ma10_2_min_ago
                         and ma12_last > ma15_last
-                        #and deviation_ma > 0.28
-                        # and ma7_last >= ma15_last
-                        # and ma18_last > ma21_last
+                        
                         and price > price_1_min_ago
                         and price > price_2_min_ago
+                 
                     ):
-                        # and deviation_prev > 0.10 nei 10 minuti dall' ultimo verde
-                        # and deviation > 0.15 nei 9 minuti dall' ultimo rosso
 
                         action = "buy"
 
-                    #elif deviation_ma > 0.35 and ma2_last >= ma32_last and ma32_last < ma32_3_min_ago:
+                        
+                        
+                    elif (
+                    
+                          ma100_last < ma100_13_min_ago
+                          and ma2_last > ma7_last
+                        
+                          and deviation_ma > 0.28
+                    
+                          and ma2_last > ma2_2_min_ago
+                          and ma4_last > ma4_2_min_ago
+                          and ma7_last >= ma15_last
+                          and ma10_last >= ma10_2_min_ago
+                          and ma18_last > ma21_last
+                        
+                          and price > price_1_min_ago
+                          and price > price_2_min_ago
+                 
+                    ):
 
-                        #action = "buy"
+                        action = "buy"
+                   
+                
+                   
+#############################################################################################################################################
 
-                # COMPRA sessione 3 in poi   - ma7 - ma15 fondamentale
+
+
+                # COMPRA sessione 3 in poi
+    
                 elif self.session == 3:
+            
+            
+            
                     if (
-                        ma2_last > ma2_2_min_ago
+                    
+                        ma100_last >= ma100_13_min_ago
+                        and ma2_last > ma7_last
+                      
+                        and ma2_last > ma2_2_min_ago
                         and ma4_last > ma4_2_min_ago
-                        and ma7_last > ma15_last
+                        and ma7_last >= ma15_last
+                        and ma10_last >= ma10_2_min_ago
+                        and ma12_last > ma15_last
+                        
                         and price > price_1_min_ago
                         and price > price_2_min_ago
+                 
                     ):
-                        # and deviation_prev > 0.10 nei 10 minuti dall' ultimo verde
-                        # and deviation > 0.15 nei 9 minuti dall' ultimo rosso
 
                         action = "buy"
 
-                    #elif deviation_ma > 0.35 and ma2_last >= ma32_last and ma32_last < ma32_3_min_ago:
+                        
+                        
+                    elif (
+                    
+                          ma100_last < ma100_13_min_ago
+                          and ma2_last > ma7_last
+                        
+                          and deviation_ma > 0.28
+                    
+                          ma2_last > ma2_2_min_ago
+                          and ma4_last > ma4_2_min_ago
+                          and ma7_last >= ma15_last
+                          and ma10_last >= ma10_2_min_ago
+                          and ma18_last > ma21_last
+                        
+                          and price > price_1_min_ago
+                          and price > price_2_min_ago
+                 
+                    ):
 
-                        #action = "buy"
-
+                        action = "buy"
+                        
+                
         #####################################################################
 
         # VENDITA
