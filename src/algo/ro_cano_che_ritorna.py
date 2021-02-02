@@ -315,6 +315,15 @@ class ro_cano_che_ritorna:
                     and ma2_last < ma7_last
                     and deviation > 0.10
                 ):
+                    #self.algo_helper.log("ma100_last: {}".format(ma100_last))
+                    #self.algo_helper.log("ma100_13_min_ago: {}".format(ma100_13_min_ago))
+                    #self.algo_helper.log("ma2_last: {}".format(ma2_last))
+                    #self.algo_helper.log("ma7_last: {}".format(ma7_last))
+                    #self.algo_helper.log("deviation: {}".format(deviation))
+                    
+                    #self.algo_helper.log("ma100_last > ma100_13_min_ago: {}".format(ma100_last > ma100_13_min_ago))
+                    
+                    
                     action = "sell"
 
                     
