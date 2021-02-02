@@ -52,7 +52,8 @@ class maddog:
         # PREZZO PRECEDENTE (di mercato) - PREV PRICE
         price_1_min_ago = self.algo_helper.price_minutes_ago(1)
         price_2_min_ago = self.algo_helper.price_minutes_ago(2)
-
+        price_7_min_ago = self.algo_helper.price_minutes_ago(7)
+    
         # formula deviation per comprare un po' piu' sopra del SELL
         deviation = (ma2_last / last_trade_price - 1) * 100 if last_trade_price else 0
         self.algo_helper.log("deviation: {}".format(deviation))
@@ -108,6 +109,7 @@ class maddog:
                         # and ma43_last > ma43_2_min_ago
                         and price > price_1_min_ago
                         and price > price_2_min_ago
+                        and price > price_7_min_ago
                     ):
                         action = "buy"
 
@@ -128,6 +130,7 @@ class maddog:
                         # and ma50_last > ma50_2_min_ago
                         and price > price_1_min_ago
                         and price > price_2_min_ago
+                        and price > price_7_min_ago
                     ):
                         action = "buy"
 
@@ -147,6 +150,7 @@ class maddog:
                         # and ma50_last > ma50_2_min_ago
                         and price > price_1_min_ago
                         and price > price_2_min_ago
+                        and price > price_7_min_ago
                     ):
                         action = "buy"
 
