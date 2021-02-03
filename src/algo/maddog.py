@@ -23,6 +23,7 @@ class maddog:
         ma7_last, ma7_prev = self.algo_helper.ma_last_prev(7)
         ma11_last, ma11_prev = self.algo_helper.ma_last_prev(11)
         ma13_last, ma13_prev = self.algo_helper.ma_last_prev(13)
+        ma15_last, ma15_prev = self.algo_helper.ma_last_prev(15)
         ma16_last, ma16_prev = self.algo_helper.ma_last_prev(16)
         ma18_last, ma18_prev = self.algo_helper.ma_last_prev(18)
         ma21_last, ma21_prev = self.algo_helper.ma_last_prev(21)
@@ -45,6 +46,7 @@ class maddog:
         ma5_3_min_ago = self.algo_helper.ma_minutes_ago(5, 3)
         ma7_2_min_ago = self.algo_helper.ma_minutes_ago(7, 2)
         ma11_2_min_ago = self.algo_helper.ma_minutes_ago(11, 2)
+        ma15_5_min_ago = self.algo_helper.ma_minutes_ago(15, 5)
         ma16_2_min_ago = self.algo_helper.ma_minutes_ago(16, 2)
         ma85_3_min_ago = self.algo_helper.ma_minutes_ago(85, 3)
         ma100_13_min_ago = self.algo_helper.ma_minutes_ago(100, 13)
@@ -62,6 +64,7 @@ class maddog:
         # PREZZO PRECEDENTE (di mercato) - PREV PRICE
         price_1_min_ago = self.algo_helper.price_minutes_ago(1)
         price_2_min_ago = self.algo_helper.price_minutes_ago(2)
+        price_3_min_ago = self.algo_helper.price_minutes_ago(3)
         price_7_min_ago = self.algo_helper.price_minutes_ago(7)
     
         # formula deviation per comprare un po' piu' sopra del SELL
@@ -112,6 +115,7 @@ class maddog:
                         and ma5_2_min_ago > ma5_3_min_ago
                         and ma7_last > ma7_2_min_ago
                         and ma11_last >= ma11_2_min_ago
+                        and ma15_last > ma15_5_min_ago
                         and ma16_last >= ma16_2_min_ago
                         and ma18_last >= ma21_last
                         #and deviation_ma > 0.28
@@ -119,6 +123,7 @@ class maddog:
                         # and ma43_last > ma43_2_min_ago
                         and price > price_1_min_ago
                         and price > price_2_min_ago
+                        and price > price_3_min_ago
                         and price > price_7_min_ago
                         
                         and ma20_last >= ma20_last
@@ -141,6 +146,7 @@ class maddog:
                         and ma5_2_min_ago > ma5_3_min_ago
                         and ma7_last > ma7_2_min_ago
                         and ma11_last >= ma11_2_min_ago
+                        and ma15_last > ma15_5_min_ago
                         and ma16_last >= ma16_2_min_ago
                         #and ma18_last >= ma21_last
                         #and deviation_ma > 0.27
@@ -149,6 +155,7 @@ class maddog:
                         # and ma50_last > ma50_2_min_ago
                         and price > price_1_min_ago
                         and price > price_2_min_ago
+                        and price > price_3_min_ago
                         and price > price_7_min_ago
                         
                         and ma20_last >= ma20_last
@@ -175,6 +182,7 @@ class maddog:
                         and ma5_2_min_ago > ma5_3_min_ago
                         and ma7_last > ma7_2_min_ago
                         and ma11_last >= ma11_2_min_ago
+                        and ma15_last >= ma15_5_min_ago
                         and deviation_ma > 0.27
                         # and ma16_last > ma16_2_min_ago
                         # and ma34_last > ma34_2_min_ago
@@ -182,6 +190,7 @@ class maddog:
                         # and ma50_last > ma50_2_min_ago
                         and price > price_1_min_ago
                         and price > price_2_min_ago
+                        and price > price_3_min_ago
                         and price > price_7_min_ago
                         
                         and ma20_last >= ma20_last
