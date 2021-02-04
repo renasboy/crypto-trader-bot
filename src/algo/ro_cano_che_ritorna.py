@@ -631,7 +631,9 @@ class ro_cano_che_ritorna:
 
             #########################################################################################
 
-            # 1) (stop loss) (salvagente)  VENDE SUBITO ( se la perdita e' troppa and incrocio al ribasso ma2 - ma20 )
+            # 1) (STOP LOSS) (salvagente)  
+            # se ma100_last >= ma100_13_min_ago vende in un modo 
+            # se ma100_last < ma100_13_min_ago vende in un altro modo
             
             if (
                 ma100_last >= ma100_13_min_ago
