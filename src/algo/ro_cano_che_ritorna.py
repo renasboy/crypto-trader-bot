@@ -1,3 +1,10 @@
+#import inspect
+#inspect.getframeinfo(inspect.currentframe()).lineno
+
+#self.algo_helper.log("SELL @ LINE {}".format(__line__))
+
+
+
 class ro_cano_che_ritorna:
     def __init__(self, helper):
         self.algo_helper = helper
