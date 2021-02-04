@@ -234,7 +234,7 @@ class maddog:
             # VENDE sessione 3 in poi
             else:
                 if ma2_last < ma16_last:
-                    if deviation > 1.20:
+                    if deviation > 0.20:
                         action = "sell"
 
             # STOP LOSS (salvagente)
