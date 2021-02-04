@@ -38,6 +38,8 @@ class ro_cano_che_ritorna:
         # moving average (2-3-4-5-7-8-20-43-100) di x minuti prima
         ma2_2_min_ago = self.algo_helper.ma_minutes_ago(2, 2)
         ma2_3_min_ago = self.algo_helper.ma_minutes_ago(2, 3)
+        ma2_15_min_ago = self.algo_helper.ma_minutes_ago(2, 15)
+        ma2_17_min_ago = self.algo_helper.ma_minutes_ago(2, 17)
         ma4_2_min_ago = self.algo_helper.ma_minutes_ago(4, 2)
         ma8_5_min_ago = self.algo_helper.ma_minutes_ago(8, 5)
         ma10_2_min_ago = self.algo_helper.ma_minutes_ago(10, 2)
@@ -153,6 +155,7 @@ class ro_cano_che_ritorna:
                         and ma8_last >= ma8_5_min_ago
                         
                         
+                        
                         and ma2_last >= ma7_last
                         and ma2_last > ma2_2_min_ago
                         and ma2_last > ma2_3_min_ago
@@ -179,8 +182,11 @@ class ro_cano_che_ritorna:
                           and ma8_last < ma8_5_min_ago
                           
                           
-                        
+                          
                           and deviation_ma > 0.27
+                          #and ma2_last > ma2_15_min_ago
+                          #and ma2_last > ma2_17_min_ago
+                          
                         
                           and ma2_last > ma7_last
                           and ma2_last > ma2_2_min_ago
@@ -212,6 +218,8 @@ class ro_cano_che_ritorna:
                         and ma50_last >= ma50_5_min_ago
                         and ma8_last >= ma8_5_min_ago
                         
+                        #and ma2_last > ma2_15_min_ago
+                        #and ma2_last > ma2_17_min_ago
                         
                         and ma2_last > ma7_last
                         and ma2_last > ma2_2_min_ago
@@ -240,6 +248,10 @@ class ro_cano_che_ritorna:
                           
                         
                           and deviation_ma > 0.27
+                          #and ma2_last > ma2_15_min_ago
+                          #and ma2_last > ma2_17_min_ago
+                        
+                        
                           
                           and ma2_last > ma7_last
                           and ma2_last > ma2_2_min_ago
@@ -275,12 +287,16 @@ class ro_cano_che_ritorna:
                         and ma50_last >= ma50_5_min_ago
                         and ma8_last >= ma8_5_min_ago
                         
+                        #and ma2_last > ma2_15_min_ago
+                        #and ma2_last > ma2_17_min_ago
+                        
                         and ma2_last > ma7_last
                         and ma2_last > ma2_2_min_ago
                         and ma4_last > ma4_2_min_ago
                         and ma7_last >= ma15_last
                         and ma10_last >= ma10_2_min_ago
                         and ma11_last > ma15_last
+                        
                         
                         and price > price_1_min_ago
                         and price > price_2_min_ago
@@ -301,7 +317,10 @@ class ro_cano_che_ritorna:
                      
                         
                           and deviation_ma > 0.28
-                          
+                          #and ma2_last > ma2_15_min_ago
+                          #and ma2_last > ma2_17_min_ago
+                        
+                        
                           and ma2_last > ma7_last
                           and ma2_last > ma2_2_min_ago
                           and ma4_last > ma4_2_min_ago
