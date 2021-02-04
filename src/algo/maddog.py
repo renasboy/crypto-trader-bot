@@ -234,11 +234,11 @@ class maddog:
             # VENDE sessione 3 in poi
             else:
                 if ma2_last < ma16_last:
-                    if deviation > 0.20:
+                    if deviation > 1.20:
                         action = "sell"
 
             # STOP LOSS (salvagente)
-            if deviation < -0.99 and ma2_last < ma21_last:
+            if deviation < -0.20 and ma2_last < ma21_last:
                 action = "sell"
 
             # compa qua aiutami tu a capire ! " salvagente piu' lontano e salvagente piu' vicino "
