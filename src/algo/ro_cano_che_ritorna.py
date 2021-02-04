@@ -634,7 +634,7 @@ class ro_cano_che_ritorna:
             # 1) (stop loss) (salvagente)  VENDE SUBITO ( se la perdita e' troppa and incrocio al ribasso ma2 - ma20 )
             
             if (
-                ma100_last >= ma100_13min_ago
+                ma100_last >= ma100_13_min_ago
                 and ma2_last < ma20_last 
                 and deviation < -1.00:
             ):
@@ -642,7 +642,7 @@ class ro_cano_che_ritorna:
             
             
             elif (
-                ma100_last < ma100_13min_ago
+                ma100_last < ma100_13_min_ago
                 and ma2_last < ma20_last 
                 and deviation < -1.20:
             ):    
