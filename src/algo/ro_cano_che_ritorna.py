@@ -24,14 +24,19 @@ class ro_cano_che_ritorna:
         ma25_last, ma25_prev = self.algo_helper.ma_last_prev(25)
         ma28_last, ma28_prev = self.algo_helper.ma_last_prev(28)
         ma32_last, ma32_prev = self.algo_helper.ma_last_prev(32)
+        ma50_last, ma50_prev = self.algo_helper.ma_last_prev(50)
+        ma85_last, ma85_prev = self.algo_helper.ma_last_prev(85)
         ma100_last, ma100_prev = self.algo_helper.ma_last_prev(100)
 
         # moving average (2-3-4-5-7-8-20-43-100) di x minuti prima
         ma2_2_min_ago = self.algo_helper.ma_minutes_ago(2, 2)
+        ma2_3_min_ago = self.algo_helper.ma_minutes_ago(2, 3)
         ma4_2_min_ago = self.algo_helper.ma_minutes_ago(4, 2)
+        ma8_5_min_ago = self.algo_helper.ma_minutes_ago(8, 5)
         ma10_2_min_ago = self.algo_helper.ma_minutes_ago(10, 2)
         ma32_3_min_ago = self.algo_helper.ma_minutes_ago(32, 3)
         ma33_3_min_ago = self.algo_helper.ma_minutes_ago(33, 3)
+        ma50_5_min_ago = self.algo_helper.ma_minutes_ago(50, 5)
         ma100_13_min_ago = self.algo_helper.ma_minutes_ago(100, 13)
         
         
@@ -136,9 +141,14 @@ class ro_cano_che_ritorna:
                     if (
                     
                         ma100_last >= ma100_13_min_ago
-                        and ma2_last > ma7_last
-                      
+                        and ma85_last >= ma100_last
+                        and ma50_last >= ma50_5_min_ago
+                        and ma8_last >= ma8_5_min_ago
+                        
+                        
+                        and ma2_last >= ma7_last
                         and ma2_last > ma2_2_min_ago
+                        and ma2_last > ma2_3_min_ago
                         and ma4_last > ma4_2_min_ago
                         and ma7_last >= ma15_last
                         and ma10_last >= ma10_2_min_ago
@@ -157,10 +167,15 @@ class ro_cano_che_ritorna:
                     elif (
                     
                           ma100_last < ma100_13_min_ago
-                          and ma2_last > ma7_last
+                          and ma85_last < ma100_last
+                          and ma50_last < ma50_5_min_ago
+                          and ma8_last < ma8_5_min_ago
+                          
+                          
                         
                           and deviation_ma > 0.27
-                    
+                        
+                          and ma2_last > ma7_last
                           and ma2_last > ma2_2_min_ago
                           and ma4_last > ma4_2_min_ago
                           and ma7_last >= ma15_last
@@ -186,8 +201,12 @@ class ro_cano_che_ritorna:
                     if (
                     
                         ma100_last >= ma100_13_min_ago
+                        and ma85_last >= ma100_last
+                        and ma50_last >= ma50_5_min_ago
+                        and ma8_last >= ma8_5_min_ago
+                        
+                        
                         and ma2_last > ma7_last
-                      
                         and ma2_last > ma2_2_min_ago
                         and ma4_last > ma4_2_min_ago
                         and ma7_last >= ma15_last
@@ -207,10 +226,15 @@ class ro_cano_che_ritorna:
                     elif (
                     
                           ma100_last < ma100_13_min_ago
-                          and ma2_last > ma7_last
+                          and ma85_last < ma100_last
+                          and ma50_last < ma50_5_min_ago
+                          and ma8_last < ma8_5_min_ago
+                        
+                          
                         
                           and deviation_ma > 0.27
-                    
+                          
+                          and ma2_last > ma7_last
                           and ma2_last > ma2_2_min_ago
                           and ma4_last > ma4_2_min_ago
                           and ma7_last >= ma15_last
@@ -240,8 +264,11 @@ class ro_cano_che_ritorna:
                     if (
                     
                         ma100_last >= ma100_13_min_ago
+                        and ma85_last >= ma100_last
+                        and ma50_last >= ma50_5_min_ago
+                        and ma8_last >= ma8_5_min_ago
+                        
                         and ma2_last > ma7_last
-                      
                         and ma2_last > ma2_2_min_ago
                         and ma4_last > ma4_2_min_ago
                         and ma7_last >= ma15_last
@@ -261,10 +288,14 @@ class ro_cano_che_ritorna:
                     elif (
                     
                           ma100_last < ma100_13_min_ago
-                          and ma2_last > ma7_last
+                          and ma85_last < ma100_last
+                          and ma50_last < ma50_5_min_ago
+                          and ma8_last < ma8_5_min_ago
+                     
                         
                           and deviation_ma > 0.28
-                    
+                          
+                          and ma2_last > ma7_last
                           and ma2_last > ma2_2_min_ago
                           and ma4_last > ma4_2_min_ago
                           and ma7_last >= ma15_last
