@@ -225,7 +225,7 @@ class maddog:
             # VENDE sessione 1
             if self.session == 1:
                 if ma2_last < ma16_last
-                    and deviation > 0.12 or deviation < -0.80:
+                if deviation > 0.12 or deviation < -0.80:
                     
                         action = "sell"
 
