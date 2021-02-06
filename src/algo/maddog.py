@@ -220,28 +220,28 @@ class maddog:
             self.algo_helper.log("deviation: {}".format(deviation))
             self.algo_helper.log("session: {}".format(self.session))
 
-            # VENDE CON INCROCIO ma2 - ma7 ( + DEVIATION BUY )
+            # VENDE
 
             # VENDE sessione 1
             if self.session == 1:
                 if ma2_last < ma11_last:
-                    if deviation > 0.20:
+                    
                         action = "sell"
 
             # VENDE sessione 2
             elif self.session == 2:
-                if ma2_last < ma11_last:
-                    if deviation > 0.20:
+                if ma2_last < ma13_last:
+                    
                         action = "sell"
 
             # VENDE sessione 3 in poi
             else:
                 if ma2_last < ma16_last:
-                    if deviation > 0.20:
+                    
                         action = "sell"
 
             # STOP LOSS (salvagente)
-            if deviation < -0.20 and ma2_last < ma21_last:
+            if deviation < -1.20 and ma2_last < ma21_last:
                 action = "sell"
 
             # compa qua aiutami tu a capire ! " salvagente piu' lontano e salvagente piu' vicino "
