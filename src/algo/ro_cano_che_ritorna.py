@@ -373,15 +373,7 @@ class ro_cano_che_ritorna:
                     and ma2_last < ma7_last
                     and deviation > 0.12
                 ):
-                    #self.algo_helper.log("ma100_last: {}".format(ma100_last))
-                    #self.algo_helper.log("ma100_13_min_ago: {}".format(ma100_13_min_ago))
-                    #self.algo_helper.log("ma2_last: {}".format(ma2_last))
-                    #self.algo_helper.log("ma7_last: {}".format(ma7_last))
-                    #self.algo_helper.log("deviation: {}".format(deviation))
-                    
-                    #self.algo_helper.log("ma100_last > ma100_13_min_ago: {}".format(ma100_last > ma100_13_min_ago))
-                    
-                    
+                   
                     action = "sell"
 
                     
@@ -638,8 +630,8 @@ class ro_cano_che_ritorna:
             
             if (
                 ma100_last >= ma100_13_min_ago
-                and ma2_last < ma20_last 
-                and deviation < -1.00
+                and ma2_last < ma100_last 
+                and deviation < -0.70
             ):
                 action = "sell"
             
@@ -647,7 +639,7 @@ class ro_cano_che_ritorna:
             elif (
                 ma100_last < ma100_13_min_ago
                 and ma2_last < ma20_last 
-                and deviation < -1.20
+                and deviation < -0.80
             ):    
                 action = "sell"
             
@@ -656,7 +648,7 @@ class ro_cano_che_ritorna:
             # 2) ro cano VENDE SE DIMINUISCE LA FORZA ! ( vende se perdita  < -0.50 e se etc.)
             if (
                 seconds_since_last_trade > max_hold_without_force_time_in_seconds
-                and deviation < -1.10
+                and deviation < -0.90
                 and ma2_last < ma18_last
                 and ma7_last < ma11_last
                 and ma11_last < ma15_last
@@ -666,7 +658,7 @@ class ro_cano_che_ritorna:
             # 3) ro cano VENDE " DOPO 100 MINUTI " "max hold time" ( vende dopo 100 MINUTI "e se" ma7_last < ma7_2_min_ago "e se" ma2 < ma11 )
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
-                and ma2_last < ma11_last
+                and ma2_last < ma20_last
             ):
                 action = "sell"
 
