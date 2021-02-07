@@ -158,6 +158,8 @@ class ro_cano_che_ritorna:
                         and ma50_last >= ma50_5_min_ago
                         and ma8_last >= ma8_5_min_ago
                         
+                        and ma18_last > ma22_last 
+                        # per non comprare con breve andamento laterale ( ma il trend e' ribassista )
                         
                         and ma2_last > ma2_2_min_ago
                         and ma2_last > ma2_3_min_ago
@@ -189,10 +191,10 @@ class ro_cano_che_ritorna:
                           
                           and deviation_ma > 0.27
                           
-                          and ma2_last > ma2_15_min_ago
-                          and ma2_last > ma2_17_min_ago
-                          and ma2_last > ma2_22_min_ago
-                          and ma2_last > ma2_24_min_ago
+                          #and ma2_last > ma2_15_min_ago
+                          #and ma2_last > ma2_17_min_ago
+                          #and ma2_last > ma2_22_min_ago
+                          #and ma2_last > ma2_24_min_ago ( ultima speranza ) 
                           
                           
                           and ma2_last > ma2_2_min_ago
@@ -202,7 +204,8 @@ class ro_cano_che_ritorna:
                           and ma10_last >= ma10_2_min_ago
                           and ma11_last > ma15_last
                         
-                          #and ma18_last > ma22_last ( per non comprare durante il ribasso ) ( prezzo e ma2 gia' sono andati giu' ! )
+                          and ma18_last > ma22_last 
+                          # per non comprare durante il ribasso ( prezzo e ma2 gia' sono andati giu' ! )
                         
                           and price > price_1_min_ago
                           and price > price_2_min_ago
