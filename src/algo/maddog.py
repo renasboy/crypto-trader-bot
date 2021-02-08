@@ -221,16 +221,29 @@ class maddog:
             self.algo_helper.log("session: {}".format(self.session))
 
             # VENDE
+            
+            
+            
 
             # VENDE sessione 1
             if self.session == 1:
-                if ma2_last < ma16_last:
-                    if deviation < -0.50:
-                    #if deviation > 0.12:  
+                #if ma2_last < ma16_last:
+                    #if deviation < -0.50:
+                if (
+                    ma100_last > ma100_13_min_ago
+                    and ma2_last < ma16_last
+                    and deviation > 0.12
+                ):
+                   
+                    action = "sell"     
                     
                 
                     
-                        action = "sell"
+                        #action = "sell"
+                        
+                        
+                        
+                        
 
             # VENDE sessione 2
             elif self.session == 2:
