@@ -367,12 +367,12 @@ class ro_cano_che_ritorna:
             # VENDITA 1 - con fasce di tempo !
 
             #    minuti
-            #   0 -   3
-            #   3 -   5
-            #   5 -  12
-            #  12 -  20
-            #  20 -  30
-            #     >30
+            #   0 -   3 -----------se ma100 > ma100 13 min ago vende con ma11 
+            #   3 -   5 -----------se ma100 > ma100 13 min ago vende con ma13
+            #   5 -  12 -----------se ma100 > ma100 13 min ago vende con ma15
+            #  12 -  20 -----------se ma100 > ma100 13 min ago vende con ma16
+            #  20 -  30 -----------se ma100 > ma100 13 min ago vende con ma16
+            #     >30   -----------se ma100 > ma100 13 min ago vende con ma16
 
             ##################################################################################
 
@@ -381,7 +381,7 @@ class ro_cano_che_ritorna:
             if seconds_since_last_trade > 0 and seconds_since_last_trade <= 180:
                 if (
                     ma100_last > ma100_13_min_ago
-                    and ma2_last < ma7_last
+                    and ma2_last < ma11_last
                     and deviation > 0.10
                 ):
                    
@@ -391,7 +391,7 @@ class ro_cano_che_ritorna:
                     
                 elif (
                     ma100_last > ma100_13_min_ago
-                    and ma2_last < ma7_last
+                    and ma2_last < ma11_last
                     and deviation < -0.90
                 ):
                     action = "sell"    
@@ -429,7 +429,7 @@ class ro_cano_che_ritorna:
                 
                 if (
                     ma100_last > ma100_13_min_ago
-                    and ma2_last < ma7_last
+                    and ma2_last < ma13_last
                     and deviation > 0.10
                 ):
                     action = "sell"
@@ -437,7 +437,7 @@ class ro_cano_che_ritorna:
                     
                 elif (
                     ma100_last > ma100_13_min_ago
-                    and ma2_last < ma7_last
+                    and ma2_last < ma13_last
                     and deviation < -0.90
                 ):
                     action = "sell"  
@@ -472,7 +472,7 @@ class ro_cano_che_ritorna:
 
                 if (
                     ma100_last > ma100_13_min_ago
-                    and ma2_last < ma10_last
+                    and ma2_last < ma16_last
                     and deviation > 0.10
                 ):
                     action = "sell"
@@ -481,7 +481,7 @@ class ro_cano_che_ritorna:
                     
                 elif (
                     ma100_last > ma100_13_min_ago
-                    and ma2_last < ma10_last
+                    and ma2_last < ma16_last
                     and deviation < -0.70
                 ):
                     action = "sell"
@@ -514,7 +514,7 @@ class ro_cano_che_ritorna:
 
                 if (
                     ma100_last > ma100_13_min_ago
-                    and ma2_last < ma11_last
+                    and ma2_last < ma16_last
                     and deviation > 0.10
                 ):
                     action = "sell"
@@ -524,7 +524,7 @@ class ro_cano_che_ritorna:
                     
                 elif (
                     ma100_last > ma100_13_min_ago
-                    and ma2_last < ma11_last
+                    and ma2_last < ma16_last
                     and deviation < -0.70
                 ):
                     action = "sell"
@@ -600,7 +600,7 @@ class ro_cano_che_ritorna:
 
                 if (
                     ma100_last > ma100_13_min_ago
-                    and ma2_last < ma15_last
+                    and ma2_last < ma16_last
                     and deviation > 0.15
                 ):
                     action = "sell"
@@ -608,7 +608,7 @@ class ro_cano_che_ritorna:
                     
                 elif (
                     ma100_last > ma100_13_min_ago
-                    and ma2_last < ma15_last
+                    and ma2_last < ma16_last
                     and deviation < -0.70
                 ):
                     action = "sell"
