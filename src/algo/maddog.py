@@ -256,15 +256,56 @@ class maddog:
 
             # VENDE sessione 2
             elif self.session == 2:
-                if ma2_last < ma16_last:
+                #if ma2_last < ma16_last:
+                if (
+                    ma100_last > ma100_13_min_ago
+                    and ma2_last < ma16_last
+                    and deviation > 0.12
+                ):
+                   
+                    action = "sell"     
                     
-                        action = "sell"
+
+                    
+                    
+                elif (
+                    ma100_last > ma100_13_min_ago
+                    and ma2_last < ma16_last
+                    and deviation < -0.52
+                ):
+                    action = "sell"      
+                        #action = "sell"
+                        
+                        
+                        
+                        
 
             # VENDE sessione 3 in poi
             else:
-                if ma2_last < ma16_last:
+                #if ma2_last < ma16_last:
+                if (
+                    ma100_last > ma100_13_min_ago
+                    and ma2_last < ma16_last
+                    and deviation > 0.12
+                ):
+                   
+                    action = "sell"     
                     
-                        action = "sell"
+
+                    
+                    
+                elif (
+                    ma100_last > ma100_13_min_ago
+                    and ma2_last < ma16_last
+                    and deviation < -0.52
+                ):
+                    action = "sell"        
+                        #action = "sell"
+                        
+                        
+                        
+                  
+                        
 
             # STOP LOSS (salvagente)
             if deviation < -1.20 and ma2_last < ma21_last:
