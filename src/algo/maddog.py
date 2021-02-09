@@ -185,7 +185,8 @@ class maddog:
                         and ma7_last > ma7_2_min_ago
                         and ma11_last >= ma11_2_min_ago
                         and ma15_last >= ma15_5_min_ago
-                        and deviation_ma > 0.20
+                        
+                        and deviation_ma > 0.25
                         # and ma16_last > ma16_2_min_ago
                     
                         and price > price_1_min_ago
@@ -232,7 +233,7 @@ class maddog:
                 if (
                     ma100_last > ma100_13_min_ago
                     and ma2_last < ma16_last
-                    and deviation > 0.12
+                    and deviation > 0.01
                 ):
                    
                     action = "sell"     
@@ -243,7 +244,7 @@ class maddog:
                 elif (
                     ma100_last > ma100_13_min_ago
                     and ma2_last < ma16_last
-                    and deviation < -0.52
+                    and deviation < -0.82
                 ):
                     action = "sell"    
                 
@@ -260,7 +261,7 @@ class maddog:
                 if (
                     ma100_last > ma100_13_min_ago
                     and ma2_last < ma16_last
-                    and deviation > 0.12
+                    and deviation > 0.10
                 ):
                    
                     action = "sell"     
@@ -271,7 +272,7 @@ class maddog:
                 elif (
                     ma100_last > ma100_13_min_ago
                     and ma2_last < ma16_last
-                    and deviation < -0.52
+                    and deviation < -0.82
                 ):
                     action = "sell"      
                         #action = "sell"
@@ -297,7 +298,7 @@ class maddog:
                 elif (
                     ma100_last > ma100_13_min_ago
                     and ma2_last < ma16_last
-                    and deviation < -0.52
+                    and deviation < -0.82
                 ):
                     action = "sell"        
                         #action = "sell"
