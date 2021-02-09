@@ -185,7 +185,7 @@ class maddog:
                         and ma7_last > ma7_2_min_ago
                         and ma11_last >= ma11_2_min_ago
                         and ma15_last >= ma15_5_min_ago
-                        and deviation_ma > 0.27
+                        and deviation_ma > 0.20
                         # and ma16_last > ma16_2_min_ago
                     
                         and price > price_1_min_ago
