@@ -189,7 +189,7 @@ class ro_cano_che_ritorna:
                           
                           
                           
-                          and deviation_ma > 0.10
+                          and deviation_ma > 0.18
                           
                           #and ma2_last > ma2_15_min_ago
                           #and ma2_last > ma2_17_min_ago
@@ -259,7 +259,7 @@ class ro_cano_che_ritorna:
                         
                           
                         
-                          and deviation_ma > 0.27
+                          and deviation_ma > 0.18
                           #and ma2_last > ma2_15_min_ago
                           #and ma2_last > ma2_17_min_ago
                         
@@ -328,7 +328,7 @@ class ro_cano_che_ritorna:
                           #and ma8_last < ma8_5_min_ago
                      
                         
-                          and deviation_ma > 0.28
+                          and deviation_ma > 0.18
                           #and ma2_last > ma2_15_min_ago
                           #and ma2_last > ma2_17_min_ago
                         
