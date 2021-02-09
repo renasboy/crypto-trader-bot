@@ -16,6 +16,7 @@ class ro_cano_che_ritorna:
 
         # moving average (2-3-4-5-x)
         ma2_last, ma2_prev = self.algo_helper.ma_last_prev(2)
+        ma3_last, ma3_prev = self.algo_helper.ma_last_prev(3)
         ma4_last, ma4_prev = self.algo_helper.ma_last_prev(4)
         ma5_last, ma5_prev = self.algo_helper.ma_last_prev(5)
         ma7_last, ma7_prev = self.algo_helper.ma_last_prev(7)
@@ -95,6 +96,7 @@ class ro_cano_che_ritorna:
         self.algo_helper.log("deviation_prev: {}".format(deviation_prev))
 
         # formula DEVIATION_ma (per comprare durante il TREND RIBASSISTA)
+        # pronto a sostituire ma2_last con ma3_last
         deviation_ma = (ma2_last / ma18_last - 1) * 100 if ma18_last else 0
         self.algo_helper.log("deviation_ma: {}".format(deviation_ma))
 
@@ -190,6 +192,7 @@ class ro_cano_che_ritorna:
                           
                           
                           and deviation_ma > 0.21
+                          # vedi riga 100 !
                           
                           #and ma2_last > ma2_15_min_ago
                           #and ma2_last > ma2_17_min_ago
