@@ -370,9 +370,9 @@ class ro_cano_che_ritorna:
             # VENDITA 1 - con fasce di tempo !
 
             #    minuti
-            #   0 -   3 -----------se ma100 > ma100 13 min ago vende con ma11 > 
-            #   3 -   5 -----------se ma100 > ma100 13 min ago vende con ma13 >
-            #   5 -  12 -----------se ma100 > ma100 13 min ago vende con ma13 > 
+            #   0 -   3 -----------se ma100 > ma100 13 min ago vende con ma11
+            #   3 -   5 -----------se ma100 > ma100 13 min ago vende con ma12
+            #   5 -  12 -----------se ma100 > ma100 13 min ago vende con ma13
             #  12 -  20 -----------se ma100 > ma100 13 min ago vende con ma16 > 0.01
             #  20 -  30 -----------se ma100 > ma100 13 min ago vende con ma16 > 0.10
             #     >30   -----------se ma100 > ma100 13 min ago vende con ma16 > 0.15
@@ -432,7 +432,7 @@ class ro_cano_che_ritorna:
                 
                 if (
                     ma100_last > ma100_13_min_ago
-                    and ma2_last < ma13_last
+                    and ma2_last < ma12_last
                     #and deviation > 0.08
                 ):
                     action = "sell"
@@ -440,7 +440,7 @@ class ro_cano_che_ritorna:
                     
                 elif (
                     ma100_last > ma100_13_min_ago
-                    and ma2_last < ma13_last
+                    and ma2_last < ma12_last
                     and deviation < -0.80
                 ):
                     action = "sell"  
