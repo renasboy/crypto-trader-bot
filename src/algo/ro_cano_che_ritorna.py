@@ -50,6 +50,7 @@ class ro_cano_che_ritorna:
         ma10_2_min_ago = self.algo_helper.ma_minutes_ago(10, 2)
         ma32_3_min_ago = self.algo_helper.ma_minutes_ago(32, 3)
         ma33_3_min_ago = self.algo_helper.ma_minutes_ago(33, 3)
+        ma50_2_min_ago = self.algo_helper.ma_minutes_ago(50, 2)
         ma50_5_min_ago = self.algo_helper.ma_minutes_ago(50, 5)
         ma100_13_min_ago = self.algo_helper.ma_minutes_ago(100, 13)
         
@@ -157,7 +158,7 @@ class ro_cano_che_ritorna:
                     
                         ma100_last >= ma100_13_min_ago
                         and ma85_last >= ma100_last
-                        and ma50_last >= ma50_5_min_ago
+                        and ma50_last >= ma50_2_min_ago
                         #and ma8_last >= ma8_5_min_ago
                         
                         and ma18_last > ma22_last 
