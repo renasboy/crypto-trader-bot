@@ -208,7 +208,7 @@ class ro_cano_che_ritorna:
                           and ma10_last >= ma10_2_min_ago
                           and ma11_last > ma15_last
                         
-                          and ma18_last > ma22_last 
+                          #and ma18_last > ma22_last 
                           # per non comprare durante il ribasso ( prezzo e ma2 gia' sono andati giu' ! )
                         
                           and price > price_1_min_ago
