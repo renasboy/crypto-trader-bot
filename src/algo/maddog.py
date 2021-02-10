@@ -49,6 +49,8 @@ class maddog:
         ma11_2_min_ago = self.algo_helper.ma_minutes_ago(11, 2)
         ma15_5_min_ago = self.algo_helper.ma_minutes_ago(15, 5)
         ma16_2_min_ago = self.algo_helper.ma_minutes_ago(16, 2)
+        ma20_2_min_ago = self.algo_helper.ma_minutes_ago(20, 2)
+        ma60_2_min_ago = self.algo_helper.ma_minutes_ago(60, 2)
         ma85_3_min_ago = self.algo_helper.ma_minutes_ago(85, 3)
         ma100_13_min_ago = self.algo_helper.ma_minutes_ago(100, 13)
         
@@ -125,8 +127,8 @@ class maddog:
                         and price > price_3_min_ago
                         and price > price_7_min_ago
                         
-                        and ma20_last >= ma20_last
-                        and ma60_last >= ma60_last
+                        and ma20_last >= ma20_2_min_ago
+                        #and ma60_last >= ma60_2_min_ago
                         
                         #and ma20_last >= ma60_last
                         
@@ -157,8 +159,8 @@ class maddog:
                         and price > price_3_min_ago
                         and price > price_7_min_ago
                         
-                        and ma20_last >= ma20_last
-                        and ma60_last >= ma60_last
+                        and ma20_last >= ma20_2_min_ago
+                        and ma60_last >= ma60_2_min_ago
                         
                         and ma20_last >= ma60_last
                         
@@ -194,8 +196,8 @@ class maddog:
                         and price > price_3_min_ago
                         and price > price_7_min_ago
                         
-                        and ma20_last >= ma20_last
-                        and ma60_last >= ma60_last
+                        and ma20_last >= ma20_2_min_ago
+                        #and ma60_last >= ma60_2_min_ago
                         
                         and ma20_last >= ma60_last
                         
