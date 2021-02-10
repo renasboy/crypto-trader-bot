@@ -234,7 +234,7 @@ class maddog:
                     #if deviation < -0.50:
                 if (
                     ma100_last > ma100_13_min_ago
-                    and ma2_last < ma100_last
+                    and ma2_last < ma34_last
                     and deviation > 0.01
                 ):
                    
