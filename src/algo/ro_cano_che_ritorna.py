@@ -192,7 +192,7 @@ class ro_cano_che_ritorna:
                           
                           
                           
-                          and deviation_ma > 0.21
+                          and deviation_ma > 0.49
                           # vedi riga 100 !
                           
                           #and ma2_last > ma2_15_min_ago
