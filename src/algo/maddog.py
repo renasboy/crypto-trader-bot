@@ -230,8 +230,7 @@ class maddog:
 
             # VENDE sessione 1
             if self.session == 1:
-                #if ma2_last < ma16_last:
-                    #if deviation < -0.50:
+                
                 if (
                     ma100_last > ma100_13_min_ago
                     and ma2_last < ma34_last
@@ -251,7 +250,7 @@ class maddog:
                     action = "sell"    
                 
                     
-                        #action = "sell"
+                    
                         
                         
                         
@@ -259,7 +258,7 @@ class maddog:
 
             # VENDE sessione 2
             elif self.session == 2:
-                #if ma2_last < ma16_last:
+               
                 if (
                     ma100_last > ma100_13_min_ago
                     and ma2_last < ma13_last
@@ -277,7 +276,7 @@ class maddog:
                     and deviation < -0.82
                 ):
                     action = "sell"      
-                        #action = "sell"
+                       
                         
                         
                         
@@ -314,14 +313,13 @@ class maddog:
             if deviation < -1.20 and ma2_last < ma21_last:
                 action = "sell"
 
-            # compa qua aiutami tu a capire ! " salvagente piu' lontano e salvagente piu' vicino "
-            # ( compa, una volta c'e' stata una grande vendita al 3° minuto dopo il buy ! ) - ( forse si puo' risolvere con ma2 al posto del price nella deviation )
-            # da 0 a 240 secondi dal buy VENDI se ma2 < ma7 "E SE" deviation < -1.8
-            # da 241 secondi dal buy VENDI se ma2 < ma16 "E SE" deviation < -0.5 ( provo a ridurre le perdite nel ribasso improvviso e improbabile )
+            
+           
+            
+            
 
-            # RO CANO TORNA A CASA
+            
             # 1) ATTESA DI 1 ORA = 3600 SECONDI "max hold time" " DOPO UN' ORA VENDE SUBITO "
-            # 2) ma aggiungere VENDI SE DIMINUISCE LA FORZA! ( DOPO 15 MINUTI VENDE SE deviation <-0,4 "E SE" ma7 < ma7 3 min ago "E SE" ma11 < ma11 3 min ago "E SE" ma16 < ma16 3 min ago )
 
             if seconds_since_last_trade > max_hold_time_in_seconds:
                 action = "sell"
