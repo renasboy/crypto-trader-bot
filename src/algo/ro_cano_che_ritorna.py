@@ -31,6 +31,7 @@ class ro_cano_che_ritorna:
         ma20_last, ma20_prev = self.algo_helper.ma_last_prev(20)
         ma21_last, ma21_prev = self.algo_helper.ma_last_prev(21)
         ma22_last, ma22_prev = self.algo_helper.ma_last_prev(22)
+        ma24_last, ma24_prev = self.algo_helper.ma_last_prev(24)
         ma25_last, ma25_prev = self.algo_helper.ma_last_prev(25)
         ma28_last, ma28_prev = self.algo_helper.ma_last_prev(28)
         ma32_last, ma32_prev = self.algo_helper.ma_last_prev(32)
@@ -191,8 +192,8 @@ class ro_cano_che_ritorna:
                           #and ma8_last < ma8_5_min_ago
                           
                           
-                          
-                          and deviation_ma > 0.49
+                          and ma16_last >= ma24_last
+                          and deviation_ma > 0.40
                           # vedi riga 100 !
                           
                           #and ma2_last > ma2_15_min_ago
@@ -206,7 +207,7 @@ class ro_cano_che_ritorna:
                           and ma4_last > ma4_2_min_ago
                           and ma7_last >= ma15_last
                           and ma10_last >= ma10_2_min_ago
-                          and ma11_last > ma15_last
+                          and ma11_last >= ma15_last
                         
                           #and ma18_last > ma22_last 
                           # per non comprare durante il ribasso ( prezzo e ma2 gia' sono andati giu' ! )
