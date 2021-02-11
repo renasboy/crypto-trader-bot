@@ -321,8 +321,9 @@ class maddog:
             
             # 1) ATTESA DI 1 ORA = 3600 SECONDI "max hold time" " DOPO UN' ORA VENDE SUBITO "
             #if seconds_since_last_trade > max_hold_time_in_seconds:
-            if seconds_since_last_trade > max_hold_time_in_seconds
-                and ma2_last < ma20_last:
+            if seconds_since_last_trade > max_hold_time_in_seconds and ma2_last < ma20_last:
+                
+                    
                 action = "sell"
 
         self.algo_helper.log("action {}".format(action))
