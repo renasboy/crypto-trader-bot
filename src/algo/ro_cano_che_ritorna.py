@@ -242,7 +242,7 @@ class ro_cano_che_ritorna:
                     if (
                     
                         ma100_last >= ma100_13_min_ago
-                        ma36_last >= ma36_2_min_ago
+                        ma36_last > ma36_2_min_ago
                         and ma8_last >= ma14_last
                         and deviation_ma >= 0.18
                         
