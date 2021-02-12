@@ -238,7 +238,7 @@ class ro_cano_che_ritorna:
                     elif (
                     
                           ma100_last < ma100_13_min_ago
-                          and ma36_last < ma36_2_min_ago
+                          and ma36_last > ma36_2_min_ago
                           and ma9_last >= ma15_last
                         
                         
