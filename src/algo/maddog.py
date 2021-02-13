@@ -188,7 +188,7 @@ class maddog:
                         and ma11_last >= ma11_2_min_ago
                         #and ma15_last >= ma15_5_min_ago
                         
-                        and deviation_ma > 0.15
+                        and deviation_ma > 0.18
                         # and ma16_last > ma16_2_min_ago
                     
                         and price > price_1_min_ago
@@ -243,7 +243,7 @@ class maddog:
                     
                     
                 elif (
-                    ma100_last > ma100_13_min_ago
+                    ma100_last < ma100_13_min_ago
                     and ma2_last < ma15_last
                     and deviation < -0.82
                 ):
@@ -271,7 +271,7 @@ class maddog:
                     
                     
                 elif (
-                    ma100_last > ma100_13_min_ago
+                    ma100_last < ma100_13_min_ago
                     and ma2_last < ma11_last
                     and deviation < -0.82
                 ):
@@ -284,7 +284,7 @@ class maddog:
 
             # VENDE sessione 3 in poi
             else:
-                #if ma2_last < ma16_last:
+                
                 if (
                     ma100_last > ma100_13_min_ago
                     and ma2_last < ma15_last
@@ -297,7 +297,7 @@ class maddog:
                     
                     
                 elif (
-                    ma100_last > ma100_13_min_ago
+                    ma100_last < ma100_13_min_ago
                     and ma2_last < ma13_last
                     and deviation < -0.82
                 ):
