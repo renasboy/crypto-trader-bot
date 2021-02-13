@@ -404,6 +404,8 @@ class ro_cano_che_ritorna:
                           ma100_last < ma100_13_min_ago
                           and ma36_last > ma36_2_min_ago
                           and ma9_last >= ma15_last
+                          and deviation_ma > 5.00
+                          # test compra 1 (la deviation > 0.20)
                         
                         
                           #and ma85_last < ma100_last
@@ -412,8 +414,8 @@ class ro_cano_che_ritorna:
                           
                           
                           #and ma16_last >= ma24_last
-                          #and deviation_ma > 0.40
-                          # vedi riga 100 !
+                          
+                          
                           
                           #and ma2_last > ma2_15_min_ago
                           #and ma2_last > ma2_17_min_ago
