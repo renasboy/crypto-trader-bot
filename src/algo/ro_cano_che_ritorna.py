@@ -967,7 +967,7 @@ class ro_cano_che_ritorna:
                     
                 elif (
                     ma100_last > ma100_13_min_ago
-                    ma36_last > ma36_2_min_ago
+                    and ma36_last > ma36_2_min_ago
                     and ma2_last < ma16_last
                     and deviation > 0.07
                 ):
@@ -976,7 +976,7 @@ class ro_cano_che_ritorna:
                     
                 elif (
                     ma100_last > ma100_13_min_ago
-                    ma36_last > ma36_2_min_ago
+                    and ma36_last > ma36_2_min_ago
                     and ma2_last < ma11_last
                     and deviation > -0.50
                 ):
