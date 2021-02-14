@@ -22,6 +22,7 @@ class maddog:
         ma5_last, ma5_prev = self.algo_helper.ma_last_prev(5)
         ma7_last, ma7_prev = self.algo_helper.ma_last_prev(7)
         ma11_last, ma11_prev = self.algo_helper.ma_last_prev(11)
+        ma12_last, ma12_prev = self.algo_helper.ma_last_prev(12)
         ma13_last, ma13_prev = self.algo_helper.ma_last_prev(13)
         ma15_last, ma15_prev = self.algo_helper.ma_last_prev(15)
         ma16_last, ma16_prev = self.algo_helper.ma_last_prev(16)
@@ -117,26 +118,26 @@ class maddog:
                         and ma5_last > ma5_2_min_ago
                         and ma5_2_min_ago > ma5_3_min_ago
                         and ma7_last > ma7_2_min_ago
-                        and ma11_last >= ma11_2_min_ago
-                        and ma15_last > ma15_5_min_ago
-                        and ma16_last >= ma16_2_min_ago
+                        #and ma11_last >= ma11_2_min_ago
+                        #and ma15_last > ma15_5_min_ago
+                        #and ma16_last >= ma16_2_min_ago
                         and ma18_last >= ma21_last
                         
                         and price > price_1_min_ago
                         and price > price_2_min_ago
-                        and price > price_3_min_ago
-                        and price > price_7_min_ago
+                        #and price > price_3_min_ago
+                        #and price > price_7_min_ago
                         
-                        and ma20_last >= ma20_2_min_ago
+                        #and ma20_last >= ma20_2_min_ago
                         #and ma60_last >= ma60_2_min_ago
                         
                         #and ma20_last >= ma60_last
                         
                         and ma85_last >= ma100_last
                         #and ma85_last >= ma85_3_min_ago
-                        and ma100_last >= ma100_13_min_ago
+                        #and ma100_last >= ma100_13_min_ago
                         
-                        and ma20_last >= ma60_last
+                        #and ma20_last >= ma60_last
                         
                     ):
                         action = "buy"
@@ -233,8 +234,8 @@ class maddog:
                 
                 if (
                     ma100_last > ma100_13_min_ago
-                    and ma2_last < ma34_last
-                    and deviation > 0.01
+                    and ma12_last < ma15_last
+                    and deviation > 0.20
                 ):
                    
                     action = "sell"     
@@ -245,7 +246,7 @@ class maddog:
                 elif (
                     ma100_last < ma100_13_min_ago
                     and ma2_last < ma15_last
-                    and deviation < -0.82
+                    and deviation < -1.5
                 ):
                     action = "sell"    
                 
