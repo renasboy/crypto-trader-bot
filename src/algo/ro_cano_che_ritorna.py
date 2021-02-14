@@ -708,7 +708,7 @@ class ro_cano_che_ritorna:
                     ma100_last < ma100_13_min_ago
                     and ma36_last < ma36_2_min_ago
                     and ma2_last < ma11_last
-                    #and deviation > 0.01
+                    and deviation > 0.01
                 ):
                     action = "sell"
 
@@ -755,7 +755,7 @@ class ro_cano_che_ritorna:
                     ma100_last < ma100_13_min_ago
                     and ma36_last < ma36_2_min_ago
                     and ma2_last < ma18_last
-                    #and deviation > 0.01
+                    and deviation > 0.01
                 ):
                     action = "sell"
 
@@ -784,7 +784,7 @@ class ro_cano_che_ritorna:
                     ma100_last >= ma100_13_min_ago
                     and ma36_last >= ma36_2_min_ago
                     and ma2_last < ma15_last
-                    #and deviation > 0.01
+                    and deviation > 0.01
                 ):
                     action = "sell"
                     
@@ -804,7 +804,7 @@ class ro_cano_che_ritorna:
                     ma100_last < ma100_13_min_ago
                     and ma36_last < ma36_2_min_ago
                     and ma2_last < ma7_last
-                    #and deviation > 0.01
+                    and deviation > 0.01
                 ):
                     action = "sell"
                     
