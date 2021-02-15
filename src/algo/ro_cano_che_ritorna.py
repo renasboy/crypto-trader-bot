@@ -1075,10 +1075,13 @@ class ro_cano_che_ritorna:
             # VENDITA 1 - da 20 a 30 minuti = da 1200 a 1800 secondi
 
             elif seconds_since_last_trade > 1200 and seconds_since_last_trade <= 1800:
+                
+                
 
                 if (
                     ma100_last > ma100_13_min_ago
-                    and ma2_last > ma16_last
+                    and ma36_last > ma36_2_min_ago
+                    and ma2_last < ma16_last
                     and deviation > 0.10
                 ):
                     action = "sell"
@@ -1087,6 +1090,7 @@ class ro_cano_che_ritorna:
                     
                 elif (
                     ma100_last > ma100_13_min_ago
+                    and ma36_last > ma36_2_min_ago
                     and ma2_last < ma16_last
                     and deviation < -0.60
                 ):
@@ -1094,8 +1098,12 @@ class ro_cano_che_ritorna:
                     
                     
                     
+                    
+                    
+                    
                 elif (
-                    ma100_last < ma100_13_min_ago
+                    ma100_last > ma100_13_min_ago
+                    and ma36_last < ma36_2_min_ago
                     and ma2_last < ma10_last
                     and deviation > 0.07
                 ):
@@ -1104,11 +1112,71 @@ class ro_cano_che_ritorna:
        
 
                 elif (
-                    ma100_last < ma100_13_min_ago
+                    ma100_last > ma100_13_min_ago
+                    and ma36_last < ma36_2_min_ago
                     and ma2_last < ma10_last
-                    and deviation < -0.60
+                    and deviation < -0.50
                 ):
                     action = "sell"
+                
+                
+                
+                
+                
+                
+                elif (
+                    ma100_last < ma100_13_min_ago
+                    and ma36_last > ma36_2_min_ago
+                    and ma2_last < ma10_last
+                    and deviation > 0.01
+                ):
+                    action = "sell"
+                    
+       
+
+                elif (
+                    ma100_last < ma100_13_min_ago
+                    and ma36_last > ma36_2_min_ago
+                    and ma2_last < ma10_last
+                    and deviation < -0.50
+                ):
+                    action = "sell"
+                
+                
+                
+                
+                
+                
+                
+                elif (
+                    ma100_last < ma100_13_min_ago
+                    and ma36_last < ma36_2_min_ago
+                    and ma2_last < ma10_last
+                    and deviation > 0.01
+                ):
+                    action = "sell"
+                    
+       
+
+                elif (
+                    ma100_last < ma100_13_min_ago
+                    and ma36_last < ma36_2_min_ago
+                    and ma2_last < ma10_last
+                    and deviation < -0.40
+                ):
+                    action = "sell"
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                     
                     
                     
