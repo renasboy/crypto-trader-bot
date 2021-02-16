@@ -18,6 +18,7 @@ class maddog:
 
         # moving average (2-3-4-5-x)
         ma2_last, ma2_prev = self.algo_helper.ma_last_prev(2)
+        ma3_last, ma3_prev = self.algo_helper.ma_last_prev(3)
         ma4_last, ma4_prev = self.algo_helper.ma_last_prev(4)
         ma5_last, ma5_prev = self.algo_helper.ma_last_prev(5)
         ma7_last, ma7_prev = self.algo_helper.ma_last_prev(7)
@@ -85,20 +86,28 @@ class maddog:
         # APRE E CHIUDE GABBIA
         # SI APRE LA GABBIA SE
         if ma100_last > ma100_13_min_ago:
+            
+            
             # NON TOCCARE QUESTA CONDIZIONE SERVE PER APERTURA DI GABBIA
             if not self.session or not self.open:
                 self.session = 1
                 self.open = True
                 self.algo_helper.log("session {}: open segment".format(self.session))
+                
+                
         # SI CHIUDE LA GABBIA SE
         else:
             self.open = False
             self.algo_helper.log("session {}: closed segment".format(self.session))
 
         #######################################################################
+        
+        
         # COMPRA
         # NON TOCCARE QUESTA CONDIZIONE (QUESTA DICE CHE STA IN MODO BUY, DEVO COMPRARE)
         if self.open and self.session and last_trade_action != "buy":
+            
+            
 
             # COMPRA UN PO' PIU' SOPRA DELL' ULTIMO SELL ( aggiungere compra un po' piu' sopra dell' ultimo BUY deviation > 0.20 )
             if (
@@ -109,6 +118,9 @@ class maddog:
                 seconds_since_last_trade == 0
                 or seconds_since_last_trade > min_buy_delay_in_seconds
             ):
+                
+                
+        #######################################################################
 
                 # COMPRA sessione 1
                 if self.session == 1:
@@ -121,7 +133,7 @@ class maddog:
                         and ma18_last >= ma21_last
                         and price > price_1_min_ago
                         and price > price_2_min_ago
-                        and ma85_last >= ma100_last
+                        and ma34_last >= ma100_last
                         
                         #and ma11_last >= ma11_2_min_ago
                         #and ma15_last > ma15_5_min_ago
@@ -161,7 +173,8 @@ class maddog:
                         and price > price_7_min_ago
                         
                         and ma100_last >= ma100_13_min_ago
-                        and ma20_last >= ma60_last
+                        and ma34_last >= ma100_last
+                        
                         
                         
                         #and ma15_last > ma15_5_min_ago
@@ -172,8 +185,8 @@ class maddog:
                         
                         #and ma20_last >= ma20_2_min_ago
                         #and ma60_last >= ma60_2_min_ago
-                        
                         #and ma20_last >= ma60_last
+                        
                         
                         #and ma85_last >= ma100_last
                         #and ma85_last >= ma85_3_min_ago
@@ -196,16 +209,18 @@ class maddog:
                         and ma5_last > ma5_2_min_ago
                         and ma5_2_min_ago > ma5_3_min_ago
                         and ma7_last > ma7_2_min_ago
-                        and ma11_last >= ma11_2_min_ago
+                        
                         and deviation_ma > 0.18
                         and price > price_1_min_ago
                         and price > price_2_min_ago
                         and price > price_3_min_ago
-                        and price > price_7_min_ago
+                        #and price > price_7_min_ago
                         
-                        and ma20_last >= ma20_2_min_ago
+                        #and ma20_last >= ma20_2_min_ago
                         and ma100_last >= ma100_13_min_ago
+                        and ma34_last >= ma100_last
                         
+                        #and ma11_last >= ma11_2_min_ago
                         #and ma15_last >= ma15_5_min_ago
                         
                         
@@ -224,6 +239,8 @@ class maddog:
                         action = "buy"
 
         #######################################################################
+        
+        
         # VENDA
         # NON TOCCARE QUESTA CONDIZIONE (QUESTA DICE CHE STA IN MODO SELL, DEVO VENDERE)
         elif last_trade_action == "buy":
@@ -245,7 +262,7 @@ class maddog:
                 
                 if (
                     ma100_last > ma100_13_min_ago
-                    and ma4_last < ma100_last
+                    and ma3_last < ma85_last
                     and deviation > 0.30
                 ):
                    
@@ -256,7 +273,7 @@ class maddog:
                     
                 elif (
                     ma100_last < ma100_13_min_ago
-                    and ma2_last < ma15_last
+                    and ma3_last < ma85_last
                     and deviation < -1.5
                 ):
                     action = "sell"    
@@ -273,7 +290,7 @@ class maddog:
                
                 if (
                     ma100_last > ma100_13_min_ago
-                    and ma2_last < ma13_last
+                    and ma3_last < ma85_last
                     and deviation > 0.10
                 ):
                    
@@ -284,7 +301,7 @@ class maddog:
                     
                 elif (
                     ma100_last < ma100_13_min_ago
-                    and ma2_last < ma11_last
+                    and ma3_last < ma85_last
                     and deviation < -0.82
                 ):
                     action = "sell"      
@@ -347,3 +364,5 @@ class maddog:
 
 
 # grazie compa ######
+
+
