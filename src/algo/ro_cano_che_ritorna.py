@@ -906,7 +906,7 @@ class ro_cano_che_ritorna:
                 elif (
                     ma50_last >= ma50_2_min_ago
                     and ma36_last >= ma36_2_min_ago
-                    and ma2_last < ma15_last
+                    and ma3_last < ma20_last
                     
                 ):
                     action = "sell"
