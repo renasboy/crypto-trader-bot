@@ -896,10 +896,23 @@ class ro_cano_che_ritorna:
                 if (
                     ma50_last >= ma50_2_min_ago
                     and ma36_last >= ma36_2_min_ago
-                    and ma2_last < ma15_last
-                    and deviation > 0.10
+                    and ma2_last < ma11_last
+                    and deviation > 0.12
                 ):
                     action = "sell"
+                    
+                    
+                    #cuscino#
+                elif (
+                    ma50_last >= ma50_2_min_ago
+                    and ma36_last >= ma36_2_min_ago
+                    and ma2_last < ma15_last
+                    
+                ):
+                    action = "sell"
+                    
+                    
+                    
                     
                     
                     
