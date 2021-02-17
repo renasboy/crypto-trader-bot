@@ -217,7 +217,7 @@ class maddog:
                         #and price > price_7_min_ago
                         
                         #and ma20_last >= ma20_2_min_ago
-                        and ma100_last >= ma100_13_min_ago
+                        #and ma100_last >= ma100_13_min_ago
                         and ma34_last >= ma100_last
                         
                         #and ma11_last >= ma11_2_min_ago
@@ -291,7 +291,7 @@ class maddog:
                 if (
                     ma100_last > ma100_13_min_ago
                     and ma3_last < ma85_last
-                    and deviation > 0.10
+                    and deviation > 0.30
                 ):
                    
                     action = "sell"     
@@ -317,7 +317,7 @@ class maddog:
                 if (
                     ma100_last > ma100_13_min_ago
                     and ma2_last < ma15_last
-                    and deviation > 0.12
+                    and deviation > 0.30
                 ):
                    
                     action = "sell"     
