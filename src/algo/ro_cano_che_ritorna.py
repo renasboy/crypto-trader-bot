@@ -1151,7 +1151,7 @@ class ro_cano_che_ritorna:
                     # cuscino della madonna MENTRE SALE #
                 elif (
                     ma50_last >= ma50_2_min_ago
-                    and ma3_last < ma50_last
+                    and ma3_last < ma60_last
                     
                 ):
                     action = "sell"
