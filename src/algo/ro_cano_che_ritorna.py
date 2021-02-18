@@ -42,6 +42,8 @@ class ro_cano_che_ritorna:
         ma60_last, ma60_prev = self.algo_helper.ma_last_prev(60)
         ma85_last, ma85_prev = self.algo_helper.ma_last_prev(85)
         ma100_last, ma100_prev = self.algo_helper.ma_last_prev(100)
+        ma110_last, ma110_prev = self.algo_helper.ma_last_prev(110)
+        
 
         # moving average (2-3-4-5-7-8-20-43-100) di x minuti prima
         ma2_2_min_ago = self.algo_helper.ma_minutes_ago(2, 2)
@@ -1028,7 +1030,7 @@ class ro_cano_che_ritorna:
                     # cuscino della madonna MENTRE SALE #
                 elif (
                     ma50_last >= ma50_2_min_ago
-                    and ma3_last < ma60_last
+                    and ma3_last < ma110_last
                     
                 ):
                     action = "sell"
@@ -1152,7 +1154,7 @@ class ro_cano_che_ritorna:
                     # cuscino della madonna MENTRE SALE #
                 elif (
                     ma50_last >= ma50_2_min_ago
-                    and ma3_last < ma60_last
+                    and ma3_last < ma110_last
                     
                 ):
                     action = "sell"
@@ -1281,7 +1283,7 @@ class ro_cano_che_ritorna:
                 # cuscino della madonna MENTRE SALE #    
                 elif (
                     ma50_last >= ma50_2_min_ago
-                    and ma3_last < ma50_last
+                    and ma3_last < ma110_last
                     
                 ):
                     action = "sell"
