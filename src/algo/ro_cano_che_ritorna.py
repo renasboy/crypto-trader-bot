@@ -39,6 +39,7 @@ class ro_cano_che_ritorna:
         ma32_last, ma32_prev = self.algo_helper.ma_last_prev(32)
         ma36_last, ma36_prev = self.algo_helper.ma_last_prev(36)
         ma50_last, ma50_prev = self.algo_helper.ma_last_prev(50)
+        ma60_last, ma60_prev = self.algo_helper.ma_last_prev(60)
         ma85_last, ma85_prev = self.algo_helper.ma_last_prev(85)
         ma100_last, ma100_prev = self.algo_helper.ma_last_prev(100)
 
@@ -1015,16 +1016,26 @@ class ro_cano_che_ritorna:
                     action = "sell"
                     
                     
-                    # cuscino della madonna #
+                    # cuscino della madonna MENTRE SALE #
                 elif (
                     ma50_last >= ma50_2_min_ago
-                    and ma36_last >= ma36_2_min_ago
+                    and ma3_last < ma60_last
+                    
+                ):
+                    action = "sell"
+                    
+                    # cuscino della madonna MENTRE SCENDE #
+                elif (
+                    ma50_last < ma50_2_min_ago
                     and ma3_last < ma28_last
                     
                 ):
                     action = "sell"
                     
                   
+                    
+                    
+                    
                     
                 elif (
                     ma50_last >= ma50_2_min_ago
@@ -1129,14 +1140,25 @@ class ro_cano_che_ritorna:
                     action = "sell"
                     
                     
-                    # cuscino della madonna #
+                    # cuscino della madonna MENTRE SALE #
                 elif (
-                    ma50_last > ma50_2_min_ago
-                    and ma36_last > ma36_2_min_ago
+                    ma50_last >= ma50_2_min_ago
+                    and ma3_last < ma50_last
+                    
+                ):
+                    action = "sell"
+                    
+                    
+                    # cuscino della madonna MENTRE SCENDE #
+                elif (
+                    ma50_last < ma50_2_min_ago
                     and ma3_last < ma25_last
                     
                 ):
                     action = "sell"
+                    
+                    
+                    
                     
                     
                 elif (
@@ -1247,14 +1269,24 @@ class ro_cano_che_ritorna:
                     action = "sell"
                     
                     
-                # cuscino della madonna #    
+                # cuscino della madonna MENTRE SALE #    
                 elif (
-                    ma50_last > ma50_2_min_ago
-                    and ma36_last > ma36_2_min_ago
-                    and ma2_last < ma16_last
+                    ma50_last >= ma50_2_min_ago
+                    and ma3_last < ma50_last
                     
                 ):
                     action = "sell"
+                    
+                    
+                # cuscino della madonna MENTRE SCENDE #      
+                elif (
+                    ma50_last < ma50_2_min_ago
+                    and ma3_last < ma25_last
+                    
+                ):
+                    action = "sell"
+                    
+                
                     
                     
                     
