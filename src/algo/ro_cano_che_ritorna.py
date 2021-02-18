@@ -96,7 +96,7 @@ class ro_cano_che_ritorna:
         min_prev_buy_delay_in_seconds = 900
 
         # formula DEVIATION last_trade (di solito l' ultimo SELL) per comprare UN PO' PIU' SOPRA DEL LAST TRADE
-        deviation = (ma2_last / last_trade_price - 1) * 100 if last_trade_price else 0
+        deviation = (ma4_last / last_trade_price - 1) * 100 if last_trade_price else 0
         self.algo_helper.log("deviation: {}".format(deviation))
 
         # formula DEVIATION prev_trade (qualche volta l' ultimo BUY ) per comprare UN PO' PIU' SOPRA DEL PREV TRADE
@@ -343,7 +343,7 @@ class ro_cano_che_ritorna:
                         ma50_last >= ma50_2_min_ago
                         and ma36_last >= ma36_2_min_ago
                         and ma8_last >= ma14_last
-                        and deviation > 0.12
+                        and deviation > 0.13
                         
                         
                         #and ma85_last >= ma100_last
@@ -505,6 +505,7 @@ class ro_cano_che_ritorna:
                         ma50_last >= ma50_2_min_ago
                         and ma36_last >= ma36_2_min_ago
                         and ma8_last >= ma12_last
+                        and deviation > 0.13
                         and deviation_ma >= 0.15
                         
                         #and ma85_last >= ma100_last
@@ -573,7 +574,7 @@ class ro_cano_che_ritorna:
                           ma50_last < ma50_2_min_ago
                           and ma36_last > ma36_2_min_ago
                           and ma8_last >= ma14_last
-                        
+                          and deviation_ma > 0.18
                         
                           #and ma85_last < ma100_last
                           #and ma50_last < ma50_5_min_ago
