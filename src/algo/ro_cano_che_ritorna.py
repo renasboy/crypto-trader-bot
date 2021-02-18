@@ -903,11 +903,19 @@ class ro_cano_che_ritorna:
                     action = "sell"
                     
                     
-                    #cuscino#
+                    # cuscino MENTRE SALE #
                 elif (
                     ma50_last >= ma50_2_min_ago
-                    and ma36_last >= ma36_2_min_ago
-                    and ma3_last < ma20_last
+                    and ma3_last < ma36_last
+                    
+                ):
+                    action = "sell"
+                    
+                    
+                    # cuscino MENTRE SCENDE #
+                elif (
+                    ma50_last < ma50_2_min_ago
+                    and ma3_last < ma28_last
                     
                 ):
                     action = "sell"
