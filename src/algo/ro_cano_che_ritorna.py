@@ -91,11 +91,11 @@ class ro_cano_che_ritorna:
 
         # TEMPO in cui (PER COMPRARE) (a tutte le condizioni gia' attive) SI AGGIUNGE una condizione aggiuntiva LA DEVIATION !
 
-        # per ULTIMO trade ( 10 minuti = 10 * 60 = 600 secondi )
-        min_buy_delay_in_seconds = 600
+        # per ULTIMO trade ( 20 minuti = 20 * 60 = 1200 secondi )
+        min_buy_delay_in_seconds = 1200
 
-        # per PENULTIMO trade ( 15 minuti = 15 * 60 = 900 secondi )
-        min_prev_buy_delay_in_seconds = 900
+        # per PENULTIMO trade ( 45 minuti = 45 * 60 = 900 secondi )
+        min_prev_buy_delay_in_seconds = 2700
 
         # formula DEVIATION last_trade (di solito l' ultimo SELL) per comprare UN PO' PIU' SOPRA DEL LAST TRADE
         deviation = (ma4_last / last_trade_price - 1) * 100 if last_trade_price else 0
@@ -148,7 +148,7 @@ class ro_cano_che_ritorna:
                 or (
                     seconds_since_prev_trade > 0
                     and seconds_since_prev_trade <= min_prev_buy_delay_in_seconds
-                    and deviation_prev > 0.15
+                    and deviation_prev > 0.17
                 )
                 or (
                     seconds_since_last_trade == 0
@@ -168,8 +168,8 @@ class ro_cano_che_ritorna:
                         ma50_last >= ma50_2_min_ago
                         and ma36_last >= ma36_2_min_ago
                         and ma8_last >= ma14_last
-                        and deviation_ma >= 0.12
-                        
+                        and deviation >= 0.13
+                        and deviation_prev >= 0.13
                         
                         
                         #and ma85_last >= ma100_last
@@ -203,8 +203,9 @@ class ro_cano_che_ritorna:
                           ma50_last < ma50_2_min_ago
                           and ma36_last < ma36_2_min_ago
                           and ma9_last >= ma15_last
-                        
-                        
+                          and deviation_ma >= 0.18
+                          
+                          
                           #and ma85_last < ma100_last
                           #and ma50_last < ma50_5_min_ago
                           #and ma8_last < ma8_5_min_ago
@@ -290,7 +291,8 @@ class ro_cano_che_ritorna:
                           ma50_last > ma50_2_min_ago
                           and ma36_last < ma36_2_min_ago
                           and ma8_last >= ma14_last
-                        
+                          and deviation > 0.13
+                          and deviation_prev >= 0.15
                         
                           #and ma85_last < ma100_last
                           #and ma50_last < ma50_5_min_ago
@@ -345,8 +347,8 @@ class ro_cano_che_ritorna:
                         ma50_last >= ma50_2_min_ago
                         and ma36_last >= ma36_2_min_ago
                         and ma8_last >= ma14_last
-                        and deviation > 0.13
-                        
+                        and deviation > 0.14
+                        and deviation_prev > 0.14
                         
                         #and ma85_last >= ma100_last
                         #and ma50_last >= ma50_5_min_ago
@@ -456,7 +458,8 @@ class ro_cano_che_ritorna:
                           ma50_last > ma50_2_min_ago
                           and ma36_last < ma36_2_min_ago
                           and ma8_last >= ma14_last
-                        
+                          and deviation > 0.13
+                          and deviation_prev >= 0.15
                         
                           #and ma85_last < ma100_last
                           #and ma50_last < ma50_5_min_ago
@@ -508,7 +511,7 @@ class ro_cano_che_ritorna:
                         and ma36_last >= ma36_2_min_ago
                         and ma8_last >= ma12_last
                         and deviation > 0.13
-                        and deviation_ma >= 0.15
+                        and deviation_prev >= 0.15
                         
                         #and ma85_last >= ma100_last
                         #and ma50_last >= ma50_5_min_ago
@@ -620,7 +623,8 @@ class ro_cano_che_ritorna:
                           ma50_last > ma50_2_min_ago
                           and ma36_last < ma36_2_min_ago
                           and ma9_last >= ma14_last
-                        
+                          and deviation > 0.13
+                          and deviation_prev >= 0.15
                         
                           #and ma85_last < ma100_last
                           #and ma50_last < ma50_5_min_ago
