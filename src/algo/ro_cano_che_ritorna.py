@@ -88,24 +88,28 @@ class ro_cano_che_ritorna:
 
         # VENDE DOPO 600 secondi = 10 minuti ("e se") - ro cano perde la forza - riga 323
         max_hold_without_force_time_in_seconds = 600
-
+        
+        
+        
         # TEMPO in cui (PER COMPRARE) (a tutte le condizioni gia' attive) SI AGGIUNGE una condizione aggiuntiva LA DEVIATION !
 
-        # per ULTIMO trade ( 20 minuti = 20 * 60 = 1200 secondi )
+        # dall' ULTIMO trade ( 20 minuti = 20 * 60 = 1200 secondi )
         min_buy_delay_in_seconds = 1200
 
-        # per PENULTIMO trade ( 45 minuti = 45 * 60 = 900 secondi )
+        # dal PENULTIMO trade ( 45 minuti = 45 * 60 = 2700 secondi )
         min_prev_buy_delay_in_seconds = 2700
 
-        # formula DEVIATION last_trade (di solito l' ultimo SELL) per comprare UN PO' PIU' SOPRA DEL LAST TRADE
+        
+        
+        # formula DEVIATION last_trade per comprare UN PO' PIU' SOPRA DEL LAST TRADE ( di solito l' ultimo SELL ) 
         deviation = (ma4_last / last_trade_price - 1) * 100 if last_trade_price else 0
         self.algo_helper.log("deviation: {}".format(deviation))
 
-        # formula DEVIATION prev_trade (qualche volta l' ultimo BUY ) per comprare UN PO' PIU' SOPRA DEL PREV TRADE
+        # formula DEVIATION prev_trade per comprare UN PO' PIU' SOPRA DEL PREV TRADE ( di solito l' ultimo BUY )
         deviation_prev = (price / prev_trade_price - 1) * 100 if prev_trade_price else 0
         self.algo_helper.log("deviation_prev: {}".format(deviation_prev))
 
-        # formula DEVIATION_ma (per comprare durante il TREND RIBASSISTA)
+        # formula DEVIATION_ma per comprare durante il TREND RIBASSISTA ( ma2 deve avere una certa distanza da ma18 )
         # pronto a sostituire ma2_last con ma3_last
         deviation_ma = (ma2_last / ma18_last - 1) * 100 if ma18_last else 0
         self.algo_helper.log("deviation_ma: {}".format(deviation_ma))
@@ -145,11 +149,15 @@ class ro_cano_che_ritorna:
                     and seconds_since_last_trade <= min_buy_delay_in_seconds
                     and deviation > 0.18
                 )
+                
+                
                 or (
                     seconds_since_prev_trade > 0
                     and seconds_since_prev_trade <= min_prev_buy_delay_in_seconds
                     and deviation_prev > 0.17
                 )
+                
+                
                 or (
                     seconds_since_last_trade == 0
                     or seconds_since_last_trade > min_buy_delay_in_seconds
