@@ -679,8 +679,8 @@ class ro_cano_che_ritorna:
             #   0 -  3 -----------
             #   3 -  5 -----------
             #   5 - 12 -----------
-            #  12 - 20 ----------- + cuscino
-            #  20 - 30 -----------
+            #  12 - 18 ----------- + cuscino
+            #  18 - 30 -----------
             #   > 30   -----------
 
             ##################################################################################
@@ -1014,9 +1014,9 @@ class ro_cano_che_ritorna:
                     
                     
 
-            # VENDITA 1 - da 12 a 20 minuti = da 720 a 1200 secondi
+            # VENDITA 1 - da 12 a 18 minuti = da 720 a 1080 secondi
 
-            elif seconds_since_last_trade > 720 and seconds_since_last_trade <= 1200:
+            elif seconds_since_last_trade > 720 and seconds_since_last_trade <= 1080:
 
                 if (
                     ma50_last >= ma50_2_min_ago
@@ -1136,9 +1136,9 @@ class ro_cano_che_ritorna:
                     
                     
 
-            # VENDITA 1 - da 20 a 30 minuti = da 1200 a 1800 secondi
+            # VENDITA 1 - da 18 a 30 minuti = da 1080 a 1800 secondi
 
-            elif seconds_since_last_trade > 1200 and seconds_since_last_trade <= 1800:
+            elif seconds_since_last_trade > 1080 and seconds_since_last_trade <= 1800:
                 
                 
 
