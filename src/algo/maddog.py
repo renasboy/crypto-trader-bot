@@ -32,7 +32,7 @@ class maddog:
         ma21_last, ma21_prev = self.algo_helper.ma_last_prev(21)
         ma28_last, ma28_prev = self.algo_helper.ma_last_prev(28)
         ma34_last, ma34_prev = self.algo_helper.ma_last_prev(34)
-        ma36_last, ma36_prev = self.algo_helper.ma_last_prev(36)
+        ma38_last, ma38_prev = self.algo_helper.ma_last_prev(38)
         ma43_last, ma43_prev = self.algo_helper.ma_last_prev(43)
         ma50_last, ma50_prev = self.algo_helper.ma_last_prev(50)
         #
@@ -126,7 +126,7 @@ class maddog:
                 # COMPRA sessione 1
                 if self.session == 1:
                     if (
-                        ma11_last >= ma36_last
+                        ma11_last >= ma38_last
                         
                         and ma2_last > ma2_2_min_ago
                         and ma4_last > ma4_2_min_ago
@@ -164,7 +164,7 @@ class maddog:
                 # COMPRA sessione 2
                 elif self.session == 2:
                     if (
-                        ma11_last >= ma36_last
+                        ma11_last >= ma38_last
                         
                         and ma2_last > ma2_2_min_ago
                         and ma4_last > ma4_2_min_ago
@@ -212,7 +212,7 @@ class maddog:
                 # COMPRA sessione 3 in poi
                 else:
                     if (
-                        ma11_last >= ma36_last
+                        ma11_last >= ma38_last
                         
                         and ma2_last > ma2_2_min_ago
                         and ma4_last > ma4_2_min_ago
@@ -284,7 +284,7 @@ class maddog:
                 elif (
                     ma100_last < ma100_13_min_ago
                     and ma3_last < ma15_last
-                    and deviation < -1.5
+                    and deviation < -1.3
                 ):
                     action = "sell"    
                 
@@ -312,7 +312,7 @@ class maddog:
                 elif (
                     ma100_last < ma100_13_min_ago
                     and ma3_last < ma15_last
-                    and deviation < -0.82
+                    and deviation < -0.72
                 ):
                     action = "sell"      
                        
@@ -338,7 +338,7 @@ class maddog:
                 elif (
                     ma100_last < ma100_13_min_ago
                     and ma2_last < ma13_last
-                    and deviation < -0.82
+                    and deviation < -0.72
                 ):
                     action = "sell"        
                         #action = "sell"
