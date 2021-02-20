@@ -78,7 +78,7 @@ class maddog:
         self.algo_helper.log("deviation: {}".format(deviation))
 
         # formula DEVIATION_ma (per comprare durante il TREND RIBASSISTA)
-        deviation_ma = (ma2_last / ma28_last - 1) * 100 if ma28_last else 0
+        deviation_ma = (ma3_last / ma28_last - 1) * 100 if ma28_last else 0
         self.algo_helper.log("deviation_ma: {}".format(deviation_ma))
 
         action = None
@@ -114,7 +114,7 @@ class maddog:
             if (
                 seconds_since_last_trade > 0
                 and seconds_since_last_trade <= min_buy_delay_in_seconds
-                and deviation > 0.18
+                and deviation > 0.19
             ) or (
                 seconds_since_last_trade == 0
                 or seconds_since_last_trade > min_buy_delay_in_seconds
@@ -126,7 +126,7 @@ class maddog:
                 # COMPRA sessione 1
                 if self.session == 1:
                     if (
-                        ma11_last >= ma38_last
+                        ma12_last >= ma38_last
                         
                         and ma2_last > ma2_2_min_ago
                         and ma4_last > ma4_2_min_ago
@@ -176,7 +176,7 @@ class maddog:
                         and price > price_2_min_ago
                         and price > price_3_min_ago
                         and price > price_7_min_ago
-                        and deviation > 0.13
+                        and deviation > 0.14
                         and deviation_ma > 0.15
                         
                         
@@ -219,7 +219,7 @@ class maddog:
                         and ma5_last > ma5_2_min_ago
                         and ma5_2_min_ago > ma5_3_min_ago
                         and ma7_last > ma7_2_min_ago
-                        and deviation > 0.13
+                        and deviation > 0.14
                         and deviation_ma > 0.15
                         and price > price_1_min_ago
                         and price > price_2_min_ago
@@ -284,7 +284,7 @@ class maddog:
                 elif (
                     ma100_last < ma100_13_min_ago
                     and ma3_last < ma15_last
-                    and deviation < -1.3
+                    and deviation < -1.2
                 ):
                     action = "sell"    
                 
@@ -349,7 +349,7 @@ class maddog:
                         
 
             # STOP LOSS (salvagente)
-            if deviation < -1.20 and ma2_last < ma21_last and deviation < -0.9:
+            if deviation < -1.10 and ma2_last < ma21_last:
                 action = "sell"
 
             
