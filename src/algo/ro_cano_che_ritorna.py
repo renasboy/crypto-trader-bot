@@ -111,7 +111,7 @@ class ro_cano_che_ritorna:
 
         # formula DEVIATION_ma per comprare durante il TREND RIBASSISTA ( ma2 deve avere una certa distanza da ma18 )
         # pronto a sostituire ma2_last con ma3_last
-        deviation_ma = (ma2_last / ma18_last - 1) * 100 if ma18_last else 0
+        deviation_ma = (ma3_last / ma18_last - 1) * 100 if ma18_last else 0
         self.algo_helper.log("deviation_ma: {}".format(deviation_ma))
 
         # DEFAULT ACTION DICE DI NON FARE NIENTE (=None, NON TOCCARE)
@@ -211,7 +211,7 @@ class ro_cano_che_ritorna:
                           ma50_last < ma50_2_min_ago
                           and ma36_last < ma36_2_min_ago
                           and ma9_last >= ma15_last
-                          and deviation_ma >= 0.18
+                          and deviation_ma >= 0.19
                           
                           
                           #and ma85_last < ma100_last
@@ -255,7 +255,7 @@ class ro_cano_che_ritorna:
                           ma50_last < ma50_2_min_ago
                           and ma36_last > ma36_2_min_ago
                           and ma9_last >= ma15_last
-                          and deviation_ma >= 0.18
+                          and deviation_ma >= 0.19
                         
                           #and ma85_last < ma100_last
                           #and ma50_last < ma50_5_min_ago
@@ -913,7 +913,7 @@ class ro_cano_che_ritorna:
                     ma50_last >= ma50_2_min_ago
                     and ma36_last >= ma36_2_min_ago
                     and ma2_last < ma11_last
-                    and deviation > 0.12
+                    and deviation > 0.14
                 ):
                     action = "sell"
                     
@@ -989,7 +989,7 @@ class ro_cano_che_ritorna:
                     ma50_last < ma50_2_min_ago
                     and ma36_last > ma36_2_min_ago
                     and ma2_last < ma10_last
-                    and deviation < -0.50
+                    and deviation < -0.60
                 ):
                     action = "sell"
                     
@@ -1034,7 +1034,7 @@ class ro_cano_che_ritorna:
                     ma50_last >= ma50_2_min_ago
                     and ma36_last >= ma36_2_min_ago
                     and ma2_last < ma13_last
-                    and deviation > 0.15
+                    and deviation > 0.19
                 ):
                     action = "sell"
                     
@@ -1158,7 +1158,7 @@ class ro_cano_che_ritorna:
                     ma50_last > ma50_2_min_ago
                     and ma36_last > ma36_2_min_ago
                     and ma2_last < ma13_last
-                    and deviation > 0.12
+                    and deviation > 0.16
                 ):
                     action = "sell"
                     
@@ -1166,7 +1166,7 @@ class ro_cano_che_ritorna:
                     # cuscino della madonna MENTRE SALE #
                 elif (
                     ma50_last >= ma50_2_min_ago
-                    and ma3_last < ma110_last
+                    and ma3_last < ma50_last
                     
                 ):
                     action = "sell"
@@ -1286,7 +1286,7 @@ class ro_cano_che_ritorna:
                 if (
                     ma50_last > ma50_2_min_ago
                     and ma36_last > ma36_2_min_ago
-                    and ma2_last < ma13_last
+                    and ma3_last < ma16_last
                     and deviation > 0.15
                 ):
                     action = "sell"
@@ -1295,7 +1295,7 @@ class ro_cano_che_ritorna:
                 # cuscino della madonna MENTRE SALE #    
                 elif (
                     ma50_last >= ma50_2_min_ago
-                    and ma3_last < ma110_last
+                    and ma3_last < ma60_last
                     and deviation < -0.25
                 ):
                     action = "sell"
@@ -1318,7 +1318,7 @@ class ro_cano_che_ritorna:
                 elif (
                     ma50_last > ma50_2_min_ago
                     and ma36_last > ma36_2_min_ago
-                    and ma2_last < ma16_last
+                    and ma3_last < ma16_last
                     and deviation < -0.70
                 ):
                     action = "sell"
