@@ -140,9 +140,11 @@ class ro_cano_che_ritorna:
         # NON TOCCARE QUESTA CONDIZIONE (QUESTA DICE CHE STA IN MODO BUY, DEVO COMPRARE)
         if self.open and self.session and last_trade_action != "buy":
 
+            
+            
+            ###############################################################################################################################
             # COMPRA UN PO' PIU' SOPRA DELL' ULTIMO TRADE SE DEVIATION > 0.23 nei 540 secondi  ( quasi sempre IL SELL )
-            # COMPRA UN PO' PIU' SOPRA DEL PENULTIMO TRADE SE DEVIATION > 0.15 nei 300 secondi ( qualche volta IL BUY)
-
+      
             if (
                 (
                     seconds_since_last_trade > 0
@@ -150,6 +152,7 @@ class ro_cano_che_ritorna:
                     and deviation > 0.19
                 )
                 
+                # COMPRA UN PO' PIU' SOPRA DEL PENULTIMO TRADE SE DEVIATION > 0.15 nei 300 secondi ( qualche volta IL BUY)
                 
                 or (
                     seconds_since_prev_trade > 0
@@ -162,6 +165,14 @@ class ro_cano_che_ritorna:
                     seconds_since_last_trade == 0
                     or seconds_since_last_trade > min_buy_delay_in_seconds
                 )
+                
+             # compa, forse qua manca deviation_ma
+                
+                # ma, domanda, vale per tutte le righe ? 
+                # se voglio mettere deviation diverse ? ( se ma50 sale deviation diversa se ma50 scende ) 
+                # ciao
+                
+                
             ):
 
   
