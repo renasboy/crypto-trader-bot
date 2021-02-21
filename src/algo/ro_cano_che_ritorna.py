@@ -111,7 +111,7 @@ class ro_cano_che_ritorna:
 
         # formula DEVIATION_ma per comprare durante il TREND RIBASSISTA ( ma2 deve avere una certa distanza da ma18 )
         # pronto a sostituire ma2_last con ma3_last
-        deviation_ma = (ma2_last / ma18_last - 1) * 100 if ma18_last else 0
+        deviation_ma = (ma3_last / ma18_last - 1) * 100 if ma18_last else 0
         self.algo_helper.log("deviation_ma: {}".format(deviation_ma))
 
         # DEFAULT ACTION DICE DI NON FARE NIENTE (=None, NON TOCCARE)
@@ -147,14 +147,14 @@ class ro_cano_che_ritorna:
                 (
                     seconds_since_last_trade > 0
                     and seconds_since_last_trade <= min_buy_delay_in_seconds
-                    and deviation > 0.18
+                    and deviation > 0.19
                 )
                 
                 
                 or (
                     seconds_since_prev_trade > 0
                     and seconds_since_prev_trade <= min_prev_buy_delay_in_seconds
-                    and deviation_prev > 0.17
+                    and deviation_prev > 0.18
                 )
                 
                 
@@ -697,7 +697,7 @@ class ro_cano_che_ritorna:
 
             ##################################################################################
 
-            # VENDITA 1 - da 0 a 3 minuti = da 0 a 180 secondi
+            # VENDITA - da 0 a 3 minuti = da 0 a 180 secondi
 
             if seconds_since_last_trade > 0 and seconds_since_last_trade <= 180:
                 
@@ -803,7 +803,7 @@ class ro_cano_che_ritorna:
                     
                     
 
-            # VENDITA 1 - da 3 a 5 minuti = da 180 a 300 secondi
+            # VENDITA - da 3 a 5 minuti = da 180 a 300 secondi
 
             elif seconds_since_last_trade > 180 and seconds_since_last_trade <= 300:
 
@@ -902,7 +902,7 @@ class ro_cano_che_ritorna:
                 
                     
                     
-            # VENDITA 1 - da 5 a 12 minuti = da 300 a 720 secondi
+            # VENDITA - da 5 a 12 minuti = da 300 a 720 secondi
 
             elif seconds_since_last_trade > 300 and seconds_since_last_trade <= 720:
                 
@@ -922,7 +922,7 @@ class ro_cano_che_ritorna:
                 elif (
                     ma50_last >= ma50_2_min_ago
                     and ma3_last < ma36_last
-                    and deviation < -0.25
+                    and deviation < -0.30
                 ):
                     action = "sell"
                     
@@ -931,7 +931,7 @@ class ro_cano_che_ritorna:
                 elif (
                     ma50_last < ma50_2_min_ago
                     and ma3_last < ma28_last
-                    and deviation < -0.25
+                    and deviation < -0.30
                 ):
                     action = "sell"
                     
@@ -1026,14 +1026,14 @@ class ro_cano_che_ritorna:
                     
                     
 
-            # VENDITA 1 - da 12 a 18 minuti = da 720 a 1080 secondi
+            # VENDITA - da 12 a 18 minuti = da 720 a 1080 secondi
 
             elif seconds_since_last_trade > 720 and seconds_since_last_trade <= 1080:
 
                 if (
                     ma50_last >= ma50_2_min_ago
                     and ma36_last >= ma36_2_min_ago
-                    and ma2_last < ma13_last
+                    and ma2_last < ma15_last
                     and deviation > 0.19
                 ):
                     action = "sell"
@@ -1042,8 +1042,8 @@ class ro_cano_che_ritorna:
                     # cuscino della madonna MENTRE SALE #
                 elif (
                     ma50_last >= ma50_2_min_ago
-                    and ma3_last < ma110_last
-                    and deviation < -0.25
+                    and ma3_last < ma100_last
+                    and deviation < -0.30
                 ):
                     action = "sell"
                     
@@ -1051,7 +1051,7 @@ class ro_cano_che_ritorna:
                 elif (
                     ma50_last < ma50_2_min_ago
                     and ma3_last < ma28_last
-                    and deviation < -0.25
+                    and deviation < -0.30
                 ):
                     action = "sell"
                     
@@ -1105,7 +1105,7 @@ class ro_cano_che_ritorna:
                     ma50_last < ma50_2_min_ago
                     and ma36_last > ma36_2_min_ago
                     and ma2_last < ma11_last
-                    and deviation > 0.01
+                    and deviation > 0.02
                 ):
                     action = "sell"
                     
@@ -1148,7 +1148,7 @@ class ro_cano_che_ritorna:
                     
                     
 
-            # VENDITA 1 - da 18 a 30 minuti = da 1080 a 1800 secondi
+            # VENDITA - da 18 a 30 minuti = da 1080 a 1800 secondi
 
             elif seconds_since_last_trade > 1080 and seconds_since_last_trade <= 1800:
                 
@@ -1201,7 +1201,7 @@ class ro_cano_che_ritorna:
                     ma50_last > ma50_2_min_ago
                     and ma36_last < ma36_2_min_ago
                     and ma2_last < ma10_last
-                    and deviation > 0.07
+                    and deviation > 0.02
                 ):
                     action = "sell"
                     
@@ -1224,7 +1224,7 @@ class ro_cano_che_ritorna:
                     ma50_last < ma50_2_min_ago
                     and ma36_last > ma36_2_min_ago
                     and ma2_last < ma10_last
-                    and deviation > 0.01
+                    and deviation > 0.02
                 ):
                     action = "sell"
                     
@@ -1277,7 +1277,7 @@ class ro_cano_che_ritorna:
                     
                     
 
-            # VENDITA 1 - da 30 minuti in poi = da 1800 secondi in poi
+            # VENDITA - da 30 minuti in poi = da 1800 secondi in poi
 
             elif seconds_since_last_trade > 1800:
                 
@@ -1286,7 +1286,7 @@ class ro_cano_che_ritorna:
                 if (
                     ma50_last > ma50_2_min_ago
                     and ma36_last > ma36_2_min_ago
-                    and ma3_last < ma16_last
+                    and ma3_last < ma15_last
                     and deviation > 0.15
                 ):
                     action = "sell"
@@ -1331,7 +1331,7 @@ class ro_cano_che_ritorna:
                     ma50_last > ma50_2_min_ago
                     and ma36_last < ma36_2_min_ago
                     and ma2_last < ma11_last
-                    and deviation > 0.07
+                    and deviation > 0.02
                 ):
                     action = "sell"
                     
@@ -1353,7 +1353,7 @@ class ro_cano_che_ritorna:
                     ma50_last < ma50_2_min_ago
                     and ma36_last > ma36_2_min_ago
                     and ma2_last < ma13_last
-                    and deviation > 0.01
+                    and deviation > 0.02
                 ):
                     action = "sell"
                     
