@@ -56,6 +56,7 @@ class ro_cano_che_ritorna:
         ma4_2_min_ago = self.algo_helper.ma_minutes_ago(4, 2)
         ma8_5_min_ago = self.algo_helper.ma_minutes_ago(8, 5)
         ma10_2_min_ago = self.algo_helper.ma_minutes_ago(10, 2)
+        ma14_2_min_ago = self.algo_helper.ma_minutes_ago(14, 2)
         ma32_3_min_ago = self.algo_helper.ma_minutes_ago(32, 3)
         ma33_3_min_ago = self.algo_helper.ma_minutes_ago(33, 3)
         ma36_2_min_ago = self.algo_helper.ma_minutes_ago(36, 2)
@@ -124,7 +125,7 @@ class ro_cano_che_ritorna:
         # APRE E CHIUDE GABBIA
 
         # SI APRE LA GABBIA SE
-        if ma78_last >= ma78_2_min_ago:
+        if ma14_last >= ma14_2_min_ago:
             # NON TOCCARE QUESTA CONDIZIONE SERVE PER APERTURA DI GABBIA
             if not self.session or not self.open:
                 self.session = 1
