@@ -7,9 +7,11 @@ class maddog:
     @property
     def action(self):
 
-        # TIME dopo quanto tempo ro cano ritorna automaticamente ( per esempio 50 minuti x 60 = 3000 secondi ) e durata segmento in cui si aggiunge una condizione per il BUY
+        # ro cano ritorna automaticamente ( per esempio 50 minuti x 60 = 3000 secondi )
         max_hold_time_in_seconds = 3000
-        min_buy_delay_in_seconds = 2100
+        
+        # e durata segmento in cui si aggiunge una condizione per il BUY ( per esempio 40 minuti x 60 = 2400 secondi )
+        min_buy_delay_in_seconds = 2400
 
         # MACD di 1-2-3-4 minuti prima
         # macd = self.algo_helper.macd
