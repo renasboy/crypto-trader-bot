@@ -225,38 +225,17 @@ class ro_cano_che_ritorna:
                     
                           ma50_last < ma50_2_min_ago
                           and ma36_last < ma36_2_min_ago
-                          and ma9_last >= ma15_last
+                          and ma8_last > ma14_last
                         
                           #and deviation > 0.14
                           #and deviation_prev > 0.14
                           and deviation_ma >= 0.19
-                          
-                          
-                          
-                          #and ma85_last < ma100_last
-                          #and ma50_last < ma50_5_min_ago
-                          #and ma8_last < ma8_5_min_ago
-                          
-                          
-                          #and ma16_last >= ma24_last
-                          
-                          
-                          
-                          #and ma2_last > ma2_15_min_ago
-                          #and ma2_last > ma2_17_min_ago
-                          #and ma2_last > ma2_22_min_ago
-                          #and ma2_last > ma2_24_min_ago ( ultima speranza ) 
-                          
-                          
+                        
                           and ma2_last > ma2_2_min_ago
                           and ma2_last > ma7_last
                           and ma4_last > ma4_2_min_ago
-                          #and ma7_last >= ma15_last
-                          #and ma10_last >= ma10_2_min_ago
-                          #and ma11_last >= ma15_last
-                        
-                          #and ma18_last > ma22_last 
-                          # per non comprare durante il ribasso ( prezzo e ma2 gia' sono andati giu' ! )
+                         
+                      
                         
                           and price > price_1_min_ago
                           and price > price_2_min_ago
@@ -273,27 +252,13 @@ class ro_cano_che_ritorna:
                     
                           ma50_last < ma50_2_min_ago
                           and ma36_last > ma36_2_min_ago
-                          and ma9_last >= ma15_last
+                          and ma8_last >= ma14_last
                         
                           #and deviation > 0.14
                           #and deviation_prev > 0.14
                           and deviation_ma >= 0.19
                           
-                         
-                          #and ma85_last < ma100_last
-                          #and ma50_last < ma50_5_min_ago
-                          #and ma8_last < ma8_5_min_ago
-                          
-                          
-                          #and ma16_last >= ma24_last
-                          
-                          
-                          
-                          #and ma2_last > ma2_15_min_ago
-                          #and ma2_last > ma2_17_min_ago
-                          #and ma2_last > ma2_22_min_ago
-                          #and ma2_last > ma2_24_min_ago ( ultima speranza ) 
-                          
+                     
                           
                           and ma2_last > ma2_2_min_ago
                           and ma2_last > ma7_last
