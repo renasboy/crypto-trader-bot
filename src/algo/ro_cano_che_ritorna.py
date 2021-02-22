@@ -41,6 +41,7 @@ class ro_cano_che_ritorna:
         ma50_last, ma50_prev = self.algo_helper.ma_last_prev(50)
         ma60_last, ma60_prev = self.algo_helper.ma_last_prev(60)
         ma85_last, ma85_prev = self.algo_helper.ma_last_prev(85)
+        ma78_last, ma78_prev = self.algo_helper.ma_last_prev(78)
         ma100_last, ma100_prev = self.algo_helper.ma_last_prev(100)
         ma110_last, ma110_prev = self.algo_helper.ma_last_prev(110)
         
@@ -59,7 +60,8 @@ class ro_cano_che_ritorna:
         ma33_3_min_ago = self.algo_helper.ma_minutes_ago(33, 3)
         ma36_2_min_ago = self.algo_helper.ma_minutes_ago(36, 2)
         ma50_2_min_ago = self.algo_helper.ma_minutes_ago(50, 2)
-        ma50_5_min_ago = self.algo_helper.ma_minutes_ago(50, 5)
+        ma50_2_min_ago = self.algo_helper.ma_minutes_ago(50, 2)
+        ma78_2_min_ago = self.algo_helper.ma_minutes_ago(78, 2)
         ma100_2_min_ago = self.algo_helper.ma_minutes_ago(100, 2)
         ma100_13_min_ago = self.algo_helper.ma_minutes_ago(100, 13)
         
