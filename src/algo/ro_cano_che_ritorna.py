@@ -190,7 +190,9 @@ class ro_cano_che_ritorna:
                         and ma36_last >= ma36_2_min_ago
                         and ma8_last >= ma14_last
                         
-                        
+                        #and deviation > 0.14
+                        #and deviation_prev > 0.14
+                        and deviation_ma >= 0.01
                         
                         
                         #and ma85_last >= ma100_last
@@ -224,7 +226,11 @@ class ro_cano_che_ritorna:
                           ma50_last < ma50_2_min_ago
                           and ma36_last < ma36_2_min_ago
                           and ma9_last >= ma15_last
+                        
+                          #and deviation > 0.14
+                          #and deviation_prev > 0.14
                           and deviation_ma >= 0.19
+                          
                           
                           
                           #and ma85_last < ma100_last
@@ -268,8 +274,12 @@ class ro_cano_che_ritorna:
                           ma50_last < ma50_2_min_ago
                           and ma36_last > ma36_2_min_ago
                           and ma9_last >= ma15_last
-                          and deviation_ma >= 0.19
                         
+                          #and deviation > 0.14
+                          #and deviation_prev > 0.14
+                          and deviation_ma >= 0.19
+                          
+                         
                           #and ma85_last < ma100_last
                           #and ma50_last < ma50_5_min_ago
                           #and ma8_last < ma8_5_min_ago
@@ -312,7 +322,11 @@ class ro_cano_che_ritorna:
                           ma50_last > ma50_2_min_ago
                           and ma36_last < ma36_2_min_ago
                           and ma8_last >= ma14_last
+                        
+                          #and deviation > 0.14
+                          #and deviation_prev > 0.14
                           and deviation_ma >= 0.15
+                          
                           
                         
                           #and ma85_last < ma100_last
@@ -368,8 +382,12 @@ class ro_cano_che_ritorna:
                         ma50_last >= ma50_2_min_ago
                         and ma36_last >= ma36_2_min_ago
                         and ma8_last >= ma14_last
+                        
                         and deviation > 0.14
                         and deviation_prev > 0.14
+                        and deviation_ma >= 0.15
+                        
+                        
                         
                         #and ma85_last >= ma100_last
                         #and ma50_last >= ma50_5_min_ago
@@ -400,7 +418,11 @@ class ro_cano_che_ritorna:
                           ma50_last < ma50_2_min_ago
                           and ma36_last < ma36_2_min_ago
                           and ma9_last >= ma15_last
+                          
+                          and deviation > 0.14
+                          and deviation_prev > 0.14
                           and deviation_ma >= 0.18
+                        
                         
                           #and ma85_last < ma100_last
                           #and ma50_last < ma50_5_min_ago
@@ -433,7 +455,11 @@ class ro_cano_che_ritorna:
                           ma50_last < ma50_2_min_ago
                           and ma36_last > ma36_2_min_ago
                           and ma9_last >= ma15_last
+                        
+                          and deviation > 0.14
+                          and deviation_prev > 0.14
                           and deviation_ma > 0.18
+                          
                           
                         
                         
@@ -479,8 +505,12 @@ class ro_cano_che_ritorna:
                           ma50_last > ma50_2_min_ago
                           and ma36_last < ma36_2_min_ago
                           and ma8_last >= ma14_last
+                        
                           and deviation > 0.13
-                          and deviation_prev >= 0.15
+                          and deviation_prev > 0.15
+                          and deviation_ma > 0.18
+                         
+                         
                         
                           #and ma85_last < ma100_last
                           #and ma50_last < ma50_5_min_ago
@@ -531,8 +561,13 @@ class ro_cano_che_ritorna:
                         ma50_last >= ma50_2_min_ago
                         and ma36_last >= ma36_2_min_ago
                         and ma8_last >= ma12_last
+                        
                         and deviation > 0.13
-                        and deviation_prev >= 0.15
+                        and deviation_prev > 0.15
+                        and deviation_ma > 0.18
+                        
+                        
+                        
                         
                         #and ma85_last >= ma100_last
                         #and ma50_last >= ma50_5_min_ago
@@ -564,7 +599,11 @@ class ro_cano_che_ritorna:
                           ma50_last < ma50_2_min_ago
                           and ma36_last < ma36_2_min_ago
                           and ma9_last >= ma15_last
+                          
+                          and deviation > 0.13
+                          and deviation_prev > 0.15
                           and deviation_ma >= 0.15
+                          
                         
                           #and ma85_last < ma100_last
                           #and ma50_last < ma50_5_min_ago
@@ -600,7 +639,12 @@ class ro_cano_che_ritorna:
                           ma50_last < ma50_2_min_ago
                           and ma36_last > ma36_2_min_ago
                           and ma8_last >= ma14_last
-                          and deviation_ma > 0.18
+                          
+                          and deviation > 0.13
+                          and deviation_prev > 0.15
+                          and deviation_ma >= 0.15
+                          
+                          
                         
                           #and ma85_last < ma100_last
                           #and ma50_last < ma50_5_min_ago
@@ -644,8 +688,13 @@ class ro_cano_che_ritorna:
                           ma50_last > ma50_2_min_ago
                           and ma36_last < ma36_2_min_ago
                           and ma9_last >= ma14_last
-                          and deviation > 0.13
+                        
+                          and deviation >= 0.13
                           and deviation_prev >= 0.15
+                          and deviation_ma >= 0.15
+                        
+                          
+                          
                         
                           #and ma85_last < ma100_last
                           #and ma50_last < ma50_5_min_ago
