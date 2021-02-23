@@ -125,7 +125,7 @@ class ro_cano_che_ritorna:
         # APRE E CHIUDE GABBIA
 
         # SI APRE LA GABBIA SE
-        if ma14_last >= ma14_2_min_ago:
+        if ma2_last >= ma4_last:
             
             
             # NON TOCCARE QUESTA CONDIZIONE SERVE PER APERTURA DI GABBIA !
