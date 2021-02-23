@@ -223,7 +223,7 @@ class ro_cano_che_ritorna:
                         
                         and price > price_1_min_ago
                         and price > price_2_min_ago
-                        and price > price_3_min_ago
+                        #and price > price_3_min_ago
                  
                     ):
 
