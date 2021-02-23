@@ -174,6 +174,8 @@ class ro_cano_che_ritorna:
                     or seconds_since_last_trade > min_buy_delay_in_seconds
                 )
                 
+             ######################################################################
+
              # compa, forse qua manca deviation_ma
                 
                 # ma, domanda, vale per tutte le righe ? 
@@ -237,7 +239,7 @@ class ro_cano_che_ritorna:
                         
                           #and deviation > 0.14
                           #and deviation_prev > 0.14
-                          and deviation_ma >= 0.22
+                          and deviation_ma >= 0.23
                           
                           
                         
@@ -273,7 +275,7 @@ class ro_cano_che_ritorna:
                         
                           #and deviation > 0.14
                           #and deviation_prev > 0.14
-                          and deviation_ma >= 0.19
+                          and deviation_ma >= 0.23
                           
                      
                           
@@ -307,7 +309,7 @@ class ro_cano_che_ritorna:
                         
                           #and deviation > 0.14
                           #and deviation_prev > 0.14
-                          and deviation_ma >= 0.16
+                          and deviation_ma >= 0.01
                           
                           
                         
