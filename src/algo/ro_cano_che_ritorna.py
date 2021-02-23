@@ -120,7 +120,7 @@ class ro_cano_che_ritorna:
         # DEFAULT ACTION DICE DI NON FARE NIENTE (=None, NON TOCCARE)
         action = None
 
-        #######################################################################
+        ##########################################################################################################################################
 
         # APRE E CHIUDE GABBIA
 
@@ -137,7 +137,7 @@ class ro_cano_che_ritorna:
             self.open = False
             self.algo_helper.log("session {}: closed segment".format(self.session))
 
-        #######################################################################
+        ###########################################################################################################################################
 
         # COMPRA
         # NON TOCCARE QUESTA CONDIZIONE (QUESTA DICE CHE STA IN MODO BUY, DEVO COMPRARE)
