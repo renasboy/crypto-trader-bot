@@ -196,6 +196,8 @@ class ro_cano_che_ritorna:
                         and deviation_ma >= 0.01
                         
                         
+                        
+                        
                         #and ma85_last >= ma100_last
                         #and ma50_last >= ma50_2_min_ago
                         #and ma8_last >= ma8_5_min_ago
@@ -231,6 +233,13 @@ class ro_cano_che_ritorna:
                           #and deviation > 0.14
                           #and deviation_prev > 0.14
                           and deviation_ma >= 0.20
+                          
+                          # questa condizione, molto probabilmente, non la prendera' perche' trovera' la gabbia chiusa 8-14
+                          # ma se apri la gabbia con ma2-ma4 non ci saranno altre sessioni sara' sempre sessione 1
+                          # e' una condizione che fa comprare quando ci sono dei grandi crolli
+                          # ma2 che deve andare sopra ma4 e' fondamentale
+                          or deviation_ma < -2.9 and ma2_last > ma4_last
+                        
                         
                           and ma2_last > ma2_2_min_ago
                           and ma2_last > ma7_last
