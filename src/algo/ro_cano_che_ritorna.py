@@ -237,9 +237,11 @@ class ro_cano_che_ritorna:
                         
                           #and deviation > 0.14
                           #and deviation_prev > 0.14
-                          and deviation_ma >= 0.20
+                          and deviation_ma >= 0.22
                           
-                          # questa condizione, molto probabilmente, non la prendera' perche' trovera' la gabbia chiusa 8-14
+                          
+                        
+                          # questa prossima condizione, molto probabilmente, non la prendera' perche' trovera' la gabbia chiusa 8-14
                           # ma se apri la gabbia con ma2-ma4 non ci saranno altre sessioni sara' sempre sessione 1
                           # e' una condizione che fa comprare quando ci sono dei grandi crolli
                           # ma2 che deve andare sopra ma4 e' fondamentale
