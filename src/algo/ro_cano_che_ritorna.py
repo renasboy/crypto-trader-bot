@@ -126,7 +126,9 @@ class ro_cano_che_ritorna:
 
         # SI APRE LA GABBIA SE
         if ma14_last >= ma14_2_min_ago:
-            # NON TOCCARE QUESTA CONDIZIONE SERVE PER APERTURA DI GABBIA
+            
+            
+            # NON TOCCARE QUESTA CONDIZIONE SERVE PER APERTURA DI GABBIA !
             if not self.session or not self.open:
                 self.session = 1
                 self.open = True
