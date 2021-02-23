@@ -230,7 +230,7 @@ class ro_cano_che_ritorna:
                         
                           #and deviation > 0.14
                           #and deviation_prev > 0.14
-                          and deviation_ma >= 0.19
+                          and deviation_ma >= 0.20
                         
                           and ma2_last > ma2_2_min_ago
                           and ma2_last > ma7_last
@@ -291,7 +291,7 @@ class ro_cano_che_ritorna:
                         
                           #and deviation > 0.14
                           #and deviation_prev > 0.14
-                          and deviation_ma >= 0.15
+                          and deviation_ma >= 0.16
                           
                           
                         
@@ -849,7 +849,7 @@ class ro_cano_che_ritorna:
                     ma50_last > ma50_2_min_ago
                     and ma36_last > ma36_2_min_ago
                     and ma2_last < ma13_last
-                    and deviation > 0.08
+                    and deviation > 0.10
                 ):
                     action = "sell"
 
@@ -959,7 +959,7 @@ class ro_cano_che_ritorna:
                     ma50_last >= ma50_2_min_ago
                     and ma36_last >= ma36_2_min_ago
                     and ma2_last < ma11_last
-                    and deviation > 0.14
+                    and deviation > 0.17
                 ):
                     action = "sell"
                     
@@ -1003,7 +1003,7 @@ class ro_cano_che_ritorna:
                     ma50_last > ma50_2_min_ago
                     and ma36_last < ma36_2_min_ago
                     and ma2_last < ma11_last
-                    and deviation > 0.01
+                    and deviation > 0.12
                 ):
                     action = "sell"
                     
@@ -1025,7 +1025,7 @@ class ro_cano_che_ritorna:
                     ma50_last < ma50_2_min_ago
                     and ma36_last > ma36_2_min_ago
                     and ma2_last < ma11_last
-                    and deviation > 0.10
+                    and deviation > 0.12
                 ):
                     action = "sell"
                     
