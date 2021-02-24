@@ -27,6 +27,7 @@ class maddog:
         ma11_last, ma11_prev = self.algo_helper.ma_last_prev(11)
         ma12_last, ma12_prev = self.algo_helper.ma_last_prev(12)
         ma13_last, ma13_prev = self.algo_helper.ma_last_prev(13)
+        ma14_last, ma14_prev = self.algo_helper.ma_last_prev(14)
         ma15_last, ma15_prev = self.algo_helper.ma_last_prev(15)
         ma16_last, ma16_prev = self.algo_helper.ma_last_prev(16)
         ma18_last, ma18_prev = self.algo_helper.ma_last_prev(18)
@@ -89,7 +90,7 @@ class maddog:
         #######################################################################
         # APRE E CHIUDE GABBIA
         # SI APRE LA GABBIA SE
-        if ma13_last > ma39_last:
+        if ma14_last > ma39_last:
             
             
             # NON TOCCARE QUESTA CONDIZIONE SERVE PER APERTURA DI GABBIA
@@ -129,7 +130,7 @@ class maddog:
                 # COMPRA sessione 1
                 if self.session == 1:
                     if (
-                        ma13_last >= ma39_last
+                        ma14_last >= ma39_last
                         
                         and ma2_last > ma2_2_min_ago
                         and ma4_last > ma4_2_min_ago
