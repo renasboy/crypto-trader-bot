@@ -89,7 +89,7 @@ class maddog:
         #######################################################################
         # APRE E CHIUDE GABBIA
         # SI APRE LA GABBIA SE
-        if ma100_last > ma100_13_min_ago:
+        if ma13_last > ma39_last:
             
             
             # NON TOCCARE QUESTA CONDIZIONE SERVE PER APERTURA DI GABBIA
