@@ -239,7 +239,7 @@ class ro_cano_che_ritorna:
                         
                           #and deviation > 0.14
                           #and deviation_prev > 0.14
-                          and deviation_ma >= 0.60
+                          and deviation_ma >= 0.61
                           
                           
                         
@@ -275,7 +275,7 @@ class ro_cano_che_ritorna:
                         
                           #and deviation > 0.14
                           #and deviation_prev > 0.14
-                          and deviation_ma >= 0.60
+                          and deviation_ma >= 0.61
                           
                      
                           
