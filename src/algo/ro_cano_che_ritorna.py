@@ -1097,7 +1097,7 @@ class ro_cano_che_ritorna:
                 if (
                     ma50_last >= ma50_2_min_ago
                     and ma36_last >= ma36_2_min_ago
-                    and ma2_last < ma15_last
+                    and ma2_last < ma13_last
                     and deviation > 0.19
                 ):
                     action = "sell"
@@ -1221,7 +1221,7 @@ class ro_cano_che_ritorna:
                 if (
                     ma50_last > ma50_2_min_ago
                     and ma36_last > ma36_2_min_ago
-                    and ma2_last < ma13_last
+                    and ma2_last < ma15_last
                     and deviation > 0.16
                 ):
                     action = "sell"
