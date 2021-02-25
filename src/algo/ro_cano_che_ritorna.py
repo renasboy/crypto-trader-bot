@@ -124,9 +124,10 @@ class ro_cano_che_ritorna:
 
         # APRE E CHIUDE GABBIA
 
-        # SI APRE LA GABBIA SE
+        #si apriva la GABBIA se
         #if ma2_last >= ma4_last:
-        #condizione comparo meo - apre la gabbia in 2 modi differenti
+
+        #condizione comparo meo - si apre la gabbia in 2 modi differenti !
         if (ma36_last >= ma36_2_min_ago and ma8_last > ma14_last) or (ma36_last < ma36_2_min_ago and ma2_last > ma4_last):
         #elif :
         #
