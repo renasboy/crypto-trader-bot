@@ -24,6 +24,8 @@ class maddog:
         ma4_last, ma4_prev = self.algo_helper.ma_last_prev(4)
         ma5_last, ma5_prev = self.algo_helper.ma_last_prev(5)
         ma7_last, ma7_prev = self.algo_helper.ma_last_prev(7)
+        ma8_last, ma8_prev = self.algo_helper.ma_last_prev(8)
+        ma9_last, ma9_prev = self.algo_helper.ma_last_prev(9)
         ma11_last, ma11_prev = self.algo_helper.ma_last_prev(11)
         ma12_last, ma12_prev = self.algo_helper.ma_last_prev(12)
         ma13_last, ma13_prev = self.algo_helper.ma_last_prev(13)
@@ -168,20 +170,20 @@ class maddog:
                 # COMPRA sessione 2
                 elif self.session == 2:
                     if (
-                        ma11_last >= ma38_last
+                        ma9_last >= ma15_last
                         
                         and ma2_last > ma2_2_min_ago
                         and ma4_last > ma4_2_min_ago
                         and ma5_last > ma5_2_min_ago
-                        and ma5_2_min_ago > ma5_3_min_ago
+                        #and ma5_2_min_ago > ma5_3_min_ago
                         and ma7_last > ma7_2_min_ago
-                        and ma11_last >= ma11_2_min_ago
+                        #and ma11_last >= ma11_2_min_ago
                         and price > price_1_min_ago
                         and price > price_2_min_ago
                         and price > price_3_min_ago
-                        and price > price_7_min_ago
-                        and deviation > 0.14
-                        and deviation_ma > 0.15
+                        #and price > price_7_min_ago
+                        and deviation > 0.13
+                        and deviation_ma > 0.13
                         
                         
                         #and ma100_last >= ma100_13_min_ago
@@ -216,18 +218,18 @@ class maddog:
                 # COMPRA sessione 3 in poi
                 else:
                     if (
-                        ma11_last >= ma38_last
+                        ma8_last >= ma14_last
                         
                         and ma2_last > ma2_2_min_ago
                         and ma4_last > ma4_2_min_ago
                         and ma5_last > ma5_2_min_ago
-                        and ma5_2_min_ago > ma5_3_min_ago
-                        and ma7_last > ma7_2_min_ago
-                        and deviation > 0.14
-                        and deviation_ma > 0.15
+                        #and ma5_2_min_ago > ma5_3_min_ago
+                        #and ma7_last > ma7_2_min_ago
+                        and deviation > 0.13
+                        and deviation_ma > 0.13
                         and price > price_1_min_ago
                         and price > price_2_min_ago
-                        and price > price_3_min_ago
+                        #and price > price_3_min_ago
                         #and price > price_7_min_ago
                         
                         #and ma20_last >= ma20_2_min_ago
