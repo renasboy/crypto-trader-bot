@@ -128,9 +128,10 @@ class ro_cano_che_ritorna:
         #if ma2_last >= ma4_last:
 
         #condizione comparo meo - si apre la gabbia in 2 modi differenti !
-        if (ma36_last >= ma36_2_min_ago and ma8_last > ma14_last) or (ma36_last < ma36_2_min_ago and ma2_last > ma4_last):
-        #elif :
-        #
+        #if (ma36_last >= ma36_2_min_ago and ma8_last > ma14_last) or (ma36_last < ma36_2_min_ago and ma2_last > ma4_last):
+        if (ma14_last >= ma39_last and ma8_last > ma14_last) or (ma14_last < ma39_last and ma54_last > ma78_last):
+
+        
             
             # NON TOCCARE QUESTA CONDIZIONE SERVE PER APERTURA DI GABBIA !
             if not self.session or not self.open:
