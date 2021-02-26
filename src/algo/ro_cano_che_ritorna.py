@@ -116,8 +116,8 @@ class ro_cano_che_ritorna:
         self.algo_helper.log("deviation_prev: {}".format(deviation_prev))
 
         # formula DEVIATION_ma per comprare durante il TREND RIBASSISTA ( ma2 deve avere una certa distanza da ma18 )
-        # pronto a sostituire ma2_last con ma3_last
-        deviation_ma = (ma4_last / ma50_last - 1) * 100 if ma20_last else 0
+        
+        deviation_ma = (ma5_last / ma50_last - 1) * 100 if ma20_last else 0
         self.algo_helper.log("deviation_ma: {}".format(deviation_ma))
 
         # DEFAULT ACTION DICE DI NON FARE NIENTE (=None, NON TOCCARE)
