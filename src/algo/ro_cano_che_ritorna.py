@@ -993,8 +993,8 @@ class ro_cano_che_ritorna:
                     # cuscino MENTRE SALE #
                 elif (
                     ma50_last >= ma50_2_min_ago
-                    and ma3_last < ma39_last
-                    and deviation < -0.40
+                    and ma4_last < ma39_last
+                    and deviation < -0.50
                 ):
                     action = "sell"
                     
@@ -1002,8 +1002,8 @@ class ro_cano_che_ritorna:
                     # cuscino MENTRE SCENDE #
                 elif (
                     ma50_last < ma50_2_min_ago
-                    and ma2_last < ma28_last
-                    and deviation < -0.30
+                    and ma3_last < ma39_last
+                    and deviation < -0.50
                 ):
                     action = "sell"
                     
