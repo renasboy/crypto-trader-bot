@@ -40,7 +40,7 @@ class maddog:
         ma38_last, ma38_prev = self.algo_helper.ma_last_prev(38)
         ma39_last, ma39_prev = self.algo_helper.ma_last_prev(39)
         ma43_last, ma43_prev = self.algo_helper.ma_last_prev(43)
-        #
+        ma48_last, ma48_prev = self.algo_helper.ma_last_prev(48)
         ma50_last, ma50_prev = self.algo_helper.ma_last_prev(50)
         #
         ma20_last, ma20_prev = self.algo_helper.ma_last_prev(20)
@@ -133,7 +133,7 @@ class maddog:
                 # COMPRA sessione 1
                 if self.session == 1:
                     if (
-                        ma14_last >= ma39_last
+                        ma12_last >= ma48_last
                         
                         and ma2_last > ma2_2_min_ago
                         and ma4_last > ma4_2_min_ago
