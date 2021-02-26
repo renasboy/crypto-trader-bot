@@ -40,6 +40,7 @@ class maddog:
         ma38_last, ma38_prev = self.algo_helper.ma_last_prev(38)
         ma39_last, ma39_prev = self.algo_helper.ma_last_prev(39)
         ma43_last, ma43_prev = self.algo_helper.ma_last_prev(43)
+        #
         ma50_last, ma50_prev = self.algo_helper.ma_last_prev(50)
         #
         ma20_last, ma20_prev = self.algo_helper.ma_last_prev(20)
@@ -92,7 +93,7 @@ class maddog:
         #######################################################################
         # APRE E CHIUDE GABBIA
         # SI APRE LA GABBIA SE
-        if ma14_last > ma39_last:
+        if ma50_last > ma60_last:
             
             
             # NON TOCCARE QUESTA CONDIZIONE SERVE PER APERTURA DI GABBIA
@@ -290,7 +291,7 @@ class maddog:
                 elif (
                     ma100_last < ma100_13_min_ago
                     and ma2_last < ma20_last
-                    and deviation < -1.10
+                    and deviation < -1.50
                 ):
                     action = "sell"    
                 
@@ -318,7 +319,7 @@ class maddog:
                 elif (
                     ma100_last < ma100_13_min_ago
                     and ma3_last < ma15_last
-                    and deviation < -1.00
+                    and deviation < -1.40
                 ):
                     action = "sell"      
                        
@@ -344,7 +345,7 @@ class maddog:
                 elif (
                     ma100_last < ma100_13_min_ago
                     and ma2_last < ma13_last
-                    and deviation < -0.90
+                    and deviation < -1.30
                 ):
                     action = "sell"        
                         #action = "sell"
@@ -355,7 +356,7 @@ class maddog:
                         
 
             # STOP LOSS (salvagente)
-            if deviation < -1.00 and ma2_last < ma21_last and ma11_last < ma100_last :
+            if deviation < -1.5 and ma2_last < ma21_last and ma11_last < ma100_last :
                 action = "sell"
 
             
