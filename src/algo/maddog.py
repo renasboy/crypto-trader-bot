@@ -279,7 +279,7 @@ class maddog:
                 
                 if (
                     ma100_last > ma100_13_min_ago
-                    and ma34_last < ma50_last
+                    and ma28_last < ma38_last
                     and deviation > 0.35
                 ):
                    
@@ -307,7 +307,7 @@ class maddog:
                
                 if (
                     ma100_last > ma100_13_min_ago
-                    and ma34_last < ma50_last
+                    and ma28_last < ma38_last
                     and deviation > 0.35
                 ):
                    
@@ -333,7 +333,7 @@ class maddog:
                 
                 if (
                     ma100_last > ma100_13_min_ago
-                    and ma2_last < ma15_last
+                    and ma3_last < ma15_last
                     and deviation > 0.35
                 ):
                    
