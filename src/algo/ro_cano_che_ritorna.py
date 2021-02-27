@@ -208,7 +208,7 @@ class ro_cano_che_ritorna:
                         
                         #and deviation > 0.14
                         #and deviation_prev > 0.14
-                        and deviation_ma >= 0.01
+                        and deviation_ma >= 0.10
                         
                         
                         
@@ -247,7 +247,7 @@ class ro_cano_che_ritorna:
                         
                           #and deviation > 0.14
                           #and deviation_prev > 0.14
-                          and deviation_ma >= 0.62
+                          and deviation_ma >= 0.72
                           
                           
                         
@@ -283,7 +283,7 @@ class ro_cano_che_ritorna:
                         
                           #and deviation > 0.14
                           #and deviation_prev > 0.14
-                          and deviation_ma >= 0.62
+                          and deviation_ma >= 0.72
                           
                      
                           
@@ -317,7 +317,7 @@ class ro_cano_che_ritorna:
                         
                           #and deviation > 0.14
                           #and deviation_prev > 0.14
-                          and deviation_ma >= 0.01
+                          and deviation_ma >= 0.10
                           
                           
                         
@@ -377,7 +377,7 @@ class ro_cano_che_ritorna:
                         
                         and deviation > 0.15
                         and deviation_prev > 0.15
-                        and deviation_ma >= 0.01
+                        and deviation_ma >= 0.10
                         
                         
                         
@@ -413,7 +413,7 @@ class ro_cano_che_ritorna:
                           
                           and deviation > 0.15
                           and deviation_prev > 0.15
-                          and deviation_ma >= 0.01
+                          and deviation_ma >= 0.10
                         
                         
                           #and ma85_last < ma100_last
@@ -450,7 +450,7 @@ class ro_cano_che_ritorna:
                         
                           and deviation > 0.15
                           and deviation_prev > 0.15
-                          and deviation_ma > 0.01
+                          and deviation_ma > 0.10
                           
                           
                         
@@ -500,7 +500,7 @@ class ro_cano_che_ritorna:
                         
                           and deviation > 0.15
                           and deviation_prev > 0.15
-                          and deviation_ma > 0.01
+                          and deviation_ma > 0.10
                          
                          
                         
