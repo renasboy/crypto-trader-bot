@@ -211,14 +211,16 @@ class ro_cano_che_ritorna:
                         #and deviation_prev > 0.14
                         and deviation_ma >= 0.01
                         
-                        
-                        
+                        and ma3_prev < ma13_prev and ma3_last > ma13_last
+                        # AGGIUNGO un INCROCIO AL RIALZO ( per essere molto piu' sicuro nel BUY 1)
+                        # quando ha comprato la ma3 era sopra la ma13 quindi non avrebbe comprato
+                        # compra dopo che la ma3 torna sotto la ma13 - vediamo
                         
                         #and ma85_last >= ma100_last
                         #and ma50_last >= ma50_2_min_ago
                         #and ma8_last >= ma8_5_min_ago
                         
-                        #and ma18_last > ma22_last 
+                        # and ma18_last > ma22_last 
                         # per non comprare con breve andamento laterale ( ma il trend e' ribassista )
                         
                         and ma2_last > ma2_2_min_ago
