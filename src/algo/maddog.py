@@ -45,6 +45,7 @@ class maddog:
         #
         ma20_last, ma20_prev = self.algo_helper.ma_last_prev(20)
         ma60_last, ma60_prev = self.algo_helper.ma_last_prev(60)
+        ma78_last, ma78_prev = self.algo_helper.ma_last_prev(78)
         ma85_last, ma85_prev = self.algo_helper.ma_last_prev(85)
         ma100_last, ma100_prev = self.algo_helper.ma_last_prev(100)
         #
@@ -93,7 +94,7 @@ class maddog:
         #######################################################################
         # APRE E CHIUDE GABBIA
         # SI APRE LA GABBIA SE
-        if ma50_last > ma60_last:
+        if ma3_last > ma78_last:
             
             
             # NON TOCCARE QUESTA CONDIZIONE SERVE PER APERTURA DI GABBIA
