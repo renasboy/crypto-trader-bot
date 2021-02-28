@@ -133,7 +133,10 @@ class ro_cano_che_ritorna:
 
         #condizione comparo meo - si apre la gabbia in 2 modi differenti !
         #if (ma36_last >= ma36_2_min_ago and ma8_last > ma14_last) or (ma36_last < ma36_2_min_ago and ma2_last > ma4_last):
-        if (ma14_last >= ma39_last and ma8_last > ma14_last) or (ma14_last < ma39_last and ma54_last > ma78_last):
+        #if (ma14_last >= ma39_last and ma8_last > ma14_last) or (ma14_last < ma39_last and ma54_last > ma78_last):
+        
+        if (ma50_last >= ma78_last and ma8_last > ma14_last):    
+            
 
         
             
@@ -211,7 +214,7 @@ class ro_cano_che_ritorna:
                         #and deviation_prev > 0.14
                         and deviation_ma >= 0.01
                         
-                        and ma3_prev < ma10_prev and ma3_last > ma10_last
+                        and ma2_prev < ma8_prev and ma2_last > ma8_last
                         # AGGIUNGO un INCROCIO AL RIALZO ( per essere molto piu' sicuro nel BUY 1)
                         # quando ha comprato la ma3 era sopra la ma13 quindi non avrebbe comprato
                         # compra dopo che la ma3 torna sotto la ma13 - vediamo (ma forse l' incrocio lo ha gia' fatto, quindi, tutto inutile. ma vediamo)
