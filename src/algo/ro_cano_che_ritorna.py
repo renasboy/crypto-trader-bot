@@ -214,7 +214,7 @@ class ro_cano_che_ritorna:
                         and ma3_prev < ma10_prev and ma3_last > ma10_last
                         # AGGIUNGO un INCROCIO AL RIALZO ( per essere molto piu' sicuro nel BUY 1)
                         # quando ha comprato la ma3 era sopra la ma13 quindi non avrebbe comprato
-                        # compra dopo che la ma3 torna sotto la ma13 - vediamo
+                        # compra dopo che la ma3 torna sotto la ma13 - vediamo (ma forse l' incrocio lo ha gia' fatto, quindi, tutto inutile. ma vediamo)
                         
                         #and ma85_last >= ma100_last
                         #and ma50_last >= ma50_2_min_ago
