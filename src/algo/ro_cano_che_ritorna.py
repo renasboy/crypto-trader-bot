@@ -254,7 +254,7 @@ class ro_cano_che_ritorna:
                           #and deviation > 0.14
                           #and deviation_prev > 0.14
                           and deviation_ma >= 0.72
-                          
+                          and ma2_prev < ma8_prev and ma2_last > ma8_last
                           
                         
                           # questa prossima condizione, molto probabilmente, non la prendera' perche' trovera' la gabbia chiusa 8-14
@@ -290,7 +290,7 @@ class ro_cano_che_ritorna:
                           #and deviation > 0.14
                           #and deviation_prev > 0.14
                           and deviation_ma >= 0.72
-                          
+                          and ma2_prev < ma8_prev and ma2_last > ma8_last
                      
                           
                           and ma2_last > ma2_2_min_ago
@@ -324,7 +324,7 @@ class ro_cano_che_ritorna:
                           #and deviation > 0.14
                           #and deviation_prev > 0.14
                           and deviation_ma >= 0.10
-                          
+                          and ma2_prev < ma8_prev and ma2_last > ma8_last
                           
                         
                           #and ma85_last < ma100_last
