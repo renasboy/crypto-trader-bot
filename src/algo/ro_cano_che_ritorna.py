@@ -169,7 +169,7 @@ class ro_cano_che_ritorna:
                 (
                     seconds_since_last_trade > 0
                     and seconds_since_last_trade <= min_buy_delay_in_seconds
-                    and deviation > 0.15
+                    and deviation > 0.13
                 )
                 
                 # COMPRA UN PO' PIU' SOPRA DEL PENULTIMO TRADE SE DEVIATION > 0.15 nei 300 secondi ( qualche volta IL BUY)
@@ -177,7 +177,7 @@ class ro_cano_che_ritorna:
                 or (
                     seconds_since_prev_trade > 0
                     and seconds_since_prev_trade <= min_prev_buy_delay_in_seconds
-                    and deviation_prev > 0.18
+                    and deviation_prev > 0.13
                 )
                 
                 
@@ -214,7 +214,7 @@ class ro_cano_che_ritorna:
                         #and deviation_prev > 0.14
                         and deviation_ma >= 0.01
                         
-                        and ma2_prev < ma8_prev and ma2_last > ma8_last
+                        and ma2_prev < ma7_prev and ma2_last > ma7_last
                         # AGGIUNGO un INCROCIO AL RIALZO ( per essere molto piu' sicuro nel BUY 1)
                         # quando ha comprato la ma3 era sopra la ma13 quindi non avrebbe comprato
                         # compra dopo che la ma3 torna sotto la ma13 - vediamo (ma forse l' incrocio lo ha gia' fatto, quindi, tutto inutile. ma vediamo)
@@ -253,8 +253,8 @@ class ro_cano_che_ritorna:
                         
                           #and deviation > 0.14
                           #and deviation_prev > 0.14
-                          and deviation_ma >= 0.72
-                          and ma2_prev < ma8_prev and ma2_last > ma8_last
+                          and deviation_ma >= 0.40
+                          and ma2_prev < ma7_prev and ma2_last > ma7_last
                           
                         
                           # questa prossima condizione, molto probabilmente, non la prendera' perche' trovera' la gabbia chiusa 8-14
@@ -289,8 +289,8 @@ class ro_cano_che_ritorna:
                         
                           #and deviation > 0.14
                           #and deviation_prev > 0.14
-                          and deviation_ma >= 0.72
-                          and ma2_prev < ma8_prev and ma2_last > ma8_last
+                          and deviation_ma >= 0.40
+                          and ma2_prev < ma7_prev and ma2_last > ma7_last
                      
                           
                           and ma2_last > ma2_2_min_ago
@@ -324,7 +324,7 @@ class ro_cano_che_ritorna:
                           #and deviation > 0.14
                           #and deviation_prev > 0.14
                           and deviation_ma >= 0.10
-                          and ma2_prev < ma8_prev and ma2_last > ma8_last
+                          and ma2_prev < ma7_prev and ma2_last > ma7_last
                           
                         
                           #and ma85_last < ma100_last
