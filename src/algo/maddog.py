@@ -134,7 +134,7 @@ class maddog:
                 # COMPRA sessione 1
                 if self.session == 1:
                     if (
-                        ma12_last >= ma48_last
+                        #ma12_last >= ma48_last
                         and deviation_ma > 0.40
                         
                         and ma2_last > ma2_2_min_ago
@@ -176,7 +176,7 @@ class maddog:
                 # COMPRA sessione 2
                 elif self.session == 2:
                     if (
-                        ma9_last >= ma15_last
+                        ma8_last >= ma14_last
                         
                         and ma2_last > ma2_2_min_ago
                         and ma4_last > ma4_2_min_ago
@@ -186,10 +186,10 @@ class maddog:
                         #and ma11_last >= ma11_2_min_ago
                         and price > price_1_min_ago
                         and price > price_2_min_ago
-                        and price > price_3_min_ago
+                        #and price > price_3_min_ago
                         #and price > price_7_min_ago
-                        and deviation > 0.13
-                        and deviation_ma > 0.13
+                        and deviation > 0.01
+                        and deviation_ma > 0.01
                         
                         
                         #and ma100_last >= ma100_13_min_ago
@@ -285,7 +285,7 @@ class maddog:
                 if (
                     ma100_last > ma100_13_min_ago
                     and ma28_last < ma38_last
-                    and deviation > 0.35
+                    and deviation > 0.25
                 ):
                    
                     action = "sell"     
@@ -388,4 +388,4 @@ class maddog:
 # grazie compa ######## #
 
 
-####
+#####
