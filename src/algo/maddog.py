@@ -134,7 +134,8 @@ class maddog:
                 # COMPRA sessione 1
                 if self.session == 1:
                     if (
-                        #ma12_last >= ma48_last
+                        ma18_last >= ma21_last
+                        
                         and deviation_ma > 0.40
                         
                         and ma2_last > ma2_2_min_ago
@@ -142,7 +143,7 @@ class maddog:
                         and ma5_last > ma5_2_min_ago
                         and ma5_2_min_ago > ma5_3_min_ago
                         and ma7_last > ma7_2_min_ago
-                        and ma18_last >= ma21_last
+                        #and ma12_last >= ma48_last
                         and price > price_1_min_ago
                         and price > price_2_min_ago
                         
