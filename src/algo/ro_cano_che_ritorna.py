@@ -560,8 +560,8 @@ class ro_cano_che_ritorna:
                         and ma36_last >= ma36_2_min_ago
                         and ma8_last >= ma12_last
                         
-                        and deviation > 0.16
-                        and deviation_prev > 0.16
+                        and deviation > 0.13
+                        and deviation_prev > 0.13
                         and deviation_ma > 0.01
                         
                         
@@ -687,8 +687,8 @@ class ro_cano_che_ritorna:
                           and ma36_last < ma36_2_min_ago
                           and ma9_last >= ma14_last
                         
-                          and deviation >= 0.16
-                          and deviation_prev >= 0.16
+                          and deviation >= 0.14
+                          and deviation_prev >= 0.14
                           and deviation_ma >= 0.01
                         
                           
