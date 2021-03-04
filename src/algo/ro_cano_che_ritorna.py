@@ -136,7 +136,9 @@ class ro_cano_che_ritorna:
         #if (ma14_last >= ma39_last and ma8_last > ma14_last) or (ma14_last < ma39_last and ma54_last > ma78_last):
         
         #if (ma50_last >= ma78_last and ma8_last > ma14_last):    
-        if (ma2_last >= ma78_last and ma8_last > ma14_last): 
+        #if (ma2_last >= ma78_last and ma8_last > ma14_last): 
+        
+        if (ma3_last >= ma50_last and ma8_last > ma14_last): 
 
         
             
@@ -765,7 +767,7 @@ class ro_cano_che_ritorna:
                 if (
                     ma50_last > ma50_2_min_ago
                     and ma36_last > ma36_2_min_ago
-                    and ma2_last < ma13_last and deviation > 0.10
+                    and ma2_last < ma13_last and deviation > 0.20
                     #and deviation > 0.10
                 ):
                    
@@ -817,7 +819,7 @@ class ro_cano_che_ritorna:
                 if (
                     ma50_last < ma50_2_min_ago
                     and ma36_last > ma36_2_min_ago
-                    and ma2_last < ma13_last and deviation > 0.01
+                    and ma2_last < ma13_last and deviation > 0.10
                     #and deviation > 0.01
                 ):
                    
@@ -842,7 +844,7 @@ class ro_cano_che_ritorna:
                 elif (
                     ma50_last < ma50_2_min_ago
                     and ma36_last < ma36_2_min_ago
-                    and ma2_last < ma11_last and deviation > 0.01
+                    and ma2_last < ma11_last and deviation > 0.10
                     #and deviation > 0.01
                 ):
                     action = "sell"
@@ -860,13 +862,13 @@ class ro_cano_che_ritorna:
                     
                     
                     # cuscino mentre scende #
-                elif (
-                    ma50_last < ma50_2_min_ago
-                    and ma36_last < ma36_2_min_ago
-                    and ma3_last < ma36_last and deviation < -0.50
+                #elif (
+                    #ma50_last < ma50_2_min_ago
+                    #and ma36_last < ma36_2_min_ago
+                    #and ma3_last < ma36_last and deviation < -0.50
                     #and deviation < -0.50
-                ):
-                    action = "sell"    
+                #):
+                    #action = "sell"    
                     
                     
                     
