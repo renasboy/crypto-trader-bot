@@ -136,7 +136,7 @@ class ro_cano_che_ritorna:
         #if (ma14_last >= ma39_last and ma8_last > ma14_last) or (ma14_last < ma39_last and ma54_last > ma78_last):
         
         #if (ma50_last >= ma78_last and ma8_last > ma14_last):    
-        if (ma78_last >= ma78_2_min_ago and ma8_last > ma14_last): 
+        if (ma2_last >= ma78_last and ma8_last > ma14_last): 
 
         
             
