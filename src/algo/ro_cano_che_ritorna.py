@@ -199,8 +199,9 @@ class ro_cano_che_ritorna:
                 if self.session == 1:
                
                     if (
-                    
-                        ma50_last >= ma50_2_min_ago
+                        ma3_last >= ma50_last
+                        #ma50_last >= ma50_2_min_ago
+                        
                         and ma36_last >= ma36_2_min_ago
                         and ma8_last >= ma14_last
                         
@@ -225,8 +226,9 @@ class ro_cano_che_ritorna:
                         
                         
                     elif (
-                    
-                          ma50_last < ma50_2_min_ago
+                          ma3_last >= ma50_last
+                          #ma50_last < ma50_2_min_ago
+                          
                           and ma36_last < ma36_2_min_ago
                           and ma8_last > ma14_last
                         
@@ -265,8 +267,9 @@ class ro_cano_che_ritorna:
                 elif self.session == 2:
               
                     if (
-                    
-                        ma50_last >= ma50_2_min_ago
+                        ma3_last >= ma50_last
+                        #ma50_last >= ma50_2_min_ago
+                        
                         and ma36_last >= ma36_2_min_ago
                         and ma8_last >= ma14_last
                         
@@ -290,8 +293,9 @@ class ro_cano_che_ritorna:
                         
                         
                     elif (
-                    
-                          ma50_last < ma50_2_min_ago
+                          ma3_last >= ma50_last
+                          #ma50_last < ma50_2_min_ago
+                          
                           and ma36_last < ma36_2_min_ago
                           and ma9_last >= ma15_last
                           
@@ -326,8 +330,9 @@ class ro_cano_che_ritorna:
             
             
                     if (
-                    
-                        ma50_last >= ma50_2_min_ago
+                        ma3_last >= ma50_last
+                        #ma50_last >= ma50_2_min_ago
+                        
                         and ma36_last >= ma36_2_min_ago
                         and ma8_last >= ma12_last
                         
@@ -350,8 +355,9 @@ class ro_cano_che_ritorna:
                         
                         
                     elif (
-                    
-                          ma50_last < ma50_2_min_ago
+                          ma3_last >= ma50_last
+                          #ma50_last < ma50_2_min_ago
+                          
                           and ma36_last < ma36_2_min_ago
                           and ma9_last >= ma15_last
                           
@@ -402,6 +408,8 @@ class ro_cano_che_ritorna:
             #   > 30   -----------
 
             ##################################################################################
+            
+            
 
             # VENDITA - da 0 a 3 minuti = da 0 a 180 secondi
 
