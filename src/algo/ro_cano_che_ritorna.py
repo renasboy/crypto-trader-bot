@@ -1,8 +1,3 @@
-#import inspect
-#inspect.getframeinfo(inspect.currentframe()).lineno
-
-#self.algo_helper.log("SELL @ LINE {}".format(__line__))
-
 
 
 class ro_cano_che_ritorna:
@@ -129,14 +124,11 @@ class ro_cano_che_ritorna:
         # APRE E CHIUDE GABBIA
 
         #si apriva la GABBIA se
-        #if ma2_last >= ma4_last:
+        
 
         #condizione comparo meo - si apre la gabbia in 2 modi differenti !
         #if (ma36_last >= ma36_2_min_ago and ma8_last > ma14_last) or (ma36_last < ma36_2_min_ago and ma2_last > ma4_last):
-        #if (ma14_last >= ma39_last and ma8_last > ma14_last) or (ma14_last < ma39_last and ma54_last > ma78_last):
         
-        #if (ma50_last >= ma78_last and ma8_last > ma14_last):    
-        #if (ma2_last >= ma78_last and ma8_last > ma14_last): 
         
         if (ma3_last >= ma50_last and ma8_last > ma14_last): 
 
@@ -212,30 +204,15 @@ class ro_cano_che_ritorna:
                         and ma36_last >= ma36_2_min_ago
                         and ma8_last >= ma14_last
                         
-                        #and deviation > 0.14
-                        #and deviation_prev > 0.14
                         and deviation_ma >= 0.01
                         
                         and ma2_prev < ma7_prev and ma2_last > ma7_last
-                        # AGGIUNGO un INCROCIO AL RIALZO ( per essere molto piu' sicuro nel BUY 1)
-                        # quando ha comprato la ma3 era sopra la ma13 quindi non avrebbe comprato
-                        # compra dopo che la ma3 torna sotto la ma13 - vediamo (ma forse l' incrocio lo ha gia' fatto, quindi, tutto inutile. ma vediamo)
-                        
-                        #and ma85_last >= ma100_last
-                        #and ma50_last >= ma50_2_min_ago
-                        #and ma8_last >= ma8_5_min_ago
-                        
-                        # and ma18_last > ma22_last 
-                        # per non comprare con breve andamento laterale ( ma il trend e' ribassista )
-                        
+
                         and ma2_last > ma2_2_min_ago
                         and ma2_last > ma2_3_min_ago
                         
                         and ma2_last >= ma7_last
                         and ma4_last > ma4_2_min_ago
-                        #and ma7_last >= ma15_last
-                        #and ma10_last >= ma10_2_min_ago
-                        #and ma11_last > ma15_last
                         
                         and price > price_1_min_ago
                         and price > price_2_min_ago
