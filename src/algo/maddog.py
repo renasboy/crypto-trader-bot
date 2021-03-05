@@ -135,44 +135,21 @@ class maddog:
                 if self.session == 1:
                     if (
                         ma18_last >= ma21_last
-                        
+                        and ma2_prev < ma7_prev and ma2_last > ma7_last
                         and deviation_ma > 0.40
                         
                         and ma2_last > ma2_2_min_ago
                         and ma4_last > ma4_2_min_ago
                         and ma5_last > ma5_2_min_ago
-                        and ma5_2_min_ago > ma5_3_min_ago
                         and ma7_last > ma7_2_min_ago
-                        #and ma12_last >= ma48_last
+                        
                         and price > price_1_min_ago
                         and price > price_2_min_ago
-                        
-                        and ma2_prev < ma7_prev and ma2_last > ma7_last
-                        
-                        #and ma34_last >= ma100_last
-                        
-                        #and ma11_last >= ma11_2_min_ago
-                        #and ma15_last > ma15_5_min_ago
-                        #and ma16_last >= ma16_2_min_ago
-                        
-                        
-                        
-                        #and price > price_3_min_ago
-                        #and price > price_7_min_ago
-                        
-                        #and ma20_last >= ma20_2_min_ago
-                        #and ma60_last >= ma60_2_min_ago
-                        
-                        #and ma20_last >= ma60_last
-                        
-                        
-                        #and ma85_last >= ma85_3_min_ago
-                        #and ma100_last >= ma100_13_min_ago
-                        
-                        #and ma20_last >= ma60_last
-                        
+                     
                     ):
                         action = "buy"
+                        
+                        
 
                 # COMPRA sessione 2
                 elif self.session == 2:
@@ -182,39 +159,12 @@ class maddog:
                         and ma2_last > ma2_2_min_ago
                         and ma4_last > ma4_2_min_ago
                         and ma5_last > ma5_2_min_ago
-                        #and ma5_2_min_ago > ma5_3_min_ago
-                        and ma7_last > ma7_2_min_ago
-                        #and ma11_last >= ma11_2_min_ago
+                       
                         and price > price_1_min_ago
                         and price > price_2_min_ago
-                        #and price > price_3_min_ago
-                        #and price > price_7_min_ago
+                       
                         and deviation > 0.01
                         and deviation_ma > 0.01
-                        
-                        
-                        #and ma100_last >= ma100_13_min_ago
-                        #and ma34_last >= ma100_last
-                        
-                        
-                        
-                        #and ma15_last > ma15_5_min_ago
-                        #and ma16_last >= ma16_2_min_ago
-                        #and ma18_last >= ma21_last
-                       
-                        
-                        
-                        #and ma20_last >= ma20_2_min_ago
-                        #and ma60_last >= ma60_2_min_ago
-                        #and ma20_last >= ma60_last
-                        
-                        
-                        #and ma85_last >= ma100_last
-                        #and ma85_last >= ma85_3_min_ago
-                        
-                        
-                        
-                        
                         
                     ):
                         action = "buy"
@@ -230,33 +180,11 @@ class maddog:
                         and ma2_last > ma2_2_min_ago
                         and ma4_last > ma4_2_min_ago
                         and ma5_last > ma5_2_min_ago
-                        #and ma5_2_min_ago > ma5_3_min_ago
-                        #and ma7_last > ma7_2_min_ago
+                       
                         and deviation > 0.13
                         and deviation_ma > 0.13
                         and price > price_1_min_ago
                         and price > price_2_min_ago
-                        #and price > price_3_min_ago
-                        #and price > price_7_min_ago
-                        
-                        #and ma20_last >= ma20_2_min_ago
-                        #and ma100_last >= ma100_13_min_ago
-                        #and ma34_last >= ma100_last
-                        
-                        #and ma11_last >= ma11_2_min_ago
-                        #and ma15_last >= ma15_5_min_ago
-                        
-                        
-                        # and ma16_last > ma16_2_min_ago
-                    
-                        
-                        #and ma60_last >= ma60_2_min_ago
-                        
-                        #and ma20_last >= ma60_last
-                        
-                        #and ma85_last >= ma100_last
-                        #and ma85_last >= ma85_3_min_ago
-                        
                         
                     ):
                         action = "buy"
@@ -275,17 +203,15 @@ class maddog:
             self.algo_helper.log("deviation: {}".format(deviation))
             self.algo_helper.log("session: {}".format(self.session))
 
+            
             # VENDE
-            
-            
-            
-
+           
             # VENDE sessione 1
             if self.session == 1:
                 
                 if (
                     ma100_last > ma100_13_min_ago
-                    and ma28_last < ma38_last
+                    and ma3_last < ma20_last
                     and deviation > 0.25
                 ):
                    
@@ -296,7 +222,7 @@ class maddog:
                     
                 elif (
                     ma100_last < ma100_13_min_ago
-                    and ma4_last < ma39_last
+                    and ma2_last < ma20_last
                     and deviation < -0.90
                 ):
                     action = "sell"    
@@ -313,7 +239,7 @@ class maddog:
                
                 if (
                     ma100_last > ma100_13_min_ago
-                    and ma28_last < ma38_last
+                    and ma3_last < ma15_last
                     and deviation > 0.35
                 ):
                    
@@ -324,7 +250,7 @@ class maddog:
                     
                 elif (
                     ma100_last < ma100_13_min_ago
-                    and ma3_last < ma15_last
+                    and ma2_last < ma13_last
                     and deviation < -1.40
                 ):
                     action = "sell"      
@@ -371,7 +297,7 @@ class maddog:
             
 
             
-            # 1) ATTESA per es. DI 1 ORA = 3600 SECONDI "max hold time" " DOPO UN' ORA VENDE SUBITO "
+            # 1) ATTESA per es. DI 1 ORA = 3600 SECONDI "max hold time" " DOPO UN' ORA VENDE SUBITO " e se ma2_last < ma20_last
             
             if seconds_since_last_trade > max_hold_time_in_seconds and ma2_last < ma20_last:
                 
@@ -386,7 +312,4 @@ class maddog:
         return action
 
 
-# grazie compa ######## #
-
-
-###### #
+        # grazie compa 
