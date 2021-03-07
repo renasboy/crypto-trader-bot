@@ -122,7 +122,7 @@ class maddog:
             if (
                 seconds_since_last_trade > 0
                 and seconds_since_last_trade <= min_buy_delay_in_seconds
-                and deviation > 0.15
+                #and deviation > 0.15
             ) or (
                 seconds_since_last_trade == 0
                 or seconds_since_last_trade > min_buy_delay_in_seconds
@@ -134,14 +134,15 @@ class maddog:
                 # COMPRA sessione 1
                 if self.session == 1:
                     if (
-                        ma18_last >= ma21_last
-                        and ma2_prev < ma7_prev and ma2_last > ma7_last
-                        and deviation_ma > 0.40
+                        ma2_last >= ma4_last
+                        #ma18_last >= ma21_last
+                        and ma2_prev < ma5_prev and ma2_last > ma5_last
+                        and deviation_ma > 0.30
                         
                         and ma2_last > ma2_2_min_ago
                         and ma4_last > ma4_2_min_ago
                         and ma5_last > ma5_2_min_ago
-                        and ma7_last > ma7_2_min_ago
+                        #and ma7_last > ma7_2_min_ago
                         
                         and price > price_1_min_ago
                         and price > price_2_min_ago
