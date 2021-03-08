@@ -11,7 +11,7 @@ class ro_cano_che_ritorna:
 
         # moving average (2-3-4-5-x)
         
-        price, price_prev = self.algo_helper.price_prev(price)
+      
         ma2_last, ma2_prev = self.algo_helper.ma_last_prev(2)
         ma3_last, ma3_prev = self.algo_helper.ma_last_prev(3)
         ma4_last, ma4_prev = self.algo_helper.ma_last_prev(4)
