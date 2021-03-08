@@ -272,7 +272,7 @@ class ro_cano_che_ritorna:
                         ma3_last >= ma50_last
                         #ma50_last >= ma50_2_min_ago
 
-                        and price_prev < ma3_prev and price_last > ma3_last
+                        and prev_price < ma3_prev and price > ma3_last
                         
                         #and ma36_last >= ma36_2_min_ago
                         and ma8_last >= ma14_last
@@ -300,7 +300,7 @@ class ro_cano_che_ritorna:
                           ma3_last >= ma50_last
                           #ma50_last < ma50_2_min_ago
 
-                          and price_prev < ma3_prev and price_last > ma3_last
+                          and prev_price < ma3_prev and price > ma3_last
                           
                           and ma36_last < ma36_2_min_ago
                           and ma9_last >= ma15_last
