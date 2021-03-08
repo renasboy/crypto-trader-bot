@@ -10,6 +10,8 @@ class ro_cano_che_ritorna:
     def action(self):
 
         # moving average (2-3-4-5-x)
+        
+        price_last, price_prev = self.algo_helper.price_last_prev(price)
         ma2_last, ma2_prev = self.algo_helper.ma_last_prev(2)
         ma3_last, ma3_prev = self.algo_helper.ma_last_prev(3)
         ma4_last, ma4_prev = self.algo_helper.ma_last_prev(4)
@@ -270,9 +272,9 @@ class ro_cano_che_ritorna:
                         ma3_last >= ma50_last
                         #ma50_last >= ma50_2_min_ago
 
-                        and ma2_prev < ma3_prev and ma2_last > ma3_last
+                        and price_prev < ma3_prev and price_last > ma3_last
                         
-                        and ma36_last >= ma36_2_min_ago
+                        #and ma36_last >= ma36_2_min_ago
                         and ma8_last >= ma14_last
                         
                         and deviation > 0.01
@@ -298,7 +300,7 @@ class ro_cano_che_ritorna:
                           ma3_last >= ma50_last
                           #ma50_last < ma50_2_min_ago
 
-                          and ma2_prev < ma3_prev and ma2_last > ma3_last
+                          and price_prev < ma3_prev and price_last > ma3_last
                           
                           and ma36_last < ma36_2_min_ago
                           and ma9_last >= ma15_last
@@ -337,7 +339,7 @@ class ro_cano_che_ritorna:
                         ma3_last >= ma50_last
                         #ma50_last >= ma50_2_min_ago
 
-                        and ma2_prev < ma7_prev and ma2_last > ma7_last
+                        and ma2_prev < ma5_prev and ma2_last > ma5_last
                         
                         and ma36_last >= ma36_2_min_ago
                         and ma8_last >= ma12_last
@@ -364,7 +366,7 @@ class ro_cano_che_ritorna:
                           ma3_last >= ma50_last
                           #ma50_last < ma50_2_min_ago
 
-                          and ma2_prev < ma7_prev and ma2_last > ma7_last
+                          and ma2_prev < ma5_prev and ma2_last > ma5_last
                           
                           and ma36_last < ma36_2_min_ago
                           and ma9_last >= ma15_last
