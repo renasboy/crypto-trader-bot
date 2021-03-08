@@ -81,7 +81,10 @@ class ro_cano_che_ritorna:
 
         # PREZZO DI ADESSO (di mercato) - CURRENT PRICE
         price = self.algo_helper.price
-
+        
+        #PREZZO PRECEDENTE (NECESSARIO PER INCROCIO)
+        prev_price = self.algo_helper.prev_price
+        
         # PREZZO PRECEDENTE (di mercato) - PREV PRICE
         price_1_min_ago = self.algo_helper.price_minutes_ago(1)
         price_2_min_ago = self.algo_helper.price_minutes_ago(2)
@@ -209,7 +212,7 @@ class ro_cano_che_ritorna:
                         
                         and deviation_ma >= 0.10
                         
-                        and ma2_prev < ma3_prev and ma2_last > ma3_last
+                        and prev_price < ma3_prev and price > ma3_last
 
                         and ma2_last > ma2_2_min_ago
                         and ma2_last > ma2_3_min_ago
@@ -235,7 +238,7 @@ class ro_cano_che_ritorna:
                           and ma8_last > ma14_last
                         
                           and deviation_ma >= 0.40
-                          and ma2_prev < ma3_prev and ma2_last > ma3_last
+                          and prev_price < ma3_prev and price > ma3_last
                    
                           or deviation_ma < -2.9 and ma2_last > ma4_last
                         
