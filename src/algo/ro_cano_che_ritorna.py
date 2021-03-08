@@ -11,7 +11,7 @@ class ro_cano_che_ritorna:
 
         # moving average (2-3-4-5-x)
         
-      
+        ma1_last, ma1_prev = self.algo_helper.ma_last_prev(1)
         ma2_last, ma2_prev = self.algo_helper.ma_last_prev(2)
         ma3_last, ma3_prev = self.algo_helper.ma_last_prev(3)
         ma4_last, ma4_prev = self.algo_helper.ma_last_prev(4)
@@ -48,6 +48,7 @@ class ro_cano_che_ritorna:
         
 
         # moving average (2-3-4-5-7-8-20-43-100) di x minuti prima
+        
         ma2_2_min_ago = self.algo_helper.ma_minutes_ago(2, 2)
         ma2_3_min_ago = self.algo_helper.ma_minutes_ago(2, 3)
         ma2_15_min_ago = self.algo_helper.ma_minutes_ago(2, 15)
@@ -212,7 +213,7 @@ class ro_cano_che_ritorna:
                         
                         and deviation_ma >= 0.10
                         
-                        and prev_price < ma3_prev and price > ma3_last
+                        and  ma1_prev < ma3_prev and ma1_last > ma3_last
 
                         and ma2_last > ma2_2_min_ago
                         and ma2_last > ma2_3_min_ago
@@ -238,7 +239,7 @@ class ro_cano_che_ritorna:
                           and ma8_last > ma14_last
                         
                           and deviation_ma >= 0.40
-                          and prev_price < ma3_prev and price > ma3_last
+                          and ma1_prev < ma3_prev and ma1_last > ma3_last
                    
                           or deviation_ma < -2.9 and ma2_last > ma4_last
                         
@@ -275,7 +276,7 @@ class ro_cano_che_ritorna:
                         ma3_last >= ma50_last
                         #ma50_last >= ma50_2_min_ago
 
-                        and prev_price < ma3_prev and price > ma3_last
+                        and ma1_prev < ma3_prev and ma1_last > ma3_last
                         
                         #and ma36_last >= ma36_2_min_ago
                         and ma8_last >= ma14_last
@@ -303,7 +304,7 @@ class ro_cano_che_ritorna:
                           ma3_last >= ma50_last
                           #ma50_last < ma50_2_min_ago
 
-                          and prev_price < ma3_prev and price > ma3_last
+                          and ma1_prev < ma3_prev and ma1_last > ma3_last
                           
                           and ma36_last < ma36_2_min_ago
                           and ma9_last >= ma15_last
