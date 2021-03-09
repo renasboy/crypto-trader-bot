@@ -273,7 +273,7 @@ class ro_cano_che_ritorna:
                         
                         ma50_last >= ma50_2_min_ago
 
-                        #and ma2_prev < ma3_prev and ma2_last > ma3_last
+                        and ma2_prev < ma3_prev and ma2_last > ma3_last
                         
                         #and ma36_last >= ma36_2_min_ago
                         and ma8_last >= ma14_last
@@ -301,7 +301,7 @@ class ro_cano_che_ritorna:
                           
                           ma50_last < ma50_2_min_ago
 
-                          #and ma2_prev < ma3_prev and ma2_last > ma3_last
+                          and ma2_prev < ma3_prev and ma2_last > ma3_last
                           
                           and ma36_last < ma36_2_min_ago
                           and ma9_last >= ma15_last
