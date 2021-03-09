@@ -136,14 +136,16 @@ class ro_cano_che_ritorna:
         # APRE E CHIUDE GABBIA
 
         #si apriva la GABBIA se
-        
-
+      
         #condizione comparo meo - si apre la gabbia in 2 modi differenti !
         #if (ma36_last >= ma36_2_min_ago and ma8_last > ma14_last) or (ma36_last < ma36_2_min_ago and ma2_last > ma4_last):
         
         
-        if ma50_last >= ma50_2_min_ago: 
-
+        if ma50_last >= ma50_2_min_ago and deviation_ma > -0.07: 
+            # ti ricordo che deviation_ma = (ma7 / ma50) -1
+            # la gabbia continua ad essere aperta anche se trend ma50 si inclina un pochino verso il basso 
+            # (o se per es il prezzo, come in precedenti versioni, va sotto la ma50 )
+            #a questo punto la compra 2 deve essere piu' veloce (che vado a cambiare)
         
             
             # NON TOCCARE QUESTA CONDIZIONE SERVE PER APERTURA DI GABBIA !
@@ -277,7 +279,7 @@ class ro_cano_che_ritorna:
                         
                         ma50_last >= ma50_2_min_ago
 
-                        and ma2_prev < ma3_prev and ma2_last > ma3_last
+                        #and ma2_prev < ma3_prev and ma2_last > ma3_last
                         
                         #and ma36_last >= ma36_2_min_ago
                         and ma8_last >= ma14_last
@@ -305,7 +307,7 @@ class ro_cano_che_ritorna:
                           
                           ma50_last < ma50_2_min_ago
 
-                          and ma2_prev < ma3_prev and ma2_last > ma3_last
+                          #and ma2_prev < ma3_prev and ma2_last > ma3_last
                           
                           and ma36_last < ma36_2_min_ago
                           and ma9_last >= ma15_last
