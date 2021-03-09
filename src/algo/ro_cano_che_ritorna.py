@@ -203,7 +203,7 @@ class ro_cano_che_ritorna:
                 
             ):
 
-  
+###################################################################################################################################################
 ###################################################################################################################################################
 
                 # COMPRA sessione 1  
@@ -217,7 +217,7 @@ class ro_cano_che_ritorna:
                         
                         and deviation_ma >= 0.10
                         
-                        and ma2_prev < ma3_prev and ma2_last > ma3_last or price_1_min_ago < ma3_prev and price > ma3_last
+                        and (ma2_prev < ma3_prev and ma2_last > ma3_last) or (price_1_min_ago < ma3_prev and price > ma3_last)
                         
                         and ma2_last > ma2_2_min_ago
                         and ma2_last > ma2_3_min_ago
@@ -240,7 +240,7 @@ class ro_cano_che_ritorna:
                           and ma8_last > ma14_last
                         
                           and deviation_ma >= 0.40
-                          and ma2_prev < ma3_prev and ma2_last > ma3_last
+                          and (ma2_prev < ma3_prev and ma2_last > ma3_last) or (price_1_min_ago < ma3_prev and price > ma3_last)
                    
                           or deviation_ma < -2.9 and ma2_last > ma4_last
                         
