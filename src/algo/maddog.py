@@ -7,8 +7,8 @@ class maddog:
     @property
     def action(self):
 
-        # ro cano ritorna automaticamente ( per esempio 50 minuti x 60 = 3000 secondi )
-        max_hold_time_in_seconds = 3000
+        # ro cano ritorna automaticamente ( per esempio 90 minuti x 60 = 5400 secondi )
+        max_hold_time_in_seconds = 5400
         
         # e durata segmento in cui si aggiunge una condizione per il BUY ( per esempio 40 minuti x 60 = 2400 secondi )
         min_buy_delay_in_seconds = 2400
@@ -298,7 +298,7 @@ class maddog:
             
 
             
-            # 1) ATTESA per es. DI 1 ORA = 3600 SECONDI "max hold time" " DOPO UN' ORA VENDE SUBITO " e se ma2_last < ma20_last
+            # 1) ATTESA riga 111 per es. DI 1 ORA e 1/2 = 5400 SECONDI "max hold time" " DOPO UN' ORA VENDE SUBITO " e se ma2_last < ma20_last
             
             if seconds_since_last_trade > max_hold_time_in_seconds and ma2_last < ma20_last:
                 
