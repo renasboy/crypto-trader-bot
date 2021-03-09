@@ -220,6 +220,7 @@ class ro_cano_che_ritorna:
                         and deviation_ma >= 0.10
                         
                         and (ma2_prev < ma3_prev and ma2_last > ma3_last) or (price_1_min_ago < ma3_prev and price > ma3_last)
+                        # e' un tentativo modesto di mettere incrocio price_prev < ma3_prev and price > ma3_last ( CHIEDI A COMPA, se hai il coraggio )
                         
                         and ma2_last > ma2_2_min_ago
                         and ma2_last > ma2_3_min_ago
@@ -259,18 +260,11 @@ class ro_cano_che_ritorna:
                         action = "buy"
                     
                     
-                    
-                  
-                    
-                    
-                    
-                    
-                    
-                  
 ##############################################################################################################################
-                        
+##############################################################################################################################                       
     
 
+    
                 # COMPRA sessione 2
         
                 elif self.session == 2:
@@ -393,15 +387,12 @@ class ro_cano_che_ritorna:
 
                         action = "buy"
                         
-                        
-                        
-                        
-                   
-                   
+               
                     
         #####################################################################
 
         # VENDITA
+        
         # NON TOCCARE QUESTA CONDIZIONE (QUESTA DICE CHE STA IN MODO SELL, DEVO VENDERE)
         elif last_trade_action == "buy":
 
