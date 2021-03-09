@@ -11,7 +11,7 @@ class ro_cano_che_ritorna:
 
         # moving average (2-3-4-5-x)
         
-        ma1_last, ma1_prev = self.algo_helper.ma_last_prev(1)
+        #ma1_last, ma1_prev = self.algo_helper.ma_last_prev(1)
         ma2_last, ma2_prev = self.algo_helper.ma_last_prev(2)
         ma3_last, ma3_prev = self.algo_helper.ma_last_prev(3)
         ma4_last, ma4_prev = self.algo_helper.ma_last_prev(4)
@@ -63,7 +63,7 @@ class ro_cano_che_ritorna:
         ma33_3_min_ago = self.algo_helper.ma_minutes_ago(33, 3)
         ma36_2_min_ago = self.algo_helper.ma_minutes_ago(36, 2)
         ma50_2_min_ago = self.algo_helper.ma_minutes_ago(50, 2)
-        ma50_2_min_ago = self.algo_helper.ma_minutes_ago(50, 2)
+        ma50_3_min_ago = self.algo_helper.ma_minutes_ago(50, 3)
         ma78_2_min_ago = self.algo_helper.ma_minutes_ago(78, 2)
         ma100_2_min_ago = self.algo_helper.ma_minutes_ago(100, 2)
         ma100_13_min_ago = self.algo_helper.ma_minutes_ago(100, 13)
@@ -73,6 +73,10 @@ class ro_cano_che_ritorna:
         last_trade_action = self.algo_helper.last_trade_action
         last_trade_price = self.algo_helper.last_trade_price
         seconds_since_last_trade = self.algo_helper.seconds_since_last_trade
+        
+
+        ############
+
 
         # PREV TRADE
         # prev_trade_action = self.algo_helper.prev_trade_action
@@ -83,8 +87,7 @@ class ro_cano_che_ritorna:
         # PREZZO DI ADESSO (di mercato) - CURRENT PRICE
         price = self.algo_helper.price
         
-        #PREZZO PRECEDENTE (NECESSARIO PER INCROCIO)
-        prev_price = self.algo_helper.prev_price
+        ##############
         
         # PREZZO PRECEDENTE (di mercato) - PREV PRICE
         price_1_min_ago = self.algo_helper.price_minutes_ago(1)
@@ -136,7 +139,7 @@ class ro_cano_che_ritorna:
         #if (ma36_last >= ma36_2_min_ago and ma8_last > ma14_last) or (ma36_last < ma36_2_min_ago and ma2_last > ma4_last):
         
         
-        if ma3_last >= ma50_last: 
+        if ma50_last >= ma50_2_min_ago: 
 
         
             
@@ -200,20 +203,20 @@ class ro_cano_che_ritorna:
   
 ###################################################################################################################################################
 
-                # COMPRA sessione 1   ( qua rompo, compa caro, )
+                # COMPRA sessione 1  
           
                 if self.session == 1:
                
                     if (
-                        ma3_last >= ma50_last
-                        #ma50_last >= ma50_2_min_ago
+                        
+                        ma50_last >= ma50_2_min_ago
                         
                         and ma36_last >= ma36_2_min_ago
                         and ma8_last >= ma14_last
                         
                         and deviation_ma >= 0.10
                         
-                        and  ma1_prev < ma3_prev and ma1_last > ma3_last
+                        and ma2_prev < ma3_prev and ma2_last > ma3_last
 
                         and ma2_last > ma2_2_min_ago
                         and ma2_last > ma2_3_min_ago
@@ -232,14 +235,14 @@ class ro_cano_che_ritorna:
                         
                         
                     elif (
-                          ma3_last >= ma50_last
-                          #ma50_last < ma50_2_min_ago
+                          
+                          ma50_last < ma50_2_min_ago
                           
                           and ma36_last < ma36_2_min_ago
                           and ma8_last > ma14_last
                         
                           and deviation_ma >= 0.40
-                          and ma1_prev < ma3_prev and ma1_last > ma3_last
+                          and ma2_prev < ma3_prev and ma2_last > ma3_last
                    
                           or deviation_ma < -2.9 and ma2_last > ma4_last
                         
@@ -273,10 +276,10 @@ class ro_cano_che_ritorna:
                 elif self.session == 2:
               
                     if (
-                        ma3_last >= ma50_last
-                        #ma50_last >= ma50_2_min_ago
+                        
+                        ma50_last >= ma50_2_min_ago
 
-                        and ma1_prev < ma3_prev and ma1_last > ma3_last
+                        and ma2_prev < ma3_prev and ma2_last > ma3_last
                         
                         #and ma36_last >= ma36_2_min_ago
                         and ma8_last >= ma14_last
@@ -301,10 +304,10 @@ class ro_cano_che_ritorna:
                         
                         
                     elif (
-                          ma3_last >= ma50_last
-                          #ma50_last < ma50_2_min_ago
+                          
+                          ma50_last < ma50_2_min_ago
 
-                          and ma1_prev < ma3_prev and ma1_last > ma3_last
+                          and ma2_prev < ma3_prev and ma2_last > ma3_last
                           
                           and ma36_last < ma36_2_min_ago
                           and ma9_last >= ma15_last
@@ -340,8 +343,8 @@ class ro_cano_che_ritorna:
             
             
                     if (
-                        ma3_last >= ma50_last
-                        #ma50_last >= ma50_2_min_ago
+                      
+                        ma50_last >= ma50_2_min_ago
 
                         and ma2_prev < ma5_prev and ma2_last > ma5_last
                         
@@ -367,8 +370,8 @@ class ro_cano_che_ritorna:
                         
                         
                     elif (
-                          ma3_last >= ma50_last
-                          #ma50_last < ma50_2_min_ago
+                          
+                          ma50_last < ma50_2_min_ago
 
                           and ma2_prev < ma5_prev and ma2_last > ma5_last
                           
