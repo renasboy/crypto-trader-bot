@@ -255,7 +255,7 @@ class ro_cano_che_ritorna:
                         
                           and deviation_ma >= 0.40
                           
-                          and (ma2_prev < ma3_prev and ma2_last > ma3_last) or (price_1_min_ago < ma3_prev and price > ma3_last)
+                          and (ma2_prev < ma3_prev and ma2_last > ma3_last) or (price_2_min_ago < ma3_2_min_ago and price > ma3_last)
                    
                           or deviation_ma < -2.9 and ma2_last > ma4_last
                         
@@ -287,15 +287,15 @@ class ro_cano_che_ritorna:
                         and ma2_last >= ma9_last
                         
                         #and ma2_prev < ma3_prev and ma2_last > ma3_last
-                        and (ma2_prev < ma3_prev and ma2_last > ma3_last) or (price_1_min_ago < ma3_prev and price > ma3_last)
+                        and (ma2_prev < ma3_prev and ma2_last > ma3_last) or (price_2_min_ago < ma3_2_min_ago and price > ma3_last)
                         
                         #and ma36_last >= ma36_2_min_ago
                         and ma8_last >= ma14_last
                         
                         
-                        and deviation > 0.01
-                        and deviation_prev > 0.01
-                        and deviation_ma >= 0.01
+                        and deviation > 0.23
+                        and deviation_prev > 0.10
+                        and deviation_ma >= 0.10
                         
                         and ma2_last > ma7_last
                         and ma2_last > ma2_2_min_ago
@@ -318,14 +318,14 @@ class ro_cano_che_ritorna:
                           and ma2_last >= ma9_last
                           
                           #and ma2_prev < ma3_prev and ma2_last > ma3_last
-                          and (ma2_prev < ma3_prev and ma2_last > ma3_last) or (price_1_min_ago < ma3_prev and price > ma3_last)
+                          and (ma2_prev < ma4_prev and ma2_last > ma4_last) or (price_2_min_ago < ma3_2_min_ago and price > ma3_last)
                         
                           and ma36_last < ma36_2_min_ago
                           and ma9_last >= ma15_last
                           
-                          and deviation > 0.01
-                          and deviation_prev > 0.01
-                          and deviation_ma >= 0.01
+                          and deviation > 0.23
+                          and deviation_prev > 0.10
+                          and deviation_ma >= 0.10
                         
                           
                           and ma2_last > ma7_last
@@ -363,7 +363,7 @@ class ro_cano_che_ritorna:
                         and ma36_last >= ma36_2_min_ago
                         and ma8_last >= ma12_last
                         
-                        and deviation > 0.14
+                        and deviation > 0.23
                         and deviation_prev > 0.14
                         and deviation_ma > 0.10
                         
@@ -391,7 +391,7 @@ class ro_cano_che_ritorna:
                           and ma36_last < ma36_2_min_ago
                           and ma9_last >= ma15_last
                           
-                          and deviation > 0.16
+                          and deviation > 0.23
                           and deviation_prev > 0.16
                           and deviation_ma >= 0.10
                           
@@ -610,16 +610,16 @@ class ro_cano_che_ritorna:
             # se ma100_last < ma100_13_min_ago vende in un altro modo
             
             if (
-                ma4_last < ma50_last 
-                and deviation < -0.61
+                ma2_last < ma50_last 
+                and deviation < -0.49
                 
             ):
                 action = "sell"
             
             
             elif (
-                ma50_last < ma50_2_min_ago
-                and ma2_last < ma20_last 
+                
+                ma2_last < ma36_last 
                 and deviation < -0.59
             ):    
                 action = "sell"
@@ -646,6 +646,7 @@ class ro_cano_che_ritorna:
 
         return action
 
-        # ave comparo meo ! ####
+        #ave comparo meo ! ####
+        #ole
 
         
