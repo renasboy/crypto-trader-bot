@@ -122,13 +122,13 @@ class ro_cano_che_ritorna:
         self.algo_helper.log("deviation: {}".format(deviation))
         
         
-        # formula DEVIATION prev_trade per comprare UN PO' PIU' SOPRA DEL PREV TRADE ( di solito l' ultimo BUY )
+        # formula DEVIATION_prev per comprare UN PO' PIU' SOPRA DEL PREV TRADE ( di solito l' ultimo BUY )
         deviation_prev = (price / prev_trade_price - 1) * 100 if prev_trade_price else 0
         self.algo_helper.log("deviation_prev: {}".format(deviation_prev))
         
         
 
-        # formula DEVIATION sell per vendere
+        # formula DEVIATION_sell per vendere
         deviation_sell = (ma2_last / last_trade_price - 1) * 100 if last_trade_price else 0
         self.algo_helper.log("deviation_sell: {}".format(deviation_sell))
 
@@ -453,7 +453,7 @@ class ro_cano_che_ritorna:
                 if (
                     ma50_last > ma50_2_min_ago
                     and ma36_last > ma36_2_min_ago
-                    and ma2_last < ma13_last and deviation > 0.20
+                    and ma2_last < ma13_last and deviation_sell > 0.20
                    
                 ):
                    
@@ -465,7 +465,7 @@ class ro_cano_che_ritorna:
                 elif (
                     ma50_last > ma50_2_min_ago
                     and ma36_last > ma36_2_min_ago
-                    and ma2_last < ma13_last and deviation < -0.55
+                    and ma2_last < ma13_last and deviation_sell < -0.55
                   
                 ):
                    
@@ -482,7 +482,7 @@ class ro_cano_che_ritorna:
                 if (
                     ma50_last > ma50_2_min_ago
                     and ma36_last > ma36_2_min_ago
-                    and ma2_last < ma13_last and deviation > 0.25
+                    and ma2_last < ma13_last and deviation_sell > 0.25
                   
                 ):
                     action = "sell"
@@ -491,7 +491,7 @@ class ro_cano_che_ritorna:
                 elif (
                     ma50_last >= ma50_2_min_ago
                     and ma36_last >= ma36_2_min_ago
-                    and ma2_last < ma13_last and deviation < -0.55
+                    and ma2_last < ma13_last and deviation_sell < -0.55
                    
                 ):
                     action = "sell"
@@ -508,7 +508,7 @@ class ro_cano_che_ritorna:
                 if (
                     ma50_last >= ma50_2_min_ago
                     and ma36_last >= ma36_2_min_ago
-                    and ma2_last < ma13_last and deviation > 0.29
+                    and ma2_last < ma13_last and deviation_sell > 0.29
                     
                 ):
                     action = "sell"
@@ -518,7 +518,7 @@ class ro_cano_che_ritorna:
                 elif (
                     ma50_last >= ma50_2_min_ago
                     and ma36_last >= ma36_2_min_ago
-                    and ma2_last < ma13_last and deviation < -0.55
+                    and ma2_last < ma13_last and deviation_sell < -0.55
                     
                 ):
                     action = "sell"
@@ -538,7 +538,7 @@ class ro_cano_che_ritorna:
                 if (
                     ma50_last >= ma50_2_min_ago
                     and ma36_last >= ma36_2_min_ago
-                    and ma2_last < ma13_last and deviation > 0.29
+                    and ma2_last < ma13_last and deviation_sell > 0.29
                     
                 ):
                     action = "sell"
@@ -547,7 +547,7 @@ class ro_cano_che_ritorna:
                 elif (
                     ma50_last >= ma50_2_min_ago
                     and ma36_last >= ma36_2_min_ago
-                    and ma2_last < ma13_last and deviation < -0.55
+                    and ma2_last < ma13_last and deviation_sell < -0.55
                     
                 ):
                     action = "sell"
@@ -564,7 +564,7 @@ class ro_cano_che_ritorna:
                 if (
                     ma50_last > ma50_2_min_ago
                     and ma36_last > ma36_2_min_ago
-                    and ma2_last < ma15_last and deviation > 0.29
+                    and ma2_last < ma15_last and deviation_sell > 0.29
                     
                 ):
                     action = "sell"
@@ -573,7 +573,7 @@ class ro_cano_che_ritorna:
                 elif (
                     ma50_last > ma50_2_min_ago
                     and ma36_last > ma36_2_min_ago
-                    and ma2_last < ma16_last and deviation < -0.50
+                    and ma2_last < ma16_last and deviation_sell < -0.50
                    
                 ):
                     action = "sell"
@@ -590,7 +590,7 @@ class ro_cano_che_ritorna:
                 if (
                     ma50_last > ma50_2_min_ago
                     and ma36_last > ma36_2_min_ago
-                    and ma2_last < ma16_last and deviation > 0.29
+                    and ma2_last < ma16_last and deviation_sell > 0.29
                 ):
                     
                 ):
@@ -601,7 +601,7 @@ class ro_cano_che_ritorna:
                 elif (
                     ma50_last > ma50_2_min_ago
                     and ma36_last > ma36_2_min_ago
-                    and ma2_last < ma17_last and deviation < -0.50
+                    and ma2_last < ma17_last and deviation_sell < -0.50
                     
                 ):
                     action = "sell"
@@ -618,7 +618,7 @@ class ro_cano_che_ritorna:
             
             if (
                 ma2_last < ma50_last 
-                and deviation < -0.49
+                and deviation_sell < -0.49
                 
             ):
                 action = "sell"
@@ -627,7 +627,7 @@ class ro_cano_che_ritorna:
             elif (
                 
                 ma2_last < ma36_last 
-                and deviation < -0.59
+                and deviation_sell < -0.59
             ):    
                 action = "sell"
             
@@ -654,6 +654,6 @@ class ro_cano_che_ritorna:
         return action
 
         #ave comparo meo ! ####
-        #ole#
+        #ole##
 
         
