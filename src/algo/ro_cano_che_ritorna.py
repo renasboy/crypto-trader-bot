@@ -117,9 +117,9 @@ class ro_cano_che_ritorna:
 
         
         
-        # formula DEVIATION last_trade per comprare UN PO' PIU' SOPRA DEL LAST TRADE ( di solito l' ultimo SELL ) 
-        deviation = (ma3_last / last_trade_price - 1) * 100 if last_trade_price else 0
-        self.algo_helper.log("deviation: {}".format(deviation))
+        # formula DEVIATION_buy per comprare UN PO' PIU' SOPRA DEL LAST TRADE ( di solito l' ultimo SELL ) 
+        deviation_buy = (ma3_last / last_trade_price - 1) * 100 if last_trade_price else 0
+        self.algo_helper.log("deviation_buy: {}".format(deviation_buy))
         
         
         # formula DEVIATION_prev per comprare UN PO' PIU' SOPRA DEL PREV TRADE ( di solito l' ultimo BUY )
@@ -300,7 +300,7 @@ class ro_cano_che_ritorna:
                         and ma8_last >= ma14_last
                         
                         
-                        and deviation > 0.23
+                        and deviation_buy > 0.23
                         and deviation_prev > 0.10
                         and deviation_ma >= 0.10
                         
@@ -330,7 +330,7 @@ class ro_cano_che_ritorna:
                           and ma36_last < ma36_2_min_ago
                           and ma9_last >= ma15_last
                           
-                          and deviation > 0.23
+                          and deviation_buy > 0.23
                           and deviation_prev > 0.10
                           and deviation_ma >= 0.10
                         
@@ -370,7 +370,7 @@ class ro_cano_che_ritorna:
                         and ma36_last >= ma36_2_min_ago
                         and ma8_last >= ma12_last
                         
-                        and deviation > 0.23
+                        and deviation_buy > 0.23
                         and deviation_prev > 0.14
                         and deviation_ma > 0.10
                         
@@ -398,7 +398,7 @@ class ro_cano_che_ritorna:
                           and ma36_last < ma36_2_min_ago
                           and ma9_last >= ma15_last
                           
-                          and deviation > 0.23
+                          and deviation_buy > 0.23
                           and deviation_prev > 0.16
                           and deviation_ma >= 0.10
                           
@@ -653,7 +653,7 @@ class ro_cano_che_ritorna:
 
         return action
 
-        #ave comparo meo ! ####
+        #ave comparo meo ! #####
         #ole##
 
         
