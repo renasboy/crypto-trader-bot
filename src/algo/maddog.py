@@ -168,12 +168,15 @@ class maddog:
                         and ma4_last > ma4_2_min_ago
                         and ma5_last > ma5_2_min_ago
                         
-                        and ma2_prev < ma4_prev and ma2_last > ma4_last
+                        #and ma2_prev < ma4_prev and ma2_last > ma4_last
+                        #piu' veloce !
+                        and (ma2_prev < ma3_prev and ma2_last > ma3_last) or (price_1_min_ago < ma3_prev and price > ma3_last)
+                        
                         
                         and price > price_1_min_ago
                         and price > price_2_min_ago
                        
-                        and deviation > 0.26
+                        and deviation > 0.23
                         and deviation_ma > 0.01
                         
                     ):
