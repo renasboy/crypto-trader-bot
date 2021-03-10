@@ -136,7 +136,14 @@ class maddog:
                     if (
                         ma2_last >= ma4_last
                         #ma18_last >= ma21_last
-                        and ma2_prev < ma4_prev and ma2_last > ma4_last
+                        
+                        #and ma2_prev < ma4_prev and ma2_last > ma4_last
+                        # attenzione ! vedi che se ci sono grandi rialzi improvvisi la ma2 incrocia molto difficilmente la ma4
+                        
+                        #allora provo a prendere un po' dal cano che ritorna il "tentativo modesto" di riga 224
+                        and (ma2_prev < ma3_prev and ma2_last > ma3_last) or (price_1_min_ago < ma3_prev and price > ma3_last)
+                        
+                        
                         and deviation_ma > 0.15
                         
                         and ma2_last > ma2_2_min_ago
