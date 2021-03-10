@@ -55,6 +55,7 @@ class ro_cano_che_ritorna:
         ma2_15_min_ago = self.algo_helper.ma_minutes_ago(2, 15)
         ma2_17_min_ago = self.algo_helper.ma_minutes_ago(2, 17)
         ma2_22_min_ago = self.algo_helper.ma_minutes_ago(2, 22)
+        ma3_2_min_ago = self.algo_helper.ma_minutes_ago(3, 2)
         ma2_24_min_ago = self.algo_helper.ma_minutes_ago(2, 24)
         ma4_2_min_ago = self.algo_helper.ma_minutes_ago(4, 2)
         ma8_5_min_ago = self.algo_helper.ma_minutes_ago(8, 5)
@@ -220,15 +221,15 @@ class ro_cano_che_ritorna:
                         and ma36_last >= ma36_2_min_ago
                         and ma8_last >= ma14_last
                         
-                        and deviation_ma >= 0.16
+                        and deviation_ma >= 0.23
                         
                         #and (ma2_prev < ma3_prev and ma2_last > ma3_last) or (price_1_min_ago < ma3_prev and price > ma3_last)
                         #( e' un tentativo modesto di mettere incrocio price_prev < ma3_prev and price > ma3_last ) ( CHIEDI A COMPA, se hai il coraggio )
                         #( FUNZIONA ma compra dopo 1 minuto MENTRE SCENDE ! (dopo che si sono incrociati prezzo-ma3 al ribasso))
                         
-                        #allora provo AD INVERTIRE I SEGNI ! e vediamo che succede
-                        and (ma2_prev < ma3_prev and ma2_last > ma3_last) or (price_1_min_ago > ma3_prev and price < ma3_last)
-                        #(compra bene ma ancora non mi e' chiara la dinamica !)
+                        
+                        and (ma2_prev < ma3_prev and ma2_last > ma3_last) or (price_2_min_ago < ma3_2_min_ago and price > ma3_last)
+                        
                         
                         
                         and ma2_last > ma2_2_min_ago
