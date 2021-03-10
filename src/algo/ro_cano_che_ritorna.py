@@ -120,10 +120,17 @@ class ro_cano_che_ritorna:
         # formula DEVIATION last_trade per comprare UN PO' PIU' SOPRA DEL LAST TRADE ( di solito l' ultimo SELL ) 
         deviation = (ma3_last / last_trade_price - 1) * 100 if last_trade_price else 0
         self.algo_helper.log("deviation: {}".format(deviation))
-
+        
+        
         # formula DEVIATION prev_trade per comprare UN PO' PIU' SOPRA DEL PREV TRADE ( di solito l' ultimo BUY )
         deviation_prev = (price / prev_trade_price - 1) * 100 if prev_trade_price else 0
         self.algo_helper.log("deviation_prev: {}".format(deviation_prev))
+        
+        
+
+        # formula DEVIATION sell per vendere
+        deviation_sell = (ma2_last / last_trade_price - 1) * 100 if last_trade_price else 0
+        self.algo_helper.log("deviation_sell: {}".format(deviation_sell))
 
         # formula DEVIATION_ma per comprare durante il TREND RIBASSISTA ( ma2 deve avere una certa distanza da ma18 )
         
@@ -647,6 +654,6 @@ class ro_cano_che_ritorna:
         return action
 
         #ave comparo meo ! ####
-        #ole
+        #ole#
 
         
