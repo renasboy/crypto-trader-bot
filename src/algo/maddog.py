@@ -160,11 +160,13 @@ class maddog:
                         and ma2_last > ma2_2_min_ago
                         and ma4_last > ma4_2_min_ago
                         and ma5_last > ma5_2_min_ago
-                       
+                        
+                        and ma2_prev < ma4_prev and ma2_last > ma4_last
+                        
                         and price > price_1_min_ago
                         and price > price_2_min_ago
                        
-                        and deviation > 0.01
+                        and deviation > 0.26
                         and deviation_ma > 0.01
                         
                     ):
@@ -228,7 +230,9 @@ class maddog:
                 ):
                     action = "sell"    
                 
-                    
+                    # cano maddog fa difficilmente un passo falso ! per questo siamo piu' tolleranti sulla perdita dopo il primo acquisto
+                    # ciao comba che non mi parli piu'.
+                    # ma basta che stai bene tu.
                     
                         
                         
@@ -252,7 +256,7 @@ class maddog:
                 elif (
                     ma100_last < ma100_13_min_ago
                     and ma2_last < ma13_last
-                    and deviation < -0.70
+                    and deviation < -0.63
                 ):
                     action = "sell"      
                        
@@ -278,7 +282,7 @@ class maddog:
                 elif (
                     ma100_last < ma100_13_min_ago
                     and ma2_last < ma13_last
-                    and deviation < -0.70
+                    and deviation < -0.63
                 ):
                     action = "sell"        
                         #action = "sell"
@@ -289,7 +293,7 @@ class maddog:
                         
 
             # STOP LOSS (salvagente)
-            if deviation < -0.85 and ma2_last < ma21_last and ma11_last < ma100_last :
+            if deviation < -0.70 and ma2_last < ma21_last and ma11_last < ma100_last :
                 action = "sell"
 
             
