@@ -501,8 +501,8 @@ class ro_cano_che_ritorna:
                 if (
                     ma50_last >= ma50_2_min_ago
                     and ma36_last >= ma36_2_min_ago
-                    and ma2_last < ma13_last
-                    and deviation > 0.29
+                    and ma2_last < ma13_last and deviation > 0.29
+                    
                 ):
                     action = "sell"
                     
@@ -511,8 +511,8 @@ class ro_cano_che_ritorna:
                 elif (
                     ma50_last >= ma50_2_min_ago
                     and ma36_last >= ma36_2_min_ago
-                    and ma2_last < ma13_last
-                    and deviation < -0.55
+                    and ma2_last < ma13_last and deviation < -0.55
+                    
                 ):
                     action = "sell"
                     
@@ -540,8 +540,8 @@ class ro_cano_che_ritorna:
                 elif (
                     ma50_last >= ma50_2_min_ago
                     and ma36_last >= ma36_2_min_ago
-                    and ma2_last < ma13_last
-                    and deviation < -0.55
+                    and ma2_last < ma13_last and deviation < -0.55
+                    
                 ):
                     action = "sell"
                     
@@ -583,8 +583,9 @@ class ro_cano_che_ritorna:
                 if (
                     ma50_last > ma50_2_min_ago
                     and ma36_last > ma36_2_min_ago
-                    and ma3_last < ma17_last
-                    and deviation > 0.29
+                    and ma2_last < ma16_last and deviation > 0.29
+                ):
+                    
                 ):
                     action = "sell"
                     
@@ -593,8 +594,8 @@ class ro_cano_che_ritorna:
                 elif (
                     ma50_last > ma50_2_min_ago
                     and ma36_last > ma36_2_min_ago
-                    and ma3_last < ma17_last
-                    and deviation < -0.50
+                    and ma2_last < ma17_last and deviation < -0.50
+                    
                 ):
                     action = "sell"
                     
