@@ -135,6 +135,8 @@ class maddog:
                 if self.session == 1:
                     if (
                         ma2_last >= ma4_last
+                        and ma2_last >= ma8_last
+                        
                         #ma18_last >= ma21_last
                         
                         #and ma2_prev < ma4_prev and ma2_last > ma4_last
@@ -163,6 +165,7 @@ class maddog:
                 elif self.session == 2:
                     if (
                         ma8_last >= ma14_last
+                        and ma2_last >= ma8_last
                         
                         and ma2_last > ma2_2_min_ago
                         and ma4_last > ma4_2_min_ago
@@ -189,6 +192,7 @@ class maddog:
                 else:
                     if (
                         ma8_last >= ma14_last
+                        and ma2_last >= ma8_last
                         
                         and ma2_last > ma2_2_min_ago
                         and ma4_last > ma4_2_min_ago
