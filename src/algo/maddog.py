@@ -135,7 +135,7 @@ class maddog:
                 if self.session == 1:
                     if (
                         ma2_last >= ma4_last
-                        and ma2_last >= ma8_last
+                        #and ma2_last >= ma8_last
                         
                         #ma18_last >= ma21_last
                         
@@ -143,18 +143,18 @@ class maddog:
                         # attenzione ! vedi che se ci sono grandi rialzi improvvisi la ma2 incrocia MOLTO DIFFICILMENTE la ma4
                         
                         
-                        and (ma3_prev < ma5_prev and ma3_last > ma5_last)
-                        
-                        
+                        and (ma2_prev < ma5_prev and ma2_last > ma5_last)
                         and deviation_ma > 0.15
                         
-                        and ma2_last > ma2_2_min_ago
-                        and ma4_last > ma4_2_min_ago
-                        and ma5_last > ma5_2_min_ago
+                        
+                        
+                        #and ma2_last > ma2_2_min_ago
+                        #and ma4_last > ma4_2_min_ago
+                        #and ma5_last > ma5_2_min_ago
                         #and ma7_last > ma7_2_min_ago
                         
-                        and price > price_1_min_ago
-                        and price > price_2_min_ago
+                        #and price > price_1_min_ago
+                        #and price > price_2_min_ago
                      
                     ):
                         action = "buy"
@@ -165,22 +165,22 @@ class maddog:
                 elif self.session == 2:
                     if (
                         #ma8_last >= ma14_last
-                        ma2_last >= ma8_last
+                        #ma2_last >= ma8_last
                         
-                        and ma2_last > ma2_2_min_ago
+                        ma2_last > ma2_2_min_ago
                         and ma4_last > ma4_2_min_ago
                         #and ma5_last > ma5_2_min_ago
                         
                         
                         #piu' veloce !
                         and (ma2_prev < ma4_prev and ma2_last > ma4_last)
-                        
+                        and deviation > 0.13
                         
                         and price > price_1_min_ago
                         and price > price_2_min_ago
                        
-                        and deviation > 0.13
-                        and deviation_ma > 0.01
+                        
+                        #and deviation_ma > 0.01
                         
                     ):
                         action = "buy"
