@@ -237,7 +237,7 @@ class ro_cano_che_ritorna:
                         
                         
                         deviation_ma > 0.01
-                        #and (price_2_min_ago < ma3_2_min_ago and price < ma3_last) questa ha funzionato !
+                        #and (price_2_min_ago < ma3_2_min_ago and price < ma3_last) questa ha funzionato ! MA compra dopo 2 minuti che si incrociano al ribasso !
                         
                         #adesso proviamo questa
                         and (price_2_min_ago < ma3_2_min_ago and price > ma3_last)
@@ -295,7 +295,7 @@ class ro_cano_che_ritorna:
                         
                     elif (
                           deviation_ma > 0.02
-                          #and (price_2_min_ago < ma3_2_min_ago and price < ma3_last) questa ha funzionato
+                          #and (price_2_min_ago < ma3_2_min_ago and price < ma3_last) questa ha funzionato MA compra dopo 2 minuti che si incrociano al ribasso !
                           
                           #ma proviamo questa
                           and (price_2_min_ago < ma3_2_min_ago and price > ma3_last)
