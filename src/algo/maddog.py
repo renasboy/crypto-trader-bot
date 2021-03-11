@@ -143,7 +143,7 @@ class maddog:
                         # attenzione ! vedi che se ci sono grandi rialzi improvvisi la ma2 incrocia molto difficilmente la ma4
                         
                         #allora provo a prendere un po' dal cano che ritorna il "tentativo modesto" di riga 224
-                        and (ma2_prev < ma3_prev and ma2_last > ma3_last) or (price_1_min_ago < ma3_prev and price > ma3_last)
+                        and (ma2_prev < ma3_prev and ma3_last > ma5_last)
                         
                         
                         and deviation_ma > 0.15
@@ -173,7 +173,7 @@ class maddog:
                         
                         #and ma2_prev < ma4_prev and ma2_last > ma4_last
                         #piu' veloce !
-                        and (ma2_prev < ma3_prev and ma2_last > ma3_last) or (price_1_min_ago < ma3_prev and price > ma3_last)
+                        and (ma2_prev < ma3_prev and ma2_last > ma4_last)
                         
                         
                         and price > price_1_min_ago
@@ -228,7 +228,7 @@ class maddog:
                 
                 if (
                     ma100_last > ma100_13_min_ago
-                    and ma2_last < ma18_last and deviation > 0.25
+                    and ma2_last < ma15_last and deviation > 0.25
                     
                 ):
                    
@@ -307,7 +307,7 @@ class maddog:
                         
 
             # STOP LOSS (salvagente)
-            if deviation < -0.70 and ma2_last < ma21_last and ma11_last < ma100_last :
+            if deviation < -0.70 and ma2_last < ma18_last and ma11_last < ma100_last :
                 action = "sell"
 
             
