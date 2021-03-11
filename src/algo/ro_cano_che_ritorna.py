@@ -295,8 +295,10 @@ class ro_cano_che_ritorna:
                         
                     elif (
                           deviation_ma > 0.02
-                          and (price_2_min_ago < ma3_2_min_ago and price < ma3_last)
+                          #and (price_2_min_ago < ma3_2_min_ago and price < ma3_last) questa ha funzionato
                           
+                          #ma proviamo questa
+                          and (price_2_min_ago < ma3_2_min_ago and price > ma3_last)
                           
                           #and (price_2_min_ago < ma3_2_min_ago and price < ma3_last and ma3_last > ma3_2_min_ago) 
                           
