@@ -232,9 +232,9 @@ class ro_cano_che_ritorna:
                 if self.session == 1:
                
                     if (
-                        
-                        deviation_ma >= 0.23
-                        and (prev_price < ma3_prev and price > ma3_last)
+                        prev_price < ma3_prev and price > ma3_last
+                        #and deviation_ma >= 0.23
+                        #and (prev_price < ma3_prev and price > ma3_last)
                         
                         
                         
