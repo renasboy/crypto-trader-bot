@@ -88,20 +88,20 @@ class ro_cano_che_ritorna:
         seconds_since_prev_trade = self.algo_helper.seconds_since_prev_trade
         
 
-        ##################################################################################################################
+        #########################################################################################################################################################
         
         # PREZZO DI ADESSO (di mercato) - CURRENT PRICE
         price = self.algo_helper.price
         
         
         
-        # PREZZO DI "PRIMA" (di mercato) - PREV PRICE....................prova. vediamo se funziona
-        prev_price = self.algo_helper.prev_price
+        # PREZZO DI "PRIMA" (di mercato) - PREV PRICE....................prova. vediamo se funziona - sembra di NO
+        #prev_price = self.algo_helper.prev_price
         
-        # PREZZO DI "DOPO" (di mercato) - LAST PRICE.....................prova. vediamo se funziona
-        last_price = self.algo_helper.last_price
+        # PREZZO DI "DOPO" (di mercato) - LAST PRICE.....................prova. vediamo se funziona - sembra di NO
+        #last_price = self.algo_helper.last_price
         
-        ####################################################################################################################
+        ##########################################################################################################################################################
         
         
         # PREZZO PRECEDENTE (di mercato) - PREV PRICE
@@ -180,7 +180,7 @@ class ro_cano_che_ritorna:
 
         #############################################################################################################################################
 
-        ###################################################################################
+        ############################################################################################################################################
         
         # COMPRA
         # NON TOCCARE QUESTA CONDIZIONE (QUESTA DICE CHE STA IN MODO BUY, DEVO COMPRARE)
@@ -191,8 +191,8 @@ class ro_cano_che_ritorna:
             
             
             # COMPRA UN PO' PIU' SOPRA DELL' ULTIMO TRADE SE DEVIATION > 0.23 nei 540 secondi  ( quasi sempre IL SELL )
-      
-            if (
+            #if (
+            if 
                 (
                     seconds_since_last_trade > 0
                     and seconds_since_last_trade <= min_buy_delay_in_seconds
