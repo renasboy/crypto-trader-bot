@@ -140,9 +140,9 @@ class maddog:
                         #ma18_last >= ma21_last
                         
                         #and ma2_prev < ma4_prev and ma2_last > ma4_last
-                        # attenzione ! vedi che se ci sono grandi rialzi improvvisi la ma2 incrocia molto difficilmente la ma4
+                        # attenzione ! vedi che se ci sono grandi rialzi improvvisi la ma2 incrocia MOLTO DIFFICILMENTE la ma4
                         
-                        #allora provo a prendere un po' dal cano che ritorna il "tentativo modesto" di riga 224
+                        
                         and (ma3_prev < ma5_prev and ma3_last > ma5_last)
                         
                         
