@@ -593,7 +593,7 @@ class ro_cano_che_ritorna:
                     and ma2_last < ma16_last and deviation_sell > 0.29
                 ):
                     
-                ):
+               
                     action = "sell"
                     
                 
