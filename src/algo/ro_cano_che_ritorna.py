@@ -294,7 +294,10 @@ class ro_cano_che_ritorna:
                         and ma2_last >= ma9_last
                         
                         #and ma2_prev < ma3_prev and ma2_last > ma3_last
-                        and (ma2_prev < ma3_prev and ma2_last > ma3_last) or (price_2_min_ago < ma3_2_min_ago and price > ma3_last)
+                        #and (ma2_prev < ma3_prev and ma2_last > ma3_last) or (price_2_min_ago < ma3_2_min_ago and price > ma3_last)
+                        
+                        #mandrakata. vediamo disegno "strano 2 miracolo "
+                        and (price_1_min_ago > ma3_prev and price < ma3_last and ma3_last > ma3_2_min_ago) 
                         
                         #and ma36_last >= ma36_2_min_ago
                         and ma8_last >= ma14_last
@@ -325,7 +328,12 @@ class ro_cano_che_ritorna:
                           and ma2_last >= ma9_last
                           
                           #and ma2_prev < ma3_prev and ma2_last > ma3_last
-                          and (ma2_prev < ma4_prev and ma2_last > ma4_last) or (price_2_min_ago < ma3_2_min_ago and price > ma3_last)
+                          #and (ma2_prev < ma4_prev and ma2_last > ma4_last) or (price_2_min_ago < ma3_2_min_ago and price > ma3_last)
+                          
+                          #mandrakata. vediamo disegno "strano 2 miracolo "
+                          and (price_1_min_ago > ma3_prev and price < ma3_last and ma3_last > ma3_2_min_ago) 
+                          
+                          
                         
                           and ma36_last < ma36_2_min_ago
                           and ma9_last >= ma15_last
