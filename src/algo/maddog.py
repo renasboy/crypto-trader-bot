@@ -94,7 +94,7 @@ class maddog:
         #######################################################################
         # APRE E CHIUDE GABBIA
         # SI APRE LA GABBIA SE
-        if ma2_last > ma78_last:
+        if ma2_last > ma38_last:
             
             
             # NON TOCCARE QUESTA CONDIZIONE SERVE PER APERTURA DI GABBIA
@@ -144,7 +144,7 @@ class maddog:
                         
                         
                         and (ma2_prev < ma3_prev and ma2_last > ma3_last)
-                        and deviation_ma > 0.15
+                        and deviation_ma > 0.13
                         
                         
                         
@@ -240,7 +240,7 @@ class maddog:
                 elif (
                     ma100_last < ma100_13_min_ago
                     and ma2_last < ma16_last
-                    and deviation < -0.70
+                    and deviation < -0.85
                 ):
                     action = "sell"    
                 
@@ -270,7 +270,7 @@ class maddog:
                 elif (
                     ma100_last < ma100_13_min_ago
                     and ma2_last < ma13_last
-                    and deviation < -0.63
+                    and deviation < -0.85
                 ):
                     action = "sell"      
                        
@@ -296,7 +296,7 @@ class maddog:
                 elif (
                     ma100_last < ma100_13_min_ago
                     and ma2_last < ma13_last
-                    and deviation < -0.63
+                    and deviation < -0.80
                 ):
                     action = "sell"        
                         #action = "sell"
@@ -307,7 +307,7 @@ class maddog:
                         
 
             # STOP LOSS (salvagente)
-            if deviation < -0.70 and ma2_last < ma18_last and ma11_last < ma100_last :
+            if deviation < -0.90 and ma2_last < ma18_last and ma11_last < ma100_last :
                 action = "sell"
 
             
