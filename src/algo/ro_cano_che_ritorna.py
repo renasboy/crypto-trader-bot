@@ -232,13 +232,19 @@ class ro_cano_che_ritorna:
                 if self.session == 1:
                
                     if (
-                        ma50_last >= ma50_2_min_ago
-                        and ma2_last >= ma9_last
                         
-                        and ma36_last >= ma36_2_min_ago
-                        and ma8_last >= ma14_last
+                        deviation_ma >= 0.23
+                        and (prev_price < ma3_prev and price > ma3_last)
                         
-                        and deviation_ma >= 0.23
+                        
+                        
+                        #ma50_last >= ma50_2_min_ago
+                        #and ma2_last >= ma9_last
+                        
+                        #and ma36_last >= ma36_2_min_ago
+                        #and ma8_last >= ma14_last
+                        
+                        
                         
                         #and (ma2_prev < ma3_prev and ma2_last > ma3_last) or (price_1_min_ago < ma3_prev and price > ma3_last)
                         #( e' un tentativo modesto di mettere incrocio (prev_price < ma3_prev and last_price > ma3_last)
@@ -256,16 +262,16 @@ class ro_cano_che_ritorna:
                         #and (prev_price < ma3_prev and last_price > ma3_last)
                         
                         #PROVO CON PRICE AL POSTO DI LAST_PRICE
-                        and (prev_price < ma3_prev and price > ma3_last)
+                        #and (prev_price < ma3_prev and price > ma3_last)
                         
                         
                         
-                        and ma2_last > ma2_2_min_ago
-                        and ma2_last > ma2_3_min_ago
-                        and ma2_last >= ma7_last
-                        and ma4_last > ma4_2_min_ago
-                        and price > price_1_min_ago
-                        and price > price_2_min_ago
+                        #and ma2_last > ma2_2_min_ago
+                        #and ma2_last > ma2_3_min_ago
+                        #and ma2_last >= ma7_last
+                        #and ma4_last > ma4_2_min_ago
+                        #and price > price_1_min_ago
+                        #and price > price_2_min_ago
                     
                     ):
                         action = "buy"
@@ -274,14 +280,17 @@ class ro_cano_che_ritorna:
                         
                         
                     elif (
+                          deviation_ma > 0.40
+                          and (prev_price < ma3_prev and price > ma3_last)
                           
-                          ma50_last < ma50_2_min_ago
-                          and ma2_last >= ma9_last
                         
-                          and ma36_last < ma36_2_min_ago
-                          and ma8_last > ma14_last
+                          #ma50_last < ma50_2_min_ago
+                          #and ma2_last >= ma9_last
                         
-                          and deviation_ma >= 0.40
+                          #and ma36_last < ma36_2_min_ago
+                          #and ma8_last > ma14_last
+                        
+                          
                           
                           #compra veloce
                           #and (price_2_min_ago < ma3_2_min_ago and price > ma3_last)
@@ -293,18 +302,18 @@ class ro_cano_che_ritorna:
                           #and (prev_price < ma3_prev and last_price > ma3_last)
                           
                           #PROVO CON PRICE AL POSTO DI LAST_PRICE
-                          and (prev_price < ma3_prev and price > ma3_last)
+                          
                           
                         
-                          or deviation_ma < -2.9 and ma2_last > ma4_last
+                          #or deviation_ma < -2.9 and ma2_last > ma4_last
                         
-                          and ma2_last > ma2_2_min_ago
-                          and ma2_last > ma7_last
-                          and ma4_last > ma4_2_min_ago
+                          #and ma2_last > ma2_2_min_ago
+                          #and ma2_last > ma7_last
+                          #and ma4_last > ma4_2_min_ago
                         
-                          and price > price_1_min_ago
-                          and price > price_2_min_ago
-                          and price > price_3_min_ago
+                          #and price > price_1_min_ago
+                          #and price > price_2_min_ago
+                          #and price > price_3_min_ago
                  
                     ):
 
