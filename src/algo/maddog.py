@@ -173,14 +173,15 @@ class maddog:
                         
                         
                         #piu' veloce !
-                        and (ma2_prev < ma4_prev and ma2_last > ma4_last)
-                        and deviation > 0.13
-                        
+                        #and (ma2_prev < ma4_prev and ma2_last > ma4_last)
+                        and deviation > 0.10
+                        #and deviation_ma > 0.10
+
                         and price > price_1_min_ago
                         and price > price_2_min_ago
                        
                         
-                        #and deviation_ma > 0.01
+                        
                         
                     ):
                         action = "buy"
@@ -191,8 +192,8 @@ class maddog:
                 # COMPRA sessione 3 in poi
                 else:
                     if (
-                        ma8_last >= ma14_last
-                        and ma2_last >= ma8_last
+                        #ma8_last >= ma14_last
+                        ma2_last >= ma8_last
                         
                         and ma2_last > ma2_2_min_ago
                         and ma4_last > ma4_2_min_ago
@@ -200,6 +201,7 @@ class maddog:
                        
                         and deviation > 0.13
                         and deviation_ma > 0.13
+
                         and price > price_1_min_ago
                         and price > price_2_min_ago
                         
