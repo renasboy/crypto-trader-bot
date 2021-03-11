@@ -7,8 +7,8 @@ class maddog:
     @property
     def action(self):
 
-        # ro cano ritorna automaticamente ( per esempio 90 minuti x 60 = 5400 secondi )
-        max_hold_time_in_seconds = 5400
+        # ro cano ritorna automaticamente ( per esempio 90 minuti x 60 = 5400 secondi )...............................(ADESSO 40 MINUTI) RIGA 319
+        max_hold_time_in_seconds = 2400
         
         # e durata segmento in cui si aggiunge una condizione per il BUY ( per esempio 40 minuti x 60 = 2400 secondi )
         min_buy_delay_in_seconds = 2400
@@ -240,7 +240,7 @@ class maddog:
                 elif (
                     ma100_last < ma100_13_min_ago
                     and ma2_last < ma16_last
-                    and deviation < -0.85
+                    and deviation < -0.65
                 ):
                     action = "sell"    
                 
@@ -270,7 +270,7 @@ class maddog:
                 elif (
                     ma100_last < ma100_13_min_ago
                     and ma2_last < ma13_last
-                    and deviation < -0.85
+                    and deviation < -0.65
                 ):
                     action = "sell"      
                        
@@ -296,7 +296,7 @@ class maddog:
                 elif (
                     ma100_last < ma100_13_min_ago
                     and ma2_last < ma13_last
-                    and deviation < -0.80
+                    and deviation < -0.65
                 ):
                     action = "sell"        
                         #action = "sell"
@@ -307,7 +307,7 @@ class maddog:
                         
 
             # STOP LOSS (salvagente)
-            if deviation < -0.90 and ma2_last < ma18_last and ma11_last < ma100_last :
+            if deviation < -0.70 and ma2_last < ma18_last :
                 action = "sell"
 
             
@@ -316,7 +316,7 @@ class maddog:
             
 
             
-            # 1) ATTESA riga 111 per es. DI 1 ORA e 1/2 = 5400 SECONDI "max hold time" " DOPO UN' ORA VENDE SUBITO " e se ma2_last < ma20_last
+            # 1) vedi riga 11 per es. DI 1 ORA e 1/2 = 5400 SECONDI "max hold time" " DOPO UN' ORA VENDE SUBITO " e se ma2_last < ma20_last
             
             if seconds_since_last_trade > max_hold_time_in_seconds and ma2_last < ma20_last:
                 
