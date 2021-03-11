@@ -191,8 +191,8 @@ class ro_cano_che_ritorna:
             
             
             # COMPRA UN PO' PIU' SOPRA DELL' ULTIMO TRADE SE DEVIATION > 0.23 nei 540 secondi  ( quasi sempre IL SELL )
-            #if (
-            if 
+            if (
+            
                 (
                     seconds_since_last_trade > 0
                     and seconds_since_last_trade <= min_buy_delay_in_seconds
