@@ -235,9 +235,12 @@ class ro_cano_che_ritorna:
                         #prev_price < ma3_prev and price > ma3_last
                         # purtroppo non funziona
                         
-                        deviation_ma > 0.01
-                        and (price_2_min_ago < ma3_2_min_ago and price < ma3_last and ma3_last > ma3_2_min_ago) 
                         
+                        deviation_ma > 0.01
+                        and (price_2_min_ago < ma3_2_min_ago and price < ma3_last)
+                        
+                        #questa non ha comprato
+                        #and (price_2_min_ago < ma3_2_min_ago and price < ma3_last and ma3_last > ma3_2_min_ago) 
                         
                         #and deviation_ma >= 0.23
                         #and (prev_price < ma3_prev and price > ma3_last)
@@ -286,8 +289,11 @@ class ro_cano_che_ritorna:
                         
                         
                     elif (
-                          deviation_ma > 0.40
-                          and (price_2_min_ago < ma3_2_min_ago and price < ma3_last and ma3_last > ma3_2_min_ago) 
+                          deviation_ma > 0.02
+                          and (price_2_min_ago < ma3_2_min_ago and price < ma3_last)
+                          
+                          
+                          #and (price_2_min_ago < ma3_2_min_ago and price < ma3_last and ma3_last > ma3_2_min_ago) 
                           
                           
                           #prev_price < ma3_prev and price > ma3_last
