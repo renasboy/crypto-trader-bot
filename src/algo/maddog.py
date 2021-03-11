@@ -143,7 +143,7 @@ class maddog:
                         # attenzione ! vedi che se ci sono grandi rialzi improvvisi la ma2 incrocia MOLTO DIFFICILMENTE la ma4
                         
                         
-                        and (ma2_prev < ma5_prev and ma2_last > ma5_last)
+                        and (ma2_prev < ma3_prev and ma2_last > ma3_last)
                         and deviation_ma > 0.15
                         
                         
