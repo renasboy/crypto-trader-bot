@@ -237,7 +237,12 @@ class ro_cano_che_ritorna:
                         
                         
                         deviation_ma > 0.01
-                        and (price_2_min_ago < ma3_2_min_ago and price < ma3_last)
+                        #and (price_2_min_ago < ma3_2_min_ago and price < ma3_last) questa ha funzionato !
+                        
+                        #adesso proviamo questa
+                        and (price_2_min_ago < ma3_2_min_ago and price > ma3_last)
+                        
+                        
                         
                         #questa non ha comprato
                         #and (price_2_min_ago < ma3_2_min_ago and price < ma3_last and ma3_last > ma3_2_min_ago) 
