@@ -58,6 +58,7 @@ class maddog:
         ma5_3_min_ago = self.algo_helper.ma_minutes_ago(5, 3)
         ma7_2_min_ago = self.algo_helper.ma_minutes_ago(7, 2)
         ma11_2_min_ago = self.algo_helper.ma_minutes_ago(11, 2)
+        ma12_2_min_ago = self.algo_helper.ma_minutes_ago(12, 2)
         ma15_5_min_ago = self.algo_helper.ma_minutes_ago(15, 5)
         ma16_2_min_ago = self.algo_helper.ma_minutes_ago(16, 2)
         ma20_2_min_ago = self.algo_helper.ma_minutes_ago(20, 2)
@@ -143,7 +144,7 @@ class maddog:
                         # attenzione ! vedi che se ci sono grandi rialzi improvvisi la ma2 incrocia MOLTO DIFFICILMENTE la ma4
                         
                         
-                        and (ma2_prev < ma3_prev and ma2_last > ma3_last)
+                        and (ma2_prev < ma3_prev and ma2_last > ma3_last and ma12_last > ma12_2_min_ago)
                         and deviation_ma > 0.13
                         
                         
