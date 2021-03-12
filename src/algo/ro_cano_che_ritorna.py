@@ -13,7 +13,10 @@ class ro_cano_che_ritorna:
         
         ma1_last, ma1_prev = self.algo_helper.ma_last_prev(1)
         ma2_last, ma2_prev = self.algo_helper.ma_last_prev(2)
+        
         ma3_last, ma3_prev = self.algo_helper.ma_last_prev(3)
+        
+        
         ma4_last, ma4_prev = self.algo_helper.ma_last_prev(4)
         ma5_last, ma5_prev = self.algo_helper.ma_last_prev(5)
         ma6_last, ma6_prev = self.algo_helper.ma_last_prev(6)
@@ -55,9 +58,12 @@ class ro_cano_che_ritorna:
         ma2_15_min_ago = self.algo_helper.ma_minutes_ago(2, 15)
         ma2_17_min_ago = self.algo_helper.ma_minutes_ago(2, 17)
         ma2_22_min_ago = self.algo_helper.ma_minutes_ago(2, 22)
+        ma2_24_min_ago = self.algo_helper.ma_minutes_ago(2, 24)
+        
         ma3_2_min_ago = self.algo_helper.ma_minutes_ago(3, 2)
         ma3_3_min_ago = self.algo_helper.ma_minutes_ago(3, 3)
-        ma2_24_min_ago = self.algo_helper.ma_minutes_ago(2, 24)
+        ma3_5_min_ago = self.algo_helper.ma_minutes_ago(3, 5)
+        
         ma4_2_min_ago = self.algo_helper.ma_minutes_ago(4, 2)
         ma8_5_min_ago = self.algo_helper.ma_minutes_ago(8, 5)
         ma10_2_min_ago = self.algo_helper.ma_minutes_ago(10, 2)
@@ -109,6 +115,12 @@ class ro_cano_che_ritorna:
         price_1_min_ago = self.algo_helper.price_minutes_ago(1)
         price_2_min_ago = self.algo_helper.price_minutes_ago(2)
         price_3_min_ago = self.algo_helper.price_minutes_ago(3)
+        price_5_min_ago = self.algo_helper.price_minutes_ago(5)
+        
+        
+        #############################################################################################################################################################
+        
+        
 
         # VENDE DOPO 6000 secondi = 100 minuti ("e se") ro cano torna a casa riga 331
         max_hold_time_in_seconds = 6000
@@ -244,8 +256,10 @@ class ro_cano_che_ritorna:
                         #and (price_2_min_ago < ma3_2_min_ago and price > ma3_last)anche questa ha funzionato! MA anche questa compra dopo 2 minuti che si incrociano al ribasso!
                         
                         #adesso proviamo questa
-                        and (price_3_min_ago < ma3_3_min_ago and price > ma3_last)
+                        #and (price_3_min_ago < ma3_3_min_ago and price > ma3_last)
                         
+                        #adesso proviamo questa
+                        and (price_5_min_ago < ma3_5_min_ago and price > ma3_last)
                         
                         
                         
@@ -306,8 +320,10 @@ class ro_cano_che_ritorna:
                           #ma adesso proviamo questa
                           #and (price_2_min_ago < ma3_2_min_ago and price > ma3_last)anche questa ha funzionato ! MA anche questa compra dopo 2 minuti che si incrociano al ribasso !
                           
-                          and (price_3_min_ago < ma3_3_min_ago and price > ma3_last)
-                        
+                          #and (price_3_min_ago < ma3_3_min_ago and price > ma3_last)
+                          
+                          #adesso proviamo questa
+                          and (price_5_min_ago < ma3_5_min_ago and price > ma3_last)
                         
                         
                           #and (price_2_min_ago < ma3_2_min_ago and price < ma3_last and ma3_last > ma3_2_min_ago) 
@@ -697,7 +713,7 @@ class ro_cano_che_ritorna:
             
             if (
                 ma2_last < ma50_last 
-                and deviation_sell < -0.70
+                and deviation_sell < -0.60
                 
             ):
                 action = "sell"
@@ -706,7 +722,7 @@ class ro_cano_che_ritorna:
             elif (
                 
                 ma2_last < ma36_last 
-                and deviation_sell < -0.70
+                and deviation_sell < -0.60
             ):    
                 action = "sell"
             
