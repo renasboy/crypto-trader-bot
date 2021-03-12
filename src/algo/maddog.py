@@ -145,7 +145,7 @@ class maddog:
                         
                         
                         #and (ma2_prev < ma3_prev and ma2_last > ma3_last and ma12_last > ma12_2_min_ago)
-                        deviation_ma > 0.13
+                        deviation_ma > 0.09
                         
                         
                         
