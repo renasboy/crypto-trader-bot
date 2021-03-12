@@ -103,7 +103,7 @@ class ro_cano_che_ritorna:
         
         
         # PREZZO DI "PRIMA" (di mercato) - PREV PRICE....................prova. vediamo se funziona - sembra di NO
-        #prev_price = self.algo_helper.prev_price
+        prev_price = self.algo_helper.prev_price
         
         # PREZZO DI "DOPO" (di mercato) - LAST PRICE.....................prova. vediamo se funziona - sembra di NO
         #last_price = self.algo_helper.last_price
@@ -111,7 +111,7 @@ class ro_cano_che_ritorna:
         ##########################################################################################################################################################
         
         
-        # PREZZO PRECEDENTE (di mercato) - PREV PRICE
+        # PREZZO di X MINUTI FA (di mercato) - PREV PRICE
         price_1_min_ago = self.algo_helper.price_minutes_ago(1)
         price_2_min_ago = self.algo_helper.price_minutes_ago(2)
         price_3_min_ago = self.algo_helper.price_minutes_ago(3)
@@ -259,8 +259,9 @@ class ro_cano_che_ritorna:
                         #and (price_3_min_ago < ma3_3_min_ago and price > ma3_last)
                         
                         #adesso proviamo questa
-                        and (price_5_min_ago < ma3_5_min_ago and price > ma3_last)
+                        #and (price_5_min_ago < ma3_5_min_ago and price > ma3_last)
                         
+                        and (prev_price < ma3_2_min_ago and price > ma3_last)
                         
                         
                         #questa non ha comprato
@@ -323,7 +324,10 @@ class ro_cano_che_ritorna:
                           #and (price_3_min_ago < ma3_3_min_ago and price > ma3_last)
                           
                           #adesso proviamo questa
-                          and (price_5_min_ago < ma3_5_min_ago and price > ma3_last)
+                          #and (price_5_min_ago < ma3_5_min_ago and price > ma3_last)
+                          
+                          and (prev_price < ma3_2_min_ago and price > ma3_last)
+                        
                         
                         
                           #and (price_2_min_ago < ma3_2_min_ago and price < ma3_last and ma3_last > ma3_2_min_ago) 
