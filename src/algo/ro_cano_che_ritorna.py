@@ -130,6 +130,9 @@ class ro_cano_che_ritorna:
         max_hold_without_force_time_in_seconds = 600
         
         
+        ############################################################################################################################################################
+        
+        
         
         # TEMPO in cui (PER COMPRARE) (a tutte le condizioni gia' attive) SI AGGIUNGE una condizione aggiuntiva LA DEVIATION !
 
@@ -139,6 +142,7 @@ class ro_cano_che_ritorna:
         # dal PENULTIMO trade ( 30 minuti = 30 * 60 = 1800 secondi )
         min_prev_buy_delay_in_seconds = 1800
 
+       ##############################################################################################################################################################
         
         
         # formula DEVIATION_buy per comprare UN PO' PIU' SOPRA DEL LAST TRADE ( di solito l' ultimo SELL ) 
@@ -149,8 +153,7 @@ class ro_cano_che_ritorna:
         # formula DEVIATION_prev per comprare UN PO' PIU' SOPRA DEL PREV TRADE ( di solito l' ultimo BUY )
         deviation_prev = (price / prev_trade_price - 1) * 100 if prev_trade_price else 0
         self.algo_helper.log("deviation_prev: {}".format(deviation_prev))
-        
-        
+      
 
         # formula DEVIATION_sell per vendere
         deviation_sell = (ma2_last / last_trade_price - 1) * 100 if last_trade_price else 0
@@ -164,6 +167,8 @@ class ro_cano_che_ritorna:
         # DEFAULT ACTION DICE DI NON FARE NIENTE (=None, NON TOCCARE)
         action = None
 
+        
+        
         ##########################################################################################################################################
 
         # APRE E CHIUDE GABBIA
@@ -204,16 +209,16 @@ class ro_cano_che_ritorna:
             
             
             
-            # COMPRA UN PO' PIU' SOPRA DELL' ULTIMO TRADE SE DEVIATION > 0.23 nei 540 secondi  ( quasi sempre IL SELL )
+            # COMPRA UN PO' PIU' SOPRA DELL' ULTIMO TRADE SE deviation_buy > x nei 540 secondi  ( quasi sempre IL SELL )
             if (
             
                 (
                     seconds_since_last_trade > 0
                     and seconds_since_last_trade <= min_buy_delay_in_seconds
-                    and deviation > 0.01
+                    and deviation_buy > 0.01
                 )
                 
-                # COMPRA UN PO' PIU' SOPRA DEL PENULTIMO TRADE SE DEVIATION > 0.15 nei 300 secondi ( qualche volta IL BUY)
+                # COMPRA UN PO' PIU' SOPRA DEL PENULTIMO TRADE SE deviation_prev > x nei 300 secondi ( qualche volta IL BUY)
                 
                 or (
                     seconds_since_prev_trade > 0
@@ -228,7 +233,8 @@ class ro_cano_che_ritorna:
                 )
                 
              ######################################################################
-
+             ######################################################################
+                
              # compa, forse qua manca deviation_ma
                 
                 # ma, domanda, vale per tutte le righe ? 
