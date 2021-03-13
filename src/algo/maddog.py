@@ -96,6 +96,10 @@ class maddog:
         # APRE E CHIUDE GABBIA
         # SI APRE LA GABBIA SE
         if ma2_last > ma38_last:
+
+        #Ma fai cosi' (che la gabbia resterà aperta come se fosse ma78>ma78 2min ago
+        #if ma2_last > ma38_last and deviation_ma > -0.07: vedi questo valore alle ore 9:43
+        
             
             
             # NON TOCCARE QUESTA CONDIZIONE SERVE PER APERTURA DI GABBIA
