@@ -62,6 +62,7 @@ class maddog:
         ma15_5_min_ago = self.algo_helper.ma_minutes_ago(15, 5)
         ma16_2_min_ago = self.algo_helper.ma_minutes_ago(16, 2)
         ma20_2_min_ago = self.algo_helper.ma_minutes_ago(20, 2)
+        ma39_2_min_ago = self.algo_helper.ma_minutes_ago(39, 2)
         ma60_2_min_ago = self.algo_helper.ma_minutes_ago(60, 2)
         ma85_3_min_ago = self.algo_helper.ma_minutes_ago(85, 3)
         ma100_13_min_ago = self.algo_helper.ma_minutes_ago(100, 13)
@@ -186,14 +187,14 @@ class maddog:
                         
                         price > price_2_min_ago
                         and price > price_3_min_ago
-                        and deviation_ma > 0.10
+                        and deviation_ma > 0.15
                         
 
                         #deviation > 0.10 dopo che ha venduto ha comprato nello stesso minuto (puntino verde proprio sopra puntino rosso) con il price che scendeva
                         #allora tolgo la deviation e lascio solo price 1 min ago e price 2 min ago per vedere se funziona ! - FUNZIONA ! vai compaaaaaaaaaaaa
                         
-                        #BUY 2 SARA' COSI'
-                        #deviation > 0.10 and ma2_prev < ma4_prev and ma2_last > ma4_last
+                        
+                        
 
                         
 
@@ -212,19 +213,21 @@ class maddog:
                 else:
                     if (
                         #ma8_last >= ma14_last
-                        ma2_last >= ma8_last
-                        
-                        and ma2_last > ma2_2_min_ago
-                        and ma4_last > ma4_2_min_ago
-                        and ma5_last > ma5_2_min_ago
+                        ma2_last >= ma4_last
+                        and deviation_ma > 0.15 or (ma3_prev < ma8_prev and ma3_last > ma8_last and ma39_last > ma39_2_min_ago)
+
+
+                        #and ma2_last > ma2_2_min_ago
+                        #and ma4_last > ma4_2_min_ago
+                        #and ma5_last > ma5_2_min_ago
                        
-                        and deviation > 0.10
-                        and deviation_ma > 0.10
+                        #and deviation > 0.10
+                        #and deviation_ma > 0.15
 
 
 
 
-                        and price > price_1_min_ago
+                        
                         and price > price_2_min_ago
                         
                     ):
