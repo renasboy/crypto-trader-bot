@@ -210,7 +210,7 @@ class ro_cano_che_ritorna:
                 (
                     seconds_since_last_trade > 0
                     and seconds_since_last_trade <= min_buy_delay_in_seconds
-                    #and deviation > 0.01
+                    and deviation > 0.01
                 )
                 
                 # COMPRA UN PO' PIU' SOPRA DEL PENULTIMO TRADE SE DEVIATION > 0.15 nei 300 secondi ( qualche volta IL BUY)
@@ -218,7 +218,7 @@ class ro_cano_che_ritorna:
                 or (
                     seconds_since_prev_trade > 0
                     and seconds_since_prev_trade <= min_prev_buy_delay_in_seconds
-                    #and deviation_prev > 0.01
+                    and deviation_prev > 0.01
                 )
                 
                 
