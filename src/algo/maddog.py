@@ -179,15 +179,18 @@ class maddog:
                         
                         #piu' veloce !
                         #and (ma2_prev < ma4_prev and ma2_last > ma4_last)
-                        deviation > 0.10
-     
+                        
+                        price > price_1_min_ago
+                        and price > price_2_min_ago
+                        #deviation > 0.10 dopo che ha venduto ha comprato nello stesso minuto (puntino verde proprio sopra puntino rosso) con il price che scendeva
+                        #allora tolgo la deviation e lascio solo price 1 min ago e price 2 min ago per vedere se funziona !
+                        
                         #BUY 2 SARA' COSI'
                         #deviation > 0.10 and ma2_prev < ma4_prev and ma2_last > ma4_last
 
                         #and deviation_ma > 0.10
 
-                        and price > price_1_min_ago
-                        and price > price_2_min_ago
+                        
                        
                         
                         
