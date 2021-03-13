@@ -95,7 +95,7 @@ class ro_cano_che_ritorna:
         prev_trade_price = self.algo_helper.prev_trade_price
         seconds_since_prev_trade = self.algo_helper.seconds_since_prev_trade
         
-
+        ###########################
         #########################################################################################################################################################
         
         # PREZZO DI ADESSO (di mercato) - CURRENT PRICE
@@ -104,13 +104,13 @@ class ro_cano_che_ritorna:
         
         
         # PREZZO DI "PRIMA" (di mercato) - PREV PRICE....................prova. vediamo se funziona - sembra di NO
-        prev_price = self.algo_helper.prev_price
+        #prev_price = self.algo_helper.prev_price
         
         # PREZZO DI "DOPO" (di mercato) - LAST PRICE.....................prova. vediamo se funziona - sembra di NO
         #last_price = self.algo_helper.last_price
         
         ##########################################################################################################################################################
-        
+        #############################
         
         # PREZZO di X MINUTI FA (di mercato) - PREV PRICE
         price_1_min_ago = self.algo_helper.price_minutes_ago(1)
