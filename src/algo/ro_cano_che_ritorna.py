@@ -41,6 +41,7 @@ class ro_cano_che_ritorna:
         ma30_last, ma30_prev = self.algo_helper.ma_last_prev(30)
         ma32_last, ma32_prev = self.algo_helper.ma_last_prev(32)
         ma36_last, ma36_prev = self.algo_helper.ma_last_prev(36)
+        ma38_last, ma38_prev = self.algo_helper.ma_last_prev(38)
         ma39_last, ma39_prev = self.algo_helper.ma_last_prev(39)
         ma50_last, ma50_prev = self.algo_helper.ma_last_prev(50)
         ma54_last, ma54_prev = self.algo_helper.ma_last_prev(54)
@@ -157,7 +158,7 @@ class ro_cano_che_ritorna:
 
         # formula DEVIATION_ma per comprare durante il TREND RIBASSISTA ( ma2 deve avere una certa distanza da ma18 )
         
-        deviation_ma = (ma7_last / ma50_last - 1) * 100 if ma50_last else 0
+        deviation_ma = (ma4_last / ma38_last - 1) * 100 if ma50_last else 0
         self.algo_helper.log("deviation_ma: {}".format(deviation_ma))
 
         # DEFAULT ACTION DICE DI NON FARE NIENTE (=None, NON TOCCARE)
@@ -249,7 +250,7 @@ class ro_cano_che_ritorna:
                         # purtroppo non funziona
                         
                         
-                        deviation_ma > 0.01
+                        deviation_ma > 0.10
                         #and (price_2_min_ago < ma3_2_min_ago and price < ma3_last) questa ha funzionato ! MA compra dopo 2 minuti che si incrociano al ribasso !
                         
                         #adesso proviamo questa
@@ -261,8 +262,8 @@ class ro_cano_che_ritorna:
                         #adesso proviamo questa
                         #and (price_5_min_ago < ma3_5_min_ago and price > ma3_last)
                         
-                        and (prev_price < ma3_2_min_ago and price > ma3_last)
-                        
+                        #and (prev_price < ma3_2_min_ago and price > ma3_last)
+                        #NON FUNZIONA. Ma non fa niente.
                         
                         #questa non ha comprato
                         #and (price_2_min_ago < ma3_2_min_ago and price < ma3_last and ma3_last > ma3_2_min_ago) 
@@ -314,7 +315,7 @@ class ro_cano_che_ritorna:
                         
                         
                     elif (
-                          deviation_ma > 0.02
+                          deviation_ma > 0.10
                           
                           #and (price_2_min_ago < ma3_2_min_ago and price < ma3_last) questa ha funzionato MA compra dopo 2 minuti che si incrociano al ribasso !
                           
@@ -326,7 +327,7 @@ class ro_cano_che_ritorna:
                           #adesso proviamo questa
                           #and (price_5_min_ago < ma3_5_min_ago and price > ma3_last)
                           
-                          and (prev_price < ma3_2_min_ago and price > ma3_last)
+                          #and (prev_price < ma3_2_min_ago and price > ma3_last)
                         
                         
                         
@@ -381,26 +382,27 @@ class ro_cano_che_ritorna:
               
                     if (
                         
-                        ma50_last >= ma50_2_min_ago
-                        and ma2_last >= ma9_last
+                        #ma50_last >= ma50_2_min_ago
+                        #and ma2_last >= ma9_last
                         
                         #and ma2_prev < ma3_prev and ma2_last > ma3_last
                         #and (ma2_prev < ma3_prev and ma2_last > ma3_last) or (price_2_min_ago < ma3_2_min_ago and price > ma3_last)
                         
                         #mandrakata. vediamo disegno "strano 2 miracolo "
-                        and (price_1_min_ago > ma3_prev and price < ma3_last and ma3_last > ma3_2_min_ago) 
+                        #and (price_1_min_ago > ma3_prev and price < ma3_last and ma3_last > ma3_2_min_ago) 
                         
                         #and ma36_last >= ma36_2_min_ago
-                        and ma8_last >= ma14_last
+                        #and ma8_last >= ma14_last
+                        
+                        deviation_ma >= 0.10
+                        and deviation_prev > 0.15
+                        and deviation_buy > 0.20
                         
                         
-                        and deviation_buy > 0.23
-                        and deviation_prev > 0.10
-                        and deviation_ma >= 0.10
                         
-                        and ma2_last > ma7_last
-                        and ma2_last > ma2_2_min_ago
-                        and ma4_last > ma4_2_min_ago
+                        #and ma2_last > ma7_last
+                        #and ma2_last > ma2_2_min_ago
+                        #and ma4_last > ma4_2_min_ago
                     
                         
                         and price > price_1_min_ago
@@ -415,8 +417,8 @@ class ro_cano_che_ritorna:
                         
                     elif (
                           
-                          ma50_last < ma50_2_min_ago
-                          and ma2_last >= ma9_last
+                          #ma50_last < ma50_2_min_ago
+                          #and ma2_last >= ma9_last
                           
                           #and ma2_prev < ma3_prev and ma2_last > ma3_last
                           #and (ma2_prev < ma4_prev and ma2_last > ma4_last) or (price_2_min_ago < ma3_2_min_ago and price > ma3_last)
@@ -426,17 +428,20 @@ class ro_cano_che_ritorna:
                           
                           
                         
-                          and ma36_last < ma36_2_min_ago
-                          and ma9_last >= ma15_last
+                          #and ma36_last < ma36_2_min_ago
+                          #and ma9_last >= ma15_last
                           
-                          and deviation_buy > 0.23
-                          and deviation_prev > 0.10
-                          and deviation_ma >= 0.10
+
+                          deviation_ma >= 0.10
+                          and deviation_prev > 0.15
+                          and deviation_buy > 0.20
+                          
+                          
                         
                           
-                          and ma2_last > ma7_last
-                          and ma2_last > ma2_2_min_ago
-                          and ma4_last > ma4_2_min_ago
+                          #and ma2_last > ma7_last
+                          #and ma2_last > ma2_2_min_ago
+                          #and ma4_last > ma4_2_min_ago
                          
                           and price > price_1_min_ago
                           and price > price_2_min_ago
@@ -461,25 +466,28 @@ class ro_cano_che_ritorna:
             
                     if (
                       
-                        ma50_last >= ma50_2_min_ago
-                        and ma2_last >= ma8_last
+                        #ma50_last >= ma50_2_min_ago
+                        #and ma2_last >= ma8_last
                         
-                        and ma2_prev < ma5_prev and ma2_last > ma5_last
+                        #and ma2_prev < ma5_prev and ma2_last > ma5_last
                         
-                        and ma36_last >= ma36_2_min_ago
-                        and ma8_last >= ma12_last
+                        #and ma36_last >= ma36_2_min_ago
+                        #and ma8_last >= ma12_last
                         
-                        and deviation_buy > 0.23
-                        and deviation_prev > 0.14
-                        and deviation_ma > 0.10
+
+                        deviation_ma > 0.10
+                        and deviation_prev > 0.15
+                        and deviation_buy > 0.20
                         
                         
-                        and ma2_last > ma7_last
-                        and ma2_last > ma2_2_min_ago
-                        and ma4_last > ma4_2_min_ago
+                        
+                        
+                        #and ma2_last > ma7_last
+                        #and ma2_last > ma2_2_min_ago
+                        #and ma4_last > ma4_2_min_ago
                        
-                        and price > price_1_min_ago
-                        and price > price_2_min_ago
+                        #and price > price_1_min_ago
+                        #and price > price_2_min_ago
                        
                     ):
 
@@ -489,21 +497,24 @@ class ro_cano_che_ritorna:
                         
                     elif (
                           
-                          ma50_last < ma50_2_min_ago
-                          and ma2_last >= ma8_last
+                          #ma50_last < ma50_2_min_ago
+                          #and ma2_last >= ma8_last
                           
-                          and ma2_prev < ma5_prev and ma2_last > ma5_last
+                          #and ma2_prev < ma5_prev and ma2_last > ma5_last
                           
-                          and ma36_last < ma36_2_min_ago
-                          and ma9_last >= ma15_last
+                          #and ma36_last < ma36_2_min_ago
+                          #and ma9_last >= ma15_last
                           
-                          and deviation_buy > 0.23
-                          and deviation_prev > 0.16
-                          and deviation_ma >= 0.10
                           
-                          and ma2_last > ma7_last
-                          and ma2_last > ma2_2_min_ago
-                          and ma4_last > ma4_2_min_ago
+                          
+                          deviation_ma >= 0.10
+                          and deviation_prev > 0.15
+                          and deviation_buy > 0.20
+                          
+
+                          #and ma2_last > ma7_last
+                          #and ma2_last > ma2_2_min_ago
+                          #and ma4_last > ma4_2_min_ago
                           
                           and price > price_1_min_ago
                           and price > price_2_min_ago
