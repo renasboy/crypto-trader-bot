@@ -424,7 +424,7 @@ class ro_cano_che_ritorna:
                           #and (ma2_prev < ma4_prev and ma2_last > ma4_last) or (price_2_min_ago < ma3_2_min_ago and price > ma3_last)
                           
                           #mandrakata. vediamo disegno "strano 2 miracolo "
-                          (price_1_min_ago > ma3_prev and price < ma3_last and ma3_last > ma3_2_min_ago) 
+                          #(price_1_min_ago > ma3_prev and price < ma3_last and ma3_last > ma3_2_min_ago) 
                           
                           
                         
