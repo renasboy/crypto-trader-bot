@@ -153,7 +153,8 @@ class maddog:
                         
                         
                         #and (ma2_prev < ma3_prev and ma2_last > ma3_last and ma12_last > ma12_2_min_ago)
-                        deviation_ma > 0.09
+                        deviation_ma > 0.10
+                        
                         
                         
                         
@@ -187,7 +188,7 @@ class maddog:
                         
                         price > price_2_min_ago
                         
-                        and deviation_ma > 0.15 and deviation > 0.17
+                        and deviation_ma > 0.16 and deviation > 0.18
                         
 
 
