@@ -402,7 +402,7 @@ class ro_cano_che_ritorna:
                         
                         deviation_ma >= 0.10
                         and deviation_prev > 0.15
-                        and deviation_buy > 0.20
+                        and deviation_buy > 0.17
                         
                         
                         
@@ -440,7 +440,7 @@ class ro_cano_che_ritorna:
 
                           deviation_ma >= 0.10
                           and deviation_prev > 0.15
-                          and deviation_buy > 0.20
+                          and deviation_buy > 0.17
                           
                           
                         
@@ -483,7 +483,7 @@ class ro_cano_che_ritorna:
 
                         deviation_ma > 0.10
                         and deviation_prev > 0.15
-                        and deviation_buy > 0.20
+                        and deviation_buy > 0.17
                         
                         
                         
@@ -515,7 +515,7 @@ class ro_cano_che_ritorna:
                           
                           deviation_ma >= 0.10
                           and deviation_prev > 0.15
-                          and deviation_buy > 0.20
+                          and deviation_buy > 0.17
                           
 
                           #and ma2_last > ma7_last
