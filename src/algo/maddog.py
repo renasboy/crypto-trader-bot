@@ -144,6 +144,18 @@ class maddog:
                 # COMPRA sessione 1
                 if self.session == 1:
                     if (
+                       
+                        #se va su all' improvviso prende la deviation.
+                        #se ci ripensa prima di salire prende l' incrocio
+                        #GRAZIE COMPA
+                        
+                        deviation_ma > 0.12 or (ma3_prev < ma7_prev and ma3_last > ma7_last)
+                        and price > price_1_min_ago
+                        and price > price_2_min_ago
+                        
+                        
+                        
+                        #and (ma2_prev < ma3_prev and ma2_last > ma3_last and ma12_last > ma12_2_min_ago)
                         #ma2_last >= ma4_last
                         #and ma2_last >= ma8_last
                         
@@ -152,20 +164,11 @@ class maddog:
                         #and ma2_prev < ma4_prev and ma2_last > ma4_last
                         # attenzione ! vedi che se ci sono grandi rialzi improvvisi la ma2 incrocia MOLTO DIFFICILMENTE la ma4
                         
-                        
-                        #and (ma2_prev < ma3_prev and ma2_last > ma3_last and ma12_last > ma12_2_min_ago)
-                        deviation_ma > 0.10
-                        
-                        
-                        
-                        
                         #and ma2_last > ma2_2_min_ago
                         #and ma4_last > ma4_2_min_ago
                         #and ma5_last > ma5_2_min_ago
                         #and ma7_last > ma7_2_min_ago
-                        
-                        and price > price_1_min_ago
-                        and price > price_2_min_ago
+                       
                      
                     ):
                         action = "buy"
