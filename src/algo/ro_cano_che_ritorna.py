@@ -757,7 +757,7 @@ class ro_cano_che_ritorna:
             # 2) ro cano VENDE " DOPO 100 MINUTI " "max hold time"
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
-                and ma2_last < ma13_last and and deviation_sell < -0.25
+                and ma2_last < ma13_last and deviation_sell < -0.25
             ):
                 action = "sell"
 
