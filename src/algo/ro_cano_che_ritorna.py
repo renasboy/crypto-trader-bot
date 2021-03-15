@@ -256,7 +256,18 @@ class ro_cano_che_ritorna:
                         # purtroppo non funziona
                         
                         
-                        deviation_ma > 0.09
+                        
+                        #porto al cane che ritorna il buy del maddog che e' molto bello (ma, attenzione, li la deviation e' 8-39)
+                        #se va su all' improvviso prende la deviation.
+                        #se ci ripensa prima di salire prende l' incrocio
+                        #GRAZIE COMPA
+                        
+                        deviation_ma > 0.09 or (ma3_prev < ma8_prev and ma3_last > ma8_last)
+                        and price > price_2_min_ago
+                        
+                        
+                        
+                        #deviation_ma > 0.09
                         # ti ricordo che la deviation_ma = (ma4_last / ma38_last - 1) * 100
                         
                         #and (price_2_min_ago < ma3_2_min_ago and price < ma3_last) questa ha funzionato ! MA compra dopo 2 minuti che si incrociano al ribasso !
@@ -314,7 +325,7 @@ class ro_cano_che_ritorna:
                         #and ma2_last >= ma7_last
                         #and ma4_last > ma4_2_min_ago
                         #and price > price_1_min_ago
-                        #and price > price_2_min_ago
+                        
                     
                     ):
                         action = "buy"
@@ -323,8 +334,12 @@ class ro_cano_che_ritorna:
                         
                         
                     elif (
-                          deviation_ma > 0.09 or (deviation_ma < -2.9 and ma2_last > ma4_last)
-
+                          #porto al cane che ritorna il buy del maddog che e' molto bello (ma, attenzione, li la deviation e' 8-39)
+                          #se va su all' improvviso prende la deviation.
+                          #se ci ripensa prima di salire prende l' incrocio
+                          #GRAZIE COMPA
+                          
+                          deviation_ma > 0.09 or (ma3_prev < ma8_prev and ma3_last > ma8_last) or (deviation_ma < -2.9 and ma2_last > ma4_last)
                           # ti ricordo che la deviation_ma = (ma4_last / ma38_last - 1) * 100
 
 
