@@ -422,9 +422,9 @@ class ro_cano_che_ritorna:
                         #and ma36_last >= ma36_2_min_ago
                         #and ma8_last >= ma14_last
                         
-                        deviation_ma >= 0.09
-                        and deviation_prev > 0.14
-                        and deviation_buy > 0.16
+                        deviation_ma >= 0.15
+                        and deviation_prev > 0.15
+                        and deviation_buy > 0.17
                         
                         
                         
@@ -460,9 +460,9 @@ class ro_cano_che_ritorna:
                           #and ma9_last >= ma15_last
                           
 
-                          deviation_ma >= 0.09
-                          and deviation_prev > 0.14
-                          and deviation_buy > 0.16
+                          deviation_ma >= 0.15
+                          and deviation_prev > 0.15
+                          and deviation_buy > 0.17
                           
                           
                         
