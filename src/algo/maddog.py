@@ -222,23 +222,17 @@ class maddog:
                 # COMPRA sessione 3 in poi
                 else:
                     if (
-                        #ma8_last >= ma14_last
+                        
                         ma2_last >= ma4_last
-                        and deviation_ma > 0.15 or (ma3_prev < ma8_prev and ma3_last > ma8_last and ma39_last > ma39_2_min_ago)
-                        and deviation > 0.15
+                        and deviation_ma > 0.08 or (ma3_prev < ma8_prev and ma3_last > ma8_last and ma12_last > ma12_2_min_ago)
+                        and deviation > 0.08
+                        and price > price_2_min_ago
 
                         #and ma2_last > ma2_2_min_ago
                         #and ma4_last > ma4_2_min_ago
                         #and ma5_last > ma5_2_min_ago
-                       
+                        #ma8_last >= ma14_last
                         
-                        
-
-
-
-
-                        
-                        and price > price_2_min_ago
                         
                     ):
                         action = "buy"
