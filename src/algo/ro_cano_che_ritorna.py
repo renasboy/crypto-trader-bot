@@ -136,11 +136,11 @@ class ro_cano_che_ritorna:
         
         # TEMPO in cui (PER COMPRARE) (a tutte le condizioni gia' attive) SI AGGIUNGE una condizione aggiuntiva LA DEVIATION !
 
-        # dall' ULTIMO trade ( 25 minuti = 25 * 60 = 1500 secondi )
-        min_buy_delay_in_seconds = 1500
+        # dall' ULTIMO trade ( 15 minuti = 15 * 60 = 900 secondi )
+        min_buy_delay_in_seconds = 900
 
-        # dal PENULTIMO trade ( 30 minuti = 30 * 60 = 1800 secondi )
-        min_prev_buy_delay_in_seconds = 1800
+        # dal PENULTIMO trade ( 20 minuti = 20 * 60 = 1800 secondi )
+        min_prev_buy_delay_in_seconds = 1200
 
        ##############################################################################################################################################################
         
