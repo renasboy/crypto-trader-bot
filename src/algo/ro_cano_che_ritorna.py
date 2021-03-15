@@ -424,7 +424,7 @@ class ro_cano_che_ritorna:
                         
                         deviation_ma >= 0.15
                         and deviation_prev > 0.15
-                        and deviation_buy > 0.17
+                        and deviation_buy > 0.18
                         
                         
                         
@@ -462,7 +462,7 @@ class ro_cano_che_ritorna:
 
                           deviation_ma >= 0.15
                           and deviation_prev > 0.15
-                          and deviation_buy > 0.17
+                          and deviation_buy > 0.18
                           
                           
                         
@@ -658,7 +658,7 @@ class ro_cano_che_ritorna:
                 if (
                     ma50_last >= ma50_2_min_ago
                     and ma36_last >= ma36_2_min_ago
-                    and ma2_last < ma13_last 
+                    and ma2_last < ma12_last 
                     and deviation_sell > 0.29
                     
                 ):
