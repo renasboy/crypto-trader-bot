@@ -53,6 +53,7 @@ class maddog:
 
         # moving average (2-3-4-5-7-8-20-43-100) di x minuti prima (NON METTERE MAI 1 min !)
         ma2_2_min_ago = self.algo_helper.ma_minutes_ago(2, 2)
+        ma3_2_min_ago = self.algo_helper.ma_minutes_ago(3, 2)
         ma4_2_min_ago = self.algo_helper.ma_minutes_ago(4, 2)
         ma5_2_min_ago = self.algo_helper.ma_minutes_ago(5, 2)
         ma5_3_min_ago = self.algo_helper.ma_minutes_ago(5, 3)
@@ -191,8 +192,9 @@ class maddog:
                         
                         
                         price > price_2_min_ago
-                        
-                        and deviation_ma > 0.16 and deviation > 0.18
+                        and ma3_last > ma3_2_min_ago
+                        and deviation_ma > 0.16 
+                        and deviation > 0.18
                         
 
 
