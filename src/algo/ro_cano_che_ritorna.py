@@ -40,6 +40,7 @@ class ro_cano_che_ritorna:
         ma28_last, ma28_prev = self.algo_helper.ma_last_prev(28)
         ma30_last, ma30_prev = self.algo_helper.ma_last_prev(30)
         ma32_last, ma32_prev = self.algo_helper.ma_last_prev(32)
+        ma34_last, ma34_prev = self.algo_helper.ma_last_prev(34)
         ma36_last, ma36_prev = self.algo_helper.ma_last_prev(36)
         ma38_last, ma38_prev = self.algo_helper.ma_last_prev(38)
         ma39_last, ma39_prev = self.algo_helper.ma_last_prev(39)
@@ -603,7 +604,7 @@ class ro_cano_che_ritorna:
                 elif (
                     ma50_last > ma50_2_min_ago
                     and ma36_last > ma36_2_min_ago
-                    and ma2_last < ma36_last 
+                    and ma2_last < ma34_last 
                     and deviation_sell < -0.40
                   
                 ):
@@ -631,7 +632,7 @@ class ro_cano_che_ritorna:
                 elif (
                     ma50_last >= ma50_2_min_ago
                     and ma36_last >= ma36_2_min_ago
-                    and ma2_last < ma36_last 
+                    and ma2_last < ma34_last 
                     and deviation_sell < -0.45
                    
                 ):
@@ -660,7 +661,7 @@ class ro_cano_che_ritorna:
                 elif (
                     ma50_last >= ma50_2_min_ago
                     and ma36_last >= ma36_2_min_ago
-                    and ma2_last < ma36_last 
+                    and ma2_last < ma34_last 
                     and deviation_sell < -0.45
                     
                 ):
