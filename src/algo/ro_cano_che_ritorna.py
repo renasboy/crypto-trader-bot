@@ -323,8 +323,11 @@ class ro_cano_che_ritorna:
                         
                         
                     elif (
-                          deviation_ma > 0.09
+                          deviation_ma > 0.09 or (deviation_ma < -2.9 and ma2_last > ma4_last)
+
                           # ti ricordo che la deviation_ma = (ma4_last / ma38_last - 1) * 100
+
+
                         
                           #and (price_2_min_ago < ma3_2_min_ago and price < ma3_last) questa ha funzionato MA compra dopo 2 minuti che si incrociano al ribasso !
                           
@@ -365,7 +368,7 @@ class ro_cano_che_ritorna:
                           
                           
                         
-                          #or deviation_ma < -2.9 and ma2_last > ma4_last
+                          
                         
                           #and ma2_last > ma2_2_min_ago
                           #and ma2_last > ma7_last
