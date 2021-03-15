@@ -765,32 +765,32 @@ class ro_cano_che_ritorna:
             # se ma100_last >= ma100_13_min_ago vende in un modo 
             # se ma100_last < ma100_13_min_ago vende in un altro modo
             
-            if (
-                ma2_last < ma50_last 
-                and deviation_sell < -0.50
+            #if (
+                #ma2_last < ma50_last 
+                #and deviation_sell < -0.50
                 
-            ):
-                action = "sell"
+            #):
+                #action = "sell"
             
             
-            elif (
+            #elif (
                 
-                ma2_last < ma36_last 
-                and deviation_sell < -0.50
-            ):    
-                action = "sell"
+                #ma2_last < ma36_last 
+                #and deviation_sell < -0.50
+            #):    
+                #action = "sell"
             
             
             
            
 
             # 2) ro cano VENDE " DOPO 100 MINUTI " "max hold time"
-            elif (
-                seconds_since_last_trade > max_hold_time_in_seconds
-                and ma2_last < ma20_last 
-                and deviation_sell < -0.40
-            ):
-                action = "sell"
+            #elif (
+                #seconds_since_last_trade > max_hold_time_in_seconds
+                #and ma2_last < ma39_last 
+                #and deviation_sell < -0.40
+            #):
+                #action = "sell"
 
         ############### FINE ALGORITH #################
         
