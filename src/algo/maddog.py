@@ -192,6 +192,7 @@ class maddog:
                         
                         
                         price > price_2_min_ago
+                        and price > price_3_min_ago
                         and ma3_last > ma3_2_min_ago
                         and deviation_ma > 0.16 
                         and deviation > 0.18
@@ -349,8 +350,8 @@ class maddog:
                         
 
             # STOP LOSS (salvagente)
-            if deviation < -0.55 and ma2_last < ma12_last:
-                action = "sell"
+            #if deviation < -0.55 and ma2_last < ma12_last:
+                #action = "sell"
 
             
            
@@ -360,10 +361,10 @@ class maddog:
             
             # 1) vedi riga 11 per es. DI 1 ORA e 1/2 = 5400 SECONDI "max hold time" " DOPO UN' ORA VENDE SUBITO " e se ma2_last < ma20_last
             
-            if seconds_since_last_trade > max_hold_time_in_seconds and ma2_last < ma20_last and deviation < -0.50:
+            #if seconds_since_last_trade > max_hold_time_in_seconds and ma2_last < ma20_last and deviation < -0.50:
                 
                     
-                action = "sell"
+                #action = "sell"
 
         self.algo_helper.log("action {}".format(action))
 
