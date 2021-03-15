@@ -89,7 +89,7 @@ class maddog:
         self.algo_helper.log("deviation: {}".format(deviation))
 
         # formula DEVIATION_ma (per comprare durante il TREND RIBASSISTA)
-        deviation_ma = (ma7_last / ma39_last - 1) * 100 if ma39_last else 0
+        deviation_ma = (ma8_last / ma39_last - 1) * 100 if ma39_last else 0
         self.algo_helper.log("deviation_ma: {}".format(deviation_ma))
 
         action = None
@@ -149,7 +149,7 @@ class maddog:
                         #se ci ripensa prima di salire prende l' incrocio
                         #GRAZIE COMPA
                         
-                        deviation_ma > 0.12 or (ma3_prev < ma7_prev and ma3_last > ma7_last)
+                        deviation_ma > 0.12 or (ma3_prev < ma8_prev and ma3_last > ma8_last)
                         and price > price_1_min_ago
                         and price > price_2_min_ago
                         
