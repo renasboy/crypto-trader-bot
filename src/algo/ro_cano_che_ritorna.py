@@ -123,8 +123,8 @@ class ro_cano_che_ritorna:
         
         
 
-        # VENDE DOPO 6000 secondi = 100 minuti ("e se") ro cano torna a casa riga 331
-        max_hold_time_in_seconds = 6000
+        # VENDE DOPO 1800 secondi = 30 minuti ("e se") ro cano torna a casa riga 331
+        max_hold_time_in_seconds = 1800
 
         # VENDE DOPO 600 secondi = 10 minuti ("e se") - ro cano perde la forza - riga 323
         max_hold_without_force_time_in_seconds = 600
@@ -752,7 +752,7 @@ class ro_cano_che_ritorna:
             
             if (
                 ma2_last < ma50_last 
-                and deviation_sell < -0.60
+                and deviation_sell < -0.50
                 
             ):
                 action = "sell"
@@ -761,7 +761,7 @@ class ro_cano_che_ritorna:
             elif (
                 
                 ma2_last < ma36_last 
-                and deviation_sell < -0.60
+                and deviation_sell < -0.50
             ):    
                 action = "sell"
             
@@ -772,7 +772,8 @@ class ro_cano_che_ritorna:
             # 2) ro cano VENDE " DOPO 100 MINUTI " "max hold time"
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
-                and ma2_last < ma13_last and deviation_sell < -0.25
+                and ma2_last < ma20_last 
+                and deviation_sell < -0.40
             ):
                 action = "sell"
 
