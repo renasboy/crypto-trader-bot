@@ -506,7 +506,8 @@ class ro_cano_che_ritorna:
                         #deviation_ma > 0.10
                         #and deviation_prev > 0.15
                         #and deviation_buy > 0.17
-                        deviation_ma > 0.08 or (ma3_prev < ma7_prev and ma3_last > ma7_last)
+
+                        deviation_ma > 0.10 or (ma3_prev < ma7_prev and ma3_last > ma7_last)
                         #deviation_ma > 0.08 e' stata aggiunta all' incrocio classico ma3-ma7 (che pero' non sembrava attivarsi...)
                         
                         ###############################################################
