@@ -306,7 +306,7 @@ class maddog:
                 elif (
                     
                     ma2_last < ma20_last 
-                    and deviation < -0.50
+                    and deviation < -0.53
                     #ma78_last < ma78_2_min_ago
                 ):
                     action = "sell"      
@@ -346,7 +346,7 @@ class maddog:
                         
 
             # STOP LOSS (salvagente)
-            if deviation < -0.40 and ma2_last < ma36_last:
+            if deviation < -0.54 and ma2_last < ma36_last:
                 action = "sell"
 
             
