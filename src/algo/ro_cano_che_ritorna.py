@@ -426,14 +426,16 @@ class ro_cano_che_ritorna:
                         and deviation_buy > 0.18
                         
                         
+                        and ma3_last > ma3_2_min_ago
+                        and price > price_1_min_ago
+                        and price > price_2_min_ago
                         
                         #and ma2_last > ma7_last
                         #and ma2_last > ma2_2_min_ago
                         #and ma4_last > ma4_2_min_ago
                     
                         
-                        and price > price_1_min_ago
-                        and price > price_2_min_ago
+                        
                        
                  
                     ):
@@ -463,15 +465,16 @@ class ro_cano_che_ritorna:
                           and deviation_prev > 0.15
                           and deviation_buy > 0.18
                           
-                          
+                          and ma3_last > ma3_2_min_ago
+                          and price > price_1_min_ago
+                          and price > price_2_min_ago
                         
                           
                           #and ma2_last > ma7_last
                           #and ma2_last > ma2_2_min_ago
                           #and ma4_last > ma4_2_min_ago
                          
-                          and price > price_1_min_ago
-                          and price > price_2_min_ago
+                          
                           
                  
                     ):
