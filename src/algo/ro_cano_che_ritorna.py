@@ -585,7 +585,7 @@ class ro_cano_che_ritorna:
             #    minuti
             #   0 -  3 -----------
             #   3 -  5 -----------
-            #   5 - 12 -----------
+            #   5 - 12 ----------- alla vendita aggiungi and ma2 < ma2 2min ago
             #  12 - 18 ----------- 
             #  18 - 30 -----------
             #   > 30   -----------
@@ -604,6 +604,9 @@ class ro_cano_che_ritorna:
                     and ma36_last > ma36_2_min_ago
                     and ma2_last < ma13_last 
                     and deviation_sell > 0.20
+                    
+                    #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
+                    and ma2_last < ma2_2_min_ago
                    
                 ):
                    
@@ -635,6 +638,9 @@ class ro_cano_che_ritorna:
                     and ma36_last > ma36_2_min_ago
                     and ma2_last < ma13_last 
                     and deviation_sell > 0.25
+                    
+                    #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
+                    and ma2_last < ma2_2_min_ago
                   
                 ):
                     action = "sell"
@@ -645,7 +651,7 @@ class ro_cano_che_ritorna:
                     and ma36_last >= ma36_2_min_ago
                     and ma2_last < ma34_last 
                     and deviation_sell < -0.65
-                   
+                 
                 ):
                     action = "sell"
           
@@ -664,6 +670,8 @@ class ro_cano_che_ritorna:
                     and ma2_last < ma12_last 
                     and deviation_sell > 0.29
                     
+                    #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
+                    and ma2_last < ma2_2_min_ago
                 ):
                     action = "sell"
                     
@@ -696,6 +704,9 @@ class ro_cano_che_ritorna:
                     and ma2_last < ma13_last 
                     and deviation_sell > 0.29
                     
+                    #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
+                    and ma2_last < ma2_2_min_ago
+                    
                 ):
                     action = "sell"
                     
@@ -724,6 +735,8 @@ class ro_cano_che_ritorna:
                     and ma2_last < ma15_last 
                     and deviation_sell > 0.29
                     
+                    #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
+                    and ma2_last < ma2_2_min_ago
                 ):
                     action = "sell"
                 
@@ -751,6 +764,9 @@ class ro_cano_che_ritorna:
                     and ma36_last > ma36_2_min_ago
                     and ma2_last < ma16_last 
                     and deviation_sell > 0.29
+                    
+                    #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
+                    and ma2_last < ma2_2_min_ago
                 ):
                     
                
@@ -781,6 +797,7 @@ class ro_cano_che_ritorna:
                 ma2_last < ma36_last 
                 and deviation_sell < -0.40
                 
+              
             ):
                 action = "sell"
             
