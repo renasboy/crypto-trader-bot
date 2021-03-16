@@ -224,8 +224,8 @@ class maddog:
                     if (
                         
                         ma2_last >= ma4_last
-                        and deviation_ma > 0.08 or (ma3_prev < ma8_prev and ma3_last > ma8_last and ma12_last > ma12_2_min_ago)
-                        and deviation > 0.08
+                        and deviation_ma > 0.10 or (ma3_prev < ma8_prev and ma3_last > ma8_last and ma12_last > ma12_2_min_ago)
+                        and deviation > 0.10
                         and price > price_2_min_ago
 
                         #and ma2_last > ma2_2_min_ago
