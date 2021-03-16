@@ -775,12 +775,12 @@ class ro_cano_che_ritorna:
             # se ma100_last >= ma100_13_min_ago vende in un modo 
             # se ma100_last < ma100_13_min_ago vende in un altro modo
             
-            #if (
-                #ma2_last < ma50_last 
-                #and deviation_sell < -0.50
+            if (
+                ma2_last < ma36_last 
+                and deviation_sell < -0.40
                 
-            #):
-                #action = "sell"
+            ):
+                action = "sell"
             
             
             #elif (
