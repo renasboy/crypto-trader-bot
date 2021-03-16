@@ -344,8 +344,8 @@ class maddog:
                         
 
             # STOP LOSS (salvagente)
-            #if deviation < -0.55 and ma2_last < ma12_last:
-                #action = "sell"
+            if deviation < -0.40 and ma2_last < ma36_last:
+                action = "sell"
 
             
            
