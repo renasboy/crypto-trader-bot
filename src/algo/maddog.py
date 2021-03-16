@@ -196,7 +196,7 @@ class maddog:
                         price > price_2_min_ago
                         and price > price_3_min_ago
                         and ma3_last > ma3_2_min_ago
-                        and deviation_ma > 0.16 
+                        and deviation_ma > 0.15
                         and deviation > 0.16
                         
 
