@@ -152,7 +152,7 @@ class maddog:
                         #se ci ripensa prima di salire prende l' incrocio
                         #GRAZIE COMPA
                         
-                        deviation_ma > 0.14 or (ma3_prev < ma8_prev and ma3_last > ma8_last)
+                        deviation_ma > 0.29 or (ma8_prev < ma39_prev and ma8_last > ma39_last)
                         and price > price_1_min_ago
                         and price > price_2_min_ago
                         
@@ -197,7 +197,7 @@ class maddog:
                         
                         
                         and deviation_ma > 0.15
-                        and deviation > 0.16
+                        and deviation > 0.17
                         
                         and ma3_last > ma3_2_min_ago
                         
@@ -296,7 +296,7 @@ class maddog:
                 if (
                     
                     ma2_last < ma15_last 
-                    and deviation > 0.25
+                    and deviation > 0.01
                     #ma78_last > ma78_2_min_ago
                 ):
                    
@@ -308,7 +308,7 @@ class maddog:
                 elif (
                     
                     ma2_last < ma20_last 
-                    and deviation < -0.53
+                    and deviation < -0.10
                     #ma78_last < ma78_2_min_ago
                 ):
                     action = "sell"      
@@ -324,7 +324,7 @@ class maddog:
                 if (
                     
                     ma2_last < ma15_last 
-                    and deviation > 0.30
+                    and deviation > 0.01
                     #ma78_last > ma78_2_min_ago
                 ):
                    
@@ -336,7 +336,7 @@ class maddog:
                 elif (
                     
                     ma2_last < ma20_last 
-                    and deviation < -0.50
+                    and deviation < -0.10
                     #ma78_last < ma78_2_min_ago
                 ):
                     action = "sell"        
@@ -348,7 +348,7 @@ class maddog:
                         
 
             # STOP LOSS (salvagente)
-            if deviation < -0.54 and ma2_last < ma36_last:
+            if deviation < -0.60 and ma2_last < ma36_last:
                 action = "sell"
 
             
