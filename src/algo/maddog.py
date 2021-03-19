@@ -276,8 +276,8 @@ class maddog:
                 elif (
                     
                     ma2_last < ma34_last 
-                    and deviation < -0.21
-                    #prima era and deviation < -0.65
+                    #and deviation < -0.21 NON FUNZIONA ! rimetto < - 0.65 ! Per adesso soltanto al al buy 1
+                    and deviation < -0.65
                     #ma78_last < ma78_2_min_ago
                 ):
                     action = "sell"    
@@ -297,7 +297,7 @@ class maddog:
                 if (
                     
                     ma2_last < ma15_last 
-                    and deviation > 0.01
+                    and deviation > 0.25
                     #ma78_last > ma78_2_min_ago
                 ):
                    
@@ -309,7 +309,7 @@ class maddog:
                 elif (
                     
                     ma2_last < ma20_last 
-                    and deviation < -0.17
+                    and deviation < -0.65
                     #ma78_last < ma78_2_min_ago
                 ):
                     action = "sell"      
