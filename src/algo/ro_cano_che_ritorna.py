@@ -421,12 +421,12 @@ class ro_cano_che_ritorna:
                         #and ma36_last >= ma36_2_min_ago
                         #and ma8_last >= ma14_last
                         
-                        deviation_ma >= 0.15
-                        and deviation_prev > 0.15
-                        and deviation_buy > 0.18
+                        deviation_ma >= 0.13
+                        and deviation_prev > 0.13
+                        and deviation_buy > 0.13
                         
                         
-                        and ma3_last > ma3_2_min_ago
+                        and ma2_last > ma2_2_min_ago
                         and price > price_1_min_ago
                         and price > price_2_min_ago
                         
@@ -461,11 +461,11 @@ class ro_cano_che_ritorna:
                           #and ma9_last >= ma15_last
                           
 
-                          deviation_ma >= 0.15
-                          and deviation_prev > 0.15
-                          and deviation_buy > 0.18
+                          deviation_ma >= 0.10
+                          and deviation_prev > 0.10
+                          and deviation_buy > 0.13
                           
-                          and ma3_last > ma3_2_min_ago
+                          and ma2_last > ma2_2_min_ago
                           and price > price_1_min_ago
                           and price > price_2_min_ago
                         
@@ -506,8 +506,8 @@ class ro_cano_che_ritorna:
                         
 
                         #deviation_ma > 0.10
-                        #and deviation_prev > 0.15
-                        #and deviation_buy > 0.17
+                        #and deviation_prev > 0.13
+                        #and deviation_buy > 0.15
 
                         deviation_ma > 0.11 or (ma3_prev < ma7_prev and ma3_last > ma7_last)
                         #deviation_ma > 0.08 e' stata aggiunta all' incrocio classico ma3-ma7 (che pero' non sembrava attivarsi...)
@@ -619,7 +619,7 @@ class ro_cano_che_ritorna:
                     ma50_last > ma50_2_min_ago
                     and ma36_last > ma36_2_min_ago
                     and ma2_last < ma34_last 
-                    and deviation_sell < -0.17
+                    and deviation_sell < -0.64
                     
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
                     and ma2_last < ma2_2_min_ago
@@ -652,7 +652,7 @@ class ro_cano_che_ritorna:
                     ma50_last >= ma50_2_min_ago
                     and ma36_last >= ma36_2_min_ago
                     and ma2_last < ma34_last 
-                    and deviation_sell < -0.17
+                    and deviation_sell < -0.64
                     
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
                     and ma2_last < ma2_2_min_ago
@@ -685,7 +685,7 @@ class ro_cano_che_ritorna:
                     ma50_last >= ma50_2_min_ago
                     and ma36_last >= ma36_2_min_ago
                     and ma2_last < ma34_last 
-                    and deviation_sell < -0.17
+                    and deviation_sell < -0.64
                     
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
                     and ma2_last < ma2_3_min_ago
