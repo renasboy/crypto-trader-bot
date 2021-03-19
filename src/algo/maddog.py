@@ -87,14 +87,28 @@ class maddog:
         price_3_min_ago = self.algo_helper.price_minutes_ago(3)
         price_7_min_ago = self.algo_helper.price_minutes_ago(7)
     
-        # formula deviation per comprare un po' piu' sopra del SELL
-        deviation = (ma2_last / last_trade_price - 1) * 100 if last_trade_price else 0
-        self.algo_helper.log("deviation: {}".format(deviation))
+    
+        ######################################################################################################################################################    
+    
+        
 
         # formula "deviation_buy1" (per comprare LA PRIMA VOLTA durante il TREND RIBASSISTA)
         deviation_buy1 = (ma8_last / ma39_last - 1) * 100 if ma39_last else 0
         self.algo_helper.log("deviation_buy1: {}".format(deviation_buy1))
+        
+        
+        # formula deviation per comprare un po' piu' sopra del SELL
+        deviation = (ma2_last / last_trade_price - 1) * 100 if last_trade_price else 0
+        self.algo_helper.log("deviation: {}".format(deviation))
+        
+        
+        
 
+        #####################################################################################################################################################
+        
+        
+        
+        
         action = None
 
         #######################################################################
@@ -152,7 +166,7 @@ class maddog:
                         #se ci ripensa prima di salire prende l' incrocio
                         #GRAZIE COMPA
                         
-                        deviation_buy1 > 0.36 or (ma8_prev < ma39_prev and ma8_last > ma39_last)
+                        deviation_buy1 > 0.37 or (ma8_prev < ma39_prev and ma8_last > ma39_last)
                         and price > price_1_min_ago
                         and price > price_2_min_ago
                         
