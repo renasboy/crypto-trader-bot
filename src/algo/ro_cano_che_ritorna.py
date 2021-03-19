@@ -339,7 +339,7 @@ class ro_cano_che_ritorna:
                           #se ci ripensa prima di salire prende l' incrocio
                           #GRAZIE COMPA
                           
-                          deviation_buy1 > 0.12 or (ma3_prev < ma8_prev and ma3_last > ma8_last) or (deviation_ma < -2.9 and ma2_last > ma4_last)
+                          deviation_buy1 > 0.12 or (ma3_prev < ma8_prev and ma3_last > ma8_last) or (deviation_buy1 < -2.9 and ma2_last > ma4_last)
                           # ti ricordo che la deviation_buy1 = (ma4_last / ma38_last - 1) * 100
 
 
