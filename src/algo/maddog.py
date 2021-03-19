@@ -194,12 +194,12 @@ class maddog:
                         
                         
                         price > price_2_min_ago
+                        and ma2_last > ma2_2_min_ago
+                        
+                        and deviation_ma > 0.10
+                        and deviation > 0.10
                         
                         
-                        and deviation_ma > 0.15
-                        and deviation > 0.17
-                        
-                        and ma3_last > ma3_2_min_ago
                         
                         #and price > price_3_min_ago
                         
@@ -349,7 +349,7 @@ class maddog:
                         
 
             # STOP LOSS (salvagente)
-            if deviation < -0.49 and ma3_last < ma36_last:
+            if deviation < -0.63 and ma2_last < ma36_last:
                 action = "sell"
 
             
