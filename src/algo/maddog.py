@@ -93,7 +93,7 @@ class maddog:
         
 
         # formula "deviation_buy1" (per comprare LA PRIMA VOLTA durante il TREND RIBASSISTA)
-        deviation_buy1 = (ma8_last / ma39_last - 1) * 100 if ma39_last else 0
+        deviation_buy1 = (ma78_last / ma8_last - 1) * 100 if ma8_last else 0
         self.algo_helper.log("deviation_buy1: {}".format(deviation_buy1))
         
         
@@ -117,7 +117,7 @@ class maddog:
         #if ma2_last > ma38_last:
       
         #ma fai cosi' (che la gabbia resterà aperta come se fosse ma78 > ma78 2 min ago !)
-        if ma2_last > ma38_last and deviation_buy1 > -0.36:
+        if ma2_last > ma38_last and deviation_buy1 < 0.20:
             
         #if ma2_last > ma38_last and deviation_buy1 > -0.36: vedi questo valore alle ore 9:43
         # TI RICORDO CHE LA deviation_buy1 prende ma7_last / ma39_last (per es. (47799 / 47966) -1) * 100 = -0.35 !
@@ -166,7 +166,7 @@ class maddog:
                         #se ci ripensa prima di salire prende l' incrocio
                         #GRAZIE COMPA
                         
-                        deviation_buy1 > 0.37 or (ma8_prev < ma39_prev and ma8_last > ma39_last)
+                        deviation_buy1 < 0.15 or (ma8_prev < ma39_prev and ma8_last > ma39_last)
                         and price > price_1_min_ago
                         and price > price_2_min_ago
                         
@@ -210,7 +210,7 @@ class maddog:
                         price > price_2_min_ago
                         and ma2_last > ma2_2_min_ago
                         
-                        and deviation_buy1 > 0.12
+                        and deviation_buy1 < 0.15
                         and deviation > 0.12
                         
                         
@@ -233,7 +233,7 @@ class maddog:
                     if (
                         
                         ma2_last >= ma4_last
-                        and deviation_buy1 > 0.10 or (ma3_prev < ma8_prev and ma3_last > ma8_last and ma12_last > ma12_2_min_ago)
+                        and deviation_buy1 < 0.15 or (ma3_prev < ma8_prev and ma3_last > ma8_last and ma12_last > ma12_2_min_ago)
                         and deviation > 0.10
                         and price > price_2_min_ago
 
