@@ -124,8 +124,8 @@ class ro_cano_che_ritorna:
         
         
 
-        # VENDE DOPO 1800 secondi = 30 minuti ("e se") ro cano torna a casa riga 331
-        max_hold_time_in_seconds = 1800
+        # VENDE DOPO 1800 secondi = 60 minuti ("e se") ro cano torna a casa
+        max_hold_time_in_seconds = 3600
 
         # VENDE DOPO 600 secondi = 10 minuti ("e se") - ro cano perde la forza - riga 323
         max_hold_without_force_time_in_seconds = 600
@@ -421,7 +421,7 @@ class ro_cano_che_ritorna:
                         #and ma36_last >= ma36_2_min_ago
                         #and ma8_last >= ma14_last
                         
-                        deviation_buy1 >= 0.13
+                        deviation_buy1 >= 0.15
                         and deviation_prev > 0.14
                         and deviation_buy > 0.14
                         
@@ -461,7 +461,7 @@ class ro_cano_che_ritorna:
                           #and ma9_last >= ma15_last
                           
 
-                          deviation_buy1 >= 0.13
+                          deviation_buy1 >= 0.15
                           and deviation_prev > 0.14
                           and deviation_buy > 0.14
                           
@@ -509,7 +509,7 @@ class ro_cano_che_ritorna:
                         #and deviation_prev > 0.13
                         #and deviation_buy > 0.15
 
-                        deviation_buy1 > 0.11 or (ma3_prev < ma7_prev and ma3_last > ma7_last)
+                        deviation_buy1 > 0.13 or (ma3_prev < ma7_prev and ma3_last > ma7_last)
                         #deviation_buy1 > 0.08 e' stata aggiunta all' incrocio classico ma3-ma7 (che pero' non sembrava attivarsi...)
                         
                         ###############################################################
@@ -825,13 +825,13 @@ class ro_cano_che_ritorna:
             
            
 
-            # 2) ro cano VENDE " DOPO 100 MINUTI " "max hold time"
-            #elif (
-                #seconds_since_last_trade > max_hold_time_in_seconds
-                #and ma2_last < ma39_last 
-                #and deviation_sell < -0.40
-            #):
-                #action = "sell"
+            #2) ro cano VENDE " DOPO 60 MINUTI " "max hold time" riga 128
+            elif (
+                seconds_since_last_trade > max_hold_time_in_seconds
+                and ma8_last < ma39_last and deviation_sell < -0.35
+                
+            ):
+                action = "sell"
 
         ############### FINE ALGORITH #################
         
