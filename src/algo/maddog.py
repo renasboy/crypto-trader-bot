@@ -166,7 +166,12 @@ class maddog:
                         #se ci ripensa prima di salire prende l' incrocio
                         #GRAZIE COMPA
                         
-                        deviation_buy1 < 0.15 or (ma8_prev < ma39_prev and ma8_last > ma39_last)
+                        #deviation_buy1 < 0.14 or (ma8_prev < ma39_prev and ma8_last > ma39_last) 
+                        #SARA' COSI' ! con incrocio classico !MA DEVI PROVARE ANCORA L' INCROCIO CON deviation buy1 che compra molto piu' alto
+                        
+                        #potrai provare- DICO PROVARE- anche un incrocio anticlassico  ma4<ma38 and ma4>ma50
+                        
+                        deviation_buy1 < 0.14
                         and price > price_1_min_ago
                         and price > price_2_min_ago
                         
@@ -280,12 +285,19 @@ class maddog:
                     
                 elif (
                     
-                    ma2_last < ma34_last 
-                    #and deviation < -0.21 NON FUNZIONA ! rimetto < - 0.65 ! Per adesso soltanto al al buy 1
-                    and deviation < -0.65
                     #ma78_last < ma78_2_min_ago
+                    #and deviation < -0.21 NON FUNZIONA ! rimetto < - 0.65 ! Per adesso soltanto al al buy 1
+                    #and deviation < -0.65
+                    #RIMETTO DEVIATION <-0.22 MA CON MEDIA PIU' ALTA
+                    
+                    ma2_last < ma39_last 
+                    and deviation < -0.22
+                    
+                    
                 ):
                     action = "sell"    
+                    
+                    
                 
                     # cano maddog fa difficilmente un passo falso ! per questo siamo piu' tolleranti sulla perdita dopo il primo acquisto
                     # ciao comba che non mi parli piu'.
