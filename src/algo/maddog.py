@@ -291,7 +291,8 @@ class maddog:
                     #RIMETTO DEVIATION <-0.22 MA CON MEDIA PIU' ALTA
                     
                     ma2_last < ma39_last 
-                    and deviation < -0.22
+                    and deviation < -0.42
+                    # ti ricordo che deviation = (ma2_last / last_trade_price - 1) * 100
                     
                     
                 ):
