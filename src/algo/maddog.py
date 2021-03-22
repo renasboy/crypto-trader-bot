@@ -97,6 +97,17 @@ class maddog:
         self.algo_helper.log("deviation_buy1: {}".format(deviation_buy1))
         
         
+        # formula "deviation_buy2" 
+        deviation_buy2 = (ma8_last / ma78_last - 1) * 100 if ma78_last else 0
+        self.algo_helper.log("deviation_buy2: {}".format(deviation_buy2))
+        
+        
+        # formula "deviation_buy3"
+        deviation_buy3 = (ma8_last / ma78_last - 1) * 100 if ma78_last else 0
+        self.algo_helper.log("deviation_buy3: {}".format(deviation_buy3))
+        
+        
+        
         # formula deviation per comprare un po' piu' sopra del SELL
         deviation = (ma2_last / last_trade_price - 1) * 100 if last_trade_price else 0
         self.algo_helper.log("deviation: {}".format(deviation))
@@ -171,7 +182,7 @@ class maddog:
                         
                         #potrai provare- DICO PROVARE- anche un incrocio anticlassico  ma4<ma38 and ma4>ma50
                         
-                        deviation_buy1 > -0.30
+                        deviation_buy1 > -0.17
                         and price > price_1_min_ago
                         and price > price_2_min_ago
                         
@@ -215,7 +226,7 @@ class maddog:
                         price > price_2_min_ago
                         and ma2_last > ma2_2_min_ago
                         
-                        and deviation_buy1 > 0.10
+                        and deviation_buy2 > 0.12 or (ma5_prev < ma36_prev and ma5_last > ma36_last and ma3_last > ma39_last and ma12_last > ma12_2_min_ago)
                         and deviation > 0.12
                         
                         
@@ -238,7 +249,7 @@ class maddog:
                     if (
                         
                         ma2_last >= ma4_last
-                        and deviation_buy1 > 0.10 or (ma3_prev < ma8_prev and ma3_last > ma8_last and ma12_last > ma12_2_min_ago)
+                        and deviation_buy3 > 0.12 or (ma5_prev < ma36_prev and ma5_last > ma36_last and ma3_last > ma39_last and ma12_last > ma12_2_min_ago)
                         and deviation > 0.10
                         and price > price_2_min_ago
 
@@ -327,7 +338,7 @@ class maddog:
                 elif (
                     
                     ma2_last < ma20_last 
-                    and deviation < -0.65
+                    and deviation < -0.50
                     #ma78_last < ma78_2_min_ago
                 ):
                     action = "sell"      
@@ -367,7 +378,7 @@ class maddog:
                         
 
             # STOP LOSS (salvagente)
-            if deviation < -0.59 and ma2_last < ma34_last:
+            if deviation < -0.56 and ma2_last < ma34_last:
                 action = "sell"
 
             
