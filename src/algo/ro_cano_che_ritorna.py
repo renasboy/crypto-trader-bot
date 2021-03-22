@@ -157,7 +157,7 @@ class ro_cano_che_ritorna:
         #####################################################################################################################
         
         # formula DEVIATION_buy1 per comprare durante il TREND RIBASSISTA ( ma2 deve avere una certa distanza da ma18 )
-        deviation_buy1 = (ma5_last / ma38_last - 1) * 100 if ma38_last else 0
+        deviation_buy1 = (ma6_last / ma38_last - 1) * 100 if ma38_last else 0
         self.algo_helper.log("deviation_buy1: {}".format(deviation_buy1))
         
         
