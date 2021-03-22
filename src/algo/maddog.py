@@ -182,7 +182,9 @@ class maddog:
                         
                         #potrai provare- DICO PROVARE- anche un incrocio anticlassico  ma4<ma38 and ma4>ma50
                         
-                        deviation_buy1 > -0.16
+
+                        #provo a stare sulla ma39 con il maddog invece che sulla ma78
+                        deviation_buy1 > -0.175
                         and price > price_1_min_ago
                         and price > price_2_min_ago
                         
