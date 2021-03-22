@@ -184,7 +184,7 @@ class maddog:
                         
 
                         #provo a stare sulla ma39 con il maddog invece che sulla ma78
-                        deviation_buy1 > -0.165
+                        deviation_buy1 > -0.16
                         
                         and price > price_2_min_ago
                         and price > price_3_min_ago
