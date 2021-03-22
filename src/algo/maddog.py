@@ -228,9 +228,9 @@ class maddog:
                         price > price_2_min_ago
                         and ma2_last > ma2_2_min_ago
                         
-                        and deviation > 0.12
+                        and deviation > 0.18
                         
-                        and deviation_buy2 > 0.12
+                        and deviation_buy2 > 0.15
                         #and deviation_buy2 > 0.12 or (ma5_prev < ma36_prev and ma5_last > ma36_last and ma3_last > ma39_last and ma12_last > ma12_2_min_ago)
                         #SARA' COSI' !
                         
