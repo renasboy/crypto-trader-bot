@@ -184,7 +184,7 @@ class maddog:
                         
 
                         #provo a stare sulla ma39 con il maddog invece che sulla ma78
-                        deviation_buy1 > -0.175
+                        deviation_buy1 > -0.165
                         and price > price_1_min_ago
                         and price > price_2_min_ago
                         
@@ -390,7 +390,7 @@ class maddog:
                         
 
             # STOP LOSS (salvagente)
-            if deviation < -0.56 and ma2_last < ma34_last:
+            if deviation < -0.54 and ma2_last < ma39_last:
                 action = "sell"
 
             
