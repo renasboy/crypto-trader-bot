@@ -401,7 +401,7 @@ class maddog:
             
             # 1) vedi riga 11 per es. DI 1 ORA = 3600 SECONDI "max hold time" " DOPO UN' ORA VENDE SUBITO " e se ma8_last < ma39_last and deviation < -0.40:
             
-            if seconds_since_last_trade > max_hold_time_in_seconds and ma8_last < ma39_last and deviation < -0.40:
+            if seconds_since_last_trade > max_hold_time_in_seconds and ma8_last < ma39_last and deviation < -0.62:
                 
                     
                 action = "sell"
