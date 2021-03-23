@@ -155,6 +155,9 @@ class ro_cano_che_ritorna:
         self.algo_helper.log("deviation_buy: {}".format(deviation_buy))
         
         #####################################################################################################################
+        # formula DEVIATION_gabbia 
+        deviation_gabbia = (ma6_last / ma38_last - 1) * 100 if ma38_last else 0
+        self.algo_helper.log("deviation_gabbia: {}".format(deviation_gabbia))
         
         # formula DEVIATION_buy1 per comprare durante il TREND RIBASSISTA ( ma2 deve avere una certa distanza da ma18 )
         deviation_buy1 = (ma6_last / ma38_last - 1) * 100 if ma38_last else 0
@@ -198,8 +201,8 @@ class ro_cano_che_ritorna:
         #if (ma36_last >= ma36_2_min_ago and ma8_last > ma14_last) or (ma36_last < ma36_2_min_ago and ma2_last > ma4_last):
         
         
-        if ma50_last >= ma50_2_min_ago and deviation_buy1 > -0.20:
-            #ti ricordo che deviation_buy1 = (ma6_last / ma38_last)
+        if ma50_last >= ma50_2_min_ago and deviation_gabbia > -0.20:
+            #ti ricordo che deviation_gabbia = (ma6_last / ma38_last)
             # ti ricordo che deviation_ma = (ma7 / ma50) -1
             # la gabbia continua ad essere aperta anche se trend ma50 si inclina un pochino verso il basso 
             # (o se per es il prezzo, come in precedenti versioni, va sotto la ma50 )
