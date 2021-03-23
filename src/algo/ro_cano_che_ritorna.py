@@ -275,12 +275,7 @@ class ro_cano_che_ritorna:
                 if self.session == 1:
                
                     if (
-                        #prev_price < ma3_prev and price > ma3_last
-                        # purtroppo non funziona
-                        
-                        
-                        
-                        #porto al cane che ritorna il buy del maddog che e' molto bello (ma, attenzione, li la deviation e' 8-39)
+                       
                         #se va su all' improvviso prende la deviation.
                         #se ci ripensa prima di salire prende l' incrocio
                         #GRAZIE COMPA
