@@ -284,9 +284,10 @@ class ro_cano_che_ritorna:
                         price > price_2_min_ago
                         
                         and deviation_buy1 > 0.165
-                        #deviation_buy1 > 0.165 or (ma25_prev < ma78_prev and ma25_last > ma78_last) 
+                        #deviation_buy1 > 0.165 or (ma24_prev < ma78_prev and ma24_last > ma78_last) 
                         #SARA' COSI' !
-                        #potrai aggiungere eventualmente and (ma3_last > ma39_last and ma12_last > ma12_2_min_ago)
+                        
+                        #forse dovrai aggiungere eventualmente and (ma3_last > ma39_last and ma12_last > ma12_2_min_ago)
                         
                         
                         
@@ -367,9 +368,10 @@ class ro_cano_che_ritorna:
                           price > price_2_min_ago
                           
                           and deviation_buy1 > 0.165
-                          #deviation_buy1 > 0.165 or (ma25_prev < ma78_prev and ma25_last > ma78_last) 
+                          #deviation_buy1 > 0.165 or (ma24_prev < ma78_prev and ma24_last > ma78_last) 
                           #SARA' COSI' !
-                          #potrai aggiungere eventualmente and ma3_last > ma39_last and ma12_last > ma12_2_min_ago) 
+                          
+                          #forse dovrai aggiungere eventualmente and ma3_last > ma39_last and ma12_last > ma12_2_min_ago) 
                           
                           # avevo studiato or (deviation_buy1 < -2.9 and ma2_last > ma4_last) per i grandi ribassi
                         
