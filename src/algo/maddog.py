@@ -177,14 +177,18 @@ class maddog:
                         #se ci ripensa prima di salire prende l' incrocio
                         #GRAZIE COMPA
                         
-                        #deviation_buy1 < 0.14 or (ma8_prev < ma39_prev and ma8_last > ma39_last) 
-                        #SARA' COSI' ! con incrocio classico !MA DEVI PROVARE ANCORA L' INCROCIO CON deviation buy1 che compra molto piu' alto
+                        
                         
                         #potrai provare- DICO PROVARE- anche un incrocio anticlassico  ma4<ma38 and ma4>ma50
                         
 
                         #provo a stare sulla ma39 con il maddog invece che sulla ma78
                         deviation_buy1 > -0.15
+                        
+                        #deviation_buy1 > -0.15 or (ma24_prev < ma78_prev and ma24_last > ma78_last) 
+                        #SARA' COSI' ! con incrocio classico ! MA DEVI PROVARE ANCORA L' INCROCIO CON deviation buy1 che compra molto piu' alto
+                        
+                        #forse dovrai aggiungere eventualmente and (ma3_last > ma39_last and ma12_last > ma12_2_min_ago)
                         
                         and price > price_2_min_ago
                         and price > price_3_min_ago
