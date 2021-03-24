@@ -563,7 +563,9 @@ class ro_cano_che_ritorna:
                         and deviation_buy > 0.09
                         and deviation_buy3 > 0.11
                         
-                        
+                        #deve essere anche questo
+                        and ma2_last > ma50_last
+                        and ma2_last > ma78_last
                         
                         #deviation_buy3 > 0.14 or (ma5_prev < ma36_prev and ma5_last > ma36_last and ma3_last > ma39_last and ma12_last > ma12_2_min_ago) 
                         #SARA' COSI' !
@@ -615,6 +617,10 @@ class ro_cano_che_ritorna:
                           and price > price_2_min_ago
                           and deviation_buy > 0.10
                           and deviation_buy3 > 0.12
+                        
+                          #deve essere anche questo
+                          and ma2_last > ma50_last
+                          and ma2_last > ma78_last
                         
                           
                           #deviation_buy3 > 0.14 or (ma5_prev < ma36_prev and ma5_last > ma36_last and ma3_last > ma39_last and ma12_last > ma12_2_min_ago) 
