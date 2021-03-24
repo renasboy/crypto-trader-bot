@@ -159,7 +159,7 @@ class ro_cano_che_ritorna:
         deviation_gabbia = (ma6_last / ma38_last - 1) * 100 if ma38_last else 0
         self.algo_helper.log("deviation_gabbia: {}".format(deviation_gabbia))
         
-        # formula DEVIATION_buy1 per comprare durante il TREND RIBASSISTA ( ma2 deve avere una certa distanza da ma18 )
+        # formula DEVIATION_buy1 per comprare durante il TREND RIBASSISTA 
         deviation_buy1 = (ma6_last / ma38_last - 1) * 100 if ma38_last else 0
         self.algo_helper.log("deviation_buy1: {}".format(deviation_buy1))
         
@@ -283,8 +283,8 @@ class ro_cano_che_ritorna:
                         
                         price > price_2_min_ago
                         
-                        and deviation_buy1 > 0.16
-                        #deviation_buy1 > 0.15 or (ma25_prev < ma78_prev and ma25_last > ma78_last) 
+                        and deviation_buy1 > 0.165
+                        #deviation_buy1 > 0.165 or (ma25_prev < ma78_prev and ma25_last > ma78_last) 
                         #SARA' COSI' !
                         #potrai aggiungere eventualmente and (ma3_last > ma39_last and ma12_last > ma12_2_min_ago)
                         
@@ -366,8 +366,8 @@ class ro_cano_che_ritorna:
                           
                           price > price_2_min_ago
                           
-                          and deviation_buy1 > 0.16
-                          #deviation_buy1 > 0.15 or (ma25_prev < ma78_prev and ma25_last > ma78_last) 
+                          and deviation_buy1 > 0.165
+                          #deviation_buy1 > 0.165 or (ma25_prev < ma78_prev and ma25_last > ma78_last) 
                           #SARA' COSI' !
                           #potrai aggiungere eventualmente and ma3_last > ma39_last and ma12_last > ma12_2_min_ago) 
                           
