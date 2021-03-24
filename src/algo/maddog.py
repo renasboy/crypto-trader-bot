@@ -184,9 +184,9 @@ class maddog:
                         
 
                         #provo a stare sulla ma39 con il maddog invece che sulla ma78
-                        deviation_buy1 > -0.15
+                        deviation_buy1 > -0.145
                         
-                        #deviation_buy1 > -0.15 or (ma24_prev < ma78_prev and ma24_last > ma78_last) 
+                        #deviation_buy1 > -0.145 or (ma24_prev < ma78_prev and ma24_last > ma78_last) 
                         #SARA' COSI' ! con incrocio classico ! MA DEVI PROVARE ANCORA L' INCROCIO CON deviation buy1 che compra molto piu' alto
                         
                         #forse dovrai aggiungere eventualmente and (ma3_last > ma39_last and ma12_last > ma12_2_min_ago)
