@@ -257,6 +257,11 @@ class maddog:
                         ma2_last >= ma4_last
                         and price > price_2_min_ago
                         
+                        #deve essere anche questo
+                        and ma2_last > ma50_last
+                        and ma2_last > ma78_last
+                        
+                        
                         and deviation > 0.09
                         
                         and deviation_buy3 > 0.11
