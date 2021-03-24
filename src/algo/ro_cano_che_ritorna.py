@@ -283,8 +283,8 @@ class ro_cano_che_ritorna:
                         
                         price > price_2_min_ago
                         
-                        and deviation_buy1 > 0.165
-                        #deviation_buy1 > 0.165 or (ma24_prev < ma78_prev and ma24_last > ma78_last) 
+                        and deviation_buy1 > 0.17
+                        #deviation_buy1 > 0.17 or (ma24_prev < ma78_prev and ma24_last > ma78_last) 
                         #SARA' COSI' !
                         
                         #forse dovrai aggiungere eventualmente and (ma3_last > ma39_last and ma12_last > ma12_2_min_ago)
@@ -367,8 +367,8 @@ class ro_cano_che_ritorna:
                           
                           price > price_2_min_ago
                           
-                          and deviation_buy1 > 0.165
-                          #deviation_buy1 > 0.165 or (ma24_prev < ma78_prev and ma24_last > ma78_last) 
+                          and deviation_buy1 > 0.17
+                          #deviation_buy1 > 0.17 or (ma24_prev < ma78_prev and ma24_last > ma78_last) 
                           #SARA' COSI' !
                           
                           #forse dovrai aggiungere eventualmente and ma3_last > ma39_last and ma12_last > ma12_2_min_ago) 
