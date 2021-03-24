@@ -128,7 +128,7 @@ class maddog:
         #if ma2_last > ma38_last:
       
         #ma fai cosi' (che la gabbia resterà aperta come se fosse ma78 > ma78 2 min ago !)
-        if ma2_last > ma38_last and deviation_buy1 > -0.40:
+        if ma2_last > ma38_last and deviation_buy1 > -0.50:
             
         #if ma2_last > ma38_last and deviation_buy1 > -0.36: vedi questo valore alle ore 9:43
         # TI RICORDO CHE LA deviation_buy1 prende (ma8_last / ma78_last - 1) * 100
