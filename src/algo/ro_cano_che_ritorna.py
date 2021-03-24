@@ -151,7 +151,7 @@ class ro_cano_che_ritorna:
         
         
         # formula DEVIATION_buy per comprare UN PO' PIU' SOPRA DEL LAST TRADE ( di solito l' ultimo SELL ) 
-        deviation_buy = (ma3_last / last_trade_price - 1) * 100 if last_trade_price else 0
+        deviation_buy = (ma2_last / last_trade_price - 1) * 100 if last_trade_price else 0
         self.algo_helper.log("deviation_buy: {}".format(deviation_buy))
         
         #####################################################################################################################
@@ -559,9 +559,9 @@ class ro_cano_che_ritorna:
                         
                         #COPIATA DA MADDOG ! la buy 3 era andata in sovrapposizione al sell 2 . vediamo 
                         ma2_last >= ma4_last
-                        and price > price_2_min_ago
-                        and deviation_buy > 0.10
-                        and deviation_buy3 > 0.12
+                        and price >= price_2_min_ago
+                        and deviation_buy > 0.09
+                        and deviation_buy3 > 0.11
                         
                         
                         
@@ -711,7 +711,7 @@ class ro_cano_che_ritorna:
                     ma50_last > ma50_2_min_ago
                     and ma36_last > ma36_2_min_ago
                     and ma2_last < ma15_last 
-                    and deviation_sell > 0.25
+                    and deviation_sell > 0.23
                     
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
                     and ma2_last < ma2_2_min_ago
@@ -744,7 +744,7 @@ class ro_cano_che_ritorna:
                     ma50_last >= ma50_2_min_ago
                     and ma36_last >= ma36_2_min_ago
                     and ma2_last < ma15_last 
-                    and deviation_sell > 0.29
+                    and deviation_sell > 0.24
                     
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
                     and ma2_last < ma2_3_min_ago
@@ -780,7 +780,7 @@ class ro_cano_che_ritorna:
                     ma50_last >= ma50_2_min_ago
                     and ma36_last >= ma36_2_min_ago
                     and ma2_last < ma16_last 
-                    and deviation_sell > 0.29
+                    and deviation_sell > 0.25
                     
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
                     and ma2_last < ma2_2_min_ago
@@ -813,7 +813,7 @@ class ro_cano_che_ritorna:
                     ma50_last > ma50_2_min_ago
                     and ma36_last > ma36_2_min_ago
                     and ma2_last < ma16_last 
-                    and deviation_sell > 0.29
+                    and deviation_sell > 0.26
                     
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
                     and ma2_last < ma2_2_min_ago
@@ -860,7 +860,7 @@ class ro_cano_che_ritorna:
                     ma50_last > ma50_2_min_ago
                     and ma36_last > ma36_2_min_ago
                     and ma2_last < ma20_last 
-                    and deviation_sell < -0.50
+                    and deviation_sell < -0.59
                     
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
                     and ma2_last < ma2_2_min_ago
