@@ -819,7 +819,7 @@ class ro_cano_che_ritorna:
                     ma50_last >= ma50_2_min_ago
                     and ma36_last >= ma36_2_min_ago
                     and deviation_sell < -0.10
-                    and ma2_last < ma38_last
+                    and ma3_last < ma38_last
                     
                     #and deviation_sell < -0.61
                     #and ma2_last < ma20_last
@@ -855,7 +855,7 @@ class ro_cano_che_ritorna:
                     and ma36_last > ma36_2_min_ago
                     
                     and deviation_sell < -0.61
-                    and ma2_last < ma20_last
+                    and ma3_last < ma20_last
                     
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
                     and ma2_last < ma2_2_min_ago
@@ -891,7 +891,7 @@ class ro_cano_che_ritorna:
                     and ma36_last > ma36_2_min_ago
                     
                     and deviation_sell < -0.61
-                    and ma2_last < ma20_last
+                    and ma3_last < ma20_last
                     
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
                     and ma2_last < ma2_2_min_ago
