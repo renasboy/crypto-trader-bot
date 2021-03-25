@@ -279,12 +279,17 @@ class ro_cano_che_ritorna:
                         #se va su all' improvviso prende la deviation.
                         #se ci ripensa prima di salire prende l' incrocio
                         #GRAZIE COMPA
-                        
-                        
                         price > price_2_min_ago
+                        and ma8_prev < ma50_prev and ma8_last > ma50_last or deviation_buy1 > 0.19
                         
-                        and deviation_buy1 > 0.18
+                        
+                        
+                        #and deviation_buy1 > 0.19
+                        
                         #deviation_buy1 > 0.18 or (ma24_prev < ma78_prev and ma24_last > ma78_last)
+                        
+                        
+                        
                         #OPPURE
                         #deviation_buy1 > 0.18 or (ma7_prev < ma38_prev and ma7_last > ma38_last) 
                         #SARA' COSI' !
@@ -372,10 +377,11 @@ class ro_cano_che_ritorna:
                           #se ci ripensa prima di salire prende l' incrocio
                           #GRAZIE COMPA
                           
-                          
                           price > price_2_min_ago
+                          and ma8_prev < ma50_prev and ma8_last > ma50_last or deviation_buy1 > 0.19
                           
-                          and deviation_buy1 > 0.18
+                          
+                          #and deviation_buy1 > 0.19
                           
                           #deviation_buy1 > 0.17 or (ma24_prev < ma78_prev and ma24_last > ma78_last) 
                           #SARA' COSI' !
