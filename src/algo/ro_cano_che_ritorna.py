@@ -378,7 +378,7 @@ class ro_cano_che_ritorna:
                           #GRAZIE COMPA
                           
                           price > price_2_min_ago
-                          and ma8_prev < ma50_prev and ma8_last > ma50_last or deviation_buy1 > 0.19
+                          and ma4_prev < ma50_prev and ma4_last > ma50_last or deviation_buy1 > 0.19
                           
                           
                           #and deviation_buy1 > 0.19
