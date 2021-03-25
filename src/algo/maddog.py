@@ -393,7 +393,7 @@ class maddog:
                     
                 elif (
                     
-                    ma2_last < ma20_last 
+                    ma3_last < ma36_last 
                     and deviation < -0.17
                     #ma78_last < ma78_2_min_ago
                 ):
