@@ -182,8 +182,12 @@ class maddog:
                         
                         #potrai provare- DICO PROVARE- anche un incrocio anticlassico  ma4<ma38 and ma4>ma50
                         
-                        deviation_buy1 > -0.135
                         
+                        #deviation_buy1 > -0.13
+                        
+                        ma13_prev < ma38_prev and ma13_last > ma38_last or deviation_buy1 > -0.13
+                        and price > price_2_min_ago
+                        and price > price_3_min_ago
                         
                         
                         #deviation_buy1 > -0.145 or (ma24_prev < ma78_prev and ma24_last > ma78_last) 
@@ -193,8 +197,7 @@ class maddog:
                         
                         #forse dovrai aggiungere eventualmente and (ma3_last > ma39_last and ma12_last > ma12_2_min_ago)
                         
-                        and price > price_2_min_ago
-                        and price > price_3_min_ago
+                        
                         
                         
                         #and (ma2_prev < ma3_prev and ma2_last > ma3_last and ma12_last > ma12_2_min_ago)
