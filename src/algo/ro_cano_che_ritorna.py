@@ -283,11 +283,19 @@ class ro_cano_che_ritorna:
                         
                         price > price_2_min_ago
                         
-                        and deviation_buy1 > 0.17
-                        #deviation_buy1 > 0.17 or (ma24_prev < ma78_prev and ma24_last > ma78_last) 
+                        and deviation_buy1 > 0.18
+                        #deviation_buy1 > 0.18 or (ma24_prev < ma78_prev and ma24_last > ma78_last)
+                        #OPPURE
+                        #deviation_buy1 > 0.18 or (ma7_prev < ma38_prev and ma7_last > ma38_last) 
                         #SARA' COSI' !
                         
-                        #forse dovrai aggiungere eventualmente and (ma3_last > ma39_last and ma12_last > ma12_2_min_ago)
+                        # E forse dovrai aggiungere eventualmente and (ma3_last > ma39_last and ma12_last > ma12_2_min_ago)
+                        
+                        #oppure INCROCIO ANTICLASSICO
+                        #ma4<ma38 and ma4>ma50 !
+                        
+                        
+                        
                         
                         
                         
@@ -367,7 +375,8 @@ class ro_cano_che_ritorna:
                           
                           price > price_2_min_ago
                           
-                          and deviation_buy1 > 0.17
+                          and deviation_buy1 > 0.18
+                          
                           #deviation_buy1 > 0.17 or (ma24_prev < ma78_prev and ma24_last > ma78_last) 
                           #SARA' COSI' !
                           
@@ -459,7 +468,7 @@ class ro_cano_che_ritorna:
                         #and ma36_last >= ma36_2_min_ago
                         #and ma8_last >= ma14_last
                         
-                        deviation_buy2 >= 0.17
+                        deviation_buy2 >= 0.16
                         # ma6>ma38
                         
                         and deviation_buy > 0.17
@@ -506,7 +515,7 @@ class ro_cano_che_ritorna:
                           #and ma9_last >= ma15_last
                           
 
-                          deviation_buy2 >= 0.17
+                          deviation_buy2 >= 0.16
                           
                           and deviation_buy > 0.17
                           
@@ -698,8 +707,9 @@ class ro_cano_che_ritorna:
                 elif (
                     ma50_last > ma50_2_min_ago
                     and ma36_last > ma36_2_min_ago
-                    and ma2_last < ma39_last 
+                    
                     and deviation_sell < -0.62
+                    and ma2_last < ma39_last 
                     
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
                     and ma2_last < ma2_2_min_ago
@@ -731,9 +741,10 @@ class ro_cano_che_ritorna:
                 elif (
                     ma50_last >= ma50_2_min_ago
                     and ma36_last >= ma36_2_min_ago
-                    and ma2_last < ma39_last 
-                    and deviation_sell < -0.62
                     
+                    and deviation_sell < -0.62
+                    and ma2_last < ma39_last
+                   
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
                     and ma2_last < ma2_2_min_ago
                 ):
@@ -764,8 +775,9 @@ class ro_cano_che_ritorna:
                 elif (
                     ma50_last >= ma50_2_min_ago
                     and ma36_last >= ma36_2_min_ago
-                    and ma2_last < ma36_last 
+                    
                     and deviation_sell < -0.62
+                    and ma2_last < ma36_last
                     
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
                     and ma2_last < ma2_3_min_ago
@@ -800,8 +812,9 @@ class ro_cano_che_ritorna:
                 elif (
                     ma50_last >= ma50_2_min_ago
                     and ma36_last >= ma36_2_min_ago
-                    and ma2_last < ma20_last 
-                    and deviation_sell < -0.59
+                    
+                    and deviation_sell < -0.61
+                    and ma2_last < ma20_last
                     
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
                     and ma2_last < ma2_2_min_ago
@@ -832,8 +845,9 @@ class ro_cano_che_ritorna:
                 elif (
                     ma50_last > ma50_2_min_ago
                     and ma36_last > ma36_2_min_ago
-                    and ma2_last < ma20_last 
-                    and deviation_sell < -0.59
+                    
+                    and deviation_sell < -0.61
+                    and ma2_last < ma20_last
                     
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
                     and ma2_last < ma2_2_min_ago
@@ -867,8 +881,9 @@ class ro_cano_che_ritorna:
                 elif (
                     ma50_last > ma50_2_min_ago
                     and ma36_last > ma36_2_min_ago
-                    and ma2_last < ma20_last 
-                    and deviation_sell < -0.59
+                    
+                    and deviation_sell < -0.61
+                    and ma2_last < ma20_last
                     
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
                     and ma2_last < ma2_2_min_ago
@@ -886,7 +901,7 @@ class ro_cano_che_ritorna:
             # se ma100_last < ma100_13_min_ago vende in un altro modo
             
             if (
-                ma2_last < ma36_last and deviation_sell < -0.63 or (ma2_last < ma36_last and deviation_sell < -0.35)
+                ma2_last < ma36_last and deviation_sell < -0.63 or (ma2_last < ma36_last and deviation_sell < -0.64)
                 
                 
               
@@ -908,7 +923,7 @@ class ro_cano_che_ritorna:
             #2) ro cano VENDE " DOPO 60 MINUTI " "max hold time" riga 128
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
-                and ma8_last < ma39_last and deviation_sell < -0.49
+                and ma8_last < ma39_last and deviation_sell < -0.60
                 
             ):
                 action = "sell"
