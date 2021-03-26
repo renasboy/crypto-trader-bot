@@ -961,6 +961,6 @@ class ro_cano_che_ritorna:
         #ole ### ## 
         
         #sempre ole #######
-        ###### AVE COMBA #
+        ###### AVE COMBA ##
 
         
