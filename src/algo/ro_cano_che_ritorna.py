@@ -86,7 +86,7 @@ class ro_cano_che_ritorna:
         seconds_since_last_trade = self.algo_helper.seconds_since_last_trade
         
 
-        #############
+        ##############
 
 
 
