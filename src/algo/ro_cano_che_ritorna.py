@@ -285,7 +285,7 @@ class ro_cano_che_ritorna:
                         # vedi grafico B -IL PREZZO NON SARA' PIU' ALT0 E NON COMPRERA' "LA PRIMA VOLTA" CHE INCROCIA AL RIALZO
                         
                         
-                        #and ma4_prev < ma50_prev and ma4_last > ma50_last or deviation_buy1 > 0.19 DEVO PROVARE L' INCROCIO PERCHE' NON SONO SICURO CHE SI SIA ATTIVATO
+                        #and ma4_prev < ma50_prev and ma4_last > ma50_last or deviation_buy1 > 0.195 DEVO PROVARE L' INCROCIO PERCHE' NON SONO SICURO CHE SI SIA ATTIVATO
                         and ma4_prev < ma50_prev and ma4_last > ma50_last
                         
                         
@@ -387,7 +387,7 @@ class ro_cano_che_ritorna:
                           # vedi grafico B
                           
                           and ma4_prev < ma50_prev and ma4_last > ma50_last
-                          #and ma4_prev < ma50_prev and ma4_last > ma50_last or deviation_buy1 > 0.19
+                          #and ma4_prev < ma50_prev and ma4_last > ma50_last or deviation_buy1 > 0.195
                           
                           
                           #and deviation_buy1 > 0.19
