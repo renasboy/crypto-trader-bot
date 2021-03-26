@@ -962,6 +962,6 @@ class ro_cano_che_ritorna:
         
         #sempre ole #######
         ###### AVE COMBA #### 
-        ##
+        ## non fa reset
 
         
