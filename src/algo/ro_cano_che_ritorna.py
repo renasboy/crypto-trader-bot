@@ -772,8 +772,6 @@ class ro_cano_che_ritorna:
 
             elif seconds_since_last_trade > 300 and seconds_since_last_trade <= 720:
                 
-                
-                
 
                 if (
                     ma50_last >= ma50_2_min_ago
