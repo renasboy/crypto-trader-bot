@@ -203,7 +203,7 @@ class ro_cano_che_ritorna:
         
         if ma50_last >= ma50_2_min_ago and deviation_gabbia > -0.20:
             #ti ricordo che deviation_gabbia = (ma6_last / ma38_last)
-            # ti ricordo che deviation_ma = (ma7 / ma50) -1
+            
             # la gabbia continua ad essere aperta anche se trend ma50 si inclina un pochino verso il basso 
             # (o se per es il prezzo, come in precedenti versioni, va sotto la ma50 )
             #a questo punto la compra 2 deve essere piu' veloce (che vado a cambiare)
