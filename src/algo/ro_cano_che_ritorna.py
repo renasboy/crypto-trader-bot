@@ -280,8 +280,8 @@ class ro_cano_che_ritorna:
                         #se ci ripensa prima di salire prende l' incrocio
                         #GRAZIE COMPA
                         price > price_2_min_ago
-                        and ma4_prev < ma50_prev and ma4_last > ma50_last or deviation_buy1 > 0.19
-                        
+                        #and ma4_prev < ma50_prev and ma4_last > ma50_last or deviation_buy1 > 0.19 DEVO PROVARE L' INCROCIO PERCHE' NON SONO SICURO CHE SI SIA ATTIVATO
+                        and ma4_prev < ma50_prev and ma4_last > ma50_last
                         
                         
                         #and deviation_buy1 > 0.19
@@ -378,7 +378,8 @@ class ro_cano_che_ritorna:
                           #GRAZIE COMPA
                           
                           price > price_2_min_ago
-                          and ma4_prev < ma50_prev and ma4_last > ma50_last or deviation_buy1 > 0.19
+                          and ma4_prev < ma50_prev and ma4_last > ma50_last
+                          #and ma4_prev < ma50_prev and ma4_last > ma50_last or deviation_buy1 > 0.19
                           
                           
                           #and deviation_buy1 > 0.19
