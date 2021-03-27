@@ -281,7 +281,7 @@ class ro_cano_che_ritorna:
                         #GRAZIE COMPA
                         
                         price > price_2_min_ago
-                        price > price_3_min_ago
+                        and price > price_3_min_ago
                         # vedi grafico B -IL PREZZO NON SARA' PIU' ALT0 E NON COMPRERA' "LA PRIMA VOLTA" CHE INCROCIA AL RIALZO
                         
                         
