@@ -384,7 +384,7 @@ class ro_cano_che_ritorna:
                           #GRAZIE COMPA
                           
                           price > price_2_min_ago
-                          price > price_3_min_ago
+                          and price > price_3_min_ago
                           # vedi grafico B
                           
                           and ma7_prev < ma50_prev and ma7_last > ma50_last
