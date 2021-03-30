@@ -44,6 +44,7 @@ class ro_cano_che_ritorna:
         ma36_last, ma36_prev = self.algo_helper.ma_last_prev(36)
         ma38_last, ma38_prev = self.algo_helper.ma_last_prev(38)
         ma39_last, ma39_prev = self.algo_helper.ma_last_prev(39)
+        ma40_last, ma40_prev = self.algo_helper.ma_last_prev(40)
         ma50_last, ma50_prev = self.algo_helper.ma_last_prev(50)
         ma54_last, ma54_prev = self.algo_helper.ma_last_prev(54)
         ma60_last, ma60_prev = self.algo_helper.ma_last_prev(60)
@@ -506,7 +507,7 @@ class ro_cano_che_ritorna:
                         #and ma2_last > ma2_2_min_ago
                         #and ma4_last > ma4_2_min_ago
                         
-                        and ma3_last > ma39_last
+                        and ma3_last > ma40_last
                         #incredibile ma vero E' NECESSARIA quando deve ricomprare dopo la correzione al ribasso
                         
                         
@@ -553,7 +554,7 @@ class ro_cano_che_ritorna:
                           #and ma2_last > ma2_2_min_ago
                           #and ma4_last > ma4_2_min_ago
                           
-                          and ma3_last > ma39_last
+                          and ma3_last > ma40_last
                           #incredibile ma vero E' NECESSARIA quando deve ricomprare dopo la correzione al ribasso
                           
                           
@@ -603,7 +604,7 @@ class ro_cano_che_ritorna:
                         and ma2_last > ma50_last
                         and ma2_last > ma78_last
                         
-                        and ma3_last > ma39_last
+                        and ma3_last > ma40_last
                         #incredibile ma vero E' NECESSARIA quando deve ricomprare dopo la correzione al ribasso
                         
                         #deviation_buy3 > 0.14 or (ma5_prev < ma36_prev and ma5_last > ma36_last and ma3_last > ma39_last and ma12_last > ma12_2_min_ago) 
@@ -663,7 +664,7 @@ class ro_cano_che_ritorna:
                           and ma2_last > ma50_last
                           and ma2_last > ma78_last
                           
-                          and ma3_last > ma39_last
+                          and ma3_last > ma40_last
                           #incredibile ma vero E' NECESSARIA quando deve ricomprare dopo la correzione al ribasso
                           
                           #deviation_buy3 > 0.14 or (ma5_prev < ma36_prev and ma5_last > ma36_last and ma3_last > ma39_last and ma12_last > ma12_2_min_ago) 
