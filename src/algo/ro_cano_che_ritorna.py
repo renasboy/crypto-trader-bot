@@ -731,7 +731,7 @@ class ro_cano_che_ritorna:
                     and ma2_last < ma2_2_min_ago
                     
                     #metto la chiusura della gabbia per essere sicuro che venda !
-                    and if ma50_last < ma50_2_min_ago and deviation_gabbia < -0.20
+                    
                     #deviation_gabbia = ma6_last / ma38_last
                 ):
                    
@@ -744,14 +744,14 @@ class ro_cano_che_ritorna:
                     ma50_last > ma50_2_min_ago
                     and ma36_last > ma36_2_min_ago
                     
-                    and deviation_sell < -0.62
+                    and deviation_sell < -0.62 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.20)
                     and ma2_last < ma39_last
                     
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
                     and ma2_last < ma2_2_min_ago
                     
                     #metto la chiusura della gabbia per essere sicuro che venda !
-                    and if ma50_last < ma50_2_min_ago and deviation_gabbia < -0.20
+                    
                     #deviation_gabbia = ma6_last / ma38_last
                     
                 ):
@@ -776,7 +776,7 @@ class ro_cano_che_ritorna:
                     and ma2_last < ma2_2_min_ago
                     
                     #metto la chiusura della gabbia per essere sicuro che venda !
-                    and if ma50_last < ma50_2_min_ago and deviation_gabbia < -0.20
+                    
                     #deviation_gabbia = ma6_last / ma38_last
                   
                 ):
@@ -787,14 +787,14 @@ class ro_cano_che_ritorna:
                     ma50_last >= ma50_2_min_ago
                     and ma36_last >= ma36_2_min_ago
                     
-                    and deviation_sell < -0.62 and ma2_last < ma39_last or ( ma2_last < ma50_last and deviation_sell < -0.29 )
+                    and deviation_sell < -0.62 and ma2_last < ma39_last or ( ma2_last < ma50_last and deviation_sell < -0.29 ) or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.20)
                     
                    
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
                     and ma2_last < ma2_2_min_ago
                     
                     #metto la chiusura della gabbia per essere sicuro che venda !
-                    and if ma50_last < ma50_2_min_ago and deviation_gabbia < -0.20
+                    
                     #deviation_gabbia = ma6_last / ma38_last
                     
                 ):
@@ -817,7 +817,7 @@ class ro_cano_che_ritorna:
                     and ma2_last < ma2_3_min_ago
                     
                     #metto la chiusura della gabbia per essere sicuro che venda !
-                    and if ma50_last < ma50_2_min_ago and deviation_gabbia < -0.20
+                    
                     #deviation_gabbia = ma6_last / ma38_last
                     
                 ):
@@ -829,14 +829,14 @@ class ro_cano_che_ritorna:
                     ma50_last >= ma50_2_min_ago
                     and ma36_last >= ma36_2_min_ago
                     
-                    and deviation_sell < -0.52 and ma2_last < ma36_last or ( ma2_last < ma50_last and deviation_sell < -0.29 )
+                    and deviation_sell < -0.52 and ma2_last < ma36_last or (ma2_last < ma50_last and deviation_sell < -0.29) or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.20)
                     
                     
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
                     and ma2_last < ma2_3_min_ago
                     
                     #metto la chiusura della gabbia per essere sicuro che venda !
-                    and if ma50_last < ma50_2_min_ago and deviation_gabbia < -0.20
+                    
                     #deviation_gabbia = ma6_last / ma38_last
                     
                 ):
@@ -864,7 +864,7 @@ class ro_cano_che_ritorna:
                     and ma2_last < ma2_2_min_ago
                     
                     #metto la chiusura della gabbia per essere sicuro che venda !
-                    and if ma50_last < ma50_2_min_ago and deviation_gabbia < -0.20
+                    
                     #deviation_gabbia = ma6_last / ma38_last
                     
                     
@@ -875,7 +875,7 @@ class ro_cano_che_ritorna:
                 elif (
                     ma50_last >= ma50_2_min_ago
                     and ma36_last >= ma36_2_min_ago
-                    and deviation_sell < -0.59 and ma3_last < ma38_last or ( ma2_last < ma50_last and deviation_sell < -0.29 )
+                    and deviation_sell < -0.59 and ma3_last < ma38_last or ( ma2_last < ma50_last and deviation_sell < -0.29 ) or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.20)
                     
                     
                     #and deviation_sell < -0.61
@@ -885,7 +885,7 @@ class ro_cano_che_ritorna:
                     and ma2_last < ma2_2_min_ago
                     
                     #metto la chiusura della gabbia per essere sicuro che venda !
-                    and if ma50_last < ma50_2_min_ago and deviation_gabbia < -0.20
+                    
                     #deviation_gabbia = ma6_last / ma38_last
                     
                 ):
@@ -910,7 +910,7 @@ class ro_cano_che_ritorna:
                     and ma2_last < ma2_2_min_ago
                     
                     #metto la chiusura della gabbia per essere sicuro che venda !
-                    and if ma50_last < ma50_2_min_ago and deviation_gabbia < -0.20
+                    
                     #deviation_gabbia = ma6_last / ma38_last
                     
                 ):
@@ -921,14 +921,14 @@ class ro_cano_che_ritorna:
                     ma50_last > ma50_2_min_ago
                     and ma36_last > ma36_2_min_ago
                     
-                    and deviation_sell < -0.61 and ma3_last < ma20_last or ( ma2_last < ma50_last and deviation_sell < -0.29 )
+                    and deviation_sell < -0.61 and ma3_last < ma20_last or (ma2_last < ma50_last and deviation_sell < -0.29) or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.20)
                     
                     
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
                     and ma2_last < ma2_2_min_ago
                     
                     #metto la chiusura della gabbia per essere sicuro che venda !
-                    and if ma50_last < ma50_2_min_ago and deviation_gabbia < -0.20
+                  
                     #deviation_gabbia = ma6_last / ma38_last
                     
                 ):
@@ -953,7 +953,7 @@ class ro_cano_che_ritorna:
                     and ma2_last < ma2_2_min_ago
                     
                     #metto la chiusura della gabbia per essere sicuro che venda !
-                    and if ma50_last < ma50_2_min_ago and deviation_gabbia < -0.20
+                    
                     #deviation_gabbia = ma6_last / ma38_last
                     
                 ):
@@ -967,14 +967,14 @@ class ro_cano_che_ritorna:
                     ma50_last > ma50_2_min_ago
                     and ma36_last > ma36_2_min_ago
                     
-                    and deviation_sell < -0.50 and ma3_last < ma20_last or ( ma2_last < ma50_last and deviation_sell < -0.29 )
+                    and deviation_sell < -0.50 and ma3_last < ma20_last or (ma2_last < ma50_last and deviation_sell < -0.29) or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.20)
                     
                     
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
                     and ma2_last < ma2_2_min_ago
                     
                     #metto la chiusura della gabbia per essere sicuro che venda !
-                    and if ma50_last < ma50_2_min_ago and deviation_gabbia < -0.20
+                    
                     #deviation_gabbia = ma6_last / ma38_last
                     
                 ):
