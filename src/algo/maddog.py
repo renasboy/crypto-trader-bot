@@ -41,6 +41,7 @@ class maddog:
         ma36_last, ma36_prev = self.algo_helper.ma_last_prev(36)
         ma38_last, ma38_prev = self.algo_helper.ma_last_prev(38)
         ma39_last, ma39_prev = self.algo_helper.ma_last_prev(39)
+        ma40_last, ma40_prev = self.algo_helper.ma_last_prev(40)
         ma43_last, ma43_prev = self.algo_helper.ma_last_prev(43)
         ma48_last, ma48_prev = self.algo_helper.ma_last_prev(48)
         ma50_last, ma50_prev = self.algo_helper.ma_last_prev(50)
@@ -240,7 +241,7 @@ class maddog:
                         price > price_2_min_ago
                         and ma2_last > ma2_2_min_ago
                         
-                        and ma3_last > ma39_last
+                        and ma3_last > ma40_last
                         #incredibile ma vero E' NECESSARIA quando deve ricomprare dopo la correzione al ribasso
                         
                         and deviation > 0.18
@@ -279,7 +280,7 @@ class maddog:
                         and ma2_last > ma50_last
                         and ma2_last > ma78_last
                         
-                        and ma3_last > ma39_last
+                        and ma3_last > ma40_last
                         #incredibile ma vero E' NECESSARIA quando deve ricomprare dopo la correzione al ribasso
                         
                         and deviation > 0.085
