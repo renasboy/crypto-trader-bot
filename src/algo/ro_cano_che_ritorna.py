@@ -165,7 +165,7 @@ class ro_cano_che_ritorna:
         
         
         # formula DEVIATION_buy2 per la compra 2 
-        deviation_buy2 = (ma6_last / ma38_last - 1) * 100 if ma38_last else 0
+        deviation_buy2 = (ma8_last / ma78_last - 1) * 100 if ma78_last else 0
         self.algo_helper.log("deviation_buy2: {}".format(deviation_buy2))
         
         
@@ -485,8 +485,8 @@ class ro_cano_che_ritorna:
                         #and ma36_last >= ma36_2_min_ago
                         #and ma8_last >= ma14_last
                         
-                        deviation_buy2 >= 0.16
-                        # ma6>ma38
+                        deviation_buy2 >= 0.15
+                        # ma8>ma78
                         
                         and deviation_buy > 0.17
                         #punto verde dall' ultimo punto rosso (ma3-last trade)
@@ -535,7 +535,7 @@ class ro_cano_che_ritorna:
                           #and ma9_last >= ma15_last
                           
 
-                          deviation_buy2 >= 0.16
+                          deviation_buy2 >= 0.15
                           
                           and deviation_buy > 0.17
                           
@@ -593,8 +593,11 @@ class ro_cano_che_ritorna:
                         #COPIATA DA MADDOG ! la buy 3 era andata in sovrapposizione al sell 2 . vediamo 
                         ma2_last >= ma4_last
                         and price >= price_2_min_ago
-                        and deviation_buy > 0.09
-                        and deviation_buy3 > 0.11
+                        
+                        and deviation_buy > 0.085
+                        
+                        and deviation_buy3 > 0.105
+                        #deviation_buy3 = (ma8_last / ma78_last
                         
                         #deve essere anche questo
                         and ma2_last > ma50_last
@@ -651,8 +654,10 @@ class ro_cano_che_ritorna:
                           #COPIATA DA MADDOG ! la buy 3 era andata in sovrapposizione al sell 2 . vediamo 
                           ma2_last >= ma4_last
                           and price > price_2_min_ago
-                          and deviation_buy > 0.10
-                          and deviation_buy3 > 0.12
+                          
+                          and deviation_buy > 0.085
+                        
+                          and deviation_buy3 > 0.105
                         
                           #deve essere anche questo
                           and ma2_last > ma50_last
