@@ -289,7 +289,14 @@ class ro_cano_che_ritorna:
                         #and ma4_prev < ma50_prev and ma4_last > ma50_last or deviation_buy1 > 0.195 DEVO PROVARE L' INCROCIO PERCHE' NON SONO SICURO CHE SI SIA ATTIVATO
                         #and ma4_prev < ma50_prev and ma4_last > ma50_last NON SEMPRE FA LA COMPRA NELLA SECONDA RISALITA
                         #ALLORA METTO ma7 - ma50 in modo tale che PRICE E' SCESO UN PO' E NON COMPRA NELLA PRIMA RISALITA
-                        and ma8_prev < ma50_prev and ma8_last > ma50_last
+                        #and ma8_prev < ma50_prev and ma8_last > ma50_last
+                        # 8-50 PRENDE NEL PRIMO ROUND MA non prende NEL SECONDO ROUND !
+                        
+                        #E' ARRIVATO IL MOMENTO DELL' INCROCIO ANTICLASSICO (8-50) (8-60)
+                        #l' incrocio anticlassico (4-39) (4-50) sembra troppo PRECIPITOSO
+                        
+                        #AVE COMBARO MEO - HIGH HOPES - ROMA 30 MARZO 2021
+                        and ma8_prev < ma50_prev and ma8_last > ma60_last
                         
                         #and deviation_buy1 > 0.19
                         
@@ -388,7 +395,12 @@ class ro_cano_che_ritorna:
                           and price > price_3_min_ago
                           # vedi grafico B
                           
-                          and ma8_prev < ma50_prev and ma8_last > ma50_last
+                          #and ma8_prev < ma50_prev and ma8_last > ma50_last
+                        
+                          #ECCO L' INCROCIO ANTICLASSICO - vediamo se funziona !
+                          and ma8_prev < ma50_prev and ma8_last > ma60_last
+                        
+                          
                           #and ma4_prev < ma50_prev and ma4_last > ma50_last VEDI BUY 1 SOPRA
                           #and ma4_prev < ma50_prev and ma4_last > ma50_last or deviation_buy1 > 0.195
                           
