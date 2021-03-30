@@ -298,7 +298,9 @@ class ro_cano_che_ritorna:
                         #AVE COMBARO MEO - HIGH HOPES - ROMA 30 MARZO 2021
                         and ma8_prev < ma50_prev and ma8_last > ma60_last
                         
-                        #and deviation_buy1 > 0.19
+                        #or deviation_buy1 > 0.19
+                        #TIENITI PRONTA PER ANDARE SULLA RIGA 299
+                        
                         
                         #deviation_buy1 > 0.18 or (ma24_prev < ma78_prev and ma24_last > ma78_last)
                         
@@ -405,7 +407,8 @@ class ro_cano_che_ritorna:
                           #and ma4_prev < ma50_prev and ma4_last > ma50_last or deviation_buy1 > 0.195
                           
                           
-                          #and deviation_buy1 > 0.19
+                          #or deviation_buy1 > 0.19
+                          #TIENITI PRONTA PER ANDARE SULLA RIGA 410
                           
                           #deviation_buy1 > 0.17 or (ma24_prev < ma78_prev and ma24_last > ma78_last) 
                           #SARA' COSI' !
