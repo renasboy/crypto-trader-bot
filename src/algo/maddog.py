@@ -324,11 +324,11 @@ class maddog:
                 
                 if (
                     
-                    ma2_last < ma16_last 
-                    and deviation > 0.25
+                    ma2_last < ma16_last and deviation > 0.25 or (ma2_last < ma38_last and deviation_buy1 < -0.40)
+                    
                     
                     #porto in ogni sell il contrario dell' apertura gabbia ! - in una occasione non si sono attivate le vendite !
-                    and if ma2_last < ma38_last and deviation_buy1 < -0.40
+                    
                     #deviation_buy1 = ma8_last / ma78_last
                     
                     #ma78_last > ma78_2_min_ago
@@ -346,12 +346,12 @@ class maddog:
                     #and deviation < -0.65
                     #RIMETTO DEVIATION <-0.22 MA CON MEDIA PIU' ALTA
                     
-                    ma2_last < ma39_last 
-                    and deviation < -0.59
+                    ma2_last < ma39_last and deviation < -0.59 or (ma2_last < ma38_last and deviation_buy1 < -0.40)
+                   
                     # ti ricordo che deviation = (ma2_last / last_trade_price - 1) * 100
                     
                     #porto in ogni sell il contrario dell' apertura gabbia ! - in una occasione non si sono attivate le vendite !
-                    and if ma2_last < ma38_last and deviation_buy1 < -0.40
+                    
                     #deviation_buy1 = ma8_last / ma78_last
                     
                     
@@ -374,12 +374,12 @@ class maddog:
                
                 if (
                     
-                    ma2_last < ma15_last 
-                    and deviation > 0.25
+                    ma2_last < ma15_last and deviation < -0.59 or (ma2_last < ma38_last and deviation_buy1 < -0.40)
+                    
                     #ma78_last > ma78_2_min_ago
                     
                     #porto in ogni sell il contrario dell' apertura gabbia ! - in una occasione non si sono attivate le vendite !
-                    and if ma2_last < ma38_last and deviation_buy1 < -0.40
+                    
                     #deviation_buy1 = ma8_last / ma78_last
                     
                     
@@ -398,7 +398,7 @@ class maddog:
                     #ma78_last < ma78_2_min_ago
                     
                     #porto in ogni sell il contrario dell' apertura gabbia ! - in una occasione non si sono attivate le vendite !
-                    and if ma2_last < ma38_last and deviation_buy1 < -0.40
+                    and if ma2_last < ma38_last and deviation_buy1 < -0.59 or (ma2_last < ma38_last and deviation_buy1 < -0.40)
                     #deviation_buy1 = ma8_last / ma78_last
                     
                     
@@ -420,7 +420,7 @@ class maddog:
                     #ma78_last > ma78_2_min_ago
                     
                     #porto in ogni sell il contrario dell' apertura gabbia ! - in una occasione non si sono attivate le vendite !
-                    and if ma2_last < ma38_last and deviation_buy1 < -0.40
+                    and if ma2_last < ma38_last and deviation_buy1 < -0.40 or (ma2_last < ma38_last and deviation_buy1 < -0.40)
                     #deviation_buy1 = ma8_last / ma78_last
                     
                     
@@ -439,7 +439,7 @@ class maddog:
                     #ma78_last < ma78_2_min_ago
                     
                     #porto in ogni sell il contrario dell' apertura gabbia ! - in una occasione non si sono attivate le vendite !
-                    and if ma2_last < ma38_last and deviation_buy1 < -0.40
+                    and if ma2_last < ma38_last and deviation_buy1 < -0.40 or (ma2_last < ma38_last and deviation_buy1 < -0.40)
                     #deviation_buy1 = ma8_last / ma78_last
                     
                     
