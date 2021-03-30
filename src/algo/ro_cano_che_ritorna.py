@@ -497,6 +497,7 @@ class ro_cano_che_ritorna:
                         #deviation_buy2 > 0.15 or (ma5_prev < ma36_prev and ma5_last > ma36_last and ma3_last > ma39_last and ma12_last > ma12_2_min_ago) 
                         #SARA' COSI' !
                         
+                        
                         and ma2_last > ma2_2_min_ago
                         and price > price_1_min_ago
                         and price > price_2_min_ago
@@ -504,7 +505,9 @@ class ro_cano_che_ritorna:
                         #and ma2_last > ma7_last
                         #and ma2_last > ma2_2_min_ago
                         #and ma4_last > ma4_2_min_ago
-                    
+                        
+                        and ma3_last > ma39_last
+                        #incredibile ma vero E' NECESSARIA quando deve ricomprare dopo la correzione al ribasso
                         
                         
                        
@@ -549,7 +552,9 @@ class ro_cano_che_ritorna:
                           #and ma2_last > ma7_last
                           #and ma2_last > ma2_2_min_ago
                           #and ma4_last > ma4_2_min_ago
-                         
+                          
+                          and ma3_last > ma39_last
+                          #incredibile ma vero E' NECESSARIA quando deve ricomprare dopo la correzione al ribasso
                           
                           
                  
@@ -594,6 +599,9 @@ class ro_cano_che_ritorna:
                         #deve essere anche questo
                         and ma2_last > ma50_last
                         and ma2_last > ma78_last
+                        
+                        and ma3_last > ma39_last
+                        #incredibile ma vero E' NECESSARIA quando deve ricomprare dopo la correzione al ribasso
                         
                         #deviation_buy3 > 0.14 or (ma5_prev < ma36_prev and ma5_last > ma36_last and ma3_last > ma39_last and ma12_last > ma12_2_min_ago) 
                         #SARA' COSI' !
@@ -649,7 +657,9 @@ class ro_cano_che_ritorna:
                           #deve essere anche questo
                           and ma2_last > ma50_last
                           and ma2_last > ma78_last
-                        
+                          
+                          and ma3_last > ma39_last
+                          #incredibile ma vero E' NECESSARIA quando deve ricomprare dopo la correzione al ribasso
                           
                           #deviation_buy3 > 0.14 or (ma5_prev < ma36_prev and ma5_last > ma36_last and ma3_last > ma39_last and ma12_last > ma12_2_min_ago) 
                           #SARA' COSI' !
