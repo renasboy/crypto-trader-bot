@@ -325,7 +325,7 @@ class maddog:
                 
                 if (
                     
-                    ma2_last < ma16_last and deviation > 0.25
+                    ma2_last < ma15_last and deviation > 0.20
                     
                     #porto in ogni sell il contrario dell' apertura gabbia ! - in una occasione non si sono attivate le vendite !
                     
