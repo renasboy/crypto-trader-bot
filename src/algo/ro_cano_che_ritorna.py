@@ -616,9 +616,9 @@ class ro_cano_che_ritorna:
                         ma2_last >= ma4_last
                         and price >= price_2_min_ago
                         
-                        and deviation_buy > 0.085
+                        and deviation_buy > 0.08
                         
-                        and deviation_buy3 > 0.105
+                        and deviation_buy3 > 0.10
                         #deviation_buy3 = (ma8_last / ma78_last
                         
                         #deve essere anche questo
@@ -677,9 +677,9 @@ class ro_cano_che_ritorna:
                           ma2_last >= ma4_last
                           and price > price_2_min_ago
                           
-                          and deviation_buy > 0.085
+                          and deviation_buy > 0.08
                         
-                          and deviation_buy3 > 0.105
+                          and deviation_buy3 > 0.10
                         
                           #deve essere anche questo
                           and ma2_last > ma50_last
