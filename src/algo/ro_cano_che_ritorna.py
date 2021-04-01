@@ -507,10 +507,10 @@ class ro_cano_che_ritorna:
                         #and ma36_last >= ma36_2_min_ago
                         #and ma8_last >= ma14_last
                         
-                        deviation_buy2 >= 0.15
+                        deviation_buy2 >= 0.14
                         # ma8>ma78
                         
-                        and deviation_buy > 0.17
+                        and deviation_buy > 0.16
                         #punto verde dall' ultimo punto rosso (ma3-last trade)
                         
                         and deviation_prev > 0.14
@@ -557,9 +557,9 @@ class ro_cano_che_ritorna:
                           #and ma9_last >= ma15_last
                           
 
-                          deviation_buy2 >= 0.15
+                          deviation_buy2 >= 0.14
                           
-                          and deviation_buy > 0.17
+                          and deviation_buy > 0.16
                           
                           and deviation_prev > 0.14
                           
