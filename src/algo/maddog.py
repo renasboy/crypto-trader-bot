@@ -115,6 +115,10 @@ class maddog:
         self.algo_helper.log("deviation: {}".format(deviation))
         
         
+        # formula deviation per vendere un po' piu' giu' di ma78
+        deviation_sell = (ma2_last / ma78_last - 1) * 100 if ma78_last else 0
+        self.algo_helper.log("deviation: {}".format(deviation_sell))
+        
         
 
         #####################################################################################################################################################
