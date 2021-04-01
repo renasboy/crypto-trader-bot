@@ -350,7 +350,7 @@ class maddog:
                     #and deviation < -0.65
                     #RIMETTO DEVIATION <-0.22 MA CON MEDIA PIU' ALTA
                     
-                    ma2_last < ma39_last and deviation < -0.59 or (ma2_last < ma38_last and deviation_buy1 < -0.36)
+                    deviation_sell < -0.30 or (ma2_last < ma38_last and deviation_buy1 < -0.36)
                    
                     # ti ricordo che deviation = (ma2_last / last_trade_price - 1) * 100
                     
@@ -402,7 +402,7 @@ class maddog:
                     #ma78_last < ma78_2_min_ago
                     
                     #porto in ogni sell il contrario dell' apertura gabbia ! - in una occasione non si sono attivate le vendite !
-                    and ma2_last < ma38_last and deviation_buy1 < -0.59 or (ma2_last < ma38_last and deviation_buy1 < -0.36)
+                    and deviation_sell < -0.30 or (ma2_last < ma38_last and deviation_buy1 < -0.36)
                     #deviation_buy1 = ma8_last / ma78_last
                     
                     
@@ -438,7 +438,7 @@ class maddog:
                     
                 elif (
                     
-                    ma3_last < ma36_last and deviation < -0.17 or (ma2_last < ma38_last and deviation_buy1 < -0.36)
+                    deviation_sell < -0.22 or (ma2_last < ma38_last and deviation_buy1 < -0.36)
                     
                     #ma78_last < ma78_2_min_ago
                     
