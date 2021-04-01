@@ -767,7 +767,7 @@ class ro_cano_che_ritorna:
                     and ma36_last > ma36_2_min_ago
                     
                     and deviation_sell < -0.62 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.20)
-                    and ma2_last < ma39_last
+                    and ma2_last < ma39_last < -0.49
                     
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
                     and ma2_last < ma2_2_min_ago
