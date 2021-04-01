@@ -299,7 +299,7 @@ class ro_cano_che_ritorna:
                         #and ma8_prev < ma50_prev and ma8_last > ma60_last
                         
                         #OLE ALTRO INCROCIO ANTICLASSICO - VEDI SE FUNZIONA
-                        and ma8_prev < ma50_prev and ma4_last > ma60_last
+                        and ma8_prev < ma50_prev and ma6_last > ma60_last
                         
                         
                         #or deviation_buy1 > 0.19
@@ -406,7 +406,7 @@ class ro_cano_che_ritorna:
                           #ECCO L' INCROCIO ANTICLASSICO - vediamo se funziona !
                           #and ma8_prev < ma50_prev and ma8_last > ma60_last
                           #ALTRO INCROCIO ANTICLASSICO - vedi se funziona
-                          and ma8_prev < ma50_prev and ma4_last > ma60_last
+                          and ma8_prev < ma50_prev and ma6_last > ma60_last
 
 
                           #and ma4_prev < ma50_prev and ma4_last > ma50_last VEDI BUY 1 SOPRA
