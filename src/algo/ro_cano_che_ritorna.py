@@ -271,7 +271,7 @@ class ro_cano_che_ritorna:
 ###################################################################################################################################################
 ###################################################################################################################################################
 
-                # COMPRA sessione 1  
+                # COMPRA sessione 1
           
                 if self.session == 1:
                
@@ -283,6 +283,12 @@ class ro_cano_che_ritorna:
                         
                         price > price_2_min_ago
                         and price > price_3_min_ago
+                        and ma8_prev < ma50_prev and ma6_last > ma60_last or deviation_buy1 > 0.19
+                        
+                        #roma 2 aprile 2021 - BUY 1
+                        
+                        
+                        
                         # vedi grafico B -IL PREZZO NON SARA' PIU' ALT0 E NON COMPRERA' "LA PRIMA VOLTA" CHE INCROCIA AL RIALZO
                         
                         
@@ -299,7 +305,7 @@ class ro_cano_che_ritorna:
                         #and ma8_prev < ma50_prev and ma8_last > ma60_last
                         
                         #OLE ALTRO INCROCIO ANTICLASSICO - VEDI SE FUNZIONA
-                        and ma8_prev < ma50_prev and ma6_last > ma60_last
+                        #and ma8_prev < ma50_prev and ma6_last > ma60_last
                         
                         
                         #or deviation_buy1 > 0.19
@@ -399,14 +405,21 @@ class ro_cano_che_ritorna:
                           
                           price > price_2_min_ago
                           and price > price_3_min_ago
+                          and ma8_prev < ma50_prev and ma6_last > ma60_last or deviation_buy1 > 0.19
+                        
+                          #roma 2 aprile 2021 - BUY 1
+                          
+                        
+                          
                           # vedi grafico B
                           
                           #and ma8_prev < ma50_prev and ma8_last > ma50_last
                         
                           #ECCO L' INCROCIO ANTICLASSICO - vediamo se funziona !
                           #and ma8_prev < ma50_prev and ma8_last > ma60_last
-                          #ALTRO INCROCIO ANTICLASSICO - vedi se funziona
-                          and ma8_prev < ma50_prev and ma6_last > ma60_last
+                          
+                          #ALTRO INCROCIO ANTICLASSICO - vedi se funziona - funziona ma come al solito l' incrocio ha il problema che non prende sempre 
+                          #and ma8_prev < ma50_prev and ma6_last > ma60_last
 
 
                           #and ma4_prev < ma50_prev and ma4_last > ma50_last VEDI BUY 1 SOPRA
