@@ -202,7 +202,7 @@ class ro_cano_che_ritorna:
         #if (ma36_last >= ma36_2_min_ago and ma8_last > ma14_last) or (ma36_last < ma36_2_min_ago and ma2_last > ma4_last):
         
         
-        if ma50_last >= ma50_2_min_ago and deviation_gabbia > -0.20:
+        if ma50_last >= ma50_2_min_ago and deviation_gabbia > -0.15:
             #ti ricordo che deviation_gabbia = (ma6_last / ma38_last)
             
             # la gabbia continua ad essere aperta anche se trend ma50 si inclina un pochino verso il basso 
@@ -520,7 +520,7 @@ class ro_cano_che_ritorna:
                         #and ma36_last >= ma36_2_min_ago
                         #and ma8_last >= ma14_last
                         
-                        deviation_buy2 >= 0.14
+                        deviation_buy2 >= 0.15
                         # ma8>ma78
                         
                         and deviation_buy > 0.16
@@ -570,7 +570,7 @@ class ro_cano_che_ritorna:
                           #and ma9_last >= ma15_last
                           
 
-                          deviation_buy2 >= 0.14
+                          deviation_buy2 >= 0.15
                           
                           and deviation_buy > 0.16
                           
@@ -779,7 +779,7 @@ class ro_cano_che_ritorna:
                     #ma50_last > ma50_2_min_ago
                     #and ma36_last > ma36_2_min_ago
                     
-                    deviation_sell < -0.62 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.20)
+                    deviation_sell < -0.62 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.15)
                     #and ma2_last < ma39_last < -0.49
                     
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
@@ -822,7 +822,7 @@ class ro_cano_che_ritorna:
                     #ma50_last >= ma50_2_min_ago
                     #and ma36_last >= ma36_2_min_ago
                     
-                    deviation_sell < -0.62 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.20)
+                    deviation_sell < -0.62 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.15)
                     
                    
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
@@ -864,7 +864,7 @@ class ro_cano_che_ritorna:
                     #ma50_last >= ma50_2_min_ago
                     #and ma36_last >= ma36_2_min_ago
                     
-                    deviation_sell < -0.62 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.20)
+                    deviation_sell < -0.62 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.15)
                     
                     
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
@@ -910,7 +910,7 @@ class ro_cano_che_ritorna:
                 elif (
                     #ma50_last >= ma50_2_min_ago
                     #and ma36_last >= ma36_2_min_ago
-                    deviation_sell < -0.62 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.20)
+                    deviation_sell < -0.62 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.15)
                     
                     
                     #and deviation_sell < -0.61
@@ -956,7 +956,7 @@ class ro_cano_che_ritorna:
                     #ma50_last > ma50_2_min_ago
                     #and ma36_last > ma36_2_min_ago
                     
-                    deviation_sell < -0.59 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.20)
+                    deviation_sell < -0.59 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.15)
                     
                     
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
@@ -1002,7 +1002,7 @@ class ro_cano_che_ritorna:
                     #ma50_last > ma50_2_min_ago
                     #and ma36_last > ma36_2_min_ago
                     
-                    deviation_sell < -0.59 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.20)
+                    deviation_sell < -0.59 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.15)
                     
                     
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
