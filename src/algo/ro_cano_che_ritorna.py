@@ -738,9 +738,9 @@ class ro_cano_che_ritorna:
             # VENDITA 1 - con fasce di tempo !
 
             #    minuti
-            #   0 -  3 -----------and ma2_last < ma34_last and deviation_sell < -0.17 c'e' vita su marte ! VENDI DOPO IL PRIMO BUY SE CI PROVA MA IL TREND CHE SCENDE !
-            #   3 -  5 -----------and ma2_last < ma34_last and deviation_sell < -0.17 c'e' vita su marte !
-            #   5 - 12 -----------and ma2_last < ma34_last and deviation_sell < -0.17 c'e' vita su marte !
+            #   0 -  3 -----------if 13 > 39 vende come adesso ma se 13 < 39 vende 0,10 prima - c'e' vita su marte !
+            #   3 -  5 -----------
+            #   5 - 12 -----------
             
             #  12 - 18 ----------- 
             #  18 - 30 -----------
@@ -779,7 +779,32 @@ class ro_cano_che_ritorna:
                     #ma50_last > ma50_2_min_ago
                     #and ma36_last > ma36_2_min_ago
                     
-                    deviation_sell < -0.62 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.15)
+                    ma13_last >= ma39_last
+                    
+                    and deviation_sell < -0.62 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.15)
+                    #and ma2_last < ma39_last < -0.49
+                    
+                    #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
+                    and ma2_last < ma2_2_min_ago
+                    
+                    #metto la chiusura della gabbia per essere sicuro che venda !
+                    
+                    #deviation_gabbia = ma6_last / ma38_last
+                    
+                ):
+                   
+                    action = "sell"
+                    
+                    
+                    
+                    
+                elif (
+                    #ma50_last > ma50_2_min_ago
+                    #and ma36_last > ma36_2_min_ago
+                    
+                    ma13_last < ma39_last
+                    
+                    and deviation_sell < -0.52 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.10)
                     #and ma2_last < ma39_last < -0.49
                     
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
