@@ -760,7 +760,7 @@ class ro_cano_che_ritorna:
                     #and ma36_last > ma36_2_min_ago
                     ma2_last < ma15_last 
                     and deviation_sell > 0.15
-                    
+                    #deviation_sell = ma2_last / last_trade_price
                     
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
                     and ma2_last < ma2_2_min_ago
@@ -782,6 +782,9 @@ class ro_cano_che_ritorna:
                     ma13_last >= ma39_last
                     
                     and deviation_sell < -0.62 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.15)
+                    #deviation_sell = ma2_last / last_trade_price
+                    
+                    
                     #and ma2_last < ma39_last < -0.49
                     
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
@@ -805,6 +808,8 @@ class ro_cano_che_ritorna:
                     ma13_last < ma39_last
                     
                     and deviation_sell < -0.52 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.10)
+                    #deviation_sell = ma2_last / last_trade_price
+                    
                     #and ma2_last < ma39_last < -0.49
                     
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
@@ -831,6 +836,8 @@ class ro_cano_che_ritorna:
                     #and ma36_last > ma36_2_min_ago
                     ma2_last < ma15_last 
                     and deviation_sell > 0.15
+                    #deviation_sell = ma2_last / last_trade_price
+                    
                     
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
                     and ma2_last < ma2_2_min_ago
@@ -849,7 +856,7 @@ class ro_cano_che_ritorna:
                     ma13_last >= ma39_last
                     
                     and deviation_sell < -0.62 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.15)
-                    
+                    #deviation_sell = ma2_last / last_trade_price
                    
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
                     and ma2_last < ma2_2_min_ago
@@ -869,7 +876,7 @@ class ro_cano_che_ritorna:
                     ma13_last < ma39_last
                     
                     and deviation_sell < -0.52 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.10)
-                    
+                    #deviation_sell = ma2_last / last_trade_price
                    
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
                     and ma2_last < ma2_2_min_ago
@@ -891,8 +898,10 @@ class ro_cano_che_ritorna:
                 if (
                     #ma50_last >= ma50_2_min_ago
                     #and ma36_last >= ma36_2_min_ago
-                    ma2_last < ma17_last 
+                    ma2_last < ma17_last
                     and deviation_sell > 0.15
+                    #deviation_sell = ma2_last / last_trade_price
+                    
                     
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
                     and ma2_last < ma2_3_min_ago
@@ -909,9 +918,9 @@ class ro_cano_che_ritorna:
                 elif (
                     #ma50_last >= ma50_2_min_ago
                     #and ma36_last >= ma36_2_min_ago
-                    
-                    deviation_sell < -0.62 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.15)
-                    
+                    ma13_last >= ma39_last
+                    and deviation_sell < -0.62 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.15)
+                    #deviation_sell = ma2_last / last_trade_price
                     
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
                     and ma2_last < ma2_3_min_ago
@@ -925,11 +934,30 @@ class ro_cano_che_ritorna:
                     
                     
                     
+                elif (
+                    #ma50_last >= ma50_2_min_ago
+                    #and ma36_last >= ma36_2_min_ago
+                    ma13_last < ma39_last
+                    and deviation_sell < -0.52 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.10)
+                    #deviation_sell = ma2_last / last_trade_price
+                    
+                    #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
+                    and ma2_last < ma2_3_min_ago
+                    
+                    #metto la chiusura della gabbia per essere sicuro che venda !
+                    
+                    #deviation_gabbia = ma6_last / ma38_last
+                    
+                ):
+                    action = "sell"
+                        
+                    
+                    
                     
                     
                     
             
-                    
+            #######################################################################################################12-18 min        
 
             # VENDITA - da 12 a 18 minuti = da 720 a 1080 secondi
 
@@ -940,6 +968,8 @@ class ro_cano_che_ritorna:
                     #and ma36_last >= ma36_2_min_ago
                     ma2_last < ma17_last 
                     and deviation_sell > 0.12
+                    #deviation_sell = ma2_last / last_trade_price
+                    
                     
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
                     and ma2_last < ma2_2_min_ago
@@ -956,8 +986,10 @@ class ro_cano_che_ritorna:
                 elif (
                     #ma50_last >= ma50_2_min_ago
                     #and ma36_last >= ma36_2_min_ago
-                    deviation_sell < -0.62 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.15)
                     
+                    ma13_last >= ma39_last
+                    and deviation_sell < -0.62 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.15)
+                    #deviation_sell = ma2_last / last_trade_price
                     
                     #and deviation_sell < -0.61
                     #and ma2_last < ma20_last
@@ -973,8 +1005,31 @@ class ro_cano_che_ritorna:
                     action = "sell"
                     
                     
+                elif (
+                    #ma50_last >= ma50_2_min_ago
+                    #and ma36_last >= ma36_2_min_ago
+                    
+                    ma13_last < ma39_last
+                    and deviation_sell < -0.52 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.10)
+                    #deviation_sell = ma2_last / last_trade_price
+                    
+                    #and deviation_sell < -0.61
+                    #and ma2_last < ma20_last
+                    
+                    #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
+                    and ma2_last < ma2_2_min_ago
+                    
+                    #metto la chiusura della gabbia per essere sicuro che venda !
+                    
+                    #deviation_gabbia = ma6_last / ma38_last
+                    
+                ):
+                    action = "sell"   
+                    
           
-
+            ################################################################################################################################18-30 min
+            
+            
             # VENDITA - da 18 a 30 minuti = da 1080 a 1800 secondi
 
             elif seconds_since_last_trade > 1080 and seconds_since_last_trade <= 1800:
@@ -986,6 +1041,8 @@ class ro_cano_che_ritorna:
                     #and ma36_last > ma36_2_min_ago
                     ma2_last < ma17_last 
                     and deviation_sell > 0.12
+                    #deviation_sell = ma2_last / last_trade_price
+                    
                     
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
                     and ma2_last < ma2_2_min_ago
@@ -1002,8 +1059,9 @@ class ro_cano_che_ritorna:
                     #ma50_last > ma50_2_min_ago
                     #and ma36_last > ma36_2_min_ago
                     
-                    deviation_sell < -0.59 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.15)
-                    
+                    ma13_last >= ma39_last
+                    and deviation_sell < -0.59 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.15)
+                    #deviation_sell = ma2_last / last_trade_price
                     
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
                     and ma2_last < ma2_2_min_ago
@@ -1016,9 +1074,27 @@ class ro_cano_che_ritorna:
                     action = "sell"
                     
                     
+                elif (
+                    #ma50_last > ma50_2_min_ago
+                    #and ma36_last > ma36_2_min_ago
+                    
+                    ma13_last < ma39_last
+                    and deviation_sell < -0.49 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.10)
+                    #deviation_sell = ma2_last / last_trade_price
+                    
+                    #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
+                    and ma2_last < ma2_2_min_ago
+                    
+                    #metto la chiusura della gabbia per essere sicuro che venda !
+                  
+                    #deviation_gabbia = ma6_last / ma38_last
+                    
+                ):
+                    action = "sell"   
+                    
                     
               
-
+            ########################################################################################################################>30 min
             # VENDITA - da 30 minuti in poi = da 1800 secondi in poi
 
             elif seconds_since_last_trade > 1800:
@@ -1029,6 +1105,7 @@ class ro_cano_che_ritorna:
                     #and ma36_last > ma36_2_min_ago
                     ma2_last < ma17_last 
                     and deviation_sell > 0.12
+                    #deviation_sell = ma2_last / last_trade_price
                     
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
                     and ma2_last < ma2_2_min_ago
@@ -1047,9 +1124,9 @@ class ro_cano_che_ritorna:
                 elif (
                     #ma50_last > ma50_2_min_ago
                     #and ma36_last > ma36_2_min_ago
-                    
-                    deviation_sell < -0.59 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.15)
-                    
+                    ma13_last >= ma39_last
+                    and deviation_sell < -0.59 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.15)
+                    #deviation_sell = ma2_last / last_trade_price
                     
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
                     and ma2_last < ma2_2_min_ago
@@ -1062,8 +1139,25 @@ class ro_cano_che_ritorna:
                     action = "sell"
                     
                     
+                elif (
+                    #ma50_last > ma50_2_min_ago
+                    #and ma36_last > ma36_2_min_ago
+                    ma13_last < ma39_last
+                    and deviation_sell < -0.49 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.10)
+                    #deviation_sell = ma2_last / last_trade_price
                     
-              
+                    #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
+                    and ma2_last < ma2_2_min_ago
+                    
+                    #metto la chiusura della gabbia per essere sicuro che venda !
+                    
+                    #deviation_gabbia = ma6_last / ma38_last
+                    
+                ):
+                    action = "sell"   
+                    
+                    
+            ################################################################################################################################## 
 
             #########################################################################################
 
