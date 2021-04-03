@@ -748,7 +748,7 @@ class ro_cano_che_ritorna:
 
             ##################################################################################
             
-            
+            ###########################################################################################################################0 -3 min
 
             # VENDITA - da 0 a 3 minuti = da 0 a 180 secondi
 
@@ -819,7 +819,7 @@ class ro_cano_che_ritorna:
                     action = "sell"
                     
                     
-                    
+         #########################################################################################################################3-5 min           
 
             # VENDITA - da 3 a 5 minuti = da 180 a 300 secondi
 
@@ -846,8 +846,29 @@ class ro_cano_che_ritorna:
                 elif (
                     #ma50_last >= ma50_2_min_ago
                     #and ma36_last >= ma36_2_min_ago
+                    ma13_last >= ma39_last
                     
-                    deviation_sell < -0.62 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.15)
+                    and deviation_sell < -0.62 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.15)
+                    
+                   
+                    #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
+                    and ma2_last < ma2_2_min_ago
+                    
+                    #metto la chiusura della gabbia per essere sicuro che venda !
+                    
+                    #deviation_gabbia = ma6_last / ma38_last
+                    
+                ):
+                    action = "sell"
+                    
+                    
+                    
+                elif (
+                    #ma50_last >= ma50_2_min_ago
+                    #and ma36_last >= ma36_2_min_ago
+                    ma13_last < ma39_last
+                    
+                    and deviation_sell < -0.52 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.10)
                     
                    
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
@@ -860,7 +881,7 @@ class ro_cano_che_ritorna:
                 ):
                     action = "sell"
           
-                    
+            ########################################################################################################################5-12 min         
                 
             # VENDITA - da 5 a 12 minuti = da 300 a 720 secondi
 
