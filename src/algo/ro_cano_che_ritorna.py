@@ -1212,6 +1212,6 @@ class ro_cano_che_ritorna:
         ## non fa reset ## bla bla bla ...##
         ##
         
-        #
+        ##
 
         
