@@ -283,7 +283,7 @@ class ro_cano_che_ritorna:
                         
                         price > price_2_min_ago
                         and price > price_3_min_ago
-                        and ma8_prev < ma50_prev and ma6_last > ma60_last or deviation_buy1 > 0.19
+                        and ma8_prev < ma50_prev and ma6_last > ma60_last or deviation_buy1 > 0.13
                         
                         #roma 2 aprile 2021 - BUY 1
                         
@@ -405,7 +405,7 @@ class ro_cano_che_ritorna:
                           
                           price > price_2_min_ago
                           and price > price_3_min_ago
-                          and ma8_prev < ma50_prev and ma6_last > ma60_last or deviation_buy1 > 0.19
+                          and ma8_prev < ma50_prev and ma6_last > ma60_last or deviation_buy1 > 0.13
                         
                           #roma 2 aprile 2021 - BUY 1
                           
