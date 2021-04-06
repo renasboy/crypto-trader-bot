@@ -191,7 +191,9 @@ class maddog:
                         
                         
                         
-                        ma13_prev < ma39_prev and ma13_last > ma78_last or deviation_buy1 > 0.125 
+                        ma13_prev < ma39_prev and ma13_last > ma78_last or deviation_buy1 > 0.17
+                        #deviation_buy1 = ma8_last / ma78_last
+                        
                         #STO PROVANDO L' INCROCIO
                         #ma13_prev < ma39_prev and ma13_last > ma38_last or deviation_buy1 > -0.125 
                         and price > price_2_min_ago
