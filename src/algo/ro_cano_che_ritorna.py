@@ -151,9 +151,6 @@ class ro_cano_che_ritorna:
         
         
         
-        # formula DEVIATION_buy per comprare UN PO' PIU' SOPRA DEL LAST TRADE ( di solito l' ultimo SELL ) 
-        deviation_buy = (ma2_last / last_trade_price - 1) * 100 if last_trade_price else 0
-        self.algo_helper.log("deviation_buy: {}".format(deviation_buy))
         
         #####################################################################################################################
         # formula DEVIATION_gabbia 
@@ -176,15 +173,24 @@ class ro_cano_che_ritorna:
         
         ########################################################################################################################
         
+        
+        # formula DEVIATION_buy per comprare UN PO' PIU' SOPRA DEL LAST TRADE ( di solito l' ultimo SELL ) 
+        deviation_buy = (ma2_last / last_trade_price - 1) * 100 if last_trade_price else 0
+        self.algo_helper.log("deviation_buy: {}".format(deviation_buy))
+        
         # formula DEVIATION_prev per comprare UN PO' PIU' SOPRA DEL PREV TRADE ( di solito l' ultimo BUY )
         deviation_prev = (price / prev_trade_price - 1) * 100 if prev_trade_price else 0
         self.algo_helper.log("deviation_prev: {}".format(deviation_prev))
-      
 
         # formula DEVIATION_sell per vendere
         deviation_sell = (ma2_last / last_trade_price - 1) * 100 if last_trade_price else 0
         self.algo_helper.log("deviation_sell: {}".format(deviation_sell))
+        
+        
+        
 
+        ###################################################################################################################################
+        
         
 
         # DEFAULT ACTION DICE DI NON FARE NIENTE (=None, NON TOCCARE)
@@ -523,7 +529,7 @@ class ro_cano_che_ritorna:
                         deviation_buy2 >= 0.15
                         # ma8>ma78
                         
-                        and deviation_buy > 0.16
+                        and deviation_buy > 0.17
                         #punto verde dall' ultimo punto rosso (ma3-last trade)
                         
                         and deviation_prev > 0.14
@@ -572,7 +578,7 @@ class ro_cano_che_ritorna:
 
                           deviation_buy2 >= 0.15
                           
-                          and deviation_buy > 0.16
+                          and deviation_buy > 0.17
                           
                           and deviation_prev > 0.14
                           
