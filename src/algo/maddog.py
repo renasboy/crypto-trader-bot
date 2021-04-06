@@ -350,8 +350,9 @@ class maddog:
                     #and deviation < -0.65
                     #RIMETTO DEVIATION <-0.22 MA CON MEDIA PIU' ALTA
                     
-                    deviation_sell < -0.33 or (ma2_last < ma38_last and deviation_buy1 < -0.43)
-                   
+                    deviation_sell < -0.13 or (ma2_last < ma38_last and deviation_buy1 < -0.43)
+                    #deviation_sell = (ma2_last / ma78_last
+                    
                     # ti ricordo che deviation = (ma2_last / last_trade_price - 1) * 100
                     
                     #porto in ogni sell il contrario dell' apertura gabbia ! - in una occasione non si sono attivate le vendite !
@@ -402,7 +403,9 @@ class maddog:
                     #ma78_last < ma78_2_min_ago
                     
                     #porto in ogni sell il contrario dell' apertura gabbia ! - in una occasione non si sono attivate le vendite !
-                    and deviation_sell < -0.33 or (ma2_last < ma38_last and deviation_buy1 < -0.43)
+                    and deviation_sell < -0.13 or (ma2_last < ma38_last and deviation_buy1 < -0.43)
+                    #deviation_sell = (ma2_last / ma78_last
+                    
                     #deviation_buy1 = ma8_last / ma78_last
                     
                     
@@ -438,8 +441,9 @@ class maddog:
                     
                 elif (
                     
-                    deviation_sell < -0.30 or (ma2_last < ma38_last and deviation_buy1 < -0.40)
-                    
+                    deviation_sell < -0.10 or (ma2_last < ma38_last and deviation_buy1 < -0.40)
+                    #deviation_sell = (ma2_last / ma78_last
+                                      
                     #ma78_last < ma78_2_min_ago
                     
                     #porto in ogni sell il contrario dell' apertura gabbia ! - in una occasione non si sono attivate le vendite !
@@ -459,7 +463,7 @@ class maddog:
 
             # STOP LOSS (salvagente)
             
-            if ma2_last < ma39_last and deviation < -0.61:
+            if ma2_last < ma39_last and deviation < -0.69:
                 action = "sell"
             
            
@@ -469,7 +473,7 @@ class maddog:
             
             # 1) vedi riga 11 per es. DI 1 ORA = 3600 SECONDI "max hold time" " DOPO UN' ORA VENDE SUBITO " e se ma8_last < ma39_last and deviation < -0.40:
             
-            if seconds_since_last_trade > max_hold_time_in_seconds and ma8_last < ma39_last and deviation < -0.62:
+            if seconds_since_last_trade > max_hold_time_in_seconds and ma8_last < ma39_last and deviation < -0.69:
                 
                     
                 action = "sell"
