@@ -87,8 +87,9 @@ class maddog:
         price_1_min_ago = self.algo_helper.price_minutes_ago(1)
         price_2_min_ago = self.algo_helper.price_minutes_ago(2)
         price_3_min_ago = self.algo_helper.price_minutes_ago(3)
+        price_4_min_ago = self.algo_helper.price_minutes_ago(4)
         price_7_min_ago = self.algo_helper.price_minutes_ago(7)
-    
+        
     
         #######################################################################################################################################################    
         ###################################################################################################################################################### 
@@ -198,7 +199,7 @@ class maddog:
                         #ma13_prev < ma39_prev and ma13_last > ma38_last or deviation_buy1 > -0.125 
                         and price > price_2_min_ago
                         and price > price_3_min_ago
-                        
+                        and price > price_4_min_ago
                         
                         #deviation_buy1 > -0.145 or (ma24_prev < ma78_prev and ma24_last > ma78_last) 
                         #SARA' COSI' ! con incrocio classico ! MA DEVI PROVARE ANCORA L' INCROCIO CON deviation buy1 che compra molto piu' alto
