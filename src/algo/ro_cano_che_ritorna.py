@@ -11,7 +11,7 @@ class ro_cano_che_ritorna:
 
         # moving average (2-3-4-5-x)
         
-        ma1_last, ma1_prev = self.algo_helper.ma_last_prev(1)
+        
         ma2_last, ma2_prev = self.algo_helper.ma_last_prev(2)
         
         ma3_last, ma3_prev = self.algo_helper.ma_last_prev(3)
@@ -78,19 +78,15 @@ class ro_cano_che_ritorna:
         ma50_2_min_ago = self.algo_helper.ma_minutes_ago(50, 2)
         ma50_3_min_ago = self.algo_helper.ma_minutes_ago(50, 3)
         ma78_2_min_ago = self.algo_helper.ma_minutes_ago(78, 2)
-        ma100_2_min_ago = self.algo_helper.ma_minutes_ago(100, 2)
-        ma100_13_min_ago = self.algo_helper.ma_minutes_ago(100, 13)
+        
+        
         
         
         # LAST TRADE
         last_trade_action = self.algo_helper.last_trade_action
         last_trade_price = self.algo_helper.last_trade_price
         seconds_since_last_trade = self.algo_helper.seconds_since_last_trade
-        
-
-        ##############
-
-
+       
 
         # PREV TRADE
         prev_trade_action = self.algo_helper.prev_trade_action
@@ -98,22 +94,14 @@ class ro_cano_che_ritorna:
         prev_trade_price = self.algo_helper.prev_trade_price
         seconds_since_prev_trade = self.algo_helper.seconds_since_prev_trade
         
-        ###########################
+       
         #########################################################################################################################################################
         
         # PREZZO DI ADESSO (di mercato) - CURRENT PRICE
         price = self.algo_helper.price
-        
-        
-        
-        # PREZZO DI "PRIMA" (di mercato) - PREV PRICE....................prova. vediamo se funziona - sembra di NO
-        #prev_price = self.algo_helper.prev_price
-        
-        # PREZZO DI "DOPO" (di mercato) - LAST PRICE.....................prova. vediamo se funziona - sembra di NO
-        #last_price = self.algo_helper.last_price
-        
+       
         ##########################################################################################################################################################
-        #############################
+        
         
         # PREZZO di X MINUTI FA (di mercato) - PREV PRICE
         price_1_min_ago = self.algo_helper.price_minutes_ago(1)
@@ -146,14 +134,7 @@ class ro_cano_che_ritorna:
         min_prev_buy_delay_in_seconds = 1200
 
        ##############################################################################################################################################################
-        
-        
-        
-        
-        
-        
-        
-        #####################################################################################################################
+    
         # formula DEVIATION_gabbia 
         deviation_gabbia = (ma6_last / ma38_last - 1) * 100 if ma38_last else 0
         self.algo_helper.log("deviation_gabbia: {}".format(deviation_gabbia))
@@ -187,9 +168,6 @@ class ro_cano_che_ritorna:
         deviation_sell = (ma2_last / last_trade_price - 1) * 100 if last_trade_price else 0
         self.algo_helper.log("deviation_sell: {}".format(deviation_sell))
         
-        
-        
-
         ###################################################################################################################################
         
         
@@ -203,19 +181,9 @@ class ro_cano_che_ritorna:
 
         # APRE E CHIUDE GABBIA
 
-        #si apriva la GABBIA se
-      
-        #condizione comparo meo - si apre la gabbia in 2 modi differenti !
-        #if (ma36_last >= ma36_2_min_ago and ma8_last > ma14_last) or (ma36_last < ma36_2_min_ago and ma2_last > ma4_last):
-        
-        
         if ma50_last >= ma50_2_min_ago and deviation_gabbia > -0.15:
             #ti ricordo che deviation_gabbia = (ma6_last / ma38_last)
-            
-            # la gabbia continua ad essere aperta anche se trend ma50 si inclina un pochino verso il basso 
-            # (o se per es il prezzo, come in precedenti versioni, va sotto la ma50 )
-            #a questo punto la compra 2 deve essere piu' veloce (che vado a cambiare)
-        
+           
             
             # NON TOCCARE QUESTA CONDIZIONE SERVE PER APERTURA DI GABBIA !
             if not self.session or not self.open:
@@ -262,21 +230,12 @@ class ro_cano_che_ritorna:
                     seconds_since_last_trade == 0
                     or seconds_since_last_trade > min_buy_delay_in_seconds
                 )
-                
-             ######################################################################
-             ######################################################################
-                
-             # compa, forse qua manca deviation_ma
-                
-                # ma, domanda, vale per tutte le righe ? 
-                # se voglio mettere deviation diverse ? ( se ma50 sale deviation diversa se ma50 scende ) 
-                # ciao
-                
+              
                 
             ):
 
 ###################################################################################################################################################
-###################################################################################################################################################
+
 
                 # COMPRA sessione 1
           
@@ -293,110 +252,7 @@ class ro_cano_che_ritorna:
                         and ma8_prev < ma50_prev and ma8_last > ma78_last or deviation_buy1 > 0.20
                         
                         #roma 2 aprile 2021 - BUY 1
-                        
-                        
-                        
-                        # vedi grafico B -IL PREZZO NON SARA' PIU' ALT0 E NON COMPRERA' "LA PRIMA VOLTA" CHE INCROCIA AL RIALZO
-                        
-                        
-                        #and ma4_prev < ma50_prev and ma4_last > ma50_last or deviation_buy1 > 0.195 DEVO PROVARE L' INCROCIO PERCHE' NON SONO SICURO CHE SI SIA ATTIVATO
-                        #and ma4_prev < ma50_prev and ma4_last > ma50_last NON SEMPRE FA LA COMPRA NELLA SECONDA RISALITA
-                        #ALLORA METTO ma7 - ma50 in modo tale che PRICE E' SCESO UN PO' E NON COMPRA NELLA PRIMA RISALITA
-                        #and ma8_prev < ma50_prev and ma8_last > ma50_last
-                        # 8-50 PRENDE NEL PRIMO ROUND MA non prende NEL SECONDO ROUND !
-                        
-                        #E' ARRIVATO IL MOMENTO DELL' INCROCIO ANTICLASSICO (8-50) (8-60)
-                        #l' incrocio anticlassico (4-39) (4-50) sembra troppo PRECIPITOSO
-                        
-                        #AVE COMBARO MEO - HIGH HOPES - ROMA 30 MARZO 2021
-                        #and ma8_prev < ma50_prev and ma8_last > ma60_last
-                        
-                        #OLE ALTRO INCROCIO ANTICLASSICO - VEDI SE FUNZIONA
-                        #and ma8_prev < ma50_prev and ma6_last > ma60_last
-                        
-                        
-                        #or deviation_buy1 > 0.19
-                        #TIENITI PRONTA PER ANDARE SULLA RIGA 299
-                        
-                        
-                        #deviation_buy1 > 0.18 or (ma24_prev < ma78_prev and ma24_last > ma78_last)
-                        
-                        
-                        
-                        #OPPURE
-                        #deviation_buy1 > 0.18 or (ma7_prev < ma38_prev and ma7_last > ma38_last) 
-                        #SARA' COSI' !
-                        
-                        # E forse dovrai aggiungere eventualmente and (ma3_last > ma39_last and ma12_last > ma12_2_min_ago)
-                        
-                        #oppure INCROCIO ANTICLASSICO
-                        #ma4<ma38 and ma4>ma50 !
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        #deviation_buy1 > 0.09
-                        # ti ricordo che la deviation_ma = (ma4_last / ma38_last - 1) * 100
-                        
-                        #and (price_2_min_ago < ma3_2_min_ago and price < ma3_last) questa ha funzionato ! MA compra dopo 2 minuti che si incrociano al ribasso !
-                        
-                        #adesso proviamo questa
-                        #and (price_2_min_ago < ma3_2_min_ago and price > ma3_last)anche questa ha funzionato! MA anche questa compra dopo 2 minuti che si incrociano al ribasso!
-                        
-                        #adesso proviamo questa
-                        #and (price_3_min_ago < ma3_3_min_ago and price > ma3_last)
-                        
-                        #adesso proviamo questa
-                        #and (price_5_min_ago < ma3_5_min_ago and price > ma3_last)
-                        
-                        #and (prev_price < ma3_2_min_ago and price > ma3_last)
-                        #NON FUNZIONA. Ma non fa niente.
-                        
-                        #questa non ha comprato
-                        #and (price_2_min_ago < ma3_2_min_ago and price < ma3_last and ma3_last > ma3_2_min_ago) 
-                        
-                        #and deviation_ma >= 0.23
-                        #and (prev_price < ma3_prev and price > ma3_last)
-                        
-                        
-                        
-                        #ma50_last >= ma50_2_min_ago
-                        #and ma2_last >= ma9_last
-                        
-                        #and ma36_last >= ma36_2_min_ago
-                        #and ma8_last >= ma14_last
-                        
-                        
-                        
-                        #and (ma2_prev < ma3_prev and ma2_last > ma3_last) or (price_1_min_ago < ma3_prev and price > ma3_last)
-                        #( e' un tentativo modesto di mettere incrocio (prev_price < ma3_prev and last_price > ma3_last)
-                        
-                        #( CHIEDI A COMPA, se hai il coraggio )
-                        #( FUNZIONA ma compra dopo 1 minuto MENTRE SCENDE ! (dopo che si sono incrociati prezzo-ma3 al ribasso))
-                        
-                        #compra veloce e strano
-                        #and (ma2_prev < ma3_prev and ma2_last > ma3_last) or (price_2_min_ago < ma3_2_min_ago and price > ma3_last)
-                        
-                        #mandrakata. vediamo disegno "strano 2 miracolo "
-                        #and (price_1_min_ago > ma3_prev and price < ma3_last and ma3_last > ma3_2_min_ago) 
-                        
-                        #prova NON HA COMPRATO PROPRIO !
-                        #and (prev_price < ma3_prev and last_price > ma3_last)
-                        
-                        #PROVO CON PRICE AL POSTO DI LAST_PRICE
-                        #and (prev_price < ma3_prev and price > ma3_last)
-                        
-                        
-                        
-                        #and ma2_last > ma2_2_min_ago
-                        #and ma2_last > ma2_3_min_ago
-                        #and ma2_last >= ma7_last
-                        #and ma4_last > ma4_2_min_ago
-                        #and price > price_1_min_ago
-                        
+          
                     
                     ):
                         action = "buy"
@@ -405,107 +261,20 @@ class ro_cano_che_ritorna:
                         
                         
                     elif (
-                          #porto al cane che ritorna il buy del maddog che e' molto bello (ma, attenzione, li la deviation e' 8-39)
-                          #se va su all' improvviso prende la deviation.
-                          #se ci ripensa prima di salire prende l' incrocio
-                          #GRAZIE COMPA
-                          
+                         
                           price > price_2_min_ago
                           and price > price_3_min_ago
                           and ma8_prev < ma50_prev and ma8_last > ma78_last or deviation_buy1 > 0.20
                         
                           #roma 2 aprile 2021 - BUY 1
-                          
-                        
-                          
-                          # vedi grafico B
-                          
-                          #and ma8_prev < ma50_prev and ma8_last > ma50_last
-                        
-                          #ECCO L' INCROCIO ANTICLASSICO - vediamo se funziona !
-                          #and ma8_prev < ma50_prev and ma8_last > ma60_last
-                          
-                          #ALTRO INCROCIO ANTICLASSICO - vedi se funziona - funziona ma come al solito l' incrocio ha il problema che non prende sempre 
-                          #and ma8_prev < ma50_prev and ma6_last > ma60_last
-
-
-                          #and ma4_prev < ma50_prev and ma4_last > ma50_last VEDI BUY 1 SOPRA
-                          #and ma4_prev < ma50_prev and ma4_last > ma50_last or deviation_buy1 > 0.195
-                          
-                          
-                          #or deviation_buy1 > 0.19
-                          #TIENITI PRONTA PER ANDARE SULLA RIGA 410
-                          
-                          #deviation_buy1 > 0.17 or (ma24_prev < ma78_prev and ma24_last > ma78_last) 
-                          #SARA' COSI' !
-                          
-                          #forse dovrai aggiungere eventualmente and ma3_last > ma39_last and ma12_last > ma12_2_min_ago) 
-                          
-                          # avevo studiato or (deviation_buy1 < -2.9 and ma2_last > ma4_last) per i grandi ribassi
-                        
-                        
-                        
-                        
-                          # ti ricordo che la deviation_buy1 = (ma4_last / ma38_last - 1) * 100
-
-
-                        
-                          #and (price_2_min_ago < ma3_2_min_ago and price < ma3_last) questa ha funzionato MA compra dopo 2 minuti che si incrociano al ribasso !
-                          
-                          #ma adesso proviamo questa
-                          #and (price_2_min_ago < ma3_2_min_ago and price > ma3_last)anche questa ha funzionato ! MA anche questa compra dopo 2 minuti che si incrociano al ribasso !
-                          
-                          #and (price_3_min_ago < ma3_3_min_ago and price > ma3_last)
-                          
-                          #adesso proviamo questa
-                          #and (price_5_min_ago < ma3_5_min_ago and price > ma3_last)
-                          
-                          #and (prev_price < ma3_2_min_ago and price > ma3_last)
-                        
-                        
-                        
-                          #and (price_2_min_ago < ma3_2_min_ago and price < ma3_last and ma3_last > ma3_2_min_ago) 
-                          
-                          
-                          #prev_price < ma3_prev and price > ma3_last
-                          #ma50_last < ma50_2_min_ago
-                          #and ma2_last >= ma9_last
-                        
-                          #and ma36_last < ma36_2_min_ago
-                          #and ma8_last > ma14_last
-                        
-                          
-                          
-                          #compra veloce
-                          #and (price_2_min_ago < ma3_2_min_ago and price > ma3_last)
-                          
-                          #mandrakata. vediamo disegno "strano 2 miracolo "
-                          #and (price_1_min_ago > ma3_prev and price < ma3_last and ma3_last > ma3_2_min_ago) 
-                          
-                          #prova non ha comprato proprio !
-                          #and (prev_price < ma3_prev and last_price > ma3_last)
-                          
-                          #PROVO CON PRICE AL POSTO DI LAST_PRICE
-                          
-                          
-                        
-                          
-                        
-                          #and ma2_last > ma2_2_min_ago
-                          #and ma2_last > ma7_last
-                          #and ma4_last > ma4_2_min_ago
-                        
-                          #and price > price_1_min_ago
-                          #and price > price_2_min_ago
-                          #and price > price_3_min_ago
-                 
+                     
                     ):
 
                         action = "buy"
                     
                     
 ##############################################################################################################################
-##############################################################################################################################                       
+                      
     
 
     
@@ -514,19 +283,7 @@ class ro_cano_che_ritorna:
                 elif self.session == 2:
               
                     if (
-                        
-                        #ma50_last >= ma50_2_min_ago
-                        #and ma2_last >= ma9_last
-                        
-                        #and ma2_prev < ma3_prev and ma2_last > ma3_last
-                        #and (ma2_prev < ma3_prev and ma2_last > ma3_last) or (price_2_min_ago < ma3_2_min_ago and price > ma3_last)
-                        
-                        #mandrakata. vediamo disegno "strano 2 miracolo "
-                        #and (price_1_min_ago > ma3_prev and price < ma3_last and ma3_last > ma3_2_min_ago) 
-                        
-                        #and ma36_last >= ma36_2_min_ago
-                        #and ma8_last >= ma14_last
-                        
+                     
                         deviation_buy2 >= 0.15
                         # ma8>ma78
                         
@@ -535,25 +292,15 @@ class ro_cano_che_ritorna:
                         
                         and deviation_prev > 0.14
                         #punto verde dall' ultimo punto verde
-                        
-                        #deviation_buy2 > 0.15 or (ma5_prev < ma36_prev and ma5_last > ma36_last and ma3_last > ma39_last and ma12_last > ma12_2_min_ago) 
-                        #SARA' COSI' !
-                        
-                        
+                       
                         and ma2_last > ma2_2_min_ago
                         and price > price_1_min_ago
                         and price > price_2_min_ago
                         
-                        #and ma2_last > ma7_last
-                        #and ma2_last > ma2_2_min_ago
-                        #and ma4_last > ma4_2_min_ago
                         
                         and ma3_last > ma40_last
                         #incredibile ma vero E' NECESSARIA quando deve ricomprare dopo la correzione al ribasso
-                        
-                        
-                       
-                 
+                
                     ):
 
                         action = "buy"
@@ -561,52 +308,25 @@ class ro_cano_che_ritorna:
                         
                         
                     elif (
-                          
-                          #ma50_last < ma50_2_min_ago
-                          #and ma2_last >= ma9_last
-                          
-                          #and ma2_prev < ma3_prev and ma2_last > ma3_last
-                          #and (ma2_prev < ma4_prev and ma2_last > ma4_last) or (price_2_min_ago < ma3_2_min_ago and price > ma3_last)
-                          
-                          #mandrakata. vediamo disegno "strano 2 miracolo "
-                          #(price_1_min_ago > ma3_prev and price < ma3_last and ma3_last > ma3_2_min_ago) 
-                          
-                          
-                        
-                          #and ma36_last < ma36_2_min_ago
-                          #and ma9_last >= ma15_last
-                          
-
+                         
                           deviation_buy2 >= 0.15
                           
                           and deviation_buy > 0.17
                           
                           and deviation_prev > 0.14
                           
-                          #deviation_buy2 > 0.15 or (ma5_prev < ma36_prev and ma5_last > ma36_last and ma3_last > ma39_last and ma12_last > ma12_2_min_ago) 
-                          #SARA' COSI' !
-                          
+                         
                           and ma2_last > ma2_2_min_ago
                           and price > price_1_min_ago
                           and price > price_2_min_ago
                         
-                          
-                          #and ma2_last > ma7_last
-                          #and ma2_last > ma2_2_min_ago
-                          #and ma4_last > ma4_2_min_ago
-                          
                           and ma3_last > ma40_last
                           #incredibile ma vero E' NECESSARIA quando deve ricomprare dopo la correzione al ribasso
-                          
-                          
-                 
+                    
                     ):
 
                         action = "buy"
                     
-                    
-                
-                   
 #############################################################################################################################################
 
 
@@ -614,25 +334,9 @@ class ro_cano_che_ritorna:
                 # COMPRA sessione 3 in poi
     
                 elif self.session == 3:
-            
-            
-            
+           
                     if (
-                      
-                        #ma50_last >= ma50_2_min_ago
-                        #and ma2_last >= ma8_last
-                        
-                        #and ma2_prev < ma5_prev and ma2_last > ma5_last
-                        
-                        #and ma36_last >= ma36_2_min_ago
-                        #and ma8_last >= ma12_last
-                        
-
-                        #deviation_buy1 > 0.10
-                        #and deviation_prev > 0.13
-                        #and deviation_buy > 0.15
-                        
-                        #COPIATA DA MADDOG ! la buy 3 era andata in sovrapposizione al sell 2 . vediamo 
+                     
                         ma2_last >= ma4_last
                         and price >= price_2_min_ago
                         and ma6_last > ma6_2_min_ago
@@ -653,33 +357,6 @@ class ro_cano_che_ritorna:
                         #deve essere anche questo
                         and ma2_last > ma50_last
                         and ma2_last > ma78_last
-                        
-                        
-                        
-                        
-                        
-                        
-                        #deviation_buy3 > 0.14 or (ma5_prev < ma36_prev and ma5_last > ma36_last and ma3_last > ma39_last and ma12_last > ma12_2_min_ago) 
-                        #SARA' COSI' !
-                        
-                        
-                        #deviation_buy1 > 0.08 e' stata aggiunta all' incrocio classico ma3-ma7 (che pero' non sembrava attivarsi...)
-                        
-                        ###############################################################
-                        #QUESTO E' IL BUY 3 DEL MADDOG
-                        #ma2_last >= ma4_last
-                        #and deviation_buy1 > 0.08 or (ma3_prev < ma8_prev and ma3_last > ma8_last and ma12_last > ma12_2_min_ago)
-                        #and deviation > 0.08
-                        #and price > price_2_min_ago
-                        #################################################################
-                        
-                        
-                        #and ma2_last > ma7_last
-                        #and ma2_last > ma2_2_min_ago
-                        #and ma4_last > ma4_2_min_ago
-                       
-                        #and price > price_1_min_ago
-                        #and price > price_2_min_ago
                        
                     ):
 
@@ -689,22 +366,6 @@ class ro_cano_che_ritorna:
                         
                     elif (
                           
-                          #ma50_last < ma50_2_min_ago
-                          #and ma2_last >= ma8_last
-                          
-                          #and ma2_prev < ma5_prev and ma2_last > ma5_last
-                          
-                          #and ma36_last < ma36_2_min_ago
-                          #and ma9_last >= ma15_last
-                          
-                          
-                          
-                          #deviation_buy1 >= 0.10
-                          #and deviation_prev > 0.15
-                          #and deviation_buy > 0.17
-                          
-                          
-                          #COPIATA DA MADDOG ! la buy 3 era andata in sovrapposizione al sell 2 . vediamo 
                           ma2_last >= ma4_last
                           and price > price_2_min_ago
                           and ma3_last > ma40_last
@@ -724,17 +385,6 @@ class ro_cano_che_ritorna:
                           and ma2_last > ma50_last
                           and ma2_last > ma78_last
                           
-                          
-                          
-                          #deviation_buy3 > 0.14 or (ma5_prev < ma36_prev and ma5_last > ma36_last and ma3_last > ma39_last and ma12_last > ma12_2_min_ago) 
-                          #SARA' COSI' !
-                          
-                        
-                          
-                          #and ma2_last > ma7_last
-                          #and ma4_last > ma4_2_min_ago
-                        
-                          #in aggiunta
                           and price > price_1_min_ago
                           and price > price_2_min_ago
                           and ma2_last > ma2_2_min_ago
@@ -764,7 +414,7 @@ class ro_cano_che_ritorna:
             # VENDITA 1 - con fasce di tempo !
 
             #    minuti
-            #   0 -  3 -----------if 13 > 39 vende come adesso ma se 13 < 39 vende 0,10 prima - c'e' vita su marte !
+            #   0 -  3 -----------c'e' vita su marte !
             #   3 -  5 -----------
             #   5 - 12 -----------
             
@@ -772,8 +422,7 @@ class ro_cano_che_ritorna:
             #  18 - 30 -----------
             #   > 30   -----------
 
-            ##################################################################################
-            
+           
             ###########################################################################################################################0 -3 min
 
             # VENDITA - da 0 a 3 minuti = da 0 a 180 secondi
@@ -782,8 +431,7 @@ class ro_cano_che_ritorna:
                 
                 
                 if (
-                    #ma50_last > ma50_2_min_ago
-                    #and ma36_last > ma36_2_min_ago
+                    
                     ma2_last < ma15_last 
                     and deviation_sell > 0.15
                     #deviation_sell = ma2_last / last_trade_price
@@ -791,9 +439,6 @@ class ro_cano_che_ritorna:
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
                     and ma2_last < ma2_2_min_ago
                     
-                    #metto la chiusura della gabbia per essere sicuro che venda !
-                    
-                    #deviation_gabbia = ma6_last / ma38_last
                 ):
                    
                     action = "sell"
@@ -802,23 +447,15 @@ class ro_cano_che_ritorna:
                 
               
                 elif (
-                    #ma50_last > ma50_2_min_ago
-                    #and ma36_last > ma36_2_min_ago
-                    
+                   
                     ma13_last >= ma39_last
                     
                     and deviation_sell < -0.75 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.25)
                     #deviation_sell = ma2_last / last_trade_price
-                    
-                    
-                    #and ma2_last < ma39_last < -0.49
-                    
+                  
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
                     and ma2_last < ma2_2_min_ago
                     
-                    #metto la chiusura della gabbia per essere sicuro che venda !
-                    
-                    #deviation_gabbia = ma6_last / ma38_last
                     
                 ):
                    
@@ -828,23 +465,15 @@ class ro_cano_che_ritorna:
                     
                     
                 elif (
-                    #ma50_last > ma50_2_min_ago
-                    #and ma36_last > ma36_2_min_ago
                     
                     ma13_last < ma39_last
                     
                     and deviation_sell < -0.60 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.25)
                     #deviation_sell = ma2_last / last_trade_price
                     
-                    #and ma2_last < ma39_last < -0.49
-                    
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
                     and ma2_last < ma2_2_min_ago
-                    
-                    #metto la chiusura della gabbia per essere sicuro che venda !
-                    
-                    #deviation_gabbia = ma6_last / ma38_last
-                    
+                   
                 ):
                    
                     action = "sell"
@@ -858,8 +487,7 @@ class ro_cano_che_ritorna:
 
                 
                 if (
-                    #ma50_last > ma50_2_min_ago
-                    #and ma36_last > ma36_2_min_ago
+                    
                     ma2_last < ma15_last 
                     and deviation_sell > 0.15
                     #deviation_sell = ma2_last / last_trade_price
@@ -868,17 +496,12 @@ class ro_cano_che_ritorna:
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
                     and ma2_last < ma2_2_min_ago
                     
-                    #metto la chiusura della gabbia per essere sicuro che venda !
-                    
-                    #deviation_gabbia = ma6_last / ma38_last
-                  
                 ):
                     action = "sell"
 
                     
                 elif (
-                    #ma50_last >= ma50_2_min_ago
-                    #and ma36_last >= ma36_2_min_ago
+                    
                     ma13_last >= ma39_last
                     
                     and deviation_sell < -0.75 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.25)
@@ -887,18 +510,13 @@ class ro_cano_che_ritorna:
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
                     and ma2_last < ma2_2_min_ago
                     
-                    #metto la chiusura della gabbia per essere sicuro che venda !
-                    
-                    #deviation_gabbia = ma6_last / ma38_last
-                    
                 ):
                     action = "sell"
                     
                     
                     
                 elif (
-                    #ma50_last >= ma50_2_min_ago
-                    #and ma36_last >= ma36_2_min_ago
+                    
                     ma13_last < ma39_last
                     
                     and deviation_sell < -0.60 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.25)
@@ -906,10 +524,6 @@ class ro_cano_che_ritorna:
                    
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
                     and ma2_last < ma2_2_min_ago
-                    
-                    #metto la chiusura della gabbia per essere sicuro che venda !
-                    
-                    #deviation_gabbia = ma6_last / ma38_last
                     
                 ):
                     action = "sell"
@@ -922,19 +536,13 @@ class ro_cano_che_ritorna:
                 
 
                 if (
-                    #ma50_last >= ma50_2_min_ago
-                    #and ma36_last >= ma36_2_min_ago
+                    
                     ma2_last < ma17_last
                     and deviation_sell > 0.15
                     #deviation_sell = ma2_last / last_trade_price
-                    
-                    
+                   
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
                     and ma2_last < ma2_3_min_ago
-                    
-                    #metto la chiusura della gabbia per essere sicuro che venda !
-                    
-                    #deviation_gabbia = ma6_last / ma38_last
                     
                 ):
                     action = "sell"
@@ -942,8 +550,7 @@ class ro_cano_che_ritorna:
              
                     
                 elif (
-                    #ma50_last >= ma50_2_min_ago
-                    #and ma36_last >= ma36_2_min_ago
+                    
                     ma13_last >= ma39_last
                     and deviation_sell < -0.75 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.25)
                     #deviation_sell = ma2_last / last_trade_price
@@ -951,28 +558,19 @@ class ro_cano_che_ritorna:
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
                     and ma2_last < ma2_3_min_ago
                     
-                    #metto la chiusura della gabbia per essere sicuro che venda !
-                    
-                    #deviation_gabbia = ma6_last / ma38_last
-                    
                 ):
                     action = "sell"
                     
                     
                     
                 elif (
-                    #ma50_last >= ma50_2_min_ago
-                    #and ma36_last >= ma36_2_min_ago
+                    
                     ma13_last < ma39_last
                     and deviation_sell < -0.60 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.25)
                     #deviation_sell = ma2_last / last_trade_price
                     
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
                     and ma2_last < ma2_3_min_ago
-                    
-                    #metto la chiusura della gabbia per essere sicuro che venda !
-                    
-                    #deviation_gabbia = ma6_last / ma38_last
                     
                 ):
                     action = "sell"
@@ -990,8 +588,7 @@ class ro_cano_che_ritorna:
             elif seconds_since_last_trade > 720 and seconds_since_last_trade <= 1080:
 
                 if (
-                    #ma50_last >= ma50_2_min_ago
-                    #and ma36_last >= ma36_2_min_ago
+                    
                     ma2_last < ma17_last 
                     and deviation_sell > 0.12
                     #deviation_sell = ma2_last / last_trade_price
@@ -1000,54 +597,31 @@ class ro_cano_che_ritorna:
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
                     and ma2_last < ma2_2_min_ago
                     
-                    #metto la chiusura della gabbia per essere sicuro che venda !
-                    
-                    #deviation_gabbia = ma6_last / ma38_last
-                    
-                    
                 ):
                     action = "sell"
                     
                   
                 elif (
-                    #ma50_last >= ma50_2_min_ago
-                    #and ma36_last >= ma36_2_min_ago
                     
                     ma13_last >= ma39_last
                     and deviation_sell < -0.75 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.20)
                     #deviation_sell = ma2_last / last_trade_price
                     
-                    #and deviation_sell < -0.61
-                    #and ma2_last < ma20_last
-                    
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
                     and ma2_last < ma2_2_min_ago
-                    
-                    #metto la chiusura della gabbia per essere sicuro che venda !
-                    
-                    #deviation_gabbia = ma6_last / ma38_last
                     
                 ):
                     action = "sell"
                     
                     
                 elif (
-                    #ma50_last >= ma50_2_min_ago
-                    #and ma36_last >= ma36_2_min_ago
                     
                     ma13_last < ma39_last
                     and deviation_sell < -0.60 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.25)
                     #deviation_sell = ma2_last / last_trade_price
                     
-                    #and deviation_sell < -0.61
-                    #and ma2_last < ma20_last
-                    
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
                     and ma2_last < ma2_2_min_ago
-                    
-                    #metto la chiusura della gabbia per essere sicuro che venda !
-                    
-                    #deviation_gabbia = ma6_last / ma38_last
                     
                 ):
                     action = "sell"   
@@ -1063,8 +637,7 @@ class ro_cano_che_ritorna:
                 
 
                 if (
-                    #ma50_last > ma50_2_min_ago
-                    #and ma36_last > ma36_2_min_ago
+                    
                     ma2_last < ma17_last 
                     and deviation_sell > 0.12
                     #deviation_sell = ma2_last / last_trade_price
@@ -1073,17 +646,11 @@ class ro_cano_che_ritorna:
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
                     and ma2_last < ma2_2_min_ago
                     
-                    #metto la chiusura della gabbia per essere sicuro che venda !
-                    
-                    #deviation_gabbia = ma6_last / ma38_last
-                    
                 ):
                     action = "sell"
                 
                     
                 elif (
-                    #ma50_last > ma50_2_min_ago
-                    #and ma36_last > ma36_2_min_ago
                     
                     ma13_last >= ma39_last
                     and deviation_sell < -0.75 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.25)
@@ -1092,17 +659,11 @@ class ro_cano_che_ritorna:
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
                     and ma2_last < ma2_2_min_ago
                     
-                    #metto la chiusura della gabbia per essere sicuro che venda !
-                  
-                    #deviation_gabbia = ma6_last / ma38_last
-                    
                 ):
                     action = "sell"
                     
                     
                 elif (
-                    #ma50_last > ma50_2_min_ago
-                    #and ma36_last > ma36_2_min_ago
                     
                     ma13_last < ma39_last
                     and deviation_sell < -0.60 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.25)
@@ -1110,10 +671,6 @@ class ro_cano_che_ritorna:
                     
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
                     and ma2_last < ma2_2_min_ago
-                    
-                    #metto la chiusura della gabbia per essere sicuro che venda !
-                  
-                    #deviation_gabbia = ma6_last / ma38_last
                     
                 ):
                     action = "sell"   
@@ -1127,8 +684,7 @@ class ro_cano_che_ritorna:
                
                 
                 if (
-                    #ma50_last > ma50_2_min_ago
-                    #and ma36_last > ma36_2_min_ago
+                    
                     ma2_last < ma17_last 
                     and deviation_sell > 0.12
                     #deviation_sell = ma2_last / last_trade_price
@@ -1136,20 +692,14 @@ class ro_cano_che_ritorna:
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
                     and ma2_last < ma2_2_min_ago
                     
-                    #metto la chiusura della gabbia per essere sicuro che venda !
-                    
-                    #deviation_gabbia = ma6_last / ma38_last
-                    
                 ):
-                    
-               
+                  
                     action = "sell"
                     
                 
                     
                 elif (
-                    #ma50_last > ma50_2_min_ago
-                    #and ma36_last > ma36_2_min_ago
+                    
                     ma13_last >= ma39_last
                     and deviation_sell < -0.75 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.25)
                     #deviation_sell = ma2_last / last_trade_price
@@ -1157,17 +707,12 @@ class ro_cano_che_ritorna:
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
                     and ma2_last < ma2_2_min_ago
                     
-                    #metto la chiusura della gabbia per essere sicuro che venda !
-                    
-                    #deviation_gabbia = ma6_last / ma38_last
-                    
                 ):
                     action = "sell"
                     
                     
                 elif (
-                    #ma50_last > ma50_2_min_ago
-                    #and ma36_last > ma36_2_min_ago
+                    
                     ma13_last < ma39_last
                     and deviation_sell < -0.60 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.25)
                     #deviation_sell = ma2_last / last_trade_price
@@ -1175,17 +720,12 @@ class ro_cano_che_ritorna:
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
                     and ma2_last < ma2_2_min_ago
                     
-                    #metto la chiusura della gabbia per essere sicuro che venda !
-                    
-                    #deviation_gabbia = ma6_last / ma38_last
-                    
                 ):
                     action = "sell"   
                     
                     
             ################################################################################################################################## 
 
-            #########################################################################################
 
             # 1) (STOP LOSS) (salvagente)  
             # se ma100_last >= ma100_13_min_ago vende in un modo 
@@ -1231,13 +771,4 @@ class ro_cano_che_ritorna:
         return action
 
         #ave comparo meo ! #####
-        #ole ### ## 
-        
-        #sempre ole #######
-        ###### AVE COMBA #### 
-        ## non fa reset ## bla bla bla ...##
-        ##
-        
-        ##
-
         
