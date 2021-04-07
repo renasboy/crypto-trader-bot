@@ -45,7 +45,7 @@ class maddog:
         ma43_last, ma43_prev = self.algo_helper.ma_last_prev(43)
         ma48_last, ma48_prev = self.algo_helper.ma_last_prev(48)
         ma50_last, ma50_prev = self.algo_helper.ma_last_prev(50)
-        #
+       
         ma20_last, ma20_prev = self.algo_helper.ma_last_prev(20)
         ma60_last, ma60_prev = self.algo_helper.ma_last_prev(60)
         ma78_last, ma78_prev = self.algo_helper.ma_last_prev(78)
@@ -71,7 +71,7 @@ class maddog:
         ma60_2_min_ago = self.algo_helper.ma_minutes_ago(60, 2)
         ma78_2_min_ago = self.algo_helper.ma_minutes_ago(78, 2)
         ma85_3_min_ago = self.algo_helper.ma_minutes_ago(85, 3)
-        ma100_13_min_ago = self.algo_helper.ma_minutes_ago(100, 13)
+        
         
         
         # LAST TRADE
@@ -88,7 +88,7 @@ class maddog:
         price_2_min_ago = self.algo_helper.price_minutes_ago(2)
         price_3_min_ago = self.algo_helper.price_minutes_ago(3)
         price_4_min_ago = self.algo_helper.price_minutes_ago(4)
-        price_7_min_ago = self.algo_helper.price_minutes_ago(7)
+        
         
     
         #######################################################################################################################################################    
@@ -124,24 +124,14 @@ class maddog:
 
         #####################################################################################################################################################
         
-        
-        
-        
         action = None
 
         ##################################################################################################################################################
         # APRE E CHIUDE GABBIA
         # SI APRE LA GABBIA SE
-        #if ma2_last > ma38_last:
       
-        #ma fai cosi' (che la gabbia resterà aperta come se fosse ma78 > ma78 2 min ago !)
         if ma2_last > ma38_last and deviation_buy1 > -0.17 and price > price_2_min_ago and price > price_3_min_ago:
-        
-                        
-        #if ma2_last > ma38_last and deviation_buy1 > -0.36: vedi questo valore alle ore 9:43
-        # TI RICORDO CHE LA deviation_buy1 prende (ma8_last / ma78_last - 1) * 100
-            
-            
+       
             
             # NON TOCCARE QUESTA CONDIZIONE SERVE PER APERTURA DI GABBIA
             if not self.session or not self.open:
@@ -184,48 +174,14 @@ class maddog:
                         #se va su all' improvviso prende la deviation.
                         #se ci ripensa prima di salire prende l' incrocio
                         #GRAZIE COMPA
-                        
-                        
-                        
-                        #potrai provare- DICO PROVARE- anche un incrocio anticlassico  ma4<ma38 and ma4>ma50
-                        
-                        
-                        
-                        
+                      
                         ma13_prev < ma39_prev and ma13_last > ma78_last or deviation_buy1 > 0.17
                         #deviation_buy1 = ma8_last / ma78_last
-                        
-                        #STO PROVANDO L' INCROCIO
-                        #ma13_prev < ma39_prev and ma13_last > ma38_last or deviation_buy1 > -0.125 
+                       
                         and price > price_2_min_ago
                         and price > price_3_min_ago
                         and price > price_4_min_ago
-                        
-                        #deviation_buy1 > -0.145 or (ma24_prev < ma78_prev and ma24_last > ma78_last) 
-                        #SARA' COSI' ! con incrocio classico ! MA DEVI PROVARE ANCORA L' INCROCIO CON deviation buy1 che compra molto piu' alto
-                        #vedi cano che ritorna
-                        
-                        
-                        #forse dovrai aggiungere eventualmente and (ma3_last > ma39_last and ma12_last > ma12_2_min_ago)
-                        
-                        
-                        
-                        
-                        #and (ma2_prev < ma3_prev and ma2_last > ma3_last and ma12_last > ma12_2_min_ago)
-                        #ma2_last >= ma4_last
-                        #and ma2_last >= ma8_last
-                        
-                        #ma18_last >= ma21_last
-                        
-                        #and ma2_prev < ma4_prev and ma2_last > ma4_last
-                        # attenzione ! vedi che se ci sono grandi rialzi improvvisi la ma2 incrocia MOLTO DIFFICILMENTE la ma4
-                        
-                        #and ma2_last > ma2_2_min_ago
-                        #and ma4_last > ma4_2_min_ago
-                        #and ma5_last > ma5_2_min_ago
-                        #and ma7_last > ma7_2_min_ago
                        
-                     
                     ):
                         action = "buy"
                         
@@ -234,17 +190,6 @@ class maddog:
                 # COMPRA sessione 2
                 elif self.session == 2:
                     if (
-                        #ma8_last >= ma14_last
-                        #ma2_last >= ma8_last
-                        
-                        #ma2_last > ma2_2_min_ago
-                        #and ma4_last > ma4_2_min_ago
-                        #and ma5_last > ma5_2_min_ago
-                        
-                        
-                        #piu' veloce !
-                        #and (ma2_prev < ma4_prev and ma2_last > ma4_last)
-                        
                         
                         price > price_2_min_ago
                         and ma2_last > ma2_2_min_ago
@@ -257,20 +202,7 @@ class maddog:
                         
                         and deviation_buy2 > 0.15
                         #deviation_buy2 = ma8_last / ma78_last
-                        
-                        #and deviation_buy2 > 0.12 or (ma5_prev < ma36_prev and ma5_last > ma36_last and ma3_last > ma39_last and ma12_last > ma12_2_min_ago)
-                        #SARA' COSI' !
-                        
-                        
-                        
-                        
-                        #and price > price_3_min_ago
-                        
-                        #and deviation_buy1 > 0.15 and (ma3_prev < ma5_prev and ma3_last > ma5_last
-                        #deviation > 0.10 dopo che ha venduto ha comprato nello stesso minuto (puntino verde proprio sopra puntino rosso) con il price che scendeva
-                        #allora tolgo la deviation e lascio solo price 1 min ago e price 2 min ago per vedere se funziona ! - FUNZIONA ! vai compaaaaaaaaaaaa
-                        
-                     
+                   
                     ):
                         action = "buy"
 
@@ -292,21 +224,10 @@ class maddog:
                         #incredibile ma vero E' NECESSARIA quando deve ricomprare dopo la correzione al ribasso
                         
                         and deviation > 0.085
-                        #prima era 0.09 ed era una ndecchiecella alta. ma sulo na ndecchiecella
-                        #deviation = ma2_last / last_trade_price
+                        
                         
                         and deviation_buy3 > 0.105
                         #deviation_buy3 = ma8_last / ma78_last
-                        #and deviation_buy3 > 0.11 or (ma5_prev < ma36_prev and ma5_last > ma36_last and ma3_last > ma39_last and ma12_last > ma12_2_min_ago)
-                        #SARA' COSI' !
-                        
-                        
-
-                        #and ma2_last > ma2_2_min_ago
-                        #and ma4_last > ma4_2_min_ago
-                        #and ma5_last > ma5_2_min_ago
-                        #ma8_last >= ma14_last
-                        
                         
                     ):
                         action = "buy"
@@ -335,11 +256,6 @@ class maddog:
                     
                     ma2_last < ma15_last and deviation > 0.13
                     
-                    #porto in ogni sell il contrario dell' apertura gabbia ! - in una occasione non si sono attivate le vendite !
-                    
-                    #deviation_buy1 = ma8_last / ma78_last
-                    
-                    #ma78_last > ma78_2_min_ago
                 ):
                    
                     action = "sell"     
@@ -348,48 +264,19 @@ class maddog:
                     
                     
                 elif (
-                    
-                    #ma78_last < ma78_2_min_ago
-                    #and deviation < -0.21 NON FUNZIONA ! rimetto < - 0.65 ! Per adesso soltanto al al buy 1
-                    #and deviation < -0.65
-                    #RIMETTO DEVIATION <-0.22 MA CON MEDIA PIU' ALTA
-                    
+                   
                     deviation_sell < -0.19 or (ma3_last < ma38_last and deviation_buy1 < -0.43)
                     #deviation_sell = (ma2_last / ma78_last
                     
-                    # ti ricordo che deviation = (ma2_last / last_trade_price - 1) * 100
-                    
-                    #porto in ogni sell il contrario dell' apertura gabbia ! - in una occasione non si sono attivate le vendite !
-                    
-                    #deviation_buy1 = ma8_last / ma78_last
-                    
-                    
                 ):
                     action = "sell"    
-                    
-                    
-                
-                    # cano maddog fa difficilmente un passo falso ! per questo siamo piu' tolleranti sulla perdita dopo il primo acquisto
-                    # ciao comba che non mi parli piu'.
-                    # ma basta che stai bene tu.
-                    
-                        
-                        
-                        
-                        
-
+                  
             # VENDE sessione 2
             elif self.session == 2:
                
                 if (
                     
                     ma2_last < ma15_last and deviation > 0.13
-                    
-                    #ma78_last > ma78_2_min_ago
-                    
-                    #porto in ogni sell il contrario dell' apertura gabbia ! - in una occasione non si sono attivate le vendite !
-                    
-                    #deviation_buy1 = ma8_last / ma78_last
                     
                     
                 ):
@@ -402,24 +289,14 @@ class maddog:
                 elif (
                     
                     ma2_last < ma38_last 
-                    #ma2_last < ma20_last 
-                    #and deviation < -0.59
-                    #ma78_last < ma78_2_min_ago
                     
-                    #porto in ogni sell il contrario dell' apertura gabbia ! - in una occasione non si sono attivate le vendite !
                     and deviation_sell < -0.19 or (ma3_last < ma38_last and deviation_buy1 < -0.43)
-                    #deviation_sell = (ma2_last / ma78_last
-                    
-                    #deviation_buy1 = ma8_last / ma78_last
-                    
+                    #deviation_sell = ma2_last / ma78_last
                     
                 ):
                     action = "sell"      
                        
-                        
-                        
-                        
-                        
+                 
 
             # VENDE sessione 3 in poi
             else:
@@ -429,12 +306,6 @@ class maddog:
                     ma2_last < ma15_last 
                     and deviation > 0.01
                     #ma78_last > ma78_2_min_ago
-                    
-                    #porto in ogni sell il contrario dell' apertura gabbia ! - in una occasione non si sono attivate le vendite !
-                    
-                    #deviation_buy1 = ma8_last / ma78_last
-                    
-                    
                     
                 ):
                    
@@ -446,34 +317,15 @@ class maddog:
                 elif (
                     
                     deviation_sell < -0.10 or (ma2_last < ma38_last and deviation_buy1 < -0.40)
-                    #deviation_sell = (ma2_last / ma78_last
-                                      
-                    #ma78_last < ma78_2_min_ago
-                    
-                    #porto in ogni sell il contrario dell' apertura gabbia ! - in una occasione non si sono attivate le vendite !
-                    
-                    #deviation_buy1 = ma8_last / ma78_last
-                    
-                    
                     
                 ):
                     action = "sell"        
                         #action = "sell"
-                        
-                        
-                        
-                  
-                        
-
+                       
             # STOP LOSS (salvagente)
             
             if ma2_last < ma39_last and deviation < -0.69:
                 action = "sell"
-            
-           
-            
-            
-
             
             # 1) vedi riga 11 per es. DI 1 ORA = 3600 SECONDI "max hold time" " DOPO UN' ORA VENDE SUBITO " e se ma8_last < ma39_last and deviation < -0.40:
             
@@ -490,6 +342,5 @@ class maddog:
         return action
 
 
-        # grazie compa #### # ###
-        ########
-        ##
+        # grazie compa 
+       
