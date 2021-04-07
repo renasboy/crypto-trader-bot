@@ -68,7 +68,8 @@ class ro_cano_che_ritorna:
         ma3_5_min_ago = self.algo_helper.ma_minutes_ago(3, 5)
         
         ma4_2_min_ago = self.algo_helper.ma_minutes_ago(4, 2)
-        ma8_5_min_ago = self.algo_helper.ma_minutes_ago(8, 5)
+        ma6_2_min_ago = self.algo_helper.ma_minutes_ago(6, 2)
+        ma8_2_min_ago = self.algo_helper.ma_minutes_ago(8, 2)
         ma10_2_min_ago = self.algo_helper.ma_minutes_ago(10, 2)
         ma14_2_min_ago = self.algo_helper.ma_minutes_ago(14, 2)
         ma32_3_min_ago = self.algo_helper.ma_minutes_ago(32, 3)
@@ -634,18 +635,29 @@ class ro_cano_che_ritorna:
                         #COPIATA DA MADDOG ! la buy 3 era andata in sovrapposizione al sell 2 . vediamo 
                         ma2_last >= ma4_last
                         and price >= price_2_min_ago
+                        and ma6_last > ma6_2_min_ago
+                        and ma3_last > ma40_last
+                        #incredibile ma vero E' NECESSARIA quando deve ricomprare dopo la correzione al ribasso
+                        and ma3_last > ma6_last
                         
-                        and deviation_buy > 0.08
+                        and deviation_buy3 > 0.13
+                        #deviation_buy3 = ma8_last / ma78_last
                         
-                        and deviation_buy3 > 0.10
-                        #deviation_buy3 = (ma8_last / ma78_last
+                        and deviation_buy > 0.15
+                        #deviation_buy = ma2_last / last_trade_price
+                        
+                        and deviation_prev > 0.15
+                        #deviation_prev = price / prev_trade_price
+                        
                         
                         #deve essere anche questo
                         and ma2_last > ma50_last
                         and ma2_last > ma78_last
                         
-                        and ma3_last > ma40_last
-                        #incredibile ma vero E' NECESSARIA quando deve ricomprare dopo la correzione al ribasso
+                        
+                        
+                        
+                        
                         
                         #deviation_buy3 > 0.14 or (ma5_prev < ma36_prev and ma5_last > ma36_last and ma3_last > ma39_last and ma12_last > ma12_2_min_ago) 
                         #SARA' COSI' !
@@ -695,17 +707,24 @@ class ro_cano_che_ritorna:
                           #COPIATA DA MADDOG ! la buy 3 era andata in sovrapposizione al sell 2 . vediamo 
                           ma2_last >= ma4_last
                           and price > price_2_min_ago
+                          and ma3_last > ma40_last
+                          #incredibile ma vero E' NECESSARIA quando deve ricomprare dopo la correzione al ribasso
+                          and ma3_last > ma6_last
                           
-                          and deviation_buy > 0.08
-                        
-                          and deviation_buy3 > 0.10
+                          and deviation_buy3 > 0.13
+                          #deviation_buy3 = ma8_last / ma78_last
+                          
+                          and deviation_buy > 0.15
+                          #deviation_buy = ma2_last / last_trade_price
+                          
+                          and deviation_prev > 0.15
+                          #deviation_prev = price / prev_trade_price
                         
                           #deve essere anche questo
                           and ma2_last > ma50_last
                           and ma2_last > ma78_last
                           
-                          and ma3_last > ma40_last
-                          #incredibile ma vero E' NECESSARIA quando deve ricomprare dopo la correzione al ribasso
+                          
                           
                           #deviation_buy3 > 0.14 or (ma5_prev < ma36_prev and ma5_last > ma36_last and ma3_last > ma39_last and ma12_last > ma12_2_min_ago) 
                           #SARA' COSI' !
@@ -719,6 +738,7 @@ class ro_cano_che_ritorna:
                           and price > price_1_min_ago
                           and price > price_2_min_ago
                           and ma2_last > ma2_2_min_ago
+                          and ma6_last > ma6_2_min_ago
                     ):
 
                         action = "buy"
