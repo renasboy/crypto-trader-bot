@@ -175,7 +175,7 @@ class maddog:
                         #se ci ripensa prima di salire prende l' incrocio
                         #GRAZIE COMPA
                       
-                        ma13_prev < ma39_prev and ma13_last > ma78_last or deviation_buy1 > 0.17
+                        ma13_prev < ma78_prev and ma13_last > ma78_last or deviation_buy1 > 0.17
                         #deviation_buy1 = ma8_last / ma78_last
                        
                         and price > price_2_min_ago
