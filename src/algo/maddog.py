@@ -288,9 +288,9 @@ class maddog:
                     
                 elif (
                     
-                    ma2_last < ma38_last 
+                    ma2_last < ma39_last and deviation_sell < -0.12 or (ma3_last < ma39_last and deviation_buy1 < -0.43)
                     
-                    and deviation_sell < -0.19 or (ma3_last < ma38_last and deviation_buy1 < -0.43)
+                    
                     #deviation_sell = ma2_last / ma78_last
                     
                 ):
@@ -316,7 +316,7 @@ class maddog:
                     
                 elif (
                     
-                    deviation_sell < -0.10 or (ma2_last < ma38_last and deviation_buy1 < -0.40)
+                    ma2_last < ma39_last and deviation_sell < -0.10 or (ma2_last < ma39_last and deviation_buy1 < -0.40)
                     
                 ):
                     action = "sell"        
