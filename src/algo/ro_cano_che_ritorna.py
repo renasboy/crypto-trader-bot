@@ -29,7 +29,7 @@ class ro_cano_che_ritorna:
         ma50_last, ma50_prev = self.algo_helper.ma_last_prev(50)
         ma60_last, ma60_prev = self.algo_helper.ma_last_prev(60)
         ma78_last, ma78_prev = self.algo_helper.ma_last_prev(78)
-        ma85_last, ma85_prev = self.algo_helper.ma_last_prev(85)
+        ma82_last, ma82_prev = self.algo_helper.ma_last_prev(82)
         
  
         # moving average (2-3-4-5-7-8-20-43-100) di x minuti prima
@@ -227,9 +227,8 @@ class ro_cano_che_ritorna:
                     elif (
                          
                           price > price_2_min_ago
-                          and price > price_3_min_ago
-                          and ma2_last > ma2_2_min_ago
-                          and ma8_prev < ma50_prev and ma8_last > ma78_last or deviation_buy1 > 0.20
+                         
+                          and ma8_prev < ma82_prev and ma8_last > ma82_last or deviation_buy1 > 0.20
                         
                           #roma 2 aprile 2021 - BUY 1
                      
