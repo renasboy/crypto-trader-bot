@@ -130,8 +130,8 @@ class maddog:
         # APRE E CHIUDE GABBIA
         # SI APRE LA GABBIA SE
       
-        if ma2_last > ma38_last and deviation_buy1 > -0.17 and price > price_2_min_ago and price > price_3_min_ago:
-       
+        if ma8_last > ma38_last and deviation_buy1 > -0.10 and price > price_2_min_ago and price > price_3_min_ago:
+        # deviation_buy1 = ma8_last / ma78_last 
             
             # NON TOCCARE QUESTA CONDIZIONE SERVE PER APERTURA DI GABBIA
             if not self.session or not self.open:
@@ -266,9 +266,9 @@ class maddog:
                     
                 elif (
                    
-                    deviation_sell < -0.19 or (ma3_last < ma38_last and deviation_buy1 < -0.43) or (ma2_last < ma50_last and deviation_ma50 < -0.20)
+                    deviation_sell < -0.19 or (ma3_last < ma39_last and deviation_buy1 < -0.20) or (ma2_last < ma50_last and deviation_ma50 < -0.20)
                     #deviation_sell = ma2_last / ma78_last
-                    
+                    #deviation_buy1 = ma8_last / ma78_last
                 ):
                     action = "sell"    
                   
@@ -291,9 +291,9 @@ class maddog:
                     
                 elif (
                     
-                    ma2_last < ma39_last and deviation_sell < -0.12 or (ma3_last < ma39_last and deviation_buy1 < -0.43) or (ma2_last < ma50_last and deviation_ma50 < -0.20)
+                    ma2_last < ma39_last and deviation_sell < -0.12 or (ma3_last < ma39_last and deviation_buy1 < -0.20) or (ma2_last < ma50_last and deviation_ma50 < -0.20)
                     #deviation_sell = ma2_last / ma78_last
-                    
+                    #deviation_buy1 = (ma8_last / ma78_last
                     
                     
                 ):
@@ -318,11 +318,13 @@ class maddog:
                     
                 elif (
                     
-                    ma2_last < ma39_last and deviation_sell < -0.10 or (ma2_last < ma39_last and deviation_buy1 < -0.40) or (ma2_last < ma50_last and deviation_ma50 < -0.20)
+                    ma2_last < ma39_last and deviation_sell < -0.10 or (ma2_last < ma39_last and deviation_buy1 < -0.20) or (ma2_last < ma50_last and deviation_ma50 < -0.20)
                     #deviation_sell = ma2_last / ma78_last
+                    #deviation_buy1 = ma8_last / ma78_last
+                    
                 ):
                     action = "sell"        
-                        #action = "sell"
+                        
                         
                         
             ###################################################################################################################################################################
