@@ -13,74 +13,32 @@ class ro_cano_che_ritorna:
         
         
         ma2_last, ma2_prev = self.algo_helper.ma_last_prev(2)
-        
         ma3_last, ma3_prev = self.algo_helper.ma_last_prev(3)
-        
-        
         ma4_last, ma4_prev = self.algo_helper.ma_last_prev(4)
         ma5_last, ma5_prev = self.algo_helper.ma_last_prev(5)
         ma6_last, ma6_prev = self.algo_helper.ma_last_prev(6)
         ma7_last, ma7_prev = self.algo_helper.ma_last_prev(7)
         ma8_last, ma8_prev = self.algo_helper.ma_last_prev(8)
-        ma9_last, ma9_prev = self.algo_helper.ma_last_prev(9)
-        ma10_last, ma10_prev = self.algo_helper.ma_last_prev(10)
-        ma11_last, ma11_prev = self.algo_helper.ma_last_prev(11)
-        ma12_last, ma12_prev = self.algo_helper.ma_last_prev(12)
         ma13_last, ma13_prev = self.algo_helper.ma_last_prev(13)
-        ma14_last, ma14_prev = self.algo_helper.ma_last_prev(14)
         ma15_last, ma15_prev = self.algo_helper.ma_last_prev(15)
-        ma16_last, ma16_prev = self.algo_helper.ma_last_prev(16)
         ma17_last, ma17_prev = self.algo_helper.ma_last_prev(17)
-        ma18_last, ma18_prev = self.algo_helper.ma_last_prev(18)
-        ma20_last, ma20_prev = self.algo_helper.ma_last_prev(20)
-        ma21_last, ma21_prev = self.algo_helper.ma_last_prev(21)
-        ma22_last, ma22_prev = self.algo_helper.ma_last_prev(22)
-        ma24_last, ma24_prev = self.algo_helper.ma_last_prev(24)
-        ma25_last, ma25_prev = self.algo_helper.ma_last_prev(25)
-        ma28_last, ma28_prev = self.algo_helper.ma_last_prev(28)
-        ma30_last, ma30_prev = self.algo_helper.ma_last_prev(30)
-        ma32_last, ma32_prev = self.algo_helper.ma_last_prev(32)
-        ma34_last, ma34_prev = self.algo_helper.ma_last_prev(34)
         ma36_last, ma36_prev = self.algo_helper.ma_last_prev(36)
         ma38_last, ma38_prev = self.algo_helper.ma_last_prev(38)
         ma39_last, ma39_prev = self.algo_helper.ma_last_prev(39)
         ma40_last, ma40_prev = self.algo_helper.ma_last_prev(40)
         ma50_last, ma50_prev = self.algo_helper.ma_last_prev(50)
-        ma54_last, ma54_prev = self.algo_helper.ma_last_prev(54)
         ma60_last, ma60_prev = self.algo_helper.ma_last_prev(60)
-        ma85_last, ma85_prev = self.algo_helper.ma_last_prev(85)
         ma78_last, ma78_prev = self.algo_helper.ma_last_prev(78)
-        ma100_last, ma100_prev = self.algo_helper.ma_last_prev(100)
-        ma110_last, ma110_prev = self.algo_helper.ma_last_prev(110)
+        ma85_last, ma85_prev = self.algo_helper.ma_last_prev(85)
         
-
+ 
         # moving average (2-3-4-5-7-8-20-43-100) di x minuti prima
         
         ma2_2_min_ago = self.algo_helper.ma_minutes_ago(2, 2)
         ma2_3_min_ago = self.algo_helper.ma_minutes_ago(2, 3)
-        ma2_15_min_ago = self.algo_helper.ma_minutes_ago(2, 15)
-        ma2_17_min_ago = self.algo_helper.ma_minutes_ago(2, 17)
-        ma2_22_min_ago = self.algo_helper.ma_minutes_ago(2, 22)
-        ma2_24_min_ago = self.algo_helper.ma_minutes_ago(2, 24)
-        
         ma3_2_min_ago = self.algo_helper.ma_minutes_ago(3, 2)
-        ma3_3_min_ago = self.algo_helper.ma_minutes_ago(3, 3)
-        ma3_5_min_ago = self.algo_helper.ma_minutes_ago(3, 5)
-        
-        ma4_2_min_ago = self.algo_helper.ma_minutes_ago(4, 2)
         ma6_2_min_ago = self.algo_helper.ma_minutes_ago(6, 2)
-        ma8_2_min_ago = self.algo_helper.ma_minutes_ago(8, 2)
-        ma10_2_min_ago = self.algo_helper.ma_minutes_ago(10, 2)
-        ma14_2_min_ago = self.algo_helper.ma_minutes_ago(14, 2)
-        ma32_3_min_ago = self.algo_helper.ma_minutes_ago(32, 3)
-        ma33_3_min_ago = self.algo_helper.ma_minutes_ago(33, 3)
-        ma36_2_min_ago = self.algo_helper.ma_minutes_ago(36, 2)
         ma50_2_min_ago = self.algo_helper.ma_minutes_ago(50, 2)
-        ma50_3_min_ago = self.algo_helper.ma_minutes_ago(50, 3)
-        ma78_2_min_ago = self.algo_helper.ma_minutes_ago(78, 2)
-        
-        
-        
         
         # LAST TRADE
         last_trade_action = self.algo_helper.last_trade_action
@@ -122,7 +80,6 @@ class ro_cano_che_ritorna:
         
         
         #############################################################################################################################################################
-        
         
         
         # TEMPO in cui (PER COMPRARE) (a tutte le condizioni gia' attive) SI AGGIUNGE una condizione aggiuntiva LA DEVIATION !
@@ -266,8 +223,7 @@ class ro_cano_che_ritorna:
                         action = "buy"
                        
 
-                        
-                        
+              
                     elif (
                          
                           price > price_2_min_ago
@@ -283,9 +239,7 @@ class ro_cano_che_ritorna:
                     
                     
 ##############################################################################################################################
-                      
-    
-
+                
     
                 # COMPRA sessione 2
         
@@ -423,7 +377,7 @@ class ro_cano_che_ritorna:
             # VENDITA 1 - con fasce di tempo !
 
             #    minuti
-            #   0 -  3 -----------c'e' vita su marte !
+            #   0 -  3 ---------- c'e' vita su marte !
             #   3 -  5 -----------
             #   5 - 12 -----------
             
