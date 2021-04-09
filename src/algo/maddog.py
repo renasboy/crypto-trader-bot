@@ -232,7 +232,7 @@ class maddog:
                     ):
                         action = "buy"
 
-        #######################################################################
+        ##############################################################################################################
         
         
         # VENDA
@@ -246,6 +246,7 @@ class maddog:
             self.algo_helper.log("deviation: {}".format(deviation))
             self.algo_helper.log("session: {}".format(self.session))
 
+       ####################################################################################################################################################     
             
             # VENDE
            
@@ -265,12 +266,14 @@ class maddog:
                     
                 elif (
                    
-                    deviation_sell < -0.19 or (ma3_last < ma38_last and deviation_buy1 < -0.43)
-                    #deviation_sell = (ma2_last / ma78_last
+                    deviation_sell < -0.19 or (ma3_last < ma38_last and deviation_buy1 < -0.43) or (ma2_last < ma50_last and deviation_ma50 < -0.20)
+                    #deviation_sell = ma2_last / ma78_last
                     
                 ):
                     action = "sell"    
                   
+                
+                
             # VENDE sessione 2
             elif self.session == 2:
                
@@ -288,10 +291,10 @@ class maddog:
                     
                 elif (
                     
-                    ma2_last < ma39_last and deviation_sell < -0.12 or (ma3_last < ma39_last and deviation_buy1 < -0.43)
-                    
-                    
+                    ma2_last < ma39_last and deviation_sell < -0.12 or (ma3_last < ma39_last and deviation_buy1 < -0.43) or (ma2_last < ma50_last and deviation_ma50 < -0.20)
                     #deviation_sell = ma2_last / ma78_last
+                    
+                    
                     
                 ):
                     action = "sell"      
@@ -315,11 +318,15 @@ class maddog:
                     
                 elif (
                     
-                    ma2_last < ma39_last and deviation_sell < -0.10 or (ma2_last < ma39_last and deviation_buy1 < -0.40)
-                    
+                    ma2_last < ma39_last and deviation_sell < -0.10 or (ma2_last < ma39_last and deviation_buy1 < -0.40) or (ma2_last < ma50_last and deviation_ma50 < -0.20)
+                    #deviation_sell = ma2_last / ma78_last
                 ):
                     action = "sell"        
                         #action = "sell"
+                        
+                        
+            ###################################################################################################################################################################
+            
                        
             # STOP LOSS (salvagente)
             
