@@ -118,11 +118,15 @@ class maddog:
         
         # formula deviation per vendere un po' piu' giu' di ma78
         deviation_sell = (ma2_last / ma78_last - 1) * 100 if ma78_last else 0
-        self.algo_helper.log("deviation: {}".format(deviation_sell))
+        self.algo_helper.log("deviation_sell: {}".format(deviation_sell))
+        
+        # formula deviation per vendere a una certa distanza da ma50
+        deviation_ma50 = (ma2_last / ma50_last - 1) * 100 if ma50_last else 0
+        self.algo_helper.log("deviation_ma50: {}".format(deviation_ma50))
         
         
 
-        #####################################################################################################################################################
+        #
         
         action = None
 
@@ -145,8 +149,9 @@ class maddog:
             self.open = False
             self.algo_helper.log("session {}: closed segment".format(self.session))
 
-        #############################################################################################################################################################
         
+        
+        ###########################################
         
         # COMPRA
         # NON TOCCARE QUESTA CONDIZIONE (QUESTA DICE CHE STA IN MODO BUY, DEVO COMPRARE)
