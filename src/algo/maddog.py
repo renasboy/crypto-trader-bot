@@ -179,13 +179,21 @@ class maddog:
                         #se va su all' improvviso prende la deviation.
                         #se ci ripensa prima di salire prende l' incrocio
                         #GRAZIE COMPA
-                      
-                        ma13_prev < ma78_prev and ma13_last > ma78_last or deviation_buy1 > 0.17
-                        #deviation_buy1 = ma8_last / ma78_last
-                       
+                        
+
+                        ma2_last > ma2_2_min_ago
+                        and ma2_last > ma2_3_min_ago
+  
                         and price > price_2_min_ago
                         and price > price_3_min_ago
-                        and price > price_4_min_ago
+                        
+
+                        and ma13_prev < ma78_prev and ma13_last > ma78_last or deviation_buy1 > 0.17
+                        #deviation_buy1 = ma8_last / ma78_last
+                       
+                        
+                        
+                        
                        
                     ):
                         action = "buy"
