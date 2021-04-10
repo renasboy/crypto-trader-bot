@@ -38,6 +38,7 @@ class ro_cano_che_ritorna:
         ma2_3_min_ago = self.algo_helper.ma_minutes_ago(2, 3)
         ma3_2_min_ago = self.algo_helper.ma_minutes_ago(3, 2)
         ma6_2_min_ago = self.algo_helper.ma_minutes_ago(6, 2)
+        ma39_2_min_ago = self.algo_helper.ma_minutes_ago(39, 2)
         ma50_2_min_ago = self.algo_helper.ma_minutes_ago(50, 2)
         
         # LAST TRADE
@@ -299,8 +300,9 @@ class ro_cano_che_ritorna:
            
                     if (
                         
-
-                        ma2_prev < ma8_prev and ma2_last > ma8_last or (deviation_buy3 > 0.135 and deviation_buy > 0.155 and deviation_prev > 0.155)
+                        
+                        ma2_prev < ma8_prev and ma2_last > ma8_last or (deviation_buy3 > 0.155 and deviation_buy > 0.175 and deviation_prev > 0.145)
+                        and ma39_last > ma39_2_min_ago
                         
                         and price > price_2_min_ago
                         and price > price_3_min_ago
@@ -331,8 +333,9 @@ class ro_cano_che_ritorna:
                     elif (
                           
 
-                          ma2_prev < ma8_prev and ma2_last > ma8_last or (deviation_buy3 > 0.135 and deviation_buy > 0.155 and deviation_prev > 0.155)
-                          
+                          ma3_prev < ma8_prev and ma3_last > ma8_last or (deviation_buy3 > 0.16 and deviation_buy > 0.18 and deviation_prev > 0.15)
+                          and ma39_last < ma39_2_min_ago
+                        
                           and price > price_2_min_ago
                           and price > price_3_min_ago
                           and ma2_last > ma2_2_min_ago
