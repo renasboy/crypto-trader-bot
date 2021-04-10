@@ -301,28 +301,27 @@ class ro_cano_che_ritorna:
                         
 
                         ma2_prev < ma8_prev and ma2_last > ma8_last or (deviation_buy3 > 0.135 and deviation_buy > 0.155 and deviation_prev > 0.155)
-                          
+                        
+                        and price > price_2_min_ago
+                        and price > price_3_min_ago
+                        and ma2_last > ma2_2_min_ago
                         and ma2_last >= ma4_last
-                        and price >= price_2_min_ago
+                        
+                        
                         and ma6_last > ma6_2_min_ago
                         and ma3_last > ma40_last
+                        
                         #incredibile ma vero E' NECESSARIA quando deve ricomprare dopo la correzione al ribasso
                         and ma3_last > ma6_last
-                        
-                        
-                        #deviation_buy3 = ma8_last / ma78_last
-                        
-                        
-                        #deviation_buy = ma2_last / last_trade_price
-                        
-                        
-                        #deviation_prev = price / prev_trade_price
-                        
                         
                         #deve essere anche questo
                         and ma2_last > ma50_last
                         and ma2_last > ma78_last
-                       
+                        
+                        #deviation_buy3 = ma8_last / ma78_last
+                        #deviation_buy = ma2_last / last_trade_price
+                        #deviation_prev = price / prev_trade_price  
+                    
                     ):
 
                         action = "buy"
@@ -333,29 +332,27 @@ class ro_cano_che_ritorna:
                           
 
                           ma2_prev < ma8_prev and ma2_last > ma8_last or (deviation_buy3 > 0.135 and deviation_buy > 0.155 and deviation_prev > 0.155)
-                          and ma2_last >= ma4_last
+                          
                           and price > price_2_min_ago
+                          and price > price_3_min_ago
+                          and ma2_last > ma2_2_min_ago
+                          and ma2_last >= ma4_last
+                        
+                        
+                          and ma6_last > ma6_2_min_ago
                           and ma3_last > ma40_last
+                        
                           #incredibile ma vero E' NECESSARIA quando deve ricomprare dopo la correzione al ribasso
                           and ma3_last > ma6_last
-                          
-                          
-                          #deviation_buy3 = ma8_last / ma78_last
-                          
-                          
-                          #deviation_buy = ma2_last / last_trade_price
-                          
-                          
-                          #deviation_prev = price / prev_trade_price
                         
                           #deve essere anche questo
                           and ma2_last > ma50_last
                           and ma2_last > ma78_last
+                        
+                          #deviation_buy3 = ma8_last / ma78_last
+                          #deviation_buy = ma2_last / last_trade_price
+                          #deviation_prev = price / prev_trade_price
                           
-                          and price > price_1_min_ago
-                          and price > price_2_min_ago
-                          and ma2_last > ma2_2_min_ago
-                          and ma6_last > ma6_2_min_ago
                     ):
 
                         action = "buy"
