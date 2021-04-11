@@ -189,7 +189,7 @@ class maddog:
                         and price > price_3_min_ago
                         
 
-                        and ma39_prev < ma78_prev and ma39_last > ma78_last and ma2_prev < ma13_prev and ma2_last > ma13_last or deviation_buy1 > 0.17
+                        and ma39_prev < ma78_prev and ma39_last > ma78_last and ma2_prev < ma13_prev and ma2_last > ma13_last or deviation_buy1 > 0.60
                         #deviation_buy1 = ma8_last / ma78_last
                        
                         
@@ -269,7 +269,7 @@ class maddog:
                 
                 if (
                     
-                    ma2_last < ma24_last and deviation > 0.13
+                    ma2_last < ma36_last and deviation > 0.13
                     
                 ):
                    
