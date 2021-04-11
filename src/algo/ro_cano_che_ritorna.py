@@ -23,6 +23,7 @@ class ro_cano_che_ritorna:
         ma15_last, ma15_prev = self.algo_helper.ma_last_prev(15)
         ma17_last, ma17_prev = self.algo_helper.ma_last_prev(17)
         ma20_last, ma20_prev = self.algo_helper.ma_last_prev(20)
+        ma25_last, ma25_prev = self.algo_helper.ma_last_prev(25)
         ma36_last, ma36_prev = self.algo_helper.ma_last_prev(36)
         ma38_last, ma38_prev = self.algo_helper.ma_last_prev(38)
         ma39_last, ma39_prev = self.algo_helper.ma_last_prev(39)
@@ -216,8 +217,10 @@ class ro_cano_che_ritorna:
                         price > price_2_min_ago
                         and price > price_3_min_ago
                         and ma2_last > ma2_2_min_ago
-                        and ma39_prev < ma78_prev and ma39_last > ma78_last or deviation_buy1 > 0.50
                         
+                        and deviation_buy1 > 0.50 or (ma39_prev < ma78_prev and ma39_last > ma78_last and deviation_buy1 > 0.25)
+                        
+                        #and ma39_prev < ma78_prev and ma39_last > ma78_last and deviation_buy1 > 0.20 or deviation_buy1 > 0.50
                         #roma 2 aprile 2021 - BUY 1
           
                     
@@ -232,8 +235,10 @@ class ro_cano_che_ritorna:
                           and price > price_3_min_ago
                           and ma2_last > ma2_2_min_ago
                    
-                          and ma50_prev < ma82_prev and ma50_last > ma82_last or deviation_buy1 > 0.50
-                        
+                          
+                          and deviation_buy1 > 0.50 or (ma39_prev < ma78_prev and ma39_last > ma78_last and deviation_buy1 > 0.25)
+                          
+                          #and ma50_prev < ma82_prev and ma50_last > ma82_last or deviation_buy1 > 0.50
                           #roma 2 aprile 2021 - BUY 1
                      
                     ):
@@ -381,16 +386,16 @@ class ro_cano_che_ritorna:
 
             ##################################################################################
 
-            # VENDITA 1 - con fasce di tempo !
+            # VENDITA 1 - con fasce di tempo ! c'e' vita su marte !
 
             #    minuti
-            #   0 -  3 ---------- c'e' vita su marte !
-            #   3 -  5 -----------
-            #   5 - 12 -----------
+            #   0 -  3 ----------  3-25
+            #   3 -  5 ----------- 3-25
+            #   5 - 12 ----------- 3-25
             
-            #  12 - 18 ----------- 
-            #  18 - 30 -----------
-            #   > 30   -----------
+            #  12 - 18 -----------3-17
+            #  18 - 30 -----------3-17
+            #   > 30   -----------3-17
 
            
             ###########################################################################################################################          0 -3 min
@@ -402,7 +407,7 @@ class ro_cano_che_ritorna:
                 
                 if (
                     
-                    ma2_last < ma39_last 
+                    ma3_last < ma25_last 
                     and deviation_sell > 0.10
                     #deviation_sell = ma2_last / last_trade_price
                     
@@ -458,7 +463,7 @@ class ro_cano_che_ritorna:
                 
                 if (
                     
-                    ma2_last < ma20_last 
+                    ma3_last < ma25_last 
                     and deviation_sell > 0.10
                     #deviation_sell = ma2_last / last_trade_price
                     
@@ -507,7 +512,7 @@ class ro_cano_che_ritorna:
 
                 if (
                     
-                    ma2_last < ma20_last
+                    ma3_last < ma25_last
                     and deviation_sell > 0.10
                     #deviation_sell = ma2_last / last_trade_price
                    
