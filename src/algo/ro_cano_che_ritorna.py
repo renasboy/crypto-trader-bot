@@ -250,7 +250,7 @@ class ro_cano_che_ritorna:
               
                     if (
                      
-                        ma2_prev < ma8_prev and ma2_last > ma8_last or (deviation_buy2 > 0.155 and deviation_buy > 0.175 and deviation_prev > 0.145)
+                        ma4_prev < ma8_prev and ma4_last > ma8_last or (deviation_buy2 > 0.16 and deviation_buy > 0.18 and deviation_prev > 0.15)
                         
                         
                         #ma8>ma78
@@ -274,7 +274,7 @@ class ro_cano_che_ritorna:
                         
                         
                     elif (
-                          ma2_prev < ma8_prev and ma2_last > ma8_last or (deviation_buy2 > 0.155 and deviation_buy > 0.175 and deviation_prev > 0.145)
+                          ma4_prev < ma8_prev and ma4_last > ma8_last or (deviation_buy2 > 0.16 and deviation_buy > 0.18 and deviation_prev > 0.15)
                           
                           
                           
