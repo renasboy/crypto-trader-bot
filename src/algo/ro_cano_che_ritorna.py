@@ -264,7 +264,7 @@ class ro_cano_che_ritorna:
               
                     if (
                      
-                        ma4_prev < ma8_prev and ma4_last > ma8_last or (deviation_buy2 > 0.16 and deviation_buy > 0.18 and deviation_prev > 0.15)
+                        ma4_prev < ma8_prev and ma4_last > ma8_last or (deviation_buy2 > 0.18 and deviation_buy > 0.20 and deviation_prev > 0.17)
                         
                         
                         #ma8>ma78
@@ -288,7 +288,7 @@ class ro_cano_che_ritorna:
                         
                         
                     elif (
-                          ma4_prev < ma8_prev and ma4_last > ma8_last or (deviation_buy2 > 0.16 and deviation_buy > 0.18 and deviation_prev > 0.15)
+                          ma4_prev < ma8_prev and ma4_last > ma8_last or (deviation_buy2 > 0.18 and deviation_buy > 0.20 and deviation_prev > 0.17)
                           
                           
                           
@@ -318,7 +318,7 @@ class ro_cano_che_ritorna:
                     if (
                         
                         
-                        ma2_prev < ma8_prev and ma2_last > ma8_last or (deviation_buy3 > 0.13 and deviation_buy > 0.13 and deviation_prev > 0.13)
+                        ma2_prev < ma8_prev and ma2_last > ma8_last or (deviation_buy3 > 0.15 and deviation_buy > 0.15 and deviation_prev > 0.15)
                         and ma39_last > ma39_2_min_ago
                         
                         and price > price_2_min_ago
@@ -350,7 +350,7 @@ class ro_cano_che_ritorna:
                     elif (
                           
 
-                          ma3_prev < ma8_prev and ma3_last > ma8_last or (deviation_buy3 > 0.16 and deviation_buy > 0.18 and deviation_prev > 0.15)
+                          ma3_prev < ma8_prev and ma3_last > ma8_last or (deviation_buy3 > 0.17 and deviation_buy > 0.20 and deviation_prev > 0.17)
                           and ma39_last < ma39_2_min_ago
                         
                           and price > price_2_min_ago
@@ -573,7 +573,7 @@ class ro_cano_che_ritorna:
 
                 if (
                     
-                    ma3_last < ma17_last 
+                    ma3_last < ma25_last 
                     and deviation_sell > 0.10
                     #deviation_sell = ma2_last / last_trade_price
                     
@@ -620,7 +620,7 @@ class ro_cano_che_ritorna:
             
                 if (
                     
-                    ma3_last < ma17_last 
+                    ma3_last < ma25_last 
                     and deviation_sell > 0.10
                     #deviation_sell = ma2_last / last_trade_price
                     
@@ -667,7 +667,7 @@ class ro_cano_che_ritorna:
                 
                 if (
                     
-                    ma3_last < ma17_last 
+                    ma3_last < ma25_last 
                     and deviation_sell > 0.10
                     #deviation_sell = ma2_last / last_trade_price
                     
