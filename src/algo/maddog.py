@@ -295,7 +295,7 @@ class maddog:
                
                 if (
                     
-                    ma2_last < ma15_last and deviation > 0.13 ma2_last < ma13_last and deviation > 0.08
+                    ma2_last < ma15_last and deviation > 0.13 or (ma2_last < ma13_last and deviation > 0.08)
                     
                     
                 ):
