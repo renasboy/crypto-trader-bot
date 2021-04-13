@@ -191,7 +191,9 @@ class maddog:
                         and price > price_3_min_ago
                         
 
-                        and ma13_prev < ma78_prev and ma13_last > ma78_last and ma39_last > ma50_last or deviation_buy1 > 0.40
+                        and ma13_prev < ma78_prev and ma13_last > ma78_last or deviation_buy1 > 0.20
+                        and ma39_last > ma50_last
+
                         #deviation_buy1 = ma8_last / ma78_last
                         #and ma2_prev < ma13_prev and ma2_last > ma13_last se aggiungo questa NON COMPRA PIU'
                         
