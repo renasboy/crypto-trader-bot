@@ -38,6 +38,10 @@ class ro_cano_che_ritorna:
         
         ma2_2_min_ago = self.algo_helper.ma_minutes_ago(2, 2)
         ma2_3_min_ago = self.algo_helper.ma_minutes_ago(2, 3)
+        
+        ma2_40_min_ago = self.algo_helper.ma_minutes_ago(2, 40)
+        
+
         ma3_2_min_ago = self.algo_helper.ma_minutes_ago(3, 2)
         ma6_2_min_ago = self.algo_helper.ma_minutes_ago(6, 2)
         ma39_2_min_ago = self.algo_helper.ma_minutes_ago(39, 2)
@@ -217,8 +221,11 @@ class ro_cano_che_ritorna:
                         price > price_2_min_ago
                         and price > price_3_min_ago
                         and ma2_last > ma2_2_min_ago
+
+                        #ESPERIMENTO
+                        and ma2_last > ma2_40_min_ago
                         
-                        and deviation_buy1 > 0.30 or (ma39_prev < ma78_prev and ma39_last > ma78_last and deviation_buy1 > 0.10)
+                        #and deviation_buy1 > 0.30 or (ma39_prev < ma78_prev and ma39_last > ma78_last and deviation_buy1 > 0.10)
                         
                         #and ma39_prev < ma78_prev and ma39_last > ma78_last and deviation_buy1 > 0.20 or deviation_buy1 > 0.50
                         #roma 2 aprile 2021 - BUY 1
@@ -234,9 +241,11 @@ class ro_cano_che_ritorna:
                           price > price_2_min_ago
                           and price > price_3_min_ago
                           and ma2_last > ma2_2_min_ago
-                   
                           
-                          and deviation_buy1 > 0.3 or (ma39_prev < ma78_prev and ma39_last > ma78_last and deviation_buy1 > 0.10)
+                          #ESPERIMENTO
+                          and ma2_last > ma2_40_min_ago
+     
+                          #and deviation_buy1 > 0.3 or (ma39_prev < ma78_prev and ma39_last > ma78_last and deviation_buy1 > 0.10)
                           
                           #and ma50_prev < ma82_prev and ma50_last > ma82_last or deviation_buy1 > 0.50
                           #roma 2 aprile 2021 - BUY 1
@@ -744,4 +753,5 @@ class ro_cano_che_ritorna:
         return action
 
         #ave comparo meo ! ###### #####
+        #compa caro #
         
