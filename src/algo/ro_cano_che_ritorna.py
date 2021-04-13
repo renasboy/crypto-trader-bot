@@ -223,7 +223,7 @@ class ro_cano_che_ritorna:
                         and ma2_last > ma2_2_min_ago
 
                         #ESPERIMENTO
-                        and ma2_last > ma2_40_min_ago
+                        and ma2_last > ma2_40_min_ago and ma3_last > ma40_last
                         
                         #and deviation_buy1 > 0.30 or (ma39_prev < ma78_prev and ma39_last > ma78_last and deviation_buy1 > 0.10)
                         
@@ -243,7 +243,7 @@ class ro_cano_che_ritorna:
                           and ma2_last > ma2_2_min_ago
                           
                           #ESPERIMENTO
-                          and ma2_last > ma2_40_min_ago
+                          and ma2_last > ma2_40_min_ago and ma3_last > ma40_last
      
                           #and deviation_buy1 > 0.3 or (ma39_prev < ma78_prev and ma39_last > ma78_last and deviation_buy1 > 0.10)
                           
