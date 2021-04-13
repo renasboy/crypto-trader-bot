@@ -239,10 +239,10 @@ class maddog:
                         and ma3_last > ma40_last
                         
                         
-                        and deviation > 0.07
+                        and deviation > 0.04
                         
                         
-                        and deviation_buy3 > 0.07
+                        and deviation_buy3 > 0.04
                         #deviation_buy3 = ma8_last / ma78_last
                         
                     ):
