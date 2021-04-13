@@ -309,7 +309,7 @@ class ro_cano_che_ritorna:
                     if (
                         
                         
-                        ma2_prev < ma8_prev and ma2_last > ma8_last or (deviation_buy3 > 0.155 and deviation_buy > 0.175 and deviation_prev > 0.145)
+                        ma2_prev < ma8_prev and ma2_last > ma8_last or (deviation_buy3 > 0.13 and deviation_buy > 0.13 and deviation_prev > 0.13)
                         and ma39_last > ma39_2_min_ago
                         
                         and price > price_2_min_ago
@@ -318,10 +318,10 @@ class ro_cano_che_ritorna:
                         and ma2_last >= ma4_last
                         
                         
-                        and ma6_last > ma6_2_min_ago
+                        
                         and ma3_last > ma40_last
                         
-                        #incredibile ma vero E' NECESSARIA quando deve ricomprare dopo la correzione al ribasso
+                        
                         and ma3_last > ma6_last
                         
                         #deve essere anche questo
