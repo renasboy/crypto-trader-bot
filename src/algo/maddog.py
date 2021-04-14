@@ -273,7 +273,7 @@ class maddog:
                 
                 if (
                     
-                    ma2_last < ma36_last and deviation > 0.13
+                    ma3_last < ma36_last and deviation > 0.13
                     
                 ):
                    
@@ -284,7 +284,7 @@ class maddog:
                     
                 elif (
                    
-                    deviation_sell < -0.19 or (ma3_last < ma39_last and deviation_buy1 < -0.27) or (ma2_last < ma50_last and deviation_ma50 < -0.27)
+                    deviation_sell < -0.30 or (ma3_last < ma39_last and deviation_buy1 < -0.30) or (ma2_last < ma50_last and deviation_ma50 < -0.30)
                     #deviation_sell = ma2_last / ma78_last
                     #deviation_buy1 = ma8_last / ma78_last
                 ):
@@ -297,7 +297,7 @@ class maddog:
                
                 if (
                     
-                    ma2_last < ma15_last and deviation > 0.13 or (ma2_last < ma13_last and deviation > 0.08)
+                    ma3_last < ma16_last and deviation > 0.13 or (ma2_last < ma13_last and deviation > 0.08)
                     
                     
                 ):
@@ -309,7 +309,7 @@ class maddog:
                     
                 elif (
                     
-                    ma2_last < ma39_last and deviation_sell < -0.12 or (ma3_last < ma39_last and deviation_buy1 < -0.27) or (ma2_last < ma50_last and deviation_ma50 < -0.27)
+                    ma2_last < ma39_last and deviation_sell < -0.25 or (ma3_last < ma39_last and deviation_buy1 < -0.35) or (ma2_last < ma50_last and deviation_ma50 < -0.35)
                     #deviation_sell = ma2_last / ma78_last
                     #deviation_buy1 = (ma8_last / ma78_last
                     
@@ -336,7 +336,7 @@ class maddog:
                     
                 elif (
                     
-                    ma2_last < ma39_last and deviation_sell < -0.10 or (ma2_last < ma39_last and deviation_buy1 < -0.27) or (ma2_last < ma50_last and deviation_ma50 < -0.27)
+                    ma2_last < ma39_last and deviation_sell < -0.20 or (ma2_last < ma39_last and deviation_buy1 < -0.35) or (ma2_last < ma50_last and deviation_ma50 < -0.35)
                     #deviation_sell = ma2_last / ma78_last
                     #deviation_buy1 = ma8_last / ma78_last
                     
