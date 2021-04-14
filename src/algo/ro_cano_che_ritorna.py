@@ -43,10 +43,10 @@ class ro_cano_che_ritorna:
         ma2_40_min_ago = self.algo_helper.ma_minutes_ago(2, 40)
         
 
-        ma3_2_min_ago = self.algo_helper.ma_minutes_ago(3, 2)
-        ma6_2_min_ago = self.algo_helper.ma_minutes_ago(6, 2)
-        ma39_2_min_ago = self.algo_helper.ma_minutes_ago(39, 2)
-        ma50_2_min_ago = self.algo_helper.ma_minutes_ago(50, 2)
+        ma3_2_min_ago = self.algo_helper.ma_minutes_ago(3,2)
+        ma6_2_min_ago = self.algo_helper.ma_minutes_ago(6,2)
+        ma39_52_min_ago = self.algo_helper.ma_minutes_ago(39,52)
+        ma50_2_min_ago = self.algo_helper.ma_minutes_ago(50,2)
         
         # LAST TRADE
         last_trade_action = self.algo_helper.last_trade_action
@@ -224,7 +224,7 @@ class ro_cano_che_ritorna:
                         and ma2_last > ma2_2_min_ago
 
                         #ESPERIMENTO
-                        and ma2_last > ma2_40_min_ago and ma3_last > ma40_last
+                        and ma2_last > ma2_40_min_ago and ma39_last > ma39_52_min_ago and ma3_last > ma40_last
                         
                         #and deviation_buy1 > 0.30 or (ma39_prev < ma78_prev and ma39_last > ma78_last and deviation_buy1 > 0.10)
                         
@@ -244,7 +244,7 @@ class ro_cano_che_ritorna:
                           and ma2_last > ma2_2_min_ago
                           
                           #ESPERIMENTO
-                          and ma2_last > ma2_40_min_ago and ma3_last > ma40_last
+                          and ma2_last > ma2_40_min_ago and ma39_last > ma39_52_min_ago and ma3_last > ma40_last
      
                           #and deviation_buy1 > 0.3 or (ma39_prev < ma78_prev and ma39_last > ma78_last and deviation_buy1 > 0.10)
                           
