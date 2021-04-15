@@ -41,7 +41,7 @@ class ro_cano_che_ritorna:
         ma2_3_min_ago = self.algo_helper.ma_minutes_ago(2, 3)
         
         ma2_30_min_ago = self.algo_helper.ma_minutes_ago(2, 30)
-        
+        ma2_40_min_ago = self.algo_helper.ma_minutes_ago(2, 40)
 
         ma3_2_min_ago = self.algo_helper.ma_minutes_ago(3,2)
         ma6_2_min_ago = self.algo_helper.ma_minutes_ago(6,2)
@@ -226,7 +226,7 @@ class ro_cano_che_ritorna:
                         and ma2_last > ma2_2_min_ago
 
                         #ESPERIMENTO
-                        and ma2_last > ma2_30_min_ago and ma3_last > ma40_last and ma78_last < ma78_2_min_ago
+                        and ma2_last > ma2_30_min_ago and ma3_last > ma40_last and ma78_last < ma78_2_min_ago and ma2_last > ma2_40_min_ago
                         
                         #and deviation_buy1 > 0.30 or (ma39_prev < ma78_prev and ma39_last > ma78_last and deviation_buy1 > 0.10)
                         
@@ -246,7 +246,7 @@ class ro_cano_che_ritorna:
                           and ma2_last > ma2_2_min_ago
                           
                           #ESPERIMENTO
-                          and ma2_last > ma2_30_min_ago and ma3_last > ma40_last and ma78_last > ma78_2_min_ago
+                          and ma2_last > ma2_30_min_ago and ma3_last > ma40_last and ma78_last > ma78_2_min_ago and ma2_last > ma2_40_min_ago
                           
      
                           #and deviation_buy1 > 0.3 or (ma39_prev < ma78_prev and ma39_last > ma78_last and deviation_buy1 > 0.10)
