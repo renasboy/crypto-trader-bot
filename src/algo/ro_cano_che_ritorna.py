@@ -88,8 +88,8 @@ class ro_cano_che_ritorna:
         
         
 
-        # VENDE DOPO 7200 secondi = 120 minuti ("e se") ro cano torna a casa
-        max_hold_time_in_seconds = 7200
+        # VENDE DOPO x secondi = x minuti * 60 ("e se") ro cano torna a casa - riga 817
+        max_hold_time_in_seconds = 2400
 
         # VENDE DOPO 600 secondi = 10 minuti ("e se") - ro cano perde la forza - riga 323
         max_hold_without_force_time_in_seconds = 600
@@ -814,10 +814,10 @@ class ro_cano_che_ritorna:
             
            
 
-            #2) ro cano VENDE " DOPO 120 MINUTI " "max hold time" riga 128
+            #2) ro cano VENDE " DOPO x MINUTI " "max hold time" riga 91
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
-                and ma2_last < ma78_last and deviation_sell < -0.18
+                and ma2_last < ma78_last and deviation_sell < -0.10
                 #deviation_sell = ma2_last / last_trade_price
             ):
                 action = "sell"
