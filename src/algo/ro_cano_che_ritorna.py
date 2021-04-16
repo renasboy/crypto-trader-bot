@@ -26,7 +26,9 @@ class ro_cano_che_ritorna:
         ma25_last, ma25_prev = self.algo_helper.ma_last_prev(25)
         ma36_last, ma36_prev = self.algo_helper.ma_last_prev(36)
         ma38_last, ma38_prev = self.algo_helper.ma_last_prev(38)
+        
         ma39_last, ma39_prev = self.algo_helper.ma_last_prev(39)
+        
         ma40_last, ma40_prev = self.algo_helper.ma_last_prev(40)
         ma45_last, ma45_prev = self.algo_helper.ma_last_prev(45)
         ma50_last, ma50_prev = self.algo_helper.ma_last_prev(50)
@@ -46,6 +48,7 @@ class ro_cano_che_ritorna:
         ma3_2_min_ago = self.algo_helper.ma_minutes_ago(3,2)
         ma6_2_min_ago = self.algo_helper.ma_minutes_ago(6,2)
         ma39_2_min_ago = self.algo_helper.ma_minutes_ago(39,2)
+        ma39_42_min_ago = self.algo_helper.ma_minutes_ago(39,42)
         ma39_52_min_ago = self.algo_helper.ma_minutes_ago(39,52)
         ma50_2_min_ago = self.algo_helper.ma_minutes_ago(50,2)
         ma78_2_min_ago = self.algo_helper.ma_minutes_ago(78,2)
@@ -226,7 +229,7 @@ class ro_cano_che_ritorna:
                         and ma2_last > ma2_2_min_ago
 
                         #ESPERIMENTO
-                        and ma2_last > ma2_30_min_ago and ma3_last > ma40_last and ma78_last < ma78_2_min_ago and ma2_last > ma2_40_min_ago
+                        and ma2_last > ma2_30_min_ago and ma3_last > ma40_last and ma78_last < ma78_2_min_ago and ma2_last > ma2_40_min_ago and ma39_last > ma39_42_min_ago
                         
                         #and deviation_buy1 > 0.30 or (ma39_prev < ma78_prev and ma39_last > ma78_last and deviation_buy1 > 0.10)
                         
@@ -246,7 +249,7 @@ class ro_cano_che_ritorna:
                           and ma2_last > ma2_2_min_ago
                           
                           #ESPERIMENTO
-                          and ma2_last > ma2_30_min_ago and ma3_last > ma40_last and ma78_last > ma78_2_min_ago and ma2_last > ma2_40_min_ago
+                          and ma2_last > ma2_30_min_ago and ma3_last > ma40_last and ma78_last > ma78_2_min_ago and ma2_last > ma2_40_min_ago and ma39_last > ma39_42_min_ago
                           
      
                           #and deviation_buy1 > 0.3 or (ma39_prev < ma78_prev and ma39_last > ma78_last and deviation_buy1 > 0.10)
@@ -281,10 +284,10 @@ class ro_cano_che_ritorna:
                         and price > price_1_min_ago
                         and price > price_2_min_ago
                         
-                        
+                        and ma39_last > ma39_42_min_ago
                         and ma3_last > ma40_last
                         #incredibile ma vero E' NECESSARIA quando deve ricomprare dopo la correzione al ribasso
-                
+                        
                     ):
 
                         action = "buy"
@@ -304,6 +307,7 @@ class ro_cano_che_ritorna:
                           and price > price_1_min_ago
                           and price > price_2_min_ago
                         
+                          and ma39_last > ma39_42_min_ago
                           and ma3_last > ma40_last
                           #incredibile ma vero E' NECESSARIA quando deve ricomprare dopo la correzione al ribasso
                     
@@ -331,7 +335,7 @@ class ro_cano_che_ritorna:
                         and ma2_last >= ma4_last
                         
                         
-                        
+                        and ma39_last > ma39_42_min_ago
                         and ma3_last > ma40_last
                         
                         
@@ -365,8 +369,10 @@ class ro_cano_che_ritorna:
                         
                           and ma6_last > ma6_2_min_ago
                           and ma3_last > ma40_last
-                        
+                          
+                          and ma39_last > ma39_42_min_ago
                           #incredibile ma vero E' NECESSARIA quando deve ricomprare dopo la correzione al ribasso
+                          
                           and ma3_last > ma6_last
                         
                           #deve essere anche questo
