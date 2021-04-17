@@ -232,8 +232,10 @@ class ro_cano_che_ritorna:
                         and ma2_last > ma2_2_min_ago
 
                         #ESPERIMENTO
-                        and ma2_last > ma2_30_min_ago and ma3_last > ma40_last and ma78_last < ma78_2_min_ago and ma2_last > ma2_40_min_ago and ma39_last > ma39_42_min_ago
+                        #and ma2_last > ma2_30_min_ago and ma3_last > ma40_last and ma78_last < ma78_2_min_ago and ma2_last > ma2_40_min_ago and ma39_last > ma39_42_min_ago
                         
+                        #proviamo l' assurdo !
+                        and ma3_last > ma40_last and ma2_last < ma2_30_min_ago and ma78_last < ma78_2_min_ago and ma2_last < ma2_40_min_ago and ma39_last < ma39_42_min_ago
                         #and deviation_buy1 > 0.30 or (ma39_prev < ma78_prev and ma39_last > ma78_last and deviation_buy1 > 0.10)
                         
                         #and ma39_prev < ma78_prev and ma39_last > ma78_last and deviation_buy1 > 0.20 or deviation_buy1 > 0.50
@@ -252,8 +254,10 @@ class ro_cano_che_ritorna:
                           and ma2_last > ma2_2_min_ago
                           
                           #ESPERIMENTO
-                          and ma2_last > ma2_30_min_ago and ma3_last > ma40_last and ma78_last > ma78_2_min_ago and ma2_last > ma2_40_min_ago and ma39_last > ma39_42_min_ago
+                          #and ma2_last > ma2_30_min_ago and ma3_last > ma40_last and ma78_last > ma78_2_min_ago and ma2_last > ma2_40_min_ago and ma39_last > ma39_42_min_ago
                           
+                          #proviamo l' assurdo !
+                          and ma3_last > ma40_last and ma2_last < ma2_30_min_ago and ma78_last < ma78_2_min_ago and ma2_last < ma2_40_min_ago and ma39_last < ma39_42_min_ago
      
                           #and deviation_buy1 > 0.3 or (ma39_prev < ma78_prev and ma39_last > ma78_last and deviation_buy1 > 0.10)
                           
@@ -447,7 +451,7 @@ class ro_cano_che_ritorna:
                    
                     ma13_last >= ma39_last
                     
-                    and deviation_sell < -0.69 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.45) or (ma2_last < ma50_last and deviation_ma50 < -0.35)
+                    and deviation_sell < -0.75 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.45) or (ma2_last < ma50_last and deviation_ma50 < -0.35)
                     #deviation_sell = ma2_last / last_trade_price
                   
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
@@ -469,7 +473,7 @@ class ro_cano_che_ritorna:
                     
                     ma13_last < ma39_last
                     
-                    and deviation_sell < -0.69 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.45)
+                    and deviation_sell < -0.75 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.45)
                     #deviation_sell = ma2_last / last_trade_price
                     
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
@@ -512,7 +516,7 @@ class ro_cano_che_ritorna:
                     
                     ma13_last >= ma39_last
                     
-                    and deviation_sell < -0.69 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.35)
+                    and deviation_sell < -0.75 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.35)
                     #deviation_sell = ma2_last / last_trade_price
                    
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
@@ -532,7 +536,7 @@ class ro_cano_che_ritorna:
                 elif (
                     
                     ma13_last < ma39_last 
-                    and deviation_sell < -0.69 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.45) or (ma2_last < ma50_last and deviation_ma50 < -0.35)
+                    and deviation_sell < -0.75 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.45) or (ma2_last < ma50_last and deviation_ma50 < -0.35)
                     
                     #deviation_sell = ma2_last / last_trade_price
                    
@@ -591,7 +595,7 @@ class ro_cano_che_ritorna:
                 elif (
                     
                     ma13_last < ma39_last
-                    and deviation_sell < -0.69 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.45) or (ma2_last < ma50_last and deviation_ma50 < -0.35)
+                    and deviation_sell < -0.75 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.45) or (ma2_last < ma50_last and deviation_ma50 < -0.35)
                     #deviation_sell = ma2_last / last_trade_price
                     
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
@@ -653,7 +657,7 @@ class ro_cano_che_ritorna:
                 elif (
                     
                     ma13_last < ma39_last
-                    and deviation_sell < -0.69 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.45) or (ma2_last < ma50_last and deviation_ma50 < -0.35)
+                    and deviation_sell < -0.75 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.45) or (ma2_last < ma50_last and deviation_ma50 < -0.35)
                     #deviation_sell = ma2_last / last_trade_price
                     
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
@@ -713,7 +717,7 @@ class ro_cano_che_ritorna:
                 elif (
                     
                     ma13_last < ma39_last
-                    and deviation_sell < -0.69 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.45) or (ma2_last < ma50_last and deviation_ma50 < -0.35)
+                    and deviation_sell < -0.75 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.45) or (ma2_last < ma50_last and deviation_ma50 < -0.35)
                     #deviation_sell = ma2_last / last_trade_price
                     
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
@@ -772,7 +776,7 @@ class ro_cano_che_ritorna:
                 elif (
                     
                     ma13_last < ma39_last
-                    and deviation_sell < -0.69 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.45) or (ma2_last < ma50_last and deviation_ma50 < -0.35)
+                    and deviation_sell < -0.75 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.45) or (ma2_last < ma50_last and deviation_ma50 < -0.35)
                     #deviation_sell = ma2_last / last_trade_price
                     
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
@@ -795,7 +799,7 @@ class ro_cano_che_ritorna:
             # se ma100_last < ma100_13_min_ago vende in un altro modo
             
             if (
-                ma2_last < ma36_last and deviation_sell < -0.68 or (ma2_last < ma36_last and deviation_sell < -0.72)
+                ma2_last < ma36_last and deviation_sell < -0.75 or (ma2_last < ma36_last and deviation_sell < -0.75)
                 
                 
               
