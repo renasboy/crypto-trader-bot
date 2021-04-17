@@ -147,8 +147,8 @@ class ro_cano_che_ritorna:
         self.algo_helper.log("deviation_ma50: {}".format(deviation_ma50))
         
         #######################################################################################################################################################
-        # formula prezzo piu' alto nella fascia !
-        highest_price_40_min_ago = self.algo_helper.highest_price_minutes_ago(40)
+        # formula prezzo piu' alto nella fascia ! riga 242 - 266
+        highest_price_50_min_ago = self.algo_helper.highest_price_minutes_ago(50)
         
         ######################################################################################################################################################
         
@@ -239,7 +239,7 @@ class ro_cano_che_ritorna:
                         and price > price_3_min_ago
                         and ma2_last > ma2_2_min_ago
                         
-                        and price > highest_price_40_min_ago 
+                        and price > highest_price_50_min_ago 
                         # riga 150
                         
                         
@@ -263,7 +263,7 @@ class ro_cano_che_ritorna:
                           and price > price_3_min_ago
                           and ma2_last > ma2_2_min_ago
                           
-                          and price > highest_price_40_min_ago 
+                          and price > highest_price_50_min_ago 
                           # riga 150
      
                           #and deviation_buy1 > 0.3 or (ma39_prev < ma78_prev and ma39_last > ma78_last and deviation_buy1 > 0.10)
