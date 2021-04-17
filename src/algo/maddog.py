@@ -192,7 +192,7 @@ class maddog:
                         
 
                         and ma13_prev < ma78_prev and ma13_last > ma78_last and or deviation_buy1 > 0.20
-                        and ma18_prev < ma78_prev and ma39_last > ma18_last and or deviation_buy1 > 0.20
+                        and ma18_prev < ma78_prev and ma18_last > ma78_last and or deviation_buy1 > 0.20
                         and ma39_last > ma50_last
 
                         #deviation_buy1 = ma8_last / ma78_last
