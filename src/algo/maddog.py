@@ -7,7 +7,7 @@ class maddog:
     @property
     def action(self):
 
-        # ro cano ritorna automaticamente ( per esempio 90 minuti x 60 = 5400 secondi )...............................(ADESSO 60 MINUTI) RIGA 319
+        # ro cano ritorna automaticamente ( per esempio 90 minuti x 60 = 5400 secondi )...............................(ADESSO 60 MINUTI) RIGA 319 #
         max_hold_time_in_seconds = 3600
         
         # e durata segmento in cui si aggiunge una condizione per il BUY ( per esempio 40 minuti x 60 = 2400 secondi )
