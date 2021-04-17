@@ -146,6 +146,14 @@ class ro_cano_che_ritorna:
         deviation_ma50 = (ma2_last / ma50_last - 1) * 100 if ma50_last else 0
         self.algo_helper.log("deviation_ma50: {}".format(deviation_ma50))
         
+        #######################################################################################################################################################
+        # formula prezzo piu' alto nella fascia !
+        highest_price_40_min_ago = self.algo_helper.highest_price_minutes_ago(40)
+        
+        ######################################################################################################################################################
+        
+        
+        
         
         
         ###################################################################################################################################
@@ -230,13 +238,15 @@ class ro_cano_che_ritorna:
                         price > price_2_min_ago
                         and price > price_3_min_ago
                         and ma2_last > ma2_2_min_ago
-
-                        #ESPERIMENTO
-                        #and ma2_last > ma2_30_min_ago and ma3_last > ma40_last and ma78_last < ma78_2_min_ago and ma2_last > ma2_40_min_ago and ma39_last > ma39_42_min_ago
                         
-                        #proviamo l' assurdo !
-                        and ma3_last > ma40_last and ma2_last < ma2_30_min_ago and ma78_last < ma78_2_min_ago and ma2_last < ma2_40_min_ago and ma39_last < ma39_42_min_ago
+                        and price > highest_price_40_min_ago 
+                        # riga 150
+                        
+                        
                         #and deviation_buy1 > 0.30 or (ma39_prev < ma78_prev and ma39_last > ma78_last and deviation_buy1 > 0.10)
+                        
+                        
+                        
                         
                         #and ma39_prev < ma78_prev and ma39_last > ma78_last and deviation_buy1 > 0.20 or deviation_buy1 > 0.50
                         #roma 2 aprile 2021 - BUY 1
@@ -253,11 +263,8 @@ class ro_cano_che_ritorna:
                           and price > price_3_min_ago
                           and ma2_last > ma2_2_min_ago
                           
-                          #ESPERIMENTO
-                          #and ma2_last > ma2_30_min_ago and ma3_last > ma40_last and ma78_last > ma78_2_min_ago and ma2_last > ma2_40_min_ago and ma39_last > ma39_42_min_ago
-                          
-                          #proviamo l' assurdo !
-                          and ma3_last > ma40_last and ma2_last < ma2_30_min_ago and ma78_last < ma78_2_min_ago and ma2_last < ma2_40_min_ago and ma39_last < ma39_42_min_ago
+                          and price > highest_price_40_min_ago 
+                          # riga 150
      
                           #and deviation_buy1 > 0.3 or (ma39_prev < ma78_prev and ma39_last > ma78_last and deviation_buy1 > 0.10)
                           
