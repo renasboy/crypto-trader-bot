@@ -238,8 +238,11 @@ class ro_cano_che_ritorna:
                         price > price_2_min_ago
                         and price > price_3_min_ago
                         and ma2_last > ma2_2_min_ago
+                        and ma4_last > ma8_last
+                        and deviation_buy1 < -0.82
                         
-                        and price > highest_price_50_min_ago 
+                        
+                        #and price > highest_price_50_min_ago 
                         # riga 150
                         
                         
@@ -262,8 +265,11 @@ class ro_cano_che_ritorna:
                           price > price_2_min_ago
                           and price > price_3_min_ago
                           and ma2_last > ma2_2_min_ago
-                          
-                          and price > highest_price_50_min_ago 
+                          and ma4_last > ma8_last
+                          and deviation_buy1 < -0.82
+                        
+                        
+                          #and price > highest_price_50_min_ago 
                           # riga 150
      
                           #and deviation_buy1 > 0.3 or (ma39_prev < ma78_prev and ma39_last > ma78_last and deviation_buy1 > 0.10)
