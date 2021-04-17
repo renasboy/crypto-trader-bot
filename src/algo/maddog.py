@@ -164,7 +164,7 @@ class maddog:
             if (
                 seconds_since_last_trade > 0
                 and seconds_since_last_trade <= min_buy_delay_in_seconds
-                and deviation > 0.15
+                and deviation > 0.13
             ) or (
                 seconds_since_last_trade == 0
                 or seconds_since_last_trade > min_buy_delay_in_seconds
@@ -216,10 +216,10 @@ class maddog:
                         and ma3_last > ma40_last
                         #incredibile ma vero E' NECESSARIA quando deve ricomprare dopo la correzione al ribasso
                         
-                        and deviation > 0.18
+                        and deviation > 0.17
                         #deviation = ma2_last / last_trade_price
                         
-                        and deviation_buy2 > 0.15
+                        and deviation_buy2 > 0.14
                         #deviation_buy2 = ma8_last / ma78_last
                    
                     ):
