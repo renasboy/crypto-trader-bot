@@ -504,6 +504,24 @@ class ro_cano_che_ritorna:
                     action = "sell"
                     
                     
+                    
+                    
+                ########### PROVA ! vende in modo diverso quando c'e' un crollo !
+                    
+                elif (
+                    deviation_buy < -0.82
+                    and ma4_last < ma8_last and deviation_sell < -0.20
+                    #deviation_sell = ma2_last / last_trade_price
+                    
+                    #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
+                    and ma2_last < ma2_2_min_ago
+                   
+                ):
+                   
+                    action = "sell"   
+                    
+                    
+                    
          #########################################################################################################################          3-5 min           
 
             # VENDITA - da 3 a 5 minuti = da 180 a 300 secondi
@@ -564,7 +582,25 @@ class ro_cano_che_ritorna:
                     
                 ):
                     action = "sell"
-          
+                    
+                    
+                ########### PROVA ! vende in modo diverso quando c'e' un crollo !
+                    
+                elif (
+                    deviation_buy < -0.82
+                    and ma4_last < ma8_last and deviation_sell < -0.20
+                    #deviation_sell = ma2_last / last_trade_price
+                    
+                    #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
+                    and ma2_last < ma2_2_min_ago
+                   
+                ):
+                   
+                    action = "sell"   
+                    
+                    
+                    
+                    
             ########################################################################################################################          5-12 min         
                 
             # VENDITA - da 5 a 12 minuti = da 300 a 720 secondi
@@ -621,14 +657,28 @@ class ro_cano_che_ritorna:
                     
                 ):
                     action = "sell"
-                        
                     
                     
                     
+                ########### PROVA ! vende in modo diverso quando c'e' un crollo !
                     
+                elif (
+                    deviation_buy < -0.82
+                    and ma4_last < ma8_last and deviation_sell < -0.20
+                    #deviation_sell = ma2_last / last_trade_price
                     
+                    #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
+                    and ma2_last < ma2_2_min_ago
+                   
+                ):
+                   
+                    action = "sell"   
+                    
+                
             
-            #######################################################################################################          12-18 min        
+            #######################################################################################################          12-18 min
+            
+            
 
             # VENDITA - da 12 a 18 minuti = da 720 a 1080 secondi
 
@@ -683,9 +733,27 @@ class ro_cano_che_ritorna:
                     
                     
                 ):
-                    action = "sell"   
+                    action = "sell"
                     
-          
+                    
+                    
+                ########### PROVA ! vende in modo diverso quando c'e' un crollo !
+                    
+                elif (
+                    deviation_buy < -0.82
+                    and ma4_last < ma8_last and deviation_sell < -0.20
+                    #deviation_sell = ma2_last / last_trade_price
+                    
+                    #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
+                    and ma2_last < ma2_2_min_ago
+                   
+                ):
+                   
+                    action = "sell"
+                    
+                    
+                    
+                    
             ################################################################################################################################          18-30 min
             
             
@@ -743,11 +811,31 @@ class ro_cano_che_ritorna:
                     
                     
                 ):
+                    action = "sell"
+                    
+                    
+                    
+                    
+                ########### PROVA ! vende in modo diverso quando c'e' un crollo !
+                    
+                elif (
+                    deviation_buy < -0.82
+                    and ma4_last < ma8_last and deviation_sell < -0.20
+                    #deviation_sell = ma2_last / last_trade_price
+                    
+                    #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
+                    and ma2_last < ma2_2_min_ago
+                   
+                ):
+                   
                     action = "sell"   
-                    
-                    
-              
+                       
+                 
+                
+                
             ########################################################################################################################          >30 min
+            
+            
             # VENDITA - da 30 minuti in poi = da 1800 secondi in poi
 
             elif seconds_since_last_trade > 1800:
@@ -801,11 +889,30 @@ class ro_cano_che_ritorna:
                     and ma2_last < ma2_46_min_ago
                     
                 ):
+                    action = "sell"
+                    
+                    
+                    
+                ########### PROVA ! vende in modo diverso quando c'e' un crollo !
+                
+                
+                elif (
+                    deviation_buy < -0.82
+                    and ma4_last < ma8_last and deviation_sell < -0.20
+                    #deviation_sell = ma2_last / last_trade_price
+                    
+                    #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
+                    and ma2_last < ma2_2_min_ago
+                   
+                ):
+                   
                     action = "sell"   
+                       
                     
-                    
+                  
             ################################################################################################################################## 
-
+            
+            
 
             # 1) (STOP LOSS) (salvagente)  
             # se ma100_last >= ma100_13_min_ago vende in un modo 
@@ -813,13 +920,24 @@ class ro_cano_che_ritorna:
             
             if (
                 ma2_last < ma36_last and deviation_sell < -0.75 or (ma2_last < ma36_last and deviation_sell < -0.75)
-                
-                
-              
+            
             ):
+                action = "sell"
+                
+            
+            
+            # un altro salvagente per il grande crollo !
+            
+            elif (
+                deviation_buy < -0.82
+                and ma4_last < ma8_last and deviation_sell < -0.40
+                and ma2_last < ma2_2_min_ago
+                
+            ):    
                 action = "sell"
             
             
+            # se diminuisce la forza - al momento disattivato
             #elif (
                 
                 #ma2_last < ma36_last 
