@@ -71,6 +71,7 @@ class maddog:
         ma39_2_min_ago = self.algo_helper.ma_minutes_ago(39, 2)
         ma60_2_min_ago = self.algo_helper.ma_minutes_ago(60, 2)
         ma78_2_min_ago = self.algo_helper.ma_minutes_ago(78, 2)
+        ma78_60_min_ago = self.algo_helper.ma_minutes_ago(78, 60)
         ma85_3_min_ago = self.algo_helper.ma_minutes_ago(85, 3)
         
         
@@ -286,12 +287,28 @@ class maddog:
                 elif (
                    
                     deviation_sell < -0.39 or (ma3_last < ma39_last and deviation_buy1 < -0.39) or (ma2_last < ma50_last and deviation_ma50 < -0.39)
+                    and ma78_last > ma78_60_min_ago
+                    
                     #deviation_sell = ma2_last / ma78_last
                     #deviation_buy1 = ma8_last / ma78_last
                 ):
                     action = "sell"    
                   
                 
+
+                elif (
+                   
+                    deviation_sell < -1.40 or (ma3_last < ma39_last and deviation_buy1 < -1.40) or (ma2_last < ma50_last and deviation_ma50 < -1.40)
+                    and ma78_last < ma78_60_min_ago
+                    
+                    #deviation_sell = ma2_last / ma78_last
+                    #deviation_buy1 = ma8_last / ma78_last
+                ):
+                    action = "sell"
+
+
+
+
                 
             # VENDE sessione 2
             elif self.session == 2:
