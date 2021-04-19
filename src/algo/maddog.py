@@ -192,8 +192,10 @@ class maddog:
                         and price > price_3_min_ago
                         
 
-                        and ma13_prev < ma78_prev and ma13_last > ma78_last or deviation_buy1 > 0.20
-                        and ma18_prev < ma78_prev and ma18_last > ma78_last or deviation_buy1 > 0.20
+                        and ma13_prev < ma78_prev and ma13_last > ma78_last and ma2_last > ma2_2_min_ago or ( deviation_buy1 > 0.20 ma2_last > ma2_2_min_ago )
+                        and ma18_prev < ma78_prev and ma18_last > ma78_last and ma2_last > ma2_2_min_ago or ( deviation_buy1 > 0.20 ma2_last > ma2_2_min_ago )
+                        # ho messo dentro ma2_last > ma2_2_min_ago perche' ha comprato mentre ma2 scendeva
+                        
                         and ma39_last > ma50_last
 
                         #deviation_buy1 = ma8_last / ma78_last
