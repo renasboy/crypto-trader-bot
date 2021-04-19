@@ -170,7 +170,7 @@ class ro_cano_che_ritorna:
 
         # APRE E CHIUDE GABBIA
 
-        if ma50_last >= ma50_2_min_ago and deviation_gabbia > -0.15 or ( deviation_buy1 < -0.82 ):
+        if ma50_last >= ma50_2_min_ago and deviation_gabbia > -0.15 or ( deviation_buy1 < -0.99 ):
             #ti ricordo che deviation_gabbia = (ma6_last / ma38_last)
            
             
@@ -240,8 +240,9 @@ class ro_cano_che_ritorna:
                         and price > price_3_min_ago
                         and ma2_last > ma2_2_min_ago
                         and ma4_last > ma8_last
-                        and ma13_prev < ma78_prev and ma13_last > ma78_last or deviation_buy1 > 0.20
-                        and ma18_prev < ma78_prev and ma18_last > ma78_last or deviation_buy1 > 0.20
+                        
+                        and ma13_prev < ma78_prev and ma13_last > ma78_last or (deviation_buy1 > 0.20 and ma2_last > ma2_2_min_ago)
+                        and ma18_prev < ma78_prev and ma18_last > ma78_last or (deviation_buy1 > 0.20 and ma2_last > ma2_2_min_ago)
                         and ma39_last > ma50_last
                         
                         
@@ -269,7 +270,7 @@ class ro_cano_che_ritorna:
                           and price > price_3_min_ago
                           and ma2_last > ma2_2_min_ago
                           and ma4_last > ma8_last
-                          and deviation_buy1 < -0.82
+                          and deviation_buy1 < -0.99
                         
                         
                           #and price > highest_price_50_min_ago 
@@ -438,6 +439,9 @@ class ro_cano_che_ritorna:
             #  12 - 18 -----------3-17
             #  18 - 30 -----------3-17
             #   > 30   -----------3-17
+            # MODIFICA
+            #  30-40
+            #  40
 
            
             ###########################################################################################################################          0 -3 min
@@ -760,9 +764,9 @@ class ro_cano_che_ritorna:
             ################################################################################################################################          18-30 min
             
             
-            # VENDITA - da 18 a 30 minuti = da 1080 a 1800 secondi
+            # VENDITA - da 18 a 40 minuti = da 1080 a 1800 secondi
 
-            elif seconds_since_last_trade > 1080 and seconds_since_last_trade <= 1800:
+            elif seconds_since_last_trade > 1080 and seconds_since_last_trade <= 2400:
             
                 if (
                     
@@ -839,14 +843,14 @@ class ro_cano_che_ritorna:
             ########################################################################################################################          >30 min
             
             
-            # VENDITA - da 30 minuti in poi = da 1800 secondi in poi
+            # VENDITA - da 40 minuti in poi = da 2400 secondi in poi
 
-            elif seconds_since_last_trade > 1800:
+            elif seconds_since_last_trade > 2400:
                
                 
                 if (
                     
-                    ma3_last < ma45_last 
+                    ma3_last < ma20_last 
                     and deviation_sell > 0.10
                     #deviation_sell = ma2_last / last_trade_price
                     
