@@ -104,8 +104,8 @@ class ro_cano_che_ritorna:
         # dall' ULTIMO trade ( 15 minuti = 15 * 60 = 900 secondi )
         min_buy_delay_in_seconds = 900
 
-        # dal PENULTIMO trade ( 20 minuti = 20 * 60 = 1800 secondi )
-        min_prev_buy_delay_in_seconds = 1200
+        # dal PENULTIMO trade ( 15 minuti = 15 * 60 = 900 secondi )
+        min_prev_buy_delay_in_seconds = 900
 
        ##############################################################################################################################################################
     
@@ -488,27 +488,27 @@ class ro_cano_che_ritorna:
                     
                     
                     
+                #questa la blocco tutta e vediamo chi e' il piu' forte  
+                #elif (
                     
-                elif (
+                    #ma13_last < ma39_last
                     
-                    ma13_last < ma39_last
-                    
-                    and deviation_sell < -0.75 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.45)
-                    #deviation_sell = ma2_last / last_trade_price
+                    #and deviation_sell < -0.75 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.45)
+                    # ti ricordo che deviation_sell = ma2_last / last_trade_price
                     
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
-                    and ma2_last < ma2_2_min_ago
+                    #and ma2_last < ma2_2_min_ago
                     
-                    and ma2_last < ma2_40_min_ago
-                    and ma2_last < ma2_40_min_ago
-                    and ma2_last < ma2_42_min_ago
-                    and ma2_last < ma2_44_min_ago
-                    and ma2_last < ma2_46_min_ago
+                    #and ma2_last < ma2_40_min_ago
+                    #and ma2_last < ma2_40_min_ago
+                    #and ma2_last < ma2_42_min_ago
+                    #and ma2_last < ma2_44_min_ago
+                    #and ma2_last < ma2_46_min_ago
                     
                     
-                ):
+                #):
                    
-                    action = "sell"
+                    #action = "sell"
                     
                     
                     
@@ -517,8 +517,9 @@ class ro_cano_che_ritorna:
                     
                 elif (
                     deviation_buy < -0.82
-                    and ma4_last < ma8_last and deviation_sell < -0.20
+                    and ma4_last < ma8_last and deviation_sell < -0.30 and ma2_last < ma2_2_min_ago 
                     #deviation_sell = ma2_last / last_trade_price
+                    # and ma2_last < ma2_2_min_ago e' il prezzemolo
                     
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
                     and ma2_last < ma2_2_min_ago
@@ -595,7 +596,7 @@ class ro_cano_che_ritorna:
                     
                 elif (
                     deviation_buy < -0.82
-                    and ma4_last < ma8_last and deviation_sell < -0.20
+                    and ma4_last < ma8_last and deviation_sell < -0.20 and ma2_last < ma2_2_min_ago
                     #deviation_sell = ma2_last / last_trade_price
                     
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
