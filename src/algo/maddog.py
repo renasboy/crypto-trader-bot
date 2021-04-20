@@ -222,7 +222,7 @@ class maddog:
                         and deviation > 0.17
                         #deviation = ma2_last / last_trade_price
                         
-                        and deviation_buy2 > 0.14
+                        and deviation_buy2 > 0.13
                         #deviation_buy2 = ma8_last / ma78_last
                    
                     ):
