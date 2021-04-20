@@ -456,7 +456,7 @@ class ro_cano_che_ritorna:
                 
                 if (
                     
-                    ma3_last < ma25_last and deviation_sell > 0.05 or ma2_last < ma15_last and deviation_sell > 0.10
+                    ma3_last < ma25_last and deviation_sell > 0.05 or ( ma2_last < ma15_last and deviation_sell > 0.10 )
                     
                     #deviation_sell = ma2_last / last_trade_price
                     
