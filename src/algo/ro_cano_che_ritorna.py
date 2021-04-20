@@ -170,7 +170,7 @@ class ro_cano_che_ritorna:
 
         # APRE E CHIUDE GABBIA
 
-        if ma50_last >= ma50_2_min_ago and deviation_gabbia > -0.15 or ( deviation_buy1 < -0.99 ):
+        if ma50_last >= ma50_2_min_ago and deviation_gabbia > -0.15 or ( deviation_buy1 < -0.90 ):
             #ti ricordo che deviation_gabbia = (ma6_last / ma38_last)
            
             
@@ -270,9 +270,12 @@ class ro_cano_che_ritorna:
                           and price > price_3_min_ago
                           and ma2_last > ma2_2_min_ago
                           and ma5_last > ma8_last
-                          and deviation_buy1 < -0.99
+                          and deviation_buy1 < -0.90
+                          #deviation_buy1 = ma8_last / ma78_last
+                          
+                          
                         
-                        
+                          
                           #and price > highest_price_50_min_ago 
                           # riga 150
      
@@ -1009,7 +1012,7 @@ class ro_cano_che_ritorna:
 
         return action
 
-        #ave comparo meo ! ###### #####
-        #compa caro #
-        #comparo de dio ###
-        
+        # ave comparo meo ! ###### #####
+        # compa caro #
+        # comparo de dio ###
+        # gloria al mio compare
