@@ -330,7 +330,7 @@ class ro_cano_che_ritorna:
                           and ma2_last > ma2_2_min_ago
                           and price > price_1_min_ago
                           and price > price_2_min_ago
-                        
+                          
                           and ma39_last > ma39_42_min_ago
                           and ma3_last > ma40_last
                           #incredibile ma vero E' NECESSARIA quando deve ricomprare dopo la correzione al ribasso
@@ -467,21 +467,27 @@ class ro_cano_che_ritorna:
                     
                    
                 
-              
+                # ECCO IL COLPEVOLE DURANTE IL CROLLO
+                
                 elif (
-                   
-                    ma13_last >= ma39_last
+                    ###################################################################
+                    deviation_sell < -0.69
+                    ###################################################################
+                    #ma13_last >= ma39_last
                     
-                    and deviation_sell < -0.75 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.45) or (ma2_last < ma50_last and deviation_ma50 < -0.35)
+                    #and deviation_sell < -0.75 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.45) or (ma2_last < ma50_last and deviation_ma50 < -0.35)
+                    
                     #deviation_sell = ma2_last / last_trade_price
-                  
-                    #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
-                    and ma2_last < ma2_2_min_ago
+                    #deviation_gabbia = ma6_last / ma38_last
                     
-                    and ma2_last < ma2_40_min_ago
-                    and ma2_last < ma2_42_min_ago
-                    and ma2_last < ma2_44_min_ago
-                    and ma2_last < ma2_46_min_ago
+                 
+                    #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
+                    #and ma2_last < ma2_2_min_ago
+                    
+                    #and ma2_last < ma2_40_min_ago
+                    #and ma2_last < ma2_42_min_ago
+                    #and ma2_last < ma2_44_min_ago
+                    #and ma2_last < ma2_46_min_ago
                     
                 ):
                    
