@@ -359,8 +359,11 @@ class ro_cano_che_ritorna:
                         and ma4_last > ma78_last
                         
                         and price > price_2_min_ago
-                        and price > price_3_min_ago
-                        and ma2_last > ma2_2_min_ago
+                        
+                        #and price > price_3_min_ago
+                        #and ma2_last > ma2_2_min_ago
+                        #ho disabilitato queste 2 righe per comprare un po' prima. vediamo.
+                        
                         and ma2_last >= ma4_last
                         
                         
@@ -392,9 +395,12 @@ class ro_cano_che_ritorna:
                           
                           and ma4_last > ma78_last
                           
-                          and price > price_2_min_ago
-                          and price > price_3_min_ago
-                          and ma2_last > ma2_2_min_ago
+                          #and price > price_2_min_ago
+                          #and price > price_3_min_ago
+                          #and ma2_last > ma2_2_min_ago
+                          #per comprare un po' prima. vediamo
+                          
+                        
                           and ma2_last >= ma4_last
                         
                         
