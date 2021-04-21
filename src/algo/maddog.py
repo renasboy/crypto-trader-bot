@@ -236,7 +236,8 @@ class maddog:
                     if (
                         
                         ma2_last >= ma4_last
-                        and price > price_2_min_ago
+                        #and price > price_2_min_ago
+                        #ha comprato un po' tardi vediamo se possiamo comprare prima
                         
                         #deve essere anche questo
                         and ma2_last > ma50_last
