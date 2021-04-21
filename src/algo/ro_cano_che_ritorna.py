@@ -299,7 +299,7 @@ class ro_cano_che_ritorna:
                     if (
                      
                         ma4_prev < ma8_prev and ma4_last > ma8_last or (deviation_buy2 > 0.18 and deviation_buy > 0.20 and deviation_prev > 0.20)
-                        
+                        and ma4_last > ma78_last
                         
                         #ma8>ma78
                         #punto verde dall' ultimo punto rosso (ma3-last trade)
@@ -323,7 +323,7 @@ class ro_cano_che_ritorna:
                         
                     elif (
                           ma4_prev < ma8_prev and ma4_last > ma8_last or (deviation_buy2 > 0.18 and deviation_buy > 0.20 and deviation_prev > 0.20)
-                          
+                          and ma4_last > ma78_last
                           
                           
                           
@@ -356,6 +356,8 @@ class ro_cano_che_ritorna:
                         ma2_prev < ma8_prev and ma2_last > ma8_last or (deviation_buy3 > 0.15 and deviation_buy > 0.20 and deviation_prev > 0.20)
                         and ma39_last > ma39_2_min_ago
                         
+                        and ma4_last > ma78_last
+                        
                         and price > price_2_min_ago
                         and price > price_3_min_ago
                         and ma2_last > ma2_2_min_ago
@@ -387,7 +389,9 @@ class ro_cano_che_ritorna:
 
                           ma3_prev < ma8_prev and ma3_last > ma8_last or (deviation_buy3 > 0.17 and deviation_buy > 0.20 and deviation_prev > 0.20)
                           and ma39_last < ma39_2_min_ago
-                        
+                          
+                          and ma4_last > ma78_last
+                          
                           and price > price_2_min_ago
                           and price > price_3_min_ago
                           and ma2_last > ma2_2_min_ago
@@ -589,10 +593,17 @@ class ro_cano_che_ritorna:
                 elif (
                     
                     ma13_last < ma39_last 
-                    and deviation_sell < -0.75 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.45) or (ma2_last < ma50_last and deviation_ma50 < -0.35)
+                    #and deviation_sell < -0.75 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.45) or (ma2_last < ma50_last and deviation_ma50 < -0.35)
+                    #questa che ha venduto immediatamente dopo il verde diventa:
+                    and deviation_sell < -0.45 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.45)
+                    
+                    
+                    
                     
                     #deviation_sell = ma2_last / last_trade_price
-                   
+                    #deviation_ma50 = (ma2_last / ma50_last
+                    
+                    
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
                     and ma2_last < ma2_2_min_ago
                     
@@ -832,7 +843,7 @@ class ro_cano_che_ritorna:
                 elif (
                     
                     ma13_last < ma39_last
-                    and deviation_sell < -0.75 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.45) or (ma2_last < ma50_last and deviation_ma50 < -0.35)
+                    and deviation_sell < -0.65 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.40) or (ma2_last < ma50_last and deviation_ma50 < -0.30)
                     #deviation_sell = ma2_last / last_trade_price
                     
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
