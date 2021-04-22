@@ -147,6 +147,13 @@ class ro_cano_che_ritorna:
         deviation_ma50 = (ma2_last / ma50_last - 1) * 100 if ma50_last else 0
         self.algo_helper.log("deviation_ma50: {}".format(deviation_ma50))
         
+        
+        # formula DEVIATION_buy_crollo per comprare a una certa distanza da ma13
+        deviation_buy_crollo = (ma3_last / ma13_last - 1) * 100 if ma13_last else 0
+        self.algo_helper.log("deviation_buy_crollo: {}".format(deviation_buy_crollo))
+        
+        
+        
         #######################################################################################################################################################
         # formula prezzo piu' alto nella fascia ! riga 242 - 266
         highest_price_50_min_ago = self.algo_helper.highest_price_minutes_ago(50)
@@ -267,14 +274,19 @@ class ro_cano_che_ritorna:
                     elif (
                          
                           price > price_2_min_ago
-                          and price > price_3_min_ago
+                          #and price > price_3_min_ago
                           and ma2_last > ma2_2_min_ago
-                          and ma5_last > ma8_last
+                          
                           and deviation_buy1 < -0.90
                           #deviation_buy1 = ma8_last / ma78_last
-                          
-                          
                         
+                          
+                          
+                          and ma5_prev < ma13_prev and ma5_last > ma13_last or ( deviation_buy_crollo > 0.39 )
+                          #deviation_buy_crollo = ma3 / ma13
+                          #la ma8 segue parallelamente la ma3 ! per questo nella deviation_buy_crollo e' stata considerata la ma13
+                        
+                          #GLORIA AL MIO COMPARE
                           
                           #and price > highest_price_50_min_ago 
                           # riga 150
@@ -472,7 +484,7 @@ class ro_cano_che_ritorna:
                     
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
                     #and ma2_last < ma2_2_min_ago
-                    #ma forse e' un altro colpevole rosso sovrapposto al verde durante nel buy durante il crollo
+                    #ma forse e' un altro colpevole ! - rosso quasi sovrapposto al verde nel buy durante il crollo
                     
                 ):
                    
