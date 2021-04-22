@@ -461,8 +461,8 @@ class ro_cano_che_ritorna:
             #   3 -  5 ----------- 3-25
             #   5 - 12 ----------- 3-25
             
-            #  12 - 18 -----------3-17
-            #  18 - 30 -----------3-17
+            #  12 - 18 -----------3-17 DIVENTA 12 -24
+            #  18 - 30 -----------3-17 DIVENTA 24 -40
             #   > 30   -----------3-17
             # MODIFICA
             #  30-40
@@ -741,14 +741,14 @@ class ro_cano_che_ritorna:
             
             
 
-            # VENDITA - da 12 a 18 minuti = da 720 a 1080 secondi
-
-            elif seconds_since_last_trade > 720 and seconds_since_last_trade <= 1080:
-
+            
+            # VENDITA - da 12 a 24 minuti = da 720 a 1440 secondi
+            
+            elif seconds_since_last_trade > 720 and seconds_since_last_trade <= 1440:
                 if (
                     
-                    ma3_last < ma25_last 
-                    and deviation_sell > 0.10
+                    ma3_last < ma25_last and deviation_sell > 0.10 or ( ma2_last < ma13_last and deviation_sell > 0.80 )
+                    
                     #deviation_sell = ma2_last / last_trade_price
                     
                     
@@ -822,9 +822,9 @@ class ro_cano_che_ritorna:
             ################################################################################################################################          18-30 min
             
             
-            # VENDITA - da 18 a 40 minuti = da 1080 a 1800 secondi
+            # VENDITA - da 24 a 40 minuti = da 1080 a 1800 secondi
 
-            elif seconds_since_last_trade > 1080 and seconds_since_last_trade <= 2400:
+            elif seconds_since_last_trade > 1440 and seconds_since_last_trade <= 2400:
             
                 if (
                     
@@ -865,7 +865,7 @@ class ro_cano_che_ritorna:
                 elif (
                     
                     ma13_last < ma39_last
-                    and deviation_sell < -0.65 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.40) or (ma2_last < ma50_last and deviation_ma50 < -0.30)
+                    and deviation_sell < -0.55 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.40) or (ma2_last < ma50_last and deviation_ma50 < -0.30)
                     #deviation_sell = ma2_last / last_trade_price
                     
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
