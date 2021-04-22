@@ -579,11 +579,14 @@ class ro_cano_che_ritorna:
                     
                     ma13_last >= ma39_last
                     
-                    and deviation_sell < -0.75 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.35)
+                    #and deviation_sell < -0.75 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.35)
+                    #diventa dopo PROBLEMA vendita quasi sovrapposta all' acquisto durante il crollo
+                    and deviation_sell < -0.75
+                    
                     #deviation_sell = ma2_last / last_trade_price
                    
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
-                    and ma2_last < ma2_2_min_ago
+                    #and ma2_last < ma2_2_min_ago
                     
                     and ma2_last < ma2_40_min_ago
                     and ma2_last < ma2_42_min_ago
