@@ -471,7 +471,8 @@ class ro_cano_che_ritorna:
                     #deviation_sell = ma2_last / last_trade_price
                     
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
-                    and ma2_last < ma2_2_min_ago
+                    #and ma2_last < ma2_2_min_ago
+                    #ma forse e' un altro colpevole rosso sovrapposto al verde durante nel buy durante il crollo
                     
                 ):
                    
