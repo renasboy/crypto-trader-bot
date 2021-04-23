@@ -285,7 +285,7 @@ class ro_cano_che_ritorna:
                         
                           
                           
-                          and ma5_prev < ma13_prev and ma5_last > ma13_last or ( deviation_buy_crollo > 0.39 )
+                          and ma3_prev < ma8_prev and ma3_last > ma8_last or ( deviation_buy_crollo > 0.39 )
                           #deviation_buy_crollo = ma3 / ma13
                           #la ma8 segue parallelamente la ma3 ! per questo nella deviation_buy_crollo e' stata considerata la ma13
                         
