@@ -51,6 +51,9 @@ class ro_cano_che_ritorna:
         
         ma3_2_min_ago = self.algo_helper.ma_minutes_ago(3,2)
         ma6_2_min_ago = self.algo_helper.ma_minutes_ago(6,2)
+        
+        ma13_2_min_ago = self.algo_helper.ma_minutes_ago(13,2)
+        
         ma39_2_min_ago = self.algo_helper.ma_minutes_ago(39,2)
         ma39_42_min_ago = self.algo_helper.ma_minutes_ago(39,42)
         ma39_52_min_ago = self.algo_helper.ma_minutes_ago(39,52)
@@ -177,7 +180,7 @@ class ro_cano_che_ritorna:
 
         # APRE E CHIUDE GABBIA
 
-        if ma50_last >= ma50_2_min_ago and deviation_gabbia > -0.15 or ( deviation_buy1 < -0.90 ):
+        if ma50_last >= ma50_2_min_ago and deviation_gabbia > -0.15 or ( deviation_buy1 < -1.90 ):
             #ti ricordo che deviation_gabbia = (ma6_last / ma38_last)
            
             
@@ -277,7 +280,7 @@ class ro_cano_che_ritorna:
                           #and price > price_3_min_ago
                           and ma2_last > ma2_2_min_ago
                           
-                          and deviation_buy1 < -0.90
+                          and deviation_buy1 < -1.90
                           #deviation_buy1 = ma8_last / ma78_last
                         
                           
@@ -479,7 +482,7 @@ class ro_cano_che_ritorna:
                 if (
                     
                     ma3_last < ma25_last and deviation_sell > 0.05 or ( ma2_last < ma15_last and deviation_sell > 0.10 )
-                    
+                    and ma13_last > ma13_2_min_ago
                     #deviation_sell = ma2_last / last_trade_price
                     
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
@@ -493,17 +496,21 @@ class ro_cano_che_ritorna:
                     
                    
                 
+                   
                 # ECCO IL COLPEVOLE DURANTE IL CROLLO
                 
                 elif (
                     ###################################################################
                     deviation_sell < -0.45
                     ###################################################################
+                    #deviation_sell = ma2_last / last_trade_price
+                    
+                    
                     #ma13_last >= ma39_last
                     
                     #and deviation_sell < -0.75 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.45) or (ma2_last < ma50_last and deviation_ma50 < -0.35)
                     
-                    #deviation_sell = ma2_last / last_trade_price
+                    
                     #deviation_gabbia = ma6_last / ma38_last
                     
                  
@@ -575,7 +582,7 @@ class ro_cano_che_ritorna:
                 if (
                     
                     ma3_last < ma25_last and deviation_sell > 0.05 or (ma2_last < ma15_last and deviation_sell > 0.10)
-                    
+                    and ma13_last > ma13_2_min_ago
                     #deviation_sell = ma2_last / last_trade_price
                     
                     
