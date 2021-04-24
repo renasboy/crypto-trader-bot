@@ -472,7 +472,7 @@ class ro_cano_che_ritorna:
             #  40
 
            
-            ###########################################################################################################################          0 -3 min
+            ###############################################################################################################################################################          0 -3 min
 
             # VENDITA - da 0 a 3 minuti = da 0 a 180 secondi
 
@@ -481,7 +481,7 @@ class ro_cano_che_ritorna:
                 
                 if (
                     
-                    ma3_last < ma25_last and deviation_sell > 0.05 or ( ma2_last < ma15_last and deviation_sell > 0.10 )
+                    ma3_last < ma25_last and deviation_sell > 0.05 or ( ma2_last < ma15_last and deviation_sell > 0.10 ) or ( ma2_last < ma13_last and deviation_sell > 0.80 )
                     and ma13_last > ma13_2_min_ago
                     #deviation_sell = ma2_last / last_trade_price
                     
@@ -572,7 +572,7 @@ class ro_cano_che_ritorna:
                     
                     
                     
-         #########################################################################################################################          3-5 min           
+         #################################################################################################################################################################          3-5 min           
 
             # VENDITA - da 3 a 5 minuti = da 180 a 300 secondi
 
@@ -581,7 +581,7 @@ class ro_cano_che_ritorna:
                 
                 if (
                     
-                    ma3_last < ma25_last and deviation_sell > 0.05 or (ma2_last < ma15_last and deviation_sell > 0.10)
+                    ma3_last < ma25_last and deviation_sell > 0.05 or (ma2_last < ma15_last and deviation_sell > 0.10) or ( ma2_last < ma13_last and deviation_sell > 0.80 )
                     and ma13_last > ma13_2_min_ago
                     #deviation_sell = ma2_last / last_trade_price
                     
@@ -665,7 +665,7 @@ class ro_cano_che_ritorna:
                     
                     
                     
-            ########################################################################################################################          5-12 min         
+            ############################################################################################################################################################### 5-12 min         
                 
             # VENDITA - da 5 a 12 minuti = da 300 a 720 secondi
 
@@ -674,8 +674,8 @@ class ro_cano_che_ritorna:
 
                 if (
                     
-                    ma3_last < ma25_last
-                    and deviation_sell > 0.10
+                    ma3_last < ma25_last and deviation_sell > 0.10 or ( ma2_last < ma13_last and deviation_sell > 0.80 )
+                    
                     #deviation_sell = ma2_last / last_trade_price
                    
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
@@ -744,7 +744,7 @@ class ro_cano_che_ritorna:
                     
                 
             
-            #######################################################################################################          12-18 min
+            ########################################################################################################################################################     12-18 min
             
             
 
@@ -754,7 +754,7 @@ class ro_cano_che_ritorna:
             elif seconds_since_last_trade > 720 and seconds_since_last_trade <= 1440:
                 if (
                     
-                    ma3_last < ma25_last and deviation_sell > 0.10 or ( ma2_last < ma13_last and deviation_sell > 0.80 )
+                    ma3_last < ma25_last and deviation_sell > 0.10 or ( ma2_last < ma15_last and deviation_sell > 0.80 )
                     
                     #deviation_sell = ma2_last / last_trade_price
                     
@@ -826,7 +826,7 @@ class ro_cano_che_ritorna:
                     
                     
                     
-            ################################################################################################################################          18-30 min
+            ################################################################################################################################################################### 24-40 min
             
             
             # VENDITA - da 24 a 40 minuti = da 1080 a 1800 secondi
@@ -835,7 +835,7 @@ class ro_cano_che_ritorna:
             
                 if (
                     
-                    ma3_last < ma39_last and deviation_sell > 0.13
+                    ma3_last < ma39_last and deviation_sell > 0.13 or ( ma2_last < ma13_last and deviation_sell > 0.80 )
                     
                     #deviation_sell = ma2_last / last_trade_price
                     
@@ -909,7 +909,7 @@ class ro_cano_che_ritorna:
                  
                 
                 
-            ########################################################################################################################          >30 min
+            ############################################################################################################################################################      > 40 min
             
             
             # VENDITA - da 40 minuti in poi = da 2400 secondi in poi
@@ -919,7 +919,7 @@ class ro_cano_che_ritorna:
                 
                 if (
                     
-                    ma3_last < ma20_last and deviation_sell > 0.30 or ( ma3_last < ma39_last and deviation_sell and deviation_sell > 0.10 )
+                    ma3_last < ma20_last and deviation_sell > 0.30 or ( ma3_last < ma39_last and deviation_sell and deviation_sell > 0.10 ) or ( ma2_last < ma15_last and deviation_sell > 0.80 )
                     
                     #deviation_sell = ma2_last / last_trade_price
                     
