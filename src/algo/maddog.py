@@ -36,6 +36,7 @@ class maddog:
         ma20_last, ma20_prev = self.algo_helper.ma_last_prev(20)
         ma21_last, ma21_prev = self.algo_helper.ma_last_prev(21)
         ma24_last, ma24_prev = self.algo_helper.ma_last_prev(24)
+        ma25_last, ma25_prev = self.algo_helper.ma_last_prev(25)
         ma28_last, ma28_prev = self.algo_helper.ma_last_prev(28)
         ma34_last, ma34_prev = self.algo_helper.ma_last_prev(34)
         ma36_last, ma36_prev = self.algo_helper.ma_last_prev(36)
@@ -276,7 +277,7 @@ class maddog:
                 
                 if (
                     
-                    ma13_last < ma50_last and deviation > 0.12 or ( ma3_last < ma20_last and deviation > 2.49 )
+                    ma3_last < ma25_last and deviation > 0.12 or ( ma3_last < ma20_last and deviation > 2.49 ) or ( ma2_last < ma13_last and deviation_sell > 0.35 )
                     
                 ):
                    
@@ -316,7 +317,7 @@ class maddog:
                
                 if (
                     
-                    ma3_last < ma16_last and deviation > 0.13 or (ma2_last < ma13_last and deviation > 0.08)
+                    ma3_last < ma25_last and deviation > 0.13 or ( ma2_last < ma13_last and deviation_sell > 0.55 )
                     
                     
                 ):
@@ -343,7 +344,7 @@ class maddog:
                 
                 if (
                     
-                    ma2_last < ma15_last and deviation > 0.01 or (ma2_last < ma13_last and deviation > 0.01)
+                    ma2_last < ma25_last and deviation > 0.01 or ( ma2_last < ma13_last and deviation_sell > 0.35 )
                     
                     
                 ):
