@@ -919,8 +919,8 @@ class ro_cano_che_ritorna:
                 
                 if (
                     
-                    ma3_last < ma20_last 
-                    and deviation_sell > 0.10
+                    ma3_last < ma20_last and deviation_sell > 0.30 or ( ma3_last < ma39_last and deviation_sell and deviation_sell > 0.10 )
+                    
                     #deviation_sell = ma2_last / last_trade_price
                     
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
