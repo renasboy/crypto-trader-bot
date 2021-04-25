@@ -482,9 +482,9 @@ class ro_cano_che_ritorna:
                 
                 
                 if (
-                    
-                    ma3_last < ma25_last and deviation_sell > 0.05 or ( ma2_last < ma13_last and deviation_sell > 0.80 )
-                    and ma50_last >= ma50_2_min_ago and deviation_gabbia > -0.15
+                    ma50_last >= ma50_2_min_ago and ma3_last < ma25_last and deviation_sell > 0.05 or ( ma2_last < ma13_last and deviation_sell > 0.80 )
+                    #ma3_last < ma25_last and deviation_sell > 0.05 or ( ma2_last < ma13_last and deviation_sell > 0.80 )
+                    #and ma50_last >= ma50_2_min_ago and deviation_gabbia > -0.15
 
                     
                     #deviation_sell = ma2_last / last_trade_price
@@ -1095,3 +1095,4 @@ class ro_cano_che_ritorna:
         # compa caro #
         # comparo de dio ###
         # gloria al mio compare #
+        
