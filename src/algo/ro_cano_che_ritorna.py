@@ -254,6 +254,9 @@ class ro_cano_che_ritorna:
                         
                         and ma13_prev < ma78_prev and ma13_last > ma78_last or (deviation_buy1 > 0.25 and ma2_last > ma2_2_min_ago)
                         and ma18_prev < ma78_prev and ma18_last > ma78_last or (deviation_buy1 > 0.25 and ma2_last > ma2_2_min_ago)
+                        
+                        #deviation_buy1 = (ma8_last / ma78_last
+                        
                         and ma39_last > ma50_last
                         
                         
@@ -265,10 +268,7 @@ class ro_cano_che_ritorna:
                         
                         #and ma39_prev < ma78_prev and ma39_last > ma78_last and deviation_buy1 > 0.20 or deviation_buy1 > 0.50
                         #roma 2 aprile 2021 - BUY 1
-                        
-                        
-                        
-          
+                 
                     
                     ):
                         action = "buy"
@@ -288,6 +288,7 @@ class ro_cano_che_ritorna:
                           
                           and ma3_prev < ma8_prev and ma3_last > ma8_last or ( deviation_buy_crollo > 0.39 )
                           #deviation_buy_crollo = ma3 / ma13
+                          
                           #la ma8 segue parallelamente la ma3 ! per questo nella deviation_buy_crollo e' stata considerata la ma13
                         
                           #GLORIA AL MIO COMPARE
