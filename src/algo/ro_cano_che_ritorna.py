@@ -1007,7 +1007,7 @@ class ro_cano_che_ritorna:
             # se ma100_last < ma100_13_min_ago vende in un altro modo
             
             if (
-                ma2_last < ma36_last and deviation_sell < -0.65 or (ma2_last < ma36_last and deviation_sell < -0.65) or ( ma8_last < ma39_last and deviation_sell < -0.20 )
+                ma2_last < ma36_last and deviation_sell < -0.60 or (ma2_last < ma36_last and deviation_sell < -0.60) or ( ma8_last < ma39_last and deviation_sell < -0.20 )
             
             ):
                 sell = "SELL #24"
