@@ -1048,7 +1048,7 @@ class ro_cano_che_ritorna:
                 sell = "SELL #26"
                 action = "sell"
 
-        ############### FINE ALGORITH #################
+        ############### FINE ALGORITH ##################
         
         
 
