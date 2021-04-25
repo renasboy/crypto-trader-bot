@@ -1007,7 +1007,7 @@ class ro_cano_che_ritorna:
             # se ma100_last < ma100_13_min_ago vende in un altro modo
             
             if (
-                ma2_last < ma36_last and deviation_sell < -0.70 or (ma2_last < ma36_last and deviation_sell < -0.70)
+                ma2_last < ma36_last and deviation_sell < -0.65 or (ma2_last < ma36_last and deviation_sell < -0.65) or ( ma8_last < ma39_last and deviation < -0.20 )
             
             ):
                 sell = "SELL #24"
@@ -1042,7 +1042,7 @@ class ro_cano_che_ritorna:
             #2) ro cano VENDE " DOPO x MINUTI " "max hold time" riga 91
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
-                and ma2_last < ma78_last and deviation_sell < -0.40
+                and ma2_last < ma78_last and deviation_sell < -0.40 or ( ma8_last < ma39_last and deviation < -0.20 )
                 #deviation_sell = ma2_last / last_trade_price
             ):
                 sell = "SELL #26"
