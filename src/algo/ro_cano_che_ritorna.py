@@ -562,9 +562,9 @@ class ro_cano_che_ritorna:
                     
                 elif (
                     #deviation_buy > -0.82
-                    
-                    ma3_last < ma8_last and deviation_sell < -0.30 and ma2_last < ma2_2_min_ago
-                    and ma50_last < ma50_2_min_ago and deviation_gabbia < -0.15
+                    ma50_last < ma50_2_min_ago and ma3_last < ma13_last and deviation_sell > 0.10 or ma3_last < ma8_last and deviation_sell > 0.60
+                    #ma3_last < ma8_last and deviation_sell < -0.30 and ma2_last < ma2_2_min_ago
+                    #and ma50_last < ma50_2_min_ago and deviation_gabbia < -0.15
                                
                     #deviation_sell = ma2_last / last_trade_price
                     # and ma2_last < ma2_2_min_ago e' il prezzemolo
