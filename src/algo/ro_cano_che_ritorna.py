@@ -58,6 +58,7 @@ class ro_cano_che_ritorna:
         ma39_42_min_ago = self.algo_helper.ma_minutes_ago(39,42)
         ma39_52_min_ago = self.algo_helper.ma_minutes_ago(39,52)
         ma50_2_min_ago = self.algo_helper.ma_minutes_ago(50,2)
+        
         ma78_2_min_ago = self.algo_helper.ma_minutes_ago(78,2)
         
         # LAST TRADE
@@ -1002,19 +1003,55 @@ class ro_cano_che_ritorna:
             
             
 
-            # 1) (STOP LOSS) (salvagente)  
-            # se ma100_last >= ma100_13_min_ago vende in un modo 
-            # se ma100_last < ma100_13_min_ago vende in un altro modo
+            #1) STOP LOSS (salvagente)  
+            # se ma78_last < ma78_2_min_ago si aziona lo stop loss in un modo !
+            # se ma78_last > ma78_2_min_ago si aziona lo stop loss in un altro modo !
             
             if (
                 ma2_last < ma36_last and deviation_sell < -0.60 or (ma2_last < ma36_last and deviation_sell < -0.60) or ( ma8_last < ma39_last and deviation_sell < -0.20 )
-            
+                and ma78_last < ma78_2_min_ago
             ):
                 sell = "SELL #24"
                 action = "sell"
                 
+                
+                
+            elif (
+                ma2_last < ma36_last and deviation_sell < -0.65 or (ma2_last < ma36_last and deviation_sell < -0.65) or ( ma8_last < ma39_last and deviation_sell < -0.25 )
+                and ma78_last >= ma78_2_min_ago
+            ):
+                sell = "SELL #25"
+                action = "sell"  
             
-            
+           
+           
+
+            #2) ro cano VENDE " DOPO x MINUTI " "max hold time" riga 91
+            # anche qua se ma78 vende in un modo
+            # se ma78 vende in un altro modo
+            elif (
+                seconds_since_last_trade > max_hold_time_in_seconds
+                and ma2_last < ma78_last and deviation_sell < -0.40 or ( ma8_last < ma39_last and deviation_sell < -0.20 )
+                and ma78_last < ma78_2_min_ago
+                #deviation_sell = ma2_last / last_trade_price
+            ):
+                sell = "SELL #26"
+                action = "sell"
+                
+                
+                
+            elif (
+                seconds_since_last_trade > max_hold_time_in_seconds
+                and ma2_last < ma78_last and deviation_sell < -0.45 or ( ma8_last < ma39_last and deviation_sell < -0.25 )
+                and ma78_last > ma78_2_min_ago
+                #deviation_sell = ma2_last / last_trade_price
+            ):
+                sell = "SELL #27"
+                action = "sell"
+                
+                
+                
+                
             # un altro salvagente per il grande crollo !
             
             elif (
@@ -1023,7 +1060,7 @@ class ro_cano_che_ritorna:
                 and ma2_last < ma2_2_min_ago
                 
             ):    
-                sell = "SELL #25"
+                sell = "SELL #28"
                 action = "sell"
             
             
@@ -1034,19 +1071,12 @@ class ro_cano_che_ritorna:
                 #and deviation_sell < -0.50
             #):    
                 #action = "sell"
-            
-            
-            
+                
+                
            
-
-            #2) ro cano VENDE " DOPO x MINUTI " "max hold time" riga 91
-            elif (
-                seconds_since_last_trade > max_hold_time_in_seconds
-                and ma2_last < ma78_last and deviation_sell < -0.40 or ( ma8_last < ma39_last and deviation_sell < -0.20 )
-                #deviation_sell = ma2_last / last_trade_price
-            ):
-                sell = "SELL #26"
-                action = "sell"
+        
+        
+        
 
         ############### FINE ALGORITH ##################
         
