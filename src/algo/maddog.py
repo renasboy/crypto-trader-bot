@@ -390,8 +390,10 @@ class maddog:
         self.algo_helper.log("action {}".format(action))
 
         if action == "sell":
+            self.algo_helper.log("action sell {}".format(sell))
             self.session += 1
-
+            
+            
         return action
 
 
