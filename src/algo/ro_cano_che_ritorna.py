@@ -1010,7 +1010,10 @@ class ro_cano_che_ritorna:
             
             if (
                 ma2_last < ma36_last and deviation_sell < -0.60 or (ma2_last < ma36_last and deviation_sell < -0.60) or ( ma8_last < ma39_last and deviation_sell < -0.20 )
-                and ma78_last < ma78_2_min_ago
+                and ma78_last < ma78_2_min_ago and ma3_last < ma13_last
+                #ha venduto anche questa durante il crollo - punto rosso sovrapposto al punto verde 
+                # e gli ho detto che and ma3 deve andare sotto ma13 per vendere .
+                #vediamo
             ):
                 sell = "SELL #24"
                 action = "sell"
