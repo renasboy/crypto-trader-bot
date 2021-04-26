@@ -370,7 +370,7 @@ class ro_cano_che_ritorna:
                     if (
                         
                         
-                        ma2_prev < ma8_prev and ma2_last > ma8_last or (deviation_buy3 > 0.15 and deviation_buy > 0.20 and deviation_prev > 0.20)
+                        ma2_prev < ma8_prev and ma2_last > ma8_last or (deviation_buy3 > 0.15 and deviation_buy > 0.19 and deviation_prev > 0.19)
                         and ma39_last > ma39_2_min_ago
                         
                         and ma4_last > ma78_last
@@ -482,7 +482,7 @@ class ro_cano_che_ritorna:
                 
                 
                 if (
-                    ma50_last >= ma50_2_min_ago and ma3_last < ma25_last and deviation_sell > 0.05 or ( ma2_last < ma13_last and deviation_sell > 0.80 )
+                    ma50_last >= ma50_2_min_ago and ( ma3_last < ma25_last and deviation_sell > 0.05 ) or ( ma2_last < ma13_last and deviation_sell > 0.80 )
                     #ma3_last < ma25_last and deviation_sell > 0.05 or ( ma2_last < ma13_last and deviation_sell > 0.80 )
                     #and ma50_last >= ma50_2_min_ago and deviation_gabbia > -0.15
 
@@ -1009,7 +1009,7 @@ class ro_cano_che_ritorna:
             # se ma78_last > ma78_2_min_ago si aziona lo stop loss in un altro modo !
             
             if (
-                ma2_last < ma36_last and deviation_sell < -0.60 or (ma2_last < ma36_last and deviation_sell < -0.60) or ( ma8_last < ma39_last and deviation_sell < -0.20 )
+                ma2_last < ma36_last and deviation_sell < -0.60 or (ma2_last < ma36_last and deviation_sell < -0.60) or ( ma8_last < ma39_last and deviation_sell < -0.25 )
                 and ma78_last < ma78_2_min_ago and ma3_last < ma13_last
                 #ha venduto anche questa durante il crollo - punto rosso sovrapposto al punto verde 
                 # e gli ho detto che and ma3 deve andare sotto ma13 per vendere .
@@ -1021,7 +1021,7 @@ class ro_cano_che_ritorna:
                 
                 
             elif (
-                ma2_last < ma36_last and deviation_sell < -0.65 or (ma2_last < ma36_last and deviation_sell < -0.65) or ( ma8_last < ma39_last and deviation_sell < -0.25 )
+                ma2_last < ma36_last and deviation_sell < -0.65 or (ma2_last < ma36_last and deviation_sell < -0.65) or ( ma8_last < ma39_last and deviation_sell < -0.30 )
                 and ma78_last >= ma78_2_min_ago
             ):
                 sell = "SELL #25"
