@@ -318,7 +318,7 @@ class ro_cano_che_ritorna:
                      
                         ma4_prev < ma8_prev and ma4_last > ma8_last or (deviation_buy2 > 0.18 and deviation_buy > 0.20 and deviation_prev > 0.20)
                         and ma4_last > ma78_last
-                        
+                        and ma13_last > ma13_2_min_ago
                         #ma8>ma78
                         #punto verde dall' ultimo punto rosso (ma3-last trade)
                         #punto verde dall' ultimo punto verde
@@ -342,7 +342,7 @@ class ro_cano_che_ritorna:
                     elif (
                           ma4_prev < ma8_prev and ma4_last > ma8_last or (deviation_buy2 > 0.18 and deviation_buy > 0.20 and deviation_prev > 0.20)
                           and ma4_last > ma78_last
-                          
+                          and ma13_last > ma13_2_min_ago
                           
                           
                           
@@ -373,7 +373,7 @@ class ro_cano_che_ritorna:
                         
                         ma2_prev < ma8_prev and ma2_last > ma8_last or (deviation_buy3 > 0.15 and deviation_buy > 0.19 and deviation_prev > 0.19)
                         and ma39_last > ma39_2_min_ago
-                        
+                        and ma13_last > ma13_2_min_ago
                         and ma4_last > ma78_last
                         
                         and price > price_2_min_ago
@@ -410,7 +410,7 @@ class ro_cano_che_ritorna:
 
                           ma3_prev < ma8_prev and ma3_last > ma8_last or (deviation_buy3 > 0.17 and deviation_buy > 0.20 and deviation_prev > 0.20)
                           and ma39_last < ma39_2_min_ago
-                          
+                          and ma13_last > ma13_2_min_ago
                           and ma4_last > ma78_last
                           
                           #and price > price_2_min_ago
