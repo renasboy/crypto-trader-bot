@@ -185,12 +185,12 @@ class maddog:
                         
 
                         ma2_last > ma2_2_min_ago
-                        and ma2_last > ma2_3_min_ago
+                        #and ma2_last > ma2_3_min_ago
                         
                         #and ma3_last > ma3_2_min_ago FORSE DA AGGIUNGERE
                         
                         and price > price_2_min_ago
-                        and price > price_3_min_ago
+                        #and price > price_3_min_ago
                         
                         and ma18_prev < ma78_prev and ma18_last > ma78_last or ( deviation_buy1 > 0.20 )
                         # ho messo dentro ma2_last > ma2_2_min_ago perche' ha comprato mentre ma2 scendeva
