@@ -114,7 +114,7 @@ class maddog:
         
         
         
-        # formula deviation per comprare un po' piu' sopra del SELL
+        # formula deviation 
         deviation = (ma2_last / last_trade_price - 1) * 100 if last_trade_price else 0
         self.algo_helper.log("deviation: {}".format(deviation))
         
