@@ -164,7 +164,9 @@ class ro_cano_che_ritorna:
         highest_price_50_min_ago = self.algo_helper.highest_price_minutes_ago(50)
         
         ######################################################################################################################################################
-        
+        # formula DEVIATION_sell_ma78
+        deviation_sell_ma78 = (ma2_last / ma78_last - 1) * 100 if ma78_last else 0
+        self.algo_helper.log("deviation_sell_ma78: {}".format(deviation_sell_ma78))
         
         
         
@@ -1012,7 +1014,7 @@ class ro_cano_che_ritorna:
             if (
                 
                 ma78_last < ma78_2_min_ago and ma3_last < ma13_last
-                and ( ma2_last < ma36_last and deviation_sell < -0.55 ) or ( ma8_last < ma39_last and deviation_sell < -0.25 )
+                and ( ma2_last < ma36_last and deviation_sell < -0.55 ) or ( ma8_last < ma39_last and deviation_sell < -0.25 ) or ( deviation_sell_ma78 < -0.20 )
                 
                 #ha venduto anche questa durante il crollo - punto rosso sovrapposto al punto verde 
                 # e gli ho detto che and ma3 deve andare sotto ma13 per vendere .
