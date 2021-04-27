@@ -465,13 +465,13 @@ class ro_cano_che_ritorna:
             # VENDITA 1 - con fasce di tempo ! c'e' vita su marte !
 
             #    minuti
-            #   0 -  3 ----------  ( 3 < 25 and gain > 0.05 ) OR ( 2 < 13 and gain > 0.80 )
-            #   3 -  5 ----------- 
+            #   0 -  3 ----------  fatto
+            #   3 -  5 ----------- fatto
             #   5 - 12 ----------- 
             
             #  12 - 18 -----------
             #  18 - 40 -----------
-            #   > 40   -----------
+            #   > 40   ----------- fatto
             
             
             
@@ -630,15 +630,16 @@ class ro_cano_che_ritorna:
 
             elif seconds_since_last_trade > 300 and seconds_since_last_trade <= 720:
                 
+                
+                
 
                 if (
-                    
-                    ma3_last < ma25_last and deviation_sell > 0.10 or ( ma2_last < ma13_last and deviation_sell > 0.80 )
-                    
+                    ma50_last >= ma50_2_min_ago and ( ma3_last < ma25_last and deviation_sell > 0.05 ) or ( ma2_last < ma13_last and deviation_sell > 0.80 )
+                   
                     #deviation_sell = ma2_last / last_trade_price
                    
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
-                    and ma2_last < ma2_3_min_ago
+                    and ma2_last < ma2_2_min_ago
                     
                 ):
                     sell = "SELL #9"
@@ -648,17 +649,12 @@ class ro_cano_che_ritorna:
                     
                 elif (
                     
-                    ma2_last < ma2_3_min_ago and ( ma13_last >= ma39_last and deviation_sell < -0.75 ) or ( ma50_last < ma50_2_min_ago and deviation_gabbia < -0.35 )
                     
+                    ma50_last >= ma50_2_min_ago and deviation_sell < -0.45
                     #deviation_sell = ma2_last / last_trade_price
                     
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
-                    
-                    
-                    #and ma2_last < ma2_40_min_ago
-                    #and ma2_last < ma2_42_min_ago
-                    #and ma2_last < ma2_44_min_ago
-                    #and ma2_last < ma2_46_min_ago
+                    and ma2_last < ma2_2_min_ago
                     
                 ):
                     sell = "SELL #10"
@@ -668,17 +664,13 @@ class ro_cano_che_ritorna:
                     
                 elif (
                     
-                    ma13_last < ma39_last
-                    and deviation_sell < -0.75 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.45) or (ma2_last < ma50_last and deviation_ma50 < -0.35)
+                    
+                    ma50_last < ma50_2_min_ago and ( ma3_last < ma13_last and deviation_sell > 0.10 ) or ( ma3_last < ma8_last and deviation_sell > 0.60 )
+                    
                     #deviation_sell = ma2_last / last_trade_price
                     
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
-                    and ma2_last < ma2_3_min_ago
-                    
-                    and ma2_last < ma2_40_min_ago
-                    and ma2_last < ma2_42_min_ago
-                    and ma2_last < ma2_44_min_ago
-                    and ma2_last < ma2_46_min_ago
+                    and ma2_last < ma2_2_min_ago
                     
                 ):
                     sell = "SELL #11"
@@ -689,8 +681,9 @@ class ro_cano_che_ritorna:
                 ########### PROVA ! vende in modo diverso quando c'e' un crollo !
                     
                 elif (
-                    deviation_buy < -0.82
-                    and ma4_last < ma8_last and deviation_sell < -0.20
+                    
+                    ma50_last < ma50_2_min_ago and deviation_sell < -0.45
+                    
                     #deviation_sell = ma2_last / last_trade_price
                     
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
@@ -711,6 +704,10 @@ class ro_cano_che_ritorna:
             # VENDITA - da 12 a 24 minuti = da 720 a 1440 secondi
             
             elif seconds_since_last_trade > 720 and seconds_since_last_trade <= 1440:
+                
+                
+                
+                
                 if (
                     
                     ma3_last < ma25_last and deviation_sell > 0.10 or ( ma3_last < ma30_last and deviation_sell > 0.30 ) or ( ma2_last < ma15_last and deviation_sell > 0.80 )
