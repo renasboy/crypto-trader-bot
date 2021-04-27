@@ -305,7 +305,7 @@ class maddog:
                     
                     
                     ma78_last < ma78_60_min_ago
-                    deviation_sell < -0.39 or (ma3_last < ma39_last and deviation_buy1 < -0.39)
+                    and deviation_sell < -0.39 or (ma3_last < ma39_last and deviation_buy1 < -0.39)
                     
                     
                     #deviation_sell = ma2_last / ma78_last
