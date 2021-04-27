@@ -277,7 +277,7 @@ class maddog:
                 
                 if (
                     
-                    ma3_last < ma25_last and deviation > 0.12 or ( ma3_last < ma20_last and deviation > 2.49 ) or ( ma2_last < ma13_last and deviation_sell > 0.35 )
+                    ma3_last < ma25_last and deviation > 0.12 or ( ma3_last < ma20_last and deviation > 0.80 )
                     
                 ):
                     sell = "SELL #1"
@@ -287,9 +287,10 @@ class maddog:
                     
                     
                 elif (
-                   
+                    
+                    ma78_last > ma78_60_min_ago
                     deviation_sell < -0.39 or (ma3_last < ma39_last and deviation_buy1 < -0.39) or (ma2_last < ma50_last and deviation_ma50 < -0.39)
-                    and ma78_last > ma78_60_min_ago
+                    
                     
                     #deviation_sell = ma2_last / ma78_last
                     #deviation_buy1 = ma8_last / ma78_last
@@ -301,9 +302,11 @@ class maddog:
                     
 
                 elif (
-                   
-                    deviation_sell < -1.40 or (ma3_last < ma39_last and deviation_buy1 < -1.40) or (ma2_last < ma50_last and deviation_ma50 < -1.40)
-                    and ma78_last < ma78_60_min_ago
+                    
+                    
+                    ma78_last < ma78_60_min_ago
+                    deviation_sell < -0.39 or (ma3_last < ma39_last and deviation_buy1 < -0.39)
+                    
                     
                     #deviation_sell = ma2_last / ma78_last
                     #deviation_buy1 = ma8_last / ma78_last
@@ -319,7 +322,7 @@ class maddog:
                
                 if (
                     
-                    ma3_last < ma25_last and deviation > 0.13 or ( ma2_last < ma13_last and deviation_sell > 0.55 )
+                    ma3_last < ma25_last and deviation > 0.13 or ( ma2_last < ma13_last and deviation_sell > 0.80 )
                     
                     
                 ):
@@ -331,7 +334,7 @@ class maddog:
                     
                 elif (
                     
-                    ma2_last < ma39_last and deviation_sell < -0.35 or (ma3_last < ma39_last and deviation_buy1 < -0.45) or (ma2_last < ma50_last and deviation_ma50 < -0.45)
+                    ma2_last < ma39_last and deviation_sell < -0.35 or (ma2_last < ma50_last and deviation_ma50 < -0.45)
                     #deviation_sell = ma2_last / ma78_last
                     #deviation_buy1 = (ma8_last / ma78_last
                     
@@ -348,7 +351,7 @@ class maddog:
                 
                 if (
                     
-                    ma2_last < ma25_last and deviation > 0.01 or ( ma2_last < ma13_last and deviation_sell > 0.35 )
+                    ma2_last < ma25_last and deviation > 0.10 or ( ma2_last < ma13_last and deviation_sell > 0.80 )
                     
                     
                 ):
@@ -360,7 +363,7 @@ class maddog:
                     
                 elif (
                     
-                    ma2_last < ma39_last and deviation_sell < -0.20 or (ma2_last < ma39_last and deviation_buy1 < -0.35) or (ma2_last < ma50_last and deviation_ma50 < -0.35)
+                    ma2_last < ma39_last and deviation_sell < -0.20 or (ma2_last < ma50_last and deviation_ma50 < -0.35)
                     #deviation_sell = ma2_last / ma78_last
                     #deviation_buy1 = ma8_last / ma78_last
                     
@@ -381,7 +384,7 @@ class maddog:
                 
             # 1) vedi riga 11 per es. DI 1 ORA = 3600 SECONDI "max hold time" " DOPO UN' ORA VENDE SUBITO " e se ma8_last < ma39_last and deviation < -0.45:
             
-            if seconds_since_last_trade > max_hold_time_in_seconds and ma8_last < ma39_last and deviation < -0.10:
+            if seconds_since_last_trade > max_hold_time_in_seconds and ma8_last < ma39_last and deviation < -0.30:
                 
                 sell = "SELL #8"     
                 action = "sell"
