@@ -484,17 +484,16 @@ class ro_cano_che_ritorna:
             if seconds_since_last_trade > 0 and seconds_since_last_trade <= 180:
                 
                 
+                
+                
                 if (
                     ma50_last >= ma50_2_min_ago and ( ma3_last < ma25_last and deviation_sell > 0.05 ) or ( ma2_last < ma13_last and deviation_sell > 0.80 )
-                    #ma3_last < ma25_last and deviation_sell > 0.05 or ( ma2_last < ma13_last and deviation_sell > 0.80 )
-                    #and ma50_last >= ma50_2_min_ago and deviation_gabbia > -0.15
-
                     
+                  
                     #deviation_sell = ma2_last / last_trade_price
                     
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
-                    #and ma2_last < ma2_2_min_ago
-                    #ma forse e' un altro colpevole ! - rosso quasi sovrapposto al verde nel buy durante il crollo
+                    and ma2_last < ma2_2_min_ago
                     
                 ):
                    
@@ -504,7 +503,7 @@ class ro_cano_che_ritorna:
                    
                 
                    
-                # ECCO un COLPEVOLE DURANTE IL CROLLO
+                
                 
                 elif (
                     
@@ -559,15 +558,11 @@ class ro_cano_che_ritorna:
 
                 
                 if (
-                    
-                    ma3_last < ma25_last and deviation_sell > 0.05 or (ma2_last < ma15_last and deviation_sell > 0.10) or ( ma2_last < ma13_last and deviation_sell > 0.80 )
-                    and ma13_last > ma13_2_min_ago
-
-                    #vedi sell 0-3 min
-                    
+                    ma50_last >= ma50_2_min_ago and ( ma3_last < ma25_last and deviation_sell > 0.05 ) or ( ma2_last < ma13_last and deviation_sell > 0.80 )
                     #deviation_sell = ma2_last / last_trade_price
                     
-                    
+                    #and ma13_last > ma13_2_min_ago
+
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
                     and ma2_last < ma2_2_min_ago
                     
@@ -575,25 +570,18 @@ class ro_cano_che_ritorna:
                     sell = "SELL #5"
                     action = "sell"
 
-                    
+                
+                
+                
                 elif (
-                    
-                    ma13_last >= ma39_last
-                    
-                    #and deviation_sell < -0.75 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.35)
-                    #diventa dopo PROBLEMA vendita quasi sovrapposta all' acquisto durante il crollo
-                    and deviation_sell < -0.75
+                  
+                    ma50_last >= ma50_2_min_ago and deviation_sell < -0.45
                     
                     #deviation_sell = ma2_last / last_trade_price
                    
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
-                    #and ma2_last < ma2_2_min_ago
-                    
-                    and ma2_last < ma2_40_min_ago
-                    and ma2_last < ma2_42_min_ago
-                    and ma2_last < ma2_44_min_ago
-                    and ma2_last < ma2_46_min_ago
-                    
+                    and ma2_last < ma2_2_min_ago
+                 
                     
                 ):
                     sell = "SELL #6"
@@ -603,25 +591,13 @@ class ro_cano_che_ritorna:
                     
                 elif (
                     
-                    ma13_last < ma39_last 
-                    #and deviation_sell < -0.75 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.45) or (ma2_last < ma50_last and deviation_ma50 < -0.35)
-                    #questa che ha venduto immediatamente dopo il verde diventa:
-                    and deviation_sell < -0.45 or (ma50_last < ma50_2_min_ago and deviation_gabbia < -0.45)
                     
-                    
-                    
-                    
+                    ma50_last < ma50_2_min_ago and ( ma3_last < ma13_last and deviation_sell > 0.10 ) or ( ma3_last < ma8_last and deviation_sell > 0.60 )
                     #deviation_sell = ma2_last / last_trade_price
-                    #deviation_ma50 = (ma2_last / ma50_last
                     
-                    
+               
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
                     and ma2_last < ma2_2_min_ago
-                    
-                    and ma2_last < ma2_40_min_ago
-                    and ma2_last < ma2_42_min_ago
-                    and ma2_last < ma2_44_min_ago
-                    and ma2_last < ma2_46_min_ago
                     
                     
                 ):
@@ -629,11 +605,12 @@ class ro_cano_che_ritorna:
                     action = "sell"
                     
                     
-                ########### PROVA ! vende in modo diverso quando c'e' un crollo !
+                
                     
                 elif (
-                    deviation_buy < -0.82
-                    and ma4_last < ma8_last and deviation_sell < -0.20 and ma2_last < ma2_2_min_ago
+                    
+                    
+                    ma50_last < ma50_2_min_ago and deviation_sell < -0.45
                     #deviation_sell = ma2_last / last_trade_price
                     
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
