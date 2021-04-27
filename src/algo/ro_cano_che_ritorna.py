@@ -1012,7 +1012,7 @@ class ro_cano_che_ritorna:
             # se ma78_last > ma78_2_min_ago si aziona lo stop loss in un altro modo !
             
             if (
-                ma78_last >= ma78_2_min_ago
+                ma50_last >= ma50_2_min_ago
                 and ma2_last < ma36_last and deviation_sell < -0.65 or (ma2_last < ma36_last and deviation_sell < -0.65) or ( ma8_last < ma39_last and deviation_sell < -0.30 )
                 
                
@@ -1024,7 +1024,7 @@ class ro_cano_che_ritorna:
             # PARTE IL SALVAGENTE DURANTE IL CROLLO E IO L' avevo DISATTIVATO    
             elif (
             
-                ma78_last < ma78_2_min_ago and ma3_last < ma13_last
+                ma50_last >= ma50_2_min_ago
                 and ( ma2_last < ma36_last and deviation_sell < -0.55 ) or ( ma8_last < ma39_last and deviation_sell < -0.25 ) or ( deviation_sell_ma78 < -0.20 )
                 
                 #ha venduto anche questa durante il crollo - punto rosso sovrapposto al punto verde 
@@ -1066,7 +1066,7 @@ class ro_cano_che_ritorna:
             # un altro salvagente per il grande crollo !
             
             elif (
-                deviation_buy < -0.82
+                ma50_last >= ma50_2_min_ago
                 and ma4_last < ma8_last and deviation_sell < -0.40
                 and ma2_last < ma2_2_min_ago
                 
