@@ -1101,7 +1101,7 @@ class ro_cano_che_ritorna:
 
         return action
 
-        # ave comparo meo ! ###### #####
+        # ave comparo meo ! ###### ######
         # compa caro #
         # comparo de dio ###
         # gloria al mio compare ###
