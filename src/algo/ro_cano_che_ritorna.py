@@ -258,9 +258,12 @@ class ro_cano_che_ritorna:
                         and ma13_prev < ma78_prev and ma13_last > ma78_last or (deviation_buy1 > 0.25 and ma2_last > ma2_2_min_ago)
                         and ma18_prev < ma78_prev and ma18_last > ma78_last or (deviation_buy1 > 0.25 and ma2_last > ma2_2_min_ago)
                         
-                        #deviation_buy1 = (ma8_last / ma78_last
+                        
                         
                         and ma39_last > ma50_last
+                        and deviation_buy1 > 0.12
+                        
+                        #deviation_buy1 = (ma8_last / ma78_last
                         
                         
                         #and price > highest_price_50_min_ago 
