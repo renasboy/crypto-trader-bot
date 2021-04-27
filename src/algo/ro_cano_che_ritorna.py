@@ -939,11 +939,12 @@ class ro_cano_che_ritorna:
                 action = "sell"
                 
             #######################################################################################################################################################    
-            # PARTE IL SALVAGENTE DURANTE IL CROLLO E IO L' avevo DISATTIVATO    
+            
+            
             elif (
             
                 ma50_last >= ma50_2_min_ago
-                and ( ma2_last < ma36_last and deviation_sell < -0.55 ) or ( ma8_last < ma39_last and deviation_sell < -0.25 ) or ( deviation_sell_ma78 < -0.20 )
+                and ( ma2_last < ma36_last and deviation_sell < -0.55 ) or ( ma8_last < ma39_last and deviation_sell < -0.30 ) or ( deviation_sell_ma78 < -0.36 )
                 
                 #ha venduto anche questa durante il crollo - punto rosso sovrapposto al punto verde 
                 # e gli ho detto che and ma3 deve andare sotto ma13 per vendere .
@@ -952,12 +953,12 @@ class ro_cano_che_ritorna:
                 sell = "SELL #26"
                 action = "sell"  
             
+            
             #########################################################################################################################################################
            
 
             #2) ro cano VENDE " DOPO x MINUTI " "max hold time" riga 91
-            # anche qua se ma78 vende in un modo
-            # se ma78 vende in un altro modo
+            
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
                 and ma2_last < ma78_last and deviation_sell < -0.40 or ( ma8_last < ma39_last and deviation_sell < -0.36 )
@@ -969,7 +970,9 @@ class ro_cano_che_ritorna:
                 
                 
                 
+                
             elif (
+                
                 seconds_since_last_trade > max_hold_time_in_seconds
                 and ma2_last < ma78_last and deviation_sell < -0.45 or ( ma8_last < ma39_last and deviation_sell < -0.25 )
                 and ma78_last > ma78_2_min_ago
@@ -979,9 +982,10 @@ class ro_cano_che_ritorna:
                 action = "sell"
                 
                 
+                
             #################################################################################################################################    
-            # AVEVO DISATTIVO ANCHE QUESTO SALVAGENTE !    
-            # un altro salvagente per il grande crollo !
+               
+            
             
             elif (
                 ma50_last >= ma50_2_min_ago
@@ -991,9 +995,14 @@ class ro_cano_che_ritorna:
             ):    
                 sell = "SELL #29"
                 action = "sell"
+                
+                
+                
             ####################################################################################################################################
             
+            
             # se diminuisce la forza - al momento disattivato
+            
             #elif (
                 
                 #ma2_last < ma36_last 
