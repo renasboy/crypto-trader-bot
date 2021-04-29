@@ -409,7 +409,7 @@ class ro_cano_che_ritorna:
                         #deviation_prev = price / prev_trade_price  
                     
                     ):
-                        buy = "BUY #6"
+                        buy = "BUY #5"
                         action = "buy"
 
                         
@@ -448,7 +448,7 @@ class ro_cano_che_ritorna:
                           #deviation_prev = price / prev_trade_price
                           
                     ):
-                        buy = "BUY #7"
+                        buy = "BUY #6"
                         action = "buy"
                         
                
