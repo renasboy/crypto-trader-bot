@@ -263,7 +263,7 @@ class ro_cano_che_ritorna:
                         and ma39_last > ma50_last
                         and deviation_buy1 > 0.12
                         
-                        #deviation_buy1 = (ma8_last / ma78_last
+                        #deviation_buy1 = ma8_last / ma78_last
                         
                         
                         #and price > highest_price_50_min_ago 
@@ -472,7 +472,7 @@ class ro_cano_che_ritorna:
             # VENDITA 1 - con fasce di tempo ! c'e' vita su marte !
 
             #    minuti
-            #   0 -  3 ----------  fatto
+            #   0 -  3 ----------  fatto - e' quello che sta dando qualche problemino. INVECE DI DIRE ma3 < ma 25 FACCIO "incrocio dall' alto"  ma3 - ma25
             #   3 -  5 ----------- fatto
             #   5 - 12 ----------- 
             
@@ -493,9 +493,16 @@ class ro_cano_che_ritorna:
                 
                 
                 if (
-                    ma50_last >= ma50_2_min_ago and ( ma3_last < ma25_last and deviation_sell > 0.05 ) or ( ma2_last < ma13_last and deviation_sell > 0.80 )
+                    #ma50_last >= ma50_2_min_ago and ( ma3_last < ma25_last and deviation_sell > 0.05 ) or ( ma2_last < ma13_last and deviation_sell > 0.80 )
+                    #diventa :
                     
-                  
+                    #ma3 < ma25 ha dato "problemi di sovrapposizione" ! (punto rosso immediatamente dopo punto verde !)
+                    #compa, faccio "incrocio dall' alto"  ma3 - ma25 !
+                    
+                    ma50_last >= ma50_2_min_ago and (( ma3_last > ma30_last and ma3_last < ma30_last ) and deviation_sell > 0.05 ) or (( ma2_last > ma13_last and ma2_last < ma13_last ) and deviation_sell > 0.80 )
+                    
+                    
+                    
                     #deviation_sell = ma2_last / last_trade_price
                     
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
@@ -532,7 +539,10 @@ class ro_cano_che_ritorna:
                 
                 elif (
                     
-                    ma50_last < ma50_2_min_ago and ( ma3_last < ma13_last and deviation_sell > 0.10 ) or ( ma3_last < ma8_last and deviation_sell > 0.60 )
+                    #ma50_last < ma50_2_min_ago and ( ma3_last < ma13_last and deviation_sell > 0.10 ) or ( ma3_last < ma8_last and deviation_sell > 0.60 )
+                    #diventa :
+                    
+                    ma50_last < ma50_2_min_ago and (( ma3_last > ma13_last and ma3_last < ma13_last ) and deviation_sell > 0.10 ) or (( ma3_last > ma8_last and ma3_last < ma8_last ) and deviation_sell > 0.60 )
                     
                     and ma2_last < ma2_2_min_ago
                    
@@ -556,8 +566,11 @@ class ro_cano_che_ritorna:
                     action = "sell"   
                     
                     
+                    
          #################################################################################################################################################################          3-5 min           
 
+        
+        
             # VENDITA - da 3 a 5 minuti = da 180 a 300 secondi
 
             elif seconds_since_last_trade > 180 and seconds_since_last_trade <= 300:
