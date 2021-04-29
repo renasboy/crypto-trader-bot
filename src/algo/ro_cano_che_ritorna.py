@@ -277,6 +277,8 @@ class ro_cano_che_ritorna:
                  
                     
                     ):
+                    
+                        buy = "BUY #1"
                         action = "buy"
                        
 
@@ -308,7 +310,7 @@ class ro_cano_che_ritorna:
                           #roma 2 aprile 2021 - BUY 1
                      
                     ):
-
+                        buy = "BUY #2"
                         action = "buy"
                     
                     
@@ -339,10 +341,12 @@ class ro_cano_che_ritorna:
                         #incredibile ma vero E' NECESSARIA quando deve ricomprare dopo la correzione al ribasso
                         
                     ):
-
+                        buy = "BUY #3"
                         action = "buy"
 
-                        
+                       
+                    
+                    
                         
                     elif (
                           ma4_prev < ma8_prev and ma4_last > ma8_last or (deviation_buy2 > 0.18 and deviation_buy > 0.20 and deviation_prev > 0.20)
@@ -362,7 +366,7 @@ class ro_cano_che_ritorna:
                           #incredibile ma vero E' NECESSARIA quando deve ricomprare dopo la correzione al ribasso
                     
                     ):
-
+                        buy = "BUY #4"
                         action = "buy"
                     
 #############################################################################################################################################
@@ -405,7 +409,7 @@ class ro_cano_che_ritorna:
                         #deviation_prev = price / prev_trade_price  
                     
                     ):
-
+                        buy = "BUY #6"
                         action = "buy"
 
                         
@@ -444,7 +448,7 @@ class ro_cano_che_ritorna:
                           #deviation_prev = price / prev_trade_price
                           
                     ):
-
+                        buy = "BUY #7"
                         action = "buy"
                         
                
