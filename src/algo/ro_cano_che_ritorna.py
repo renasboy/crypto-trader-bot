@@ -935,7 +935,7 @@ class ro_cano_che_ritorna:
             
             if (
                 ma50_last >= ma50_2_min_ago
-                and ma2_last < ma36_last and deviation_sell < -0.65 or (ma2_last < ma36_last and deviation_sell < -0.65) or ( ma8_last < ma39_last and deviation_sell < -0.30 )
+                and ma2_last < ma36_last and deviation_sell < -0.70 or (ma2_last < ma36_last and deviation_sell < -0.65) or ( ma8_last < ma39_last and deviation_sell < -0.35 )
                 
                
             ):
