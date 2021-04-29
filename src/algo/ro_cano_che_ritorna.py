@@ -19,6 +19,9 @@ class ro_cano_che_ritorna:
         ma6_last, ma6_prev = self.algo_helper.ma_last_prev(6)
         ma7_last, ma7_prev = self.algo_helper.ma_last_prev(7)
         ma8_last, ma8_prev = self.algo_helper.ma_last_prev(8)
+        
+        ma10_last, ma10_prev = self.algo_helper.ma_last_prev(10)
+        
         ma13_last, ma13_prev = self.algo_helper.ma_last_prev(13)
         ma15_last, ma15_prev = self.algo_helper.ma_last_prev(15)
         ma17_last, ma17_prev = self.algo_helper.ma_last_prev(17)
@@ -322,9 +325,14 @@ class ro_cano_che_ritorna:
                 elif self.session == 2:
               
                     if (
-                     
-                        ma4_prev < ma8_prev and ma4_last > ma8_last or (deviation_buy2 > 0.18 and deviation_buy > 0.20 and deviation_prev > 0.20)
-                        and ma4_last > ma78_last
+                        
+                        
+                        ma4_last > ma78_last
+                        and (( ma4_prev < ma10_prev and ma4_last > ma10_last ) and deviation_buy > 0.10 ) or (deviation_buy2 > 0.18 and deviation_buy > 0.20 and deviation_prev > 0.20)
+                        #deviation_buy = ma2_last / last_trade_price
+                        #deviation_buy2 = ma8_last / ma78_last
+                        
+                        
                         and ma13_last > ma13_2_min_ago
                         #ma8>ma78
                         #punto verde dall' ultimo punto rosso (ma3-last trade)
@@ -349,8 +357,12 @@ class ro_cano_che_ritorna:
                     
                         
                     elif (
-                          ma4_prev < ma8_prev and ma4_last > ma8_last or (deviation_buy2 > 0.18 and deviation_buy > 0.20 and deviation_prev > 0.20)
-                          and ma4_last > ma78_last
+                        
+                          ma4_last > ma78_last
+                          and (( ma4_prev < ma10_prev and ma4_last > ma10_last ) and deviation_buy > 0.15 ) or ( deviation_buy2 > 0.18 and deviation_buy > 0.20 and deviation_prev > 0.20)
+                          #deviation_buy = ma2_last / last_trade_price
+                          #deviation_buy2 = ma8_last / ma78_last
+                          
                           and ma13_last > ma13_2_min_ago
                           
                           
@@ -379,11 +391,15 @@ class ro_cano_che_ritorna:
            
                     if (
                         
+                        ma4_last > ma78_last
+                        and (( ma2_prev < ma8_prev and ma2_last > ma8_last ) and deviation_buy > 0.15 ) or (deviation_buy3 > 0.15 and deviation_buy > 0.19 and deviation_prev > 0.19)
+                        #deviation_buy = ma2_last / last_trade_price
+                        #deviation_buy3 = ma8_last / ma78_last
                         
-                        ma2_prev < ma8_prev and ma2_last > ma8_last or (deviation_buy3 > 0.15 and deviation_buy > 0.19 and deviation_prev > 0.19)
+                        
                         and ma39_last > ma39_2_min_ago
                         and ma13_last > ma13_2_min_ago
-                        and ma4_last > ma78_last
+                        
                         
                         and price > price_2_min_ago
                         
@@ -416,8 +432,12 @@ class ro_cano_che_ritorna:
                         
                     elif (
                           
-
-                          ma3_prev < ma8_prev and ma3_last > ma8_last or (deviation_buy3 > 0.17 and deviation_buy > 0.20 and deviation_prev > 0.20)
+                          ma4_last > ma78_last
+                          and (( ma3_prev < ma8_prev and ma3_last > ma8_last ) and deviation_buy > 0.15 ) or (deviation_buy3 > 0.17 and deviation_buy > 0.20 and deviation_prev > 0.20)
+                          #deviation_buy = ma2_last / last_trade_price
+                          #deviation_buy3 = ma8_last / ma78_last
+                        
+                        
                           and ma39_last < ma39_2_min_ago
                           and ma13_last > ma13_2_min_ago
                           and ma4_last > ma78_last
