@@ -19,7 +19,7 @@ class ro_cano_che_ritorna:
         ma6_last, ma6_prev = self.algo_helper.ma_last_prev(6)
         ma7_last, ma7_prev = self.algo_helper.ma_last_prev(7)
         ma8_last, ma8_prev = self.algo_helper.ma_last_prev(8)
-        
+        ma9_last, ma9_prev = self.algo_helper.ma_last_prev(9)
         ma10_last, ma10_prev = self.algo_helper.ma_last_prev(10)
         
         ma13_last, ma13_prev = self.algo_helper.ma_last_prev(13)
@@ -370,7 +370,7 @@ class ro_cano_che_ritorna:
                         
                         
                         ma4_last > ma78_last
-                        and (( ma4_prev < ma10_prev and ma4_last > ma10_last ) and deviation_buy > 0.10 ) or (deviation_buy2 > 0.18 and deviation_buy > 0.20 and deviation_prev > 0.20)
+                        and (( ma4_prev < ma9_prev and ma4_last > ma9_last ) and deviation_buy > 0.09 ) or (deviation_buy2 > 0.17 and deviation_buy > 0.19 and deviation_prev > 0.19)
                         #deviation_buy = ma2_last / last_trade_price
                         #deviation_buy2 = ma8_last / ma78_last
                         
@@ -401,7 +401,7 @@ class ro_cano_che_ritorna:
                     elif (
                         
                           ma4_last > ma78_last
-                          and (( ma4_prev < ma10_prev and ma4_last > ma10_last ) and deviation_buy > 0.15 ) or ( deviation_buy2 > 0.18 and deviation_buy > 0.20 and deviation_prev > 0.20)
+                          and (( ma4_prev < ma9_prev and ma4_last > ma9_last ) and deviation_buy > 0.14 ) or ( deviation_buy2 > 0.17 and deviation_buy > 0.19 and deviation_prev > 0.19 )
                           #deviation_buy = ma2_last / last_trade_price
                           #deviation_buy2 = ma8_last / ma78_last
                           
