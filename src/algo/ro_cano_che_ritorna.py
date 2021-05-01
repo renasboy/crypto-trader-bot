@@ -272,7 +272,7 @@ class ro_cano_che_ritorna:
                         
                         
                         and ma39_last > ma50_last
-                        and deviation_buy1 > 0.12
+                        and deviation_buy1 > 0.11
                         
                         #deviation_buy1 = ma8_last / ma78_last
                         
