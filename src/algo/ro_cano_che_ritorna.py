@@ -250,13 +250,17 @@ class ro_cano_che_ritorna:
           
                 if self.session == 1:
                
+            
+                    # BUY 1 SE ma78 > ma78 50 min ago ! resta uguale
                     if (
                        
                         #se va su all' improvviso prende la deviation.
                         #se ci ripensa prima di salire prende l' incrocio
                         #GRAZIE COMPA
                         
-                        price > price_2_min_ago
+                        ma78_last > ma78_50_min_ago
+                        
+                        and price > price_2_min_ago
                         and price > price_3_min_ago
                         and ma2_last > ma2_2_min_ago
                         and ma4_last > ma8_last
@@ -286,9 +290,44 @@ class ro_cano_che_ritorna:
                     
                         buy = "BUY #1"
                         action = "buy"
+                        
+                        
+                        
+                        
+                    # BUY 1 SE ma78 < ma78 50 min ago ! deviation > ma di poco !
+                    elif (
                        
+                        #se va su all' improvviso prende la deviation.
+                        #se ci ripensa prima di salire prende l' incrocio
+                        #GRAZIE COMPA
+                        
+                        ma78_last < ma78_50_min_ago
+                        
+                        and price > price_2_min_ago
+                        and price > price_3_min_ago
+                        and ma2_last > ma2_2_min_ago
+                        and ma4_last > ma8_last
+                        
+                        and ma13_prev < ma78_prev and ma13_last > ma78_last or (deviation_buy1 > 0.27 and ma2_last > ma2_2_min_ago)
+                        and ma18_prev < ma78_prev and ma18_last > ma78_last or (deviation_buy1 > 0.27 and ma2_last > ma2_2_min_ago)
+                        
+                        
+                        
+                        and ma39_last > ma50_last
+                        and deviation_buy1 > 0.12
+                        
+                        #deviation_buy1 = ma8_last / ma78_last
+                        
+                     
+                    ):
+                    
+                        buy = "BUY #1"
+                        action = "buy"
+                        
+                        
+                        ##############################################################################################################################
 
-              
+                    # PER COMPRARE DURANTE IL CROLLO - compa prega per me - ( cruise - david gilmour )
                     elif (
                          
                           price > price_2_min_ago
