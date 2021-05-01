@@ -245,7 +245,7 @@ class maddog:
                         and ma3_last > ma40_last
                         
                         
-                        and deviation > 0.04
+                        and deviation > 0.10
                         
                         
                         and deviation_buy3 > 0.04
