@@ -1008,7 +1008,7 @@ class ro_cano_che_ritorna:
                   
             ################################################################################################################################## 
             
-            
+            # salvagente solo mentre sale !
 
             #1) STOP LOSS (salvagente)  
             # se ma78_last < ma78_2_min_ago si aziona lo stop loss in un modo !
@@ -1016,7 +1016,7 @@ class ro_cano_che_ritorna:
             
             if (
                 ma50_last >= ma50_2_min_ago
-                and ma2_last < ma36_last and deviation_sell < -0.68 or (ma2_last < ma36_last and deviation_sell < -0.63) or ( ma8_last < ma39_last and deviation_sell < -0.33 )
+                and ma2_last < ma36_last and deviation_sell < -0.68 or (ma2_last < ma36_last and deviation_sell < -0.63) or ( ma8_last < ma39_last and deviation_sell < -0.45 )
                 
                
             ):
@@ -1029,7 +1029,7 @@ class ro_cano_che_ritorna:
             elif (
             
                 ma50_last >= ma50_2_min_ago
-                and ( ma2_last < ma36_last and deviation_sell < -0.53 ) or ( ma8_last < ma39_last and deviation_sell < -0.30 ) or ( deviation_sell_ma78 < -0.35 )
+                and ( ma2_last < ma36_last and deviation_sell < -0.53 ) or ( ma8_last < ma39_last and deviation_sell < -0.45 ) or ( deviation_sell_ma78 < -0.43 )
                 
                 #ha venduto anche questa durante il crollo - punto rosso sovrapposto al punto verde 
                 # e gli ho detto che and ma3 deve andare sotto ma13 per vendere .
@@ -1046,7 +1046,7 @@ class ro_cano_che_ritorna:
             
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
-                and ma2_last < ma78_last and deviation_sell < -0.40 or ( ma8_last < ma39_last and deviation_sell < -0.36 )
+                and ma2_last < ma78_last and deviation_sell < -0.30 or ( ma8_last < ma39_last and deviation_sell < -0.30 )
                 and ma78_last < ma78_2_min_ago
                 #deviation_sell = ma2_last / last_trade_price
             ):
