@@ -277,7 +277,7 @@ class maddog:
                 
                 if (
                     
-                    ma3_last < ma25_last and deviation > 0.12 or ( ma3_last < ma20_last and deviation > 0.80 )
+                    ma3_last < ma25_last and deviation > 0.12 or ( ma3_last < ma20_last and deviation > 0.70 )
                     
                 ):
                     sell = "SELL #1"
@@ -322,7 +322,7 @@ class maddog:
                
                 if (
                     
-                    ma3_last < ma25_last and deviation > 0.13 or ( ma2_last < ma13_last and deviation_sell > 0.80 )
+                    ma3_last < ma25_last and deviation > 0.13 or ( ma2_last < ma13_last and deviation_sell > 0.70 )
                     
                     
                 ):
@@ -351,7 +351,7 @@ class maddog:
                 
                 if (
                     
-                    ma2_last < ma25_last and deviation > 0.10 or ( ma2_last < ma13_last and deviation_sell > 0.80 )
+                    ma2_last < ma25_last and deviation > 0.10 or ( ma2_last < ma13_last and deviation_sell > 0.70 )
                     
                     
                 ):
@@ -377,7 +377,7 @@ class maddog:
                        
             # STOP LOSS (salvagente)
             
-            if ma2_last < ma39_last and deviation < -0.68:
+            if ma2_last < ma39_last and deviation < -0.64:
                 
                 sell = "SELL #7"
                 action = "sell"
