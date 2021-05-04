@@ -1032,7 +1032,7 @@ class ro_cano_che_ritorna:
            
 
             #2) ro cano VENDE " DOPO x MINUTI " "max hold time" riga 91
-            
+                # HA VENDUTO DOPO 20 MINUTI !
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
                 and ma2_last < ma78_last and deviation_sell < -0.30 or ( ma8_last < ma39_last and deviation_sell < -0.30 )
