@@ -424,6 +424,9 @@ class maddog:
         if action == "sell":
             self.algo_helper.log("action sell {}".format(sell))
             self.session += 1
+        
+        elif action == 'buy':
+            self.algo_helper.log("action buy {}".format(buy))
             
             
         return action
