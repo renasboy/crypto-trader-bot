@@ -209,6 +209,9 @@ class maddog:
                         action = "buy"
                         
                         
+                        
+                        
+                        
                     elif (
                           
                           
@@ -244,9 +247,9 @@ class maddog:
                         #deviation_buy2 = ma8_last / ma78_last
                    
                     ):
-                        action = "buy"
-
                         
+                        buy = "BUY #3"
+                        action = "buy"
                         
                         
                 # COMPRA sessione 3 in poi
@@ -271,8 +274,11 @@ class maddog:
                         #deviation_buy3 = ma8_last / ma78_last
                         
                     ):
+                        
+                        buy = "BUY #4"
                         action = "buy"
-
+                        
+                
         ##############################################################################################################
         
         
@@ -289,6 +295,8 @@ class maddog:
 
        ###############################################################################################################################################     
             
+        
+        
             # VENDE
            
             # VENDE sessione 1
