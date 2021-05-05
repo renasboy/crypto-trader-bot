@@ -49,7 +49,12 @@ class maddog:
        
         ma20_last, ma20_prev = self.algo_helper.ma_last_prev(20)
         ma60_last, ma60_prev = self.algo_helper.ma_last_prev(60)
+        
+        
         ma78_last, ma78_prev = self.algo_helper.ma_last_prev(78)
+        
+        
+        
         ma85_last, ma85_prev = self.algo_helper.ma_last_prev(85)
         ma100_last, ma100_prev = self.algo_helper.ma_last_prev(100)
         #
@@ -70,9 +75,9 @@ class maddog:
         ma20_2_min_ago = self.algo_helper.ma_minutes_ago(20, 2)
         ma36_2_min_ago = self.algo_helper.ma_minutes_ago(36, 2)
         ma39_2_min_ago = self.algo_helper.ma_minutes_ago(39, 2)
-        ma60_2_min_ago = self.algo_helper.ma_minutes_ago(60, 2)
-        ma78_2_min_ago = self.algo_helper.ma_minutes_ago(78, 2)
-        ma78_60_min_ago = self.algo_helper.ma_minutes_ago(78, 60)
+        
+        ma78_20_min_ago = self.algo_helper.ma_minutes_ago(78, 20)
+        
         ma85_3_min_ago = self.algo_helper.ma_minutes_ago(85, 3)
         
         
@@ -182,21 +187,16 @@ class maddog:
                         #se va su all' improvviso prende la deviation.
                         #se ci ripensa prima di salire prende l' incrocio
                         #GRAZIE COMPA
+                       
+                        deviation_buy1 > 0.50 and ( ma18_prev < ma78_prev and ma18_last > ma78_last ) or ( deviation_buy1 > 0.55 )
+                        and ma78_last >= ma78_20_min_ago
                         
-
-                        ma2_last > ma2_2_min_ago
-                        #and ma2_last > ma2_3_min_ago
-                        
-                        #and ma3_last > ma3_2_min_ago FORSE DA AGGIUNGERE
-                        
-                        and price > price_2_min_ago
-                        #and price > price_3_min_ago
-                        
-                        and ma18_prev < ma78_prev and ma18_last > ma78_last or ( deviation_buy1 > 0.20 )
-                        # ho messo dentro ma2_last > ma2_2_min_ago perche' ha comprato mentre ma2 scendeva
                         
                         and ma39_last > ma50_last
-
+                        and ma2_last > ma2_2_min_ago
+                        
+                        
+                        
                         #deviation_buy1 = ma8_last / ma78_last
                         #and ma2_prev < ma13_prev and ma2_last > ma13_last se aggiungo questa NON COMPRA PIU'
                         
@@ -204,10 +204,29 @@ class maddog:
                         
                        
                     ):
+                        
+                        buy = "BUY #1"
                         action = "buy"
                         
                         
-
+                    elif (
+                          
+                          
+                          deviation_buy1 > 0.05 and ( ma18_prev < ma78_prev and ma18_last > ma78_last ) or ( deviation_buy1 > 0.10 )
+                          and ma78_last < ma78_20_min_ago
+                          
+                          and ma39_last > ma50_last
+                          and ma2_last > ma2_2_min_ago
+                          
+                         
+                    ):
+                        buy = "BUY #2"
+                        action = "buy"
+                        
+                        
+                
+                
+                
                 # COMPRA sessione 2
                 elif self.session == 2:
                     if (
