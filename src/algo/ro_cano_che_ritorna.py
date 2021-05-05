@@ -260,19 +260,16 @@ class ro_cano_che_ritorna:
                         #GRAZIE COMPA
                         
                         ma78_last > ma78_50_min_ago
+                      
+                        and (deviation_buy1 > 0.05 and (ma13_prev < ma78_prev and ma13_last > ma78_last)) or (deviation_buy1 > 0.10 )
+                        and (deviation_buy1 > 0.05 and (ma18_prev < ma78_prev and ma18_last > ma78_last)) or (deviation_buy1 > 0.10 )
+                        
                         
                         and price > price_2_min_ago
-                        and price > price_3_min_ago
                         and ma2_last > ma2_2_min_ago
                         and ma4_last > ma8_last
-                        
-                        and ma13_prev < ma78_prev and ma13_last > ma78_last or (deviation_buy1 > 0.25 and ma2_last > ma2_2_min_ago)
-                        and ma18_prev < ma78_prev and ma18_last > ma78_last or (deviation_buy1 > 0.25 and ma2_last > ma2_2_min_ago)
-                        
-                        
-                        
                         and ma39_last > ma50_last
-                        and deviation_buy1 > 0.12
+                        
                         
                         #deviation_buy1 = ma8_last / ma78_last
                         
@@ -303,19 +300,16 @@ class ro_cano_che_ritorna:
                         #GRAZIE COMPA
                         
                         ma78_last < ma78_50_min_ago
+                     
+                        and (deviation_buy1 > 0.50 and (ma13_prev < ma78_prev and ma13_last > ma78_last)) or (deviation_buy1 > 0.55 )
+                        and (deviation_buy1 > 0.50 and (ma18_prev < ma78_prev and ma18_last > ma78_last)) or (deviation_buy1 > 0.55 )
+                        
+                        and ma39_last > ma50_last
                         
                         and price > price_2_min_ago
                         and price > price_3_min_ago
                         and ma2_last > ma2_2_min_ago
                         and ma4_last > ma8_last
-                        
-                        and ma13_prev < ma78_prev and ma13_last > ma78_last or (deviation_buy1 > 0.27 and ma2_last > ma2_2_min_ago)
-                        and ma18_prev < ma78_prev and ma18_last > ma78_last or (deviation_buy1 > 0.27 and ma2_last > ma2_2_min_ago)
-                        
-                        
-                        
-                        and ma39_last > ma50_last
-                        and deviation_buy1 > 0.12
                         
                         #deviation_buy1 = ma8_last / ma78_last
                         
@@ -324,7 +318,9 @@ class ro_cano_che_ritorna:
                     
                         buy = "BUY #2"
                         action = "buy"
-                        
+                       
+                    
+                    
                     ##############################################################################################################################
                     # IMPORTANTISSIMO ! SOLO PER IL BUY 1
                     ##############################################################################################################################
