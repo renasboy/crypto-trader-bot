@@ -1095,6 +1095,8 @@ class ro_cano_che_ritorna:
         if action == "sell":
             self.algo_helper.log("action sell {}".format(sell))
             self.session += 1
+        elif action == 'buy':
+            self.algo_helper.log("action buy {}".format(buy))
 
         return action
 
