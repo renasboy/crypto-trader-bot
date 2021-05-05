@@ -1086,7 +1086,7 @@ class ro_cano_che_ritorna:
         
         
 
-        ############### FINE ALGORITH ##################
+        ############### FINE ALGORITH ###################
         
         
 
