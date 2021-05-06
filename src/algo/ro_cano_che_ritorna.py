@@ -627,13 +627,14 @@ class ro_cano_che_ritorna:
 
                 
                 if (
-                    ma50_last >= ma50_2_min_ago and ( ma3_last < ma25_last and deviation_sell > 0.12 ) or ( ma2_last < ma13_last and deviation_sell > 0.80 ) or (( ma3_last > ma78_last and ma3_last < ma78_last ) and deviation_sell < -0.20 )
+                    
+                    ma2_last < ma2_2_min_ago
+                    and ( ma50_last >= ma50_2_min_ago and ( ma3_last < ma25_last and deviation_sell > 0.12 )) or ( ma50_last >= ma50_2_min_ago and ( ma2_last < ma13_last and deviation_sell > 0.80 )) or ( ma50_last >= ma50_2_min_ago and ( ma3_last > ma78_last and ma3_last < ma78_last ) and deviation_sell < -0.20 )
+                    
                     #deviation_sell = ma2_last / last_trade_price
                     
                     #and ma13_last > ma13_2_min_ago
 
-                    #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
-                    and ma2_last < ma2_2_min_ago
                     
                 ):
                     sell = "SELL #5"
