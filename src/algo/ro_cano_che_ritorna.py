@@ -593,9 +593,7 @@ class ro_cano_che_ritorna:
                     #diventa :
                     ma2_last < ma2_2_min_ago
                     and ( ma50_last < ma50_2_min_ago and ( ma3_last > ma13_last and ma3_last < ma13_last ) and deviation_sell > 0.10 ) or ( ma50_last < ma50_2_min_ago and ( ma3_last > ma8_last and ma3_last < ma8_last ) and deviation_sell > 0.60 ) or ( ma50_last < ma50_2_min_ago and ( ma3_last > ma78_last and ma3_last < ma78_last ) and deviation_sell < -0.20 ) 
-                    
-                    
-                   
+                  
                 ):
                    
                     sell = "SELL #3"
@@ -851,14 +849,10 @@ class ro_cano_che_ritorna:
             
                 if (
                     
-                    
-                    ma50_last >= ma50_2_min_ago and ( ma3_last < ma25_last and deviation_sell > 0.18 ) or ( ma2_last < ma13_last and deviation_sell > 0.80 ) or (( ma3_last > ma78_last and ma3_last < ma78_last ) and deviation_sell < -0.20 )
+                    ma2_last < ma2_2_min_ago
+                    and ( ma50_last >= ma50_2_min_ago and ( ma3_last < ma25_last and deviation_sell > 0.18 )) or ( ma50_last >= ma50_2_min_ago and ( ma2_last < ma13_last and deviation_sell > 0.80 ) or ( ma50_last >= ma50_2_min_ago and ( ma3_last > ma78_last and ma3_last < ma78_last ) and deviation_sell < -0.20 )
                     #deviation_sell = ma2_last / last_trade_price
-                    
-                    
-                    #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
-                    and ma2_last < ma2_2_min_ago
-                    
+                 
                 ):
                     sell = "SELL #17"
                     action = "sell"
