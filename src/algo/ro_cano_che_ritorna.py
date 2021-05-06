@@ -894,11 +894,10 @@ class ro_cano_che_ritorna:
                     
                 elif (
                     
-                    ma50_last < ma50_2_min_ago and deviation_sell < -0.45
+                    ma2_last < ma2_2_min_ago
+                    and ma50_last < ma50_2_min_ago and deviation_sell < -0.45
                     #deviation_sell = ma2_last / last_trade_price
                     
-                    #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
-                    and ma2_last < ma2_2_min_ago
                     
                     #avevo messo 4-8 per vendere durante il crollo - non dimenticarlo
                     #and ma4_last < ma8_last and deviation_sell < -0.20
@@ -921,8 +920,8 @@ class ro_cano_che_ritorna:
                 
                 if (
                     
-                    
-                    ma50_last >= ma50_2_min_ago and ( ma3_last < ma25_last and deviation_sell > 0.12 ) or ( ma2_last < ma13_last and deviation_sell > 0.60 ) or (( ma3_last > ma78_last and ma3_last < ma78_last ) and deviation_sell < -0.20 )
+                    ma2_last < ma2_2_min_ago
+                    and ( ma50_last >= ma50_2_min_ago and ( ma3_last < ma25_last and deviation_sell > 0.12 )) or ( ma50_last >= ma50_2_min_ago and ( ma2_last < ma13_last and deviation_sell > 0.60 )) or ( ma50_last >= ma50_2_min_ago and ( ma3_last > ma78_last and ma3_last < ma78_last ) and deviation_sell < -0.20 )
                     #deviation_sell = ma2_last / last_trade_price
                     
                 ):
@@ -933,8 +932,8 @@ class ro_cano_che_ritorna:
                 
                     
                 elif (
-                    ma50_last >= ma50_2_min_ago and deviation_sell < -0.45
                     
+                    ma50_last >= ma50_2_min_ago and deviation_sell < -0.45
                     #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
                     and ma2_last < ma2_2_min_ago
                  
