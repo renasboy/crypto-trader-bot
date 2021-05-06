@@ -187,10 +187,8 @@ class maddog:
                         #se va su all' improvviso prende la deviation.
                         #se ci ripensa prima di salire prende l' incrocio
                         #GRAZIE COMPA
-                       
-                        deviation_buy1 > 0.50 and ( ma18_prev < ma78_prev and ma18_last > ma78_last ) or ( deviation_buy1 > 0.55 )
-                        and ma78_last >= ma78_20_min_ago
-                        
+                        ma78_last >= ma78_20_min_ago
+                        and ( deviation_buy1 > 0.05 and ( ma18_prev < ma78_prev and ma18_last > ma78_last )) or ( deviation_buy1 > 0.10 )
                         
                         and ma39_last > ma50_last
                         and ma2_last > ma2_2_min_ago
@@ -214,10 +212,9 @@ class maddog:
                         
                     elif (
                           
-                          
-                          deviation_buy1 > 0.05 and ( ma18_prev < ma78_prev and ma18_last > ma78_last ) or ( deviation_buy1 > 0.10 )
-                          and ma78_last < ma78_20_min_ago
-                          
+                          ma78_last < ma78_20_min_ago
+                          and ( deviation_buy1 > 0.55 and ( ma18_prev < ma78_prev and ma18_last > ma78_last )) or ( deviation_buy1 > 0.60 )
+                        
                           and ma39_last > ma50_last
                           and ma2_last > ma2_2_min_ago
                           
