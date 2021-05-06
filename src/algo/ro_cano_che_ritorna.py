@@ -592,7 +592,7 @@ class ro_cano_che_ritorna:
                     #ma50_last < ma50_2_min_ago and ( ma3_last < ma13_last and deviation_sell > 0.10 ) or ( ma3_last < ma8_last and deviation_sell > 0.60 )
                     #diventa :
                     ma2_last < ma2_2_min_ago
-                    and ( ma50_last < ma50_2_min_ago and (( ma3_last > ma13_last and ma3_last < ma13_last ) and deviation_sell > 0.10 ) or ( ma50_last < ma50_2_min_ago and ( ma3_last > ma8_last and ma3_last < ma8_last ) and deviation_sell > 0.60 ) or ( ma50_last < ma50_2_min_ago and ( ma3_last > ma78_last and ma3_last < ma78_last ) and deviation_sell < -0.20 ) 
+                    and ( ma50_last < ma50_2_min_ago and ( ma3_last > ma13_last and ma3_last < ma13_last ) and deviation_sell > 0.10 ) or ( ma50_last < ma50_2_min_ago and ( ma3_last > ma8_last and ma3_last < ma8_last ) and deviation_sell > 0.60 ) or ( ma50_last < ma50_2_min_ago and ( ma3_last > ma78_last and ma3_last < ma78_last ) and deviation_sell < -0.20 ) 
                     
                     
                    
