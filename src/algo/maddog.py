@@ -301,7 +301,7 @@ class maddog:
                 
                 if (
                     
-                    ma3_last < ma25_last and deviation > 0.12 or ( ma3_last < ma20_last and deviation > 0.70 )
+                    ma3_last < ma25_last and deviation > 0.12 or ( ma3_last < ma25_last and ( ma3_last < ma20_last and deviation > 0.70 ))
                     
                 ):
                     sell = "SELL #1"
@@ -312,8 +312,8 @@ class maddog:
                     
                 elif (
                     
-                    ma78_last > ma78_20_min_ago
-                    and deviation_sell < -0.45 or (ma3_last < ma39_last and deviation_buy1 < -0.45) or (ma2_last < ma50_last and deviation_ma50 < -0.45)
+                    ma78_last > ma78_20_min_ago and deviation_sell < -0.45 or ( ma78_last > ma78_20_min_ago and (ma3_last < ma39_last and deviation_buy1 < -0.45 )) or ( ma78_last > ma78_20_min_ago and ( ma2_last < ma50_last and deviation_ma50 < -0.45 ))
+                    
                     
                     
                     #deviation_sell = ma2_last / ma78_last
