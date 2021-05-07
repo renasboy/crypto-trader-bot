@@ -24,6 +24,9 @@ class ro_cano_che_ritorna:
         
         ma13_last, ma13_prev = self.algo_helper.ma_last_prev(13)
         ma15_last, ma15_prev = self.algo_helper.ma_last_prev(15)
+        
+        ma16_last, ma16_prev = self.algo_helper.ma_last_prev(16)
+        
         ma17_last, ma17_prev = self.algo_helper.ma_last_prev(17)
         ma18_last, ma18_prev = self.algo_helper.ma_last_prev(18)
         ma20_last, ma20_prev = self.algo_helper.ma_last_prev(20)
@@ -57,6 +60,8 @@ class ro_cano_che_ritorna:
         ma6_2_min_ago = self.algo_helper.ma_minutes_ago(6,2)
         
         ma13_2_min_ago = self.algo_helper.ma_minutes_ago(13,2)
+        
+        ma16_2_min_ago = self.algo_helper.ma_minutes_ago(16,2)
         
         ma39_2_min_ago = self.algo_helper.ma_minutes_ago(39,2)
         ma39_42_min_ago = self.algo_helper.ma_minutes_ago(39,42)
@@ -269,7 +274,7 @@ class ro_cano_che_ritorna:
                         and ma2_last > ma2_2_min_ago
                         and ma4_last > ma8_last
                         and ma39_last > ma50_last
-                        
+                        and ma16_last > ma16_2_min_ago
                         
                         #deviation_buy1 = ma8_last / ma78_last
                         
