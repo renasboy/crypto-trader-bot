@@ -1026,7 +1026,7 @@ class ro_cano_che_ritorna:
             elif (
                 
                 seconds_since_last_trade > max_hold_time_in_seconds
-                and ma2_last < ma78_last and deviation_sell < -0.45 or ( ma8_last < ma39_last and deviation_sell < -0.36 )
+                and ma2_last < ma78_last and deviation_sell < -0.49 or ( ma8_last < ma39_last and deviation_sell < -0.49 )
                 and ma78_last > ma78_2_min_ago
                 #deviation_sell = ma2_last / last_trade_price
             ):
