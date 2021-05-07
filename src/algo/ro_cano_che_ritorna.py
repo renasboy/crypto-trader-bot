@@ -368,7 +368,7 @@ class ro_cano_che_ritorna:
                         
                         
                         ma4_last > ma78_last
-                        and (( ma4_prev < ma9_prev and ma4_last > ma9_last ) and deviation_buy > 0.10 ) or (deviation_buy2 > 0.12 and deviation_buy > 0.16 and deviation_prev > 0.19)
+                        and (( ma4_prev < ma9_prev and ma4_last > ma9_last ) and deviation_buy > 0.10 ) or (deviation_buy2 > 0.11 and deviation_buy > 0.12 and deviation_prev > 0.19)
                         #deviation_buy = ma2_last / last_trade_price
                         #deviation_buy2 = ma8_last / ma78_last
                         
@@ -377,13 +377,10 @@ class ro_cano_che_ritorna:
                         #ma8>ma78
                         #punto verde dall' ultimo punto rosso (ma3-last trade)
                         #punto verde dall' ultimo punto verde
-                        
-                        
                        
                         and ma2_last > ma2_2_min_ago
-                        and price > price_1_min_ago
                         and price > price_2_min_ago
-                        
+                       
                         #and ma39_last > ma39_42_min_ago
                         and ma3_last > ma40_last
                         #incredibile ma vero E' NECESSARIA quando deve ricomprare dopo la correzione al ribasso
@@ -1013,8 +1010,10 @@ class ro_cano_che_ritorna:
                 # HA VENDUTO DOPO 20 MINUTI !
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
-                and ma2_last < ma78_last and deviation_sell < -0.40 or ( ma8_last < ma39_last and deviation_sell < -0.45 )
+                
                 and ma78_last < ma78_2_min_ago
+                and ma2_last < ma78_last and deviation_sell < -0.40 or ( ma8_last < ma39_last and deviation_sell < -0.45 ) or deviation_sell < 0.10
+                
                 #deviation_sell = ma2_last / last_trade_price
             ):
                 sell = "SELL #27"
@@ -1026,8 +1025,10 @@ class ro_cano_che_ritorna:
             elif (
                 
                 seconds_since_last_trade > max_hold_time_in_seconds
-                and ma2_last < ma78_last and deviation_sell < -0.49 or ( ma8_last < ma39_last and deviation_sell < -0.49 )
+                
                 and ma78_last > ma78_2_min_ago
+                and ma2_last < ma78_last and deviation_sell < -0.55 or ( ma8_last < ma39_last and deviation_sell < -0.55 ) or deviation_sell < 0.10
+                
                 #deviation_sell = ma2_last / last_trade_price
             ):
                 sell = "SELL #28"
@@ -1040,7 +1041,7 @@ class ro_cano_che_ritorna:
             
             
             elif (
-                ma50_last >= ma50_2_min_ago and ma4_last < ma8_last and deviation_sell < -0.40 and ma2_last < ma2_2_min_ago
+                ma50_last >= ma50_2_min_ago and ma4_last < ma8_last and deviation_sell < -0.55 and ma2_last < ma2_2_min_ago
                 
                 
                 
