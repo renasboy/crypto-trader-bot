@@ -195,8 +195,10 @@ class ro_cano_che_ritorna:
 
         # APRE E CHIUDE GABBIA
 
-        if ma50_last >= ma50_2_min_ago and deviation_gabbia > -0.15 or ( deviation_buy1 < -1.90 ):
-            #ti ricordo che deviation_gabbia = (ma6_last / ma38_last)
+        #if ma50_last >= ma50_2_min_ago and deviation_gabbia > -0.15 or ( deviation_buy1 < -1.90 ):
+        if deviation_buy1 > -0.20 or ( deviation_buy1 < -1.90 ):
+        #deviation_buy1 = (ma8_last / ma78_last
+        #ti ricordo che deviation_gabbia = (ma6_last / ma38_last)
            
             
             # NON TOCCARE QUESTA CONDIZIONE SERVE PER APERTURA DI GABBIA !
