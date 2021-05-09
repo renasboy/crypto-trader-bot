@@ -120,8 +120,8 @@ class ro_cano_che_ritorna:
         # dall' ULTIMO trade ( 15 minuti = 15 * 60 = 900 secondi )
         min_buy_delay_in_seconds = 900
 
-        # dal PENULTIMO trade ( 15 minuti = 15 * 60 = 900 secondi )
-        min_prev_buy_delay_in_seconds = 900
+        # dal PENULTIMO trade ( 150 minuti = 150 * 60 = 9000 secondi )
+        min_prev_buy_delay_in_seconds = 9000
 
        ###############################################################################################################################################################
     
