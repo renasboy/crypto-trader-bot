@@ -373,7 +373,7 @@ class ro_cano_che_ritorna:
                         
                         
                         ma4_last > ma78_last
-                        and (( ma4_prev < ma9_prev and ma4_last > ma9_last ) and deviation_buy > 0.10 ) or (deviation_buy2 > 0.11 and deviation_buy > 0.12 and deviation_prev > 0.19)
+                        and (( ma4_prev < ma9_prev and ma4_last > ma9_last ) and deviation_buy > 0.10 ) or (deviation_buy2 > 0.11 and deviation_buy > 0.12 and deviation_prev > 0.22)
                         #deviation_buy = ma2_last / last_trade_price
                         #deviation_buy2 = ma8_last / ma78_last
                         
@@ -401,7 +401,7 @@ class ro_cano_che_ritorna:
                     elif (
                         
                           ma4_last > ma78_last
-                          and (( ma4_prev < ma9_prev and ma4_last > ma9_last ) and deviation_buy > 0.10 ) or ( deviation_buy2 > 0.12 and deviation_buy > 0.16 and deviation_prev > 0.19 )
+                          and (( ma4_prev < ma9_prev and ma4_last > ma9_last ) and deviation_buy > 0.10 ) or ( deviation_buy2 > 0.12 and deviation_buy > 0.16 )
                           #deviation_buy = ma2_last / last_trade_price
                           #deviation_buy2 = ma8_last / ma78_last
                           
@@ -437,7 +437,7 @@ class ro_cano_che_ritorna:
                     if (
                         
                         ma4_last > ma78_last
-                        and (( ma2_prev < ma8_prev and ma2_last > ma8_last ) and deviation_buy > 0.16 ) or (deviation_buy3 > 0.12 and deviation_buy > 0.16 and deviation_prev > 0.16)
+                        and (( ma2_prev < ma8_prev and ma2_last > ma8_last ) and deviation_buy > 0.16 ) or (deviation_buy3 > 0.12 and deviation_buy > 0.16 and deviation_prev > 0.22)
                         #deviation_buy = ma2_last / last_trade_price
                         #deviation_buy3 = ma8_last / ma78_last
                         
@@ -471,7 +471,7 @@ class ro_cano_che_ritorna:
                     elif (
                           
                           ma4_last > ma78_last
-                          and (( ma3_prev < ma8_prev and ma3_last > ma8_last ) and deviation_buy > 0.15 ) or (deviation_buy3 > 0.12 and deviation_buy > 0.16 and deviation_prev > 0.18 )
+                          and (( ma3_prev < ma8_prev and ma3_last > ma8_last ) and deviation_buy > 0.15 ) or (deviation_buy3 > 0.12 and deviation_buy > 0.16 )
                           #deviation_buy = ma2_last / last_trade_price
                           #deviation_buy3 = ma8_last / ma78_last
                         
@@ -923,7 +923,7 @@ class ro_cano_che_ritorna:
                 if (
                     
                     ma2_last < ma2_2_min_ago
-                    and ( ma50_last >= ma50_2_min_ago and ( ma3_last < ma25_last and deviation_sell > 0.18 )) or ( ma50_last >= ma50_2_min_ago and ( ma2_last < ma13_last and deviation_sell > 0.60 )) or ( ma50_last >= ma50_2_min_ago and ( ma3_last > ma78_last and ma3_last < ma78_last ) and deviation_sell < -0.20 )
+                    and ( ma50_last >= ma50_2_min_ago and ( ma3_last < ma25_last and deviation_sell > 0.15 )) or ( ma50_last >= ma50_2_min_ago and ( ma2_last < ma13_last and deviation_sell > 0.60 )) or ( ma50_last >= ma50_2_min_ago and ( ma3_last > ma78_last and ma3_last < ma78_last ) and deviation_sell < -0.20 )
                     #deviation_sell = ma2_last / last_trade_price
                     
                 ):
@@ -946,7 +946,7 @@ class ro_cano_che_ritorna:
                     
                 elif (
                     
-                    ma50_last < ma50_2_min_ago and ( ma3_last < ma13_last and deviation_sell > 0.18 ) or ( ma3_last < ma8_last and deviation_sell > 0.60 ) or (( ma3_last > ma78_last and ma3_last < ma78_last ) and deviation_sell < -0.20 )
+                    ma50_last < ma50_2_min_ago and ( ma3_last < ma13_last and deviation_sell > 0.15 ) or ( ma3_last < ma8_last and deviation_sell > 0.60 ) or (( ma3_last > ma78_last and ma3_last < ma78_last ) and deviation_sell < -0.20 )
                   
                     #deviation_sell = ma2_last / last_trade_price
                    
