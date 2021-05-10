@@ -70,6 +70,8 @@ class ro_cano_che_ritorna:
         
         ma78_2_min_ago = self.algo_helper.ma_minutes_ago(78,2)
         
+        ma78_20_min_ago = self.algo_helper.ma_minutes_ago(78,20)
+        
         ma78_50_min_ago = self.algo_helper.ma_minutes_ago(78,50)
         
         
@@ -266,7 +268,7 @@ class ro_cano_che_ritorna:
                         #se ci ripensa prima di salire prende l' incrocio
                         #GRAZIE COMPA
                         
-                        ma78_last > ma78_50_min_ago
+                        ma78_last > ma78_20_min_ago
                       
                         and (deviation_buy1 > 0.05 and (ma13_prev < ma78_prev and ma13_last > ma78_last)) or (deviation_buy1 > 0.10 )
                         and (deviation_buy1 > 0.05 and (ma18_prev < ma78_prev and ma18_last > ma78_last)) or (deviation_buy1 > 0.10 )
@@ -306,10 +308,10 @@ class ro_cano_che_ritorna:
                         #se ci ripensa prima di salire prende l' incrocio
                         #GRAZIE COMPA
                         
-                        ma78_last < ma78_50_min_ago
+                        ma78_last < ma78_20_min_ago
                      
-                        and (deviation_buy1 > 0.50 and (ma13_prev < ma78_prev and ma13_last > ma78_last)) or (deviation_buy1 > 0.55 )
-                        and (deviation_buy1 > 0.50 and (ma18_prev < ma78_prev and ma18_last > ma78_last)) or (deviation_buy1 > 0.55 )
+                        and (deviation_buy1 > 0.60 and (ma13_prev < ma78_prev and ma13_last > ma78_last)) or (deviation_buy1 > 0.65 )
+                        and (deviation_buy1 > 0.60 and (ma18_prev < ma78_prev and ma18_last > ma78_last)) or (deviation_buy1 > 0.65 )
                         
                         and ma8_last > ma50_last
                         
@@ -575,7 +577,7 @@ class ro_cano_che_ritorna:
                 elif (
                     
                     ma2_last < ma2_2_min_ago
-                    and ma50_last >= ma50_2_min_ago and deviation_sell < -0.45 
+                    and ma50_last >= ma50_2_min_ago and deviation_sell < -0.45
                     
                     #deviation_sell = ma2_last / last_trade_price
                    
@@ -608,9 +610,10 @@ class ro_cano_che_ritorna:
                     
                 elif (
                     
-                    ma50_last < ma50_2_min_ago and deviation_sell < -0.45
+                    ma2_last < ma2_2_min_ago
+                    and ( ma50_last < ma50_2_min_ago and deviation_sell < -0.45 ) or ( ma50_last < ma50_2_min_ago and deviation_buy1 < -0.20 )
                     
-                    and ma2_last < ma2_2_min_ago
+                    
                    
                 ):
                    
@@ -676,12 +679,12 @@ class ro_cano_che_ritorna:
                     
                 elif (
                     
+                    ma2_last < ma2_2_min_ago
+                    and ( ma50_last < ma50_2_min_ago and deviation_sell < -0.45 ) or ( ma50_last < ma50_2_min_ago and deviation_buy1 < -0.20 )
                     
-                    ma50_last < ma50_2_min_ago and deviation_sell < -0.45
                     #deviation_sell = ma2_last / last_trade_price
                     
-                    #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
-                    and ma2_last < ma2_2_min_ago
+                    
                    
                 ):
                    
@@ -747,12 +750,13 @@ class ro_cano_che_ritorna:
                     
                 elif (
                     
-                    ma50_last < ma50_2_min_ago and deviation_sell < -0.45
+                    ma2_last < ma2_2_min_ago
+                    and ma50_last < ma50_2_min_ago and deviation_sell < -0.45 or ( ma50_last < ma50_2_min_ago and deviation_buy1 < -0.20 )
                     
                     #deviation_sell = ma2_last / last_trade_price
                     
-                    #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
-                    and ma2_last < ma2_2_min_ago
+                   
+                    
                    
                 ):
                    
@@ -827,12 +831,13 @@ class ro_cano_che_ritorna:
                     
                 elif (
                     
-                    ma50_last < ma50_2_min_ago and deviation_sell < -0.45
+                    ma2_last < ma2_2_min_ago
+                    and ma50_last < ma50_2_min_ago and deviation_sell < -0.45 or ( ma50_last < ma50_2_min_ago and deviation_buy1 < -0.20 )
                     
                     #deviation_sell = ma2_last / last_trade_price
                     
-                    #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
-                    and ma2_last < ma2_2_min_ago
+                    
+                     
                    
                 ):
                    
@@ -899,7 +904,7 @@ class ro_cano_che_ritorna:
                 elif (
                     
                     ma2_last < ma2_2_min_ago
-                    and ma50_last < ma50_2_min_ago and deviation_sell < -0.45
+                    and ( ma50_last < ma50_2_min_ago and deviation_sell < -0.45 ) or ( ma50_last < ma50_2_min_ago and deviation_buy1 < -0.20 )
                     #deviation_sell = ma2_last / last_trade_price
                     
                     
@@ -962,13 +967,11 @@ class ro_cano_che_ritorna:
                   
                 
                 elif (
-                    
-                    ma50_last < ma50_2_min_ago and deviation_sell < -0.45
+                    ma2_last < ma2_2_min_ago
+                    and ( ma50_last < ma50_2_min_ago and deviation_sell < -0.45 ) or ( ma50_last < ma50_2_min_ago and deviation_buy1 < -0.20 )
                     
                     #deviation_sell = ma2_last / last_trade_price
-                    
-                    #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
-                    and ma2_last < ma2_2_min_ago
+                   
                    
                 ):
                    
