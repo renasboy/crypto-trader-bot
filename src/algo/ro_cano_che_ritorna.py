@@ -149,15 +149,20 @@ class ro_cano_che_ritorna:
         
         
         # formula DEVIATION_buy per comprare UN PO' PIU' SOPRA DEL LAST TRADE ( di solito l' ultimo SELL ) 
-        deviation_buy = (ma2_last / last_trade_price - 1) * 100 if last_trade_price else 0
+        deviation_buy = ( ma2_last / last_trade_price - 1) * 100 if last_trade_price else 0
         self.algo_helper.log("deviation_buy: {}".format(deviation_buy))
         
+        # formula DEVIATION_buy_ma4 per comprare UN PO' PIU' SOPRA DEL LAST TRADE ( di solito l' ultimo SELL ) ma PIU' LENTA ! PERCHE' ma2 si muove troppo disinvoltamente
+        deviation_buy_ma4 = ( ma4_last / last_trade_price - 1) * 100 if last_trade_price else 0
+        self.algo_helper.log("deviation_buy: {}".format(deviation_buy_ma4))
+        
+        
         # formula DEVIATION_prev per comprare UN PO' PIU' SOPRA DEL PREV TRADE ( di solito l' ultimo BUY )
-        deviation_prev = (price / prev_trade_price - 1) * 100 if prev_trade_price else 0
+        deviation_prev = ( price / prev_trade_price - 1) * 100 if prev_trade_price else 0
         self.algo_helper.log("deviation_prev: {}".format(deviation_prev))
 
         # formula DEVIATION_sell per vendere
-        deviation_sell = (ma3_last / last_trade_price - 1) * 100 if last_trade_price else 0
+        deviation_sell = ( ma3_last / last_trade_price - 1) * 100 if last_trade_price else 0
         self.algo_helper.log("deviation_sell: {}".format(deviation_sell))
         
         
@@ -377,8 +382,9 @@ class ro_cano_che_ritorna:
                         
                         
                         ma4_last > ma78_last
-                        and (( ma4_prev < ma9_prev and ma4_last > ma9_last ) and deviation_buy > 0.10 ) or (deviation_buy2 > 0.11 and deviation_buy > 0.12 and deviation_prev > 0.22)
-                        #deviation_buy = ma2_last / last_trade_price
+                        and (( ma4_prev < ma9_prev and ma4_last > ma9_last ) and deviation_buy_ma4 > 0.10 ) or (deviation_buy2 > 0.11 and deviation_buy_ma4 > 0.12 and deviation_prev > 0.22 )
+                        #deviation_buy_ma4 = ma4_last / last_trade_price
+                        #deviation_buy = ma2_last / last_trade_price SCHIZZA IN ALTO TROPPO VELOCEMENTE QUASI COME IL PREZZO
                         #deviation_buy2 = ma8_last / ma78_last
                         
                         
@@ -405,7 +411,8 @@ class ro_cano_che_ritorna:
                     elif (
                         
                           ma4_last > ma78_last
-                          and (( ma4_prev < ma9_prev and ma4_last > ma9_last ) and deviation_buy > 0.10 ) or ( deviation_buy2 > 0.12 and deviation_buy > 0.16 )
+                          and (( ma4_prev < ma9_prev and ma4_last > ma9_last ) and deviation_buy_ma4 > 0.10 ) or ( deviation_buy2 > 0.12 and deviation_buy_ma4 > 0.16 )
+                          #deviation_buy_ma4 = ma4_last / last_trade_price
                           #deviation_buy = ma2_last / last_trade_price
                           #deviation_buy2 = ma8_last / ma78_last
                           
@@ -441,7 +448,8 @@ class ro_cano_che_ritorna:
                     if (
                         
                         ma4_last > ma78_last
-                        and (( ma2_prev < ma8_prev and ma2_last > ma8_last ) and deviation_buy > 0.16 ) or (deviation_buy3 > 0.12 and deviation_buy > 0.16 and deviation_prev > 0.22)
+                        and (( ma2_prev < ma8_prev and ma2_last > ma8_last ) and deviation_buy_ma4 > 0.16 ) or (deviation_buy3 > 0.12 and deviation_buy_ma4 > 0.16 and deviation_prev > 0.22 )
+                        #deviation_buy_ma4 = ma4_last / last_trade_price
                         #deviation_buy = ma2_last / last_trade_price
                         #deviation_buy3 = ma8_last / ma78_last
                         
@@ -475,7 +483,8 @@ class ro_cano_che_ritorna:
                     elif (
                           
                           ma4_last > ma78_last
-                          and (( ma3_prev < ma8_prev and ma3_last > ma8_last ) and deviation_buy > 0.15 ) or (deviation_buy3 > 0.12 and deviation_buy > 0.16 )
+                          and (( ma3_prev < ma8_prev and ma3_last > ma8_last ) and deviation_buy_ma4 > 0.15 ) or (deviation_buy3 > 0.12 and deviation_buy_ma4 > 0.16 )
+                          #deviation_buy_ma4 = ma4_last / last_trade_price
                           #deviation_buy = ma2_last / last_trade_price
                           #deviation_buy3 = ma8_last / ma78_last
                         
