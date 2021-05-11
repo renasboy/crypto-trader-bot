@@ -557,22 +557,10 @@ class ro_cano_che_ritorna:
 
             if seconds_since_last_trade > 0 and seconds_since_last_trade <= 180:
                 
-                
-                
-                
                 if (
-                    #ma50_last >= ma50_2_min_ago and ( ma3_last < ma25_last and deviation_sell > 0.05 ) or ( ma2_last < ma13_last and deviation_sell > 0.80 )
-                    #diventa :
-                    
-                    #ma3 < ma25 ha dato "problemi di sovrapposizione" ! (punto rosso immediatamente dopo punto verde !)
-                    #compa, faccio "incrocio dall' alto"  ma3 - ma25 !
-                    
                    
                     #ma2_last < ma2_2_min_ago
                     ( ma50_last >= ma50_2_min_ago and ( ma3_last > ma30_last and ma3_last < ma30_last ) and deviation_sell > 0.18 ) or ( ma50_last >= ma50_2_min_ago and ( ma2_last > ma13_last and ma2_last < ma13_last ) and deviation_sell > 0.80 ) or ( ma50_last >= ma50_2_min_ago and ( ma3_last > ma78_last and ma3_last < ma78_last ) and deviation_sell < -0.20 ) 
-                    
-                    
-                    
                     #deviation_sell = ma2_last / last_trade_price
                    
                 ):
@@ -580,26 +568,30 @@ class ro_cano_che_ritorna:
                     sell = "SELL #1"
                     action = "sell"
                     
-                   
                 
-                   
+                
+                
+                
+                
+                
+                
                 
                 
                 elif (
                     
                     #ma2_last < ma2_2_min_ago
                     ma50_last >= ma50_2_min_ago and deviation_sell < -0.45
-                    
                     #deviation_sell = ma2_last / last_trade_price
-                   
-                    
-                    
-                    
+                 
                 ):
                    
                     sell = "SELL #2"
                     action = "sell"
                     
+                
+                
+                
+                
                 
                 
                 
