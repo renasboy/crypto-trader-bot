@@ -266,12 +266,9 @@ class ro_cano_che_ritorna:
                 if self.session == 1:
                
             
-                    # BUY 1 SE ma78 > ma78 50 min ago ! resta uguale
+                    
                     if (
                        
-                        #se va su all' improvviso prende la deviation.
-                        #se ci ripensa prima di salire prende l' incrocio
-                        #GRAZIE COMPA
                         
                         ma78_last > ma78_40_min_ago
                       
@@ -286,17 +283,7 @@ class ro_cano_che_ritorna:
                         and ma16_last > ma16_2_min_ago
                         
                         #deviation_buy1 = ma8_last / ma78_last
-                        
-                        
-                        #and price > highest_price_50_min_ago 
-                        # riga 150
-                        
-                        
-                        #and deviation_buy1 > 0.30 or (ma39_prev < ma78_prev and ma39_last > ma78_last and deviation_buy1 > 0.10)
-                        
-                        #and ma39_prev < ma78_prev and ma39_last > ma78_last and deviation_buy1 > 0.20 or deviation_buy1 > 0.50
-                        #roma 2 aprile 2021 - BUY 1
-                 
+                       
                     
                     ):
                     
@@ -306,13 +293,13 @@ class ro_cano_che_ritorna:
                         
                         
                         
-                    # BUY 1 SE ma78 < ma78 50 min ago ! deviation > ma di poco !
+                        
+                        
+                        
+                        
+                    
                     elif (
                        
-                        #se va su all' improvviso prende la deviation.
-                        #se ci ripensa prima di salire prende l' incrocio
-                        #GRAZIE COMPA
-                        
                         ma78_last < ma78_20_min_ago
                      
                         and (deviation_buy1 > 0.65 and (ma13_prev < ma78_prev and ma13_last > ma78_last)) or (deviation_buy1 > 0.85 )
@@ -335,6 +322,21 @@ class ro_cano_che_ritorna:
                        
                     
                     
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     ##############################################################################################################################
                     # IMPORTANTISSIMO ! SOLO PER IL BUY 1
                     ##############################################################################################################################
@@ -343,28 +345,13 @@ class ro_cano_che_ritorna:
                     elif (
                          
                           price > price_2_min_ago
-                          #and price > price_3_min_ago
+                          
                           and ma2_last > ma2_2_min_ago
                           
                           and deviation_buy1 < -1.90
-                          #deviation_buy1 = ma8_last / ma78_last
                         
-                          
-                          
                           and ma3_prev < ma8_prev and ma3_last > ma8_last or ( deviation_buy_crollo > 0.39 )
-                          #deviation_buy_crollo = ma3 / ma13
                           
-                          #la ma8 segue parallelamente la ma3 ! per questo nella deviation_buy_crollo e' stata considerata la ma13
-                        
-                          #GLORIA AL MIO COMPARE
-                          
-                          #and price > highest_price_50_min_ago 
-                          # riga 150
-     
-                          #and deviation_buy1 > 0.3 or (ma39_prev < ma78_prev and ma39_last > ma78_last and deviation_buy1 > 0.10)
-                          
-                          #and ma50_prev < ma82_prev and ma50_last > ma82_last or deviation_buy1 > 0.50
-                          #roma 2 aprile 2021 - BUY 1
                      
                     ):
                         buy = "BUY #3"
