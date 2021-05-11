@@ -550,7 +550,10 @@ class ro_cano_che_ritorna:
             
             #avevo messo incrocio 4-8 and deviation_sell < -0.20 per vendere durante il crollo - non dimenticarlo
                 
-           
+            
+            
+            
+            
             ###############################################################################################################################################################          0 -3 min
 
             # VENDITA - da 0 a 3 minuti = da 0 a 180 secondi
@@ -558,9 +561,11 @@ class ro_cano_che_ritorna:
             if seconds_since_last_trade > 0 and seconds_since_last_trade <= 180:
                 
                 if (
-                   
+                    #( ma50_last >= ma50_2_min_ago and ( ma3_last > ma30_last and ma3_last < ma30_last ) and deviation_sell > 0.18 ) or ( ma50_last >= ma50_2_min_ago and ( ma2_last > ma13_last and ma2_last < ma13_last ) and deviation_sell > 0.80 ) or ( ma50_last >= ma50_2_min_ago and ( ma3_last > ma78_last and ma3_last < ma78_last ) and deviation_sell < -0.20 ) 
                     #ma2_last < ma2_2_min_ago
-                    ( ma50_last >= ma50_2_min_ago and ( ma3_last > ma30_last and ma3_last < ma30_last ) and deviation_sell > 0.18 ) or ( ma50_last >= ma50_2_min_ago and ( ma2_last > ma13_last and ma2_last < ma13_last ) and deviation_sell > 0.80 ) or ( ma50_last >= ma50_2_min_ago and ( ma3_last > ma78_last and ma3_last < ma78_last ) and deviation_sell < -0.20 ) 
+                    
+                    
+                    ( ma50_last >= ma50_2_min_ago and ( ma3_last > ma30_last and ma3_last < ma30_last ) and deviation_sell > 0.18 ) 
                     #deviation_sell = ma2_last / last_trade_price
                    
                 ):
@@ -572,11 +577,37 @@ class ro_cano_che_ritorna:
                 
                 
                 
+                elif (
+                   
+                    
+                    ( ma50_last >= ma50_2_min_ago and ( ma2_last > ma13_last and ma2_last < ma13_last ) and deviation_sell > 0.80 )
+                    #deviation_sell = ma2_last / last_trade_price
+                   
+                ):
+                   
+                    sell = "SELL #2"
+                    action = "sell"
+                    
+                 
                 
                 
-                
-                
-                
+                    
+                 elif (
+                   
+                    
+                    ( ma50_last >= ma50_2_min_ago and ( ma3_last > ma78_last and ma3_last < ma78_last ) and deviation_sell < -0.20 ) 
+                    #deviation_sell = ma2_last / last_trade_price
+                   
+                ):
+                   
+                    sell = "SELL #3"
+                    action = "sell"
+                    
+                    
+                    
+            ###################################################################################################        
+                    
+                    
                 elif (
                     
                     #ma2_last < ma2_2_min_ago
@@ -585,7 +616,27 @@ class ro_cano_che_ritorna:
                  
                 ):
                    
-                    sell = "SELL #2"
+                    sell = "SELL #4"
+                    action = "sell"
+                    
+                
+                
+           #################################################################################################################################################################     
+                
+                
+                
+                
+                
+                elif (
+                    
+                    #( ma50_last < ma50_2_min_ago and ( ma3_last > ma16_last and ma3_last < ma16_last ) and deviation_sell > 0.23 ) or ( ma50_last < ma50_2_min_ago and ( ma3_last > ma8_last and ma3_last < ma8_last ) and deviation_sell > 0.60 ) or ( ma50_last < ma50_2_min_ago and ( ma3_last > ma78_last and ma3_last < ma78_last ) and deviation_sell < -0.20 ) 
+                    
+                    
+                    ( ma50_last < ma50_2_min_ago and ( ma3_last > ma16_last and ma3_last < ma16_last ) and deviation_sell > 0.23 ) or ( ma50_last < ma50_2_min_ago and ( ma3_last > ma8_last and ma3_last < ma8_last ) and deviation_sell > 0.60 ) or ( ma50_last < ma50_2_min_ago and ( ma3_last > ma78_last and ma3_last < ma78_last ) and deviation_sell < -0.20 ) 
+                  
+                ):
+                   
+                    sell = "SELL #5"
                     action = "sell"
                     
                 
@@ -598,18 +649,31 @@ class ro_cano_che_ritorna:
                 
                 elif (
                     
-                    #ma50_last < ma50_2_min_ago and ( ma3_last < ma13_last and deviation_sell > 0.10 ) or ( ma3_last < ma8_last and deviation_sell > 0.60 )
-                    #diventa :
-                    #ma2_last < ma2_2_min_ago
-                    ( ma50_last < ma50_2_min_ago and ( ma3_last > ma16_last and ma3_last < ma16_last ) and deviation_sell > 0.23 ) or ( ma50_last < ma50_2_min_ago and ( ma3_last > ma8_last and ma3_last < ma8_last ) and deviation_sell > 0.60 ) or ( ma50_last < ma50_2_min_ago and ( ma3_last > ma78_last and ma3_last < ma78_last ) and deviation_sell < -0.20 ) 
+                    ( ma50_last < ma50_2_min_ago and ( ma3_last > ma8_last and ma3_last < ma8_last ) and deviation_sell > 0.60 )
                   
                 ):
                    
-                    sell = "SELL #3"
+                    sell = "SELL #6"
                     action = "sell"
                     
-                
-                
+                    
+                    
+                    
+                    
+                    
+                elif (
+                    
+                    ( ma50_last < ma50_2_min_ago and ( ma3_last > ma78_last and ma3_last < ma78_last ) and deviation_sell < -0.20 )
+                  
+                ):
+                   
+                    sell = "SELL #7"
+                    action = "sell"
+                    
+                    
+                    
+                    
+                    
                     
                 elif (
                     
@@ -620,13 +684,13 @@ class ro_cano_che_ritorna:
                    
                 ):
                    
-                    sell = "SELL #4"
+                    sell = "SELL #8"
                     action = "sell"   
                     
                     
                     
          #################################################################################################################################################################          3-5 min           
-
+         #################################################################################################################################################################
         
         
             # VENDITA - da 3 a 5 minuti = da 180 a 300 secondi
@@ -645,7 +709,7 @@ class ro_cano_che_ritorna:
 
                     
                 ):
-                    sell = "SELL #5"
+                    sell = "SELL #9"
                     action = "sell"
 
                 
@@ -661,7 +725,7 @@ class ro_cano_che_ritorna:
                  
                     
                 ):
-                    sell = "SELL #6"
+                    sell = "SELL #10"
                     action = "sell"
                     
                     
@@ -674,7 +738,7 @@ class ro_cano_che_ritorna:
                    
                     
                 ):
-                    sell = "SELL #7"
+                    sell = "SELL #11"
                     action = "sell"
                     
                     
@@ -691,7 +755,7 @@ class ro_cano_che_ritorna:
                    
                 ):
                    
-                    sell = "SELL #8"
+                    sell = "SELL #12"
                     action = "sell"   
                     
                     
@@ -715,7 +779,7 @@ class ro_cano_che_ritorna:
                    
                     
                 ):
-                    sell = "SELL #9"
+                    sell = "SELL #13"
                     action = "sell"
                     
              
@@ -730,7 +794,7 @@ class ro_cano_che_ritorna:
                     
                     
                 ):
-                    sell = "SELL #10"
+                    sell = "SELL #14"
                     action = "sell"
                     
                     
@@ -744,7 +808,7 @@ class ro_cano_che_ritorna:
                     
                     
                 ):
-                    sell = "SELL #11"
+                    sell = "SELL #15"
                     action = "sell"
                     
                     
@@ -763,7 +827,7 @@ class ro_cano_che_ritorna:
                    
                 ):
                    
-                    sell = "SELL #12"
+                    sell = "SELL #16"
                     action = "sell"   
                     
                 
@@ -791,83 +855,9 @@ class ro_cano_che_ritorna:
                   
                     
                 ):
-                    sell = "SELL #13"
-                    action = "sell"
-                    
-                
-                
-                
-                elif (
-                    
-                    
-                    ma50_last >= ma50_2_min_ago and deviation_sell < -0.45
-                    
-                    #deviation_sell = ma2_last / last_trade_price
-                    
-                    #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
-                    and ma2_last < ma2_2_min_ago
-                    
-                ):
-                    sell = "SELL #14"
-                    action = "sell"
-                    
-                
-                
-                
-                elif (
-                    
-                    ma2_last < ma2_2_min_ago
-                    and ( ma50_last < ma50_2_min_ago and ( ma3_last < ma16_last and deviation_sell > 0.23 )) or ( ma50_last < ma50_2_min_ago and ( ma3_last < ma8_last and deviation_sell > 0.60 )) or ( ma50_last < ma50_2_min_ago and ( ma3_last > ma78_last and ma3_last < ma78_last )) and ( ma50_last < ma50_2_min_ago and deviation_sell < -0.20 )
-                    
-                    #deviation_sell = ma2_last / last_trade_price
-                    
-                    #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
-                    
-                    
-                ):
-                    sell = "SELL #15"
-                    action = "sell"
-                    
-                    
-                    
-                
-                    
-                elif (
-                    
-                    ma2_last < ma2_2_min_ago
-                    and ma50_last < ma50_2_min_ago and deviation_sell < -0.45 or ( ma50_last < ma50_2_min_ago and deviation_buy1 < -0.20 )
-                    
-                    #deviation_sell = ma2_last / last_trade_price
-                    
-                    
-                     
-                   
-                ):
-                   
-                    sell = "SELL #16"
-                    action = "sell"
-                    
-                    
-                    
-                    
-            ################################################################################################################################################################### 24-40 min
-            
-            
-            # VENDITA - da 24 a 40 minuti = da 1080 a 1800 secondi
-
-            elif seconds_since_last_trade > 1440 and seconds_since_last_trade <= 2400:
-                
-                
-            
-                if (
-                    
-                    ma2_last < ma2_2_min_ago
-                    and ( ma50_last >= ma50_2_min_ago and ( ma3_last < ma25_last and deviation_sell > 0.18 )) or ( ma50_last >= ma50_2_min_ago and ( ma2_last < ma13_last and deviation_sell > 0.80 )) or ( ma50_last >= ma50_2_min_ago and ( ma3_last > ma78_last and ma3_last < ma78_last ) and deviation_sell < -0.20 )
-                    #deviation_sell = ma2_last / last_trade_price
-                 
-                ):
                     sell = "SELL #17"
                     action = "sell"
+                    
                 
                 
                 
@@ -891,12 +881,86 @@ class ro_cano_che_ritorna:
                 elif (
                     
                     ma2_last < ma2_2_min_ago
+                    and ( ma50_last < ma50_2_min_ago and ( ma3_last < ma16_last and deviation_sell > 0.23 )) or ( ma50_last < ma50_2_min_ago and ( ma3_last < ma8_last and deviation_sell > 0.60 )) or ( ma50_last < ma50_2_min_ago and ( ma3_last > ma78_last and ma3_last < ma78_last )) and ( ma50_last < ma50_2_min_ago and deviation_sell < -0.20 )
+                    
+                    #deviation_sell = ma2_last / last_trade_price
+                    
+                    #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
+                    
+                    
+                ):
+                    sell = "SELL #19"
+                    action = "sell"
+                    
+                    
+                    
+                
+                    
+                elif (
+                    
+                    ma2_last < ma2_2_min_ago
+                    and ma50_last < ma50_2_min_ago and deviation_sell < -0.45 or ( ma50_last < ma50_2_min_ago and deviation_buy1 < -0.20 )
+                    
+                    #deviation_sell = ma2_last / last_trade_price
+                    
+                    
+                     
+                   
+                ):
+                   
+                    sell = "SELL #20"
+                    action = "sell"
+                    
+                    
+                    
+                    
+            ################################################################################################################################################################### 24-40 min
+            
+            
+            # VENDITA - da 24 a 40 minuti = da 1080 a 1800 secondi
+
+            elif seconds_since_last_trade > 1440 and seconds_since_last_trade <= 2400:
+                
+                
+            
+                if (
+                    
+                    ma2_last < ma2_2_min_ago
+                    and ( ma50_last >= ma50_2_min_ago and ( ma3_last < ma25_last and deviation_sell > 0.18 )) or ( ma50_last >= ma50_2_min_ago and ( ma2_last < ma13_last and deviation_sell > 0.80 )) or ( ma50_last >= ma50_2_min_ago and ( ma3_last > ma78_last and ma3_last < ma78_last ) and deviation_sell < -0.20 )
+                    #deviation_sell = ma2_last / last_trade_price
+                 
+                ):
+                    sell = "SELL #21"
+                    action = "sell"
+                
+                
+                
+                elif (
+                    
+                    
+                    ma50_last >= ma50_2_min_ago and deviation_sell < -0.45
+                    
+                    #deviation_sell = ma2_last / last_trade_price
+                    
+                    #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
+                    and ma2_last < ma2_2_min_ago
+                    
+                ):
+                    sell = "SELL #22"
+                    action = "sell"
+                    
+                
+                
+                
+                elif (
+                    
+                    ma2_last < ma2_2_min_ago
                     and ( ma50_last < ma50_2_min_ago and ( ma3_last < ma16_last and deviation_sell > 0.23 )) or ( ma50_last < ma50_2_min_ago and ( ma3_last < ma8_last and deviation_sell > 0.60 )) or ( ma50_last < ma50_2_min_ago and ( ma3_last > ma78_last and ma3_last < ma78_last ) and deviation_sell < -0.20 )
                     
                     #deviation_sell = ma2_last / last_trade_price
                   
                 ):
-                    sell = "SELL #19"
+                    sell = "SELL #23"
                     action = "sell"
                     
                     
@@ -916,7 +980,7 @@ class ro_cano_che_ritorna:
                   
                 ):
                    
-                    sell = "SELL #20"
+                    sell = "SELL #24"
                     action = "sell"   
                        
                  
@@ -938,7 +1002,7 @@ class ro_cano_che_ritorna:
                     
                 ):
                   
-                    sell = "SELL #21"
+                    sell = "SELL #25"
                     action = "sell"
                     
                 
@@ -950,7 +1014,7 @@ class ro_cano_che_ritorna:
                     and ma2_last < ma2_2_min_ago
                  
                 ):
-                    sell = "SELL #22"
+                    sell = "SELL #26"
                     action = "sell"
                     
                     
@@ -964,7 +1028,7 @@ class ro_cano_che_ritorna:
                    
                     
                 ):
-                    sell = "SELL #23"
+                    sell = "SELL #27"
                     action = "sell"
                     
                   
@@ -978,7 +1042,7 @@ class ro_cano_che_ritorna:
                    
                 ):
                    
-                    sell = "SELL #24"
+                    sell = "SELL #28"
                     action = "sell"   
                        
                     
@@ -997,7 +1061,7 @@ class ro_cano_che_ritorna:
                 
                
             ):
-                sell = "SELL #25"
+                sell = "SELL #29"
                 action = "sell"
                 
             #######################################################################################################################################################    
@@ -1012,7 +1076,7 @@ class ro_cano_che_ritorna:
                 # e gli ho detto che and ma3 deve andare sotto ma13 per vendere .
                 #vediamo
             ):
-                sell = "SELL #26"
+                sell = "SELL #30"
                 action = "sell"  
             
             
@@ -1031,7 +1095,7 @@ class ro_cano_che_ritorna:
                 
                 #deviation_sell = ma2_last / last_trade_price
             ):
-                sell = "SELL #27"
+                sell = "SELL #31"
                 action = "sell"
                 
                 
@@ -1047,7 +1111,7 @@ class ro_cano_che_ritorna:
                 
                 #deviation_sell = ma2_last / last_trade_price
             ):
-                sell = "SELL #28"
+                sell = "SELL #32"
                 action = "sell"
                 
                 
@@ -1064,7 +1128,7 @@ class ro_cano_che_ritorna:
                 
                 
             ):    
-                sell = "SELL #29"
+                sell = "SELL #33"
                 action = "sell"
                 
                 
