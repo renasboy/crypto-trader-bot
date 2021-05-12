@@ -377,7 +377,7 @@ class maddog:
                     
                 ):
                          
-                    sell = "SELL #4"     
+                    sell = "SELL #5"     
                     action = "sell" 
 
                     
@@ -391,7 +391,7 @@ class maddog:
                     
                 ):
                     
-                    sell = "SELL #5" 
+                    sell = "SELL #6" 
                     action = "sell" 
 
                     
@@ -404,7 +404,7 @@ class maddog:
                     #deviation_buy1 = ma8_last / ma78_last
                     
                 ):
-                    sell = "SELL #6"     
+                    sell = "SELL #7"     
                     action = "sell"      
                         
                         
@@ -418,7 +418,7 @@ class maddog:
                 #deviation = ma2_last / last_trade_price
                 #deviation_sell = ma2_last / ma78_last
                 
-                sell = "SELL #7"
+                sell = "SELL #8"
                 action = "sell"
                 
             # 1) vedi riga 11 per es. DI 1 ORA = 3600 SECONDI "max hold time" " DOPO UN' ORA VENDE SUBITO " e se ma8_last < ma39_last and deviation < -0.45:
