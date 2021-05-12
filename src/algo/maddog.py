@@ -378,7 +378,7 @@ class maddog:
                     
                     
             # VENDE sessione 3 in poi
-            else:
+            elif:
                 
                 if (
                     
