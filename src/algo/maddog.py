@@ -371,8 +371,8 @@ class maddog:
                     and ( ma2_last < ma39_last and deviation_sell < -0.01 ) or ( ma3_last < ma33_last and and deviation_ma50 < -0.01 )
                     
                     
-                      #deviation_sell = ma2_last / ma78_last
-                      #deviation_buy1 = ma8_last / ma78_last
+                    #deviation_sell = ma2_last / ma78_last
+                    #deviation_buy1 = ma8_last / ma78_last
                     
                     
                 ):
