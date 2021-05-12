@@ -378,8 +378,26 @@ class maddog:
                 ):
                          
                     sell = "SELL #5"     
+                    action = "sell"
+                    
+                    
+                    
+                    
+                elif (
+                      
+                    ma2_last < ma2_2_min_ago
+                    and ( ma2_last < ma39_last ) or ( ma3_last < ma33_last )
+                    #QUESTA E' SENZA ALCUNA DEVIATION SOLO SUL SECONDO SELL.  
+                    #HA EFFETTUATO IL SECONDO BUY NON HA LA FORZA DI SALIRE E VENDE. PERCHE' LE VENDITE FATTE CON LA DEVIATION SONO TROPPO LONTANE !
+                    
+                    #deviation_sell = ma2_last / ma78_last
+                    #deviation_buy1 = ma8_last / ma78_last
+                    
+                    
+                ):
+                         
+                    sell = "SELL #6"     
                     action = "sell" 
-
                     
                     
             # VENDE sessione 3 in poi
@@ -391,7 +409,7 @@ class maddog:
                     
                 ):
                     
-                    sell = "SELL #6" 
+                    sell = "SELL #7" 
                     action = "sell" 
 
                     
@@ -404,7 +422,7 @@ class maddog:
                     #deviation_buy1 = ma8_last / ma78_last
                     
                 ):
-                    sell = "SELL #7"     
+                    sell = "SELL #8"     
                     action = "sell"      
                         
                         
@@ -418,7 +436,7 @@ class maddog:
                 #deviation = ma2_last / last_trade_price
                 #deviation_sell = ma2_last / ma78_last
                 
-                sell = "SELL #8"
+                sell = "SELL #9"
                 action = "sell"
                 
             # 1) vedi riga 11 per es. DI 1 ORA = 3600 SECONDI "max hold time" " DOPO UN' ORA VENDE SUBITO " e se ma8_last < ma39_last and deviation < -0.45:
