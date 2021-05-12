@@ -426,7 +426,7 @@ class maddog:
             if seconds_since_last_trade > max_hold_time_in_seconds and ma8_last < ma39_last and deviation < -0.40:
                 
                 #deviation = (ma2_last / last_trade_price
-                sell = "SELL #8"     
+                sell = "SELL #9"     
                 action = "sell"
         
         
