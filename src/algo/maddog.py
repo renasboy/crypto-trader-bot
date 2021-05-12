@@ -466,7 +466,7 @@ class maddog:
         return action
 
 
-        # grazie compa ### #
+        # grazie compa ### ##
         #
         # plinius  ##################
         # comparo de dio ###### ###########
