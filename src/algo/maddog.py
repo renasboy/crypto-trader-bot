@@ -400,8 +400,11 @@ class maddog:
                     action = "sell" 
                     
                     
+                    
+                    
             # VENDE sessione 3 in poi
-            elif:
+            
+            elif self.session == 3:
                 
                 if (
                     ma2_last < ma2_2_min_ago
