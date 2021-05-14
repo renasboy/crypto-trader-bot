@@ -371,7 +371,7 @@ class ro_cano_che_ritorna:
                         
                         
                         ma4_last > ma78_last
-                        and (( ma4_prev < ma9_prev and ma4_last > ma9_last ) and deviation_buy_ma4 > 0.10 ) or (deviation_buy2 > 0.11 and deviation_buy_ma4 > 0.12 and deviation_prev > 0.22 )
+                        and (( ma4_prev < ma9_prev and ma4_last > ma9_last ) and deviation_buy_ma4 > 0.12 ) or (deviation_buy2 > 0.12 and deviation_buy_ma4 > 0.12 and deviation_prev > 0.22 )
                         #deviation_buy_ma4 = ma4_last / last_trade_price
                         #deviation_buy = ma2_last / last_trade_price SCHIZZA IN ALTO TROPPO VELOCEMENTE QUASI COME IL PREZZO
                         #deviation_buy2 = ma8_last / ma78_last
