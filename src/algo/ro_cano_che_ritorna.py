@@ -698,7 +698,7 @@ class ro_cano_che_ritorna:
                     #and ma13_last > ma13_2_min_ago
 
                     
-                ):
+                )):
                     sell = "SELL #9"
                     action = "sell"
 
