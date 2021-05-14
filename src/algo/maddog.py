@@ -354,9 +354,9 @@ class maddog:
                
                 if (
                     
-                    ma2_last < ma2_2_min_ago
-                    and ( ma3_last < ma25_last and deviation > 0.13 ) or ( ma3_last < ma25_last and ( ma2_last < ma13_last and deviation_sell > 0.70 ))
-                    
+                    #ma2_last < ma2_2_min_ago
+                    ( ma3_last < ma25_last and deviation > 0.13 ) or ( ma3_last < ma25_last and ( ma2_last < ma13_last and deviation_sell > 0.70 )) 
+                    # NON CAPISCO PERCHE' HA VENDUTO CON -0.32 ! STRANISSIMO
                     
                 ):
                     
