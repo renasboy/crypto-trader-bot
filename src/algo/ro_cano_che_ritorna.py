@@ -664,7 +664,7 @@ class ro_cano_che_ritorna:
                     
                     
                     
-                else (
+            else (
                     
                     #ma2_last < ma2_2_min_ago
                     ( ma50_last < ma50_2_min_ago and deviation_sell < -0.45 )
