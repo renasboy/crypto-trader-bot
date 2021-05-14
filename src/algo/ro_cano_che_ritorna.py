@@ -844,7 +844,7 @@ class ro_cano_che_ritorna:
                     
                   
                     
-                ):
+                )):
                     sell = "SELL #17"
                     action = "sell"
                     
