@@ -557,7 +557,7 @@ class ro_cano_che_ritorna:
                     ( ma50_last >= ma50_2_min_ago and ( ma3_last > ma30_last and ma3_last < ma30_last ) and deviation_sell > 0.18 ) or ( ma50_last >= ma50_2_min_ago and ( ma3_last > ma50_last and ma3_last < ma50_last )
                     #deviation_sell = ma2_last / last_trade_price
                    
-                ):
+                )):
                    
                     sell = "SELL #1"
                     action = "sell"
