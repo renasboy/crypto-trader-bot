@@ -147,7 +147,7 @@ class maddog:
         # APRE E CHIUDE GABBIA
         # SI APRE LA GABBIA SE
       
-        if ma8_last > ma38_last and deviation_buy1 > -0.20 :
+        if ma8_last > ma38_last and deviation_buy1 > -0.50 :
         # deviation_buy1 = ma8_last / ma78_last 
             
             # NON TOCCARE QUESTA CONDIZIONE SERVE PER APERTURA DI GABBIA
