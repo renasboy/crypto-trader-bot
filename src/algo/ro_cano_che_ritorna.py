@@ -63,7 +63,7 @@ class ro_cano_che_ritorna:
         ma13_2_min_ago = self.algo_helper.ma_minutes_ago(13,2)
         
         ma16_2_min_ago = self.algo_helper.ma_minutes_ago(16,2)
-        
+        ma25_2_min_ago = self.algo_helper.ma_minutes_ago(25,2)
         ma39_2_min_ago = self.algo_helper.ma_minutes_ago(39,2)
         ma39_42_min_ago = self.algo_helper.ma_minutes_ago(39,42)
         ma39_52_min_ago = self.algo_helper.ma_minutes_ago(39,52)
@@ -377,7 +377,7 @@ class ro_cano_che_ritorna:
                         #deviation_buy2 = ma8_last / ma78_last
                         
                         
-                        and ma13_last > ma13_2_min_ago
+                        and ma25_last > ma25_2_min_ago
                         #ma8>ma78
                         #punto verde dall' ultimo punto rosso (ma3-last trade)
                         #punto verde dall' ultimo punto verde
@@ -405,7 +405,7 @@ class ro_cano_che_ritorna:
                           #deviation_buy = ma2_last / last_trade_price
                           #deviation_buy2 = ma8_last / ma78_last
                           
-                          and ma13_last > ma13_2_min_ago
+                          and ma25_last > ma25_2_min_ago
                           
                           
                           
