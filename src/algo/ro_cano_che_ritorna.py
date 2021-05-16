@@ -15,6 +15,7 @@ class ro_cano_che_ritorna:
         ma2_last, ma2_prev = self.algo_helper.ma_last_prev(2)
         ma3_last, ma3_prev = self.algo_helper.ma_last_prev(3)
         ma4_last, ma4_prev = self.algo_helper.ma_last_prev(4)
+        
         ma5_last, ma5_prev = self.algo_helper.ma_last_prev(5)
         ma6_last, ma6_prev = self.algo_helper.ma_last_prev(6)
         ma7_last, ma7_prev = self.algo_helper.ma_last_prev(7)
@@ -50,14 +51,9 @@ class ro_cano_che_ritorna:
         
         ma2_2_min_ago = self.algo_helper.ma_minutes_ago(2, 2)
         ma2_3_min_ago = self.algo_helper.ma_minutes_ago(2, 3)
-        
-        ma2_30_min_ago = self.algo_helper.ma_minutes_ago(2, 30)
-        ma2_40_min_ago = self.algo_helper.ma_minutes_ago(2, 40)
-        ma2_42_min_ago = self.algo_helper.ma_minutes_ago(2, 42)
-        ma2_44_min_ago = self.algo_helper.ma_minutes_ago(2, 44)
-        ma2_46_min_ago = self.algo_helper.ma_minutes_ago(2, 46)
-        
+       
         ma3_2_min_ago = self.algo_helper.ma_minutes_ago(3,2)
+        ma4_2_min_ago = self.algo_helper.ma_minutes_ago(4,2)
         ma6_2_min_ago = self.algo_helper.ma_minutes_ago(6,2)
         
         ma13_2_min_ago = self.algo_helper.ma_minutes_ago(13,2)
@@ -279,6 +275,7 @@ class ro_cano_che_ritorna:
                         
                         and price > price_2_min_ago
                         and ma2_last > ma2_2_min_ago
+                        and ma4_last > ma4_2_min_ago
                         and ma4_last > ma8_last
                         and ma8_last > ma50_last
                         and ma16_last > ma16_2_min_ago
@@ -309,8 +306,10 @@ class ro_cano_che_ritorna:
                         and ma8_last > ma50_last
                         
                         and price > price_2_min_ago
-                        and price > price_3_min_ago
                         and ma2_last > ma2_2_min_ago
+                        and ma4_last > ma4_2_min_ago
+                        
+                        
                         and ma4_last > ma8_last
                         
                         #deviation_buy1 = ma8_last / ma78_last
@@ -346,8 +345,8 @@ class ro_cano_che_ritorna:
                     elif (
                          
                           price > price_2_min_ago
-                          
                           and ma2_last > ma2_2_min_ago
+                          
                           
                           and ( deviation_buy1 < -1.90 and ma3_prev < ma8_prev and ma3_last > ma8_last ) or ( deviation_buy1 < -1.90 and deviation_buy_crollo > 0.39 )
                         
