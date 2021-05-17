@@ -218,7 +218,7 @@ class maddog:
                     elif (
                           
                           ma78_last < ma78_20_min_ago
-                          and ( deviation_buy1 > 0.60 and ( ma18_prev < ma78_prev and ma18_last > ma78_last )) or ( deviation_buy1 > 0.65 )
+                          and ( deviation_buy1 > 0.80 and ( ma18_prev < ma78_prev and ma18_last > ma78_last )) or ( deviation_buy1 > 0.85 )
                           #deviation_buy1 = (ma8_last / ma78_last 
                           
                           and ma39_last > ma50_last
