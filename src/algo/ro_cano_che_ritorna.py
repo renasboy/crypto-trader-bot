@@ -304,7 +304,10 @@ class ro_cano_che_ritorna:
                         ma78_last < ma78_20_min_ago
                         #and (deviation_buy1 > 0.65 and (ma25_prev < ma78_prev and ma25_last > ma78_last)) or (deviation_buy1 > 0.85 )
                         
-                        and (deviation_buy1 > 0.85 and (ma18_prev < ma78_prev and ma18_last > ma78_last)) or (deviation_buy1 > 0.95 )
+                        and (deviation_buy1 > 0.90 and (ma18_prev < ma78_prev and ma18_last > ma78_last)) or (deviation_buy1 > 0.99 )
+                        
+                        #and ma39_last > ma50_last
+                        #questa sta nel maddog che va molto bene durante i ribassi
                         
                         and ma8_last > ma50_last
                         
