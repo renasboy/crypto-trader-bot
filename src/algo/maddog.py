@@ -243,10 +243,10 @@ class maddog:
                         and ma3_last > ma40_last
                         #incredibile ma vero E' NECESSARIA quando deve ricomprare dopo la correzione al ribasso
                         
-                        and deviation > 0.16
+                        and deviation > 0.13
                         #deviation = ma2_last / last_trade_price
                         
-                        and deviation_buy2 > 0.12
+                        and deviation_buy2 > 0.11
                         #deviation_buy2 = ma8_last / ma78_last
                    
                     ):
