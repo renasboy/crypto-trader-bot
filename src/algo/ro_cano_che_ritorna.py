@@ -127,51 +127,51 @@ class ro_cano_che_ritorna:
        ###############################################################################################################################################################
     
         # formula DEVIATION_gabbia 
-        deviation_gabbia = (ma6_last / ma38_last - 1) * 100 if ma38_last else 0
+        deviation_gabbia = ( ma6_last / ma38_last - 1 ) * 100 if ma38_last else 0
         self.algo_helper.log("deviation_gabbia: {}".format(deviation_gabbia))
         
         # formula DEVIATION_buy1 per comprare durante il TREND RIBASSISTA 
-        deviation_buy1 = (ma8_last / ma78_last - 1) * 100 if ma78_last else 0
+        deviation_buy1 = ( ma8_last / ma78_last - 1 ) * 100 if ma78_last else 0
         self.algo_helper.log("deviation_buy1: {}".format(deviation_buy1))
         
         
         # formula DEVIATION_buy2 per la compra 2 
-        deviation_buy2 = (ma8_last / ma78_last - 1) * 100 if ma78_last else 0
+        deviation_buy2 = ( ma8_last / ma78_last - 1 ) * 100 if ma78_last else 0
         self.algo_helper.log("deviation_buy2: {}".format(deviation_buy2))
         
         
         # formula DEVIATION_buy3 per la compra 3
-        deviation_buy3 = (ma8_last / ma78_last - 1) * 100 if ma78_last else 0
+        deviation_buy3 = ( ma8_last / ma78_last - 1 ) * 100 if ma78_last else 0
         self.algo_helper.log("deviation_buy3: {}".format(deviation_buy3))
         
         ########################################################################################################################
         
         
         # formula DEVIATION_buy per comprare UN PO' PIU' SOPRA DEL LAST TRADE ( di solito l' ultimo SELL ) 
-        deviation_buy = ( ma2_last / last_trade_price - 1) * 100 if last_trade_price else 0
+        deviation_buy = ( ma2_last / last_trade_price - 1 ) * 100 if last_trade_price else 0
         self.algo_helper.log("deviation_buy: {}".format(deviation_buy))
         
         # formula DEVIATION_buy_ma4 per comprare UN PO' PIU' SOPRA DEL LAST TRADE ( di solito l' ultimo SELL ) ma PIU' LENTA ! PERCHE' ma2 si muove troppo disinvoltamente
-        deviation_buy_ma4 = ( ma4_last / last_trade_price - 1) * 100 if last_trade_price else 0
+        deviation_buy_ma4 = ( ma4_last / last_trade_price - 1 ) * 100 if last_trade_price else 0
         self.algo_helper.log("deviation_buy: {}".format(deviation_buy_ma4))
         
         
         # formula DEVIATION_prev per comprare UN PO' PIU' SOPRA DEL PREV TRADE ( di solito l' ultimo BUY )
-        deviation_prev = ( price / prev_trade_price - 1) * 100 if prev_trade_price else 0
+        deviation_prev = ( price / prev_trade_price - 1 ) * 100 if prev_trade_price else 0
         self.algo_helper.log("deviation_prev: {}".format(deviation_prev))
 
         # formula DEVIATION_sell per vendere
-        deviation_sell = ( ma3_last / last_trade_price - 1) * 100 if last_trade_price else 0
+        deviation_sell = ( ma3_last / last_trade_price - 1 ) * 100 if last_trade_price else 0
         self.algo_helper.log("deviation_sell: {}".format(deviation_sell))
         
         
         # formula DEVIATION_ma50 per vendere a una certa distanza da ma50
-        deviation_ma50 = (ma2_last / ma50_last - 1) * 100 if ma50_last else 0
+        deviation_ma50 = ( ma2_last / ma50_last - 1 ) * 100 if ma50_last else 0
         self.algo_helper.log("deviation_ma50: {}".format(deviation_ma50))
         
         
         # formula DEVIATION_buy_crollo per comprare a una certa distanza da ma13
-        deviation_buy_crollo = (ma3_last / ma13_last - 1) * 100 if ma13_last else 0
+        deviation_buy_crollo = ( ma3_last / ma13_last - 1 ) * 100 if ma13_last else 0
         self.algo_helper.log("deviation_buy_crollo: {}".format(deviation_buy_crollo))
         
         
@@ -182,7 +182,7 @@ class ro_cano_che_ritorna:
         
         ######################################################################################################################################################
         # formula DEVIATION_sell_ma78
-        deviation_sell_ma78 = (ma2_last / ma78_last - 1) * 100 if ma78_last else 0
+        deviation_sell_ma78 = ( ma2_last / ma78_last - 1 ) * 100 if ma78_last else 0
         self.algo_helper.log("deviation_sell_ma78: {}".format(deviation_sell_ma78))
         
         
@@ -742,10 +742,10 @@ class ro_cano_che_ritorna:
                 elif (
                     
                     #ma2_last < ma2_2_min_ago
-                    ( ma50_last < ma50_2_min_ago and deviation_sell < -0.45 ) or ( ma50_last < ma50_2_min_ago and deviation_buy1 < -0.20 )
+                    ( ma50_last < ma50_2_min_ago and deviation_sell < -0.45 )
                     
                     #deviation_sell = ma2_last / last_trade_price
-                    
+                    # or ( ma50_last < ma50_2_min_ago and deviation_buy1 < -0.20 ) QUESTA ERA LA COLPEVOLE CHE FACEVA VENDERE MENTRE RISALIVA DOPO IL CROLLO !
                     
                    
                 ):
@@ -813,7 +813,7 @@ class ro_cano_che_ritorna:
                 elif (
                     
                     #ma2_last < ma2_2_min_ago
-                    ma50_last < ma50_2_min_ago and deviation_sell < -0.45 or ( ma50_last < ma50_2_min_ago and deviation_buy1 < -0.20 )
+                    ma50_last < ma50_2_min_ago and deviation_sell < -0.45
                     
                     #deviation_sell = ma2_last / last_trade_price
                     
@@ -894,7 +894,7 @@ class ro_cano_che_ritorna:
                 elif (
                     
                     ma2_last < ma2_2_min_ago
-                    and ma50_last < ma50_2_min_ago and deviation_sell < -0.45 or ( ma50_last < ma50_2_min_ago and deviation_buy1 < -0.20 )
+                    and ma50_last < ma50_2_min_ago and deviation_sell < -0.45
                     
                     #deviation_sell = ma2_last / last_trade_price
                     
@@ -966,7 +966,7 @@ class ro_cano_che_ritorna:
                 elif (
                     
                     ma2_last < ma2_2_min_ago
-                    and ( ma50_last < ma50_2_min_ago and deviation_sell < -0.45 ) or ( ma50_last < ma50_2_min_ago and deviation_buy1 < -0.20 )
+                    and ( ma50_last < ma50_2_min_ago and deviation_sell < -0.45 )
                     #deviation_sell = ma2_last / last_trade_price
                     
                     
@@ -1030,7 +1030,7 @@ class ro_cano_che_ritorna:
                 
                 elif (
                     ma2_last < ma2_2_min_ago
-                    and ( ma50_last < ma50_2_min_ago and deviation_sell < -0.45 ) or ( ma50_last < ma50_2_min_ago and deviation_buy1 < -0.20 )
+                    and ( ma50_last < ma50_2_min_ago and deviation_sell < -0.45 )
                     
                     #deviation_sell = ma2_last / last_trade_price
                    
