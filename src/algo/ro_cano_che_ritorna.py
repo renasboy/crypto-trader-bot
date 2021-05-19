@@ -1062,7 +1062,7 @@ class ro_cano_che_ritorna:
             
             if (
                 (ma50_last >= ma50_2_min_ago
-                and ma2_last < ma36_last and deviation_sell < -0.68) or (ma2_last < ma36_last and deviation_sell < -0.63) or ( ma8_last < ma39_last and deviation_sell < -0.45 )
+                and ma2_last < ma36_last and deviation_sell < -0.68) or (ma50_last >= ma50_2_min_ago and ma2_last < ma36_last and deviation_sell < -0.63) or ( ma50_last >= ma50_2_min_ago and ma8_last < ma39_last and deviation_sell < -0.45 )
                 
                
             ):
@@ -1074,7 +1074,7 @@ class ro_cano_che_ritorna:
             
             elif (
             
-                ma50_last >= ma50_2_min_ago and ( ma2_last < ma36_last and deviation_sell < -0.50 ) or ( ma8_last < ma39_last and deviation_sell < -0.48 ) 
+                ( ma50_last >= ma50_2_min_ago and ( ma2_last < ma36_last and deviation_sell < -0.50 )) or ( ma50_last >= ma50_2_min_ago and ( ma8_last < ma39_last and deviation_sell < -0.48 )) 
                 
                 #or ( deviation_sell_ma78 < -0.43 )
                 #ha venduto anche questa durante il crollo - punto rosso sovrapposto al punto verde 
