@@ -208,7 +208,7 @@ class maddog:
                        
                     ):
                         
-                        buy = "BUY #1"
+                        buy = "BUY #1-A"
                         action = "buy"
                         
                         
@@ -226,7 +226,7 @@ class maddog:
                           
                          
                     ):
-                        buy = "BUY #2"
+                        buy = "BUY #1-B"
                         action = "buy"
                         
                         
@@ -251,7 +251,7 @@ class maddog:
                    
                     ):
                         
-                        buy = "BUY #3"
+                        buy = "BUY #2-A"
                         action = "buy"
                         
                         
@@ -278,7 +278,7 @@ class maddog:
                         
                     ):
                         
-                        buy = "BUY #4"
+                        buy = "BUY #3-A"
                         action = "buy"
                         
                 
