@@ -127,7 +127,7 @@ class ro_cano_che_ritorna:
        ###############################################################################################################################################################
     
         # formula DEVIATION_gabbia 
-        deviation_gabbia = ( ma6_last / ma38_last - 1 ) * 100 if ma38_last else 0
+        deviation_gabbia = ( ma8_last / ma78_last - 1 ) * 100 if ma78_last else 0
         self.algo_helper.log("deviation_gabbia: {}".format(deviation_gabbia))
         
         # formula DEVIATION_buy1 per comprare durante il TREND RIBASSISTA 
@@ -208,9 +208,9 @@ class ro_cano_che_ritorna:
         # APRE E CHIUDE GABBIA
 
         #if ma50_last >= ma50_2_min_ago and deviation_gabbia > -0.15 or ( deviation_buy1 < -1.90 ):
-        if deviation_buy1 > -0.50 or ( deviation_buy1 < -1.90 ):
-        #deviation_buy1 = (ma8_last / ma78_last
-        #ti ricordo che deviation_gabbia = (ma6_last / ma38_last)
+        if deviation_gabbia > -0.60 or ( deviation_buy1 < -1.90 ):
+        
+        #ti ricordo che deviation_gabbia = (ma8_last / ma78_last)
            
             
             # NON TOCCARE QUESTA CONDIZIONE SERVE PER APERTURA DI GABBIA !
