@@ -130,7 +130,7 @@ class maddog:
         
         
         # formula deviation per vendere un po' piu' giu' di ma78
-        deviation_sell = (ma2_last / ma78_last - 1) * 100 if ma78_last else 0
+        deviation_sell = (ma3_last / ma78_last - 1) * 100 if ma78_last else 0
         self.algo_helper.log("deviation_sell: {}".format(deviation_sell))
         
         # formula deviation per vendere a una certa distanza da ma50
@@ -322,7 +322,7 @@ class maddog:
                  
                     ( ma78_last < ma78_20_min_ago and ( ma3_last > ma39_last and ma3_last < ma39_last and deviation_sell < -0.43 )) or ( ma78_last < ma78_20_min_ago and ( ma3_last > ma50_last and ma3_last < ma50_last and deviation_ma50 < -0.43 ))
                    
-                    #deviation_sell = ma2_last / ma78_last
+                    #deviation_sell = ma3_last / ma78_last
                     #deviation_buy1 = ma8_last / ma78_last
                 ):
                     
@@ -354,7 +354,7 @@ class maddog:
                     #and ( ma2_last < ma39_last and deviation_sell < -0.01 ) or ( ma3_last < ma33_last and deviation_ma50 < -0.01 )
                     ( ma78_last < ma78_20_min_ago and ( ma3_last > ma39_last and ma3_last < ma39_last and deviation_sell < -0.43 )) or ( ma78_last < ma78_20_min_ago and ( ma3_last > ma50_last and ma3_last < ma50_last and deviation_ma50 < -0.43 ))
                     
-                    #deviation_sell = ma2_last / ma78_last
+                    #deviation_sell = ma3_last / ma78_last
                     #deviation_buy1 = ma8_last / ma78_last
                     
                     
@@ -386,7 +386,7 @@ class maddog:
                     ( ma78_last < ma78_20_min_ago and ( ma3_last > ma39_last and ma3_last < ma39_last and deviation_sell < -0.43 )) or ( ma78_last < ma78_20_min_ago and ( ma3_last > ma50_last and ma3_last < ma50_last and deviation_ma50 < -0.43 ))
                     
                     
-                    #deviation_sell = ma2_last / ma78_last
+                    #deviation_sell = ma3_last / ma78_last
                     #deviation_buy1 = ma8_last / ma78_last
                     
                 ):
@@ -399,10 +399,10 @@ class maddog:
                        
             # STOP LOSS (salvagente)
             
-            if ((ma3_last > ma39_last and ma3_last < ma39_last) and deviation < -0.59) or deviation_sell < -0.20:
+            if ((ma3_last > ma39_last and ma3_last < ma39_last) and deviation < -0.68) or deviation_sell < -0.30:
                 
                 #deviation = ma2_last / last_trade_price
-                #deviation_sell = ma2_last / ma78_last
+                #deviation_sell = ma3_last / ma78_last
                 
                 sell = "SELL #SALVAGENTE"
                 action = "sell"
