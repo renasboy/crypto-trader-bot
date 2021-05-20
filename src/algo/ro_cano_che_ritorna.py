@@ -446,8 +446,10 @@ class ro_cano_che_ritorna:
 
                 # COMPRA sessione 3 in poi
     
-                elif self.session == 3:
-           
+                #elif self.session == 3:
+                # CON " elif self.session == 3: " NON COMPRAVA PIU' ALLORA HO PRESO ELSE DA MADDOG CHE INVECE ANDAVA BENE
+        
+                else:
                     if (
                         
                         deviation_ma3_sopra_ma40 > 0.12
