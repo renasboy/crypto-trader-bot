@@ -280,7 +280,7 @@ class ro_cano_che_ritorna:
                         #and (deviation_buy1 > 0.05 and (ma13_prev < ma78_prev and ma13_last > ma78_last)) or (deviation_buy1 > 0.10 )
                         #and (deviation_buy1 > 0.05 and (ma18_prev < ma78_prev and ma18_last > ma78_last)) or (deviation_buy1 > 0.10 )
                         
-                        and (deviation_buy1 > 0.05 and (ma8_prev < ma50_prev and ma8_last > ma50_last)) or (deviation_buy1 > 0.05)
+                        and (deviation_buy1 > 0.10 and (ma8_prev < ma50_prev and ma8_last > ma50_last)) or (deviation_buy1 > 0.15)
                         
                         and price > price_2_min_ago
                         and ma2_last > ma2_2_min_ago
