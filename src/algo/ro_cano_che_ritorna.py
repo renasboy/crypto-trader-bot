@@ -790,10 +790,10 @@ class ro_cano_che_ritorna:
                 elif (
                     
                     #ma2_last < ma2_2_min_ago
-                    ma50_last >= ma50_2_min_ago and deviation_sell < -0.45
+                    ma50_last >= ma50_2_min_ago and deviation_sell < -0.59
                     #deviation_sell = ma2_last / last_trade_price
                     
-                    #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
+                    
                     
                     
                 ):
