@@ -277,10 +277,7 @@ class ro_cano_che_ritorna:
                         
                         ma78_last > ma78_20_min_ago
                       
-                        #and (deviation_buy1 > 0.05 and (ma13_prev < ma78_prev and ma13_last > ma78_last)) or (deviation_buy1 > 0.10 )
-                        #and (deviation_buy1 > 0.05 and (ma18_prev < ma78_prev and ma18_last > ma78_last)) or (deviation_buy1 > 0.10 )
-                        
-                        and (deviation_buy1 > 0.10 and (ma8_prev < ma50_prev and ma8_last > ma50_last)) or (deviation_buy1 > 0.15)
+                        and ( deviation_buy1 > 0.10 and ( ma8_prev < ma50_prev and ma8_last > ma50_last ))
                         
                         and price > price_2_min_ago
                         and ma2_last > ma2_2_min_ago
@@ -294,8 +291,55 @@ class ro_cano_che_ritorna:
                     
                     ):
                     
-                        buy = "BUY #1-A"
+                        buy = "BUY #1-INCROCIO CLASSICO"
                         action = "buy"
+                        
+                        
+                        
+                        
+                    elif (
+                       
+                        
+                        ma78_last > ma78_20_min_ago
+                      
+                        and ( deviation_buy1 > 0.15 )
+                        
+                        and price > price_2_min_ago
+                        and ma2_last > ma2_2_min_ago
+                        and ma4_last > ma4_2_min_ago
+                        and ma4_last > ma8_last
+                        and ma8_last > ma50_last
+                        and ma16_last > ma16_2_min_ago
+                        
+                        #deviation_buy1 = ma8_last / ma78_last
+                       
+                    
+                    ):
+                    
+                        buy = "BUY #1-CON LA DEVIATION BUY "
+                        action = "buy"
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                         
                         
                         
@@ -308,9 +352,8 @@ class ro_cano_che_ritorna:
                     elif (
                         
                         ma78_last < ma78_20_min_ago
-                        #and (deviation_buy1 > 0.65 and (ma25_prev < ma78_prev and ma25_last > ma78_last)) or (deviation_buy1 > 0.85 )
-                        
-                        and (deviation_buy1 > 0.90 and (ma18_prev < ma78_prev and ma18_last > ma78_last)) or (deviation_buy1 > 0.99 )
+                       
+                        and ( deviation_buy1 > 0.90 and (ma18_prev < ma78_prev and ma18_last > ma78_last ))
                         
                         #and ma39_last > ma50_last
                         #questa sta nel maddog che va molto bene durante i ribassi
@@ -329,10 +372,39 @@ class ro_cano_che_ritorna:
                      
                     ):
                     
-                        buy = "BUY #1-B"
+                        buy = "BUY #1- INCROCIO CLASSICO DURANTE IL RIBASSO"
                         action = "buy"
-                       
                     
+                    
+                    
+                    
+                    
+                    
+                    elif (
+                        
+                        ma78_last < ma78_20_min_ago
+                        
+                        and ( deviation_buy1 > 0.99 )
+                        
+                        #and ma39_last > ma50_last
+                        #questa sta nel maddog che va molto bene durante i ribassi
+                        
+                        and ma8_last > ma50_last
+                        
+                        and price > price_2_min_ago
+                        and ma2_last > ma2_2_min_ago
+                        and ma4_last > ma4_2_min_ago
+                        
+                        
+                        and ma4_last > ma8_last
+                        
+                        #deviation_buy1 = ma8_last / ma78_last
+                        
+                     
+                    ):
+                    
+                        buy = "BUY #1-CON DEVIATION DURANTE IL RIBASSO"
+                        action = "buy" 
                     
                     
                     
@@ -367,7 +439,7 @@ class ro_cano_che_ritorna:
                           #COSI' HO LEGATO deviation_buy_crollo > 0.39 al crollo vero e proprio (deviation_buy1 < -1.90)
                      
                     ):
-                        buy = "BUY #1-C di crollo"
+                        buy = "BUY #1- DURANTE IL CROLLO"
                         action = "buy"
                     
                     
