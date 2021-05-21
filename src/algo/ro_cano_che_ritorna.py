@@ -1132,10 +1132,9 @@ class ro_cano_che_ritorna:
             # se ma78_last > ma78_2_min_ago si aziona lo stop loss in un altro modo !
             
             if (
-               ( ma50_last >= ma50_2_min_ago ( and ma2_last < ma36_last and deviation_sell < -0.68 )) or ( ma50_last >= ma50_2_min_ago and ma2_last < ma36_last and deviation_sell < -0.63) or ( ma50_last >= ma50_2_min_ago and ma8_last < ma39_last and deviation_sell < -0.45 )
+                ( ma50_last >= ma50_2_min_ago ( and ma2_last < ma36_last and deviation_sell < -0.68 )) or ( ma50_last >= ma50_2_min_ago and ma2_last < ma36_last and deviation_sell < -0.63 ) or ( ma50_last >= ma50_2_min_ago and ma8_last < ma39_last and deviation_sell < -0.45 )
                 
-                
-               
+           
             ):
                 sell = " SELL # SALVAGENTE 1 "
                 action = "sell"
