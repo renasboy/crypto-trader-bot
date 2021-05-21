@@ -1135,7 +1135,7 @@ class ro_cano_che_ritorna:
                 ( ma50_last >= ma50_2_min_ago ( and ma2_last < ma36_last and deviation_sell < -0.68 )) or ( ma50_last >= ma50_2_min_ago and ma2_last < ma36_last and deviation_sell < -0.63 ) or ( ma50_last >= ma50_2_min_ago and ma8_last < ma39_last and deviation_sell < -0.45 )
                 
            
-            ):
+            )):
                 sell = " SELL # SALVAGENTE 1 "
                 action = "sell"
                 
