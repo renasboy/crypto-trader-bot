@@ -709,12 +709,12 @@ class ro_cano_che_ritorna:
                 elif (
                     
                     #ma2_last < ma2_2_min_ago
-                    ( ma50_last >= ma50_2_min_ago and deviation_mentre_ma50_sale < -0.45 )
+                    ( ma50_last >= ma50_2_min_ago and deviation_mentre_ma50_sale > 0.59 )
                     
                     
                     #deviation_sell = ma3_last / last_trade_price (TROVATO IL COLPEVOLE !)
                     
-                    #deviation_mentre_ma50_sale = ( last_trade_price / ma3_last - 1 )
+                    #deviation_mentre_ma50_sale = last_trade_price / ma3_last
                 ):
                    
                     sell = " SELL #4 (0-3 min) con ma50 > "
@@ -818,10 +818,10 @@ class ro_cano_che_ritorna:
                 
                 elif (
                     #ma2_last < ma2_2_min_ago
-                    ( ma50_last >= ma50_2_min_ago and deviation_mentre_ma50_sale < -0.45 )
+                    ( ma50_last >= ma50_2_min_ago and deviation_mentre_ma50_sale > 0.59 )
                     
                     
-                    #deviation_mentre_ma50_sale = ( last_trade_price / ma3_last
+                    #deviation_mentre_ma50_sale = last_trade_price / ma3_last
                     
                     #deviation_sell = ma2_last / last_trade_price
                  
@@ -890,9 +890,9 @@ class ro_cano_che_ritorna:
                 elif (
                     
                     #ma2_last < ma2_2_min_ago
-                    ( ma50_last >= ma50_2_min_ago and deviation_mentre_ma50_sale < -0.59 )
+                    ( ma50_last >= ma50_2_min_ago and deviation_mentre_ma50_sale > 0.59 )
                     
-                    #deviation_mentre_ma50_sale = ( last_trade_price / ma3_last
+                    #deviation_mentre_ma50_sale = last_trade_price / ma3_last
                     
                     #deviation_sell = ma2_last / last_trade_price
                     
@@ -972,13 +972,13 @@ class ro_cano_che_ritorna:
                 elif (
                     
                     
-                    ( ma50_last >= ma50_2_min_ago and deviation_mentre_ma50_sale < -0.45 )
+                    ( ma50_last >= ma50_2_min_ago and deviation_mentre_ma50_sale > 0.59 )
                     
-                    #deviation_mentre_ma50_sale = ( last_trade_price / ma3_last
+                    #deviation_mentre_ma50_sale = last_trade_price / ma3_last
                     
                     #deviation_sell = ma2_last / last_trade_price
                     
-                    #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
+                    
                     and ma2_last < ma2_2_min_ago
                     
                 ):
@@ -1048,7 +1048,7 @@ class ro_cano_che_ritorna:
                 elif (
                     
                     
-                    ( ma50_last >= ma50_2_min_ago and deviation_mentre_ma50_sale < -0.45 )
+                    ( ma50_last >= ma50_2_min_ago and deviation_mentre_ma50_sale > 0.59 )
                     
                     #deviation_mentre_ma50_sale = ( last_trade_price / ma3_last
                     
@@ -1121,9 +1121,9 @@ class ro_cano_che_ritorna:
                     
                 elif (
                     
-                    ( ma50_last >= ma50_2_min_ago and deviation_mentre_ma50_sale < -0.45 )
+                    ( ma50_last >= ma50_2_min_ago and deviation_mentre_ma50_sale > -0.59 )
                     
-                    #deviation_mentre_ma50_sale = ( last_trade_price / ma3_last
+                    #deviation_mentre_ma50_sale = last_trade_price / ma3_last
                     
                     
                     and ma2_last < ma2_2_min_ago
