@@ -160,9 +160,7 @@ class ro_cano_che_ritorna:
         deviation_prev = ( price / prev_trade_price - 1 ) * 100 if prev_trade_price else 0
         self.algo_helper.log("deviation_prev: {}".format(deviation_prev))
 
-        # formula DEVIATION_sell per vendere
-        deviation_sell = ( ma3_last / last_trade_price - 1 ) * 100 if last_trade_price else 0
-        self.algo_helper.log("deviation_sell: {}".format(deviation_sell))
+        
         
         
         # formula DEVIATION_ma50 per vendere a una certa distanza da ma50
@@ -194,6 +192,20 @@ class ro_cano_che_ritorna:
         
         
         
+        #################################################################################################################################################
+        ###############################################################################################################################################
+        
+        # formula DEVIATION_mentre_ma50_sale (per vendere)
+        deviation_mentre_ma50_sale = ( last_trade_price / ma3_last - 1 ) * 100 if ma3_last else 0
+        self.algo_helper.log("deviation_mentre_ma50_sale: {}".format(deviation_mentre_ma50_sale))
+        
+        
+        # formula DEVIATION_sell (per vendere)
+        deviation_sell = ( ma3_last / last_trade_price - 1 ) * 100 if last_trade_price else 0
+        self.algo_helper.log("deviation_sell: {}".format(deviation_sell))
+        
+        
+        ####################################################################################################################################################
         ###################################################################################################################################
         
         
@@ -262,6 +274,9 @@ class ro_cano_che_ritorna:
                 
             ):
 
+
+                
+                
 ############################################################################################################################################################################
 ############################################################################################################################################################################
 
@@ -323,27 +338,8 @@ class ro_cano_che_ritorna:
                         
                         
                         
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
+                     
+                       
                         
                         
                         
@@ -413,14 +409,6 @@ class ro_cano_che_ritorna:
                     
                     
                     
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
                     ##############################################################################################################################
                     # IMPORTANTISSIMO ! SOLO PER IL BUY 1
                     ##############################################################################################################################
@@ -479,8 +467,7 @@ class ro_cano_che_ritorna:
                         action = "buy"
 
                        
-                    
-                    
+                   
                         
                     elif (
                           
@@ -596,6 +583,7 @@ class ro_cano_che_ritorna:
         
         
         
+        
         #############################################################################################################################################################            
         #############################################################################################################################################################
         
@@ -614,6 +602,9 @@ class ro_cano_che_ritorna:
             self.algo_helper.log("session: {}".format(self.session))
 
             ##################################################################################
+            
+            
+            
 
             # VENDITA 1 - con fasce di tempo ! c'e' vita su marte !
 
@@ -632,7 +623,13 @@ class ro_cano_che_ritorna:
             
             
             
-            ###############################################################################################################################################################          0 -3 min
+            ############################################################################################################################################################### 
+            
+            
+            
+            
+            
+            0 -3 min
 
             # VENDITA - da 0 a 3 minuti = da 0 a 180 secondi
 
@@ -683,20 +680,28 @@ class ro_cano_che_ritorna:
                     
                     
                     
+                    
+                    
             ###################################################################################################        
+                   
                     
                     
                 elif (
                     
                     #ma2_last < ma2_2_min_ago
-                    ( ma50_last >= ma50_2_min_ago and deviation_sell < -0.45 )
-                    #deviation_sell = ma2_last / last_trade_price
-                 
+                    ( ma50_last >= ma50_2_min_ago and deviation_mentre_ma50_sale < -0.45 )
+                    
+                    
+                    #deviation_sell = ma3_last / last_trade_price (TROVATO IL COLPEVOLE !)
+                    
+                    #deviation_mentre_ma50_sale = ( last_trade_price / ma3_last - 1 )
                 ):
                    
                     sell = " SELL #4 (0-3 min) con ma50 > "
                     action = "sell"
                     
+                
+                
                 
                 
            #################################################################################################################################################################     
@@ -793,7 +798,10 @@ class ro_cano_che_ritorna:
                 
                 elif (
                     #ma2_last < ma2_2_min_ago
-                    ( ma50_last >= ma50_2_min_ago and deviation_sell < -0.45 )
+                    ( ma50_last >= ma50_2_min_ago and deviation_mentre_ma50_sale < -0.45 )
+                    
+                    
+                    #deviation_mentre_ma50_sale = ( last_trade_price / ma3_last
                     
                     #deviation_sell = ma2_last / last_trade_price
                  
@@ -862,7 +870,10 @@ class ro_cano_che_ritorna:
                 elif (
                     
                     #ma2_last < ma2_2_min_ago
-                    ( ma50_last >= ma50_2_min_ago and deviation_sell < -0.59 )
+                    ( ma50_last >= ma50_2_min_ago and deviation_mentre_ma50_sale < -0.59 )
+                    
+                    #deviation_mentre_ma50_sale = ( last_trade_price / ma3_last
+                    
                     #deviation_sell = ma2_last / last_trade_price
                     
                     
@@ -871,6 +882,8 @@ class ro_cano_che_ritorna:
                 ):
                     sell = " SELL #14 (5-12 min) con ma50 > "
                     action = "sell"
+                    
+                    
                     
                     
                     
@@ -939,7 +952,9 @@ class ro_cano_che_ritorna:
                 elif (
                     
                     
-                    ( ma50_last >= ma50_2_min_ago and deviation_sell < -0.45 )
+                    ( ma50_last >= ma50_2_min_ago and deviation_mentre_ma50_sale < -0.45 )
+                    
+                    #deviation_mentre_ma50_sale = ( last_trade_price / ma3_last
                     
                     #deviation_sell = ma2_last / last_trade_price
                     
@@ -1013,7 +1028,9 @@ class ro_cano_che_ritorna:
                 elif (
                     
                     
-                    ( ma50_last >= ma50_2_min_ago and deviation_sell < -0.45 )
+                    ( ma50_last >= ma50_2_min_ago and deviation_mentre_ma50_sale < -0.45 )
+                    
+                    #deviation_mentre_ma50_sale = ( last_trade_price / ma3_last
                     
                     #deviation_sell = ma2_last / last_trade_price
                     
@@ -1084,13 +1101,18 @@ class ro_cano_che_ritorna:
                     
                 elif (
                     
-                    ( ma50_last >= ma50_2_min_ago and deviation_sell < -0.45 )
-                    #questa ho dovuto metterla perche' ha venduto "da sotto" mentre ma2 saliva !
+                    ( ma50_last >= ma50_2_min_ago and deviation_mentre_ma50_sale < -0.45 )
+                    
+                    #deviation_mentre_ma50_sale = ( last_trade_price / ma3_last
+                    
+                    
                     and ma2_last < ma2_2_min_ago
                  
                 ):
                     sell = " SELL #26 ( dopo 40 min ) con ma50 > "
                     action = "sell"
+                    
+                    
                     
                     
                 elif (
