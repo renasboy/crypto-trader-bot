@@ -420,7 +420,7 @@ class ro_cano_che_ritorna:
                           and ma2_last > ma2_2_min_ago
                           
                           
-                          and ( deviation_buy1 < -2.40 and ma3_prev < ma15_prev and ma3_last > ma15_last ) or ( deviation_buy1 < -2.40 and deviation_buy_crollo > 0.39 )
+                          and ( deviation_buy1 < -2.30 and ma8_prev < ma25_prev and ma8_last > ma25_last ) or ( deviation_buy1 < -2.40 and deviation_buy_crollo > 0.39 )
                         
                           #and ma3_prev < ma8_prev and ma3_last > ma8_last or ( deviation_buy_crollo > 0.39 )
                           #questa ha fatto comprare NON DURANTE UN CROLLO.
