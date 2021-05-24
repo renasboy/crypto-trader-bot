@@ -629,7 +629,7 @@ class ro_cano_che_ritorna:
             
             
             
-            0 -3 min
+            #0 -3 min
 
             # VENDITA - da 0 a 3 minuti = da 0 a 180 secondi
 
