@@ -192,7 +192,7 @@ class maddog:
                         #se va su all' improvviso prende la deviation.
                         #se ci ripensa prima di salire prende l' incrocio
                         #GRAZIE COMPA
-                        ( ma78_last >= ma78_20_min_ago and ( deviation_buy1 > 0.10 and ( ma18_prev < ma78_prev and ma18_last > ma78_last ))) or ( ma78_last >= ma78_20_min_ago and ( deviation_buy1 > 0.15 ))
+                        ( ma78_last >= ma78_20_min_ago and ( deviation_buy1 > 0.10 and ( ma18_prev < ma78_prev and ma18_last > ma78_last ))) 
                         
                         
                         and ma39_last > ma50_last
@@ -202,22 +202,32 @@ class maddog:
                         
                         #deviation_buy1 = ma8_last / ma78_last
                         #and ma2_prev < ma13_prev and ma2_last > ma13_last se aggiungo questa NON COMPRA PIU'
-                        
-                        
-                        
+                       
                        
                     ):
                         
-                        buy = "BUY #1-A"
+                        buy = " BUY #1 - incrocio classico con ma78 IN RIALZO "
                         action = "buy"
-                        
                         
                         
                         
                         
                     elif (
                           
-                          ( ma78_last < ma78_20_min_ago and ( deviation_buy1 > 0.90 and ( ma18_prev < ma78_prev and ma18_last > ma78_last ))) or ( ma78_last < ma78_20_min_ago and ( deviation_buy1 > 0.99 ))
+                          ( ma78_last >= ma78_20_min_ago and ( deviation_buy1 > 0.15 ))
+                          and ma39_last > ma50_last
+                          and ma2_last > ma2_2_min_ago
+                    ):
+                       buy = " BUY #1 - deviation buy1 con ma78 IN RIALZO "
+                       action = "buy"
+                        
+                        
+                    
+                        
+                        
+                    elif (
+                          
+                          ( ma78_last < ma78_20_min_ago and ( deviation_buy1 > 0.90 and ( ma18_prev < ma78_prev and ma18_last > ma78_last )))
                            
                           #deviation_buy1 = ma8_last / ma78_last 
                           
@@ -226,10 +236,35 @@ class maddog:
                           
                          
                     ):
-                        buy = "BUY #1-B"
+                        buy = " BUY #1 - incrocio classico con ma78 IN RIBASSO"
                         action = "buy"
                         
                         
+                        
+                        
+                        
+                        
+                    elif (
+                          
+                          ( ma78_last < ma78_20_min_ago and ( deviation_buy1 > 0.99 ))
+                           
+                          #deviation_buy1 = ma8_last / ma78_last 
+                          
+                          and ma39_last > ma50_last
+                          and ma2_last > ma2_2_min_ago
+                          
+                         
+                    ):
+                        buy = " BUY #1 - deviation con ma78 IN RIBASSO "
+                        action = "buy"
+                        
+                
+                
+                
+                
+         ########################################################################################################################################################       
+                
+                
                 
                 
                 
