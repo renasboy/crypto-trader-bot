@@ -777,7 +777,7 @@ class ro_cano_che_ritorna:
             elif (
                     
                     #ma2_last < ma2_2_min_ago
-                    ( ma50_last < ma50_2_min_ago and deviation_sell < -0.65 )
+                    ( ma50_last < ma50_2_min_ago and deviation_sell < -0.75 )
                     
                     #deviation_sell =  ma3_last / last_trade_price
                     
@@ -850,7 +850,7 @@ class ro_cano_che_ritorna:
                 elif (
                     
                     #ma2_last < ma2_2_min_ago
-                    ( ma50_last < ma50_2_min_ago and deviation_sell < -0.65 )
+                    ( ma50_last < ma50_2_min_ago and deviation_sell < -0.75 )
                     
                     #deviation_sell = ma2_last / last_trade_price
                     # or ( ma50_last < ma50_2_min_ago and deviation_buy1 < -0.20 ) QUESTA ERA LA COLPEVOLE CHE FACEVA VENDERE MENTRE RISALIVA DOPO IL CROLLO !
@@ -926,7 +926,7 @@ class ro_cano_che_ritorna:
                 elif (
                     
                     #ma2_last < ma2_2_min_ago
-                    ( ma50_last < ma50_2_min_ago and deviation_sell < -0.65 )
+                    ( ma50_last < ma50_2_min_ago and deviation_sell < -0.75 )
                     
                     #deviation_sell = ma2_last / last_trade_price
                     
@@ -1009,7 +1009,7 @@ class ro_cano_che_ritorna:
                 elif (
                     
                     #ma2_last < ma2_2_min_ago
-                    ( ma50_last < ma50_2_min_ago and deviation_sell < -0.65 )
+                    ( ma50_last < ma50_2_min_ago and deviation_sell < -0.75 )
                     
                     #deviation_sell = ma2_last / last_trade_price
                     
@@ -1083,7 +1083,7 @@ class ro_cano_che_ritorna:
                 elif (
                     
                     #ma2_last < ma2_2_min_ago
-                    ( ma50_last < ma50_2_min_ago and deviation_sell < -0.65 )
+                    ( ma50_last < ma50_2_min_ago and deviation_sell < -0.75 )
                     #deviation_sell = ma2_last / last_trade_price
                     
                     
@@ -1153,7 +1153,7 @@ class ro_cano_che_ritorna:
                 
                 elif (
                     ma2_last < ma2_2_min_ago
-                    and ( ma50_last < ma50_2_min_ago and deviation_sell < -0.65 )
+                    and ( ma50_last < ma50_2_min_ago and deviation_sell < -0.75 )
                     
                     #deviation_sell = ma2_last / last_trade_price
                    
@@ -1186,7 +1186,7 @@ class ro_cano_che_ritorna:
             
             elif (
             
-                ( ma50_last >= ma50_2_min_ago and ( ma2_last < ma36_last and deviation_sell < -0.50 )) or ( ma50_last >= ma50_2_min_ago and ( ma8_last < ma39_last and deviation_sell < -0.48 )) 
+                ( ma50_last >= ma50_2_min_ago and ( ma2_last < ma36_last and deviation_sell < -0.80 )) or ( ma50_last >= ma50_2_min_ago and ( ma8_last < ma39_last and deviation_sell < -0.70 )) 
                 
                 #or ( deviation_sell_ma78 < -0.43 )
                 #ha venduto anche questa durante il crollo - punto rosso sovrapposto al punto verde 
