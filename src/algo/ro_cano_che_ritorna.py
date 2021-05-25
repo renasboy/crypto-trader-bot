@@ -818,7 +818,7 @@ class ro_cano_che_ritorna:
                 
                 elif (
                     #ma2_last < ma2_2_min_ago
-                    ( ma50_last >= ma50_2_min_ago and deviation_mentre_ma50_sale > 0.65 )
+                    ( ma50_last >= ma50_2_min_ago and deviation_mentre_ma50_sale > 0.66 )
                     
                     
                     #deviation_mentre_ma50_sale = last_trade_price / ma3_last
@@ -890,7 +890,7 @@ class ro_cano_che_ritorna:
                 elif (
                     
                     #ma2_last < ma2_2_min_ago
-                    ( ma50_last >= ma50_2_min_ago and deviation_mentre_ma50_sale > 0.65 )
+                    ( ma50_last >= ma50_2_min_ago and deviation_mentre_ma50_sale > 0.67 )
                     
                     #deviation_mentre_ma50_sale = last_trade_price / ma3_last
                     
@@ -972,7 +972,7 @@ class ro_cano_che_ritorna:
                 elif (
                     
                     
-                    ( ma50_last >= ma50_2_min_ago and deviation_mentre_ma50_sale > 0.65 )
+                    ( ma50_last >= ma50_2_min_ago and deviation_mentre_ma50_sale > 0.68 )
                     
                     #deviation_mentre_ma50_sale = last_trade_price / ma3_last
                     
@@ -1048,7 +1048,7 @@ class ro_cano_che_ritorna:
                 elif (
                     
                     
-                    ( ma50_last >= ma50_2_min_ago and deviation_mentre_ma50_sale > 0.65 )
+                    ( ma50_last >= ma50_2_min_ago and deviation_mentre_ma50_sale > 0.69 )
                     
                     #deviation_mentre_ma50_sale = ( last_trade_price / ma3_last
                     
@@ -1121,7 +1121,7 @@ class ro_cano_che_ritorna:
                     
                 elif (
                     
-                    ( ma50_last >= ma50_2_min_ago and deviation_mentre_ma50_sale > -0.65 )
+                    ( ma50_last >= ma50_2_min_ago and deviation_mentre_ma50_sale > -0.70 )
                     
                     #deviation_mentre_ma50_sale = last_trade_price / ma3_last
                     
