@@ -329,7 +329,7 @@ class ro_cano_che_ritorna:
                         
                         ma78_last > ma78_20_min_ago
                       
-                        and ( deviation_buy1 > 0.15 )
+                        and ( deviation_buy1 > 0.30 )
                         
                         and price > price_2_min_ago
                         and ma2_last > ma2_2_min_ago
