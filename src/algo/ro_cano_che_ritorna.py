@@ -302,16 +302,16 @@ class ro_cano_che_ritorna:
                     if (
                        
                         
-                        ma78_last > ma78_20_min_ago
+                        ( ma78_last > ma78_20_min_ago and ( deviation_buy1 > 0.10 and ( ma8_prev < ma50_prev and ma8_last > ma50_last )))
                       
-                        and ( deviation_buy1 > 0.10 and ( ma8_prev < ma50_prev and ma8_last > ma50_last ))
+                        
                         
                         and price > price_2_min_ago
                         and ma2_last > ma2_2_min_ago
-                        and ma4_last > ma4_2_min_ago
+                        #and ma4_last > ma4_2_min_ago
                         and ma4_last > ma8_last
                         and ma8_last > ma50_last
-                        and ma16_last > ma16_2_min_ago
+                        #and ma16_last > ma16_2_min_ago
                         
                         #deviation_buy1 = ma8_last / ma78_last
                        
@@ -361,7 +361,7 @@ class ro_cano_che_ritorna:
                         
                         ma78_last < ma78_20_min_ago
                        
-                        and ( deviation_buy1 > 0.90 and (ma18_prev < ma78_prev and ma18_last > ma78_last ))
+                        and ( deviation_buy1 > 0.80 and (ma18_prev < ma78_prev and ma18_last > ma78_last ))
                         
                         #and ma39_last > ma50_last
                         #questa sta nel maddog che va molto bene durante i ribassi
@@ -373,7 +373,7 @@ class ro_cano_che_ritorna:
                         and ma4_last > ma4_2_min_ago
                         
                         
-                        and ma4_last > ma8_last
+                        #and ma4_last > ma8_last
                         
                         #deviation_buy1 = ma8_last / ma78_last
                         
