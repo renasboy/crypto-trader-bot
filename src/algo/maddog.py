@@ -517,13 +517,32 @@ class maddog:
                        
             # STOP LOSS (salvagente)
             
+            
+            
             if ((ma3_last > ma39_last and ma3_last < ma39_last) and deviation < -0.68) or deviation_sell < -0.59:
                 
                 #deviation = ma2_last / last_trade_price
                 #deviation_sell = ma3_last / ma78_last
                 
-                sell = "SELL #SALVAGENTE"
+                sell = "SELL # SALVAGENTE 1"
                 action = "sell"
+                
+                
+            elif (
+            
+                ( ma50_last > ma50_2_min_ago and ( ma2_last < ma36_last and deviation_sell < -0.80 ))  
+                
+                #or ( deviation_sell_ma78 < -0.43 )
+                #ha venduto anche questa durante il crollo - punto rosso sovrapposto al punto verde 
+                # e gli ho detto che and ma3 deve andare sotto ma13 per vendere .
+                #vediamo
+            ):
+                sell = " SELL # SALVAGENTE 2 "
+                action = "sell"  
+            
+                
+                
+                
                 
             # 1) vedi riga 11 per es. DI 1 ORA = 3600 SECONDI "max hold time" " DOPO UN' ORA VENDE SUBITO " e se ma8_last < ma39_last and deviation < -0.45:
             
