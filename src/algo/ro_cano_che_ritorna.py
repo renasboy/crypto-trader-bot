@@ -451,10 +451,9 @@ class ro_cano_che_ritorna:
                 elif self.session == 2:
               
                     if (
-                       
-                        deviation_ma3_sopra_ma40 > 0.12
                         
-                        and deviation_pendenza_ma33 > 0.08
+                        deviation_pendenza_ma33 > 0.08
+                        and deviation_ma3_sopra_ma40 > 0.12
                         
                         and (( ma4_prev < ma9_prev and ma4_last > ma9_last ) and deviation_buy_ma4 > 0.12 ) or (deviation_buy2 > 0.12 and deviation_buy_ma4 > 0.12 and deviation_prev > 0.22 )
                         #deviation_buy_ma4 = ma4_last / last_trade_price
@@ -485,10 +484,9 @@ class ro_cano_che_ritorna:
                         
                     elif (
                           
-                          deviation_ma3_sopra_ma40 > 0.12
+                          deviation_pendenza_ma33 > 0.08
+                          and deviation_ma3_sopra_ma40 > 0.12
                         
-                          and deviation_pendenza_ma33 > 0.08
-                          
                           and (( ma4_prev < ma9_prev and ma4_last > ma9_last ) and deviation_buy_ma4 > 0.12 ) or ( deviation_buy2 > 0.15 and deviation_buy_ma4 > 0.16 )
                           #deviation_buy_ma4 = ma4_last / last_trade_price
                           #deviation_buy = ma2_last / last_trade_price
@@ -497,9 +495,6 @@ class ro_cano_che_ritorna:
                           and ma25_last > ma25_2_min_ago
                           and ma4_last > ma78_last
                           
-                          
-                          
-                         
                           and ma2_last > ma2_2_min_ago
                           and price > price_1_min_ago
                           and price > price_2_min_ago
@@ -527,10 +522,9 @@ class ro_cano_che_ritorna:
                 else:
                     if (
                         
-                        deviation_ma3_sopra_ma40 > 0.12
-                        
-                        and deviation_pendenza_ma33 > 0.08
-                        
+                        deviation_pendenza_ma33 > 0.08
+                        and deviation_ma3_sopra_ma40 > 0.12
+                       
                         and (( ma4_prev < ma9_prev and ma4_last > ma9_last ) and deviation_buy_ma4 > 0.12 ) or (deviation_buy3 > 0.13 and deviation_buy_ma4 > 0.15 and deviation_prev > 0.20 )
                         
                         #deviation_buy_ma4 = ma4_last / last_trade_price
@@ -563,10 +557,9 @@ class ro_cano_che_ritorna:
                         
                         
                     elif (
-                        
-                          deviation_ma3_sopra_ma40 > 0.12
-                        
-                          and deviation_pendenza_ma33 > 0.08
+                          
+                          deviation_pendenza_ma33 > 0.08
+                          and deviation_ma3_sopra_ma40 > 0.12
                           
                           and (( ma3_prev < ma8_prev and ma3_last > ma8_last ) and deviation_buy_ma4 > 0.15 ) or (deviation_buy3 > 0.12 and deviation_buy_ma4 > 0.16 )
                           #deviation_buy_ma4 = ma4_last / last_trade_price
