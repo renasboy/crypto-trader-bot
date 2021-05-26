@@ -318,7 +318,7 @@ class ro_cano_che_ritorna:
                     
                     ):
                     
-                        buy = ".............................................................BUY #1-INCROCIO CLASSICO"
+                        buy = ".............................................................BUY #1 MENTRE SALE con INCROCIO CLASSICO"
                         action = "buy"
                         
                         
@@ -343,7 +343,7 @@ class ro_cano_che_ritorna:
                     
                     ):
                     
-                        buy = ".................................................................BUY #1-CON LA DEVIATION BUY "
+                        buy = ".................................................................BUY #1 MENTRE SALE con LA DEVIATION BUY "
                         action = "buy"
                         
                         
@@ -380,7 +380,7 @@ class ro_cano_che_ritorna:
                      
                     ):
                     
-                        buy = "...............................................................BUY #1- INCROCIO CLASSICO DURANTE IL RIBASSO"
+                        buy = "...............................................................BUY #1 MENTRE SCENDE con INCROCIO CLASSICO DURANTE IL RIBASSO"
                         action = "buy"
                     
                     
@@ -411,7 +411,7 @@ class ro_cano_che_ritorna:
                      
                     ):
                     
-                        buy = ".................................................................BUY #1-CON DEVIATION DURANTE IL RIBASSO"
+                        buy = ".................................................................BUY #1 MENTRE SCENDE con DEVIATION DURANTE IL RIBASSO"
                         action = "buy" 
                     
                     
@@ -439,7 +439,7 @@ class ro_cano_che_ritorna:
                           #COSI' HO LEGATO deviation_buy_crollo > 0.39 al crollo vero e proprio (deviation_buy1 < -1.90)
                      
                     ):
-                        buy = "......................................................................BUY #1- DURANTE IL CROLLO"
+                        buy = "......................................................................BUY #1 DURANTE IL CROLLO"
                         action = "buy"
                     
                     
