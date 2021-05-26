@@ -58,6 +58,9 @@ class ro_cano_che_ritorna:
         ma4_2_min_ago = self.algo_helper.ma_minutes_ago(4,2)
         ma6_2_min_ago = self.algo_helper.ma_minutes_ago(6,2)
         
+        ma8_4_min_ago = self.algo_helper.ma_minutes_ago(8,4)
+        # se deve comprare con deviation buy 1 mentre sale DEVE AVERE ANCHE UNA PENDENZA ! VAI COMPAAAAAAAAA
+        
         ma13_2_min_ago = self.algo_helper.ma_minutes_ago(13,2)
         
         ma16_2_min_ago = self.algo_helper.ma_minutes_ago(16,2)
@@ -214,6 +217,10 @@ class ro_cano_che_ritorna:
         self.algo_helper.log("deviation_pendenza_ma33: {}".format(deviation_pendenza_ma33))
         
         
+        # formula DEVIATION_PENDENZA_ma8  ( per comprare in aggiunta al BUY 1 mentre sale con deviation )
+        deviation_pendenza_ma8 = ( ma8_last / ma8_4_min_ago - 1 ) * 100 if ma8_4_min_ago else 0
+        self.algo_helper.log("deviation_pendenza_ma33: {}".format(deviation_pendenza_ma8))
+        
         
         
         
@@ -330,6 +337,9 @@ class ro_cano_che_ritorna:
                         ma78_last > ma78_20_min_ago
                       
                         and ( deviation_buy1 > 0.45 )
+                        and deviation_pendenza_ma8 > 0.10
+                        
+                        #se deve comprare con deviation DEVE AVERE ANCHE UNA PENDENZA !
                         
                         and price > price_2_min_ago
                         and ma2_last > ma2_2_min_ago
