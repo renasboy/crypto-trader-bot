@@ -318,7 +318,7 @@ class ro_cano_che_ritorna:
                     
                     ):
                     
-                        buy = "BUY #1-INCROCIO CLASSICO"
+                        buy = ".............................................................BUY #1-INCROCIO CLASSICO"
                         action = "buy"
                         
                         
@@ -343,7 +343,7 @@ class ro_cano_che_ritorna:
                     
                     ):
                     
-                        buy = "BUY #1-CON LA DEVIATION BUY "
+                        buy = ".................................................................BUY #1-CON LA DEVIATION BUY "
                         action = "buy"
                         
                         
@@ -380,7 +380,7 @@ class ro_cano_che_ritorna:
                      
                     ):
                     
-                        buy = "BUY #1- INCROCIO CLASSICO DURANTE IL RIBASSO"
+                        buy = "...............................................................BUY #1- INCROCIO CLASSICO DURANTE IL RIBASSO"
                         action = "buy"
                     
                     
@@ -411,7 +411,7 @@ class ro_cano_che_ritorna:
                      
                     ):
                     
-                        buy = "BUY #1-CON DEVIATION DURANTE IL RIBASSO"
+                        buy = ".................................................................BUY #1-CON DEVIATION DURANTE IL RIBASSO"
                         action = "buy" 
                     
                     
@@ -439,7 +439,7 @@ class ro_cano_che_ritorna:
                           #COSI' HO LEGATO deviation_buy_crollo > 0.39 al crollo vero e proprio (deviation_buy1 < -1.90)
                      
                     ):
-                        buy = "BUY #1- DURANTE IL CROLLO"
+                        buy = "......................................................................BUY #1- DURANTE IL CROLLO"
                         action = "buy"
                     
                     
@@ -477,7 +477,7 @@ class ro_cano_che_ritorna:
                         #incredibile ma vero E' NECESSARIA quando deve ricomprare dopo la correzione al ribasso
                         
                     ):
-                        buy = "BUY #2-A"
+                        buy = ".................................................................................BUY #2-A"
                         action = "buy"
 
                        
@@ -512,7 +512,7 @@ class ro_cano_che_ritorna:
                         
                          
                     ):
-                        buy = "BUY #2-B"
+                        buy = ".................................................................................BUY #2-B"
                         action = "buy"
                     
 #############################################################################################################################################
@@ -557,7 +557,7 @@ class ro_cano_che_ritorna:
                         #deviation_prev = price / prev_trade_price  
                     
                     ):
-                        buy = "BUY #3-A"
+                        buy = "........................................................................................BUY #3-A"
                         action = "buy"
 
                         
@@ -597,7 +597,7 @@ class ro_cano_che_ritorna:
                           #deviation_prev = price / prev_trade_price
                           
                     ):
-                        buy = "BUY #3-B"
+                        buy = "........................................................................................BUY #3-B"
                         action = "buy"
                         
         
