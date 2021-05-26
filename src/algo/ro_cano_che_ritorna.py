@@ -1109,7 +1109,7 @@ class ro_cano_che_ritorna:
                 if (
                     
                     ma2_last < ma2_2_min_ago
-                    and ( ma50_last >= ma50_2_min_ago and ( ma3_last < ma25_last and deviation_sell > 0.18 )) or ( ma50_last >= ma50_2_min_ago and ( ma2_last < ma13_last and deviation_sell > 0.60 )) or ( ma50_last >= ma50_2_min_ago and ( ma3_last > ma78_last and ma3_last < ma78_last ) and deviation_sell < -0.20 ) or ( ma50_last >= ma50_2_min_ago and ( ma3_last > ma50_last and ma3_last < ma50_last )
+                    and ( ma50_last >= ma50_2_min_ago and ( ma3_last < ma25_last and deviation_sell > 0.18 )) or ( ma50_last >= ma50_2_min_ago and ( ma2_last < ma30_last and deviation_sell > 0.60 )) or ( ma50_last >= ma50_2_min_ago and ( ma3_last > ma78_last and ma3_last < ma78_last ) and deviation_sell < -0.20 ) or ( ma50_last >= ma50_2_min_ago and ( ma3_last > ma50_last and ma3_last < ma50_last )
                     #deviation_sell = ma2_last / last_trade_price
                     
                 )):
