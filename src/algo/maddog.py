@@ -195,7 +195,7 @@ class maddog:
                         ( ma78_last >= ma78_20_min_ago and ( deviation_buy1 > 0.10 and ( ma18_prev < ma78_prev and ma18_last > ma78_last ))) 
                         
                         
-                        and ma39_last > ma50_last
+                        and ma3_last > ma40_last
                         and ma2_last > ma2_2_min_ago
                         
                         
@@ -214,8 +214,8 @@ class maddog:
                         
                     elif (
                           
-                          ( ma78_last >= ma78_20_min_ago and ( deviation_buy1 > 0.15 ))
-                          and ma39_last > ma50_last
+                          ( ma78_last >= ma78_20_min_ago and ( deviation_buy1 > 0.10 ))
+                          and ma3_last > ma40_last
                           and ma2_last > ma2_2_min_ago
                     ):
                        buy = " BUY #1 - deviation buy1 con ma78 IN RIALZO "
