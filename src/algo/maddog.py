@@ -525,19 +525,20 @@ class maddog:
                 
                 if (
                     #ma2_last < ma2_2_min_ago
-                    ( ma78_last >= ma78_20_min_ago and  ( ma3_last > ma25_last and ma3_last < ma25_last ) and deviation > 0.18 ) or ( ma78_last >= ma78_20_min_ago and ( ma3_last > ma18_last and ma3_last < ma18_last ) and deviation_sell > 0.70 )
+                    ( ma78_last >= ma78_20_min_ago and  ( ma3_last > ma25_last and ma3_last < ma25_last ) and deviation > 0.18 )
                     
                 ):
                     
                     sell = "SELL #3-A" 
-                    action = "sell" 
-
+                    action = "sell"
+                    
+                    
                     
                     
                 elif (
                     
-                    #ma2_last < ma2_2_min_ago
-                    ( ma78_last < ma78_20_min_ago and ( ma3_last > ma39_last and ma3_last < ma39_last ) and deviation_sell < -0.43 ) or ( ma78_last < ma78_20_min_ago and ( ma3_last > ma50_last and ma3_last < ma50_last ) and deviation_ma50 < -0.43 )
+                    
+                    ( ma78_last >= ma78_20_min_ago and ( ma3_last > ma18_last and ma3_last < ma18_last ) and deviation_sell > 0.70 )
                     
                     
                     #deviation_sell = ma3_last / ma78_last
@@ -546,8 +547,57 @@ class maddog:
                 ):
                     sell = "SELL #3-B"     
                     action = "sell"      
-                        
-                        
+                    
+                
+                
+                
+                elif (
+                    
+                    #ma2_last < ma2_2_min_ago
+                    ( ma78_last < ma78_20_min_ago and ( ma3_last > ma39_last and ma3_last < ma39_last ) and deviation_sell < -0.43 )
+                    
+                    
+                    #deviation_sell = ma3_last / ma78_last
+                    #deviation_buy1 = ma8_last / ma78_last
+                    
+                ):
+                    sell = "SELL #3-C"     
+                    action = "sell"
+                    
+                    
+                    
+                    
+                    
+                elif (
+                    
+                    
+                    ( ma78_last < ma78_20_min_ago and ( ma3_last > ma50_last and ma3_last < ma50_last ) and deviation_ma50 < -0.43 )
+                    
+                    
+                    #deviation_sell = ma3_last / ma78_last
+                    #deviation_buy1 = ma8_last / ma78_last
+                    
+                ):
+                    sell = "SELL #3-D"     
+                    action = "sell"     
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             ###################################################################################################################################################################
             
                        
