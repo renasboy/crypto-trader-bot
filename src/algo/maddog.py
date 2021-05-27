@@ -518,15 +518,35 @@ class maddog:
             # STOP LOSS (salvagente)
             
             
+            # ATTENZIONE ! SALVAGENTE 1 VENDE BENISSIMO (MOLTO LENTO) E CON GUADAGNO DI + 1% MA PERCHE' ? VEDIAMO...
             
-            if ((ma3_last > ma39_last and ma3_last < ma39_last) and deviation < -0.68) or deviation_sell < -0.59:
+            
+            if (
+                
+                (( ma3_last > ma39_last and ma3_last < ma39_last) and deviation < -0.68 )
                 
                 #deviation = ma2_last / last_trade_price
                 #deviation_sell = ma3_last / ma78_last
+             
+            ):
                 
                 sell = "SELL # SALVAGENTE 1"
                 action = "sell"
                 
+                
+                
+                
+                
+            elif (
+            
+                deviation_sell < -0.59
+                
+            ):
+                sell = " SELL # SALVAGENTE 2 "
+                action = "sell"
+                
+            
+            
                 
             elif (
             
@@ -537,7 +557,7 @@ class maddog:
                 # e gli ho detto che and ma3 deve andare sotto ma13 per vendere .
                 #vediamo
             ):
-                sell = " SELL # SALVAGENTE 2 "
+                sell = " SELL # SALVAGENTE 3 "
                 action = "sell"  
             
                 
