@@ -336,7 +336,7 @@ class ro_cano_che_ritorna:
                         
                         ma78_last > ma78_20_min_ago
                       
-                        and ( deviation_buy1 > 0.45 )
+                        and ( deviation_buy1 > 0.25 )
                         and deviation_pendenza_ma8 > 0.10
                         
                         #se deve comprare con deviation DEVE AVERE ANCHE UNA PENDENZA !
@@ -344,9 +344,9 @@ class ro_cano_che_ritorna:
                         and price > price_2_min_ago
                         and ma2_last > ma2_2_min_ago
                         and ma4_last > ma4_2_min_ago
-                        and ma4_last > ma8_last
+                        #and ma4_last > ma8_last
                         and ma8_last > ma50_last
-                        and ma16_last > ma16_2_min_ago
+                        #and ma16_last > ma16_2_min_ago
                         
                         #deviation_buy1 = ma8_last / ma78_last
                        
@@ -532,20 +532,20 @@ class ro_cano_che_ritorna:
                 else:
                     if (
                         
-                        deviation_pendenza_ma33 > 0.08
-                        and deviation_ma3_sopra_ma40 > 0.12
+                        deviation_pendenza_ma33 > 0.05
+                        and deviation_ma3_sopra_ma40 > 0.10
                        
-                        and (( ma4_prev < ma9_prev and ma4_last > ma9_last ) and deviation_buy_ma4 > 0.12 ) or (deviation_buy3 > 0.13 and deviation_buy_ma4 > 0.15 and deviation_prev > 0.20 )
+                        and (( ma4_prev < ma9_prev and ma4_last > ma9_last ) and deviation_buy_ma4 > 0.10 ) or (deviation_buy3 > 0.13 and deviation_buy_ma4 > 0.10 and deviation_prev > 0.20 )
                         
                         #deviation_buy_ma4 = ma4_last / last_trade_price
                         #deviation_buy = ma2_last / last_trade_price
                         #deviation_buy3 = ma8_last / ma78_last
                        
                         and ma4_last > ma78_last
-                        and ma13_last > ma13_2_min_ago
+                        
                         and ma2_last >= ma4_last
                         and price > price_2_min_ago
-                        and ma3_last > ma6_last
+                        
                         and ma2_last > ma50_last
                         and ma2_last > ma78_last
                         
@@ -584,8 +584,8 @@ class ro_cano_che_ritorna:
                           and ma2_last > ma50_last
                           and ma2_last > ma78_last
                           and ma4_last > ma78_last
-                          and ma6_last > ma6_2_min_ago
-                          and ma3_last > ma6_last
+                          
+                          
                           
                           #and price > price_2_min_ago
                           #and price > price_3_min_ago
