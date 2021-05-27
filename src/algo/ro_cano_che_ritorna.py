@@ -336,7 +336,7 @@ class ro_cano_che_ritorna:
                         
                         ma78_last > ma78_20_min_ago
                       
-                        and ( deviation_buy1 > 0.25 )
+                        and ( deviation_buy1 > 0.13 )
                         and deviation_pendenza_ma8 > 0.10
                         
                         #se deve comprare con deviation DEVE AVERE ANCHE UNA PENDENZA !
