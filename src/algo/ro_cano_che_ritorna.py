@@ -55,6 +55,8 @@ class ro_cano_che_ritorna:
         ma2_3_min_ago = self.algo_helper.ma_minutes_ago(2, 3)
        
         ma3_2_min_ago = self.algo_helper.ma_minutes_ago(3,2)
+        ma3_16_min_ago = self.algo_helper.ma_minutes_ago(3,16)
+        
         ma4_2_min_ago = self.algo_helper.ma_minutes_ago(4,2)
         ma6_2_min_ago = self.algo_helper.ma_minutes_ago(6,2)
         
@@ -222,6 +224,9 @@ class ro_cano_che_ritorna:
         self.algo_helper.log("deviation_pendenza_ma33: {}".format(deviation_pendenza_ma8))
         
         
+        # formula DEVIATION_TEMPO_SPAZIO  ( per comprare in aggiunta al BUY 1 mentre sale con deviation )
+        deviation_tempo_spazio = ( ma3_last / ma3_16_min_ago - 1 ) * 100 if ma3_16_min_ago else 0
+        self.algo_helper.log("deviation_tempo_spazio: {}".format(deviation_tempo_spazio))
         
         
         ####################################################################################################################################################
@@ -325,7 +330,7 @@ class ro_cano_che_ritorna:
                     
                     ):
                     
-                        buy = ".............................................................BUY #1 MENTRE SALE con INCROCIO CLASSICO"
+                        buy = ".............................................................BUY 1 MENTRE SALE con INCROCIO CLASSICO "
                         action = "buy"
                         
                         
@@ -353,7 +358,7 @@ class ro_cano_che_ritorna:
                     
                     ):
                     
-                        buy = ".................................................................BUY #1 MENTRE SALE con LA DEVIATION BUY "
+                        buy = ".................................................................BUY 1 MENTRE SALE con LA DEVIATION BUY "
                         action = "buy"
                         
                         
@@ -367,6 +372,8 @@ class ro_cano_che_ritorna:
                         
                         
                     # BUY #1 MENTRE SCENDE con INCROCIO CLASSICO DURANTE IL RIBASSO"
+                    
+                    
                     elif (
                         
                         ma78_last < ma78_20_min_ago
@@ -390,7 +397,7 @@ class ro_cano_che_ritorna:
                      
                     ):
                     
-                        buy = "...............................................................BUY #1 MENTRE SCENDE con INCROCIO CLASSICO DURANTE IL RIBASSO"
+                        buy = "...............................................................BUY 1 MENTRE SCENDE con INCROCIO CLASSICO DURANTE IL RIBASSO "
                         action = "buy"
                     
                     
@@ -398,6 +405,7 @@ class ro_cano_che_ritorna:
                     
                     
                     # BUY #1 MENTRE SCENDE con DEVIATION DURANTE IL RIBASSO"
+                    
                     elif (
                         
                         ma78_last < ma78_20_min_ago
@@ -406,24 +414,35 @@ class ro_cano_che_ritorna:
                         
                         #and ma39_last > ma50_last
                         #questa sta nel maddog che va molto bene durante i ribassi
+                        #deviation_buy1 = ma8_last / ma78_last
+                  
+                     
+                    ):
+                    
+                        buy = ".................................................................BUY 1 MENTRE SCENDE con DEVIATION DURANTE IL RIBASSO "
+                        action = "buy"
                         
-                        and ma8_last > ma50_last
                         
-                        and price > price_2_min_ago
-                        and ma2_last > ma2_2_min_ago
-                        and ma4_last > ma4_2_min_ago
+                    
+                    
+                    
+                    # BUY 1 MENTRE SCENDE con DEVIATION TEMPO_SPAZIO durante IL RIBASSO"
+                    elif (
                         
-                        
-                        and ma4_last > ma8_last
+                        ma78_last < ma78_20_min_ago
+                        and deviation_tempo_spazio > 1.25
+                        and ma3_last > ma100_last
+                       
+                        #QUESTA CONDIZIONE TEMPO - SPAZIO ERA UNA TUA IDEA !
+                        #vai compaaaaaaaaaaaaaaaaaaaa
                         
                         #deviation_buy1 = ma8_last / ma78_last
                         
                      
                     ):
                     
-                        buy = ".................................................................BUY #1 MENTRE SCENDE con DEVIATION DURANTE IL RIBASSO"
+                        buy = ".................................................................BUY 1 MENTRE SCENDE con DEVIATION TEMPO_SPAZIO durante IL RIBASSO "
                         action = "buy" 
-                    
                     
                     
                     
