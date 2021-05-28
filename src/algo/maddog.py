@@ -81,6 +81,8 @@ class maddog:
         ma36_2_min_ago = self.algo_helper.ma_minutes_ago(36, 2)
         ma39_2_min_ago = self.algo_helper.ma_minutes_ago(39, 2)
         ma50_2_min_ago = self.algo_helper.ma_minutes_ago(50, 2)
+        
+        ma78_5_min_ago = self.algo_helper.ma_minutes_ago(78, 5)
         ma78_20_min_ago = self.algo_helper.ma_minutes_ago(78, 20)
         
         ma85_3_min_ago = self.algo_helper.ma_minutes_ago(85, 3)
@@ -138,12 +140,19 @@ class maddog:
         self.algo_helper.log("deviation_ma50: {}".format(deviation_ma50))
         
         
+        
+        # formula DEVIATION_PENDENZA_ma78  (per comprare 1 )
+        deviation_pendenza_ma78 = ( ma78_last / ma78_5_min_ago - 1 ) * 100 if ma78_5_min_ago else 0
+        self.algo_helper.log("deviation_pendenza_ma78: {}".format(deviation_pendenza_ma78))
+        
+        
 
         #
         
         action = None
 
         ##################################################################################################################################################
+        
         # APRE E CHIUDE GABBIA
         # SI APRE LA GABBIA SE
       
@@ -192,7 +201,9 @@ class maddog:
                         #se va su all' improvviso prende la deviation.
                         #se ci ripensa prima di salire prende l' incrocio
                         #GRAZIE COMPA
-                        ( ma78_last >= ma78_20_min_ago and ( deviation_buy1 > 0.10 and ( ma18_prev < ma78_prev and ma18_last > ma78_last ))) 
+                        
+                        deviation_pendenza_ma78 > 0.08
+                        and ( ma78_last >= ma78_20_min_ago and ( deviation_buy1 > 0.10 and ( ma18_prev < ma78_prev and ma18_last > ma78_last ))) 
                         
                         
                         and ma3_last > ma40_last
@@ -214,7 +225,8 @@ class maddog:
                         
                     elif (
                           
-                          ( ma78_last >= ma78_20_min_ago and ( deviation_buy1 > 0.13 ))
+                          deviation_pendenza_ma78 > 0.08
+                          and ( ma78_last >= ma78_20_min_ago and ( deviation_buy1 > 0.13 ))
                           and ma3_last > ma40_last
                           and ma2_last > ma2_2_min_ago
                     ):
