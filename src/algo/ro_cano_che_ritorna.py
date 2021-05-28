@@ -1359,19 +1359,33 @@ class ro_cano_che_ritorna:
 
             #2) ro cano VENDE " DOPO x MINUTI " "max hold time" riga 91
                 # HA VENDUTO DOPO 20 MINUTI !
+                
+                
             elif (
                 
-                ma2_last > ma2_2_min_ago
-                and ( seconds_since_last_trade > max_hold_time_in_seconds and ( ma2_last < ma78_last and deviation_sell < -0.40 )) or ( seconds_since_last_trade > max_hold_time_in_seconds and deviation_sell < 0.20 )
+                
+                ( seconds_since_last_trade > max_hold_time_in_seconds and ( ma2_last < ma78_last and deviation_sell < -0.40 ))
                  
-                
-
-                
+              
                 #deviation_sell = ma2_last / last_trade_price
             ):
+                
                 sell = " SELL # TEMPO 1 "
                 action = "sell"
                 
+                
+                
+                
+            elif (
+                
+                ma2_last > ma2_2_min_ago
+                and ( seconds_since_last_trade > max_hold_time_in_seconds and deviation_sell < 0.20 )
+                 
+                #deviation_sell = ma2_last / last_trade_price
+
+            ):
+                sell = " SELL # TEMPO 2 "
+                action = "sell"
                 
                 
                 
@@ -1385,7 +1399,7 @@ class ro_cano_che_ritorna:
                 
                 #deviation_sell = ma2_last / last_trade_price
             ):
-                sell = " SELL # TEMPO 2 "
+                sell = " SELL # TEMPO 3 "
                 action = "sell"
                 
                 
