@@ -305,7 +305,7 @@ class ro_cano_che_ritorna:
                 if self.session == 1:
                
             
-                    
+                    #BUY #1 MENTRE SALE con INCROCIO CLASSICO"
                     if (
                        
                         
@@ -330,7 +330,7 @@ class ro_cano_che_ritorna:
                         
                         
                         
-                        
+                    # BUY #1 MENTRE SALE con LA DEVIATION BUY "   
                     elif (
                        
                         
@@ -366,7 +366,7 @@ class ro_cano_che_ritorna:
                         
                         
                         
-                    
+                    # BUY #1 MENTRE SCENDE con INCROCIO CLASSICO DURANTE IL RIBASSO"
                     elif (
                         
                         ma78_last < ma78_20_min_ago
@@ -397,7 +397,7 @@ class ro_cano_che_ritorna:
                     
                     
                     
-                    
+                    # BUY #1 MENTRE SCENDE con DEVIATION DURANTE IL RIBASSO"
                     elif (
                         
                         ma78_last < ma78_20_min_ago
@@ -432,10 +432,14 @@ class ro_cano_che_ritorna:
                     
                     
                     ##############################################################################################################################
-                    # IMPORTANTISSIMO ! SOLO PER IL BUY 1
+                    # IMPORTANTISSIMO ! SOLO PER IL BUY 1 - PER COMPRARE DURANTE IL CROLLO - compa prega per me - ( cruise - david gilmour )
                     ##############################################################################################################################
 
-                    # PER COMPRARE DURANTE IL CROLLO 1 - compa prega per me - ( cruise - david gilmour )
+                    
+                    
+                    
+                    
+                    # BUY # PRIMO MODO DURANTE IL CROLLO 
                     elif (
                          
                           price > price_2_min_ago
@@ -457,7 +461,7 @@ class ro_cano_che_ritorna:
                         
                         
                         
-                    # PER COMPRARE DURANTE IL CROLLO 2
+                    # BUY # SECONDO MODO - DURANTE IL CROLLO
                     elif (
                          
                           price > price_2_min_ago
