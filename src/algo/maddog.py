@@ -214,7 +214,7 @@ class maddog:
                         
                     elif (
                           
-                          ( ma78_last >= ma78_20_min_ago and ( deviation_buy1 > 0.10 ))
+                          ( ma78_last >= ma78_20_min_ago and ( deviation_buy1 > 0.13 ))
                           and ma3_last > ma40_last
                           and ma2_last > ma2_2_min_ago
                     ):
