@@ -435,22 +435,43 @@ class ro_cano_che_ritorna:
                     # IMPORTANTISSIMO ! SOLO PER IL BUY 1
                     ##############################################################################################################################
 
-                    # PER COMPRARE DURANTE IL CROLLO - compa prega per me - ( cruise - david gilmour )
+                    # PER COMPRARE DURANTE IL CROLLO 1 - compa prega per me - ( cruise - david gilmour )
                     elif (
                          
                           price > price_2_min_ago
                           and ma2_last > ma2_2_min_ago
                           
                           
-                          and ( deviation_buy1 < -2.30 and ma8_prev < ma25_prev and ma8_last > ma25_last ) or ( deviation_buy1 < -2.40 and deviation_buy_crollo > 0.39 )
+                          and ( deviation_buy1 < -2.30 and ma8_prev < ma25_prev and ma8_last > ma25_last )
                         
                           #and ma3_prev < ma8_prev and ma3_last > ma8_last or ( deviation_buy_crollo > 0.39 )
                           #questa ha fatto comprare NON DURANTE UN CROLLO.
                           #COSI' HO LEGATO deviation_buy_crollo > 0.39 al crollo vero e proprio (deviation_buy1 < -1.90)
                      
                     ):
-                        buy = "......................................................................BUY #1 DURANTE IL CROLLO"
+                        buy = "......................................................................BUY # PRIMO MODO DURANTE IL CROLLO "
                         action = "buy"
+                        
+                        
+                        
+                        
+                        
+                        
+                    # PER COMPRARE DURANTE IL CROLLO 2
+                    elif (
+                         
+                          price > price_2_min_ago
+                          and ma2_last > ma2_2_min_ago
+                          
+                          
+                          and ( deviation_buy1 < -2.40 and deviation_buy_crollo > 0.39 )
+                        
+                     
+                    ):
+                        buy = "......................................................................BUY # SECONDO MODO - DURANTE IL CROLLO "
+                        action = "buy"
+                    
+                    
                     
                     
 ##############################################################################################################################
