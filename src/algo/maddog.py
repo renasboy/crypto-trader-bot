@@ -195,14 +195,16 @@ class maddog:
         #######################################################################
 
                 # COMPRA sessione 1
+                
                 if self.session == 1:
+                    
                     if (
                        
                         #se va su all' improvviso prende la deviation.
                         #se ci ripensa prima di salire prende l' incrocio
                         #GRAZIE COMPA
                         
-                        deviation_pendenza_ma78 > 0.08
+                        deviation_pendenza_ma78 > 0.06
                         and ( ma78_last >= ma78_20_min_ago and ( deviation_buy1 > 0.10 and ( ma18_prev < ma78_prev and ma18_last > ma78_last ))) 
                         
                         
@@ -217,7 +219,7 @@ class maddog:
                        
                     ):
                         
-                        buy = " BUY #1 - incrocio classico con ma78 IN RIALZO "
+                        buy = "................................................................. BUY 1 - con INCROCIO CLASSICO e ma78 IN RIALZO "
                         action = "buy"
                         
                         
@@ -225,12 +227,12 @@ class maddog:
                         
                     elif (
                           
-                          deviation_pendenza_ma78 > 0.08
+                          deviation_pendenza_ma78 > 0.06
                           and ( ma78_last >= ma78_20_min_ago and ( deviation_buy1 > 0.13 ))
                           and ma3_last > ma40_last
                           and ma2_last > ma2_2_min_ago
                     ):
-                       buy = " BUY #1 - deviation buy1 con ma78 IN RIALZO "
+                       buy = "................................................................... BUY 1 - con DEVIATION buy1 e ma78 IN RIALZO "
                        action = "buy"
                         
                         
@@ -248,7 +250,7 @@ class maddog:
                           
                          
                     ):
-                        buy = " BUY #1 - incrocio classico con ma78 IN RIBASSO"
+                        buy = "...............................................................BUY 1 - con INCROCIO CLASSICO e ma78 IN RIBASSO"
                         action = "buy"
                         
                         
@@ -267,7 +269,7 @@ class maddog:
                           
                          
                     ):
-                        buy = " BUY #1 - deviation con ma78 IN RIBASSO "
+                        buy = ".............................................................................. BUY 1 - con DEVIATION e ma78 IN RIBASSO "
                         action = "buy"
                         
                 
@@ -298,10 +300,15 @@ class maddog:
                    
                     ):
                         
-                        buy = "BUY #2-A"
+                        buy = "..............................................................................BUY 2 "
                         action = "buy"
                         
-                        
+                
+                
+                
+                
+                
+                
                 # COMPRA sessione 3 in poi
                 else:
                     if (
@@ -325,7 +332,7 @@ class maddog:
                         
                     ):
                         
-                        buy = "BUY #3-A"
+                        buy = "......................................................................................................BUY 3 "
                         action = "buy"
                         
                 
