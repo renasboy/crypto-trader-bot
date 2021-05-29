@@ -57,6 +57,10 @@ class ro_cano_che_ritorna:
         ma2_3_min_ago = self.algo_helper.ma_minutes_ago(2, 3)
        
         ma3_2_min_ago = self.algo_helper.ma_minutes_ago(3,2)
+        
+        ma3_12_min_ago = self.algo_helper.ma_minutes_ago(3,12)
+        
+        #16 min sono troppi per la condizione SPAZIO - TEMPO
         ma3_16_min_ago = self.algo_helper.ma_minutes_ago(3,16)
         
         ma4_2_min_ago = self.algo_helper.ma_minutes_ago(4,2)
@@ -226,9 +230,9 @@ class ro_cano_che_ritorna:
         self.algo_helper.log("deviation_pendenza_ma33: {}".format(deviation_pendenza_ma8))
         
         
-        # formula DEVIATION_TEMPO_SPAZIO  ( per comprare in aggiunta al BUY 1 mentre sale con deviation )
-        deviation_tempo_spazio = ( ma3_last / ma3_16_min_ago - 1 ) * 100 if ma3_16_min_ago else 0
-        self.algo_helper.log("deviation_tempo_spazio: {}".format(deviation_tempo_spazio))
+        # formula DEVIATION_SPAZIO_TEMPO ( per comprare in aggiunta al BUY 1 mentre sale con deviation )
+        deviation_tempo_spazio = ( ma3_last / ma3_12_min_ago - 1 ) * 100 if ma3_12_min_ago else 0
+        self.algo_helper.log("deviation_tempo_spazio: {}".format(deviation_spazio_tempo))
         
         
         ####################################################################################################################################################
@@ -372,15 +376,15 @@ class ro_cano_che_ritorna:
                         
                         
                         
-                    # BUY 1 DURANTE IL RIALZO con DEVIATION TEMPO_SPAZIO
+                    # BUY 1 DURANTE IL RIALZO con DEVIATION_SPAZIO_TEMPO
                     
                     elif (
                         
                         ma78_last > ma78_20_min_ago
-                        and deviation_tempo_spazio > 1.25
+                        and deviation_spazio_tempo > 0.95
                         and ma3_last > ma100_last
                        
-                        #QUESTA CONDIZIONE TEMPO - SPAZIO ERA UNA TUA IDEA !
+                        #QUESTA CONDIZIONE SPAZIO-TEMPO ERA UNA TUA IDEA !
                         #vai compaaaaaaaaaaaaaaaaaaaa
                         
                         #deviation_buy1 = ma8_last / ma78_last
@@ -388,7 +392,7 @@ class ro_cano_che_ritorna:
                      
                     ):
                     
-                        buy = ".................................................................BUY 1 DURANTE IL RIALZO con DEVIATION TEMPO_SPAZIO "
+                        buy = ".................................................................BUY 1 DURANTE IL RIALZO con DEVIATION_SPAZIO_TEMPO "
                         action = "buy" 
                         
                         
@@ -463,12 +467,12 @@ class ro_cano_che_ritorna:
                     
                     
                     
-                    # BUY 1 DURANTE IL RIBASSO con DEVIATION TEMPO_SPAZIO
+                    # BUY 1 DURANTE IL RIBASSO con DEVIATION_SPAZIO_TEMPO
                     
                     elif (
                         
                         ma78_last < ma78_20_min_ago
-                        and deviation_tempo_spazio > 1.25
+                        and deviation_spazio_tempo > 0.95
                         and ma3_last > ma100_last
                        
                         #QUESTA CONDIZIONE TEMPO - SPAZIO ERA UNA TUA IDEA !
@@ -479,7 +483,7 @@ class ro_cano_che_ritorna:
                      
                     ):
                     
-                        buy = ".................................................................BUY 1 DURANTE IL RIBASSO con DEVIATION TEMPO_SPAZIO "
+                        buy = ".................................................................BUY 1 DURANTE IL RIBASSO con DEVIATION_SPAZIO_TEMPO "
                         action = "buy" 
                     
                     
