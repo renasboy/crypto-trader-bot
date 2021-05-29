@@ -1240,7 +1240,7 @@ class ro_cano_che_ritorna:
                     #deviation_sell = ma2_last / last_trade_price
                    
                     
-                )):
+                ):
                     sell = " SELL #13 (5-12 min) con ma50 > "
                     action = "sell"
                     
