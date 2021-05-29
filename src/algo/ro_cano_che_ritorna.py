@@ -1348,21 +1348,39 @@ class ro_cano_che_ritorna:
                 
                 if (
                     
-                    
-                    #ma2_last < ma2_2_min_ago
-                    ( ma50_last >= ma50_2_min_ago and ( ma3_last < ma25_last and deviation_sell > 0.18 )) or ( ma50_last >= ma50_2_min_ago and ( ma2_last < ma18_last and deviation_sell > 0.80 )) or ( ma50_last >= ma50_2_min_ago and ( ma3_last > ma78_last and ma3_last < ma78_last )) and ( ma50_last >= ma50_2_min_ago and deviation_sell < -0.20 ) or ( ma50_last >= ma50_2_min_ago and ( ma3_last > ma50_last and ma3_last < ma50_last )
+                    ( ma50_last >= ma50_2_min_ago and ( ma3_last < ma25_last and deviation_sell > 0.18 )
                     #deviation_sell = ma2_last / last_trade_price
+                   
+                ):
+                    sell = " SELL #17 (12-24 min) con ma50 > "
+                    action = "sell"
                     
                     
-                  
                     
+                    
+                elif (
+                    
+                    ( ma50_last >= ma50_2_min_ago and ( ma2_last < ma18_last and deviation_sell > 0.80 )
+                    #deviation_sell = ma2_last / last_trade_price
+                   
+                ):
+                    sell = " SELL #17 (12-24 min) con ma50 > "
+                    action = "sell"
+                    
+                    
+                    
+                    
+                elif (
+                    
+                    ( ma50_last >= ma50_2_min_ago and ( ma3_last > ma78_last and ma3_last < ma78_last )) and ( ma50_last >= ma50_2_min_ago and deviation_sell < -0.20 )
+                    #deviation_sell = ma2_last / last_trade_price
+                   
                 )):
                     sell = " SELL #17 (12-24 min) con ma50 > "
                     action = "sell"
                     
                 
-                
-                
+                    
                 elif (
                     
                     
