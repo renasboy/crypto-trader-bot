@@ -1465,7 +1465,7 @@ class ro_cano_che_ritorna:
                 if (
                     
                     #ma2_last < ma2_2_min_ago
-                    ( ma50_last >= ma50_2_min_ago and ( ma3_last < ma25_last and deviation_sell > 0.18 )  
+                    ( ma50_last >= ma50_2_min_ago and ( ma3_last < ma25_last and deviation_sell > 0.18 )) 
                  
                 ):
                     sell = " SELL #21 (24-40 min) con ma50 > "
