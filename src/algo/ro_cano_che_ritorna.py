@@ -232,7 +232,7 @@ class ro_cano_che_ritorna:
         
         # formula DEVIATION_SPAZIO_TEMPO ( per comprare in aggiunta al BUY 1 mentre sale con deviation )
         deviation_tempo_spazio = ( ma3_last / ma3_12_min_ago - 1 ) * 100 if ma3_12_min_ago else 0
-        self.algo_helper.log("deviation_tempo_spazio: {}".format(deviation_spazio_tempo))
+        self.algo_helper.log("deviation_spazio_tempo: {}".format(deviation_spazio_tempo))
         
         
         ####################################################################################################################################################
