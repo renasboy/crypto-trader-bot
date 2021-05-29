@@ -1275,7 +1275,7 @@ class ro_cano_che_ritorna:
                 elif (
                     
                     #ma2_last < ma2_2_min_ago
-                    ( ma50_last < ma50_2_min_ago and ( ma3_last < ma18_last and deviation_sell > 0.23 )
+                    ( ma50_last < ma50_2_min_ago and ( ma3_last < ma18_last and deviation_sell > 0.23 ))
                     #or ( ma50_last < ma50_2_min_ago and ( ma3_last < ma8_last and deviation_sell > 0.60 )) vendeva mentre risaliva dal crollo
                     #deviation_sell = ma2_last / last_trade_price
                     
