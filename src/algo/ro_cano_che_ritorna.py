@@ -382,7 +382,7 @@ class ro_cano_che_ritorna:
                         
                         ma78_last > ma78_20_min_ago
                         and deviation_spazio_tempo > 0.95
-                        and ma3_last > ma100_last
+                        and ma3_last > ma78_last
                        
                         #QUESTA CONDIZIONE SPAZIO-TEMPO ERA UNA TUA IDEA !
                         #vai compaaaaaaaaaaaaaaaaaaaa
@@ -473,7 +473,7 @@ class ro_cano_che_ritorna:
                         
                         ma78_last < ma78_20_min_ago
                         and deviation_spazio_tempo > 0.95
-                        and ma3_last > ma100_last
+                        and ma3_last > ma78_last
                        
                         #QUESTA CONDIZIONE TEMPO - SPAZIO ERA UNA TUA IDEA !
                         #vai compaaaaaaaaaaaaaaaaaaaa
