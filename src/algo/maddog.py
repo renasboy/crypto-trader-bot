@@ -696,6 +696,6 @@ class maddog:
 
         # grazie compa ### ##
         #
-        # plinius  ###################
+        # plinius  ####################
         # comparo de dio ###### ############
         
