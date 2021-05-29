@@ -1097,7 +1097,7 @@ class ro_cano_che_ritorna:
                     
                 elif (
                    
-                    ( ma50_last >= ma50_2_min_ago and ( ma2_last < ma18_last and deviation_sell > 0.80 )
+                    ( ma50_last >= ma50_2_min_ago and ( ma2_last < ma18_last and deviation_sell > 0.80 ))
                     
                     #deviation_sell = ma2_last / last_trade_price
                 
