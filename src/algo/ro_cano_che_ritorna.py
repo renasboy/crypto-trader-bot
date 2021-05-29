@@ -992,6 +992,47 @@ class ro_cano_che_ritorna:
                     sell = " SELL #5 (0-3 min) con ma50 < "
                     action = "sell"
                     
+                    
+                    
+                elif (
+                    
+                    #( ma50_last < ma50_2_min_ago and ( ma3_last > ma16_last and ma3_last < ma16_last ) and deviation_sell > 0.23 ) or ( ma50_last < ma50_2_min_ago and ( ma3_last > ma8_last and ma3_last < ma8_last ) and deviation_sell > 0.60 ) or ( ma50_last < ma50_2_min_ago and ( ma3_last > ma78_last and ma3_last < ma78_last ) and deviation_sell < -0.20 ) 
+                    
+                    
+                    ( ma50_last < ma50_2_min_ago and ( ma3_last > ma18_last and ma3_last < ma16_last ) and deviation_sell > 0.23 ) or ( ma50_last < ma50_2_min_ago and ( ma3_last > ma8_last and ma3_last < ma8_last ) and deviation_sell > 0.60 ) or ( ma50_last < ma50_2_min_ago and ( ma3_last > ma78_last and ma3_last < ma78_last ) and deviation_sell < -0.20 ) 
+                  
+                ):
+                   
+                    sell = " SELL #5 (0-3 min) con ma50 < "
+                    action = "sell"
+                    
+                    
+                    
+                    
+                elif (
+                    
+                    #( ma50_last < ma50_2_min_ago and ( ma3_last > ma16_last and ma3_last < ma16_last ) and deviation_sell > 0.23 ) or ( ma50_last < ma50_2_min_ago and ( ma3_last > ma8_last and ma3_last < ma8_last ) and deviation_sell > 0.60 ) or ( ma50_last < ma50_2_min_ago and ( ma3_last > ma78_last and ma3_last < ma78_last ) and deviation_sell < -0.20 ) 
+                    
+                    
+                    ( ma50_last < ma50_2_min_ago and ( ma3_last > ma18_last and ma3_last < ma16_last ) and deviation_sell > 0.23 ) or ( ma50_last < ma50_2_min_ago and ( ma3_last > ma8_last and ma3_last < ma8_last ) and deviation_sell > 0.60 ) or ( ma50_last < ma50_2_min_ago and ( ma3_last > ma78_last and ma3_last < ma78_last ) and deviation_sell < -0.20 ) 
+                  
+                ):
+                   
+                    sell = " SELL #5 (0-3 min) con ma50 < "
+                    action = "sell"
+                    
+                    
+                    
+                    
+         ########################################################################################           
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                 
                 
                 
