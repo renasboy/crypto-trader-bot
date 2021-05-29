@@ -1651,11 +1651,22 @@ class ro_cano_che_ritorna:
                 
                 elif (
                     
-                    ( ma50_last < ma50_2_min_ago and ( ma3_last < ma18_last and deviation_sell > 0.23 )) or (( ma3_last > ma78_last and ma3_last < ma78_last ) and deviation_sell < -0.20 )
+                    ( ma50_last < ma50_2_min_ago and ( ma3_last < ma18_last and deviation_sell > 0.23 ))
              
                 ):
                     sell = " SELL #27 ( dopo 40 min ) con ma50 < "
                     action = "sell"
+                    
+                    
+                    
+                    
+                elif (
+                    
+                    ( ma50_last < ma50_2_min_ago and (( ma3_last > ma78_last and ma3_last < ma78_last ) and deviation_sell < -0.20 ))
+             
+                ):
+                    sell = " SELL #27 ( dopo 40 min ) con ma50 < "
+                    action = "sell"    
                     
                   
                 
@@ -1702,19 +1713,51 @@ class ro_cano_che_ritorna:
             # se ma78_last > ma78_2_min_ago si aziona lo stop loss in un altro modo !
             
             if (
-                ( ma50_last >= ma50_2_min_ago and ( ma2_last < ma36_last and deviation_sell < -0.68 )) or ( ma50_last >= ma50_2_min_ago and ma2_last < ma36_last and deviation_sell < -0.63 ) or ( ma50_last >= ma50_2_min_ago and ma8_last < ma39_last and deviation_sell < -0.45 )
+                ( ma50_last >= ma50_2_min_ago and ( ma2_last < ma36_last and deviation_sell < -0.68 )) or ( ma50_last >= ma50_2_min_ago and ma8_last < ma39_last and deviation_sell < -0.45 )
                 
            
             ):
                 sell = " SELL # SALVAGENTE 1 "
                 action = "sell"
                 
+                
+                
+                
+            elif (
+                ( ma50_last >= ma50_2_min_ago and ma2_last < ma36_last and deviation_sell < -0.63 )
+                
+           
+            ):
+                sell = " SELL # SALVAGENTE 1 "
+                action = "sell"
+            
+            
+            
+            
+            elif (
+                ( ma50_last >= ma50_2_min_ago and ma8_last < ma39_last and deviation_sell < -0.45 )
+                
+           
+            ):
+                sell = " SELL # SALVAGENTE 1 "
+                action = "sell"   
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
             #######################################################################################################################################################    
             
             
             elif (
             
-                ( ma50_last >= ma50_2_min_ago and ( ma2_last < ma36_last and deviation_sell < -0.80 )) or ( ma50_last >= ma50_2_min_ago and ( ma8_last < ma39_last and deviation_sell < -0.70 )) 
+                ( ma50_last >= ma50_2_min_ago and ( ma2_last < ma36_last and deviation_sell < -0.80 ))
                 
                 #or ( deviation_sell_ma78 < -0.43 )
                 #ha venduto anche questa durante il crollo - punto rosso sovrapposto al punto verde 
@@ -1722,11 +1765,31 @@ class ro_cano_che_ritorna:
                 #vediamo
             ):
                 sell = " SELL # SALVAGENTE 2 "
-                action = "sell"  
+                action = "sell"
+                
+                
+                
+                
+            elif (
+            
+                ( ma50_last >= ma50_2_min_ago and ( ma8_last < ma39_last and deviation_sell < -0.70 )) 
+                
+                #or ( deviation_sell_ma78 < -0.43 )
+                #ha venduto anche questa durante il crollo - punto rosso sovrapposto al punto verde 
+                # e gli ho detto che and ma3 deve andare sotto ma13 per vendere .
+                #vediamo
+            ):
+                sell = " SELL # SALVAGENTE 2 "
+                action = "sell"
+                
+                
+                
             
             
             #########################################################################################################################################################
-           
+            
+            
+          
 
             #2) ro cano VENDE " DOPO x MINUTI " "max hold time" riga 91
                 # HA VENDUTO DOPO 20 MINUTI !
