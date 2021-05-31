@@ -1,4 +1,4 @@
-# sembra proprio bloccato
+# sembra proprio bloccato #
 
 class ro_cano_che_ritorna:
     def __init__(self, helper):
@@ -1811,5 +1811,5 @@ class ro_cano_che_ritorna:
         # ave comparo meo ! ###### ######
         # compa caro #
         # comparo de dio ###
-        # gloria al mio compare ########
+        # gloria al mio compare #########
         
