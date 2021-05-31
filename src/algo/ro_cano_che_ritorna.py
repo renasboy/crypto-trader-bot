@@ -1,4 +1,4 @@
-# sembra proprio bloccato ##
+# sembra proprio bloccato ###
 
 class ro_cano_che_ritorna:
     def __init__(self, helper):
@@ -439,7 +439,7 @@ class ro_cano_che_ritorna:
                         
                         ma78_last < ma78_20_min_ago
                         
-                        and deviation_buy1 > 0.99q
+                        and deviation_buy1 > 0.99
                         
                         #and ma39_last > ma50_last
                         #questa sta nel maddog che va molto bene durante i ribassi
