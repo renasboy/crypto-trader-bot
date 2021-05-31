@@ -323,7 +323,7 @@ class ro_cano_che_ritorna:
                     if (
                        
                         
-                        ( ma78_last > ma78_20_min_ago and ( deviation_buy1 > 0.10 and ( ma8_prev < ma50_prev and ma8_last > ma50_last )))
+                        ma78_last > ma78_20_min_ago and ( deviation_buy1 > 0.10 and ( ma8_prev < ma50_prev and ma8_last > ma50_last ))
                       
                         
                         
@@ -351,7 +351,7 @@ class ro_cano_che_ritorna:
                         
                         ma78_last > ma78_20_min_ago
                       
-                        and ( deviation_buy1 > 0.13 )
+                        and deviation_buy1 > 0.13
                         and deviation_pendenza_ma8 > 0.10
                         
                         #se deve comprare con deviation DEVE AVERE ANCHE UNA PENDENZA !
@@ -397,17 +397,7 @@ class ro_cano_che_ritorna:
                         
                         
                         
-                        
-                     
-                       
-                        
-                        
-                        
-                    
-                    
-                    
-                    
-                    
+                  
                     
                     
                     # BUY 1 DURANTE IL RIBASSO con INCROCIO CLASSICO
@@ -449,7 +439,7 @@ class ro_cano_che_ritorna:
                         
                         ma78_last < ma78_20_min_ago
                         
-                        and ( deviation_buy1 > 0.99 )
+                        and deviation_buy1 > 0.99q
                         
                         #and ma39_last > ma50_last
                         #questa sta nel maddog che va molto bene durante i ribassi
