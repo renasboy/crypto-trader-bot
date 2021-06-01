@@ -1668,7 +1668,7 @@ class ro_cano_che_ritorna:
             
             elif (
                 
-                ma50_last >= ma50_2_min_ago and (( ma8_last > ma39_last and ma8_last < ma39_last ) and deviation_sell < -0.45 ))
+                ma50_last >= ma50_2_min_ago and (( ma8_last > ma39_last and ma8_last < ma39_last ) and deviation_sell < -0.45 )
            
             ):
                 sell = " SALVAGENTE 3 "
