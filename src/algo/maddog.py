@@ -644,7 +644,7 @@ class maddog:
                 
             elif (
             
-                deviation_sell < -0.29
+                deviation_sell < -0.32
                 #deviation_sell = ma3_last / ma78_last
                 
             ):
