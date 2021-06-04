@@ -59,7 +59,12 @@ class influx_algo_helper:
 
     def ma_minutes_ago(self, period, minutes):
         query_ma = "SELECT moving_average(mean(price), {}) as ma FROM price_volume WHERE exchange = '{}' and symbol_1 = '{}' and symbol_2 = '{}' and time > now() - {}m GROUP BY time(1m) fill(previous) ORDER BY time DESC limit {}".format(
-            period, self.exchange, self.symbol_1, self.symbol_2, period * (minutes + 1), minutes + 1
+            period,
+            self.exchange,
+            self.symbol_1,
+            self.symbol_2,
+            period * (minutes + 1),
+            minutes + 1,
         )
         if period == 1:
             query_ma = "SELECT mean(price) as ma FROM price_volume WHERE exchange = '{}' and symbol_1 = '{}' and symbol_2 = '{}' and time > now() - 2m GROUP BY time(1m) fill(previous) ORDER BY time DESC limit 2".format(
