@@ -814,7 +814,7 @@ class ro_cano_che_ritorna:
                 
                 
                 if (
-                    ma50_last >= ma50_2_min_ago and (( ma3_last > ma25_last and ma3_last < ma25_last ) and deviation_sell > 0.18
+                    ma50_last >= ma50_2_min_ago and (( ma3_last > ma25_last and ma3_last < ma25_last ) and deviation_sell > 0.18 )
                 
                 ):
                     sell = " SELL 15 (5-12 min) con ma50 > "
