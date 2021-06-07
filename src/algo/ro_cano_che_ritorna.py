@@ -1,4 +1,4 @@
-# c'e' un problema !!! # forse di allineamento ?
+# c'e' un problema !!! vediamo
 
 
 class ro_cano_che_ritorna:
@@ -411,6 +411,7 @@ class ro_cano_che_ritorna:
                         action = " buy "
 
                 ##############################################################################################################################
+                
 
                 # COMPRA sessione 2 - LA PENDENZA COMINCIA DA 0.08
 
@@ -533,14 +534,14 @@ class ro_cano_che_ritorna:
                         # deviation_buy = ma2_last / last_trade_price
                         # deviation_prev = price / prev_trade_price
                     ):
-                        buy = "........................................................................................BUY 3 A "
-                        action = "buy"
+                        buy = "........................................................................................BUY 3 con PENDENZA ma33 > 0.05 "
+                        action = " buy "
                     
                     
                     
                     
                     elif (
-                        deviation_pendenza_ma33 > 0.05
+                        deviation_pendenza_ma33 > 0.04
                         and deviation_ma3_sopra_ma40 > 0.10
                         and (
                             deviation_buy3 > 0.13
@@ -562,14 +563,14 @@ class ro_cano_che_ritorna:
                         # deviation_buy = ma2_last / last_trade_price
                         # deviation_prev = price / prev_trade_price
                     ):
-                        buy = "........................................................................................BUY 3 B "
-                        action = "buy"
+                        buy = "................................................................................BUY 3 con PENDENZA ma33 > 0.04 ( e altre deviation ) "
+                        action = " buy "
                     
                     
                     
                     
                     elif (
-                        deviation_pendenza_ma33 > 0.08
+                        deviation_pendenza_ma33 > 0.03
                         and deviation_ma3_sopra_ma40 > 0.12
                         and (deviation_buy3 > 0.12 and deviation_buy_ma4 > 0.16)
                         # deviation_buy_ma4 = ma4_last / last_trade_price
@@ -585,14 +586,35 @@ class ro_cano_che_ritorna:
                         # deviation_buy = ma2_last / last_trade_price
                         # deviation_prev = price / prev_trade_price
                     ):
-                        buy = "........................................................................................BUY 3 C "
-                        action = "buy"
+                        buy = "..................................................................................BUY 3 con PENDENZA ma33 > 0.03 ( e altre deviation ) "
+                        action = " buy "
+                        
+                        
+                        
+                        
+                    elif (
+                        deviation_pendenza_ma33 > -0.03
+                        and deviation_ma3_sopra_ma40 > 0.12
+                        and (deviation_buy3 > 0.12 and deviation_buy_ma4 > 0.16)
+                        # deviation_buy_ma4 = ma4_last / last_trade_price
+                        # deviation_buy = ma2_last / last_trade_price
+                        # deviation_buy3 = ma8_last / ma78_last
+                        and ma39_last < ma39_2_min_ago
+                        and ma3_last > ma40_last
+                        and ma2_last >= ma4_last
+                        and ma2_last > ma50_last
+                        and ma2_last > ma78_last
+                        and ma4_last > ma78_last
+                        # deviation_buy3 = ma8_last / ma78_last
+                        # deviation_buy = ma2_last / last_trade_price
+                        # deviation_prev = price / prev_trade_price
+                    ):
+                        buy = "..................................................................................BUY 3 con PENDENZA ma33 > -0.03 ( e altre deviation ) "
+                        action = " buy "
                     
                     
                     
-                    
-                    
-                    # vediamo buy3 anche se mancherebbe un altro elif...
+                 
 
         #########################################################################################################################################
 
