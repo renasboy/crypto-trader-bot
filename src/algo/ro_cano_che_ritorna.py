@@ -1027,52 +1027,71 @@ class ro_cano_che_ritorna:
             elif seconds_since_last_trade > 2400:
                 
                 
-                if ma50_last >= ma50_2_min_ago and (
-                    (ma3_last > ma25_last and ma3_last < ma25_last)
-                    and deviation_sell > 0.18
+                    
+                if (
+                    ma50_last >= ma50_2_min_ago and (( ma3_last > ma25_last and ma3_last < ma25_last ) and deviation_sell > 0.18
+                    
                 ):
 
-                    sell = "SELL 34 ( dopo 40 min ) con ma50 >"
-                    action = "sell"
-
-                elif ma50_last >= ma50_2_min_ago and (
-                    (ma3_last > ma18_last and ma3_last < ma18_last)
-                    and deviation_sell > 0.60
+                    sell = " SELL 34 ( dopo 40 min ) con ma50 > "
+                    action = " sell "
+                
+                    
+                    
+                
+                    
+                elif (
+                    ma50_last >= ma50_2_min_ago and (( ma3_last > ma18_last and ma3_last < ma18_last ) and deviation_sell > 0.60
+                  
                 ):
 
-                    sell = "SELL 35 ( dopo 40 min ) con ma50 >"
-                    action = "sell"
+                    sell = " SELL 35 ( dopo 40 min ) con ma50 > "
+                    action = " sell "
 
                 
-
-                elif ma50_last >= ma50_2_min_ago and (
-                    (ma3_last > ma18_last and ma3_last < ma18_last)
-                    and deviation_mentre_ma50_sale > -0.70
+                    
+                    
+                elif (
+                    ma50_last >= ma50_2_min_ago and (( ma3_last > ma18_last and ma3_last < ma18_last ) and deviation_mentre_ma50_sale > -0.70
+                   
                 ):
-                    sell = "SELL 36 ( dopo 40 min ) con ma50 >"
-                    action = "sell"
-
-                elif ma50_last < ma50_2_min_ago and (
-                    (ma3_last > ma18_last and ma3_last < ma18_last)
-                    and deviation_sell > 0.23
+                    sell = " SELL 36 ( dopo 40 min ) con ma50 > "
+                    action = " sell "
+                
+                    
+                    
+                    
+                elif (
+                    ma50_last < ma50_2_min_ago and (( ma3_last > ma18_last and ma3_last < ma18_last ) and deviation_sell > 0.23
+                   
                 ):
-                    sell = "SELL 37 ( dopo 40 min ) con ma50 <"
-                    action = "sell"
-
-                elif ma50_last < ma50_2_min_ago and (
-                    (ma3_last > ma78_last and ma3_last < ma78_last)
-                    and deviation_sell < -0.20
+                    sell = " SELL 37 ( dopo 40 min ) con ma50 < "
+                    action = " sell "
+                
+                    
+                    
+                    
+                elif (
+                    ma50_last < ma50_2_min_ago and (( ma3_last > ma78_last and ma3_last < ma78_last ) and deviation_sell < -0.20
+                   
                 ):
-                    sell = "SELL 38 ( dopo 40 min ) con ma50 <"
-                    action = "sell"
-
-                elif ma50_last < ma50_2_min_ago and (
-                    (ma3_last > ma18_last and ma3_last < ma18_last)
-                    and deviation_sell < -0.75
+                    sell = " SELL 38 ( dopo 40 min ) con ma50 < "
+                    action = " sell "
+                
+                    
+                    
+                    
+                elif (
+                    ma50_last < ma50_2_min_ago and (( ma3_last > ma18_last and ma3_last < ma18_last ) and deviation_sell < -0.75
+                
                 ):
 
-                    sell = "SELL 39 ( dopo 40 min ) con ma50 <"
-                    action = "sell"
+                    sell = " SELL 39 ( dopo 40 min ) con ma50 < "
+                    action = " sell "
+                    
+                    
+                    
+                    
 
             ##################################################################################################################################
             
