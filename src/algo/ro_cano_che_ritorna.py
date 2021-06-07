@@ -412,7 +412,7 @@ class ro_cano_che_ritorna:
 
                 ##############################################################################################################################
 
-                # COMPRA sessione 2
+                # COMPRA sessione 2 - LA PENDENZA COMINCIA DA 0.08
 
                 elif self.session == 2:
 
@@ -512,6 +512,9 @@ class ro_cano_che_ritorna:
                 # CON " elif self.session == 3: " NON COMPRAVA PIU' ALLORA HO PRESO ELSE DA MADDOG CHE INVECE ANDAVA BENE
 
                 else:
+                    
+                    
+                    
                     if (
                         deviation_pendenza_ma33 > 0.05
                         and deviation_ma3_sopra_ma40 > 0.10
@@ -532,7 +535,10 @@ class ro_cano_che_ritorna:
                     ):
                         buy = "........................................................................................BUY 3 A "
                         action = "buy"
-
+                    
+                    
+                    
+                    
                     elif (
                         deviation_pendenza_ma33 > 0.05
                         and deviation_ma3_sopra_ma40 > 0.10
@@ -558,7 +564,10 @@ class ro_cano_che_ritorna:
                     ):
                         buy = "........................................................................................BUY 3 B "
                         action = "buy"
-
+                    
+                    
+                    
+                    
                     elif (
                         deviation_pendenza_ma33 > 0.08
                         and deviation_ma3_sopra_ma40 > 0.12
@@ -578,7 +587,11 @@ class ro_cano_che_ritorna:
                     ):
                         buy = "........................................................................................BUY 3 C "
                         action = "buy"
-
+                    
+                    
+                    
+                    
+                    
                     # vediamo buy3 anche se mancherebbe un altro elif...
 
         #########################################################################################################################################
