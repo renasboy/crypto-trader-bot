@@ -220,7 +220,7 @@ class ro_cano_che_ritorna:
             (ma8_last / ma8_4_min_ago - 1) * 100 if ma8_4_min_ago else 0
         )
         self.algo_helper.log(
-            "deviation_pendenza_ma33: {}".format(deviation_pendenza_ma8)
+            "deviation_pendenza_ma33: {}".format(deviation_pendenza_ma33)
         )
 
         # formula DEVIATION_SPAZIO_TEMPO ( per comprare se c'e' una velocita' nel rialzo del prezzo )
