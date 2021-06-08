@@ -174,11 +174,7 @@ class ro_cano_che_ritorna:
         deviation_buy_crollo = (ma3_last / ma13_last - 1) * 100 if ma13_last else 0
         self.algo_helper.log("deviation_buy_crollo: {}".format(deviation_buy_crollo))
 
-        #######################################################################################################################################################
-        # formula prezzo piu' alto nella fascia ! riga 242 - 266
-        highest_price_50_min_ago = self.algo_helper.highest_price_minutes_ago(50)
-
-        ######################################################################################################################################################
+       
         # formula DEVIATION_sell_ma78
         deviation_sell_ma78 = (ma2_last / ma78_last - 1) * 100 if ma78_last else 0
         self.algo_helper.log("deviation_sell_ma78: {}".format(deviation_sell_ma78))
