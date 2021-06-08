@@ -289,26 +289,29 @@ class ro_cano_che_ritorna:
                 # COMPRA sessione 1
 
                 if self.session == 1:
+                    
+                    
 
                     # BUY 1 DURANTE IL RIALZO con INCROCIO CLASSICO
 
                     if (
                         ma78_last > ma78_20_min_ago
-                        and (
-                            deviation_buy1 > 0.10
-                            and (ma8_prev < ma50_prev and ma8_last > ma50_last)
-                        )
+                        and ( deviation_buy1 > 0.10 and ( ma8_prev < ma50_prev and ma8_last > ma50_last ))
+                     
                         and price > price_2_min_ago
                         and ma2_last > ma2_2_min_ago
                         and ma4_last > ma8_last
                         and ma8_last > ma50_last
-                        # and ma16_last > ma16_2_min_ago
+                        
                         # deviation_buy1 = ma8_last / ma78_last
                     ):
 
                         buy = ".............................................................BUY 1 DURANTE IL RIALZO con INCROCIO CLASSICO "
                         action = " buy "
-
+                    
+                    
+                    
+                    
                     # BUY 1 DURANTE IL RIALZO con LA DEVIATION BUY
 
                     elif (
@@ -321,34 +324,38 @@ class ro_cano_che_ritorna:
                         and ma4_last > ma4_2_min_ago
                         # and ma4_last > ma8_last
                         and ma8_last > ma50_last
-                        # and ma16_last > ma16_2_min_ago
+                        
                         # deviation_buy1 = ma8_last / ma78_last
                     ):
 
                         buy = ".............................................................BUY 1 DURANTE IL RIALZO con LA DEVIATION "
                         action = " buy "
-
+                    
+                    
+                    
                     # BUY 1 DURANTE IL RIALZO con DEVIATION_SPAZIO_TEMPO
 
                     elif (
                         ma78_last > ma78_20_min_ago
                         and deviation_spazio_tempo > 0.95
                         and ma3_last > ma78_last
+                        
                         # QUESTA CONDIZIONE SPAZIO-TEMPO ERA UNA TUA IDEA !
                         # deviation_buy1 = ma8_last / ma78_last
                     ):
 
                         buy = "..............................................................BUY 1 DURANTE IL RIALZO con DEVIATION_SPAZIO_TEMPO "
                         action = " buy "
-
+                    
+                    
+                    
+                    
                     # BUY 1 DURANTE IL RIBASSO con INCROCIO CLASSICO
 
                     elif (
                         ma78_last < ma78_20_min_ago
-                        and (
-                            deviation_buy1 > 0.80
-                            and (ma18_prev < ma78_prev and ma18_last > ma78_last)
-                        )
+                        and (deviation_buy1 > 0.80 and (ma18_prev < ma78_prev and ma18_last > ma78_last))
+                       
                         and ma8_last > ma50_last
                         and price > price_2_min_ago
                         and ma2_last > ma2_2_min_ago
@@ -358,7 +365,9 @@ class ro_cano_che_ritorna:
 
                         buy = ".............................................................BUY 1 DURANTE IL RIBASSO con INCROCIO CLASSICO "
                         action = " buy "
-
+                    
+                    
+                    
                     # BUY 1 DURANTE IL RIBASSO con DEVIATION
 
                     elif (
@@ -369,21 +378,24 @@ class ro_cano_che_ritorna:
 
                         buy = "..............................................................BUY 1 DURANTE IL RIBASSO con DEVIATION "
                         action = " buy "
-
+                    
+                    
+                    
                     # BUY 1 DURANTE IL RIBASSO con DEVIATION_SPAZIO_TEMPO
 
                     elif (
                         ma78_last < ma78_20_min_ago
                         and deviation_spazio_tempo > 0.95
                         and ma3_last > ma78_last
-                        # QUESTA CONDIZIONE TEMPO - SPAZIO ERA UNA TUA IDEA !
-                        # vai compaaaaaaaaaaaaaaaaaaaa
+                       
                         # deviation_buy1 = ma8_last / ma78_last
                     ):
 
                         buy = "...............................................................BUY 1 DURANTE IL RIBASSO con DEVIATION_SPAZIO_TEMPO "
                         action = " buy "
-
+                    
+                    
+                    
                     ##############################################################################################################################
                     # IMPORTANTISSIMO ! SOLO PER IL BUY 1 - PER COMPRARE DURANTE IL CROLLO - compa prega per me - ( cruise - david gilmour )
                     ##############################################################################################################################
@@ -392,24 +404,25 @@ class ro_cano_che_ritorna:
                     elif (
                         price > price_2_min_ago
                         and ma2_last > ma2_2_min_ago
-                        and (
-                            deviation_buy1 < -2.30
-                            and ma8_prev < ma25_prev
-                            and ma8_last > ma25_last
-                        )
+                        and ( deviation_buy1 < -2.30 and (ma8_prev < ma25_prev and ma8_last > ma25_last ))
+                      
                     ):
                         buy = "......................................................................BUY DURANTE IL CROLLO - modo 1 "
                         action = " buy "
-
+                    
+                    
+                    
                     # BUY  SECONDO MODO - DURANTE IL CROLLO
                     elif (
                         price > price_2_min_ago
                         and ma2_last > ma2_2_min_ago
-                        and (deviation_buy1 < -2.40 and deviation_buy_crollo > 0.39)
+                        and ( deviation_buy1 < -2.40 and deviation_buy_crollo > 0.39 )
                     ):
                         buy = "......................................................................BUY DURANTE IL CROLLO - modo 2 "
                         action = " buy "
-
+                
+                
+                
                 ##############################################################################################################################
                 
 
@@ -420,17 +433,8 @@ class ro_cano_che_ritorna:
                     if (
                         deviation_pendenza_ma33 > 0.08
                         and deviation_ma3_sopra_ma40 > 0.12
-                        and (
-                            (ma4_prev < ma9_prev and ma4_last > ma9_last)
-                            and deviation_buy_ma4 > 0.12
-                        )
-                        # deviation_buy_ma4 = ma4_last / last_trade_price
-                        # deviation_buy = ma2_last / last_trade_price SCHIZZA IN ALTO TROPPO VELOCEMENTE QUASI COME IL PREZZO
-                        # deviation_buy2 = ma8_last / ma78_last
-                        and ma25_last > ma25_2_min_ago
-                        # ma8>ma78
-                        # punto verde dall' ultimo punto rosso (ma3-last trade)
-                        # punto verde dall' ultimo punto verde
+                        and ((ma4_prev < ma9_prev and ma4_last > ma9_last) and deviation_buy_ma4 > 0.12 )
+                      
                         and ma2_last > ma2_2_min_ago
                         and price > price_2_min_ago
                         and ma4_last > ma78_last
@@ -444,19 +448,14 @@ class ro_cano_che_ritorna:
                     elif (
                         deviation_pendenza_ma33 > 0.07
                         and deviation_ma3_sopra_ma40 > 0.12
-                        and (
-                            deviation_buy2 > 0.12
-                            and deviation_buy_ma4 > 0.12
-                            and deviation_prev > 0.22
-                        )
-                        # deviation_buy_ma4 = ma4_last / last_trade_price
-                        # deviation_buy = ma2_last / last_trade_price SCHIZZA IN ALTO TROPPO VELOCEMENTE QUASI COME IL PREZZO
-                        # deviation_buy2 = ma8_last / ma78_last
-                        and ma25_last > ma25_2_min_ago
+                        and deviation_buy2 > 0.12  
+                        and deviation_buy_ma4 > 0.12
+                        and deviation_prev > 0.22 
+                          
                         and ma2_last > ma2_2_min_ago
-                        and price > price_2_min_ago
                         and ma4_last > ma78_last
                         and ma3_last > ma40_last
+                        
                     ):
                         buy = "........................................................................BUY 2 con PENDENZA ma33 > 0.07  "
                         action = " buy "
@@ -468,18 +467,12 @@ class ro_cano_che_ritorna:
                     elif (
                         deviation_pendenza_ma33 > 0.06
                         and deviation_ma3_sopra_ma40 > 0.12
-                        and (
-                            (ma4_prev < ma9_prev and ma4_last > ma9_last)
-                            and deviation_buy_ma4 > 0.12
-                        )
-                        # deviation_buy_ma4 = ma4_last / last_trade_price
-                        # deviation_buy = ma2_last / last_trade_price
-                        # deviation_buy2 = ma8_last / ma78_last
-                        and ma25_last > ma25_2_min_ago
-                        and ma4_last > ma78_last
+                        and (( ma4_prev < ma9_prev and ma4_last > ma9_last ) and deviation_buy_ma4 > 0.12 )
+                        
                         and ma2_last > ma2_2_min_ago
-                        and price > price_2_min_ago
                         and ma3_last > ma40_last
+                        and ma4_last > ma78_last
+                        
                     ):
                         buy = ".................................................................................BUY 2 con PENDENZA ma33 > 0.06 "
                         action = " buy "
@@ -491,12 +484,13 @@ class ro_cano_che_ritorna:
                     elif (
                         deviation_pendenza_ma33 > -0.05
                         and deviation_ma3_sopra_ma40 > 0.12
-                        and (deviation_buy2 > 0.15 and deviation_buy_ma4 > 0.16)
-                        and ma25_last > ma25_2_min_ago
-                        and ma4_last > ma78_last
+                        and deviation_buy2 > 0.15 
+                        and deviation_buy_ma4 > 0.16
+                       
                         and ma2_last > ma2_2_min_ago
-                        and price > price_2_min_ago
                         and ma3_last > ma40_last
+                        and ma4_last > ma78_last
+                        
                     ):
                         buy = ".................................................................................BUY 2 con PENDENZA ma33 > -0.05 "
                         action = " buy "
@@ -514,25 +508,18 @@ class ro_cano_che_ritorna:
 
                 else:
                     
-                    
-                    
+                   
                     if (
                         deviation_pendenza_ma33 > 0.05
                         and deviation_ma3_sopra_ma40 > 0.10
-                        and (
-                            (ma4_prev < ma9_prev and ma4_last > ma9_last)
-                            and deviation_buy_ma4 > 0.10
-                        )
-                        # deviation_buy_ma4 = ma4_last / last_trade_price
-                        # deviation_buy3 = ma8_last / ma78_last
-                        and ma4_last > ma78_last
+                        and (( ma4_prev < ma9_prev and ma4_last > ma9_last ) and deviation_buy_ma4 > 0.10 )
+                       
+                       
                         and ma2_last >= ma4_last
-                        and price > price_2_min_ago
+                        and ma4_last > ma78_last
                         and ma2_last > ma50_last
                         and ma2_last > ma78_last
-                        # deviation_buy3 = ma8_last / ma78_last
-                        # deviation_buy = ma2_last / last_trade_price
-                        # deviation_prev = price / prev_trade_price
+                       
                     ):
                         buy = "........................................................................................BUY 3 con PENDENZA ma33 > 0.05 "
                         action = " buy "
@@ -541,27 +528,18 @@ class ro_cano_che_ritorna:
                     
                     
                     elif (
+                        
                         deviation_pendenza_ma33 > 0.04
                         and deviation_ma3_sopra_ma40 > 0.10
-                        and (
-                            deviation_buy3 > 0.13
-                            and deviation_buy_ma4 > 0.10
-                            and deviation_prev > 0.20
-                        )
-                        # deviation_buy_ma4 = ma4_last / last_trade_price
-                        # deviation_buy = ma2_last / last_trade_price
-                        # deviation_buy3 = ma8_last / ma78_last
-                        and ma4_last > ma78_last
+                        and deviation_buy3 > 0.13
+                        and deviation_buy_ma4 > 0.10   
+                        and deviation_prev > 0.20  
+                        
                         and ma2_last >= ma4_last
-                        and price > price_2_min_ago
                         and ma2_last > ma50_last
                         and ma2_last > ma78_last
-                        # and ma39_last > ma39_2_min_ago
-                        # and price > price_3_min_ago
-                        # and ma2_last > ma2_2_min_ago
-                        # deviation_buy3 = ma8_last / ma78_last
-                        # deviation_buy = ma2_last / last_trade_price
-                        # deviation_prev = price / prev_trade_price
+                        and ma4_last > ma78_last
+                        
                     ):
                         buy = "................................................................................BUY 3 con PENDENZA ma33 > 0.04 ( e altre deviation ) "
                         action = " buy "
@@ -572,19 +550,15 @@ class ro_cano_che_ritorna:
                     elif (
                         deviation_pendenza_ma33 > 0.03
                         and deviation_ma3_sopra_ma40 > 0.12
-                        and (deviation_buy3 > 0.12 and deviation_buy_ma4 > 0.16)
-                        # deviation_buy_ma4 = ma4_last / last_trade_price
-                        # deviation_buy = ma2_last / last_trade_price
-                        # deviation_buy3 = ma8_last / ma78_last
-                        and ma39_last < ma39_2_min_ago
-                        and ma3_last > ma40_last
+                        and deviation_buy3 > 0.12
+                        and deviation_buy_ma4 > 0.16
+                      
                         and ma2_last >= ma4_last
                         and ma2_last > ma50_last
                         and ma2_last > ma78_last
+                        and ma3_last > ma40_last
                         and ma4_last > ma78_last
-                        # deviation_buy3 = ma8_last / ma78_last
-                        # deviation_buy = ma2_last / last_trade_price
-                        # deviation_prev = price / prev_trade_price
+                       
                     ):
                         buy = "..................................................................................BUY 3 con PENDENZA ma33 > 0.03 ( e altre deviation ) "
                         action = " buy "
@@ -595,19 +569,15 @@ class ro_cano_che_ritorna:
                     elif (
                         deviation_pendenza_ma33 > -0.03
                         and deviation_ma3_sopra_ma40 > 0.12
-                        and (deviation_buy3 > 0.12 and deviation_buy_ma4 > 0.16)
-                        # deviation_buy_ma4 = ma4_last / last_trade_price
-                        # deviation_buy = ma2_last / last_trade_price
-                        # deviation_buy3 = ma8_last / ma78_last
-                        and ma39_last < ma39_2_min_ago
-                        and ma3_last > ma40_last
+                        and deviation_buy3 > 0.12
+                        and deviation_buy_ma4 > 0.16
+                       
                         and ma2_last >= ma4_last
                         and ma2_last > ma50_last
                         and ma2_last > ma78_last
+                        and ma3_last > ma40_last
                         and ma4_last > ma78_last
-                        # deviation_buy3 = ma8_last / ma78_last
-                        # deviation_buy = ma2_last / last_trade_price
-                        # deviation_prev = price / prev_trade_price
+                      
                     ):
                         buy = "..................................................................................BUY 3 con PENDENZA ma33 > -0.03 ( e altre deviation ) "
                         action = " buy "
