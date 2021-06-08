@@ -199,8 +199,8 @@ class maddog:
                         action = "buy"
 
                     elif (
-                        deviation_pendenza_ma78 > 0.03
-                        and (ma78_last >= ma78_20_min_ago and (deviation_buy1 > 0.02))
+                        deviation_pendenza_ma78 > 0.02
+                        and (ma78_last >= ma78_20_min_ago and (deviation_buy1 > 0.01))
                         and ma3_last > ma40_last
                     ):
                         buy = "................................................................... BUY 1 - con DEVIATION buy1 e ma78 IN RIALZO "
