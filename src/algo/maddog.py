@@ -220,9 +220,10 @@ class maddog:
                     ):
                         buy = "...............................................................BUY 1 - con INCROCIO CLASSICO e ma78 IN RIBASSO"
                         action = "buy"
-
+                    
+                    
                     elif (
-                        (ma78_last < ma78_20_min_ago and (deviation_buy1 > 0.99))
+                        (ma78_last < ma78_20_min_ago and ( deviation_buy1 > 0.79 ))
                         # deviation_buy1 = ma8_last / ma78_last
                         and ma39_last > ma50_last
                         and ma2_last > ma2_2_min_ago
