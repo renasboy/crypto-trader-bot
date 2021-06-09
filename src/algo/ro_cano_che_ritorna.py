@@ -182,7 +182,7 @@ class ro_cano_che_ritorna:
         # formula DEVIATION_ma3_sopra_ma40
         deviation_ma3_sopra_ma40 = (ma3_last / ma40_last - 1) * 100 if ma40_last else 0
         self.algo_helper.log(
-            "deviation_ma3_sopra_ma40: {}".format(deviation_ma3_sopra_ma40))
+            "deviation_ma3_sopra_ma40: {}".format(deviation_ma3_sopra_ma40)
         )
 
         #################################################################################################################################################
