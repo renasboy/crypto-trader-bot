@@ -208,7 +208,7 @@ class ro_cano_che_ritorna:
             (ma33_last / ma33_5_min_ago - 1) * 100 if ma33_5_min_ago else 0
         )
         self.algo_helper.log(
-            "deviation_pendenza_ma33: {}".format(deviation_pendenza_ma33))
+            "deviation_pendenza_ma33: {}".format(deviation_pendenza_ma33)
         )
 
         # formula DEVIATION_PENDENZA_ma8  ( per comprare in aggiunta al BUY 1 mentre sale con deviation )
@@ -216,7 +216,7 @@ class ro_cano_che_ritorna:
             (ma8_last / ma8_4_min_ago - 1) * 100 if ma8_4_min_ago else 0
         )
         self.algo_helper.log(
-            "deviation_pendenza_ma33: {}".format(deviation_pendenza_ma33))
+            "deviation_pendenza_ma33: {}".format(deviation_pendenza_ma33)
         )
 
         # formula DEVIATION_SPAZIO_TEMPO ( per comprare se c'e' una velocita' nel rialzo del prezzo )
@@ -224,7 +224,7 @@ class ro_cano_che_ritorna:
             (ma3_last / ma3_12_min_ago - 1) * 100 if ma3_12_min_ago else 0
         )
         self.algo_helper.log(
-            "deviation_spazio_tempo: {}".format(deviation_spazio_tempo))
+            "deviation_spazio_tempo: {}".format(deviation_spazio_tempo)
         )
 
         ####################################################################################################################################################
