@@ -137,7 +137,7 @@ class ro_cano_che_ritorna:
         self.algo_helper.log("deviation_gabbia: {}".format(deviation_gabbia)
 
         # formula DEVIATION_buy1 per comprare durante il TREND RIBASSISTA
-        deviation_buy1 = (ma8_last / ma78_last - 1) * 100 if ma78_last else 0
+        deviation_buy1 = ((ma8_last / ma78_last) - 1) * 100 if ma78_last else 0
         self.algo_helper.log("deviation_buy1: {}".format(deviation_buy1)
 
         # formula DEVIATION_buy2 per la compra 2
