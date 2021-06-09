@@ -285,8 +285,8 @@ class ro_cano_che_ritorna:
                 and seconds_since_prev_trade <= min_prev_buy_delay_in_seconds
                 and deviation_prev > 0.20
             ) or (
-                seconds_since_last_trade == 0
-                or seconds_since_last_trade > min_buy_delay_in_seconds
+                seconds_since_prev_trade == 0
+                or seconds_since_prev_trade > min_buy_delay_in_seconds
                 
             ):
            
