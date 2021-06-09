@@ -261,29 +261,41 @@ class ro_cano_che_ritorna:
         # NON TOCCARE QUESTA CONDIZIONE (QUESTA DICE CHE STA IN MODO BUY, DEVO COMPRARE)
         if self.open and self.session and last_trade_action != "buy":
 
-            ###################################################################################
-
-            # COMPRA UN PO' PIU' SOPRA DELL' ULTIMO TRADE SE deviation_buy > x nei 540 secondi  ( quasi sempre IL SELL )
+            
+            
+            ######################################################################################################################################
+            ######################################################################################################################################
+            
+            
+            # COMPRA UN PO' PIU' SOPRA DELL' ULTIMO SELL ( aggiungere compra un po' piu' sopra dell' ultimo BUY deviation > 0.20 )
             if (
-                (
-                    seconds_since_last_trade > 0
-                    and seconds_since_last_trade <= min_buy_delay_in_seconds
-                    and deviation_buy > 0.20
-                )
-                # COMPRA UN PO' PIU' SOPRA DEL PENULTIMO TRADE SE deviation_prev > x nei 300 secondi ( qualche volta IL BUY)
-                or (
-                    seconds_since_prev_trade > 0
-                    and seconds_since_prev_trade <= min_prev_buy_delay_in_seconds
-                    and deviation_prev > 0.20
-                )
-                or (
-                    seconds_since_last_trade == 0
-                    or seconds_since_last_trade > min_buy_delay_in_seconds
-                )
+                seconds_since_last_trade > 0
+                and seconds_since_last_trade <= min_buy_delay_in_seconds
+                and deviation > 0.13
+            ) or (
+                seconds_since_last_trade == 0
+                or seconds_since_last_trade > min_buy_delay_in_seconds
             ):
 
-                ###########################################################################################################################################
-                ###########################################################################################################################################
+            
+            
+            # COMPRA UN PO' PIU' SOPRA DEL PENULTIMO TRADE SE deviation_prev > x nei 300 secondi ( qualche volta IL BUY)
+            if (
+                seconds_since_prev_trade > 0
+                and seconds_since_prev_trade <= min_prev_buy_delay_in_seconds
+                and deviation_prev > 0.20
+            ) or (
+                seconds_since_last_trade == 0
+                or seconds_since_last_trade > min_buy_delay_in_seconds
+                
+            ):
+           
+
+            ###########################################################################################################################################
+            ###########################################################################################################################################
+                
+                
+                
 
                 # COMPRA sessione 1
 
