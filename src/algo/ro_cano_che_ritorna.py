@@ -29,9 +29,9 @@ class ro_cano_che_ritorna:
         ma16_last, ma16_prev = self.algo_helper.ma_last_prev(16)
 
         ma17_last, ma17_prev = self.algo_helper.ma_last_prev(17)
-        
+
         ma18_last, ma18_prev = self.algo_helper.ma_last_prev(18)
-        
+
         ma20_last, ma20_prev = self.algo_helper.ma_last_prev(20)
 
         ma25_last, ma25_prev = self.algo_helper.ma_last_prev(25)
@@ -151,84 +151,78 @@ class ro_cano_che_ritorna:
         ########################################################################################################################
 
         # formula DEVIATION_buy per comprare UN PO' PIU' SOPRA DEL LAST TRADE ( di solito l' ultimo SELL )
-        deviation_buy = (ma2_last / last_trade_price - 1) * 100 if last_trade_price else 0 
-        self.algo_helper.log("deviation_buy: {}".format(deviation_buy))    
-       
-        
+        deviation_buy = (
+            (ma2_last / last_trade_price - 1) * 100 if last_trade_price else 0
+        )
+        self.algo_helper.log("deviation_buy: {}".format(deviation_buy))
 
         # formula DEVIATION_buy_ma4 per comprare UN PO' PIU' SOPRA DEL LAST TRADE ( di solito l' ultimo SELL ) ma PIU' LENTA ! PERCHE' ma2 si muove troppo disinvoltamente
-        deviation_buy_ma4 = (ma4_last / last_trade_price - 1) * 100 if last_trade_price else 0
-        self.algo_helper.log("deviation_buy_ma4: {}".format(deviation_buy_ma4))    
-        
-        
+        deviation_buy_ma4 = (
+            (ma4_last / last_trade_price - 1) * 100 if last_trade_price else 0
+        )
+        self.algo_helper.log("deviation_buy_ma4: {}".format(deviation_buy_ma4))
 
         # formula DEVIATION_prev per comprare UN PO' PIU' SOPRA DEL PREV TRADE ( di solito l' ultimo BUY )
         deviation_prev = (price / prev_trade_price - 1) * 100 if prev_trade_price else 0
         self.algo_helper.log("deviation_prev: {}".format(deviation_prev))
-        
-        
-        
+
         # formula DEVIATION_ma50 per vendere a una certa distanza da ma50
         deviation_ma50 = (ma2_last / ma50_last - 1) * 100 if ma50_last else 0
         self.algo_helper.log("deviation_ma50: {}".format(deviation_ma50))
-        
-        
-        
+
         # formula DEVIATION_buy_crollo per comprare a una certa distanza da ma13
         deviation_buy_crollo = (ma3_last / ma13_last - 1) * 100 if ma13_last else 0
         self.algo_helper.log("deviation_buy_crollo: {}".format(deviation_buy_crollo))
 
-        
-        
         # formula DEVIATION_sell_ma78
         deviation_sell_ma78 = (ma2_last / ma78_last - 1) * 100 if ma78_last else 0
         self.algo_helper.log("deviation_sell_ma78: {}".format(deviation_sell_ma78))
-        
-        
-        
+
         # formula DEVIATION_ma3_sopra_ma40
         deviation_ma3_sopra_ma40 = (ma3_last / ma40_last - 1) * 100 if ma40_last else 0
-        self.algo_helper.log("deviation_ma3_sopra_ma40: {}".format(deviation_ma3_sopra_ma40))
-            
-        
+        self.algo_helper.log(
+            "deviation_ma3_sopra_ma40: {}".format(deviation_ma3_sopra_ma40)
+        )
 
         #################################################################################################################################################
-        
-        
+
         # formula DEVIATION_mentre_ma50_sale (per vendere)
-        deviation_mentre_ma50_sale = (( last_trade_price / ma3_last - 1) * 100 ) if ma3_last else 0 
-        self.algo_helper.log("deviation_mentre_ma50_sale: {}".format(deviation_mentre_ma50_sale))
-        
-       
+        deviation_mentre_ma50_sale = (
+            ((last_trade_price / ma3_last - 1) * 100) if ma3_last else 0
+        )
+        self.algo_helper.log(
+            "deviation_mentre_ma50_sale: {}".format(deviation_mentre_ma50_sale)
+        )
+
         # formula DEVIATION_sell (per vendere)
-        deviation_sell = (ma3_last / last_trade_price - 1) * 100 if last_trade_price else 0
-        self.algo_helper.log("deviation_sell: {}".format(deviation_sell))   
-       
-        
+        deviation_sell = (
+            (ma3_last / last_trade_price - 1) * 100 if last_trade_price else 0
+        )
+        self.algo_helper.log("deviation_sell: {}".format(deviation_sell))
 
         # formula DEVIATION_PENDENZA_ma33  (per comprare)
-        deviation_pendenza_ma33 = (ma33_last / ma33_5_min_ago - 1) * 100 if ma33_5_min_ago else 0
-        self.algo_helper.log("deviation_pendenza_ma33: {}".format(deviation_pendenza_ma33))   
-        
-        
-            
-       
+        deviation_pendenza_ma33 = (
+            (ma33_last / ma33_5_min_ago - 1) * 100 if ma33_5_min_ago else 0
+        )
+        self.algo_helper.log(
+            "deviation_pendenza_ma33: {}".format(deviation_pendenza_ma33)
+        )
 
         # formula DEVIATION_PENDENZA_ma8  ( per comprare in aggiunta al BUY 1 mentre sale con deviation )
-        deviation_pendenza_ma8 = (ma8_last / ma8_4_min_ago - 1) * 100 if ma8_4_min_ago else 0
-        self.algo_helper.log("deviation_pendenza_ma33: {}".format(deviation_pendenza_ma33))    
-        
-        
-            
-        
+        deviation_pendenza_ma8 = (
+            (ma8_last / ma8_4_min_ago - 1) * 100 if ma8_4_min_ago else 0
+        )
+        self.algo_helper.log(
+            "deviation_pendenza_ma33: {}".format(deviation_pendenza_ma33)
+        )
 
         # formula DEVIATION_SPAZIO_TEMPO ( per comprare se c'e' una velocita' nel rialzo del prezzo )
-        deviation_spazio_tempo = (ma3_last / ma3_12_min_ago - 1) * 100 if ma3_12_min_ago else 0
-        self.algo_helper.log("deviation_spazio_tempo: {}".format(deviation_spazio_tempo))    
-        
-        
-            
-        
+        deviation_spazio_tempo = (
+            (ma3_last / ma3_12_min_ago - 1) * 100 if ma3_12_min_ago else 0
+        )
+        self.algo_helper.log(
+            "deviation_spazio_tempo: {}".format(deviation_spazio_tempo)
+        )
 
         ####################################################################################################################################################
 
@@ -260,16 +254,14 @@ class ro_cano_che_ritorna:
         # COMPRA
         # NON TOCCARE QUESTA CONDIZIONE (QUESTA DICE CHE STA IN MODO BUY, DEVO COMPRARE)
         if self.open and self.session and last_trade_action != "buy":
-            
-            
-            
+
             ######################################################################################################################################
             ######################################################################################################################################
-            
+
             '''
             """
             # COMPRA UN PO' PIU' SOPRA DELL' ULTIMO SELL ( aggiungere compra un po' piu' sopra dell' ultimo BUY deviation > 0.20 )
-            
+
             if (
                 seconds_since_last_trade > 0
                 and seconds_since_last_trade <= min_buy_delay_in_seconds
@@ -279,10 +271,10 @@ class ro_cano_che_ritorna:
                 or seconds_since_last_trade > min_buy_delay_in_seconds
             ):
 
-            
-           
+
+
             # COMPRA UN PO' PIU' SOPRA DEL PENULTIMO TRADE SE deviation_prev > x nei 300 secondi ( qualche volta IL BUY)
-            
+
             if (
                 seconds_since_prev_trade > 0
                 and seconds_since_prev_trade <= min_prev_buy_delay_in_seconds
@@ -290,316 +282,258 @@ class ro_cano_che_ritorna:
             ) or (
                 seconds_since_prev_trade == 0
                 or seconds_since_prev_trade > min_buy_delay_in_seconds
-                
+
             ):
             """
             '''
-            
+
             ###########################################################################################################################################
             ###########################################################################################################################################
-                
-                
-                
 
-                # COMPRA sessione 1
+            # COMPRA sessione 1
 
-                if self.session == 1:
-                    
-                    
+            if self.session == 1:
 
-                    # BUY 1 DURANTE IL RIALZO con INCROCIO CLASSICO
+                # BUY 1 DURANTE IL RIALZO con INCROCIO CLASSICO
 
-                    if (
-                        ma78_last > ma78_20_min_ago
-                        and ( deviation_buy1 > 0.10 and ( ma8_prev < ma50_prev and ma8_last > ma50_last ))
-                     
-                        and price > price_2_min_ago
-                        and ma2_last > ma2_2_min_ago
-                        and ma4_last > ma8_last
-                        and ma8_last > ma50_last
-                        
-                        # deviation_buy1 = ma8_last / ma78_last
-                    ):
+                if (
+                    ma78_last > ma78_20_min_ago
+                    and (
+                        deviation_buy1 > 0.10
+                        and (ma8_prev < ma50_prev and ma8_last > ma50_last)
+                    )
+                    and price > price_2_min_ago
+                    and ma2_last > ma2_2_min_ago
+                    and ma4_last > ma8_last
+                    and ma8_last > ma50_last
+                    # deviation_buy1 = ma8_last / ma78_last
+                ):
 
-                        buy = ".............................................................BUY 1 DURANTE IL RIALZO con INCROCIO CLASSICO "
-                        action = " buy "
-                    
-                    
-                    
-                    
-                    # BUY 1 DURANTE IL RIALZO con LA DEVIATION BUY
+                    buy = ".............................................................BUY 1 DURANTE IL RIALZO con INCROCIO CLASSICO "
+                    action = " buy "
 
-                    elif (
-                        ma78_last > ma78_20_min_ago
-                        and deviation_buy1 > 0.11
-                        and deviation_pendenza_ma8 > 0.10
-                        # se deve comprare con deviation DEVE AVERE ANCHE UNA PENDENZA !
-                        and price > price_2_min_ago
-                        and ma2_last > ma2_2_min_ago
-                        and ma4_last > ma4_2_min_ago
-                        # and ma4_last > ma8_last
-                        and ma8_last > ma50_last
-                        
-                        # deviation_buy1 = ma8_last / ma78_last
-                    ):
+                # BUY 1 DURANTE IL RIALZO con LA DEVIATION BUY
 
-                        buy = ".............................................................BUY 1 DURANTE IL RIALZO con LA DEVIATION "
-                        action = " buy "
-                    
-                    
-                    
-                    # BUY 1 DURANTE IL RIALZO con DEVIATION_SPAZIO_TEMPO
+                elif (
+                    ma78_last > ma78_20_min_ago
+                    and deviation_buy1 > 0.11
+                    and deviation_pendenza_ma8 > 0.10
+                    # se deve comprare con deviation DEVE AVERE ANCHE UNA PENDENZA !
+                    and price > price_2_min_ago
+                    and ma2_last > ma2_2_min_ago
+                    and ma4_last > ma4_2_min_ago
+                    # and ma4_last > ma8_last
+                    and ma8_last > ma50_last
+                    # deviation_buy1 = ma8_last / ma78_last
+                ):
 
-                    elif (
-                        ma78_last > ma78_20_min_ago
-                        and deviation_spazio_tempo > 0.95
-                        and ma3_last > ma78_last
-                        
-                        # QUESTA CONDIZIONE SPAZIO-TEMPO ERA UNA TUA IDEA !
-                        # deviation_buy1 = ma8_last / ma78_last
-                    ):
+                    buy = ".............................................................BUY 1 DURANTE IL RIALZO con LA DEVIATION "
+                    action = " buy "
 
-                        buy = "..............................................................BUY 1 DURANTE IL RIALZO con DEVIATION_SPAZIO_TEMPO "
-                        action = " buy "
-                    
-                    
-                    
-                    
-                    # BUY 1 DURANTE IL RIBASSO con INCROCIO CLASSICO
+                # BUY 1 DURANTE IL RIALZO con DEVIATION_SPAZIO_TEMPO
 
-                    elif (
-                        ma78_last < ma78_20_min_ago
-                        and (deviation_buy1 > 0.80 and (ma18_prev < ma78_prev and ma18_last > ma78_last))
-                       
-                        and ma8_last > ma50_last
-                        and price > price_2_min_ago
-                        and ma2_last > ma2_2_min_ago
-                        and ma4_last > ma4_2_min_ago
-                        # deviation_buy1 = ma8_last / ma78_last
-                    ):
+                elif (
+                    ma78_last > ma78_20_min_ago
+                    and deviation_spazio_tempo > 0.95
+                    and ma3_last > ma78_last
+                    # QUESTA CONDIZIONE SPAZIO-TEMPO ERA UNA TUA IDEA !
+                    # deviation_buy1 = ma8_last / ma78_last
+                ):
 
-                        buy = ".............................................................BUY 1 DURANTE IL RIBASSO con INCROCIO CLASSICO "
-                        action = " buy "
-                    
-                    
-                    
-                    # BUY 1 DURANTE IL RIBASSO con DEVIATION
+                    buy = "..............................................................BUY 1 DURANTE IL RIALZO con DEVIATION_SPAZIO_TEMPO "
+                    action = " buy "
 
-                    elif (
-                        ma78_last < ma78_20_min_ago
-                        and deviation_buy1 > 0.99
-                        # deviation_buy1 = ma8_last / ma78_last
-                    ):
+                # BUY 1 DURANTE IL RIBASSO con INCROCIO CLASSICO
 
-                        buy = "..............................................................BUY 1 DURANTE IL RIBASSO con DEVIATION "
-                        action = " buy "
-                    
-                    
-                    
-                    # BUY 1 DURANTE IL RIBASSO con DEVIATION_SPAZIO_TEMPO
+                elif (
+                    ma78_last < ma78_20_min_ago
+                    and (
+                        deviation_buy1 > 0.80
+                        and (ma18_prev < ma78_prev and ma18_last > ma78_last)
+                    )
+                    and ma8_last > ma50_last
+                    and price > price_2_min_ago
+                    and ma2_last > ma2_2_min_ago
+                    and ma4_last > ma4_2_min_ago
+                    # deviation_buy1 = ma8_last / ma78_last
+                ):
 
-                    elif (
-                        ma78_last < ma78_20_min_ago
-                        and deviation_spazio_tempo > 0.95
-                        and ma3_last > ma78_last
-                       
-                        # deviation_buy1 = ma8_last / ma78_last
-                    ):
+                    buy = ".............................................................BUY 1 DURANTE IL RIBASSO con INCROCIO CLASSICO "
+                    action = " buy "
 
-                        buy = "...............................................................BUY 1 DURANTE IL RIBASSO con DEVIATION_SPAZIO_TEMPO "
-                        action = " buy "
-                    
-                    
-                    
-                    ##############################################################################################################################
-                    # IMPORTANTISSIMO ! SOLO PER IL BUY 1 - PER COMPRARE DURANTE IL CROLLO - compa prega per me - ( cruise - david gilmour )
-                    ##############################################################################################################################
+                # BUY 1 DURANTE IL RIBASSO con DEVIATION
 
-                    # BUY  PRIMO MODO DURANTE IL CROLLO
-                    elif (
-                        price > price_2_min_ago
-                        and ma2_last > ma2_2_min_ago
-                        and ( deviation_buy1 < -2.30 and (ma8_prev < ma25_prev and ma8_last > ma25_last ))
-                      
-                    ):
-                        buy = "......................................................................BUY DURANTE IL CROLLO - modo 1 "
-                        action = " buy "
-                    
-                    
-                    
-                    # BUY  SECONDO MODO - DURANTE IL CROLLO
-                    elif (
-                        price > price_2_min_ago
-                        and ma2_last > ma2_2_min_ago
-                        and ( deviation_buy1 < -2.40 and deviation_buy_crollo > 0.39 )
-                    ):
-                        buy = "......................................................................BUY DURANTE IL CROLLO - modo 2 "
-                        action = " buy "
-                
-                
-                
+                elif (
+                    ma78_last < ma78_20_min_ago
+                    and deviation_buy1 > 0.99
+                    # deviation_buy1 = ma8_last / ma78_last
+                ):
+
+                    buy = "..............................................................BUY 1 DURANTE IL RIBASSO con DEVIATION "
+                    action = " buy "
+
+                # BUY 1 DURANTE IL RIBASSO con DEVIATION_SPAZIO_TEMPO
+
+                elif (
+                    ma78_last < ma78_20_min_ago
+                    and deviation_spazio_tempo > 0.95
+                    and ma3_last > ma78_last
+                    # deviation_buy1 = ma8_last / ma78_last
+                ):
+
+                    buy = "...............................................................BUY 1 DURANTE IL RIBASSO con DEVIATION_SPAZIO_TEMPO "
+                    action = " buy "
+
                 ##############################################################################################################################
-                
+                # IMPORTANTISSIMO ! SOLO PER IL BUY 1 - PER COMPRARE DURANTE IL CROLLO - compa prega per me - ( cruise - david gilmour )
+                ##############################################################################################################################
 
-                # COMPRA sessione 2 - LA PENDENZA COMINCIA DA 0.08
+                # BUY  PRIMO MODO DURANTE IL CROLLO
+                elif (
+                    price > price_2_min_ago
+                    and ma2_last > ma2_2_min_ago
+                    and (
+                        deviation_buy1 < -2.30
+                        and (ma8_prev < ma25_prev and ma8_last > ma25_last)
+                    )
+                ):
+                    buy = "......................................................................BUY DURANTE IL CROLLO - modo 1 "
+                    action = " buy "
 
-                elif self.session == 2:
+                # BUY  SECONDO MODO - DURANTE IL CROLLO
+                elif (
+                    price > price_2_min_ago
+                    and ma2_last > ma2_2_min_ago
+                    and (deviation_buy1 < -2.40 and deviation_buy_crollo > 0.39)
+                ):
+                    buy = "......................................................................BUY DURANTE IL CROLLO - modo 2 "
+                    action = " buy "
 
-                    if (
-                        deviation_pendenza_ma33 > 0.08
-                        and deviation_ma3_sopra_ma40 > 0.12
-                        and ((ma4_prev < ma9_prev and ma4_last > ma9_last) and deviation_buy_ma4 > 0.12 )
-                      
-                        and ma2_last > ma2_2_min_ago
-                        and price > price_2_min_ago
-                        and ma4_last > ma78_last
-                        and ma3_last > ma40_last
-                    ):
-                        buy = "........................................................................BUY 2 con PENDENZA ma33 > 0.08 "
-                        action = " buy "
-                    
-                    
-                    
-                    elif (
-                        deviation_pendenza_ma33 > 0.07
-                        and deviation_ma3_sopra_ma40 > 0.12
-                        and deviation_buy2 > 0.12  
+            ##############################################################################################################################
+
+            # COMPRA sessione 2 - LA PENDENZA COMINCIA DA 0.08
+
+            elif self.session == 2:
+
+                if (
+                    deviation_pendenza_ma33 > 0.08
+                    and deviation_ma3_sopra_ma40 > 0.12
+                    and (
+                        (ma4_prev < ma9_prev and ma4_last > ma9_last)
                         and deviation_buy_ma4 > 0.12
-                        and deviation_prev > 0.22 
-                          
-                        and ma2_last > ma2_2_min_ago
-                        and ma4_last > ma78_last
-                        and ma3_last > ma40_last
-                        
-                    ):
-                        buy = "........................................................................BUY 2 con PENDENZA ma33 > 0.07  "
-                        action = " buy "
-                    
-                    
-                    
-                    
-                    
-                    elif (
-                        deviation_pendenza_ma33 > 0.06
-                        and deviation_ma3_sopra_ma40 > 0.12
-                        and (( ma4_prev < ma9_prev and ma4_last > ma9_last ) and deviation_buy_ma4 > 0.12 )
-                        
-                        and ma2_last > ma2_2_min_ago
-                        and ma3_last > ma40_last
-                        and ma4_last > ma78_last
-                        
-                    ):
-                        buy = ".................................................................................BUY 2 con PENDENZA ma33 > 0.06 "
-                        action = " buy "
-                    
-                    
-                    
-                    
-                    
-                    elif (
-                        deviation_pendenza_ma33 > -0.05
-                        and deviation_ma3_sopra_ma40 > 0.12
-                        and deviation_buy2 > 0.15 
-                        and deviation_buy_ma4 > 0.16
-                       
-                        and ma2_last > ma2_2_min_ago
-                        and ma3_last > ma40_last
-                        and ma4_last > ma78_last
-                        
-                    ):
-                        buy = ".................................................................................BUY 2 con PENDENZA ma33 > -0.05 "
-                        action = " buy "
-                        
-                        
+                    )
+                    and ma2_last > ma2_2_min_ago
+                    and price > price_2_min_ago
+                    and ma4_last > ma78_last
+                    and ma3_last > ma40_last
+                ):
+                    buy = "........................................................................BUY 2 con PENDENZA ma33 > 0.08 "
+                    action = " buy "
 
-                #######################################################################################################################
-                
-                
-                
-                # COMPRA sessione 3 in poi
+                elif (
+                    deviation_pendenza_ma33 > 0.07
+                    and deviation_ma3_sopra_ma40 > 0.12
+                    and deviation_buy2 > 0.12
+                    and deviation_buy_ma4 > 0.12
+                    and deviation_prev > 0.22
+                    and ma2_last > ma2_2_min_ago
+                    and ma4_last > ma78_last
+                    and ma3_last > ma40_last
+                ):
+                    buy = "........................................................................BUY 2 con PENDENZA ma33 > 0.07  "
+                    action = " buy "
 
-                # elif self.session == 3:
-                # CON " elif self.session == 3: " NON COMPRAVA PIU' ALLORA HO PRESO ELSE DA MADDOG CHE INVECE ANDAVA BENE
+                elif (
+                    deviation_pendenza_ma33 > 0.06
+                    and deviation_ma3_sopra_ma40 > 0.12
+                    and (
+                        (ma4_prev < ma9_prev and ma4_last > ma9_last)
+                        and deviation_buy_ma4 > 0.12
+                    )
+                    and ma2_last > ma2_2_min_ago
+                    and ma3_last > ma40_last
+                    and ma4_last > ma78_last
+                ):
+                    buy = ".................................................................................BUY 2 con PENDENZA ma33 > 0.06 "
+                    action = " buy "
 
-                else:
-                    
-                   
-                    if (
-                        deviation_pendenza_ma33 > 0.05
-                        and deviation_ma3_sopra_ma40 > 0.10
-                        and (( ma4_prev < ma9_prev and ma4_last > ma9_last ) and deviation_buy_ma4 > 0.10 )
-                       
-                       
-                        and ma2_last >= ma4_last
-                        and ma4_last > ma78_last
-                        and ma2_last > ma50_last
-                        and ma2_last > ma78_last
-                       
-                    ):
-                        buy = "........................................................................................BUY 3 con PENDENZA ma33 > 0.05 "
-                        action = " buy "
-                    
-                    
-                    
-                    
-                    elif (
-                        
-                        deviation_pendenza_ma33 > 0.04
-                        and deviation_ma3_sopra_ma40 > 0.10
-                        and deviation_buy3 > 0.13
-                        and deviation_buy_ma4 > 0.10   
-                        and deviation_prev > 0.20  
-                        
-                        and ma2_last >= ma4_last
-                        and ma2_last > ma50_last
-                        and ma2_last > ma78_last
-                        and ma4_last > ma78_last
-                        
-                    ):
-                        buy = "................................................................................BUY 3 con PENDENZA ma33 > 0.04 ( e altre deviation ) "
-                        action = " buy "
-                    
-                    
-                    
-                    
-                    elif (
-                        deviation_pendenza_ma33 > 0.03
-                        and deviation_ma3_sopra_ma40 > 0.12
-                        and deviation_buy3 > 0.12
-                        and deviation_buy_ma4 > 0.16
-                      
-                        and ma2_last >= ma4_last
-                        and ma2_last > ma50_last
-                        and ma2_last > ma78_last
-                        and ma3_last > ma40_last
-                        and ma4_last > ma78_last
-                       
-                    ):
-                        buy = "..................................................................................BUY 3 con PENDENZA ma33 > 0.03 ( e altre deviation ) "
-                        action = " buy "
-                        
-                        
-                        
-                        
-                    elif (
-                        deviation_pendenza_ma33 > -0.03
-                        and deviation_ma3_sopra_ma40 > 0.12
-                        and deviation_buy3 > 0.12
-                        and deviation_buy_ma4 > 0.16
-                       
-                        and ma2_last >= ma4_last
-                        and ma2_last > ma50_last
-                        and ma2_last > ma78_last
-                        and ma3_last > ma40_last
-                        and ma4_last > ma78_last
-                      
-                    ):
-                        buy = "..................................................................................BUY 3 con PENDENZA ma33 > -0.03 ( e altre deviation ) "
-                        action = " buy "
-                    
-                    
-                    
-                 
+                elif (
+                    deviation_pendenza_ma33 > -0.05
+                    and deviation_ma3_sopra_ma40 > 0.12
+                    and deviation_buy2 > 0.15
+                    and deviation_buy_ma4 > 0.16
+                    and ma2_last > ma2_2_min_ago
+                    and ma3_last > ma40_last
+                    and ma4_last > ma78_last
+                ):
+                    buy = ".................................................................................BUY 2 con PENDENZA ma33 > -0.05 "
+                    action = " buy "
+
+            #######################################################################################################################
+
+            # COMPRA sessione 3 in poi
+
+            # elif self.session == 3:
+            # CON " elif self.session == 3: " NON COMPRAVA PIU' ALLORA HO PRESO ELSE DA MADDOG CHE INVECE ANDAVA BENE
+
+            else:
+
+                if (
+                    deviation_pendenza_ma33 > 0.05
+                    and deviation_ma3_sopra_ma40 > 0.10
+                    and (
+                        (ma4_prev < ma9_prev and ma4_last > ma9_last)
+                        and deviation_buy_ma4 > 0.10
+                    )
+                    and ma2_last >= ma4_last
+                    and ma4_last > ma78_last
+                    and ma2_last > ma50_last
+                    and ma2_last > ma78_last
+                ):
+                    buy = "........................................................................................BUY 3 con PENDENZA ma33 > 0.05 "
+                    action = " buy "
+
+                elif (
+                    deviation_pendenza_ma33 > 0.04
+                    and deviation_ma3_sopra_ma40 > 0.10
+                    and deviation_buy3 > 0.13
+                    and deviation_buy_ma4 > 0.10
+                    and deviation_prev > 0.20
+                    and ma2_last >= ma4_last
+                    and ma2_last > ma50_last
+                    and ma2_last > ma78_last
+                    and ma4_last > ma78_last
+                ):
+                    buy = "................................................................................BUY 3 con PENDENZA ma33 > 0.04 ( e altre deviation ) "
+                    action = " buy "
+
+                elif (
+                    deviation_pendenza_ma33 > 0.03
+                    and deviation_ma3_sopra_ma40 > 0.12
+                    and deviation_buy3 > 0.12
+                    and deviation_buy_ma4 > 0.16
+                    and ma2_last >= ma4_last
+                    and ma2_last > ma50_last
+                    and ma2_last > ma78_last
+                    and ma3_last > ma40_last
+                    and ma4_last > ma78_last
+                ):
+                    buy = "..................................................................................BUY 3 con PENDENZA ma33 > 0.03 ( e altre deviation ) "
+                    action = " buy "
+
+                elif (
+                    deviation_pendenza_ma33 > -0.03
+                    and deviation_ma3_sopra_ma40 > 0.12
+                    and deviation_buy3 > 0.12
+                    and deviation_buy_ma4 > 0.16
+                    and ma2_last >= ma4_last
+                    and ma2_last > ma50_last
+                    and ma2_last > ma78_last
+                    and ma3_last > ma40_last
+                    and ma4_last > ma78_last
+                ):
+                    buy = "..................................................................................BUY 3 con PENDENZA ma33 > -0.03 ( e altre deviation ) "
+                    action = " buy "
 
         #########################################################################################################################################
 
@@ -633,457 +567,362 @@ class ro_cano_che_ritorna:
 
             ###################################################################################################################################
             ###################################################################################################################################
-            
+
             # 0 - 3 min
 
             # VENDITA - da 0 a 3 minuti = da 0 a 180 secondi
 
             if seconds_since_last_trade > 0 and seconds_since_last_trade <= 180:
-                
-                
-                if (  
-                    ma50_last >= ma50_2_min_ago and (( ma3_last > ma30_last and ma3_last < ma30_last ) and deviation_sell > 0.18 )
+
+                if ma50_last >= ma50_2_min_ago and (
+                    (ma3_last > ma30_last and ma3_last < ma30_last)
+                    and deviation_sell > 0.18
                 ):
-              
+
                     sell = " SELL 1 (0-3 min) con ma50 > "
                     action = " sell "
-               
-                
-                
-                elif (
-                    ma50_last >= ma50_2_min_ago and (( ma3_last > ma16_last and ma3_last < ma16_last ) and deviation_sell > 0.65 )
-            
+
+                elif ma50_last >= ma50_2_min_ago and (
+                    (ma3_last > ma16_last and ma3_last < ma16_last)
+                    and deviation_sell > 0.65
                 ):
 
                     sell = " SELL 2 (0-3 min) con ma50 > "
                     action = "sell"
-                    
-                    
-                
-                
-                elif (
-                    ma50_last >= ma50_2_min_ago and (( ma3_last > ma18_last and ma3_last < ma18_last) and deviation_sell > 0.80 )
+
+                elif ma50_last >= ma50_2_min_ago and (
+                    (ma3_last > ma18_last and ma3_last < ma18_last)
+                    and deviation_sell > 0.80
                 ):
-            
+
                     sell = " SELL 3 (0-3 min) con ma50 > "
                     action = " sell "
-                
-               
-            
-                elif (
-                    ma50_last >= ma50_2_min_ago and ((ma3_last > ma78_last and ma3_last < ma78_last) and deviation_sell < -0.20)
-                ):  
-             
+
+                elif ma50_last >= ma50_2_min_ago and (
+                    (ma3_last > ma78_last and ma3_last < ma78_last)
+                    and deviation_sell < -0.20
+                ):
+
                     sell = "SELL 4 (0-3 min) con ma50 >"
                     action = " sell "
-                
-                
-                
-                #------------------------------------------------------------------------------------------------------------------- CROLLO
-                
-               
-                elif (
-                    ma50_last < ma50_2_min_ago and (( ma3_last > ma16_last and ma3_last < ma16_last) and deviation_sell > 0.23 )
-                ):   
-               
+
+                # ------------------------------------------------------------------------------------------------------------------- CROLLO
+
+                elif ma50_last < ma50_2_min_ago and (
+                    (ma3_last > ma16_last and ma3_last < ma16_last)
+                    and deviation_sell > 0.23
+                ):
+
                     sell = " SELL 5 (0-3 min) con ma50 < "
                     action = " sell "
-                
-                
-                #---------------------------------------------------------------------------------------------------------------------
-                
-                
-                elif (
-                    ma50_last < ma50_2_min_ago and (( ma3_last > ma8_last and ma3_last < ma8_last ) and deviation_sell > 0.60 )
-                ):   
-              
+
+                # ---------------------------------------------------------------------------------------------------------------------
+
+                elif ma50_last < ma50_2_min_ago and (
+                    (ma3_last > ma8_last and ma3_last < ma8_last)
+                    and deviation_sell > 0.60
+                ):
+
                     sell = " SELL 6 ( 0-3 min ) con ma50 < "
                     action = " sell "
-                
-                
-                
-                elif (
-                    ma50_last < ma50_2_min_ago and (( ma3_last > ma78_last and ma3_last < ma78_last ) and deviation_sell < -0.20 )
-                ):   
-              
+
+                elif ma50_last < ma50_2_min_ago and (
+                    (ma3_last > ma78_last and ma3_last < ma78_last)
+                    and deviation_sell < -0.20
+                ):
+
                     sell = " SELL 7 (0-3 min) con ma50 < "
                     action = "sell"
-                
-                
-                
-                elif (
-                    ma50_last < ma50_2_min_ago and (( ma3_last > ma16_last and ma3_last < ma16_last ) and deviation_sell < -0.75 )
-                ):    
-               
+
+                elif ma50_last < ma50_2_min_ago and (
+                    (ma3_last > ma16_last and ma3_last < ma16_last)
+                    and deviation_sell < -0.75
+                ):
+
                     sell = " SELL 8 (0-3 min) con ma50 < "
                     action = " sell "
-                    
-            
-            
-            
+
             ################################################################################################################################         3-5 min
             ################################################################################################################################
-            
-            
+
             # VENDITA - da 3 a 5 minuti = da 180 a 300 secondi
-            
-            
 
             elif seconds_since_last_trade > 180 and seconds_since_last_trade <= 300:
-                
 
-                if (
-                    ma50_last >= ma50_2_min_ago and (( ma3_last > ma25_last and ma3_last < ma25_last ) and deviation_sell > 0.18 )
-                ):  
-                    #deviation_sell = ma3_last / last_trade_price
-                    
+                if ma50_last >= ma50_2_min_ago and (
+                    (ma3_last > ma25_last and ma3_last < ma25_last)
+                    and deviation_sell > 0.18
+                ):
+                    # deviation_sell = ma3_last / last_trade_price
+
                     sell = " SELL 9 (3-5 min) con ma50 > "
                     action = " sell "
-                    
-                
-                
-                
-                elif (
-                    ma50_last >= ma50_2_min_ago and (( ma3_last > ma16_last and ma3_last < ma16_last ) and deviation_sell > 0.66 )
-                ): 
-                  
+
+                elif ma50_last >= ma50_2_min_ago and (
+                    (ma3_last > ma16_last and ma3_last < ma16_last)
+                    and deviation_sell > 0.66
+                ):
+
                     sell = " SELL 10 (3-5 min) con ma50 > "
                     action = " sell "
-                
-                
-                
-                elif (
-                    ma50_last >= ma50_2_min_ago and (( ma3_last > ma18_last and ma3_last < ma18_last ) and deviation_sell > 0.80 )
+
+                elif ma50_last >= ma50_2_min_ago and (
+                    (ma3_last > ma18_last and ma3_last < ma18_last)
+                    and deviation_sell > 0.80
                 ):
-               
+
                     sell = " SELL 11 (3-5 min) con ma50 > "
                     action = " sell "
-                
-                
-                #-------------------------------------------------------------------------------------------------------------------------crollo
-                
-                elif (
-                    ma50_last < ma50_2_min_ago and (( ma3_last > ma18_last and ma3_last < ma18_last ) and deviation_sell > 0.23 )
+
+                # -------------------------------------------------------------------------------------------------------------------------crollo
+
+                elif ma50_last < ma50_2_min_ago and (
+                    (ma3_last > ma18_last and ma3_last < ma18_last)
+                    and deviation_sell > 0.23
                 ):
-                
+
                     sell = " SELL 12 (3-5 min) con ma50 < "
                     action = " sell "
-                    
-                #--------------------------------------------------------------------------------------------------------------------------------
-                
-                
-                
-                elif (
-                    ma50_last < ma50_2_min_ago and (( ma3_last > ma78_last and ma3_last < ma78_last ) and deviation_sell < -0.20 )
+
+                # --------------------------------------------------------------------------------------------------------------------------------
+
+                elif ma50_last < ma50_2_min_ago and (
+                    (ma3_last > ma78_last and ma3_last < ma78_last)
+                    and deviation_sell < -0.20
                 ):
-                   
+
                     sell = " SELL 13 (3-5 min) con ma50 < "
                     action = " sell "
-                
-                
-                
-                elif (
-                    ma50_last < ma50_2_min_ago and (( ma3_last > ma16_last and ma3_last < ma16_last ) and deviation_sell < -0.75 )
-                ): 
-                    
+
+                elif ma50_last < ma50_2_min_ago and (
+                    (ma3_last > ma16_last and ma3_last < ma16_last)
+                    and deviation_sell < -0.75
+                ):
+
                     sell = " SELL 14 (3-5 min) con ma50 < "
                     action = " sell "
-                    
-            
+
             ################################################################################################################################### 5-12 min
-            
-            
+
             # VENDITA - da 5 a 12 minuti = da 300 a 720 secondi
 
             elif seconds_since_last_trade > 300 and seconds_since_last_trade <= 720:
-                
-                
-                if (
-                    ma50_last >= ma50_2_min_ago and (( ma3_last > ma25_last and ma3_last < ma25_last ) and deviation_sell > 0.18 )
-                
+
+                if ma50_last >= ma50_2_min_ago and (
+                    (ma3_last > ma25_last and ma3_last < ma25_last)
+                    and deviation_sell > 0.18
                 ):
                     sell = " SELL 15 (5-12 min) con ma50 > "
                     action = " sell "
-                
-                
-                    
-                elif (
-                    ma50_last >= ma50_2_min_ago and (( ma3_last > ma16_last and ma3_last < ma16_last ) and deviation_sell > 0.67 )
-                  
+
+                elif ma50_last >= ma50_2_min_ago and (
+                    (ma3_last > ma16_last and ma3_last < ma16_last)
+                    and deviation_sell > 0.67
                 ):
                     sell = "SELL 16 (5-12 min) con ma50 >"
                     action = " sell "
-                
-                    
-                    
-                elif (
-                    ma50_last >= ma50_2_min_ago and (( ma3_last > ma18_last and ma3_last < ma18_last ) and deviation_sell > 0.80 )
-                  
+
+                elif ma50_last >= ma50_2_min_ago and (
+                    (ma3_last > ma18_last and ma3_last < ma18_last)
+                    and deviation_sell > 0.80
                 ):
                     sell = "SELL 17 (5-12 min) con ma50 > "
                     action = " sell "
 
-                
-               #---------------------------------------------------------------------------------------------------------------------- crollo
+                # ---------------------------------------------------------------------------------------------------------------------- crollo
 
-                elif (
-                    ma50_last < ma50_2_min_ago and (( ma3_last > ma18_last and ma3_last < ma18_last ) and deviation_sell > 0.23 )
-                  
+                elif ma50_last < ma50_2_min_ago and (
+                    (ma3_last > ma18_last and ma3_last < ma18_last)
+                    and deviation_sell > 0.23
                 ):
                     sell = " SELL 18 (5-12 min) con ma50 < "
                     action = " sell "
-                
-                    
-                #--------------------------------------------------------------------------------------------------------------------------------
-                    
-                
-                elif (
-                    ma50_last < ma50_2_min_ago and (( ma3_last > ma78_last and ma3_last < ma78_last ) and deviation_sell < -0.20 )
-                 
+
+                # --------------------------------------------------------------------------------------------------------------------------------
+
+                elif ma50_last < ma50_2_min_ago and (
+                    (ma3_last > ma78_last and ma3_last < ma78_last)
+                    and deviation_sell < -0.20
                 ):
                     sell = " SELL 19 (5-12 min) con ma50 < "
                     action = " sell "
-                
-                
-                
-                elif (
-                    ma50_last < ma50_2_min_ago and (( ma3_last > ma18_last and ma3_last < ma18_last ) and deviation_sell < -0.75 )
-                   
+
+                elif ma50_last < ma50_2_min_ago and (
+                    (ma3_last > ma18_last and ma3_last < ma18_last)
+                    and deviation_sell < -0.75
                 ):
 
                     sell = " SELL 20 (5-12 min) con ma50 < "
                     action = " sell "
-                    
-                    
 
             ############################################################################################################################    12-24 min
-            
-            
+
             # VENDITA - da 12 a 24 minuti = da 720 a 1440 secondi
 
             elif seconds_since_last_trade > 720 and seconds_since_last_trade <= 1440:
-                
-                
-                if (
-                    ma50_last >= ma50_2_min_ago and (( ma3_last > ma18_last and ma3_last < ma18_last ) and deviation_sell > 0.18 )
-                   
+
+                if ma50_last >= ma50_2_min_ago and (
+                    (ma3_last > ma18_last and ma3_last < ma18_last)
+                    and deviation_sell > 0.18
                 ):
                     sell = " SELL 21 (12-24 min) con ma50 > "
                     action = " sell "
-                
-                
-                    
-                    
-                elif (
-                    ma50_last >= ma50_2_min_ago and (( ma3_last > ma18_last and ma3_last < ma18_last ) and deviation_mentre_ma50_sale > 0.68 )
-                  
+
+                elif ma50_last >= ma50_2_min_ago and (
+                    (ma3_last > ma18_last and ma3_last < ma18_last)
+                    and deviation_mentre_ma50_sale > 0.68
                 ):
                     sell = " SELL 22 (12-24 min) con ma50 > "
                     action = " sell "
-                    
-                    
-                    
-                    
-                elif (
-                    ma50_last >= ma50_2_min_ago and (( ma3_last > ma18_last and ma3_last < ma18_last ) and deviation_sell > 0.80 )
-                  
+
+                elif ma50_last >= ma50_2_min_ago and (
+                    (ma3_last > ma18_last and ma3_last < ma18_last)
+                    and deviation_sell > 0.80
                 ):
                     sell = " SELL 23 (12-24 min) con ma50 > "
                     action = " sell "
 
-                
-                #------------------------------------------------------------------------------------------------------------- crollo
-                    
-                elif (
-                    ma50_last < ma50_2_min_ago and (( ma3_last > ma18_last and ma3_last < ma18_last ) and deviation_sell > 0.23 )
-               
+                # ------------------------------------------------------------------------------------------------------------- crollo
+
+                elif ma50_last < ma50_2_min_ago and (
+                    (ma3_last > ma18_last and ma3_last < ma18_last)
+                    and deviation_sell > 0.23
                 ):
                     sell = " SELL 24 (12-24 min) con ma50 < "
                     action = " sell "
-                
-                #---------------------------------------------------------------------------------------------------------------    
-                    
-                    
-                elif (
-                    ma50_last < ma50_2_min_ago and (( ma3_last > ma78_last and ma3_last < ma78_last ) and deviation_sell < -0.20 )
-                    
+
+                # ---------------------------------------------------------------------------------------------------------------
+
+                elif ma50_last < ma50_2_min_ago and (
+                    (ma3_last > ma78_last and ma3_last < ma78_last)
+                    and deviation_sell < -0.20
                 ):
                     sell = " SELL 25 (12-24 min) con ma50 < "
                     action = " sell "
-                
-                    
-                    
-                elif ( 
-                    ma50_last < ma50_2_min_ago and (( ma3_last > ma18_last and ma3_last < ma18_last ) and deviation_sell < -0.75 )
-                   
+
+                elif ma50_last < ma50_2_min_ago and (
+                    (ma3_last > ma18_last and ma3_last < ma18_last)
+                    and deviation_sell < -0.75
                 ):
 
                     sell = " SELL 26 (12-24 min) con ma50 < "
                     action = " sell "
-            
-            
+
             ################################################################################################################################## 24-40 min
-            
-            
+
             # VENDITA - da 24 a 40 minuti = da 1080 a 1800 secondi
 
             elif seconds_since_last_trade > 1440 and seconds_since_last_trade <= 2400:
-                
-                
-                if (
-                    ma50_last >= ma50_2_min_ago and (( ma3_last > ma25_last and ma3_last < ma25_last ) and deviation_sell > 0.18 )
-                  
+
+                if ma50_last >= ma50_2_min_ago and (
+                    (ma3_last > ma25_last and ma3_last < ma25_last)
+                    and deviation_sell > 0.18
                 ):
                     sell = " SELL 27 (24-40 min) con ma50 > "
                     action = " sell "
-                
-                
-                    
-                
-                elif (
-                    ma50_last >= ma50_2_min_ago and (( ma3_last > ma16_last and ma3_last < ma16_last ) and deviation_mentre_ma50_sale > 0.69 )
-                  
+
+                elif ma50_last >= ma50_2_min_ago and (
+                    (ma3_last > ma16_last and ma3_last < ma16_last)
+                    and deviation_mentre_ma50_sale > 0.69
                 ):
                     sell = " SELL 28 (24-40 min) con ma50 > "
                     action = " sell "
-                
-                    
-                    
-                    
-                elif (
-                    ma50_last >= ma50_2_min_ago and (( ma3_last > ma18_last and ma3_last < ma18_last ) and deviation_sell > 0.80 )
-                  
+
+                elif ma50_last >= ma50_2_min_ago and (
+                    (ma3_last > ma18_last and ma3_last < ma18_last)
+                    and deviation_sell > 0.80
                 ):
                     sell = " SELL 29 (24-40 min) con ma50 > "
                     action = " sell "
-                    
-                    
-                    
-                
-                elif (
-                    ma50_last >= ma50_2_min_ago and (( ma3_last > ma78_last and ma3_last < ma78_last ) and deviation_sell < -0.20 )
-                   
+
+                elif ma50_last >= ma50_2_min_ago and (
+                    (ma3_last > ma78_last and ma3_last < ma78_last)
+                    and deviation_sell < -0.20
                 ):
                     sell = " SELL 30  (24-40 min) con ma50 < "
                     action = " sell "
-                
-                
-                    
-                
-                #----------------------------------------------------------------------------------------------------------------------crollo
-                    
-                elif (
-                    ma50_last < ma50_2_min_ago and (( ma3_last > ma18_last and ma3_last < ma18_last ) and deviation_sell > 0.23 )
-               
+
+                # ----------------------------------------------------------------------------------------------------------------------crollo
+
+                elif ma50_last < ma50_2_min_ago and (
+                    (ma3_last > ma18_last and ma3_last < ma18_last)
+                    and deviation_sell > 0.23
                 ):
                     sell = " SELL 31  (24-40 min) con ma50 < "
                     action = " sell "
-                
-                #--------------------------------------------------------------------------------------------------------------------------
-                
-                
-                elif (
-                    ma50_last < ma50_2_min_ago and (( ma3_last > ma78_last and ma3_last < ma78_last ) and deviation_sell < -0.20 )
-                   
+
+                # --------------------------------------------------------------------------------------------------------------------------
+
+                elif ma50_last < ma50_2_min_ago and (
+                    (ma3_last > ma78_last and ma3_last < ma78_last)
+                    and deviation_sell < -0.20
                 ):
                     sell = " SELL 32  (24-40 min) con ma50 < "
                     action = " sell "
-                
-                    
-                    
-                elif (
-                    ma50_last < ma50_2_min_ago and (( ma3_last > ma18_last and ma3_last < ma18_last ) and deviation_sell < -0.75 )
-                  
+
+                elif ma50_last < ma50_2_min_ago and (
+                    (ma3_last > ma18_last and ma3_last < ma18_last)
+                    and deviation_sell < -0.75
                 ):
 
                     sell = " SELL 33 (24-40 min) con ma50 < "
                     action = " sell "
-            
-            
-                    
-                    
+
             ##############################################################################################################################     > 40 min
-            
-                    
-            
+
             # VENDITA - da 40 minuti in poi = da 2400 secondi in poi
-            
-            
+
             elif seconds_since_last_trade > 2400:
-                
-                
-                    
-                if (
-                    ma50_last >= ma50_2_min_ago and (( ma3_last > ma25_last and ma3_last < ma25_last ) and deviation_sell > 0.18 )
-                    
+
+                if ma50_last >= ma50_2_min_ago and (
+                    (ma3_last > ma25_last and ma3_last < ma25_last)
+                    and deviation_sell > 0.18
                 ):
 
                     sell = " SELL 34 ( dopo 40 min ) con ma50 > "
                     action = " sell "
-                
-                    
-                    
-                
-                    
-                elif (
-                    ma50_last >= ma50_2_min_ago and (( ma3_last > ma18_last and ma3_last < ma18_last ) and deviation_sell > 0.60 )
-                  
+
+                elif ma50_last >= ma50_2_min_ago and (
+                    (ma3_last > ma18_last and ma3_last < ma18_last)
+                    and deviation_sell > 0.60
                 ):
 
                     sell = " SELL 35 ( dopo 40 min ) con ma50 > "
                     action = " sell "
 
-                
-                    
-                    
-                elif (
-                    ma50_last >= ma50_2_min_ago and (( ma3_last > ma18_last and ma3_last < ma18_last ) and deviation_mentre_ma50_sale > -0.70 )
-                   
+                elif ma50_last >= ma50_2_min_ago and (
+                    (ma3_last > ma18_last and ma3_last < ma18_last)
+                    and deviation_mentre_ma50_sale > -0.70
                 ):
                     sell = " SELL 36 ( dopo 40 min ) con ma50 > "
                     action = " sell "
-                
-                    
-                    
-                    
-                elif (
-                    ma50_last < ma50_2_min_ago and (( ma3_last > ma18_last and ma3_last < ma18_last ) and deviation_sell > 0.23 )
-                   
+
+                elif ma50_last < ma50_2_min_ago and (
+                    (ma3_last > ma18_last and ma3_last < ma18_last)
+                    and deviation_sell > 0.23
                 ):
                     sell = " SELL 37 ( dopo 40 min ) con ma50 < "
                     action = " sell "
-                
-                    
-                    
-                    
-                elif (
-                    ma50_last < ma50_2_min_ago and (( ma3_last > ma78_last and ma3_last < ma78_last ) and deviation_sell < -0.20 )
-                   
+
+                elif ma50_last < ma50_2_min_ago and (
+                    (ma3_last > ma78_last and ma3_last < ma78_last)
+                    and deviation_sell < -0.20
                 ):
                     sell = " SELL 38 ( dopo 40 min ) con ma50 < "
                     action = " sell "
-                
-                    
-                    
-                    
-                elif (
-                    ma50_last < ma50_2_min_ago and (( ma3_last > ma18_last and ma3_last < ma18_last ) and deviation_sell < -0.75 )
-                
+
+                elif ma50_last < ma50_2_min_ago and (
+                    (ma3_last > ma18_last and ma3_last < ma18_last)
+                    and deviation_sell < -0.75
                 ):
 
                     sell = " SELL 39 ( dopo 40 min ) con ma50 < "
                     action = " sell "
-                    
-                    
-                    
-                    
 
             ##################################################################################################################################
-            
-            
+
             # salvagente SOLO mentre sale ! altrimenti va in conflitto con il buy durante il crollo
-            
-            
+
             # 1) STOP LOSS (salvagente)
 
             if ma50_last >= ma50_2_min_ago and (
