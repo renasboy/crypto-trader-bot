@@ -459,7 +459,7 @@ class maddog:
 
             elif (
                 deviation_sell
-                < -0.27
+                < -0.25
                 # deviation_sell = ma3_last / ma78_last
             ):
                 sell = " SELL # SALVAGENTE 2 "
