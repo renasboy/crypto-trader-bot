@@ -161,7 +161,7 @@ class maddog:
         # NON TOCCARE QUESTA CONDIZIONE (QUESTA DICE CHE STA IN MODO BUY, DEVO COMPRARE)
         if self.open and self.session and last_trade_action != "buy":
 
-            # COMPRA UN PO' PIU' SOPRA DELL' ULTIMO SELL ( aggiungere compra un po' piu' sopra dell' ultimo BUY deviation > 0.20 )
+            # COMPRA UN PO' PIU' SOPRA DELL' ULTIMO SELL ( aggiungere compra un po' piu' sopra dell' ultimo BUY deviation > 0.20 ) 
             if (
                 seconds_since_last_trade > 0
                 and seconds_since_last_trade <= min_buy_delay_in_seconds
@@ -197,15 +197,24 @@ class maddog:
 
                         buy = "................................................................. BUY 1 - con INCROCIO CLASSICO e ma78 IN RIALZO "
                         action = "buy"
-
+                    
+                    
+                    
+                    #########################################
+                    # QUESTA HA FUNZIONATO !
                     elif (
                         deviation_pendenza_ma78 > 0.02
                         and (ma78_last >= ma78_20_min_ago and (deviation_buy1 > -0.20))
                         and ma3_last > ma40_last
                     ):
-                        buy = "................................................................... BUY 1 - con DEVIATION buy1 e ma78 IN RIALZO "
+                        buy = "................................................................... BUY 1 - con DEVIATION buy1 e ma78 IN RIALZO " 
                         action = "buy"
-
+                    #########################################
+                    
+                    
+                    
+                    
+                    
                     elif (
                         (
                             ma78_last < ma78_20_min_ago
@@ -220,7 +229,13 @@ class maddog:
                     ):
                         buy = "...............................................................BUY 1 - con INCROCIO CLASSICO e ma78 IN RIBASSO"
                         action = "buy"
-
+                    
+                    
+                    
+                    
+                    
+                    ############################################################################################################################################
+                    # QUESTA HA FUNZIONATO
                     elif (
                         (ma78_last < ma78_20_min_ago and (deviation_buy1 > 0.79))
                         # deviation_buy1 = ma8_last / ma78_last
@@ -229,7 +244,11 @@ class maddog:
                     ):
                         buy = "...............................................................BUY 1 - con DEVIATION e ma78 IN RIBASSO "
                         action = "buy"
-
+                    ###########################################################################################################################################
+                    
+                    
+                    
+                    
                 ########################################################################################################################################################
 
                 # COMPRA sessione 2
@@ -455,7 +474,16 @@ class maddog:
 
                 sell = "SELL # SALVAGENTE 1"
                 action = "sell"
-
+            
+            
+            
+            
+            
+            
+            #####################################################################################################################################################
+            
+            # QUESTA HA FUNZIONATO
+            
             elif (
                 deviation_sell
                 < -0.22
@@ -463,7 +491,15 @@ class maddog:
             ):
                 sell = " SELL # SALVAGENTE 2 "
                 action = "sell"
-
+            
+            ################################################################################################################################################
+            
+            
+            
+            
+            
+            
+            
             elif (
                 ma50_last > ma50_2_min_ago
                 and (ma2_last < ma36_last and deviation_sell < -0.80)
