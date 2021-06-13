@@ -263,7 +263,7 @@ class ro_cano_che_ritorna:
             # COMPRA UN PO' PIU' SOPRA DELL' ULTIMO SELL ( aggiungere compra un po' piu' sopra dell' ultimo BUY deviation > 0.20 )
 
             if (
-                ( seconds_since_last_trade > 0 and seconds_since_last_trade <= min_buy_delay_in_seconds and deviation > 0.13 ) or ( seconds_since_last_trade == 0 or seconds_since_last_trade > min_buy_delay_in_seconds )
+                ( seconds_since_last_trade > 0 and seconds_since_last_trade <= min_buy_delay_in_seconds and deviation_buy_ma4 > 0.13 ) or ( seconds_since_last_trade == 0 or seconds_since_last_trade > min_buy_delay_in_seconds )
            
             ):
                 action = " buy "
