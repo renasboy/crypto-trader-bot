@@ -155,12 +155,16 @@ class maddog:
             self.open = False
             self.algo_helper.log("session {}: closed segment".format(self.session))
 
-        ###########################################
+        ###############################################################################################################################################
 
         # COMPRA
         # NON TOCCARE QUESTA CONDIZIONE (QUESTA DICE CHE STA IN MODO BUY, DEVO COMPRARE)
         if self.open and self.session and last_trade_action != "buy":
 
+            
+            
+        ###################################################################################################################################################    
+            
             # COMPRA UN PO' PIU' SOPRA DELL' ULTIMO SELL ( aggiungere compra un po' piu' sopra dell' ultimo BUY deviation > 0.20 ) 
             if (
                 seconds_since_last_trade > 0
@@ -170,6 +174,8 @@ class maddog:
                 seconds_since_last_trade == 0
                 or seconds_since_last_trade > min_buy_delay_in_seconds
             ):
+                
+                action = " buy "
 
                 #######################################################################
 
