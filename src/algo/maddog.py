@@ -193,7 +193,7 @@ class maddog:
                         # se ci ripensa prima di salire prende l' incrocio
                         # GRAZIE COMPA
                         deviation_pendenza_ma78 > 0.06
-                        and (ma78_last >= ma78_20_min_ago and (deviation_buy1 > 0.10 and (ma18_prev < ma78_prev and ma18_last > ma78_last)))
+                        and ma78_last >= ma78_20_min_ago and (deviation_buy1 > 0.10 and (ma18_prev < ma78_prev and ma18_last > ma78_last))
                         and ma3_last > ma40_last
                         and ma2_last > ma2_2_min_ago
                         # deviation_buy1 = ma8_last / ma78_last
@@ -224,7 +224,7 @@ class maddog:
                     
                     
                     elif (
-                        (ma78_last < ma78_20_min_ago and (deviation_buy1 > 0.90 and (ma18_prev < ma78_prev and ma18_last > ma78_last)))
+                        ma78_last < ma78_20_min_ago and (deviation_buy1 > 0.90 and (ma18_prev < ma78_prev and ma18_last > ma78_last))
                         and ma39_last > ma50_last
                         and ma2_last > ma2_2_min_ago
                         # deviation_buy1 = ma8_last / ma78_last
@@ -240,8 +240,8 @@ class maddog:
                     ############################################################################################################################################
                     # QUESTA HA FUNZIONATO
                     elif (
-                        (ma78_last < ma78_20_min_ago and (deviation_buy1 > 0.79))
-                        # deviation_buy1 = ma8_last / ma78_last
+                        ma78_last < ma78_20_min_ago and deviation_buy1 > 0.79
+                        
                         and ma39_last > ma50_last
                         and ma2_last > ma2_2_min_ago
                     ):
@@ -264,9 +264,8 @@ class maddog:
                         and ma3_last > ma40_last
                         # incredibile ma vero E' NECESSARIA quando deve ricomprare dopo la correzione al ribasso
                         and deviation > 0.13
-                        # deviation = ma2_last / last_trade_price
                         and deviation_buy2 > 0.11
-                        # deviation_buy2 = ma8_last / ma78_last
+                   
                     ):
 
                         buy = "...............................................................BUY 2 "
@@ -278,15 +277,12 @@ class maddog:
                 else:
                     if (
                         ma2_last >= ma4_last
-                        # and price > price_2_min_ago
-                        # ha comprato un po' tardi vediamo se possiamo comprare prima
-                        # deve essere anche questo
                         and ma2_last > ma50_last
                         and ma2_last > ma78_last
                         and ma3_last > ma40_last
                         and deviation > 0.10
                         and deviation_buy3 > 0.04
-                        # deviation_buy3 = ma8_last / ma78_last
+                     
                     ):
 
                         buy = "................................................................BUY 3 "
@@ -487,10 +483,10 @@ class maddog:
             
             # STOP LOSS (salvagente)
 
-            # ATTENZIONE ! SALVAGENTE 1 VENDE BENISSIMO (MOLTO LENTO) E CON GUADAGNO DI + 1% MA PERCHE' ? VEDIAMO...
+            
 
             if (
-                (ma3_last > ma39_last and ma3_last < ma39_last) and deviation < -0.68
+                ma3_last > ma39_last and ma3_last < ma39_last and deviation < -0.68
                 
                 # deviation = ma2_last / last_trade_price
                 # deviation_sell = ma3_last / ma50_last
