@@ -330,9 +330,8 @@ class maddog:
                 
                 
                 elif (
-                    ma78_last >= ma78_20_min_ago
-                    and (ma3_last > ma50_last and ma3_last < ma50_last)
-                    and deviation > 0.01
+                    ma78_last >= ma78_20_min_ago and (ma3_last > ma50_last and ma3_last < ma50_last) and deviation > 0.01
+                
                 ):
                     sell = "SELL #1-A3"
                     action = "sell"
@@ -344,142 +343,151 @@ class maddog:
                 # VENDE sessione 1 con ma78_last < ma78_20_min_ago
 
                 elif (
-                    ma78_last < ma78_20_min_ago
-                    and (ma3_last > ma39_last and ma3_last < ma39_last)
-                    and deviation_ma50 < -0.43
+                    ma78_last < ma78_20_min_ago and (ma3_last > ma39_last and ma3_last < ma39_last) and deviation_ma50 < -0.43
+                 
                     # deviation_sell = ma3_last / ma50_last
                     # deviation_buy1 = ma8_last / ma78_last
                 ):
 
                     sell = "SELL #1-B1"
                     action = "sell"
-
+                
+                
+                
                 elif (
-                    ma78_last < ma78_20_min_ago
-                    and (ma3_last > ma50_last and ma3_last < ma50_last)
-                    and deviation_ma50 < -0.43
+                    ma78_last < ma78_20_min_ago and (ma3_last > ma50_last and ma3_last < ma50_last) and deviation_ma50 < -0.43
+                   
                     # deviation_sell = ma3_last / ma50_last
                     # deviation_buy1 = ma8_last / ma78_last
                 ):
 
                     sell = "SELL #1-B2"
                     action = "sell"
-
+                
+                
+                
                 elif (
-                    ma78_last < ma78_20_min_ago
-                    and (ma3_last > ma78_last and ma3_last < ma78_last)
-                    and deviation_ma50 < -0.01
+                    ma78_last < ma78_20_min_ago and (ma3_last > ma78_last and ma3_last < ma78_last) and deviation_ma50 < -0.01
+                   
                     # deviation_sell = ma3_last / ma50_last
                 ):
 
                     sell = "SELL #1-B3"
                     action = "sell"
-
+            
+            
+            
             ############################################################################################################################################################
             ############################################################################################################################################################
-
+            
+            
+            
             # VENDE sessione 2
             elif self.session == 2:
-
+                
+                
                 if (
-                    ma78_last >= ma78_20_min_ago
-                    and (ma3_last > ma25_last and ma3_last < ma25_last)
-                    and deviation > 0.18
+                    ma78_last >= ma78_20_min_ago and (ma3_last > ma25_last and ma3_last < ma25_last) and deviation > 0.18
+                  
                 ):
 
                     sell = "SELL #2-A"
                     action = "sell"
-
+                
+                
+                
                 elif (
-                    ma78_last >= ma78_20_min_ago
-                    and (ma3_last > ma18_last and ma3_last < ma18_last)
-                    and deviation_ma50 > 0.70
+                    ma78_last >= ma78_20_min_ago and (ma3_last > ma18_last and ma3_last < ma18_last) and deviation_ma50 > 0.70
+                 
                 ):
 
                     sell = "SELL #2-B"
                     action = "sell"
-
+                
+                
+                
                 elif (
-                    (
-                        ma78_last < ma78_20_min_ago
-                        and (ma3_last > ma39_last and ma3_last < ma39_last)
-                        and deviation_ma50 < -0.43
-                    )
-                    or (
-                        ma78_last < ma78_20_min_ago
-                        and (ma3_last > ma50_last and ma3_last < ma50_last)
-                        and deviation_ma50 < -0.43
-                    )
+                    (ma78_last < ma78_20_min_ago and (ma3_last > ma50_last and ma3_last < ma50_last) and deviation_ma50 < -0.43 )  
+                    
                     # deviation_sell = ma3_last / ma50_last
                     # deviation_buy1 = ma8_last / ma78_last
                 ):
 
                     sell = "SELL #2-C"
                     action = "sell"
-
+                
+                
+                
                 elif (
-                    ma78_last < ma78_20_min_ago
-                    and (ma3_last > ma50_last and ma3_last < ma50_last)
-                    and deviation_ma50 < -0.43
+                    ma78_last < ma78_20_min_ago and (ma3_last > ma50_last and ma3_last < ma50_last) and deviation_ma50 < -0.43
+                
                     # deviation_sell = ma3_last / ma50_last
                     # deviation_buy1 = ma8_last / ma78_last
                 ):
 
                     sell = "SELL #2-D"
                     action = "sell"
-
+            
+            
+            
+            
             # VENDE sessione 3 in poi
 
             elif self.session == 3:
 
                 if (
-                    ma78_last >= ma78_20_min_ago
-                    and (ma3_last > ma25_last and ma3_last < ma25_last)
-                    and deviation > 0.18
+                    ma78_last >= ma78_20_min_ago and (ma3_last > ma25_last and ma3_last < ma25_last) and deviation > 0.18
+                
                 ):
 
                     sell = "SELL #3-A"
                     action = "sell"
-
+                
+                
+                
                 elif (
-                    ma78_last >= ma78_20_min_ago
-                    and (ma3_last > ma18_last and ma3_last < ma18_last)
-                    and deviation_ma50 > 0.70
+                    ma78_last >= ma78_20_min_ago and (ma3_last > ma18_last and ma3_last < ma18_last) and deviation_ma50 > 0.70
+                   
                     # deviation_sell = ma3_last / ma50_last
                     # deviation_buy1 = ma8_last / ma78_last
                 ):
                     sell = "SELL #3-B"
                     action = "sell"
-
+                
+                
+                
                 elif (
-                    ma78_last < ma78_20_min_ago
-                    and (ma3_last > ma39_last and ma3_last < ma39_last)
-                    and deviation_ma50 < -0.43
+                    ma78_last < ma78_20_min_ago and (ma3_last > ma39_last and ma3_last < ma39_last) and deviation_ma50 < -0.43
+                   
                     # deviation_sell = ma3_last / ma50_last
                     # deviation_buy1 = ma8_last / ma78_last
                 ):
                     sell = "SELL #3-C"
                     action = "sell"
-
+                
+                
+                
                 elif (
-                    ma78_last < ma78_20_min_ago
-                    and (ma3_last > ma50_last and ma3_last < ma50_last)
-                    and deviation_ma50 < -0.43
+                    ma78_last < ma78_20_min_ago and (ma3_last > ma50_last and ma3_last < ma50_last) and deviation_ma50 < -0.43
+                  
                     # deviation_sell = ma3_last / ma50_last
                     # deviation_buy1 = ma8_last / ma78_last
-                ):
+                ):  
+                    
                     sell = "SELL #3-D"
                     action = "sell"
 
             ###################################################################################################################################################################
-
+            
+            
+            
             # STOP LOSS (salvagente)
 
             # ATTENZIONE ! SALVAGENTE 1 VENDE BENISSIMO (MOLTO LENTO) E CON GUADAGNO DI + 1% MA PERCHE' ? VEDIAMO...
 
             if (
-                (ma3_last > ma39_last and ma3_last < ma39_last)
-                and deviation < -0.68
+                (ma3_last > ma39_last and ma3_last < ma39_last) and deviation < -0.68
+                
                 # deviation = ma2_last / last_trade_price
                 # deviation_sell = ma3_last / ma50_last
             ):
@@ -506,33 +514,24 @@ class maddog:
             
             ################################################################################################################################################
             
-            
-            
-            
-            
-            
-            
+           
             elif (
-                ma50_last > ma50_2_min_ago
-                and (ma2_last < ma36_last and deviation_ma50 < -0.80)
-                # or ( deviation_sell_ma78 < -0.43 )
-                # ha venduto anche questa durante il crollo - punto rosso sovrapposto al punto verde
-                # e gli ho detto che and ma3 deve andare sotto ma13 per vendere .
-                # vediamo
+                ma50_last > ma50_2_min_ago and (ma2_last < ma36_last and deviation_ma50 < -0.80)
+             
             ):
                 sell = " SELL # SALVAGENTE 3 "
                 action = "sell"
 
             # 1) vedi riga 11 per es. DI 1 ORA = 3600 SECONDI "max hold time" " DOPO UN' ORA VENDE SUBITO " e se ma8_last < ma39_last and deviation < -0.45:
 
-            if seconds_since_last_trade > max_hold_time_in_seconds and (
-                (ma8_last > ma39_last and ma8_last < ma39_last) and deviation < -0.40
+            if seconds_since_last_trade > max_hold_time_in_seconds and ((ma8_last > ma39_last and ma8_last < ma39_last) and deviation < -0.40
+                
             ):
 
-                # deviation = ma2_last / last_trade_price
                 sell = "SELL #TEMPO"
                 action = "sell"
-
+        
+        
         self.algo_helper.log("action {}".format(action))
 
         if action == "sell":
@@ -541,7 +540,9 @@ class maddog:
 
         elif action == "buy":
             self.algo_helper.log("action buy {}".format(buy))
-
+        
+        
+        
         return action
 
         # grazie compa ### ##
