@@ -131,11 +131,16 @@ class ro_cano_che_ritorna:
         min_prev_buy_delay_in_seconds = 9000
 
         ###############################################################################################################################################################
-
-        # formula DEVIATION_gabbia
-        deviation_gabbia = (ma8_last / ma78_last - 1) * 100 if ma78_last else 0
-        self.algo_helper.log("deviation_gabbia: {}".format(deviation_gabbia))
-
+        #########################################################################################################################################################
+        
+        #                                                         T U T T E    L E   D E V I A T I O N  !
+        
+        
+        
+        
+        
+        #########################################################################################################################################################
+        
         # formula DEVIATION_buy1 per comprare durante il TREND RIBASSISTA
         deviation_buy1 = (ma8_last / ma78_last - 1) * 100 if ma78_last else 0
         self.algo_helper.log("deviation_buy1: {}".format(deviation_buy1))
@@ -149,7 +154,7 @@ class ro_cano_che_ritorna:
         self.algo_helper.log("deviation_buy3: {}".format(deviation_buy3))
 
         ########################################################################################################################
-
+        
         # formula DEVIATION_buy per comprare UN PO' PIU' SOPRA DEL LAST TRADE ( di solito l' ultimo SELL )
         deviation_buy = ((ma2_last / last_trade_price - 1) * 100 if last_trade_price else 0)
         self.algo_helper.log("deviation_buy: {}".format(deviation_buy))   
@@ -165,6 +170,12 @@ class ro_cano_che_ritorna:
         # formula DEVIATION_prev per comprare UN PO' PIU' SOPRA DEL PREV TRADE ( di solito l' ultimo BUY )
         deviation_prev = (price / prev_trade_price - 1) * 100 if prev_trade_price else 0
         self.algo_helper.log("deviation_prev: {}".format(deviation_prev))
+        
+        
+        
+        # formula DEVIATION_gabbia
+        deviation_gabbia = (ma8_last / ma78_last - 1) * 100 if ma78_last else 0
+        self.algo_helper.log("deviation_gabbia: {}".format(deviation_gabbia))
 
         # formula DEVIATION_ma50 per vendere a una certa distanza da ma50
         deviation_ma50 = (ma2_last / ma50_last - 1) * 100 if ma50_last else 0
