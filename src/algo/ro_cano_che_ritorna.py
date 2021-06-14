@@ -218,17 +218,17 @@ class ro_cano_che_ritorna:
 
         # formula DEVIATION_PENDENZA_ma8  ( per comprare in aggiunta al BUY 1 mentre sale con deviation )
         deviation_pendenza_ma8 = ((ma8_last / ma8_4_min_ago - 1) * 100 if ma8_4_min_ago else 0 )
-            
+        self.algo_helper.log("deviation_pendenza_ma33: {}".format(deviation_pendenza_ma33))    
        
-        self.algo_helper.log("deviation_pendenza_ma33: {}".format(deviation_pendenza_ma33))
+        
             
        
 
         # formula DEVIATION_SPAZIO_TEMPO ( per comprare se c'e' una velocita' nel rialzo del prezzo )
         deviation_spazio_tempo = ((ma3_last / ma3_12_min_ago - 1) * 100 if ma3_12_min_ago else 0)
-            
+        self.algo_helper.log( "deviation_spazio_tempo: {}".format(deviation_spazio_tempo))    
         
-        self.algo_helper.log( "deviation_spazio_tempo: {}".format(deviation_spazio_tempo))
+        
            
         
 
@@ -242,7 +242,7 @@ class ro_cano_che_ritorna:
         # APRE E CHIUDE GABBIA
 
         # if ma50_last >= ma50_2_min_ago and deviation_gabbia > -0.15 or ( deviation_buy1 < -1.90 ):
-        if deviation_gabbia > -0.60 or (deviation_buy1 < -1.90):
+        if deviation_gabbia > -0.60 or deviation_buy1 < -1.90:
 
             # ti ricordo che deviation_gabbia = (ma8_last / ma78_last)
 
@@ -301,15 +301,13 @@ class ro_cano_che_ritorna:
 
                 if (
                     ma78_last > ma78_20_min_ago
-                    and (
-                        deviation_buy1 > 0.10
-                        and (ma8_prev < ma50_prev and ma8_last > ma50_last)
-                    )
+                    and (deviation_buy1 > 0.10 and (ma8_prev < ma50_prev and ma8_last > ma50_last))
                     and price > price_2_min_ago
                     and ma2_last > ma2_2_min_ago
                     and ma4_last > ma8_last
                     and ma8_last > ma50_last
                     # deviation_buy1 = ma8_last / ma78_last
+                    
                 ):
 
                     buy = ".............................................................BUY 1 DURANTE IL RIALZO con INCROCIO CLASSICO "
