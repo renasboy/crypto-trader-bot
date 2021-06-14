@@ -130,15 +130,11 @@ class maddog:
         
         
         # formula DEVIATION_PENDENZA_ma78  (per comprare 1 )
-        deviation_pendenza_ma78 = (
-            (ma78_last / ma78_5_min_ago - 1) * 100 if ma78_5_min_ago else 0
-        )
-        self.algo_helper.log(
-            "deviation_pendenza_ma78: {}".format(deviation_pendenza_ma78)
-        )
-
-        #
-
+        deviation_pendenza_ma78 = ((ma78_last / ma78_5_min_ago - 1) * 100 if ma78_5_min_ago else 0)
+            
+        
+        self.algo_helper.log("deviation_pendenza_ma78: {}".format(deviation_pendenza_ma78))
+       
         action = None
 
         ##################################################################################################################################################
@@ -148,6 +144,8 @@ class maddog:
 
         if ma8_last > ma38_last and deviation_buy1 > -0.30:
             # deviation_buy1 = ma8_last / ma78_last
+            
+        #########################################################################################################################################
 
             # NON TOCCARE QUESTA CONDIZIONE SERVE PER APERTURA DI GABBIA
             if not self.session or not self.open:
@@ -193,17 +191,12 @@ class maddog:
                         # se ci ripensa prima di salire prende l' incrocio
                         # GRAZIE COMPA
                         deviation_pendenza_ma78 > 0.06
-                        and (
-                            ma78_last >= ma78_20_min_ago
-                            and (
-                                deviation_buy1 > 0.10
-                                and (ma18_prev < ma78_prev and ma18_last > ma78_last)
-                            )
-                        )
+                        and (ma78_last >= ma78_20_min_ago and (deviation_buy1 > 0.10 and (ma18_prev < ma78_prev and ma18_last > ma78_last)))
                         and ma3_last > ma40_last
                         and ma2_last > ma2_2_min_ago
                         # deviation_buy1 = ma8_last / ma78_last
                         # and ma2_prev < ma13_prev and ma2_last > ma13_last se aggiungo questa NON COMPRA PIU'
+                       
                     ):
 
                         buy = "................................................................. BUY 1 - con INCROCIO CLASSICO e ma78 IN RIALZO "
@@ -227,16 +220,11 @@ class maddog:
                     
                     
                     elif (
-                        (
-                            ma78_last < ma78_20_min_ago
-                            and (
-                                deviation_buy1 > 0.90
-                                and (ma18_prev < ma78_prev and ma18_last > ma78_last)
-                            )
-                        )
-                        # deviation_buy1 = ma8_last / ma78_last
+                        (ma78_last < ma78_20_min_ago and (deviation_buy1 > 0.90 and (ma18_prev < ma78_prev and ma18_last > ma78_last)))
                         and ma39_last > ma50_last
                         and ma2_last > ma2_2_min_ago
+                        # deviation_buy1 = ma8_last / ma78_last
+                      
                     ):
                         buy = "...............................................................BUY 1 - con INCROCIO CLASSICO e ma78 IN RIBASSO"
                         action = "buy"
@@ -261,7 +249,9 @@ class maddog:
                     
                     
                 ########################################################################################################################################################
-
+                
+                
+                
                 # COMPRA sessione 2
                 elif self.session == 2:
                     if (
@@ -277,7 +267,9 @@ class maddog:
 
                         buy = "...............................................................BUY 2 "
                         action = "buy"
-
+                
+                
+                
                 # COMPRA sessione 3 in poi
                 else:
                     if (
@@ -295,7 +287,9 @@ class maddog:
 
                         buy = "................................................................BUY 3 "
                         action = "buy"
-
+        
+        
+        
         ###############################################################################################################
 
         # VENDA
@@ -310,28 +304,31 @@ class maddog:
             self.algo_helper.log("session: {}".format(self.session))
 
             ################################################################################################################################################
-
+            
+            
             # VENDE
 
             # VENDE sessione 1 con ma78_last >= ma78_20_min_ago
             if self.session == 1:
 
                 if (
-                    ma78_last >= ma78_20_min_ago
-                    and (ma3_last > ma25_last and ma3_last < ma25_last)
-                    and deviation > 0.18
+                    ma78_last >= ma78_20_min_ago and (ma3_last > ma25_last and ma3_last < ma25_last) and deviation > 0.18
+                 
                 ):
                     sell = "SELL #1-A1"
                     action = "sell"
-
+                
+                
+                
                 elif (
-                    ma78_last >= ma78_20_min_ago
-                    and (ma3_last > ma18_last and ma3_last < ma18_last)
-                    and deviation_ma50 > 0.70
+                    ma78_last >= ma78_20_min_ago and (ma3_last > ma18_last and ma3_last < ma18_last) and deviation_ma50 > 0.70
+                 
                 ):
                     sell = "SELL #1-A2"
                     action = "sell"
-
+                
+                
+                
                 elif (
                     ma78_last >= ma78_20_min_ago
                     and (ma3_last > ma50_last and ma3_last < ma50_last)
@@ -339,7 +336,11 @@ class maddog:
                 ):
                     sell = "SELL #1-A3"
                     action = "sell"
-
+                
+                
+                
+                
+                
                 # VENDE sessione 1 con ma78_last < ma78_20_min_ago
 
                 elif (
