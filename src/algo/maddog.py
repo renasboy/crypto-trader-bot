@@ -61,7 +61,7 @@ class maddog:
         ma100_last, ma100_prev = self.algo_helper.ma_last_prev(100)
         #
 
-        # moving average (2-3-4-5-7-8-20-43-100) di x minuti prima (NON METTERE MAI 1 min !)
+        # moving average (2-3-4-5-7-8-20-43-100) di x minuti prima 
         ma2_2_min_ago = self.algo_helper.ma_minutes_ago(2, 2)
         ma2_3_min_ago = self.algo_helper.ma_minutes_ago(2, 3)
         ma3_2_min_ago = self.algo_helper.ma_minutes_ago(3, 2)
@@ -93,7 +93,7 @@ class maddog:
         price = self.algo_helper.price
 
         # PREZZO PRECEDENTE (di mercato) - PREV PRICE
-        price_1_min_ago = self.algo_helper.price_minutes_ago(1)
+        
         price_2_min_ago = self.algo_helper.price_minutes_ago(2)
         price_3_min_ago = self.algo_helper.price_minutes_ago(3)
         price_4_min_ago = self.algo_helper.price_minutes_ago(4)
@@ -125,16 +125,19 @@ class maddog:
         # formula deviation per vendere un po' piu' giu' di ma78
         deviation_ma78 = (ma3_last / ma78_last - 1) * 100 if ma78_last else 0
         self.algo_helper.log("deviation_ma78: {}".format(deviation_ma78))
-        
-        ###############################################################################################################
-        
+       
         
         # formula DEVIATION_PENDENZA_ma78  (per comprare 1 )
-        deviation_pendenza_ma78 = ((ma78_last / ma78_5_min_ago - 1) * 100 if ma78_5_min_ago else 0)
-            
+        deviation_pendenza_ma78 = (ma78_last / ma78_5_min_ago - 1) * 100 if ma78_5_min_ago else 0
+        self.algo_helper.log("deviation_pendenza_ma78: {}".format(deviation_pendenza_ma78))    
         
-        self.algo_helper.log("deviation_pendenza_ma78: {}".format(deviation_pendenza_ma78))
-       
+        
+        #############################################################################################################################################
+        ##################################################################################################################################################
+        
+        
+        
+        
         action = None
 
         ##################################################################################################################################################
@@ -143,7 +146,7 @@ class maddog:
         # SI APRE LA GABBIA SE
 
         if ma8_last > ma38_last and deviation_buy1 > -0.30:
-            # deviation_buy1 = ma8_last / ma78_last
+        # deviation_buy1 = ma8_last / ma78_last    
             
         #########################################################################################################################################
 
@@ -164,8 +167,7 @@ class maddog:
         # NON TOCCARE QUESTA CONDIZIONE (QUESTA DICE CHE STA IN MODO BUY, DEVO COMPRARE)
         if self.open and self.session and last_trade_action != "buy":
 
-            
-            
+     
         ###################################################################################################################################################    
             
             # COMPRA UN PO' PIU' SOPRA DELL' ULTIMO SELL ( aggiungere compra un po' piu' sopra dell' ultimo BUY deviation > 0.20 ) 
