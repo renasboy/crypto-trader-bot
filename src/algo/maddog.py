@@ -116,14 +116,19 @@ class maddog:
         deviation = (ma2_last / last_trade_price - 1) * 100 if last_trade_price else 0
         self.algo_helper.log("deviation: {}".format(deviation))
 
+        ############################################################################################################
+        
         # formula deviation per vendere un po' piu' giu' di ma50
-        deviation_sell = (ma3_last / ma50_last - 1) * 100 if ma50_last else 0
-        self.algo_helper.log("deviation_sell: {}".format(deviation_sell))
+        deviation_ma50 = (ma3_last / ma50_last - 1) * 100 if ma50_last else 0
+        self.algo_helper.log("deviation_ma50: {}".format(deviation_ma50))
 
-        # formula deviation per vendere a una certa distanza da ma78
+        # formula deviation per vendere un po' piu' giu' di ma78
         deviation_ma78 = (ma3_last / ma78_last - 1) * 100 if ma78_last else 0
         self.algo_helper.log("deviation_ma78: {}".format(deviation_ma78))
-
+        
+        ###############################################################################################################
+        
+        
         # formula DEVIATION_PENDENZA_ma78  (per comprare 1 )
         deviation_pendenza_ma78 = (
             (ma78_last / ma78_5_min_ago - 1) * 100 if ma78_5_min_ago else 0
@@ -322,7 +327,7 @@ class maddog:
                 elif (
                     ma78_last >= ma78_20_min_ago
                     and (ma3_last > ma18_last and ma3_last < ma18_last)
-                    and deviation_sell > 0.70
+                    and deviation_ma50 > 0.70
                 ):
                     sell = "SELL #1-A2"
                     action = "sell"
@@ -340,7 +345,7 @@ class maddog:
                 elif (
                     ma78_last < ma78_20_min_ago
                     and (ma3_last > ma39_last and ma3_last < ma39_last)
-                    and deviation_sell < -0.43
+                    and deviation_ma50 < -0.43
                     # deviation_sell = ma3_last / ma50_last
                     # deviation_buy1 = ma8_last / ma78_last
                 ):
@@ -351,7 +356,7 @@ class maddog:
                 elif (
                     ma78_last < ma78_20_min_ago
                     and (ma3_last > ma50_last and ma3_last < ma50_last)
-                    and deviation_sell < -0.43
+                    and deviation_ma50 < -0.43
                     # deviation_sell = ma3_last / ma50_last
                     # deviation_buy1 = ma8_last / ma78_last
                 ):
@@ -362,7 +367,7 @@ class maddog:
                 elif (
                     ma78_last < ma78_20_min_ago
                     and (ma3_last > ma78_last and ma3_last < ma78_last)
-                    and deviation_sell < -0.01
+                    and deviation_ma50 < -0.01
                     # deviation_sell = ma3_last / ma50_last
                 ):
 
@@ -387,7 +392,7 @@ class maddog:
                 elif (
                     ma78_last >= ma78_20_min_ago
                     and (ma3_last > ma18_last and ma3_last < ma18_last)
-                    and deviation_sell > 0.70
+                    and deviation_ma50 > 0.70
                 ):
 
                     sell = "SELL #2-B"
@@ -397,12 +402,12 @@ class maddog:
                     (
                         ma78_last < ma78_20_min_ago
                         and (ma3_last > ma39_last and ma3_last < ma39_last)
-                        and deviation_sell < -0.43
+                        and deviation_ma50 < -0.43
                     )
                     or (
                         ma78_last < ma78_20_min_ago
                         and (ma3_last > ma50_last and ma3_last < ma50_last)
-                        and deviation_sell < -0.43
+                        and deviation_ma50 < -0.43
                     )
                     # deviation_sell = ma3_last / ma50_last
                     # deviation_buy1 = ma8_last / ma78_last
@@ -414,7 +419,7 @@ class maddog:
                 elif (
                     ma78_last < ma78_20_min_ago
                     and (ma3_last > ma50_last and ma3_last < ma50_last)
-                    and deviation_sell < -0.43
+                    and deviation_ma50 < -0.43
                     # deviation_sell = ma3_last / ma50_last
                     # deviation_buy1 = ma8_last / ma78_last
                 ):
@@ -438,7 +443,7 @@ class maddog:
                 elif (
                     ma78_last >= ma78_20_min_ago
                     and (ma3_last > ma18_last and ma3_last < ma18_last)
-                    and deviation_sell > 0.70
+                    and deviation_ma50 > 0.70
                     # deviation_sell = ma3_last / ma50_last
                     # deviation_buy1 = ma8_last / ma78_last
                 ):
@@ -448,7 +453,7 @@ class maddog:
                 elif (
                     ma78_last < ma78_20_min_ago
                     and (ma3_last > ma39_last and ma3_last < ma39_last)
-                    and deviation_sell < -0.43
+                    and deviation_ma50 < -0.43
                     # deviation_sell = ma3_last / ma50_last
                     # deviation_buy1 = ma8_last / ma78_last
                 ):
@@ -458,7 +463,7 @@ class maddog:
                 elif (
                     ma78_last < ma78_20_min_ago
                     and (ma3_last > ma50_last and ma3_last < ma50_last)
-                    and deviation_sell < -0.43
+                    and deviation_ma50 < -0.43
                     # deviation_sell = ma3_last / ma50_last
                     # deviation_buy1 = ma8_last / ma78_last
                 ):
@@ -491,7 +496,7 @@ class maddog:
             # QUESTA HA FUNZIONATO
             
             elif (
-                deviation_sell < -0.22
+                deviation_ma50 < -0.22
                 
                 # deviation_sell = ma3_last / ma50_last
             ):
@@ -508,7 +513,7 @@ class maddog:
             
             elif (
                 ma50_last > ma50_2_min_ago
-                and (ma2_last < ma36_last and deviation_sell < -0.80)
+                and (ma2_last < ma36_last and deviation_ma50 < -0.80)
                 # or ( deviation_sell_ma78 < -0.43 )
                 # ha venduto anche questa durante il crollo - punto rosso sovrapposto al punto verde
                 # e gli ho detto che and ma3 deve andare sotto ma13 per vendere .
