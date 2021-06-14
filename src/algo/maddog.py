@@ -120,9 +120,9 @@ class maddog:
         deviation_sell = (ma3_last / ma50_last - 1) * 100 if ma50_last else 0
         self.algo_helper.log("deviation_sell: {}".format(deviation_sell))
 
-        # formula deviation per vendere a una certa distanza da ma50
-        deviation_ma50 = (ma2_last / ma50_last - 1) * 100 if ma50_last else 0
-        self.algo_helper.log("deviation_ma50: {}".format(deviation_ma50))
+        # formula deviation per vendere a una certa distanza da ma78
+        deviation_ma78 = (ma3_last / ma78_last - 1) * 100 if ma78_last else 0
+        self.algo_helper.log("deviation_ma78: {}".format(deviation_ma78))
 
         # formula DEVIATION_PENDENZA_ma78  (per comprare 1 )
         deviation_pendenza_ma78 = (
@@ -351,7 +351,7 @@ class maddog:
                 elif (
                     ma78_last < ma78_20_min_ago
                     and (ma3_last > ma50_last and ma3_last < ma50_last)
-                    and deviation_ma50 < -0.43
+                    and deviation_sell < -0.43
                     # deviation_sell = ma3_last / ma50_last
                     # deviation_buy1 = ma8_last / ma78_last
                 ):
@@ -402,7 +402,7 @@ class maddog:
                     or (
                         ma78_last < ma78_20_min_ago
                         and (ma3_last > ma50_last and ma3_last < ma50_last)
-                        and deviation_ma50 < -0.43
+                        and deviation_sell < -0.43
                     )
                     # deviation_sell = ma3_last / ma50_last
                     # deviation_buy1 = ma8_last / ma78_last
@@ -414,7 +414,7 @@ class maddog:
                 elif (
                     ma78_last < ma78_20_min_ago
                     and (ma3_last > ma50_last and ma3_last < ma50_last)
-                    and deviation_ma50 < -0.43
+                    and deviation_sell < -0.43
                     # deviation_sell = ma3_last / ma50_last
                     # deviation_buy1 = ma8_last / ma78_last
                 ):
@@ -458,7 +458,7 @@ class maddog:
                 elif (
                     ma78_last < ma78_20_min_ago
                     and (ma3_last > ma50_last and ma3_last < ma50_last)
-                    and deviation_ma50 < -0.43
+                    and deviation_sell < -0.43
                     # deviation_sell = ma3_last / ma50_last
                     # deviation_buy1 = ma8_last / ma78_last
                 ):
