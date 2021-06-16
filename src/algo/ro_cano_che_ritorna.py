@@ -547,7 +547,7 @@ class ro_cano_che_ritorna:
                 if (
                     deviation_pendenza_ma33 > 0.05
                     and deviation_ma3_sopra_ma40 > 0.10
-                    and ((ma4_prev < ma9_prev and ma4_last > ma9_last)and deviation_buy_ma3 > 0.10)
+                    and ((ma4_prev < ma9_prev and ma4_last > ma9_last) and deviation_buy_ma3 > 0.10)
                     and ma2_last >= ma4_last
                     and ma4_last > ma78_last
                     and ma2_last > ma50_last
