@@ -194,12 +194,6 @@ class ro_cano_che_ritorna:
         self.algo_helper.log("deviation_ma3_sopra_ma40: {}".format(deviation_ma3_sopra_ma40))
         
         
-
-        # formula DEVIATION_mentre_ma50_sale (per vendere)
-        deviation_mentre_ma50_sale = (((last_trade_price / ma3_last - 1) * 100) if ma3_last else 0)
-        self.algo_helper.log("deviation_mentre_ma50_sale: {}".format(deviation_mentre_ma50_sale))    
-        
-        
         # formula DEVIATION_sell (per vendere)
         deviation_sell = ((ma3_last / last_trade_price - 1) * 100 if last_trade_price else 0)
         self.algo_helper.log("deviation_sell: {}".format(deviation_sell))    
