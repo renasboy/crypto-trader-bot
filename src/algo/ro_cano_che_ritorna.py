@@ -164,8 +164,8 @@ class ro_cano_che_ritorna:
         
         # formula DEVIATION_buy_ma4 per comprare UN PO' PIU' SOPRA DEL LAST TRADE ( di solito l' ultimo SELL ) ma PIU' LENTA ! PERCHE' ma2 si muove troppo disinvoltamente
         
-        deviation_buy_ma4 = (ma4_last / last_trade_price - 1) * 100 if last_trade_price else 0
-        self.algo_helper.log("deviation_buy_ma4: {}".format(deviation_buy_ma4))    
+        deviation_buy_ma3 = (ma3_last / last_trade_price - 1) * 100 if last_trade_price else 0
+        self.algo_helper.log("deviation_buy_ma3: {}".format(deviation_buy_ma3))    
         
         
         
@@ -173,7 +173,7 @@ class ro_cano_che_ritorna:
         
         # formula DEVIATION_prev per comprare UN PO' PIU' SOPRA DEL PREV TRADE ( di solito l' ultimo BUY )
         
-        deviation_prev = (price / prev_trade_price - 1) * 100 if prev_trade_price else 0
+        deviation_prev = (ma3_last / prev_trade_price - 1) * 100 if prev_trade_price else 0
         self.algo_helper.log("deviation_prev: {}".format(deviation_prev))
         
         
