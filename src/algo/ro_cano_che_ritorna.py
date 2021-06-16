@@ -1061,53 +1061,79 @@ class ro_cano_che_ritorna:
                 
                 
                 
-                if ma50_last >= ma50_2_min_ago and (
-                    (ma3_last > ma25_last and ma3_last < ma25_last)
-                    and deviation_sell > 0.18
+                if (
+                    ma50_last >= ma50_2_min_ago and (ma3_last > ma25_last and ma3_last < ma25_last) and deviation_sell > 0.18
+                
                 ):
 
                     sell = " SELL 34 ( dopo 40 min ) con ma50 > "
                     action = " sell "
 
-                elif ma50_last >= ma50_2_min_ago and (
-                    (ma3_last > ma18_last and ma3_last < ma18_last)
-                    and deviation_sell > 0.60
+                    
+                    
+                    
+                    
+                elif (
+                    ma50_last >= ma50_2_min_ago and (ma3_last > ma18_last and ma3_last < ma18_last) and deviation_sell > 0.60
+                 
                 ):
 
                     sell = " SELL 35 ( dopo 40 min ) con ma50 > "
                     action = " sell "
 
-                elif ma50_last >= ma50_2_min_ago and (
-                    (ma3_last > ma18_last and ma3_last < ma18_last)
                     
+                    
+                  
+                    
+                elif (
+                    ma50_last >= ma50_2_min_ago and (ma3_last > ma18_last and ma3_last < ma18_last)
+                 
                 ):
                     sell = " SELL 36 ( dopo 40 min ) con ma50 > "
                     action = " sell "
 
-                elif ma50_last < ma50_2_min_ago and (
-                    (ma3_last > ma18_last and ma3_last < ma18_last)
-                    and deviation_sell > 0.23
+                    
+                    
+                    
+                    
+                elif (
+                    ma50_last < ma50_2_min_ago and (ma3_last > ma18_last and ma3_last < ma18_last) and deviation_sell > 0.23
+                   
                 ):
                     sell = " SELL 37 ( dopo 40 min ) con ma50 < "
                     action = " sell "
 
-                elif ma50_last < ma50_2_min_ago and (
-                    (ma3_last > ma78_last and ma3_last < ma78_last)
-                    and deviation_sell < -0.20
+                    
+                    
+                    
+                    
+                elif (
+                    ma50_last < ma50_2_min_ago and (ma3_last > ma78_last and ma3_last < ma78_last) and deviation_sell < -0.20
+                 
                 ):
                     sell = " SELL 38 ( dopo 40 min ) con ma50 < "
                     action = " sell "
 
-                elif ma50_last < ma50_2_min_ago and (
-                    (ma3_last > ma18_last and ma3_last < ma18_last)
-                    and deviation_sell < -0.75
+                    
+                    
+                    
+                    
+                elif (
+                    ma50_last < ma50_2_min_ago and (ma3_last > ma18_last and ma3_last < ma18_last) and deviation_sell < -0.75
+                 
                 ):
 
                     sell = " SELL 39 ( dopo 40 min ) con ma50 < "
                     action = " sell "
 
+                    
+                    
+                    
             ##################################################################################################################################
 
+            
+            
+            
             # salvagente SOLO mentre sale ! altrimenti va in conflitto con il buy durante il crollo
 
             # 1) STOP LOSS (salvagente)
