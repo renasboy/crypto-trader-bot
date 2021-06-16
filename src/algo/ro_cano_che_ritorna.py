@@ -722,7 +722,7 @@ class ro_cano_che_ritorna:
                 
                 
                 
-                elif 
+                elif (
                     ma50_last < ma50_2_min_ago and (ma3_last > ma78_last and ma3_last < ma78_last) and deviation_sell < -0.20
                    
                 ):
@@ -732,7 +732,7 @@ class ro_cano_che_ritorna:
                 
                 
                 
-                elif 
+                elif (
                     ma50_last < ma50_2_min_ago and (ma3_last > ma16_last and ma3_last < ma16_last) and deviation_sell < -0.75
                    
                 ):
