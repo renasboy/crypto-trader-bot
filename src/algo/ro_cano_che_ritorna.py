@@ -100,11 +100,7 @@ class ro_cano_che_ritorna:
         # VENDE DOPO x secondi = x minuti * 60 ("e se") ro cano torna a casa - riga 817
         max_hold_time_in_seconds = 2400
 
-        # VENDE DOPO 600 secondi = 10 minuti ("e se") - ro cano perde la forza - riga 323
-        max_hold_without_force_time_in_seconds = 600
         
-        
-
         #############################################################################################################################################################
 
         
@@ -125,17 +121,17 @@ class ro_cano_che_ritorna:
 
 
 
-        ###############################################################################################################################################################
         #########################################################################################################################################################
+        #########################################################################################################################################################
+        
+        
         
         #                                                         T U T T E    L E   D E V I A T I O N  !
         
         
         
-        #############################################################################
         
-        
-        # formula DEVIATION_buy1 per comprare durante il TREND RIBASSISTA
+        # formula DEVIATION_buy1 per la compra 1
         deviation_buy1 = (ma8_last / ma78_last - 1) * 100 if ma78_last else 0
         self.algo_helper.log("deviation_buy1: {}".format(deviation_buy1))
 
@@ -148,8 +144,6 @@ class ro_cano_che_ritorna:
         self.algo_helper.log("deviation_buy3: {}".format(deviation_buy3))
         
 
-        ################################################################################
-        
         
         
         
@@ -162,7 +156,7 @@ class ro_cano_che_ritorna:
         
         
         
-        # formula DEVIATION_buy_ma4 per comprare UN PO' PIU' SOPRA DEL LAST TRADE ( di solito l' ultimo SELL ) ma PIU' LENTA ! PERCHE' ma2 si muove troppo disinvoltamente
+        # formula DEVIATION_buy_ma4 per comprare UN PO' PIU' SOPRA DEL LAST TRADE ( di solito l' ultimo SELL )
         
         deviation_buy_ma3 = (ma3_last / last_trade_price - 1) * 100 if last_trade_price else 0
         self.algo_helper.log("deviation_buy_ma3: {}".format(deviation_buy_ma3))    
@@ -1138,81 +1132,109 @@ class ro_cano_che_ritorna:
 
             # 1) STOP LOSS (salvagente)
 
-            if ma50_last >= ma50_2_min_ago and (
-                (ma3_last > ma18_last and ma3_last < ma18_last)
-                and deviation_sell < -0.68
+            
+            if (
+                ma50_last >= ma50_2_min_ago and (ma3_last > ma18_last and ma3_last < ma18_last) and deviation_sell < -0.68
+             
             ):
                 sell = "SALVAGENTE 1"
                 action = "sell"
 
-            elif ma50_last >= ma50_2_min_ago and (
-                (ma3_last > ma36_last and ma3_last < ma36_last)
-                and deviation_sell < -0.63
+                
+                
+                
+            elif (
+                ma50_last >= ma50_2_min_ago and (ma3_last > ma36_last and ma3_last < ma36_last) and deviation_sell < -0.63
+               
             ):
                 sell = "SALVAGENTE 2"
                 action = "sell"
 
-            elif ma50_last >= ma50_2_min_ago and (
-                (ma8_last > ma39_last and ma8_last < ma39_last)
-                and deviation_sell < -0.45
+                
+                
+                
+            elif (
+                ma50_last >= ma50_2_min_ago and (ma8_last > ma39_last and ma8_last < ma39_last) and deviation_sell < -0.45
+              
             ):
                 sell = "SALVAGENTE 3"
                 action = "sell"
 
+                
+                
             #########################################################################################################################
 
-            elif ma50_last >= ma50_2_min_ago and (
-                (ma2_last > ma36_last and ma2_last < ma36_last)
-                and deviation_sell < -0.80
+            
+            
+            elif (
+                ma50_last >= ma50_2_min_ago and (ma2_last > ma36_last and ma2_last < ma36_last) and deviation_sell < -0.80
+             
             ):
                 sell = "SALVAGENTE 4"
                 action = "sell"
 
-            elif ma50_last >= ma50_2_min_ago and (
-                (ma8_last > ma39_last and ma8_last < ma39_last)
-                and deviation_sell < -0.70
+                
+                
+                
+            elif (
+                ma50_last >= ma50_2_min_ago and (ma8_last > ma39_last and ma8_last < ma39_last) and deviation_sell < -0.70
+             
             ):
                 sell = "SALVAGENTE 5"
                 action = "sell"
 
+                
+                
+                
             ##########################################################################################################################
 
+            
+            
+            
             # 2) ro cano VENDE " DOPO x MINUTI " "max hold time"
 
-            elif seconds_since_last_trade > max_hold_time_in_seconds and (
-                (ma2_last > ma78_last and ma2_last < ma78_last)
-                and deviation_sell < -0.50
+            
+            elif (
+                seconds_since_last_trade > max_hold_time_in_seconds and (ma2_last > ma78_last and ma2_last < ma78_last) and deviation_sell < -0.50
+              
             ):
 
                 sell = "SELL TEMPO 1"
                 action = "sell"
 
-            elif seconds_since_last_trade > max_hold_time_in_seconds and (
-                (ma78_last > ma78_2_min_ago and ma2_last < ma78_last)
-                and deviation_sell < -0.55
+                
+                
+                
+            elif (
+                seconds_since_last_trade > max_hold_time_in_seconds and (ma78_last > ma78_2_min_ago and ma2_last < ma78_last) and deviation_sell < -0.55
+              
             ):
                 sell = "SELL TEMPO 2"
                 action = "sell"
 
-            elif seconds_since_last_trade > max_hold_time_in_seconds and (
-                (ma3_last > ma78_last and ma3_last < ma78_last)
-                and deviation_sell < -0.40
+                
+                
+                
+                
+            elif (
+                seconds_since_last_trade > max_hold_time_in_seconds and (ma3_last > ma78_last and ma3_last < ma78_last) and deviation_sell < -0.40
+              
             ):
                 sell = "SELL TEMPO 3"
                 action = "sell"
 
+                
+                
+                
             ######################################################################################################################
 
-            # se diminuisce la forza - al momento disattivato
+            
+            
+           
 
-            # elif (
-
-            # ma2_last < ma36_last
-            # and deviation_sell < -0.50
-            # ):
-            # action = "sell"
-
-        ############### FINE ALGORITH ###################
+                                                     ############### FINE ALGORITH ###################
+            
+            
 
         self.algo_helper.log("action {}".format(action))
 
