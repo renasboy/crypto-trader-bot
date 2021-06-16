@@ -657,77 +657,95 @@ class ro_cano_che_ritorna:
 
             if seconds_since_last_trade > 0 and seconds_since_last_trade <= 180:
 
-                if ma50_last >= ma50_2_min_ago and (
-                    (ma3_last > ma30_last and ma3_last < ma30_last)
-                    and deviation_sell > 0.18
+                if (
+                    ma50_last >= ma50_2_min_ago and (ma3_last > ma30_last and ma3_last < ma30_last) and deviation_sell > 0.18
                 ):
-
+                
                     sell = " SELL 1 (0-3 min) con ma50 > "
                     action = " sell "
-
-                elif ma50_last >= ma50_2_min_ago and (
-                    (ma3_last > ma16_last and ma3_last < ma16_last)
-                    and deviation_sell > 0.65
+                    
+                
+                
+                
+                elif (
+                    ma50_last >= ma50_2_min_ago and (ma3_last > ma16_last and ma3_last < ma16_last) and deviation_sell > 0.65
+                 
                 ):
 
                     sell = " SELL 2 (0-3 min) con ma50 > "
                     action = "sell"
-
-                elif ma50_last >= ma50_2_min_ago and (
-                    (ma3_last > ma18_last and ma3_last < ma18_last)
-                    and deviation_sell > 0.80
+                
+                
+                
+                
+                
+                elif (
+                    ma50_last >= ma50_2_min_ago and (ma3_last > ma18_last and ma3_last < ma18_last) and deviation_sell > 0.80
+               
                 ):
 
                     sell = " SELL 3 (0-3 min) con ma50 > "
                     action = " sell "
-
-                elif ma50_last >= ma50_2_min_ago and (
-                    (ma3_last > ma78_last and ma3_last < ma78_last)
-                    and deviation_sell < -0.20
+                
+                
+                
+                
+                elif (
+                    ma50_last >= ma50_2_min_ago and (ma3_last > ma78_last and ma3_last < ma78_last) and deviation_sell < -0.20
+                   
                 ):
 
                     sell = "SELL 4 (0-3 min) con ma50 >"
                     action = " sell "
 
                 # ------------------------------------------------------------------------------------------------------------------- CROLLO
-
-                elif ma50_last < ma50_2_min_ago and (
-                    (ma3_last > ma16_last and ma3_last < ma16_last)
-                    and deviation_sell > 0.23
+                
+                
+                elif (
+                    ma50_last < ma50_2_min_ago and (ma3_last > ma16_last and ma3_last < ma16_last) and deviation_sell > 0.23
+                 
                 ):
 
                     sell = " SELL 5 (0-3 min) con ma50 < "
                     action = " sell "
 
                 # ---------------------------------------------------------------------------------------------------------------------
-
-                elif ma50_last < ma50_2_min_ago and (
-                    (ma3_last > ma8_last and ma3_last < ma8_last)
-                    and deviation_sell > 0.60
+                
+                
+                elif (
+                    ma50_last < ma50_2_min_ago and (ma3_last > ma8_last and ma3_last < ma8_last) and deviation_sell > 0.60
+                   
                 ):
 
                     sell = " SELL 6 ( 0-3 min ) con ma50 < "
                     action = " sell "
-
-                elif ma50_last < ma50_2_min_ago and (
-                    (ma3_last > ma78_last and ma3_last < ma78_last)
-                    and deviation_sell < -0.20
+                
+                
+                
+                elif 
+                    ma50_last < ma50_2_min_ago and (ma3_last > ma78_last and ma3_last < ma78_last) and deviation_sell < -0.20
+                   
                 ):
 
                     sell = " SELL 7 (0-3 min) con ma50 < "
                     action = "sell"
-
-                elif ma50_last < ma50_2_min_ago and (
-                    (ma3_last > ma16_last and ma3_last < ma16_last)
-                    and deviation_sell < -0.75
+                
+                
+                
+                elif 
+                    ma50_last < ma50_2_min_ago and (ma3_last > ma16_last and ma3_last < ma16_last) and deviation_sell < -0.75
+                   
                 ):
 
                     sell = " SELL 8 (0-3 min) con ma50 < "
                     action = " sell "
-
+            
+            
+            
             ################################################################################################################################         3-5 min
             ################################################################################################################################
-
+            
+            
             # VENDITA - da 3 a 5 minuti = da 180 a 300 secondi
 
             elif seconds_since_last_trade > 180 and seconds_since_last_trade <= 300:
