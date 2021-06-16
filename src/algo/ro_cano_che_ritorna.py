@@ -875,6 +875,7 @@ class ro_cano_che_ritorna:
 
                     
                     
+                    
                 elif (
                     ma50_last < ma50_2_min_ago and (ma3_last > ma18_last and ma3_last < ma18_last) and deviation_sell < -0.75
                    
@@ -885,13 +886,17 @@ class ro_cano_che_ritorna:
 
                   
                 
+                
             ############################################################################################################################    12-24 min
 
             
             # VENDITA - da 12 a 24 minuti = da 720 a 1440 secondi
 
            
+        
             elif seconds_since_last_trade > 720 and seconds_since_last_trade <= 1440:
+                
+                
 
                 if (
                     ma50_last >= ma50_2_min_ago and (ma3_last > ma18_last and ma3_last < ma18_last) and deviation_sell > 0.18
@@ -946,6 +951,7 @@ class ro_cano_che_ritorna:
                     sell = " SELL 25 (12-24 min) con ma50 < "
                     action = " sell "
 
+                    
                     
                     
                     
