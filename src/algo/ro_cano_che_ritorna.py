@@ -82,25 +82,35 @@ class ro_cano_che_ritorna:
 
         # PREZZO DI ADESSO (di mercato) - CURRENT PRICE
         price = self.algo_helper.price
-
+        
+        
         ##########################################################################################################################################################
+        
+        
 
         # PREZZO di X MINUTI FA (di mercato) - PREV PRICE
         price_1_min_ago = self.algo_helper.price_minutes_ago(1)
         price_2_min_ago = self.algo_helper.price_minutes_ago(2)
         price_3_min_ago = self.algo_helper.price_minutes_ago(3)
         price_5_min_ago = self.algo_helper.price_minutes_ago(5)
+        
 
         #############################################################################################################################################################
-
+        
         # VENDE DOPO x secondi = x minuti * 60 ("e se") ro cano torna a casa - riga 817
         max_hold_time_in_seconds = 2400
 
         # VENDE DOPO 600 secondi = 10 minuti ("e se") - ro cano perde la forza - riga 323
         max_hold_without_force_time_in_seconds = 600
+        
+        
 
         #############################################################################################################################################################
 
+        
+        
+        '''
+        
         # TEMPO in cui (PER COMPRARE) (a tutte le condizioni gia' attive) SI AGGIUNGE una condizione aggiuntiva LA DEVIATION !
 
         # dall' ULTIMO trade ( 15 minuti = 15 * 60 = 900 secondi )
@@ -108,6 +118,12 @@ class ro_cano_che_ritorna:
 
         # dal PENULTIMO trade ( 150 minuti = 150 * 60 = 9000 secondi )
         min_prev_buy_delay_in_seconds = 9000
+
+        '''
+
+
+
+
 
         ###############################################################################################################################################################
         #########################################################################################################################################################
