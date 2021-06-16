@@ -192,10 +192,8 @@ class ro_cano_che_ritorna:
         # formula DEVIATION_ma3_sopra_ma40
         deviation_ma3_sopra_ma40 = (ma3_last / ma40_last - 1) * 100 if ma40_last else 0
         self.algo_helper.log("deviation_ma3_sopra_ma40: {}".format(deviation_ma3_sopra_ma40))
-            
         
-
-        #################################################################################################################################################
+        
 
         # formula DEVIATION_mentre_ma50_sale (per vendere)
         deviation_mentre_ma50_sale = (((last_trade_price / ma3_last - 1) * 100) if ma3_last else 0)
@@ -231,7 +229,9 @@ class ro_cano_che_ritorna:
         
            
         
-
+        
+        
+        
         ####################################################################################################################################################
 
         # DEFAULT ACTION DICE DI NON FARE NIENTE (=None, NON TOCCARE)
@@ -252,10 +252,14 @@ class ro_cano_che_ritorna:
                 self.open = True
                 self.algo_helper.log("session {}: open segment".format(self.session))
 
+        
         # SI CHIUDE LA GABBIA SE
-        elif self.open:
+        else:    
             self.open = False
             self.algo_helper.log("session {}: closed segment".format(self.session))
+            
+            
+            
 
         #############################################################################################################################################
 
