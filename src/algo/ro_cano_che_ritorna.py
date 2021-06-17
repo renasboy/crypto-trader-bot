@@ -19,65 +19,51 @@ class ro_cano_che_ritorna:
         ma6_last, ma6_prev = self.algo_helper.ma_last_prev(6)
         ma7_last, ma7_prev = self.algo_helper.ma_last_prev(7)
         ma8_last, ma8_prev = self.algo_helper.ma_last_prev(8)
-        #ma9_last, ma9_prev = self.algo_helper.ma_last_prev(9)
         ma10_last, ma10_prev = self.algo_helper.ma_last_prev(10)
         ma13_last, ma13_prev = self.algo_helper.ma_last_prev(13)
-        #ma15_last, ma15_prev = self.algo_helper.ma_last_prev(15)
-        #ma16_last, ma16_prev = self.algo_helper.ma_last_prev(16)
-        #ma17_last, ma17_prev = self.algo_helper.ma_last_prev(17)
         ma18_last, ma18_prev = self.algo_helper.ma_last_prev(18)
-        #ma20_last, ma20_prev = self.algo_helper.ma_last_prev(20)
         ma25_last, ma25_prev = self.algo_helper.ma_last_prev(25)
         ma30_last, ma30_prev = self.algo_helper.ma_last_prev(30)
         ma33_last, ma33_prev = self.algo_helper.ma_last_prev(33)
-        #ma36_last, ma36_prev = self.algo_helper.ma_last_prev(36)
-        #ma38_last, ma38_prev = self.algo_helper.ma_last_prev(38)
         ma39_last, ma39_prev = self.algo_helper.ma_last_prev(39)
         ma40_last, ma40_prev = self.algo_helper.ma_last_prev(40)
-        #ma45_last, ma45_prev = self.algo_helper.ma_last_prev(45)
         ma50_last, ma50_prev = self.algo_helper.ma_last_prev(50)
-        #ma60_last, ma60_prev = self.algo_helper.ma_last_prev(60)
         ma78_last, ma78_prev = self.algo_helper.ma_last_prev(78)
-        #ma82_last, ma82_prev = self.algo_helper.ma_last_prev(82)
-        #ma100_last, ma100_prev = self.algo_helper.ma_last_prev(100)
         
         
-
-      
-
+        
+        
         # moving average (2-3-4-5-7-8-20-43-100) di x minuti prima
 
         ma2_2_min_ago = self.algo_helper.ma_minutes_ago(2, 2)
         ma2_3_min_ago = self.algo_helper.ma_minutes_ago(2, 3)
         ma3_2_min_ago = self.algo_helper.ma_minutes_ago(3, 2)
         ma3_12_min_ago = self.algo_helper.ma_minutes_ago(3, 12)
-        #ma3_16_min_ago = self.algo_helper.ma_minutes_ago(3, 16)
         ma4_2_min_ago = self.algo_helper.ma_minutes_ago(4, 2)
         ma6_2_min_ago = self.algo_helper.ma_minutes_ago(6, 2)
         ma8_4_min_ago = self.algo_helper.ma_minutes_ago(8, 4)
         ma13_2_min_ago = self.algo_helper.ma_minutes_ago(13, 2)
-        #ma16_2_min_ago = self.algo_helper.ma_minutes_ago(16, 2)
-        #ma25_2_min_ago = self.algo_helper.ma_minutes_ago(25, 2)
         ma33_5_min_ago = self.algo_helper.ma_minutes_ago(33, 5)
         ma39_2_min_ago = self.algo_helper.ma_minutes_ago(39, 2)
-        
-        
         ma50_2_min_ago = self.algo_helper.ma_minutes_ago(50, 2)
         ma78_2_min_ago = self.algo_helper.ma_minutes_ago(78, 2)
         ma78_20_min_ago = self.algo_helper.ma_minutes_ago(78, 20)
         
-
+       
+    
         # LAST TRADE
         last_trade_action = self.algo_helper.last_trade_action
         last_trade_price = self.algo_helper.last_trade_price
         seconds_since_last_trade = self.algo_helper.seconds_since_last_trade
 
+        
         # PREV TRADE
         prev_trade_action = self.algo_helper.prev_trade_action
         prev_trade_time = self.algo_helper.prev_trade_time
         prev_trade_price = self.algo_helper.prev_trade_price
         seconds_since_prev_trade = self.algo_helper.seconds_since_prev_trade
 
+        
         #########################################################################################################################################################
 
         # PREZZO DI ADESSO (di mercato) - CURRENT PRICE
@@ -92,7 +78,7 @@ class ro_cano_che_ritorna:
         
         price_2_min_ago = self.algo_helper.price_minutes_ago(2)
         #price_3_min_ago = self.algo_helper.price_minutes_ago(3)
-        #price_5_min_ago = self.algo_helper.price_minutes_ago(5)
+        
         
 
         #############################################################################################################################################################
