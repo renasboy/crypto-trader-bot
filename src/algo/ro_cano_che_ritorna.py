@@ -19,27 +19,27 @@ class ro_cano_che_ritorna:
         ma6_last, ma6_prev = self.algo_helper.ma_last_prev(6)
         ma7_last, ma7_prev = self.algo_helper.ma_last_prev(7)
         ma8_last, ma8_prev = self.algo_helper.ma_last_prev(8)
-        ma9_last, ma9_prev = self.algo_helper.ma_last_prev(9)
+        #ma9_last, ma9_prev = self.algo_helper.ma_last_prev(9)
         ma10_last, ma10_prev = self.algo_helper.ma_last_prev(10)
         ma13_last, ma13_prev = self.algo_helper.ma_last_prev(13)
-        ma15_last, ma15_prev = self.algo_helper.ma_last_prev(15)
-        ma16_last, ma16_prev = self.algo_helper.ma_last_prev(16)
-        ma17_last, ma17_prev = self.algo_helper.ma_last_prev(17)
-        ma18_last, ma18_prev = self.algo_helper.ma_last_prev(18)
-        ma20_last, ma20_prev = self.algo_helper.ma_last_prev(20)
-        ma25_last, ma25_prev = self.algo_helper.ma_last_prev(25)
-        ma30_last, ma30_prev = self.algo_helper.ma_last_prev(30)
+        #ma15_last, ma15_prev = self.algo_helper.ma_last_prev(15)
+        #ma16_last, ma16_prev = self.algo_helper.ma_last_prev(16)
+        #ma17_last, ma17_prev = self.algo_helper.ma_last_prev(17)
+        #ma18_last, ma18_prev = self.algo_helper.ma_last_prev(18)
+        #ma20_last, ma20_prev = self.algo_helper.ma_last_prev(20)
+        #ma25_last, ma25_prev = self.algo_helper.ma_last_prev(25)
+        #ma30_last, ma30_prev = self.algo_helper.ma_last_prev(30)
         ma33_last, ma33_prev = self.algo_helper.ma_last_prev(33)
-        ma36_last, ma36_prev = self.algo_helper.ma_last_prev(36)
-        ma38_last, ma38_prev = self.algo_helper.ma_last_prev(38)
+        #ma36_last, ma36_prev = self.algo_helper.ma_last_prev(36)
+        #ma38_last, ma38_prev = self.algo_helper.ma_last_prev(38)
         ma39_last, ma39_prev = self.algo_helper.ma_last_prev(39)
         ma40_last, ma40_prev = self.algo_helper.ma_last_prev(40)
-        ma45_last, ma45_prev = self.algo_helper.ma_last_prev(45)
+        #ma45_last, ma45_prev = self.algo_helper.ma_last_prev(45)
         ma50_last, ma50_prev = self.algo_helper.ma_last_prev(50)
-        ma60_last, ma60_prev = self.algo_helper.ma_last_prev(60)
+        #ma60_last, ma60_prev = self.algo_helper.ma_last_prev(60)
         ma78_last, ma78_prev = self.algo_helper.ma_last_prev(78)
-        ma82_last, ma82_prev = self.algo_helper.ma_last_prev(82)
-        ma100_last, ma100_prev = self.algo_helper.ma_last_prev(100)
+        #ma82_last, ma82_prev = self.algo_helper.ma_last_prev(82)
+        #ma100_last, ma100_prev = self.algo_helper.ma_last_prev(100)
         
         
 
@@ -51,20 +51,20 @@ class ro_cano_che_ritorna:
         ma2_3_min_ago = self.algo_helper.ma_minutes_ago(2, 3)
         ma3_2_min_ago = self.algo_helper.ma_minutes_ago(3, 2)
         ma3_12_min_ago = self.algo_helper.ma_minutes_ago(3, 12)
-        ma3_16_min_ago = self.algo_helper.ma_minutes_ago(3, 16)
+        #ma3_16_min_ago = self.algo_helper.ma_minutes_ago(3, 16)
         ma4_2_min_ago = self.algo_helper.ma_minutes_ago(4, 2)
         ma6_2_min_ago = self.algo_helper.ma_minutes_ago(6, 2)
         ma8_4_min_ago = self.algo_helper.ma_minutes_ago(8, 4)
         ma13_2_min_ago = self.algo_helper.ma_minutes_ago(13, 2)
-        ma16_2_min_ago = self.algo_helper.ma_minutes_ago(16, 2)
-        ma25_2_min_ago = self.algo_helper.ma_minutes_ago(25, 2)
+        #ma16_2_min_ago = self.algo_helper.ma_minutes_ago(16, 2)
+        #ma25_2_min_ago = self.algo_helper.ma_minutes_ago(25, 2)
         ma33_5_min_ago = self.algo_helper.ma_minutes_ago(33, 5)
         ma39_2_min_ago = self.algo_helper.ma_minutes_ago(39, 2)
-        ma39_42_min_ago = self.algo_helper.ma_minutes_ago(39, 42)
-        ma39_52_min_ago = self.algo_helper.ma_minutes_ago(39, 52)
+        
+        
         ma50_2_min_ago = self.algo_helper.ma_minutes_ago(50, 2)
         ma78_2_min_ago = self.algo_helper.ma_minutes_ago(78, 2)
-        ma78_20_min_ago = self.algo_helper.ma_minutes_ago(78, 20)
+        #ma78_20_min_ago = self.algo_helper.ma_minutes_ago(78, 20)
         
 
         # LAST TRADE
@@ -89,10 +89,10 @@ class ro_cano_che_ritorna:
         
 
         # PREZZO di X MINUTI FA (di mercato) - PREV PRICE
-        price_1_min_ago = self.algo_helper.price_minutes_ago(1)
+        
         price_2_min_ago = self.algo_helper.price_minutes_ago(2)
-        price_3_min_ago = self.algo_helper.price_minutes_ago(3)
-        price_5_min_ago = self.algo_helper.price_minutes_ago(5)
+        #price_3_min_ago = self.algo_helper.price_minutes_ago(3)
+        #price_5_min_ago = self.algo_helper.price_minutes_ago(5)
         
 
         #############################################################################################################################################################
@@ -154,23 +154,21 @@ class ro_cano_che_ritorna:
         
         
         
-        
+        '''
         
         # formula DEVIATION_buy_ma3 per comprare UN PO' PIU' SOPRA DEL LAST TRADE ( di solito l' ultimo SELL )
         
         deviation_buy_ma3 = (ma3_last / last_trade_price - 1) * 100 if last_trade_price else 0
         self.algo_helper.log("deviation_buy_ma3: {}".format(deviation_buy_ma3))    
         
-        
-        
-        
+       
         
         # formula DEVIATION_prev per comprare UN PO' PIU' SOPRA DEL PREV TRADE ( di solito l' ultimo BUY )
         
         deviation_prev = (ma3_last / prev_trade_price - 1) * 100 if prev_trade_price else 0
         self.algo_helper.log("deviation_prev: {}".format(deviation_prev))
         
-        
+        '''
         
         
         
@@ -363,11 +361,11 @@ class ro_cano_che_ritorna:
                     ma78_last > ma78_20_min_ago
                     and deviation_buy1 > 0.11
                     and deviation_pendenza_ma8 > 0.10
-                    # se deve comprare con deviation DEVE AVERE ANCHE UNA PENDENZA !
+                    # se deve comprare DEVE AVERE ANCHE UNA PENDENZA !
                     and price > price_2_min_ago
                     and ma2_last > ma2_2_min_ago
                     and ma4_last > ma4_2_min_ago
-                    # and ma4_last > ma8_last
+                    
                     and ma8_last > ma50_last
                     # deviation_buy1 = ma8_last / ma78_last
                 ):
@@ -1141,7 +1139,7 @@ class ro_cano_che_ritorna:
             ##################################################################################################################################
 
             
-            
+            ''' L I N E E   I N A T T I V E  ! 
             
             # salvagente SOLO mentre sale ! altrimenti va in conflitto con il buy durante il crollo
 
@@ -1165,7 +1163,10 @@ class ro_cano_che_ritorna:
                 sell = "SALVAGENTE 2"
                 action = "sell"
 
-                
+            '''
+            
+            
+            
             '''  L I N E E   I N A T T I V E  ! 
                 
             elif (
@@ -1248,7 +1249,9 @@ class ro_cano_che_ritorna:
 
             '''   
                 
-                
+              
+            
+            
             ######################################################################################################################
 
             
