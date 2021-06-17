@@ -745,7 +745,7 @@ class ro_cano_che_ritorna:
             
             # VENDITA - da 3 a 5 minuti = da 180 a 300 secondi
 
-            elif seconds_since_last_trade > 180 and seconds_since_last_trade <= 300:
+            if seconds_since_last_trade > 180 and seconds_since_last_trade <= 300:
 
                 if (
                     ma50_last >= ma50_2_min_ago and ( ma3_last > ma25_last and ma3_last < ma25_last) and deviation_sell > 0.18
