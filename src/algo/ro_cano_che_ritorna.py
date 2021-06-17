@@ -25,10 +25,10 @@ class ro_cano_che_ritorna:
         #ma15_last, ma15_prev = self.algo_helper.ma_last_prev(15)
         #ma16_last, ma16_prev = self.algo_helper.ma_last_prev(16)
         #ma17_last, ma17_prev = self.algo_helper.ma_last_prev(17)
-        #ma18_last, ma18_prev = self.algo_helper.ma_last_prev(18)
+        ma18_last, ma18_prev = self.algo_helper.ma_last_prev(18)
         #ma20_last, ma20_prev = self.algo_helper.ma_last_prev(20)
         ma25_last, ma25_prev = self.algo_helper.ma_last_prev(25)
-        #ma30_last, ma30_prev = self.algo_helper.ma_last_prev(30)
+        ma30_last, ma30_prev = self.algo_helper.ma_last_prev(30)
         ma33_last, ma33_prev = self.algo_helper.ma_last_prev(33)
         #ma36_last, ma36_prev = self.algo_helper.ma_last_prev(36)
         #ma38_last, ma38_prev = self.algo_helper.ma_last_prev(38)
@@ -64,7 +64,7 @@ class ro_cano_che_ritorna:
         
         ma50_2_min_ago = self.algo_helper.ma_minutes_ago(50, 2)
         ma78_2_min_ago = self.algo_helper.ma_minutes_ago(78, 2)
-        #ma78_20_min_ago = self.algo_helper.ma_minutes_ago(78, 20)
+        ma78_20_min_ago = self.algo_helper.ma_minutes_ago(78, 20)
         
 
         # LAST TRADE
