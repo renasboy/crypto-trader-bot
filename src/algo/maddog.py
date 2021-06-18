@@ -519,7 +519,7 @@ class maddog:
             # QUESTA HA FUNZIONATO
             
             elif (
-                deviation_ma48 < -0.22
+                deviation_ma48 < -0.33
                 
                 # deviation_ma48 = ma3_last / ma48_last
             ):
