@@ -5,7 +5,7 @@
                                                            # sell = "SELL 1 (0-3 min) con ma50 >"
         
         
-                    action = "sell"
+                   
 
 
 class ro_cano_che_ritorna:
