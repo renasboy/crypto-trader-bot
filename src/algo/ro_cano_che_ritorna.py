@@ -1,5 +1,11 @@
                                                      # NON c'e' un problema COMPA ! 
-                                                           #"sell" NO " sell "
+                                                           # "sell" 
+                                                           # NO " sell "
+                                                           # e anche questa cosi'!
+                                                           # sell = "SELL 1 (0-3 min) con ma50 >"
+        
+        
+                    action = "sell"
 
 
 class ro_cano_che_ritorna:
@@ -642,7 +648,7 @@ class ro_cano_che_ritorna:
                     ma50_last >= ma50_2_min_ago and (ma3_last > ma30_last and ma3_last < ma30_last) and deviation_sell > 0.18
                 ):
                 
-                    sell = " SELL 1 (0-3 min) con ma50 > "
+                    sell = "SELL 1 (0-3 min) con ma50 >"
                     action = "sell"
                     
                 
@@ -736,7 +742,7 @@ class ro_cano_che_ritorna:
                    
                 ):
                   
-                    sell = " SELL 9 (3-5 min) con ma50 > "
+                    sell = "SELL 9 (3-5 min) con ma50 >"
                     action = "sell"
                 
                 ''' L I N E E   I N A T T I V E  !
@@ -810,7 +816,7 @@ class ro_cano_che_ritorna:
                     ma50_last >= ma50_2_min_ago and (ma3_last > ma25_last and ma3_last < ma25_last) and deviation_sell > 0.18
                    
                 ):
-                    sell = " SELL 15 (5-12 min) con ma50 > "
+                    sell = "SELL 15 (5-12 min) con ma50 >"
                     action = "sell"
 
                     
@@ -887,7 +893,7 @@ class ro_cano_che_ritorna:
                     ma50_last >= ma50_2_min_ago and (ma3_last > ma18_last and ma3_last < ma18_last) and deviation_sell > 0.18
                 
                 ):
-                    sell = " SELL 21 (12-24 min) con ma50 > "
+                    sell = "SELL 21 (12-24 min) con ma50 >"
                     action = "sell"
 
                     
@@ -965,7 +971,7 @@ class ro_cano_che_ritorna:
                     ma50_last >= ma50_2_min_ago and (ma3_last > ma25_last and ma3_last < ma25_last) and deviation_sell > 0.18
                   
                 ):
-                    sell = " SELL 27 (24-40 min) con ma50 > "
+                    sell = "SELL 27 (24-40 min) con ma50 >"
                     action = "sell"
 
                     
@@ -1057,7 +1063,7 @@ class ro_cano_che_ritorna:
                 
                 ):
 
-                    sell = " SELL 34 ( dopo 40 min ) con ma50 > "
+                    sell = "SELL 34 ( dopo 40 min ) con ma50 >"
                     action = "sell"
 
                 ''' L I N E E   I N A T T I V E  !
