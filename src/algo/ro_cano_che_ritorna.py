@@ -1,4 +1,4 @@
-# c'e' un problema !!! vediamo
+                                                     # c'e' un problema COMPA !
 
 
 class ro_cano_che_ritorna:
@@ -91,7 +91,7 @@ class ro_cano_che_ritorna:
 
         
         
-        '''
+        ''' L I N E E   I N A T T I V E  !
         
         # TEMPO in cui (PER COMPRARE) (a tutte le condizioni gia' attive) SI AGGIUNGE una condizione aggiuntiva LA DEVIATION !
 
@@ -130,17 +130,14 @@ class ro_cano_che_ritorna:
         self.algo_helper.log("deviation_buy3: {}".format(deviation_buy3))
         
 
-        
-        
-        
         # formula DEVIATION_buy per comprare UN PO' PIU' SOPRA DEL LAST TRADE ( di solito l' ultimo SELL )
-        
         deviation_buy = (ma2_last / last_trade_price - 1) * 100 if last_trade_price else 0
         self.algo_helper.log("deviation_buy: {}".format(deviation_buy))   
         
         
         
-        '''
+        
+        ''' L I N E E   I N A T T I V E  !
         
         # formula DEVIATION_buy_ma3 per comprare UN PO' PIU' SOPRA DEL LAST TRADE ( di solito l' ultimo SELL )
         
