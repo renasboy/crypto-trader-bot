@@ -331,7 +331,7 @@ class ro_cano_che_ritorna:
                     
                 ):
 
-                    buy = ".............................................................BUY 1 DURANTE IL RIALZO con INCROCIO CLASSICO "
+                    buy = "...........................................................BUY 1 DURANTE IL RIALZO con INCROCIO CLASSICO"
                     action = "buy"
                 
                 
@@ -354,7 +354,7 @@ class ro_cano_che_ritorna:
                     # deviation_buy1 = ma8_last / ma78_last
                 ):
 
-                    buy = ".............................................................BUY 1 DURANTE IL RIALZO con LA DEVIATION "
+                    buy = "............................................................BUY 1 DURANTE IL RIALZO con LA DEVIATION"
                     action = "buy"
 
                 
