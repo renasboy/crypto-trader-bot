@@ -1,4 +1,5 @@
-                                                     # c'e' un problema COMPA !
+                                                     # NON c'e' un problema COMPA ! 
+                                                           #"sell" NO " sell "
 
 
 class ro_cano_che_ritorna:
@@ -331,7 +332,7 @@ class ro_cano_che_ritorna:
                 ):
 
                     buy = ".............................................................BUY 1 DURANTE IL RIALZO con INCROCIO CLASSICO "
-                    action = " buy "
+                    action = "buy"
                 
                 
                 
@@ -354,7 +355,7 @@ class ro_cano_che_ritorna:
                 ):
 
                     buy = ".............................................................BUY 1 DURANTE IL RIALZO con LA DEVIATION "
-                    action = " buy "
+                    action = "buy"
 
                 
                 ''' L I N E E   I N A T T I V E  !
@@ -642,7 +643,7 @@ class ro_cano_che_ritorna:
                 ):
                 
                     sell = " SELL 1 (0-3 min) con ma50 > "
-                    action = " sell "
+                    action = "sell"
                     
                 
             ''' L I N E E   I N A T T I V E  !
@@ -736,7 +737,7 @@ class ro_cano_che_ritorna:
                 ):
                   
                     sell = " SELL 9 (3-5 min) con ma50 > "
-                    action = " sell "
+                    action = "sell"
                 
                 ''' L I N E E   I N A T T I V E  !
                 
@@ -810,7 +811,7 @@ class ro_cano_che_ritorna:
                    
                 ):
                     sell = " SELL 15 (5-12 min) con ma50 > "
-                    action = " sell "
+                    action = "sell"
 
                     
                     
@@ -887,7 +888,7 @@ class ro_cano_che_ritorna:
                 
                 ):
                     sell = " SELL 21 (12-24 min) con ma50 > "
-                    action = " sell "
+                    action = "sell"
 
                     
                     
@@ -965,7 +966,7 @@ class ro_cano_che_ritorna:
                   
                 ):
                     sell = " SELL 27 (24-40 min) con ma50 > "
-                    action = " sell "
+                    action = "sell"
 
                     
                 ''' L I N E E   I N A T T I V E  !
@@ -1057,7 +1058,7 @@ class ro_cano_che_ritorna:
                 ):
 
                     sell = " SELL 34 ( dopo 40 min ) con ma50 > "
-                    action = " sell "
+                    action = "sell"
 
                 ''' L I N E E   I N A T T I V E  !
                     
