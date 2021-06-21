@@ -1,8 +1,8 @@
-                                                     # NON c'e' un problema COMPA ! 
+                                                     
                                                            # "sell" 
                                                            # NO " sell "
-                                                           # e anche questa cosi'!
-                                                           # sell = "SELL 1 (0-3 min) con ma50 >"
+                                                          
+                                                  
         
         
                    
@@ -90,7 +90,7 @@ class ro_cano_che_ritorna:
 
         #############################################################################################################################################################
         
-        # VENDE DOPO x secondi = x minuti * 60 ("e se") ro cano torna a casa - riga 817
+        # VENDE DOPO x SECONDI = x minuti * 60  ro cano torna a casa - (ma c'e' anche un "e se")
         max_hold_time_in_seconds = 2400
 
         
@@ -102,10 +102,10 @@ class ro_cano_che_ritorna:
         
         # TEMPO in cui (PER COMPRARE) (a tutte le condizioni gia' attive) SI AGGIUNGE una condizione aggiuntiva LA DEVIATION !
 
-        # dall' ULTIMO trade ( 15 minuti = 15 * 60 = 900 secondi )
+        # dall' ULTIMO trade ( nei 15 minuti dall' ultimo trade = 15 * 60 = 900 secondi )
         min_buy_delay_in_seconds = 900
 
-        # dal PENULTIMO trade ( 150 minuti = 150 * 60 = 9000 secondi )
+        # dal PENULTIMO trade ( nei 150 minuti dal penultimo trade = 150 * 60 = 9000 secondi )
         min_prev_buy_delay_in_seconds = 9000
 
         '''
@@ -147,23 +147,22 @@ class ro_cano_che_ritorna:
         ''' L I N E E   I N A T T I V E  !
         
         # formula DEVIATION_buy_ma3 per comprare UN PO' PIU' SOPRA DEL LAST TRADE ( di solito l' ultimo SELL )
-        
         deviation_buy_ma3 = (ma3_last / last_trade_price - 1) * 100 if last_trade_price else 0
         self.algo_helper.log("deviation_buy_ma3: {}".format(deviation_buy_ma3))    
+        
         
        
         
         # formula DEVIATION_prev per comprare UN PO' PIU' SOPRA DEL PREV TRADE ( di solito l' ultimo BUY )
-        
         deviation_prev = (ma3_last / prev_trade_price - 1) * 100 if prev_trade_price else 0
         self.algo_helper.log("deviation_prev: {}".format(deviation_prev))
+        
         
         '''
         
         
         
         # formula DEVIATION_gabbia
-        
         deviation_gabbia = (ma8_last / ma78_last - 1) * 100 if ma78_last else 0
         self.algo_helper.log("deviation_gabbia: {}".format(deviation_gabbia))
         
@@ -172,8 +171,8 @@ class ro_cano_che_ritorna:
         
         
         
-        # formula DEVIATION_ma50 per vendere a una certa distanza da ma50
         
+        # formula DEVIATION_ma50 per vendere a una certa distanza da ma50
         deviation_ma50 = (ma2_last / ma50_last - 1) * 100 if ma50_last else 0
         self.algo_helper.log("deviation_ma50: {}".format(deviation_ma50))
         
@@ -182,8 +181,8 @@ class ro_cano_che_ritorna:
         
         
         
-        # formula DEVIATION_buy_crollo per comprare a una certa distanza da ma13
         
+        # formula DEVIATION_buy_crollo per comprare a una certa distanza da ma13
         deviation_buy_crollo = (ma3_last / ma13_last - 1) * 100 if ma13_last else 0
         self.algo_helper.log("deviation_buy_crollo: {}".format(deviation_buy_crollo))
         
@@ -191,8 +190,8 @@ class ro_cano_che_ritorna:
         
         
         
-        # formula DEVIATION_sell_ma78
         
+        # formula DEVIATION_sell_ma78
         deviation_sell_ma78 = (ma2_last / ma78_last - 1) * 100 if ma78_last else 0
         self.algo_helper.log("deviation_sell_ma78: {}".format(deviation_sell_ma78))
         
@@ -201,8 +200,8 @@ class ro_cano_che_ritorna:
         
         
         
-        # formula DEVIATION_ma3_sopra_ma40
         
+        # formula DEVIATION_ma3_sopra_ma40
         deviation_ma3_sopra_ma40 = (ma3_last / ma40_last - 1) * 100 if ma40_last else 0
         self.algo_helper.log("deviation_ma3_sopra_ma40: {}".format(deviation_ma3_sopra_ma40))
         
@@ -210,9 +209,9 @@ class ro_cano_che_ritorna:
         
         
         
+        
        
         # formula DEVIATION_sell (per vendere)
-        
         deviation_sell = (ma3_last / last_trade_price - 1) * 100 if last_trade_price else 0
         self.algo_helper.log("deviation_sell: {}".format(deviation_sell))    
        
@@ -221,10 +220,11 @@ class ro_cano_che_ritorna:
         
         
         
-        # formula DEVIATION_PENDENZA_ma33  (per comprare)
         
+        # formula DEVIATION_PENDENZA_ma33  (per comprare)
         deviation_pendenza_ma33 = (ma33_last / ma33_5_min_ago - 1) * 100 if ma33_5_min_ago else 0
         self.algo_helper.log( "deviation_pendenza_ma33: {}".format(deviation_pendenza_ma33))    
+        
         
         
            
@@ -232,19 +232,19 @@ class ro_cano_che_ritorna:
         
         
         # formula DEVIATION_PENDENZA_ma8  ( per comprare in aggiunta al BUY 1 mentre sale con deviation )
-        
         deviation_pendenza_ma8 = (ma8_last / ma8_4_min_ago - 1) * 100 if ma8_4_min_ago else 0
         self.algo_helper.log("deviation_pendenza_ma33: {}".format(deviation_pendenza_ma33))    
        
+        
         
             
        
         
         
         # formula DEVIATION_SPAZIO_TEMPO ( per comprare se c'e' una velocita' nel rialzo del prezzo )
-        
         deviation_spazio_tempo = (ma3_last / ma3_12_min_ago - 1) * 100 if ma3_12_min_ago else 0
         self.algo_helper.log( "deviation_spazio_tempo: {}".format(deviation_spazio_tempo))    
+        
         
         
            
