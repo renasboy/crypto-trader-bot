@@ -299,7 +299,7 @@ class ro_cano_che_ritorna:
                 ( seconds_since_last_trade > 0 and seconds_since_last_trade <= min_buy_delay_in_seconds and deviation_buy_ma4 > 0.13 ) or ( seconds_since_last_trade == 0 or seconds_since_last_trade > min_buy_delay_in_seconds )
            
             ):
-                action = " buy "
+                action = "buy"
             
             
             # COMPRA UN PO' PIU' SOPRA DEL PENULTIMO TRADE SE deviation_prev > x nei 300 secondi ( qualche volta IL BUY)
@@ -308,7 +308,7 @@ class ro_cano_che_ritorna:
                 ( seconds_since_prev_trade > 0 and seconds_since_prev_trade <= min_prev_buy_delay_in_seconds and deviation_prev > 0.20 ) or ( seconds_since_prev_trade == 0 or seconds_since_prev_trade > min_buy_delay_in_seconds )
             
             ):   
-                action = " buy "
+                action = "buy"
              
                
                 
@@ -377,7 +377,7 @@ class ro_cano_che_ritorna:
                 ):
 
                     buy = "..........................................................BUY 1 DURANTE IL RIALZO con DEVIATION_SPAZIO_TEMPO "
-                    action = " buy "
+                    action = "buy"
                 
                 
                 
@@ -395,7 +395,7 @@ class ro_cano_che_ritorna:
                 ):
 
                     buy = ".............................................................BUY 1 DURANTE IL RIBASSO con INCROCIO CLASSICO "
-                    action = " buy "   
+                    action = "buy"   
                         
                     
                     
@@ -409,7 +409,7 @@ class ro_cano_che_ritorna:
                 ):
 
                     buy = "..............................................................BUY 1 DURANTE IL RIBASSO con DEVIATION "
-                    action = " buy "
+                    action = "buy"
                 
                 
                 
@@ -424,7 +424,7 @@ class ro_cano_che_ritorna:
                 ):
 
                     buy = "...............................................................BUY 1 DURANTE IL RIBASSO con DEVIATION_SPAZIO_TEMPO "
-                    action = " buy "
+                    action = "buy"
                 
                 
                 
@@ -441,7 +441,7 @@ class ro_cano_che_ritorna:
                   
                 ):
                     buy = "......................................................................BUY DURANTE IL CROLLO - modo 1 "
-                    action = " buy "
+                    action = "buy"
                 
                 
                 
@@ -453,7 +453,7 @@ class ro_cano_che_ritorna:
                     and (deviation_buy1 < -2.40 and deviation_buy_crollo > 0.39)
                 ):
                     buy = "......................................................................BUY DURANTE IL CROLLO - modo 2 "
-                    action = " buy "
+                    action = "buy"
             
             
             
@@ -475,7 +475,7 @@ class ro_cano_che_ritorna:
                     and ma3_last > ma40_last
                 ):
                     buy = "........................................................................BUY 2 con PENDENZA ma33 > 0.08 "
-                    action = " buy "   
+                    action = "buy"   
                         
                     
                     
@@ -491,7 +491,7 @@ class ro_cano_che_ritorna:
                     and ma3_last > ma40_last
                 ):
                     buy = "........................................................................BUY 2 con PENDENZA ma33 > 0.07  "
-                    action = " buy "
+                    action = "buy"
                 
                 
                 
@@ -504,7 +504,7 @@ class ro_cano_che_ritorna:
                     and ma4_last > ma78_last
                 ):
                     buy = ".................................................................................BUY 2 con PENDENZA ma33 > 0.06 "
-                    action = " buy "   
+                    action = "buy"   
                         
                    
                     
@@ -519,7 +519,7 @@ class ro_cano_che_ritorna:
                     and ma4_last > ma78_last
                 ):
                     buy = ".................................................................................BUY 2 con PENDENZA ma33 > -0.05 "
-                    action = " buy "
+                    action = "buy"
             
             
             
@@ -543,7 +543,7 @@ class ro_cano_che_ritorna:
                     and ma2_last > ma78_last
                 ):
                     buy = "........................................................................................BUY 3 con PENDENZA ma33 > 0.05 "
-                    action = " buy "    
+                    action = "buy"    
                         
                     
                     
@@ -560,7 +560,7 @@ class ro_cano_che_ritorna:
                     and ma4_last > ma78_last
                 ):
                     buy = "................................................................................BUY 3 con PENDENZA ma33 > 0.04 ( e altre deviation ) "
-                    action = " buy "
+                    action = "buy"
                 
                 
                 
@@ -577,7 +577,7 @@ class ro_cano_che_ritorna:
                     and ma4_last > ma78_last
                 ):
                     buy = "..................................................................................BUY 3 con PENDENZA ma33 > 0.03 ( e altre deviation ) "
-                    action = " buy "
+                    action = "buy"
                 
                 
                 
@@ -594,7 +594,7 @@ class ro_cano_che_ritorna:
                     and ma4_last > ma78_last
                 ):
                     buy = "..................................................................................BUY 3 con PENDENZA ma33 > -0.03 ( e altre deviation ) "
-                    action = " buy "
+                    action = "buy"
                 
                 
                 
@@ -672,7 +672,7 @@ class ro_cano_che_ritorna:
                 ):
 
                     sell = " SELL 3 (0-3 min) con ma50 > "
-                    action = " sell "
+                    action = "sell"
                 
                 
                 
@@ -683,7 +683,7 @@ class ro_cano_che_ritorna:
                 ):
 
                     sell = "SELL 4 (0-3 min) con ma50 >"
-                    action = " sell "
+                    action = "sell"
 
                 # ------------------------------------------------------------------------------------------------------------------- CROLLO
                 
@@ -694,7 +694,7 @@ class ro_cano_che_ritorna:
                 ):
 
                     sell = " SELL 5 (0-3 min) con ma50 < "
-                    action = " sell "
+                    action = "sell"
 
                 # ---------------------------------------------------------------------------------------------------------------------
                 
@@ -705,7 +705,7 @@ class ro_cano_che_ritorna:
                 ):
 
                     sell = " SELL 6 ( 0-3 min ) con ma50 < "
-                    action = " sell "
+                    action = "sell"
                 
                 
                 
@@ -725,7 +725,7 @@ class ro_cano_che_ritorna:
                 ):
 
                     sell = " SELL 8 (0-3 min) con ma50 < "
-                    action = " sell "
+                    action = "sell"
             
                 '''
             
@@ -753,7 +753,7 @@ class ro_cano_che_ritorna:
                 ):
 
                     sell = " SELL 10 (3-5 min) con ma50 > "
-                    action = " sell "
+                    action = "sell"
                 
                 
                 
@@ -764,7 +764,7 @@ class ro_cano_che_ritorna:
                 ):
 
                     sell = " SELL 11 (3-5 min) con ma50 > "
-                    action = " sell "
+                    action = "sell"
 
                     
                 # -------------------------------------------------------------------------------------------------------------------------crollo
@@ -776,7 +776,7 @@ class ro_cano_che_ritorna:
                 ):
 
                     sell = " SELL 12 (3-5 min) con ma50 < "
-                    action = " sell "
+                    action = "sell"
 
                 # --------------------------------------------------------------------------------------------------------------------------------
 
@@ -788,7 +788,7 @@ class ro_cano_che_ritorna:
                 ):
 
                     sell = " SELL 13 (3-5 min) con ma50 < "
-                    action = " sell "
+                    action = "sell"
 
                     
                     
@@ -798,7 +798,7 @@ class ro_cano_che_ritorna:
                 ):
 
                     sell = " SELL 14 (3-5 min) con ma50 < "
-                    action = " sell "
+                    action = "sell"
 
                 '''
                 
@@ -829,7 +829,7 @@ class ro_cano_che_ritorna:
                   
                 ):
                     sell = "SELL 16 (5-12 min) con ma50 >"
-                    action = " sell "
+                    action = "sell"
 
                     
                     
@@ -839,7 +839,7 @@ class ro_cano_che_ritorna:
                    
                 ):
                     sell = "SELL 17 (5-12 min) con ma50 > "
-                    action = " sell "
+                    action = "sell"
 
                     
                 # ---------------------------------------------------------------------------------------------------------------------- crollo
@@ -850,7 +850,7 @@ class ro_cano_che_ritorna:
                    
                 ):
                     sell = " SELL 18 (5-12 min) con ma50 < "
-                    action = " sell "
+                    action = "sell"
 
                     
                 # --------------------------------------------------------------------------------------------------------------------------------
@@ -862,7 +862,7 @@ class ro_cano_che_ritorna:
                  
                 ):
                     sell = " SELL 19 (5-12 min) con ma50 < "
-                    action = " sell "
+                    action = "sell"
 
                     
                     
@@ -873,7 +873,7 @@ class ro_cano_che_ritorna:
                 ):
 
                     sell = " SELL 20 (5-12 min) con ma50 < "
-                    action = " sell "
+                    action = "sell"
 
                   
                 '''
@@ -907,7 +907,7 @@ class ro_cano_che_ritorna:
                    
                 ):
                     sell = " SELL 22 (12-24 min) con ma50 > "
-                    action = " sell "
+                    action = "sell"
 
                     
                     
@@ -917,7 +917,7 @@ class ro_cano_che_ritorna:
                  
                 ):
                     sell = " SELL 23 (12-24 min) con ma50 > "
-                    action = " sell "
+                    action = "sell"
 
                     
                     
@@ -930,7 +930,7 @@ class ro_cano_che_ritorna:
                   
                 ):
                     sell = " SELL 24 (12-24 min) con ma50 < "
-                    action = " sell "
+                    action = "sell"
 
                     
                     
@@ -943,7 +943,7 @@ class ro_cano_che_ritorna:
                   
                 ):
                     sell = " SELL 25 (12-24 min) con ma50 < "
-                    action = " sell "
+                    action = "sell"
 
                     
                     
@@ -955,7 +955,7 @@ class ro_cano_che_ritorna:
                 ):
 
                     sell = " SELL 26 (12-24 min) con ma50 < "
-                    action = " sell "
+                    action = "sell"
 
                     '''
                     
@@ -982,7 +982,7 @@ class ro_cano_che_ritorna:
                   
                 ):
                     sell = " SELL 28 (24-40 min) con ma50 > "
-                    action = " sell "
+                    action = "sell"
 
                     
                     
@@ -992,7 +992,7 @@ class ro_cano_che_ritorna:
                  
                 ):
                     sell = " SELL 29 (24-40 min) con ma50 > "
-                    action = " sell "
+                    action = "sell"
 
                     
                     
@@ -1002,7 +1002,7 @@ class ro_cano_che_ritorna:
                   
                 ):
                     sell = " SELL 30  (24-40 min) con ma50 < "
-                    action = " sell "
+                    action = "sell"
 
                     
                     
@@ -1015,7 +1015,7 @@ class ro_cano_che_ritorna:
                    
                 ):
                     sell = " SELL 31  (24-40 min) con ma50 < "
-                    action = " sell "
+                    action = "sell"
 
                     
                     
@@ -1028,7 +1028,7 @@ class ro_cano_che_ritorna:
                   
                 ):
                     sell = " SELL 32  (24-40 min) con ma50 < "
-                    action = " sell "
+                    action = "sell"
 
                     
                     
@@ -1039,7 +1039,7 @@ class ro_cano_che_ritorna:
                 ):
 
                     sell = " SELL 33 (24-40 min) con ma50 < "
-                    action = " sell "
+                    action = "sell"
                     
                     
                     
@@ -1076,7 +1076,7 @@ class ro_cano_che_ritorna:
                 ):
 
                     sell = " SELL 35 ( dopo 40 min ) con ma50 > "
-                    action = " sell "
+                    action = "sell"
 
                     
                     
@@ -1087,7 +1087,7 @@ class ro_cano_che_ritorna:
                  
                 ):
                     sell = " SELL 36 ( dopo 40 min ) con ma50 > "
-                    action = " sell "
+                    action = "sell"
 
                     
                     
@@ -1098,7 +1098,7 @@ class ro_cano_che_ritorna:
                    
                 ):
                     sell = " SELL 37 ( dopo 40 min ) con ma50 < "
-                    action = " sell "
+                    action = "sell"
 
                     
                     
@@ -1109,7 +1109,7 @@ class ro_cano_che_ritorna:
                  
                 ):
                     sell = " SELL 38 ( dopo 40 min ) con ma50 < "
-                    action = " sell "
+                    action = "sell"
 
                     
                     
@@ -1121,7 +1121,7 @@ class ro_cano_che_ritorna:
                 ):
 
                     sell = " SELL 39 ( dopo 40 min ) con ma50 < "
-                    action = " sell "
+                    action = "sell"
 
                     
                 '''    
