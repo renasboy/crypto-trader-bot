@@ -81,7 +81,7 @@ class ro_cano_che_ritorna:
         
         
 
-        # PREZZO di X MINUTI FA (di mercato) - PREV PRICE
+        # PREZZO di X MINUTI FA (di mercato) - 
         
         price_2_min_ago = self.algo_helper.price_minutes_ago(2)
         #price_3_min_ago = self.algo_helper.price_minutes_ago(3)
@@ -291,7 +291,7 @@ class ro_cano_che_ritorna:
        ####################################################################################################################################
              
             
-            ''' L I N E E   I N A T T I V E  !
+            # non vendeva allora ho attivato questa...vediamo
             
             # COMPRA UN PO' PIU' SOPRA DELL' ULTIMO SELL ( aggiungere compra un po' piu' sopra dell' ultimo BUY deviation > 0.20 )
             
@@ -309,7 +309,7 @@ class ro_cano_che_ritorna:
             
             ):   
                 action = " buy "
-            '''    
+             
                
                 
                 
