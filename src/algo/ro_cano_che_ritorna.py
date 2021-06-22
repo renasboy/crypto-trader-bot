@@ -291,27 +291,46 @@ class ro_cano_che_ritorna:
        ####################################################################################################################################
              
             
-            # non vendeva allora ho attivato questa...vediamo
+          
+          
+          
+            # queste righe non le capisco...ma e' un mio limite
+            
+            
+            
+            
             
             # COMPRA UN PO' PIU' SOPRA DELL' ULTIMO SELL ( aggiungere compra un po' piu' sopra dell' ultimo BUY deviation > 0.20 )
-            
             if (
-                ( seconds_since_last_trade > 0 and seconds_since_last_trade <= min_buy_delay_in_seconds and deviation_buy_ma4 > 0.13 ) or ( seconds_since_last_trade == 0 or seconds_since_last_trade > min_buy_delay_in_seconds )
-           
+                seconds_since_last_trade > 0
+                and seconds_since_last_trade <= min_buy_delay_in_seconds
+                and deviation_buy > 0.13
+            ) or (
+                seconds_since_last_trade == 0
+                or seconds_since_last_trade > min_buy_delay_in_seconds
             ):
-                action = "buy"
-            
+                
+                action = " buy "
+                
+           
+          
+          
             
             # COMPRA UN PO' PIU' SOPRA DEL PENULTIMO TRADE SE deviation_prev > x nei 300 secondi ( qualche volta IL BUY)
-
             elif (
-                ( seconds_since_prev_trade > 0 and seconds_since_prev_trade <= min_prev_buy_delay_in_seconds and deviation_prev > 0.20 ) or ( seconds_since_prev_trade == 0 or seconds_since_prev_trade > min_buy_delay_in_seconds )
-            
-            ):   
-                action = "buy"
-             
-               
+                seconds_since_prev_trade > 0
+                and seconds_since_prev_trade <= min_prev_buy_delay_in_seconds
+                and deviation_buy > 0.13
+            ) or (
+                seconds_since_prev_trade == 0
+                or seconds_since_prev_trade > min_buy_delay_in_seconds
+            ):
                 
+                action = " buy "
+                
+                
+            
+           
                 
             ###########################################################################################################################################
             ###########################################################################################################################################
