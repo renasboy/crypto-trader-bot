@@ -98,8 +98,8 @@ class ro_cano_che_ritorna:
 
         
         
-        ''' L I N E E   I N A T T I V E  !
         
+        # CONDIZIONE TEMPO anche per i segmenti del sell !
         # TEMPO in cui (PER COMPRARE) (a tutte le condizioni gia' attive) SI AGGIUNGE una condizione aggiuntiva LA DEVIATION !
 
         # dall' ULTIMO trade ( nei 15 minuti dall' ultimo trade = 15 * 60 = 900 secondi )
@@ -108,7 +108,7 @@ class ro_cano_che_ritorna:
         # dal PENULTIMO trade ( nei 150 minuti dal penultimo trade = 150 * 60 = 9000 secondi )
         min_prev_buy_delay_in_seconds = 9000
 
-        '''
+        
 
 
 
@@ -144,7 +144,7 @@ class ro_cano_che_ritorna:
         
         
         
-        ''' L I N E E   I N A T T I V E  !
+        
         
         # formula DEVIATION_buy_ma3 per comprare UN PO' PIU' SOPRA DEL LAST TRADE ( di solito l' ultimo SELL )
         deviation_buy_ma3 = (ma3_last / last_trade_price - 1) * 100 if last_trade_price else 0
@@ -158,7 +158,7 @@ class ro_cano_che_ritorna:
         self.algo_helper.log("deviation_prev: {}".format(deviation_prev))
         
         
-        '''
+        
         
         
         
