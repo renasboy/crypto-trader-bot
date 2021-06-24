@@ -331,7 +331,7 @@ class maddog:
                     ma78_last >= ma78_20_min_ago and (ma3_last > ma25_last and ma3_last < ma25_last) and deviation > 0.18
                  
                 ):
-                    sell = "SELL 1-A1"
+                    sell = "SELL 1 A1"
                     action = "sell"
                 
                 
@@ -340,7 +340,7 @@ class maddog:
                     ma78_last >= ma78_20_min_ago and (ma3_last > ma18_last and ma3_last < ma18_last) and deviation_ma50 > 0.70
                  
                 ):
-                    sell = "SELL 1-A2"
+                    sell = "SELL 1 A2"
                     action = "sell"
                 
                 
@@ -349,7 +349,7 @@ class maddog:
                     ma78_last >= ma78_20_min_ago and (ma3_last > ma50_last and ma3_last < ma50_last) and deviation > 0.01
                 
                 ):
-                    sell = "SELL 1-A3"
+                    sell = "SELL 1 A3"
                     action = "sell"
                 
                 
@@ -365,7 +365,7 @@ class maddog:
                     # deviation_buy1 = ma8_last / ma78_last
                 ):
 
-                    sell = "SELL 1-B1"
+                    sell = "SELL 1 B1"
                     action = "sell"
                 
                 
@@ -377,7 +377,7 @@ class maddog:
                     # deviation_buy1 = ma8_last / ma78_last
                 ):
 
-                    sell = "SELL 1-B2"
+                    sell = "SELL 1 B2"
                     action = "sell"
                 
                 
@@ -388,7 +388,7 @@ class maddog:
                     # deviation_sell = ma3_last / ma50_last
                 ):
 
-                    sell = "SELL 1-B3"
+                    sell = "SELL 1 B3"
                     action = "sell"
             
             
@@ -407,7 +407,7 @@ class maddog:
                   
                 ):
 
-                    sell = "SELL 2-A"
+                    sell = "SELL 2 A"
                     action = "sell"
                 
                 
@@ -417,7 +417,7 @@ class maddog:
                  
                 ):
 
-                    sell = "SELL 2-B"
+                    sell = "SELL 2 B"
                     action = "sell"
                 
                 
@@ -429,7 +429,7 @@ class maddog:
                     # deviation_buy1 = ma8_last / ma78_last
                 ):
 
-                    sell = "SELL 2-C"
+                    sell = "SELL 2 C"
                     action = "sell"
                 
                 
@@ -441,7 +441,7 @@ class maddog:
                     # deviation_buy1 = ma8_last / ma78_last
                 ):
 
-                    sell = "SELL 2-D"
+                    sell = "SELL 2 D"
                     action = "sell"
             
             
@@ -456,7 +456,7 @@ class maddog:
                 
                 ):
 
-                    sell = "SELL 3-A"
+                    sell = "SELL 3 A"
                     action = "sell"
                 
                 
@@ -467,7 +467,7 @@ class maddog:
                     # deviation_sell = ma3_last / ma50_last
                     # deviation_buy1 = ma8_last / ma78_last
                 ):
-                    sell = "SELL 3-B"
+                    sell = "SELL 3 B"
                     action = "sell"
                 
                 
@@ -478,7 +478,7 @@ class maddog:
                     # deviation_sell = ma3_last / ma50_last
                     # deviation_buy1 = ma8_last / ma78_last
                 ):
-                    sell = "SELL 3-C"
+                    sell = "SELL 3 C"
                     action = "sell"
                 
                 
@@ -490,7 +490,7 @@ class maddog:
                     # deviation_buy1 = ma8_last / ma78_last
                 ):  
                     
-                    sell = "SELL 3-D"
+                    sell = "SELL 3 D"
                     action = "sell"
 
             ###################################################################################################################################################################
@@ -521,11 +521,11 @@ class maddog:
             # QUESTA HA FUNZIONATO
             
             elif (
-                deviation_ma48 < -0.33
+                deviation_ma48 < -0.37
                 
                 # deviation_ma48 = ma3_last / ma48_last
             ):
-                sell = " SELL SALVAGENTE 2 "
+                sell = "SELL SALVAGENTE 2"
                 action = "sell"
             
             ################################################################################################################################################
@@ -535,7 +535,7 @@ class maddog:
                 ma50_last > ma50_2_min_ago and (ma2_last < ma36_last and deviation_ma50 < -0.80)
              
             ):
-                sell = " SELL SALVAGENTE 3 "
+                sell = "SELL SALVAGENTE 3"
                 action = "sell"
 
             # 1) vedi riga 11 per es. DI 1 ORA = 3600 SECONDI "max hold time" " DOPO UN' ORA VENDE SUBITO " e se ma8_last < ma39_last and deviation < -0.45:
