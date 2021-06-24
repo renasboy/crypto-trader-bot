@@ -1273,8 +1273,3 @@ class ro_cano_che_ritorna:
             self.algo_helper.log("action buy {}".format(buy))
 
         return action
-
-        # ave comparo meo !
-        # compa caro
-        # comparo de dio
-        # gloria al mio compare
