@@ -377,7 +377,7 @@ class ro_cano_che_ritorna:
                     action = "buy"
 
                 
-                ''' L I N E E   I N A T T I V E  !
+                
                 
                 
                 # BUY 1 DURANTE IL RIALZO con DEVIATION_SPAZIO_TEMPO
@@ -665,7 +665,7 @@ class ro_cano_che_ritorna:
                     action = "sell"
                     
                 
-            ''' L I N E E   I N A T T I V E  !
+            
                 
                 elif (
                     ma50_last >= ma50_2_min_ago and (ma3_last > ma16_last and ma3_last < ma16_last) and deviation_sell > 0.65
@@ -740,7 +740,7 @@ class ro_cano_che_ritorna:
                     sell = "SELL 8 (0-3 min) con ma50 <"
                     action = "sell"
             
-                '''
+               
             
             ################################################################################################################################         3-5 min
             ################################################################################################################################
@@ -758,7 +758,7 @@ class ro_cano_che_ritorna:
                     sell = "SELL 9 (3-5 min) con ma50 >"
                     action = "sell"
                 
-                ''' L I N E E   I N A T T I V E  !
+                
                 
                 elif (
                     ma50_last >= ma50_2_min_ago and (ma3_last > ma16_last and ma3_last < ma16_last) and deviation_sell > 0.66
@@ -813,7 +813,7 @@ class ro_cano_che_ritorna:
                     sell = "SELL 14 (3-5 min) con ma50 <"
                     action = "sell"
 
-                '''
+               
                 
                 
             ################################################################################################################################### 5-12 min
@@ -834,7 +834,7 @@ class ro_cano_che_ritorna:
 
                     
                     
-                ''' L I N E E   I N A T T I V E  !
+               
                 
                 
                 elif (
@@ -889,7 +889,7 @@ class ro_cano_che_ritorna:
                     action = "sell"
 
                   
-                '''
+             
                 
             ############################################################################################################################    12-24 min
 
@@ -911,7 +911,7 @@ class ro_cano_che_ritorna:
 
                     
                     
-                ''' L I N E E   I N A T T I V E  !
+               
                 
                 
                 
@@ -970,7 +970,7 @@ class ro_cano_che_ritorna:
                     sell = "SELL 26 (12-24 min) con ma50 <"
                     action = "sell"
 
-                    '''
+                  
                     
             ################################################################################################################################## 24-40 min
 
@@ -988,7 +988,7 @@ class ro_cano_che_ritorna:
                     action = "sell"
 
                     
-                ''' L I N E E   I N A T T I V E  !
+               
                     
                 elif (
                     ma50_last >= ma50_2_min_ago and (ma3_last > ma16_last and ma3_last < ma16_last)
@@ -1056,7 +1056,7 @@ class ro_cano_che_ritorna:
                     
                     
                     
-                '''
+             
                     
                     
             ##############################################################################################################################     > 40 min
@@ -1079,7 +1079,7 @@ class ro_cano_che_ritorna:
                     sell = "SELL 34 ( dopo 40 min ) con ma50 >"
                     action = "sell"
 
-                ''' L I N E E   I N A T T I V E  !
+                
                     
                     
                     
@@ -1137,12 +1137,11 @@ class ro_cano_che_ritorna:
                     action = "sell"
 
                     
-                '''    
                     
             ##################################################################################################################################
 
             
-            ''' L I N E E   I N A T T I V E  ! 
+           
             
             # salvagente SOLO mentre sale ! altrimenti va in conflitto con il buy durante il crollo
 
@@ -1166,11 +1165,11 @@ class ro_cano_che_ritorna:
                 sell = "SALVAGENTE 2"
                 action = "sell"
 
-            '''
+           
             
             
             
-            '''  L I N E E   I N A T T I V E  ! 
+            
                 
             elif (
                 ma50_last >= ma50_2_min_ago and (ma8_last > ma39_last and ma8_last < ma39_last) and deviation_sell < -0.45
@@ -1204,7 +1203,7 @@ class ro_cano_che_ritorna:
             
             
             
-            '''
+          
             
             
                 
@@ -1213,7 +1212,7 @@ class ro_cano_che_ritorna:
             ##########################################################################################################################
 
             
-            ''' L I N E E   I N A T T I V E  !
+          
             
             # 2) ro cano VENDE " DOPO x MINUTI " "max hold time"
 
@@ -1250,7 +1249,7 @@ class ro_cano_che_ritorna:
 
 
 
-            '''   
+           
                 
               
             
