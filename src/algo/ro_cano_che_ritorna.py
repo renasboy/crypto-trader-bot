@@ -610,9 +610,14 @@ class ro_cano_che_ritorna:
                     action = "buy"
                 
                 
-                
                 '''
-        
+                # bla bla bla
+                
+                lucrezia e' bela
+                ro comparo meo e' de coro
+                Hortensia e Cloe sono due bele cane
+                # and mario e la sua esposa sono beli
+                '''
         
         
         
