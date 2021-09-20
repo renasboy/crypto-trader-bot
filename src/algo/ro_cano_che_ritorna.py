@@ -51,7 +51,7 @@ class ro_cano_che_ritorna:
         ma39_2_min_ago = self.algo_helper.ma_minutes_ago(39, 2)
         ma50_2_min_ago = self.algo_helper.ma_minutes_ago(50, 2)
         ma78_2_min_ago = self.algo_helper.ma_minutes_ago(78, 2)
-        ma78_20_min_ago = self.algo_helper.ma_minutes_ago(78, 20)
+        ma78_10_min_ago = self.algo_helper.ma_minutes_ago(78, 10)
         
        
     
@@ -222,7 +222,7 @@ class ro_cano_che_ritorna:
               
                 # BUY 1 DURANTE IL RIALZO con INCROCIO CLASSICO
                 if (
-                    ma78_last > ma78_20_min_ago
+                    ma78_last > ma78_10_min_ago
                     and (deviation_buy1>0.10 and (ma8_prev< ma50_prev and ma8_last>ma50_last))
                     and price>price_2_min_ago
                     and ma2_last>ma2_2_min_ago
@@ -243,8 +243,8 @@ class ro_cano_che_ritorna:
                 
                 # BUY 1 DURANTE IL RIALZO con LA DEVIATION BUY
                 elif (
-                    ma78_last > ma78_20_min_ago
-                    and deviation_buy1 > 0.11
+                    ma78_last > ma78_10_min_ago
+                    and deviation_buy1 > 0.07
                     
                     and price > price_2_min_ago
                     and ma2_last > ma2_2_min_ago
@@ -263,7 +263,7 @@ class ro_cano_che_ritorna:
                 
                 # BUY 1 DURANTE IL RIALZO con DEVIATION_SPAZIO_TEMPO
                 elif (
-                    ma78_last > ma78_20_min_ago
+                    ma78_last > ma78_10_min_ago
                     and deviation_spazio_tempo > 0.95
                     and ma3_last > ma78_last
                     # QUESTA CONDIZIONE SPAZIO-TEMPO ERA UNA TUA IDEA !
@@ -1081,5 +1081,6 @@ class ro_cano_che_ritorna:
             self.algo_helper.log("action buy {}".format(buy))
 
         return action
+      
       
       
