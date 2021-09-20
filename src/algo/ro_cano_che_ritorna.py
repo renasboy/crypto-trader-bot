@@ -123,38 +123,9 @@ class ro_cano_che_ritorna:
         
         
         
-        
-        
-        # formula DEVIATION_buy_ma3 per comprare UN PO' PIU' SOPRA DEL LAST TRADE ( di solito l' ultimo SELL )
-        deviation_buy_ma3 =(ma3_last/last_trade_price - 1) *100 if last_trade_price else 0
-        self.algo_helper.log("deviation_buy_ma3: {}".format(deviation_buy_ma3))    
-        
-        
-       
-        
-        # formula DEVIATION_prev per comprare UN PO' PIU' SOPRA DEL PREV TRADE ( di solito l' ultimo BUY )
-        deviation_prev =(ma3_last/prev_trade_price - 1) *100 if prev_trade_price else 0
-        self.algo_helper.log("deviation_prev: {}".format(deviation_prev))
-        
-        
-        
-        
-        
-        
         # formula DEVIATION_gabbia
         deviation_gabbia = (ma8_last/ma78_last - 1) *100 if ma78_last else 0
         self.algo_helper.log("deviation_gabbia: {}".format(deviation_gabbia))
-        
-        
-        
-        
-        
-        
-        
-        # formula DEVIATION_ma50 per vendere a una certa distanza da ma50
-        deviation_ma50 = (ma2_last/ma50_last - 1) *100 if ma50_last else 0
-        self.algo_helper.log("deviation_ma50: {}".format(deviation_ma50))
-        
         
         
         
@@ -196,25 +167,9 @@ class ro_cano_che_ritorna:
        
         
         
-        
-        
-        
-        
-        
-        
-        
-       
-        
-        
         # formula DEVIATION_SPAZIO_TEMPO ( per comprare se c'e' una velocita' nel rialzo del prezzo )
         deviation_spazio_tempo = (ma3_last/ma3_12_min_ago - 1) *100 if ma3_12_min_ago else 0
         self.algo_helper.log( "deviation_spazio_tempo: {}".format(deviation_spazio_tempo))    
-        
-        
-        
-           
-        
-        
         
         
         ####################################################################################################################################################
@@ -249,7 +204,7 @@ class ro_cano_che_ritorna:
         #############################################################################################################################################
 
         # COMPRA
-        # NON TOCCARE QUESTA RIGA ( DICE CHE STA IN MODO BUY, DEVO COMPRARE)
+        # NON TOCCARE QUESTA RIGA ( DICE CHE STA IN MODO BUY, vuole COMPRARE ! )
         if self.open and self.session and last_trade_action != "buy":
 
           
