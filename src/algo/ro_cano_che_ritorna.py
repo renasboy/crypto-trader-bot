@@ -284,43 +284,8 @@ class ro_cano_che_ritorna:
         # NON TOCCARE QUESTA RIGA ( DICE CHE STA IN MODO BUY, DEVO COMPRARE)
         if self.open and self.session and last_trade_action != "buy":
 
-            
-       ####################################################################################################################################
-             
-            
-          
-            
-            
-            
-            # COMPRA UN PO' PIU' SOPRA DELL' ULTIMO SELL ( aggiungere compra un po' piu' sopra dell' ultimo BUY deviation > 0.20 )
-            if (
-                seconds_since_last_trade > 0
-                and seconds_since_last_trade <= min_buy_delay_in_seconds
-                and deviation_buy > 0.13
-            ) or (
-                seconds_since_last_trade == 0
-                or seconds_since_last_trade > min_buy_delay_in_seconds
-            ):
-                
-                action = " buy "
-                
-           
           
           
-            
-            # COMPRA UN PO' PIU' SOPRA DEL PENULTIMO TRADE SE deviation_prev > x nei 300 secondi (qualche volta IL BUY)
-            
-            elif (
-                seconds_since_prev_trade > 0
-                and seconds_since_prev_trade <= min_prev_buy_delay_in_seconds
-                and deviation_buy > 0.13
-            ) or (
-                seconds_since_prev_trade == 0
-                or seconds_since_prev_trade > min_buy_delay_in_seconds
-            ):
-                
-                action = " buy "
-                
            
             ###########################################################################################################################################
                                                               #   B U Y 
@@ -335,7 +300,7 @@ class ro_cano_che_ritorna:
                 # BUY 1 DURANTE IL RIALZO con INCROCIO CLASSICO
                 if (
                     ma78_last > ma78_20_min_ago
-                    and (deviation_buy1 > 0.10 and (ma8_prev< ma50_prev and ma8_last > ma50_last))
+                    and (deviation_buy1>0.10 and (ma8_prev< ma50_prev and ma8_last>ma50_last))
                     and price>price_2_min_ago
                     and ma2_last>ma2_2_min_ago
                     and ma4_last>ma8_last
@@ -344,8 +309,8 @@ class ro_cano_che_ritorna:
                     
                 ):
 
-                    buy = "BUY 1 DURANTE IL RIALZO con INCROCIO CLASSICO"
-                    action = "buy"
+                    buy="BUY 1 DURANTE IL RIALZO con INCROCIO CLASSICO"
+                    action="buy"
                 
                 
                 
