@@ -1,11 +1,5 @@
                                                      
-                                                           # "sell" 
-                                                           # NO " sell "
                                                           
-                                                  
-        
-        
-                   
 
 
 class ro_cano_che_ritorna:
@@ -337,19 +331,16 @@ class ro_cano_che_ritorna:
             # COMPRA sessione 1
 
             if self.session == 1:
-                
-                
-                
-                
+              
                 # BUY 1 DURANTE IL RIALZO con INCROCIO CLASSICO
                 if (
                     ma78_last > ma78_20_min_ago
-                    and (deviation_buy1 > 0.10 and (ma8_prev < ma50_prev and ma8_last > ma50_last))
-                    and price > price_2_min_ago
-                    and ma2_last > ma2_2_min_ago
-                    and ma4_last > ma8_last
-                    and ma8_last > ma50_last
-                    # deviation_buy1 = ma8_last / ma78_last
+                    and (deviation_buy1 > 0.10 and (ma8_prev< ma50_prev and ma8_last > ma50_last))
+                    and price>price_2_min_ago
+                    and ma2_last>ma2_2_min_ago
+                    and ma4_last>ma8_last
+                    and ma8_last>ma50_last
+                    
                     
                 ):
 
@@ -399,49 +390,8 @@ class ro_cano_che_ritorna:
                 
                 
                 
-                # BUY 1 DURANTE IL RIBASSO con INCROCIO CLASSICO
-                elif (
-                    ma78_last < ma78_20_min_ago
-                    and (deviation_buy1 > 0.80 and (ma18_prev < ma78_prev and ma18_last > ma78_last))
-                    and ma8_last > ma50_last
-                    and price > price_2_min_ago
-                    and ma2_last > ma2_2_min_ago
-                    and ma4_last > ma4_2_min_ago
-                    # deviation_buy1 = ma8_last / ma78_last
-                ):
-
-                    buy = "BUY 1 DURANTE IL RIBASSO con INCROCIO CLASSICO"
-                    action = "buy"   
-                        
-                    
-                    
-
-                
-                # BUY 1 DURANTE IL RIBASSO con DEVIATION
-                elif (
-                    ma78_last < ma78_20_min_ago
-                    and deviation_buy1 > 0.99
-                    # deviation_buy1 = ma8_last / ma78_last
-                ):
-
-                    buy = "BUY 1 DURANTE IL RIBASSO con DEVIATION"
-                    action = "buy"
-                
-                
-                
                 
                
-                # BUY 1 DURANTE IL RIBASSO con DEVIATION_SPAZIO_TEMPO
-                elif (
-                    ma78_last < ma78_20_min_ago
-                    and deviation_spazio_tempo > 0.95
-                    and ma3_last > ma78_last
-                    # deviation_buy1 = ma8_last / ma78_last
-                ):
-
-                    buy = "BUY 1 DURANTE IL RIBASSO con DEVIATION_SPAZIO_TEMPO"
-                    action = "buy"
-                
                 
                 
                 ##############################################################################################################################
