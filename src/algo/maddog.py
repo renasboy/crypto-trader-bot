@@ -125,9 +125,9 @@ class maddog:
         self.algo_helper.log("deviation_ma50: {}".format(deviation_ma50))
         
         
-        # formula deviation_ma48 per vendere un po' piu' giu' di ma48
-        deviation_ma48 = (ma3_last / ma48_last - 1) * 100 if ma48_last else 0
-        self.algo_helper.log("deviation_ma48: {}".format(deviation_ma48))
+        # formula deviation_ma39 per vendere un po' piu' giu' di ma39
+        deviation_ma48 = (ma3_last / ma39_last - 1) * 100 if ma39_last else 0
+        self.algo_helper.log("deviation_ma39: {}".format(deviation_ma39))
         
         
         
@@ -351,9 +351,9 @@ class maddog:
          
             
             if (
-                deviation_ma48 < -0.37
+                deviation_ma39 < -0.37
                 
-                # deviation_ma48 = ma3_last / ma48_last
+                # deviation_ma39 = ma3_last / ma39_last
             ):
                 sell = "SELL SALVAGENTE 2"
                 action = "sell"
