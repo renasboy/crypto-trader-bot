@@ -350,7 +350,7 @@ class ro_cano_che_ritorna:
                 elif (
                     price > price_2_min_ago
                     and ma2_last > ma2_2_min_ago
-                    and (deviation_buy1 < -2.30 and (ma8_prev < ma25_prev and ma8_last > ma25_last) )
+                    and (deviation_buy1 < -2.30 and (ma8_prev < ma25_prev and ma8_last > ma25_last))
                   
                 ):
                     buy = "BUY DURANTE IL CROLLO - modo 1"
