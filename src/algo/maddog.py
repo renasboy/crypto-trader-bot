@@ -126,7 +126,7 @@ class maddog:
         
         
         # formula deviation_ma39 per vendere un po' piu' giu' di ma39
-        deviation_ma48 = (ma3_last / ma39_last - 1) * 100 if ma39_last else 0
+        deviation_ma39 = (ma3_last / ma39_last - 1) * 100 if ma39_last else 0
         self.algo_helper.log("deviation_ma39: {}".format(deviation_ma39))
         
         
