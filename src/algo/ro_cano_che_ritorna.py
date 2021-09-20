@@ -321,7 +321,7 @@ class ro_cano_che_ritorna:
                 if (
                     
                     deviation_ma3_sopra_ma40 > 0.12
-                    and ((ma4_prev < ma9_prev and ma4_last > ma9_last) and deviation_buy_ma3 > 0.12)
+                    and ((ma4_prev < ma9_prev and ma4_last > ma9_last) and deviation_buy2 > 0.12)
                     and ma2_last > ma2_2_min_ago
                     and price > price_2_min_ago
                     and ma4_last > ma78_last
@@ -337,8 +337,8 @@ class ro_cano_che_ritorna:
                     
                     deviation_ma3_sopra_ma40 > 0.12
                     and deviation_buy2 > 0.12
-                    and deviation_buy_ma3 > 0.12
-                    and deviation_prev > 0.22
+                    and deviation_buy2 > 0.12
+                    
                     and ma2_last > ma2_2_min_ago
                     and ma4_last > ma78_last
                     and ma3_last > ma40_last
@@ -351,7 +351,7 @@ class ro_cano_che_ritorna:
                 elif (
                     
                     deviation_ma3_sopra_ma40 > 0.12
-                    and ((ma4_prev < ma9_prev and ma4_last > ma9_last) and deviation_buy_ma3 > 0.12)
+                    and ((ma4_prev < ma9_prev and ma4_last > ma9_last) and deviation_buy2 > 0.12)
                     and ma2_last > ma2_2_min_ago
                     and ma3_last > ma40_last
                     and ma4_last > ma78_last
@@ -366,7 +366,7 @@ class ro_cano_che_ritorna:
                     
                     deviation_ma3_sopra_ma40 > 0.12
                     and deviation_buy2 > 0.15
-                    and deviation_buy_ma3 > 0.16
+                    and deviation_buy2 > 0.16
                     and ma2_last > ma2_2_min_ago
                     and ma3_last > ma40_last
                     and ma4_last > ma78_last
@@ -389,7 +389,7 @@ class ro_cano_che_ritorna:
                 if (
                     
                     deviation_ma3_sopra_ma40 > 0.10
-                    and ((ma4_prev < ma9_prev and ma4_last > ma9_last) and deviation_buy_ma3 > 0.10)
+                    and ((ma4_prev < ma9_prev and ma4_last > ma9_last) and deviation_buy3 > 0.10)
                     and ma2_last >= ma4_last
                     and ma4_last > ma78_last
                     and ma2_last > ma50_last
@@ -404,9 +404,9 @@ class ro_cano_che_ritorna:
                 elif (
                     
                     deviation_ma3_sopra_ma40 > 0.10
-                    and deviation_buy3 > 0.13
-                    and deviation_buy_ma3 > 0.10
-                    and deviation_prev > 0.20
+                    
+                    and deviation_buy3 > 0.10
+                    
                     and ma2_last >= ma4_last
                     and ma2_last > ma50_last
                     and ma2_last > ma78_last
@@ -421,8 +421,8 @@ class ro_cano_che_ritorna:
                 elif (
                     
                     deviation_ma3_sopra_ma40 > 0.12
-                    and deviation_buy3 > 0.12
-                    and deviation_buy_ma3 > 0.16
+                    
+                    and deviation_buy3 > 0.16
                     and ma2_last >= ma4_last
                     and ma2_last > ma50_last
                     and ma2_last > ma78_last
@@ -438,8 +438,8 @@ class ro_cano_che_ritorna:
                 elif (
                     
                     deviation_ma3_sopra_ma40 > 0.12
-                    and deviation_buy3 > 0.12
-                    and deviation_buy_ma3 > 0.16
+                    
+                    and deviation_buy3 > 0.16
                     and ma2_last >= ma4_last
                     and ma2_last > ma50_last
                     and ma2_last > ma78_last
