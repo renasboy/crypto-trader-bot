@@ -458,21 +458,14 @@ class ro_cano_che_ritorna:
 
         #########################################################################################################################################
 
-        #                                                              V E N D I T A
+        #                                                              V E N D I T A ....ma non vende proprio !!!!
         
 
         # NON TOCCARE QUESTA RIGA (DICE CHE STA IN MODO SELL, DEVO VENDERE)
+      
         elif last_trade_action == "buy":
-
-            self.algo_helper.log("ma2_prev: {}".format(ma2_prev))
-            self.algo_helper.log("ma7_prev: {}".format(ma7_prev))
-            self.algo_helper.log("ma2_last: {}".format(ma2_last))
-            self.algo_helper.log("ma7_last: {}".format(ma7_last))
-            self.algo_helper.log("deviation_sell: {}".format(deviation_sell))
-            self.algo_helper.log("session: {}".format(self.session))
-
-            ###################################################################################################################################
-            ###################################################################################################################################
+          
+           ###################################################################################################################################
 
             # VENDITA 1 - con fasce di tempo ! c'e' vita su marte !
 
@@ -486,13 +479,11 @@ class ro_cano_che_ritorna:
             #   > 40   -
 
             ###################################################################################################################################
-            ####################################################################################################################################
             
-            
+          
             # 0 - 3 min
 
             # VENDITA - da 0 a 3 minuti = da 0 a 180 secondi
-
             if seconds_since_last_trade > 0 and seconds_since_last_trade <= 180:
 
                 if (
