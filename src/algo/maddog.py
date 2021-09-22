@@ -348,10 +348,10 @@ class maddog:
             
             # STOP LOSS (salvagente)
 
-         
+            # questa funziona (bene)
             
             if (
-                deviation_ma39 < -0.37
+                deviation_ma39 < -0.35
                 
                 # deviation_ma39 = ma3_last / ma39_last
             ):
