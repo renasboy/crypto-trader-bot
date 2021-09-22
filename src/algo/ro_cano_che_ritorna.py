@@ -103,6 +103,16 @@ class ro_cano_che_ritorna:
         
         
         
+        
+        #######################################################################################  vediamo se vende
+        
+        # formula deviation_ma39 per vendere un po' piu' giu' di ma39
+        deviation_ma39 = (ma3_last / ma39_last - 1) * 100 if ma39_last else 0
+        self.algo_helper.log("deviation_ma39: {}".format(deviation_ma39))
+        
+        #######################################################################################
+        
+        
         # formula DEVIATION_buy1 per la compra 1
         deviation_buy1 = (ma8_last/ma78_last - 1) * 100 if ma78_last else 0
         self.algo_helper.log("deviation_buy1: {}".format(deviation_buy1))
@@ -178,6 +188,11 @@ class ro_cano_che_ritorna:
         action = None
 
         ##########################################################################################################################################
+        
+        
+        
+        
+        
 
         # APRE E CHIUDE GABBIA
 
@@ -464,6 +479,26 @@ class ro_cano_che_ritorna:
         # NON TOCCARE QUESTA RIGA (DICE CHE STA IN MODO SELL, DEVO VENDERE)
       
         elif last_trade_action == "buy":
+          
+          
+            # vediamo se vende
+          
+            if (
+                deviation_ma39 < -0.37
+                
+                # deviation_ma39 = ma3_last / ma39_last
+            ):
+                sell = "SELL SALVAGENTE 2"
+                action = "sell"
+          
+          
+          
+          
+          
+          
+          
+          
+          
           
            ###################################################################################################################################
 
