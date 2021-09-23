@@ -280,7 +280,7 @@ class ro_cano_che_ritorna:
                 
                 
                 # BUY 1 DURANTE IL RIALZO con DEVIATION_SPAZIO_TEMPO
-                elif (
+                if (
                     ma78_last > ma78_10_min_ago
                     and deviation_spazio_tempo > 0.95
                     and ma3_last > ma78_last
