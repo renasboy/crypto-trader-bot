@@ -259,7 +259,7 @@ class ro_cano_che_ritorna:
                 # BUY 1 DURANTE IL RIALZO con LA DEVIATION BUY
                 elif (
                     ma78_last > ma78_10_min_ago
-                    and deviation_buy1 > 0.07
+                    and deviation_buy1 > 0.09
                     
                     and price > price_2_min_ago
                     and ma2_last > ma2_2_min_ago
