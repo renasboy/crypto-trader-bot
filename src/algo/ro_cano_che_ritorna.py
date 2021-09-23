@@ -1,5 +1,5 @@
                                                      
-                                                          
+                #compa, compa caro !                                          
 
 
 class ro_cano_che_ritorna:
