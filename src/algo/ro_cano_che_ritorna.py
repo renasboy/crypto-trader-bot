@@ -254,8 +254,8 @@ class ro_cano_che_ritorna:
                 
                 
                 
-                
-                
+                ############################################################################## QUESTA FUNZIONA MA LA BLOCCO TEMPORANEAMENTE
+                '''
                 # BUY 1 DURANTE IL RIALZO con LA DEVIATION BUY
                 elif (
                     ma78_last > ma78_10_min_ago
@@ -271,9 +271,9 @@ class ro_cano_che_ritorna:
 
                     buy = "BUY 1 DURANTE IL RIALZO con LA DEVIATION"
                     action = "buy"
-
+                '''
                 
-                
+                ##############################################################################
                 
                 
                 # BUY 1 DURANTE IL RIALZO con DEVIATION_SPAZIO_TEMPO
