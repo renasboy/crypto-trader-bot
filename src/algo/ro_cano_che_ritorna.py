@@ -42,7 +42,7 @@ class ro_cano_che_ritorna:
         ma2_2_min_ago = self.algo_helper.ma_minutes_ago(2, 2)
         ma2_3_min_ago = self.algo_helper.ma_minutes_ago(2, 3)
         ma3_2_min_ago = self.algo_helper.ma_minutes_ago(3, 2)
-        ma3_12_min_ago = self.algo_helper.ma_minutes_ago(3, 12)
+        ma3_9_min_ago = self.algo_helper.ma_minutes_ago(3, 9)
         ma4_2_min_ago = self.algo_helper.ma_minutes_ago(4, 2)
         ma6_2_min_ago = self.algo_helper.ma_minutes_ago(6, 2)
         ma8_4_min_ago = self.algo_helper.ma_minutes_ago(8, 4)
@@ -178,7 +178,7 @@ class ro_cano_che_ritorna:
         
         
         # formula DEVIATION_SPAZIO_TEMPO ( per comprare se c'e' una velocita' nel rialzo del prezzo )
-        deviation_spazio_tempo = (ma3_last/ma3_12_min_ago - 1) *100 if ma3_12_min_ago else 0
+        deviation_spazio_tempo = (ma3_last/ma3_9_min_ago - 1) *100 if ma3_9_min_ago else 0
         self.algo_helper.log( "deviation_spazio_tempo: {}".format(deviation_spazio_tempo))    
         
         
@@ -282,7 +282,7 @@ class ro_cano_che_ritorna:
                 # BUY 1 DURANTE IL RIALZO con DEVIATION_SPAZIO_TEMPO
                 if (
                     ma78_last > ma78_10_min_ago
-                    and deviation_spazio_tempo > 0.95
+                    and deviation_spazio_tempo > 0.65
                     and ma3_last > ma78_last
                     # QUESTA CONDIZIONE SPAZIO-TEMPO ERA UNA TUA IDEA !
                     
