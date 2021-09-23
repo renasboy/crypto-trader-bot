@@ -333,6 +333,7 @@ class ro_cano_che_ritorna:
             elif self.session == 2:
                 
                 
+                
                 if (
                     
                     deviation_ma3_sopra_ma40 > 0.12
@@ -347,7 +348,7 @@ class ro_cano_che_ritorna:
                         
                     
                     
-
+                ############################################################################################################# MIRACOLO QUESTA HA FUNZIONATO DI NUOVO !
                 elif (
                     
                     deviation_ma3_sopra_ma40 > 0.12
@@ -360,7 +361,7 @@ class ro_cano_che_ritorna:
                 ):
                     buy = "BUY 2 con PENDENZA ma33 > 0.07"
                     action = "buy"
-                
+                ####################################################################################################### 
                 
                 
                 elif (
