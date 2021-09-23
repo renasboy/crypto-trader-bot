@@ -1,6 +1,6 @@
                                                      
                 #compa, compa caro !                                          
-
+                #non fa reset
 
 class ro_cano_che_ritorna:
     def __init__(self, helper):
