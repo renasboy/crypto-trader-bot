@@ -1005,7 +1005,9 @@ class ro_cano_che_ritorna:
 
             
             if (
-                ma50_last >= ma50_2_min_ago and (ma3_last > ma18_last and ma3_last < ma18_last) and deviation_sell < -0.68
+                ma50_last >= ma50_2_min_ago 
+                and (ma3_last > ma18_last and ma3_last < ma18_last) 
+                and deviation_sell < -0.68
              
             ):
                 sell = "SALVAGENTE 1"
@@ -1023,47 +1025,6 @@ class ro_cano_che_ritorna:
 
            
             
-            
-            
-            
-                
-            elif (
-                ma50_last >= ma50_2_min_ago and (ma8_last > ma39_last and ma8_last < ma39_last) and deviation_sell < -0.45
-              
-            ):
-                sell = "SALVAGENTE 3"
-                action = "sell"
-
-                
-                
-            #########################################################################################################################
-
-            
-            
-            elif (
-                ma50_last >= ma50_2_min_ago and (ma2_last > ma36_last and ma2_last < ma36_last) and deviation_sell < -0.80
-             
-            ):
-                sell = "SALVAGENTE 4"
-                action = "sell"
-
-                
-                
-                
-            elif (
-                ma50_last >= ma50_2_min_ago and (ma8_last > ma39_last and ma8_last < ma39_last) and deviation_sell < -0.70
-             
-            ):
-                sell = "SALVAGENTE 5"
-                action = "sell"
-            
-            
-            
-          
-            
-            
-                
-                
                 
             ##########################################################################################################################
 
