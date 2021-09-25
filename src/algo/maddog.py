@@ -192,7 +192,7 @@ class maddog:
                 
                 action = " buy "
 
-                ####################################################################### QUESTA FUNZIONA
+                ###################################### QUESTA FUNZIONA 
 
                 # COMPRA sessione 1
 
@@ -200,9 +200,9 @@ class maddog:
 
                     if (
                         
-                        deviation_buy1 > -0.23
+                        deviation_buy1 > 0.23
                         #and (ma78_last >= ma78_20_min_ago and (deviation_buy1 > -0.20))
-                        and ma3_last > ma40_last
+                        and ma4_last > ma40_last
                        
                     ):
                         buy = "BUY 1 - con DEVIATION buy1 e ma78 IN RIALZO" 
@@ -351,7 +351,7 @@ class maddog:
             # questa funziona 
             
             if (
-                deviation_ma39 < -0.33
+                deviation_ma39 < -0.31
                 
                 # deviation_ma39 = ma3_last / ma39_last
             ):
