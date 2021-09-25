@@ -76,21 +76,21 @@ class ro_cano_che_ritorna:
         
         
         ##########################################################################################################################################################
-        
-        
+
 
         # PREZZO di X MINUTI FA (di mercato) - 
         
         price_2_min_ago = self.algo_helper.price_minutes_ago(2)
-        #price_3_min_ago = self.algo_helper.price_minutes_ago(3)
+        price_20_min_ago = self.algo_helper.price_minutes_ago(20)
+        
         
         
 
         #############################################################################################################################################################
         
-        # VENDE DOPO x SECONDI = x minuti * 60  ro cano torna a casa - (ma c'e' anche un "e se")
+        # VENDE DOPO x SECONDI - ro cano torna a casa - (ma c'e' anche un "e se")
         max_hold_time_in_seconds = 2400
-
+        # 2400 / 60 = 40 minuti
         
        
 
@@ -103,8 +103,10 @@ class ro_cano_che_ritorna:
         
         
         
-        
-        
+        # formula vendi se dopo 20 minuti il prezzo non aumenta
+        # PREZZO DI ADESSO / PREZZO DI 20 MINUTI FA < 0,10
+        condizione_attesa_inutile = (price / price_20_min_ago - 1 ) * 100 if price_20_min_ago else 0
+        # vedi riga 423
         #######################################################################################  vediamo se vende
         
         # formula deviation_ma39 per vendere un po' piu' giu' di ma39
@@ -185,7 +187,7 @@ class ro_cano_che_ritorna:
         # APRE E CHIUDE GABBIA
 
         
-        if deviation_gabbia>-0.60 or deviation_buy1<-1.90:
+        if deviation_gabbia > -0.60 or deviation_buy1 < -1.90:
 
             # ti ricordo che deviation_gabbia = (ma8_last / ma78_last)
 
@@ -400,6 +402,8 @@ class ro_cano_che_ritorna:
           
           
             # vediamo se vende
+            
+            # 1) ro cano VENDE CON UN SALVAGENTE
           
             if (
                 deviation_ma39 < -0.34
@@ -408,7 +412,20 @@ class ro_cano_che_ritorna:
             ):
                 sell = "SELL SALVAGENTE FUNZIONANTE riga 409"
                 action = "sell"
-          
+                
+                
+                
+             
+            # 2) ro cano VENDE " DOPO x MINUTI " "max hold time"
+
+            elif (
+                condizione_attesa_inutile < 0.10
+                # riga 108
+            ):
+
+                sell = "SELL SE > 20 MINUTI DI ATTESA IL PREZZO NON E' SALITO DI ALMENO 0.10%"
+                action = "sell"
+
           
           
           
