@@ -138,49 +138,36 @@ class ro_cano_che_ritorna:
         deviation_gabbia = (ma8_last/ma78_last - 1) *100 if ma78_last else 0
         self.algo_helper.log("deviation_gabbia: {}".format(deviation_gabbia))
         
-        
-        
-        
-        
-        
+       
         # formula DEVIATION_buy_crollo per comprare a una certa distanza da ma13
         deviation_buy_crollo = (ma3_last/ma13_last - 1) *100 if ma13_last else 0
         self.algo_helper.log("deviation_buy_crollo: {}".format(deviation_buy_crollo))
         
-        
-        
-        
-        
-        
+       
         # formula DEVIATION_sell_ma78
         deviation_sell_ma78 = (ma2_last/ma78_last - 1) *100 if ma78_last else 0
         self.algo_helper.log("deviation_sell_ma78: {}".format(deviation_sell_ma78))
-        
-        
-        
-        
-        
         
         
         # formula DEVIATION_ma3_sopra_ma40
         deviation_ma3_sopra_ma40 = (ma3_last/ma40_last - 1) *100 if ma40_last else 0
         self.algo_helper.log("deviation_ma3_sopra_ma40: {}".format(deviation_ma3_sopra_ma40))
         
-        
-        
-        
-        
-        
        
         # formula DEVIATION_sell (per vendere)
         deviation_sell = (ma3_last/last_trade_price - 1) *100 if last_trade_price else 0
         self.algo_helper.log("deviation_sell: {}".format(deviation_sell))    
        
-        
-        
+      
         # formula DEVIATION_SPAZIO_TEMPO ( per comprare se c'e' una velocita' nel rialzo del prezzo )
         deviation_spazio_tempo = (ma3_last/ma3_9_min_ago - 1) *100 if ma3_9_min_ago else 0
         self.algo_helper.log( "deviation_spazio_tempo: {}".format(deviation_spazio_tempo))    
+        
+        
+        
+        
+        
+        
         
         
         ####################################################################################################################################################
