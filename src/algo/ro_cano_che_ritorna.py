@@ -104,6 +104,14 @@ class ro_cano_che_ritorna:
         # deviation per comprare
         
         
+        
+        # formula deviation
+        deviation = (ma2_last / last_trade_price - 1) * 100 if last_trade_price else 0
+        self.algo_helper.log("deviation: {}".format(deviation))
+        # da maddog per ATTESA INUTILE !
+        
+        
+        
         # formula DEVIATION_gabbia
         deviation_gabbia = (ma8_last/ma78_last - 1) *100 if ma78_last else 0
         self.algo_helper.log("deviation_gabbia: {}".format(deviation_gabbia))
