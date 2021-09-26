@@ -361,14 +361,7 @@ class maddog:
             
             
             ################################################################################################################################################
-            
-           
-            elif (
-                ma50_last > ma50_2_min_ago and (ma2_last < ma36_last and deviation_ma50 < -0.80)
-             
-            ):
-                sell = "SELL SALVAGENTE 3"
-                action = "sell"
+          
 
             # 1) vedi riga 11 per es. DI 1 ORA = 3600 SECONDI "max hold time" " DOPO UN' ORA VENDE SUBITO " e se ma8_last < ma39_last and deviation < -0.45:
 
@@ -378,6 +371,10 @@ class maddog:
 
                 sell = "SELL TEMPO"
                 action = "sell"
+        
+        
+             ##########################################################################################################################################
+        
         
         
         self.algo_helper.log("action {}".format(action))
