@@ -101,7 +101,15 @@ class ro_cano_che_ritorna:
         
         #                                                         T U T T E    L E   D E V I A T I O N  !
         
+        # deviation per comprare
         
+        
+        # formula DEVIATION_gabbia
+        deviation_gabbia = (ma8_last/ma78_last - 1) *100 if ma78_last else 0
+        self.algo_helper.log("deviation_gabbia: {}".format(deviation_gabbia))
+        
+        
+       
         # formula DEVIATION_buy1 per la compra 1
         deviation_buy1 = (ma8_last/ma78_last - 1) * 100 if ma78_last else 0
         self.algo_helper.log("deviation_buy1: {}".format(deviation_buy1))
@@ -115,34 +123,22 @@ class ro_cano_che_ritorna:
         self.algo_helper.log("deviation_buy3: {}".format(deviation_buy3))
         
 
+        
+        
         # formula DEVIATION_buy per comprare UN PO' PIU' SOPRA DEL LAST TRADE ( di solito l' ultimo SELL )
         deviation_buy=(ma2_last/last_trade_price - 1) *100 if last_trade_price else 0
         self.algo_helper.log("deviation_buy: {}".format(deviation_buy))   
        
       
-        # formula DEVIATION_gabbia
-        deviation_gabbia = (ma8_last/ma78_last - 1) *100 if ma78_last else 0
-        self.algo_helper.log("deviation_gabbia: {}".format(deviation_gabbia))
-        
-       
         # formula DEVIATION_buy_crollo per comprare a una certa distanza da ma13
         deviation_buy_crollo = (ma3_last/ma13_last - 1) *100 if ma13_last else 0
         self.algo_helper.log("deviation_buy_crollo: {}".format(deviation_buy_crollo))
         
        
-        # formula DEVIATION_sell_ma78
-        deviation_sell_ma78 = (ma2_last/ma78_last - 1) *100 if ma78_last else 0
-        self.algo_helper.log("deviation_sell_ma78: {}".format(deviation_sell_ma78))
-        
-        
         # formula DEVIATION_ma7_sopra_ma40
         deviation_ma7_sopra_ma40 = (ma7_last/ma40_last - 1) *100 if ma40_last else 0
         self.algo_helper.log("deviation_ma7_sopra_ma40: {}".format(deviation_ma7_sopra_ma40))
         
-       
-        # formula DEVIATION_sell (per vendere)
-        deviation_sell = (ma3_last/last_trade_price - 1) *100 if last_trade_price else 0
-        self.algo_helper.log("deviation_sell: {}".format(deviation_sell))    
        
       
         # formula DEVIATION_SPAZIO_TEMPO ( per comprare se c'e' una velocita' nel rialzo del prezzo )
@@ -152,15 +148,29 @@ class ro_cano_che_ritorna:
         
         ########################################################################################
         
-        # formula vendi se dopo 20 minuti il prezzo non aumenta - attesa inutile
-        # PREZZO DI ADESSO / PREZZO DI 20 MINUTI FA < 0,10
-        condizione_attesa_inutile = ((ma2_last/price_20_min_ago)-1)*100 if price_20_min_ago else 0
+        # deviation per vendere
         
         
+        # formula DEVIATION_sell 
+        deviation_sell = (ma3_last/last_trade_price - 1) *100 if last_trade_price else 0
+        self.algo_helper.log("deviation_sell: {}".format(deviation_sell))   
+        
+        # formula DEVIATION_sell_ma78
+        deviation_sell_ma78 = (ma2_last/ma78_last - 1) *100 if ma78_last else 0
+        self.algo_helper.log("deviation_sell_ma78: {}".format(deviation_sell_ma78))
         
         # formula deviation_ma39 per vendere un po' piu' giu' di ma39
         deviation_ma39 = (ma3_last / ma39_last - 1) * 100 if ma39_last else 0
         self.algo_helper.log("deviation_ma39: {}".format(deviation_ma39))
+        
+        
+        
+        
+        
+        # formula vendi se dopo 20 minuti il prezzo non aumenta - attesa inutile
+        # PREZZO DI ADESSO / PREZZO DI 20 MINUTI FA < 0,10
+        condizione_attesa_inutile = ((ma2_last/price_20_min_ago)-1)*100 if price_20_min_ago else 0
+        
         
         #######################################################################################
         
@@ -205,16 +215,14 @@ class ro_cano_che_ritorna:
         
         if self.open and self.session and last_trade_action != "buy":
 
-          
-          
-           
+         
             ###########################################################################################################################################
                                                               #   B U Y 
             ###########################################################################################################################################
             
             
             
-            # COMPRA sessione 1
+            ######################################################################################################## COMPRA sessione 1
 
             if self.session == 1:
               
@@ -234,11 +242,9 @@ class ro_cano_che_ritorna:
                     action="buy"
                 
                 
+               
+                ############################################################################## QUESTA FUNZIONA
                 
-                
-                
-                ############################################################################## QUESTA FUNZIONA MA LA BLOCCO TEMPORANEAMENTE
-                '''
                 # BUY 1 DURANTE IL RIALZO con LA DEVIATION BUY
                 elif (
                     
@@ -253,7 +259,7 @@ class ro_cano_che_ritorna:
 
                     buy = "BUY 1 con LA DEVIATION"
                     action = "buy"
-                '''
+                
                 
                 ##############################################################################
                 
@@ -304,9 +310,9 @@ class ro_cano_che_ritorna:
             
             
             
-            ##############################################################################################################################
+            ############################################################################################################
 
-            # COMPRA sessione 2
+            #############################################################################################################      COMPRA sessione 2
 
             elif self.session == 2:
               
@@ -325,7 +331,8 @@ class ro_cano_che_ritorna:
                         
                     
                     
-                ############################################################################################################# MIRACOLO QUESTA HA FUNZIONATO DI NUOVO !
+                ####################################################### MIRACOLO QUESTA HA FUNZIONATO !
+                
                 
                 elif (
                     deviation_buy2 > 0.13
@@ -342,9 +349,9 @@ class ro_cano_che_ritorna:
                     
             
             
-            #######################################################################################################################
+            ###############################################################################################################
 
-            # COMPRA sessione 3 in poi
+            # ###############################################################################################################     COMPRA sessione 3 in poi
 
             # elif self.session == 3:
             # CON " elif self.session == 3: " NON COMPRAVA PIU' ALLORA HO PRESO ELSE DA MADDOG CHE INVECE ANDAVA BENE
@@ -381,9 +388,9 @@ class ro_cano_che_ritorna:
                 
                 
         
-        ##################################################################################################################################################################
-                                                     #                                                              V E N D I T A ....ma non vende proprio !!!!
-        ###################################################################################################################################################################
+        ###########################################################################################################################
+                                                     #                                  V E N D I T A ....ma non vende proprio !!!!
+        ############################################################################################################################
 
         
         
@@ -394,7 +401,7 @@ class ro_cano_che_ritorna:
           
           
             
-            ###########################################################################################################################
+            #####################################################################################################################
             
             # VENDITA CON QUESTE 2 ECCEZIONI !
             
