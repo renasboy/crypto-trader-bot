@@ -7,7 +7,7 @@ class maddog:
     @property
     def action(self):
 
-        # ro cano ritorna automaticamente ( per esempio 20 minuti x 60 = 1200 secondi )...............................(ADESSO 60 MINUTI) RIGA 319 #
+        # ro cano ritorna automaticamente ( per esempio 20 minuti x 60 = 1200 secondi ).......................... RIGA 319 #
         max_hold_time_in_seconds = 1200
 
         # e durata segmento in cui si aggiunge una condizione per il BUY ( per esempio 40 minuti x 60 = 2400 secondi )
@@ -101,6 +101,12 @@ class maddog:
         price_4_min_ago = self.algo_helper.price_minutes_ago(4)
 
         #########################################################################################################################################################
+        
+        
+        # formula deviation
+        deviation = (ma2_last / last_trade_price - 1) * 100 if last_trade_price else 0
+        self.algo_helper.log("deviation: {}".format(deviation))
+        
 
         # formula "deviation_buy1" (per comprare LA PRIMA VOLTA durante il TREND RIBASSISTA)
         deviation_buy1 = (ma8_last / ma78_last - 1) * 100 if ma78_last else 0
@@ -114,9 +120,7 @@ class maddog:
         deviation_buy3 = (ma8_last / ma78_last - 1) * 100 if ma78_last else 0
         self.algo_helper.log("deviation_buy3: {}".format(deviation_buy3))
 
-        # formula deviation
-        deviation = (ma2_last / last_trade_price - 1) * 100 if last_trade_price else 0
-        self.algo_helper.log("deviation: {}".format(deviation))
+        
 
         ############################################################################################################
         
@@ -363,10 +367,15 @@ class maddog:
             ################################################################################################################################################
           
 
-            # 1) vedi riga 11 per es. DI 1 ORA = 3600 SECONDI "max hold time" " DOPO 20 min dal buy VENDE SUBITO " E SE last_price < last_trade .......and deviation < -0.45:
+            # 1) vedi riga 11 DOPO 20 min dal buy VENDE SUBITO " E SE last_price < last_trade_price...and deviation < 0.10:
 
-            if seconds_since_last_trade > max_hold_time_in_seconds and last_price <last_trade
+            if seconds_since_last_trade > max_hold_time_in_seconds 
+                and last_price < last_trade_price 
                 and deviation < 0.10
+                
+                
+                # condizione_attesa_inutile = last_price < last_trade_price 
+                # deviation = ma2_last / last_trade_price
                 
             ):
 
