@@ -423,12 +423,26 @@ class ro_cano_che_ritorna:
              
             # 2) ro cano VENDE " DOPO x MINUTI " "max hold time"
 
+            
+                
+                
+            
+
+             
+                
+                
+                
             elif (
-                condizione_attesa_inutile < 0.10
+                seconds_since_last_trade > max_hold_time_in_seconds 
+                and ma2_last < last_trade_price 
+                and deviation < 0.10
+               
+                # condizione_attesa_inutile = ma2_last < last_trade_price 
+                # deviation = ma2_last / last_trade_price
                 
             ):
 
-                sell = "SELL SE > 20 MINUTI DI ATTESA IL PREZZO NON E' SALITO DI ALMENO 0.10%"
+                sell = "SELL TEMPO"
                 action = "sell"
 
           ###########################################################################################################################################
