@@ -102,20 +102,6 @@ class ro_cano_che_ritorna:
         #                                                         T U T T E    L E   D E V I A T I O N  !
         
         
-        
-        # formula vendi se dopo 20 minuti il prezzo non aumenta
-        # PREZZO DI ADESSO / PREZZO DI 20 MINUTI FA < 0,10
-        condizione_attesa_inutile = ((ma2_last/price_20_min_ago)-1)*100 if price_20_min_ago else 0
-        # vedi riga 423
-        #######################################################################################  vediamo se vende
-        
-        # formula deviation_ma39 per vendere un po' piu' giu' di ma39
-        deviation_ma39 = (ma3_last / ma39_last - 1) * 100 if ma39_last else 0
-        self.algo_helper.log("deviation_ma39: {}".format(deviation_ma39))
-        
-        #######################################################################################
-        
-        
         # formula DEVIATION_buy1 per la compra 1
         deviation_buy1 = (ma8_last/ma78_last - 1) * 100 if ma78_last else 0
         self.algo_helper.log("deviation_buy1: {}".format(deviation_buy1))
@@ -132,10 +118,8 @@ class ro_cano_che_ritorna:
         # formula DEVIATION_buy per comprare UN PO' PIU' SOPRA DEL LAST TRADE ( di solito l' ultimo SELL )
         deviation_buy=(ma2_last/last_trade_price - 1) *100 if last_trade_price else 0
         self.algo_helper.log("deviation_buy: {}".format(deviation_buy))   
-        
-        
-        
-        
+       
+      
         # formula DEVIATION_gabbia
         deviation_gabbia = (ma8_last/ma78_last - 1) *100 if ma78_last else 0
         self.algo_helper.log("deviation_gabbia: {}".format(deviation_gabbia))
@@ -163,10 +147,22 @@ class ro_cano_che_ritorna:
       
         # formula DEVIATION_SPAZIO_TEMPO ( per comprare se c'e' una velocita' nel rialzo del prezzo )
         deviation_spazio_tempo = (ma3_last/ma3_9_min_ago - 1) *100 if ma3_9_min_ago else 0
-        self.algo_helper.log( "deviation_spazio_tempo: {}".format(deviation_spazio_tempo))    
+        self.algo_helper.log( "deviation_spazio_tempo: {}".format(deviation_spazio_tempo))  
+        
+        
+        ########################################################################################
+        
+        # formula vendi se dopo 20 minuti il prezzo non aumenta - attesa inutile
+        # PREZZO DI ADESSO / PREZZO DI 20 MINUTI FA < 0,10
+        condizione_attesa_inutile = ((ma2_last/price_20_min_ago)-1)*100 if price_20_min_ago else 0
         
         
         
+        # formula deviation_ma39 per vendere un po' piu' giu' di ma39
+        deviation_ma39 = (ma3_last / ma39_last - 1) * 100 if ma39_last else 0
+        self.algo_helper.log("deviation_ma39: {}".format(deviation_ma39))
+        
+        #######################################################################################
         
         
         
@@ -180,10 +176,6 @@ class ro_cano_che_ritorna:
         ##########################################################################################################################################
         
         
-        
-        
-        
-
         # APRE E CHIUDE GABBIA
 
         
@@ -210,6 +202,7 @@ class ro_cano_che_ritorna:
 
         # COMPRA
         # NON TOCCARE QUESTA RIGA ( DICE CHE STA IN MODO BUY, vuole COMPRARE ! )
+        
         if self.open and self.session and last_trade_action != "buy":
 
           
@@ -226,15 +219,14 @@ class ro_cano_che_ritorna:
             if self.session == 1:
               
                 # BUY 1 DURANTE IL RIALZO con INCROCIO CLASSICO
+                
                 if (
-                  
                     deviation_buy1 > 0.10 
                     and (ma8_prev < ma50_prev and ma8_last > ma50_last)
                     
                     and price > price_2_min_ago
                     and ma2_last > ma2_2_min_ago
                     and ma4_last > ma8_last
-                    and ma8_last > ma50_last
                   
                 ):
 
