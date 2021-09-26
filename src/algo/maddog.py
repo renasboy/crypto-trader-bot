@@ -369,11 +369,11 @@ class maddog:
 
             # 1) vedi riga 11 DOPO 20 min dal buy VENDE SUBITO " E SE last_price < last_trade_price...and deviation < 0.10:
 
-            if seconds_since_last_trade > max_hold_time_in_seconds 
+            if (
+                seconds_since_last_trade > max_hold_time_in_seconds 
                 and last_price < last_trade_price 
                 and deviation < 0.10
-                
-                
+               
                 # condizione_attesa_inutile = last_price < last_trade_price 
                 # deviation = ma2_last / last_trade_price
                 
