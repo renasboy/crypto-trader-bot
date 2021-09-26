@@ -213,15 +213,7 @@ class maddog:
                         action = "buy"
                         
                         
-                    #########################################
-                    
-                    
-                    
-                    
-                    
-                   
-                    
-                    
+                  
                     
                     ############################################################################################################################################
                     
@@ -259,7 +251,7 @@ class maddog:
                         buy = "BUY 2"
                         action = "buy"
                 
-                
+                ########################################################################################################################################################
                 
                 # COMPRA sessione 3 in poi
                 else:
@@ -277,8 +269,8 @@ class maddog:
                         action = "buy"
         
         
-        
-        ###############################################################################################################
+        ########################################################################################################################################################
+        ########################################################################################################################################################
 
         # VENDA
         # NON TOCCARE QUESTA CONDIZIONE (QUESTA DICE CHE STA IN MODO SELL, DEVO VENDERE)
@@ -295,6 +287,7 @@ class maddog:
             
             
             # VENDE
+            
 
             # VENDE sessione 1 con ma78_last >= ma78_20_min_ago
             if self.session == 1:
@@ -316,12 +309,7 @@ class maddog:
                     action = "sell"
                 
                 
-                
-                
-                
-                
-                
-                
+             
                 # VENDE sessione 1 con ma78_last < ma78_20_min_ago
 
                 elif (
@@ -334,14 +322,6 @@ class maddog:
                     sell = "SELL 1 B1"
                     action = "sell"
                 
-                
-                
-                
-                
-                
-                
-            
-            
             
             ############################################################################################################################################################
             ############################################################################################################################################################
@@ -367,14 +347,14 @@ class maddog:
             ################################################################################################################################################
           
 
-            # 1) vedi riga 11 DOPO 20 min dal buy VENDE SUBITO " E SE last_price < last_trade_price...and deviation < 0.10:
+            # 1) vedi riga 11 DOPO 20 min dal buy VENDE SUBITO " E SE ma2_last < last_trade_price...and deviation < 0.10:
 
-            if (
+            elif (
                 seconds_since_last_trade > max_hold_time_in_seconds 
-                and last_price < last_trade_price 
+                and ma2_last < last_trade_price 
                 and deviation < 0.10
                
-                # condizione_attesa_inutile = last_price < last_trade_price 
+                # condizione_attesa_inutile = ma2_last < last_trade_price 
                 # deviation = ma2_last / last_trade_price
                 
             ):
