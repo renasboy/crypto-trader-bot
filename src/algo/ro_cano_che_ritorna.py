@@ -105,7 +105,7 @@ class ro_cano_che_ritorna:
         
         # formula vendi se dopo 20 minuti il prezzo non aumenta
         # PREZZO DI ADESSO / PREZZO DI 20 MINUTI FA < 0,10
-        condizione_attesa_inutile = (price / price_20_min_ago - 1 ) * 100 if price_20_min_ago else 0
+        condizione_attesa_inutile = ((price/price_20_min_ago)-1)*100 if price_20_min_ago else 0
         # vedi riga 423
         #######################################################################################  vediamo se vende
         
