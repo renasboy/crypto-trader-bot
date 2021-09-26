@@ -245,7 +245,9 @@ class ro_cano_che_ritorna:
                
                 ############################################################################## QUESTA FUNZIONA
                 
-                # BUY 1 DURANTE IL RIALZO con LA DEVIATION BUY
+                # BUY 1 DURANTE IL RIALZO con LA DEVIATION BUY 1
+                # deviation_buy1 = ma8_last/ma78_last
+                
                 elif (
                     
                     deviation_buy1 > 0.09
