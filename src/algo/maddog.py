@@ -204,9 +204,11 @@ class maddog:
 
                     if (
                         
-                        deviation_buy1 > 0.23
-                        #and (ma78_last >= ma78_20_min_ago and (deviation_buy1 > -0.20))
+                        deviation_buy1 > 0.22
                         and ma4_last > ma40_last
+                        
+                        # deviation_buy1 = ma8_last / ma78_last
+                        
                        
                     ):
                         buy = "BUY 1 - con DEVIATION buy1 e ma78 IN RIALZO" 
