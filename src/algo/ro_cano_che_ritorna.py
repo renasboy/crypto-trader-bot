@@ -384,11 +384,12 @@ class ro_cano_che_ritorna:
                     
 
                 elif (
+                    deviation_buy3 > 0.16
+                    and deviation_ma7_sopra_ma40 > 0.12
                     
-                    deviation_ma7_sopra_ma40 > 0.12
-                    and deviation_buy3 > 0.16
-                   
-                    
+                   # deviation_buy3 = ma6_last/ma78
+                  
+                    and ma2_last > ma8_last
                     and ma2_last > ma78_last
                     and ma4_last > ma78_last
                 ):
