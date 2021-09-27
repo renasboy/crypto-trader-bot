@@ -7,8 +7,8 @@ class maddog:
     @property
     def action(self):
 
-        # ro cano ritorna automaticamente ( per esempio 20 minuti x 60 = 1200 secondi ).......................... RIGA 319 #
-        max_hold_time_in_seconds = 1200
+        # ro cano ritorna automaticamente ( per esempio 18 minuti x 60 = 1080 secondi ).......................... RIGA 319 #
+        max_hold_time_in_seconds = 1080
 
         # e durata segmento in cui si aggiunge una condizione per il BUY ( per esempio 40 minuti x 60 = 2400 secondi )
         min_buy_delay_in_seconds = 2400
@@ -81,7 +81,7 @@ class maddog:
         ma50_2_min_ago = self.algo_helper.ma_minutes_ago(50, 2)
 
         ma78_5_min_ago = self.algo_helper.ma_minutes_ago(78, 5)
-        ma78_20_min_ago = self.algo_helper.ma_minutes_ago(78, 20)
+        ma78_18_min_ago = self.algo_helper.ma_minutes_ago(78, 18)
 
         ma85_3_min_ago = self.algo_helper.ma_minutes_ago(85, 3)
 
@@ -312,10 +312,10 @@ class maddog:
                 
                 
              
-                # VENDE sessione 1 con ma78_last < ma78_20_min_ago
+                # VENDE sessione 1 con ma78_last < ma78_18_min_ago
 
                 elif (
-                    ma78_last < ma78_20_min_ago and (ma3_last > ma39_last and ma3_last < ma39_last) and deviation_ma50 < -0.43
+                    ma78_last < ma78_18_min_ago and (ma3_last > ma39_last and ma3_last < ma39_last) and deviation_ma50 < -0.43
                  
                     # deviation_sell = ma3_last / ma50_last
                     # deviation_buy1 = ma8_last / ma78_last
@@ -349,7 +349,7 @@ class maddog:
             ################################################################################################################################################
           
 
-            # 1) vedi riga 11 DOPO 20 min dal buy VENDE SUBITO " E SE ma2_last < last_trade_price...and deviation < 0.10:
+            # 1) vedi riga 11 DOPO 18 min dal buy VENDE SUBITO " E SE ma2_last < last_trade_price...and deviation < 0.10:
 
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds 
