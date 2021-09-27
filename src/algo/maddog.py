@@ -206,12 +206,12 @@ class maddog:
                         
                         deviation_buy1 > 0.22
                         and ma4_last > ma40_last
+                        and ma2_last > ma2_2_min_ago
                         
                         # deviation_buy1 = ma8_last / ma78_last
-                        
-                       
+                    
                     ):
-                        buy = "BUY 1 - con DEVIATION buy1 e ma78 IN RIALZO" 
+                        buy = "BUY 1 - con DEVIATION buy1 e ma78 IN RIALZO - riga 214" 
                         action = "buy"
                         
                         
