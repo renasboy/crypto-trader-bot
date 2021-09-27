@@ -61,8 +61,10 @@ class maddog:
 
         ma85_last, ma85_prev = self.algo_helper.ma_last_prev(85)
         ma100_last, ma100_prev = self.algo_helper.ma_last_prev(100)
-        #
+        
 
+        
+        
         # moving average (2-3-4-5-7-8-20-43-100) di x minuti prima 
         ma2_2_min_ago = self.algo_helper.ma_minutes_ago(2, 2)
         ma2_3_min_ago = self.algo_helper.ma_minutes_ago(2, 3)
@@ -81,7 +83,8 @@ class maddog:
         ma50_2_min_ago = self.algo_helper.ma_minutes_ago(50, 2)
 
         ma78_5_min_ago = self.algo_helper.ma_minutes_ago(78, 5)
-        ma78_18_min_ago = self.algo_helper.ma_minutes_ago(78, 18)
+        ma78_10_min_ago = self.algo_helper.ma_minutes_ago(78, 10)
+        
 
         ma85_3_min_ago = self.algo_helper.ma_minutes_ago(85, 3)
 
@@ -220,7 +223,7 @@ class maddog:
                     ############################################################################################################################################
                     
                     elif (
-                        ma78_last < ma78_20_min_ago and deviation_buy1 > 0.79
+                        ma78_last < ma78_5_min_ago and deviation_buy1 > 0.79
                         
                         and ma39_last > ma50_last
                         and ma2_last > ma2_2_min_ago
@@ -295,7 +298,7 @@ class maddog:
             if self.session == 1:
 
                 if (
-                    ma78_last >= ma78_20_min_ago and (ma3_last > ma25_last and ma3_last < ma25_last) and deviation > 0.18
+                    ma78_last >= ma78_10_min_ago and (ma3_last > ma25_last and ma3_last < ma25_last) and deviation > 0.18
                  
                 ):
                     sell = "SELL 1 A1"
@@ -304,7 +307,7 @@ class maddog:
                 
                 
                 elif (
-                    ma78_last >= ma78_20_min_ago and (ma3_last > ma18_last and ma3_last < ma18_last) and deviation_ma50 > 0.70
+                    ma78_last >= ma78_10_min_ago and (ma3_last > ma18_last and ma3_last < ma18_last) and deviation_ma50 > 0.70
                  
                 ):
                     sell = "SELL 1 A2"
