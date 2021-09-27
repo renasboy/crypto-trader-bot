@@ -84,13 +84,14 @@ class ro_cano_che_ritorna:
         price_20_min_ago = self.algo_helper.price_minutes_ago(20)
         
         
-        
-
+      
         #############################################################################################################################################################
         
+        # importante : inutile attesa vedi riga 434
+        
         # VENDE DOPO x SECONDI - ro cano torna a casa - (ma c'e' anche un "e se")
-        max_hold_time_in_seconds = 2400
-        # 2400 / 60 = 40 minuti
+        max_hold_time_in_seconds = 1200
+        #  20 minuti * 60 = 1200
         
        
 
@@ -430,17 +431,8 @@ class ro_cano_che_ritorna:
                 
                 
              
-            # 2) ro cano VENDE " DOPO x MINUTI " "max hold time"
+            # 2) ro cano VENDE " DOPO x MINUTI " "max hold time" - vedi riga 90
 
-            
-                
-                
-            
-
-             
-                
-                
-                
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds 
                 and ma2_last < last_trade_price 
