@@ -41,6 +41,9 @@ class ro_cano_che_ritorna:
 
         ma2_2_min_ago = self.algo_helper.ma_minutes_ago(2, 2)
         ma2_3_min_ago = self.algo_helper.ma_minutes_ago(2, 3)
+        
+        ma2_4_min_ago = self.algo_helper.ma_minutes_ago(2, 4)
+        
         ma3_2_min_ago = self.algo_helper.ma_minutes_ago(3, 2)
         ma3_9_min_ago = self.algo_helper.ma_minutes_ago(3, 9)
         ma4_2_min_ago = self.algo_helper.ma_minutes_ago(4, 2)
@@ -150,7 +153,7 @@ class ro_cano_che_ritorna:
         
        
       
-        # formula DEVIATION_SPAZIO_TEMPO ( per comprare se c'e' una velocita' nel rialzo del prezzo )
+        # formula DEVIATION_SPAZIO_TEMPO ( per comprare se c'e' una alta velocita' nel rialzo del prezzo )
         deviation_spazio_tempo = (ma3_last/ma3_9_min_ago - 1) *100 if ma3_9_min_ago else 0
         self.algo_helper.log( "deviation_spazio_tempo: {}".format(deviation_spazio_tempo))  
         
@@ -181,8 +184,12 @@ class ro_cano_che_ritorna:
         condizione_attesa_inutile = ((ma2_last/price_20_min_ago)-1)*100 if price_20_min_ago else 0
         
         
-        #######################################################################################
+        ############################################################################################################################# novita' !
         
+        
+        # formula VENDI_SPAZIO_TEMPO ( per vendere se c'e' una alta velocita' nel ribasso del prezzo )
+        vendi_spazio_tempo = (ma2_last/ma2_4_min_ago - 1) *100 if ma2_4_min_ago else 0
+        self.algo_helper.log( "vendi_spazio_tempo: {}".format(vendi_spazio_tempo))  
         
         
         
@@ -421,7 +428,7 @@ class ro_cano_che_ritorna:
             
             #####################################################################################################################
             
-            # VENDITA CON QUESTE 2 ECCEZIONI !
+            # VENDITA CON QUESTE 3 ECCEZIONI !
             
             
             # 1) ro cano VENDE CON UN SALVAGENTE
@@ -451,6 +458,26 @@ class ro_cano_che_ritorna:
 
                 sell = "SELL TEMPO"
                 action = "sell"
+                
+                
+                
+                
+            # 3) ro cano VENDE DOPo 4 minuti con VENDI_SPAZIO_TEMPO se il ribasso ha una alta velocita'
+                if (
+                    vendi_spazio_tempo < -0.65
+                    and ma4_last < ma4_5_min_ago
+                    
+                    # QUESTA CONDIZIONE SPAZIO-TEMPO ERA UNA TUA IDEA !
+                    
+                ):
+
+                    sell = "con VENDI_SPAZIO_TEMPO riga 471"
+                    action = "sell"
+                
+                
+                
+                
+                
 
           ###########################################################################################################################################
           
