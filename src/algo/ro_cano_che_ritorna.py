@@ -200,8 +200,12 @@ class ro_cano_che_ritorna:
         
         if deviation_gabbia > -0.60 or deviation_buy1 < -1.90:
 
-            # ti ricordo che deviation_gabbia = (ma8_last / ma78_last)
-
+            # ti ricordo che 
+            # deviation_gabbia = ma8_last / ma78_last
+            # e che 
+            # deviation_buy1 = ma8_last / ma78_last
+            
+            
             # NON TOCCARE QUESTA CONDIZIONE ! SERVE PER APERTURA DI GABBIA !
             if not self.session or not self.open:
                 self.session = 1
