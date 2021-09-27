@@ -342,11 +342,11 @@ class maddog:
             # questa funziona 
             
             if (
-                deviation_ma39 < -0.31
+                deviation_ma39 < -0.30
                 
                 # deviation_ma39 = ma3_last / ma39_last
             ):
-                sell = "SELL SALVAGENTE 2"
+                sell = "SELL SALVAGENTE 2 riga 349"
                 action = "sell"
             
             
