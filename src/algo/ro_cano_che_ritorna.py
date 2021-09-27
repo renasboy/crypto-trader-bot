@@ -84,17 +84,18 @@ class ro_cano_che_ritorna:
         # PREZZO di X MINUTI FA (di mercato) - 
         
         price_2_min_ago = self.algo_helper.price_minutes_ago(2)
+        price_15_min_ago = self.algo_helper.price_minutes_ago(15)
         price_20_min_ago = self.algo_helper.price_minutes_ago(20)
         
         
       
-        #############################################################################################################################################################
+                                                                                                                 #################################################
         
-        # importante : inutile attesa vedi riga 434
+        # importante : inutile attesa vedi riga 448
         
         # VENDE DOPO x SECONDI - ro cano torna a casa - (ma c'e' anche un "e se")
-        max_hold_time_in_seconds = 1200
-        #  20 minuti * 60 = 1200
+        max_hold_time_in_seconds = 900
+        #  15 minuti * 60 = 900
         
        
 
@@ -153,10 +154,10 @@ class ro_cano_che_ritorna:
         
        
       
-        # formula DEVIATION_SPAZIO_TEMPO ( per comprare se c'e' una alta velocita' nel rialzo del prezzo )
-        deviation_spazio_tempo = (ma3_last/ma3_9_min_ago - 1) *100 if ma3_9_min_ago else 0
-        self.algo_helper.log( "deviation_spazio_tempo: {}".format(deviation_spazio_tempo))  
-        
+        # formula COMPRA_SPAZIO_TEMPO ( per comprare se c'e' una alta velocita' nel rialzo del prezzo )
+        compra_spazio_tempo = (ma3_last/ma3_9_min_ago - 1) *100 if ma3_9_min_ago else 0
+        self.algo_helper.log( "compra_spazio_tempo: {}".format(compra_spazio_tempo))  
+        # vedi riga 291
         
         ########################################################################################
         
@@ -179,9 +180,9 @@ class ro_cano_che_ritorna:
         
         
         
-        # formula vendi se dopo 20 minuti il prezzo non aumenta - attesa inutile
+        # formula vendi se dopo 15 minuti il prezzo non aumenta - attesa inutile
         # PREZZO DI ADESSO / PREZZO DI 20 MINUTI FA < 0,10
-        condizione_attesa_inutile = ((ma2_last/price_20_min_ago)-1)*100 if price_20_min_ago else 0
+        condizione_attesa_inutile = ((ma2_last/price_15_min_ago)-1)*100 if price_15_min_ago else 0
         
         
         ############################################################################################################################# novita' !
@@ -288,14 +289,15 @@ class ro_cano_che_ritorna:
                 
                 # BUY 1 DURANTE IL RIALZO con DEVIATION_SPAZIO_TEMPO
                 if (
-                    deviation_spazio_tempo > 0.65
+                    compra_spazio_tempo > 0.60
                     and ma4_last > ma4_5_min_ago
                     and ma3_last > ma78_last
+                    
                     # QUESTA CONDIZIONE SPAZIO-TEMPO ERA UNA TUA IDEA !
                     
                 ):
 
-                    buy = "BUY 1 con DEVIATION_SPAZIO_TEMPO"
+                    buy = "BUY 1 con COMPRA_SPAZIO_TEMPO riga 290"
                     action = "buy"
                     
                    
