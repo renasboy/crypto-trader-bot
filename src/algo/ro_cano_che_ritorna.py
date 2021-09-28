@@ -464,10 +464,10 @@ class ro_cano_che_ritorna:
                 
                 
                 
-            # 3) ro cano VENDE DOPo 4 minuti con VENDI_SPAZIO_TEMPO se il ribasso ha una alta velocita'
+            # 3) ro cano VENDE DOPO 4 minuti con VENDI_SPAZIO_TEMPO se il ribasso ha una alta velocita'
                 if (
                     vendi_spazio_tempo < -0.65
-                    and ma4_last < ma4_5_min_ago
+                    and ma4_last < ma4_4_min_ago
                     
                     # QUESTA CONDIZIONE SPAZIO-TEMPO ERA UNA TUA IDEA !
                     
