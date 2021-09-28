@@ -84,6 +84,7 @@ class ro_cano_che_ritorna:
         # PREZZO di X MINUTI FA (di mercato) - 
         
         price_2_min_ago = self.algo_helper.price_minutes_ago(2)
+        price_10_min_ago = self.algo_helper.price_minutes_ago(10)
         price_15_min_ago = self.algo_helper.price_minutes_ago(15)
         price_20_min_ago = self.algo_helper.price_minutes_ago(20)
         
@@ -91,11 +92,11 @@ class ro_cano_che_ritorna:
       
                                                                                                                  #################################################
         
-        # importante : inutile attesa vedi riga 448
+        # importante : dolce attesa vedi riga 448
         
         # VENDE DOPO x SECONDI - ro cano torna a casa - (ma c'e' anche un "e se")
-        max_hold_time_in_seconds = 900
-        #  15 minuti * 60 = 900
+        max_hold_time_in_seconds = 600
+        #  10 minuti * 60 = 600
         
        
 
@@ -113,7 +114,7 @@ class ro_cano_che_ritorna:
         # formula deviation
         deviation = (ma2_last / last_trade_price - 1) * 100 if last_trade_price else 0
         self.algo_helper.log("deviation: {}".format(deviation))
-        # da maddog per ATTESA INUTILE !
+        # da maddog per DOLCE ATTESA !
         
         
         
@@ -444,9 +445,8 @@ class ro_cano_che_ritorna:
                 action = "sell"
                 
                 
-                
-             
-            # 2) ro cano VENDE " DOPO x MINUTI " "max hold time" - vedi riga 90
+         
+            # 2) ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA vedi riga 90
 
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds 
@@ -458,7 +458,7 @@ class ro_cano_che_ritorna:
                 
             ):
 
-                sell = "SELL TEMPO"
+                sell = "SELL TEMPO riga 461"
                 action = "sell"
                 
                 
@@ -816,7 +816,7 @@ class ro_cano_che_ritorna:
                     and (ma3_prev > ma18_prev and ma3_last < ma18_last)
                    
                 ):
-                    sell = "SELL 22 (12-24 min) con ma50 >"
+                    sell = "SELL 22 (12-24 min) con ma50 > riga 819"
                     action = "sell"
 
                     
