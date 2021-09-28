@@ -130,11 +130,11 @@ class maddog:
         self.algo_helper.log("deviation_buy1: {}".format(deviation_buy1))
 
         # formula "deviation_buy2"
-        deviation_buy2 = (ma8_last / ma78_last - 1) * 100 if ma78_last else 0
+        deviation_buy2 = (ma8_last / ma50_last - 1) * 100 if ma50_last else 0
         self.algo_helper.log("deviation_buy2: {}".format(deviation_buy2))
 
         # formula "deviation_buy3"
-        deviation_buy3 = (ma8_last / ma78_last - 1) * 100 if ma78_last else 0
+        deviation_buy3 = (ma8_last / ma50_last - 1) * 100 if ma50_last else 0
         self.algo_helper.log("deviation_buy3: {}".format(deviation_buy3))
 
         
@@ -228,7 +228,7 @@ class maddog:
                         # deviation_buy1 = ma8_last / ma50_last
                     
                     ):
-                        buy = "BUY 1 - con DEVIATION buy1 e ma50 IN RIALZO - riga 210" 
+                        buy = "BUY 1 - con DEVIATION buy1 e ma50 IN RIALZO - riga 218" 
                         action = "buy"
                         
                         
