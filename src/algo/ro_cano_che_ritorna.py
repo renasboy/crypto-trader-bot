@@ -48,6 +48,9 @@ class ro_cano_che_ritorna:
         ma2_4_min_ago = self.algo_helper.ma_minutes_ago(2, 4)
         
         ma3_2_min_ago = self.algo_helper.ma_minutes_ago(3, 2)
+        
+        ma3_3_min_ago = self.algo_helper.ma_minutes_ago(3, 3)
+        
         ma3_9_min_ago = self.algo_helper.ma_minutes_ago(3, 9)
         ma4_2_min_ago = self.algo_helper.ma_minutes_ago(4, 2)
         ma4_4_min_ago = self.algo_helper.ma_minutes_ago(4, 4)
@@ -93,7 +96,7 @@ class ro_cano_che_ritorna:
         
         
       
-                                                                                                                 #################################################
+                                                                                                                
         
         # importante : dolce attesa vedi riga 448
         
@@ -159,9 +162,13 @@ class ro_cano_che_ritorna:
        
       
         # formula COMPRA_SPAZIO_TEMPO ( per comprare se c'e' una alta velocita' nel rialzo del prezzo )
-        compra_spazio_tempo = (ma3_last/ma3_9_min_ago - 1) *100 if ma3_9_min_ago else 0
+        compra_spazio_tempo = (ma3_last/ma3_3_min_ago - 1) *100 if ma3_3_min_ago else 0
         self.algo_helper.log( "compra_spazio_tempo: {}".format(compra_spazio_tempo))  
-        # vedi riga 291
+        # vedi riga 298
+        
+        
+        
+        
         
         ########################################################################################
         
@@ -291,11 +298,11 @@ class ro_cano_che_ritorna:
                 ##############################################################################
                 
                 
-                # BUY 1 DURANTE IL RIALZO con DEVIATION_SPAZIO_TEMPO
+                # BUY 1 DURANTE IL RIALZO con COMPRA_SPAZIO_TEMPO
                 if (
                     compra_spazio_tempo > 0.70
-                    and ma4_last > ma4_4_min_ago
                     and ma3_last > ma78_last
+                    
                   
                     # compra_spazio_tempo = ma3_last/ma3_9_min_ago
                     # QUESTA CONDIZIONE SPAZIO-TEMPO ERA UNA TUA IDEA !
