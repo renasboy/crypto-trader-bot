@@ -461,7 +461,7 @@ class ro_cano_che_ritorna:
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds 
                 and ma2_last < last_trade_price 
-                and deviation < 0.10
+                and deviation < -0.30
                
                 # condizione_attesa_inutile = ma2_last < last_trade_price 
                 # deviation = ma2_last / last_trade_price
