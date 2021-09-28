@@ -22,6 +22,9 @@ class ro_cano_che_ritorna:
         ma8_last, ma8_prev = self.algo_helper.ma_last_prev(8)
         ma9_last, ma9_prev = self.algo_helper.ma_last_prev(9)
         ma10_last, ma10_prev = self.algo_helper.ma_last_prev(10)
+        
+        ma11_last, ma11_prev = self.algo_helper.ma_last_prev(11)
+        
         ma13_last, ma13_prev = self.algo_helper.ma_last_prev(13)
         ma16_last, ma16_prev = self.algo_helper.ma_last_prev(16)
         ma18_last, ma18_prev = self.algo_helper.ma_last_prev(18)
@@ -125,7 +128,7 @@ class ro_cano_che_ritorna:
         
        
         # formula DEVIATION_buy1 per la compra 1
-        deviation_buy1 = (ma13_last/ma39_last - 1) * 100 if ma39_last else 0
+        deviation_buy1 = (ma11_last/ma39_last - 1) * 100 if ma39_last else 0
         self.algo_helper.log("deviation_buy1: {}".format(deviation_buy1))
 
         # formula DEVIATION_buy2 per la compra 2
@@ -181,7 +184,7 @@ class ro_cano_che_ritorna:
         
         
         
-        # formula vendi se dopo 15 minuti il prezzo non aumenta - attesa inutile
+        # formula vendi se dopo 10 minuti il prezzo non aumenta - attesa inutile
         # PREZZO DI ADESSO / PREZZO DI 20 MINUTI FA < 0,10
         condizione_attesa_inutile = ((ma2_last/price_15_min_ago)-1)*100 if price_15_min_ago else 0
         
@@ -252,7 +255,7 @@ class ro_cano_che_ritorna:
                 
                 if (
                     deviation_buy1 > 0.10 
-                    and (ma13_prev < ma39_prev and ma13_last > ma39_last)
+                    and (ma11_prev < ma39_prev and ma11_last > ma39_last)
                     
                     and price > price_2_min_ago
                     and ma2_last > ma2_2_min_ago
@@ -294,7 +297,7 @@ class ro_cano_che_ritorna:
                     and ma4_last > ma4_4_min_ago
                     and ma3_last > ma78_last
                   
-                    # compra_spazio_tempo = (ma3_last/ma3_9_min_ago
+                    # compra_spazio_tempo = ma3_last/ma3_9_min_ago
                     # QUESTA CONDIZIONE SPAZIO-TEMPO ERA UNA TUA IDEA !
                     
                 ):
@@ -402,7 +405,7 @@ class ro_cano_che_ritorna:
                     
 
                 elif (
-                    deviation_buy3 > 0.17
+                    deviation_buy3 > 0.12
                     and deviation_ma7_sopra_ma40 > 0.13
                     
                    # deviation_buy3 = ma7_last/ma78
@@ -410,7 +413,7 @@ class ro_cano_che_ritorna:
                     
                     and ma4_last > ma78_last
                 ):
-                    buy = "BUY 3B"
+                    buy = "BUY 3B riga 407"
                     action = "buy"
                 
                 
@@ -676,11 +679,11 @@ class ro_cano_che_ritorna:
                 elif (
                     ma50_last < ma50_2_min_ago 
                     and (ma3_prev > ma78_prev and ma3_last < ma78_last) 
-                    and deviation_sell < -0.20
+                    and deviation_sell < -0.15
                   
                 ):
 
-                    sell = "SELL 13 (3-5 min) con ma50 <"
+                    sell = "SELL 13 (3-5 min) con ma50 < riga 680"
                     action = "sell"
 
                     
