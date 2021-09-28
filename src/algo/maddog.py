@@ -1,23 +1,35 @@
+
+
 class maddog:
     def __init__(self, helper):
         self.algo_helper = helper
         self.session = 0
         self.open = False
 
+        
+        
     @property
     def action(self):
+        
+        
+        
 
         # ro cano ritorna automaticamente ( per esempio 8 minuti x 60 = 480 secondi ).......................... RIGA 319 #
         max_hold_time_in_seconds = 480
 
         # e durata segmento in cui si aggiunge una condizione per il BUY ( per esempio 40 minuti x 60 = 2400 secondi )
         min_buy_delay_in_seconds = 2400
-
+        
+        
+        
+        
         # MACD di 1-2-3-4 minuti prima
         # macd = self.algo_helper.macd
 
         # macd_2_min_ago = self.algo_helper.macd_minutes_ago(2)
-
+        
+        
+        
         # moving average (2-3-4-5-x)
         ma2_last, ma2_prev = self.algo_helper.ma_last_prev(2)
         ma3_last, ma3_prev = self.algo_helper.ma_last_prev(3)
@@ -300,7 +312,9 @@ class maddog:
             if self.session == 1:
 
                 if (
-                    ma78_last >= ma78_10_min_ago and (ma3_last > ma25_last and ma3_last < ma25_last) and deviation > 0.18
+                    ma78_last >= ma78_10_min_ago 
+                    and (ma3_last > ma25_last and ma3_last < ma25_last) 
+                    and deviation > 0.18
                  
                 ):
                     sell = "SELL 1 A1"
@@ -309,7 +323,9 @@ class maddog:
                 
                 
                 elif (
-                    ma78_last >= ma78_10_min_ago and (ma3_last > ma18_last and ma3_last < ma18_last) and deviation_ma50 > 0.70
+                    ma78_last >= ma78_10_min_ago 
+                    and (ma3_last > ma18_last and ma3_last < ma18_last) 
+                    and deviation_ma50 > 0.70
                  
                 ):
                     sell = "SELL 1 A2"
@@ -320,7 +336,9 @@ class maddog:
                 # VENDE sessione 1 con ma78_last < ma78_18_min_ago
 
                 elif (
-                    ma78_last < ma78_18_min_ago and (ma3_last > ma39_last and ma3_last < ma39_last) and deviation_ma50 < -0.43
+                    ma78_last < ma78_18_min_ago 
+                    and (ma3_last > ma39_last and ma3_last < ma39_last) 
+                    and deviation_ma50 < -0.43
                  
                     # deviation_sell = ma3_last / ma50_last
                     # deviation_buy1 = ma8_last / ma78_last
