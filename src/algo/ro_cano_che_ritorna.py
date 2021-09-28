@@ -135,7 +135,7 @@ class ro_cano_che_ritorna:
         self.algo_helper.log("deviation_buy1: {}".format(deviation_buy1))
 
         # formula DEVIATION_buy2 per la compra 2
-        deviation_buy2 = (ma8_last/ma78_last - 1) * 100 if ma78_last else 0
+        deviation_buy2 = (ma8_last/ma50_last - 1) * 100 if ma50_last else 0
         self.algo_helper.log("deviation_buy2: {}".format(deviation_buy2))
 
         # formula DEVIATION_buy3 per la compra 3
@@ -353,16 +353,17 @@ class ro_cano_che_ritorna:
             elif self.session == 2:
               
                 if (
+                    deviation_buy2 > 0.18
+                    and deviation_ma7_sopra_ma40 > 0.12
                     
-                    deviation_ma7_sopra_ma40 > 0.12
                     and (ma4_prev < ma9_prev and ma4_last > ma9_last) 
-                    and deviation_buy2 > 0.12
+                    
                     and ma2_last > ma2_2_min_ago
                     and price > price_2_min_ago
                     and ma4_last > ma78_last
                     and ma3_last > ma40_last
                 ):
-                    buy = "BUY 2A"
+                    buy = "BUY 2A riga 357"
                     action = "buy"   
                         
                     
@@ -401,11 +402,9 @@ class ro_cano_che_ritorna:
                     and deviation_ma7_sopra_ma40 > 0.10
                     and (ma4_prev < ma9_prev and ma4_last > ma9_last) 
                    
-                    
-                    
-                    and ma4_last > ma78_last
+                    and ma4_last > ma50_last
                 ):
-                    buy = "BUY 3A"
+                    buy = "BUY 3A riga 401"
                     action = "buy"    
                         
                     
@@ -415,10 +414,10 @@ class ro_cano_che_ritorna:
                     deviation_buy3 > 0.12
                     and deviation_ma7_sopra_ma40 > 0.13
                     
-                   # deviation_buy3 = ma7_last/ma78
+                   # deviation_buy3 = ma7_last/ma50
                   
                     
-                    and ma4_last > ma78_last
+                    and ma4_last > ma50_last
                 ):
                     buy = "BUY 3B riga 407"
                     action = "buy"
@@ -427,7 +426,7 @@ class ro_cano_che_ritorna:
                 
         
         ###########################################################################################################################
-                                                     #                                  V E N D I T A ....ma non vende proprio !!!!
+                                                     #                                                                V E N D I T A 
         ############################################################################################################################
 
         
