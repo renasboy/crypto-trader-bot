@@ -47,7 +47,7 @@ class ro_cano_che_ritorna:
         ma3_2_min_ago = self.algo_helper.ma_minutes_ago(3, 2)
         ma3_9_min_ago = self.algo_helper.ma_minutes_ago(3, 9)
         ma4_2_min_ago = self.algo_helper.ma_minutes_ago(4, 2)
-        ma4_5_min_ago = self.algo_helper.ma_minutes_ago(4, 5)
+        ma4_4_min_ago = self.algo_helper.ma_minutes_ago(4, 4)
         ma6_2_min_ago = self.algo_helper.ma_minutes_ago(6, 2)
         ma8_4_min_ago = self.algo_helper.ma_minutes_ago(8, 4)
         ma13_2_min_ago = self.algo_helper.ma_minutes_ago(13, 2)
@@ -289,10 +289,11 @@ class ro_cano_che_ritorna:
                 
                 # BUY 1 DURANTE IL RIALZO con DEVIATION_SPAZIO_TEMPO
                 if (
-                    compra_spazio_tempo > 0.60
-                    and ma4_last > ma4_5_min_ago
+                    compra_spazio_tempo > 0.70
+                    and ma4_last > ma4_4_min_ago
                     and ma3_last > ma78_last
-                    
+                  
+                    # compra_spazio_tempo = (ma3_last/ma3_9_min_ago
                     # QUESTA CONDIZIONE SPAZIO-TEMPO ERA UNA TUA IDEA !
                     
                 ):
