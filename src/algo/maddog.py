@@ -372,20 +372,49 @@ class maddog:
             ################################################################################################################################################
           
 
-            # 1) vedi riga 11 DOPO 8 min dal buy VENDE SUBITO " E SE ma2_last < last_trade_price...and deviation < 0.10:
+            # 1) vedi riga 11 DOPO 8 min dal buy VENDE SUBITO " E SE ma2_last < last_trade_price...and deviation < 0.30:
 
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds 
                 and ma2_last < last_trade_price 
-                and deviation < -0.30
-               
-                # condizione_attesa_inutile = ma2_last < last_trade_price 
+                and deviation < -0.50
+                and ma39_last > ma39_2_min_ago
+                
+                # condizione_dolce_attesa = ma2_last < last_trade_price 
                 # deviation = ma2_last / last_trade_price
                 
             ):
 
-                sell = "SELL TEMPO riga 380"
+                sell = "SELL TEMPO CON TREND IN RIBASSO riga 380"
                 action = "sell"
+                
+                
+                
+                
+                
+            elif (
+                seconds_since_last_trade > max_hold_time_in_seconds 
+                and ma2_last < last_trade_price 
+                and deviation < -0.20
+                and ma39_last < ma39_2_min_ago
+                
+                # condizione_dolce_attesa = ma2_last < last_trade_price 
+                # deviation = ma2_last / last_trade_price
+                
+            ):
+
+                sell = "SELL TEMPO CON TREND IN RIALZO riga 396"
+                action = "sell"
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
              ##########################################################################################################################################
