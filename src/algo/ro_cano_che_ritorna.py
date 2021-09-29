@@ -398,7 +398,8 @@ class ro_cano_che_ritorna:
             
             else: 
                 if (
-                    deviation_buy3 > 0.10
+                    ma3_last > ma13_last
+                    and deviation_buy3 > 0.10
                     and deviation_ma7_sopra_ma40 > 0.10
                     and (ma4_prev < ma9_prev and ma4_last > ma9_last) 
                    
@@ -719,10 +720,10 @@ class ro_cano_che_ritorna:
                 if (
                     ma50_last > ma50_2_min_ago 
                     and (ma3_prev > ma25_prev and ma3_last < ma25_last) 
-                    and deviation_sell > 0.18
+                    and deviation_sell > 0.28 or deviation_sell < -0.28
                    
                 ):
-                    sell = "SELL 15 (5-12 min) con ma50 >"
+                    sell = "SELL 15 (5-12 min) con ma50 > riga 720 FONDAMENTALE vedi or"
                     action = "sell"
 
                     
