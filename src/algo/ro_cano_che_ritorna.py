@@ -412,7 +412,8 @@ class ro_cano_che_ritorna:
                     
 
                 elif (
-                    deviation_buy3 > 0.12
+                    ma3_last > ma13_last
+                    and deviation_buy3 > 0.12
                     and deviation_ma7_sopra_ma40 > 0.13
                     
                    # deviation_buy3 = ma7_last/ma50
@@ -420,7 +421,7 @@ class ro_cano_che_ritorna:
                     
                     and ma4_last > ma50_last
                 ):
-                    buy = "BUY 3B riga 407"
+                    buy = "BUY 3B riga 415"
                     action = "buy"
                 
                 
