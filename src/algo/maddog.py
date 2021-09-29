@@ -221,7 +221,7 @@ class maddog:
 
                     if (
                         
-                        deviation_buy1 > 0.20
+                        deviation_buy1 > 0.20 or (ma3_last < ma78_last and ma3_last > ma78_last)
                         and ma4_last > ma40_last
                         and ma2_last > ma2_2_min_ago
                         
@@ -360,11 +360,11 @@ class maddog:
             # questa funziona 
             
             if (
-                deviation_ma39 < -0.30
+                deviation_ma39 < -0.30 
                 
                 # deviation_ma39 = ma3_last / ma39_last
             ):
-                sell = "SELL SALVAGENTE 2 riga 349"
+                sell = "SELL SALVAGENTE 2 riga 367"
                 action = "sell"
             
             
@@ -377,14 +377,14 @@ class maddog:
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds 
                 and ma2_last < last_trade_price 
-                and deviation < 0.10
+                and deviation < -0.30
                
                 # condizione_attesa_inutile = ma2_last < last_trade_price 
                 # deviation = ma2_last / last_trade_price
                 
             ):
 
-                sell = "SELL TEMPO"
+                sell = "SELL TEMPO riga 380"
                 action = "sell"
         
         
