@@ -412,7 +412,7 @@ class ro_cano_che_ritorna:
                     
 
                 elif (
-                    ma3_last > ma25_last
+                    ma4_last > ma30_last
                     and ma3_last > ma78_last
                     #and deviation_buy3 > 0.04
                     #and deviation_ma7_sopra_ma40 > 0.07
