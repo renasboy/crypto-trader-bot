@@ -999,7 +999,7 @@ class ro_cano_che_ritorna:
                     
                 elif (
                     ma50_last > ma50_2_min_ago 
-                    and (ma3_prev > ma15_prev and ma3_last < ma15_last) 
+                    and (ma3_prev > ma13_prev and ma3_last < ma13_last) 
                     and deviation_sell > 0.60
                  
                 ):
