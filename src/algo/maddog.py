@@ -222,6 +222,7 @@ class maddog:
                     if (
                         
                         deviation_buy1 > 0.20 or (ma3_last < ma78_last and ma3_last > ma78_last)
+                        and ma2_last > ma8_last
                         and ma4_last > ma40_last
                         and ma2_last > ma2_2_min_ago
                         
