@@ -391,7 +391,7 @@ class maddog:
                 
                 
                 
-                
+            '''
             # 1) VENDI DOPO 8 min dal buy " (E SE) con TREND IN RIBASSO - vedi riga 11 
             
             elif (
@@ -407,7 +407,7 @@ class maddog:
 
                 sell = "SELL TEMPO con TREND IN RIALZO riga 396"
                 action = "sell"
-        
+            '''
         
         
         
