@@ -308,7 +308,7 @@ class maddog:
             # VENDE
             
 
-            # VENDE sessione 1 con ma78_last >= ma78_20_min_ago
+            # VENDE con ma78_last >= ma78_20_min_ago
             if self.session == 1:
 
                 if (
@@ -328,12 +328,12 @@ class maddog:
                     and deviation_ma50 > 0.70
                  
                 ):
-                    sell = "SELL 1 A2"
+                    sell = "SELL con ma78 <"
                     action = "sell"
                 
                 
              
-                # VENDE sessione 1 con ma78_last < ma78_18_min_ago
+                # VENDE con ma78_last < ma78_18_min_ago
 
                 elif (
                     ma78_last < ma78_18_min_ago 
@@ -344,7 +344,7 @@ class maddog:
                     # deviation_buy1 = ma8_last / ma78_last
                 ):
 
-                    sell = "SELL 1 B1"
+                    sell = "SELL con ma78 <"
                     action = "sell"
                 
             
@@ -372,9 +372,9 @@ class maddog:
             ################################################################################################################################################
           
 
-            # 1) vedi riga 11 DOPO 8 min dal buy VENDE SUBITO " E SE ma2_last < last_trade_price...and deviation < 0.30:
+            # 1) VENDI DOPO 8 min dal buy " (E SE) con TREND IN RIALZO - vedi riga 11 
 
-            elif (
+            if (
                 seconds_since_last_trade > max_hold_time_in_seconds 
                 and ma2_last < last_trade_price 
                 and deviation < -0.50
@@ -385,13 +385,14 @@ class maddog:
                 
             ):
 
-                sell = "SELL TEMPO CON TREND IN RIBASSO riga 380"
+                sell = "SELL TEMPO con TREND IN RIBASSO riga 380"
                 action = "sell"
                 
                 
                 
                 
-                
+            # 1) VENDI DOPO 8 min dal buy " (E SE) con TREND IN RIBASSO - vedi riga 11 
+            
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds 
                 and ma2_last < last_trade_price 
@@ -403,7 +404,7 @@ class maddog:
                 
             ):
 
-                sell = "SELL TEMPO CON TREND IN RIALZO riga 396"
+                sell = "SELL TEMPO con TREND IN RIALZO riga 396"
                 action = "sell"
         
         
