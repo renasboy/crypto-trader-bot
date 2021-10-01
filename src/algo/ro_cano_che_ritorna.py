@@ -155,9 +155,9 @@ class ro_cano_che_ritorna:
         self.algo_helper.log("deviation_buy_crollo: {}".format(deviation_buy_crollo))
         
        
-        # formula DEVIATION_ma7_sopra_ma40
-        deviation_ma7_sopra_ma40 = (ma7_last/ma40_last - 1) *100 if ma40_last else 0
-        self.algo_helper.log("deviation_ma7_sopra_ma40: {}".format(deviation_ma7_sopra_ma40))
+        # formula DEVIATION_ma4_sopra_ma30
+        deviation_ma4_sopra_ma30 = (ma4_last/ma30_last - 1) *100 if ma30_last else 0
+        self.algo_helper.log("deviation_ma4_sopra_ma30: {}".format(deviation_ma4_sopra_ma30))
         
        
       
@@ -413,15 +413,14 @@ class ro_cano_che_ritorna:
 
                 elif (
                     ma4_last > ma30_last
+                    and ma4_last > ma4_2_min_ago
                     and ma3_last > ma78_last
-                    #and deviation_buy3 > 0.04
-                    #and deviation_ma7_sopra_ma40 > 0.07
-                    #and ma4_last > ma50_last
-                    
-                    # deviation_buy3 = ma7_last/ma50
+                    and deviation_buy3 > 0.04
                   
                     
+                    # deviation_buy3 = ma4_last/ma30
                     
+              
                 ):
                     buy = "BUY 3B RIVOLUZIONARIO - riga 415"
                     action = "buy"
@@ -810,7 +809,7 @@ class ro_cano_che_ritorna:
                 
                 if (
                     ma50_last >= ma50_2_min_ago 
-                    and (ma3_prev > ma18_prev and ma3_last < ma18_last)
+                    and (ma3_prev > ma25_prev and ma3_last < ma25_last)
                     and deviation_sell > 0.25
                     
                     # deviation_sell = ma3_last/last_trade_price
