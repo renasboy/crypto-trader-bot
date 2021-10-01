@@ -154,7 +154,11 @@ class ro_cano_che_ritorna:
         deviation_buy_crollo = (ma3_last/ma13_last - 1) *100 if ma13_last else 0
         self.algo_helper.log("deviation_buy_crollo: {}".format(deviation_buy_crollo))
         
-       
+        # formula DEVIATION_buy_ma3_sopra_ma13 per comprare a una certa distanza da ma13
+        deviation_buy_ma3_sopra_ma13 = (ma3_last/ma13_last - 1) *100 if ma13_last else 0
+        self.algo_helper.log("deviation_buy_ma3_sopra_ma13: {}".format(deviation_buy_ma3_sopra_ma13))
+        
+        
         # formula DEVIATION_ma4_sopra_ma30
         deviation_ma4_sopra_ma30 = (ma4_last/ma30_last - 1) *100 if ma30_last else 0
         self.algo_helper.log("deviation_ma4_sopra_ma30: {}".format(deviation_ma4_sopra_ma30))
@@ -358,7 +362,8 @@ class ro_cano_che_ritorna:
             elif self.session == 2:
               
                 if (
-                    deviation_buy2 > 0.18
+                    deviation_buy_ma3_sopra_ma13 > 0.10
+                    and deviation_buy2 > 0.18
                     and deviation_ma7_sopra_ma40 > 0.12
                     
                     and (ma4_prev < ma9_prev and ma4_last > ma9_last) 
@@ -371,13 +376,14 @@ class ro_cano_che_ritorna:
                     buy = "BUY 2A riga 357"
                     action = "buy"   
                         
-                    
+                    # deviation_buy_ma3_sopra_ma13 > 0.10 e' fondamentale !
                     
                 ####################################################### MIRACOLO QUESTA HA FUNZIONATO !
                 
                 
                 elif (
-                    deviation_buy2 > 0.13
+                    deviation_buy_ma3_sopra_ma13 > 0.10
+                    and deviation_buy2 > 0.13
                     and deviation_ma7_sopra_ma40 > 0.14
                     and (ma4_prev < ma9_prev and ma4_last > ma9_last) 
                   
