@@ -270,11 +270,11 @@ class ro_cano_che_ritorna:
                 # BUY 1 DURANTE IL RIALZO con INCROCIO CLASSICO
                 
                 if (
-                    deviation_buy1 > 0.10 
-                    and (ma11_prev < ma39_prev and ma11_last > ma39_last)
+                    ma2_last > ma2_2_min_ago
+                    and (ma8_prev < ma39_prev and ma8_last > ma39_last)
                     
                     and price > price_2_min_ago
-                    and ma2_last > ma2_2_min_ago
+                    
                     and ma4_last > ma8_last
                   
                 ):
