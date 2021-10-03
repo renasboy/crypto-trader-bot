@@ -361,7 +361,7 @@ class maddog:
             # questa funziona 
             
             if (
-                deviation_ma39 < -0.29 
+                deviation_ma39 < -0.27
                 
                 # deviation_ma39 = ma3_last / ma39_last
             ):
