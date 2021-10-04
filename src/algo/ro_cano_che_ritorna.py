@@ -98,11 +98,11 @@ class ro_cano_che_ritorna:
       
                                                                                                                 
         
-        # importante : dolce attesa vedi riga 462
+        # importante : dolce attesa vedi riga 484
         
         # VENDE DOPO x SECONDI - ro cano torna a casa - (ma c'e' anche un "e se")
-        max_hold_time_in_seconds = 600
-        #  10 minuti * 60 = 600
+        max_hold_time_in_seconds = 540
+        #  9 minuti * 60 = 540
         
        
 
@@ -473,14 +473,14 @@ class ro_cano_che_ritorna:
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds 
                 and ma2_last < last_trade_price 
-                and deviation < -0.28
+                and deviation < -0.30
                
-                # condizione_dolce_attesa = ma2_last < last_trade_price (10 min)
+                # condizione_dolce_attesa = ma2_last < last_trade_price (9 min)
                 # deviation = ma2_last / last_trade_price
                 
             ):
 
-                sell = "SELL TEMPO riga 462"
+                sell = "SELL TEMPO riga 484"
                 action = "sell"
                 
                 
