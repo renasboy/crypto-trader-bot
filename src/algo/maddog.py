@@ -93,7 +93,9 @@ class maddog:
         ma36_2_min_ago = self.algo_helper.ma_minutes_ago(36, 2)
         ma39_2_min_ago = self.algo_helper.ma_minutes_ago(39, 2)
         ma50_2_min_ago = self.algo_helper.ma_minutes_ago(50, 2)
-
+        
+        ma50_10_min_ago = self.algo_helper.ma_minutes_ago(50, 10)
+        
         ma78_5_min_ago = self.algo_helper.ma_minutes_ago(78, 5)
         ma78_10_min_ago = self.algo_helper.ma_minutes_ago(78, 10)
         
@@ -221,7 +223,8 @@ class maddog:
 
                     if (
                         
-                        deviation_buy1 > 0.20 or (ma3_last < ma78_last and ma3_last > ma78_last)
+                        deviation_buy1 > 0.20
+                        and ma50_last > ma50_10_min_ago
                         and ma2_last > ma8_last
                         and ma4_last > ma40_last
                         and ma2_last > ma2_2_min_ago
@@ -229,7 +232,23 @@ class maddog:
                         # deviation_buy1 = ma8_last / ma50_last
                     
                     ):
-                        buy = "BUY 1 - con DEVIATION buy1 e ma50 IN RIALZO - riga 218" 
+                        buy = "BUY 1 - con DEVIATION buy1- riga 218" 
+                        action = "buy"
+                        
+                    
+                    
+                    
+                    if (
+                        ma2_last > ma8_last
+                        and (ma3_last < ma78_last and ma3_last > ma78_last)
+                        and ma4_last > ma40_last
+                        and ma2_last > ma2_2_min_ago
+                        
+                        
+                       
+                    
+                    ):
+                        buy = "BUY 1 - con INCROCIO CLASSICO - riga 238" 
                         action = "buy"
                         
                         
@@ -361,7 +380,7 @@ class maddog:
             # questa funziona 
             
             if (
-                deviation_ma39 < -0.27
+                deviation_ma39 < -0.26
                 
                 # deviation_ma39 = ma3_last / ma39_last
             ):
