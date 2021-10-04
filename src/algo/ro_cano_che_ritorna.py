@@ -424,10 +424,11 @@ class ro_cano_che_ritorna:
                     ma4_last > ma30_last
                     and ma4_last > ma4_2_min_ago
                     and ma3_last > ma78_last
-                    and deviation_buy3 > 0.04
+                    and deviation_buy3 > 0.05
                   
                     
                     # deviation_buy3 = ma4_last/ma30
+                    # che potrebbe diventare ma33
                     
               
                 ):
