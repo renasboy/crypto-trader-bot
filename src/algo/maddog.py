@@ -273,7 +273,7 @@ class maddog:
                 
                 
                 # COMPRA sessione 2
-                if self.session == 2:
+                else self.session == 2:
                     if (
                         price > price_2_min_ago
                         and ma2_last > ma2_2_min_ago
@@ -381,7 +381,7 @@ class maddog:
             # questa funziona 
             
             if (
-                deviation_ma39 < -0.26
+                deviation_ma39 < -0.25
                 
                 # deviation_ma39 = ma3_last / ma39_last
             ):
