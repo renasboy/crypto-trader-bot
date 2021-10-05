@@ -869,7 +869,7 @@ class ro_cano_che_ritorna:
                 elif (
                     ma50_last < ma50_2_min_ago 
                     and (ma3_prev > ma78_prev and ma3_last < ma78_last) 
-                    and deviation_sell < -0.20
+                    and deviation_sell < -0.30
                   
                 ):
                     sell = "SELL 24 (12-24 min) con ma50 <"
@@ -939,7 +939,7 @@ class ro_cano_che_ritorna:
                 elif (
                     ma50_last > ma50_2_min_ago 
                     and (ma3_prev > ma78_prev and ma3_last < ma78_last) 
-                    and deviation_sell < -0.20
+                    and deviation_sell < -0.30
                  
                 ):
                     sell = "SELL 29  (24-40 min) con ma50 <"
@@ -969,7 +969,7 @@ class ro_cano_che_ritorna:
                 elif (
                     ma50_last < ma50_2_min_ago 
                     and (ma3_prev > ma78_prev and ma3_last < ma78_last) 
-                    and deviation_sell < -0.20
+                    and deviation_sell < -0.40
                   
                 ):
                     sell = "SELL 31  (24-40 min) con ma50 <"
@@ -1089,11 +1089,27 @@ class ro_cano_che_ritorna:
 
                 sell = "SELL TEMPO 1"
                 action = "sell"
+                
+                
+                
+                
+            elif (
+                seconds_since_last_trade > max_hold_time_in_seconds 
+                and ma8_last < ma39_last
+                and deviation_sell < -0.20
+              
+            ):
+
+                sell = "SELL TEMPO 2"
+                action = "sell"
 
                 
             
            
 
+          
+          
+          
                                                      ############### FINE ALGORITH ###################
             
             
