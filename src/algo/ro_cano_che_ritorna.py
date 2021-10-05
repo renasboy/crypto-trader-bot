@@ -59,6 +59,7 @@ class ro_cano_che_ritorna:
         ma13_2_min_ago = self.algo_helper.ma_minutes_ago(13, 2)
         ma33_5_min_ago = self.algo_helper.ma_minutes_ago(33, 5)
         ma39_2_min_ago = self.algo_helper.ma_minutes_ago(39, 2)
+        ma39_3_min_ago = self.algo_helper.ma_minutes_ago(39, 3)
         ma50_2_min_ago = self.algo_helper.ma_minutes_ago(50, 2)
         ma78_2_min_ago = self.algo_helper.ma_minutes_ago(78, 2)
         ma78_10_min_ago = self.algo_helper.ma_minutes_ago(78, 10)
@@ -271,16 +272,17 @@ class ro_cano_che_ritorna:
                 # BUY 1 DURANTE IL RIALZO con INCROCIO CLASSICO
                 
                 if (
-                    ma2_last > ma2_2_min_ago
-                    and (ma8_prev < ma39_prev and ma8_last > ma39_last)
                     
-                    and price > price_2_min_ago
-                    
+                    ma8_prev < ma39_prev and ma8_last > ma39_last
+                    and ma39_last > ma39_3_min_ago
+                    and ma2_last > ma2_2_min_ago
                     and ma4_last > ma8_last
+                    
+                    
                   
                 ):
 
-                    buy="BUY 1 con INCROCIO CLASSICO"
+                    buy="BUY 1 con INCROCIO CLASSICO riga 275"
                     action="buy"
                 
                 
