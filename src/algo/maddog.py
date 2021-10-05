@@ -276,12 +276,13 @@ class maddog:
                 
                 
                 # COMPRA sessione 2
-                elif self.session == 2:
+                if self.session == 2:
                     if (
                         price > price_2_min_ago
                         and ma2_last > ma2_2_min_ago
                         and ma3_last > ma40_last
                         # incredibile ma vero E' NECESSARIA quando deve ricomprare dopo la correzione al ribasso
+                        
                         and deviation > 0.13
                         and deviation_buy2 > 0.11
                    
@@ -289,8 +290,11 @@ class maddog:
 
                         buy = "BUY 2"
                         action = "buy"
+                        
                 
                 ########################################################################################################################################################
+                
+                
                 
                 # COMPRA sessione 3 in poi
                 else:
