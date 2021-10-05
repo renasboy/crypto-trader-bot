@@ -273,7 +273,7 @@ class maddog:
                 
                 
                 # COMPRA sessione 2
-                else self.session == 2:
+                elif self.session == 2:
                     if (
                         price > price_2_min_ago
                         and ma2_last > ma2_2_min_ago
