@@ -98,11 +98,11 @@ class ro_cano_che_ritorna:
       
                                                                                                                 
         
-        # importante : dolce attesa vedi riga 484
+        # importante : dolce attesa vedi riga 476
         
         # VENDE DOPO x SECONDI - ro cano torna a casa - (ma c'e' anche un "e se")
-        max_hold_time_in_seconds = 540
-        #  9 minuti * 60 = 540
+        max_hold_time_in_seconds = 600
+        #  10 minuti * 60 = 600
         
        
 
@@ -424,15 +424,18 @@ class ro_cano_che_ritorna:
                     ma4_last > ma30_last
                     and ma4_last > ma4_2_min_ago
                     and ma3_last > ma78_last
-                    and deviation_buy3 > 0.05
                   
+                    
+                    and deviation_buy3 > 0.05
+                    and ma3_last > ma8_last
+                    # questa 3-8 puoi dare un delta 0.10 (in futuro)
                     
                     # deviation_buy3 = ma4_last/ma30
                     # che potrebbe diventare ma33
                     
               
                 ):
-                    buy = "BUY 3B RIVOLUZIONARIO - riga 415"
+                    buy = "BUY 3B RIVOLUZIONARIO - riga 424"
                     action = "buy"
                 
                 
@@ -468,19 +471,19 @@ class ro_cano_che_ritorna:
                 
                 
          
-            # 2) ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA vedi riga 90
+            # 2) ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA vedi riga 104
 
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds 
                 and ma2_last < last_trade_price 
-                and deviation < -0.30
+                and deviation < -0.37
                
-                # condizione_dolce_attesa = ma2_last < last_trade_price (9 min)
+                # condizione_dolce_attesa = ma2_last < last_trade_price (10 min)
                 # deviation = ma2_last / last_trade_price
                 
             ):
 
-                sell = "SELL TEMPO riga 484"
+                sell = "SELL TEMPO riga 476"
                 action = "sell"
                 
                 
