@@ -199,6 +199,7 @@ class ro_cano_che_ritorna:
         
         
         
+        ################################################################################################################################### riga 103 - 476 -( e 204 !)
         
         # formula vendi se dopo 10 minuti il prezzo non aumenta - attesa inutile
         # PREZZO DI ADESSO / PREZZO DI 20 MINUTI FA < 0,10
