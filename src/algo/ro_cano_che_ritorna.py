@@ -203,7 +203,7 @@ class ro_cano_che_ritorna:
         
         # formula vendi se dopo 10 minuti il prezzo non aumenta - attesa inutile
         # PREZZO DI ADESSO / PREZZO DI 20 MINUTI FA < 0,10
-        condizione_attesa_inutile = ((ma2_last/price_15_min_ago)-1)*100 if price_15_min_ago else 0
+        condizione_dolce_attesa = ((ma2_last/last_trade_price)-1)*100 if last_trade_price else 0
         
         
         ############################################################################################################################# novita' !
@@ -479,7 +479,7 @@ class ro_cano_che_ritorna:
                 and ma2_last < last_trade_price 
                 and deviation < -0.37
                
-                # condizione_dolce_attesa = ma2_last < last_trade_price (10 min)
+                # condizione_dolce_attesa = ma2_last < last_trade_price
                 # deviation = ma2_last / last_trade_price
                 
             ):
