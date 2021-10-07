@@ -381,7 +381,7 @@ class maddog:
                     and deviation_ma50 > 0.70
                  
                 ):
-                    sell = "SELL con ma78 <"
+                    sell = "SELL con ma78 >"
                     action = "sell"
                 
                 
@@ -391,7 +391,7 @@ class maddog:
                 elif (
                     ma78_last < ma78_18_min_ago 
                     and (ma3_last > ma39_last and ma3_last < ma39_last) 
-                    and deviation_ma50 < -0.43
+                    and deviation_ma50 < -0.22
                  
                     # deviation_sell = ma3_last / ma50_last
                     # deviation_buy1 = ma8_last / ma78_last
@@ -400,6 +400,9 @@ class maddog:
                     sell = "SELL con ma78 <"
                     action = "sell"
                 
+            
+            # STA VENDENDO SOLO CON SALVAGENTE 2 !
+            
             
             ############################################################################################################################################################
             ############################################################################################################################################################
@@ -417,7 +420,7 @@ class maddog:
                 
                 # deviation_ma39 = ma3_last / ma39_last
             ):
-                sell = "SELL SALVAGENTE 2 riga 367"
+                sell = "SELL SALVAGENTE 2 riga 423"
                 action = "sell"
             
             
@@ -438,7 +441,7 @@ class maddog:
                 
             ):
 
-                sell = "SELL TEMPO con TREND IN RIBASSO riga 380"
+                sell = "SELL TEMPO con TREND IN RIBASSO riga 444"
                 action = "sell"
                 
                 
@@ -457,7 +460,7 @@ class maddog:
                 
             ):
 
-                sell = "SELL TEMPO con TREND IN RIALZO riga 396"
+                sell = "SELL TEMPO con TREND IN RIALZO riga 453"
                 action = "sell"
             '''
         
