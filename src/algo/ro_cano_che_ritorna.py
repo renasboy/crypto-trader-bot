@@ -808,10 +808,10 @@ class ro_cano_che_ritorna:
                 elif (
                     ma50_last < ma50_2_min_ago 
                     and (ma3_prev > ma78_prev and ma3_last < ma78_last) 
-                    and deviation_sell < -0.20
+                    and deviation_sell < -0.30
                  
                 ):
-                    sell = "SELL 19 (5-12 min) con ma50 <"
+                    sell = "SELL 19 (5-12 min) con ma50 < riga 809"
                     action = "sell"
 
                     
