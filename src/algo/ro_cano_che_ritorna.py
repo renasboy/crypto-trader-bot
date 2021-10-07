@@ -141,12 +141,23 @@ class ro_cano_che_ritorna:
         # formula DEVIATION_buy2 per la compra 2
         deviation_buy2 = (ma8_last/ma50_last - 1) * 100 if ma50_last else 0
         self.algo_helper.log("deviation_buy2: {}".format(deviation_buy2))
-
+        
+        
+        
+        
         # formula DEVIATION_buy3 per la compra 3
         deviation_buy3 = (ma7_last/ma78_last - 1) * 100 if ma78_last else 0
         self.algo_helper.log("deviation_buy3: {}".format(deviation_buy3))
         
-
+        
+        
+        #formula delta_buy3_incrocio_ma3_ma8 > 0.10 per la compra 3
+        delta_buy3_incrocio_ma3_ma8 = (ma3_last/ma8_last - 1) * 100 if ma8_last else 0
+        self.algo_helper.log("delta_buy3_incrocio_ma3_ma8: {}".format(delta_buy3_incrocio_ma3_ma8))
+       
+      
+        # Done With Bonaparte - vai compaaaaaaaaaaa
+        
         
         
         # formula DEVIATION_buy per comprare UN PO' PIU' SOPRA DEL LAST TRADE ( di solito l' ultimo SELL )
@@ -434,14 +445,17 @@ class ro_cano_che_ritorna:
                     
                     and deviation_buy3 > 0.05
                     and ma3_last > ma8_last
-                    # questa 3-8 puoi dare un delta 0.10 (in futuro)
+                    and delta_buy3_incrocio_ma3_ma8 > 0.10
+                     
+                  
+                    # questa 3-8 puoi dare un delta 0.10 (in futuro) - il futuro e' adesso
                     
                     # deviation_buy3 = ma4_last/ma30
                     # che potrebbe diventare ma33
                     
               
                 ):
-                    buy = "BUY 3B RIVOLUZIONARIO - riga 424"
+                    buy = "BUY 3B RIVOLUZIONARIO - riga 430"
                     action = "buy"
                 
                 
