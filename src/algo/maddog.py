@@ -212,7 +212,7 @@ class maddog:
         ###################################################################################################################################################    
             
             
-                ###################################### QUESTA FUNZIONA 
+               
 
                 # COMPRA sessione 1
 
@@ -220,8 +220,10 @@ class maddog:
 
                     if (
                         
-                        deviation_buy1 > 0.20
+                        deviation_buy1 > 0.25
                         and ma50_last > ma50_10_min_ago
+                        and ma78_last < ma78_2_min_ago
+                        
                         and ma2_last > ma8_last
                         and ma4_last > ma40_last
                         and ma2_last > ma2_2_min_ago
@@ -231,7 +233,37 @@ class maddog:
                     ):
                         buy = "BUY 1 - con DEVIATION buy1- riga 218" 
                         action = "buy"
+                    
+                        # pronto a vendere subito se trend discendente !
+                    
+                    
+                    ########################################################### vediamo se funziona
+                    
+                    
+                    
+                    if (
                         
+                        deviation_buy1 > 0.20
+                        and ma50_last > ma50_10_min_ago
+                        and ma78_last > ma78_2_min_ago
+                        
+                        and ma2_last > ma8_last
+                        and ma4_last > ma40_last
+                        and ma2_last > ma2_2_min_ago
+                        
+                        # deviation_buy1 = ma8_last / ma50_last
+                    
+                    ):
+                        buy = "BUY 1 - con DEVIATION buy1- riga 246" 
+                        action = "buy"
+                        
+                    
+                    
+                    ###############################################################################################################################################
+                    
+                    
+                    
+                    
                     
                     
                     
