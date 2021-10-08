@@ -976,7 +976,7 @@ class ro_cano_che_ritorna:
                     and deviation_sell > 0.23
                    
                 ):
-                    sell = "SELL 30 (24-40 min) con ma50 <"
+                    sell = "SELL 30 (24-40 min) con ma50 < riga 974"
                     action = "sell"
 
                     
@@ -991,7 +991,7 @@ class ro_cano_che_ritorna:
                     and deviation_sell < -0.40
                   
                 ):
-                    sell = "SELL 31  (24-40 min) con ma50 <"
+                    sell = "SELL 31  (24-40 min) con ma50 < riga 989"
                     action = "sell"
 
                     
@@ -1004,7 +1004,7 @@ class ro_cano_che_ritorna:
                    
                 ):
 
-                    sell = "SELL 32 (24-40 min) con ma50 <"
+                    sell = "SELL 32 (24-40 min) con ma50 < riga 1001"
                     action = "sell"
                     
                     
@@ -1026,9 +1026,13 @@ class ro_cano_che_ritorna:
                 if (
                     ma50_last > ma50_2_min_ago 
                     and (ma3_prev > ma23_prev and ma3_last < ma23_last)
-                    and deviation_sell > 0.15
+                    # and deviation_sell > 0.15 questa va bene 
+                    
+                    # ma proviamo le fasce di guadagno (!)
+                    and deviation_sell > 0.15 and deviation_sell < 0.59
+                  
                 ):
-                    sell = "SELL 33 ( dopo 40 min ) con ma50 >"
+                    sell = "SELL 33 ( dopo 40 min ) con ma50 > riga 1027"
                     action = "sell"
                 
                     
@@ -1036,14 +1040,16 @@ class ro_cano_che_ritorna:
                     
                 elif (
                     ma50_last > ma50_2_min_ago 
-                    and (ma3_prev > ma25_prev and ma3_last < ma25_last) 
+                    and (ma3_prev > ma33_prev and ma3_last < ma33_last) 
                     and deviation_sell > 0.60
                  
                 ):
 
-                    sell = "SELL 34 ( dopo 40 min ) con ma50 >"
+                    sell = "SELL 34 ( dopo 40 min ) con ma50 > riga 1038"
                     action = "sell"
 
+                    
+                    
                     
              
                 elif (
@@ -1052,7 +1058,7 @@ class ro_cano_che_ritorna:
                     and deviation_sell > 0.23
                    
                 ):
-                    sell = "SELL 35 ( dopo 40 min ) con ma50 <"
+                    sell = "SELL 35 ( dopo 40 min ) con ma50 < riga 1049"
                     action = "sell"
 
                     
