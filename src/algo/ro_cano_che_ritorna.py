@@ -431,7 +431,7 @@ class ro_cano_che_ritorna:
                    
                     and ma4_last > ma50_last
                 ):
-                    buy = "BUY 3A riga 401"
+                    buy = "BUY 3A riga 427"
                     action = "buy"    
                         
                     
@@ -445,17 +445,17 @@ class ro_cano_che_ritorna:
                     
                     and deviation_buy3 > 0.05
                     and ma3_last > ma8_last
-                    and delta_buy3_incrocio_ma3_ma8 > 0.10
+                    and delta_buy3_incrocio_ma3_ma8 > 0.09
                      
                   
                     # questa 3-8 puoi dare un delta 0.10 (in futuro) - il futuro e' adesso
                     
                     # deviation_buy3 = ma4_last/ma30
-                    # che potrebbe diventare ma33
+                    
                     
               
                 ):
-                    buy = "BUY 3B RIVOLUZIONARIO - riga 430"
+                    buy = "BUY 3B RIVOLUZIONARIO - riga 441"
                     action = "buy"
                 
                 
