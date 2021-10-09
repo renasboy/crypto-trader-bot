@@ -283,11 +283,11 @@ class ro_cano_che_ritorna:
 
             if self.session == 1:
               
-                # BUY 1 DURANTE IL RIALZO con INCROCIO CLASSICO
+                # BUY 1 DURANTE IL RIALZO con INCROCIO CLASSICO 8-48
                 
                 if (
                     
-                    ma8_prev < ma39_prev and ma8_last > ma39_last
+                    ma8_prev < ma48_prev and ma8_last > ma48_last
                     
                     and ma2_last > ma2_2_min_ago
                     and ma4_last > ma8_last
@@ -296,7 +296,7 @@ class ro_cano_che_ritorna:
                   
                 ):
 
-                    buy="BUY 1 con INCROCIO CLASSICO riga 299"
+                    buy="BUY 1 con INCROCIO CLASSICO 8-48 riga 299"
                     action="buy"
                 
                 
