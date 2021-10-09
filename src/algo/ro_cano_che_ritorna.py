@@ -219,7 +219,7 @@ class ro_cano_che_ritorna:
         # formula vendi se dopo 10 minuti il prezzo non aumenta - dolce attesa
         # PREZZO DI ADESSO / PREZZO DI 20 MINUTI FA < 0,10
         condizione_dolce_attesa = ((ma2_last/last_trade_price)-1)*100 if last_trade_price else 0
-        
+        self.algo_helper.log("condizione_dolce_attesa: {}".format(condizione_dolce_attesa))
         
         ############################################################################################################################# novita' !
         
@@ -462,14 +462,14 @@ class ro_cano_che_ritorna:
 
                 elif (
                     ma4_last > ma30_last
-                    and ma4_last > ma4_2_min_ago
-                    and ma3_last > ma78_last
-                  
                     
                     and deviation_buy3 > 0.05
+                    and delta_buy3_incrocio_ma3_ma8 > 0.08
+                    
+                    
                     and ma3_last > ma8_last
-                    and delta_buy3_incrocio_ma3_ma8 > 0.09
-                     
+                    and ma3_last > ma78_last
+                    and ma4_last > ma4_2_min_ago 
                   
                     # questa 3-8 puoi dare un delta 0.10 (in futuro) - il futuro e' adesso
                     
@@ -532,13 +532,13 @@ class ro_cano_che_ritorna:
                 
                 
                 
-            # 3) ro cano VENDE DOPO 4 minuti con VENDI_SPAZIO_TEMPO se il ribasso ha una alta velocita'
+            # 3) ro cano VENDE DOPO 4 minuti con VENDI_SPAZIO_TEMPO se il ribasso ha una alta velocita' # ha venduto con +0.07 strano !
                 if (
-                    vendi_spazio_tempo < -0.65
+                    vendi_spazio_tempo<-0.65
                     and ma4_last < ma4_4_min_ago
                     
                     # QUESTA CONDIZIONE SPAZIO-TEMPO ERA UNA TUA IDEA !
-                    
+                    # vendi_spazio_tempo = ma2_last/ma2_4_min_ago
                 ):
 
                     sell = "con VENDI_SPAZIO_TEMPO riga 544"
@@ -944,20 +944,20 @@ class ro_cano_che_ritorna:
                
                 if (
                     ma50_last >= ma50_2_min_ago 
-                    and (ma3_prev > ma25_prev and ma3_last < ma25_last) 
-                    and deviation_sell > 0.18
+                    and (ma3_prev > ma33_prev and ma3_last < ma33_last) 
+                    and deviation_sell > 0.25 and deviation_sell < 0.59
                   
                 ):
                     sell = "SELL 26 (24-40 min) con ma50 > riga 951"
                     action = "sell"
 
-                    
+                    # se funziona e' meraviglioso
                
                     
                 elif (
                     ma50_last >= ma50_2_min_ago 
                     and (ma3_prev > ma23_prev and ma3_last < ma23_last)
-                    and deviation_sell > 0.25
+                    and deviation_sell > 0.60
                     
                     # deviation_sell = ma3_last/last_trade_price
                 ):
