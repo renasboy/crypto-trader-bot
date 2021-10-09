@@ -288,7 +288,7 @@ class ro_cano_che_ritorna:
                 if (
                     
                     ma8_prev < ma39_prev and ma8_last > ma39_last
-                    and ma39_last > ma39_3_min_ago
+                    
                     and ma2_last > ma2_2_min_ago
                     and ma4_last > ma8_last
                     
@@ -296,7 +296,7 @@ class ro_cano_che_ritorna:
                   
                 ):
 
-                    buy="BUY 1 con INCROCIO CLASSICO riga 275"
+                    buy="BUY 1 con INCROCIO CLASSICO riga 299"
                     action="buy"
                 
                 
