@@ -233,7 +233,7 @@ class maddog:
                         # deviation_buy1 = ma8_last / ma50_last
                     
                     ):
-                        buy = "BUY 1 - con DEVIATION buy1- riga 225" 
+                        buy = "BUY 1 - con DEVIATION buy1- riga 225 ma78<" 
                         action = "buy"
                     
                         # pronto a vendere subito se trend discendente !
@@ -245,7 +245,7 @@ class maddog:
                     
                     if (
                         
-                        deviation_buy1 > 0.19
+                        deviation_buy1 > 0.18
                         and ma50_last > ma50_10_min_ago
                         and ma78_last > ma78_2_min_ago
                         
@@ -256,7 +256,7 @@ class maddog:
                         # deviation_buy1 = ma8_last / ma50_last
                     
                     ):
-                        buy = "BUY 1 - con DEVIATION buy1- riga 248" 
+                        buy = "BUY 1 - con DEVIATION buy1- riga 248 - ma78>" 
                         action = "buy"
                         
                     
@@ -418,7 +418,7 @@ class maddog:
             # questa funziona 
             
             if (
-                deviation_ma39 < -0.24
+                deviation_ma39 < -0.23
                 
                 # deviation_ma39 = ma3_last / ma39_last
             ):
