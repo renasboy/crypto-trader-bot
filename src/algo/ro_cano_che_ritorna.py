@@ -1145,7 +1145,7 @@ class ro_cano_che_ritorna:
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds 
                 and ma8_last < ma39_last
-                and deviation_sell < -0.18
+                and deviation_sell < -0.28
               
             ):
 
