@@ -146,7 +146,7 @@ class ro_cano_che_ritorna:
         
         
         # formula DEVIATION_buy3 per la compra 3
-        deviation_buy3 = (ma7_last/ma78_last - 1) * 100 if ma78_last else 0
+        deviation_buy3 = (ma4_last/ma30_last - 1) * 100 if ma30_last else 0
         self.algo_helper.log("deviation_buy3: {}".format(deviation_buy3))
         
         
@@ -325,11 +325,11 @@ class ro_cano_che_ritorna:
                     
                     
                     
-                # vediamo se funziona (ma78 <)
+                # vediamo se funziona (ma78 <) FUNZIONA !
                 
                 elif (
                     
-                    deviation_buy1 > 0.11
+                    deviation_buy1 > 0.13
                     and ma78_last < ma78_2_min_ago
                     
                     
@@ -464,14 +464,14 @@ class ro_cano_che_ritorna:
                     
                     
                     deviation_buy3 > 0.03
-                    and delta_buy3_incrocio_ma3_ma8 > 0.07
+                    and delta_buy3_incrocio_ma3_ma8 > 0.06
                     
                     
                     and ma3_last > ma8_last
                     and ma3_last > ma78_last
                     and ma4_last > ma4_2_min_ago 
                   
-                    # questa 3-8 puoi dare un delta 0.10 (in futuro) - il futuro e' adesso
+                    
                     
                     # deviation_buy3 = ma4_last/ma30_last
                     
@@ -505,7 +505,7 @@ class ro_cano_che_ritorna:
             # 1) ro cano VENDE CON UN SALVAGENTE
           
             if (
-                deviation_ma39 < -0.34
+                deviation_ma39 < -0.30
                 
                 # deviation_ma39 = ma3_last / ma39_last
             ):
@@ -1032,57 +1032,71 @@ class ro_cano_che_ritorna:
                     action = "sell"
                     
                     
-                    
-             
-                    
-                    
+           
             ##############################################################################################################################     > 40 min
 
             
             
+            # ECCO IL MIO CAPOLAVORO ! TUTTE COSI' DOVREBBERO ESSERE 
+            # 0.01-0.29
+            # 0.30-0.59
+            # >0.60
             
             # VENDITA - da 40 minuti in poi = da 2400 secondi in poi
 
             elif seconds_since_last_trade > 2400:
 
-                
+                # FUNZIONA ! Tom Petty - Something Good Coming
                 
                 if (
                     ma50_last > ma50_2_min_ago 
-                    and (ma3_prev > ma23_prev and ma3_last < ma23_last)
+                    and (ma3_prev > ma50_prev and ma3_last < ma50_last)
                     # and deviation_sell > 0.15 questa va bene 
                     
-                    # ma proviamo le fasce di guadagno (!) FUNZIONA !
-                    and deviation_sell > 0.25 and deviation_sell < 0.59
+                    # ma proviamo le fasce di guadagno (!) FUNZIONA ! 
+                    and deviation_sell > 0.01 and deviation_sell < 0.29
                   
                 ):
-                    sell = "SELL 33 ( dopo 40 min ) con ma50 > riga 1059"
+                    sell = "SELL 33 ( dopo 40 min ) con ma50 > - 0.01-0.29 - riga 1060"
                     action = "sell"
+                    
+                    
                 
-                    
-                    
-                    
+                
                 elif (
                     ma50_last > ma50_2_min_ago 
-                    and (ma3_prev > ma33_prev and ma3_last < ma33_last) 
+                    and (ma3_prev > ma33_prev and ma3_last < ma33_last)
+                    and deviation_sell > 0.29 and deviation_sell < 0.59
+                  
+                ):
+                    sell = "SELL 33 ( dopo 40 min ) con ma50 > - 0.30-0.59 - riga 1072"
+                    action = "sell"
+                    
+                 
+                
+                elif (
+                    ma50_last > ma50_2_min_ago 
+                    and (ma3_prev > ma23_prev and ma3_last < ma23_last) 
                     and deviation_sell > 0.60
                  
                 ):
 
-                    sell = "SELL 34 ( dopo 40 min ) con ma50 > riga 1072"
+                    sell = "SELL 34 ( dopo 40 min ) con ma50 > - >0.60 - riga 1084"
                     action = "sell"
 
                     
-                    
-                    
              
+            
+            
+            
+            
                 elif (
                     ma50_last < ma50_2_min_ago 
                     and (ma3_prev > ma33_prev and ma3_last < ma33_last) 
                     and deviation_sell > 0.23
                    
                 ):
-                    sell = "SELL 35 ( dopo 40 min ) con ma50 < riga 1085"
+                    sell = "SELL 35 ( dopo 40 min ) con ma50 < riga 1099"
                     action = "sell"
 
                     
@@ -1103,7 +1117,7 @@ class ro_cano_che_ritorna:
                 and deviation_sell < -0.68
              
             ):
-                sell = "SALVAGENTE 1 riga 1106"
+                sell = "SALVAGENTE 1 riga 1120"
                 action = "sell"
 
                 
@@ -1115,7 +1129,7 @@ class ro_cano_che_ritorna:
                 and deviation_sell < -0.63
                
             ):
-                sell = "SALVAGENTE 2 riga 1118"
+                sell = "SALVAGENTE 2 riga 1132"
                 action = "sell"
 
            
@@ -1136,7 +1150,7 @@ class ro_cano_che_ritorna:
               
             ):
 
-                sell = "SELL TEMPO 1 riga 1139"
+                sell = "SELL TEMPO 1 riga 1153"
                 action = "sell"
                 
                 
@@ -1145,11 +1159,11 @@ class ro_cano_che_ritorna:
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds 
                 and ma8_last < ma39_last
-                and deviation_sell < -0.28
+                and deviation_sell < -0.25
               
             ):
 
-                sell = "SELL TEMPO 2 riga 1152"
+                sell = "SELL TEMPO 2 riga 1166"
                 action = "sell"
 
                 
