@@ -461,10 +461,10 @@ class ro_cano_che_ritorna:
                     
 
                 elif (
-                    ma4_last > ma30_last
                     
-                    and deviation_buy3 > 0.05
-                    and delta_buy3_incrocio_ma3_ma8 > 0.08
+                    
+                    deviation_buy3 > 0.03
+                    and delta_buy3_incrocio_ma3_ma8 > 0.07
                     
                     
                     and ma3_last > ma8_last
@@ -473,7 +473,7 @@ class ro_cano_che_ritorna:
                   
                     # questa 3-8 puoi dare un delta 0.10 (in futuro) - il futuro e' adesso
                     
-                    # deviation_buy3 = ma4_last/ma30
+                    # deviation_buy3 = ma4_last/ma30_last
                     
                     
               
@@ -1052,8 +1052,8 @@ class ro_cano_che_ritorna:
                     and (ma3_prev > ma23_prev and ma3_last < ma23_last)
                     # and deviation_sell > 0.15 questa va bene 
                     
-                    # ma proviamo le fasce di guadagno (!)
-                    and deviation_sell > 0.15 and deviation_sell < 0.59
+                    # ma proviamo le fasce di guadagno (!) FUNZIONA !
+                    and deviation_sell > 0.25 and deviation_sell < 0.59
                   
                 ):
                     sell = "SELL 33 ( dopo 40 min ) con ma50 > riga 1059"
