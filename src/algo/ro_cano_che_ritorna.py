@@ -1,6 +1,6 @@
                                                      
-                #compa, compa caro !                                          
-                ##
+                # compa, compa caro !                                          
+                # Tom Petty - Something Good Coming
 
 class ro_cano_che_ritorna:
     def __init__(self, helper):
