@@ -1,4 +1,4 @@
-#ave compa
+#ave compa - Tom Petty - Something Good Coming
 
 class maddog:
     def __init__(self, helper):
