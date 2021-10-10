@@ -216,15 +216,15 @@ class maddog:
 
                 # COMPRA sessione 1
                 # vediamo se funziona 
-                # il principio e' questo : se ma78 < la deviation e' un po' piu' alta
+                # il principio e' questo : se ma50 < la deviation e' un po' piu' alta
 
                 if self.session == 1:
 
                     if (
                         
                         deviation_buy1 > 0.25
-                        and ma50_last > ma50_10_min_ago
-                        and ma78_last < ma78_2_min_ago
+                        and ma50_last < ma50_10_min_ago
+                        
                         
                         and ma2_last > ma8_last
                         and ma4_last > ma40_last
@@ -233,7 +233,7 @@ class maddog:
                         # deviation_buy1 = ma8_last / ma50_last
                     
                     ):
-                        buy = "BUY 1 - con DEVIATION buy1- riga 225 ma78<" 
+                        buy = "BUY 1 - con DEVIATION buy1- riga 225 ma50<" 
                         action = "buy"
                     
                         # pronto a vendere subito se trend discendente !
@@ -245,9 +245,9 @@ class maddog:
                     
                     if (
                         
-                        deviation_buy1 > 0.18
+                        deviation_buy1 > 0.15
                         and ma50_last > ma50_10_min_ago
-                        and ma78_last > ma78_2_min_ago
+                        
                         
                         and ma2_last > ma8_last
                         and ma4_last > ma40_last
@@ -256,7 +256,7 @@ class maddog:
                         # deviation_buy1 = ma8_last / ma50_last
                     
                     ):
-                        buy = "BUY 1 - con DEVIATION buy1- riga 248 - ma78>" 
+                        buy = "BUY 1 - con DEVIATION buy1- riga 248 - ma50>" 
                         action = "buy"
                         
                     
@@ -418,12 +418,16 @@ class maddog:
             # questa funziona 
             
             if (
-                deviation_ma39 < -0.22
+                deviation_ma39 < -0.20
                 
                 # deviation_ma39 = ma3_last / ma39_last
             ):
-                sell = "SELL SALVAGENTE 2 riga 423"
+                sell = "SELL SALVAGENTE 2 riga 425"
                 action = "sell"
+            
+            
+            
+            
             
             
             
@@ -443,7 +447,7 @@ class maddog:
                 
             ):
 
-                sell = "SELL TEMPO con TREND IN RIBASSO riga 444"
+                sell = "SELL TEMPO con TREND IN RIBASSO riga 450"
                 action = "sell"
                 
                 
@@ -462,7 +466,7 @@ class maddog:
                 
             ):
 
-                sell = "SELL TEMPO con TREND IN RIALZO riga 453"
+                sell = "SELL TEMPO con TREND IN RIALZO riga 469"
                 action = "sell"
             '''
         
