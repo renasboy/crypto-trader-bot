@@ -1034,8 +1034,8 @@ class ro_cano_che_ritorna:
                     
            
             ##############################################################################################################################     > 40 min
-
-            
+            ##############################################################################################################################
+            # ma proviamo le fasce di guadagno (!) FUNZIONA ! 
             
             # ECCO IL MIO CAPOLAVORO ! TUTTE COSI' DOVREBBERO ESSERE 
             # 0.01-0.29
@@ -1051,11 +1051,8 @@ class ro_cano_che_ritorna:
                 if (
                     ma50_last > ma50_2_min_ago 
                     and (ma3_prev > ma50_prev and ma3_last < ma50_last)
-                    # and deviation_sell > 0.15 questa va bene 
-                    
-                    # ma proviamo le fasce di guadagno (!) FUNZIONA ! 
                     and deviation_sell > 0.01 and deviation_sell < 0.29
-                  
+                   
                 ):
                     sell = "SELL 33 ( dopo 40 min ) con ma50 > - 0.01-0.29 - riga 1060"
                     action = "sell"
@@ -1073,6 +1070,7 @@ class ro_cano_che_ritorna:
                     action = "sell"
                     
                  
+                
                 
                 elif (
                     ma50_last > ma50_2_min_ago 
