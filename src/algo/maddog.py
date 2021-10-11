@@ -222,7 +222,7 @@ class maddog:
 
                     if (
                         
-                        deviation_buy1 > 0.25
+                        deviation_buy1 > 0.26
                         and ma50_last < ma50_10_min_ago
                         
                         
