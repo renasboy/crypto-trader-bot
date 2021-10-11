@@ -574,7 +574,7 @@ class ro_cano_che_ritorna:
             # VENDITA - da 0 a 3 minuti = da 0 a 180 secondi
             if seconds_since_last_trade > 0 and seconds_since_last_trade <= 180:
                 
-                con ma50 >
+                # con ma50 >
                 
                 if (
                     ma50_last > ma50_2_min_ago 
