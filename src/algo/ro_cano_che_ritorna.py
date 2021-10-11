@@ -687,7 +687,7 @@ class ro_cano_che_ritorna:
             
             # VENDITA - da 3 a 5 minuti = da 180 a 300 secondi
 
-            if seconds_since_last_trade > 180 and seconds_since_last_trade <= 300:
+            elif seconds_since_last_trade > 180 and seconds_since_last_trade <= 300:
 
                 if (
                     ma50_last > ma50_2_min_ago 
@@ -751,7 +751,7 @@ class ro_cano_che_ritorna:
 
                     sell = "SELL 13 (3-5 min) con ma50 < riga 752"
                     action = "sell"
-
+                    # anche questa e' entrata in azione dopo 1 ora ! strano ! e, inoltre, con guadagno di 0.18%
                     
                     
                 elif (
@@ -774,11 +774,11 @@ class ro_cano_che_ritorna:
 
             
             elif seconds_since_last_trade > 300 and seconds_since_last_trade <= 720:
-
+            # r785 entrata in azione dopo 1 ora ! strano
                 
                 if (
                     ma50_last > ma50_2_min_ago 
-                    and (ma3_prev > ma25_prev and ma3_last < ma25_last) 
+                    and (ma3_prev > ma40_prev and ma3_last < ma40_last) 
                     and deviation_sell > 0.28 or deviation_sell < -0.28
                    
                 ):
@@ -1076,12 +1076,12 @@ class ro_cano_che_ritorna:
                 
                 elif (
                     ma50_last > ma50_2_min_ago 
-                    and (ma3_prev > ma23_prev and ma3_last < ma23_last) 
+                    and (ma3_prev > ma40_prev and ma3_last < ma40_last) 
                     and deviation_sell > 0.60
                  
                 ):
 
-                    sell = "SELL 34 ( dopo 40 min ) con ma50 > - >0.60 - riga 1084"
+                    sell = "SELL 34 ( dopo 40 min ) con ma50> ( >0.60 ) - riga 1084"
                     action = "sell"
 
                     
