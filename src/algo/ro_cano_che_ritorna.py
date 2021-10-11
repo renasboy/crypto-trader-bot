@@ -329,7 +329,10 @@ class ro_cano_che_ritorna:
                 
                 elif (
                     
-                    deviation_buy1 > 0.13
+                    deviation_buy1 > -0.13
+                    #deviation_buy1 > 0.13 questa era quella di prima
+                    #deviation_buy1 = ma11_last/ma39_last
+                  
                     and ma78_last < ma78_2_min_ago
                     
                     
@@ -1121,7 +1124,7 @@ class ro_cano_che_ritorna:
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds 
                 and ma8_last < ma39_last
-                and deviation_sell < -0.25
+                and deviation_sell < -0.15
               
             ):
 
