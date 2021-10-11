@@ -418,13 +418,22 @@ class maddog:
             # questa funziona 
             
             if (
-                deviation_ma39 < -0.18
+                deviation_ma39 < -0.33
+                and ma50_last > ma50_2_min_ago
                 
                 # deviation_ma39 = ma3_last / ma39_last
             ):
-                sell = "SELL SALVAGENTE 2 riga 425"
+                sell = "SELL SALVAGENTE 2 con ma50> riga 425"
                 action = "sell"
-            
+                
+            elif (
+                deviation_ma39 < -0.20
+                and ma50_last < ma50_2_min_ago
+                
+                # deviation_ma39 = ma3_last / ma39_last
+            ):
+                sell = "SELL SALVAGENTE 3 con ma50< riga 435"
+                action = "sell"
             
             
             
