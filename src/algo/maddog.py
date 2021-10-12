@@ -1,5 +1,5 @@
-#ave compa - Tom Petty - Something Good Coming
-
+# ti voglio bene, compa.
+# ave compa - Tom Petty - Something Good Coming
 class maddog:
     def __init__(self, helper):
         self.algo_helper = helper
