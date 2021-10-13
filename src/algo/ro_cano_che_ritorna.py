@@ -404,9 +404,9 @@ class ro_cano_che_ritorna:
               
                 if (
                     deviation_buy_ma3_sopra_ma13 > 0.09
-                    and deviation_buy2 > 0.09
-                    and deviation_ma7_sopra_ma40 > 0.09
-                  
+                    and deviation_ma7_sopra_ma40 > 0.08
+                    
+                    and deviation_buy2 > 0.08
                     and ma2_last > ma2_2_min_ago
                     and price > price_2_min_ago
                     and ma3_last > ma40_last
@@ -416,7 +416,7 @@ class ro_cano_che_ritorna:
                     action = "buy"   
                         
                     # deviation_buy_ma3_sopra_ma13 > 0.10 e' fondamentale !
-                    
+                    # deviation_buy2 = ma8_last/ma50_last 
                 ####################################################### MIRACOLO QUESTA HA FUNZIONATO !
                 
                 
@@ -506,8 +506,8 @@ class ro_cano_che_ritorna:
             # 1) ro cano VENDE CON UN SALVAGENTE
           
             if (
-                deviation_ma39 < -0.30
-                
+                deviation_ma39 < -0.19
+                # come maddog che e' andato bene nella stessa circostanza
                 # deviation_ma39 = ma3_last / ma39_last
             ):
                 sell = "SELL SALVAGENTE FUNZIONANTE riga 513"
@@ -869,27 +869,27 @@ class ro_cano_che_ritorna:
                     
                 # ------------------------------------------------------------------------------------------------------------- trend <
                 
+                
+                    
                 elif (
                     ma50_last < ma50_2_min_ago 
                     and (ma3_prev > ma39_prev and ma3_last < ma39_last) 
-                    and deviation_sell < -0.20
-                    #quando il trend e' discendente la ma78 sta molto sopra - la 39 mi salva 
-                ):
-                    sell = "SELL 24 (12-24 min) con ma50 < riga 878"
-                    action = "sell"
-                    
-                    
-                    
-                    
-                elif (
-                    ma50_last < ma50_2_min_ago 
-                    and (ma3_prev > ma18_prev and ma3_last < ma18_last) 
-                    and deviation_sell > 0.01
+                    and deviation_sell <-0.20
                   
                 ):
-                    sell = "SELL 23 (12-24 min) con ma50 < riga 890"
+                    sell = "SELL 23 (12-24 min) con ma50 < riga 880"
                     action = "sell"
                     
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             
