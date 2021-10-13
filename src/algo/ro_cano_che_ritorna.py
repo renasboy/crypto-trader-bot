@@ -100,14 +100,15 @@ class ro_cano_che_ritorna:
         price_20_min_ago = self.algo_helper.price_minutes_ago(20)
         
         
-      
+        ###################################################################################################################################################### TEMPO
+        ######################################################################################################################################################
                                                                                                                 
         
-        # importante : dolce attesa vedi riga 476
+        # importante : dolce attesa vedi riga 522
         
         # VENDE DOPO x SECONDI - ro cano torna a casa - (ma c'e' anche un "e se")
-        max_hold_time_in_seconds = 600
-        #  10 minuti * 60 = 600
+        max_hold_time_in_seconds = 480
+        #  8 minuti * 60 = 480
         
        
 
@@ -190,8 +191,6 @@ class ro_cano_che_ritorna:
         compra_spazio_tempo = (ma3_last/ma3_3_min_ago - 1) *100 if ma3_3_min_ago else 0
         self.algo_helper.log( "compra_spazio_tempo: {}".format(compra_spazio_tempo))  
         # vedi riga 298
-        
-        
         
         
         
@@ -367,8 +366,6 @@ class ro_cano_che_ritorna:
                     
                    
                 
-                
-                
                 ##############################################################################################################################
                 # IMPORTANTISSIMO ! SOLO PER IL BUY 1 - PER COMPRARE DURANTE IL CROLLO - compa prega per me - ( cruise - david gilmour )
                 ##############################################################################################################################
@@ -501,7 +498,7 @@ class ro_cano_che_ritorna:
           
           
             
-            #####################################################################################################################
+        #####################################################################################################################
             
             # VENDITA CON QUESTE 3 ECCEZIONI !
             
@@ -524,7 +521,9 @@ class ro_cano_che_ritorna:
                 seconds_since_last_trade > max_hold_time_in_seconds 
                 and ma2_last < last_trade_price 
                 and deviation < -0.37
-               
+                and ma78_last < ma78_2_min_ago
+                # il fattore tempo - la dolce attesa - solo con trend ribassista
+                
                 # condizione_dolce_attesa = ma2_last < last_trade_price
                 # deviation = ma2_last / last_trade_price
                 
@@ -548,16 +547,11 @@ class ro_cano_che_ritorna:
                     sell = "con VENDI_SPAZIO_TEMPO riga 544"
                     action = "sell"
                 
-                
-                
-                
-                
+           
 
-          ###########################################################################################################################################
+          ###################################################################################################################################
           
-          
-          
-           ###################################################################################################################################
+          ###################################################################################################################################
 
             # VENDITA 1 - con fasce di tempo ! c'e' vita su marte !
 
@@ -673,9 +667,7 @@ class ro_cano_che_ritorna:
                     action = "sell"
                     
                     
-                    
-                    
-                    
+                  
                     
                 # ------------------------------------------------------------ VENDITA ECCEZIONALE DURANTE IL CROLLO questa non si sa se funziona
                 #################################################################################################################################
@@ -771,9 +763,6 @@ class ro_cano_che_ritorna:
                     
                
 
-               
-                
-                
             ################################################################################################################################### 5-12 min
 
             
@@ -833,9 +822,7 @@ class ro_cano_che_ritorna:
                     sell = "SELL 35 ( dopo 40 min ) con ma50 < riga 829"
                     action = "sell"
    
-                
-
-           
+         
                 # ---------------------------------------------------------------------------------------------------------------------- crollo
                 #########################################################################################################################
                 
@@ -886,39 +873,38 @@ class ro_cano_che_ritorna:
 
                     
                     
-                # ------------------------------------------------------------------------------------------------------------- crollo
-                ##############################################################################################################à
+                # ------------------------------------------------------------------------------------------------------------- trend >
+                
                 
                 
                 elif (
                     ma50_last < ma50_2_min_ago 
+                    and (ma3_prev > ma39_prev and ma3_last < ma39_last) 
+                    and deviation_sell > -0.30 and deviation_sell < 0.01
+                    #quando il trend e' discendente la ma78 sta molto sopra - la 39 mi salva 
+                ):
+                    sell = "SELL 24 (12-24 min) con ma50 < riga 910"
+                    action = "sell"
+                    
+                    
+                    
+                    
+                elif (
+                    ma50_last < ma50_2_min_ago 
                     and (ma3_prev > ma18_prev and ma3_last < ma18_last) 
-                    and deviation_sell > 0.23
+                    and deviation_sell > 0.01
                   
                 ):
                     sell = "SELL 23 (12-24 min) con ma50 < riga 895"
                     action = "sell"
-
                     
-                    
-                # ---------------------------------------------------------------------------------------------------------------
-                  ###############################################################################################################
-                
-                
-                elif (
-                    ma50_last < ma50_2_min_ago 
-                    and (ma3_prev > ma78_prev and ma3_last < ma78_last) 
-                    and deviation_sell < -0.30
-                  
-                ):
-                    sell = "SELL 24 (12-24 min) con ma50 < riga 910"
-                    action = "sell"
-
-                    
-                    
-                    
-             
-                    
+            
+            
+            
+            
+            
+            
+            
             ################################################################################################################################## 24-40 min
 
             # VENDITA - da 24 a 40 minuti = da 1080 a 1800 secondi
@@ -1041,16 +1027,16 @@ class ro_cano_che_ritorna:
                 
                 elif (
                     ma50_last > ma50_2_min_ago 
-                    and (ma3_prev > ma33_prev and ma3_last < ma33_last) 
+                    and (ma3_prev > ma39_prev and ma3_last < ma39_last) 
                     and deviation_sell > 0.60
                  
                 ):
 
-                    sell = "SELL 34 ( dopo 40 min ) con ma50 > ( >0.60 con ma3-ma33 ) - riga 1049"
+                    sell = "SELL 34 ( dopo 40 min ) con ma50 > ( >0.60 con ma3-ma39 ) - riga 1049"
                     action = "sell"
-
                     
-             
+                    # ma3-39 mi evita la ricompra e la rivendita con perdita !
+                   
             
             
             
