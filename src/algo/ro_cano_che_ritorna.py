@@ -391,7 +391,7 @@ class ro_cano_che_ritorna:
                 # BUY  SECONDO MODO - DURANTE IL CROLLO
                 elif (    
                     ma2_last > ma2_2_min_ago
-                    and (deviation_buy_crollo_1 < -2.40
+                    and deviation_buy_crollo_1 < -2.40
                     and deviation_buy_crollo_2 > 0.39
                          
                 ):
