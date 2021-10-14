@@ -362,7 +362,10 @@ class maddog:
             
             # VENDE
             
-
+            
+            
+            
+            '''
             # VENDE con ma78_last >= ma78_20_min_ago
             if self.session == 1:
 
@@ -401,7 +404,14 @@ class maddog:
 
                     sell = "SELL con ma78 < riga 402"
                     action = "sell"
-                
+             
+             
+            '''
+            
+            
+            
+            
+            
             #########################################################################################################################################################
             ########################################################################################################################################################
             
@@ -422,7 +432,7 @@ class maddog:
                 
                 # deviation_ma39 = ma3_last / ma39_last
             ):
-                sell = "SELL SALVAGENTE 2 con ma50 > riga 425"
+                sell = "SELL SALVAGENTE 1 con ma50 > riga 425"
                 action = "sell"
             
             
@@ -433,7 +443,7 @@ class maddog:
                 
                 # deviation_ma39 = ma3_last / ma39_last
             ):
-                sell = "SELL SALVAGENTE 3 con ma50 < riga 436"
+                sell = "SELL SALVAGENTE 2 con ma50 < riga 436"
                 action = "sell"
             
             
