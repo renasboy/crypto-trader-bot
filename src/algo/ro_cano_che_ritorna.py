@@ -387,7 +387,7 @@ class ro_cano_che_ritorna:
                 
                 
                 
-                '''
+                
                 # BUY  SECONDO MODO - DURANTE IL CROLLO
                 elif (    
                     ma2_last > ma2_2_min_ago
@@ -397,7 +397,7 @@ class ro_cano_che_ritorna:
                 ):
                     buy = "BUY DURANTE IL CROLLO - modo 2 riga 398"
                     action = "buy"
-                '''
+                
             
             
             
