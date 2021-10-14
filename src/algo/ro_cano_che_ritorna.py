@@ -981,7 +981,7 @@ class ro_cano_che_ritorna:
                 
                 elif (
                     ma50_last < ma50_2_min_ago 
-                    and (ma3_prev > ma78_prev and ma3_last < ma78_last) 
+                    and (ma3_prev > ma33_prev and ma3_last < ma33_last) 
                     and deviation_sell < -0.16
                   
                 ):
@@ -1030,21 +1030,24 @@ class ro_cano_che_ritorna:
                 if (
                     ma50_last > ma50_2_min_ago 
                     and (ma3_prev > ma78_prev and ma3_last < ma78_last)
-                    and deviation_sell > -0.16 and deviation_sell < 0.29
+                    and deviation_sell < -0.20
                    
                 ):
-                    sell = "SELL 33 ( dopo 40 min ) con ma50 > ( 0.01-0.29 con ma3-ma78 ) - riga 1007"
+                    sell = "SELL 33 ( dopo 40 min ) con ma50 > ( -0.20 con ma3-ma78 ) - riga 1007"
                     action = "sell"
+                
                 
                 
                 elif (
                     ma50_last > ma50_2_min_ago 
-                    and (ma3_prev > ma40_prev and ma3_last < ma40_last)
+                    and (ma3_prev > ma39_prev and ma3_last < ma39_last)
                     and deviation_sell > 0.29 and deviation_sell < 0.59
                   
                 ):
-                    sell = "SELL 33 ( dopo 40 min ) con ma50 > - ( 0.30-0.59 con ma3-ma40 ) - riga 1017"
+                    sell = "SELL 33 ( dopo 40 min ) con ma50 > - ( 0.29 -0.59 con ma3-ma39 ) - riga 1017"
                     action = "sell"
+                
+                
                 
                 elif (
                     ma50_last > ma50_2_min_ago 
@@ -1061,19 +1064,25 @@ class ro_cano_che_ritorna:
             
             
             
-                # con ma50 <
+                ######################################################################################## con trend discendente
+              
+                
                 elif (
                     ma50_last < ma50_2_min_ago 
                     and (ma3_prev > ma33_prev and ma3_last < ma33_last) 
-                    and deviation_sell > -0.16
+                    and deviation_sell < -0.16
                    
                 ):
                     sell = "SELL 35 ( dopo 40 min ) con ma50 < riga 1042"
                     action = "sell"
 
                     
-                  
+            
+                # qui non ho messo il crollon perche' dopo 40 min o gia' ha venduto o e' gia' risalita
+            
             ##################################################################################################################################
+            
+            
 
             
            # VEDI 399 LE HO GIA' MESSE LI LE VENDITE ECCEZIONALI
