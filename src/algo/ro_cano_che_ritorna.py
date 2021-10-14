@@ -139,7 +139,7 @@ class ro_cano_che_ritorna:
         
         ################################################################ deviation per comprare
         
-        ---------------------------------------------------------------------------------------
+        
         
         # formula DEVIATION_buy1 per la compra 1
         deviation_buy1 = (ma11_last/ma39_last - 1) * 100 if ma39_last else 0
