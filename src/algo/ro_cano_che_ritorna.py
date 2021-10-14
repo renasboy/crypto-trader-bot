@@ -269,8 +269,8 @@ class ro_cano_che_ritorna:
         # APRE E CHIUDE GABBIA
 
         
-        if deviation_gabbia > -0.60:
-            elif deviation_buy_crollo_1 < -1.90:    
+        if deviation_gabbia > -0.60 or deviation_buy_crollo_1 < -1.90:
+            
             
             
             
