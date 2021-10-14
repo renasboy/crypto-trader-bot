@@ -428,7 +428,7 @@ class maddog:
             
             
             elif (
-                deviation_ma39 < -0.19
+                deviation_ma39 < -0.18
                 and ma50_last < ma50_2_min_ago
                 
                 # deviation_ma39 = ma3_last / ma39_last
