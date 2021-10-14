@@ -936,33 +936,34 @@ class ro_cano_che_ritorna:
 
             elif seconds_since_last_trade > 1440 and seconds_since_last_trade <= 2400:
 
+            
+                ################################################################################# tutto ha origine da qui
                 
-               
+                
                 if (
                     ma50_last >= ma50_2_min_ago 
-                    and (ma3_prev > ma78_prev and ma3_last < ma78_last) 
-                    and deviation_sell > -0.16 and deviation_sell < 0.28
-                  
-                ):
-                    sell = "SELL 26 (24-40 min) con ma50 > riga 914"
-                    action = "sell"
-
-                    # se funziona e' meraviglioso
-               
-                    
-                elif (
-                    ma50_last >= ma50_2_min_ago 
-                    and (ma3_prev > ma33_prev and ma3_last < ma33_last)
-                    and deviation_sell > -0.29 and deviation_sell < 0.60
+                    and (ma3_prev > ma78_prev and ma3_last < ma78_last)
+                    and deviation_sell < -0.20 
                     
                     # deviation_sell = ma3_last/last_trade_price
                 ):
                     sell = "SELL 27 (24-40 min) con ma50 > riga 927"
                     action = "sell"
-
+                
+                
+                
+                elif (
+                    ma50_last >= ma50_2_min_ago 
+                    and (ma3_prev > ma39_prev and ma3_last < ma39_last)
+                    and deviation_sell > 0.29 and deviation_sell < 0.60
                     
-                    
-                    
+                    # deviation_sell = ma3_last/last_trade_price
+                ):
+                    sell = "SELL 27 (24-40 min) con ma50 > riga 927"
+                    action = "sell"
+                
+                
+                
                 elif (
                     ma50_last >= ma50_2_min_ago 
                     and (ma3_prev > ma23_prev and ma3_last < ma23_last) 
@@ -972,22 +973,24 @@ class ro_cano_che_ritorna:
                     sell = "SELL 28 (24-40 min) con ma50 > riga 940"
                     action = "sell"
 
-                    
-                    
-                    
+                
+                
+                
+                
+                ##################################################################### con trend discendente
+                
                 elif (
-                    ma50_last > ma50_2_min_ago 
+                    ma50_last < ma50_2_min_ago 
                     and (ma3_prev > ma78_prev and ma3_last < ma78_last) 
-                    and deviation_sell < -0.30
-                 
+                    and deviation_sell < -0.16
+                  
                 ):
-                    sell = "SELL 29  (24-40 min) con ma50 < riga 951"
+                    sell = "SELL 31  (24-40 min) con ma50 < riga 981"
                     action = "sell"
-
-                    
-                    
+                
+                
                 # ----------------------------------------------------------------------------------------------------------------------crollo
-                #########################################################################################################################
+                
                 
                 
                 elif (
@@ -1005,14 +1008,7 @@ class ro_cano_che_ritorna:
                 #############################################################################################################################
                 
                 
-                elif (
-                    ma50_last < ma50_2_min_ago 
-                    and (ma3_prev > ma78_prev and ma3_last < ma78_last) 
-                    and deviation_sell > -0.16
-                  
-                ):
-                    sell = "SELL 31  (24-40 min) con ma50 < riga 981"
-                    action = "sell"
+                
 
                     
             
