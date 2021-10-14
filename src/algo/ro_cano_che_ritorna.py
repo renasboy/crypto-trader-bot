@@ -119,6 +119,21 @@ class ro_cano_che_ritorna:
         
         #                                                         T U T T E    L E   D E V I A T I O N  !
         
+        
+        
+        
+        
+        # formula DEVIATION_gabbia
+        deviation_gabbia = (ma8_last/ma39_last - 1) *100 if ma39_last else 0
+        self.algo_helper.log("deviation_gabbia: {}".format(deviation_gabbia))
+        
+        # gabbia maddog buona if ma8_last > ma38_last and deviation_buy1 > -0.50:
+        
+        
+        
+        
+        
+        
         # deviation per comprare
         
         
@@ -130,12 +145,11 @@ class ro_cano_che_ritorna:
         
         
         
-        # formula DEVIATION_gabbia
-        deviation_gabbia = (ma8_last/ma78_last - 1) *100 if ma78_last else 0
-        self.algo_helper.log("deviation_gabbia: {}".format(deviation_gabbia))
         
         
-       
+        
+        
+        
         # formula DEVIATION_buy1 per la compra 1
         deviation_buy1 = (ma11_last/ma39_last - 1) * 100 if ma39_last else 0
         self.algo_helper.log("deviation_buy1: {}".format(deviation_buy1))
@@ -166,10 +180,23 @@ class ro_cano_che_ritorna:
         deviation_buy=(ma2_last/last_trade_price - 1) *100 if last_trade_price else 0
         self.algo_helper.log("deviation_buy: {}".format(deviation_buy))   
        
-      
-        # formula DEVIATION_buy_crollo per comprare a una certa distanza da ma13
+        
+        ############################################################################################################################
+        
+        # formula DEVIATION_buy_crollo_1 per comprare a una certa distanza da ma78
+        deviation_buy_crollo_1 = (ma8_last/ma78_last - 1) *100 if ma78_last else 0
+        self.algo_helper.log("deviation_buy_crollo_1: {}".format(deviation_buy_crollo_1))
+        
+        
+        # formula DEVIATION_buy_crollo_2 per comprare a una certa distanza da ma13
         deviation_buy_crollo = (ma3_last/ma13_last - 1) *100 if ma13_last else 0
-        self.algo_helper.log("deviation_buy_crollo: {}".format(deviation_buy_crollo))
+        self.algo_helper.log("deviation_buy_crollo_2: {}".format(deviation_buy_crollo_2))
+        
+        ############################################################################################################################
+        
+        
+        
+        
         
         # formula DEVIATION_buy_ma3_sopra_ma13 per comprare a una certa distanza da ma13
         deviation_buy_ma3_sopra_ma13 = (ma3_last/ma13_last - 1) *100 if ma13_last else 0
@@ -242,12 +269,18 @@ class ro_cano_che_ritorna:
         # APRE E CHIUDE GABBIA
 
         
-        if deviation_gabbia > -0.60 or deviation_buy1 < -1.90:
-
-            # ti ricordo che 
-            # deviation_gabbia = ma8_last / ma78_last
-            # e che 
-            # deviation_buy1 = ma8_last / ma78_last
+        if deviation_gabbia > -0.60:
+        elif deviation_buy_crollo_1 < -1.90:    
+            
+            
+            
+            
+        
+            
+            # deviation_gabbia = ma8_last / ma39_last
+            # deviation_buy_crollo_1 = ma8_last / ma78_last
+            
+            
             
             
             # NON TOCCARE QUESTA CONDIZIONE ! SERVE PER APERTURA DI GABBIA !
@@ -375,7 +408,7 @@ class ro_cano_che_ritorna:
                 # BUY  PRIMO MODO DURANTE IL CROLLO
                 elif (    
                     ma2_last > ma2_2_min_ago
-                    and (deviation_buy1 < -2.30 and (ma8_prev < ma25_prev and ma8_last > ma25_last))
+                    and (deviation_buy_crollo_1 < -2.30 and (ma8_prev < ma25_prev and ma8_last > ma25_last))
                   
                 ):
                     buy = "BUY DURANTE IL CROLLO - modo 1 riga 381"
@@ -388,9 +421,9 @@ class ro_cano_che_ritorna:
                 # BUY  SECONDO MODO - DURANTE IL CROLLO
                 elif (    
                     ma2_last > ma2_2_min_ago
-                    and (deviation_buy1 < -2.40 and deviation_buy_crollo > 0.39)
+                    and (deviation_buy_crollo_1 < -2.40 and deviation_buy_crollo_2 > 0.39)
                 ):
-                    buy = "BUY DURANTE IL CROLLO - modo 2 riga 393"
+                    buy = "BUY DURANTE IL CROLLO - modo 2 riga 426"
                     action = "buy"
             
             
