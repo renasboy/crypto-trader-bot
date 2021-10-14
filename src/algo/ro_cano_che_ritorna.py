@@ -189,7 +189,7 @@ class ro_cano_che_ritorna:
         
         
         # formula DEVIATION_buy_crollo_2 per comprare a una certa distanza da ma13
-        deviation_buy_crollo = (ma3_last/ma13_last - 1) *100 if ma13_last else 0
+        deviation_buy_crollo_2 = (ma3_last/ma13_last - 1) *100 if ma13_last else 0
         self.algo_helper.log("deviation_buy_crollo_2: {}".format(deviation_buy_crollo_2))
         
         ############################################################################################################################
