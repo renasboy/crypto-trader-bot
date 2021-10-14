@@ -649,7 +649,7 @@ class ro_cano_che_ritorna:
                     
                     
                     
-              elif (
+                elif (
                     ma50_last >= ma50_2_min_ago 
                     and (ma3_prev > ma18_prev and ma3_last < ma18_last) 
                     and deviation_sell > 0.80
@@ -658,9 +658,8 @@ class ro_cano_che_ritorna:
 
                     sell = "SELL 3 (0-3 min) con ma50 > riga 610"
                     action = "sell"
-                
-                
                     
+                 
                     
                 ###########################################################################     trend in ribasso
              
