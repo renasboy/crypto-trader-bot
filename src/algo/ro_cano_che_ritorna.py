@@ -1163,5 +1163,5 @@ class ro_cano_che_ritorna:
         ##
         
         # ave comparo meo !
-        
+        # attenzione vende dopo 6 min con le condizioni della fascia > 40 min ! vediamo...
         
