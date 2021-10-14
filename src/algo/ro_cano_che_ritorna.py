@@ -724,72 +724,72 @@ class ro_cano_che_ritorna:
             
 
             elif seconds_since_last_trade > 180 and seconds_since_last_trade <= 300:
-
+              
+              
+              
                 if (
-                    ma50_last > ma50_2_min_ago 
-                    and (ma3_prev > ma25_prev and ma3_last < ma25_last) 
-                    and deviation_sell > 0.18
+                    ma50_last >= ma50_2_min_ago 
+                    and (ma3_prev > ma39_prev and ma3_last < ma39_last)
+                    and deviation_sell < -0.20 
+                    
+                    # deviation_sell = ma3_last/last_trade_price
+                ):
+                    sell = "SELL 27 (24-40 min) con ma50 > riga 927"
+                    action = "sell"
+                    
+                
+                elif (
+                    ma50_last >= ma50_2_min_ago 
+                    and (ma3_prev > ma33_prev and ma3_last < ma33_last)
+                    and deviation_sell > 0.25 and deviation_sell < 0.60
+                    
+                    # deviation_sell = ma3_last/last_trade_price
+                ):
+                    sell = "SELL 27 (24-40 min) con ma50 > riga 927"
+                    action = "sell"
+                    
+                    
+              
+                
+                elif (
+                    ma50_last >= ma50_2_min_ago 
+                    and (ma3_prev > ma33_prev and ma3_last < ma33_last) 
+                    and deviation_sell > 0.61
+                 
+                ):
+                    sell = "SELL 28 (24-40 min) con ma50 > riga 940"
+                    action = "sell"
+                    
+                    
+                    
+                ###########################################################################     trend in ribasso
+             
+            
+                elif (
+                    ma50_last < ma50_2_min_ago 
+                    and (ma3_prev > ma33_prev and ma3_last < ma33_last) 
+                    and deviation_sell < -0.20
                    
                 ):
-                  
-                    sell = "SELL 9 (3-5 min) con ma50 > riga 702"
+                    sell = "SELL 35 ( dopo 40 min ) con ma50 < riga 816"
                     action = "sell"
+   
+         
+                # ---------------------------------------------------------------------------------------------------------------------- crollo
                 
-                
-                
-                elif (
-                    ma50_last > ma50_2_min_ago 
-                    and (ma3_prev > ma16_prev and ma3_last < ma16_last) 
-                    and deviation_sell > 0.66
-                 
-                ):
-
-                    sell = "SELL 10 (3-5 min) con ma50 > riga 714"
-                    action = "sell"
-                
-                
-                
-                
-                elif (
-                    ma50_last > ma50_2_min_ago 
-                    and (ma3_prev > ma18_prev and ma3_last < ma18_last) 
-                    and deviation_sell > 0.80
-                  
-                ):
-
-                    sell = "SELL 11 (3-5 min) con ma50 > riga 727"
-                    action = "sell"
-
-                    
-                # -------------------------------------------------------------------------------------------------------------------------crollo
-                ############################################################################################################################
                 
                 elif (
                     ma50_last < ma50_2_min_ago 
-                    and (ma3_prev > ma18_prev and ma3_last < ma18_last) 
+                    and (ma3_prev > ma23_prev and ma3_last < ma23_last) 
                     and deviation_sell > 0.23
-                 
+                   
                 ):
-
-                    sell = "SELL 12 (3-5 min) con ma50 < riga 741"
+                    sell = "SELL 18 (5-12 min) con ma50 < riga 829"
                     action = "sell"
 
-                # --------------------------------------------------------------------------------------------------------------------------------
-                ###############################################################################################################################
+             
                 
-                
-                elif (
-                    ma50_last < ma50_2_min_ago 
-                    and (ma3_prev > ma78_prev and ma3_last < ma78_last) 
-                    and deviation_sell < -0.15
-                  
-                ):
 
-                    sell = "SELL 13 (3-5 min) con ma50 < riga 753"
-                    action = "sell"
-                    # anche questa e' entrata in azione dopo 1 ora ! strano ! e, inoltre, con guadagno di 0.18%
-                    
-          
             ################################################################################################################################### 5-12 min
 
             
