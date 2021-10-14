@@ -153,7 +153,7 @@ class ro_cano_che_ritorna:
         deviation_buy3 = (ma4_last/ma30_last - 1) * 100 if ma30_last else 0
         self.algo_helper.log("deviation_buy3: {}".format(deviation_buy3))
         
-        ------------------------------------------------------------------------------------------------------------
+        #------------------------------------------------------------------------------------------------------------
         
         #formula delta_buy3_incrocio_ma3_ma8 > 0.10 per la compra 3
         delta_buy3_incrocio_ma3_ma8 = (ma3_last/ma8_last - 1) * 100 if ma8_last else 0
