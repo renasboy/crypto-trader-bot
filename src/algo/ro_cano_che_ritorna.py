@@ -270,7 +270,7 @@ class ro_cano_che_ritorna:
 
         
         if deviation_gabbia > -0.60:
-        elif deviation_buy_crollo_1 < -1.90:    
+            elif deviation_buy_crollo_1 < -1.90:    
             
             
             
