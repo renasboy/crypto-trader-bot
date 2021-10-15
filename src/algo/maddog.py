@@ -427,7 +427,7 @@ class maddog:
             # questa funziona 
             
             if (
-                deviation_ma39 < -0.35
+                deviation_ma39 < -0.34
                 and ma50_last > ma50_2_min_ago
                 
                 # deviation_ma39 = ma3_last / ma39_last
