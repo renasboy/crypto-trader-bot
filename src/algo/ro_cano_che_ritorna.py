@@ -466,7 +466,7 @@ class ro_cano_che_ritorna:
 
                 elif (
                 
-                    deviation_buy3 > 0.03
+                    deviation_buy3 > 0.02
                     and delta_buy3_incrocio_ma3_ma8 > 0.06
                     
                     
@@ -480,7 +480,7 @@ class ro_cano_che_ritorna:
                     
                   
                     # deviation_buy3 = ma4_last/ma30_last
-                
+                    
         ############################################################################################################
                                                      #                                                                V E N D I T A !
         ############################################################################################################
@@ -504,7 +504,7 @@ class ro_cano_che_ritorna:
             # 1) ro cano VENDE CON UN SALVAGENTE
           
             if (
-                deviation_ma39 < -0.19
+                deviation_ma39 < -0.24
             
             ):
                 sell = "SELL SALVAGENTE 3-39  riga 510"
@@ -981,7 +981,7 @@ class ro_cano_che_ritorna:
                 if (
                     ma50_last > ma50_2_min_ago 
                     and (ma3_prev > ma78_prev and ma3_last < ma78_last)
-                    and deviation_sell < -0.20
+                    and deviation_sell < -0.25
                    
                 ):
                     sell = "SELL 29 ( dopo 40 min ) con ma50 > ( -0.20 con ma3-ma78 ) - riga 987"
