@@ -371,7 +371,7 @@ class ro_cano_che_ritorna:
                 # IMPORTANTISSIMO ! SOLO PER IL BUY 1 - PER COMPRARE DURANTE IL CROLLO - compa prega per me - ( cruise - david gilmour )
                 ##############################################################################################################################
                 
-                
+                # entriamo nell' area dell' ipervenduto, compa !
                 
                 # BUY  PRIMO MODO DURANTE IL CROLLO
                 
@@ -383,7 +383,8 @@ class ro_cano_che_ritorna:
                 ):
                     buy = "BUY DURANTE IL CROLLO - modo 1 riga 384"
                     action = "buy"
-                
+                    
+                    # deviation_buy_crollo_1 = ma8_last / ma78_last
                 
                 
                 
@@ -397,8 +398,9 @@ class ro_cano_che_ritorna:
                 ):
                     buy = "BUY DURANTE IL CROLLO - modo 2 riga 398"
                     action = "buy"
-                
-            
+                    
+                    # deviation_buy_crollo_1 = ma8_last / ma78_last
+                    # deviation_buy_crollo_2 = ma3_last / ma13_last
             
             
             ############################################################################################################
