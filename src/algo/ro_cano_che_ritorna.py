@@ -983,7 +983,7 @@ class ro_cano_che_ritorna:
                 if (
                     ma50_last > ma50_2_min_ago 
                     and (ma3_prev > ma78_prev and ma3_last < ma78_last)
-                    and deviation_sell < -0.25
+                    and deviation_sell < -0.23
                    
                 ):
                     sell = "SELL 29 ( dopo 40 min ) con ma50 > ( -0.20 con ma3-ma78 ) - riga 987"
