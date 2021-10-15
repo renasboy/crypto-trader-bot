@@ -997,7 +997,7 @@ class ro_cano_che_ritorna:
                     and deviation_sell > 0.29 and deviation_sell < 0.59
                   
                 ):
-                    sell = "SELL 30 ( dopo 40 min ) con ma50 > - ( 0.29 -0.59 con ma3-ma39 ) - riga 998"
+                    sell = "SELL 30 ( dopo 40 min ) con ma50 > - ( 0.29 - 0.59 con ma3-ma39 ) - riga 998"
                     action = "sell"
                 
                 
@@ -1005,15 +1005,27 @@ class ro_cano_che_ritorna:
                 elif (
                     ma50_last > ma50_2_min_ago 
                     and (ma3_prev > ma39_prev and ma3_last < ma39_last) 
-                    and deviation_sell > 0.60
+                    and deviation_sell > 0.60 and deviation_sell < 1.99
                  
                 ):
 
-                    sell = "SELL 31 ( dopo 40 min ) con ma50 > ( >0.60 con ma3-ma39 ) - riga 1010"
+                    sell = "SELL 31 ( dopo 40 min ) con ma50 > ( 0.60 - 1.99 con ma3-ma39 ) - riga 1010"
                     action = "sell"
                     
                     # ma3-39 mi evita la ricompra e la rivendita con perdita !
-                   
+                
+                
+                
+                elif (
+                    ma50_last > ma50_2_min_ago 
+                    and (ma3_prev > ma33_prev and ma3_last < ma33_last) 
+                    and deviation_sell > 2.00
+                 
+                ):
+
+                    sell = "SELL 32 ( dopo 40 min ) con ma50 > ( > 2.00 con ma3-ma33 ) - riga 1010"
+                    action = "sell"
+                    
             
             
             
@@ -1026,7 +1038,7 @@ class ro_cano_che_ritorna:
                     and deviation_sell < -0.16
                    
                 ):
-                    sell = "SELL 32 ( dopo 40 min ) con ma50 < riga 1027"
+                    sell = "SELL 33 ( dopo 40 min ) con ma50 < riga 1027"
                     action = "sell"
 
                     
