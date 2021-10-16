@@ -289,7 +289,7 @@ class ro_cano_che_ritorna:
                 
                 if (
                     ma13_last > ma78_last
-                    and (ma39_prev < ma78_prev and ma39_last > ma78_last)       
+                    and (ma13_prev < ma78_prev and ma13_last > ma78_last)       
                     
                     and ma2_last > ma2_2_min_ago
                     and ma4_last > ma8_last
@@ -328,11 +328,9 @@ class ro_cano_che_ritorna:
                 ####################################################################
                 
                 elif (
-                    
-                    deviation_buy1 > 0.13
-                    
-                    and ma78_last < ma78_2_min_ago
-                    
+                   
+                    ma78_last < ma78_2_min_ago
+                    and deviation_buy1 > 0.13
                     
                     and price > price_2_min_ago
                     and ma2_last > ma2_2_min_ago
@@ -345,6 +343,27 @@ class ro_cano_che_ritorna:
                     
                     
                     #deviation_buy1 = ma13_last/ma39_last
+                
+                
+                
+                
+                elif (
+                   
+                    ma78_last < ma78_2_min_ago
+                    and (ma39_prev < ma78_prev and ma39_last > ma78_last) 
+                    
+                    and price > price_2_min_ago
+                    and ma2_last > ma2_2_min_ago
+                    and ma4_last > ma4_2_min_ago
+                  
+                ):
+
+                    buy = "se ma78 < - BUY 1 con incrocio classico 39-78 - riga 343"
+                    action = "buy"
+                    
+                    
+                    #deviation_buy1 = ma13_last/ma39_last
+                    
                     
                 
                 ##############################################################################
