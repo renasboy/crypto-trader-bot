@@ -289,17 +289,17 @@ class ro_cano_che_ritorna:
                 
                 if (
                     ma13_last > ma78_last
-                    and (ma13_prev < ma78_prev and ma13_last > ma78_last)       
+                    and (ma39_prev < ma78_prev and ma39_last > ma78_last)       
                     
                     and ma2_last > ma2_2_min_ago
                     and ma4_last > ma8_last
                   
                 ):
 
-                    buy="BUY 1 con INCROCIO CLASSICO 8-48 riga 299"
+                    buy="BUY 1 con INCROCIO CLASSICO 39-78 riga 299"
                     action="buy"
                 
-                
+                    
                
                 #--------------------------------------------------------------    BUY 1 DURANTE IL RIALZO con LA DEVIATION BUY 1
                 
