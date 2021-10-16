@@ -1042,7 +1042,7 @@ class ro_cano_che_ritorna:
                  
                 ):
 
-                    sell = "SELL 32 ( dopo 40 min ) con ma50 > ( > 2.00 con ma3-ma33 ) - riga 1010"
+                    sell = "SELL 32 ( dopo 40 min ) con ma50 > ( > 2.00 con ma3-ma33 ) - riga 1045"
                     action = "sell"
                     
             
@@ -1057,7 +1057,7 @@ class ro_cano_che_ritorna:
                     and deviation_sell < -0.16
                    
                 ):
-                    sell = "SELL 33 ( dopo 40 min ) con ma50 < riga 1027"
+                    sell = "SELL 33 ( dopo 40 min ) con ma50 < riga 1060"
                     action = "sell"
 
                     
@@ -1083,7 +1083,7 @@ class ro_cano_che_ritorna:
                 and deviation_sell < -0.68
              
             ):
-                sell = "SALVAGENTE 1 riga 1053"
+                sell = "SALVAGENTE 1 riga 1086"
                 action = "sell"
 
                 
@@ -1095,7 +1095,7 @@ class ro_cano_che_ritorna:
                 and deviation_sell < -0.63
                
             ):
-                sell = "SALVAGENTE 2 riga 1065"
+                sell = "SALVAGENTE 2 riga 1098"
                 action = "sell"
 
            
@@ -1112,11 +1112,11 @@ class ro_cano_che_ritorna:
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds 
                 and (ma2_prev > ma78_prev and ma2_last < ma78_last) 
-                and deviation_sell < -0.50
+                and deviation_sell < -0.48
               
             ):
 
-                sell = "SELL TEMPO 1 riga 1086"
+                sell = "SELL TEMPO 1 riga 1119"
                 action = "sell"
                 
                 
@@ -1125,11 +1125,11 @@ class ro_cano_che_ritorna:
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds 
                 and ma8_last < ma39_last
-                and deviation_sell < -0.34
+                and deviation_sell < -0.32
               
             ):
 
-                sell = "SELL TEMPO 2 riga 1113"
+                sell = "SELL TEMPO 2 riga 1132"
                 action = "sell"
 
                 
