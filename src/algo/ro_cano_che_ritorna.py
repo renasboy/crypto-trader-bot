@@ -329,7 +329,7 @@ class ro_cano_che_ritorna:
                 
                 elif (
                     
-                    deviation_buy1 > 0.12
+                    deviation_buy1 > 0.13
                     
                     and ma78_last < ma78_2_min_ago
                     
