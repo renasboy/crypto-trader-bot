@@ -142,7 +142,7 @@ class ro_cano_che_ritorna:
         
         
         # formula DEVIATION_buy1 per la compra 1
-        deviation_buy1 = (ma11_last/ma39_last - 1) * 100 if ma39_last else 0
+        deviation_buy1 = (ma13_last/ma39_last - 1) * 100 if ma39_last else 0
         self.algo_helper.log("deviation_buy1: {}".format(deviation_buy1))
 
         # formula DEVIATION_buy2 per la compra 2
@@ -344,7 +344,7 @@ class ro_cano_che_ritorna:
                     action = "buy"
                     
                     
-                    #deviation_buy1 = ma11_last/ma39_last
+                    #deviation_buy1 = ma13_last/ma39_last
                     
                 
                 ##############################################################################
