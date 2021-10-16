@@ -128,7 +128,7 @@ class maddog:
         
 
         # formula "deviation_buy1" (per comprare LA PRIMA VOLTA durante il TREND RIBASSISTA)
-        deviation_buy1 = (ma8_last / ma50_last - 1) * 100 if ma50_last else 0
+        deviation_buy1 = (ma13_last / ma50_last - 1) * 100 if ma50_last else 0
         self.algo_helper.log("deviation_buy1: {}".format(deviation_buy1))
 
         # formula "deviation_buy2"
@@ -230,7 +230,7 @@ class maddog:
                         and ma4_last > ma40_last
                         and ma2_last > ma2_2_min_ago
                         
-                        # deviation_buy1 = ma8_last / ma50_last
+                        # deviation_buy1 = ma13_last / ma50_last
                     
                     ):
                         buy = "BUY 1 - con DEVIATION buy1- riga 236 ma50<" 
@@ -417,7 +417,7 @@ class maddog:
             
             # STA VENDENDO SOLO CON SALVAGENTE 2 e 3 !
             
-            # e chissa' perche'
+            # e chissa' perche' ... vedi ''' riga 368 !
             ############################################################################################################################################################
             ############################################################################################################################################################
            
