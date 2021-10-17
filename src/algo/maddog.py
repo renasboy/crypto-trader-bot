@@ -179,7 +179,7 @@ class maddog:
         # SI APRE LA GABBIA SE
 
         if ma8_last > ma38_last and deviation_buy1 > -0.50:
-        # deviation_buy1 = ma8_last / ma50_last    
+        # deviation_buy1 = ma13_last / ma50_last    
             
             
             
