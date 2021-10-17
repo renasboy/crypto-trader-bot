@@ -1116,26 +1116,39 @@ class ro_cano_che_ritorna:
               
             ):
 
-                sell = "SELL TEMPO 1 riga 1119"
+                sell = "SELL TEMPO CLASSICO riga 1119"
                 action = "sell"
                 
-                
+            #############################################################################################
                 
                 
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds 
                 and ma8_last < ma39_last
-                and deviation_sell < -0.32
+                and deviation_sell < -0.31
               
             ):
 
-                sell = "SELL TEMPO 2 riga 1132"
+                sell = "SELL TEMPO con ma39 > riga 1132"
                 action = "sell"
+            
+            
+            
+            elif (
+                seconds_since_last_trade > max_hold_time_in_seconds 
+                and ma8_last < ma39_last
+                and deviation_sell < -0.28
+              
+            ):
 
-                
+                sell = "SELL TEMPO con ma39 < riga 1144"
+                action = "sell"
+            
+            
+            #################################################################################################
             
            
-
+            
           
           
           
