@@ -577,7 +577,9 @@ class ro_cano_che_ritorna:
             # VENDITA 1 - con fasce di tempo ! c'e' vita su marte !
 
             #    minuti
-            #   0 -  3 -
+            #   0 -  3 - ok
+            
+            
             #   3 -  5 -
             #   5 - 12 -
 
@@ -603,7 +605,7 @@ class ro_cano_che_ritorna:
             
             
             
-            # questa vendita da 0 - 3 min sta fatta bene 
+            
             # la deviation_sell_ma78 mi protegge - ogni volta che c'e' stato un rialzo non l' ha mai toccata !
             
             
@@ -694,12 +696,12 @@ class ro_cano_che_ritorna:
                 elif (
                     ma50_last < ma50_2_min_ago 
                     and deviation_sell_ma78 < -0.10
-                 
+                    # deviation_sell_ma78 = ma3_last / ma78_last
                 ):
                     sell = "SELL 5 (0-3 min) con ma50 < riga 664"
                     action = "sell"
                     
-                    # deviation_sell_ma78 = ma3_last / ma78_last
+                    
                    
                 
                 
@@ -762,6 +764,18 @@ class ro_cano_che_ritorna:
               
                 if (
                     ma50_last >= ma50_2_min_ago 
+                    and deviation_sell_ma78 < -0.10
+                    
+                    # deviation_sell_ma78 = ma3_last / ma78_last
+                
+                ):
+                    sell = "SELL 9 (3-5 min) con ma50 > riga 722"
+                    action = "sell"
+                    
+                
+                
+                elif (
+                    ma50_last >= ma50_2_min_ago 
                     and (ma3_prev > ma39_prev and ma3_last < ma39_last)
                     and deviation_sell < -0.24
                     
@@ -769,7 +783,6 @@ class ro_cano_che_ritorna:
                 ):
                     sell = "SELL 9 (3-5 min) con ma50 > riga 722"
                     action = "sell"
-                    
                 
                 elif (
                     ma50_last >= ma50_2_min_ago 
@@ -787,17 +800,38 @@ class ro_cano_che_ritorna:
                 elif (
                     ma50_last >= ma50_2_min_ago 
                     and (ma3_prev > ma33_prev and ma3_last < ma33_last) 
-                    and deviation_sell > 0.61
+                    and deviation_sell > 0.61 and deviation_sell < 1.20
                  
                 ):
                     sell = "SELL 11 (3-5 min) con ma50 > riga 745"
                     action = "sell"
                     
                     
+                elif (
+                    ma50_last >= ma50_2_min_ago 
+                    and (ma3_prev > ma25_prev and ma3_last < ma25_last) 
+                    and deviation_sell > 1.21
+                 
+                ):
+                    sell = "SELL 11 (3-5 min) con ma50 > riga 745"
+                    action = "sell"
+                    
                     
                 ###########################################################################     trend in ribasso
-             
-            
+                
+                
+                
+                elif (
+                    ma50_last < ma50_2_min_ago 
+                    ma50_last < ma50_2_min_ago 
+                    and deviation_sell_ma78 < -0.10
+                    # deviation_sell_ma78 = ma3_last / ma78_last
+                ):
+                    sell = "SELL 12 (3-5 min) con ma50 < riga 759"
+                    action = "sell"
+                    
+                
+                
                 elif (
                     ma50_last < ma50_2_min_ago 
                     and (ma3_prev > ma33_prev and ma3_last < ma33_last) 
