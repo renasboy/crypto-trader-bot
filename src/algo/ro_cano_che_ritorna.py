@@ -583,8 +583,8 @@ class ro_cano_che_ritorna:
             #   3 -  5 -
             #   5 - 12 -
 
-            #  12 - 18 -
-            #  18 - 40 -
+            #  12 - 24 -
+            #  24 - 40 -
             #   > 40   -
             
             
@@ -1078,9 +1078,21 @@ class ro_cano_che_ritorna:
             # VENDITA - da 24 a 40 minuti = da 1080 a 1800 secondi
 
             elif seconds_since_last_trade > 1440 and seconds_since_last_trade <= 2400:
-
-            
+                
+                
                 if (
+                    ma50_last >= ma50_2_min_ago 
+                    and deviation_sell_ma78 < -0.15
+                    
+                    # deviation_sell_ma78 = ma3_last / ma78_last
+                
+                ):
+                    sell = "SELL 9 (12-24 min) con ma50 > riga 722"
+                    action = "sell"
+                    
+                
+                
+                elif (
                     ma50_last >= ma50_2_min_ago 
                     and (ma3_prev > ma39_prev and ma3_last < ma39_last)
                     and deviation_sell < -0.26 
@@ -1106,8 +1118,20 @@ class ro_cano_che_ritorna:
                 
                 elif (
                     ma50_last >= ma50_2_min_ago 
-                    and (ma3_prev > ma23_prev and ma3_last < ma23_last) 
-                    and deviation_sell > 0.61
+                    and (ma3_prev > ma39_prev and ma3_last < ma39_last)
+                    and deviation_sell > 0.61 and deviation_sell < 1.20
+                    
+                    # deviation_sell = ma3_last/last_trade_price
+                ):
+                    sell = "SELL 25 (24-40 min) con ma50 > riga 950"
+                    action = "sell"
+                    
+                    
+                    
+                elif (
+                    ma50_last >= ma50_2_min_ago 
+                    and (ma3_prev > ma39_prev and ma3_last < ma39_last) 
+                    and deviation_sell > 1.21
                  
                 ):
                     sell = "SELL 26 (24-40 min) con ma50 > riga 961"
@@ -1119,6 +1143,16 @@ class ro_cano_che_ritorna:
                 
                 ##################################################################### con trend discendente
                 
+                
+                elif (
+                    ma50_last < ma50_2_min_ago 
+                    and deviation_sell_ma78 < -0.15
+                    # deviation_sell_ma78 = ma3_last / ma78_last
+                ):
+                    sell = "SELL 12 (5-12 min) con ma50 < riga 759"
+                    action = "sell"
+                    
+                    
                 elif (
                     ma50_last < ma50_2_min_ago 
                     and (ma3_prev > ma33_prev and ma3_last < ma33_last) 
@@ -1127,9 +1161,12 @@ class ro_cano_che_ritorna:
                 ):
                     sell = "SELL 27 (24-40 min) con ma50 < riga 976"
                     action = "sell"
+                    
+                    
+                    
                 
                 
-                # --------------------------------------------------------------------------------------crollo
+                # --------------------------------------------------------------------------------------eventuale guadagno durante il crollo
                 
                 
                 
@@ -1143,7 +1180,11 @@ class ro_cano_che_ritorna:
                     action = "sell"
 
                     
-                    
+            
+            
+            
+            
+            
             ##############################################################################################################################     > 40 min
             
             
@@ -1218,6 +1259,25 @@ class ro_cano_che_ritorna:
               
             
             ###########################################################################################################################
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             
             
 
