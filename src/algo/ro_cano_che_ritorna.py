@@ -823,12 +823,12 @@ class ro_cano_che_ritorna:
                 
                 elif (
                     ma50_last < ma50_2_min_ago 
-                    ma50_last < ma50_2_min_ago 
                     and deviation_sell_ma78 < -0.10
                     # deviation_sell_ma78 = ma3_last / ma78_last
                 ):
                     sell = "SELL 12 (3-5 min) con ma50 < riga 759"
                     action = "sell"
+                    
                     
                 
                 
@@ -842,7 +842,7 @@ class ro_cano_che_ritorna:
                     action = "sell"
    
          
-                # ---------------------------------------------------------------------------------------------------------------------- crollo
+                # ---------------------------------------------------------------------------------------------------------------------- guadagno con crollo
                 
                 
                 elif (
@@ -866,8 +866,18 @@ class ro_cano_che_ritorna:
             
             elif seconds_since_last_trade > 300 and seconds_since_last_trade <= 720:
            
-            
                 if (
+                    ma50_last >= ma50_2_min_ago 
+                    and deviation_sell_ma78 < -0.10
+                    
+                    # deviation_sell_ma78 = ma3_last / ma78_last
+                
+                ):
+                    sell = "SELL 9 (5-12 min) con ma50 > riga 722"
+                    action = "sell"
+                  
+                  
+                elif (
                     ma50_last >= ma50_2_min_ago 
                     and (ma3_prev > ma39_prev and ma3_last < ma39_last)
                     and deviation_sell < -0.25
@@ -887,14 +897,25 @@ class ro_cano_che_ritorna:
                 ):
                     sell = "SELL 15 (5-12 min) con ma50 > riga 806"
                     action = "sell"
+                
+                
+                
+                elif (
+                    ma50_last >= ma50_2_min_ago 
+                    and (ma3_prev > ma33_prev and ma3_last < ma33_last)
+                    and deviation_sell > 0.61 and deviation_sell < 1.20
                     
+                    # deviation_sell = ma3_last/last_trade_price
+                ):
+                    sell = "SELL 15 (5-12 min) con ma50 > riga 806"
+                    action = "sell"
                     
               
                 
                 elif (
                     ma50_last >= ma50_2_min_ago 
-                    and (ma3_prev > ma33_prev and ma3_last < ma33_last) 
-                    and deviation_sell > 0.61
+                    and (ma3_prev > ma25_prev and ma3_last < ma25_last) 
+                    and deviation_sell > 1.21
                  
                 ):
                     sell = "SELL 16 (5-12 min) con ma50 > riga 818"
@@ -903,8 +924,18 @@ class ro_cano_che_ritorna:
                     
                     
                 ###########################################################################     trend in ribasso
-             
-            
+                
+                
+                elif (
+                    ma50_last < ma50_2_min_ago 
+                    and deviation_sell_ma78 < -0.10
+                    # deviation_sell_ma78 = ma3_last / ma78_last
+                ):
+                    sell = "SELL 12 (5-12 min) con ma50 < riga 759"
+                    action = "sell"
+                    
+                    
+                    
                 elif (
                     ma50_last < ma50_2_min_ago 
                     and (ma3_prev > ma33_prev and ma3_last < ma33_last) 
@@ -914,8 +945,9 @@ class ro_cano_che_ritorna:
                     sell = "SELL 17 (5-12 min) con ma50 < riga 832"
                     action = "sell"
    
-         
-                # ------------------------------------------------------------------------------- crollo
+                
+                
+                # ------------------------------------------------------------------------------- guadagno con crollo
                 
                 
                 elif (
