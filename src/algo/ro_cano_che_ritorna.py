@@ -1107,7 +1107,7 @@ class ro_cano_che_ritorna:
                 elif (
                     ma50_last >= ma50_2_min_ago 
                     and (ma3_prev > ma39_prev and ma3_last < ma39_last)
-                    and deviation_sell > 0.29 and deviation_sell < 0.60
+                    and deviation_sell > 0.30 and deviation_sell < 0.60
                     
                     # deviation_sell = ma3_last/last_trade_price
                 ):
@@ -1219,7 +1219,7 @@ class ro_cano_che_ritorna:
                 elif (
                     ma50_last > ma50_2_min_ago 
                     and (ma3_prev > ma39_prev and ma3_last < ma39_last)
-                    and deviation_sell > 0.29 and deviation_sell < 0.59
+                    and deviation_sell > 0.35 and deviation_sell < 0.59
                   
                 ):
                     sell = "SELL 30 ( dopo 60 min ) con ma50 > - ( 0.29 - 0.59 con ma3-ma39 ) - riga 1019"
