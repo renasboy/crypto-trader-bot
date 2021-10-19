@@ -584,6 +584,10 @@ class ro_cano_che_ritorna:
             #  12 - 18 -
             #  18 - 40 -
             #   > 40   -
+            
+            
+            # fare 40 - 60
+            # fare> 60
 
             #############################################################################################################################
             
@@ -591,9 +595,9 @@ class ro_cano_che_ritorna:
              
             # Tom Petty - Something Good Coming
             
-            # <-0.20
+            # < -0.20
             # 0.25 -0.59
-            # 0.60-0.79
+            # 0.60 - 0.79
             # > 0.80
             ####################################################################################################################### 0 - 3 min
             
@@ -661,16 +665,27 @@ class ro_cano_che_ritorna:
                 elif (
                     ma50_last >= ma50_2_min_ago 
                     and (ma3_prev > ma13_prev and ma3_last < ma13_last) 
-                    and deviation_sell > 0.80
-               
+                    and deviation_sell > 0.80 and deviation_sell < 1.20
+                   
                 ):
 
                     sell = "SELL 4 (0-3 min) con ma50 > riga 650"
                     action = "sell"
                     
+                    
+                    
+                elif (
+                    ma50_last >= ma50_2_min_ago 
+                    and (ma3_prev > ma11_prev and ma3_last < ma11_last) 
+                    and deviation_sell > 1.21
+               
+                ):
+
+                    sell = "SELL 4 (0-3 min) con ma50 > riga 650"
+                    action = "sell"
                  
                 
-                # fai fascia sopra 0.80
+                
                 
                 ###########################################################################     trend in ribasso
              
