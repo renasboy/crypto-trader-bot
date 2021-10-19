@@ -689,7 +689,19 @@ class ro_cano_che_ritorna:
                 
                 ###########################################################################     trend in ribasso
              
-                # qui metti deviation 78
+                
+                
+                elif (
+                    ma50_last < ma50_2_min_ago 
+                    and deviation_sell_ma78 < -0.10
+                 
+                ):
+                    sell = "SELL 5 (0-3 min) con ma50 < riga 664"
+                    action = "sell"
+                    
+                    # deviation_sell_ma78 = ma3_last / ma78_last
+                   
+                
                 
                 elif (
                     ma50_last < ma50_2_min_ago 
