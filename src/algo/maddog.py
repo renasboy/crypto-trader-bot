@@ -250,7 +250,7 @@ class maddog:
                         
                         
                         and ma2_last > ma8_last
-                        and ma4_last > ma40_last
+                        and ma4_last > ma33_last
                         and ma2_last > ma2_2_min_ago
                         
                         # deviation_buy1 = ma8_last / ma50_last
@@ -365,48 +365,21 @@ class maddog:
             
             
             
-            '''
+            
             # VENDE con ma78_last >= ma78_20_min_ago
             if self.session == 1:
 
                 if (
                     ma78_last >= ma78_10_min_ago 
                     and (ma3_last > ma25_last and ma3_last < ma25_last) 
-                    and deviation > 0.18
+                    and deviation > 0.99
                  
                 ):
-                    sell = "SELL 1 A1 riga 375"
+                    sell = "SELL 1 A1 riga 378"
                     action = "sell"
                 
                 
                 
-                elif (
-                    ma78_last >= ma78_10_min_ago 
-                    and (ma3_last > ma18_last and ma3_last < ma18_last) 
-                    and deviation_ma50 > 0.70
-                 
-                ):
-                    sell = "SELL con ma78 > riga 386"
-                    action = "sell"
-                
-                
-             
-                # VENDE con ma78_last < ma78_18_min_ago
-
-                elif (
-                    ma78_last < ma78_18_min_ago 
-                    and (ma3_last > ma39_last and ma3_last < ma39_last) 
-                    and deviation_ma50 < -0.22
-                 
-                    # deviation_sell = ma3_last / ma50_last
-                    # deviation_buy1 = ma8_last / ma78_last
-                ):
-
-                    sell = "SELL con ma78 < riga 402"
-                    action = "sell"
-             
-             
-            '''
             
             
             
@@ -417,33 +390,33 @@ class maddog:
             
             # STA VENDENDO SOLO CON SALVAGENTE 2 e 3 !
             
-            # e chissa' perche' ... vedi ''' riga 368 !
+            
             ############################################################################################################################################################
             ############################################################################################################################################################
            
             
             # STOP LOSS (salvagente)
 
-            # questa funziona 
+            
             
             if (
-                deviation_ma39 < -0.34
+                deviation_ma39 < -0.32
                 and ma50_last > ma50_2_min_ago
                 
                 # deviation_ma39 = ma3_last / ma39_last
             ):
-                sell = "SELL SALVAGENTE 1 con ma50 > riga 425"
+                sell = "SELL SALVAGENTE 1 con ma50 > riga 408"
                 action = "sell"
             
             
             
             elif (
-                deviation_ma39 < -0.17
+                deviation_ma39 < -0.15
                 and ma50_last < ma50_2_min_ago
                 
                 # deviation_ma39 = ma3_last / ma39_last
             ):
-                sell = "SELL SALVAGENTE 2 con ma50 < riga 436"
+                sell = "SELL SALVAGENTE 2 con ma50 < riga 419"
                 action = "sell"
             
             
@@ -460,43 +433,18 @@ class maddog:
                 seconds_since_last_trade > max_hold_time_in_seconds 
                 and ma2_last < last_trade_price 
                 and ma39_last > ma39_2_min_ago
-                and deviation < -0.48
+                and deviation < -0.40
                 
                 # condizione_dolce_attesa = ma2_last < last_trade_price 
                 # deviation = ma2_last / last_trade_price
                 
             ):
 
-                sell = "SELL TEMPO con TREND IN RIBASSO riga 460"
+                sell = "SELL TEMPO con TREND IN RIBASSO riga 443"
                 action = "sell"
                 
                 
                 
-            '''
-            # 1) VENDI DOPO 8 min dal buy " (E SE) con TREND IN RIBASSO - vedi riga 11 
-            
-            elif (
-                seconds_since_last_trade > max_hold_time_in_seconds 
-                and ma2_last < last_trade_price 
-                and deviation < -0.20
-                and ma39_last < ma39_2_min_ago
-                
-                # condizione_dolce_attesa = ma2_last < last_trade_price 
-                # deviation = ma2_last / last_trade_price
-                
-            ):
-
-                sell = "SELL TEMPO con TREND IN RIALZO riga 479"
-                action = "sell"
-            '''
-        
-        
-        
-        
-        
-        
-        
-        
         
         
         
