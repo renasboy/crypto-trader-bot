@@ -214,7 +214,7 @@ class ro_cano_che_ritorna:
         self.algo_helper.log("deviation_sell: {}".format(deviation_sell))   
         
         # formula DEVIATION_sell_ma78
-        deviation_sell_ma78 = (ma2_last/ma78_last - 1) *100 if ma78_last else 0
+        deviation_sell_ma78 = (ma3_last/ma78_last - 1) *100 if ma78_last else 0
         self.algo_helper.log("deviation_sell_ma78: {}".format(deviation_sell_ma78))
         
         # formula deviation_ma39 per vendere un po' piu' giu' di ma39
@@ -596,9 +596,14 @@ class ro_cano_che_ritorna:
             # 0.60-0.79
             # > 0.80
             ####################################################################################################################### 0 - 3 min
-
             
-                  
+            
+            
+            # questa vendita da 0 - 3 min sta fatta bene 
+            # la deviation_sell_ma78 mi protegge - ogni volta che c'e' stato un rialzo non l' ha mai toccata !
+            
+            
+            
             # VENDITA - da 0 a 3 minuti = da 0 a 180 secondi
                   
             if seconds_since_last_trade > 0 and seconds_since_last_trade <= 180:
@@ -606,14 +611,27 @@ class ro_cano_che_ritorna:
                 # con ma50 >
                 if (
                     ma50_last >= ma50_2_min_ago 
+                    and deviation_sell_ma78 < -0.10
+                    
+                    # deviation_sell_ma78 = ma3_last / ma78_last
+                    
+                ):
+                    sell = "SELL  (0-3 min) con ma50 > riga 614"
+                    action = "sell"
+                    
+                    
+                elif (
+                    ma50_last >= ma50_2_min_ago 
                     and (ma3_prev > ma39_prev and ma3_last < ma39_last)
                     and deviation_sell < -0.23
                     
                     # deviation_sell = ma3_last/last_trade_price
                 ):
-                    sell = "SELL 1 (0-3 min) con ma50 > riga 614"
+                    sell = "SELL  (0-3 min) con ma50 > riga 614"
                     action = "sell"
-                    
+                
+                
+                
                 
                 elif (
                     ma50_last >= ma50_2_min_ago 
@@ -642,7 +660,7 @@ class ro_cano_che_ritorna:
                     
                 elif (
                     ma50_last >= ma50_2_min_ago 
-                    and (ma3_prev > ma18_prev and ma3_last < ma18_last) 
+                    and (ma3_prev > ma13_prev and ma3_last < ma13_last) 
                     and deviation_sell > 0.80
                
                 ):
@@ -651,10 +669,13 @@ class ro_cano_che_ritorna:
                     action = "sell"
                     
                  
-                    
+                
+                # fai fascia sopra 0.80
+                
                 ###########################################################################     trend in ribasso
              
-            
+                # qui metti deviation 78
+                
                 elif (
                     ma50_last < ma50_2_min_ago 
                     and (ma3_prev > ma33_prev and ma3_last < ma33_last) 
