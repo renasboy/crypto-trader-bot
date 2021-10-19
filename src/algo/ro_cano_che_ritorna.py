@@ -947,7 +947,7 @@ class ro_cano_che_ritorna:
    
                 
                 
-                # ------------------------------------------------------------------------------- guadagno con crollo
+                # ------------------------------------------------------------------------------- eventuale guadagno con crollo
                 
                 
                 elif (
@@ -968,8 +968,21 @@ class ro_cano_che_ritorna:
 
        
             elif seconds_since_last_trade > 720 and seconds_since_last_trade <= 1440:
+          
                 
                 if (
+                    ma50_last >= ma50_2_min_ago 
+                    and deviation_sell_ma78 < -0.10
+                    
+                    # deviation_sell_ma78 = ma3_last / ma78_last
+                
+                ):
+                    sell = "SELL 9 (12-24 min) con ma50 > riga 722"
+                    action = "sell"
+                  
+                  
+                  
+                elif (
                     ma50_last >= ma50_2_min_ago 
                     and (ma3_prev > ma39_prev and ma3_last < ma39_last)
                     and deviation_sell < -0.30
@@ -992,11 +1005,21 @@ class ro_cano_che_ritorna:
                     action = "sell"
                 
                 
-                
                 elif (
                     ma50_last >= ma50_2_min_ago 
-                    and (ma3_prev > ma23_prev and ma3_last < ma23_last) 
-                    and deviation_sell > 0.61
+                    and (ma3_prev > ma33_prev and ma3_last < ma33_last)
+                    and deviation_sell > 0.61 and deviation_sell < 1.20
+                    
+                    # deviation_sell = ma3_last/last_trade_price
+                ):
+                    sell = "SELL 20 (12-24 min) con ma50 > riga 877"
+                    action = "sell"
+                    
+                    
+                elif (
+                    ma50_last >= ma50_2_min_ago 
+                    and (ma3_prev > ma39_prev and ma3_last < ma39_last) 
+                    and deviation_sell > 1.21
                  
                 ):
                     sell = "SELL 21 (12-24 min) con ma50 > riga 888"
@@ -1008,6 +1031,18 @@ class ro_cano_che_ritorna:
                 
                 ##################################################################### con trend discendente
                 
+                
+                
+                elif (
+                    ma50_last < ma50_2_min_ago 
+                    and deviation_sell_ma78 < -0.10
+                    # deviation_sell_ma78 = ma3_last / ma78_last
+                ):
+                    sell = "SELL 12 (5-12 min) con ma50 < riga 759"
+                    action = "sell"
+                
+                
+                
                 elif (
                     ma50_last < ma50_2_min_ago 
                     and (ma3_prev > ma33_prev and ma3_last < ma33_last) 
@@ -1018,7 +1053,10 @@ class ro_cano_che_ritorna:
                     action = "sell"
                 
                 
-                # -----------------------------------------------------------------------------crollo
+                
+                
+                
+                # -----------------------------------------------------------------------------eventuale guadagno con crollo
                 
                 
                 
