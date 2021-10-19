@@ -1073,11 +1073,11 @@ class ro_cano_che_ritorna:
             
             
             
-            ################################################################################################################################## 24-40 min
+            ################################################################################################################################## 24-60 min
 
-            # VENDITA - da 24 a 40 minuti = da 1080 a 1800 secondi
+            # VENDITA - da 24 a 60 minuti = da 1080 a 3600 secondi
 
-            elif seconds_since_last_trade > 1440 and seconds_since_last_trade <= 2400:
+            elif seconds_since_last_trade > 1440 and seconds_since_last_trade <= 3600:
                 
                 
                 if (
@@ -1087,7 +1087,7 @@ class ro_cano_che_ritorna:
                     # deviation_sell_ma78 = ma3_last / ma78_last
                 
                 ):
-                    sell = "SELL 9 (12-24 min) con ma50 > riga 722"
+                    sell = "SELL 9 (24-60 min) con ma50 > riga 722"
                     action = "sell"
                     
                 
@@ -1099,7 +1099,7 @@ class ro_cano_che_ritorna:
                     
                     # deviation_sell = ma3_last/last_trade_price
                 ):
-                    sell = "SELL 24 (24-40 min) con ma50 > riga 938"
+                    sell = "SELL 24 (24-60 min) con ma50 > riga 938"
                     action = "sell"
                 
                 
@@ -1111,7 +1111,7 @@ class ro_cano_che_ritorna:
                     
                     # deviation_sell = ma3_last/last_trade_price
                 ):
-                    sell = "SELL 25 (24-40 min) con ma50 > riga 950"
+                    sell = "SELL 25 (24-60 min) con ma50 > riga 950"
                     action = "sell"
                 
                 
@@ -1123,7 +1123,7 @@ class ro_cano_che_ritorna:
                     
                     # deviation_sell = ma3_last/last_trade_price
                 ):
-                    sell = "SELL 25 (24-40 min) con ma50 > riga 950"
+                    sell = "SELL 25 (24-60 min) con ma50 > riga 950"
                     action = "sell"
                     
                     
@@ -1134,7 +1134,7 @@ class ro_cano_che_ritorna:
                     and deviation_sell > 1.21
                  
                 ):
-                    sell = "SELL 26 (24-40 min) con ma50 > riga 961"
+                    sell = "SELL 26 (24-60 min) con ma50 > riga 961"
                     action = "sell"
 
                 
@@ -1149,7 +1149,7 @@ class ro_cano_che_ritorna:
                     and deviation_sell_ma78 < -0.15
                     # deviation_sell_ma78 = ma3_last / ma78_last
                 ):
-                    sell = "SELL 12 (5-12 min) con ma50 < riga 759"
+                    sell = "SELL 12 (24-60 min) con ma50 < riga 759"
                     action = "sell"
                     
                     
@@ -1159,7 +1159,7 @@ class ro_cano_che_ritorna:
                     and deviation_sell < -0.25
                   
                 ):
-                    sell = "SELL 27 (24-40 min) con ma50 < riga 976"
+                    sell = "SELL 27 (24-60 min) con ma50 < riga 976"
                     action = "sell"
                     
                     
@@ -1176,7 +1176,7 @@ class ro_cano_che_ritorna:
                     and deviation_sell > 0.23
                    
                 ):
-                    sell = "SELL 28 (24-40 min) con ma50 < riga 990"
+                    sell = "SELL 28 (24-60 min) con ma50 < riga 990"
                     action = "sell"
 
                     
@@ -1185,20 +1185,33 @@ class ro_cano_che_ritorna:
             
             
             
-            ##############################################################################################################################     > 40 min
+            ##############################################################################################################################     > 60 min
             
             
-            # VENDITA - da 40 minuti in poi = da 2400 secondi in poi
+            # VENDITA - da 60 minuti in poi = da 3600 secondi in poi
 
-            elif seconds_since_last_trade > 2400:
-
+            elif seconds_since_last_trade > 3600:
+                
+                
+                
                 if (
+                    ma50_last >= ma50_2_min_ago 
+                    and deviation_sell_ma78 < -0.20
+                    
+                    # deviation_sell_ma78 = ma3_last / ma78_last
+                
+                ):
+                    sell = "SELL 9 ( dopo 60 min ) con ma50 > riga 722"
+                    action = "sell"
+                    
+                    
+                elif (
                     ma50_last > ma50_2_min_ago 
                     and (ma3_prev > ma78_prev and ma3_last < ma78_last)
                     and deviation_sell < -0.25
                    
                 ):
-                    sell = "SELL 29 ( dopo 40 min ) con ma50 > ( -0.20 con ma3-ma78 ) - riga 1008"
+                    sell = "SELL 29 ( dopo 60 min ) con ma50 > ( -0.20 con ma3-ma78 ) - riga 1008"
                     action = "sell"
                 
                 
@@ -1209,7 +1222,7 @@ class ro_cano_che_ritorna:
                     and deviation_sell > 0.29 and deviation_sell < 0.59
                   
                 ):
-                    sell = "SELL 30 ( dopo 40 min ) con ma50 > - ( 0.29 - 0.59 con ma3-ma39 ) - riga 1019"
+                    sell = "SELL 30 ( dopo 60 min ) con ma50 > - ( 0.29 - 0.59 con ma3-ma39 ) - riga 1019"
                     action = "sell"
                 
                 
@@ -1217,11 +1230,11 @@ class ro_cano_che_ritorna:
                 elif (
                     ma50_last > ma50_2_min_ago 
                     and (ma3_prev > ma39_prev and ma3_last < ma39_last) 
-                    and deviation_sell > 0.60 and deviation_sell < 1.99
+                    and deviation_sell > 0.60 and deviation_sell < 1.20
                  
                 ):
 
-                    sell = "SELL 31 ( dopo 40 min ) con ma50 > ( 0.60 - 1.99 con ma3-ma39 ) - riga 1031"
+                    sell = "SELL 31 ( dopo 60 min ) con ma50 > ( 0.60 - 1.99 con ma3-ma39 ) - riga 1031"
                     action = "sell"
                     
                     # ma3-39 mi evita la ricompra e la rivendita con perdita !
@@ -1231,11 +1244,11 @@ class ro_cano_che_ritorna:
                 elif (
                     ma50_last > ma50_2_min_ago 
                     and (ma3_prev > ma33_prev and ma3_last < ma33_last) 
-                    and deviation_sell > 2.00
+                    and deviation_sell > 1.21
                  
                 ):
 
-                    sell = "SELL 32 ( dopo 40 min ) con ma50 > ( > 2.00 con ma3-ma33 ) - riga 1045"
+                    sell = "SELL 32 ( dopo 60 min ) con ma50 > ( > 2.00 con ma3-ma33 ) - riga 1045"
                     action = "sell"
                     
             
@@ -1243,18 +1256,28 @@ class ro_cano_che_ritorna:
             
                 ######################################################################################## con trend discendente
               
-                
+                elif (
+                    ma50_last < ma50_2_min_ago 
+                    and deviation_sell_ma78 < -0.20
+                    # deviation_sell_ma78 = ma3_last / ma78_last
+                ):
+                    sell = "SELL 12 (dopo 60 min) con ma50 < riga 759"
+                    action = "sell"
+                    
+                    
                 elif (
                     ma50_last < ma50_2_min_ago 
                     and (ma3_prev > ma33_prev and ma3_last < ma33_last) 
                     and deviation_sell < -0.25
                    
                 ):
-                    sell = "SELL 33 ( dopo 40 min ) con ma50 < riga 1060"
+                    sell = "SELL 33 ( dopo 60 min ) con ma50 < riga 1060"
                     action = "sell"
 
                     
-            
+                
+                
+                
                 # qui non ho messo il crollon perche' dopo 40 min o gia' ha venduto o e' gia' risalita
               
             
