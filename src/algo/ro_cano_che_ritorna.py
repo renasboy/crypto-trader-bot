@@ -522,8 +522,8 @@ class ro_cano_che_ritorna:
                   
             
             # VENDITA CON QUESTE 3 ECCEZIONI !
-            
-            
+            # altre VENDITE ECCEZIONALI LE HO GIA' MESSE SOTTO - verifica e poi cancella !
+            # A T T E N Z I O N E ! salvagente SOLO mentre sale ! altrimenti va in conflitto con il buy durante il crollo - RIFLETTI SU QUESTA FRASE...
                   
             # 1) ro cano VENDE CON UN SALVAGENTE
           
@@ -1235,10 +1235,10 @@ class ro_cano_che_ritorna:
                 elif (
                     ma50_last > ma50_2_min_ago 
                     and (ma3_prev > ma39_prev and ma3_last < ma39_last)
-                    and deviation_sell > 0.35 and deviation_sell < 0.59
+                    and deviation_sell > 0.35 and deviation_sell < 0.79
                   
                 ):
-                    sell = "SELL dopo 60 min con ma50 > incrocio 3 - 39 and deviation_sell 0.35 - 0.59 - riga 1019"
+                    sell = "SELL dopo 60 min con ma50 > incrocio 3 - 39 and deviation_sell 0.35 - 0.79 - riga 1019"
                     action = "sell"
                 
                 
@@ -1246,27 +1246,27 @@ class ro_cano_che_ritorna:
                 
                 elif (
                     ma50_last > ma50_2_min_ago 
-                    and (ma3_prev > ma13_prev and ma3_last < ma13_last) 
-                    and deviation_sell > 0.60 and deviation_sell < 1.20
+                    and (ma3_prev > ma39_prev and ma3_last < ma39_last) 
+                    and deviation_sell > 0.80 and deviation_sell < 2.49
                  
                 ):
 
-                    sell = "SELL dopo 60 min con ma50 > incrocio 3 - 13 and deviation_sell 0.60 - 1.20 - riga 1254"
+                    sell = "SELL dopo 60 min con ma50 > incrocio 3 - 39 and deviation_sell 0.80 - 2.49 - riga 1254"
                     action = "sell"
                     
-                    # ma3-39 mi evita la ricompra e la rivendita con perdita ! ( ma io ho messo di nuovo 3-13 ) ( vediamo )
+                    # ma 3-48 mi evita la ricompra e la rivendita con perdita ! 
                 
                 
                 
                 
                 elif (
                     ma50_last > ma50_2_min_ago 
-                    and (ma3_prev > ma11_prev and ma3_last < ma11_last) 
-                    and deviation_sell > 1.21
+                    and (ma3_prev > ma33_prev and ma3_last < ma33_last) 
+                    and deviation_sell > 2.50
                  
                 ):
 
-                    sell = "SELL dopo 60 min con ma50 > incrocio 3 - 11 and deviation_sell > 1.21 - riga 1269"
+                    sell = "SELL dopo 60 min con ma50 > incrocio 3 - 33 and deviation_sell > 2.50 - riga 1269"
                     action = "sell"
                     
             
