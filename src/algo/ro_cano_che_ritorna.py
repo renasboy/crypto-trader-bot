@@ -1307,55 +1307,19 @@ class ro_cano_che_ritorna:
             
            
           
-           # A T T E N Z I O N E !     LE VENDITE ECCEZIONALI LE HO GIA' MESSE SOPRA - verifica e poi cancella queste !
-            
-          
-            
-            # salvagente SOLO mentre sale ! altrimenti va in conflitto con il buy durante il crollo
-
-            # 1) STOP LOSS (salvagente)
+           # A T T E N Z I O N E !     altre  VENDITE ECCEZIONALI 
+           
+            # ro cano VENDE " DOPO x MINUTI " and...
 
             
             if (
-                ma50_last >= ma50_2_min_ago 
-                and (ma3_prev > ma18_prev and ma3_last < ma18_last) 
-                and deviation_sell < -0.68
-             
-            ):
-                sell = "SALVAGENTE 1 con ma50 > incrocio 3-18 and deviation_sell < -0.68 - riga 1325"
-                action = "sell"
-
-                
-                
-                
-            elif (
-                ma50_last >= ma50_2_min_ago 
-                and (ma3_prev > ma36_prev and ma3_last < ma36_last) 
-                and deviation_sell < -0.63
-               
-            ):
-                sell = "SALVAGENTE 2 con ma50 > incrocio 3-36 and deviation_sell < -0.63 - riga 1337"
-                action = "sell"
-
-           
-            
-                
-            ##########################################################################################################################
-
-            
-          
-            
-            # 2) ro cano VENDE " DOPO x MINUTI " and...
-
-            
-            elif (
                 seconds_since_last_trade > max_hold_time_in_seconds 
                 and (ma2_prev > ma78_prev and ma2_last < ma78_last) 
                 and deviation_sell < -0.48
               
             ):
 
-                sell = "SELL TEMPO 1 e con incrocio 2 - 78 and deviation_sell < -0.48 - riga 1358"
+                sell = "SELL TEMPO 1 e con incrocio 2 - 78 and deviation_sell < -0.48 - riga 1322"
                 action = "sell"
                 
             #############################################################################################
@@ -1368,7 +1332,7 @@ class ro_cano_che_ritorna:
               
             ):
 
-                sell = "SELL TEMPO 2 e se ma8 < ma39 and deviation_sell < -0.31 - riga 1371"
+                sell = "SELL TEMPO 2 e se ma8 < ma39 and deviation_sell < -0.31 - riga 1335"
                 action = "sell"
             
            
