@@ -363,7 +363,7 @@ class maddog:
                                                                                             # VENDE
             
         
-            if self.session == 1:
+        if self.session == 1:
 
             # STOP LOSS (salvagente)
 
