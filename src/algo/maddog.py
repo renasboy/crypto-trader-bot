@@ -360,41 +360,11 @@ class maddog:
             ################################################################################################################################################
             
             
-            # VENDE
+                                                                                            # VENDE
             
-            
-            
-            
-            
-            # VENDE con ma78_last >= ma78_20_min_ago
+        
             if self.session == 1:
 
-                if (
-                    ma78_last >= ma78_10_min_ago 
-                    and (ma3_last > ma25_last and ma3_last < ma25_last) 
-                    and deviation > 0.99
-                 
-                ):
-                    sell = "SELL 1 A1 riga 378"
-                    action = "sell"
-                
-                
-                
-            
-            
-            
-            
-            
-            #########################################################################################################################################################
-            ########################################################################################################################################################
-            
-            # STA VENDENDO SOLO CON SALVAGENTE 2 e 3 !
-            
-            
-            ############################################################################################################################################################
-            ############################################################################################################################################################
-           
-            
             # STOP LOSS (salvagente)
 
             
@@ -405,7 +375,7 @@ class maddog:
                 
                 # deviation_ma39 = ma3_last / ma39_last
             ):
-                sell = "SELL SALVAGENTE 1 con ma50 > riga 408"
+                sell = "SELL SALVAGENTE 1 con ma50 > riga 378"
                 action = "sell"
             
             
@@ -416,9 +386,22 @@ class maddog:
                 
                 # deviation_ma39 = ma3_last / ma39_last
             ):
-                sell = "SELL SALVAGENTE 2 con ma50 < riga 419"
+                sell = "SELL SALVAGENTE 2 con ma50 < riga 389"
                 action = "sell"
-            
+                
+                
+                
+                
+            elif (
+                    ma78_last >= ma78_10_min_ago 
+                    and (ma3_last > ma50_last and ma3_last < ma50_last) 
+                    and deviation > 1.99
+                 
+                ):
+                    sell = "SELL 1 A1 riga 401"
+                    action = "sell"
+                
+                
             
             
             
@@ -427,7 +410,7 @@ class maddog:
             ################################################################################################################################################
           
 
-            # 1) VENDI DOPO 8 min dal buy " (E SE) con TREND IN RIALZO - vedi riga 11 
+            # VENDI DOPO 8 min dal buy " (E SE) con TREND IN RIALZO 
 
             if (
                 seconds_since_last_trade > max_hold_time_in_seconds 
