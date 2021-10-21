@@ -226,12 +226,12 @@ class ro_cano_che_ritorna:
         
         
         # formula COMPRA_SPAZIO_TEMPO ( per comprare se c'e' una alta velocita' nel rialzo del prezzo )
-        compra_spazio_tempo = (ma3_last/ma3_3_min_ago - 1) *100 if ma3_3_min_ago else 0
+        compra_spazio_tempo = (ma3_last / ma3_3_min_ago - 1) *100 if ma3_3_min_ago else 0
         self.algo_helper.log( "compra_spazio_tempo: {}".format(compra_spazio_tempo))  
         
         
         # formula VENDI_SPAZIO_TEMPO ( per vendere se c'e' una alta velocita' nel ribasso del prezzo )
-        vendi_spazio_tempo = (ma2_last/ma2_4_min_ago - 1) *100 if ma2_4_min_ago else 0
+        vendi_spazio_tempo = (ma2_last / ma2_4_min_ago - 1) *100 if ma2_4_min_ago else 0
         self.algo_helper.log( "vendi_spazio_tempo: {}".format(vendi_spazio_tempo))  
         
         
@@ -374,12 +374,12 @@ class ro_cano_che_ritorna:
                 # BUY 1 DURANTE IL RIALZO con COMPRA_SPAZIO_TEMPO
                 if (
                     compra_spazio_tempo > 0.70
-                    and ma3_last > ma78_last
+                    and ma3_last > ma33_last
                     
                   
-                    # compra_spazio_tempo = ma3_last/ma3_9_min_ago
+                    # compra_spazio_tempo = ma3_last / ma3_3_min_ago
                     # QUESTA CONDIZIONE SPAZIO-TEMPO ERA UNA TUA IDEA !
-                    
+                    # questa condizione e' molto molto rischiosa ! vedi un po'
                 ):
 
                     buy = "BUY 1 con COMPRA_SPAZIO_TEMPO riga 385"
@@ -489,7 +489,7 @@ class ro_cano_che_ritorna:
                 
                     deviation_buy3 > 0.02
                     and delta_buy3_incrocio_ma3_ma8 > 0.06
-                    
+                    and deviation_ma4_sopra_ma30 > 0.18
                     
                     and ma3_last > ma8_last
                     and ma3_last > ma78_last
@@ -529,16 +529,16 @@ class ro_cano_che_ritorna:
           
             if (
                 deviation_ma39 < -0.24
-            
+                and ma50_last < ma50_2_min_ago
             ):
-                sell = "SELL SALVAGENTE 3-39  riga 534"
+              
+                sell = "SELL SALVAGENTE 3-39 con ma50 < riga 534"
                 action = "sell"
                   
                 # deviation_ma39 = ma3_last / ma39_last  
                 
                 
             
-                  
                   
             # 2) ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA
 
@@ -1277,7 +1277,7 @@ class ro_cano_che_ritorna:
                 
                 elif (
                     ma50_last < ma50_2_min_ago 
-                    and deviation_sell_ma78 < -0.20
+                    and deviation_sell_ma78 < -0.18
                   
                     # deviation_sell_ma78 = ma3_last / ma78_last
                 ):
