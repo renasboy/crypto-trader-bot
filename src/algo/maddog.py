@@ -17,7 +17,7 @@ class maddog:
         
         
 
-        # ro cano ritorna automaticamente ( per esempio 8 minuti x 60 = 480 secondi ).......................... RIGA 319 #
+        # ro cano ritorna automaticamente ( per esempio 8 minuti x 60 = 480 secondi )
         max_hold_time_in_seconds = 480
 
         # e durata segmento in cui si aggiunge una condizione per il BUY ( per esempio 40 minuti x 60 = 2400 secondi )
@@ -170,8 +170,6 @@ class maddog:
         
         #############################################################################################################################################
         
-        
-        
         action = None
 
         ##################################################################################################################################################
@@ -222,7 +220,7 @@ class maddog:
                         # deviation_buy1 = ma13_last / ma50_last
                     
                     ):
-                        buy = "BUY 1 - con DEVIATION buy1- riga 236 ma50<" 
+                        buy = "BUY 1 - con DEVIATION buy1 ma50< - riga 223" 
                         action = "buy"
                     
                         # pronto a vendere subito se trend discendente !
@@ -239,7 +237,7 @@ class maddog:
                         # deviation_buy1 = ma8_last / ma50_last
                     
                     ):
-                        buy = "BUY 1 - con DEVIATION buy1- riga 259 - ma50>" 
+                        buy = "BUY 1 - con DEVIATION buy1 - ma50> - riga 240" 
                         action = "buy"
                    
                  
@@ -251,7 +249,7 @@ class maddog:
                         and ma2_last > ma2_2_min_ago
                    
                     ):
-                        buy = "BUY 1 - con INCROCIO CLASSICO - riga 282" 
+                        buy = "BUY 1 - con INCROCIO CLASSICO - riga 252" 
                         action = "buy"
                         
                     
@@ -262,7 +260,7 @@ class maddog:
                         and ma2_last > ma2_2_min_ago
                         
                     ):
-                        buy = "BUY 1 - con DEVIATION e ma78 IN RIBASSO riga 296"
+                        buy = "BUY 1 - con DEVIATION e ma78 IN RIBASSO riga 263"
                         action = "buy"
                         
                  
@@ -283,7 +281,7 @@ class maddog:
                    
                     ):
 
-                        buy = "BUY 2 riga 322"
+                        buy = "BUY 2 riga 284"
                         action = "buy"
                         
                 
@@ -303,7 +301,7 @@ class maddog:
                      
                     ):
 
-                        buy = "BUY 3 riga 342"
+                        buy = "BUY 3 riga 304"
                         action = "buy"
         
         
@@ -336,7 +334,7 @@ class maddog:
                 and ma50_last > ma50_2_min_ago
              
             ):
-                sell = "SELL SALVAGENTE 1 con ma50 > riga 378"
+                sell = "SELL SALVAGENTE 1 con ma50 > riga 337"
                 action = "sell"
                 
                 # deviation_ma39 = ma3_last / ma39_last
@@ -348,7 +346,7 @@ class maddog:
                 and ma50_last < ma50_2_min_ago
                
             ):
-                sell = "SELL SALVAGENTE 2 con ma50 < riga 389"
+                sell = "SELL SALVAGENTE 2 con ma50 < riga 349"
                 action = "sell"
                 
                 
@@ -363,7 +361,7 @@ class maddog:
                     and deviation > 1.99
                  
                 ):
-                    sell = "SELL 1 A1 riga 401"
+                    sell = "SELL 1 A1 riga 364"
                     action = "sell"
                 
            
@@ -380,7 +378,7 @@ class maddog:
                 and deviation < -0.40
              
             ):
-                sell = "SELL TEMPO 8 min con TREND IN RIBASSO riga 426"
+                sell = "SELL TEMPO 8 min con TREND IN RIBASSO riga 381"
                 action = "sell"
                 
                 # condizione_dolce_attesa = ma2_last < last_trade_price 
