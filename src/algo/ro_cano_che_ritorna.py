@@ -214,11 +214,11 @@ class ro_cano_che_ritorna:
         self.algo_helper.log("deviation_sell: {}".format(deviation_sell))   
         
         # formula DEVIATION_sell_ma78
-        deviation_sell_ma78 = (ma3_last / ma78_last - 1) *100 if ma78_last else 0
+        deviation_sell_ma78 = (ma3_last/ma78_last - 1) *100 if ma78_last else 0
         self.algo_helper.log("deviation_sell_ma78: {}".format(deviation_sell_ma78))
         
         # formula deviation_ma39 per vendere un po' piu' giu' di ma39
-        deviation_ma39 = (ma3_last / ma39_last - 1) * 100 if ma39_last else 0
+        deviation_ma39 = (ma3_last/ma39_last - 1) * 100 if ma39_last else 0
         self.algo_helper.log("deviation_ma39: {}".format(deviation_ma39))
         
         
@@ -226,12 +226,12 @@ class ro_cano_che_ritorna:
         
         
         # formula COMPRA_SPAZIO_TEMPO ( per comprare se c'e' una alta velocita' nel rialzo del prezzo )
-        compra_spazio_tempo = (ma3_last / ma3_3_min_ago - 1) *100 if ma3_3_min_ago else 0
+        compra_spazio_tempo = (ma3_last/ma3_3_min_ago - 1) *100 if ma3_3_min_ago else 0
         self.algo_helper.log( "compra_spazio_tempo: {}".format(compra_spazio_tempo))  
         
         
         # formula VENDI_SPAZIO_TEMPO ( per vendere se c'e' una alta velocita' nel ribasso del prezzo )
-        vendi_spazio_tempo = (ma2_last / ma2_4_min_ago - 1) *100 if ma2_4_min_ago else 0
+        vendi_spazio_tempo = (ma2_last/ma2_4_min_ago - 1) *100 if ma2_4_min_ago else 0
         self.algo_helper.log( "vendi_spazio_tempo: {}".format(vendi_spazio_tempo))  
         
         
