@@ -245,7 +245,7 @@ class maddog:
                     
                     if (
                         
-                        deviation_buy1 > 0.15
+                        deviation_buy1 > 0.17
                         and ma50_last > ma50_10_min_ago
                         
                         
@@ -370,7 +370,7 @@ class maddog:
             
             
             if (
-                deviation_ma39 < -0.32
+                deviation_ma39 < -0.40
                 and ma50_last > ma50_2_min_ago
                 
                 # deviation_ma39 = ma3_last / ma39_last
@@ -423,7 +423,7 @@ class maddog:
                 
             ):
 
-                sell = "SELL TEMPO con TREND IN RIBASSO riga 443"
+                sell = "SELL TEMPO 8 min con TREND IN RIBASSO riga 426"
                 action = "sell"
                 
                 
