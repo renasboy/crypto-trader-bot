@@ -691,19 +691,19 @@ class ro_cano_che_ritorna:
                 
                 ###########################################################################     trend in ribasso
              
-                
-                
+               
                 elif (
                     ma50_last < ma50_2_min_ago 
                     and deviation_sell_ma78 < -0.10
+                    and (ma3_prev > ma30_prev and ma3_last < ma30_last)
                   
                     # deviation_sell_ma78 = ma3_last / ma78_last
                 ):
-                    sell = "SELL (0-3 min) con ma50 < and deviation_sell_ma78 < -0.10 - riga 702"
+                    sell = "SELL (0-3 min) con ma50 < and deviation_sell_ma78 < -0.10 and incrocio 3-30- riga 702"
                     action = "sell"
                     
+                    # incrocio 3 -30 e' fondamentale per evitare punto rosso sovrapposto al punto verde !
                     
-                   
                 
                 
                 elif (
@@ -827,18 +827,18 @@ class ro_cano_che_ritorna:
                     
                 ###########################################################################     trend in ribasso
                 
-                
-                
+               
                 elif (
                     ma50_last < ma50_2_min_ago 
                     and deviation_sell_ma78 < -0.10
-                  
+                    and (ma3_prev > ma30_prev and ma3_last < ma30_last)
+                    
                     # deviation_sell_ma78 = ma3_last / ma78_last
                 ):
-                    sell = "SELL (3-5 min) con ma50 < and deviation_sell_ma78 < -0.10 - riga 838"
+                    sell = "SELL (3-5 min) con ma50 < and deviation_sell_ma78 < -0.10 and incrocio 3-30 - riga 838"
                     action = "sell"
                     
-                    
+                    # incrocio 3 -30 e' fondamentale per evitare punto rosso sovrapposto al punto verde !
                 
                 
                 elif (
@@ -931,21 +931,21 @@ class ro_cano_che_ritorna:
                     sell = "SELL (5-12 min) con ma50 > incrocio 3 - 25 and deviation_sell > 1.21 - riga 931"
                     action = "sell"
                     
-                    
-                    
+                
                 ###########################################################################     trend in ribasso
                 
                 
                 elif (
                     ma50_last < ma50_2_min_ago 
                     and deviation_sell_ma78 < -0.10
-                  
+                    and (ma3_prev > ma30_prev and ma3_last < ma30_last)
+                    
                     # deviation_sell_ma78 = ma3_last / ma78_last
                 ):
-                    sell = "SELL 12 (5-12 min) con ma50 < and deviation_sell_ma78 < -0.10 - riga 945"
+                    sell = "SELL 12 (5-12 min) con ma50 < and deviation_sell_ma78 < -0.10 and incrocio 3-30 - riga 945"
                     action = "sell"
                     
-                    
+                    # incrocio 3 -30 e' fondamentale per evitare punto rosso sovrapposto al punto verde !
                     
                 elif (
                     ma50_last < ma50_2_min_ago 
