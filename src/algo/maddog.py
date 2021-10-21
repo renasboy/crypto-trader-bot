@@ -1,3 +1,6 @@
+
+
+
 # ti voglio bene, compa.
 # ave compa - Tom Petty - Something Good Coming
 class maddog:
@@ -166,28 +169,23 @@ class maddog:
         
         
         #############################################################################################################################################
-        ##################################################################################################################################################
+        
         
         
         action = None
 
         ##################################################################################################################################################
 
-        ###################################################################### APRE E CHIUDE LA GABBIA
+        ###################    APRE E CHIUDE LA GABBIA
         
         
         # SI APRE LA GABBIA SE
 
         if ma8_last > ma38_last and deviation_buy1 > -0.50:
         # deviation_buy1 = ma13_last / ma50_last    
-            
-            
-            
+         
         #########################################################################################################################################
         
-        
-        
-
             # NON TOCCARE QUESTA CONDIZIONE SERVE PER APERTURA DI GABBIA
             if not self.session or not self.open:
                 self.session = 1
@@ -198,10 +196,7 @@ class maddog:
         else:
             self.open = False
             self.algo_helper.log("session {}: closed segment".format(self.session))
-            
-            
-            
-
+          
         ###############################################################################################################################################
 
         # COMPRA
@@ -210,26 +205,20 @@ class maddog:
 
      
         ###################################################################################################################################################    
-            
-            
-               
-
+         
                 # COMPRA sessione 1
-                # vediamo se funziona 
+                
                 # il principio e' questo : se ma50 < la deviation e' un po' piu' alta
 
                 if self.session == 1:
 
                     if (
-                        
                         deviation_buy1 > 0.30
                         and ma50_last < ma50_10_min_ago
-                        
-                        
                         and ma2_last > ma8_last
                         and ma4_last > ma40_last
                         and ma2_last > ma2_2_min_ago
-                        
+                     
                         # deviation_buy1 = ma13_last / ma50_last
                     
                     ):
@@ -239,16 +228,10 @@ class maddog:
                         # pronto a vendere subito se trend discendente !
                     
                     
-                   
-                    
-                    
-                    
                     if (
-                        
                         deviation_buy1 > 0.17
                         and ma50_last > ma50_10_min_ago
-                        
-                        
+                     
                         and ma2_last > ma8_last
                         and ma4_last > ma33_last
                         and ma2_last > ma2_2_min_ago
@@ -258,50 +241,31 @@ class maddog:
                     ):
                         buy = "BUY 1 - con DEVIATION buy1- riga 259 - ma50>" 
                         action = "buy"
-                        
-                    
-                    
-                    ###############################################################################################################################################
-                    
-                    
-                    
-                    
-                    
-                    
+                   
+                 
                     
                     if (
                         ma2_last > ma8_last
                         and (ma3_last < ma78_last and ma3_last > ma78_last)
                         and ma4_last > ma40_last
                         and ma2_last > ma2_2_min_ago
-                        
-                        
-                       
-                    
+                   
                     ):
                         buy = "BUY 1 - con INCROCIO CLASSICO - riga 282" 
                         action = "buy"
                         
-                        
-                  
                     
-                    ############################################################################################################################################
                     
                     elif (
                         ma78_last < ma78_5_min_ago and deviation_buy1 > 0.79
-                        
                         and ma39_last > ma50_last
                         and ma2_last > ma2_2_min_ago
+                        
                     ):
                         buy = "BUY 1 - con DEVIATION e ma78 IN RIBASSO riga 296"
                         action = "buy"
                         
-                        
-                    
-                    
-                    
-                    
-                    
+                 
                 ########################################################################################################################################################
                 
                 
@@ -360,38 +324,39 @@ class maddog:
             ################################################################################################################################################
             
             
-                                                                                            # VENDE
+                                                                   # VENDE
             
         
         if self.session == 1:
 
             # STOP LOSS (salvagente)
 
-            
-            
             if (
                 deviation_ma39 < -0.40
                 and ma50_last > ma50_2_min_ago
-                
-                # deviation_ma39 = ma3_last / ma39_last
+             
             ):
                 sell = "SELL SALVAGENTE 1 con ma50 > riga 378"
                 action = "sell"
+                
+                # deviation_ma39 = ma3_last / ma39_last
             
             
             
             elif (
                 deviation_ma39 < -0.16
                 and ma50_last < ma50_2_min_ago
-                
-                # deviation_ma39 = ma3_last / ma39_last
+               
             ):
                 sell = "SELL SALVAGENTE 2 con ma50 < riga 389"
                 action = "sell"
                 
                 
+                # deviation_ma39 = ma3_last / ma39_last
                 
                 
+            
+            
             elif (
                     ma78_last >= ma78_10_min_ago 
                     and (ma3_last > ma50_last and ma3_last < ma50_last) 
@@ -401,11 +366,7 @@ class maddog:
                     sell = "SELL 1 A1 riga 401"
                     action = "sell"
                 
-                
-            
-            
-            
-            
+           
             ################################################################################################################################################
             ################################################################################################################################################
           
@@ -417,21 +378,16 @@ class maddog:
                 and ma2_last < last_trade_price 
                 and ma39_last > ma39_2_min_ago
                 and deviation < -0.40
+             
+            ):
+                sell = "SELL TEMPO 8 min con TREND IN RIBASSO riga 426"
+                action = "sell"
                 
                 # condizione_dolce_attesa = ma2_last < last_trade_price 
                 # deviation = ma2_last / last_trade_price
                 
-            ):
-
-                sell = "SELL TEMPO 8 min con TREND IN RIBASSO riga 426"
-                action = "sell"
-                
-                
-                
-        
-        
-        
-             ##########################################################################################################################################
+          
+    #########################################################################################################################################
         
         
         
