@@ -1,4 +1,5 @@
-                
+                # incrocio 48-78 per risolvere il problema trend laterale - MA.per adesso, solo sul buy 1
+                # TOGLIERE IL RUMORE, compa !
                 
                 # ti voglio bene, compa.                                     
                 # compa, compa caro !                                          
@@ -43,6 +44,9 @@ class ro_cano_che_ritorna:
         ma36_last, ma36_prev = self.algo_helper.ma_last_prev(36)
         ma39_last, ma39_prev = self.algo_helper.ma_last_prev(39)
         ma40_last, ma40_prev = self.algo_helper.ma_last_prev(40)
+        
+        ma48_last, ma48_prev = self.algo_helper.ma_last_prev(48)
+        
         ma50_last, ma50_prev = self.algo_helper.ma_last_prev(50)
         ma78_last, ma78_prev = self.algo_helper.ma_last_prev(78)
         
@@ -57,9 +61,7 @@ class ro_cano_che_ritorna:
         ma2_4_min_ago = self.algo_helper.ma_minutes_ago(2, 4)
         
         ma3_2_min_ago = self.algo_helper.ma_minutes_ago(3, 2)
-        
         ma3_3_min_ago = self.algo_helper.ma_minutes_ago(3, 3)
-        
         ma3_9_min_ago = self.algo_helper.ma_minutes_ago(3, 9)
         ma4_2_min_ago = self.algo_helper.ma_minutes_ago(4, 2)
         ma4_4_min_ago = self.algo_helper.ma_minutes_ago(4, 4)
@@ -73,8 +75,8 @@ class ro_cano_che_ritorna:
         ma78_2_min_ago = self.algo_helper.ma_minutes_ago(78, 2)
         ma78_10_min_ago = self.algo_helper.ma_minutes_ago(78, 10)
         
-       
-    
+        
+        
         # LAST TRADE
         last_trade_action = self.algo_helper.last_trade_action
         last_trade_price = self.algo_helper.last_trade_price
@@ -121,8 +123,7 @@ class ro_cano_che_ritorna:
         #########################################################################################################################################################
         
         #                                                         T U T T E    L E   D E V I A T I O N  !
-        
-        
+       
         ##############################################################################################################
         # formula DEVIATION_1_gabbia
         deviation_1_gabbia = (ma8_last/ma39_last - 1) * 100 if ma39_last else 0
@@ -143,8 +144,6 @@ class ro_cano_che_ritorna:
         ##################################################################################################################
         
         ################################################################ deviation per comprare
-        
-        
         
         # formula DEVIATION_buy1 per la compra 1
         deviation_buy1 = (ma13_last/ma39_last - 1) * 100 if ma39_last else 0
@@ -275,8 +274,7 @@ class ro_cano_che_ritorna:
           
                                                                         #   B U Y 
             
-            
-           
+          
             ###########################################################################################################################################
             
             
@@ -290,26 +288,28 @@ class ro_cano_che_ritorna:
                 
                 if (
                     ma13_last > ma78_last
+                    and (ma48_prev < ma78_prev and ma48_last > ma78_last)      
                     and (ma39_prev < ma50_prev and ma39_last > ma50_last)       
                     
                     and ma2_last > ma2_2_min_ago
                     and ma4_last > ma8_last
+                    
                   
                 ):
 
-                    buy="BUY 1 con INCROCIO CLASSICO 39-50 riga 300"
+                    buy="BUY 1 con incrocio 48-78 and INCROCIO CLASSICO 39-50 riga 300"
                     action="buy"
                 
                     
-               
+                
+                
                 #--------------------------------------------------------------    BUY 1 DURANTE IL RIALZO con LA DEVIATION BUY 1
                 
                 
-                
-               
                 elif (
                     
                     deviation_buy1 > 0.09
+                    and (ma48_prev < ma78_prev and ma48_last > ma78_last)
                     and ma78_last > ma78_2_min_ago
                     
                     
@@ -319,20 +319,20 @@ class ro_cano_che_ritorna:
                   
                 ):
 
-                    buy = "BUY 1 con LA DEVIATION e ma78> riga 322"
+                    buy = "BUY 1 con incrocio 48-78 and DEVIATION BUY 1 e ma78> riga 322"
                     action = "buy"
                     
                     
                     # deviation_buy1 = ma11_last/ma39_last
                
-                
-                
+               
                 ####################################################################
                 
                 
                 elif (
                    
                     ma78_last < ma78_2_min_ago
+                    and (ma48_prev < ma78_prev and ma48_last > ma78_last)
                     and deviation_buy1 > 0.14
                     
                     and price > price_2_min_ago
@@ -341,16 +341,16 @@ class ro_cano_che_ritorna:
                   
                 ):
 
-                    buy = "BUY 1 con LA DEVIATION e ma78 < riga 344"
+                    buy = "BUY 1 con incrocio 48-78 and DEVIATION BUY 1 e ma78 < riga 344"
                     action = "buy"
                     
                     #deviation_buy1 = ma13_last/ma39_last
                     
-                
-                
+               
                 elif (
                    
                     ma78_last < ma78_2_min_ago
+                    and (ma48_prev < ma78_prev and ma48_last > ma78_last)
                     and (ma39_prev < ma78_prev and ma39_last > ma78_last) 
                     
                     and price > price_2_min_ago
@@ -359,7 +359,7 @@ class ro_cano_che_ritorna:
                   
                 ):
 
-                    buy = "se ma78 < - BUY 1 con incrocio classico 39-78 - riga 362"
+                    buy = "se ma78 < - BUY 1 con incrocio 48-78 (and incrocio classico 39-78) (he he) - riga 362"
                     action = "buy"
                     
                     
@@ -369,12 +369,13 @@ class ro_cano_che_ritorna:
                 
                 ##############################################################################
                 
-                
+               
                 
                 # BUY 1 DURANTE IL RIALZO con COMPRA_SPAZIO_TEMPO
                 if (
                     compra_spazio_tempo > 0.70
                     and ma3_last > ma33_last
+                    and (ma48_prev < ma78_prev and ma48_last > ma78_last)
                     
                   
                     # compra_spazio_tempo = ma3_last / ma3_3_min_ago
@@ -382,11 +383,10 @@ class ro_cano_che_ritorna:
                     # questa condizione e' molto molto rischiosa ! vedi un po'
                 ):
 
-                    buy = "BUY 1 con COMPRA_SPAZIO_TEMPO riga 385"
+                    buy = "BUY 1 con incrocio 48-78 and COMPRA_SPAZIO_TEMPO > 0.70 riga 386"
                     action = "buy"
                     
-                   
-                
+              
                 ##############################################################################################################################
                 # IMPORTANTISSIMO ! SOLO PER IL BUY 1 - PER COMPRARE DURANTE IL CROLLO - compa prega per me - ( cruise - david gilmour )
                 ##############################################################################################################################
