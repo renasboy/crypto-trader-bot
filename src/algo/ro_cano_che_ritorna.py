@@ -35,6 +35,9 @@ class ro_cano_che_ritorna:
         ma23_last, ma23_prev = self.algo_helper.ma_last_prev(23)
         
         ma25_last, ma25_prev = self.algo_helper.ma_last_prev(25)
+        
+        ma28_last, ma28_prev = self.algo_helper.ma_last_prev(28)
+        
         ma30_last, ma30_prev = self.algo_helper.ma_last_prev(30)
         ma33_last, ma33_prev = self.algo_helper.ma_last_prev(33)
         ma36_last, ma36_prev = self.algo_helper.ma_last_prev(36)
@@ -117,11 +120,7 @@ class ro_cano_che_ritorna:
         #########################################################################################################################################################
         #########################################################################################################################################################
         
-        
-        
         #                                                         T U T T E    L E   D E V I A T I O N  !
-        
-        
         
         
         ##############################################################################################################
@@ -134,9 +133,7 @@ class ro_cano_che_ritorna:
         deviation_2_gabbia = (ma8_last/ma50_last - 1) * 100 if ma50_last else 0
         self.algo_helper.log("deviation_2_gabbia: {}".format(deviation_2_gabbia))
         
-        
-        
-        
+       
         ##################################################################################################################  
         
         # formula deviation
@@ -204,8 +201,6 @@ class ro_cano_che_ritorna:
         
         
         
-        ########################################################################################
-      
         ######################################################################################## deviation per vendere
         
         
@@ -279,14 +274,19 @@ class ro_cano_che_ritorna:
             ###########################################################################################################################################
           
                                                                         #   B U Y 
+            
+            
            
             ###########################################################################################################################################
             
+            
             ######################################################################################################## COMPRA sessione 1
-
+            
+            
             if self.session == 1:
               
                 #------------------------------------------------------------ BUY 1 DURANTE IL RIALZO con INCROCIO CLASSICO 39-50
+                
                 
                 if (
                     ma13_last > ma78_last
@@ -607,7 +607,7 @@ class ro_cano_che_ritorna:
             
             
             # la deviation_sell_ma78 mi protegge - (ogni volta che c'e' stato un rialzo la ma3 non l' ha mai toccata !)
-            
+            # e l' incrocio 3 -28 e' fondamentale per evitare punto rosso sovrapposto al punto verde ! e mi protegge anche questa quando ma78 sta molto in alto !
             
             
             # VENDITA - da 0 a 3 minuti = da 0 a 180 secondi
@@ -695,14 +695,14 @@ class ro_cano_che_ritorna:
                 elif (
                     ma50_last < ma50_2_min_ago 
                     and deviation_sell_ma78 < -0.10
-                    and (ma3_prev > ma30_prev and ma3_last < ma30_last)
+                    and (ma3_prev > ma28_prev and ma3_last < ma28_last)
                   
                     # deviation_sell_ma78 = ma3_last / ma78_last
                 ):
-                    sell = "SELL (0-3 min) con ma50 < and deviation_sell_ma78 < -0.10 and incrocio 3-30- riga 702"
+                    sell = "SELL (0-3 min) con ma50 < and deviation_sell_ma78 < -0.10 and incrocio 3-28- riga 702"
                     action = "sell"
                     
-                    # incrocio 3 -30 e' fondamentale per evitare punto rosso sovrapposto al punto verde !
+                    # incrocio 3 -28 e' fondamentale per evitare punto rosso sovrapposto al punto verde !
                     
                 
                 
@@ -831,15 +831,15 @@ class ro_cano_che_ritorna:
                 elif (
                     ma50_last < ma50_2_min_ago 
                     and deviation_sell_ma78 < -0.10
-                    and (ma3_prev > ma30_prev and ma3_last < ma30_last)
+                    and (ma3_prev > ma28_prev and ma3_last < ma28_last)
                     
                     # deviation_sell_ma78 = ma3_last / ma78_last
                 ):
-                    sell = "SELL (3-5 min) con ma50 < and deviation_sell_ma78 < -0.10 and incrocio 3-30 - riga 838"
+                    sell = "SELL (3-5 min) con ma50 < and deviation_sell_ma78 < -0.10 and incrocio 3-28 - riga 838"
                     action = "sell"
                     
-                    # incrocio 3 -30 e' fondamentale per evitare punto rosso sovrapposto al punto verde !
-                
+                    # incrocio 3 -28 e' fondamentale per evitare punto rosso sovrapposto al punto verde !
+                    
                 
                 elif (
                     ma50_last < ma50_2_min_ago 
@@ -938,14 +938,14 @@ class ro_cano_che_ritorna:
                 elif (
                     ma50_last < ma50_2_min_ago 
                     and deviation_sell_ma78 < -0.10
-                    and (ma3_prev > ma30_prev and ma3_last < ma30_last)
+                    and (ma3_prev > ma28_prev and ma3_last < ma28_last)
                     
                     # deviation_sell_ma78 = ma3_last / ma78_last
                 ):
-                    sell = "SELL 12 (5-12 min) con ma50 < and deviation_sell_ma78 < -0.10 and incrocio 3-30 - riga 945"
+                    sell = "SELL 12 (5-12 min) con ma50 < and deviation_sell_ma78 < -0.10 and incrocio 3-28 - riga 945"
                     action = "sell"
                     
-                    # incrocio 3 -30 e' fondamentale per evitare punto rosso sovrapposto al punto verde !
+                    # incrocio 3 -28 e' fondamentale per evitare punto rosso sovrapposto al punto verde !
                     
                 elif (
                     ma50_last < ma50_2_min_ago 
