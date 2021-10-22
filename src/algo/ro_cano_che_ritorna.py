@@ -694,7 +694,7 @@ class ro_cano_che_ritorna:
                
                 elif (
                     ma50_last < ma50_2_min_ago 
-                    and deviation_sell_ma78 < -0.10
+                    and deviation_sell_ma78 < -0.15
                     and (ma3_prev > ma28_prev and ma3_last < ma28_last)
                   
                     # deviation_sell_ma78 = ma3_last / ma78_last
@@ -830,7 +830,7 @@ class ro_cano_che_ritorna:
                
                 elif (
                     ma50_last < ma50_2_min_ago 
-                    and deviation_sell_ma78 < -0.10
+                    and deviation_sell_ma78 < -0.15
                     and (ma3_prev > ma28_prev and ma3_last < ma28_last)
                     
                     # deviation_sell_ma78 = ma3_last / ma78_last
@@ -937,7 +937,7 @@ class ro_cano_che_ritorna:
                 
                 elif (
                     ma50_last < ma50_2_min_ago 
-                    and deviation_sell_ma78 < -0.10
+                    and deviation_sell_ma78 < -0.15
                     and (ma3_prev > ma28_prev and ma3_last < ma28_last)
                     
                     # deviation_sell_ma78 = ma3_last / ma78_last
@@ -1048,7 +1048,7 @@ class ro_cano_che_ritorna:
                 
                 elif (
                     ma50_last < ma50_2_min_ago 
-                    and deviation_sell_ma78 < -0.10
+                    and deviation_sell_ma78 < -0.20
                     # deviation_sell_ma78 = ma3_last / ma78_last
                 ):
                     sell = "SELL (5-12 min) con ma50 < and deviation_sell_ma78 < -0.10 - riga 1054"
@@ -1160,7 +1160,7 @@ class ro_cano_che_ritorna:
                 
                 elif (
                     ma50_last < ma50_2_min_ago 
-                    and deviation_sell_ma78 < -0.14
+                    and deviation_sell_ma78 < -0.20
                   
                     # deviation_sell_ma78 = ma3_last / ma78_last
                 ):
@@ -1277,7 +1277,7 @@ class ro_cano_che_ritorna:
                 
                 elif (
                     ma50_last < ma50_2_min_ago 
-                    and deviation_sell_ma78 < -0.17
+                    and deviation_sell_ma78 < -0.20
                   
                     # deviation_sell_ma78 = ma3_last / ma78_last
                 ):
