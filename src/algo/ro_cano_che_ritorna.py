@@ -64,6 +64,7 @@ class ro_cano_che_ritorna:
         ma3_3_min_ago = self.algo_helper.ma_minutes_ago(3, 3)
         ma3_9_min_ago = self.algo_helper.ma_minutes_ago(3, 9)
         ma4_2_min_ago = self.algo_helper.ma_minutes_ago(4, 2)
+        ma5_2_min_ago = self.algo_helper.ma_minutes_ago(5, 2)
         ma4_4_min_ago = self.algo_helper.ma_minutes_ago(4, 4)
         ma6_2_min_ago = self.algo_helper.ma_minutes_ago(6, 2)
         ma8_4_min_ago = self.algo_helper.ma_minutes_ago(8, 4)
@@ -89,7 +90,6 @@ class ro_cano_che_ritorna:
         prev_trade_price = self.algo_helper.prev_trade_price
         seconds_since_prev_trade = self.algo_helper.seconds_since_prev_trade
 
-        
         #########################################################################################################################################################
 
         # PREZZO DI ADESSO (di mercato) - CURRENT PRICE
@@ -292,6 +292,7 @@ class ro_cano_che_ritorna:
                     and (ma78_prev < ma100_prev and ma78_last > ma100_last)      
                     
                     and ma2_last > ma2_2_min_ago
+                    and ma5_last > ma5_2_min_ago
                     and ma4_last > ma8_last
                     
                   
@@ -311,7 +312,6 @@ class ro_cano_che_ritorna:
                     and (ma39_prev < ma78_prev and ma39_last > ma78_last)
                     
                     and ma78_last > ma78_2_min_ago
-                    
                     
                     and price > price_2_min_ago
                     and ma2_last > ma2_2_min_ago
