@@ -44,7 +44,7 @@ class ro_cano_che_ritorna:
         ma36_last, ma36_prev = self.algo_helper.ma_last_prev(36)
         ma39_last, ma39_prev = self.algo_helper.ma_last_prev(39)
         ma40_last, ma40_prev = self.algo_helper.ma_last_prev(40)
-        
+        ma47_last, ma47_prev = self.algo_helper.ma_last_prev(47)
         ma48_last, ma48_prev = self.algo_helper.ma_last_prev(48)
         
         ma50_last, ma50_prev = self.algo_helper.ma_last_prev(50)
@@ -208,7 +208,7 @@ class ro_cano_che_ritorna:
         self.algo_helper.log("deviation_sell: {}".format(deviation_sell))   
         
         # formula DEVIATION_sell_ma78
-        deviation_sell_ma78 = (ma3_last/ma78_last - 1) *100 if ma78_last else 0
+        deviation_sell_ma78 = (ma4_last/ma78_last - 1) *100 if ma78_last else 0
         self.algo_helper.log("deviation_sell_ma78: {}".format(deviation_sell_ma78))
         
         # formula deviation_ma39 per vendere un po' piu' giu' di ma39
@@ -283,12 +283,12 @@ class ro_cano_che_ritorna:
             
             if self.session == 1:
               
-                #------------------------------------------------------------ BUY 1 DURANTE IL RIALZO con INCROCIO CLASSICO 39-50
+                #------------------------------------------------------------ BUY 1 DURANTE IL RIALZO con INCROCIO CLASSICO 39-50 
                 
                 
                 if (
                     ma13_last > ma78_last
-                    and (ma48_prev < ma78_prev and ma48_last > ma78_last)      
+                    and (ma47_prev < ma78_prev and ma47_last > ma78_last)      
                     and (ma39_prev < ma50_prev and ma39_last > ma50_last)       
                     
                     and ma2_last > ma2_2_min_ago
@@ -297,7 +297,7 @@ class ro_cano_che_ritorna:
                   
                 ):
 
-                    buy="BUY 1 con incrocio 48-78 and INCROCIO CLASSICO 39-50 riga 300"
+                    buy="BUY 1 con incrocio 47-78 and INCROCIO CLASSICO 39-50 riga 300"
                     action="buy"
                 
                     
@@ -308,8 +308,8 @@ class ro_cano_che_ritorna:
                 
                 elif (
                     
-                    deviation_buy1 > 0.09
-                    and (ma48_prev < ma78_prev and ma48_last > ma78_last)
+                    deviation_buy1 > 0.08
+                    and (ma47_prev < ma78_prev and ma47_last > ma78_last)
                     and ma78_last > ma78_2_min_ago
                     
                     
@@ -319,7 +319,7 @@ class ro_cano_che_ritorna:
                   
                 ):
 
-                    buy = "BUY 1 con incrocio 48-78 and DEVIATION BUY 1 e ma78> riga 322"
+                    buy = "BUY 1 con incrocio 47-78 and DEVIATION BUY 1 e ma78> riga 322"
                     action = "buy"
                     
                     
@@ -332,7 +332,7 @@ class ro_cano_che_ritorna:
                 elif (
                    
                     ma78_last < ma78_2_min_ago
-                    and (ma48_prev < ma78_prev and ma48_last > ma78_last)
+                    and (ma47_prev < ma78_prev and ma47_last > ma78_last)
                     and deviation_buy1 > 0.14
                     
                     and price > price_2_min_ago
@@ -341,7 +341,7 @@ class ro_cano_che_ritorna:
                   
                 ):
 
-                    buy = "BUY 1 con incrocio 48-78 and DEVIATION BUY 1 e ma78 < riga 344"
+                    buy = "BUY 1 con incrocio 47-78 and DEVIATION BUY 1 e ma78 < riga 344"
                     action = "buy"
                     
                     #deviation_buy1 = ma13_last/ma39_last
@@ -350,7 +350,7 @@ class ro_cano_che_ritorna:
                 elif (
                    
                     ma78_last < ma78_2_min_ago
-                    and (ma48_prev < ma78_prev and ma48_last > ma78_last)
+                    and (ma47_prev < ma78_prev and ma47_last > ma78_last)
                     and (ma39_prev < ma78_prev and ma39_last > ma78_last) 
                     
                     and price > price_2_min_ago
@@ -359,7 +359,7 @@ class ro_cano_che_ritorna:
                   
                 ):
 
-                    buy = "se ma78 < - BUY 1 con incrocio 48-78 (and incrocio classico 39-78) (he he) - riga 362"
+                    buy = "se ma78 < - BUY 1 con incrocio 47-78 (and incrocio classico 39-78) (he he) - riga 362"
                     action = "buy"
                     
                     
@@ -375,7 +375,7 @@ class ro_cano_che_ritorna:
                 if (
                     compra_spazio_tempo > 0.70
                     and ma3_last > ma33_last
-                    and (ma48_prev < ma78_prev and ma48_last > ma78_last)
+                    and (ma47_prev < ma78_prev and ma47_last > ma78_last)
                     
                   
                     # compra_spazio_tempo = ma3_last / ma3_3_min_ago
@@ -383,7 +383,7 @@ class ro_cano_che_ritorna:
                     # questa condizione e' molto molto rischiosa ! vedi un po'
                 ):
 
-                    buy = "BUY 1 con incrocio 48-78 and COMPRA_SPAZIO_TEMPO > 0.70 riga 386"
+                    buy = "BUY 1 con incrocio 47-78 and COMPRA_SPAZIO_TEMPO > 0.70 riga 386"
                     action = "buy"
                     
               
@@ -697,7 +697,7 @@ class ro_cano_che_ritorna:
                     and deviation_sell_ma78 < -0.15
                     and (ma3_prev > ma28_prev and ma3_last < ma28_last)
                   
-                    # deviation_sell_ma78 = ma3_last / ma78_last
+                    # deviation_sell_ma78 = ma4_last / ma78_last
                 ):
                     sell = "SELL (0-3 min) con ma50 < and deviation_sell_ma78 < -0.10 and incrocio 3-28- riga 702"
                     action = "sell"
@@ -772,7 +772,7 @@ class ro_cano_che_ritorna:
                     ma50_last >= ma50_2_min_ago 
                     and deviation_sell_ma78 < -0.10
                     
-                    # deviation_sell_ma78 = ma3_last / ma78_last
+                    # deviation_sell_ma78 = ma4_last / ma78_last
                 
                 ):
                     sell = "SELL (3-5 min) con ma50 > and deviation_sell_ma78 < -0.10 - riga 778"
@@ -879,7 +879,7 @@ class ro_cano_che_ritorna:
                     ma50_last >= ma50_2_min_ago 
                     and deviation_sell_ma78 < -0.10
                     
-                    # deviation_sell_ma78 = ma3_last / ma78_last
+                    # deviation_sell_ma78 = ma4_last / ma78_last
                 
                 ):
                     sell = "SELL (5-12 min) con ma50 > and deviation_sell_ma78 < -0.10 - riga 885"
@@ -940,7 +940,7 @@ class ro_cano_che_ritorna:
                     and deviation_sell_ma78 < -0.15
                     and (ma3_prev > ma28_prev and ma3_last < ma28_last)
                     
-                    # deviation_sell_ma78 = ma3_last / ma78_last
+                    # deviation_sell_ma78 = ma4_last / ma78_last
                 ):
                     sell = "SELL 12 (5-12 min) con ma50 < and deviation_sell_ma78 < -0.10 and incrocio 3-28 - riga 945"
                     action = "sell"
@@ -985,7 +985,7 @@ class ro_cano_che_ritorna:
                     ma50_last >= ma50_2_min_ago 
                     and deviation_sell_ma78 < -0.10
                     
-                    # deviation_sell_ma78 = ma3_last / ma78_last
+                    # deviation_sell_ma78 = ma4_last / ma78_last
                 
                 ):
                     sell = "SELL (12-24 min) con ma50 > and deviation_sell_ma78 < -0.10 - riga 991"
@@ -1049,7 +1049,7 @@ class ro_cano_che_ritorna:
                 elif (
                     ma50_last < ma50_2_min_ago 
                     and deviation_sell_ma78 < -0.20
-                    # deviation_sell_ma78 = ma3_last / ma78_last
+                    # deviation_sell_ma78 = ma4_last / ma78_last
                 ):
                     sell = "SELL (5-12 min) con ma50 < and deviation_sell_ma78 < -0.10 - riga 1054"
                     action = "sell"
@@ -1098,7 +1098,7 @@ class ro_cano_che_ritorna:
                     ma50_last >= ma50_2_min_ago 
                     and deviation_sell_ma78 < -0.15
                     
-                    # deviation_sell_ma78 = ma3_last / ma78_last
+                    # deviation_sell_ma78 = ma4_last / ma78_last
                 
                 ):
                     sell = "SELL (24-60 min) con ma50 > and deviation_sell_ma78 < -0.15 - riga 1104"
@@ -1160,11 +1160,11 @@ class ro_cano_che_ritorna:
                 
                 elif (
                     ma50_last < ma50_2_min_ago 
-                    and deviation_sell_ma78 < -0.20
+                    and deviation_sell_ma78 < -0.21
                   
-                    # deviation_sell_ma78 = ma3_last / ma78_last
+                    # deviation_sell_ma78 = ma4_last / ma78_last
                 ):
-                    sell = "SELL (24-60 min) con ma50 < and deviation_sell_ma78 < -0.14 - riga 1167"
+                    sell = "SELL (24-60 min) con ma50 < and deviation_sell_ma78 < -0.21 - riga 1167"
                     action = "sell"
                     
                     
@@ -1213,7 +1213,7 @@ class ro_cano_che_ritorna:
                     ma50_last >= ma50_2_min_ago 
                     and deviation_sell_ma78 < -0.20
                     
-                    # deviation_sell_ma78 = ma3_last / ma78_last
+                    # deviation_sell_ma78 = ma4_last / ma78_last
                 
                 ):
                     sell = "SELL dopo 60 min con ma50 > and deviation_sell_ma78 < -0.20 - riga 1219"
@@ -1279,7 +1279,7 @@ class ro_cano_che_ritorna:
                     ma50_last < ma50_2_min_ago 
                     and deviation_sell_ma78 < -0.20
                   
-                    # deviation_sell_ma78 = ma3_last / ma78_last
+                    # deviation_sell_ma78 = ma4_last / ma78_last
                 ):
                     sell = "SELL dopo 60 min con ma50 < and deviation_sell_ma78 < -0.17 - riga 1284"
                     action = "sell"
@@ -1360,5 +1360,5 @@ class ro_cano_che_ritorna:
         # ave comparo meo !
         
         
-        ##
+        # AGAINST THE WIND - Bob Seger & Jason Aldean
         
