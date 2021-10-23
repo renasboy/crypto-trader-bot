@@ -6,7 +6,7 @@
                 # Tom Petty - Something Good Coming
                 ###################################                23 ottobre 2021 - ore 18:49 - funziona, compa.
 
-class ro_cano_che_ritorna:
+class maddog:
     def __init__(self, helper):
         self.algo_helper = helper
         self.session = 0
