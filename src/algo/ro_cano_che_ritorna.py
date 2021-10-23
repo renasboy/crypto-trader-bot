@@ -4,7 +4,7 @@
                 # ti voglio bene, compa.                                     
                 # compa, compa caro !                                          
                 # Tom Petty - Something Good Coming
-                ###################################                23 ottobre 2021 funziona
+                ###################################                23 ottobre 2021 funziona 0re 18-40
 
 class ro_cano_che_ritorna:
     def __init__(self, helper):
@@ -49,7 +49,7 @@ class ro_cano_che_ritorna:
         
         ma50_last, ma50_prev = self.algo_helper.ma_last_prev(50)
         ma78_last, ma78_prev = self.algo_helper.ma_last_prev(78)
-        
+        ma100_last, ma100_prev = self.algo_helper.ma_last_prev(100)
         
         
         
@@ -283,13 +283,13 @@ class ro_cano_che_ritorna:
             
             if self.session == 1:
               
-                #------------------------------------------------------------ BUY 1 DURANTE IL RIALZO con INCROCIO CLASSICO 39-50 
+                #------------------------------------------------------------ BUY 1 DURANTE IL RIALZO con INCROCIO CLASSICO 78-100 
+                
                 
                 
                 if (
                     ma13_last > ma78_last
-                    and (ma39_prev < ma78_prev and ma39_last > ma78_last)      
-                    and (ma39_prev < ma50_prev and ma39_last > ma50_last)       
+                    and (ma78_prev < ma100_prev and ma78_last > ma100_last)      
                     
                     and ma2_last > ma2_2_min_ago
                     and ma4_last > ma8_last
@@ -308,8 +308,8 @@ class ro_cano_che_ritorna:
                 
                 elif (
                     deviation_buy1 > 0.56
-                    #deviation_buy1 > 0.08
-                    #and (ma39_prev < ma78_prev and ma39_last > ma78_last)
+                    and (ma39_prev < ma78_prev and ma39_last > ma78_last)
+                    
                     and ma78_last > ma78_2_min_ago
                     
                     
@@ -319,11 +319,10 @@ class ro_cano_che_ritorna:
                   
                 ):  
                   
-                    buy = "BUY 1 con DEVIATION BUY 1 e ma78 > riga 322"
-                    #buy = "BUY 1 con incrocio 39-78 and DEVIATION BUY 1 e ma78> riga 322"
+                    buy = "BUY 1 con incrocio 39-78 and DEVIATION BUY 1 e ma78> riga 322"
                     action = "buy"
                     
-                    
+                
                     # deviation_buy1 = ma13_last/ma39_last
                
                
@@ -360,7 +359,7 @@ class ro_cano_che_ritorna:
                   
                 ):
 
-                    buy = "se ma78 < - BUY 1 con incrocio 39-78 (and incrocio classico 39-78) (he he) - riga 362"
+                    buy = "se ma78 < - BUY 1 con incrocio 39-78 - riga 362"
                     action = "buy"
                     
                     
