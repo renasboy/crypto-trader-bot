@@ -4,7 +4,7 @@
                 # ti voglio bene, compa.                                     
                 # compa, compa caro !                                          
                 # Tom Petty - Something Good Coming
-                ###################################                23 ottobre 2021 funziona 0re 18-40
+                ###################################                23 ottobre 2021 - ore 18:49 - funziona, compa.
 
 class ro_cano_che_ritorna:
     def __init__(self, helper):
