@@ -309,7 +309,7 @@ class ro_cano_che_ritorna:
                 
                 elif (
                     deviation_buy1 > 0.56
-                    and (ma39_prev < ma78_prev and ma39_last > ma78_last)
+                    and (ma13_prev < ma39_prev and ma13_last > ma39_last)
                     
                     and ma78_last > ma78_2_min_ago
                     
@@ -319,7 +319,7 @@ class ro_cano_che_ritorna:
                   
                 ):  
                   
-                    buy = "BUY 1 con incrocio 39-78 and DEVIATION BUY 1 e ma78> riga 322"
+                    buy = "BUY 1 con incrocio 13-39 and DEVIATION BUY 1 ALTA e ma78 > riga 322"
                     action = "buy"
                     
                 
@@ -341,7 +341,7 @@ class ro_cano_che_ritorna:
                   
                 ):
 
-                    buy = "BUY 1 con incrocio 39-78 and DEVIATION BUY 1 e ma78 < riga 344"
+                    buy = "BUY 1 con incrocio 39-78 and DEVIATION BUY 1 BASSA e ma78 < riga 344"
                     action = "buy"
                     
                     #deviation_buy1 = ma13_last/ma39_last
