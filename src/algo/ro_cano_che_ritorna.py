@@ -471,9 +471,9 @@ class ro_cano_che_ritorna:
            
             else: 
                 if (
-                    deviation_buy3 > 0.10
+                    deviation_buy3 > 0.09
                     and ma3_last > ma13_last
-                    and deviation_ma7_sopra_ma40 > 0.10
+                    and deviation_ma7_sopra_ma40 > 0.09
                     and (ma4_prev < ma9_prev and ma4_last > ma9_last) 
                     
                     and ma4_last > ma50_last
