@@ -90,13 +90,13 @@ class ro_cano_che_ritorna:
         prev_trade_price = self.algo_helper.prev_trade_price
         seconds_since_prev_trade = self.algo_helper.seconds_since_prev_trade
 
-        #########################################################################################################################################################
+        
 
         # PREZZO DI ADESSO (di mercato) - CURRENT PRICE
         price = self.algo_helper.price
         
         
-        ##########################################################################################################################################################
+        
 
 
         # PREZZO di X MINUTI FA (di mercato) - 
@@ -239,7 +239,7 @@ class ro_cano_che_ritorna:
         
         # APRE E CHIUDE GABBIA
         
-        if deviation_1_gabbia > -0.50 and deviation_2_gabbia > -0.50 or deviation_buy_crollo_1 < -1.90:
+        if deviation_1_gabbia > -0.49 and deviation_2_gabbia > -0.49 or deviation_buy_crollo_1 < -1.90:
           
             # deviation_1_gabbia = ma8_last / ma39_last
             # deviation_2_gabbia = ma8_last / ma50_last
