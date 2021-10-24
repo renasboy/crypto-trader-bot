@@ -426,7 +426,8 @@ class ro_cano_che_ritorna:
             ############################################################################################################
 
             #############################################################################################################      COMPRA sessione 2
-
+            
+            
             elif self.session == 2:
               
                 if (
@@ -464,16 +465,19 @@ class ro_cano_che_ritorna:
                     
                     
                     # deviation_buy2 = ma8_last / ma50
-           
-                  
-            # ###############################################################################################################     COMPRA sessione 3 in poi
+                    
+            
+            ############################################################################################################
 
-           
-            else: 
+            #############################################################################################################      COMPRA sessione 3
+        
+            elif self.session == 3:
+              
+                
                 if (
-                    deviation_buy3 > 0.09
+                    deviation_buy3 > 0.11
                     and ma3_last > ma13_last
-                    and deviation_ma7_sopra_ma40 > 0.09
+                    and deviation_ma7_sopra_ma40 > 0.11
                     and (ma4_prev < ma9_prev and ma4_last > ma9_last) 
                     
                     and ma4_last > ma50_last
@@ -481,15 +485,14 @@ class ro_cano_che_ritorna:
                 ):
                     buy = "BUY 3A riga 482"
                     action = "buy"    
-                        
-                    
-                    
-
-                elif (
                 
-                    deviation_buy3 > 0.02
-                    and delta_buy3_incrocio_ma3_ma8 > 0.06
-                    and deviation_ma4_sopra_ma30 > 0.18
+                
+                
+                
+                elif (
+                    deviation_buy3 > 0.03
+                    and delta_buy3_incrocio_ma3_ma8 > 0.07
+                    and deviation_ma4_sopra_ma30 > 0.19
                     
                     and ma3_last > ma8_last
                     and ma3_last > ma78_last
@@ -497,6 +500,46 @@ class ro_cano_che_ritorna:
                
                 ):
                     buy = "BUY 3B RIVOLUZIONARIO - riga 499"
+                    action = "buy"
+                    
+                  
+                    # deviation_buy3 = ma4_last/ma30_last
+                    
+           
+            
+            
+            # ###############################################################################################################     COMPRA sessione 4 in poi
+            # --------------------------------------------------------------------------------------------------------------------- deviation piu' alte !
+
+           
+            else: 
+                if (
+                    deviation_buy3 > 0.12
+                    and ma3_last > ma13_last
+                    and deviation_ma7_sopra_ma40 > 0.12
+                    and (ma4_prev < ma9_prev and ma4_last > ma9_last) 
+                    
+                    and ma4_last > ma50_last
+                    
+                ):
+                    buy = "BUY 4A riga 526"
+                    action = "buy"    
+                        
+                    
+                    
+
+                elif (
+                
+                    deviation_buy3 > 0.04
+                    and delta_buy3_incrocio_ma3_ma8 > 0.08
+                    and deviation_ma4_sopra_ma30 > 0.20
+                    
+                    and ma3_last > ma8_last
+                    and ma3_last > ma78_last
+                    and ma4_last > ma4_2_min_ago 
+               
+                ):
+                    buy = "BUY 4B RIVOLUZIONARIO - riga 543"
                     action = "buy"
                     
                   
