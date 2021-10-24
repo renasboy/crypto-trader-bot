@@ -239,7 +239,7 @@ class maddog:
         
         # APRE E CHIUDE GABBIA
         
-        if deviation_1_gabbia > -0.50 and deviation_2_gabbia > -0.50 or deviation_buy_crollo_1 < -1.90:
+        if deviation_1_gabbia > -0.48 and deviation_2_gabbia > -0.48 or deviation_buy_crollo_1 < -1.90:
           
             # deviation_1_gabbia = ma8_last / ma39_last
             # deviation_2_gabbia = ma8_last / ma50_last
