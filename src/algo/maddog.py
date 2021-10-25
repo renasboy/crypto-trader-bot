@@ -513,7 +513,7 @@ class maddog:
             # 1) ro cano VENDE CON UN SALVAGENTE
           
             if (
-                deviation_ma39 < -0.24
+                deviation_ma39 < -0.27
                 and ma50_last < ma50_2_min_ago
             ):
               
