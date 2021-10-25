@@ -44,6 +44,9 @@ class ro_cano_che_ritorna:
         ma36_last, ma36_prev = self.algo_helper.ma_last_prev(36)
         ma39_last, ma39_prev = self.algo_helper.ma_last_prev(39)
         ma40_last, ma40_prev = self.algo_helper.ma_last_prev(40)
+        
+        ma45_last, ma45_prev = self.algo_helper.ma_last_prev(45)
+        
         ma47_last, ma47_prev = self.algo_helper.ma_last_prev(47)
         ma48_last, ma48_prev = self.algo_helper.ma_last_prev(48)
         
@@ -94,10 +97,7 @@ class ro_cano_che_ritorna:
 
         # PREZZO DI ADESSO (di mercato) - CURRENT PRICE
         price = self.algo_helper.price
-        
-        
-        
-
+      
 
         # PREZZO di X MINUTI FA (di mercato) - 
         
@@ -491,7 +491,7 @@ class ro_cano_che_ritorna:
                 
                 elif (
                     ma78_last > ma78_2_min_ago
-                    deviation_buy3 > 0.02
+                    and deviation_buy3 > 0.02
                     and delta_buy3_incrocio_ma3_ma8 > 0.06
                     and deviation_ma4_sopra_ma30 > 0.18
                     
@@ -1218,12 +1218,12 @@ class ro_cano_che_ritorna:
                 
                 elif (
                     ma50_last >= ma50_2_min_ago 
-                    and (ma3_prev > ma39_prev and ma3_last < ma39_last)
+                    and (ma3_prev > ma45_prev and ma3_last < ma45_last)
                     and deviation_sell > 0.61 and deviation_sell < 1.20
                     
                     # deviation_sell = ma3_last/last_trade_price
                 ):
-                    sell = "SELL (24-60 min) con ma50 > incrocio 3- 39 and deviation_sell 0.61 - 1.20 - riga 1226"
+                    sell = "SELL (24-60 min) con ma50 > incrocio 3- 45 ! and deviation_sell 0.61 - 1.20 - riga 1226"
                     action = "sell"
                     
                     
