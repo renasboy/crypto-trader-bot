@@ -325,7 +325,7 @@ class maddog:
                   
                
                 #--------------------------------------------------------------    BUY 1 CON INCROCIO 13 - 100 mi piace 
-                
+                                                                              #    # quando 13-100 si incrociano price ma2 e ma4 sono gia' in ribasso
                 
                 elif (
                     
