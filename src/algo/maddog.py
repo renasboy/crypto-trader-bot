@@ -323,7 +323,6 @@ class maddog:
                 
                     # deviation_buy1 = ma13_last/ma39_last
                   
-                
                
                 #--------------------------------------------------------------    BUY 1 CON INCROCIO 13 - 100 mi piace 
                 
@@ -334,6 +333,7 @@ class maddog:
                    
                     and price > price_2_min_ago
                     and ma2_last > ma2_2_min_ago
+                    and ma3_last > ma3_3_min_ago
                     and ma4_last > ma4_2_min_ago
                   
                     # quando 13-100 si incrociano price ma2 e ma4 sono gia' in ribasso
