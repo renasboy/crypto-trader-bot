@@ -880,7 +880,7 @@ class maddog:
                 
                 elif (
                     ma50_last >= ma50_2_min_ago 
-                    and (ma3_prev > ma33_prev and ma3_last < ma33_last) 
+                    and (ma3_prev > ma18_prev and ma3_last < ma18_last) 
                     and deviation_sell > 0.61 and deviation_sell < 1.20
                  
                 ):
@@ -978,7 +978,7 @@ class maddog:
                 
                 elif (
                     ma50_last >= ma50_2_min_ago 
-                    and (ma3_prev > ma33_prev and ma3_last < ma33_last)
+                    and (ma3_prev > ma18_prev and ma3_last < ma18_last)
                     and deviation_sell > 0.61 and deviation_sell < 1.20
                     
                     # deviation_sell = ma3_last/last_trade_price
@@ -1006,7 +1006,7 @@ class maddog:
                     
                     and (ma3_prev > ma28_prev and ma3_last < ma28_last)
                     
-                    # deviation_sell_ma78 = ma4_last / ma78_last
+                    
                 ):
                     sell = "SELL 12 (5-12 min) con ma50 < and incrocio 3-28 - riga 1027"
                     action = "sell"
@@ -1076,7 +1076,7 @@ class maddog:
                 
                 elif (
                     ma50_last >= ma50_2_min_ago 
-                    and (ma3_prev > ma33_prev and ma3_last < ma33_last)
+                    and (ma3_prev > ma18_prev and ma3_last < ma18_last)
                     and deviation_sell > 0.61 and deviation_sell < 1.20
                     
                     # deviation_sell = ma3_last/last_trade_price
