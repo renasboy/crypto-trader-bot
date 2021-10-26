@@ -625,7 +625,7 @@ class maddog:
           
             if (
                 deviation_ma39 < -0.25
-                and ma50_last < ma50_2_min_ago
+                and ma50_last > ma50_2_min_ago
             ):
               
                 sell = "SELL SALVAGENTE 3-39 con ma50 < riga 615"
@@ -642,7 +642,7 @@ class maddog:
                 seconds_since_last_trade > max_hold_time_in_seconds 
                 and ma2_last < last_trade_price 
                 and deviation < -0.37
-                and ma78_last < ma78_2_min_ago
+                
             
             ):
                 
@@ -708,19 +708,8 @@ class maddog:
                 
                 
                 # con ma50 >
+                
                 if (
-                    ma50_last >= ma50_2_min_ago 
-                    and deviation_sell_ma78 < -0.10
-                    
-                    # deviation_sell_ma78 = ma3_last / ma78_last
-                    
-                ):
-                    sell = "SELL (0-3 min) con ma50 > and deviation_sell_ma78 < -0.10 - riga 702"
-                    action = "sell"
-                    
-                
-                
-                elif (
                     ma50_last >= ma50_2_min_ago 
                     and (ma3_prev > ma39_prev and ma3_last < ma39_last)
                     and deviation_sell < -0.23
@@ -788,12 +777,12 @@ class maddog:
                
                 elif (
                     ma50_last < ma50_2_min_ago 
-                    and deviation_sell_ma78 < -0.15
+                    
                     and (ma3_prev > ma28_prev and ma3_last < ma28_last)
                   
-                    # deviation_sell_ma78 = ma4_last / ma78_last
+                    
                 ):
-                    sell = "SELL (0-3 min) con ma50 < and deviation_sell_ma78 < -0.10 and incrocio 3-28- riga 780"
+                    sell = "SELL (0-3 min) con ma50 < and incrocio 3-28- riga 780"
                     action = "sell"
                     
                     # incrocio 3 -28 e' fondamentale per evitare punto rosso sovrapposto al punto verde !
@@ -862,20 +851,9 @@ class maddog:
             elif seconds_since_last_trade > 180 and seconds_since_last_trade <= 300:
               
               
+                
+                
                 if (
-                    ma50_last >= ma50_2_min_ago 
-                    and deviation_sell_ma78 < -0.10
-                    
-                    # deviation_sell_ma78 = ma4_last / ma78_last
-                
-                ):
-                    sell = "SELL (3-5 min) con ma50 > and deviation_sell_ma78 < -0.10 - riga 856"
-                    action = "sell"
-                    
-                
-                
-                
-                elif (
                     ma50_last >= ma50_2_min_ago 
                     and (ma3_prev > ma39_prev and ma3_last < ma39_last)
                     and deviation_sell < -0.24
@@ -927,12 +905,12 @@ class maddog:
                
                 elif (
                     ma50_last < ma50_2_min_ago 
-                    and deviation_sell_ma78 < -0.15
+                    
                     and (ma3_prev > ma28_prev and ma3_last < ma28_last)
                     
                     # deviation_sell_ma78 = ma3_last / ma78_last
                 ):
-                    sell = "SELL (3-5 min) con ma50 < and deviation_sell_ma78 < -0.10 and incrocio 3-28 - riga 919"
+                    sell = "SELL (3-5 min) con ma50 < and incrocio 3-28 - riga 919"
                     action = "sell"
                     
                     # incrocio 3 -28 e' fondamentale per evitare punto rosso sovrapposto al punto verde !
@@ -973,18 +951,8 @@ class maddog:
             
             elif seconds_since_last_trade > 300 and seconds_since_last_trade <= 720:
            
-                if (
-                    ma50_last >= ma50_2_min_ago 
-                    and deviation_sell_ma78 < -0.10
-                    
-                    # deviation_sell_ma78 = ma4_last / ma78_last
                 
-                ):
-                    sell = "SELL (5-12 min) con ma50 > and deviation_sell_ma78 < -0.10 - riga 967"
-                    action = "sell"
-                  
-                  
-                elif (
+                if (
                     ma50_last >= ma50_2_min_ago 
                     and (ma3_prev > ma39_prev and ma3_last < ma39_last)
                     and deviation_sell < -0.25
@@ -1035,12 +1003,12 @@ class maddog:
                 
                 elif (
                     ma50_last < ma50_2_min_ago 
-                    and deviation_sell_ma78 < -0.15
+                    
                     and (ma3_prev > ma28_prev and ma3_last < ma28_last)
                     
                     # deviation_sell_ma78 = ma4_last / ma78_last
                 ):
-                    sell = "SELL 12 (5-12 min) con ma50 < and deviation_sell_ma78 < -0.10 and incrocio 3-28 - riga 1027"
+                    sell = "SELL 12 (5-12 min) con ma50 < and incrocio 3-28 - riga 1027"
                     action = "sell"
                     
                     # incrocio 3 -28 e' fondamentale per evitare punto rosso sovrapposto al punto verde !
@@ -1081,19 +1049,8 @@ class maddog:
             elif seconds_since_last_trade > 720 and seconds_since_last_trade <= 1440:
           
                 
-                if (
-                    ma50_last >= ma50_2_min_ago 
-                    and deviation_sell_ma78 < -0.10
-                    
-                    # deviation_sell_ma78 = ma4_last / ma78_last
                 
-                ):
-                    sell = "SELL (12-24 min) con ma50 > and deviation_sell_ma78 < -0.10 - riga 1075"
-                    action = "sell"
-                  
-                  
-                  
-                elif (
+                if (
                     ma50_last >= ma50_2_min_ago 
                     and (ma3_prev > ma39_prev and ma3_last < ma39_last)
                     and deviation_sell < -0.30
@@ -1146,14 +1103,6 @@ class maddog:
                 
                 
                 
-                elif (
-                    ma50_last < ma50_2_min_ago 
-                    and deviation_sell_ma78 < -0.20
-                    # deviation_sell_ma78 = ma4_last / ma78_last
-                ):
-                    sell = "SELL (5-12 min) con ma50 < and deviation_sell_ma78 < -0.10 - riga 1138"
-                    action = "sell"
-                
                 
                 
                 elif (
@@ -1195,18 +1144,6 @@ class maddog:
                 
                 
                 if (
-                    ma50_last >= ma50_2_min_ago 
-                    and deviation_sell_ma78 < -0.15
-                    
-                    # deviation_sell_ma78 = ma4_last / ma78_last
-                
-                ):
-                    sell = "SELL (24-60 min) con ma50 > and deviation_sell_ma78 < -0.15 - riga 1188"
-                    action = "sell"
-                    
-                
-                
-                elif (
                     ma50_last >= ma50_2_min_ago 
                     and (ma3_prev > ma39_prev and ma3_last < ma39_last)
                     and deviation_sell < -0.26 
@@ -1261,17 +1198,7 @@ class maddog:
                 ##################################################################### con trend discendente
                 
                 
-                elif (
-                    ma50_last < ma50_2_min_ago 
-                    and deviation_sell_ma78 < -0.21
-                  
-                    # deviation_sell_ma78 = ma4_last / ma78_last
-                ):
-                    sell = "SELL (24-60 min) con ma50 < and deviation_sell_ma78 < -0.21 - riga 1254"
-                    action = "sell"
-                    
-                
-                
+           
                 elif (
                     ma50_last < ma50_2_min_ago 
                     and (ma3_prev > ma33_prev and ma3_last < ma33_last) 
@@ -1310,20 +1237,8 @@ class maddog:
                 
                 
                 
+                
                 if (
-                    ma50_last >= ma50_2_min_ago 
-                    and deviation_sell_ma78 < -0.20
-                    
-                    # deviation_sell_ma78 = ma4_last / ma78_last
-                
-                ):
-                    sell = "SELL dopo 60 min con ma50 > and deviation_sell_ma78 < -0.20 - riga 1304"
-                    action = "sell"
-                    
-                
-                
-                
-                elif (
                     ma50_last > ma50_2_min_ago 
                     and (ma3_prev > ma39_prev and ma3_last < ma39_last)
                     and deviation_sell < -0.30
@@ -1377,17 +1292,7 @@ class maddog:
                 ######################################################################################## con trend discendente
                 
                 
-                elif (
-                    ma50_last < ma50_2_min_ago 
-                    and deviation_sell_ma78 < -0.24
-                  
-                    # deviation_sell_ma78 = ma4_last / ma78_last
-                ):
-                    sell = "SELL dopo 60 min con ma50 < and deviation_sell_ma78 < -0.24 - riga 1370"
-                    action = "sell"
-                    
-                
-                
+           
                 elif (
                     ma50_last < ma50_2_min_ago 
                     and (ma3_prev > ma33_prev and ma3_last < ma33_last) 
@@ -1412,22 +1317,8 @@ class maddog:
            # A T T E N Z I O N E !     altre  VENDITE ECCEZIONALI 
            
             # ro cano VENDE " DOPO x MINUTI " and...
-
-            
+ 
             if (
-                seconds_since_last_trade > max_hold_time_in_seconds 
-                and (ma2_prev > ma78_prev and ma2_last < ma78_last) 
-                and deviation_sell < -0.48
-              
-            ):
-
-                sell = "SELL TEMPO 1 e con incrocio 2 - 78 and deviation_sell < -0.48 - riga 1408"
-                action = "sell"
-                
-            #############################################################################################
-                
-                
-            elif (
                 seconds_since_last_trade > max_hold_time_in_seconds 
                 and ma8_last < ma39_last
                 and deviation_sell < -0.31
@@ -1464,30 +1355,5 @@ class maddog:
         
         # AGAINST THE WIND - Bob Seger & Jason Aldean
                      
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
   
   
