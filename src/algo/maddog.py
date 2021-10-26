@@ -331,7 +331,7 @@ class maddog:
                 elif (
                     
                     (ma13_prev < ma100_prev and ma13_last > ma100_last)
-                    and ma78_last > ma78_5_min_ago
+                    and ma78_last > ma78_7_min_ago
                     and price > price_2_min_ago
                     and ma2_last > ma2_2_min_ago
                     and ma3_last > ma3_3_min_ago
