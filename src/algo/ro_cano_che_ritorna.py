@@ -276,11 +276,13 @@ class ro_cano_che_ritorna:
             ###########################################################################################################################################
             
             
+            
             ######################################################################################################## COMPRA sessione 1
             
             
             if self.session == 1:
-              
+                
+                
                 #------------------------------------------------------------ BUY 1 DURANTE IL RIALZO con INCROCIO CLASSICO 78-100 
                 
                
@@ -463,18 +465,18 @@ class ro_cano_che_ritorna:
                     
                     # deviation_buy2 = ma8_last / ma50
                     
-            
+        
             ############################################################################################################
 
             #############################################################################################################      COMPRA sessione 3
             
             
-            
             elif self.session == 3:
               
-                
-                if (
-                    deviation_buy3 > 0.11
+             
+                if (    
+                    ma78_last >= ma78_2_min_ago
+                    and deviation_buy3 > 0.11
                     and ma3_last > ma13_last
                     and deviation_ma7_sopra_ma40 > 0.11
                     and (ma4_prev < ma9_prev and ma4_last > ma9_last) 
@@ -486,9 +488,9 @@ class ro_cano_che_ritorna:
                     action = "buy"    
                 
                 
-                
+              
                 elif (
-                    ma78_last > ma78_2_min_ago
+                    ma78_last >= ma78_2_min_ago
                     and deviation_buy3 > 0.02
                     and delta_buy3_incrocio_ma3_ma8 > 0.06
                     and deviation_ma4_sopra_ma30 > 0.18
@@ -505,8 +507,7 @@ class ro_cano_che_ritorna:
                     # deviation_buy3 = ma4_last/ma30_last
                 
                 
-                
-                
+               
                 elif (
                     
                     ma78_last < ma78_2_min_ago
@@ -529,13 +530,16 @@ class ro_cano_che_ritorna:
             
             
             # ###############################################################################################################     COMPRA sessione 4 in poi
-            # --------------------------------------------------------------------------------------------------------------------- deviation piu' alte !
+            # --------------------------------------------------------------------------------------------------------------------- deviation piu' alte se ma 78 < !
 
             
             
-            else: 
+            else:
+                
                 if (
-                    deviation_buy3 > 0.12
+                    
+                    ma78_last >= ma78_2_min_ago
+                    and deviation_buy3 > 0.12
                     and ma3_last > ma13_last
                     and deviation_ma7_sopra_ma40 > 0.12
                     and (ma4_prev < ma9_prev and ma4_last > ma9_last) 
@@ -546,14 +550,12 @@ class ro_cano_che_ritorna:
                     buy = "BUY 4A riga 548"
                     action = "buy"    
                         
-                    
-                
-                
+               
                 elif (
-                    ma78_last > ma78_2_min_ago
-                    and deviation_buy3 > 0.03
-                    and delta_buy3_incrocio_ma3_ma8 > 0.07
-                    and deviation_ma4_sopra_ma30 > 0.19
+                    ma78_last >= ma78_2_min_ago
+                    and deviation_buy3 > 0.02
+                    and delta_buy3_incrocio_ma3_ma8 > 0.06
+                    and deviation_ma4_sopra_ma30 > 0.18
                     
                     and ma3_last > ma8_last
                     and ma3_last > ma78_last
@@ -1361,11 +1363,11 @@ class ro_cano_che_ritorna:
                 
                 elif (
                     ma50_last < ma50_2_min_ago 
-                    and deviation_sell_ma78 < -0.25
+                    and deviation_sell_ma78 < -0.24
                   
                     # deviation_sell_ma78 = ma4_last / ma78_last
                 ):
-                    sell = "SELL dopo 60 min con ma50 < and deviation_sell_ma78 < -0.25 - riga 1370"
+                    sell = "SELL dopo 60 min con ma50 < and deviation_sell_ma78 < -0.24 - riga 1370"
                     action = "sell"
                     
                 
@@ -1373,10 +1375,10 @@ class ro_cano_che_ritorna:
                 elif (
                     ma50_last < ma50_2_min_ago 
                     and (ma3_prev > ma33_prev and ma3_last < ma33_last) 
-                    and deviation_sell < -0.25
+                    and deviation_sell < -0.24
                    
                 ):
-                    sell = "SELL dopo 60 min con ma50 < con incrocio 3 - 33 and deviation_sell < -0.25 - riga 1381"
+                    sell = "SELL dopo 60 min con ma50 < con incrocio 3 - 33 and deviation_sell < -0.24 - riga 1381"
                     action = "sell"
 
                     
