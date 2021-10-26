@@ -292,12 +292,12 @@ class maddog:
                     
                     and ma2_last > ma2_2_min_ago
                     and ma5_last > ma5_2_min_ago
-                    and ma4_last > ma8_last
+                    
                     
                   
                 ):
 
-                    buy="BUY 1 con incrocio 39-78 and INCROCIO CLASSICO 39-50 riga 300"
+                    buy="BUY 1 con incrocio 13-100 riga 300"
                     action="buy"
                 
                     
