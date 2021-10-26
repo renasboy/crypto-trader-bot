@@ -297,7 +297,7 @@ class ro_cano_che_ritorna:
                   
                 ):
 
-                    buy="BUY 1 con incrocio 39-78 and INCROCIO CLASSICO 39-50 riga 300"
+                    buy="BUY 1 con incrocio 78-100 riga 300"
                     action="buy"
                 
                     
