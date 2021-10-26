@@ -125,14 +125,12 @@ class ro_cano_che_ritorna:
         #                                                         T U T T E    L E   D E V I A T I O N  !
        
         ##############################################################################################################
+        
+        
+        
         # formula DEVIATION_1_gabbia
-        deviation_1_gabbia = (ma8_last/ma39_last - 1) * 100 if ma39_last else 0
+        deviation_1_gabbia = (ma8_last/ma50_last - 1) * 100 if ma50_last else 0
         self.algo_helper.log("deviation_1_gabbia: {}".format(deviation_1_gabbia))
-        
-        
-        # formula DEVIATION_2_gabbia
-        deviation_2_gabbia = (ma8_last/ma50_last - 1) * 100 if ma50_last else 0
-        self.algo_helper.log("deviation_2_gabbia: {}".format(deviation_2_gabbia))
         
        
         ##################################################################################################################  
@@ -239,10 +237,10 @@ class ro_cano_che_ritorna:
         
         # APRE E CHIUDE GABBIA
         
-        if deviation_1_gabbia > -0.49 and deviation_2_gabbia > -0.49 or deviation_buy_crollo_1 < -1.90:
+        if deviation_1_gabbia > -0.27 or deviation_buy_crollo_1 < -1.90:
           
-            # deviation_1_gabbia = ma8_last / ma39_last
-            # deviation_2_gabbia = ma8_last / ma50_last
+            
+            # deviation_1_gabbia = ma8_last / ma50_last
             # deviation_buy_crollo_1 = ma8_last / ma78_last
             
             
