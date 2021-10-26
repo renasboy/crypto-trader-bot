@@ -195,7 +195,11 @@ class maddog:
         # formula deviation_ma7_sopra_ma40
         deviation_ma7_sopra_ma40 = (ma7_last/ma40_last - 1) *100 if ma40_last else 0
         self.algo_helper.log("deviation_ma7_sopra_ma40: {}".format(deviation_ma7_sopra_ma40))
-        
+         
+         
+        # formula deviation_ma3_sopra_ma7 (solo per il BUY1)
+        deviation_ma3_sopra_ma7 = (ma3_last/ma7_last - 1) *100 if ma7_last else 0
+        self.algo_helper.log("deviation_ma3_sopra_ma7: {}".format(deviation_ma3_sopra_ma7))
         
         
         ######################################################################################## deviation per vendere
@@ -293,6 +297,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                     and ma5_last > ma5_2_min_ago
                     
+                    and deviation_ma3_sopra_ma7 > 0.05
                     
                   
                 ):
@@ -316,7 +321,7 @@ class maddog:
                     and price > price_2_min_ago
                     and ma2_last > ma2_2_min_ago
                     and ma4_last > ma4_2_min_ago
-                  
+                    
                 ):  
                   
                     buy = "BUY 1 con incrocio 13-39 and DEVIATION BUY 1 ALTA e ma78 > riga 322"
@@ -336,11 +341,13 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                     and ma3_last > ma3_3_min_ago
                     and ma4_last > ma4_2_min_ago
-                  
+                    
+                    and deviation_ma3_sopra_ma7 > 0.05
+                   
                     # quando 13-100 si incrociano price ma2 e ma4 sono gia' in ribasso
                   
                 ):  
-                    buy = "BUY 1 con incrocio 13 - 100 e ma78> 5min ago riga 343 mi piace"
+                    buy = "BUY 1 con incrocio 13 - 100 e ma78> 7 min ago riga 343 mi piace"
                     action = "buy"
                   
                   
@@ -354,7 +361,8 @@ class maddog:
                     and price > price_2_min_ago
                     and ma2_last > ma2_2_min_ago
                     and ma4_last > ma4_2_min_ago
-                  
+                    
+                    and deviation_ma3_sopra_ma7 > 0.05
                 ):
 
                     buy = "BUY 1 con incrocio 39-78 and DEVIATION BUY 1 BASSA e ma78 < riga 344"
@@ -372,7 +380,8 @@ class maddog:
                     and price > price_2_min_ago
                     and ma2_last > ma2_2_min_ago
                     and ma4_last > ma4_2_min_ago
-                  
+                    
+                    and deviation_ma3_sopra_ma7 > 0.05
                 ):
 
                     buy = "se ma78 < - BUY 1 con incrocio 39-78 - riga 362"
