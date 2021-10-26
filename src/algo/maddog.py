@@ -77,7 +77,7 @@ class maddog:
         ma39_3_min_ago = self.algo_helper.ma_minutes_ago(39, 3)
         ma50_2_min_ago = self.algo_helper.ma_minutes_ago(50, 2)
         ma78_2_min_ago = self.algo_helper.ma_minutes_ago(78, 2)
-        ma78_10_min_ago = self.algo_helper.ma_minutes_ago(78, 10)
+        ma78_7_min_ago = self.algo_helper.ma_minutes_ago(78, 7)
         
         
         
@@ -297,7 +297,7 @@ class maddog:
                   
                 ):
 
-                    buy="BUY 1 con incrocio 13-100 riga 300"
+                    buy="BUY 1 con incrocio 78-100 riga 300"
                     action="buy"
                 
                     
@@ -331,7 +331,7 @@ class maddog:
                 elif (
                     
                     (ma13_prev < ma100_prev and ma13_last > ma100_last)
-                   
+                    and ma78_last > ma78_5_min_ago
                     and price > price_2_min_ago
                     and ma2_last > ma2_2_min_ago
                     and ma3_last > ma3_3_min_ago
@@ -340,7 +340,7 @@ class maddog:
                     # quando 13-100 si incrociano price ma2 e ma4 sono gia' in ribasso
                   
                 ):  
-                    buy = "BUY 1 con incrocio 13 - 100 riga 343 mi piace"
+                    buy = "BUY 1 con incrocio 13 - 100 e ma78> 5min ago riga 343 mi piace"
                     action = "buy"
                   
                   
