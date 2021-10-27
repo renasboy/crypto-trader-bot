@@ -59,7 +59,9 @@ class coinbasepro:
         return self.call("GET", "/accounts", {})
 
     def balance(self, symbol):
-        return (next(float(b["available"]) for b in self.balances() if b["currency"] == symbol))
+        return next(
+            float(b["available"]) for b in self.balances() if b["currency"] == symbol
+        )
 
     def orders(self):
         return self.call("GET", "/orders", {})
@@ -103,7 +105,7 @@ class coinbasepro:
         elif type == "sell":
             data["size"] = amount
         print(data)
-        order = self.call('POST', '/orders/', data)
+        order = self.call("POST", "/orders/", data)
         print(order)
         if order:
             return order["id"]
@@ -112,7 +114,7 @@ class coinbasepro:
         # default type=limit
         data = dict(side=type, size=volume, price=price, product_id=self.symbol)
         print(data)
-        order = self.call('POST', '/orders/', data)
+        order = self.call("POST", "/orders/", data)
         print(order)
         if order:
             return order["id"]
@@ -152,21 +154,21 @@ class coinbasepro:
             pass
 
 
-#if __name__ == '__main__':
-#exchange = coinbasepro('BTC', 'EUR', coinbasepro.PUBLIC_KEY, coinbasepro.PRIVATE_KEY, coinbasepro.PASSPHRASE)
-#print(exchange.ticker())
-#print(exchange.balance('BTC'))
-#print(exchange.balance('EUR'))
-#print(exchange.orders())
-#print(exchange.orderbook())
-#print(exchange.highest_bid())
-#print(exchange.lowest_ask())
-#print(exchange.closed_order('949f38ca-8494-4ce2-b5c7-fb2782114d66'))
-#print(exchange.closed_order('dd426289-29f6-406a-9a9f-0775a58c3fb8'))
-#print(exchange.active_order_id())
-#print(exchange.delete_order('6eb75320-de55-44dd-8af8-8d16880b8ffb'))
-#print(exchange.limit_order('buy', 1, 1))
-#print(exchange.market_order('buy', 70))
-#print(exchange.market_order('sell', 0.0001))
-#print(exchange.limit_order('sell', 0.0001, 50380))
-#print(exchange.closed_order('dbc39ae4-039a-4351-9121-6abd8e19e0b1'))
+# if __name__ == '__main__':
+# exchange = coinbasepro('BTC', 'EUR', coinbasepro.PUBLIC_KEY, coinbasepro.PRIVATE_KEY, coinbasepro.PASSPHRASE)
+# print(exchange.ticker())
+# print(exchange.balance('BTC'))
+# print(exchange.balance('EUR'))
+# print(exchange.orders())
+# print(exchange.orderbook())
+# print(exchange.highest_bid())
+# print(exchange.lowest_ask())
+# print(exchange.closed_order('949f38ca-8494-4ce2-b5c7-fb2782114d66'))
+# print(exchange.closed_order('dd426289-29f6-406a-9a9f-0775a58c3fb8'))
+# print(exchange.active_order_id())
+# print(exchange.delete_order('6eb75320-de55-44dd-8af8-8d16880b8ffb'))
+# print(exchange.limit_order('buy', 1, 1))
+# print(exchange.market_order('buy', 70))
+# print(exchange.market_order('sell', 0.0001))
+# print(exchange.limit_order('sell', 0.0001, 50380))
+# print(exchange.closed_order('dbc39ae4-039a-4351-9121-6abd8e19e0b1'))

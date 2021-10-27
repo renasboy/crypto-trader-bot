@@ -21,15 +21,16 @@ def run():
         if not LIMIT_ORDER:
             if not DRY_RUN:
                 if action == "buy":
-                    amount = (
-                        exchange.balance(SYMBOL_2)
-                        * (float(MAX_SYMBOL_2_PERCENTAGE) / 100.0)
+                    amount = exchange.balance(SYMBOL_2) * (
+                        float(MAX_SYMBOL_2_PERCENTAGE) / 100.0
                     )
                 elif action == "sell":
                     amount = exchange.balance(SYMBOL_1) * (
                         float(MAX_SYMBOL_1_PERCENTAGE) / 100.0
                     )
-                algo_helper.log("REAL market order action {} amount {}".format(action, amount))
+                algo_helper.log(
+                    "REAL market order action {} amount {}".format(action, amount)
+                )
                 active_order_id = exchange.market_order(action, amount)
                 algo_helper.log("REAL market order id {} ".format(active_order_id))
             else:
@@ -48,7 +49,11 @@ def run():
                 )
 
             if not DRY_RUN:
-                algo_helper.log("REAL limit order action {} price {} volume {}".format(action, price, volume))
+                algo_helper.log(
+                    "REAL limit order action {} price {} volume {}".format(
+                        action, price, volume
+                    )
+                )
                 active_order_id = exchange.limit_order(action, volume, price)
                 algo_helper.log("REAL limit order id {} ".format(active_order_id))
             else:
@@ -61,7 +66,9 @@ def run():
                 action, price, volume, fee = exchange.closed_order(active_order_id)
             if action:
                 algo_helper.last_trade_session += int(action == "buy")
-                algo_helper.write_trade_action(action, active_order_id, price, volume, fee)
+                algo_helper.write_trade_action(
+                    action, active_order_id, price, volume, fee
+                )
                 if action == "sell":
                     algo_helper.write_trade_session(price)
                 algo_helper.update_last_trade()

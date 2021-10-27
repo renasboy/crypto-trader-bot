@@ -44,15 +44,11 @@ class influx_algo_helper:
                         exchange=self.exchange,
                         symbol_1=self.symbol_1,
                         symbol_2=self.symbol_2,
-                        session=str(self.last_trade_session).rjust(
-                            30, "0"
-                        ),
-                        buy_time=self.last_trade_time.strftime(
+                        session=str(self.last_trade_session).rjust(30, "0"),
+                        buy_time=self.last_trade_time.strftime("%Y-%m-%dT%H:%M:%S"),
+                        sell_time=datetime.now(tz.gettz(os.environ["TZ"])).strftime(
                             "%Y-%m-%dT%H:%M:%S"
                         ),
-                        sell_time=datetime.now(
-                            tz.gettz(os.environ["TZ"])
-                        ).strftime("%Y-%m-%dT%H:%M:%S"),
                     ),
                     fields=dict(
                         buy_price=float(self.last_trade_price),
