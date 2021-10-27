@@ -96,7 +96,7 @@ class cobinhood:
             return type, price, volume, fee
         return None, None, None, None
 
-    def add_order(self, type, volume, price):
+    def limit_order(self, type, volume, price):
         types = dict(buy="bid", sell="ask")
         data = dict(
             trading_pair_id=self.symbol,
@@ -106,10 +106,10 @@ class cobinhood:
             price=price,
         )
         print(data)
-        add_order = {"result": {"order": {"id": 1}}}
-        # add_order = self.call('post', '/v1/trading/orders', data)
-        if add_order:
-            return add_order["result"]["order"]["id"]
+        limit_order = {"result": {"order": {"id": 1}}}
+        # limit_order = self.call('post', '/v1/trading/orders', data)
+        if limit_order:
+            return limit_order["result"]["order"]["id"]
 
     def call(self, method, path, data):
         post_data = urllib.parse.urlencode(data)
@@ -144,4 +144,4 @@ class cobinhood:
 # print(exchange.lowest_ask())
 # print(exchange.closed_order('17391295'))
 # print(exchange.active_order_id())
-# print(exchange.add_order('sell', 1, 1))
+# print(exchange.limit_order('sell', 1, 1))

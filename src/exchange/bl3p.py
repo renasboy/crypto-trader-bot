@@ -95,7 +95,7 @@ class bl3p:
             return type, price, volume, fee
         return None, None, None, None
 
-    def add_order(self, type, volume, price):
+    def limit_order(self, type, volume, price):
         types = dict(buy="bid", sell="ask")
         data = dict(
             type=types[type],
@@ -104,10 +104,10 @@ class bl3p:
             fee_currency="EUR",
         )
         print(data)
-        add_order = {"data": {"order_id": 1}}
-        # add_order = self.call(self.symbol + '/money/order/add', data)
-        if add_order:
-            return add_order["data"]["order_id"]
+        limit_order = {"data": {"order_id": 1}}
+        # limit_order = self.call(self.symbol + '/money/order/add', data)
+        if limit_order:
+            return limit_order["data"]["order_id"]
 
     def call(self, path, data):
         post_data = urllib.parse.urlencode(data)
@@ -140,4 +140,4 @@ class bl3p:
 # print(exchange.lowest_ask())
 # print(exchange.closed_order(25293373))
 # print(exchange.active_order_id())
-# print(exchange.add_order('sell', PRICE_INT, VOLUME_INT))
+# print(exchange.limit_order('sell', PRICE_INT, VOLUME_INT))

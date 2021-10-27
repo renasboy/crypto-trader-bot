@@ -94,7 +94,7 @@ class kraken:
             return type, price, volume, fee
         return None, None, None, None
 
-    def add_order(self, type, volume, price):
+    def limit_order(self, type, volume, price):
         types = dict(buy="buy", sell="sell")
         data = dict(
             pair="XXBTZEUR",
@@ -104,10 +104,10 @@ class kraken:
             volume=volume,
         )
         print(data)
-        add_order = {"result": {"txid": [1]}}
-        # add_order = self.call('/0/private/AddOrder', data)
-        if add_order:
-            return add_order["result"]["txid"][0]
+        limit_order = {"result": {"txid": [1]}}
+        # limit_order = self.call('/0/private/AddOrder', data)
+        if limit_order:
+            return limit_order["result"]["txid"][0]
 
     def call(self, path, data):
         # post_data = urllib.parse.urlencode(data)
@@ -150,4 +150,4 @@ if __name__ == "__main__":
     # print(exchange.highest_bid())
     # print(exchange.lowest_ask())
     # print(exchange.closed_order('07120101'))
-    # print(exchange.add_order('sell', PRICE_INT, VOLUME_INT))
+    # print(exchange.limit_order('sell', PRICE_INT, VOLUME_INT))

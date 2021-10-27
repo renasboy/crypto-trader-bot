@@ -18,7 +18,23 @@ def run():
     action = algo.action
 
     if action != None:
-        if not active_order_id:
+        if not LIMIT_ORDER:
+            if not DRY_RUN:
+                if action == "buy":
+                    amount = (
+                        exchange.balance(SYMBOL_2)
+                        * (float(MAX_SYMBOL_2_PERCENTAGE) / 100.0)
+                    )
+                elif action == "sell":
+                    amount = exchange.balance(SYMBOL_1) * (
+                        float(MAX_SYMBOL_1_PERCENTAGE) / 100.0
+                    )
+                algo_helper.log("REAL market order action {} amount {}".format(action, amount))
+                active_order_id = exchange.market_order(action, amount)
+                algo_helper.log("REAL market order id {} ".format(active_order_id))
+            else:
+                active_order_id = 1
+        elif not active_order_id:
             if action == "buy":
                 price = exchange.lowest_ask()
                 volume = (
@@ -31,34 +47,31 @@ def run():
                     float(MAX_SYMBOL_1_PERCENTAGE) / 100.0
                 )
 
-            algo_helper.log(
-                "order action {} price {} volume {} session {}".format(
-                    action, price, volume, algo_helper.last_trade_session
-                )
-            )
             if not DRY_RUN:
-                active_order_id = exchange.add_order(action, volume, price)
-                algo_helper.log("order id {} ".format(active_order_id))
+                algo_helper.log("REAL limit order action {} price {} volume {}".format(action, price, volume))
+                active_order_id = exchange.limit_order(action, volume, price)
+                algo_helper.log("REAL limit order id {} ".format(active_order_id))
             else:
                 active_order_id = 1
 
     # AFTER CONFIRMATION
-    if active_order_id and not exchange.orders():
-        if not DRY_RUN:
-            action, price, volume, fee = exchange.closed_order(active_order_id)
-        if action:
-            algo_helper.last_trade_session += int(action == "buy")
-            algo_helper.write_trade_action(action, active_order_id, price, volume, fee)
-            if action == "sell":
-                algo_helper.write_trade_session(price)
-            algo_helper.update_last_trade()
-        active_order_id = None
+    if active_order_id:
+        if not LIMIT_ORDER or not exchange.orders():
+            if LIMIT_ORDER and not DRY_RUN:
+                action, price, volume, fee = exchange.closed_order(active_order_id)
+            if action:
+                algo_helper.last_trade_session += int(action == "buy")
+                algo_helper.write_trade_action(action, active_order_id, price, volume, fee)
+                if action == "sell":
+                    algo_helper.write_trade_session(price)
+                algo_helper.update_last_trade()
+                active_order_id = None
 
 
 if __name__ == "__main__":
 
     CONF = os.environ["CONF"]
-    # execfile('conf/{}.conf'.format(CONF))
+
     exec(
         compile(
             open("conf/{}.conf".format(CONF), "rb").read(),
@@ -85,8 +98,11 @@ if __name__ == "__main__":
             SYMBOL_1, SYMBOL_2, PUBLIC_KEY, PRIVATE_KEY, PASSPHRASE
         )
 
-    active_order_id = exchange.active_order_id()
-    algo_helper.log("started order id {} ".format(active_order_id))
+    active_order_id = None
+    if LIMIT_ORDER:
+        active_order_id = exchange.active_order_id()
+        algo_helper.log("started order id {} ".format(active_order_id))
+
     while True:
         run()
         time.sleep(PING_INTERVAL)

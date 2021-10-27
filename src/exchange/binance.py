@@ -87,7 +87,7 @@ class binance:
             return type, price, volume, fee
         return None, None, None, None
 
-    def add_order(self, type, volume, price):
+    def limit_order(self, type, volume, price):
         types = dict(buy="BUY", sell="SELL")
         data = dict(
             symbol=self.symbol,
@@ -99,10 +99,10 @@ class binance:
             newOrderRespType="ACK",
         )
         print(data)
-        add_order = {"orderId": 1}
-        # add_order = self.call('post', 'order', data)
-        if add_order:
-            return add_order["orderId"]
+        limit_order = {"orderId": 1}
+        # limit_order = self.call('post', 'order', data)
+        if limit_order:
+            return limit_order["orderId"]
 
     def call(self, method, path, data):
         data["timestamp"] = int(1000 * time.time())
@@ -149,4 +149,4 @@ class binance:
 # print(exchange.lowest_ask())
 # print(exchange.closed_order('17391295'))
 # print(exchange.active_order_id())
-# print(exchange.add_order('sell', 1, 1))
+# print(exchange.limit_order('sell', 1, 1))
