@@ -34,6 +34,57 @@ class influx_algo_helper:
     def write(self, data):
         self.influx.write_points(data)
 
+    def write_trade_session(self, price):
+        self.write(
+            [
+                dict(
+                    measurement="session",
+                    tags=dict(
+                        algo=self.algo,
+                        exchange=self.exchange,
+                        symbol_1=self.symbol_1,
+                        symbol_2=self.symbol_2,
+                        session=str(self.last_trade_session).rjust(
+                            30, "0"
+                        ),
+                        buy_time=self.last_trade_time.strftime(
+                            "%Y-%m-%dT%H:%M:%S"
+                        ),
+                        sell_time=datetime.now(
+                            tz.gettz(os.environ["TZ"])
+                        ).strftime("%Y-%m-%dT%H:%M:%S"),
+                    ),
+                    fields=dict(
+                        buy_price=float(self.last_trade_price),
+                        sell_price=float(price),
+                    ),
+                )
+            ]
+        )
+
+    def write_trade_action(self, action, order_id, price, volume, fee):
+        self.write(
+            [
+                dict(
+                    measurement="trade",
+                    tags=dict(
+                        algo=self.algo,
+                        exchange=self.exchange,
+                        symbol_1=self.symbol_1,
+                        symbol_2=self.symbol_2,
+                        type=action,
+                        session=str(self.last_trade_session).rjust(30, "0"),
+                        order_id=order_id,
+                    ),
+                    fields=dict(
+                        price=float(price),
+                        volume=float(volume),
+                        fee=float(fee),
+                    ),
+                )
+            ]
+        )
+
     def ma_last_prev(self, period):
         query_ma = "SELECT moving_average(mean(price), {}) as ma FROM price_volume WHERE exchange = '{}' and symbol_1 = '{}' and symbol_2 = '{}' and time > now() - {}m GROUP BY time(1m) fill(previous) ORDER BY time DESC limit 2".format(
             period, self.exchange, self.symbol_1, self.symbol_2, period + 1

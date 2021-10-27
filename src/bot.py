@@ -1,8 +1,5 @@
 import os
 import time
-from datetime import datetime
-
-from dateutil import tz
 
 from influx_algo_helper import influx_algo_helper
 
@@ -50,58 +47,10 @@ def run():
         if not DRY_RUN:
             action, price, volume, fee = exchange.closed_order(active_order_id)
         if action:
-            if action == "buy":
-                algo_helper.last_trade_session += 1
-            algo_helper.write(
-                [
-                    dict(
-                        measurement="trade",
-                        tags=dict(
-                            algo=ALGO,
-                            exchange=EXCHANGE,
-                            symbol_1=SYMBOL_1,
-                            symbol_2=SYMBOL_2,
-                            type=action,
-                            session=str(algo_helper.last_trade_session).rjust(30, "0"),
-                            order_id=active_order_id,
-                        ),
-                        fields=dict(
-                            price=float(price),
-                            volume=float(volume),
-                            fee=float(fee),
-                        ),
-                    )
-                ]
-            )
-
-            # SAVE SESSION
+            algo_helper.last_trade_session += int(action == "buy")
+            algo_helper.write_trade_action(action, active_order_id, price, volume, fee)
             if action == "sell":
-                algo_helper.write(
-                    [
-                        dict(
-                            measurement="session",
-                            tags=dict(
-                                algo=ALGO,
-                                exchange=EXCHANGE,
-                                symbol_1=SYMBOL_1,
-                                symbol_2=SYMBOL_2,
-                                session=str(algo_helper.last_trade_session).rjust(
-                                    30, "0"
-                                ),
-                                buy_time=algo_helper.last_trade_time.strftime(
-                                    "%Y-%m-%dT%H:%M:%S"
-                                ),
-                                sell_time=datetime.now(
-                                    tz.gettz(os.environ["TZ"])
-                                ).strftime("%Y-%m-%dT%H:%M:%S"),
-                            ),
-                            fields=dict(
-                                buy_price=float(algo_helper.last_trade_price),
-                                sell_price=float(price),
-                            ),
-                        )
-                    ]
-                )
+                algo_helper.write_trade_session(price)
             algo_helper.update_last_trade()
         active_order_id = None
 
