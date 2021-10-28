@@ -101,7 +101,7 @@ class coinbasepro:
         data = dict(type="market", side=type, product_id=self.symbol)
         # size or funds is required
         if type == "buy":
-            data["funds"] = amount
+            data["funds"] = round(amount, 2)
         elif type == "sell":
             data["size"] = round(amount, 8)
         print(data)
