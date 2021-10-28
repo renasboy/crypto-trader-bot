@@ -348,12 +348,12 @@ class ro_cano_che_ritorna:
                 ##############################################################################################################################
 
                 # entriamo nell' area dell' ipervenduto, compa !
-
                 # BUY  PRIMO MODO DURANTE IL CROLLO
-
+               
                 elif (
                     ma2_last > ma2_2_min_ago
-                    and deviation_buy_crollo_1 < -2.30
+                    #and deviation_buy_crollo_1 < -2.30 PROVA CON -1.8 SITUAZIONE MOLTO RISCHIOSA !
+                    and deviation_buy_crollo_1 < -1.80
                     and (ma8_prev < ma25_prev and ma8_last > ma25_last)
                 ):
                     buy = "BUY DURANTE IL CROLLO - modo 1 riga 359"
