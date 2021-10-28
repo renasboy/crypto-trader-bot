@@ -151,7 +151,7 @@ class ro_cano_che_ritorna:
         
 
         # formula DEVIATION_buy per comprare UN PO' PIU' SOPRA DEL LAST TRADE ( di solito l' ultimo SELL )
-        deviation_buy = ((ma2_last / last_trade_price - 1) * 100 if last_trade_price else 0
+        deviation_buy = (ma2_last / last_trade_price - 1) * 100 if last_trade_price else 0
         self.algo_helper.info("deviation_buy: {}".format(deviation_buy))    
         
         
