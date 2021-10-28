@@ -1,5 +1,5 @@
-# TOGLIERE IL RUMORE, compa !
-
+# 28 ottobre 2021
+# togliere il rumore, compa !
 # ti voglio bene, compa.
 # compa, compa caro !
 # Tom Petty - Something Good Coming
