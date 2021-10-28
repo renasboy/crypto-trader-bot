@@ -34,7 +34,7 @@ def run():
                 active_order_id = exchange.market_order(action, amount)
                 algo_helper.log("REAL market order id {} ".format(active_order_id))
             else:
-                active_order_id = 1
+                active_order_id, volume = 1, 1
         elif not active_order_id:
             if action == "buy":
                 price = exchange.lowest_ask()
