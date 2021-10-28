@@ -116,13 +116,13 @@ class maddog:
 
         # formula DEVIATION_1_gabbia
         deviation_1_gabbia = (ma8_last / ma50_last - 1) * 100 if ma50_last else 0
-        self.algo_helper.log("deviation_1_gabbia: {}".format(deviation_1_gabbia))
+        self.algo_helper.info("deviation_1_gabbia: {}".format(deviation_1_gabbia))
 
         ##################################################################################################################
 
         # formula deviation
         deviation = (ma2_last / last_trade_price - 1) * 100 if last_trade_price else 0
-        self.algo_helper.log("deviation: {}".format(deviation))
+        self.algo_helper.info("deviation: {}".format(deviation))
 
         ##################################################################################################################
 
@@ -130,21 +130,21 @@ class maddog:
 
         # formula DEVIATION_buy1 per la compra 1
         deviation_buy1 = (ma13_last / ma39_last - 1) * 100 if ma39_last else 0
-        self.algo_helper.log("deviation_buy1: {}".format(deviation_buy1))
+        self.algo_helper.info("deviation_buy1: {}".format(deviation_buy1))
 
         # formula DEVIATION_buy2 per la compra 2
         deviation_buy2 = (ma8_last / ma50_last - 1) * 100 if ma50_last else 0
-        self.algo_helper.log("deviation_buy2: {}".format(deviation_buy2))
+        self.algo_helper.info("deviation_buy2: {}".format(deviation_buy2))
 
         # formula DEVIATION_buy3 per la compra 3
         deviation_buy3 = (ma4_last / ma30_last - 1) * 100 if ma30_last else 0
-        self.algo_helper.log("deviation_buy3: {}".format(deviation_buy3))
+        self.algo_helper.info("deviation_buy3: {}".format(deviation_buy3))
 
         # ------------------------------------------------------------------------------------------------------------
 
         # formula delta_buy3_incrocio_ma3_ma8 > 0.10 per la compra 3
         delta_buy3_incrocio_ma3_ma8 = (ma3_last / ma8_last - 1) * 100 if ma8_last else 0
-        self.algo_helper.log(
+        self.algo_helper.info(
             "delta_buy3_incrocio_ma3_ma8: {}".format(delta_buy3_incrocio_ma3_ma8)
         )
 
@@ -152,19 +152,19 @@ class maddog:
         deviation_buy = (
             (ma2_last / last_trade_price - 1) * 100 if last_trade_price else 0
         )
-        self.algo_helper.log("deviation_buy: {}".format(deviation_buy))
+        self.algo_helper.info("deviation_buy: {}".format(deviation_buy))
 
         ############################################################################################     DEVIATION_buy_crollo
 
         # formula DEVIATION_buy_crollo_1 per comprare a una certa distanza da ma78
         deviation_buy_crollo_1 = (ma8_last / ma78_last - 1) * 100 if ma78_last else 0
-        self.algo_helper.log(
+        self.algo_helper.info(
             "deviation_buy_crollo_1: {}".format(deviation_buy_crollo_1)
         )
 
         # formula DEVIATION_buy_crollo_2 per comprare a una certa distanza da ma13
         deviation_buy_crollo_2 = (ma3_last / ma13_last - 1) * 100 if ma13_last else 0
-        self.algo_helper.log(
+        self.algo_helper.info(
             "deviation_buy_crollo_2: {}".format(deviation_buy_crollo_2)
         )
 
@@ -174,25 +174,25 @@ class maddog:
         deviation_buy_ma3_sopra_ma13 = (
             (ma3_last / ma13_last - 1) * 100 if ma13_last else 0
         )
-        self.algo_helper.log(
+        self.algo_helper.info(
             "deviation_buy_ma3_sopra_ma13: {}".format(deviation_buy_ma3_sopra_ma13)
         )
 
         # formula DEVIATION_ma4_sopra_ma30
         deviation_ma4_sopra_ma30 = (ma4_last / ma30_last - 1) * 100 if ma30_last else 0
-        self.algo_helper.log(
+        self.algo_helper.info(
             "deviation_ma4_sopra_ma30: {}".format(deviation_ma4_sopra_ma30)
         )
 
         # formula deviation_ma7_sopra_ma40
         deviation_ma7_sopra_ma40 = (ma7_last / ma40_last - 1) * 100 if ma40_last else 0
-        self.algo_helper.log(
+        self.algo_helper.info(
             "deviation_ma7_sopra_ma40: {}".format(deviation_ma7_sopra_ma40)
         )
 
         # formula deviation_ma3_sopra_ma7 (solo per il BUY1)
         deviation_ma3_sopra_ma7 = (ma3_last / ma7_last - 1) * 100 if ma7_last else 0
-        self.algo_helper.log(
+        self.algo_helper.info(
             "deviation_ma3_sopra_ma7: {}".format(deviation_ma3_sopra_ma7)
         )
 
@@ -202,15 +202,15 @@ class maddog:
         deviation_sell = (
             (ma3_last / last_trade_price - 1) * 100 if last_trade_price else 0
         )
-        self.algo_helper.log("deviation_sell: {}".format(deviation_sell))
+        self.algo_helper.info("deviation_sell: {}".format(deviation_sell))
 
         # formula DEVIATION_sell_ma78
         deviation_sell_ma78 = (ma4_last / ma78_last - 1) * 100 if ma78_last else 0
-        self.algo_helper.log("deviation_sell_ma78: {}".format(deviation_sell_ma78))
+        self.algo_helper.info("deviation_sell_ma78: {}".format(deviation_sell_ma78))
 
         # formula deviation_ma39 per vendere un po' piu' giu' di ma39
         deviation_ma39 = (ma4_last / ma39_last - 1) * 100 if ma39_last else 0
-        self.algo_helper.log("deviation_ma39: {}".format(deviation_ma39))
+        self.algo_helper.info("deviation_ma39: {}".format(deviation_ma39))
 
         ################################################################################################ SPAZIO - TEMPO
 
@@ -218,13 +218,13 @@ class maddog:
         compra_spazio_tempo = (
             (ma3_last / ma3_3_min_ago - 1) * 100 if ma3_3_min_ago else 0
         )
-        self.algo_helper.log("compra_spazio_tempo: {}".format(compra_spazio_tempo))
+        self.algo_helper.info("compra_spazio_tempo: {}".format(compra_spazio_tempo))
 
         # formula VENDI_SPAZIO_TEMPO ( per vendere se c'e' una alta velocita' nel ribasso del prezzo )
         vendi_spazio_tempo = (
             (ma2_last / ma2_4_min_ago - 1) * 100 if ma2_4_min_ago else 0
         )
-        self.algo_helper.log("vendi_spazio_tempo: {}".format(vendi_spazio_tempo))
+        self.algo_helper.info("vendi_spazio_tempo: {}".format(vendi_spazio_tempo))
 
         ####################################################################################################################################################
 
@@ -244,12 +244,12 @@ class maddog:
             if not self.session or not self.open:
                 self.session = 1
                 self.open = True
-                self.algo_helper.log("session {}: open segment".format(self.session))
+                self.algo_helper.info("session {}: open segment".format(self.session))
 
         # SI CHIUDE LA GABBIA SE
         else:
             self.open = False
-            self.algo_helper.log("session {}: closed segment".format(self.session))
+            self.algo_helper.info("session {}: closed segment".format(self.session))
 
         #############################################################################################################################################
 
@@ -1033,14 +1033,14 @@ class maddog:
 
             ############### FINE ALGORITH ###################
 
-        self.algo_helper.log("action {}".format(action))
+        self.algo_helper.info("action {}".format(action))
 
         if action == "sell":
-            self.algo_helper.log("action sell {}".format(sell))
+            self.algo_helper.info("action sell {}".format(sell))
             self.session += 1
 
         elif action == "buy":
-            self.algo_helper.log("action buy {}".format(buy))
+            self.algo_helper.info("action buy {}".format(buy))
 
         return action
 

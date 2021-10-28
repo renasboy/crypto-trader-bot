@@ -146,6 +146,7 @@ class coinbasepro:
             elif method == "DELETE":
                 response = requests.delete(full_path, data={}, headers=headers)
             if response.status_code != 200:
+                print(response.content)
                 raise Exception(
                     "API failure: {} {}".format(response.status_code, response.content)
                 )

@@ -11,7 +11,7 @@ def run():
 
     price, fee = exchange.ticker()
 
-    algo_helper.log("price: {} fee: {}".format(price, fee))
+    algo_helper.info("price: {} fee: {}".format(price, fee))
 
     algo_helper.write(
         [

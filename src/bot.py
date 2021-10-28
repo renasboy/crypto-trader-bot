@@ -28,11 +28,11 @@ def run():
                     amount = exchange.balance(SYMBOL_1) * (
                         float(MAX_SYMBOL_1_PERCENTAGE) / 100.0
                     )
-                algo_helper.log(
+                algo_helper.info(
                     "REAL market order action {} amount {}".format(action, amount)
                 )
                 active_order_id = exchange.market_order(action, amount)
-                algo_helper.log("REAL market order id {} ".format(active_order_id))
+                algo_helper.info("REAL market order id {} ".format(active_order_id))
             else:
                 active_order_id, volume = 1, 1
         elif not active_order_id:
@@ -49,13 +49,13 @@ def run():
                 )
 
             if not DRY_RUN:
-                algo_helper.log(
+                algo_helper.info(
                     "REAL limit order action {} price {} volume {}".format(
                         action, price, volume
                     )
                 )
                 active_order_id = exchange.limit_order(action, volume, price)
-                algo_helper.log("REAL limit order id {} ".format(active_order_id))
+                algo_helper.info("REAL limit order id {} ".format(active_order_id))
             else:
                 active_order_id = 1
 
@@ -108,7 +108,7 @@ if __name__ == "__main__":
     active_order_id = None
     if LIMIT_ORDER:
         active_order_id = exchange.active_order_id()
-        algo_helper.log("started order id {} ".format(active_order_id))
+        algo_helper.info("started order id {} ".format(active_order_id))
 
     while True:
         run()

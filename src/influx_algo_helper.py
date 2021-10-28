@@ -101,7 +101,7 @@ class influx_algo_helper:
             if results and len(results) == 2 and results[1]["ma"] is not None
             else 0
         )
-        self.log("ma{} last: {} ma{} prev: {}".format(period, ma_last, period, ma_prev))
+        self.info("ma{} last: {} ma{} prev: {}".format(period, ma_last, period, ma_prev))
         return float(ma_last), float(ma_prev)
 
     def ma_minutes_ago(self, period, minutes):
@@ -126,7 +126,7 @@ class influx_algo_helper:
             and results[minutes]["ma"] is not None
             else 0
         )
-        self.log("ma{} {} minutes ago: {}".format(period, minutes, ma))
+        self.info("ma{} {} minutes ago: {}".format(period, minutes, ma))
         return float(ma)
 
     @property
@@ -135,7 +135,7 @@ class influx_algo_helper:
         rsi_trend_up = (
             self.price - prev_price if prev_price and self.price > prev_price else 0
         )
-        self.log("rsi trend up: {}".format(rsi_trend_up))
+        self.info("rsi trend up: {}".format(rsi_trend_up))
         return rsi_trend_up
 
     @property
@@ -144,7 +144,7 @@ class influx_algo_helper:
         rsi_trend_down = (
             prev_price - self.price if prev_price and self.price < prev_price else 0
         )
-        self.log("rsi trend down: {}".format(rsi_trend_down))
+        self.info("rsi trend down: {}".format(rsi_trend_down))
         return rsi_trend_down
 
     @property
@@ -156,7 +156,7 @@ class influx_algo_helper:
         result = self.influx.query(query_rsi)
         results = list(result.get_points())
         rsi = results[-1]["rsi"] if results else 50
-        self.log("rsi: {}".format(rsi))
+        self.info("rsi: {}".format(rsi))
         return rsi
 
     @property
@@ -168,7 +168,7 @@ class influx_algo_helper:
         result = self.influx.query(query_macd)
         results = list(result.get_points())
         macd = results[-1]["macd"] if results else 0
-        self.log("macd: {}".format(macd))
+        self.info("macd: {}".format(macd))
         return macd
 
     def macd_minutes_ago(self, minutes):
@@ -179,7 +179,7 @@ class influx_algo_helper:
         result = self.influx.query(query_macd)
         results = list(result.get_points())
         macd = results[-minutes]["macd"] if results else 0
-        self.log("macd {} minutes ago: {}".format(minutes, macd))
+        self.info("macd {} minutes ago: {}".format(minutes, macd))
         return macd
 
     @property
@@ -195,7 +195,7 @@ class influx_algo_helper:
             if self.prev_macd > 0 and macd_last <= 0:
                 macd_trend = "breakdown"
         self.prev_macd = macd_last
-        self.log("macd trend: {}".format(macd_trend))
+        self.info("macd trend: {}".format(macd_trend))
         return macd_trend
 
     def min_mean_max(self, period1, period2):
@@ -234,7 +234,7 @@ class influx_algo_helper:
         )
         results = list(result.get_points())
         price = results[minutes]["price"] if len(results) == minutes + 1 else 0
-        self.log("price {} minutes ago: {}".format(minutes, price))
+        self.info("price {} minutes ago: {}".format(minutes, price))
         return price
 
     @property
@@ -246,7 +246,7 @@ class influx_algo_helper:
         )
         results = list(result.get_points())
         price = results[0]["price"] if results else 0
-        self.log("last price: {}".format(price))
+        self.info("last price: {}".format(price))
         return price
 
     def highest_price_minutes_ago(self, minutes):
@@ -257,7 +257,7 @@ class influx_algo_helper:
         )
         results = list(result.get_points())
         max = results[0]["max"] if results else 0
-        self.log("max price {} minutes ago: {}".format(minutes, max))
+        self.info("max price {} minutes ago: {}".format(minutes, max))
         return float(max)
 
     def update_last_trade(self):
@@ -285,7 +285,7 @@ class influx_algo_helper:
         session = results[0]["session"] if results else 0
         action = results[0]["type"] if results else None
         price = results[0]["price"] if results else 0
-        self.log(
+        self.info(
             "last trade date: {} session: {} action: {} price: {}".format(
                 date_time, session, action, price
             )
@@ -303,7 +303,7 @@ class influx_algo_helper:
         session = results[1]["session"] if len(results) == 2 else 0
         action = results[1]["type"] if len(results) == 2 else None
         price = results[1]["price"] if len(results) == 2 else 0
-        self.log(
+        self.info(
             "prev trade date: {} session: {} action: {} price: {}".format(
                 date_time, session, action, price
             )
@@ -313,27 +313,36 @@ class influx_algo_helper:
     @property
     def seconds_since_last_trade(self):
         if self.last_trade_time:
-            self.log("last trade time: {}".format(self.last_trade_time))
+            self.info("last trade time: {}".format(self.last_trade_time))
             seconds_since_last_trade = (
                 datetime.now(tz.gettz(os.environ["TZ"])) - self.last_trade_time
             ).seconds
-            self.log("seconds since last trade: {}".format(seconds_since_last_trade))
+            self.info("seconds since last trade: {}".format(seconds_since_last_trade))
             return seconds_since_last_trade
         return 0
 
     @property
     def seconds_since_prev_trade(self):
         if self.prev_trade_time:
-            self.log("prev trade time: {}".format(self.prev_trade_time))
+            self.info("prev trade time: {}".format(self.prev_trade_time))
             seconds_since_prev_trade = (
                 datetime.now(tz.gettz(os.environ["TZ"])) - self.prev_trade_time
             ).seconds
-            self.log("seconds since prev trade: {}".format(seconds_since_prev_trade))
+            self.info("seconds since prev trade: {}".format(seconds_since_prev_trade))
             return seconds_since_prev_trade
         return 0
 
-    def log(self, message):
+    def info(self, message):
+        self.log('INFO', message)
+
+    def debug(self, message):
+        self.log('DEBUG', message)
+
+    def error(self, message):
+        self.log('ERROR', message)
+
+    def log(self, level, message):
         string_date = datetime.now(tz.gettz(os.environ["TZ"])).strftime(
             "%Y-%m-%dT%H:%M:%S.%fZ"
         )
-        print("{} {}: {}".format(string_date, self.label, message))
+        print("{} {}: {} {}".format(string_date, self.label, level, message))

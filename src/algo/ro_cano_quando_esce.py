@@ -55,7 +55,7 @@ class ro_cano_quando_esce:
                     last_trade_time[: last_trade_time.index(".")], "%Y-%m-%dT%H:%M:%S"
                 )
             ).seconds
-            self.algo_helper.log(
+            self.algo_helper.info(
                 "last trade time {}: seconds since last trade: {}".format(
                     last_trade_time, seconds_since_last_trade
                 )
@@ -74,12 +74,12 @@ class ro_cano_quando_esce:
             if not self.session or not self.open:
                 self.session = 1
             self.open = True
-            self.algo_helper.log("session {}: open segment".format(self.session))
+            self.algo_helper.info("session {}: open segment".format(self.session))
         # se chiude la gabbia, vende subito
         # subito dopo l'incrocio della ma8 X ma34 la m8 < ma34
         elif ma34_prev and ma34_last and ma8_prev >= ma34_prev and ma8_last < ma34_last:
             self.open = False
-            self.algo_helper.log("session {}: closed segment".format(self.session))
+            self.algo_helper.info("session {}: closed segment".format(self.session))
         # se chiude la gabbia, vende subito se la perdita > -1,20
         # perdita > -1.20%
         elif (
@@ -87,7 +87,7 @@ class ro_cano_quando_esce:
             and last_trade_price - price >= last_trade_price * 0.0120
         ):
             self.open = False
-            self.algo_helper.log("session {}: closed segment".format(self.session))
+            self.algo_helper.info("session {}: closed segment".format(self.session))
 
         # compra o vende solo se ma8 >= ma34 ed anche (macd proper <= 6.0 oppure se ((ma8 / ma34 - 1) * 100 > 0.37) and macd < -2.0)
         # speciale: macd > macd_4_min_ago e ma8_last > ma8_10_min_ago
@@ -271,14 +271,14 @@ class ro_cano_quando_esce:
                     ):
                         action = None
 
-        self.algo_helper.log("session {}: action {}".format(self.session, action))
+        self.algo_helper.info("session {}: action {}".format(self.session, action))
 
         if action == "sell":
-            self.algo_helper.log("session {}: closed session".format(self.session))
+            self.algo_helper.info("session {}: closed session".format(self.session))
             self.session = self.session + 1
             if not self.open:
-                self.algo_helper.log("session {}: restart segment".format(self.session))
+                self.algo_helper.info("session {}: restart segment".format(self.session))
                 self.session = 0
-                self.algo_helper.log("session {}: restart segment".format(self.session))
+                self.algo_helper.info("session {}: restart segment".format(self.session))
 
         return action
