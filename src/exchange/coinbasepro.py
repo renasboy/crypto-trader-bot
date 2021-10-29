@@ -103,7 +103,8 @@ class coinbasepro:
         if type == "buy":
             data["funds"] = round(amount, 2)
         elif type == "sell":
-            data["size"] = round(amount, 8)
+            # data["size"] = round(amount, 8)
+            data["size"] = int(amount * 100000000) / 100000000
         print(data)
         order = self.call("POST", "/orders/", data)
         print(order)
