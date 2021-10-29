@@ -62,7 +62,7 @@ def run():
     # AFTER CONFIRMATION
     if active_order_id:
         if not LIMIT_ORDER or not exchange.orders():
-            if LIMIT_ORDER and not DRY_RUN:
+            if not DRY_RUN:
                 action, price, volume, fee = exchange.closed_order(active_order_id)
             if action:
                 algo_helper.last_trade_session += int(action == "buy")
