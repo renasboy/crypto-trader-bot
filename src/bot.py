@@ -17,7 +17,7 @@ def run():
     # ALGO TAKE ACTION
     action = algo.action
 
-    if action != None:
+    if action != None and not active_order_id:
         if not LIMIT_ORDER:
             if not DRY_RUN:
                 if action == "buy":
@@ -35,7 +35,7 @@ def run():
                 algo_helper.info("REAL market order id {} ".format(active_order_id))
             else:
                 active_order_id, volume = 1, 1
-        elif not active_order_id:
+        else:
             if action == "buy":
                 price = exchange.lowest_ask()
                 volume = (
