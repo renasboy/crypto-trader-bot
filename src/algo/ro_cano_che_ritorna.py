@@ -714,10 +714,10 @@ class ro_cano_che_ritorna:
 
                 if (
                     ma50_last >= ma50_2_min_ago
-                    and deviation_sell_ma78 < -0.10
+                    and deviation_sell_ma78 < -0.15
                     # deviation_sell_ma78 = ma4_last / ma78_last
                 ):
-                    sell = "SELL (3-5 min) con ma50 > and deviation_sell_ma78 < -0.10 - riga 720"
+                    sell = "SELL (3-5 min) con ma50 > and deviation_sell_ma78 < -0.15 - riga 720"
                     action = "sell"
 
                 elif (
@@ -1115,11 +1115,11 @@ class ro_cano_che_ritorna:
 
             if (
                 seconds_since_last_trade > max_hold_time_in_seconds
-                and ma8_last < ma39_last
-                and deviation_sell < -0.30
+                and ma11_last < ma39_last
+                and deviation_sell < -0.33
             ):
 
-                sell = "SELL TEMPO 1 e se ma8 < ma39 and deviation_sell < -0.30 - riga 1122"
+                sell = "SELL TEMPO 1 e se ma11 < ma39 and deviation_sell < -0.33 - riga 1122"
                 action = "sell"
                          
                          
