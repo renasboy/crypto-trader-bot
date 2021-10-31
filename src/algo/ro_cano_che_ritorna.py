@@ -657,6 +657,7 @@ class ro_cano_che_ritorna:
 
                 elif (
                     ma50_last < ma50_2_min_ago
+                    and deviation_sell < -0.30
                     #and deviation_sell_ma78 < -0.15 per evitare il punto rosso sovrapposto al verde durante il crollo
                     and (ma3_prev > ma28_prev and ma3_last < ma28_last)
                     # deviation_sell_ma78 = ma4_last / ma78_last
@@ -760,6 +761,7 @@ class ro_cano_che_ritorna:
 
                 elif (
                     ma50_last < ma50_2_min_ago
+                    and deviation_sell < -0.30
                     #and deviation_sell_ma78 < -0.15 per evitare il punto rosso sovrapposto al verde durante il crollo
                     and (ma3_prev > ma28_prev and ma3_last < ma28_last)
                     # deviation_sell_ma78 = ma3_last / ma78_last
@@ -842,6 +844,7 @@ class ro_cano_che_ritorna:
 
                 elif (
                     ma50_last < ma50_2_min_ago
+                    and deviation_sell < -0.30
                     #and deviation_sell_ma78 < -0.15 per evitare il punto rosso sovrapposto al verde durante il crollo
                     and (ma3_prev > ma28_prev and ma3_last < ma28_last)
                     
@@ -925,6 +928,7 @@ class ro_cano_che_ritorna:
 
                 elif (
                     ma50_last < ma50_2_min_ago
+                    and deviation_sell < -0.30
                     #and deviation_sell_ma78 < -0.20 per evitare il punto rosso sovrapposto al verde durante il crollo
                     # deviation_sell_ma78 = ma4_last / ma78_last
                 ):
@@ -1005,6 +1009,7 @@ class ro_cano_che_ritorna:
 
                 elif (
                     ma50_last < ma50_2_min_ago
+                    and deviation_sell < -0.30
                     #and deviation_sell_ma78 < -0.21 per evitare il punto rosso sovrapposto al verde durante il crollo
                     
                     # deviation_sell_ma78 = ma4_last / ma78_last
