@@ -1022,11 +1022,11 @@ class maddog:
 
             if (
                 seconds_since_last_trade > max_hold_time_in_seconds
-                and ma8_last < ma39_last
-                and deviation_sell < -0.31
+                and ma11_last < ma39_last
+                and deviation_sell < -0.34
             ):
 
-                sell = "SELL TEMPO 2 e se ma8 < ma39 and deviation_sell < -0.31 - riga 1334"
+                sell = "SELL TEMPO 2 e se ma11 < ma39 and deviation_sell < -0.34 - riga 1029"
                 action = "sell"
 
             #################################################################################################
