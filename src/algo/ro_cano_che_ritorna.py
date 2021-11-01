@@ -52,6 +52,7 @@ class ro_cano_che_ritorna:
         ma48_last, ma48_prev = self.algo_helper.ma_last_prev(48)
 
         ma50_last, ma50_prev = self.algo_helper.ma_last_prev(50)
+        ma72_last, ma72_prev = self.algo_helper.ma_last_prev(72)
         ma78_last, ma78_prev = self.algo_helper.ma_last_prev(78)
         ma100_last, ma100_prev = self.algo_helper.ma_last_prev(100)
 
@@ -272,13 +273,13 @@ class ro_cano_che_ritorna:
 
                 if (
                     ma13_last > ma78_last
-                    and (ma78_prev < ma100_prev and ma78_last > ma100_last)
+                    and (ma72_prev < ma100_prev and ma72_last > ma100_last)
                     and ma2_last > ma2_2_min_ago
                     and ma5_last > ma5_2_min_ago
                     and ma4_last > ma8_last
                 ):
 
-                    buy = "BUY 1 con incrocio 78-100 riga 281"
+                    buy = "BUY 1 con incrocio 72-100 riga 281"
                     action = "buy"
 
                 # --------------------------------------------------------------    BUY 1 DURANTE IL RIALZO con LA DEVIATION BUY 1
