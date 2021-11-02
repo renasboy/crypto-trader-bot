@@ -1166,3 +1166,4 @@ class ro_cano_che_ritorna:
                          
                          
         # 28 ottobre 2021
+        # 02 novembre 2021 ok
