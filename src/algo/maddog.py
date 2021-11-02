@@ -51,8 +51,12 @@ class maddog:
         ma48_last, ma48_prev = self.algo_helper.ma_last_prev(48)
 
         ma50_last, ma50_prev = self.algo_helper.ma_last_prev(50)
+        ma72_last, ma72_prev = self.algo_helper.ma_last_prev(72)
         ma78_last, ma78_prev = self.algo_helper.ma_last_prev(78)
         ma100_last, ma100_prev = self.algo_helper.ma_last_prev(100)
+        
+        
+        
 
         # moving average (2-3-4-5-7-8-20-43-100) di x minuti prima
 
@@ -74,7 +78,9 @@ class maddog:
         ma39_2_min_ago = self.algo_helper.ma_minutes_ago(39, 2)
         ma39_3_min_ago = self.algo_helper.ma_minutes_ago(39, 3)
         ma50_2_min_ago = self.algo_helper.ma_minutes_ago(50, 2)
+        
         ma78_2_min_ago = self.algo_helper.ma_minutes_ago(78, 2)
+        ma78_5_min_ago = self.algo_helper.ma_minutes_ago(78, 5)
         ma78_7_min_ago = self.algo_helper.ma_minutes_ago(78, 7)
 
         # LAST TRADE
@@ -271,17 +277,17 @@ class maddog:
 
             if self.session == 1:
 
-                # ------------------------------------------------------------ BUY 1 DURANTE IL RIALZO con INCROCIO CLASSICO 78-100
+                # ------------------------------------------------------------ BUY 1 DURANTE IL RIALZO con INCROCIO CLASSICO 72-100
 
                 if (
                     ma13_last > ma78_last
-                    and (ma78_prev < ma100_prev and ma78_last > ma100_last)
+                    and (ma72_prev < ma100_prev and ma72_last > ma100_last)
                     and ma2_last > ma2_2_min_ago
                     and ma5_last > ma5_2_min_ago
                     and deviation_ma3_sopra_ma7 > 0.05
                 ):
 
-                    buy = "BUY 1 con incrocio 78-100 riga 302"
+                    buy = "BUY 1 con incrocio 72-100 riga 302"
                     action = "buy"
 
                 # --------------------------------------------------------------    BUY 1 DURANTE IL RIALZO con LA DEVIATION BUY 1
@@ -304,7 +310,7 @@ class maddog:
 
                 elif (
                     (ma13_prev < ma100_prev and ma13_last > ma100_last)
-                    and ma78_last > ma78_7_min_ago
+                    and ma78_last > ma78_5_min_ago
                     and price > price_2_min_ago
                     and ma2_last > ma2_2_min_ago
                     and ma3_last > ma3_3_min_ago
@@ -312,7 +318,7 @@ class maddog:
                     and deviation_ma3_sopra_ma7 > 0.05
                     # quando 13-100 si incrociano price ma2 e ma4 sono gia' in ribasso
                 ):
-                    buy = "BUY 1 con incrocio 13 - 100 e ma78> 7 min ago riga 347 mi piace"
+                    buy = "BUY 1 con incrocio 13 - 100 e ma78> 5 min ago riga 347 mi piace"
                     action = "buy"
 
                 ###########################################################################################################################
@@ -330,7 +336,8 @@ class maddog:
                     action = "buy"
 
                     # deviation_buy1 = ma13_last/ma39_last
-
+                
+                
                 elif (
                     ma78_last < ma78_2_min_ago
                     and (ma39_prev < ma78_prev and ma39_last > ma78_last)
@@ -344,7 +351,8 @@ class maddog:
                     action = "buy"
 
                     # deviation_buy1 = ma13_last/ma39_last
-
+                
+                
                 ##############################################################################
 
                 # BUY 1 DURANTE IL RIALZO con COMPRA_SPAZIO_TEMPO
@@ -1031,10 +1039,10 @@ class maddog:
             if (
                 seconds_since_last_trade > max_hold_time_in_seconds
                 and ma11_last < ma39_last
-                and deviation_sell < -0.34
+                and deviation_sell < -0.33
             ):
 
-                sell = "SELL TEMPO 2 e se ma11 < ma39 and deviation_sell < -0.34 - riga 1029"
+                sell = "SELL TEMPO 2 e se ma11 < ma39 and deviation_sell < -0.33 - riga 1029"
                 action = "sell"
 
             #################################################################################################
