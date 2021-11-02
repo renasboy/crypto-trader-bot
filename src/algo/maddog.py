@@ -144,87 +144,90 @@ class maddog:
 
         # formula delta_buy3_incrocio_ma3_ma8 > 0.10 per la compra 3
         delta_buy3_incrocio_ma3_ma8 = (ma3_last / ma8_last - 1) * 100 if ma8_last else 0
-        self.algo_helper.info(
-            "delta_buy3_incrocio_ma3_ma8: {}".format(delta_buy3_incrocio_ma3_ma8)
-        )
+        self.algo_helper.info("delta_buy3_incrocio_ma3_ma8: {}".format(delta_buy3_incrocio_ma3_ma8))
+            
+        
 
         # formula DEVIATION_buy per comprare UN PO' PIU' SOPRA DEL LAST TRADE ( di solito l' ultimo SELL )
-        deviation_buy = (
-            (ma2_last / last_trade_price - 1) * 100 if last_trade_price else 0
-        )
-        self.algo_helper.info("deviation_buy: {}".format(deviation_buy))
+        deviation_buy = (ma2_last / last_trade_price - 1) * 100 if last_trade_price else 0
+        self.algo_helper.info("deviation_buy: {}".format(deviation_buy))    
+        
+        
 
         ############################################################################################     DEVIATION_buy_crollo
 
         # formula DEVIATION_buy_crollo_1 per comprare a una certa distanza da ma78
         deviation_buy_crollo_1 = (ma8_last / ma78_last - 1) * 100 if ma78_last else 0
-        self.algo_helper.info(
-            "deviation_buy_crollo_1: {}".format(deviation_buy_crollo_1)
-        )
+        self.algo_helper.info("deviation_buy_crollo_1: {}".format(deviation_buy_crollo_1))
+            
+        
 
         # formula DEVIATION_buy_crollo_2 per comprare a una certa distanza da ma13
         deviation_buy_crollo_2 = (ma3_last / ma13_last - 1) * 100 if ma13_last else 0
-        self.algo_helper.info(
-            "deviation_buy_crollo_2: {}".format(deviation_buy_crollo_2)
-        )
+        self.algo_helper.info("deviation_buy_crollo_2: {}".format(deviation_buy_crollo_2))
+            
+        
 
         ############################################################################################################################
 
         # formula DEVIATION_buy_ma3_sopra_ma13 per comprare a una certa distanza da ma13
-        deviation_buy_ma3_sopra_ma13 = (
-            (ma3_last / ma13_last - 1) * 100 if ma13_last else 0
-        )
-        self.algo_helper.info(
-            "deviation_buy_ma3_sopra_ma13: {}".format(deviation_buy_ma3_sopra_ma13)
-        )
+        deviation_buy_ma3_sopra_ma13 = (ma3_last / ma13_last - 1) * 100 if ma13_last else 0
+        self.algo_helper.info("deviation_buy_ma3_sopra_ma13: {}".format(deviation_buy_ma3_sopra_ma13))    
+        
+        
+            
+        
 
         # formula DEVIATION_ma4_sopra_ma30
         deviation_ma4_sopra_ma30 = (ma4_last / ma30_last - 1) * 100 if ma30_last else 0
-        self.algo_helper.info(
-            "deviation_ma4_sopra_ma30: {}".format(deviation_ma4_sopra_ma30)
-        )
+        self.algo_helper.info("deviation_ma4_sopra_ma30: {}".format(deviation_ma4_sopra_ma30))
+            
+        
 
         # formula deviation_ma7_sopra_ma40
         deviation_ma7_sopra_ma40 = (ma7_last / ma40_last - 1) * 100 if ma40_last else 0
-        self.algo_helper.info(
-            "deviation_ma7_sopra_ma40: {}".format(deviation_ma7_sopra_ma40)
-        )
+        self.algo_helper.info("deviation_ma7_sopra_ma40: {}".format(deviation_ma7_sopra_ma40))
+            
+        
 
         # formula deviation_ma3_sopra_ma7 (solo per il BUY1)
         deviation_ma3_sopra_ma7 = (ma3_last / ma7_last - 1) * 100 if ma7_last else 0
-        self.algo_helper.info(
-            "deviation_ma3_sopra_ma7: {}".format(deviation_ma3_sopra_ma7)
-        )
+        self.algo_helper.info("deviation_ma3_sopra_ma7: {}".format(deviation_ma3_sopra_ma7))
+            
+        
 
         ######################################################################################## deviation per vendere
 
         # formula DEVIATION_sell
-        deviation_sell = (
-            (ma3_last / last_trade_price - 1) * 100 if last_trade_price else 0
-        )
-        self.algo_helper.info("deviation_sell: {}".format(deviation_sell))
+        deviation_sell = (ma3_last / last_trade_price - 1) * 100 if last_trade_price else 0
+        self.algo_helper.info("deviation_sell: {}".format(deviation_sell))    
+        
+        
 
         # formula DEVIATION_sell_ma78
         deviation_sell_ma78 = (ma4_last / ma78_last - 1) * 100 if ma78_last else 0
         self.algo_helper.info("deviation_sell_ma78: {}".format(deviation_sell_ma78))
-
+        
+        
+        
         # formula deviation_ma39 per vendere un po' piu' giu' di ma39
         deviation_ma39 = (ma4_last / ma39_last - 1) * 100 if ma39_last else 0
         self.algo_helper.info("deviation_ma39: {}".format(deviation_ma39))
-
+        
+        
         ################################################################################################ SPAZIO - TEMPO
 
         # formula COMPRA_SPAZIO_TEMPO ( per comprare se c'e' una alta velocita' nel rialzo del prezzo )
-        compra_spazio_tempo = (
-            (ma3_last / ma3_3_min_ago - 1) * 100 if ma3_3_min_ago else 0
-        )
-        self.algo_helper.info("compra_spazio_tempo: {}".format(compra_spazio_tempo))
+        compra_spazio_tempo = (ma3_last / ma3_3_min_ago - 1) * 100 if ma3_3_min_ago else 0
+        self.algo_helper.info("compra_spazio_tempo: {}".format(compra_spazio_tempo))    
+        
+        
 
         # formula VENDI_SPAZIO_TEMPO ( per vendere se c'e' una alta velocita' nel ribasso del prezzo )
-        vendi_spazio_tempo = (
-            (ma2_last / ma2_4_min_ago - 1) * 100 if ma2_4_min_ago else 0
-        )
-        self.algo_helper.info("vendi_spazio_tempo: {}".format(vendi_spazio_tempo))
+        vendi_spazio_tempo = (ma2_last / ma2_4_min_ago - 1) * 100 if ma2_4_min_ago else 0
+        self.algo_helper.info("vendi_spazio_tempo: {}".format(vendi_spazio_tempo))    
+        
+        
 
         ####################################################################################################################################################
 
