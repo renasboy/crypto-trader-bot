@@ -515,11 +515,12 @@ class ro_cano_che_ritorna:
             #####################################################################################################################
             
 
-            # VENDITA CON QUESTE 3 ECCEZIONI !
-            # altre VENDITE ECCEZIONALI LE HO GIA' MESSE SOTTO - verifica e poi cancella !
+            # VENDITA CON QUESTE 5 ECCEZIONI !
+            
             # A T T E N Z I O N E ! salvagente SOLO mentre sale ! altrimenti va in conflitto con il buy durante il crollo - RIFLETTI SU QUESTA FRASE...
-
-            # 1) ro cano VENDE CON UN SALVAGENTE
+            
+            
+            # 1 - ro cano VENDE CON UN SALVAGENTE
 
             if deviation_ma39 < -0.27 and ma50_last < ma50_2_min_ago:
 
@@ -527,9 +528,23 @@ class ro_cano_che_ritorna:
                 action = "sell"
 
                 # deviation_ma39 = ma5_last / ma39_last
+                
+                
             
-                         
-            # 2) ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA
+            # 2 - ro cano VENDE DURANTE UN CROLLO IMPROVVISO !
+            elif (
+                deviation < -0.70
+            ):
+                sell = "SELL CROLLO IMPROVVISO - riga 570"
+                action = "sell"
+                
+                # deviation = ma2_last / last_trade_price
+                # FORSE E' L' UNICA DEVIATION CHE MI POTRA' SALVARE DA UN CROLLO IMPROVVISO COME QUELLO DEL 3 NOVEMBRE 2021
+                
+                
+                
+                
+            # 3 - ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA
 
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
@@ -546,7 +561,7 @@ class ro_cano_che_ritorna:
                 
                          
                          
-                # 3) ro cano VENDE DOPO 4 minuti con VENDI_SPAZIO_TEMPO se il ribasso ha una alta velocita' 
+                # 4 - ro cano VENDE DOPO 4 minuti con VENDI_SPAZIO_TEMPO se il ribasso ha una alta velocita' 
                 if (
                     vendi_spazio_tempo < -0.65
                     and ma4_last < ma4_4_min_ago
@@ -556,7 +571,18 @@ class ro_cano_che_ritorna:
 
                     sell = "con VENDI_SPAZIO_TEMPO riga 557"
                     action = "sell"
-            
+                    
+                    
+                    
+                # 5 - ro cano VENDE " DOPO x MINUTI " and...
+                if (
+                    seconds_since_last_trade > max_hold_time_in_seconds
+                    and ma11_last < ma39_last
+                    and deviation_sell < -0.33
+                ):
+
+                sell = "SELL TEMPO 1 e se ma11 < ma39 and deviation_sell < -0.33 - riga 1137"
+                action = "sell"
                          
                          
                          
@@ -1120,26 +1146,7 @@ class ro_cano_che_ritorna:
 
             ###########################################################################################################################
 
-            # A T T E N Z I O N E !     altre  VENDITE ECCEZIONALI
-
-            # ro cano VENDE " DOPO x MINUTI " and...
-
             
-
-            #############################################################################################
-
-            if (
-                seconds_since_last_trade > max_hold_time_in_seconds
-                and ma11_last < ma39_last
-                and deviation_sell < -0.33
-            ):
-
-                sell = "SELL TEMPO 1 e se ma11 < ma39 and deviation_sell < -0.33 - riga 1137"
-                action = "sell"
-                         
-                         
-
-            #################################################################################################
             
             
             
