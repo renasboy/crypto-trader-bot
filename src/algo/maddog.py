@@ -413,7 +413,7 @@ class maddog:
             elif self.session == 2:
 
                 if (
-                    deviation_buy2 > 0.07
+                    deviation_buy2 > 0.08
                     and deviation_buy_ma3_sopra_ma13 > 0.09
                     and deviation_ma7_sopra_ma40 > 0.08
                     and ma2_last > ma2_2_min_ago
@@ -441,9 +441,7 @@ class maddog:
 
                     # deviation_buy2 = ma8_last / ma50
 
-            ############################################################################################################
-
-            #############################################################################################################      COMPRA sessione 3
+            ############################################################################################################COMPRA sessione 3
 
             elif self.session == 3:
 
@@ -455,19 +453,21 @@ class maddog:
                     and (ma4_prev < ma9_prev and ma4_last > ma9_last)
                     and ma4_last > ma50_last
                 ):
-                    buy = "BUY 3A riga 458"
+                    buy = "BUY 3A riga 456"
                     action = "buy"
-
-                elif (
-                    ma78_last >= ma78_2_min_ago
+            
+            
+                elif (    
+                    deviation_buy3 > 0.02
+                    and (ma39_prev < ma78_prev and ma39_last > ma78_last)
                     and deviation_buy3 > 0.02
                     and delta_buy3_incrocio_ma3_ma8 > 0.06
-                    and deviation_ma4_sopra_ma30 > 0.18
+                    and deviation_ma4_sopra_ma30 > 0.17
                     and ma3_last > ma8_last
                     and ma3_last > ma78_last
                     and ma4_last > ma4_2_min_ago
                 ):
-                    buy = "BUY 3B RIVOLUZIONARIO ma78 > - riga 470"
+                    buy = "BUY 3B RIVOLUZIONARIO se ma39 > ma78- riga 470"
                     action = "buy"
 
                     # deviation_buy3 = ma4_last/ma30_last
@@ -483,7 +483,7 @@ class maddog:
                     and ma3_last > ma78_last
                     and ma4_last > ma4_2_min_ago
                 ):
-                    buy = "BUY 3C RIVOLUZIONARIO con ma78 < - riga 486"
+                    buy = "BUY 3C RIVOLUZIONARIO se ma78 < - riga 486"
                     action = "buy"
 
                     # deviation_buy3 = ma4_last/ma30_last
@@ -875,9 +875,9 @@ class maddog:
                 elif (
                     ma50_last < ma50_2_min_ago
                     and (ma3_prev > ma33_prev and ma3_last < ma33_last)
-                    and deviation_sell < -0.24
+                    and deviation_sell < -0.27
                 ):
-                    sell = "SELL (5-12 min) con ma50 < incrocio 3-33 and deviation_sell < -0.24 - riga 880"
+                    sell = "SELL (5-12 min) con ma50 < incrocio 3-33 and deviation_sell < -0.27 - riga 880"
                     action = "sell"
 
                 # ------------------------------------------------------------------------------- eventuale guadagno con crollo
@@ -1102,10 +1102,10 @@ class maddog:
             if (
                 seconds_since_last_trade > max_hold_time_in_seconds
                 and ma13_last < ma39_last
-                and deviation_sell < -0.36
+                and deviation_sell < -0.35
             ):
 
-                sell = "SELL TEMPO e se ma13 < ma39 and deviation_sell < -0.36 - riga 1108"
+                sell = "SELL TEMPO e se ma13 < ma39 and deviation_sell < -0.35 - riga 1108"
                 action = "sell"
 
             #################################################################################################
