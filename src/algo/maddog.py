@@ -544,22 +544,33 @@ class maddog:
 
             #####################################################################################################################
 
-            # VENDITA CON QUESTE 3 ECCEZIONI !
-            # altre VENDITE ECCEZIONALI LE HO GIA' MESSE SOTTO - verifica e poi cancella !
+            # VENDITA CON QUESTE 5 ECCEZIONI !
+            
             # A T T E N Z I O N E ! salvagente SOLO mentre sale ! altrimenti va in conflitto con il buy durante il crollo - RIFLETTI SU QUESTA FRASE...
-
-            # 1) ro cano VENDE CON UN SALVAGENTE
-
-            if deviation_ma39 < -0.25 and ma50_last > ma50_2_min_ago:
-
+            
+            
+            # 1 - ro cano VENDE CON UN SALVAGENTE
+            if (
+                deviation_ma39 < -0.25 and ma50_last > ma50_2_min_ago:
                 sell = "SELL SALVAGENTE 3-39 con ma50 < riga 555"
                 action = "sell"
-
-                # deviation_ma39 = ma4_last / ma39_last
+            ):
+                
+                # deviation_ma39 = ma4_last / ma39_last QUESTA HA VENDUTO NEL CROLLO IMPROVVISO DI 1 MINUTO (con -2.06% !!!)!
             
             
             
-            # 2) ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA
+            # 2 - ro cano VENDE DURANTE UN CROLLO IMPROVVISO !
+            elif (
+                deviation < -0.70
+            ):
+        
+                # deviation = ma2_last / last_trade_price
+                # FORSE E' L' UNICA DEVIATION CHE MI POTRA' SALVARE DA UN CROLLO IMPROVVISO COME QUELLO DEL 3 NOVEMBRE 2021
+                
+            
+            
+            # 3 - ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA
 
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
@@ -575,16 +586,28 @@ class maddog:
                 
                 
                 
-                # 3) ro cano VENDE DOPO 4 minuti con VENDI_SPAZIO_TEMPO se il ribasso ha una alta velocita' # ha venduto con +0.07 strano !
-                if (
-                    vendi_spazio_tempo < -0.65
-                    and ma4_last < ma4_4_min_ago
-                    # QUESTA CONDIZIONE SPAZIO-TEMPO ERA UNA TUA IDEA !
-                    # vendi_spazio_tempo = ma2_last/ma2_4_min_ago
-                ):
+            # 4 - ro cano VENDE DOPO 4 minuti con VENDI_SPAZIO_TEMPO se il ribasso ha una alta velocita' # ha venduto con +0.07 strano !
+            elif (
+                vendi_spazio_tempo < -0.65
+                and ma4_last < ma4_4_min_ago
+                # QUESTA CONDIZIONE SPAZIO-TEMPO ERA UNA TUA IDEA !
+                # vendi_spazio_tempo = ma2_last/ma2_4_min_ago
+            ):
 
-                    sell = "con VENDI_SPAZIO_TEMPO riga 586"
-                    action = "sell"
+                sell = "con VENDI_SPAZIO_TEMPO riga 586"
+                action = "sell"
+                    
+                    
+            # 5 - ro cano VENDE " DOPO x MINUTI " and...
+            elif (
+                seconds_since_last_trade > max_hold_time_in_seconds
+                and ma13_last < ma39_last
+                and deviation_sell < -0.35
+            ):
+
+                sell = "SELL TEMPO e se ma13 < ma39 and deviation_sell < -0.35 - riga 1108"
+                action = "sell"
+            
 
             ###################################################################################################################################
             
@@ -1095,18 +1118,9 @@ class maddog:
 
             ###########################################################################################################################
 
-            # A T T E N Z I O N E !     altra  VENDITA ECCEZIONALE
+            
 
-            # ro cano VENDE " DOPO x MINUTI " and...
-
-            if (
-                seconds_since_last_trade > max_hold_time_in_seconds
-                and ma13_last < ma39_last
-                and deviation_sell < -0.35
-            ):
-
-                sell = "SELL TEMPO e se ma13 < ma39 and deviation_sell < -0.35 - riga 1108"
-                action = "sell"
+            
 
             #################################################################################################
             
