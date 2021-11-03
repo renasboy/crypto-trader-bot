@@ -1050,18 +1050,18 @@ class maddog:
                     
                 elif (
                     ma50_last > ma50_2_min_ago
-                    and (ma3_prev > ma39_prev and ma3_last < ma39_last)
+                    and (ma3_prev > ma13_prev and ma3_last < ma13_last)
                     and deviation_sell > 0.35
-                    and deviation_sell < 0.79
+                    and deviation_sell < 0.59
                 ):
-                    sell = "SELL dopo 60 min con ma50 > incrocio 3-39 and deviation_sell 0.35 - 0.79 - riga 1057"
+                    sell = "SELL dopo 60 min con ma50 > incrocio 3-39 and deviation_sell 0.35 - 0.59 DOPPIO PASSO ALLA RONALDO - riga 1057"
                     action = "sell"
 
                     
                 elif (
                     ma50_last > ma50_2_min_ago
                     and (ma3_prev > ma39_prev and ma3_last < ma39_last)
-                    and deviation_sell > 0.80
+                    and deviation_sell > 0.60
                     and deviation_sell < 2.49
                 ):
 
