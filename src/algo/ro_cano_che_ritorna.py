@@ -204,7 +204,7 @@ class ro_cano_che_ritorna:
         
 
         # formula deviation_ma39 per vendere un po' piu' giu' di ma39
-        deviation_ma39 = (ma4_last / ma39_last - 1) * 100 if ma39_last else 0
+        deviation_ma39 = (ma5_last / ma39_last - 1) * 100 if ma39_last else 0
         self.algo_helper.info("deviation_ma39: {}".format(deviation_ma39))
         
                          
@@ -521,12 +521,12 @@ class ro_cano_che_ritorna:
 
             # 1) ro cano VENDE CON UN SALVAGENTE
 
-            if deviation_ma39 < -0.25 and ma50_last < ma50_2_min_ago:
+            if deviation_ma39 < -0.27 and ma50_last < ma50_2_min_ago:
 
-                sell = "SELL SALVAGENTE 3-39 con ma50 < riga 526"
+                sell = "SELL SALVAGENTE 5-39 con ma50 < riga 526"
                 action = "sell"
 
-                # deviation_ma39 = ma4_last / ma39_last
+                # deviation_ma39 = ma5_last / ma39_last
             
                          
             # 2) ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA
