@@ -469,9 +469,9 @@ class maddog:
                 ):
                     buy = "BUY 3B RIVOLUZIONARIO se ma39 > ma78- riga 470"
                     action = "buy"
-
+                  
                     # deviation_buy3 = ma4_last/ma30_last
-                
+                    # riga 462 potrebbe esserci un problema perche' ho tolto ma78_last >= ma78_2_min_ago. vediamo
                 
                 
                 elif (
