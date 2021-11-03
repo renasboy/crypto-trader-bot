@@ -127,7 +127,7 @@ class maddog:
         ##################################################################################################################
 
         # formula deviation
-        deviation = (ma2_last / last_trade_price - 1) * 100 if last_trade_price else 0
+        deviation = (ma3_last / last_trade_price - 1) * 100 if last_trade_price else 0
         self.algo_helper.info("deviation: {}".format(deviation))
 
         ##################################################################################################################
