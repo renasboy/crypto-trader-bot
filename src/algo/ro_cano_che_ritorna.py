@@ -469,7 +469,7 @@ class ro_cano_che_ritorna:
                     and (ma4_prev < ma9_prev and ma4_last > ma9_last)
                     and ma4_last > ma50_last
                 ):
-                    buy = "BUY 4A riga 472"
+                    buy = "BUY 4A con ma 78 > e deviation buy 3 ALTA - riga 472"
                     action = "buy"
 
                 elif (
@@ -481,7 +481,7 @@ class ro_cano_che_ritorna:
                     and ma3_last > ma78_last
                     and ma4_last > ma4_2_min_ago
                 ):
-                    buy = "BUY 4B RIVOLUZIONARIO con ma78 >- riga 484"
+                    buy = "BUY 4B RIVOLUZIONARIO con ma78 > e deviation buy 3 BASSA - riga 484"
                     action = "buy"
 
                     # deviation_buy3 = ma4_last/ma30_last
