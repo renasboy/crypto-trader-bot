@@ -552,9 +552,10 @@ class maddog:
             # 1 - ro cano VENDE CON UN SALVAGENTE
             if (
                 deviation_ma39 < -0.25 and ma50_last > ma50_2_min_ago:
+            ):
                 sell = "SELL SALVAGENTE 3-39 con ma50 < riga 555"
                 action = "sell"
-            ):
+            
                 
                 # deviation_ma39 = ma4_last / ma39_last QUESTA HA VENDUTO NEL CROLLO IMPROVVISO DI 1 MINUTO (con -2.06% !!!)!
             
@@ -564,7 +565,9 @@ class maddog:
             elif (
                 deviation < -0.70
             ):
-        
+                sell = "SELL CROLLO IMPROVVISO - riga 570"
+                action = "sell"
+                
                 # deviation = ma2_last / last_trade_price
                 # FORSE E' L' UNICA DEVIATION CHE MI POTRA' SALVARE DA UN CROLLO IMPROVVISO COME QUELLO DEL 3 NOVEMBRE 2021
                 
