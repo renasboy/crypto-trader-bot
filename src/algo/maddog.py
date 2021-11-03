@@ -981,12 +981,12 @@ class maddog:
                     
                 elif (
                     ma50_last >= ma50_2_min_ago
-                    and (ma3_prev > ma39_prev and ma3_last < ma39_last)
+                    and (ma3_prev > ma11_prev and ma3_last < ma11_last)
                     and deviation_sell > 0.30
-                    and deviation_sell < 0.60
+                    and deviation_sell < 0.50
                     # deviation_sell = ma3_last/last_trade_price
                 ):
-                    sell = "SELL (24-60 min) con ma50 > incrocio 3-39 and deviation_sell 0.30 - 0.60 - riga 989"
+                    sell = "SELL (24-60 min) con ma50 > incrocio 3-11 and deviation_sell 0.30 - 0.50 DRIBBLING ALLA RONALDO - riga 989"
                     action = "sell"
 
                     
@@ -994,11 +994,11 @@ class maddog:
                 elif (
                     ma50_last >= ma50_2_min_ago
                     and (ma3_prev > ma45_prev and ma3_last < ma45_last)
-                    and deviation_sell > 0.61
+                    and deviation_sell > 0.51
                     and deviation_sell < 1.20
                     # deviation_sell = ma3_last/last_trade_price
                 ):
-                    sell = "SELL (24-60 min) con ma50 > incrocio 3-45 ! and deviation_sell 0.61 - 1.20 - riga 1001"
+                    sell = "SELL (24-60 min) con ma50 > incrocio 3-45 ! and deviation_sell 0.51 - 1.20 - riga 1001"
                     action = "sell"
 
                     
