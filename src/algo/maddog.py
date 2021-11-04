@@ -74,6 +74,7 @@ class maddog:
         ma6_2_min_ago = self.algo_helper.ma_minutes_ago(6, 2)
         ma8_4_min_ago = self.algo_helper.ma_minutes_ago(8, 4)
         ma13_2_min_ago = self.algo_helper.ma_minutes_ago(13, 2)
+        ma25_2_min_ago = self.algo_helper.ma_minutes_ago(25, 2)
         ma33_5_min_ago = self.algo_helper.ma_minutes_ago(33, 5)
         ma39_2_min_ago = self.algo_helper.ma_minutes_ago(39, 2)
         ma39_3_min_ago = self.algo_helper.ma_minutes_ago(39, 3)
@@ -574,12 +575,27 @@ class maddog:
                 
             
             
-            # 3 - ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA
-
+            # 3 - ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma25 >
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
                 and ma2_last < last_trade_price
-                and deviation < -0.37
+                and deviation < -0.40
+                and ma25_last > ma25_2_min_ago
+            ):
+
+                sell = "SELL DOLCE ATTESA - riga 585"
+                action = "sell"
+
+                # il fattore tempo - la dolce attesa - solo con trend ribassista
+                # deviation = ma2_last / last_trade_price
+                
+                
+            # 4 - ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma25 <
+            elif (
+                seconds_since_last_trade > max_hold_time_in_seconds
+                and ma2_last < last_trade_price
+                and deviation < -0.45
+                and ma25_last < ma25_2_min_ago
             ):
 
                 sell = "SELL DOLCE ATTESA - riga 585"
@@ -590,7 +606,7 @@ class maddog:
                 
                 
                 
-            # 4 - ro cano VENDE DOPO 4 minuti con VENDI_SPAZIO_TEMPO se il ribasso ha una alta velocita' # ha venduto con +0.07 strano !
+            # 5 - ro cano VENDE DOPO 4 minuti con VENDI_SPAZIO_TEMPO se il ribasso ha una alta velocita' # ha venduto con +0.07 strano !
             elif (
                 vendi_spazio_tempo < -0.65
                 and ma4_last < ma4_4_min_ago
@@ -602,7 +618,7 @@ class maddog:
                 action = "sell"
                     
                     
-            # 5 - ro cano VENDE " DOPO x MINUTI " and...
+            # 6 - ro cano VENDE " DOPO x MINUTI " and...
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
                 and ma11_last < ma39_last
