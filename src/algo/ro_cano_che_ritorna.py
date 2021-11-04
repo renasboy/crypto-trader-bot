@@ -1064,10 +1064,12 @@ class ro_cano_che_ritorna:
                     ma50_last < ma50_2_min_ago
                     and (ma3_prev > ma33_prev and ma3_last < ma33_last)
                     and deviation_sell < -0.34
+                    and deviation_sell < 0.10
                 ):
-                    sell = "SELL (24-60 min) con ma50 < incrocio 3-33 and deviation_sell < -0.25 - riga 1068"
+                    sell = "SELL (24-60 min) con ma50 < incrocio 3-33 and deviation_sell < -0.25 and deviation_sell < 0.10 - riga 1068"
                     action = "sell"
-
+                # se non ha forza dopo 24-61 ora e' inutile continuare a sperare ! FANCULO CANO
+                
                 # --------------------------------------------------------------------------------------eventuale guadagno durante il crollo
 
                 elif (
