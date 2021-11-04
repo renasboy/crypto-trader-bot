@@ -1019,13 +1019,13 @@ class ro_cano_che_ritorna:
                     ma50_last > ma50_2_min_ago
                     and (ma3_prev > ma39_prev and ma3_last < ma39_last)
                     and deviation_sell < -0.26
-                    # deviation_sell = ma3_last/last_trade_price
+                    and deviation_sell < 0.10
                 ):
-                    sell = "SELL (24-60 min) con ma50 > incrocio 3-39 and deviation_sell < -0.26 - riga 1024"
+                    sell = "SELL (24-60 min) con ma50 > incrocio 3-39 and deviation_sell < -0.26 and deviation_sell < 0.10 - riga 1024"
                     action = "sell"
-
                     
-                    
+                    # se non ha forza dopo 24 min e' inutile continuare a sperare ! FANCULO CANO
+                  
                 elif (
                     ma50_last > ma50_2_min_ago
                     and (ma3_prev > ma11_prev and ma3_last < ma11_last)
@@ -1036,8 +1036,7 @@ class ro_cano_che_ritorna:
                     sell = "SELL (24-60 min) con ma50 > incrocio 3-11 and deviation_sell 0.30 - 0.60 DRIBBLING ALLA RONALDO - riga 1036"
                     action = "sell"
 
-                    
-                    
+                   
                 elif (
                     ma50_last > ma50_2_min_ago
                     and (ma3_prev > ma39_prev and ma3_last < ma39_last)
@@ -1045,17 +1044,16 @@ class ro_cano_che_ritorna:
                     and deviation_sell < 1.20
                     # deviation_sell = ma3_last/last_trade_price
                 ):
-                    sell = "SELL (24-60 min) con ma50 > incrocio 3-39 and deviation_sell 0.61 - 1.20 - riga 1048"
+                    sell = "SELL (24-60 min) con ma50 > incrocio 3-39 and deviation_sell 0.61 - 1.20 - riga 1047"
                     action = "sell"
 
-                    
-                    
+                 
                 elif (
                     ma50_last > ma50_2_min_ago
                     and (ma3_prev > ma45_prev and ma3_last < ma45_last)
                     and deviation_sell > 1.21
                 ):
-                    sell = "SELL (24-60 min) con ma50 > incrocio 3-45 and deviation_sell > 1.21 - riga 1058"
+                    sell = "SELL (24-60 min) con ma50 > incrocio 3-45 and deviation_sell > 1.21 - riga 1056"
                     action = "sell"
 
                 ##################################################################### con trend discendente
@@ -1066,9 +1064,9 @@ class ro_cano_che_ritorna:
                     and deviation_sell < -0.34
                     and deviation_sell < 0.10
                 ):
-                    sell = "SELL (24-60 min) con ma50 < incrocio 3-33 and deviation_sell < -0.25 and deviation_sell < 0.10 - riga 1068"
+                    sell = "SELL (24-60 min) con ma50 < incrocio 3-33 and deviation_sell < -0.25 and deviation_sell < 0.10 - riga 1067"
                     action = "sell"
-                # se non ha forza dopo 24-61 ora e' inutile continuare a sperare ! FANCULO CANO
+                # se non ha forza dopo 24 min e' inutile continuare a sperare ! FANCULO CANO
                 
                 # --------------------------------------------------------------------------------------eventuale guadagno durante il crollo
 
