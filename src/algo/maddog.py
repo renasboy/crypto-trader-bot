@@ -605,13 +605,13 @@ class maddog:
             # 5 - ro cano VENDE " DOPO x MINUTI " and...
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
-                and ma13_last < ma39_last
+                and ma11_last < ma39_last
                 and deviation_sell < -0.35
             ):
 
-                sell = "SELL TEMPO e se ma13 < ma39 and deviation_sell < -0.35 - riga 612"
+                sell = "SELL TEMPO e se ma11 < ma39 and deviation_sell < -0.35 - riga 612"
                 action = "sell"
-            
+                # ma13 troppo lenta !
 
             ###################################################################################################################################
             
