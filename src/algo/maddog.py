@@ -413,7 +413,7 @@ class maddog:
             elif self.session == 2:
 
                 if (
-                    deviation_buy2 > 0.08
+                    deviation_buy2 > 0.07
                     and deviation_buy_ma3_sopra_ma13 > 0.09
                     and deviation_ma7_sopra_ma40 > 0.09
                     and ma2_last > ma2_2_min_ago
