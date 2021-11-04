@@ -3,7 +3,7 @@
 # ti voglio bene, compa.
 # compa, compa caro !
 # Tom Petty - Something Good Coming
-####################################                26 ottobre 2021 - ore 18:49 - funziona, compa.
+####################################                04 NOVEMBRE 2021 - ore 19:49 - funziona, compa. - CCR = MADDOG MA UN POCO, pochissimo MENO PRUDENTE
 
 
 class ro_cano_che_ritorna:
@@ -284,7 +284,7 @@ class ro_cano_che_ritorna:
                     and ma2_last > ma2_2_min_ago
                     and ma5_last > ma5_2_min_ago
                     and deviation_ma3_sopra_ma7 > 0.05
-                    and deviation_ma13_sopra_ma25 > 0.05
+                    and deviation_ma13_sopra_ma25 > 0.04
                 ):
 
                     buy = "BUY 1 con incrocio 72-100 riga 290"
