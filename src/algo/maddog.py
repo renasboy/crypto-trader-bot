@@ -188,7 +188,9 @@ class maddog:
         deviation_ma4_sopra_ma30 = (ma4_last / ma30_last - 1) * 100 if ma30_last else 0
         self.algo_helper.info("deviation_ma4_sopra_ma30: {}".format(deviation_ma4_sopra_ma30))
             
-        
+        # formula DEVIATION_ma13_sopra_ma25
+        deviation_ma13_sopra_ma25 = (ma13_last / ma25_last - 1) * 100 if ma25_last else 0
+        self.algo_helper.info("deviation_ma13_sopra_ma25: {}".format(deviation_ma13_sopra_ma25))
 
         # formula deviation_ma7_sopra_ma40
         deviation_ma7_sopra_ma40 = (ma7_last / ma40_last - 1) * 100 if ma40_last else 0
@@ -226,15 +228,12 @@ class maddog:
         # formula COMPRA_SPAZIO_TEMPO ( per comprare se c'e' una alta velocita' nel rialzo del prezzo )
         compra_spazio_tempo = (ma3_last / ma3_3_min_ago - 1) * 100 if ma3_3_min_ago else 0
         self.algo_helper.info("compra_spazio_tempo: {}".format(compra_spazio_tempo))    
-        
-        
+       
 
         # formula VENDI_SPAZIO_TEMPO ( per vendere se c'e' una alta velocita' nel ribasso del prezzo )
         vendi_spazio_tempo = (ma2_last / ma2_4_min_ago - 1) * 100 if ma2_4_min_ago else 0
         self.algo_helper.info("vendi_spazio_tempo: {}".format(vendi_spazio_tempo))    
-        
-        
-
+       
         ####################################################################################################################################################
 
         # DEFAULT ACTION DICE DI NON FARE NIENTE (= None, NON TOCCARE )
@@ -268,11 +267,11 @@ class maddog:
         if self.open and self.session and last_trade_action != "buy":
 
             ###########################################################################################################################################
-
             #   B U Y
-
             ###########################################################################################################################################
-
+           
+        
+        
             ######################################################################################################## COMPRA sessione 1
 
             if self.session == 1:
@@ -285,11 +284,13 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                     and ma5_last > ma5_2_min_ago
                     and deviation_ma3_sopra_ma7 > 0.05
+                    and deviation_ma13_sopra_ma25 > 0.05
                 ):
 
                     buy = "BUY 1 con incrocio 72-100 riga 290"
                     action = "buy"
-                
+                 
+                    # la deviation_ma13_sopra_ma25 puoi portarla > 0.072 SOLO CON 72-100
                 
                 # --------------------------------------------------------------    BUY 1 DURANTE IL RIALZO con LA DEVIATION BUY 1
 
@@ -301,14 +302,13 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                     and ma4_last > ma4_2_min_ago
                 ):
-
                     buy = "BUY 1 con incrocio 13-39 and DEVIATION BUY 1 ALTA e ma78 > riga 305"
                     action = "buy"
+                    
 
                     # deviation_buy1 = ma13_last/ma39_last
                 
-                
-                
+               
                 #################################################################### "BUY 1 con incrocio 13 - 100 riga 343" MI PIACE !
 
                 elif (
