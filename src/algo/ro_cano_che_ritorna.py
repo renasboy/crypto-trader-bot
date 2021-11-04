@@ -193,7 +193,7 @@ class ro_cano_che_ritorna:
         ######################################################################################## deviation per vendere
 
         # formula DEVIATION_sell
-        deviation_sell = (ma3_last / last_trade_price - 1) * 100 if last_trade_price else 0
+        deviation_sell = (ma4_last / last_trade_price - 1) * 100 if last_trade_price else 0
         self.algo_helper.info("deviation_sell: {}".format(deviation_sell))    
         
         
@@ -1043,7 +1043,7 @@ class ro_cano_che_ritorna:
 
                 elif (
                     ma50_last < ma50_2_min_ago
-                    and deviation_sell < -0.33
+                    and deviation_sell < -0.34
                     #and deviation_sell_ma78 < -0.21 per evitare il punto rosso sovrapposto al verde durante il crollo
                     
                     # deviation_sell_ma78 = ma4_last / ma78_last
