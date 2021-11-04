@@ -207,7 +207,7 @@ class maddog:
         ######################################################################################## deviation per vendere
 
         # formula DEVIATION_sell
-        deviation_sell = (ma3_last / last_trade_price - 1) * 100 if last_trade_price else 0
+        deviation_sell = (ma4_last / last_trade_price - 1) * 100 if last_trade_price else 0
         self.algo_helper.info("deviation_sell: {}".format(deviation_sell))    
         
         
@@ -1043,7 +1043,7 @@ class maddog:
                 elif (
                     ma50_last < ma50_2_min_ago
                     and (ma3_prev > ma33_prev and ma3_last < ma33_last)
-                    and deviation_sell < -0.25
+                    and deviation_sell < -0.34
                 ):
                     sell = "SELL (24-60 min) con ma50 < incrocio 3-33 and deviation_sell < -0.25 - riga 1048"
                     action = "sell"
