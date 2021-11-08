@@ -213,7 +213,7 @@ class ro_cano_che_ritorna:
         
         
 
-        # formula DEVIATION_sell_ma78
+        # formula DEVIATION_sell_ma78 - VA IN CONFLITTO DURANTE IL CROLLO !
         deviation_sell_ma78 = (ma4_last / ma78_last - 1) * 100 if ma78_last else 0
         self.algo_helper.info("deviation_sell_ma78: {}".format(deviation_sell_ma78))
         
