@@ -1081,10 +1081,9 @@ class ro_cano_che_ritorna:
                     
                     
             ##############################################################################################################################     > 60 min
-
-            # VENDITA - da 60 minuti in poi = da 3600 secondi in poi
-
-            elif seconds_since_last_trade > 3600:
+            # VENDITA - da 3601 a 5400 secondi in poi
+            elif seconds_since_last_trade > 3601 and seconds_since_last_trade <= 5400:
+            
 
                 if (
                     ma50_last > ma50_2_min_ago
@@ -1142,7 +1141,74 @@ class ro_cano_che_ritorna:
                 # se non ha forza dopo 1 ora e' inutile continuare a sperare !
                 # qui non ho messo il crollo perche' dopo 40 min o gia' ha venduto o e' gia' risalita
 
-            ###########################################################################################################################
+            
+            
+            
+            
+            
+            
+            #################################################################################################################################
+            # VENDITA - da 90 minuti in poi = da 5401 secondi in poi
+
+            elif seconds_since_last_trade > 5401:
+
+                if (
+                    ma50_last > ma50_2_min_ago
+                    and (ma3_prev > ma39_prev and ma3_last < ma39_last)
+                    and deviation_sell < -0.20
+                    and deviation_sell < 0.10
+                ):
+                    sell = "SELL dopo 60 min con ma50 > incrocio 3-39 and deviation_sell < -0.20 and deviation_sell < 0.10 (!) - riga 1095"
+                    action = "sell"
+                    # # se non ha forza dopo 1 ora e' inutile continuare a sperare !
+                    
+                elif (
+                    ma50_last > ma50_2_min_ago
+                    and (ma3_prev > ma13_prev and ma3_last < ma13_last)
+                    and deviation_sell > 0.35
+                    and deviation_sell < 0.69
+                ):
+                    sell = "SELL dopo 60 min con ma50 > incrocio 3-13 and deviation_sell 0.35 - 0.69 DOPPIO PASSO ALLA RONALDO - riga 1105"
+                    action = "sell"
+
+                    
+                elif (
+                    ma50_last > ma50_2_min_ago
+                    and (ma3_prev > ma39_prev and ma3_last < ma39_last)
+                    and deviation_sell > 0.70
+                    and deviation_sell < 1.49
+                ):
+
+                    sell = "SELL dopo 60 min con ma50 > incrocio 3-39 and deviation_sell 0.70 - 1.49 - riga 1116"
+                    action = "sell"
+
+                    # ma 3-48 mi evita la ricompra e la rivendita con perdita !
+
+                    
+                elif (
+                    ma50_last > ma50_2_min_ago
+                    and (ma3_prev > ma33_prev and ma3_last < ma33_last)
+                    and deviation_sell > 1.50
+                ):
+
+                    sell = "SELL dopo 60 min con ma50 > incrocio 3-33 and deviation_sell > 1.50 - riga 1128"
+                    action = "sell"
+
+                    
+                ######################################################################################## con trend discendente
+
+                elif (
+                    ma50_last < ma50_2_min_ago
+                    and (ma3_prev > ma33_prev and ma3_last < ma33_last)
+                    and deviation_sell < -0.24
+                    and deviation_sell < 0.10
+                ):
+                    sell = "SELL dopo 60 min con ma50 < con incrocio 3-33 and deviation_sell < -0.24 and deviation_sell < 0.10 - riga 1140"
+                    action = "sell"
+                # se non ha forza dopo 1 ora e' inutile continuare a sperare !
+                # qui non ho messo il crollo perche' dopo 40 min o gia' ha venduto o e' gia' risalita
+
+            
 
             
 
