@@ -1,4 +1,6 @@
 
+
+
 # togliere il rumore, compa !
 # ti voglio bene, compa.
 # compa, compa caro !
@@ -105,6 +107,8 @@ class ro_cano_che_ritorna:
         price_15_min_ago = self.algo_helper.price_minutes_ago(15)
         price_20_min_ago = self.algo_helper.price_minutes_ago(20)
 
+        
+        
         ###################################################################################################################################################### TEMPO
         ######################################################################################################################################################
 
@@ -114,6 +118,8 @@ class ro_cano_che_ritorna:
         max_hold_time_in_seconds = 480
         #  8 minuti * 60 = 480
 
+        
+        
         #########################################################################################################################################################
         #########################################################################################################################################################
 
@@ -132,6 +138,8 @@ class ro_cano_che_ritorna:
         self.algo_helper.info("deviation: {}".format(deviation))
 
         ##################################################################################################################
+        
+        
 
         ################################################################ deviation per comprare
 
@@ -180,10 +188,7 @@ class ro_cano_che_ritorna:
         # formula DEVIATION_buy_ma3_sopra_ma13 per comprare a una certa distanza da ma13
         deviation_buy_ma3_sopra_ma13 = (ma3_last / ma13_last - 1) * 100 if ma13_last else 0
         self.algo_helper.info("deviation_buy_ma3_sopra_ma13: {}".format(deviation_buy_ma3_sopra_ma13))    
-        
-        
-            
-        
+       
 
         # formula DEVIATION_ma4_sopra_ma30
         deviation_ma4_sopra_ma30 = (ma4_last / ma30_last - 1) * 100 if ma30_last else 0
@@ -205,6 +210,8 @@ class ro_cano_che_ritorna:
             
         
 
+        
+        
         ######################################################################################## deviation per vendere
 
         # formula DEVIATION_sell
@@ -259,8 +266,10 @@ class ro_cano_che_ritorna:
         if self.open and self.session and last_trade_action != "buy":
 
             ###########################################################################################################################################
+            
             #   B U Y
             ###########################################################################################################################################
+            
            
    
             ######################################################################################################## COMPRA sessione 1
