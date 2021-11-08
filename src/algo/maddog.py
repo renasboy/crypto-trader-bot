@@ -1082,8 +1082,8 @@ class maddog:
                     
             ##############################################################################################################################     da 60 a 90 min
             
-            # VENDITA - da 60 a 90 min - da 3601 a 5400 secondi in poi
-            elif seconds_since_last_trade > 3601 and seconds_since_last_trade <= 5400:
+            # VENDITA - da 60 a 90 min - da 3600 a 5400 secondi in poi
+            elif seconds_since_last_trade > 3600 and seconds_since_last_trade <= 5400:
             
 
                 if (
@@ -1153,9 +1153,9 @@ class maddog:
             
             ################################################################################################################################# > 90 min
             
-            # VENDITA - da 90 minuti in poi = da 5401 secondi in poi
+            # VENDITA - da 90 minuti in poi = da 5400 secondi in poi
 
-            elif seconds_since_last_trade > 5401:
+            elif seconds_since_last_trade > 5400:
 
                 if (
                     ma50_last > ma50_2_min_ago
