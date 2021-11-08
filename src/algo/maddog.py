@@ -223,19 +223,7 @@ class maddog:
         self.algo_helper.info("deviation_ma39: {}".format(deviation_ma39))
         
         
-        ################################################################################################ SPAZIO - TEMPO
-
-        # formula COMPRA_SPAZIO_TEMPO ( per comprare se c'e' una alta velocita' nel rialzo del prezzo )
-        compra_spazio_tempo = (ma3_last / ma3_3_min_ago - 1) * 100 if ma3_3_min_ago else 0
-        self.algo_helper.info("compra_spazio_tempo: {}".format(compra_spazio_tempo))    
-       
-
-        # formula VENDI_SPAZIO_TEMPO ( per vendere se c'e' una alta velocita' nel ribasso del prezzo )
-        vendi_spazio_tempo = (ma2_last / ma2_4_min_ago - 1) * 100 if ma2_4_min_ago else 0
-        self.algo_helper.info("vendi_spazio_tempo: {}".format(vendi_spazio_tempo))    
-       
-        ####################################################################################################################################################
-
+        
         # DEFAULT ACTION DICE DI NON FARE NIENTE (= None, NON TOCCARE )
         action = None
 
@@ -358,21 +346,7 @@ class maddog:
                     # deviation_buy1 = ma13_last/ma39_last
                 
                 
-                ##############################################################################
-
-                # BUY 1 DURANTE IL RIALZO con COMPRA_SPAZIO_TEMPO
-                if (
-                    compra_spazio_tempo > 0.70
-                    and ma3_last > ma33_last
-                    and (ma39_prev < ma78_prev and ma39_last > ma78_last)
-                    # compra_spazio_tempo = ma3_last / ma3_3_min_ago
-                    # QUESTA CONDIZIONE SPAZIO-TEMPO ERA UNA TUA IDEA !
-                    # questa condizione e' molto molto rischiosa ! vedi un po'
-                ):
-
-                    buy = "BUY 1 con incrocio 39-78 and COMPRA_SPAZIO_TEMPO > 0.70 riga 373"
-                    action = "buy"
-
+                
                 ##############################################################################################################################
                 # IMPORTANTISSIMO ! SOLO PER IL BUY 1 - PER COMPRARE DURANTE IL CROLLO - compa prega per me - ( cruise - david gilmour )
                 ##############################################################################################################################
@@ -488,7 +462,7 @@ class maddog:
 
                     # deviation_buy3 = ma4_last/ma30_last
 
-            # ###############################################################################################################     COMPRA sessione 4 in poi
+            # ###############################################################################################################       COMPRA sessione 4 in poi
             # --------------------------------------------------------------------------------------------------------------------- deviation piu' alte se ma 78 < !
 
             else:
@@ -603,21 +577,8 @@ class maddog:
                 # il fattore tempo - la dolce attesa - solo con trend ribassista
                 # deviation = ma2_last / last_trade_price
                 
-                
-                
-            # 5 - ro cano VENDE DOPO 4 minuti con VENDI_SPAZIO_TEMPO se il ribasso ha una alta velocita' # ha venduto con +0.07 strano !
-            elif (
-                vendi_spazio_tempo < -0.65
-                and ma4_last < ma4_4_min_ago
-                # QUESTA CONDIZIONE SPAZIO-TEMPO ERA UNA TUA IDEA !
-                # vendi_spazio_tempo = ma2_last/ma2_4_min_ago
-            ):
-
-                sell = "con VENDI_SPAZIO_TEMPO riga 616"
-                action = "sell"
-                    
-                    
-            # 6 - ro cano VENDE " DOPO x MINUTI " and...
+              
+            # 5 - ro cano VENDE " DOPO x MINUTI " and...
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
                 and ma11_last < ma39_last
@@ -1089,7 +1050,7 @@ class maddog:
                 if (
                     ma50_last > ma50_2_min_ago
                     #and ma3_last < ma39_last
-                    and deviation_ma39 <-0.09
+                    and deviation_ma39 < -0.09
                     and deviation_sell < 0.10
                     
                 ):
@@ -1135,7 +1096,7 @@ class maddog:
 
                 elif (
                     ma50_last < ma50_2_min_ago
-                    and deviation_ma39 <-0.08
+                    and deviation_ma39 < -0.08
                     #and ma3_last < ma33_last
                     and deviation_sell < 0.10
                     
@@ -1160,7 +1121,7 @@ class maddog:
                 if (
                     ma50_last > ma50_2_min_ago
                     #and ma3_last < ma39_last
-                    and deviation_ma39 <-0.09
+                    and deviation_ma39 < -0.09
                     and deviation_sell < 0.10
                 ):   
                     sell = "SELL dopo 90 min con ma50 > and deviation_ma39 <-0.09 (no ma3<ma39) (NO INCROCIO!) and deviation_sell < 0.10 (!) - riga 1166"
@@ -1207,7 +1168,7 @@ class maddog:
                 elif (
                     ma50_last < ma50_2_min_ago
                     #and ma3_last < ma33_last
-                    and deviation_ma39 <-0.08
+                    and deviation_ma39 < -0.08
                     and deviation_sell < 0.10
                     
                 ):
