@@ -605,33 +605,25 @@ class ro_cano_che_ritorna:
                 
                 
                 
-            # 5 - ro cano VENDE DOPO 4 minuti con VENDI_SPAZIO_TEMPO se il ribasso ha una alta velocita' # ha venduto con +0.07 strano !
-            elif (
-                vendi_spazio_tempo < -0.65
-                and ma4_last < ma4_4_min_ago
-                # QUESTA CONDIZIONE SPAZIO-TEMPO ERA UNA TUA IDEA !
-                # vendi_spazio_tempo = ma2_last/ma2_4_min_ago
-            ):
-
-                sell = "con VENDI_SPAZIO_TEMPO riga 616"
-                action = "sell"
+            
                     
-                    
-            # 6 - ro cano VENDE " DOPO x MINUTI " and...
+            # 5 - ro cano VENDE " DOPO x MINUTI " and...
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
                 and ma11_last < ma39_last
                 and deviation_sell < -0.35
             ):
 
-                sell = "SELL TEMPO e se ma11 < ma39 and deviation_sell < -0.35 - riga 627"
+                sell = "SELL TEMPO e se ma11 < ma39 and deviation_sell < -0.35 - riga 617"
                 action = "sell"
                 # ma13 troppo lenta !
 
+                
+                
             ###################################################################################################################################
-            
-            
-
+           
+          
+          
             # VENDITA - con fasce di tempo ! c'e' vita su marte !
 
             #    minuti
@@ -644,9 +636,12 @@ class ro_cano_che_ritorna:
             #  60 -  90
             #    > 90
             
+            
+            
             ##############################################################################################################################
-            
-            
+           
+          
+          
             #TEMPO BREVE            TEMPO MEDIO             TEMPO LUNGO
            
             # < -0.20                                       < -0.20
@@ -655,15 +650,20 @@ class ro_cano_che_ritorna:
             # 0.60 - 0.79                                   # 0.60 - 0.79
             # 0.80 - 1.20                                   # 0.80 - 1.20
             # > 1.21                                        # > 1.21
-            
-            
+          
+          
+          
+          
             ####################################################################################################################### 0 - 3 min
-            
-            
-            
+           
+          
+          
+          
             # la deviation_sell_ma78 mi protegge - (ogni volta che c'e' stato un rialzo la ma3 non l' ha mai toccata !)
             # e l' incrocio 3 -28 e' fondamentale per evitare punto rosso sovrapposto al punto verde ! e mi protegge anche questa quando ma78 sta molto in alto !
 
+            
+            
             # VENDITA - da 0 a 3 minuti = da 0 a 180 secondi
 
             if seconds_since_last_trade > 0 and seconds_since_last_trade <= 180:
