@@ -1087,13 +1087,14 @@ class ro_cano_che_ritorna:
 
                 if (
                     ma50_last > ma50_2_min_ago
-                    and (ma3_prev > ma39_prev and ma3_last < ma39_last)
-                    and deviation_sell < -0.20
+                    and ma3_last < ma39_last
                     and deviation_sell < 0.10
+                    
                 ):
-                    sell = "SELL dopo 60 min con ma50 > incrocio 3-39 and deviation_sell < -0.20 and deviation_sell < 0.10 (!) - riga 1095"
+                    sell = "SELL dopo 60 min con ma50 > and ma 3 < 39 (NO INCROCIO!) and deviation_sell < 0.10 (!) - riga 1095"
                     action = "sell"
-                    # # se non ha forza dopo 1 ora e' inutile continuare a sperare !
+                    # se non ha forza dopo 1 ora e' inutile continuare a sperare !
+                    # cuscino dell' angelo custode
                     
                 elif (
                     ma50_last > ma50_2_min_ago
@@ -1132,15 +1133,15 @@ class ro_cano_che_ritorna:
 
                 elif (
                     ma50_last < ma50_2_min_ago
-                    and (ma3_prev > ma33_prev and ma3_last < ma33_last)
-                    and deviation_sell < -0.24
+                    and ma3_last < ma33_last
                     and deviation_sell < 0.10
+                    
                 ):
-                    sell = "SELL dopo 60 min con ma50 < con incrocio 3-33 and deviation_sell < -0.24 and deviation_sell < 0.10 - riga 1140"
+                    sell = "SELL dopo 60 min con ma50 < con ma 3<33 (NO INCROCIO!) and deviation_sell < 0.10 - riga 1140"
                     action = "sell"
                 # se non ha forza dopo 1 ora e' inutile continuare a sperare !
                 # qui non ho messo il crollo perche' dopo 40 min o gia' ha venduto o e' gia' risalita
-
+                # cuscino dell' angelo custode
             
             
             
@@ -1154,13 +1155,14 @@ class ro_cano_che_ritorna:
 
                 if (
                     ma50_last > ma50_2_min_ago
-                    and (ma3_prev > ma39_prev and ma3_last < ma39_last)
-                    and deviation_sell < -0.20
+                    and ma3_last < ma39_last
                     and deviation_sell < 0.10
-                ):
-                    sell = "SELL dopo 90 min con ma50 > incrocio 3-39 and deviation_sell < -0.20 and deviation_sell < 0.10 (!) - riga 1095"
+                ):   
+                    sell = "SELL dopo 90 min con ma50 > and ma 3<39 (NO INCROCIO!) and deviation_sell < 0.10 (!) - riga 1095"
                     action = "sell"
-                    # # se non ha forza dopo 1 ora e' inutile continuare a sperare !
+                    # se non ha forza dopo 1 ora e' inutile continuare a sperare !
+                    # cuscino dell' angelo custode
+                    
                     
                 elif (
                     ma50_last > ma50_2_min_ago
@@ -1199,25 +1201,21 @@ class ro_cano_che_ritorna:
 
                 elif (
                     ma50_last < ma50_2_min_ago
-                    and (ma3_prev > ma33_prev and ma3_last < ma33_last)
-                    and deviation_sell < -0.24
+                    and ma3_last < ma33_last
                     and deviation_sell < 0.10
+                    
                 ):
-                    sell = "SELL dopo 90 min con ma50 < con incrocio 3-33 and deviation_sell < -0.24 and deviation_sell < 0.10 - riga 1140"
+                    sell = "SELL dopo 90 min con ma50 < con ma 3 < 33 (NO INCROCIO!) and deviation_sell < 0.10 - riga 1140"
                     action = "sell"
                 # se non ha forza dopo 1 ora e' inutile continuare a sperare !
                 # qui non ho messo il crollo perche' dopo 40 min o gia' ha venduto o e' gia' risalita
+                # ATTENZIONE non c'e' l' incrocio 3-33 ( PERCHE' NON HANNO INCROCIATO !) ma 3 < 33 !
+                # cuscino dell' angelo custode
+                
+                
+                ######################################################################################################################################################
 
-            
-
-            
-
-            
-
-            #################################################################################################
-            
-            
-            
+           
             
 
             ############### FINE ALGORITH ###################
@@ -1238,6 +1236,8 @@ class ro_cano_che_ritorna:
 
         # AGAINST THE WIND - Bob Seger & Jason Aldean
         
+        
+        # vai compaaaaaaaaaaaa
 
 
 
