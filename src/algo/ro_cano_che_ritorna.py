@@ -3,10 +3,10 @@
 # ti voglio bene, compa.
 # compa, compa caro !
 # Tom Petty - Something Good Coming
-####################################                8 ottobre 2021 - ore 17:30 - NON funziona, compa.
-# Tom Petty - learning to fly
+####################################                26 ottobre 2021 - ore 18:49 - funziona, compa.
 
-class ro_cano_che_ritorna:
+
+class maddog:
     def __init__(self, helper):
         self.algo_helper = helper
         self.session = 0
@@ -44,9 +44,10 @@ class ro_cano_che_ritorna:
         ma36_last, ma36_prev = self.algo_helper.ma_last_prev(36)
         ma39_last, ma39_prev = self.algo_helper.ma_last_prev(39)
         ma40_last, ma40_prev = self.algo_helper.ma_last_prev(40)
-        ma45_last, ma45_prev = self.algo_helper.ma_last_prev(45)
-        ma47_last, ma47_prev = self.algo_helper.ma_last_prev(47)
 
+        ma45_last, ma45_prev = self.algo_helper.ma_last_prev(45)
+
+        ma47_last, ma47_prev = self.algo_helper.ma_last_prev(47)
         ma48_last, ma48_prev = self.algo_helper.ma_last_prev(48)
 
         ma50_last, ma50_prev = self.algo_helper.ma_last_prev(50)
@@ -270,8 +271,7 @@ class ro_cano_che_ritorna:
             #   B U Y
             ###########################################################################################################################################
            
-            
-            
+   
             ######################################################################################################## COMPRA sessione 1
 
             if self.session == 1:
@@ -370,7 +370,7 @@ class ro_cano_che_ritorna:
                     # questa condizione e' molto molto rischiosa ! vedi un po'
                 ):
 
-                    buy = "BUY 1 con incrocio 39-78 and COMPRA_SPAZIO_TEMPO > 0.70 riga 373"
+                    buy = "BUY 1 con incrocio 47-78 and COMPRA_SPAZIO_TEMPO > 0.70 riga 373"
                     action = "buy"
 
                 ##############################################################################################################################
@@ -478,7 +478,7 @@ class ro_cano_che_ritorna:
                     ma78_last < ma78_2_min_ago
                     and deviation_buy3 > 0.03
                     and delta_buy3_incrocio_ma3_ma8 > 0.07
-                    and deviation_ma4_sopra_ma30 > 0.18
+                    and deviation_ma4_sopra_ma30 > 0.19
                     and ma3_last > ma8_last
                     and ma3_last > ma78_last
                     and ma4_last > ma4_2_min_ago
@@ -508,12 +508,12 @@ class ro_cano_che_ritorna:
                     ma78_last >= ma78_2_min_ago
                     and deviation_buy3 > 0.02
                     and delta_buy3_incrocio_ma3_ma8 > 0.06
-                    and deviation_ma4_sopra_ma30 > 0.17
+                    and deviation_ma4_sopra_ma30 > 0.18
                     and ma3_last > ma8_last
                     and ma3_last > ma78_last
                     and ma4_last > ma4_2_min_ago
                 ):
-                    buy = "BUY 4B RIVOLUZIONARIO con ma78 > - riga 516"
+                    buy = "BUY 4B RIVOLUZIONARIO con ma78 >- riga 516"
                     action = "buy"
 
                     # deviation_buy3 = ma4_last/ma30_last
@@ -1080,32 +1080,29 @@ class ro_cano_che_ritorna:
 
                     
                     
-            ##############################################################################################################################     da 60 a 90 min
-            
-            # VENDITA - da 60 a 90 min - da 3600 a 5400 secondi in poi
-            elif seconds_since_last_trade > 3600 and seconds_since_last_trade <= 5400:
-            
+            ##############################################################################################################################     > 60 min
+
+            # VENDITA - da 60 minuti in poi = da 3600 secondi in poi
+
+            elif seconds_since_last_trade > 3600:
 
                 if (
                     ma50_last > ma50_2_min_ago
-                    #and ma3_last < ma39_last
-                    and deviation_ma39 <-0.09
+                    and (ma3_prev > ma39_prev and ma3_last < ma39_last)
+                    and deviation_sell < -0.20
                     and deviation_sell < 0.10
-                    
                 ):
-                    sell = "SELL da 60 a 90 min con ma50 > and deviation_ma39 <-0.09 (no ma3<ma39) (NO INCROCIO!) and deviation_sell < 0.10 (!) - riga 1096"
+                    sell = "SELL dopo 60 min con ma50 > incrocio 3-39 and deviation_sell < -0.20 and deviation_sell < 0.10 (!) - riga 1095"
                     action = "sell"
-                    # se non ha forza dopo 1 ora e' inutile continuare a sperare !
-                    # cuscino dell' angelo custode
-                   
-                
+                    # # se non ha forza dopo 1 ora e' inutile continuare a sperare !
+                    
                 elif (
                     ma50_last > ma50_2_min_ago
                     and (ma3_prev > ma13_prev and ma3_last < ma13_last)
                     and deviation_sell > 0.35
                     and deviation_sell < 0.69
                 ):
-                    sell = "SELL dopo 60 min con ma50 > incrocio 3-13 and deviation_sell 0.35 - 0.69 DOPPIO PASSO ALLA RONALDO - riga 1108"
+                    sell = "SELL dopo 60 min con ma50 > incrocio 3-13 and deviation_sell 0.35 - 0.69 DOPPIO PASSO ALLA RONALDO - riga 1105"
                     action = "sell"
 
                     
@@ -1116,89 +1113,19 @@ class ro_cano_che_ritorna:
                     and deviation_sell < 1.49
                 ):
 
-                    sell = "SELL da 60 a 90 min con ma50 > incrocio 3-39 and deviation_sell 0.70 - 1.49 - riga 1119"
+                    sell = "SELL dopo 60 min con ma50 > incrocio 3-39 and deviation_sell 0.70 - 1.49 - riga 1116"
                     action = "sell"
 
                     # ma 3-48 mi evita la ricompra e la rivendita con perdita !
- 
 
+                    
                 elif (
                     ma50_last > ma50_2_min_ago
                     and (ma3_prev > ma33_prev and ma3_last < ma33_last)
                     and deviation_sell > 1.50
                 ):
 
-                    sell = "SELL da 60 a 90 min con ma50 > incrocio 3-33 and deviation_sell > 1.50 - riga 1131"
-                    action = "sell"
-
-                ######################################################################################## con trend discendente
-
-                elif (
-                    ma50_last < ma50_2_min_ago
-                    and deviation_ma39 <-0.08
-                    #and ma3_last < ma33_last
-                    and deviation_sell < 0.10
-                    
-                ):
-                    sell = "SELL da 60 a 90 min con ma50 < con deviation_ma39 <-0.08 (no ma3<ma33) (NO INCROCIO!) and deviation_sell < 0.10 - riga 1143"
-                    action = "sell"
-                # se non ha forza dopo 1 ora e' inutile continuare a sperare !
-                # qui non ho messo il crollo perche' dopo 40 min o gia' ha venduto o e' gia' risalita
-                # cuscino dell' angelo custode
-            
-            
-            
-            
-            
-            
-            ################################################################################################################################# > 90 min
-            
-            # VENDITA - da 90 minuti in poi = da 5400 secondi in poi
-
-            elif seconds_since_last_trade > 5400:
-
-                if (
-                    ma50_last > ma50_2_min_ago
-                    #and ma3_last < ma39_last
-                    and deviation_ma39 <-0.09
-                    and deviation_sell < 0.10
-                ):   
-                    sell = "SELL dopo 90 min con ma50 > and deviation_ma39 <-0.09 (no ma3<ma39) (NO INCROCIO!) and deviation_sell < 0.10 (!) - riga 1166"
-                    action = "sell"
-                    # se non ha forza dopo 1 ora e' inutile continuare a sperare !
-                    # cuscino dell' angelo custode
-                    
-                    
-                elif (
-                    ma50_last > ma50_2_min_ago
-                    and (ma3_prev > ma13_prev and ma3_last < ma13_last)
-                    and deviation_sell > 0.35
-                    and deviation_sell < 0.69
-                ):
-                    sell = "SELL dopo 90 min con ma50 > incrocio 3-13 and deviation_sell 0.35 - 0.69 DOPPIO PASSO ALLA RONALDO - riga 1178"
-                    action = "sell"
-
-                    
-                elif (
-                    ma50_last > ma50_2_min_ago
-                    and (ma3_prev > ma48_prev and ma3_last < ma48_last)
-                    and deviation_sell > 0.70
-                    and deviation_sell < 1.49
-                ):
-
-                    sell = "SELL dopo 90 min con ma50 > incrocio 3-48 (!) and deviation_sell 0.70 - 1.49 - riga 1189"
-                    action = "sell"
-
-                    # ma 3-48 mi evita la ricompra e la rivendita con perdita !
-
-                    
-                elif (
-                    ma50_last > ma50_2_min_ago
-                    and (ma3_prev > ma48_prev and ma3_last < ma48_last)
-                    and deviation_sell > 1.50
-                ):
-
-                    sell = "SELL dopo 90 min con ma50 > incrocio 3-48 (!) and deviation_sell > 1.50 - riga 1201"
+                    sell = "SELL dopo 60 min con ma50 > incrocio 3-33 and deviation_sell > 1.50 - riga 1128"
                     action = "sell"
 
                     
@@ -1206,22 +1133,25 @@ class ro_cano_che_ritorna:
 
                 elif (
                     ma50_last < ma50_2_min_ago
-                    #and ma3_last < ma33_last
-                    and deviation_ma39 <-0.08
+                    and (ma3_prev > ma33_prev and ma3_last < ma33_last)
+                    and deviation_sell < -0.24
                     and deviation_sell < 0.10
-                    
                 ):
-                    sell = "SELL dopo 90 min con ma50 < con deviation_ma39 <-0.08 (no ma3<ma33) (NO INCROCIO!) and deviation_sell < 0.10 - riga 1214"
+                    sell = "SELL dopo 60 min con ma50 < con incrocio 3-33 and deviation_sell < -0.24 and deviation_sell < 0.10 - riga 1140"
                     action = "sell"
                 # se non ha forza dopo 1 ora e' inutile continuare a sperare !
                 # qui non ho messo il crollo perche' dopo 40 min o gia' ha venduto o e' gia' risalita
-                # ATTENZIONE non c'e' l' incrocio 3-33 ( PERCHE' NON HANNO INCROCIATO !) ma 3 < 33 !
-                # cuscino dell' angelo custode
-                
-                
-                ######################################################################################################################################################
 
-           
+            ###########################################################################################################################
+ 
+            
+
+            
+
+            #################################################################################################
+            
+            
+            
             
 
             ############### FINE ALGORITH ###################
@@ -1243,7 +1173,3 @@ class ro_cano_che_ritorna:
         # AGAINST THE WIND - Bob Seger & Jason Aldean
         
         
-        # vai compaaaaaaaaaaaa
-
-
-
