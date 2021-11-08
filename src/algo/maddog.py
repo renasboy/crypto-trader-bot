@@ -3,7 +3,7 @@
 # ti voglio bene, compa.
 # compa, compa caro !
 # Tom Petty - Something Good Coming
-####################################                7 ottobre 2021 - ore 18:00 - funziona, compa.
+####################################                8 ottobre 2021 - ore 17:30 - NON funziona, compa.
 # Tom Petty - learning to fly
 
 class maddog:
