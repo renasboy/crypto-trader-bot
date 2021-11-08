@@ -224,16 +224,7 @@ class ro_cano_che_ritorna:
         self.algo_helper.info("deviation_ma39: {}".format(deviation_ma39))
         
         
-        ################################################################################################ SPAZIO - TEMPO
-
-        # formula COMPRA_SPAZIO_TEMPO ( per comprare se c'e' una alta velocita' nel rialzo del prezzo )
-        compra_spazio_tempo = (ma3_last / ma3_3_min_ago - 1) * 100 if ma3_3_min_ago else 0
-        self.algo_helper.info("compra_spazio_tempo: {}".format(compra_spazio_tempo))    
-       
-
-        # formula VENDI_SPAZIO_TEMPO ( per vendere se c'e' una alta velocita' nel ribasso del prezzo )
-        vendi_spazio_tempo = (ma2_last / ma2_4_min_ago - 1) * 100 if ma2_4_min_ago else 0
-        self.algo_helper.info("vendi_spazio_tempo: {}".format(vendi_spazio_tempo))    
+        
        
         ####################################################################################################################################################
 
@@ -358,20 +349,7 @@ class ro_cano_che_ritorna:
                     # deviation_buy1 = ma13_last/ma39_last
                 
                 
-                ##############################################################################
-
-                # BUY 1 DURANTE IL RIALZO con COMPRA_SPAZIO_TEMPO
-                if (
-                    compra_spazio_tempo > 0.70
-                    and ma3_last > ma33_last
-                    and (ma39_prev < ma78_prev and ma39_last > ma78_last)
-                    # compra_spazio_tempo = ma3_last / ma3_3_min_ago
-                    # QUESTA CONDIZIONE SPAZIO-TEMPO ERA UNA TUA IDEA !
-                    # questa condizione e' molto molto rischiosa ! vedi un po'
-                ):
-
-                    buy = "BUY 1 con incrocio 47-78 and COMPRA_SPAZIO_TEMPO > 0.70 riga 373"
-                    action = "buy"
+               
 
                 ##############################################################################################################################
                 # IMPORTANTISSIMO ! SOLO PER IL BUY 1 - PER COMPRARE DURANTE IL CROLLO - compa prega per me - ( cruise - david gilmour )
