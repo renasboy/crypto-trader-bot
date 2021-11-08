@@ -1,10 +1,10 @@
-# 28 ottobre 2021
+
 # togliere il rumore, compa !
 # ti voglio bene, compa.
 # compa, compa caro !
 # Tom Petty - Something Good Coming
-####################################                26 ottobre 2021 - ore 18:49 - funziona, compa.
-
+####################################              il giorno 8 novembre 2021 ho migliorato il MADDOG ma CANO CHE RITORNA non funziona ! vediamo perche'
+                                                        # nuova fascia con sell ma50 e cuscino dell' angelo custode (deviation_ma39) forse il problema sta li
 
 class ro_cano_che_ritorna:
     def __init__(self, helper):
