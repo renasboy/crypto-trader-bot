@@ -1080,8 +1080,9 @@ class ro_cano_che_ritorna:
 
                     
                     
-            ##############################################################################################################################     > 60 min
-            # VENDITA - da 3601 a 5400 secondi in poi
+            ##############################################################################################################################     da 60 a 90 min
+            
+            # VENDITA - da 60 a 90 min - da 3601 a 5400 secondi in poi
             elif seconds_since_last_trade > 3601 and seconds_since_last_trade <= 5400:
             
 
@@ -1091,7 +1092,7 @@ class ro_cano_che_ritorna:
                     and deviation_sell < 0.10
                     
                 ):
-                    sell = "SELL dopo 60 min con ma50 > and ma 3 < 39 (NO INCROCIO!) and deviation_sell < 0.10 (!) - riga 1095"
+                    sell = "SELL da 60 a 90 min con ma50 > and ma 3 < 39 (NO INCROCIO!) and deviation_sell < 0.10 (!) - riga 1095"
                     action = "sell"
                     # se non ha forza dopo 1 ora e' inutile continuare a sperare !
                     # cuscino dell' angelo custode
@@ -1113,7 +1114,7 @@ class ro_cano_che_ritorna:
                     and deviation_sell < 1.49
                 ):
 
-                    sell = "SELL dopo 60 min con ma50 > incrocio 3-39 and deviation_sell 0.70 - 1.49 - riga 1116"
+                    sell = "SELL da 60 a 90 min con ma50 > incrocio 3-39 and deviation_sell 0.70 - 1.49 - riga 1116"
                     action = "sell"
 
                     # ma 3-48 mi evita la ricompra e la rivendita con perdita !
@@ -1125,7 +1126,7 @@ class ro_cano_che_ritorna:
                     and deviation_sell > 1.50
                 ):
 
-                    sell = "SELL dopo 60 min con ma50 > incrocio 3-33 and deviation_sell > 1.50 - riga 1128"
+                    sell = "SELL da 60 a 90 min con ma50 > incrocio 3-33 and deviation_sell > 1.50 - riga 1128"
                     action = "sell"
 
                     
@@ -1137,7 +1138,7 @@ class ro_cano_che_ritorna:
                     and deviation_sell < 0.10
                     
                 ):
-                    sell = "SELL dopo 60 min con ma50 < con ma 3<33 (NO INCROCIO!) and deviation_sell < 0.10 - riga 1140"
+                    sell = "SELL da 60 a 90 min con ma50 < con ma 3<33 (NO INCROCIO!) and deviation_sell < 0.10 - riga 1140"
                     action = "sell"
                 # se non ha forza dopo 1 ora e' inutile continuare a sperare !
                 # qui non ho messo il crollo perche' dopo 40 min o gia' ha venduto o e' gia' risalita
@@ -1148,7 +1149,8 @@ class ro_cano_che_ritorna:
             
             
             
-            #################################################################################################################################
+            ################################################################################################################################# > 90 min
+            
             # VENDITA - da 90 minuti in poi = da 5401 secondi in poi
 
             elif seconds_since_last_trade > 5401:
