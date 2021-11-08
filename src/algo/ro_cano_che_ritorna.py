@@ -359,10 +359,23 @@ class ro_cano_che_ritorna:
                 
                 
                
-
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 ##############################################################################################################################
+                
                 # IMPORTANTISSIMO ! SOLO PER IL BUY 1 - PER COMPRARE DURANTE IL CROLLO - compa prega per me - ( cruise - david gilmour )
                 ##############################################################################################################################
+                
+                
+                
+                
 
                 # entriamo nell' area dell' ipervenduto, compa !
               
