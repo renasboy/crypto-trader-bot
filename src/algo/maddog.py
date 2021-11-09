@@ -1050,11 +1050,11 @@ class maddog:
                 if (
                     ma50_last > ma50_2_min_ago
                     #and ma3_last < ma39_last
-                    and deviation_ma39 < -0.09
-                    and deviation_sell < 0.10
+                    and deviation_ma39 < -0.12
+                    #and deviation_sell < 0.10
                     
                 ):
-                    sell = "SELL da 60 a 90 min con ma50 > and deviation_ma39 <-0.09 (no ma3<ma39) (NO INCROCIO!) and deviation_sell < 0.10 (!) - riga 1096"
+                    sell = "SELL da 60 a 90 min con ma50 > and deviation_ma39 <-0.12 (no ma3<ma39) (NO INCROCIO!) (NO and deviation_sell < 0.10 (!)) - riga 1096"
                     action = "sell"
                     # se non ha forza dopo 1 ora e' inutile continuare a sperare !
                     # cuscino dell' angelo custode
