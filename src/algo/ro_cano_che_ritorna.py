@@ -5,8 +5,8 @@
 # ti voglio bene, compa.
 # compa, compa caro !
 # Tom Petty - Something Good Coming
-####################################              il giorno 8 novembre 2021 ho migliorato il MADDOG ma CANO CHE RITORNA non funziona ! vediamo perche'
-                                                        # nuova fascia con sell ma50 e cuscino dell' angelo custode (deviation_ma39) forse il problema sta li
+####################################              
+                                                        
 
 class ro_cano_che_ritorna:
     def __init__(self, helper):
@@ -610,11 +610,11 @@ class ro_cano_che_ritorna:
             # 5 - ro cano VENDE " DOPO x MINUTI " and...
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
-                and ma11_last < ma39_last
-                and deviation_sell < -0.35
+                and ma10_last < ma39_last
+                and deviation_sell < -0.34
             ):
 
-                sell = "SELL TEMPO e se ma11 < ma39 and deviation_sell < -0.35 - riga 617"
+                sell = "SELL TEMPO e se ma10 < ma39 and deviation_sell < -0.34 - riga 617"
                 action = "sell"
                 # ma13 troppo lenta !
 
