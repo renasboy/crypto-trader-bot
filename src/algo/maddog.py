@@ -1050,11 +1050,11 @@ class maddog:
                 if (
                     ma50_last > ma50_2_min_ago
                     #and ma3_last < ma39_last
-                    and deviation_ma39 < -0.12
+                    and deviation_ma39 < -0.18
                     #and deviation_sell < 0.10
                     
                 ):
-                    sell = "SELL da 60 a 90 min con ma50 > and deviation_ma39 <-0.12 (no ma3<ma39) (NO INCROCIO!) (NO and deviation_sell < 0.10 (!)) - riga 1096"
+                    sell = "SELL da 60 a 90 min con ma50 > and deviation_ma39 <-0.18 (no ma3<ma39) (NO INCROCIO!) (NO and deviation_sell < 0.10 (!)) - riga 1096"
                     action = "sell"
                     # se non ha forza dopo 1 ora e' inutile continuare a sperare !
                     # cuscino dell' angelo custode
@@ -1096,12 +1096,12 @@ class maddog:
 
                 elif (
                     ma50_last < ma50_2_min_ago
-                    and deviation_ma39 < -0.08
+                    and deviation_ma39 < -0.18
                     #and ma3_last < ma33_last
                     and deviation_sell < 0.10
                     
                 ):
-                    sell = "SELL da 60 a 90 min con ma50 < con deviation_ma39 <-0.08 (no ma3<ma33) (NO INCROCIO!) and deviation_sell < 0.10 - riga 1143"
+                    sell = "SELL da 60 a 90 min con ma50 < con deviation_ma39 <-0.18 and deviation_sell < 0.10 (no ma3<ma33) (NO INCROCIO!) - riga 1143"
                     action = "sell"
                 # se non ha forza dopo 1 ora e' inutile continuare a sperare !
                 # qui non ho messo il crollo perche' dopo 40 min o gia' ha venduto o e' gia' risalita
@@ -1121,10 +1121,10 @@ class maddog:
                 if (
                     ma50_last > ma50_2_min_ago
                     #and ma3_last < ma39_last
-                    and deviation_ma39 < -0.09
+                    and deviation_ma39 < -0.18
                     and deviation_sell < 0.10
                 ):   
-                    sell = "SELL dopo 90 min con ma50 > and deviation_ma39 <-0.09 (no ma3<ma39) (NO INCROCIO!) and deviation_sell < 0.10 (!) - riga 1166"
+                    sell = "SELL dopo 90 min con ma50 > and deviation_ma39 <-0.18 (no ma3<ma39) (NO INCROCIO!) and deviation_sell < 0.10 (!) - riga 1166"
                     action = "sell"
                     # se non ha forza dopo 1 ora e' inutile continuare a sperare !
                     # cuscino dell' angelo custode
@@ -1168,11 +1168,11 @@ class maddog:
                 elif (
                     ma50_last < ma50_2_min_ago
                     #and ma3_last < ma33_last
-                    and deviation_ma39 < -0.08
+                    and deviation_ma39 < -0.18
                     and deviation_sell < 0.10
                     
                 ):
-                    sell = "SELL dopo 90 min con ma50 < con deviation_ma39 <-0.08 (no ma3<ma33) (NO INCROCIO!) and deviation_sell < 0.10 - riga 1214"
+                    sell = "SELL dopo 90 min con ma50 < con deviation_ma39 <-0.18 and deviation_sell < 0.10 (no ma3<ma33) (NO INCROCIO!)  - riga 1214"
                     action = "sell"
                 # se non ha forza dopo 1 ora e' inutile continuare a sperare !
                 # qui non ho messo il crollo perche' dopo 40 min o gia' ha venduto o e' gia' risalita
