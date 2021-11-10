@@ -509,7 +509,7 @@ class maddog:
                     
 
         ############################################################################################################  compra sessione 5 in poi
-                                                                                                                      piu' alto il BUY - "effetti laterali"
+                                                                                                                   #  piu' alto il BUY - "effetti laterali"
              
             else:
 
