@@ -462,20 +462,20 @@ class maddog:
 
                     # deviation_buy3 = ma4_last/ma30_last
 
-            # ###############################################################################################################       COMPRA sessione 4 in poi
+            # ###############################################################################################################       COMPRA sessione 4
             # --------------------------------------------------------------------------------------------------------------------- deviation piu' alte se ma 78 < !
-
-            else:
-
+            
+            elif self.session == 4:
+                
                 if (
                     ma78_last >= ma78_2_min_ago
-                    and deviation_buy3 > 0.12
+                    and deviation_buy3 > 0.11
                     and ma3_last > ma13_last
-                    and deviation_ma7_sopra_ma40 > 0.12
+                    and deviation_ma7_sopra_ma40 > 0.11
                     and (ma4_prev < ma9_prev and ma4_last > ma9_last)
                     and ma4_last > ma50_last
                 ):
-                    buy = "BUY 4A riga 504"
+                    buy = "BUY 4A con ma 78 > riga 478"
                     action = "buy"
 
                 elif (
@@ -487,7 +487,7 @@ class maddog:
                     and ma3_last > ma78_last
                     and ma4_last > ma4_2_min_ago
                 ):
-                    buy = "BUY 4B RIVOLUZIONARIO con ma78 > - riga 516"
+                    buy = "BUY 4B RIVOLUZIONARIO con ma78 > - riga 490"
                     action = "buy"
 
                     # deviation_buy3 = ma4_last/ma30_last
@@ -501,10 +501,58 @@ class maddog:
                     and ma3_last > ma78_last
                     and ma4_last > ma4_2_min_ago
                 ):
-                    buy = "BUY 4C RIVOLUZIONARIO con ma78 < - riga 530"
+                    buy = "BUY 4C RIVOLUZIONARIO con ma78 < - riga 504"
                     action = "buy"
 
                     # deviation_buy3 = ma4_last/ma30_last
+                    
+                    
+
+        ############################################################################################################  compra sessione 5 in poi
+                                                                                                                      piu' alto il BUY - "effetti laterali"
+             
+            else:
+
+                if (
+                    ma78_last >= ma78_2_min_ago
+                    and deviation_buy3 > 0.13
+                    and ma3_last > ma13_last
+                    and deviation_ma7_sopra_ma40 > 0.13
+                    and (ma4_prev < ma9_prev and ma4_last > ma9_last)
+                    and ma4_last > ma50_last
+                ):
+                    buy = "BUY 5A riga 524"
+                    action = "buy"
+
+                elif (
+                    ma78_last >= ma78_2_min_ago
+                    and deviation_buy3 > 0.03
+                    and delta_buy3_incrocio_ma3_ma8 > 0.06
+                    and deviation_ma4_sopra_ma30 > 0.18
+                    and ma3_last > ma8_last
+                    and ma3_last > ma78_last
+                    and ma4_last > ma4_2_min_ago
+                ):
+                    buy = "BUY 5B RIVOLUZIONARIO con ma78 > - riga 536"
+                    action = "buy"
+
+                    # deviation_buy3 = ma4_last/ma30_last
+
+                elif (
+                    ma78_last < ma78_2_min_ago
+                    and deviation_buy3 > 0.04
+                    and delta_buy3_incrocio_ma3_ma8 > 0.08
+                    and deviation_ma4_sopra_ma30 > 0.20
+                    and ma3_last > ma8_last
+                    and ma3_last > ma78_last
+                    and ma4_last > ma4_2_min_ago
+                ):
+                    buy = "BUY 5C RIVOLUZIONARIO con ma78 < - riga 550"
+                    action = "buy"
+
+                    # deviation_buy3 = ma4_last/ma30_last
+                    
+                    
 
         ############################################################################################################
 
