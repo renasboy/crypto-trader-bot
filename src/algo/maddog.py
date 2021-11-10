@@ -423,11 +423,11 @@ class maddog:
                     ma78_last >= ma78_2_min_ago
                     and deviation_buy3 > 0.11
                     and ma3_last > ma13_last
-                    and deviation_ma7_sopra_ma40 > 0.11
+                    and deviation_ma7_sopra_ma40 > 0.10
                     and (ma4_prev < ma9_prev and ma4_last > ma9_last)
                     and ma4_last > ma50_last
                 ):
-                    buy = "BUY 3A riga 456"
+                    buy = "BUY 3A con ma78 > riga 430"
                     action = "buy"
             
             
