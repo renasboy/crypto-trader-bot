@@ -1184,10 +1184,10 @@ class ro_cano_che_ritorna:
                 if (
                     ma50_last > ma50_2_min_ago
                     #and ma3_last < ma39_last
-                    and deviation_ma39 < -0.18
-                    and deviation_sell < 0.10
+                    and deviation_ma39 < -0.18 or (deviation_sell < 0.10 and ma3_last < ma39_last)
+                    # dopo 90 min se il prezzo non ha forza puoi anche prendere qualcosa (solo > 90 min QUESTA RIGA e' diversa da MADDOG)
                 ):   
-                    sell = "SELL dopo 90 min con ma50 > and deviation_ma39 <-0.18 (no ma3<ma39) (NO INCROCIO!) and deviation_sell < 0.10 (!) - riga 1190"
+                    sell = "SELL dopo 90 min con ma50 > and deviation_ma39 <-0.18 (no ma3<ma39) (NO INCROCIO!) or (deviation_sell < 0.10 and ma3 < ma39) - riga 1190"
                     action = "sell"
                     # se non ha forza dopo 1 ora e' inutile continuare a sperare !
                     # cuscino dell' angelo custode
@@ -1231,11 +1231,11 @@ class ro_cano_che_ritorna:
                 elif (
                     ma50_last < ma50_2_min_ago
                     #and ma3_last < ma33_last
-                    and deviation_ma39 < -0.18
-                    and deviation_sell < 0.10
+                    and deviation_ma39 < -0.18 or (deviation_sell < 0.10 and ma3_last < ma39_last)
+                    # dopo 90 min se il prezzo non ha forza puoi anche prendere qualcosa (solo > 90 min QUESTA RIGA e' diversa da MADDOG)
                     
                 ):
-                    sell = "SELL dopo 90 min con ma50 < con deviation_ma39 <-0.18 and deviation_sell < 0.10 (no ma3<ma33) (NO INCROCIO!)  - riga 1235"
+                    sell = "SELL dopo 90 min con ma50 < con deviation_ma39 <-0.18 (no ma3<ma33) (NO INCROCIO!) or (deviation_sell < 0.10 and ma3_last < ma39_last) - riga 1235"
                     action = "sell"
                 # se non ha forza dopo 1 ora e' inutile continuare a sperare !
                 # qui non ho messo il crollo perche' dopo 40 min o gia' ha venduto o e' gia' risalita
