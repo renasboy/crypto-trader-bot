@@ -620,7 +620,7 @@ class maddog:
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
                 and ma2_last < last_trade_price
-                and deviation < -0.40
+                and deviation < -0.37
                 and ma25_last < ma25_2_min_ago
             ):
 
