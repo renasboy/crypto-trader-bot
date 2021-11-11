@@ -7,8 +7,10 @@
 # Tom Petty - learning to fly
 
 class ro_cano_che_ritorna:
-    def __init__(self, helper):
+    def __init__(self, helper, buy_percentage, sell_percentage):
         self.algo_helper = helper
+        self.buy_percentage = buy_percentage
+        self.sell_percentage = sell_percentage
         self.session = 0
         self.open = False
 
@@ -226,6 +228,7 @@ class ro_cano_che_ritorna:
         
         # DEFAULT ACTION DICE DI NON FARE NIENTE (= None, NON TOCCARE )
         action = None
+        percentage = 0
 
         ############################################################################################ APRE E CHIUDE LA GABBIA
 
@@ -261,6 +264,9 @@ class ro_cano_che_ritorna:
             
             
             ######################################################################################################## COMPRA sessione 1
+
+            percentage = self.buy_percentage
+
 
             if self.session == 1:
 
@@ -571,6 +577,8 @@ class ro_cano_che_ritorna:
         # NON TOCCARE QUESTA RIGA (DICE CHE STA IN MODO SELL, DEVO VENDERE !)
 
         elif last_trade_action == "buy":
+
+            percentage = self.sell_percentage
 
             #####################################################################################################################
 
@@ -1251,6 +1259,7 @@ class ro_cano_che_ritorna:
             ############### FINE ALGORITH ###################
 
         self.algo_helper.info("action {}".format(action))
+        self.algo_helper.info("percentage {}".format(percentage))
 
         if action == "sell":
             self.algo_helper.info("action sell {}".format(sell))
@@ -1259,7 +1268,7 @@ class ro_cano_che_ritorna:
         elif action == "buy":
             self.algo_helper.info("action buy {}".format(buy))
 
-        return action
+        return action, percentage
 
         # compa, compa caro !
         # ave comparo meo !

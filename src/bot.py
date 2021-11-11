@@ -15,18 +15,18 @@ def run():
     fee = algo_helper.fee
 
     # ALGO TAKE ACTION
-    action = algo.action
+    action, percentage = algo.action
 
     if action != None and not active_order_id:
         if not LIMIT_ORDER:
             if not DRY_RUN:
                 if action == "buy":
                     amount = exchange.balance(SYMBOL_2) * (
-                        float(MAX_SYMBOL_2_PERCENTAGE) / 100.0
+                        float(percentage) / 100.0
                     )
                 elif action == "sell":
                     amount = exchange.balance(SYMBOL_1) * (
-                        float(MAX_SYMBOL_1_PERCENTAGE) / 100.0
+                        float(percentage) / 100.0
                     )
                 algo_helper.info(
                     "REAL market order action {} amount {}".format(action, amount)
@@ -40,12 +40,12 @@ def run():
                 price = exchange.lowest_ask()
                 volume = (
                     exchange.balance(SYMBOL_2)
-                    * (float(MAX_SYMBOL_2_PERCENTAGE) / 100.0)
+                    * (float(percentage) / 100.0)
                 ) / price
             elif action == "sell":
                 price = exchange.highest_bid()
                 volume = exchange.balance(SYMBOL_1) * (
-                    float(MAX_SYMBOL_1_PERCENTAGE) / 100.0
+                    float(percentage) / 100.0
                 )
 
             if not DRY_RUN:
@@ -97,7 +97,7 @@ if __name__ == "__main__":
         "boring_but_safe",
     ):
         module = __import__("algo.{}".format(ALGO), fromlist=[ALGO])
-        algo = getattr(module, ALGO)(algo_helper)
+        algo = getattr(module, ALGO)(algo_helper, MAX_SYMBOL_2_PERCENTAGE, MAX_SYMBOL_1_PERCENTAGE)
 
     if EXCHANGE in ("bl3p", "binance", "cobinhood", "coinbasepro"):
         module = __import__("exchange.{}".format(EXCHANGE), fromlist=[EXCHANGE])

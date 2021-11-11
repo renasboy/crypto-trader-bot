@@ -2,8 +2,10 @@ from datetime import datetime
 
 
 class ro_cano_quando_esce:
-    def __init__(self, helper):
+    def __init__(self, helper, buy_percentage, sell_percentage):
         self.algo_helper = helper
+        self.buy_percentage = buy_percentage
+        self.sell_percentage = sell_percentage
         self.session = 0
         self.open = False
 
@@ -68,6 +70,7 @@ class ro_cano_quando_esce:
         price = self.algo_helper.price
 
         action = None
+        percentage = 0
 
         # apre la gabbia, se subito dopo l'incrocio della ma8 X ma34 la ma8 >= ma34
         if ma34_prev and ma34_last and ma8_prev < ma34_prev and ma8_last >= ma34_last:
@@ -115,6 +118,9 @@ class ro_cano_quando_esce:
             or ((ma7_last / ma34_last - 1) * 100 > 0.37)
             and macd < -30.0
         ):
+
+            percentage = self.buy_percentage
+
             # TODO: separare la condizione speciale
 
             # compra sessione UNO solo se
@@ -153,6 +159,8 @@ class ro_cano_quando_esce:
 
         # vende
         elif last_trade_action == "buy":
+
+            percentage = self.sell_percentage
 
             # vende subito (rispetando la fascia di non vendita) se la gabbia e' chiusa
             # "condizione corona" se MACD >25 vendi subito
@@ -281,4 +289,4 @@ class ro_cano_quando_esce:
                 self.session = 0
                 self.algo_helper.info("session {}: restart segment".format(self.session))
 
-        return action
+        return action, percentage

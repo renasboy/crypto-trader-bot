@@ -1,6 +1,8 @@
 class boring_but_safe:
-    def __init__(self, helper):
+    def __init__(self, helper, buy_percentage, sell_percentage):
         self.algo_helper = helper
+        self.buy_percentage = buy_percentage
+        self.sell_percentage = sell_percentage
 
     @property
     def action(self):
@@ -21,12 +23,14 @@ class boring_but_safe:
         fee = self.algo_helper.fee
 
         action = None
+        percentage = 0
         if (
             last_trade_action != "buy"
             and macd_trend == "breakup"
             and rsi < 80
             and price == min([price, week_mean])
         ):
+            percentage = self.buy_percentage
             action = "buy"
         elif (
             last_trade_action == "buy"
@@ -34,5 +38,6 @@ class boring_but_safe:
             and rsi > 20
             and price > last_trade_price + (fee * 5)
         ):
+            percentage = self.sell_percentage
             action = "sell"
-        return action
+        return action, percentage
