@@ -369,7 +369,7 @@ class maddog:
                 
                 
               
-                # BUY  SECONDO MODO - DURANTE IL CROLLO
+                # BUY SECONDO MODO - DURANTE IL CROLLO - e' entrato in azione ! ( e mi e' sembrato buono !)
                 
                 elif (
                     ma2_last > ma2_2_min_ago
@@ -381,7 +381,7 @@ class maddog:
 
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     # deviation_buy_crollo_2 = ma3_last / ma13_last
-
+                    
             ############################################################################################################
 
             #############################################################################################################      COMPRA sessione 2
