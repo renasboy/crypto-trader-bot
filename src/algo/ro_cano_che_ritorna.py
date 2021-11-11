@@ -1276,7 +1276,7 @@ class ro_cano_che_ritorna:
         # AGAINST THE WIND - Bob Seger & Jason Aldean
         
         
-        # vai compaaaaaaaaaaaa
+        # vai compaaaaaaaaaaaaa
 
 
 
