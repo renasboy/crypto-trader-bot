@@ -340,15 +340,15 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                     and ma4_last > ma4_2_min_ago
                     and deviation_ma3_sopra_ma7 > 0.05
+                    and deviation_ma13_sopra_ma25 > 0.05
                 ):
 
-                    buy = "se ma78 < - BUY 1 con incrocio 39-78 - riga 345"
+                    buy = "se ma78 < - BUY 1 con incrocio 39-78 - riga 346"
                     action = "buy"
 
                     # deviation_buy1 = ma13_last/ma39_last
-                
-                
-                
+                    # and deviation_ma13_sopra_ma25 > 0.05 FONDAMENTALE
+              
                 ##############################################################################################################################
                 # IMPORTANTISSIMO ! SOLO PER IL BUY 1 - PER COMPRARE DURANTE IL CROLLO - compa prega per me - ( cruise - david gilmour )
                 ##############################################################################################################################
