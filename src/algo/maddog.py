@@ -262,7 +262,7 @@ class maddog:
             ###########################################################################################################################################
 
             percentage = self.buy_percentage
-           
+            # NON TOCCARE  ! DI DEFAULT E' IL 2%
             
             
             ######################################################################################################## COMPRA sessione 1
@@ -282,7 +282,7 @@ class maddog:
 
                     buy = "BUY 1 con incrocio 72-100 riga 278"
                     action = "buy"
-                 
+                    percentage = 50
                     # la deviation_ma13_sopra_ma25 puoi portarla > 0.072 SOLO CON 72-100
                     
                     
@@ -299,7 +299,7 @@ class maddog:
                 ):
                     buy = "BUY 1 con incrocio 13-39 and DEVIATION BUY 1 ALTA e ma78 > riga 295"
                     action = "buy"
-                    
+                    percentage = 50
 
                     # deviation_buy1 = ma13_last/ma39_last
                
@@ -318,7 +318,7 @@ class maddog:
                 ):
                     buy = "BUY 1 con incrocio 13 - 100 e ma78> 5 min ago riga 314"
                     action = "buy"
-
+                    percentage = 50
                 ################################################################################################################## compra durante il ribasso
                 
                 
@@ -334,7 +334,7 @@ class maddog:
 
                     buy = "BUY 1 con incrocio 39-78 and DEVIATION BUY 1 BASSA e ma78 < riga 330"
                     action = "buy"
-
+                    percentage = 50
                     # deviation_buy1 = ma13_last/ma39_last
                 
                 
@@ -350,7 +350,7 @@ class maddog:
 
                     buy = "se ma78 < - BUY 1 con incrocio 39-78 - riga 346"
                     action = "buy"
-
+                    percentage = 50
                     # deviation_buy1 = ma13_last/ma39_last
                     # and deviation_ma13_sopra_ma25 > 0.05 FONDAMENTALE
               
@@ -369,7 +369,7 @@ class maddog:
                 ):
                     buy = "BUY DURANTE IL CROLLO - modo 1 riga 365"
                     action = "buy"
-
+                    percentage = 50
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                 
                 
@@ -383,7 +383,7 @@ class maddog:
                 ):
                     buy = "BUY DURANTE IL CROLLO - modo 2 riga 379"
                     action = "buy"
-
+                    percentage = 50
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     # deviation_buy_crollo_2 = ma3_last / ma13_last
                     
@@ -403,7 +403,7 @@ class maddog:
                 ):
                     buy = "BUY 2A riga 399"
                     action = "buy"
-
+                    percentage = 50
                     # deviation_buy_ma3_sopra_ma13 > x e' fondamentale !
                     # deviation_buy2 = ma8_last/ma50_last
                 
@@ -419,7 +419,7 @@ class maddog:
                 ):
                     buy = "BUY 2B riga 415"
                     action = "buy"
-
+                    percentage = 50
                     # deviation_buy2 = ma8_last / ma50
 
             ############################################################################################################COMPRA sessione 3
@@ -436,7 +436,7 @@ class maddog:
                 ):
                     buy = "BUY 3A con ma78 > riga 432"
                     action = "buy"
-            
+                    percentage = 50
             
                 elif (    
                     deviation_buy3 > 0.02
@@ -450,7 +450,7 @@ class maddog:
                 ):
                     buy = "BUY 3B RIVOLUZIONARIO se ma39 > ma78- riga 446"
                     action = "buy"
-                  
+                    percentage = 50
                     # deviation_buy3 = ma4_last/ma30_last
                     # riga 462 potrebbe esserci un problema perche' ho tolto ma78_last >= ma78_2_min_ago. vediamo
                 
@@ -466,7 +466,7 @@ class maddog:
                 ):
                     buy = "BUY 3C RIVOLUZIONARIO se ma78 < - riga 462"
                     action = "buy"
-
+                    percentage = 50
                     # deviation_buy3 = ma4_last/ma30_last
                     
                     
@@ -486,7 +486,7 @@ class maddog:
                 ):
                     buy = "BUY 4A con ma 78 > riga 482"
                     action = "buy"
-
+                    percentage = 50
                     
                 elif (
                     ma78_last >= ma78_2_min_ago
@@ -499,7 +499,7 @@ class maddog:
                 ):
                     buy = "BUY 4B RIVOLUZIONARIO con ma78 > - riga 495"
                     action = "buy"
-
+                    percentage = 50
                     # deviation_buy3 = ma4_last/ma30_last
 
                     
@@ -514,7 +514,7 @@ class maddog:
                 ):
                     buy = "BUY 4C RIVOLUZIONARIO con ma78 < - riga 510"
                     action = "buy"
-
+                    percentage = 50
                     # deviation_buy3 = ma4_last/ma30_last
                     
                     
@@ -534,7 +534,7 @@ class maddog:
                 ):
                     buy = "BUY 5A riga 530"
                     action = "buy"
-                
+                    percentage = 50
                 
                 elif (
                     ma78_last >= ma78_2_min_ago
@@ -547,7 +547,7 @@ class maddog:
                 ):
                     buy = "BUY 5B RIVOLUZIONARIO con ma78 > - riga 543"
                     action = "buy"
-
+                    percentage = 50
                     # deviation_buy3 = ma4_last/ma30_last
                 
                 
@@ -562,7 +562,7 @@ class maddog:
                 ):
                     buy = "BUY 5C RIVOLUZIONARIO con ma78 < - riga 558"
                     action = "buy"
-
+                    percentage = 50
                     # deviation_buy3 = ma4_last/ma30_last
                     
                     
@@ -573,12 +573,12 @@ class maddog:
 
         ############################################################################################################
 
-        # NON TOCCARE QUESTA RIGA (DICE CHE STA IN MODO SELL, DEVO VENDERE !)
+        # NON TOCCARE QUESTE RIGHE (DICE CHE STA IN MODO SELL, DEVO VENDERE !)
 
         elif last_trade_action == "buy":
 
             percentage = self.sell_percentage
-
+            # E' 100 DI DEFAULT !
             #####################################################################################################################
 
             # VENDITA CON QUESTE 5 ECCEZIONI !
