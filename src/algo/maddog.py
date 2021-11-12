@@ -1191,14 +1191,15 @@ class maddog:
                 if (
                     ma50_last > ma50_2_min_ago
                     #and ma3_last < ma39_last
-                    and deviation_ma39 < -0.18
-                    and deviation_sell < 0.10
+                    #and deviation_ma39 < -0.18
+                    #and deviation_sell < 0.10
+                    and deviation_ma39 < -0.18 or (deviation_sell < 0.10 and ma3_last < ma39_last)
                 ):   
-                    sell = "SELL dopo 90 min con ma50 > and deviation_ma39 <-0.18 (no ma3<ma39) (NO INCROCIO!) and deviation_sell < 0.10 (!) - riga 1190"
+                    sell = "SELL dopo 90 min con ma50 > and deviation_ma39 <-0.18 (no ma3<ma39) (NO INCROCIO!) and deviation_sell < 0.10 (!) - riga 1198"
                     action = "sell"
                     # se non ha forza dopo 1 ora e' inutile continuare a sperare !
                     # cuscino dell' angelo custode
-                    
+                    # dopo 90 min se il prezzo non ha forza puoi anche prendere qualcosa. 
                     
                 elif (
                     ma50_last > ma50_2_min_ago
@@ -1206,7 +1207,7 @@ class maddog:
                     and deviation_sell > 0.35
                     and deviation_sell < 0.69
                 ):
-                    sell = "SELL dopo 90 min con ma50 > incrocio 3-13 and deviation_sell 0.35 - 0.69 DOPPIO PASSO ALLA RONALDO (fatto con ma13 invece che con ma11) - riga 1202"
+                    sell = "SELL dopo 90 min con ma50 > incrocio 3-13 and deviation_sell 0.35 - 0.69 DOPPIO PASSO ALLA RONALDO (fatto con ma13 invece che con ma11) - riga 1210"
                     action = "sell"
 
                     
@@ -1217,7 +1218,7 @@ class maddog:
                     and deviation_sell < 1.49
                 ):
 
-                    sell = "SELL dopo 90 min con ma50 > incrocio 3-48 (!) and deviation_sell 0.70 - 1.49 - riga 1213"
+                    sell = "SELL dopo 90 min con ma50 > incrocio 3-48 (!) and deviation_sell 0.70 - 1.49 - riga 1221"
                     action = "sell"
 
                     # ma 3-48 mi evita la ricompra e la rivendita con perdita !
@@ -1229,7 +1230,7 @@ class maddog:
                     and deviation_sell > 1.50
                 ):
 
-                    sell = "SELL dopo 90 min con ma50 > incrocio 3-48 (!) and deviation_sell > 1.50 - riga 1225"
+                    sell = "SELL dopo 90 min con ma50 > incrocio 3-48 (!) and deviation_sell > 1.50 - riga 1233"
                     action = "sell"
 
                     
@@ -1238,13 +1239,14 @@ class maddog:
                 elif (
                     ma50_last < ma50_2_min_ago
                     #and ma3_last < ma33_last
-                    and deviation_ma39 < -0.18
-                    and deviation_sell < 0.10
-                    
+                    #and deviation_ma39 < -0.18
+                    #and deviation_sell < 0.10
+                    and deviation_ma39 < -0.18 or (deviation_sell < 0.10 and ma3_last < ma39_last)
                 ):
-                    sell = "SELL dopo 90 min con ma50 < con deviation_ma39 <-0.18 and deviation_sell < 0.10 (no ma3<ma33) (NO INCROCIO!)  - riga 1235"
+                    sell = "SELL dopo 90 min con ma50 < con deviation_ma39 <-0.18 and deviation_sell < 0.10 (no ma3<ma33) (NO INCROCIO!)  - riga 1246"
                     action = "sell"
                 # se non ha forza dopo 1 ora e' inutile continuare a sperare !
+                # dopo 90 min se il prezzo non ha forza puoi anche prendere qualcosa 
                 # qui non ho messo il crollo perche' dopo 40 min o gia' ha venduto o e' gia' risalita
                 # ATTENZIONE non c'e' l' incrocio 3-33 ( PERCHE' NON HANNO INCROCIATO !) ma 3 < 33 !
                 # cuscino dell' angelo custode
