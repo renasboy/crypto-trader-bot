@@ -270,8 +270,8 @@ class ro_cano_che_ritorna:
 
             if self.session == 1:
 
+                
                 # ------------------------------------------------------------ BUY 1 DURANTE IL RIALZO con INCROCIO CLASSICO 72-100
-
                 if (
                     ma13_last > ma78_last
                     and (ma72_prev < ma100_prev and ma72_last > ma100_last)
@@ -288,8 +288,8 @@ class ro_cano_che_ritorna:
                     
                     
                 
+                
                 # --------------------------------------------------------------    BUY 1 DURANTE IL RIALZO con LA DEVIATION BUY 1
-
                 elif (
                     deviation_buy1 > 0.56
                     and (ma13_prev < ma39_prev and ma13_last > ma39_last)
@@ -304,8 +304,8 @@ class ro_cano_che_ritorna:
 
                     # deviation_buy1 = ma13_last/ma39_last
                
+                
                 ####################################################################  BUY 1 con incrocio 13-100 and ma78_last > ma78_5_min_ago  "MI PIACE!"
-
                 elif (
                     (ma13_prev < ma100_prev and ma13_last > ma100_last)
                     and ma78_last > ma78_5_min_ago
@@ -320,9 +320,9 @@ class ro_cano_che_ritorna:
                     buy = "BUY 1 con incrocio 13 - 100 e ma78> 5 min ago riga 314"
                     action = "buy"
 
+                
+                
                 ################################################################################################################## compra durante il ribasso
-                
-                
                 elif (
                     ma78_last < ma78_2_min_ago
                     and (ma39_prev < ma78_prev and ma39_last > ma78_last)
@@ -338,7 +338,7 @@ class ro_cano_che_ritorna:
 
                     # deviation_buy1 = ma13_last/ma39_last
                 
-                
+                ############################################################################################################### x
                 elif (
                     ma78_last < ma78_2_min_ago
                     and (ma39_prev < ma78_prev and ma39_last > ma78_last)
@@ -361,8 +361,8 @@ class ro_cano_che_ritorna:
 
                 # entriamo nell' area dell' ipervenduto, compa !
               
+                
                 # BUY  PRIMO MODO DURANTE IL CROLLO
-
                 elif (
                     ma2_last > ma2_2_min_ago
                     and deviation_buy_crollo_1 < -2.30
@@ -375,8 +375,8 @@ class ro_cano_che_ritorna:
                 
                 
               
-                # BUY SECONDO MODO - DURANTE IL CROLLO - e' entrato in azione ! ( e mi e' sembrato buono !)
                 
+                # BUY SECONDO MODO - DURANTE IL CROLLO - e' entrato in azione ! ( e mi e' sembrato buono !)
                 elif (
                     ma2_last > ma2_2_min_ago
                     and deviation_buy_crollo_1 < -2.40
@@ -388,12 +388,13 @@ class ro_cano_che_ritorna:
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     # deviation_buy_crollo_2 = ma3_last / ma13_last
                     
-            ############################################################################################################
-
+           
             #############################################################################################################      COMPRA sessione 2
 
             elif self.session == 2:
-
+                
+                
+                ########################################################################################
                 if (
                     deviation_buy2 > 0.07
                     and deviation_buy_ma3_sopra_ma13 > 0.09
@@ -408,7 +409,7 @@ class ro_cano_che_ritorna:
                     # deviation_buy_ma3_sopra_ma13 > x e' fondamentale !
                     # deviation_buy2 = ma8_last/ma50_last
                 
-                
+                ###################################################################################
                 elif (
                     deviation_buy2 > 0.13
                     and deviation_buy_ma3_sopra_ma13 > 0.10
@@ -426,7 +427,9 @@ class ro_cano_che_ritorna:
             ############################################################################################################COMPRA sessione 3
 
             elif self.session == 3:
-
+                
+                
+                ##############################################################################
                 if (
                     ma78_last >= ma78_2_min_ago
                     and deviation_buy3 > 0.11
@@ -437,8 +440,10 @@ class ro_cano_che_ritorna:
                 ):
                     buy = "BUY 3A con ma78 > riga 432"
                     action = "buy"
+                    
+                    
             
-            
+                ##########################################################################
                 elif (    
                     deviation_buy3 > 0.02
                     and (ma39_prev < ma78_prev and ma39_last > ma78_last)
@@ -454,8 +459,10 @@ class ro_cano_che_ritorna:
                   
                     # deviation_buy3 = ma4_last/ma30_last
                     # riga 462 potrebbe esserci un problema perche' ho tolto ma78_last >= ma78_2_min_ago. vediamo
+                    
+                    
                 
-                
+                ########################################################################################################
                 elif (
                     ma78_last < ma78_2_min_ago
                     and deviation_buy3 > 0.03
@@ -477,6 +484,8 @@ class ro_cano_che_ritorna:
             
             elif self.session == 4:
                 
+                
+                ###############################################################################
                 if (
                     ma78_last >= ma78_2_min_ago
                     and deviation_buy3 > 0.11
@@ -488,7 +497,9 @@ class ro_cano_che_ritorna:
                     buy = "BUY 4A con ma 78 > riga 482"
                     action = "buy"
 
-                    
+                
+                
+                ##############################################################################
                 elif (
                     ma78_last >= ma78_2_min_ago
                     and deviation_buy3 > 0.02
@@ -503,7 +514,8 @@ class ro_cano_che_ritorna:
 
                     # deviation_buy3 = ma4_last/ma30_last
 
-                    
+                
+                ##############################################################################
                 elif (
                     ma78_last < ma78_2_min_ago
                     and deviation_buy3 > 0.04
@@ -519,12 +531,15 @@ class ro_cano_che_ritorna:
                     # deviation_buy3 = ma4_last/ma30_last
                     
                     
-
+        
+        
+        
         ############################################################################################################  compra sessione 5 in poi
                                                                                                                    #  piu' alto il BUY - "effetti laterali"
              
             else:
-
+                
+                ##############################################################################
                 if (
                     ma78_last >= ma78_2_min_ago
                     and deviation_buy3 > 0.13
@@ -535,8 +550,10 @@ class ro_cano_che_ritorna:
                 ):
                     buy = "BUY 5A riga 530"
                     action = "buy"
+                    
+                    
                 
-                
+                #######################################################################
                 elif (
                     ma78_last >= ma78_2_min_ago
                     and deviation_buy3 > 0.03
@@ -552,6 +569,7 @@ class ro_cano_che_ritorna:
                     # deviation_buy3 = ma4_last/ma30_last
                 
                 
+                ###########################################################################
                 elif (
                     ma78_last < ma78_2_min_ago
                     and deviation_buy3 > 0.04
