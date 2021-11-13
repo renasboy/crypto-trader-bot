@@ -129,7 +129,7 @@ class maddog:
         ##################################################################################################################
 
         # formula deviation
-        deviation = (ma3_last / last_trade_price - 1) * 100 if last_trade_price else 0
+        deviation = (ma4_last / last_trade_price - 1) * 100 if last_trade_price else 0
         self.algo_helper.info("deviation: {}".format(deviation))
 
         ##################################################################################################################
@@ -612,14 +612,14 @@ class maddog:
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
                 and ma2_last < last_trade_price
-                and deviation < -0.35
+                and deviation < -0.45
                 and ma25_last > ma25_2_min_ago
             ):
 
                 sell = "SELL DOLCE ATTESA con ma25 > - riga 612"
                 action = "sell"
-
-                # il fattore tempo - la dolce attesa - solo con trend ribassista
+                
+                # deviation = ma4_last / last_trade_price
                 # deviation = ma2_last / last_trade_price
                 # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
                 
@@ -627,14 +627,14 @@ class maddog:
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
                 and ma2_last < last_trade_price
-                and deviation < -0.37
+                and deviation < -0.43
                 and ma25_last < ma25_2_min_ago
             ):
 
                 sell = "SELL DOLCE ATTESA con ma25 < - riga 627"
                 action = "sell"
-
-                # il fattore tempo - la dolce attesa - solo con trend ribassista
+               
+                # deviation = ma4_last / last_trade_price 
                 # deviation = ma2_last / last_trade_price
                 # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
             
