@@ -591,7 +591,8 @@ class maddog:
              
                 sell = "SELL SALVAGENTE 3-39 con ma50 < riga 585"
                 action = "sell"
-        
+                percentage = 100
+                
                 # deviation_ma39 = ma4_last / ma39_last QUESTA HA VENDUTO NEL CROLLO IMPROVVISO DI 1 MINUTO (con -2.06% !!!)!
             
             
@@ -602,6 +603,7 @@ class maddog:
             ):
                 sell = "SELL CROLLO IMPROVVISO - riga 596"
                 action = "sell"
+                percentage = 100
                 
                 # deviation = ma2_last / last_trade_price
                 # FORSE E' L' UNICA DEVIATION CHE MI POTRA' SALVARE DA UN CROLLO IMPROVVISO COME QUELLO DEL 3 NOVEMBRE 2021
@@ -618,6 +620,7 @@ class maddog:
 
                 sell = "SELL DOLCE ATTESA con ma25 > - riga 612"
                 action = "sell"
+                percentage = 100
                 
                 # deviation = ma4_last / last_trade_price
                 # deviation = ma2_last / last_trade_price
@@ -633,7 +636,8 @@ class maddog:
 
                 sell = "SELL DOLCE ATTESA con ma25 < - riga 627"
                 action = "sell"
-               
+                percentage = 100
+                
                 # deviation = ma4_last / last_trade_price 
                 # deviation = ma2_last / last_trade_price
                 # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
@@ -648,6 +652,8 @@ class maddog:
 
                 sell = "SELL TEMPO e se ma11 < ma39 and deviation_sell < -0.35 - riga 642"
                 action = "sell"
+                percentage = 100
+                
                 # ma13 troppo lenta !
                 # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
 
@@ -702,7 +708,7 @@ class maddog:
                 ):
                     sell = "SELL (0-3 min) con ma50 > incrocio 3-39 and deviation_sell < -0.23 - riga 696"
                     action = "sell"
-                
+                    percentage = 100
                 
                 elif (
                     ma50_last >= ma50_2_min_ago
@@ -713,7 +719,7 @@ class maddog:
                 ):
                     sell = "SELL (0-3 min) con ma50 > incrocio 3-33 and deviation_sell 0.25 - 0.60 - riga 707"
                     action = "sell"
-
+                    percentage = 100
                     
                 elif (
                     ma50_last >= ma50_2_min_ago
@@ -723,7 +729,7 @@ class maddog:
                 ):
                     sell = "SELL (0-3 min) con ma50 > incrocio 3-33 and deviation_sell 0.61 - 0.79 - riga 717"
                     action = "sell"
-                
+                    percentage = 100
                 
                 
                 elif (
@@ -735,7 +741,7 @@ class maddog:
 
                     sell = "SELL (0-3 min) con ma50 > incrocio 3-13 and deviation_sell 0.80 - 1.20 - riga 729"
                     action = "sell"
-                
+                    percentage = 100
                 
                 
                 elif (
@@ -746,7 +752,7 @@ class maddog:
 
                     sell = "SELL (0-3 min) con ma50 > incrocio 3-11 and deviation_sell > 1.21 - riga 740"
                     action = "sell"
-                
+                    percentage = 100
                 
                 ###########################################################################     trend in ribasso
 
@@ -757,7 +763,8 @@ class maddog:
                 ):
                     sell = "SELL (0-3 min) con ma50 < and incrocio 3-28- riga 751"
                     action = "sell"
-
+                    percentage = 100
+                    
                     # incrocio 3 -28 e' fondamentale per evitare punto rosso sovrapposto al punto verde !
                 
                 
@@ -768,7 +775,7 @@ class maddog:
                 ):
                     sell = "SELL (0-3 min) con ma50 < incrocio 3-33 and deviation_sell -0.23 - riga 762"
                     action = "sell"
-
+                    percentage = 100
                 # ---------------------------------------------------------------------------------------------------------------------- crollo
 
                 elif (
@@ -778,7 +785,8 @@ class maddog:
                 ):
                     sell = "SELL CROLLO (0-3 min) con ma50 < incrocio 3-16 and deviation_sell < -0.50 - riga 772"
                     action = "sell"
-
+                    percentage = 100
+                    
                     # AGGIUNTA PER SICUREZZA SE CONTINUA A PRECIPITARE
                 
                 
@@ -789,7 +797,7 @@ class maddog:
                 ):
                     sell = "SELL CROLLO (0-3 min) con ma50 < incrocio 3-23 and deviation_sell > 0.23 - riga 783"
                     action = "sell"
-                
+                    percentage = 100
                 
                 elif (
                     ma50_last < ma50_2_min_ago
@@ -799,7 +807,7 @@ class maddog:
 
                     sell = "SELL CROLLO (0-3 min) con ma50 < incrocio 3-8 and deviation_sell > 0.60 - riga 793"
                     action = "sell"
-            
+                    percentage = 100
             
             
             ################################################################################################################################         3-5 min
@@ -816,7 +824,7 @@ class maddog:
                 ):
                     sell = "SELL (3-5 min) con ma50 > incrocio 3-39 and deviation_sell < -0.24 - riga 810"
                     action = "sell"
-                
+                    percentage = 100
                 
                 elif (
                     ma50_last >= ma50_2_min_ago
@@ -827,7 +835,7 @@ class maddog:
                 ):
                     sell = "SELL (3-5 min) con ma50 > incrocio 3-13 and deviation_sell 0.25 - 0.50 - DRIBBLING ALLA RONALDO - riga 821"
                     action = "sell"
-                
+                    percentage = 100
                 
                 elif (
                     ma50_last >= ma50_2_min_ago
@@ -837,7 +845,7 @@ class maddog:
                 ):
                     sell = "SELL (3-5 min) con ma50 > incrocio 3-25 and deviation_sell 0.51 - 1.20 - riga 831"
                     action = "sell"
-
+                    percentage = 100
                     
                     
                 elif (
@@ -847,7 +855,7 @@ class maddog:
                 ):
                     sell = "SELL (3-5 min) con ma50 > incrocio 3-25 and deviation_sell > 1.21 - riga 841"
                     action = "sell"
-                
+                    percentage = 100
                 
                 ###########################################################################     trend in ribasso
 
@@ -860,7 +868,8 @@ class maddog:
                 ):
                     sell = "SELL (3-5 min) con ma50 < and incrocio 3-28 - riga 854"
                     action = "sell"
-
+                    percentage = 100
+                    
                     # incrocio 3 -28 e' fondamentale per evitare punto rosso sovrapposto al punto verde !
                 
                 
@@ -871,7 +880,9 @@ class maddog:
                 ):
                     sell = "SELL (3-5 min) con ma50 < incrocio 3-33 and deviation_sell < -0.23 - riga 865"
                     action = "sell"
-
+                    percentage = 100
+                    
+                    
                 # ---------------------------------------------------------------------------------------------------------------------- guadagno con crollo
 
                 elif (
@@ -881,7 +892,7 @@ class maddog:
                 ):
                     sell = "SELL GUADAGNO CON CROLLO (3-5 min) con ma50 < incrocio 3-23 and deviation_sell > 0.23 - riga 875"
                     action = "sell"
-
+                    percentage = 100
                     
                     
             ################################################################################################################################### 5-12 min
@@ -898,7 +909,7 @@ class maddog:
                 ):
                     sell = "SELL (5-12 min) con ma50 > incrocio 3-39 and deviation_sell < -0.25 - riga 892"
                     action = "sell"
-
+                    percentage = 100
                     
                     
                 elif (
@@ -910,7 +921,8 @@ class maddog:
                 ):
                     sell = "SELL (5-12 min) con ma50 > incrocio 3-13 and deviation_sell 0.25 - 0.50 - DRIBBLING ALLA RONALDO - riga 904"
                     action = "sell"
-
+                    percentage = 100
+                    
                     
                 elif (
                     ma50_last >= ma50_2_min_ago
@@ -921,7 +933,7 @@ class maddog:
                 ):
                     sell = "SELL (5-12 min) con ma50 > incrocio 3-25 and deviation_sell 0.51 - 1.20 - riga 915"
                     action = "sell"
-
+                    percentage = 100
                     
                     
                 elif (
@@ -931,7 +943,9 @@ class maddog:
                 ):
                     sell = "SELL (5-12 min) con ma50 > incrocio 3-25 and deviation_sell > 1.21 - riga 925"
                     action = "sell"
-
+                    percentage = 100
+                    
+                    
                 ###########################################################################     trend in ribasso
 
                 elif (
@@ -942,7 +956,7 @@ class maddog:
                 ):
                     sell = "SELL 12 (5-12 min) con ma50 < and incrocio 3-28 - riga 936"
                     action = "sell"
-
+                    percentage = 100
                     # incrocio 3 -28 e' fondamentale per evitare punto rosso sovrapposto al punto verde !
 
                     
@@ -954,7 +968,9 @@ class maddog:
                 ):
                     sell = "SELL (5-12 min) con ma50 < incrocio 3-33 and deviation_sell < -0.27 - riga 948"
                     action = "sell"
-
+                    percentage = 100
+                    
+                    
                 # ------------------------------------------------------------------------------- eventuale guadagno con crollo
 
                 elif (
@@ -981,7 +997,7 @@ class maddog:
                 ):
                     sell = "SELL (12-24 min) con ma50 > and deviation_ma39 < -0.17 and deviation_sell < 0.10 ( NO incrocio 3-39 and deviation_sell < -0.30) - riga 975"
                     action = "sell"
-                
+                    percentage = 100
                 
                 
                 elif (
@@ -993,7 +1009,7 @@ class maddog:
                 ):
                     sell = "SELL (12-24 min) con ma50 > incrocio 3-16 and deviation_sell 0.25 - 0.50 - DOPPIO PASSO ALLA RONALDO fino a +0.50 - riga 987"
                     action = "sell"
-
+                    percentage = 100
                     
                     
                 elif (
@@ -1005,7 +1021,9 @@ class maddog:
                 ):
                     sell = "SELL (12-24 min) con ma50 > incrocio 3-25 and deviation_sell 0.51 - 1.20 - riga 999"
                     action = "sell"
- 
+                    percentage = 100
+
+
                 elif (
                     ma50_last >= ma50_2_min_ago
                     and (ma3_prev > ma39_prev and ma3_last < ma39_last)
@@ -1013,7 +1031,9 @@ class maddog:
                 ):
                     sell = "SELL (12-24 min) con ma50 > incrocio 3-39 and deviation_sell > 1.21 - riga 1007"
                     action = "sell"
-
+                    percentage = 100
+                
+                
                 ##################################################################### con trend discendente
                 elif (
                     ma50_last < ma50_2_min_ago
@@ -1024,7 +1044,9 @@ class maddog:
                 ):
                     sell = "SELL (12-24 min) con ma50 < and deviation_ma39 < -0.17 and deviation_sell < 0.10 (NO incrocio 3-33 and deviation_sell < -0.25) - riga 1018"
                     action = "sell"
-
+                    percentage = 100
+                    
+                    
                 # -----------------------------------------------------------------------------eventuale guadagno con crollo
 
                 elif (
@@ -1034,7 +1056,7 @@ class maddog:
                 ):
                     sell = "SELL eventuale guadagno con crollo (12-24 min) con ma50 < incrocio 3 - 18 and deviation_sell > 0.23 - riga 1028"
                     action = "sell"
-
+                    percentage = 100
                     
                     
             ################################################################################################################################## 24-60 min
@@ -1053,7 +1075,7 @@ class maddog:
                 ):
                     sell = "SELL (24-60 min) con ma50 > and deviation_ma39 < -0.17 and deviation_sell < 0.10 (NO incrocio 3-39 and deviation_sell < -0.26) - riga 1045"
                     action = "sell"
-
+                    percentage = 100
                    
                 elif (
                     ma50_last > ma50_2_min_ago
@@ -1064,7 +1086,8 @@ class maddog:
                 ):
                     sell = "SELL (24-60 min) con ma50 > incrocio 3-16 and deviation_sell 0.30 - 0.60 DOPPIO  PASSO ALLA RONALDO - riga 1057"
                     action = "sell"
-
+                    percentage = 100
+                    
                     
                 elif (
                     ma50_last > ma50_2_min_ago
@@ -1075,6 +1098,7 @@ class maddog:
                 ):
                     sell = "SELL (24-60 min) con ma50 > incrocio 3-39 and deviation_sell 0.61 - 1.20 - riga 1069"
                     action = "sell"
+                    percentage = 100
                 
                 
                 elif (
@@ -1084,7 +1108,9 @@ class maddog:
                 ):
                     sell = "SELL (24-60 min) con ma50 > incrocio 3-45 and deviation_sell > 1.21 - riga 1078"
                     action = "sell"
-
+                    percentage = 100
+                    
+                    
                 ##################################################################### con trend discendente
                 elif (
                     ma50_last < ma50_2_min_ago
@@ -1095,7 +1121,9 @@ class maddog:
                 ):
                     sell = "SELL (24-60 min) con ma50 < and deviation_ma39 < -0.17 and deviation_sell < 0.10 (NO incrocio 3-33 and deviation_sell < -0.25) - riga 1089"
                     action = "sell"
-
+                    percentage = 100
+                    
+                    
                 # --------------------------------------------------------------------------------------eventuale guadagno durante il crollo
 
                 elif (
@@ -1105,7 +1133,7 @@ class maddog:
                 ):
                     sell = "SELL eventuale guadagno durante il crollo (24-60 min) con ma50 < incrocio 3 - 18 and deviation_sell > 0.23 - riga 1099"
                     action = "sell"
-
+                    percentage = 100
                     
                     
                     
@@ -1126,6 +1154,8 @@ class maddog:
                 ):
                     sell = "SELL da 60 a 90 min con ma50 > and deviation_ma39 <-0.18 (no ma3<ma39) (NO INCROCIO!) (NO and deviation_sell < 0.10 (!)) - riga 1120"
                     action = "sell"
+                    percentage = 100
+                    
                     # se non ha forza dopo 1 ora e' inutile continuare a sperare !
                     # cuscino dell' angelo custode
                    
@@ -1138,7 +1168,9 @@ class maddog:
                 ):
                     sell = "SELL dopo 60 min con ma50 > incrocio 3-16 and deviation_sell 0.35 - 0.69 DOPPIO PASSO ALLA RONALDO (fatto con ma16 invece che con ma13) - riga 1132"
                     action = "sell"
-
+                    percentage = 100
+                    
+                    
                     
                 elif (
                     ma50_last > ma50_2_min_ago
@@ -1149,7 +1181,8 @@ class maddog:
 
                     sell = "SELL da 60 a 90 min con ma50 > incrocio 3-39 and deviation_sell 0.70 - 1.49 - riga 1143"
                     action = "sell"
-
+                    percentage = 100
+                    
                     # ma 3-48 mi evita la ricompra e la rivendita con perdita !
  
 
@@ -1161,7 +1194,9 @@ class maddog:
 
                     sell = "SELL da 60 a 90 min con ma50 > incrocio 3-33 and deviation_sell > 1.50 - riga 1155"
                     action = "sell"
-
+                    percentage = 100
+                    
+                    
                 ######################################################################################## con trend discendente
 
                 elif (
@@ -1173,6 +1208,8 @@ class maddog:
                 ):
                     sell = "SELL da 60 a 90 min con ma50 < con deviation_ma39 <-0.18 and deviation_sell < 0.10 (no ma3<ma33) (NO INCROCIO!) - riga 1167"
                     action = "sell"
+                    percentage = 100
+                    
                 # se non ha forza dopo 1 ora e' inutile continuare a sperare !
                 # qui non ho messo il crollo perche' dopo 40 min o gia' ha venduto o e' gia' risalita
                 # cuscino dell' angelo custode
@@ -1197,9 +1234,12 @@ class maddog:
                 ):   
                     sell = "SELL dopo 90 min con ma50 > and deviation_ma39 <-0.18 (no ma3<ma39) (NO INCROCIO!) and deviation_sell < 0.10 (!) - riga 1198"
                     action = "sell"
+                    percentage = 100 
+                    
                     # se non ha forza dopo 1 ora e' inutile continuare a sperare !
                     # cuscino dell' angelo custode
                     # dopo 90 min se il prezzo non ha forza puoi anche prendere qualcosa. 
+                    
                     
                 elif (
                     ma50_last > ma50_2_min_ago
@@ -1209,7 +1249,9 @@ class maddog:
                 ):
                     sell = "SELL dopo 90 min con ma50 > incrocio 3-16 and deviation_sell 0.35 - 0.69 DOPPIO PASSO ALLA RONALDO (fatto con ma16 invece che con ma13) - riga 1210"
                     action = "sell"
-
+                    percentage = 100
+                    
+                    
                     
                 elif (
                     ma50_last > ma50_2_min_ago
@@ -1220,7 +1262,8 @@ class maddog:
 
                     sell = "SELL dopo 90 min con ma50 > incrocio 3-48 (!) and deviation_sell 0.70 - 1.49 - riga 1221"
                     action = "sell"
-
+                    percentage = 100
+                    
                     # ma 3-48 mi evita la ricompra e la rivendita con perdita !
 
                     
@@ -1232,7 +1275,8 @@ class maddog:
 
                     sell = "SELL dopo 90 min con ma50 > incrocio 3-48 (!) and deviation_sell > 1.50 - riga 1233"
                     action = "sell"
-
+                    percentage = 100
+                    
                     
                 ######################################################################################## con trend discendente
 
@@ -1245,6 +1289,8 @@ class maddog:
                 ):
                     sell = "SELL dopo 90 min con ma50 < con deviation_ma39 <-0.18 and deviation_sell < 0.10 (no ma3<ma33) (NO INCROCIO!)  - riga 1246"
                     action = "sell"
+                    percentage = 100
+                    
                 # se non ha forza dopo 1 ora e' inutile continuare a sperare !
                 # dopo 90 min se il prezzo non ha forza puoi anche prendere qualcosa 
                 # qui non ho messo il crollo perche' dopo 40 min o gia' ha venduto o e' gia' risalita
