@@ -820,7 +820,7 @@ class maddog:
                 
                 elif (
                     ma50_last >= ma50_2_min_ago
-                    and (ma3_prev > ma11_prev and ma3_last < ma11_last)
+                    and (ma3_prev > ma13_prev and ma3_last < ma13_last)
                     and deviation_sell > 0.25
                     and deviation_sell < 0.50
                     # deviation_sell = ma3_last/last_trade_price
@@ -903,7 +903,7 @@ class maddog:
                     
                 elif (
                     ma50_last >= ma50_2_min_ago
-                    and (ma3_prev > ma11_prev and ma3_last < ma11_last)
+                    and (ma3_prev > ma13_prev and ma3_last < ma13_last)
                     and deviation_sell > 0.25
                     and deviation_sell < 0.50
                     # deviation_sell = ma3_last/last_trade_price
@@ -986,7 +986,7 @@ class maddog:
                 
                 elif (
                     ma50_last >= ma50_2_min_ago
-                    and (ma3_prev > ma11_prev and ma3_last < ma11_last)
+                    and (ma3_prev > ma13_prev and ma3_last < ma13_last)
                     and deviation_sell > 0.25
                     and deviation_sell < 0.50
                     # deviation_sell = ma3_last/last_trade_price
@@ -1057,7 +1057,7 @@ class maddog:
                    
                 elif (
                     ma50_last > ma50_2_min_ago
-                    and (ma3_prev > ma11_prev and ma3_last < ma11_last)
+                    and (ma3_prev > ma13_prev and ma3_last < ma13_last)
                     and deviation_sell > 0.30
                     and deviation_sell < 0.60
                     # deviation_sell = ma3_last/last_trade_price
