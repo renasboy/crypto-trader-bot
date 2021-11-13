@@ -825,7 +825,7 @@ class maddog:
                     and deviation_sell < 0.50
                     # deviation_sell = ma3_last/last_trade_price
                 ):
-                    sell = "SELL (3-5 min) con ma50 > incrocio 3-11 and deviation_sell 0.25 - 0.50 - DRIBBLING ALLA RONALDO - riga 821"
+                    sell = "SELL (3-5 min) con ma50 > incrocio 3-13 and deviation_sell 0.25 - 0.50 - DRIBBLING ALLA RONALDO - riga 821"
                     action = "sell"
                 
                 
@@ -908,7 +908,7 @@ class maddog:
                     and deviation_sell < 0.50
                     # deviation_sell = ma3_last/last_trade_price
                 ):
-                    sell = "SELL (5-12 min) con ma50 > incrocio 3-11 and deviation_sell 0.25 - 0.50 -DRIBBLING ALLA RONALDO - riga 904"
+                    sell = "SELL (5-12 min) con ma50 > incrocio 3-13 and deviation_sell 0.25 - 0.50 - DRIBBLING ALLA RONALDO - riga 904"
                     action = "sell"
 
                     
@@ -986,12 +986,12 @@ class maddog:
                 
                 elif (
                     ma50_last >= ma50_2_min_ago
-                    and (ma3_prev > ma13_prev and ma3_last < ma13_last)
+                    and (ma3_prev > ma16_prev and ma3_last < ma16_last)
                     and deviation_sell > 0.25
                     and deviation_sell < 0.50
                     # deviation_sell = ma3_last/last_trade_price
                 ):
-                    sell = "SELL (12-24 min) con ma50 > incrocio 3-11 and deviation_sell 0.25 - 0.50 - DRIBBLING ALLA RONALDO fino a +0.50 - riga 987"
+                    sell = "SELL (12-24 min) con ma50 > incrocio 3-16 and deviation_sell 0.25 - 0.50 - DOPPIO PASSO ALLA RONALDO fino a +0.50 - riga 987"
                     action = "sell"
 
                     
@@ -1057,12 +1057,12 @@ class maddog:
                    
                 elif (
                     ma50_last > ma50_2_min_ago
-                    and (ma3_prev > ma13_prev and ma3_last < ma13_last)
+                    and (ma3_prev > ma16_prev and ma3_last < ma16_last)
                     and deviation_sell > 0.30
                     and deviation_sell < 0.60
                     # deviation_sell = ma3_last/last_trade_price
                 ):
-                    sell = "SELL (24-60 min) con ma50 > incrocio 3-11 and deviation_sell 0.30 - 0.60 DRIBBLING ALLA RONALDO - riga 1057"
+                    sell = "SELL (24-60 min) con ma50 > incrocio 3-16 and deviation_sell 0.30 - 0.60 DOPPIO  PASSO ALLA RONALDO - riga 1057"
                     action = "sell"
 
                     
@@ -1132,11 +1132,11 @@ class maddog:
                 
                 elif (
                     ma50_last > ma50_2_min_ago
-                    and (ma3_prev > ma13_prev and ma3_last < ma13_last)
+                    and (ma3_prev > ma16_prev and ma3_last < ma16_last)
                     and deviation_sell > 0.35
                     and deviation_sell < 0.69
                 ):
-                    sell = "SELL dopo 60 min con ma50 > incrocio 3-13 and deviation_sell 0.35 - 0.69 DOPPIO PASSO ALLA RONALDO (fatto con ma13 invece che con ma11) - riga 1132"
+                    sell = "SELL dopo 60 min con ma50 > incrocio 3-16 and deviation_sell 0.35 - 0.69 DOPPIO PASSO ALLA RONALDO (fatto con ma16 invece che con ma13) - riga 1132"
                     action = "sell"
 
                     
@@ -1203,11 +1203,11 @@ class maddog:
                     
                 elif (
                     ma50_last > ma50_2_min_ago
-                    and (ma3_prev > ma13_prev and ma3_last < ma13_last)
+                    and (ma3_prev > ma16_prev and ma3_last < ma16_last)
                     and deviation_sell > 0.35
                     and deviation_sell < 0.69
                 ):
-                    sell = "SELL dopo 90 min con ma50 > incrocio 3-13 and deviation_sell 0.35 - 0.69 DOPPIO PASSO ALLA RONALDO (fatto con ma13 invece che con ma11) - riga 1210"
+                    sell = "SELL dopo 90 min con ma50 > incrocio 3-16 and deviation_sell 0.35 - 0.69 DOPPIO PASSO ALLA RONALDO (fatto con ma16 invece che con ma13) - riga 1210"
                     action = "sell"
 
                     
