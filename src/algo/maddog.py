@@ -1,11 +1,12 @@
-# 28 ottobre 2021
-# togliere il rumore, compa !
+
 # ti voglio bene, compa.
 # compa, compa caro !
-# Tom Petty - Something Good Coming
-####################################          copia CCR che funziona - non so perche' MADDOG NON FUNZIONAVA PIU'      
-# Tom Petty - learning to fly
 
+####################################          copia CCR che funziona - non so perche' MADDOG NON FUNZIONAVA PIU'
+                                   #          + percentage 
+                                   #          + da ma11 a ma13 dribbling e da ma13 a ma15 doppio passo   
+                                   #          + dolce attesa da -0.34 a 0.43  
+                                   #          + BUY 2 ma7 > ma40 diminuito di 0.01
 class maddog:
     def __init__(self, helper, buy_percentage, sell_percentage):
         self.algo_helper = helper
@@ -398,7 +399,7 @@ class maddog:
                 if (
                     deviation_buy2 > 0.07
                     and deviation_buy_ma3_sopra_ma13 > 0.09
-                    and deviation_ma7_sopra_ma40 > 0.09
+                    and deviation_ma7_sopra_ma40 > 0.08
                     and ma2_last > ma2_2_min_ago
                     and price > price_2_min_ago
                     and ma3_last > ma40_last
@@ -631,11 +632,11 @@ class maddog:
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
                 and ma2_last < last_trade_price
-                and deviation < -0.35
+                and deviation < -0.45
                 and ma25_last > ma25_2_min_ago
             ):
 
-                sell = "SELL DOLCE ATTESA con ma25 > - riga 612"
+                sell = "SELL DOLCE ATTESA con ma25 > and deviation < -0.45 - riga 612"
                 action = "sell"
 
                 # il fattore tempo - la dolce attesa - solo con trend ribassista
@@ -646,11 +647,11 @@ class maddog:
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
                 and ma2_last < last_trade_price
-                and deviation < -0.36
+                and deviation < -0.43
                 and ma25_last < ma25_2_min_ago
             ):
 
-                sell = "SELL DOLCE ATTESA con ma25 < - riga 627"
+                sell = "SELL DOLCE ATTESA con ma25 < and deviation < -0.43 - riga 627"
                 action = "sell"
 
                 # il fattore tempo - la dolce attesa - solo con trend ribassista
@@ -839,12 +840,12 @@ class maddog:
                 
                 elif (
                     ma50_last >= ma50_2_min_ago
-                    and (ma3_prev > ma11_prev and ma3_last < ma11_last)
+                    and (ma3_prev > ma13_prev and ma3_last < ma13_last)
                     and deviation_sell > 0.25
                     and deviation_sell < 0.50
                     # deviation_sell = ma3_last/last_trade_price
                 ):
-                    sell = "SELL (3-5 min) con ma50 > incrocio 3-11 and deviation_sell 0.25 - 0.50 - DRIBBLING ALLA RONALDO - riga 821"
+                    sell = "SELL (3-5 min) con ma50 > incrocio 3-13 and deviation_sell 0.25 - 0.50 - DRIBBLING ALLA RONALDO - riga 821"
                     action = "sell"
                 
                 
@@ -922,12 +923,12 @@ class maddog:
                     
                 elif (
                     ma50_last >= ma50_2_min_ago
-                    and (ma3_prev > ma11_prev and ma3_last < ma11_last)
+                    and (ma3_prev > ma13_prev and ma3_last < ma13_last)
                     and deviation_sell > 0.25
                     and deviation_sell < 0.50
                     # deviation_sell = ma3_last/last_trade_price
                 ):
-                    sell = "SELL (5-12 min) con ma50 > incrocio 3-11 and deviation_sell 0.25 - 0.50 -DRIBBLING ALLA RONALDO - riga 904"
+                    sell = "SELL (5-12 min) con ma50 > incrocio 3-13 and deviation_sell 0.25 - 0.50 - DRIBBLING ALLA RONALDO - riga 904"
                     action = "sell"
 
                     
@@ -1005,7 +1006,7 @@ class maddog:
                 
                 elif (
                     ma50_last >= ma50_2_min_ago
-                    and (ma3_prev > ma11_prev and ma3_last < ma11_last)
+                    and (ma3_prev > ma13_prev and ma3_last < ma13_last)
                     and deviation_sell > 0.25
                     and deviation_sell < 0.50
                     # deviation_sell = ma3_last/last_trade_price
@@ -1076,12 +1077,12 @@ class maddog:
                    
                 elif (
                     ma50_last > ma50_2_min_ago
-                    and (ma3_prev > ma11_prev and ma3_last < ma11_last)
+                    and (ma3_prev > ma13_prev and ma3_last < ma13_last)
                     and deviation_sell > 0.30
                     and deviation_sell < 0.60
                     # deviation_sell = ma3_last/last_trade_price
                 ):
-                    sell = "SELL (24-60 min) con ma50 > incrocio 3-11 and deviation_sell 0.30 - 0.60 DRIBBLING ALLA RONALDO - riga 1057"
+                    sell = "SELL (24-60 min) con ma50 > incrocio 3-13 and deviation_sell 0.30 - 0.60 DRIBBLING ALLA RONALDO - riga 1057"
                     action = "sell"
 
                     
@@ -1151,11 +1152,11 @@ class maddog:
                 
                 elif (
                     ma50_last > ma50_2_min_ago
-                    and (ma3_prev > ma13_prev and ma3_last < ma13_last)
+                    and (ma3_prev > ma15_prev and ma3_last < ma15_last)
                     and deviation_sell > 0.35
                     and deviation_sell < 0.69
                 ):
-                    sell = "SELL dopo 60 min con ma50 > incrocio 3-13 and deviation_sell 0.35 - 0.69 DOPPIO PASSO ALLA RONALDO (fatto con ma13 invece che con ma11) - riga 1132"
+                    sell = "SELL dopo 60 min con ma50 > incrocio 3-15 and deviation_sell 0.35 - 0.69 DOPPIO PASSO ALLA RONALDO (fatto con ma15 invece che con ma13) - riga 1132"
                     action = "sell"
 
                     
@@ -1221,11 +1222,11 @@ class maddog:
                     
                 elif (
                     ma50_last > ma50_2_min_ago
-                    and (ma3_prev > ma13_prev and ma3_last < ma13_last)
+                    and (ma3_prev > ma15_prev and ma3_last < ma15_last)
                     and deviation_sell > 0.35
                     and deviation_sell < 0.69
                 ):
-                    sell = "SELL dopo 90 min con ma50 > incrocio 3-13 and deviation_sell 0.35 - 0.69 DOPPIO PASSO ALLA RONALDO (fatto con ma13 invece che con ma11) - riga 1202"
+                    sell = "SELL dopo 90 min con ma50 > incrocio 3-15 and deviation_sell 0.35 - 0.69 DOPPIO PASSO ALLA RONALDO (fatto con ma15 invece che con ma13) - riga 1202"
                     action = "sell"
 
                     
@@ -1295,6 +1296,7 @@ class maddog:
         
         
         # vai compaaaaaaaaaaaaa
+        # ave comparo meo !
 
 
 
