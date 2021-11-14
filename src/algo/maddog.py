@@ -1,12 +1,12 @@
 
-# ti voglio bene, compa.
-# compa, compa caro !
-
 ####################################          copia CCR che funziona - non so perche' MADDOG NON FUNZIONAVA PIU'
                                    #          + percentage 
                                    #          + da ma11 a ma13 dribbling e da ma13 a ma15 doppio passo   
                                    #          + dolce attesa da -0.34 a 0.43  
                                    #          + BUY 2 ma7 > ma40 diminuito di 0.01
+                                   #          + piccola modifica fascia sell 0.25-0.60
+                                   #          + solo al dribbling e doppio passo alla ronaldo metto ma3 < ma13  invece dell' incrocio 3-13 che non ha incrociato !
+        
 class maddog:
     def __init__(self, helper, buy_percentage, sell_percentage):
         self.algo_helper = helper
@@ -58,15 +58,12 @@ class maddog:
         ma78_last, ma78_prev = self.algo_helper.ma_last_prev(78)
         ma100_last, ma100_prev = self.algo_helper.ma_last_prev(100)
         ma200_last, ma100_prev = self.algo_helper.ma_last_prev(200)
-        
-        
-
-        # moving average (2-3-4-5-7-8-20-43-100) di x minuti prima
-
+     
+        # moving average (2-3-4-5-7-8-20-43-100) di x minuti prima 
         ma2_2_min_ago = self.algo_helper.ma_minutes_ago(2, 2)
         ma2_3_min_ago = self.algo_helper.ma_minutes_ago(2, 3)
-
         ma2_4_min_ago = self.algo_helper.ma_minutes_ago(2, 4)
+        
 
         ma3_2_min_ago = self.algo_helper.ma_minutes_ago(3, 2)
         ma3_3_min_ago = self.algo_helper.ma_minutes_ago(3, 3)
@@ -82,11 +79,11 @@ class maddog:
         ma39_2_min_ago = self.algo_helper.ma_minutes_ago(39, 2)
         ma39_3_min_ago = self.algo_helper.ma_minutes_ago(39, 3)
         ma50_2_min_ago = self.algo_helper.ma_minutes_ago(50, 2)
-        
         ma78_2_min_ago = self.algo_helper.ma_minutes_ago(78, 2)
         ma78_5_min_ago = self.algo_helper.ma_minutes_ago(78, 5)
         ma78_7_min_ago = self.algo_helper.ma_minutes_ago(78, 7)
         ma200_3_min_ago = self.algo_helper.ma_minutes_ago(200, 3)
+        
         # LAST TRADE
         last_trade_action = self.algo_helper.last_trade_action
         last_trade_price = self.algo_helper.last_trade_price
@@ -134,8 +131,6 @@ class maddog:
         deviation = (ma3_last / last_trade_price - 1) * 100 if last_trade_price else 0
         self.algo_helper.info("deviation: {}".format(deviation))
 
-        ##################################################################################################################
-
         ################################################################ deviation per comprare
 
         # formula DEVIATION_buy1 per la compra 1
@@ -155,15 +150,11 @@ class maddog:
         # formula delta_buy3_incrocio_ma3_ma8 > 0.10 per la compra 3
         delta_buy3_incrocio_ma3_ma8 = (ma3_last / ma8_last - 1) * 100 if ma8_last else 0
         self.algo_helper.info("delta_buy3_incrocio_ma3_ma8: {}".format(delta_buy3_incrocio_ma3_ma8))
-            
-        
-
+       
         # formula DEVIATION_buy per comprare UN PO' PIU' SOPRA DEL LAST TRADE ( di solito l' ultimo SELL )
         deviation_buy = (ma2_last / last_trade_price - 1) * 100 if last_trade_price else 0
         self.algo_helper.info("deviation_buy: {}".format(deviation_buy))    
-        
-        
-
+     
         ############################################################################################     DEVIATION_buy_crollo
 
         # formula DEVIATION_buy_crollo_1 per comprare a una certa distanza da ma78
@@ -183,9 +174,6 @@ class maddog:
         # formula DEVIATION_buy_ma3_sopra_ma13 per comprare a una certa distanza da ma13
         deviation_buy_ma3_sopra_ma13 = (ma3_last / ma13_last - 1) * 100 if ma13_last else 0
         self.algo_helper.info("deviation_buy_ma3_sopra_ma13: {}".format(deviation_buy_ma3_sopra_ma13))    
-        
-        
-            
         
 
         # formula DEVIATION_ma4_sopra_ma30
@@ -251,6 +239,10 @@ class maddog:
         else:
             self.open = False
             self.algo_helper.info("session {}: closed segment".format(self.session))
+            
+            
+            
+            
 
         #############################################################################################################################################
 
@@ -696,8 +688,8 @@ class maddog:
 
             # < -0.10  ma78 che mi salva (nel movimento laterale mi fa perdere la meta')
             # < -0.20
-            # 0.25 - 0.59
-            # 0.60 - 0.79
+            # 0.25 - 0.60
+            # 0.61 - 0.79
             # 0.80 - 1.20
             # > 1.21
             
@@ -841,22 +833,22 @@ class maddog:
                 
                 elif (
                     ma50_last >= ma50_2_min_ago
-                    and (ma3_prev > ma13_prev and ma3_last < ma13_last)
+                    and ma3_last < ma13_last
                     and deviation_sell > 0.25
-                    and deviation_sell < 0.50
+                    and deviation_sell < 0.60
                     # deviation_sell = ma3_last/last_trade_price
                 ):
-                    sell = "SELL (3-5 min) con ma50 > incrocio 3-13 and deviation_sell 0.25 - 0.50 - DRIBBLING ALLA RONALDO - riga 821"
+                    sell = "SELL (3-5 min) con ma50 > 3<13 (NO INCROCIO 3-13) and deviation_sell 0.25 - 0.60 - DRIBBLING ALLA RONALDO - riga 821"
                     action = "sell"
                 
                 
                 elif (
                     ma50_last >= ma50_2_min_ago
                     and (ma3_prev > ma25_prev and ma3_last < ma25_last)
-                    and deviation_sell > 0.51
+                    and deviation_sell > 0.61
                     and deviation_sell < 1.20
                 ):
-                    sell = "SELL (3-5 min) con ma50 > incrocio 3-25 and deviation_sell 0.51 - 1.20 - riga 831"
+                    sell = "SELL (3-5 min) con ma50 > incrocio 3-25 and deviation_sell 0.61 - 1.20 - riga 831"
                     action = "sell"
 
                     
@@ -924,23 +916,23 @@ class maddog:
                     
                 elif (
                     ma50_last >= ma50_2_min_ago
-                    and (ma3_prev > ma13_prev and ma3_last < ma13_last)
+                    and ma3_last < ma13_last
                     and deviation_sell > 0.25
-                    and deviation_sell < 0.50
+                    and deviation_sell < 0.60
                     # deviation_sell = ma3_last/last_trade_price
                 ):
-                    sell = "SELL (5-12 min) con ma50 > incrocio 3-13 and deviation_sell 0.25 - 0.50 - DRIBBLING ALLA RONALDO - riga 904"
+                    sell = "SELL (5-12 min) con ma50 > ma3 < ma13 (NO INCROCIO 3-13) and deviation_sell 0.25 - 0.60 - DRIBBLING ALLA RONALDO - riga 904"
                     action = "sell"
 
                     
                 elif (
                     ma50_last >= ma50_2_min_ago
                     and (ma3_prev > ma25_prev and ma3_last < ma25_last)
-                    and deviation_sell > 0.51
+                    and deviation_sell > 0.61
                     and deviation_sell < 1.20
                     # deviation_sell = ma3_last/last_trade_price
                 ):
-                    sell = "SELL (5-12 min) con ma50 > incrocio 3-25 and deviation_sell 0.51 - 1.20 - riga 915"
+                    sell = "SELL (5-12 min) con ma50 > incrocio 3-25 and deviation_sell 0.61 - 1.20 - riga 915"
                     action = "sell"
 
                     
@@ -1007,12 +999,12 @@ class maddog:
                 
                 elif (
                     ma50_last >= ma50_2_min_ago
-                    and (ma3_prev > ma13_prev and ma3_last < ma13_last)
+                    and ma3_last < ma13_last
                     and deviation_sell > 0.25
-                    and deviation_sell < 0.50
+                    and deviation_sell < 0.60
                     # deviation_sell = ma3_last/last_trade_price
                 ):
-                    sell = "SELL (12-24 min) con ma50 > incrocio 3-11 and deviation_sell 0.25 - 0.50 - DRIBBLING ALLA RONALDO fino a +0.50 - riga 987"
+                    sell = "SELL (12-24 min) con ma50 > ma3 < ma13 (NO INCROCIO 3-13) and deviation_sell 0.25 - 0.60 - DRIBBLING ALLA RONALDO fino a +0.60 - riga 987"
                     action = "sell"
 
                     
@@ -1020,11 +1012,11 @@ class maddog:
                 elif (
                     ma50_last >= ma50_2_min_ago
                     and (ma3_prev > ma25_prev and ma3_last < ma25_last)
-                    and deviation_sell > 0.51
+                    and deviation_sell > 0.61
                     and deviation_sell < 1.20
                     # deviation_sell = ma3_last/last_trade_price
                 ):
-                    sell = "SELL (12-24 min) con ma50 > incrocio 3-25 and deviation_sell 0.51 - 1.20 - riga 999"
+                    sell = "SELL (12-24 min) con ma50 > incrocio 3-25 and deviation_sell 0.61 - 1.20 - riga 999"
                     action = "sell"
  
                 elif (
@@ -1078,12 +1070,12 @@ class maddog:
                    
                 elif (
                     ma50_last > ma50_2_min_ago
-                    and (ma3_prev > ma13_prev and ma3_last < ma13_last)
+                    and ma3_last < ma13_last
                     and deviation_sell > 0.30
                     and deviation_sell < 0.60
                     # deviation_sell = ma3_last/last_trade_price
                 ):
-                    sell = "SELL (24-60 min) con ma50 > incrocio 3-13 and deviation_sell 0.30 - 0.60 DRIBBLING ALLA RONALDO - riga 1057"
+                    sell = "SELL (24-60 min) con ma50 > ma3 < ma13 (NO INCROCIO 3-13) and deviation_sell 0.30 - 0.60 DRIBBLING ALLA RONALDO - riga 1057"
                     action = "sell"
 
                     
@@ -1153,11 +1145,11 @@ class maddog:
                 
                 elif (
                     ma50_last > ma50_2_min_ago
-                    and (ma3_prev > ma15_prev and ma3_last < ma15_last)
+                    and ma3_last < ma15_last
                     and deviation_sell > 0.35
                     and deviation_sell < 0.69
                 ):
-                    sell = "SELL dopo 60 min con ma50 > incrocio 3-15 and deviation_sell 0.35 - 0.69 DOPPIO PASSO ALLA RONALDO (fatto con ma15 invece che con ma13) - riga 1132"
+                    sell = "SELL dopo 60 min con ma50 > ma3 < ma15 (NO INCROCIO 3-13) and deviation_sell 0.35 - 0.69 DOPPIO PASSO ALLA RONALDO (fatto con ma15 invece che con ma13) - riga 1132"
                     action = "sell"
 
                     
@@ -1223,11 +1215,11 @@ class maddog:
                     
                 elif (
                     ma50_last > ma50_2_min_ago
-                    and (ma3_prev > ma15_prev and ma3_last < ma15_last)
+                    and ma3_last < ma15_last
                     and deviation_sell > 0.35
                     and deviation_sell < 0.69
                 ):
-                    sell = "SELL dopo 90 min con ma50 > incrocio 3-15 and deviation_sell 0.35 - 0.69 DOPPIO PASSO ALLA RONALDO (fatto con ma15 invece che con ma13) - riga 1202"
+                    sell = "SELL dopo 90 min con ma50> ma3<ma15 (NO INCROCIO 3-15) and deviation_sell 0.35 - 0.69 DOPPIO PASSO ALLA RONALDO (fatto con ma15 invece che con ma13) - riga 1202"
                     action = "sell"
 
                     
@@ -1298,6 +1290,10 @@ class maddog:
         
         # vai compaaaaaaaaaaaaa
         # ave comparo meo !
+        
+        # ti voglio bene, compa.
+        # compa, compa caro !
+
 
 
 
