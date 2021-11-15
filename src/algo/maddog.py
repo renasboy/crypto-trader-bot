@@ -6,6 +6,7 @@
                                    #          + BUY 2 ma7 > ma40 diminuito di 0.01
                                    #          + piccola modifica fascia sell 0.25-0.60
                                    #          + solo al dribbling e doppio passo alla ronaldo metto ma3 < ma13  invece dell' incrocio 3-13 che non ha incrociato !
+                                   #          + BUY 2 se ma78> e se ma78<
         
 class maddog:
     def __init__(self, helper, buy_percentage, sell_percentage):
