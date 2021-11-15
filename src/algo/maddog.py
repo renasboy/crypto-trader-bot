@@ -389,19 +389,40 @@ class maddog:
                 
                 
                 ########################################################################################
+                
                 if (
-                    deviation_buy2 > 0.07
+                    ma78_last > ma78_5_min_ago
+                    and deviation_buy2 > 0.07
                     and deviation_buy_ma3_sopra_ma13 > 0.09
-                    and deviation_ma7_sopra_ma40 > 0.08
+                    and deviation_ma7_sopra_ma40 > 0.09
                     and ma2_last > ma2_2_min_ago
                     and price > price_2_min_ago
                     and ma3_last > ma40_last
                 ):
-                    buy = "BUY 2A riga 399"
+                    buy = "BUY 2A con ma78 > riga 399"
                     action = "buy"
                     percentage = 50
                     # deviation_buy_ma3_sopra_ma13 > x e' fondamentale !
                     # deviation_buy2 = ma8_last/ma50_last
+                    
+                    
+                
+                elif (
+                    ma78_last < ma78_5_min_ago
+                    and deviation_buy2 > 0.07
+                    and deviation_buy_ma3_sopra_ma13 > 0.09
+                    and deviation_ma7_sopra_ma40 > 0.10
+                    and ma2_last > ma2_2_min_ago
+                    and price > price_2_min_ago
+                    and ma3_last > ma40_last
+                ):
+                    buy = "BUY 2A con ma78 < riga 399"
+                    action = "buy"
+                    percentage = 50
+                    # deviation_buy_ma3_sopra_ma13 > x e' fondamentale !
+                    # deviation_buy2 = ma8_last/ma50_last
+                    
+                    
                 
                 ###################################################################################
                 elif (
