@@ -2,7 +2,7 @@
 ####################################          copia CCR che funziona - non so perche' MADDOG NON FUNZIONAVA PIU'
 
                                    
-                                   #          + percentage 
+                                   #          + percentage (secondo me il problema di MADDOG sta dal buy 2 che non esegue su coinbase pro. SONO SICURO AL 99% vedi FIX?)
     
     
                                    #          + SI APRE LA GABBIA SE "if deviation_1_gabbia > -0.50" (prima era if deviation_1_gabbia > -0.27)
