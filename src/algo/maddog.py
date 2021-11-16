@@ -1,6 +1,12 @@
 
 ####################################          copia CCR che funziona - non so perche' MADDOG NON FUNZIONAVA PIU'
+
+                                   
                                    #          + percentage 
+    
+    
+                                   #          + SI APRE LA GABBIA SE "if deviation_1_gabbia > -0.50" (prima era if deviation_1_gabbia > -0.27)
+    
                                    #          + da ma11 a ma13 dribbling e da ma13 a ma15 doppio passo   
                                    #          + dolce attesa da -0.34 a 0.43  
                                    #          + BUY 2 ma7 > ma40 diminuito di 0.01
@@ -231,9 +237,9 @@ class maddog:
 
         ############################################################################################ APRE E CHIUDE LA GABBIA
 
-        # APRE E CHIUDE GABBIA
+        # SI APRE LA GABBIA SE
 
-        if deviation_1_gabbia > -0.27 or deviation_buy_crollo_1 < -1.90:
+        if deviation_1_gabbia > -0.50 or deviation_buy_crollo_1 < -1.90:
 
             # deviation_1_gabbia = ma8_last / ma50_last
             # deviation_buy_crollo_1 = ma8_last / ma78_last
