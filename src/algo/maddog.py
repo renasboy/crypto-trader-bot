@@ -7,7 +7,9 @@
                                    #          + piccola modifica fascia sell 0.25-0.60
                                    #          + solo al dribbling e doppio passo alla ronaldo metto ma3 < ma13  invece dell' incrocio 3-13 che non ha incrociato !
                                    #          + BUY 2 se ma78> e se ma78<
-        
+                                   #          + sell dolce attesa con ma25< and dev<-0.43 portata a 0.41
+                                   #          + sell 12-14 min e 12-24 min con ma50< : aggiunto "or ma3<ma100" (con le condizioni precedenti aveva fatto -0.61 !)
+                
 class maddog:
     def __init__(self, helper, buy_percentage, sell_percentage):
         self.algo_helper = helper
@@ -662,11 +664,11 @@ class maddog:
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
                 and ma2_last < last_trade_price
-                and deviation < -0.43
+                and deviation < -0.41
                 and ma25_last < ma25_2_min_ago
             ):
 
-                sell = "SELL DOLCE ATTESA con ma25 < and deviation < -0.43 - riga 627"
+                sell = "SELL DOLCE ATTESA con ma25 < and deviation < -0.41 - riga 627"
                 action = "sell"
 
                 # il fattore tempo - la dolce attesa - solo con trend ribassista
@@ -1052,12 +1054,12 @@ class maddog:
                 ##################################################################### con trend discendente
                 elif (
                     ma50_last < ma50_2_min_ago
-                    and deviation_ma39 < -0.17
-                    and deviation_sell < 0.10
+                    and deviation_ma39 < -0.17 and deviation_sell < 0.10 or ma3_last < ma100_last
+                    
                     #and (ma3_prev > ma33_prev and ma3_last < ma33_last)
                     #and deviation_sell < -0.25
                 ):
-                    sell = "SELL (12-24 min) con ma50 < and deviation_ma39 < -0.17 and deviation_sell < 0.10 (NO incrocio 3-33 and deviation_sell < -0.25) - riga 1018"
+                    sell = "SELL (12-24 min) con ma50 < and deviation_ma39 < -0.17 and deviation_sell < 0.10 (NO incrocio 3-33) or ma3<ma100 - riga 1018"
                     action = "sell"
 
                 # -----------------------------------------------------------------------------eventuale guadagno con crollo
@@ -1123,12 +1125,12 @@ class maddog:
                 ##################################################################### con trend discendente
                 elif (
                     ma50_last < ma50_2_min_ago
-                    and deviation_ma39 < -0.17
-                    and deviation_sell < 0.10
+                    and deviation_ma39 < -0.17 and deviation_sell < 0.10  or ma3_last < ma100_last
+                    
                     #and (ma3_prev > ma33_prev and ma3_last < ma33_last)
                     #and deviation_sell < -0.34
                 ):
-                    sell = "SELL (24-60 min) con ma50 < and deviation_ma39 < -0.17 and deviation_sell < 0.10 (NO incrocio 3-33 and deviation_sell < -0.25) - riga 1089"
+                    sell = "SELL (24-60 min) con ma50 < and deviation_ma39 < -0.17 and deviation_sell < 0.10 (NO incrocio 3-33) or ma3<ma100 - riga 1089"
                     action = "sell"
 
                 # --------------------------------------------------------------------------------------eventuale guadagno durante il crollo
