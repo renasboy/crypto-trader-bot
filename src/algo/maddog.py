@@ -379,11 +379,18 @@ class maddog:
                 
               
                 
-                # BUY SECONDO MODO - DURANTE IL CROLLO - e' entrato in azione ! ( e mi e' sembrato buono !)
+                # BUY SECONDO MODO - DURANTE IL CROLLO - e' entrato in azione ! ( e mi e' sembrato buono !) 
+                # MA METTIAMOLO ALLA PROVA CON deviation_buy_crollo_1 < -1.80 !
+                
                 elif (
                     ma2_last > ma2_2_min_ago
-                    and deviation_buy_crollo_1 < -2.40
+                    and deviation_buy_crollo_1 < -1.80
                     and deviation_buy_crollo_2 > 0.35
+                    
+                    # PRIMA ERA COSI'
+                    #ma2_last > ma2_2_min_ago
+                    #and deviation_buy_crollo_1 < -2.40
+                    #and deviation_buy_crollo_2 > 0.35
                 ):
                     buy = "BUY DURANTE IL CROLLO - modo 2 riga 379"
                     action = "buy"
