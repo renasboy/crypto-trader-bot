@@ -768,9 +768,11 @@ class ro_cano_che_ritorna:
             # VENDITA - da 0 a 3 minuti = da 0 a 180 secondi
 
             if seconds_since_last_trade > 0 and seconds_since_last_trade <= 180:
+              
+              
 
-                # con ma50 >
-
+                
+                ######################################################################################################################### 1) SELL con ma50 >
                 if (
                     ma50_last >= ma50_2_min_ago
                     and (ma3_prev > ma39_prev and ma3_last < ma39_last)
@@ -779,8 +781,11 @@ class ro_cano_che_ritorna:
                 ):
                     sell = "SELL (0-3 min) con ma50 > incrocio 3-39 and deviation_sell < -0.23 - riga 780"
                     action = "sell"
+                    
+                    
                 
                 
+                ######################################################################################################################### 2) SELL con ma50 >
                 elif (
                     ma50_last >= ma50_2_min_ago
                     and (ma3_prev > ma33_prev and ma3_last < ma33_last)
@@ -791,7 +796,10 @@ class ro_cano_che_ritorna:
                     sell = "SELL (0-3 min) con ma50 > incrocio 3-33 and deviation_sell 0.25 - 0.60 - riga 791"
                     action = "sell"
 
-                    
+                
+                
+                
+                ######################################################################################################################### 3) SELL con ma50 >
                 elif (
                     ma50_last >= ma50_2_min_ago
                     and (ma3_prev > ma33_prev and ma3_last < ma33_last)
@@ -803,6 +811,8 @@ class ro_cano_che_ritorna:
                 
                 
                 
+                
+                ######################################################################################################################### 4) SELL con ma50 >
                 elif (
                     ma50_last >= ma50_2_min_ago
                     and (ma3_prev > ma13_prev and ma3_last < ma13_last)
@@ -815,6 +825,8 @@ class ro_cano_che_ritorna:
                 
                 
                 
+                
+                ######################################################################################################################### 5) SELL con ma50 >
                 elif (
                     ma50_last >= ma50_2_min_ago
                     and (ma3_prev > ma11_prev and ma3_last < ma11_last)
@@ -825,8 +837,10 @@ class ro_cano_che_ritorna:
                     action = "sell"
                 
                 
-                ###########################################################################     trend in ribasso
-
+                #########################################################################################################     trend in ribasso
+                
+                
+                ######################################################################################################### 1) SELL (0-3 min) con ma50 <
                 elif (
                     ma50_last < ma50_2_min_ago
                     and (ma3_prev > ma28_prev and ma3_last < ma28_last)
@@ -838,6 +852,9 @@ class ro_cano_che_ritorna:
                     # incrocio 3 -28 e' fondamentale per evitare punto rosso sovrapposto al punto verde !
                 
                 
+                
+                
+                ######################################################################################################### 2) SELL (0-3 min) con ma50 <
                 elif (
                     ma50_last < ma50_2_min_ago
                     and (ma3_prev > ma33_prev and ma3_last < ma33_last)
@@ -845,46 +862,69 @@ class ro_cano_che_ritorna:
                 ):
                     sell = "SELL (0-3 min) con ma50 < incrocio 3-33 and deviation_sell -0.23 - riga 846"
                     action = "sell"
-
+                
+                
+                
+                
+                
                 # ---------------------------------------------------------------------------------------------------------------------- crollo
-
-                elif (
-                    ma50_last < ma50_2_min_ago
-                    and (ma3_prev > ma16_prev and ma3_last < ma16_last)
-                    and deviation_sell < -0.50
-                ):
-                    sell = "SELL CROLLO (0-3 min) con ma50 < incrocio 3-16 and deviation_sell < -0.50 - riga 856"
-                    action = "sell"
-
-                    # AGGIUNTA PER SICUREZZA SE CONTINUA A PRECIPITARE
+                # ---------------------------------------------------------------------------------------------------------------------- crollo
+                # ---------------------------------------------------------------------------------------------------------------------- crollo
                 
                 
+                ######################################################################################################### SELL CROLLO 1
                 elif (
                     ma50_last < ma50_2_min_ago
                     and (ma3_prev > ma23_prev and ma3_last < ma23_last)
                     and deviation_sell > 0.23
                 ):
-                    sell = "SELL CROLLO (0-3 min) con ma50 < incrocio 3-23 and deviation_sell > 0.23 - riga 866"
+                    sell = "SELL CROLLO 1 (0-3 min) con ma50 < incrocio 3-23 and deviation_sell > 0.23 - riga 866"
                     action = "sell"
                 
                 
+                
+                
+                ########################################################################################################## SELL CROLLO 2
                 elif (
                     ma50_last < ma50_2_min_ago
                     and (ma3_prev > ma8_prev and ma3_last < ma8_last)
                     and deviation_sell > 0.60
                 ):
 
-                    sell = "SELL CROLLO (0-3 min) con ma50 < incrocio 3-8 and deviation_sell > 0.60 - riga 877"
+                    sell = "SELL CROLLO 2 (0-3 min) con ma50 < incrocio 3-8 and deviation_sell > 0.60 - riga 877"
                     action = "sell"
+                
+                
+                
+                
+                
+                ########################################################################################################## SELL CROLLO 3 # AGGIUNTA PER SICUREZZA SE CONTINUA A PRECIPITARE
+                elif (
+                    ma50_last < ma50_2_min_ago
+                    and ma3_last < ma16_last
+                    and deviation_sell < -0.50
+                ):
+                    sell = "SELL CROLLO 3 (0-3 min) con ma50 < and ma3 < ma16 (NO INCROCIO 3-16) and deviation_sell < -0.50 - riga 856"
+                    action = "sell"
+
+                    
+                
+                
+                
             
             
             
-            ################################################################################################################################         3-5 min
+            
+            
+            ################################################################################################################################ SELL 3-5 min
 
             # VENDITA - da 3 a 5 minuti = da 180 a 300 secondi
 
             elif seconds_since_last_trade > 180 and seconds_since_last_trade <= 300:
-
+                
+                
+                
+                
                 if (
                     ma50_last >= ma50_2_min_ago
                     and (ma3_prev > ma39_prev and ma3_last < ma39_last)
@@ -893,6 +933,9 @@ class ro_cano_che_ritorna:
                 ):
                     sell = "SELL (3-5 min) con ma50 > incrocio 3-39 and deviation_sell < -0.24 - riga 894"
                     action = "sell"
+                
+                
+                
                 
                 
                 elif (
@@ -906,6 +949,9 @@ class ro_cano_che_ritorna:
                     action = "sell"
                 
                 
+                
+                
+                
                 elif (
                     ma50_last >= ma50_2_min_ago
                     and (ma3_prev > ma25_prev and ma3_last < ma25_last)
@@ -916,7 +962,9 @@ class ro_cano_che_ritorna:
                     action = "sell"
 
                     
-                    
+                
+                
+                
                 elif (
                     ma50_last >= ma50_2_min_ago
                     and (ma3_prev > ma25_prev and ma3_last < ma25_last)
@@ -926,8 +974,12 @@ class ro_cano_che_ritorna:
                     action = "sell"
                 
                 
+                
+                
                 ###########################################################################     trend in ribasso
-
+                
+                
+                
                 elif (
                     ma50_last < ma50_2_min_ago
                     and (ma3_prev > ma28_prev and ma3_last < ma28_last)
@@ -941,6 +993,9 @@ class ro_cano_che_ritorna:
                     # incrocio 3 -28 e' fondamentale per evitare punto rosso sovrapposto al punto verde !
                 
                 
+                
+                
+                
                 elif (
                     ma50_last < ma50_2_min_ago
                     and (ma3_prev > ma33_prev and ma3_last < ma33_last)
@@ -948,7 +1003,9 @@ class ro_cano_che_ritorna:
                 ):
                     sell = "SELL (3-5 min) con ma50 < incrocio 3-33 and deviation_sell < -0.23 - riga 949"
                     action = "sell"
-
+                
+                
+                
                 # ---------------------------------------------------------------------------------------------------------------------- guadagno con crollo
 
                 elif (
@@ -959,6 +1016,8 @@ class ro_cano_che_ritorna:
                     sell = "SELL GUADAGNO CON CROLLO (3-5 min) con ma50 < incrocio 3-23 and deviation_sell > 0.23 - riga 959"
                     action = "sell"
 
+                    
+                    
                     
                     
             ################################################################################################################################### 5-12 min
