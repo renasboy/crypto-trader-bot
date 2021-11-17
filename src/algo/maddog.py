@@ -909,7 +909,7 @@ class maddog:
             elif seconds_since_last_trade > 180 and seconds_since_last_trade <= 300:
               
               
-
+                #################################################################################################### 1) con ma50 > 
                 if (
                     ma50_last >= ma50_2_min_ago
                     and (ma3_prev > ma39_prev and ma3_last < ma39_last)
