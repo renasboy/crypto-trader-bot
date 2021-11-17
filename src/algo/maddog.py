@@ -1,4 +1,4 @@
-
+# si potrebbe fare NUOVA CONDIZIONE 13-25 > x o 13-78 > and 8-48 per il rialzo improvviso senza crollo oltre a spazio - tempo che gia' hai
                 
 class maddog:
     def __init__(self, helper, buy_percentage, sell_percentage):
@@ -303,7 +303,9 @@ class maddog:
                     percentage = 50
 
                     # deviation_buy1 = ma13_last/ma39_last
-               
+                    
+
+
                 
                 ####################################################################  BUY 1 con incrocio 13-100 and ma78_last > ma78_5_min_ago  "MI PIACE!"
                 elif (
