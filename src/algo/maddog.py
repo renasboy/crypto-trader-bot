@@ -321,7 +321,7 @@ class maddog:
                     action = "buy"
                     percentage = 50
                 
-                
+                    # ATTENZIONE ! CCR ho messo 78 4 min ago ! vediamo quale e' statisticamente migliore !
                 ################################################################################################################## compra durante il ribasso
                 
                 
