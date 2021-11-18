@@ -278,7 +278,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                     and ma5_last > ma5_2_min_ago
                     and deviation_ma3_sopra_ma7 > 0.05
-                    and deviation_ma13_sopra_ma25 > 0.08
+                    and deviation_ma13_sopra_ma25 > 0.07
                 ):
 
                     buy = "BUY 1 con incrocio 72-100 riga 284"
@@ -303,10 +303,8 @@ class maddog:
                     percentage = 50
 
                     # deviation_buy1 = ma13_last/ma39_last
-                    
-
-
-                
+              
+              
                 ####################################################################  BUY 1 con incrocio 13-100 and ma78_last > ma78_5_min_ago  "MI PIACE!"
                 elif (
                     (ma13_prev < ma100_prev and ma13_last > ma100_last)
@@ -326,6 +324,8 @@ class maddog:
                 
                 ################################################################################################################## compra durante il ribasso
                 
+                
+                ###################################################### se ma78< BUY 1 con incrocio 39-78 and DEVIATION BUY 1 BASSA
                 elif (
                     ma78_last < ma78_2_min_ago
                     and (ma39_prev < ma78_prev and ma39_last > ma78_last)
@@ -336,14 +336,14 @@ class maddog:
                     and deviation_ma3_sopra_ma7 > 0.05
                 ):
 
-                    buy = "BUY 1 con incrocio 39-78 and DEVIATION BUY 1 BASSA e ma78 < riga 337"
+                    buy = "BUY 1 con incrocio 39-78 and DEVIATION BUY 1 BASSA e ma78 < riga 339"
                     action = "buy"
                     percentage = 50
                     # deviation_buy1 = ma13_last/ma39_last
                     
-                
-                ####################################################################################################### se ma78< BUY 1 con incrocio 39-78
-               
+              
+              
+                #############################################################se ma78< BUY 1 con incrocio 39-78
                 elif (
                     ma78_last < ma78_2_min_ago
                     and (ma39_prev < ma78_prev and ma39_last > ma78_last)
@@ -354,7 +354,7 @@ class maddog:
                     and deviation_ma13_sopra_ma25 > 0.05
                 ):
 
-                    buy = "se ma78 < - BUY 1 con incrocio 39-78 - riga 355"
+                    buy = "se ma78 < - BUY 1 con incrocio 39-78 - riga 357"
                     action = "buy"
                     percentage = 50
                     # deviation_buy1 = ma13_last/ma39_last
@@ -377,13 +377,12 @@ class maddog:
                     and deviation_buy_crollo_1 < -2.30
                     and (ma8_prev < ma25_prev and ma8_last > ma25_last)
                 ):
-                    buy = "BUY DURANTE IL CROLLO - modo 1 riga 378"
+                    buy = "BUY DURANTE IL CROLLO - modo 1 riga 380"
                     action = "buy"
                     percentage = 50
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                 
                 
-              
                 
                 # BUY SECONDO MODO - DURANTE IL CROLLO - questa condizione e' entrata in azione ! ( e mi e' sembrata addirittura buona !) 
                 # MA METTIAMOLO ALLA PROVA CON deviation_buy_crollo_1 < -1.80 ! (non con -2.40)
@@ -398,14 +397,13 @@ class maddog:
                     #and deviation_buy_crollo_1 < -2.40
                     #and deviation_buy_crollo_2 > 0.35
                 ):
-                    buy = "BUY DURANTE IL CROLLO - modo 2 riga 399"
+                    buy = "BUY DURANTE IL CROLLO - modo 2 riga 400"
                     action = "buy"
                     percentage = 50
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     # deviation_buy_crollo_2 = ma3_last / ma13_last
                     
-                    
-            #############################################################################################################
+               
             #############################################################################################################
             #############################################################################################################      COMPRA sessione 2
 
