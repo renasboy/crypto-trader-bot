@@ -278,7 +278,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                     and ma5_last > ma5_2_min_ago
                     and deviation_ma3_sopra_ma7 > 0.05
-                    and deviation_ma13_sopra_ma25 > 0.05
+                    and deviation_ma13_sopra_ma25 > 0.08
                 ):
 
                     buy = "BUY 1 con incrocio 72-100 riga 284"
