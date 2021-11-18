@@ -1,4 +1,4 @@
-# si potrebbe fare NUOVA CONDIZIONE 13-25 > x o 13-78 > and 8-48 per il rialzo improvviso senza crollo oltre a spazio - tempo che gia' hai
+
                 
 class maddog:
     def __init__(self, helper, buy_percentage, sell_percentage):
@@ -262,8 +262,8 @@ class maddog:
                                                                     #   B U Y
             ###########################################################################################################################################
            
-           
-            ######################################################################################################## COMPRA sessione 1
+            # rialzo improvviso che adesso manca (spazio-tempo) - vedi buy2 durante il crollo ! (e considerare l' aggiunta di 13-25)
+            ##################################################################################################################################COMPRA 1
 
             percentage = self.buy_percentage
 
