@@ -53,7 +53,6 @@ class ro_cano_che_ritorna:
         ma2_4_min_ago = self.algo_helper.ma_minutes_ago(2, 4)
         ma3_2_min_ago = self.algo_helper.ma_minutes_ago(3, 2)
         ma3_3_min_ago = self.algo_helper.ma_minutes_ago(3, 3)
-        ma3_9_min_ago = self.algo_helper.ma_minutes_ago(3, 9)
         ma4_2_min_ago = self.algo_helper.ma_minutes_ago(4, 2)
         ma5_2_min_ago = self.algo_helper.ma_minutes_ago(5, 2)
         ma4_4_min_ago = self.algo_helper.ma_minutes_ago(4, 4)
@@ -66,9 +65,11 @@ class ro_cano_che_ritorna:
         ma39_3_min_ago = self.algo_helper.ma_minutes_ago(39, 3)
         ma50_2_min_ago = self.algo_helper.ma_minutes_ago(50, 2)
         ma78_2_min_ago = self.algo_helper.ma_minutes_ago(78, 2)
+        ma78_4_min_ago = self.algo_helper.ma_minutes_ago(78, 4)
         ma78_5_min_ago = self.algo_helper.ma_minutes_ago(78, 5)
         ma78_7_min_ago = self.algo_helper.ma_minutes_ago(78, 7)
         ma200_3_min_ago = self.algo_helper.ma_minutes_ago(200, 3)
+        
 
         
         # LAST TRADE
@@ -287,8 +288,7 @@ class ro_cano_che_ritorna:
                     # la deviation_ma13_sopra_ma25 puoi portarla > 0.072 SOLO CON 72-100
                     
                     
-                
-                
+               
                 # --------------------------------------------------------------    BUY 1 DURANTE IL RIALZO con LA DEVIATION BUY 1
                 elif (
                     deviation_buy1 > 0.56
@@ -308,7 +308,7 @@ class ro_cano_che_ritorna:
                 ####################################################################  BUY 1 con incrocio 13-100 and ma78_last > ma78_5_min_ago  "MI PIACE!"
                 elif (
                     (ma13_prev < ma100_prev and ma13_last > ma100_last)
-                    and ma78_last > ma78_5_min_ago
+                    and ma78_last > ma78_4_min_ago
                     and price > price_2_min_ago
                     and ma2_last > ma2_2_min_ago
                     and ma3_last > ma3_3_min_ago
@@ -317,7 +317,7 @@ class ro_cano_che_ritorna:
                     and deviation_ma13_sopra_ma25 > 0.06
                     # quando 13-100 si incrociano price ma2 e ma4 sono gia' in ribasso
                 ):
-                    buy = "BUY 1 con incrocio 13 - 100 e ma78> 5 min ago riga 320"
+                    buy = "BUY 1 con incrocio 13 - 100 e ma78> 4 min (no 5 min ago !) ago riga 320"
                     action = "buy"
                     percentage = 50
                 
