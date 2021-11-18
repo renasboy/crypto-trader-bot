@@ -1647,7 +1647,8 @@ class ro_cano_che_ritorna:
         # ave comparo meo !
         
         # ti voglio bene, compa.
-        # compa, compa caro !
+        # compa, compa caro ! 
+        #
 
 
 
