@@ -413,9 +413,9 @@ class ro_cano_che_ritorna:
                 ################################################################# BUY 2A con ma78 >
                 if (
                     ma78_last > ma78_5_min_ago
-                    and deviation_buy2 > 0.07
+                    and deviation_buy2 > 0.04
                     and deviation_buy_ma3_sopra_ma13 > 0.09
-                    and deviation_ma7_sopra_ma40 > 0.09
+                    and deviation_ma7_sopra_ma40 > 0.04
                     and ma2_last > ma2_2_min_ago
                     and price > price_2_min_ago
                     and ma3_last > ma40_last
