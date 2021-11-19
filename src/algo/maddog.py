@@ -1,7 +1,8 @@
                                                                                 # Bob Dylan - Not Dark Yet (NYC 2019)
                                                                                 # 19 nov 2021 - viva ro combaro meo !
                                                                                 # maddog = CCR
-                                                                                # ma CCR ha BUY1 con ma78 5 min invece di 4
+                                                                                # ma dei mettere CCR che ha BUY1 con ma78 5 min invece di 4
+             
 class maddog:
     def __init__(self, helper, buy_percentage, sell_percentage):
         self.algo_helper = helper
@@ -14,6 +15,8 @@ class maddog:
     def action(self):
       
       
+
+        
         # moving average (2-3-4-5-x)
         ma2_last, ma2_prev = self.algo_helper.ma_last_prev(2)
         ma3_last, ma3_prev = self.algo_helper.ma_last_prev(3)
@@ -247,8 +250,10 @@ class maddog:
             self.open = False
             self.algo_helper.info("session {}: closed segment".format(self.session))
             
-        
-       
+            
+          
+        ############################################################################################
+        ############################################################################################
         ############################################################################################ 
         #############################################################################################################################################
 
@@ -258,16 +263,15 @@ class maddog:
         if self.open and self.session and last_trade_action != "buy":
 
             
-            ###########################################################################################################################################
                                                                     #   B U Y
             ###########################################################################################################################################
            
             # rialzo improvviso che adesso manca (spazio-tempo) - vedi buy2 durante il crollo ! (e considerare l' aggiunta di 13-25)
-            ################################################################################################################################## COMPRA 1
-            
+            ##################################################################################################################################COMPRA 1
+
             percentage = self.buy_percentage
-            
-           
+
+
             if self.session == 1:
 
                 
@@ -287,8 +291,7 @@ class maddog:
                     # la deviation_ma13_sopra_ma25 puoi portarla > 0.072 SOLO CON 72-100
                     
                     
-                
-                
+               
                 # --------------------------------------------------------------    BUY 1 DURANTE IL RIALZO con LA DEVIATION BUY 1
                 elif (
                     deviation_buy1 > 0.56
@@ -305,7 +308,7 @@ class maddog:
                     # deviation_buy1 = ma13_last/ma39_last
               
               
-                ####################################################################  BUY 1 con incrocio 13-100 and ma78_last > ma78_5_min_ago  "MI PIACE!"
+                ####################################################################  BUY 1 con incrocio 13-100 and ma78_last > ma78_4_min_ago  "MI PIACE!"
                 elif (
                     (ma13_prev < ma100_prev and ma13_last > ma100_last)
                     and ma78_last > ma78_4_min_ago
@@ -1651,14 +1654,13 @@ class maddog:
         
         # ti voglio bene, compa.
         # compa, compa caro ! 
-        
-        
-        
-        
-        
-        #dice errore 1659 ma non c'era !
-        
-        
+        #
+
+
+
+
+
+
 
 
 
