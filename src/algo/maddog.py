@@ -2,7 +2,7 @@
                                                                                 # 19 nov 2021 - viva ro combaro meo !
                                                                                 # maddog = CCR
                                                                                 # ma CCR ha BUY1 con ma78 5 min invece di 4
-class maddog::
+class maddog:
     def __init__(self, helper, buy_percentage, sell_percentage):
         self.algo_helper = helper
         self.buy_percentage = buy_percentage
