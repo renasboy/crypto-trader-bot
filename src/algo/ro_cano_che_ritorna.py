@@ -1202,24 +1202,26 @@ class ro_cano_che_ritorna:
 
                 if (
                     ma50_last > ma50_2_min_ago
-                    and deviation_ma39 < -0.17
-                    and deviation_sell < 0.10
+                    and deviation_ma39 < -0.16 or (deviation_sell < 0.10 and ma3_last < ma39_last)
+                    
                     #and (ma3_prev > ma39_prev and ma3_last < ma39_last)
                     #and deviation_sell < -0.26
                     # deviation_sell = ma3_last/last_trade_price
                 ):
-                    sell = "SELL (24-60 min) con ma50 > and deviation_ma39 < -0.17 and deviation_sell < 0.10 (NO incrocio 3-39 and deviation_sell < -0.26) - riga 1045"
+                    sell = "SELL (24-60 min) con ma50 > and deviation_ma39 < -0.16 or (deviation_sell < 0.10 and ma3_last < ma39_last) - riga 1045"
                     action = "sell"
 
-                   
+                
+                
+                
                 elif (
                     ma50_last > ma50_2_min_ago
-                    and (ma3_prev > ma11_prev and ma3_last < ma11_last)
+                    and ma3_last < ma13_last)
                     and deviation_sell > 0.30
                     and deviation_sell < 0.60
                     # deviation_sell = ma3_last/last_trade_price
                 ):
-                    sell = "SELL (24-60 min) con ma50 > incrocio 3-11 and deviation_sell 0.30 - 0.60 DRIBBLING ALLA RONALDO - riga 1057"
+                    sell = "SELL (24-60 min) con ma50 > 3<13 (no incrocio 3-13) and deviation_sell 0.30 - 0.60 DRIBBLING ALLA RONALDO - riga 1057"
                     action = "sell"
 
                     
