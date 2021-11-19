@@ -460,12 +460,11 @@ class ro_cano_che_ritorna:
                     percentage = 50
                     # deviation_buy2 = ma8_last / ma50
                     
-                    
-                    
-
+           
             ############################################################################################################COMPRA sessione 3
 
             elif self.session == 3:
+                
                 
                 
                 ############################################################################## BUY 3A con ma78 > 
@@ -477,11 +476,10 @@ class ro_cano_che_ritorna:
                     and (ma4_prev < ma9_prev and ma4_last > ma9_last)
                     and ma4_last > ma50_last
                 ):
-                    buy = "BUY 3A con ma78 > riga 480"
+                    buy = "BUY 3A con ma78 > riga 479"
                     action = "buy"
                     percentage = 50
-                    
-            
+               
                 ############################################################################## BUY 3B RIVOLUZIONARIO se ma39 > ma78
                 elif (    
                     deviation_buy3 > 0.02
@@ -493,23 +491,25 @@ class ro_cano_che_ritorna:
                     and ma3_last > ma78_last
                     and ma4_last > ma4_2_min_ago
                 ):
-                    buy = "BUY 3B RIVOLUZIONARIO se ma39 > ma78- riga 496"
+                    buy = "BUY 3B RIVOLUZIONARIO se ma39 > ma78- riga 494"
                     action = "buy"
                     percentage = 50
                     # deviation_buy3 = ma4_last/ma30_last
                     # riga 462 potrebbe esserci un problema perche' ho tolto ma78_last >= ma78_2_min_ago. vediamo
                     
-                    
-                
+               
+            
                 ################################################################################ BUY 3C RIVOLUZIONARIO se ma78 <
                 elif (
                     ma78_last < ma78_2_min_ago
                     and deviation_buy3 > 0.03
+                    and deviation_ma13_sopra_ma25 > 0.045
                     and delta_buy3_incrocio_ma3_ma8 > 0.07
                     and deviation_ma4_sopra_ma30 > 0.18
                     and ma3_last > ma8_last
                     and ma3_last > ma78_last
                     and ma4_last > ma4_2_min_ago
+                    
                 ):
                     buy = "BUY 3C RIVOLUZIONARIO se ma78 < - riga 514"
                     action = "buy"
