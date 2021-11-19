@@ -1032,11 +1032,11 @@ class ro_cano_che_ritorna:
                     and deviation_sell < -0.41
                     # deviation_sell = ma3_last/last_trade_price
                 ):
-                    sell = "SELL (5-12 min) con ma50 > incrocio 3-78 and deviation_sell < -0.41 - QUESTO E' IL RISCHIO PIU' GRANDE CHE PRENDO ! ( ma con ma50 > ) riga 1035"
+                    sell = "SELL (5-12 min) con ma50 > incrocio 3-78 and deviation_sell < -0.41 - guardare da una stella ( ma con ma50> ) riga 1035"
                     action = "sell"
                     
                     # QUESTO E' IL RISCHIO PIU' GRANDE CHE DEVO PRENDERE ! ( ma con ma50 > )
-                    
+                    # 1035 guardare la stella (guardare da una stella!)
                     
                 
                 
