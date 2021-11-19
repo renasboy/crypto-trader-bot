@@ -1,8 +1,4 @@
-                                                                                # Bob Dylan - Not Dark Yet (NYC 2019)
-                                                                                # 19 nov 2021 - viva ro combaro meo !
-                                                                                # maddog = CCR
-                                                                                # ma dei mettere CCR che ha BUY1 con ma78 5 min invece di 4
-             
+ 
 class maddog:
     def __init__(self, helper, buy_percentage, sell_percentage):
         self.algo_helper = helper
@@ -235,7 +231,7 @@ class maddog:
         # SI APRE LA GABBIA SE
 
         if deviation_1_gabbia > -0.39 or deviation_buy_crollo_1 < -1.90:
-            # se la gabbia si apre troppo facilmente avrai problemi con andamento laterale ! ( prima deviation_1_gabbia > -0.27 ) vediamo con -0.50 come si comporta.
+            # se la gabbia si apre troppo facilmente avrai problemi con andamento laterale ! ( prima deviation_1_gabbia > -0.27 ) vediamo con -0.39 come si comporta.
             # deviation_1_gabbia = ma8_last / ma50_last
             # deviation_buy_crollo_1 = ma8_last / ma78_last
 
