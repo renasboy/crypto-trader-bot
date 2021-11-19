@@ -408,6 +408,8 @@ class ro_cano_che_ritorna:
                     
                     ma78_last < ma78_4_min_ago
                     and deviation_buy2 > 0.07
+                    and deviation_ma13_sopra_ma25 > 0.06
+                    
                     and deviation_buy_ma3_sopra_ma13 > 0.09
                     and deviation_ma7_sopra_ma40 > 0.10
                     and ma2_last > ma2_2_min_ago
@@ -473,6 +475,7 @@ class ro_cano_che_ritorna:
                 elif (
                     ma78_last < ma78_2_min_ago
                     and deviation_buy3 > 0.03
+                    and deviation_ma13_sopra_ma25 > 0.045
                     and delta_buy3_incrocio_ma3_ma8 > 0.07
                     and deviation_ma4_sopra_ma30 > 0.18
                     and ma3_last > ma8_last
