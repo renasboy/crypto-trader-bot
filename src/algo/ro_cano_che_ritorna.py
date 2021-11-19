@@ -1,5 +1,4 @@
-    # CCR = MADDOG                           # 17 NOVEMBRE 2021 - funziona MA PROBLEMI SUL COINBASE - realizza solo il buy 1 poi si blocca !
-             
+    
 class ro_cano_che_ritorna:
     def __init__(self, helper, buy_percentage, sell_percentage):
         self.algo_helper = helper
@@ -305,10 +304,10 @@ class ro_cano_che_ritorna:
                     # deviation_buy1 = ma13_last/ma39_last
               
               
-                ####################################################################  BUY 1 con incrocio 13-100 and ma78_last > ma78_4_min_ago  "MI PIACE!"
+                ####################################################################  BUY 1 con incrocio 13-100 and ma78_last > ma78_5_min_ago  "MI PIACE!"
                 elif (
                     (ma13_prev < ma100_prev and ma13_last > ma100_last)
-                    and ma78_last > ma78_4_min_ago
+                    and ma78_last > ma78_5_min_ago
                     and price > price_2_min_ago
                     and ma2_last > ma2_2_min_ago
                     and ma3_last > ma3_3_min_ago
@@ -317,7 +316,7 @@ class ro_cano_che_ritorna:
                     and deviation_ma13_sopra_ma25 > 0.06
                     # quando 13-100 si incrociano price ma2 e ma4 sono gia' in ribasso
                 ):
-                    buy = "BUY 1 con incrocio 13 - 100 e ma78> 4 min (no 5 min ago !) ago riga 320"
+                    buy = "BUY 1 con incrocio 13 - 100 e ma78> 5 min (MADDOG 4 min !) ago riga 320"
                     action = "buy"
                     percentage = 50
                 
