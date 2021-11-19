@@ -1652,6 +1652,13 @@ class maddog:
         # ti voglio bene, compa.
         # compa, compa caro ! 
         
+        
+        
+        
+        
+        #dice errore 1659 ma non c'era !
+        
+        
 
 
 
