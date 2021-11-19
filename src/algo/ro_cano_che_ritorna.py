@@ -1028,12 +1028,15 @@ class ro_cano_che_ritorna:
                 #################################################################################################### 1) con ma50 >
                 if (
                     ma50_last >= ma50_2_min_ago
-                    and (ma3_prev > ma39_prev and ma3_last < ma39_last)
-                    and deviation_sell < -0.25
+                    and (ma3_prev > ma50_prev and ma3_last < ma50_last)
+                    and deviation_sell < -0.41
                     # deviation_sell = ma3_last/last_trade_price
                 ):
-                    sell = "SELL (5-12 min) con ma50 > incrocio 3-39 and deviation_sell < -0.25 - riga 1035"
+                    sell = "SELL (5-12 min) con ma50 > incrocio 3-50 and deviation_sell < -0.41 - QUESTO E' IL RISCHIO PIU' GRANDE CHE PRENDO ! ( ma con ma50 > ) riga 1035"
                     action = "sell"
+                    
+                    # QUESTO E' IL RISCHIO PIU' GRANDE CHE DEVO PRENDERE ! ( ma con ma50 > )
+                    
                     
                 
                 
