@@ -305,7 +305,7 @@ class ro_cano_che_ritorna:
                     # deviation_buy1 = ma13_last/ma39_last
               
               
-                ####################################################################  BUY 1 con incrocio 13-100 and ma78_last > ma78_5_min_ago  "MI PIACE!"
+                ####################################################################  BUY 1 con incrocio 13-100 and ma78_last > ma78_4_min_ago  "MI PIACE!"
                 elif (
                     (ma13_prev < ma100_prev and ma13_last > ma100_last)
                     and ma78_last > ma78_4_min_ago
