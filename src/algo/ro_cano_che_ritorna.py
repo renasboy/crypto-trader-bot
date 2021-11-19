@@ -260,6 +260,13 @@ class ro_cano_che_ritorna:
             # NON TOCCARE  ! DI DEFAULT E' IL 2%
             
             
+            
+            # in futuro
+            # buy spazio-tempo ma con aggiunta di ma 13-25
+            # MACD sempre con aggiunta di ma 13-25 (come studio) (III° cane)
+            
+            
+            
             ######################################################################################################## COMPRA sessione 1
 
             if self.session == 1:
@@ -598,10 +605,20 @@ class ro_cano_che_ritorna:
             percentage = self.sell_percentage
             # E' 100 DI DEFAULT !
             #####################################################################################################################
+            
+            
+            
 
             # VENDITA CON QUESTE 5 ECCEZIONI !
+            # MA ATTENZIONE al conflitto durante il crollo - SELL SOVRAPPOSTO AL BUY
             
-            # A T T E N Z I O N E ! salvagente SOLO mentre sale ! altrimenti va in conflitto con il buy durante il crollo - RIFLETTI SU QUESTA FRASE...
+            
+            # NO 3<78 !
+            # NO deviation 78 !
+            # QUALCHE VOLTA ma3-ma39 NON HANNO INCROCIATO allora per la vendita con il DRIBBLING e il DOPPIO PASSO ALLA RONALDO ho risolto con 3<39
+            # il CUSCINO DELL' ANGELO CUSTODE e di SANT' ANTONIO mi proteggono ! (vendita con medie lunghe)
+            
+            
             
             
             # 1 - ro cano VENDE CON UN SALVAGENTE
@@ -640,7 +657,9 @@ class ro_cano_che_ritorna:
                 # il fattore tempo - la dolce attesa - solo con trend ribassista
                 # deviation = ma2_last / last_trade_price
                 # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
-                
+            
+            
+            
             # 4 - ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma25 <
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
@@ -656,6 +675,8 @@ class ro_cano_che_ritorna:
                 # il fattore tempo - la dolce attesa - solo con trend ribassista
                 # deviation = ma2_last / last_trade_price
                 # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
+            
+            
             
             
             # 5 - ro cano VENDE " DOPO x MINUTI " and...
