@@ -921,6 +921,11 @@ class ro_cano_che_ritorna:
 
                     
                     
+                    
+                    
+                    
+                    
+                    
             ################################################################################################################################### 5-12 min
 
             # VENDITA - da 5 a 12 minuti = da 300 a 720 secondi
@@ -929,34 +934,46 @@ class ro_cano_che_ritorna:
 
                 if (
                     ma50_last >= ma50_2_min_ago
-                    and (ma3_prev > ma39_prev and ma3_last < ma39_last)
-                    and deviation_sell < -0.25
+                    and (ma3_prev > ma78_prev and ma3_last < ma78_last)
+                    and deviation_sell < -0.41
                     # deviation_sell = ma3_last/last_trade_price
                 ):
-                    sell = "SELL (5-12 min) con ma50 > incrocio 3-39 and deviation_sell < -0.25 - riga 892"
+                    sell = "SELL (5-12 min) con ma50 > incrocio 3-78 and deviation_sell < -0.41 - riga 892"
                     action = "sell"
 
                     
-                    
                 elif (
                     ma50_last >= ma50_2_min_ago
-                    and (ma3_prev > ma11_prev and ma3_last < ma11_last)
-                    and deviation_sell > 0.25
-                    and deviation_sell < 0.50
+                    and (ma5_prev > ma100_prev and ma5_last < ma100_last)
+                    and deviation_sell < -0.25
+                    
                     # deviation_sell = ma3_last/last_trade_price
                 ):
-                    sell = "SELL (5-12 min) con ma50 > incrocio 3-11 and deviation_sell 0.25 - 0.50 -DRIBBLING ALLA RONALDO - riga 904"
+                    sell = "SELL (5-12 min) con ma50 > incrocio 5-100 (cuscino di sant' antonio) and deviation_sell < -0.25 - riga 1048"
+                    action = "sell"
+                
+                
+                
+                
+                elif (
+                    ma50_last >= ma50_2_min_ago
+                    and ma3_last < ma13_last
+                    and deviation_sell > 0.25
+                    and deviation_sell < 0.60
+                    # deviation_sell = ma3_last/last_trade_price
+                ):
+                    sell = "SELL (5-12 min) con ma50 >  3<13 and deviation_sell 0.25 - 0.60 -DRIBBLING ALLA RONALDO - riga 904"
                     action = "sell"
 
                     
                 elif (
                     ma50_last >= ma50_2_min_ago
                     and (ma3_prev > ma25_prev and ma3_last < ma25_last)
-                    and deviation_sell > 0.51
+                    and deviation_sell > 0.61
                     and deviation_sell < 1.20
                     # deviation_sell = ma3_last/last_trade_price
                 ):
-                    sell = "SELL (5-12 min) con ma50 > incrocio 3-25 and deviation_sell 0.51 - 1.20 - riga 915"
+                    sell = "SELL (5-12 min) con ma50 > incrocio 3-25 and deviation_sell 0.61 - 1.20 - riga 915"
                     action = "sell"
 
                     
@@ -986,12 +1003,16 @@ class ro_cano_che_ritorna:
                     
                 elif (
                     ma50_last < ma50_2_min_ago
-                    and (ma3_prev > ma33_prev and ma3_last < ma33_last)
-                    and deviation_sell < -0.27
+                    and ma3_last < ma78_last
+                    and deviation_sell < -0.30
                 ):
                     sell = "SELL (5-12 min) con ma50 < incrocio 3-33 and deviation_sell < -0.27 - riga 948"
                     action = "sell"
 
+                    
+                    
+                    
+                    
                 # ------------------------------------------------------------------------------- eventuale guadagno con crollo
 
                 elif (
@@ -1002,6 +1023,13 @@ class ro_cano_che_ritorna:
                     sell = "SELL eventuale guadagno con crollo (5-12 min) con ma50 <  incrocio 3-23 - riga 958"
                     action = "sell"
  
+
+
+
+
+
+
+
             ############################################################################################################################    12-24 min
 
             # VENDITA - da 12 a 24 minuti = da 720 a 1440 secondi
