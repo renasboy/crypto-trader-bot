@@ -1087,7 +1087,7 @@ class ro_cano_che_ritorna:
 
                 if (
                     ma50_last >= ma50_2_min_ago
-                    and deviation_ma39 < -0.17
+                    and deviation_ma39 < -0.29
                     
                     # ATTENZIONE "and (ma3_prev > ma39_prev and ma3_last < ma39_last)" NON HA INCROCIATO
                     # and deviation_sell < -0.30
