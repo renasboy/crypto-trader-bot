@@ -227,10 +227,12 @@ class ro_cano_che_ritorna:
         percentage = 0
 
         ############################################################################################ APRE E CHIUDE LA GABBIA
-
+        
+        # SE LA GABBIA E' TROPPO APERTA IMPAZZISCE NEI MOVIMENTI LATERALI ! entrano in azione buy 2-3-4-5 che sono piu' reattivi del BUY 1 !
+        
         # APRE E CHIUDE GABBIA
 
-        if deviation_1_gabbia > -0.39 or deviation_buy_crollo_1 < -1.90:
+        if deviation_1_gabbia > -0.29 or deviation_buy_crollo_1 < -1.90:
 
             # deviation_1_gabbia = ma8_last / ma50_last
             # deviation_buy_crollo_1 = ma8_last / ma78_last
@@ -266,7 +268,7 @@ class ro_cano_che_ritorna:
             # buy spazio-tempo ma con aggiunta di ma 13-25
             # MACD sempre con aggiunta di ma 13-25 (come studio) (III° cane)
             
-            
+            # TOGLIER TUTTI GLI INCROCI AL BUY ! se 13 > 100 NON INCROCERA' MAI ! INCROCIO 13-100 DIVENTA 13>100 !
             
             ######################################################################################################## COMPRA sessione 1
 
@@ -276,14 +278,14 @@ class ro_cano_che_ritorna:
 
                 if (
                     ma13_last > ma78_last
-                    and (ma72_prev < ma100_prev and ma72_last > ma100_last)
+                    and ma72_last > ma100_last
                     and ma2_last > ma2_2_min_ago
                     and ma5_last > ma5_2_min_ago
                     and deviation_ma3_sopra_ma7 > 0.05
                     and deviation_ma13_sopra_ma25 > 0.07
                 ):
 
-                    buy = "BUY 1 con incrocio 72-100 riga 278"
+                    buy = "BUY 1 con 72>100 riga 288"
                     action = "buy"
                     percentage = 50
                     
@@ -294,23 +296,23 @@ class ro_cano_che_ritorna:
 
                 elif (
                     deviation_buy1 > 0.56
-                    and (ma13_prev < ma39_prev and ma13_last > ma39_last)
+                    and ma13_last > ma39_last
                     and ma78_last > ma78_2_min_ago
                     and price > price_2_min_ago
                     and ma2_last > ma2_2_min_ago
                     and ma4_last > ma4_2_min_ago
                 ):
-                    buy = "BUY 1 con incrocio 13-39 and DEVIATION BUY 1 ALTA e ma78 > riga 295"
+                    buy = "BUY 1 con 13>39 and DEVIATION BUY 1 ALTA e ma78 > riga 295"
                     action = "buy"
                     percentage = 50
 
                     # deviation_buy1 = ma13_last/ma39_last
                
-                ####################################################################  BUY 1 con incrocio 13-100 and ma78_last > ma78_4_min_ago  "MI PIACE!"
+                ####################################################################  BUY 1 con incrocio 13-100 and ma78_last >= ma78_4_min_ago  "MI PIACE!"
 
                 elif (
-                    (ma13_prev < ma100_prev and ma13_last > ma100_last)
-                    and ma78_last > ma78_4_min_ago
+                    ma13_last > ma100_last
+                    and ma78_last >= ma78_4_min_ago
                     and price > price_2_min_ago
                     and ma2_last > ma2_2_min_ago
                     and ma3_last > ma3_3_min_ago
@@ -319,7 +321,7 @@ class ro_cano_che_ritorna:
                     and deviation_ma13_sopra_ma25 > 0.06
                     # quando 13-100 si incrociano price ma2 e ma4 sono gia' in ribasso
                 ):
-                    buy = "BUY 1 con incrocio 13 - 100 e ma78> 4 min ago riga 314"
+                    buy = "BUY 1 con 13>100 e ma78> 4 min ago riga 314"
                     action = "buy"
                     percentage = 50
                 ################################################################################################################## compra durante il ribasso
@@ -327,7 +329,7 @@ class ro_cano_che_ritorna:
                 
                 elif (
                     ma78_last < ma78_2_min_ago
-                    and (ma39_prev < ma78_prev and ma39_last > ma78_last)
+                    and ma39_last > ma78_last
                     and deviation_buy1 > 0.14
                     and price > price_2_min_ago
                     and ma2_last > ma2_2_min_ago
@@ -335,7 +337,7 @@ class ro_cano_che_ritorna:
                     and deviation_ma3_sopra_ma7 > 0.05
                 ):
 
-                    buy = "BUY 1 con incrocio 39-78 and DEVIATION BUY 1 BASSA e ma78 < riga 330"
+                    buy = "BUY 1 con ma78< and 39>78 and DEVIATION BUY 1 BASSA riga 330"
                     action = "buy"
                     percentage = 50
                     # deviation_buy1 = ma13_last/ma39_last
@@ -343,7 +345,7 @@ class ro_cano_che_ritorna:
                 
                 elif (
                     ma78_last < ma78_2_min_ago
-                    and (ma39_prev < ma78_prev and ma39_last > ma78_last)
+                    and ma39_last > ma78_last
                     and price > price_2_min_ago
                     and ma2_last > ma2_2_min_ago
                     and ma4_last > ma4_2_min_ago
@@ -351,7 +353,7 @@ class ro_cano_che_ritorna:
                     and deviation_ma13_sopra_ma25 > 0.05
                 ):
 
-                    buy = "se ma78 < - BUY 1 con incrocio 39-78 - riga 346"
+                    buy = "se ma78< - BUY 1 con incrocio 39>78 - riga 346"
                     action = "buy"
                     percentage = 50
                     # deviation_buy1 = ma13_last/ma39_last
@@ -362,6 +364,7 @@ class ro_cano_che_ritorna:
                 ##############################################################################################################################
 
                 # entriamo nell' area dell' ipervenduto, compa !
+                # QUI LASCIO GLI INCROCI !
               
                 # BUY  PRIMO MODO DURANTE IL CROLLO
 
@@ -377,7 +380,7 @@ class ro_cano_che_ritorna:
                 
                 
               
-                # BUY SECONDO MODO - DURANTE IL CROLLO - e' entrato in azione ! ( e mi e' sembrato buono !)
+                # BUY SECONDO MODO - DURANTE IL CROLLO - questa condizione e' entrata in azione ! ( e mi e' sembrata ben fatta !)
                 
                 elif (
                     ma2_last > ma2_2_min_ago
@@ -437,7 +440,7 @@ class ro_cano_che_ritorna:
                     deviation_buy2 > 0.13
                     and deviation_buy_ma3_sopra_ma13 > 0.10
                     and deviation_ma7_sopra_ma40 > 0.14
-                    and (ma4_prev < ma9_prev and ma4_last > ma9_last)
+                    and ma4_last > ma9_last
                     and ma2_last > ma2_2_min_ago
                     and ma3_last > ma40_last
                     and ma4_last > ma78_last
@@ -456,7 +459,7 @@ class ro_cano_che_ritorna:
                     and deviation_buy3 > 0.11
                     and ma3_last > ma13_last
                     and deviation_ma7_sopra_ma40 > 0.10
-                    and (ma4_prev < ma9_prev and ma4_last > ma9_last)
+                    and ma4_last > ma9_last
                     and ma4_last > ma50_last
                 ):
                     buy = "BUY 3A con ma78 > riga 432"
@@ -465,7 +468,7 @@ class ro_cano_che_ritorna:
             
                 elif (    
                     deviation_buy3 > 0.02
-                    and (ma39_prev < ma78_prev and ma39_last > ma78_last)
+                    and ma39_last > ma78_last
                     and deviation_buy3 > 0.02
                     and delta_buy3_incrocio_ma3_ma8 > 0.06
                     and deviation_ma4_sopra_ma30 > 0.17
@@ -507,7 +510,7 @@ class ro_cano_che_ritorna:
                     and deviation_buy3 > 0.11
                     and ma3_last > ma13_last
                     and deviation_ma7_sopra_ma40 > 0.11
-                    and (ma4_prev < ma9_prev and ma4_last > ma9_last)
+                    and ma4_last > ma9_last
                     and ma4_last > ma50_last
                 ):
                     buy = "BUY 4A con ma 78 > riga 482"
@@ -555,7 +558,7 @@ class ro_cano_che_ritorna:
                     and deviation_buy3 > 0.13
                     and ma3_last > ma13_last
                     and deviation_ma7_sopra_ma40 > 0.13
-                    and (ma4_prev < ma9_prev and ma4_last > ma9_last)
+                    and ma4_last > ma9_last
                     and ma4_last > ma50_last
                 ):
                     buy = "BUY 5A riga 530"
