@@ -585,6 +585,7 @@ class ro_cano_che_ritorna:
                     and ma4_last > ma9_last
                     and ma4_last > ma50_last
                     
+                    and ma6_last > ma15_last
                     and ma7_last > ma25_last
                 ):
                     buy = "BUY 5A riga 530"
