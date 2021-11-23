@@ -721,11 +721,11 @@ class ro_cano_che_ritorna:
             # 5 - ro cano VENDE " DOPO x MINUTI " and...
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
-                and ma11_last < ma39_last
-                and deviation_sell < -0.35
+                and ma8_last < ma50_last
+                and deviation_sell < -0.49
             ):
 
-                sell = "SELL TEMPO e se ma11 < ma39 and deviation_sell < -0.35 - riga 642"
+                sell = "SELL TEMPO e se ma8 < ma50 and deviation_sell < -0.49 - riga 642"
                 action = "sell"
                 # ma13 troppo lenta !
                 # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
