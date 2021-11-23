@@ -282,7 +282,13 @@ class ro_cano_che_ritorna:
                     and ma2_last > ma2_2_min_ago
                     and ma5_last > ma5_2_min_ago
                     and deviation_ma3_sopra_ma7 > 0.05
-                    and deviation_ma13_sopra_ma25 > 0.07
+                    
+                    and ma6_last > ma100_last
+                    and ma6_last > ma39_last
+                    and ma6_last > ma13_last
+                    # ho visto anche il BUY durante il crollo
+                    
+                    #and deviation_ma13_sopra_ma25 > 0.07 TOLTA PROVVISORIAMENTE vedi BUY ore 10:47 del23 nov 2021
                 ):
 
                     buy = "BUY 1 con 72>100 riga 288"
@@ -461,10 +467,14 @@ class ro_cano_che_ritorna:
                     and deviation_ma7_sopra_ma40 > 0.10
                     and ma4_last > ma9_last
                     and ma4_last > ma50_last
+                    
+                    and ma7_last > ma25_last
                 ):
                     buy = "BUY 3A con ma78 > riga 432"
                     action = "buy"
                     percentage = 50
+            
+            
             
                 elif (    
                     deviation_buy3 > 0.02
@@ -475,6 +485,8 @@ class ro_cano_che_ritorna:
                     and ma3_last > ma8_last
                     and ma3_last > ma78_last
                     and ma4_last > ma4_2_min_ago
+                    
+                    and ma7_last > ma25_last
                 ):
                     buy = "BUY 3B RIVOLUZIONARIO se ma39 > ma78- riga 446"
                     action = "buy"
@@ -492,6 +504,8 @@ class ro_cano_che_ritorna:
                     and ma3_last > ma8_last
                     and ma3_last > ma78_last
                     and ma4_last > ma4_2_min_ago
+                    
+                    and ma7_last > ma25_last
                 ):
                     buy = "BUY 3C RIVOLUZIONARIO se ma78 < - riga 462"
                     action = "buy"
@@ -512,10 +526,15 @@ class ro_cano_che_ritorna:
                     and deviation_ma7_sopra_ma40 > 0.11
                     and ma4_last > ma9_last
                     and ma4_last > ma50_last
+                    
+                    and ma7_last > ma25_last
                 ):
                     buy = "BUY 4A con ma 78 > riga 482"
                     action = "buy"
                     percentage = 50
+                    
+                    
+                    
                     
                 elif (
                     ma78_last >= ma78_2_min_ago
@@ -525,13 +544,16 @@ class ro_cano_che_ritorna:
                     and ma3_last > ma8_last
                     and ma3_last > ma78_last
                     and ma4_last > ma4_2_min_ago
+                    
+                    and ma7_last > ma25_last
                 ):
                     buy = "BUY 4B RIVOLUZIONARIO con ma78 > - riga 495"
                     action = "buy"
                     percentage = 50
                     # deviation_buy3 = ma4_last/ma30_last
 
-                    
+                
+                
                 elif (
                     ma78_last < ma78_2_min_ago
                     and deviation_buy3 > 0.04
@@ -540,6 +562,8 @@ class ro_cano_che_ritorna:
                     and ma3_last > ma8_last
                     and ma3_last > ma78_last
                     and ma4_last > ma4_2_min_ago
+                    
+                    and ma7_last > ma25_last
                 ):
                     buy = "BUY 4C RIVOLUZIONARIO con ma78 < - riga 510"
                     action = "buy"
@@ -560,10 +584,14 @@ class ro_cano_che_ritorna:
                     and deviation_ma7_sopra_ma40 > 0.13
                     and ma4_last > ma9_last
                     and ma4_last > ma50_last
+                    
+                    and ma7_last > ma25_last
                 ):
                     buy = "BUY 5A riga 530"
                     action = "buy"
                     percentage = 50
+                
+                
                 
                 elif (
                     ma78_last >= ma78_2_min_ago
@@ -573,11 +601,15 @@ class ro_cano_che_ritorna:
                     and ma3_last > ma8_last
                     and ma3_last > ma78_last
                     and ma4_last > ma4_2_min_ago
+                    
+                    and ma7_last > ma25_last
                 ):
                     buy = "BUY 5B RIVOLUZIONARIO con ma78 > - riga 543"
                     action = "buy"
                     percentage = 50
                     # deviation_buy3 = ma4_last/ma30_last
+                
+                
                 
                 
                 elif (
@@ -588,6 +620,8 @@ class ro_cano_che_ritorna:
                     and ma3_last > ma8_last
                     and ma3_last > ma78_last
                     and ma4_last > ma4_2_min_ago
+                    
+                    and ma7_last > ma25_last
                 ):
                     buy = "BUY 5C RIVOLUZIONARIO con ma78 < - riga 558"
                     action = "buy"
@@ -637,7 +671,7 @@ class ro_cano_che_ritorna:
             
             # 2 - ro cano VENDE DURANTE UN CROLLO IMPROVVISO !
             elif (
-                deviation < -0.70
+                deviation < -0.60
             ):
                 sell = "SELL CROLLO IMPROVVISO - riga 596"
                 action = "sell"
@@ -705,7 +739,7 @@ class ro_cano_che_ritorna:
             #   0 -  3
             #   3 -  5 -
             #   5 - 12 -
-            #  12 - 24 -
+            #  12 - 24 - ---------------------------------------------qui comincia un nuovo paradigma
             #  24 - 40 -
             #  40   60
             #  60   90
@@ -1087,13 +1121,16 @@ class ro_cano_che_ritorna:
 
                 if (
                     ma50_last >= ma50_2_min_ago
-                    and deviation_ma39 < -0.29
+                    and (ma3_prev > ma72_prev and ma3_last < ma72_last) 
+                    and deviation_sell < -0.65
                     
-                    # ATTENZIONE "and (ma3_prev > ma39_prev and ma3_last < ma39_last)" NON HA INCROCIATO
+                    #and deviation_ma39 < -0.29 vendeva troppo presto
+                    
+                    # ATTENZIONE "and (ma3_prev > ma39_prev and ma3_last < ma39_last)" con ma39 NON HA INCROCIATO
                     # and deviation_sell < -0.30
                     # deviation_sell = ma3_last/last_trade_price
                 ):
-                    sell = "SELL (12-24 min) con ma50 > and deviation_ma39 < -0.17 (NO incrocio 3-39) - riga 975"
+                    sell = "SELL (12-24 min) con ma50 > and incrocio 3-72 and deviation sell -0.65 e vaffanculo ! - riga 975"
                     action = "sell"
                 
                 
@@ -1227,8 +1264,10 @@ class ro_cano_che_ritorna:
 
                 if (
                     ma50_last > ma50_2_min_ago
-                    and deviation_ma39 < -0.16 or (deviation_sell < 0.10 and ma3_last < ma39_last)
                     
+                    and (ma3_prev > ma78_prev and ma3_last < ma78_last) and and deviation_sell < -0.65
+                    
+                    #and deviation_ma39 < -0.16 or (deviation_sell < 0.10 and ma3_last < ma39_last)
                     #and (ma3_prev > ma39_prev and ma3_last < ma39_last)
                     #and deviation_sell < -0.26
                     # deviation_sell = ma3_last/last_trade_price
