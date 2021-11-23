@@ -231,7 +231,7 @@ class ro_cano_quando_esce:
 
             # fascia di non vendita
             if action == "sell":
-                # da 1 a 30 minuti  non vendere se il guadagno e' < 0,08% o se la perdita e' < -1,20 %
+                # da 1 a 30 minuti  non vendere se il guadagno e' < 0,08% o se la perdita e' > -1,20 %
                 if (
                     seconds_since_last_trade >= 60
                     and seconds_since_last_trade < 60 * 30
@@ -244,10 +244,10 @@ class ro_cano_quando_esce:
                     # perdita < -1.20%
                     elif (
                         price - last_trade_price <= 0
-                        and last_trade_price - price < last_trade_price * 0.0120
+                        and last_trade_price - price > last_trade_price * 0.0120
                     ):
                         action = None
-                # da 30 a 45 minuti  non vendere se il guadagno e' < 0,15% o se la perdita e' < -1,20 %
+                # da 30 a 45 minuti  non vendere se il guadagno e' < 0,15% o se la perdita e' > -1,20 %
                 elif (
                     seconds_since_last_trade >= 60 * 30
                     and seconds_since_last_trade < 60 * 45
@@ -261,10 +261,10 @@ class ro_cano_quando_esce:
                     # perdita < -1.20%
                     elif (
                         price - last_trade_price <= 0
-                        and last_trade_price - price < last_trade_price * 0.0120
+                        and last_trade_price - price > last_trade_price * 0.0120
                     ):
                         action = None
-                # da 45 a 60 minuti  non vendere se il guadagno e' < 0,30% o se la perdita e' < -1,20 %
+                # da 45 a 60 minuti  non vendere se il guadagno e' < 0,30% o se la perdita e' > -1,20 %
                 elif seconds_since_last_trade >= 60 * 45:
                     # ma anche solo se guadagno > 0.30%
                     if (
@@ -275,7 +275,7 @@ class ro_cano_quando_esce:
                     # perdita < -1.20%
                     elif (
                         price - last_trade_price <= 0
-                        and last_trade_price - price < last_trade_price * 0.0120
+                        and last_trade_price - price > last_trade_price * 0.0120
                     ):
                         action = None
 
