@@ -740,7 +740,7 @@ class ro_cano_che_ritorna:
             #   0 -  3
             #   3 -  5 -
             #   5 - 12 -
-            #  12 - 24 - ---------------------------------------------qui comincia un nuovo paradigma
+            #  12 - 24 - ---------------------------------------------qui comincia un nuovo paradigma !
             #  24 - 40 -
             #  40   60
             #  60   90
@@ -899,12 +899,12 @@ class ro_cano_che_ritorna:
                 
                 elif (
                     ma50_last >= ma50_2_min_ago
-                    and ma3_last < ma13_last
+                    and ma3_last < ma9_last
                     and deviation_sell > 0.25
                     and deviation_sell < 0.60
                     # deviation_sell = ma3_last/last_trade_price
                 ):
-                    sell = "SELL (3-5 min) con ma50 > and 3<13 (no incrocio 3-13) and deviation_sell 0.25 - 0.60 - DRIBBLING ALLA RONALDO - riga 821"
+                    sell = "SELL (3-5 min) con ma50 > and 3<10(no incrocio 3-9) and deviation_sell 0.25 - 0.60 - DRIBBLING ALLA RONALDO - riga 821"
                     action = "sell"
                 
                 
@@ -1022,12 +1022,12 @@ class ro_cano_che_ritorna:
                 
                 elif (
                     ma50_last >= ma50_2_min_ago
-                    and ma3_last < ma13_last
+                    and ma3_last < ma9_last
                     and deviation_sell > 0.25
                     and deviation_sell < 0.60
                     # deviation_sell = ma3_last/last_trade_price
                 ):
-                    sell = "SELL (5-12 min) con ma50 >  3<13 and deviation_sell 0.25 - 0.60 -DRIBBLING ALLA RONALDO - riga 904"
+                    sell = "SELL (5-12 min) con ma50 >  3<9 and deviation_sell 0.25 - 0.60 - DRIBBLING ALLA RONALDO - riga 904"
                     action = "sell"
 
                     
@@ -1148,12 +1148,12 @@ class ro_cano_che_ritorna:
                 
                 elif (
                     ma50_last >= ma50_2_min_ago
-                    and ma3_last < ma13_last
+                    and ma3_last < ma11_last
                     and deviation_sell > 0.25
                     and deviation_sell < 0.60
                     # deviation_sell = ma3_last/last_trade_price
                 ):
-                    sell = "SELL (12-24 min) con ma50 > 3-13 (NO INCROCIO 3-13) and deviation_sell 0.25 - 0.60 - DRIBBLING ALLA RONALDO fino a +0.50 - riga 987"
+                    sell = "SELL (12-24 min) con ma50 > 3-11 (NO INCROCIO 3-11) and deviation_sell 0.25 - 0.60 - DOPPIO PASSO ALLA RONALDO fino a +0.50 - riga 987"
                     action = "sell"
 
                     
@@ -1298,7 +1298,7 @@ class ro_cano_che_ritorna:
                     and deviation_sell < 0.60
                     # deviation_sell = ma3_last/last_trade_price
                 ):
-                    sell = "SELL (24-60 min) con ma50 > 3<13 (no incrocio 3-13) and deviation_sell 0.30 - 0.60 DRIBBLING ALLA RONALDO - riga 1057"
+                    sell = "SELL (24-60 min) con ma50 > 3<13 (no incrocio 3-13) and deviation_sell 0.30 - 0.60 ELASTICO ALLA RONALDO - riga 1057"
                     action = "sell"
 
                     
@@ -1416,7 +1416,7 @@ class ro_cano_che_ritorna:
                     and deviation_sell > 0.35
                     and deviation_sell < 0.69
                 ):
-                    sell = "SELL dopo 60 min con ma50 > incrocio 3-13 and deviation_sell 0.35 - 0.69 DOPPIO PASSO ALLA RONALDO (fatto con ma15 invece che con ma13) - riga 1132"
+                    sell = "SELL dopo 60 min con ma50 > incrocio 3-13 and deviation_sell 0.35 - 0.69 RABONA ALLA RONALDO (fatto con ma15 invece che con ma13) - riga 1132"
                     action = "sell"
 
                 
@@ -1511,7 +1511,7 @@ class ro_cano_che_ritorna:
                     and deviation_sell > 0.35
                     and deviation_sell < 0.69
                 ):
-                    sell = "SELL dopo 90 min con ma50 > con 3-15 (NO INCROCIO) and deviation_sell 0.35 - 0.69 DOPPIO PASSO ALLA RONALDO (fatto con ma15 invece che con ma13) - riga 1202"
+                    sell = "SELL dopo 90 min con ma50 > con 3-15 (NO INCROCIO) and deviation_sell 0.35 - 0.69 RABONA ALLA RONALDO (fatto con ma15 invece che con ma13) - riga 1202"
                     action = "sell"
 
                     
