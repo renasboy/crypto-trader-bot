@@ -779,7 +779,7 @@ class ro_cano_che_ritorna:
                     and deviation_sell < -0.23
                     # deviation_sell = ma3_last/last_trade_price
                 ):
-                    sell = "SELL (0-3 min) con ma50 > incrocio 3-39 and deviation_sell < -0.23 - riga 696"
+                    sell = "SELL (0-3 min) con ma50 > and incrocio 3-39 and deviation_sell < -0.23 - riga 696"
                     action = "sell"
                 
                 
@@ -790,7 +790,7 @@ class ro_cano_che_ritorna:
                     and deviation_sell < 0.60
                     # deviation_sell = ma3_last/last_trade_price
                 ):
-                    sell = "SELL (0-3 min) con ma50 > incrocio 3-33 and deviation_sell 0.25 - 0.60 - riga 707"
+                    sell = "SELL (0-3 min) con ma50 > and incrocio 3-33 and deviation_sell 0.25 - 0.60 - riga 707"
                     action = "sell"
 
                     
@@ -800,7 +800,7 @@ class ro_cano_che_ritorna:
                     and deviation_sell > 0.61
                     and deviation_sell < 0.79
                 ):
-                    sell = "SELL (0-3 min) con ma50 > incrocio 3-33 and deviation_sell 0.61 - 0.79 - riga 717"
+                    sell = "SELL (0-3 min) con ma50 > and incrocio 3-33 and deviation_sell 0.61 - 0.79 - riga 717"
                     action = "sell"
                 
                 
@@ -812,7 +812,7 @@ class ro_cano_che_ritorna:
                     and deviation_sell < 1.20
                 ):
 
-                    sell = "SELL (0-3 min) con ma50 > incrocio 3-13 and deviation_sell 0.80 - 1.20 - riga 729"
+                    sell = "SELL (0-3 min) con ma50 > and incrocio 3-13 and deviation_sell 0.80 - 1.20 - riga 729"
                     action = "sell"
                 
                 
@@ -823,7 +823,7 @@ class ro_cano_che_ritorna:
                     and deviation_sell > 1.21
                 ):
 
-                    sell = "SELL (0-3 min) con ma50 > incrocio 3-11 and deviation_sell > 1.21 - riga 740"
+                    sell = "SELL (0-3 min) con ma50 > and incrocio 3-11 and deviation_sell > 1.21 (che sarebbe come IL DRIBBLING ALLA RONALDO !)- riga 740"
                     action = "sell"
                 
                 
@@ -845,7 +845,7 @@ class ro_cano_che_ritorna:
                     and (ma3_prev > ma33_prev and ma3_last < ma33_last)
                     and deviation_sell < -0.23
                 ):
-                    sell = "SELL (0-3 min) con ma50 < incrocio 3-33 and deviation_sell -0.23 - riga 762"
+                    sell = "SELL (0-3 min) con ma50 < and incrocio 3-33 and deviation_sell -0.23 - riga 762"
                     action = "sell"
 
                 # ---------------------------------------------------------------------------------------------------------------------- crollo
@@ -855,7 +855,7 @@ class ro_cano_che_ritorna:
                     and (ma3_prev > ma16_prev and ma3_last < ma16_last)
                     and deviation_sell < -0.50
                 ):
-                    sell = "SELL CROLLO (0-3 min) con ma50 < incrocio 3-16 and deviation_sell < -0.50 - riga 772"
+                    sell = "SELL CROLLO (0-3 min) con ma50 < and incrocio 3-16 and deviation_sell < -0.50 - riga 772"
                     action = "sell"
 
                     # AGGIUNTA PER SICUREZZA SE CONTINUA A PRECIPITARE
@@ -866,7 +866,7 @@ class ro_cano_che_ritorna:
                     and (ma3_prev > ma23_prev and ma3_last < ma23_last)
                     and deviation_sell > 0.23
                 ):
-                    sell = "SELL CROLLO (0-3 min) con ma50 < incrocio 3-23 and deviation_sell > 0.23 - riga 783"
+                    sell = "SELL CROLLO (0-3 min) con ma50 < and incrocio 3-23 and deviation_sell > 0.23 - riga 783"
                     action = "sell"
                 
                 
@@ -876,7 +876,7 @@ class ro_cano_che_ritorna:
                     and deviation_sell > 0.60
                 ):
 
-                    sell = "SELL CROLLO (0-3 min) con ma50 < incrocio 3-8 and deviation_sell > 0.60 - riga 793"
+                    sell = "SELL CROLLO (0-3 min) con ma50 < and incrocio 3-8 and deviation_sell > 0.60 - riga 793"
                     action = "sell"
             
             
@@ -893,7 +893,7 @@ class ro_cano_che_ritorna:
                     and deviation_sell < -0.24
                     # deviation_sell = ma3_last/last_trade_price
                 ):
-                    sell = "SELL (3-5 min) con ma50 > incrocio 3-39 and deviation_sell < -0.24 - riga 810"
+                    sell = "SELL (3-5 min) con ma50 > and incrocio 3-39 and deviation_sell < -0.24 - riga 810"
                     action = "sell"
                 
                 
@@ -901,20 +901,20 @@ class ro_cano_che_ritorna:
                     ma50_last >= ma50_2_min_ago
                     and ma3_last < ma9_last
                     and deviation_sell > 0.25
-                    and deviation_sell < 0.60
+                    and deviation_sell < 0.90
                     # deviation_sell = ma3_last/last_trade_price
                 ):
-                    sell = "SELL (3-5 min) con ma50 > and 3<10(no incrocio 3-9) and deviation_sell 0.25 - 0.60 - DRIBBLING ALLA RONALDO - riga 821"
+                    sell = "SELL (3-5 min) con ma50 > and 3<9 (no incrocio 3-9) and deviation_sell 0.25 - 0.90 - DRIBBLING ALLA RONALDO - riga 821"
                     action = "sell"
                 
                 
                 elif (
                     ma50_last >= ma50_2_min_ago
                     and (ma3_prev > ma25_prev and ma3_last < ma25_last)
-                    and deviation_sell > 0.61
+                    and deviation_sell > 0.91
                     and deviation_sell < 1.20
                 ):
-                    sell = "SELL (3-5 min) con ma50 > incrocio 3-25 and deviation_sell 0.61 - 1.20 - riga 831"
+                    sell = "SELL (3-5 min) con ma50 > and incrocio 3-25 and deviation_sell 0.91 - 1.20 - riga 831"
                     action = "sell"
 
                     
@@ -924,7 +924,7 @@ class ro_cano_che_ritorna:
                     and (ma3_prev > ma25_prev and ma3_last < ma25_last)
                     and deviation_sell > 1.21
                 ):
-                    sell = "SELL (3-5 min) con ma50 > incrocio 3-25 and deviation_sell > 1.21 - riga 841"
+                    sell = "SELL (3-5 min) con ma50 > and incrocio 3-25 and deviation_sell > 1.21 - riga 841"
                     action = "sell"
                 
                 
@@ -948,7 +948,7 @@ class ro_cano_che_ritorna:
                     and (ma3_prev > ma33_prev and ma3_last < ma33_last)
                     and deviation_sell < -0.23
                 ):
-                    sell = "SELL (3-5 min) con ma50 < incrocio 3-33 and deviation_sell < -0.23 - riga 865"
+                    sell = "SELL (3-5 min) con ma50 < and incrocio 3-33 and deviation_sell < -0.23 - riga 865"
                     action = "sell"
 
                 # ---------------------------------------------------------------------------------------------------------------------- guadagno con crollo
@@ -957,7 +957,7 @@ class ro_cano_che_ritorna:
                     and (ma3_prev > ma23_prev and ma3_last < ma23_last)
                     and deviation_sell > 0.23
                 ):
-                    sell = "SELL GUADAGNO CON CROLLO (3-5 min) con ma50 < incrocio 3-23 and deviation_sell > 0.23 - riga 875"
+                    sell = "SELL GUADAGNO CON CROLLO (3-5 min) con ma50 < and incrocio 3-23 and deviation_sell > 0.23 - riga 875"
                     action = "sell"
                     
                     
@@ -998,7 +998,7 @@ class ro_cano_che_ritorna:
                     and deviation_sell < -0.41
                     # deviation_sell = ma3_last/last_trade_price
                 ):
-                    sell = "SELL (5-12 min) con ma50 > incrocio 3-78 and deviation_sell < -0.41 - riga 892"
+                    sell = "SELL (5-12 min) con ma50 > and incrocio 3-78 and deviation_sell < -0.41 - riga 892"
                     action = "sell"
                 
                 # guardare la stella (guardare da una stella!)
@@ -1014,7 +1014,7 @@ class ro_cano_che_ritorna:
                     
                     # deviation_sell = ma3_last/last_trade_price
                 ):
-                    sell = "SELL (5-12 min) con ma50 > incrocio 5-100 (cuscino di sant' antonio) and deviation_sell < -0.25 - riga 1048"
+                    sell = "SELL (5-12 min) con ma50 > and incrocio 5-100 (cuscino di sant' antonio) and deviation_sell < -0.25 - riga 1048"
                     action = "sell"
                 
                 
@@ -1024,21 +1024,21 @@ class ro_cano_che_ritorna:
                     ma50_last >= ma50_2_min_ago
                     and ma3_last < ma9_last
                     and deviation_sell > 0.25
-                    and deviation_sell < 0.60
+                    and deviation_sell < 0.90
                     # deviation_sell = ma3_last/last_trade_price
                 ):
-                    sell = "SELL (5-12 min) con ma50 >  3<9 and deviation_sell 0.25 - 0.60 - DRIBBLING ALLA RONALDO - riga 904"
+                    sell = "SELL (5-12 min) con ma50 >  3<9 and deviation_sell 0.25 - 0.90 - DRIBBLING ALLA RONALDO - riga 904"
                     action = "sell"
 
                     
                 elif (
                     ma50_last >= ma50_2_min_ago
                     and (ma3_prev > ma25_prev and ma3_last < ma25_last)
-                    and deviation_sell > 0.61
+                    and deviation_sell > 0.91
                     and deviation_sell < 1.20
                     # deviation_sell = ma3_last/last_trade_price
                 ):
-                    sell = "SELL (5-12 min) con ma50 > incrocio 3-25 and deviation_sell 0.61 - 1.20 - riga 915"
+                    sell = "SELL (5-12 min) con ma50 > and incrocio 3-25 and deviation_sell 0.91 - 1.20 - riga 915"
                     action = "sell"
 
                     
@@ -1048,7 +1048,7 @@ class ro_cano_che_ritorna:
                     and (ma3_prev > ma25_prev and ma3_last < ma25_last)
                     and deviation_sell > 1.21
                 ):
-                    sell = "SELL (5-12 min) con ma50 > incrocio 3-25 and deviation_sell > 1.21 - riga 925"
+                    sell = "SELL (5-12 min) con ma50 > and incrocio 3-25 and deviation_sell > 1.21 - riga 925"
                     action = "sell"
 
                 ###########################################################################     trend in ribasso
@@ -1088,7 +1088,7 @@ class ro_cano_che_ritorna:
                     and (ma3_prev > ma23_prev and ma3_last < ma23_last)
                     and deviation_sell > 0.23
                 ):
-                    sell = "SELL guadagno con crollo (5-12 min) con ma50 <  incrocio 3-23 - riga 958"
+                    sell = "SELL guadagno con crollo (5-12 min) con ma50 < and incrocio 3-23 - riga 958"
                     action = "sell"
                     
                     
@@ -1150,10 +1150,10 @@ class ro_cano_che_ritorna:
                     ma50_last >= ma50_2_min_ago
                     and ma3_last < ma11_last
                     and deviation_sell > 0.25
-                    and deviation_sell < 0.60
+                    and deviation_sell < 0.90
                     # deviation_sell = ma3_last/last_trade_price
                 ):
-                    sell = "SELL (12-24 min) con ma50 > 3-11 (NO INCROCIO 3-11) and deviation_sell 0.25 - 0.60 - DOPPIO PASSO ALLA RONALDO fino a +0.50 - riga 987"
+                    sell = "SELL (12-24 min) con ma50 > and 3-11 (NO INCROCIO 3-11) and deviation_sell 0.25 - 0.90 - DOPPIO PASSO ALLA RONALDO fino a +0.50 - riga 987"
                     action = "sell"
 
                     
@@ -1161,11 +1161,11 @@ class ro_cano_che_ritorna:
                 elif (
                     ma50_last >= ma50_2_min_ago
                     and (ma3_prev > ma25_prev and ma3_last < ma25_last)
-                    and deviation_sell > 0.61
+                    and deviation_sell > 0.91
                     and deviation_sell < 1.20
                     # deviation_sell = ma3_last/last_trade_price
                 ):
-                    sell = "SELL (12-24 min) con ma50 > incrocio 3-25 and deviation_sell 0.61 - 1.20 - riga 999"
+                    sell = "SELL (12-24 min) con ma50 > and incrocio 3-25 and deviation_sell 0.91 - 1.20 - riga 999"
                     action = "sell"
                 
                 
@@ -1175,7 +1175,7 @@ class ro_cano_che_ritorna:
                     and (ma3_prev > ma39_prev and ma3_last < ma39_last)
                     and deviation_sell > 1.21
                 ):
-                    sell = "SELL (12-24 min) con ma50 > incrocio 3-39 and deviation_sell > 1.21 - riga 1007"
+                    sell = "SELL (12-24 min) con ma50 > and incrocio 3-39 and deviation_sell > 1.21 - riga 1007"
                     action = "sell"
                 
                 ##########################################################################################
@@ -1247,7 +1247,7 @@ class ro_cano_che_ritorna:
                     and (ma3_prev > ma18_prev and ma3_last < ma18_last)
                     and deviation_sell > 0.23
                 ):
-                    sell = "SELL eventuale guadagno con crollo (12-24 min) con ma50 < incrocio 3 - 18 and deviation_sell > 0.23 - riga 1028"
+                    sell = "SELL eventuale guadagno con crollo (12-24 min) con ma50 < and incrocio 3 - 18 and deviation_sell > 0.23 - riga 1028"
                     action = "sell"    
                 
                     
@@ -1297,21 +1297,21 @@ class ro_cano_che_ritorna:
                     ma50_last > ma50_2_min_ago
                     and ma3_last < ma13_last
                     and deviation_sell > 0.30
-                    and deviation_sell < 0.60
+                    and deviation_sell < 0.90
                     # deviation_sell = ma3_last/last_trade_price
                 ):
-                    sell = "SELL (24-60 min) con ma50 > 3<13 (no incrocio 3-13) and deviation_sell 0.30 - 0.60 ELASTICO ALLA RONALDO - riga 1057"
+                    sell = "SELL (24-60 min) con ma50 > and 3<13 (no incrocio 3-13) and deviation_sell 0.30 - 0.90 ELASTICO ALLA RONALDO - riga 1057"
                     action = "sell"
 
                     
                 elif (
                     ma50_last > ma50_2_min_ago
                     and (ma3_prev > ma39_prev and ma3_last < ma39_last)
-                    and deviation_sell > 0.61
+                    and deviation_sell > 0.91
                     and deviation_sell < 1.20
                     # deviation_sell = ma3_last/last_trade_price
                 ):
-                    sell = "SELL (24-60 min) con ma50 > incrocio 3-39 and deviation_sell 0.61 - 1.20 - riga 1069"
+                    sell = "SELL (24-60 min) con ma50 > and incrocio 3-39 and deviation_sell 0.91 - 1.20 - riga 1069"
                     action = "sell"
                 
                 
@@ -1324,7 +1324,7 @@ class ro_cano_che_ritorna:
                     and (ma3_prev > ma45_prev and ma3_last < ma45_last)
                     and deviation_sell > 1.21
                 ):
-                    sell = "SELL (24-60 min) con ma50 > incrocio 3-45 and deviation_sell > 1.21 - riga 1078"
+                    sell = "SELL (24-60 min) con ma50 > and incrocio 3-45 and deviation_sell > 1.21 - riga 1078"
                     action = "sell"
                     
                     
@@ -1418,9 +1418,9 @@ class ro_cano_che_ritorna:
                     ma50_last > ma50_2_min_ago
                     and (ma3_prev > ma15_prev and ma3_last < ma15_last)
                     and deviation_sell > 0.35
-                    and deviation_sell < 0.69
+                    and deviation_sell < 0.80
                 ):
-                    sell = "SELL dopo 60 min con ma50 > incrocio 3-13 and deviation_sell 0.35 - 0.69 RABONA ALLA RONALDO (fatto con ma15 invece che con ma13) - riga 1132"
+                    sell = "SELL dopo 60 min con ma50 > and incrocio 3-13 and deviation_sell 0.35 - 0.80 RABONA ALLA RONALDO (fatto con ma15 invece che con ma13) - riga 1132"
                     action = "sell"
 
                 
@@ -1429,11 +1429,11 @@ class ro_cano_che_ritorna:
                 elif (
                     ma50_last > ma50_2_min_ago
                     and (ma3_prev > ma39_prev and ma3_last < ma39_last)
-                    and deviation_sell > 0.70
+                    and deviation_sell > 0.81
                     and deviation_sell < 1.49
                 ):
 
-                    sell = "SELL da 60 a 90 min con ma50 > incrocio 3-39 and deviation_sell 0.70 - 1.49 - riga 1143"
+                    sell = "SELL da 60 a 90 min con ma50 > and incrocio 3-39 and deviation_sell 0.81 - 1.49 - riga 1143"
                     action = "sell"
 
                     # ma ricordati che in diverse occasioni 3-48 mi ha evitato la ricompra e la rivendita conseguente con perdita !
