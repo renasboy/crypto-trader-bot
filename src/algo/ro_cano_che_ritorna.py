@@ -1115,7 +1115,7 @@ class ro_cano_che_ritorna:
 
             ############################################################################################################################    12-21 min
 
-            # VENDITA - da 12 a 21 minuti = da 720 a 1440 secondi
+            # VENDITA - da 12 a 21 minuti = da 720 a 1260 secondi
 
             elif seconds_since_last_trade > 720 and seconds_since_last_trade <= 1260:
 
