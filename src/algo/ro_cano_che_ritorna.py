@@ -1218,6 +1218,8 @@ class ro_cano_che_ritorna:
                 elif (
                     ma50_last < ma50_2_min_ago
                     and (ma5_prev > ma100_prev and ma5_last < ma100_last)
+                    and deviation_sell < -0.27
+                    # viva sant' antonio !
                    # incrocio 5-100 no 5<100 altrimenti vende durante il crollo !
                 ):
                     sell = "SELL (12-24 min) con ma50 < and CUSCINO DI SANT' ANTONIO - riga 1279"
@@ -1360,6 +1362,8 @@ class ro_cano_che_ritorna:
                 elif (
                     ma50_last < ma50_2_min_ago
                     and (ma5_prev > ma100_prev and ma5_last < ma100_last)
+                    and deviation_sell < -0.27
+                    # viva sant' antonio !
                     # NON INCROCERANNO MAI DURANTE IL CROLLO !
                     # non toccare ! INCROCIO 3-100 CUSCINO DI SANT' ANTONIO !
                 ):
