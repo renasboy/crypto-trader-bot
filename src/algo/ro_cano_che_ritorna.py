@@ -689,7 +689,7 @@ class ro_cano_che_ritorna:
                 and ma25_last > ma25_2_min_ago
             ):
 
-                sell = "SELL DOLCE ATTESA con ma25 > - riga 692"
+                sell = "SELL DOLCE ATTESA con ma25> and deviation < -0.45 - riga 692"
                 action = "sell"
 
                 # il fattore tempo - la dolce attesa - solo con trend ribassista
@@ -703,11 +703,11 @@ class ro_cano_che_ritorna:
                 seconds_since_last_trade > max_hold_time_in_seconds
                 and ma25_last < ma25_2_min_ago
                 
-                and deviation < -0.41
+                and deviation < -0.40
                 and ma2_last < last_trade_price
             ):
 
-                sell = "SELL DOLCE ATTESA con ma25 < - riga 710"
+                sell = "SELL DOLCE ATTESA con ma25< and deviation < -0.40 - riga 710"
                 action = "sell"
 
                 # il fattore tempo - la dolce attesa - solo con trend ribassista
