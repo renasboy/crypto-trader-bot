@@ -1203,12 +1203,12 @@ class ro_cano_che_ritorna:
                     
                 elif (
                     ma50_last < ma50_2_min_ago
-                    and (ma3_prev > ma78_prev and ma3_last < ma78_last) and deviation_sell < -0.37
+                    and (ma3_prev > ma78_prev and ma3_last < ma78_last) and deviation_sell < -0.45
                     
                     # ALLORA METTO incrocio 3-78 e deviation < 0.10 e vaffanculo ! ma solo se ma50< !
                
                 ):
-                    sell = "SELL (12-21 min) con ma50 < and incrocio 3-78 and deviation_sell < -0.37 - riga 1211"
+                    sell = "SELL (12-21 min) con ma50 < and incrocio 3-78 and deviation_sell < -0.45 - riga 1211"
                     action = "sell"
                 
                 
