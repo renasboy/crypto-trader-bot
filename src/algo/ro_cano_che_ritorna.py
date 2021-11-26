@@ -1588,7 +1588,7 @@ class ro_cano_che_ritorna:
         # compa, compa caro !
         # ave comparo meo !
 
-        # AGAINST THE WIND - Bob Seger & Jason Aldean
+        
         
         
         # vai compaaaaaaaaaaaa
