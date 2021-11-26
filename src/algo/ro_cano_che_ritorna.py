@@ -135,6 +135,12 @@ class ro_cano_che_ritorna:
         # formula DEVIATION_buy1 per la compra 1
         deviation_buy1 = (ma13_last / ma39_last - 1) * 100 if ma39_last else 0
         self.algo_helper.info("deviation_buy1: {}".format(deviation_buy1))
+        
+        
+        # formula DEVIATION_bellissima
+        deviation_bellissima = (ma6_last / ma30_last - 1) * 100 if ma30_last else 0
+        self.algo_helper.info("deviation_bellissima: {}".format(deviation_bellissima))
+        
 
         # formula DEVIATION_buy2 per la compra 2
         deviation_buy2 = (ma8_last / ma50_last - 1) * 100 if ma50_last else 0
@@ -169,19 +175,14 @@ class ro_cano_che_ritorna:
         # formula DEVIATION_buy_crollo_2 per comprare a una certa distanza da ma13
         deviation_buy_crollo_2 = (ma3_last / ma13_last - 1) * 100 if ma13_last else 0
         self.algo_helper.info("deviation_buy_crollo_2: {}".format(deviation_buy_crollo_2))
-            
         
-
+      
         ############################################################################################################################
 
         # formula DEVIATION_buy_ma3_sopra_ma13 per comprare a una certa distanza da ma13
         deviation_buy_ma3_sopra_ma13 = (ma3_last / ma13_last - 1) * 100 if ma13_last else 0
         self.algo_helper.info("deviation_buy_ma3_sopra_ma13: {}".format(deviation_buy_ma3_sopra_ma13))    
         
-        
-            
-        
-
         # formula DEVIATION_ma4_sopra_ma30
         deviation_ma4_sopra_ma30 = (ma4_last / ma30_last - 1) * 100 if ma30_last else 0
         self.algo_helper.info("deviation_ma4_sopra_ma30: {}".format(deviation_ma4_sopra_ma30))
@@ -193,35 +194,30 @@ class ro_cano_che_ritorna:
         # formula deviation_ma7_sopra_ma40
         deviation_ma7_sopra_ma40 = (ma7_last / ma40_last - 1) * 100 if ma40_last else 0
         self.algo_helper.info("deviation_ma7_sopra_ma40: {}".format(deviation_ma7_sopra_ma40))
-            
         
-
         # formula deviation_ma3_sopra_ma7 (solo per il BUY1)
         deviation_ma3_sopra_ma7 = (ma3_last / ma7_last - 1) * 100 if ma7_last else 0
         self.algo_helper.info("deviation_ma3_sopra_ma7: {}".format(deviation_ma3_sopra_ma7))
-            
-        
-
+      
         ######################################################################################## deviation per vendere
 
         # formula DEVIATION_sell
         deviation_sell = (ma4_last / last_trade_price - 1) * 100 if last_trade_price else 0
         self.algo_helper.info("deviation_sell: {}".format(deviation_sell))    
-        
-        
-
+       
         # formula DEVIATION_sell_ma78
         deviation_sell_ma78 = (ma4_last / ma78_last - 1) * 100 if ma78_last else 0
         self.algo_helper.info("deviation_sell_ma78: {}".format(deviation_sell_ma78))
         
-        
-        
+      
         # formula deviation_ma39 per vendere un po' piu' giu' di ma39
         deviation_ma39 = (ma4_last / ma39_last - 1) * 100 if ma39_last else 0
         self.algo_helper.info("deviation_ma39: {}".format(deviation_ma39))
         
         
         
+        ###########################################################################################
+      
         # DEFAULT ACTION DICE DI NON FARE NIENTE (= None, NON TOCCARE )
         action = None
         percentage = 0
@@ -262,13 +258,14 @@ class ro_cano_che_ritorna:
             percentage = self.buy_percentage
             # NON TOCCARE  ! DI DEFAULT E' IL 2%
             
-            
-            
+        
             # in futuro
             # buy spazio-tempo ma con aggiunta di ma 13-25
             # MACD sempre con aggiunta di ma 13-25 (come studio) (III° cane)
             
             # TOGLIER TUTTI GLI INCROCI AL BUY ! se 13 > 100 NON INCROCERA' MAI ! INCROCIO 13-100 DIVENTA 13>100 !
+            
+            
             
             ######################################################################################################## COMPRA sessione 1
 
@@ -288,10 +285,13 @@ class ro_cano_che_ritorna:
                     and ma6_last > ma13_last
                     # ho visto anche il BUY durante il crollo
                     
-                    #and deviation_ma13_sopra_ma25 > 0.07 TOLTA PROVVISORIAMENTE vedi BUY ore 10:47 del 23 nov 2021
+                    and deviation_bellissima > 0.163
+                    # deviation_bellissima = ma6_last / ma30_last
+                    
+                    # and deviation_ma13_sopra_ma25 > 0.07 TOLTA PROVVISORIAMENTE vedi BUY ore 10:47 del 23 nov 2021 (E' ARRIVATA MOLTO TARDI)
                 ):
 
-                    buy = "BUY 1 con 72>100 riga 294"
+                    buy = "BUY 1 con 72>100 and deviation_bellissima >0.163 riga 294"
                     action = "buy"
                     percentage = 50
                     
@@ -533,9 +533,7 @@ class ro_cano_che_ritorna:
                     action = "buy"
                     percentage = 50
                     
-                    
-                    
-                    
+                   
                 elif (
                     ma78_last >= ma78_2_min_ago
                     and deviation_buy3 > 0.02
@@ -547,7 +545,7 @@ class ro_cano_che_ritorna:
                     
                     and ma7_last > ma25_last
                 ):
-                    buy = "BUY 4B RIVOLUZIONARIO con ma78 > - riga 550"
+                    buy = "BUY 4B RIVOLUZIONARIO con ma78 > - riga 548"
                     action = "buy"
                     percentage = 50
                     # deviation_buy3 = ma4_last/ma30_last
@@ -565,13 +563,11 @@ class ro_cano_che_ritorna:
                     
                     and ma7_last > ma25_last
                 ):
-                    buy = "BUY 4C RIVOLUZIONARIO con ma78 < - riga 568"
+                    buy = "BUY 4C RIVOLUZIONARIO con ma78 < - riga 566"
                     action = "buy"
                     percentage = 50
                     # deviation_buy3 = ma4_last/ma30_last
-                    
-                    
-
+          
         ############################################################################################################  compra sessione 5 in poi
                                                                                                                    #  piu' alto il BUY - "effetti laterali"
              
@@ -587,8 +583,15 @@ class ro_cano_che_ritorna:
                     
                     and ma6_last > ma15_last
                     and ma7_last > ma25_last
+                    
+                    and deviation_bellissima > 0.163
+                    
+                    # deviation_bellissima = 6/30
+                    # questa deviation serve a spezzare la catena dei buy - effetti laterali.
+                    # se e' arrivato il buy 5 e' molto probabile che il trend sia consolidato 
+                    # e, a questo punto, non importa se compra con un + 0.10 piu' in alto. NON FA UNA GRANDE DIFFERENZA !
                 ):
-                    buy = "BUY 5A riga 591"
+                    buy = "BUY 5A con ma78 > and deviation_bellissima > 0.163 (PER SPEZZARE LA CATENA -effetti laterali) riga 594"
                     action = "buy"
                     percentage = 50
                 
@@ -604,15 +607,14 @@ class ro_cano_che_ritorna:
                     and ma4_last > ma4_2_min_ago
                     
                     and ma7_last > ma25_last
+                    and deviation_bellissima > 0.163
                 ):
-                    buy = "BUY 5B RIVOLUZIONARIO con ma78 > - riga 608"
+                    buy = "BUY 5B RIVOLUZIONARIO con ma78 > and deviation_bellissima > 0.163 (PER SPEZZARE LA CATENA -effetti laterali) - riga 612"
                     action = "buy"
                     percentage = 50
                     # deviation_buy3 = ma4_last/ma30_last
                 
-                
-                
-                
+             
                 elif (
                     ma78_last < ma78_2_min_ago
                     and deviation_buy3 > 0.04
@@ -623,8 +625,9 @@ class ro_cano_che_ritorna:
                     and ma4_last > ma4_2_min_ago
                     
                     and ma7_last > ma25_last
+                    and deviation_bellissima > 0.163
                 ):
-                    buy = "BUY 5C RIVOLUZIONARIO con ma78 < - riga 627"
+                    buy = "BUY 5C RIVOLUZIONARIO con ma78 < and deviation_bellissima > 0.163 - riga 630"
                     action = "buy"
                     percentage = 50
                     # deviation_buy3 = ma4_last/ma30_last
@@ -645,9 +648,7 @@ class ro_cano_che_ritorna:
             # E' 100 DI DEFAULT !
             #####################################################################################################################
             
-            
-            
-
+           
             # VENDITA CON QUESTE 5 ECCEZIONI !
             # MA ATTENZIONE al conflitto durante il crollo - SELL SOVRAPPOSTO AL BUY
             
@@ -656,7 +657,6 @@ class ro_cano_che_ritorna:
             # NO deviation 78 !
             # QUALCHE VOLTA ma3-ma39 NON HANNO INCROCIATO allora per la vendita con il DRIBBLING e il DOPPIO PASSO ALLA RONALDO ho risolto con 3<39
             # il CUSCINO DELL' ANGELO CUSTODE e di SANT' ANTONIO mi proteggono ! (vendita con medie lunghe)
-            
             
            
             # 1 - ro cano VENDE CON UN SALVAGENTE
