@@ -318,7 +318,7 @@ class ro_cano_che_ritorna:
 
                 elif (
                     ma13_last > ma100_last
-                    and ma78_last >= ma78_4_min_ago
+                    and ma72_last >= ma72_2_min_ago
                     and price > price_2_min_ago
                     and ma2_last > ma2_2_min_ago
                     and ma3_last > ma3_3_min_ago
@@ -327,12 +327,12 @@ class ro_cano_che_ritorna:
                     and deviation_ma13_sopra_ma25 > 0.06
                     # quando 13-100 si incrociano price ma2 e ma4 sono gia' in ribasso
                 ):
-                    buy = "BUY 1 con 13>100 e ma78> 4 min ago riga 330"
+                    buy = "BUY 1 con 13>100 e ma72> 2 min ago (!) riga 330"
                     action = "buy"
                     percentage = 50
+                    
                 ################################################################################################################## compra durante il ribasso
-                
-                
+              
                 elif (
                     ma78_last < ma78_2_min_ago
                     and ma39_last > ma78_last
