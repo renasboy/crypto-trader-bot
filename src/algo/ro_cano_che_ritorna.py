@@ -1137,10 +1137,10 @@ class ro_cano_che_ritorna:
                 elif (
                     ma50_last >= ma50_2_min_ago
                     and (ma3_prev > ma100_prev and ma3_last < ma100_last)
-                    and deviation_sell < -0.30
+                    and deviation_sell < -0.33
                     # viva sant' antonio !
                 ):
-                    sell = "SELL (12-21 min) con ma50 > and incrocio 3-100 cuscino di sant' antonio and deviation_sell < 0.30 - riga 1143"
+                    sell = "SELL (12-21 min) con ma50 > and incrocio 3-100 cuscino di sant' antonio and deviation_sell < 0.33 - riga 1143"
                     action = "sell"
                 
                 
