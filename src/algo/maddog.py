@@ -75,7 +75,7 @@ class maddog:
         ma39_2_min_ago = self.algo_helper.ma_minutes_ago(39, 2)
         ma39_3_min_ago = self.algo_helper.ma_minutes_ago(39, 3)
         ma50_2_min_ago = self.algo_helper.ma_minutes_ago(50, 2)
-        
+        ma72_2_min_ago = self.algo_helper.ma_minutes_ago(72, 2)
         ma78_2_min_ago = self.algo_helper.ma_minutes_ago(78, 2)
         ma78_4_min_ago = self.algo_helper.ma_minutes_ago(78, 4)
         ma78_5_min_ago = self.algo_helper.ma_minutes_ago(78, 5)
@@ -314,11 +314,11 @@ class maddog:
 
                     # deviation_buy1 = ma13_last/ma39_last
                
-                ####################################################################  BUY 1 con incrocio 13-100 and ma78_last >= ma78_4_min_ago  "MI PIACE!"
+                ####################################################################  BUY 1 con incrocio 13-100 and ma78_last >= ma72_2_min_ago  "MI PIACE!"
 
                 elif (
                     ma13_last > ma100_last
-                    and ma78_last >= ma78_4_min_ago
+                    and ma72_last >= ma72_2_min_ago
                     and price > price_2_min_ago
                     and ma2_last > ma2_2_min_ago
                     and ma3_last > ma3_3_min_ago
@@ -327,12 +327,12 @@ class maddog:
                     and deviation_ma13_sopra_ma25 > 0.06
                     # quando 13-100 si incrociano price ma2 e ma4 sono gia' in ribasso
                 ):
-                    buy = "BUY 1 con 13>100 e ma78> 4 min ago riga 330"
+                    buy = "BUY 1 con 13>100 e ma72>= 2 min ago riga 330"
                     action = "buy"
                     percentage = 50
+                    
                 ################################################################################################################## compra durante il ribasso
-                
-                
+               
                 elif (
                     ma78_last < ma78_2_min_ago
                     and ma39_last > ma78_last
