@@ -75,7 +75,7 @@ class ro_cano_che_ritorna:
         ma39_2_min_ago = self.algo_helper.ma_minutes_ago(39, 2)
         ma39_3_min_ago = self.algo_helper.ma_minutes_ago(39, 3)
         ma50_2_min_ago = self.algo_helper.ma_minutes_ago(50, 2)
-        
+        ma72_2_min_ago = self.algo_helper.ma_minutes_ago(72, 2)
         ma78_2_min_ago = self.algo_helper.ma_minutes_ago(78, 2)
         ma78_4_min_ago = self.algo_helper.ma_minutes_ago(78, 4)
         ma78_5_min_ago = self.algo_helper.ma_minutes_ago(78, 5)
