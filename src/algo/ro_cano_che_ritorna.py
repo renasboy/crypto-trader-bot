@@ -703,8 +703,7 @@ class ro_cano_che_ritorna:
             # la deviation_sell_ma78 mi protegge - (ogni volta che c'e' stato un rialzo la ma3 non l' ha mai toccata !)
             # e l' incrocio 3 -28 e' fondamentale per evitare punto rosso sovrapposto al punto verde ! e mi protegge anche questa quando ma78 sta molto in alto !
                 # VENDITA - da 0 a 3 minuti = da 0 a 180 secondi
-
-            if seconds_since_last_trade > 0 and seconds_since_last_trade <= 180:
+                if seconds_since_last_trade > 0 and seconds_since_last_trade <= 180:
 
                 # con ma50 >
 
@@ -1588,6 +1587,7 @@ class ro_cano_che_ritorna:
                 # ma13 troppo lenta !
                 # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
                 
+            
             
             
             
