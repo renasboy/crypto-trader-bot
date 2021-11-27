@@ -707,7 +707,7 @@ class ro_cano_che_ritorna:
 
                     # con ma50 >
                     #
-                    if (
+                if (
                     ma50_last >= ma50_2_min_ago
                     and (ma3_prev > ma39_prev and ma3_last < ma39_last)
                     and deviation_sell < -0.23
