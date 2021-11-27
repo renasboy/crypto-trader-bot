@@ -728,11 +728,24 @@ class ro_cano_che_ritorna:
                 action = "sell"
                 # ma13 troppo lenta !
                 # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
-
+                
+                
+            ###################################################################################################################################    
+            ###################################################################################################################################
+            ###################################################################################################################################
+            
+            # VENDITA CON SESSIONE 1-2-3
+            # LA PRIMA VENDITA DOPO IL BUY 1 E' COMPLETAMENTE DIVERSA E PIU' REATTIVA !
+            # LA SECONDA VENDITA PIU' TRANQUILLA
+            # DALLA TERZA COME LA PRIMA ( SI CHIUDE IL DISCORSO EVITANDO SE POSSIBILE UNA GRANDE PERDITA)
+            
+            ###################################################################################################################################    
+            ###################################################################################################################################
             ###################################################################################################################################
             
             
-
+            
+            
             # VENDITA - con fasce di tempo ! c'e' vita su marte !
 
             #    minuti
@@ -762,11 +775,11 @@ class ro_cano_che_ritorna:
             ####################################################################################################################### 0 - 3 min
             
             
-            
+            elif self.session == 1:
+                
             # la deviation_sell_ma78 mi protegge - (ogni volta che c'e' stato un rialzo la ma3 non l' ha mai toccata !)
             # e l' incrocio 3 -28 e' fondamentale per evitare punto rosso sovrapposto al punto verde ! e mi protegge anche questa quando ma78 sta molto in alto !
-
-            # VENDITA - da 0 a 3 minuti = da 0 a 180 secondi
+                # VENDITA - da 0 a 3 minuti = da 0 a 180 secondi
 
             if seconds_since_last_trade > 0 and seconds_since_last_trade <= 180:
 
@@ -1564,6 +1577,7 @@ class ro_cano_che_ritorna:
                 # qui non ho messo il crollo perche' dopo 40 min o gia' ha venduto o e' gia' risalita
                 # ATTENZIONE non c'e' l' incrocio 3-33 ( PERCHE' NON HANNO INCROCIATO !) ma 3 < 33 !
                 # cuscino dell' angelo custode
+            
                 
                 
                 ######################################################################################################################################################
