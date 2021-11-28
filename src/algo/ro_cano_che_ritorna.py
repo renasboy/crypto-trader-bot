@@ -704,7 +704,7 @@ class ro_cano_che_ritorna:
             ####################################################################################################################### sessione 1 ( 0 - 3 min )
             
             
-            elif self.session == 1:
+            if self.session == 1:
                 
             # la deviation_sell_ma78 mi protegge - (ogni volta che c'e' stato un rialzo la ma3 non l' ha mai toccata !)
             # e l' incrocio 3 -28 e' fondamentale per evitare punto rosso sovrapposto al punto verde ! e mi protegge anche questa quando ma78 sta molto in alto !
