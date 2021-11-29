@@ -3390,15 +3390,6 @@ class ro_cano_che_ritorna:
                 
                 
                 
-                ######################################################################################################################################################
-
-           
-            
-            
-            
-            
-            ############### FINE ALGORITH ###################
-
         self.algo_helper.info("action {}".format(action))
         self.algo_helper.info("percentage {}".format(percentage))
 
@@ -3411,12 +3402,18 @@ class ro_cano_che_ritorna:
 
         return action, percentage
 
-        # compa, compa caro !
-        # ave comparo meo !
-
-        
-        
-        
-        # vai compaaaaaaaaaaaa
 
 
+
+                                    ############### FINE ALGORITH ###################
+     
+            
+            
+            
+            
+        
+        
+    
+
+
+                                 # AVE COMPA CARO
