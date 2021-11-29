@@ -704,12 +704,12 @@ class ro_cano_che_ritorna:
             ####################################################################################################################### sessione 1 ( 0 - 3 min )
             
             
-            elif self.session == 1:
+        if self.session == 1:
                 
             # la deviation_sell_ma78 mi protegge - (ogni volta che c'e' stato un rialzo la ma3 non l' ha mai toccata !)
             # e l' incrocio 3 -28 e' fondamentale per evitare punto rosso sovrapposto al punto verde ! e mi protegge anche questa quando ma78 sta molto in alto !
                 # VENDITA - da 0 a 3 minuti = da 0 a 180 secondi
-                if seconds_since_last_trade > 0 and seconds_since_last_trade <= 180:
+            if seconds_since_last_trade > 0 and seconds_since_last_trade <= 180:
 
                     # con ma50 >
                     
@@ -1524,7 +1524,7 @@ class ro_cano_che_ritorna:
             
            
             # 1 - ro cano VENDE CON UN SALVAGENTE
-            if deviation_ma39 < -0.25 and ma50_last > ma50_2_min_ago:
+            elif deviation_ma39 < -0.25 and ma50_last > ma50_2_min_ago:
              
                 sell = "sessione 1 SELL SALVAGENTE 3-39 con ma50 < riga 1529"
                 action = "sell"
@@ -1602,14 +1602,14 @@ class ro_cano_che_ritorna:
             ###########################################################################################################################   
             ########################################################################################################################### SESSIONE 2
             
-            elif self.session == 2:
+        elif self.session == 2:
             
             ############################################################################################################# sessione 2 ( 0-3 min )
             if seconds_since_last_trade > 0 and seconds_since_last_trade <= 180:
 
                 # con ma50 >
 
-                if (
+                if(
                     ma50_last >= ma50_2_min_ago
                     and (ma3_prev > ma39_prev and ma3_last < ma39_last)
                     and deviation_sell < -0.23
@@ -2498,7 +2498,7 @@ class ro_cano_che_ritorna:
             ###################################################################################################      
             ################################################################################################### SESSIONE 3-4-x
             
-            elif self.session > 2:
+        elif self.session > 2:
             
             
             ################################################################################################### sessione 3-4-x ( 0-3 min )
@@ -3418,6 +3418,5 @@ class ro_cano_che_ritorna:
         
         
         # vai compaaaaaaaaaaaa
-
 
 
