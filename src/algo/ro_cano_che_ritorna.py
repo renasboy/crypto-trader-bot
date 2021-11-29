@@ -3063,14 +3063,14 @@ class ro_cano_che_ritorna:
                     
                     
                     
-                    
-                    
-                    
-
+                
                 ##################################################################### con trend discendente
                 elif (
                     ma50_last < ma50_2_min_ago
-                    and deviation_ma39 < -0.15 or (deviation_sell < 0.10 and ma3_last < ma39_last)
+                    and deviation_ma39 < -0.18 or deviation_sell < -0.20
+                    
+                    # and deviation_ma39 < -0.15 or (deviation_sell < 0.10 and ma3_last < ma39_last)
+                    # nella sessione 3-4-x ti puoi rilassare una ndecchia.
                     
                     #and (ma3_prev > ma33_prev and ma3_last < ma33_last)
                     
