@@ -1270,25 +1270,25 @@ class ro_cano_che_ritorna:
                     
                     
                     
-                    
-                    
-                    
-
+                  
                 ##################################################################### con trend discendente
                 elif (
                     ma50_last < ma50_2_min_ago
-                    and deviation_ma39 < -0.15 or (deviation_sell < 0.10 and ma3_last < ma39_last)
-                    
+                    and deviation_ma39 < -0.18 or deviation_sell < 0.20 
+                    #and deviation_ma39 < -0.15 or (deviation_sell < 0.10 and ma3_last < ma39_last)
+                    # mario, sii un po' piu' paziente. 
+                    # quel deviation_sell < 0.10 era troppo restrittivo anche se sono passati 29 minuti.
+                   
                     #and (ma3_prev > ma33_prev and ma3_last < ma33_last)
                     
                 ):
-                    sell = "sessione 1 SELL (21-60 min) con ma50 < and deviation_ma39 < -0.15 or (deviation_sell < 0.10 and ma3_last < ma39_last) - riga 1285"
+                    sell = "sessione 1 SELL (21-60 min) con ma50 < and deviation_ma39 < -0.18 or deviation_sell < 0.20 - riga 1285"
                     action = "sell"
                 
                 
-                
-                
-                
+              
+            
+            
                 elif (
                     ma50_last < ma50_2_min_ago
                     and (ma3_prev > ma78_prev and ma3_last < ma78_last) and deviation_sell < -0.37
@@ -2167,18 +2167,18 @@ class ro_cano_che_ritorna:
                     
                     
                     
-                    
-                    
-
+               
                 ##################################################################### con trend discendente
                 elif (
                     ma50_last < ma50_2_min_ago
-                    and deviation_ma39 < -0.15 or (deviation_sell < 0.10 and ma3_last < ma39_last)
+                    and deviation_ma39 < -0.19 or deviation_sell < 0.20
+                    # NELLA SESSIONE 2 TI PUOI RILASSARE UN POCHINO !
                     
+                    #and deviation_ma39 < -0.15 or (deviation_sell < 0.10 and ma3_last < ma39_last) 
                     #and (ma3_prev > ma33_prev and ma3_last < ma33_last)
                     
                 ):
-                    sell = "sessione 2 SELL (21-60 min) con ma50 < and deviation_ma39 < -0.15 or (deviation_sell < 0.10 and ma3_last < ma39_last) - riga 2181"
+                    sell = "sessione 2 SELL (21-60 min) con ma50 < and deviation_ma39 < -0.19 or deviation_sell < 0.20 - riga 2181"
                     action = "sell"
                 
                 
