@@ -3388,6 +3388,27 @@ class ro_cano_che_ritorna:
                 
                 
                 
+                
+                
+        self.algo_helper.info("action {}".format(action))
+        self.algo_helper.info("percentage {}".format(percentage))
+
+        if action == "sell":
+            self.algo_helper.info("action sell {}".format(sell))
+            self.session += 1
+
+        elif action == "buy":
+            self.algo_helper.info("action buy {}".format(buy))
+
+        return action, percentage
+        
+        
+        
+        
+        """
+        
+        # questo e' il finale del cano quando esce (che ha le sessioni di vendita)
+        
         self.algo_helper.info("session {}: action {}".format(self.session, action))
         self.algo_helper.info("percentage {}".format(percentage))
 
@@ -3402,26 +3423,9 @@ class ro_cano_che_ritorna:
                 self.algo_helper.info("session {}: restart segment".format(self.session))
 
         return action, percentage
-    
-        
-        # prima era cosi' ma dopo il buy 1 uscivano solo i punti rossi
-        
+   
         """
-        CANO CHE RITORNA (dopo ho messo le sessioni che invece c'erano al cano quando esce)
         
-        self.algo_helper.info("action {}".format(action))
-        self.algo_helper.info("percentage {}".format(percentage))
-
-        if action == "sell":
-            self.algo_helper.info("action sell {}".format(sell))
-            self.session += 1
-
-        elif action == "buy":
-            self.algo_helper.info("action buy {}".format(buy))
-
-        return action, percentage
-        
-        """
     
        
         
