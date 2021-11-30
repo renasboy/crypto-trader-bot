@@ -3420,6 +3420,8 @@ class ro_cano_che_ritorna:
             self.algo_helper.info("action buy {}".format(buy))
 
         return action, percentage
+        
+        """
     
        
         
