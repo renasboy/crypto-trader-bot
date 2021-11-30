@@ -1274,7 +1274,7 @@ class ro_cano_che_ritorna:
                 ##################################################################### con trend discendente
                 elif (
                     ma50_last < ma50_2_min_ago
-                    and deviation_ma39 < -0.23 or deviation_sell < 0.23
+                    and deviation_ma39 < -0.23 or deviation_sell < -0.23
                     #and deviation_ma39 < -0.15 or (deviation_sell < 0.10 and ma3_last < ma39_last)
                     # mario, sii un po' piu' paziente. 
                     # quel deviation_sell < 0.10 era troppo restrittivo anche se sono passati 29 minuti.
@@ -1282,7 +1282,7 @@ class ro_cano_che_ritorna:
                     #and (ma3_prev > ma33_prev and ma3_last < ma33_last)
                     
                 ):
-                    sell = "sessione 1 SELL (21-60 min) con ma50 < and deviation_ma39 < -0.23 or deviation_sell < 0.23 - riga 1285"
+                    sell = "sessione 1 SELL (21-60 min) con ma50 < and deviation_ma39 < -0.23 or deviation_sell < -0.23 - riga 1285"
                     action = "sell"
                 
                 
@@ -2171,14 +2171,14 @@ class ro_cano_che_ritorna:
                 ##################################################################### con trend discendente
                 elif (
                     ma50_last < ma50_2_min_ago
-                    and deviation_ma39 < -0.23 or deviation_sell < 0.23
+                    and deviation_ma39 < -0.23 or deviation_sell < -0.23
                     # NELLA SESSIONE 2 TI PUOI RILASSARE UN POCHINO !
                     
                     #and deviation_ma39 < -0.15 or (deviation_sell < 0.10 and ma3_last < ma39_last) 
                     #and (ma3_prev > ma33_prev and ma3_last < ma33_last)
                     
                 ):
-                    sell = "sessione 2 SELL (21-60 min) con ma50 < and deviation_ma39 < -0.23 or deviation_sell < 0.23 - riga 2181"
+                    sell = "sessione 2 SELL (21-60 min) con ma50 < and deviation_ma39 < -0.23 or deviation_sell < -0.23 - riga 2181"
                     action = "sell"
                 
                 
