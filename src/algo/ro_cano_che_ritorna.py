@@ -704,16 +704,15 @@ class ro_cano_che_ritorna:
             ####################################################################################################################### sessione 1 ( 0 - 3 min )
             
             
-        if self.session == 1:
+            if self.session == 1:
                 
-            # la deviation_sell_ma78 mi protegge - (ogni volta che c'e' stato un rialzo la ma3 non l' ha mai toccata !)
-            # e l' incrocio 3 -28 e' fondamentale per evitare punto rosso sovrapposto al punto verde ! e mi protegge anche questa quando ma78 sta molto in alto !
+                # la deviation_sell_ma78 mi protegge - (ogni volta che c'e' stato un rialzo la ma3 non l' ha mai toccata !)
+                # e l' incrocio 3 -28 e' fondamentale per evitare punto rosso sovrapposto al punto verde ! e mi protegge anche questa quando ma78 sta molto in alto !
                 # VENDITA - da 0 a 3 minuti = da 0 a 180 secondi
-            if seconds_since_last_trade > 0 and seconds_since_last_trade <= 180:
+                if seconds_since_last_trade > 0 and seconds_since_last_trade <= 180:
 
                     # con ma50 >
-                    
-                if (
+                    if (
                     ma50_last >= ma50_2_min_ago
                     and (ma3_prev > ma39_prev and ma3_last < ma39_last)
                     and deviation_sell < -0.23
@@ -3384,7 +3383,8 @@ class ro_cano_che_ritorna:
                 sell = "session 3-4-x SELL TEMPO e se ma8 < ma50 and deviation_sell < -0.49 - riga 3384"
                 action = "sell"
                 # ma13 troppo lenta !
-                # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)    
+                # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)        
+                
                 
                 
                 
@@ -3438,6 +3438,3 @@ class ro_cano_che_ritorna:
 
 
                                     ############### FINE ALGORITH ###################
-     
-            
-            
