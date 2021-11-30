@@ -3388,20 +3388,26 @@ class ro_cano_che_ritorna:
                 
                 
                 
-                
-                
-        self.algo_helper.info("action {}".format(action))
+        self.algo_helper.info("session {}: action {}".format(self.session, action))
         self.algo_helper.info("percentage {}".format(percentage))
 
         if action == "sell":
-            self.algo_helper.info("action sell {}".format(sell))
-            self.session += 1
+            self.algo_helper.info("session {}: closed session".format(self.session))
+            self.session = self.session + 1
 
-        elif action == "buy":
-            self.algo_helper.info("action buy {}".format(buy))
+
+            if not self.open:
+                self.algo_helper.info("session {}: restart segment".format(self.session))
+                self.session = 0
+                self.algo_helper.info("session {}: restart segment".format(self.session))
 
         return action, percentage
 
+
+
+
+
+        
 
 
 
@@ -3409,11 +3415,3 @@ class ro_cano_che_ritorna:
      
             
             
-            
-            
-        
-        
-    
-
-
-                                 # AVE COMPA CARO
