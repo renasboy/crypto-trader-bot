@@ -1236,14 +1236,14 @@ class ro_cano_che_ritorna:
                 
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and ma3_last < ma16_last
+                        and ma4_last < ma30_last
                         and deviation_sell > 0.30
                         and deviation_sell < 0.90
                         # deviation_sell = ma3_last/last_trade_price
                     ):
-                        sell = "sessione 1 SELL (21-60 min) con ma50 > and 3<16 (no incrocio 3-13) and deviation_sell 0.30 - 0.90 ELASTICO ALLA RONALDO - riga 1244"
+                        sell = "sessione 1 SELL (21-60 min) con ma50 > and 4 < 30 (no incrocio 3-13) and deviation_sell 0.30 - 0.90 ELASTICO ALLA RONALDO - riga 1244"
                         action = "sell"
-
+                        # dopo 26 minuti non c'e' piu' quello scatto in avanti - dribbling- che si verifica nei primi minuti
                     
                     elif (
                         ma50_last > ma50_2_min_ago
