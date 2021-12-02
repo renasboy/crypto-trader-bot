@@ -266,8 +266,8 @@ class ro_cano_che_ritorna:
             
             
             
-            ######################################################################################################## COMPRA sessione 1
-
+            ######################################################################################################## COMPRA sessione 1 
+                                                                                                                   # BUY 1 con "percentage" 25
             if self.session == 1:
 
                 # ------------------------------------------------------------ BUY 1 DURANTE IL RIALZO con INCROCIO CLASSICO 72-100
@@ -290,9 +290,9 @@ class ro_cano_che_ritorna:
                     # and deviation_ma13_sopra_ma25 > 0.07 TOLTA PROVVISORIAMENTE vedi BUY ore 10:47 del 23 nov 2021 (E' ARRIVATA MOLTO TARDI)
                 ):
 
-                    buy = "BUY 1 con 72>100 and deviation_bellissima >0.163 riga 294"
+                    buy = "BUY 1 con 72 > 100 and deviation_bellissima >0.163 riga 294"
                     action = "buy"
-                    percentage = 50
+                    percentage = 25
                     
                     
                     
@@ -309,7 +309,7 @@ class ro_cano_che_ritorna:
                 ):
                     buy = "BUY 1 con 13>39 and DEVIATION BUY 1 ALTA e ma78 > riga 311"
                     action = "buy"
-                    percentage = 50
+                    percentage = 25
 
                     # deviation_buy1 = ma13_last/ma39_last
                
@@ -328,7 +328,7 @@ class ro_cano_che_ritorna:
                 ):
                     buy = "BUY 1 con 13>100 e ma72> 2 min ago (!) riga 330"
                     action = "buy"
-                    percentage = 50
+                    percentage = 25
                     
                 ################################################################################################################## compra durante il ribasso
               
@@ -344,7 +344,7 @@ class ro_cano_che_ritorna:
 
                     buy = "BUY 1 con ma78< and 39>78 and DEVIATION BUY 1 BASSA riga 346"
                     action = "buy"
-                    percentage = 50
+                    percentage = 25
                     # deviation_buy1 = ma13_last/ma39_last
                 
                 
@@ -360,7 +360,7 @@ class ro_cano_che_ritorna:
 
                     buy = "se ma78< - BUY 1 con incrocio 39>78 - riga 362"
                     action = "buy"
-                    percentage = 50
+                    percentage = 25
                     # deviation_buy1 = ma13_last/ma39_last
                     # and deviation_ma13_sopra_ma25 > 0.05 FONDAMENTALE
               
@@ -380,7 +380,7 @@ class ro_cano_che_ritorna:
                 ):
                     buy = "BUY DURANTE IL CROLLO - modo 1 riga 382"
                     action = "buy"
-                    percentage = 50
+                    percentage = 25
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                 
                 
@@ -394,7 +394,7 @@ class ro_cano_che_ritorna:
                 ):
                     buy = "BUY DURANTE IL CROLLO - modo 2 riga 396"
                     action = "buy"
-                    percentage = 50
+                    percentage = 25
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     # deviation_buy_crollo_2 = ma3_last / ma13_last
                     
