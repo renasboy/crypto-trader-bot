@@ -405,10 +405,10 @@ class ro_cano_che_ritorna:
             elif self.session == 2:
                 if (
                     
-                    ma78_last > ma78_4_min_ago
-                    and deviation_buy2 > 0.06
+                    ma78_last > ma78_2_min_ago
+                    and deviation_buy2 > 0.05
                     and deviation_buy_ma3_sopra_ma13 > 0.09
-                    and deviation_ma7_sopra_ma40 > 0.08
+                    and deviation_ma7_sopra_ma40 > 0.075
                     and ma2_last > ma2_2_min_ago
                     and price > price_2_min_ago
                     and ma3_last > ma40_last
@@ -422,7 +422,7 @@ class ro_cano_che_ritorna:
                     
                 elif (
                     
-                    ma78_last < ma78_4_min_ago
+                    ma78_last < ma78_2_min_ago
                     and deviation_buy2 > 0.07
                     and deviation_ma13_sopra_ma25 > 0.06
                     
@@ -1549,15 +1549,15 @@ class ro_cano_che_ritorna:
                 
             
             
-            # 3 - ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma25 >
+            # 3 - ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma13 >
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
                 and ma2_last < last_trade_price
-                and deviation < -0.45
-                and ma25_last > ma25_2_min_ago
+                and deviation < -0.40
+                and ma13_last > ma13_2_min_ago
             ):
 
-                sell = "sessione 1 SELL DOLCE ATTESA con ma25> and deviation < -0.45 - riga 1556"
+                sell = "sessione 1 SELL DOLCE ATTESA con ma13 > and deviation < -0.40 - riga 1556"
                 action = "sell"
 
                 # il fattore tempo - la dolce attesa - solo con trend ribassista
@@ -1566,16 +1566,16 @@ class ro_cano_che_ritorna:
             
             
             
-            # 4 - ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma25 <
+            # 4 - ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma13 <
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
-                and ma25_last < ma25_2_min_ago
+                and ma13_last < ma13_2_min_ago
                 
-                and deviation < -0.40
+                and deviation < -0.35
                 and ma2_last < last_trade_price
             ):
 
-                sell = "sessione 1 SELL DOLCE ATTESA con ma25< and deviation < -0.40 - riga 1574"
+                sell = "sessione 1 SELL DOLCE ATTESA con ma13 < and deviation < -0.35 - riga 1574"
                 action = "sell"
 
                 # il fattore tempo - la dolce attesa - solo con trend ribassista
@@ -2445,15 +2445,15 @@ class ro_cano_che_ritorna:
                 
             
             
-            # 3 - ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma25 >
+            # 3 - ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma13 >
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
                 and ma2_last < last_trade_price
-                and deviation < -0.45
-                and ma25_last > ma25_2_min_ago
+                and deviation < -0.40
+                and ma13_last > ma13_2_min_ago
             ):
 
-                sell = "sessione 2 SELL DOLCE ATTESA con ma25> and deviation < -0.45 - riga 2452"
+                sell = "sessione 2 SELL DOLCE ATTESA con ma13 > and deviation < -0.40 - riga 2452"
                 action = "sell"
 
                 # il fattore tempo - la dolce attesa - solo con trend ribassista
@@ -2462,16 +2462,16 @@ class ro_cano_che_ritorna:
             
             
             
-            # 4 - ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma25 <
+            # 4 - ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma13 <
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
-                and ma25_last < ma25_2_min_ago
+                and ma13_last < ma13_2_min_ago
                 
-                and deviation < -0.40
+                and deviation < -0.35
                 and ma2_last < last_trade_price
             ):
 
-                sell = "sessione 2 SELL DOLCE ATTESA con ma25< and deviation < -0.40 - riga 2470"
+                sell = "sessione 2 SELL DOLCE ATTESA con ma13 < and deviation < -0.35 - riga 2470"
                 action = "sell"
 
                 # il fattore tempo - la dolce attesa - solo con trend ribassista
@@ -3346,11 +3346,11 @@ class ro_cano_che_ritorna:
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
                 and ma2_last < last_trade_price
-                and deviation < -0.45
-                and ma25_last > ma25_2_min_ago
+                and deviation < -0.40
+                and ma13_last > ma13_2_min_ago
             ):
 
-                sell = "session 3-4-x SELL DOLCE ATTESA con ma25> and deviation < -0.45 - riga 3349"
+                sell = "session 3-4-x SELL DOLCE ATTESA con ma13 > and deviation < -0.40 - riga 3349"
                 action = "sell"
 
                 # il fattore tempo - la dolce attesa - solo con trend ribassista
@@ -3362,13 +3362,13 @@ class ro_cano_che_ritorna:
             # 4 - ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma25 <
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
-                and ma25_last < ma25_2_min_ago
+                and ma13_last < ma13_2_min_ago
                 
-                and deviation < -0.40
+                and deviation < -0.35
                 and ma2_last < last_trade_price
             ):
 
-                sell = "session 3-4-x SELL DOLCE ATTESA con ma25< and deviation < -0.40 - riga 3367"
+                sell = "session 3-4-x SELL DOLCE ATTESA con ma13 < and deviation < -0.35 - riga 3367"
                 action = "sell"
 
                 # il fattore tempo - la dolce attesa - solo con trend ribassista
