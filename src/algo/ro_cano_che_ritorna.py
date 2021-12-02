@@ -1,4 +1,4 @@
-
+                                                                             
 class ro_cano_che_ritorna:
     def __init__(self, helper, buy_percentage, sell_percentage):
         self.algo_helper = helper
@@ -1207,16 +1207,15 @@ class ro_cano_che_ritorna:
 
                     if (
                         ma50_last > ma50_2_min_ago
-                        and (ma3_prev > ma78_prev and ma3_last < ma78_last) and deviation_sell < -0.65 or (deviation_sell < -0.19 and ma3_last < ma50_last)
-                        and ma2_last < ma2_2_min_ago
-                        #and (ma3_prev > ma78_prev and ma3_last < ma78_last) and deviation_sell < -0.65 or (deviation_sell < 0.10 and ma3_last < ma50_last)
+                    
+                        and (ma3_prev > ma78_prev and ma3_last < ma78_last) and deviation_sell < -0.65 or (deviation_sell < 0.10 and ma3_last < ma50_last)
                     
                         #and deviation_ma39 < -0.16 or (deviation_sell < 0.10 and ma3_last < ma39_last)
                         #and (ma3_prev > ma39_prev and ma3_last < ma39_last)
                         #and deviation_sell < -0.26
                         # deviation_sell = ma3_last/last_trade_price
                     ):
-                        sell = "sessione 1 SELL (21-60 min) con ma50 > and incrocio 3-78 and deviation_sell < -0.65 or (deviation_sell < -0.19 and ma3_last < ma50_last) - riga 1219"
+                        sell = "sessione 1 SELL (21-60 min) con ma50 > and deviation_ma39 < -0.16 or (deviation_sell < 0.10 and ma3_last < ma50_last) - riga 1219"
                         action = "sell"
 
                 
@@ -2108,15 +2107,15 @@ class ro_cano_che_ritorna:
 
                     if (
                         ma50_last > ma50_2_min_ago
-                        and ma2_last < ma2_2_min_ago
-                        and (ma3_prev > ma78_prev and ma3_last < ma78_last) and deviation_sell < -0.65 or (deviation_sell < -0.15 and ma3_last < ma50_last)
+                    
+                        and (ma3_prev > ma78_prev and ma3_last < ma78_last) and deviation_sell < -0.65 or (deviation_sell < 0.10 and ma3_last < ma50_last)
                     
                         #and deviation_ma39 < -0.16 or (deviation_sell < 0.10 and ma3_last < ma39_last)
                         #and (ma3_prev > ma39_prev and ma3_last < ma39_last)
                         #and deviation_sell < -0.26
                         # deviation_sell = ma3_last/last_trade_price
                     ):
-                        sell = "sessione 2 SELL (21-60 min) con ma50 > and deviation_ma39 < -0.16 or (deviation_sell < -0.15 and ma3_last < ma50_last) - riga 2115"
+                        sell = "sessione 2 SELL (21-60 min) con ma50 > and deviation_ma39 < -0.16 or (deviation_sell < 0.10 and ma3_last < ma50_last) - riga 2115"
                         action = "sell"
 
                 
@@ -2136,12 +2135,12 @@ class ro_cano_che_ritorna:
                 
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and ma3_last < ma15_last
+                        and ma3_last < ma16_last
                         and deviation_sell > 0.30
                         and deviation_sell < 0.90
                         # deviation_sell = ma3_last/last_trade_price
                     ):
-                        sell = "sessione 2 SELL (21-60 min) con ma50 > and 3<15 (no incrocio 3-13) and deviation_sell 0.30 - 0.90 ELASTICO ALLA RONALDO - riga 2140"
+                        sell = "sessione 2 SELL (21-60 min) con ma50 > and 3<16 (no incrocio 3-13) and deviation_sell 0.30 - 0.90 ELASTICO ALLA RONALDO - riga 2140"
                         action = "sell"
 
                     
@@ -3005,15 +3004,15 @@ class ro_cano_che_ritorna:
 
                     if (
                         ma50_last > ma50_2_min_ago
-                        and ma2_last < ma2_2_min_ago
-                        and (ma3_prev > ma78_prev and ma3_last < ma78_last) and deviation_sell < -0.65 or (deviation_sell < -0.19 and ma3_last < ma50_last)
+                    
+                        and (ma3_prev > ma78_prev and ma3_last < ma78_last) and deviation_sell < -0.65 or (deviation_sell < 0.10 and ma3_last < ma50_last)
                     
                         #and deviation_ma39 < -0.16 or (deviation_sell < 0.10 and ma3_last < ma39_last)
                         #and (ma3_prev > ma39_prev and ma3_last < ma39_last)
                         #and deviation_sell < -0.26
                         # deviation_sell = ma3_last/last_trade_price
                     ):
-                        sell = "session 3-4-x SELL (21-60 min) con ma50 > and incrocio 3-78 and deviation_sell < -0.65 or (deviation_sell < -0.19 and ma3_last < ma50_last) - riga 3012"
+                        sell = "session 3-4-x SELL (21-60 min) con ma50 > and deviation_ma39 < -0.16 or (deviation_sell < 0.10 and ma3_last < ma50_last) - riga 3012"
                         action = "sell"
 
                 
@@ -3436,10 +3435,13 @@ class ro_cano_che_ritorna:
         
 
 
-
+    
 
         
 
 
 
                                     ############### FINE ALGORITH ###################
+            
+            
+                               
