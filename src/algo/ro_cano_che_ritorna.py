@@ -292,7 +292,7 @@ class ro_cano_che_ritorna:
 
                     buy = "BUY 1 con 72 > 100 and deviation_bellissima >0.163 riga 294"
                     action = "buy"
-                    percentage = 25
+                    percentage = 20
                     
                     
                     
@@ -309,11 +309,11 @@ class ro_cano_che_ritorna:
                 ):
                     buy = "BUY 1 con 13>50 and DEVIATION BUY 1 ALTA e ma78> - riga 311"
                     action = "buy"
-                    percentage = 25
+                    percentage = 20
 
                     # deviation_buy1 = ma13_last/ma39_last
                
-                ####################################################################  BUY 1 con incrocio 13-100 and ma78_last >= ma78_4_min_ago  "MI PIACE!"
+                ####################################################################  BUY 1 con incrocio 13-100 and ma72_last >= ma72_2_min_ago  "MI PIACE!"
 
                 elif (
                     ma13_last > ma100_last
@@ -328,10 +328,10 @@ class ro_cano_che_ritorna:
                 ):
                     buy = "BUY 1 con 13>100 e ma72> 2 min ago (!) riga 330"
                     action = "buy"
-                    percentage = 25
+                    percentage = 20
                     
                 ################################################################################################################## compra durante il ribasso
-              
+                ########################################################################################################### A
                 elif (
                     ma78_last < ma78_2_min_ago
                     and ma39_last > ma78_last
@@ -344,10 +344,10 @@ class ro_cano_che_ritorna:
 
                     buy = "BUY 1 con ma78< and 39>78 and DEVIATION BUY 1 BASSA riga 346"
                     action = "buy"
-                    percentage = 25
+                    percentage = 10
                     # deviation_buy1 = ma13_last/ma39_last
                 
-                
+                ############################################################################################################ B
                 elif (
                     ma78_last < ma78_2_min_ago
                     and ma39_last > ma78_last
@@ -360,7 +360,7 @@ class ro_cano_che_ritorna:
 
                     buy = "se ma78< - BUY 1 con incrocio 39>78 - riga 362"
                     action = "buy"
-                    percentage = 25
+                    percentage = 10
                     # deviation_buy1 = ma13_last/ma39_last
                     # and deviation_ma13_sopra_ma25 > 0.05 FONDAMENTALE
               
@@ -381,7 +381,7 @@ class ro_cano_che_ritorna:
                 ):
                     buy = "BUY DURANTE IL CROLLO - modo 1 riga 382"
                     action = "buy"
-                    percentage = 25
+                    percentage = 20
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                 
                 
@@ -395,7 +395,7 @@ class ro_cano_che_ritorna:
                 ):
                     buy = "BUY DURANTE IL CROLLO - modo 2 riga 396"
                     action = "buy"
-                    percentage = 25
+                    percentage = 20
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     # deviation_buy_crollo_2 = ma3_last / ma13_last
                     
@@ -416,7 +416,7 @@ class ro_cano_che_ritorna:
                 ):
                     buy = "BUY 2A riga 417"
                     action = "buy"
-                    percentage = 50
+                    percentage = 70
                     # deviation_buy_ma3_sopra_ma13 > x e' fondamentale !
                     # deviation_buy2 = ma8_last/ma50_last
                     
@@ -509,7 +509,7 @@ class ro_cano_che_ritorna:
                 ):
                     buy = "BUY 3C RIVOLUZIONARIO se ma78 < - riga 510"
                     action = "buy"
-                    percentage = 50
+                    percentage = 40
                     # deviation_buy3 = ma4_last/ma30_last
                     
                     
