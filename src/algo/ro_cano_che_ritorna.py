@@ -124,7 +124,7 @@ class ro_cano_che_ritorna:
         ##################################################################################################################
 
         # formula deviation
-        deviation = (ma3_last / last_trade_price - 1) * 100 if last_trade_price else 0
+        deviation = (ma4_last / last_trade_price - 1) * 100 if last_trade_price else 0
         self.algo_helper.info("deviation: {}".format(deviation))
 
         ##################################################################################################################
@@ -300,14 +300,14 @@ class ro_cano_che_ritorna:
                 # --------------------------------------------------------------    BUY 1 DURANTE IL RIALZO con LA DEVIATION BUY 1
 
                 elif (
-                    deviation_buy1 > 0.56
-                    and ma13_last > ma39_last
+                    deviation_buy1 > 0.25
+                    and ma13_last > ma50_last
                     and ma78_last > ma78_2_min_ago
                     and price > price_2_min_ago
                     and ma2_last > ma2_2_min_ago
                     and ma4_last > ma4_2_min_ago
                 ):
-                    buy = "BUY 1 con 13>39 and DEVIATION BUY 1 ALTA e ma78 > riga 311"
+                    buy = "BUY 1 con 13>50 and DEVIATION BUY 1 ALTA e ma78> - riga 311"
                     action = "buy"
                     percentage = 25
 
@@ -376,7 +376,8 @@ class ro_cano_che_ritorna:
                 elif (
                     ma2_last > ma2_2_min_ago
                     and deviation_buy_crollo_1 < -2.30
-                    and (ma8_prev < ma25_prev and ma8_last > ma25_last)
+                    and ma3_last > ma7_last
+                    
                 ):
                     buy = "BUY DURANTE IL CROLLO - modo 1 riga 382"
                     action = "buy"
@@ -1539,12 +1540,12 @@ class ro_cano_che_ritorna:
             
             # 2 - ro cano VENDE DURANTE UN CROLLO IMPROVVISO !
             elif (
-                deviation < -0.60
+                deviation < -0.90
             ):
                 sell = "sessione 1 SELL CROLLO IMPROVVISO - riga 1540"
                 action = "sell"
                 
-                # deviation = ma2_last / last_trade_price
+                # deviation = ma4_last / last_trade_price
                 # FORSE E' L' UNICA DEVIATION CHE MI POTRA' SALVARE DA UN CROLLO IMPROVVISO COME QUELLO DEL 3 NOVEMBRE 2021
                 
             
@@ -2435,12 +2436,12 @@ class ro_cano_che_ritorna:
             
             # 2 - ro cano VENDE DURANTE UN CROLLO IMPROVVISO !
             elif (
-                deviation < -0.60
+                deviation < -0.90
             ):
                 sell = "sessione 2 SELL CROLLO IMPROVVISO - riga 2436"
                 action = "sell"
                 
-                # deviation = ma2_last / last_trade_price
+                # deviation = ma4_last / last_trade_price
                 # FORSE E' L' UNICA DEVIATION CHE MI POTRA' SALVARE DA UN CROLLO IMPROVVISO COME QUELLO DEL 3 NOVEMBRE 2021
                 
             
@@ -3332,12 +3333,12 @@ class ro_cano_che_ritorna:
             
             # 2 - ro cano VENDE DURANTE UN CROLLO IMPROVVISO !
             elif (
-                deviation < -0.60
+                deviation < -0.90
             ):
                 sell = "session 3-4-x SELL CROLLO IMPROVVISO - riga 3333"
                 action = "sell"
                 
-                # deviation = ma2_last / last_trade_price
+                # deviation = ma4_last / last_trade_price
                 # FORSE E' L' UNICA DEVIATION CHE MI POTRA' SALVARE DA UN CROLLO IMPROVVISO COME QUELLO DEL 3 NOVEMBRE 2021
                 
             
