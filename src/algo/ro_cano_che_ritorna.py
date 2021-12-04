@@ -1,4 +1,5 @@
 PROVA ERRORE
+compa ma dove sei ?
 class ro_cano_che_ritorna:
     def __init__(self, helper, buy_percentage, sell_percentage):
         self.algo_helper = helper
