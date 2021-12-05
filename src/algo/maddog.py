@@ -1,4 +1,8 @@
-PROVA ERRORE - compa ma dove sei ? ma che ti ho fatto ?
+PROVA ERRORE - compa ma dove sei ? 
+ma che ti ho fatto ? 
+(sta girando un cane vecchio !)
+
+
 # il cane falso (che fa la finta) - il buy 1 ha solo il 20%
 
 class maddog:
@@ -12,8 +16,8 @@ class maddog:
     @property
     def action(self):
 
+        
         # moving average (2-3-4-5-x)
-
         ma2_last, ma2_prev = self.algo_helper.ma_last_prev(2)
         ma3_last, ma3_prev = self.algo_helper.ma_last_prev(3)
         ma4_last, ma4_prev = self.algo_helper.ma_last_prev(4)
@@ -23,20 +27,14 @@ class maddog:
         ma8_last, ma8_prev = self.algo_helper.ma_last_prev(8)
         ma9_last, ma9_prev = self.algo_helper.ma_last_prev(9)
         ma10_last, ma10_prev = self.algo_helper.ma_last_prev(10)
-
         ma11_last, ma11_prev = self.algo_helper.ma_last_prev(11)
-
         ma13_last, ma13_prev = self.algo_helper.ma_last_prev(13)
         ma15_last, ma15_prev = self.algo_helper.ma_last_prev(15)
         ma16_last, ma16_prev = self.algo_helper.ma_last_prev(16)
         ma18_last, ma18_prev = self.algo_helper.ma_last_prev(18)
-
         ma23_last, ma23_prev = self.algo_helper.ma_last_prev(23)
-
         ma25_last, ma25_prev = self.algo_helper.ma_last_prev(25)
-
         ma28_last, ma28_prev = self.algo_helper.ma_last_prev(28)
-
         ma30_last, ma30_prev = self.algo_helper.ma_last_prev(30)
         ma33_last, ma33_prev = self.algo_helper.ma_last_prev(33)
         ma36_last, ma36_prev = self.algo_helper.ma_last_prev(36)
@@ -44,24 +42,19 @@ class maddog:
         ma40_last, ma40_prev = self.algo_helper.ma_last_prev(40)
         ma45_last, ma45_prev = self.algo_helper.ma_last_prev(45)
         ma47_last, ma47_prev = self.algo_helper.ma_last_prev(47)
-
         ma48_last, ma48_prev = self.algo_helper.ma_last_prev(48)
-
         ma50_last, ma50_prev = self.algo_helper.ma_last_prev(50)
         ma72_last, ma72_prev = self.algo_helper.ma_last_prev(72)
         ma78_last, ma78_prev = self.algo_helper.ma_last_prev(78)
-        ma100_last, ma100_prev = self.algo_helper.ma_last_prev(100)
-        
-        
-        
+        ma100_last, ma100_prev = self.algo_helper.ma_last_prev(100) 
+ 
+ 
 
+        
         # moving average (2-3-4-5-7-8-20-43-100) di x minuti prima
-
         ma2_2_min_ago = self.algo_helper.ma_minutes_ago(2, 2)
         ma2_3_min_ago = self.algo_helper.ma_minutes_ago(2, 3)
-
         ma2_4_min_ago = self.algo_helper.ma_minutes_ago(2, 4)
-
         ma3_2_min_ago = self.algo_helper.ma_minutes_ago(3, 2)
         ma3_3_min_ago = self.algo_helper.ma_minutes_ago(3, 3)
         ma3_9_min_ago = self.algo_helper.ma_minutes_ago(3, 9)
@@ -82,22 +75,30 @@ class maddog:
         ma78_5_min_ago = self.algo_helper.ma_minutes_ago(78, 5)
         ma78_7_min_ago = self.algo_helper.ma_minutes_ago(78, 7)
 
+        
+
+        
         # LAST TRADE
         last_trade_action = self.algo_helper.last_trade_action
         last_trade_price = self.algo_helper.last_trade_price
         seconds_since_last_trade = self.algo_helper.seconds_since_last_trade
-
+        
+        
+        
+        
         # PREV TRADE
         prev_trade_action = self.algo_helper.prev_trade_action
         prev_trade_time = self.algo_helper.prev_trade_time
         prev_trade_price = self.algo_helper.prev_trade_price
         seconds_since_prev_trade = self.algo_helper.seconds_since_prev_trade
-
+        
+        
+        
         # PREZZO DI ADESSO (di mercato) - CURRENT PRICE
         price = self.algo_helper.price
-
-        # PREZZO di X MINUTI FA (di mercato) -
-
+        
+        
+        # PREZZO di X MINUTI FA (di mercato) 
         price_2_min_ago = self.algo_helper.price_minutes_ago(2)
         price_10_min_ago = self.algo_helper.price_minutes_ago(10)
         price_15_min_ago = self.algo_helper.price_minutes_ago(15)
@@ -131,7 +132,7 @@ class maddog:
 
         ##################################################################################################################
 
-        ################################################################ deviation per comprare
+        ################################################################################################################## deviation per comprare
 
         # formula DEVIATION_buy1 per la compra 1
         deviation_buy1 = (ma13_last / ma39_last - 1) * 100 if ma39_last else 0
@@ -147,12 +148,12 @@ class maddog:
         deviation_buy2 = (ma8_last / ma50_last - 1) * 100 if ma50_last else 0
         self.algo_helper.info("deviation_buy2: {}".format(deviation_buy2))
 
+        
         # formula DEVIATION_buy3 per la compra 3
         deviation_buy3 = (ma4_last / ma30_last - 1) * 100 if ma30_last else 0
         self.algo_helper.info("deviation_buy3: {}".format(deviation_buy3))
 
-        # ------------------------------------------------------------------------------------------------------------
-
+        
         # formula delta_buy3_incrocio_ma3_ma8 > 0.10 per la compra 3
         delta_buy3_incrocio_ma3_ma8 = (ma3_last / ma8_last - 1) * 100 if ma8_last else 0
         self.algo_helper.info("delta_buy3_incrocio_ma3_ma8: {}".format(delta_buy3_incrocio_ma3_ma8))
@@ -170,9 +171,8 @@ class maddog:
         # formula DEVIATION_buy_crollo_1 per comprare a una certa distanza da ma78
         deviation_buy_crollo_1 = (ma8_last / ma78_last - 1) * 100 if ma78_last else 0
         self.algo_helper.info("deviation_buy_crollo_1: {}".format(deviation_buy_crollo_1))
-            
-        
-
+     
+    
         # formula DEVIATION_buy_crollo_2 per comprare a una certa distanza da ma13
         deviation_buy_crollo_2 = (ma3_last / ma13_last - 1) * 100 if ma13_last else 0
         self.algo_helper.info("deviation_buy_crollo_2: {}".format(deviation_buy_crollo_2))
@@ -200,7 +200,7 @@ class maddog:
         deviation_ma3_sopra_ma7 = (ma3_last / ma7_last - 1) * 100 if ma7_last else 0
         self.algo_helper.info("deviation_ma3_sopra_ma7: {}".format(deviation_ma3_sopra_ma7))
       
-        ######################################################################################## deviation per vendere
+        ########################################################################################################################## deviation per vendere
 
         # formula DEVIATION_sell
         deviation_sell = (ma4_last / last_trade_price - 1) * 100 if last_trade_price else 0
@@ -215,8 +215,7 @@ class maddog:
         deviation_ma39 = (ma4_last / ma39_last - 1) * 100 if ma39_last else 0
         self.algo_helper.info("deviation_ma39: {}".format(deviation_ma39))
         
-        
-        
+       
         ###########################################################################################
       
         # DEFAULT ACTION DICE DI NON FARE NIENTE (= None, NON TOCCARE )
@@ -244,14 +243,15 @@ class maddog:
         else:
             self.open = False
             self.algo_helper.info("session {}: closed segment".format(self.session))
-
+        
+        
         #############################################################################################################################################
 
         # COMPRA
         # NON TOCCARE QUESTA RIGA ( DICE CHE STA IN MODO BUY, vuole COMPRARE ! )
 
         if self.open and self.session and last_trade_action != "buy":
-
+            
             ###########################################################################################################################################
             #   B U Y
             ###########################################################################################################################################
@@ -264,12 +264,12 @@ class maddog:
             # buy spazio-tempo ma con aggiunta di ma 13-25
             # MACD sempre con aggiunta di ma 13-25 (come studio) (III° cane)
             
-            # TOGLIER TUTTI GLI INCROCI AL BUY ! se 13 > 100 NON INCROCERA' MAI ! INCROCIO 13-100 DIVENTA 13>100 !
+            # TOGLIERE TUTTI GLI INCROCI AL BUY ! se 13 > 100 NON INCROCERA' MAI ! INCROCIO 13-100 DIVENTA 13>100 !
             
             
             
             ######################################################################################################## COMPRA sessione 1 
-                                                                                                                   # BUY 1 con "percentage" 25
+                                                                                                                   # BUY 1 con "percentage" 20
             if self.session == 1:
 
                 # ------------------------------------------------------------ BUY 1 DURANTE IL RIALZO con INCROCIO CLASSICO 72-100
@@ -2021,8 +2021,8 @@ class maddog:
                 
                     ##########################################################################################
                     # NON TOCCARE ! CUSCINO DI SANT' ANTONIO !
-                    # L' INCROCIO 5-100 MI SALVA ! MA 5<100 VENDE DURANTE IL RIBASSO !
-                    ##################################################################### con trend discendente
+                    # L' INCROCIO 5-100 MI SALVA ! MA, attenzione, 5<100 VENDE DURANTE IL RIBASSO !
+                    ########################################################################################### con trend discendente
                 
                     elif (
                         ma50_last < ma50_2_min_ago
