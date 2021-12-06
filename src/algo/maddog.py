@@ -742,29 +742,29 @@ class maddog:
                         sell = "sessione 1 SELL (0-3 min) con ma50 > and incrocio 3-33 and deviation_sell 0.61 - 0.79 - riga 742"
                         action = "sell"
                     
+                 
+                    # attenzione : tacco di allah e dribbling alla ronaldo SOLO con ma50> (altrimenti si attivano in "sell durante il crollo" che ha le sue dinamiche.)
                     
-               
-                
                     elif (
                         ma50_last >= ma50_2_min_ago
-                        and (ma3_prev > ma13_prev and ma3_last < ma13_last)
+                        and (ma3_prev > ma9_prev and ma3_last < ma9_last)
                         and deviation_sell > 0.80
                         and deviation_sell < 1.20
                     ):
 
-                        sell = "sessione 1 SELL (0-3 min) con ma50 > and incrocio 3-13 and deviation_sell 0.80 - 1.20 - riga 755"
+                        sell = "sessione 1 SELL (0-3 min) con ma50 > and incrocio 3-9 and deviation_sell 0.80 - 1.20 ( TACCO DI ALLAH !) - riga 755"
                         action = "sell"
                 
-                
-                
+               
                     elif (
                         ma50_last >= ma50_2_min_ago
                         and (ma3_prev > ma11_prev and ma3_last < ma11_last)
                         and deviation_sell > 1.21
                     ):
 
-                        sell = "sessione 1 SELL (0-3 min) con ma50 > and incrocio 3-11 and deviation_sell > 1.21 (che sarebbe come IL DRIBBLING ALLA RONALDO !)- riga 766"
+                        sell = "sessione 1 SELL (0-3 min) con ma50 > and incrocio 3-11 and deviation_sell > 1.21 (DRIBBLING ALLA RONALDO !)- riga 765"
                         action = "sell"
+                
                 
                 
                 ###########################################################################     trend in ribasso
