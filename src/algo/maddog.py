@@ -1,6 +1,16 @@
-PROVA ERRORE - compa ma dove sei ? 
-ma che ti ho fatto ? 
-(sta girando un cane vecchio !)
+PROVA ERRORE - compa, compa caro ma che ti ho fatto ? 
+#(sta girando un cane vecchio)
+
+#forse e' "rotto" qua:
+#https://github.com/renasboy/crypto-trader-bot/commit/1e260aa42b3436fb94c14fb70367a215d157f885
+(se mi dai il permesso posso provarci io)
+#(maddog r147 etc)
+#(ro cano che ritorna r148 etc)
+
+
+#che sono diversi, inoltre, da quelli che ci sono qui
+#https://github.com/renasboy/crypto-trader-bot/blob/master/src/algo/maddog.py
+#https://github.com/renasboy/crypto-trader-bot/blob/master/src/algo/ro_cano_che_ritorna.py
 
 
 # il cane falso (che fa la finta) - il buy 1 ha solo il 20%
@@ -49,8 +59,6 @@ class maddog:
         ma100_last, ma100_prev = self.algo_helper.ma_last_prev(100) 
  
  
-
-        
         # moving average (2-3-4-5-7-8-20-43-100) di x minuti prima
         ma2_2_min_ago = self.algo_helper.ma_minutes_ago(2, 2)
         ma2_3_min_ago = self.algo_helper.ma_minutes_ago(2, 3)
@@ -75,15 +83,11 @@ class maddog:
         ma78_5_min_ago = self.algo_helper.ma_minutes_ago(78, 5)
         ma78_7_min_ago = self.algo_helper.ma_minutes_ago(78, 7)
 
-        
-
-        
+       
         # LAST TRADE
         last_trade_action = self.algo_helper.last_trade_action
         last_trade_price = self.algo_helper.last_trade_price
         seconds_since_last_trade = self.algo_helper.seconds_since_last_trade
-        
-        
         
         
         # PREV TRADE
@@ -91,8 +95,7 @@ class maddog:
         prev_trade_time = self.algo_helper.prev_trade_time
         prev_trade_price = self.algo_helper.prev_trade_price
         seconds_since_prev_trade = self.algo_helper.seconds_since_prev_trade
-        
-        
+       
         
         # PREZZO DI ADESSO (di mercato) - CURRENT PRICE
         price = self.algo_helper.price
@@ -130,8 +133,6 @@ class maddog:
         deviation = (ma4_last / last_trade_price - 1) * 100 if last_trade_price else 0
         self.algo_helper.info("deviation: {}".format(deviation))
 
-        ##################################################################################################################
-
         ################################################################################################################## deviation per comprare
 
         # formula DEVIATION_buy1 per la compra 1
@@ -157,9 +158,7 @@ class maddog:
         # formula delta_buy3_incrocio_ma3_ma8 > 0.10 per la compra 3
         delta_buy3_incrocio_ma3_ma8 = (ma3_last / ma8_last - 1) * 100 if ma8_last else 0
         self.algo_helper.info("delta_buy3_incrocio_ma3_ma8: {}".format(delta_buy3_incrocio_ma3_ma8))
-            
         
-
         # formula DEVIATION_buy per comprare UN PO' PIU' SOPRA DEL LAST TRADE ( di solito l' ultimo SELL )
         deviation_buy = (ma2_last / last_trade_price - 1) * 100 if last_trade_price else 0
         self.algo_helper.info("deviation_buy: {}".format(deviation_buy))    
@@ -215,16 +214,18 @@ class maddog:
         deviation_ma39 = (ma4_last / ma39_last - 1) * 100 if ma39_last else 0
         self.algo_helper.info("deviation_ma39: {}".format(deviation_ma39))
         
-       
-        ###########################################################################################
+        
+        ######################################################################################################## TUTTO COMINCIA DA QUA !
+                                                                                                                 # dal non fare niente !          
       
         # DEFAULT ACTION DICE DI NON FARE NIENTE (= None, NON TOCCARE )
         action = None
         percentage = 0
 
-        ############################################################################################ APRE E CHIUDE LA GABBIA
+        ######################################################################################################## APRE E CHIUDE LA GABBIA !
         
-        # SE LA GABBIA E' TROPPO APERTA IMPAZZISCE NEI MOVIMENTI LATERALI ! entrano in azione buy 2-3-4-5 che sono piu' reattivi del BUY 1 !
+        # SE LA GABBIA E' TROPPO APERTA IMPAZZISCE NEI MOVIMENTI LATERALI ! 
+        # entrano in azione buy 2-3-4-5 che sono piu' reattivi del BUY 1 !
         
         # APRE E CHIUDE GABBIA
 
@@ -266,8 +267,7 @@ class maddog:
             
             # TOGLIERE TUTTI GLI INCROCI AL BUY ! se 13 > 100 NON INCROCERA' MAI ! INCROCIO 13-100 DIVENTA 13>100 !
             
-            
-            
+          
             ######################################################################################################## COMPRA sessione 1 
                                                                                                                    # BUY 1 con "percentage" 20
             if self.session == 1:
