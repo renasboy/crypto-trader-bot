@@ -3,10 +3,9 @@ PROVA ERRORE - compa, ma che ti ho fatto ?
 
 #forse e' "rotto" qua:
 #https://github.com/renasboy/crypto-trader-bot/commit/1e260aa42b3436fb94c14fb70367a215d157f885
-(se mi dai il permesso posso provarci io)
-#(maddog r147 etc)
-#(ro cano che ritorna r148 etc)
+#(maddog riga 147 etc)
 
+#(se mi dai il permesso posso provarci io)
 
 #che sono diversi, inoltre, da quelli che ci sono qui
 #https://github.com/renasboy/crypto-trader-bot/blob/master/src/algo/maddog.py
@@ -259,7 +258,7 @@ class maddog:
 
             percentage = self.buy_percentage
             # NON TOCCARE  ! DI DEFAULT E' IL 2%
-            
+        
         
             # in futuro
             # buy spazio-tempo ma con aggiunta di ma 13-25
@@ -268,6 +267,7 @@ class maddog:
             # TOGLIERE TUTTI GLI INCROCI AL BUY ! se 13 > 100 NON INCROCERA' MAI ! INCROCIO 13-100 DIVENTA 13>100 !
             
           
+        
             ######################################################################################################## COMPRA sessione 1 
                                                                                                                    # BUY 1 con "percentage" 20
             if self.session == 1:
