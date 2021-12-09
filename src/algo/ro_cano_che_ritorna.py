@@ -2,9 +2,11 @@ PROVA ERRORE - compa, ma che ti ho fatto ? (gira un cane vecchio)
 
 #forse e' rotto qua:
 #https://github.com/renasboy/crypto-trader-bot/commit/1e260aa42b3436fb94c14fb70367a215d157f885
+#(ro cano che ritorna riga 148 etc)
+
 (se mi dai il permesso posso provarci io)
-#(maddog r147 etc)
-#(ro cano che ritorna r148 etc)
+
+
 
 
 #che sono diversi, inoltre, da quelli che ci sono qui
@@ -213,9 +215,7 @@ class ro_cano_che_ritorna:
         self.algo_helper.info("deviation_ma39: {}".format(deviation_ma39))
         
         
-        
-        
-        
+       
         ########################################################################################################################### TUTTO COMINCIA QUI !
       
         # DEFAULT ACTION DICE DI NON FARE NIENTE (= None, NON TOCCARE )
