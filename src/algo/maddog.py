@@ -1,4 +1,4 @@
-PROVA ERRORE - compa, compa caro ma che ti ho fatto ? 
+PROVA ERRORE - compa, ma che ti ho fatto ? 
 #(sta girando un cane vecchio)
 
 #forse e' "rotto" qua:
