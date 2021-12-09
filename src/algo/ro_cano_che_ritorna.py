@@ -1,4 +1,4 @@
-PROVA ERRORE - compa ma dove sei ? ma che ti ho fatto ? (gira un cane vecchio)
+PROVA ERRORE - compa, ma che ti ho fatto ? (gira un cane vecchio)
 
 #forse e' rotto qua:
 #https://github.com/renasboy/crypto-trader-bot/commit/1e260aa42b3436fb94c14fb70367a215d157f885
