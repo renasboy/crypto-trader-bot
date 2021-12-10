@@ -472,7 +472,7 @@ class maddog:
                     and deviation_ma7_sopra_ma40 > 0.10
                     and ma4_last > ma9_last
                     and ma4_last > ma50_last
-                    
+                    and ma2_last > ma2_2_min_ago
                     and ma7_last > ma25_last
                 ):
                     buy = "BUY 3A con ma78 > riga 478"
@@ -492,7 +492,7 @@ class maddog:
                     and ma3_last > ma8_last
                     and ma3_last > ma78_last
                     and ma4_last > ma4_2_min_ago
-                    
+                    and ma2_last > ma2_2_min_ago
                     and ma7_last > ma25_last
                 ):
                     buy = "BUY 3B RIVOLUZIONARIO se ma39 > ma78- riga 498"
@@ -511,7 +511,7 @@ class maddog:
                     and ma3_last > ma8_last
                     and ma3_last > ma78_last
                     and ma4_last > ma4_2_min_ago
-                    
+                    and ma2_last > ma2_2_min_ago
                     and ma7_last > ma25_last
                 ):
                     buy = "BUY 3C RIVOLUZIONARIO se ma78 < - riga 517"
@@ -533,7 +533,7 @@ class maddog:
                     and deviation_ma7_sopra_ma40 > 0.11
                     and ma4_last > ma9_last
                     and ma4_last > ma50_last
-                    
+                    and ma2_last > ma2_2_min_ago
                     and ma7_last > ma25_last
                 ):
                     buy = "BUY 4A con ma 78 > riga 539"
@@ -549,7 +549,7 @@ class maddog:
                     and ma3_last > ma8_last
                     and ma3_last > ma78_last
                     and ma4_last > ma4_2_min_ago
-                    
+                    and ma2_last > ma2_2_min_ago
                     and ma7_last > ma25_last
                 ):
                     buy = "BUY 4B RIVOLUZIONARIO con ma78 > - riga 555"
@@ -567,7 +567,7 @@ class maddog:
                     and ma3_last > ma8_last
                     and ma3_last > ma78_last
                     and ma4_last > ma4_2_min_ago
-                    
+                    and ma2_last > ma2_2_min_ago
                     and ma7_last > ma25_last
                 ):
                     buy = "BUY 4C RIVOLUZIONARIO con ma78 < - riga 573"
@@ -588,12 +588,11 @@ class maddog:
                     and deviation_ma7_sopra_ma40 > 0.13
                     and ma4_last > ma9_last
                     and ma4_last > ma50_last
-                    
+                    and ma2_last > ma2_2_min_ago
                     and ma6_last > ma15_last
                     and ma7_last > ma25_last
-                    
                     and deviation_bellissima > 0.163
-                    
+                
                     # deviation_bellissima = 6/30
                     # questa deviation serve a spezzare la catena dei buy - effetti laterali.
                     # se e' arrivato il buy 5 e' molto probabile che il trend sia consolidato 
@@ -613,7 +612,7 @@ class maddog:
                     and ma3_last > ma8_last
                     and ma3_last > ma78_last
                     and ma4_last > ma4_2_min_ago
-                    
+                    and ma2_last > ma2_2_min_ago
                     and ma7_last > ma25_last
                     and deviation_bellissima > 0.163
                 ):
@@ -631,7 +630,7 @@ class maddog:
                     and ma3_last > ma8_last
                     and ma3_last > ma78_last
                     and ma4_last > ma4_2_min_ago
-                    
+                    and ma2_last > ma2_2_min_ago
                     and ma7_last > ma25_last
                     and deviation_bellissima > 0.163
                 ):
