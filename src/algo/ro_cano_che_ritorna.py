@@ -1,5 +1,6 @@
-PROVA ERRORE - compa, ma che ti ho fatto ? 
+PROVA ERRORE 
 #(sta girando un cane vecchio)
+
 
 #forse e' "rotto" qua:
 #https://github.com/renasboy/crypto-trader-bot/commit/1e260aa42b3436fb94c14fb70367a215d157f885
@@ -267,7 +268,8 @@ class ro_cano_che_ritorna:
             # TOGLIERE TUTTI GLI INCROCI AL BUY ! se 13 > 100 NON INCROCERA' MAI ! INCROCIO 13-100 DIVENTA 13>100 !
             
           
-        
+            
+            
             ######################################################################################################## COMPRA sessione 1 
                                                                                                                    # BUY 1 con "percentage" 20
             if self.session == 1:
