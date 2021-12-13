@@ -1,3 +1,4 @@
+# JP Cooper - Let It Be (The Beatles Cover)
 (sta girando un cane vecchio)
 
 #forse e' "rotto" qua:
@@ -55,6 +56,7 @@ class maddog:
         ma47_last, ma47_prev = self.algo_helper.ma_last_prev(47)
         ma48_last, ma48_prev = self.algo_helper.ma_last_prev(48)
         ma50_last, ma50_prev = self.algo_helper.ma_last_prev(50)
+        ma69_last, ma69_prev = self.algo_helper.ma_last_prev(69)
         ma72_last, ma72_prev = self.algo_helper.ma_last_prev(72)
         ma78_last, ma78_prev = self.algo_helper.ma_last_prev(78)
         ma100_last, ma100_prev = self.algo_helper.ma_last_prev(100) 
@@ -271,11 +273,11 @@ class maddog:
                                                                                                                    # BUY 1 con "percentage" 20
             if self.session == 1:
 
-                # ------------------------------------------------------------ BUY 1 DURANTE IL RIALZO con INCROCIO CLASSICO 72-100
-
-                if (
-                    ma13_last > ma78_last
-                    and ma72_last > ma100_last
+                # ------------------------------------------------------------ BUY 1 DURANTE IL RIALZO con INCROCIO CLASSICO 69-100
+                
+                if (    
+                    ma69_last > ma100_last
+                    and ma13_last > ma78_last
                     and ma2_last > ma2_2_min_ago
                     and ma5_last > ma5_2_min_ago
                     and deviation_ma3_sopra_ma7 > 0.05
@@ -288,15 +290,15 @@ class maddog:
                     # and deviation_ma13_sopra_ma25 > 0.07 TOLTA PROVVISORIAMENTE vedi BUY ore 10:47 del 23 nov 2021 (E' ARRIVATA MOLTO TARDI)
                 ):
 
-                    buy = "BUY 1 con 72 > 100 and deviation_bellissima > 0.163 riga 292"
+                    buy = "BUY 1 con 69 > 100 and deviation_bellissima > 0.163 riga 292"
                     action = "buy"
                     percentage = 20
                     
              
-                ####################################################################  BUY 1 con incrocio 13-100 and ma72_last >= ma72_2_min_ago  "MI PIACE!"
+                ####################################################################  BUY 1 con incrocio 13-69 and ma72_last >= ma72_2_min_ago  "MI PIACE!"
 
                 elif (
-                    ma13_last > ma100_last
+                    ma13_last > ma69_last
                     and ma72_last >= ma72_2_min_ago
                     and price > price_2_min_ago
                     and ma2_last > ma2_2_min_ago
@@ -306,7 +308,7 @@ class maddog:
                     and deviation_ma13_sopra_ma25 > 0.06
                     # quando 13-100 si incrociano price ma2 e ma4 sono gia' in ribasso
                 ):
-                    buy = "BUY 1 con 13>100 e ma72> 2 min ago (!) riga 310"
+                    buy = "BUY 1 con 13>69 e ma72> 2 min ago (!) riga 310"
                     action = "buy"
                     percentage = 20
                     
