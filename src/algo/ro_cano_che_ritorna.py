@@ -1,14 +1,12 @@
-#(sta girando un cane vecchio)
+# JP Cooper - Let It Be (The Beatles Cover)
+(sta girando un cane vecchio)
 
+#forse e' "rotto" qua:
 src
 (influx_algo_helper.py)
 FIX: added log level
 riga 148
 etc
-
-#forse e' "rotto" qua:
-#https://github.com/renasboy/crypto-trader-bot/commit/1e260aa42b3436fb94c14fb70367a215d157f885
-
 
 #(se mi dai il permesso posso provarci io)
 
@@ -58,6 +56,7 @@ class ro_cano_che_ritorna:
         ma47_last, ma47_prev = self.algo_helper.ma_last_prev(47)
         ma48_last, ma48_prev = self.algo_helper.ma_last_prev(48)
         ma50_last, ma50_prev = self.algo_helper.ma_last_prev(50)
+        ma69_last, ma69_prev = self.algo_helper.ma_last_prev(69)
         ma72_last, ma72_prev = self.algo_helper.ma_last_prev(72)
         ma78_last, ma78_prev = self.algo_helper.ma_last_prev(78)
         ma100_last, ma100_prev = self.algo_helper.ma_last_prev(100) 
@@ -166,9 +165,7 @@ class ro_cano_che_ritorna:
         # formula DEVIATION_buy per comprare UN PO' PIU' SOPRA DEL LAST TRADE ( di solito l' ultimo SELL )
         deviation_buy = (ma2_last / last_trade_price - 1) * 100 if last_trade_price else 0
         self.algo_helper.info("deviation_buy: {}".format(deviation_buy))    
-        
-        
-
+    
         ############################################################################################     DEVIATION_buy_crollo
 
         # formula DEVIATION_buy_crollo_1 per comprare a una certa distanza da ma78
@@ -271,18 +268,16 @@ class ro_cano_che_ritorna:
             
             # TOGLIERE TUTTI GLI INCROCI AL BUY ! se 13 > 100 NON INCROCERA' MAI ! INCROCIO 13-100 DIVENTA 13>100 !
             
-          
-            
-            
+        
             ######################################################################################################## COMPRA sessione 1 
                                                                                                                    # BUY 1 con "percentage" 20
             if self.session == 1:
 
-                # ------------------------------------------------------------ BUY 1 DURANTE IL RIALZO con INCROCIO CLASSICO 72-100
-
-                if (
-                    ma13_last > ma78_last
-                    and ma72_last > ma100_last
+                # ------------------------------------------------------------ BUY 1 DURANTE IL RIALZO con INCROCIO CLASSICO 69-100
+                
+                if (    
+                    ma69_last > ma100_last
+                    and ma13_last > ma78_last
                     and ma2_last > ma2_2_min_ago
                     and ma5_last > ma5_2_min_ago
                     and deviation_ma3_sopra_ma7 > 0.05
@@ -295,15 +290,15 @@ class ro_cano_che_ritorna:
                     # and deviation_ma13_sopra_ma25 > 0.07 TOLTA PROVVISORIAMENTE vedi BUY ore 10:47 del 23 nov 2021 (E' ARRIVATA MOLTO TARDI)
                 ):
 
-                    buy = "BUY 1 con 72 > 100 and deviation_bellissima > 0.163 riga 292"
+                    buy = "BUY 1 con 69 > 100 and deviation_bellissima > 0.163 riga 292"
                     action = "buy"
                     percentage = 20
                     
              
-                ####################################################################  BUY 1 con incrocio 13-100 and ma72_last >= ma72_2_min_ago  "MI PIACE!"
+                ####################################################################  BUY 1 con incrocio 13-69 and ma72_last >= ma72_2_min_ago  "MI PIACE!"
 
                 elif (
-                    ma13_last > ma100_last
+                    ma13_last > ma69_last
                     and ma72_last >= ma72_2_min_ago
                     and price > price_2_min_ago
                     and ma2_last > ma2_2_min_ago
@@ -313,7 +308,7 @@ class ro_cano_che_ritorna:
                     and deviation_ma13_sopra_ma25 > 0.06
                     # quando 13-100 si incrociano price ma2 e ma4 sono gia' in ribasso
                 ):
-                    buy = "BUY 1 con 13>100 e ma72> 2 min ago (!) riga 310"
+                    buy = "BUY 1 con 13>69 e ma72> 2 min ago (!) riga 310"
                     action = "buy"
                     percentage = 20
                     
@@ -2115,7 +2110,7 @@ class ro_cano_che_ritorna:
                     if (
                         ma50_last > ma50_2_min_ago
                         and ma2_last < ma2_2_min_ago
-                        and (ma3_prev > ma78_prev and ma3_last < ma78_last) and deviation_sell < -0.65 or (deviation_sell < -0.15 and ma3_last < ma50_last)
+                        and deviation_ma39 < -0.16 or (deviation_sell < -0.15 and ma3_last < ma50_last)
                     
                         #and deviation_ma39 < -0.16 or (deviation_sell < 0.10 and ma3_last < ma39_last)
                         #and (ma3_prev > ma39_prev and ma3_last < ma39_last)
@@ -3012,14 +3007,14 @@ class ro_cano_che_ritorna:
                     if (
                         ma50_last > ma50_2_min_ago
                         and ma2_last < ma2_2_min_ago
-                        and (ma3_prev > ma78_prev and ma3_last < ma78_last) and deviation_sell < -0.65 or (deviation_sell < -0.19 and ma3_last < ma50_last)
+                        and deviation_ma39 < -0.16 or (deviation_sell < -0.19 and ma3_last < ma50_last)
                     
                         #and deviation_ma39 < -0.16 or (deviation_sell < 0.10 and ma3_last < ma39_last)
                         #and (ma3_prev > ma39_prev and ma3_last < ma39_last)
                         #and deviation_sell < -0.26
                         # deviation_sell = ma3_last/last_trade_price
                     ):
-                        sell = "session 3-4-x SELL (21-60 min) con ma50 > and incrocio 3-78 and deviation_sell < -0.65 or (deviation_sell < -0.19 and ma3_last < ma50_last) - riga 3012"
+                        sell = "session 3-4-x SELL (21-60 min) con ma50 > and deviation_ma39 < -0.16 or (deviation_sell < -0.19 and ma3_last < ma50_last) - riga 3012"
                         action = "sell"
 
                 
@@ -3149,7 +3144,7 @@ class ro_cano_che_ritorna:
                         and deviation_ma39 < -0.18 or (deviation_sell < 0.10 and ma3_last < ma50_last)
                    
                     ):
-                        sell = "session 3-4-x SELL da 60 a 90 min con ma50 > and deviation_ma39 <-0.18 (no ma3<ma39) (NO INCROCIO!) (NO and deviation_sell < 0.10 (!)) - riga 3142"
+                        sell = "session 3-4-x SELL da 60 a 90 min con ma50 > and deviation_ma39 <-0.18  - riga 3142"
                         action = "sell"
                         # se non ha forza dopo 1 ora e' inutile continuare a sperare !
                         # cuscino dell' angelo custode
