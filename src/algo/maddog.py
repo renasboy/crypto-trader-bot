@@ -1,9 +1,11 @@
-PROVA ERRORE
-#(sta girando un cane vecchio)
+(sta girando un cane vecchio)
 
 #forse e' "rotto" qua:
-#https://github.com/renasboy/crypto-trader-bot/commit/1e260aa42b3436fb94c14fb70367a215d157f885
-#(maddog riga 147 etc)
+src
+influx_algo_helper.py
+FIX: added log level
+riga 148
+etc
 
 #(se mi dai il permesso posso provarci io)
 
@@ -161,9 +163,7 @@ class maddog:
         # formula DEVIATION_buy per comprare UN PO' PIU' SOPRA DEL LAST TRADE ( di solito l' ultimo SELL )
         deviation_buy = (ma2_last / last_trade_price - 1) * 100 if last_trade_price else 0
         self.algo_helper.info("deviation_buy: {}".format(deviation_buy))    
-        
-        
-
+    
         ############################################################################################     DEVIATION_buy_crollo
 
         # formula DEVIATION_buy_crollo_1 per comprare a una certa distanza da ma78
@@ -266,7 +266,6 @@ class maddog:
             
             # TOGLIERE TUTTI GLI INCROCI AL BUY ! se 13 > 100 NON INCROCERA' MAI ! INCROCIO 13-100 DIVENTA 13>100 !
             
-          
         
             ######################################################################################################## COMPRA sessione 1 
                                                                                                                    # BUY 1 con "percentage" 20
