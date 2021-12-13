@@ -1,6 +1,10 @@
-PROVA ERRORE 
 #(sta girando un cane vecchio)
 
+src
+(influx_algo_helper.py)
+FIX: added log level
+riga 148
+etc
 
 #forse e' "rotto" qua:
 #https://github.com/renasboy/crypto-trader-bot/commit/1e260aa42b3436fb94c14fb70367a215d157f885
