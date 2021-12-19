@@ -3333,12 +3333,13 @@ class ro_cano_che_ritorna:
             
             # 2 - ro cano VENDE DURANTE UN CROLLO IMPROVVISO !
             elif (
-                deviation < -0.90
+                deviation < -0.62
             ):
                 sell = "session 3-4-x SELL CROLLO IMPROVVISO - riga 3333"
                 action = "sell"
                 
                 # deviation = ma4_last / last_trade_price
+                
                 # FORSE E' L' UNICA DEVIATION CHE MI POTRA' SALVARE DA UN CROLLO IMPROVVISO COME QUELLO DEL 3 NOVEMBRE 2021
                 
             
