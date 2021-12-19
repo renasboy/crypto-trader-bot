@@ -1540,7 +1540,7 @@ class maddog:
             
             # 2 - ro cano VENDE DURANTE UN CROLLO IMPROVVISO !
             elif (
-                deviation < -0.90
+                deviation < -0.59
             ):
                 sell = "sessione 1 SELL CROLLO IMPROVVISO - riga 1540"
                 action = "sell"
@@ -2436,7 +2436,7 @@ class maddog:
             
             # 2 - ro cano VENDE DURANTE UN CROLLO IMPROVVISO !
             elif (
-                deviation < -0.90
+                deviation < -0.59
             ):
                 sell = "sessione 2 SELL CROLLO IMPROVVISO - riga 2436"
                 action = "sell"
@@ -3333,13 +3333,16 @@ class maddog:
             
             # 2 - ro cano VENDE DURANTE UN CROLLO IMPROVVISO !
             elif (
-                deviation < -0.90
+                deviation < -0.59
             ):
                 sell = "session 3-4-x SELL CROLLO IMPROVVISO - riga 3333"
                 action = "sell"
                 
                 # deviation = ma4_last / last_trade_price
-                # FORSE E' L' UNICA DEVIATION CHE MI POTRA' SALVARE DA UN CROLLO IMPROVVISO COME QUELLO DEL 3 NOVEMBRE 2021
+                # c'e' stata una vendita con crollo improvviso -0.90 a -1.46 il 19 dic 2021 - alle ore 15:14
+                # AL CROLLO IMPROVVISO METTO -0.59 AL POSTO DI -0.90
+                
+                # FORSE E' L' UNICA DEVIATION CHE MI POTRA' SALVARE DA UN CROLLO IMPROVVISO COME QUELLO DEL 3 NOVEMBRE 2021 e del 19 dic 2021
                 
             
             
