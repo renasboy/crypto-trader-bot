@@ -2513,11 +2513,11 @@ class ro_cano_che_ritorna:
 
                     if (
                         ma50_last >= ma50_2_min_ago
-                        and (ma3_prev > ma39_prev and ma3_last < ma39_last)
-                        and deviation_sell < -0.23
+                        and (ma3_prev > ma16_prev and ma3_last < ma16_last)
+                        and deviation_sell < -0.33
                         # deviation_sell = ma3_last/last_trade_price
                     ):
-                        sell = "session 3-4-x SELL (0-3 min) con ma50 > and incrocio 3-39 and deviation_sell < -0.23 - riga 2515"
+                        sell = "session 3-4-x SELL (0-3 min) con ma50 > and incrocio 3-16 and deviation_sell < -0.33 - riga 2515"
                         action = "sell"
                 
                 
@@ -2627,11 +2627,11 @@ class ro_cano_che_ritorna:
 
                     if (
                         ma50_last >= ma50_2_min_ago
-                        and (ma3_prev > ma39_prev and ma3_last < ma39_last)
-                        and deviation_sell < -0.24
+                        and (ma3_prev > ma16_prev and ma3_last < ma16_last)
+                        and deviation_sell < -0.33
                         # deviation_sell = ma3_last/last_trade_price
                     ):
-                        sell = "session 3-4-x SELL (3-5 min) con ma50 > and incrocio 3-39 and deviation_sell < -0.24 - riga 2629"
+                        sell = "session 3-4-x SELL (3-5 min) con ma50 > and incrocio 3-16 and deviation_sell < -0.33 - riga 2629"
                         action = "sell"
                 
                 
@@ -2729,7 +2729,7 @@ class ro_cano_che_ritorna:
                 ############################################################################################################## sessione 3-4-x  (5-12 min)
 
                 # VENDITA - da 5 a 12 minuti = da 300 a 720 secondi
-
+                 
                 elif seconds_since_last_trade > 300 and seconds_since_last_trade <= 720:
 
                     if (
@@ -2743,7 +2743,7 @@ class ro_cano_che_ritorna:
                 
                     # guardare la stella (guardare da una stella!)
                     # QUESTO E' IL RISCHIO PIU' GRANDE CHE PRENDO ! ( ma con ma50 > ma50 2 min ago DOPO 5 min (+2))
-                
+                    # e qua mi ha fottuto con la vendita -1.46 al min 6 del 19 dic 2021 - cambiato crollo improvviso ! e cambiato condizioni e fasce da 0 7 min
                 
                 
                 
