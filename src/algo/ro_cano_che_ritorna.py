@@ -1540,14 +1540,14 @@ class ro_cano_che_ritorna:
             
             # 2 - ro cano VENDE DURANTE UN CROLLO IMPROVVISO !
             elif (
-                deviation < -0.90
+                deviation < -0.62
             ):
                 sell = "sessione 1 SELL CROLLO IMPROVVISO - riga 1540"
                 action = "sell"
                 
                 # deviation = ma4_last / last_trade_price
                 # FORSE E' L' UNICA DEVIATION CHE MI POTRA' SALVARE DA UN CROLLO IMPROVVISO COME QUELLO DEL 3 NOVEMBRE 2021
-                
+                # -0.90 ha fatto fare una perdita di -1.46% il 19 dic 2021
             
             
             # 3 - ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma13 >
@@ -2436,14 +2436,14 @@ class ro_cano_che_ritorna:
             
             # 2 - ro cano VENDE DURANTE UN CROLLO IMPROVVISO !
             elif (
-                deviation < -0.90
+                deviation < -0.62
             ):
                 sell = "sessione 2 SELL CROLLO IMPROVVISO - riga 2436"
                 action = "sell"
                 
                 # deviation = ma4_last / last_trade_price
                 # FORSE E' L' UNICA DEVIATION CHE MI POTRA' SALVARE DA UN CROLLO IMPROVVISO COME QUELLO DEL 3 NOVEMBRE 2021
-                
+                # -0.90 ha fatto fare una perdita di -1.46% il 19 dic 2021
             
             
             # 3 - ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma13 >
