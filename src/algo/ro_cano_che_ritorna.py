@@ -2506,7 +2506,7 @@ class ro_cano_che_ritorna:
             elif self.session > 2:
             
             
-                ################################################################################################### sessione 3-4-x ( 0-3 min )
+                ################################################################################################### sessione 3-4-x ( 0-3 min ) ok
                 if seconds_since_last_trade > 0 and seconds_since_last_trade <= 180:
 
                 # con ma50 >
@@ -2619,11 +2619,11 @@ class ro_cano_che_ritorna:
             
             
             
-                ################################################################################################################### sessione 3-4-x ( 3-5 min )
+                ################################################################################################################### sessione 3-4-x ( 3-5 min  cambiata a 3 - 7)
 
-                # VENDITA - da 3 a 5 minuti = da 180 a 300 secondi
+                # VENDITA - da 3 a 7 minuti = da 180 a 420 secondi
 
-                elif seconds_since_last_trade > 180 and seconds_since_last_trade <= 300:
+                elif seconds_since_last_trade > 180 and seconds_since_last_trade <= 420:
 
                     if (
                         ma50_last >= ma50_2_min_ago
@@ -2726,11 +2726,11 @@ class ro_cano_che_ritorna:
                     
                     
                     
-                ############################################################################################################## sessione 3-4-x  (5-12 min)
+                ############################################################################################################## sessione 3-4-x  (5-12 min) (cambiata con 7-12 !)
 
-                # VENDITA - da 5 a 12 minuti = da 300 a 720 secondi
+                # VENDITA - da 7 a 12 minuti = da 4200 a 720 secondi
                  
-                elif seconds_since_last_trade > 300 and seconds_since_last_trade <= 720:
+                elif seconds_since_last_trade > 420 and seconds_since_last_trade <= 720:
 
                     if (
                         ma50_last >= ma50_2_min_ago
@@ -2743,7 +2743,7 @@ class ro_cano_che_ritorna:
                 
                     # guardare la stella (guardare da una stella!)
                     # QUESTO E' IL RISCHIO PIU' GRANDE CHE PRENDO ! ( ma con ma50 > ma50 2 min ago DOPO 5 min (+2))
-                    # e qua mi ha fottuto con la vendita -1.46 al min 6 del 19 dic 2021 - cambiato crollo improvviso ! e cambiato condizioni e fasce da 0 7 min
+                    # e qua mi ha fottuto con la vendita -1.46 al min 6 del 19 dic 2021 - cambiato crollo improvviso ! e cambiato condizioni e anche fascia da 5-12
                 
                 
                 
