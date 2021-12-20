@@ -305,8 +305,8 @@ class maddog:
                     and ma3_last > ma3_3_min_ago
                     and ma4_last > ma4_2_min_ago
                     and deviation_ma3_sopra_ma7 > 0.05
-                    and deviation_ma13_sopra_ma25 > 0.06
-                    # quando 13-100 si incrociano price ma2 e ma4 sono gia' in ribasso
+                    and deviation_ma13_sopra_ma25 > 0.08
+                    # quando 13-69 si incrociano price ma2 e ma4 sono gia' in ribasso
                 ):
                     buy = "BUY 1 con 13>69 e ma72> 2 min ago (!) riga 310"
                     action = "buy"
