@@ -132,6 +132,16 @@ class ro_cano_che_ritorna:
         # formula deviation
         deviation = (ma4_last / last_trade_price - 1) * 100 if last_trade_price else 0
         self.algo_helper.info("deviation: {}".format(deviation))
+        
+        
+        # formula DEVIATION_ma13_sopra_ma25
+        deviation_ma13_sopra_ma25 = (ma13_last / ma25_last - 1) * 100 if ma25_last else 0
+        self.algo_helper.info("deviation_ma13_sopra_ma25: {}".format(deviation_ma13_sopra_ma25))
+        
+        
+        # formula DEVIATION_bellissima
+        deviation_bellissima = (ma6_last / ma30_last - 1) * 100 if ma30_last else 0
+        self.algo_helper.info("deviation_bellissima: {}".format(deviation_bellissima))
 
         ################################################################################################################## deviation per comprare
 
@@ -140,11 +150,6 @@ class ro_cano_che_ritorna:
         self.algo_helper.info("deviation_buy1: {}".format(deviation_buy1))
         
         
-        # formula DEVIATION_bellissima
-        deviation_bellissima = (ma6_last / ma30_last - 1) * 100 if ma30_last else 0
-        self.algo_helper.info("deviation_bellissima: {}".format(deviation_bellissima))
-        
-
         # formula DEVIATION_buy2 per la compra 2
         deviation_buy2 = (ma8_last / ma50_last - 1) * 100 if ma50_last else 0
         self.algo_helper.info("deviation_buy2: {}".format(deviation_buy2))
@@ -184,10 +189,7 @@ class ro_cano_che_ritorna:
         # formula DEVIATION_ma4_sopra_ma30
         deviation_ma4_sopra_ma30 = (ma4_last / ma30_last - 1) * 100 if ma30_last else 0
         self.algo_helper.info("deviation_ma4_sopra_ma30: {}".format(deviation_ma4_sopra_ma30))
-            
-        # formula DEVIATION_ma13_sopra_ma25
-        deviation_ma13_sopra_ma25 = (ma13_last / ma25_last - 1) * 100 if ma25_last else 0
-        self.algo_helper.info("deviation_ma13_sopra_ma25: {}".format(deviation_ma13_sopra_ma25))
+       
 
         # formula deviation_ma7_sopra_ma40
         deviation_ma7_sopra_ma40 = (ma7_last / ma40_last - 1) * 100 if ma40_last else 0
@@ -257,17 +259,15 @@ class ro_cano_che_ritorna:
 
             percentage = self.buy_percentage
             # NON TOCCARE  ! DI DEFAULT E' IL 2%
-        
-        
+      
             # in futuro
+            
             # buy spazio-tempo ma con aggiunta di ma 13-25
             # MACD sempre con aggiunta di ma 13-25 (come studio) (III° cane)
-            
             # TOGLIERE TUTTI GLI INCROCI AL BUY ! se 13 > 100 NON INCROCERA' MAI ! INCROCIO 13-100 DIVENTA 13>100 !
-            
-            
-            
-            
+           
+            # analisi dei dati !
+         
             ######################################################################################################## COMPRA sessione 1 
                                                                                                                    # BUY 1 con "percentage" 20
             if self.session == 1:
