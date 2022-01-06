@@ -1161,9 +1161,9 @@ class maddog:
                     if (
                         ma50_last > ma50_2_min_ago
                         and deviation_ma39 < -0.18
-                        or (deviation_sell < 0.10 and ma3_last < ma50_last)
+                        or (deviation_sell < -0.18 and ma3_last < ma50_last)
                     ):
-                        sell = "sessione 1 SELL da 60 a 90 min con ma50 > and deviation_ma39 <-0.18 (no ma3<ma39) (NO INCROCIO!) (NO and deviation_sell < 0.10 (!)) - riga 1349"
+                        sell = "sessione 1 SELL da 60 a 90 min con ma50 > and deviation_ma39 <-0.18 or (deviation_sell < -0.18 and ma3_last < ma50_last)  - riga 1349"
                         action = "sell"
                         # se non ha forza dopo 1 ora e' inutile continuare a sperare !
                         # cuscino dell' angelo custode
@@ -1867,9 +1867,9 @@ class maddog:
                     if (
                         ma50_last > ma50_2_min_ago
                         and deviation_ma39 < -0.18
-                        or (deviation_sell < 0.10 and ma3_last < ma50_last)
+                        or (deviation_sell < -0.18 and ma3_last < ma50_last)
                     ):
-                        sell = "sessione 2 SELL da 60 a 90 min con ma50 > and deviation_ma39 <-0.18 (no ma3<ma39) (NO INCROCIO!) (NO and deviation_sell < 0.10 (!)) - riga 2245"
+                        sell = "sessione 2 SELL da 60 a 90 min con ma50 > and deviation_ma39 <-0.18 or (deviation_sell < -0.18 and ma3_last < ma50_last)  - riga 2245"
                         action = "sell"
                         # se non ha forza dopo 1 ora e' inutile continuare a sperare !
                         # cuscino dell' angelo custode
@@ -2574,9 +2574,9 @@ class maddog:
                     if (
                         ma50_last > ma50_2_min_ago
                         and deviation_ma39 < -0.18
-                        or (deviation_sell < 0.10 and ma3_last < ma50_last)
+                        or (deviation_sell < -0.18 and ma3_last < ma50_last)
                     ):
-                        sell = "session 3-4-x SELL da 60 a 90 min con ma50 > and deviation_ma39 <-0.18  - riga 3142"
+                        sell = "session 3-4-x SELL da 60 a 90 min con ma50 > and deviation_ma39 < -0.18 or (deviation_sell < -0.18 and ma3_last < ma50_last) - riga 3142"
                         action = "sell"
                         # se non ha forza dopo 1 ora e' inutile continuare a sperare !
                         # cuscino dell' angelo custode
