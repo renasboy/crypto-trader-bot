@@ -101,7 +101,9 @@ class influx_algo_helper:
             if results and len(results) == 2 and results[1]["ma"] is not None
             else 0
         )
-        self.info("ma{} last: {} ma{} prev: {}".format(period, ma_last, period, ma_prev))
+        self.info(
+            "ma{} last: {} ma{} prev: {}".format(period, ma_last, period, ma_prev)
+        )
         return float(ma_last), float(ma_prev)
 
     def ma_minutes_ago(self, period, minutes):
@@ -333,13 +335,13 @@ class influx_algo_helper:
         return 0
 
     def info(self, message):
-        self.log('INFO', message)
+        self.log("INFO", message)
 
     def debug(self, message):
-        self.log('DEBUG', message)
+        self.log("DEBUG", message)
 
     def error(self, message):
-        self.log('ERROR', message)
+        self.log("ERROR", message)
 
     def log(self, level, message):
         string_date = datetime.now(tz.gettz(os.environ["TZ"])).strftime(
