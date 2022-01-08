@@ -1238,12 +1238,12 @@ class ro_cano_che_ritorna:
                     if (
                         ma50_last > ma50_2_min_ago
                         and deviation_ma39 < -0.18
-                        or (deviation_sell < 0.10 and ma3_last < ma50_last)
+                        or (deviation_sell < -0.10 and ma3_last < ma50_last)
                         # and ma3_last < ma39_last
                         # and deviation_ma39 < -0.18
                         # and deviation_sell < 0.10
                     ):
-                        sell = "sessione 1 SELL dopo 90 min con ma50 > and deviation_ma39 <-0.18 (no ma3<ma39) or (deviation_sell < 0.10 and ma3_last < ma50_last) - riga 1246"
+                        sell = "sessione 1 SELL dopo 90 min con ma50 > and deviation_ma39 <-0.18 (no ma3<ma39) or (deviation_sell < -0.10 and ma3_last < ma50_last) - riga 1246"
                         action = "sell"
 
                         # se non ha forza dopo 1 ora e' inutile continuare a sperare !
@@ -1947,9 +1947,9 @@ class ro_cano_che_ritorna:
                         or (deviation_sell < 0.10 and ma3_last < ma50_last)
                         # and ma3_last < ma39_last
                         # and deviation_ma39 < -0.18
-                        # and deviation_sell < 0.10
+                        # and deviation_sell < -0.10
                     ):
-                        sell = "sessione 2 SELL dopo 90 min con ma50 > and deviation_ma39 <-0.18 (no ma3<ma39) or (deviation_sell < 0.10 and ma3_last < ma50_last) - riga 1952"
+                        sell = "sessione 2 SELL dopo 90 min con ma50 > and deviation_ma39 <-0.18 (no ma3<ma39) or (deviation_sell < -0.10 and ma3_last < ma50_last) - riga 1952"
                         action = "sell"
 
                         # se non ha forza dopo 1 ora e' inutile continuare a sperare !
@@ -2651,12 +2651,12 @@ class ro_cano_che_ritorna:
                     if (
                         ma50_last > ma50_2_min_ago
                         and deviation_ma39 < -0.18
-                        or (deviation_sell < 0.10 and ma3_last < ma50_last)
+                        or (deviation_sell < -0.10 and ma3_last < ma50_last)
                         # and ma3_last < ma39_last
                         # and deviation_ma39 < -0.18
                         # and deviation_sell < 0.10
                     ):
-                        sell = "session 3-4-x SELL dopo 90 min con ma50> and deviation_ma39<-0.18 (no ma3<ma39) or (deviation_sell < 0.10 and ma3_last < ma50_last)- riga 2659"
+                        sell = "session 3-4-x SELL dopo 90 min con ma50> and deviation_ma39<-0.18 (no ma3<ma39) or (deviation_sell < -0.10 and ma3_last < ma50_last)- riga 2659"
                         action = "sell"
 
                         # se non ha forza dopo 1 ora e' inutile continuare a sperare !
