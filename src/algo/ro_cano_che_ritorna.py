@@ -384,7 +384,7 @@ class ro_cano_che_ritorna:
                 elif (
                     ma2_last > ma2_2_min_ago
                     and deviation_buy_crollo_1 < -1.70
-                    and deviation_buy_crollo_2 > 0.21
+                    and deviation_buy_crollo_2 > 0.11
                 ):
                     buy = "BUY DURANTE IL CROLLO - modo 2 riga 389"
                     action = "buy"
