@@ -228,7 +228,7 @@ class ro_cano_che_ritorna:
 
         # APRE E CHIUDE GABBIA
 
-        if deviation_1_gabbia > -0.29 or deviation_buy_crollo_1 < -1.90:
+        if deviation_1_gabbia > -0.29 or deviation_buy_crollo_1 < -1.60:
 
             # deviation_1_gabbia = ma8_last / ma50_last
             # deviation_buy_crollo_1 = ma8_last / ma78_last
@@ -383,7 +383,7 @@ class ro_cano_che_ritorna:
 
                 elif (
                     ma2_last > ma2_2_min_ago
-                    and deviation_buy_crollo_1 < -1.80
+                    and deviation_buy_crollo_1 < -2.00
                     and deviation_buy_crollo_2 > 0.21
                 ):
                     buy = "BUY DURANTE IL CROLLO - modo 2 riga 389"
