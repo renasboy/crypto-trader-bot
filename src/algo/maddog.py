@@ -221,7 +221,7 @@ class maddog:
 
         # APRE E CHIUDE GABBIA
 
-        if deviation_1_gabbia > -0.29 or deviation_buy_crollo_1 < -1.60:
+        if deviation_1_gabbia > -0.29 or deviation_buy_crollo_1 < -1.50:
 
             # deviation_1_gabbia = ma8_last / ma50_last
             # deviation_buy_crollo_1 = ma8_last / ma78_last
@@ -373,7 +373,7 @@ class maddog:
 
                 elif (
                     ma2_last > ma2_2_min_ago
-                    and deviation_buy_crollo_1 < -2.00
+                    and deviation_buy_crollo_1 < -1.70
                     and deviation_buy_crollo_2 > 0.21
                 ):
                     buy = "BUY DURANTE IL CROLLO - modo 2 riga 397"
