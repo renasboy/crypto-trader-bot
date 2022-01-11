@@ -2723,7 +2723,7 @@ class ro_cano_che_ritorna:
             # il CUSCINO DELL' ANGELO CUSTODE e di SANT' ANTONIO mi proteggono ! (vendita con medie lunghe)
 
             # 1 - ro cano VENDE CON UN SALVAGENTE
-            if deviation_ma39 < -0.25 and ma50_last > ma50_2_min_ago:
+            if deviation_ma39 < -0.24 and ma50_last > ma50_2_min_ago:
 
                 sell = "session 3-4-x SELL SALVAGENTE 3-39 con ma50 < riga 2728"
                 action = "sell"
