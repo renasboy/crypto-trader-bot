@@ -448,7 +448,7 @@ class maddog:
                     ma78_last >= ma78_2_min_ago
                     and deviation_buy3 > 0.12
                     and ma3_last > ma13_last
-                    and deviation_ma7_sopra_ma40 > 0.10
+                    and deviation_ma7_sopra_ma40 > 0.09
                     and ma4_last > ma9_last
                     and ma4_last > ma50_last
                     and ma2_last > ma2_2_min_ago
