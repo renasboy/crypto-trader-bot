@@ -282,13 +282,14 @@ class ro_cano_che_ritorna:
                 if (
                     ma69_last > ma100_last
                     and ma13_last > ma78_last
+                    and deviation_bellissima > 0.17
                     and ma2_last > ma2_2_min_ago
                     and ma5_last > ma5_2_min_ago
                     and deviation_ma3_sopra_ma7 > 0.05
                     and ma6_last > ma100_last
                     and ma6_last > ma39_last
                     and ma6_last > ma13_last
-                    and deviation_bellissima > 0.163
+                    
                     # deviation_bellissima = ma6_last / ma30_last
                     # and deviation_ma13_sopra_ma25 > 0.07 TOLTA PROVVISORIAMENTE vedi BUY ore 10:47 del 23 nov 2021 (E' ARRIVATA MOLTO TARDI)
                 ):
@@ -302,6 +303,7 @@ class ro_cano_che_ritorna:
                 elif (
                     ma13_last > ma69_last
                     and ma72_last >= ma72_2_min_ago
+                    and deviation_bellissima > 0.17
                     and price > price_2_min_ago
                     and ma2_last > ma2_2_min_ago
                     and ma3_last > ma3_3_min_ago
@@ -319,6 +321,7 @@ class ro_cano_che_ritorna:
                     deviation_buy1 > 0.25
                     and ma13_last > ma50_last
                     and ma78_last > ma78_2_min_ago
+                    and deviation_bellissima > 0.17
                     and price > price_2_min_ago
                     and ma2_last > ma2_2_min_ago
                     and ma4_last > ma4_2_min_ago
@@ -336,6 +339,7 @@ class ro_cano_che_ritorna:
                     ma78_last < ma78_2_min_ago
                     and ma39_last > ma78_last
                     and deviation_buy1 > 0.14
+                    and deviation_bellissima > 0.18
                     and price > price_2_min_ago
                     and ma2_last > ma2_2_min_ago
                     and ma4_last > ma4_2_min_ago
@@ -351,6 +355,7 @@ class ro_cano_che_ritorna:
                 elif (
                     ma78_last < ma78_2_min_ago
                     and ma39_last > ma78_last
+                    and deviation_bellissima > 0.18
                     and price > price_2_min_ago
                     and ma2_last > ma2_2_min_ago
                     and ma4_last > ma4_2_min_ago
@@ -405,6 +410,7 @@ class ro_cano_che_ritorna:
                 if (
                     ma78_last > ma78_2_min_ago
                     and deviation_buy2 > 0.05
+                    and deviation_bellissima > 0.12
                     and deviation_buy_ma3_sopra_ma13 > 0.09
                     and deviation_ma7_sopra_ma40 > 0.075
                     and ma2_last > ma2_2_min_ago
@@ -421,6 +427,7 @@ class ro_cano_che_ritorna:
                 elif (
                     ma78_last < ma78_2_min_ago
                     and deviation_buy2 > 0.07
+                    and deviation_bellissima > 0.12
                     and deviation_ma13_sopra_ma25 > 0.06
                     and deviation_buy_ma3_sopra_ma13 > 0.09
                     and deviation_ma7_sopra_ma40 > 0.10
@@ -437,6 +444,7 @@ class ro_cano_che_ritorna:
                 elif (
                     deviation_buy2 > 0.13
                     and deviation_buy_ma3_sopra_ma13 > 0.10
+                    and deviation_bellissima > 0.12
                     and deviation_ma7_sopra_ma40 > 0.14
                     and ma4_last > ma9_last
                     and ma2_last > ma2_2_min_ago
