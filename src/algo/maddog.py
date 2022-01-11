@@ -206,6 +206,12 @@ class maddog:
         # formula deviation_ma39 per vendere un po' piu' giu' di ma39
         deviation_ma39 = (ma4_last / ma39_last - 1) * 100 if ma39_last else 0
         self.algo_helper.info("deviation_ma39: {}".format(deviation_ma39))
+        
+        
+        # formula deviation_ma25 per vendere un po' piu' giu' di ma25 (per il buy 3-4-5 con ma 39 ha fatto -0.89 !)
+        deviation_ma25 = (ma3_last / ma25_last - 1) * 100 if ma25_last else 0
+        self.algo_helper.info("deviation_ma25: {}".format(deviation_ma25))
+        
 
         ######################################################################################################## TUTTO COMINCIA DA QUA !
         # dal non fare niente !
@@ -2476,14 +2482,14 @@ class maddog:
                     if (
                         ma50_last > ma50_2_min_ago
                         and ma2_last < ma2_2_min_ago
-                        and deviation_ma39 < -0.17
+                        and deviation_ma25 < -0.17
                         or (deviation_sell < -0.21 and ma3_last < ma50_last)
                         # and deviation_ma39 < -0.16 or (deviation_sell < 0.10 and ma3_last < ma39_last)
                         # and (ma3_prev > ma39_prev and ma3_last < ma39_last)
                         # and deviation_sell < -0.26
                         # deviation_sell = ma3_last/last_trade_price
                     ):
-                        sell = "session 3-4-x SELL (21-60 min) con ma50 > and deviation_ma39 < -0.17 or (deviation_sell < -0.21 and ma3_last < ma50_last) - riga 3012"
+                        sell = "session 3-4-x SELL (21-60 min) con ma50 > and deviation_ma25 < -0.17 or (deviation_sell < -0.21 and ma3_last < ma50_last) - riga 3012"
                         action = "sell"
 
                     elif (
@@ -2573,10 +2579,10 @@ class maddog:
 
                     if (
                         ma50_last > ma50_2_min_ago
-                        and deviation_ma39 < -0.18
+                        and deviation_ma25 < -0.18
                         or (deviation_sell < -0.18 and ma3_last < ma50_last)
                     ):
-                        sell = "session 3-4-x SELL da 60 a 90 min con ma50 > and deviation_ma39 < -0.18 or (deviation_sell < -0.18 and ma3_last < ma50_last) - riga 3142"
+                        sell = "session 3-4-x SELL da 60 a 90 min con ma50 > and deviation_ma25 < -0.18 or (deviation_sell < -0.18 and ma3_last < ma50_last) - riga 3142"
                         action = "sell"
                         # se non ha forza dopo 1 ora e' inutile continuare a sperare !
                         # cuscino dell' angelo custode
@@ -2640,13 +2646,13 @@ class maddog:
 
                     if (
                         ma50_last > ma50_2_min_ago
-                        and deviation_ma39 < -0.18
+                        and deviation_ma25 < -0.18
                         or (deviation_sell < 0.10 and ma3_last < ma50_last)
                         # and ma3_last < ma39_last
                         # and deviation_ma39 < -0.18
                         # and deviation_sell < 0.10
                     ):
-                        sell = "session 3-4-x SELL dopo 90 min con ma50> and deviation_ma39<-0.18 (no ma3<ma39) or (deviation_sell < 0.10 and ma3_last < ma50_last)- riga 3234"
+                        sell = "session 3-4-x SELL dopo 90 min con ma50> and deviation_ma25 <-0.18 (no ma3<ma39) or (deviation_sell < 0.10 and ma3_last < ma50_last)- riga 3234"
                         action = "sell"
 
                         # se non ha forza dopo 1 ora e' inutile continuare a sperare !
