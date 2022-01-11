@@ -1696,12 +1696,12 @@ class ro_cano_che_ritorna:
 
                     elif (
                         ma50_last >= ma50_2_min_ago
-                        and ma3_last < ma13_last
+                        and ma3_last < ma15_last
                         and deviation_sell > 0.25
                         and deviation_sell < 0.90
                         # deviation_sell = ma3_last/last_trade_price
                     ):
-                        sell = "sessione 2 SELL (12-21 min) con ma50 > and 3<13 and deviation_sell 0.25-0.90 - DOPPIO PASSO ALLA RONALDO fino a +0.50 - riga 1692"
+                        sell = "sessione 2 SELL (12-21 min) con ma50 > and 3<15 and deviation_sell 0.25-0.90 - DOPPIO PASSO ALLA RONALDO fino a +0.50 - riga 1692"
                         action = "sell"
 
                     elif (
