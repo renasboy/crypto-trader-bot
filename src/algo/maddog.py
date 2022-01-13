@@ -456,7 +456,7 @@ class maddog:
                     ma78_last >= ma78_2_min_ago
                     and deviation_buy3 > 0.12
                     and ma3_last > ma13_last
-                    and deviation_ma7_sopra_ma40 > 0.09
+                    and deviation_ma4_sopra_ma30 > 0.15
                     and ma4_last > ma9_last
                     and ma4_last > ma50_last
                     and ma2_last > ma2_2_min_ago
@@ -467,13 +467,15 @@ class maddog:
                     percentage = 50
 
                     # deviation_buy3 = ma4_last/ma30_last
+                    
+                    
 
                 elif (
                     deviation_buy3 > 0.02
                     and ma39_last > ma78_last
                     and deviation_buy3 > 0.02
                     and delta_buy3_incrocio_ma3_ma8 > 0.06
-                    and deviation_ma4_sopra_ma30 > 0.17
+                    and deviation_ma4_sopra_ma30 > 0.15
                     and ma3_last > ma8_last
                     and ma3_last > ma78_last
                     and ma4_last > ma4_2_min_ago
@@ -491,7 +493,7 @@ class maddog:
                     and deviation_buy3 > 0.03
                     and deviation_ma13_sopra_ma25 > 0.045
                     and delta_buy3_incrocio_ma3_ma8 > 0.07
-                    and deviation_ma4_sopra_ma30 > 0.18
+                    and deviation_ma4_sopra_ma30 > 0.15
                     and ma3_last > ma8_last
                     and ma3_last > ma78_last
                     and ma4_last > ma4_2_min_ago
