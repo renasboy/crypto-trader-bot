@@ -153,6 +153,16 @@ class ro_cano_che_ritorna:
         
         
         
+        deviation_range_1 = (ma30_last / ma30_10_min_ago - 1) * 100 if ma30_10_min_ago else 0
+        self.algo_helper.info("deviation_range_1: {}".format(deviation_range_1))
+        deviation_range_2 = (ma30_10_min_ago / ma30_20_min_ago - 1) * 100 if ma30_20_min_ago else 0
+        self.algo_helper.info("deviation_range_2: {}".format(deviation_range_2))
+        
+        
+        
+        
+        
+        
         
         
         # formula DEVIATION_buy1 per la compra 1
@@ -380,7 +390,12 @@ class ro_cano_che_ritorna:
                     and deviation_rialzo_improvviso_3 > 0.20
                     and deviation_rialzo_improvviso_4 > 0.20
                     and deviation_rialzo_improvviso_5 > 0.20
-                   
+                    
+                    and deviation_range_1 < 0.20
+                    and deviation_range_1 > -0.20
+                    
+                    and deviation_range_2 < 0.20
+                    and deviation_range_2 > -0.20
                 ):
 
                     buy = "BUY 1 RIALZO IMPROVVISO - riga 341"
