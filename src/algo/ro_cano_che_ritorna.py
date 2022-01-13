@@ -155,9 +155,15 @@ class ro_cano_che_ritorna:
         
         deviation_range_1 = (ma30_last / ma30_10_min_ago - 1) * 100 if ma30_10_min_ago else 0
         self.algo_helper.info("deviation_range_1: {}".format(deviation_range_1))
+        
         deviation_range_2 = (ma30_10_min_ago / ma30_20_min_ago - 1) * 100 if ma30_20_min_ago else 0
         self.algo_helper.info("deviation_range_2: {}".format(deviation_range_2))
         
+        deviation_range_3 = (ma30_20_min_ago / ma30_30_min_ago - 1) * 100 if ma30_30_min_ago else 0
+        self.algo_helper.info("deviation_range_3: {}".format(deviation_range_3))
+        
+        deviation_range_4 = (ma30_30_min_ago / ma30_40_min_ago - 1) * 100 if ma30_40_min_ago else 0
+        self.algo_helper.info("deviation_range_4: {}".format(deviation_range_4))
         
         
         
@@ -396,6 +402,15 @@ class ro_cano_che_ritorna:
                     
                     and deviation_range_2 < 0.20
                     and deviation_range_2 > -0.20
+                    
+                    and deviation_range_3 < 0.20
+                    and deviation_range_3 > -0.20
+                    
+                    and deviation_range_4 < 0.20
+                    and deviation_range_4 > -0.20
+                    
+                    # teoricamente potresti usare solo la deviation_range
+                    # con deviation_rialzo_improvviso_5 > 0.20 non parte il BUY se trend leggermente ribassista
                 ):
 
                     buy = "BUY 1 RIALZO IMPROVVISO - riga 341"
