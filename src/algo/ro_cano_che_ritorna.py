@@ -55,6 +55,12 @@ class ro_cano_che_ritorna:
         ma8_4_min_ago = self.algo_helper.ma_minutes_ago(8, 4)
         ma13_2_min_ago = self.algo_helper.ma_minutes_ago(13, 2)
         ma25_2_min_ago = self.algo_helper.ma_minutes_ago(25, 2)
+        
+        ma30_10_min_ago = self.algo_helper.ma_minutes_ago(30, 10)
+        ma30_20_min_ago = self.algo_helper.ma_minutes_ago(30, 20)
+        ma30_30_min_ago = self.algo_helper.ma_minutes_ago(30, 30)
+        ma30_40_min_ago = self.algo_helper.ma_minutes_ago(30, 40)
+        
         ma33_5_min_ago = self.algo_helper.ma_minutes_ago(33, 5)
         ma39_2_min_ago = self.algo_helper.ma_minutes_ago(39, 2)
         ma39_3_min_ago = self.algo_helper.ma_minutes_ago(39, 3)
@@ -114,9 +120,41 @@ class ro_cano_che_ritorna:
         # formula deviation
         deviation = (ma4_last / last_trade_price - 1) * 100 if last_trade_price else 0
         self.algo_helper.info("deviation: {}".format(deviation))
+        
+        
 
         ################################################################################################################## deviation per comprare
-
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        # formula DEVIATION_RIALZO_IMPROVVISO (per 40 min si muove in un range +0.25 -0.25 sintetizzato dalla ma30 e fa uno scatto - 12 gennaio 2022 la ma2 arriva tardi !
+        deviation_rialzo_improvviso_1 = (price / ma30_last - 1) * 100 if ma30_last else 0
+        self.algo_helper.info("deviation_rialzo_improvviso_1: {}".format(deviation_rialzo_improvviso_1))
+        
+        deviation_rialzo_improvviso_2 = (price / ma30_10_min_ago - 1) * 100 if ma30_10_min_ago else 0
+        self.algo_helper.info("deviation_rialzo_improvviso_2: {}".format(deviation_rialzo_improvviso_2))
+        
+        deviation_rialzo_improvviso_3 = (price / ma30_20_min_ago - 1) * 100 if ma30_20_min_ago else 0
+        self.algo_helper.info("deviation_rialzo_improvviso_3: {}".format(deviation_rialzo_improvviso_3))
+        
+        deviation_rialzo_improvviso_4 = (price / ma30_30_min_ago - 1) * 100 if ma30_30_min_ago else 0
+        self.algo_helper.info("deviation_rialzo_improvviso_4: {}".format(deviation_rialzo_improvviso_4))
+        
+        deviation_rialzo_improvviso_5 = (price / ma30_40_min_ago - 1) * 100 if ma30_40_min_ago else 0
+        self.algo_helper.info("deviation_rialzo_improvviso_5: {}".format(deviation_rialzo_improvviso_5))
+        
+        
+        
+        
+        
         # formula DEVIATION_buy1 per la compra 1
         deviation_buy1 = (ma13_last / ma39_last - 1) * 100 if ma39_last else 0
         self.algo_helper.info("deviation_buy1: {}".format(deviation_buy1))
@@ -331,10 +369,29 @@ class ro_cano_che_ritorna:
                     percentage = 20
 
                     # deviation_buy1 = ma13_last/ma39_last
+                
+                
+                ########################################################################################################### compra durante un rialzo improvviso ! 
+                ########################################################################################################### con ma30 che ha 40 min di andamento laterale
+                ########################################################################################################### PER ADESSO SOLO SUL BUY 1
+                elif (    
+                    deviation_rialzo_improvviso_1 > 0.20
+                    and deviation_rialzo_improvviso_2 > 0.20
+                    and deviation_rialzo_improvviso_3 > 0.20
+                    and deviation_rialzo_improvviso_4 > 0.20
+                    and deviation_rialzo_improvviso_5 > 0.20
+                   
+                ):
 
+                    buy = "BUY 1 RIALZO IMPROVVISO - riga 341"
+                    action = "buy"
+                    percentage = 10
+                    # deviation_buy1 = ma13_last/ma39_last
+                    
+                    
                 ################################################################################################################## compra durante il ribasso
-
                 ########################################################################################################### A
+                ########################################################################################################### 
                 elif (
                     ma78_last < ma78_2_min_ago
                     and ma39_last > ma78_last
