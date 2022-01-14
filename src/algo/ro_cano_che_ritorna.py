@@ -166,6 +166,9 @@ class ro_cano_che_ritorna:
         self.algo_helper.info("deviation_range_4: {}".format(deviation_range_4))
         
         
+        deviation_range_x = (ma30_last / ma30_20_min_ago - 1) * 100 if ma30_20_min_ago else 0
+        self.algo_helper.info("deviation_range_x: {}".format(deviation_range_x))
+        
         
         
         
@@ -409,7 +412,11 @@ class ro_cano_che_ritorna:
                     and deviation_range_4 < 0.20
                     and deviation_range_4 > -0.20
                     
-                    # teoricamente potresti usare solo la deviation_range
+                    and deviation_range_x < 0.20
+                    and deviation_range_x > -0.20
+                    
+                    # deviation_range_x va da 0 a -20 min
+                    # teoricamente potresti usare solo la deviation_range !
                     # con deviation_rialzo_improvviso_5 > 0.20 non parte il BUY se trend leggermente ribassista
                 ):
 
