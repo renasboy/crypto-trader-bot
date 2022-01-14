@@ -665,15 +665,16 @@ class ro_cano_che_ritorna:
                     ma78_last >= ma78_2_min_ago
                     and deviation_buy3 > 0.13
                     and ma3_last > ma13_last
-                    and deviation_ma7_sopra_ma40 > 0.13
+                    and deviation_ma7_sopra_ma40 > 0.11
                     and ma4_last > ma9_last
                     and ma4_last > ma50_last
                     and ma2_last > ma2_2_min_ago
                     and ma6_last > ma15_last
                     and ma7_last > ma25_last
-                    and deviation_bellissima > 0.163
+                    and deviation_bellissima > 0.12
+                    
                     # deviation_bellissima = 6/30
-                    # questa deviation serve a spezzare la catena dei buy - effetti laterali.
+                    # spezzare la catena dei buy - effetti laterali.
                     # se e' arrivato il buy 5 e' molto probabile che il trend sia consolidato
                     # e, a questo punto, non importa se compra con un + 0.10 piu' in alto. NON FA UNA GRANDE DIFFERENZA !
                 ):
