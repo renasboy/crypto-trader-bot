@@ -2533,10 +2533,10 @@ class maddog:
 
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and (ma3_prev > ma45_prev and ma3_last < ma45_last)
+                        and (ma3_prev > ma33_prev and ma3_last < ma33_last)
                         and deviation_sell > 1.21
                     ):
-                        sell = "session 3-4-x SELL (21-60 min) con ma50 > and incrocio 3-45 and deviation_sell > 1.21 - riga 3061"
+                        sell = "session 3-4-x SELL (21-60 min) con ma50 > and incrocio 3-33 and deviation_sell > 1.21 - riga 3061"
                         action = "sell"
 
                     ##################################################################### con trend discendente
@@ -2608,23 +2608,23 @@ class maddog:
 
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and (ma3_prev > ma39_prev and ma3_last < ma39_last)
+                        and (ma3_prev > ma33_prev and ma3_last < ma33_last)
                         and deviation_sell > 0.81
                         and deviation_sell < 1.49
                     ):
 
-                        sell = "session 3-4-x SELL da 60 a 90 min con ma50 > and incrocio 3-39 and deviation_sell 0.81 - 1.49 - riga 3170"
+                        sell = "session 3-4-x SELL da 60 a 90 min con ma50 > and incrocio 3-33 and deviation_sell 0.81 - 1.49 - riga 3170"
                         action = "sell"
 
                         # ma ricordati che in diverse occasioni 3-48 mi ha evitato la ricompra e la rivendita conseguente con perdita !
 
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and (ma3_prev > ma33_prev and ma3_last < ma33_last)
+                        and (ma3_prev > ma30_prev and ma3_last < ma30_last)
                         and deviation_sell > 1.50
                     ):
 
-                        sell = "session 3-4-x SELL da 60 a 90 min con ma50 > incrocio 3-33 and deviation_sell > 1.50 - riga 3182"
+                        sell = "session 3-4-x SELL da 60 a 90 min con ma50 > incrocio 3-30 and deviation_sell > 1.50 - riga 3182"
                         action = "sell"
 
                     ######################################################################################## con trend discendente
@@ -2680,23 +2680,23 @@ class maddog:
 
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and (ma3_prev > ma48_prev and ma3_last < ma48_last)
+                        and (ma3_prev > ma33_prev and ma3_last < ma33_last)
                         and deviation_sell > 0.70
                         and deviation_sell < 1.49
                     ):
 
-                        sell = "session 3-4-x SELL dopo 90 min con ma50 > incrocio 3-48 (!) and deviation_sell 0.70 - 1.49 - riga 3265"
+                        sell = "session 3-4-x SELL dopo 90 min con ma50 > incrocio 3-33 (!) and deviation_sell 0.70 - 1.49 - riga 3265"
                         action = "sell"
 
                         # ma 3-48 mi evita la ricompra e la rivendita con perdita !
 
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and (ma3_prev > ma48_prev and ma3_last < ma48_last)
+                        and (ma3_prev > ma30_prev and ma3_last < ma30_last)
                         and deviation_sell > 1.50
                     ):
 
-                        sell = "session 3-4-x SELL dopo 90 min con ma50 > incrocio 3-48 (!) and deviation_sell > 1.50 - riga 3277"
+                        sell = "session 3-4-x SELL dopo 90 min con ma50 > incrocio 3-30 (!) and deviation_sell > 1.50 - riga 3277"
                         action = "sell"
 
                     ######################################################################################## con trend discendente
