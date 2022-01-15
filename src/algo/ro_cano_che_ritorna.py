@@ -2614,12 +2614,12 @@ class ro_cano_che_ritorna:
 
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and ma3_last < ma16_last
+                        and ma3_last < ma15_last
                         and deviation_sell > 0.30
                         and deviation_sell < 0.90
                         # deviation_sell = ma3_last/last_trade_price
                     ):
-                        sell = "session 3-4-x SELL (21-60 min) con ma50 > and 3<16 (no incrocio 3-13) and deviation_sell 0.30 - 0.90 ELASTICO ALLA RONALDO - riga 2515"
+                        sell = "session 3-4-x SELL (21-60 min) con ma50 > and 3<15 (no incrocio 3-15) and deviation_sell 0.30 - 0.90 ELASTICO ALLA RONALDO - riga 2515"
                         action = "sell"
 
                     elif (
@@ -2700,11 +2700,11 @@ class ro_cano_che_ritorna:
 
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and (ma3_prev > ma15_prev and ma3_last < ma15_last)
+                        and ma3_last < ma15_last
                         and deviation_sell > 0.35
                         and deviation_sell < 0.80
                     ):
-                        sell = "session 3-4-x SELL dopo 60 min con ma50> and incrocio 3-13 and deviation_sell 0.35-0.80 RABONA ALLA RONALDO ( ma15 invece di ma13) - riga 2600"
+                        sell = "session 3-4-x SELL dopo 60 min con ma50> and 3<15 and deviation_sell 0.35-0.80 RABONA ALLA RONALDO ( ma15 invece di ma13 !) - riga 2600"
                         action = "sell"
 
                     elif (
