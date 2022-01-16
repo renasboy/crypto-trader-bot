@@ -55,6 +55,12 @@ class maddog:
         ma8_4_min_ago = self.algo_helper.ma_minutes_ago(8, 4)
         ma13_2_min_ago = self.algo_helper.ma_minutes_ago(13, 2)
         ma25_2_min_ago = self.algo_helper.ma_minutes_ago(25, 2)
+        
+        ma30_10_min_ago = self.algo_helper.ma_minutes_ago(30, 10)
+        ma30_20_min_ago = self.algo_helper.ma_minutes_ago(30, 20)
+        ma30_30_min_ago = self.algo_helper.ma_minutes_ago(30, 30)
+        ma30_40_min_ago = self.algo_helper.ma_minutes_ago(30, 40)
+        
         ma33_5_min_ago = self.algo_helper.ma_minutes_ago(33, 5)
         ma39_2_min_ago = self.algo_helper.ma_minutes_ago(39, 2)
         ma39_3_min_ago = self.algo_helper.ma_minutes_ago(39, 3)
@@ -123,6 +129,50 @@ class maddog:
         deviation_bellissima = (ma6_last / ma30_last - 1) * 100 if ma30_last else 0
         self.algo_helper.info("deviation_bellissima: {}".format(deviation_bellissima))
 
+        """ attenzione ! LO STO TESTANDO SU RCCR !
+        ############# deviation per comprare con un RIALZO IMPROVVISO
+        
+        
+        # 12 gennaio 2022 la ma2 arriva tardi ! DEVIATION RIALZO IMPROVVISO per adesso solo su RCCR
+        
+        
+        # formula DEVIATION_RIALZO_IMPROVVISO (per 40 min si muove in un range +0.25 -0.25 sintetizzato dalla ma30
+        deviation_rialzo_improvviso_1 = (price / ma30_last - 1) * 100 if ma30_last else 0
+        self.algo_helper.info("deviation_rialzo_improvviso_1: {}".format(deviation_rialzo_improvviso_1))
+        
+        deviation_rialzo_improvviso_2 = (price / ma30_10_min_ago - 1) * 100 if ma30_10_min_ago else 0
+        self.algo_helper.info("deviation_rialzo_improvviso_2: {}".format(deviation_rialzo_improvviso_2))
+        
+        deviation_rialzo_improvviso_3 = (price / ma30_20_min_ago - 1) * 100 if ma30_20_min_ago else 0
+        self.algo_helper.info("deviation_rialzo_improvviso_3: {}".format(deviation_rialzo_improvviso_3))
+        
+        deviation_rialzo_improvviso_4 = (price / ma30_30_min_ago - 1) * 100 if ma30_30_min_ago else 0
+        self.algo_helper.info("deviation_rialzo_improvviso_4: {}".format(deviation_rialzo_improvviso_4))
+        
+        deviation_rialzo_improvviso_5 = (price / ma30_40_min_ago - 1) * 100 if ma30_40_min_ago else 0
+        self.algo_helper.info("deviation_rialzo_improvviso_5: {}".format(deviation_rialzo_improvviso_5))
+        
+        
+        
+        deviation_range_1 = (ma30_last / ma30_10_min_ago - 1) * 100 if ma30_10_min_ago else 0
+        self.algo_helper.info("deviation_range_1: {}".format(deviation_range_1))
+        
+        deviation_range_2 = (ma30_10_min_ago / ma30_20_min_ago - 1) * 100 if ma30_20_min_ago else 0
+        self.algo_helper.info("deviation_range_2: {}".format(deviation_range_2))
+        
+        deviation_range_3 = (ma30_20_min_ago / ma30_30_min_ago - 1) * 100 if ma30_30_min_ago else 0
+        self.algo_helper.info("deviation_range_3: {}".format(deviation_range_3))
+        
+        deviation_range_4 = (ma30_30_min_ago / ma30_40_min_ago - 1) * 100 if ma30_40_min_ago else 0
+        self.algo_helper.info("deviation_range_4: {}".format(deviation_range_4))
+        
+        
+        deviation_range_x = (ma30_last / ma30_20_min_ago - 1) * 100 if ma30_20_min_ago else 0
+        self.algo_helper.info("deviation_range_x: {}".format(deviation_range_x))
+        
+        """
+        
+        
         ################################################################################################################## deviation per comprare
 
         # formula DEVIATION_buy1 per la compra 1
@@ -342,7 +392,40 @@ class maddog:
                     action = "buy"
                     percentage = 10
                     # deviation_buy1 = ma13_last/ma39_last
+                
+                """   attenzione ! LO STO TESTANDO SU RCCR ! 
+                ########################################################################################################### compra durante un rialzo improvviso ! 
+                ########################################################################################################### con ma30 che ha 40 min di andamento laterale
+                ########################################################################################################### PER ADESSO SOLO SUL BUY 1
+                elif (    
+                    deviation_rialzo_improvviso_1 > 0.20
+                    and deviation_rialzo_improvviso_2 > 0.20
+                    and deviation_rialzo_improvviso_3 > 0.20
+                    and deviation_rialzo_improvviso_4 > 0.20
+                    and deviation_rialzo_improvviso_5 > 0.20
+                    
+                    and deviation_range_1 < 0.20
+                    and deviation_range_1 > -0.20
+                    and deviation_range_2 < 0.20
+                    and deviation_range_2 > -0.20
+                    and deviation_range_3 < 0.20
+                    and deviation_range_3 > -0.20
+                    and deviation_range_4 < 0.20
+                    and deviation_range_4 > -0.20
+                    and deviation_range_x < 0.20
+                    and deviation_range_x > -0.20
+                   
+                    # deviation_range_x va da 0 a -20 min
+                    # teoricamente potresti usare solo la deviation_range !
+                    # con deviation_rialzo_improvviso_5 > 0.20 non parte il BUY se trend leggermente ribassista
+                ):
 
+                    buy = "BUY 1 RIALZO IMPROVVISO - riga 421"
+                    action = "buy"
+                    percentage = 10
+                    # deviation_buy1 = ma13_last/ma39_last    
+                """"
+                    
                 ############################################################################################################ B
                 elif (
                     ma78_last < ma78_2_min_ago
