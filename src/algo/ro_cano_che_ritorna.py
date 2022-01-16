@@ -312,19 +312,15 @@ class ro_cano_che_ritorna:
             ###########################################################################################################################################
             #   B U Y
             ###########################################################################################################################################
-           
-            #######################################################################################################
+          
             percentage = self.buy_percentage
             # NON TOCCARE  ! DI DEFAULT E' IL 2%
             #######################################################################################################
            
-            
             # in futuro
-            
             # MACD sempre con aggiunta di ma 13-25 (come studio) (III° cane)
             # TOGLIERE TUTTI GLI INCROCI AL BUY ! se 13 > 100 NON INCROCERA' MAI ! INCROCIO 13-100 DIVENTA 13>100 !
             
-         
             ######################################################################################################## COMPRA sessione 1
             # BUY 1 con "percentage" 20
             if self.session == 1:
@@ -346,7 +342,7 @@ class ro_cano_che_ritorna:
                     # and deviation_ma13_sopra_ma25 > 0.07 TOLTA PROVVISORIAMENTE vedi BUY ore 10:47 del 23 nov 2021 (E' ARRIVATA MOLTO TARDI)
                 ):
 
-                    buy = "BUY 1 con 69 > 100 and deviation_bellissima > 0.163 riga 355"
+                    buy = "BUY 1 con 69 > 100 and deviation_bellissima > 0.163 riga 345"
                     action = "buy"
                     percentage = 20
 
@@ -364,7 +360,7 @@ class ro_cano_che_ritorna:
                     and deviation_ma13_sopra_ma25 > 0.07
                     # quando 13-100 si incrociano price ma2 e ma4 sono gia' in ribasso
                 ):
-                    buy = "BUY 1 con 13>69 e ma72> 2 min ago (!) riga 373"
+                    buy = "BUY 1 con 13>69 e ma72> 2 min ago (!) riga 363"
                     action = "buy"
                     percentage = 20
                 
@@ -379,7 +375,7 @@ class ro_cano_che_ritorna:
                     and ma2_last > ma2_2_min_ago
                     and ma4_last > ma4_2_min_ago
                 ):
-                    buy = "BUY 1 con 13>50 and DEVIATION BUY 1 ALTA e ma78> - riga 388"
+                    buy = "BUY 1 con 13>50 and DEVIATION BUY 1 ALTA e ma78> - riga 378"
                     action = "buy"
                     percentage = 20
 
@@ -412,7 +408,7 @@ class ro_cano_che_ritorna:
                     # con deviation_rialzo_improvviso_5 > 0.20 non parte il BUY se trend leggermente ribassista
                 ):
 
-                    buy = "BUY 1 RIALZO IMPROVVISO - riga 421"
+                    buy = "BUY 1 RIALZO IMPROVVISO - riga 411"
                     action = "buy"
                     percentage = 10
                     # deviation_buy1 = ma13_last/ma39_last
@@ -432,7 +428,7 @@ class ro_cano_che_ritorna:
                     and deviation_ma3_sopra_ma7 > 0.05
                 ):
 
-                    buy = "BUY 1 con ma78< and 39>78 and DEVIATION BUY 1 BASSA riga 441"
+                    buy = "BUY 1 con ma78< and 39>78 and DEVIATION BUY 1 BASSA riga 431"
                     action = "buy"
                     percentage = 10
                     # deviation_buy1 = ma13_last/ma39_last
@@ -449,7 +445,7 @@ class ro_cano_che_ritorna:
                     and deviation_ma13_sopra_ma25 > 0.05
                 ):
 
-                    buy = "se ma78< - BUY 1 con incrocio 39>78 - riga 460"
+                    buy = "se ma78< - BUY 1 con incrocio 39>78 - riga 448"
                     action = "buy"
                     percentage = 10
                     # deviation_buy1 = ma13_last/ma39_last
@@ -470,7 +466,7 @@ class ro_cano_che_ritorna:
                     and deviation_buy_crollo_1 < -2.30
                     and ma3_last > ma7_last
                 ):
-                    buy = "BUY DURANTE IL CROLLO - modo 1 riga 481"
+                    buy = "BUY DURANTE IL CROLLO - modo 1 riga 469"
                     action = "buy"
                     percentage = 20
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
@@ -482,7 +478,7 @@ class ro_cano_che_ritorna:
                     and deviation_buy_crollo_1 < -1.70
                     and deviation_buy_crollo_2 > 0.11
                 ):
-                    buy = "BUY DURANTE IL CROLLO - modo 2 riga 493"
+                    buy = "BUY DURANTE IL CROLLO - modo 2 riga 481"
                     action = "buy"
                     percentage = 20
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
@@ -496,7 +492,7 @@ class ro_cano_che_ritorna:
                     and deviation_buy_crollo_1 > -1.50
                     and ma6_last > ma30_last
                 ):
-                    buy = "BUY DURANTE UN RIBASSO che non e' un crollo ! - riga 508"
+                    buy = "BUY DURANTE UN RIBASSO che non e' un crollo ! - riga 495"
                     action = "buy"
                     percentage = 20
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
@@ -515,7 +511,7 @@ class ro_cano_che_ritorna:
                     and price > price_2_min_ago
                     and ma3_last > ma40_last
                 ):
-                    buy = "BUY 2A riga 515"
+                    buy = "BUY 2A riga 514"
                     action = "buy"
                     percentage = 70
 
@@ -534,7 +530,7 @@ class ro_cano_che_ritorna:
                     and price > price_2_min_ago
                     and ma3_last > ma40_last
                 ):
-                    buy = "BUY 2B riga 553"
+                    buy = "BUY 2B riga 533"
                     action = "buy"
                     percentage = 50
                     # deviation_buy_ma3_sopra_ma13 > x e' fondamentale !
@@ -552,7 +548,7 @@ class ro_cano_che_ritorna:
                     and ma3_last > ma40_last
                     and ma4_last > ma78_last
                 ):
-                    buy = "BUY 2C riga 571"
+                    buy = "BUY 2C riga 551"
                     action = "buy"
                     percentage = 50
                     # deviation_buy2 = ma8_last / ma50
@@ -571,7 +567,7 @@ class ro_cano_che_ritorna:
                     and ma2_last > ma2_2_min_ago
                     and ma7_last > ma25_last
                 ):
-                    buy = "BUY 3A con ma78 > riga 568"
+                    buy = "BUY 3A con ma78 > riga 570"
                     action = "buy"
                     percentage = 50
 
@@ -589,7 +585,7 @@ class ro_cano_che_ritorna:
                     and ma2_last > ma2_2_min_ago
                     and ma7_last > ma25_last
                 ):
-                    buy = "BUY 3B RIVOLUZIONARIO se ma39 > ma78- riga 586"
+                    buy = "BUY 3B RIVOLUZIONARIO se ma39 > ma78- riga 588"
                     action = "buy"
                     percentage = 50
                     # deviation_buy3 = ma4_last/ma30_last
@@ -607,15 +603,14 @@ class ro_cano_che_ritorna:
                     and ma2_last > ma2_2_min_ago
                     and ma7_last > ma25_last
                 ):
-                    buy = "BUY 3C RIVOLUZIONARIO se ma78 < - riga 604"
+                    buy = "BUY 3C RIVOLUZIONARIO se ma78 < - riga 606"
                     action = "buy"
                     percentage = 40
                     # deviation_buy3 = ma4_last/ma30_last
             
-            
             # ###############################################################################################################       COMPRA sessione 4
             # --------------------------------------------------------------------------------------------------------------------- deviation piu' alte se ma 78 < !
-
+           
             elif self.session == 4:
 
                 if (
@@ -628,7 +623,7 @@ class ro_cano_che_ritorna:
                     and ma2_last > ma2_2_min_ago
                     and ma7_last > ma25_last
                 ):
-                    buy = "BUY 4A con ma 78 > riga 625"
+                    buy = "BUY 4A con ma 78 > riga 626"
                     action = "buy"
                     percentage = 50
 
@@ -643,7 +638,7 @@ class ro_cano_che_ritorna:
                     and ma2_last > ma2_2_min_ago
                     and ma7_last > ma25_last
                 ):
-                    buy = "BUY 4B RIVOLUZIONARIO con ma78 > - riga 640"
+                    buy = "BUY 4B RIVOLUZIONARIO con ma78 > - riga 641"
                     action = "buy"
                     percentage = 50
                     # deviation_buy3 = ma4_last/ma30_last
@@ -659,13 +654,12 @@ class ro_cano_che_ritorna:
                     and ma2_last > ma2_2_min_ago
                     and ma7_last > ma25_last
                 ):
-                    buy = "BUY 4C RIVOLUZIONARIO con ma78 < - riga 656"
+                    buy = "BUY 4C RIVOLUZIONARIO con ma78 < - riga 657"
                     action = "buy"
                     percentage = 50
                     # deviation_buy3 = ma4_last/ma30_last
             
-            
-            
+           
             ############################################################################################################  compra sessione 5 in poi
             #  piu' alto il BUY - "effetti laterali"
 
