@@ -153,7 +153,6 @@ class maddog:
         self.algo_helper.info("deviation_rialzo_improvviso_5: {}".format(deviation_rialzo_improvviso_5))
         
         
-        
         deviation_range_1 = (ma30_last / ma30_10_min_ago - 1) * 100 if ma30_10_min_ago else 0
         self.algo_helper.info("deviation_range_1: {}".format(deviation_range_1))
         
@@ -171,8 +170,7 @@ class maddog:
         self.algo_helper.info("deviation_range_x: {}".format(deviation_range_x))
         
         """
-        
-        
+       
         ################################################################################################################## deviation per comprare
 
         # formula DEVIATION_buy1 per la compra 1
@@ -304,9 +302,8 @@ class maddog:
 
         if self.open and self.session and last_trade_action != "buy":
             
+           
             
-            
-            ###########################################################################################################################################
             ###########################################################################################################################################
             ###########################################################################################################################################
             #   B U Y
@@ -319,20 +316,12 @@ class maddog:
             ###########################################################################################################################################
             ###########################################################################################################################################
             
-            
             # in futuro
-          
-            # buy spazio-tempo ma con aggiunta di ma 13-25
+         
             # MACD sempre con aggiunta di ma 13-25 (come studio) (III° cane)
             # TOGLIERE TUTTI GLI INCROCI AL BUY ! se 13 > 100 NON INCROCERA' MAI ! INCROCIO 13-100 DIVENTA 13>100 !
-
             # analisi dei dati !
-            
-            
-           
-        
-            
-            
+          
             ######################################################################################################## COMPRA sessione 1
             # BUY 1 con "percentage" 20
             if self.session == 1:
@@ -393,8 +382,8 @@ class maddog:
                     # deviation_buy1 = ma13_last/ma39_last
 
                 ################################################################################################################## compra durante il ribasso
-
                 ########################################################################################################### A
+                
                 elif (
                     ma78_last < ma78_2_min_ago
                     and ma39_last > ma78_last
@@ -494,7 +483,9 @@ class maddog:
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     # deviation_buy_crollo_2 = ma3_last / ma13_last
                     
-                """   
+                """ 
+                #BUY DURANTE UN RIBASSO CHE NON E' UN CROLLO ! (compare stammi vicino!)
+                
                 elif (
                     ma2_last > ma2_2_min_ago
                     and deviation_buy_crollo_1 < -0.60
