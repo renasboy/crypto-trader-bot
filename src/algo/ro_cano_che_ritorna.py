@@ -490,9 +490,9 @@ class ro_cano_che_ritorna:
                     ma2_last > ma2_2_min_ago
                     and deviation_buy_crollo_1 < -0.60
                     and deviation_buy_crollo_1 > -1.50
-                    and ma6_last > ma30_last
+                    and deviation_bellissima > 0.17
                 ):
-                    buy = "BUY DURANTE UN RIBASSO che non e' un crollo ! - riga 495"
+                    buy = "BUY DURANTE UN RIBASSO che non e' un crollo ! con deviation_bellissima > 0.17 - riga 495"
                     action = "buy"
                     percentage = 20
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
