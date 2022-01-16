@@ -122,7 +122,7 @@ class ro_cano_che_ritorna:
         # formula deviation
         deviation = (ma4_last / last_trade_price - 1) * 100 if last_trade_price else 0
         self.algo_helper.info("deviation: {}".format(deviation))
-        #################################################################################################################
+        
         #################################################################################################################
         #################################################################################################################
         
@@ -151,7 +151,6 @@ class ro_cano_che_ritorna:
         self.algo_helper.info("deviation_rialzo_improvviso_5: {}".format(deviation_rialzo_improvviso_5))
         
         
-        
         deviation_range_1 = (ma30_last / ma30_10_min_ago - 1) * 100 if ma30_10_min_ago else 0
         self.algo_helper.info("deviation_range_1: {}".format(deviation_range_1))
         
@@ -167,10 +166,7 @@ class ro_cano_che_ritorna:
         
         deviation_range_x = (ma30_last / ma30_20_min_ago - 1) * 100 if ma30_20_min_ago else 0
         self.algo_helper.info("deviation_range_x: {}".format(deviation_range_x))
-        
-        
-        #################################################################################################################
-        #################################################################################################################
+       
         #################################################################################################################
         ################################################################################################################## deviation per comprare
         
@@ -273,9 +269,7 @@ class ro_cano_che_ritorna:
         # formula deviation_ma25 per vendere un po' piu' giu' di ma25 (per il buy 3-4-5 con ma 39 ha fatto -0.89 !)
         deviation_ma25 = (ma3_last / ma25_last - 1) * 100 if ma25_last else 0
         self.algo_helper.info("deviation_ma25: {}".format(deviation_ma25))
-        
-        
-        
+       
         ######################################################################################################## TUTTO COMINCIA DA QUA !
         # dal non fare niente !
 
@@ -290,8 +284,10 @@ class ro_cano_che_ritorna:
 
         # APRE E CHIUDE GABBIA
 
-        if deviation_1_gabbia > -0.29 or deviation_buy_crollo_1 < -1.50:
-
+        #if deviation_1_gabbia > -0.29 or deviation_buy_crollo_1 < -1.50:
+        if deviation_1_gabbia > -0.29 or deviation_buy_crollo_1 < -1.50 or (-1.50 < deviation_buy_crollo_1 < -0.60):    
+        # compare non mi abbandonare !
+        
             # deviation_1_gabbia = ma8_last / ma50_last
             # deviation_buy_crollo_1 = ma8_last / ma78_last
 
@@ -316,14 +312,12 @@ class ro_cano_che_ritorna:
             ###########################################################################################################################################
             #   B U Y
             ###########################################################################################################################################
-            
-            #######################################################################################################
+           
             #######################################################################################################
             percentage = self.buy_percentage
             # NON TOCCARE  ! DI DEFAULT E' IL 2%
             #######################################################################################################
-            #######################################################################################################
-            
+           
             
             # in futuro
             
@@ -443,8 +437,6 @@ class ro_cano_che_ritorna:
                     percentage = 10
                     # deviation_buy1 = ma13_last/ma39_last
                 
-                
-                
                 ############################################################################################################ B
                 elif (
                     ma78_last < ma78_2_min_ago
@@ -495,9 +487,20 @@ class ro_cano_che_ritorna:
                     percentage = 20
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     # deviation_buy_crollo_2 = ma3_last / ma13_last
-
-            ############################################################################################################
-
+                
+                
+                # BUY DURANTE UN RIBASSO CHE NON E' UN CROLLO ! (compare stammi vicino!)   
+                elif (
+                    ma2_last > ma2_2_min_ago
+                    and deviation_buy_crollo_1 < -0.60
+                    and deviation_buy_crollo_1 > -1.50
+                    and ma6_last > ma30_last
+                ):
+                    buy = "BUY DURANTE UN RIBASSO che non e' un crollo ! - riga 508"
+                    action = "buy"
+                    percentage = 20
+                    # deviation_buy_crollo_1 = ma8_last / ma78_last
+          
             #############################################################################################################      COMPRA sessione 2
 
             elif self.session == 2:
@@ -518,7 +521,8 @@ class ro_cano_che_ritorna:
 
                     # deviation_buy_ma3_sopra_ma13 > x e' fondamentale !
                     # deviation_buy2 = ma8_last/ma50_last
-
+                
+                
                 elif (
                     ma78_last < ma78_2_min_ago
                     and deviation_buy2 > 0.07
@@ -530,12 +534,14 @@ class ro_cano_che_ritorna:
                     and price > price_2_min_ago
                     and ma3_last > ma40_last
                 ):
-                    buy = "BUY 2B riga 533"
+                    buy = "BUY 2B riga 553"
                     action = "buy"
                     percentage = 50
                     # deviation_buy_ma3_sopra_ma13 > x e' fondamentale !
                     # deviation_buy2 = ma8_last/ma50_last
-
+                
+                
+                
                 elif (
                     deviation_buy2 > 0.13
                     and deviation_buy_ma3_sopra_ma13 > 0.10
@@ -546,13 +552,13 @@ class ro_cano_che_ritorna:
                     and ma3_last > ma40_last
                     and ma4_last > ma78_last
                 ):
-                    buy = "BUY 2C riga 549"
+                    buy = "BUY 2C riga 571"
                     action = "buy"
                     percentage = 50
                     # deviation_buy2 = ma8_last / ma50
 
             ############################################################################################################ COMPRA sessione 3
-
+          
             elif self.session == 3:
 
                 if (
