@@ -552,7 +552,38 @@ class maddog:
                     action = "buy"
                     percentage = 50
                     # deviation_buy2 = ma8_last / ma50
+                    
+                    
+                #################################################################################################################################    
+                # se il crollo continua dopo che ha venduto sell 1 durante il crollo - CI RIPROVA !     
+                
+                # BUY  PRIMO MODO DURANTE IL CROLLO
 
+                elif (
+                    ma2_last > ma2_2_min_ago
+                    and deviation_buy_crollo_1 < -2.30
+                    and ma3_last > ma7_last
+                ):
+                    buy = "BUY DURANTE IL CROLLO - modo 1 riga 469"
+                    action = "buy"
+                    percentage = 20
+                    # deviation_buy_crollo_1 = ma8_last / ma78_last
+
+                # BUY SECONDO MODO - DURANTE IL CROLLO - questa condizione e' entrata in azione ! ( e mi e' sembrata ben fatta !)
+
+                elif (
+                    ma2_last > ma2_2_min_ago
+                    and deviation_buy_crollo_1 < -1.70
+                    and deviation_buy_crollo_2 > 0.11
+                ):
+                    buy = "BUY DURANTE IL CROLLO - modo 2 riga 481"
+                    action = "buy"
+                    percentage = 20
+                    # deviation_buy_crollo_1 = ma8_last / ma78_last
+                    # deviation_buy_crollo_2 = ma3_last / ma13_last
+            
+            
+            
             ############################################################################################################ COMPRA sessione 3
 
             elif self.session == 3:
