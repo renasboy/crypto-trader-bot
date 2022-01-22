@@ -1437,68 +1437,73 @@ class maddog:
             # NO deviation 78 !
             # QUALCHE VOLTA ma3-ma39 NON HANNO INCROCIATO allora per la vendita con il DRIBBLING e il DOPPIO PASSO ALLA RONALDO ho risolto con 3<39
             # il CUSCINO DELL' ANGELO CUSTODE e di SANT' ANTONIO mi proteggono ! (vendita con medie lunghe)
+            
+            
+            # ATTENZIONE sposto di 4 posti in avanti le 5 condizioni eccezionali. - COMPARE PREGA PER ME !
+            # adesso prende solo le ultime 5 condizioni eccezionali anche per la sessione 1
+            # che si puo' aumentare la perdita tollerata poiche' lavora solo con il 10%-20% del capitale
+            
+                # 1 - ro cano VENDE CON UN SALVAGENTE
+                elif deviation_ma39 < -0.25 and ma50_last > ma50_2_min_ago:
 
-            # 1 - ro cano VENDE CON UN SALVAGENTE
-            elif deviation_ma39 < -0.25 and ma50_last > ma50_2_min_ago:
+                    sell = "sessione 1 SELL SALVAGENTE 3-39 con ma50 < riga 1444"
+                    action = "sell"
 
-                sell = "sessione 1 SELL SALVAGENTE 3-39 con ma50 < riga 1444"
-                action = "sell"
+                # deviation_ma39 = ma4_last / ma39_last QUESTA HA VENDUTO NEL CROLLO IMPROVVISO DI 1 MINUTO (con -2.06% !!!)!
 
-            # deviation_ma39 = ma4_last / ma39_last QUESTA HA VENDUTO NEL CROLLO IMPROVVISO DI 1 MINUTO (con -2.06% !!!)!
+                # 2 - ro cano VENDE DURANTE UN CROLLO IMPROVVISO !
+                elif deviation < -0.62:
+                    sell = "sessione 1 SELL CROLLO IMPROVVISO - riga 1451"
+                    action = "sell"
 
-            # 2 - ro cano VENDE DURANTE UN CROLLO IMPROVVISO !
-            elif deviation < -0.62:
-                sell = "sessione 1 SELL CROLLO IMPROVVISO - riga 1451"
-                action = "sell"
+                    # deviation = ma4_last / last_trade_price
+                    # FORSE E' L' UNICA DEVIATION CHE MI POTRA' SALVARE DA UN CROLLO IMPROVVISO COME QUELLO DEL 3 NOVEMBRE 2021
+                    # -0.90 ha fatto fare una perdita di -1.46% il 19 dic 2021
 
-                # deviation = ma4_last / last_trade_price
-                # FORSE E' L' UNICA DEVIATION CHE MI POTRA' SALVARE DA UN CROLLO IMPROVVISO COME QUELLO DEL 3 NOVEMBRE 2021
-                # -0.90 ha fatto fare una perdita di -1.46% il 19 dic 2021
+                # 3 - ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma13 >
+                elif (
+                    seconds_since_last_trade > max_hold_time_in_seconds
+                    and ma2_last < last_trade_price
+                    and deviation < -0.40
+                    and ma13_last > ma13_2_min_ago
+                ):
 
-            # 3 - ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma13 >
-            elif (
-                seconds_since_last_trade > max_hold_time_in_seconds
-                and ma2_last < last_trade_price
-                and deviation < -0.40
-                and ma13_last > ma13_2_min_ago
-            ):
+                    sell = "sessione 1 SELL DOLCE ATTESA con ma13 > and deviation < -0.40 - riga 1449"
+                    action = "sell"
 
-                sell = "sessione 1 SELL DOLCE ATTESA con ma13 > and deviation < -0.40 - riga 1449"
-                action = "sell"
+                    # il fattore tempo - la dolce attesa - solo con trend ribassista
+                    # deviation = ma2_last / last_trade_price
+                    # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
 
-                # il fattore tempo - la dolce attesa - solo con trend ribassista
-                # deviation = ma2_last / last_trade_price
-                # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
+                # 4 - ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma13 <
+                elif (
+                    seconds_since_last_trade > max_hold_time_in_seconds
+                    and ma13_last < ma13_2_min_ago
+                    and deviation < -0.35
+                    and ma2_last < last_trade_price
+                ):
 
-            # 4 - ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma13 <
-            elif (
-                seconds_since_last_trade > max_hold_time_in_seconds
-                and ma13_last < ma13_2_min_ago
-                and deviation < -0.35
-                and ma2_last < last_trade_price
-            ):
+                    sell = "sessione 1 SELL DOLCE ATTESA con ma13 < and deviation < -0.35 - riga 1464"
+                    action = "sell"
 
-                sell = "sessione 1 SELL DOLCE ATTESA con ma13 < and deviation < -0.35 - riga 1464"
-                action = "sell"
+                    # il fattore tempo - la dolce attesa - solo con trend ribassista
+                    # deviation = ma2_last / last_trade_price
+                    # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
 
-                # il fattore tempo - la dolce attesa - solo con trend ribassista
-                # deviation = ma2_last / last_trade_price
-                # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
+                # 5 - ro cano VENDE " DOPO x MINUTI " and...
+                elif (
+                    seconds_since_last_trade > max_hold_time_in_seconds
+                    and ma8_last < ma50_last
+                    and deviation_sell < -0.49
+                ):
 
-            # 5 - ro cano VENDE " DOPO x MINUTI " and...
-            elif (
-                seconds_since_last_trade > max_hold_time_in_seconds
-                and ma8_last < ma50_last
-                and deviation_sell < -0.49
-            ):
-
-                sell = "sessione 1 SELL TEMPO e se ma8 < ma50 and deviation_sell < -0.49 - riga 1478"
-                action = "sell"
-                # ma13 troppo lenta !
-                # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
+                    sell = "sessione 1 SELL TEMPO e se ma8 < ma50 and deviation_sell < -0.49 - riga 1478"
+                    action = "sell"
+                    # ma13 troppo lenta !
+                    # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
 
             ########################################################################################################################### SESSIONE 2
-
+            # ALLA SESSIONE 2 MANCA UN ACQUISTO DURANTE IL CROLLO SE PER ES SESSIONE 1 HA GIA' VENDUTO MA IL TITOLO RESTA IN IPERVENDUTO
             elif self.session == 2:
 
                 ############################################################################################################# sessione 2 ( 0-3 min )
