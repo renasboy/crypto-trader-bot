@@ -276,7 +276,7 @@ class maddog:
         # APRE E CHIUDE GABBIA
 
         if deviation_1_gabbia > -0.29 or deviation_buy_crollo_1 < -1.50:
-        #if deviation_1_gabbia > -0.29 or deviation_buy_crollo_1 < -1.50 or (-1.50 < deviation_buy_crollo_1 < -0.60): 
+        #if deviation_1_gabbia > -0.29 or deviation_buy_crollo_1 < -1.50 or (-1.50 < deviation_buy_crollo_1 < -0.60):     CHIEDERE AL COMPARE 1
         
         
             # deviation_1_gabbia = ma8_last / ma50_last
@@ -381,7 +381,7 @@ class maddog:
 
                     # deviation_buy1 = ma13_last/ma39_last
 
-                """   attenzione ! LO STO TESTANDO SU RCCR ! 
+                """   attenzione ! LO STO TESTANDO SU RCCR !                                                                CHIEDERE AL COMPARE 2
                 ########################################################################################################### compra durante un rialzo improvviso ! 
                 ########################################################################################################### con ma30 che ha 40 min di andamento laterale
                 ########################################################################################################### PER ADESSO SOLO SUL BUY 1
@@ -484,8 +484,8 @@ class maddog:
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     # deviation_buy_crollo_2 = ma3_last / ma13_last
                
-                """ 
-                #BUY DURANTE UN RIBASSO CHE NON E' UN CROLLO ! (compare stammi vicino!)
+                """                
+                #BUY DURANTE UN RIBASSO CHE NON E' UN CROLLO ! (compare stammi vicino!)                                 CHIEDERE AL COMPARE 3
                 elif (
                     ma2_last > ma2_2_min_ago
                     and deviation_buy_crollo_1 < -0.60
@@ -1443,7 +1443,7 @@ class maddog:
             # il CUSCINO DELL' ANGELO CUSTODE e di SANT' ANTONIO mi proteggono ! (vendita con medie lunghe)
             
             
-            # ATTENZIONE sposto di 4 posti in avanti le 5 condizioni eccezionali. - COMPARE PREGA PER ME !
+            # ATTENZIONE sposto di 4 posti in avanti le 5 condizioni eccezionali. - COMPARE PREGA PER ME !                  CHIEDERE AL COMPARE 4
             # adesso prende solo le ultime 5 condizioni eccezionali anche per la sessione 1
             # che si puo' aumentare la perdita tollerata poiche' lavora solo con il 10%-20% del capitale
             
