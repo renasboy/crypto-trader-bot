@@ -746,7 +746,7 @@ class maddog:
             ###################################################################################################################################
             ###################################################################################################################################
 
-            # sell sessione 1 .................... righe  706 - 1593
+            # sell sessione 1 .................... righe  706 - 1593 
             # sell sessione 2 .................... righe 1604 - 2489
             # sell sessione 3-4-x ................ righe 2500 - 3386
 
@@ -769,7 +769,11 @@ class maddog:
             # > 1.21
 
             ####################################################################################################################### SESSIONE 1
-
+            
+            # al SELL 1 PUOI AUMENTARE LA PERDITA TOLLERATA POICHE' HAI SOLO IL 10%-20% DEL CAPITALE - eviterai un po' di sell e buy nel movimenti laterali !
+            # la perdita tollerata ovviamente va aumentata anche alle 5 vendite eccezonali del SELL 1 sperando che la nuova indentazione ha funzionato
+            # fino a questo momento vendevano SOLO le ULTIME 5 condizioni eccezionali 
+            
             ####################################################################################################################### sessione 1 ( 0 - 3 min )
 
             if self.session == 1:
