@@ -453,7 +453,7 @@ class maddog:
                 
                 
                 ##############################################################################################################################
-                # IMPORTANTISSIMO ! SOLO PER IL BUY 1 - PER COMPRARE DURANTE IL CROLLO - compa prega per me - ( cruise - david gilmour )
+                # IMPORTANTISSIMO ! - PER COMPRARE DURANTE IL CROLLO - compa prega per me - ( cruise - david gilmour )
                 ##############################################################################################################################
 
                 # entriamo nell' area dell' ipervenduto, compa !
@@ -483,7 +483,9 @@ class maddog:
                     percentage = 20
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     # deviation_buy_crollo_2 = ma3_last / ma13_last
-               
+                
+                
+                ######################################################################################################## per comprare durante un ribasso che non e' un crollo
                 """                
                 #BUY DURANTE UN RIBASSO CHE NON E' UN CROLLO ! (compare stammi vicino!)                                 CHIEDERE AL COMPARE 3
                 elif (
@@ -554,8 +556,8 @@ class maddog:
                     # deviation_buy2 = ma8_last / ma50
                     
                     
-                #################################################################################################################################    
-                # se il crollo continua dopo che ha venduto sell 1 durante il crollo - CI RIPROVA !     
+                ############################################################################################################ BUY 2 DURANTE IL CROLLO CHE CONTINUA    
+                # se il crollo continua dopo che ha venduto sell 1 durante il crollo - ro cano CI RIPROVA !     
                 
                 # BUY  PRIMO MODO DURANTE IL CROLLO
 
@@ -581,6 +583,22 @@ class maddog:
                     percentage = 20
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     # deviation_buy_crollo_2 = ma3_last / ma13_last
+                
+                
+                ######################################################################################################## per comprare durante un ribasso che non e' un crollo
+                """                
+                #BUY DURANTE UN RIBASSO CHE NON E' UN CROLLO ! (compare stammi vicino!)                                 CHIEDERE AL COMPARE 3
+                elif (
+                    ma2_last > ma2_2_min_ago
+                    and deviation_buy_crollo_1 < -0.60
+                    and deviation_buy_crollo_1 > -1.50
+                    and deviation_bellissima > 0.17
+                ):
+                    buy = "BUY DURANTE UN RIBASSO che non e' un crollo ! and deviation_bellissima > 0.17 -  riga 495"
+                    action = "buy"
+                    percentage = 20
+                    # deviation_buy_crollo_1 = ma8_last / ma78_last
+                """
             
             
             
