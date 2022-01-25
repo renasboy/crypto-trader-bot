@@ -363,9 +363,6 @@ class maddog:
                     buy = "BUY 1 con 13>69 e ma72> 2 min ago (!) riga 363"
                     action = "buy"
                     percentage = 20
-                
-                
-                # --------------------------------------------------------------    BUY 1 DURANTE IL RIALZO con 13-50 + deviation
                 elif (
                     deviation_buy1 > 0.25
                     and ma13_last > ma50_last
@@ -378,45 +375,6 @@ class maddog:
                     buy = "BUY 1 con 13>50 and DEVIATION BUY 1 ALTA e ma78> - riga 378"
                     action = "buy"
                     percentage = 20
-
-                    # deviation_buy1 = ma13_last/ma39_last
-
-                """   attenzione ! LO STO TESTANDO SU RCCR !                                                                CHIEDERE AL COMPARE 2
-                ########################################################################################################### compra durante un rialzo improvviso ! 
-                ########################################################################################################### con ma30 che ha 40 min di andamento laterale
-                ########################################################################################################### PER ADESSO SOLO SUL BUY 1
-                elif (    
-                    deviation_rialzo_improvviso_1 > 0.20
-                    and deviation_rialzo_improvviso_2 > 0.20
-                    and deviation_rialzo_improvviso_3 > 0.20
-                    and deviation_rialzo_improvviso_4 > 0.20
-                    and deviation_rialzo_improvviso_5 > 0.20
-                    
-                    and deviation_range_1 < 0.20
-                    and deviation_range_1 > -0.20
-                    and deviation_range_2 < 0.20
-                    and deviation_range_2 > -0.20
-                    and deviation_range_3 < 0.20
-                    and deviation_range_3 > -0.20
-                    and deviation_range_4 < 0.20
-                    and deviation_range_4 > -0.20
-                    and deviation_range_x < 0.20
-                    and deviation_range_x > -0.20
-                   
-                    # deviation_range_x va da 0 a -20 min
-                    # teoricamente potresti usare solo la deviation_range !
-                    # con deviation_rialzo_improvviso_5 > 0.20 non parte il BUY se trend leggermente ribassista
-                ):
-
-                    buy = "BUY 1 RIALZO IMPROVVISO - riga 411"
-                    action = "buy"
-                    percentage = 10
-                    # deviation_buy1 = ma13_last/ma39_last    
-                """"
-                
-                
-                ################################################################################################################## compra durante il ribasso
-                ########################################################################################################### A
                 elif (
                     ma78_last < ma78_2_min_ago
                     and ma39_last > ma78_last
@@ -427,13 +385,9 @@ class maddog:
                     and ma4_last > ma4_2_min_ago
                     and deviation_ma3_sopra_ma7 > 0.05
                 ):
-
                     buy = "BUY 1 con ma78< and 39>78 and DEVIATION BUY 1 BASSA riga 431"
                     action = "buy"
                     percentage = 10
-                    # deviation_buy1 = ma13_last/ma39_last
-                    
-                ############################################################################################################ B
                 elif (
                     ma78_last < ma78_2_min_ago
                     and ma39_last > ma78_last
