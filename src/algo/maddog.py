@@ -412,8 +412,8 @@ class maddog:
 
                 # entriamo nell' area dell' ipervenduto, compa !
                 # QUI LASCIO GLI INCROCI !
-
                 # BUY  PRIMO MODO DURANTE IL CROLLO
+                
 
                 elif (
                     ma2_last > ma2_2_min_ago
