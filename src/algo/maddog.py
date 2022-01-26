@@ -2465,11 +2465,11 @@ class maddog:
                     elif (
                         ma50_last >= ma50_2_min_ago
                         and ma3_last < ma9_last
-                        and deviation_sell > 0.25
+                        and deviation_sell > 0.27
                         and deviation_sell < 0.90
                         # deviation_sell = ma3_last/last_trade_price
                     ):
-                        sell = "SELL (5-12 min) con ma50 >  3<9 and deviation_sell 0.25 - 0.90 - DRIBBLING ALLA RONALDO - riga 2414"
+                        sell = "SELL (5-12 min) con ma50 >  3<9 and deviation_sell 0.27 - 0.90 - DRIBBLING ALLA RONALDO - riga 2414"
                         action = "sell"
 
                     elif (
