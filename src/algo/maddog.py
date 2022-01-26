@@ -1243,42 +1243,42 @@ class maddog:
 
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and ma4_last < ma30_last
+                        and ma4_last < ma15_last
                         and deviation_sell > 0.30
                         and deviation_sell < 0.90
                         # deviation_sell = ma3_last/last_trade_price
                     ):
-                        sell = "sessione 1 SELL (21-60 min) con ma50 > and 4 < 30 (no incrocio 3-13) and deviation_sell 0.30 - 0.90 ELASTICO ALLA RONALDO - riga 1212"
+                        sell = "sessione 1 SELL (21-60 min) con ma50 > and 4 < 15 (no incrocio 3-13) and deviation_sell 0.30 - 0.90 ELASTICO ALLA RONALDO - riga 1212"
                         action = "sell"
                         # dopo 26 minuti non c'e' piu' quello scatto in avanti - dribbling- che si verifica nei primi minuti
 
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and (ma3_prev > ma39_prev and ma3_last < ma39_last)
+                        and (ma3_prev > ma13_prev and ma3_last < ma13_last)
                         and deviation_sell > 0.91
                         and deviation_sell < 1.20
                         # deviation_sell = ma3_last/last_trade_price
                     ):
-                        sell = "sessione 1 SELL (21-60 min) con ma50 > and incrocio 3-39 and deviation_sell 0.91 - 1.20 - riga 1223"
-                        action = "sell"
-                        
-                        
-                    elif (
-                        ma50_last > ma50_2_min_ago
-                        and (ma3_prev > ma39_prev and ma3_last < ma39_last)
-                        and deviation_sell > 1.21
-                        and deviation_sell < 2.70
-                    ):
-                        sell = "sessione 1 SELL (21-60 min) con ma50 > and incrocio 3-39 and deviation_sell 1.21 - 2.70 - riga 1233"
+                        sell = "sessione 1 SELL (21-60 min) con ma50 > and incrocio 3-13 and deviation_sell 0.91 - 1.20 - riga 1223"
                         action = "sell"
                         
                         
                     elif (
                         ma50_last > ma50_2_min_ago
                         and (ma3_prev > ma11_prev and ma3_last < ma11_last)
+                        and deviation_sell > 1.21
+                        and deviation_sell < 2.70
+                    ):
+                        sell = "sessione 1 SELL (21-60 min) con ma50 > and incrocio 3-11 and deviation_sell 1.21 - 2.70 - riga 1233"
+                        action = "sell"
+                        
+                        
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and (ma3_prev > ma9_prev and ma3_last < ma9_last)
                         and deviation_sell > 2.71
                     ):
-                        sell = "sessione 1 SELL (21-60 min) con ma50 > and incrocio 3-11 and deviation_sell > 2.71 - riga 1242"
+                        sell = "sessione 1 SELL (21-60 min) con ma50 > and incrocio 3-9 and deviation_sell > 2.71 - riga 1242"
                         action = "sell"
 
                     ##################################################################### con trend discendente
