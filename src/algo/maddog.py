@@ -1862,20 +1862,20 @@ class maddog:
 
                     elif (
                         ma50_last >= ma50_2_min_ago
-                        and (ma3_prev > ma25_prev and ma3_last < ma25_last)
+                        and (ma3_prev > ma15_prev and ma3_last < ma15_last)
                         and deviation_sell > 0.91
                         and deviation_sell < 1.20
                         # deviation_sell = ma3_last/last_trade_price
                     ):
-                        sell = "sessione 2 SELL (12-21 min) con ma50 > and incrocio 3-25 and deviation_sell 0.91 - 1.20 - riga 1814"
+                        sell = "sessione 2 SELL (12-21 min) con ma50 > and incrocio 3-15 and deviation_sell 0.91 - 1.20 - riga 1814"
                         action = "sell"
 
                     elif (
                         ma50_last >= ma50_2_min_ago
-                        and (ma3_prev > ma39_prev and ma3_last < ma39_last)
+                        and (ma3_prev > ma13_prev and ma3_last < ma13_last)
                         and deviation_sell > 1.21
                     ):
-                        sell = "sessione 2 SELL (12-21 min) con ma50 > and incrocio 3-39 and deviation_sell > 1.21 - riga 1822"
+                        sell = "sessione 2 SELL (12-21 min) con ma50 > and incrocio 3-13 and deviation_sell > 1.21 - riga 1822"
                         action = "sell"
 
                     ##########################################################################################
@@ -1978,21 +1978,21 @@ class maddog:
 
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and (ma3_prev > ma39_prev and ma3_last < ma39_last)
+                        and (ma3_prev > ma15_prev and ma3_last < ma15_last)
                         and deviation_sell > 0.91
                         and deviation_sell < 1.20
                         # deviation_sell = ma3_last/last_trade_price
                     ):
-                        sell = "sessione 2 SELL (21-60 min) con ma50 > and incrocio 3-39 and deviation_sell 0.91 - 1.20 - riga 1930"
+                        sell = "sessione 2 SELL (21-60 min) con ma50 > and incrocio 3-15 and deviation_sell 0.91 - 1.20 - riga 1930"
                         action = "sell"
                     
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and (ma3_prev > ma39_prev and ma3_last < ma39_last)
+                        and (ma3_prev > ma15_prev and ma3_last < ma15_last)
                         and deviation_sell > 1.21
                         and deviation_sell < 2.70
                     ):
-                        sell = "sessione 2 SELL (21-60 min) con ma50 > and incrocio 3-39 and deviation_sell 1.21 - 2.70 - riga 1938"
+                        sell = "sessione 2 SELL (21-60 min) con ma50 > and incrocio 3-15 and deviation_sell 1.21 - 2.70 - riga 1938"
                         action = "sell"
                         
                         
@@ -2073,12 +2073,12 @@ class maddog:
 
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and (ma3_prev > ma39_prev and ma3_last < ma39_last)
+                        and (ma3_prev > ma15_prev and ma3_last < ma15_last)
                         and deviation_sell > 0.81
                         and deviation_sell < 1.49
                     ):
 
-                        sell = "sessione 2 SELL da 60 a 90 min con ma50 > and incrocio 3-39 and deviation_sell 0.81 - 1.49 - riga 2015"
+                        sell = "sessione 2 SELL da 60 a 90 min con ma50 > and incrocio 3-15 and deviation_sell 0.81 - 1.49 - riga 2015"
                         action = "sell"
 
                         # ma ricordati che in diverse occasioni 3-48 mi ha evitato la ricompra e la rivendita conseguente con perdita !
@@ -2086,12 +2086,12 @@ class maddog:
                     
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and (ma3_prev > ma33_prev and ma3_last < ma33_last)
+                        and (ma3_prev > ma13_prev and ma3_last < ma13_last)
                         and deviation_sell > 1.50
                         and deviation_sell < 2.70
                     ):
 
-                        sell = "sessione 2 SELL da 60 a 90 min con ma50 > incrocio 3-33 and deviation_sell 1.50 - 2.70 - riga 2050"
+                        sell = "sessione 2 SELL da 60 a 90 min con ma50 > incrocio 3-13 and deviation_sell 1.50 - 2.70 - riga 2050"
                         action = "sell"
                         
                         
@@ -2157,12 +2157,12 @@ class maddog:
 
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and (ma3_prev > ma48_prev and ma3_last < ma48_last)
+                        and (ma3_prev > ma15_prev and ma3_last < ma15_last)
                         and deviation_sell > 0.70
                         and deviation_sell < 1.49
                     ):
 
-                        sell = "sessione 2 SELL dopo 90 min con ma50 > incrocio 3-48 (!) and deviation_sell 0.70 - 1.49 - riga 2087"
+                        sell = "sessione 2 SELL dopo 90 min con ma50 > incrocio 3-15 and deviation_sell 0.70 - 1.49 - riga 2087"
                         action = "sell"
 
                         # ma 3-48 mi evita la ricompra e la rivendita con perdita !
@@ -2170,12 +2170,12 @@ class maddog:
                     
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and (ma3_prev > ma33_prev and ma3_last < ma33_last)
+                        and (ma3_prev > ma13_prev and ma3_last < ma13_last)
                         and deviation_sell > 1.50
                         and deviation_sell < 2.70
                     ):
 
-                        sell = "sessione 2 SELL dopo 90 min con ma50 > incrocio 3-33 and deviation_sell 1.50 - 2.70 - riga 2134"
+                        sell = "sessione 2 SELL dopo 90 min con ma50 > incrocio 3-13 and deviation_sell 1.50 - 2.70 - riga 2134"
                         action = "sell"
                         
                         
