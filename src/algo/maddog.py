@@ -3001,11 +3001,11 @@ class maddog:
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
                 and ma13_last < ma13_2_min_ago
-                and deviation < -0.35
+                and deviation < -0.36
                 and ma2_last < last_trade_price
             ):
 
-                sell = "session 3-4-x SELL DOLCE ATTESA con ma13 < and deviation < -0.35 - riga 2877"
+                sell = "session 3-4-x SELL DOLCE ATTESA con ma13 < and deviation < -0.36 - riga 2877"
                 action = "sell"
 
                 # il fattore tempo - la dolce attesa - solo con trend ribassista
