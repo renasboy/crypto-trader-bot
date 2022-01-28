@@ -1787,9 +1787,9 @@ class maddog:
                     elif (
                         ma50_last < ma50_2_min_ago
                         and (ma3_prev > ma28_prev and ma3_last < ma28_last)
-                        and deviation_sell < -0.30
+                        and deviation_sell < -0.31
                     ):
-                        sell = "sessione 2 SELL 12 (5-12 min) con ma50 < and incrocio 3-28 - riga 1735"
+                        sell = "sessione 2 SELL 12 (5-12 min) con ma50 < and incrocio 3-28 and deviation_sell < -0.31 - riga 1735"
                         action = "sell"
 
                         # incrocio 3 -28 e' fondamentale per evitare punto rosso sovrapposto al punto verde !
