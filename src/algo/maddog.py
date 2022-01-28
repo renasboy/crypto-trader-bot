@@ -65,6 +65,7 @@ class maddog:
         ma39_2_min_ago = self.algo_helper.ma_minutes_ago(39, 2)
         ma39_3_min_ago = self.algo_helper.ma_minutes_ago(39, 3)
         ma50_2_min_ago = self.algo_helper.ma_minutes_ago(50, 2)
+        ma69_2_min_ago = self.algo_helper.ma_minutes_ago(69, 2)
         ma72_2_min_ago = self.algo_helper.ma_minutes_ago(72, 2)
         ma78_2_min_ago = self.algo_helper.ma_minutes_ago(78, 2)
         ma78_4_min_ago = self.algo_helper.ma_minutes_ago(78, 4)
@@ -350,8 +351,8 @@ class maddog:
 
                 elif (
                     ma13_last > ma69_last
-                    and ma72_last >= ma72_2_min_ago
-                    and deviation_bellissima > 0.18
+                    and ma69_last >= ma69_2_min_ago
+                    and deviation_bellissima > 0.17
                     and price > price_2_min_ago
                     and ma2_last > ma2_2_min_ago
                     and ma3_last > ma3_3_min_ago
@@ -360,7 +361,7 @@ class maddog:
                     and deviation_ma13_sopra_ma25 > 0.07
                     # quando 13-100 si incrociano price ma2 e ma4 sono gia' in ribasso
                 ):
-                    buy = "BUY 1 con 13>69 e ma72> 2 min ago (!) riga 363"
+                    buy = "BUY 1 con 13>69 e ma69> 2 min ago (!) riga 363"
                     action = "buy"
                     percentage = 20
                 elif (
