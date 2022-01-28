@@ -444,7 +444,7 @@ class maddog:
                 ########################################################################################################### con ma30 che ha 40 min di andamento laterale
                 ########################################################################################################### PER ADESSO SOLO SUL BUY 1
                 elif (    
-                    deviation_rialzo_improvviso_1 > 0.20
+                    deviation_rialzo_improvviso_1 > 0.32
                     and deviation_rialzo_improvviso_2 > 0.20
                     and deviation_rialzo_improvviso_3 > 0.20
                     and deviation_rialzo_improvviso_4 > 0.20
@@ -466,7 +466,7 @@ class maddog:
                     # con deviation_rialzo_improvviso_5 > 0.20 non parte il BUY se trend leggermente ribassista
                 ):
 
-                    buy = "BUY 1 RIALZO IMPROVVISO - riga 411"
+                    buy = "BUY 1 RIALZO IMPROVVISO con 0.32 da 0.20 per evitare falsi acquisti guardando anche il 6-30 - riga 411"
                     action = "buy"
                     percentage = 10
                     # deviation_buy1 = ma13_last/ma39_last
