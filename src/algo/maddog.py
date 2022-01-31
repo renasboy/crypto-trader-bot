@@ -449,7 +449,7 @@ class maddog:
                     and deviation_rialzo_improvviso_2 > 0.20
                     and deviation_rialzo_improvviso_3 > 0.20
                     and deviation_rialzo_improvviso_4 > 0.20
-                    and deviation_rialzo_improvviso_5 > 0.20
+                    
                     
                     and deviation_range_1 < 0.20
                     and deviation_range_1 > -0.20
