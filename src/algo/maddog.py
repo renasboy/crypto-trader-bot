@@ -150,8 +150,7 @@ class maddog:
         deviation_rialzo_improvviso_4 = (price / ma30_30_min_ago - 1) * 100 if ma30_30_min_ago else 0
         self.algo_helper.info("deviation_rialzo_improvviso_4: {}".format(deviation_rialzo_improvviso_4))
         
-        deviation_rialzo_improvviso_5 = (price / ma30_40_min_ago - 1) * 100 if ma30_40_min_ago else 0
-        self.algo_helper.info("deviation_rialzo_improvviso_5: {}".format(deviation_rialzo_improvviso_5))
+        
         
         
         deviation_range_1 = (ma30_last / ma30_10_min_ago - 1) * 100 if ma30_10_min_ago else 0
