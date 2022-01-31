@@ -1948,14 +1948,14 @@ class maddog:
                     if (
                         ma50_last > ma50_2_min_ago
                         and ma2_last < ma2_2_min_ago
-                        and deviation_ma39 < -0.17
-                        or (deviation_sell < -0.16 and ma3_last < ma50_last)
+                        and deviation_ma39 < -0.18
+                        or (deviation_sell < -0.17 and ma3_last < ma50_last)
                         # and deviation_ma39 < -0.16 or (deviation_sell < 0.10 and ma3_last < ma39_last)
                         # and (ma3_prev > ma39_prev and ma3_last < ma39_last)
                         # and deviation_sell < -0.26
                         # deviation_sell = ma3_last/last_trade_price
                     ):
-                        sell = "sessione 2 SELL (21-60 min) con ma50 > and deviation_ma39 < -0.17 or (deviation_sell < -0.16 and ma3_last < ma50_last) - riga 1901"
+                        sell = "sessione 2 SELL (21-60 min) con ma50 > and deviation_ma39 < -0.18 or (deviation_sell < -0.17 and ma3_last < ma50_last) - riga 1901"
                         action = "sell"
 
                     elif (
