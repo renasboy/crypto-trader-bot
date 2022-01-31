@@ -212,7 +212,10 @@ class maddog:
         )
 
         ############################################################################################################################
-
+        # formula DEVIATION_buy_ma2_sopra_ma13 per comprare a una certa distanza da ma13
+        deviation_buy_ma2_sopra_ma13 = (ma2_last / ma13_last - 1) * 100 if ma13_last else 0
+        self.algo_helper.info("deviation_buy_ma2_sopra_ma13: {}".format(deviation_buy_ma2_sopra_ma13))
+        
         # formula DEVIATION_buy_ma3_sopra_ma13 per comprare a una certa distanza da ma13
         deviation_buy_ma3_sopra_ma13 = (
             (ma3_last / ma13_last - 1) * 100 if ma13_last else 0
@@ -595,6 +598,7 @@ class maddog:
                 if (
                     ma78_last >= ma78_2_min_ago
                     and deviation_buy3 > 0.12
+                    and deviation_buy_ma2_sopra_ma13 > 0.16
                     and ma3_last > ma13_last
                     and deviation_ma4_sopra_ma30 > 0.15
                     and ma4_last > ma9_last
