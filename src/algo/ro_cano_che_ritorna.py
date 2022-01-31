@@ -147,8 +147,7 @@ class ro_cano_che_ritorna:
         deviation_rialzo_improvviso_4 = (price / ma30_30_min_ago - 1) * 100 if ma30_30_min_ago else 0
         self.algo_helper.info("deviation_rialzo_improvviso_4: {}".format(deviation_rialzo_improvviso_4))
         
-        deviation_rialzo_improvviso_5 = (price / ma30_40_min_ago - 1) * 100 if ma30_40_min_ago else 0
-        self.algo_helper.info("deviation_rialzo_improvviso_5: {}".format(deviation_rialzo_improvviso_5))
+        
         
         
         deviation_range_1 = (ma30_last / ma30_10_min_ago - 1) * 100 if ma30_10_min_ago else 0
@@ -390,7 +389,7 @@ class ro_cano_che_ritorna:
                     and deviation_rialzo_improvviso_2 > 0.20
                     and deviation_rialzo_improvviso_3 > 0.20
                     and deviation_rialzo_improvviso_4 > 0.20
-                    and deviation_rialzo_improvviso_5 > 0.20
+                    
                     
                     and deviation_range_1 < 0.20
                     and deviation_range_1 > -0.20
