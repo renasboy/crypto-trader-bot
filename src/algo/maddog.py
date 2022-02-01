@@ -1318,9 +1318,18 @@ class maddog:
                     elif (
                         ma50_last < ma50_2_min_ago
                         and (ma3_prev > ma18_prev and ma3_last < ma18_last)
-                        and deviation_sell > 0.23
+                        and deviation_sell > 0.30
                     ):
-                        sell = "sessione 1 SELL eventuale guadagno durante il crollo (21-60 min) con ma50 < incrocio 3 - 18 and deviation_sell > 0.23 - riga 1280"
+                        sell = "sessione 1 SELL eventuale guadagno durante il crollo (21-60 min) con ma50 < incrocio 3 - 18 and deviation_sell > 0.30 - riga 1280"
+                        action = "sell"
+                        
+                        
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and (ma3_prev > ma18_prev and ma3_last < ma18_last)
+                        and deviation_sell < -0.18
+                    ):
+                        sell = "sessione 1 SELL eventuale guadagno durante il crollo (21-60 min) con ma50 < incrocio 3 - 18 and deviation_sell < -0.18 - riga 1281"
                         action = "sell"
                 
                 ##############################################################################################################################  SESSIONE 1 ( da 60 a 90 min )
