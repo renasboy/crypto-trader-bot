@@ -98,8 +98,8 @@ class maddog:
         # importante : dolce attesa
 
         # VENDE DOPO x SECONDI - ro cano torna a casa - (ma c'e' anche un "e se")
-        max_hold_time_in_seconds = 300
-        #  5 minuti * 60 = 300
+        max_hold_time_in_seconds = 270
+        #  4 minuti * 60 = 280 + 30 secondi = 270 secondi
 
         #########################################################################################################################################################
         #########################################################################################################################################################
@@ -3011,7 +3011,7 @@ class maddog:
                 # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
                 # max_hold_time_in_seconds = 300 = 5 min (con 6 min perdita di 0.90 %)
                 
-            # 4 - ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma25 <
+            # 4 - ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma13 <
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
                 and ma13_last < ma13_2_min_ago
@@ -3019,13 +3019,14 @@ class maddog:
                 and ma2_last < last_trade_price
             ):
 
-                sell = "session 3-4-x SELL DOLCE ATTESA con ma13 < and deviation < -0.36 - riga 2877"
+                sell = "session 3-4-x SELL DOLCE ATTESA 270 sec con ma13 < and deviation < -0.36 - riga 2877"
                 action = "sell"
 
                 # il fattore tempo - la dolce attesa - solo con trend ribassista
                 # deviation = ma2_last / last_trade_price
                 # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
-
+                # max_hold_time_in_seconds = 270 sec = 4 min e 1/2  (con 6 min perdita di 0.60 %)
+                
             # 5 - ro cano VENDE " DOPO x MINUTI " and...
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
