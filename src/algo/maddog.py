@@ -1329,7 +1329,7 @@ class maddog:
                         and (ma3_prev > ma18_prev and ma3_last < ma18_last)
                         and deviation_sell < -0.18
                     ):
-                        sell = "sessione 1 SELL eventuale guadagno durante il crollo (21-60 min) con ma50 < incrocio 3 - 18 and deviation_sell < -0.18 - riga 1281"
+                        sell = "sessione 1 SELL piccola perdita durante il crollo (21-60 min) con ma50 < incrocio 3 - 18 and deviation_sell < -0.18 - riga 1281"
                         action = "sell"
                 
                 ##############################################################################################################################  SESSIONE 1 ( da 60 a 90 min )
