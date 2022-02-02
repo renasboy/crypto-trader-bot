@@ -70,7 +70,9 @@ class ro_cano_che_ritorna:
         ma78_4_min_ago = self.algo_helper.ma_minutes_ago(78, 4)
         ma78_5_min_ago = self.algo_helper.ma_minutes_ago(78, 5)
         ma78_7_min_ago = self.algo_helper.ma_minutes_ago(78, 7)
-
+        ma78_40_min_ago = self.algo_helper.ma_minutes_ago(78, 40)
+        
+        
         # LAST TRADE
         last_trade_action = self.algo_helper.last_trade_action
         last_trade_price = self.algo_helper.last_trade_price
@@ -385,7 +387,9 @@ class ro_cano_che_ritorna:
                 ########################################################################################################### con ma30 che ha 40 min di andamento laterale
                 ########################################################################################################### PER ADESSO SOLO SUL BUY 1
                 elif (    
-                    deviation_rialzo_improvviso_1 > 0.20
+                    
+                    ma78_last > ma78_40_min_ago
+                    and deviation_rialzo_improvviso_1 > 0.20
                     and deviation_rialzo_improvviso_2 > 0.20
                     and deviation_rialzo_improvviso_3 > 0.20
                     and deviation_rialzo_improvviso_4 > 0.20
