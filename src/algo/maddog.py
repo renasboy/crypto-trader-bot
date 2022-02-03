@@ -350,10 +350,10 @@ class maddog:
                     action = "buy"
                     percentage = 20
 
-                ####################################################################  BUY 1 con incrocio 13-69 and ma72_last >= ma72_2_min_ago  "MI PIACE!"
+                ####################################################################  BUY 1 con incrocio 11-69 and ma72_last >= ma72_2_min_ago  "MI PIACE!"
 
                 elif (
-                    ma13_last > ma69_last
+                    ma11_last > ma69_last
                     and ma69_last >= ma69_2_min_ago
                     and deviation_bellissima > 0.17
                     and price > price_2_min_ago
@@ -364,9 +364,10 @@ class maddog:
                     and deviation_ma13_sopra_ma25 > 0.07
                     # quando 13-100 si incrociano price ma2 e ma4 sono gia' in ribasso
                 ):
-                    buy = "BUY 1 con 13>69 e ma69> 2 min ago (!) riga 363"
+                    buy = "BUY 1 con 11 > 69 e ma69> 2 min ago (!) riga 363"
                     action = "buy"
                     percentage = 20
+                    
                 elif (
                     deviation_buy1 > 0.25
                     and ma13_last > ma50_last
