@@ -2330,7 +2330,7 @@ class maddog:
                 and ma2_last < last_trade_price
             ):
 
-                sell = "sessione 2 SELL DOLCE ATTESA con ma13 < and deviation < -0.35 - riga 2170"
+                sell = "sessione 2 SELL DOLCE ATTESA con ma13 < and deviation < -0.36 - riga 2170"
                 action = "sell"
 
                 # il fattore tempo - la dolce attesa - solo con trend ribassista
