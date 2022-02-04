@@ -3071,10 +3071,11 @@ class maddog:
                 # deviation_ma39 = ma4_last / ma39_last QUESTA HA VENDUTO NEL CROLLO IMPROVVISO DI 1 MINUTO (con -2.06% !!!)!
 
             # 2 - ro cano VENDE DURANTE UN CROLLO IMPROVVISO !
-            elif deviation < -0.62:
-                sell = "session 3-4-x SELL CROLLO IMPROVVISO - riga 2847"
+            elif deviation < -0.59:
+                sell = "session 3-4-x SELL CROLLO IMPROVVISO < -0.59 - riga 2847"
                 action = "sell"
-
+                
+                # con -0.62 il 4 feb 2022 ha fatto -0.89%
                 # deviation = ma4_last / last_trade_price
 
                 # FORSE E' L' UNICA DEVIATION CHE MI POTRA' SALVARE DA UN CROLLO IMPROVVISO COME QUELLO DEL 3 NOVEMBRE 2021
