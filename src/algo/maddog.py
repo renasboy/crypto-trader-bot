@@ -742,16 +742,19 @@ class maddog:
 
                 if (
                     ma78_last >= ma78_2_min_ago
+                    
                     and deviation_buy3 > 0.13
+                    and deviation_bellissima > 0.184
                     and ma3_last > ma13_last
                     and deviation_ma7_sopra_ma40 > 0.11
                     and ma4_last > ma9_last
                     and ma4_last > ma50_last
-                    and ma2_last > ma2_2_min_ago
+                    
                     and ma6_last > ma15_last
                     and ma7_last > ma25_last
-                    and deviation_bellissima > 0.12
                     
+                    and ma2_last > ma2_2_min_ago
+                 
                     # deviation_bellissima = 6/30
                     # spezzare la catena dei buy - effetti laterali !
                     # se e' arrivato il buy 5 e' molto probabile che il trend sia consolidato
@@ -764,14 +767,16 @@ class maddog:
                 elif (
                     ma78_last >= ma78_2_min_ago
                     and deviation_buy3 > 0.03
+                    and deviation_bellissima > 0.184
                     and delta_buy3_incrocio_ma3_ma8 > 0.06
                     and deviation_ma4_sopra_ma30 > 0.15
                     and ma3_last > ma8_last
                     and ma3_last > ma78_last
                     and ma4_last > ma4_2_min_ago
-                    and ma2_last > ma2_2_min_ago
                     and ma7_last > ma25_last
-                    and deviation_bellissima > 0.163
+                    
+                    and ma2_last > ma2_2_min_ago
+                    
                 ):
                     buy = "BUY 5B RIVOLUZIONARIO con ma78 > and deviation_bellissima > 0.163 (PER SPEZZARE LA CATENA -effetti laterali) - riga 701"
                     action = "buy"
@@ -782,14 +787,15 @@ class maddog:
                 elif (
                     ma78_last < ma78_2_min_ago
                     and deviation_buy3 > 0.04
+                    and deviation_bellissima > 0.184
                     and delta_buy3_incrocio_ma3_ma8 > 0.08
                     and deviation_ma4_sopra_ma30 > 0.20
                     and ma3_last > ma8_last
                     and ma3_last > ma78_last
                     and ma4_last > ma4_2_min_ago
-                    and ma2_last > ma2_2_min_ago
                     and ma7_last > ma25_last
-                    and deviation_bellissima > 0.163
+                
+                    and ma2_last > ma2_2_min_ago
                 ):
                     buy = "BUY 5C RIVOLUZIONARIO con ma78 < and deviation_bellissima > 0.163 - riga 719"
                     action = "buy"
