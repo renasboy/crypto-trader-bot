@@ -2472,10 +2472,10 @@ class maddog:
                     if (
                         ma50_last >= ma50_2_min_ago
                         and ma3_last < ma16_last
-                        and deviation_sell < -0.33
+                        and deviation_sell < -0.32
                         # deviation_sell = ma3_last/last_trade_price
                     ):
-                        sell = "session 3-4-x SELL (3-5 min) con ma50 > and 3<16 and deviation_sell < -0.33 - riga 2309"
+                        sell = "session 3-4-x SELL (3-5 min) con ma50 > and 3<16 and deviation_sell < -0.32 - riga 2475"
                         action = "sell"
 
                     elif (
