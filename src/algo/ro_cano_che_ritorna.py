@@ -71,7 +71,7 @@ class ro_cano_che_ritorna:
         ma78_5_min_ago = self.algo_helper.ma_minutes_ago(78, 5)
         ma78_7_min_ago = self.algo_helper.ma_minutes_ago(78, 7)
         ma78_40_min_ago = self.algo_helper.ma_minutes_ago(78, 40)
-        ma100_2_min_ago = self.algo_helper.ma_minutes_ago(100, 2)
+        
         
         # LAST TRADE
         last_trade_action = self.algo_helper.last_trade_action
@@ -325,7 +325,7 @@ class ro_cano_che_ritorna:
             ######################################################################################################## COMPRA sessione 1
             # BUY 1 con "percentage" 20
             if self.session == 1:
-            # if ma13_last > ma100_last or ma100_last > ma100_2_min_ago:
+
                 # ------------------------------------------------------------ BUY 1 DURANTE IL RIALZO con INCROCIO CLASSICO 69-100
 
                 if (
@@ -535,7 +535,7 @@ class ro_cano_che_ritorna:
             #############################################################################################################      COMPRA sessione 2
 
             elif self.session == 2:
-            # if ma13_last > ma100_last or ma100_last > ma100_2_min_ago:
+
                 if (
                     ma78_last > ma78_2_min_ago
                     and deviation_buy2 > 0.05
@@ -591,7 +591,7 @@ class ro_cano_che_ritorna:
             ############################################################################################################ COMPRA sessione 3
           
             elif self.session == 3:
-            # if ma13_last > ma100_last or ma100_last > ma100_2_min_ago:
+
                 if (
                     ma78_last >= ma78_2_min_ago
                     and deviation_buy3 > 0.12
@@ -647,7 +647,7 @@ class ro_cano_che_ritorna:
             # --------------------------------------------------------------------------------------------------------------------- deviation piu' alte se ma 78 < !
            
             elif self.session == 4:
-            # if ma13_last > ma100_last or ma100_last > ma100_2_min_ago:
+
                 if (
                     ma78_last >= ma78_2_min_ago
                     and deviation_buy3 > 0.11
@@ -699,8 +699,7 @@ class ro_cano_che_ritorna:
             #  piu' alto il BUY - "effetti laterali"
 
             else:
-            # if ma13_last > ma100_last or ma100_last > ma100_2_min_ago:
-            
+
                 if (
                     ma78_last >= ma78_2_min_ago
                     and deviation_buy3 > 0.13
@@ -809,8 +808,7 @@ class ro_cano_che_ritorna:
             ####################################################################################################################### sessione 1 ( 0 - 3 min )
 
             if self.session == 1:
-            # if ma13_last > ma100_last or ma100_last > ma100_2_min_ago:
-                
+
                 # la deviation_sell_ma78 mi protegge - (ogni volta che c'e' stato un rialzo la ma3 non l' ha mai toccata !)
                 # e l' incrocio 3 -28 e' fondamentale per evitare punto rosso sovrapposto al punto verde ! e mi protegge anche questa quando ma78 sta molto in alto !
                 # VENDITA - da 0 a 3 minuti = da 0 a 180 secondi
@@ -1523,7 +1521,7 @@ class ro_cano_che_ritorna:
             ########################################################################################################################### SESSIONE 2
 
             elif self.session == 2:
-            # if ma13_last > ma100_last or ma100_last > ma100_2_min_ago:
+
                 ############################################################################################################# sessione 2 ( 0-3 min )
                 if seconds_since_last_trade > 0 and seconds_since_last_trade <= 180:
 
@@ -2229,7 +2227,6 @@ class ro_cano_che_ritorna:
             ################################################################################################### SESSIONE 3-4-x
 
             elif self.session > 2:
-            # if ma13_last > ma100_last or ma100_last > ma100_2_min_ago:    
 
                 ################################################################################################### sessione 3-4-x ( 0-3 min ) ok
                 if seconds_since_last_trade > 0 and seconds_since_last_trade <= 180:
