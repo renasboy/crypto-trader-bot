@@ -280,10 +280,12 @@ class maddog:
         # APRE E CHIUDE GABBIA
 
         # if deviation_1_gabbia > -0.29 or deviation_buy_crollo_1 < -1.50:
+        if deviation_1_gabbia > -0.29 or deviation_buy_crollo_1 < -1.50 or (-1.50 < deviation_buy_crollo_1 < -0.60):
         
-        if deviation_1_gabbia > -0.29 
-        or deviation_buy_crollo_1 < -1.50 
-        or (-1.50 < deviation_buy_crollo_1 < -0.60):
+        # QUESTE 3 HANNO DATO ERRORE !
+        # if deviation_1_gabbia > -0.29 
+        # or deviation_buy_crollo_1 < -1.50 
+        # or (-1.50 < deviation_buy_crollo_1 < -0.60):
         
         
             # deviation_1_gabbia = ma8_last / ma50_last
