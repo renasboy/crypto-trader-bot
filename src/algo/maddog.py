@@ -2728,11 +2728,11 @@ class maddog:
 
                     elif (
                         ma50_last < ma50_2_min_ago
-                        and deviation_ma39 < -0.15
+                        and deviation_ma39 < -0.17
                         # and (ma3_prev > ma33_prev and ma3_last < ma33_last)
                         # and deviation_sell < -0.25
                     ):
-                        sell = "session 3-4-x SELL (12-21 min) con ma50 < and deviation_ma39 < -0.15 - riga 2543"
+                        sell = "session 3-4-x SELL (12-21 min) con ma50 < and deviation_ma39 < -0.17 - riga 2543"
                         action = "sell"
 
                         # ATTENZIONE QUESTA aveva FATTO -0.61% !
