@@ -375,7 +375,7 @@ class maddog:
                     percentage = 20
                     
                 elif (
-                    deviation_buy1 > 0.25
+                    deviation_buy1 > 0.24
                     and ma13_last > ma50_last
                     and ma78_last > ma78_2_min_ago
                     and deviation_bellissima > 0.18
