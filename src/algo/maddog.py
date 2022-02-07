@@ -1330,12 +1330,12 @@ class maddog:
 
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and (ma3_prev > ma13_prev and ma3_last < ma13_last)
+                        and (ma4_prev > ma18_prev and ma4_last < ma18_last)
                         and deviation_sell > 0.91
                         and deviation_sell < 1.20
                         # deviation_sell = ma3_last/last_trade_price
                     ):
-                        sell = "sessione 1 SELL (21-60 min) con ma50 > and incrocio 3-13 and deviation_sell 0.91 - 1.20 - riga 1223"
+                        sell = "sessione 1 SELL (21-60 min) con ma50 > and incrocio 4-18 and deviation_sell 0.91 - 1.20 - riga 1223"
                         action = "sell"
                         
                         
