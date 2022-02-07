@@ -715,7 +715,7 @@ class maddog:
                     and deviation_ma4_sopra_ma30 > 0.145
                     and ma3_last > ma8_last
                     and ma3_last > ma78_last
-                    and ma4_last > ma4_2_min_ago
+                    and ma4_last >= ma4_2_min_ago
                     and ma2_last > ma2_2_min_ago
                     and ma7_last > ma25_last
                 ):
