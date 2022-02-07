@@ -3106,7 +3106,7 @@ class maddog:
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
                 and ma13_last < ma13_2_min_ago
-                and deviation < -0.345
+                and deviation < -0.355
                 and ma2_last < last_trade_price
             ):
 
@@ -3117,7 +3117,10 @@ class maddog:
                 # deviation = ma2_last / last_trade_price
                 # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
                 # max_hold_time_in_seconds = 270 sec = 4 min e 1/2  (con 6 min perdita di 0.60 %)
-                # 4 FEBBRAIO 2022 con <-0.26 ha fatto -0.88% (dopo +4.29%)
+                # 4 feb 2022 con <-0.26 ha fatto -0.88% (dopo +4.29%)
+                
+                # 7 feb 2022 con <-0.345 e 270 sec ha fatto -0.38% - aumenta a 0.355 ! -eventualmente ci pensa la condizione CROLLO IMPROVVISO CHE FUNZIONA !
+            
             
             # 5 - ro cano VENDE " DOPO x MINUTI " and...
             elif (
