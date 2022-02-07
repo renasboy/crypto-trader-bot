@@ -2692,17 +2692,36 @@ class maddog:
                     ):
                         sell = "session 3-4-x SELL (12-21 min) con ma50 > and incrocio 3-100 cuscino di sant' antonio and deviation_sell < 0.36 - riga 2501"
                         action = "sell"
+                    
+                    #
+                    # IMPORTANTE !   
+                    # vai compaaaaaaaaaa
+                    # poco guadagno ma piu' alta
+                    # molto guadagno ma piu' bassa
+                    
+                    
+                    elif (
+                        ma50_last >= ma50_2_min_ago
+                        and ma5_last < ma25_last
+                        and deviation_sell > 0.25
+                        and deviation_sell < 0.40
+                        # deviation_sell = ma3_last/last_trade_price
+                    ):
+                        sell = "session 3-4-x SELL (12-21 min) con ma50 > and 5-25 and deviation_sell 0.25-0.40 - FINTA ALLA MARADONA - riga 2510"
+                        action = "sell"
 
                     elif (
                         ma50_last >= ma50_2_min_ago
-                        and ma3_last < ma13_last
-                        and deviation_sell > 0.25
+                        and ma3_last < ma15_last
+                        and deviation_sell > 0.41
                         and deviation_sell < 0.90
                         # deviation_sell = ma3_last/last_trade_price
                     ):
-                        sell = "session 3-4-x SELL (12-21 min) con ma50 > and 3-13 (NO INCROCIO 3-13) and deviation_sell 0.25-0.90 - DOPPIO PASSO ALLA RONALDO - riga 2511"
+                        sell = "session 3-4-x SELL (12-21 min) con ma50 > and 3-15 and deviation_sell 0.41-0.90 - DOPPIO PASSO ALLA RONALDO - riga 2511"
                         action = "sell"
-
+                    
+                    #
+                    
                     elif (
                         ma50_last >= ma50_2_min_ago
                         and (ma3_prev > ma25_prev and ma3_last < ma25_last)
