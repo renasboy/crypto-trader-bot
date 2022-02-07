@@ -99,7 +99,8 @@ class maddog:
         # importante : dolce attesa
 
         # VENDE DOPO x SECONDI - ro cano torna a casa - (ma c'e' anche un "e se")
-        max_hold_time_in_seconds = 270
+        max_hold_time_in_seconds = 255
+        
         #  4 minuti * 60 = 240 + 30 secondi = 270 secondi
 
         #########################################################################################################################################################
