@@ -2674,10 +2674,10 @@ class ro_cano_che_ritorna:
 
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and (ma3_prev > ma33_prev and ma3_last < ma33_last)
+                        and (ma4_prev > ma25_prev and ma4_last < ma25_last)
                         and deviation_sell > 1.21
                     ):
-                        sell = "session 3-4-x SELL (21-60 min) con ma50 > and incrocio 3-33 and deviation_sell > 1.21 - riga 2645"
+                        sell = "session 3-4-x SELL (21-60 min) con ma50 > and incrocio 4-25 and deviation_sell > 1.21 - riga 2645"
                         action = "sell"
 
                     ##################################################################### con trend discendente
