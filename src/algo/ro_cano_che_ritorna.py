@@ -295,8 +295,8 @@ class ro_cano_che_ritorna:
         # or (-1.50 < deviation_buy_crollo_1 < -0.60):
         
         if deviation_1_gabbia > -0.29 
-        or deviation_buy_crollo_1 < -1.50 
-        or deviation_buy_crollo_1 > -1.50 and deviation_buy_crollo_1 < -0.60:    
+        or deviation_buy_crollo_1 < -1.50:
+        # or deviation_buy_crollo_1 > -1.50 and deviation_buy_crollo_1 < -0.60:    
         
         # vediamo se funziona cosi' o se mi da errore
         
