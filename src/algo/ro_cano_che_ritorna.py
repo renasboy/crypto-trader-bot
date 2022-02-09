@@ -285,9 +285,21 @@ class ro_cano_che_ritorna:
 
         # APRE E CHIUDE GABBIA
 
-        #if deviation_1_gabbia > -0.29 or deviation_buy_crollo_1 < -1.50:
-        if deviation_1_gabbia > -0.29 or deviation_buy_crollo_1 < -1.50 or (-1.50 < deviation_buy_crollo_1 < -0.60):    
+        # if deviation_1_gabbia > -0.29 or deviation_buy_crollo_1 < -1.50:
+        # if deviation_1_gabbia > -0.29 or deviation_buy_crollo_1 < -1.50 or (-1.50 < deviation_buy_crollo_1 < -0.60):    
         # compare non mi abbandonare !
+        
+        # QUESTE 3 HANNO DATO ERRORE !
+        # if deviation_1_gabbia > -0.29 
+        # or deviation_buy_crollo_1 < -1.50 
+        # or (-1.50 < deviation_buy_crollo_1 < -0.60):
+        
+        if deviation_1_gabbia > -0.29 
+        or deviation_buy_crollo_1 < -1.50 
+        or deviation_buy_crollo_1 > -1.50 and deviation_buy_crollo_1 < -0.60:    
+        
+        # vediamo se funziona cosi' o se mi da errore
+        
         
             # deviation_1_gabbia = ma8_last / ma50_last
             # deviation_buy_crollo_1 = ma8_last / ma78_last
