@@ -352,6 +352,7 @@ class maddog:
           
             ######################################################################################################## COMPRA sessione 1
             # BUY 1 con "percentage" 20
+            
             if self.session == 1:
 
                 # ------------------------------------------------------------ BUY 1 DURANTE IL RIALZO con INCROCIO CLASSICO 69-100
@@ -482,6 +483,7 @@ class maddog:
                 ########################################################################################################### compra durante un rialzo improvviso ! 
                 ########################################################################################################### con ma30 che ha 40 min di andamento laterale
                 ########################################################################################################### PER ADESSO SOLO SUL BUY 1
+                
                 elif (    
                     
                     ma78_last > ma78_30_min_ago
@@ -547,6 +549,7 @@ class maddog:
                 ######################################################################################################## per comprare durante un ribasso che non e' un crollo
                               
                 #BUY DURANTE UN RIBASSO CHE NON E' UN CROLLO ! (compare stammi vicino!) HA FUNZIONATO ! viva ro combaro meo !
+                
                 elif (
                     ma2_last > ma2_2_min_ago
                     and deviation_buy_crollo_1 < -0.60
@@ -575,7 +578,8 @@ class maddog:
                     
                     
 
-            #############################################################################################################      COMPRA sessione 2 
+            #############################################################################################################      COMPRA sessione 2
+            
             elif self.session == 2:
 
                 if (
@@ -2456,6 +2460,7 @@ class maddog:
             # il CUSCINO DELL' ANGELO CUSTODE e di SANT' ANTONIO mi proteggono ! (vendita con medie lunghe)
 
             # 1 - ro cano VENDE CON UN SALVAGENTE
+            
             if deviation_ma39 < -0.25 and ma50_last > ma50_2_min_ago:
 
                 sell = "sessione 2 SELL SALVAGENTE 3-39 con ma50 < riga 2133"
@@ -2464,6 +2469,7 @@ class maddog:
                 # deviation_ma39 = ma4_last / ma39_last QUESTA HA VENDUTO NEL CROLLO IMPROVVISO DI 1 MINUTO (con -2.06% !!!)!
 
             # 2 - ro cano VENDE DURANTE UN CROLLO IMPROVVISO !
+            
             elif deviation < -0.62:
                 sell = "sessione 2 SELL CROLLO IMPROVVISO - riga 2140"
                 action = "sell"
@@ -2473,6 +2479,7 @@ class maddog:
                 # -0.90 ha fatto fare una perdita di -1.46% il 19 dic 2021
 
             # 3 - ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma13 >
+            
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
                 and ma2_last < last_trade_price
@@ -2488,6 +2495,7 @@ class maddog:
                 # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
 
             # 4 - ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma13 <
+            
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
                 and ma13_last < ma13_2_min_ago
@@ -2503,6 +2511,7 @@ class maddog:
                 # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
 
             # 5 - ro cano VENDE " DOPO x MINUTI " and...
+            
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
                 and ma8_last < ma50_last
@@ -2516,6 +2525,7 @@ class maddog:
                 
                 
             # 6 - RIBASSO IMPROVVISO
+            
             elif (
                 ma78_last > ma78_2_min_ago
                 and deviation_ribasso_improvviso < -0.63
@@ -2526,6 +2536,7 @@ class maddog:
                 action = "sell"
             
             # 7 - RIBASSO IMPROVVISO
+            
             elif (
                 ma78_last < ma78_2_min_ago
                 and deviation_ribasso_improvviso < -0.63
@@ -2804,6 +2815,7 @@ class maddog:
                         action = "sell"
 
                     # ------------------------------------------------------------------------------- guadagno con crollo
+                    
                     elif (
                         ma50_last < ma50_2_min_ago
                         and (ma3_prev > ma23_prev and ma3_last < ma23_last)
@@ -2813,6 +2825,7 @@ class maddog:
                         action = "sell"
 
                     # ------------------------------------------------------------------------------------------------------------ PARACADUTE crollo
+                    
                     elif (
                         ma50_last < ma50_2_min_ago
                         and ma3_last < ma16_last
@@ -2938,6 +2951,7 @@ class maddog:
                         action = "sell"
 
                     # --------------------------------------------------------------------------------- PARACADUTE crollo
+                    
                     elif (
                         ma50_last < ma50_2_min_ago
                         and ma3_last < ma16_last
@@ -2949,6 +2963,7 @@ class maddog:
                         # AGGIUNTA PER SICUREZZA SE CONTINUA A PRECIPITARE
 
                     # ----------------------------------------------------------------------------- guadagno con crollo
+                    
                     elif (
                         ma50_last < ma50_2_min_ago
                         and (ma3_prev > ma18_prev and ma3_last < ma18_last)
@@ -3031,6 +3046,7 @@ class maddog:
                     
                     
                     ##################################################################### con trend discendente
+                    
                     elif (
                         ma50_last < ma50_2_min_ago
                         and deviation_ma39 < -0.22
@@ -3074,6 +3090,7 @@ class maddog:
                 ########################################################################################################################## sessione 3-4-x ( da 60 a 90 min )
 
                 # VENDITA - da 60 a 90 min - da 3600 a 5400 secondi in poi
+                
                 elif (
                     seconds_since_last_trade > 3600 and seconds_since_last_trade <= 5400
                 ):
@@ -3132,6 +3149,7 @@ class maddog:
                         action = "sell"
 
                     ######################################################################################## con trend discendente
+                    
                     elif (
                         ma50_last < ma50_2_min_ago
                         and deviation_ma39 < -0.18
@@ -3246,6 +3264,7 @@ class maddog:
             # il CUSCINO DELL' ANGELO CUSTODE e di SANT' ANTONIO mi proteggono ! (vendita con medie lunghe)
 
             # 1 - ro cano VENDE CON UN SALVAGENTE
+            
             if deviation_ma39 < -0.24 and ma50_last > ma50_2_min_ago:
 
                 sell = "session 3-4-x SELL SALVAGENTE 3-39 con ma50 < riga 2840"
@@ -3254,6 +3273,7 @@ class maddog:
                 # deviation_ma39 = ma4_last / ma39_last QUESTA HA VENDUTO NEL CROLLO IMPROVVISO DI 1 MINUTO (con -2.06% !!!)!
 
             # 2 - ro cano VENDE DURANTE UN CROLLO IMPROVVISO !
+            
             elif deviation < -0.58:
                 sell = "session 3-4-x SELL CROLLO IMPROVVISO < -0.58 - riga 2847"
                 action = "sell"
@@ -3265,6 +3285,7 @@ class maddog:
                 # FORSE E' L' UNICA DEVIATION CHE MI POTRA' SALVARE DA UN CROLLO IMPROVVISO COME QUELLO DEL 3 NOVEMBRE 2021
 
             # 3 - ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma13 >
+            
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
                 and ma2_last < last_trade_price
@@ -3281,6 +3302,7 @@ class maddog:
                 # max_hold_time_in_seconds = 300 = 5 min (con 6 min perdita di 0.90 %)
                 
             # 4 - ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma13 <
+            
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
                 and ma13_last < ma13_2_min_ago
@@ -3302,6 +3324,7 @@ class maddog:
             
             
             # 5 - ro cano VENDE " DOPO x MINUTI " and...
+            
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
                 and ma8_last < ma50_last
@@ -3316,6 +3339,7 @@ class maddog:
                 
                 
             # 6 - RIBASSO IMPROVVISO
+            
             elif (
                 ma78_last > ma78_2_min_ago
                 and deviation_ribasso_improvviso < -0.63
@@ -3326,6 +3350,7 @@ class maddog:
                 action = "sell"
             
             # 7 - RIBASSO IMPROVVISO
+            
             elif (
                 ma78_last < ma78_2_min_ago
                 and deviation_ribasso_improvviso < -0.63
