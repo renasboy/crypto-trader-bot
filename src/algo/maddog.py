@@ -813,17 +813,18 @@ class maddog:
                     # deviation_buy3 = ma4_last/ma30_last
                     
                     
-                    
+                """   
                 # BUY 4 ECCEZIONALE - se ma100 sale da 20 min compra con ma30
 
                 elif (
                     ma2_last > ma2_2_min_ago
                     and ma200_last > ma200_20_min_ago
-                    and deviation_ma5_sopra_ma30 > 0.12
+                    and deviation_ma5_sopra_ma30 > 0.13
                 ):
                     buy = "BUY 4 ECCEZIONALE se ma200 sale da 20 min compra con deviation 4-30 - riga 658"
                     action = "buy"
                     percentage = 40
+                """
                     
             ############################################################################################################  compra sessione 5 in poi
             #  piu' alto il BUY - "effetti laterali"
