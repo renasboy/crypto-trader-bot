@@ -64,6 +64,7 @@ class maddog:
         ma30_40_min_ago = self.algo_helper.ma_minutes_ago(30, 40)
         
         ma33_5_min_ago = self.algo_helper.ma_minutes_ago(33, 5)
+        ma36_2_min_ago = self.algo_helper.ma_minutes_ago(36, 2)
         ma39_2_min_ago = self.algo_helper.ma_minutes_ago(39, 2)
         ma39_3_min_ago = self.algo_helper.ma_minutes_ago(39, 3)
         ma50_2_min_ago = self.algo_helper.ma_minutes_ago(50, 2)
@@ -557,6 +558,7 @@ class maddog:
 
                 elif (
                     ma2_last > ma2_2_min_ago
+                    and ma36_last > ma36_2_min_ago
                     and ma200_last > ma200_20_min_ago
                     and deviation_ma4_sopra_ma30 > 0.11
                 ):
