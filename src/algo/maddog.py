@@ -24,6 +24,7 @@ class maddog:
         ma15_last, ma15_prev = self.algo_helper.ma_last_prev(15)
         ma16_last, ma16_prev = self.algo_helper.ma_last_prev(16)
         ma18_last, ma18_prev = self.algo_helper.ma_last_prev(18)
+        ma20_last, ma20_prev = self.algo_helper.ma_last_prev(20)
         ma23_last, ma23_prev = self.algo_helper.ma_last_prev(23)
         ma25_last, ma25_prev = self.algo_helper.ma_last_prev(25)
         ma28_last, ma28_prev = self.algo_helper.ma_last_prev(28)
@@ -232,7 +233,14 @@ class maddog:
         self.algo_helper.info(
             "deviation_ma4_sopra_ma30: {}".format(deviation_ma4_sopra_ma30)
         )
-
+        
+        # formula DEVIATION_ma5_sopra_ma30
+        deviation_ma5_sopra_ma30 = (ma5_last / ma30_last - 1) * 100 if ma30_last else 0
+        self.algo_helper.info(
+            "deviation_ma5_sopra_ma30: {}".format(deviation_ma5_sopra_ma30)
+        )
+        
+        
         # formula deviation_ma7_sopra_ma40
         deviation_ma7_sopra_ma40 = (ma7_last / ma40_last - 1) * 100 if ma40_last else 0
         self.algo_helper.info(
@@ -341,7 +349,8 @@ class maddog:
                 # ------------------------------------------------------------ BUY 1 DURANTE IL RIALZO con INCROCIO CLASSICO 69-100
 
                 if (
-                    ma69_last > ma100_last
+                    ma20_last > ma200_last
+                    and ma69_last > ma100_last
                     and ma13_last > ma78_last
                     and deviation_bellissima > 0.18
                     and ma2_last > ma2_2_min_ago
@@ -362,7 +371,8 @@ class maddog:
                 ####################################################################  BUY 1 con incrocio 11-69 and ma72_last >= ma72_2_min_ago  "MI PIACE!"
 
                 elif (
-                    ma11_last > ma69_last
+                    ma20_last > ma200_last
+                    and ma11_last > ma69_last
                     and ma69_last >= ma69_2_min_ago
                     and deviation_bellissima > 0.17
                     and price > price_2_min_ago
@@ -378,7 +388,8 @@ class maddog:
                     percentage = 20
                     
                 elif (
-                    deviation_buy1 > 0.24
+                    ma20_last > ma200_last
+                    and deviation_buy1 > 0.24
                     and ma13_last > ma50_last
                     and ma78_last > ma78_2_min_ago
                     and deviation_bellissima > 0.18
@@ -389,8 +400,11 @@ class maddog:
                     buy = "BUY 1 con 13>50 and DEVIATION BUY 1 ALTA e ma78> - riga 378"
                     action = "buy"
                     percentage = 20
+                    
+                    
                 elif (
-                    ma78_last < ma78_2_min_ago
+                    ma20_last > ma200_last
+                    and ma78_last < ma78_2_min_ago
                     and ma39_last > ma78_last
                     and deviation_buy1 > 0.14
                     and deviation_bellissima > 0.17
@@ -402,8 +416,11 @@ class maddog:
                     buy = "BUY 1 con ma78< and 39>78 and DEVIATION BUY 1 BASSA riga 431"
                     action = "buy"
                     percentage = 10
+                    
+                    
                 elif (
-                    ma78_last < ma78_2_min_ago
+                    ma20_last > ma200_last
+                    and ma78_last < ma78_2_min_ago
                     and ma39_last > ma78_last
                     and deviation_bellissima > 0.17
                     and price > price_2_min_ago
@@ -521,7 +538,7 @@ class maddog:
                 
                 ######################################################################################################## per comprare durante un ribasso che non e' un crollo
                               
-                #BUY DURANTE UN RIBASSO CHE NON E' UN CROLLO ! (compare stammi vicino!)                                 CHIEDERE AL COMPARE 3
+                #BUY DURANTE UN RIBASSO CHE NON E' UN CROLLO ! (compare stammi vicino!)
                 elif (
                     ma2_last > ma2_2_min_ago
                     and deviation_buy_crollo_1 < -0.60
@@ -640,9 +657,9 @@ class maddog:
                 elif (
                     ma2_last > ma2_2_min_ago
                     and ma200_last > ma200_20_min_ago
-                    and deviation_ma4_sopra_ma30 > 0.11
+                    and deviation_ma5_sopra_ma30 > 0.12
                 ):
-                    buy = "BUY 2 ECCEZIONALE se ma200 sale da 20 min compra con deviation 4-30 -riga 482"
+                    buy = "BUY 2 ECCEZIONALE se ma200 sale da 20 min compra con deviation 5-30 -riga 482"
                     action = "buy"
                     percentage = 40
                 
