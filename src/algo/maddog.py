@@ -72,7 +72,7 @@ class maddog:
         ma78_4_min_ago = self.algo_helper.ma_minutes_ago(78, 4)
         ma78_5_min_ago = self.algo_helper.ma_minutes_ago(78, 5)
         ma78_7_min_ago = self.algo_helper.ma_minutes_ago(78, 7)
-        ma78_40_min_ago = self.algo_helper.ma_minutes_ago(78, 40)
+        ma78_30_min_ago = self.algo_helper.ma_minutes_ago(78, 30)
         ma200_20_min_ago = self.algo_helper.ma_minutes_ago(200, 20)
 
         # LAST TRADE
@@ -165,9 +165,6 @@ class maddog:
         
         deviation_range_3 = (ma30_20_min_ago / ma30_30_min_ago - 1) * 100 if ma30_30_min_ago else 0
         self.algo_helper.info("deviation_range_3: {}".format(deviation_range_3))
-        
-        deviation_range_4 = (ma30_30_min_ago / ma30_40_min_ago - 1) * 100 if ma30_40_min_ago else 0
-        self.algo_helper.info("deviation_range_4: {}".format(deviation_range_4))
         
         
         deviation_range_x = (ma30_last / ma30_20_min_ago - 1) * 100 if ma30_20_min_ago else 0
@@ -462,7 +459,7 @@ class maddog:
                 ########################################################################################################### PER ADESSO SOLO SUL BUY 1
                 elif (    
                     
-                    ma78_last > ma78_40_min_ago
+                    ma78_last > ma78_30_min_ago
                     and deviation_rialzo_improvviso_1 > 0.18
                     and deviation_rialzo_improvviso_2 > 0.19
                     and deviation_rialzo_improvviso_3 > 0.19
@@ -475,8 +472,8 @@ class maddog:
                     and deviation_range_2 > -0.20
                     and deviation_range_3 < 0.20
                     and deviation_range_3 > -0.20
-                    and deviation_range_4 < 0.20
-                    and deviation_range_4 > -0.20
+                    
+                    
                     and deviation_range_x < 0.20
                     and deviation_range_x > -0.20
                    
@@ -493,7 +490,7 @@ class maddog:
                     
                 elif (    
                     
-                    ma78_last < ma78_40_min_ago
+                    ma78_last < ma78_30_min_ago
                     
                     and deviation_rialzo_improvviso_1 > 0.33
                     and deviation_rialzo_improvviso_2 > 0.20
@@ -507,8 +504,8 @@ class maddog:
                     and deviation_range_2 > -0.20
                     and deviation_range_3 < 0.20
                     and deviation_range_3 > -0.20
-                    and deviation_range_4 < 0.20
-                    and deviation_range_4 > -0.20
+                    
+                    
                     and deviation_range_x < 0.20
                     and deviation_range_x > -0.20
                    
