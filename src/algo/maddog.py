@@ -173,7 +173,14 @@ class maddog:
         self.algo_helper.info("deviation_range_x: {}".format(deviation_range_x))
         
         
-       
+        
+        # formula DEVIATION_RIBASSO_IMPROVVISO
+        deviation_ribasso_improvviso = (price / ma30_last - 1) * 100 if ma30_last else 0
+        self.algo_helper.info("deviation_ribasso_improvviso: {}".format(deviation_ribasso_improvviso))
+        
+        
+        
+        
         ################################################################################################################## deviation per comprare
 
         # formula DEVIATION_buy1 per la compra 1
@@ -539,14 +546,14 @@ class maddog:
                 
                 ######################################################################################################## per comprare durante un ribasso che non e' un crollo
                               
-                #BUY DURANTE UN RIBASSO CHE NON E' UN CROLLO ! (compare stammi vicino!)
+                #BUY DURANTE UN RIBASSO CHE NON E' UN CROLLO ! (compare stammi vicino!) HA FUNZIONATO ! viva ro combaro meo !
                 elif (
                     ma2_last > ma2_2_min_ago
                     and deviation_buy_crollo_1 < -0.60
                     and deviation_buy_crollo_1 > -1.50
                     and deviation_bellissima > 0.17
                 ):
-                    buy = "BUY DURANTE UN RIBASSO CHE NON E' UN CROLLO ! and deviation_bellissima > 0.17 -  riga 495"
+                    buy = "BUY DURANTE UN RIBASSO CHE NON E' UN CROLLO ! and deviation_bellissima > 0.17 -  riga 412"
                     action = "buy"
                     percentage = 20
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
@@ -667,7 +674,7 @@ class maddog:
                 
                 ######################################################################################################## per comprare durante un ribasso che non e' un crollo
                            
-                # BUY DURANTE UN RIBASSO CHE NON E' UN CROLLO ! (compare stammi vicino!)                                 CHIEDERE AL COMPARE 3
+                # BUY DURANTE UN RIBASSO CHE NON E' UN CROLLO ! (compare stammi vicino!) 
                 
                 elif (
                     ma2_last > ma2_2_min_ago
@@ -749,7 +756,7 @@ class maddog:
                     and ma200_last > ma200_20_min_ago
                     and deviation_ma5_sopra_ma30 > 0.12
                 ):
-                    buy = "BUY 3 ECCEZIONALE se ma200 sale da 20 min compra con deviation 4-30 -riga 496"
+                    buy = "BUY 3 ECCEZIONALE se ma200 sale da 20 min compra con deviation 4-30 -riga 607"
                     action = "buy"
                     percentage = 40
                     
@@ -1727,9 +1734,34 @@ class maddog:
                     action = "sell"
                     # ma13 troppo lenta !
                     # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
+                    
+                
+                
+                # 6 - RIBASSO IMPROVVISO
+                elif (
+                    ma78_last > ma78_2_min_ago
+                    and deviation_ribasso_improvviso < -0.63
+                
+                ):
+                    sell = "session 1 RIBASSO IMPROVVISO - riga 1479"
+                    action = "sell"
+                
+            
+            
+                # 7 - RIBASSO IMPROVVISO
+                elif (
+                    ma78_last < ma78_2_min_ago
+                    and deviation_ribasso_improvviso < -0.63
+                
+                ):
+                    sell = "session 1 RIBASSO IMPROVVISO - riga 1480"
+                    action = "sell"
+                
+                    
+                    
 
             ########################################################################################################################### SESSIONE 2
-            # ALLA SESSIONE 2 MANCA UN ACQUISTO DURANTE IL CROLLO SE PER ES SESSIONE 1 HA GIA' VENDUTO MA IL TITOLO RESTA IN IPERVENDUTO
+            # ALLA SESSIONE 2 MANCAva UN ACQUISTO DURANTE IL CROLLO SE PER ES SESSIONE 1 HA GIA' VENDUTO MA IL TITOLO RESTA IN IPERVENDUTO
             elif self.session == 2:
 
                 ############################################################################################################# sessione 2 ( 0-3 min )
@@ -2480,6 +2512,29 @@ class maddog:
                 action = "sell"
                 # ma13 troppo lenta !
                 # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
+                
+                
+            # 6 - RIBASSO IMPROVVISO
+            elif (
+                ma78_last > ma78_2_min_ago
+                and deviation_ribasso_improvviso < -0.63
+                
+            ):
+       
+                sell = "session 2 RIBASSO IMPROVVISO - riga 2185"
+                action = "sell"
+            
+            # 7 - RIBASSO IMPROVVISO
+            elif (
+                ma78_last < ma78_2_min_ago
+                and deviation_ribasso_improvviso < -0.63
+                
+            ):
+       
+                sell = "session 2 RIBASSO IMPROVVISO - riga 2186"
+                action = "sell"
+                
+                
 
             ##################################################################################################################################
             ###################################################################################################
@@ -3244,6 +3299,7 @@ class maddog:
                 # 7 feb 2022 con <-0.345 e 270 sec ha fatto -0.38% - aumenta a 0.355 ! -eventualmente ci pensa la condizione CROLLO IMPROVVISO CHE FUNZIONA !
             
             
+            
             # 5 - ro cano VENDE " DOPO x MINUTI " and...
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
@@ -3255,6 +3311,32 @@ class maddog:
                 action = "sell"
                 # ma13 troppo lenta !
                 # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
+                
+                
+                
+            # 6 - RIBASSO IMPROVVISO
+            elif (
+                ma78_last > ma78_2_min_ago
+                and deviation_ribasso_improvviso < -0.63
+                
+            ):
+       
+                sell = "session 3-4-x RIBASSO IMPROVVISO - riga 3276"
+                action = "sell"
+            
+            # 7 - RIBASSO IMPROVVISO
+            elif (
+                ma78_last < ma78_2_min_ago
+                and deviation_ribasso_improvviso < -0.63
+                
+            ):
+       
+                sell = "session 3-4-x RIBASSO IMPROVVISO - riga 3277"
+                action = "sell"
+                
+                
+                
+                
 
         self.algo_helper.info("action {}".format(action))
         self.algo_helper.info("percentage {}".format(percentage))
