@@ -747,7 +747,7 @@ class maddog:
                 elif (
                     ma2_last > ma2_2_min_ago
                     and ma200_last > ma200_20_min_ago
-                    and deviation_ma4_sopra_ma30 > 0.11
+                    and deviation_ma5_sopra_ma30 > 0.12
                 ):
                     buy = "BUY 3 ECCEZIONALE se ma200 sale da 20 min compra con deviation 4-30 -riga 496"
                     action = "buy"
@@ -812,7 +812,7 @@ class maddog:
                 elif (
                     ma2_last > ma2_2_min_ago
                     and ma200_last > ma200_20_min_ago
-                    and deviation_ma4_sopra_ma30 > 0.11
+                    and deviation_ma5_sopra_ma30 > 0.12
                 ):
                     buy = "BUY 4 ECCEZIONALE se ma200 sale da 20 min compra con deviation 4-30 - riga 658"
                     action = "buy"
@@ -892,7 +892,7 @@ class maddog:
                 elif (
                     ma2_last > ma2_2_min_ago
                     and ma200_last > ma200_20_min_ago
-                    and deviation_ma4_sopra_ma30 > 0.11
+                    and deviation_ma5_sopra_ma30 > 0.13
                 ):
                     buy = "BUY 5 ECCEZIONALE se ma200 sale da 20 min compra con deviation 4-30 -riga 720"
                     action = "buy"
