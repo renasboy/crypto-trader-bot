@@ -870,7 +870,7 @@ class maddog:
                     # deviation_buy3 = ma4_last/ma30_last
                     
                     
-                    
+                """    
                 # BUY 5 ECCEZIONALE - se ma100 sale da 20 min compra con ma30
 
                 elif (
@@ -881,7 +881,7 @@ class maddog:
                     buy = "BUY 5 ECCEZIONALE se ma200 sale da 20 min compra con deviation 4-30 -riga 720"
                     action = "buy"
                     percentage = 40
-                    
+                """
                     
                     
         ############################################################################################
