@@ -388,6 +388,7 @@ class ro_cano_che_ritorna:
                 
                 
                 # --------------------------------------------------------------    BUY 1 DURANTE IL RIALZO con 13-50 + deviation
+                
                 elif (
                     deviation_buy1 > 0.25
                     and ma13_last > ma50_last
@@ -491,6 +492,7 @@ class ro_cano_che_ritorna:
                     # deviation_buy1 = ma13_last/ma39_last
                 
                 ############################################################################################################ B
+                
                 elif (
                     ma78_last < ma78_2_min_ago
                     and ma39_last > ma78_last
@@ -543,6 +545,7 @@ class ro_cano_che_ritorna:
                 
                 
                 # BUY DURANTE UN RIBASSO CHE NON E' UN CROLLO ! (compare stammi vicino!)   
+                
                 elif (
                     ma2_last > ma2_2_min_ago
                     and deviation_buy_crollo_1 < -0.60
@@ -928,6 +931,7 @@ class ro_cano_che_ritorna:
                 # la deviation_sell_ma78 mi protegge - (ogni volta che c'e' stato un rialzo la ma3 non l' ha mai toccata !)
                 # e l' incrocio 3 -28 e' fondamentale per evitare punto rosso sovrapposto al punto verde ! e mi protegge anche questa quando ma78 sta molto in alto !
                 # VENDITA - da 0 a 3 minuti = da 0 a 180 secondi
+                
                 if seconds_since_last_trade > 0 and seconds_since_last_trade <= 180:
 
                     # con ma50 >
@@ -1108,6 +1112,7 @@ class ro_cano_che_ritorna:
                         action = "sell"
 
                     # ---------------------------------------------------------------------------------------------------------------------- guadagno con crollo
+                    
                     elif (
                         ma50_last < ma50_2_min_ago
                         and (ma3_prev > ma23_prev and ma3_last < ma23_last)
@@ -1216,6 +1221,7 @@ class ro_cano_che_ritorna:
                         action = "sell"
 
                     # ------------------------------------------------------------------------------- guadagno con crollo
+                    
                     elif (
                         ma50_last < ma50_2_min_ago
                         and (ma3_prev > ma23_prev and ma3_last < ma23_last)
@@ -1225,6 +1231,7 @@ class ro_cano_che_ritorna:
                         action = "sell"
 
                     # ------------------------------------------------------------------------------------------------------------ PARACADUTE crollo
+                    
                     elif (
                         ma50_last < ma50_2_min_ago
                         and ma3_last < ma16_last
@@ -1331,6 +1338,7 @@ class ro_cano_che_ritorna:
                         action = "sell"
 
                     # --------------------------------------------------------------------------------- PARACADUTE crollo
+                    
                     elif (
                         ma50_last < ma50_2_min_ago
                         and ma3_last < ma16_last
@@ -1342,6 +1350,7 @@ class ro_cano_che_ritorna:
                         # AGGIUNTA PER SICUREZZA SE CONTINUA A PRECIPITARE
 
                     # ----------------------------------------------------------------------------- guadagno con crollo
+                    
                     elif (
                         ma50_last < ma50_2_min_ago
                         and (ma3_prev > ma18_prev and ma3_last < ma18_last)
@@ -1412,6 +1421,7 @@ class ro_cano_che_ritorna:
                         action = "sell"
 
                     ##################################################################### con trend discendente
+                    
                     elif (
                         ma50_last < ma50_2_min_ago
                         and deviation_ma39 < -0.23
@@ -1456,6 +1466,7 @@ class ro_cano_che_ritorna:
                 ##############################################################################################################################  SESSIONE 1 ( da 60 a 90 min )
 
                 # VENDITA - da 60 a 90 min - da 3600 a 5400 secondi in poi
+                
                 elif (
                     seconds_since_last_trade > 3600 and seconds_since_last_trade <= 5400
                 ):
@@ -1501,6 +1512,7 @@ class ro_cano_che_ritorna:
                         action = "sell"
 
                     ######################################################################################## con trend discendente
+                    
                     elif (
                         ma50_last < ma50_2_min_ago
                         and deviation_ma39 < -0.18
@@ -1602,6 +1614,7 @@ class ro_cano_che_ritorna:
             # il CUSCINO DELL' ANGELO CUSTODE e di SANT' ANTONIO mi proteggono ! (vendita con medie lunghe)
 
             # 1 - ro cano VENDE CON UN SALVAGENTE
+            
             elif deviation_ma39 < -0.25 and ma50_last > ma50_2_min_ago:
 
                 sell = "sessione 1 SELL SALVAGENTE 3-39 con ma50 < riga 1427"
@@ -1610,6 +1623,7 @@ class ro_cano_che_ritorna:
             # deviation_ma39 = ma4_last / ma39_last QUESTA HA VENDUTO NEL CROLLO IMPROVVISO DI 1 MINUTO (con -2.06% !!!)!
 
             # 2 - ro cano VENDE DURANTE UN CROLLO IMPROVVISO !
+            
             elif deviation < -0.62:
                 sell = "sessione 1 SELL CROLLO IMPROVVISO - riga 1434"
                 action = "sell"
@@ -1619,6 +1633,7 @@ class ro_cano_che_ritorna:
                 # -0.90 ha fatto fare una perdita di -1.46% il 19 dic 2021
 
             # 3 - ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma13 >
+            
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
                 and ma2_last < last_trade_price
@@ -1634,6 +1649,7 @@ class ro_cano_che_ritorna:
                 # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
 
             # 4 - ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma13 <
+            
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
                 and ma13_last < ma13_2_min_ago
@@ -1649,6 +1665,7 @@ class ro_cano_che_ritorna:
                 # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
 
             # 5 - ro cano VENDE " DOPO x MINUTI " and...
+            
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
                 and ma8_last < ma50_last
@@ -1668,6 +1685,7 @@ class ro_cano_che_ritorna:
             elif self.session == 2:
 
                 ############################################################################################################# sessione 2 ( 0-3 min )
+                
                 if seconds_since_last_trade > 0 and seconds_since_last_trade <= 180:
 
                     # con ma50 >
@@ -1832,6 +1850,7 @@ class ro_cano_che_ritorna:
                         action = "sell"
 
                     # ---------------------------------------------------------------------------------------------------------------------- guadagno con crollo
+                    
                     elif (
                         ma50_last < ma50_2_min_ago
                         and (ma3_prev > ma23_prev and ma3_last < ma23_last)
@@ -1926,6 +1945,7 @@ class ro_cano_che_ritorna:
                         action = "sell"
 
                     # ------------------------------------------------------------------------------- guadagno con crollo
+                    
                     elif (
                         ma50_last < ma50_2_min_ago
                         and (ma3_prev > ma23_prev and ma3_last < ma23_last)
@@ -1935,6 +1955,7 @@ class ro_cano_che_ritorna:
                         action = "sell"
 
                     # ------------------------------------------------------------------------------------------------------------ PARACADUTE crollo
+                    
                     elif (
                         ma50_last < ma50_2_min_ago
                         and ma3_last < ma16_last
@@ -2041,6 +2062,7 @@ class ro_cano_che_ritorna:
                         action = "sell"
 
                     # --------------------------------------------------------------------------------- PARACADUTE crollo
+                    
                     elif (
                         ma50_last < ma50_2_min_ago
                         and ma3_last < ma16_last
@@ -2052,6 +2074,7 @@ class ro_cano_che_ritorna:
                         # AGGIUNTA PER SICUREZZA SE CONTINUA A PRECIPITARE
 
                     # ----------------------------------------------------------------------------- guadagno con crollo
+                    
                     elif (
                         ma50_last < ma50_2_min_ago
                         and (ma3_prev > ma18_prev and ma3_last < ma18_last)
@@ -2119,6 +2142,7 @@ class ro_cano_che_ritorna:
                         action = "sell"
 
                     ##################################################################### con trend discendente
+                    
                     elif (
                         ma50_last < ma50_2_min_ago
                         and deviation_ma39 < -0.23
@@ -2162,6 +2186,7 @@ class ro_cano_che_ritorna:
                 ############################################################################################################################## SESSIONE 2 ( da 60 a 90 min )
 
                 # VENDITA - da 60 a 90 min - da 3600 a 5400 secondi in poi
+                
                 elif (
                     seconds_since_last_trade > 3600 and seconds_since_last_trade <= 5400
                 ):
@@ -2207,6 +2232,7 @@ class ro_cano_che_ritorna:
                         action = "sell"
 
                     ######################################################################################## con trend discendente
+                    
                     elif (
                         ma50_last < ma50_2_min_ago
                         and deviation_ma39 < -0.18
@@ -2308,6 +2334,7 @@ class ro_cano_che_ritorna:
             # il CUSCINO DELL' ANGELO CUSTODE e di SANT' ANTONIO mi proteggono ! (vendita con medie lunghe)
 
             # 1 - ro cano VENDE CON UN SALVAGENTE
+            
             if deviation_ma39 < -0.25 and ma50_last > ma50_2_min_ago:
 
                 sell = "sessione 2 SELL SALVAGENTE 3-39 con ma50 < riga 2133"
@@ -2315,7 +2342,10 @@ class ro_cano_che_ritorna:
 
                 # deviation_ma39 = ma4_last / ma39_last QUESTA HA VENDUTO NEL CROLLO IMPROVVISO DI 1 MINUTO (con -2.06% !!!)!
 
+            
+            
             # 2 - ro cano VENDE DURANTE UN CROLLO IMPROVVISO !
+            
             elif deviation < -0.62:
                 sell = "sessione 2 SELL CROLLO IMPROVVISO - riga 2140"
                 action = "sell"
@@ -2323,8 +2353,11 @@ class ro_cano_che_ritorna:
                 # deviation = ma4_last / last_trade_price
                 # FORSE E' L' UNICA DEVIATION CHE MI POTRA' SALVARE DA UN CROLLO IMPROVVISO COME QUELLO DEL 3 NOVEMBRE 2021
                 # -0.90 ha fatto fare una perdita di -1.46% il 19 dic 2021
+                
+                
 
             # 3 - ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma13 >
+            
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
                 and ma2_last < last_trade_price
@@ -2338,8 +2371,11 @@ class ro_cano_che_ritorna:
                 # il fattore tempo - la dolce attesa - solo con trend ribassista
                 # deviation = ma2_last / last_trade_price
                 # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
+                
+                
 
             # 4 - ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma13 <
+            
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
                 and ma13_last < ma13_2_min_ago
@@ -2353,8 +2389,11 @@ class ro_cano_che_ritorna:
                 # il fattore tempo - la dolce attesa - solo con trend ribassista
                 # deviation = ma2_last / last_trade_price
                 # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
+                
+                
 
             # 5 - ro cano VENDE " DOPO x MINUTI " and...
+            
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
                 and ma8_last < ma50_last
@@ -2374,6 +2413,7 @@ class ro_cano_che_ritorna:
             elif self.session > 2:
 
                 ################################################################################################### sessione 3-4-x ( 0-3 min ) ok
+                
                 if seconds_since_last_trade > 0 and seconds_since_last_trade <= 180:
 
                     # con ma50 >
@@ -2538,6 +2578,7 @@ class ro_cano_che_ritorna:
                         action = "sell"
 
                     # ---------------------------------------------------------------------------------------------------------------------- guadagno con crollo
+                    
                     elif (
                         ma50_last < ma50_2_min_ago
                         and (ma3_prev > ma23_prev and ma3_last < ma23_last)
@@ -2633,6 +2674,7 @@ class ro_cano_che_ritorna:
                         action = "sell"
 
                     # ------------------------------------------------------------------------------- guadagno con crollo
+                    
                     elif (
                         ma50_last < ma50_2_min_ago
                         and (ma3_prev > ma23_prev and ma3_last < ma23_last)
@@ -2642,6 +2684,7 @@ class ro_cano_che_ritorna:
                         action = "sell"
 
                     # ------------------------------------------------------------------------------------------------------------ PARACADUTE crollo
+                    
                     elif (
                         ma50_last < ma50_2_min_ago
                         and ma3_last < ma16_last
@@ -2748,6 +2791,7 @@ class ro_cano_che_ritorna:
                         action = "sell"
 
                     # --------------------------------------------------------------------------------- PARACADUTE crollo
+                    
                     elif (
                         ma50_last < ma50_2_min_ago
                         and ma3_last < ma16_last
@@ -2759,6 +2803,7 @@ class ro_cano_che_ritorna:
                         # AGGIUNTA PER SICUREZZA SE CONTINUA A PRECIPITARE
 
                     # ----------------------------------------------------------------------------- guadagno con crollo
+                    
                     elif (
                         ma50_last < ma50_2_min_ago
                         and (ma3_prev > ma18_prev and ma3_last < ma18_last)
@@ -2812,7 +2857,9 @@ class ro_cano_che_ritorna:
                         and (ma3_prev > ma39_prev and ma3_last < ma39_last)
                         and deviation_sell > 0.91
                         and deviation_sell < 1.20
+                        
                         # deviation_sell = ma3_last/last_trade_price
+                        
                     ):
                         sell = "session 3-4-x SELL (21-60 min) con ma50 > and incrocio 3-39 and deviation_sell 0.91 - 1.20 - riga 2637"
                         action = "sell"
@@ -2826,6 +2873,7 @@ class ro_cano_che_ritorna:
                         action = "sell"
 
                     ##################################################################### con trend discendente
+                    
                     elif (
                         ma50_last < ma50_2_min_ago
                         and deviation_ma39 < -0.22
@@ -2914,6 +2962,7 @@ class ro_cano_che_ritorna:
                         action = "sell"
 
                     ######################################################################################## con trend discendente
+                    
                     elif (
                         ma50_last < ma50_2_min_ago
                         and deviation_ma25 < -0.18
@@ -3015,14 +3064,18 @@ class ro_cano_che_ritorna:
             # il CUSCINO DELL' ANGELO CUSTODE e di SANT' ANTONIO mi proteggono ! (vendita con medie lunghe)
 
             # 1 - ro cano VENDE CON UN SALVAGENTE
+            
             if deviation_ma39 < -0.24 and ma50_last > ma50_2_min_ago:
 
                 sell = "session 3-4-x SELL SALVAGENTE 3-39 con ma50 < riga 2840"
                 action = "sell"
 
                 # deviation_ma39 = ma4_last / ma39_last QUESTA HA VENDUTO NEL CROLLO IMPROVVISO DI 1 MINUTO (con -2.06% !!!)!
+                
+                
 
             # 2 - ro cano VENDE DURANTE UN CROLLO IMPROVVISO !
+            
             elif deviation < -0.62:
                 sell = "session 3-4-x SELL CROLLO IMPROVVISO - riga 2847"
                 action = "sell"
@@ -3030,8 +3083,11 @@ class ro_cano_che_ritorna:
                 # deviation = ma4_last / last_trade_price
 
                 # FORSE E' L' UNICA DEVIATION CHE MI POTRA' SALVARE DA UN CROLLO IMPROVVISO COME QUELLO DEL 3 NOVEMBRE 2021
+                
+                
 
             # 3 - ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma25 >
+            
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
                 and ma2_last < last_trade_price
@@ -3045,8 +3101,12 @@ class ro_cano_che_ritorna:
                 # il fattore tempo - la dolce attesa - solo con trend ribassista
                 # deviation = ma2_last / last_trade_price
                 # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
+                
+                
+                
 
             # 4 - ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma25 <
+           
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
                 and ma13_last < ma13_2_min_ago
@@ -3060,8 +3120,11 @@ class ro_cano_che_ritorna:
                 # il fattore tempo - la dolce attesa - solo con trend ribassista
                 # deviation = ma2_last / last_trade_price
                 # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
+                
+                
 
             # 5 - ro cano VENDE " DOPO x MINUTI " and...
+            
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
                 and ma8_last < ma50_last
