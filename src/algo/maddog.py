@@ -572,7 +572,7 @@ class maddog:
                 
                 
                 
-                # BUY 1 ECCEZIONALE - se ma200 sale da 15 min compra con ma30
+                # BUY 1 ECCEZIONALE modo 1 - se ma200 sale da 15 min compra con ma30
 
                 elif (
                     ma200_last > ma200_15_min_ago
@@ -582,9 +582,24 @@ class maddog:
                     and deviation_ma4_sopra_ma25 > 0.10
                     
                 ):
-                    buy = "BUY 1 ECCEZIONALE se ma200 sale da 15 min compra con deviation 4-25 - riga 496"
+                    buy = "BUY 1 ECCEZIONALE modo 1 - se ma200 sale da 15 min compra con deviation 4-25 - riga 496"
                     action = "buy"
                     percentage = 20
+                    
+                    
+                    
+                # BUY 1 ECCEZIONALE modo 2 - se ma200 sale da 20 min compra con ma30
+
+                elif (   
+                    ma200_last > ma200_20_min_ago
+                    and ma2_last > ma2_2_min_ago
+                    and deviation_ma4_sopra_ma30 > 0.11
+                ):
+                    buy = "BUY 1 ECCEZIONALE modo 2 - se ma200 sale da 20 min compra con deviation 4-30 - riga 496"
+                    action = "buy"
+                    percentage = 20
+                    
+                    # questo mi ha fatto comprare in alto mentre ma 200 saliva ancora ma ma69 gia' era in ribasso. - VEDIAMO
                     
                     
 
@@ -675,14 +690,14 @@ class maddog:
                     
                     
                     
-                # BUY 2 ECCEZIONALE - se ma100 sale da 20 min compra con ma30
+                # BUY 2 ECCEZIONALE - se ma100 sale da 20 min compra con 4-30
 
                 elif (
                     ma2_last > ma2_2_min_ago
                     and ma200_last > ma200_20_min_ago
-                    and deviation_ma5_sopra_ma30 > 0.12
+                    and deviation_ma4_sopra_ma30 > 0.11
                 ):
-                    buy = "BUY 2 ECCEZIONALE se ma200 sale da 20 min compra con deviation 5-30 -riga 482"
+                    buy = "BUY 2 ECCEZIONALE se ma200 sale da 20 min compra con deviation 4-30 -riga 482"
                     action = "buy"
                     percentage = 40
                 
