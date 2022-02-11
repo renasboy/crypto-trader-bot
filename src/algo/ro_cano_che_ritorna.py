@@ -173,6 +173,11 @@ class ro_cano_che_ritorna:
         #################################################################################################################
         ################################################################################################################## deviation per comprare
         
+        # formula DEVIATION_ASSURDA (se ma200>ma200 20 min ago compra con incrocio prezzo-ma200 e vende con incrocio ma2-ma5 e deviation > +0.20 % - ASSURDO !
+        deviation_assurda = (price / ma200_last - 1) * 100 if ma200_last else 0
+        self.algo_helper.info("deviation_assurda: {}".format(deviation_assurda))
+        
+        
         
         # formula DEVIATION_buy1 per la compra 1
         deviation_buy1 = (ma13_last / ma39_last - 1) * 100 if ma39_last else 0
@@ -338,6 +343,7 @@ class ro_cano_che_ritorna:
             # TOGLIERE TUTTI GLI INCROCI AL BUY ! se 13 > 100 NON INCROCERA' MAI ! INCROCIO 13-100 DIVENTA 13>100 !
             
             ######################################################################################################## COMPRA sessione 1
+            
             # BUY 1 con "percentage" 20
             if self.session == 1:
 
@@ -401,6 +407,7 @@ class ro_cano_che_ritorna:
                 ########################################################################################################### compra durante un rialzo improvviso ! 
                 ########################################################################################################### con ma30 che ha 40 min di andamento laterale
                 ########################################################################################################### PER ADESSO SOLO SUL BUY 1
+                
                 elif (    
                     
                     ma78_last > ma78_40_min_ago
@@ -559,6 +566,19 @@ class ro_cano_che_ritorna:
                     action = "buy"
                     percentage = 20
                     
+                    
+                    
+                # BUY con DEVIATION ASSURDA -
+
+                elif (
+                    
+                    ma200_last > ma200_20_min_ago
+                    and ma2_last > ma2_2_min_ago
+                    and deviation_assurda > -0.10
+                ):
+                    buy = "BUY DEVIATION ASSURDA - riga 497"
+                    action = "buy"
+                    percentage = 20
                     
             #############################################################################################################      COMPRA sessione 2
 
@@ -1008,6 +1028,21 @@ class ro_cano_che_ritorna:
 
                         sell = "sessione 1 SELL CROLLO (0-3 min) con ma50 < and incrocio 3-8 and deviation_sell > 0.60 - riga 878"
                         action = "sell"
+                        
+                        
+                    
+                    
+                    elif (
+                        ma2_last < ma2_2_min_ago
+                        and (ma2_prev > ma5_prev and ma2_last < ma5_last)
+                        and deviation_sell > 0.20
+                    ):
+                        sell = "fascia 0-3 min SELL DEVIATION ASSURDA - riga 879"
+                        action = "sell"
+                        
+                        
+                        
+                        
 
                 ################################################################################################################################ sessione 1 ( 3-5 min )
 
@@ -1090,6 +1125,20 @@ class ro_cano_che_ritorna:
                         action = "sell"
 
                         # AGGIUNTA PER SICUREZZA SE CONTINUA A PRECIPITARE
+                        
+                        
+                        
+                        
+                        
+                    elif (
+                        ma2_last < ma2_2_min_ago
+                        and (ma2_prev > ma5_prev and ma2_last < ma5_last)
+                        and deviation_sell > 0.20
+                    ):
+                        sell = "fascia 3-5 min SELL DEVIATION ASSURDA - riga 959"
+                        action = "sell"
+                        
+                        
 
                 ################################################################################################################################### sessione 1 ( 5-12 min )
 
