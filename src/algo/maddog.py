@@ -181,6 +181,12 @@ class maddog:
         
         
         
+        # formula DEVIATION_MA100_LATERALE evita BUY CONTINUI DEL BUY ECCEZIONALE NELLA FASE LATERALE
+        
+        deviation_ma100_laterale = (price / ma100_last - 1) * 100 if ma100_last else 0
+        self.algo_helper.info("deviation_ma100_laterale: {}".format(deviation_ma100_laterale))
+        
+        
         
         ################################################################################################################## deviation per comprare
 
@@ -572,30 +578,33 @@ class maddog:
                 
                 
                 
-                # BUY 1 ECCEZIONALE modo 1 - se ma200 sale da 15 min compra con ma30
+                # BUY 1 ECCEZIONALE modo 1 - se ma200 sale da 15 min compra con 4-25
 
                 elif (
                     ma200_last > ma200_15_min_ago
                     and ma69_last > ma69_2_min_ago
+                    and deviation_ma100_laterale > 0.50
+                    and deviation_ma4_sopra_ma25 > 0.10
                     and ma2_last > ma2_2_min_ago
                     and ma36_last > ma36_2_min_ago
-                    and deviation_ma4_sopra_ma25 > 0.10
-                    
+                  
                 ):
-                    buy = "BUY 1 ECCEZIONALE modo 1 - se ma200 sale da 15 min compra con deviation 4-25 - riga 496"
+                    buy = "BUY 1 ECCEZIONALE modo 1 - se ma200 sale da 15 min compra con deviation 4-25 e un po' piu' su della ma100 ! - riga 496"
                     action = "buy"
                     percentage = 20
                     
                     
                     
-                # BUY 1 ECCEZIONALE modo 2 - se ma200 sale da 20 min compra con ma30
+                # BUY 1 ECCEZIONALE modo 2 - se ma200 sale da 20 min compra con 4-30
 
                 elif (   
                     ma200_last > ma200_20_min_ago
-                    and ma2_last > ma2_2_min_ago
+                    and deviation_ma100_laterale > 0.50
                     and deviation_ma4_sopra_ma30 > 0.11
+                    and ma2_last > ma2_2_min_ago
+                   
                 ):
-                    buy = "BUY 1 ECCEZIONALE modo 2 - se ma200 sale da 20 min compra con deviation 4-30 - riga 496"
+                    buy = "BUY 1 ECCEZIONALE modo 2 - se ma200 sale da 20 min compra con deviation 4-30 e un po' piu' su della ma100 ! - riga 496"
                     action = "buy"
                     percentage = 20
                     
@@ -688,19 +697,7 @@ class maddog:
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     # deviation_buy_crollo_2 = ma3_last / ma13_last
                     
-                    
-                    
-                # BUY 2 ECCEZIONALE - se ma100 sale da 20 min compra con 4-30
-
-                elif (
-                    ma2_last > ma2_2_min_ago
-                    and ma200_last > ma200_20_min_ago
-                    and deviation_ma4_sopra_ma30 > 0.11
-                ):
-                    buy = "BUY 2 ECCEZIONALE se ma200 sale da 20 min compra con deviation 4-30 -riga 482"
-                    action = "buy"
-                    percentage = 40
-                
+               
                 ######################################################################################################## per comprare durante un ribasso che non e' un crollo
                            
                 # BUY DURANTE UN RIBASSO CHE NON E' UN CROLLO ! (compare stammi vicino!) 
@@ -715,7 +712,19 @@ class maddog:
                     action = "buy"
                     percentage = 20
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
-                
+                    
+                    
+                    
+                # BUY 2 ECCEZIONALE - se ma100 sale da 20 min compra con 4-30
+
+                elif (
+                    ma2_last > ma2_2_min_ago
+                    and ma200_last > ma200_20_min_ago
+                    and deviation_ma4_sopra_ma30 > 0.11
+                ):
+                    buy = "BUY 2 ECCEZIONALE se ma200 sale da 20 min compra con deviation 4-30 -riga 496"
+                    action = "buy"
+                    percentage = 40
             
             
             
@@ -1573,24 +1582,37 @@ class maddog:
                         action = "sell"
                         # se non ha forza dopo 1 ora e' inutile continuare a sperare !
                         # cuscino dell' angelo custode
-
+                        
+                        
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and (ma5_prev > ma25_prev and ma5_last < ma25_last)
+                        and deviation_sell > 0.31
+                        and deviation_sell < 0.50
+                    ):
+                        sell = "sessione 1 SELL da 60 a 90 min con ma50 > and incrocio 5-25 and deviation_sell 0.31-0.50 FINTA ALLA MARADONA - riga 1306"
+                        action = "sell"
+                        
+                        
+                        
                     elif (
                         ma50_last > ma50_2_min_ago
                         and (ma3_prev > ma15_prev and ma3_last < ma15_last)
-                        and deviation_sell > 0.31
-                        and deviation_sell < 0.80
+                        and deviation_sell > 0.51
+                        and deviation_sell < 0.90
                     ):
-                        sell = "sessione 1 SELL da 60 a 90 min con ma50> and incrocio 3-13 and deviation_sell 0.31-0.80 RABONA ALLA RONALDO (ma15 invece di ma13) - riga 1306"
+                        sell = "sessione 1 SELL da 60 a 90 min con ma50> and incrocio 3-15 and deviation_sell 0.51-0.90 RABONA ALLA RONALDO - riga 1306"
                         action = "sell"
-
+                    
+                    
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and (ma3_prev > ma39_prev and ma3_last < ma39_last)
-                        and deviation_sell > 0.81
+                        and (ma3_prev > ma30_prev and ma3_last < ma30_last)
+                        and deviation_sell > 0.91
                         and deviation_sell < 1.49
                     ):
 
-                        sell = "sessione 1 SELL da 60 a 90 min con ma50 > and incrocio 3-39 and deviation_sell 0.81 - 1.49 - riga 1316"
+                        sell = "sessione 1 SELL da 60 a 90 min con ma50 > and incrocio 3-30 and deviation_sell 0.91 - 1.49 - riga 1316"
                         action = "sell"
 
                         # ma ricordati che in diverse occasioni 3-48 mi ha evitato la ricompra e la rivendita conseguente con perdita !
