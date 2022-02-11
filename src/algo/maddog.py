@@ -1401,9 +1401,9 @@ class maddog:
                     elif (
                         ma50_last < ma50_2_min_ago
                         and (ma3_prev > ma36_prev and ma3_last < ma36_last)
-                        and deviation_sell < -0.15
+                        and deviation_sell < -0.25
                     ):
-                        sell = "sessione 1 SELL torna a casa durante il crollo con minor danno  (12-21 min) con ma50< and incrocio 3-36 and deviation_sell < -0.15 - riga 1171"
+                        sell = "sessione 1 SELL torna a casa durante il crollo con minor danno  (12-21 min) con ma50 < and incrocio 3-36 and deviation_sell < -0.25 - riga 1171"
                         action = "sell"
                         
                         
