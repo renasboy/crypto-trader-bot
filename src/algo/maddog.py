@@ -582,7 +582,7 @@ class maddog:
                 
                 ######################################################################################################## per comprare durante un ribasso che non e' un crollo
                               
-                #BUY DURANTE UN RIBASSO CHE NON E' UN CROLLO ! (compare stammi vicino!) HA FUNZIONATO ! viva ro combaro meo !
+                # BUY DURANTE UN RIBASSO CHE NON E' UN CROLLO ! (compare stammi vicino!) HA FUNZIONATO ! viva ro combaro meo !
                 
                 elif (
                     ma2_last > ma2_2_min_ago
@@ -741,12 +741,12 @@ class maddog:
                     
                     
                     
-                # BUY 2 ECCEZIONALE - se ma100 sale da 20 min compra con 4-30
+                # BUY 2 ECCEZIONALE - se ma200 sale da 20 min compra con 4-30
 
                 elif (
                     ma2_last > ma2_2_min_ago
                     and ma200_last > ma200_20_min_ago
-                    and deviation_ma4_sopra_ma30 > 0.11
+                    and deviation_ma4_sopra_ma30 > 0.12
                 ):
                     buy = "BUY 2 ECCEZIONALE se ma200 sale da 20 min compra con deviation 4-30 - riga 483"
                     action = "buy"
