@@ -382,7 +382,7 @@ class maddog:
                     ma20_last > ma200_last
                     and ma69_last > ma100_last
                     and ma13_last > ma78_last
-                    and deviation_bellissima > 0.18
+                    and deviation_bellissima > 0.15
                     and ma2_last > ma2_2_min_ago
                     and ma5_last > ma5_2_min_ago
                     and deviation_ma3_sopra_ma7 > 0.05
@@ -394,7 +394,7 @@ class maddog:
                     # and deviation_ma13_sopra_ma25 > 0.07 TOLTA PROVVISORIAMENTE vedi BUY ore 10:47 del 23 nov 2021 (E' ARRIVATA MOLTO TARDI)
                 ):
 
-                    buy = "BUY 1 con 69 > 100 and deviation_bellissima > 0.163 riga 345"
+                    buy = "BUY 1 con 69 > 100 and deviation_bellissima > 0.15 riga 345"
                     action = "buy"
                     percentage = 20
 
@@ -610,7 +610,7 @@ class maddog:
                     and ma36_last > ma36_2_min_ago
                   
                 ):
-                    buy = "BUY 1 ECCEZIONALE modo 1 - se ma200 sale da 15 min compra con deviation 4-25 e un po' piu' su della ma100 ! - riga 496"
+                    buy = "BUY 1 ECCEZIONALE modo 1 - se ma200 sale da 15 min compra con deviation 4-25 e un po' piu' su della ma100 ! - riga 495"
                     action = "buy"
                     percentage = 20
                     
@@ -702,7 +702,7 @@ class maddog:
                     and deviation_buy_crollo_1 < -2.30
                     and ma3_last > ma7_last
                 ):
-                    buy = "BUY DURANTE IL CROLLO - modo 1 riga 469"
+                    buy = "BUY 2 DURANTE IL CROLLO - modo 1 riga 469"
                     action = "buy"
                     percentage = 20
                     
@@ -715,7 +715,7 @@ class maddog:
                     and deviation_buy_crollo_1 < -1.70
                     and deviation_buy_crollo_2 > 0.11
                 ):
-                    buy = "BUY DURANTE IL CROLLO - modo 2 riga 481"
+                    buy = "BUY 2 DURANTE IL CROLLO - modo 2 riga 481"
                     action = "buy"
                     percentage = 20
                     
@@ -733,7 +733,7 @@ class maddog:
                     and deviation_buy_crollo_1 > -1.50
                     and deviation_bellissima > 0.17
                 ):
-                    buy = "BUY DURANTE UN RIBASSO CHE NON E' UN CROLLO ! and deviation_bellissima > 0.17 -  riga 495"
+                    buy = "BUY 2 DURANTE UN RIBASSO CHE NON E' UN CROLLO ! and deviation_bellissima > 0.17 -  riga 482"
                     action = "buy"
                     percentage = 20
                     
@@ -748,7 +748,7 @@ class maddog:
                     and ma200_last > ma200_20_min_ago
                     and deviation_ma4_sopra_ma30 > 0.11
                 ):
-                    buy = "BUY 2 ECCEZIONALE se ma200 sale da 20 min compra con deviation 4-30 -riga 496"
+                    buy = "BUY 2 ECCEZIONALE se ma200 sale da 20 min compra con deviation 4-30 - riga 483"
                     action = "buy"
                     percentage = 40
             
@@ -819,9 +819,9 @@ class maddog:
                 elif (
                     ma2_last > ma2_2_min_ago
                     and ma200_last > ma200_20_min_ago
-                    and deviation_ma5_sopra_ma30 > 0.12
+                    and deviation_ma5_sopra_ma30 > 0.13
                 ):
-                    buy = "BUY 3 ECCEZIONALE se ma200 sale da 20 min compra con deviation 4-30 -riga 607"
+                    buy = "BUY 3 ECCEZIONALE se ma200 sale da 20 min compra con deviation 4-30 - riga 607"
                     action = "buy"
                     percentage = 40
                     
