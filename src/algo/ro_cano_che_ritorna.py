@@ -178,6 +178,14 @@ class ro_cano_che_ritorna:
         self.algo_helper.info("deviation_assurda: {}".format(deviation_assurda))
         
         
+        # formula DEVIATION_ma20_sopra_ma100
+        deviation_ma20_sopra_ma100 = (
+            (ma20_last / ma100_last - 1) * 100 if ma100_last else 0
+        )
+        self.algo_helper.info(
+            "deviation_ma20_sopra_ma100: {}".format(deviation_ma20_sopra_ma100)
+        )
+        
         
         # formula DEVIATION_buy1 per la compra 1
         deviation_buy1 = (ma13_last / ma39_last - 1) * 100 if ma39_last else 0
@@ -570,18 +578,39 @@ class ro_cano_che_ritorna:
                     percentage = 20
                     
                     
-                    
-                # BUY con DEVIATION ASSURDA -
+                
+                
+                # BUY con DEVIATION ASSURDA 1
 
-                elif (
-                    
+                
+                elif (    
                     ma200_last > ma200_20_min_ago
                     and ma2_last > ma2_2_min_ago
                     and deviation_assurda > -0.10
                 ):
-                    buy = "BUY DEVIATION ASSURDA - riga 497"
+                    buy = "BUY DEVIATION ASSURDA 1 considera ma200 > - riga 497"
                     action = "buy"
                     percentage = 20
+                    
+                    # deviation_assurda = price / ma200_last
+                    
+                
+                
+                
+                # BUY con DEVIATION ASSURDA 2
+
+                elif (    
+                    deviation_ma20_sopra_ma100 > 0.10
+                    and ma5_last > ma5_2_min_ago
+                    and ma2_last > ma2_2_min_ago
+                    
+                ):
+                    buy = "BUY DEVIATION ASSURDA 2 considera ma100 < - riga 497"
+                    action = "buy"
+                    percentage = 20
+                    
+                    # deviation_ma20_sopra_ma100
+                    
                     
             #############################################################################################################      COMPRA sessione 2
 
