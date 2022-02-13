@@ -1792,8 +1792,8 @@ class maddog:
                         ma50_last > ma50_2_min_ago
                         and deviation_ma39 < -0.18
                         or (deviation_sell < -0.10 and ma3_last < ma50_last)
+                        or (deviation_sell < +0.10 and ma3_last < ma50_last and ma25_last < ma25_2_min_ago)
                         
-                        # or (deviation_sell < +0.10 and ma3_last < ma50_last and ma25_last < ma25_2_min_ago)
                         
                         # and ma3_last < ma39_last
                         # and deviation_ma39 < -0.18
