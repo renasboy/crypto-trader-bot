@@ -2110,28 +2110,28 @@ class maddog:
                         action = "sell"
                         
                         
-
                     elif (
                         ma50_last >= ma50_2_min_ago
-                        and ma3_last < ma9_last
+                        and ma5_last < ma25_last
                         and deviation_sell > 0.25
-                        and deviation_sell < 0.90
+                        and deviation_sell < 0.50
                         
                         # deviation_sell = ma3_last/last_trade_price
                         
                     ):
-                        sell = "sessione 2 SELL (3-5 min) con ma50 > and 3<9 (no incrocio 3-9) and deviation_sell 0.25 - 0.90 - DRIBBLING ALLA RONALDO - riga 1625"
+                        sell = "session 2 SELL (3-5 min) con ma50 > and 5-25 and deviation_sell 0.25-0.50 - FINTA ALLA MARADONA - riga 2122"
                         action = "sell"
+                 
                         
                         
 
                     elif (
                         ma50_last >= ma50_2_min_ago
-                        and (ma3_prev > ma25_prev and ma3_last < ma25_last)
-                        and deviation_sell > 0.91
+                        and (ma3_prev > ma15_prev and ma3_last < ma15_last)
+                        and deviation_sell > 0.51
                         and deviation_sell < 1.20
                     ):
-                        sell = "sessione 2 SELL (3-5 min) con ma50 > and incrocio 3-25 and deviation_sell 0.91 - 1.20 - riga 1634"
+                        sell = "sessione 2 SELL (3-5 min) con ma50 > and incrocio 3-15 and deviation_sell 0.51 - 1.20 - riga 1634"
                         action = "sell"
                         
 
