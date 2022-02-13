@@ -1706,6 +1706,7 @@ class maddog:
                     ):
                         sell = "sessione 1 SELL da 60 a 90 min con ma50 > and deviation_ma39 <-0.18 or (deviation_sell < -0.18 and ma3_last < ma50_last)  - riga 1295"
                         action = "sell"
+                        
                         # se non ha forza dopo 1 ora e' inutile continuare a sperare !
                         # cuscino dell' angelo custode
                         
@@ -1714,20 +1715,21 @@ class maddog:
                         ma50_last > ma50_2_min_ago
                         and (ma5_prev > ma25_prev and ma5_last < ma25_last)
                         and deviation_sell > 0.31
-                        and deviation_sell < 0.50
+                        and deviation_sell < 0.52
                     ):
-                        sell = "sessione 1 SELL da 60 a 90 min con ma50 > and incrocio 5-25 and deviation_sell 0.31-0.50 FINTA ALLA MARADONA - riga 1306"
+                        sell = "sessione 1 SELL da 60 a 90 min con ma50 > and incrocio 5-25 and deviation_sell 0.31-0.52 FINTA ALLA MARADONA - riga 1306"
                         action = "sell"
                         
+                        # MARADONA accompagna nelle prime fasi di crescita il titolo. poi interviene RONALDO se il rialzo comincia a farsi piu' consistente.
                         
                         
                     elif (
                         ma50_last > ma50_2_min_ago
                         and (ma3_prev > ma15_prev and ma3_last < ma15_last)
-                        and deviation_sell > 0.51
+                        and deviation_sell > 0.53
                         and deviation_sell < 0.90
                     ):
-                        sell = "sessione 1 SELL da 60 a 90 min con ma50> and incrocio 3-15 and deviation_sell 0.51-0.90 RABONA ALLA RONALDO - riga 1306"
+                        sell = "sessione 1 SELL da 60 a 90 min con ma50> and incrocio 3-15 and deviation_sell 0.51-0.90 RABONA ALLA RONALDO - riga 1307"
                         action = "sell"
                     
                     
