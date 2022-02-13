@@ -1770,7 +1770,7 @@ class maddog:
                     elif (
                         ma50_last < ma50_2_min_ago
                         and deviation_ma39 < -0.18
-                      
+                        and ma2_last < ma2_2_min_ago
                     ):
                         sell = "sessione 1 SELL da 60 a 90 min con ma50 < con deviation_ma39 <-0.18 and deviation_sell < 0.10 (no ma3<ma33) (NO INCROCIO!) - riga 1330"
                         action = "sell"
@@ -1854,6 +1854,7 @@ class maddog:
                         ma50_last < ma50_2_min_ago
                         and deviation_ma39 < -0.18
                         or (deviation_sell < 0.10 and ma3_last < ma39_last)
+                        and ma2_last < ma2_2_min_ago
                         
                         # and ma3_last < ma33_last
                         # and deviation_ma39 < -0.18
@@ -2045,6 +2046,7 @@ class maddog:
                         ma50_last < ma50_2_min_ago
                         and (ma3_prev > ma28_prev and ma3_last < ma28_last)
                         and deviation_sell < -0.30
+                        and ma2_last < ma2_2_min_ago
                     ):
                         sell = "sessione 2 SELL (0-3 min) con ma50 < and incrocio 3-28- riga 1563"
                         action = "sell"
@@ -2055,6 +2057,7 @@ class maddog:
                         ma50_last < ma50_2_min_ago
                         and (ma3_prev > ma33_prev and ma3_last < ma33_last)
                         and deviation_sell < -0.23
+                        and ma2_last < ma2_2_min_ago
                     ):
                         sell = "sessione 2 SELL (0-3 min) con ma50 < and incrocio 3-33 and deviation_sell -0.23 - riga 1572"
                         action = "sell"
@@ -2151,6 +2154,7 @@ class maddog:
                         ma50_last < ma50_2_min_ago
                         and (ma3_prev > ma28_prev and ma3_last < ma28_last)
                         and deviation_sell < -0.30
+                        and ma2_last < ma2_2_min_ago
                         
                         # deviation_sell_ma78 = ma3_last / ma78_last
                         
@@ -2166,6 +2170,7 @@ class maddog:
                         ma50_last < ma50_2_min_ago
                         and (ma3_prev > ma33_prev and ma3_last < ma33_last)
                         and deviation_sell < -0.23
+                        and ma2_last < ma2_2_min_ago
                     ):
                         sell = "sessione 2 SELL (3-5 min) con ma50 < and incrocio 3-33 and deviation_sell < -0.23 - riga 1663"
                         action = "sell"
@@ -2266,6 +2271,7 @@ class maddog:
                         ma50_last < ma50_2_min_ago
                         and (ma3_prev > ma28_prev and ma3_last < ma28_last)
                         and deviation_sell < -0.31
+                        and ma2_last < ma2_2_min_ago
                     ):
                         sell = "sessione 2 SELL 12 (5-12 min) con ma50 < and incrocio 3-28 and deviation_sell < -0.31 - riga 1735"
                         action = "sell"
@@ -2278,6 +2284,7 @@ class maddog:
                         ma50_last < ma50_2_min_ago
                         and (ma5_prev > ma78_prev and ma5_last < ma78_last)
                         and deviation_sell < -0.36
+                        and ma2_last < ma2_2_min_ago
                     ):
                         sell = "sessione 2 SELL 12 (5-12 min) con ma50 < and incrocio 3-100 (cuscino di sant' antonio) - riga 1745"
                         action = "sell"
@@ -2385,6 +2392,7 @@ class maddog:
                     elif (
                         ma50_last < ma50_2_min_ago
                         and deviation_ma39 < -0.15
+                        and ma2_last < ma2_2_min_ago
                         
                         # and (ma3_prev > ma33_prev and ma3_last < ma33_last)
                         # and deviation_sell < -0.25
@@ -2402,6 +2410,7 @@ class maddog:
                         ma50_last < ma50_2_min_ago
                         and (ma3_prev > ma78_prev and ma3_last < ma78_last)
                         and deviation_sell < -0.45
+                        and ma2_last < ma2_2_min_ago
                         
                         # ALLORA METTO incrocio 3-78 e deviation < 0.10 e vaffanculo ! ma solo se ma50< !
                         
@@ -2553,6 +2562,7 @@ class maddog:
                         ma50_last < ma50_2_min_ago
                         and deviation_ma39 < -0.24
                         or deviation_sell < -0.24
+                        and ma2_last < ma2_2_min_ago
                         
                         # NELLA SESSIONE 2 TI PUOI RILASSARE UN POCHINO !
                         # and deviation_ma39 < -0.15 or (deviation_sell < 0.10 and ma3_last < ma39_last)
@@ -2568,6 +2578,7 @@ class maddog:
                         ma50_last < ma50_2_min_ago
                         and (ma3_prev > ma78_prev and ma3_last < ma78_last)
                         and deviation_sell < -0.37
+                        and ma2_last < ma2_2_min_ago
                     ):
                         sell = "sessione 2 SELL (21-60 min) con ma50 < and incrocio 3-78 and deviation_sell < -0.37 - riga 1958"
                         action = "sell"
@@ -2666,6 +2677,7 @@ class maddog:
                     elif (
                         ma50_last < ma50_2_min_ago
                         and deviation_ma39 < -0.18
+                        and ma2_last < ma2_2_min_ago
                         
                         # and ma3_last < ma33_last
                         # and deviation_sell < 0.10
@@ -2684,6 +2696,7 @@ class maddog:
                         ma50_last < ma50_2_min_ago
                         and (ma3_prev > ma78_prev and ma3_last < ma78_last)
                         and deviation_sell < 0.10
+                        and ma2_last < ma2_2_min_ago
                     ):
                         sell = "sessione 2 SELL da 60 a 90 min con ma50 < con incrocio 3-78 and deviation_sell < 0.10 - riga 2047"
                         action = "sell"
@@ -2759,6 +2772,7 @@ class maddog:
                         ma50_last < ma50_2_min_ago
                         and deviation_ma39 < -0.18
                         or (deviation_sell < 0.10 and ma3_last < ma39_last)
+                        and ma2_last < ma2_2_min_ago
                         
                         # and ma3_last < ma33_last
                         # and deviation_ma39 < -0.18
@@ -2950,6 +2964,7 @@ class maddog:
                         ma50_last < ma50_2_min_ago
                         and (ma3_prev > ma28_prev and ma3_last < ma28_last)
                         and deviation_sell < -0.30
+                        and ma2_last < ma2_2_min_ago
                     ):
                         sell = "session 3-4-x SELL (0-3 min) con ma50 < and incrocio 3-28- riga 2255"
                         action = "sell"
@@ -2960,6 +2975,7 @@ class maddog:
                         ma50_last < ma50_2_min_ago
                         and (ma3_prev > ma33_prev and ma3_last < ma33_last)
                         and deviation_sell < -0.23
+                        and ma2_last < ma2_2_min_ago
                     ):
                         sell = "SELL (0-3 min) con ma50 < and incrocio 3-33 and deviation_sell -0.23 - riga 2265"
                         action = "sell"
@@ -3047,6 +3063,7 @@ class maddog:
                         ma50_last < ma50_2_min_ago
                         and (ma3_prev > ma28_prev and ma3_last < ma28_last)
                         and deviation_sell < -0.30
+                        and ma2_last < ma2_2_min_ago
                         
                         # deviation_sell_ma78 = ma3_last / ma78_last
                         
@@ -3062,6 +3079,7 @@ class maddog:
                         ma50_last < ma50_2_min_ago
                         and (ma3_prev > ma33_prev and ma3_last < ma33_last)
                         and deviation_sell < -0.23
+                        and ma2_last < ma2_2_min_ago
                     ):
                         sell = "session 3-4-x SELL (3-5 min) con ma50 < and incrocio 3-33 and deviation_sell < -0.23 - riga 2357"
                         action = "sell"
@@ -3156,6 +3174,7 @@ class maddog:
                         ma50_last < ma50_2_min_ago
                         and (ma3_prev > ma28_prev and ma3_last < ma28_last)
                         and deviation_sell < -0.30
+                        and ma2_last < ma2_2_min_ago
                     ):
                         sell = "session 3-4-x SELL 12 (5-12 min) con ma50 < and incrocio 3-28 - riga 2442"
                         action = "sell"
@@ -3166,6 +3185,7 @@ class maddog:
                         ma50_last < ma50_2_min_ago
                         and (ma5_prev > ma78_prev and ma5_last < ma78_last)
                         and deviation_sell < -0.36
+                        and ma2_last < ma2_2_min_ago
                     ):
                         sell = "session 3-4-x SELL 12 (5-12 min) con ma50 < and incrocio 3-100 (cuscino di sant' antonio) - riga 2452"
                         action = "sell"
@@ -3290,6 +3310,7 @@ class maddog:
                     elif (
                         ma50_last < ma50_2_min_ago
                         and deviation_ma39 < -0.17
+                        and ma2_last < ma2_2_min_ago
                         
                         # and (ma3_prev > ma33_prev and ma3_last < ma33_last)
                         # and deviation_sell < -0.25
@@ -3308,6 +3329,7 @@ class maddog:
                         ma50_last < ma50_2_min_ago
                         and (ma3_prev > ma78_prev and ma3_last < ma78_last)
                         and deviation_sell < -0.45
+                        and ma2_last < ma2_2_min_ago
                         
                         # ALLORA METTO incrocio 3-78 e deviation < 0.10 e vaffanculo ! ma solo se ma50< !
                         
@@ -3321,6 +3343,7 @@ class maddog:
                         ma50_last < ma50_2_min_ago
                         and (ma5_prev > ma100_prev and ma5_last < ma100_last)
                         and deviation_sell < -0.27
+                        and ma2_last < ma2_2_min_ago
                         
                         # viva sant' antonio !
                         # incrocio 5-100 no 5<100 altrimenti vende durante il crollo !
@@ -3442,6 +3465,7 @@ class maddog:
                         ma50_last < ma50_2_min_ago
                         and deviation_ma39 < -0.22
                         or deviation_sell < -0.22
+                        and ma2_last < ma2_2_min_ago
                         
                         # and deviation_ma39 < -0.15 or (deviation_sell < 0.10 and ma3_last < ma39_last)
                         # nella sessione 3-4-x ti puoi rilassare una ndecchia.
@@ -3457,6 +3481,7 @@ class maddog:
                         ma50_last < ma50_2_min_ago
                         and (ma3_prev > ma78_prev and ma3_last < ma78_last)
                         and deviation_sell < -0.37
+                        and ma2_last < ma2_2_min_ago
                     ):
                         sell = "session 3-4-x SELL (21-60 min) con ma50 < and incrocio 3-78 and deviation_sell < -0.37 - riga 2665"
                         action = "sell"
@@ -3465,6 +3490,7 @@ class maddog:
                         ma50_last < ma50_2_min_ago
                         and (ma5_prev > ma100_prev and ma5_last < ma100_last)
                         and deviation_sell < -0.27
+                        and ma2_last < ma2_2_min_ago
                         
                         # viva sant' antonio !
                         # NON INCROCERANNO MAI DURANTE IL CROLLO !
@@ -3552,6 +3578,7 @@ class maddog:
                     elif (
                         ma50_last < ma50_2_min_ago
                         and deviation_ma39 < -0.18
+                        and ma2_last < ma2_2_min_ago
                         
                         # and ma3_last < ma33_last
                         # and deviation_sell < 0.10
@@ -3569,6 +3596,7 @@ class maddog:
                         ma50_last < ma50_2_min_ago
                         and (ma3_prev > ma78_prev and ma3_last < ma78_last)
                         and deviation_sell < 0.10
+                        and ma2_last < ma2_2_min_ago
                     ):
                         sell = "session 3-4-x SELL da 60 a 90 min con ma50 < con incrocio 3-78 and deviation_sell < 0.10 - riga 2754"
                         action = "sell"
@@ -3647,6 +3675,7 @@ class maddog:
                         ma50_last < ma50_2_min_ago
                         and deviation_ma39 < -0.18
                         or (deviation_sell < 0.10 and ma3_last < ma39_last)
+                        and ma2_last < ma2_2_min_ago
                         
                         # and ma3_last < ma33_last
                         # and deviation_ma39 < -0.18
