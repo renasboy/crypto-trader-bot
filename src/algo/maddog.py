@@ -761,9 +761,9 @@ class maddog:
                 if (
                     ma78_last >= ma78_2_min_ago
                     and deviation_buy3 > 0.12
-                    and deviation_buy_ma2_sopra_ma13 > 0.16
+                    and deviation_buy_ma2_sopra_ma13 > 0.155
                     and ma3_last > ma13_last
-                    and deviation_ma4_sopra_ma30 > 0.15
+                    and deviation_ma4_sopra_ma30 > 0.145
                     and ma4_last > ma9_last
                     and ma4_last > ma50_last
                     and ma2_last > ma2_2_min_ago
