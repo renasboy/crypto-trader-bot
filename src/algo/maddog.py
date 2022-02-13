@@ -1162,28 +1162,27 @@ class maddog:
                         action = "sell"
                         
                         
-
                     elif (
                         ma50_last >= ma50_2_min_ago
-                        and ma3_last < ma9_last
-                        and deviation_sell > 0.25
-                        and deviation_sell < 0.90
+                        and ma5_last < ma25_last
+                        and deviation_sell > 0.27
+                        and deviation_sell < 0.60
                         
                         # deviation_sell = ma3_last/last_trade_price
                         
                     ):
-                        sell = "sessione 1 SELL (3-5 min) con ma50 > and 3<9 (no incrocio 3-9) and deviation_sell 0.25 - 0.90 - DRIBBLING ALLA RONALDO - riga 903"
+                        sell = "sessione 1 SELL (3-5 min) con ma50> 5-25 and deviation_sell 0.27 - 0.60 - FINTA ALLA MARADONA - riga 997"
                         action = "sell"
                         
-                        
+                     
 
                     elif (
                         ma50_last >= ma50_2_min_ago
-                        and (ma3_prev > ma25_prev and ma3_last < ma25_last)
-                        and deviation_sell > 0.91
+                        and (ma3_prev > ma15_prev and ma3_last < ma15_last)
+                        and deviation_sell > 0.61
                         and deviation_sell < 1.20
                     ):
-                        sell = "sessione 1 SELL (3-5 min) con ma50 > and incrocio 3-25 and deviation_sell 0.91 - 1.20 - riga 912"
+                        sell = "sessione 1 SELL (3-5 min) con ma50 > and incrocio 3-15 and deviation_sell 0.91 - 1.20 DRIBBLING ALLA RONALDO - riga 912"
                         action = "sell"
                         
 
@@ -1276,28 +1275,28 @@ class maddog:
 
                     elif (
                         ma50_last >= ma50_2_min_ago
-                        and ma3_last < ma13_last
-                        and deviation_sell > 0.25
+                        and ma5_last < ma25_last
+                        and deviation_sell > 0.27
                         and deviation_sell < 0.60
                         
                         # deviation_sell = ma3_last/last_trade_price
                         
                     ):
-                        sell = "sessione 1 SELL (5-12 min) con ma50 >  3<13 and deviation_sell 0.25 - 0.90 - DRIBBLING ALLA RONALDO - riga 997"
+                        sell = "sessione 1 SELL (5-12 min) con ma50> 5-25 and deviation_sell 0.27 - 0.60 - FINTA ALLA MARADONA - riga 997"
                         action = "sell"
                         
                         
                         
                     elif (
                         ma50_last >= ma50_2_min_ago
-                        and ma3_last < ma11_last
+                        and ma3_last < ma13_last
                         and deviation_sell > 0.61
                         and deviation_sell < 0.90
                         
                         # deviation_sell = ma3_last/last_trade_price
                         
                     ):
-                        sell = "sessione 1 SELL (5-12 min) con ma50 >  3<11 and deviation_sell 0.61 - 0.90 - DRIBBLING ALLA MARADONA - riga 998"
+                        sell = "sessione 1 SELL (5-12 min) con ma50 >  3<13 and deviation_sell 0.61 - 0.90 - DRIBBLING ALLA RONALDO - riga 998"
                         action = "sell"
                         
                         
@@ -1311,7 +1310,7 @@ class maddog:
                         # deviation_sell = ma3_last/last_trade_price
                         
                     ):
-                        sell = "sessione 1 SELL (5-12 min) con ma50 > and incrocio 3-25 and deviation_sell 0.91 - 1.20 - riga 1007"
+                        sell = "sessione 1 SELL (5-12 min) con ma50 > and incrocio 3-15 and deviation_sell 0.91 - 1.20 - riga 1007"
                         action = "sell"
                         
                         
