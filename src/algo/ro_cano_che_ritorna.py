@@ -133,12 +133,20 @@ class ro_cano_che_ritorna:
         
       
 
+        # ESPERIMENTO !
+        
+        # formula DEVIATION_CORREZIONE
+        
+        deviation_correzione = (ma3_last / ma25_last - 1) * 100 if ma25_last else 0
+        self.algo_helper.info("deviation_correzione: {}".format(deviation_correzione))
+        
+        # per adesso solo su RCCR !
+        
+        
+        
+        
+        
         ############# deviation per comprare con un RIALZO IMPROVVISO
-        
-        
-        # 12 gennaio 2022 la ma2 arriva tardi ! DEVIATION RIALZO IMPROVVISO per adesso solo su RCCR
-        
-        
         # formula DEVIATION_RIALZO_IMPROVVISO (per 40 min si muove in un range +0.25 -0.25 sintetizzato dalla ma30
         deviation_rialzo_improvviso_1 = (price / ma30_last - 1) * 100 if ma30_last else 0
         self.algo_helper.info("deviation_rialzo_improvviso_1: {}".format(deviation_rialzo_improvviso_1))
@@ -310,7 +318,13 @@ class ro_cano_che_ritorna:
         # or deviation_buy_crollo_1 < -1.50 
         # or (-1.50 < deviation_buy_crollo_1 < -0.60):
         
-        if deviation_1_gabbia > -0.29 or deviation_buy_crollo_1 < -1.50 or deviation_buy_crollo_1 > -1.50 and deviation_buy_crollo_1 < -0.60:
+        
+        # esperimento ! con aggiunta di deviation correzione e nuova apertura gabbia
+        
+        if deviation_1_gabbia > -0.29 or deviation_buy_crollo_1 < -1.50 or deviation_buy_crollo_1 > -1.50 and deviation_buy_crollo_1 < -0.60 or deviation_buy_crollo_1 > -0.59 and deviation_buy_crollo_1 < -0.29:
+            
+            
+            
         # if deviation_1_gabbia > -0.29  
         # or deviation_buy_crollo_1 < -1.50:
         # or deviation_buy_crollo_1 > -1.50 and deviation_buy_crollo_1 < -0.60:    
@@ -611,6 +625,32 @@ class ro_cano_che_ritorna:
                     percentage = 20
                     
                     # deviation_ma20_sopra_ma100
+                    
+                    
+                    
+                    
+                    
+                    
+                    # esperimento
+                    # BUY DURANTE UNA CORREZIONE che non e' un ribasso e non e' un crollo ! (compare stammi vicino!)   
+                
+                elif (
+                    ma2_last > ma2_2_min_ago
+                    and deviation_buy_crollo_1 < -0.29
+                    and deviation_buy_crollo_1 > -0.59
+                    and deviation_correzione > 0.02
+                ):
+                    buy = "BUY DURANTE UNA CORREZIONE che non e' un forte ribasso e non e' un crollo ! con deviation_correzione > 0.02 - riga 643"
+                    action = "buy"
+                    percentage = 20
+                    
+                    # deviation_buy_crollo_1 = ma8_last / ma78_last
+                    # deviation_correzione = ma3_last / ma25_last
+                    
+                    # compare prega per me !
+                    
+                    
+                    
                     
                     
             #############################################################################################################      COMPRA sessione 2
