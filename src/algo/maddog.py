@@ -56,6 +56,7 @@ class maddog:
         ma6_2_min_ago = self.algo_helper.ma_minutes_ago(6, 2)
         ma8_4_min_ago = self.algo_helper.ma_minutes_ago(8, 4)
         ma13_2_min_ago = self.algo_helper.ma_minutes_ago(13, 2)
+        ma20_2_min_ago = self.algo_helper.ma_minutes_ago(20, 2)
         ma25_2_min_ago = self.algo_helper.ma_minutes_ago(25, 2)
         
         ma30_10_min_ago = self.algo_helper.ma_minutes_ago(30, 10)
@@ -660,6 +661,7 @@ class maddog:
                     ma200_last > ma200_20_min_ago
                     and ma2_last > ma2_2_min_ago
                     and deviation_assurda > -0.10
+                    and ma20_last > ma20_2_min_ago
                 ):
                     buy = "BUY 1 con DEVIATION ASSURDA che ma200 > da 20 min COMPRA con price-ma200 - riga 497"
                     action = "buy"
