@@ -965,7 +965,9 @@ class maddog:
                     # deviation_buy3 = ma4_last/ma30_last
                     
                     
-                """   
+                """
+                # la BUY 3 ECCEZIONALE compra troppo presto !
+                
                 # BUY 4 ECCEZIONALE - se ma100 sale da 20 min compra con ma30
 
                 elif (
