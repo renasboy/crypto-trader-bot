@@ -723,7 +723,7 @@ class ro_cano_che_ritorna:
                     percentage = 40
                     
                     
-                # BUY DURANTE UN RIBASSO CHE NON E' UN CROLLO ! (compare stammi vicino!)
+                # BUY 2 DURANTE UN RIBASSO CHE NON E' UN CROLLO ! (compare stammi vicino!)
                 
                 elif (
                     ma2_last > ma2_2_min_ago
@@ -731,7 +731,7 @@ class ro_cano_che_ritorna:
                     and deviation_buy_crollo_1 > -1.50
                     and deviation_bellissima > 0.17
                 ):
-                    buy = "BUY DURANTE UN RIBASSO CHE NON E' UN CROLLO ! and deviation_bellissima > 0.17 -  riga 495"
+                    buy = "BUY 2 DURANTE UN RIBASSO CHE NON E' UN CROLLO ! and deviation_bellissima > 0.17 -  riga 495"
                     action = "buy"
                     percentage = 20
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
@@ -792,7 +792,8 @@ class ro_cano_che_ritorna:
                     # deviation_buy3 = ma4_last/ma30_last
                     
                     
-                    
+                """
+                
                 # BUY 3 ECCEZIONALE - se ma100 sale da 20 min compra con ma30
            
                 elif (
@@ -803,6 +804,9 @@ class ro_cano_che_ritorna:
                     buy = "BUY 3 ECCEZIONALE se ma200 sale da 20 min compra con deviation 4-30 -riga 496"
                     action = "buy"
                     percentage = 40
+                    
+                 """
+                    
             
             # ###############################################################################################################       COMPRA sessione 4
             # --------------------------------------------------------------------------------------------------------------------- deviation piu' alte se ma 78 < !
@@ -856,7 +860,8 @@ class ro_cano_che_ritorna:
                     # deviation_buy3 = ma4_last/ma30_last
                     
                     
-                    
+                """
+                
                 # BUY 4 ECCEZIONALE - se ma100 sale da 20 min compra con ma30
 
                 elif (
@@ -867,6 +872,8 @@ class ro_cano_che_ritorna:
                     buy = "BUY 4 ECCEZIONALE se ma200 sale da 20 min compra con deviation 4-30 - riga 658"
                     action = "buy"
                     percentage = 40
+                
+                """
                     
            
             ############################################################################################################  compra sessione 5 in poi
@@ -931,7 +938,9 @@ class ro_cano_che_ritorna:
                     # deviation_buy3 = ma4_last/ma30_last
                     
                     
-                    
+                
+                """
+                
                 # BUY 5 ECCEZIONALE - se ma100 sale da 20 min compra con ma30
 
                 elif (
@@ -942,6 +951,8 @@ class ro_cano_che_ritorna:
                     buy = "BUY 5 ECCEZIONALE se ma200 sale da 20 min compra con deviation 4-30 -riga 720"
                     action = "buy"
                     percentage = 40
+                    
+                """
                     
                     
                     
