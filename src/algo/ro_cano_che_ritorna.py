@@ -468,7 +468,7 @@ class ro_cano_che_ritorna:
                     
                     ma78_last < ma78_40_min_ago
                     
-                    and deviation_rialzo_improvviso_1 > 0.32
+                    and deviation_rialzo_improvviso_1 > 0.48
                     and deviation_rialzo_improvviso_2 > 0.20
                     and deviation_rialzo_improvviso_3 > 0.20
                     and deviation_rialzo_improvviso_4 > 0.20
