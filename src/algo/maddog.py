@@ -655,15 +655,16 @@ class maddog:
                     
                     
                     
-                # BUY 1 con DEVIATION ASSURDA = price / ma200_last CON ma200 >
+                # BUY 1 con DEVIATION ASSURDA  se ma200 > da 20 min COMPRA con price - ma200 >
 
                 elif (    
                     ma200_last > ma200_20_min_ago
                     and ma2_last > ma2_2_min_ago
                     and deviation_assurda > -0.10
                     and ma20_last > ma20_2_min_ago
+                    and ma69_last > ma69_2_min_ago
                 ):
-                    buy = "BUY 1 con DEVIATION ASSURDA che ma200 > da 20 min COMPRA con price-ma200 - riga 497"
+                    buy = "BUY 1 con DEVIATION ASSURDA se ma200 > da 20 min COMPRA con price - ma200 - riga 497"
                     action = "buy"
                     percentage = 20
                     
@@ -2081,6 +2082,7 @@ class maddog:
                     ):
                         sell = "SELL 2 (0-3 min) con ma50 > and incrocio 3-39 and deviation_sell < -0.23 - riga 1515"
                         action = "sell"
+                        
 
                     elif (
                         ma50_last >= ma50_2_min_ago
@@ -3495,17 +3497,33 @@ class maddog:
                     ):
                         sell = "session 3-4-x SELL (21-60 min) con ma50 > and incrocio 5-100 cuscino di sant' antonio (no 5<100) and deviation_sell < -0.26 - riga 2617"
                         action = "sell"
-
+                        
+                        
+                        
+                        
+                    elif (
+                        ma50_last >= ma50_2_min_ago
+                        and (ma4_prev > ma25_prev and ma4_last < ma25_last)
+                        and deviation_sell > 0.25
+                        and deviation_sell < 0.55
+                        
+                        # deviation_sell = ma3_last/last_trade_price
+                        
+                    ):
+                        sell = "SELL 3-4-x (21-60 min) con ma50 > and incrocio 4-25 and deviation_sell 0.25 - 0.60 FINTA DI MARADONA - riga 3513"
+                        action = "sell"
+                        
+                        
                     elif (
                         ma50_last > ma50_2_min_ago
                         and ma3_last < ma15_last
-                        and deviation_sell > 0.30
+                        and deviation_sell > 0.56
                         and deviation_sell < 0.90
                         
                         # deviation_sell = ma3_last/last_trade_price
                         
                     ):
-                        sell = "session 3-4-x SELL (21-60 min) con ma50 > and 3<15 (no incrocio 3-15) and deviation_sell 0.30 - 0.90 ELASTICO ALLA RONALDO - riga 2627"
+                        sell = "SELL 3-4-x (21-60 min) con ma50 > and 3<15 (no incrocio 3-15) and deviation_sell 0.56 - 0.90 ELASTICO ALLA RONALDO - riga 3526"
                         action = "sell"
                         
                         
