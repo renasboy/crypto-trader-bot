@@ -802,8 +802,8 @@ class maddog:
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     
                     
-                
-                
+                # buy 2 esperimentali
+                # forse a queste 2 prossime condizioni dovrai mettere l' incrocio - forse comprera' non appena vendera'
                 
                 # BUY 2 ECCEZIONALE - se ma200 sale da 20 min compra con 4-30 ma sul BUY 2 lo 0.50 evita GLI EFFETTI LATERALI !
 
