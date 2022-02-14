@@ -1685,7 +1685,7 @@ class ro_cano_che_ritorna:
 
             # 1 - ro cano VENDE CON UN SALVAGENTE
             
-            elif deviation_ma39 < -0.25 and ma50_last > ma50_2_min_ago:
+            elif deviation_ma39 < -0.26 and ma50_last > ma50_2_min_ago:
 
                 sell = "sessione 1 SELL SALVAGENTE 3-39 con ma50 < riga 1427"
                 action = "sell"
@@ -2405,7 +2405,7 @@ class ro_cano_che_ritorna:
 
             # 1 - ro cano VENDE CON UN SALVAGENTE
             
-            if deviation_ma39 < -0.25 and ma50_last > ma50_2_min_ago:
+            if deviation_ma39 < -0.26 and ma50_last > ma50_2_min_ago:
 
                 sell = "sessione 2 SELL SALVAGENTE 3-39 con ma50 < riga 2133"
                 action = "sell"
@@ -3135,7 +3135,7 @@ class ro_cano_che_ritorna:
 
             # 1 - ro cano VENDE CON UN SALVAGENTE
             
-            if deviation_ma39 < -0.24 and ma50_last > ma50_2_min_ago:
+            if deviation_ma39 < -0.27 and ma50_last > ma50_2_min_ago:
 
                 sell = "session 3-4-x SELL SALVAGENTE 3-39 con ma50 < riga 2840"
                 action = "sell"
