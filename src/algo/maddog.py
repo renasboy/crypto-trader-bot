@@ -895,7 +895,9 @@ class maddog:
                     
                     
                     
-                    
+                """
+                # la BUY 3 ECCEZIONALE compra troppo presto ! 
+                
                 # BUY 3 ECCEZIONALE - se ma100 sale da 20 min compra con ma30
            
                 elif (
@@ -906,6 +908,8 @@ class maddog:
                     buy = "BUY 3 ECCEZIONALE se ma200 sale da 20 min compra con deviation 4-30 - riga 607"
                     action = "buy"
                     percentage = 40
+                    
+                """
                     
                     
             # ###############################################################################################################       COMPRA sessione 4
