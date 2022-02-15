@@ -672,6 +672,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                     and deviation_assurda > -0.10
                     and ma20_last > ma20_2_min_ago
+                    and ma39_last > ma39_2_min_ago
                     and ma69_last > ma69_2_min_ago
                     and deviation_buy_ma3_sopra_ma25 > 0.10
                 ):
