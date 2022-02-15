@@ -270,7 +270,17 @@ class maddog:
         self.algo_helper.info(
             "deviation_buy_ma3_sopra_ma13: {}".format(deviation_buy_ma3_sopra_ma13)
         )
-
+        z
+        
+        # formula DEVIATION_buy_ma3_sopra_ma25 per comprare a una certa distanza da ma25
+        deviation_buy_ma3_sopra_ma25 = (
+            (ma3_last / ma25_last - 1) * 100 if ma25_last else 0
+        )
+        self.algo_helper.info(
+            "deviation_buy_ma3_sopra_ma25: {}".format(deviation_buy_ma3_sopra_ma25)
+        )
+        
+        
         # formula DEVIATION_ma4_sopra_ma30
         deviation_ma4_sopra_ma30 = (ma4_last / ma30_last - 1) * 100 if ma30_last else 0
         self.algo_helper.info(
@@ -663,6 +673,7 @@ class maddog:
                     and deviation_assurda > -0.10
                     and ma20_last > ma20_2_min_ago
                     and ma69_last > ma69_2_min_ago
+                    and deviation_buy_ma3_sopra_ma25
                 ):
                     buy = "BUY 1 con DEVIATION ASSURDA se ma200 > da 20 min COMPRA con price - ma200 - riga 497"
                     action = "buy"
@@ -3476,7 +3487,7 @@ class maddog:
                         ma50_last > ma50_2_min_ago
                         and ma2_last < ma2_2_min_ago
                         and deviation_ma25 < -0.20
-                        or (deviation_sell < -0.24 and ma3_last < ma50_last)
+                        or (deviation_sell < -0.235 and ma3_last < ma50_last)
                         
                         # and deviation_ma39 < -0.16 or (deviation_sell < 0.10 and ma3_last < ma39_last)
                         # and (ma3_prev > ma39_prev and ma3_last < ma39_last)
@@ -3484,7 +3495,7 @@ class maddog:
                         # deviation_sell = ma3_last/last_trade_price
                         
                     ):
-                        sell = "session 3-4-x SELL (21-60 min) con ma50 > and deviation_ma25 < -0.20 or (deviation_sell < -0.24 and ma3_last < ma50_last) - riga 2608"
+                        sell = "session 3-4-x SELL (21-60 min) con ma50 > and deviation_ma25 < -0.20 or (deviation_sell < -0.235 and ma3_last < ma50_last) - riga 2608"
                         action = "sell"
                         
                         
