@@ -837,9 +837,11 @@ class maddog:
                     ma200_last > ma200_20_min_ago
                     and ma2_last > ma2_2_min_ago
                     and deviation_assurda > -0.10
-                    and deviation_ma100_laterale > 0.50
+                    and deviation_ma4_sopra_ma30 > 0.11
+                    
+                    # and deviation_ma100_laterale > 0.50
                 ):
-                    buy = "BUY 2 con DEVIATION ASSURDA se ma200 sale da 20 min compra con price - ma200 (ma SUL BUY 2 lo 0.50 evita GLI EFFETTI LATERALI !) - riga 497"
+                    buy = "BUY 2 con DEVIATION ASSURDA se ma200 sale da 20 min compra con price - ma200 (sul BUY 2 lo 0.50 evitera' GLI EFFETTI LATERALI !) - riga 497"
                     action = "buy"
                     percentage = 20
                     
@@ -917,6 +919,7 @@ class maddog:
                     ma2_last > ma2_2_min_ago
                     and ma200_last > ma200_20_min_ago
                     and deviation_ma5_sopra_ma30 > 0.13
+                    # and deviation_ma100_laterale > 0.50
                 ):
                     buy = "BUY 3 ECCEZIONALE se ma200 sale da 20 min compra con deviation 4-30 - riga 607"
                     action = "buy"
