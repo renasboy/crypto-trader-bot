@@ -673,7 +673,7 @@ class maddog:
                     and deviation_assurda > -0.10
                     and ma20_last > ma20_2_min_ago
                     and ma69_last > ma69_2_min_ago
-                    and deviation_buy_ma3_sopra_ma25
+                    and deviation_buy_ma3_sopra_ma25 > 0.10
                 ):
                     buy = "BUY 1 con DEVIATION ASSURDA se ma200 > da 20 min COMPRA con price - ma200 - riga 497"
                     action = "buy"
