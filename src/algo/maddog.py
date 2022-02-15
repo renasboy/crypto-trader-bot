@@ -839,12 +839,11 @@ class maddog:
                     and deviation_assurda > -0.10
                     and deviation_ma4_sopra_ma30 > 0.11
                     and deviation_ma100_laterale > 0.10
-                    
                 ):
                     buy = "BUY 2 con DEVIATION ASSURDA se ma200 sale da 20 min BUY con PRICE-ma200 (sul BUY 2 lo 0.50 evita molto meglio GLI EFFETTI LATERALI !) - riga 497"
                     action = "buy"
-                    percentage = 20
-                    
+                    percentage = 20    
+          
                     # deviation_assurda = price / ma200
             
             
