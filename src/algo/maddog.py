@@ -270,7 +270,7 @@ class maddog:
         self.algo_helper.info(
             "deviation_buy_ma3_sopra_ma13: {}".format(deviation_buy_ma3_sopra_ma13)
         )
-        z
+        
         
         # formula DEVIATION_buy_ma3_sopra_ma25 per comprare a una certa distanza da ma25
         deviation_buy_ma3_sopra_ma25 = (
