@@ -887,6 +887,7 @@ class maddog:
                     buy = "BUY 3B RIVOLUZIONARIO se ma39 > ma78- riga 588"
                     action = "buy"
                     percentage = 50
+                    
                     # deviation_buy3 = ma4_last/ma30_last
                     # riga 462 potrebbe esserci un problema perche' ho tolto ma78_last >= ma78_2_min_ago. vediamo
                     
@@ -906,11 +907,13 @@ class maddog:
                     buy = "BUY 3C RIVOLUZIONARIO se ma78 < - riga 606"
                     action = "buy"
                     percentage = 40
+                    
                     # deviation_buy3 = ma4_last/ma30_last
                     
                     
                     
                 """
+                
                 # la BUY 3 ECCEZIONALE compra troppo presto ! 
                 
                 # BUY 3 ECCEZIONALE - se ma100 sale da 20 min compra con ma30
@@ -919,11 +922,13 @@ class maddog:
                     ma2_last > ma2_2_min_ago
                     and ma200_last > ma200_20_min_ago
                     and deviation_ma5_sopra_ma30 > 0.13
-                    # and deviation_ma100_laterale > 0.50
+                    
                 ):
                     buy = "BUY 3 ECCEZIONALE se ma200 sale da 20 min compra con deviation 4-30 - riga 607"
                     action = "buy"
                     percentage = 40
+                    
+                    # and deviation_ma100_laterale > 0.50
                     
                 """
                     
@@ -946,6 +951,7 @@ class maddog:
                     buy = "BUY 4A con ma 78 > riga 626"
                     action = "buy"
                     percentage = 50
+                    
 
                 elif (
                     ma78_last >= ma78_2_min_ago
@@ -961,7 +967,9 @@ class maddog:
                     buy = "BUY 4B RIVOLUZIONARIO con ma78 > - riga 641"
                     action = "buy"
                     percentage = 50
+                    
                     # deviation_buy3 = ma4_last/ma30_last
+                    
 
                 elif (
                     ma78_last < ma78_2_min_ago
@@ -977,10 +985,12 @@ class maddog:
                     buy = "BUY 4C RIVOLUZIONARIO con ma78 < - riga 657"
                     action = "buy"
                     percentage = 50
+                    
                     # deviation_buy3 = ma4_last/ma30_last
                     
                     
                 """
+                
                 # la BUY 3 ECCEZIONALE compra troppo presto !
                 
                 # BUY 4 ECCEZIONALE - se ma100 sale da 20 min compra con ma30
@@ -993,6 +1003,7 @@ class maddog:
                     buy = "BUY 4 ECCEZIONALE se ma200 sale da 20 min compra con deviation 4-30 - riga 658"
                     action = "buy"
                     percentage = 40
+                    
                 """
                     
             ############################################################################################################  compra sessione 5 in poi
@@ -1044,6 +1055,7 @@ class maddog:
                     buy = "BUY 5B RIVOLUZIONARIO con ma78 > and deviation_bellissima > 0.163 (PER SPEZZARE LA CATENA -effetti laterali) - riga 701"
                     action = "buy"
                     percentage = 50
+                    
                     # deviation_buy3 = ma4_last/ma30_last
 
                     
@@ -1063,10 +1075,12 @@ class maddog:
                     buy = "BUY 5C RIVOLUZIONARIO con ma78 < and deviation_bellissima > 0.163 - riga 719"
                     action = "buy"
                     percentage = 50
+                    
                     # deviation_buy3 = ma4_last/ma30_last
                     
                     
-                """    
+                """
+                
                 # BUY 5 ECCEZIONALE - se ma100 sale da 20 min compra con ma30
 
                 elif (
@@ -1077,6 +1091,7 @@ class maddog:
                     buy = "BUY 5 ECCEZIONALE se ma200 sale da 20 min compra con deviation 4-30 -riga 720"
                     action = "buy"
                     percentage = 40
+                    
                 """
                     
                     
