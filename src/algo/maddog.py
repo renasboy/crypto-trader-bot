@@ -506,7 +506,7 @@ class maddog:
                     and deviation_ma13_sopra_ma25 > 0.05
                 ):
 
-                    buy = "se ma78< - BUY 1 con incrocio 39>78 - riga 448"
+                    buy = "BUY 1 se ma78< - BUY 1 con incrocio 39>78 - riga 448"
                     action = "buy"
                     percentage = 10
                     
@@ -528,7 +528,7 @@ class maddog:
                     and deviation_buy_crollo_1 < -2.30
                     and ma3_last > ma7_last
                 ):
-                    buy = "BUY DURANTE IL CROLLO - modo 1 riga 469"
+                    buy = "BUY 1 DURANTE IL CROLLO - modo 1 riga 469"
                     action = "buy"
                     percentage = 20
                     
@@ -543,7 +543,7 @@ class maddog:
                     and deviation_buy_crollo_1 < -1.70
                     and deviation_buy_crollo_2 > 0.11
                 ):
-                    buy = "BUY DURANTE IL CROLLO - modo 2 riga 481"
+                    buy = "BUY 1 DURANTE IL CROLLO - modo 2 riga 481"
                     action = "buy"
                     percentage = 20
                     
@@ -624,7 +624,7 @@ class maddog:
                 
                 ######################################################################################################## per comprare durante un ribasso che non e' un crollo
                               
-                # BUY DURANTE UN RIBASSO CHE NON E' UN CROLLO ! (compare stammi vicino!) HA FUNZIONATO ! viva ro combaro meo !
+                # BUY 1 DURANTE UN RIBASSO CHE NON E' UN CROLLO ! (compare stammi vicino!) HA FUNZIONATO ! viva ro combaro meo !
                 
                 elif (
                     ma2_last > ma2_2_min_ago
@@ -632,7 +632,7 @@ class maddog:
                     and deviation_buy_crollo_1 > -1.50
                     and deviation_bellissima > 0.03
                 ):
-                    buy = "BUY DURANTE UN RIBASSO CHE NON E' UN CROLLO ! and deviation_bellissima > 0.03 -  riga 412"
+                    buy = "BUY 1 DURANTE UN RIBASSO CHE NON E' UN CROLLO ! and deviation_bellissima > 0.03 -  riga 412"
                     action = "buy"
                     percentage = 20
                     
@@ -799,7 +799,7 @@ class maddog:
                
                 ######################################################################################################## per comprare durante un ribasso che non e' un crollo
                            
-                # BUY DURANTE UN RIBASSO che NON E' UN CROLLO ! (compare stammi vicino!) 
+                # BUY 2 DURANTE UN RIBASSO che NON E' UN CROLLO ! (compare stammi vicino!) 
                 
                 elif (
                     ma2_last > ma2_2_min_ago
@@ -824,7 +824,7 @@ class maddog:
                     and ma200_last > ma200_20_min_ago
                     and deviation_ma4_sopra_ma30 > 0.12
                     and deviation_ma100_laterale > 0.50
-                    and (ma3_prev < ma200_prev and ma3_last > ma200_last)
+                    and (ma3_prev < ma200_prev and ma3_last > ma200_last) or (ma3_prev < ma100_prev and ma3_last > ma100_last)
                 ):
                     buy = "BUY 2 ECCEZIONALE HO RISOLTO BUY IN ALTO ! se ma200 sale da 20 min compra con 4-30 (ma SUL BUY 2 lo 0.50 evita GLI EFFETTI LATERALI !) - riga 483"
                     action = "buy"
