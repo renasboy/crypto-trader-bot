@@ -824,11 +824,13 @@ class maddog:
                     and ma200_last > ma200_20_min_ago
                     and deviation_ma4_sopra_ma30 > 0.12
                     and deviation_ma100_laterale > 0.50
+                    and (ma3_prev < ma200_prev and ma3_last > ma200_last)
                 ):
-                    buy = "BUY 2 ECCEZIONALE se ma200 sale da 20 min compra con 4-30 (ma SUL BUY 2 lo 0.50 evita GLI EFFETTI LATERALI !) - riga 483"
+                    buy = "BUY 2 ECCEZIONALE HO RISOLTO BUY IN ALTO ! se ma200 sale da 20 min compra con 4-30 (ma SUL BUY 2 lo 0.50 evita GLI EFFETTI LATERALI !) - riga 483"
                     action = "buy"
                     percentage = 40
                     
+                    # CON INCROCIO 3-200 HO RISOLTO IL PROBLEMA DEL BUY 2 ECCEZIONALE CHE COINCIDEVA QUASI CON IL SELL 1 ! 
                     
                     
                 # BUY 2 con DEVIATION ASSURDA = price / ma200_last CON ma200 >
