@@ -173,6 +173,11 @@ class maddog:
         
         # 12 gennaio 2022 la ma2 arriva tardi ! DEVIATION RIALZO IMPROVVISO per adesso solo su RCCR
         
+        # ma deve andare almeno di 0.5% sopra la ma200 ! cosi' eviti molti falsi buy
+        
+        # formula DEVIATION_RIALZO_IMPROVVISO_SOPRA (deve stare 0.5 sopra la ma200)
+        deviation_rialzo_improvviso_sopra = (price / ma200_last - 1) * 100 if ma200_last else 0
+        self.algo_helper.info("deviation_rialzo_improvviso_sopra: {}".format(deviation_rialzo_improvviso_sopra))
         
         # formula DEVIATION_RIALZO_IMPROVVISO (per 40 min si muove in un range +0.25 -0.25 sintetizzato dalla ma30
         deviation_rialzo_improvviso_1 = (price / ma30_last - 1) * 100 if ma30_last else 0
@@ -575,13 +580,15 @@ class maddog:
                     
                     and deviation_range_x < 0.20
                     and deviation_range_x > -0.20
-                   
+                    and deviation_rialzo_improvviso_sopra > 0.5
+                    
                     # deviation_range_x va da 0 a -20 min
                     # teoricamente potresti usare solo la deviation_range !
                     # con deviation_rialzo_improvviso_5 > 0.20 non parte il BUY se trend leggermente ribassista
+                    # deve andare > 0.5% la ma200 - evito molti falsi BUY - ave compa
                 ):
 
-                    buy = "BUY 1 RIALZO IMPROVVISO con ma78 > - riga 410"
+                    buy = "BUY 1 RIALZO IMPROVVISO con ma78 > e deve andare sopra ma200 - riga 410"
                     action = "buy"
                     percentage = 10
                     
