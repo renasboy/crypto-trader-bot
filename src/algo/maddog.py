@@ -388,7 +388,7 @@ class maddog:
         
         # ultima evoluzione APERTURA GABBIA
         
-        if deviation_1_gabbia > -0.29 or deviation_buy_crollo_1 < -1.50 or deviation_buy_crollo_1 > -1.50 and deviation_buy_crollo_1 < -0.60 or deviation_buy_crollo_1 > -0.59 and deviation_buy_crollo_1 < -0.33:
+        if deviation_1_gabbia > -0.29 or deviation_buy_crollo_1 < -1.60 or deviation_buy_crollo_1 > -1.59 and deviation_buy_crollo_1 < -0.90 or deviation_buy_crollo_1 > -0.89 and deviation_buy_crollo_1 < -0.60:
         
         
         # QUESTE 3 HANNO DATO ERRORE !
