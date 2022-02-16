@@ -574,7 +574,7 @@ class maddog:
 
                 elif (
                     ma2_last > ma2_2_min_ago
-                    and deviation_buy_crollo_1 < -1.70
+                    and deviation_buy_crollo_1 < -1.61
                     and deviation_buy_crollo_2 > 0.11
                 ):
                     buy = "BUY 1 DURANTE IL CROLLO - modo 2 riga 481"
@@ -660,14 +660,42 @@ class maddog:
                     # con deviation_rialzo_improvviso_5 > 0.20 non parte il BUY se trend leggermente ribassista
                     
                     
-                ######################################################################################################## per comprare durante un ribasso che non e' un crollo
+                    
+                    
+                    
+                    
+                    
+                    
+                ################################################################################################  per comprare durante una CORREZIONE e un FORTE RIBASSO
                               
-                # BUY 1 DURANTE UN RIBASSO CHE NON E' UN CROLLO ! (compare stammi vicino!) HA FUNZIONATO ! viva ro combaro meo !
+                
+                
+                # BUY 1 DURANTE UNA CORREZIONE che NON E' un ribasso e NON E' un crollo ! (compare stammi vicino!)
                 
                 elif (
                     ma2_last > ma2_2_min_ago
                     and deviation_buy_crollo_1 < -0.60
-                    and deviation_buy_crollo_1 > -1.50
+                    and deviation_buy_crollo_1 > -0.90
+                    and deviation_correzione > 0.02
+                ):
+                    buy = "BUY 1 DURANTE UNA CORREZIONE che NON E' un forte ribasso e NON E' un crollo ! con deviation_correzione > 0.02 - riga 643"
+                    action = "buy"
+                    percentage = 20
+                    
+                    # deviation_buy_crollo_1 = ma8_last / ma78_last
+                    # deviation_correzione = ma3_last / ma25_last
+                    
+                    # compare prega per me !
+                    
+                    
+                
+                
+                # BUY 1 DURANTE UN RIBASSO CHE NON E' UN CROLLO ! (compare stammi vicino!) HA FUNZIONATO ! viva ro combaro meo !
+                
+                elif (
+                    ma2_last > ma2_2_min_ago
+                    and deviation_buy_crollo_1 < -0.91
+                    and deviation_buy_crollo_1 > -1.60
                     and deviation_bellissima > 0.03
                 ):
                     buy = "BUY 1 DURANTE UN RIBASSO CHE NON E' UN CROLLO ! and deviation_bellissima > 0.03 -  riga 412"
@@ -676,6 +704,9 @@ class maddog:
                     
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     
+                    
+                    
+                
             
                
                 # condizioni esperimentali !
@@ -720,22 +751,7 @@ class maddog:
                     
                     
                 
-                # BUY 1 DURANTE UNA CORREZIONE che NON E' un ribasso e NON E' un crollo ! (compare stammi vicino!)
                 
-                elif (
-                    ma2_last > ma2_2_min_ago
-                    and deviation_buy_crollo_1 < -0.29
-                    and deviation_buy_crollo_1 > -0.59
-                    and deviation_correzione > 0.02
-                ):
-                    buy = "BUY 1 DURANTE UNA CORREZIONE che NON E' un forte ribasso e NON E' un crollo ! con deviation_correzione > 0.02 - riga 643"
-                    action = "buy"
-                    percentage = 20
-                    
-                    # deviation_buy_crollo_1 = ma8_last / ma78_last
-                    # deviation_correzione = ma3_last / ma25_last
-                    
-                    # compare prega per me !
                     
                 
           
