@@ -611,7 +611,6 @@ class maddog:
                     and deviation_range_x > -0.20
                     and deviation_rialzo_improvviso_sopra > 0.5
                     
-                    or ma20_last > ma200_last and ma2_last > ma2_2_min_ago
                     
                 ):
 
@@ -624,10 +623,6 @@ class maddog:
                     # teoricamente potresti usare solo la deviation_range !
                     # con deviation_rialzo_improvviso_5 > 0.20 non parte il BUY se trend leggermente ribassista
                     # deve andare > 0.5% la ma200 - evito molti falsi BUY - ave compa
-                    
-                    
-                    
-                    
                     
                     
                 elif (    
@@ -929,8 +924,6 @@ class maddog:
                     percentage = 50
 
                     # deviation_buy3 = ma4_last/ma30_last
-                    
-                    
               
                 elif (
                     deviation_buy3 > 0.02
@@ -972,12 +965,25 @@ class maddog:
                     
                     
                     
-                    
-                    
-                    # BUY 3 ECCEZIONALE  NO!
-                    
-                    
+                """
                 
+                # la BUY 3 ECCEZIONALE compra troppo presto ! 
+                
+                # BUY 3 ECCEZIONALE - se ma100 sale da 20 min compra con ma30
+           
+                elif (
+                    ma2_last > ma2_2_min_ago
+                    and ma200_last > ma200_20_min_ago
+                    and deviation_ma5_sopra_ma30 > 0.13
+                    
+                ):
+                    buy = "BUY 3 ECCEZIONALE se ma200 sale da 20 min compra con deviation 4-30 - riga 607"
+                    action = "buy"
+                    percentage = 40
+                    
+                    # and deviation_ma100_laterale > 0.50
+                    
+                """
                     
                     
             # ###############################################################################################################       COMPRA sessione 4
@@ -1036,21 +1042,24 @@ class maddog:
                     # deviation_buy3 = ma4_last/ma30_last
                     
                     
-                    
-                    
-                    
-                    # BUY 4 ECCEZIONALE  NO!
-                    
-                    
-                    
-                    
-          
+                """
                 
+                # la BUY 4 ECCEZIONALE compra troppo presto !
                 
-                
+                # BUY 4 ECCEZIONALE - se ma100 sale da 20 min compra con ma30
+
+                elif (
+                    ma2_last > ma2_2_min_ago
+                    and ma200_last > ma200_20_min_ago
+                    and deviation_ma5_sopra_ma30 > 0.13
+                ):
+                    buy = "BUY 4 ECCEZIONALE se ma200 sale da 20 min compra con deviation 4-30 - riga 658"
+                    action = "buy"
+                    percentage = 40
+                    
+                """
                     
             ############################################################################################################  compra sessione 5 in poi
-            
             #  piu' alto il BUY - "effetti laterali"
 
             else:
@@ -1082,7 +1091,6 @@ class maddog:
                     # se e' arrivato il buy 5 e' molto probabile che il trend sia consolidato
                     # e, a questo punto, non importa se compra con un + 0.10 piu' in alto. NON FA UNA GRANDE DIFFERENZA !
                     
-                    
 
                 elif (
                     ma78_last >= ma78_2_min_ago
@@ -1103,7 +1111,6 @@ class maddog:
                     percentage = 50
                     
                     # deviation_buy3 = ma4_last/ma30_last
-                    
 
                     
                 elif (
@@ -1126,15 +1133,20 @@ class maddog:
                     # deviation_buy3 = ma4_last/ma30_last
                     
                     
-                    
-                    
-                    
-                    # BUY 5 ECCEZIONALE  NO!
-                    
-               
+                """
                 
-                
+                # BUY 5 ECCEZIONALE - se ma100 sale da 20 min compra con ma30
 
+                elif (
+                    ma2_last > ma2_2_min_ago
+                    and ma200_last > ma200_20_min_ago
+                    and deviation_ma5_sopra_ma30 > 0.13
+                ):
+                    buy = "BUY 5 ECCEZIONALE se ma200 sale da 20 min compra con deviation 4-30 -riga 720"
+                    action = "buy"
+                    percentage = 40
+                    
+                """
                     
                     
         ############################################################################################
