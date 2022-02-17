@@ -611,6 +611,7 @@ class maddog:
                     and deviation_range_x > -0.20
                     and deviation_rialzo_improvviso_sopra > 0.5
                     
+                    or ma20_last > ma200_last and ma2_last > ma2_2_min_ago
                     
                 ):
 
@@ -623,6 +624,10 @@ class maddog:
                     # teoricamente potresti usare solo la deviation_range !
                     # con deviation_rialzo_improvviso_5 > 0.20 non parte il BUY se trend leggermente ribassista
                     # deve andare > 0.5% la ma200 - evito molti falsi BUY - ave compa
+                    
+                    
+                    
+                    
                     
                     
                 elif (    
