@@ -434,7 +434,7 @@ class ro_cano_che_ritorna:
                 
                 elif (    
                     
-                    ma78_last > ma78_40_min_ago
+                    ma200_last > ma200_20_min_ago
                     and deviation_rialzo_improvviso_1 > 0.20
                     and deviation_rialzo_improvviso_2 > 0.20
                     and deviation_rialzo_improvviso_3 > 0.20
@@ -457,7 +457,7 @@ class ro_cano_che_ritorna:
                     # con deviation_rialzo_improvviso_5 > 0.20 non parte il BUY se trend leggermente ribassista
                 ):
 
-                    buy = "BUY 1 RIALZO IMPROVVISO con 78 > - riga 411"
+                    buy = "BUY 1 RIALZO IMPROVVISO con 200 > - riga 411"
                     action = "buy"
                     percentage = 10
                     # deviation_buy1 = ma13_last/ma39_last
@@ -466,9 +466,9 @@ class ro_cano_che_ritorna:
                     
                 elif (    
                     
-                    ma78_last < ma78_40_min_ago
+                    ma200_last < ma200_20_min_ago
                     
-                    and deviation_rialzo_improvviso_1 > 0.48
+                    and deviation_rialzo_improvviso_1 > 0.58
                     and deviation_rialzo_improvviso_2 > 0.20
                     and deviation_rialzo_improvviso_3 > 0.20
                     and deviation_rialzo_improvviso_4 > 0.20
@@ -490,9 +490,10 @@ class ro_cano_che_ritorna:
                     # con deviation_rialzo_improvviso_5 > 0.20 non parte il BUY se trend leggermente ribassista
                 ):
 
-                    buy = "BUY 1 RIALZO IMPROVVISO con 78 < (0.32 da 0.20 per evitare falsi acquisti guardando anche il 6-30) - riga 411"
+                    buy = "BUY 1 RIALZO IMPROVVISO con ma200 < (0.58 per evitare falsi acquisti) - riga 493"
                     action = "buy"
                     percentage = 10
+                    
                     # deviation_buy1 = ma13_last/ma39_last
                     
                 ################################################################################################################## compra durante il ribasso
