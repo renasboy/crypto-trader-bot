@@ -670,15 +670,17 @@ class maddog:
                               
                 
                 
-                # BUY 1 DURANTE UNA CORREZIONE che NON E' un ribasso e NON E' un crollo ! (compare stammi vicino!)
+                # BUY 1A DURANTE UNA CORREZIONE che NON E' un forte ribasso e NON E' un crollo ! (compare stammi vicino!)
                 
                 elif (
-                    ma2_last > ma2_2_min_ago
+                    ma20_last > ma200_last
+                    and deviation_correzione > 0.03
+                    and ma2_last > ma2_2_min_ago
                     and deviation_buy_crollo_1 < -0.60
                     and deviation_buy_crollo_1 > -0.90
-                    and deviation_correzione > 0.04
+                  
                 ):
-                    buy = "BUY 1 DURANTE UNA CORREZIONE che NON E' un forte ribasso e NON E' un crollo ! con deviation_correzione > 0.02 - riga 681"
+                    buy = "BUY 1 DURANTE UNA CORREZIONE che NON E' un forte ribasso e NON E' un crollo ! con deviation_correzione > 0.02 - riga 683"
                     action = "buy"
                     percentage = 20
                     
@@ -687,6 +689,26 @@ class maddog:
                     
                     # compare prega per me !
                     
+                    
+                    
+                # BUY 1B DURANTE UNA CORREZIONE che NON E' un forte ribasso e NON E' un crollo ! (compare stammi vicino!)
+                
+                elif (
+                    ma20_last > ma200_last
+                    ma2_last > ma2_2_min_ago
+                    and deviation_buy_crollo_1 < -0.60
+                    and deviation_buy_crollo_1 > -0.90
+                    and ma5_last > ma39_last
+                    
+                ):
+                    buy = "BUY 1 DURANTE UNA CORREZIONE che NON E' un forte ribasso e NON E' un crollo ! con deviation_correzione > 0.02 - riga 704"
+                    action = "buy"
+                    percentage = 20
+                    
+                    # deviation_buy_crollo_1 = ma8_last / ma78_last
+                    # deviation_correzione = ma5_last / ma30_last
+                    
+                    # compare prega per me !
                     
                 
                 
