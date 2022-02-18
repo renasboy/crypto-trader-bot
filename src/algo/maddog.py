@@ -134,9 +134,11 @@ class maddog:
         
         # formula DEVIATION_CORREZIONE
         
-        deviation_correzione = (ma5_last / ma30_last - 1) * 100 if ma30_last else 0
-        self.algo_helper.info("deviation_correzione: {}".format(deviation_correzione))
+        deviation_correzione_1 = (ma5_last / ma30_last - 1) * 100 if ma30_last else 0
+        self.algo_helper.info("deviation_correzione_1: {}".format(deviation_correzione_1))
         
+        deviation_correzione_2 = (ma5_last / ma39_last - 1) * 100 if ma39_last else 0
+        self.algo_helper.info("deviation_correzione_2: {}".format(deviation_correzione_2))
         
         
         # formula DEVIATION_ASSURDA (se ma200>ma200 20 min ago compra con incrocio prezzo-ma200 e vende con incrocio ma2-ma5 e deviation > +0.20 % - ASSURDO !
@@ -666,7 +668,7 @@ class maddog:
                 
                 elif (
                     ma20_last > ma200_last
-                    and deviation_correzione > 0.03
+                    and deviation_correzione_1 > 0.03
                     and ma2_last > ma2_2_min_ago
                     and deviation_buy_crollo_1 < -0.60
                     and deviation_buy_crollo_1 > -0.90
@@ -687,10 +689,11 @@ class maddog:
                 
                 elif (
                     ma20_last > ma200_last
-                    ma2_last > ma2_2_min_ago
+                    and deviation_correzione_2 > 0.03
+                    and ma2_last > ma2_2_min_ago
                     and deviation_buy_crollo_1 < -0.60
                     and deviation_buy_crollo_1 > -0.90
-                    and ma5_last > ma39_last
+                    
                     
                 ):
                     buy = "BUY 1 DURANTE UNA CORREZIONE che NON E' un forte ribasso e NON E' un crollo ! con deviation_correzione > 0.02 - riga 696"
