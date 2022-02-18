@@ -3704,7 +3704,7 @@ class maddog:
                         or (deviation_sell < -0.235 and ma3_last < ma50_last)
                     
                     ):
-                        sell = "session 3-4-x SELL (21-60 min) con ma50 > and deviation_ma25 < -0.20 or (deviation_sell < -0.235 and ma3_last < ma50_last) - riga 2608"
+                        sell = "session 3-4-x SELL (21-60 min) con ma50 > and deviation_ma25 < -0.21 or (deviation_sell < -0.235 and ma3_last < ma50_last) - riga 3707"
                         action = "sell"
                         
                         # and deviation_ma39 < -0.16 or (deviation_sell < 0.10 and ma3_last < ma39_last)
