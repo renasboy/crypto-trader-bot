@@ -713,9 +713,9 @@ class maddog:
                     ma2_last > ma2_2_min_ago
                     and deviation_buy_crollo_1 < -0.91
                     and deviation_buy_crollo_1 > -1.60
-                    and deviation_bellissima > 0.03
+                    and deviation_bellissima > 0.012
                 ):
-                    buy = "BUY 1 DURANTE UN RIBASSO CHE NON E' UN CROLLO ! and deviation_bellissima > 0.03 - riga 715"
+                    buy = "BUY 1 DURANTE UN RIBASSO CHE NON E' UN CROLLO ! and deviation_bellissima > 0.012- riga 715"
                     action = "buy"
                     percentage = 20
                     
