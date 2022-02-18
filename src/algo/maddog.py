@@ -134,7 +134,7 @@ class maddog:
         
         # formula DEVIATION_CORREZIONE
         
-        deviation_correzione = (ma3_last / ma30_last - 1) * 100 if ma30_last else 0
+        deviation_correzione = (ma5_last / ma30_last - 1) * 100 if ma30_last else 0
         self.algo_helper.info("deviation_correzione: {}".format(deviation_correzione))
         
         
@@ -676,14 +676,14 @@ class maddog:
                     ma2_last > ma2_2_min_ago
                     and deviation_buy_crollo_1 < -0.60
                     and deviation_buy_crollo_1 > -0.90
-                    and deviation_correzione > 0.02
+                    and deviation_correzione > 0.04
                 ):
                     buy = "BUY 1 DURANTE UNA CORREZIONE che NON E' un forte ribasso e NON E' un crollo ! con deviation_correzione > 0.02 - riga 681"
                     action = "buy"
                     percentage = 20
                     
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
-                    # deviation_correzione = ma3_last / ma30_last
+                    # deviation_correzione = ma5_last / ma30_last
                     
                     # compare prega per me !
                     
