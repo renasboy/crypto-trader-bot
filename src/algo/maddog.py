@@ -390,7 +390,7 @@ class maddog:
         
         # ultima evoluzione APERTURA GABBIA
         
-        if deviation_1_gabbia > -0.29 or deviation_buy_crollo_1 < -1.60 or deviation_buy_crollo_1 > -1.59 and deviation_buy_crollo_1 < -0.80 or deviation_buy_crollo_1 > -0.79 and deviation_buy_crollo_1 < -0.380:
+        if deviation_1_gabbia > -0.29 or deviation_buy_crollo_1 < -1.60 or deviation_buy_crollo_1 > -1.59 and deviation_buy_crollo_1 < -0.80 or deviation_buy_crollo_1 > -0.79 and deviation_buy_crollo_1 < -0.45:
         
         
         # QUESTE 3 HANNO DATO ERRORE !
@@ -666,9 +666,10 @@ class maddog:
                 # BUY 1A DURANTE UNA CORREZIONE che NON E' un forte ribasso e NON E' un crollo ! (compare stammi vicino!)
                 
                 elif (
-                    ma20_last > ma200_last
+                    ma2_last > ma2_2_min_ago
+                    and (ma20_prev < ma200_prev and ma20_last > ma200_last)
                     and deviation_correzione_1 > 0.03
-                    and ma2_last > ma2_2_min_ago
+                    
                     and deviation_buy_crollo_1 < -0.60
                     and deviation_buy_crollo_1 > -0.90
                   
@@ -687,9 +688,11 @@ class maddog:
                 # BUY 1B DURANTE UNA CORREZIONE che NON E' un forte ribasso e NON E' un crollo ! (compare stammi vicino!)
                 
                 elif (
-                    ma20_last > ma200_last
+                    
+                    ma2_last > ma2_2_min_ago
+                    and (ma20_prev < ma200_prev and ma20_last > ma200_last)
                     and deviation_correzione_2 > 0.03
-                    and ma2_last > ma2_2_min_ago
+                    
                     and deviation_buy_crollo_1 < -0.60
                     and deviation_buy_crollo_1 > -0.90
                     
@@ -3154,7 +3157,1059 @@ class maddog:
             ##################################################################################################################################
             ###################################################################################################
             ###################################################################################################
-            ################################################################################################### SESSIONE 4-5-x
+            ################################################################################################### SESSIONE 3
+            
+            elif self.session == 3:
+                
+                ################################################################################################### sessione 3 ( 0-3 min ) ok
+                
+                if seconds_since_last_trade > 0 and seconds_since_last_trade <= 180:
+
+                    # con ma50 >
+
+                    if (
+                        ma50_last >= ma50_2_min_ago
+                        and ma3_last < ma18_last
+                        and deviation_sell < -0.33
+                      
+                    ):
+                        sell = "session 3 SELL (0-3 min) con ma50 > and 3<18 and deviation_sell < -0.33 - riga 3170"
+                        action = "sell"
+                        
+                        # deviation_sell = ma3_last/last_trade_price
+                        
+                        
+                        
+                    elif (
+                        ma50_last >= ma50_2_min_ago
+                        and (ma3_prev > ma33_prev and ma3_last < ma33_last)
+                        and deviation_sell > 0.25
+                        and deviation_sell < 0.60
+                      
+                    ):
+                        sell = "session 3-4-x SELL (0-3 min) con ma50 > and incrocio 3-33 and deviation_sell 0.25 - 0.60 - riga 3184"
+                        action = "sell"
+                        
+                        # deviation_sell = ma3_last/last_trade_price
+                        
+                        
+                        
+                    elif (
+                        ma50_last >= ma50_2_min_ago
+                        and (ma3_prev > ma33_prev and ma3_last < ma33_last)
+                        and deviation_sell > 0.61
+                        and deviation_sell < 0.79
+                    ):
+                        sell = "session 3-4-x SELL (0-3 min) con ma50 > and incrocio 3-33 and deviation_sell 0.61 - 0.79 - riga 3197"
+                        action = "sell"
+                        
+                        
+
+                    elif (
+                        ma50_last >= ma50_2_min_ago
+                        and (ma3_prev > ma13_prev and ma3_last < ma13_last)
+                        and deviation_sell > 0.80
+                        and deviation_sell < 1.20
+                    ):
+
+                        sell = "session 3-4-x SELL (0-3 min) con ma50 > and incrocio 3-13 and deviation_sell 0.80 - 1.20 - riga 3209"
+                        action = "sell"
+                        
+                        
+
+                    elif (
+                        ma50_last >= ma50_2_min_ago
+                        and (ma3_prev > ma11_prev and ma3_last < ma11_last)
+                        and deviation_sell > 1.21
+                    ):
+
+                        sell = "session 3-4-x SELL (0-3 min) con ma50 > and incrocio 3-11 and deviation_sell > 1.21 (che sarebbe come IL DRIBBLING ALLA RONALDO !)- riga 3220"
+                        action = "sell"
+                        
+                        
+
+                    ###########################################################################     trend in ribasso
+
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and (ma3_prev > ma28_prev and ma3_last < ma28_last)
+                        and deviation_sell < -0.30
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "session 3-4-x SELL (0-3 min) con ma50 < and incrocio 3-28- riga 3233"
+                        action = "sell"
+
+                        # incrocio 3 -28 e' fondamentale per evitare punto rosso sovrapposto al punto verde !
+                        
+                        
+
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and (ma3_prev > ma33_prev and ma3_last < ma33_last)
+                        and deviation_sell < -0.23
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL (0-3 min) con ma50 < and incrocio 3-33 and deviation_sell -0.23 - riga 3246"
+                        action = "sell"
+
+                    # ---------------------------------------------------------------------------------------------------------------------- crollo
+
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and (ma3_prev > ma16_prev and ma3_last < ma16_last)
+                        and deviation_sell < -0.50
+                    ):
+                        sell = "session 3-4-x SELL CROLLO (0-3 min) con ma50 < and incrocio 3-16 and deviation_sell < -0.50 - riga 3256"
+                        action = "sell"
+
+                        # AGGIUNTA PER SICUREZZA SE CONTINUA A PRECIPITARE
+                        
+                        
+
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and (ma3_prev > ma23_prev and ma3_last < ma23_last)
+                        and deviation_sell > 0.23
+                    ):
+                        sell = "session 3-4-x SELL CROLLO (0-3 min) con ma50 < and incrocio 3-23 and deviation_sell > 0.23 - riga 3268"
+                        action = "sell"
+                        
+                        
+
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and (ma3_prev > ma8_prev and ma3_last < ma8_last)
+                        and deviation_sell > 0.60
+                    ):
+
+                        sell = "session 3-4-x SELL CROLLO (0-3 min) con ma50 < and incrocio 3-8 and deviation_sell > 0.60 - riga 3279"
+                        action = "sell"
+                        
+
+                ############################################################################################################## sessione 3-4-x ( 3-5 min  cambiata con 3-7 min )
+
+                # VENDITA - da 3 a 7 minuti = da 180 a 420 secondi
+
+                elif seconds_since_last_trade > 180 and seconds_since_last_trade <= 420:
+
+                    if (
+                        ma50_last >= ma50_2_min_ago
+                        and ma3_last < ma16_last
+                        and deviation_sell < -0.32
+                      
+                    ):
+                        sell = "session 3-4-x SELL (3-5 min) con ma50 > and 3<16 and deviation_sell < -0.32 - riga 3295"
+                        action = "sell"
+                        
+                        # deviation_sell = ma3_last/last_trade_price
+                        
+                        
+                        
+                    elif (
+                        ma50_last >= ma50_2_min_ago
+                        and ma3_last < ma9_last
+                        and deviation_sell > 0.25
+                        and deviation_sell < 0.90
+                        
+                    ):
+                        sell = "session 3-4-x SELL (3-5 min) con ma50 > and 3<9 (no incrocio 3-9) and deviation_sell 0.25 - 0.90 - DRIBBLING ALLA RONALDO - riga 3309"
+                        action = "sell"
+                        
+                        # deviation_sell = ma3_last/last_trade_price
+                        
+                        
+                        
+                    elif (
+                        ma50_last >= ma50_2_min_ago
+                        and (ma3_prev > ma25_prev and ma3_last < ma25_last)
+                        and deviation_sell > 0.91
+                        and deviation_sell < 1.20
+                    ):
+                        sell = "session 3-4-x SELL (3-5 min) con ma50 > and incrocio 3-25 and deviation_sell 0.91 - 1.20 - riga 3322"
+                        action = "sell"
+                        
+                        
+
+                    elif (
+                        ma50_last >= ma50_2_min_ago
+                        and (ma3_prev > ma25_prev and ma3_last < ma25_last)
+                        and deviation_sell > 1.21
+                    ):
+                        sell = "session 3-4-x SELL (3-5 min) con ma50 > and incrocio 3-25 and deviation_sell > 1.21 - riga 3332"
+                        action = "sell"
+                        
+
+                    ###########################################################################     trend in ribasso
+
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and (ma3_prev > ma28_prev and ma3_last < ma28_last)
+                        and deviation_sell < -0.30
+                        and ma2_last < ma2_2_min_ago
+                      
+                    ):
+                        sell = "session 3-4-x SELL (3-5 min) con ma50 < and incrocio 3-28 - riga 3345"
+                        action = "sell"
+                        
+                        # deviation_sell_ma78 = ma3_last / ma78_last
+                        # incrocio 3 -28 e' fondamentale per evitare punto rosso sovrapposto al punto verde !
+                        
+                        
+
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and (ma3_prev > ma33_prev and ma3_last < ma33_last)
+                        and deviation_sell < -0.23
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "session 3-4-x SELL (3-5 min) con ma50 < and incrocio 3-33 and deviation_sell < -0.23 - riga 3359"
+                        action = "sell"
+                        
+
+                    # ---------------------------------------------------------------------------------------------------------------------- guadagno con crollo
+                    
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and (ma3_prev > ma23_prev and ma3_last < ma23_last)
+                        and deviation_sell > 0.23
+                    ):
+                        sell = "session 3-4-x SELL GUADAGNO CON CROLLO (3-5 min) con ma50 < and incrocio 3-23 and deviation_sell > 0.23 - riga 3370"
+                        action = "sell"
+                        
+                        
+
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and ma3_last < ma16_last
+                        and deviation_sell < -0.50
+                    ):
+                        sell = "session 3-4-x PARACADUTE CROLLO (0-3 min) con ma50 < and ma3<ma16 (no incrocio) and deviation_sell < -0.50 - riga 3380"
+                        action = "sell"
+
+                        # AGGIUNTA PER SICUREZZA SE CONTINUA A PRECIPITARE
+                        
+                        
+
+                ####################################################################################################### sessione 3-4-x  (5-12 min) ( cambiata con 7-12 min ! )
+
+                # VENDITA - da 7 a 12 minuti = da 4200 a 720 secondi
+
+                elif seconds_since_last_trade > 420 and seconds_since_last_trade <= 720:
+
+                    if (
+                        ma50_last >= ma50_2_min_ago
+                        and (ma3_prev > ma78_prev and ma3_last < ma78_last)
+                        and deviation_sell < -0.41
+                     
+                    ):
+                        sell = "session 3-4-x SELL (5-12 min) con ma50 > and incrocio 3-78 and deviation_sell < -0.41 - riga 3399"
+                        action = "sell"
+                        
+                    # deviation_sell = ma3_last/last_trade_price
+                    # guardare la stella (guardare da una stella!)
+                    # QUESTO E' IL RISCHIO PIU' GRANDE CHE PRENDO ! ( ma con ma50 > ma50 2 min ago DOPO 5 min (+2))
+                    # e qua mi ha fottuto con la vendita -1.46 al min 6 del 19 dic 2021 - cambiato crollo improvviso ! e cambiato condizioni e anche fascia da 5-12
+                    
+                    
+
+                    elif (
+                        ma50_last >= ma50_2_min_ago
+                        and (ma5_prev > ma100_prev and ma5_last < ma100_last)
+                        and deviation_sell < -0.25
+                   
+                    ):
+                        sell = "session 3-4-x SELL (5-12 min) con ma50 > and incrocio 5-100 (cuscino di sant' antonio) and deviation_sell < -0.25 - riga 3415"
+                        action = "sell"
+                        
+                        # deviation_sell = ma3_last/last_trade_price
+                        
+                        
+                        
+                        
+                    elif (
+                        ma50_last >= ma50_2_min_ago
+                        and ma3_last < ma9_last
+                        and deviation_sell > 0.27
+                        and deviation_sell < 0.90
+                  
+                    ):
+                        sell = "SELL (5-12 min) con ma50 >  3<9 and deviation_sell 0.27 - 0.90 - DRIBBLING ALLA RONALDO - riga 3430"
+                        action = "sell"
+                        
+                        # deviation_sell = ma3_last/last_trade_price
+                        
+                        
+                        
+                        
+                    elif (
+                        ma50_last >= ma50_2_min_ago
+                        and (ma3_prev > ma25_prev and ma3_last < ma25_last)
+                        and deviation_sell > 0.91
+                        and deviation_sell < 1.20
+                     
+                    ):
+                        sell = "session 3-4-x SELL (5-12 min) con ma50 > and incrocio 3-25 and deviation_sell 0.91 - 1.20 - riga 3445"
+                        action = "sell"
+                        
+                        # deviation_sell = ma3_last/last_trade_price
+                        
+                        
+                        
+                        
+                    elif (
+                        ma50_last >= ma50_2_min_ago
+                        and (ma3_prev > ma25_prev and ma3_last < ma25_last)
+                        and deviation_sell > 1.21
+                    ):
+                        sell = "session 3-4-x SELL (5-12 min) con ma50 > and incrocio 3-25 and deviation_sell > 1.21 - riga 3458"
+                        action = "sell"
+                        
+                        
+
+                    ###########################################################################     trend in ribasso
+
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and (ma3_prev > ma28_prev and ma3_last < ma28_last)
+                        and deviation_sell < -0.30
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "session 3-4-x SELL 12 (5-12 min) con ma50 < and incrocio 3-28 - riga 3471"
+                        action = "sell"
+
+                        # incrocio 3 -28 e' fondamentale per evitare punto rosso sovrapposto al punto verde !
+                        
+                        
+
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and (ma5_prev > ma78_prev and ma5_last < ma78_last)
+                        and deviation_sell < -0.36
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "session 3-4-x SELL 12 (5-12 min) con ma50 < and incrocio 3-100 (cuscino di sant' antonio) - riga 3484"
+                        action = "sell"
+                        
+                        
+
+                    # ------------------------------------------------------------------------------- guadagno con crollo
+                    
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and (ma3_prev > ma23_prev and ma3_last < ma23_last)
+                        and deviation_sell > 0.23
+                    ):
+                        sell = "session 3-4-x SELL guadagno con crollo (5-12 min) con ma50 < and incrocio 3-23 - riga 3496"
+                        action = "sell"
+                        
+                        
+
+                    # ------------------------------------------------------------------------------------------------------------ PARACADUTE crollo
+                    
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and ma3_last < ma16_last
+                        and deviation_sell < -0.50
+                    ):
+                        sell = "session 3-4-x PARACADUTE CROLLO (0-3 min) con ma50 < and ma3<ma16 (no incrocio) and deviation_sell < -0.50 - riga 3508"
+                        action = "sell"
+
+                        # AGGIUNTA PER SICUREZZA SE CONTINUA A PRECIPITARE
+                        
+                        
+
+                ######################################################################################################################### sessione 3-4-x ( 12-21 min )
+
+                # VENDITA - da 12 a 21 minuti = da 720 a 1260 secondi
+
+                elif (
+                    seconds_since_last_trade > 720 and seconds_since_last_trade <= 1260
+                ):
+
+                    if (
+                        ma50_last >= ma50_2_min_ago
+                        and (ma3_prev > ma72_prev and ma3_last < ma72_last)
+                        and deviation_sell < -0.65
+                      
+                    ):
+                        sell = "session 3-4-x SELL (12-21 min) con ma50 > and incrocio 3-72 and deviation sell -0.65 e vaffanculo ! - riga 3529"
+                        action = "sell"
+                        
+                        # and deviation_ma39 < -0.29 vendeva troppo presto
+                        # ATTENZIONE "and (ma3_prev > ma39_prev and ma3_last < ma39_last)" con ma39 NON HA INCROCIATO
+                        # and deviation_sell < -0.30
+                        # deviation_sell = ma3_last/last_trade_price
+                        
+                        
+                        
+                    elif (
+                        ma50_last >= ma50_2_min_ago
+                        and (ma3_prev > ma100_prev and ma3_last < ma100_last)
+                        and deviation_sell < -0.36
+                   
+                    ):
+                        sell = "session 3-4-x SELL (12-21 min) con ma50 > and incrocio 3-100 cuscino di sant' antonio and deviation_sell < 0.36 - riga 3545"
+                        action = "sell"
+                    
+                    # viva sant' antonio !
+                    # IMPORTANTE !   
+                    # vai compaaaaaaaaaa
+                    # poco guadagno ma piu' alta
+                    # molto guadagno ma piu' bassa
+                    
+                    
+                    
+                    
+                    elif (
+                        ma50_last >= ma50_2_min_ago
+                        and ma5_last < ma25_last
+                        and deviation_sell > 0.25
+                        and deviation_sell < 0.40
+                       
+                    ):
+                        sell = "session 3-4-x SELL (12-21 min) con ma50 > and 5-25 and deviation_sell 0.25-0.40 - FINTA ALLA MARADONA - riga 3564"
+                        action = "sell"
+                        
+                        # deviation_sell = ma3_last/last_trade_price
+                        
+                    
+                    
+                    
+                    elif (
+                        ma50_last >= ma50_2_min_ago
+                        and ma3_last < ma15_last
+                        and deviation_sell > 0.41
+                        and deviation_sell < 0.90
+                     
+                    ):
+                        sell = "session 3-4-x SELL (12-21 min) con ma50 > and 3-15 and deviation_sell 0.41-0.90 - DOPPIO PASSO ALLA RONALDO - riga 3579"
+                        action = "sell"
+                        
+                        # deviation_sell = ma3_last/last_trade_price
+                        
+                        
+                    
+                    
+                    elif (
+                        ma50_last >= ma50_2_min_ago
+                        and (ma3_prev > ma25_prev and ma3_last < ma25_last)
+                        and deviation_sell > 0.91
+                        and deviation_sell < 1.20
+                     
+                    ):
+                        sell = "session 3-4-x SELL (12-21 min) con ma50 > and incrocio 3-25 and deviation_sell 0.91 - 1.20 - riga 3594"
+                        action = "sell"
+                        
+                        # deviation_sell = ma3_last/last_trade_price
+                        
+                        
+
+                    elif (
+                        ma50_last >= ma50_2_min_ago
+                        and (ma3_prev > ma39_prev and ma3_last < ma39_last)
+                        and deviation_sell > 1.21
+                    ):
+                        sell = "session 3-4-x SELL (12-21 min) con ma50 > and incrocio 3-39 and deviation_sell > 1.21 - riga 3606"
+                        action = "sell"
+                        
+                    
+                    
+                    ##########################################################################################
+                    # NON TOCCARE ! CUSCINO DI SANT' ANTONIO !
+                    # L' INCROCIO 5-100 MI SALVA ! MA 5<100 VENDE DURANTE IL RIBASSO !
+                    ##################################################################### con trend discendente
+
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and deviation_ma39 < -0.17
+                        and ma2_last < ma2_2_min_ago
+                     
+                    ):
+                        sell = "session 3-4-x SELL (12-21 min) con ma50 < and deviation_ma39 < -0.17 - riga 3622"
+                        action = "sell"
+                        
+                        # and (ma3_prev > ma33_prev and ma3_last < ma33_last)
+                        # and deviation_sell < -0.25
+                        # ATTENZIONE QUESTA aveva FATTO -0.61% !
+                        # QUINDI ho abbassato da 0.17 a 0.16 a 0.15
+                        # HO NOTATO CHE ANCHE INCROCIO 5-100 SAREBBE ARRIVATO TARDI
+                        # ALLORA METTO incrocio 3-78 e deviation < 0.10
+                        
+                        
+
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and (ma3_prev > ma78_prev and ma3_last < ma78_last)
+                        and deviation_sell < -0.45
+                        and ma2_last < ma2_2_min_ago
+                     
+                    ):
+                        sell = "session 3-4-x SELL (12-21 min) con ma50 < and incrocio 3-78 and deviation_sell < -0.45 - riga 3641"
+                        action = "sell"
+                        
+                        # ALLORA METTO incrocio 3-78 e deviation < 0.10 e vaffanculo ! ma solo se ma50< !
+                        
+                        
+                        
+
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and (ma5_prev > ma100_prev and ma5_last < ma100_last)
+                        and deviation_sell < -0.27
+                        and ma2_last < ma2_2_min_ago
+                     
+                    ):
+                        sell = "session 3-4-x SELL (12-21 min) con ma50 < and CUSCINO DI SANT' ANTONIO - riga 3656"
+                        action = "sell"
+                        
+                        # viva sant' antonio !
+                        # incrocio 5-100 no 5<100 altrimenti vende durante il crollo !
+                        
+                        
+                    
+                    
+                    # --------------------------------------------------------------------------------- PARACADUTE crollo
+                    
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and ma3_last < ma16_last
+                        and deviation_sell < -0.50
+                    ):
+                        sell = "session 3-4-x PARACADUTE CROLLO (12-21min) con ma50< and ma3<ma16 (no incrocio) and deviation_sell < -0.50 - riga 3672"
+                        action = "sell"
+
+                        # AGGIUNTA PER SICUREZZA SE CONTINUA A PRECIPITARE
+                        
+                        
+                        
+
+                    # ----------------------------------------------------------------------------- guadagno con crollo
+                    
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and (ma3_prev > ma18_prev and ma3_last < ma18_last)
+                        and deviation_sell > 0.23
+                    ):
+                        sell = "session 3-4-x SELL eventuale guadagno con crollo (12-21 min) con ma50 < and incrocio 3 - 18 and deviation_sell > 0.23 - riga 3687"
+                        action = "sell"
+                        
+                        
+
+                ############################################################################################################################# sessione 3-4-x ( 21-60 min )
+
+                # VENDITA - da 21 a 60 minuti = da 1261 a 3600 secondi
+
+                elif (
+                    seconds_since_last_trade > 1261 and seconds_since_last_trade <= 3600
+                ):
+
+                    if (
+                        ma50_last > ma50_2_min_ago
+                        and ma2_last < ma2_2_min_ago
+                        and deviation_ma25 < -0.20
+                        or (deviation_sell < -0.235 and ma3_last < ma50_last)
+                    
+                    ):
+                        sell = "session 3-4-x SELL (21-60 min) con ma50 > and deviation_ma25 < -0.21 or (deviation_sell < -0.235 and ma3_last < ma50_last) - riga 3707"
+                        action = "sell"
+                        
+                        # and deviation_ma39 < -0.16 or (deviation_sell < 0.10 and ma3_last < ma39_last)
+                        # and (ma3_prev > ma39_prev and ma3_last < ma39_last)
+                        # and deviation_sell < -0.26
+                        # deviation_sell = ma3_last/last_trade_price
+                        
+                        
+                        
+
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and (ma5_prev > ma100_prev and ma5_last < ma100_last)
+                        and deviation_sell < -0.26
+                  
+                    ):
+                        sell = "session 3-4-x SELL (21-60 min) con ma50 > and incrocio 5-100 cuscino di sant' antonio (no 5<100) and deviation_sell < -0.26 - riga 3724"
+                        action = "sell"
+                        
+                        # deviation_sell = ma3_last/last_trade_price
+                        
+                        
+                        
+                        
+                    elif (
+                        ma50_last >= ma50_2_min_ago
+                        and (ma4_prev > ma25_prev and ma4_last < ma25_last)
+                        and deviation_sell > 0.25
+                        and deviation_sell < 0.55
+                   
+                    ):
+                        sell = "SELL 3-4-x (21-60 min) con ma50 > and incrocio 4-25 and deviation_sell 0.25 - 0.60 FINTA DI MARADONA - riga 3739"
+                        action = "sell"
+                        
+                        # deviation_sell = ma3_last/last_trade_price
+                        
+                        
+                        
+                        
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and ma3_last < ma15_last
+                        and deviation_sell > 0.56
+                        and deviation_sell < 0.90
+                      
+                    ):
+                        sell = "SELL 3-4-x (21-60 min) con ma50 > and 3<15 (no incrocio 3-15) and deviation_sell 0.56 - 0.90 ELASTICO ALLA RONALDO - riga 3754"
+                        action = "sell"
+                        
+                        # deviation_sell = ma3_last/last_trade_price
+                        
+                        
+                        
+                        
+
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and (ma3_prev > ma39_prev and ma3_last < ma39_last)
+                        and deviation_sell > 0.91
+                        and deviation_sell < 1.20
+                       
+                    ):
+                        sell = "session 3-4-x SELL (21-60 min) con ma50 > and incrocio 3-39 and deviation_sell 0.91 - 1.20 - riga 3770"
+                        action = "sell"
+                        
+                        # deviation_sell = ma3_last/last_trade_price
+                        
+                        
+                    
+                    
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and (ma3_prev > ma33_prev and ma3_last < ma33_last)
+                        and deviation_sell > 1.21
+                        and deviation_sell < 2.70
+                    ):
+                        sell = "session 3-4-x SELL (21-60 min) con ma50 > and incrocio 3-33 and deviation_sell 1.21 -2.70 - riga 3784"
+                        action = "sell"
+                        
+                        
+                        
+                        
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and (ma3_prev > ma11_prev and ma3_last < ma11_last)
+                        and deviation_sell > 2.71
+                    ):
+                        sell = "session 3-4-x SELL (21-60 min) con ma50 > and incrocio 3-11 and deviation_sell > 2.71 - riga 3795"
+                        action = "sell"
+                    
+                    
+                    
+                    
+                    ##################################################################### con trend discendente
+                    
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and deviation_ma39 < -0.225
+                        or deviation_sell < -0.225
+                        and ma2_last < ma2_2_min_ago
+                       
+                    ):
+                        sell = "session 3-4-x SELL (21-60 min) con ma50 < and deviation_ma39 < -0.225 or deviation_sell < 0.225 - riga 3810"
+                        action = "sell"
+                        
+                        # and deviation_ma39 < -0.15 or (deviation_sell < 0.10 and ma3_last < ma39_last)
+                        # nella sessione 3-4-x ti puoi rilassare una ndecchia.
+                        # and (ma3_prev > ma33_prev and ma3_last < ma33_last)
+                        
+                        
+
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and (ma3_prev > ma78_prev and ma3_last < ma78_last)
+                        and deviation_sell < -0.37
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "session 3-4-x SELL (21-60 min) con ma50 < and incrocio 3-78 and deviation_sell < -0.37 - riga 3825"
+                        action = "sell"
+                        
+                        
+
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and (ma5_prev > ma100_prev and ma5_last < ma100_last)
+                        and deviation_sell < -0.27
+                        and ma2_last < ma2_2_min_ago
+                       
+                    ):
+                        sell = "session 3-4-x SELL (21-60 min) con ma50 < and INCROCIO 3-100 (no 3<100) CUSCINO DI SANT' ANTONIO - riga 3837"
+                        action = "sell"
+                        
+                        # viva sant' antonio !
+                        # NON INCROCERANNO MAI DURANTE IL CROLLO !
+                        # non toccare ! INCROCIO 3-100 CUSCINO DI SANT' ANTONIO !
+                        
+                        
+                    # -------------------------------------------------------------------------------------- guadagno durante il crollo
+
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and (ma3_prev > ma18_prev and ma3_last < ma18_last)
+                        and deviation_sell > 0.23
+                    ):
+                        sell = "session 3-4-x SELL eventuale guadagno durante il crollo (21-60 min) con ma50 < incrocio 3 - 18 and deviation_sell > 0.23 - riga 3852"
+                        action = "sell"
+                        
+                        
+
+                ########################################################################################################################## sessione 3-4-x ( da 60 a 90 min )
+
+                # VENDITA - da 60 a 90 min - da 3600 a 5400 secondi in poi
+                
+                elif (
+                    seconds_since_last_trade > 3600 and seconds_since_last_trade <= 5400
+                ):
+
+                    if (
+                        ma50_last > ma50_2_min_ago
+                        and deviation_ma25 < -0.19
+                        or (deviation_sell < -0.19 and ma3_last < ma50_last)
+                    ):
+                        sell = "session 3-4-x SELL da 60 a 90 min con ma50 > and deviation_ma25 < -0.19 or (deviation_sell < -0.19 and ma3_last < ma50_last) - riga 3870"
+                        action = "sell"
+                        
+                        # se non ha forza dopo 1 ora e' inutile continuare a sperare !
+                        # cuscino dell' angelo custode
+                        
+                        
+                        
+                    elif (
+                        ma50_last >= ma50_2_min_ago
+                        and (ma5_prev > ma25_prev and ma5_last < ma25_last)
+                        and deviation_sell > 0.25
+                        and deviation_sell < 0.55
+                       
+                    ):
+                        sell = "SELL 3-4-x (21-60 min) con ma50 > and incrocio 5-25 and deviation_sell 0.25 - 0.55 FINTA DI MARADONA - riga 3885"
+                        action = "sell"
+                        
+                        # deviation_sell = ma3_last/last_trade_price
+                        
+                        
+                        
+                        
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and ma3_last < ma15_last
+                        and deviation_sell > 0.56
+                        and deviation_sell < 0.80
+                    ):
+                        sell = "session 3-4-x SELL >60 min con ma50> and 3-15 and deviation_sell 0.56-0.80 DRIBBLING ALLA RONALDO ( ma15 invece di ma13) - riga 3899"
+                        action = "sell"
+                        
+                        
+                        
+
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and (ma3_prev > ma33_prev and ma3_last < ma33_last)
+                        and deviation_sell > 0.81
+                        and deviation_sell < 1.49
+                    ):
+
+                        sell = "session 3-4-x SELL da 60 a 90 min con ma50 > and incrocio 3-33 and deviation_sell 0.81 - 1.49 - riga 3912"
+                        action = "sell"
+
+                        # ma ricordati che in diverse occasioni 3-48 mi ha evitato la ricompra e la rivendita conseguente con perdita !
+                        
+                    
+                    
+                    
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and (ma3_prev > ma33_prev and ma3_last < ma33_last)
+                        and deviation_sell > 1.50
+                        and deviation_sell < 2.70
+                    ):
+
+                        sell = "session 3-4-x SELL da 60 a 90 min con ma50 > incrocio 3-33 and deviation_sell 1.50 - 2.70 - riga 3927"
+                        action = "sell"
+                        
+                        
+                        
+                        
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and (ma3_prev > ma11_prev and ma3_last < ma11_last)
+                        and deviation_sell > 2.71
+                    ):
+
+                        sell = "session 3-4-x SELL da 60 a 90 min con ma50 > incrocio 3-11 and deviation_sell > 2.71 - riga 3939"
+                        action = "sell"
+                        
+                        
+                        
+
+                    ######################################################################################## con trend discendente
+                    
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and deviation_ma39 < -0.18
+                        and ma2_last < ma2_2_min_ago
+                       
+                    ):
+                        sell = "session 3-4-x SELL da 60 a 90 min con ma50 < con deviation_ma39 <-0.18 and deviation_sell < 0.10 (no ma3<ma33) (NO INCROCIO!) - riga 3953"
+                        action = "sell"
+                        
+                        # and ma3_last < ma33_last
+                        # and deviation_sell < 0.10
+                        # se non ha forza dopo 1 ora e' inutile continuare a sperare !
+                        # qui non ho messo il crollo perche' dopo 40 min o gia' ha venduto o e' gia' risalita
+                        # cuscino dell' angelo custode
+                        
+                        
+                    
+
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and (ma3_prev > ma78_prev and ma3_last < ma78_last)
+                        and deviation_sell < 0.10
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "session 3-4-x SELL da 60 a 90 min con ma50 < con incrocio 3-78 and deviation_sell < 0.10 - riga 3971"
+                        action = "sell"
+                        
+                        
+
+                ##################################################################################################################### sessione 3-4-x ( > 90 min )
+
+                # VENDITA - da 90 minuti in poi = da 5400 secondi in poi
+
+                elif seconds_since_last_trade > 5400:
+
+                    if (
+                        ma50_last > ma50_2_min_ago
+                        and deviation_ma25 < -0.18
+                        or (deviation_sell < 0.10 and ma3_last < ma50_last)
+                     
+                    ):
+                        sell = "session 3-4-x SELL dopo 90 min con ma50> and deviation_ma25 <-0.18 (no ma3<ma39) or (deviation_sell < 0.10 and ma3_last < ma50_last)- riga 3988"
+                        action = "sell"
+                        
+                        # and ma3_last < ma39_last
+                        # and deviation_ma39 < -0.18
+                        # and deviation_sell < 0.10
+                        # se non ha forza dopo 1 ora e' inutile continuare a sperare !
+                        # dopo 90 min se il prezzo non ha forza puoi anche prendere qualcosa (solo > 90 min)
+                        # cuscino dell' angelo custode
+                        
+                        
+                        
+
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and ma3_last < ma15_last
+                        and deviation_sell > 0.35
+                        and deviation_sell < 0.69
+                    ):
+                        sell = "session 3-4-x SELL >90 min con ma50 > con 3<15 and deviation_sell 0.35 - 0.69 RABONA ALLA RONALDO (ma15 invece di ma13 !) - riga 4007"
+                        action = "sell"
+                        
+                        
+
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and (ma3_prev > ma33_prev and ma3_last < ma33_last)
+                        and deviation_sell > 0.70
+                        and deviation_sell < 1.49
+                    ):
+
+                        sell = "session 3-4-x SELL dopo 90 min con ma50 > incrocio 3-33 (!) and deviation_sell 0.70 - 1.49 - riga 4019"
+                        action = "sell"
+
+                        # ma 3-48 mi evita la ricompra e la rivendita con perdita !
+                    
+                    
+                    
+                    
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and (ma3_prev > ma33_prev and ma3_last < ma33_last)
+                        and deviation_sell > 1.50
+                        and deviation_sell < 2.70
+                    ):
+
+                        sell = "session 3-4-x SELL dopo 90 min con ma50 > incrocio 3-33 (!) and deviation_sell 1.50 - 2.70 - riga 4034"
+                        action = "sell"
+                        
+                        
+                        
+                        
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and (ma3_prev > ma11_prev and ma3_last < ma11_last)
+                        and deviation_sell > 2.71
+                    ):
+
+                        sell = "session 3-4-x SELL dopo 90 min con ma50 > incrocio 3-11 (!) and deviation_sell > 2.71 - riga 4046"
+                        action = "sell"
+                        
+                        
+
+                    ######################################################################################## con trend discendente
+
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and deviation_ma39 < -0.18
+                        or (deviation_sell < 0.10 and ma3_last < ma39_last)
+                        and ma2_last < ma2_2_min_ago
+                        
+                        
+                        
+                    ):
+                        sell = "session 3-4-x SELL dopo 90 min con ma50 < con deviation_ma39 <-0.18 or (deviation_sell < 0.10 and ma3_last < ma39_last) - riga 4062"
+                        action = "sell"
+                        
+                        # and ma3_last < ma33_last
+                        # and deviation_ma39 < -0.18
+                        # and deviation_sell < 0.10    
+                        # se non ha forza dopo 1 ora e' inutile continuare a sperare !
+                        # dopo 90 min se il prezzo non ha forza puoi anche prendere qualcosa (solo > 90 min
+                        # qui non ho messo il crollo perche' dopo 40 min o gia' ha venduto o e' gia' risalita
+                        # ATTENZIONE non c'e' l' incrocio 3-33 ( PERCHE' NON HANNO INCROCIATO !) ma 3 < 33 !
+                        # cuscino dell' angelo custode
+                        
+                        
+                        
+                    
+
+                    ################################################################################################ sessione 3 (vendita con questi 5 altri modi)
+                    ################################################################################################
+                    ################################################################################################
+                    # MA ATTENZIONE al conflitto durante il crollo - SELL SOVRAPPOSTO AL BUY
+
+                    # NO 3<78 !
+                    # NO deviation 78 !
+                    # QUALCHE VOLTA ma3-ma39 NON HANNO INCROCIATO allora per la vendita con il DRIBBLING e il DOPPIO PASSO ALLA RONALDO ho risolto con 3<39
+                    # il CUSCINO DELL' ANGELO CUSTODE e di SANT' ANTONIO mi proteggono ! (vendita con medie lunghe)
+                    
+                    
+
+                    # 1 - ro cano VENDE CON UN SALVAGENTE
+            
+                    if deviation_ma39 < -0.24 and ma50_last > ma50_2_min_ago:
+
+                        sell = "session 3-4-x SELL SALVAGENTE 3-39 con ma50 < riga 4094"
+                        action = "sell"
+
+                        # deviation_ma39 = ma4_last / ma39_last QUESTA HA VENDUTO NEL CROLLO IMPROVVISO DI 1 MINUTO (con -2.06% !!!)!
+                        
+                        
+                        
+
+                    # 2 - ro cano VENDE DURANTE UN CROLLO IMPROVVISO !
+            
+                    elif deviation < -0.58:
+                    
+                        sell = "session 3-4-x SELL CROLLO IMPROVVISO < -0.58 - riga 4106"
+                        action = "sell"
+                
+                        # con -0.59 il 6 feb 2022 ha fatto -0.85
+                        # con -0.62 il 4 feb 2022 ha fatto -0.89%
+                        # deviation = ma4_last / last_trade_price
+
+                        # FORSE E' L' UNICA DEVIATION CHE MI POTRA' SALVARE DA UN CROLLO IMPROVVISO COME QUELLO DEL 3 NOVEMBRE 2021
+                        
+                        
+                        
+                        
+
+                    # 3 - ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma13 >
+            
+                    elif (
+                        seconds_since_last_trade > max_hold_time_in_seconds
+                        and ma2_last < last_trade_price
+                        and deviation < -0.42
+                        and ma13_last > ma13_2_min_ago
+                    ):
+
+                        sell = "session 3-4-x SELL DOLCE ATTESA con ma13 > and deviation < -0.40 - riga 4128"
+                        action = "sell"
+
+                        # il fattore tempo - la dolce attesa - solo con trend ribassista
+                        # deviation = ma2_last / last_trade_price
+                        # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
+                        # max_hold_time_in_seconds = 300 = 5 min (con 6 min perdita di 0.90 %)
+                        
+                        
+                        
+                
+                    # 4 - ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma13 <
+            
+                    elif (
+                        seconds_since_last_trade > max_hold_time_in_seconds
+                        and ma13_last < ma13_2_min_ago
+                        and deviation < -0.355
+                        and ma2_last < last_trade_price
+                    ):
+
+                        sell = "session 3-4-x SELL DOLCE ATTESA 270 sec con ma13 < and deviation < -0.345 - riga 4148"
+                        action = "sell"
+
+                        # il fattore tempo - la dolce attesa - solo con trend ribassista
+                        # deviation = ma2_last / last_trade_price
+                        # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
+                        # max_hold_time_in_seconds = 270 sec = 4 min e 1/2  (con 6 min perdita di 0.60 %)
+                        # 4 feb 2022 con <-0.26 ha fatto -0.88% (dopo +4.29%)
+                        # 7 feb 2022 con <-0.345 e 270 sec ha fatto -0.38% - aumenta a 0.355 ! -eventualmente ci pensa la condizione CROLLO IMPROVVISO CHE FUNZIONA !
+                        
+            
+            
+            
+                    # 5 - ro cano VENDE " DOPO x MINUTI " and...
+            
+                    elif (
+                        seconds_since_last_trade > max_hold_time_in_seconds
+                        and ma8_last < ma50_last
+                        and deviation_sell < -0.49
+                    ):
+
+                        sell = "session 3-4-x SELL TEMPO e se ma8 < ma50 and deviation_sell < -0.49 - riga 4169"
+                        action = "sell"
+                        
+                        # ma13 troppo lenta !
+                        # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
+                        
+                        
+                
+                
+                
+                    # 6 - RIBASSO IMPROVVISO
+            
+                    elif (
+                        ma78_last > ma78_2_min_ago
+                        and deviation_ribasso_improvviso < -0.63
+                
+                    ):
+       
+                        sell = "session 3-4-x RIBASSO IMPROVVISO - riga 4187"
+                        action = "sell"
+            
+            
+            
+            
+            
+                    # 7 - RIBASSO IMPROVVISO
+            
+                    elif (
+                        ma78_last < ma78_2_min_ago
+                        and deviation_ribasso_improvviso < -0.63
+                
+                    ):
+       
+                        sell = "session 3-4-x RIBASSO IMPROVVISO - riga 4202"
+                        action = "sell"
+            
+            
+            
             elif self.session > 3:
 
                 ################################################################################################### sessione 4-5-x ( 0-3 min ) ok
@@ -3169,7 +4224,7 @@ class maddog:
                         and deviation_sell < -0.33
                       
                     ):
-                        sell = "session 3-4-x SELL (0-3 min) con ma50 > and 3<18 and deviation_sell < -0.33 - riga 3170"
+                        sell = "session 4-5-x SELL (0-3 min) con ma50 > and 3<18 and deviation_sell < -0.33 - riga 3170"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
@@ -4201,1055 +5256,7 @@ class maddog:
                 
                     ):
        
-                        sell = "session 3-4-x RIBASSO IMPROVVISO - riga 4202"
-                        action = "sell"
-            elif self.session > 2:
-
-                ################################################################################################### sessione 3-4-x ( 0-3 min ) ok
-                
-                if seconds_since_last_trade > 0 and seconds_since_last_trade <= 180:
-
-                    # con ma50 >
-
-                    if (
-                        ma50_last >= ma50_2_min_ago
-                        and ma3_last < ma18_last
-                        and deviation_sell < -0.33
-                      
-                    ):
-                        sell = "session 3-4-x SELL (0-3 min) con ma50 > and 3<18 and deviation_sell < -0.33 - riga 3170"
-                        action = "sell"
-                        
-                        # deviation_sell = ma3_last/last_trade_price
-                        
-                        
-                        
-                    elif (
-                        ma50_last >= ma50_2_min_ago
-                        and (ma3_prev > ma33_prev and ma3_last < ma33_last)
-                        and deviation_sell > 0.25
-                        and deviation_sell < 0.60
-                      
-                    ):
-                        sell = "session 3-4-x SELL (0-3 min) con ma50 > and incrocio 3-33 and deviation_sell 0.25 - 0.60 - riga 3184"
-                        action = "sell"
-                        
-                        # deviation_sell = ma3_last/last_trade_price
-                        
-                        
-                        
-                    elif (
-                        ma50_last >= ma50_2_min_ago
-                        and (ma3_prev > ma33_prev and ma3_last < ma33_last)
-                        and deviation_sell > 0.61
-                        and deviation_sell < 0.79
-                    ):
-                        sell = "session 3-4-x SELL (0-3 min) con ma50 > and incrocio 3-33 and deviation_sell 0.61 - 0.79 - riga 3197"
-                        action = "sell"
-                        
-                        
-
-                    elif (
-                        ma50_last >= ma50_2_min_ago
-                        and (ma3_prev > ma13_prev and ma3_last < ma13_last)
-                        and deviation_sell > 0.80
-                        and deviation_sell < 1.20
-                    ):
-
-                        sell = "session 3-4-x SELL (0-3 min) con ma50 > and incrocio 3-13 and deviation_sell 0.80 - 1.20 - riga 3209"
-                        action = "sell"
-                        
-                        
-
-                    elif (
-                        ma50_last >= ma50_2_min_ago
-                        and (ma3_prev > ma11_prev and ma3_last < ma11_last)
-                        and deviation_sell > 1.21
-                    ):
-
-                        sell = "session 3-4-x SELL (0-3 min) con ma50 > and incrocio 3-11 and deviation_sell > 1.21 (che sarebbe come IL DRIBBLING ALLA RONALDO !)- riga 3220"
-                        action = "sell"
-                        
-                        
-
-                    ###########################################################################     trend in ribasso
-
-                    elif (
-                        ma50_last < ma50_2_min_ago
-                        and (ma3_prev > ma28_prev and ma3_last < ma28_last)
-                        and deviation_sell < -0.30
-                        and ma2_last < ma2_2_min_ago
-                    ):
-                        sell = "session 3-4-x SELL (0-3 min) con ma50 < and incrocio 3-28- riga 3233"
-                        action = "sell"
-
-                        # incrocio 3 -28 e' fondamentale per evitare punto rosso sovrapposto al punto verde !
-                        
-                        
-
-                    elif (
-                        ma50_last < ma50_2_min_ago
-                        and (ma3_prev > ma33_prev and ma3_last < ma33_last)
-                        and deviation_sell < -0.23
-                        and ma2_last < ma2_2_min_ago
-                    ):
-                        sell = "SELL (0-3 min) con ma50 < and incrocio 3-33 and deviation_sell -0.23 - riga 3246"
-                        action = "sell"
-
-                    # ---------------------------------------------------------------------------------------------------------------------- crollo
-
-                    elif (
-                        ma50_last < ma50_2_min_ago
-                        and (ma3_prev > ma16_prev and ma3_last < ma16_last)
-                        and deviation_sell < -0.50
-                    ):
-                        sell = "session 3-4-x SELL CROLLO (0-3 min) con ma50 < and incrocio 3-16 and deviation_sell < -0.50 - riga 3256"
-                        action = "sell"
-
-                        # AGGIUNTA PER SICUREZZA SE CONTINUA A PRECIPITARE
-                        
-                        
-
-                    elif (
-                        ma50_last < ma50_2_min_ago
-                        and (ma3_prev > ma23_prev and ma3_last < ma23_last)
-                        and deviation_sell > 0.23
-                    ):
-                        sell = "session 3-4-x SELL CROLLO (0-3 min) con ma50 < and incrocio 3-23 and deviation_sell > 0.23 - riga 3268"
-                        action = "sell"
-                        
-                        
-
-                    elif (
-                        ma50_last < ma50_2_min_ago
-                        and (ma3_prev > ma8_prev and ma3_last < ma8_last)
-                        and deviation_sell > 0.60
-                    ):
-
-                        sell = "session 3-4-x SELL CROLLO (0-3 min) con ma50 < and incrocio 3-8 and deviation_sell > 0.60 - riga 3279"
-                        action = "sell"
-                        
-
-                ############################################################################################################## sessione 3-4-x ( 3-5 min  cambiata con 3-7 min )
-
-                # VENDITA - da 3 a 7 minuti = da 180 a 420 secondi
-
-                elif seconds_since_last_trade > 180 and seconds_since_last_trade <= 420:
-
-                    if (
-                        ma50_last >= ma50_2_min_ago
-                        and ma3_last < ma16_last
-                        and deviation_sell < -0.32
-                      
-                    ):
-                        sell = "session 3-4-x SELL (3-5 min) con ma50 > and 3<16 and deviation_sell < -0.32 - riga 3295"
-                        action = "sell"
-                        
-                        # deviation_sell = ma3_last/last_trade_price
-                        
-                        
-                        
-                    elif (
-                        ma50_last >= ma50_2_min_ago
-                        and ma3_last < ma9_last
-                        and deviation_sell > 0.25
-                        and deviation_sell < 0.90
-                        
-                    ):
-                        sell = "session 3-4-x SELL (3-5 min) con ma50 > and 3<9 (no incrocio 3-9) and deviation_sell 0.25 - 0.90 - DRIBBLING ALLA RONALDO - riga 3309"
-                        action = "sell"
-                        
-                        # deviation_sell = ma3_last/last_trade_price
-                        
-                        
-                        
-                    elif (
-                        ma50_last >= ma50_2_min_ago
-                        and (ma3_prev > ma25_prev and ma3_last < ma25_last)
-                        and deviation_sell > 0.91
-                        and deviation_sell < 1.20
-                    ):
-                        sell = "session 3-4-x SELL (3-5 min) con ma50 > and incrocio 3-25 and deviation_sell 0.91 - 1.20 - riga 3322"
-                        action = "sell"
-                        
-                        
-
-                    elif (
-                        ma50_last >= ma50_2_min_ago
-                        and (ma3_prev > ma25_prev and ma3_last < ma25_last)
-                        and deviation_sell > 1.21
-                    ):
-                        sell = "session 3-4-x SELL (3-5 min) con ma50 > and incrocio 3-25 and deviation_sell > 1.21 - riga 3332"
-                        action = "sell"
-                        
-
-                    ###########################################################################     trend in ribasso
-
-                    elif (
-                        ma50_last < ma50_2_min_ago
-                        and (ma3_prev > ma28_prev and ma3_last < ma28_last)
-                        and deviation_sell < -0.30
-                        and ma2_last < ma2_2_min_ago
-                      
-                    ):
-                        sell = "session 3-4-x SELL (3-5 min) con ma50 < and incrocio 3-28 - riga 3345"
-                        action = "sell"
-                        
-                        # deviation_sell_ma78 = ma3_last / ma78_last
-                        # incrocio 3 -28 e' fondamentale per evitare punto rosso sovrapposto al punto verde !
-                        
-                        
-
-                    elif (
-                        ma50_last < ma50_2_min_ago
-                        and (ma3_prev > ma33_prev and ma3_last < ma33_last)
-                        and deviation_sell < -0.23
-                        and ma2_last < ma2_2_min_ago
-                    ):
-                        sell = "session 3-4-x SELL (3-5 min) con ma50 < and incrocio 3-33 and deviation_sell < -0.23 - riga 3359"
-                        action = "sell"
-                        
-
-                    # ---------------------------------------------------------------------------------------------------------------------- guadagno con crollo
-                    
-                    elif (
-                        ma50_last < ma50_2_min_ago
-                        and (ma3_prev > ma23_prev and ma3_last < ma23_last)
-                        and deviation_sell > 0.23
-                    ):
-                        sell = "session 3-4-x SELL GUADAGNO CON CROLLO (3-5 min) con ma50 < and incrocio 3-23 and deviation_sell > 0.23 - riga 3370"
-                        action = "sell"
-                        
-                        
-
-                    elif (
-                        ma50_last < ma50_2_min_ago
-                        and ma3_last < ma16_last
-                        and deviation_sell < -0.50
-                    ):
-                        sell = "session 3-4-x PARACADUTE CROLLO (0-3 min) con ma50 < and ma3<ma16 (no incrocio) and deviation_sell < -0.50 - riga 3380"
-                        action = "sell"
-
-                        # AGGIUNTA PER SICUREZZA SE CONTINUA A PRECIPITARE
-                        
-                        
-
-                ####################################################################################################### sessione 3-4-x  (5-12 min) ( cambiata con 7-12 min ! )
-
-                # VENDITA - da 7 a 12 minuti = da 4200 a 720 secondi
-
-                elif seconds_since_last_trade > 420 and seconds_since_last_trade <= 720:
-
-                    if (
-                        ma50_last >= ma50_2_min_ago
-                        and (ma3_prev > ma78_prev and ma3_last < ma78_last)
-                        and deviation_sell < -0.41
-                     
-                    ):
-                        sell = "session 3-4-x SELL (5-12 min) con ma50 > and incrocio 3-78 and deviation_sell < -0.41 - riga 3399"
-                        action = "sell"
-                        
-                    # deviation_sell = ma3_last/last_trade_price
-                    # guardare la stella (guardare da una stella!)
-                    # QUESTO E' IL RISCHIO PIU' GRANDE CHE PRENDO ! ( ma con ma50 > ma50 2 min ago DOPO 5 min (+2))
-                    # e qua mi ha fottuto con la vendita -1.46 al min 6 del 19 dic 2021 - cambiato crollo improvviso ! e cambiato condizioni e anche fascia da 5-12
-                    
-                    
-
-                    elif (
-                        ma50_last >= ma50_2_min_ago
-                        and (ma5_prev > ma100_prev and ma5_last < ma100_last)
-                        and deviation_sell < -0.25
-                   
-                    ):
-                        sell = "session 3-4-x SELL (5-12 min) con ma50 > and incrocio 5-100 (cuscino di sant' antonio) and deviation_sell < -0.25 - riga 3415"
-                        action = "sell"
-                        
-                        # deviation_sell = ma3_last/last_trade_price
-                        
-                        
-                        
-                        
-                    elif (
-                        ma50_last >= ma50_2_min_ago
-                        and ma3_last < ma9_last
-                        and deviation_sell > 0.27
-                        and deviation_sell < 0.90
-                  
-                    ):
-                        sell = "SELL (5-12 min) con ma50 >  3<9 and deviation_sell 0.27 - 0.90 - DRIBBLING ALLA RONALDO - riga 3430"
-                        action = "sell"
-                        
-                        # deviation_sell = ma3_last/last_trade_price
-                        
-                        
-                        
-                        
-                    elif (
-                        ma50_last >= ma50_2_min_ago
-                        and (ma3_prev > ma25_prev and ma3_last < ma25_last)
-                        and deviation_sell > 0.91
-                        and deviation_sell < 1.20
-                     
-                    ):
-                        sell = "session 3-4-x SELL (5-12 min) con ma50 > and incrocio 3-25 and deviation_sell 0.91 - 1.20 - riga 3445"
-                        action = "sell"
-                        
-                        # deviation_sell = ma3_last/last_trade_price
-                        
-                        
-                        
-                        
-                    elif (
-                        ma50_last >= ma50_2_min_ago
-                        and (ma3_prev > ma25_prev and ma3_last < ma25_last)
-                        and deviation_sell > 1.21
-                    ):
-                        sell = "session 3-4-x SELL (5-12 min) con ma50 > and incrocio 3-25 and deviation_sell > 1.21 - riga 3458"
-                        action = "sell"
-                        
-                        
-
-                    ###########################################################################     trend in ribasso
-
-                    elif (
-                        ma50_last < ma50_2_min_ago
-                        and (ma3_prev > ma28_prev and ma3_last < ma28_last)
-                        and deviation_sell < -0.30
-                        and ma2_last < ma2_2_min_ago
-                    ):
-                        sell = "session 3-4-x SELL 12 (5-12 min) con ma50 < and incrocio 3-28 - riga 3471"
-                        action = "sell"
-
-                        # incrocio 3 -28 e' fondamentale per evitare punto rosso sovrapposto al punto verde !
-                        
-                        
-
-                    elif (
-                        ma50_last < ma50_2_min_ago
-                        and (ma5_prev > ma78_prev and ma5_last < ma78_last)
-                        and deviation_sell < -0.36
-                        and ma2_last < ma2_2_min_ago
-                    ):
-                        sell = "session 3-4-x SELL 12 (5-12 min) con ma50 < and incrocio 3-100 (cuscino di sant' antonio) - riga 3484"
-                        action = "sell"
-                        
-                        
-
-                    # ------------------------------------------------------------------------------- guadagno con crollo
-                    
-                    elif (
-                        ma50_last < ma50_2_min_ago
-                        and (ma3_prev > ma23_prev and ma3_last < ma23_last)
-                        and deviation_sell > 0.23
-                    ):
-                        sell = "session 3-4-x SELL guadagno con crollo (5-12 min) con ma50 < and incrocio 3-23 - riga 3496"
-                        action = "sell"
-                        
-                        
-
-                    # ------------------------------------------------------------------------------------------------------------ PARACADUTE crollo
-                    
-                    elif (
-                        ma50_last < ma50_2_min_ago
-                        and ma3_last < ma16_last
-                        and deviation_sell < -0.50
-                    ):
-                        sell = "session 3-4-x PARACADUTE CROLLO (0-3 min) con ma50 < and ma3<ma16 (no incrocio) and deviation_sell < -0.50 - riga 3508"
-                        action = "sell"
-
-                        # AGGIUNTA PER SICUREZZA SE CONTINUA A PRECIPITARE
-                        
-                        
-
-                ######################################################################################################################### sessione 3-4-x ( 12-21 min )
-
-                # VENDITA - da 12 a 21 minuti = da 720 a 1260 secondi
-
-                elif (
-                    seconds_since_last_trade > 720 and seconds_since_last_trade <= 1260
-                ):
-
-                    if (
-                        ma50_last >= ma50_2_min_ago
-                        and (ma3_prev > ma72_prev and ma3_last < ma72_last)
-                        and deviation_sell < -0.65
-                      
-                    ):
-                        sell = "session 3-4-x SELL (12-21 min) con ma50 > and incrocio 3-72 and deviation sell -0.65 e vaffanculo ! - riga 3529"
-                        action = "sell"
-                        
-                        # and deviation_ma39 < -0.29 vendeva troppo presto
-                        # ATTENZIONE "and (ma3_prev > ma39_prev and ma3_last < ma39_last)" con ma39 NON HA INCROCIATO
-                        # and deviation_sell < -0.30
-                        # deviation_sell = ma3_last/last_trade_price
-                        
-                        
-                        
-                    elif (
-                        ma50_last >= ma50_2_min_ago
-                        and (ma3_prev > ma100_prev and ma3_last < ma100_last)
-                        and deviation_sell < -0.36
-                   
-                    ):
-                        sell = "session 3-4-x SELL (12-21 min) con ma50 > and incrocio 3-100 cuscino di sant' antonio and deviation_sell < 0.36 - riga 3545"
-                        action = "sell"
-                    
-                    # viva sant' antonio !
-                    # IMPORTANTE !   
-                    # vai compaaaaaaaaaa
-                    # poco guadagno ma piu' alta
-                    # molto guadagno ma piu' bassa
-                    
-                    
-                    
-                    
-                    elif (
-                        ma50_last >= ma50_2_min_ago
-                        and ma5_last < ma25_last
-                        and deviation_sell > 0.25
-                        and deviation_sell < 0.40
-                       
-                    ):
-                        sell = "session 3-4-x SELL (12-21 min) con ma50 > and 5-25 and deviation_sell 0.25-0.40 - FINTA ALLA MARADONA - riga 3564"
-                        action = "sell"
-                        
-                        # deviation_sell = ma3_last/last_trade_price
-                        
-                    
-                    
-                    
-                    elif (
-                        ma50_last >= ma50_2_min_ago
-                        and ma3_last < ma15_last
-                        and deviation_sell > 0.41
-                        and deviation_sell < 0.90
-                     
-                    ):
-                        sell = "session 3-4-x SELL (12-21 min) con ma50 > and 3-15 and deviation_sell 0.41-0.90 - DOPPIO PASSO ALLA RONALDO - riga 3579"
-                        action = "sell"
-                        
-                        # deviation_sell = ma3_last/last_trade_price
-                        
-                        
-                    
-                    
-                    elif (
-                        ma50_last >= ma50_2_min_ago
-                        and (ma3_prev > ma25_prev and ma3_last < ma25_last)
-                        and deviation_sell > 0.91
-                        and deviation_sell < 1.20
-                     
-                    ):
-                        sell = "session 3-4-x SELL (12-21 min) con ma50 > and incrocio 3-25 and deviation_sell 0.91 - 1.20 - riga 3594"
-                        action = "sell"
-                        
-                        # deviation_sell = ma3_last/last_trade_price
-                        
-                        
-
-                    elif (
-                        ma50_last >= ma50_2_min_ago
-                        and (ma3_prev > ma39_prev and ma3_last < ma39_last)
-                        and deviation_sell > 1.21
-                    ):
-                        sell = "session 3-4-x SELL (12-21 min) con ma50 > and incrocio 3-39 and deviation_sell > 1.21 - riga 3606"
-                        action = "sell"
-                        
-                    
-                    
-                    ##########################################################################################
-                    # NON TOCCARE ! CUSCINO DI SANT' ANTONIO !
-                    # L' INCROCIO 5-100 MI SALVA ! MA 5<100 VENDE DURANTE IL RIBASSO !
-                    ##################################################################### con trend discendente
-
-                    elif (
-                        ma50_last < ma50_2_min_ago
-                        and deviation_ma39 < -0.17
-                        and ma2_last < ma2_2_min_ago
-                     
-                    ):
-                        sell = "session 3-4-x SELL (12-21 min) con ma50 < and deviation_ma39 < -0.17 - riga 3622"
-                        action = "sell"
-                        
-                        # and (ma3_prev > ma33_prev and ma3_last < ma33_last)
-                        # and deviation_sell < -0.25
-                        # ATTENZIONE QUESTA aveva FATTO -0.61% !
-                        # QUINDI ho abbassato da 0.17 a 0.16 a 0.15
-                        # HO NOTATO CHE ANCHE INCROCIO 5-100 SAREBBE ARRIVATO TARDI
-                        # ALLORA METTO incrocio 3-78 e deviation < 0.10
-                        
-                        
-
-                    elif (
-                        ma50_last < ma50_2_min_ago
-                        and (ma3_prev > ma78_prev and ma3_last < ma78_last)
-                        and deviation_sell < -0.45
-                        and ma2_last < ma2_2_min_ago
-                     
-                    ):
-                        sell = "session 3-4-x SELL (12-21 min) con ma50 < and incrocio 3-78 and deviation_sell < -0.45 - riga 3641"
-                        action = "sell"
-                        
-                        # ALLORA METTO incrocio 3-78 e deviation < 0.10 e vaffanculo ! ma solo se ma50< !
-                        
-                        
-                        
-
-                    elif (
-                        ma50_last < ma50_2_min_ago
-                        and (ma5_prev > ma100_prev and ma5_last < ma100_last)
-                        and deviation_sell < -0.27
-                        and ma2_last < ma2_2_min_ago
-                     
-                    ):
-                        sell = "session 3-4-x SELL (12-21 min) con ma50 < and CUSCINO DI SANT' ANTONIO - riga 3656"
-                        action = "sell"
-                        
-                        # viva sant' antonio !
-                        # incrocio 5-100 no 5<100 altrimenti vende durante il crollo !
-                        
-                        
-                    
-                    
-                    # --------------------------------------------------------------------------------- PARACADUTE crollo
-                    
-                    elif (
-                        ma50_last < ma50_2_min_ago
-                        and ma3_last < ma16_last
-                        and deviation_sell < -0.50
-                    ):
-                        sell = "session 3-4-x PARACADUTE CROLLO (12-21min) con ma50< and ma3<ma16 (no incrocio) and deviation_sell < -0.50 - riga 3672"
-                        action = "sell"
-
-                        # AGGIUNTA PER SICUREZZA SE CONTINUA A PRECIPITARE
-                        
-                        
-                        
-
-                    # ----------------------------------------------------------------------------- guadagno con crollo
-                    
-                    elif (
-                        ma50_last < ma50_2_min_ago
-                        and (ma3_prev > ma18_prev and ma3_last < ma18_last)
-                        and deviation_sell > 0.23
-                    ):
-                        sell = "session 3-4-x SELL eventuale guadagno con crollo (12-21 min) con ma50 < and incrocio 3 - 18 and deviation_sell > 0.23 - riga 3687"
-                        action = "sell"
-                        
-                        
-
-                ############################################################################################################################# sessione 3-4-x ( 21-60 min )
-
-                # VENDITA - da 21 a 60 minuti = da 1261 a 3600 secondi
-
-                elif (
-                    seconds_since_last_trade > 1261 and seconds_since_last_trade <= 3600
-                ):
-
-                    if (
-                        ma50_last > ma50_2_min_ago
-                        and ma2_last < ma2_2_min_ago
-                        and deviation_ma25 < -0.20
-                        or (deviation_sell < -0.235 and ma3_last < ma50_last)
-                    
-                    ):
-                        sell = "session 3-4-x SELL (21-60 min) con ma50 > and deviation_ma25 < -0.21 or (deviation_sell < -0.235 and ma3_last < ma50_last) - riga 3707"
-                        action = "sell"
-                        
-                        # and deviation_ma39 < -0.16 or (deviation_sell < 0.10 and ma3_last < ma39_last)
-                        # and (ma3_prev > ma39_prev and ma3_last < ma39_last)
-                        # and deviation_sell < -0.26
-                        # deviation_sell = ma3_last/last_trade_price
-                        
-                        
-                        
-
-                    elif (
-                        ma50_last > ma50_2_min_ago
-                        and (ma5_prev > ma100_prev and ma5_last < ma100_last)
-                        and deviation_sell < -0.26
-                  
-                    ):
-                        sell = "session 3-4-x SELL (21-60 min) con ma50 > and incrocio 5-100 cuscino di sant' antonio (no 5<100) and deviation_sell < -0.26 - riga 3724"
-                        action = "sell"
-                        
-                        # deviation_sell = ma3_last/last_trade_price
-                        
-                        
-                        
-                        
-                    elif (
-                        ma50_last >= ma50_2_min_ago
-                        and (ma4_prev > ma25_prev and ma4_last < ma25_last)
-                        and deviation_sell > 0.25
-                        and deviation_sell < 0.55
-                   
-                    ):
-                        sell = "SELL 3-4-x (21-60 min) con ma50 > and incrocio 4-25 and deviation_sell 0.25 - 0.60 FINTA DI MARADONA - riga 3739"
-                        action = "sell"
-                        
-                        # deviation_sell = ma3_last/last_trade_price
-                        
-                        
-                        
-                        
-                    elif (
-                        ma50_last > ma50_2_min_ago
-                        and ma3_last < ma15_last
-                        and deviation_sell > 0.56
-                        and deviation_sell < 0.90
-                      
-                    ):
-                        sell = "SELL 3-4-x (21-60 min) con ma50 > and 3<15 (no incrocio 3-15) and deviation_sell 0.56 - 0.90 ELASTICO ALLA RONALDO - riga 3754"
-                        action = "sell"
-                        
-                        # deviation_sell = ma3_last/last_trade_price
-                        
-                        
-                        
-                        
-
-                    elif (
-                        ma50_last > ma50_2_min_ago
-                        and (ma3_prev > ma39_prev and ma3_last < ma39_last)
-                        and deviation_sell > 0.91
-                        and deviation_sell < 1.20
-                       
-                    ):
-                        sell = "session 3-4-x SELL (21-60 min) con ma50 > and incrocio 3-39 and deviation_sell 0.91 - 1.20 - riga 3770"
-                        action = "sell"
-                        
-                        # deviation_sell = ma3_last/last_trade_price
-                        
-                        
-                    
-                    
-                    elif (
-                        ma50_last > ma50_2_min_ago
-                        and (ma3_prev > ma33_prev and ma3_last < ma33_last)
-                        and deviation_sell > 1.21
-                        and deviation_sell < 2.70
-                    ):
-                        sell = "session 3-4-x SELL (21-60 min) con ma50 > and incrocio 3-33 and deviation_sell 1.21 -2.70 - riga 3784"
-                        action = "sell"
-                        
-                        
-                        
-                        
-                    elif (
-                        ma50_last > ma50_2_min_ago
-                        and (ma3_prev > ma11_prev and ma3_last < ma11_last)
-                        and deviation_sell > 2.71
-                    ):
-                        sell = "session 3-4-x SELL (21-60 min) con ma50 > and incrocio 3-11 and deviation_sell > 2.71 - riga 3795"
-                        action = "sell"
-                    
-                    
-                    
-                    
-                    ##################################################################### con trend discendente
-                    
-                    elif (
-                        ma50_last < ma50_2_min_ago
-                        and deviation_ma39 < -0.225
-                        or deviation_sell < -0.225
-                        and ma2_last < ma2_2_min_ago
-                       
-                    ):
-                        sell = "session 3-4-x SELL (21-60 min) con ma50 < and deviation_ma39 < -0.225 or deviation_sell < 0.225 - riga 3810"
-                        action = "sell"
-                        
-                        # and deviation_ma39 < -0.15 or (deviation_sell < 0.10 and ma3_last < ma39_last)
-                        # nella sessione 3-4-x ti puoi rilassare una ndecchia.
-                        # and (ma3_prev > ma33_prev and ma3_last < ma33_last)
-                        
-                        
-
-                    elif (
-                        ma50_last < ma50_2_min_ago
-                        and (ma3_prev > ma78_prev and ma3_last < ma78_last)
-                        and deviation_sell < -0.37
-                        and ma2_last < ma2_2_min_ago
-                    ):
-                        sell = "session 3-4-x SELL (21-60 min) con ma50 < and incrocio 3-78 and deviation_sell < -0.37 - riga 3825"
-                        action = "sell"
-                        
-                        
-
-                    elif (
-                        ma50_last < ma50_2_min_ago
-                        and (ma5_prev > ma100_prev and ma5_last < ma100_last)
-                        and deviation_sell < -0.27
-                        and ma2_last < ma2_2_min_ago
-                       
-                    ):
-                        sell = "session 3-4-x SELL (21-60 min) con ma50 < and INCROCIO 3-100 (no 3<100) CUSCINO DI SANT' ANTONIO - riga 3837"
-                        action = "sell"
-                        
-                        # viva sant' antonio !
-                        # NON INCROCERANNO MAI DURANTE IL CROLLO !
-                        # non toccare ! INCROCIO 3-100 CUSCINO DI SANT' ANTONIO !
-                        
-                        
-                    # -------------------------------------------------------------------------------------- guadagno durante il crollo
-
-                    elif (
-                        ma50_last < ma50_2_min_ago
-                        and (ma3_prev > ma18_prev and ma3_last < ma18_last)
-                        and deviation_sell > 0.23
-                    ):
-                        sell = "session 3-4-x SELL eventuale guadagno durante il crollo (21-60 min) con ma50 < incrocio 3 - 18 and deviation_sell > 0.23 - riga 3852"
-                        action = "sell"
-                        
-                        
-
-                ########################################################################################################################## sessione 3-4-x ( da 60 a 90 min )
-
-                # VENDITA - da 60 a 90 min - da 3600 a 5400 secondi in poi
-                
-                elif (
-                    seconds_since_last_trade > 3600 and seconds_since_last_trade <= 5400
-                ):
-
-                    if (
-                        ma50_last > ma50_2_min_ago
-                        and deviation_ma25 < -0.19
-                        or (deviation_sell < -0.19 and ma3_last < ma50_last)
-                    ):
-                        sell = "session 3-4-x SELL da 60 a 90 min con ma50 > and deviation_ma25 < -0.19 or (deviation_sell < -0.19 and ma3_last < ma50_last) - riga 3870"
-                        action = "sell"
-                        
-                        # se non ha forza dopo 1 ora e' inutile continuare a sperare !
-                        # cuscino dell' angelo custode
-                        
-                        
-                        
-                    elif (
-                        ma50_last >= ma50_2_min_ago
-                        and (ma5_prev > ma25_prev and ma5_last < ma25_last)
-                        and deviation_sell > 0.25
-                        and deviation_sell < 0.55
-                       
-                    ):
-                        sell = "SELL 3-4-x (21-60 min) con ma50 > and incrocio 5-25 and deviation_sell 0.25 - 0.55 FINTA DI MARADONA - riga 3885"
-                        action = "sell"
-                        
-                        # deviation_sell = ma3_last/last_trade_price
-                        
-                        
-                        
-                        
-                    elif (
-                        ma50_last > ma50_2_min_ago
-                        and ma3_last < ma15_last
-                        and deviation_sell > 0.56
-                        and deviation_sell < 0.80
-                    ):
-                        sell = "session 3-4-x SELL >60 min con ma50> and 3-15 and deviation_sell 0.56-0.80 DRIBBLING ALLA RONALDO ( ma15 invece di ma13) - riga 3899"
-                        action = "sell"
-                        
-                        
-                        
-
-                    elif (
-                        ma50_last > ma50_2_min_ago
-                        and (ma3_prev > ma33_prev and ma3_last < ma33_last)
-                        and deviation_sell > 0.81
-                        and deviation_sell < 1.49
-                    ):
-
-                        sell = "session 3-4-x SELL da 60 a 90 min con ma50 > and incrocio 3-33 and deviation_sell 0.81 - 1.49 - riga 3912"
-                        action = "sell"
-
-                        # ma ricordati che in diverse occasioni 3-48 mi ha evitato la ricompra e la rivendita conseguente con perdita !
-                        
-                    
-                    
-                    
-                    elif (
-                        ma50_last > ma50_2_min_ago
-                        and (ma3_prev > ma33_prev and ma3_last < ma33_last)
-                        and deviation_sell > 1.50
-                        and deviation_sell < 2.70
-                    ):
-
-                        sell = "session 3-4-x SELL da 60 a 90 min con ma50 > incrocio 3-33 and deviation_sell 1.50 - 2.70 - riga 3927"
-                        action = "sell"
-                        
-                        
-                        
-                        
-                    elif (
-                        ma50_last > ma50_2_min_ago
-                        and (ma3_prev > ma11_prev and ma3_last < ma11_last)
-                        and deviation_sell > 2.71
-                    ):
-
-                        sell = "session 3-4-x SELL da 60 a 90 min con ma50 > incrocio 3-11 and deviation_sell > 2.71 - riga 3939"
-                        action = "sell"
-                        
-                        
-                        
-
-                    ######################################################################################## con trend discendente
-                    
-                    elif (
-                        ma50_last < ma50_2_min_ago
-                        and deviation_ma39 < -0.18
-                        and ma2_last < ma2_2_min_ago
-                       
-                    ):
-                        sell = "session 3-4-x SELL da 60 a 90 min con ma50 < con deviation_ma39 <-0.18 and deviation_sell < 0.10 (no ma3<ma33) (NO INCROCIO!) - riga 3953"
-                        action = "sell"
-                        
-                        # and ma3_last < ma33_last
-                        # and deviation_sell < 0.10
-                        # se non ha forza dopo 1 ora e' inutile continuare a sperare !
-                        # qui non ho messo il crollo perche' dopo 40 min o gia' ha venduto o e' gia' risalita
-                        # cuscino dell' angelo custode
-                        
-                        
-                    
-
-                    elif (
-                        ma50_last < ma50_2_min_ago
-                        and (ma3_prev > ma78_prev and ma3_last < ma78_last)
-                        and deviation_sell < 0.10
-                        and ma2_last < ma2_2_min_ago
-                    ):
-                        sell = "session 3-4-x SELL da 60 a 90 min con ma50 < con incrocio 3-78 and deviation_sell < 0.10 - riga 3971"
-                        action = "sell"
-                        
-                        
-
-                ##################################################################################################################### sessione 3-4-x ( > 90 min )
-
-                # VENDITA - da 90 minuti in poi = da 5400 secondi in poi
-
-                elif seconds_since_last_trade > 5400:
-
-                    if (
-                        ma50_last > ma50_2_min_ago
-                        and deviation_ma25 < -0.18
-                        or (deviation_sell < 0.10 and ma3_last < ma50_last)
-                     
-                    ):
-                        sell = "session 3-4-x SELL dopo 90 min con ma50> and deviation_ma25 <-0.18 (no ma3<ma39) or (deviation_sell < 0.10 and ma3_last < ma50_last)- riga 3988"
-                        action = "sell"
-                        
-                        # and ma3_last < ma39_last
-                        # and deviation_ma39 < -0.18
-                        # and deviation_sell < 0.10
-                        # se non ha forza dopo 1 ora e' inutile continuare a sperare !
-                        # dopo 90 min se il prezzo non ha forza puoi anche prendere qualcosa (solo > 90 min)
-                        # cuscino dell' angelo custode
-                        
-                        
-                        
-
-                    elif (
-                        ma50_last > ma50_2_min_ago
-                        and ma3_last < ma15_last
-                        and deviation_sell > 0.35
-                        and deviation_sell < 0.69
-                    ):
-                        sell = "session 3-4-x SELL >90 min con ma50 > con 3<15 and deviation_sell 0.35 - 0.69 RABONA ALLA RONALDO (ma15 invece di ma13 !) - riga 4007"
-                        action = "sell"
-                        
-                        
-
-                    elif (
-                        ma50_last > ma50_2_min_ago
-                        and (ma3_prev > ma33_prev and ma3_last < ma33_last)
-                        and deviation_sell > 0.70
-                        and deviation_sell < 1.49
-                    ):
-
-                        sell = "session 3-4-x SELL dopo 90 min con ma50 > incrocio 3-33 (!) and deviation_sell 0.70 - 1.49 - riga 4019"
-                        action = "sell"
-
-                        # ma 3-48 mi evita la ricompra e la rivendita con perdita !
-                    
-                    
-                    
-                    
-                    elif (
-                        ma50_last > ma50_2_min_ago
-                        and (ma3_prev > ma33_prev and ma3_last < ma33_last)
-                        and deviation_sell > 1.50
-                        and deviation_sell < 2.70
-                    ):
-
-                        sell = "session 3-4-x SELL dopo 90 min con ma50 > incrocio 3-33 (!) and deviation_sell 1.50 - 2.70 - riga 4034"
-                        action = "sell"
-                        
-                        
-                        
-                        
-                    elif (
-                        ma50_last > ma50_2_min_ago
-                        and (ma3_prev > ma11_prev and ma3_last < ma11_last)
-                        and deviation_sell > 2.71
-                    ):
-
-                        sell = "session 3-4-x SELL dopo 90 min con ma50 > incrocio 3-11 (!) and deviation_sell > 2.71 - riga 4046"
-                        action = "sell"
-                        
-                        
-
-                    ######################################################################################## con trend discendente
-
-                    elif (
-                        ma50_last < ma50_2_min_ago
-                        and deviation_ma39 < -0.18
-                        or (deviation_sell < 0.10 and ma3_last < ma39_last)
-                        and ma2_last < ma2_2_min_ago
-                        
-                        
-                        
-                    ):
-                        sell = "session 3-4-x SELL dopo 90 min con ma50 < con deviation_ma39 <-0.18 or (deviation_sell < 0.10 and ma3_last < ma39_last) - riga 4062"
-                        action = "sell"
-                        
-                        # and ma3_last < ma33_last
-                        # and deviation_ma39 < -0.18
-                        # and deviation_sell < 0.10    
-                        # se non ha forza dopo 1 ora e' inutile continuare a sperare !
-                        # dopo 90 min se il prezzo non ha forza puoi anche prendere qualcosa (solo > 90 min
-                        # qui non ho messo il crollo perche' dopo 40 min o gia' ha venduto o e' gia' risalita
-                        # ATTENZIONE non c'e' l' incrocio 3-33 ( PERCHE' NON HANNO INCROCIATO !) ma 3 < 33 !
-                        # cuscino dell' angelo custode
-                        
-                        
-                        
-                    
-
-                    ################################################################################################ sessione 3-4-x (vendita con questi 5 altri modi)
-                    ################################################################################################
-                    ################################################################################################
-                    # MA ATTENZIONE al conflitto durante il crollo - SELL SOVRAPPOSTO AL BUY
-
-                    # NO 3<78 !
-                    # NO deviation 78 !
-                    # QUALCHE VOLTA ma3-ma39 NON HANNO INCROCIATO allora per la vendita con il DRIBBLING e il DOPPIO PASSO ALLA RONALDO ho risolto con 3<39
-                    # il CUSCINO DELL' ANGELO CUSTODE e di SANT' ANTONIO mi proteggono ! (vendita con medie lunghe)
-                    
-                    
-
-                    # 1 - ro cano VENDE CON UN SALVAGENTE
-            
-                    if deviation_ma39 < -0.24 and ma50_last > ma50_2_min_ago:
-
-                        sell = "session 3-4-x SELL SALVAGENTE 3-39 con ma50 < riga 4094"
-                        action = "sell"
-
-                        # deviation_ma39 = ma4_last / ma39_last QUESTA HA VENDUTO NEL CROLLO IMPROVVISO DI 1 MINUTO (con -2.06% !!!)!
-                        
-                        
-                        
-
-                    # 2 - ro cano VENDE DURANTE UN CROLLO IMPROVVISO !
-            
-                    elif deviation < -0.58:
-                    
-                        sell = "session 3-4-x SELL CROLLO IMPROVVISO < -0.58 - riga 4106"
-                        action = "sell"
-                
-                        # con -0.59 il 6 feb 2022 ha fatto -0.85
-                        # con -0.62 il 4 feb 2022 ha fatto -0.89%
-                        # deviation = ma4_last / last_trade_price
-
-                        # FORSE E' L' UNICA DEVIATION CHE MI POTRA' SALVARE DA UN CROLLO IMPROVVISO COME QUELLO DEL 3 NOVEMBRE 2021
-                        
-                        
-                        
-                        
-
-                    # 3 - ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma13 >
-            
-                    elif (
-                        seconds_since_last_trade > max_hold_time_in_seconds
-                        and ma2_last < last_trade_price
-                        and deviation < -0.42
-                        and ma13_last > ma13_2_min_ago
-                    ):
-
-                        sell = "session 3-4-x SELL DOLCE ATTESA con ma13 > and deviation < -0.40 - riga 4128"
-                        action = "sell"
-
-                        # il fattore tempo - la dolce attesa - solo con trend ribassista
-                        # deviation = ma2_last / last_trade_price
-                        # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
-                        # max_hold_time_in_seconds = 300 = 5 min (con 6 min perdita di 0.90 %)
-                        
-                        
-                        
-                
-                    # 4 - ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma13 <
-            
-                    elif (
-                        seconds_since_last_trade > max_hold_time_in_seconds
-                        and ma13_last < ma13_2_min_ago
-                        and deviation < -0.355
-                        and ma2_last < last_trade_price
-                    ):
-
-                        sell = "session 3-4-x SELL DOLCE ATTESA 270 sec con ma13 < and deviation < -0.345 - riga 4148"
-                        action = "sell"
-
-                        # il fattore tempo - la dolce attesa - solo con trend ribassista
-                        # deviation = ma2_last / last_trade_price
-                        # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
-                        # max_hold_time_in_seconds = 270 sec = 4 min e 1/2  (con 6 min perdita di 0.60 %)
-                        # 4 feb 2022 con <-0.26 ha fatto -0.88% (dopo +4.29%)
-                        # 7 feb 2022 con <-0.345 e 270 sec ha fatto -0.38% - aumenta a 0.355 ! -eventualmente ci pensa la condizione CROLLO IMPROVVISO CHE FUNZIONA !
-                        
-            
-            
-            
-                    # 5 - ro cano VENDE " DOPO x MINUTI " and...
-            
-                    elif (
-                        seconds_since_last_trade > max_hold_time_in_seconds
-                        and ma8_last < ma50_last
-                        and deviation_sell < -0.49
-                    ):
-
-                        sell = "session 3-4-x SELL TEMPO e se ma8 < ma50 and deviation_sell < -0.49 - riga 4169"
-                        action = "sell"
-                        
-                        # ma13 troppo lenta !
-                        # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
-                        
-                        
-                
-                
-                
-                    # 6 - RIBASSO IMPROVVISO
-            
-                    elif (
-                        ma78_last > ma78_2_min_ago
-                        and deviation_ribasso_improvviso < -0.63
-                
-                    ):
-       
-                        sell = "session 3-4-x RIBASSO IMPROVVISO - riga 4187"
-                        action = "sell"
-            
-            
-            
-            
-            
-                    # 7 - RIBASSO IMPROVVISO
-            
-                    elif (
-                        ma78_last < ma78_2_min_ago
-                        and deviation_ribasso_improvviso < -0.63
-                
-                    ):
-       
-                        sell = "session 3-4-x RIBASSO IMPROVVISO - riga 4202"
+                        sell = "session 4-5-x RIBASSO IMPROVVISO - riga 4202"
                         action = "sell"
                 
                 
