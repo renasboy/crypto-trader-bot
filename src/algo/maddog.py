@@ -593,7 +593,7 @@ class maddog:
                 ########################################################################################################### PER ADESSO SOLO SUL BUY 1
                 
                 elif (    
-                    ma20_last > ma200_last and ma2_last > ma2_2_min_ago
+                    ma2_last > ma2_2_min_ago and (ma20_prev < ma200_prev and ma20_last > ma200_last)
                     or ma200_last > ma200_20_min_ago
                     and deviation_rialzo_improvviso_1 > 0.18
                     and deviation_rialzo_improvviso_2 > 0.19
