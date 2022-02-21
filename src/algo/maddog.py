@@ -2582,11 +2582,23 @@ class maddog:
                         # viva sant' antonio !
                         
                         
+                    elif (
+                        ma50_last >= ma50_2_min_ago
+                        and ma5_last < ma15_last
+                        and deviation_sell > 0.25
+                        and deviation_sell < 0.50
+                      
+                    ):
+                        sell = "sessione 2 SELL (12-21 min) con ma50 > and 5<15 and deviation_sell 0.25-0.50 - MARADONA - riga 2585"
+                        action = "sell"
+                        
+                        # deviation_sell = ma3_last/last_trade_price
+                        
                         
                     elif (
                         ma50_last >= ma50_2_min_ago
                         and ma3_last < ma15_last
-                        and deviation_sell > 0.25
+                        and deviation_sell > 0.51
                         and deviation_sell < 0.90
                       
                     ):
