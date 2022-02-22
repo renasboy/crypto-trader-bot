@@ -777,14 +777,14 @@ class maddog:
                 elif (    
                     ma200_last > ma200_20_min_ago
                     and ma2_last > ma2_2_min_ago
-                    and (ma2_prev < ma200_prev and ma2_last > ma200_last)
+                    and (ma8_prev < ma200_prev and ma8_last > ma200_last)
                     and deviation_assurda > -0.10
                     and ma20_last > ma20_2_min_ago
                     and ma39_last > ma39_2_min_ago
                     and ma69_last > ma69_2_min_ago
                     and deviation_buy_ma3_sopra_ma25 > 0.10
                 ):
-                    buy = "BUY 1 con DEVIATION ASSURDA se ma200 > da 20 min COMPRA con INCROCIO ma2 - ma200 - riga 755"
+                    buy = "BUY 1 con DEVIATION ASSURDA se ma200 > da 20 min COMPRA con INCROCIO ma8 ma200 - riga 755"
                     action = "buy"
                     percentage = 20
                     
