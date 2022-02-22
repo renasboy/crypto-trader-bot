@@ -878,10 +878,11 @@ class maddog:
 
                 elif (
                     ma2_last > ma2_2_min_ago
+                    and ma5_last > ma5_2_min_ago
                     and (ma20_prev < ma69_prev and ma20_last > ma69_last)
                     and ma20_last > ma200_last
                     and ma200_last > ma200_20_min_ago
-                    and deviation_ma4_sopra_ma30 > 0.12
+                    and deviation_ma4_sopra_ma30 > 0.15
                     and deviation_ma100_laterale > 0.50
                     and (ma3_prev < ma200_prev and ma3_last > ma200_last) or (ma3_prev < ma100_prev and ma3_last > ma100_last)
                 ):
