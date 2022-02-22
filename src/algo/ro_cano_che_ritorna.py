@@ -433,7 +433,7 @@ class ro_cano_che_ritorna:
                 ########################################################################################################### PER ADESSO SOLO SUL BUY 1
                 
                 elif (    
-                    ma20_last > ma200_last and ma2_last > ma2_2_min_ago
+                    ma20_last > ma200_last and ma2_last > ma2_2_min_ago and ma5_last > ma5_2_min_ago
                     
                     or ma200_last > ma200_20_min_ago
                     and deviation_rialzo_improvviso_1 > 0.20
