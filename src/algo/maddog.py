@@ -693,7 +693,7 @@ class maddog:
                     and deviation_buy_crollo_1 > -0.59
 
                     and deviation_correzione > 0.02
-                    and deviation_buy_ma5_sopra_ma20 > 0.065
+                    and deviation_buy_ma5_sopra_ma20 > 0.20
 
                 ):
 
