@@ -2187,12 +2187,12 @@ class maddog:
 
                     if (
                         ma50_last > ma50_2_min_ago
-                        and deviation_ma39 < -0.18
-                        or (deviation_sell < -0.10 and ma3_last < ma50_last)
-                        or (deviation_sell < +0.10 and ma3_last < ma50_last and ma25_last < ma25_2_min_ago)
+                        and deviation_ma39 < -0.19
+                        or (deviation_sell < -0.18 and ma3_last < ma50_last)
+                        or (deviation_sell < -0.17 and ma3_last < ma50_last and ma25_last < ma25_2_min_ago)
                         
                     ):
-                        sell = "SELL 1 dopo 90 min con ma50 > and deviation_ma39 <-0.18 (no ma3<ma39) or (deviation_sell < -0.10 and ma3_last < ma50_last) - riga 1995"
+                        sell = "SELL 1 dopo 90 min con ma50 > and deviation_ma39 <-0.19 (no ma3<ma39) or (deviation_sell < -0.18 and ma3_last < ma50_last) - riga 1995"
                         action = "sell"
                         
                         # and ma3_last < ma39_last
@@ -2252,12 +2252,12 @@ class maddog:
 
                     elif (
                         ma50_last < ma50_2_min_ago
-                        and deviation_ma39 < -0.18
-                        or (deviation_sell < 0.10 and ma3_last < ma39_last)
+                        and deviation_ma39 < -0.17
+                        or (deviation_sell < -0.16 and ma3_last < ma39_last)
                         and ma2_last < ma2_2_min_ago
                        
                     ):
-                        sell = "SELL 1 dopo 90 min con ma50 < con deviation_ma39 <-0.18 or (deviation_sell < 0.10 and ma3_last < ma39_last) - riga 2060"
+                        sell = "SELL 1 dopo 90 min con ma50 < con deviation_ma39 <-0.17 or (deviation_sell < -0.16 and ma3_last < ma39_last) - riga 2060"
                         action = "sell"
                         
                         # and ma3_last < ma33_last
@@ -3161,8 +3161,8 @@ class maddog:
 
                     if (
                         ma50_last > ma50_2_min_ago
-                        and deviation_ma39 < -0.18
-                        or (deviation_sell < 0.10 and ma3_last < ma50_last)
+                        and deviation_ma39 < -0.19
+                        or (deviation_sell < -0.18 and ma3_last < ma50_last)
                         
                     ):
                         sell = "sessione 2 SELL dopo 90 min con ma50 > and deviation_ma39 <-0.18 (no ma3<ma39) or (deviation_sell < 0.10 and ma3_last < ma50_last) - riga 2956"
@@ -3226,12 +3226,12 @@ class maddog:
 
                     elif (
                         ma50_last < ma50_2_min_ago
-                        and deviation_ma39 < -0.18
-                        or (deviation_sell < 0.10 and ma3_last < ma39_last)
+                        and deviation_ma39 < -0.16
+                        or (deviation_sell < -0.15 and ma3_last < ma39_last)
                         and ma2_last < ma2_2_min_ago
                      
                     ):
-                        sell = "sessione 2 SELL dopo 90 min con ma50 < con deviation_ma39 <-0.18 or (deviation_sell < 0.10 and ma3_last < ma39_last) - riga 3022"
+                        sell = "sessione 2 SELL dopo 90 min con ma50 < con deviation_ma39 <-0.16 or (deviation_sell < -0.15 and ma3_last < ma39_last) - riga 3022"
                         action = "sell"
                         
                         # and ma3_last < ma33_last
