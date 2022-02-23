@@ -760,14 +760,20 @@ class maddog:
                     ma200_last > ma200_15_min_ago
                     and ma69_last > ma69_2_min_ago
                     and deviation_ma100_laterale > 0.50
+                    
                     and deviation_ma4_sopra_ma25 > 0.10
+                    
+                    and (ma4_prev < ma25_prev and ma4_last > ma25_last)
                     and ma2_last > ma2_2_min_ago
+                    and (ma3_prev < ma8_prev and ma3_last > ma8_last)
                     and ma36_last > ma36_2_min_ago
                   
                 ):
                     buy = "BUY 1 ECCEZIONALE - se ma200 sale da 15 min e 69> COMPRA con deviation 4-25 e un po' piu' su della ma100 ! - riga 738"
                     action = "buy"
                     percentage = 20
+                    
+                    # deviation 4-25 forse, in futuro, da aumentare un pochino.
                     
                     
                     
@@ -780,6 +786,7 @@ class maddog:
                     and ma20_last > ma200_last
                     and ma20_last > ma69_last
                     and ma2_last > ma2_2_min_ago
+                    and (ma3_prev < ma8_prev and ma3_last > ma8_last)
                     and ma3_last > ma69_last
                     and (ma4_prev < ma25_prev and ma4_last > ma25_last)
                     and deviation_buy_ma3_sopra_ma25 > 0.05
@@ -813,12 +820,13 @@ class maddog:
                     
                     
                     
-                # BUY 1 con DEVIATION ASSURDA  se ma200 > da 20 min COMPRA con INCROCIO ma2 - ma200 >
+                # BUY 1 con DEVIATION ASSURDA  se ma200 > da 20 min COMPRA con INCROCIO ma8 - ma200 >
 
                 elif (    
                     ma200_last > ma200_20_min_ago
                     and ma2_last > ma2_2_min_ago
                     and (ma8_prev < ma200_prev and ma8_last > ma200_last)
+                    and (ma3_prev < ma8_prev and ma3_last > ma8_last)
                     and deviation_assurda > -0.10
                     and ma20_last > ma20_2_min_ago
                     and ma39_last > ma39_2_min_ago
@@ -1728,9 +1736,9 @@ class maddog:
                     elif (
                         ma50_last < ma50_2_min_ago
                         and ma3_last < ma16_last
-                        and deviation_sell < -0.50
+                        and deviation_sell < -0.49
                     ):
-                        sell = "SELL 1 PARACADUTE CROLLO (0-3 min) con ma50 < and ma3<ma16 (no incrocio) and deviation_sell < -0.50 - riga 1542"
+                        sell = "SELL 1 PARACADUTE CROLLO (0-3 min) con ma50 < and ma3<ma16 (no incrocio) and deviation_sell < -0.49 - riga 1542"
                         action = "sell"
 
                         # AGGIUNTA PER SICUREZZA SE CONTINUA A PRECIPITARE
