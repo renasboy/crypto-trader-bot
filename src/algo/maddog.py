@@ -134,7 +134,13 @@ class maddog:
         
         # ESPERIMENTO !
         
-        # formula DEVIATION_CORREZIONE
+        # formule DEVIATION CORREZIONE
+        
+        deviation_correzione = (ma3_last / ma25_last - 1) * 100 if ma25_last else 0
+        self.algo_helper.info("deviation_correzione: {}".format(deviation_correzione))
+
+        
+        
         
         deviation_correzione_1 = (ma5_last / ma30_last - 1) * 100 if ma30_last else 0
         self.algo_helper.info("deviation_correzione_1: {}".format(deviation_correzione_1))
