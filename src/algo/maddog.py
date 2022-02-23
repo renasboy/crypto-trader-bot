@@ -290,6 +290,16 @@ class maddog:
         ############################################################################################################################
         
         # formula DEVIATION_buy_ma2_sopra_ma13 per comprare a una certa distanza da ma13
+
+        
+
+        deviation_buy_ma5_sopra_ma20 = (ma5_last / ma20_last - 1) * 100 if ma20_last else 0
+
+        self.algo_helper.info("deviation_buy_ma5_sopra_ma20: {}".format(deviation_buy_ma5_sopra_ma20))
+        
+        
+        
+        # formula DEVIATION_buy_ma2_sopra_ma13 per comprare a una certa distanza da ma13
         
         deviation_buy_ma2_sopra_ma13 = (ma2_last / ma13_last - 1) * 100 if ma13_last else 0
         self.algo_helper.info("deviation_buy_ma2_sopra_ma13: {}".format(deviation_buy_ma2_sopra_ma13))
@@ -683,6 +693,7 @@ class maddog:
                     and deviation_buy_crollo_1 > -0.59
 
                     and deviation_correzione > 0.02
+                    and deviation_buy_ma5_sopra_ma20 > 0.065
 
                 ):
 
@@ -1002,7 +1013,7 @@ class maddog:
                     and ma20_last > ma200_last
                     and ma200_last > ma200_20_min_ago
                     and deviation_ma4_sopra_ma30 > 0.15
-                    and deviation_ma100_laterale > 0.50
+                    and deviation_ma100_laterale > 0.49
                     and (ma3_prev < ma200_prev and ma3_last > ma200_last) or (ma3_prev < ma100_prev and ma3_last > ma100_last)
                 ):
                     buy = "BUY 2 ECCEZIONALE HO RISOLTO BUY IN ALTO ! se ma200 sale da 20 min compra con 4-30 (SUL BUY 2 lo 0.50 e 20-69 evita GLI EFFETTI LATERALI !) - riga 881"
