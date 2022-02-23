@@ -1980,11 +1980,11 @@ class maddog:
                     elif (
                         ma50_last < ma50_2_min_ago
                         and ma2_last < ma2_2_min_ago
-                        and deviation_ma39 < -0.24
-                        or deviation_sell < -0.25
+                        and deviation_ma39 < -0.25
+                        or deviation_sell < -0.26
                        
                     ):
-                        sell = "SELL 1 (21-60 min) con ma50 < and deviation_ma39 < -0.24 or deviation_sell < -0.25 - riga 1837"
+                        sell = "SELL 1 (21-60 min) con ma50 < and deviation_ma39 < -0.25 or deviation_sell < -0.26 - riga 1837"
                         action = "sell"
                         
                         # and deviation_ma39 < -0.15 or (deviation_sell < 0.10 and ma3_last < ma39_last)
@@ -2041,10 +2041,10 @@ class maddog:
 
                     if (
                         ma50_last > ma50_2_min_ago
-                        and deviation_ma39 < -0.18
-                        or (deviation_sell < -0.18 and ma3_last < ma50_last)
+                        and deviation_ma39 < -0.20
+                        or (deviation_sell < -0.20 and ma3_last < ma50_last)
                     ):
-                        sell = "SELL da 60 a 90 min con ma50 > and deviation_ma39 <-0.18 or (deviation_sell < -0.18 and ma3_last < ma50_last)  - riga 1897"
+                        sell = "SELL da 60 a 90 min con ma50 > and deviation_ma39 <-0.20 or (deviation_sell < -0.20 and ma3_last < ma50_last)  - riga 1897"
                         action = "sell"
                         
                         # se non ha forza dopo 1 ora e' inutile continuare a sperare !
