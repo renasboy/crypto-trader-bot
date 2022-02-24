@@ -5086,7 +5086,7 @@ class maddog:
                         
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and (ma3_prev > ma13_prev and ma3_last < ma113_last)
+                        and (ma3_prev > ma13_prev and ma3_last < ma13_last)
                         and deviation_sell > 2.71
                     ):
                         sell = "session 3-4-x SELL (21-60 min) con ma50 > and incrocio 3-13 and deviation_sell > 2.71 - riga 3795"
