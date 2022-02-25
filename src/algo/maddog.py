@@ -141,6 +141,12 @@ class maddog:
         
         # ESPERIMENTO !
         
+        # formula DEVIATION_ma5_sotto_ma200 per comprare FINO a una certa distanza da ma200
+        
+        deviation_ma5_sotto_ma200 = (ma5_last / ma200_last - 1) * 100 if ma200_last else 0
+        self.algo_helper.info("deviation_ma5_sotto_ma200: {}".format(deviation_ma5_sotto_ma200))    
+        
+        
         # formule DEVIATION CORREZIONE
         
         deviation_correzione = (ma3_last / ma25_last - 1) * 100 if ma25_last else 0
