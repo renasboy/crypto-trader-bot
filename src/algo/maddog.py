@@ -1066,6 +1066,7 @@ class maddog:
                     and ma3_last > ma78_last
                     and ma4_last > ma4_2_min_ago
                     and ma2_last > ma2_2_min_ago
+                    and ma5_last > ma15_last
                     and ma7_last > ma25_last
                 ):
                     buy = "BUY 3B RIVOLUZIONARIO se ma39 > ma78- riga 940"
