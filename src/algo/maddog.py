@@ -696,7 +696,7 @@ class maddog:
                     and deviation_buy_crollo_1 > -0.59
                     and deviation_correzione > 0.015
                     and deviation_buy_ma5_sopra_ma20 > 0.14
-                    and deviation_ma5_sotto_ma200 > -1.00
+                    and ma200_last > ma200_15_min_ago
                     
                 ):
 
@@ -2848,11 +2848,11 @@ class maddog:
 
                     elif (
                         ma50_last < ma50_2_min_ago
-                        and deviation_ma39 < -0.18
+                        and deviation_ma39 < -0.20
                         and ma2_last < ma2_2_min_ago
                       
                     ):
-                        sell = "SELL 2 (12-21 min) con ma50 < and deviation_ma39 < -0.18 - riga 2627"
+                        sell = "SELL 2 (12-21 min) con ma50 < and deviation_ma39 < -0.20 - riga 2627"
                         action = "sell"
                         
                         # and (ma3_prev > ma33_prev and ma3_last < ma33_last)
