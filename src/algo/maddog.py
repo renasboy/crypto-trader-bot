@@ -617,7 +617,7 @@ class maddog:
                 
                 elif (    
                     ma2_last > ma2_2_min_ago and (ma20_prev < ma200_prev and ma20_last > ma200_last)
-                    or ma200_last > ma200_20_min_ago
+                    or ma200_last > ma200_20_min_ago or (ma20_prev < ma78_prev and ma20_last > ma78_last)
                     and deviation_rialzo_improvviso_1 > 0.18
                     and deviation_rialzo_improvviso_2 > 0.19
                     and deviation_rialzo_improvviso_3 > 0.19
