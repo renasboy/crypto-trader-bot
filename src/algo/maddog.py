@@ -639,63 +639,75 @@ class maddog:
                    
                 ):
 
-                    buy = "BUY 1 RIALZO IMPROVVISO con ma78 > e deve andare sopra ma200 - riga 642"
+                    buy = "BUY 1 RIALZO IMPROVVISO con ma200 > - riga 642"
                     action = "buy"
                     percentage = 10
+                    
                     
                     # deviation_rialzo_improvviso_sopra = price / ma200_last
                     
                     # deviation_rialzo_improvviso_1 = price / ma30_last
                     # deviation_rialzo_improvviso_2 = price / ma30_10_min_ago
                     # deviation_rialzo_improvviso_3 = price / ma30_20_min_ago
+                    # deviation_rialzo_improvviso_4 = price / ma30_30_min_ago
+                    
+                    # deviation_range_1 = ma30_last / ma30_10_min_ago
+                    
+                
+                
+                
+                
+                
+                elif (
+                  
+                    ma200_last > ma200_20_min_ago
+                    and (ma20_prev < ma78_prev and ma20_last > ma78_last)
+                   
+                    and deviation_rialzo_improvviso_1 > 0.18
+                    and deviation_range_1 < 0.20
+                    
+                    and ma2_last > ma2_2_min_ago
+                ):
+
+                    buy = "BUY 1 variazione 1 RIALZO IMPROVVISO con 20-78 - riga 672"
+                    action = "buy"
+                    percentage = 10
+                    
+                    
+                    
+                    
+                elif (
+                  
+                    ma200_last > ma200_20_min_ago
+                    and (ma20_prev < ma100_prev and ma20_last > ma100_last)
+                   
+                    and deviation_rialzo_improvviso_1 > 0.18
+                    and deviation_range_1 < 0.20
+                    
+                    and ma2_last > ma2_2_min_ago
+                ):
+
+                    buy = "BUY 1 variazione 2 RIALZO IMPROVVISO con 20-100 - riga 690"
+                    action = "buy"
+                    percentage = 10
+                    
                     
                     
                 
+                
                 elif (
-                   
-                    ma2_last > ma2_2_min_ago
-                    and (ma20_prev < ma78_prev and ma20_last > ma78_last)
-                    and deviation_rialzo_improvviso_sopra > 0.49
-                    and deviation_range_1 < 0.20
-                    and deviation_rialzo_improvviso_1 > 0.18
-                 
-                ):
-
-                    buy = "BUY 1 variazione 1 RIALZO IMPROVVISO con 20-78 - riga 685"
-                    action = "buy"
-                    percentage = 10
-                    
-                    
-                    
-                    
-                elif (
-                   
-                    ma2_last > ma2_2_min_ago
-                    and (ma20_prev < ma100_prev and ma20_last > ma100_last)
-                    and deviation_rialzo_improvviso_sopra > 0.49
-                    and deviation_range_1 < 0.20
-                    and deviation_rialzo_improvviso_1 > 0.18
-                 
-                ):
-
-                    buy = "BUY 1 variazione 2 RIALZO IMPROVVISO con 20-100 - riga 688"
-                    action = "buy"
-                    percentage = 10
-                    
-                    
-                    
-                    
-                elif (
-                    
-                    ma2_last > ma2_2_min_ago
+                  
+                    ma200_last > ma200_20_min_ago
                     and (ma20_prev < ma200_prev and ma20_last > ma200_last)
-                    and deviation_rialzo_improvviso_sopra > 0.49
-                    and deviation_range_1 < 0.20
+                   
                     and deviation_rialzo_improvviso_1 > 0.18
+                    and deviation_range_1 < 0.20
+                    
+                    and ma2_last > ma2_2_min_ago
                  
                 ):
 
-                    buy = "BUY 1 variazione 3 RIALZO IMPROVVISO con 20-200 - riga 705"
+                    buy = "BUY 1 variazione 3 RIALZO IMPROVVISO con 20-200 - riga 710"
                     action = "buy"
                     percentage = 10
                     
