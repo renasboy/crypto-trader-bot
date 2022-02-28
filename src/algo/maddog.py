@@ -659,9 +659,9 @@ class maddog:
                 
                 
                 elif (
-                  
+                    
                     ma200_last > ma200_20_min_ago
-                    and (ma20_prev < ma78_prev and ma20_last > ma78_last)
+                    and (ma20_prev < ma69_prev and ma20_last > ma69_last)
                    
                     and deviation_rialzo_improvviso_1 > 0.18
                     and deviation_range_1 < 0.20
@@ -669,7 +669,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                 ):
 
-                    buy = "BUY 1 variazione 1 RIALZO IMPROVVISO con 20-78 - riga 672"
+                    buy = "BUY 1 variazione 1 RIALZO con 20-69 - riga 672"
                     action = "buy"
                     percentage = 10
                     
@@ -687,7 +687,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                 ):
 
-                    buy = "BUY 1 variazione 2 RIALZO IMPROVVISO con 20-100 - riga 690"
+                    buy = "BUY 1 variazione 2 RIALZO con 20-100 - riga 690"
                     action = "buy"
                     percentage = 10
                     
@@ -707,7 +707,7 @@ class maddog:
                  
                 ):
 
-                    buy = "BUY 1 variazione 3 RIALZO IMPROVVISO con 20-200 - riga 710"
+                    buy = "BUY 1 variazione 3 RIALZO con 20-200 - riga 710"
                     action = "buy"
                     percentage = 10
                     
@@ -1104,13 +1104,15 @@ class maddog:
                 if (
                     ma78_last >= ma78_2_min_ago
                     and deviation_buy3 > 0.12
-                    and deviation_buy_ma2_sopra_ma13 > 0.155
                     and ma3_last > ma13_last
-                    and deviation_ma4_sopra_ma30 > 0.145
+                    and deviation_ma7_sopra_ma40 > 0.09
                     and ma4_last > ma9_last
+                    and deviation_ma4_sopra_ma30 > 0.10
+                    and deviation_buy_ma2_sopra_ma13 > 0.10
                     and ma4_last > ma50_last
                     and ma2_last > ma2_2_min_ago
                     and ma7_last > ma25_last
+                  
                 ):
                     buy = "BUY 3A con ma78 > riga 922"
                     action = "buy"
