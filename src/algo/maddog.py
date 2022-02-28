@@ -1347,6 +1347,8 @@ class maddog:
                     
                 elif (
                     ma78_last < ma78_2_min_ago
+                    and ma20_last > ma200_last
+                    
                     and deviation_buy3 > 0.04
                     and deviation_bellissima > 0.181
                     and delta_buy3_incrocio_ma3_ma8 > 0.075
@@ -1355,7 +1357,7 @@ class maddog:
                     and ma3_last > ma78_last
                     and ma4_last > ma4_2_min_ago
                     and ma7_last > ma25_last
-                
+                    
                     and ma2_last > ma2_2_min_ago
                 ):
                     buy = "BUY 5d RIVOLUZIONARIO con ma78 < and deviation_bellissima > 0.163 - riga 1129"
