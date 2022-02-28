@@ -1043,6 +1043,7 @@ class maddog:
 
                 elif (
                     ma2_last > ma2_2_min_ago
+                    and ma7_last > ma25_last
                     and ma10_last > ma10_2_min_ago
                     and (ma20_prev < ma69_prev and ma20_last > ma69_last)
                     and ma20_last > ma200_last
