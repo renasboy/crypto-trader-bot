@@ -1302,7 +1302,27 @@ class maddog:
                     # se e' arrivato il buy 5 e' molto probabile che il trend sia consolidato
                     # e, a questo punto, non importa se compra con un + 0.10 piu' in alto. NON FA UNA GRANDE DIFFERENZA !
                     
-
+                    
+                    
+                    
+                elif (
+                    ma200_last >= ma200_120_min_ago
+                    and ma3_last > ma8_last
+                    and ma3_last > ma78_last
+                    and ma4_last > ma4_2_min_ago
+                    and ma7_last > ma25_last
+                    
+                    and ma2_last > ma2_2_min_ago
+                   
+                ):
+                    buy = "BUY 5B RIVOLUZIONARIO che NON SPEZZA LA CATENA SE ma200> 120 min) - riga 1318"
+                    action = "buy"
+                    percentage = 50
+                    
+                    # deviation_buy3 = ma4_last/ma30_last
+                    
+                    
+                    
                 elif (
                     ma78_last >= ma78_2_min_ago
                     and deviation_buy3 > 0.03
@@ -1317,7 +1337,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                     
                 ):
-                    buy = "BUY 5B RIVOLUZIONARIO con ma78 > and deviation_bellissima > 0.163 (PER SPEZZARE LA CATENA -effetti laterali) - riga 1109"
+                    buy = "BUY 5c RIVOLUZIONARIO con ma78 > and deviation_bellissima > 0.163 (PER SPEZZARE LA CATENA -effetti laterali) - riga 1109"
                     action = "buy"
                     percentage = 50
                     
@@ -1337,7 +1357,7 @@ class maddog:
                 
                     and ma2_last > ma2_2_min_ago
                 ):
-                    buy = "BUY 5C RIVOLUZIONARIO con ma78 < and deviation_bellissima > 0.163 - riga 1129"
+                    buy = "BUY 5d RIVOLUZIONARIO con ma78 < and deviation_bellissima > 0.163 - riga 1129"
                     action = "buy"
                     percentage = 50
                     
@@ -1360,7 +1380,7 @@ class maddog:
                     
                 ):
 
-                    buy = "BUY 5A PAZZA DURANTE UNA piccola CORREZIONE che non e' un forte ribasso e non e' un crollo ! con deviation_correzione > 0.02 - riga 683"
+                    buy = "BUY 5 PAZZA DURANTE UNA piccola CORREZIONE che non e' un forte ribasso e non e' un crollo ! con deviation_correzione > 0.02 - riga 683"
                     action = "buy"
                     percentage = 10
 
