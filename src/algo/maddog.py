@@ -670,6 +670,13 @@ class maddog:
                     
                     
                     
+                    # deviation_rialzo_improvviso_1 = price / ma30_last
+                    # deviation_range_1 = ma30_last / ma30_10_min_ago
+                    
+                    
+                    
+                    
+                    
                     
                 elif (
                   
@@ -686,6 +693,8 @@ class maddog:
                     action = "buy"
                     percentage = 10
                     
+                    # deviation_rialzo_improvviso_1 = price / ma30_last
+                    # deviation_range_1 = ma30_last / ma30_10_min_ago
                     
                     
                 
@@ -706,6 +715,8 @@ class maddog:
                     action = "buy"
                     percentage = 10
                     
+                    # deviation_rialzo_improvviso_1 = price / ma30_last
+                    # deviation_range_1 = ma30_last / ma30_10_min_ago
                 
                 
                 
@@ -715,6 +726,7 @@ class maddog:
                 elif (    
                    
                     ma200_last < ma200_20_min_ago
+                    
                     and deviation_rialzo_improvviso_1 > 0.47
                     and deviation_rialzo_improvviso_2 > 0.20
                     and deviation_rialzo_improvviso_3 > 0.20
