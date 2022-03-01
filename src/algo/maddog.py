@@ -411,7 +411,11 @@ class maddog:
         
         # ultima evoluzione APERTURA GABBIA
         
-        if deviation_1_gabbia > -0.30 or deviation_buy_crollo_1 < -1.62 or deviation_buy_crollo_1 > -1.59 and deviation_buy_crollo_1 < -0.72 or deviation_buy_crollo_1 > -0.69 and deviation_buy_crollo_1 < -0.36:
+        # if deviation_1_gabbia > -0.30 or deviation_buy_crollo_1 < -1.62 or deviation_buy_crollo_1 > -1.59 and deviation_buy_crollo_1 < -0.72 or deviation_buy_crollo_1 > -0.69 and deviation_buy_crollo_1 < -0.36:
+        
+        if deviation_1_gabbia > -0.29 or deviation_buy_crollo_1 < -1.62 or deviation_buy_crollo_1 > -1.59 and deviation_buy_crollo_1 < -0.72 or deviation_buy_crollo_1 > -0.69 and deviation_buy_crollo_1 < -0.33:
+        
+        
         
         # HO INTERROTTO LA CONTINUITA' COSI' CHIUDE E PARTE LA SESSION 1
         
@@ -808,13 +812,13 @@ class maddog:
                     ma2_last > ma2_2_min_ago
                     and deviation_buy_crollo_1 < -0.29
                     and deviation_buy_crollo_1 > -0.59
-                    and deviation_correzione > 0.015
+                    and deviation_correzione > 0.018
                     and deviation_buy_ma5_sopra_ma20 > 0.14
-                    and ma200_last > ma200_15_min_ago
+                    and ma200_last > ma200_120_min_ago
                     
                 ):
 
-                    buy = "BUY 1A PAZZA DURANTE UNA piccola CORREZIONE che non e' un forte ribasso e non e' un crollo ! con deviation_correzione > 0.02 - riga 683"
+                    buy = "BUY 1A PAZZA DURANTE UNA piccola CORREZIONE che non e' un forte ribasso e non e' un crollo ! con deviation_correzione > 0.018 - riga 821"
                     action = "buy"
                     percentage = 10
 
