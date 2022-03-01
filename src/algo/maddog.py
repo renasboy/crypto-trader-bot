@@ -500,6 +500,8 @@ class maddog:
                     # deviation_bellissima = ma6_last / ma30_last
                     # and deviation_ma13_sopra_ma25 > 0.07 TOLTA PROVVISORIAMENTE vedi BUY ore 10:47 del 23 nov 2021 (E' ARRIVATA MOLTO TARDI)
                     
+                    
+                    
                 ####################################################################  BUY 1 con incrocio 11-69 and ma72_last >= ma72_2_min_ago  "MI PIACE!"
 
                 elif (
@@ -520,6 +522,33 @@ class maddog:
                     percentage = 20
                     
                     # quando 13-100 si incrociano price ma2 e ma4 sono gia' in ribasso
+                    
+                
+                
+                
+                # BUY 1 con 11-69 SE ma200 SALE DA 2 ORE !
+                    
+                elif (
+                    ma200_last > ma200_120_min_ago
+                    and ma20_last > ma200_last
+                    and ma11_last > ma69_last
+                    
+                    and deviation_bellissima > 0.17
+                    and price > price_2_min_ago
+                    and ma2_last > ma2_2_min_ago
+                    and ma3_last > ma3_3_min_ago
+                    and ma4_last > ma4_2_min_ago
+                    and deviation_ma3_sopra_ma7 > 0.05
+                    and deviation_ma13_sopra_ma25 > 0.07
+                 
+                ):
+                    buy = "BUY 1 con 11-69 SE ma200 SALE DA 2 ORE ! - riga 545"
+                    action = "buy"
+                    percentage = 20
+                    
+                    
+                    
+                    
                     
                     
                 elif (
