@@ -623,7 +623,7 @@ class maddog:
                     and deviation_rialzo_improvviso_1 > 0.18
                     and deviation_rialzo_improvviso_2 > 0.19
                     and deviation_rialzo_improvviso_3 > 0.19
-                    and deviation_rialzo_improvviso_4 > 0.19
+                    
                     
                     
                     and deviation_range_1 < 0.20
@@ -664,7 +664,7 @@ class maddog:
                     and (ma20_prev < ma69_prev and ma20_last > ma69_last)
                    
                     and deviation_rialzo_improvviso_1 > 0.18
-                    and deviation_range_1 < 0.20
+                    and deviation_range_1 > 0.20
                     
                     and ma2_last > ma2_2_min_ago
                 ):
@@ -682,7 +682,7 @@ class maddog:
                     and (ma20_prev < ma100_prev and ma20_last > ma100_last)
                    
                     and deviation_rialzo_improvviso_1 > 0.18
-                    and deviation_range_1 < 0.20
+                    and deviation_range_1 > 0.20
                     
                     and ma2_last > ma2_2_min_ago
                 ):
@@ -701,7 +701,7 @@ class maddog:
                     and (ma20_prev < ma200_prev and ma20_last > ma200_last)
                    
                     and deviation_rialzo_improvviso_1 > 0.18
-                    and deviation_range_1 < 0.20
+                    and deviation_range_1 > 0.20
                     
                     and ma2_last > ma2_2_min_ago
                  
@@ -1048,7 +1048,7 @@ class maddog:
                     and (ma20_prev < ma69_prev and ma20_last > ma69_last)
                     and ma20_last > ma200_last
                     and ma200_last > ma200_20_min_ago
-                    and deviation_ma4_sopra_ma30 > 0.15
+                    and deviation_ma4_sopra_ma30 > 0.17
                     and deviation_ma100_laterale > 0.49
                     and (ma3_prev < ma200_prev and ma3_last > ma200_last) or (ma3_prev < ma100_prev and ma3_last > ma100_last)
                 ):
