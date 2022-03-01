@@ -623,16 +623,11 @@ class maddog:
                     and deviation_rialzo_improvviso_1 > 0.18
                     and deviation_rialzo_improvviso_2 > 0.19
                     and deviation_rialzo_improvviso_3 > 0.19
-                    
-                    
-                    
+                  
                     and deviation_range_1 < 0.20
                     and deviation_range_1 > -0.20
                     and deviation_range_2 < 0.20
                     and deviation_range_2 > -0.20
-                    and deviation_range_3 < 0.20
-                    and deviation_range_3 > -0.20
-                    
                     
                     and deviation_range_x < 0.20
                     and deviation_range_x > -0.20
@@ -649,11 +644,11 @@ class maddog:
                     # deviation_rialzo_improvviso_1 = price / ma30_last
                     # deviation_rialzo_improvviso_2 = price / ma30_10_min_ago
                     # deviation_rialzo_improvviso_3 = price / ma30_20_min_ago
-                    # deviation_rialzo_improvviso_4 = price / ma30_30_min_ago
                     
                     # deviation_range_1 = ma30_last / ma30_10_min_ago
-                    
-                
+                    # deviation_range_2 = ma30_10_min_ago / ma30_20_min_ago
+                   
+                    # deviation_range_x = ma30_last / ma30_20_min_ago
                 
                 
                 
@@ -742,6 +737,21 @@ class maddog:
                     buy = "BUY 1 RIALZO IMPROVVISO con 78 < (0.49 da 0.35 per evitare falsi acquisti guardando anche il 6-30) - riga 651"
                     action = "buy"
                     percentage = 10
+                    
+                    
+                    # deviation_rialzo_improvviso_sopra = price / ma200_last
+                    
+                    # deviation_rialzo_improvviso_1 = price / ma30_last
+                    # deviation_rialzo_improvviso_2 = price / ma30_10_min_ago
+                    # deviation_rialzo_improvviso_3 = price / ma30_20_min_ago
+                    # deviation_rialzo_improvviso_4 = price / ma30_30_min_ago
+                    
+                    # deviation_range_1 = ma30_last / ma30_10_min_ago
+                    # deviation_range_2 = ma30_10_min_ago / ma30_20_min_ago
+                    # deviation_range_3 = ma30_20_min_ago / ma30_30_min_ago
+                    
+                    # deviation_range_x = ma30_last / ma30_20_min_ago
+                    
                     
                   
                 
@@ -1052,7 +1062,7 @@ class maddog:
                     and deviation_ma100_laterale > 0.49
                     and (ma3_prev < ma200_prev and ma3_last > ma200_last) or (ma3_prev < ma100_prev and ma3_last > ma100_last)
                 ):
-                    buy = "BUY 2 ECCEZIONALE HO RISOLTO BUY IN ALTO ! se ma200 sale da 20 min compra con 4-30 (SUL BUY 2 lo 0.50 e 20-69 evita GLI EFFETTI LATERALI !) - riga 881"
+                    buy = "BUY 2 ECCEZIONALE risolvere BUY IN ALTO ! se ma200> da 20 min compra con 4-30 (SUL BUY 2 0.50 e 20-69 vs EFFETTI LATERALI !) - riga 881"
                     action = "buy"
                     percentage = 40
                     
