@@ -857,14 +857,17 @@ class maddog:
                     
                     
                     
-                # BUY 1 PAZZA no ma200 no ma300 > DURANTE UNA piccola CORREZIONE che NON E' un forte ribasso e NON E' un crollo ! (compare stammi vicino!)
+                # BUY 1 PAZZA ma200< and ma300< DURANTE UNA piccola CORREZIONE che NON E' un forte ribasso e NON E' un crollo ! (compare stammi vicino!)
                 
                 elif (
 
                     ma2_last > ma2_2_min_ago
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_120_min_ago
                     and ma8_last > ma39_last
                     and deviation_buy_crollo_1 < -0.29
                     and deviation_buy_crollo_1 > -0.59
+                    
                 ):
 
                     buy = "BUY 1 PAZZA no ma200 no ma300 > DURANTE UNA piccola CORREZIONE che non e' un forte ribasso e non e' un crollo ! - riga 821"
