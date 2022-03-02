@@ -43,7 +43,9 @@ class maddog:
         ma78_last, ma78_prev = self.algo_helper.ma_last_prev(78)
         ma100_last, ma100_prev = self.algo_helper.ma_last_prev(100)
         ma200_last, ma200_prev = self.algo_helper.ma_last_prev(200)
+        ma300_last, ma300_prev = self.algo_helper.ma_last_prev(300)
 
+        
         # moving average (2-3-4-5-7-8-20-43-100) di x minuti prima
         
         ma2_2_min_ago = self.algo_helper.ma_minutes_ago(2, 2)
@@ -82,6 +84,7 @@ class maddog:
         ma200_15_min_ago = self.algo_helper.ma_minutes_ago(200, 15)
         ma200_20_min_ago = self.algo_helper.ma_minutes_ago(200, 20)
         ma200_120_min_ago = self.algo_helper.ma_minutes_ago(200, 120)
+        ma300_120_min_ago = self.algo_helper.ma_minutes_ago(300, 120)
 
         # LAST TRADE
         
@@ -760,7 +763,7 @@ class maddog:
                    
                     ma200_last < ma200_20_min_ago
                     
-                    and deviation_rialzo_improvviso_1 > 0.47
+                    and deviation_rialzo_improvviso_1 > 0.78
                     and deviation_rialzo_improvviso_2 > 0.20
                     and deviation_rialzo_improvviso_3 > 0.20
                     and deviation_rialzo_improvviso_4 > 0.20
@@ -779,7 +782,7 @@ class maddog:
                  
                 ):
 
-                    buy = "BUY 1 RIALZO IMPROVVISO con 78 < (0.49 da 0.35 per evitare falsi acquisti guardando anche il 6-30) - riga 651"
+                    buy = "BUY 1 RIALZO IMPROVVISO con 78 < (0.78 ! da 0.35 per evitare falsi acquisti) - riga 785"
                     action = "buy"
                     percentage = 10
                     
@@ -803,7 +806,6 @@ class maddog:
                 ################################################################################################  per comprare durante una CORREZIONE e un FORTE RIBASSO
                 
                
-                
                 # BUY 1A PAZZA DURANTE UNA piccola CORREZIONE che NON E' un forte ribasso e NON E' un crollo ! (compare stammi vicino!)
                 
                 
@@ -819,6 +821,31 @@ class maddog:
                 ):
 
                     buy = "BUY 1A PAZZA DURANTE UNA piccola CORREZIONE che non e' un forte ribasso e non e' un crollo ! con deviation_correzione > 0.018 - riga 821"
+                    action = "buy"
+                    percentage = 10
+
+                    # deviation_buy_crollo_1 = ma8_last / ma78_last
+                    # deviation_correzione = ma3_last / ma25_last
+                    # ma5 non deve allontanarsi troppo dalla ma200 !
+                    # compare prega per me !
+                    
+                    
+                    
+                # BUY 1 PAZZA ma300 > DURANTE UNA piccola CORREZIONE che NON E' un forte ribasso e NON E' un crollo ! (compare stammi vicino!)
+                
+                
+                elif (
+
+                    ma2_last > ma2_2_min_ago
+                    and deviation_buy_crollo_1 < -0.29
+                    and deviation_buy_crollo_1 > -0.59
+                    and deviation_correzione > 0.018
+                    
+                    and ma300_last > ma300_120_min_ago
+                    
+                ):
+
+                    buy = "BUY 1A PAZZA ma300 > DURANTE UNA piccola CORREZIONE che non e' un forte ribasso e non e' un crollo ! con deviation_correzione > 0.018 - riga 821"
                     action = "buy"
                     percentage = 10
 
