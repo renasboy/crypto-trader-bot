@@ -3121,11 +3121,11 @@ class maddog:
                     if (
                         
                         
-                        ma50_last > ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_ma39 < -0.19)
-                        or ma50_last > ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_sell < -0.18 and ma3_last < ma50_last)
+                        ma50_last > ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_ma39 < -0.23)
+                        or ma50_last > ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_sell < -0.22 and ma3_last < ma50_last)
                        
                     ):
-                        sell = "SELL 2 (21-60 min) con ma50 > and deviation_ma39 < -0.19 or (deviation_sell < -0.18 and ma3_last < ma50_last) - riga 2705"
+                        sell = "SELL 2 (21-60 min) con ma50 > and deviation_ma39 < -0.23 or (deviation_sell < -0.22 and ma3_last < ma50_last) - riga 2705"
                         action = "sell"
                         
                         
@@ -4195,11 +4195,11 @@ class maddog:
 
                     if (
                       
-                        ma50_last > ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_ma25 < -0.22)
-                        or ma50_last > ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_sell < -0.245 and ma3_last < ma50_last)
+                        ma50_last > ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_ma25 < -0.25)
+                        or ma50_last > ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_sell < -0.25 and ma3_last < ma50_last)
                     
                     ):
-                        sell = "session 3-4-x SELL (21-60 min) con ma50 > and deviation_ma25 < -0.225 or (deviation_sell < -0.245 and ma3_last < ma50_last) - riga 3707"
+                        sell = "session 3-4-x SELL (21-60 min) con ma50 > and deviation_ma25 < -0.25 or (deviation_sell < -0.25 and ma3_last < ma50_last) - riga 3707"
                         action = "sell"
                         
                         
