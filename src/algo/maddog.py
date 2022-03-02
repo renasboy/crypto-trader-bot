@@ -806,7 +806,7 @@ class maddog:
                 ################################################################################################  per comprare durante una CORREZIONE e un FORTE RIBASSO
                 
                
-                # BUY 1A PAZZA DURANTE UNA piccola CORREZIONE che NON E' un forte ribasso e NON E' un crollo ! (compare stammi vicino!)
+                # BUY 1 PAZZA ma200 DURANTE UNA piccola CORREZIONE che NON E' un forte ribasso e NON E' un crollo ! (compare stammi vicino!)
                 
                 
                 elif (
@@ -820,7 +820,7 @@ class maddog:
                     
                 ):
 
-                    buy = "BUY 1A PAZZA DURANTE UNA piccola CORREZIONE che non e' un forte ribasso e non e' un crollo ! con deviation_correzione > 0.018 - riga 821"
+                    buy = "BUY 1A PAZZA ma200 DURANTE UNA piccola CORREZIONE che non e' un forte ribasso e non e' un crollo ! con deviation_correzione > 0.018 - riga 821"
                     action = "buy"
                     percentage = 10
 
@@ -830,7 +830,8 @@ class maddog:
                     # compare prega per me !
                     
                     
-                    
+                
+                
                 # BUY 1 PAZZA ma300 > DURANTE UNA piccola CORREZIONE che NON E' un forte ribasso e NON E' un crollo ! (compare stammi vicino!)
                 
                 
@@ -845,7 +846,7 @@ class maddog:
                     
                 ):
 
-                    buy = "BUY 1A PAZZA ma300 > DURANTE UNA piccola CORREZIONE che non e' un forte ribasso e non e' un crollo ! con deviation_correzione > 0.018 - riga 821"
+                    buy = "BUY 1 PAZZA ma300 > DURANTE UNA piccola CORREZIONE che non e' un forte ribasso e non e' un crollo ! con deviation_correzione > 0.018 - riga 821"
                     action = "buy"
                     percentage = 10
 
@@ -853,9 +854,29 @@ class maddog:
                     # deviation_correzione = ma3_last / ma25_last
                     # ma5 non deve allontanarsi troppo dalla ma200 !
                     # compare prega per me !
-                        
-
                     
+                    
+                    
+                # BUY 1 PAZZA no ma200 no ma300 > DURANTE UNA piccola CORREZIONE che NON E' un forte ribasso e NON E' un crollo ! (compare stammi vicino!)
+                
+                elif (
+
+                    ma2_last > ma2_2_min_ago
+                    and ma8_last > ma39_last
+                  
+                ):
+
+                    buy = "BUY 1 PAZZA no ma200 no ma300 > DURANTE UNA piccola CORREZIONE che non e' un forte ribasso e non e' un crollo ! - riga 821"
+                    action = "buy"
+                    percentage = 10
+
+                    # compare prega per me !
+                   
+
+                
+                
+                
+                
                 # BUY 1B DURANTE UNA CORREZIONE che NON E' una piccola correzione e NON E' un forte ribasso e NON E' un crollo ! !)
                 
                 elif (
