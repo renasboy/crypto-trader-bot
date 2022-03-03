@@ -1151,21 +1151,50 @@ class maddog:
                     
                     
                 # buy 2 esperimentali # CON INCROCIO 3-200 HO RISOLTO IL PROBLEMA DEL BUY 2 ECCEZIONALE CHE COINCIDEVA QUASI CON IL SELL 1 ! 
-               
-                # BUY 2 ECCEZIONALE - se ma200 sale da 20 min compra con 4-30 ma sul BUY 2 lo 0.50 evita GLI EFFETTI LATERALI !
+                
+                
+                # BUY 2 andamento laterale - se ma200 sale da 20 min compra con 4-30 ma sul BUY 2 lo 0.50 evita GLI EFFETTI LATERALI !
 
                 elif (
-                    ma2_last > ma2_2_min_ago
+                    ma200_last > ma200_20_min_ago
+                    and ma20_last > ma200_last
+                    
+                    and (ma3_prev < ma200_prev and ma3_last > ma200_last)
+                    and (ma20_prev < ma69_prev and ma20_last > ma69_last)
+                    
+                    and ma2_last > ma2_2_min_ago
                     and ma7_last > ma25_last
                     and ma10_last > ma10_2_min_ago
-                    and (ma20_prev < ma69_prev and ma20_last > ma69_last)
-                    and ma20_last > ma200_last
-                    and ma200_last > ma200_20_min_ago
+                    
                     and deviation_ma4_sopra_ma30 > 0.17
                     and deviation_ma100_laterale > 0.49
-                    and (ma3_prev < ma200_prev and ma3_last > ma200_last) or (ma3_prev < ma100_prev and ma3_last > ma100_last)
+                    
                 ):
-                    buy = "BUY 2 ECCEZIONALE risolvere BUY IN ALTO ! se ma200> da 20 min compra con 4-30 (SUL BUY 2 0.50 e 20-69 vs EFFETTI LATERALI !) - riga 881"
+                    buy = "BUY 2 andamento laterale se ma200> da 20 min compra con 4-30 (SUL BUY 2 0.50 e 20-69 vs EFFETTI LATERALI !) - riga 1174"
+                    action = "buy"
+                    percentage = 40
+                    
+                
+                
+                # BUY 2 andamento laterale - se ma200 sale da 20 min compra con 4-30 ma sul BUY 2 lo 0.50 vs EFFETTI LATERALI !
+
+                elif (
+                    
+                    ma200_last > ma200_20_min_ago
+                    and ma20_last > ma200_last
+                    
+                    and (ma3_prev < ma100_prev and ma3_last > ma100_last)
+                    and (ma20_prev < ma69_prev and ma20_last > ma69_last)
+                    
+                    and ma2_last > ma2_2_min_ago
+                    and ma7_last > ma25_last
+                    and ma10_last > ma10_2_min_ago
+                    
+                    and deviation_ma4_sopra_ma30 > 0.17
+                    and deviation_ma100_laterale > 0.49
+                   
+                ):
+                    buy = "BUY 2 andamento laterale se ma200> da 20 min compra con 4-30 (SUL BUY 2 0.50 e 20-69 vs EFFETTI LATERALI !) - riga 1195"
                     action = "buy"
                     percentage = 40
                     
