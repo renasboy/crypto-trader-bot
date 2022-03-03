@@ -950,7 +950,6 @@ class maddog:
                     # deviation 4-25 forse, in futuro, da aumentare un pochino.
                     
                     
-                    
                 # BUY 1 DOCCIA 
                 
                 elif (    
@@ -966,11 +965,30 @@ class maddog:
                   
                 ):
 
-                    buy = "BUY 1 DOCCIA se ma200 > da 120 min ! COMPRA riga 755"
-
+                    buy = "BUY 1 DOCCIA se ma200 > da 120 min ! COMPRA riga 968"
                     action = "buy"
+                    percentage = 20   
+                    
+                
+                
+                
+                
+                # BUY 1 forever young se ma200 > ma300
+             
+                elif (  
+                    ma200_last > ma300_last
+                    and ma30_last > ma50_last
+                    and ma2_last > ma2_2_min_ago
+                 
+                ):
 
+                    buy = "BUY 1 forever young se ma200 > ma300 - riga 985"
+                    action = "buy"
                     percentage = 20
+
+                    
+
+                    
 
                 
                     
