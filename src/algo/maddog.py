@@ -1887,18 +1887,7 @@ class maddog:
                     
                     # guadagno durante il crollo o il trend discendente
                     
-                    elif (
-
-                        ma50_last < ma50_2_min_ago
-                        and (ma2_prev > ma5_prev and ma2_last < ma5_last)
-                        and deviation_sell > 0.81
-                        and ma2_last < ma2_2_min_ago
-
-                    ):
-
-                        sell = "SELL 1 CROLLO (0-3 min) con ma50 < and incrocio 3-8 and deviation_sell > 0.60 - riga 1320"
-
-                        action = "sell"
+                    
                         
                         
                     elif (
@@ -1911,18 +1900,21 @@ class maddog:
                         action = "sell"
                         
                         
-                        
                     elif (
+
                         ma50_last < ma50_2_min_ago
-                        and (ma3_prev > ma11_prev and ma3_last < ma11_last)
+                        and (ma2_prev > ma5_prev and ma2_last < ma5_last)
                         and deviation_sell > 0.81 and deviation_sell < 1.70
                         and ma2_last < ma2_2_min_ago
+
                     ):
-                        sell = "SELL 1 GUADAGNO CON CROLLO (3-5 min) con ma50 < and incrocio 3-11 and gain > 0.80-1.70 - riga 1845"
+
+                        sell = "SELL 1 CROLLO (3-5 min) con ma50 < and incrocio 2-5 and gain > 0.81-1.70 - riga 1845"
                         action = "sell"
-                        
-                        
-                        
+
+                    
+                    
+                    
                     elif (
                         ma50_last < ma50_2_min_ago
                         and (ma3_prev > ma9_prev and ma3_last < ma9_last)
