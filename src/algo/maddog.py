@@ -2382,12 +2382,12 @@ class maddog:
                     
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and ma5_last < ma25_last
+                        and ma5_last < ma30_last
                         and deviation_sell > 0.31
                         and deviation_sell < 0.56
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 (60-90 min) con ma50 > and 5-25 and deviation_sell 0.31-0.56 la prima FINTA ALLA MARADONA - riga 1777"
+                        sell = "SELL 1 (60-90 min) con ma50 > and 5-30 and deviation_sell 0.31-0.56 la prima FINTA ALLA MARADONA - riga 1777"
                         action = "sell"
                         
                         
@@ -3446,12 +3446,12 @@ class maddog:
                     
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and ma5_last < ma25_last
+                        and ma5_last < ma30_last
                         and deviation_sell > 0.25
                         and deviation_sell < 0.56
                        
                     ):
-                        sell = "SELL 2 (21-60 min) con ma50 > and 5<25 and deviation_sell 0.25 - 0.56 MARADONA - riga 2739"
+                        sell = "SELL 2 (21-60 min) con ma50 > and 5<30 and deviation_sell 0.25 - 0.56 MARADONA - riga 2739"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
@@ -4523,12 +4523,12 @@ class maddog:
                         
                     elif (
                         ma50_last >= ma50_2_min_ago
-                        and (ma5_prev > ma25_prev and ma5_last < ma25_last)
+                        and (ma5_prev > ma30_prev and ma5_last < ma30_last)
                         and deviation_sell > 0.25
                         and deviation_sell < 0.56
                    
                     ):
-                        sell = "SELL 3-4-x (21-60 min) con ma50 > and incrocio 5-25 and deviation_sell 0.25 - 0.56 FINTA DI MARADONA - riga 3739"
+                        sell = "SELL 3-4-x (21-60 min) con ma50 > and incrocio 5-30 and deviation_sell 0.25 - 0.56 FINTA DI MARADONA - riga 3739"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
