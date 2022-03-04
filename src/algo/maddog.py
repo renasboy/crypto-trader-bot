@@ -1246,7 +1246,7 @@ class maddog:
                     and ma10_last > ma10_2_min_ago
                     and ma2_last > ma2_2_min_ago
                     and deviation_assurda > -0.10
-                    and deviation_ma4_sopra_ma30 > 0.11
+                    and deviation_ma4_sopra_ma30 > 0.13
                     and deviation_ma100_laterale > 0.10
                     and (ma3_prev < ma200_prev and ma3_last > ma200_last) or (ma3_prev < ma100_prev and ma3_last > ma100_last)
                 ):
@@ -2332,7 +2332,7 @@ class maddog:
                         ma50_last > ma50_2_min_ago
                         and (ma3_prev > ma78_prev and ma3_last < ma78_last)
                         and deviation_sell < -0.65
-                        or (deviation_sell < -0.24 and ma5_last < ma50_last)
+                        or (deviation_sell < -0.25 and ma5_last < ma50_last)
                         and ma2_last < ma2_2_min_ago
                       
                     ):
@@ -4289,7 +4289,7 @@ class maddog:
                     elif (
                         ma50_last < ma50_2_min_ago
                         and ma3_last < ma16_last
-                        and deviation_sell < -0.50
+                        and deviation_sell < -0.48
                     ):
                         sell = "session 3-4-x PARACADUTE CROLLO (0-3 min) con ma50 < and ma3<ma16 (no incrocio) and deviation_sell < -0.50 - riga 3508"
                         action = "sell"
