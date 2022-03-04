@@ -822,7 +822,7 @@ class maddog:
                     
                 ):
 
-                    buy = "BUY 1A con ma200> DURANTE UNA piccola CORREZIONE che non e' un forte ribasso e non e' un crollo ! con deviation_correzione > 0.018 - riga 821"
+                    buy = "BUY 1A con ma200> DURANTE UNA piccola CORREZIONE che non e' un forte ribasso e non e' un crollo ! con deviation_correzione > 0.018 - riga 825"
                     action = "buy"
                     percentage = 10
 
@@ -847,7 +847,7 @@ class maddog:
                    
                 ):
 
-                    buy = "BUY 1 PAZZA ma300 > DURANTE UNA piccola CORREZIONE che non e' un forte ribasso e non e' un crollo ! con deviation_correzione > 0.018 - riga 821"
+                    buy = "BUY 1 PAZZA ma300 > DURANTE UNA piccola CORREZIONE che non e' un forte ribasso e non e' un crollo ! con deviation_correzione > 0.018 - riga 850"
                     action = "buy"
                     percentage = 10
 
@@ -866,19 +866,19 @@ class maddog:
                     ma2_last > ma2_2_min_ago
                     and ma200_last < ma200_120_min_ago
                     and ma300_last < ma300_120_min_ago
-                    and ma8_last > ma50_last
+                    and ma11_last > ma69_last
                     
                     and deviation_buy_crollo_1 < -0.29
                     and deviation_buy_crollo_1 > -0.59
                     
                 ):
 
-                    buy = "BUY 1 con ma200< e ma300< DURANTE UNA piccola CORREZIONE che non e' un forte ribasso e non e' un crollo ! - riga 821"
+                    buy = "BUY 1 con ma200< e ma300< DURANTE UNA piccola CORREZIONE che non e' un forte ribasso e non e' un crollo ! - riga 876"
                     action = "buy"
                     percentage = 10
 
                     # compare prega per me !
-                    # se ma200< e ma300< si torna alle origini ! 8-50 ! (con ma2 > ma2 2 min ago)
+                    # se ma200< e ma300< si torna alle origini ! 11-69 ! (con ma2 > ma2 2 min ago)
                    
 
                 
