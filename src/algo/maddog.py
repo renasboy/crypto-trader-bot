@@ -2761,7 +2761,7 @@ class maddog:
                         
                         
                         
-            ################################################################################################# SESSIONE 1 ( vendita con questi 5 altri modi )
+            ################################################################################################# SESSIONE 1 ( vendita con questi 7 altri modi )
            
                 # MA ATTENZIONE al conflitto durante il crollo - SELL SOVRAPPOSTO AL BUY
                 # NO 3<78 !
@@ -2862,7 +2862,7 @@ class maddog:
                     elif (
                         ma78_last > ma78_2_min_ago
                         and deviation_ribasso_improvviso < -0.63
-                        and ma2_last < ma2_2_min_ago
+                        
                 
                     ):
                         sell = "session 1 RIBASSO IMPROVVISO - riga 2168"
@@ -2875,7 +2875,7 @@ class maddog:
                     elif (
                         ma78_last < ma78_2_min_ago
                         and deviation_ribasso_improvviso < -0.63
-                        and ma2_last < ma2_2_min_ago
+                        
                 
                     ):
                         sell = "session 1 RIBASSO IMPROVVISO - riga 2180"
@@ -3825,7 +3825,7 @@ class maddog:
                         
                     #####################################################################################################################
 
-                    ################################################################################################ sessione 2  (vendita con questi 5 altri modi)
+                    ################################################################################################ sessione 2  (vendita con questi 7 altri modi)
                     ################################################################################################
                     ################################################################################################
                     
@@ -3922,7 +3922,7 @@ class maddog:
                     elif (
                         ma78_last > ma78_2_min_ago
                         and deviation_ribasso_improvviso < -0.63
-                        and ma2_last < ma2_2_min_ago
+                        
                 
                     ):
        
@@ -3936,7 +3936,7 @@ class maddog:
                     elif (
                         ma78_last < ma78_2_min_ago
                         and deviation_ribasso_improvviso < -0.63
-                        and ma2_last < ma2_2_min_ago
+                        
                 
                     ):
        
@@ -6091,7 +6091,7 @@ class maddog:
                         
                     
 
-                    ################################################################################################ sessione 3-4-x (vendita con questi 5 altri modi)
+                    ################################################################################################ sessione 3-4-x (vendita con questi 7 altri modi)
                     ################################################################################################
                     ################################################################################################
                     # MA ATTENZIONE al conflitto durante il crollo - SELL SOVRAPPOSTO AL BUY
@@ -6200,7 +6200,7 @@ class maddog:
                 elif (
                     ma78_last > ma78_2_min_ago
                     and deviation_ribasso_improvviso < -0.63
-                    and ma2_last < ma2_2_min_ago
+                    
                 ):
        
                     sell = "session 3-4-x RIBASSO IMPROVVISO - riga 4187"
@@ -6215,7 +6215,7 @@ class maddog:
                 elif (
                     ma78_last < ma78_2_min_ago
                     and deviation_ribasso_improvviso < -0.63
-                    and ma2_last < ma2_2_min_ago
+                    
                 ):
        
                     sell = "session 4-5-x RIBASSO IMPROVVISO - riga 4202"
