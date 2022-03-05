@@ -140,6 +140,12 @@ class maddog:
         deviation = (ma4_last / last_trade_price - 1) * 100 if last_trade_price else 0
         self.algo_helper.info("deviation: {}".format(deviation))
         
+        
+        # formula deviation trend ma200
+        
+        deviation_trend_ma200 = (ma200_last / ma200_120_min_ago - 1) * 100 if ma200_120_min_ago else 0
+        self.algo_helper.info("deviation_trend_ma200: {}".format(deviation_trend_ma200))
+        
         ######################################################################
         
         # ESPERIMENTO !
