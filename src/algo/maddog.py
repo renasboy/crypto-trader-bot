@@ -902,7 +902,7 @@ class maddog:
                     and deviation_buy_crollo_1 > -0.90
                   
                 ):
-                    buy = "BUY 1B DURANTE UNA grande CORREZIONE che NON E' un forte ribasso e NON E' un crollo ! con deviation_correzione > 0.02 - riga 675"
+                    buy = "BUY 1B1 DURANTE UNA grande CORREZIONE che NON E' un forte ribasso e NON E' un crollo ! con deviation_correzione > 0.02 - riga 675"
                     action = "buy"
                     percentage = 20
                     
@@ -911,6 +911,27 @@ class maddog:
                     
                     # compare prega per me !
                     
+                    
+                    
+                # BUY 1B con deviation trend ma200 DURANTE UNA grande CORREZIONE che NON E' una piccola correzione e NON E' un forte ribasso e NON E' un crollo ! !)
+                
+                elif (
+                    ma2_last > ma2_2_min_ago
+                    and deviation_trend_ma200 > -0.30
+                    and deviation_correzione_1 > 0.03
+                    
+                    and deviation_buy_crollo_1 < -0.60
+                    and deviation_buy_crollo_1 > -0.90
+                  
+                ):
+                    buy = "BUY 1B con deviation trend ma200 DURANTE UNA grande CORREZIONE che NON E' un forte ribasso e NON E' un crollo ! - riga 927"
+                    action = "buy"
+                    percentage = 20
+                    
+                    # deviation_buy_crollo_1 = ma8_last / ma78_last
+                    # deviation_correzione = ma5_last / ma30_last
+                    
+                    # compare prega per me !
                 
                 
                 
