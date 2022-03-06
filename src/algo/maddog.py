@@ -5166,6 +5166,44 @@ class maddog:
                         action = "sell"
                         
                         
+                        
+                        
+                    # maggiore perdita tollerata
+                    
+                    elif (
+                        deviation_trend_ma200 > -0.10
+                        and ma200_last > ma300_last
+                        and ma50_last < ma50_2_min_ago
+                        and deviation_ma39 < -0.20
+                        and ma2_last < ma2_2_min_ago
+                       
+                    ):
+                        sell = "session 3-4-x SELL da 60 a 90 min con ma50 < con deviation_ma39 <-0.20 and deviation_sell < 0.10 con > perdita tollerata - riga 3953"
+                        action = "sell"
+                        
+                        # and ma3_last < ma33_last
+                        # and deviation_sell < 0.10
+                        # se non ha forza dopo 1 ora e' inutile continuare a sperare !
+                        # qui non ho messo il crollo perche' dopo 40 min o gia' ha venduto o e' gia' risalita
+                        # cuscino dell' angelo custode
+                        
+                        
+                    
+
+                    elif (
+                        deviation_trend_ma200 > -0.10
+                        and ma200_last > ma300_last
+                        and ma50_last < ma50_2_min_ago
+                        and (ma3_prev > ma78_prev and ma3_last < ma78_last)
+                        and deviation_sell < 0.13
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "session 3-4-x SELL da 60 a 90 min con ma50 < con incrocio 3-78 and deviation_sell < 0.13 con > perdita tollerata - riga 3971"
+                        action = "sell"
+                        
+                        
+                       
+                        
 
                 ##################################################################################################################### sessione 3-4-x ( > 90 min )
 
@@ -5262,7 +5300,11 @@ class maddog:
                         action = "sell"
                         
                         
-
+                    
+                    
+                    
+                    
+                    
                     ######################################################################################## con trend discendente
 
                     elif (
@@ -5293,7 +5335,11 @@ class maddog:
                         
                         
                     
-
+                    
+                    
+                    
+                    
+                    
                     ################################################################################################ sessione 3 (vendita con questi 5 altri modi)
                     ################################################################################################
                     ################################################################################################
