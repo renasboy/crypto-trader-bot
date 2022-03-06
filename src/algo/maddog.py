@@ -2558,14 +2558,14 @@ class maddog:
                         
                         
                     ############################################################# con ma50 discendente MA deviation trend ma200 ET ma200>ma300 - PERDITA TOLLERATA AUMENTA
+                    # MA NON HO TOCCATO LA 2563 DEL MAESTRO !
                     
                     elif (
-                        deviation_trend_ma200 > -0.10
-                        and ma200_last > ma300_last
-                        and ma50_last < ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_ma39 < -0.28)
+                        
+                        ma50_last < ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_ma39 < -0.28)
                         or ma50_last < ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_sell < -0.29)
                     ):
-                        sell = "SELL 1 (21-60 min) con ma50 < and deviation_ma39 < -0.28 or deviation_sell < -0.29 - CON PERDITA TOLLERATA > - riga 2522"
+                        sell = "SELL 1 (21-60 min) con ma50 < and deviation_ma39 < -0.28 or deviation_sell < -0.29 - DA FARE - riga 2522"
                         action = "sell"
                         
                         # and deviation_ma39 < -0.15 or (deviation_sell < 0.10 and ma3_last < ma39_last)
@@ -2738,6 +2738,15 @@ class maddog:
                         sell = "SELL 1 da 60 a 90 min con ma50 > incrocio 3-11 and deviation_sell > 2.71 TACCO DI ALLAH - riga 1957"
                         action = "sell"
                         
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
 
                     ######################################################################################## con trend discendente
                     
@@ -2760,6 +2769,52 @@ class maddog:
                     ):
                         sell = "SELL 1 da 60 a 90 min con ma50 < con incrocio 3-78 and deviation_sell < -0.15 - riga 1977"
                         action = "sell"
+                        
+                        
+                        
+                        
+                    ############################################################### con ma50 discendente MA deviation trend ma200 ET ma200>ma300 - PERDITA TOLLERATA AUMENTA
+                    
+                    elif (
+                        deviation_trend_ma200 > -0.10
+                        and ma200_last > ma300_last
+                        and ma50_last < ma50_2_min_ago
+                        and deviation_ma39 < -0.19
+                        and ma2_last < ma2_2_min_ago
+                        and deviation_sell < -0.195
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 1 da 60 a 90 min con ma50 < con deviation_ma39 <-0.19 and deviation_sell < -0.195 - CON PERDITA TOLLERATA > - riga 2787"
+                        action = "sell"
+                        
+                   
+                    elif (
+                        deviation_trend_ma200 > -0.10
+                        and ma200_last > ma300_last
+                        and ma50_last < ma50_2_min_ago
+                        and (ma3_prev > ma78_prev and ma3_last < ma78_last)
+                        and deviation_sell < -0.15
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 1 da 60 a 90 min con ma50 < con incrocio 3-78 and deviation_sell < -0.15 - CON PERDITA TOLLERATA > - riga 2799"
+                        action = "sell"
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                         
                         
 
@@ -3668,7 +3723,12 @@ class maddog:
                         # and (ma3_prev > ma33_prev and ma3_last < ma33_last)
                         
                         
-
+                        
+                    
+                    
+                    
+                    
+                    
                     elif (
                         ma50_last < ma50_2_min_ago
                         and (ma3_prev > ma78_prev and ma3_last < ma78_last)
@@ -3693,7 +3753,25 @@ class maddog:
                         # NON INCROCERANNO MAI DURANTE IL CROLLO !
                         # non toccare ! INCROCIO 3-100 CUSCINO DI SANT' ANTONIO !
                         
-                        
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     # -------------------------------------------------------------------------------------- guadagno durante il crollo
 
                     elif (
