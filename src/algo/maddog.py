@@ -932,6 +932,30 @@ class maddog:
                     # deviation_correzione = ma5_last / ma30_last
                     
                     # compare prega per me !
+                    
+                    
+                    
+                # copia della riga 530 del RCCR ma piu' prudente ! - BUY DURANTE UN RIBASSO CHE NON E' UN CROLLO !
+                
+                elif (
+                    ma2_last > ma2_2_min_ago
+                    and deviation_buy_crollo_1 < -0.60
+                    and deviation_buy_crollo_1 > -1.50
+                    and deviation_bellissima > 0.02
+                    and deviation_correzione_1 > 0.03
+                    and ma13_last > ma50_last
+                ):
+                    buy = "copia della riga 530 del RCCR ma piu' prudente ! - BUY DURANTE UN RIBASSO CHE NON E' UN CROLLO ! - riga 948"
+                    action = "buy"
+                    percentage = 20
+                    
+                    # deviation_buy_crollo_1 = ma8_last / ma78_last
+                
+                
+                
+                
+                
+                
                 
                 
                 
@@ -1290,7 +1314,7 @@ class maddog:
                 elif (
                     deviation_buy2 > 0.10
                     and ma2_last > ma2_2_min_ago
-                    
+                    and deviation_ma4_sopra_ma30 > 0.05
                     and ma200_last < ma200_120_min_ago
                     and ma300_last < ma300_120_min_ago
                 ):
