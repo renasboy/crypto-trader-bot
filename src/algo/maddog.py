@@ -4968,6 +4968,66 @@ class maddog:
                         # non toccare ! INCROCIO 3-100 CUSCINO DI SANT' ANTONIO !
                         
                         
+                        
+                        
+                        
+                        
+                    # aumento perdita tollerata se....
+                    # non tocco 4978 del maestro
+                    
+                    elif (
+                      
+                        ma50_last < ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_ma39 < -0.23)
+                        or ma50_last < ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_sell < -0.22)
+                       
+                    ):
+                        sell = "session 3-4-x SELL (21-60 min) con ma50 < and deviation_ma39 < -0.225 or deviation_sell < 0.225 - riga 3810"
+                        action = "sell"
+                        
+                        # ma50_last < ma50_2_min_ago
+                        # and ma2_last < ma2_2_min_ago
+                        # and deviation_ma39 < -0.23
+                        # or deviation_sell < -0.22
+                        
+                        # and deviation_ma39 < -0.15 or (deviation_sell < 0.10 and ma3_last < ma39_last)
+                        # nella sessione 3-4-x ti puoi rilassare una ndecchia.
+                        # and (ma3_prev > ma33_prev and ma3_last < ma33_last)
+                        
+                        
+
+                    elif (
+                        deviation_trend_ma200 > -0.10
+                        and ma200_last > ma300_last
+                        and ma50_last < ma50_2_min_ago
+                        and (ma3_prev > ma78_prev and ma3_last < ma78_last)
+                        and deviation_sell < -0.39
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "session 3-4-x SELL (21-60 min) con ma50 < and incrocio 3-78 and deviation_sell < -0.39 con > perdita tollerata - riga 3825"
+                        action = "sell"
+                        
+                        
+
+                    elif (
+                        deviation_trend_ma200 > -0.10
+                        and ma200_last > ma300_last
+                        and ma50_last < ma50_2_min_ago
+                        and (ma5_prev > ma100_prev and ma5_last < ma100_last)
+                        and deviation_sell < -0.30
+                        and ma2_last < ma2_2_min_ago
+                       
+                    ):
+                        sell = "session 3-4-x SELL (21-60 min) con ma50 < and INCROCIO 3-100 (no 3<100) CUSCINO DI SANT' ANTONIO - con > perdita tollerata - riga 3837"
+                        action = "sell"
+                        
+                        # viva sant' antonio !
+                        # NON INCROCERANNO MAI DURANTE IL CROLLO !
+                        # non toccare ! INCROCIO 3-100 CUSCINO DI SANT' ANTONIO !
+                    
+                    
+                    
+                    
+                    
                     # -------------------------------------------------------------------------------------- guadagno durante il crollo
 
                     elif (
