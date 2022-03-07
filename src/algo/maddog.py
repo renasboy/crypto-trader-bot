@@ -1029,6 +1029,7 @@ class maddog:
                 elif (  
                     ma200_last > ma300_last
                     and ma30_last > ma50_last
+                    and ma3_last > ma11_last
                     and ma2_last > ma2_2_min_ago
                  
                 ):
@@ -1341,7 +1342,7 @@ class maddog:
                     and ma3_last > ma13_last
                     and deviation_ma7_sopra_ma40 > 0.09
                     and ma4_last > ma9_last
-                    and deviation_ma4_sopra_ma30 > 0.10
+                    and deviation_ma4_sopra_ma30 > 0.12
                     and deviation_buy_ma2_sopra_ma13 > 0.10
                     and ma4_last > ma50_last
                     and ma2_last > ma2_2_min_ago
@@ -2179,10 +2180,10 @@ class maddog:
                     elif (
                         ma50_last < ma50_2_min_ago
                         and ma3_last < ma16_last
-                        and deviation_sell < -0.45
+                        and deviation_sell < -0.40
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 PARACADUTE CROLLO (0-3 min) con ma50 < and ma3<ma16 (no incrocio) and deviation_sell < -0.45 - riga 1542"
+                        sell = "SELL 1 PARACADUTE CROLLO (5-12 min) con ma50 < and ma3 < ma16 (no incrocio) and deviation_sell < -0.40 - riga 1542"
                         action = "sell"
 
                         # AGGIUNTA PER SICUREZZA SE CONTINUA A PRECIPITARE
@@ -4750,10 +4751,10 @@ class maddog:
                     if (
                         ma50_last >= ma50_2_min_ago
                         and (ma3_prev > ma72_prev and ma3_last < ma72_last)
-                        and deviation_sell < -0.65
+                        and deviation_sell < -0.35
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "session 3-4-x SELL (12-21 min) con ma50 > and incrocio 3-72 and deviation sell -0.65 e vaffanculo ! - riga 3529"
+                        sell = "session 3-4-x SELL (12-21 min) con ma50 > and incrocio 3-72 and deviation sell -0.35 e vaffanculo ! - riga 3529"
                         action = "sell"
                         
                         # and deviation_ma39 < -0.29 vendeva troppo presto
