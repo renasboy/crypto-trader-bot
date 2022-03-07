@@ -1406,8 +1406,8 @@ class maddog:
                     and ma20_last > ma200_last
                     
                     and (ma4_prev < ma25_prev and ma4_last > ma25_last)
+                    and ma25_last > ma25_2_min_ago
                     and ma2_last > ma2_2_min_ago
-                
                 ):
                     buy = "BUY 3 CON IL TURBO - riga 1412"
                     action = "buy"
