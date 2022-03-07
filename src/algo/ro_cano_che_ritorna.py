@@ -748,7 +748,7 @@ class ro_cano_che_ritorna:
                 
                 elif (
                     
-                    and deviation_buy_crollo_1 < -0.60
+                    deviation_buy_crollo_1 < -0.60
                     and deviation_buy_crollo_1 > -1.50
                     and deviation_bellissima > 0.17
                     and ma2_last > ma2_2_min_ago
