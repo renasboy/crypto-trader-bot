@@ -3689,7 +3689,7 @@ class ro_cano_che_ritorna:
 
             # 2 - ro cano VENDE DURANTE UN CROLLO IMPROVVISO !
             
-            elif deviation < -0.62:
+            elif deviation < -0.62 and ma2_last < ma2_2_min_ago:
                 sell = "session 3-4-x SELL CROLLO IMPROVVISO - riga 2847"
                 action = "sell"
 
