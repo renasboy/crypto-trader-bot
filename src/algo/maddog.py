@@ -822,13 +822,13 @@ class maddog:
                     and ma200_last > ma200_120_min_ago
                     and deviation_buy_crollo_1 < -0.29
                     and deviation_buy_crollo_1 > -0.59
-                    and deviation_correzione > 0.018
-                    and deviation_buy_ma5_sopra_ma20 > 0.14
+                    and deviation_correzione > 0.017
+                    and deviation_buy_ma5_sopra_ma20 > 0.12
                     
                     
                 ):
 
-                    buy = "BUY 1A con ma200> DURANTE UNA piccola CORREZIONE che non e' un forte ribasso e non e' un crollo ! con deviation_correzione > 0.018 - riga 825"
+                    buy = "BUY 1A con ma200> DURANTE UNA piccola CORREZIONE che non e' un forte ribasso e non e' un crollo - riga 825"
                     action = "buy"
                     percentage = 10
 
