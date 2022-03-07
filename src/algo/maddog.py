@@ -2759,14 +2759,6 @@ class maddog:
                         action = "sell"
                         
                         
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
 
                     ######################################################################################## con trend discendente
                     
@@ -2984,7 +2976,7 @@ class maddog:
             
                     # 1 - ro cano VENDE CON UN SALVAGENTE
                 
-                    elif deviation_ma39 < -0.25 and ma50_last > ma50_2_min_ago:
+                    elif deviation_ma39 < -0.25 and deviation < -0.36 and ma50_last > ma50_2_min_ago:
 
                         sell = "SELL 1 SALVAGENTE 3-39 con ma50 < riga 2085"
                         action = "sell"
@@ -3483,10 +3475,10 @@ class maddog:
                     if (
                         ma50_last >= ma50_2_min_ago
                         and (ma3_prev > ma72_prev and ma3_last < ma72_last)
-                        and deviation_sell < -0.65
+                        and deviation_sell < -0.35
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 2 (12-21 min) con ma50 > and incrocio 3-72 and deviation sell -0.65 e vaffanculo ! - riga 2555"
+                        sell = "SELL 2 (12-21 min) con ma50 > and incrocio 3-72 and deviation sell -0.35 e vaffanculo ! - riga 2555"
                         action = "sell"
                         
                         # and deviation_ma39 < -0.29 vendeva troppo presto
@@ -3717,7 +3709,7 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                    
                     ):
-                        sell = "SELL2 (21-60 min) con ma50 > and incrocio 3-16 and deviation_sell 0.91 - 1.20 - riga 2767"
+                        sell = "SELL 2 (21-60 min) con ma50 > and incrocio 3-16 and deviation_sell 0.91 - 1.20 - riga 2767"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
@@ -3730,7 +3722,7 @@ class maddog:
                         and deviation_sell > 1.21 and deviation_sell < 2.70
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "sessione 2 SELL (21-60 min) con ma50 > and incrocio 3-30 (!) SI PROPRIO COSI' ! 3-30 ! and deviation_sell 1.21 - 2.70 - riga 2780"
+                        sell = "SELL 2 (21-60 min) con ma50 > and incrocio 3-30 (!) SI PROPRIO COSI' ! 3-30 ! and deviation_sell 1.21 - 2.70 - riga 2780"
                         action = "sell"
                         
                         
@@ -4197,7 +4189,7 @@ class maddog:
 
                     # 1 - ro cano VENDE CON UN SALVAGENTE
             
-                    if deviation_ma39 < -0.25 and ma50_last > ma50_2_min_ago:
+                    if deviation_ma39 < -0.25 and deviation < -0.36 and ma50_last > ma50_2_min_ago:
 
                         sell = "sessione 2 SELL SALVAGENTE 3-39 con ma50 < riga 3052"
                         action = "sell"
@@ -5538,7 +5530,7 @@ class maddog:
 
                     # 1 - ro cano VENDE CON UN SALVAGENTE
             
-                    if deviation_ma39 < -0.24 and ma50_last > ma50_2_min_ago:
+                    if deviation_ma39 < -0.24 and deviation < -0.36 and ma50_last > ma50_2_min_ago:
 
                         sell = "session 3-4-x SELL SALVAGENTE 3-39 con ma50 < riga 4094"
                         action = "sell"
@@ -6061,7 +6053,7 @@ class maddog:
                     if (
                         ma50_last >= ma50_2_min_ago
                         and (ma3_prev > ma72_prev and ma3_last < ma72_last)
-                        and deviation_sell < -0.65
+                        and deviation_sell < -0.35
                         and ma2_last < ma2_2_min_ago
                     ):
                         sell = "session 3-4-x SELL (12-21 min) con ma50 > and incrocio 3-72 and deviation sell -0.65 e vaffanculo ! - riga 3529"
@@ -6674,7 +6666,7 @@ class maddog:
 
                 # 1 - ro cano VENDE CON UN SALVAGENTE
             
-                if deviation_ma39 < -0.24 and ma50_last > ma50_2_min_ago:
+                if deviation_ma39 < -0.24 and deviation < -0.36 and ma50_last > ma50_2_min_ago:
 
                     sell = "session 3-4-x SELL SALVAGENTE 3-39 con ma50 < riga 4094"
                     action = "sell"
