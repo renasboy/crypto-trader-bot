@@ -1395,10 +1395,29 @@ class maddog:
                     # deviation_buy3 = ma4_last/ma30_last
                     
                     
+                
+                
+                
+                # BUY 3 CON IL TURBO ! (compare stammi vicino!)
+               
+                elif (    
+                    ma200_last > ma200_120_min_ago
+                    and ma200_last > ma300_last
+                    and ma20_last > ma200_last
                     
-                # BUY 3A PAZZA DURANTE UNA piccola CORREZIONE che NON E' un forte ribasso e NON E' un crollo ! (compare stammi vicino!)
+                    and (ma4_prev < ma25_prev and ma4_last > ma25_last)
+                    and ma2_last > ma2_2_min_ago
                 
-                
+                ):
+                    buy = "BUY 3 CON IL TURBO - riga 1412"
+                    action = "buy"
+                    percentage = 50
+
+                    
+                    
+                    
+                    
+                    
                 elif (
 
                     ma2_last > ma2_2_min_ago
