@@ -604,8 +604,9 @@ class ro_cano_che_ritorna:
                     ma200_last > ma200_20_min_ago
                     and ma2_last > ma2_2_min_ago
                     and deviation_assurda > -0.10
+                    and deviation_buy_ma3_sopra_ma13 > 0.09
                 ):
-                    buy = "BUY DEVIATION ASSURDA 1 considera ma200 > - riga 497"
+                    buy = "BUY DEVIATION ASSURDA 1 considera ma200 > - riga 609"
                     action = "buy"
                     percentage = 20
                     
@@ -618,11 +619,12 @@ class ro_cano_che_ritorna:
 
                 elif (    
                     deviation_ma20_sopra_ma100 > 0.10
+                    and deviation_buy_ma3_sopra_ma13 > 0.09
                     and ma5_last > ma5_2_min_ago
                     and ma2_last > ma2_2_min_ago
                     
                 ):
-                    buy = "BUY DEVIATION ASSURDA 2 considera ma100 < - riga 497"
+                    buy = "BUY DEVIATION ASSURDA 2 considera ma100 < - riga 627"
                     action = "buy"
                     percentage = 20
                     
@@ -1672,12 +1674,12 @@ class ro_cano_che_ritorna:
                     elif (
                         ma50_last < ma50_2_min_ago
                         and deviation_ma39 < -0.18
-                        or (deviation_sell < 0.10 and ma3_last < ma39_last)
+                        or (deviation_sell < -0.10 and ma3_last < ma39_last)
                         # and ma3_last < ma33_last
                         # and deviation_ma39 < -0.18
                         # and deviation_sell < 0.10
                     ):
-                        sell = "sessione 1 SELL dopo 90 min con ma50 < con deviation_ma39 <-0.18 or (deviation_sell < 0.10 and ma3_last < ma39_last) - riga 1405"
+                        sell = "sessione 1 SELL dopo 90 min con ma50 < con deviation_ma39 <-0.18 or (deviation_sell < -0.10 and ma3_last < ma39_last) - riga 1405"
                         action = "sell"
                         # se non ha forza dopo 1 ora e' inutile continuare a sperare !
                         # dopo 90 min se il prezzo non ha forza puoi anche prendere qualcosa (solo > 90 min
@@ -2345,7 +2347,7 @@ class ro_cano_che_ritorna:
                     if (
                         ma50_last > ma50_2_min_ago
                         and deviation_ma39 < -0.18
-                        or (deviation_sell < 0.10 and ma3_last < ma50_last)
+                        or (deviation_sell < -0.10 and ma3_last < ma50_last)
                         # and ma3_last < ma39_last
                         # and deviation_ma39 < -0.18
                         # and deviation_sell < -0.10
