@@ -3757,7 +3757,7 @@ class ro_cano_che_ritorna:
             elif (
                 ma3_last < ma28_last and ma2_last < ma2_2_min_ago
                 and ma200_last < ma200_60_min_ago
-                and deviation < -0.15 or deviation > 0.01
+                and deviation < -0.15 or deviation > 0.17
             ):
 
                 sell = "session 3-4-x SELL 3-28 FOREVER con ma200 < - riga 3762"
