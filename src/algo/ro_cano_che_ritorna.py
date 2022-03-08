@@ -2301,12 +2301,12 @@ class ro_cano_che_ritorna:
 
                     elif (
                         ma50_last >= ma50_2_min_ago
-                        and ma3_last < ma15_last
+                        and ma3_last < ma20_last
                         and deviation_sell > 0.25
                         and deviation_sell < 0.90
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "sessione 2 SELL (12-21 min) con ma50 > and 3<15 and deviation_sell 0.25-0.90 - DOPPIO PASSO ALLA RONALDO fino a +0.50 - riga 1804"
+                        sell = "sessione 2 SELL (12-21 min) con ma50 > and 3 < 20 and deviation_sell 0.25 - 0.90 - DOPPIO PASSO ALLA RONALDO fino a +0.50 - riga 1804"
                         action = "sell"
                         
                         
@@ -3715,6 +3715,45 @@ class ro_cano_che_ritorna:
                 # il fattore tempo - la dolce attesa - solo con trend ribassista
                 # deviation = ma2_last / last_trade_price
                 # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
+                
+            
+            
+            
+            
+            
+            ################################################################################################## la piu' bella esperimento.
+            
+            
+            # 3-28 FOREVER con ma200 >
+            
+            elif (
+                ma3_last < ma28_last and ma2_last < ma2_2_min_ago
+                and ma200_last > ma200_60_min_ago
+                and deviation < -0.25 or deviation > 0.20
+            ):
+
+                sell = "session 3-4-x SELL 3-28 FOREVER con ma200 > - riga 3735"
+                action = "sell"
+                
+            
+            
+            
+            # 3-28 FOREVER con ma200 >
+            
+            elif (
+                ma3_last < ma28_last and ma2_last < ma2_2_min_ago
+                and ma200_last < ma200_60_min_ago
+                and deviation < -0.15 or deviation > 0.01
+            ):
+
+                sell = "session 3-4-x SELL 3-28 FOREVER con ma200 < - riga 3749"
+                action = "sell"
+                
+                
+                
+            ##################################################################################################
+
+                
                 
                 
                 
