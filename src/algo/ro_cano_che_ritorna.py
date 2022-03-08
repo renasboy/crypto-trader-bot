@@ -75,6 +75,7 @@ class ro_cano_che_ritorna:
         ma78_7_min_ago = self.algo_helper.ma_minutes_ago(78, 7)
         ma78_40_min_ago = self.algo_helper.ma_minutes_ago(78, 40)
         ma200_20_min_ago = self.algo_helper.ma_minutes_ago(200, 20)
+        ma200_60_min_ago = self.algo_helper.ma_minutes_ago(200, 60)
         
         # LAST TRADE
         last_trade_action = self.algo_helper.last_trade_action
