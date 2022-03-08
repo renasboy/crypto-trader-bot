@@ -3721,10 +3721,23 @@ class ro_cano_che_ritorna:
             
             
             
+            ################################################################################################## POCHI MALEDETTI E SUBITO
+            
+            elif (
+                ma3_last < ma9_last and ma2_last < ma2_2_min_ago
+                and ma200_last < ma200_60_min_ago
+                and deviation > 0.80
+            ):
+
+                sell = "session 3-4-x SELL POCHI MALEDETTI E SUBITO solo quando ma200 < - riga 3732"
+                action = "sell"
+                
+                
+                
             ################################################################################################## la piu' bella esperimento.
             
             
-            # 3-28 FOREVER con ma200 >
+            # 3-28 FOREVER con ma200 > 
             
             elif (
                 ma3_last < ma28_last and ma2_last < ma2_2_min_ago
@@ -3732,7 +3745,7 @@ class ro_cano_che_ritorna:
                 and deviation < -0.25 or deviation > 0.10
             ):
 
-                sell = "session 3-4-x SELL 3-28 FOREVER con ma200 > - riga 3735"
+                sell = "session 3-4-x SELL 3-28 FOREVER con ma200 > - riga 3748"
                 action = "sell"
                 
             
@@ -3746,7 +3759,7 @@ class ro_cano_che_ritorna:
                 and deviation < -0.15 or deviation > 0.01
             ):
 
-                sell = "session 3-4-x SELL 3-28 FOREVER con ma200 < - riga 3749"
+                sell = "session 3-4-x SELL 3-28 FOREVER con ma200 < - riga 3762"
                 action = "sell"
                 
                 
