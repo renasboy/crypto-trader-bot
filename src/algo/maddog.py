@@ -5084,8 +5084,7 @@ class maddog:
                 ):
                     
                     
-                    ################################################################################################ RIGHE DEL COPA DA RADDOPPIARE
-                    
+                    ################################################################################################ RIGHE DEL COMPA DA RADDOPPIARE
                     
                     if (    
                         ma50_last > ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_ma25 < -0.25)
@@ -5095,13 +5094,29 @@ class maddog:
                         
                     
                     
-                    
-                   
-                    
                     elif (      
                         ma50_last > ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_sell < -0.25 and ma3_last < ma50_last)
                     ):
                         sell = "session 3-4-x SELL (21-60 min) con ma50 > and (deviation_sell < -0.25 and ma3_last < ma50_last) - riga 5039"
+                        action = "sell"
+                        
+                        
+                        
+                        
+                    elif (    
+                        ma50_last > ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_ma25 < -0.28)
+                        and ma200_last > ma200_60_min_ago
+                    ):
+                        sell = "session 3-4-x SELL (21-60 min) con ma50 > and deviation_ma25 < -0.28 - riga 5027"
+                        action = "sell"
+                        
+                    
+                    
+                    elif (      
+                        ma50_last > ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_sell < -0.27 and ma3_last < ma50_last)
+                        and ma200_last > ma200_60_min_ago
+                    ):
+                        sell = "session 3-4-x SELL (21-60 min) con ma50 > and (deviation_sell < -0.27 and ma3_last < ma50_last) - riga 5039"
                         action = "sell"
                         
                         
@@ -5267,9 +5282,7 @@ class maddog:
                         action = "sell"
                         
                         
-                        
-                        
-                        
+                     
                     
                     elif ( 
                         ma50_last < ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_sell < -0.24)
@@ -5337,7 +5350,8 @@ class maddog:
                 ):
                     
                     
-                    ################################################################################################### RIGHE DEL COMPA DA RADDOPPIARE PER AUMENTARE LA TOLLERANZA
+                    ########################################################################################## RIGHE DEL COMPA DA RADDOPPIARE PER AUMENTARE LA TOLLERANZA
+                    
                     
                     if (    
                         ma50_last > ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_ma25 < -0.21)
@@ -5351,6 +5365,26 @@ class maddog:
                     elif (    
                         ma50_last > ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_sell < -0.20 and ma3_last < ma50_last)
                         
+                    ):
+                        sell = "session 3-4-x SELL da 60 a 90 min con ma50 > and (deviation_sell < -0.19 and ma3_last < ma50_last) - riga 5287"
+                        action = "sell"
+                        
+                        
+                        
+                        
+                    elif (    
+                        ma50_last > ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_ma25 < -0.21)
+                        and ma200_last > ma200_60_min_ago
+                    ):
+                        sell = "session 3-4-x SELL da 60 a 90 min con ma50 > and deviation_ma25 < -0.19 - riga 5276"
+                        action = "sell"
+                        
+                        
+                        
+                    
+                    elif (    
+                        ma50_last > ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_sell < -0.20 and ma3_last < ma50_last)
+                        and ma200_last > ma200_60_min_ago
                     ):
                         sell = "session 3-4-x SELL da 60 a 90 min con ma50 > and (deviation_sell < -0.19 and ma3_last < ma50_last) - riga 5287"
                         action = "sell"
@@ -5430,7 +5464,7 @@ class maddog:
                         
                         
 
-                    ######################################################################################## con trend discendente
+                    ################################################################################################################## con trend discendente
                     
                     elif (
                         ma50_last < ma50_2_min_ago
@@ -5507,6 +5541,7 @@ class maddog:
                     
                     ############################################################################################ RIGHE DEL COMPA DA RADDOPPIARE PER AUMENTARE TOLLERANZA
                     
+                    
                     if (    
                         ma50_last > ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_ma25 < -0.21)
                     ):
@@ -5520,6 +5555,26 @@ class maddog:
                         ma50_last > ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_sell < -0.20 and ma3_last < ma50_last)
                     ):
                         sell = "session 3-4-x SELL dopo 90 min con ma50> and (deviation_sell < 0.10 and ma3_last < ma50_last)- riga 3988"
+                        action = "sell"
+                        
+                        
+                        
+                        
+                    elif (    
+                        ma50_last > ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_ma25 < -0.23)
+                        and ma200_last > ma200_60_min_ago
+                    ):
+                        sell = "session 3-4-x SELL dopo 90 min con ma50> and deviation_ma25 < -0.23 - riga 3988"
+                        action = "sell"
+                        
+                    
+                  
+                    
+                    elif (     
+                        ma50_last > ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_sell < -0.23 and ma3_last < ma50_last)
+                        and ma200_last > ma200_60_min_ago
+                    ):
+                        sell = "session 3-4-x SELL dopo 90 min con ma50> and (deviation_sell < -0.23 and ma3_last < ma50_last) - riga 5576"
                         action = "sell"
                         
                        
