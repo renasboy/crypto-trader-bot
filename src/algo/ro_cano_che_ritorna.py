@@ -3779,6 +3779,7 @@ class ro_cano_che_ritorna:
                 
             ################################################################################################## la piu' bella esperimento.
             
+            """
             
             # 3-28 FOREVER con ma200 > 
             # 3-28 FOREVER con ma200 > 
@@ -3831,6 +3832,9 @@ class ro_cano_che_ritorna:
 
                 sell = "session 3-4-x SELL 3-28 FOREVER con ma200 < - riga 3832"
                 action = "sell"
+                
+                
+                """
                 
                 
                 
