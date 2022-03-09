@@ -1467,8 +1467,8 @@ class maddog:
                 elif (
                     ma78_last >= ma78_2_min_ago
                     and deviation_buy3 > 0.02
-                    and delta_buy3_incrocio_ma3_ma8 > 0.06
-                    and deviation_ma4_sopra_ma30 > 0.145
+                    and delta_buy3_incrocio_ma3_ma8 > 0.05
+                    and deviation_ma4_sopra_ma30 > 0.14
                     and ma3_last > ma8_last
                     and ma3_last > ma78_last
                     and ma4_last >= ma4_2_min_ago
