@@ -3716,89 +3716,6 @@ class ro_cano_che_ritorna:
                 # il fattore tempo - la dolce attesa - solo con trend ribassista
                 # deviation = ma2_last / last_trade_price
                 # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
-                
-            
-            
-            
-            
-            
-            ################################################################################################## POCHI MALEDETTI E SUBITO
-            
-            elif (
-                ma3_last < ma9_last and ma2_last < ma2_2_min_ago
-                and ma200_last < ma200_60_min_ago
-                and deviation > 0.80
-            ):
-
-                sell = "session 3-4-x SELL POCHI MALEDETTI E SUBITO solo quando ma200 < - riga 3732"
-                action = "sell"
-                
-                
-                
-            ################################################################################################## la piu' bella esperimento.
-            
-            
-            # 3-28 FOREVER con ma200 > 
-            # 3-28 FOREVER con ma200 > 
-            
-            elif (
-                ma3_last < ma28_last and ma3_last < ma3_2_min_ago
-                and ma200_last > ma200_60_min_ago
-                and deviation < -0.25
-            ):
-
-                sell = "session 3-4-x SELL 3-28 FOREVER con ma200 > - riga 3750"
-                action = "sell"
-                
-                
-                
-            elif (
-                ma3_last < ma28_last and ma3_last < ma3_2_min_ago
-                and ma200_last > ma200_60_min_ago
-                
-            ):
-
-                sell = "session 3-4-x SELL 3-28 FOREVER con ma200 > - riga 3761"
-                action = "sell"
-                
-            
-            
-            
-            
-            
-            # 3-28 FOREVER con ma200 >
-            
-            elif (
-                ma3_last < ma28_last and ma3_last < ma3_2_min_ago
-                and ma200_last < ma200_60_min_ago
-                and deviation < -0.15
-            ):
-
-                sell = "session 3-4-x SELL 3-28 FOREVER con ma200 < - riga 3776"
-                action = "sell"
-                
-                
-                
-            # 3-28 FOREVER con ma200 >
-            
-            elif (
-                ma3_last < ma28_last and ma3_last < ma3_2_min_ago
-                and ma200_last < ma200_60_min_ago
-                
-            ):
-
-                sell = "session 3-4-x SELL 3-28 FOREVER con ma200 < - riga 3788"
-                action = "sell"
-                
-                
-                
-            ##################################################################################################
-
-                
-                
-                
-                
-
             # 4 - ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma25 <
            
             elif (
@@ -3831,6 +3748,100 @@ class ro_cano_che_ritorna:
                 action = "sell"
                 # ma13 troppo lenta !
                 # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
+            
+            
+            
+            
+            
+            ################################################################################################## POCHI MALEDETTI E SUBITO dedicata al compa !
+            
+            
+            elif (
+                ma3_last < ma9_last and ma2_last < ma2_2_min_ago
+                and ma200_last > ma200_60_min_ago
+                and deviation > 0.78
+            ):
+
+                sell = "session 3-4-x SELL POCHI MALEDETTI E SUBITO solo quando ma200 > - riga 3765"
+                action = "sell"
+                
+                
+            elif (
+                ma3_last < ma9_last and ma2_last < ma2_2_min_ago
+                and ma200_last < ma200_60_min_ago
+                and deviation > 0.60
+            ):
+
+                sell = "session 3-4-x SELL POCHI MALEDETTI E SUBITO solo quando ma200 < - riga 3775"
+                action = "sell"
+                
+                
+                
+            ################################################################################################## la piu' bella esperimento.
+            
+            
+            # 3-28 FOREVER con ma200 > 
+            # 3-28 FOREVER con ma200 > 
+            
+            elif (
+                ma3_last < ma28_last and ma3_last < ma3_2_min_ago
+                and ma200_last > ma200_60_min_ago
+                and deviation < -0.25
+            ):
+
+                sell = "session 3-4-x SELL 3-28 FOREVER con ma200 > - riga 3792"
+                action = "sell"
+                
+                
+                
+            elif (
+                ma3_last < ma28_last and ma3_last < ma3_2_min_ago
+                and ma200_last > ma200_60_min_ago
+                
+            ):
+
+                sell = "session 3-4-x SELL 3-28 FOREVER con ma200 > - riga 3803"
+                action = "sell"
+                
+            
+            
+            
+            
+            
+            # 3-28 FOREVER con ma200 >
+            
+            elif (
+                ma3_last < ma28_last and ma3_last < ma3_2_min_ago
+                and ma200_last < ma200_60_min_ago
+                and deviation < -0.15
+            ):
+
+                sell = "session 3-4-x SELL 3-28 FOREVER con ma200 < - riga 3819"
+                action = "sell"
+                
+                
+                
+            # 3-28 FOREVER con ma200 >
+            
+            elif (
+                ma3_last < ma28_last and ma3_last < ma3_2_min_ago
+                and ma200_last < ma200_60_min_ago
+                
+            ):
+
+                sell = "session 3-4-x SELL 3-28 FOREVER con ma200 < - riga 3832"
+                action = "sell"
+                
+                
+                
+            ##################################################################################################
+
+                
+                
+                
+                
+
+            
 
         self.algo_helper.info("action {}".format(action))
         self.algo_helper.info("percentage {}".format(percentage))
