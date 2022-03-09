@@ -442,7 +442,7 @@ class ro_cano_che_ritorna:
                     ma20_last > ma200_last
                     
                     or ma200_last > ma200_20_min_ago
-                    and deviation_rialzo_improvviso_1 > 0.40
+                    and deviation_rialzo_improvviso_1 > 1.20
                     and deviation_rialzo_improvviso_2 > 0.20
                     and deviation_rialzo_improvviso_3 > 0.20
                     and deviation_rialzo_improvviso_4 > 0.20
@@ -475,7 +475,7 @@ class ro_cano_che_ritorna:
                     
                     ma200_last < ma200_20_min_ago
                     
-                    and deviation_rialzo_improvviso_1 > 0.58
+                    and deviation_rialzo_improvviso_1 > 1.30
                     and deviation_rialzo_improvviso_2 > 0.20
                     and deviation_rialzo_improvviso_3 > 0.20
                     and deviation_rialzo_improvviso_4 > 0.20
@@ -3739,28 +3739,55 @@ class ro_cano_che_ritorna:
             
             
             # 3-28 FOREVER con ma200 > 
+            # 3-28 FOREVER con ma200 > 
             
             elif (
-                ma3_last < ma28_last and ma2_last < ma2_2_min_ago
+                ma3_last < ma28_last and ma3_last < ma3_2_min_ago
                 and ma200_last > ma200_60_min_ago
-                and deviation < -0.25 or deviation > 0.10
+                and deviation < -0.25
             ):
 
-                sell = "session 3-4-x SELL 3-28 FOREVER con ma200 > - riga 3748"
+                sell = "session 3-4-x SELL 3-28 FOREVER con ma200 > - riga 3750"
                 action = "sell"
                 
+                
+                
+            elif (
+                ma3_last < ma28_last and ma3_last < ma3_2_min_ago
+                and ma200_last > ma200_60_min_ago
+                
+            ):
+
+                sell = "session 3-4-x SELL 3-28 FOREVER con ma200 > - riga 3761"
+                action = "sell"
+                
+            
+            
             
             
             
             # 3-28 FOREVER con ma200 >
             
             elif (
-                ma3_last < ma28_last and ma2_last < ma2_2_min_ago
+                ma3_last < ma28_last and ma3_last < ma3_2_min_ago
                 and ma200_last < ma200_60_min_ago
-                and deviation < -0.15 or deviation > 0.17
+                and deviation < -0.15
             ):
 
-                sell = "session 3-4-x SELL 3-28 FOREVER con ma200 < - riga 3762"
+                sell = "session 3-4-x SELL 3-28 FOREVER con ma200 < - riga 3776"
+                action = "sell"
+                
+                
+                
+            # 3-28 FOREVER con ma200 >
+            
+            elif (
+                ma3_last < ma28_last and ma3_last < ma3_2_min_ago
+                and ma200_last < ma200_60_min_ago
+                
+            ):
+
+                sell = "session 3-4-x SELL 3-28 FOREVER con ma200 < - riga 3788"
                 action = "sell"
                 
                 
