@@ -2404,6 +2404,7 @@ class maddog:
                 
                 
                 
+                
                 ################################################################################################################################## SESSIONE 1 ( 21-60 min )
 
                 # VENDITA - da 21 a 60 minuti = da 1261 a 3600 secondi
@@ -2415,11 +2416,10 @@ class maddog:
                         ma50_last > ma50_2_min_ago
                         and (ma3_prev > ma78_prev and ma3_last < ma78_last)
                         and deviation_sell < -0.65
-                        or (deviation_sell < -0.25 and ma5_last < ma50_last)
                         and ma2_last < ma2_2_min_ago
-                      
+                    
                     ):
-                        sell = "SELL 1 (21-60 min) con ma50> and incrocio 3-78 and deviation_sell<-0.65 or (deviation_sell <-0.24 and ma5_last<ma50_last) - riga 2422"
+                        sell = "SELL 1 (21-60 min) con ma50> and incrocio 3-78 and deviation_sell<-0.65 - riga 2422"
                         action = "sell"
                         
                         # VENDITA IN BASSO 
@@ -2429,16 +2429,16 @@ class maddog:
                         # deviation_sell = ma3_last/last_trade_price
                         
                         
-                        
+                    
+                    
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and (ma3_prev > ma78_prev and ma3_last < ma78_last)
-                        and deviation_sell < -0.65
-                        or (deviation_sell < -0.28 and ma3_last < ma50_last)
+                        and deviation_sell < -0.28
+                        and ma3_last < ma50_last
                         and ma2_last < ma2_2_min_ago
                     
                     ):
-                        sell = "SELL 1 (21-60 min) con ma50> and incrocio 3-78 and deviation_sell<-0.65 or (deviation_sell <-0.28 and ma3_last<ma50_last) - riga 2441"
+                        sell = "SELL 1 (21-60 min) con ma50> and deviation_sell <-0.28 and ma3_last < ma50_last - riga 2441"
                         action = "sell"
                         
                         # VENDITA 1 IN ALTO dopo BUY IN RISALITA
@@ -2927,10 +2927,10 @@ class maddog:
                     
                     
                     elif (    
-                        ma50_last < ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_ma39 < -0.18)
+                        ma50_last < ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_ma39 < -0.175)
                        
                     ):
-                        sell = "SELL 1 dopo 90 min con ma50 < con deviation_ma39 <-0.18 - riga 2933"
+                        sell = "SELL 1 dopo 90 min con ma50 < con deviation_ma39 <-0.175- riga 2933"
                         action = "sell"
                         
                         
