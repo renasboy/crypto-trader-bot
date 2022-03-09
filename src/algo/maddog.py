@@ -1287,7 +1287,7 @@ class maddog:
 
              
                     
-                # BUY 2 con DEVIATION ASSURDA = price / ma200_last CON ma200 >
+                # BUY 2 con DEVIATION ASSURDA = ma2 / ma200_last CON ma200 >
 
                 elif (    
                     ma200_last > ma200_120_min_ago
@@ -3616,7 +3616,7 @@ class maddog:
                     elif (
                         ma50_last < ma50_2_min_ago
                         and (ma5_prev > ma100_prev and ma5_last < ma100_last)
-                        and deviation_sell < -0.27
+                        and deviation_sell < -0.28
                         and ma2_last < ma2_2_min_ago
                     ):
                         sell = "SELL 2 (12-21 min) con ma50 < and CUSCINO DI SANT' ANTONIO - riga 3622"
@@ -4542,11 +4542,11 @@ class maddog:
 
                     if (
                         ma50_last >= ma50_2_min_ago
-                        and ma3_last < ma16_last
-                        and deviation_sell < -0.32
+                        and ma3_last < ma18_last
+                        and deviation_sell < -0.335
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 3 (3-5 min) con ma50 > and 3<16 and deviation_sell < -0.32 - riga 3295"
+                        sell = "SELL 3 (3-5 min) con ma50 > and 3 < 18 and deviation_sell < -0.335 - riga 4549"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
@@ -4559,7 +4559,7 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                        
                     ):
-                        sell = "SELL 3 (3-5 min) con ma50 > and 5-25 and deviation_sell 0.25-0.56 - FINTA ALLA MARADONA - riga 3296"
+                        sell = "SELL 3 (3-5 min) con ma50 > and 5-25 and deviation_sell 0.25-0.56 - FINTA ALLA MARADONA - riga 4562"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
