@@ -609,8 +609,34 @@ class ro_cano_che_ritorna:
                     
                 
                 
-                # BUY con DEVIATION ASSURDA 1
+                
+                # BUY 1 con ma200 > DURANTE UNA piccola CORREZIONE - condizione ferrari
+                
+                elif (
 
+                    ma2_last > ma2_2_min_ago
+                    and ma200_last > ma200_120_min_ago
+                    and deviation_buy_crollo_1 < -0.29
+                    and deviation_buy_crollo_1 > -0.59
+                    and ma2_last > ma5_last
+                    
+                  
+                ):
+
+                    buy = "BUY 1A con ma200> DURANTE UNA piccola CORREZIONE che non e' un forte ribasso e non e' un crollo - riga 830"
+                    action = "buy"
+                    percentage = 10
+
+                    # deviation_buy_crollo_1 = ma8_last / ma78_last
+                    # deviation_correzione = ma3_last / ma25_last
+                    # ma5 non deve allontanarsi troppo dalla ma200 !
+                    # compare prega per me !
+                    
+                    
+                    
+                    
+                # BUY con DEVIATION ASSURDA 1
+                
                 
                 elif (    
                     ma200_last > ma200_20_min_ago
