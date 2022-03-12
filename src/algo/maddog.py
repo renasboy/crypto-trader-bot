@@ -1688,7 +1688,7 @@ class maddog:
 
             # < -0.10  ma78 che mi salva (nel movimento laterale mi fa perdere la meta')
             # < -0.20
-            # 0.25 - 0.59  MARADONA 5-25 CHE DOPO 60 MIN DIVENTA 5-50
+            # 0.25 - 0.59  MARADONA 5-25 CHE DOPO 60 MIN DIVENTA 5-39 che dopo 90 min diventa 5-50
             # 0.60 - 1.20  RONALDO CHE DOPO 60 MIN DIVENTA 4-20
             # 1.21 - 2.50  TACCO DI ALLAH
             #  > 2.50      SI VIVE TRA GLI ANGELI
@@ -3732,12 +3732,12 @@ class maddog:
                     
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and ma5_last < ma30_last
+                        and ma5_last < ma39_last
                         and deviation_sell > 0.25 and deviation_sell < 0.56
                         and ma2_last < ma2_2_min_ago
                        
                     ):
-                        sell = "SELL 2 (21-60 min) con ma50 > and 5<30 and deviation_sell 0.25 - 0.56 MARADONA - riga 3740"
+                        sell = "SELL 2 (21-60 min) con ma50 > and 5<39 and deviation_sell 0.25 - 0.56 MARADONA e' piu' stanco e paziente - riga 3740"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
@@ -3934,7 +3934,7 @@ class maddog:
                     if (    
                         ma50_last > ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_ma39 < -0.18)
                     ):
-                        sell = "sessione 2 SELL da 60 a 90 min con ma50 > and deviation_ma39 <-0.18 - riga 3937"
+                        sell = "sessione 2 SELL da 60 a 90 min con ma50 > and deviation_ma39 < -0.18 - riga 3937"
                         action = "sell"
                         
                         
@@ -6869,10 +6869,10 @@ class maddog:
                     
                     
                     elif (
-                        ma50_last < ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_ma39 < -0.22)
+                        ma50_last < ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_ma39 < -0.215)
                      
                     ):
-                        sell = "SELL 4-5-x dopo 90 min con ma50 < con deviation_ma39 <-0.18 - riga 6681"
+                        sell = "SELL 4-5-x dopo 90 min con ma50 < con deviation_ma39 <-0.215 - riga 6681"
                         action = "sell"
                         
                         
