@@ -820,7 +820,7 @@ class maddog:
 
                     ma2_last > ma2_2_min_ago
                     and ma200_last > ma200_120_min_ago
-                    and deviation_buy_crollo_1 < -0.29
+                    and deviation_buy_crollo_1 < -0.33
                     and deviation_buy_crollo_1 > -0.59
                     and deviation_correzione > 0.017
                     and deviation_buy_ma5_sopra_ma20 > 0.12
@@ -845,7 +845,7 @@ class maddog:
 
                     ma2_last > ma2_2_min_ago
                     and ma300_last > ma300_120_min_ago
-                    and deviation_buy_crollo_1 < -0.29
+                    and deviation_buy_crollo_1 < -0.33
                     and deviation_buy_crollo_1 > -0.59
                     and deviation_correzione > 0.018
                    
@@ -872,7 +872,7 @@ class maddog:
                     and ma300_last < ma300_120_min_ago
                     and ma11_last > ma69_last
                     
-                    and deviation_buy_crollo_1 < -0.29
+                    and deviation_buy_crollo_1 < -0.33
                     and deviation_buy_crollo_1 > -0.59
                     
                 ):
