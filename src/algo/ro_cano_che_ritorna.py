@@ -3779,9 +3779,9 @@ class ro_cano_che_ritorna:
                 # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
             
             
-            
-            
-            
+            ##################################################################################################
+            ##################################################################################################
+            ##################################################################################################
             ################################################################################################## POCHI MALEDETTI E SUBITO dedicata al compa !
             
             
@@ -3806,6 +3806,37 @@ class ro_cano_che_ritorna:
                 
                 
                 
+                
+                
+            # dolce attesa applicata a pochi maledetti e subito
+            
+            elif (
+                seconds_since_last_trade > max_hold_time_in_seconds
+                and deviation > 0.80
+                and ma3_last < ma9_last
+                and ma2_last < last_trade_price
+                
+            ):
+
+                sell = "dolce attesa applicata a pochi maledetti e subito - riga 3817"
+                action = "sell"
+
+                # il fattore tempo - la dolce attesa - solo con trend ribassista
+                # deviation = ma2_last / last_trade_price
+                # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
+                
+                
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             ################################################################################################## la piu' bella esperimento.
             
             """
