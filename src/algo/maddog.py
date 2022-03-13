@@ -2927,10 +2927,10 @@ class maddog:
                     
                     
                     elif (    
-                        ma50_last < ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_ma39 < -0.175)
+                        ma50_last < ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_ma39 < -0.15)
                        
                     ):
-                        sell = "SELL 1 dopo 90 min con ma50 < con deviation_ma39 <-0.175- riga 2933"
+                        sell = "SELL 1 dopo 90 min con ma50 < con deviation_ma39 <-0.15- riga 2933"
                         action = "sell"
                         
                         
@@ -2938,10 +2938,10 @@ class maddog:
                     
                     
                     elif (
-                        ma50_last < ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_sell < -0.17 and ma3_last < ma39_last )
+                        ma50_last < ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_sell < -0.16 and ma3_last < ma39_last )
                        
                     ):
-                        sell = "SELL 1 dopo 90 min con ma50 < and (deviation_sell < -0.17 and ma3_last < ma39_last) - riga 2944"
+                        sell = "SELL 1 dopo 90 min con ma50 < and (deviation_sell < -0.16 and ma3_last < ma39_last) - riga 2944"
                         action = "sell"
                         
                         
@@ -2954,13 +2954,13 @@ class maddog:
                     
                     
                     elif (    
-                        ma50_last < ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_ma39 < -0.21)
+                        ma50_last < ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_ma39 < -0.18)
                         and deviation_trend_ma200 > -0.10
                         and ma200_last > ma300_last
                         and ma2_last < ma2_2_min_ago
                        
                     ):
-                        sell = "SELL 1 compa dopo 90 min con ma50 < and deviation_ma39 < -0.21  con > PERDITA TOLLERATA - riga 2963"
+                        sell = "SELL 1 compa dopo 90 min con ma50 < and deviation_ma39 < -0.18  con > PERDITA TOLLERATA - riga 2963"
                         action = "sell"
                         
                         
@@ -2968,12 +2968,12 @@ class maddog:
                         
                     elif (    
                         
-                        ma50_last < ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_sell < -0.20 and ma3_last < ma39_last )
+                        ma50_last < ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_sell < -0.19 and ma3_last < ma39_last )
                         and deviation_trend_ma200 > -0.10
                         and ma200_last > ma300_last
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 compa dopo 90 min con ma50 < (deviation_sell < -0.20 and ma3_last < ma39_last) con > PERDITA TOLLERATA - riga 2976"
+                        sell = "SELL 1 compa dopo 90 min con ma50 < (deviation_sell < -0.19 and ma3_last < ma39_last) con > PERDITA TOLLERATA - riga 2976"
                         action = "sell"
                         
                  
@@ -3025,7 +3025,7 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                     ):
 
-                        sell = "sessione 1 SELL DOLCE ATTESA con ma13 > and deviation < -0.40 - riga 3028"
+                        sell = "SELL 1 DOLCE ATTESA con ma13 > and deviation < -0.40 - riga 3028"
                         action = "sell"
 
                         # il fattore tempo - la dolce attesa - solo con trend ribassista
@@ -3045,7 +3045,7 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                     ):
 
-                        sell = "sessione 1 SELL DOLCE ATTESA con ma13 < and deviation < -0.35 - riga 3048"
+                        sell = "SELL 1 DOLCE ATTESA con ma13 < and deviation < -0.35 - riga 3048"
                         action = "sell"
 
                         # il fattore tempo - la dolce attesa - solo con trend ribassista
@@ -3081,7 +3081,7 @@ class maddog:
                         and deviation_ribasso_improvviso < -0.63
                   
                     ):
-                        sell = "session 1 RIBASSO IMPROVVISO - riga 3084"
+                        sell = "SELL 1 RIBASSO IMPROVVISO - riga 3084"
                         action = "sell"
                 
             
@@ -3093,7 +3093,7 @@ class maddog:
                         and deviation_ribasso_improvviso < -0.63
                     
                     ):
-                        sell = "session 1 RIBASSO IMPROVVISO - riga 3096"
+                        sell = "SELL 1 RIBASSO IMPROVVISO - riga 3096"
                         action = "sell"
                 
                     
