@@ -3797,10 +3797,10 @@ class ro_cano_che_ritorna:
             elif (
                 ma3_last < ma9_last and ma2_last < ma2_2_min_ago
                 and ma200_last < ma200_60_min_ago
-                and deviation > 0.60
+                and deviation > 0.70
             ):
 
-                sell = "session 3-4-x SELL POCHI MALEDETTI E SUBITO solo quando ma200 < - riga 3775"
+                sell = "session 3-4-x SELL POCHI MALEDETTI E SUBITO solo quando ma200 < e con deviation > 0.70 - riga 3775"
                 action = "sell"
                 
                 
