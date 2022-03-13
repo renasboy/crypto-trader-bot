@@ -611,7 +611,7 @@ class ro_cano_che_ritorna:
                     
                     
                 
-                
+                ######################################################################## CONDIZIONE FERRARI
                 
                 # BUY 1 con ma200 > DURANTE UNA piccola CORREZIONE - condizione ferrari
                 
@@ -621,12 +621,11 @@ class ro_cano_che_ritorna:
                     and ma200_last > ma200_120_min_ago
                     and deviation_buy_crollo_1 < -0.29
                     and deviation_buy_crollo_1 > -0.59
-                    and ma2_last > ma6_last
-                    
-                  
+                    and ma3_last > ma7_last
+                 
                 ):
 
-                    buy = "BUY 1A con ma200> DURANTE UNA piccola CORREZIONE - condizione ferrari - riga 830"
+                    buy = "BUY 1A con ma200> DURANTE UNA piccola CORREZIONE - condizione ferrari 3-7 - riga 830"
                     action = "buy"
                     percentage = 10
 
