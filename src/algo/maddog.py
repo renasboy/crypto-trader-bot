@@ -483,10 +483,13 @@ class maddog:
             # MACD sempre con aggiunta di ma 13-25 (come studio) (III° cane)
             # TOGLIERE TUTTI GLI INCROCI AL BUY ! se 13 > 100 NON INCROCERA' MAI ! INCROCIO 13-100 DIVENTA 13>100 !
             # analisi dei dati !
-          
+            
+            
+            
             ######################################################################################################## COMPRA sessione 1
             
             # BUY 1 con "percentage" 20
+            
             
             if self.session == 1:
 
@@ -497,22 +500,19 @@ class maddog:
                 if (    
                     ma20_last > ma200_last
                     and ma69_last > ma100_last
-                    and ma13_last > ma78_last
+                    
                     and deviation_bellissima > 0.14
-                    and deviation_ma3_sopra_ma7 > 0.01
-                    and ma6_last > ma100_last
                     and ma6_last > ma39_last
-                    and ma6_last > ma13_last
-                ):   
-                
-
-                    buy = "BUY 1 con 69 > 100 and deviation_bellissima > 0.14 riga 509"
+                ):    
+              
+                    buy = "BUY 1 con 69 > 100 and deviation_bellissima > 0.14 riga 508"
                     action = "buy"
                     percentage = 20
                     
                     # deviation_bellissima = ma6_last / ma30_last
                     # and deviation_ma13_sopra_ma25 > 0.07 TOLTA PROVVISORIAMENTE vedi BUY ore 10:47 del 23 nov 2021 (E' ARRIVATA MOLTO TARDI)
                     
+                
                 
                 
                 ####################################################################  BUY 1 con incrocio 11-69 and ma72_last >= ma72_2_min_ago  "MI PIACE!"
