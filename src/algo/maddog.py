@@ -496,17 +496,17 @@ class maddog:
                     ma20_last > ma200_last
                     and ma69_last > ma100_last
                     and ma13_last > ma78_last
-                    and deviation_bellissima > 0.15
-                    and ma2_last > ma2_2_min_ago
+                    and deviation_bellissima > 0.14
+                    and price > price_2_min_ago
                     and ma5_last > ma5_2_min_ago
-                    and deviation_ma3_sopra_ma7 > 0.05
+                    and deviation_ma3_sopra_ma7 > 0.01
                     and ma6_last > ma100_last
                     and ma6_last > ma39_last
                     and ma6_last > ma13_last
                    
                 ):
 
-                    buy = "BUY 1 con 69 > 100 and deviation_bellissima > 0.15 riga 509"
+                    buy = "BUY 1 con 69 > 100 and deviation_bellissima > 0.14 riga 509"
                     action = "buy"
                     percentage = 20
                     
@@ -523,7 +523,7 @@ class maddog:
                     and ma69_last >= ma69_2_min_ago
                     and deviation_bellissima > 0.17
                     and price > price_2_min_ago
-                    and ma2_last > ma2_2_min_ago
+                    
                     and ma3_last > ma3_3_min_ago
                     and ma4_last > ma4_2_min_ago
                     and deviation_ma3_sopra_ma7 > 0.05
