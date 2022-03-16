@@ -312,9 +312,11 @@ class maddog:
         )
        
         ############################################################################################################################
+    
+        # formula DEVIATION_buy_ma3_sopra_ma20 per comprare a una certa distanza da ma20
         
-        # formula DEVIATION_buy_ma2_sopra_ma13 per comprare a una certa distanza da ma13
-
+        deviation_buy_ma3_sopra_ma20 = (ma3_last / ma20_last - 1) * 100 if ma20_last else 0
+        self.algo_helper.info("deviation_buy_ma3_sopra_ma20: {}".format(deviation_buy_ma3_sopra_ma20))
         
 
         deviation_buy_ma5_sopra_ma20 = (ma5_last / ma20_last - 1) * 100 if ma20_last else 0
@@ -1312,14 +1314,14 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                     and ma3_last > ma7_last
                     and ma3_last > ma13_last
-                    and ma3_last > ma20_last
+                    and deviation_buy_ma3_sopra_ma20 > 0.05
                     and deviation_ma4_sopra_ma25 > 0.05
                     and deviation_ma5_sopra_ma30 > 0.05
                     and ma200_last < ma200_120_min_ago
                     and ma300_last < ma300_120_min_ago
                 ):
                
-                    buy = "BUY 2 che ci riprova TORNANDO ALLE ORIGINI con ma200< and ma300< - riga 1322"
+                    buy = "BUY 2 che ci riprova TORNANDO ALLE ORIGINI con ma200< and ma300< - riga 1324"
                     action = "buy"
                     percentage = 30
 
@@ -1327,9 +1329,7 @@ class maddog:
                     # se ma200< e ma300< si torna alle origini ! 8-50 ! (con ma2 > ma2 2 min ago)
                     # deviation_buy2 = ma8_last / ma50_last
                     
-                    
-            
-            
+           
             ############################################################################################################ COMPRA sessione 3
 
             elif self.session == 3:
