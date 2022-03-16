@@ -81,6 +81,7 @@ class maddog:
         ma78_5_min_ago = self.algo_helper.ma_minutes_ago(78, 5)
         ma78_7_min_ago = self.algo_helper.ma_minutes_ago(78, 7)
         ma78_30_min_ago = self.algo_helper.ma_minutes_ago(78, 30)
+        ma100_60_min_ago = self.algo_helper.ma_minutes_ago(100, 60)
         ma200_15_min_ago = self.algo_helper.ma_minutes_ago(200, 15)
         ma200_20_min_ago = self.algo_helper.ma_minutes_ago(200, 20)
         ma200_60_min_ago = self.algo_helper.ma_minutes_ago(200, 60)
@@ -112,8 +113,7 @@ class maddog:
         price_20_min_ago = self.algo_helper.price_minutes_ago(20)
 
         ###################################################################################################################################################### TEMPO
-        ######################################################################################################################################################
-
+        
         # importante : dolce attesa
 
         # VENDE DOPO x SECONDI - ro cano torna a casa - (ma c'e' anche un "e se")
@@ -485,9 +485,7 @@ class maddog:
             # MACD sempre con aggiunta di ma 13-25 (come studio) (III° cane)
             # TOGLIERE TUTTI GLI INCROCI AL BUY ! se 13 > 100 NON INCROCERA' MAI ! INCROCIO 13-100 DIVENTA 13>100 !
             # analisi dei dati !
-            
-            
-            
+           
             ######################################################################################################## COMPRA sessione 1
             
             # BUY 1 con "percentage" 20
@@ -6948,6 +6946,17 @@ class maddog:
                     sell = "SELL 4-5-x RIBASSO IMPROVVISO - riga 6948"
                     action = "sell"
                     
+                
+                # POCHI MALEDETTI E SUBITO - dedicated to comparo meo
+                
+                elif (
+                    ma3_last < ma9_last and ma2_last < ma2_2_min_ago
+                    and ma100_last < ma100_60_min_ago
+                    and deviation > 0.70
+                ):
+
+                sell = "SELL 4-5-x POCHI MALEDETTI E SUBITO solo quando ma100 < E con deviation > 0.70 - dedicated to comparo meo - riga 6958"
+                action = "sell"
                 
                 
                 
