@@ -4233,10 +4233,10 @@ class maddog:
                     
                     
                     elif (    
-                        ma50_last < ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_sell < -0.21 and ma3_last < ma39_last)
+                        ma50_last < ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_sell < -0.18 and ma3_last < ma39_last)
                      
                     ):
-                        sell = "sessione 2 SELL 2 dopo 90 min con ma50 < and (deviation_sell < -0.15 and ma3_last < ma39_last) - riga 4241"
+                        sell = "sessione 2 SELL 2 dopo 90 min con ma50 < and (deviation_sell < -0.18 and ma3_last < ma39_last) - riga 4241"
                         action = "sell"
                         
                         # quello che vedi e' stato discusso con il maestro
