@@ -807,9 +807,7 @@ class maddog:
                 
                 
                 
-                
-                
-                
+                 
                 ################################################################################################  per comprare durante una CORREZIONE e un FORTE RIBASSO
                 
                
@@ -827,7 +825,7 @@ class maddog:
                     
                 ):
 
-                    buy = "BUY 1A con ma200> DURANTE UNA piccola CORREZIONE che non e' un forte ribasso e non e' un crollo - riga 830"
+                    buy = "BUY 1A con ma200> DURANTE UNA piccola CORREZIONE che non e' un forte ribasso e non e' un crollo - riga 828"
                     action = "buy"
                     percentage = 10
                     
@@ -840,11 +838,11 @@ class maddog:
                     and ma300_last > ma300_120_min_ago
                     and deviation_buy_crollo_1 < -0.33
                     and deviation_buy_crollo_1 > -0.59
-                    and deviation_correzione > 0.018
-                   
+                    and deviation_correzione > 0.012
+                    and ma3_last > ma69_last
                 ):
 
-                    buy = "BUY 1 con ma300 > DURANTE UNA piccola CORREZIONE che NON E' un forte ribasso e NON E' un crollo ! con deviation_correzione > 0.018 - riga 847"
+                    buy = "BUY 1 con ma300 > DURANTE UNA piccola CORREZIONE che NON E' un forte ribasso e NON E' un crollo ! deviation_correzione > 0.012 - riga 845"
                     action = "buy"
                     percentage = 10
 
@@ -853,6 +851,7 @@ class maddog:
                     # ma5 non deve allontanarsi troppo dalla ma200 !
                     # compare prega per me !
                     
+                    # and ma3_last > ma69_last SOLTANTO con ma300> va bene anche senza ma sembra che STATISTICAMENTE produce una alta % di piccole perdite
                     
                     
                 # BUY 1 DURANTE UNA piccola CORREZIONE che NON E' un forte ribasso e NON E' un crollo !
@@ -865,7 +864,7 @@ class maddog:
                  
                 ):
 
-                    buy = "BUY 1 DURANTE UNA piccola CORREZIONE che NON E' un forte ribasso e NON E' un crollo ! - riga 868"
+                    buy = "BUY 1 DURANTE UNA piccola CORREZIONE che NON E' un forte ribasso e NON E' un crollo ! - riga 867"
                     action = "buy"
                     percentage = 10
 
@@ -884,7 +883,7 @@ class maddog:
                     
                 ):
 
-                    buy = "BUY 1 con ma200< e ma300< DURANTE UNA piccola CORREZIONE che NON E' una grande correzione e NON E' un forte ribasso e NON E' un crollo ! - riga 887"
+                    buy = "BUY 1 con ma200< e ma300< piccola CORREZIONE che NON E' una grande correzione e NON E' un forte ribasso e NON E' un crollo ! - riga 886"
                     action = "buy"
                     percentage = 10
 
@@ -893,6 +892,7 @@ class maddog:
          
               
                 # BUY 1 durante UNA grande CORREZIONE che NON E' una piccola CORREZIONE che NON E' un forte ribasso e NON E' un crollo ! !)
+                
                 
                 elif (
                     ma2_last > ma2_2_min_ago
