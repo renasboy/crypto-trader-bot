@@ -6956,10 +6956,10 @@ class maddog:
                     and ma2_last > ma100_last
                 ):
 
-                sell = "SELL 4-5-x POCHI MALEDETTI E SUBITO solo quando ma100 < E con deviation > 0.70 - dedicated to comparo meo - riga 6959"
-                action = "sell"
+                    sell = "SELL 4-5-x POCHI MALEDETTI E SUBITO solo quando ma100 < E con deviation > 0.70 - dedicated to comparo meo - riga 6959"
+                    action = "sell"
                 
-                # and ma2_last > ma100_last (altrimenti vende durante il crollo con la ma3-ma9)
+                    # and ma2_last > ma100_last (altrimenti vende durante il crollo con la ma3-ma9)
                 
                 
 
