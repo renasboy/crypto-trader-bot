@@ -839,7 +839,7 @@ class maddog:
                     and deviation_buy_crollo_1 < -0.33
                     and deviation_buy_crollo_1 > -0.59
                     and deviation_correzione > 0.012
-                    and ma3_last > ma69_last
+                    and ma5_last > ma72_last
                 ):
 
                     buy = "BUY 1 con ma300 > DURANTE UNA piccola CORREZIONE che NON E' un forte ribasso e NON E' un crollo ! deviation_correzione > 0.012 - riga 845"
