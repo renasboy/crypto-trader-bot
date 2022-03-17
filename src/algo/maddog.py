@@ -1282,7 +1282,8 @@ class maddog:
                     action = "buy"
                     percentage = 20
                     
-  
+                
+                
                 # BUY 2 con DEVIATION ASSURDA = ma2 / ma200_last CON ma200 >
 
                 elif (    
@@ -1296,13 +1297,14 @@ class maddog:
                     and (ma3_prev < ma200_prev and ma3_last > ma200_last)
                     and ma2_last > ma2_2_min_ago
                 ):
-                    buy = "BUY 2 con DEVIATION ASSURDA se ma200 sale da 120 min BUY con ma2-ma200 (ma5 > ma300 evita GLI EFFETTI LATERALI !) - riga 1299"
+                    buy = "BUY 2 con DEVIATION ASSURDA se ma200 sale da 120 min BUY con ma2-ma200 (ma5 > ma300 evita GLI EFFETTI LATERALI !) - riga 1300"
                     action = "buy"
                     percentage = 20    
           
                     # deviation_assurda = ma2 / ma200
             
-            
+                
+                
                 
                 
                 # BUY 2 che ci riprova TORNANDO ALLE ORIGINI con ma200< and ma300 < (compare stammi vicino !)
