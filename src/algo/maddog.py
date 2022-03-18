@@ -2433,12 +2433,12 @@ class maddog:
                     
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and deviation_sell < -0.28
+                        and deviation_sell < -0.29
                         and ma3_last < ma50_last
                         and ma2_last < ma2_2_min_ago
                     
                     ):
-                        sell = "SELL 1 (21-60 min) con ma50> and deviation_sell <-0.28 and ma3_last < ma50_last - riga 2441"
+                        sell = "SELL 1 (21-60 min) con ma50> and deviation_sell <-0.29 and ma3_last < ma50_last - riga 2441"
                         action = "sell"
                         
                         # VENDITA 1 IN ALTO dopo BUY IN RISALITA
