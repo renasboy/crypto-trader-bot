@@ -42,7 +42,7 @@ class ro_cano_che_ritorna:
         ma78_last, ma78_prev = self.algo_helper.ma_last_prev(78)
         ma100_last, ma100_prev = self.algo_helper.ma_last_prev(100)
         ma200_last, ma200_prev = self.algo_helper.ma_last_prev(200)
-        
+        ma300_last, ma300_prev = self.algo_helper.ma_last_prev(300)
         
         
         # moving average (2-3-4-5-7-8-20-43-100) di x minuti prima
@@ -78,6 +78,7 @@ class ro_cano_che_ritorna:
         ma200_20_min_ago = self.algo_helper.ma_minutes_ago(200, 20)
         ma200_60_min_ago = self.algo_helper.ma_minutes_ago(200, 60)
         ma200_120_min_ago = self.algo_helper.ma_minutes_ago(200, 120)
+        ma300_120_min_ago = self.algo_helper.ma_minutes_ago(300, 120)
         
         
         # LAST TRADE
@@ -271,12 +272,21 @@ class ro_cano_che_ritorna:
         self.algo_helper.info(
             "deviation_ma7_sopra_ma40: {}".format(deviation_ma7_sopra_ma40)
         )
-
+        
+        
         # formula deviation_ma3_sopra_ma7 (solo per il BUY1)
         deviation_ma3_sopra_ma7 = (ma3_last / ma7_last - 1) * 100 if ma7_last else 0
         self.algo_helper.info(
             "deviation_ma3_sopra_ma7: {}".format(deviation_ma3_sopra_ma7)
         )
+        
+        
+        
+        
+        # formula deviation_buy_ma5_sopra_ma20 
+        
+        deviation_buy_ma5_sopra_ma20 = (ma5_last / ma20_last - 1) * 100 if ma20_last else 0
+        self.algo_helper.info("deviation_buy_ma5_sopra_ma20: {}".format(deviation_buy_ma5_sopra_ma20))
 
         ########################################################################################################################## deviation per vendere
 
