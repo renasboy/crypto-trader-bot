@@ -765,12 +765,13 @@ class ro_cano_che_ritorna:
                 elif (
                     
                     ma200_last > ma200_20_min_ago
-                    and deviation_ma4_sopra_ma30 > 0.11
+                    and deviation_ma4_sopra_ma30 > 0.12
                     and ma2_last > ma2_2_min_ago
                 ):
                     buy = "BUY 2 ECCEZIONALE se ma200 sale da 20 min compra con deviation 4-30 -riga 482"
                     action = "buy"
                     percentage = 40
+                    
                     
                     
                 # BUY 2 DURANTE UN RIBASSO CHE NON E' UN CROLLO ! (compare stammi vicino!)
@@ -785,7 +786,31 @@ class ro_cano_che_ritorna:
                     buy = "BUY 2 DURANTE UN RIBASSO CHE NON E' UN CROLLO ! and deviation_bellissima > 0.17 -  riga 495"
                     action = "buy"
                     percentage = 20
+                    
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
+                    
+                    
+                
+                
+                
+                # BUY 2 con ma200> e ma300> DURANTE UNA piccola CORREZIONE che NON E' un forte ribasso e NON E' un crollo !  
+                
+                elif (
+
+                    ma2_last > ma2_2_min_ago
+                    and ma200_last > ma200_120_min_ago
+                    and ma300_last > ma300_120_min_ago
+                    and deviation_buy_crollo_1 < -0.33
+                    and deviation_buy_crollo_1 > -0.59
+                    and deviation_correzione > 0.017
+                    and deviation_buy_ma5_sopra_ma20 > 0.12
+                    
+                ):
+
+                    buy = "BUY 2 con ma200> e ma300> DURANTE UNA piccola CORREZIONE che non e' un forte ribasso e non e' un crollo - riga 828"
+                    action = "buy"
+                    percentage = 10
+                    
                     
             ############################################################################################################ COMPRA sessione 3
           
