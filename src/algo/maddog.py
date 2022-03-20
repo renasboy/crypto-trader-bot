@@ -1314,7 +1314,7 @@ class maddog:
                     and ma3_last > ma13_last
                     and deviation_buy_ma3_sopra_ma20 > 0.05
                     and deviation_ma4_sopra_ma25 > 0.05
-                    and deviation_ma5_sopra_ma30 > 0.14
+                    and deviation_ma5_sopra_ma30 > 0.173
                     and ma200_last < ma200_120_min_ago
                     and ma300_last < ma300_120_min_ago
                 ):
