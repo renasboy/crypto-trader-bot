@@ -34,6 +34,7 @@ class maddog:
         ma36_last, ma36_prev = self.algo_helper.ma_last_prev(36)
         ma39_last, ma39_prev = self.algo_helper.ma_last_prev(39)
         ma40_last, ma40_prev = self.algo_helper.ma_last_prev(40)
+        ma42_last, ma42_prev = self.algo_helper.ma_last_prev(42)
         ma45_last, ma45_prev = self.algo_helper.ma_last_prev(45)
         ma47_last, ma47_prev = self.algo_helper.ma_last_prev(47)
         ma48_last, ma48_prev = self.algo_helper.ma_last_prev(48)
@@ -163,8 +164,7 @@ class maddog:
         self.algo_helper.info("deviation_correzione: {}".format(deviation_correzione))
 
         
-        
-        
+      
         deviation_correzione_1 = (ma5_last / ma30_last - 1) * 100 if ma30_last else 0
         self.algo_helper.info("deviation_correzione_1: {}".format(deviation_correzione_1))
         
@@ -4155,12 +4155,12 @@ class maddog:
                         
                     elif (
                         ma50_last >= ma50_2_min_ago
-                        and ma5_last < ma50_last
+                        and ma5_last < ma42_last
                         and deviation_sell > 0.25 and deviation_sell < 0.56
                         and ma2_last < ma2_2_min_ago
                        
                     ):
-                        sell = "SELL 2 (12-21 min) con ma50 > and 5-50 and deviation_sell 0.25-0.56 - FINTA ALLA MARADONA - riga 4163"
+                        sell = "SELL 2 (12-21 min) con ma50 > and 5-42 and deviation_sell 0.25-0.56 - FINTA ALLA MARADONA - riga 4163"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
