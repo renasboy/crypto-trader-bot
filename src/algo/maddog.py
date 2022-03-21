@@ -2544,10 +2544,10 @@ class maddog:
                     
                     
                     elif (    
-                        ma50_last < ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_ma39 < -0.25)
+                        ma50_last < ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_ma39 < -0.28)
                         
                     ):
-                        sell = "SELL 1 maestro parte 1 (21-60 min) con ma50 < and deviation_ma39 < -0.25  - riga 2550"
+                        sell = "SELL 1 maestro parte 1 (21-60 min) con ma50 < and deviation_ma39 < -0.28  - riga 2550"
                         action = "sell"
                         
                     
@@ -3681,9 +3681,9 @@ class maddog:
                     
                     
                     elif (    
-                        ma50_last > ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_sell < -0.26 and ma3_last < ma50_last)
+                        ma50_last > ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_sell < -0.28 and ma3_last < ma50_last)
                     ):
-                        sell = "SELL 2 (21-60 min) con ma50 > and (deviation_sell < -0.26 and ma3_last < ma50_last) - riga 3686"
+                        sell = "SELL 2 (21-60 min) con ma50 > and (deviation_sell < -0.28 and ma3_last < ma50_last) - riga 3686"
                         action = "sell"
                         
                         
