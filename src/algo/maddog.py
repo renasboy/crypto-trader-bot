@@ -515,7 +515,7 @@ class maddog:
                 
                 
                 
-                ####################################################################  BUY 1 con incrocio 11-69 and ma72_last >= ma72_2_min_ago  "MI PIACE!"
+                ####################################################################  BUY 1 con incrocio 11-69 and ma69_last >= ma69_2_min_ago  "MI PIACE!"
 
                 elif (
                     ma20_last > ma200_last
@@ -527,10 +527,10 @@ class maddog:
                     and ma3_last > ma3_3_min_ago
                     and ma4_last > ma4_2_min_ago
                     and deviation_ma3_sopra_ma7 > 0.05
-                    and deviation_ma13_sopra_ma25 > 0.07
+                    and deviation_ma13_sopra_ma25 > 0.06
                  
                 ):
-                    buy = "BUY 1 con 11 > 69 e ma69> 2 min ago (!) riga 533"
+                    buy = "BUY 1 con ma20_last > ma200_last e con 11 > 69 e ma69> 2 min ago (!) riga 533"
                     action = "buy"
                     percentage = 20
                     
@@ -1066,10 +1066,10 @@ class maddog:
             elif self.session == 2:
 
                 if (
-                    ma78_last > ma78_2_min_ago
-                    and deviation_buy2 > 0.045
+                    ma69_last > ma69_2_min_ago
+                    and deviation_buy2 > 0.04
                     and deviation_bellissima > 0.12
-                    and deviation_buy_ma3_sopra_ma13 > 0.095
+                    and deviation_buy_ma3_sopra_ma13 > 0.09
                     and deviation_ma7_sopra_ma40 > 0.07
                     and ma2_last > ma2_2_min_ago
                     and price > price_2_min_ago
@@ -2960,12 +2960,12 @@ class maddog:
 
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and (ma3_prev > ma39_prev and ma3_last < ma39_last)
+                        and (ma5_prev > ma45_prev and ma5_last < ma45_last)
                         and deviation_sell > 0.65 and deviation_sell < 1.49
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 dopo 90 min con ma50 > incrocio 3-39 (!) and deviation_sell 0.65 - 1.49 RABONA ALLA RONALDO - riga 2968"
+                        sell = "SELL 1 dopo 90 min con ma50 > incrocio 5-45 (!) and deviation_sell 0.65 - 1.49 RABONA ALLA RONALDO - riga 2968"
                         action = "sell"
                         
                         
