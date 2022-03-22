@@ -181,7 +181,7 @@ class maddog:
         
         # formula DEVIATION_MA100_LATERALE evita BUY CONTINUI DEL BUY ECCEZIONALE NELLA FASE LATERALE
         
-        deviation_ma100_laterale = (price / ma100_last - 1) * 100 if ma100_last else 0
+        deviation_ma100_laterale = (ma5_last / ma100_last - 1) * 100 if ma100_last else 0
         self.algo_helper.info("deviation_ma100_laterale: {}".format(deviation_ma100_laterale))
         
         
@@ -1022,7 +1022,7 @@ class maddog:
              
                 elif (  
                     ma200_last > ma300_last
-                    and ma8_last > ma50_last
+                    and deviation_ma100_laterale > 0.10
                     and ma3_last > ma11_last
                     and ma5_last > ma200_last
                     and ma2_last > ma2_2_min_ago
