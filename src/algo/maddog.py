@@ -1024,7 +1024,7 @@ class maddog:
                     ma200_last > ma300_last
                     and ma8_last > ma50_last
                     and ma3_last > ma11_last
-                    and ma5_last > ma100_last
+                    and ma5_last > ma200_last
                     and ma2_last > ma2_2_min_ago
                 ):
 
