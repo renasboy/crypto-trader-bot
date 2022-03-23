@@ -1103,10 +1103,10 @@ class maddog:
 
                    
                 elif (
-                    deviation_buy2 > 0.12
+                    deviation_buy2 > 0.11
                     and deviation_bellissima > 0.12
                     and deviation_buy_ma3_sopra_ma13 > 0.10
-                    and deviation_ma7_sopra_ma40 > 0.12
+                    and deviation_ma7_sopra_ma40 > 0.11
                     and ma4_last > ma9_last
                     and ma2_last > ma2_2_min_ago
                     and ma3_last > ma40_last
