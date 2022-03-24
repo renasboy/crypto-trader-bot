@@ -830,17 +830,17 @@ class ro_cano_che_ritorna:
             elif self.session == 3:
 
                 if (
-                    ma78_last >= ma78_2_min_ago
+                    ma69_last >= ma69_2_min_ago
                     and deviation_buy3 > 0.12
                     and ma3_last > ma13_last
-                    and deviation_ma7_sopra_ma40 > 0.09
+                    and deviation_ma7_sopra_ma40 > 0.08
                     and ma4_last > ma9_last
                     and ma4_last > ma50_last
                     
                     and ma7_last > ma25_last
                     and ma2_last > ma2_2_min_ago
                 ):
-                    buy = "BUY 3 con ma78 > riga 843"
+                    buy = "BUY 3 con ma69 > riga 843"
                     action = "buy"
                     percentage = 50
 
@@ -1746,11 +1746,11 @@ class ro_cano_che_ritorna:
 
                     elif (
                         ma50_last < ma50_2_min_ago
-                        and (ma3_prev > ma18_prev and ma3_last < ma18_last)
+                        and (ma3_prev > ma20_prev and ma3_last < ma20_last)
                         and deviation_sell > 0.23
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 eventuale guadagno durante il crollo (21-60 min) con ma50 < incrocio 3 - 18 and deviation_sell > 0.23 - riga 1753"
+                        sell = "SELL 1 eventuale guadagno durante il crollo (21-60 min) con ma50 < incrocio 3 - 20 and deviation_sell > 0.23 - riga 1753"
                         action = "sell"
 
                 ###################################################################################################################  SESSIONE 1 ( da 60 a 90 min )
@@ -3699,12 +3699,12 @@ class ro_cano_che_ritorna:
 
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and ma3_last < ma15_last
+                        and ma3_last < ma18_last
                         and deviation_sell > 0.35
                         and deviation_sell < 0.69
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 3-4-x >90 min con ma50 > con 3<15 and deviation_sell 0.35 - 0.69 RABONA ALLA RONALDO (ma15 invece di ma13) - riga 3707"
+                        sell = "SELL 3-4-x >90 min con ma50 > con 3<18 and deviation_sell 0.35 - 0.69 RABONA ALLA RONALDO - riga 3707"
                         action = "sell"
                         
                         
