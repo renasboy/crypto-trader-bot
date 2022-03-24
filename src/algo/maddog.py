@@ -509,12 +509,12 @@ class maddog:
                     action = "buy"
                     percentage = 20
                     
-                
-                
+              
                 # ------------------------------------------------------------ BUY 1 che considera il passare del tempo
                 
                 elif (     
                     ma69_last > ma69_45_min_ago
+                    and deviation_bellissima > 0.14
                     and ma20_last > ma20_2_min_ago
                     and ma5_last > ma5_2_min_ago
                     and ma2_last > ma20_last
