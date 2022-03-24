@@ -2960,7 +2960,7 @@ class maddog:
 
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and (ma5_prev > ma42_prev and ma5_last < ma45_last)
+                        and (ma5_prev > ma42_prev and ma5_last < ma42_last)
                         and deviation_sell > 0.65 and deviation_sell < 1.49
                         and ma2_last < ma2_2_min_ago
                         
