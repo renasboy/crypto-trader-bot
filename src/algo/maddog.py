@@ -87,6 +87,7 @@ class maddog:
         ma200_15_min_ago = self.algo_helper.ma_minutes_ago(200, 15)
         ma200_20_min_ago = self.algo_helper.ma_minutes_ago(200, 20)
         ma200_60_min_ago = self.algo_helper.ma_minutes_ago(200, 60)
+        ma200_90_min_ago = self.algo_helper.ma_minutes_ago(200, 90)
         ma200_120_min_ago = self.algo_helper.ma_minutes_ago(200, 120)
         ma300_120_min_ago = self.algo_helper.ma_minutes_ago(300, 120)
 
@@ -235,8 +236,7 @@ class maddog:
         deviation_rialzo_improvviso_4 = (price / ma30_30_min_ago - 1) * 100 if ma30_30_min_ago else 0
         self.algo_helper.info("deviation_rialzo_improvviso_4: {}".format(deviation_rialzo_improvviso_4))
         
-        
-        
+       
         
         deviation_range_1 = (ma30_last / ma30_10_min_ago - 1) * 100 if ma30_10_min_ago else 0
         self.algo_helper.info("deviation_range_1: {}".format(deviation_range_1))
@@ -1270,15 +1270,15 @@ class maddog:
                 
                 elif (    
 
-                    ma200_last > ma200_120_min_ago
+                    ma200_last > ma200_90_min_ago
                     and ma20_last > ma200_last
-                    and ma20_last > ma69_last
+                    and ma11_last > ma69_last
                     and ma2_last > ma2_2_min_ago
                     and ma3_last > ma69_last
                     and (ma4_prev < ma25_prev and ma4_last > ma25_last)
                     and deviation_buy_ma3_sopra_ma25 > 0.05
                 ): 
-                    buy = "BUY 2 DOCCIA se ma200 > da 120 min ! COMPRA riga 1281"
+                    buy = "BUY 2 DOCCIA se ma200 > da 90 min ! COMPRA riga 1281"
                     action = "buy"
                     percentage = 20
                     
