@@ -422,7 +422,7 @@ class maddog:
         
         # if deviation_1_gabbia > -0.30 or deviation_buy_crollo_1 < -1.62 or deviation_buy_crollo_1 > -1.59 and deviation_buy_crollo_1 < -0.72 or deviation_buy_crollo_1 > -0.69 and deviation_buy_crollo_1 < -0.36:
         
-        if deviation_1_gabbia > -0.27 or deviation_buy_crollo_1 < -1.51 or deviation_buy_crollo_1 > -1.50 and deviation_buy_crollo_1 < -0.60 or deviation_buy_crollo_1 > -0.59 and deviation_buy_crollo_1 < -0.33:
+        if deviation_1_gabbia > -0.27 or (deviation_buy_crollo_1 < -1.51) or (deviation_buy_crollo_1 > -1.50 and deviation_buy_crollo_1 < -0.60) or (deviation_buy_crollo_1 > -0.59 and deviation_buy_crollo_1 < -0.33):
         
         # FATTO GABBIA UGUALE A QUELLA DEL RCCR ! andava meglio !
         
