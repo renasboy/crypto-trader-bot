@@ -422,7 +422,7 @@ class maddog:
         
         # if deviation_1_gabbia > -0.30 or deviation_buy_crollo_1 < -1.62 or deviation_buy_crollo_1 > -1.59 and deviation_buy_crollo_1 < -0.72 or deviation_buy_crollo_1 > -0.69 and deviation_buy_crollo_1 < -0.36:
         
-        if deviation_1_gabbia > -0.27 or (deviation_buy_crollo_1 < -1.51) or (deviation_buy_crollo_1 > -1.50 and deviation_buy_crollo_1 < -0.60) or (deviation_buy_crollo_1 > -0.59 and deviation_buy_crollo_1 < -0.33):
+        if deviation_1_gabbia > -0.27 or deviation_buy_crollo_1 < -1.51 or deviation_buy_crollo_1 > -1.50 and deviation_buy_crollo_1 < -0.60 or deviation_buy_crollo_1 > -0.59 and deviation_buy_crollo_1 < -0.33:
         
         # FATTO GABBIA UGUALE A QUELLA DEL RCCR ! andava meglio !
         
@@ -1355,25 +1355,25 @@ class maddog:
             elif self.session == 3:
 
                 if (
-                    ma78_last >= ma78_2_min_ago
+                    ma69_last >= ma69_2_min_ago
                     and deviation_buy3 > 0.12
+                    and deviation_ma4_sopra_ma30 > 0.12
                     and ma3_last > ma13_last
-                    and deviation_ma7_sopra_ma40 > 0.09
+                    and deviation_ma7_sopra_ma40 > 0.08
                     and ma4_last > ma9_last
                     and deviation_ma4_sopra_ma30 > 0.12
                     and deviation_buy_ma2_sopra_ma13 > 0.10
                     and ma4_last > ma50_last
                     and ma2_last > ma2_2_min_ago
                     and ma7_last > ma25_last
-                  
-                ):
+                ):  
+                
                     buy = "BUY 3A con ma78 > riga 1370"
                     action = "buy"
                     percentage = 50
 
                     # deviation_buy3 = ma4_last/ma30_last
-                    
-              
+               
                 elif (
                     deviation_buy3 > 0.02
                     and ma39_last > ma78_last
@@ -5214,9 +5214,9 @@ class maddog:
                         
                   
                     elif (    
-                        ma50_last < ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_sell < -0.24)
+                        ma50_last < ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_sell < -0.28)
                     ):
-                        sell = "SELL 3 (21-60 min) con ma50 < and deviation_sell < -0.24 - riga 5219"
+                        sell = "SELL 3 (21-60 min) con ma50 < and deviation_sell < -0.28 - riga 5219"
                         action = "sell"
                         
                      
