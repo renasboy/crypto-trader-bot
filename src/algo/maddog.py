@@ -232,8 +232,6 @@ class maddog:
         deviation_rialzo_improvviso_4 = (price / ma30_30_min_ago - 1) * 100 if ma30_30_min_ago else 0
         self.algo_helper.info("deviation_rialzo_improvviso_4: {}".format(deviation_rialzo_improvviso_4))
         
-       
-        
         deviation_range_1 = (ma30_last / ma30_10_min_ago - 1) * 100 if ma30_10_min_ago else 0
         self.algo_helper.info("deviation_range_1: {}".format(deviation_range_1))
         
@@ -254,12 +252,7 @@ class maddog:
         deviation_ribasso_improvviso = (price / ma30_last - 1) * 100 if ma30_last else 0
         self.algo_helper.info("deviation_ribasso_improvviso: {}".format(deviation_ribasso_improvviso))
         
-        
-        
-        
-        
-        
-        
+       
         ################################################################################################################## deviation per comprare
 
         # formula DEVIATION_buy1 per la compra 1
@@ -297,16 +290,14 @@ class maddog:
         
         deviation_buy_crollo_1 = (ma8_last / ma78_last - 1) * 100 if ma78_last else 0
         self.algo_helper.info("deviation_buy_crollo_1: {}".format(deviation_buy_crollo_1))
-            
-        
-
+       
+    
         # formula DEVIATION_buy_crollo_2 per comprare a una certa distanza da ma13
         
         deviation_buy_crollo_2 = (ma3_last / ma13_last - 1) * 100 if ma13_last else 0
         self.algo_helper.info("deviation_buy_crollo_2: {}".format(deviation_buy_crollo_2))
             
-        
-       
+      
         ############################################################################################################################
     
         # formula DEVIATION_buy_ma3_sopra_ma20 per comprare a una certa distanza da ma20
@@ -476,16 +467,12 @@ class maddog:
             
             ###########################################################################################################################################
             
-            ###########################################################################################################################################
-            
             # in futuro
          
             # MACD sempre con aggiunta di ma 13-25 (come studio) (III° cane)
             # TOGLIERE TUTTI GLI INCROCI AL BUY ! se 13 > 100 NON INCROCERA' MAI ! INCROCIO 13-100 DIVENTA 13>100 !
             # analisi dei dati !
-            
-            
-            
+      
             ######################################################################################################## COMPRA sessione 1
             
             # BUY 1 con "percentage" 20
@@ -493,10 +480,9 @@ class maddog:
             
             if self.session == 1:
                 
-                
-                
+            
                 # ------------------------------------------------------------ BUY 1 DURANTE IL RIALZO con INCROCIO CLASSICO 69-100
-                    
+                
                 if (    
                     ma20_last > ma200_last
                     and ma69_last > ma100_last
@@ -505,10 +491,24 @@ class maddog:
                     and ma6_last > ma39_last
                 ):    
               
-                    buy = "BUY 1 con 20>200 and 69 > 100 and deviation_bellissima > 0.14 riga 508"
+                    buy = "BUY 1 con 20>200 and 69 > 100 and deviation_bellissima > 0.14 riga 494"
                     action = "buy"
                     percentage = 20
                     
+                    
+                    
+                # ------------------------------------------------------------ BUY 1 se ma200> and ma300> and 13>50   
+                
+                elif (    
+                    ma20_last > ma200_last
+                    and ma200_last > ma200_120_min_ago
+                    and ma300_last > ma300_120_min_ago
+                    and ma13_last > ma50_last
+                ):  
+                
+                    buy = "BUY 1 con 20>200 and 69 > 100 and deviation_bellissima > 0.14 riga 509"
+                    action = "buy"
+                    percentage = 20
               
                 # ------------------------------------------------------------ BUY 1 che considera il passare del tempo
                 
