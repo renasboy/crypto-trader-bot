@@ -958,10 +958,10 @@ class ro_cano_che_ritorna:
             else:
 
                 if (
-                    ma78_last >= ma78_2_min_ago
-                    and deviation_buy3 > 0.13
+                    ma69_last >= ma69_2_min_ago
+                    and deviation_buy3 > 0.12
                     and ma3_last > ma13_last
-                    and deviation_ma7_sopra_ma40 > 0.11
+                    and deviation_ma7_sopra_ma40 > 0.10
                     and ma4_last > ma9_last
                     and ma4_last > ma50_last
                     
@@ -975,7 +975,7 @@ class ro_cano_che_ritorna:
                     # se e' arrivato il buy 5 e' molto probabile che il trend sia consolidato
                     # e, a questo punto, non importa se compra con un + 0.10 piu' in alto. NON FA UNA GRANDE DIFFERENZA !
                 ):
-                    buy = "BUY 5 con ma78 > and deviation_bellissima > 0.163 (PER SPEZZARE LA CATENA - effetti laterali) riga 978"
+                    buy = "BUY 5 con ma69 > and deviation_bellissima > 0.163 (PER SPEZZARE LA CATENA - effetti laterali) riga 978"
                     action = "buy"
                     percentage = 50
 
@@ -1702,11 +1702,11 @@ class ro_cano_che_ritorna:
                     
                     elif (
                         ma50_last < ma50_2_min_ago
-                        and deviation_ma39 < -0.23
-                        or deviation_sell < -0.23
+                        and deviation_ma39 < -0.26
+                        or deviation_sell < -0.26
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 (21-60 min) con ma50 < and deviation_ma39 < -0.23 or deviation_sell < -0.23 - riga 1709"
+                        sell = "SELL 1 (21-60 min) con ma50 < and deviation_ma39 < -0.26 or deviation_sell < -0.26 - riga 1709"
                         action = "sell"
                         
                         # and deviation_ma39 < -0.15 or (deviation_sell < 0.10 and ma3_last < ma39_last)
@@ -3454,11 +3454,11 @@ class ro_cano_che_ritorna:
                     if (
                         ma50_last > ma50_2_min_ago
                         
-                        and deviation_ma25 < -0.22
-                        or (deviation_sell < -0.23 and ma3_last < ma50_last)
+                        and deviation_ma25 < -0.25
+                        or (deviation_sell < -0.27 and ma3_last < ma50_last)
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 3-4-x (21-60 min) con ma50 > and deviation_ma25 < -0.22 or (deviation_sell < -0.23 and ma3_last < ma50_last) - riga 3461"
+                        sell = "SELL 3-4-x (21-60 min) con ma50 > and deviation_ma25 < -0.25 or (deviation_sell < -0.27 and ma3_last < ma50_last) - riga 3461"
                         action = "sell"
                         
                         # and deviation_ma39 < -0.16 or (deviation_sell < 0.10 and ma3_last < ma39_last)
