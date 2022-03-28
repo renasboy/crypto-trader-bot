@@ -848,7 +848,7 @@ class ro_cano_che_ritorna:
 
                 elif (
                     deviation_buy3 > 0.02
-                    and ma39_last > ma78_last
+                    and ma39_last > ma72_last
                     and deviation_buy3 > 0.02
                     and delta_buy3_incrocio_ma3_ma8 > 0.06
                     and deviation_ma4_sopra_ma30 > 0.15
@@ -859,7 +859,7 @@ class ro_cano_che_ritorna:
                     and ma7_last > ma25_last
                     and ma2_last > ma2_2_min_ago
                 ):
-                    buy = "BUY 3 RIVOLUZIONARIO se ma39 > ma78- riga 862"
+                    buy = "BUY 3 RIVOLUZIONARIO se ma39 > ma72 - riga 862"
                     action = "buy"
                     percentage = 50
                     
@@ -961,7 +961,7 @@ class ro_cano_che_ritorna:
                     ma69_last >= ma69_2_min_ago
                     and deviation_buy3 > 0.12
                     and ma3_last > ma13_last
-                    and deviation_ma7_sopra_ma40 > 0.10
+                    and deviation_ma7_sopra_ma40 > 0.09
                     and ma4_last > ma9_last
                     and ma4_last > ma50_last
                     
@@ -975,7 +975,7 @@ class ro_cano_che_ritorna:
                     # se e' arrivato il buy 5 e' molto probabile che il trend sia consolidato
                     # e, a questo punto, non importa se compra con un + 0.10 piu' in alto. NON FA UNA GRANDE DIFFERENZA !
                 ):
-                    buy = "BUY 5 con ma69 > and deviation_bellissima > 0.163 (PER SPEZZARE LA CATENA - effetti laterali) riga 978"
+                    buy = "BUY 5 con ma69 > and deviation_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali) riga 978"
                     action = "buy"
                     percentage = 50
 
@@ -3680,11 +3680,11 @@ class ro_cano_che_ritorna:
 
                     if (
                         ma50_last > ma50_2_min_ago
-                        and deviation_ma25 < -0.18
-                        or (deviation_sell < -0.10 and ma3_last < ma50_last)
+                        and deviation_ma25 < -0.21
+                        or (deviation_sell < -0.14 and ma3_last < ma50_last)
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 3-4-x dopo 90 min con ma50> and deviation_ma25 <-0.18 or (deviation_sell < -0.10 and ma3_last < ma50_last)- riga 3687"
+                        sell = "SELL 3-4-x dopo 90 min con ma50> and deviation_ma25 <-0.21 or (deviation_sell < -0.14 and ma3_last < ma50_last)- riga 3687"
                         action = "sell"
                         
                         # and ma3_last < ma39_last
@@ -3695,8 +3695,8 @@ class ro_cano_che_ritorna:
                         # dopo 90 min se il prezzo non ha forza puoi anche prendere qualcosa (solo > 90 min)
                         # cuscino dell' angelo custode
                         
+                   
                         
-
                     elif (
                         ma50_last > ma50_2_min_ago
                         and ma3_last < ma18_last
