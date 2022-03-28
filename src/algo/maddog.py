@@ -2593,6 +2593,7 @@ class maddog:
                         ma50_last < ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_ma39 < -0.28)
                         and deviation_trend_ma200 > -0.10
                         and ma200_last > ma300_last
+                        
                         and ma2_last < ma2_2_min_ago
                     ):
                         sell = "SELL 1 compa (21-60 min) con ma50 < and deviation_ma39 < -0.28 con > PERDITA TOLLERATA - riga 2598"
@@ -2611,6 +2612,7 @@ class maddog:
                         ma50_last < ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_sell < -0.29)
                         and deviation_trend_ma200 > -0.10
                         and ma200_last > ma300_last
+                        
                         and ma2_last < ma2_2_min_ago
                     ):
                         sell = "SELL 1 compa (21-60 min) con ma50 < and deviation_sell < -0.29 con > PERDITA TOLLERATA - riga 2616"
@@ -2628,6 +2630,7 @@ class maddog:
                     elif (
                         deviation_trend_ma200 > -0.10
                         and ma200_last > ma300_last
+                        
                         and ma50_last < ma50_2_min_ago
                         and (ma3_prev > ma78_prev and ma3_last < ma78_last)
                         and deviation_sell < -0.40
@@ -2641,6 +2644,7 @@ class maddog:
                     elif (
                         deviation_trend_ma200 > -0.10
                         and ma200_last > ma300_last
+                        
                         and ma50_last < ma50_2_min_ago
                         and (ma5_prev > ma100_prev and ma5_last < ma100_last)
                         and deviation_sell < -0.30
@@ -3672,6 +3676,7 @@ class maddog:
                     
                     if (        
                         ma50_last > ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_ma39 < -0.25)
+                        and ma200_last < ma200_60_min_ago
                     ):
                         sell = "SELL 2 (21-60 min) con ma50 > and deviation_ma39 < -0.25 - riga 3676"
                         action = "sell"
@@ -3682,6 +3687,7 @@ class maddog:
                     
                     elif (    
                         ma50_last > ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_sell < -0.28 and ma3_last < ma50_last)
+                        and ma200_last < ma200_60_min_ago
                     ):
                         sell = "SELL 2 (21-60 min) con ma50 > and (deviation_sell < -0.28 and ma3_last < ma50_last) - riga 3686"
                         action = "sell"
@@ -3691,10 +3697,10 @@ class maddog:
                     
                     
                     elif (        
-                        ma50_last > ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_ma39 < -0.28)
+                        ma50_last > ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_ma39 < -0.29)
                         and ma200_last > ma200_60_min_ago
                     ):
-                        sell = "SELL 2 (21-60 min) con ma50 > and deviation_ma39 < -0.28 - TOLLERANTE ! - riga 3697"
+                        sell = "SELL 2 (21-60 min) con ma50 > and deviation_ma39 < -0.29 - TOLLERANTE ! - riga 3697"
                         action = "sell"
                         
                         
@@ -3702,10 +3708,10 @@ class maddog:
                     
                     
                     elif (    
-                        ma50_last > ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_sell < -0.29 and ma3_last < ma50_last)
+                        ma50_last > ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_sell < -0.30 and ma3_last < ma50_last)
                         and ma200_last > ma200_60_min_ago
                     ):
-                        sell = "SELL 2 (21-60 min) con ma50 > and (deviation_sell < -0.29 and ma3_last < ma50_last) TOLLERANTE ! - riga 3708"
+                        sell = "SELL 2 (21-60 min) con ma50 > and (deviation_sell < -0.30 and ma3_last < ma50_last) TOLLERANTE ! - riga 3708"
                         action = "sell"
                         
                     ##############################################################################################################################
@@ -3756,7 +3762,7 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                       
                     ):
-                        sell = "SELL 2 (21-60 min) con ma50 > AND 200>120min and 5<69 (fidati!) and deviation_sell 0.57 - 0.90 ELASTICO ALLA RONALDO - riga 3759"
+                        sell = "SELL 2 (21-60 min) con ma50 > AND 200>120 min and 5<69 (fidati!) and deviation_sell 0.57 - 0.90 ELASTICO ALLA RONALDO - riga 3759"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
@@ -3816,12 +3822,13 @@ class maddog:
                         action = "sell"
                         
 
-                    ############################################################################################################### con trend discendente
-                    ############################################################################################################## 2 righe del compa GIA' CON TOLLERANZA
+                    ######################################################################################################## con trend discendente
+                    ######################################################################################################## 2 righe del compa GIA' CON TOLLERANZA
                     
                     
                     elif (        
                         ma50_last < ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_ma39 < -0.25)
+                        and ma200_last < ma200_60_min_ago
                     ):
                         sell = "sessione 2 SELL (21-60 min) con ma50 < and deviation_ma39 < -0.25 - riga 3826"
                         action = "sell"
@@ -3829,6 +3836,7 @@ class maddog:
                     
                     elif (    
                         ma50_last < ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_sell < -0.27)
+                        and ma200_last < ma200_60_min_ago
                     ):
                         sell = "sessione 2 SELL (21-60 min) con ma50 < and deviation_sell < -0.27 - riga 3833"
                         action = "sell"
@@ -3836,6 +3844,7 @@ class maddog:
                     
                     elif (
                         ma50_last < ma50_2_min_ago
+                        and ma200_last < ma200_60_min_ago
                         and (ma3_prev > ma78_prev and ma3_last < ma78_last)
                         and deviation_sell < -0.37
                         and ma2_last < ma2_2_min_ago
@@ -3845,6 +3854,7 @@ class maddog:
                    
                     elif (
                         ma50_last < ma50_2_min_ago
+                        and ma200_last < ma200_60_min_ago
                         and (ma5_prev > ma100_prev and ma5_last < ma100_last)
                         and deviation_sell < -0.27
                         and ma2_last < ma2_2_min_ago
@@ -3852,7 +3862,7 @@ class maddog:
                         sell = "sessione 2 SELL (21-60 min) con ma50 < and INCROCIO 3-100 (no 3<100) CUSCINO DI SANT' ANTONIO - riga 3852"
                         action = "sell"
                       
-                    ################################################################################################################# con > PERDITA TOLLERATA
+                    ################################################################################################################# con > PERDITA TOLLERATA !
                     
                     # ATTENZIONE ! AUMENTA LA PERDITA TOLLERATA  ! PERCHE' ma200 sale e perche' ma200 > ma300
                     
@@ -3862,6 +3872,7 @@ class maddog:
                     elif (
                         
                         ma50_last < ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_ma39 < -0.28)
+                        and ma200_last > ma200_60_min_ago
                         and deviation_trend_ma200 > -0.10
                         and ma200_last > ma300_last
                     
@@ -3872,6 +3883,7 @@ class maddog:
                  
                     elif (  
                         ma50_last < ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_sell < -0.29)
+                        and ma200_last > ma200_60_min_ago
                         and deviation_trend_ma200 > -0.10
                         and ma200_last > ma300_last
                      
@@ -3882,6 +3894,7 @@ class maddog:
                    
                     elif (
                         deviation_trend_ma200 > -0.10
+                        and ma200_last > ma200_60_min_ago
                         and ma200_last > ma300_last
                         and ma50_last < ma50_2_min_ago
                         and (ma3_prev > ma78_prev and ma3_last < ma78_last)
@@ -3893,6 +3906,7 @@ class maddog:
                  
                     elif (
                         deviation_trend_ma200 > -0.10
+                        and ma200_last > ma200_60_min_ago
                         and ma200_last > ma300_last
                         and ma50_last < ma50_2_min_ago
                         and (ma5_prev > ma100_prev and ma5_last < ma100_last)
@@ -5085,6 +5099,7 @@ class maddog:
                     
                     if (    
                         ma50_last > ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_ma25 < -0.25)
+                        and ma200_last < ma200_60_min_ago
                     ):
                         sell = "SELL 3 (21-60 min) con ma50 > and deviation_ma25 < -0.25 - riga 5088"
                         action = "sell"
@@ -5093,6 +5108,7 @@ class maddog:
                     
                     elif (      
                         ma50_last > ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_sell < -0.25 and ma3_last < ma50_last)
+                        and ma200_last < ma200_60_min_ago
                     ):
                         sell = "SELL (21-60 min) con ma50 > and (deviation_sell < -0.25 and ma3_last < ma50_last) - riga 5096"
                         action = "sell"
@@ -5333,6 +5349,7 @@ class maddog:
                     
                     if (    
                         ma50_last > ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_ma25 < -0.21)
+                        and ma200_last < ma200_60_min_ago
                     ):
                         sell = "SELL 3 da 60 a 90 min con ma50 > and deviation_ma25 < -0.19 - riga 5337"
                         action = "sell"
@@ -5343,6 +5360,7 @@ class maddog:
                     
                     elif (    
                         ma50_last > ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_sell < -0.20 and ma3_last < ma50_last)
+                        and ma200_last < ma200_60_min_ago
                     ):
                         sell = "SELL 3 da 60 a 90 min con ma50 > and (deviation_sell < -0.19 and ma3_last < ma50_last) - riga 5347"
                         action = "sell"
@@ -6558,6 +6576,7 @@ class maddog:
                     
                     if ( 
                         ma50_last > ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_ma25 < -0.22)
+                        and ma200_last < ma200_60_min_ago
                     ):
                         sell = "SELL 4-5-x da 60 a 90 min con ma50 > and deviation_ma25 < -0.19 - riga 6562"
                         action = "sell"
@@ -6566,6 +6585,7 @@ class maddog:
                     
                     elif (    
                         ma50_last > ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_sell < -0.21 and ma3_last < ma50_last)
+                        and ma200_last < ma200_60_min_ago
                     ):
                         sell = "SELL 4-5-x da 60 a 90 min con ma50 > and (deviation_sell < -0.19 and ma3_last < ma50_last) - riga 6570"
                         action = "sell"
