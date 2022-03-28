@@ -7015,20 +7015,38 @@ class maddog:
                     sell = "SELL 4-5-x RIBASSO IMPROVVISO - riga 6948"
                     action = "sell"
                     
+                    
+                
                 
                 # POCHI MALEDETTI E SUBITO - dedicated to comparo meo
                 
                 elif (
-                    ma3_last < ma9_last and ma2_last < ma2_2_min_ago
-                    and ma100_last < ma100_60_min_ago
+                    ma3_last < ma9_last
+                    and ma200_last > ma200_60_min_ago
+                    and deviation > 0.68
+                    and ma2_last > ma100_last
+                    and ma2_last < ma2_2_min_ago
+                ):
+                    sell = "SELL 3-4-x POCHI MALEDETTI E SUBITO quando ma200 > e con deviation > 0.70 - dedicated to comparo meo - riga 7029"
+                    action = "sell"
+                    
+                    # and ma2_last > ma100_last (altrimenti vende durante il crollo con la ma3-ma9)
+                
+                
+                elif (
+                    ma3_last < ma9_last 
+                    and ma200_last < ma200_60_min_ago
                     and deviation > 0.70
                     and ma2_last > ma100_last
+                    and ma2_last < ma2_2_min_ago
                 ):
-
-                    sell = "SELL 4-5-x POCHI MALEDETTI E SUBITO solo quando ma100 < E con deviation > 0.70 - dedicated to comparo meo - riga 6959"
+                    sell = "SELL 3-4-x POCHI MALEDETTI E SUBITO quando ma200 < e con deviation > 0.70 - dedicated to comparo meo - riga 7039"
                     action = "sell"
-                
+                    
                     # and ma2_last > ma100_last (altrimenti vende durante il crollo con la ma3-ma9)
+                    
+                    
+                
                 
                 
 
