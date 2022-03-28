@@ -1561,16 +1561,16 @@ class maddog:
                     and ma3_last > ma78_last
                     and ma4_last > ma4_2_min_ago
                     and ma7_last > ma25_last
-                    
+                    and ma13_last > ma50_last
                     and ma2_last > ma2_2_min_ago
-                   
-                ):
+                ):   
                     buy = "BUY 5B RIVOLUZIONARIO che NON SPEZZA LA CATENA SE ma200> 120 min) - riga 1568"
                     action = "buy"
                     percentage = 50
                     
                     # deviation_buy3 = ma4_last/ma30_last
-                    
+                    # ok tu non voi spezzare la catena.
+                    # ma per essere un BUY 5 devi avere almeno ma13>ma50 cazzo !
                     
                     
                 elif (
