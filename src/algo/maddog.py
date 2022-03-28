@@ -150,6 +150,13 @@ class maddog:
         deviation_trend_ma200 = (ma200_last / ma200_120_min_ago - 1) * 100 if ma200_120_min_ago else 0
         self.algo_helper.info("deviation_trend_ma200: {}".format(deviation_trend_ma200))
         
+        # deviation pochi maledetti
+        
+        deviation_pochi_maledetti = (ma13_last / ma13_10_min_ago - 1) * 100 if ma13_10_min_ago else 0
+        self.algo_helper.info("deviation_pochi_maledetti: {}".format(deviation_pochi_maledetti))
+        
+        
+        
         ######################################################################
         
         # ESPERIMENTO !
@@ -7023,7 +7030,8 @@ class maddog:
                 elif (
                     ma3_last < ma9_last
                     and ma200_last > ma200_60_min_ago
-                    and deviation > 0.68
+                    and deviation > 0.70
+                    and deviation_pochi_maledetti > 0.70
                     and ma2_last > ma100_last
                     and ma2_last < ma2_2_min_ago
                 ):
@@ -7037,6 +7045,7 @@ class maddog:
                     ma3_last < ma9_last 
                     and ma200_last < ma200_60_min_ago
                     and deviation > 0.70
+                    and deviation_pochi_maledetti > 0.70
                     and ma2_last > ma100_last
                     and ma2_last < ma2_2_min_ago
                 ):
