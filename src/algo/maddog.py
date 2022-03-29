@@ -171,7 +171,7 @@ class maddog:
         
         # formula deviation_ma8_sotto_last_trade_price
         
-        deviation_ma8_sotto_last_trade = (ma8_last / last_trade_price - 1) * 100 if last_trade_price else 0
+        deviation_ma8_sotto_last_trade_price = (ma8_last / last_trade_price - 1) * 100 if last_trade_price else 0
         self.algo_helper.info("deviation_ma8_sotto_last_trade_price: {}".format(deviation_ma8_sotto_last_trade_price))
         
         
