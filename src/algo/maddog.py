@@ -4177,23 +4177,25 @@ class maddog:
                     
                     
                     if (  
-                        ma50_last > ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_ma39 < -0.20)
+                        ma50_last > ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_ma39 < -0.22)
+                        and ma200_last > ma200_60_min_ago
                     ):    
-                        sell = "SELL 2 dopo 90 min con ma50 > and deviation_ma39 <-0.18 (no ma3<ma39) - riga 4123"
+                        sell = "SELL 2 dopo 90 min con ma50 > and deviation_ma39 <-0.22 (no ma3<ma39) - riga 4123"
                         action = "sell"
                         
                    
                     elif (      
-                        ma50_last > ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_sell < -0.19 and ma3_last < ma50_last)
+                        ma50_last > ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_sell < -0.21 and ma3_last < ma50_last)
+                        and ma200_last > ma200_60_min_ago
                     ):
-                        sell = "sessione 2 SELL dopo 90 min con ma50 > and (deviation_sell < 0.10 and ma3_last < ma50_last) - riga 4130"
+                        sell = "sessione 2 SELL dopo 90 min con ma50 > and (deviation_sell < 0.21 and ma3_last < ma50_last) - riga 4130"
                         action = "sell"
                         
                         
                         
                     elif (  
                         ma50_last > ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_ma39 < -0.23)
-                        and ma200_last > ma200_60_min_ago
+                        and ma200_last < ma200_60_min_ago
                     ):    
                         sell = "sessione 2 SELL 2 dopo 90 min con ma50 > and deviation_ma39 < -0.23 - riga 4139"
                         action = "sell"
@@ -4201,7 +4203,7 @@ class maddog:
                    
                     elif (      
                         ma50_last > ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_sell < -0.22 and ma3_last < ma50_last)
-                        and ma200_last > ma200_60_min_ago
+                        and ma200_last < ma200_60_min_ago
                     ):
                         sell = "sessione 2 SELL dopo 90 min con ma50 > and (deviation_sell < -0.22 and ma3_last < ma50_last) - riga 4147"
                         action = "sell"
