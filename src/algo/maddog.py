@@ -878,7 +878,7 @@ class maddog:
                     
               
               
-                # BUY 1 con deviation trend ma200 DURANTE UNA grande CORREZIONE AUDI che NON E' una piccola correzione e NON E' un grande ribasso e NON E' un crollo !)
+                # BUY 1 DURANTE UNA grande CORREZIONE AUDI che NON E' una piccola correzione e NON E' un grande ribasso e NON E' un crollo ! con deviation trend ma200 
                 
                 elif (
                     ma2_last > ma2_2_min_ago
@@ -889,14 +889,15 @@ class maddog:
                     and deviation_buy_crollo_1 > -0.90
                   
                 ):
-                    buy = "BUY 1 con deviation trend ma200 DURANTE UNA grande CORREZIONE AUDI che NON E' un grande ribasso e NON E' un crollo ! - riga 892"
+                    buy = "BUY 1 DURANTE UNA grande CORREZIONE AUDI che NON E' un grande ribasso e NON E' un crollo ! con deviation trend ma200 - riga 892"
                     action = "buy"
                     percentage = 20
                     
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     # deviation_correzione = ma5_last / ma30_last
-                    
+                    # deviation_trend_ma200 = ma200_last / ma200_120_min_ago
                     # compare prega per me !
+                    
                
                
                 # copia della riga 530 del RCCR CHE FUNZIONA BENISSIMO ma solo un po' piu' prudente ! - BUY DURANTE UN grande ribasso MASERATI CHE NON E' UN CROLLO !
@@ -917,7 +918,7 @@ class maddog:
                 
                 
                 
-                # QUA DEVI VEDERE vanno in sovrapposizione - vedi prima come vanno poi correggi
+                # QUA DEVI VEDERE - vanno in sovrapposizione - vedi prima come vanno poi correggi
                 
                 # BUY 1 durante un GRANDE RIBASSO MASERATI CHE NON E' UN CROLLO ! (compare stammi vicino!) HA FUNZIONATO ! viva ro combaro meo !
                 
@@ -1399,6 +1400,8 @@ class maddog:
 
                 if (
                     ma69_last >= ma69_2_min_ago
+                    and deviation > -0.30
+                    
                     and deviation_buy3 > 0.12
                     and deviation_ma4_sopra_ma30 > 0.12
                     and ma3_last > ma13_last
@@ -1416,9 +1419,13 @@ class maddog:
                     percentage = 50
 
                     # deviation_buy3 = ma4_last/ma30_last
+                    # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
+                    
                
                 elif (
                     deviation_buy3 > 0.02
+                    and deviation > -0.30
+                    
                     and ma39_last > ma72_last
                     and deviation_buy3 > 0.02
                     and delta_buy3_incrocio_ma3_ma8 > 0.06
@@ -1436,10 +1443,13 @@ class maddog:
                     
                     # deviation_buy3 = ma4_last/ma30_last
                     # riga 462 potrebbe esserci un problema perche' ho tolto ma78_last >= ma78_2_min_ago. vediamo
+                    # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
                     
                 
                 elif (
                     ma78_last < ma78_2_min_ago
+                    and deviation > -0.30
+                    
                     and deviation_buy3 > 0.03
                     and deviation_ma13_sopra_ma25 > 0.040
                     and delta_buy3_incrocio_ma3_ma8 > 0.07
@@ -1455,12 +1465,15 @@ class maddog:
                     percentage = 40
                     
                     # deviation_buy3 = ma4_last/ma30_last
+                    # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
+                    
                     
             
                 # BUY 3 CON IL TURBO ! (compare stammi vicino!)
                
                 elif (    
                     ma200_last > ma200_120_min_ago
+                    and deviation > -0.30
                     and ma200_last > ma300_last
                     and ma20_last > ma200_last
                     
@@ -1471,12 +1484,16 @@ class maddog:
                     buy = "BUY 3 CON IL TURBO - riga 1428"
                     action = "buy"
                     percentage = 50
-
-             
                     
+                    
+                    # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
+                  
+                    
+                
                 elif (
-
                     ma2_last > ma2_2_min_ago
+                    and deviation > -0.30
+                    
                     and deviation_buy_crollo_1 < -0.29
                     and deviation_buy_crollo_1 > -0.59
                     and deviation_correzione > 0.015
@@ -1492,6 +1509,9 @@ class maddog:
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     # deviation_correzione = ma3_last / ma25_last
                     # ma5 non deve allontanarsi troppo dalla ma200 !
+                    # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
+                    
+                    
             
             # ###############################################################################################################       COMPRA sessione 4
             # --------------------------------------------------------------------------------------------------------------------- deviation piu' alte se ma 78 < !
