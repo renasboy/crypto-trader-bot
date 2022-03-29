@@ -1017,32 +1017,36 @@ class maddog:
                     percentage = 20   
                     
                 
+                
+                
+                ############################################################################################################################
+                
                 # condizione RCCR - BUY 1 DURANTE UNA CORREZIONE FIAT che non e' un forte ribasso e non e' un crollo !
                 # ATTENZIONE ! QUESTA E' UNA CONDIZIONE CHE ANDAVA BENE IN RCCR e non prendeva proprio in maddog !
                 # questa condizione considera anche le ipotesi in cui ma100< ma200< ma300<  - da aggiungere in un secondo momento
                 # e non e' ancora una situazione cosi' drammatica - distanza di ma8 da last trade
                 
-                elif (
-                    
+                elif (    
                     deviation_buy_crollo_1 < -0.29
                     and deviation_buy_crollo_1 > -0.59
                     and ma8_last > ma50_last
                     and ma2_last > ma2_2_min_ago
-                    
-                    # and ma100_last > ma100_120_min_ago
-                    # and ma200_last > ma200_120_min_ago
-                    # and ma300_last > ma300_60_min_ago
-                    # and deviation_ma8_sotto_last_trade_price > -1.50
-                    
+                
                 ):
                     buy = "condizione RCCR - BUY 1 DURANTE UNA CORREZIONE FIAT che non e' un forte ribasso e non e' un crollo !  - riga 1036"
                     action = "buy"
                     percentage = 20
                     
+                    # DA AGGIUNGERE
+                    # and ma100_last > ma100_120_min_ago
+                    # and ma200_last > ma200_120_min_ago
+                    # and ma300_last > ma300_60_min_ago
+                    # and deviation_ma8_sotto_last_trade_price > -1.50
+                    
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     # deviation_correzione = ma3_last / ma25_last
                     
-                    # compare prega per me !
+                    
                     
                     
                 # BUY 1 forever young 1 PIU' PRUDENTE se ma200 > e se ma200 > ma300 - che si preoccupa degli effetti laterali
