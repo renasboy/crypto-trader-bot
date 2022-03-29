@@ -2778,7 +2778,7 @@ class maddog:
                     
                     elif (
                         ma50_last > ma50_2_min_ago
-                        ma200_last > ma200_120_min_ago
+                        and ma200_last > ma200_120_min_ago
                         and (ma4_prev > ma50_prev and ma4_last < ma50_last)
                         and deviation_sell > 0.53 and deviation_sell < 0.90
                         and ma2_last < ma2_2_min_ago
@@ -2791,7 +2791,7 @@ class maddog:
                     
                     elif (
                         ma50_last > ma50_2_min_ago
-                        ma200_last < ma200_120_min_ago
+                        and ma200_last < ma200_120_min_ago
                         and (ma4_prev > ma20_prev and ma4_last < ma20_last)
                         and deviation_sell > 0.53 and deviation_sell < 0.90
                         and ma2_last < ma2_2_min_ago
