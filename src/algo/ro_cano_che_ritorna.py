@@ -155,6 +155,7 @@ class ro_cano_che_ritorna:
         
         ############# deviation per comprare con un RIALZO IMPROVVISO
         # formula DEVIATION_RIALZO_IMPROVVISO (per 40 min si muove in un range +0.25 -0.25 sintetizzato dalla ma30
+        
         deviation_rialzo_improvviso_1 = (price / ma30_last - 1) * 100 if ma30_last else 0
         self.algo_helper.info("deviation_rialzo_improvviso_1: {}".format(deviation_rialzo_improvviso_1))
         
@@ -300,15 +301,18 @@ class ro_cano_che_ritorna:
         self.algo_helper.info("deviation_sell: {}".format(deviation_sell))    
        
         # formula DEVIATION_sell_ma78
+        
         deviation_sell_ma78 = (ma4_last / ma78_last - 1) * 100 if ma78_last else 0
         self.algo_helper.info("deviation_sell_ma78: {}".format(deviation_sell_ma78))
 
         # formula deviation_ma39 per vendere un po' piu' giu' di ma39
+        
         deviation_ma39 = (ma4_last / ma39_last - 1) * 100 if ma39_last else 0
         self.algo_helper.info("deviation_ma39: {}".format(deviation_ma39))
         
         
         # formula deviation_ma25 per vendere un po' piu' giu' di ma25 (per il buy 3-4-5 con ma 39 ha fatto -0.89 !)
+        
         deviation_ma25 = (ma3_last / ma25_last - 1) * 100 if ma25_last else 0
         self.algo_helper.info("deviation_ma25: {}".format(deviation_ma25))
        
@@ -316,6 +320,7 @@ class ro_cano_che_ritorna:
         # dal non fare niente !
 
         # DEFAULT ACTION DICE DI NON FARE NIENTE (= None, NON TOCCARE )
+        
         action = None
         percentage = 0
 
@@ -352,12 +357,14 @@ class ro_cano_che_ritorna:
             # deviation_buy_crollo_1 = ma8_last / ma78_last
 
             # NON TOCCARE QUESTA CONDIZIONE ! SERVE PER APERTURA DI GABBIA !
+            
             if not self.session or not self.open:
                 self.session = 1
                 self.open = True
                 self.algo_helper.info("session {}: open segment".format(self.session))
 
         # SI CHIUDE LA GABBIA SE
+        
         else:
             self.open = False
             self.algo_helper.info("session {}: closed segment".format(self.session))
@@ -374,6 +381,7 @@ class ro_cano_che_ritorna:
             ###########################################################################################################################################
           
             percentage = self.buy_percentage
+            
             # NON TOCCARE  ! DI DEFAULT E' IL 2%
             #######################################################################################################
            
@@ -384,6 +392,7 @@ class ro_cano_che_ritorna:
             ######################################################################################################## COMPRA sessione 1
             
             # BUY 1 con "percentage" 20
+            
             if self.session == 1:
                 
 
@@ -391,6 +400,7 @@ class ro_cano_che_ritorna:
 
                 if (
                     ma69_last > ma100_last
+                    and deviation < -0.30
                     and ma13_last > ma78_last
                     and deviation_bellissima > 0.17
                     
@@ -414,6 +424,7 @@ class ro_cano_che_ritorna:
 
                 elif (
                     ma13_last > ma69_last
+                    and deviation < -0.30
                     and ma72_last >= ma72_2_min_ago
                     and deviation_bellissima > 0.17
                     and price > price_2_min_ago
@@ -434,6 +445,7 @@ class ro_cano_che_ritorna:
                 
                 elif (
                     deviation_buy1 > 0.25
+                    and deviation < -0.30
                     and ma13_last > ma50_last
                     and ma78_last > ma78_2_min_ago
                     and deviation_bellissima > 0.17
@@ -526,6 +538,7 @@ class ro_cano_che_ritorna:
                 
                 elif (
                     ma78_last < ma78_2_min_ago
+                    and deviation < -0.30
                     and ma39_last > ma78_last
                     and deviation_buy1 > 0.14
                     and deviation_bellissima > 0.18
@@ -546,6 +559,7 @@ class ro_cano_che_ritorna:
                 
                 elif (
                     ma78_last < ma78_2_min_ago
+                    and deviation < -0.30
                     and ma39_last > ma78_last
                     and deviation_bellissima > 0.18
                     and price > price_2_min_ago
@@ -618,6 +632,7 @@ class ro_cano_che_ritorna:
 
                 elif (    
                     ma200_last > ma200_20_min_ago
+                    
                     and deviation_ma4_sopra_ma30 > 0.11
                     and ma2_last > ma2_2_min_ago
                 ):
