@@ -403,6 +403,7 @@ class ro_cano_che_ritorna:
                     
                     and ma13_last > ma78_last
                     and deviation_bellissima > 0.17
+                    and deviation < -0.30
                     
                     and ma5_last > ma5_2_min_ago
                     and deviation_ma3_sopra_ma7 > 0.05
@@ -424,6 +425,7 @@ class ro_cano_che_ritorna:
 
                 elif (
                     ma13_last > ma69_last
+                    and deviation < -0.30
                     
                     and ma72_last >= ma72_2_min_ago
                     and deviation_bellissima > 0.17
@@ -445,6 +447,7 @@ class ro_cano_che_ritorna:
                 
                 elif (
                     deviation_buy1 > 0.25
+                    and deviation < -0.30
                     
                     and ma13_last > ma50_last
                     and ma78_last > ma78_2_min_ago
@@ -538,7 +541,7 @@ class ro_cano_che_ritorna:
                 
                 elif (
                     ma78_last < ma78_2_min_ago
-                    
+                    and deviation < -0.30
                     and ma39_last > ma78_last
                     and deviation_buy1 > 0.14
                     and deviation_bellissima > 0.18
@@ -559,7 +562,7 @@ class ro_cano_che_ritorna:
                 
                 elif (
                     ma78_last < ma78_2_min_ago
-                    
+                    and deviation < -0.30
                     and ma39_last > ma78_last
                     and deviation_bellissima > 0.18
                     and price > price_2_min_ago
