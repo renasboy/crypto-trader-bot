@@ -790,17 +790,20 @@ class ro_cano_che_ritorna:
                     
                     
                     
-                # BUY 2 ECCEZIONALE - se ma100 sale da 20 min compra con ma30
+                # BUY 2 ECCEZIONALE - se ma100 sale da 20 min compra con 4-30
 
                 elif (
                     
                     ma200_last > ma200_20_min_ago
                     and deviation_ma4_sopra_ma30 > 0.12
+                    and deviation_correzione > 0.11
                     and ma2_last > ma2_2_min_ago
                 ):
-                    buy = "BUY 2 ECCEZIONALE se ma200 sale da 20 min compra con deviation 4-30 -riga 783"
+                    buy = "BUY 2 ECCEZIONALE se ma200 sale da 20 min compra con deviation 4-30 and deviation 3-25 - riga 783"
                     action = "buy"
                     percentage = 40
+                    
+                    # deviation_correzione = 3/25
                     
                     
                     
