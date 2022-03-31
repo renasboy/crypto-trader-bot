@@ -120,14 +120,22 @@ class maddog:
 
         ###################################################################################################################################################### TEMPO
         
-        # importante : dolce attesa
+        # importante : SELL dolce attesa e BUY con il passare del tempo
 
         # VENDE DOPO x SECONDI - ro cano torna a casa - (ma c'e' anche un "e se")
+        # esempio : 4 minuti * 60 = 240 + 30 secondi = 270 secondi
+        
+        # vedi SELL dolce attesa
         
         max_hold_time_in_seconds = 255
         
-        #  4 minuti * 60 = 240 + 30 secondi = 270 secondi
-
+        
+        
+        # vedi BUY 2 con il passare del tempo
+        
+        max_hold_time_in_seconds_nuova = 7200
+        
+       
         #########################################################################################################################################################
         #########################################################################################################################################################
 
@@ -541,7 +549,7 @@ class maddog:
                     and ma2_last > ma20_last
                     and ma2_last > ma2_2_min_ago
                 ):    
-                    buy = "BUY 1 BUY 1 che considera il passare del tempo - riga 523"
+                    buy = "BUY 1 che considera il passare del tempo - riga 523"
                     action = "buy"
                     percentage = 20
                     
@@ -1402,6 +1410,25 @@ class maddog:
                     action = "buy"
                     percentage = 10
                     
+                    
+                    
+                # --------------------------------------- BUY 2 che considera il passare del tempo ! - FAI ATTENZIONE - PRIMA DI QUESTA FUNZIONAVA
+                
+                
+                elif (     
+                    seconds_since_last_trade > max_hold_time_in_seconds_nuova
+                    and ma4_last > ma100_last
+                    and ma100_last < ma300_last
+                    and ma2_last > ma2_2_min_ago
+                ):    
+                    buy = "BUY 2 che considera il passare del tempo - riga 1424"
+                    action = "buy"
+                    percentage = 50
+                    
+                    # incredibile ! la ma100 sta sotto la ma300 ! ripeto la ma100 sta sotto la ma300 
+                    # NON TOGLIERE QUELLA RIGA !
+                    # vedi r136 r523
+                    # compa prega per me !
            
             ############################################################################################################ COMPRA sessione 3
             
