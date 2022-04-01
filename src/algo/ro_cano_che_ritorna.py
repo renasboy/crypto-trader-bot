@@ -1995,16 +1995,26 @@ class ro_cano_che_ritorna:
                 action = "sell"
 
             # deviation_ma39 = ma4_last / ma39_last QUESTA HA VENDUTO NEL CROLLO IMPROVVISO DI 1 MINUTO (con -2.06% !!!)!
+            
+            
 
+            
             # 2 - ro cano VENDE DURANTE UN CROLLO IMPROVVISO !
             
-            elif deviation < -0.62:
-                sell = "SELL 1 CROLLO IMPROVVISO - riga 1944"
+            elif (            
+                ma2_last < ma4_last
+                and ma2_last < ma6_last
+                and deviation < -0.62
+                  
+            ):    
+                sell = "SELL 1 CROLLO IMPROVVISO - riga 2011"        
                 action = "sell"
-
+                
                 # deviation = ma4_last / last_trade_price
                 # FORSE E' L' UNICA DEVIATION CHE MI POTRA' SALVARE DA UN CROLLO IMPROVVISO COME QUELLO DEL 3 NOVEMBRE 2021
                 # -0.90 ha fatto fare una perdita di -1.46% il 19 dic 2021
+                
+                
 
             # 3 - ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma13 >
             
@@ -2941,9 +2951,15 @@ class ro_cano_che_ritorna:
             
             # 2 - ro cano VENDE DURANTE UN CROLLO IMPROVVISO !
             
-            elif deviation < -0.62:
-                sell = "SELL 2 CROLLO IMPROVVISO - riga 2855"
+            elif (            
+                ma2_last < ma4_last
+                and ma2_last < ma6_last
+                and deviation < -0.62
+                  
+            ):    
+                sell = "SELL 1 CROLLO IMPROVVISO - riga 2960"        
                 action = "sell"
+            
 
                 # deviation = ma4_last / last_trade_price
                 # FORSE E' L' UNICA DEVIATION CHE MI POTRA' SALVARE DA UN CROLLO IMPROVVISO COME QUELLO DEL 3 NOVEMBRE 2021
@@ -3875,15 +3891,20 @@ class ro_cano_che_ritorna:
 
             # 2 - ro cano VENDE DURANTE UN CROLLO IMPROVVISO !
             
-            elif deviation < -0.62 and ma2_last < ma2_2_min_ago:
-                sell = "SELL 3-4-x CROLLO IMPROVVISO - riga 3789"
+            elif (            
+                ma2_last < ma4_last
+                and ma2_last < ma6_last
+                and deviation < -0.62
+                  
+            ):    
+                sell = "SELL 1 CROLLO IMPROVVISO - riga 2011"        
                 action = "sell"
-
+            
+                # FORSE E' L' UNICA DEVIATION CHE MI POTRA' SALVARE DA UN CROLLO IMPROVVISO COME QUELLO DEL 3 NOVEMBRE 2021
                 # deviation = ma4_last / last_trade_price
 
-                # FORSE E' L' UNICA DEVIATION CHE MI POTRA' SALVARE DA UN CROLLO IMPROVVISO COME QUELLO DEL 3 NOVEMBRE 2021
                 
-                
+            
 
             # 3 - ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma25 >
             
