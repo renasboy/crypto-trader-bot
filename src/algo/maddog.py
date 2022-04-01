@@ -197,6 +197,15 @@ class maddog:
         deviation_trend_ma200 = (ma200_last / ma200_120_min_ago - 1) * 100 if ma200_120_min_ago else 0
         self.algo_helper.info("deviation_trend_ma200: {}".format(deviation_trend_ma200))
         
+        
+        
+        # formula deviation trend ma100 - se dopo 60 min cresce > 1%  NON FA PARTIRE LA VENDITA POCHI MALEDETTI E SUBITO - diversamente succederebbero punti sovrapposti
+        
+        deviation_trend_ma100 = (ma100_last / ma100_60_min_ago - 1) * 100 if ma100_60_min_ago else 0
+        self.algo_helper.info("deviation_trend_ma100: {}".format(deviation_trend_ma100))
+        
+        
+        
         # deviation pochi maledetti
         
         deviation_pochi_maledetti = (ma13_last / ma13_10_min_ago - 1) * 100 if ma13_10_min_ago else 0
@@ -7288,21 +7297,27 @@ class maddog:
                     
                 
                 
-                # POCHI MALEDETTI E SUBITO - dedicated to comparo meo
+                # 8 - POCHI MALEDETTI E SUBITO con ma200 > MA ma100 NON DEVE SALIRE TROPPO ! - dedicated to comparo meo
                 
                 elif (
                     ma3_last < ma9_last
+                    and deviation_trend_ma100 < 1.00
                     and ma200_last > ma200_60_min_ago
                     and deviation > 0.70
                     and deviation_pochi_maledetti > 0.70
                     and ma2_last > ma100_last
                     and ma2_last < ma2_2_min_ago
                 ):
-                    sell = "SELL 3-4-x POCHI MALEDETTI E SUBITO quando ma200 > e con deviation > 0.70 - dedicated to comparo meo - riga 7029"
+                    sell = "SELL 3-4-x POCHI MALEDETTI E SUBITO quando ma200 > e con deviation > 0.70 MA - dedicated to comparo meo - riga 7311"
                     action = "sell"
                     
                     # and ma2_last > ma100_last (altrimenti vende durante il crollo con la ma3-ma9)
+                    # incredibile questa and deviation_trend_ma100 < 1.00 - se ma100 sale "forte" da 60 min non deve intervenire sell 3-9
+                    
+                    
                 
+                
+                # 8 - POCHI MALEDETTI E SUBITO con ma200 < - dedicated to comparo meo
                 
                 elif (
                     ma3_last < ma9_last 
@@ -7312,7 +7327,7 @@ class maddog:
                     and ma2_last > ma100_last
                     and ma2_last < ma2_2_min_ago
                 ):
-                    sell = "SELL 3-4-x POCHI MALEDETTI E SUBITO quando ma200 < e con deviation > 0.70 - dedicated to comparo meo - riga 7039"
+                    sell = "SELL 3-4-x POCHI MALEDETTI E SUBITO quando ma200 < e con deviation > 0.70 - dedicated to comparo meo - riga 7330"
                     action = "sell"
                     
                     # and ma2_last > ma100_last (altrimenti vende durante il crollo con la ma3-ma9)
