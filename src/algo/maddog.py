@@ -3313,8 +3313,8 @@ class maddog:
                     
                     elif (
                         
-                        ma2_last < ma2_2_min_ago
-                        and ma2_last < ma4_last
+                        ma2_last < ma4_last
+                        and ma2_last < ma6_last
                         and deviation < -0.62
                   
                     ):    
@@ -4567,11 +4567,10 @@ class maddog:
                     # 2 - ro cano VENDE DURANTE UN CROLLO IMPROVVISO !
                     
                     elif (
-                        
-                        ma2_last < ma2_2_min_ago
-                        and ma2_last < ma4_last
+                        ma2_last < ma4_last
+                        and ma2_last < ma6_last
                         and deviation < -0.62
-                  
+                 
                     ):    
                         
                         sell = "SELL 2 CROLLO IMPROVVISO - riga 4577"
@@ -5941,9 +5940,9 @@ class maddog:
                     # 2 - ro cano VENDE DURANTE UN CROLLO IMPROVVISO !
                     
                     elif (
-                        
-                        ma2_last < ma2_2_min_ago
-                        and ma2_last < ma4_last
+                   
+                        ma2_last < ma4_last
+                        and ma2_last < ma6_last
                         and deviation < -0.58
                   
                     ):    
@@ -7181,14 +7180,13 @@ class maddog:
                 # 2 - ro cano VENDE DURANTE UN CROLLO IMPROVVISO !
                 
                 elif (
-                        
-                        ma2_last < ma2_2_min_ago
-                        and ma2_last < ma4_last
+                        ma2_last < ma4_last
+                        and ma2_last < ma6_last
                         and deviation < -0.58
-                  
+                
                     ):    
                         
-                        sell = "SELL 4-5-x CROLLO IMPROVVISO - riga 3072"
+                        sell = "SELL 4-5-x CROLLO IMPROVVISO - riga 7190"
                         action = "sell"
                 
                 
