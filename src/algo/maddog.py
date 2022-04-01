@@ -7180,14 +7180,14 @@ class maddog:
                 # 2 - ro cano VENDE DURANTE UN CROLLO IMPROVVISO !
                 
                 elif (
-                        ma2_last < ma4_last
-                        and ma2_last < ma6_last
-                        and deviation < -0.58
+                    ma2_last < ma4_last
+                    and ma2_last < ma6_last
+                    and deviation < -0.58
                 
-                    ):    
+                ):    
                         
-                        sell = "SELL 4-5-x CROLLO IMPROVVISO - riga 7190"
-                        action = "sell"
+                    sell = "SELL 4-5-x CROLLO IMPROVVISO - riga 7190"
+                    action = "sell"
                 
                 
                     # con -0.59 il 6 feb 2022 ha fatto -0.85
