@@ -3308,9 +3308,17 @@ class maddog:
                     
                     
 
-                    # 2 - ro cano VENDE DURANTE UN CROLLO IMPROVVISO !
+                    # 2 - ro cano VENDE DURANTE UN CROLLO IMPROVVISO ! che dava problemi quando il prezzo ! andava molto sopra ma4 durante un trend rialzista !
+                    # spero di aver risolto aggiungendo per precauzione queste altre 2 righe
                     
-                    elif deviation < -0.62:
+                    elif (
+                        
+                        ma2_last < ma2_2_min_ago
+                        and ma2_last < ma4_last
+                        and deviation < -0.62
+                  
+                    ):    
+                        
                         sell = "SELL 1 CROLLO IMPROVVISO - riga 3072"
                         action = "sell"
 
@@ -4557,10 +4565,18 @@ class maddog:
                         
 
                     # 2 - ro cano VENDE DURANTE UN CROLLO IMPROVVISO !
-            
-                    elif deviation < -0.62:
-                        sell = "SELL 2 CROLLO IMPROVVISO - riga 4306"
+                    
+                    elif (
+                        
+                        ma2_last < ma2_2_min_ago
+                        and ma2_last < ma4_last
+                        and deviation < -0.62
+                  
+                    ):    
+                        
+                        sell = "SELL 2 CROLLO IMPROVVISO - riga 4577"
                         action = "sell"
+                    
 
                         # deviation = ma4_last / last_trade_price
                         # FORSE E' L' UNICA DEVIATION CHE MI POTRA' SALVARE DA UN CROLLO IMPROVVISO COME QUELLO DEL 3 NOVEMBRE 2021
@@ -5923,11 +5939,18 @@ class maddog:
                         
 
                     # 2 - ro cano VENDE DURANTE UN CROLLO IMPROVVISO !
-            
-                    elif deviation < -0.58:
                     
-                        sell = "SELL 3 CROLLO IMPROVVISO < -0.58 - riga 5669"
+                    elif (
+                        
+                        ma2_last < ma2_2_min_ago
+                        and ma2_last < ma4_last
+                        and deviation < -0.58
+                  
+                    ):    
+                        
+                        sell = "SELL 3 CROLLO IMPROVVISO - riga 5951"
                         action = "sell"
+                    
                 
                         # con -0.59 il 6 feb 2022 ha fatto -0.85
                         # con -0.62 il 4 feb 2022 ha fatto -0.89%
@@ -7156,11 +7179,18 @@ class maddog:
                         
 
                 # 2 - ro cano VENDE DURANTE UN CROLLO IMPROVVISO !
-            
-                elif deviation < -0.58:
-                    
-                    sell = "SELL 4-5-x CROLLO IMPROVVISO < -0.58 - riga 6853"
-                    action = "sell"
+                
+                elif (
+                        
+                        ma2_last < ma2_2_min_ago
+                        and ma2_last < ma4_last
+                        and deviation < -0.58
+                  
+                    ):    
+                        
+                        sell = "SELL 4-5-x CROLLO IMPROVVISO - riga 3072"
+                        action = "sell"
+                
                 
                     # con -0.59 il 6 feb 2022 ha fatto -0.85
                     # con -0.62 il 4 feb 2022 ha fatto -0.89%
