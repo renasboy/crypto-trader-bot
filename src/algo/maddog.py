@@ -571,13 +571,13 @@ class maddog:
                     
                     
                     
-                # ------------------------------------------------------------ BUY 1 se ma200> and ma300> and 13>50   
+                # ------------------------------------------------------------ BUY 1 se ma200> and ma300> and 8>50   
                 
                 elif (    
                     ma20_last > ma200_last
                     and ma200_last > ma200_120_min_ago
                     and ma300_last > ma300_120_min_ago
-                    and ma13_last > ma50_last
+                    and ma8_last > ma50_last
                 ):  
                 
                     buy = "BUY 1 con 20>200 and 69 > 100 and deviation_bellissima > 0.14 riga 509"
