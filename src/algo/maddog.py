@@ -838,10 +838,10 @@ class maddog:
           
                 ########################################################################################################################### ATTENZIONE !
                 
-                # piccola CORREZIONE FIAT
-                # grande CORREZIONE AUDI
-                # RIBASSO MASERATI
-                # CROLLO FERRARI
+                # BUY piccola CORREZIONE FIAT
+                # BUY grande CORREZIONE AUDI
+                # BUY RIBASSO MASERATI
+                # BUY CROLLO FERRARI
                 
                 ########################################################################################################################### ATTENZIONE !
                 
@@ -3436,9 +3436,8 @@ class maddog:
                     ):
                         sell = "SELL 1 RIBASSO IMPROVVISO - riga 3141"
                         action = "sell"
+                        
                 
-            
-            
                     # 7 - RIBASSO IMPROVVISO
                 
                     elif (
@@ -3448,6 +3447,23 @@ class maddog:
                     ):
                         sell = "SELL 1 RIBASSO IMPROVVISO - riga 3153"
                         action = "sell"
+                        
+                        
+                        
+                    # 7 - VENDITA FIAT se > 20 min dal BUY FIAT la perdita < -0.30
+                    
+                    elif (     
+                        seconds_since_last_trade > max_hold_time_in_seconds_fiat
+                        and deviation_buy_crollo_1 < -0.33
+                        and deviation_buy_crollo_1 > -0.59
+                        and deviation < -0.30
+                        and ma2_last < ma2_2_min_ago
+                    
+                    ):    
+                        buy = "BUY 2 che considera il passare del tempo - riga 3461"
+                        action = "sell"
+                        
+                    
                
             ########################################################################################################################### SESSIONE 2
             
