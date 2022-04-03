@@ -84,6 +84,7 @@ class maddog:
         ma78_5_min_ago = self.algo_helper.ma_minutes_ago(78, 5)
         ma78_7_min_ago = self.algo_helper.ma_minutes_ago(78, 7)
         ma78_30_min_ago = self.algo_helper.ma_minutes_ago(78, 30)
+        ma100_10_min_ago = self.algo_helper.ma_minutes_ago(100, 10)
         ma100_60_min_ago = self.algo_helper.ma_minutes_ago(100, 60)
         ma200_15_min_ago = self.algo_helper.ma_minutes_ago(200, 15)
         ma200_20_min_ago = self.algo_helper.ma_minutes_ago(200, 20)
@@ -215,6 +216,12 @@ class maddog:
         ######################################################################
         
         # ESPERIMENTO !
+        
+        # formula DEVIATION_ma200_sotto_ma300 per comprare
+        
+        deviation_ma200_sotto_ma300 = (ma200_last / ma300_last - 1) * 100 if ma300_last else 0
+        self.algo_helper.info("deviation_ma200_sotto_ma300: {}".format(deviation_ma200_sotto_ma300))
+        
         
         # formula DEVIATION_ma5_sotto_ma200 per comprare FINO a una certa distanza da ma200
         
@@ -950,7 +957,7 @@ class maddog:
                     and deviation_buy_crollo_1 > -0.90
                   
                 ):
-                    buy = "BUY 1 grande CORREZIONE AUDI che NON E' un grande ribasso e NON E' un crollo ! con deviation trend ma200 - riga 892"
+                    buy = "BUY 1 grande CORREZIONE AUDI che NON E' un grande ribasso e NON E' un crollo ! con deviation trend ma200 - riga 960"
                     action = "buy"
                     percentage = 20
                     
@@ -959,8 +966,37 @@ class maddog:
                     # deviation_trend_ma200 = ma200_last / ma200_120_min_ago
                     # compare prega per me !
                     
-               
-               
+                    
+                
+                
+                # BUY 1 copia r701 RCCR - CORREZIONE FIAT che non e' correzione AUDI non e' un grande ribasso MASERATI e non e' un crollo FERRARI !
+                
+                # copia della riga 701 del RCCR CHE FUNZIONA BENISSIMO ma piu' prudente !
+                
+                elif (    
+                    deviation_buy_crollo_1 < -0.29
+                    and deviation_buy_crollo_1 > -0.59
+                    and deviation_correzione > 0.025
+                    
+                    and ma200_last < ma300_last
+                    and ma20_last < ma100_last
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma200_sotto_ma300 < -0.27
+                    and ma2_last > ma2_2_min_ago
+                ):
+                    buy = "BUY 1 copia r701 RCCR - CORREZIONE FIAT che non e' un grande ribasso e non e' un crollo ! con deviation_correzione > 0.02 - riga 987"
+                    action = "buy"
+                    percentage = 20
+                    
+                    # deviation_buy_crollo_1 = ma8_last / ma78_last
+                    # deviation_correzione = ma3_last / ma25_last
+                    
+                    # compare prega per me !
+                  
+                    
+                    
+                    
+                    
                 # copia della riga 530 del RCCR CHE FUNZIONA BENISSIMO ma solo un po' piu' prudente ! - BUY grande ribasso MASERATI CHE NON E' UN CROLLO !
                 
                 elif (
@@ -1476,6 +1512,7 @@ class maddog:
                     # compa prega per me !
            
             ############################################################################################################ COMPRA sessione 3
+            # forse dal BUY 3 in poi (o dal BUY 4 in poi) ma100 DEVE ESSERE > !
             
 
             elif self.session == 3:
