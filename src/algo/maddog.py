@@ -2683,7 +2683,7 @@ class maddog:
                 
                 
                 
-                ################################################################################################################################## SESSIONE 1 ( 21-60 min )
+                ################################################################################################################# SESSIONE 1 ( 21-60 min )
 
                 # VENDITA - da 21 a 60 minuti = da 1261 a 3600 secondi
 
@@ -2961,14 +2961,14 @@ class maddog:
                     elif (
                         ma50_last < ma50_2_min_ago
                         and (ma3_prev > ma18_prev and ma3_last < ma18_last)
-                        and deviation_sell < -0.18
+                        and deviation_sell < -0.24
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 piccola perdita durante il crollo (21-60 min) con ma50 < incrocio 3 - 18 and deviation_sell < -0.18 - riga 2685"
+                        sell = "SELL 1 piccola perdita durante il crollo (21-60 min) con ma50 < incrocio 3 - 18 and deviation_sell < -0.24 - riga 2685"
                         action = "sell"
                         
               
-                ##############################################################################################################################  SESSIONE 1 ( da 60 a 90 min )
+                #############################################################################################################  SESSIONE 1 ( da 60 a 90 min )
 
                 # VENDITA - da 60 a 90 min - da 3600 a 5400 secondi in poi
                 
