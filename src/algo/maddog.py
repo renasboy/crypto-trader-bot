@@ -886,15 +886,15 @@ class maddog:
                     # and ma3_last > ma69_last SOLTANTO con ma300> va bene anche senza ma sembra che STATISTICAMENTE produce una alta % di piccole perdite
                     
                 
-                
+                # ATTENZIONE !
                 # questa condizione che e' una condizione NECESSARIA FUNZIONALE E BUONA compra un po' troppo presto.
                 # allora la divido in 2 !
                 # la prima e' proprio uguale all' originaria ma aumento solo la ma per la vendita 5-50 da 5-39
                 # la seconda e' uguale proprio ma le dico che deve stare a una certa distanza da ma200 ( cioe' tenta di prendere solo il secondo tentativo )
                 
                 
-                # BUY 1 piccola CORREZIONE FIAT 5-50 che NON E' un grande ribasso e NON E' un crollo !
                 
+                # BUY 1 piccola CORREZIONE FIAT 5-50 che NON E' un grande ribasso e NON E' un crollo !
                 
                 elif (
                     ma2_last > ma2_2_min_ago
@@ -904,7 +904,7 @@ class maddog:
                     and deviation_buy_crollo_1 > -0.59
                 ): 
             
-                    buy = "BUY 1 piccola CORREZIONE FIAT 5-50 che NON E' un grande ribasso e NON E' un crollo ! - riga 832"
+                    buy = "BUY 1 piccola CORREZIONE FIAT 5-50 che NON E' un grande ribasso e NON E' un crollo ! - riga 907"
                     action = "buy"
                     percentage = 10
                     
@@ -916,13 +916,13 @@ class maddog:
                 elif (
                     ma2_last > ma2_2_min_ago
                     and ma5_last > ma39_last
-                    and deviation_ma5_sotto_ma200 < -0.80
+                    and deviation_ma5_sotto_ma200 < -0.85
                     
                     and deviation_ma8_sotto_ma100 < -0.50
                     and deviation_buy_crollo_1 > -0.59
                 ): 
             
-                    buy = "BUY 1 piccola CORREZIONE FIAT 5-39 ma con ma5 piu' distante da ma200 che NON E' un grande ribasso e NON E' un crollo ! - riga 832"
+                    buy = "BUY 1 piccola CORREZIONE FIAT 5-39 ma con ma5 piu' distante da ma200 che NON E' un grande ribasso e NON E' un crollo ! - riga 925"
                     action = "buy"
                     percentage = 10
                     
