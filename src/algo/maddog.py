@@ -946,7 +946,7 @@ class maddog:
                     
                 ):
 
-                    buy = "BUY 1 con ma200< e ma300< piccola CORREZIONE FIAT che NON E'una grande correzione e NON E' un grande ribasso e NON E' un crollo -r 852"
+                    buy = "BUY 1 con ma200< e ma300< piccola CORREZIONE FIAT che NON E'una grande correzione e NON E' un grande ribasso e NON E' un crollo - r 852"
                     action = "buy"
                     percentage = 10
 
@@ -955,7 +955,7 @@ class maddog:
          
               
                 
-                # BUY 1 grande CORREZIONE AUDI che NON E' una piccola CORREZIONE BICICLETTA che NON E' un grande ribasso e NON E' un crollo !)
+                # BUY 1 grande CORREZIONE AUDI che NON E' una piccola CORREZIONE FIAT che NON E' un grande ribasso MASERATI e NON E' un crollo FERRARI !)
                 
                 elif (
                     ma2_last > ma2_2_min_ago
@@ -966,7 +966,7 @@ class maddog:
                     and deviation_buy_crollo_1 > -0.90
                   
                 ):
-                    buy = "BUY 1 grande CORREZIONE AUDI che NON E' un grande ribasso e NON E' un crollo ! + deviation_correzione> 0.02 - riga 872"
+                    buy = "BUY 1 grande CORREZIONE AUDI che NON E' una piccola CORREZIONE FIAT e NON E' un grande ribasso MASERATI e NON E' un crollo FERRARI ! + deviation_correzione> 0.02 - riga 872"
                     action = "buy"
                     percentage = 20
                     
@@ -975,7 +975,7 @@ class maddog:
                     
               
               
-                # BUY 1 grande CORREZIONE AUDI che NON E' una piccola correzione e NON E' un grande ribasso e NON E' un crollo ! con deviation trend ma200 
+                # BUY 1 grande CORREZIONE AUDI che NON E' una piccola correzione FIAT e NON E' un grande ribasso MASERATI e NON E' un crollo FERRARI ! con deviation trend ma200 
                 
                 elif (
                     ma2_last > ma2_2_min_ago
@@ -986,7 +986,7 @@ class maddog:
                     and deviation_buy_crollo_1 > -0.90
                   
                 ):
-                    buy = "BUY 1 grande CORREZIONE AUDI che NON E' un grande ribasso e NON E' un crollo ! con deviation trend ma200 - riga 960"
+                    buy = "BUY 1 grande CORREZIONE AUDI che NON E' un grande ribasso MASERATI e NON E' un crollo FERRARI ! con deviation trend ma200 - riga 960"
                     action = "buy"
                     percentage = 20
                     
@@ -998,7 +998,7 @@ class maddog:
                     
                 
                 
-                # BUY 1 copia r701 RCCR - CORREZIONE FIAT che non e' correzione AUDI non e' un grande ribasso MASERATI e non e' un crollo FERRARI !
+                # BUY 1 copia r701 RCCR - PICCOLA CORREZIONE FIAT che non e' grande correzione AUDI non e' un grande ribasso MASERATI e non e' un crollo FERRARI !
                 
                 # copia della riga 701 del RCCR CHE FUNZIONA BENISSIMO ma piu' prudente !
                 
@@ -1013,7 +1013,7 @@ class maddog:
                     and deviation_ma200_sotto_ma300 < -0.27
                     and ma2_last > ma2_2_min_ago
                 ):
-                    buy = "BUY 1 copia r701 RCCR - CORREZIONE FIAT che non e' un grande ribasso e non e' un crollo ! con deviation_correzione > 0.02 - riga 987"
+                    buy = "BUY 1 copia r701 RCCR - PICCOLA CORREZIONE FIAT che non e' una grande correzione AUDI e che non e' un grande ribasso MASERATI e non e' un crollo FERRARI ! con deviation_correzione > 0.02 - riga 987"
                     action = "buy"
                     percentage = 20
                     
@@ -3478,8 +3478,9 @@ class maddog:
                         action = "sell"
                         
                         
+                    ######################################################################### vendite dedicate al BUY FIAT - AUDI - MASERATI - FERRARI    
                         
-                    # 7 - VENDITA FIAT se > 20 min dal BUY FIAT la perdita < -0.30
+                    # 8 - SELL 1 FIAT se > 20 min dal BUY FIAT la perdita e' < -0.30
                     
                     elif (     
                         seconds_since_last_trade > max_hold_time_in_seconds_fiat
@@ -3489,11 +3490,61 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                     
                     ):    
-                        buy = "BUY 2 che considera il passare del tempo - riga 3461"
+                        buy = "SELL 1 FIAT se > 20 min dal BUY FIAT la perdita e' < -0.30 - riga 3493"
                         action = "sell"
                         
+                        
+                        
+                        
+                    # 9 - SELL 1 AUDI se > 20 min dal BUY AUDI la perdita e' < -0.35
                     
-               
+                    elif (     
+                        seconds_since_last_trade > max_hold_time_in_seconds_audi
+                        and deviation_buy_crollo_1 < -0.60
+                        and deviation_buy_crollo_1 > -0.90
+                        and deviation < -0.35
+                        and ma2_last < ma2_2_min_ago
+                    
+                    ):    
+                        buy = "SELL 1 AUDI se > 20 min dal BUY AUDI la perdita e' < -0.35 - riga 3507"
+                        action = "sell"
+                        
+                        
+                        
+                        
+                    # 10 - SELL 1 MASERATI se > 20 min dal BUY MASERATI la perdita e' < -0.40
+                    
+                    elif (     
+                        seconds_since_last_trade > max_hold_time_in_seconds_maserati
+                        and deviation_buy_crollo_1 < -0.91
+                        and deviation_buy_crollo_1 > -1.50
+                        and deviation < -0.40
+                        and ma2_last < ma2_2_min_ago
+                    
+                    ):    
+                        buy = "SELL 1 MASERATI se > 20 min dal BUY MASERATI la perdita e' < -0.40 - riga 3524"
+                        action = "sell"
+                        
+                        
+                        
+                        
+                    # 11 - SELL 1 FERRARI se > 20 min dal BUY FERRARI la perdita e' < -0.45
+                    
+                    elif (     
+                        seconds_since_last_trade > max_hold_time_in_seconds_ferrari
+                        and deviation_buy_crollo_1 < -1.51
+                        and deviation < -0.45
+                        and ma2_last < ma2_2_min_ago
+                    
+                    ):    
+                        buy = "SELL 1 FERRARI se > 20 min dal BUY FERRARI la perdita e' < -0.45 - riga 3541"
+                        action = "sell"
+                        
+                        
+                        
+                        # OGGI 5 APRILE 2022
+                        
+            
             ########################################################################################################################### SESSIONE 2
             
             # ALLA SESSIONE 2 MANCAva UN ACQUISTO DURANTE IL CROLLO SE PER ES SESSIONE 1 HA GIA' VENDUTO MA IL TITOLO RESTA IN IPERVENDUTO
