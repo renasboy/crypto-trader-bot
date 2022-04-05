@@ -64,6 +64,7 @@ class maddog:
         ma13_2_min_ago = self.algo_helper.ma_minutes_ago(13, 2)
         ma13_10_min_ago = self.algo_helper.ma_minutes_ago(13, 10)
         ma20_2_min_ago = self.algo_helper.ma_minutes_ago(20, 2)
+        ma20_60_min_ago = self.algo_helper.ma_minutes_ago(20, 60)
         ma25_2_min_ago = self.algo_helper.ma_minutes_ago(25, 2)
         
         ma30_10_min_ago = self.algo_helper.ma_minutes_ago(30, 10)
@@ -327,6 +328,11 @@ class maddog:
         
         deviation_range_x = (ma30_last / ma30_20_min_ago - 1) * 100 if ma30_20_min_ago else 0
         self.algo_helper.info("deviation_range_x: {}".format(deviation_range_x))
+        
+        # formula deviation_ma20_laterale
+        
+        deviation_ma20_laterale = (ma20_last / ma20_60_min_ago - 1) * 100 if ma20_60_min_ago else 0
+        self.algo_helper.info("deviation_ma20_laterale: {}".format(deviation_ma20_laterale))
         
         
         
@@ -863,7 +869,7 @@ class maddog:
                     percentage = 10
                     
                 
-                # BUY 1 con ma300 > piccola CORREZIONE FIAT che NON E' un forte ribasso e NON E' un crollo ! (compare stammi vicino!)
+                # BUY 1 con ma300 > piccola CORREZIONE FIAT che NON E' una grande correzione AUDI e non e' un forte ribasso MASERATI e NON E' un crollo FERRARI ! (compare stammi vicino!)
               
                 elif (
 
@@ -875,7 +881,7 @@ class maddog:
                     and ma5_last > ma72_last
                 ):
 
-                    buy = "BUY 1 con ma300 > piccola CORREZIONE FIAT che NON E' un forte ribasso e NON E' un crollo ! - riga 810"
+                    buy = "BUY 1 con ma300 > piccola CORREZIONE FIAT che NON E' una grande correzione AUDI e non e' un forte ribasso MASERATI e NON E' un crollo FERRARI ! - riga 810"
                     action = "buy"
                     percentage = 10
 
@@ -886,15 +892,41 @@ class maddog:
                     # and ma3_last > ma69_last SOLTANTO con ma300> va bene anche senza ma sembra che STATISTICAMENTE produce una alta % di piccole perdite
                     
                 
+                
+                
                 # ATTENZIONE !
                 # questa condizione che e' una condizione NECESSARIA FUNZIONALE E BUONA compra un po' troppo presto.
-                # allora la divido in 2 !
-                # la prima e' proprio uguale all' originaria ma aumento solo la ma per la vendita 5-50 da 5-39
-                # la seconda e' uguale proprio ma le dico che deve stare a una certa distanza da ma200 ( cioe' tenta di prendere solo il secondo tentativo )
+                # allora la divido in 3 !
+                
+                # la prima e' proprio uguale all' originaria ma aumento solo la ma da 5-39 a 5-100 
+                # la seconda e' proprio uguale all' originaria ma aumento solo la ma da 5-39 a 5-50
+                # la terza e' uguale proprio ma le dico che deve stare a una certa distanza da ma200 ( cioe' tenta di prendere solo il secondo tentativo )
                 
                 
+                # BUY 1 piccola CORREZIONE FIAT che non e' una grande correzione AUDI e non e' un forte ribasso MASERATI e non e' un crollo FERRARI !
                 
-                # BUY 1 piccola CORREZIONE FIAT 5-50 che NON E' un grande ribasso e NON E' un crollo !
+                elif (
+                    
+                    deviation_buy_crollo_1 < -0.29
+                    and deviation_buy_crollo_1 > -0.59
+                    and deviation_correzione > 0.02
+                    and ma5_last > ma100_last
+                    and deviation_ma20_laterale > -0.15
+                    and ma2_last > ma2_2_min_ago
+                ):
+                    buy = "BUY 1 piccola CORREZIONE FIAT che non e' una grande correzione AUDI e non e' un forte ribasso MASERATI e non e' un crollo FERRARI ! - riga 701"
+                    action = "buy"
+                    percentage = 20
+                    
+                    # deviation_buy_crollo_1 = ma8_last / ma78_last
+                    # deviation_correzione = ma3_last / ma25_last
+                    # deviation_ma20_laterale > -0.15 cioe' ma20 ( una ma di breve termine) da ben 60 minuti non perde un cazzo !
+                    
+                    # compare prega per me !
+                    
+                    
+                    
+                # BUY 1 piccola CORREZIONE FIAT 5-50 che NON E' una grande correzione e non e' un grande ribasso e NON E' un crollo !
                 
                 elif (
                     ma2_last > ma2_2_min_ago
@@ -904,7 +936,7 @@ class maddog:
                     and deviation_buy_crollo_1 > -0.59
                 ): 
             
-                    buy = "BUY 1 piccola CORREZIONE FIAT 5-50 che NON E' un grande ribasso e NON E' un crollo ! - riga 907"
+                    buy = "BUY 1 piccola CORREZIONE FIAT 5-50 che NON E' una grande correzione e non e' un grande ribasso e NON E' un crollo ! - riga 907"
                     action = "buy"
                     percentage = 10
                     
@@ -3439,6 +3471,8 @@ class maddog:
                         # il fattore tempo - la dolce attesa - solo con trend ribassista
                         # deviation = ma2_last / last_trade_price
                         # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
+                        
+                        
                 
                     # 5 - ro cano VENDE " DOPO x MINUTI " and...
                     
@@ -4792,9 +4826,9 @@ class maddog:
        
                         sell = "SELL 2 RIBASSO IMPROVVISO - riga 4380"
                         action = "sell"
+                    
             
-            
-            
+                    
                     # 7 - RIBASSO IMPROVVISO attenzione! ma2 arriva tardi !
             
                     elif (
@@ -4806,6 +4840,73 @@ class maddog:
        
                         sell = "SELL 2 RIBASSO IMPROVVISO - riga 4394"
                         action = "sell"
+            
+                    ######################################################################### vendite dedicate al BUY FIAT - AUDI - MASERATI - FERRARI    
+                        
+                    # 8 - SELL 2 FIAT se > 20 min dal BUY FIAT la perdita e' < -0.30
+                    
+                    elif (     
+                        seconds_since_last_trade > max_hold_time_in_seconds_fiat
+                        and deviation_buy_crollo_1 < -0.33
+                        and deviation_buy_crollo_1 > -0.59
+                        and deviation < -0.30
+                        and ma2_last < ma2_2_min_ago
+                    
+                    ):    
+                        buy = "SELL 2 FIAT se > 20 min dal BUY FIAT la perdita e' < -0.30 - riga 4856"
+                        action = "sell"
+                        
+                        
+                        
+                        
+                    # 9 - SELL 2 AUDI se > 20 min dal BUY AUDI la perdita e' < -0.35
+                    
+                    elif (     
+                        seconds_since_last_trade > max_hold_time_in_seconds_audi
+                        and deviation_buy_crollo_1 < -0.60
+                        and deviation_buy_crollo_1 > -0.90
+                        and deviation < -0.35
+                        and ma2_last < ma2_2_min_ago
+                    
+                    ):    
+                        buy = "SELL 2 AUDI se > 20 min dal BUY AUDI la perdita e' < -0.35 - riga 4872"
+                        action = "sell"
+                        
+                        
+                        
+                        
+                    # 10 - SELL 2 MASERATI se > 20 min dal BUY MASERATI la perdita e' < -0.40
+                    
+                    elif (     
+                        seconds_since_last_trade > max_hold_time_in_seconds_maserati
+                        and deviation_buy_crollo_1 < -0.91
+                        and deviation_buy_crollo_1 > -1.50
+                        and deviation < -0.40
+                        and ma2_last < ma2_2_min_ago
+                    
+                    ):    
+                        buy = "SELL 2 MASERATI se > 20 min dal BUY MASERATI la perdita e' < -0.40 - riga 4888"
+                        action = "sell"
+                        
+                        
+                        
+                        
+                    # 11 - SELL 2 FERRARI se > 20 min dal BUY FERRARI la perdita e' < -0.45
+                    
+                    elif (     
+                        seconds_since_last_trade > max_hold_time_in_seconds_ferrari
+                        and deviation_buy_crollo_1 < -1.51
+                        and deviation < -0.45
+                        and ma2_last < ma2_2_min_ago
+                    
+                    ):    
+                        buy = "SELL 2 FERRARI se > 20 min dal BUY FERRARI la perdita e' < -0.45 - riga 4903"
+                        action = "sell"
+                        
+                        
+                        
+                        # OGGI 5 APRILE 2022
+                    
                 
                 
 
