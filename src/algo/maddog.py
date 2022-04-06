@@ -1084,7 +1084,7 @@ class maddog:
                     ma2_last > ma2_2_min_ago
                     and deviation_buy_crollo_1 < -0.91
                     and deviation_buy_crollo_1 > -1.50
-                    and ma3_last > ma30_last
+                    and ma3_last > ma28_last
                 ):
                     buy = "BUY 1 GRANDE RIBASSO MASERATI CHE NON E' UN CROLLO ! and deviation_bellissima > 0.012- riga 929"
                     action = "buy"
