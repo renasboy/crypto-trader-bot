@@ -1580,6 +1580,7 @@ class maddog:
 
                 if (
                     ma69_last >= ma69_2_min_ago
+                    and ma200_last > ma200_60_min_ago
                     and deviation > -0.30
                     
                     and deviation_buy3 > 0.12
@@ -1594,14 +1595,43 @@ class maddog:
                     and ma7_last > ma25_last
                 ):  
                 
-                    buy = "BUY 3A con ma78 > riga 1370"
+                    buy = "BUY 3A con ma69 > MA ma200 sale da 60 min - riga 1598"
                     action = "buy"
                     percentage = 50
 
                     # deviation_buy3 = ma4_last/ma30_last
                     # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
                     
-               
+                    
+                    
+                    
+                elif (
+                    ma69_last >= ma69_2_min_ago
+                    and ma200_last < ma200_60_min_ago
+                    and deviation_bellissima > 0.37
+                    and deviation > -0.30
+                    
+                    and deviation_buy3 > 0.12
+                    and deviation_ma4_sopra_ma30 > 0.12
+                    and ma3_last > ma13_last
+                    and deviation_ma7_sopra_ma40 > 0.08
+                    and ma4_last > ma9_last
+                    and deviation_ma4_sopra_ma30 > 0.12
+                    and deviation_buy_ma2_sopra_ma13 > 0.10
+                    and ma4_last > ma50_last
+                    and ma2_last > ma2_2_min_ago
+                    and ma7_last > ma25_last
+                ):  
+                
+                    buy = "BUY 3A con ma69 > MA ma200 scende da 60 min ! - riga 1626"
+                    action = "buy"
+                    percentage = 50
+                    
+                    
+                    
+                    
+                    
+                    
                 elif (
                     deviation_buy3 > 0.02
                     and deviation > -0.30
@@ -1667,8 +1697,11 @@ class maddog:
                     
                     
                     # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
+                    
+                    
                   
                     
+                # BUY 3 PAZZA piccola CORREZIONE FIAT
                 
                 elif (
                     ma2_last > ma2_2_min_ago
@@ -1682,7 +1715,7 @@ class maddog:
                     
                 ):
 
-                    buy = "BUY 3A PAZZA piccola CORREZIONE FIAT che non e' un forte ribasso e non e' un crollo ! con deviation_correzione > 0.02 - riga 1445"
+                    buy = "BUY 3 PAZZA piccola CORREZIONE FIAT che non e' un forte ribasso e non e' un crollo ! con deviation_correzione > 0.02 - riga 1445"
                     action = "buy"
                     percentage = 10
 
