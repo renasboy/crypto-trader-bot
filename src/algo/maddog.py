@@ -4473,15 +4473,18 @@ class maddog:
                         action = "sell"
                         
                     
-                    ######################################################################################## con trend discendente
+                    ######################################################################################## trend discendente con PERDITA BASE
+                    
                     
                     elif (
                         ma50_last < ma50_2_min_ago
+                        and ma100_last < ma100_60_min_ago
+                        
                         and deviation_ma39 < -0.17
                         and deviation_sell < 0.10
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 2 da 60 a 90 min con ma50 < con deviation_ma39 <-0.17 and deviation_sell < 0.10 (no ma3<ma33) (NO INCROCIO!) - riga 4046"
+                        sell = "SELL 2 da 60 a 90 min TREND < con PERDITA BASE con ma50 < con deviation_ma39 <-0.17 and deviation_sell < 0.10 - riga 4487"
                         action = "sell"
                         
                         # and ma3_last < ma39_last
@@ -4495,27 +4498,61 @@ class maddog:
 
                     elif (
                         ma50_last < ma50_2_min_ago
+                        and ma100_last < ma100_60_min_ago
                         and (ma3_prev > ma78_prev and ma3_last < ma78_last)
                         and deviation_sell < -0.13
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 2 da 60 a 90 min con ma50 < con incrocio 3-78 and deviation_sell < -0.13 - riga 4064"
+                        sell = "SELL 2 TREND < con PERDITA BASE da 60 a 90 min con ma50 < con incrocio 3-78 and deviation_sell < -0.13 - riga 4506"
+                        action = "sell"
+                        
+                        
+                        
+                    ######################################################################################## trend discendente con POCA PERDITA TOLLERATA  
+                    
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and ma100_last > ma100_60_min_ago
+                        and deviation_ma39 < -0.18
+                        and deviation_sell < 0.05
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 2 da 60 a 90 min TREND < con POCA PERDITA TOLLERATA con ma50 < con deviation_ma39 <-0.17 and deviation_sell < 0.05 - riga 4520"
+                        action = "sell"
+                        
+                        # and ma3_last < ma39_last
+                        # and deviation_sell < 0.10
+                        # se non ha forza dopo 1 ora e' inutile continuare a sperare ! POI STIAMO GIA' AL SELL 2 -le ma hanno avuto piu' tempo di salire
+                        # qui non ho messo il crollo perche' dopo 40 min o gia' ha venduto o e' gia' risalita
+                        # cuscino dell' angelo custode
+                        
+                    
+                    
+
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and ma100_last > ma100_60_min_ago
+                        and (ma3_prev > ma78_prev and ma3_last < ma78_last)
+                        and deviation_sell < -0.14
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 2 da 60 a 90 min con POCA PERDITA TOLLERATA con ma50 < con incrocio 3-78 and deviation_sell < -0.14 - riga 4539"
                         action = "sell"
                         
                         
                         
                         
-                    ################################################################################## aumenta perdita tollerata
+                    ################################################################################## trend discendente con MOLTA PERDITA TOLLERATA
                     
                     elif (
                         ma50_last < ma50_2_min_ago
-                        and deviation_ma39 < -0.18
+                        and deviation_ma39 < -0.19
                         
-                        and deviation_trend_ma200 > -0.10
+                        and deviation_trend_ma200 > -0.12
                         and ma200_last > ma300_last
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 2 da 60 a 90 min con ma50 < con deviation_ma39 < -0.18 AUMENTA PERDITA TOLLERATA - riga 4080"
+                        sell = "SELL 2 da 60 a 90 min con MOLTA PERDITA TOLLERATA con ma50 < con deviation_ma39 < -0.19 - riga 4555"
                         action = "sell"
                         
                         # and ma3_last < ma33_last
@@ -4530,13 +4567,13 @@ class maddog:
                     elif (
                         ma50_last < ma50_2_min_ago
                         and (ma3_prev > ma78_prev and ma3_last < ma78_last)
-                        and deviation_sell < -0.13
+                        and deviation_sell < -0.15
                         
-                        and deviation_trend_ma200 > -0.10
+                        and deviation_trend_ma200 > -0.12
                         and ma200_last > ma300_last
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 2 da 60 a 90 min con ma50 < con incrocio 3-78 and deviation_sell < -0.13 AUMENTA PERDITA TOLLERATA - riga 4101"
+                        sell = "SELL 2 da 60 a 90 min con MOLTA PERDITA TOLLERATA con ma50 < con incrocio 3-78 and deviation_sell < -0.15 - riga 4576"
                         action = "sell"
                         
                         
@@ -4545,7 +4582,7 @@ class maddog:
                         
                        
                 
-                ################################################################################################################################# SESSIONE 2 ( > 90 min )
+                ############################################################################################################################ SESSIONE 2 ( > 90 min )
 
                 # VENDITA 2 - da 90 minuti in poi = da 5400 secondi in poi
 
