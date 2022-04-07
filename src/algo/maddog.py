@@ -55,6 +55,7 @@ class maddog:
         ma3_2_min_ago = self.algo_helper.ma_minutes_ago(3, 2)
         ma3_3_min_ago = self.algo_helper.ma_minutes_ago(3, 3)
         ma3_9_min_ago = self.algo_helper.ma_minutes_ago(3, 9)
+        ma3_20_min_ago = self.algo_helper.ma_minutes_ago(3, 20)
         ma4_2_min_ago = self.algo_helper.ma_minutes_ago(4, 2)
         ma5_2_min_ago = self.algo_helper.ma_minutes_ago(5, 2)
         ma4_4_min_ago = self.algo_helper.ma_minutes_ago(4, 4)
@@ -192,6 +193,38 @@ class maddog:
         
         deviation = (ma4_last / last_trade_price - 1) * 100 if last_trade_price else 0
         self.algo_helper.info("deviation: {}".format(deviation))
+        
+        
+        
+      
+        
+        # formula delta_1
+        
+        delta_1 = (ma200_last / ma100_last - 1) * 100 if ma100_last else 0
+        self.algo_helper.info("delta_1: {}".format(delta_1))
+        
+        
+        # formula delta_2
+        
+        delta_2 = (ma200_60_min_ago / ma100_60_min_ago - 1) * 100 if ma100_60_min_ago else 0
+        self.algo_helper.info("delta_2: {}".format(delta_2))
+        
+        
+        # formula differenza_delta_1_delta_2
+        
+        differenza_delta_1_delta_2 = (delta_1 / delta_2 - 1) * 100 if delta_2 else 0
+        self.algo_helper.info("differenza_delta_1_delta_2: {}".format(differenza_delta_1_delta_2))
+        
+        
+      
+        # formula deviation_ma3
+        
+        deviation_ma3 = (ma3_last / ma3_20_min_ago - 1) * 100 if ma3_20_min_ago else 0
+        self.algo_helper.info("deviation_ma3: {}".format(deviation_ma3))
+        
+        
+        
+        
         
         
         # formula deviation trend ma200
@@ -981,9 +1014,34 @@ class maddog:
                     buy = "BUY 1 con ma200< e ma300< piccola CORREZIONE FIAT che NON E'una grande correzione e NON E' un grande ribasso e NON E' un crollo - r 852"
                     action = "buy"
                     percentage = 10
-
-                    # compare prega per me !
-                    # se ma200< e ma300< si torna alle origini ! 11-69 ! (con ma2 > ma2 2 min ago)
+                    
+                    
+                
+                
+                
+                # BUY 1 con RIBASSO VELOCE mentre la distanza tra ma100 e ma200 si sta riducendo ! USANDO UN DOPPIO DELTA ! 
+                
+                elif (
+                    deviation_ma3 < -1.30
+                    and delta_1 > 1.1
+                    and delta_2 > 1.2
+                    and differenza_delta_1_delta_2 < 0
+                    and ma3_last > ma9_last
+                ):
+                
+                    buy = "BUY 1 con RIBASSO VELOCE mentre la distanza tra ma100 e ma200 si sta riducendo ! USANDO UN DOPPIO DELTA ! - riga 1032"
+                    action = "buy"
+                    percentage = 10
+                    
+                    # compare grazie. altre parole io non ho.
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
          
               
                 
