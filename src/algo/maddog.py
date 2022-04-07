@@ -65,6 +65,7 @@ class maddog:
         ma13_2_min_ago = self.algo_helper.ma_minutes_ago(13, 2)
         ma13_10_min_ago = self.algo_helper.ma_minutes_ago(13, 10)
         ma20_2_min_ago = self.algo_helper.ma_minutes_ago(20, 2)
+        ma20_22_min_ago = self.algo_helper.ma_minutes_ago(20, 22)
         ma20_60_min_ago = self.algo_helper.ma_minutes_ago(20, 60)
         ma25_2_min_ago = self.algo_helper.ma_minutes_ago(25, 2)
         
@@ -936,7 +937,28 @@ class maddog:
                 # la terza e' uguale proprio ma le dico che deve stare a una certa distanza da ma200 ( cioe' tenta di prendere solo il secondo tentativo )
                 
                 
-                # BUY 1 piccola CORREZIONE FIAT che non e' una grande correzione AUDI e non e' un forte ribasso MASERATI e non e' un crollo FERRARI !
+                
+                
+                
+                # BUY 1 piccola CORREZIONE FIAT = r 701 RCCR ma con rischio ridotto !
+                
+                elif (
+                    
+                    deviation_buy_crollo_1 < -0.29
+                    and deviation_buy_crollo_1 > -0.59
+                    and ma13_last > ma50_last
+                    and ma20_last > ma20_22_min_ago
+                    and ma2_last > ma2_2_min_ago
+                ):    
+                
+                    buy = "BUY 1 piccola CORREZIONE FIAT = r 701 RCCR ma con rischio ridotto ! - riga 953"
+                    action = "buy"
+                    percentage = 20
+                    
+                    
+                    
+                    
+                # BUY 1 piccola CORREZIONE FIAT che non e' una grande correzione AUDI e non e' un forte ribasso MASERATI e non e' un crollo FERRARI ! - riga 701
                 
                 elif (
                     
@@ -953,7 +975,7 @@ class maddog:
                     
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     # deviation_correzione = ma3_last / ma25_last
-                    # deviation_ma20_laterale > -0.15 cioe' ma20 ( una ma di breve termine) da ben 60 minuti non perde un cazzo !
+                    # deviation_ma20_laterale > -0.15 cioe' ma20 ( una ma di breve termine) da ben 60 minuti non perde !
                     
                     # compare prega per me !
                     
