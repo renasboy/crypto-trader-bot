@@ -1037,7 +1037,7 @@ class maddog:
                 elif (    
                     deviation_buy_crollo_1 < -0.29
                     and deviation_buy_crollo_1 > -0.59
-                    and deviation_correzione > 0.025
+                    and deviation_correzione > 0.10
                     
                     and ma200_last < ma300_last
                     and ma20_last < ma100_last
@@ -2926,9 +2926,9 @@ class maddog:
                     
                     
                     elif (        
-                        ma50_last < ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_sell < -0.29)
+                        ma50_last < ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_sell < -0.34)
                     ):
-                        sell = "SELL 1 maestro parte 2 (21-60 min) con ma50 < and deviation_sell < -0.29 - riga 2559"
+                        sell = "SELL 1 maestro parte 2 (21-60 min) con ma50 < and deviation_sell < -0.34 - riga 2559"
                         action = "sell"
                         
                         
@@ -4730,34 +4730,46 @@ class maddog:
                     ######################################################################################## con trend discendente
                     
                     
-                    
                     elif (  
-                        ma50_last < ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_ma39 < -0.22)
-                    
+                        ma50_last < ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_ma39 < -0.25)
+                        and deviation_trend_ma100 > 0.10
                     ):
-                        sell = "sessione 2 SELL 2 dopo 90 min con ma50 < con deviation_ma39 <-0.16 - riga 4228"
+                        sell = "SELL 2 dopo 90 min con ma50 < MA ma100 > con deviation_ma39 <-0.25 - riga 4228"
                         action = "sell"
                         
-                        # quello che vedi e' stato discusso con il maestro
-                        
-                        
-                 
-                    
+              
                     
                     elif (    
-                        ma50_last < ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_sell < -0.18 and ma3_last < ma39_last)
-                     
+                        ma50_last < ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_sell < -0.20 and ma3_last < ma39_last)
+                        and deviation_trend_ma100 > 0.10
                     ):
-                        sell = "sessione 2 SELL 2 dopo 90 min con ma50 < and (deviation_sell < -0.18 and ma3_last < ma39_last) - riga 4241"
+                        sell = "SELL 2 dopo 90 min con ma50 < MA ma100 > and (deviation_sell < -0.20 and ma3_last < ma39_last) - riga 4241"
                         action = "sell"
                         
-                        # quello che vedi e' stato discusso con il maestro
                         
                         
                         
-                    
-                    
-                    
+                        
+                        
+                    elif (  
+                        ma50_last < ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_ma39 < -0.22)
+                        and deviation_trend_ma100 < 0.10
+                    ):
+                        sell = "SELL 2 dopo 90 min con ma50 < MA ma100 < con deviation_ma39 <-0.22 - riga 4228"
+                        action = "sell"
+                        
+                        
+                
+                 
+                    elif (    
+                        ma50_last < ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_sell < -0.18 and ma3_last < ma39_last)
+                        and deviation_trend_ma100 < 0.10
+                    ):
+                        sell = "SELL 2 dopo 90 min con ma50 < MA ma100 < and (deviation_sell < -0.18 and ma3_last < ma39_last) - riga 4241"
+                        action = "sell"
+                        
+                        
+                     
                     
                     ########################################################################################## AUMENTA PERDITA TOLLERATA e divido in 2 il compa
                     
