@@ -893,8 +893,8 @@ class maddog:
                     and ma200_last > ma200_120_min_ago
                     and deviation_buy_crollo_1 < -0.33
                     and deviation_buy_crollo_1 > -0.59
-                    and deviation_correzione > 0.017
-                    and deviation_buy_ma5_sopra_ma20 > 0.12
+                    and ma3_last > ma28_last
+                    
                 ):    
                     
                     buy = "BUY 1A con ma200> piccola CORREZIONE FIAT che non e' un forte ribasso e non e' un crollo - riga 793"
