@@ -6208,19 +6208,20 @@ class maddog:
                         
                        
                         
-                    ########################################################################################################################################### 
+                    ############################################################################################################################### 
                   
                     elif (
                         ma50_last >= ma50_2_min_ago
-                        and ma5_last < ma50_last
+                        and ma5_last < ma69_last
                         and deviation_sell > 0.25 and deviation_sell < 0.59
                         and ma2_last < ma2_2_min_ago
                        
                     ):
-                        sell = "SELL 3 (12-21 min) con ma50 > and 5-50 and deviation_sell 0.25-0.59 - FINTA ALLA MARADONA - riga 5562"
+                        sell = "SELL 3 (12-21 min) con ma50 > and 5-69 and deviation_sell 0.25-0.59 - FINTA ALLA MARADONA - riga 5562"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
+                        # al SELL 3 maradona e' ancora piu' stanco di quello che pensavo !
                         
                         
                         
