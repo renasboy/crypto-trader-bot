@@ -60,6 +60,7 @@ class maddog:
         ma5_2_min_ago = self.algo_helper.ma_minutes_ago(5, 2)
         ma4_4_min_ago = self.algo_helper.ma_minutes_ago(4, 4)
         ma6_2_min_ago = self.algo_helper.ma_minutes_ago(6, 2)
+        ma8_2_min_ago = self.algo_helper.ma_minutes_ago(8, 2)
         ma8_4_min_ago = self.algo_helper.ma_minutes_ago(8, 4)
         ma10_2_min_ago = self.algo_helper.ma_minutes_ago(10, 2)
         ma13_2_min_ago = self.algo_helper.ma_minutes_ago(13, 2)
@@ -174,8 +175,7 @@ class maddog:
         ###############################################################################################################################
         
         
-        
-       
+      
         #########################################################################################################################################################
         #########################################################################################################################################################
 
@@ -1586,12 +1586,12 @@ class maddog:
           
                     # deviation_assurda = ma2 / ma200
             
-              
-                
                 # BUY 2 che ci riprova TORNANDO ALLE ORIGINI con ma200< and ma300 < (compare stammi vicino !)
                 
                 elif (
                     deviation_buy2 > 0.10
+                    and deviation_bellissima > 0.16
+                    and ma8_last > ma8_2_min_ago
                     and ma2_last > ma2_2_min_ago
                     and ma3_last > ma7_last
                     and ma3_last > ma13_last
