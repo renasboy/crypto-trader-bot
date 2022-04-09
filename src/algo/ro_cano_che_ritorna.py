@@ -468,10 +468,23 @@ class ro_cano_che_ritorna:
                 ########################################################################################################### con ma30 che ha 40 min di andamento laterale
                 ########################################################################################################### PER ADESSO SOLO SUL BUY 1
                 
+                # --------------------------------------------------------------    BUY 1 con 200 >
+                
                 elif (    
                     ma20_last > ma200_last
-                    
                     or ma200_last > ma200_20_min_ago
+                ):    
+                    
+                    buy = "BUY 1 con 200 > - riga 481"
+                    action = "buy"
+                    percentage = 10
+                    
+                    
+             
+                # -------------------------------------------------------------- BUY 1 RIALZO IMPROVVISO con 200 >
+                
+                elif (    
+                    ma20_last > ma200_last
                     and deviation_rialzo_improvviso_1 > 1.20
                     and deviation_rialzo_improvviso_2 > 0.20
                     and deviation_rialzo_improvviso_3 > 0.20
@@ -487,21 +500,39 @@ class ro_cano_che_ritorna:
                     and deviation_range_4 > -0.20
                     and deviation_range_x < 0.20
                     and deviation_range_x > -0.20
-                   
-                    # deviation_range_x va da 0 a -20 min
-                    # teoricamente potresti usare solo la deviation_range !
-                    # con deviation_rialzo_improvviso_5 > 0.20 non parte il BUY se trend leggermente ribassista
+                
                 ):
 
                     buy = "BUY 1 RIALZO IMPROVVISO con 200 > - riga 481"
                     action = "buy"
                     percentage = 10
+                    
                     # deviation_buy1 = ma13_last/ma39_last
+                    # deviation_range_x va da 0 a -20 min
+                    # teoricamente potresti usare solo la deviation_range !
+                    # con deviation_rialzo_improvviso_5 > 0.20 non parte il BUY se trend leggermente ribassista
+                    
+                    
+                
+                
+          
+                # -------------------------------------------------------------- BUY 1 con ma200 <
+            
+                elif (       
+                    ma200_last < ma200_20_min_ago
+                    and ma20_last > ma200_last
+                ):    
+        
+                    buy = "BUY 1 con ma200 < - riga 514"
+                    action = "buy"
+                    percentage = 10
                     
                     
                     
-                elif (    
                     
+                # --------------------------------------------------------------  BUY 1 RIALZO IMPROVVISO con ma200 <
+                
+                elif (     
                     ma200_last < ma200_20_min_ago
                     
                     and deviation_rialzo_improvviso_1 > 1.30
@@ -526,11 +557,22 @@ class ro_cano_che_ritorna:
                     # con deviation_rialzo_improvviso_5 > 0.20 non parte il BUY se trend leggermente ribassista
                 ):
 
-                    buy = "BUY 1 RIALZO IMPROVVISO con ma200 < (0.58 per evitare falsi acquisti) - riga 514"
+                    buy = "BUY 1 RIALZO IMPROVVISO con ma200 < (1.30 per evitare falsi acquisti) - riga 514"
                     action = "buy"
                     percentage = 10
                     
                     # deviation_buy1 = ma13_last/ma39_last
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     
                 ############################################################################################ compra durante CORREZIONE - FIAT
                 ############################################################################################ compra durante RIBASSO - AUDI
@@ -713,16 +755,16 @@ class ro_cano_che_ritorna:
                     
                     deviation_buy_crollo_1 < -0.29
                     and deviation_buy_crollo_1 > -0.59
-                    and deviation_correzione > 0.02
+                    and deviation_correzione > 0.03
                     and ma2_last > ma2_2_min_ago
                 ):
-                    buy = "BUY 1 DURANTE UNA CORREZIONE FIAT che non e' un forte ribasso e non e' un crollo ! con deviation_correzione > 0.02 - riga 701"
+                    buy = "BUY 1 DURANTE UNA CORREZIONE FIAT che non e' un forte ribasso e non e' un crollo ! con deviation_correzione > 0.03 - riga 701"
                     action = "buy"
                     percentage = 20
                     
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     # deviation_correzione = ma3_last / ma25_last
-                    
+                    # and deviation_correzione > 0.02 HA PRODOTTO MOLTISSIME PERDITE quindi ho modificato con 0.03
                     # compare prega per me !
                     
                     
@@ -775,7 +817,7 @@ class ro_cano_che_ritorna:
                 elif (
                     deviation_buy2 > 0.13
                     and deviation_buy_ma3_sopra_ma13 > 0.10
-                    and deviation_bellissima > 0.12
+                    and deviation_bellissima > 0.14
                     and deviation_ma7_sopra_ma40 > 0.14
                     and ma4_last > ma9_last
                     
@@ -786,8 +828,9 @@ class ro_cano_che_ritorna:
                     buy = "BUY 2 riga 768"
                     action = "buy"
                     percentage = 50
-                    # deviation_buy2 = ma8_last / ma50
                     
+                    # deviation_buy2 = ma8_last / ma50
+                    # deviation_bellissima > 0.14 
                     
                     
                 # BUY 2 ECCEZIONALE - se ma100 sale da 20 min compra con 4-30
@@ -795,7 +838,7 @@ class ro_cano_che_ritorna:
                 elif (
                     
                     ma200_last > ma200_20_min_ago
-                    and deviation_ma4_sopra_ma30 > 0.12
+                    and deviation_ma4_sopra_ma30 > 0.13
                     and deviation_correzione > 0.11
                     and ma2_last > ma2_2_min_ago
                 ):
@@ -853,7 +896,7 @@ class ro_cano_che_ritorna:
                 if (
                     ma69_last >= ma69_2_min_ago
                     and deviation > -0.30
-                    
+                    and deviation_ma4_sopra_ma30 > 0.12
                     and deviation_buy3 > 0.12
                     and ma3_last > ma13_last
                     and deviation_ma7_sopra_ma40 > 0.08
