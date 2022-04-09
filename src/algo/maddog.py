@@ -3670,64 +3670,64 @@ class maddog:
                         
                     ######################################################################### vendite dedicate al BUY FIAT - AUDI - MASERATI - FERRARI    
                         
-                    # 8 - SELL 1 FIAT se > 20 min dal BUY FIAT la perdita e' < -0.30
+                    # 8 - SELL 1 FIAT 
                     
                     elif (     
                         seconds_since_last_trade > max_hold_time_in_seconds_fiat
                         and deviation_buy_crollo_1 < -0.33
                         and deviation_buy_crollo_1 > -0.59
-                        and deviation < -0.30
+                        and deviation < -0.29
                         and ma2_last < ma2_2_min_ago
                     
                     ):    
-                        buy = "SELL 1 FIAT se > 20 min dal BUY FIAT la perdita e' < -0.30 - r 3683"
+                        buy = "SELL 1 FIAT se > 20 min dal BUY FIAT la perdita e' < -0.29 - r 3683"
                         action = "sell"
                         
                         
                         
                         
-                    # 9 - SELL 1 AUDI se > 20 min dal BUY AUDI la perdita e' < -0.35
+                    # 9 - SELL 1 AUDI 
                     
                     elif (     
                         seconds_since_last_trade > max_hold_time_in_seconds_audi
                         and deviation_buy_crollo_1 < -0.60
                         and deviation_buy_crollo_1 > -0.90
-                        and deviation < -0.35
+                        and deviation < -0.31
                         and ma2_last < ma2_2_min_ago
                     
                     ):    
-                        buy = "SELL 1 AUDI se > 20 min dal BUY AUDI la perdita e' < -0.35 - r 3699"
+                        buy = "SELL 1 AUDI se > 20 min dal BUY AUDI la perdita e' < -0.31 - r 3699"
                         action = "sell"
                         
                         
                         
                         
-                    # 10 - SELL 1 MASERATI se > 20 min dal BUY MASERATI la perdita e' < -0.40
+                    # 10 - SELL 1 MASERATI 
                     
                     elif (     
                         seconds_since_last_trade > max_hold_time_in_seconds_maserati
                         and deviation_buy_crollo_1 < -0.91
                         and deviation_buy_crollo_1 > -1.50
-                        and deviation < -0.40
+                        and deviation < -0.33
                         and ma2_last < ma2_2_min_ago
                     
                     ):    
-                        buy = "SELL 1 MASERATI se > 20 min dal BUY MASERATI la perdita e' < -0.40 - r 3715"
+                        buy = "SELL 1 MASERATI se > 20 min dal BUY MASERATI la perdita e' < -0.33 - r 3715"
                         action = "sell"
                         
                         
                         
                         
-                    # 11 - SELL 1 FERRARI se > 20 min dal BUY FERRARI la perdita e' < -0.45
+                    # 11 - SELL 1 FERRARI 
                     
                     elif (     
                         seconds_since_last_trade > max_hold_time_in_seconds_ferrari
                         and deviation_buy_crollo_1 < -1.51
-                        and deviation < -0.45
+                        and deviation < -0.37
                         and ma2_last < ma2_2_min_ago
                     
                     ):    
-                        buy = "SELL 1 FERRARI se > 20 min dal BUY FERRARI la perdita e' < -0.45 - r 3730"
+                        buy = "SELL 1 FERRARI se > 20 min dal BUY FERRARI la perdita e' < -0.37 - r 3730"
                         action = "sell"
                         
                         
@@ -5068,7 +5068,7 @@ class maddog:
             
                     ######################################################################### vendite dedicate al BUY FIAT - AUDI - MASERATI - FERRARI    
                         
-                    # 8 - SELL 2 FIAT se > 20 min dal BUY FIAT la perdita e' < -0.30
+                    # 8 - SELL 2 FIAT 
                     
                     elif (     
                         seconds_since_last_trade > max_hold_time_in_seconds_fiat
@@ -5084,7 +5084,7 @@ class maddog:
                         
                         
                         
-                    # 9 - SELL 2 AUDI se > 20 min dal BUY AUDI la perdita e' < -0.35
+                    # 9 - SELL 2 AUDI 
                     
                     elif (     
                         seconds_since_last_trade > max_hold_time_in_seconds_audi
@@ -5100,7 +5100,7 @@ class maddog:
                         
                         
                         
-                    # 10 - SELL 2 MASERATI se > 20 min dal BUY MASERATI la perdita e' < -0.40
+                    # 10 - SELL 2 
                     
                     elif (     
                         seconds_since_last_trade > max_hold_time_in_seconds_maserati
@@ -5116,7 +5116,7 @@ class maddog:
                         
                         
                         
-                    # 11 - SELL 2 FERRARI se > 20 min dal BUY FERRARI la perdita e' < -0.45
+                    # 11 - SELL 2 
                     
                     elif (     
                         seconds_since_last_trade > max_hold_time_in_seconds_ferrari
