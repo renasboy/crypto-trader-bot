@@ -1769,7 +1769,7 @@ class maddog:
                     and deviation > -0.30
                     and ma200_last > ma300_last
                     and ma20_last > ma200_last
-                    
+                    and deviation_bellissima > 0.05
                     and (ma4_prev < ma25_prev and ma4_last > ma25_last)
                     and ma25_last > ma25_2_min_ago
                     and ma2_last > ma2_2_min_ago
@@ -3090,13 +3090,13 @@ class maddog:
                         
                       
                     elif (    
-                        ma50_last < ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_sell < -0.29)
-                        and deviation_trend_ma200 > -0.10
+                        ma50_last < ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_sell < -0.28)
+                        and deviation_trend_ma200 > -0.03
                         and ma200_last > ma300_last
                         
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 compa (21-60 min) con ma50 < and deviation_sell < -0.29 con > PERDITA TOLLERATA - r 3099"
+                        sell = "SELL 1 compa (21-60 min) con ma50 < and deviation_sell < -0.28 con > PERDITA TOLLERATA - r 3099"
                         action = "sell"
                         
                         # and deviation_ma39 < -0.15 or (deviation_sell < 0.10 and ma3_last < ma39_last)
@@ -6009,11 +6009,11 @@ class maddog:
                      
                     
                     elif ( 
-                        ma50_last < ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_sell < -0.27)
+                        ma50_last < ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_sell < -0.29)
                         and deviation_trend_ma200 > -0.10
                         and ma200_last > ma300_last
                     ):
-                        sell = "SELL 3 compa (21-60 min) con ma50 < and deviation_sell < 0.27  con PERDITA TOLLERATA > - r 6016"
+                        sell = "SELL 3 compa (21-60 min) con ma50 < and deviation_sell < 0.29 con PERDITA TOLLERATA > - r 6016"
                         action = "sell"
                         
                         
