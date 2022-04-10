@@ -334,7 +334,7 @@ class ro_cano_che_ritorna:
         
         # formula deviation_trend_ma100
         
-        deviation_trend_100 = (ma100_last / ma100_60_min_ago - 1) * 100 if ma100_60_min_ago else 0
+        deviation_trend_ma100 = (ma100_last / ma100_60_min_ago - 1) * 100 if ma100_60_min_ago else 0
         self.algo_helper.info("deviation_trend_ma100: {}".format(deviation_trend_ma100))
         
         
@@ -749,6 +749,8 @@ class ro_cano_che_ritorna:
                     # deviation_assurda = price / ma200_last
                     
                     
+                    
+                    
                 # BUY con ultima condizione
                 
                 elif (    
@@ -757,14 +759,16 @@ class ro_cano_che_ritorna:
                     and ma200_last > ma300_last
                     and deviation_distanza_ma200_da_ma300 > -0.20
                     and deviation_distanza_ma50_da_ma300 < -0.10
-                    and deviation_trend_100 > -0.20
+                    and deviation_trend_ma100 > -0.20
                     and ma2_last > ma2_2_min_ago
                 ):
                     buy = "BUY 1 ultima condizione - riga 763"
                     action = "buy"
                     percentage = 20
                     
-                    # da portare anche al BUY 2 e BUY 3 e poi anche al maddog - ma vedi prima come va
+                    # da portare anche al BUY 2 e BUY 3 e poi anche al maddog - ma vedi prima come va.
+                    
+                    
                     
                 
                 
