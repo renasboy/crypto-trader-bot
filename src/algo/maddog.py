@@ -3526,10 +3526,30 @@ class maddog:
                         sell = "SELL 1 dopo 90 min con ma50 < and (deviation_sell < -0.15 and ma3_last < ma39_last) - r 3526"
                         action = "sell"
                         
+                        
+                        
+                    # ma se ma100 >
+                    
+                    elif (    
+                        ma50_last < ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_ma39 < -0.20)
+                        and ma5_last < ma5_2_min_ago
+                        and ma100_last > ma100_60_min_ago
+                    ):
+                        sell = "SELL 1 dopo 90 min con ma50 < MA ma100 > con deviation_ma39 <-0.20 - r 3538"
+                        action = "sell"
+                        
+                        
+                    # ma se ma100 > 
+                    
+                    elif (
+                        ma50_last < ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_sell < -0.18 and ma3_last < ma39_last )
+                        and ma100_last > ma100_60_min_ago
+                    ):
+                        sell = "SELL 1 dopo 90 min con ma50 < MA ma100 > and (deviation_sell < -0.18 and ma3_last < ma39_last) - r 3548"
+                        action = "sell"
+                        
                     
                     ############################################################################### aumento della perdita tollerata ! 50< MA 200> e 200>300
-                    # ho diviso il compare in 2 !
-                    
                     
                     elif (    
                         ma50_last < ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_ma39 < -0.20)
@@ -3538,11 +3558,10 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                        
                     ):
-                        sell = "SELL 1 compa dopo 90 min con ma50 < and deviation_ma39 < -0.20  con > PERDITA TOLLERATA - r 3541"
+                        sell = "SELL 1 compa dopo 90 min con ma50 < and deviation_ma39 < -0.20  con > PERDITA TOLLERATA - r 3561"
                         action = "sell"
                         
-                     
-                        
+                 
                     elif (    
                         
                         ma50_last < ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_sell < -0.21 and ma3_last < ma39_last )
@@ -3550,7 +3569,7 @@ class maddog:
                         and ma200_last > ma300_last
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 compa dopo 90 min con ma50 < (deviation_sell < -0.21 and ma3_last < ma39_last) con > PERDITA TOLLERATA - r 3553"
+                        sell = "SELL 1 compa dopo 90 min con ma50 < (deviation_sell < -0.21 and ma3_last < ma39_last) con > PERDITA TOLLERATA - r 3572"
                         action = "sell"
                         
           
@@ -3561,34 +3580,26 @@ class maddog:
                 
                     elif deviation_ma39 < -0.25 and deviation < -0.36 and ma50_last > ma50_2_min_ago:
 
-                        sell = "SELL 1 SALVAGENTE 3-39 con ma50 < r 3564"
+                        sell = "SELL 1 SALVAGENTE 3-39 con ma50 < r 3583"
                         action = "sell"
 
                     # deviation_ma39 = ma4_last / ma39_last QUESTA HA VENDUTO NEL CROLLO IMPROVVISO DI 1 MINUTO (con -2.06% !!!)!
-                    
-                    
-                    
-
                     # 2 - ro cano VENDE DURANTE UN CROLLO IMPROVVISO ! che dava problemi quando il prezzo ! andava molto sopra ma4 durante un trend rialzista !
                     # spero di aver risolto aggiungendo per precauzione queste altre 2 righe
-                    
-                    elif (
-                        
+                
+                    elif (    
                         ma2_last < ma4_last
                         and ma2_last < ma6_last
                         and deviation < -0.62
-                  
-                    ):    
-                        
-                        sell = "SELL 1 CROLLO IMPROVVISO - r 3583"
+                    ): 
+                
+                        sell = "SELL 1 CROLLO IMPROVVISO - r 3596"
                         action = "sell"
 
                         # deviation = ma4_last / last_trade_price
                         # FORSE E' L' UNICA DEVIATION CHE MI POTRA' SALVARE DA UN CROLLO IMPROVVISO COME QUELLO DEL 3 NOVEMBRE 2021
                         # -0.90 ha fatto fare una perdita di -1.46% il 19 dic 2021
-                        
-                        
-
+               
                     # 3 - ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma13 >
                     
                     elif (
@@ -3599,16 +3610,14 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                     ):
 
-                        sell = "SELL 1 DOLCE ATTESA con ma13 > and deviation < -0.40 - r 3602"
+                        sell = "SELL 1 DOLCE ATTESA con ma13 > and deviation < -0.40 - r 3613"
                         action = "sell"
 
                         # il fattore tempo - la dolce attesa - solo con trend ribassista
                         # deviation = ma2_last / last_trade_price
                         # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
                         
-                        
-                        
-
+       
                     # 4 - ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma13 <
                     
                     elif (
@@ -3619,15 +3628,14 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                     ):
 
-                        sell = "SELL 1 DOLCE ATTESA con ma13 < and deviation < -0.35 - r 3622"
+                        sell = "SELL 1 DOLCE ATTESA con ma13 < and deviation < -0.35 - r 3631"
                         action = "sell"
 
                         # il fattore tempo - la dolce attesa - solo con trend ribassista
                         # deviation = ma2_last / last_trade_price
                         # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
                         
-                        
-                
+                 
                     # 5 - ro cano VENDE " DOPO x MINUTI " and...
                     
                     elif (
@@ -3637,14 +3645,13 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                     ):
 
-                        sell = "sessione 1 SELL TEMPO e se ma8 < ma50 and deviation_sell < -0.49 - r 3640"
+                        sell = "sessione 1 SELL TEMPO e se ma8 < ma50 and deviation_sell < -0.49 - r 3648"
                         action = "sell"
                         
                         # ma13 troppo lenta !
                         # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
                         
-                        
-                  
+                 
                     # 6 - RIBASSO IMPROVVISO
                     
                     elif (
@@ -3652,11 +3659,9 @@ class maddog:
                         and deviation_ribasso_improvviso < -0.63
                   
                     ):
-                        sell = "SELL 1 RIBASSO IMPROVVISO - r 3655"
+                        sell = "SELL 1 RIBASSO IMPROVVISO - r 3662"
                         action = "sell"
-                        
-                        
-                
+             
                     # 7 - RIBASSO IMPROVVISO
                 
                     elif (
@@ -3664,7 +3669,7 @@ class maddog:
                         and deviation_ribasso_improvviso < -0.63
                     
                     ):
-                        sell = "SELL 1 RIBASSO IMPROVVISO - r 3667"
+                        sell = "SELL 1 RIBASSO IMPROVVISO - r 3672"
                         action = "sell"
                         
                         
@@ -3680,12 +3685,10 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                     
                     ):    
-                        buy = "SELL 1 FIAT se > 20 min dal BUY FIAT la perdita e' < -0.29 - r 3683"
+                        buy = "SELL 1 FIAT se > 20 min dal BUY FIAT la perdita e' < -0.29 - r 3688"
                         action = "sell"
                         
-                        
-                        
-                        
+                  
                     # 9 - SELL 1 AUDI 
                     
                     elif (     
@@ -3696,12 +3699,10 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                     
                     ):    
-                        buy = "SELL 1 AUDI se > 20 min dal BUY AUDI la perdita e' < -0.31 - r 3699"
+                        buy = "SELL 1 AUDI se > 20 min dal BUY AUDI la perdita e' < -0.31 - r 3702"
                         action = "sell"
                         
-                        
-                        
-                        
+                  
                     # 10 - SELL 1 MASERATI 
                     
                     elif (     
@@ -3712,12 +3713,11 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                     
                     ):    
-                        buy = "SELL 1 MASERATI se > 20 min dal BUY MASERATI la perdita e' < -0.33 - r 3715"
+                        buy = "SELL 1 MASERATI se > 20 min dal BUY MASERATI la perdita e' < -0.33 - r 3716"
                         action = "sell"
                         
                         
-                        
-                        
+                      
                     # 11 - SELL 1 FERRARI 
                     
                     elif (     
