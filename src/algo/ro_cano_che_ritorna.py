@@ -315,8 +315,32 @@ class ro_cano_che_ritorna:
         
         deviation_ma25 = (ma3_last / ma25_last - 1) * 100 if ma25_last else 0
         self.algo_helper.info("deviation_ma25: {}".format(deviation_ma25))
-       
+        
+        
+        
+        
+        
+        # formula deviation_distanza_ma200_da_ma300 
+        
+        deviation_distanza_ma200_da_ma300 = (ma200_last / ma300_last - 1) * 100 if ma300_last else 0
+        self.algo_helper.info("deviation_distanza_ma200_da_ma300: {}".format(deviation_distanza_ma200_da_ma300))
+        
+        
+        # formula deviation_distanza_ma50_da_ma300 
+        
+        deviation_distanza_ma50_da_ma300 = (ma50_last / ma300_last - 1) * 100 if ma300_last else 0
+        self.algo_helper.info("deviation_distanza_ma50_da_ma300: {}".format(deviation_distanza_ma50_da_ma300))
+        
+        
+        # formula deviation_trend_ma100
+        
+        deviation_trend_100 = (ma100_last / ma100_60_min_ago - 1) * 100 if ma100_60_min_ago else 0
+        self.algo_helper.info("deviation_trend_ma100: {}".format(deviation_trend_ma100))
+        
+        
+        
         ######################################################################################################## TUTTO COMINCIA DA QUA !
+        
         # dal non fare niente !
 
         # DEFAULT ACTION DICE DI NON FARE NIENTE (= None, NON TOCCARE )
@@ -711,7 +735,6 @@ class ro_cano_che_ritorna:
                  
                 # BUY con DEVIATION ASSURDA 1
                 
-                
                 elif (    
                     ma200_last > ma200_20_min_ago
                     
@@ -724,6 +747,24 @@ class ro_cano_che_ritorna:
                     percentage = 20
                     
                     # deviation_assurda = price / ma200_last
+                    
+                    
+                # BUY con ultima condizione
+                
+                elif (    
+                    
+                    ma13_last > ma50_last
+                    and ma200_last > ma300_last
+                    and deviation_distanza_ma200_da_ma300 > -0.20
+                    and deviation_distanza_ma50_da_ma300 < -0.10
+                    and deviation_trend_100 > -0.20
+                    and ma2_last > ma2_2_min_ago
+                ):
+                    buy = "BUY 1 ultima condizione - riga 763"
+                    action = "buy"
+                    percentage = 20
+                    
+                    # da portare anche al BUY 2 e BUY 3 e poi anche al maddog - ma vedi prima come va
                     
                 
                 
@@ -3848,12 +3889,12 @@ class ro_cano_che_ritorna:
                         
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and ma3_last < ma18_last
+                        and ma4_last < ma20_last
                         and deviation_sell > 0.35
                         and deviation_sell < 0.69
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 3-4-x >90 min con ma50 > con 3<18 and deviation_sell 0.35 - 0.69 RABONA ALLA RONALDO - riga 3707"
+                        sell = "SELL 3-4-x >90 min con ma50 > con 4 < 20 and deviation_sell 0.35 - 0.69 RABONA ALLA RONALDO - riga 3707"
                         action = "sell"
                         
                         
