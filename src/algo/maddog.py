@@ -1718,8 +1718,8 @@ class maddog:
                     deviation_buy3 > 0.02
                     and deviation > -0.30
                     
-                    and ma39_last > ma72_last
-                    and deviation_buy3 > 0.02
+                    and ma39_last > ma69_last
+                    
                     and delta_buy3_incrocio_ma3_ma8 > 0.06
                     and deviation_ma4_sopra_ma30 > 0.15
                     and ma3_last > ma8_last
@@ -1729,7 +1729,7 @@ class maddog:
                     and ma5_last > ma15_last
                     and ma7_last > ma25_last
                 ):
-                    buy = "BUY 3B RIVOLUZIONARIO se ma39 > ma72 - r 1732"
+                    buy = "BUY 3B RIVOLUZIONARIO se ma39 > ma69 - r 1732"
                     action = "buy"
                     percentage = 50
                     
@@ -3505,8 +3505,7 @@ class maddog:
 
                         sell = "SELL 1 dopo 90 min con ma50 > incrocio 3-69 (!) and deviation_sell > 5.71 SI STA TRA GLI ANGELI, compa ! - r 3506"
                         action = "sell"
-                        
-                     
+                 
                     ######################################################################################## con trend discendente
                     
                     # con or IL MAESTRO HA FATTO LA CORREZIONE ! questa che vedi e' stata corretta dal maestro
@@ -3514,16 +3513,17 @@ class maddog:
                     elif (    
                         ma50_last < ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_ma39 < -0.17)
                         and ma5_last < ma5_2_min_ago
+                        and ma100_last < ma100_60_min_ago
                     ):
-                        sell = "SELL 1 dopo 90 min con ma50 < con deviation_ma39 <-0.17 - r 3518"
+                        sell = "SELL 1 dopo 90 min con ma50 <  and ma100 < con deviation_ma39 <-0.17 - r 3518"
                         action = "sell"
                         
                 
                     elif (
                         ma50_last < ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_sell < -0.15 and ma3_last < ma39_last )
-                       
+                        and ma100_last < ma100_60_min_ago
                     ):
-                        sell = "SELL 1 dopo 90 min con ma50 < and (deviation_sell < -0.15 and ma3_last < ma39_last) - r 3526"
+                        sell = "SELL 1 dopo 90 min con ma50 < and ma100 < and (deviation_sell < -0.15 and ma3_last < ma39_last) - r 3526"
                         action = "sell"
                         
                         
