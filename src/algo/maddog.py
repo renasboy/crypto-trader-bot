@@ -1047,8 +1047,8 @@ class maddog:
                 
                 elif (
                     deviation_ma3 < -1.30
-                    and delta_1 > 1.1
-                    and delta_2 > 1.2
+                    and delta_1 < 0.15
+                    and delta_2 > 0.30
                     and differenza_delta_1_delta_2 < 1
                     and ma3_last > ma9_last
                 ):
@@ -1127,8 +1127,8 @@ class maddog:
                     and ma100_last < ma100_10_min_ago
                     and deviation_ma200_sotto_ma300 < -0.27
                     
-                    and delta_1 > 1.1
-                    and delta_2 > 1.2
+                    and delta_1 < 0.15
+                    and delta_2 > 0.30
                     and differenza_delta_1_delta_2 < 1
                     
                     and ma2_last > ma2_2_min_ago
@@ -1159,8 +1159,8 @@ class maddog:
                     and ma100_last < ma100_10_min_ago
                     and deviation_ma200_sotto_ma300 < -0.27
                     
-                    and delta_1 > 1.2
-                    and delta_2 > 1.1
+                    and delta_1 > 0.30
+                    and delta_2 < 0.15
                     and differenza_delta_1_delta_2 > 1
                     
                     and ma2_last > ma2_2_min_ago
@@ -2703,11 +2703,11 @@ class maddog:
                         and deviation_sell < -0.45
                         and ma2_last < ma2_2_min_ago
                         
-                        and delta_1 > 1.1
-                        and delta_2 > 1.2
+                        and delta_1 < 0.15
+                        and delta_2 > 0.30
                         and differenza_delta_1_delta_2 < 1
                     ):
-                        sell = "SELL 1 PARACADUTE CROLLO distanza < tra ma100 e ma200 (5-12 min) con ma50 < and ma3 < ma16 and deviation_sell < -0.35 - r 2663"
+                        sell = "SELL 1 PARACADUTE CROLLO distanza < tra ma100 e ma200 (5-12 min) con ma50 < and ma3 < ma16 and deviation_sell < -0.35 - r 2710"
                         action = "sell"
 
                         # AGGIUNTA PER SICUREZZA SE CONTINUA A PRECIPITARE ma sta risalendo
@@ -2723,11 +2723,11 @@ class maddog:
                         and deviation_sell < -0.35
                         and ma2_last < ma2_2_min_ago
                         
-                        and delta_1 > 1.2
-                        and delta_2 > 1.1
+                        and delta_1 > 0.30
+                        and delta_2 > 0.15
                         and differenza_delta_1_delta_2 > 1
                     ):
-                        sell = "SELL 1 PARACADUTE CROLLO distanza > tra ma100 e ma200 (5-12 min) con ma50 < and ma3 < ma16 and deviation_sell < -0.35 - r 2663"
+                        sell = "SELL 1 PARACADUTE CROLLO distanza > tra ma100 e ma200 (5-12 min) con ma50 < and ma3 < ma16 and deviation_sell < -0.35 - r 2730"
                         action = "sell"
 
                         # AGGIUNTA PER SICUREZZA SE CONTINUA A PRECIPITARE ma sta continuando a scendere
