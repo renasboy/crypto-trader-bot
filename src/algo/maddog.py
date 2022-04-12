@@ -1715,19 +1715,19 @@ class maddog:
                     
                     
                 elif (
-                    deviation_buy3 > 0.02
+                    deviation_buy3 > 0.01
                     and deviation > -0.30
                     
                     and ma39_last > ma69_last
                     
-                    and delta_buy3_incrocio_ma3_ma8 > 0.06
-                    and deviation_ma4_sopra_ma30 > 0.15
+                    and delta_buy3_incrocio_ma3_ma8 >= 0.06
+                    and deviation_ma4_sopra_ma30 >= 0.15
                     and ma3_last > ma8_last
-                    and ma3_last > ma72_last
-                    and ma4_last > ma4_2_min_ago
-                    and ma2_last > ma2_2_min_ago
-                    and ma5_last > ma15_last
-                    and ma7_last > ma25_last
+                    and ma3_last >= ma69_last
+                    and ma4_last >= ma4_2_min_ago
+                    and ma2_last >= ma2_2_min_ago
+                    and ma5_last >= ma15_last
+                    and ma7_last >= ma25_last
                 ):
                     buy = "BUY 3B RIVOLUZIONARIO se ma39 > ma69 - r 1732"
                     action = "buy"
