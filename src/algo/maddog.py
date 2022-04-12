@@ -2657,10 +2657,10 @@ class maddog:
                     elif (
                         ma50_last < ma50_2_min_ago
                         and ma3_last < ma16_last
-                        and deviation_sell < -0.40
+                        and deviation_sell < -0.35
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 PARACADUTE CROLLO (5-12 min) con ma50 < and ma3 < ma16 (no incrocio) and deviation_sell < -0.40 - r 2663"
+                        sell = "SELL 1 PARACADUTE CROLLO (5-12 min) con ma50 < and ma3 < ma16 (no incrocio) and deviation_sell < -0.35 - r 2663"
                         action = "sell"
 
                         # AGGIUNTA PER SICUREZZA SE CONTINUA A PRECIPITARE
