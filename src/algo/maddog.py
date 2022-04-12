@@ -1106,10 +1106,16 @@ class maddog:
                     
                     
                 
+                ###################################### attenzione qui applico il doppio delta !
+                
+                # quando la ma100 si avvicina risalendo verso la ma200 ok cosi'
+                # quando la ma100 si allontana verso il basso dalla ma 200 metto 8-50 altrimenti e' una perdita continua !
+                
+                
                 
                 # BUY 1 copia r701 RCCR - PICCOLA CORREZIONE FIAT che non e' grande correzione AUDI non e' un grande ribasso MASERATI e non e' un crollo FERRARI !
                 
-                # copia della riga 701 del RCCR CHE FUNZIONA BENISSIMO ma piu' prudente !
+                # copia della riga 701 del RCCR CHE FUNZIONA BENISSIMO (piu' prudente del RCCR ma piu' aggressivo del BIS) ( DOPPIO DELTA in risalita !)
                 
                 elif (    
                     deviation_buy_crollo_1 < -0.29
@@ -1120,9 +1126,46 @@ class maddog:
                     and ma20_last < ma100_last
                     and ma100_last < ma100_10_min_ago
                     and deviation_ma200_sotto_ma300 < -0.27
+                    
+                    and delta_1 > 1.1
+                    and delta_2 > 1.2
+                    and differenza_delta_1_delta_2 < 1
+                    
                     and ma2_last > ma2_2_min_ago
                 ):
-                    buy = "BUY 1 copia r701 RCCR - PICCOLA CORREZIONE FIAT che non e' AUDI e che non e' MASERATI e non e' FERRARI ! - r 1125"
+                    buy = "BUY 1 copia r701 RCCR doppio delta in risalita - PICCOLA CORREZIONE FIAT che non e' AUDI e che non e' MASERATI e non e' FERRARI ! - r 1125"
+                    action = "buy"
+                    percentage = 20
+                    
+                    # deviation_buy_crollo_1 = ma8_last / ma78_last
+                    # deviation_correzione = ma3_last / ma25_last
+                    
+                    # compare prega per me !
+                    
+                    
+                    
+                    
+                # BUY 1 copia BIS della r701 RCCR - PICCOLA CORREZIONE FIAT che non e' AUDI non e' MASERATI e non e' FERRARI !
+                
+                # copia BIS r701 del RCCR CHE FUNZIONA BENISSIMO ma piu' prudente ( doppio delta in ribasso !)
+                
+                elif (    
+                    deviation_buy_crollo_1 < -0.29
+                    and deviation_buy_crollo_1 > -0.59
+                    and deviation_correzione > 0.10
+                    
+                    and ma200_last < ma300_last
+                    and ma20_last < ma100_last
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma200_sotto_ma300 < -0.27
+                    
+                    and delta_1 > 1.2
+                    and delta_2 > 1.1
+                    and differenza_delta_1_delta_2 > 1
+                    
+                    and ma2_last > ma2_2_min_ago
+                ):
+                    buy = "BUY 1 copia BIS r701 RCCR doppio delta in ribasso - PICCOLA CORREZIONE FIAT che non e' AUDI non e' MASERATI e non e' FERRARI - r 1125"
                     action = "buy"
                     percentage = 20
                     
@@ -2981,12 +3024,12 @@ class maddog:
                         
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and ma5_last < ma15_last
+                        and ma5_last < ma18_last
                         and deviation_sell > 0.57 and deviation_sell < 0.90
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 (21-60 min) con ma50 > and 5-15 (era 4-15) and deviation_sell 0.51 - 0.90 ELASTICO ALLA RONALDO - r 2960"
+                        sell = "SELL 1 (21-60 min) con ma50 > and 5-18 (era 4-15) and deviation_sell 0.51 - 0.90 ELASTICO ALLA RONALDO - r 2960"
                         action = "sell"
                         
                         # dopo 26 minuti non c'e' piu' quello scatto in avanti - dribbling- che si verifica nei primi minuti
