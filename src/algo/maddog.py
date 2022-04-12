@@ -3024,12 +3024,12 @@ class maddog:
                         
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and ma5_last < ma18_last
+                        and ma5_last < ma20_last
                         and deviation_sell > 0.57 and deviation_sell < 0.90
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 (21-60 min) con ma50 > and 5-18 (era 4-15) and deviation_sell 0.51 - 0.90 ELASTICO ALLA RONALDO - r 2960"
+                        sell = "SELL 1 (21-60 min) con ma50 > and 5-20 (era 4-15) and deviation_sell 0.51 - 0.90 ELASTICO ALLA RONALDO - r 2960"
                         action = "sell"
                         
                         # dopo 26 minuti non c'e' piu' quello scatto in avanti - dribbling- che si verifica nei primi minuti
