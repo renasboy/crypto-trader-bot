@@ -1049,7 +1049,7 @@ class maddog:
                     deviation_ma3 < -1.30
                     and delta_1 > 1.1
                     and delta_2 > 1.2
-                    and differenza_delta_1_delta_2 < 0
+                    and differenza_delta_1_delta_2 < 1
                     and ma3_last > ma9_last
                 ):
                 
@@ -2652,18 +2652,47 @@ class maddog:
                         
                         
 
-                    # ------------------------------------------------------------------------------------------------------------ PARACADUTE crollo
+                    # -------------------------------------------------------- PARACADUTE crollo SE SI RIDUCE LA DISTANZA TRA ma 100 E ma 200 quindi sta risalendo
+                    
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and ma3_last < ma16_last
+                        and deviation_sell < -0.45
+                        and ma2_last < ma2_2_min_ago
+                        
+                        and delta_1 > 1.1
+                        and delta_2 > 1.2
+                        and differenza_delta_1_delta_2 < 1
+                    ):
+                        sell = "SELL 1 PARACADUTE CROLLO distanza < tra ma100 e ma200 (5-12 min) con ma50 < and ma3 < ma16 and deviation_sell < -0.35 - r 2663"
+                        action = "sell"
+
+                        # AGGIUNTA PER SICUREZZA SE CONTINUA A PRECIPITARE ma sta risalendo
+                        
+                        
+                        
+                        
+                    # ----------------------------------------------------------- PARACADUTE crollo SE AUMENTA LA DISTANZA TRA ma 100 E ma 200 quindi grande ribasso
                     
                     elif (
                         ma50_last < ma50_2_min_ago
                         and ma3_last < ma16_last
                         and deviation_sell < -0.35
                         and ma2_last < ma2_2_min_ago
+                        
+                        and delta_1 > 1.2
+                        and delta_2 > 1.1
+                        and differenza_delta_1_delta_2 > 1
                     ):
-                        sell = "SELL 1 PARACADUTE CROLLO (5-12 min) con ma50 < and ma3 < ma16 (no incrocio) and deviation_sell < -0.35 - r 2663"
+                        sell = "SELL 1 PARACADUTE CROLLO distanza > tra ma100 e ma200 (5-12 min) con ma50 < and ma3 < ma16 and deviation_sell < -0.35 - r 2663"
                         action = "sell"
 
-                        # AGGIUNTA PER SICUREZZA SE CONTINUA A PRECIPITARE
+                        # AGGIUNTA PER SICUREZZA SE CONTINUA A PRECIPITARE ma sta continuando a scendere
+                        
+                        
+                        
+                        
+                        
                         
                         
                         
