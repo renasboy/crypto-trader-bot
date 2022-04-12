@@ -1152,7 +1152,7 @@ class maddog:
                 elif (    
                     deviation_buy_crollo_1 < -0.29
                     and deviation_buy_crollo_1 > -0.59
-                    and deviation_correzione > 0.10
+                    and ma8_last < ma50_last
                     
                     and ma200_last < ma300_last
                     and ma20_last < ma100_last
@@ -1165,7 +1165,7 @@ class maddog:
                     
                     and ma2_last > ma2_2_min_ago
                 ):
-                    buy = "BUY 1 copia BIS r701 RCCR doppio delta in ribasso - PICCOLA CORREZIONE FIAT che non e' AUDI non e' MASERATI e non e' FERRARI - r 1125"
+                    buy = "BUY 1 copia BIS r701 RCCR doppio delta in ribasso - PICCOLA CORREZIONE FIAT che non e' AUDI non e' MASERATI e non e' FERRARI - r 1168"
                     action = "buy"
                     percentage = 20
                     
