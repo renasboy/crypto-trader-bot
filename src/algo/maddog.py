@@ -4108,16 +4108,19 @@ class maddog:
                         action = "sell"
                         
                         
-                  
-                    ###########################################################################     trend in ribasso
-
+                    
+                    
+                    
+                    ###########################################################################     trend in ribasso and ma200_last < ma300_last
+                    
                     elif (
                         ma50_last < ma50_2_min_ago
+                        and ma200_last < ma300_last
                         and (ma3_prev > ma28_prev and ma3_last < ma28_last)
                         and deviation_sell < -0.31
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 2 (5-12 min) con ma50 < and incrocio 3-28 and deviation_sell < -0.31 - r 4048"
+                        sell = "SELL 2 (5-12 min) con ma50 < AND 200<300 and incrocio 3-28 and deviation_sell < -0.31 - r 4123"
                         action = "sell"
 
                         # incrocio 3 -28 e' fondamentale per evitare punto rosso sovrapposto al punto verde !
@@ -4125,14 +4128,49 @@ class maddog:
                   
                     elif (
                         ma50_last < ma50_2_min_ago
+                        and ma200_last < ma300_last
                         and (ma5_prev > ma78_prev and ma5_last < ma78_last)
                         and deviation_sell < -0.36
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 2 (5-12 min) con ma50 < and incrocio 3-100 (cuscino di sant' antonio) - r 4060"
+                        sell = "SELL 2 (5-12 min) con ma50 < AND 200<300 and incrocio 3-100 (cuscino di sant' antonio) - r 4136"
                         action = "sell"
                         
-                 
+                        
+                        
+                        
+                    ###########################################################################     trend in ribasso MA ma200_last > ma300_last
+                    
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and ma200_last > ma300_last
+                        and (ma3_prev > ma28_prev and ma3_last < ma28_last)
+                        and deviation_sell < -0.35
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 2 (5-12 min) con ma50 < MA 200>300 and incrocio 3-28 and deviation_sell < -0.35 - r 4151"
+                        action = "sell"
+
+                        # incrocio 3 -28 e' fondamentale per evitare punto rosso sovrapposto al punto verde !
+                        
+                  
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and ma200_last > ma300_last
+                        and (ma5_prev > ma100_prev and ma5_last < ma100_last)
+                        and deviation_sell < -0.40
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 2 (5-12 min) con ma50 < MA 200>300 and incrocio 5-100 (cuscino di sant' antonio) and deviation_sell < -0.40 - r 4164"
+                        action = "sell"
+                        
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     # ------------------------------------------------------------------------------- guadagno con crollo
                     
                     elif (
