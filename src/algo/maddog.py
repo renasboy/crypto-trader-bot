@@ -211,21 +211,22 @@ class maddog:
         self.algo_helper.info("delta_2: {}".format(delta_2))
         
         
-        # formula differenza_delta_1_delta_2
+        # formula rapporto_delta_1_delta_2
         
-        differenza_delta_1_delta_2 = (delta_1 / delta_2 - 1) * 100 if delta_2 else 0
-        self.algo_helper.info("differenza_delta_1_delta_2: {}".format(differenza_delta_1_delta_2))
+        rapporto_delta_1_delta_2 = (delta_1 / delta_2 - 1) * 100 if delta_2 else 0
+        self.algo_helper.info("rapporto_delta_1_delta_2: {}".format(rapporto_delta_1_delta_2))
+        
+        # forse scrivero' rapporto_delta_1_delta_2 = delta_1 / delta_2
         
         
-      
+        
+        
         # formula deviation_ma3
         
         deviation_ma3 = (ma3_last / ma3_20_min_ago - 1) * 100 if ma3_20_min_ago else 0
         self.algo_helper.info("deviation_ma3: {}".format(deviation_ma3))
         
-        
-        
-        
+      
         
         
         # formula deviation trend ma200
@@ -1043,17 +1044,17 @@ class maddog:
                 
                 
                 
-                # BUY 1 con RIBASSO VELOCE mentre la distanza tra ma100 e ma200 si sta riducendo ! USANDO UN DOPPIO DELTA ! 
+                # BUY 1 con RIBASSO VELOCE MA la distanza tra ma100 e ma200 si sta riducendo - la ma100 sta risalendo ! USANDO UN DOPPIO DELTA ! 
                 
                 elif (
                     deviation_ma3 < -1.30
-                    and delta_1 < 0.15
-                    and delta_2 > 0.30
-                    and differenza_delta_1_delta_2 < 1
+                    and delta_1 < 0.25
+                    and delta_2 > 0.40
+                    and rapporto_delta_1_delta_2 < 1
                     and ma3_last > ma9_last
                 ):
                 
-                    buy = "BUY 1 con RIBASSO VELOCE mentre la distanza tra ma100 e ma200 si sta riducendo ! USANDO UN DOPPIO DELTA ! - r 1056"
+                    buy = "BUY 1 con RIBASSO VELOCE mentre la distanza tra ma100 e ma200 si sta riducendo - la ma100 sta risalendo ! USANDO UN DOPPIO DELTA ! - r 1056"
                     action = "buy"
                     percentage = 10
                     
@@ -1127,9 +1128,9 @@ class maddog:
                     and ma100_last < ma100_10_min_ago
                     and deviation_ma200_sotto_ma300 < -0.27
                     
-                    and delta_1 < 0.15
-                    and delta_2 > 0.30
-                    and differenza_delta_1_delta_2 < 1
+                    and delta_1 < 0.25
+                    and delta_2 > 0.40
+                    and rapporto_delta_1_delta_2 < 1
                     
                     and ma2_last > ma2_2_min_ago
                 ):
@@ -1159,9 +1160,9 @@ class maddog:
                     and ma100_last < ma100_10_min_ago
                     and deviation_ma200_sotto_ma300 < -0.27
                     
-                    and delta_1 > 0.30
-                    and delta_2 < 0.15
-                    and differenza_delta_1_delta_2 > 1
+                    and delta_1 > 0.40
+                    and delta_2 < 0.25
+                    and rapporto_delta_1_delta_2 > 1
                     
                     and ma2_last > ma2_2_min_ago
                 ):
@@ -2703,9 +2704,9 @@ class maddog:
                         and deviation_sell < -0.45
                         and ma2_last < ma2_2_min_ago
                         
-                        and delta_1 < 0.15
-                        and delta_2 > 0.30
-                        and differenza_delta_1_delta_2 < 1
+                        and delta_1 < 0.25
+                        and delta_2 > 0.40
+                        and rapporto_delta_1_delta_2 < 1
                     ):
                         sell = "SELL 1 PARACADUTE CROLLO distanza < tra ma100 e ma200 (5-12 min) con ma50 < and ma3 < ma16 and deviation_sell < -0.35 - r 2710"
                         action = "sell"
@@ -2723,9 +2724,9 @@ class maddog:
                         and deviation_sell < -0.35
                         and ma2_last < ma2_2_min_ago
                         
-                        and delta_1 > 0.30
-                        and delta_2 > 0.15
-                        and differenza_delta_1_delta_2 > 1
+                        and delta_1 > 0.40
+                        and delta_2 < 0.25
+                        and rapporto_delta_1_delta_2 > 1
                     ):
                         sell = "SELL 1 PARACADUTE CROLLO distanza > tra ma100 e ma200 (5-12 min) con ma50 < and ma3 < ma16 and deviation_sell < -0.35 - r 2730"
                         action = "sell"
