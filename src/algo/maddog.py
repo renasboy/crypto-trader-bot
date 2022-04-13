@@ -6477,9 +6477,9 @@ class maddog:
                     
                     
                     elif (      
-                        ma50_last < ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_ma39 < -0.21)
+                        ma50_last < ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_ma39 < -0.15)
                     ):
-                        sell = "SELL 3 dopo 90 min con ma50 < con deviation_ma39 <-0.18 - r 6372"
+                        sell = "SELL 3 dopo 90 min con ma50 < con deviation_ma39 < -0.15 - r 6372"
                         action = "sell"
                         
                         
@@ -6488,9 +6488,9 @@ class maddog:
                     
                      
                     elif (    
-                        ma50_last < ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_sell < -0.20 and ma3_last < ma39_last)
+                        ma50_last < ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_sell < -0.10 and ma3_last < ma39_last)
                     ):
-                        sell = "SELL 3 dopo 90 min con ma50 < and (deviation_sell < 0.10 and ma3_last < ma39_last) - r 6383"
+                        sell = "SELL 3 dopo 90 min con ma50 < and (deviation_sell < -0.10 and ma3_last < ma39_last) - r 6383"
                         action = "sell"
                         
                     
