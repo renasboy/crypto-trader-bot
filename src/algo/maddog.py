@@ -1158,7 +1158,7 @@ class maddog:
                     
                     and ma2_last > ma2_2_min_ago
                 ):
-                    buy = "BUY 1 FIAT CHE NON HA FUNZIONATO ( DOPPIO DELTA in risalita !) - r 1125"
+                    buy = "BUY 1 FIAT CHE NON HA FUNZIONATO ( DOPPIO DELTA in risalita !) - r 1161"
                     action = "buy"
                     percentage = 20
                     
@@ -1188,7 +1188,7 @@ class maddog:
                     
                     and ma2_last > ma2_2_min_ago
                 ):
-                    buy = "BUY 1 FIAT OK ( DOPPIO DELTA in risalita !) - r 1125"
+                    buy = "BUY 1 FIAT OK ( DOPPIO DELTA in risalita !) - r 1191"
                     action = "buy"
                     percentage = 20
                     
@@ -1207,12 +1207,12 @@ class maddog:
                 # BUY 1 KO copia BIS della r701 RCCR - PICCOLA CORREZIONE FIAT che non e' AUDI non e' MASERATI e non e' FERRARI !
                 
                 
-                #  BUY 1 FIAT CHE NON HA FUNZIONATO ( CON DOPPIO DELTA in RIBASSO !)
+                #  BUY 1 FIAT CHE NON HA FUNZIONATO ( CON DOPPIO DELTA in RIBASSO !) 8-39
                 
                 elif (    
                     deviation_buy_crollo_1 < -0.29
                     and deviation_buy_crollo_1 > -0.59
-                    and ma8_last > ma50_last
+                    and ma8_last > ma39_last
                     
                     and ma200_last < ma300_last
                     and ma20_last < ma100_last
@@ -1225,7 +1225,7 @@ class maddog:
                     
                     and ma2_last > ma2_2_min_ago
                 ):
-                    buy = "BUY 1 FIAT CHE NON HA FUNZIONATO ( CON DOPPIO DELTA in RIBASSO !) - r 1168"
+                    buy = "BUY 1 FIAT CHE NON HA FUNZIONATO ( CON DOPPIO DELTA in RIBASSO !) 8-39 - r 1228"
                     action = "buy"
                     percentage = 20
                     
@@ -1238,12 +1238,12 @@ class maddog:
                     
                     
                     
-                # BUY 1 FIAT OK ( CON doppio delta in ribasso !) 8-30
+                # BUY 1 FIAT OK ( CON doppio delta in ribasso !) 8-39
                 
                 elif (    
                     deviation_buy_crollo_1 < -0.29
                     and deviation_buy_crollo_1 > -0.59
-                    and ma8_last > ma30_last
+                    and ma8_last > ma39_last
                     
                     and ma200_last < ma300_last
                     and ma20_last < ma100_last
@@ -1256,7 +1256,7 @@ class maddog:
                     
                     and ma2_last > ma2_2_min_ago
                 ):
-                    buy = "BUY 1 FIAT OK ( CON DOPPIO DELTA in RIBASSO ! 8-30 )- r 1168"
+                    buy = "BUY 1 FIAT OK ( CON DOPPIO DELTA in RIBASSO !) 8-39 - r 1259"
                     action = "buy"
                     percentage = 20
                     
