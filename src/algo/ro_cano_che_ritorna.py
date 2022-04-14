@@ -4018,12 +4018,12 @@ class ro_cano_che_ritorna:
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
                 and ma13_last < ma13_2_min_ago
-                and deviation < -0.35
+                and deviation < -0.39
                 and ma2_last < last_trade_price
                 and ma2_last < ma2_2_min_ago
             ):
 
-                sell = "SELL 3-4-x DOLCE ATTESA con ma13 < and deviation < -0.35 - riga 3824"
+                sell = "SELL 3-4-x DOLCE ATTESA con ma13 < and deviation < -0.39 - riga 3824"
                 action = "sell"
 
                 # il fattore tempo - la dolce attesa - solo con trend ribassista
