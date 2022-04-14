@@ -1127,7 +1127,7 @@ class maddog:
                     # compare prega per me !
                     
                     
-                
+                ############################################################################################
                 ###################################### attenzione qui applico il doppio delta !
                 
                 # quando la ma100 si avvicina risalendo verso la ma200 ok cosi'
@@ -1137,7 +1137,10 @@ class maddog:
                 
                 # BUY 1 copia r701 RCCR - PICCOLA CORREZIONE FIAT che non e' grande correzione AUDI non e' un grande ribasso MASERATI e non e' un crollo FERRARI !
                 
-                # copia della riga 701 del RCCR CHE FUNZIONA BENISSIMO (piu' prudente del RCCR ma piu' aggressivo del BIS) ( DOPPIO DELTA in risalita !)
+                
+                
+                
+                # BUY 1 FIAT CHE NON HA FUNZIONATO ( DOPPIO DELTA in risalita !)
                 
                 elif (    
                     deviation_buy_crollo_1 < -0.29
@@ -1155,7 +1158,7 @@ class maddog:
                     
                     and ma2_last > ma2_2_min_ago
                 ):
-                    buy = "BUY 1 copia r701 RCCR doppio delta in risalita - PICCOLA CORREZIONE FIAT che non e' AUDI e che non e' MASERATI e non e' FERRARI ! - r 1125"
+                    buy = "BUY 1 FIAT CHE NON HA FUNZIONATO ( DOPPIO DELTA in risalita !) - r 1125"
                     action = "buy"
                     percentage = 20
                     
@@ -1167,9 +1170,44 @@ class maddog:
                     
                     
                     
-                # BUY 1 copia BIS della r701 RCCR - PICCOLA CORREZIONE FIAT che non e' AUDI non e' MASERATI e non e' FERRARI !
+                # BUY 1 OK FIAT ( DOPPIO DELTA in risalita !)
                 
-                # copia BIS r701 del RCCR CHE FUNZIONA BENISSIMO ma piu' prudente ( doppio delta in ribasso !)
+                elif (    
+                    deviation_buy_crollo_1 < -0.29
+                    and deviation_buy_crollo_1 > -0.59
+                    and deviation_correzione > 0.10
+                    
+                    and ma200_last < ma300_last
+                    and ma20_last < ma100_last
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma200_sotto_ma300 < -0.27
+                    
+                    and delta_1 < 0.50
+                    and delta_2 > 0.69
+                    and rapporto_delta_1_delta_2 < 1
+                    
+                    and ma2_last > ma2_2_min_ago
+                ):
+                    buy = "BUY 1 FIAT OK ( DOPPIO DELTA in risalita !) - r 1125"
+                    action = "buy"
+                    percentage = 20
+                    
+                    # deviation_buy_crollo_1 = ma8_last / ma78_last
+                    # deviation_correzione = ma3_last / ma25_last
+                    
+                    # compare prega per me !
+                    
+                    
+                    
+                
+                
+                
+                
+                
+                # BUY 1 KO copia BIS della r701 RCCR - PICCOLA CORREZIONE FIAT che non e' AUDI non e' MASERATI e non e' FERRARI !
+                
+                
+                #  BUY 1 FIAT CHE NON HA FUNZIONATO ( CON DOPPIO DELTA in RIBASSO !)
                 
                 elif (    
                     deviation_buy_crollo_1 < -0.29
@@ -1187,7 +1225,7 @@ class maddog:
                     
                     and ma2_last > ma2_2_min_ago
                 ):
-                    buy = "BUY 1 copia BIS r701 RCCR doppio delta in ribasso - PICCOLA CORREZIONE FIAT che non e' AUDI non e' MASERATI e non e' FERRARI - r 1168"
+                    buy = "BUY 1 FIAT CHE NON HA FUNZIONATO ( CON DOPPIO DELTA in RIBASSO !) - r 1168"
                     action = "buy"
                     percentage = 20
                     
@@ -1195,11 +1233,45 @@ class maddog:
                     # deviation_correzione = ma3_last / ma25_last
                     
                     # compare prega per me !
+                    
+                    
+                    
+                    
+                    
+                # BUY 1 FIAT OK ( CON doppio delta in ribasso !) 8-30
+                
+                elif (    
+                    deviation_buy_crollo_1 < -0.29
+                    and deviation_buy_crollo_1 > -0.59
+                    and ma8_last > ma30_last
+                    
+                    and ma200_last < ma300_last
+                    and ma20_last < ma100_last
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma200_sotto_ma300 < -0.27
+                    
+                    and delta_1 > 0.69
+                    and delta_2 > 0.50
+                    and rapporto_delta_1_delta_2 > 1
+                    
+                    and ma2_last > ma2_2_min_ago
+                ):
+                    buy = "BUY 1 FIAT OK ( CON DOPPIO DELTA in RIBASSO ! 8-30 )- r 1168"
+                    action = "buy"
+                    percentage = 20
+                    
+                    # deviation_buy_crollo_1 = ma8_last / ma78_last
+                    # deviation_correzione = ma3_last / ma25_last
+                    
+                    # compare prega per me !
+                    
+                    #####################################################################################################################
                   
                     
                     
-                    
-                    
+              
+                
+                
                 # copia della riga 530 del RCCR CHE FUNZIONA BENISSIMO ma solo un po' piu' prudente ! - BUY grande ribasso MASERATI CHE NON E' UN CROLLO !
                 
                 elif (
