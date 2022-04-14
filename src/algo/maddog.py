@@ -2208,9 +2208,9 @@ class maddog:
             #   5 - 12
             #  12 - 21
             #  21 - 50
-            #  50   90
-            #  60   90
-            #   > 90
+            #  50 - 90 
+            
+            #    > 90
             
             
 
@@ -3272,10 +3272,10 @@ class maddog:
               
                 #############################################################################################################  SESSIONE 1 ( da 50 a 90 min )
 
-                # VENDITA - da 50 a 90 min - da 3601 a 5400 secondi in poi
+                # VENDITA - da 50 a 90 min - da 3001 a 5400 secondi in poi
                 
                 elif (
-                    seconds_since_last_trade > 3600 and seconds_since_last_trade <= 5400
+                    seconds_since_last_trade > 3001 and seconds_since_last_trade <= 5400
                 ):
                     
                     
