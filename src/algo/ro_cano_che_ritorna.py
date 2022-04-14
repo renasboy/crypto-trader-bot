@@ -495,11 +495,13 @@ class ro_cano_che_ritorna:
                 # --------------------------------------------------------------    BUY 1 con 200 >
                 
                 elif (    
-                    ma20_last > ma200_last
-                    or ma200_last > ma200_20_min_ago
+                    
+                    ma200_last > ma200_20_min_ago
+                    and ma3_last > ma15_last
+                    and ma2_last > ma2_2_min_ago
                 ):    
                     
-                    buy = "BUY 1 con 200 > - riga 481"
+                    buy = "BUY 1 con 200 > - riga 503"
                     action = "buy"
                     percentage = 10
                     
@@ -545,6 +547,7 @@ class ro_cano_che_ritorna:
                 elif (       
                     ma200_last < ma200_20_min_ago
                     and ma20_last > ma200_last
+                    and ma2_last > ma2_2_min_ago
                 ):    
         
                     buy = "BUY 1 con ma200 < - riga 514"
