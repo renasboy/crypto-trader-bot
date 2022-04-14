@@ -620,6 +620,26 @@ class maddog:
                     
                     
                     
+                # ------------------------------------------------------------ BUY 1 quando incomincia il ribasso MA 300>
+                  
+                elif (     
+                    ma300_last > ma300_120_min_ago
+                    and ma8_last > ma100_last
+                    
+                    and ma200_last < ma200_60_min_ago
+                    and ma100_last < ma100_60_min_ago
+                    
+                    and deviation_bellissima > 0.14
+                    and ma2_last > ma2_2_min_ago
+                ):     
+                  
+                    buy = "BUY 1 quando incomincia il ribasso MA 300> - r 636"
+                    action = "buy"
+                    percentage = 20
+                    
+                    
+                    
+                    
                 # ------------------------------------------------------------ BUY 1 se ma200> and ma300> and 8>50   
                 
                 elif (    
@@ -1686,6 +1706,7 @@ class maddog:
                 elif (     
                     seconds_since_last_trade > max_hold_time_in_seconds_nuova
                     and ma4_last > ma100_last
+                    and ma20_last > ma100_last
                     and ma100_last < ma300_last
                     and ma2_last > ma2_2_min_ago
                 ):    
@@ -1696,6 +1717,7 @@ class maddog:
                     # incredibile ! la ma100 sta sotto la ma300 ! ripeto la ma100 sta sotto la ma300 
                     # NON TOGLIERE QUELLA RIGA !
                     # vedi r136 r523
+                    # 20>100 solo sul passare del tempo del BUY 2
                     # compa prega per me !
            
             ############################################################################################################ COMPRA sessione 3
