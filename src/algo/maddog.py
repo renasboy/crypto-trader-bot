@@ -869,7 +869,7 @@ class maddog:
                    
                     ma200_last < ma200_20_min_ago
                     
-                    and deviation_rialzo_improvviso_1 > 1.20
+                    and deviation_rialzo_improvviso_1 > 1.10
                     and deviation_rialzo_improvviso_2 > 0.20
                     and deviation_rialzo_improvviso_3 > 0.20
                     and deviation_rialzo_improvviso_4 > 0.20
@@ -886,7 +886,7 @@ class maddog:
                  
                 ):
 
-                    buy = "BUY 1 RIALZO IMPROVVISO con 78 < (1.20 ! per evitare falsi acquisti) - r 867"
+                    buy = "BUY 1 RIALZO IMPROVVISO con 78 < ( da 1.20 a 1.1 !) sempre tentando di evitare falsi acquisti - r 867"
                     action = "buy"
                     percentage = 10
                     
