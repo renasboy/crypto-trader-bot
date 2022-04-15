@@ -1521,11 +1521,39 @@ class maddog:
                     
                     # deviation_buy_ma3_sopra_ma13 > x e' fondamentale !
                     # deviation_buy2 = ma8_last/ma50_last
+                    
+                    
+                    
 
-                   
+                # BUY 2C se ma100 >
+                
                 elif (
                     deviation_buy2 > 0.10
+                    and ma100_last > ma100_60_min_ago
                     and deviation_bellissima > 0.12
+                    
+                    and deviation_buy_ma3_sopra_ma13 > 0.10
+                    and deviation_ma7_sopra_ma40 > 0.10
+                    and ma4_last > ma9_last
+                    and ma2_last > ma2_2_min_ago
+                    and ma3_last > ma40_last
+                    and ma4_last > ma78_last
+                ):
+                    buy = "BUY 2C - r 1396"
+                    action = "buy"
+                    percentage = 50
+                    
+                    # deviation_buy2 = ma8_last / ma50
+                    
+                    
+                    
+                # BUY 2C se ma100 <
+                
+                elif (
+                    deviation_buy2 > 0.10
+                    and ma100_last < ma100_60_min_ago
+                    and deviation_bellissima > 0.17
+                    
                     and deviation_buy_ma3_sopra_ma13 > 0.10
                     and deviation_ma7_sopra_ma40 > 0.10
                     and ma4_last > ma9_last
