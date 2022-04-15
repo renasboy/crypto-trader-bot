@@ -1151,9 +1151,7 @@ class maddog:
                     and ma20_last < ma100_last
                     and ma100_last < ma100_10_min_ago
                     and deviation_ma200_sotto_ma300 < -0.27
-                    
-                    and delta_1 < 0.25
-                    and delta_2 > 0.40
+                  
                     and rapporto_delta_1_delta_2 < 1
                     
                     and ma2_last > ma2_2_min_ago
@@ -1164,6 +1162,9 @@ class maddog:
                     
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     # deviation_correzione = ma3_last / ma25_last
+                    
+                    # and delta_1 < 0.25 la puoi aggiungere in un secondo momento
+                    # and delta_2 > 0.40 la puoi aggiungere in un secondo momento
                     
                     # compare prega per me !
                     
@@ -1219,8 +1220,7 @@ class maddog:
                     and ma100_last < ma100_10_min_ago
                     and deviation_ma200_sotto_ma300 < -0.27
                     
-                    and delta_1 > 0.40
-                    and delta_2 < 0.25
+                    
                     and rapporto_delta_1_delta_2 > 1
                     
                     and ma2_last > ma2_2_min_ago
@@ -1231,6 +1231,9 @@ class maddog:
                     
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     # deviation_correzione = ma3_last / ma25_last
+                    
+                    # and delta_1 > 0.40 la puoi aggiungere in un secondo momento
+                    # and delta_2 < 0.25 la puoi aggiungere in un secondo momento
                     
                     # compare prega per me !
                     
@@ -3679,12 +3682,17 @@ class maddog:
                     # con or IL MAESTRO HA FATTO LA CORREZIONE ! questa che vedi e' stata corretta dal maestro
                     
                     elif (    
-                        ma50_last < ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_ma39 < -0.17)
+                        ma50_last < ma50_2_min_ago
+                        and deviation_ma39 < -0.17
+                        and deviation_sell > 0.20
                         and ma5_last < ma5_2_min_ago
                         and ma100_last < ma100_60_min_ago
+                        and ma2_last < ma2_2_min_ago
                     ):
                         sell = "SELL 1 dopo 90 min con ma50 <  and ma100 < con deviation_ma39 <-0.17 - r 3518"
                         action = "sell"
+                        
+                        # ma39 non deve vendere laterale quindi per farlo vendere in alto ho dato 0.20
                         
                 
                     elif (
@@ -3699,12 +3707,19 @@ class maddog:
                     # ma se ma100 >
                     
                     elif (    
-                        ma50_last < ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_ma39 < -0.20)
+                        ma50_last < ma50_2_min_ago
+                        and deviation_ma39 < -0.20
+                        and deviation_sell > 0.20
                         and ma5_last < ma5_2_min_ago
                         and ma100_last > ma100_60_min_ago
+                        and ma2_last < ma2_2_min_ago
                     ):
                         sell = "SELL 1 dopo 90 min con ma50 < MA ma100 > con deviation_ma39 <-0.20 - r 3538"
                         action = "sell"
+                        
+                        # ma39 NON DEVE VENDERE in fase laterale ma in alto
+                        
+                        
                         
                         
                     # ma se ma100 > 
