@@ -1804,7 +1804,7 @@ class maddog:
                     and ma100_last < ma300_last
                     and ma2_last > ma2_2_min_ago
                 ):    
-                    buy = "BUY 2 che considera il passare del tempo - r 1807"
+                    buy = "BUY 2 che considera il passare del tempo (SE > 120 min) - r 1807"
                     action = "buy"
                     percentage = 50
                     
