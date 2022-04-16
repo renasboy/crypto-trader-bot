@@ -4771,16 +4771,19 @@ class maddog:
                     ##################################################################################### RIGHE DEL COMPA DA RADDOPPIARE PER AUMENTO TOLLERANZA
                     
                     if (    
-                        ma50_last > ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_ma39 < -0.18)
+                        ma50_last > ma50_2_min_ago
+                        and deviation_ma39 < -0.18
+                        and ma2_last < ma2_2_min_ago
                     ):
                         sell = "SELL 2 da 60 a 90 min con ma50 > and deviation_ma39 < -0.18 - r 4776"
                         action = "sell"
                         
-                        
-                    
-                   
+               
                     elif (      
-                        ma50_last > ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_sell < -0.18 and ma3_last < ma50_last)
+                        ma50_last > ma50_2_min_ago
+                        and deviation_sell < -0.18
+                        and ma3_last < ma50_last
+                        and ma2_last < ma2_2_min_ago 
                     ):
                         sell = "SELL 2 da 60 a 90 min con ma50 > and (deviation_sell < -0.18 and ma3_last < ma50_last)  - r 4785"
                         action = "sell"
@@ -4790,7 +4793,9 @@ class maddog:
                         
                         
                     elif (    
-                        ma50_last > ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_ma39 < -0.22)
+                        ma50_last > ma50_2_min_ago
+                        and deviation_ma39 < -0.22
+                        and ma2_last < ma2_2_min_ago
                         and ma200_last > ma200_60_min_ago
                     ):
                         sell = "SELL 2 da 60 a 90 min con ma50 > and deviation_ma39 <-0.22 - r 4796"
@@ -4800,8 +4805,11 @@ class maddog:
                     
                    
                     elif (      
-                        ma50_last > ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_sell < -0.21 and ma3_last < ma50_last)
+                        ma50_last > ma50_2_min_ago
+                        and deviation_sell < -0.21
+                        and ma3_last < ma50_last
                         and ma200_last > ma200_60_min_ago
+                        and ma2_last < ma2_2_min_ago
                     ):
                         sell = "SELL 2 da 60 a 90 min con ma50 > and (deviation_sell < -0.21 and ma3_last < ma50_last)  - r 4806"
                         action = "sell"
