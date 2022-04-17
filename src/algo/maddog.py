@@ -1794,7 +1794,7 @@ class maddog:
                     
                     
                     
-                # --------------------------------------- BUY 2 che considera il passare del tempo ! - FAI ATTENZIONE - PRIMA DI QUESTA FUNZIONAVA
+                # --------------------------------------- BUY 2 che considera il passare del tempo !
                 
                 
                 elif (     
@@ -1802,6 +1802,7 @@ class maddog:
                     and ma4_last > ma100_last
                     and ma20_last > ma100_last
                     and ma100_last < ma300_last
+                    and deviation_bellissima > 0.07
                     and ma2_last > ma2_2_min_ago
                 ):    
                     buy = "BUY 2 che considera il passare del tempo (SE > 120 min) - r 1807"
@@ -1812,10 +1813,10 @@ class maddog:
                     # NON TOGLIERE QUELLA RIGA !
                     # vedi r136 r523
                     # 20>100 solo sul passare del tempo del BUY 2
+                    # and deviation_bellissima > 0.07 ho dovuto aggiungerla
                     # compa prega per me !
                     
-                    
-           
+                 
             ############################################################################################################ COMPRA sessione 3
             
             # forse dal BUY 3 in poi (o dal BUY 4 in poi) ma100 DEVE ESSERE > !
@@ -3844,10 +3845,10 @@ class maddog:
                     
                     elif (
                         ma78_last > ma78_2_min_ago
-                        and deviation_ribasso_improvviso < -0.63
+                        and deviation_ribasso_improvviso < -0.61
                   
                     ):
-                        sell = "SELL 1 RIBASSO IMPROVVISO - r 3850"
+                        sell = "SELL 1 RIBASSO IMPROVVISO < -0.61 - r 3850"
                         action = "sell"
                         
              
@@ -3855,10 +3856,10 @@ class maddog:
                 
                     elif (
                         ma78_last < ma78_2_min_ago
-                        and deviation_ribasso_improvviso < -0.63
+                        and deviation_ribasso_improvviso < -0.60
                     
                     ):
-                        sell = "SELL 1 RIBASSO IMPROVVISO - r 3861"
+                        sell = "SELL 1 RIBASSO IMPROVVISO -0.60 - r 3861"
                         action = "sell"
                         
                         
