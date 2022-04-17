@@ -655,15 +655,17 @@ class maddog:
                 
                 elif (     
                     ma69_last > ma69_45_min_ago
-                    and deviation_bellissima > 0.14
+                    and deviation_bellissima > 0.06
                     and ma20_last > ma20_2_min_ago
                     and ma5_last > ma5_2_min_ago
                     and ma2_last > ma20_last
                     and ma2_last > ma2_2_min_ago
                 ):    
-                    buy = "BUY 1 che considera il passare del tempo - r 664"
+                    buy = "BUY 1 che considera il passare del tempo con deviation_bellissima > 0.06 - r 664"
                     action = "buy"
                     percentage = 20
+                    
+                    # con deviation > 0.14 BUY arrivato molto tardi !
                     
               
                 # ------------------------------------------------------------  BUY 1 con incrocio 11-69 and ma69_last >= ma69_2_min_ago  "MI PIACE!"
@@ -681,7 +683,7 @@ class maddog:
                     and deviation_ma13_sopra_ma25 > 0.06
                  
                 ):
-                    buy = "BUY 1 con ma20_last > ma200_last e con 11 > 69 e ma69> 2 min ago (!) r 684"
+                    buy = "BUY 1 con ma20_last > ma200_last e con 11 > 69 e ma69> 2 min ago (!) r 686"
                     action = "buy"
                     percentage = 20
                     
@@ -703,7 +705,7 @@ class maddog:
                     and deviation_ma13_sopra_ma25 > 0.07
                  
                 ):
-                    buy = "BUY 1 con 11-69 SE ma200 SALE DA 2 ORE ! - r 706"
+                    buy = "BUY 1 con 11-69 SE ma200 SALE DA 2 ORE ! - r 708"
                     action = "buy"
                     percentage = 20
                     
@@ -718,7 +720,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                     and ma4_last > ma4_2_min_ago
                 ):
-                    buy = "BUY 1 con 13>50 and DEVIATION BUY 1 ALTA e ma78> - r 721"
+                    buy = "BUY 1 con 13>50 and DEVIATION BUY 1 ALTA e ma78> - r 723"
                     action = "buy"
                     percentage = 20
                     
@@ -735,10 +737,9 @@ class maddog:
                     and ma4_last > ma4_2_min_ago
                     and deviation_ma3_sopra_ma7 > 0.05
                 ):
-                    buy = "BUY 1 con ma78< and 39>78 and DEVIATION BUY 1 BASSA r 738"
+                    buy = "BUY 1 con ma78< and 39>78 and DEVIATION BUY 1 BASSA r 740"
                     action = "buy"
                     percentage = 10
-                    
                     
                
                 elif (
@@ -753,14 +754,13 @@ class maddog:
                     and deviation_ma13_sopra_ma25 > 0.05
                 ):
 
-                    buy = "BUY 1 se ma78< - BUY 1 con incrocio 39>78 - r 756"
+                    buy = "BUY 1 se ma78< - BUY 1 con incrocio 39>78 - r 757"
                     action = "buy"
                     percentage = 10
                
         
-                ####################################################################################################### compra durante un rialzo improvviso ! 
-                ####################################################################################################### con ma30 che ha 40 min di andamento laterale
-                ####################################################################################################### PER ADESSO SOLO SUL BUY 1
+                ############################################################################### compra durante un rialzo improvviso ! PER ADESSO SOLO SUL BUY 1
+                ############################################################################### con ma30 che ha 40 min di andamento laterale
                 
                 elif (
                    
