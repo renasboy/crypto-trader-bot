@@ -3863,9 +3863,44 @@ class maddog:
                         action = "sell"
                         
                         
+                        
+                    # 8 - POCHI MALEDETTI E SUBITO con ma200 > MA ma100 NON DEVE SALIRE TROPPO ! - dedicated to comparo meo
+                
+                    elif (
+                        ma3_last < ma9_last
+                        and deviation_trend_ma100 < 1.00
+                        and ma200_last > ma200_60_min_ago
+                        and deviation > 0.70
+                        and deviation_pochi_maledetti > 0.70
+                        and ma2_last > ma100_last
+                    ):    
+                        sell = "SELL 3-4-x POCHI MALEDETTI E SUBITO quando ma200 > e con deviation > 0.70 MA - dedicated to comparo meo - r 7974"
+                        action = "sell"
+                    
+                        # and ma2_last > ma100_last (altrimenti vende durante il crollo con la ma3-ma9)
+                        # incredibile questa and deviation_trend_ma100 < 1.00 - se ma100 sale "forte" da 60 min non deve intervenire sell 3-9
+                        
+                    
+          
+                    # 9 - POCHI MALEDETTI E SUBITO con ma200 < - dedicated to comparo meo
+                
+                    elif (
+                        ma3_last < ma9_last 
+                        and ma200_last < ma200_60_min_ago
+                        and deviation > 0.70
+                        and deviation_pochi_maledetti > 0.70
+                        and ma2_last > ma100_last
+                    ):    
+                        sell = "SELL 3-4-x POCHI MALEDETTI E SUBITO quando ma200 < e con deviation > 0.70 - dedicated to comparo meo - r 7993"
+                        action = "sell"
+                    
+                        # and ma2_last > ma100_last (altrimenti vende durante il crollo con la ma3-ma9)
+                        
+                        
+                        
                     ######################################################################### vendite dedicate al BUY FIAT - AUDI - MASERATI - FERRARI    
                         
-                    # 8 - SELL 1 FIAT 
+                    # 10 - SELL 1 FIAT 
                     
                     elif (     
                         seconds_since_last_trade > max_hold_time_in_seconds_fiat
@@ -3878,8 +3913,9 @@ class maddog:
                         buy = "SELL 1 FIAT se > 20 min dal BUY FIAT la perdita e' < -0.29 - r 3877"
                         action = "sell"
                         
+                        
                   
-                    # 9 - SELL 1 AUDI 
+                    # 11 - SELL 1 AUDI 
                     
                     elif (     
                         seconds_since_last_trade > max_hold_time_in_seconds_audi
@@ -3892,8 +3928,9 @@ class maddog:
                         buy = "SELL 1 AUDI se > 20 min dal BUY AUDI la perdita e' < -0.31 - r 3891"
                         action = "sell"
                         
+                        
                   
-                    # 10 - SELL 1 MASERATI 
+                    # 12 - SELL 1 MASERATI 
                     
                     elif (     
                         seconds_since_last_trade > max_hold_time_in_seconds_maserati
@@ -3908,7 +3945,7 @@ class maddog:
                         
                         
                       
-                    # 11 - SELL 1 FERRARI 
+                    # 13 - SELL 1 FERRARI 
                     
                     elif (     
                         seconds_since_last_trade > max_hold_time_in_seconds_ferrari
@@ -3923,7 +3960,7 @@ class maddog:
                         
                         
                         # OGGI 5 APRILE 2022
-                        
+                        # oggi pasqua 2022
                         
             
             ########################################################################################################################### SESSIONE 2
