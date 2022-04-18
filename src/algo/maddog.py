@@ -601,7 +601,7 @@ class maddog:
                 if (    
                     ma20_last > ma200_last
                     and ma69_last > ma100_last
-                    
+                    and ma3_last > ma8_last
                     and deviation_bellissima > 0.14
                     and ma6_last > ma39_last
                 ):    
@@ -1802,6 +1802,7 @@ class maddog:
                     and ma100_last > ma100_60_min_ago
                     and ma200_last > ma200_120_min_ago
                     and ma100_last > ma200_last
+                    and ma3_last > ma8_last
                     and ma2_last > ma2_2_min_ago
                 ):    
                     buy = "BUY 2 che entra in azione se DOPO 2 MINUTI ma2 va sopra SELL 1 di almeno 0.30 ! - r 1807"
