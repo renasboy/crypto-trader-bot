@@ -1980,7 +1980,7 @@ class maddog:
                 
                 
                 if (
-                    ma78_last >= ma78_2_min_ago
+                    ma69_last >= ma69_2_min_ago
                     and ma300_last > ma300_60_min_ago
                     
                     and deviation_buy3 > 0.11
