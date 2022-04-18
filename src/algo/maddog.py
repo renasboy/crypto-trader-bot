@@ -168,10 +168,16 @@ class maddog:
         max_hold_time_in_seconds_maserati = 1200
         
         
-        
         # vedi SELL 1 FERRARI - 20 minuti = 1200 secondi
         
         max_hold_time_in_seconds_ferrari = 1200
+        
+        
+        ###############################################################################################################################
+        
+        # vedi DELTA BUY 2 DAL SELL 1  > 2 minuti = 120 secondi
+        
+        max_hold_time_in_seconds_delta_buy2_sell1 = 120
         
         ###############################################################################################################################
         
@@ -389,16 +395,27 @@ class maddog:
         
         deviation_buy1 = (ma13_last / ma39_last - 1) * 100 if ma39_last else 0
         self.algo_helper.info("deviation_buy1: {}".format(deviation_buy1))
+        
+        
 
         # formula DEVIATION_buy2 per la compra 2
         
         deviation_buy2 = (ma8_last / ma50_last - 1) * 100 if ma50_last else 0
         self.algo_helper.info("deviation_buy2: {}".format(deviation_buy2))
+        
+        
+        # formula DELTA_buy2 per la compra 2
+        
+        delta_buy2_dal_sell1 = (ma2_last / last_trade_price - 1) * 100 if last_trade_price else 0
+        self.algo_helper.info("delta_buy2_dal_sell1: {}".format(delta_buy2_dal_sell1))
+        
+        
 
         # formula DEVIATION_buy3 per la compra 3
         
         deviation_buy3 = (ma4_last / ma30_last - 1) * 100 if ma30_last else 0
         self.algo_helper.info("deviation_buy3: {}".format(deviation_buy3))
+        
 
         # formula delta_buy3_incrocio_ma3_ma8 > 0.10 per la compra 3
         
@@ -1795,7 +1812,6 @@ class maddog:
                   
                 # --------------------------------------- BUY 2 che considera il passare del tempo !
                 
-                
                 elif (     
                     seconds_since_last_trade > max_hold_time_in_seconds_nuova
                     and ma4_last > ma100_last
@@ -1808,11 +1824,26 @@ class maddog:
                     action = "buy"
                     percentage = 50
                     
-                    # incredibile ! la ma100 sta sotto la ma300 ! ripeto la ma100 sta sotto la ma300 
-                    # NON TOGLIERE QUELLA RIGA !
-                    # vedi r136 r523
-                    # 20>100 solo sul passare del tempo del BUY 2
-                    # and deviation_bellissima > 0.07 ho dovuto aggiungerla
+                    
+                    
+                # --------------------------------------- BUY 2 che entra in azione se ma2 va sopra SELL 1 di almeno 0.30 !    
+                
+                elif (     
+                    seconds_since_last_trade > max_hold_time_in_seconds_delta_buy2_sell1
+                    and delta_buy2_dal_sell1 > 0.30
+                    and ma100_last > ma100_60_min_ago
+                    and ma2_last > ma2_2_min_ago
+                ):    
+                    buy = "BUY 2 che entra in azione se DOPO 2 MINUTI ma2 va sopra SELL 1 di almeno 0.30 ! - r 1837"
+                    action = "buy"
+                    percentage = 40
+                    
+                    # il BUY 2 con deviation buy2 (8-50) ma anche con (6-30) ARRIVA IN RITARDO !
+                    
+                    # vedi r107
+                    # vedi r180
+                    # vedi r409
+                    # vedi r1829
                     # compa prega per me !
                     
                  
@@ -6393,11 +6424,11 @@ class maddog:
                     
                     elif (
                         ma50_last < ma50_2_min_ago
-                        and deviation_ma39 < -0.18
+                        and deviation_ma39 < -0.17
                         and ma2_last < ma2_2_min_ago
                        
                     ):
-                        sell = "SELL 3 da 60 a 90 min con ma50 < con deviation_ma39 <-0.18 and deviation_sell < 0.10 (no ma3<ma33) (NO INCROCIO!) - r 6400"
+                        sell = "SELL 3 da 60 a 90 min con ma50 < con deviation_ma39 <-0.17 and deviation_sell < 0.10 (no ma3<ma33) (NO INCROCIO!) - r 6400"
                         action = "sell"
                         
                         # and ma3_last < ma33_last
