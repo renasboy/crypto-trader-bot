@@ -58,8 +58,9 @@ class maddog:
         ma3_9_min_ago = self.algo_helper.ma_minutes_ago(3, 9)
         ma3_20_min_ago = self.algo_helper.ma_minutes_ago(3, 20)
         ma4_2_min_ago = self.algo_helper.ma_minutes_ago(4, 2)
-        ma5_2_min_ago = self.algo_helper.ma_minutes_ago(5, 2)
+        
         ma4_4_min_ago = self.algo_helper.ma_minutes_ago(4, 4)
+        ma5_2_min_ago = self.algo_helper.ma_minutes_ago(5, 2)
         ma6_2_min_ago = self.algo_helper.ma_minutes_ago(6, 2)
         ma8_2_min_ago = self.algo_helper.ma_minutes_ago(8, 2)
         ma8_4_min_ago = self.algo_helper.ma_minutes_ago(8, 4)
@@ -70,12 +71,11 @@ class maddog:
         ma20_22_min_ago = self.algo_helper.ma_minutes_ago(20, 22)
         ma20_60_min_ago = self.algo_helper.ma_minutes_ago(20, 60)
         ma25_2_min_ago = self.algo_helper.ma_minutes_ago(25, 2)
-        
         ma30_10_min_ago = self.algo_helper.ma_minutes_ago(30, 10)
         ma30_20_min_ago = self.algo_helper.ma_minutes_ago(30, 20)
         ma30_30_min_ago = self.algo_helper.ma_minutes_ago(30, 30)
         ma30_40_min_ago = self.algo_helper.ma_minutes_ago(30, 40)
-        
+      
         ma33_5_min_ago = self.algo_helper.ma_minutes_ago(33, 5)
         ma36_2_min_ago = self.algo_helper.ma_minutes_ago(36, 2)
         ma39_2_min_ago = self.algo_helper.ma_minutes_ago(39, 2)
@@ -1413,7 +1413,6 @@ class maddog:
                     action = "buy"
                     percentage = 20
                     
-                  
                 
                     
                 # BUY 1 FOREVER YOUNG 2 PIU' AGGRESSIVO se ma 200 > e se ma200 > ma300
@@ -1421,6 +1420,7 @@ class maddog:
                 elif (  
                     ma200_last > ma300_last
                     and ma200_last > ma200_15_min_ago
+                    and ma6_last > ma6_2_min_ago
                     and ma13_last > ma69_last
                     and ma13_last > ma13_2_min_ago
                     and ma2_last > ma2_2_min_ago
@@ -1778,8 +1778,7 @@ class maddog:
                     action = "buy"
                     percentage = 10
                     
-                    
-                  
+                 
                 # --------------------------------------- BUY 2 che considera il passare del tempo !
                 
                 elif (     
@@ -1790,18 +1789,19 @@ class maddog:
                     and deviation_bellissima > 0.07
                     and ma2_last > ma2_2_min_ago
                 ):    
-                    buy = "BUY 2 che considera il passare del tempo (SE > 120 min) - r 1793"
+                    buy = "BUY 2 che considera il passare del tempo (SE > 120 min) - r 1792"
                     action = "buy"
                     percentage = 50
                     
-                    
-                    
+                 
                 # --------------------------------------- BUY 2 che entra in azione se ma2 va sopra SELL 1 di almeno 0.30 !    
                 
                 elif (     
                     seconds_since_last_trade > max_hold_time_in_seconds_delta_buy2_sell1
-                    and delta_buy2_dal_sell1 > 0.30
+                    and delta_buy2_dal_sell1 > 0.35
                     and ma100_last > ma100_60_min_ago
+                    and ma200_last > ma200_120_min_ago
+                    and ma100_last > ma200_last
                     and ma2_last > ma2_2_min_ago
                 ):    
                     buy = "BUY 2 che entra in azione se DOPO 2 MINUTI ma2 va sopra SELL 1 di almeno 0.30 ! - r 1807"
