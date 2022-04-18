@@ -1798,11 +1798,12 @@ class maddog:
                 
                 elif (     
                     seconds_since_last_trade > max_hold_time_in_seconds_delta_buy2_sell1
-                    and delta_buy2_dal_sell1 > 0.35
+                    and delta_buy2_dal_sell1 > 0.43
                     and ma100_last > ma100_60_min_ago
                     and ma200_last > ma200_120_min_ago
                     and ma100_last > ma200_last
                     and ma3_last > ma8_last
+                    and ma5_last > ma18_last
                     and ma2_last > ma2_2_min_ago
                 ):    
                     buy = "BUY 2 che entra in azione se DOPO 2 MINUTI ma2 va sopra SELL 1 di almeno 0.30 ! - r 1807"
