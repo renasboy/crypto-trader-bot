@@ -4070,7 +4070,7 @@ class maddog:
                     
                     elif (    
                         ma3_last < ma100_last
-                        and deviation_sell < 0.10
+                        and deviation_sell < 0.05
                         and ma2_last < ma2_2_min_ago
                     ):
                    
@@ -5647,7 +5647,7 @@ class maddog:
                     
                     elif (    
                         ma3_last < ma100_last
-                        and deviation_sell < 0.10
+                        and deviation_sell < 0.05
                         and ma2_last < ma2_2_min_ago
                     ):
                    
