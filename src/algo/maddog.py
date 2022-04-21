@@ -90,6 +90,7 @@ class maddog:
         ma78_5_min_ago = self.algo_helper.ma_minutes_ago(78, 5)
         ma78_7_min_ago = self.algo_helper.ma_minutes_ago(78, 7)
         ma78_30_min_ago = self.algo_helper.ma_minutes_ago(78, 30)
+        ma100_2_min_ago = self.algo_helper.ma_minutes_ago(100, 2)
         ma100_10_min_ago = self.algo_helper.ma_minutes_ago(100, 10)
         ma100_60_min_ago = self.algo_helper.ma_minutes_ago(100, 60)
         ma200_15_min_ago = self.algo_helper.ma_minutes_ago(200, 15)
@@ -680,10 +681,40 @@ class maddog:
                     action = "buy"
                     percentage = 20
                     
+                
+                
+                
+                # BUY 1 copiata e modificata da RCCR che e' arrivata una ndecchia prima del passare del tempo.
+                
+                elif (
+                    
+                    ma3_last > ma200_last
+                    and deviation_ma100_sopra_ma200 > -0.30
+                    
+                    and ma100_last > ma100_2_min_ago
+                    and ma300_last < ma300_60_min_ago
+                    and ma200_last < ma200_60_min_ago
+                    
+                    and ma72_last >= ma72_2_min_ago
+                    and ma13_last > ma69_last
+                    and deviation_bellissima > 0.17
+                    and deviation_ma13_sopra_ma25 > 0.07
+                    and deviation_ma3_sopra_ma7 > 0.05
+         
+                    and ma3_last > ma3_3_min_ago
+                    and ma2_last > ma2_2_min_ago
+               
+                ):
+                    buy = "BUY 1 copiata e modificata da RCCR che e' arrivata una ndecchia prima del passare del tempo - riga 707"
+                    action = "buy"
+                    percentage = 20
+                    
+                    # importante : ma100 sta sotto la ma200 non le e' troppo lontana cioe' NON ci troviamo in una situazione drammatica! (anche se ma200< e ma300<)
+                    
                     
               
                 # ------------------------------------------------------------  BUY 1 con incrocio 11-69 and ma69_last >= ma69_2_min_ago  "MI PIACE!"
-
+                
                 elif (
                     ma20_last > ma200_last
                     and ma11_last > ma69_last
@@ -3791,12 +3822,13 @@ class maddog:
                     
                     elif (
                         ma50_last < ma50_2_min_ago
-                        and ma2_last < ma2_2_min_ago
-                        and deviation_sell < -0.18
+                        
+                        and deviation_sell < -0.20
                         and ma3_last < ma39_last
                         and ma100_last > ma100_60_min_ago
+                        and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 90-110 min con ma50 < MA ma100 > and (deviation_sell < -0.18 and ma3_last < ma39_last) - r 3739"
+                        sell = "SELL 1 90-110 min con ma50 < MA ma100 > and (deviation_sell < -0.20 and ma3_last < ma39_last) - r 3739"
                         action = "sell"
                         
                     
