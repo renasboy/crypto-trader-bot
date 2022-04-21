@@ -193,12 +193,23 @@ class maddog:
         deviation_1_gabbia = (ma8_last / ma50_last - 1) * 100 if ma50_last else 0
         self.algo_helper.info("deviation_1_gabbia: {}".format(deviation_1_gabbia))
 
-        ##################################################################################################################
+        
 
         # formula deviation
         
         deviation = (ma4_last / last_trade_price - 1) * 100 if last_trade_price else 0
         self.algo_helper.info("deviation: {}".format(deviation))
+        
+        
+        
+        # formula DEVIATION_ma5_sopra_ma28
+        
+        deviation_ma5_sopra_ma28 = (ma5_last / ma28_last - 1) * 100 if ma28_last else 0
+        self.algo_helper.info("deviation_ma5_sopra_ma28: {}".format(deviation_ma5_sopra_ma28))
+        
+        
+        #################################################################################################################
+        
         
      
         # formula delta_1
@@ -1625,16 +1636,17 @@ class maddog:
                 
                 
                 elif (
-
-                    ma2_last > ma2_2_min_ago
+                    deviation_ma5_sopra_ma28 > 0.05
+             
                     and deviation_buy_crollo_1 < -0.29
                     and deviation_buy_crollo_1 > -0.59
+               
                     and deviation_correzione > 0.015
                     and deviation_buy_ma5_sopra_ma20 > 0.10
-                  
+                    and ma2_last > ma2_2_min_ago
                 ):
 
-                    buy = "BUY 2A PAZZA piccola CORREZIONE che non e' un forte ribasso e non e' un crollo ! con deviation_correzione > 0.02 - r 1595"
+                    buy = "BUY 2A PAZZA piccola CORREZIONE che non e' un forte ribasso e non e' un crollo ! deviation 5-28 > 0.05 - r 1595"
                     action = "buy"
                     percentage = 10
 
