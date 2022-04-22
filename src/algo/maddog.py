@@ -1901,23 +1901,24 @@ class maddog:
             elif self.session == 3:
 
                 if (
-                    ma69_last >= ma69_2_min_ago
+                    ma10_last > ma10_2_min_ago
                     and ma200_last > ma200_60_min_ago
                     and deviation > -0.30
+                    and deviation_ma5_sopra_ma28 > 0.09
                     
-                    and deviation_buy3 > 0.12
-                    and deviation_ma4_sopra_ma30 > 0.12
+                    and deviation_ma4_sopra_ma30 > 0.11
                     and ma3_last > ma13_last
-                    and deviation_ma7_sopra_ma40 > 0.08
                     and ma4_last > ma9_last
-                    and deviation_ma4_sopra_ma30 > 0.12
+                    and deviation_ma7_sopra_ma40 > 0.08
+                    and ma7_last > ma25_last
+                    
                     and deviation_buy_ma2_sopra_ma13 > 0.10
                     and ma4_last > ma50_last
                     and ma2_last > ma2_2_min_ago
-                    and ma7_last > ma25_last
+                    
                 ):  
                 
-                    buy = "BUY 3A con ma69 > MA ma200 sale da 60 min - r 1846"
+                    buy = "BUY 3A con ma200 che sale da 60 min etc. - r 1846"
                     action = "buy"
                     percentage = 50
 
