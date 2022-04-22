@@ -678,11 +678,14 @@ class maddog:
                     action = "buy"
                     percentage = 20
                     
+                    
+                    
               
-                # ------------------------------------------------------------ BUY 1 che considera il passare del tempo
+                # ------------------------------------------------------------ BUY 1 che considera il passare del tempo 1 CON TREND IN RIALZO
                 
                 elif (     
                     ma69_last > ma69_45_min_ago
+                    and ma30_last > ma30_40_min_ago
                     and deviation_ma5_sopra_ma28 > 0.15
                     and deviation_bellissima > 0.06
                     and ma20_last > ma20_2_min_ago
@@ -691,6 +694,24 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                 ):    
                     buy = "BUY 1 che considera il passare del tempo con deviation_bellissima > 0.06 - r 657"
+                    action = "buy"
+                    percentage = 20
+                    
+                    
+                    
+                # ------------------------------------------------------------ BUY 1 che considera il passare del tempo 2 MA TREND IN RIBASSO
+                
+                elif (     
+                    ma69_last > ma69_45_min_ago
+                    and ma30_last < ma30_40_min_ago
+                    and deviation_ma5_sopra_ma28 > 0.25
+                    and deviation_bellissima > 0.06
+                    and ma20_last > ma20_2_min_ago
+                    and ma5_last > ma5_2_min_ago
+                    and ma2_last > ma20_last
+                    and ma2_last > ma2_2_min_ago
+                ):    
+                    buy = "BUY 1 che considera il passare del tempo con deviation_bellissima > 0.06 - r 714"
                     action = "buy"
                     percentage = 20
                     
@@ -1862,6 +1883,8 @@ class maddog:
                     action = "buy"
                     percentage = 10
                     
+                    
+                    
                  
                 # --------------------------------------- BUY 2 che considera il passare del tempo !
                 
@@ -1877,8 +1900,36 @@ class maddog:
                     action = "buy"
                     percentage = 50
                     
-                 
-                # --------------------------------------- BUY 2 che entra in azione se ma2 va sopra SELL 1 di almeno 0.30 !    
+                    
+                    
+                    
+                   
+                
+                # BUY 2 FIAT che non funzionava MA CHE HA FUNZIONATO BENISSIMO ! ( DOPPIO DELTA in risalita !) copiato da BUY 1 perche' PERFETTO
+                
+                elif (    
+                    deviation_buy_crollo_1 < -0.29
+                    and deviation_buy_crollo_1 > -0.59
+                    and ma3_last > ma9_last
+                    
+                    and ma200_last < ma300_last
+                    and ma20_last < ma100_last
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma200_sotto_ma300 < -0.27
+                  
+                    and rapporto_delta_1_delta_2 < 1
+                    
+                    and ma2_last > ma2_2_min_ago
+                ):
+                    buy = "BUY 2 FIAT che non funzionava MA CHE HA FUNZIONATO BENISSIMO ! ( DOPPIO DELTA in risalita !) copiato da BUY 1 perche' PERFETTO - r 1925"
+                    action = "buy"
+                    percentage = 20
+                    
+                    
+                    
+                    
+                    
+                # --------------------------------------- BUY 2 che entra in azione se ma2 va sopra SELL 1 di almeno 0.30 !   
                 
                 elif (     
                     seconds_since_last_trade > max_hold_time_in_seconds_delta_buy2_sell1
