@@ -4230,14 +4230,21 @@ class maddog:
                     
                     elif (     
                         seconds_since_last_trade > max_hold_time_in_seconds_fiat
-                        and deviation_buy_crollo_1 < -0.33
+                        and deviation_buy_crollo_1 < -0.15
                         and deviation_buy_crollo_1 > -0.59
+                        
+                        and deviation_ma100_sopra_ma300 < -0.70
                         and deviation < -0.29
-                        and ma2_last < ma2_2_min_ago
+                        
+                        
                     ): 
-                        buy = "SELL 1 FIAT se > 20 min dal BUY FIAT la perdita e' < -0.29 - r 3910"
+                        buy = "SELL 1 FIAT se > 20 min dal BUY FIAT la perdita e' < -0.29 ! - r 3910"
                         action = "sell"
-                    
+                        
+                        # and ma2_last < ma2_2_min_ago
+                        # and deviation_ma100_sopra_ma300 < -0.70 significa che c'e' un grande ribasso. 100 sta lontana da 300. 
+                        # EVITO COSI' PROBLEMI AL TREND LATERALE.
+                        
                     
                     # 11 - SELL 1 AUDI 
                     
@@ -4245,11 +4252,15 @@ class maddog:
                         seconds_since_last_trade > max_hold_time_in_seconds_audi
                         and deviation_buy_crollo_1 < -0.60
                         and deviation_buy_crollo_1 > -0.90
+                        
+                        and deviation_ma100_sopra_ma300 < -0.70
                         and deviation < -0.31
-                        and ma2_last < ma2_2_min_ago
+                        
                     ):
                         buy = "SELL 1 AUDI se > 20 min dal BUY AUDI la perdita e' < -0.31 - r 3923"
                         action = "sell"
+                        
+                        # and ma2_last < ma2_2_min_ago
                         
                
                     # 12 - SELL 1 MASERATI 
@@ -4258,11 +4269,15 @@ class maddog:
                         seconds_since_last_trade > max_hold_time_in_seconds_maserati
                         and deviation_buy_crollo_1 < -0.91
                         and deviation_buy_crollo_1 > -1.50
+                      
+                        and deviation_ma100_sopra_ma300 < -0.70
                         and deviation < -0.33
-                        and ma2_last < ma2_2_min_ago
+                        
                     ):
                         buy = "SELL 1 MASERATI se > 20 min dal BUY MASERATI la perdita e' < -0.33 - r 3936"
                         action = "sell"
+                        
+                        # and ma2_last < ma2_2_min_ago
                  
                 
                     # 13 - SELL 1 FERRARI 
@@ -4270,11 +4285,14 @@ class maddog:
                     elif (     
                         seconds_since_last_trade > max_hold_time_in_seconds_ferrari
                         and deviation_buy_crollo_1 < -1.51
+                        
+                        and deviation_ma100_sopra_ma300 < -0.70
                         and deviation < -0.37
-                        and ma2_last < ma2_2_min_ago
                     ):
                         buy = "SELL 1 FERRARI se > 20 min dal BUY FERRARI la perdita e' < -0.37 - r 3948"
                         action = "sell"
+                        
+                        # and ma2_last < ma2_2_min_ago
              
             ########################################################################################################################### SESSIONE 2
             
