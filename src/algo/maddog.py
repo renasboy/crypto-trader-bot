@@ -4083,11 +4083,11 @@ class maddog:
                     
                     elif (    
                         ma3_last < ma100_last
-                        and deviation_sell < 0.05
+                        and deviation_sell < -0.05
                         and ma2_last < ma2_2_min_ago
                     ):
                    
-                        sell = "SELL 1 > 110 min FORSE E' NECESSARA SOLO QUESTA ! - r 3769"
+                        sell = "SELL 1 > 110 min FORSE E' NECESSARA SOLO QUESTA ! deviation_sell < -0.05 - r 4090"
                         action = "sell"
                         
           
