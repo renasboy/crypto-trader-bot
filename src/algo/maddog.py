@@ -8242,10 +8242,10 @@ class maddog:
                         and deviation_ma100_sopra_ma300 < 0.25
                         
                         and (ma3_prev > ma78_prev and ma3_last < ma78_last)
-                        and deviation_sell < -0.15
+                        and deviation_sell < -0.19
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 4-5-x da 60 a 90 min con ma50 < con incrocio 3-78 and deviation_sell < -0.15 piu' tollerante (sta in basso) - r 8248"
+                        sell = "SELL 4-5-x da 60 a 90 min con ma50 < con incrocio 3-78 and deviation_sell < -0.19 piu' tollerante (sta in basso) - r 8248"
                         action = "sell"
                         
                         
