@@ -650,6 +650,7 @@ class maddog:
                 elif (     
                     ma300_last > ma300_120_min_ago
                     and ma8_last > ma100_last
+                    and deviation_ma5_sopra_ma28 > 0.16
                     
                     and ma200_last < ma200_60_min_ago
                     and ma100_last < ma100_60_min_ago
@@ -682,6 +683,7 @@ class maddog:
                 
                 elif (     
                     ma69_last > ma69_45_min_ago
+                    and deviation_ma5_sopra_ma28 > 0.15
                     and deviation_bellissima > 0.06
                     and ma20_last > ma20_2_min_ago
                     and ma5_last > ma5_2_min_ago
@@ -751,7 +753,7 @@ class maddog:
                     ma200_last > ma200_120_min_ago
                     and ma20_last > ma200_last
                     and ma11_last > ma69_last
-                    
+                    and deviation_ma5_sopra_ma28 > 0.15
                     and deviation_bellissima > 0.17
                     and price > price_2_min_ago
                     and ma2_last > ma2_2_min_ago
@@ -1111,8 +1113,8 @@ class maddog:
                 
                 elif (
                     deviation_ma3 < -1.30
-                    and delta_1 < 0.25
-                    and delta_2 > 0.40
+                    
+                    
                     and rapporto_delta_1_delta_2 < 1
                     and ma3_last > ma9_last
                 ):
@@ -1120,6 +1122,10 @@ class maddog:
                     buy = "BUY 1 con RIBASSO VELOCE mentre la distanza tra ma100 e ma200 si sta riducendo - la ma100 sta risalendo ! USANDO UN DOPPIO DELTA ! - r 1062"
                     action = "buy"
                     percentage = 10
+                    
+                    # and delta_1 < 0.25
+                    # and delta_2 > 0.40
+                    # STUDIARE MEGLIO DELTA 1 E DELTA 2
                     
                     # compare grazie. altre parole io non ho.
                     
@@ -1219,8 +1225,8 @@ class maddog:
                     and ma100_last < ma100_10_min_ago
                     and deviation_ma200_sotto_ma300 < -0.27
                     
-                    and delta_1 < 0.50
-                    and delta_2 > 0.69
+                    
+                    
                     and rapporto_delta_1_delta_2 < 1
                     
                     and ma2_last > ma2_2_min_ago
@@ -1229,6 +1235,8 @@ class maddog:
                     action = "buy"
                     percentage = 20
                     
+                    # and delta_1 < 0.50
+                    # and delta_2 > 0.69
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     # deviation_correzione = ma3_last / ma25_last
                     
@@ -1283,8 +1291,8 @@ class maddog:
                     and ma100_last < ma100_10_min_ago
                     and deviation_ma200_sotto_ma300 < -0.27
                     
-                    and delta_1 > 0.69
-                    and delta_2 > 0.50
+                    
+                    
                     and rapporto_delta_1_delta_2 > 1
                     
                     and ma2_last > ma2_2_min_ago
@@ -1295,6 +1303,9 @@ class maddog:
                     
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     # deviation_correzione = ma3_last / ma25_last
+                    
+                    # and delta_1 > 0.69
+                    # and delta_2 > 0.50
                     
                     # compare prega per me !
                     
@@ -2883,15 +2894,16 @@ class maddog:
                         and deviation_sell < -0.45
                         and ma2_last < ma2_2_min_ago
                         
-                        and delta_1 < 0.25
-                        and delta_2 > 0.40
+                        
+                        
                         and rapporto_delta_1_delta_2 < 1
                     ):
                         sell = "SELL 1 PARACADUTE CROLLO distanza < tra ma100 e ma200 (5-12 min) con ma50 < and ma3 < ma16 and deviation_sell < -0.35 - r 2812"
                         action = "sell"
 
                         # AGGIUNTA PER SICUREZZA SE CONTINUA A PRECIPITARE ma sta risalendo
-                        
+                        # and delta_1 < 0.25
+                        # and delta_2 > 0.40
                         
                         
                         
@@ -2903,15 +2915,16 @@ class maddog:
                         and deviation_sell < -0.35
                         and ma2_last < ma2_2_min_ago
                         
-                        and delta_1 > 0.40
-                        and delta_2 < 0.25
+                        
+                        
                         and rapporto_delta_1_delta_2 > 1
                     ):
                         sell = "SELL 1 PARACADUTE CROLLO distanza > tra ma100 e ma200 (5-12 min) con ma50 < and ma3 < ma16 and deviation_sell < -0.35 - r 2832"
                         action = "sell"
 
                         # AGGIUNTA PER SICUREZZA SE CONTINUA A PRECIPITARE ma sta continuando a scendere
-                        
+                        # and delta_1 > 0.40
+                        # and delta_2 < 0.25
                         
                  
                 ###################################################################################################################  SESSIONE 1 ( 12-21 min )
@@ -3439,7 +3452,7 @@ class maddog:
                         and deviation_ma39 < -0.22
                         and ma2_last < ma2_2_min_ago
                     ):    
-                        sell = "SELL da 50 a 90 min con ma50 > and deviation_ma39 <-0.22 - r 3364"
+                        sell = "SELL 1 da 50 a 90 min con ma50 > and deviation_ma39 <-0.22 - r 3364"
                         action = "sell"
                         
                         # se non ha forza dopo 1 ora e' inutile continuare a sperare !
@@ -3452,7 +3465,7 @@ class maddog:
                         and ma3_last < ma50_last
                         and ma2_last < ma2_2_min_ago
                     ):    
-                        sell = "SELL da 50 a 90 min con ma50 > and deviation_sell < -0.23 and ma3_last < ma50_last  - r 3377"
+                        sell = "SELL 1 da 50 a 90 min con ma50 > and deviation_sell < -0.23 and ma3_last < ma50_last  - r 3377"
                         action = "sell"
                         
                         # se non ha forza dopo 1 ora e' inutile continuare a sperare !
