@@ -4189,11 +4189,12 @@ class maddog:
                 
                     elif (
                         ma78_last < ma78_2_min_ago
-                        and deviation_ribasso_improvviso < -0.60
+                        and deviation_ribasso_improvviso < -0.59
                     
                     ):
-                        sell = "SELL 1 RIBASSO IMPROVVISO -0.60 - r 3876"
+                        sell = "SELL 1 RIBASSO IMPROVVISO -0.59 - r 3876"
                         action = "sell"
+                        
               
                     # 8 - POCHI MALEDETTI E SUBITO con ma200 > MA ma100 NON DEVE SALIRE TROPPO ! - dedicated to comparo meo
                 
