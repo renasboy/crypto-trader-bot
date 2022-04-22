@@ -8218,14 +8218,34 @@ class maddog:
                         
                         
                     
-
+                    
+                    # sta in alto e stai attento
+                    
                     elif (
                         ma50_last < ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 > 0.25
+                        
                         and (ma3_prev > ma78_prev and ma3_last < ma78_last)
-                        and deviation_sell < 0.01
+                        and deviation_sell < -0.05
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 4-5-x da 60 a 90 min con ma50 < con incrocio 3-78 and deviation_sell < 0.01 - r 7691"
+                        sell = "SELL 4-5-x da 60 a 90 min con ma50 < con incrocio 3-78 and deviation_sell < -0.05 meno tollerante (sta in alto) - r 8232"
+                        action = "sell"
+                        
+                        
+                        
+                        
+                    # sta in basso e, PARADOSSALMENTE, sta piu' calmo
+                    
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 < 0.25
+                        
+                        and (ma3_prev > ma78_prev and ma3_last < ma78_last)
+                        and deviation_sell < -0.15
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 4-5-x da 60 a 90 min con ma50 < con incrocio 3-78 and deviation_sell < -0.15 piu' tollerante (sta in basso) - r 8248"
                         action = "sell"
                         
                         
