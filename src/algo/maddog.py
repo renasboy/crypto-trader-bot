@@ -1175,12 +1175,12 @@ class maddog:
                 # quando la ma100 si allontana verso il basso dalla ma 200 metto 8-50 altrimenti e' una perdita continua !
                 
             
-                # BUY 1 FIAT CHE NON HA FUNZIONATO ( DOPPIO DELTA in risalita !)
+                # BUY 1 FIAT che non funzionava MA CHE HA FUNZIONATO ! ( DOPPIO DELTA in risalita !)
                 
                 elif (    
                     deviation_buy_crollo_1 < -0.29
                     and deviation_buy_crollo_1 > -0.59
-                    and deviation_correzione > 0.10
+                    and ma3_last > ma9_last
                     
                     and ma200_last < ma300_last
                     and ma20_last < ma100_last
@@ -1191,12 +1191,13 @@ class maddog:
                     
                     and ma2_last > ma2_2_min_ago
                 ):
-                    buy = "BUY 1 FIAT CHE NON HA FUNZIONATO ( DOPPIO DELTA in risalita !) - r 1136"
+                    buy = "BUY 1 FIAT che non funzionava MA CHE HA FUNZIONATO ! ( DOPPIO DELTA in risalita !) - r 1136"
                     action = "buy"
                     percentage = 20
                     
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     # deviation_correzione = ma3_last / ma25_last
+                    # and deviation_correzione > 0.10
                     
                     # and delta_1 < 0.25 la puoi aggiungere in un secondo momento
                     # and delta_2 > 0.40 la puoi aggiungere in un secondo momento
