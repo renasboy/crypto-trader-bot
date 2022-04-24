@@ -320,23 +320,19 @@ class maddog:
         
         deviation_ma50_sotto_ma300 = (ma50_last / ma300_last - 1) * 100 if ma300_last else 0
         self.algo_helper.info("deviation_ma50_sotto_ma300: {}".format(deviation_ma50_sotto_ma300))
-        
-        
-        
+     
         
         # formula DEVIATION_ma100_sopra_ma300
         
         deviation_ma100_sopra_ma300 = (ma100_last / ma300_last - 1) * 100 if ma300_last else 0
         self.algo_helper.info("deviation_ma100_sopra_ma300: {}".format(deviation_ma100_sopra_ma300))
-        
-        
+       
         
         # formula DEVIATION_ma100_sopra_ma200
         
         deviation_ma100_sopra_ma200 = (ma100_last / ma200_last - 1) * 100 if ma200_last else 0
         self.algo_helper.info("deviation_ma100_sopra_ma200: {}".format(deviation_ma100_sopra_ma200))
-        
-        
+     
         
         # formula DEVIATION_ma13_sopra_ma25
         
@@ -399,6 +395,12 @@ class maddog:
         
         deviation_ribasso_improvviso = (price / ma30_last - 1) * 100 if ma30_last else 0
         self.algo_helper.info("deviation_ribasso_improvviso: {}".format(deviation_ribasso_improvviso))
+      
+        
+        # formula DEVIATION_crollo_24_aprile - che va nella vendita speciale
+        
+        deviation_crollo_24_aprile = (ma2_last / last_trade_price - 1) * 100 if last_trade_price else 0
+        self.algo_helper.info("deviation_crollo_24_aprile: {}".format(deviation_crollo_24_aprile))
         
        
         ################################################################################################################## deviation per comprare
@@ -420,9 +422,7 @@ class maddog:
         
         delta_buy2_dal_sell1 = (ma2_last / last_trade_price - 1) * 100 if last_trade_price else 0
         self.algo_helper.info("delta_buy2_dal_sell1: {}".format(delta_buy2_dal_sell1))
-        
-        
-
+    
         # formula DEVIATION_buy3 per la compra 3
         
         deviation_buy3 = (ma4_last / ma30_last - 1) * 100 if ma30_last else 0
@@ -572,8 +572,7 @@ class maddog:
         # if deviation_1_gabbia > -0.29 
         # or deviation_buy_crollo_1 < -1.50 
         # or (-1.50 < deviation_buy_crollo_1 < -0.60):
-        
-        
+       
             # deviation_1_gabbia = ma8_last / ma50_last
             # deviation_buy_crollo_1 = ma8_last / ma78_last
             
@@ -614,11 +613,12 @@ class maddog:
             ########################################################################################################
             
             # in futuro
-            # MACD sempre con aggiunta di ma 13-25 (come studio) (III° cane)
+            # MACD e RSI
             # TOGLIERE TUTTI GLI INCROCI AL BUY ! se 13 > 100 NON INCROCERA' MAI ! INCROCIO 13-100 DIVENTA 13>100 !
             # analisi dei dati !
-            
-            
+           
+        
+        
             ######################################################################################################## COMPRA sessione 1
             
             # BUY 1 con "percentage" 20
@@ -4257,15 +4257,19 @@ class maddog:
 
                         sell = "SELL 1 SALVAGENTE 3-39 con ma50 < r 4254"
                         action = "sell"
+                        
 
                     # deviation_ma39 = ma4_last / ma39_last QUESTA HA VENDUTO NEL CROLLO IMPROVVISO DI 1 MINUTO (con -2.06% !!!)!
+                    
+                    
+                    
                     # 2 - ro cano VENDE DURANTE UN CROLLO IMPROVVISO ! che dava problemi quando il prezzo ! andava molto sopra ma4 durante un trend rialzista !
                     # spero di aver risolto aggiungendo per precauzione queste altre 2 righe
                 
                     elif (    
                         ma2_last < ma4_last
                         and ma2_last < ma6_last
-                        and deviation < -0.62
+                        and deviation_crollo_24_aprile < -0.58
                     ): 
                 
                         sell = "SELL 1 CROLLO IMPROVVISO - r 4267"
