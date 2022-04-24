@@ -492,7 +492,23 @@ class ro_cano_che_ritorna:
                 ########################################################################################################### con ma30 che ha 40 min di andamento laterale
                 ########################################################################################################### PER ADESSO SOLO SUL BUY 1
                 
-                # --------------------------------------------------------------    BUY 1 con 200 >
+                # BUY 1 con 200 > copiata da maddog MA MOLTO PIU' AGGRESSIVA ma200 > MA ma100 < (e' in ribasso) (non e' un forte ribasso e non e' un crollo!)
+                
+                elif (
+                    ma2_last > ma5_last
+                    and ma200_last > ma200_120_min_ago
+                    and deviation_buy_crollo_1 < -0.33
+                    and deviation_buy_crollo_1 > -0.59
+                    and ma2_last > ma2_2_min_ago
+                    
+                ):    
+                    
+                    buy = "BUY 1A con ma200> piccola CORREZIONE FIAT che non e' un forte ribasso e non e' un crollo - r 995"
+                    action = "buy"
+                    percentage = 10
+                    
+                    
+                # BUY 1 con ma200> piccola CORREZIONE FIAT che NON E' un forte ribasso e NON E' un crollo ! (compare stammi vicino!)   
                 
                 elif (    
                     
