@@ -4246,6 +4246,7 @@ class maddog:
                         sell = "SELL 1 > 110 min FORSE E' NECESSARA SOLO QUESTA ! deviation_sell < -0.05 - r 4242"
                         action = "sell"
                         
+                        
           
             
             ################################################################################################# SESSIONE 1 ( vendita con questi 13 ALTRI MODI )
@@ -4265,7 +4266,25 @@ class maddog:
                     
                     # 2 - ro cano VENDE DURANTE UN CROLLO IMPROVVISO ! che dava problemi quando il prezzo ! andava molto sopra ma4 durante un trend rialzista !
                     # spero di aver risolto aggiungendo per precauzione queste altre 2 righe
+                    
+                    
+                    elif (    
+                        ma2_last < ma4_last
+                        and ma2_last < ma6_last
+                        and deviation  < -0.61
+                    ): 
                 
+                        sell = "SELL 1 CROLLO IMPROVVISO - r 4267"
+                        action = "sell"
+                        
+                        # deviation = ma4_last / last_trade_price
+                        # FORSE E' L' UNICA DEVIATION CHE MI POTRA' SALVARE DA UN CROLLO IMPROVVISO COME QUELLO DEL 3 NOVEMBRE 2021
+                        # -0.90 ha fatto fare una perdita di -1.46% il 19 dic 2021
+                        
+                        
+                    
+                    # vendita speciale dopo il crollo del 24 aprile
+                    
                     elif (    
                         ma2_last < ma4_last
                         and ma2_last < ma6_last
@@ -4274,10 +4293,12 @@ class maddog:
                 
                         sell = "SELL 1 CROLLO IMPROVVISO - r 4267"
                         action = "sell"
+                        
+                        # ho aggiunto anche questa vendita speciale dopo il 24 aprile -1%
+                        # deviation_crollo_24_aprile = ma2_last / last_trade_price
+                        # r400
 
-                        # deviation = ma4_last / last_trade_price
-                        # FORSE E' L' UNICA DEVIATION CHE MI POTRA' SALVARE DA UN CROLLO IMPROVVISO COME QUELLO DEL 3 NOVEMBRE 2021
-                        # -0.90 ha fatto fare una perdita di -1.46% il 19 dic 2021
+                        
                         
                     
                     
