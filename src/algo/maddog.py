@@ -3791,12 +3791,12 @@ class maddog:
                         and ma200_last > ma300_last
                         and deviation_trend_ma200 > -0.10
                         
-                        and deviation_ma39 < -0.20
+                        and deviation_ma39 < -0.23
                         and deviation_sell < -0.30
                         
                         and ma2_last <= ma2_2_min_ago
                     ):
-                        sell = "SELL 1 da 50-90 min BEST ma sempre con ma50< con deviation_ma39 <-0.20 and deviation_sell <-0.30 - CON PERDITA TOLLERATA> - r 3799"
+                        sell = "SELL 1 da 50-90 min BEST ma sempre con ma50< con deviation_ma39 <-0.23 and deviation_sell <-0.30 - CON PERDITA TOLLERATA> - r 3799"
                         action = "sell"
                         
                         # ha fatto perdita dell' 1% - forse succede tutto in quei 2 minuti se crolla improvvisamente
