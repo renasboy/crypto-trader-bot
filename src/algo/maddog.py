@@ -989,14 +989,15 @@ class maddog:
                     and deviation_buy_crollo_1 < -0.33
                     and deviation_buy_crollo_1 > -0.59
                     and ma3_last > ma28_last
-                    
+                    and ma3_last > ma100_last
                 ):    
                     
                     buy = "BUY 1A con ma200> piccola CORREZIONE FIAT che non e' un forte ribasso e non e' un crollo - r 995"
                     action = "buy"
                     percentage = 10
                     
-                    
+                    # and ma3_last > ma100_last PERCHE' in questa circostanza 3-28 arriva tardi e mi proteggo
+                    # dovrei fare 2-5 MA SAREBBE TROPPO RISCHIOSO perche' ma100 gia' e' in ribasso !
                 
                 # BUY 1 con ma300 > piccola CORREZIONE FIAT che NON E' AUDI e non e' MASERATI e NON E' FERRARI ! (compare stammi vicino!)
               
@@ -1010,7 +1011,7 @@ class maddog:
                     and ma5_last > ma72_last
                 ):
 
-                    buy = "BUY 1 con ma300 > piccola CORREZIONE FIAT che NON E' una grande correzione AUDI e non e' MASERATI e NON E' FERRARI ! - r 1013"
+                    buy = "BUY 1 con ma300 > piccola CORREZIONE FIAT che NON E' una grande correzione AUDI e non e' MASERATI e NON E' FERRARI ! - r 1014"
                     action = "buy"
                     percentage = 10
 
@@ -1031,8 +1032,7 @@ class maddog:
                 # la terza e' uguale proprio ma le dico che deve stare a una certa distanza da ma200 ( cioe' tenta di prendere solo il secondo tentativo )
                 
                 
-                
-                
+              
                 
                 # BUY 1 piccola CORREZIONE FIAT = r 701 RCCR ma con rischio ridotto !
                 
