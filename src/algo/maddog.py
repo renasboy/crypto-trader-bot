@@ -202,7 +202,7 @@ class maddog:
         
         
         
-        # formula DEVIATION_ma5_sopra_ma28
+        # formula DEVIATION_ma5_sopra_ma28 - FORMULA AUREA !
         
         deviation_ma5_sopra_ma28 = (ma5_last / ma28_last - 1) * 100 if ma28_last else 0
         self.algo_helper.info("deviation_ma5_sopra_ma28: {}".format(deviation_ma5_sopra_ma28))
@@ -700,14 +700,14 @@ class maddog:
                 elif (     
                     ma69_last > ma69_45_min_ago
                     and ma30_last < ma30_40_min_ago
-                    and deviation_ma5_sopra_ma28 > 0.25
+                    and deviation_ma5_sopra_ma28 > 0.175
                     and deviation_bellissima > 0.06
-                    and ma20_last > ma20_2_min_ago
-                    and ma5_last > ma5_2_min_ago
                     and ma2_last > ma20_last
+                    and ma5_last >= ma5_2_min_ago
                     and ma2_last > ma2_2_min_ago
+                    
                 ):    
-                    buy = "BUY 1 che considera il passare del tempo con deviation_bellissima > 0.06 - r 710"
+                    buy = "BUY 1 che considera il passare del tempo con deviation_bellissima > 0.06 and deviation_ma5_sopra_ma28 > 0.18 - r 710"
                     action = "buy"
                     percentage = 20
                     
@@ -3778,12 +3778,8 @@ class maddog:
                         sell = "SELL 1 da 50 a 90 min UN PO' MEGLIO con ma50 < con incrocio 3-78 and deviation_sell < -0.17 - r 3778"
                         action = "sell"    
                     
-                    
-                   
-                    
-                    ########################################################## con ma50 discendente MA trend ma200> ET ma200 > ma300 - PERDITA TOLLERATA AUMENTA
-                    
-                    # ipotesi migliore ( sempre con ma50 < ) MA....!
+                
+                    ##################################################### sempre con ma50 discendente MA trend ma200> ET ma200 > ma300 - PERDITA TOLLERATA AUMENTA
                     
                     
                     elif (
@@ -3796,7 +3792,7 @@ class maddog:
                         
                         and ma2_last <= ma2_2_min_ago
                     ):
-                        sell = "SELL 1 da 50-90 min BEST ma sempre con ma50< con deviation_ma39 <-0.23 and deviation_sell <-0.30 - CON PERDITA TOLLERATA> - r 3799"
+                        sell = "SELL 1 da 50-90 min BEST ma sempre con ma50< con deviation_ma39 <-0.23 and deviation_sell <-0.30 - CON PERDITA TOLLERATA> - r 3795"
                         action = "sell"
                         
                         # ha fatto perdita dell' 1% - forse succede tutto in quei 2 minuti se crolla improvvisamente
@@ -4246,9 +4242,8 @@ class maddog:
                         sell = "SELL 1 > 110 min FORSE E' NECESSARA SOLO QUESTA ! deviation_sell < -0.05 - r 4242"
                         action = "sell"
                         
-                        
-          
-            
+         
+        
             ################################################################################################# SESSIONE 1 ( vendita con questi 13 ALTRI MODI )
            
             
@@ -4274,7 +4269,7 @@ class maddog:
                         and deviation  < -0.61
                     ): 
                 
-                        sell = "SELL 1 CROLLO IMPROVVISO - r 4267"
+                        sell = "SELL 1 CROLLO IMPROVVISO - r 4272"
                         action = "sell"
                         
                         # deviation = ma4_last / last_trade_price
@@ -4291,17 +4286,13 @@ class maddog:
                         and deviation_crollo_24_aprile < -0.58
                     ): 
                 
-                        sell = "SELL 1 CROLLO IMPROVVISO - r 4267"
+                        sell = "SELL 1 CROLLO IMPROVVISO - r 4289"
                         action = "sell"
                         
                         # ho aggiunto anche questa vendita speciale dopo il 24 aprile -1%
-                        # deviation_crollo_24_aprile = ma2_last / last_trade_price
-                        # r400
+                        # deviation_crollo_24_aprile = ma2_last / last_trade_price - # r400
+                        
 
-                        
-                        
-                    
-                    
                     # 3 - ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma13 >
                     
                     elif (
@@ -4312,7 +4303,7 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                     ):
 
-                        sell = "SELL 1 DOLCE ATTESA con ma13 > and deviation < -0.40 - r 4286"
+                        sell = "SELL 1 DOLCE ATTESA con ma13 > and deviation < -0.40 - r 4306"
                         action = "sell"
 
                         # il fattore tempo - la dolce attesa - solo con trend ribassista
@@ -4331,7 +4322,7 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                     ):
 
-                        sell = "SELL 1 DOLCE ATTESA con ma13 < and deviation < -0.35 - r 4305"
+                        sell = "SELL 1 DOLCE ATTESA con ma13 < and deviation < -0.35 - r 4325"
                         action = "sell"
 
                         # il fattore tempo - la dolce attesa - solo con trend ribassista
@@ -4349,7 +4340,7 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                     ):
 
-                        sell = "sessione 1 SELL TEMPO e se ma8 < ma50 and deviation_sell < -0.49 - r 4323"
+                        sell = "sessione 1 SELL TEMPO e se ma8 < ma50 and deviation_sell < -0.49 - r 4343"
                         action = "sell"
                         
                         # ma13 troppo lenta !
@@ -4363,7 +4354,7 @@ class maddog:
                         ma78_last > ma78_2_min_ago
                         and deviation_ribasso_improvviso < -0.61
                     ):
-                        sell = "SELL 1 RIBASSO IMPROVVISO < -0.61 - r 4337"
+                        sell = "SELL 1 RIBASSO IMPROVVISO < -0.61 - r 4357"
                         action = "sell"
                         
                         
@@ -4373,11 +4364,9 @@ class maddog:
                     elif (
                         ma78_last < ma78_2_min_ago
                         and deviation_ribasso_improvviso < -0.59
-                    
                     ):
-                        sell = "SELL 1 RIBASSO IMPROVVISO -0.59 - r 4349"
+                        sell = "SELL 1 RIBASSO IMPROVVISO -0.59 - r 4368"
                         action = "sell"
-                        
                         
               
                     # 8 - POCHI MALEDETTI E SUBITO con ma200 > MA ma100 NON DEVE SALIRE TROPPO ! - dedicated to comparo meo
@@ -4390,7 +4379,7 @@ class maddog:
                         and deviation_pochi_maledetti > 0.70
                         and ma2_last > ma100_last
                     ):    
-                        sell = "SELL 3-4-x POCHI MALEDETTI E SUBITO quando ma200 > e con deviation > 0.70 MA ma100 NON DEVE SALIRE TROPPO ! - r 4364"
+                        sell = "SELL 3-4-x POCHI MALEDETTI E SUBITO quando ma200 > e con deviation > 0.70 MA ma100 NON DEVE SALIRE TROPPO ! - r 4382"
                         action = "sell"
                     
                         # and ma2_last > ma100_last (altrimenti vende durante il crollo con la ma3-ma9)
@@ -4407,7 +4396,7 @@ class maddog:
                         and deviation_pochi_maledetti > 0.70
                         and ma2_last > ma100_last
                     ):    
-                        sell = "SELL 3-4-x POCHI MALEDETTI E SUBITO quando ma200 < e con deviation > 0.70 - dedicated to comparo meo - r 4381"
+                        sell = "SELL 3-4-x POCHI MALEDETTI E SUBITO quando ma200 < e con deviation > 0.70 - dedicated to comparo meo - r 4399"
                         action = "sell"
                     
                         # and ma2_last > ma100_last (altrimenti vende durante il crollo con la ma3-ma9)
@@ -4425,18 +4414,16 @@ class maddog:
                         
                         and deviation_ma100_sopra_ma300 < -0.70
                         and deviation < -0.29
-                        
-                        
-                    ): 
-                        buy = "SELL 1 FIAT se > 20 min dal BUY FIAT la perdita e' < -0.29 ! - r 4402"
+                    ):    
+                 
+                        buy = "SELL 1 FIAT se > 20 min dal BUY FIAT la perdita e' < -0.29 ! - r 4419"
                         action = "sell"
                         
                         # and ma2_last < ma2_2_min_ago
                         # and deviation_ma100_sopra_ma300 < -0.70 significa che c'e' un grande ribasso. 100 sta lontana da 300. 
                         # EVITO COSI' PROBLEMI AL TREND LATERALE.
                         
-                        
-                    
+                
                     # 11 - SELL 1 AUDI 
                     
                     elif (     
@@ -4448,7 +4435,7 @@ class maddog:
                         and deviation < -0.31
                         
                     ):
-                        buy = "SELL 1 AUDI se > 20 min dal BUY AUDI la perdita e' < -0.31 - r 4422"
+                        buy = "SELL 1 AUDI se > 20 min dal BUY AUDI la perdita e' < -0.31 - r 4438"
                         action = "sell"
                         
                         # and ma2_last < ma2_2_min_ago
@@ -4466,13 +4453,12 @@ class maddog:
                         and deviation < -0.33
                         
                     ):
-                        buy = "SELL 1 MASERATI se > 20 min dal BUY MASERATI la perdita e' < -0.33 - r 4440"
+                        buy = "SELL 1 MASERATI se > 20 min dal BUY MASERATI la perdita e' < -0.33 - r 4456"
                         action = "sell"
                         
                         # and ma2_last < ma2_2_min_ago
                         
-                 
-                
+               
                     # 13 - SELL 1 FERRARI 
                     
                     elif (     
@@ -4482,14 +4468,12 @@ class maddog:
                         and deviation_ma100_sopra_ma300 < -0.70
                         and deviation < -0.37
                     ):
-                        buy = "SELL 1 FERRARI se > 20 min dal BUY FERRARI la perdita e' < -0.37 - r 4456"
+                        buy = "SELL 1 FERRARI se > 20 min dal BUY FERRARI la perdita e' < -0.37 - r 4471"
                         action = "sell"
                         
                         # and ma2_last < ma2_2_min_ago
                         
-                        
-                        
-             
+            
             ########################################################################################################################### SESSIONE 2
             
             # ALLA SESSIONE 2 MANCAva UN ACQUISTO DURANTE IL CROLLO SE PER ES SESSIONE 1 HA GIA' VENDUTO MA IL TITOLO RESTA IN IPERVENDUTO
@@ -4509,11 +4493,10 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                      
                     ):
-                        sell = "SELL 2 (0-3 min) con ma50 > and incrocio 3-39 and deviation_sell < -0.23 - r 4483"
+                        sell = "SELL 2 (0-3 min) con ma50 > and incrocio 3-39 and deviation_sell < -0.23 - r 4496"
                         action = "sell"
                         
-                        
-                  
+               
                     elif (
                         ma50_last >= ma50_2_min_ago
                         and (ma3_prev > ma33_prev and ma3_last < ma33_last)
@@ -4521,21 +4504,19 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 2 (0-3 min) con ma50 > and incrocio 3-33 and deviation_sell 0.25 - 0.60 FINTA DI MARADONA - r 4495"
+                        sell = "SELL 2 (0-3 min) con ma50 > and incrocio 3-33 and deviation_sell 0.25 - 0.60 FINTA DI MARADONA - r 4507"
                         action = "sell"
                         
-                        
-               
+                 
                     elif (
                         ma50_last >= ma50_2_min_ago
                         and (ma3_prev > ma33_prev and ma3_last < ma33_last)
                         and deviation_sell > 0.61 and deviation_sell < 0.79
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 2 (0-3 min) con ma50 > and incrocio 3-33 and deviation_sell 0.61 - 0.79 DRIBBLING DI RONALDO - r 4506"
+                        sell = "SELL 2 (0-3 min) con ma50 > and incrocio 3-33 and deviation_sell 0.61 - 0.79 DRIBBLING DI RONALDO - r 4517"
                         action = "sell"
-                        
-                        
+                    
                
                     elif (
                         ma50_last >= ma50_2_min_ago
@@ -4543,7 +4524,7 @@ class maddog:
                         and deviation_sell > 0.80 and deviation_sell < 1.20
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 2 (0-3 min) con ma50 > and incrocio 3-13 and deviation_sell 0.80 - 1.20 DOPPIO PASSO ALLA RONALDO - r 4517"
+                        sell = "SELL 2 (0-3 min) con ma50 > and incrocio 3-13 and deviation_sell 0.80 - 1.20 DOPPIO PASSO ALLA RONALDO - r 4527"
                         action = "sell"
                   
                 
@@ -4553,11 +4534,9 @@ class maddog:
                         and deviation_sell > 1.21
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 2 (0-3 min) con ma50 > and incrocio 3-11 and deviation_sell > 1.21 (che sarebbe come IL DRIBBLING ALLA RONALDO !) - r 4527"
+                        sell = "SELL 2 (0-3 min) con ma50 > and incrocio 3-11 and deviation_sell > 1.21 (che sarebbe come IL DRIBBLING ALLA RONALDO !) - r 4537"
                         action = "sell"
-                        
-                        
-                
+                    
                     ###########################################################################     trend in ribasso
 
                     elif (
@@ -4566,7 +4545,7 @@ class maddog:
                         and deviation_sell < -0.30
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 2 (0-3 min) con ma50 < and incrocio 3-28 - r 4540"
+                        sell = "SELL 2 (0-3 min) con ma50 < and incrocio 3-28 - r 4548"
                         action = "sell"
                         
                         # incrocio 3 -28 e' fondamentale per evitare punto rosso sovrapposto al punto verde !
@@ -4578,11 +4557,9 @@ class maddog:
                         and deviation_sell < -0.23
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 2 (0-3 min) con ma50 < and incrocio 3-33 and deviation_sell -0.23 - r 4552"
+                        sell = "SELL 2 (0-3 min) con ma50 < and incrocio 3-33 and deviation_sell -0.23 - r 4560"
                         action = "sell"
-                        
-                        
-                 
+               
                     # ---------------------------------------------------------------------------------------------------------------------- crollo
 
                     elif (
@@ -4591,20 +4568,18 @@ class maddog:
                         and deviation_sell < -0.50
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 2 CROLLO (0-3 min) con ma50 < and incrocio 3-16 and deviation_sell < -0.50 - r 4565"
+                        sell = "SELL 2 CROLLO (0-3 min) con ma50 < and incrocio 3-16 and deviation_sell < -0.50 - r 4571"
                         action = "sell"
                         
                         # AGGIUNTA PER SICUREZZA SE CONTINUA A PRECIPITARE
-                        
-                        
-                   
+                
                     elif (
                         ma50_last < ma50_2_min_ago
                         and (ma3_prev > ma23_prev and ma3_last < ma23_last)
                         and deviation_sell > 0.23
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 2 CROLLO (0-3 min) con ma50 < and incrocio 3-23 and deviation_sell > 0.23 - r 4478"
+                        sell = "SELL 2 CROLLO (0-3 min) con ma50 < and incrocio 3-23 and deviation_sell > 0.23 - r 4582"
                         action = "sell"
                    
                 
@@ -4615,12 +4590,10 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                     ):
 
-                        sell = "SELL 2 CROLLO (0-3 min) con ma50 < and incrocio 3-8 and deviation_sell > 0.60 - r 4589"
+                        sell = "SELL 2 CROLLO (0-3 min) con ma50 < and incrocio 3-8 and deviation_sell > 0.60 - r 4593"
                         action = "sell"
-                        
-                        
               
-                ################################################################################################################################ SESSIONE 2 ( 3-5 min )
+                ##################################################################################################################### SESSIONE 2 ( 3-5 min )
 
                 # VENDITA - da 3 a 5 minuti = da 180 a 300 secondi
 
@@ -4632,7 +4605,7 @@ class maddog:
                         and deviation_sell < -0.25
                         and ma2_last < ma2_2_min_ago
                     ):  
-                        sell = "SELL 2 (3-5 min) con ma50 > and incrocio 3-39 and deviation_sell < -0.25 - r 4606"
+                        sell = "SELL 2 (3-5 min) con ma50 > and incrocio 3-39 and deviation_sell < -0.25 - r 4608"
                         action = "sell"
                         
                  
@@ -4641,19 +4614,18 @@ class maddog:
                         and ma5_last < ma25_last
                         and deviation_sell > 0.25 and deviation_sell < 0.56
                         and ma2_last < ma2_2_min_ago
-                      
-                    ):
-                        sell = "SELL 2 (3-5 min) con ma50 > and 5-25 and deviation_sell 0.25-0.56 - FINTA ALLA MARADONA - r 4617"
+                    ):  
+                        sell = "SELL 2 (3-5 min) con ma50 > and 5-25 and deviation_sell 0.25-0.56 - FINTA ALLA MARADONA - r 4618"
                         action = "sell"
                         
-                  
+                    
                     elif (
                         ma50_last >= ma50_2_min_ago
                         and (ma3_prev > ma15_prev and ma3_last < ma15_last)
                         and deviation_sell > 0.57 and deviation_sell < 1.20
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 2 (3-5 min) con ma50 > and incrocio 3-15 and deviation_sell 0.57 - 1.20 - r 4627"
+                        sell = "SELL 2 (3-5 min) con ma50 > and incrocio 3-15 and deviation_sell 0.57 - 1.20 - r 4628"
                         action = "sell"
                         
                     
@@ -4663,11 +4635,10 @@ class maddog:
                         and deviation_sell > 1.21
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 2 (3-5 min) con ma50 > and incrocio 3-25 and deviation_sell > 1.21 - r 4637"
+                        sell = "SELL 2 (3-5 min) con ma50 > and incrocio 3-25 and deviation_sell > 1.21 - r 4638"
                         action = "sell"
                         
-                        
-                   
+                    
                     ###########################################################################     trend in ribasso
 
                     elif (
