@@ -694,8 +694,7 @@ class maddog:
                     action = "buy"
                     percentage = 20
                     
-                    
-                    
+              
                 # ------------------------------------------------------------ BUY 1 che considera il passare del tempo 2 MA TREND IN RIBASSO
                 
                 elif (     
@@ -708,13 +707,11 @@ class maddog:
                     and ma2_last > ma20_last
                     and ma2_last > ma2_2_min_ago
                 ):    
-                    buy = "BUY 1 che considera il passare del tempo con deviation_bellissima > 0.06 - r 711"
+                    buy = "BUY 1 che considera il passare del tempo con deviation_bellissima > 0.06 - r 710"
                     action = "buy"
                     percentage = 20
                     
-                
-                
-                
+              
                 # BUY 1 copiata e modificata da RCCR che e' arrivata una ndecchia prima del passare del tempo.
                 
                 elif (
@@ -731,19 +728,17 @@ class maddog:
                     and deviation_bellissima > 0.17
                     and deviation_ma13_sopra_ma25 > 0.07
                     and deviation_ma3_sopra_ma7 > 0.05
-         
                     and ma3_last > ma3_3_min_ago
                     and ma2_last > ma2_2_min_ago
-               
+              
                 ):
-                    buy = "BUY 1 copiata e modificata da RCCR che e' arrivata una ndecchia prima del passare del tempo - riga 739"
+                    buy = "BUY 1 copiata e modificata da RCCR che e' arrivata una ndecchia prima del passare del tempo - riga 735"
                     action = "buy"
                     percentage = 20
                     
                     # importante : ma100 sta sotto la ma200 non le e' troppo lontana cioe' NON ci troviamo in una situazione drammatica! (anche se ma200< e ma300<)
                     
-                    
-              
+               
                 # ------------------------------------------------------------  BUY 1 con incrocio 11-69 and ma69_last >= ma69_2_min_ago  "MI PIACE!"
                 
                 elif (
@@ -759,11 +754,16 @@ class maddog:
                     and deviation_ma13_sopra_ma25 > 0.06
                  
                 ):
-                    buy = "BUY 1 con ma20_last > ma200_last e con 11 > 69 e ma69> 2 min ago (!) r 762"
+                    buy = "BUY 1 con ma20_last > ma200_last e con 11 > 69 e ma69> 2 min ago (!) r 757"
                     action = "buy"
                     percentage = 20
                     
            
+        
+        
+        
+        
+        
                 
                 # BUY 1 con 11-69 SE ma200 SALE DA 2 ORE !
                     
@@ -3791,15 +3791,19 @@ class maddog:
                         and ma200_last > ma300_last
                         and deviation_trend_ma200 > -0.10
                         
-                        and deviation_ma39 < -0.27
-                        and ma2_last < ma2_2_min_ago
-                        and deviation_sell < -0.28
-                        and ma2_last < ma2_2_min_ago
+                        and deviation_ma39 < -0.20
+                        and deviation_sell < -0.30
+                        
+                        and ma2_last <= ma2_2_min_ago
                     ):
-                        sell = "SELL 1 da 50-90 min IPOTESI BEST ma sempre con ma50< con deviation_ma39<-0.27 and deviation_sell<-0.28 -CON PERDITA TOLLERATA> -r 3799"
+                        sell = "SELL 1 da 50-90 min BEST ma sempre con ma50< con deviation_ma39 <-0.20 and deviation_sell <-0.30 - CON PERDITA TOLLERATA> - r 3799"
                         action = "sell"
                         
-                    
+                        # ha fatto perdita dell' 1% - forse succede tutto in quei 2 minuti se crolla improvvisamente
+                        # con deviation_ma39 < -0.27
+                        # con deviation_sell < -0.28
+                        
+                        
                     
                     elif (
                         ma50_last < ma50_2_min_ago
@@ -3810,7 +3814,7 @@ class maddog:
                         and deviation_sell < -0.17
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 da 50-90 min IPOTESI BEST ma sempre con ma50 < con incrocio 3-78 and deviation_sell < -0.17 - CON PERDITA TOLLERATA > - r 3813"
+                        sell = "SELL 1 da 50-90 min BEST ma sempre con ma50 < con incrocio 3-78 and deviation_sell < -0.17 - CON PERDITA TOLLERATA > - r 3813"
                         action = "sell"
                         
                 
