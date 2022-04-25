@@ -1499,21 +1499,73 @@ class maddog:
                     percentage = 20
                     
                 
-                    
-                # BUY 1 FOREVER YOUNG 2 PIU' AGGRESSIVO se ma 200 > e se ma200 > ma300
-             
+                
+                
+                
+                
+                
+                
+                ################################################################################################
+                
+                # BUY 1 FOREVER YOUNG PIU' AGGRESSIVO con doppio delta < 1 (rialzo) se ma 200 > e se ma200 > ma300  and deviation_ma5_sopra_ma28 > 0.10
+                
                 elif (  
                     ma200_last > ma300_last
                     and ma200_last > ma200_15_min_ago
+                    and rapporto_delta_1_delta_2 < 1
+                    and deviation_ma5_sopra_ma28 > 0.10
+                    
+                    
                     and ma6_last > ma6_2_min_ago
                     and ma13_last > ma69_last
                     and ma13_last > ma13_2_min_ago
                     and ma2_last > ma2_2_min_ago
                 ):
                     
-                    buy = "BUY 1 FOREVER YOUNG 2 PIU' AGGRESSIVO se ma 200 > e se ma200 > ma300 - r 1514"
+                    buy = "BUY 1 FOREVER YOUNG PIU' AGGRESSIVO con doppio delta < 1 (rialzo) se ma 200 > e se ma200 > ma300 - r 1514"
                     action = "buy"
                     percentage = 20
+                    
+                    
+                    
+                    
+                
+                
+                # BUY 1 FOREVER YOUNG PRUDENTE se ma 200 > e se ma200 > ma300 con doppio delta > 1 (ribasso) and deviation_ma5_sopra_ma28 > 0.30
+                
+                elif (  
+                    ma200_last > ma300_last
+                    and ma200_last > ma200_15_min_ago
+                    and rapporto_delta_1_delta_2 > 1
+                    and deviation_ma5_sopra_ma28 > 0.30
+                    
+                    
+                    and ma6_last > ma6_2_min_ago
+                    and ma13_last > ma69_last
+                    and ma13_last > ma13_2_min_ago
+                    and ma2_last > ma2_2_min_ago
+                ):
+                    
+                    buy = "BUY 1 FOREVER YOUNG PRUDENTE con doppio delta > 1 (ribasso) and deviation_ma5_sopra_ma28 > 0.30 se ma 200 > e se ma200 > ma300 - r 1514"
+                    action = "buy"
+                    percentage = 20
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     
 
                     
@@ -1584,13 +1636,19 @@ class maddog:
                     # deviation_buy2 = ma8_last/ma50_last
                     
              
-            
-            
-                # BUY 2C se ma100 >
+                
+                
+                
+                ##################################################################################
+                
+                # BUY 2 con doppio delta < 1 trend crescita and deviation_ma5_sopra_ma28 > 0.14
                 
                 elif (
                     deviation_buy2 > 0.10
                     and ma100_last > ma100_60_min_ago
+                    and rapporto_delta_1_delta_2 < 1
+                    and deviation_ma5_sopra_ma28 > 0.14
+                    
                     and deviation_bellissima > 0.12
                     
                     and deviation_buy_ma3_sopra_ma13 > 0.10
@@ -1605,6 +1663,48 @@ class maddog:
                     percentage = 50
                     
                     # deviation_buy2 = ma8_last / ma50
+                    
+                    
+                    
+                    
+                    
+                    
+                # BUY 2 con doppio delta > 1 trend ribasso and deviation_ma5_sopra_ma28 > 0.16
+                
+                elif (
+                    deviation_buy2 > 0.10
+                    and ma100_last > ma100_60_min_ago
+                    and rapporto_delta_1_delta_2 > 1
+                    and deviation_ma5_sopra_ma28 > 0.16
+                    
+                    and deviation_bellissima > 0.12
+                    
+                    and deviation_buy_ma3_sopra_ma13 > 0.10
+                    and deviation_ma7_sopra_ma40 > 0.10
+                    and ma4_last > ma9_last
+                    and ma2_last > ma2_2_min_ago
+                    and ma3_last > ma40_last
+                    and ma4_last > ma78_last
+                ):
+                    buy = "BUY 2C - r 1603"
+                    action = "buy"
+                    percentage = 50
+                    
+                    # deviation_buy2 = ma8_last / ma50
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     
                     
                     
