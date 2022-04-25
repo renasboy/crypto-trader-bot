@@ -842,8 +842,8 @@ class maddog:
                 
                 elif (
                     ma200_last > ma200_20_min_ago
-                    and deviation_rialzo_improvviso_sopra > 0.49
-                    and deviation_rialzo_improvviso_1 > 0.49
+                    and deviation_rialzo_improvviso_sopra > 0.48
+                    and deviation_rialzo_improvviso_1 > 0.48
                     and deviation_rialzo_improvviso_2 > 0.19
                     and deviation_rialzo_improvviso_3 > 0.19
                     and deviation_range_1 < 0.20
@@ -2060,7 +2060,31 @@ class maddog:
                     
                     
                     
-                # --------------------------------------- BUY 2 che entra in azione se ma2 va sopra SELL 1 di almeno 0.30 !   
+                # BUY 2 RIALZO IMPROVVISO ! con ma200 > and ma100_last > ma200_last
+                
+                elif (
+                    ma200_last > ma200_20_min_ago
+                    and ma100_last > ma200_last
+                    and deviation_rialzo_improvviso_sopra > 0.48
+                    and deviation_rialzo_improvviso_1 > 0.48
+                    and deviation_rialzo_improvviso_2 > 0.19
+                    and deviation_rialzo_improvviso_3 > 0.19
+                    and deviation_range_1 < 0.20
+                    and deviation_range_1 > -0.20
+                    and deviation_range_2 < 0.20
+                    and deviation_range_2 > -0.20
+                    and deviation_range_x < 0.20
+                    and deviation_range_x > -0.20
+                ):
+             
+                    buy = "BUY 2 RIALZO IMPROVVISO ! con ma200 > and 100>200 (solo per il buy 2 e per il buy 3) - r 2079"
+                    action = "buy"
+                    percentage = 10
+                    
+                    
+                    
+                    
+                # --------------------------------------- BUY 2 che entra in azione se ma2 va sopra SELL 1 di almeno 0.30 !
                 
                 elif (     
                     seconds_since_last_trade > max_hold_time_in_seconds_delta_buy2_sell1
@@ -2192,8 +2216,33 @@ class maddog:
                  
                 
                 
-                # BUY 3 CON IL TURBO ! (compare stammi vicino!)
-               
+                # BUY 3 RIALZO IMPROVVISO ! con ma200 > and ma100_last > ma200_last
+                
+                elif (
+                    ma200_last > ma200_20_min_ago
+                    and ma100_last > ma200_last
+                    and deviation_rialzo_improvviso_sopra > 0.48
+                    and deviation_rialzo_improvviso_1 > 0.48
+                    and deviation_rialzo_improvviso_2 > 0.19
+                    and deviation_rialzo_improvviso_3 > 0.19
+                    and deviation_range_1 < 0.20
+                    and deviation_range_1 > -0.20
+                    and deviation_range_2 < 0.20
+                    and deviation_range_2 > -0.20
+                    and deviation_range_x < 0.20
+                    and deviation_range_x > -0.20
+                ):
+             
+                    buy = "BUY 3 RIALZO IMPROVVISO ! con ma200 > and 100>200 (solo per il buy 2 e per il buy 3) - r 2079"
+                    action = "buy"
+                    percentage = 10
+                    
+                    
+                    
+                    
+                    
+                # BUY 3 CON IL TURBO ! (compare stammi vicino!)   
+                
                 elif (    
                     ma200_last > ma200_120_min_ago
                     and deviation > -0.30
@@ -5158,10 +5207,10 @@ class maddog:
                   
                     
                     elif (    
-                        ma50_last > ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_sell < -0.30 and ma3_last < ma50_last)
+                        ma50_last > ma50_2_min_ago and (ma2_last < ma2_2_min_ago and deviation_sell < -0.29 and ma3_last < ma50_last)
                         and ma200_last > ma200_60_min_ago
                     ):
-                        sell = "SELL 2 (21-60 min) con ma50 > and (deviation_sell < -0.30 and ma3_last < ma50_last) TOLLERANTE ! - r 5064"
+                        sell = "SELL 2 (21-60 min) con ma50 > and (deviation_sell < -0.29 and ma3_last < ma50_last) TOLLERANTE ! - r 5064"
                         action = "sell"
                         
                         
