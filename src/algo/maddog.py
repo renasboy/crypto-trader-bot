@@ -1121,7 +1121,7 @@ class maddog:
                     ma2_last > ma2_2_min_ago
                     and ma5_last > ma39_last
                     and deviation_ma5_sotto_ma200 < -0.85
-                    
+                    and rapporto_delta_1_delta_2_69_39 < 1
                     and deviation_ma8_sotto_ma100 < -0.50
                     and deviation_buy_crollo_1 > -0.59
                 ): 
@@ -1758,7 +1758,7 @@ class maddog:
                 
                 
                 elif (
-                    deviation_ma5_sopra_ma28 > 0.05
+                    deviation_ma5_sopra_ma28 > 0.23
              
                     and deviation_buy_crollo_1 < -0.29
                     and deviation_buy_crollo_1 > -0.59
