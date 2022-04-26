@@ -81,8 +81,12 @@ class maddog:
         ma36_2_min_ago = self.algo_helper.ma_minutes_ago(36, 2)
         ma39_2_min_ago = self.algo_helper.ma_minutes_ago(39, 2)
         ma39_3_min_ago = self.algo_helper.ma_minutes_ago(39, 3)
+        ma39_15_min_ago = self.algo_helper.ma_minutes_ago(39, 15)
+        
         ma50_2_min_ago = self.algo_helper.ma_minutes_ago(50, 2)
         ma69_2_min_ago = self.algo_helper.ma_minutes_ago(69, 2)
+        ma69_15_min_ago = self.algo_helper.ma_minutes_ago(69, 15)
+        
         ma69_45_min_ago = self.algo_helper.ma_minutes_ago(69, 45)
         ma72_2_min_ago = self.algo_helper.ma_minutes_ago(72, 2)
         ma78_2_min_ago = self.algo_helper.ma_minutes_ago(78, 2)
@@ -211,7 +215,6 @@ class maddog:
         #################################################################################################################
         
         
-     
         # formula delta_1
         
         delta_1 = (ma200_last / ma100_last - 1) * 100 if ma100_last else 0
@@ -228,6 +231,27 @@ class maddog:
         
         rapporto_delta_1_delta_2 = (delta_1 / delta_2 - 1) * 100 if delta_2 else 0
         self.algo_helper.info("rapporto_delta_1_delta_2: {}".format(rapporto_delta_1_delta_2))
+        
+        
+        
+        # formula delta_1_69_39
+        
+        delta_1_69_39 = (ma69_last / ma39_last - 1) * 100 if ma39_last else 0
+        self.algo_helper.info("delta_1_69_39: {}".format(delta_1_69_39))
+        
+        
+        # formula delta_2_69_39
+        
+        delta_2_69_39 = (ma69_15_min_ago / ma39_15_min_ago - 1) * 100 if ma39_15_min_ago else 0
+        self.algo_helper.info("delta_2_69_39: {}".format(delta_2_69_39))
+        
+        
+        # formula rapporto_delta_1_delta_2_69_39
+        
+        rapporto_delta_1_delta_2_69_39 = (delta_1_69_39 / delta_2_69_39 - 1) * 100 if delta_2_69_39 else 0
+        self.algo_helper.info("rapporto_delta_1_delta_2_69_39: {}".format(rapporto_delta_1_delta_2_69_39))
+        
+        
         
      
         # formula deviation_ma3
@@ -1214,10 +1238,11 @@ class maddog:
                     and deviation_ma200_sotto_ma300 < -0.27
                   
                     and rapporto_delta_1_delta_2 < 1
+                    and rapporto_delta_1_delta_2_69_39 < 1
                     
                     and ma2_last > ma2_2_min_ago
                 ):
-                    buy = "BUY 1 FIAT che non funzionava MA CHE HA FUNZIONATO ! ( DOPPIO DELTA in risalita !) - r 1220"
+                    buy = "BUY 1 FIAT che non funzionava MA CHE HA FUNZIONATO ! ( DOPPIO DELTA 200-100 e DOPPIO DELTA 69-39 in risalita !) - r 1220"
                     action = "buy"
                     percentage = 20
                     
