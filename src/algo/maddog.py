@@ -97,6 +97,7 @@ class maddog:
         ma100_2_min_ago = self.algo_helper.ma_minutes_ago(100, 2)
         ma100_10_min_ago = self.algo_helper.ma_minutes_ago(100, 10)
         ma100_60_min_ago = self.algo_helper.ma_minutes_ago(100, 60)
+        ma100_120_min_ago = self.algo_helper.ma_minutes_ago(100, 120)
         ma200_15_min_ago = self.algo_helper.ma_minutes_ago(200, 15)
         ma200_20_min_ago = self.algo_helper.ma_minutes_ago(200, 20)
         ma200_60_min_ago = self.algo_helper.ma_minutes_ago(200, 60)
@@ -267,7 +268,8 @@ class maddog:
         
         
         
-        # formula deviation trend ma100 - se dopo 60 min cresce > 1%  NON FA PARTIRE LA VENDITA POCHI MALEDETTI E SUBITO - diversamente succederebbero punti sovrapposti
+        # formula deviation trend ma100 - se dopo 60 min cresce > 1%  NON FA PARTIRE LA VENDITA POCHI MALEDETTI E SUBITO !
+        # diversamente succederebbero punti sovrapposti !
         
         deviation_trend_ma100 = (ma100_last / ma100_60_min_ago - 1) * 100 if ma100_60_min_ago else 0
         self.algo_helper.info("deviation_trend_ma100: {}".format(deviation_trend_ma100))
@@ -1057,6 +1059,31 @@ class maddog:
                 
                 
               
+                
+                
+                # BUY 1 piccola CORREZIONE FIAT = r 995 RCCR medie mobili lunghe TUTE IN RIALZO ! ma si verifica una correzione fiat !
+                
+                elif (
+                    ma3_last > ma25_last
+                    and ma100_last > ma100_120_min_ago
+                    and ma200_last > ma200_120_min_ago
+                    and ma300_last > ma300_120_min_ago
+                    
+                    and ma100_last > ma200_last
+                    and ma200_last > ma300_last
+                    
+                    and deviation_buy_crollo_1 < -0.33
+                    and deviation_buy_crollo_1 > -0.59
+                    and ma2_last > ma2_2_min_ago
+                    
+                ):    
+                    
+                    buy = "BUY 1 piccola CORREZIONE FIAT = r 995 RCCR medie mobili lunghe TUTTE IN RIALZO ! ma si verifica una correzione fiat ! - r 1075"
+                    action = "buy"
+                    percentage = 10
+                    
+                    
+                
                 
                 # BUY 1 piccola CORREZIONE FIAT = r 701 RCCR ma con rischio ridotto !
                 
@@ -4512,20 +4539,27 @@ class maddog:
                         sell = "SELL 1 RIBASSO IMPROVVISO -0.59 - r 4468"
                         action = "sell"
                         
+                        
               
                     # 8 - POCHI MALEDETTI E SUBITO con ma200 > MA ma100 NON DEVE SALIRE TROPPO ! - dedicated to comparo meo
                 
                     elif (
+                        
                         ma3_last < ma9_last
-                        and deviation_trend_ma100 < 1.00
                         and ma200_last > ma200_60_min_ago
-                        and deviation > 0.70
-                        and deviation_pochi_maledetti > 0.70
+                        and deviation > 0.68
+                        and ma2_last < ma2_2_min_ago
+                 
                         and ma2_last > ma100_last
+                        
+                        and deviation_pochi_maledetti > 0.25
+                        and deviation_trend_ma100 < 0.50
                     ):    
-                        sell = "SELL 3-4-x POCHI MALEDETTI E SUBITO quando ma200 > e con deviation > 0.70 MA ma100 NON DEVE SALIRE TROPPO ! - r 4482"
+                        sell = "SELL 1 POCHI MALEDETTI E SUBITO quando ma200 > e con deviation > 0.70 MA ma100 NON DEVE SALIRE TROPPO ! - r 4482"
                         action = "sell"
-                    
+                        
+                        # attenzione : le prime 4 righe sono uguali a RCCR che ha funzionato. le altre 3 non hanno fatto attivare questa condizione !
+                        
                         # and ma2_last > ma100_last (altrimenti vende durante il crollo con la ma3-ma9)
                         # incredibile questa and deviation_trend_ma100 < 1.00 - se ma100 sale "forte" da 60 min non deve intervenire sell 3-9
                         
@@ -6212,9 +6246,34 @@ class maddog:
                         # ma13 troppo lenta !
                         # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
                         
+                        
+                        
                 
-                
-                
+                    # 6 POCHI MALEDETTI E SUBITO ma solo con 200 > and...
+                    
+                    elif (
+                        
+                        ma3_last < ma9_last
+                        and ma200_last > ma200_60_min_ago
+                        and deviation > 0.68
+                        and ma2_last < ma2_2_min_ago
+                 
+                        and ma2_last > ma100_last
+                        
+                        and deviation_pochi_maledetti > 0.25
+                        and deviation_trend_ma100 < 0.50
+                    ):    
+                        sell = "SELL 2 POCHI MALEDETTI E SUBITO quando ma200 > e con deviation > 0.70 MA ma100 NON DEVE SALIRE TROPPO ! - r 4482"
+                        action = "sell"
+                        
+                        # attenzione : le prime 4 righe sono uguali a RCCR che ha funzionato. le altre 3 non hanno fatto attivare questa condizione !
+                        
+                        # and ma2_last > ma100_last (altrimenti vende durante il crollo con la ma3-ma9)
+                        # incredibile questa and deviation_trend_ma100 < 1.00 - se ma100 sale "forte" da 60 min non deve intervenire sell 3-9
+                        
+                        
+                        
+                        
                     # 6 - RIBASSO IMPROVVISO - attenzione! ma2 arriva tardi !
             
                     elif (
@@ -7743,7 +7802,31 @@ class maddog:
                         
                 
                 
-                
+                    # 6 POCHI MALEDETTI E SUBITO ma solo con 200 > and...
+                    
+                    elif (
+                        
+                        ma3_last < ma9_last
+                        and ma200_last > ma200_60_min_ago
+                        and deviation > 0.68
+                        and ma2_last < ma2_2_min_ago
+                 
+                        and ma2_last > ma100_last
+                        and deviation_pochi_maledetti > 0.25
+                        and deviation_trend_ma100 < 0.50
+                    ):    
+                        sell = "SELL 3 POCHI MALEDETTI E SUBITO quando ma200 > e con deviation > 0.70 MA ma100 NON DEVE SALIRE TROPPO ! - r 4482"
+                        action = "sell"
+                        
+                        # attenzione : le prime 4 righe sono uguali a RCCR che ha funzionato. le altre 3 non hanno fatto attivare questa condizione !
+                        
+                        # and ma2_last > ma100_last (altrimenti vende durante il crollo con la ma3-ma9)
+                        # incredibile questa and deviation_trend_ma100 < 1.00 - se ma100 sale "forte" da 60 min non deve intervenire sell 3-9
+                        
+                        #POCHI MALEDETTI E SUBITO FINO A BUY 3. STOP. PASSO E CHIUDO.
+                        
+                        
+                        
                     # 6 - RIBASSO IMPROVVISO
             
                     elif (
