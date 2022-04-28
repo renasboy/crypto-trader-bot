@@ -446,7 +446,7 @@ class maddog:
         
         # formula DELTA_buy2 per la compra 2
         
-        delta_buy2_dal_sell1 = (ma2_last / last_trade_price - 1) * 100 if last_trade_price else 0
+        delta_buy2_dal_sell1 = (ma3_last / last_trade_price - 1) * 100 if last_trade_price else 0
         self.algo_helper.info("delta_buy2_dal_sell1: {}".format(delta_buy2_dal_sell1))
     
         # formula DEVIATION_buy3 per la compra 3
@@ -1141,7 +1141,34 @@ class maddog:
                     
                     
                     
+                
+                # BUY 1 con ma200> piccola CORREZIONE FIAT che NON E' un forte ribasso e NON E' un crollo ! ALTRA RIGA RCCR che e' andata bene.
+                
+                elif (    
                     
+                    ma200_last > ma200_20_min_ago
+                    and ma3_last > ma28_last
+                    and ma2_last > ma2_2_min_ago
+                    
+                    and ma100_last > ma200_last
+                    and ma200_last > ma300_last
+                    
+                    and ma100_last > ma100_60_min_ago
+                    and ma200_last > ma200_60_min_ago
+                    and ma300_last > ma300_60_min_ago
+               
+                ):    
+                    
+                    buy = "BUY 1 con 200 > - riga 1162"
+                    action = "buy"
+                    percentage = 10
+                    
+                    
+                    
+                    
+                    
+                
+                
                 # BUY 1 piccola CORREZIONE FIAT 5-39 ma con ma5 piu' distante da ma200 che NON E' un grande ribasso e NON E' un crollo !
                 
                 elif (
@@ -1159,7 +1186,7 @@ class maddog:
                     
 
                     
-                    
+                   
                 # BUY 1 con ma200< e ma300< piccola CORREZIONE FIAT che NON E' un forte ribasso e NON E' un crollo !
                 
                 elif (
@@ -2106,7 +2133,9 @@ class maddog:
                 
                 elif (     
                     seconds_since_last_trade > max_hold_time_in_seconds_delta_buy2_sell1
-                    and delta_buy2_dal_sell1 > 0.43
+                    and delta_buy2_dal_sell1 > 0.50
+                    and deviation_ma5_sopra_ma28 > 0.15
+                    
                     and ma100_last > ma100_60_min_ago
                     and ma200_last > ma200_120_min_ago
                     and ma100_last > ma200_last
@@ -2114,7 +2143,7 @@ class maddog:
                     and ma5_last > ma18_last
                     and ma2_last > ma2_2_min_ago
                 ):    
-                    buy = "BUY 2 che entra in azione se DOPO 2 MINUTI ma2 va sopra SELL 1 di almeno 0.30 ! - r 2059"
+                    buy = "BUY 2 che entra in azione se DOPO 2 MINUTI ma2 va sopra SELL 1 > 0.50 ! - r 2059"
                     action = "buy"
                     percentage = 40
                     
@@ -2141,7 +2170,7 @@ class maddog:
                     ma10_last > ma10_2_min_ago
                     and ma200_last > ma200_60_min_ago
                     and deviation > -0.30
-                    and deviation_ma5_sopra_ma28 > 0.09
+                    and deviation_ma5_sopra_ma28 > 0.12
                     
                     and deviation_ma4_sopra_ma30 > 0.11
                     and ma3_last > ma13_last
