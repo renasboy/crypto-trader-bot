@@ -496,6 +496,7 @@ class ro_cano_che_ritorna:
                 
                 elif (
                     ma2_last > ma5_last
+                    ma5_last > ma15_last
                     and ma200_last > ma200_120_min_ago
                     and deviation_buy_crollo_1 < -0.33
                     and deviation_buy_crollo_1 > -0.59
@@ -503,7 +504,7 @@ class ro_cano_che_ritorna:
                     
                 ):    
                     
-                    buy = "BUY 1A con ma200> piccola CORREZIONE FIAT che non e' un forte ribasso e non e' un crollo - r 995"
+                    buy = "BUY 1A con ma200> piccola CORREZIONE FIAT che non e' un forte ribasso e non e' un crollo - r 507"
                     action = "buy"
                     percentage = 10
                     
