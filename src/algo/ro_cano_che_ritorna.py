@@ -80,6 +80,7 @@ class ro_cano_che_ritorna:
         ma200_20_min_ago = self.algo_helper.ma_minutes_ago(200, 20)
         ma200_60_min_ago = self.algo_helper.ma_minutes_ago(200, 60)
         ma200_120_min_ago = self.algo_helper.ma_minutes_ago(200, 120)
+        ma300_60_min_ago = self.algo_helper.ma_minutes_ago(300, 60)
         ma300_120_min_ago = self.algo_helper.ma_minutes_ago(300, 120)
         
         
@@ -514,11 +515,16 @@ class ro_cano_che_ritorna:
                 elif (    
                     
                     ma200_last > ma200_20_min_ago
-                    and ma3_last > ma15_last
+                    and ma3_last > ma28_last
+                    
+                    and ma100_last < ma100_60_min_ago
+                    and ma200_last < ma200_60_min_ago
+                    and ma300_last > ma300_60_min_ago
+                    
                     and ma2_last > ma2_2_min_ago
                 ):    
                     
-                    buy = "BUY 1 con 200 > - riga 503"
+                    buy = "BUY 1 con 200 > 200 20 min ago (100 < and 200 < MA 300 >)  - riga 527"
                     action = "buy"
                     percentage = 10
                     
@@ -2450,12 +2456,12 @@ class ro_cano_che_ritorna:
 
                     elif (
                         ma50_last >= ma50_2_min_ago
-                        and ma3_last < ma9_last
+                        and ma3_last < ma28_last
                         and deviation_sell > 0.25
                         and deviation_sell < 0.90
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 2 (5-12 min) con ma50 >  3<9 and deviation_sell 0.25 - 0.90 - DRIBBLING ALLA RONALDO - riga 2282"
+                        sell = "SELL 2 (5-12 min) con ma50 >  3<28 and deviation_sell 0.25 - 0.90 - DRIBBLING ALLA RONALDO - riga 2282"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
