@@ -1689,6 +1689,30 @@ class maddog:
                     
                     
                     
+                
+                
+                
+                # BUY 1 con mcon 200 > 200 20 min ago (100 < and 200 < MA 300 >) piccola CORREZIONE FIAT che NON E' un forte ribasso e NON E' un crollo !   
+                
+                elif (    
+               
+                    ma3_last > ma28_last
+                    
+                    and ma100_last < ma100_60_min_ago
+                    and ma200_last < ma200_60_min_ago
+                    and ma300_last > ma300_60_min_ago
+                    
+                    and ma200_last > ma200_20_min_ago
+                    
+                    and ma2_last > ma2_2_min_ago
+                ):    
+                    
+                    buy = "BUY 1 con 200 > 200 20 min ago (100 < and 200 < MA 300 >)  - riga 1710"
+                    action = "buy"
+                    percentage = 10
+                    
+                    
+                    
                     
                 # BUY 1 forever young 1 PIU' PRUDENTE se ma200 > e se ma200 > ma300 - che si preoccupa degli effetti laterali
              
@@ -1705,6 +1729,14 @@ class maddog:
                     buy = "BUY 1 forever young 1 PIU' PRUDENTE se ma 200 > e se ma200 > ma300 - che si preoccupa degli effetti laterali - r 1705"
                     action = "buy"
                     percentage = 20
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     
                 
                 
@@ -3789,17 +3821,17 @@ class maddog:
                         action = "sell"
                         
                        
-                    ########################################################################################## CUSCINO DI MARADONA per questo segmento di tempo !
+                    ############################################################################## CUSCINO DI SANT' ANTONIO per questo segmento di tempo !
                     
                     
                     elif (
                         ma50_last > ma50_2_min_ago
                         and ma5_last < ma100_last
-                        and deviation_sell < 0.01
+                        and deviation_sell < 0.10
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 (21-50 min) con ma50 > and 5-100 and deviation_sell < 0.01 CUSCINO DI SANT' ANTONIO - r 3802"
+                        sell = "SELL 1 (21-50 min) con ma50 > and 5-100 and deviation_sell < 0.10 CUSCINO DI SANT' ANTONIO - r 3802"
                         action = "sell"
                   
              
