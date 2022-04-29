@@ -496,7 +496,7 @@ class ro_cano_che_ritorna:
                 
                 elif (
                     ma2_last > ma5_last
-                    ma5_last > ma15_last
+                    and ma5_last > ma15_last
                     and ma200_last > ma200_120_min_ago
                     and deviation_buy_crollo_1 < -0.33
                     and deviation_buy_crollo_1 > -0.59
