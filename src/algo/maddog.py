@@ -1265,28 +1265,28 @@ class maddog:
                     percentage = 10
                     
                     
-                    
-                    
-                    
-                
+                 
                 
                 # BUY 1 piccola CORREZIONE FIAT 5-39 ma con ma5 piu' distante da ma200 che NON E' un grande ribasso e NON E' un crollo !
                 
                 elif (
                     ma2_last > ma2_2_min_ago
                     and ma5_last > ma39_last
+                    and deviation_ma5_sopra_ma28 > 0.10
                     and deviation_ma5_sotto_ma200 < -0.85
                     and rapporto_delta_1_delta_2_69_39 < 1
                     and deviation_ma8_sotto_ma100 < -0.50
                     and deviation_buy_crollo_1 > -0.59
                 ): 
             
-                    buy = "BUY 1 piccola CORREZIONE FIAT 5-39 ma con ma5 piu' distante da ma200 che NON E' un grande ribasso e NON E' un crollo ! - r 1284"
+                    buy = "BUY 1 piccola CORREZIONE FIAT 5-39 ma con ma5 piu' distante da ma200 che NON E' un grande ribasso e NON E' un crollo ! - r 1283"
                     action = "buy"
                     percentage = 10
                     
+                    # 5-28 se non c'e' un minimo di accelerazione che cazzo mi compri !
 
                     
+                
                 
                 
                 # BUY 1 con ma200< e ma300< piccola CORREZIONE FIAT che NON E' un forte ribasso e NON E' un crollo !
@@ -3558,10 +3558,10 @@ class maddog:
                     elif (
                         ma50_last < ma50_2_min_ago
                         and deviation_ma39 < -0.159
-                        and deviation_sell < -0.29
+                        and deviation_sell < -0.34
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 (12-21 min) con ma50 < and deviation_ma39 < -0.159 and deviation_sell < -0.29 - r 3564"
+                        sell = "SELL 1 (12-21 min) con ma50 < and deviation_ma39 < -0.159 and deviation_sell < -0.34 - r 3564"
                         action = "sell"
                         
                         
