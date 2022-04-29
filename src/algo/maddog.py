@@ -3718,11 +3718,11 @@ class maddog:
                     elif (
                         ma50_last > ma50_2_min_ago
                         and ma5_last < ma30_last
-                        and deviation_sell > 0.31 and deviation_sell < 0.56
+                        and deviation_sell > 0.34 and deviation_sell < 0.56
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 (21-50 min) con ma50 > and 5-30 and deviation_sell 0.31-0.56 la prima FINTA ALLA MARADONA - r 3725"
+                        sell = "SELL 1 (21-50 min) con ma50 > and 5-30 and deviation_sell 0.34 - 0.56 la prima FINTA ALLA MARADONA - r 3725"
                         action = "sell"
                         
                         
@@ -3740,8 +3740,7 @@ class maddog:
                         # dopo 26 minuti non c'e' piu' quello scatto in avanti - dribbling- che si verifica nei primi minuti
                         # deviation_sell = ma3_last/last_trade_price
                         
-                     
-                    
+                 
 
                     elif (
                         ma50_last > ma50_2_min_ago
@@ -3750,13 +3749,11 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 (21-50 min) con ma50 > and incrocio 4-16 and deviation_sell 0.91 - 1.20 (DOPPIA FINTA DI RONALDO) - r 3753"
+                        sell = "SELL 1 (21-50 min) con ma50 > and incrocio 4-16 and deviation_sell 0.91 - 1.20 (DOPPIA FINTA DI RONALDO) - r 3752"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
                         
-                    
-                    
                 
                     elif (
                         ma50_last > ma50_2_min_ago
@@ -3765,11 +3762,10 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 (21-50 min) con ma50 > and incrocio 4-22 and deviation_sell 1.21 - 2.70 (DOPPIO PASSO DI RONALDO)- r 3768"
+                        sell = "SELL 1 (21-50 min) con ma50 > and incrocio 4-22 and deviation_sell 1.21 - 2.70 (DOPPIO PASSO DI RONALDO)- r 3765"
                         action = "sell"
                         
-                        
-                        
+                  
                
                     elif (
                         ma50_last > ma50_2_min_ago
@@ -3778,7 +3774,7 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 (21-50 min) con ma50 > and incrocio 3-9 and deviation_sell 2.71 - 5.70 (TACCO DI ALLAH) - r 3781"
+                        sell = "SELL 1 (21-50 min) con ma50 > and incrocio 3-9 and deviation_sell 2.71 - 5.70 (TACCO DI ALLAH) - r 3777"
                         action = "sell"
                         
                         
@@ -3789,13 +3785,24 @@ class maddog:
                         and deviation_sell > 5.71
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 (21-50 min) con ma50 > and incrocio 3-39 and deviation_sell > 2.71 (SI STA TRA GLI ANGELI, comba !) - r 3792"
+                        sell = "SELL 1 (21-50 min) con ma50 > and incrocio 3-39 and deviation_sell > 2.71 (SI STA TRA GLI ANGELI, comba !) - r 3788"
                         action = "sell"
                         
+                       
+                    ########################################################################################## CUSCINO DI MARADONA per questo segmento di tempo !
+                    
+                    
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and ma5_last < ma100_last
+                        and deviation_sell < 0.01
+                        and ma2_last < ma2_2_min_ago
+                        
+                    ):
+                        sell = "SELL 1 (21-50 min) con ma50 > and 5-100 and deviation_sell < 0.01 CUSCINO DI SANT' ANTONIO - r 3802"
+                        action = "sell"
                   
-                
-                
-                
+             
                     ##################################################################### con trend discendente
                     
                     ################################################################################################ con ma50 NON DISTANTE dalla ma300
@@ -3806,11 +3813,10 @@ class maddog:
                         and deviation_ma39 < -0.29
                         and deviation_ma50_sotto_ma300 > -0.50
                     ):
-                        sell = "SELL 1 maestro parte 1 (21-50 min) con ma50 < and deviation_ma39 < -0.29 - r 3809"
+                        sell = "SELL 1 maestro parte 1 (21-50 min) con ma50 < and deviation_ma39 < -0.29 - r 3816"
                         action = "sell"
                         
-                        
-                        
+                 
               
                     elif (        
                         ma50_last < ma50_2_min_ago 
@@ -3818,12 +3824,10 @@ class maddog:
                         and deviation_sell < -0.35
                         and deviation_ma50_sotto_ma300 > -0.50
                     ):
-                        sell = "SELL 1 maestro parte 2 (21-50 min) con ma50 < and deviation_sell < -0.35 - r 3821"
+                        sell = "SELL 1 maestro parte 2 (21-50 min) con ma50 < and deviation_sell < -0.35 - r 3827"
                         action = "sell"
                         
-                        
-                        
-               
+                 
                     ################################################################################################### con ma50 DISTANTE dalla ma300
                     
                     elif (    
@@ -3832,11 +3836,10 @@ class maddog:
                         and deviation_ma39 < -0.27
                         and deviation_ma50_sotto_ma300 < -0.50
                     ):
-                        sell = "SELL 1 maestro parte 1 (21-50 min) con ma50 < and deviation_ma39 < -0.27  - r 3835"
+                        sell = "SELL 1 maestro parte 1 (21-50 min) con ma50 < and deviation_ma39 < -0.27  - r 3839"
                         action = "sell"
                         
-                        
-                        
+                    
                
                     elif (        
                         ma50_last < ma50_2_min_ago 
@@ -3844,12 +3847,11 @@ class maddog:
                         and deviation_sell < -0.32
                         and deviation_ma50_sotto_ma300 < -0.50
                     ):
-                        sell = "SELL 1 maestro parte 2 (21-50 min) con ma50 < and deviation_sell < -0.32 - r 3847"
+                        sell = "SELL 1 maestro parte 2 (21-50 min) con ma50 < and deviation_sell < -0.32 - r 3850"
                         action = "sell"
-                        
-                  
                 
-                
+                    
+                    
                     #####################################################################################
                     
                     elif (
@@ -3858,12 +3860,10 @@ class maddog:
                         and deviation_sell < -0.37
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 (21-50 min) con ma50 < and incrocio 3-78 and deviation_sell < -0.37 - r 3861"
+                        sell = "SELL 1 (21-50 min) con ma50 < and incrocio 3-78 and deviation_sell < -0.37 - r 3863"
                         action = "sell"
                         
-                        
-                        
-              
+                   
                     elif (
                         ma50_last < ma50_2_min_ago
                         and (ma5_prev > ma100_prev and ma5_last < ma100_last)
