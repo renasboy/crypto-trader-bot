@@ -703,12 +703,20 @@ class maddog:
                     
                     
                     
-              
-                # ------------------------------------------------------------ BUY 1 che considera il passare del tempo 1 CON TREND IN RIALZO
+                
+                
+                
+                
+                
+                
+                # ------------------------------------------------------------ BUY 1 tempo ESTATE che considera il passare del TEMPO  CON ma30 > 
                 
                 elif (     
                     ma69_last > ma69_45_min_ago
+                    and ma100_last > ma200_last
+                    
                     and ma30_last > ma30_40_min_ago
+                
                     and deviation_ma5_sopra_ma28 > 0.15
                     and deviation_bellissima > 0.06
                     and ma20_last > ma20_2_min_ago
@@ -716,16 +724,20 @@ class maddog:
                     and ma2_last > ma20_last
                     and ma2_last > ma2_2_min_ago
                 ):    
-                    buy = "BUY 1 che considera il passare del tempo con deviation_bellissima > 0.06 - r 693"
+                    buy = "BUY 1 tempo ESTATE che considera il passare del tempo con deviation_bellissima > 0.06 - r 693"
                     action = "buy"
                     percentage = 20
                     
+                    
               
-                # ------------------------------------------------------------ BUY 1 che considera il passare del tempo 2 MA TREND IN RIBASSO
+                # ------------------------------------------------------------ BUY 1 tempo PRIMAVERA che considera il passare del tempo con ma30 < 
                 
                 elif (     
                     ma69_last > ma69_45_min_ago
+                    and ma100_last > ma200_last
+                    
                     and ma30_last < ma30_40_min_ago
+                 
                     and deviation_ma5_sopra_ma28 > 0.175
                     and deviation_bellissima > 0.06
                     and ma2_last > ma20_last
@@ -733,9 +745,70 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                     
                 ):    
-                    buy = "BUY 1 che considera il passare del tempo con deviation_bellissima > 0.06 and deviation_ma5_sopra_ma28 > 0.18 - r 710"
+                    buy = "BUY 1 tempo PRIMAVERA che considera il passare del tempo con deviation_bellissima > 0.06 and deviation_ma5_sopra_ma28 > 0.18 - r 710"
                     action = "buy"
                     percentage = 20
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                # ------------------------------------------------------------ BUY 1 tempo AUTUNNO che considera il passare del tempo con ma30 > MA 100 > 200
+                
+                elif (     
+                    ma69_last > ma69_45_min_ago
+                    and ma100_last < ma200_last
+                    
+                    and ma30_last > ma30_40_min_ago
+                    
+                    and ma20_last > ma200_last
+                    and deviation_ma5_sopra_ma28 > 0.15
+                    and deviation_bellissima > 0.06
+                    and ma20_last > ma20_2_min_ago
+                    and ma5_last > ma5_2_min_ago
+                    and ma2_last > ma20_last
+                    and ma2_last > ma2_2_min_ago
+                ):    
+                    buy = "BUY 1 tempo AUTUNNO che considera il passare del tempo con deviation_bellissima > 0.06 - r 693"
+                    action = "buy"
+                    percentage = 20
+                    
+              
+                
+                # ------------------------------------------------------------ BUY 1 tempo INVERNO che considera il passare del tempo con ma30 < MA 100 > 200
+                
+                elif (     
+                    ma69_last > ma69_45_min_ago
+                    and ma100_last < ma200_last
+                    
+                    and ma30_last < ma30_40_min_ago
+                    
+                    and ma20_last > ma200_last
+                    and deviation_ma5_sopra_ma28 > 0.175
+                    and deviation_bellissima > 0.06
+                    and ma2_last > ma20_last
+                    and ma5_last >= ma5_2_min_ago
+                    and ma2_last > ma2_2_min_ago
+                    
+                ):    
+                    buy = "BUY 1 tempo INVERNO che considera il passare del tempo con deviation_bellissima > 0.06 and deviation_ma5_sopra_ma28 > 0.18 - r 710"
+                    action = "buy"
+                    percentage = 20
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     
                     
                     
@@ -2084,15 +2157,18 @@ class maddog:
                   
                     
                  
-                # --------------------------------------- BUY 2 che considera il passare del tempo con TREND IN RIALZO !
+                # --------------------------------------- BUY 2 che considera il passare del tempo con TREND IN RIALZO ! sempre 20 > 200
                 
                 elif (     
                     seconds_since_last_trade > max_hold_time_in_seconds_nuova
                     and deviation_ma5_sopra_ma28 > 0.10
                     and ma30_last > ma30_40_min_ago
                     
-                    and ma4_last > ma100_last
+                    and ma20_last > ma200_last
                     and ma20_last > ma100_last
+                    
+                    and ma4_last > ma100_last
+                    
                     and ma100_last < ma300_last
                     and deviation_bellissima > 0.07
                     and ma2_last > ma2_2_min_ago
@@ -2105,15 +2181,18 @@ class maddog:
                     
                     
                     
-                # --------------------------------------- BUY 2 che considera il passare del tempo con TREND IN RIBASSO !
+                # --------------------------------------- BUY 2 che considera il passare del tempo con TREND IN RIBASSO ! sempre 20 > 200
                 
                 elif (     
                     seconds_since_last_trade > max_hold_time_in_seconds_nuova
                     and deviation_ma5_sopra_ma28 > 0.17
                     and ma30_last < ma30_40_min_ago
                     
-                    and ma4_last > ma100_last
+                    and ma20_last > ma200_last
                     and ma20_last > ma100_last
+                    
+                    and ma4_last > ma100_last
+                    
                     and ma100_last < ma300_last
                     and deviation_bellissima > 0.07
                     and ma2_last > ma2_2_min_ago
