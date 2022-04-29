@@ -1456,8 +1456,8 @@ class maddog:
                 elif (    
                     deviation_buy_crollo_1 < -0.29
                     and deviation_buy_crollo_1 > -0.59
+                    and deviation_ma5_sopra_ma28 > 0.10
                     and ma8_last > ma39_last
-                    
                     and ma200_last < ma300_last
                     and ma20_last < ma100_last
                     and ma100_last < ma100_10_min_ago
