@@ -45,6 +45,7 @@ class maddog:
         ma72_last, ma72_prev = self.algo_helper.ma_last_prev(72)
         ma78_last, ma78_prev = self.algo_helper.ma_last_prev(78)
         ma100_last, ma100_prev = self.algo_helper.ma_last_prev(100)
+        ma125_last, ma125_prev = self.algo_helper.ma_last_prev(125)
         ma150_last, ma150_prev = self.algo_helper.ma_last_prev(150)
         ma200_last, ma200_prev = self.algo_helper.ma_last_prev(200)
         ma300_last, ma300_prev = self.algo_helper.ma_last_prev(300)
@@ -1195,10 +1196,10 @@ class maddog:
                     deviation_buy_crollo_1 < -0.29
                     and deviation_buy_crollo_1 > -0.59
                     and deviation_correzione > 0.03
-                    and ma3_last > ma150_last
+                    and ma5_last > ma125_last
                     and ma2_last > ma2_2_min_ago
                 ):
-                    buy = "BUY 1 DURANTE UNA CORREZIONE FIAT che non e' un forte ribasso e non e' un crollo ! ma3 > ma150 - riga 1209"
+                    buy = "BUY 1 DURANTE UNA CORREZIONE FIAT che non e' un forte ribasso e non e' un crollo ! ma5 > ma125 - riga 1209"
                     action = "buy"
                     percentage = 20
                     
@@ -1206,7 +1207,7 @@ class maddog:
                 
                 
                     
-                # BUY 1 piccola CORREZIONE FIAT = r 701 RCCR CHE FA PAURA ! ( ma la ma100 non sta ancora troppo lontana dalla ma300 !)
+                # BUY 1 piccola CORREZIONE FIAT = r 701 RCCR CHE FA PAURA ! ( ma la ma100 E' ANCORA VICINA alla ma300 !)
                 
                 elif (
                     
@@ -1214,11 +1215,11 @@ class maddog:
                     and deviation_buy_crollo_1 > -0.59
                     and deviation_correzione > 0.03
                     
-                    and deviation_ma100_sopra_ma300 > -0.37
+                    and deviation_ma100_sopra_ma300 > -0.30
                     
                     and ma2_last > ma2_2_min_ago
                 ):
-                    buy = "BUY 1 DURANTE UNA CORREZIONE FIAT = r 701 RCCR CHE FA PAURA ! (ma la ma100 non sta ancora troppo lontana dalla ma300)! - riga 1229"
+                    buy = "BUY 1 DURANTE UNA CORREZIONE FIAT = r 701 RCCR CHE FA PAURA ! (ma la ma100 E' ANCORA VICINA alla ma300)! - riga 1229"
                     action = "buy"
                     percentage = 10
                     
