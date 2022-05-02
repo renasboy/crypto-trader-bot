@@ -1182,21 +1182,13 @@ class maddog:
                     
                     
                 
+               
+                
+                ################################################################################################### ecco le 2 CONDIZIONI PIU' PERICOLOSE !
                 
                 
                 
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                # BUY 1 DURANTE UNA CORREZIONE FIAT che non e' un forte ribasso e non e' un crollo ! ma3 > ma150
+                # BUY 1 DURANTE UNA CORREZIONE FIAT che non e' un forte ribasso e non e' un crollo ! (MA ma3 > ma150 mi protegge un po')
                 
                 elif (
                     
@@ -1206,7 +1198,7 @@ class maddog:
                     and ma3_last > ma150_last
                     and ma2_last > ma2_2_min_ago
                 ):
-                    buy = "BUY 1 DURANTE UNA CORREZIONE FIAT che non e' un forte ribasso e non e' un crollo ! ma3 > ma150 - riga 1208"
+                    buy = "BUY 1 DURANTE UNA CORREZIONE FIAT che non e' un forte ribasso e non e' un crollo ! ma3 > ma150 - riga 1209"
                     action = "buy"
                     percentage = 20
                     
@@ -1214,7 +1206,7 @@ class maddog:
                 
                 
                     
-                # BUY 1 piccola CORREZIONE FIAT = r 701 RCCR CHE FA PAURA ! (ma la ma100 non sta ancora troppo lontana dalla ma300)
+                # BUY 1 piccola CORREZIONE FIAT = r 701 RCCR CHE FA PAURA ! ( ma la ma100 non sta ancora troppo lontana dalla ma300 !)
                 
                 elif (
                     
@@ -1226,16 +1218,19 @@ class maddog:
                     
                     and ma2_last > ma2_2_min_ago
                 ):
-                    buy = "BUY 1 DURANTE UNA CORREZIONE FIAT = r 701 RCCR CHE FA PAURA ! (ma la ma100 non sta ancora troppo lontana dalla ma300)! - riga 1203"
+                    buy = "BUY 1 DURANTE UNA CORREZIONE FIAT = r 701 RCCR CHE FA PAURA ! (ma la ma100 non sta ancora troppo lontana dalla ma300)! - riga 1229"
                     action = "buy"
-                    percentage = 20
+                    percentage = 10
                     
                     # deviation_ma100_sopra_ma300 significa 100/300 ( ma100 ancora NON SI E' ALLONTANATA TROPPO DALLA ma300 )
                     
                     
                     
-                    
-                    
+               
+                ############################################################################################################################################## 
+                
+                
+                
                 # BUY 1 piccola CORREZIONE FIAT = r 701 RCCR ma con rischio ridotto !
                 
                 elif (
