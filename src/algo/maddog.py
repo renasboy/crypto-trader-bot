@@ -7942,13 +7942,16 @@ class maddog:
 
                     ####################################################################################################### con trend discendente
                     
+                    
                     elif (
                         ma50_last < ma50_2_min_ago
-                        and deviation_ma39 < -0.17
+                        and deviation_ma39 < -0.16
                         and ma2_last < ma2_2_min_ago
+                        
+                        and deviation_ma100_sopra_ma300 > 0.69
                        
                     ):
-                        sell = "SELL 3 da 60 a 90 min con ma50 < con deviation_ma39 <-0.17 and deviation_sell < 0.10 (no ma3<ma33) (NO INCROCIO!) - r 7880"
+                        sell = "SELL 3 da 60 a 90 min con ma50 < con deviation_ma39 <-0.16 TREND CRESCITA (100 sopra 300 > 0.69) - r 7954"
                         action = "sell"
                         
                         # and ma3_last < ma33_last
@@ -7958,7 +7961,41 @@ class maddog:
                         # cuscino dell' angelo custode
                         
                         
-                    
+                        
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and ma2_last < ma2_2_min_ago
+                
+                        and deviation_ma100_sopra_ma300 > 0.69
+                        and deviation_sell < -0.10
+                        and ma5_last < ma100_last
+                    ):
+                        sell = "SELL 3 da 60 a 90 min con ma50 < CUSCINO SANT' ANTONIO (5-100) MA SOLO con TREND CRESCITA (100 sopra 300 > 0.69) - r 7973"
+                        action = "sell"
+                        
+                        
+                        
+                        
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and deviation_ma39 < -0.17
+                        and ma2_last < ma2_2_min_ago
+                        
+                        and deviation_ma100_sopra_ma300 < 0.69
+                        and deviation_sell < -0.15
+                       
+                    ):
+                        sell = "SELL 3 da 60 a 90 min con ma50 < con deviation_ma39 <-0.17 and deviation_sell < 0.10 TREND LATERALE (100>300 MA <0.69) - r 7988"
+                        action = "sell"
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    ###########################################################################################################
 
                     elif (
                         ma50_last < ma50_2_min_ago
