@@ -3905,58 +3905,120 @@ class maddog:
                         sell = "SELL 1 (21-50 min) con ma50 > and 5-100 and deviation_sell < 0.10 CUSCINO DI SANT' ANTONIO - r 3802"
                         action = "sell"
                   
-             
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     ##################################################################### con trend discendente
                     
-                    ################################################################################################ con ma50 NON DISTANTE dalla ma300
                     
-                    elif (    
-                        ma50_last < ma50_2_min_ago 
-                        and ma2_last < ma2_2_min_ago 
-                        and deviation_ma39 < -0.29
-                        and deviation_ma50_sotto_ma300 > -0.50
+                    
+                    
+                    ################################################################################################ con ma100 DISTANTE sopra dalla ma300
+                    
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and deviation_ma39 < -0.16
+                        and ma2_last < ma2_2_min_ago
                         
+                        and deviation_ma100_sopra_ma300 > 0.69
+                       
                     ):
-                        sell = "SELL 1 maestro parte 1 (21-50 min) con ma50 < and deviation_ma39 < -0.29 - r 3816"
+                        sell = "SELL 1 (21-50 min) con ma50 < con deviation_ma39 <-0.16 TREND CRESCITA (100 sopra 300 > 0.69) - r 3857"
                         action = "sell"
                         
-                 
+                        # and ma3_last < ma33_last
+                        # and deviation_sell < 0.10
+                        # se non ha forza dopo 1 ora e' inutile continuare a sperare !
+                        # qui non ho messo il crollo perche' dopo 40 min o gia' ha venduto o e' gia' risalita
+                        # cuscino dell' angelo custode
+                        
+                    
+                    
+                    
+                    # cuscino sant' antonio
+                    
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and ma2_last < ma2_2_min_ago
                 
-                
-                
-              
-                    elif (        
-                        ma50_last < ma50_2_min_ago 
-                        and ma2_last < ma2_2_min_ago 
-                        and deviation_sell < -0.35
-                        and deviation_ma50_sotto_ma300 > -0.50
+                        and deviation_ma100_sopra_ma300 > 0.69
+                        and deviation_sell < -0.10
+                        and ma5_last < ma100_last
                     ):
-                        sell = "SELL 1 maestro parte 2 (21-50 min) con ma50 < and deviation_sell < -0.35 - r 3827"
+                        sell = "SELL 1 (21-50 min)con ma50 < CUSCINO SANT' ANTONIO (5-100) MA SOLO con TREND CRESCITA (100 sopra 300 > 0.69) - r 3859"
                         action = "sell"
                         
+                        
+                    
+                    
+                    
+                    # TREND LATERALE (100>300 MA <0.69)
+                    
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and deviation_ma39 < -0.17
+                        and ma2_last < ma2_2_min_ago
+                        
+                        and deviation_ma100_sopra_ma300 < 0.69
+                        and deviation_sell < -0.15
+                       
+                    ):
+                        sell = "SELL 1 (21-50 min) con ma50 < con deviation_ma39 <-0.17 and deviation_sell < 0.10 TREND LATERALE (100>300 MA <0.69) - r 3860"
+                        action = "sell"
+                        
+                        
+                        
+                        
+                        
                  
-                    ################################################################################################### con ma50 DISTANTE dalla ma300
+                    
+                    ######################################################################## con ma50 DISTANTE dalla ma300 # queste 2 son un souvenir !
+                    # ho considerato, poi, la distanza tra ma100 e ma300 (ma il principio e' lo stesso)
+                    # se ma100 sta molto sopra ma300 TREND IN CRESCITA interviene solo ma39
+                    # ma se ma100 e' vicina alla ma300 TREND LATERALE interviene la ma39 E la deviation sell !
+                    
+                    # poi c'e' il cuscino di sant' antonio 5-100
+                    
+                    
+                    
+                    
+                    # SELL 1 maestro parte 1 (21-50 min) con ma50 < and deviation_ma39 < -0.27
                     
                     elif (    
                         ma50_last < ma50_2_min_ago 
                         and ma2_last < ma2_2_min_ago 
                         and deviation_ma39 < -0.27
-                        and deviation_ma50_sotto_ma300 < -0.50
+                        and deviation_ma50_sotto_ma300 > 0.50
                     ):
-                        sell = "SELL 1 maestro parte 1 (21-50 min) con ma50 < and deviation_ma39 < -0.27  - r 3839"
+                        sell = "SELL 1 maestro parte 1 (21-50 min) con ma50 < and deviation_ma39 < -0.27 - r 3861"
                         action = "sell"
                         
+                        
+                        
                     
-               
+                    
+                    # SELL 1 maestro parte 2 (21-50 min) con ma50 < and deviation_sell < -0.32
+                    
                     elif (        
                         ma50_last < ma50_2_min_ago 
                         and ma2_last < ma2_2_min_ago 
                         and deviation_sell < -0.32
-                        and deviation_ma50_sotto_ma300 < -0.50
+                        and deviation_ma50_sotto_ma300 < 0.50
                     ):
-                        sell = "SELL 1 maestro parte 2 (21-50 min) con ma50 < and deviation_sell < -0.32 - r 3850"
+                        sell = "SELL 1 maestro parte 2 (21-50 min) con ma50 < and deviation_sell < -0.32 - r 3862"
                         action = "sell"
                 
+                    
+                    
                     
                     
                     #####################################################################################
@@ -7998,7 +8060,7 @@ class maddog:
                         
                         
 
-                    ####################################################################################################### con trend discendente
+                    ############################################################################# con trend discendente MA 100 sopra di molto da 300
                     
                     
                     elif (
