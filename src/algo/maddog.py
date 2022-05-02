@@ -45,6 +45,7 @@ class maddog:
         ma72_last, ma72_prev = self.algo_helper.ma_last_prev(72)
         ma78_last, ma78_prev = self.algo_helper.ma_last_prev(78)
         ma100_last, ma100_prev = self.algo_helper.ma_last_prev(100)
+        ma150_last, ma150_prev = self.algo_helper.ma_last_prev(150)
         ma200_last, ma200_prev = self.algo_helper.ma_last_prev(200)
         ma300_last, ma300_prev = self.algo_helper.ma_last_prev(300)
 
@@ -1182,6 +1183,59 @@ class maddog:
                     
                 
                 
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                # BUY 1 DURANTE UNA CORREZIONE FIAT che non e' un forte ribasso e non e' un crollo ! ma3 > ma150
+                
+                elif (
+                    
+                    deviation_buy_crollo_1 < -0.29
+                    and deviation_buy_crollo_1 > -0.59
+                    and deviation_correzione > 0.03
+                    and ma3_last > ma150_last
+                    and ma2_last > ma2_2_min_ago
+                ):
+                    buy = "BUY 1 DURANTE UNA CORREZIONE FIAT che non e' un forte ribasso e non e' un crollo ! ma3 > ma150 - riga 1208"
+                    action = "buy"
+                    percentage = 20
+                    
+                    
+                
+                
+                    
+                # BUY 1 piccola CORREZIONE FIAT = r 701 RCCR CHE FA PAURA ! (ma la ma100 non sta ancora troppo lontana dalla ma300)
+                
+                elif (
+                    
+                    deviation_buy_crollo_1 < -0.29
+                    and deviation_buy_crollo_1 > -0.59
+                    and deviation_correzione > 0.03
+                    
+                    and deviation_ma100_sopra_ma300 > -0.37
+                    
+                    and ma2_last > ma2_2_min_ago
+                ):
+                    buy = "BUY 1 DURANTE UNA CORREZIONE FIAT = r 701 RCCR CHE FA PAURA ! (ma la ma100 non sta ancora troppo lontana dalla ma300)! - riga 1203"
+                    action = "buy"
+                    percentage = 20
+                    
+                    # deviation_ma100_sopra_ma300 significa 100/300 ( ma100 ancora NON SI E' ALLONTANATA TROPPO DALLA ma300 )
+                    
+                    
+                    
+                    
+                    
                 # BUY 1 piccola CORREZIONE FIAT = r 701 RCCR ma con rischio ridotto !
                 
                 elif (
@@ -3861,11 +3915,15 @@ class maddog:
                         and ma2_last < ma2_2_min_ago 
                         and deviation_ma39 < -0.29
                         and deviation_ma50_sotto_ma300 > -0.50
+                        
                     ):
                         sell = "SELL 1 maestro parte 1 (21-50 min) con ma50 < and deviation_ma39 < -0.29 - r 3816"
                         action = "sell"
                         
                  
+                
+                
+                
               
                     elif (        
                         ma50_last < ma50_2_min_ago 
