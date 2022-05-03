@@ -9735,16 +9735,16 @@ class maddog:
                     
                     
                     
-                    #################################################################################### sessione 3-4-x (vendita con questi 9 altri modi)
-                    ####################################################################################
-                    ####################################################################################
+            #################################################################################### sessione 3-4-x (vendita con questi 9 altri modi)
+            ####################################################################################
+            ####################################################################################
                     
-                    # ATTENZIONE al conflitto durante il crollo - SELL SOVRAPPOSTO AL BUY
+            # ATTENZIONE al conflitto durante il crollo - SELL SOVRAPPOSTO AL BUY
 
-                    # NO 3<78 !
-                    # NO deviation 78 !
-                    # QUALCHE VOLTA ma3-ma39 NON HANNO INCROCIATO allora per la vendita con il DRIBBLING e il DOPPIO PASSO ALLA RONALDO ho risolto con 3<39
-                    # il CUSCINO DELL' ANGELO CUSTODE e di SANT' ANTONIO mi proteggono ! (vendita con medie lunghe)
+            # NO 3<78 !
+            # NO deviation 78 !
+            # QUALCHE VOLTA ma3-ma39 NON HANNO INCROCIATO allora per la vendita con il DRIBBLING e il DOPPIO PASSO ALLA RONALDO ho risolto con 3<39
+            # il CUSCINO DELL' ANGELO CUSTODE e di SANT' ANTONIO mi proteggono ! (vendita con medie lunghe)
                     
                     
 
