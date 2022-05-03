@@ -9748,161 +9748,161 @@ class maddog:
                     
                     
 
-                # 1 - ro cano VENDE CON UN SALVAGENTE
+            # 1 - ro cano VENDE CON UN SALVAGENTE
             
-                if deviation_ma39 < -0.24 and deviation < -0.36 and ma50_last > ma50_2_min_ago:
+            if deviation_ma39 < -0.24 and deviation < -0.36 and ma50_last > ma50_2_min_ago:
                    
 
-                    sell = "SELL 4-5-x SALVAGENTE 3-39 con ma50 < - r 9506"
-                    action = "sell"
+                sell = "SELL 4-5-x SALVAGENTE 3-39 con ma50 < - r 9506"
+                action = "sell"
 
-                    # deviation_ma39 = ma4_last / ma39_last QUESTA HA VENDUTO NEL CROLLO IMPROVVISO DI 1 MINUTO (con -2.06% !!!)!
+                # deviation_ma39 = ma4_last / ma39_last QUESTA HA VENDUTO NEL CROLLO IMPROVVISO DI 1 MINUTO (con -2.06% !!!)!
                         
                         
                         
 
-                # 2 - ro cano VENDE DURANTE UN CROLLO IMPROVVISO !
+            # 2 - ro cano VENDE DURANTE UN CROLLO IMPROVVISO !
                 
-                elif (
-                    ma2_last < ma4_last
-                    and ma2_last < ma6_last
-                    and deviation < -0.58
-                ):
+            elif (
+                ma2_last < ma4_last
+                and ma2_last < ma6_last
+                and deviation < -0.58
+            ):
                   
-                    sell = "SELL 4-5-x CROLLO IMPROVVISO - r 9522"
-                    action = "sell"
+                sell = "SELL 4-5-x CROLLO IMPROVVISO - r 9522"
+                action = "sell"
             
-                    # con -0.59 il 6 feb 2022 ha fatto -0.85
-                    # con -0.62 il 4 feb 2022 ha fatto -0.89%
-                    # deviation = ma4_last / last_trade_price
+                # con -0.59 il 6 feb 2022 ha fatto -0.85
+                # con -0.62 il 4 feb 2022 ha fatto -0.89%
+                # deviation = ma4_last / last_trade_price
 
-                    # FORSE E' L' UNICA DEVIATION CHE MI POTRA' SALVARE DA UN CROLLO IMPROVVISO COME QUELLO DEL 3 NOVEMBRE 2021
+                # FORSE E' L' UNICA DEVIATION CHE MI POTRA' SALVARE DA UN CROLLO IMPROVVISO COME QUELLO DEL 3 NOVEMBRE 2021
                         
                         
                         
                         
 
-                # 3 - ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma13 >
+            # 3 - ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma13 >
             
-                elif (
-                    seconds_since_last_trade > max_hold_time_in_seconds
-                    and ma2_last < last_trade_price
-                    and deviation < -0.42
-                    and ma13_last > ma13_2_min_ago
-                    and ma2_last < ma2_2_min_ago
-                ):
+            elif (
+                seconds_since_last_trade > max_hold_time_in_seconds
+                and ma2_last < last_trade_price
+                and deviation < -0.42
+                and ma13_last > ma13_2_min_ago
+                and ma2_last < ma2_2_min_ago
+            ):
 
-                    sell = "SELL 4-5-x DOLCE ATTESA con ma13 > and deviation < -0.40 - r 9545"
-                    action = "sell"
+                sell = "SELL 4-5-x DOLCE ATTESA con ma13 > and deviation < -0.40 - r 9545"
+                action = "sell"
 
-                    # il fattore tempo - la dolce attesa - solo con trend ribassista
-                    # deviation = ma2_last / last_trade_price
-                    # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
-                    # max_hold_time_in_seconds = 300 = 5 min (con 6 min perdita di 0.90 %)
+                # il fattore tempo - la dolce attesa - solo con trend ribassista
+                # deviation = ma2_last / last_trade_price
+                # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
+                # max_hold_time_in_seconds = 300 = 5 min (con 6 min perdita di 0.90 %)
                         
                         
                         
                 
-                # 4 - ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma13 <
+            # 4 - ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma13 <
             
-                elif (
-                    seconds_since_last_trade > max_hold_time_in_seconds
-                    and ma13_last < ma13_2_min_ago
-                    and deviation < -0.355
-                    and ma2_last < last_trade_price
-                    and ma2_last < ma2_2_min_ago
-                ):
+            elif (
+                seconds_since_last_trade > max_hold_time_in_seconds
+                and ma13_last < ma13_2_min_ago
+                and deviation < -0.355
+                and ma2_last < last_trade_price
+                and ma2_last < ma2_2_min_ago
+            ):
 
-                    sell = "SELL 4-5-x DOLCE ATTESA 270 sec con ma13 < and deviation < -0.345 - r 9566"
-                    action = "sell"
+                sell = "SELL 4-5-x DOLCE ATTESA 270 sec con ma13 < and deviation < -0.345 - r 9566"
+                action = "sell"
 
-                    # il fattore tempo - la dolce attesa - solo con trend ribassista
-                    # deviation = ma2_last / last_trade_price
-                    # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
-                    # max_hold_time_in_seconds = 270 sec = 4 min e 1/2  (con 6 min perdita di 0.60 %)
-                    # 4 feb 2022 con <-0.26 ha fatto -0.88% (dopo +4.29%)
-                    # 7 feb 2022 con <-0.345 e 270 sec ha fatto -0.38% - aumenta a 0.355 ! - eventualmente ci pensa la condizione CROLLO IMPROVVISO CHE FUNZIONA !
+                # il fattore tempo - la dolce attesa - solo con trend ribassista
+                # deviation = ma2_last / last_trade_price
+                # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
+                # max_hold_time_in_seconds = 270 sec = 4 min e 1/2  (con 6 min perdita di 0.60 %)
+                # 4 feb 2022 con <-0.26 ha fatto -0.88% (dopo +4.29%)
+                # 7 feb 2022 con <-0.345 e 270 sec ha fatto -0.38% - aumenta a 0.355 ! - eventualmente ci pensa la condizione CROLLO IMPROVVISO CHE FUNZIONA !
                         
             
             
             
-                # 5 - ro cano VENDE " DOPO x MINUTI " and...
+            # 5 - ro cano VENDE " DOPO x MINUTI " and...
             
-                elif (
-                    seconds_since_last_trade > max_hold_time_in_seconds
-                    and ma8_last < ma50_last
-                    and deviation_sell < -0.49
-                    and ma2_last < ma2_2_min_ago
-                ):
+            elif (
+                seconds_since_last_trade > max_hold_time_in_seconds
+                and ma8_last < ma50_last
+                and deviation_sell < -0.49
+                and ma2_last < ma2_2_min_ago
+            ):
 
-                    sell = "SELL 4-5-x TEMPO e se ma8 < ma50 and deviation_sell < -0.49 - r 9588"
-                    action = "sell"
+                sell = "SELL 4-5-x TEMPO e se ma8 < ma50 and deviation_sell < -0.49 - r 9588"
+                action = "sell"
                         
-                    # ma13 troppo lenta !
-                    # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
+                # ma13 troppo lenta !
+                # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
                         
                         
                
                 
-                # 6 - RIBASSO IMPROVVISO
+            # 6 - RIBASSO IMPROVVISO
             
-                elif (
-                    ma78_last > ma78_2_min_ago
-                    and deviation_ribasso_improvviso < -0.63
+            elif (
+                ma78_last > ma78_2_min_ago
+                and deviation_ribasso_improvviso < -0.63
                     
-                ):
-                    sell = "SELL 4-5-x RIBASSO IMPROVVISO - r 9604"
-                    action = "sell"
+            ):
+                sell = "SELL 4-5-x RIBASSO IMPROVVISO - r 9604"
+                action = "sell"
                     
                     
             
-                # 7 - RIBASSO IMPROVVISO
+            # 7 - RIBASSO IMPROVVISO
             
-                elif (
-                    ma78_last < ma78_2_min_ago
-                    and deviation_ribasso_improvviso < -0.63
+            elif (
+                ma78_last < ma78_2_min_ago
+                and deviation_ribasso_improvviso < -0.63
                     
-                ):
-                    sell = "SELL 4-5-x RIBASSO IMPROVVISO - r 9616"
-                    action = "sell"
+            ):
+                sell = "SELL 4-5-x RIBASSO IMPROVVISO - r 9616"
+                action = "sell"
                     
-                    
-                
-                
-                # 8 - POCHI MALEDETTI E SUBITO con ma200 > MA ma100 NON DEVE SALIRE TROPPO ! - dedicated to comparo meo
-                
-                elif (
-                    ma3_last < ma9_last
-                    
-                    and ma200_last > ma200_60_min_ago
-                    
-                    and deviation > 0.70
-                    and deviation_trend_ma100 < 1.00
-                    and deviation_pochi_maledetti > 0.25
-                    and ma2_last > ma100_last
-                ):    
-                    sell = "SELL 3-4-x POCHI MALEDETTI E SUBITO quando ma200 > e con deviation > 0.70 MA - dedicated to comparo meo - r 9634"
-                    action = "sell"
-                    
-                    # and ma2_last > ma100_last (altrimenti vende durante il crollo con la ma3-ma9)
-                    # incredibile questa and deviation_trend_ma100 < 1.00 - se ma100 sale "forte" da 60 min non deve intervenire sell 3-9
                     
                 
                 
+            # 8 - POCHI MALEDETTI E SUBITO con ma200 > MA ma100 NON DEVE SALIRE TROPPO ! - dedicated to comparo meo
                 
-                # 9 - POCHI MALEDETTI E SUBITO con ma200 < - dedicated to comparo meo
-                
-                elif (
-                    ma3_last < ma9_last 
-                    and ma200_last < ma200_60_min_ago
-                    and deviation > 0.70
-                    and deviation_pochi_maledetti > 0.70
-                    and ma2_last > ma100_last
-                ):    
-                    sell = "SELL 3-4-x POCHI MALEDETTI E SUBITO quando ma200 < e con deviation > 0.70 - dedicated to comparo meo - r 9652"
-                    action = "sell"
+            elif (
+                ma3_last < ma9_last
                     
-                    # and ma2_last > ma100_last (altrimenti vende durante il crollo con la ma3-ma9)
+                and ma200_last > ma200_60_min_ago
+                    
+                and deviation > 0.70
+                and deviation_trend_ma100 < 1.00
+                and deviation_pochi_maledetti > 0.25
+                and ma2_last > ma100_last
+            ):    
+                sell = "SELL 3-4-x POCHI MALEDETTI E SUBITO quando ma200 > e con deviation > 0.70 MA - dedicated to comparo meo - r 9634"
+                action = "sell"
+                    
+                # and ma2_last > ma100_last (altrimenti vende durante il crollo con la ma3-ma9)
+                # incredibile questa and deviation_trend_ma100 < 1.00 - se ma100 sale "forte" da 60 min non deve intervenire sell 3-9
+                    
+                
+                
+                
+            # 9 - POCHI MALEDETTI E SUBITO con ma200 < - dedicated to comparo meo
+                
+            elif (
+                ma3_last < ma9_last 
+                and ma200_last < ma200_60_min_ago
+                and deviation > 0.70
+                and deviation_pochi_maledetti > 0.70
+                and ma2_last > ma100_last
+            ):    
+                sell = "SELL 3-4-x POCHI MALEDETTI E SUBITO quando ma200 < e con deviation > 0.70 - dedicated to comparo meo - r 9652"
+                action = "sell"
+                    
+                # and ma2_last > ma100_last (altrimenti vende durante il crollo con la ma3-ma9)
                     
                     
                 
