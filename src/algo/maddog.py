@@ -824,7 +824,7 @@ class maddog:
                 
                 elif (
                     
-                    ma3_last > ma150_last
+                    ma8_last > ma150_last
                     and deviation_ma100_sopra_ma200 > -0.30
                     
                     and ma100_last > ma100_2_min_ago
@@ -840,7 +840,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
               
                 ):
-                    buy = "BUY 1 3-150 copiata e modificata da RCCR che e' arrivata una ndecchia prima del passare del tempo - riga 843"
+                    buy = "BUY 1 8-150 copiata e modificata da RCCR che e' arrivata una ndecchia prima del passare del tempo - riga 843"
                     action = "buy"
                     percentage = 20
                     
