@@ -801,7 +801,7 @@ class maddog:
             
                 elif (       
                     ma200_last < ma200_20_min_ago
-                    and ma20_last > ma200_last
+                    and ma11_last > ma200_last
                     and ma2_last > ma2_2_min_ago
                     
                     and rapporto_delta_1_delta_2 < 1
@@ -811,7 +811,7 @@ class maddog:
                     and ma300_last < ma300_60_min_ago
                 ):    
         
-                    buy = "BUY 1 con ma200 < 300< MA ma100> 100 60 min ago e doppio delta < STA RISALENDO !- riga 812"
+                    buy = "BUY 1 11-200 con ma200< 300< MA ma100> 100 60 min ago e doppio delta < STA RISALENDO !- riga 812"
                     action = "buy"
                     percentage = 10
                     
