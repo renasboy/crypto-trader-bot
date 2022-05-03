@@ -3894,11 +3894,11 @@ class maddog:
                     elif (
                         ma50_last > ma50_2_min_ago
                         and ma5_last < ma100_last
-                        and deviation_sell < 0.10
+                        and deviation_sell < -0.10
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 (21-50 min) con ma50 > and 5-100 and deviation_sell < 0.10 CUSCINO DI SANT' ANTONIO - r 3802"
+                        sell = "SELL 1 (21-50 min) con ma50 > and 5-100 and deviation_sell < -0.10 CUSCINO DI SANT' ANTONIO - r 3802"
                         action = "sell"
                   
                     
