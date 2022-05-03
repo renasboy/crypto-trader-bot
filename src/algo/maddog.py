@@ -801,7 +801,7 @@ class maddog:
             
                 elif (       
                     ma200_last < ma200_20_min_ago
-                    and ma11_last > ma200_last
+                    and ma11_last > ma150_last
                     and ma2_last > ma2_2_min_ago
                     
                     and rapporto_delta_1_delta_2 < 1
@@ -811,10 +811,11 @@ class maddog:
                     and ma300_last < ma300_60_min_ago
                 ):    
         
-                    buy = "BUY 1 11-200 con ma200< 300< MA ma100> 100 60 min ago e doppio delta < STA RISALENDO !- riga 812"
+                    buy = "BUY 1 11-150 con ma200< 300< MA ma100> 100 60 min ago e doppio delta < STA RISALENDO !- riga 812"
                     action = "buy"
                     percentage = 10
                     
+                    # 11-150 perche' doppio delta sta risalendo !
                     
                     
                     
@@ -4279,7 +4280,9 @@ class maddog:
                   
                     ######################################################################################## con trend discendente ma50 <
                     
-                    ################################################################ ipotesi peggiore e sono cazzi ! ( sempre con ma50 < )
+                    ############################################################## ipotesi peggiore e sono cazzi ! and doppio delta ( sempre con ma50 < )
+                    
+                    # SELL 1 50-90 min IPOTESI PEGGIORE con ma50< con deviation_ma39 <-0.205 and deviation_sell < -0.205 and DOPPIO DELTA RIBASSO
                     
                     elif (
                         ma50_last < ma50_2_min_ago
@@ -4287,15 +4290,38 @@ class maddog:
                         and deviation_trend_ma200 < -0.10
                         
                         and deviation_ma39 < -0.19
-                        and ma2_last < ma2_2_min_ago
                         and deviation_sell < -0.195
+                        
+                        and rapporto_delta_1_delta_2 > 1
+                        
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 da 50 a 90 min IPOTESI PEGGIORE con ma50 < con deviation_ma39 <-0.19 and deviation_sell < -0.195 - r 4129"
+                        sell = "SELL 1 50-90 min IPOTESI PEGGIORE con ma50 < con deviation_ma39 <-0.19 and deviation_sell < -0.195 E DOPPIO DELTA RIBASSO- r 4129"
                         action = "sell"
                         
                         
                         
+                        
+                    # SELL 1 50-90 min IPOTESI PEGGIORE con ma50< con deviation_ma39 <-0.205 and deviation_sell < -0.205 MA DOPPIO DELTA RIALZO
+                    
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and ma200_last < ma300_last
+                        and deviation_trend_ma200 < -0.10
+                        
+                        and deviation_ma39 < -0.205
+                        and deviation_sell < -0.205
+                        
+                        and rapporto_delta_1_delta_2 < 1
+                        
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 1 50-90 min IPOTESI PEGGIORE con ma50< con deviation_ma39 <-0.205 and deviation_sell < -0.205 MA DOPPIO DELTA RIALZO - r 4130"
+                        action = "sell"
+                        
+                        
+                        
+                    
                     
                     elif (
                         ma50_last < ma50_2_min_ago
