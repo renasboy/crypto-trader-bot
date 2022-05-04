@@ -1408,7 +1408,7 @@ class maddog:
                 elif (
                     ma2_last > ma2_2_min_ago
                     and deviation_trend_ma200 > -0.30
-                    and deviation_correzione_1 > 0.03
+                    and deviation_correzione_1 > 0.01
                     
                     and deviation_buy_crollo_1 < -0.60
                     and deviation_buy_crollo_1 > -0.90
@@ -1861,9 +1861,12 @@ class maddog:
             #############################################################################################################      COMPRA sessione 2
             
             elif self.session == 2:
-
+                
+                
                 if (
                     ma69_last > ma69_2_min_ago
+                    and deviation_ma100_sopra_ma300 > 0.20
+                    
                     and deviation_buy2 > 0.04
                     and deviation_bellissima > 0.151
                     and deviation_buy_ma3_sopra_ma13 > 0.09
@@ -1872,12 +1875,42 @@ class maddog:
                     and price > price_2_min_ago
                     and ma3_last > ma40_last
                 ):
-                    buy = "BUY 2A - r 1875"
+                    buy = "BUY 2A rialzo o laterale - r 1875"
                     action = "buy"
                     percentage = 70
 
                     # deviation_buy_ma3_sopra_ma13 > x e' fondamentale !
                     # deviation_buy2 = ma8_last/ma50_last
+                    
+                    
+                    
+                elif (
+                    ma69_last > ma69_2_min_ago
+                    and deviation_ma100_sopra_ma300 < 0.20
+                    
+                    and deviation_buy2 > 0.03
+                    and deviation_bellissima > 0.14
+                    and deviation_buy_ma3_sopra_ma13 > 0.08
+                    and deviation_ma7_sopra_ma40 > 0.06
+                    and ma2_last > ma2_2_min_ago
+                    and price > price_2_min_ago
+                    and ma3_last > ma40_last
+                ):
+                    buy = "BUY 2A ribasso o laterale - r 1875"
+                    action = "buy"
+                    percentage = 70
+
+                    # deviation_buy_ma3_sopra_ma13 > x e' fondamentale !
+                    # deviation_buy2 = ma8_last/ma50_last
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 
                 
                 
@@ -2424,7 +2457,7 @@ class maddog:
                 elif (
                     deviation_ma4_sopra_ma30 > 0.15
                     and deviation > -0.30
-                    and deviation_bellissima > 0.13
+                    and deviation_bellissima > 0.07
                     and ma39_last > ma69_last
                     and delta_buy3_incrocio_ma3_ma8 >= 0.06
                     and ma3_last > ma8_last
@@ -2432,7 +2465,7 @@ class maddog:
                     and ma4_last >= ma4_2_min_ago
                     and ma2_last >= ma2_2_min_ago
                     and ma5_last >= ma15_last
-                    and ma7_last >= ma25_last
+                    and ma5_last >= ma25_last
                 ):    
                     buy = "BUY 3B RIVOLUZIONARIO se ma39 > ma69 - r 2437"
                     action = "buy"
@@ -2848,7 +2881,7 @@ class maddog:
                 elif (
                     ma200_last >= ma200_120_min_ago
                     and deviation_ma4_sopra_ma100 > 0.25
-                    
+                    and ma3_last > ma15_last
                     and ma3_last > ma8_last
                     and ma3_last > ma78_last
                     and ma4_last > ma4_2_min_ago
@@ -9857,13 +9890,13 @@ class maddog:
                 action = "sell"
                     
                     
-                
-                
-            # 8 - POCHI MALEDETTI E SUBITO con ma200 > MA ma100 NON DEVE SALIRE TROPPO ! - dedicated to comparo meo
-                
+              
+            
+            # 8 - POCHI MALEDETTI E SUBITO QUANDO SALE FORTE ( cerca di inibirlo ) con ma200 > MA ma100 - dedicated to comparo meo
+            
             elif (
-                ma3_last < ma9_last
-                    
+                ma3_last < ma28_last
+                and deviation_ma100_sopra_ma200 > 0.40    
                 and ma200_last > ma200_60_min_ago
                     
                 and deviation > 0.70
@@ -9871,7 +9904,27 @@ class maddog:
                 and deviation_pochi_maledetti > 0.25
                 and ma2_last > ma100_last
             ):    
-                sell = "SELL 3-4-x POCHI MALEDETTI E SUBITO quando ma200 > e con deviation > 0.70 MA - dedicated to comparo meo - r 9874"
+                sell = "SELL 4-5-x POCHI MALEDETTI E SUBITO QUANDO SALE FORTE 3-28 ( cerca di inibirlo ) quando ma200 > e con deviation > 0.70 MA - dedicated to comparo meo - r 9874"
+                action = "sell"
+                    
+                # and ma2_last > ma100_last (altrimenti vende durante il crollo con la ma3-ma9)
+                # incredibile questa and deviation_trend_ma100 < 1.00 - se ma100 sale "forte" da 60 min non deve intervenire sell 3-9
+                
+                
+                
+            # 9 - POCHI MALEDETTI E SUBITO QUANDO SALE PIANO con ma200 > MA ma100 NON DEVE SALIRE TROPPO ! - dedicated to comparo meo
+            
+            elif (
+                ma3_last < ma15_last
+                and deviation_ma100_sopra_ma200 < 0.40      
+                and ma200_last > ma200_60_min_ago
+                    
+                and deviation > 0.70
+                and deviation_trend_ma100 < 1.00
+                and deviation_pochi_maledetti > 0.25
+                and ma2_last > ma100_last
+            ):    
+                sell = "SELL 4-5-x POCHI MALEDETTI E SUBITO 3-15 QUANDO SALE PIANO quando ma200 > e con deviation > 0.70 MA - dedicated to comparo meo - r 9874"
                 action = "sell"
                     
                 # and ma2_last > ma100_last (altrimenti vende durante il crollo con la ma3-ma9)
@@ -9879,8 +9932,8 @@ class maddog:
                     
                 
                 
-                
-            # 9 - POCHI MALEDETTI E SUBITO con ma200 < - dedicated to comparo meo
+            
+            # 10 - POCHI MALEDETTI E SUBITO con ma200 < - dedicated to comparo meo
                 
             elif (
                 ma3_last < ma9_last 
@@ -9889,7 +9942,7 @@ class maddog:
                 and deviation_pochi_maledetti > 0.70
                 and ma2_last > ma100_last
             ):    
-                sell = "SELL 3-4-x POCHI MALEDETTI E SUBITO quando ma200 < e con deviation > 0.70 - dedicated to comparo meo - r 9892"
+                sell = "SELL 4-5-x POCHI MALEDETTI E SUBITO 3-9 quando ma200 < e con deviation > 0.70 - dedicated to comparo meo - r 9892"
                 action = "sell"
                     
                 # and ma2_last > ma100_last (altrimenti vende durante il crollo con la ma3-ma9)
