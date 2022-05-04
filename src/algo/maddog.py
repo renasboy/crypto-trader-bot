@@ -1165,6 +1165,8 @@ class maddog:
                 
                 elif (
                     ma3_last > ma25_last
+                    and ma100_last > ma100_10_min_ago
+                    
                     and ma100_last > ma100_120_min_ago
                     and ma200_last > ma200_120_min_ago
                     and ma300_last > ma300_120_min_ago
@@ -1179,6 +1181,33 @@ class maddog:
                 ):    
                     
                     buy = "BUY 1 piccola CORREZIONE FIAT = r 995 RCCR medie mobili lunghe TUTTE IN RIALZO ! ma si verifica una correzione fiat ! - r 1181"
+                    action = "buy"
+                    percentage = 10
+                    
+                    
+                
+                # BUY 1 piccola CORREZIONE FIAT = r 995 RCCR medie mobili lunghe TUTTE IN RIALZO MA ma100 COMINCIA A RIPIEGARE ! correzione fiat
+                
+                elif (
+                    ma3_last > ma25_last
+                    
+                    and ma100_last < ma100_10_min_ago
+                    and ma11_last > ma100_last
+                    
+                    and ma100_last > ma100_120_min_ago
+                    and ma200_last > ma200_120_min_ago
+                    and ma300_last > ma300_120_min_ago
+                    
+                    and ma100_last > ma200_last
+                    and ma200_last > ma300_last
+                    
+                    and deviation_buy_crollo_1 < -0.33
+                    and deviation_buy_crollo_1 > -0.59
+                    and ma2_last > ma2_2_min_ago
+                    
+                ):    
+                    
+                    buy = "BUY 1 piccola CORREZIONE FIAT = r 995 RCCR medie mobili lunghe TUTTE IN RIALZO MA ma100 COMINCIA A RIPIEGARE ! correzione fiat ! - r 1210"
                     action = "buy"
                     percentage = 10
                     
@@ -2363,7 +2392,16 @@ class maddog:
                     
                     
                     
-                    
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 # --------------------------------------- BUY 2 che entra in azione se ma2 va sopra SELL 1 di almeno 0.45 !
                 
                 elif (     
@@ -2392,7 +2430,27 @@ class maddog:
                     
                     
                     
-                 
+                # BUY 2 ultima condizione ! ma tutte negative MA BUY con 8 > 125
+                
+                elif (     
+               
+                    ma8_last > ma125_last
+                    and ma100_last < ma100_60_min_ago
+                    and ma200_last < ma200_60_min_ago
+                    and ma300_last < ma300_60_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and ma2_last > ma2_2_min_ago
+                ):    
+                    buy = "BUY 2 ULTIMA CONDIZIONE ! ma tutte negative MA BUY con 8 > 125 - r 2447"
+                    action = "buy"
+                    percentage = 30
+                    
+                    
+                    
+            
             ############################################################################################################ COMPRA sessione 3
             
             # forse dal BUY 3 in poi (o dal BUY 4 in poi) DEVE ESSERE ma100 > E ma2 > ma100 !
