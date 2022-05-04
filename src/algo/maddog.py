@@ -4909,251 +4909,251 @@ class maddog:
             ################################################################################################# SESSIONE 1 ( vendita con questi 13 ALTRI MODI )
            
             
-                    # 1 - ro cano VENDE CON UN SALVAGENTE
+            # 1 - ro cano VENDE CON UN SALVAGENTE
+               
+            if deviation_ma39 < -0.25 and deviation < -0.36 and ma50_last > ma50_2_min_ago:
+
+                sell = "SELL 1 SALVAGENTE 3-39 con ma50 < r 4883"
+                action = "sell"
+                        
+
+                # deviation_ma39 = ma4_last / ma39_last QUESTA HA VENDUTO NEL CROLLO IMPROVVISO DI 1 MINUTO (con -2.06% !!!)!
+                    
+                    
+                    
+            # 2 - ro cano VENDE DURANTE UN CROLLO IMPROVVISO ! che dava problemi quando il prezzo ! andava molto sopra ma4 durante un trend rialzista !
+            # spero di aver risolto aggiungendo per precauzione queste altre 2 righe
+                    
+                    
+            elif (    
+                ma2_last < ma4_last
+                and ma2_last < ma6_last
+                and deviation  < -0.61
+            ): 
                 
-                    elif deviation_ma39 < -0.25 and deviation < -0.36 and ma50_last > ma50_2_min_ago:
-
-                        sell = "SELL 1 SALVAGENTE 3-39 con ma50 < r 4883"
-                        action = "sell"
+                sell = "SELL 1 CROLLO IMPROVVISO - r 4901"
+                action = "sell"
                         
-
-                    # deviation_ma39 = ma4_last / ma39_last QUESTA HA VENDUTO NEL CROLLO IMPROVVISO DI 1 MINUTO (con -2.06% !!!)!
+                # deviation = ma4_last / last_trade_price
+                # FORSE E' L' UNICA DEVIATION CHE MI POTRA' SALVARE DA UN CROLLO IMPROVVISO COME QUELLO DEL 3 NOVEMBRE 2021
+                # -0.90 ha fatto fare una perdita di -1.46% il 19 dic 2021
+                        
+                        
                     
                     
+            # vendita speciale dopo il crollo del 24 aprile
                     
-                    # 2 - ro cano VENDE DURANTE UN CROLLO IMPROVVISO ! che dava problemi quando il prezzo ! andava molto sopra ma4 durante un trend rialzista !
-                    # spero di aver risolto aggiungendo per precauzione queste altre 2 righe
-                    
-                    
-                    elif (    
-                        ma2_last < ma4_last
-                        and ma2_last < ma6_last
-                        and deviation  < -0.61
-                    ): 
+            elif (    
+                ma2_last < ma4_last
+                and ma2_last < ma6_last
+                and deviation_crollo_24_aprile < -0.58
+            ): 
                 
-                        sell = "SELL 1 CROLLO IMPROVVISO - r 4901"
-                        action = "sell"
+                sell = "SELL 1 CROLLO IMPROVVISO - r 4919"
+                action = "sell"
                         
-                        # deviation = ma4_last / last_trade_price
-                        # FORSE E' L' UNICA DEVIATION CHE MI POTRA' SALVARE DA UN CROLLO IMPROVVISO COME QUELLO DEL 3 NOVEMBRE 2021
-                        # -0.90 ha fatto fare una perdita di -1.46% il 19 dic 2021
-                        
-                        
-                    
-                    
-                    # vendita speciale dopo il crollo del 24 aprile
-                    
-                    elif (    
-                        ma2_last < ma4_last
-                        and ma2_last < ma6_last
-                        and deviation_crollo_24_aprile < -0.58
-                    ): 
-                
-                        sell = "SELL 1 CROLLO IMPROVVISO - r 4919"
-                        action = "sell"
-                        
-                        # ho aggiunto anche questa vendita speciale dopo il 24 aprile -1%
-                        # deviation_crollo_24_aprile = ma2_last / last_trade_price - # r400
+                # ho aggiunto anche questa vendita speciale dopo il 24 aprile -1%
+                # deviation_crollo_24_aprile = ma2_last / last_trade_price - # r400
                         
                         
 
-                    # 3 - ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma13 >
+            # 3 - ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma13 >
                     
-                    elif (
-                        seconds_since_last_trade > max_hold_time_in_seconds
-                        and ma2_last < last_trade_price
-                        and deviation < -0.40
-                        and ma13_last > ma13_2_min_ago
-                        and ma2_last < ma2_2_min_ago
-                    ):
+            elif (
+                seconds_since_last_trade > max_hold_time_in_seconds
+                and ma2_last < last_trade_price
+                and deviation < -0.40
+                and ma13_last > ma13_2_min_ago
+                and ma2_last < ma2_2_min_ago
+            ):
 
-                        sell = "SELL 1 DOLCE ATTESA con ma13 > and deviation < -0.40 - r 4937"
-                        action = "sell"
+                sell = "SELL 1 DOLCE ATTESA con ma13 > and deviation < -0.40 - r 4937"
+                action = "sell"
 
-                        # il fattore tempo - la dolce attesa - solo con trend ribassista
-                        # deviation = ma2_last / last_trade_price
-                        # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
+                # il fattore tempo - la dolce attesa - solo con trend ribassista
+                # deviation = ma2_last / last_trade_price
+                # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
                         
        
                     
         
-                    # 4 - ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma13 <
+            # 4 - ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma13 <
                     
-                    elif (
-                        seconds_since_last_trade > max_hold_time_in_seconds
-                        and ma13_last < ma13_2_min_ago
-                        and deviation < -0.35
-                        and ma2_last < last_trade_price
-                        and ma2_last < ma2_2_min_ago
-                    ):
+            elif (
+                seconds_since_last_trade > max_hold_time_in_seconds
+                and ma13_last < ma13_2_min_ago
+                and deviation < -0.35
+                and ma2_last < last_trade_price
+                and ma2_last < ma2_2_min_ago
+            ):
 
-                        sell = "SELL 1 DOLCE ATTESA con ma13 < and deviation < -0.35 - r 4957"
-                        action = "sell"
+                sell = "SELL 1 DOLCE ATTESA con ma13 < and deviation < -0.35 - r 4957"
+                action = "sell"
 
-                        # il fattore tempo - la dolce attesa - solo con trend ribassista
-                        # deviation = ma2_last / last_trade_price
-                        # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
+                # il fattore tempo - la dolce attesa - solo con trend ribassista
+                # deviation = ma2_last / last_trade_price
+                # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
                         
                     
                     
                     
-                    # 5 - ro cano VENDE " DOPO x MINUTI " and...
+            # 5 - ro cano VENDE " DOPO x MINUTI " and...
                     
-                    elif (
-                        seconds_since_last_trade > max_hold_time_in_seconds
-                        and ma8_last < ma50_last
-                        and deviation_sell < -0.49
-                        and ma2_last < ma2_2_min_ago
-                    ):
+            elif (
+                seconds_since_last_trade > max_hold_time_in_seconds
+                and ma8_last < ma50_last
+                and deviation_sell < -0.49
+                and ma2_last < ma2_2_min_ago
+            ):
 
-                        sell = "sessione 1 SELL TEMPO e se ma8 < ma50 and deviation_sell < -0.49 - r 4976"
-                        action = "sell"
+                sell = "sessione 1 SELL TEMPO e se ma8 < ma50 and deviation_sell < -0.49 - r 4976"
+                action = "sell"
                         
-                        # ma13 troppo lenta !
-                        # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
+                # ma13 troppo lenta !
+                # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
                         
                         
                         
                     
-                    # 6 - RIBASSO IMPROVVISO
+            # 6 - RIBASSO IMPROVVISO
                     
-                    elif (
-                        ma78_last > ma78_2_min_ago
-                        and deviation_ribasso_improvviso < -0.61
-                    ):
-                        sell = "SELL 1 RIBASSO IMPROVVISO < -0.61 - r 4991"
-                        action = "sell"
+            elif (
+                ma78_last > ma78_2_min_ago
+                and deviation_ribasso_improvviso < -0.61
+            ):
+                sell = "SELL 1 RIBASSO IMPROVVISO < -0.61 - r 4991"
+                action = "sell"
                         
                         
                  
-                    # 7 - RIBASSO IMPROVVISO
+            # 7 - RIBASSO IMPROVVISO
                 
-                    elif (
-                        ma78_last < ma78_2_min_ago
-                        and deviation_ribasso_improvviso < -0.59
-                    ):
-                        sell = "SELL 1 RIBASSO IMPROVVISO -0.59 - r 5002"
-                        action = "sell"
+            elif (
+                ma78_last < ma78_2_min_ago
+                and deviation_ribasso_improvviso < -0.59
+            ):
+                sell = "SELL 1 RIBASSO IMPROVVISO -0.59 - r 5002"
+                action = "sell"
                         
                         
                     
                     
-                    # 8 - POCHI MALEDETTI E SUBITO con ma200 > MA ma100 NON DEVE SALIRE TROPPO ! - dedicated to comparo meo
+            # 8 - POCHI MALEDETTI E SUBITO con ma200 > MA ma100 NON DEVE SALIRE TROPPO ! - dedicated to comparo meo
                 
-                    elif (
+            elif (
                         
-                        ma3_last < ma9_last
-                        and ma200_last > ma200_60_min_ago
-                        and deviation > 0.68
-                        and ma2_last < ma2_2_min_ago
+                ma3_last < ma9_last
+                and ma200_last > ma200_60_min_ago
+                and deviation > 0.68
+                and ma2_last < ma2_2_min_ago
                  
-                        and ma2_last > ma100_last
+                and ma2_last > ma100_last
                         
-                        and deviation_trend_ma100 < 0.50
-                        and deviation_pochi_maledetti > 0.25
+                and deviation_trend_ma100 < 0.50
+                and deviation_pochi_maledetti > 0.25
                         
-                    ):    
-                        sell = "SELL 1 POCHI MALEDETTI E SUBITO quando ma200 > e con deviation > 0.70 MA ma100 NON DEVE SALIRE TROPPO ! - r 5023"
-                        action = "sell"
+            ):    
+                sell = "SELL 1 POCHI MALEDETTI E SUBITO quando ma200 > e con deviation > 0.70 MA ma100 NON DEVE SALIRE TROPPO ! - r 5023"
+                action = "sell"
                         
-                        # attenzione : le prime 4 righe sono uguali a RCCR che ha funzionato. le altre 3 non hanno fatto attivare questa condizione !
-                        # deviation_trend_ma100 = ma100_last / ma100_60_min_ago
-                        # deviation_pochi_maledetti = ma13_last / ma13_10_min_ago
+                # attenzione : le prime 4 righe sono uguali a RCCR che ha funzionato. le altre 3 non hanno fatto attivare questa condizione !
+                # deviation_trend_ma100 = ma100_last / ma100_60_min_ago
+                # deviation_pochi_maledetti = ma13_last / ma13_10_min_ago
                         
-                        # and ma2_last > ma100_last (altrimenti vende durante il crollo con la ma3-ma9)
-                        # incredibile questa and deviation_trend_ma100 < 1.00 - se ma100 sale "forte" da 60 min non deve intervenire sell 3-9
+                # and ma2_last > ma100_last (altrimenti vende durante il crollo con la ma3-ma9)
+                # incredibile questa and deviation_trend_ma100 < 1.00 - se ma100 sale "forte" da 60 min non deve intervenire sell 3-9
                         
                  
                 
-                    # 9 - POCHI MALEDETTI E SUBITO con ma200 < - dedicated to comparo meo
+            # 9 - POCHI MALEDETTI E SUBITO con ma200 < - dedicated to comparo meo
                 
-                    elif (
-                        ma3_last < ma9_last 
-                        and ma200_last < ma200_60_min_ago
-                        and deviation > 0.70
-                        and deviation_pochi_maledetti > 0.70
-                        and ma2_last > ma100_last
-                    ):    
-                        sell = "SELL 3-4-x POCHI MALEDETTI E SUBITO quando ma200 < e con deviation > 0.70 - dedicated to comparo meo - r 5044"
-                        action = "sell"
+            elif (
+                ma3_last < ma9_last 
+                and ma200_last < ma200_60_min_ago
+                and deviation > 0.70
+                and deviation_pochi_maledetti > 0.70
+                and ma2_last > ma100_last
+            ):    
+                sell = "SELL 3-4-x POCHI MALEDETTI E SUBITO quando ma200 < e con deviation > 0.70 - dedicated to comparo meo - r 5044"
+                action = "sell"
                     
-                        # and ma2_last > ma100_last (altrimenti vende durante il crollo con la ma3-ma9)
+                # and ma2_last > ma100_last (altrimenti vende durante il crollo con la ma3-ma9)
                         
                         
                 
-                    ######################################################################### vendite dedicate al BUY FIAT - AUDI - MASERATI - FERRARI    
+            ######################################################################### vendite dedicate al BUY FIAT - AUDI - MASERATI - FERRARI    
                         
-                    # 10 - SELL 1 FIAT 
+            # 10 - SELL 1 FIAT 
                     
-                    elif (     
-                        seconds_since_last_trade > max_hold_time_in_seconds_fiat
-                        and deviation_buy_crollo_1 < -0.15
-                        and deviation_buy_crollo_1 > -0.59
+            elif (     
+                seconds_since_last_trade > max_hold_time_in_seconds_fiat
+                and deviation_buy_crollo_1 < -0.15
+                and deviation_buy_crollo_1 > -0.59
                         
-                        and deviation_ma100_sopra_ma300 < -0.70
-                        and deviation < -0.29
-                    ):    
+                and deviation_ma100_sopra_ma300 < -0.70
+                and deviation < -0.29
+            ):    
                  
-                        buy = "SELL 1 FIAT se > 20 min dal BUY FIAT la perdita e' < -0.29 ! - r 5064"
-                        action = "sell"
+                buy = "SELL 1 FIAT se > 20 min dal BUY FIAT la perdita e' < -0.29 ! - r 5064"
+                action = "sell"
                         
-                        # and ma2_last < ma2_2_min_ago
-                        # and deviation_ma100_sopra_ma300 < -0.70 significa che c'e' un grande ribasso. 100 sta lontana da 300. 
-                        # EVITO COSI' PROBLEMI AL TREND LATERALE.
+                # and ma2_last < ma2_2_min_ago
+                # and deviation_ma100_sopra_ma300 < -0.70 significa che c'e' un grande ribasso. 100 sta lontana da 300. 
+                # EVITO COSI' PROBLEMI AL TREND LATERALE.
                         
                         
                         
                 
-                    # 11 - SELL 1 AUDI 
+            # 11 - SELL 1 AUDI 
                     
-                    elif (     
-                        seconds_since_last_trade > max_hold_time_in_seconds_audi
-                        and deviation_buy_crollo_1 < -0.60
-                        and deviation_buy_crollo_1 > -0.90
+            elif (     
+                seconds_since_last_trade > max_hold_time_in_seconds_audi
+                and deviation_buy_crollo_1 < -0.60
+                and deviation_buy_crollo_1 > -0.90
                         
-                        and deviation_ma100_sopra_ma300 < -0.70
-                        and deviation < -0.31
+                and deviation_ma100_sopra_ma300 < -0.70
+                and deviation < -0.31
                         
-                    ):
-                        buy = "SELL 1 AUDI se > 20 min dal BUY AUDI la perdita e' < -0.31 - r 5085"
-                        action = "sell"
+            ):
+                buy = "SELL 1 AUDI se > 20 min dal BUY AUDI la perdita e' < -0.31 - r 5085"
+                action = "sell"
                         
-                        # and ma2_last < ma2_2_min_ago
+                # and ma2_last < ma2_2_min_ago
                         
                         
                
-                    # 12 - SELL 1 MASERATI 
+            # 12 - SELL 1 MASERATI 
                     
-                    elif (     
-                        seconds_since_last_trade > max_hold_time_in_seconds_maserati
-                        and deviation_buy_crollo_1 < -0.91
-                        and deviation_buy_crollo_1 > -1.50
+            elif (     
+                seconds_since_last_trade > max_hold_time_in_seconds_maserati
+                and deviation_buy_crollo_1 < -0.91
+                and deviation_buy_crollo_1 > -1.50
                       
-                        and deviation_ma100_sopra_ma300 < -0.70
-                        and deviation < -0.33
+                and deviation_ma100_sopra_ma300 < -0.70
+                and deviation < -0.33
                         
-                    ):
-                        buy = "SELL 1 MASERATI se > 20 min dal BUY MASERATI la perdita e' < -0.33 - r 5103"
-                        action = "sell"
+            ):
+                buy = "SELL 1 MASERATI se > 20 min dal BUY MASERATI la perdita e' < -0.33 - r 5103"
+                action = "sell"
                         
-                        # and ma2_last < ma2_2_min_ago
+                # and ma2_last < ma2_2_min_ago
                         
                
             
             
-                    # 13 - SELL 1 FERRARI 
+            # 13 - SELL 1 FERRARI 
                     
-                    elif (     
-                        seconds_since_last_trade > max_hold_time_in_seconds_ferrari
-                        and deviation_buy_crollo_1 < -1.51
+            elif (     
+                seconds_since_last_trade > max_hold_time_in_seconds_ferrari
+                and deviation_buy_crollo_1 < -1.51
                         
-                        and deviation_ma100_sopra_ma300 < -0.70
-                        and deviation < -0.37
-                    ):
-                        buy = "SELL 1 FERRARI se > 20 min dal BUY FERRARI la perdita e' < -0.37 - r 5120"
-                        action = "sell"
+                and deviation_ma100_sopra_ma300 < -0.70
+                and deviation < -0.37
+            ):
+                buy = "SELL 1 FERRARI se > 20 min dal BUY FERRARI la perdita e' < -0.37 - r 5120"
+                action = "sell"
                         
-                        # and ma2_last < ma2_2_min_ago
+                # and ma2_last < ma2_2_min_ago
                         
                         
                         
@@ -6964,7 +6964,7 @@ class maddog:
                         
                         # OGGI 5 APRILE 2022
                         
-                        
+            #    
                         
             
             ###################################################################################################
