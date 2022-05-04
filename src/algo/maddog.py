@@ -9856,21 +9856,89 @@ class maddog:
             # QUALCHE VOLTA ma3-ma39 NON HANNO INCROCIATO allora per la vendita con il DRIBBLING e il DOPPIO PASSO ALLA RONALDO ho risolto con 3<39
             # il CUSCINO DELL' ANGELO CUSTODE e di SANT' ANTONIO mi proteggono ! (vendita con medie lunghe)
                     
-                    
-
+          
+            
+            
             # 1 - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE
             
-            if deviation_ma39 < -0.24 and deviation < -0.36 and ma50_last > ma50_2_min_ago:
-                   
-
-                sell = "SELL condizione speciale SALVAGENTE 3-39 con ma50 < - r 9746"
-                action = "sell"
+            if (
+                deviation_ma39 < -0.26
+                and deviation < -0.29
+                and ma50_last > ma50_2_min_ago
+                and deviation_ma100_sopra_ma300 > 0.40
+            ):
+                sell = "SELL condizione speciale SALVAGENTE 1 3-39 con ma50 > - r 9870"
+                action = "sell"   
+                
 
                 # deviation_ma39 = ma4_last / ma39_last QUESTA HA VENDUTO NEL CROLLO IMPROVVISO DI 1 MINUTO (con -2.06% !!!)!
-                        
-                        
-                        
+                
+                
+            
+            
+            
+            # 2 - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE   
+            
+            elif (
+                deviation_ma39 < -0.27
+                and deviation < -0.30
+                and ma50_last > ma50_2_min_ago
+                and deviation_ma100_sopra_ma300 < 0.40
+            ):
+                sell = "SELL condizione speciale SALVAGENTE 2 3-39 con ma50 > - r 9986"
+                action = "sell"   
+                
 
+                # deviation_ma39 = ma4_last / ma39_last QUESTA HA VENDUTO NEL CROLLO IMPROVVISO DI 1 MINUTO (con -2.06% !!!)!
+                
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            # 3 - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE
+            
+            elif (
+                deviation_ma39 < -0.26
+                and deviation < -0.28
+                and ma50_last < ma50_2_min_ago
+                and deviation_ma100_sopra_ma300 > 0.40
+            ):
+                sell = "SELL condizione speciale SALVAGENTE 3 3-39 con ma50 < - r 9912"
+                action = "sell"   
+                
+
+                # deviation_ma39 = ma4_last / ma39_last QUESTA HA VENDUTO NEL CROLLO IMPROVVISO DI 1 MINUTO (con -2.06% !!!)!
+                
+                
+                
+                
+                
+            # 4 - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE
+            
+            elif (
+                deviation_ma39 < -0.27
+                and deviation < -0.29
+                and ma50_last < ma50_2_min_ago
+                and deviation_ma100_sopra_ma300 < 0.40
+            ):
+                sell = "SELL condizione speciale SALVAGENTE 4 3-39 con ma50 < - r 9930"
+                action = "sell"   
+                
+
+                # deviation_ma39 = ma4_last / ma39_last QUESTA HA VENDUTO NEL CROLLO IMPROVVISO DI 1 MINUTO (con -2.06% !!!)!
+                
+                
+                
+              
+            
             # 2 - SELL condizione speciale ro cano VENDE DURANTE UN CROLLO IMPROVVISO !
                 
             elif (
