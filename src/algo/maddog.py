@@ -9829,12 +9829,28 @@ class maddog:
                 # deviation = ma4_last / last_trade_price
 
                 # FORSE E' L' UNICA DEVIATION CHE MI POTRA' SALVARE DA UN CROLLO IMPROVVISO COME QUELLO DEL 3 NOVEMBRE 2021
+                
+                
+            
+            
+            # 3 - SELL condizione speciale dopo il crollo improvviso del 24 aprile 2022
+                    
+            elif (    
+                ma2_last < ma4_last
+                and ma2_last < ma6_last
+                and deviation_crollo_24_aprile < -0.58
+            ): 
+                
+                sell = "SELL condizione speciale DOPO IL CROLLO IMPROVVISO del 24 aprile 2022 - r 9843"
+                action = "sell"
                         
+                # ho aggiunto anche questa vendita speciale dopo il 24 aprile -1%
+                # deviation_crollo_24_aprile = ma2_last / last_trade_price        
                         
                         
                         
 
-            # 3 - SELL condizione speciale ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma13 >
+            # 4 - SELL condizione speciale ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma13 >
             
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
@@ -9855,7 +9871,7 @@ class maddog:
                         
                         
                 
-            # 4 - SELL condizione speciale ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma13 <
+            # 5 - SELL condizione speciale ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma13 <
             
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
@@ -9878,7 +9894,7 @@ class maddog:
             
             
             
-            # 5 - SELL condizione speciale ro cano VENDE " DOPO x MINUTI " and...
+            # 6 - SELL condizione speciale ro cano VENDE " DOPO x MINUTI " and...
             
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
@@ -9896,7 +9912,7 @@ class maddog:
                         
                
                 
-            # 6 - SELL condizione speciale RIBASSO IMPROVVISO
+            # 7 - SELL condizione speciale RIBASSO IMPROVVISO
             
             elif (
                 ma78_last > ma78_2_min_ago
@@ -9908,7 +9924,7 @@ class maddog:
                     
                     
             
-            # 7 - SELL condizione speciale RIBASSO IMPROVVISO
+            # 8 - SELL condizione speciale RIBASSO IMPROVVISO
             
             elif (
                 ma78_last < ma78_2_min_ago
@@ -9921,7 +9937,7 @@ class maddog:
                     
               
             
-            # 8 - SELL condizione speciale POCHI MALEDETTI E SUBITO QUANDO SALE FORTE ( cerca di inibirlo ) con ma200 > MA ma100 - dedicated to comparo meo
+            # 9 - SELL condizione speciale POCHI MALEDETTI E SUBITO QUANDO SALE FORTE ( cerca di inibirlo ) con ma200 > MA ma100 - dedicated to comparo meo
             
             elif (
                 ma3_last < ma28_last
@@ -9941,7 +9957,7 @@ class maddog:
                 
                 
                 
-            # 9 - SELL condizione speciale POCHI MALEDETTI E SUBITO QUANDO SALE PIANO con ma200 > MA ma100 NON DEVE SALIRE TROPPO ! - dedicated to comparo meo
+            # 10 - SELL condizione speciale POCHI MALEDETTI E SUBITO QUANDO SALE PIANO con ma200 > MA ma100 NON DEVE SALIRE TROPPO ! - dedicated to comparo meo
             
             elif (
                 ma3_last < ma9_last
@@ -9962,7 +9978,7 @@ class maddog:
                 
                 
             
-            # 10 - SELL condizione speciale POCHI MALEDETTI E SUBITO con ma200 < - dedicated to comparo meo
+            # 11 - SELL condizione speciale POCHI MALEDETTI E SUBITO con ma200 < - dedicated to comparo meo
                 
             elif (
                 ma3_last < ma9_last 
@@ -9981,7 +9997,7 @@ class maddog:
                 
             ######################################################################### vendite dedicate al BUY FIAT - AUDI - MASERATI - FERRARI 
             
-            # 11 - SELL condizione speciale FIAT 
+            # 12 - SELL condizione speciale FIAT 
                     
             elif (     
                 seconds_since_last_trade > max_hold_time_in_seconds_fiat
@@ -10002,7 +10018,7 @@ class maddog:
                         
                         
                 
-            # 12 - SELL condizione speciale AUDI 
+            # 13 - SELL condizione speciale AUDI 
                     
             elif (     
                 seconds_since_last_trade > max_hold_time_in_seconds_audi
@@ -10020,7 +10036,7 @@ class maddog:
                         
                         
                
-            # 13 - SELL condizione speciale MASERATI 
+            # 14 - SELL condizione speciale MASERATI 
                     
             elif (     
                 seconds_since_last_trade > max_hold_time_in_seconds_maserati
@@ -10039,7 +10055,7 @@ class maddog:
                
             
             
-            # 14 - SELL condizione speciale FERRARI 
+            # 15 - SELL condizione speciale FERRARI 
                     
             elif (     
                 seconds_since_last_trade > max_hold_time_in_seconds_ferrari
