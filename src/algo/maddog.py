@@ -1641,9 +1641,7 @@ class maddog:
                     
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     
-                
-                
-                
+               
                 ##############################################################################################################################
                 # IMPORTANTISSIMO ! - PER COMPRARE DURANTE IL CROLLO - FERRARI - compa prega per me - ( cruise - david gilmour )
                 ##############################################################################################################################
@@ -1658,15 +1656,13 @@ class maddog:
                     and deviation_buy_crollo_1 < -2.30
                     and ma3_last > ma7_last
                 ):
-                    buy = "BUY 1 CROLLO FERRARI - modo 1 - r 1661"
+                    buy = "BUY 1 CROLLO FERRARI - modo 1 - r 1659"
                     action = "buy"
                     percentage = 20
                     
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     
-             
-            
-            
+                
                 
                 # BUY 1 CROLLO FERRARI - modo 2 questa condizione e' entrata in azione ! ( e mi e' sembrata ben fatta !)
 
@@ -1675,15 +1671,29 @@ class maddog:
                     and deviation_buy_crollo_1 < -1.61
                     and deviation_buy_crollo_2 > 0.11
                 ):
-                    buy = "BUY 1 CROLLO FERRARI - modo 2 - r 1678"
+                    buy = "BUY 1 CROLLO FERRARI - modo 2 - r 1674"
                     action = "buy"
                     percentage = 20
                     
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     # deviation_buy_crollo_2 = ma3_last / ma13_last
                     
-            
-            
+                    
+                    
+                    
+                # BUY 1 crollo MISSILE COMPA !
+                
+                elif (
+                    ma2_last > ma2_2_min_ago
+                    and deviation_buy_crollo_1 < -2.60
+                    and ma3_last > ma6_last
+                ):
+                    buy = "BUY 1 crollo MISSILE COMPA - r 1691"
+                    action = "buy"
+                    percentage = 20
+                    
+                    # deviation_buy_crollo_1 = ma8_last / ma78_last
+                    
             
                 ##################################################################################################### CONDIZIONI ESPERIMENTALI !
                 
@@ -1703,7 +1713,7 @@ class maddog:
                     and ma36_last > ma36_2_min_ago
                   
                 ):
-                    buy = "BUY 1 ECCEZIONALE - se ma200 sale da 15 min e 69> COMPRA con deviation 4-25 e un po' piu' su della ma100 ! - r 1706"
+                    buy = "BUY 1 ECCEZIONALE - se ma200 sale da 15 min e 69> COMPRA con deviation 4-25 e un po' piu' su della ma100 ! - r 1716"
                     action = "buy"
                     percentage = 20
                     
@@ -1726,19 +1736,15 @@ class maddog:
                   
                 ):
 
-                    buy = "BUY 1 DOCCIA se ma200 > da 120 min ! COMPRA - r 1729"
+                    buy = "BUY 1 DOCCIA se ma200 > da 120 min ! COMPRA - r 1739"
                     action = "buy"
                     percentage = 20   
                     
-                
-                
-                
+          
                 ############################################################################################################################
                 
-                # condizione RCCR - BUY 1 DURANTE UNA CORREZIONE FIAT che non e' un forte ribasso e non e' un crollo !
-                # ATTENZIONE ! QUESTA E' UNA CONDIZIONE CHE ANDAVA BENE IN RCCR e non prendeva proprio in maddog !
-                # questa condizione considera anche le ipotesi in cui ma100< ma200< ma300<  - da aggiungere in un secondo momento
-                # e non e' ancora una situazione cosi' drammatica - distanza di ma8 da last trade
+                
+                # e non e' ancora una situazione cosi' drammatica.
                 
                 elif (    
                     deviation_buy_crollo_1 < -0.29
@@ -1747,7 +1753,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                 
                 ):
-                    buy = "condizione RCCR - BUY 1 DURANTE UNA CORREZIONE FIAT che non e' un forte ribasso e non e' un crollo !  - r 1750"
+                    buy = "condizione RCCR - BUY 1 DURANTE UNA CORREZIONE FIAT che non e' un forte ribasso e non e' un crollo !  - r 1756"
                     action = "buy"
                     percentage = 20
                     
@@ -1760,8 +1766,7 @@ class maddog:
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     # deviation_correzione = ma3_last / ma25_last
                     
-                    
-             
+          
                 
                 # BUY 1 con con 200 > 200 20 min ago (100 < and 200 < MA 300 >)    
                 
@@ -1778,12 +1783,11 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                 ):    
                     
-                    buy = "BUY 1 con 200 > 200 20 min ago (100 < and 200 < MA 300 >) and 13-200 !  - riga 1781"
+                    buy = "BUY 1 con 200 > 200 20 min ago (100 < and 200 < MA 300 >) and 13-200 !  - riga 1786"
                     action = "buy"
                     percentage = 10
                     
-                    
-                    
+              
              
                 # BUY 1 forever young 1 PIU' PRUDENTE se ma200 > e se ma200 > ma300 - che si preoccupa degli effetti laterali
              
@@ -1797,14 +1801,12 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                 ):
 
-                    buy = "BUY 1 forever young 1 PIU' PRUDENTE se ma 200 > e se ma200 > ma300 - che si preoccupa degli effetti laterali - r 1800"
+                    buy = "BUY 1 forever young 1 PIU' PRUDENTE se ma 200 > e se ma200 > ma300 - che si preoccupa degli effetti laterali - r 1792"
                     action = "buy"
                     percentage = 20
                     
                     # la troppa prudenza qualche volta genera perdite
-                    
-                    
-                
+               
                 ################################################################################################
                 
                 
@@ -1824,16 +1826,15 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                 ):
                     
-                    buy = "BUY 1 FOREVER YOUNG PIU' AGGRESSIVO (doppio delta < 1) (rialzo) se ma 200 > e se ma200 > ma300 questa sarebbe DOPO DOPPIO MINIMO - r 1827"
+                    buy = "BUY 1 FOREVER YOUNG PIU' AGGRESSIVO (doppio delta < 1) (rialzo) se ma 200 > e se ma200 > ma300 questa sarebbe DOPO DOPPIO MINIMO - r 1829"
                     action = "buy"
                     percentage = 20
                     
-                    # SITUAZIONE : dopo crollo e dopo primo grande ribalzo 
-                    # riprende a scendere 
+                    # SITUAZIONE : dopo crollo e dopo primo grande ribalzo riprende a scendere 
                     # MA ma100 e' intanto andata > ma200 !
                     # e anche ma200 sta sopra ma300
-                    
               
+                
                 
                 # BUY 1 FOREVER YOUNG PRUDENTE se ma 200 > e se ma200 > ma300 con doppio delta > 1 (ribasso) and deviation_ma5_sopra_ma28 > 0.30
                 
@@ -1849,13 +1850,12 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                 ):
                     
-                    buy = "BUY 1 FOREVER YOUNG PRUDENTE con doppio delta > 1 (ribasso) and deviation_ma5_sopra_ma28 > 0.30 se ma 200 > e se ma200 > ma300 - r 1852"
+                    buy = "BUY 1 FOREVER YOUNG PRUDENTE con doppio delta > 1 (ribasso) and deviation_ma5_sopra_ma28 > 0.30 se ma 200 > e se ma200 > ma300 - r 1853"
                     action = "buy"
                     percentage = 20
                     
                     
-                    
-            
+              
                 # BUY 1 con DEVIATION ASSURDA  se ma200 > da 20 min COMPRA con INCROCIO ma8 - ma200 >
 
                 elif (    
