@@ -186,8 +186,7 @@ class maddog:
         
         max_hold_time_in_seconds_delta_buy2_sell1 = 120
         
-        ###############################################################################################################################
-       
+        
         #########################################################################################################################################################
         #########################################################################################################################################################
 
@@ -255,7 +254,6 @@ class maddog:
         self.algo_helper.info("rapporto_delta_1_delta_2_69_39: {}".format(rapporto_delta_1_delta_2_69_39))
         
         
-        
      
         # formula deviation_ma3
         
@@ -311,6 +309,12 @@ class maddog:
         deviation_ma8_sotto_last_trade_price = (ma8_last / last_trade_price - 1) * 100 if last_trade_price else 0
         self.algo_helper.info("deviation_ma8_sotto_last_trade_price: {}".format(deviation_ma8_sotto_last_trade_price))
         
+      
+        # formula DEVIATION_evita_ribasso_improvviso_crollo_ferrari
+        
+        deviation_evita_ribasso_improvviso_crollo_ferrari = (ma3_last / ma30_last - 1) * 100 if ma30_last else 0
+        self.algo_helper.info("deviation_evita_ribasso_improvviso_crollo_ferrari: {}".format(deviation_evita_ribasso_improvviso_crollo_ferrari))
+        
         
         # formule DEVIATION CORREZIONE
         
@@ -330,8 +334,7 @@ class maddog:
         deviation_assurda = (ma2_last / ma200_last - 1) * 100 if ma200_last else 0
         self.algo_helper.info("deviation_assurda: {}".format(deviation_assurda))
         
-        
-        
+      
         # formula DEVIATION_MA100_LATERALE evita BUY CONTINUI DEL BUY ECCEZIONALE NELLA FASE LATERALE
         
         deviation_ma100_laterale = (ma5_last / ma100_last - 1) * 100 if ma100_last else 0
@@ -439,7 +442,6 @@ class maddog:
         self.algo_helper.info("deviation_buy1: {}".format(deviation_buy1))
         
         
-
         # formula DEVIATION_buy2 per la compra 2
         
         deviation_buy2 = (ma8_last / ma50_last - 1) * 100 if ma50_last else 0
@@ -645,8 +647,6 @@ class maddog:
             # TOGLIERE TUTTI GLI INCROCI AL BUY ! se 13 > 100 NON INCROCERA' MAI ! INCROCIO 13-100 DIVENTA 13>100 !
             # analisi dei dati !
            
-        
-        
             ######################################################################################################## COMPRA sessione 1
             
             # BUY 1 con "percentage" 20
@@ -9386,23 +9386,32 @@ class maddog:
             elif (
                 ma78_last > ma78_2_min_ago
                 and deviation_ribasso_improvviso < -0.63
-                    
+                and deviation_evita_ribasso_improvviso_crollo_ferrari > -0.30  
             ):
                 sell = "SELL condizione speciale RIBASSO IMPROVVISO - r 9391"
                 action = "sell"
                     
-                    
+                # IMPORTANTISSIMO ! PREZZO / ma30 FACEVA VENDERE IMMEDIATAMENTE DURANTE IL CROLLO FERRARI !
+                # prezzo molto distante dalla ma30
+                # cosi' ho aggiunto la deviation che dice che se ma3 si e' gia' un po' piu' giu' della ma30 IL RIBASSO IMPROVVISO NON E' GIA' PIU' !
+                # INTERVERRANNO ALTRE CONDIZIONI
+                
+                
             
             # 11 - SELL condizione speciale RIBASSO IMPROVVISO
             
             elif (
                 ma78_last < ma78_2_min_ago
                 and deviation_ribasso_improvviso < -0.63
-                    
+                and deviation_evita_ribasso_improvviso_crollo_ferrari > -0.30      
             ):
-                sell = "SELL condizione speciale RIBASSO IMPROVVISO - r 9403"
+                sell = "SELL condizione speciale RIBASSO IMPROVVISO - r 9408"
                 action = "sell"
-                    
+                
+                # IMPORTANTISSIMO ! PREZZO / ma30 FACEVA VENDERE IMMEDIATAMENTE DURANTE IL CROLLO FERRARI !
+                # prezzo molto distante dalla ma30
+                # cosi' ho aggiunto la deviation che dice che se ma3 si e' gia' un po' piu' giu' della ma30 IL RIBASSO IMPROVVISO NON E' GIA' PIU' !
+                # INTERVERRANNO ALTRE CONDIZIONI    
                     
               
             
@@ -9418,7 +9427,7 @@ class maddog:
                 and deviation_pochi_maledetti > 0.25
                 and ma2_last > ma100_last
             ):    
-                sell = "SELL condizione speciale POCHI MALEDETTI E SUBITO QUANDO SALE FORTE 3-28 ( cerca di inibirlo ) con ma200> e con deviation > 0.70 - r 9421"
+                sell = "SELL condizione speciale POCHI MALEDETTI E SUBITO QUANDO SALE FORTE 3-28 ( cerca di inibirlo ) con ma200> e con deviation > 0.70 - r 9430"
                 action = "sell"
                     
                 # and ma2_last > ma100_last (altrimenti vende durante il crollo con la ma3-ma9)
@@ -9438,7 +9447,7 @@ class maddog:
                 and deviation_pochi_maledetti > 0.25
                 and ma2_last > ma100_last
             ):    
-                sell = "SELL condizione speciale POCHI MALEDETTI E SUBITO 3-9 QUANDO SALE PIANO quando ma200 > e con deviation > 0.70 - r 9441"
+                sell = "SELL condizione speciale POCHI MALEDETTI E SUBITO 3-9 QUANDO SALE PIANO quando ma200 > e con deviation > 0.70 - r 9450"
                 action = "sell"
                     
                 # and ma2_last > ma100_last (altrimenti vende durante il crollo con la ma3-ma9)
@@ -9456,7 +9465,7 @@ class maddog:
                 and deviation_pochi_maledetti > 0.70
                 and ma2_last > ma100_last
             ):    
-                sell = "SELL condizione speciale POCHI MALEDETTI E SUBITO 3-9 quando ma200 < e con deviation > 0.70 - dedicated to comparo meo - r 9459"
+                sell = "SELL condizione speciale POCHI MALEDETTI E SUBITO 3-9 quando ma200 < e con deviation > 0.70 - dedicated to comparo meo - r 9468"
                 action = "sell"
                     
                 # and ma2_last > ma100_last (altrimenti vende durante il crollo con la ma3-ma9)
@@ -9477,7 +9486,7 @@ class maddog:
                 and deviation < -0.29
             ):    
                  
-                buy = "SELL condizione speciale FIAT se > 20 min dal BUY FIAT la perdita e' < -0.29 ! - r 9480"
+                buy = "SELL condizione speciale FIAT se > 20 min dal BUY FIAT la perdita e' < -0.29 ! - r 9489"
                 action = "sell"
                         
                 # and ma2_last < ma2_2_min_ago
@@ -9498,7 +9507,7 @@ class maddog:
                 and deviation < -0.31
                         
             ):
-                buy = "SELL condizione speciale AUDI se > 20 min dal BUY AUDI la perdita e' < -0.31 - r 9501"
+                buy = "SELL condizione speciale AUDI se > 20 min dal BUY AUDI la perdita e' < -0.31 - r 9510"
                 action = "sell"
                         
                 # and ma2_last < ma2_2_min_ago
@@ -9516,7 +9525,7 @@ class maddog:
                 and deviation < -0.33
                         
             ):
-                buy = "SELL condizione speciale MASERATI se > 20 min dal BUY MASERATI la perdita e' < -0.33 - r 9519"
+                buy = "SELL condizione speciale MASERATI se > 20 min dal BUY MASERATI la perdita e' < -0.33 - r 9528"
                 action = "sell"
                         
                 # and ma2_last < ma2_2_min_ago
@@ -9533,7 +9542,7 @@ class maddog:
                 and deviation_ma100_sopra_ma300 < -0.70
                 and deviation < -0.37
             ):
-                buy = "SELL condizione speciale FERRARI se > 20 min dal BUY FERRARI la perdita e' < -0.37 - r 9536"
+                buy = "SELL condizione speciale FERRARI se > 20 min dal BUY FERRARI la perdita e' < -0.37 - r 9545"
                 action = "sell"
                         
                 # and ma2_last < ma2_2_min_ago    
