@@ -1464,7 +1464,7 @@ class maddog:
                     deviation_buy_crollo_1 < -0.29
                     and deviation_buy_crollo_1 > -0.59
                     and ma3_last > ma9_last
-                    
+                    and deviation_ma5_sopra_ma28 > 0.05
                     and ma200_last < ma300_last
                     and ma20_last < ma100_last
                     and ma100_last < ma100_10_min_ago
@@ -9212,7 +9212,7 @@ class maddog:
             # 1 - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE
             
             if (
-                deviation_ma39 < -0.26
+                deviation_ma39 < -0.25
                 and deviation < -0.29
                 and ma50_last > ma50_2_min_ago
                 and deviation_ma100_sopra_ma300 > 0.40
@@ -9230,7 +9230,7 @@ class maddog:
             # 2 - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE   
             
             elif (
-                deviation_ma39 < -0.27
+                deviation_ma39 < -0.25
                 and deviation < -0.30
                 and ma50_last > ma50_2_min_ago
                 and deviation_ma100_sopra_ma300 < 0.40
@@ -9249,7 +9249,7 @@ class maddog:
             # 3 - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE
             
             elif (
-                deviation_ma39 < -0.26
+                deviation_ma39 < -0.25
                 and deviation < -0.28
                 and ma50_last < ma50_2_min_ago
                 and deviation_ma100_sopra_ma300 > 0.40
@@ -9267,7 +9267,7 @@ class maddog:
             # 4 - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE
             
             elif (
-                deviation_ma39 < -0.27
+                deviation_ma39 < -0.25
                 and deviation < -0.29
                 and ma50_last < ma50_2_min_ago
                 and deviation_ma100_sopra_ma300 < 0.40
@@ -9386,7 +9386,7 @@ class maddog:
             elif (
                 ma78_last > ma78_2_min_ago
                 and deviation_ribasso_improvviso < -0.63
-                and deviation_evita_ribasso_improvviso_crollo_ferrari > -0.30  
+                and deviation_evita_ribasso_improvviso_crollo_ferrari > -0.62 
             ):
                 sell = "SELL condizione speciale RIBASSO IMPROVVISO - r 9391"
                 action = "sell"
@@ -9403,7 +9403,7 @@ class maddog:
             elif (
                 ma78_last < ma78_2_min_ago
                 and deviation_ribasso_improvviso < -0.63
-                and deviation_evita_ribasso_improvviso_crollo_ferrari > -0.30      
+                and deviation_evita_ribasso_improvviso_crollo_ferrari > -0.62    
             ):
                 sell = "SELL condizione speciale RIBASSO IMPROVVISO - r 9408"
                 action = "sell"
