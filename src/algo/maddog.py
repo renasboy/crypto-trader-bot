@@ -4031,11 +4031,11 @@ class maddog:
                         ma50_last > ma50_2_min_ago
                         and ma100_last < ma100_60_min_ago
                         and ma5_last < ma100_last
-                        and deviation_sell < -0.17
+                        and deviation_sell < -0.20
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 (21-50 min) con ma50 > and 5-100 and deviation_sell < -0.17 CUSCINO DELLA MADONNA se ma100 < - r 4038"
+                        sell = "SELL 1 (21-50 min) con ma50 > and 5-100 and deviation_sell < -0.20 CUSCINO DELLA MADONNA se ma100 < - r 4038"
                         action = "sell"
                
                     ################################################################################################ con trend discendente 
@@ -5597,7 +5597,7 @@ class maddog:
                         and deviation_ma39 < -0.25
                         and ma200_last < ma200_60_min_ago
                     ):
-                        sell = "SELL 2 (21-60 min) con ma50 > and deviation_ma39 < -0.25 - r 5600"
+                        sell = "SELL 2 (21-60 min) con ma50 > and deviation_ma39 < -0.26 - r 5600"
                         action = "sell"
                         
                         
