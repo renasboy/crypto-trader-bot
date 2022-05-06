@@ -32,6 +32,7 @@ class maddog:
         ma28_last, ma28_prev = self.algo_helper.ma_last_prev(28)
         ma30_last, ma30_prev = self.algo_helper.ma_last_prev(30)
         ma33_last, ma33_prev = self.algo_helper.ma_last_prev(33)
+        ma34_last, ma34_prev = self.algo_helper.ma_last_prev(34)
         ma36_last, ma36_prev = self.algo_helper.ma_last_prev(36)
         ma39_last, ma39_prev = self.algo_helper.ma_last_prev(39)
         ma40_last, ma40_prev = self.algo_helper.ma_last_prev(40)
@@ -98,6 +99,7 @@ class maddog:
         ma78_30_min_ago = self.algo_helper.ma_minutes_ago(78, 30)
         ma100_2_min_ago = self.algo_helper.ma_minutes_ago(100, 2)
         ma100_10_min_ago = self.algo_helper.ma_minutes_ago(100, 10)
+        ma100_50_min_ago = self.algo_helper.ma_minutes_ago(100, 50)
         ma100_60_min_ago = self.algo_helper.ma_minutes_ago(100, 60)
         ma100_120_min_ago = self.algo_helper.ma_minutes_ago(100, 120)
         ma200_15_min_ago = self.algo_helper.ma_minutes_ago(200, 15)
@@ -191,15 +193,12 @@ class maddog:
         #########################################################################################################################################################
 
         #                                                         T U T T E    L E   D E V I A T I O N  !
-
-        ##############################################################################################################
+        
 
         # formula DEVIATION_1_gabbia
         
         deviation_1_gabbia = (ma8_last / ma50_last - 1) * 100 if ma50_last else 0
         self.algo_helper.info("deviation_1_gabbia: {}".format(deviation_1_gabbia))
-
-        
 
         # formula deviation
         
@@ -803,7 +802,7 @@ class maddog:
                     ma200_last < ma200_20_min_ago
                     and ma11_last > ma150_last
                     and ma2_last > ma2_2_min_ago
-                    
+                    and deviation_ma5_sopra_ma28 > 0.20
                     and rapporto_delta_1_delta_2 < 1
                     
                     and ma100_last > ma100_60_min_ago
@@ -816,7 +815,7 @@ class maddog:
                     percentage = 10
                     
                     # 11-150 perche' doppio delta sta risalendo !
-                    
+                    # MA HO DOVUTO AGGIUNGERE and deviation_ma5_sopra_ma28 > 0.20
                     
                     
                     
@@ -1347,7 +1346,7 @@ class maddog:
                 
                 elif (
                     ma2_last > ma2_2_min_ago
-                    and ma5_last > ma39_last
+                    and ma5_last > ma34_last
                     and deviation_ma5_sopra_ma28 > 0.10
                     and deviation_ma5_sotto_ma200 < -0.85
                     and rapporto_delta_1_delta_2_69_39 < 1
@@ -1355,7 +1354,7 @@ class maddog:
                     and deviation_buy_crollo_1 > -0.59
                 ): 
             
-                    buy = "BUY 1 piccola CORREZIONE FIAT 5-39 ma con ma5 piu' distante da ma200 che NON E' un grande ribasso e NON E' un crollo ! - r 1358"
+                    buy = "BUY 1 piccola CORREZIONE FIAT 5-34 ma con ma5 piu' distante da ma200 che NON E' un grande ribasso e NON E' un crollo ! - r 1358"
                     action = "buy"
                     percentage = 10
                     
@@ -2005,9 +2004,9 @@ class maddog:
                 # BUY 2C se ma100 <
                 
                 elif (
-                    deviation_buy2 > 0.10
-                    and ma100_last < ma100_60_min_ago
-                    and deviation_bellissima > 0.17
+                    deviation_buy2 > 0.09
+                    and ma100_last < ma100_50_min_ago
+                    and deviation_bellissima > 0.165
                     
                     and deviation_buy_ma3_sopra_ma13 > 0.10
                     and deviation_ma7_sopra_ma40 > 0.10
@@ -4015,22 +4014,30 @@ class maddog:
                     
                     ############################################################################## CUSCINO DI SANT' ANTONIO per questo segmento di tempo !
                     
-                    
                     elif (
                         ma50_last > ma50_2_min_ago
+                        and ma100_last > ma100_60_min_ago
                         and ma5_last < ma100_last
-                        and deviation_sell < -0.10
+                        and deviation_sell < -0.16
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 (21-50 min) con ma50 > and 5-100 and deviation_sell < -0.10 CUSCINO DI SANT' ANTONIO - r 4026"
+                        sell = "SELL 1 (21-50 min) con ma50 > and 5-100 and deviation_sell < -0.16 CUSCINO DI SANT' ANTONIO se ma100 > - r 4026"
                         action = "sell"
-                  
-                    
-                   
-                    ##################################################################### con trend discendente
-                    
-                  
+                        
+                        
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and ma100_last < ma100_60_min_ago
+                        and ma5_last < ma100_last
+                        and deviation_sell < -0.17
+                        and ma2_last < ma2_2_min_ago
+                        
+                    ):
+                        sell = "SELL 1 (21-50 min) con ma50 > and 5-100 and deviation_sell < -0.17 CUSCINO DELLA MADONNA se ma100 < - r 4038"
+                        action = "sell"
+               
+                    ################################################################################################ con trend discendente 
                     ################################################################################################ con ma100 DISTANTE sopra dalla ma300
                     
                     elif (
@@ -4039,20 +4046,15 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                         
                         and deviation_ma100_sopra_ma300 > 0.69
-                       
-                    ):
-                        sell = "SELL 1 (21-50 min) con ma50 < con deviation_ma39 <-0.16 TREND CRESCITA (100 sopra 300 > 0.69) - r 4044"
+                    ):   
+                        sell = "SELL 1 (21-50 min) con ma50 < con deviation_ma39 <-0.16 TREND CRESCITA (100 sopra 300 > 0.69) - r 4051"
                         action = "sell"
                         
-                        # and ma3_last < ma33_last
-                        # and deviation_sell < 0.10
                         # se non ha forza dopo 1 ora e' inutile continuare a sperare !
                         # qui non ho messo il crollo perche' dopo 40 min o gia' ha venduto o e' gia' risalita
                         # cuscino dell' angelo custode
                         
-                    
-                    
-                    
+                  
                     # cuscino sant' antonio
                     
                     elif (
@@ -4063,12 +4065,10 @@ class maddog:
                         and deviation_sell < -0.10
                         and ma5_last < ma100_last
                     ):
-                        sell = "SELL 1 (21-50 min)con ma50 < CUSCINO SANT' ANTONIO (5-100) MA SOLO con TREND CRESCITA (100 sopra 300 > 0.69) - r 4066"
+                        sell = "SELL 1 (21-50 min)con ma50 < CUSCINO SANT' ANTONIO (5-100) MA SOLO con TREND CRESCITA (100 sopra 300 > 0.69) - r 4069"
                         action = "sell"
                         
-                        
-                    
-                    
+                  
                     
                     # TREND LATERALE (100>300 MA <0.69)
                     
@@ -4081,11 +4081,10 @@ class maddog:
                         and deviation_sell < -0.15
                        
                     ):
-                        sell = "SELL 1 (21-50 min) con ma50 < con deviation_ma39 <-0.17 and deviation_sell < 0.10 TREND LATERALE (100>300 MA <0.69) - r 4084"
+                        sell = "SELL 1 (21-50 min) con ma50 < con deviation_ma39 <-0.17 and deviation_sell < 0.10 TREND LATERALE (100>300 MA <0.69) - r 4085"
                         action = "sell"
                         
-                        
-                    
+                   
                     ######################################################################## con ma50 DISTANTE dalla ma300 # queste 2 son un souvenir !
                     
                     # ho considerato, poi, la distanza tra ma100 e ma300 (ma il principio e' lo stesso)
