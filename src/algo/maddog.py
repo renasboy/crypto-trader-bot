@@ -206,8 +206,7 @@ class maddog:
         deviation = (ma4_last / last_trade_price - 1) * 100 if last_trade_price else 0
         self.algo_helper.info("deviation: {}".format(deviation))
         
-        
-        
+       
         # formula DEVIATION_ma5_sopra_ma28 - FORMULA AUREA !
         
         deviation_ma5_sopra_ma28 = (ma5_last / ma28_last - 1) * 100 if ma28_last else 0
@@ -234,8 +233,7 @@ class maddog:
         rapporto_delta_1_delta_2 = (delta_1 / delta_2 - 1) * 100 if delta_2 else 0
         self.algo_helper.info("rapporto_delta_1_delta_2: {}".format(rapporto_delta_1_delta_2))
         
-        
-        
+       
         # formula delta_1_69_39
         
         delta_1_69_39 = (ma69_last / ma39_last - 1) * 100 if ma39_last else 0
@@ -253,8 +251,7 @@ class maddog:
         rapporto_delta_1_delta_2_69_39 = (delta_1_69_39 / delta_2_69_39 - 1) * 100 if delta_2_69_39 else 0
         self.algo_helper.info("rapporto_delta_1_delta_2_69_39: {}".format(rapporto_delta_1_delta_2_69_39))
         
-        
-     
+       
         # formula deviation_ma3
         
         deviation_ma3 = (ma3_last / ma3_20_min_ago - 1) * 100 if ma3_20_min_ago else 0
@@ -281,11 +278,7 @@ class maddog:
         deviation_pochi_maledetti = (ma13_last / ma13_10_min_ago - 1) * 100 if ma13_10_min_ago else 0
         self.algo_helper.info("deviation_pochi_maledetti: {}".format(deviation_pochi_maledetti))
         
-      
-        ######################################################################
-        
-        # ESPERIMENTO !
-        
+    
         # formula DEVIATION_ma200_sotto_ma300 per comprare
         
         deviation_ma200_sotto_ma300 = (ma200_last / ma300_last - 1) * 100 if ma300_last else 0
@@ -351,7 +344,13 @@ class maddog:
         
         deviation_ma50_sotto_ma300 = (ma50_last / ma300_last - 1) * 100 if ma300_last else 0
         self.algo_helper.info("deviation_ma50_sotto_ma300: {}".format(deviation_ma50_sotto_ma300))
-     
+        
+        
+        # formula DEVIATION_ma25_sotto_ma300
+        
+        deviation_ma25_sotto_ma300 = (ma25_last / ma300_last - 1) * 100 if ma300_last else 0
+        self.algo_helper.info("deviation_ma25_sotto_ma300: {}".format(deviation_ma25_sotto_ma300))
+        
         
         # formula DEVIATION_ma100_sopra_ma300
         
@@ -646,6 +645,7 @@ class maddog:
             # MACD e RSI
             # TOGLIERE TUTTI GLI INCROCI AL BUY ! se 13 > 100 NON INCROCERA' MAI ! INCROCIO 13-100 DIVENTA 13>100 !
             # analisi dei dati !
+            
            
             ######################################################################################################## COMPRA sessione 1
             
@@ -1213,8 +1213,7 @@ class maddog:
                     
              
                 ################################################################################################### ecco le 2 CONDIZIONI PIU' PERICOLOSE !
-                
-                
+               
                 
                 # BUY 1 DURANTE UNA CORREZIONE FIAT che non e' un forte ribasso e non e' un crollo ! (MA ma3 > ma150 mi protegge un po')
                 
@@ -1234,7 +1233,8 @@ class maddog:
                 
                 
                     
-                # BUY 1 piccola CORREZIONE FIAT = r 701 RCCR CHE FA PAURA ! ( ma la ma100 E' ANCORA VICINA alla ma300 !)
+                # BUY 1 piccola CORREZIONE FIAT CHE FA PAURA ! ( ma la ma100 E' ANCORA VICINA alla ma300 !)
+                # ( E ANCHE la ma25 deve stare un po' distante dalla 300 !!! )
                 
                 elif (
                     
@@ -1243,15 +1243,15 @@ class maddog:
                     and deviation_correzione > 0.03
                     
                     and deviation_ma100_sopra_ma300 > -0.30
-                    
+                    and deviation_ma25_sotto_ma300 < -0.60
                     and ma2_last > ma2_2_min_ago
                 ):
-                    buy = "BUY 1 DURANTE UNA CORREZIONE FIAT = r 701 RCCR CHE FA PAURA ! (ma la ma100 E' ANCORA VICINA alla ma300)! - riga 1249"
+                    buy = "BUY 1 CORREZIONE FIAT CHE FA PAURA ! (MA ma100 E' ANCORA VICINA alla ma300) (E CON ma25 un po' distante dalla ma300) - riga 1249"
                     action = "buy"
                     percentage = 10
                     
                     # deviation_ma100_sopra_ma300 significa 100/300 ( ma100 ancora NON SI E' ALLONTANATA TROPPO DALLA ma300 )
-                    
+                    # deviation_ma25_sotto_ma300 significa che anche ma25 deve andare almeno un po' sotto ma300 (per evitare piccole schegge rialziste !)
                     
                     
                
