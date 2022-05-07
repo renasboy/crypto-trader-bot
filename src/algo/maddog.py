@@ -2464,7 +2464,7 @@ class maddog:
                     ma10_last > ma10_2_min_ago
                     and ma200_last > ma200_60_min_ago
                     and deviation > -0.30
-                    and deviation_ma5_sopra_ma28 > 0.12
+                    and deviation_ma5_sopra_ma28 > 0.15
                     
                     and deviation_ma4_sopra_ma30 > 0.11
                     and ma3_last > ma13_last
@@ -2885,20 +2885,20 @@ class maddog:
             else:
                 
                 if (
-                    ma69_last >= ma69_2_min_ago
-                    and deviation_buy3 > 0.12
+                    ma50_last >= ma50_2_min_ago
+                    and deviation_buy3 > 0.10
                     and ma3_last > ma13_last
                     and deviation_ma7_sopra_ma40 > 0.09
                     and ma4_last > ma9_last
                     and ma4_last > ma50_last
-                    
+                    and deviation_ma5_sopra_ma28 > 0.15
                     and ma6_last > ma15_last
                     and ma7_last > ma25_last
                     and deviation_bellissima > 0.12
                     and ma2_last > ma2_2_min_ago
                 
                 ):
-                    buy = "BUY 5 con ma69 > and deviation_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali) riga 2901"
+                    buy = "BUY 5 con ma50 > and 5-28 > 0.15 (PER SPEZZARE LA CATENA un po' di meno - vs effetti laterali) riga 2901"
                     action = "buy"
                     percentage = 50
                     
@@ -9016,10 +9016,10 @@ class maddog:
                         and deviation_ma100_sopra_ma300 > 0.25
                         
                         and (ma3_prev > ma78_prev and ma3_last < ma78_last)
-                        and deviation_sell < -0.05
+                        and deviation_sell < -0.07
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 4-5-x da 60 a 90 min con ma50 < con incrocio 3-78 and deviation_sell < -0.05 meno tollerante (sta in alto) - r 9022"
+                        sell = "SELL 4-5-x da 60 a 90 min con ma50 < con incrocio 3-78 and deviation_sell < -0.07 meno tollerante (sta in alto) - r 9022"
                         action = "sell"
                         
                         
