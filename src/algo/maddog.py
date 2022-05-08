@@ -4093,7 +4093,7 @@ class maddog:
                         
                   
                     
-                    # TREND LATERALE (100>300 MA <0.69)
+                    # TREND LATERALE (100/300  <0.69 and >-0.77)
                     
                     elif (
                         ma50_last < ma50_2_min_ago
@@ -4101,10 +4101,11 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                         
                         and deviation_ma100_sopra_ma300 < 0.69
-                        and deviation_sell < -0.15
+                        and deviation_ma100_sopra_ma300 > -0.77
+                        and deviation_sell < -0.18
                        
                     ):
-                        sell = "SELL 1 (21-50 min) con ma50 < con deviation_ma39 <-0.17 and deviation_sell < 0.10 TREND LATERALE (100>300 MA <0.69) - r 4085"
+                        sell = "SELL 1 (21-50 min) con ma50 < con deviation_ma39 <-0.17 and deviation_sell < -0.18 TREND LATERALE (100>300 <0.69 and >-0.77) - r 4085"
                         action = "sell"
                         
                    
