@@ -688,11 +688,9 @@ class maddog:
                     percentage = 20
                     
                     
+              
                 
-                
-                
-                
-                # ------------------------------------------------------------ BUY 1 quando incomincia il ribasso MA 300>
+                # ------------------------------------------------------------ BUY 1 MOLTO RISCHIOSO modo 1 ! quando incomincia il ribasso MA ma300 >
                   
                 elif (     
                     ma300_last > ma300_120_min_ago
@@ -701,18 +699,44 @@ class maddog:
                     
                     and ma200_last < ma200_60_min_ago
                     and ma100_last < ma100_60_min_ago
+                    and deviation_ma5_sopra_ma28 > 0.29
                     
                     and deviation_bellissima > 0.14
                     and ma2_last > ma2_2_min_ago
                 ):     
                   
-                    buy = "BUY 1 quando incomincia il ribasso MA 300> - r 687"
+                    buy = "BUY 1 MOLTO RISCHIOSO modo 1 ! quando incomincia il ribasso MA ma300> - r 687"
+                    action = "buy"
+                    percentage = 20
+                    
+                    
+                    
+                    
+                # ------------------------------------------------------------ BUY 1 MOLTO RISCHIOSO modo 2 ! quando incomincia il ribasso MA ma300 >
+                
+                elif (     
+                    ma300_last > ma300_120_min_ago
+                    and ma8_last > ma100_last
+                    and ma28_last > ma125_last
+                
+                    and ma200_last < ma200_60_min_ago
+                    and ma100_last < ma100_60_min_ago
+                 
+                    and deviation_bellissima > 0.14
+                    and ma2_last > ma2_2_min_ago
+                ):     
+                  
+                    buy = "BUY 1 MOLTO RISCHIOSO modo 2 ! quando incomincia il ribasso MA ma300> - r 687"
                     action = "buy"
                     percentage = 20
                     
                 
                 
-                # ------------------------------------------------------------ BUY 1 se ma200> and ma300> and 8>50   
+                
+                
+                
+                
+                # ------------------------------------------------------------ BUY 1 se ma200> and ma300 > and 8>50   
                 
                 elif (    
                     ma20_last > ma200_last
@@ -2371,6 +2395,7 @@ class maddog:
                   
                     and rapporto_delta_1_delta_2 < 1
                     
+                    and deviation_ma5_sopra_ma28 > 0.07
                     and ma2_last > ma2_2_min_ago
                 ):
                     buy = "BUY 2 FIAT che non funzionava MA CHE HA FUNZIONATO BENISSIMO ( DOPPIO DELTA in risalita !) copiato da BUY 1 perche' PERFETTO - r 2354"
