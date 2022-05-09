@@ -1903,7 +1903,37 @@ class maddog:
                     percentage = 20
                     
                     
-              
+                
+                
+                
+                
+                elif (
+                    
+                    deviation_buy_crollo_1 < -0.29
+                    and deviation_buy_crollo_1 > -0.59
+                    and deviation_correzione > 0.03
+                    
+                    and ma100_last < ma100_120_min_ago
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_120_min_ago
+                    
+                    and ma2_last > ma2_2_min_ago
+                ):
+                    buy = "BUY 1 DURANTE UNA CORREZIONE FIAT da r701 RCCE ho dovuto metterla ! con deviation_correzione > 0.03 - riga 1922"
+                    action = "buy"
+                    percentage = 20
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                 # BUY 1 con DEVIATION ASSURDA  se ma200 > da 20 min COMPRA con INCROCIO ma8 - ma200 >
 
                 elif (    
@@ -2068,20 +2098,52 @@ class maddog:
                     # deviation_buy2 = ma8_last / ma50
                     
                     
-                    
+              
+                # IL BUY 2 CI RIPROVA CON INCROCIO 8-50
+                
                 elif (
                     deviation_buy2 > 0.01
                     and ma200_last < ma200_120_min_ago
                     
                     and ma100_last < ma100_50_min_ago
+                    and (ma8_prev < ma50_prev and ma8_last > ma50_last)
                     and ma2_last > ma2_2_min_ago
                 ):
                
-                    buy = "BUY 2C con 100< and 200< con 8-50 - r 2080"
+                    buy = "BUY 2C con 100< and 200< con INCROCIO 8-50 - r 2080"
                     action = "buy"
                     percentage = 50
                     
                     # deviation_buy2 = ma8_last / ma50
+                    # incrocio va bene nel trend laterale NON TOCCARLO ! ho messo incrocio per evitare punti sopvrapposti
+                    
+                    
+                    
+                    
+                # IL BUY 2 CI RIPROVA MA PIU' IN ALTO ! non toccare questa altrimenti fa punti sovrapposti !
+                
+                elif (
+                    deviation_buy2 > 0.01
+                    and ma200_last < ma200_120_min_ago
+                    
+                    and ma100_last < ma100_50_min_ago
+                    
+                    and deviation_buy > 0.50
+                    and deviation_ma5_sopra_ma28 > 0.60
+                    and ma2_last > ma2_2_min_ago
+                ):
+               
+                    buy = "BUY 2C con 100 < and 200 < con DEVIATION BUY > 0.50 and 5-28 > 0.60 - r 2105"
+                    action = "buy"
+                    percentage = 50
+                    
+                    # deviation_buy2 = ma8_last / ma50
+                    # deviation buy e 5-28 cosi' alte per evitare punti sovrapposti NON TOCCARE
+                    
+                    
+                    
+                    
+                    
             
                 ####################################################################################################### BUY 2 DURANTE IL CROLLO CHE CONTINUA !
                 
