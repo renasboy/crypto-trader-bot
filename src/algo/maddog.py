@@ -2493,7 +2493,7 @@ class maddog:
                     
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
-                    
+                    and deviation_buy_ma5_sopra_ma20 > 0.05
                     and ma2_last > ma2_2_min_ago
                 ):    
                     buy = "BUY 2 ULTIMA CONDIZIONE ! ma tutte negative MA BUY con 25-200 (ho sostituito 8 > 125) - r 2499"
