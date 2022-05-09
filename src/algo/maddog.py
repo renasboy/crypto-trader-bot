@@ -1917,13 +1917,19 @@ class maddog:
                     and ma200_last < ma200_120_min_ago
                     and ma300_last < ma300_120_min_ago
                     
+                    and deviation_ma100_sopra_ma300 <-2.30
                     and ma2_last > ma2_2_min_ago
                 ):
-                    buy = "BUY 1 DURANTE UNA CORREZIONE FIAT da r701 RCCE ho dovuto metterla ! con deviation_correzione > 0.03 - riga 1922"
+                    buy = "BUY 1 DURANTE UNA CORREZIONE FIAT da r701 RCCE ho dovuto metterla ! con deviation_correzione > 0.03 MA 100 lontana da 300 ! - riga 1922"
                     action = "buy"
                     percentage = 20
                     
+                    # 100 sopra 300 MA IN REALTA' STA SOTTO.
+                    # 100 lontana da 300
+                    # 100< 200< 300< da oltre 120 min
                     
+                    # deve essere cosi' altrimenti la r701 RCCR genera molte perdite.
+                    # ma il 9 maggio 2022 RCCR ha comprato in situazione DRAMMATICA ed e' andata benissimo mentre MADDOG DORMIVA.
                     
                     
                     
