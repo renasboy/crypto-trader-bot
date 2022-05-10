@@ -152,6 +152,18 @@ class ro_cano_che_ritorna:
         
         
         
+        # formula DEVIATION_ma5_sopra_ma28 - FORMULA AUREA !
+        
+        deviation_ma5_sopra_ma28 = (ma5_last / ma28_last - 1) * 100 if ma28_last else 0
+        self.algo_helper.info("deviation_ma5_sopra_ma28: {}".format(deviation_ma5_sopra_ma28))
+        
+        
+        
+        # formula DEVIATION_ma100_sopra_ma300
+        
+        deviation_ma100_sopra_ma300 = (ma100_last / ma300_last - 1) * 100 if ma300_last else 0
+        self.algo_helper.info("deviation_ma100_sopra_ma300: {}".format(deviation_ma100_sopra_ma300))
+        
         
         
         ############# deviation per comprare con un RIALZO IMPROVVISO
@@ -763,12 +775,12 @@ class ro_cano_che_ritorna:
                 
                 elif (    
                     ma200_last > ma200_20_min_ago
-                    
+                    and ma5_last > ma20_last
                     and deviation_assurda > -0.10
                     and deviation_buy_ma3_sopra_ma13 > 0.09
                     and ma2_last > ma2_2_min_ago
                 ):
-                    buy = "BUY 1 DEVIATION ASSURDA 1 considera ma200 > - riga 662"
+                    buy = "BUY 1 DEVIATION ASSURDA 1 considera ma200 > and 5-20 - riga 662"
                     action = "buy"
                     percentage = 20
                     
@@ -819,24 +831,36 @@ class ro_cano_che_ritorna:
                     
                     
                     
-                    # esperimento
-                    # BUY DURANTE UNA CORREZIONE che non e' un ribasso e non e' un crollo ! (compare stammi vicino!)   
-                
+                    
+                # ecco la indimenticabile r701 portata poi in MADDOG con le modifiche necessarie.
+                # e riportata finalmente in RCCR.
+                    
                 elif (
                     
                     deviation_buy_crollo_1 < -0.29
                     and deviation_buy_crollo_1 > -0.59
                     and deviation_correzione > 0.03
+                    
+                    and ma100_last < ma100_120_min_ago
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_120_min_ago
+                    
+                    and deviation_ma100_sopra_ma300 <-2.30
                     and ma2_last > ma2_2_min_ago
                 ):
-                    buy = "BUY 1 DURANTE UNA CORREZIONE FIAT che non e' un forte ribasso e non e' un crollo ! con deviation_correzione > 0.03 - riga 701"
+                    buy = "BUY 1 DURANTE UNA CORREZIONE FIAT da r701 RCCE ho dovuto metterla ! con deviation_correzione > 0.03 MA 100 lontana da 300 ! - riga 1922"
                     action = "buy"
                     percentage = 20
                     
-                    # deviation_buy_crollo_1 = ma8_last / ma78_last
-                    # deviation_correzione = ma3_last / ma25_last
-                    # and deviation_correzione > 0.02 HA PRODOTTO MOLTISSIME PERDITE quindi ho modificato con 0.03
-                    # compare prega per me !
+                    # 100 sopra 300 MA IN REALTA' STA SOTTO.
+                    # 100 lontana da 300 !
+                    # 100< 200< 300< da oltre 120 min
+                    
+                    # deve essere cosi' altrimenti la r701 RCCR genera molte perdite.
+                    # ma il 9 maggio 2022 RCCR ha comprato in situazione DRAMMATICA ed e' andata benissimo mentre MADDOG DORMIVA.
+                    
+                    
+                
                     
                     
                     
