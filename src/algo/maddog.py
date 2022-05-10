@@ -1286,7 +1286,7 @@ class maddog:
                     and deviation_buy_crollo_1 > -0.59
                     
                     and deviation_correzione > 0.03
-                    and deviation_ma5_sopra_ma28 > 0.010
+                    and deviation_ma5_sopra_ma28 > 0.05
                     and deviation_ma100_sopra_ma300 > -0.30
                     and deviation_ma25_sotto_ma300 < -0.60
                     and ma2_last > ma2_2_min_ago
@@ -1297,7 +1297,7 @@ class maddog:
                     
                     # deviation_ma100_sopra_ma300 significa 100/300 ( ma100 ancora NON SI E' ALLONTANATA TROPPO DALLA ma300 )
                     # deviation_ma25_sotto_ma300 significa che anche ma25 deve andare almeno un po' sotto ma300 (per evitare piccole schegge rialziste !)
-                    # NON TOCCARE 5-28 > 0.10 !
+                    # NON TOCCARE 5-28 > 0.05 !
                     
                
                 ############################################################################################################################################## 
@@ -1480,7 +1480,7 @@ class maddog:
                 elif (
                     ma2_last > ma2_2_min_ago
                     and deviation_trend_ma200 > -0.30
-                    and deviation_correzione_1 > 0.01
+                    and deviation_correzione_1 > -0.01
                     
                     and deviation_buy_crollo_1 < -0.60
                     and deviation_buy_crollo_1 > -0.90
@@ -1495,7 +1495,7 @@ class maddog:
                     # deviation_trend_ma200 = ma200_last / ma200_120_min_ago
                     # compare prega per me !
                     
-                    
+                    # and deviation_correzione_1 > -0.01 significa una ndecchia prima di 5-30 !
                 
                 
                 ######################################################################################################
