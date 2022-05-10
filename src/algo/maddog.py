@@ -1438,7 +1438,7 @@ class maddog:
                     
                     
                     and rapporto_delta_1_delta_2 < 1
-                    and ma3_last > ma9_last
+                    and ma3_last > ma20_last
                 ):
                 
                     buy = "BUY 1 con RIBASSO VELOCE mentre la distanza tra ma100 e ma200 si sta riducendo - la ma100 sta risalendo ! USANDO UN DOPPIO DELTA - r 1444"
@@ -1678,9 +1678,9 @@ class maddog:
                     ma2_last > ma2_2_min_ago
                     and deviation_buy_crollo_1 < -0.91
                     and deviation_buy_crollo_1 > -1.50
-                    and ma5_last > ma15_last
+                    and deviation_ma5_sopra_ma28 > 0.05
                 ):
-                    buy = "BUY 1 GRANDE RIBASSO MASERATI CHE NON E' UN CROLLO ! con 5-15 - r 1683"
+                    buy = "BUY 1 GRANDE RIBASSO MASERATI CHE NON E' UN CROLLO ! con 5-28 - r 1683"
                     action = "buy"
                     percentage = 20
                     
@@ -2176,6 +2176,7 @@ class maddog:
                     ma2_last > ma2_2_min_ago
                     and deviation_buy_crollo_1 < -1.70
                     and deviation_buy_crollo_2 > 0.11
+                    and deviation_ma5_sopra_ma28 > 0.05
                 ):
                     buy = "BUY 2 DURANTE IL CROLLO - modo 2 - r 2112"
                     action = "buy"
@@ -2656,7 +2657,7 @@ class maddog:
                 
               
                 elif (
-                    ma78_last < ma78_2_min_ago
+                    ma69_last < ma69_2_min_ago
                     and deviation > -0.30
                     
                     and deviation_buy3 > 0.03
@@ -2669,7 +2670,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                     and ma7_last > ma25_last
                 ):
-                    buy = "BUY 3C RIVOLUZIONARIO se ma78 < - r 2604"
+                    buy = "BUY 3C RIVOLUZIONARIO se ma69 < - r 2604"
                     action = "buy"
                     percentage = 40
                     
@@ -6181,12 +6182,12 @@ class maddog:
                         
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and (ma3_prev > ma11_prev and ma3_last < ma11_last)
+                        and (ma3_prev > ma20_prev and ma3_last < ma20_last)
                         and deviation_sell > 2.71
                         and ma2_last < ma2_2_min_ago
                     ):
 
-                        sell = "SELL 2 da 60 a 90 min con ma50 > incrocio 3-11 and deviation_sell > 2.71 STIAMO TRA GLI ANGELI, compa ! - r 6121"
+                        sell = "SELL 2 da 60 a 90 min con ma50 > incrocio 3-20 and deviation_sell > 2.71 STIAMO TRA GLI ANGELI, compa ! - r 6121"
                         action = "sell"
                         
                         
@@ -9490,7 +9491,7 @@ class maddog:
             elif (    
                 ma2_last < ma4_last
                 and ma2_last < ma6_last
-                and deviation_crollo_24_aprile < -0.58
+                and deviation_crollo_24_aprile < -0.575
             ): 
                 
                 sell = "SELL condizione speciale DOPO IL CROLLO IMPROVVISO del 24 aprile 2022 - r 9428"
@@ -9498,7 +9499,8 @@ class maddog:
                         
                 # ho aggiunto anche questa vendita speciale dopo il 24 aprile -1%
                 # deviation_crollo_24_aprile = ma2_last / last_trade_price        
-                        
+                # -0.58 ha generato perdita -0.82 il 10 maggio 2020 cosi' ho ridotto a -0.575
+                # MA VA BENE !
              
             
             
@@ -9621,16 +9623,17 @@ class maddog:
             elif (
                 ma78_last > ma78_2_min_ago
                 and deviation_ribasso_improvviso < -0.63
-                and deviation_evita_ribasso_improvviso_crollo_ferrari > -0.62 
+                and deviation_evita_ribasso_improvviso_crollo_ferrari > -0.62
+                and deviation_sell < -0.30
             ):
                 sell = "SELL condizione speciale RIBASSO IMPROVVISO - r 9558"
                 action = "sell"
                     
                 # IMPORTANTISSIMO ! PREZZO / ma30 FACEVA VENDERE IMMEDIATAMENTE DURANTE IL CROLLO FERRARI !
-                # prezzo molto distante dalla ma30
-                # cosi' ho aggiunto la deviation che dice che se ma3 si e' gia' un po' piu' giu' della ma30 IL RIBASSO IMPROVVISO NON E' GIA' PIU' !
+                # perche' il prezzo era molto distante dalla ma30
+                # cosi' ho aggiunto la deviation che dice che se ma3 e' gia' un po' piu' giu' della ma30 IL RIBASSO IMPROVVISO NON E' GIA' PIU' !
                 # INTERVERRANNO ALTRE CONDIZIONI
-                
+                # ho dovuto mettere and deviation_sell < -0.30 (ha fatto vendita strana con -0.20 ore00:10 del 9 maggio 2022)
                 
             
             
@@ -9639,7 +9642,8 @@ class maddog:
             elif (
                 ma78_last < ma78_2_min_ago
                 and deviation_ribasso_improvviso < -0.63
-                and deviation_evita_ribasso_improvviso_crollo_ferrari > -0.62    
+                and deviation_evita_ribasso_improvviso_crollo_ferrari > -0.62
+                and deviation_sell < -0.30
             ):
                 sell = "SELL condizione speciale RIBASSO IMPROVVISO - r 9576"
                 action = "sell"
@@ -9648,7 +9652,7 @@ class maddog:
                 # prezzo molto distante dalla ma30
                 # cosi' ho aggiunto la deviation che dice che se ma3 si e' gia' un po' piu' giu' della ma30 IL RIBASSO IMPROVVISO NON E' GIA' PIU' !
                 # INTERVERRANNO ALTRE CONDIZIONI    
-                    
+                # anche qua ho dovuto mettere and deviation_sell < -0.18    
               
             
             
