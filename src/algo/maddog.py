@@ -9507,7 +9507,7 @@ class maddog:
             elif (    
                 ma2_last < ma4_last
                 and ma2_last < ma6_last
-                and deviation_crollo_24_aprile < -0.575
+                and deviation_crollo_24_aprile < -0.57
             ): 
                 
                 sell = "SELL condizione speciale DOPO IL CROLLO IMPROVVISO del 24 aprile 2022 - r 9428"
@@ -9516,6 +9516,7 @@ class maddog:
                 # ho aggiunto anche questa vendita speciale dopo il 24 aprile -1%
                 # deviation_crollo_24_aprile = ma2_last / last_trade_price        
                 # -0.58 ha generato perdita -0.82 il 10 maggio 2020 cosi' ho ridotto a -0.575
+                # -0.575 ha generato perdita -1.12 il 10 maggio 2020 cosi' ho ridotto a -0.57
                 # MA VA BENE !
              
             
