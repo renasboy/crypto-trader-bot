@@ -9409,70 +9409,83 @@ class maddog:
           
             
             
-            # 1 - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE
+            
+            
+            
+            
+            ####################################################################################### SALVAGENTE con deviation_ma5_sotto_ma200 > -1.00
+            
+            
+            
+            # 1A - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 > -1.00
             
             if (
                 deviation_ma39 < -0.25
                 and deviation < -0.29
+                
                 and ma50_last > ma50_2_min_ago
                 and deviation_ma100_sopra_ma300 > 0.40
+                
+                and deviation_ma5_sotto_ma200 > -1.00
             ):
-                sell = "SELL condizione speciale SALVAGENTE 1 3-39 con ma50 > - r 9335"
+                sell = "SELL condizione speciale SALVAGENTE 1 3-39 con ma50 > - con deviation_ma5_sotto_ma200 > -1.00 - r 9335"
                 action = "sell"   
                 
 
                 # deviation_ma39 = ma4_last / ma39_last QUESTA HA VENDUTO NEL CROLLO IMPROVVISO DI 1 MINUTO (con -2.06% !!!)!
                 
-                
+          
             
-            
-            
-            # 2 - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE   
+            # 2A - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 > -1.00   
             
             elif (
                 deviation_ma39 < -0.25
                 and deviation < -0.30
+                
                 and ma50_last > ma50_2_min_ago
                 and deviation_ma100_sopra_ma300 < 0.40
+                
+                and deviation_ma5_sotto_ma200 > -1.00
             ):
-                sell = "SELL condizione speciale SALVAGENTE 2 3-39 con ma50 > - r 9353"
+                sell = "SELL condizione speciale SALVAGENTE 2 3-39 con ma50 > - con deviation_ma5_sotto_ma200 > -1.00 - r 9353"
                 action = "sell"   
                 
 
                 # deviation_ma39 = ma4_last / ma39_last QUESTA HA VENDUTO NEL CROLLO IMPROVVISO DI 1 MINUTO (con -2.06% !!!)!
                 
+         
             
-            
-            
-            
-            
-            # 3 - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE
+            # 3A - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 > -1.00
             
             elif (
                 deviation_ma39 < -0.25
                 and deviation < -0.28
+                
                 and ma50_last < ma50_2_min_ago
                 and deviation_ma100_sopra_ma300 > 0.40
+                
+                and deviation_ma5_sotto_ma200 > -1.00
             ):
-                sell = "SELL condizione speciale SALVAGENTE 3 3-39 con ma50 < - r 9372"
+                sell = "SELL condizione speciale SALVAGENTE 3 3-39 con ma50 < - con deviation_ma5_sotto_ma200 > -1.00 - r 9372"
                 action = "sell"   
                 
 
                 # deviation_ma39 = ma4_last / ma39_last QUESTA HA VENDUTO NEL CROLLO IMPROVVISO DI 1 MINUTO (con -2.06% !!!)!
                 
+            
                 
-                
-                
-                
-            # 4 - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE
+            # 4A - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 > -1.00
             
             elif (
                 deviation_ma39 < -0.26
                 and deviation < -0.30
+                
                 and ma50_last < ma50_2_min_ago
                 and deviation_ma100_sopra_ma300 < 0.40
+                
+                and deviation_ma5_sotto_ma200 > -1.00
             ):
-                sell = "SELL condizione speciale SALVAGENTE 4 3-39 con ma50 < - r 9390"
+                sell = "SELL condizione speciale SALVAGENTE 4 3-39 con ma50 < - con deviation_ma5_sotto_ma200 > -1.00 - r 9390"
                 action = "sell"   
                 
 
@@ -9480,17 +9493,250 @@ class maddog:
                 # modifica solo devation.
                 
                 
+                
+                
+                #########################################################################################################################
+                
+                
+                
+                
+                
+            
+            
+            
+            ############################################################################## SALVAGENTE con deviation_ma5_sotto_ma200 < -1.00 and > -1.50
+            
+            
+            
+            # 1B - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 < -1.00 and > -1.50
+            
+            elif (
+                deviation_ma39 < -0.25
+                and deviation < -0.40
+                
+                and ma50_last > ma50_2_min_ago
+                and deviation_ma100_sopra_ma300 > 0.40
+                
+                and deviation_ma5_sotto_ma200 < -1.00
+                and deviation_ma5_sotto_ma200 > -1.50
+            ):
+                sell = "SELL condizione speciale SALVAGENTE 1 3-39 con ma50 > - con deviation_ma5_sotto_ma200 < -1.00 and > -1.50 - r 9395"
+                action = "sell"   
+                
+
+                # deviation_ma39 = ma4_last / ma39_last QUESTA HA VENDUTO NEL CROLLO IMPROVVISO DI 1 MINUTO (con -2.06% !!!)!
+                
+          
+            
+            # 2B - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 < -1.00 and > -1.50   
+            
+            elif (
+                deviation_ma39 < -0.25
+                and deviation < -0.40
+                
+                and ma50_last > ma50_2_min_ago
+                and deviation_ma100_sopra_ma300 < 0.40
+                
+                and deviation_ma5_sotto_ma200 < -1.00
+                and deviation_ma5_sotto_ma200 > -1.50
+                
+            ):
+                sell = "SELL condizione speciale SALVAGENTE 2 3-39 con ma50 > - con deviation_ma5_sotto_ma200 < -1.00 and > -1.50 - r 9396"
+                action = "sell"   
+                
+
+                # deviation_ma39 = ma4_last / ma39_last QUESTA HA VENDUTO NEL CROLLO IMPROVVISO DI 1 MINUTO (con -2.06% !!!)!
+                
+         
+            
+            # 3B - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 < -1.00 and > -1.50
+            
+            elif (
+                deviation_ma39 < -0.25
+                and deviation < -0.40
+                
+                and ma50_last < ma50_2_min_ago
+                and deviation_ma100_sopra_ma300 > 0.40
+                
+                and deviation_ma5_sotto_ma200 < -1.00
+                and deviation_ma5_sotto_ma200 > -1.50
+                
+            ):
+                sell = "SELL condizione speciale SALVAGENTE 3 3-39 con ma50 < - con deviation_ma5_sotto_ma200 < -1.00 and > -1.50 - r 9397"
+                action = "sell"   
+                
+
+                # deviation_ma39 = ma4_last / ma39_last QUESTA HA VENDUTO NEL CROLLO IMPROVVISO DI 1 MINUTO (con -2.06% !!!)!
+                
+            
+                
+            # 4B - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 < -1.00 and > -1.50
+            
+            elif (
+                deviation_ma39 < -0.26
+                and deviation < -0.40
+                
+                and ma50_last < ma50_2_min_ago
+                and deviation_ma100_sopra_ma300 < 0.40
+                
+                and deviation_ma5_sotto_ma200 < -1.00
+                and deviation_ma5_sotto_ma200 > -1.50
+                
+            ):
+                sell = "SELL condizione speciale SALVAGENTE 4 3-39 con ma50 < - con deviation_ma5_sotto_ma200 < -1.00 and > -1.50 - r 9398"
+                action = "sell"   
+                
+
+                # deviation_ma39 = ma4_last / ma39_last QUESTA HA VENDUTO NEL CROLLO IMPROVVISO DI 1 MINUTO (con -2.06% !!!)!
+                # modifica solo devation.
+                
+                
+                
+                #####################################################################################################################################
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+            ##################################################################################### SALVAGENTE con deviation_ma5_sotto_ma200 < -1.50
+            
+            
+            
+            # 1C - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 < -1.50
+            
+            elif (
+                deviation_ma39 < -0.25
+                and deviation < -0.50
+                
+                and ma50_last > ma50_2_min_ago
+                and deviation_ma100_sopra_ma300 > 0.40
+                
+                and deviation_ma5_sotto_ma200 < -1.50
+            ):
+                sell = "SELL condizione speciale SALVAGENTE 1C 3-39 con ma50 > - con deviation_ma5_sotto_ma200 < -1.50 - r 9395"
+                action = "sell"   
+                
+
+                # deviation_ma39 = ma4_last / ma39_last QUESTA HA VENDUTO NEL CROLLO IMPROVVISO DI 1 MINUTO (con -2.06% !!!)!
+                
+          
+            
+            # 2C - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 < -1.50   
+            
+            elif (
+                deviation_ma39 < -0.25
+                and deviation < -0.50
+                
+                and ma50_last > ma50_2_min_ago
+                and deviation_ma100_sopra_ma300 < 0.40
+                
+                and deviation_ma5_sotto_ma200 < -1.50
+                
+            ):
+                sell = "SELL condizione speciale SALVAGENTE 2C 3-39 con ma50 > - con deviation_ma5_sotto_ma200 < -1.50 - r 9396"
+                action = "sell"   
+                
+
+                # deviation_ma39 = ma4_last / ma39_last QUESTA HA VENDUTO NEL CROLLO IMPROVVISO DI 1 MINUTO (con -2.06% !!!)!
+                
+         
+            
+            # 3C - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 < -1.50
+            
+            elif (
+                deviation_ma39 < -0.25
+                and deviation < -0.50
+                
+                and ma50_last < ma50_2_min_ago
+                and deviation_ma100_sopra_ma300 > 0.40
+                
+                and deviation_ma5_sotto_ma200 < -1.50
+                
+            ):
+                sell = "SELL condizione speciale SALVAGENTE 3C 3-39 con ma50 < - con deviation_ma5_sotto_ma200 < -1.50 - r 9397"
+                action = "sell"   
+                
+
+                # deviation_ma39 = ma4_last / ma39_last QUESTA HA VENDUTO NEL CROLLO IMPROVVISO DI 1 MINUTO (con -2.06% !!!)!
+                
+            
+                
+            # 4C - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 < -1.50
+            
+            elif (
+                deviation_ma39 < -0.26
+                and deviation < -0.50
+                
+                and ma50_last < ma50_2_min_ago
+                and deviation_ma100_sopra_ma300 < 0.40
+                
+                and deviation_ma5_sotto_ma200 < -1.50
+                
+            ):
+                sell = "SELL condizione speciale SALVAGENTE 4C 3-39 con ma50 < - con deviation_ma5_sotto_ma200 < -1.50 - r 9398"
+                action = "sell"   
+                
+
+                # deviation_ma39 = ma4_last / ma39_last QUESTA HA VENDUTO NEL CROLLO IMPROVVISO DI 1 MINUTO (con -2.06% !!!)!
+                # modifica solo devation.
+                
+                
+                
+                ##################################################################################################################### fine salvagente
+                
+                
               
             
-            # 5 - SELL condizione speciale ro cano VENDE DURANTE UN CROLLO IMPROVVISO !
-                
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            ################################################################################################################## CROLLO IMPROVVISO !
+            
+            
+            
+            # 5A - SELL condizione speciale ro cano VENDE DURANTE UN CROLLO IMPROVVISO ! and deviation_ma5_sotto_ma200 > -1.00
+            
             elif (
                 ma2_last < ma4_last
                 and ma2_last < ma6_last
                 and deviation < -0.58
+                
+                and deviation_ma5_sotto_ma200 > -1.00
             ):
                   
-                sell = "SELL condizione speciale CROLLO IMPROVVISO - r 9408"
+                sell = "SELL condizione speciale CROLLO IMPROVVISO - and deviation_ma5_sotto_ma200 > -1.00 - r 9399"
                 action = "sell"
             
                 # con -0.59 il 6 feb 2022 ha fatto -0.85
@@ -9500,17 +9746,60 @@ class maddog:
                 # FORSE E' L' UNICA DEVIATION CHE MI POTRA' SALVARE DA UN CROLLO IMPROVVISO COME QUELLO DEL 3 NOVEMBRE 2021
                 
                 
+                
+                
+                
+                
+            # 5B - SELL condizione speciale ro cano VENDE DURANTE UN CROLLO IMPROVVISO ! and deviation_ma5_sotto_ma200 < -1.00
+            
+            elif (
+                ma2_last < ma4_last
+                and ma2_last < ma6_last
+                and deviation < -0.60
+                
+                and deviation_ma5_sotto_ma200 < -1.00
+            ):
+                  
+                sell = "SELL condizione speciale CROLLO IMPROVVISO - and deviation_ma5_sotto_ma200 < -1.00 - r 9400"
+                action = "sell"
+            
+                # con -0.59 il 6 feb 2022 ha fatto -0.85
+                # con -0.62 il 4 feb 2022 ha fatto -0.89%
+                # deviation = ma4_last / last_trade_price
+
+                # FORSE E' L' UNICA DEVIATION CHE MI POTRA' SALVARE DA UN CROLLO IMPROVVISO COME QUELLO DEL 3 NOVEMBRE 2021
+                
+                
+                
+                
+                ##################################################################################################################### fine crollo improvviso
+                
+                
+                
+                
+                
             
             
-            # 6 - SELL condizione speciale dopo il crollo improvviso del 24 aprile 2022
+            
+            
+            
+            
+            
+            ################################################################################################ dopo il crollo improvviso del 24 aprile 2022
+            
+            
+            
+            # 6A - SELL condizione speciale dopo il crollo improvviso del 24 aprile 2022 ! and deviation_ma5_sotto_ma200 > -1.00
                     
             elif (    
                 ma2_last < ma4_last
                 and ma2_last < ma6_last
                 and deviation_crollo_24_aprile < -0.57
+                
+                and deviation_ma5_sotto_ma200 > -1.00
             ): 
                 
-                sell = "SELL condizione speciale DOPO IL CROLLO IMPROVVISO del 24 aprile 2022 - r 9428"
+                sell = "SELL condizione speciale DOPO IL CROLLO IMPROVVISO del 24 aprile 2022 - and deviation_ma5_sotto_ma200 > -1.00 - r 9401"
                 action = "sell"
                         
                 # ho aggiunto anche questa vendita speciale dopo il 24 aprile -1%
@@ -9518,10 +9807,119 @@ class maddog:
                 # -0.58 ha generato perdita -0.82 il 10 maggio 2020 cosi' ho ridotto a -0.575
                 # -0.575 ha generato perdita -1.12 il 10 maggio 2020 cosi' ho ridotto a -0.57
                 # MA VA BENE !
-             
+                
+                
             
             
-            # 7 - SELL condizione speciale ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma100 > e ma13 >
+            
+            
+            # 6B - SELL condizione speciale dopo il crollo improvviso del 24 aprile 2022 ! and deviation_ma5_sotto_ma200 < -1.00
+                    
+            elif (    
+                ma2_last < ma4_last
+                and ma2_last < ma6_last
+                and deviation_crollo_24_aprile < -0.60
+                
+                and deviation_ma5_sotto_ma200 < -1.00
+            ): 
+                
+                sell = "SELL condizione speciale DOPO IL CROLLO IMPROVVISO del 24 aprile 2022 - and deviation_ma5_sotto_ma200 < -1.00 - r 9402"
+                action = "sell"
+                        
+                # ho aggiunto anche questa vendita speciale dopo il 24 aprile -1%
+                # deviation_crollo_24_aprile = ma2_last / last_trade_price        
+                # -0.58 ha generato perdita -0.82 il 10 maggio 2020 cosi' ho ridotto a -0.575
+                # -0.575 ha generato perdita -1.12 il 10 maggio 2020 cosi' ho ridotto a -0.57
+                # MA VA BENE !
+                
+                
+                
+                
+                ######################################################################################### fine dopo il crollo improvviso del 24 aprile 2022
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            # 7 - SELL condizione speciale RIBASSO IMPROVVISO con deviation_sell < -0.60
+            
+            elif (
+                ma78_last > ma78_2_min_ago
+                and deviation_ribasso_improvviso < -0.63
+                and deviation_evita_ribasso_improvviso_crollo_ferrari > -0.62
+                and deviation_sell < -0.60
+            ):
+                sell = "SELL condizione speciale RIBASSO IMPROVVISO - r 9558"
+                action = "sell"
+                    
+                # IMPORTANTISSIMO ! PREZZO / ma30 FACEVA VENDERE IMMEDIATAMENTE DURANTE IL CROLLO FERRARI !
+                # perche' il prezzo era OVVIAMENTE molto distante dalla ma30
+                # cosi' ho aggiunto la deviation che dice che se ma3 e' piu' giu' della ma30 IL RIBASSO IMPROVVISO NON E' GIA' PIU' !
+                # INTERVERRANNO ALTRE CONDIZIONI
+                # ho dovuto mettere and deviation_sell < -0.30 (ha fatto vendita strana con -0.20 ore 00:10 del 9 maggio 2022)
+                
+                
+                
+            
+            
+            # 8 - SELL condizione speciale RIBASSO IMPROVVISO con deviation_sell < -0.60
+            
+            elif (
+                ma78_last < ma78_2_min_ago
+                and deviation_ribasso_improvviso < -0.63
+                and deviation_evita_ribasso_improvviso_crollo_ferrari > -0.62
+                and deviation_sell < -0.60
+            ):
+                sell = "SELL condizione speciale RIBASSO IMPROVVISO - r 9576"
+                action = "sell"
+                
+                # IMPORTANTISSIMO ! PREZZO / ma30 FACEVA VENDERE IMMEDIATAMENTE DURANTE IL CROLLO FERRARI !
+                # prezzo molto distante dalla ma30
+                # cosi' ho aggiunto la deviation che dice che se ma3 e' piu' giu' della ma30 IL RIBASSO IMPROVVISO NON E' GIA' PIU' !
+                # INTERVERRANNO ALTRE CONDIZIONI    
+                # anche qua ho dovuto mettere and deviation_sell < -0.18    
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            # 9 - SELL condizione speciale ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma100 > e ma13 >
            
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
@@ -9538,7 +9936,7 @@ class maddog:
             
             
             
-            # 8 - SELL condizione speciale ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma100 > e ma13 <
+            # 10 - SELL condizione speciale ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma100 > e ma13 <
             
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
@@ -9555,7 +9953,7 @@ class maddog:
             
             
             
-            # 9 - SELL condizione speciale ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma100 < e con ma13 > 
+            # 11 - SELL condizione speciale ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma100 < e con ma13 > 
             
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
@@ -9572,7 +9970,7 @@ class maddog:
             
             
             
-            # 10 - SELL condizione speciale ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma100 < e con ma13 <
+            # 12 - SELL condizione speciale ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma100 < e con ma13 <
             
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
@@ -9594,7 +9992,7 @@ class maddog:
                         
              
             
-            # 11 - SELL condizione speciale ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma13 <
+            # 13 - SELL condizione speciale ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma13 <
             
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
@@ -9617,7 +10015,7 @@ class maddog:
             
             
             
-            # 12 - SELL condizione speciale ro cano VENDE " DOPO x MINUTI " and...
+            # 14 - SELL condizione speciale ro cano VENDE " DOPO x MINUTI " and...
             
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
@@ -9634,43 +10032,38 @@ class maddog:
                         
                         
                
-                
-            # 13 - SELL condizione speciale RIBASSO IMPROVVISO
-            
-            elif (
-                ma78_last > ma78_2_min_ago
-                and deviation_ribasso_improvviso < -0.63
-                and deviation_evita_ribasso_improvviso_crollo_ferrari > -0.62
-                and deviation_sell < -0.30
-            ):
-                sell = "SELL condizione speciale RIBASSO IMPROVVISO - r 9558"
-                action = "sell"
-                    
-                # IMPORTANTISSIMO ! PREZZO / ma30 FACEVA VENDERE IMMEDIATAMENTE DURANTE IL CROLLO FERRARI !
-                # perche' il prezzo era molto distante dalla ma30
-                # cosi' ho aggiunto la deviation che dice che se ma3 e' gia' un po' piu' giu' della ma30 IL RIBASSO IMPROVVISO NON E' GIA' PIU' !
-                # INTERVERRANNO ALTRE CONDIZIONI
-                # ho dovuto mettere and deviation_sell < -0.30 (ha fatto vendita strana con -0.20 ore00:10 del 9 maggio 2022)
-                
             
             
-            # 14 - SELL condizione speciale RIBASSO IMPROVVISO
             
-            elif (
-                ma78_last < ma78_2_min_ago
-                and deviation_ribasso_improvviso < -0.63
-                and deviation_evita_ribasso_improvviso_crollo_ferrari > -0.62
-                and deviation_sell < -0.30
-            ):
-                sell = "SELL condizione speciale RIBASSO IMPROVVISO - r 9576"
-                action = "sell"
-                
-                # IMPORTANTISSIMO ! PREZZO / ma30 FACEVA VENDERE IMMEDIATAMENTE DURANTE IL CROLLO FERRARI !
-                # prezzo molto distante dalla ma30
-                # cosi' ho aggiunto la deviation che dice che se ma3 si e' gia' un po' piu' giu' della ma30 IL RIBASSO IMPROVVISO NON E' GIA' PIU' !
-                # INTERVERRANNO ALTRE CONDIZIONI    
-                # anche qua ho dovuto mettere and deviation_sell < -0.18    
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
               
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             # 15 - SELL condizione speciale POCHI MALEDETTI E SUBITO QUANDO SALE FORTE ( cerca di inibirlo ) con ma200 > MA ma100 - dedicated to comparo meo
@@ -9730,11 +10123,6 @@ class maddog:
                 
                 
                 
-            
-            
-            
-            
-            
             
             ######################################################################### vendite dedicate al BUY FIAT - AUDI - MASERATI - FERRARI 
             
