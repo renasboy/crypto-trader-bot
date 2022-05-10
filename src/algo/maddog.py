@@ -162,24 +162,24 @@ class maddog:
         
         ###########################################################################################################################
         
-        # vedi SELL 1 FIAT - 20 minuti = 1200 secondi
+        # vedi SELL 1 FIAT - 2 minuti = 120 secondi
         
-        max_hold_time_in_seconds_fiat = 1200
+        max_hold_time_in_seconds_fiat = 120
         
        
-        # vedi SELL 1 AUDI - 20 minuti = 1200 secondi
+        # vedi SELL 1 AUDI - 2 minuti = 120 secondi
         
-        max_hold_time_in_seconds_audi = 1200
+        max_hold_time_in_seconds_audi = 120
         
       
-        # vedi SELL 1 MASERATI - 20 minuti = 1200 secondi
+        # vedi SELL 1 MASERATI - 2 minuti = 120 secondi
         
-        max_hold_time_in_seconds_maserati = 1200
+        max_hold_time_in_seconds_maserati = 120
         
         
-        # vedi SELL 1 FERRARI - 20 minuti = 1200 secondi
+        # vedi SELL 1 FERRARI - 2 minuti = 120 secondi
         
-        max_hold_time_in_seconds_ferrari = 1200
+        max_hold_time_in_seconds_ferrari = 120
         
         
         ###############################################################################################################################
@@ -9730,7 +9730,12 @@ class maddog:
                 
                 
                 
-                
+            
+            
+            
+            
+            
+            
             ######################################################################### vendite dedicate al BUY FIAT - AUDI - MASERATI - FERRARI 
             
             # 18 - SELL condizione speciale FIAT 
@@ -9741,10 +9746,10 @@ class maddog:
                 and deviation_buy_crollo_1 > -0.59
                         
                 and deviation_ma100_sopra_ma300 < -0.70
-                and deviation < -0.29
+                and deviation < -0.30
             ):    
                  
-                buy = "SELL condizione speciale FIAT se > 20 min dal BUY FIAT la perdita e' < -0.29 ! - r 9658"
+                buy = "SELL condizione speciale FIAT se > 2 min dal BUY FIAT la perdita e' < -0.30 ! - r 9658"
                 action = "sell"
                         
                 # and ma2_last < ma2_2_min_ago
@@ -9762,10 +9767,10 @@ class maddog:
                 and deviation_buy_crollo_1 > -0.90
                         
                 and deviation_ma100_sopra_ma300 < -0.70
-                and deviation < -0.31
+                and deviation < -0.40
                         
             ):
-                buy = "SELL condizione speciale AUDI se > 20 min dal BUY AUDI la perdita e' < -0.31 - r 9679"
+                buy = "SELL condizione speciale AUDI se > 2 min dal BUY AUDI la perdita e' < -0.40 - r 9679"
                 action = "sell"
                         
                 # and ma2_last < ma2_2_min_ago
@@ -9781,10 +9786,10 @@ class maddog:
                 and deviation_buy_crollo_1 > -1.50
                       
                 and deviation_ma100_sopra_ma300 < -0.70
-                and deviation < -0.33
+                and deviation < -0.50
                         
             ):
-                buy = "SELL condizione speciale MASERATI se > 20 min dal BUY MASERATI la perdita e' < -0.33 - r 9698"
+                buy = "SELL condizione speciale MASERATI se > 2 min dal BUY MASERATI la perdita e' < -0.50 - r 9698"
                 action = "sell"
                         
                 # and ma2_last < ma2_2_min_ago
@@ -9799,9 +9804,9 @@ class maddog:
                 and deviation_buy_crollo_1 < -1.51
                         
                 and deviation_ma100_sopra_ma300 < -0.70
-                and deviation < -0.37
+                and deviation < -0.58
             ):
-                buy = "SELL condizione speciale FERRARI se > 20 min dal BUY FERRARI la perdita e' < -0.37 - r 9715"
+                buy = "SELL condizione speciale FERRARI se > 2 min dal BUY FERRARI la perdita e' < -0.70 - r 9715"
                 action = "sell"
                         
                 # and ma2_last < ma2_2_min_ago    
