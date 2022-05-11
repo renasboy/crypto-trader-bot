@@ -99,6 +99,7 @@ class maddog:
         ma78_30_min_ago = self.algo_helper.ma_minutes_ago(78, 30)
         ma100_2_min_ago = self.algo_helper.ma_minutes_ago(100, 2)
         ma100_10_min_ago = self.algo_helper.ma_minutes_ago(100, 10)
+        ma100_30_min_ago = self.algo_helper.ma_minutes_ago(100, 30)
         ma100_50_min_ago = self.algo_helper.ma_minutes_ago(100, 50)
         ma100_60_min_ago = self.algo_helper.ma_minutes_ago(100, 60)
         ma100_120_min_ago = self.algo_helper.ma_minutes_ago(100, 120)
@@ -1733,9 +1734,9 @@ class maddog:
                 elif (
                     ma2_last > ma2_2_min_ago
                     and deviation_buy_crollo_1 < -2.60
-                    and ma3_last > ma6_last
+                    and ma3_last > ma13_last
                 ):
-                    buy = "BUY 1 crollo MISSILE COMPA - r 1736"
+                    buy = "BUY 1 crollo MISSILE COMPA 3-13 - r 1736"
                     action = "buy"
                     percentage = 20
                     
@@ -2798,9 +2799,9 @@ class maddog:
                 elif (
                     ma2_last > ma2_2_min_ago
                     and deviation_buy_crollo_1 < -2.30
-                    and ma8_last > ma25_last
+                    and ma3_last > ma28_last
                 ):
-                    buy = "BUY 3 di emergenza CROLLO FERRARI - modo 1 - 8-25 - r 2801"
+                    buy = "BUY 3 di emergenza CROLLO FERRARI - modo 1 - 3-28 - r 2801"
                     action = "buy"
                     percentage = 20
                     
@@ -9993,7 +9994,7 @@ class maddog:
                 seconds_since_last_trade > max_hold_time_in_seconds
                 and ma2_last < last_trade_price
                 and deviation < -0.38
-                and ma100_last > ma100_60_min_ago
+                and ma100_last > ma100_30_min_ago
                 and ma13_last > ma13_2_min_ago
                 and ma2_last < ma2_2_min_ago
             ):
@@ -10010,7 +10011,7 @@ class maddog:
                 seconds_since_last_trade > max_hold_time_in_seconds
                 and ma2_last < last_trade_price
                 and deviation < -0.37
-                and ma100_last > ma100_60_min_ago
+                and ma100_last > ma100_30_min_ago
                 and ma13_last > ma13_2_min_ago
                 and ma2_last < ma2_2_min_ago
             ):
@@ -10027,7 +10028,7 @@ class maddog:
                 seconds_since_last_trade > max_hold_time_in_seconds
                 and ma2_last < last_trade_price
                 and deviation < -0.38
-                and ma100_last < ma100_60_min_ago
+                and ma100_last < ma100_30_min_ago
                 and ma13_last > ma13_2_min_ago
                 and ma2_last < ma2_2_min_ago
             ):
@@ -10044,7 +10045,7 @@ class maddog:
                 seconds_since_last_trade > max_hold_time_in_seconds
                 and ma2_last < last_trade_price
                 and deviation < -0.355
-                and ma100_last < ma100_60_min_ago
+                and ma100_last < ma100_30_min_ago
                 and ma13_last > ma13_2_min_ago
                 and ma2_last < ma2_2_min_ago
             ):
@@ -10176,15 +10177,31 @@ class maddog:
                 
             
             # 17 - SELL condizione speciale POCHI MALEDETTI E SUBITO con ma200 < - dedicated to comparo meo
-                
+            
             elif (
                 ma3_last < ma9_last 
                 and ma200_last < ma200_60_min_ago
                 and deviation > 0.70
+                and deviation < 2.50
                 and deviation_pochi_maledetti > 0.70
                 and ma2_last > ma100_last
             ):    
-                sell = "SELL condizione speciale POCHI MALEDETTI E SUBITO 3-9 quando ma200 < e con deviation > 0.70 - dedicated to comparo meo - r 9637"
+                sell = "SELL condizione speciale POCHI MALEDETTI E SUBITO 3-9 quando ma200 < e con deviation > 0.70 and < 2.50 - dedicated to comparo meo - r 10188"
+                action = "sell"
+                    
+                # and ma2_last > ma100_last (altrimenti vende durante il crollo con la ma3-ma9)
+                
+                
+                
+                
+            elif (
+                ma3_last < ma8_last 
+                and ma200_last < ma200_60_min_ago
+                and deviation > 2.51
+                and deviation_pochi_maledetti > 0.70
+                and ma2_last > ma100_last
+            ):    
+                sell = "SELL condizione speciale POCHI MALEDETTI E SUBITO 3-8 quando ma200 < e con deviation > 2.51 - dedicated to comparo meo - r 10203"
                 action = "sell"
                     
                 # and ma2_last > ma100_last (altrimenti vende durante il crollo con la ma3-ma9)
