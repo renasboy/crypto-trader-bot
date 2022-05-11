@@ -1644,13 +1644,14 @@ class maddog:
                     
                     and ma5_last > ma16_last
                     and ma2_last > ma2_2_min_ago
+                    and ma78_last < ma200_last
                 ):
                     buy = "BUY 1 DURANTE UN RIBASSO AUDI CHE NON E' UN CROLLO ! con 5-16  - riga 1646"
                     action = "buy"
                     percentage = 20
                     
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
-                    
+                    # questa cosa che 78 deve essere < 200 ha dell' incredibile. MA NON TOCCARE !
                     
                     
                     
@@ -1663,13 +1664,14 @@ class maddog:
                     and deviation_bellissima > 0.02
                     and deviation_correzione_1 > 0.03
                     and ma13_last > ma50_last
+                    and ma78_last < ma200_last
                 ):
                     buy = "copia della riga 530 del RCCR ma piu' prudente ! - BUY GRANDE RIBASSO MASERATI CHE NON E' UN CROLLO ! - r 1664"
                     action = "buy"
                     percentage = 20
                     
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
-                
+                    # questa cosa che 78 deve essere < 200 ha dell' incredibile. MA NON TOCCARE !
                 
                 
                 
