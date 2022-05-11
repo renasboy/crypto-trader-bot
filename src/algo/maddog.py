@@ -1684,13 +1684,14 @@ class maddog:
                     and deviation_buy_crollo_1 < -0.91
                     and deviation_buy_crollo_1 > -1.50
                     and deviation_ma5_sopra_ma28 > 0.05
+                    and ma78_last < ma200_last
                 ):
                     buy = "BUY 1 GRANDE RIBASSO MASERATI CHE NON E' UN CROLLO ! con 5-28 - r 1683"
                     action = "buy"
                     percentage = 20
                     
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
-                    
+                    # questa cosa che 78 deve essere < 200 ha dell' incredibile. MA NON TOCCARE !
                
                 ##############################################################################################################################
                 # IMPORTANTISSIMO ! - PER COMPRARE DURANTE IL CROLLO - FERRARI - compa prega per me - ( cruise - david gilmour )
