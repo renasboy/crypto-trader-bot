@@ -9484,6 +9484,7 @@ class maddog:
             
             ####################################################################################### SALVAGENTE con deviation_ma5_sotto_ma200 > -1.00
             
+            # SENZA and ma2_last < ma2_2_min_ago VENDE mentre ma4 si trova sotto il BUY !
             
             
             # 1A - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 > -1.00
@@ -9491,6 +9492,7 @@ class maddog:
             if (
                 deviation_ma39 < -0.25
                 and deviation < -0.29
+                and ma2_last < ma2_2_min_ago
                 
                 and ma50_last > ma50_2_min_ago
                 and deviation_ma100_sopra_ma300 > 0.40
@@ -9501,7 +9503,7 @@ class maddog:
                 action = "sell"   
                 
 
-                # deviation_ma39 = ma4_last / ma39_last QUESTA HA VENDUTO NEL CROLLO IMPROVVISO DI 1 MINUTO (con -2.06% !!!)!
+                # deviation_ma39 = ma4_last / ma39_last QUESTA HA VENDUTO NEL CROLLO IMPROVVISO DI 1 MINUTO (con -2.06% !)
                 
           
             
@@ -9510,6 +9512,7 @@ class maddog:
             elif (
                 deviation_ma39 < -0.25
                 and deviation < -0.30
+                and ma2_last < ma2_2_min_ago 
                 
                 and ma50_last > ma50_2_min_ago
                 and deviation_ma100_sopra_ma300 < 0.40
@@ -9520,7 +9523,8 @@ class maddog:
                 action = "sell"   
                 
 
-                # deviation_ma39 = ma4_last / ma39_last QUESTA HA VENDUTO NEL CROLLO IMPROVVISO DI 1 MINUTO (con -2.06% !!!)!
+                # deviation_ma39 = ma4_last / ma39_last QUESTA HA VENDUTO NEL CROLLO IMPROVVISO DI 1 MINUTO (con -2.06% !)
+                
                 
          
             
@@ -9529,6 +9533,7 @@ class maddog:
             elif (
                 deviation_ma39 < -0.25
                 and deviation < -0.28
+                and ma2_last < ma2_2_min_ago 
                 
                 and ma50_last < ma50_2_min_ago
                 and deviation_ma100_sopra_ma300 > 0.40
@@ -9539,7 +9544,8 @@ class maddog:
                 action = "sell"   
                 
 
-                # deviation_ma39 = ma4_last / ma39_last QUESTA HA VENDUTO NEL CROLLO IMPROVVISO DI 1 MINUTO (con -2.06% !!!)!
+                # deviation_ma39 = ma4_last / ma39_last QUESTA HA VENDUTO NEL CROLLO IMPROVVISO DI 1 MINUTO (con -2.06% !)
+                
                 
             
                 
@@ -9548,6 +9554,7 @@ class maddog:
             elif (
                 deviation_ma39 < -0.27
                 and deviation < -0.32
+                and ma2_last < ma2_2_min_ago 
                 
                 and ma50_last < ma50_2_min_ago
                 and deviation_ma100_sopra_ma300 < 0.40
