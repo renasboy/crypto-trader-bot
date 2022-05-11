@@ -362,12 +362,21 @@ class maddog:
         
         deviation_ma100_sopra_ma200 = (ma100_last / ma200_last - 1) * 100 if ma200_last else 0
         self.algo_helper.info("deviation_ma100_sopra_ma200: {}".format(deviation_ma100_sopra_ma200))
-     
         
+        
+     
         # formula DEVIATION_ma13_sopra_ma25
         
         deviation_ma13_sopra_ma25 = (ma13_last / ma25_last - 1) * 100 if ma25_last else 0
-        self.algo_helper.info("deviation_ma13_sopra_ma25: {}".format(deviation_ma13_sopra_ma25))    
+        self.algo_helper.info("deviation_ma13_sopra_ma25: {}".format(deviation_ma13_sopra_ma25))
+        
+        
+        
+        # formula DEVIATION_ma5_sopra_ma16
+        
+        deviation_ma5_sopra_ma16 = (ma5_last / ma16_last - 1) * 100 if ma16_last else 0
+        self.algo_helper.info("deviation_ma5_sopra_ma16: {}".format(deviation_ma5_sopra_ma16))
+        
         
         
         # formula DEVIATION_bellissima
@@ -1645,6 +1654,7 @@ class maddog:
                     and ma5_last > ma16_last
                     and ma2_last > ma2_2_min_ago
                     and ma78_last < ma200_last
+                    and deviation_ma5_sopra_ma16 > 0.12
                 ):
                     buy = "BUY 1 DURANTE UN RIBASSO AUDI CHE NON E' UN CROLLO ! con 5-16  - riga 1646"
                     action = "buy"
@@ -10037,13 +10047,13 @@ class maddog:
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
                 and ma2_last < last_trade_price
-                and deviation < -0.38
+                and deviation < -0.41
                 and ma100_last < ma100_30_min_ago
                 and ma13_last > ma13_2_min_ago
                 and ma2_last < ma2_2_min_ago
             ):
 
-                sell = "SELL condizione speciale DOLCE ATTESA con ma100 < e con ma13 > and deviation < -0.38 - r 9482"
+                sell = "SELL condizione speciale DOLCE ATTESA con ma100 < e con ma13 > and deviation < -0.41 - r 9482"
                 action = "sell"
                 
             
