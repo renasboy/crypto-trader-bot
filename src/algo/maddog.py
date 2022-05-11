@@ -2660,7 +2660,7 @@ class maddog:
                     deviation_ma4_sopra_ma30 > 0.15
                     and deviation > -0.30
                     and deviation_bellissima > 0.07
-                    and ma39_last > ma69_last
+                    and ma39_last > ma50_last
                     and delta_buy3_incrocio_ma3_ma8 >= 0.06
                     and ma3_last > ma8_last
                     and ma3_last >= ma69_last
@@ -2669,7 +2669,7 @@ class maddog:
                     and ma5_last >= ma15_last
                     and ma5_last >= ma25_last
                 ):    
-                    buy = "BUY 3B RIVOLUZIONARIO se ma39 > ma69 - r 2582"
+                    buy = "BUY 3B RIVOLUZIONARIO se ma39 > ma50 - r 2582"
                     action = "buy"
                     percentage = 50
                     
