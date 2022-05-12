@@ -1730,7 +1730,7 @@ class maddog:
                 elif (
                     ma2_last > ma2_2_min_ago
                     and deviation_buy_crollo_1 < -1.61
-                    and deviation_buy_crollo_2 > 0.11
+                    and deviation_buy_crollo_2 > 0.01
                 ):
                     buy = "BUY 1 CROLLO FERRARI - modo 2 - r 1719"
                     action = "buy"
@@ -2178,9 +2178,9 @@ class maddog:
                 elif (
                     ma2_last > ma2_2_min_ago
                     and deviation_buy_crollo_1 < -2.30
-                    and ma3_last > ma7_last
+                    and ma2_last > ma7_last
                 ):
-                    buy = "BUY 2 DURANTE IL CROLLO - modo 1 - r 2097"
+                    buy = "BUY 2 DURANTE IL CROLLO - modo 1 2-7 - r 2097"
                     action = "buy"
                     percentage = 20
                     
@@ -9608,6 +9608,8 @@ class maddog:
                 
                 and deviation_ma5_sotto_ma200 < -1.00
                 and deviation_ma5_sotto_ma200 > -1.50
+                
+                and ma2_last < ma2_2_min_ago 
             ):
                 sell = "SELL condizione speciale SALVAGENTE 1 3-39 con ma50 > - con deviation_ma5_sotto_ma200 < -1.00 and > -1.50 - r 9395"
                 action = "sell"   
@@ -9629,6 +9631,7 @@ class maddog:
                 and deviation_ma5_sotto_ma200 < -1.00
                 and deviation_ma5_sotto_ma200 > -1.50
                 
+                and ma2_last < ma2_2_min_ago 
             ):
                 sell = "SELL condizione speciale SALVAGENTE 2 3-39 con ma50 > - con deviation_ma5_sotto_ma200 < -1.00 and > -1.50 - r 9396"
                 action = "sell"   
@@ -9650,6 +9653,8 @@ class maddog:
                 and deviation_ma5_sotto_ma200 < -1.00
                 and deviation_ma5_sotto_ma200 > -1.50
                 
+                and ma2_last < ma2_2_min_ago 
+                
             ):
                 sell = "SELL condizione speciale SALVAGENTE 3 3-39 con ma50 < - con deviation_ma5_sotto_ma200 < -1.00 and > -1.50 - r 9397"
                 action = "sell"   
@@ -9670,6 +9675,8 @@ class maddog:
                 
                 and deviation_ma5_sotto_ma200 < -1.00
                 and deviation_ma5_sotto_ma200 > -1.50
+                
+                and ma2_last < ma2_2_min_ago 
                 
             ):
                 sell = "SELL condizione speciale SALVAGENTE 4 3-39 con ma50 < - con deviation_ma5_sotto_ma200 < -1.00 and > -1.50 - r 9398"
