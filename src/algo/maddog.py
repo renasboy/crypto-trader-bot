@@ -1231,6 +1231,8 @@ class maddog:
                     and deviation_buy_crollo_1 > -0.59
                     and ma2_last > ma2_2_min_ago
                     
+                    and deviation_ma5_sopra_ma28 > 0.10
+                    
                 ):    
                     
                     buy = "BUY 1 piccola CORREZIONE FIAT = r 995 RCCR medie mobili lunghe TUTTE IN RIALZO ! ma si verifica una correzione fiat ! - r 1226"
@@ -1379,6 +1381,8 @@ class maddog:
                 elif (    
                     
                     ma200_last > ma200_20_min_ago
+                    and deviation_ma5_sopra_ma28 > 0.17
+                    
                     and ma3_last > ma28_last
                     and ma2_last > ma2_2_min_ago
                     
@@ -1388,7 +1392,7 @@ class maddog:
                     and ma100_last > ma100_60_min_ago
                     and ma200_last > ma200_60_min_ago
                     and ma300_last > ma300_60_min_ago
-               
+             
                 ):    
                     
                     buy = "BUY 1 con 200 > - riga 1384"
@@ -1584,7 +1588,7 @@ class maddog:
                 elif (    
                     deviation_buy_crollo_1 < -0.29
                     and deviation_buy_crollo_1 > -0.59
-                    and deviation_ma5_sopra_ma28 > 0.10
+                    and deviation_ma5_sopra_ma28 > 0.15
                     and ma8_last > ma39_last
                     and ma200_last < ma300_last
                     and ma20_last < ma100_last
@@ -1710,19 +1714,24 @@ class maddog:
                 # entriamo nell' area dell' ipervenduto, compa !
                 # QUI LASCIO GLI INCROCI !
                 
+                
+                
                 # BUY 1 CROLLO FERRARI - modo 1
                 
                 elif (
                     ma2_last > ma2_2_min_ago
                     and deviation_buy_crollo_1 < -2.30
-                    and ma5_last > ma15_last
+                    and ma3_last > ma16_last
+                    and ma78_last < ma300_last
                 ):
-                    buy = "BUY 1 CROLLO FERRARI - modo 1 - r 1704"
+                    buy = "BUY 1 CROLLO FERRARI 3-16 - modo 1 and ma78_last < ma300_last - r 1727"
                     action = "buy"
                     percentage = 50
                     
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     # era 3-7 ma MI DISPIACE TANTO ma ho dovuto mettere 5-15
+                    
+                    
                 
                 
                 # BUY 1 CROLLO FERRARI - modo 2 questa condizione e' entrata in azione ! ( e mi e' sembrata ben fatta !)
@@ -1731,8 +1740,9 @@ class maddog:
                     ma2_last > ma2_2_min_ago
                     and deviation_buy_crollo_1 < -1.61
                     and deviation_buy_crollo_2 > 0.01
+                    and ma78_last < ma300_last
                 ):
-                    buy = "BUY 1 CROLLO FERRARI - modo 2 - r 1719"
+                    buy = "BUY 1 CROLLO FERRARI - modo 2 and ma78_last < ma300_last - r 1745"
                     action = "buy"
                     percentage = 50
                     
@@ -1748,12 +1758,81 @@ class maddog:
                     ma2_last > ma2_2_min_ago
                     and deviation_buy_crollo_1 < -2.60
                     and ma3_last > ma13_last
+                    and ma78_last < ma300_last
                 ):
-                    buy = "BUY 1 crollo MISSILE COMPA 3-13 - r 1736"
+                    buy = "BUY 1 crollo MISSILE COMPA 3-13 and ma78_last < ma300_last - r 1763"
                     action = "buy"
                     percentage = 50
                     
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                elif (
+                    ma2_last > ma2_2_min_ago
+                    and deviation_buy_crollo_1 < -2.30
+                    and ma5_last > ma15_last
+                    
+                    and ma78_last > ma300_last
+                    and deviation_ma5_sopra_ma28 > 0.05
+                ):
+                    buy = "BUY 1 CROLLO FERRARI - modo 1 and ma78_last > ma300_last - r 1785"
+                    action = "buy"
+                    percentage = 50
+                    
+                    # deviation_buy_crollo_1 = ma8_last / ma78_last
+                    # era 3-7 ma MI DISPIACE TANTO ma ho dovuto mettere 5-15
+                
+                
+                # BUY 1 CROLLO FERRARI - modo 2 questa condizione e' entrata in azione ! ( e mi e' sembrata ben fatta !)
+
+                elif (
+                    ma2_last > ma2_2_min_ago
+                    and deviation_buy_crollo_1 < -1.61
+                    and deviation_buy_crollo_2 > 0.01
+                    
+                    and ma78_last > ma300_last
+                    and deviation_ma5_sopra_ma28 > 0.05
+                ):
+                    buy = "BUY 1 CROLLO FERRARI - modo 2 and ma78_last > ma300_last - r 1803"
+                    action = "buy"
+                    percentage = 50
+                    
+                    # deviation_buy_crollo_1 = ma8_last / ma78_last
+                    # deviation_buy_crollo_2 = ma3_last / ma13_last
+                    
+                    
+                    
+                    
+                # BUY 1 crollo MISSILE COMPA !
+                
+                elif (
+                    ma2_last > ma2_2_min_ago
+                    and deviation_buy_crollo_1 < -2.60
+                    and ma3_last > ma13_last
+                    
+                    and ma78_last > ma300_last
+                    and deviation_ma5_sopra_ma28 > 0.05
+                ):
+                    buy = "BUY 1 crollo MISSILE COMPA 3-13 and ma78_last > ma300_last - r 1823"
+                    action = "buy"
+                    percentage = 50
+                    
+                    # deviation_buy_crollo_1 = ma8_last / ma78_last
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     
             
                 ##################################################################################################### CONDIZIONI ESPERIMENTALI !
@@ -1859,6 +1938,8 @@ class maddog:
                     ma200_last > ma300_last
                     and deviation_ma100_laterale > 0.18
                     and ma200_last > ma200_15_min_ago
+                    and deviation_ma5_sopra_ma28 > 0.10
+                    
                     and ma3_last > ma11_last
                     and ma5_last > ma200_last
                     and ma10_last > ma10_2_min_ago
@@ -2260,9 +2341,9 @@ class maddog:
                     ma2_last > ma2_2_min_ago
                     and deviation_buy_crollo_1 < -0.60
                     and deviation_buy_crollo_1 > -1.50
-                    and deviation_bellissima > 0.17
+                    and deviation_bellissima > 0.15
                 ):
-                    buy = "BUY 2 FORTE RIBASSO che NON E' UN CROLLO ! and deviation_bellissima > 0.17 - r 2178"
+                    buy = "BUY 2 FORTE RIBASSO che NON E' UN CROLLO ! and deviation_bellissima > 0.15 - r 2178"
                     action = "buy"
                     percentage = 40
                     
@@ -2347,9 +2428,11 @@ class maddog:
                 
                 elif (    
 
-                    ma200_last > ma200_90_min_ago
+                    ma100_last > ma100_60_min_ago
+                    and ma200_last > ma200_90_min_ago
+                    and ma300_last > ma300_120_min_ago
                     and ma20_last > ma200_last
-                    and deviation_ma5_sopra_ma30 > 0.05
+                    and deviation_ma5_sopra_ma30 > 0.03
                     and ma11_last > ma69_last
                     and ma2_last > ma2_2_min_ago
                     and ma3_last > ma69_last
@@ -3187,6 +3270,9 @@ class maddog:
                 elif (    
                     
                     ma200_last > ma200_20_min_ago
+                    and (ma5_prev < ma28_prev and ma5_last > ma28_last)
+                    and ma28_last > ma34_last
+                    
                     and ma3_last > ma28_last
                     
                     and ma100_last > ma200_last
@@ -7513,6 +7599,8 @@ class maddog:
                         and (ma3_prev > ma18_prev and ma3_last < ma18_last)
                         and deviation_sell > 0.23
                         and ma2_last < ma2_2_min_ago
+                        
+                        and ma5_last < ma78_last
                     ):
                         sell = "SELL 3 eventuale guadagno con crollo (12-21 min) con ma50 < and incrocio 3 - 18 and deviation_sell > 0.23 - r 7368"
                         action = "sell"
@@ -9335,9 +9423,9 @@ class maddog:
                     if (    
                         ma50_last > ma50_2_min_ago 
                         and ma2_last < ma2_2_min_ago 
-                        and deviation_ma25 < -0.22
+                        and deviation_ma25 < -0.24
                     ):
-                        sell = "SELL 4-5-x dopo 90 min con ma50> and deviation_ma25 <-0.18 (no ma3<ma39) - r 9173"
+                        sell = "SELL 4-5-x dopo 90 min con ma50> and deviation_ma25 <-0.24 ( no ma3 < ma39 ) - r 9173"
                         action = "sell"
                         
                       
@@ -9890,18 +9978,19 @@ class maddog:
             elif (    
                 ma2_last < ma4_last
                 and ma2_last < ma6_last
-                and deviation_crollo_24_aprile < -0.57
+                and deviation_crollo_24_aprile < -0.56
                 
                 and deviation_ma5_sotto_ma200 > -1.00
             ): 
                 
-                sell = "SELL condizione speciale DOPO IL CROLLO IMPROVVISO del 24 aprile 2022 - and deviation_ma5_sotto_ma200 > -1.00 - r 9401"
+                sell = "SELL condizione speciale DOPO IL CROLLO IMPROVVISO del 24 aprile 2022 - and deviation_ma5_sotto_ma200 > -1.00 - (-0.56) - r 9401"
                 action = "sell"
                         
                 # ho aggiunto anche questa vendita speciale dopo il 24 aprile -1%
                 # deviation_crollo_24_aprile = ma2_last / last_trade_price        
-                # -0.58 ha generato perdita -0.82 il 10 maggio 2020 cosi' ho ridotto a -0.575
-                # -0.575 ha generato perdita -1.12 il 10 maggio 2020 cosi' ho ridotto a -0.57
+                # -0.58 ha generato perdita -0.82 il 10 maggio 2022 cosi' ho ridotto a -0.575
+                # -0.575 ha generato perdita -1.12 il 10 maggio 2022 cosi' ho ridotto a -0.57
+                # -0.57 ha generato perdita -1.37 il 12 maggio 2022 cosi' ho ridotto a -0.56
                 # MA VA BENE !
                 
                 
@@ -10084,6 +10173,11 @@ class maddog:
                 # deviation = ma2_last / last_trade_price
                 # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
                 # max_hold_time_in_seconds = 300 = 5 min (con 6 min perdita di 0.90 %)
+                
+                
+                
+                
+                
                         
                         
              
@@ -10093,12 +10187,12 @@ class maddog:
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
                 and ma13_last < ma13_2_min_ago
-                and deviation < -0.355
+                and deviation < -0.43
                 and ma2_last < last_trade_price
                 and ma2_last < ma2_2_min_ago
             ):
 
-                sell = "SELL condizione speciale DOLCE ATTESA 270 sec con ma13 < and deviation < -0.345 - r 9520"
+                sell = "SELL condizione speciale DOLCE ATTESA 270 sec con ma13 < and deviation < -0.43 - r 9520"
                 action = "sell"
 
                 # il fattore tempo - la dolce attesa - solo con trend ribassista
@@ -10108,6 +10202,10 @@ class maddog:
                 # 4 feb 2022 con <-0.26 ha fatto -0.88% (dopo +4.29%)
                 # 7 feb 2022 con <-0.345 e 270 sec ha fatto -0.38% - aumenta a 0.355 ! - eventualmente ci pensa la condizione CROLLO IMPROVVISO CHE FUNZIONA !
                         
+            
+            
+            
+            
             
             
             
@@ -10173,6 +10271,7 @@ class maddog:
                 and deviation_trend_ma100 < 1.00
                 and deviation_pochi_maledetti > 0.25
                 and ma2_last > ma100_last
+                and ma2_last < ma2_2_min_ago
             ):    
                 sell = "SELL condizione speciale POCHI MALEDETTI E SUBITO QUANDO SALE FORTE 3-28 ( cerca di inibirlo ) con ma200> e con deviation > 0.70 - r 9599"
                 action = "sell"
@@ -10190,11 +10289,13 @@ class maddog:
                 and ma200_last > ma200_60_min_ago
                     
                 and deviation > 0.70
+                and deviation < 0.99
                 and deviation_trend_ma100 < 1.00
                 and deviation_pochi_maledetti > 0.25
                 and ma2_last > ma100_last
+                
             ):    
-                sell = "SELL condizione speciale POCHI MALEDETTI E SUBITO 3-25 QUANDO SALE PIANO quando ma200 > e con deviation > 0.70 - r 9616"
+                sell = "SELL condizione speciale POCHI MALEDETTI E SUBITO 3-25 QUANDO SALE PIANO quando ma200 > e con deviation > 0.70 and < 0.99 - r 9616"
                 action = "sell"
                     
                 # and ma2_last > ma100_last (altrimenti vende durante il crollo con la ma3-ma9)
@@ -10208,10 +10309,11 @@ class maddog:
             elif (
                 ma3_last < ma9_last 
                 and ma200_last < ma200_60_min_ago
-                and deviation > 0.70
+                and deviation > 1.00
                 and deviation < 2.50
                 and deviation_pochi_maledetti > 0.70
                 and ma2_last > ma100_last
+                and ma2_last < ma2_2_min_ago
             ):    
                 sell = "SELL condizione speciale POCHI MALEDETTI E SUBITO 3-9 quando ma200 < e con deviation > 0.70 and < 2.50 - dedicated to comparo meo - r 10188"
                 action = "sell"
@@ -10227,11 +10329,14 @@ class maddog:
                 and deviation > 2.51
                 and deviation_pochi_maledetti > 0.70
                 and ma2_last > ma100_last
+                and ma2_last < ma2_2_min_ago
             ):    
                 sell = "SELL condizione speciale POCHI MALEDETTI E SUBITO 3-8 quando ma200 < e con deviation > 2.51 - dedicated to comparo meo - r 10203"
                 action = "sell"
                     
                 # and ma2_last > ma100_last (altrimenti vende durante il crollo con la ma3-ma9)
+                
+                
                 
                 
                 
