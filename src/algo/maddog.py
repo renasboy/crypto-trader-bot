@@ -4264,31 +4264,98 @@ class maddog:
                     
                     
                     
+                    
+                    
+                    
+                    
+                    
+                    
+                    ######################################################################################### doppio delta < 1 TREND CONTINUA AL RIALZO vendi cosi'
+                    
                     elif (
                         ma50_last > ma50_2_min_ago
+                        and rapporto_delta_1_delta_2 < 1
                         and ma5_last < ma30_last
                         and deviation_sell > 0.34 and deviation_sell < 0.56
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 (21-50 min) con ma50 > and 5-30 and deviation_sell 0.34 - 0.56 la prima FINTA ALLA MARADONA - r 4030"
+                        sell = "SELL 1 (21-50 min) con ma50 > and 5-30 and deviation_sell 0.34 - 0.56 la prima FINTA ALLA MARADONA - r 4029"
                         action = "sell"
                         
                         
-                    
+                        
+                    ###################################################################### doppio delta > 1 TREND COMINCIA A SCENDERE ! vendi con ma50 !
                     
                     elif (
                         ma50_last > ma50_2_min_ago
+                        and rapporto_delta_1_delta_2 > 1
+                        and ma3_last < ma50_last
+                        and deviation_sell > 0.34 and deviation_sell < 0.56
+                        and ma2_last < ma2_2_min_ago
+                        
+                    ):
+                        sell = "SELL 1 (21-50 min) con ma50 > and 3-50 and deviation_sell 0.34 - 0.56 la prima FINTA ALLA MARADONA - r 4030"
+                        action = "sell"
+                        
+                        
+                        
+                        ###########################################################################################################
+                        
+                        
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    ############################################################################## doppio delta < 1 TREND CONTINUA AL RIALZO vendi cosi'
+                    
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and rapporto_delta_1_delta_2 < 1
                         and ma5_last < ma22_last
                         and deviation_sell > 0.57 and deviation_sell < 0.90
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 (21-50 min) con ma50 > and 5-22 (era 4-15) and deviation_sell 0.51 - 0.90 ELASTICO ALLA RONALDO - r 4043"
+                        sell = "SELL 1 (21-50 min) con ma50 > and 5-22 (era 4-15) and deviation_sell 0.51 - 0.90 ELASTICO ALLA RONALDO - r 4042"
                         action = "sell"
                         
                         # dopo 26 minuti non c'e' piu' quello scatto in avanti - dribbling- che si verifica nei primi minuti
                         # deviation_sell = ma3_last/last_trade_price
+                        
+                        
+                        
+                        
+                    ########################################################################## doppio delta > 1 TREND COMINCIA A SCENDERE ! vendi con ma50 !
+                    
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and rapporto_delta_1_delta_2 > 1
+                        and ma3_last < ma50_last
+                        and deviation_sell > 0.57 and deviation_sell < 0.90
+                        and ma2_last < ma2_2_min_ago
+                        
+                    ):
+                        sell = "SELL 1 (21-50 min) con ma50 > and 3-50 (era 4-15) and deviation_sell 0.51 - 0.90 ELASTICO ALLA RONALDO - r 4043"
+                        action = "sell"
+                        
+                        # dopo 26 minuti non c'e' piu' quello scatto in avanti - dribbling- che si verifica nei primi minuti
+                        # deviation_sell = ma3_last/last_trade_price
+                        
+                        
+                        #######################################################################################################
+                        
+                        
+                        
                         
                  
 
@@ -4309,12 +4376,12 @@ class maddog:
                     
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and (ma4_prev > ma22_prev and ma4_last < ma22_last)
+                        and (ma4_prev > ma28_prev and ma4_last < ma28_last)
                         and deviation_sell > 1.21 and deviation_sell < 2.70
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 (21-50 min) con ma50 > and incrocio 4-22 and deviation_sell 1.21 - 2.70 (DOPPIO PASSO DI RONALDO)- r 4073"
+                        sell = "SELL 1 (21-50 min) con ma50 > and incrocio 4-28 and deviation_sell 1.21 - 2.70 (DOPPIO PASSO DI RONALDO)- r 4073"
                         action = "sell"
                         
                   
@@ -6094,11 +6161,11 @@ class maddog:
                         
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and (ma3_prev > ma30_prev and ma3_last < ma30_last)
+                        and (ma5_prev > ma30_prev and ma5_last < ma30_last)
                         and deviation_sell > 1.21 and deviation_sell < 2.70
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 2 (21-60 min) con ma50 > and incrocio 3-30 (!) SI PROPRIO COSI' ! 3-30 ! and deviation_sell 1.21 - 2.70 - r 5842"
+                        sell = "SELL 2 (21-60 min) con ma50 > and incrocio 5-30 (!) SI PROPRIO COSI' ! 3-30 ! and deviation_sell 1.21 - 2.70 - r 5842"
                         action = "sell"
                         
                         
@@ -8812,23 +8879,66 @@ class maddog:
                     
                     
                     
+                    
+                    
+                    
+                    
+                    
+                    #################################################################### and rapporto_delta_1_delta_2 < 1
+                    
                     elif (
                         ma50_last >= ma50_2_min_ago
+                        and rapporto_delta_1_delta_2 < 1
                         and ma5_last < ma25_last
                         and deviation_sell > 0.25 and deviation_sell < 0.56
                         and ma2_last < ma2_2_min_ago
                        
                     ):
-                        sell = "SELL 4-5-x (12-21 min) con ma50 > and 5-25 and deviation_sell 0.25-0.56 - FINTA ALLA MARADONA - r 8561"
+                        sell = "SELL 4-5-x (12-21 min) con ma50 > and 5-25 and deviation_sell 0.25-0.56 - FINTA ALLA MARADONA - r 8560"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
                         
-                    
+                        
+                        
+                        
+                        
+                        
+                    ###########################################################################
                     
                     
                     elif (
                         ma50_last >= ma50_2_min_ago
+                        and rapporto_delta_1_delta_2 > 1
+                        and ma3_last < ma50_last
+                        and deviation_sell > 0.25 and deviation_sell < 0.56
+                        and ma2_last < ma2_2_min_ago
+                       
+                    ):
+                        sell = "SELL 4-5-x (12-21 min) con ma50 > and 3-50 and deviation_sell 0.25-0.56 - FINTA ALLA MARADONA - r 8561"
+                        action = "sell"
+                        
+                        # deviation_sell = ma3_last/last_trade_price
+                        
+                        
+                        
+                        ###################################################################
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    
+                    ######################################################## and rapporto_delta_1_delta_2 < 1
+                    
+                    elif (
+                        ma50_last >= ma50_2_min_ago
+                        and rapporto_delta_1_delta_2 < 1
                         and ma4_last < ma20_last
                         and deviation_sell > 0.57 and deviation_sell < 0.90
                         and ma2_last < ma2_2_min_ago
@@ -8838,6 +8948,39 @@ class maddog:
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
+                        
+                        
+                        
+                        
+                        
+                        
+                    ##################################################################
+                    
+                    elif (
+                        ma50_last >= ma50_2_min_ago
+                        and rapporto_delta_1_delta_2 > 1
+                        and ma3_last < ma50_last
+                        and deviation_sell > 0.57 and deviation_sell < 0.90
+                        and ma2_last < ma2_2_min_ago
+                     
+                    ):
+                        sell = "SELL 4-5-x (12-21 min) con ma50 > and 3-50 and deviation_sell 0.57 - 0.90 - DRIBBLING ALLA RONALDO - r 8576"
+                        action = "sell"
+                        
+                        # deviation_sell = ma3_last/last_trade_price
+                        
+                        
+                        ###############################################################
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                         
                         
                     
@@ -8995,10 +9138,10 @@ class maddog:
                     elif (    
                         ma50_last > ma50_2_min_ago 
                         and ma2_last < ma2_2_min_ago 
-                        and deviation_ma25 < -0.29
+                        and deviation_ma25 < -0.30
                         and ma200_last > ma200_60_min_ago
                     ):
-                        sell = "SELL 4-5-x (21-60 min) con ma50 > and deviation_ma25 < -0.29 - r 8740"
+                        sell = "SELL 4-5-x (21-60 min) con ma50 > and deviation_ma25 < -0.30 - r 8740"
                         action = "sell"
                         
                        
@@ -9031,12 +9174,34 @@ class maddog:
                         # deviation_sell = ma3_last/last_trade_price
                         
                         
-                        
+                    #######################################################
+                    
+                    
                     # FINTA DI MARADONA
+                    
+                    ###################################################### and rapporto_delta_1_delta_2 < 1
                     
                     elif (
                         ma50_last >= ma50_2_min_ago
+                        and rapporto_delta_1_delta_2 < 1
                         and (ma5_prev > ma25_prev and ma5_last < ma25_last)
+                        and deviation_sell > 0.25 and deviation_sell < 0.56
+                        and ma2_last < ma2_2_min_ago
+                   
+                    ):
+                        sell = "SELL 4-5-x (21-60 min) con ma50 > and incrocio 5-25 and deviation_sell 0.25 - 0.56 FINTA DI MARADONA - r 8781"
+                        action = "sell"
+                        
+                        # deviation_sell = ma3_last/last_trade_price
+                        
+                        
+                        
+                    ##################################################################### and rapporto_delta_1_delta_2 > 1
+                    
+                    elif (
+                        ma50_last >= ma50_2_min_ago
+                        and rapporto_delta_1_delta_2 > 1
+                        and (ma3_prev > ma50_prev and ma3_last < ma50_last)
                         and deviation_sell > 0.25 and deviation_sell < 0.56
                         and ma2_last < ma2_2_min_ago
                    
@@ -9045,6 +9210,14 @@ class maddog:
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                         
                         
                         
@@ -9064,19 +9237,55 @@ class maddog:
                         
                         
                     
+                    
+                    
+                    
+                    
+                    
                     # FINTA ALLA RONALDO
+                    
+                    
+                    ######################################################################## and rapporto_delta_1_delta_2 < 1
                     
                     elif (
                         ma50_last > ma50_2_min_ago
+                        and rapporto_delta_1_delta_2 < 1
                         and ma3_last < ma28_last
                         and deviation_sell > 0.57 and deviation_sell < 0.90
                         and ma2_last < ma2_2_min_ago
                       
                     ):
-                        sell = "SELL 4-5-x (21-60 min) con ma50 > and 3-28 (no incrocio 3-15) and deviation_sell 0.57 - 0.90 FINTA ALLA RONALDO - r 8797"
+                        sell = "SELL 4-5-x (21-60 min) con ma50 > and 3-28 (no incrocio 3-15) and deviation_sell 0.57 - 0.90 FINTA ALLA RONALDO - r 8796"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
+                        
+                        
+                        
+                        
+                    ######################################################## and rapporto_delta_1_delta_2 > 1
+                    
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and rapporto_delta_1_delta_2 > 1
+                        and ma3_last < ma50_last
+                        and deviation_sell > 0.57 and deviation_sell < 0.90
+                        and ma2_last < ma2_2_min_ago
+                      
+                    ):
+                        sell = "SELL 4-5-x (21-60 min) con ma50 > and 3-50 (no incrocio 3-15) and deviation_sell 0.57 - 0.90 FINTA ALLA RONALDO - r 8797"
+                        action = "sell"
+                        
+                        # deviation_sell = ma3_last/last_trade_price
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                         
                       
                     
@@ -10002,7 +10211,7 @@ class maddog:
             elif (    
                 ma2_last < ma4_last
                 and ma2_last < ma6_last
-                and deviation_crollo_24_aprile < -0.56
+                and deviation_crollo_24_aprile < -0.55
                 
                 and deviation_ma5_sotto_ma200 > -1.00
             ): 
@@ -10015,6 +10224,7 @@ class maddog:
                 # -0.58 ha generato perdita -0.82 il 10 maggio 2022 cosi' ho ridotto a -0.575
                 # -0.575 ha generato perdita -1.12 il 10 maggio 2022 cosi' ho ridotto a -0.57
                 # -0.57 ha generato perdita -1.37 il 12 maggio 2022 cosi' ho ridotto a -0.56
+                # -0.56 ha generato perdita -1.19 il 13 maggio 2022 cosi' ho ridotto a -0.55
                 # MA VA BENE !
                 
                 
@@ -10027,7 +10237,7 @@ class maddog:
             elif (    
                 ma2_last < ma4_last
                 and ma2_last < ma6_last
-                and deviation_crollo_24_aprile < -0.60
+                and deviation_crollo_24_aprile < -0.59
                 
                 and deviation_ma5_sotto_ma200 < -1.00
             ): 
@@ -10037,8 +10247,10 @@ class maddog:
                         
                 # ho aggiunto anche questa vendita speciale dopo il 24 aprile -1%
                 # deviation_crollo_24_aprile = ma2_last / last_trade_price        
-                # -0.58 ha generato perdita -0.82 il 10 maggio 2020 cosi' ho ridotto a -0.575
-                # -0.575 ha generato perdita -1.12 il 10 maggio 2020 cosi' ho ridotto a -0.57
+                # -0.58 ha generato perdita -0.82 il 10 maggio 2022 cosi' ho ridotto a -0.575
+                # -0.575 ha generato perdita -1.12 il 10 maggio 2022 cosi' ho ridotto a -0.57
+                
+                # -0.60 ha generato perdita -0.84 il 13 maggio 2022 cosi' ho ridotto a -0.59
                 # MA VA BENE !
                 
                 
@@ -10133,13 +10345,13 @@ class maddog:
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
                 and ma2_last < last_trade_price
-                and deviation < -0.38
+                and deviation < -0.39
                 and ma100_last > ma100_30_min_ago
                 and ma13_last > ma13_2_min_ago
                 and ma2_last < ma2_2_min_ago
             ):
 
-                sell = "SELL condizione speciale DOLCE ATTESA con ma100 > e ma13 > and deviation < -0.38 - r 9448"
+                sell = "SELL condizione speciale DOLCE ATTESA con ma100 > e ma13 > and deviation < -0.39 - r 9448"
                 action = "sell"
                 
             
