@@ -907,9 +907,10 @@ class maddog:
                 
                 # ------------------------------------------------------------  BUY 1 con incrocio 11-69 and ma69_last >= ma69_2_min_ago  "MI PIACE!"
                 
+                
                 elif (
                     ma20_last > ma200_last
-                    and ma11_last > ma69_last
+                    and ma11_last > ma50_last
                     and ma69_last >= ma69_2_min_ago
                     and deviation_bellissima > 0.17
                     and price > price_2_min_ago
@@ -920,7 +921,30 @@ class maddog:
                     and deviation_ma13_sopra_ma25 > 0.06
                  
                 ):
-                    buy = "BUY 1 con ma20_last > ma200_last e con 11 > 69 e ma69> 2 min ago (!) r 913"
+                    buy = "BUY 1 con ma20_last > ma200_last e con 11 > 59 e ma69> 2 min ago (!) r 913"
+                    action = "buy"
+                    percentage = 50
+                    
+                    
+                # buy1 r913 anticipata e modificata    
+                elif (
+                    ma100_last > ma200_last
+                    and ma100_last > ma300_last
+                    and ma100_last > ma100_120_min_ago
+                    and rapporto_delta_1_delta_2 < 1
+                    
+                    and ma11_last > ma50_last
+                    
+                    and deviation_bellissima > 0.17
+                    and price > price_2_min_ago
+                    
+                    and ma3_last > ma3_3_min_ago
+                    and ma4_last > ma4_2_min_ago
+                    and deviation_ma3_sopra_ma7 > 0.05
+                    and deviation_ma13_sopra_ma25 > 0.06
+                 
+                ):
+                    buy = "BUY 1 r913 anticipata e modificata e con 11 > 50 r 914"
                     action = "buy"
                     percentage = 50
                     
