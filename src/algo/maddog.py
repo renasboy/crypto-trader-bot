@@ -761,7 +761,7 @@ class maddog:
                 # ------------------------------------------------------------ BUY 1 tempo ESTATE che considera il passare del TEMPO  CON ma30 > 
                 
                 elif (     
-                    ma69_last > ma69_45_min_ago
+                    ma50_last > ma100_last
                     and ma100_last > ma200_last
                     
                     and ma30_last > ma30_40_min_ago
@@ -783,7 +783,7 @@ class maddog:
                 # ------------------------------------------------------------ BUY 1 tempo PRIMAVERA che considera il passare del tempo con ma30 < 
                 
                 elif (     
-                    ma69_last > ma69_45_min_ago
+                    ma50_last > ma100_last
                     and ma100_last > ma200_last
                     
                     and ma30_last < ma30_40_min_ago
@@ -803,15 +803,15 @@ class maddog:
                 
                     
                     
-                # --------------------------------------------------- BUY 1 tempo AUTUNNO che considera il passare del tempo con ma30 > MA 100 > 200
+                # --------------------------------------------------- BUY 1 tempo AUTUNNO che considera il passare del tempo con ma30 > MA 100 < 200
                 
                 elif (     
-                    ma69_last > ma69_45_min_ago
+                    ma50_last > ma100_last
                     and ma100_last < ma200_last
                     
                     and ma30_last > ma30_40_min_ago
                     
-                    and ma20_last > ma200_last
+                    and ma11_last > ma125_last
                     and deviation_ma5_sopra_ma28 > 0.15
                     and deviation_bellissima > 0.06
                     and ma20_last > ma20_2_min_ago
@@ -826,15 +826,15 @@ class maddog:
               
                 
                 
-                # ------------------------------------------------------------ BUY 1 tempo INVERNO che considera il passare del tempo con ma30 < MA 100 > 200
+                # ------------------------------------------------------------ BUY 1 tempo INVERNO che considera il passare del tempo con ma30 < MA 100 < 200
                 
                 elif (     
-                    ma69_last > ma69_45_min_ago
+                    ma50_last > ma100_last
                     and ma100_last < ma200_last
                     
                     and ma30_last < ma30_40_min_ago
                     
-                    and ma20_last > ma200_last
+                    and ma11_last > ma125_last
                     and deviation_ma5_sopra_ma28 > 0.175
                     and deviation_bellissima > 0.06
                     and ma2_last > ma20_last
@@ -1582,7 +1582,7 @@ class maddog:
                     deviation_buy_crollo_1 < -0.29
                     and deviation_buy_crollo_1 > -0.59
                     and deviation_correzione > 0.10
-                    
+                    and deviation_ma5_sopra_ma28 > 0.07
                     and ma200_last < ma300_last
                     and ma20_last < ma100_last
                     and ma100_last < ma100_10_min_ago
@@ -1600,7 +1600,7 @@ class maddog:
                     # and delta_2 > 0.69
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     # deviation_correzione = ma3_last / ma25_last
-                    
+                    # MA DEVE AVERE UN PO' DI FORZA 5-28 > 0.07 !
                     # compare prega per me !
                     
                     
@@ -4290,6 +4290,7 @@ class maddog:
                     elif (
                         ma50_last > ma50_2_min_ago
                         and rapporto_delta_1_delta_2 > 1
+                        and deviation_ma100_sopra_ma200 > -0.10
                         and ma3_last < ma50_last
                         and deviation_sell > 0.34 and deviation_sell < 0.56
                         and ma2_last < ma2_2_min_ago
@@ -4298,7 +4299,7 @@ class maddog:
                         sell = "SELL 1 (21-50 min) con ma50 > and 3-50 and deviation_sell 0.34 - 0.56 la prima FINTA ALLA MARADONA - r 4030"
                         action = "sell"
                         
-                        
+                        # 100 deve stare sopra 200 cosi' non vende con ma 50 durante il crollo o un forte ribasso !
                         
                         ###########################################################################################################
                         
@@ -4340,6 +4341,7 @@ class maddog:
                     elif (
                         ma50_last > ma50_2_min_ago
                         and rapporto_delta_1_delta_2 > 1
+                        and deviation_ma100_sopra_ma200 > -0.10
                         and ma3_last < ma50_last
                         and deviation_sell > 0.57 and deviation_sell < 0.90
                         and ma2_last < ma2_2_min_ago
@@ -4350,7 +4352,7 @@ class maddog:
                         
                         # dopo 26 minuti non c'e' piu' quello scatto in avanti - dribbling- che si verifica nei primi minuti
                         # deviation_sell = ma3_last/last_trade_price
-                        
+                        # 100 deve stare sopra 200 per non vendere con ma50 durante il crollo o un forte ribasso
                         
                         #######################################################################################################
                         
@@ -4361,12 +4363,12 @@ class maddog:
 
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and (ma4_prev > ma16_prev and ma4_last < ma16_last)
+                        and (ma3_prev > ma16_prev and ma3_last < ma16_last)
                         and deviation_sell > 0.91 and deviation_sell < 1.20
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 (21-50 min) con ma50 > and incrocio 4-16 and deviation_sell 0.91 - 1.20 (DOPPIA FINTA DI RONALDO) - r 4058"
+                        sell = "SELL 1 (21-50 min) con ma50 > and incrocio 3-16 and deviation_sell 0.91 - 1.20 (DOPPIA FINTA DI RONALDO) - r 4058"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
@@ -8954,21 +8956,22 @@ class maddog:
                         
                         
                         
-                    ##################################################################
+                    ################################################################## and rapporto_delta_1_delta_2 > 1 TRAMONTO
                     
                     elif (
                         ma50_last >= ma50_2_min_ago
                         and rapporto_delta_1_delta_2 > 1
+                        and deviation_ma100_sopra_ma200 > -0.10
                         and ma3_last < ma50_last
                         and deviation_sell > 0.57 and deviation_sell < 0.90
                         and ma2_last < ma2_2_min_ago
                      
                     ):
-                        sell = "SELL 4-5-x (12-21 min) con ma50 > and 3-50 and deviation_sell 0.57 - 0.90 - DRIBBLING ALLA RONALDO - r 8576"
+                        sell = "SELL 4-5-x (12-21 min) con ma50 > and 3-50 and deviation_sell 0.57 - 0.90 - DRIBBLING ALLA RONALDO AL TRAMONTO - r 8576"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
-                        
+                        # 100 DEVE STARE SOPRA 200 per non vendere durante il crollo con ma50
                         
                         ###############################################################
                         
@@ -9196,21 +9199,22 @@ class maddog:
                         
                         
                         
-                    ##################################################################### and rapporto_delta_1_delta_2 > 1
+                    ##################################################################### and rapporto_delta_1_delta_2 > 1 tramonto
                     
                     elif (
                         ma50_last >= ma50_2_min_ago
                         and rapporto_delta_1_delta_2 > 1
+                        and deviation_ma100_sopra_ma200 > -0.10
                         and (ma3_prev > ma50_prev and ma3_last < ma50_last)
                         and deviation_sell > 0.25 and deviation_sell < 0.56
                         and ma2_last < ma2_2_min_ago
                    
                     ):
-                        sell = "SELL 4-5-x (21-60 min) con ma50 > and incrocio 5-25 and deviation_sell 0.25 - 0.56 FINTA DI MARADONA - r 8782"
+                        sell = "SELL 4-5-x (21-60 min) con ma50 > and incrocio 5-25 and deviation_sell 0.25 - 0.56 FINTA DI MARADONA tramonto - r 8782"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
-                        
+                        # 100 deve stare sopra 200 per non vendere con ma50 durante il crollo.
                         
                         
                         
@@ -9263,21 +9267,26 @@ class maddog:
                         
                         
                         
-                    ######################################################## and rapporto_delta_1_delta_2 > 1
+                    ######################################################## and rapporto_delta_1_delta_2 > 1 tramonto
                     
                     elif (
                         ma50_last > ma50_2_min_ago
                         and rapporto_delta_1_delta_2 > 1
+                        and deviation_ma100_sopra_ma200 > -0.10
                         and ma3_last < ma50_last
                         and deviation_sell > 0.57 and deviation_sell < 0.90
                         and ma2_last < ma2_2_min_ago
                       
                     ):
-                        sell = "SELL 4-5-x (21-60 min) con ma50 > and 3-50 (no incrocio 3-15) and deviation_sell 0.57 - 0.90 FINTA ALLA RONALDO - r 8797"
+                        sell = "SELL 4-5-x (21-60 min) con ma50 > and 3-50 (no incrocio 3-15) and deviation_sell 0.57 - 0.90 FINTA ALLA RONALDO tramonto - r 8797"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
+                        # 100 dee stare sopra 200 per non vendere con ma50 durante il crollo o un grande ribasso
                         
+                        
+                        
+                        ###################################################################################################
                         
                         
                         
