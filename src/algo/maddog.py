@@ -9346,12 +9346,12 @@ class maddog:
                     # tra MARADONA e RONALDO ho messo POCHI MALEDETTI E SUBITO se alla fine del trend da' una botta rialzista
                     
                     elif (
-                        ma3_last < ma9_last
+                        ma3_last < ma13_last
                         and ma200_last > ma200_60_min_ago
                         and deviation > 0.68
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 3-4-x (21-60 min) SOLO QUI tra MARADONA e RONALDO ho messo POCHI MALEDETTI E SUBITO solo quando ma200 > - riga 8931"
+                        sell = "SELL 3-4-x (21-60 min) SOLO QUI tra MARADONA e RONALDO ho messo POCHI MALEDETTI E SUBITO 11-13 ( solo quando ma200 > ) - riga 8931"
                         action = "sell"
                         
                         
