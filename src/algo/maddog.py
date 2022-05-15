@@ -49,6 +49,7 @@ class maddog:
         ma125_last, ma125_prev = self.algo_helper.ma_last_prev(125)
         ma150_last, ma150_prev = self.algo_helper.ma_last_prev(150)
         ma200_last, ma200_prev = self.algo_helper.ma_last_prev(200)
+        ma285_last, ma285_prev = self.algo_helper.ma_last_prev(285)
         ma300_last, ma300_prev = self.algo_helper.ma_last_prev(300)
 
         
@@ -230,7 +231,7 @@ class maddog:
         
         # formula rapporto_delta_1_delta_2
         
-        rapporto_delta_1_delta_2 = (delta_1 / delta_2 - 1) * 100 if delta_2 else 0
+        rapporto_delta_1_delta_2 = (delta_1 / delta_2) if delta_2 else 0
         self.algo_helper.info("rapporto_delta_1_delta_2: {}".format(rapporto_delta_1_delta_2))
         
        
@@ -248,7 +249,7 @@ class maddog:
         
         # formula rapporto_delta_1_delta_2_69_39
         
-        rapporto_delta_1_delta_2_69_39 = (delta_1_69_39 / delta_2_69_39 - 1) * 100 if delta_2_69_39 else 0
+        rapporto_delta_1_delta_2_69_39 = (delta_1_69_39 / delta_2_69_39) if delta_2_69_39 else 0
         self.algo_helper.info("rapporto_delta_1_delta_2_69_39: {}".format(rapporto_delta_1_delta_2_69_39))
         
        
@@ -1433,7 +1434,9 @@ class maddog:
                     and ma5_last > ma34_last
                     and deviation_ma5_sopra_ma28 > 0.175
                     and deviation_ma5_sotto_ma200 < -0.85
+                    
                     and rapporto_delta_1_delta_2_69_39 < 1
+                    
                     and deviation_ma8_sotto_ma100 < -0.50
                     and deviation_buy_crollo_1 > -0.59
                 ): 
@@ -1473,9 +1476,9 @@ class maddog:
                 
                 elif (
                     deviation_ma3 < -1.30
-                    
-                    
+                  
                     and rapporto_delta_1_delta_2 < 1
+                    
                     and ma3_last > ma20_last
                 ):
                 
@@ -1953,13 +1956,21 @@ class maddog:
                     action = "buy"
                     percentage = 30
                     
+                    
+                    
+                    
+                    
+                    
+                    
+                    
               
                 
                 
                 # BUY 1 forever young 1 PIU' PRUDENTE se ma200 > e se ma200 > ma300 - che si preoccupa degli effetti laterali
-             
+                
                 elif (  
                     ma200_last > ma300_last
+                    and ma78_last > ma100_last
                     and deviation_ma100_laterale > 0.18
                     and ma200_last > ma200_15_min_ago
                     and deviation_ma5_sopra_ma28 > 0.10
@@ -1975,6 +1986,43 @@ class maddog:
                     percentage = 30
                     
                     # la troppa prudenza qualche volta genera perdite
+                    
+                    
+                    
+                    
+                    
+                # BUY 1 forever young 1 PIU' PRUDENTE se ma 200 > e se ma200 > ma300 - che si preoccupa degli effetti laterali
+                
+                elif (  
+                    ma200_last > ma300_last
+                    and ma78_last < ma100_last
+                    and deviation_ma100_laterale > 0.15
+                    and ma11_last > ma200_last
+                    and ma200_last > ma200_15_min_ago
+                    and deviation_ma5_sopra_ma28 > 0.10
+                    
+                    and ma3_last > ma11_last
+                    and ma5_last > ma200_last
+                    and ma10_last > ma10_2_min_ago
+                    and ma2_last > ma2_2_min_ago
+                ):
+
+                    buy = "BUY 1 forever young 1 PIU' PRUDENTE se ma 200 > e se ma200 > ma300 - che si preoccupa degli effetti laterali - r 1853"
+                    action = "buy"
+                    percentage = 30
+                    
+                    # la troppa prudenza qualche volta genera perdite
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                
                 ################################################################################################
                 
@@ -2739,11 +2787,21 @@ class maddog:
                     # deviation_buy3 = ma4_last/ma30_last
                     # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
                     
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                # BUY 3A con ma69 > MA ma200 scende da 60 min ! MA CON ma300>60 min ago
                 
-               
                 elif (
                     ma69_last >= ma69_2_min_ago
                     and ma200_last < ma200_60_min_ago
+                    and ma300_last < ma300_60_min_ago
+                    
                     and deviation_bellissima > 0.35
                     and deviation > -0.30
                     
@@ -2758,9 +2816,52 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                 ):      
               
-                    buy = "BUY 3A con ma69 > MA ma200 scende da 60 min ! - r 2564"
+                    buy = "BUY 3A con ma69 > MA ma200 scende da 60 min ! e CON ma300 < 60 min ago - r 2564"
                     action = "buy"
                     percentage = 50
+                    
+                    
+                    
+                    
+                #  BUY 3A con ma69 > MA ma200 scende da 60 min ! and ma300_last > ma300_60_min_ago
+                
+                elif (
+                    ma3_last > ma300_last
+                    and ma200_last < ma200_60_min_ago
+                    and ma300_last > ma300_60_min_ago
+                    
+                    and deviation_bellissima > 0.35
+                    and deviation > -0.30
+                    
+                    and deviation_buy3 > 0.12
+                    and deviation_ma4_sopra_ma30 > 0.12
+                    and ma3_last > ma13_last
+                    and deviation_ma7_sopra_ma40 > 0.08
+                    and ma4_last > ma9_last
+                    and ma7_last > ma25_last
+                    and deviation_buy_ma2_sopra_ma13 > 0.10
+                    and ma4_last > ma50_last
+                    and ma2_last > ma2_2_min_ago
+                ):      
+              
+                    buy = "BUY 3A con ma69 > MA ma200 scende da 60 min ! and ma300_last > ma300_60_min_ago - r 2565"
+                    action = "buy"
+                    percentage = 50
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     
              
                 elif (
@@ -4270,11 +4371,12 @@ class maddog:
                     
                     
                     
-                    ######################################################################################### doppio delta < 1 TREND CONTINUA AL RIALZO vendi cosi'
+                    ######################################################################################### doppio delta > 1 TREND CONTINUA AL RIALZO vendi cosi'
                     
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and rapporto_delta_1_delta_2 < 1
+                        
+                        and rapporto_delta_1_delta_2 > 1
                         and ma5_last < ma30_last
                         and deviation_sell > 0.34 and deviation_sell < 0.56
                         and ma2_last < ma2_2_min_ago
@@ -4285,11 +4387,11 @@ class maddog:
                         
                         
                         
-                    ###################################################################### doppio delta > 1 TREND COMINCIA A SCENDERE ! vendi con ma50 !
+                    ###################################################################### doppio delta < 1 TREND COMINCIA A SCENDERE ! vendi con ma50 !
                     
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and rapporto_delta_1_delta_2 > 1
+                        and rapporto_delta_1_delta_2 < 1
                         and deviation_ma100_sopra_ma200 > -0.10
                         and ma3_last < ma50_last
                         and deviation_sell > 0.34 and deviation_sell < 0.56
@@ -4317,11 +4419,13 @@ class maddog:
                     
                     
                     
-                    ############################################################################## doppio delta < 1 TREND CONTINUA AL RIALZO vendi cosi'
+                    ############################################################################## doppio delta > 1 TREND CONTINUA AL RIALZO vendi cosi'
                     
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and rapporto_delta_1_delta_2 < 1
+                        
+                        and rapporto_delta_1_delta_2 > 1
+                        
                         and ma5_last < ma22_last
                         and deviation_sell > 0.57 and deviation_sell < 0.90
                         and ma2_last < ma2_2_min_ago
@@ -4336,11 +4440,13 @@ class maddog:
                         
                         
                         
-                    ########################################################################## doppio delta > 1 TREND COMINCIA A SCENDERE ! vendi con ma50 !
+                    ########################################################################## doppio delta < 1 TREND COMINCIA A SCENDERE ! vendi con ma50 !
                     
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and rapporto_delta_1_delta_2 > 1
+                        
+                        and rapporto_delta_1_delta_2 < 1
+                        
                         and deviation_ma100_sopra_ma200 > -0.10
                         and ma3_last < ma50_last
                         and deviation_sell > 0.57 and deviation_sell < 0.90
@@ -6201,10 +6307,10 @@ class maddog:
                     elif (    
                         ma50_last < ma50_2_min_ago 
                         and ma2_last < ma2_2_min_ago 
-                        and deviation_sell < -0.30
+                        and deviation_sell < -0.32
                         and ma200_last < ma200_60_min_ago
                     ):
-                        sell = "sessione 2 SELL (21-60 min) con ma50 < and deviation_sell < -0.30 - r 5879"
+                        sell = "sessione 2 SELL (21-60 min) con ma50 < and deviation_sell < -0.32 - r 5879"
                         action = "sell"
                         
                         
@@ -7716,10 +7822,10 @@ class maddog:
                     if (    
                         ma50_last > ma50_2_min_ago 
                         and ma2_last < ma2_2_min_ago 
-                        and deviation_ma25 < -0.25
+                        and deviation_ma25 < -0.27
                         and ma200_last < ma200_60_min_ago
                     ):
-                        sell = "SELL 3 (21-60 min) con ma50 > and deviation_ma25 < -0.25 - r 7392"
+                        sell = "SELL 3 (21-60 min) con ma50 > and deviation_ma25 < -0.27 - r 7392"
                         action = "sell"
                         
                     
@@ -8886,11 +8992,11 @@ class maddog:
                     
                     
                     
-                    #################################################################### and rapporto_delta_1_delta_2 < 1
+                    #################################################################### and rapporto_delta_1_delta_2 > 1
                     
                     elif (
                         ma50_last >= ma50_2_min_ago
-                        and rapporto_delta_1_delta_2 < 1
+                        and rapporto_delta_1_delta_2 > 1
                         and ma5_last < ma25_last
                         and deviation_sell > 0.25 and deviation_sell < 0.56
                         and ma2_last < ma2_2_min_ago
@@ -8911,7 +9017,9 @@ class maddog:
                     
                     elif (
                         ma50_last >= ma50_2_min_ago
-                        and rapporto_delta_1_delta_2 > 1
+                        
+                        and rapporto_delta_1_delta_2 < 1
+                        
                         and ma3_last < ma50_last
                         and deviation_sell > 0.25 and deviation_sell < 0.56
                         and ma2_last < ma2_2_min_ago
@@ -8936,11 +9044,13 @@ class maddog:
                         
                         
                     
-                    ######################################################## and rapporto_delta_1_delta_2 < 1
+                    ######################################################## and rapporto_delta_1_delta_2 > 1
                     
                     elif (
                         ma50_last >= ma50_2_min_ago
-                        and rapporto_delta_1_delta_2 < 1
+                        
+                        and rapporto_delta_1_delta_2 > 1
+                        
                         and ma4_last < ma20_last
                         and deviation_sell > 0.57 and deviation_sell < 0.90
                         and ma2_last < ma2_2_min_ago
@@ -8956,11 +9066,13 @@ class maddog:
                         
                         
                         
-                    ################################################################## and rapporto_delta_1_delta_2 > 1 TRAMONTO
+                    ################################################################## and rapporto_delta_1_delta_2 < 1 TRAMONTO
                     
                     elif (
                         ma50_last >= ma50_2_min_ago
-                        and rapporto_delta_1_delta_2 > 1
+                        
+                        and rapporto_delta_1_delta_2 < 1
+                        
                         and deviation_ma100_sopra_ma200 > -0.10
                         and ma3_last < ma50_last
                         and deviation_sell > 0.57 and deviation_sell < 0.90
@@ -9182,11 +9294,13 @@ class maddog:
                     
                     # FINTA DI MARADONA
                     
-                    ###################################################### and rapporto_delta_1_delta_2 < 1
+                    ###################################################### and rapporto_delta_1_delta_2 > 1
                     
                     elif (
                         ma50_last >= ma50_2_min_ago
-                        and rapporto_delta_1_delta_2 < 1
+                        
+                        and rapporto_delta_1_delta_2 > 1
+                        
                         and (ma5_prev > ma25_prev and ma5_last < ma25_last)
                         and deviation_sell > 0.25 and deviation_sell < 0.56
                         and ma2_last < ma2_2_min_ago
@@ -9199,11 +9313,13 @@ class maddog:
                         
                         
                         
-                    ##################################################################### and rapporto_delta_1_delta_2 > 1 tramonto
+                    ##################################################################### and rapporto_delta_1_delta_2 < 1 tramonto
                     
                     elif (
                         ma50_last >= ma50_2_min_ago
-                        and rapporto_delta_1_delta_2 > 1
+                        
+                        and rapporto_delta_1_delta_2 < 1
+                        
                         and deviation_ma100_sopra_ma200 > -0.10
                         and (ma3_prev > ma50_prev and ma3_last < ma50_last)
                         and deviation_sell > 0.25 and deviation_sell < 0.56
@@ -9249,11 +9365,13 @@ class maddog:
                     # FINTA ALLA RONALDO
                     
                     
-                    ######################################################################## and rapporto_delta_1_delta_2 < 1
+                    ######################################################################## and rapporto_delta_1_delta_2 > 1
                     
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and rapporto_delta_1_delta_2 < 1
+                        
+                        and rapporto_delta_1_delta_2 > 1
+                        
                         and ma3_last < ma28_last
                         and deviation_sell > 0.57 and deviation_sell < 0.90
                         and ma2_last < ma2_2_min_ago
@@ -9267,11 +9385,13 @@ class maddog:
                         
                         
                         
-                    ######################################################## and rapporto_delta_1_delta_2 > 1 tramonto
+                    ######################################################## and rapporto_delta_1_delta_2 < 1 tramonto
                     
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and rapporto_delta_1_delta_2 > 1
+                        
+                        and rapporto_delta_1_delta_2 < 1
+                        
                         and deviation_ma100_sopra_ma200 > -0.10
                         and ma3_last < ma50_last
                         and deviation_sell > 0.57 and deviation_sell < 0.90
