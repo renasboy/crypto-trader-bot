@@ -809,18 +809,19 @@ class maddog:
                 elif (     
                     ma50_last > ma100_last
                     and ma100_last < ma200_last
-                    
+                    and deviation_ma5_sopra_ma28 > 0.17
                     and ma30_last > ma30_40_min_ago
                     
                     and ma11_last > ma125_last
-                    and deviation_ma5_sopra_ma28 > 0.15
+                    
+                    and deviation_ma5_sopra_ma28 > 0.17
                     and deviation_bellissima > 0.06
                     and ma20_last > ma20_2_min_ago
                     and ma5_last > ma5_2_min_ago
                     and ma2_last > ma20_last
                     and ma2_last > ma2_2_min_ago
                 ):    
-                    buy = "BUY 1 tempo AUTUNNO che considera il passare del tempo con deviation_bellissima > 0.06 - r 812"
+                    buy = "BUY 1 tempo AUTUNNO che considera il passare del tempo con 5-28 > 0.17 - r 812"
                     action = "buy"
                     percentage = 50
                     
@@ -4114,11 +4115,11 @@ class maddog:
                     elif (
                         ma50_last >= ma50_2_min_ago
                         and (ma3_prev > ma100_prev and ma3_last < ma100_last)
-                        and deviation_sell < -0.36
+                        and deviation_sell < -0.39
                         and ma2_last < ma2_2_min_ago
                       
                     ):
-                        sell = "SELL 1 (12-21 min) con ma50 > and incrocio 3-100 cuscino di sant' antonio and deviation_sell < 0.36 - r 3776"
+                        sell = "SELL 1 (12-21 min) con ma50 > and incrocio 3-100 cuscino di sant' antonio and deviation_sell < 0.39 - r 3776"
                         action = "sell"
                         
                         # viva sant' antonio !
@@ -4638,16 +4639,46 @@ class maddog:
                         
                     
                     
+                    
+                    
+                    
+                    
+                    # RAFFORZATIVO CON 300 > 300 120 AGO (TREND RIALZO) OPPURE CON 300< 300 120 MIN AGO (CROLLO)
+                    
                     # SELL 1 maestro parte 2 (21-50 min) con ma50 < and deviation_sell < -0.33
                     
+                    
+                    
                     elif (        
-                        ma50_last < ma50_2_min_ago 
+                        ma50_last < ma50_2_min_ago
+                        and ma300_last > ma300_120_min_ago
                         and ma2_last < ma2_2_min_ago 
                         and deviation_sell < -0.33
                         and deviation_ma50_sotto_ma300 < 0.50
                     ):
-                        sell = "SELL 1 maestro parte 2 (21-50 min) con ma50 < and deviation_sell < -0.33 - r 4215"
+                        sell = "SELL 1 maestro parte 2 (21-50 min) con ma50 < and deviation_sell < -0.33 - r 4214"
                         action = "sell"
+                        
+                        
+                        
+                        
+                    # ECCO inequivocabilmente il crollo !    
+                    
+                    elif (        
+                        ma50_last < ma50_2_min_ago
+                        and ma300_last < ma300_120_min_ago
+                        and ma2_last < ma2_2_min_ago 
+                        and deviation_sell < -0.36
+                        and deviation_ma50_sotto_ma300 < 0.50
+                    ):
+                        sell = "SELL 1 maestro parte 2 (21-50 min) con ma50 < and deviation_sell < -0.36 - r 4215"
+                        action = "sell"
+                        
+                        # da 0.33 a 0.36 perche' durante il crollo ferrari non devi guardare i centesimi.
+                        
+                        
+                        
+                        
                 
                  
                     
@@ -6293,8 +6324,10 @@ class maddog:
                     #################################################################################################### 2 righe del compa GIA' CON TOLLERANZA
                     
                     
+                    
                     elif (        
-                        ma50_last < ma50_2_min_ago 
+                        ma50_last < ma50_2_min_ago
+                        and ma300_last > ma300_120_min_ago
                         and ma2_last < ma2_2_min_ago 
                         and deviation_ma39 < -0.27
                         and ma200_last < ma200_60_min_ago
@@ -6302,7 +6335,27 @@ class maddog:
                         sell = "sessione 2 SELL (21-60 min) con ma50 < and deviation_ma39 < -0.27 - r 5868"
                         action = "sell"
                         
+                        
+                        
+                    # ecco inequivocabilmente il crollo !
+                    
+                    elif (        
+                        ma50_last < ma50_2_min_ago
+                        and ma300_last < ma300_120_min_ago
+                        and ma2_last < ma2_2_min_ago 
+                        and deviation_ma39 < -0.31
+                        and ma200_last < ma200_60_min_ago
+                    ):
+                        sell = "sessione 2 SELL (21-60 min) con ma50 < and deviation_ma39 < -0.31 - r 5868"
+                        action = "sell"
+                        
+                        # durante il crollo non devi pensare ai centesimi !
+                        
                   
+                    
+                    
+                    
+                    
                     
                     elif (    
                         ma50_last < ma50_2_min_ago 
