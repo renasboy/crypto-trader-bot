@@ -335,10 +335,19 @@ class maddog:
         self.algo_helper.info("deviation_ma100_laterale: {}".format(deviation_ma100_laterale))
         
         
+        
         # formula DEVIATION_ma8_sotto_ma100
         
         deviation_ma8_sotto_ma100 = (ma8_last / ma100_last - 1) * 100 if ma100_last else 0
         self.algo_helper.info("deviation_ma8_sotto_ma100: {}".format(deviation_ma8_sotto_ma100))
+        # formula DEVIATION_ma8_sotto_ma100
+        
+        
+        # formula DEVIATION_ma8_sotto_ma300
+        
+        deviation_ma8_sotto_ma300 = (ma8_last / ma300_last - 1) * 100 if ma300_last else 0
+        self.algo_helper.info("deviation_ma8_sotto_ma300: {}".format(deviation_ma8_sotto_ma300))
+        
         
         
         # formula DEVIATION_ma50_sotto_ma300
@@ -1991,7 +2000,6 @@ class maddog:
                     
                     
                     
-                    
                 # BUY 1 SUL SUPPORTO 300 !
                 
                 elif (    
@@ -2007,6 +2015,26 @@ class maddog:
                 
                 ):
                     buy = "BUY 1 SUL SUPPORTO 300 ! - r 1803"
+                    action = "buy"
+                    percentage = 30
+                    
+                    # madonna compa !
+                    
+                    
+                    
+                    
+                # BUY 1 CHE MANCAVA ! 8-50 CON 100 < AND 200 < AND 300 <
+                
+                elif (    
+                    ma11_last > ma50_last
+                    and deviation_ma8_sotto_ma300 < 0.40
+                    
+                    and ma100_last < ma100_120_min_ago
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_120_min_ago
+            
+                ):
+                    buy = "BUY 1 CHE MANCAVA ! 8-50 CON 100 < AND 200 < AND 300 < - r 2027"
                     action = "buy"
                     percentage = 30
                     
