@@ -4631,11 +4631,11 @@ class maddog:
                         ma50_last > ma50_2_min_ago
                         and ma100_last > ma100_60_min_ago
                         and ma5_last < ma100_last
-                        and deviation_sell < -0.20
+                        and deviation_sell < -0.24
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 (21-50 min) con ma50 > and 5-100 and deviation_sell < -0.20 CUSCINO DI SANT' ANTONIO se ma100 > - r 4112"
+                        sell = "SELL 1 (21-50 min) con ma50 > and 5-100 and deviation_sell < -0.24 CUSCINO DI SANT' ANTONIO se ma100 > - r 4112"
                         action = "sell"
                         
                     
@@ -6260,30 +6260,81 @@ class maddog:
                 ):
                     
                 
-                    ######################################################################################################## 2 righe compa RADDOPPIATE !
+                    ######################################################################################################## righe compa RADDOPPIATE !
+                    
+                    # situazione in miglioramento
                     
                     if (        
                         ma50_last > ma50_2_min_ago 
                         and ma2_last < ma2_2_min_ago 
-                        and deviation_ma39 < -0.25
+                        and deviation_ma39 < -0.255
                         and ma200_last < ma200_60_min_ago
+                        and ma100_last > ma200_last
                     ):
-                        sell = "SELL 2 (21-60 min) con ma50 > and deviation_ma39 < -0.26 - r 5700"
+                        sell = "SELL 2 (21-60 min) con ma50 > and deviation_ma39 < -0.255 situazione in miglioramento - r 5700"
                         action = "sell"
                         
                         
                         
-                
+                    # situazione post crollo
+                    
+                    elif (        
+                        ma50_last > ma50_2_min_ago 
+                        and ma2_last < ma2_2_min_ago 
+                        and deviation_ma39 < -0.26
+                        and ma200_last < ma200_60_min_ago
+                        and ma100_last < ma200_last
+                    ):
+                        sell = "SELL 2 (21-60 min) con ma50 > and deviation_ma39 < -0.26 situazione post crollo - r 5701"
+                        action = "sell"
+                        
+                        
+                        
+                        
+                        
+                        
+                    # situazione in miglioramento
+                    
                     elif (    
                         ma50_last > ma50_2_min_ago 
                         and ma2_last < ma2_2_min_ago 
                         and deviation_sell < -0.28 
                         and ma3_last < ma50_last
                         and ma200_last < ma200_60_min_ago
+                        and ma100_last > ma200_last
                     ):
-                        sell = "SELL 2 (21-60 min) con ma50 > and (deviation_sell < -0.28 and ma3_last < ma50_last) - r 5713"
+                        sell = "SELL 2 (21-60 min) con ma50 > and (deviation_sell < -0.28 and ma3_last < ma50_last) situazione in miglioramento - r 5702"
                         action = "sell"
                         
+                        
+                        
+                    # situazione post crollo
+                    
+                    elif (    
+                        ma50_last > ma50_2_min_ago 
+                        and ma2_last < ma2_2_min_ago 
+                        and deviation_sell < -0.28 
+                        and ma3_last < ma50_last
+                        and ma200_last < ma200_60_min_ago
+                        and ma100_last < ma200_last
+                    ):
+                        sell = "SELL 2 (21-60 min) con ma50 > and (deviation_sell < -0.28 and ma3_last < ma50_last) situazione post crollo - r 5703"
+                        action = "sell"
+                        
+                        
+                        
+                        #######################################################################################################################
+                        
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     
                     
                     
