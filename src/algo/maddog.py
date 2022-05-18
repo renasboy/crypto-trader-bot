@@ -2026,15 +2026,19 @@ class maddog:
                 # BUY 1 CHE MANCAVA ! 8-50 CON 100 < AND 200 < AND 300 <
                 
                 elif (    
-                    ma11_last > ma50_last
+                    ma8_last > ma50_last
                     and deviation_ma8_sotto_ma300 < 0.40
                     
                     and ma100_last < ma100_120_min_ago
                     and ma200_last < ma200_120_min_ago
                     and ma300_last < ma300_120_min_ago
+                    
+                    and deviation_ma5_sopra_ma28 > 0.10
+                    and ma2_last > ma2_2_min_ago
+                    
             
                 ):
-                    buy = "BUY 1 CHE MANCAVA ! 8-50 CON 100 < AND 200 < AND 300 < - r 2027"
+                    buy = "BUY 1 CHE MANCAVA ! 8-50 CON 100 < AND 200 < AND 300 < AND 5-28 > 0.10 - r 2027"
                     action = "buy"
                     percentage = 30
                     
@@ -4660,11 +4664,11 @@ class maddog:
                         and ma300_last < ma300_120_min_ago
                         
                         and ma5_last < ma100_last
-                        and deviation_sell < -0.20
+                        and deviation_sell < -0.24
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 (21-50 min) con ma50 > and 5-100 and deviation_sell < -0.20 CUSCINO DELLA MADONNA se ma100 < E DE SANTO RENATO 300 < - r 4211"
+                        sell = "SELL 1 (21-50 min) con ma50 > and 5-100 and deviation_sell < -0.24 CUSCINO DELLA MADONNA se ma100 < E DE SANTO RENATO 300 < - r 4671"
                         action = "sell"
                         
                         
