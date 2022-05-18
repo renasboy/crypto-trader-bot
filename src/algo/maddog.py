@@ -2026,8 +2026,8 @@ class maddog:
                 # BUY 1 CHE MANCAVA ! 8-50 CON 100 < AND 200 < AND 300 <
                 
                 elif (    
-                    ma8_last > ma50_last
-                    and deviation_ma8_sotto_ma300 < 0.40
+                    ma7_last > ma50_last
+                    and deviation_ma8_sotto_ma300 < -0.40
                     
                     and ma100_last < ma100_120_min_ago
                     and ma200_last < ma200_120_min_ago
@@ -2038,7 +2038,7 @@ class maddog:
                     
             
                 ):
-                    buy = "BUY 1 CHE MANCAVA ! 8-50 CON 100 < AND 200 < AND 300 < AND 5-28 > 0.10 - r 2027"
+                    buy = "BUY 1 CHE MANCAVA ! 7-50 CON 100 < AND 200 < AND 300 < AND 5-28 > 0.10 - r 2027"
                     action = "buy"
                     percentage = 30
                     
@@ -2106,14 +2106,14 @@ class maddog:
                 elif (  
                     ma200_last > ma300_last
                     and ma78_last < ma100_last
-                    and deviation_ma100_laterale > 0.15
+                    and deviation_ma100_laterale > 0.13
                     and ma11_last > ma200_last
                     and ma200_last > ma200_15_min_ago
                     and deviation_ma5_sopra_ma28 > 0.10
                     
                     and ma3_last > ma11_last
                     and ma5_last > ma200_last
-                    and ma10_last > ma10_2_min_ago
+                    
                     and ma2_last > ma2_2_min_ago
                 ):
 
