@@ -1517,7 +1517,7 @@ class maddog:
                 
                 
                 
-                # BUY 1 con ma200< e ma300< piccola CORREZIONE FIAT che NON E' un forte ribasso e NON E' un crollo !
+                # BUY 1 con ma200 < e ma300 < piccola CORREZIONE FIAT che NON E' un forte ribasso e NON E' un crollo !
                 
                 elif (
 
@@ -1743,7 +1743,7 @@ class maddog:
                     
                 #####################################################################################################################
              
-                # BUY DURANTE UN RIBASSO AUDI copiata da RCCR CHE E' ANDATA BENISSIMO CHE NON E' UN CROLLO ! (compare stammi vicino!)   
+                # BUY 1 DURANTE UN RIBASSO AUDI copiata da RCCR CHE E' ANDATA BENISSIMO CHE NON E' UN CROLLO ! (compare stammi vicino!)   
                 
                 elif (
                     
@@ -2023,22 +2023,23 @@ class maddog:
                     
                     
                     
-                # BUY 1 CHE MANCAVA ! 8-50 CON 100 < AND 200 < AND 300 <
+                # BUY 1 CHE MANCAVA ! con incrocio 11-50 AND 5-28 > 0.20 ( CON 100 < AND 200 < AND 300 < ) (!)
                 
-                elif (    
-                    ma7_last > ma50_last
+                elif (
+                    deviation_ma5_sopra_ma28 > 0.265
+                    and (ma11_last < ma50_last and ma11_last > ma50_last)
                     and deviation_ma8_sotto_ma300 < -0.30
                     
                     and ma100_last < ma100_120_min_ago
                     and ma200_last < ma200_120_min_ago
                     and ma300_last < ma300_120_min_ago
                     
-                    and deviation_ma5_sopra_ma28 > 0.10
+                    and deviation_ma5_sopra_ma28 > 0.20
                     and ma2_last > ma2_2_min_ago
                     
             
                 ):
-                    buy = "BUY 1 CHE MANCAVA ! 7-50 CON 100 < AND 200 < AND 300 < AND 5-28 > 0.10 - r 2027"
+                    buy = "BUY 1 CHE MANCAVA ! con incrocio 11-50 AND 5-28 > 0.265 (!) ( CON 100 < AND 200 < AND 300 < ) (!)  - r 2027"
                     action = "buy"
                     percentage = 30
                     
@@ -3344,11 +3345,16 @@ class maddog:
                     percentage = 50
                     
                     
-             
-                # BUY 4 con ma69 > and deviation_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali) IMPORTATA DA BUY 5    
+                
+                
+                
+                
+                # BUY 4 se 11 > 200 e con ma69 > and deviation_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali) IMPORTATA DA BUY 5
+                
                 
                 elif (
                     ma69_last >= ma69_2_min_ago
+                    and ma11_last > ma200_last
                     and deviation_bellissima > 0.12
                     and deviation_buy3 > 0.12
                     and deviation_ma7_sopra_ma40 > 0.09
@@ -3362,7 +3368,34 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
              
                 ):
-                    buy = "BUY 4 con ma69 > and deviation_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali) IMPORTATA DA BUY 5 RCCR - riga 2912"
+                    buy = "BUY 4 se 11 > 200 e con ma69 > and deviation_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali) DA BUY 5 RCCR - riga 2912"
+                    action = "buy"
+                    percentage = 50
+                    
+                    
+                    
+                    
+                # BUY 4 se 11 < 200 con 5-28 > 0.20 ! e con ma69 > and deviation_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali) IMPORTATA DA BUY 5
+                
+                elif (
+                    ma69_last >= ma69_2_min_ago
+                    and ma11_last < ma200_last
+                    and deviation_ma5_sopra_ma28 > 0.20
+                    
+                    and deviation_bellissima > 0.12
+                    and deviation_buy3 > 0.12
+                    and deviation_ma7_sopra_ma40 > 0.09
+               
+                    and ma3_last > ma13_last
+                    and ma4_last > ma9_last
+                    and ma4_last > ma50_last
+                    and ma6_last > ma15_last
+                    and ma7_last > ma25_last
+                    
+                    and ma2_last > ma2_2_min_ago
+             
+                ):
+                    buy = "BUY 4 se 11 < 200 con 5-28 > 0.20 ! e con ma69 > and deviation_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali) DA BUY 5 RCCR - riga 2912"
                     action = "buy"
                     percentage = 50
                     
@@ -3370,6 +3403,15 @@ class maddog:
                     # spezzare la catena dei buy - effetti laterali.
                     # se e' arrivato il buy 5 e' molto probabile che il trend sia consolidato
                     # e, a questo punto, non importa se compra con un + 0.10 piu' in alto. NON FA UNA GRANDE DIFFERENZA !
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     
                     
           
@@ -3430,7 +3472,8 @@ class maddog:
                     # se e' arrivato il buy 5 e' molto probabile che il trend sia consolidato
                     # e, a questo punto, non importa se compra con un + 0.10 piu' in alto. NON FA UNA GRANDE DIFFERENZA !
                     
-               
+                    
+                
                 elif (
                     ma78_last >= ma78_2_min_ago
                     and deviation_ma4_sopra_ma100 > 0.25
@@ -10230,7 +10273,7 @@ class maddog:
             
             elif (
                 deviation_ma39 < -0.27
-                and deviation < -0.32
+                and deviation < -0.315
                 and ma2_last < ma2_2_min_ago 
                 
                 and ma50_last < ma50_2_min_ago
@@ -10238,7 +10281,7 @@ class maddog:
                 
                 and deviation_ma5_sotto_ma200 > -1.00
             ):
-                sell = "SELL condizione speciale SALVAGENTE 4 deviation 3-39 <-0.27 and deviation<-0.32 - con ma50 < e con ma5 sotto ma200 > -1.00 - r 9390"
+                sell = "SELL condizione speciale SALVAGENTE 4 deviation 3-39 <-0.27 and deviation <-0.315 - con ma50 < e con ma5 sotto ma200 > -1.00 - r 9390"
                 action = "sell"   
                 
 
@@ -10687,8 +10730,9 @@ class maddog:
            
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
-                and ma2_last < last_trade_price
                 and deviation < -0.39
+                and ma2_last < last_trade_price
+                
                 and ma100_last > ma100_30_min_ago
                 and ma13_last > ma13_2_min_ago
                 and ma2_last < ma2_2_min_ago
@@ -10704,8 +10748,9 @@ class maddog:
             
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
-                and ma2_last < last_trade_price
                 and deviation < -0.37
+                and ma2_last < last_trade_price
+                
                 and ma100_last > ma100_30_min_ago
                 and ma13_last > ma13_2_min_ago
                 and ma2_last < ma2_2_min_ago
@@ -10721,8 +10766,9 @@ class maddog:
             
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
-                and ma2_last < last_trade_price
                 and deviation < -0.41
+                and ma2_last < last_trade_price
+                
                 and ma100_last < ma100_30_min_ago
                 and ma13_last > ma13_2_min_ago
                 and ma2_last < ma2_2_min_ago
@@ -10734,24 +10780,61 @@ class maddog:
             
             
             
-            # 12 - SELL condizione speciale ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma100 < e con ma13 <
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            # 12A - SELL condizione speciale ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma100 < e con ma13 < ( and 20 > 100 )
             
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
-                and ma2_last < last_trade_price
                 and deviation < -0.355
+                
+                and ma20_last > ma100_last
+                
                 and ma100_last < ma100_30_min_ago
                 and ma13_last > ma13_2_min_ago
+                and ma2_last < last_trade_price
                 and ma2_last < ma2_2_min_ago
             ):
 
-                sell = "SELL condizione speciale DOLCE ATTESA con ma100 < e con ma13 < and deviation < -0.355 - r 9499"
+                sell = "SELL condizione speciale DOLCE ATTESA con ma100 < e con ma13 < and deviation < -0.355 ( and 20 > 100 )- r 9499"
+                action = "sell"
+                
+            
+            
+            
+            # 12B - SELL condizione speciale ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma100 < e con ma13 < ( and 20 < 100 )
+            
+            elif (
+                seconds_since_last_trade > max_hold_time_in_seconds
+                and deviation < -0.36
+                
+                and ma20_last < ma100_last
+                
+                and ma100_last < ma100_30_min_ago
+                and ma13_last > ma13_2_min_ago
+                and ma2_last < last_trade_price
+                and ma2_last < ma2_2_min_ago
+            ):
+
+                sell = "SELL condizione speciale DOLCE ATTESA con ma100 < e con ma13 < and deviation < -0.36 ( and 20 < 100 ) - r 10819"
                 action = "sell"
 
                 # il fattore tempo - la dolce attesa - solo con trend ribassista
                 # deviation = ma2_last / last_trade_price
                 # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
                 # max_hold_time_in_seconds = 300 = 5 min (con 6 min perdita di 0.90 %)
+                
+                # IMPORTANTE ! HO deviation < -0.355 MA VENDE CON SOLI - 0.25 cosi' ovviamente e' impossibile !
+                # allora ho provato con un rafforzativo and ma20_last < ma100_last
+                # per distinguerla da quella precedente che aveva dato il problema. ( e che ha and ma20_last < ma100_last )
+                
                 
                 
                 
@@ -10765,8 +10848,9 @@ class maddog:
             
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
-                and ma13_last < ma13_2_min_ago
                 and deviation < -0.43
+                and ma13_last < ma13_2_min_ago
+                
                 and ma2_last < last_trade_price
                 and ma2_last < ma2_2_min_ago
             ):
@@ -10792,8 +10876,9 @@ class maddog:
             
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
-                and ma8_last < ma50_last
                 and deviation_sell < -0.49
+                and ma8_last < ma50_last
+                
                 and ma2_last < ma2_2_min_ago
             ):
 
