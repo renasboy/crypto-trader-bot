@@ -2027,7 +2027,7 @@ class maddog:
                 
                 elif (    
                     ma7_last > ma50_last
-                    and deviation_ma8_sotto_ma300 < -0.40
+                    and deviation_ma8_sotto_ma300 < -0.30
                     
                     and ma100_last < ma100_120_min_ago
                     and ma200_last < ma200_120_min_ago
@@ -2393,11 +2393,11 @@ class maddog:
                     and ma200_last < ma200_120_min_ago
                     
                     and ma100_last < ma100_50_min_ago
-                    and (ma8_prev < ma50_prev and ma8_last > ma50_last)
+                    and (ma7_prev < ma50_prev and ma7_last > ma50_last)
                     and ma2_last > ma2_2_min_ago
                 ):
                
-                    buy = "BUY 2C con 100< and 200< con INCROCIO 8-50 - r 2080"
+                    buy = "BUY 2C con 100< and 200< con INCROCIO 7-50 - r 2080"
                     action = "buy"
                     percentage = 70
                     
