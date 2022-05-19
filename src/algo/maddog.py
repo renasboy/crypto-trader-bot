@@ -866,29 +866,68 @@ class maddog:
                     
                 
                     
-                    
-                # --------------------------------------------------- BUY 1 tempo AUTUNNO che considera il passare del tempo con ma30 > MA 100 < 200
+                
+                
+                
+                
+                # -------------------------------------- BUY 1 tempo INIZIO AUTUNNO (200 > 200 120 min) che considera il passare del tempo con ma30 > MA 100 < 200
                 
                 elif (     
                     ma50_last > ma100_last
-                    and ma100_last < ma200_last
+                    and ma200_last > ma200_120_min_ago
                     and deviation_ma5_sopra_ma28 > 0.17
+                    and ma100_last < ma200_last
+                    
                     and ma30_last > ma30_40_min_ago
                     
                     and ma11_last > ma125_last
                     
-                    and deviation_ma5_sopra_ma28 > 0.17
+                    
                     and deviation_bellissima > 0.06
                     and ma20_last > ma20_2_min_ago
                     and ma5_last > ma5_2_min_ago
                     and ma2_last > ma20_last
                     and ma2_last > ma2_2_min_ago
                 ):    
-                    buy = "BUY 1 tempo AUTUNNO che considera il passare del tempo con 5-28 > 0.17 - r 812"
+                    buy = "BUY 1 tempo INIZIO AUTUNNO (200 > 200 120 min ago) che considera il passare del tempo con 5-28 > 0.17 - r 812"
                     action = "buy"
                     percentage = 50
                     
+                    
+                    
+                    
+                elif (     
+                    ma50_last > ma100_last
+                    and ma200_last < ma200_120_min_ago
+                    and deviation_ma5_sopra_ma28 > 0.20
+                    and ma100_last < ma200_last
+                    
+                    and ma30_last > ma30_40_min_ago
+                    
+                    and ma11_last > ma125_last
+                    
+                    
+                    and deviation_bellissima > 0.06
+                    and ma20_last > ma20_2_min_ago
+                    and ma5_last > ma5_2_min_ago
+                    and ma2_last > ma20_last
+                    and ma2_last > ma2_2_min_ago
+                ):    
+                    buy = "BUY 1 tempo FINE AUTUNNO (quasi inverno !) che considera il passare del tempo con 5-28 > 0.20 - r 813"
+                    action = "buy"
+                    percentage = 50
+                    
+                    
+                    
+                    ################################################################################################ fine autunno
+                    
               
+                
+                
+                
+                
+                
+                
                 
                 
                 # ------------------------------------------------------------ BUY 1 tempo INVERNO che considera il passare del tempo con ma30 < MA 100 < 200
@@ -4889,17 +4928,38 @@ class maddog:
                         
                         
                         
-              
+                        
+                    # rafforzativo alla perdita tollerata
+                    
                     elif (    
-                        ma50_last < ma50_2_min_ago 
+                        ma50_last < ma50_2_min_ago
+                        and ma200_last > ma200_120_min_ago
+                        and ma2_last < ma2_2_min_ago 
+                        and deviation_sell < -0.31
+                        and deviation_trend_ma200 > -0.03
+                        and ma200_last > ma300_last
+                        
+                        
+                    ):
+                        sell = "SELL 1 compa (21-50 min) con ma50 < and deviation_sell < -0.31 con > PERDITA TOLLERATA RAFFORZATA (200> 120 min)  - r 4284"
+                        action = "sell"
+                        
+                        
+                        
+                        
+                    # rafforzativo alla perdita tollerata
+                    
+                    elif (    
+                        ma50_last < ma50_2_min_ago
+                        and ma200_last < ma200_120_min_ago
                         and ma2_last < ma2_2_min_ago 
                         and deviation_sell < -0.28
                         and deviation_trend_ma200 > -0.03
                         and ma200_last > ma300_last
                         
-                        and ma2_last < ma2_2_min_ago
+                        
                     ):
-                        sell = "SELL 1 compa (21-50 min) con ma50 < and deviation_sell < -0.28 con > PERDITA TOLLERATA - r 4284"
+                        sell = "SELL 1 compa (21-50 min) con ma50 < and deviation_sell < -0.28 con > PERDITA TOLLERATA - r 4285"
                         action = "sell"
                         
                         # and deviation_ma39 < -0.15 or (deviation_sell < 0.10 and ma3_last < ma39_last)
