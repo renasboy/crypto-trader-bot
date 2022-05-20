@@ -42,11 +42,13 @@ class maddog:
         ma48_last, ma48_prev = self.algo_helper.ma_last_prev(48)
         ma50_last, ma50_prev = self.algo_helper.ma_last_prev(50)
         ma52_last, ma52_prev = self.algo_helper.ma_last_prev(52)
+        ma54_last, ma54_prev = self.algo_helper.ma_last_prev(54)
         ma69_last, ma69_prev = self.algo_helper.ma_last_prev(69)
         ma72_last, ma72_prev = self.algo_helper.ma_last_prev(72)
         ma78_last, ma78_prev = self.algo_helper.ma_last_prev(78)
         ma100_last, ma100_prev = self.algo_helper.ma_last_prev(100)
         ma125_last, ma125_prev = self.algo_helper.ma_last_prev(125)
+        ma140_last, ma140_prev = self.algo_helper.ma_last_prev(140)
         ma150_last, ma150_prev = self.algo_helper.ma_last_prev(150)
         ma200_last, ma200_prev = self.algo_helper.ma_last_prev(200)
         ma285_last, ma285_prev = self.algo_helper.ma_last_prev(285)
@@ -88,6 +90,7 @@ class maddog:
         ma39_15_min_ago = self.algo_helper.ma_minutes_ago(39, 15)
         
         ma50_2_min_ago = self.algo_helper.ma_minutes_ago(50, 2)
+     
         ma69_2_min_ago = self.algo_helper.ma_minutes_ago(69, 2)
         ma69_15_min_ago = self.algo_helper.ma_minutes_ago(69, 15)
         
@@ -1012,7 +1015,7 @@ class maddog:
                 
                 elif (
                     
-                    ma8_last > ma150_last
+                    ma8_last > ma140_last
                     and deviation_ma100_sopra_ma200 > -0.30
                     
                     and ma100_last > ma100_2_min_ago
@@ -1028,13 +1031,13 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
               
                 ):
-                    buy = "BUY 1 8-150 copiata e modificata da RCCR che e' arrivata una ndecchia prima del passare del tempo - riga 887"
+                    buy = "BUY 1 8-140 copiata e modificata da RCCR che e' arrivata una ndecchia prima del passare del tempo - riga 887"
                     action = "buy"
                     percentage = 50
                     
                     # importante : ma100 sta sotto la ma200 non le e' troppo lontana cioe' NON ci troviamo in una situazione drammatica! (anche se ma200< e ma300<)
+                    # 20 maggio 2020 messo ma140 prima era ma150
                     
-                
                 
                 
                 
@@ -2068,9 +2071,13 @@ class maddog:
                     
                     
                     
-                    
-                # BUY 1 SUL SUPPORTO 300 !
                 
+                
+                
+                
+                
+                # BUY 1 SUL SUPPORTO 300 !
+          
                 elif (    
                     ma5_last > ma13_last
                     and (ma3_last > ma285_last and ma3_last < ma285_last)
@@ -2088,6 +2095,41 @@ class maddog:
                     percentage = 30
                     
                     # madonna compa !
+                    
+                    
+                    
+                # BUY 1 dopo ribasso MA CON TUTTE LE MA > e con incrocio al rialzo 8-140 !
+                
+                elif (    
+                    ma50_last > ma100_last
+                    and (ma8_last < ma140_last and ma8_last > ma140_last)
+                 
+                    and ma100_last > ma100_60_min_ago
+                   
+                    and ma100_last > ma100_120_min_ago
+                    and ma200_last > ma200_120_min_ago
+                    and ma300_last > ma300_120_min_ago
+                    
+                    and ma100_last > ma200_last
+                    and ma200_last > ma300_last
+                    
+                    and ma2_last > ma300_last
+                    and ma2_last > ma2_2_min_ago
+                
+                ):
+                    buy = "BUY 1 dopo ribasso MA CON TUTTE LE MA > e con incrocio al rialzo 8-140 - r 1804"
+                    action = "buy"
+                    percentage = 30
+                    
+                    # madonna compa !
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     
                     
                     
@@ -4420,17 +4462,36 @@ class maddog:
                       
                     
                     ##########################################################################################
+                    
                     # NON TOCCARE ! CUSCINO DI SANT' ANTONIO !
                     # L' INCROCIO 5-100 MI SALVA ! MA 5<100 VENDE DURANTE IL RIBASSO !
+                    
+                    
                     ##################################################################### con trend discendente
-
+                    
+                    
+                    # RAFFORZATO DA 100>300
+                    
                     elif (
                         ma50_last < ma50_2_min_ago
+                        and ma100_last > ma300_last
+                        
+                        and deviation_ma39 < -0.16
+                        and deviation_sell < -0.36
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 1 (12-21 min) RAFFORZATO con ma50 < and deviation_ma39 < -0.16 and deviation_sell < -0.36 - r 3865"
+                        action = "sell"
+                        
+                        
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and ma100_last < ma300_last
                         and deviation_ma39 < -0.159
                         and deviation_sell < -0.34
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 (12-21 min) con ma50 < and deviation_ma39 < -0.159 and deviation_sell < -0.34 - r 3865"
+                        sell = "SELL 1 (12-21 min) con ma50 < and deviation_ma39 < -0.159 and deviation_sell < -0.34 - r 3866"
                         action = "sell"
                         
                         
@@ -4440,6 +4501,11 @@ class maddog:
                         # QUINDI ho abbassato da 0.17 a 0.16 a 0.15
                         # HO NOTATO CHE ANCHE INCROCIO 5-100 SAREBBE ARRIVATO TARDI
                         # ALLORA METTO incrocio 3-78 e deviation <0.10
+                        
+                        
+                        
+                        
+                        
                         
                         
                     
@@ -5109,16 +5175,39 @@ class maddog:
                    
                     
                     
+                    # la prima FINTA ALLA MARADONA RAFFORZATO DA 100>300
+                    
                     elif (
                         ma50_last > ma50_2_min_ago
+                        and ma100_last > ma300_last
+                        and (ma5_prev > ma54_prev and ma5_last < ma54_last)
+                        and deviation_sell > 0.32 and deviation_sell < 0.52
+                        and ma2_last < ma2_2_min_ago
+                    ):    
+                        sell = "SELL 1 da 50 a 90 min con ma50 > and incrocio 5-54 and deviation_sell 0.31-0.52 la prima FINTA ALLA MARADONA RAFFORZATO - r 4410"
+                        action = "sell"
+                        
+                        # MARADONA RAFFORZATO accompagna nelle prime fasi di crescita il titolo. poi interviene RONALDO se il rialzo comincia a farsi piu' consistente.
+                        
+                        
+                    # la prima FINTA ALLA MARADONA
+                    
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and ma100_last < ma300_last
                         and (ma5_prev > ma52_prev and ma5_last < ma52_last)
                         and deviation_sell > 0.32 and deviation_sell < 0.52
                         and ma2_last < ma2_2_min_ago
                     ):    
-                        sell = "SELL 1 da 50 a 90 min con ma50 > and incrocio 5-52 and deviation_sell 0.31-0.52 la prima FINTA ALLA MARADONA - r 4410"
+                        sell = "SELL 1 da 50 a 90 min con ma50 > and incrocio 5-52 and deviation_sell 0.31-0.52 la prima FINTA ALLA MARADONA - r 4411"
                         action = "sell"
                         
                         # MARADONA accompagna nelle prime fasi di crescita il titolo. poi interviene RONALDO se il rialzo comincia a farsi piu' consistente.
+                        
+                        
+                        
+                        
+                        
                     
                     
                     
@@ -5252,10 +5341,33 @@ class maddog:
                         
                         
                
-                    ############################################################### ipotesi mediana 1 un po' meno peggio ( sempre con ma50 < )
-                  
+                    ############################################################### ipotesi mediana 1 RAFFORZATA un po' meno peggio ( sempre con ma50 < )
+                    
                     elif (
                         ma50_last < ma50_2_min_ago
+                        and ma100_last > ma300_last
+                        
+                        and ma200_last < ma300_last
+                        and deviation_trend_ma200 > -0.10
+                        
+                        
+                        and deviation_ma39 < -0.20
+                        and ma2_last < ma2_2_min_ago
+                        and deviation_sell < -0.21
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 1 50-90 min IPOTESI mediana 1 RAFFORZATA un po' MENO PEGGIO con ma50< E deviation_ma39 <-0.20 E deviation_sell < -0.21- r 4560"
+                        action = "sell"
+                        
+                        
+                        
+                        
+                    ############################################################### ipotesi mediana 1 un po' meno peggio ( sempre con ma50 < )   
+                    
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and ma100_last < ma300_last
+                        
                         and ma200_last < ma300_last
                         and deviation_trend_ma200 > -0.10
                         
@@ -5265,10 +5377,16 @@ class maddog:
                         and deviation_sell < -0.195
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 da 50 a 90 min IPOTESI un po' MENO PEGGIO con ma50 < con deviation_ma39 <-0.19 and deviation_sell < -0.195 - r 4560"
+                        sell = "SELL 1 da 50 a 90 min IPOTESI un po' MENO PEGGIO con ma50 < con deviation_ma39 <-0.19 and deviation_sell < -0.195 - r 4561"
                         action = "sell"
                         
                         
+                    
+                    
+                    
+                    
+                    
+                    
                     
                     
                     elif (
