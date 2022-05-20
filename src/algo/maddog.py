@@ -5175,11 +5175,11 @@ class maddog:
                    
                     
                     
-                    # la prima FINTA ALLA MARADONA RAFFORZATO DA 100>300
+                    # la prima FINTA ALLA MARADONA RAFFORZATO DA 100>150
                     
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and ma100_last > ma300_last
+                        and ma100_last > ma150_last
                         and (ma5_prev > ma54_prev and ma5_last < ma54_last)
                         and deviation_sell > 0.32 and deviation_sell < 0.52
                         and ma2_last < ma2_2_min_ago
@@ -5194,7 +5194,7 @@ class maddog:
                     
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and ma100_last < ma300_last
+                        and ma100_last < ma150_last
                         and (ma5_prev > ma52_prev and ma5_last < ma52_last)
                         and deviation_sell > 0.32 and deviation_sell < 0.52
                         and ma2_last < ma2_2_min_ago
