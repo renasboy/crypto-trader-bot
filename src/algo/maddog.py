@@ -2497,11 +2497,33 @@ class maddog:
                     # deviation_buy2 = ma8_last / ma50
                     
                     
-              
+                
+                
+                
+                
                 # IL BUY 2 CI RIPROVA CON INCROCIO 8-50
                 
                 elif (
                     deviation_buy2 > 0.01
+                    and ma50_last > ma100_last
+                    
+                    and ma200_last < ma200_120_min_ago
+                    
+                    and ma100_last < ma100_50_min_ago
+                    and (ma7_prev < ma50_prev and ma7_last > ma50_last)
+                    and ma2_last > ma2_2_min_ago
+                ):
+               
+                    buy = "BUY 2C con 100< and 200< con INCROCIO 7-50 - r 2080"
+                    action = "buy"
+                    percentage = 70
+                    
+                    
+                    
+                elif (
+                    deviation_buy2 > 0.01
+                    and ma50_last < ma100_last
+                    and deviation_ma5_sopra_ma28 > 0.08
                     and ma200_last < ma200_120_min_ago
                     
                     and ma100_last < ma100_50_min_ago
@@ -2518,7 +2540,12 @@ class maddog:
                     
                     
                     
-                    
+                
+                
+                
+                
+                
+                
                 # IL BUY 2 CI RIPROVA MA PIU' IN ALTO ! non toccare questa altrimenti fa punti sovrapposti !
                 
                 elif (
@@ -2952,10 +2979,11 @@ class maddog:
                     
                     # deviation_correzione = 3/25    
                     # non toccare 5 > 15 !
+                    
+                    
                 
                 
-                
-                # BUY 2 ultima condizione ! ma tutte negative MA BUY con 8 > 125
+                # BUY 2 PENULTIMA condizione ! ma tutte negative MA BUY con 8 > 125
                 
                 elif (     
                
@@ -2969,7 +2997,31 @@ class maddog:
                     and deviation_buy_ma5_sopra_ma20 > 0.05
                     and ma2_last > ma2_2_min_ago
                 ):    
-                    buy = "BUY 2 ULTIMA CONDIZIONE ! ma tutte negative MA BUY con 25-200 (ho sostituito 8 > 125) - r 2505"
+                    buy = "BUY 2 PENUULTIMA CONDIZIONE ! ma tutte negative MA BUY con 25-200 (ho sostituito 8 > 125) - r 2505"
+                    action = "buy"
+                    percentage = 30
+                    
+                    # BUY con 25>200 ha sostituito 8>125 (che un po' mi piaceva ma era troppo rischiosa)
+                    
+                    
+                    
+                    
+                    
+                # BUY 2 ultima condizione ! ma tutte negative MA BUY con 50-100 (integra r2505)
+                
+                elif (     
+               
+                    ma50_last > ma100_last
+                    and ma100_last < ma100_60_min_ago
+                    and ma200_last < ma200_60_min_ago
+                    and ma300_last < ma300_60_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    and deviation_buy_ma5_sopra_ma20 > 0.05
+                    and ma2_last > ma2_2_min_ago
+                ):    
+                    buy = "BUY 2 ULTIMA CONDIZIONE ! ma tutte negative MA BUY con 50-100 (integra r2505) - r 2506"
                     action = "buy"
                     percentage = 30
                     
@@ -3556,12 +3608,17 @@ class maddog:
               
             ############################################################################################################  compra sessione 5 in poi
             
+            # and ma50_last > ma100_last STIAMO AL BUY 5 PERDIO !
+            
+            
             #  piu' alto il BUY - "effetti laterali"
 
             else:
                 
                 if (
                     ma50_last >= ma50_2_min_ago
+                    and ma50_last > ma100_last
+                    
                     and deviation_buy3 > 0.10
                     and ma3_last > ma13_last
                     and deviation_ma7_sopra_ma40 > 0.09
@@ -3574,7 +3631,31 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                 
                 ):
-                    buy = "BUY 5 con ma50 > and 5-28 > 0.15 (PER SPEZZARE LA CATENA un po' di meno - vs effetti laterali) riga 2971"
+                    buy = "BUY 5 con ma50 > AND 50>100 and 5-28 > 0.15 (PER SPEZZARE LA CATENA un po' di meno - vs effetti laterali) riga 2971"
+                    action = "buy"
+                    percentage = 50
+                    
+                
+                
+                
+                elif (
+                    ma50_last >= ma50_2_min_ago
+                    and ma50_last < ma100_last
+                    and deviation_ma5_sopra_ma28 > 0.27
+                    
+                    and deviation_buy3 > 0.10
+                    and ma3_last > ma13_last
+                    and deviation_ma7_sopra_ma40 > 0.09
+                    and ma4_last > ma9_last
+                    and ma4_last > ma50_last
+                    
+                    and ma6_last > ma15_last
+                    and ma7_last > ma25_last
+                    and deviation_bellissima > 0.12
+                    and ma2_last > ma2_2_min_ago
+                
+                ):
+                    buy = "BUY 5 con ma50 > AND 50<100 and 5-28 > 0.27 (SI !) (PER SPEZZARE LA CATENA un po' di meno - vs effetti laterali) riga 2972"
                     action = "buy"
                     percentage = 50
                     
@@ -3585,8 +3666,21 @@ class maddog:
                     
                     
                 
+                
+                
+                
+                
+                
+                
+                
+                # ATTENZIONE ! AL BUY 5 TRANNE CHE IN UNA EVENTUALE CORREZIONE HO MESSO 50>100 STIAMO AL BUY 5 !
+                # SENZA QUESTA 50>100 HO AVUTO MOLTI PROBLEMI !
+                
+                
                 elif (
                     ma78_last >= ma78_2_min_ago
+                    and ma50_last > ma100_last
+                    
                     and deviation_ma4_sopra_ma100 > 0.25
                     
                     and deviation_buy3 > 0.12
@@ -3612,6 +3706,10 @@ class maddog:
                 
                 elif (
                     ma200_last >= ma200_120_min_ago
+                    and ma50_last > ma100_last
+                    
+                    and deviation_ma5_sopra_ma28 > 0.10
+                    
                     and deviation_ma4_sopra_ma100 > 0.25
                     and ma3_last > ma15_last
                     and ma3_last > ma8_last
@@ -3634,6 +3732,8 @@ class maddog:
              
                 elif (
                     ma78_last >= ma78_2_min_ago
+                    and ma50_last > ma100_last
+                    
                     and deviation_ma4_sopra_ma100 > 0.25
                     
                     and deviation_buy3 > 0.03
@@ -3660,6 +3760,8 @@ class maddog:
                 elif (    
                     
                     ma200_last > ma200_20_min_ago
+                    and ma50_last > ma100_last
+                    
                     and (ma5_prev < ma28_prev and ma5_last > ma28_last)
                     and ma28_last > ma34_last
                     
@@ -3690,6 +3792,8 @@ class maddog:
                 
                 elif (
                     ma78_last < ma78_2_min_ago
+                    and ma50_last > ma100_last
+                    
                     and deviation_ma4_sopra_ma100 > 0.25
                     
                     and ma20_last > ma200_last
@@ -3710,7 +3814,12 @@ class maddog:
                     
                     
                     
-              
+                    
+                    
+                    
+                    
+                # NELLA CORREZIONE EVENTUALE (SIAMO AL BUY 5 !) NON HO MESSO and ma50_last > ma100_last
+                
                 # BUY 5A PAZZA DURANTE UNA piccola CORREZIONE che NON E' un forte ribasso e NON E' un crollo ! (compare stammi vicino!)
               
                 elif (
@@ -9924,27 +10033,68 @@ class maddog:
                     
                     ################################################################################################# con trend discendente
                     
-                    
                     elif (
-                        ma50_last < ma50_2_min_ago 
+                        ma50_last < ma50_2_min_ago
+                        and ma50_last > ma100_last
+                        
                         and ma2_last < ma2_2_min_ago 
-                        and deviation_ma39 < -0.24
+                        and deviation_ma39 < -0.29
                         and ma200_last < ma200_60_min_ago
                     ):
-                        sell = "SELL 4-5-x (21-60 min) con ma50 < and deviation_ma39 < -0.225 - r 8852"
+                        sell = "SELL 4-5-x RAFFORZATA (21-60 min) con ma50 < and deviation_ma39 < -0.29 - r 8852"
                         action = "sell"
                         
                         
-                 
-                    elif (    
-                        ma50_last < ma50_2_min_ago 
+                        
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and ma50_last < ma100_last
+                        
                         and ma2_last < ma2_2_min_ago 
-                        and deviation_sell < -0.23 
+                        and deviation_ma39 < -0.28
+                        and ma200_last < ma200_60_min_ago
+                    ):
+                        sell = "SELL 4-5-x (21-60 min) con ma50 < and deviation_ma39 < -0.28 - r 8853"
+                        action = "sell"
+                        
+                        
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    elif (    
+                        ma50_last < ma50_2_min_ago
+                        and ma50_last > ma100_last
+                        
+                        and ma2_last < ma2_2_min_ago 
+                        and deviation_sell < -0.29
                         and ma3_last < ma39_last
                         and ma200_last < ma200_60_min_ago
                     ):
-                        sell = "SELL 4-5-x (21-60 min) con ma50 < and deviation_sell < 0.225 - r 8864"
+                        sell = "SELL 4-5-x RAFFORZATA (21-60 min) con ma50 < and deviation_sell < 0.29 - r 8864"
                         action = "sell"
+                        
+                        
+                    elif (    
+                        ma50_last < ma50_2_min_ago
+                        and ma50_last < ma100_last
+                        
+                        and ma2_last < ma2_2_min_ago 
+                        and deviation_sell < -0.28
+                        and ma3_last < ma39_last
+                        and ma200_last < ma200_60_min_ago
+                    ):
+                        sell = "SELL 4-5-x (21-60 min) con ma50 < and deviation_sell < 0.28 - r 8865"
+                        action = "sell"
+                        
+                        
+                        
+                        
+                        
+                        
                         
               
             
@@ -9975,6 +10125,10 @@ class maddog:
                         # viva sant' antonio !
                         # NON INCROCERANNO MAI DURANTE IL CROLLO !
                         # non toccare ! INCROCIO 3-100 CUSCINO DI SANT' ANTONIO !
+                        
+                        
+                        
+                        
                         
                         
                         
@@ -10247,50 +10401,130 @@ class maddog:
                     
                     # ################################################################################ RIGHE DEL COMPA DA RADDOPPIARE PER AUMENTARE TOLLERANZA
                     
+                    
                     if (    
-                        ma50_last > ma50_2_min_ago 
+                        ma50_last > ma50_2_min_ago
+                        and ma50_last > ma100_last
+                        
                         and ma2_last < ma2_2_min_ago 
-                        and deviation_ma25 < -0.24
+                        and deviation_ma25 < -0.28
+                        and ma200_last < ma200_60_min_ago
                     ):
-                        sell = "SELL 4-5-x dopo 90 min con ma50> and deviation_ma25 <-0.24 ( no ma3 < ma39 ) - r 9173"
+                        sell = "SELL 4-5-x dopo 90 min con ma50> and deviation_ma25 <-0.28 ( no ma3 < ma39 ) - r 9172"
                         action = "sell"
                         
-                      
-                    
-                    
-                    
-                    elif (     
-                        ma50_last > ma50_2_min_ago 
-                        and ma2_last < ma2_2_min_ago 
-                        and deviation_sell < -0.21 
-                        and ma3_last < ma50_last
-                    ):
-                        sell = "SELL 4-5-x dopo 90 min con ma50> and (deviation_sell < 0.10 and ma3_last < ma50_last) - r 9186"
-                        action = "sell"
-                        
-                      
                         
                         
                     elif (    
-                        ma50_last > ma50_2_min_ago 
-                        and ma2_last < ma2_2_min_ago 
-                        and deviation_ma25 < -0.25
-                        and ma200_last > ma200_60_min_ago
+                        ma50_last > ma50_2_min_ago
+                        and ma50_last < ma100_last
+                        
+                        and ma2_last < ma2_2_min_ago
+                        and deviation_ma25 < -0.29
+                        and ma200_last < ma200_60_min_ago
                     ):
-                        sell = "SELL 4-5-x dopo 90 min con ma50> and deviation_ma25 < -0.25 TOLLERANTE - r 9198"
+                        sell = "SELL 4-5-x RAFFORZATO dopo 90 min con ma50> and deviation_ma25 <-0.29 ( no ma3 < ma39 ) - r 9173"
+                        action = "sell"
+                        
+                      
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    elif (     
+                        ma50_last > ma50_2_min_ago
+                        and ma50_last > ma100_last
+                        
+                        and ma2_last < ma2_2_min_ago 
+                        and deviation_sell < -0.29
+                        and ma3_last < ma50_last
+                        and ma200_last < ma200_60_min_ago
+                    ):
+                        sell = "SELL 4-5-x RAFFORZATO dopo 90 min con ma50> and (deviation_sell < -0.29 and ma3_last < ma50_last) - r 9186"
                         action = "sell"
                         
                         
                         
-                 
+                        
                     elif (     
-                        ma50_last > ma50_2_min_ago 
+                        ma50_last > ma50_2_min_ago
+                        and ma50_last < ma100_last
+                        
                         and ma2_last < ma2_2_min_ago 
-                        and deviation_sell < -0.24 
+                        and deviation_sell < -0.28
+                        and ma3_last < ma50_last
+                        and ma200_last < ma200_60_min_ago
+                    ):
+                        sell = "SELL 4-5-x dopo 90 min con ma50> and (deviation_sell < -0.28 and ma3_last < ma50_last) - r 9187"
+                        action = "sell"
+                        
+                      
+                        
+                    
+                    
+                    
+                    
+                    
+                    
+                    elif (    
+                        ma50_last > ma50_2_min_ago
+                        and ma50_last > ma100_last
+                        
+                        and ma2_last < ma2_2_min_ago 
+                        and deviation_ma25 < -0.31
+                        and ma200_last > ma200_60_min_ago
+                    ):
+                        sell = "SELL 4-5-x RAFFORZATO dopo 90 min con ma50> and deviation_ma25 < -0.31 TOLLERANTE - r 9198"
+                        action = "sell"
+                        
+                        
+                        
+                    elif (    
+                        ma50_last > ma50_2_min_ago
+                        and ma50_last < ma100_last
+                        
+                        and ma2_last < ma2_2_min_ago 
+                        and deviation_ma25 < -0.30
+                        and ma200_last > ma200_60_min_ago
+                    ):
+                        sell = "SELL 4-5-x dopo 90 min con ma50> and deviation_ma25 < -0.30 TOLLERANTE - r 9199"
+                        action = "sell"
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    elif (     
+                        ma50_last > ma50_2_min_ago
+                        and ma50_last > ma100_last
+                        
+                        and ma2_last < ma2_2_min_ago 
+                        and deviation_sell < -0.32
+                        
                         and ma3_last < ma50_last
                         and ma200_last > ma200_60_min_ago
                     ):
-                        sell = "SELL 4-5-x dopo 90 min con ma50> and (deviation_sell < -0.24 and ma3_last < ma50_last) TOLLERANTE - r 9211"
+                        sell = "SELL 4-5-x RAFFORZATO dopo 90 min con ma50> and (deviation_sell < -0.32 and ma3_last < ma50_last) TOLLERANTE - r 9211"
+                        action = "sell"
+                        
+                        
+                        
+                    elif (     
+                        ma50_last > ma50_2_min_ago
+                        and ma50_last < ma100_last
+                        
+                        and ma2_last < ma2_2_min_ago 
+                        and deviation_sell < -0.31
+                        and ma3_last < ma50_last
+                        and ma200_last > ma200_60_min_ago
+                    ):
+                        sell = "SELL 4-5-x dopo 90 min con ma50> and (deviation_sell < -0.31 and ma3_last < ma50_last) TOLLERANTE - r 9212"
                         action = "sell"
                         
                         
