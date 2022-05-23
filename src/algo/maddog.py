@@ -74,6 +74,7 @@ class maddog:
         ma10_2_min_ago = self.algo_helper.ma_minutes_ago(10, 2)
         ma13_2_min_ago = self.algo_helper.ma_minutes_ago(13, 2)
         ma13_10_min_ago = self.algo_helper.ma_minutes_ago(13, 10)
+        
         ma20_2_min_ago = self.algo_helper.ma_minutes_ago(20, 2)
         ma20_22_min_ago = self.algo_helper.ma_minutes_ago(20, 22)
         ma20_60_min_ago = self.algo_helper.ma_minutes_ago(20, 60)
@@ -88,7 +89,7 @@ class maddog:
         ma39_2_min_ago = self.algo_helper.ma_minutes_ago(39, 2)
         ma39_3_min_ago = self.algo_helper.ma_minutes_ago(39, 3)
         ma39_15_min_ago = self.algo_helper.ma_minutes_ago(39, 15)
-        
+        ma39_30_min_ago = self.algo_helper.ma_minutes_ago(39, 30)
         ma50_2_min_ago = self.algo_helper.ma_minutes_ago(50, 2)
      
         ma69_2_min_ago = self.algo_helper.ma_minutes_ago(69, 2)
@@ -1604,6 +1605,7 @@ class maddog:
                     and deviation_ma5_sotto_ma200 < -0.85
                     
                     and rapporto_delta_1_delta_2_69_39 < 1
+                    and ma39_last > ma39_30_min_ago
                     and ma100_last > ma100_60_min_ago
                     
                     and deviation_ma8_sotto_ma100 < -0.50
@@ -1716,7 +1718,7 @@ class maddog:
                 # quando la ma100 si allontana verso il basso dalla ma 200 metto 8-50 altrimenti e' una perdita continua !
                 
             
-                # BUY 1 FIAT che non funzionava MA CHE HA FUNZIONATO ! ( DOPPIO DELTA  !) STA RISALENDO
+                # BUY 1 FIAT che non funzionava MA CHE HA FUNZIONATO ! ( DOPPIO DELTA 200-100 E DOPPIO DELTA 69-39 !) STA RISALENDO
                 
                 elif (    
                     deviation_buy_crollo_1 < -0.29
@@ -1734,6 +1736,7 @@ class maddog:
                     and ma100_last > ma100_60_min_ago
                     
                     and rapporto_delta_1_delta_2_69_39 < 1
+                    and ma39_last > ma39_30_min_ago
                     
                     and ma2_last > ma2_2_min_ago
                 ):
