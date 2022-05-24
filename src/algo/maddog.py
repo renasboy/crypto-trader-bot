@@ -1037,7 +1037,7 @@ class maddog:
                     and ma300_last < ma300_60_min_ago
                 ):    
         
-                    buy = "BUY 1 11-150 con ma200< 300< MA ma100> 100 60 min ago e doppio delta < and ma100 >60_min_ago STA RISALENDO !- riga 857"
+                    buy = "BUY 1 11-150 con ma200< 300< MA ma100> 100 60 min ago e doppio delta < MA ma100 SOTTO RIALZO RIALZO - GIORNO ! - riga 857"
                     action = "buy"
                     percentage = 50
                     
@@ -1108,7 +1108,7 @@ class maddog:
                     and ma100_last > ma300_last
                     and ma100_last > ma100_120_min_ago
                     
-                    and rapporto_delta_1_delta_2 < 1
+                    and rapporto_delta_1_delta_2 > 1
                     and ma100_last > ma100_60_min_ago
                     
                     and ma11_last > ma50_last
@@ -1122,7 +1122,7 @@ class maddog:
                     and deviation_ma13_sopra_ma25 > 0.06
                  
                 ):
-                    buy = "BUY 1 r913 anticipata e modificata e con 11 > 50 STA RISALENDO -r 914"
+                    buy = "BUY 1 r913 anticipata e modificata e con 11 > 50 - SOPRA RIALZO RIALZO - GIORNO - r 914"
                     action = "buy"
                     percentage = 50
                     
@@ -1616,17 +1616,19 @@ class maddog:
                     
                     and rapporto_delta_1_delta_2_69_39 < 1
                     and ma39_last > ma39_30_min_ago
+                    
                     and ma100_last > ma100_60_min_ago
                     
                     and deviation_ma8_sotto_ma100 < -0.50
                     and deviation_buy_crollo_1 > -0.59
                 ): 
             
-                    buy = "BUY 1 CORREZIONE FIAT 5-34 ma con ma5 piu' distante da ma200 che NON E' un grande ribasso e NON E' un crollo ! STA RISALENDO - r 1403"
+                    buy = "BUY 1 CORREZIONE FIAT 5-34 ma con ma5 piu' distante da ma200 - SOTTO RIALZO RIALZO - GIORNO ! - r 1403"
                     action = "buy"
                     percentage = 40
                     
                     # 5-28 se non c'e' un minimo di accelerazione che cazzo mi compri !
+                    # CORREZIONE FIAT NON E' un grande ribasso e NON E' un crollo 
 
                     
                 
@@ -1664,7 +1666,7 @@ class maddog:
                     and ma3_last > ma20_last
                 ):
                 
-                    buy = "BUY 1 con RIBASSO VELOCE mentre la distanza tra ma100 e ma200 si sta riducendo - USANDO UN DOPPIO DELTA STA RISALENDO - r 1444"
+                    buy = "BUY 1 con RIBASSO VELOCE mentre la distanza tra ma100 e ma200 si sta riducendo - SOTTO RIALZO RIALZO - GIORNO ! - r 1444"
                     action = "buy"
                     percentage = 40
                     
@@ -1750,7 +1752,7 @@ class maddog:
                     
                     and ma2_last > ma2_2_min_ago
                 ):
-                    buy = "BUY 1 FIAT che non funzionava MA CHE HA FUNZIONATO ! ( DOPPIO DELTA 200-100 e DOPPIO DELTA 69-39 in risalita !) - r 1525"
+                    buy = "BUY 1 FIAT che non funzionava MA CHE HA FUNZIONATO ! SOTTO RIALZO RIALZO - GIORNO ! - r 1525"
                     action = "buy"
                     percentage = 40
                     
@@ -1783,7 +1785,7 @@ class maddog:
                     
                     and ma2_last > ma2_2_min_ago
                 ):
-                    buy = "BUY 1 FIAT OK ( DOPPIO DELTA) STA RISALENDO - r 1557"
+                    buy = "BUY 1 FIAT OK DOPPIO DELTA STA RISALENDO - SOTTO RIALZO RIALZO - GIORNO !- r 1557"
                     action = "buy"
                     percentage = 40
                     
@@ -1815,7 +1817,7 @@ class maddog:
                     
                     and ma2_last > ma2_2_min_ago
                 ):
-                    buy = "BUY 1 FIAT copia BIS della r701 del RCCR che non funzionava e che invece HA FUNZIONATO ! (DOPPIO DELTA) RIBASSO ! 8-39 - r 1588"
+                    buy = "BUY 1 FIAT copia BIS della r701 del RCCR che non funzionava e che invece HA FUNZIONATO !  SOTTO RIBASSO RIBASSO - NOTTE ! ! 8-39 - r 1588"
                     action = "buy"
                     percentage = 40
                     
@@ -1848,7 +1850,7 @@ class maddog:
                     
                     and ma2_last > ma2_2_min_ago
                 ):
-                    buy = "BUY 1 FIAT OK (DOPPIO DELTA) RIBASSO ! 8-39 - r 1620"
+                    buy = "BUY 1 FIAT OK (DOPPIO DELTA) RIBASSO ! 8-39  SOTTO RBASSO RIBASSO  - NOTTE ! - r 1620"
                     action = "buy"
                     percentage = 40
                     
@@ -2242,16 +2244,17 @@ class maddog:
                     and rapporto_delta_1_delta_2 > 1
                     and ma100_last > ma100_60_min_ago
                     
-                    and deviation_ma5_sopra_ma28 > 0.04
+                    and deviation_ma5_sopra_ma28 > 0.02
                     and ma2_last > ma2_2_min_ago
                 ):    
                     
-                    buy = "BUY 1 BUY 1 SITUAZIONE TREND LATERALE che mancava - DOPPIO DELTA - RIALZO and 5-28 > 0.04 - riga 1834"
+                    buy = "BUY 1 SITUAZIONE TREND LATERALE che mancava - SOPRA RIALZO RIALZO - GIORNO ! and 5-28 > 0.02 - riga 1834"
                     action = "buy"
                     percentage = 30
                     
                     # ho aggiunto 5-28 > 0.05
-                    
+                    # cosa curiosa SEMBRA CHE and ma2_last > ma2_2_min_ago abbia fatto ritardare questo BUY.
+                    # ho tenuto i 2 minuti e ho ridotto 5-28
                     
                     
                     
@@ -2333,7 +2336,7 @@ class maddog:
                     
                     and ma200_last > ma200_15_min_ago
                     
-                    and rapporto_delta_1_delta_2 < 1
+                    and rapporto_delta_1_delta_2 > 1
                     and ma100_last > ma100_60_min_ago
                     
                     and deviation_ma5_sopra_ma28 > 0.01
@@ -2344,7 +2347,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                 ):
                     
-                    buy = "BUY 1 FOREVER YOUNG PIU' AGGRESSIVO (doppio delta < 1 E 100> ) (rialzo) se ma 200 > e se ma200 > ma300 - r 1877"
+                    buy = "BUY 1 FOREVER YOUNG PIU' AGGRESSIVO (doppio delta < 1 E 100> ) (SOPRA RIALZO RIALZO) - GIORNO - se ma 200 > e se ma200 > ma300 - r 1877"
                     action = "buy"
                     percentage = 30
                     
@@ -2359,7 +2362,10 @@ class maddog:
                 elif (  
                     ma200_last > ma300_last
                     and ma200_last > ma200_15_min_ago
-                    and rapporto_delta_1_delta_2 > 1
+                    
+                    and rapporto_delta_1_delta_2 < 1
+                    and ma100_last < ma100_60_min_ago
+                    
                     and deviation_ma5_sopra_ma28 > 0.30
                 
                     and ma6_last > ma6_2_min_ago
@@ -2368,7 +2374,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                 ):
                     
-                    buy = "BUY 1 FOREVER YOUNG PRUDENTE con doppio delta > 1 (ribasso) and deviation_ma5_sopra_ma28 > 0.30 se ma 200 > e se ma200 > ma300 - r 1901"
+                    buy = "BUY 1 FOREVER YOUNG PRUDENTE SOPRA RIBASSO RIBASSO - NOTTE - and deviation_ma5_sopra_ma28 > 0.30 se ma 200 > e se ma200 > ma300 - r 1901"
                     action = "buy"
                     percentage = 30
                     
@@ -2506,8 +2512,7 @@ class maddog:
                 elif (
                     deviation_buy2 > 0.10
                     and ma100_last > ma100_60_min_ago
-                    
-                    and ma2_last > ma200_last
+                  
                     and rapporto_delta_1_delta_2 < 1
                     and ma100_last > ma100_60_min_ago
                     
@@ -2522,7 +2527,7 @@ class maddog:
                     and ma3_last > ma40_last
                     and ma4_last > ma78_last
                 ):
-                    buy = "BUY 2C ( SOPRA and DOPPIO DELTA < 1 and 100> ) (ribasso-rialzo) - CREPUSCOLO and deviation_ma5_sopra_ma28 > 0.14 - r 2015"
+                    buy = "BUY 2C (SOPRA) (DOPPIO DELTA < 1 and 100 > ) (SOPRA RIBASSO RIALZO) - CREPUSCOLO - and deviation_ma5_sopra_ma28 > 0.14 - r 2015"
                     action = "buy"
                     percentage = 50
                     
@@ -2539,7 +2544,7 @@ class maddog:
                     deviation_buy2 > 0.10
                     
                     
-                    and rapporto_delta_1_delta_2 > 1
+                    and rapporto_delta_1_delta_2 < 1
                     and ma100_last < ma100_60_min_ago
                     
                     and deviation_ma5_sopra_ma28 > 0.16
@@ -2553,7 +2558,7 @@ class maddog:
                     and ma3_last > ma40_last
                     and ma4_last > ma78_last
                 ):
-                    buy = "BUY 2C DOPPIO DELTA>1 E MA100 < 60 MIN AGO - RIBASSO - r 2040"
+                    buy = "BUY 2C SOPRA RIBASSO RIBASSO - NOTTE - r 2040"
                     action = "buy"
                     percentage = 50
                     
@@ -2993,7 +2998,7 @@ class maddog:
                     and deviation_ma5_sopra_ma28 > 0.07
                     and ma2_last > ma2_2_min_ago
                 ):
-                    buy = "BUY 2 FIAT che non funzionava MA CHE HA FUNZIONATO BENISSIMO ( DOPPIO DELTA AND 100> ) risalita ! copiato da BUY 1 - r 2415"
+                    buy = "BUY 2 FIAT che non funzionava MA CHE HA FUNZIONATO BENISSIMO ( SOTTO RIALZO RIALZO ) GIORNO ! copiato da BUY 1 - r 2415"
                     action = "buy"
                     percentage = 40
                     
@@ -4110,7 +4115,7 @@ class maddog:
                         and deviation_sell < -0.29
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 (0-3 min) con ma50 < and incrocio 3-33 and deviation_sell -0.29 and rapporto_delta_1_delta_2 < 1 AND 100> RISALENDO  - r 3301"
+                        sell = "SELL 1 (0-3 min) con ma50 < and incrocio 3-33 and deviation_sell -0.29 SOTTO RIALZO RIALZO - GIORNO - r 3301"
                         action = "sell"
                         
                         
@@ -4128,7 +4133,7 @@ class maddog:
                         and deviation_sell < -0.23
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 (0-3 min) con ma50 < and incrocio 3-33 and deviation_sell -0.23 and rapporto_delta_1_delta_2 > 1 RIBASSO - r 3316"
+                        sell = "SELL 1 (0-3 min) con ma50 < and incrocio 3-33 and deviation_sell -0.23 SOTTO RIBASSO RIBASSO - NOTTE - r 3316"
                         action = "sell"
                         
                         
@@ -4524,7 +4529,7 @@ class maddog:
                         and rapporto_delta_1_delta_2 < 1
                         and ma100_last > ma100_60_min_ago
                     ):
-                        sell = "SELL 1 PARACADUTE CROLLO distanza < ma100-ma200 (5-12 min) con ma50 < and ma3 < ma16 and deviation_sell < -0.35 RISALENDO - r 3711"
+                        sell = "SELL 1 PARACADUTE CROLLO distanza< ma100-ma200 (5-12 min) Ema50< E ma3<ma16 and deviation_sell< -0.35 SOTTO RIALZO RIALZO - GIORNO- r 3711"
                         action = "sell"
 
                         # AGGIUNTA PER SICUREZZA SE CONTINUA A PRECIPITARE ma sta risalendo
@@ -4546,7 +4551,7 @@ class maddog:
                         and rapporto_delta_1_delta_2 > 1
                         and ma100_last < ma100_60_min_ago
                     ):
-                        sell = "SELL 1 PARACADUTE CROLLO distanza > tra ma100 e ma200 (5-12 min) con ma50 < and ma3 < ma16 and deviation_sell < -0.35 INFERI- r 3732"
+                        sell = "SELL 1 PARACADUTE CROLLO distanza> ma100-ma200 (5-12 min) e ma50< and ma3 < ma16 and deviation_sell < -0.35 SOTTO RIBASSO RIBASSO - NOTTE - r 3732"
                         action = "sell"
 
                         # AGGIUNTA PER SICUREZZA SE CONTINUA A PRECIPITARE ma sta continuando a scendere
@@ -4880,7 +4885,7 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 (21-50 min) con ma50 > and 5-30 and deviation_sell 0.34 - 0.56 la prima FINTA ALLA MARADONA - r 4029"
+                        sell = "SELL 1 (21-50 min) con ma50 > and 5-30 and deviation_sell 0.34 - 0.56 la prima FINTA ALLA MARADONA  - sopra rialzo rialzo - GIORNO - r 4029"
                         action = "sell"
                         
                         
@@ -4891,7 +4896,7 @@ class maddog:
                         ma50_last > ma50_2_min_ago
                         
                         and rapporto_delta_1_delta_2 < 1
-                        and ma100_last < ma100_60_min_ago
+                        and ma100_last > ma100_60_min_ago
                         
                         and deviation_ma100_sopra_ma200 > -0.10
                         and ma3_last < ma50_last
@@ -4899,7 +4904,7 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 (21-50 min) con ma50 > and 3-50 and deviation_sell 0.34 - 0.56 la prima FINTA ALLA MARADONA - r 4030"
+                        sell = "SELL 1 (21-50 min) con ma50 > and 3-50 and deviation_sell 0.34-0.56 FINTA ALLA MARADONA - SOPRA RIBASSO RIALZO - CREPUSCOLO - r 4030"
                         action = "sell"
                         
                         # 100 deve stare sopra 200 cosi' non vende con ma 50 durante il crollo o un forte ribasso !
@@ -4933,12 +4938,12 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 (21-50 min) con ma50 > and 5-22 (era 4-15) and deviation_sell 0.51 - 0.90 ELASTICO ALLA RONALDO - r 4042"
+                        sell = "SELL 1 (21-50 min) con ma50 > and 5-22 and deviation_sell 0.51 - 0.90 ELASTICO ALLA RONALDO SOPRA RIALZO RIALZO - GIORNO - r 4042"
                         action = "sell"
                         
                         # dopo 26 minuti non c'e' piu' quello scatto in avanti - dribbling- che si verifica nei primi minuti
                         # deviation_sell = ma3_last/last_trade_price
-                        
+                        # 5-22 (era 4-15)
                         
                         
                         
@@ -4948,7 +4953,7 @@ class maddog:
                         ma50_last > ma50_2_min_ago
                         
                         and rapporto_delta_1_delta_2 < 1
-                        and ma100_last < ma100_60_min_ago
+                        and ma100_last > ma100_60_min_ago
                         
                         and deviation_ma100_sopra_ma200 > -0.10
                         and ma3_last < ma50_last
@@ -4956,7 +4961,7 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 (21-50 min) con ma50 > and 3-50 (era 4-15) and deviation_sell 0.51 - 0.90 ELASTICO ALLA RONALDO - r 4043"
+                        sell = "SELL 1 (21-50 min) con ma50 > and 3-50 and deviation_sell 0.51-0.90 ELASTICO ALLA RONALDO SOPRA RIBASSO RIALZO - CREPUSCOLO - r 4043"
                         action = "sell"
                         
                         # dopo 26 minuti non c'e' piu' quello scatto in avanti - dribbling- che si verifica nei primi minuti
@@ -5103,15 +5108,16 @@ class maddog:
                     
                     elif (
                         ma50_last < ma50_2_min_ago
-                        and deviation_ma39 < -0.17
+                        and deviation_ma39 < -0.20
+                        and deviation_sell < -0.27
+                        
                         and ma2_last < ma2_2_min_ago
                         
                         and deviation_ma100_sopra_ma300 < 0.69
                         and deviation_ma100_sopra_ma300 > -0.77
-                        and deviation_sell < -0.18
-                       
+                    
                     ):
-                        sell = "SELL 1 (21-50 min) con ma50 < con deviation_ma39 <-0.17 and deviation_sell < -0.18 TREND LATERALE (100>300 <0.69 and >-0.77) - r 4177"
+                        sell = "SELL 1 (21-50 min) con ma50 < e deviation_ma39 < -0.20 e deviation_sell < -0.27 TREND LATERALE (100>300 <0.69 and > -0.77) - r 4177"
                         action = "sell"
                         
                     
@@ -5514,7 +5520,7 @@ class maddog:
                         
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 50-90 min IPOTESI PEGGIORE con ma50 < con deviation_ma39 <-0.19 and deviation_sell < -0.195 E DOPPIO DELTA INFERI- r 4505"
+                        sell = "SELL 1 50-90 min IPOTESI PEGGIORE con ma50 < con deviation_ma39 <-0.19 and deviation_sell < -0.195 SOTTO RIBASSO RIBASSO - NOTTE - r 4505"
                         action = "sell"
                         
                         
@@ -5535,7 +5541,7 @@ class maddog:
                         
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 50-90 min IPOTESI PEGGIORE MA DOPPIO DELTA RISALITA con ma50< con deviation_ma39 < -0.215 and deviation_sell < -0.27 - r 4525"
+                        sell = "SELL 1 50-90 min IPOTESI PEGGIORE MA DOPPIO DELTA E 100>con ma50< e deviation_ma39 < -0.215 e deviation_sell<-0.27 SOTTO RIALZO RIALZO - GIORNO - r 4525"
                         action = "sell"
                         
                         
@@ -9760,7 +9766,7 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                        
                     ):
-                        sell = "SELL 4-5-x (12-21 min) con ma50 > and 5-25 and deviation_sell 0.25-0.56 - DOPPIO DELTA> AND 100>FINTA ALLA MARADONA - r 8560"
+                        sell = "SELL 4-5-x (12-21 min) con ma50 > and 5-25 and deviation_sell 0.25-0.56 - FINTA ALLA MARADONA sopra rialzo rialzo - GIORNO - r 8560"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
@@ -9777,14 +9783,14 @@ class maddog:
                         ma50_last >= ma50_2_min_ago
                         
                         and rapporto_delta_1_delta_2 < 1
-                        and ma100_last < ma100_60_min_ago
+                        and ma100_last > ma100_60_min_ago
                         
                         and ma3_last < ma50_last
                         and deviation_sell > 0.25 and deviation_sell < 0.56
                         and ma2_last < ma2_2_min_ago
                        
                     ):
-                        sell = "SELL 4-5-x (12-21 min) con ma50>and 3-50 and deviation_sell 0.25-0.56 - DOPPIO DELTA<1 AND 100< TRAMONTO - FINTA ALLA MARADONA -r8561"
+                        sell = "SELL 4-5-x (12-21 min) con ma50>and 3-50 and deviation_sell 0.25-0.56 - SOPRA RIBASSO RIALZO - CREPUSCOLO - FINTA ALLA MARADONA -r8561"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
@@ -9816,7 +9822,7 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                      
                     ):
-                        sell = "SELL 4-5-x (12-21 min) con ma50 > and 4-20 and deviation_sell 0.57 - 0.90 - SORGERE DRIBBLING ALLA RONALDO - r 8576"
+                        sell = "SELL 4-5-x (12-21 min) con ma50 > and 4-20 e deviation_sell 0.57 - 0.90 - SORGERE DRIBBLING ALLA RONALDO -SOPRA RIALZO RIALZO - GIORNO - r 8576"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
@@ -9832,7 +9838,7 @@ class maddog:
                         ma50_last >= ma50_2_min_ago
                         
                         and rapporto_delta_1_delta_2 < 1
-                        and ma100_last < ma100_60_min_ago
+                        and ma100_last > ma100_60_min_ago
                         
                         and deviation_ma100_sopra_ma200 > -0.10
                         and ma3_last < ma50_last
@@ -9840,7 +9846,7 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                      
                     ):
-                        sell = "SELL 4-5-x (12-21 min) con ma50 > and 3-50 and deviation_sell 0.57 - 0.90 - DRIBBLING ALLA RONALDO AL TRAMONTO - r 8576"
+                        sell = "SELL 4-5-x (12-21 min) con ma50 > and 3-50 and deviation_sell 0.57 - 0.90 - DRIBBLING ALLA RONALDO sopra ribasso rialzo - CREPUSCOLO - r 8576"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
@@ -10068,7 +10074,7 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                    
                     ):
-                        sell = "SELL 4-5-x (21-60 min) con ma50 > and incrocio 5-25 and deviation_sell 0.25 - 0.56 SORGERE -FINTA DI MARADONA - r 8781"
+                        sell = "SELL 4-5-x (21-60 min) con ma50 > and incrocio 5-25 and deviation_sell 0.25 - 0.56 SOPRA RIALZO RIALZO - GIORNO - FINTA DI MARADONA - r 8781"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
@@ -10081,7 +10087,7 @@ class maddog:
                         ma50_last >= ma50_2_min_ago
                         
                         and rapporto_delta_1_delta_2 < 1
-                        and ma100_last < ma100_60_min_ago
+                        and ma100_last > ma100_60_min_ago
                         
                         and deviation_ma100_sopra_ma200 > -0.10
                         and (ma3_prev > ma50_prev and ma3_last < ma50_last)
@@ -10089,7 +10095,7 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                    
                     ):
-                        sell = "SELL 4-5-x (21-60 min) con ma50 > and incrocio 5-25 and deviation_sell 0.25 - 0.56 FINTA DI MARADONA tramonto - r 8782"
+                        sell = "SELL 4-5-x (21-60 min) con ma50 > and incrocio 5-25 and deviation_sell 0.25 - 0.56 FINTA DI MARADONA SOPRA RIBASSO RIALZO - CREPUSCOLO - r 8782"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
@@ -10141,7 +10147,7 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                       
                     ):
-                        sell = "SELL 4-5-x (21-60 min) con ma50 > and 3-28 (no incrocio 3-15) and deviation_sell 0.57 - 0.90 SORGERE FINTA ALLA RONALDO - r 8796"
+                        sell = "SELL 4-5-x (21-60 min) con ma50 > and 3-28 (no incrocio 3-15) and deviation_sell 0.57 - 0.90 FINTA ALLA RONALDO SOPRA RIALZO RIALZO - GIORNO - r 8796"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
@@ -10155,7 +10161,7 @@ class maddog:
                         ma50_last > ma50_2_min_ago
                         
                         and rapporto_delta_1_delta_2 < 1
-                        and ma100_last < ma100_60_min_ago
+                        and ma100_last > ma100_60_min_ago
                         
                         and deviation_ma100_sopra_ma200 > -0.10
                         and ma3_last < ma50_last
@@ -10163,7 +10169,7 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                       
                     ):
-                        sell = "SELL 4-5-x (21-60 min) con ma50 > and 3-50 (no incrocio 3-15) and deviation_sell 0.57 - 0.90 FINTA ALLA RONALDO tramonto - r 8797"
+                        sell = "SELL 4-5-x (21-60 min) con ma50 > and 3-50 (no incrocio 3-15) e deviation_sell 0.57-0.90 FINTA ALLA RONALDO SOPRA RIBASSO RIALZO - CREPUSCOLO - r 8797"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
