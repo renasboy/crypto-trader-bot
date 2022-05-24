@@ -831,7 +831,7 @@ class maddog:
                     
                     
                     
-                # ------------------------------------------------------------ BUY 1 se ma200> and ma300 > and 8>50 AND ma78 < AND 8 > 78 AND 5-28 > 0.11 
+                # BUY 1 se ma200> and ma300 > and 8>50 AND ma78 < AND 8 > 78 AND 5-28 > 0.11 
                 
                 elif (    
                     ma20_last > ma200_last
@@ -851,7 +851,7 @@ class maddog:
                     
                     
                     
-                # ------------------------------------------------------------ BUY 1 se ma200> and ma300 > and 8>50 AND ma78 < AND 8 < 78 AND 5-28 > 0.17 
+                # BUY 1 se ma200> and ma300 > and 8>50 AND ma78 < AND 8 < 78 AND 5-28 > 0.17 
                 
                 elif (    
                     ma20_last > ma200_last
@@ -879,8 +879,11 @@ class maddog:
                     
                     
                 
+                #################################################################################################################### ecco le 4 stagioni !
                 
-                # ------------------------------------------------------------ BUY 1 tempo ESTATE che considera il passare del TEMPO  CON ma30 > 
+                
+                
+                # BUY 1 tempo ESTATE che considera il passare del TEMPO  CON ma30 > 
                 
                 elif (     
                     ma50_last > ma100_last
@@ -902,7 +905,7 @@ class maddog:
                     
                 
                 
-                # ------------------------------------------------------------ BUY 1 tempo PRIMAVERA che considera il passare del tempo con ma30 < 
+                # BUY 1 tempo PRIMAVERA che considera il passare del tempo con ma30 < 
                 
                 elif (     
                     ma50_last > ma100_last
@@ -928,7 +931,7 @@ class maddog:
                 
                 
                 
-                # -------------------------------------- BUY 1 tempo INIZIO AUTUNNO (200 > 200 120 min) che considera il passare del tempo con ma30 > MA 100 < 200
+                # BUY 1 tempo INIZIO AUTUNNO (200 > 200 120 min) che considera il passare del tempo con ma30 > MA 100 < 200
                 
                 elif (     
                     ma50_last > ma100_last
@@ -953,9 +956,10 @@ class maddog:
                     
                     
                     
-                    
+                # BUY 1 tempo FINE AUTUNNO (quasi inverno !)
+                
                 elif (     
-                    ma50_last > ma100_last
+                    ma50_last > ma78_last
                     and ma200_last < ma200_120_min_ago
                     and deviation_ma5_sopra_ma28 > 0.20
                     and ma100_last < ma200_last
@@ -971,9 +975,11 @@ class maddog:
                     and ma2_last > ma20_last
                     and ma2_last > ma2_2_min_ago
                 ):    
-                    buy = "BUY 1 tempo FINE AUTUNNO (quasi inverno !) che considera il passare del tempo con 5-28 > 0.20 - r 813"
+                    buy = "BUY 1 tempo FINE AUTUNNO (quasi inverno !) con 50-78 che considera il passare del tempo con 5-28 > 0.20 - r 813"
                     action = "buy"
                     percentage = 50
+                    
+                    # 50-78 PRIMA ERA 50-100 (arrivava un po' tardi.) (questa era la mia impressione.)
                     
                     
                     
@@ -988,7 +994,7 @@ class maddog:
                 
                 
                 
-                # ------------------------------------------------------------ BUY 1 tempo INVERNO che considera il passare del tempo con ma30 < MA 100 < 200
+                # BUY 1 tempo INVERNO che considera il passare del tempo con ma30 < MA 100 < 200
                 
                 elif (     
                     ma50_last > ma100_last
@@ -1012,7 +1018,7 @@ class maddog:
                 
                     
                     
-                # ------------------------------------- BUY 1 con ma200 < 300< MA ma100> 100 60 min ago e doppio delta < and ma100 >60_min_ago STA RISALENDO !
+                # BUY 1 con ma200 < 300< MA ma100> 100 60 min ago e doppio delta < and ma100 >60_min_ago STA RISALENDO !
             
                 elif (       
                     ma200_last < ma200_20_min_ago
@@ -2862,10 +2868,10 @@ class maddog:
             
             
             
-                # BUY 2 che ci riprova TORNANDO ALLE ORIGINI con ma200< and ma300 < (compare stammi vicino !)
+                # BUY 2 che ci riprova TORNANDO ALLE ORIGINI con ma200< and ma300< (compare stammi vicino !)
                 
                 elif (
-                    deviation_buy2 > 0.10
+                    deviation_buy2 > 0.08
                     and deviation_bellissima > 0.16
                     and ma8_last > ma8_2_min_ago
                     and ma2_last > ma2_2_min_ago
@@ -2873,7 +2879,7 @@ class maddog:
                     and ma3_last > ma13_last
                     and deviation_buy_ma3_sopra_ma20 > 0.05
                     and deviation_ma4_sopra_ma25 > 0.05
-                    and deviation_ma5_sopra_ma30 > 0.173
+                    and deviation_ma5_sopra_ma30 > 0.17
                     and ma200_last < ma200_120_min_ago
                     and ma300_last < ma300_120_min_ago
                 ):
@@ -5504,7 +5510,7 @@ class maddog:
                         
                         
                         
-                    # SELL 1 50-90 min IPOTESI PEGGIORE con ma50< con deviation_ma39 <-0.205 and deviation_sell < -0.205 DOPPIO DELTA RISALITA
+                    # SELL 1 50-90 min IPOTESI PEGGIORE MA DOPPIO DELTA RISALITA con ma50< con deviation_ma39 <-0.205 and deviation_sell < -0.205
                     
                     elif (
                         ma50_last < ma50_2_min_ago
@@ -5512,14 +5518,14 @@ class maddog:
                         and deviation_trend_ma200 < -0.10
                         
                         and deviation_ma39 < -0.215
-                        and deviation_sell < -0.215
+                        and deviation_sell < -0.27
                         
                         and rapporto_delta_1_delta_2 < 1
                         and ma100_last > ma100_60_min_ago
                         
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 50-90 min IPOTESI PEGGIORE con ma50< con deviation_ma39 < -0.215 and deviation_sell < -0.215 DOPPIO DELTA RISALITA - r 4525"
+                        sell = "SELL 1 50-90 min IPOTESI PEGGIORE MA DOPPIO DELTA RISALITA con ma50< con deviation_ma39 < -0.215 and deviation_sell < -0.27 - r 4525"
                         action = "sell"
                         
                         
@@ -5727,21 +5733,42 @@ class maddog:
                     
                     ################################################################################### fare maradona 1 ma3>ma100 (69) e maradona 2 ma3<ma100 (50)
                     
-                    # MARADONA 1
+                    # MARADONA 1a
                     
                     elif (
                         ma50_last > ma50_2_min_ago
+                        and ma200_last > ma300_last
                         and ma3_last > ma100_last
                         and ma5_last < ma69_last
                         and deviation_sell > 0.35 and deviation_sell < 0.64
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 90-110 min con ma50 > con 5-69 (!) and deviation_sell 0.35 - 0.64 la prima FINTA DI MARADONA 1 (non toccare) - r 4692"
+                        sell = "SELL 1a 90-110 min con ma50 > con 5-69 (!) and deviation_sell 0.35 - 0.64 la prima FINTA DI MARADONA 1 (non toccare) - r 4692"
                         action = "sell"
                         
                         
+                    # MARADONA 1b
+                    
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and ma200_last < ma300_last
+                        and ma3_last > ma100_last
+                        and ma5_last < ma78_last
+                        and deviation_sell > 0.35 and deviation_sell < 0.64
+                        and ma2_last < ma2_2_min_ago
                         
+                    ):
+                        sell = "SELL 1b 90-110 min con ma50 > con 5-78 (!) and deviation_sell 0.35 - 0.64 la prima FINTA DI MARADONA 1 (non toccare) - r 4693"
+                        action = "sell"
+                        
+                        
+                    
+                    
+                    
+                    
+                    
+                    
                     # MARADONA 2
                     
                     elif (
@@ -10803,7 +10830,7 @@ class maddog:
             
             elif (
                 deviation_ma39 < -0.25
-                and deviation < -0.30
+                and deviation < -0.34
                 and ma2_last < ma2_2_min_ago 
                 
                 and ma50_last > ma50_2_min_ago
@@ -10811,7 +10838,7 @@ class maddog:
                 
                 and deviation_ma5_sotto_ma200 > -1.00
             ):
-                sell = "SELL condizione speciale SALVAGENTE 2 3-39 con ma50 > - con deviation_ma5_sotto_ma200 > -1.00 - r 9353"
+                sell = "SELL condizione speciale SALVAGENTE 2 3-39 con ma50 > - con deviation_ma5_sotto_ma200 > -1.00 and deviation < -0.34 - r 9353"
                 action = "sell"   
                 
 
