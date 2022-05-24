@@ -5747,19 +5747,43 @@ class maddog:
                         sell = "SELL 1a 90-110 min con ma50 > con 5-69 (!) and deviation_sell 0.35 - 0.64 la prima FINTA DI MARADONA 1 (non toccare) - r 4692"
                         action = "sell"
                         
-                        
-                    # MARADONA 1b
+                    
+                    
+                    
+                    
+                    
+                    # MARADONA 1b FASE LATERALE
                     
                     elif (
                         ma50_last > ma50_2_min_ago
                         and ma200_last < ma300_last
+                        and deviation_ma200_sotto_ma300 > -0.30
+                        
                         and ma3_last > ma100_last
                         and ma5_last < ma78_last
                         and deviation_sell > 0.35 and deviation_sell < 0.64
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1b 90-110 min con ma50 > con 5-78 (!) and deviation_sell 0.35 - 0.64 la prima FINTA DI MARADONA 1 (non toccare) - r 4693"
+                        sell = "SELL 1b FASE LATERALE 90-110 min con ma50 > con 5-78 (!) and deviation_sell 0.35 - 0.64 la prima FINTA DI MARADONA 1 - r 4693"
+                        action = "sell"
+                        
+                        
+                        
+                    # MARADONA 1b FASE RIBASSO
+                    
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and ma200_last < ma300_last
+                        and deviation_ma200_sotto_ma300 < -0.30
+                        
+                        and ma3_last > ma100_last
+                        and ma5_last < ma69_last
+                        and deviation_sell > 0.35 and deviation_sell < 0.64
+                        and ma2_last < ma2_2_min_ago
+                        
+                    ):
+                        sell = "SELL 1b FASE RIBASSO 90-110 min con ma50 > con 5-69 (!) and deviation_sell 0.35 - 0.64 la prima FINTA DI MARADONA 1 - r 4694"
                         action = "sell"
                         
                         
