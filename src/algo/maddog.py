@@ -722,6 +722,7 @@ class maddog:
                 elif (    
                     ma28_last > ma300_last
                     and ma300_last < ma300_120_min_ago
+                    and deviation_ma5_sopra_ma28 > 0.20
                     
                     and ma69_last > ma100_last
                     and ma3_last > ma8_last
@@ -732,6 +733,9 @@ class maddog:
                     buy = "BUY 1 con 28>300 and 69 > 100 and deviation_bellissima > 0.14 r 684"
                     action = "buy"
                     percentage = 50
+                    
+                    
+                    
                     
                     
               
@@ -2238,12 +2242,17 @@ class maddog:
                     and rapporto_delta_1_delta_2 > 1
                     and ma100_last > ma100_60_min_ago
                     
+                    and deviation_ma5_sopra_ma28 > 0.04
                     and ma2_last > ma2_2_min_ago
                 ):    
                     
-                    buy = "BUY 1 BUY 1 SITUAZIONE TREND LATERALE che mancava - DOPPIO DELTA - RIALZO - riga 1834"
+                    buy = "BUY 1 BUY 1 SITUAZIONE TREND LATERALE che mancava - DOPPIO DELTA - RIALZO and 5-28 > 0.04 - riga 1834"
                     action = "buy"
                     percentage = 30
+                    
+                    # ho aggiunto 5-28 > 0.05
+                    
+                    
                     
                     
                     
@@ -2492,19 +2501,20 @@ class maddog:
                 ##################################################################################
                 
                 
-                # BUY 2 con doppio delta < 1 E 100>  RIALZO trend crescita and deviation_ma5_sopra_ma28 > 0.14
+                # BUY 2C ( SOPRA and DOPPIO DELTA < 1 and 100> ) (ribasso-rialzo) - CREPUSCOLO and deviation_ma5_sopra_ma28 > 0.14
                 
                 elif (
                     deviation_buy2 > 0.10
                     and ma100_last > ma100_60_min_ago
                     
+                    and ma2_last > ma200_last
                     and rapporto_delta_1_delta_2 < 1
                     and ma100_last > ma100_60_min_ago
                     
+                    
                     and deviation_ma5_sopra_ma28 > 0.14
-                    
+                 
                     and deviation_bellissima > 0.12
-                    
                     and deviation_buy_ma3_sopra_ma13 > 0.10
                     and deviation_ma7_sopra_ma40 > 0.10
                     and ma4_last > ma9_last
@@ -2512,7 +2522,7 @@ class maddog:
                     and ma3_last > ma40_last
                     and ma4_last > ma78_last
                 ):
-                    buy = "BUY 2C DOPPIO DELTA< E 100> (RIALZO) - r 2015"
+                    buy = "BUY 2C ( SOPRA and DOPPIO DELTA < 1 and 100> ) (ribasso-rialzo) - CREPUSCOLO and deviation_ma5_sopra_ma28 > 0.14 - r 2015"
                     action = "buy"
                     percentage = 50
                     
@@ -10875,7 +10885,7 @@ class maddog:
             
             elif (
                 deviation_ma39 < -0.25
-                and deviation < -0.28
+                and deviation < -0.31
                 and ma2_last < ma2_2_min_ago 
                 
                 and ma50_last < ma50_2_min_ago
@@ -10883,7 +10893,7 @@ class maddog:
                 
                 and deviation_ma5_sotto_ma200 > -1.00
             ):
-                sell = "SELL condizione speciale SALVAGENTE 3 3-39 con ma50 < - con deviation_ma5_sotto_ma200 > -1.00 - r 9372"
+                sell = "SELL condizione speciale SALVAGENTE 3 3-39 < -0.25 and deviation < -0.31 con ma50 < - con deviation_ma5_sotto_ma200 > -1.00 - r 9372"
                 action = "sell"   
                 
 
