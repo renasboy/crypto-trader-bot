@@ -208,7 +208,7 @@ class maddog:
 
         # formula deviation
         
-        deviation = (ma4_last / last_trade_price - 1) * 100 if last_trade_price else 0
+        deviation = (ma5_last / last_trade_price - 1) * 100 if last_trade_price else 0
         self.algo_helper.info("deviation: {}".format(deviation))
         
        
@@ -2114,7 +2114,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                 
                 ):
-                    buy = "condizione RCCR - BUY 1 DURANTE UNA CORREZIONE FIAT che non e' un forte ribasso e non e' un crollo !  - r 1802"
+                    buy = "condizione RCCR - BUY 1 DURANTE UNA CORREZIONE FIAT che non e' un forte ribasso e non e' un crollo !  - r 1801"
                     action = "buy"
                     percentage = 30
                     
@@ -2126,8 +2126,44 @@ class maddog:
                 
                 
                 
+                # ECCO LA CONDIZIONE FIAT CHE FA PAURA ! MA CERCHIAMO DI FARLA ATTIVARE NEL MOMENTO GIUSTO
                 
-                
+                elif (
+                    deviation_buy_crollo_1 < -0.29
+                    and deviation_buy_crollo_1 > -0.59
+                    
+                    and ma300_last < ma300_60_min_ago
+                    and ma100_last < ma200_last
+                    and deviation_ma200_sotto_ma300 > -0.15
+                    and deviation_ma100_sopra_ma300 > -0.30
+                    
+                    and deviation_correzione > 0.03
+                    and deviation_ma5_sopra_ma28 > 0.05
+                    
+                    and deviation_ma25_sotto_ma300 < -0.60
+                    and ma2_last > ma2_2_min_ago
+                ):
+                    buy = "BUY 1 CORREZIONE FIAT CHE FA PAURA ! (MA ma100 e ma200 sono ANCORA VICINE alla ma300) (NON E' ANCORA UNA TRAGEDIA) - riga 1802"
+                    action = "buy"
+                    percentage = 40
+                    
+                    # questa e' la condizione che piu' di tutte mi ha fatto soffrire.
+                    # ma molte volte ha dato grandi soddisfazioni sul RCCR
+                    # io ho cercato di prendere LA PARTE MIGLIORE.
+                    # SPERIAMO. sempre.
+                    
+                    # deviation_ma100_sopra_ma300 significa 100/300 ( ma100 ancora NON SI E' ALLONTANATA TROPPO DALLA ma300 )
+                    # deviation_ma25_sotto_ma300 significa che anche ma25 deve andare almeno un po' sotto ma300 (per evitare piccole schegge rialziste !)
+                    # NON TOCCARE 5-28 > 0.05 !
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                 # BUY 1 SUL SUPPORTO 300 !
           
                 elif (    
@@ -5108,8 +5144,9 @@ class maddog:
                     
                     elif (
                         ma50_last < ma50_2_min_ago
-                        and deviation_ma39 < -0.20
-                        and deviation_sell < -0.27
+                        
+                        and deviation_correzione_2 < -0.20
+                        and deviation < -0.27
                         
                         and ma2_last < ma2_2_min_ago
                         
@@ -5120,6 +5157,11 @@ class maddog:
                         sell = "SELL 1 (21-50 min) con ma50 < e deviation_ma39 < -0.20 e deviation_sell < -0.27 TREND LATERALE (100>300 <0.69 and > -0.77) - r 4177"
                         action = "sell"
                         
+                        # HO AVUTO UN PROBLEMA GRANDE ! ha venduto con -0.14 ma io avevo -0.20 e -0.27 !!! ore 15:30 25 mag 2022
+                        # DEVIATION 3-39 DIVENTA 4-39 (deviation_correzione_2)
+                        # DEVIATION SELL DIVENTA 5-last trade price (deviation)
+                        
+                        # non mi arrendo !
                     
                     
                     ######################################################################## con ma50 DISTANTE dalla ma300 # queste 2 son un souvenir !
