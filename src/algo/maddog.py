@@ -2280,6 +2280,8 @@ class maddog:
                     and rapporto_delta_1_delta_2 > 1
                     and ma100_last > ma100_60_min_ago
                     
+                    and ma300_last > ma300_60_min_ago
+                    
                     and deviation_ma5_sopra_ma28 > 0.02
                     and ma2_last > ma2_2_min_ago
                 ):    
