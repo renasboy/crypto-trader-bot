@@ -2269,7 +2269,7 @@ class maddog:
                     
                 
                 
-                # BUY 1 SITUAZIONE TREND LATERALE che mancava - DOPPIO DELTA - RIALZO
+                # BUY 1 SITUAZIONE TREND LATERALE che mancava con ma300 > - DOPPIO DELTA - RIALZO
                 
                 elif (    
                
@@ -2286,13 +2286,38 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                 ):    
                     
-                    buy = "BUY 1 SITUAZIONE TREND LATERALE che mancava - SOPRA RIALZO RIALZO - GIORNO ! and 5-28 > 0.02 - riga 1834"
+                    buy = "BUY 1 SITUAZIONE TREND LATERALE che mancava con ma300 > - SOPRA RIALZO RIALZO - GIORNO ! and 5-28 > 0.02 - riga 1834"
                     action = "buy"
                     percentage = 30
                     
                     # ho aggiunto 5-28 > 0.05
                     # cosa curiosa SEMBRA CHE and ma2_last > ma2_2_min_ago abbia fatto ritardare questo BUY.
                     # ho tenuto i 2 minuti e ho ridotto 5-28
+                    
+                    
+                    
+                # BUY 1 SITUAZIONE TREND LATERALE che mancava con ma300 < - DOPPIO DELTA - RIALZO
+                
+                elif (    
+               
+                    ma8_last > ma300_last
+                    and ma100_last > ma200_last
+                    and ma100_last > ma300_last
+                    
+                    and rapporto_delta_1_delta_2 > 1
+                    and ma100_last > ma100_60_min_ago
+                    
+                    and ma300_last < ma300_60_min_ago
+                    
+                    and deviation_ma5_sopra_ma28 > 0.17
+                    and ma2_last > ma2_2_min_ago
+                ):    
+                    
+                    buy = "BUY 1 SITUAZIONE TREND LATERALE che mancava con ma300 < - SOPRA RIALZO RIALZO - GIORNO ! and 5-28 > 0.17 - riga 1835"
+                    action = "buy"
+                    percentage = 30
+                    
+                    
                     
                     
                     
