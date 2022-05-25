@@ -5367,16 +5367,34 @@ class maddog:
                     seconds_since_last_trade > 3001 and seconds_since_last_trade <= 5400
                 ):
                     
-                    
                     if (    
                         ma50_last > ma50_2_min_ago
+                        and ma100_last > ma200_last
                         and deviation_ma39 < -0.22
+                        and deviation_sell < -0.23
                         and ma2_last < ma2_2_min_ago
                     ):    
-                        sell = "SELL 1 da 50 a 90 min con ma50 > and deviation_ma39 <-0.22 - r 4382"
+                        sell = "SELL 1 da 50 a 90 min con ma50 > and deviation_ma39 <-0.22 and deviation_sell < -0.23 - r 4381"
                         action = "sell"
                         
                         # se non ha forza dopo 1 ora e' inutile continuare a sperare !
+                        
+                        
+                    elif (    
+                        ma50_last > ma50_2_min_ago
+                        and ma100_last < ma200_last
+                        and deviation_ma39 < -0.22
+                        and ma2_last < ma2_2_min_ago
+                    ):    
+                        sell = "SELL 1 da 50 a 90 min con ma50 > and deviation_ma39 < -0.22 - r 4382"
+                        action = "sell"
+                        
+                        # se non ha forza dopo 1 ora e' inutile continuare a sperare !
+                        # potrebbe essere situazione di crollo che vende con ma39 e senza deviation sell !
+                        
+                        
+                        
+                        
                         
                      
                     
@@ -5407,7 +5425,7 @@ class maddog:
                         sell = "SELL 1 da 50 a 90 min con ma50 > and incrocio 5-54 and deviation_sell 0.31-0.52 la prima FINTA ALLA MARADONA RAFFORZATO - r 4410"
                         action = "sell"
                         
-                        # MARADONA RAFFORZATO accompagna nelle prime fasi di crescita il titolo. poi interviene RONALDO se il rialzo comincia a farsi piu' consistente.
+                        # MARADONA RAFFORZATO accompagna nelle prime fasi di crescita. poi interviene RONALDO se il rialzo comincia a farsi piu' consistente.
                         
                         
                     # la prima FINTA ALLA MARADONA
@@ -5520,7 +5538,7 @@ class maddog:
                         
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 50-90 min IPOTESI PEGGIORE con ma50 < con deviation_ma39 <-0.19 and deviation_sell < -0.195 SOTTO RIBASSO RIBASSO - NOTTE - r 4505"
+                        sell = "SELL 1 50-90 min IPOTESI PEGGIORE con ma50 < con deviation_ma39 <-0.19 and dev sell < -0.195 SOTTO RIBASSO RIBASSO - NOTTE - r 4505"
                         action = "sell"
                         
                         
@@ -5541,9 +5559,10 @@ class maddog:
                         
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 50-90 min IPOTESI PEGGIORE MA DOPPIO DELTA E 100>con ma50< e deviation_ma39 < -0.215 e deviation_sell<-0.27 SOTTO RIALZO RIALZO - GIORNO - r 4525"
+                        sell = "SELL 1 50-90 min con ma50< e dev ma39 < -0.215 e dev sell <-0.27 SOTTO RIALZO RIALZO - GIORNO ! - r 4525"
                         action = "sell"
                         
+                        # IPOTESI PEGGIORE MA GIORNO !
                         
                         
                     
@@ -5724,14 +5743,33 @@ class maddog:
                 
                 elif seconds_since_last_trade > 5400 and seconds_since_last_trade <= 6600:
                     
+                    
                     if (    
                         ma50_last > ma50_2_min_ago
+                        and ma100_last > ma200_last
                         and deviation_ma39 < -0.22 
                         and deviation_sell < -0.21
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 90-110 min con ma50 > and deviation_ma39 <-0.22 and deviation_sell < -0.21 - r 4663"
+                        sell = "SELL 1 90-110 min con ma50 > and deviation_ma39 <-0.22 and deviation_sell < -0.21 - r 4662"
                         action = "sell"
+                        
+                        
+                        
+                    if (    
+                        ma50_last > ma50_2_min_ago
+                        and ma100_last < ma200_last
+                        and deviation_ma39 < -0.22 
+                        
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 1 90-110 min con ma50 > and deviation_ma39 <-0.22 - r 4663"
+                        action = "sell"
+                        
+                        # potrebbe essere una situazione di crollo con 39 senza deviation sell !
+                        
+                        
+                        
                         
                         
                        
@@ -7647,15 +7685,31 @@ class maddog:
                     
                     ###################################################################################   RIGHE DEL COMPA raddoppiate PER AUMENTO TOLLERANZA
                     
-                    
                     if (  
-                        ma50_last > ma50_2_min_ago 
+                        ma50_last > ma50_2_min_ago
+                        and ma100_last > ma200_last
+                        and ma2_last < ma2_2_min_ago 
+                        and deviation_ma39 < -0.22
+                        and deviation_sell < -0.25 
+                        and ma200_last > ma200_60_min_ago
+                    ):    
+                        sell = "SELL 2 dopo 110 min con ma50 > and deviation_ma39 <-0.22 (no ma3<ma39) - r 6461"
+                        action = "sell"
+                        
+                        
+                    if (  
+                        ma50_last > ma50_2_min_ago
+                        and ma100_last < ma200_last
                         and ma2_last < ma2_2_min_ago 
                         and deviation_ma39 < -0.22
                         and ma200_last > ma200_60_min_ago
                     ):    
                         sell = "SELL 2 dopo 110 min con ma50 > and deviation_ma39 <-0.22 (no ma3<ma39) - r 6462"
                         action = "sell"
+                        
+                        # POTREBBE ESSERE SITUAZIONE DI CROLLO SOLO CON 39 E SENZA DEVIATION SELL
+                        
+                        
                         
                    
                 
