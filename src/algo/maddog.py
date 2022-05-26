@@ -3339,8 +3339,45 @@ class maddog:
                     # deviation_buy3 = ma4_last/ma30_last
                     # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
                     
+                    
+                    
+                    
+                    
+                    
+                # BUY 3 NUOVO che ci riprova TORNANDO ALLE ORIGINI con ma200< and ma300<
                 
+                elif (
+                    deviation_buy2 > 0.05
+                    and deviation_ma5_sopra_ma28 > 0.15
+                    
+                    and ma8_last > ma8_2_min_ago
+                    and ma2_last > ma2_2_min_ago
+                    and ma3_last > ma7_last
+                    and ma3_last > ma13_last
+                    and deviation_buy_ma3_sopra_ma20 > 0.05
+                    and deviation_ma4_sopra_ma25 > 0.05
+                    
+                    
+                    and ma100_last > ma200_last
+                    and ma200_last < ma200_60_min_ago
+                    
+                ):
                
+                    buy = "BUY 3 NUOVO che ci riprova TORNANDO ALLE ORIGINI con ma200<  MA 100 e' andata sopra 200 ! - r 2317"
+                    action = "buy"
+                    percentage = 40
+
+                    # compare prega per me !
+                    # se ma200< MA 100 e' andata sopra 200 ! si torna alle origini ! 8-50 ! (con ma2 > ma2 2 min ago)
+                    # deviation_buy2 = ma8_last / ma50_last
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                 # BUY 3 RIALZO IMPROVVISO ! con ma200 > and ma100_last > ma200_last
                 
                 elif (
