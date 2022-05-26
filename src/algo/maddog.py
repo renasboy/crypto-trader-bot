@@ -354,6 +354,24 @@ class maddog:
         
         
         
+        
+        
+        # formula DEVIATION_ma5_sotto_ma300
+        
+        deviation_ma5_sotto_ma300 = (ma5_last / ma300_last - 1) * 100 if ma300_last else 0
+        self.algo_helper.info("deviation_ma5_sotto_ma300: {}".format(deviation_ma5_sotto_ma300))
+        
+        
+        # formula DEVIATION_ma28_sotto_ma100
+        
+        deviation_ma28_sotto_ma100 = (ma28_last / ma100_last - 1) * 100 if ma100_last else 0
+        self.algo_helper.info("deviation_ma28_sotto_ma100: {}".format(deviation_ma28_sotto_ma100))
+        
+        
+        
+        
+        
+        
         # formula DEVIATION_ma50_sotto_ma300
         
         deviation_ma50_sotto_ma300 = (ma50_last / ma300_last - 1) * 100 if ma300_last else 0
@@ -1916,7 +1934,7 @@ class maddog:
                     ma2_last > ma2_2_min_ago
                     and deviation_buy_crollo_1 < -0.91
                     and deviation_buy_crollo_1 > -1.50
-                    and deviation_ma5_sopra_ma28 > 0.05
+                    and deviation_ma5_sopra_ma28 > 0.03
                     and ma78_last < ma200_last
                 ):
                     buy = "BUY 1 GRANDE RIBASSO MASERATI CHE NON E' UN CROLLO ! con 5-28 - r 1683"
@@ -2752,8 +2770,9 @@ class maddog:
                 elif (
                     ma2_last > ma2_2_min_ago
                     and deviation_buy_crollo_1 < -1.70
+                    and deviation_buy_crollo_1 > -2.29
                     and deviation_buy_crollo_2 > 0.11
-                    and deviation_ma5_sopra_ma28 > 0.05
+                    and deviation_ma5_sopra_ma28 > 0.03
                 ):
                     buy = "BUY 2 DURANTE IL CROLLO - modo 2 - r 2112"
                     action = "buy"
@@ -3420,6 +3439,82 @@ class maddog:
                     
                     # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
                     
+                    
+                    
+                    
+                    
+                
+                ################################################################### condizioni che mancavano !!!
+                
+                # BUY 3 primo modo che ci riprova DURANTE IL CROLLO !
+
+                elif (
+                    ma2_last > ma2_2_min_ago
+                    and deviation_buy_crollo_1 < -2.30
+                    and ma2_last > ma7_last
+                ):
+                    buy = "BUY 3 che ci riprova DURANTE IL CROLLO - modo 1 2-7 - r 3437"
+                    action = "buy"
+                    percentage = 70
+                    
+                    # deviation_buy_crollo_1 = ma8_last / ma78_last
+                    
+                    
+                    
+               
+                # BUY 3 secondo modo che ci riprova DURANTE IL CROLLO !
+                
+                elif (
+                    ma2_last > ma2_2_min_ago
+                    and deviation_buy_crollo_1 < -1.70
+                    and deviation_buy_crollo_1 > -2.29
+                    and deviation_buy_crollo_2 > 0.11
+                    and deviation_ma5_sopra_ma28 > 0.03
+                ):
+                    buy = "BUY 3 che ci riprova DURANTE IL CROLLO - modo 2 - r 3455"
+                    action = "buy"
+                    percentage = 70
+                    
+                    # deviation_buy_crollo_1 = ma8_last / ma78_last
+                    # deviation_buy_crollo_2 = ma3_last / ma13_last
+                    
+                    
+                    
+                    
+                # BUY 3 che ci riprova DURANTE IL CROLLO - modo 3
+                
+                elif (
+                    
+                    ma5_last > ma20_last
+                    
+                    and deviation_ma5_sotto_ma300 < -2.40
+                    and deviation_ma100_laterale < -1.90
+                    and deviation_ma28_sotto_ma100 < -0.80
+                    
+                    
+                    and ma100_last < ma100_120_min_ago
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_120_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and ma2_last > ma2_2_min_ago
+                    
+                ):
+                    buy = "BUY 3 che ci riprova DURANTE IL CROLLO - modo 3 - r 3503"
+                    action = "buy"
+                    percentage = 70
+                    
+                    # and deviation_ma100_laterale < -1.90 e' 5 sotto 100 (NON TI PREOCCUPARE)
+                    # QUESTA CONDIZIONE E' STATA CREATA DOPO AVER VISTO UN CROLLO DOPO IL BUY 2 ma il BUY 3 non entrava in azione !
+                    
+                    
+                    
+                    
+                    
+                    
+                
                 
                 
                 
@@ -3445,6 +3540,18 @@ class maddog:
                     # deviation_correzione = ma3_last / ma25_last
                     # ma5 non deve allontanarsi troppo dalla ma200 !
                     # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     
          
             # ########################################################################################################## COMPRA sessione 4
@@ -3485,14 +3592,14 @@ class maddog:
                 
                 
                 
-                # BUY 3 di emergenza CROLLO FERRARI - modo 1
+                # BUY 4 di emergenza CROLLO FERRARI - modo 1
                 
                 elif (
                     ma2_last > ma2_2_min_ago
                     and deviation_buy_crollo_1 < -2.30
                     and ma3_last > ma28_last
                 ):
-                    buy = "BUY 3 di emergenza CROLLO FERRARI - modo 1 - 3-28 - r 2801"
+                    buy = "BUY 4 di emergenza CROLLO FERRARI - modo 1 - 3-28 - r 2801"
                     action = "buy"
                     percentage = 20
                     
@@ -3503,15 +3610,16 @@ class maddog:
                     
                 
                 
-                # BUY 3 di emergenza CROLLO FERRARI - modo 2 
+                # BUY 4 di emergenza CROLLO FERRARI - modo 2 
 
                 elif (
                     ma2_last > ma2_2_min_ago
                     and deviation_buy_crollo_1 < -1.61
+                    and deviation_buy_crollo_1 > -2.29
                     and deviation_buy_crollo_2 > 0.11
                     and ma8_last > ma50_last
                 ):
-                    buy = "BUY 3 di emergenza CROLLO FERRARI - modo 2 - r 2820"
+                    buy = "BUY 4 di emergenza CROLLO FERRARI - modo 2 - r 2820"
                     action = "buy"
                     percentage = 20
                     
