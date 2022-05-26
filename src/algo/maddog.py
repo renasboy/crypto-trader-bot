@@ -4043,11 +4043,81 @@ class maddog:
                     
                     
                     
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                # RIALZO IMPROVVISO 200< DOPO TANTO TEMPO DI TREND LATERALE - POTREBBE SUCCEDERE !
+                
+                elif (    
+                   
+                    ma200_last < ma200_20_min_ago
+                    
+                    and deviation_rialzo_improvviso_1 > 1.10
+                    and deviation_rialzo_improvviso_2 > 0.20
+                    and deviation_rialzo_improvviso_3 > 0.20
+                    and deviation_rialzo_improvviso_4 > 0.20
+              
+                    and deviation_range_1 < 0.20
+                    and deviation_range_1 > -0.20
+                    and deviation_range_2 < 0.20
+                    and deviation_range_2 > -0.20
+                    and deviation_range_3 < 0.20
+                    and deviation_range_3 > -0.20
+             
+                    and deviation_range_x < 0.20
+                    and deviation_range_x > -0.20
+                 
+                ):
+
+                    buy = "BUY 5 RIALZO IMPROVVISO con 200 < sempre tentando di evitare falsi acquisti DOPO TANTO TEMPO DI TREND LATERALE - POTREBBE SUCCEDERE ! - r 4084"
+                    action = "buy"
+                    percentage = 40
+                    
+                    # da 1.20 a 1.1 !
+                    
+                    
+                    
+                    
+                # RIALZO IMPROVVISO 200> DOPO TANTO TEMPO DI TREND LATERALE - POTREBBE SUCCEDERE !
+                
+                elif (
+                    ma200_last > ma200_20_min_ago
+                    and deviation_rialzo_improvviso_sopra > 0.46
+                    and deviation_rialzo_improvviso_1 > 0.46
+                    and deviation_rialzo_improvviso_2 > 0.19
+                    and deviation_rialzo_improvviso_3 > 0.19
+                    and deviation_range_1 < 0.22
+                    and deviation_range_1 > -0.22
+                    and deviation_range_2 < 0.22
+                    and deviation_range_2 > -0.22
+                    and deviation_range_x < 0.22
+                    and deviation_range_x > -0.22
+                ):
+             
+                    buy = "BUY 5 RIALZO IMPROVVISO con 200 > e con > 0.46 DOPO TANTO TEMPO DI TREND LATERALE - POTREBBE SUCCEDERE ! - r 4108"
+                    action = "buy"
+                    percentage = 50
+                    
+                    
+                    
+                    
                     
                 # NELLA CORREZIONE EVENTUALE (SIAMO AL BUY 5 !) NON HO MESSO and ma50_last > ma100_last
                 
                 # BUY 5A PAZZA DURANTE UNA piccola CORREZIONE che NON E' un forte ribasso e NON E' un crollo ! (compare stammi vicino!)
-              
+                
                 elif (
                     ma2_last > ma2_2_min_ago
                     and deviation_buy_crollo_1 < -0.29
@@ -4064,6 +4134,26 @@ class maddog:
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     # deviation_correzione = ma3_last / ma25_last
                     # ma5 non deve allontanarsi troppo dalla ma200 !
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     
                     
         
