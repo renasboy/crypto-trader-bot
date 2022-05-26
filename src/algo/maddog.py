@@ -3832,7 +3832,9 @@ class maddog:
               
             ############################################################################################################  compra sessione 5 in poi
             
-            # and ma50_last > ma100_last STIAMO AL BUY 5 PERDIO !
+            #################################################### ATTENZIONE! HO MESSO and ma78_last > ma150_last (50>100 non e' stata sufficiente)
+            
+            #################################################### STIAMO AL BUY 5 PERDIO !
             
             
             #  piu' alto il BUY - "effetti laterali"
@@ -3841,7 +3843,7 @@ class maddog:
                 
                 if (
                     ma50_last >= ma50_2_min_ago
-                    and ma50_last > ma100_last
+                    and ma78_last > ma150_last
                     
                     and deviation_buy3 > 0.10
                     and ma3_last > ma13_last
@@ -3864,7 +3866,7 @@ class maddog:
                 
                 elif (
                     ma50_last >= ma50_2_min_ago
-                    and ma50_last < ma100_last
+                    and ma78_last < ma150_last
                     and deviation_ma5_sopra_ma28 > 0.27
                     
                     and deviation_buy3 > 0.10
@@ -3897,13 +3899,13 @@ class maddog:
                 
                 
                 
-                # ATTENZIONE ! AL BUY 5 TRANNE CHE IN UNA EVENTUALE CORREZIONE HO MESSO 50>100 STIAMO AL BUY 5 !
-                # SENZA QUESTA 50>100 HO AVUTO MOLTI PROBLEMI !
+                # ATTENZIONE ! AL BUY 5 TRANNE CHE IN UNA EVENTUALE CORREZIONE HO MESSO 78>150 STIAMO AL BUY 5 PERDIO !
+                # SENZA QUESTA 78>150 HO AVUTO MOLTI PROBLEMI !
                 
                 
                 elif (
                     ma78_last >= ma78_2_min_ago
-                    and ma50_last > ma100_last
+                    and ma78_last > ma150_last
                     
                     and deviation_ma4_sopra_ma100 > 0.25
                     
@@ -3930,7 +3932,7 @@ class maddog:
                 
                 elif (
                     ma200_last >= ma200_120_min_ago
-                    and ma50_last > ma100_last
+                    and ma78_last > ma150_last
                     
                     and deviation_ma5_sopra_ma28 > 0.10
                     
@@ -3956,7 +3958,7 @@ class maddog:
              
                 elif (
                     ma78_last >= ma78_2_min_ago
-                    and ma50_last > ma100_last
+                    and ma78_last > ma150_last
                     
                     and deviation_ma4_sopra_ma100 > 0.25
                     
@@ -3984,7 +3986,7 @@ class maddog:
                 elif (    
                     
                     ma200_last > ma200_20_min_ago
-                    and ma50_last > ma100_last
+                    and ma78_last > ma150_last
                     
                     and (ma5_prev < ma28_prev and ma5_last > ma28_last)
                     and ma28_last > ma34_last
@@ -4016,7 +4018,7 @@ class maddog:
                 
                 elif (
                     ma78_last < ma78_2_min_ago
-                    and ma50_last > ma100_last
+                    and ma78_last > ma150_last
                     
                     and deviation_ma4_sopra_ma100 > 0.25
                     
