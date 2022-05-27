@@ -1048,7 +1048,8 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                     and deviation_ma5_sopra_ma28 > 0.20
                     
-                    and rapporto_delta_1_delta_2 < 1
+                    
+                    and delta_1 < delta_2
                     and ma100_last > ma100_60_min_ago
                     
                     and ma200_last < ma200_60_min_ago
@@ -1126,7 +1127,8 @@ class maddog:
                     and ma100_last > ma300_last
                     and ma100_last > ma100_120_min_ago
                     
-                    and rapporto_delta_1_delta_2 > 1
+                    
+                    and delta_1 < delta_2
                     and ma100_last > ma100_60_min_ago
                     
                     and ma11_last > ma50_last
@@ -1678,7 +1680,8 @@ class maddog:
                 elif (
                     deviation_ma3 < -1.30
                   
-                    and rapporto_delta_1_delta_2 < 1
+                    
+                    and delta_1 < delta_2
                     and ma100_last > ma100_60_min_ago
                     
                     and ma3_last > ma20_last
@@ -1762,7 +1765,8 @@ class maddog:
                     and ma100_last < ma100_10_min_ago
                     and deviation_ma200_sotto_ma300 < -0.27
                   
-                    and rapporto_delta_1_delta_2 < 1
+                    
+                    and delta_1 < delta_2
                     and ma100_last > ma100_60_min_ago
                     
                     and rapporto_delta_1_delta_2_69_39 < 1
@@ -1798,7 +1802,8 @@ class maddog:
                     and ma100_last < ma100_10_min_ago
                     and deviation_ma200_sotto_ma300 < -0.27
                    
-                    and rapporto_delta_1_delta_2 < 1
+                    
+                    and delta_1 < delta_2
                     and ma100_last > ma100_60_min_ago
                     
                     and ma2_last > ma2_2_min_ago
@@ -1830,7 +1835,8 @@ class maddog:
                     and ma100_last < ma100_10_min_ago
                     and deviation_ma200_sotto_ma300 < -0.27
              
-                    and rapporto_delta_1_delta_2 > 1
+                    
+                    and delta_1 > delta_2
                     and ma100_last < ma100_60_min_ago
                     
                     and ma2_last > ma2_2_min_ago
@@ -1863,7 +1869,8 @@ class maddog:
                     and deviation_ma200_sotto_ma300 < -0.27
                     
                  
-                    and rapporto_delta_1_delta_2 > 1
+                    
+                    and delta_1 > delta_2
                     and ma100_last < ma100_60_min_ago
                     and deviation_ma5_sopra_ma28 > 0.25
                     
@@ -2163,7 +2170,8 @@ class maddog:
                     deviation_buy_crollo_1 < -0.29
                     and deviation_buy_crollo_1 > -0.59
                     
-                    and rapporto_delta_1_delta_2 < 1
+                    
+                    and delta_1 < delta_2
                     and ma100_last < ma100_60_min_ago
                     
                     and deviation_ma5_sopra_ma28 > 0.05
@@ -2361,7 +2369,8 @@ class maddog:
                     and ma100_last > ma200_last
                     and ma100_last > ma300_last
                     
-                    and rapporto_delta_1_delta_2 > 1
+                    
+                    and delta_1 < delta_2
                     and ma100_last > ma100_60_min_ago
                     
                     and ma300_last > ma300_60_min_ago
@@ -2388,7 +2397,8 @@ class maddog:
                     and ma100_last > ma200_last
                     and ma100_last > ma300_last
                     
-                    and rapporto_delta_1_delta_2 > 1
+                    
+                    and delta_1 < delta_2
                     and ma100_last > ma100_60_min_ago
                     
                     and ma300_last < ma300_60_min_ago
@@ -2483,7 +2493,8 @@ class maddog:
                     
                     and ma200_last > ma200_15_min_ago
                     
-                    and rapporto_delta_1_delta_2 > 1
+                    
+                    and delta_1 < delta_2
                     and ma100_last > ma100_60_min_ago
                     
                     and deviation_ma5_sopra_ma28 > 0.01
@@ -2510,7 +2521,8 @@ class maddog:
                     ma200_last > ma300_last
                     and ma200_last > ma200_15_min_ago
                     
-                    and rapporto_delta_1_delta_2 < 1
+                    
+                    and delta_1 > delta_2
                     and ma100_last < ma100_60_min_ago
                     
                     and deviation_ma5_sopra_ma28 > 0.30
@@ -2660,7 +2672,8 @@ class maddog:
                     deviation_buy2 > 0.10
                     and ma100_last > ma100_60_min_ago
                   
-                    and rapporto_delta_1_delta_2 < 1
+                    
+                    and delta_1 > delta_2
                     and ma100_last > ma100_60_min_ago
                     
                     
@@ -2691,7 +2704,8 @@ class maddog:
                     deviation_buy2 > 0.10
                     
                     
-                    and rapporto_delta_1_delta_2 < 1
+                    
+                    and delta_1 > delta_2
                     and ma100_last < ma100_60_min_ago
                     
                     and deviation_ma5_sopra_ma28 > 0.16
@@ -2772,7 +2786,8 @@ class maddog:
                 elif (
                     deviation_buy2 > 0.01
                     
-                    and rapporto_delta_1_delta_2 > 1
+                    
+                    and delta_1 < delta_2
                     and ma100_last < ma100_60_min_ago
                     
                     and deviation_ma5_sopra_ma28 > 0.08
@@ -2799,7 +2814,8 @@ class maddog:
                 elif (
                     deviation_buy2 > 0.01
                     
-                    and rapporto_delta_1_delta_2 < 1
+                    
+                    and delta_1 > delta_2
                     and ma100_last < ma100_60_min_ago
                     
                     and deviation_ma5_sopra_ma28 > 0.29
@@ -3189,7 +3205,8 @@ class maddog:
                     and ma100_last < ma100_10_min_ago
                     and deviation_ma200_sotto_ma300 < -0.27
                   
-                    and rapporto_delta_1_delta_2 < 1
+                    
+                    and delta_1 < delta_2
                     and ma100_last > ma100_60_min_ago
                     
                     and deviation_ma5_sopra_ma28 > 0.07
@@ -4576,7 +4593,8 @@ class maddog:
                     elif (
                         ma50_last < ma50_2_min_ago
                         
-                        and rapporto_delta_1_delta_2 < 1
+                        
+                        and delta_1 < delta_2
                         and ma100_last > ma100_60_min_ago
                         
                         and (ma3_prev > ma33_prev and ma3_last < ma33_last)
@@ -4594,7 +4612,8 @@ class maddog:
                     elif (
                         ma50_last < ma50_2_min_ago
                         
-                        and rapporto_delta_1_delta_2 > 1
+                        
+                        and delta_1 > delta_2
                         and ma100_last < ma100_60_min_ago
                         
                         and (ma3_prev > ma33_prev and ma3_last < ma33_last)
@@ -4994,7 +5013,8 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                         
                         
-                        and rapporto_delta_1_delta_2 < 1
+                        
+                        and delta_1 < delta_2
                         and ma100_last > ma100_60_min_ago
                     ):
                         sell = "SELL 1 PARACADUTE CROLLO distanza< ma100-ma200 (5-12 min) Ema50< E ma3<ma16 and deviation_sell< -0.35 SOTTO RIALZO RIALZO - GIORNO- r 3711"
@@ -5016,7 +5036,8 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                         
                        
-                        and rapporto_delta_1_delta_2 > 1
+                        
+                        and delta_1 > delta_2
                         and ma100_last < ma100_60_min_ago
                     ):
                         sell = "SELL 1 PARACADUTE CROLLO distanza> ma100-ma200 (5-12 min) e ma50< and ma3 < ma16 and deviation_sell < -0.35 SOTTO RIBASSO RIBASSO - NOTTE - r 3732"
@@ -5345,7 +5366,8 @@ class maddog:
                     elif (
                         ma50_last > ma50_2_min_ago
                         
-                        and rapporto_delta_1_delta_2 > 1
+                        
+                        and delta_1 < delta_2
                         and ma100_last > ma100_60_min_ago
                         
                         and ma5_last < ma30_last
@@ -5363,7 +5385,8 @@ class maddog:
                     elif (
                         ma50_last > ma50_2_min_ago
                         
-                        and rapporto_delta_1_delta_2 < 1
+                        
+                        and delta_1 > delta_2
                         and ma100_last > ma100_60_min_ago
                         
                         and deviation_ma100_sopra_ma200 > -0.10
@@ -5398,7 +5421,8 @@ class maddog:
                     elif (
                         ma50_last > ma50_2_min_ago
                         
-                        and rapporto_delta_1_delta_2 > 1
+                        
+                        and delta_1 < delta_2
                         and ma100_last > ma100_60_min_ago
                         
                         and ma5_last < ma22_last
@@ -5420,7 +5444,8 @@ class maddog:
                     elif (
                         ma50_last > ma50_2_min_ago
                         
-                        and rapporto_delta_1_delta_2 < 1
+                        
+                        and delta_1 > delta_2
                         and ma100_last > ma100_60_min_ago
                         
                         and deviation_ma100_sopra_ma200 > -0.10
@@ -6007,7 +6032,8 @@ class maddog:
                         and deviation_ma39 < -0.19
                         and deviation_sell < -0.195
                         
-                        and rapporto_delta_1_delta_2 > 1
+                        
+                        and delta_1 > delta_2
                         and ma100_last < ma100_60_min_ago
                         
                         and ma2_last < ma2_2_min_ago
@@ -6028,7 +6054,8 @@ class maddog:
                         and deviation_ma39 < -0.215
                         and deviation_sell < -0.30
                         
-                        and rapporto_delta_1_delta_2 < 1
+                        
+                        and delta_1 < delta_2
                         and ma100_last > ma100_60_min_ago
                         
                         and ma2_last < ma2_2_min_ago
@@ -10314,7 +10341,8 @@ class maddog:
                     elif (
                         ma50_last >= ma50_2_min_ago
                         
-                        and rapporto_delta_1_delta_2 > 1
+                        
+                        and delta_1 < delta_2
                         and ma100_last > ma100_60_min_ago
                         
                         and ma5_last < ma25_last
@@ -10338,7 +10366,8 @@ class maddog:
                     elif (
                         ma50_last >= ma50_2_min_ago
                         
-                        and rapporto_delta_1_delta_2 < 1
+                        
+                        and delta_1 > delta_2
                         and ma100_last > ma100_60_min_ago
                         
                         and ma3_last < ma50_last
@@ -10370,7 +10399,8 @@ class maddog:
                     elif (
                         ma50_last >= ma50_2_min_ago
                         
-                        and rapporto_delta_1_delta_2 > 1
+                        
+                        and delta_1 < delta_2
                         and ma100_last > ma100_60_min_ago
                         
                         and ma4_last < ma20_last
@@ -10393,7 +10423,8 @@ class maddog:
                     elif (
                         ma50_last >= ma50_2_min_ago
                         
-                        and rapporto_delta_1_delta_2 < 1
+                        
+                        and delta_1 > delta_2
                         and ma100_last > ma100_60_min_ago
                         
                         and deviation_ma100_sopra_ma200 > -0.10
@@ -10622,7 +10653,8 @@ class maddog:
                     elif (
                         ma50_last >= ma50_2_min_ago
                         
-                        and rapporto_delta_1_delta_2 > 1
+                        
+                        and delta_1 < delta_2
                         and ma100_last > ma100_60_min_ago
                         
                         and (ma5_prev > ma25_prev and ma5_last < ma25_last)
@@ -10642,7 +10674,8 @@ class maddog:
                     elif (
                         ma50_last >= ma50_2_min_ago
                         
-                        and rapporto_delta_1_delta_2 < 1
+                        
+                        and delta_1 > delta_2
                         and ma100_last > ma100_60_min_ago
                         
                         and deviation_ma100_sopra_ma200 > -0.10
@@ -10695,7 +10728,8 @@ class maddog:
                     elif (
                         ma50_last > ma50_2_min_ago
                         
-                        and rapporto_delta_1_delta_2 > 1
+                        
+                        and delta_1 < delta_2
                         and ma100_last > ma100_60_min_ago
                         
                         and ma3_last < ma28_last
@@ -10703,7 +10737,7 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                       
                     ):
-                        sell = "SELL 4-5-x (21-60 min) con ma50 > and 3-28 (no incrocio 3-15) and deviation_sell 0.57 - 0.90 FINTA ALLA RONALDO SOPRA RIALZO RIALZO - GIORNO - r 8796"
+                        sell = "SELL 4-5-x (21-60 min) con ma50 > and 3-28 (no incrocio 3-15) and deviation_sell 0.57 - 0.90 FINTA ALLA RONALDO - GIORNO - r 8796"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
@@ -10716,7 +10750,8 @@ class maddog:
                     elif (
                         ma50_last > ma50_2_min_ago
                         
-                        and rapporto_delta_1_delta_2 < 1
+                        
+                        and delta_1 > delta_2
                         and ma100_last > ma100_60_min_ago
                         
                         and deviation_ma100_sopra_ma200 > -0.10
@@ -10725,7 +10760,7 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                       
                     ):
-                        sell = "SELL 4-5-x (21-60 min) con ma50 > and 3-50 (no incrocio 3-15) e deviation_sell 0.57-0.90 FINTA ALLA RONALDO SOPRA RIBASSO RIALZO - CREPUSCOLO - r 8797"
+                        sell = "SELL 4-5-x (21-60 min) con ma50 > and 3-50 (no incrocio 3-15) e deviation_sell 0.57-0.90 FINTA ALLA RONALDO - CREPUSCOLO - r 8797"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
@@ -10830,7 +10865,10 @@ class maddog:
                         sell = "SELL 4-5-x RAFFORZATA (21-60 min) con ma50 < and deviation_sell < 0.29 - r 8864"
                         action = "sell"
                         
-                        
+                    
+                    
+                    
+                    
                     elif (    
                         ma50_last < ma50_2_min_ago
                         and ma50_last < ma100_last
@@ -10861,6 +10899,8 @@ class maddog:
                     ):
                         sell = "SELL 4-5-x (21-60 min) con ma50 < and incrocio 3-78 and deviation_sell < -0.37 - r 8877"
                         action = "sell"
+                    
+                    
                     
                     
                     
