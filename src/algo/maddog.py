@@ -2196,7 +2196,8 @@ class maddog:
                     deviation_buy_crollo_1 < -0.29
                     and deviation_buy_crollo_1 > -0.59
                     
-                    and rapporto_delta_1_delta_2 > 1
+                    
+                    and delta_1 > delta_2
                     and ma100_last < ma100_60_min_ago
                     
                     and deviation_ma5_sopra_ma28 > 0.30
