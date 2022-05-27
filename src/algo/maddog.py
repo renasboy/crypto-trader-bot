@@ -5339,15 +5339,32 @@ class maddog:
                         # deviation_sell = ma3_last/last_trade_price
                         
                         
+                    
+                    
+                    
+                    
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and (ma5_prev > ma100_prev and ma5_last < ma100_last)
+                        and deviation_sell < -0.29
+                        and ma300_last > ma300_120_min_ago
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 1 (21-50 min) con ma50 > and incrocio 5-100 cuscino di sant' antonio (no 5<100) and deviation_sell < -0.29 - r 4015"
+                        action = "sell"
                         
-               
+                        # deviation_sell = ma3_last/last_trade_price
+                        
+                        
+                        
                     elif (
                         ma50_last > ma50_2_min_ago
                         and (ma5_prev > ma100_prev and ma5_last < ma100_last)
                         and deviation_sell < -0.26
+                        and ma300_last < ma300_120_min_ago
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 (21-50 min) con ma50 > and incrocio 5-100 cuscino di sant' antonio (no 5<100) and deviation_sell < -0.26 - r 4015"
+                        sell = "SELL 1 (21-50 min) con ma50 > and incrocio 5-100 cuscino di sant' antonio (no 5<100) and deviation_sell < -0.26 - r 4016"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
@@ -7477,14 +7494,26 @@ class maddog:
                     ##############################################################################################################################
                         
                     
-                    
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and (ma5_prev > ma100_prev and ma5_last < ma100_last)
+                        and deviation_sell < -0.29
+                        and ma300_last > ma300_120_min_ago
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 2 (21-60 min) con ma50 > and incrocio 5-100 cuscino di sant' antonio (no 5<100) and deviation_sell < -0.29 - r 5754"
+                        action = "sell"
+                        
+                        
+                        
                     elif (
                         ma50_last > ma50_2_min_ago
                         and (ma5_prev > ma100_prev and ma5_last < ma100_last)
                         and deviation_sell < -0.26
+                        and ma300_last < ma300_120_min_ago
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 2 (21-60 min) con ma50 > and incrocio 5-100 cuscino di sant' antonio (no 5<100) and deviation_sell < -0.26 - r 5754"
+                        sell = "SELL 2 (21-60 min) con ma50 > and incrocio 5-100 cuscino di sant' antonio (no 5<100) and deviation_sell < -0.26 - r 5755"
                         action = "sell"
                   
                         # deviation_sell = ma3_last/last_trade_price
@@ -7492,6 +7521,13 @@ class maddog:
                         # vai compaaaaaaaaaa
                         # poco guadagno ma piu' alta
                         # molto guadagno ma piu' bassa
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                     
                     
                     
