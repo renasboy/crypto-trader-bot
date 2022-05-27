@@ -2157,7 +2157,7 @@ class maddog:
                 
                 
                 
-                # ECCO LA CONDIZIONE FIAT CHE FA PAURA ! MA CERCHIAMO DI FARLA ATTIVARE NEL MOMENTO GIUSTO (SOTTO cresce diminuisce) AURORA
+                # ECCO LA CONDIZIONE FIAT CHE FA PAURA ! MA CERCHIAMO DI FARLA ATTIVARE NEL MOMENTO GIUSTO (SOTTO RIALZO RIBASSO) AURORA
                 
                 elif (
                     deviation_buy_crollo_1 < -0.29
@@ -2190,7 +2190,7 @@ class maddog:
                     
                     
                     
-                # FIAT SOTTO CRESCE diminuisce NOTTE
+                # FIAT SOTTO RIBASSO RIBASSO - NOTTE
                 
                 elif (
                     deviation_buy_crollo_1 < -0.29
@@ -2212,7 +2212,7 @@ class maddog:
                     and deviation_ma25_sotto_ma300 < -0.60
                     and ma2_last > ma2_2_min_ago
                 ):
-                    buy = "BUY 1 CORREZIONE FIAT CHE FA PAURA ! (MA ma100 e ma200 sono ANCORA VICINE alla ma300) (SOTTO CRESCE diminuisce ) NOTTE ! - riga 1803"
+                    buy = "BUY 1 CORREZIONE FIAT CHE FA PAURA ! (MA ma100 e ma200 sono ANCORA VICINE alla ma300) (SOTTO RIBASSO RIBASSO ) NOTTE ! - riga 1803"
                     action = "buy"
                     percentage = 40
                     
