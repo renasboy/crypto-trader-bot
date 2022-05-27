@@ -1865,10 +1865,11 @@ class maddog:
                  
                     and rapporto_delta_1_delta_2 > 1
                     and ma100_last < ma100_60_min_ago
+                    and deviation_ma5_sopra_ma28 > 0.25
                     
                     and ma2_last > ma2_2_min_ago
                 ):
-                    buy = "BUY 1 FIAT OK (DOPPIO DELTA) RIBASSO ! 8-39  SOTTO RBASSO RIBASSO  - NOTTE ! - r 1620"
+                    buy = "BUY 1 FIAT OK (DOPPIO DELTA) RIBASSO ! 8-39  SOTTO RIBASSO RIBASSO  - NOTTE ! - r 1620"
                     action = "buy"
                     percentage = 40
                     
@@ -2156,13 +2157,13 @@ class maddog:
                 
                 
                 
-                # ECCO LA CONDIZIONE FIAT CHE FA PAURA ! MA CERCHIAMO DI FARLA ATTIVARE NEL MOMENTO GIUSTO (sopra cresce diminuisce) AURORA
+                # ECCO LA CONDIZIONE FIAT CHE FA PAURA ! MA CERCHIAMO DI FARLA ATTIVARE NEL MOMENTO GIUSTO (SOTTO cresce diminuisce) AURORA
                 
                 elif (
                     deviation_buy_crollo_1 < -0.29
                     and deviation_buy_crollo_1 > -0.59
                     
-                    and rapporto_delta_1_delta_2 > 1
+                    and rapporto_delta_1_delta_2 < 1
                     and ma100_last < ma100_60_min_ago
                     
                     and deviation_ma5_sopra_ma28 > 0.05
@@ -2178,7 +2179,7 @@ class maddog:
                     and deviation_ma25_sotto_ma300 < -0.60
                     and ma2_last > ma2_2_min_ago
                 ):
-                    buy = "BUY 1 CORREZIONE FIAT CHE FA PAURA ! (MA ma100 e ma200 sono ANCORA VICINE alla ma300) (sopra cresce diminuisce) AURORA - riga 1802"
+                    buy = "BUY 1 CORREZIONE FIAT CHE FA PAURA ! (MA ma100 e ma200 sono ANCORA VICINE alla ma300) (SOTTO cresce diminuisce) AURORA - riga 1802"
                     action = "buy"
                     percentage = 40
                     
@@ -2189,13 +2190,13 @@ class maddog:
                     
                     
                     
-                # FIAT sopra diminuisce diminuisce NOTTE
+                # FIAT SOTTO CRESCE diminuisce NOTTE
                 
                 elif (
                     deviation_buy_crollo_1 < -0.29
                     and deviation_buy_crollo_1 > -0.59
                     
-                    and rapporto_delta_1_delta_2 < 1
+                    and rapporto_delta_1_delta_2 > 1
                     and ma100_last < ma100_60_min_ago
                     
                     and deviation_ma5_sopra_ma28 > 0.30
@@ -2211,7 +2212,7 @@ class maddog:
                     and deviation_ma25_sotto_ma300 < -0.60
                     and ma2_last > ma2_2_min_ago
                 ):
-                    buy = "BUY 1 CORREZIONE FIAT CHE FA PAURA ! (MA ma100 e ma200 sono ANCORA VICINE alla ma300) (sopra diminuisce diminuisce ) NOTTE ! - riga 1803"
+                    buy = "BUY 1 CORREZIONE FIAT CHE FA PAURA ! (MA ma100 e ma200 sono ANCORA VICINE alla ma300) (SOTTO CRESCE diminuisce ) NOTTE ! - riga 1803"
                     action = "buy"
                     percentage = 40
                     
