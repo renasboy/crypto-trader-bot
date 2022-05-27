@@ -3428,7 +3428,26 @@ class maddog:
                     
                     
                     
-             
+                elif (
+                    deviation_ma4_sopra_ma30 > 0.15
+                    and deviation > -0.30
+                    and deviation_bellissima > 0.07
+                    and ma39_last > ma50_last
+                    and delta_buy3_incrocio_ma3_ma8 >= 0.06
+                    and ma3_last > ma8_last
+                    and ma3_last >= ma69_last
+                    and ma4_last >= ma4_2_min_ago
+                    and ma2_last >= ma2_2_min_ago
+                    and ma5_last >= ma15_last
+                    and ma5_last >= ma25_last
+                ):    
+                    buy = "BUY 3B da RCCR - se ma39 > ma50 - r 2581"
+                    action = "buy"
+                    percentage = 50
+                    
+                    
+                    
+                    
                 elif (
                     deviation_ma4_sopra_ma30 > 0.15
                     and (ma3_prev < ma22_prev and ma3_last > ma22_last)
@@ -3443,12 +3462,17 @@ class maddog:
                     and ma5_last >= ma15_last
                     and ma5_last >= ma25_last
                 ):    
-                    buy = "BUY 3B RIVOLUZIONARIO se ma39 > ma50 - r 2582"
+                    buy = "BUY 3C RIVOLUZIONARIO se ma39 > ma50 - r 2582"
                     action = "buy"
                     percentage = 50
                     
                     # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
-                    # ho dovuto aggiungere incrocio dal basso! 
+                    # ho dovuto aggiungere incrocio dal basso!
+                    
+                    
+                    
+                    
+                    
                 
               
                 elif (
@@ -3465,7 +3489,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                     and ma7_last > ma25_last
                 ):
-                    buy = "BUY 3C RIVOLUZIONARIO se ma69 < - r 2604"
+                    buy = "BUY 3D RIVOLUZIONARIO se ma69 < - r 2604"
                     action = "buy"
                     percentage = 40
                     
@@ -6381,16 +6405,37 @@ class maddog:
                         # ma39 non deve vendere laterale quindi per farlo vendere in alto ho dato 0.20
                         
                         
-                 
+                        
+                        
+                        
+                        
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and ma2_last < ma2_2_min_ago
+                        and deviation_sell < -0.19
+                        and ma3_last < ma39_last
+                        and ma100_last < ma100_60_min_ago
+                        and ma300_last > ma300_120_min_ago
+                    ):
+                        sell = "SELL 1 90-110 min con ma50 < and ma100 < and (deviation_sell < -0.15 and ma3_last < ma39_last) MA 300>120min ago - r 4789"
+                        action = "sell"
+                        
+                        
                     elif (
                         ma50_last < ma50_2_min_ago
                         and ma2_last < ma2_2_min_ago
                         and deviation_sell < -0.15
                         and ma3_last < ma39_last
                         and ma100_last < ma100_60_min_ago
+                        and ma300_last < ma300_120_min_ago
                     ):
-                        sell = "SELL 1 90-110 min con ma50 < and ma100 < and (deviation_sell < -0.15 and ma3_last < ma39_last) - r 4790"
+                        sell = "SELL 1 90-110 min con ma50 < and ma100 < and (deviation_sell < -0.15 and ma3_last < ma39_last) 300<120 min ago - r 4790"
                         action = "sell"
+                        
+                        
+                        
+                        
+                        
                         
                         
                     
@@ -7510,7 +7555,7 @@ class maddog:
                         and deviation_sell > 2.71
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "sessione 2 SELL (21-60 min) con ma50 > and incrocio 3-20 and deviation_sell > 2.71 - r 5853"
+                        sell = "SELL 2 (21-60 min) con ma50 > and incrocio 3-20 and deviation_sell > 2.71 - r 5853"
                         action = "sell"
                         
 
@@ -7520,15 +7565,22 @@ class maddog:
                     
                     
                     
+                        
                     elif (        
                         ma50_last < ma50_2_min_ago
                         and ma300_last > ma300_120_min_ago
                         and ma2_last < ma2_2_min_ago 
-                        and deviation_ma39 < -0.27
+                        and deviation_ma39 < -0.30
                         and ma200_last < ma200_60_min_ago
                     ):
-                        sell = "sessione 2 SELL (21-60 min) con ma50 < and deviation_ma39 < -0.27 - r 5868"
+                        sell = "SELL 2 (21-60 min) con ma50 < and deviation_ma39 < -0.30 - r 5867"
                         action = "sell"
+                        
+                        
+                        
+                        
+                        
+                        
                         
                         
                         
@@ -7541,7 +7593,7 @@ class maddog:
                         and deviation_ma39 < -0.31
                         and ma200_last < ma200_60_min_ago
                     ):
-                        sell = "sessione 2 SELL (21-60 min) con ma50 < and deviation_ma39 < -0.31 - r 5868"
+                        sell = "SELL 2 (21-60 min) con ma50 < and deviation_ma39 < -0.31 - r 5868"
                         action = "sell"
                         
                         # durante il crollo non devi pensare ai centesimi !
@@ -7558,7 +7610,7 @@ class maddog:
                         and deviation_sell < -0.32
                         and ma200_last < ma200_60_min_ago
                     ):
-                        sell = "sessione 2 SELL (21-60 min) con ma50 < and deviation_sell < -0.32 - r 5879"
+                        sell = "SELL 2 (21-60 min) con ma50 < and deviation_sell < -0.32 - r 5879"
                         action = "sell"
                         
                         
@@ -7572,7 +7624,7 @@ class maddog:
                         and deviation_sell < -0.37
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "sessione 2 SELL (21-60 min) con ma50 < and incrocio 3-78 and deviation_sell < -0.37 - r 5893"
+                        sell = "SELL 2 (21-60 min) con ma50 < and incrocio 3-78 and deviation_sell < -0.37 - r 5893"
                         action = "sell"
                         
                         
@@ -7586,7 +7638,7 @@ class maddog:
                         and deviation_sell < -0.27
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "sessione 2 SELL (21-60 min) con ma50 < and INCROCIO 3-100 (no 3<100) CUSCINO DI SANT' ANTONIO - r 5907"
+                        sell = "SELL 2 (21-60 min) con ma50 < and INCROCIO 3-100 (no 3<100) CUSCINO DI SANT' ANTONIO - r 5907"
                         action = "sell"
                         
                         
