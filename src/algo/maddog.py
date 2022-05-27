@@ -2141,14 +2141,31 @@ class maddog:
                     
                     
                     
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                 
                 
                 
-                # ECCO LA CONDIZIONE FIAT CHE FA PAURA ! MA CERCHIAMO DI FARLA ATTIVARE NEL MOMENTO GIUSTO
+                # ECCO LA CONDIZIONE FIAT CHE FA PAURA ! MA CERCHIAMO DI FARLA ATTIVARE NEL MOMENTO GIUSTO (sopra cresce diminuisce) AURORA
                 
                 elif (
                     deviation_buy_crollo_1 < -0.29
                     and deviation_buy_crollo_1 > -0.59
+                    
+                    and rapporto_delta_1_delta_2 > 1
+                    and ma100_last < ma100_60_min_ago
+                    
+                    and deviation_ma5_sopra_ma28 > 0.05
                     
                     and ma300_last < ma300_60_min_ago
                     and ma100_last < ma200_last
@@ -2156,12 +2173,45 @@ class maddog:
                     and deviation_ma100_sopra_ma300 > -0.30
                     
                     and deviation_correzione > 0.03
-                    and deviation_ma5_sopra_ma28 > 0.05
+                    
                     
                     and deviation_ma25_sotto_ma300 < -0.60
                     and ma2_last > ma2_2_min_ago
                 ):
-                    buy = "BUY 1 CORREZIONE FIAT CHE FA PAURA ! (MA ma100 e ma200 sono ANCORA VICINE alla ma300) (NON E' ANCORA UNA TRAGEDIA) - riga 1802"
+                    buy = "BUY 1 CORREZIONE FIAT CHE FA PAURA ! (MA ma100 e ma200 sono ANCORA VICINE alla ma300) (sopra cresce diminuisce) AURORA - riga 1802"
+                    action = "buy"
+                    percentage = 40
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                # FIAT sopra diminuisce diminuisce NOTTE
+                
+                elif (
+                    deviation_buy_crollo_1 < -0.29
+                    and deviation_buy_crollo_1 > -0.59
+                    
+                    and rapporto_delta_1_delta_2 < 1
+                    and ma100_last < ma100_60_min_ago
+                    
+                    and deviation_ma5_sopra_ma28 > 0.30
+                    
+                    and ma300_last < ma300_60_min_ago
+                    and ma100_last < ma200_last
+                    and deviation_ma200_sotto_ma300 > -0.15
+                    and deviation_ma100_sopra_ma300 > -0.30
+                    
+                    and deviation_correzione > 0.03
+                    
+                    
+                    and deviation_ma25_sotto_ma300 < -0.60
+                    and ma2_last > ma2_2_min_ago
+                ):
+                    buy = "BUY 1 CORREZIONE FIAT CHE FA PAURA ! (MA ma100 e ma200 sono ANCORA VICINE alla ma300) (sopra diminuisce diminuisce ) NOTTE ! - riga 1803"
                     action = "buy"
                     percentage = 40
                     
@@ -2181,7 +2231,21 @@ class maddog:
                     
                     
                     
-                    
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 # BUY 1 SUL SUPPORTO 300 !
           
                 elif (    
@@ -2694,11 +2758,26 @@ class maddog:
                     percentage = 70
                     
                     
-                    
+               
+            
+            
+            
+            
+            
+            
+                # BUY 2C con 100< and 200< con INCROCIO 7-50 PIU' FORTE (SOPRA -CRESCE-DIMINUISCE) aurora
+                
                 elif (
                     deviation_buy2 > 0.01
-                    and ma50_last < ma100_last
+                    
+                    and rapporto_delta_1_delta_2 > 1
+                    and ma100_last < ma100_60_min_ago
+                    
                     and deviation_ma5_sopra_ma28 > 0.08
+                    
+                    and ma50_last < ma100_last
+                    
+                    
                     and ma200_last < ma200_120_min_ago
                     
                     and ma100_last < ma100_50_min_ago
@@ -2706,12 +2785,46 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                 ):
                
-                    buy = "BUY 2C con 100< and 200< con INCROCIO 7-50 - r 2080"
+                    buy = "BUY 2C con 100< and 200< con INCROCIO 7-50 and 5-28 >0.08 (SOPRA -CRESCE-DIMINUISCE) aurora- r 2081"
+                    action = "buy"
+                    percentage = 70
+                    
+                    
+                    
+                    
+                # BUY 2C con 100< and 200< con INCROCIO 7-50 PIU' FRAGILE (SOPRA DIMINUISCE DIMINUISCE)notte
+                
+                elif (
+                    deviation_buy2 > 0.01
+                    
+                    and rapporto_delta_1_delta_2 < 1
+                    and ma100_last < ma100_60_min_ago
+                    
+                    and deviation_ma5_sopra_ma28 > 0.29
+                    
+                    and ma50_last < ma100_last
+                    
+                    and ma200_last < ma200_120_min_ago
+                    
+                    and ma100_last < ma100_50_min_ago
+                    and (ma7_prev < ma50_prev and ma7_last > ma50_last)
+                    and ma2_last > ma2_2_min_ago
+                ):
+               
+                    buy = "BUY 2C con 100< and 200< con INCROCIO 7-50 and 5-28>0.29 (SOPRA DIMINUISCE DIMINUISCE) NOTTE!- r 2082"
                     action = "buy"
                     percentage = 70
                     
                     # deviation_buy2 = ma8_last / ma50
                     # incrocio va bene nel trend laterale NON TOCCARLO ! ho messo incrocio per evitare punti sopvrapposti
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     
                     
                     
@@ -5887,14 +6000,14 @@ class maddog:
                         and deviation_trend_ma200 < -0.10
                         
                         and deviation_ma39 < -0.215
-                        and deviation_sell < -0.27
+                        and deviation_sell < -0.30
                         
                         and rapporto_delta_1_delta_2 < 1
                         and ma100_last > ma100_60_min_ago
                         
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 50-90 min con ma50< e dev ma39 < -0.215 e dev sell <-0.27 SOTTO RIALZO RIALZO - GIORNO ! - r 4525"
+                        sell = "SELL 1 50-90 min con ma50< e dev ma39 < -0.215 e dev sell <-0.30 SOTTO RIALZO RIALZO - GIORNO ! - r 4525"
                         action = "sell"
                         
                         # IPOTESI PEGGIORE MA GIORNO !
