@@ -371,6 +371,11 @@ class maddog:
         
         
         
+        # formula DEVIATION_ma50_sotto_ma200
+        
+        deviation_ma50_sotto_ma200 = (ma50_last / ma200_last - 1) * 100 if ma200_last else 0
+        self.algo_helper.info("deviation_ma50_sotto_ma200: {}".format(deviation_ma50_sotto_ma200))
+        
         
         # formula DEVIATION_ma50_sotto_ma300
         
@@ -981,12 +986,18 @@ class maddog:
                 # BUY 1 tempo FINE AUTUNNO (quasi inverno !)
                 
                 elif (     
-                    ma50_last > ma78_last
+                    ma8_last > ma50_last
+                    and ma8_last < ma100_last
+                    and ma8_last < ma200_last
+                    and ma8_last < ma300_last
+                    
                     and ma200_last < ma200_120_min_ago
+                    
+                    and deviation_ma50_sotto_ma200 < -0.22
+                    and ma30_last > ma30_40_min_ago
+                    
                     and deviation_ma5_sopra_ma28 > 0.20
                     and ma100_last < ma200_last
-                    
-                    and ma30_last > ma30_40_min_ago
                     
                     and ma11_last > ma125_last
                     
@@ -1002,7 +1013,7 @@ class maddog:
                     percentage = 50
                     
                     # 50-78 PRIMA ERA 50-100 (arrivava un po' tardi.) (questa era la mia impressione.)
-                    
+                    # 8>50
                     
                     
                     ################################################################################################ fine autunno
