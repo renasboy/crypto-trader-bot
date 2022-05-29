@@ -983,21 +983,50 @@ class maddog:
                     
                     
                     
+                    
+                # BUY 1 tempo FINE AUTUNNO PRECEDENTE(quasi inverno !)
+                
+                elif (     
+                    ma50_last > ma78_last
+               
+                    and ma200_last < ma200_120_min_ago
+                    and deviation_ma5_sopra_ma28 > 0.20
+                    and ma100_last < ma200_last
+
+                    and ma30_last > ma30_40_min_ago
+
+                    and deviation_ma5_sopra_ma28 > 0.20
+                    and ma11_last > ma125_last
+
+                    and deviation_bellissima > 0.06
+                    and ma20_last > ma20_2_min_ago
+                    and ma5_last > ma5_2_min_ago
+                    and ma2_last > ma20_last
+                    and ma2_last > ma2_2_min_ago
+                ):    
+                    buy = "BUY 1 PERICOLOSA tempo FINE AUTUNNO LENTO (quasi inverno !) con 50-78 che considera il passare del tempo con 5-28 > 0.20 - r 813"
+                    action = "buy"
+                    percentage = 50
+                    
+                    
+                    
                 # BUY 1 tempo FINE AUTUNNO (quasi inverno !)
                 
                 elif (     
                     ma8_last > ma50_last
+                    and ma30_last > ma30_40_min_ago
+                    
                     and ma8_last < ma100_last
                     and ma8_last < ma200_last
                     and ma8_last < ma300_last
                     
                     and ma200_last < ma200_120_min_ago
+                    and ma100_last < ma200_last
                     
                     and deviation_ma50_sotto_ma200 < -0.22
-                    and ma30_last > ma30_40_min_ago
-                    
+              
                     and deviation_ma5_sopra_ma28 > 0.20
-                    and ma100_last < ma200_last
+                    
                     
                     and ma11_last > ma125_last
                     
@@ -1008,7 +1037,7 @@ class maddog:
                     and ma2_last > ma20_last
                     and ma2_last > ma2_2_min_ago
                 ):    
-                    buy = "BUY 1 tempo FINE AUTUNNO (quasi inverno !) con 50-78 che considera il passare del tempo con 5-28 > 0.20 - r 813"
+                    buy = "BUY 1 PERICOLOSA tempo FINE AUTUNNO VELOCE (quasi inverno !) con 50-78 che considera il passare del tempo con 5-28 > 0.20 - r 814"
                     action = "buy"
                     percentage = 50
                     
