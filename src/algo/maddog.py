@@ -3712,7 +3712,31 @@ class maddog:
                 
                 
                 
+                # BUY 3 ultima condizione che mancava ! ma tutte negative MA BUY con 8 > 125
                 
+                elif (     
+               
+                    ma8_last > ma150_last
+                    and ma100_last < ma100_60_min_ago
+                    and ma200_last < ma200_60_min_ago
+                    and ma300_last < ma300_60_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    and deviation_buy_ma5_sopra_ma20 > 0.05
+                    and ma2_last > ma2_2_min_ago
+                ):    
+                    buy = "BUY 3 ULTIMA CONDIZIONE che mancava ! ma tutte negative MA BUY con 8-150 - r 3729v"
+                    action = "buy"
+                    percentage = 30
+                    
+                    # BUY 3 ULTIMA CONDIZIONE che mancava con 8-150
+                    
+                    
+                    
+                    
+                    
+                    
                 # BUY 3 PAZZA piccola CORREZIONE FIAT
                 
                 elif (
