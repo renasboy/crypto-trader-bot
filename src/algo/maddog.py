@@ -3481,6 +3481,28 @@ class maddog:
                     percentage = 50
                     
                     
+                # BUY 2 RIVOLUZIONARIO se ma39 > ma50 - r 3450
+                
+                elif (
+                    deviation_ma4_sopra_ma30 > 0.15
+                    and deviation > -0.30
+                    and deviation_bellissima > 0.07
+                    and ma39_last > ma50_last
+                    and delta_buy3_incrocio_ma3_ma8 >= 0.06
+                    and ma3_last > ma8_last
+                    and ma3_last >= ma69_last
+                    and ma4_last >= ma4_2_min_ago
+                    and ma2_last >= ma2_2_min_ago
+                    and ma5_last >= ma15_last
+                    and ma5_last >= ma25_last
+                ):    
+                    buy = "BUY 2 RIVOLUZIONARIO se ma39 > ma50 - r 3450"
+                    action = "buy"
+                    percentage = 50
+                    
+                    # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
+                    
+                    
                     
                     
                 # BUY 2 ultima condizione ! ma tutte negative MA BUY con 50-100 (integra r2505)
