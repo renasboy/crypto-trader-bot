@@ -718,6 +718,33 @@ class maddog:
                     
                     
                     
+                # BUY 1 piccola CORREZIONE FIAT = r 1226 RCCR medie mobili lunghe TUTTE IN RIALZO ! ma si verifica una correzione fiat !
+                
+                elif (
+                    ma3_last > ma25_last
+                    and ma100_last > ma100_10_min_ago
+                    
+                    and ma100_last > ma100_120_min_ago
+                    and ma200_last > ma200_120_min_ago
+                    and ma300_last > ma300_120_min_ago
+                    
+                    and ma100_last > ma200_last
+                    and ma200_last > ma300_last
+                    
+                    and deviation_buy_crollo_1 < -0.33
+                    and deviation_buy_crollo_1 > -0.59
+                    and ma2_last > ma2_2_min_ago
+                    
+                ):    
+                    
+                    buy = "BUY 1 piccola CORREZIONE FIAT = r 1226 RCCR medie mobili lunghe TUTTE IN RIALZO ! ma si verifica una correzione fiat ! - r 669"
+                    action = "buy"
+                    percentage = 40
+                    
+                    
+                    
+                    
+                    
                     
                 # ------------------------------------------------------------ BUY 1 DURANTE IL RIALZO con INCROCIO CLASSICO 69-100 and ma78 < AND 5-28 > 0.11
                 
@@ -733,7 +760,7 @@ class maddog:
                     and ma6_last > ma39_last
                 ):    
               
-                    buy = "BUY 1 con 20>200 and 69 > 100 and deviation_bellissima > 0.14 and ma78 < AND 5-28 > 0.11 - r 667"
+                    buy = "BUY 1 con 20>200 and 69 > 100 and deviation_bellissima > 0.14 and ma78 < AND 5-28 > 0.11 - r 670"
                     action = "buy"
                     percentage = 50
                     
@@ -3425,6 +3452,33 @@ class maddog:
                     
                     # BUY con 25>200 ha sostituito 8>125 (che un po' mi piaceva ma era troppo rischiosa)
                     
+                    
+                    
+                    
+                    
+                # BUY 2 con ma200 che sale da 60 min etc. importata dal BUY 3 RCCR
+                
+                elif (
+                    ma10_last > ma10_2_min_ago
+                    and ma200_last > ma200_60_min_ago
+                    and deviation > -0.30
+                    and deviation_ma5_sopra_ma28 > 0.15
+                    
+                    and deviation_ma4_sopra_ma30 > 0.11
+                    and ma3_last > ma13_last
+                    and ma4_last > ma9_last
+                    and deviation_ma7_sopra_ma40 > 0.08
+                    and ma7_last > ma25_last
+                    
+                    and deviation_buy_ma2_sopra_ma13 > 0.10
+                    and ma4_last > ma50_last
+                    and ma2_last > ma2_2_min_ago
+                    
+                ):  
+                
+                    buy = "BUY 2 con ma200 che sale da 60 min etc. importata dal BUY 3 RCCR - r 3449"
+                    action = "buy"
+                    percentage = 50
                     
                     
                     
