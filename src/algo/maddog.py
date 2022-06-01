@@ -5631,17 +5631,20 @@ class maddog:
                    
                 
                 
-                    # ----------------------------------------------------------------------------- guadagno con crollo
+                    # -------------------------------------------- guadagno con crollo ! fondamentale per uscire, EVENTUALMENTE, con guadagno DURANTE IL CROLLO !
+                    
+                    # INTANTO TE LI PRENDI E TE LI PORTI A CASA ! 
+                    # E' UNA SPECIE DI POCHI MALEDETTI E SUBITO.
                    
                     
                     elif (
                         ma50_last < ma50_2_min_ago
                         and (ma3_prev > ma16_prev and ma3_last < ma16_last)
-                        and deviation_sell > 0.25 and deviation_sell > 0.54
+                        and deviation_sell > 0.25 and deviation_sell < 0.80
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 eventuale guadagno con crollo (12-21 min) con ma50 < and incrocio 3 - 16 and deviation_sell 0.25-0.54 - r 3933"
+                        sell = "SELL 1 eventuale guadagno con crollo (12-21 min) con ma50 < and incrocio 3 - 16 and deviation_sell 0.25-0.80 - r 3933"
                         action = "sell"
                         
                     
@@ -5650,10 +5653,10 @@ class maddog:
                     elif (
                         ma50_last < ma50_2_min_ago
                         and (ma3_prev > ma11_prev and ma3_last < ma11_last)
-                        and deviation_sell > 0.55
+                        and deviation_sell > 0.81
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 eventuale guadagno con crollo (12-21 min) con ma50 < and incrocio 3-11 and deviation_sell > 0.55 - r 3945"
+                        sell = "SELL 1 eventuale guadagno con crollo (12-21 min) con ma50 < and incrocio 3-11 and deviation_sell > 0.81 - r 3945"
                         action = "sell"
                         
                    
