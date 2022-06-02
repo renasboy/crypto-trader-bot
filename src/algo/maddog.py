@@ -3650,10 +3650,43 @@ class maddog:
                     # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
                     
                     
+                
+                
+                ######################################################### raddoppiate con 100> o con 100< 
+                
+                elif (
+                    ma10_last > ma10_2_min_ago
+                    and ma28_last < ma78_last
+                    and ma100_last > ma100_60_min_ago
+                    
+                    and ma200_last > ma200_60_min_ago
+                    and deviation > -0.30
+                    and deviation_ma5_sopra_ma28 > 0.155
+                    
+                    and deviation_ma4_sopra_ma30 > 0.11
+                    and ma3_last > ma13_last
+                    and ma4_last > ma9_last
+                    and deviation_ma7_sopra_ma40 > 0.08
+                    and ma7_last > ma25_last
+                    
+                    and deviation_buy_ma2_sopra_ma13 > 0.10
+                    and ma4_last > ma50_last
+                    and ma2_last > ma2_2_min_ago
+                    
+                ):  
+                
+                    buy = "BUY 3A con ma200 che sale da 60 min and ma28_last < ma78_last MA 100> 60 min ago - r 2539"
+                    action = "buy"
+                    percentage = 50
+
+                    # deviation_buy3 = ma4_last/ma30_last
+                    # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
+                    
                     
                 elif (
                     ma10_last > ma10_2_min_ago
                     and ma28_last < ma78_last
+                    and ma100_last < ma100_60_min_ago
                     
                     and ma200_last > ma200_60_min_ago
                     and deviation > -0.30
@@ -3671,12 +3704,17 @@ class maddog:
                     
                 ):  
                 
-                    buy = "BUY 3A con ma200 che sale da 60 min and ma28_last < ma78_last - r 2539"
+                    buy = "BUY 3A con ma200 che sale da 60 min and ma28_last < ma78_last - r 2540"
                     action = "buy"
                     percentage = 50
 
                     # deviation_buy3 = ma4_last/ma30_last
                     # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
+                    
+                    
+                    
+                    
+                    
                     
                     
                     
@@ -8178,17 +8216,34 @@ class maddog:
                     
                     
                     
-                    
                     elif (    
                         ma50_last < ma50_2_min_ago 
                         and ma2_last < ma2_2_min_ago 
                         and deviation_sell < -0.32
                         and ma200_last < ma200_60_min_ago
+                        and ma50_last > ma100_last
                     ):
                         sell = "SELL 2 (21-60 min) con ma50 < and deviation_sell < -0.32 - r 5879"
                         action = "sell"
                         
+                        # 2 GIUGNO a 0.335 da 0.32
                         
+                        
+                    elif (    
+                        ma50_last < ma50_2_min_ago 
+                        and ma2_last < ma2_2_min_ago 
+                        and deviation_sell < -0.335
+                        and ma200_last < ma200_60_min_ago
+                        and ma50_last < ma100_last
+                    ):
+                        sell = "SELL 2 (21-60 min) con ma50 < and deviation_sell < -0.335 - r 5880"
+                        action = "sell"
+                        
+                        # 2 GIUGNO a 0.335 da 0.32
+                        
+                    
+                    
+                    
                     
                     
                     elif (
