@@ -103,6 +103,8 @@ class maddog:
         ma78_7_min_ago = self.algo_helper.ma_minutes_ago(78, 7)
         ma78_30_min_ago = self.algo_helper.ma_minutes_ago(78, 30)
         ma100_2_min_ago = self.algo_helper.ma_minutes_ago(100, 2)
+        ma100_3_min_ago = self.algo_helper.ma_minutes_ago(100, 3)
+        
         ma100_10_min_ago = self.algo_helper.ma_minutes_ago(100, 10)
         ma100_30_min_ago = self.algo_helper.ma_minutes_ago(100, 30)
         ma100_50_min_ago = self.algo_helper.ma_minutes_ago(100, 50)
@@ -220,7 +222,6 @@ class maddog:
         
         #################################################################################################################
         
-        
         # formula delta_1
         
         delta_1 = (ma200_last / ma100_last - 1) * 100 if ma100_last else 0
@@ -237,6 +238,34 @@ class maddog:
         
         rapporto_delta_1_delta_2 = (delta_1 / delta_2) if delta_2 else 0
         self.algo_helper.info("rapporto_delta_1_delta_2: {}".format(rapporto_delta_1_delta_2))
+        
+        
+        
+        
+        
+        
+        
+        # formula delta_150_100
+        
+        delta_150_100 = (ma150_last / ma100_last - 1) * 100 if ma100_last else 0
+        self.algo_helper.info("delta_150_100: {}".format(delta_150_100))
+        
+        
+        # formula delta_150_100_60_min
+        
+        delta_150_100_60_min = (ma150_60_min_ago / ma100_60_min_ago - 1) * 100 if ma100_60_min_ago else 0
+        self.algo_helper.info("delta_150_100_60_min: {}".format(delta_150_100_60_min))
+        
+        
+        # non serve piu' il rapporto !
+        
+        
+        
+        
+        
+        
+        
+        
         
        
         # formula delta_1_69_39
@@ -2481,7 +2510,6 @@ class maddog:
                     
                     
                     
-                    
                 # BUY 1 CHE MANCAVA ! con incrocio 11-50 AND 5-28 > 0.20 ( CON 100 < AND 200 < AND 300 < ) (!)
                 
                 elif (
@@ -2503,6 +2531,53 @@ class maddog:
                     percentage = 30
                     
                     # madonna compa !
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                
+                # BUY 1 CHE MANCAVA DOPO BUY-SELL CROLLO ! 150-100 GIORNO !
+                
+                elif (
+                    deviation_ma5_sopra_ma28 > 0.10
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and ma100_last < ma100_120_min_ago
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_120_min_ago
+                    
+                    and delta_150_100 < delta_150_100_60_min
+                    and ma100_last > ma100_3_min_ago
+                    
+                    and ma2_last > ma2_2_min_ago
+                
+                ):
+                    buy = "BUY 1 CHE MANCAVA DOPO BUY-SELL CROLLO ! 150-100 GIORNO ! - r 2029"
+                    action = "buy"
+                    percentage = 30
+                    
+                    # madonna compa ! 
+                    # the sound of silence
+                    # ASSURDO ! questa 100 > 100 3 min e' incredibile ! si e' verificata dopo il BUY-SELL del crollo ! NON TOCCARE
+                    # SI STA RIDUCENDO LA DISTANZA TRA 150 E 100
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     
           
                 
@@ -3064,7 +3139,7 @@ class maddog:
                     
                     
                     
-            
+                
                 ####################################################################################################### BUY 2 DURANTE IL CROLLO CHE CONTINUA !
                 
                 # se il crollo continua dopo che ha venduto sell 1 durante il crollo - ro cano CI RIPROVA !     
@@ -3083,7 +3158,8 @@ class maddog:
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     
                     
-               
+                    
+                    
                 # BUY 2 secondo modo - DURANTE IL CROLLO - questa condizione e' entrata in azione ! ( e mi e' sembrata ben fatta !)
 
                 elif (
@@ -3099,6 +3175,41 @@ class maddog:
                     
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     # deviation_buy_crollo_2 = ma3_last / ma13_last
+                    
+                    
+                    
+                    
+                # BUY 2 CHE MANCAVA DOPO BUY-SELL CROLLO ! 150-100 GIORNO !
+                
+                elif (
+                    deviation_ma5_sopra_ma28 > 0.10
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and ma100_last < ma100_120_min_ago
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_120_min_ago
+                    
+                    and delta_150_100 < delta_150_100_60_min
+                    and ma100_last > ma100_3_min_ago
+                    
+                    and ma2_last > ma2_2_min_ago
+                
+                ):
+                    buy = "BUY 2 CHE MANCAVA DOPO BUY-SELL CROLLO ! 150-100 GIORNO ! - r 2113"
+                    action = "buy"
+                    percentage = 30
+                    
+                    # madonna compa ! 
+                    # the sound of silence
+                    # ASSURDO ! questa 100 > 100 3 min e' incredibile ! si e' verificata dopo il BUY-SELL del crollo ! NON TOCCARE
+                    # SI STA RIDUCENDO LA DISTANZA TRA 150 E 100
+                    
+                    
+                    
+                    
+                
                     
                     
               
@@ -8809,12 +8920,12 @@ class maddog:
                     elif (  
                         ma50_last < ma50_2_min_ago 
                         and ma2_last < ma2_2_min_ago 
-                        and deviation_ma39 < -0.24
+                        and deviation_ma39 < -0.235
                         and deviation_trend_ma200 > -0.10
                         and ma200_last > ma300_last
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 2 compa 90-110 min  con ma50 < con deviation_ma39 <-0.24 con > PERDITA TOLLERATA - r 6426"
+                        sell = "SELL 2 compa 90-110 min  con ma50 < con deviation_ma39 <-0.235 con > PERDITA TOLLERATA - r 6426"
                         action = "sell"
                         
                         
@@ -10469,27 +10580,63 @@ class maddog:
                     ######################################################################################## con trend discendente
                     
                     
-                    
                     elif (      
-                        ma50_last < ma50_2_min_ago 
+                        ma50_last < ma50_2_min_ago
+                        and ma200_last > ma300_last
                         and ma2_last < ma2_2_min_ago 
-                        and deviation_ma39 < -0.15
+                        and deviation_ma39 < -0.20
                        
                     ):
-                        sell = "SELL 3 dopo 90 min con ma50 < con deviation_ma39 < -0.15 - r 8070"
+                        sell = "SELL 3 dopo 90 min con ma50 < con deviation_ma39 < -0.20 - r 8069"
+                        action = "sell"
+                        
+                        
+                    elif (      
+                        ma50_last < ma50_2_min_ago
+                        and ma200_last < ma300_last
+                        and ma2_last < ma2_2_min_ago 
+                        and deviation_ma39 < -0.16
+                       
+                    ):
+                        sell = "SELL 3 dopo 90 min con ma50 < con deviation_ma39 < -0.16 - r 8070"
                         action = "sell"
                         
                      
                     
-                     
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     elif (    
-                        ma50_last < ma50_2_min_ago 
+                        ma50_last < ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 > 0.20
                         and ma2_last < ma2_2_min_ago 
-                        and deviation_sell < -0.10 
+                         
                         and ma3_last < ma39_last
                     ):
-                        sell = "SELL 3 dopo 90 min con ma50 < and (deviation_sell < -0.10 and ma3_last < ma39_last) - r 8082"
+                        sell = "SELL 3 dopo 90 min con ma50< MA ma100 > ma300 and ma3_last < ma39_last - r 8082"
                         action = "sell"
+                        
+                        # se sta in alto NO DEVIATION SELL - la 100 se ne sta andando in alto.
+                        
+                        
+                    elif (    
+                        ma50_last < ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 < 0.20
+                        and ma2_last < ma2_2_min_ago 
+                        and deviation_sell < -0.15 
+                        and ma3_last < ma39_last
+                    ):
+                        sell = "SELL 3 dopo 90 min con ma50 < and ma100 NON DISTANTE dalla ma300 and (deviation_sell < -0.15 and ma3_last < ma39_last) - r 8083"
+                        action = "sell"
+                        
+                        # SE ma100 RESTA VICINA ALLA ma300 - trend laterale - allora tieniti pronto anche con la deviation sell
+                        
+                        
                         
                     
                     
