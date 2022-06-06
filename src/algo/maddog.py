@@ -4728,8 +4728,38 @@ class maddog:
                 
                 
                 
+                # BUY 5 TUTTE LE ma IN CRESCITA
                 
-                
+                elif (
+                    ma69_last < ma69_2_min_ago
+                    and deviation > -0.30
+                    
+                    and deviation_buy3 > 0.03
+                    and deviation_ma13_sopra_ma25 > 0.040
+                    and delta_buy3_incrocio_ma3_ma8 > 0.07
+                    and deviation_ma4_sopra_ma30 > 0.15
+                    and ma3_last > ma8_last
+                    and ma3_last > ma78_last
+                    and ma4_last > ma4_2_min_ago
+                    and ma2_last > ma2_2_min_ago
+                    and ma7_last > ma25_last
+                    
+                    and ma100_last > ma200_last
+                    and ma200_last > ma300_last
+                    
+                    and ma300_last > ma300_60_min_ago
+                ):
+                    buy = "BUY 5 CON TUTTE LE ma IN CRESCITA - r 2995"
+                    action = "buy"
+                    percentage = 40
+                    
+                    # deviation_buy3 = ma4_last/ma30_last
+                    # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
+                    
+                    
+                    
+                    
+                    
                 # ATTENZIONE ! AL BUY 5 TRANNE CHE IN UNA EVENTUALE CORREZIONE HO MESSO 78>150 STIAMO AL BUY 5 PERDIO !
                 # SENZA QUESTA 78>150 HO AVUTO MOLTI PROBLEMI !
                 
@@ -4751,7 +4781,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
               
                 ):
-                    buy = "BUY 5A con ma78 > and deviation_bellissima > 0.163 (PER SPEZZARE LA CATENA -effetti laterali) - r 2996"
+                    buy = "BUY 5A con ma78 > and deviation_bellissima > 0.163 (PER SPEZZARE LA CATENA - effetti laterali) - r 2996"
                     action = "buy"
                     percentage = 50
                     
@@ -10613,15 +10643,27 @@ class maddog:
                         
                     ############################################################################################################################### 
                     
-                  
                     elif (
                         ma50_last >= ma50_2_min_ago
-                        and ma5_last < ma69_last
-                        and deviation_sell > 0.25 and deviation_sell < 0.59
+                        and ma5_last < ma39_last
+                        and deviation_sell > 0.29 and deviation_sell < 0.59
                         and ma2_last < ma2_2_min_ago
+                        and deviation_ma100_sopra_ma200 > 0.20
                        
                     ):
-                        sell = "SELL 3 (12-21 min) con ma50 > and 5-69 and deviation_sell 0.25-0.59 - FINTA ALLA MARADONA - r 7998"
+                        sell = "SELL 3 (12-21 min) con ma50 > and 5-39 and deviation_sell 0.29 - 0.59 - FINTA ALLA MARADONA se sale tanto - r 7998"
+                        action = "sell"
+                        
+                        
+                    elif (
+                        ma50_last >= ma50_2_min_ago
+                        and ma5_last < ma150_last
+                        and deviation_sell > 0.25 and deviation_sell < 0.59
+                        and ma2_last < ma2_2_min_ago
+                        and deviation_ma100_sopra_ma200 < 0.20
+                       
+                    ):
+                        sell = "SELL 3 (12-21 min) con ma50 > and 5-150 (!) and deviation_sell 0.25 - 0.59 - FINTA ALLA MARADONA se sale poco - r 7999"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
@@ -10629,7 +10671,14 @@ class maddog:
                         
                         
                         
-                        
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     elif (
                         ma50_last > ma50_2_min_ago
                         and ma4_last < ma30_last
@@ -11258,7 +11307,7 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                        
                     ):
-                        sell = "SELL 4-5-x (12-21 min) con ma50>and 3-50 and deviation_sell 0.25-0.56 - SOPRA RIBASSO RIALZO - CREPUSCOLO - FINTA ALLA MARADONA -r8561"
+                        sell = "SELL 4-5-x (12-21 min) con ma50>and 3-50 and dev_sell 0.25-0.56 - SOPRA RIBASSO RIALZO - CREPUSCOLO - FINTA ALLA MARADONA - r 8561"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
@@ -11291,7 +11340,7 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                      
                     ):
-                        sell = "SELL 4-5-x (12-21 min) con ma50 > and 4-20 e deviation_sell 0.57 - 0.90 - SORGERE DRIBBLING ALLA RONALDO -SOPRA RIALZO RIALZO - GIORNO - r 8576"
+                        sell = "SELL 4-5-x (12-21 min) con ma50 > and 4-20 e dev_sell 0.57 - 0.90 - SORGERE DRIBBLING ALLA RONALDO - GIORNO - r 8576"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
@@ -11316,7 +11365,7 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                      
                     ):
-                        sell = "SELL 4-5-x (12-21 min) con ma50 > and 3-50 and deviation_sell 0.57 - 0.90 - DRIBBLING ALLA RONALDO sopra ribasso rialzo - CREPUSCOLO - r 8576"
+                        sell = "SELL 4-5-x (12-21 min) con ma50 > and 3-50 and dev_sell 0.57 - 0.90 - DRIBBLING RONALDO sopra ribasso rialzo -CREPUSCOLO - r 8576"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
