@@ -1175,11 +1175,11 @@ class maddog:
                     and ma200_last < ma200_60_min_ago
                     and ma300_last < ma300_60_min_ago
                     
-                    and deviation_ma5_sopra_ma28 > 0.18
+                    and deviation_ma5_sopra_ma28 > 0.17
                     and deviation_ma13_sopra_ma25 > 0.07
                     and deviation_ma3_sopra_ma7 > 0.05
                     
-                    and ma2_last > ma2_2_min_ago
+                    and ma2_last >= ma2_2_min_ago
               
                 ):
                     buy = "BUY 1 8-140 copiata e modificata da RCCR che e' arrivata una ndecchia prima del passare del tempo - riga 886"
