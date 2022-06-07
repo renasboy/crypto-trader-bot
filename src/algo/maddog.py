@@ -6791,22 +6791,43 @@ class maddog:
                         
                         
                         
-                    ############################################################### ipotesi mediana 1 un po' meno peggio ( sempre con ma50 < )   
+                    ############################################################### ipotesi mediana 1 un po' meno peggio ( sempre con ma50 < )
+                    
                     
                     elif (
                         ma50_last < ma50_2_min_ago
                         and ma100_last < ma300_last
+                        and ma100_last > ma100_60_min_ago
                         
                         and ma200_last < ma300_last
                         and deviation_trend_ma200 > -0.10
                         
                         
                         and deviation_ma39 < -0.19
-                        and ma2_last < ma2_2_min_ago
-                        and deviation_sell < -0.195
+                        and deviation_sell < -0.22
+                        
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 da 50 a 90 min IPOTESI un po' MENO PEGGIO con ma50 < con deviation_ma39 <-0.19 and deviation_sell < -0.195 - r 4561"
+                        sell = "SELL 1 da 50 a 90 min IPOTESI un po' MENO PEGGIO con ma50 < con dev_ma39 < -0.19 MA 100> and dev_sell < -0.22 - r 4561"
+                        action = "sell"
+                        
+                    
+                    
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and ma100_last < ma300_last
+                        and ma100_last < ma100_60_min_ago
+                        
+                        and ma200_last < ma300_last
+                        and deviation_trend_ma200 > -0.10
+                        
+                        
+                        and deviation_ma39 < -0.19
+                        and deviation_sell < -0.21
+                        
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 1 da 50 a 90 min IPOTESI un po' MENO PEGGIO con ma50 < con deviation_ma39 <-0.19 E 100< and dev_sell < -0.21 - r 4562"
                         action = "sell"
                         
                         
