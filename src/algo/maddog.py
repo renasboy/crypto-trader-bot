@@ -2595,7 +2595,7 @@ class maddog:
                 # BUY 1 CHE MANCAVA DOPO BUY-SELL CROLLO ! 150-100 GIORNO !
                 
                 elif (
-                    deviation_ma5_sopra_ma28 > 0.10
+                    deviation_ma5_sopra_ma28 > 0.09
                     
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
@@ -2610,7 +2610,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                 
                 ):
-                    buy = "BUY 1 CHE MANCAVA DOPO BUY-SELL CROLLO ! 150-100 GIORNO ! - r 2029"
+                    buy = "BUY 1 CHE MANCAVA DOPO BUY-SELL CROLLO ! 150-100 GIORNO ! 5-28 > 0.09 - r 2029"
                     action = "buy"
                     percentage = 30
                     
@@ -8834,24 +8834,57 @@ class maddog:
                         
                         
                         
-                    ######################################################################################## trend discendente con POCA PERDITA TOLLERATA  
+                    ######################################################################################## trend discendente con POCA PERDITA TOLLERATA
                     
                     
                     elif (
                         ma50_last < ma50_2_min_ago
                         and ma100_last > ma100_60_min_ago
+                        and ma100_last > ma200_last
+                        
                         and deviation_ma39 < -0.18
-                        and deviation_sell < 0.05
+                        and deviation_sell < -0.20
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 2 da 60 a 90 min TREND < con POCA PERDITA TOLLERATA con ma50 < con deviation_ma39 <-0.17 and deviation_sell < 0.05 - r 6173"
+                        sell = "SELL 2 da 60 a 90 min TREND < con POCA PERDITA TOLLERATA con ma50 < con deviation_ma39 <-0.17 and deviation_sell < -0.20 - r 6172"
                         action = "sell"
                         
                         # and ma3_last < ma39_last
-                        # and deviation_sell < 0.10
+                        # and deviation_sell < -0.10
                         # se non ha forza dopo 1 ora e' inutile continuare a sperare ! POI STIAMO GIA' AL SELL 2 -le ma hanno avuto piu' tempo di salire
                         # qui non ho messo il crollo perche' dopo 40 min o gia' ha venduto o e' gia' risalita
                         # cuscino dell' angelo custode
+                        
+                        
+                        
+                        
+                        
+                        
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and ma100_last > ma100_60_min_ago
+                        and ma100_last < ma200_last
+                        
+                        and deviation_ma39 < -0.18
+                        and deviation_sell < -0.15
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 2 da 60 a 90 min TREND < con POCA PERDITA TOLLERATA con ma50 < con deviation_ma39 <-0.17 and deviation_sell < -0.15 - r 6173"
+                        action = "sell"
+                        
+                        # and ma3_last < ma39_last
+                        # and deviation_sell < -0.10
+                        # se non ha forza dopo 1 ora e' inutile continuare a sperare ! POI STIAMO GIA' AL SELL 2 -le ma hanno avuto piu' tempo di salire
+                        # qui non ho messo il crollo perche' dopo 40 min o gia' ha venduto o e' gia' risalita
+                        # cuscino dell' angelo custode
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                         
                     
                     
