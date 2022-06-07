@@ -2666,11 +2666,11 @@ class maddog:
                     
                     and ma300_last > ma300_60_min_ago
                     
-                    and deviation_ma5_sopra_ma28 > 0.02
+                    and deviation_ma5_sopra_ma28 > 0.14
                     and ma2_last > ma2_2_min_ago
                 ):    
                     
-                    buy = "BUY 1 SITUAZIONE TREND LATERALE che mancava con ma300 > - SOPRA RIALZO RIALZO - GIORNO ! and 5-28 > 0.02 - riga 1834"
+                    buy = "BUY 1 SITUAZIONE TREND LATERALE che mancava con ma300 > - SOPRA RIALZO RIALZO - GIORNO ! and 5-28 > 0.14 - riga 1834"
                     action = "buy"
                     percentage = 30
                     
@@ -8925,6 +8925,24 @@ class maddog:
                     
                     ################################################################################## trend discendente con MOLTA PERDITA TOLLERATA
                     
+                    
+                    
+                    
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and ma3_last < ma59_last
+                        
+                        and deviation_trend_ma200 > -0.12
+                        and ma200_last > ma300_last
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 2 da 60 a 90 min con MOLTA PERDITA TOLLERATA con ma50 < con 3 < 59 - r 6207"
+                        action = "sell"
+                        
+                        # questa anticipa di una ndecchia la prossima
+                        
+                        
+                        
                     elif (
                         ma50_last < ma50_2_min_ago
                         and deviation_ma39 < -0.19
@@ -8946,6 +8964,12 @@ class maddog:
                         
                         
                         
+                    
+                    
+                    
+                    
+                    
+                    
                     
                     elif (
                         ma50_last < ma50_2_min_ago
