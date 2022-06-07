@@ -215,11 +215,19 @@ class maddog:
         deviation = (ma5_last / last_trade_price - 1) * 100 if last_trade_price else 0
         self.algo_helper.info("deviation: {}".format(deviation))
         
-       
+        
+        
         # formula DEVIATION_ma5_sopra_ma28 - FORMULA AUREA !
         
         deviation_ma5_sopra_ma28 = (ma5_last / ma28_last - 1) * 100 if ma28_last else 0
         self.algo_helper.info("deviation_ma5_sopra_ma28: {}".format(deviation_ma5_sopra_ma28))
+        
+        
+        
+        # formula DEVIATION_ma3_sopra_ma16
+        
+        deviation_ma3_sopra_ma16 = (ma3_last / ma16_last - 1) * 100 if ma16_last else 0
+        self.algo_helper.info("deviation_ma3_sopra_ma16: {}".format(deviation_ma3_sopra_ma16))
         
         
         #################################################################################################################
@@ -2129,19 +2137,20 @@ class maddog:
                     deviation_buy_crollo_1 < -0.70
                     and deviation_buy_crollo_1 > -1.50
                     
-                    and ma3_last > ma15_last
+                    and deviation_ma3_sopra_ma16 > 0.20
+                    
                     and ma2_last >= ma2_2_min_ago
                     and ma78_last < ma200_last
                     
                 ):
-                    buy = "BUY 1 DURANTE UN RIBASSO AUDI PIU' GIU' -0.70 E PIU' VELOCE CHE NON E' UN CROLLO ! con 5-16  - riga 1647"
+                    buy = "BUY 1 RIBASSO AUDI PIU' GIU' -0.70 E PIU' VELOCE CHE NON E' UN CROLLO ! con deviation 3-16 > 0.20  - riga 1647"
                     action = "buy"
                     percentage = 50
                     
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     # questa cosa che 78 deve essere < 200 ha dell' incredibile. MA NON TOCCARE !
-                    # 1 GIUGNO 2022 3-15
-                    
+                    # 1 GIUGNO 2022 3-15 troppo veloce e troppi buy affrettati ! e perdite conseguenti !
+                    # 7 giugno 2022 3-16> 0.20
                     
                     
                     
@@ -3901,6 +3910,24 @@ class maddog:
                     action = "buy"
                     percentage = 50
                     
+                    
+                # BUY 3 nuovo TREND LATERALE !
+                
+                elif (
+                    ma100_last > ma300_last
+                    and ma100_last > ma200_last
+                    and ma8_last > ma50_last
+                    and ma2_last > ma2_2_min_ago
+                        
+                    and deviation_ma100_sopra_ma300 < 0.04
+                    and deviation_ma100_sopra_ma200 < 0.05
+                    and deviation_ma5_sopra_ma28 > 0.07
+                ):
+                    buy = "BUY 3 nuovo TREND LATERALE ! - r 3917"
+                    action = "buy"
+                    percentage = 40
+                    
+                    # SE ma100 E' cosi' VICINA A ma200 E ma300 vuo dire che non c'e' un grande rialzo in atto ma un TREND LATERALE !
                     
                     
                     
