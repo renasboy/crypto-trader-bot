@@ -1174,31 +1174,31 @@ class maddog:
                     
                     
                 
-                # BUY 1 per arrivare prima del passare del tempo. prendo qualche rischio ma aggiungo altro sell>60 min
+                # BUY 1 per arrivare prima del passare del tempo. prendo qualche rischio
                 
                 elif (
                     
                     ma8_last > ma50_last
-                    and deviation_ma100_sopra_ma200 > -0.40
-                    and deviation_ma50_sotto_ma200 < -0.20
+                    and deviation_ma100_sopra_ma200 > -0.50
+                    and deviation_ma50_sotto_ma200 < -0.15
                     
-                    and ma100_last < ma200_60_min_ago
+                    and ma100_last < ma100_60_min_ago
                     and ma200_last < ma200_60_min_ago
                     and ma300_last < ma300_60_min_ago
                     
-                    and deviation_ma5_sopra_ma28 > 0.17
-                    and deviation_ma13_sopra_ma25 > 0.07
-                    and deviation_ma3_sopra_ma7 > 0.05
+                    and deviation_ma5_sopra_ma28 > 0.16
+                    and deviation_ma13_sopra_ma25 > 0.06
+                    and deviation_ma3_sopra_ma7 > 0.04
                     
                     and ma2_last >= ma2_2_min_ago
               
                 ):
-                    buy = "BUY 1 8-140 copiata e modificata da RCCR che e' arrivata una ndecchia prima del passare del tempo - riga 886"
+                    buy = "BUY 1 MISTERO 8-50 copiata e modificata da RCCR che era arrivata una ndecchia prima del passare del tempo - riga 886"
                     action = "buy"
                     percentage = 50
                     
-                    # ma100 sta sotto la ma200 MA non le e' troppo lontana cioe' NON ci troviamo in una situazione drammatica! (anche se ma200< e ma300<)
-                    
+                    # ma100 sta sotto la ma200 MA non le e' troppo lontana cioe' NON ci troviamo in una situazione drammatica! ( anche se ma100< e ma200< e ma300< )
+                    # MISTERO !
                     
                     
                     
@@ -2696,13 +2696,15 @@ class maddog:
                     
                     and ma300_last < ma300_60_min_ago
                     
-                    and deviation_ma5_sopra_ma28 > 0.17
+                    and deviation_ma5_sopra_ma28 > 0.16
                     and ma2_last > ma2_2_min_ago
                 ):    
                     
-                    buy = "BUY 1 SITUAZIONE TREND LATERALE che mancava con ma300 < - SOPRA RIALZO RIALZO - GIORNO ! and 5-28 > 0.17 - riga 1835"
+                    buy = "BUY 1 SITUAZIONE TREND LATERALE che mancava con ma300 < - SOPRA RIALZO RIALZO - GIORNO ! and 5-28 > 0.16 - riga 1835"
                     action = "buy"
                     percentage = 30
+                    
+                    # 8 giu 2022 5-28 0.16 da 0.17
                     
                     
                     
@@ -6202,17 +6204,43 @@ class maddog:
                         action = "sell"
                         
                         
+                    
+                    
+                    
+                    
+                    
                     elif (
                         ma50_last > ma50_2_min_ago
                         and ma100_last < ma100_60_min_ago
                         and ma300_last < ma300_120_min_ago
                         
+                        and ma200_last > ma200_60_min_ago
+                        
+                        
                         and ma5_last < ma100_last
-                        and deviation_sell < -0.24
+                        and deviation_sell < -0.26
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 (21-50 min) con ma50 > and 5-100 and deviation_sell < -0.24 CUSCINO DELLA MADONNA se ma100 < E DE SANTO RENATO 300 < - r 4671"
+                        sell = "SELL 1 (21-50 min) con ma50 > and 5-100 and dev_sell< -0.26 CUSCINO DELLA MADONNA se ma100< E DE SANTO RENATO 300 < MA 200> - r 4127"
+                        action = "sell"
+                        
+                        
+                        
+                        
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and ma100_last < ma100_60_min_ago
+                        and ma300_last < ma300_120_min_ago
+                        
+                        and ma200_last < ma200_60_min_ago
+                        
+                        and ma5_last < ma100_last
+                        and deviation_sell < -0.25
+                        and ma2_last < ma2_2_min_ago
+                        
+                    ):
+                        sell = "SELL 1 (21-50 min) con ma50 > and 5-100 and dev_sell< -0.25 CUSCINO DELLA MADONNA se ma100< E DE SANTO RENATO 300 < CON 200< - r 4128"
                         action = "sell"
                         
                         
