@@ -382,17 +382,28 @@ class maddog:
         
         
         
+        
+        
         # formula DEVIATION_ma8_sotto_ma100
         
         deviation_ma8_sotto_ma100 = (ma8_last / ma100_last - 1) * 100 if ma100_last else 0
         self.algo_helper.info("deviation_ma8_sotto_ma100: {}".format(deviation_ma8_sotto_ma100))
-        # formula DEVIATION_ma8_sotto_ma100
+        
+        
+        
+        # formula DEVIATION_ma8_sotto_ma200
+        
+        deviation_ma8_sotto_ma200 = (ma8_last / ma200_last - 1) * 100 if ma200_last else 0
+        self.algo_helper.info("deviation_ma8_sotto_ma200: {}".format(deviation_ma8_sotto_ma200))
+        
         
         
         # formula DEVIATION_ma8_sotto_ma300
         
         deviation_ma8_sotto_ma300 = (ma8_last / ma300_last - 1) * 100 if ma300_last else 0
         self.algo_helper.info("deviation_ma8_sotto_ma300: {}".format(deviation_ma8_sotto_ma300))
+        
+        
         
         
         
@@ -2622,7 +2633,6 @@ class maddog:
                     
                     
                     
-                
                 # BUY 1 CHE MANCAVA DOPO BUY-SELL CROLLO ! 150-100 GIORNO !
                 
                 elif (
@@ -2649,6 +2659,36 @@ class maddog:
                     # the sound of silence
                     # ASSURDO ! questa 100 > 100 3 min e' incredibile ! si e' verificata dopo il BUY-SELL del crollo ! NON TOCCARE
                     # SI STA RIDUCENDO LA DISTANZA TRA 150 E 100
+                    
+                    
+                
+                
+                # BUY 1 CHE MANCAVA aggressiva
+                
+                elif (
+                    deviation_ma5_sopra_ma28 > 0.08
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and ma100_last < ma100_60_min_ago
+                    and ma200_last < ma200_60_min_ago
+                    and ma300_last < ma300_60_min_ago
+                    
+                    
+                    and deviation_ma8_sotto_ma100 < -0.70
+                    and deviation_ma8_sotto_ma200 < -1.10
+                    and deviation_ma8_sotto_ma300 < -1.30
+                    
+                    and ma2_last > ma2_2_min_ago
+                
+                ):
+                    buy = "BUY 1 CHE MANCAVA aggressiva 5-28 > 0.08 - r 2030"
+                    action = "buy"
+                    percentage = 30
+                    
+                    # madonna compa che ti sei dimenticato di me ! 
+                    
                     
                     
                     
