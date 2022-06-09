@@ -2385,24 +2385,35 @@ class ro_cano_che_ritorna:
             
             
             
-            
-                # BUY 2 che ci riprova TORNANDO ALLE ORIGINI con ma200< and ma300 < (compare stammi vicino !)
+                
+                
+                
+                
+                ################################################################ QUESTO E' LO STUDIO SU RCCR !
+                ################################################################ BUY con incrocio 8-50 doppio minimo o compra su forte ralzo
+                
+                
+                # BUY 2 che ci riprova TORNANDO ALLE ORIGINI con ma200< and ma300 < (compare stammi vicino !) STUDIO RCCR
                 
                 elif (
-                    deviation_buy2 > 0.10
-                    and deviation_bellissima > 0.16
-                    and ma8_last > ma8_2_min_ago
+                    deviation_buy2 > 0.01
+                    and (ma8_prev < ma50_prev and ma8_last > ma50_last)
                     and ma2_last > ma2_2_min_ago
+                    
+                    and deviation_bellissima > 0.16
+                    
                     and ma3_last > ma7_last
                     and ma3_last > ma13_last
                     and deviation_buy_ma3_sopra_ma20 > 0.05
                     and deviation_ma4_sopra_ma25 > 0.05
                     and deviation_ma5_sopra_ma30 > 0.173
+                    and ma8_last > ma8_2_min_ago
+                    
                     and ma200_last < ma200_120_min_ago
                     and ma300_last < ma300_120_min_ago
                 ):
                
-                    buy = "BUY 2 che ci riprova TORNANDO ALLE ORIGINI con ma200< and ma300< - r 2317"
+                    buy = "BUY 2 che ci riprova TORNANDO ALLE ORIGINI CON INCROCIO 8-50 se ma200< and ma300< STUDIO RCCR - r 2317"
                     action = "buy"
                     percentage = 40
 
@@ -2410,6 +2421,12 @@ class ro_cano_che_ritorna:
                     # se ma200< e ma300< si torna alle origini ! 8-50 ! (con ma2 > ma2 2 min ago)
                     # deviation_buy2 = ma8_last / ma50_last
                     
+                    
+                    #######################################################################################################################################
+                    
+                
+                
+                
                 
                 
                 
