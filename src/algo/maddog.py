@@ -979,11 +979,12 @@ class maddog:
                 
                 
                 
-                # BUY 1 tempo ESTATE che considera il passare del TEMPO  CON ma30 > 
+                # BUY 1 tempo ESTATE PIU' LENTA 100 < 60 min ago considera il passare del tempo ! ma30 > 
                 
                 elif (     
                     ma50_last > ma100_last
                     and ma100_last > ma200_last
+                    and ma100_last < ma100_60_min_ago
                     
                     and ma30_last > ma30_40_min_ago
                 
@@ -994,9 +995,37 @@ class maddog:
                     and ma2_last > ma20_last
                     and ma2_last > ma2_2_min_ago
                 ):    
-                    buy = "BUY 1 tempo ESTATE che considera il passare del tempo con deviation_bellissima > 0.06 - r 766"
+                    buy = "BUY 1 tempo ESTATE PIU' LENTA 100 > 60 min ago considera il passare del tempo ! ma30 > - r 766"
                     action = "buy"
                     percentage = 50
+                    
+                    
+                    
+                    
+                # BUY 1 tempo ESTATE PIU' VELOCE 100 > 60 min ago (solo l' estate se lo puo' perettere!) considera il passare del TEMPO ! ma30 > 
+                
+                elif (     
+                    ma15_last > ma28_last
+                    and ma8_last > ma200_last
+                    and ma100_last > ma100_60_min_ago
+                    
+                    and ma30_last > ma30_40_min_ago
+                
+                    and deviation_ma5_sopra_ma28 > 0.15
+                    and deviation_bellissima > 0.06
+                    and ma20_last > ma20_2_min_ago
+                    and ma5_last > ma5_2_min_ago
+                    and ma2_last > ma20_last
+                    and ma2_last > ma2_2_min_ago
+                ):    
+                    buy = "BUY 1 tempo ESTATE PIU' VELOCE 100 > 60 min ago (solo l' estate se lo puo' permettere!) considera il passare del tempo ! ma30 > - r 767"
+                    action = "buy"
+                    percentage = 50
+                    
+                    # 9 giu 2022 15>28 al posto di 50>100 
+                    # 9 giu 2022 8>200 al posto di 100>200
+                    
+                    
                     
                     
                 
@@ -3452,15 +3481,17 @@ class maddog:
                 # BUY 2 che ci riprova TORNANDO ALLE ORIGINI con ma200< and ma300< (compare stammi vicino !)
                 
                 elif (
-                    deviation_buy2 > 0.08
-                    and deviation_bellissima > 0.16
+                    deviation_buy2 > 0.06
+                    
+                    and deviation_ma5_sopra_ma28 > 0.15
+                    and deviation_bellissima > 0.14
                     and ma8_last > ma8_2_min_ago
                     and ma2_last > ma2_2_min_ago
                     and ma3_last > ma7_last
                     and ma3_last > ma13_last
                     and deviation_buy_ma3_sopra_ma20 > 0.05
                     and deviation_ma4_sopra_ma25 > 0.05
-                    and deviation_ma5_sopra_ma30 > 0.17
+                    
                     and ma200_last < ma200_120_min_ago
                     and ma300_last < ma300_120_min_ago
                 ):
@@ -3473,7 +3504,8 @@ class maddog:
                     # se ma200< e ma300< si torna alle origini ! 8-50 ! (con ma2 > ma2 2 min ago)
                     # deviation_buy2 = ma8_last / ma50_last
                     
-                
+                    # 9 giu 2022 dev_buy2 (8-50) a 0.06 da 0.08
+                    # 9 giu 2022 dev_bellissima a 0.15 da 0.16
                 
                 
                 # BUY 2 con ma200> e ma300> DURANTE UNA piccola CORREZIONE che NON E' un forte ribasso e NON E' un crollo !  
@@ -9346,16 +9378,16 @@ class maddog:
                         
                     elif (
                         ma50_last >= ma50_2_min_ago
-                        and ma5_last < ma50_last
+                        and ma5_last < ma59_last
                         and deviation_sell > 0.25 and deviation_sell < 0.56
                         and ma2_last < ma2_2_min_ago
                        
                     ):
-                        sell = "SELL 2 dopo 110 min con ma50 > and 5-50 (!) and deviation_sell 0.25-0.56 - FINTA ALLA MARADONA (non toccare) - r 6515"
+                        sell = "SELL 2 dopo 110 min con ma50 > and 5-59 (!) and deviation_sell 0.25-0.56 - FINTA ALLA MARADONA (non toccare) - r 6515"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
-                        
+                        # 9 GIU 2022 5-59 da 5-50
                      
                     
                     
