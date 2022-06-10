@@ -986,8 +986,33 @@ class maddog:
                     
                     
                 
-                #################################################################################################################### ecco le 4 stagioni !
                 
+                
+                # BUY 1 PERICOLOSA derivata dal tardo autunno ! togliendo i 40 minuti della ma30 
+                
+                elif (     
+                    ma11_last > ma69_last
+                    and ma100_last < ma200_last
+                    and ma200_last < ma200_120_min_ago
+                    
+                    and ma11_last > ma69_last
+                    and deviation_ma5_sopra_ma28 > 0.20
+                    and deviation_bellissima > 0.06
+                    
+                    and ma20_last > ma20_2_min_ago
+                    and ma5_last > ma5_2_min_ago
+                    and ma2_last > ma20_last
+                    and ma2_last > ma2_2_min_ago
+                ):    
+                    buy = "BUY 1 PERICOLOSA tempo FINE AUTUNNO LENTO (quasi inverno !) con 11-69 che considera il passare del tempo con 5-28 > 0.20 - r 765"
+                    action = "buy"
+                    percentage = 50
+                    
+                    
+                    
+                    
+                    
+                #################################################################################################################### ecco le 4 stagioni !  
                 
                 
                 # BUY 1 tempo ESTATE PIU' LENTA 100 < 60 min ago considera il passare del tempo ! ma30 > 
@@ -1097,17 +1122,15 @@ class maddog:
                 
                 elif (     
                     ma50_last > ma78_last
-               
                     and ma200_last < ma200_120_min_ago
-                    and deviation_ma5_sopra_ma28 > 0.20
                     and ma100_last < ma200_last
-
+                    
                     and ma30_last > ma30_40_min_ago
-
-                    and deviation_ma5_sopra_ma28 > 0.20
                     and ma11_last > ma125_last
-
+                    
+                    and deviation_ma5_sopra_ma28 > 0.20
                     and deviation_bellissima > 0.06
+               
                     and ma20_last > ma20_2_min_ago
                     and ma5_last > ma5_2_min_ago
                     and ma2_last > ma20_last
@@ -1116,6 +1139,8 @@ class maddog:
                     buy = "BUY 1 PERICOLOSA tempo FINE AUTUNNO LENTO (quasi inverno !) con 50-78 che considera il passare del tempo con 5-28 > 0.20 - r 813"
                     action = "buy"
                     percentage = 50
+                    
+                    
                     
                     
                     
@@ -2636,7 +2661,7 @@ class maddog:
                 # BUY 1 CHE MANCAVA DOPO BUY-SELL CROLLO ! 150-100 GIORNO !
                 
                 elif (
-                    deviation_ma5_sopra_ma28 > 0.09
+                    deviation_ma5_sopra_ma28 > 0.11
                     
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
@@ -2660,6 +2685,7 @@ class maddog:
                     # ASSURDO ! questa 100 > 100 3 min e' incredibile ! si e' verificata dopo il BUY-SELL del crollo ! NON TOCCARE
                     # SI STA RIDUCENDO LA DISTANZA TRA 150 E 100
                     
+                    # 10 giu 5-28 0.11 da 0.09 cazzo
                     
                 
                 
@@ -3186,7 +3212,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                 ):
                
-                    buy = "BUY 2C con 100< and 200< con INCROCIO 7-50 and 5-28 >0.10 (SOPRA -CRESCE-DIMINUISCE) aurora- r 2081"
+                    buy = "BUY 2C con 100< and 200< con INCROCIO 7-50 and 5-28 >0.10 (SOPRA -CRESCE-DIMINUISCE) aurora - r 2081"
                     action = "buy"
                     percentage = 70
                     
@@ -3195,7 +3221,7 @@ class maddog:
                     
                     
                     
-                # BUY 2C con 100< and 200< con INCROCIO 7-50 PIU' FRAGILE (SOPRA DIMINUISCE DIMINUISCE)notte
+                # BUY 2C con 100< and 200< con INCROCIO 7-50 PIU' FRAGILE (SOPRA DIMINUISCE DIMINUISCE) notte
                 
                 elif (
                     deviation_buy2 > 0.01
@@ -7455,14 +7481,15 @@ class maddog:
                     elif (
                         ma50_last > ma50_2_min_ago
                         and ma3_last > ma100_last
-                        and ma5_last < ma69_last
+                        and ma5_last < ma78_last
                         and deviation_sell > 0.35 and deviation_sell < 0.64
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 dopo 110 min con ma50 > con 5-69 (!) and deviation_sell 0.35 - 0.64 la prima FINTA DI MARADONA 1 (non toccare) - r 4904"
+                        sell = "SELL 1 dopo 110 min con ma50 > con 5-78 (!) and deviation_sell 0.35 - 0.64 la prima FINTA DI MARADONA 1 (non toccare) - r 4904"
                         action = "sell"
                         
+                        # 10 GIU 2022 5-78 da 5-69
                         
                     
                     # MARADONA 2
