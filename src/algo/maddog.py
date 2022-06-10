@@ -992,10 +992,11 @@ class maddog:
                 
                 elif (     
                     ma11_last > ma69_last
+                    and deviation_ma100_sopra_ma300 < -0.27
                     and ma100_last < ma200_last
                     and ma200_last < ma200_120_min_ago
                     
-                    and ma11_last > ma69_last
+                    and ma11_last > ma59_last
                     and deviation_ma5_sopra_ma28 > 0.20
                     and deviation_bellissima > 0.06
                     
@@ -1004,10 +1005,11 @@ class maddog:
                     and ma2_last > ma20_last
                     and ma2_last > ma2_2_min_ago
                 ):    
-                    buy = "BUY 1 PERICOLOSA tempo FINE AUTUNNO LENTO (quasi inverno !) con 11-69 che considera il passare del tempo con 5-28 > 0.20 - r 765"
+                    buy = "BUY 1 PERICOLOSA derivata dal tardo autunno ! togliendo i 40 minuti della ma30 con 11-59 con 5-28 > 0.20 - r 765"
                     action = "buy"
                     percentage = 50
                     
+                    # 100 deve stare un po' sotto alla 300 !
                     
                     
                     
@@ -2661,7 +2663,7 @@ class maddog:
                 # BUY 1 CHE MANCAVA DOPO BUY-SELL CROLLO ! 150-100 GIORNO !
                 
                 elif (
-                    deviation_ma5_sopra_ma28 > 0.11
+                    deviation_ma5_sopra_ma28 > 0.12
                     
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
@@ -2676,7 +2678,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                 
                 ):
-                    buy = "BUY 1 CHE MANCAVA DOPO BUY-SELL CROLLO ! 150-100 GIORNO ! 5-28 > 0.09 - r 2029"
+                    buy = "BUY 1 CHE MANCAVA DOPO BUY-SELL CROLLO ! 150-100 GIORNO ! 5-28 > 0.12 - r 2029"
                     action = "buy"
                     percentage = 30
                     
@@ -2685,11 +2687,11 @@ class maddog:
                     # ASSURDO ! questa 100 > 100 3 min e' incredibile ! si e' verificata dopo il BUY-SELL del crollo ! NON TOCCARE
                     # SI STA RIDUCENDO LA DISTANZA TRA 150 E 100
                     
-                    # 10 giu 5-28 0.11 da 0.09 cazzo
+                    # 10 giu 5-28 0.12 da 0.09 cazzo
                     
                 
                 
-                # BUY 1 CHE MANCAVA aggressiva
+                # BUY 1 CHE MANCAVA aggressiva - (SEMBRA pari al BUY DURANTE UN RIBASSO AUDI !)
                 
                 elif (
                     deviation_ma5_sopra_ma28 > 0.08
@@ -2709,7 +2711,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                 
                 ):
-                    buy = "BUY 1 CHE MANCAVA aggressiva 5-28 > 0.08 - r 2030"
+                    buy = "BUY 1 CHE MANCAVA aggressiva 5-28 > 0.08 (SEMBRA pari al BUY DURANTE UN RIBASSO AUDI !) - r 2030"
                     action = "buy"
                     percentage = 30
                     
@@ -3165,7 +3167,9 @@ class maddog:
                     # questa cosa che 78 deve essere < 200 ha dell' incredibile. MA NON TOCCARE !
                     
                     
-                    
+                
+                
+                
                 # IL BUY 2 CI RIPROVA CON INCROCIO 8-50
                 
                 elif (
