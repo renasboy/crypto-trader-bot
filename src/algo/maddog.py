@@ -3173,7 +3173,7 @@ class maddog:
                 # IL BUY 2 CI RIPROVA CON INCROCIO 8-50
                 
                 elif (
-                    deviation_buy2 > 0.01
+                    deviation_buy2 > 0.005
                     and ma50_last > ma100_last
                     
                     and ma200_last < ma200_120_min_ago
