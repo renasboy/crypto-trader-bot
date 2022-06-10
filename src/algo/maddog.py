@@ -3518,12 +3518,14 @@ class maddog:
             
             
             
-                # BUY 2 che ci riprova TORNANDO ALLE ORIGINI con ma200< and ma300< (compare stammi vicino !)
+            
+                # BUY 2 che ci riprova TORNANDO ALLE ORIGINI ( TREND LATERALE !) con ma200< and ma300< AND 100 vicina alla 300
                 
                 elif (
                     deviation_buy2 > 0.06
+                    and deviation_ma100_sopra_ma300 > -0.20
+                    and deviation_ma5_sopra_ma28 > 0.19
                     
-                    and deviation_ma5_sopra_ma28 > 0.15
                     and deviation_bellissima > 0.14
                     and ma8_last > ma8_2_min_ago
                     and ma2_last > ma2_2_min_ago
@@ -3536,7 +3538,39 @@ class maddog:
                     and ma300_last < ma300_120_min_ago
                 ):
                
-                    buy = "BUY 2 che ci riprova TORNANDO ALLE ORIGINI con ma200< and ma300< - r 2317"
+                    buy = "BUY 2 che ci riprova TORNANDO ALLE ORIGINI ( TREND LATERALE !) con ma200< and ma300< AND 100 vicina alla 300 - r 2317"
+                    action = "buy"
+                    percentage = 40
+
+                    # compare prega per me !
+                    # se ma200< e ma300< si torna alle origini ! 8-50 ! (con ma2 > ma2 2 min ago)
+                    # deviation_buy2 = ma8_last / ma50_last
+                    
+                    # SE 100 STA VICINO ALLA 300 TREND LATERALE ! - 5-28 DEVE AVERE UNA SPINTA MAGGIORE !
+                    
+                    
+                    
+                    
+                # BUY 2 che ci riprova TORNANDO ALLE ORIGINI (TREND RIBASSO !) con ma200< and ma300< AND 100 molto sotto 300
+                
+                elif (
+                    deviation_buy2 > 0.06
+                    and deviation_ma100_sopra_ma300 < -0.20
+                    and deviation_ma5_sopra_ma28 > 0.15
+                    
+                    and deviation_bellissima > 0.14
+                    and ma8_last > ma8_2_min_ago
+                    and ma2_last > ma2_2_min_ago
+                    and ma3_last > ma7_last
+                    and ma3_last > ma13_last
+                    and deviation_buy_ma3_sopra_ma20 > 0.05
+                    and deviation_ma4_sopra_ma25 > 0.05
+                    
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_120_min_ago
+                ):
+               
+                    buy = "BUY 2 che ci riprova TORNANDO ALLE ORIGINI (TREND RIBASSO !) con ma200< and ma300< AND 100 molto sotto 300 - r 2318"
                     action = "buy"
                     percentage = 40
 
@@ -3546,6 +3580,20 @@ class maddog:
                     
                     # 9 giu 2022 dev_buy2 (8-50) a 0.06 da 0.08
                     # 9 giu 2022 dev_bellissima a 0.15 da 0.16
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                 
                 
                 # BUY 2 con ma200> e ma300> DURANTE UNA piccola CORREZIONE che NON E' un forte ribasso e NON E' un crollo !  
