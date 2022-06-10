@@ -3306,6 +3306,7 @@ class maddog:
                 
                 elif (
                     deviation_ma5_sopra_ma28 > 0.10
+                    and deviation_ma100_sopra_ma300 < -0.20
                     
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
@@ -3328,7 +3329,7 @@ class maddog:
                     # the sound of silence
                     # ASSURDO ! questa 100 > 100 3 min e' incredibile ! si e' verificata dopo il BUY-SELL del crollo ! NON TOCCARE
                     # SI STA RIDUCENDO LA DISTANZA TRA 150 E 100
-                    
+                    # and deviation_ma100_sopra_ma300 < -0.20 significa che stiamo ancora in una situazione di ribasso !
                     
                     
                     
