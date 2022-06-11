@@ -332,6 +332,14 @@ class maddog:
         self.algo_helper.info("deviation_ma200_sotto_ma300: {}".format(deviation_ma200_sotto_ma300))
         
         
+        
+        # formula DEVIATION_MA100_LATERALE evita BUY CONTINUI DEL BUY ECCEZIONALE NELLA FASE LATERALE
+        
+        deviation_ma100_laterale = (ma5_last / ma100_last - 1) * 100 if ma100_last else 0
+        self.algo_helper.info("deviation_ma100_laterale: {}".format(deviation_ma100_laterale))
+        
+        
+        
         # formula DEVIATION_ma5_sotto_ma200 per comprare FINO a una certa distanza da ma200
         
         deviation_ma5_sotto_ma200 = (ma5_last / ma200_last - 1) * 100 if ma200_last else 0
@@ -375,10 +383,7 @@ class maddog:
         self.algo_helper.info("deviation_assurda: {}".format(deviation_assurda))
         
       
-        # formula DEVIATION_MA100_LATERALE evita BUY CONTINUI DEL BUY ECCEZIONALE NELLA FASE LATERALE
         
-        deviation_ma100_laterale = (ma5_last / ma100_last - 1) * 100 if ma100_last else 0
-        self.algo_helper.info("deviation_ma100_laterale: {}".format(deviation_ma100_laterale))
         
         
         
@@ -1246,7 +1251,7 @@ class maddog:
                 elif (
                     
                     ma8_last > ma50_last
-                    and deviation_ma100_sopra_ma200 > -0.50
+                    and deviation_ma100_sopra_ma200 > -0.60
                     and deviation_ma50_sotto_ma200 < -0.15
                     
                     and ma100_last < ma100_60_min_ago
@@ -2177,7 +2182,44 @@ class maddog:
                     
                     
                 #####################################################################################################################
-             
+                
+                # BUY 1 ultimo e meraviglioso RIBASSO AUDI con 5-16 copiata da RCCR CHE E' ANDATA BENISSIMO e che non e' un crollo ! (compare dove sei!)   
+                
+                elif (
+                    
+                    deviation_buy_crollo_1 < -0.60
+                    and deviation_buy_crollo_1 > -1.70
+                    and deviation_ma5_sopra_ma16 > 0.11
+                    
+                    and ma100_last < ma100_120_min_ago
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_120_min_ago
+                    
+                    and ma100_last > ma200_last
+                    and ma200_last > ma300_last
+                    
+                    and deviation_ma100_laterale < -0.50
+                    
+                    and ma5_last > ma16_last
+                    and ma2_last > ma2_2_min_ago
+                    and ma78_last < ma200_last
+                    
+                    
+                ):
+                    buy = "BUY 1 ultimo e meraviglioso RIBASSO AUDI con 5-16 copiata da RCCR CHE E' ANDATA BENISSIMO e che non e' un crollo !  - riga 1645"
+                    action = "buy"
+                    percentage = 50
+                    
+                    # deviation_buy_crollo_1 = ma8_last / ma78_last
+                    # questa cosa che 78 deve essere < 200 ha dell' incredibile. MA NON TOCCARE !
+                    # and deviation_ma100_laterale < -0.50 significa che ma5 sa sotto di almeno 0.50 rispetto alla ma100 - questa e' necessaria
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                 # BUY 1 DURANTE UN RIBASSO AUDI PIU' LENTA LENTA copiata da RCCR CHE E' ANDATA BENISSIMO CHE NON E' UN CROLLO ! (compare stammi vicino!)
                 
                 elif (
