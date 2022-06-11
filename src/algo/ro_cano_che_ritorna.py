@@ -1555,13 +1555,15 @@ class ro_cano_che_ritorna:
                     deviation_buy_crollo_1 < -0.29
                     and deviation_buy_crollo_1 > -0.59
                     and deviation_correzione > 0.10
+                    and deviation_ma5_sopra_ma28 > 0.07
                     
                     and ma200_last < ma300_last
                     and ma20_last < ma100_last
                     and ma100_last < ma100_10_min_ago
                     and deviation_ma200_sotto_ma300 < -0.27
                    
-                    and rapporto_delta_1_delta_2 < 1
+                    and delta_1 < delta_2
+                    and ma100_last > ma100_60_min_ago
                     
                     and ma2_last > ma2_2_min_ago
                 ):
