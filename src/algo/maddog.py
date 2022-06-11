@@ -1245,12 +1245,20 @@ class maddog:
                     # MA HO DOVUTO AGGIUNGERE and deviation_ma5_sopra_ma28 > 0.20
                     
                     
-                
-                # BUY 1 per arrivare prima del passare del tempo. prendo qualche rischio
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                # BUY 1 MISTERO CON 8>50 E 5-28 PIU' ALTO ! per arrivare una ndecchia prima del passare del tempo. prendendo rischio
                 
                 elif (
+                    deviation_ma5_sopra_ma28 > 0.35
+                    and ma8_last > ma50_last
                     
-                    ma8_last > ma50_last
                     and deviation_ma100_sopra_ma200 > -0.60
                     and deviation_ma50_sotto_ma200 < -0.15
                     
@@ -1258,14 +1266,14 @@ class maddog:
                     and ma200_last < ma200_60_min_ago
                     and ma300_last < ma300_60_min_ago
                     
-                    and deviation_ma5_sopra_ma28 > 0.16
+                    
                     and deviation_ma13_sopra_ma25 > 0.06
                     and deviation_ma3_sopra_ma7 > 0.04
                     
                     and ma2_last >= ma2_2_min_ago
               
                 ):
-                    buy = "BUY 1 MISTERO 8-50 copiata e modificata da RCCR che era arrivata una ndecchia prima del passare del tempo - riga 886"
+                    buy = "BUY 1 MISTERO CON 8>50 E 5-28 PIU' ALTO ! per arrivare una ndecchia prima del passare del tempo prendendo rischio - riga 885"
                     action = "buy"
                     percentage = 50
                     
@@ -1274,6 +1282,47 @@ class maddog:
                     
                     
                     
+                    
+                # BUY 1 MISTERO con INCROCIO 8-50 E 5-28 PIU' BASSO per arrivare una ndecchia prima del passare del tempo. prendendo rischio
+                
+                elif (
+                    
+                    deviation_ma5_sopra_ma28 > 0.16
+                    and (ma8_prev < ma50_prev and ma8_last > ma50_last)
+                    and deviation_ma100_sopra_ma200 > -0.60
+                    and deviation_ma50_sotto_ma200 < -0.15
+                    
+                    and ma100_last < ma100_60_min_ago
+                    and ma200_last < ma200_60_min_ago
+                    and ma300_last < ma300_60_min_ago
+                    
+                    
+                    and deviation_ma13_sopra_ma25 > 0.06
+                    and deviation_ma3_sopra_ma7 > 0.04
+                    
+                    and ma2_last >= ma2_2_min_ago
+              
+                ):
+                    buy = "BUY 1 MISTERO con INCROCIO 8-50 e 5-28 PIU' BASSO per arrivare una ndecchia prima del passare del tempo prendendo rischio - riga 886"
+                    action = "buy"
+                    percentage = 50
+                    
+                    # ma100 sta sotto la ma200 MA non le e' troppo lontana cioe' NON ci troviamo in una situazione drammatica! ( anche se ma100< e ma200< e ma300< )
+                    # MISTERO !
+                    
+                    
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 # BUY 1 copiata e modificata da RCCR che e' arrivata una ndecchia prima del passare del tempo.
                 
                 elif (
@@ -2183,6 +2232,30 @@ class maddog:
                     
                 #####################################################################################################################
                 
+                
+                
+                # BUY 1 RIBASSO AUDI importato dal BUY 2 che e' andato benissimo dopo il blocco
+                
+                elif (
+                    
+                    deviation_buy_crollo_1 < -0.70
+                    and deviation_buy_crollo_1 > -1.50
+                    
+                    and ma5_last > ma16_last
+                    and ma2_last > ma2_2_min_ago
+                    and ma78_last < ma200_last
+                    and deviation_ma5_sopra_ma16 > 0.10
+                ):
+                    buy = "BUY 1 RIBASSO AUDI importato dal BUY 2 che e' andato benissimo dopo il blocco - riga 1621"
+                    action = "buy"
+                    percentage = 50
+                    
+                    # deviation_buy_crollo_1 = ma8_last / ma78_last
+                    # questa cosa che 78 deve essere < 200 ha dell' incredibile. MA NON TOCCARE !
+                    
+                    
+                    
+                    
                 # BUY 1 ultimo e meraviglioso RIBASSO AUDI con 5-16 copiata da RCCR CHE E' ANDATA BENISSIMO e che non e' un crollo ! (compare dove sei!)   
                 
                 elif (
