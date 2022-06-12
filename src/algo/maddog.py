@@ -1282,15 +1282,16 @@ class maddog:
                     
                     
                     
-                    
                 # BUY 1 MISTERO con INCROCIO 8-50 E 5-28 PIU' BASSO per arrivare una ndecchia prima del passare del tempo. prendendo rischio
                 
                 elif (
                     
-                    deviation_ma5_sopra_ma28 > 0.16
+                    deviation_ma5_sopra_ma28 > 0.24
                     and (ma8_prev < ma50_prev and ma8_last > ma50_last)
                     and deviation_ma100_sopra_ma200 > -0.60
                     and deviation_ma50_sotto_ma200 < -0.15
+                    
+                    and deviation_ma100_sopra_ma300 > -0.80
                     
                     and ma100_last < ma100_60_min_ago
                     and ma200_last < ma200_60_min_ago
@@ -1303,7 +1304,36 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
               
                 ):
-                    buy = "BUY 1 MISTERO con INCROCIO 8-50 e 5-28 PIU' BASSO per arrivare una ndecchia prima del passare del tempo prendendo rischio - riga 886"
+                    buy = "BUY 1 MISTERO con INCROCIO 8-50 e 5-28 > 0.28 per arrivare una ndecchia prima del passare del tempo prendendo rischio - riga 886 a"
+                    action = "buy"
+                    percentage = 50
+                    
+                    
+                    
+                    
+                # BUY 1 MISTERO con INCROCIO 8-50 E 5-28 PIU' BASSO per arrivare una ndecchia prima del passare del tempo. prendendo rischio
+                
+                elif (
+                    
+                    deviation_ma5_sopra_ma28 > 0.14
+                    and (ma8_prev < ma50_prev and ma8_last > ma50_last)
+                    and deviation_ma100_sopra_ma200 > -0.60
+                    and deviation_ma50_sotto_ma200 < -0.15
+                    
+                    and deviation_ma100_sopra_ma300 < -0.80
+                    
+                    and ma100_last < ma100_60_min_ago
+                    and ma200_last < ma200_60_min_ago
+                    and ma300_last < ma300_60_min_ago
+                    
+                    
+                    and deviation_ma13_sopra_ma25 > 0.06
+                    and deviation_ma3_sopra_ma7 > 0.04
+                    
+                    and ma2_last >= ma2_2_min_ago
+              
+                ):
+                    buy = "BUY 1 MISTERO con INCROCIO 8-50 e 5-28 > 0.14 per arrivare una ndecchia prima del passare del tempo prendendo rischio - riga 886 b"
                     action = "buy"
                     percentage = 50
                     
