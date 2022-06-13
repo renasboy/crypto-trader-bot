@@ -123,6 +123,7 @@ class maddog:
         ma200_90_min_ago = self.algo_helper.ma_minutes_ago(200, 90)
         ma200_120_min_ago = self.algo_helper.ma_minutes_ago(200, 120)
         ma200_120_min_ago = self.algo_helper.ma_minutes_ago(200, 120)
+        ma300_20_min_ago = self.algo_helper.ma_minutes_ago(300, 20)
         ma300_60_min_ago = self.algo_helper.ma_minutes_ago(300, 60)
         ma300_120_min_ago = self.algo_helper.ma_minutes_ago(300, 120)
 
@@ -6939,16 +6940,40 @@ class maddog:
                     # SELL 1 maestro parte 2 (21-50 min) con ma50 < and deviation_sell < -0.33
                     
                     
-                    
                     elif (        
                         ma50_last < ma50_2_min_ago
                         and ma300_last > ma300_120_min_ago
+                        and ma300_last > ma300_20_min_ago
+                        
+                        and ma2_last < ma2_2_min_ago 
+                        and deviation_sell < -0.36
+                        and deviation_ma50_sotto_ma300 < 0.50
+                    ):
+                        sell = "SELL 1 maestro parte 2 300>120 e 300>20 (21-50 min) con ma50 < and deviation_sell < -0.36 - r 4214"
+                        action = "sell"
+                        
+                        
+                        
+                        
+                    elif (        
+                        ma50_last < ma50_2_min_ago
+                        and ma300_last > ma300_120_min_ago
+                        and ma300_last < ma300_20_min_ago
+                        
                         and ma2_last < ma2_2_min_ago 
                         and deviation_sell < -0.33
                         and deviation_ma50_sotto_ma300 < 0.50
                     ):
-                        sell = "SELL 1 maestro parte 2 (21-50 min) con ma50 < and deviation_sell < -0.33 - r 4214"
+                        sell = "SELL 1 maestro parte 2 300>120 e 300>20 (21-50 min) con ma50 < and deviation_sell < -0.33 - r 4215"
                         action = "sell"
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                         
                         
                         
