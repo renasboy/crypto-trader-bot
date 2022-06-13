@@ -83,6 +83,8 @@ class maddog:
         ma20_60_min_ago = self.algo_helper.ma_minutes_ago(20, 60)
         ma25_2_min_ago = self.algo_helper.ma_minutes_ago(25, 2)
         ma28_2_min_ago = self.algo_helper.ma_minutes_ago(28, 2)
+        ma28_30_min_ago = self.algo_helper.ma_minutes_ago(28, 30)
+        
         ma30_10_min_ago = self.algo_helper.ma_minutes_ago(30, 10)
         ma30_20_min_ago = self.algo_helper.ma_minutes_ago(30, 20)
         ma30_30_min_ago = self.algo_helper.ma_minutes_ago(30, 30)
@@ -1002,7 +1004,7 @@ class maddog:
                     and ma200_last < ma200_120_min_ago
                     
                     and ma11_last > ma59_last
-                    and deviation_ma5_sopra_ma28 > 0.20
+                    and deviation_ma5_sopra_ma28 > 0.21
                     and deviation_bellissima > 0.06
                     
                     and ma20_last > ma20_2_min_ago
@@ -2209,12 +2211,17 @@ class maddog:
                     
                 
                 
-             
+                
+                
+                
+                
                 #  BUY 1 FIAT copia BIS della r701 del RCCR che non funzionava e che invece HA FUNZIONATO ! ( CON DOPPIO DELTA in RIBASSO !) 8-39
                 
                 elif (    
                     deviation_buy_crollo_1 < -0.29
                     and deviation_buy_crollo_1 > -0.69
+                    
+                    and ma300_last > ma300_120_min_ago
                     and deviation_ma5_sopra_ma28 > 0.15
                     and ma8_last > ma39_last
                     and ma200_last < ma300_last
@@ -2228,7 +2235,35 @@ class maddog:
                     
                     and ma2_last > ma2_2_min_ago
                 ):
-                    buy = "BUY 1 FIAT copia BIS della r701 del RCCR che non funzionava e che invece HA FUNZIONATO !  SOTTO RIBASSO RIBASSO - NOTTE ! ! 8-39 - r 1588"
+                    buy = "BUY 1 FIAT 300 > 120 min agocopia BIS della r701 del RCCR che non funzionava e che invece HA FUNZIONATO ! - NOTTE ! ! 8-39 - r 1588 A"
+                    action = "buy"
+                    percentage = 40
+                    
+                    
+                    
+                    
+                #  BUY 1 FIAT copia BIS della r701 del RCCR che non funzionava e che invece HA FUNZIONATO ! ( CON DOPPIO DELTA in RIBASSO !) 8-39
+                
+                elif (    
+                    deviation_buy_crollo_1 < -0.29
+                    and deviation_buy_crollo_1 > -0.69
+                    
+                    and ma300_last < ma300_120_min_ago
+                    and deviation_ma5_sopra_ma28 > 0.285
+                    
+                    and ma8_last > ma39_last
+                    and ma200_last < ma300_last
+                    and ma20_last < ma100_last
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma200_sotto_ma300 < -0.27
+             
+                    
+                    and delta_1 > delta_2
+                    and ma100_last < ma100_60_min_ago
+                    
+                    and ma2_last > ma2_2_min_ago
+                ):
+                    buy = "BUY 1 FIAT 300 < 120 min ago copia BIS della r701 del RCCR che non funzionava e che invece HA FUNZIONATO ! - NOTTE ! ! 8-39 - r 1588 B"
                     action = "buy"
                     percentage = 40
                     
@@ -2242,7 +2277,13 @@ class maddog:
                     
                     
                    
-                    
+                
+                
+                
+                
+                
+                
+                
                 # BUY 1 FIAT OK ( con doppio delta in ribasso !) 8-39
                 
                 elif (    
@@ -2288,6 +2329,7 @@ class maddog:
                     
                     deviation_buy_crollo_1 < -0.70
                     and deviation_buy_crollo_1 > -1.50
+                    and deviation_ma5_sopra_ma28 > 0.01
                     
                     and ma5_last > ma16_last
                     and ma2_last > ma2_2_min_ago
@@ -2369,13 +2411,14 @@ class maddog:
                     deviation_buy_crollo_1 < -0.70
                     and deviation_buy_crollo_1 > -1.50
                     
-                    and deviation_ma3_sopra_ma16 > 0.20
+                    
+                    and deviation_ma3_sopra_ma16 > 0.46
                     
                     and ma2_last >= ma2_2_min_ago
                     and ma78_last < ma200_last
                     
                 ):
-                    buy = "BUY 1 RIBASSO AUDI PIU' GIU' -0.70 E PIU' VELOCE CHE NON E' UN CROLLO ! con deviation 3-16 > 0.20  - riga 1647"
+                    buy = "BUY 1 RIBASSO AUDI PIU' GIU' -0.70 E PIU' VELOCE CHE NON E' UN CROLLO ! con deviation 3-16 > 0.46  - riga 1647"
                     action = "buy"
                     percentage = 50
                     
@@ -2461,7 +2504,7 @@ class maddog:
                 elif (
                     ma2_last > ma2_2_min_ago
                     and deviation_buy_crollo_1 < -1.61
-                    and deviation_buy_crollo_2 > 0.005
+                    and deviation_buy_crollo_2 > -0.005
                     and ma78_last < ma300_last
                 ):
                     buy = "BUY 1 CROLLO FERRARI - modo 2 and ma78_last < ma300_last - r 1745"
@@ -3253,12 +3296,11 @@ class maddog:
                 
                 
                 
-                # BUY 2 con doppio delta > 1 trend ribasso and deviation_ma5_sopra_ma28 > 0.16
+                # BUY 2 300 > 120 min ago con doppio delta > 1 trend ribasso and deviation_ma5_sopra_ma28 > 0.16
                 
                 elif (
                     deviation_buy2 > 0.10
-                    
-                    
+                    and ma300_last > ma300_120_min_ago
                     
                     and delta_1 > delta_2
                     and ma100_last < ma100_60_min_ago
@@ -3274,11 +3316,43 @@ class maddog:
                     and ma3_last > ma40_last
                     and ma4_last > ma78_last
                 ):
-                    buy = "BUY 2C SOPRA RIBASSO RIBASSO - NOTTE - r 2040"
+                    buy = "BUY 2C SOPRA RIBASSO RIBASSO - NOTTE - r 2040 a"
                     action = "buy"
                     percentage = 50
                     
                     # deviation_buy2 = ma8_last / ma50
+                    
+                    
+                    
+                # BUY 2 300 < 120 min ago con doppio delta > 1 trend ribasso and deviation_ma5_sopra_ma28 > 0.16
+                
+                elif (
+                    deviation_buy2 > 0.10
+                    and ma300_last < ma300_120_min_ago
+                    
+                    and delta_1 > delta_2
+                    and ma100_last < ma100_60_min_ago
+                    
+                    and deviation_ma5_sopra_ma28 > 0.01
+                    
+                    and deviation_bellissima > 0.12
+                    
+                    and deviation_buy_ma3_sopra_ma13 > 0.10
+                    and deviation_ma7_sopra_ma40 > 0.10
+                    and ma4_last > ma9_last
+                    and ma2_last > ma2_2_min_ago
+                    and ma3_last > ma40_last
+                    and ma4_last > ma78_last
+                ):
+                    buy = "BUY 2C SOPRA RIBASSO RIBASSO - NOTTE - r 2040 b"
+                    action = "buy"
+                    percentage = 50
+                    
+                    # deviation_buy2 = ma8_last / ma50
+                    
+                    # incredibile :  anticipa con 300 < 120 min ago
+                    
+                    
                     
                     
              
@@ -3286,6 +3360,7 @@ class maddog:
                 
                 elif (
                     deviation_buy2 > 0.09
+                    
                     and ma200_last > ma200_120_min_ago
                     
                     and ma5_last > ma18_last
@@ -3320,7 +3395,7 @@ class maddog:
                     and ma5_last > ma16_last
                     and ma2_last > ma2_2_min_ago
                     and ma78_last < ma200_last
-                    and deviation_ma5_sopra_ma16 > 0.10
+                    and deviation_ma5_sopra_ma16 > 0.09
                 ):
                     buy = "BUY 2 DURANTE UN RIBASSO AUDI CHE NON E' UN CROLLO ! E CHE CI RIPROVA - riga 2065"
                     action = "buy"
@@ -4342,10 +4417,10 @@ class maddog:
                     ma69_last < ma69_2_min_ago
                     and deviation > -0.30
                     
-                    and deviation_buy3 > 0.03
+                    and deviation_buy3 > 0.02
                     and deviation_ma13_sopra_ma25 > 0.040
                     and delta_buy3_incrocio_ma3_ma8 > 0.07
-                    and deviation_ma4_sopra_ma30 > 0.15
+                    and deviation_ma4_sopra_ma30 > 0.14
                     and ma3_last > ma8_last
                     and ma3_last > ma78_last
                     and ma4_last > ma4_2_min_ago
@@ -4358,6 +4433,33 @@ class maddog:
                     
                     # deviation_buy3 = ma4_last/ma30_last
                     # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
+                    
+                    
+                    
+                    
+                    
+                # BUY 3 FORTE RIBASSO che NON E' UN CROLLO ! (compare stammi vicino!) da BUY2 RCCR
+                
+                elif (
+                    ma2_last > ma2_2_min_ago
+                    and deviation_buy_crollo_1 < -0.60
+                    and deviation_buy_crollo_1 > -1.50
+                    and deviation_bellissima > 0.17
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and ma100_last < ma100_120_min_ago
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_120_min_ago
+             
+                    
+                ):
+                    buy = "BUY 3 FORTE RIBASSO che NON E' UN CROLLO ! and deviation_bellissima > 0.17  da BUY2 RCCR - r 2178"
+                    action = "buy"
+                    percentage = 40
+                    
+                    # deviation_buy_crollo_1 = ma8_last / ma78_last
                     
                     
                     
@@ -4976,21 +5078,50 @@ class maddog:
                 
                 if (
                     ma50_last >= ma50_2_min_ago
+                    and ma28_last > ma28_30_min_ago
                     and ma78_last > ma150_last
+                    
+                    and deviation_ma5_sopra_ma28 > 0.12
                     
                     and deviation_buy3 > 0.10
                     and ma3_last > ma13_last
                     and deviation_ma7_sopra_ma40 > 0.09
                     and ma4_last > ma9_last
                     and ma4_last > ma50_last
-                    and deviation_ma5_sopra_ma28 > 0.12
+                    
                     and ma6_last > ma15_last
                     and ma7_last > ma25_last
                     
                     and ma2_last > ma2_2_min_ago
                 
                 ):
-                    buy = "BUY 5 con ma50 > AND 50>100 and 5-28 > 0.12 - riga 2971"
+                    buy = "BUY 5 con ma50 > AND 50>100 and ma28_last > ma28_30_min_ago and 5-28 > 0.12 - riga 2971a"
+                    action = "buy"
+                    percentage = 50
+                    
+                    # 6 giu 2022 5-28 a 0.12 da 0.15
+                    
+                    
+                elif (
+                    ma50_last >= ma50_2_min_ago
+                    and ma28_last < ma28_30_min_ago
+                    and ma78_last > ma150_last
+                    
+                    and deviation_ma5_sopra_ma28 > 0.17
+                    
+                    and deviation_buy3 > 0.10
+                    and ma3_last > ma13_last
+                    and deviation_ma7_sopra_ma40 > 0.09
+                    and ma4_last > ma9_last
+                    and ma4_last > ma50_last
+                    
+                    and ma6_last > ma15_last
+                    and ma7_last > ma25_last
+                    
+                    and ma2_last > ma2_2_min_ago
+                
+                ):
+                    buy = "BUY 5 con ma50 > AND 50>100 and ma28_last < ma28_30_min_ago and 5-28 > 0.17 - riga 2971b"
                     action = "buy"
                     percentage = 50
                     
@@ -5003,9 +5134,10 @@ class maddog:
                 
                 
                 
-                
                 elif (
                     ma50_last >= ma50_2_min_ago
+                    and ma300_last > ma300_120_min_ago
+                    
                     and ma78_last < ma150_last
                     and deviation_ma5_sopra_ma28 > 0.27
                     and ma50_last > ma100_last
@@ -5023,9 +5155,49 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                 
                 ):
-                    buy = "BUY 5 con ma50 > AND 50<100 and 5-28 > 0.27 (SI !) (PER SPEZZARE LA CATENA un po' di meno - vs effetti laterali) riga 2972"
+                    buy = "BUY 5 con ma50 > AND 50<100 and 300 > 60 min ago and 5-28 > 0.27 (SI !) - riga 2972 a"
                     action = "buy"
                     percentage = 50
+                    
+                    
+                    
+                elif (
+                    ma50_last >= ma50_2_min_ago
+                    and ma300_last < ma300_120_min_ago
+                    and ma78_last < ma150_last
+                    and deviation_ma5_sopra_ma28 > 0.29
+                    and ma50_last > ma100_last
+                    
+                    
+                    and deviation_buy3 > 0.10
+                    and ma3_last > ma13_last
+                    and deviation_ma7_sopra_ma40 > 0.09
+                    and ma4_last > ma9_last
+                    and ma4_last > ma50_last
+                    
+                    and ma6_last > ma15_last
+                    and ma7_last > ma25_last
+                    and deviation_bellissima > 0.12
+                    and ma2_last > ma2_2_min_ago
+                
+                ):
+                    buy = "BUY 5 con ma50 > and 300 < 60 min ago AND 50<100 and 5-28 > 0.29 (SI !) - riga 2972 b"
+                    action = "buy"
+                    percentage = 50
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     
                     
                 elif (
@@ -5047,7 +5219,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                 
                 ):
-                    buy = "BUY 5 con ma50 > AND 50<100 and 5-28 > 0.31 (SI !) (PER SPEZZARE LA CATENA un po' di meno - vs effetti laterali) riga 2972"
+                    buy = "BUY 5 con ma50 > AND 50<100 and 5-28 > 0.31 (SI !) (PER SPEZZARE LA CATENA un po' di meno - vs effetti laterali) riga 2972 c"
                     action = "buy"
                     percentage = 50
                     
@@ -5744,13 +5916,13 @@ class maddog:
                     
                     elif (
                         ma50_last < ma50_2_min_ago
-                        and (ma2_prev > ma5_prev and ma2_last < ma5_last)
+                        and (ma2_prev > ma8_prev and ma2_last < ma8_last)
                         and deviation_sell > 0.81 and deviation_sell < 1.70
                         and ma2_last < ma2_2_min_ago
 
                     ):
 
-                        sell = "SELL 1 CROLLO (3-5 min) con ma50 < and incrocio 2-5 and gain > 0.81-1.70 - r 3500"
+                        sell = "SELL 1 CROLLO (3-5 min) con ma50 < and incrocio 2-8 and gain > 0.81-1.70 - r 3500"
                         action = "sell"
 
                     
@@ -8624,7 +8796,7 @@ class maddog:
                     elif (    
                         ma50_last > ma50_2_min_ago 
                         and ma2_last < ma2_2_min_ago 
-                        and deviation_sell < -0.28 
+                        and deviation_sell < -0.30
                         and ma3_last < ma50_last
                         and ma200_last < ma200_60_min_ago
                         and ma100_last < ma200_last
@@ -13128,7 +13300,7 @@ class maddog:
             
             elif (
                 deviation_ma39 < -0.26
-                and deviation < -0.40
+                and deviation_sell < -0.36
                 
                 and ma50_last < ma50_2_min_ago
                 and deviation_ma100_sopra_ma300 < 0.40
