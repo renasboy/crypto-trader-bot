@@ -3420,34 +3420,27 @@ class maddog:
                 
                 
                 # --------------------------------------------------- BUY 2 ORIGINALE CHE CI RIPROVA IMPORTATO DA SELL 1 - NOTTE
+                
+                elif (
+                    ma50_last < ma50_2_min_ago
+                    and ma3_last > ma28_last
+                        
+                    and ma2_last > ma2_2_min_ago
+                        
+                    and delta_1 > delta_2
+                    and ma100_last < ma100_60_min_ago
+                        
+                    and ma100_last < ma100_120_min_ago
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_120_min_ago
+                        
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                ):
+                    sell = "BUY 2 ORIGINALE CHE CI RIPROVA IMPORTATO DA SELL 1  - NOTTE - r 2064 b"
+                    action = "sell"    
                     
-                    elif (
-                        ma50_last < ma50_2_min_ago
-                        and ma3_last > ma28_last
-                        
-                        and ma2_last > ma2_2_min_ago
-                        
-                        and delta_1 > delta_2
-                        and ma100_last < ma100_60_min_ago
-                        
-                        and ma100_last < ma100_120_min_ago
-                        and ma200_last < ma200_120_min_ago
-                        and ma300_last < ma300_120_min_ago
-                        
-                        and ma100_last < ma200_last
-                        and ma200_last < ma300_last
-                    ):
-                        sell = "BUY 2 ORIGINALE CHE CI RIPROVA IMPORTATO DA SELL 1  - NOTTE - r 2064 b"
-                        action = "sell"
 
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
                         
                 # BUY 2 DURANTE UN RIBASSO AUDI CHE NON E' UN CROLLO ! E CHE CI RIPROVA (compare stammi vicino!)
                 
