@@ -4944,12 +4944,48 @@ class maddog:
                     # deviation_buy3 = ma4_last/ma30_last
                     # deviation_ma4_sopra_ma100 > 0.25 arrivati al buy 4 DEVE AVERE UNA CERTA FORZA !
                     
-              
-            
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                elif (
+                    ma78_last >= ma78_2_min_ago
+                    and ma300_last < ma300_60_min_ago
+                    and deviation_ma4_sopra_ma100 > 0.24
+                    and ma39_last > ma100_last
+                    
+                    and deviation_buy3 > 0.01
+                    and delta_buy3_incrocio_ma3_ma8 > 0.05
+                    and deviation_ma4_sopra_ma30 > 0.15
+                    and ma3_last > ma8_last
+                    and ma3_last > ma78_last
+                    and ma4_last >= ma4_2_min_ago
+                    and ma2_last > ma2_2_min_ago
+                    and ma7_last > ma25_last
+                    
+                    and ma13_last > ma100_last
+                    and deviation_ma5_sopra_ma28 > 0.10
+                ):
+                    buy = "BUY 4B RIVOLUZIONARIO con ma78 > and ma39_last > ma100_last - r 2835"
+                    action = "buy"
+                    percentage = 50
+                    
+                    # deviation_buy3 = ma4_last/ma30_last
+                    # deviation_ma4_sopra_ma100 > 0.25 arrivati al buy 4 DEVE AVERE UNA CERTA FORZA !
+                    
+                    
+                    
+                    
                 elif (
                     ma78_last >= ma78_2_min_ago
                     and ma300_last < ma300_60_min_ago
                     and deviation_ma4_sopra_ma100 > 0.25
+                    and ma39_last < ma100_last
                     
                     and deviation_buy3 > 0.02
                     and delta_buy3_incrocio_ma3_ma8 > 0.05
@@ -4963,12 +4999,19 @@ class maddog:
                     and ma13_last > ma100_last
                     and deviation_ma5_sopra_ma28 > 0.10
                 ):
-                    buy = "BUY 4B RIVOLUZIONARIO con ma78 > - r 2836"
+                    buy = "BUY 4B RIVOLUZIONARIO con ma78 > and ma39_last < ma100_last - r 2836"
                     action = "buy"
                     percentage = 50
                     
                     # deviation_buy3 = ma4_last/ma30_last
                     # deviation_ma4_sopra_ma100 > 0.25 arrivati al buy 4 DEVE AVERE UNA CERTA FORZA !
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     
                     
                     
