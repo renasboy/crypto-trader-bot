@@ -258,9 +258,6 @@ class maddog:
         
         
         
-        
-        
-        
         # formula delta_150_100
         
         delta_150_100 = (ma150_last / ma100_last - 1) * 100 if ma100_last else 0
@@ -276,11 +273,7 @@ class maddog:
         # non serve piu' il rapporto !
         
         
-        
-        
-        
-        
-        
+       
         
         
        
@@ -388,10 +381,6 @@ class maddog:
       
         
         
-        
-        
-        
-        
         # formula DEVIATION_ma8_sotto_ma100
         
         deviation_ma8_sotto_ma100 = (ma8_last / ma100_last - 1) * 100 if ma100_last else 0
@@ -410,9 +399,6 @@ class maddog:
         
         deviation_ma8_sotto_ma300 = (ma8_last / ma300_last - 1) * 100 if ma300_last else 0
         self.algo_helper.info("deviation_ma8_sotto_ma300: {}".format(deviation_ma8_sotto_ma300))
-        
-        
-        
         
         
         
@@ -613,15 +599,11 @@ class maddog:
         self.algo_helper.info("deviation_buy_ma3_sopra_ma13: {}".format(deviation_buy_ma3_sopra_ma13))
         
         
-        
-        
             
         # formula DEVIATION_buy_ma2_sopra_ma5 per comprare a una certa distanza da ma5
         
         deviation_buy_ma2_sopra_ma5 = (ma2_last / ma5_last - 1) * 100 if ma5_last else 0
         self.algo_helper.info("deviation_buy_ma2_sopra_ma5: {}".format(deviation_buy_ma2_sopra_ma5))
-        
-        
         
         
         
@@ -786,7 +768,7 @@ class maddog:
                     and ma6_last > ma39_last
                 ):    
               
-                    buy = "BUY 1 con 20>200 and 69 > 100 and deviation_bellissima > 0.14 and ma78 > - r 667"
+                    buy = "BUY 1 con 20>200 and 69 > 100 and deviation_bellissima > 0.14 and ma78 > - r 771"
                     action = "buy"
                     percentage = 50
                     
@@ -842,10 +824,30 @@ class maddog:
                     
                 
                 
-                
                 elif (    
                     ma28_last > ma300_last
                     and ma300_last < ma300_120_min_ago
+                    and ma200_last > ma200_60_min_ago
+                    
+                    and deviation_ma5_sopra_ma28 > 0.18
+                    
+                    and ma69_last > ma100_last
+                    and ma3_last > ma8_last
+                    and deviation_bellissima > 0.12
+                    and ma6_last > ma39_last
+                ):    
+              
+                    buy = "BUY 1 con 28>300 and 69 > 100 e 200> and deviation_bellissima > 0.12 and 5-28>0.18 r 684a"
+                    action = "buy"
+                    percentage = 50
+                    
+                    
+                    
+                elif (    
+                    ma28_last > ma300_last
+                    and ma300_last < ma300_120_min_ago
+                    and ma200_last < ma200_60_min_ago
+                    
                     and deviation_ma5_sopra_ma28 > 0.20
                     
                     and ma69_last > ma100_last
@@ -854,7 +856,7 @@ class maddog:
                     and ma6_last > ma39_last
                 ):    
               
-                    buy = "BUY 1 con 28>300 and 69 > 100 and deviation_bellissima > 0.14 r 684"
+                    buy = "BUY 1 con 28>300 and 69 > 100 e 200< and deviation_bellissima > 0.14 r 684b"
                     action = "buy"
                     percentage = 50
                     
@@ -1283,9 +1285,9 @@ class maddog:
             
                 elif (       
                     ma200_last < ma200_20_min_ago
-                    and ma11_last > ma150_last
+                    and ma11_last > ma125_last
                     and ma2_last > ma2_2_min_ago
-                    and deviation_ma5_sopra_ma28 > 0.20
+                    and deviation_ma5_sopra_ma28 > 0.15
                     
                     
                     and delta_1 < delta_2
@@ -1295,13 +1297,14 @@ class maddog:
                     and ma300_last < ma300_60_min_ago
                 ):    
         
-                    buy = "BUY 1 11-150 con ma200< 300< MA ma100> 100 60 min ago e doppio delta < MA ma100 SOTTO RIALZO RIALZO - GIORNO ! - riga 857"
+                    buy = "BUY 1 11-125 con ma200< 300< MA ma100> 100 60 min ago e doppio delta < MA ma100 > - GIORNO ! - riga 857"
                     action = "buy"
                     percentage = 50
                     
                     # 11-150 perche' doppio delta sta risalendo !
                     # MA HO DOVUTO AGGIUNGERE and deviation_ma5_sopra_ma28 > 0.20
                     
+                    # 14 giu 2022 11-125 da 11-150 (giorno!)
                     
                     
                     
@@ -11217,7 +11220,7 @@ class maddog:
 
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and (ma3_prev > ma30_prev and ma3_last < ma30_last)
+                        and (ma3_prev > ma28_prev and ma3_last < ma28_last)
                         and deviation_sell > 0.91 and deviation_sell < 1.20
                         and ma2_last < ma2_2_min_ago
                        
@@ -11226,7 +11229,7 @@ class maddog:
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
-                        
+                        # 14 giu 2022 3-28 da 3-30
                         
                     
                     
@@ -13805,7 +13808,7 @@ class maddog:
             
             elif (
                 deviation_ma39 < -0.25
-                and deviation_sell < -0.50
+                and deviation_sell < -0.52
                 
                 and ma50_last < ma50_2_min_ago
                 and deviation_ma100_sopra_ma300 > 0.40
@@ -13818,7 +13821,7 @@ class maddog:
                 
 
                 # deviation_ma39 = ma4_last / ma39_last QUESTA HA VENDUTO NEL CROLLO IMPROVVISO DI 1 MINUTO (con -2.06% !!!)!
-                
+                # 14 giu 2022 -0.52 da 0.50
             
                 
             
