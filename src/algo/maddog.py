@@ -3437,7 +3437,7 @@ class maddog:
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
                 ):
-                    sell = "BUY 2 ORIGINALE CHE CI RIPROVA IMPORTATO DA SELL 1  - NOTTE - r 2064 b"
+                    buy = "BUY 2 ORIGINALE CHE CI RIPROVA IMPORTATO DA SELL 1  - NOTTE - r 2064 b"
                     action = "sell"    
                     
 
@@ -13521,13 +13521,40 @@ class maddog:
 
                 # deviation_ma39 = ma4_last / ma39_last QUESTA HA VENDUTO NEL CROLLO IMPROVVISO DI 1 MINUTO (con -2.06% !!!)!
                 
-            
                 
-            # 4B - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 < -1.00 and > -1.50
+                
+                
+                
+            
+            # 4C - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 < -1.50 CROLLO !
             
             elif (
-                deviation_ma39 < -0.26
+                
+                deviation_sell < -0.50
+                and (ma3_prev > ma13_prev and ma3_last < ma13_last)
+                
+                and ma50_last < ma50_2_min_ago
+                and deviation_ma100_sopra_ma300 < 0.40
+                
+                and deviation_ma5_sotto_ma200 < -1.50
+                
+            ):
+                sell = "SELL condizione speciale SALVAGENTE 4C 3-39 con ma50 < - con deviation_ma5_sotto_ma200 < -1.50 CROLLO ! - r 9398 A"
+                action = "sell"   
+                
+
+                # DEVIATION 3-39 FACEVA USCIRE PUNTO ROSSO SOVRAPPOSTO AL PUNTO VERDE PERCHE' NEL CROLLO 3 ERA SOTTO 39 ( E NON POTEVANO NEANCHE INCROCIARE)
+                # 
+                
+                
+                
+                
+            # 4B - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 < -1.00 and > -1.50 GRANDE RIBASSO !
+            
+            elif (
+                ma2_last < ma2_2_min_ago
                 and deviation_sell < -0.36
+                and (ma3_prev > ma13_prev and ma3_last < ma13_last)
                 
                 and ma50_last < ma50_2_min_ago
                 and deviation_ma100_sopra_ma300 < 0.40
@@ -13535,15 +13562,16 @@ class maddog:
                 and deviation_ma5_sotto_ma200 < -1.00
                 and deviation_ma5_sotto_ma200 > -1.50
                 
-                and ma2_last < ma2_2_min_ago 
+                
                 
             ):
-                sell = "SELL condizione speciale SALVAGENTE 4 3-39 con ma50 < - con deviation_ma5_sotto_ma200 < -1.00 and > -1.50 - r 9398"
-                action = "sell"   
+                sell = "SELL condizione speciale SALVAGENTE 4 3-13 con ma50 < e con deviation_ma5_sotto_ma200 < -1.00 and > -1.50 GRANDE RIBASSO ! - r 9398 B"
+                action = "sell"
+                
+                # co deviation 3-39 NELLA PRESENTE SITUAZIONE CROLLO 3 SOTTO 39 E PARTIVA IL PUNTO ROSSO SOVRAPPOSTO AL PUNTO VERDE
                 
 
-                # deviation_ma39 = ma4_last / ma39_last QUESTA HA VENDUTO NEL CROLLO IMPROVVISO DI 1 MINUTO (con -2.06% !!!)!
-                # modifica solo devation.
+                
                 
                 
                 
@@ -13567,14 +13595,14 @@ class maddog:
             
             elif (
                 deviation_ma39 < -0.25
-                and deviation < -0.50
+                and deviation_sell < -0.50
                 
                 and ma50_last > ma50_2_min_ago
                 and deviation_ma100_sopra_ma300 > 0.40
                 
                 and deviation_ma5_sotto_ma200 < -1.50
             ):
-                sell = "SELL condizione speciale SALVAGENTE 1C 3-39 con ma50 > - con deviation_ma5_sotto_ma200 < -1.50 - r 9395"
+                sell = "SELL condizione speciale SALVAGENTE 1C 3-39 con ma50 > - con deviation_ma5_sotto_ma200 < -1.50 - r 9399"
                 action = "sell"   
                 
 
@@ -13586,7 +13614,7 @@ class maddog:
             
             elif (
                 deviation_ma39 < -0.25
-                and deviation < -0.50
+                and deviation_sell < -0.50
                 
                 and ma50_last > ma50_2_min_ago
                 and deviation_ma100_sopra_ma300 < 0.40
@@ -13594,7 +13622,7 @@ class maddog:
                 and deviation_ma5_sotto_ma200 < -1.50
                 
             ):
-                sell = "SELL condizione speciale SALVAGENTE 2C 3-39 con ma50 > - con deviation_ma5_sotto_ma200 < -1.50 - r 9396"
+                sell = "SELL condizione speciale SALVAGENTE 2C 3-39 con ma50 > - con deviation_ma5_sotto_ma200 < -1.50 - r 9400"
                 action = "sell"   
                 
 
@@ -13606,7 +13634,7 @@ class maddog:
             
             elif (
                 deviation_ma39 < -0.25
-                and deviation < -0.50
+                and deviation_sell < -0.50
                 
                 and ma50_last < ma50_2_min_ago
                 and deviation_ma100_sopra_ma300 > 0.40
@@ -13614,7 +13642,7 @@ class maddog:
                 and deviation_ma5_sotto_ma200 < -1.50
                 
             ):
-                sell = "SELL condizione speciale SALVAGENTE 3C 3-39 con ma50 < - con deviation_ma5_sotto_ma200 < -1.50 - r 9397"
+                sell = "SELL condizione speciale SALVAGENTE 3C 3-39 con ma50 < - con deviation_ma5_sotto_ma200 < -1.50 - r 9401"
                 action = "sell"   
                 
 
@@ -13622,24 +13650,7 @@ class maddog:
                 
             
                 
-            # 4C - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 < -1.50
             
-            elif (
-                deviation_ma39 < -0.26
-                and deviation < -0.50
-                
-                and ma50_last < ma50_2_min_ago
-                and deviation_ma100_sopra_ma300 < 0.40
-                
-                and deviation_ma5_sotto_ma200 < -1.50
-                
-            ):
-                sell = "SELL condizione speciale SALVAGENTE 4C 3-39 con ma50 < - con deviation_ma5_sotto_ma200 < -1.50 - r 9398"
-                action = "sell"   
-                
-
-                # deviation_ma39 = ma4_last / ma39_last QUESTA HA VENDUTO NEL CROLLO IMPROVVISO DI 1 MINUTO (con -2.06% !!!)!
-                # modifica solo devation.
                 
                 
                 
@@ -13686,7 +13697,7 @@ class maddog:
             elif (
                 ma2_last < ma4_last
                 and ma2_last < ma6_last
-                and deviation < -0.58
+                and deviation_sell < -0.58
                 
                 and deviation_ma5_sotto_ma200 > -1.00
             ):
@@ -13710,7 +13721,7 @@ class maddog:
             elif (
                 ma2_last < ma4_last
                 and ma2_last < ma6_last
-                and deviation < -0.60
+                and deviation_sell < -0.60
                 
                 and deviation_ma5_sotto_ma200 < -1.00
             ):
