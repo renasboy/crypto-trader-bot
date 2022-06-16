@@ -2029,6 +2029,8 @@ class maddog:
                     percentage = 40
                     
                     
+                    
+                    
                 # BUY 1 piccola CORREZIONE FIAT 5-50 che NON E' una grande correzione e non e' un grande ribasso e NON E' un crollo !
                 
                 elif (
@@ -2039,9 +2041,34 @@ class maddog:
                     
                     and deviation_ma8_sotto_ma100 < -0.50
                     and deviation_buy_crollo_1 > -0.69
+                    
+                    and delta_1 < delta_2
+                    and deviation_ma3_sopra_ma10 > 0.05
                 ): 
             
-                    buy = "BUY 1 piccola CORREZIONE FIAT 100 LONTANA 300 8-50 e 5-28 > 0.20 che NON E' G correzione e non e' G ribasso e NON E' C ! - r 2030"
+                    buy = "BUY 1 FIAT con delta1 < delta2 and 3-10 > 0.05 and 5-28 > 0.20 e con 8-50 e con ma100 LONTANA 300 - r 2030 A"
+                    action = "buy"
+                    percentage = 40
+                    
+                    
+                    
+                    
+                # BUY 1 piccola CORREZIONE FIAT 5-50 che NON E' una grande correzione e non e' un grande ribasso e NON E' un crollo !
+                
+                elif (
+                    ma2_last > ma2_2_min_ago
+                    and ma8_last > ma50_last
+                    and deviation_ma5_sopra_ma28 > 0.20
+                    and deviation_ma100_sopra_ma300 < -0.30
+                    
+                    and deviation_ma8_sotto_ma100 < -0.50
+                    and deviation_buy_crollo_1 > -0.69
+                    
+                    and delta_1 > delta_2
+                    and deviation_ma3_sopra_ma10 > 0.17
+                ): 
+            
+                    buy = "BUY 1 FIAT con delta1 > delta2 and 3-10 > 0.17 and 5-28 > 0.20 e con 8-50 e con ma100 LONTANA 300 - r 2030 B"
                     action = "buy"
                     percentage = 40
                     
@@ -2460,12 +2487,14 @@ class maddog:
                     
                     deviation_buy_crollo_1 < -0.70
                     and deviation_buy_crollo_1 > -1.50
-                    and deviation_ma5_sopra_ma28 > 0.01
+                    and deviation_ma5_sopra_ma28 > -0.01
                     
                     and ma5_last > ma16_last
+                    and deviation_ma5_sopra_ma16 > 0.08
+                    
                     and ma2_last > ma2_2_min_ago
                     and ma78_last < ma200_last
-                    and deviation_ma5_sopra_ma16 > 0.10
+                    
                 ):
                     buy = "BUY 1 RIBASSO AUDI importato dal BUY 2 che e' andato benissimo dopo il blocco - riga 2456"
                     action = "buy"
@@ -3038,6 +3067,7 @@ class maddog:
                 
                 elif (
                     deviation_ma5_sopra_ma28 > 0.12
+                    and deviation_ma3_sopra_ma10 > 0.05
                     
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
@@ -3052,7 +3082,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                 
                 ):
-                    buy = "BUY 1 CHE MANCAVA DOPO BUY-SELL CROLLO ! 150-100 GIORNO ! 5-28 > 0.12 - r 3007"
+                    buy = "BUY 1 CHE MANCAVA DOPO BUY-SELL CROLLO ! 150-100 GIORNO ! and 3-10 > 0.05 and 5-28 > 0.12 - r 3007"
                     action = "buy"
                     percentage = 30
                     
