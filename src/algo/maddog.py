@@ -4733,6 +4733,29 @@ class maddog:
                     
                     
                     
+                # BUY 3 importata da RCCR - AUDI CHE NON E' UN CROLLO ! con 5-16
+                
+                elif (
+                    
+                    deviation_buy_crollo_1 < -0.60
+                    and deviation_buy_crollo_1 > -1.50
+                    
+                    and ma5_last > ma16_last
+                    and ma2_last > ma2_2_min_ago
+                    and ma78_last < ma200_last
+                    and deviation_ma5_sopra_ma16 > 0.12
+                ):
+                    buy = "BUY 3 importata da RCCR - AUDI CHE NON E' UN CROLLO ! con 5-16 - riga 4668"
+                    action = "buy"
+                    percentage = 50
+                    
+                    # deviation_buy_crollo_1 = ma8_last / ma78_last
+                    # questa cosa che 78 deve essere < 200 ha dell' incredibile. MA NON TOCCARE !   
+                    
+                    
+                    
+                    
+                    
                     
                 # BUY 3 FORTE RIBASSO che NON E' UN CROLLO ! (compare stammi vicino!) da BUY2 RCCR
                 
@@ -11188,12 +11211,13 @@ class maddog:
                         ma50_last > ma50_2_min_ago 
                         and ma2_last < ma2_2_min_ago 
                         and deviation_sell < -0.25 
-                        and ma3_last < ma50_last
+                        and ma3_last < ma42_last
                         and ma200_last < ma200_60_min_ago
                     ):
-                        sell = "SELL (21-60 min) con ma50 > and (deviation_sell < -0.25 and ma3_last < ma50_last) - r 7405"
+                        sell = "SELL (21-60 min) con ma50 > and (deviation_sell < -0.25 and ma3_last < ma42_last) - r 7405"
                         action = "sell"
                         
+                        # 16 GIU 2022 3-42 da 3-50
                         
                         
                         
