@@ -871,11 +871,12 @@ class maddog:
                     
                     
               
-                
-                # ------------------------------------------------------------ BUY 1 MOLTO RISCHIOSO modo 1 ! quando incomincia il ribasso MA ma300 >
+                # ------------------------------------------------------ BUY 1 MOLTO RISCHIOSO modo 1 ! quando incomincia il ribasso MA ma300 120 > E ma200 120 >
                   
                 elif (     
                     ma300_last > ma300_120_min_ago
+                    and ma200_last > ma200_120_min_ago
+                    
                     and ma200_last < ma200_60_min_ago
                     and ma100_last < ma100_60_min_ago
                     
@@ -888,9 +889,35 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                 ):     
                   
-                    buy = "BUY 1 MOLTO RISCHIOSO modo 1 ! quando incomincia il ribasso MA ma300 E' ANCORA IN RIALZO ! 3-10 > 0.13 - r 884"
+                    buy = "BUY 1 MOLTO RISCHIOSO modo 1 ! quando incomincia il ribasso MA ma300 120 > e ma200 120 > ANCORA IN RIALZO ! 3-10 > 0.13 - r 884 A"
                     action = "buy"
                     percentage = 50
+                    
+                    
+                    
+                    
+                # ------------------------------------------------------------ BUY 1 MOLTO RISCHIOSO modo 1 ! quando incomincia il ribasso MA ma300 > MA ma200 120 <
+                  
+                elif (     
+                    ma300_last > ma300_120_min_ago
+                    and ma200_last < ma200_120_min_ago
+                    
+                    and ma200_last < ma200_60_min_ago
+                    and ma100_last < ma100_60_min_ago
+                    
+                    and ma8_last > ma69_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.12
+                    and deviation_ma5_sopra_ma28 > 0.19
+                    and deviation_bellissima > 0.12
+               
+                    and ma2_last > ma2_2_min_ago
+                ):     
+                  
+                    buy = "BUY 1 MOLTO RISCHIOSO modo 1 ! quando incomincia il ribasso MA ma300 ANCORA IN RIALZO MA ma200 120 < con 3-10 > 0.13 - r 884 B"
+                    action = "buy"
+                    percentage = 50
+                    
                     
                     
                     
