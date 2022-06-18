@@ -108,6 +108,7 @@ class maddog:
         ma78_5_min_ago = self.algo_helper.ma_minutes_ago(78, 5)
         ma78_7_min_ago = self.algo_helper.ma_minutes_ago(78, 7)
         ma78_30_min_ago = self.algo_helper.ma_minutes_ago(78, 30)
+        ma78_60_min_ago = self.algo_helper.ma_minutes_ago(78, 60)
         ma100_2_min_ago = self.algo_helper.ma_minutes_ago(100, 2)
         ma100_3_min_ago = self.algo_helper.ma_minutes_ago(100, 3)
         
@@ -258,6 +259,8 @@ class maddog:
         
         
         
+        
+        
         # formula delta_150_100
         
         delta_150_100 = (ma150_last / ma100_last - 1) * 100 if ma100_last else 0
@@ -273,10 +276,37 @@ class maddog:
         # non serve piu' il rapporto !
         
         
-       
+        
+        
+        
+        
+        
+        # formula delta_1_200_78
+        
+        delta_1_200_78 = (ma200_last / ma78_last - 1) * 100 if ma78_last else 0
+        self.algo_helper.info("delta_1_200_78: {}".format(delta_1_200_78))
+        
+        
+        # formula delta_2_200_78_60_min
+        
+        delta_2_200_78_60_min = (ma200_60_min_ago / ma78_60_min_ago - 1) * 100 if ma78_60_min_ago else 0
+        self.algo_helper.info("delta_2_200_78_60_min: {}".format(delta_2_200_78_60_min))
+        
+        
+        # non serve piu' il rapporto !
         
         
        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         # formula delta_1_69_39
         
         delta_1_69_39 = (ma69_last / ma39_last - 1) * 100 if ma39_last else 0
@@ -1376,12 +1406,13 @@ class maddog:
                     # MISTERO !
                     
                     
-                    
                 # BUY 1 MISTERO con INCROCIO 8-50 E 5-28 PIU' BASSO per arrivare una ndecchia prima del passare del tempo. prendendo rischio
                 
                 elif (
                     
                     deviation_ma5_sopra_ma28 > 0.24
+                    and delta_1_200_78 < delta_2_200_78_60_min
+                    
                     and (ma8_prev < ma50_prev and ma8_last > ma50_last)
                     and deviation_ma100_sopra_ma200 > -0.60
                     and deviation_ma50_sotto_ma200 < -0.15
@@ -1399,9 +1430,49 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
               
                 ):
-                    buy = "BUY 1 MISTERO con INCROCIO 8-50 e 5-28 > 0.28 per arrivare una ndecchia prima del passare del tempo prendendo rischio - riga 1368"
+                    buy = "BUY 1 MISTERO con INCROCIO 8-50 e 5-28 > 0.28 prendendo rischio - E CON delta 200-78 - RIALZO - riga 1368 A"
                     action = "buy"
                     percentage = 50
+                    
+                    
+                    
+                # BUY 1 MISTERO con INCROCIO 8-50 E 5-28 PIU' BASSO per arrivare una ndecchia prima del passare del tempo. prendendo rischio
+                
+                elif (
+                    
+                    deviation_ma5_sopra_ma28 > 0.24
+                    and delta_1_200_78 > delta_2_200_78_60_min
+                    and deviation_ma3_sopra_ma10 > 0.22
+                    
+                    and (ma8_prev < ma50_prev and ma8_last > ma50_last)
+                    and deviation_ma100_sopra_ma200 > -0.60
+                    and deviation_ma50_sotto_ma200 < -0.15
+                    
+                    and deviation_ma100_sopra_ma300 > -0.80
+                    
+                    and ma100_last < ma100_60_min_ago
+                    and ma200_last < ma200_60_min_ago
+                    and ma300_last < ma300_60_min_ago
+                    
+                    
+                    and deviation_ma13_sopra_ma25 > 0.06
+                    and deviation_ma3_sopra_ma7 > 0.04
+                    
+                    and ma2_last >= ma2_2_min_ago
+              
+                ):
+                    buy = "BUY 1 MISTERO con INCROCIO 8-50 e 5-28 > 0.28 prendendo rischio - E CON delta 200-78 - RIBASSO - riga 1368 B"
+                    action = "buy"
+                    percentage = 50
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     
                     
                     
@@ -2674,6 +2745,7 @@ class maddog:
                     and delta_1 > delta_2
                     
                     and ma13_last < ma25_last
+                    and deviation_ma3_sopra_ma10 > 0.35
                     
                     and ma4_last > ma15_last
                     
@@ -2682,7 +2754,7 @@ class maddog:
                     and ma78_last < ma200_last
                     
                 ):
-                    buy = "BUY 1 DURANTE UN RIBASSO AUDI PIU' LENTA CHE NON E' UN CROLLO ! and delta_1 > delta_2 con 4-15 > 0.10 e 13<25 - riga 2515 B2"
+                    buy = "BUY 1 RIBASSO AUDI PIU' LENTA CHE NON E' UN CROLLO ! and delta_1 > delta_2 con 4-15 > 0.10 e 13<25 E 3-10 > 0.35 ! - riga 2515 B2"
                     action = "buy"
                     percentage = 50
                     
@@ -3065,22 +3137,26 @@ class maddog:
                     
                     
                     
+              
+                
+                
+                # BUY 1 CROLLO FERRARI ok - RCCR - questa condizione mi e' sembrata ben fatta !
+
+                elif (
+                    ma2_last > ma2_2_min_ago
+                    and deviation_buy_crollo_1 < -1.61
+                    and deviation_buy_crollo_2 > 0.01
+                ):
+                    buy = "BUY 1 CROLLO FERRARI ok - RCCR - r 2912"
+                    action = "buy"
+                    percentage = 50
                     
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
+                    # deviation_buy_crollo_1 = ma8_last / ma78_last
+                    # deviation_buy_crollo_2 = ma3_last / ma13_last
+                    
+                    
+                    
+                    
                 # BUY 1 SUL SUPPORTO 300 !
           
                 elif (    
@@ -3097,7 +3173,7 @@ class maddog:
                 ):
                     buy = "BUY 1 SUL SUPPORTO 300 ! - r 2913"
                     action = "buy"
-                    percentage = 30
+                    percentage = 50
                     
                     # madonna compa !
                     
