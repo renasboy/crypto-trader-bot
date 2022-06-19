@@ -120,6 +120,7 @@ class maddog:
         ma150_60_min_ago = self.algo_helper.ma_minutes_ago(150, 60)
         ma200_15_min_ago = self.algo_helper.ma_minutes_ago(200, 15)
         ma200_20_min_ago = self.algo_helper.ma_minutes_ago(200, 20)
+        ma200_30_min_ago = self.algo_helper.ma_minutes_ago(200, 30)
         ma200_60_min_ago = self.algo_helper.ma_minutes_ago(200, 60)
         ma200_90_min_ago = self.algo_helper.ma_minutes_ago(200, 90)
         ma200_120_min_ago = self.algo_helper.ma_minutes_ago(200, 120)
@@ -276,6 +277,23 @@ class maddog:
         # non serve piu' il rapporto !
         
         
+        
+        
+        
+        
+        # formula delta_1_200_30
+        
+        delta_1_200_30 = (ma200_last / ma30_last - 1) * 100 if ma30_last else 0
+        self.algo_helper.info("delta_1_200_30: {}".format(delta_1_200_30))
+        
+        
+        # formula delta_2_200_30_30_min
+        
+        delta_2_200_30_30_min = (ma200_30_min_ago / ma30_30_min_ago - 1) * 100 if ma30_30_min_ago else 0
+        self.algo_helper.info("delta_2_200_30_30_min: {}".format(delta_2_200_30_30_min))
+        
+        
+        # non serve piu' il rapporto !
         
         
         
@@ -5675,7 +5693,7 @@ class maddog:
                     
                     and deviation_ma5_sopra_ma28 > 0.12
                     
-                    and deviation_buy3 > 0.10
+                    and deviation_buy3 > 0.09
                     and ma3_last > ma13_last
                     and deviation_ma7_sopra_ma40 > 0.09
                     and ma4_last > ma9_last
@@ -14393,18 +14411,47 @@ class maddog:
             ################################################################################################ dopo il crollo improvviso del 24 aprile 2022
             
             
-            
-            # 6A - SELL condizione speciale dopo il crollo improvviso del 24 aprile 2022 ! and deviation_ma5_sotto_ma200 > -1.00
+            # 6A a- SELL condizione speciale dopo il crollo improvviso del 24 aprile 2022 ! and deviation_ma5_sotto_ma200 > -1.00
                     
             elif (    
                 ma2_last < ma4_last
                 and ma2_last < ma6_last
+                and delta_1_200_30 < delta_2_200_30_30_min
+                
+                and deviation_crollo_24_aprile < -0.56
+                
+                and deviation_ma5_sotto_ma200 > -1.00
+            ): 
+                
+                sell = "SELL condizione speciale DOPO IL CROLLO IMPROVVISO del 24 aprile 2022 - and deviation_ma5_sotto_ma200 > -1.00 - (-0.56) giorno - r 9401 a"
+                action = "sell"
+                        
+                # ho aggiunto anche questa vendita speciale dopo il 24 aprile -1%
+                # deviation_crollo_24_aprile = ma2_last / last_trade_price        
+                # -0.58 ha generato perdita -0.82 il 10 maggio 2022 cosi' ho ridotto a -0.575
+                # -0.575 ha generato perdita -1.12 il 10 maggio 2022 cosi' ho ridotto a -0.57
+                # -0.57 ha generato perdita -1.37 il 12 maggio 2022 cosi' ho ridotto a -0.56
+                # -0.56 ha generato perdita -1.19 il 13 maggio 2022 cosi' ho ridotto a -0.55
+                # MA VA BENE !
+                # con delta_1_200_30 < delta_2_200_30_30_min ho aumentato a -0.56
+                
+                
+                
+                
+                
+            # 6A b- SELL condizione speciale dopo il crollo improvviso del 24 aprile 2022 ! and deviation_ma5_sotto_ma200 > -1.00
+                    
+            elif (    
+                ma2_last < ma4_last
+                and ma2_last < ma6_last
+                and delta_1_200_30 > delta_2_200_30_30_min
+                
                 and deviation_crollo_24_aprile < -0.55
                 
                 and deviation_ma5_sotto_ma200 > -1.00
             ): 
                 
-                sell = "SELL condizione speciale DOPO IL CROLLO IMPROVVISO del 24 aprile 2022 - and deviation_ma5_sotto_ma200 > -1.00 - (-0.56) - r 9401"
+                sell = "SELL condizione speciale DOPO IL CROLLO IMPROVVISO del 24 aprile 2022 - and deviation_ma5_sotto_ma200 > -1.00 - (-0.56) notte - r 9401 b"
                 action = "sell"
                         
                 # ho aggiunto anche questa vendita speciale dopo il 24 aprile -1%
