@@ -1348,6 +1348,8 @@ class maddog:
                     and ma30_last < ma30_40_min_ago
                     
                     and ma11_last > ma125_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.09
                     and deviation_ma5_sopra_ma28 > 0.175
                     and deviation_bellissima > 0.06
                     and ma2_last > ma20_last
@@ -1355,7 +1357,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                     
                 ):    
-                    buy = "BUY 1 tempo INVERNO che considera il passare del tempo con deviation_bellissima > 0.06 and deviation_ma5_sopra_ma28 > 0.18 - r 1276"
+                    buy = "BUY 1 tempo INVERNO che considera il passare del tempo con dev_bellissima > 0.06 and dev_ma5_sopra_ma28 > 0.18 E 3-10 > 0.09 - r 1276"
                     action = "buy"
                     percentage = 90
                     
@@ -1935,24 +1937,52 @@ class maddog:
               
             
             
-                
                 # BUY 1 con ma200> piccola CORREZIONE FIAT che NON E' un forte ribasso e NON E' un crollo ! (compare stammi vicino!)
                
                 elif (
                     ma2_last > ma2_2_min_ago
                     and ma200_last > ma200_120_min_ago
+                    and ma28_last > ma28_30_min_ago
+                    
                     and deviation_buy_crollo_1 < -0.33
                     and deviation_buy_crollo_1 > -0.69
                     and ma3_last > ma28_last
                     and ma5_last > ma100_last
                 ):    
                     
-                    buy = "BUY 1A con ma200> piccola CORREZIONE FIAT che non e' un forte ribasso e non e' un crollo - r 1788"
+                    buy = "BUY 1A con ma200> piccola CORREZIONE FIAT che non e' un forte ribasso e non e' un crollo - r 1788 A"
                     action = "buy"
                     percentage = 80
                     
                     # and ma3_last > ma100_last PERCHE' in questa circostanza 3-28 arriva tardi e mi proteggo
                     # dovrei fare 2-5 MA SAREBBE TROPPO RISCHIOSO perche' ma100 gia' e' in ribasso !
+                    
+                    
+                    
+                    
+                # BUY 1 con ma200> piccola CORREZIONE FIAT che NON E' un forte ribasso e NON E' un crollo ! CON ma28 < E CON 5-28 > 0.13 (compare stammi vicino!)
+               
+                elif (
+                    ma2_last > ma2_2_min_ago
+                    and ma200_last > ma200_120_min_ago
+                    and ma28_last < ma28_30_min_ago
+                    and deviation_ma5_sopra_ma28 > 0.13
+                    
+                    and deviation_buy_crollo_1 < -0.33
+                    and deviation_buy_crollo_1 > -0.69
+                    and ma3_last > ma28_last
+                    and ma5_last > ma100_last
+                ):    
+                    
+                    buy = "BUY 1A con ma200> piccola CORREZIONE FIAT che non e' un forte ribasso e non e' un crollo CON ma28 < E CON 5-28 > 0.13 - r 1788 B"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # and ma3_last > ma100_last PERCHE' in questa circostanza 3-28 arriva tardi e mi proteggo
+                    # dovrei fare 2-5 MA SAREBBE TROPPO RISCHIOSO perche' ma100 gia' e' in ribasso !
+                    
+                    
+                    
                     
                     
                     
@@ -4188,6 +4218,8 @@ class maddog:
                     and ma300_last > ma300_120_min_ago
                     and ma20_last > ma200_last
                     
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    
                     and ma3_last > ma59_last
                     and ma11_last > ma59_last
                     
@@ -4197,7 +4229,7 @@ class maddog:
                     and (ma4_prev < ma25_prev and ma4_last > ma25_last)
                     and ma2_last >= ma2_2_min_ago
                 ): 
-                    buy = "BUY 2 DOCCIA se ma200 > da 90 min ! - r 3910"
+                    buy = "BUY 2 DOCCIA se ma200 > da 90 min ! E 3-10 > 0.01 - r 3910"
                     action = "buy"
                     percentage = 70
                     
