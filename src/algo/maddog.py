@@ -9435,7 +9435,7 @@ class maddog:
                     # ----------------------------------------------------------------------------- guadagno con crollo
                     
                     
-                     elif (
+                    elif (
                         ma50_last < ma50_2_min_ago
                         and ma18_last > ma18_30_min_ago
                          
