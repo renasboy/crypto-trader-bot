@@ -1129,12 +1129,40 @@ class maddog:
                     
                     
                 
-                
                 # BUY 1 PERICOLOSA derivata dal tardo autunno ! togliendo i 40 minuti della ma30 
                 
                 elif (     
                     ma11_last > ma59_last
                     and ma39_last > ma39_30_min_ago
+                    and ma69_last >= ma69_2_min_ago
+                    
+                    and deviation_ma100_sopra_ma300 < -0.30
+                    and ma100_last < ma200_last
+                    and ma200_last < ma200_120_min_ago
+                    
+                    
+                    and deviation_ma5_sopra_ma28 > 0.18
+                    and deviation_bellissima > 0.05
+                    
+                    and ma20_last >= ma20_2_min_ago
+                    and ma5_last > ma5_2_min_ago
+                    and ma2_last > ma20_last
+                    and ma2_last > ma2_2_min_ago
+                ):    
+                    buy = "BUY 1 PERICOLOSA 39 > E 69 > 2min ago derivata dal tardo autunno ! togliendo i 40 minuti della ma30 con 11-59 con 5-28 > 0.19 - r 1032 A"
+                    action = "buy"
+                    percentage = 90
+                    
+                    # 100 deve stare un po' sotto alla 300 !
+                    
+                    
+                    
+                # BUY 1 PERICOLOSA derivata dal tardo autunno ! togliendo i 40 minuti della ma30 
+                
+                elif (     
+                    ma11_last > ma59_last
+                    and ma39_last > ma39_30_min_ago
+                    and ma69_last < ma69_2_min_ago
                     
                     and deviation_ma100_sopra_ma300 < -0.25
                     and ma100_last < ma200_last
@@ -1149,7 +1177,7 @@ class maddog:
                     and ma2_last > ma20_last
                     and ma2_last > ma2_2_min_ago
                 ):    
-                    buy = "BUY 1 PERICOLOSA 39> derivata dal tardo autunno ! togliendo i 40 minuti della ma30 con 11-59 con 5-28 > 0.19 - r 1032"
+                    buy = "BUY 1 PERICOLOSA 39 > E 69 < 2min agoderivata dal tardo autunno ! togliendo i 40 minuti della ma30 con 11-59 con 5-28 > 0.19 - r 1032 B"
                     action = "buy"
                     percentage = 90
                     
@@ -8391,7 +8419,7 @@ class maddog:
                         and ma200_last < ma200_120_min_ago
                         and ma300_last < ma300_120_min_ago
                    
-                        and deviation_sell < -0.10
+                        and deviation_sell < -0.17
                         and ma2_last < ma2_2_min_ago
                     ):
                         sell = "SELL 1 da 50-90 min AGGIUNTA TARDIVA MA FORSE NECESSARIA ! - r 4644"
@@ -14616,14 +14644,42 @@ class maddog:
             
             
             
-            ################################################################################################ dopo il crollo improvviso del 24 aprile 2022
+            ################################################################################################ dopo crollo improvviso del 24 aprile 2022
             
-            
-            # 6A a- SELL condizione speciale dopo il crollo improvviso del 24 aprile 2022 ! and deviation_ma5_sotto_ma200 > -1.00
+            # 6A a- SELL condizione speciale dopo crollo improvviso del 24 aprile 2022 ! and deviation_ma5_sotto_ma200 > -1.00
                     
             elif (    
                 ma2_last < ma4_last
                 and ma2_last < ma6_last
+                and ma33_last > ma78_last
+                
+                and delta_1_200_30 < delta_2_200_30_30_min
+                
+                and deviation_crollo_24_aprile < -0.57
+                
+                and deviation_ma5_sotto_ma200 > -1.00
+            ): 
+                
+                sell = "SELL condizione speciale DOPO CROLLO IMPROVVISO del 24 aprile 2022 - and dev_ma5_sotto_ma200 > -1.00 - (-0.57) giorno E 33>78 - r 9401 a1"
+                action = "sell"
+                        
+                # ho aggiunto anche questa vendita speciale dopo il 24 aprile -1%
+                # deviation_crollo_24_aprile = ma2_last / last_trade_price        
+                # -0.58 ha generato perdita -0.82 il 10 maggio 2022 cosi' ho ridotto a -0.575
+                # -0.575 ha generato perdita -1.12 il 10 maggio 2022 cosi' ho ridotto a -0.57
+                # -0.57 ha generato perdita -1.37 il 12 maggio 2022 cosi' ho ridotto a -0.56
+                # -0.56 ha generato perdita -1.19 il 13 maggio 2022 cosi' ho ridotto a -0.55
+                # MA VA BENE !
+                # con delta_1_200_30 < delta_2_200_30_30_min ho aumentato a -0.56
+                
+                
+            # 6A a- SELL condizione speciale dopo crollo improvviso del 24 aprile 2022 ! and deviation_ma5_sotto_ma200 > -1.00
+                    
+            elif (    
+                ma2_last < ma4_last
+                and ma2_last < ma6_last
+                and ma33_last < ma78_last
+                
                 and delta_1_200_30 < delta_2_200_30_30_min
                 
                 and deviation_crollo_24_aprile < -0.56
@@ -14631,7 +14687,7 @@ class maddog:
                 and deviation_ma5_sotto_ma200 > -1.00
             ): 
                 
-                sell = "SELL condizione speciale DOPO IL CROLLO IMPROVVISO del 24 aprile 2022 - and deviation_ma5_sotto_ma200 > -1.00 - (-0.56) giorno - r 9401 a"
+                sell = "SELL condizione speciale DOPO CROLLO IMPROVVISO del 24 aprile 2022 - and dev_ma5_sotto_ma200 > -1.00 - (-0.56) giorno MA 33<78 - r 9401 a2"
                 action = "sell"
                         
                 # ho aggiunto anche questa vendita speciale dopo il 24 aprile -1%
