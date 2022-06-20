@@ -2705,14 +2705,14 @@ class maddog:
                 #####################################################################################################################
                 
                 
-                
-                # BUY 1 RIBASSO AUDI importato dal BUY 2 che e' andato benissimo dopo il blocco
+                # BUY 1 RIBASSO AUDI A importato dal BUY 2 che e' andato benissimo dopo il blocco
                 
                 elif (
                     
                     deviation_buy_crollo_1 < -0.70
                     and deviation_buy_crollo_1 > -1.50
                     
+                    and deviation_ma8_sotto_ma300 > -1.20
                     
                     and ma5_last > ma16_last
                     and deviation_ma5_sopra_ma16 > 0.11
@@ -2722,7 +2722,32 @@ class maddog:
                     and ma78_last < ma200_last
                     
                 ):
-                    buy = "BUY 1 RIBASSO AUDI importato dal BUY 2 che e' andato benissimo dopo il blocco - 5-16 > 0.11 E 5-28 > 0.01 - riga 2456"
+                    buy = "BUY 1 RIBASSO AUDI A importato dal BUY 2 CON 8 sotto 300 > -1.20 - 5-16 > 0.11 E 5-28 > 0.01 - riga 2456 A"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # deviation_buy_crollo_1 = ma8_last / ma78_last
+                    # questa cosa che 78 deve essere < 200 ha dell' incredibile. MA NON TOCCARE !
+                    
+                    
+                    
+                    
+                # BUY 1 RIBASSO AUDI B importato dal BUY 2 CON 8 sotto 300 < -1.20
+                
+                elif (
+                    
+                    deviation_buy_crollo_1 < -0.70
+                    and deviation_buy_crollo_1 > -1.50
+                    
+                    and deviation_ma8_sotto_ma300 < -1.20
+                    
+                    and ma3_last > ma20_last
+                    
+                    and ma2_last > ma2_2_min_ago
+                    and ma78_last < ma200_last
+                    
+                ):
+                    buy = "BUY 1 RIBASSO AUDI B importato dal BUY 2 CON 8 sotto 300 < -1.20 - 3-20 - riga 2456 B"
                     action = "buy"
                     percentage = 80
                     
