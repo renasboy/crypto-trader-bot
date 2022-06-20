@@ -827,12 +827,17 @@ class maddog:
                     percentage = 90
                     
                     
-                    
+                
+                
+                
+                
+                
                 # BUY 1 piccola CORREZIONE FIAT = r 1226 RCCR medie mobili lunghe TUTTE IN RIALZO ! ma si verifica una correzione fiat !
                 
                 elif (
                     ma3_last > ma25_last
                     and ma100_last > ma100_10_min_ago
+                    and ma33_last > ma78_last
                     
                     and ma100_last > ma100_120_min_ago
                     and ma200_last > ma200_120_min_ago
@@ -847,9 +852,42 @@ class maddog:
                     
                 ):    
                     
-                    buy = "BUY 1 piccola CORREZIONE FIAT = r 1226 RCCR medie mobili lunghe TUTTE IN RIALZO ! ma si verifica una correzione fiat ! - r 796"
+                    buy = "BUY 1 piccola CORREZIONE FIAT = r 1226 RCCR medie mobili lunghe TUTTE IN RIALZO ! ma si verifica una correzione fiat ! - r 796 A"
                     action = "buy"
-                    percentage = 90
+                    percentage = 80
+                    
+                    
+                    
+                # BUY 1 piccola CORREZIONE FIAT = r 1226 RCCR medie mobili lunghe TUTTE IN RIALZO ! ma si verifica una correzione fiat !
+                
+                elif (
+                    ma3_last > ma25_last
+                    and ma100_last > ma100_10_min_ago
+                    and ma33_last < ma78_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.12
+                    and deviation_ma5_sopra_ma28 > 0.01
+                    
+                    and ma100_last > ma100_120_min_ago
+                    and ma200_last > ma200_120_min_ago
+                    and ma300_last > ma300_120_min_ago
+                    
+                    and ma100_last > ma200_last
+                    and ma200_last > ma300_last
+                    
+                    and deviation_buy_crollo_1 < -0.33
+                    and deviation_buy_crollo_1 > -0.59
+                    and ma2_last > ma2_2_min_ago
+                    
+                ):    
+                    
+                    buy = "BUY 1 piccola CORREZIONE FIAT = r 1226 RCCR medie mobili lunghe TUTTE IN RIALZO ! ma si verifica una correzione fiat ! - r 796 B"
+                    action = "buy"
+                    percentage = 80
+                    
+                    
+                    
+                    
                     
                     
                     
@@ -4579,13 +4617,17 @@ class maddog:
                     
                     
                     
-                    
+                
+                
+                
                 # BUY 2 con ma200 che sale da 60 min etc. importata dal BUY 3 RCCR
                 
                 elif (
                     ma10_last >= ma10_2_min_ago
                     and ma200_last > ma200_60_min_ago
                     and deviation > -0.40
+                    
+                    and ma33_last > ma78_last
                     and deviation_ma5_sopra_ma28 > 0.14
                     
                     and deviation_ma4_sopra_ma30 > 0.11
@@ -4600,9 +4642,42 @@ class maddog:
                     
                 ):  
                 
-                    buy = "BUY 2 con ma200 che sale da 60 min etc. importata dal BUY 3 RCCR - r 4281"
+                    buy = "BUY 2 con ma200 che sale da 60 min 33 > 78 ! - r 4281 A"
                     action = "buy"
                     percentage = 70
+                    
+                    
+                # BUY 2 con ma200 che sale da 60 min etc. importata dal BUY 3 RCCR
+                
+                elif (
+                    ma10_last >= ma10_2_min_ago
+                    and ma200_last > ma200_60_min_ago
+                    and deviation > -0.40
+                    
+                    and ma33_last < ma78_last
+                    and deviation_ma3_sopra_ma10 > 0.20
+                    and deviation_ma5_sopra_ma28 > 0.14
+                    
+                    and deviation_ma4_sopra_ma30 > 0.11
+                    and ma3_last > ma13_last
+                    and ma4_last > ma9_last
+                    and deviation_ma7_sopra_ma40 > 0.05
+                    and ma7_last > ma25_last
+                    
+                    and deviation_buy_ma2_sopra_ma13 > 0.10
+                    and ma4_last > ma50_last
+                    and ma2_last >= ma2_2_min_ago
+                    
+                ):  
+                
+                    buy = "BUY 2 con ma200 che sale da 60 min 33 < 78 ! - r 4281 B"
+                    action = "buy"
+                    percentage = 70
+                    
+                    
+                    
+                    
+                    
                     
                     
                     
@@ -6870,25 +6945,46 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                      
                     ):
-                        sell = "SELL 1 (12-21 min) con ma50> and 5<25 and deviation_sell 0.27-0.56 - FINTA ALLA MARADONA - r 6482"
+                        sell = "SELL 1 (12-21 min) con ma50> and 5 < 25 and deviation_sell 0.27-0.56 - FINTA ALLA MARADONA - r 6482"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
                         
+                        
+                        
+                    
+                    
+                    elif (
+                        ma50_last >= ma50_2_min_ago
+                        and ma3_last > ma300_last
+                        
+                        and ma3_last < ma22_last
+                        and deviation_sell > 0.57 and deviation_sell < 0.90
+                        and ma2_last < ma2_2_min_ago
+                      
+                    ):
+                        sell = "SELL 1 (12-21 min) con ma50> and 3 < 22 con 3 sopra 300 (NO INCROCIO 3-13) and dev_sell 0.57-0.90 - DOPPIO PASSO RONALDO - r 6497 a"
+                        action = "sell"
+                        
+                        # deviation_sell = ma3_last/last_trade_price
                         
                         
                         
                     elif (
                         ma50_last >= ma50_2_min_ago
+                        and ma3_last < ma300_last
+                        
                         and ma3_last < ma13_last
                         and deviation_sell > 0.57 and deviation_sell < 0.90
                         and ma2_last < ma2_2_min_ago
                       
                     ):
-                        sell = "SELL 1 (12-21 min) con ma50> and 3<13 (NO INCROCIO 3-13) and deviation_sell 0.57-0.90 - DOPPIO PASSO ALLA RONALDO - r 6497"
+                        sell = "SELL 1 (12-21 min) con ma50> and 3<13 con 3 soto 300 (NO INCROCIO 3-13) and dev_sell 0.57-0.90 - DOPPIO PASSO RONALDO - r 6497 b"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
+                        
+                        
                         
                         
                         
@@ -7302,14 +7398,30 @@ class maddog:
                  
                     #######################################################################################################
                     
+                    
                     elif (
                         ma50_last > ma50_2_min_ago
+                        and ma3_last > ma300_last
+                        and (ma3_prev > ma25_prev and ma3_last < ma25_last)
+                        and deviation_sell > 0.91 and deviation_sell < 1.20
+                        and ma2_last < ma2_2_min_ago
+                        
+                    ):
+                        sell = "SELL 1 (21-50 min) con ma50 > and incrocio 3-25 se 3 sopra 300 and deviation_sell 0.91 - 1.20 (DOPPIA FINTA DI RONALDO) - r 6893 A"
+                        action = "sell"
+                        
+                        # deviation_sell = ma3_last/last_trade_price
+                        
+                        
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and ma3_last < ma300_last
                         and (ma3_prev > ma16_prev and ma3_last < ma16_last)
                         and deviation_sell > 0.91 and deviation_sell < 1.20
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 (21-50 min) con ma50 > and incrocio 3-16 and deviation_sell 0.91 - 1.20 (DOPPIA FINTA DI RONALDO) - r 6893"
+                        sell = "SELL 1 (21-50 min) con ma50 > and incrocio 3-16 se 3 sotto 300 and deviation_sell 0.91 - 1.20 (DOPPIA FINTA DI RONALDO) - r 6893 B"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
