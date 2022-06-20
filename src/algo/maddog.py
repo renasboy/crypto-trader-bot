@@ -2712,16 +2712,17 @@ class maddog:
                     
                     deviation_buy_crollo_1 < -0.70
                     and deviation_buy_crollo_1 > -1.50
-                    and deviation_ma5_sopra_ma28 > -0.01
+                    
                     
                     and ma5_last > ma16_last
-                    and deviation_ma5_sopra_ma16 > 0.08
+                    and deviation_ma5_sopra_ma16 > 0.11
+                    and deviation_ma5_sopra_ma28 > 0.01
                     
                     and ma2_last > ma2_2_min_ago
                     and ma78_last < ma200_last
                     
                 ):
-                    buy = "BUY 1 RIBASSO AUDI importato dal BUY 2 che e' andato benissimo dopo il blocco - riga 2456"
+                    buy = "BUY 1 RIBASSO AUDI importato dal BUY 2 che e' andato benissimo dopo il blocco - 5-16 > 0.11 E 5-28 > 0.01 - riga 2456"
                     action = "buy"
                     percentage = 80
                     
@@ -8275,18 +8276,40 @@ class maddog:
                 
                     ##################################################### sempre con ma50 discendente MA trend ma200> ET ma200 > ma300 - PERDITA TOLLERATA AUMENTA
                     
-                    
                     elif (
                         ma50_last < ma50_2_min_ago
                         and ma200_last > ma300_last
                         and deviation_trend_ma200 > -0.10
+                        
+                        and ma78_last > ma200_last
                         
                         and deviation_ma39 < -0.23
                         and deviation_sell < -0.30
                         
                         and ma2_last <= ma2_2_min_ago
                     ):
-                        sell = "SELL 1 da 50-90 min BEST ma sempre con ma50< con deviation_ma39 <-0.23 and deviation_sell <-0.30 - CON PERDITA TOLLERATA> - r 4624"
+                        sell = "SELL 1 da 50-90 min BEST ma sempre con ma50< E 78 > 200 con dev_ma39 <-0.23 and dev_sell <-0.30 - CON PERDITA TOLLERATA > - r 4624 A"
+                        action = "sell"
+                        
+                        # ha fatto perdita dell' 1% - forse succede tutto in quei 2 minuti se crolla improvvisamente
+                        # con deviation_ma39 < -0.27
+                        # con deviation_sell < -0.28
+                        
+                        
+                        
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and ma200_last > ma300_last
+                        and deviation_trend_ma200 > -0.10
+                        
+                        and ma78_last < ma200_last
+                        
+                        and deviation_ma39 < -0.23
+                        and deviation_sell < -0.295
+                        
+                        and ma2_last <= ma2_2_min_ago
+                    ):
+                        sell = "SELL 1 da 50-90 min BEST ma sempre con ma50< MA 78 < 200 con dev_ma39 <-0.23 and dev_sell <-0.295 - CON PERDITA TOLLERATA > - r 4624 B"
                         action = "sell"
                         
                         # ha fatto perdita dell' 1% - forse succede tutto in quei 2 minuti se crolla improvvisamente
@@ -9896,15 +9919,31 @@ class maddog:
                     
                     
                     
-                        
                     elif (        
                         ma50_last < ma50_2_min_ago
                         and ma300_last > ma300_120_min_ago
+                        
+                        and ma78_last > ma200_last
+                        
                         and ma2_last < ma2_2_min_ago 
                         and deviation_ma39 < -0.30
                         and ma200_last < ma200_60_min_ago
                     ):
-                        sell = "SELL 2 (21-60 min) con ma50 < and deviation_ma39 < -0.30 - r 5867"
+                        sell = "SELL 2 (21-60 min) con ma50 < and deviation_ma39 < -0.30 AND 78>200 - r 5867 A"
+                        action = "sell"    
+                        
+                        
+                    elif (        
+                        ma50_last < ma50_2_min_ago
+                        and ma300_last > ma300_120_min_ago
+                        
+                        and ma78_last < ma200_last
+                        
+                        and ma2_last < ma2_2_min_ago 
+                        and deviation_ma39 < -0.295
+                        and ma200_last < ma200_60_min_ago
+                    ):
+                        sell = "SELL 2 (21-60 min) con ma50 < and deviation_ma39 < -0.295 AND 78<200 - r 5867 B"
                         action = "sell"
                         
                         
