@@ -2741,13 +2741,13 @@ class maddog:
                     
                     and deviation_ma8_sotto_ma300 < -1.20
                     
-                    and ma3_last > ma20_last
+                    and ma5_last > ma20_last
                     
                     and ma2_last > ma2_2_min_ago
                     and ma78_last < ma200_last
                     
                 ):
-                    buy = "BUY 1 RIBASSO AUDI B importato dal BUY 2 CON 8 sotto 300 < -1.20 - 3-20 - riga 2456 B"
+                    buy = "BUY 1 RIBASSO AUDI B importato dal BUY 2 CON 8 sotto 300 < -1.20 - 5-20 - riga 2456 B"
                     action = "buy"
                     percentage = 80
                     
