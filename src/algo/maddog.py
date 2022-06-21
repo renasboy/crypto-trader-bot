@@ -2769,19 +2769,19 @@ class maddog:
                     
                     and deviation_ma8_sotto_ma300 < -1.20
                     
-                    and ma5_last > ma20_last
+                    and ma5_last > ma18_last
                     
-                    and ma2_last > ma2_2_min_ago
+                    and ma2_last >= ma2_2_min_ago
                     and ma78_last < ma200_last
                     
                 ):
-                    buy = "BUY 1 RIBASSO AUDI B importato dal BUY 2 CON 8 sotto 300 < -1.20 - 5-20 - riga 2456 B"
+                    buy = "BUY 1 RIBASSO AUDI B importato dal BUY 2 CON 8 sotto 300 < -1.20 - 5-18 - riga 2456 B"
                     action = "buy"
                     percentage = 80
                     
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     # questa cosa che 78 deve essere < 200 ha dell' incredibile. MA NON TOCCARE !
-                    
+                    # 21 giu 2022 5-18 da 5-20
                     
                     
                     
@@ -5218,6 +5218,8 @@ class maddog:
                     and deviation > -0.30
                     and ma200_last > ma300_last
                     and ma20_last > ma200_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.145
                     and deviation_bellissima > 0.05
                     and (ma4_prev < ma25_prev and ma4_last > ma25_last)
                     and ma25_last > ma25_2_min_ago
@@ -9824,13 +9826,14 @@ class maddog:
                     elif (    
                         ma50_last > ma50_2_min_ago 
                         and ma2_last < ma2_2_min_ago 
-                        and deviation_sell < -0.29 
+                        and deviation_sell < -0.31
                         and ma3_last < ma50_last
                         and ma200_last > ma200_60_min_ago
                     ):
                         sell = "SELL 2 (21-60 min) con ma50 > and (deviation_sell < -0.29 and ma3_last < ma50_last) TOLLERANTE ! - r 5738"
                         action = "sell"
                         
+                        # 21 giu 2022 0.31 da 0.29
                         
                         
                         
@@ -14204,7 +14207,7 @@ class maddog:
 
             # NO 3<78 !
             # NO deviation 78 !
-            # QUALCHE VOLTA ma3-ma39 NON HANNO INCROCIATO allora per la vendita con il DRIBBLING e il DOPPIO PASSO ALLA RONALDO ho risolto con 3<39
+            # QUALCHE VOLTA ma3-ma39 NON HANNO INCROCIATO allora per la vendita con il DRIBBLING e il DOPPIO PASSO ALLA RONALDO ho risolto con 3 < 39
             # il CUSCINO DELL' ANGELO CUSTODE e di SANT' ANTONIO mi proteggono ! (vendita con medie lunghe)
                     
           
@@ -14219,7 +14222,7 @@ class maddog:
             # SENZA and ma2_last < ma2_2_min_ago VENDE mentre ma4 si trova sotto il BUY !
             
             
-            # 1A - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 > -1.00
+            # 1 - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 > -1.00
             
             if (
                 deviation_ma39 < -0.25
@@ -14241,11 +14244,11 @@ class maddog:
                 
           
             
-            # 2A - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 > -1.00   
+            # 2 - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 > -1.00   
             
             elif (
                 deviation_ma39 < -0.25
-                and deviation < -0.34
+                and deviation_sell < -0.34
                 and ma2_last < ma2_2_min_ago 
                 
                 and ma50_last > ma50_2_min_ago
@@ -14261,12 +14264,11 @@ class maddog:
                 
                 
          
-            
-            # 3A - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 > -1.00
+            # 3 - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 > -1.00
             
             elif (
                 deviation_ma39 < -0.25
-                and deviation < -0.31
+                and deviation_sell < -0.31
                 and ma2_last < ma2_2_min_ago 
                 
                 and ma50_last < ma50_2_min_ago
@@ -14274,20 +14276,43 @@ class maddog:
                 
                 and deviation_ma5_sotto_ma200 > -1.00
             ):
-                sell = "SELL condizione speciale SALVAGENTE 3 3-39 < -0.25 and deviation < -0.31 con ma50 < - con deviation_ma5_sotto_ma200 > -1.00 - r 9372"
+                sell = "SELL condizione speciale SALVAGENTE 3 3-39 < -0.25 and deviation < -0.31 con ma50 < - con deviation_ma5_sotto_ma200 > -1.00 - r 9372 A"
                 action = "sell"   
                 
-
+                
                 # deviation_ma39 = ma4_last / ma39_last QUESTA HA VENDUTO NEL CROLLO IMPROVVISO DI 1 MINUTO (con -2.06% !)
+                
+                # 21 giugno 2022 RICORDO TREMENDO 9372 ha venduto a -2.23% !!!
+                # COME PRIMA COSA HO NOTATO CHE AVEVA DEVIATION INVECE DI DEVIATON SELL 
+                # ma non sapendo se era questo il problema ho creato la prossima condizione speciale.
+                
+                
+                
+                
+                
+            # 4 - SELL ricordo terribile del 21 giugno 2022
+            
+            elif (
+                
+                ma3_last < ma100_last
+                and deviation_sell < -0.69
+                and deviation_ma100_sopra_ma300 > 0.20
+                and ma2_last < ma2_2_min_ago 
+             
+            ):
+                sell = "SELL 21 giugno 2022 - r 9372 B"
+                action = "sell"   
+             
+                # 21 giugno 2022 RICORDO TERRIBILE del 21 giugno 2022 !  9372 A ha venduto a -2.23% !!!
                 
                 
             
                 
-            # 4A - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 > -1.00
+            # 5 - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 > -1.00
             
             elif (
                 deviation_ma39 < -0.27
-                and deviation < -0.315
+                and deviation_sell < -0.315
                 and ma2_last < ma2_2_min_ago 
                 
                 and ma50_last < ma50_2_min_ago
@@ -14318,11 +14343,11 @@ class maddog:
             
             
             
-            # 1B - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 < -1.00 and > -1.50
+            # 6 - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 < -1.00 and > -1.50
             
             elif (
                 deviation_ma39 < -0.25
-                and deviation < -0.40
+                and deviation_sell < -0.40
                 
                 and ma50_last > ma50_2_min_ago
                 and deviation_ma100_sopra_ma300 > 0.40
@@ -14340,11 +14365,11 @@ class maddog:
                 
           
             
-            # 2B - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 < -1.00 and > -1.50   
+            # 7 - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 < -1.00 and > -1.50   
             
             elif (
                 deviation_ma39 < -0.25
-                and deviation < -0.40
+                and deviation_sell < -0.40
                 
                 and ma50_last > ma50_2_min_ago
                 and deviation_ma100_sopra_ma300 < 0.40
@@ -14362,11 +14387,11 @@ class maddog:
                 
          
             
-            # 3B - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 < -1.00 and > -1.50
+            # 8 - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 < -1.00 and > -1.50
             
             elif (
                 deviation_ma39 < -0.25
-                and deviation < -0.40
+                and deviation_sell < -0.40
                 
                 and ma50_last < ma50_2_min_ago
                 and deviation_ma100_sopra_ma300 > 0.40
@@ -14388,7 +14413,7 @@ class maddog:
                 
                 
             
-            # 4C - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 < -1.50 CROLLO !
+            # 9 - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 < -1.50 CROLLO !
             
             elif (
                 
@@ -14411,7 +14436,7 @@ class maddog:
                 
                 
                 
-            # 4B - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 < -1.00 and > -1.50 GRANDE RIBASSO !
+            # 10 - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 < -1.00 and > -1.50 GRANDE RIBASSO !
             
             elif (
                 ma2_last < ma2_2_min_ago
@@ -14453,7 +14478,7 @@ class maddog:
             
             
             
-            # 1C - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 < -1.50
+            # 11 - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 < -1.50
             
             elif (
                 deviation_ma39 < -0.25
@@ -14472,7 +14497,7 @@ class maddog:
                 
           
             
-            # 2C - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 < -1.50   
+            # 12 - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 < -1.50   
             
             elif (
                 deviation_ma39 < -0.25
@@ -14496,7 +14521,7 @@ class maddog:
             
             
             
-            # 3C - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 < -1.50
+            # 13 - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 < -1.50
             
             elif (
                 deviation_ma39 < -0.25
@@ -14518,7 +14543,9 @@ class maddog:
                 # 15 giu 2022 -0.53 da 0.52
                 
                 
-            # 3C - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 < -1.50
+                
+                
+            # 14 - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 < -1.50
             
             elif (
                 deviation_ma39 < -0.25
@@ -14585,7 +14612,7 @@ class maddog:
             
             
             
-            # 5A - SELL condizione speciale ro cano VENDE DURANTE UN CROLLO IMPROVVISO ! and deviation_ma5_sotto_ma200 > -1.00
+            # 15 - SELL condizione speciale ro cano VENDE DURANTE UN CROLLO IMPROVVISO ! and deviation_ma5_sotto_ma200 > -1.00
             
             elif (
                 ma2_last < ma4_last
@@ -14609,7 +14636,7 @@ class maddog:
                 
                 
                 
-            # 5B - SELL condizione speciale ro cano VENDE DURANTE UN CROLLO IMPROVVISO ! and deviation_ma5_sotto_ma200 < -1.00
+            # 16 - SELL condizione speciale ro cano VENDE DURANTE UN CROLLO IMPROVVISO ! and deviation_ma5_sotto_ma200 < -1.00
             
             elif (
                 ma2_last < ma4_last
@@ -14646,7 +14673,7 @@ class maddog:
             
             ################################################################################################ dopo crollo improvviso del 24 aprile 2022
             
-            # 6A a- SELL condizione speciale dopo crollo improvviso del 24 aprile 2022 ! and deviation_ma5_sotto_ma200 > -1.00
+            # 17 - SELL condizione speciale dopo crollo improvviso del 24 aprile 2022 ! and deviation_ma5_sotto_ma200 > -1.00
                     
             elif (    
                 ma2_last < ma4_last
@@ -14673,7 +14700,7 @@ class maddog:
                 # con delta_1_200_30 < delta_2_200_30_30_min ho aumentato a -0.56
                 
                 
-            # 6A a- SELL condizione speciale dopo crollo improvviso del 24 aprile 2022 ! and deviation_ma5_sotto_ma200 > -1.00
+            # 18 - SELL condizione speciale dopo crollo improvviso del 24 aprile 2022 ! and deviation_ma5_sotto_ma200 > -1.00
                     
             elif (    
                 ma2_last < ma4_last
@@ -14703,7 +14730,7 @@ class maddog:
                 
                 
                 
-            # 6A b- SELL condizione speciale dopo il crollo improvviso del 24 aprile 2022 ! and deviation_ma5_sotto_ma200 > -1.00
+            # 19 - SELL condizione speciale dopo il crollo improvviso del 24 aprile 2022 ! and deviation_ma5_sotto_ma200 > -1.00
                     
             elif (    
                 ma2_last < ma4_last
@@ -14733,7 +14760,7 @@ class maddog:
             
             
             
-            # 6B - SELL condizione speciale dopo il crollo improvviso del 24 aprile 2022 ! and deviation_ma5_sotto_ma200 < -1.00
+            # 20 - SELL condizione speciale dopo il crollo improvviso del 24 aprile 2022 ! and deviation_ma5_sotto_ma200 < -1.00
                     
             elif (    
                 ma2_last < ma4_last
@@ -14757,7 +14784,7 @@ class maddog:
                 
                 
                 
-            # 6B - SELL condizione speciale dopo il crollo improvviso del 24 aprile 2022 ! and deviation_ma5_sotto_ma200 < -1.00
+            # 21 - SELL condizione speciale dopo il crollo improvviso del 24 aprile 2022 ! and deviation_ma5_sotto_ma200 < -1.00
                     
             elif (    
                 ma2_last < ma4_last
@@ -14810,7 +14837,7 @@ class maddog:
             
             
             
-            # 7 - SELL condizione speciale RIBASSO IMPROVVISO con deviation_sell < -0.60
+            # 22 - SELL condizione speciale RIBASSO IMPROVVISO con deviation_sell < -0.60
             
             elif (
                 ma78_last > ma78_2_min_ago
@@ -14831,7 +14858,7 @@ class maddog:
                 
             
             
-            # 8 - SELL condizione speciale RIBASSO IMPROVVISO con deviation_sell < -0.60
+            # 23 - SELL condizione speciale RIBASSO IMPROVVISO con deviation_sell < -0.60
             
             elif (
                 ma78_last < ma78_2_min_ago
@@ -14866,11 +14893,11 @@ class maddog:
             
             
             
-            # 9 - SELL condizione speciale ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma100 > e ma13 >
+            # 24 - SELL condizione speciale ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma100 > e ma13 >
            
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
-                and deviation < -0.39
+                and deviation_sell < -0.39
                 and ma2_last < last_trade_price
                 
                 and ma100_last > ma100_30_min_ago
@@ -14884,11 +14911,11 @@ class maddog:
             
             
             
-            # 10 - SELL condizione speciale ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma100 > e ma13 <
+            # 25 - SELL condizione speciale ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma100 > e ma13 <
             
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
-                and deviation < -0.37
+                and deviation_sell < -0.37
                 and ma2_last < last_trade_price
                 
                 and ma100_last > ma100_30_min_ago
@@ -14902,7 +14929,7 @@ class maddog:
             
             
             
-            # 11 - SELL condizione speciale ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma100 < e con ma13 > 
+            # 26 - SELL condizione speciale ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma100 < e con ma13 > 
             
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
@@ -14929,7 +14956,7 @@ class maddog:
             
             
             
-            # 12A - SELL condizione speciale ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma100 < e con ma13 < ( and 20 > 100 )
+            # 27 - SELL condizione speciale ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma100 < e con ma13 < ( and 20 > 100 )
             
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
@@ -14956,7 +14983,7 @@ class maddog:
             
             
             
-            # 12B - SELL condizione speciale ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma100 < e con ma13 < ( and 20 < 100 )
+            # 28 - SELL condizione speciale ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma100 < e con ma13 < ( and 20 < 100 )
             
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
@@ -14987,7 +15014,7 @@ class maddog:
                 
                 
                 
-            # 12B - SELL condizione speciale ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma100 < e con ma13 < ( and 20 < 100 )
+            # 29 - SELL condizione speciale ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma100 < e con ma13 < ( and 20 < 100 )
             
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
@@ -15016,7 +15043,7 @@ class maddog:
                         
              
             
-            # 13 A - SELL condizione speciale ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma13 <
+            # 30 - SELL condizione speciale ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma13 <
             
             
             elif (
@@ -15042,7 +15069,7 @@ class maddog:
                 
                 
                 
-            # 13 B - SELL condizione speciale ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma13 <
+            # 31 - SELL condizione speciale ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma13 <
             
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
@@ -15069,7 +15096,7 @@ class maddog:
             
             
             
-            # 14 - SELL condizione speciale ro cano VENDE " DOPO x MINUTI " and...
+            # 32 - SELL condizione speciale ro cano VENDE " DOPO x MINUTI " and...
             
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
@@ -15121,14 +15148,14 @@ class maddog:
             
             
             
-            # 15 - SELL condizione speciale POCHI MALEDETTI E SUBITO QUANDO SALE FORTE ( cerca di inibirlo ) con ma200 > MA ma100 - dedicated to comparo meo
+            # 33 - SELL condizione speciale POCHI MALEDETTI E SUBITO QUANDO SALE FORTE ( cerca di inibirlo ) con ma200 > MA ma100 - dedicated to comparo meo
             
             elif (
                 ma3_last < ma28_last
                 and deviation_ma100_sopra_ma200 > 0.40    
                 and ma200_last > ma200_60_min_ago
                     
-                and deviation > 0.70
+                and deviation_sell > 0.70
                 and deviation_trend_ma100 < 1.00
                 and deviation_pochi_maledetti > 0.25
                 and ma2_last > ma100_last
@@ -15142,15 +15169,15 @@ class maddog:
                 
                 
                 
-            # 16 - SELL condizione speciale POCHI MALEDETTI E SUBITO QUANDO SALE PIANO con ma200 > MA ma100 NON DEVE SALIRE TROPPO ! - dedicated to comparo meo
+            # 34 - SELL condizione speciale POCHI MALEDETTI E SUBITO QUANDO SALE PIANO con ma200 > MA ma100 NON DEVE SALIRE TROPPO ! - dedicated to comparo meo
             
             elif (
                 ma3_last < ma25_last
                 and deviation_ma100_sopra_ma200 < 0.40      
                 and ma200_last > ma200_60_min_ago
                     
-                and deviation > 0.70
-                and deviation < 0.99
+                and deviation_sell > 0.70
+                and deviation_sell < 0.99
                 and deviation_trend_ma100 < 1.00
                 and deviation_pochi_maledetti > 0.25
                 and ma2_last > ma100_last
@@ -15165,13 +15192,13 @@ class maddog:
                 
                 
             
-            # 17 - SELL condizione speciale POCHI MALEDETTI E SUBITO con ma200 < - dedicated to comparo meo
+            # 35 - SELL condizione speciale POCHI MALEDETTI E SUBITO con ma200 < - dedicated to comparo meo
             
             elif (
                 ma3_last < ma20_last 
                 and ma200_last < ma200_60_min_ago
-                and deviation > 0.90
-                and deviation < 1.30
+                and deviation_sell > 0.90
+                and deviation_sell < 1.30
                 and deviation_pochi_maledetti > 0.70
                 and ma2_last > ma100_last
                 and ma2_last < ma2_2_min_ago
@@ -15182,12 +15209,13 @@ class maddog:
                 # and ma2_last > ma100_last (altrimenti vende durante il crollo con la ma3-ma9)
                 
                 
-                
+            # 36 - SELL condizione speciale POCHI MALEDETTI E SUBITO ma non troppo ! 3-18 quando ma200 < e con deviation > 1.31 and < 2.50
+            
             elif (
                 ma3_last < ma18_last 
                 and ma200_last < ma200_60_min_ago
-                and deviation > 1.31
-                and deviation < 2.50
+                and deviation_sell > 1.31
+                and deviation_sell < 2.50
                 and deviation_pochi_maledetti > 0.70
                 and ma2_last > ma100_last
                 and ma2_last < ma2_2_min_ago
@@ -15204,14 +15232,14 @@ class maddog:
             
             
             
-            # POCHI MALEDETTI E SUBITO ma non troppo 3-28 mentre sale
+            # 37 - POCHI MALEDETTI E SUBITO ma non troppo 3-28 mentre sale
             
             elif (
                 ma3_last < ma28_last 
                 and ma200_last < ma200_60_min_ago
                 and deviation_ma100_sopra_ma300 > 0.30
                 
-                and deviation > 2.51
+                and deviation_sell > 2.51
                 and deviation_pochi_maledetti > 0.70
                 and ma2_last > ma100_last
                 and ma2_last < ma2_2_min_ago
@@ -15224,14 +15252,14 @@ class maddog:
                 
                 
                 
-            # POCHI MALEDETTI E SUBITO ma non troppo mentre scende
+            # 38 - POCHI MALEDETTI E SUBITO ma non troppo mentre scende
             
             elif (
                 ma3_last < ma8_last 
                 and ma200_last < ma200_60_min_ago
                 and deviation_ma100_sopra_ma300 < 0.30
                 
-                and deviation > 2.51
+                and deviation_sell > 2.51
                 and deviation_pochi_maledetti > 0.70
                 and ma2_last > ma100_last
                 and ma2_last < ma2_2_min_ago
@@ -15253,7 +15281,7 @@ class maddog:
             
             ######################################################################### vendite dedicate al BUY FIAT - AUDI - MASERATI - FERRARI 
             
-            # 18 - SELL condizione speciale FIAT 
+            # 39 - SELL condizione speciale FIAT 
                     
             elif (     
                 seconds_since_last_trade > max_hold_time_in_seconds_fiat
@@ -15261,7 +15289,7 @@ class maddog:
                 and deviation_buy_crollo_1 > -0.59
                         
                 and deviation_ma100_sopra_ma300 < -0.70
-                and deviation < -0.30
+                and deviation_sell < -0.30
             ):    
                  
                 buy = "SELL condizione speciale FIAT se > 2 min dal BUY FIAT la perdita e' < -0.30 ! - r 9658"
@@ -15274,7 +15302,7 @@ class maddog:
                         
                         
                 
-            # 19 - SELL condizione speciale AUDI 
+            # 40 - SELL condizione speciale AUDI 
                     
             elif (     
                 seconds_since_last_trade > max_hold_time_in_seconds_audi
@@ -15282,7 +15310,7 @@ class maddog:
                 and deviation_buy_crollo_1 > -0.90
                         
                 and deviation_ma100_sopra_ma300 < -0.70
-                and deviation < -0.40
+                and deviation_sell < -0.40
                         
             ):
                 buy = "SELL condizione speciale AUDI se > 2 min dal BUY AUDI la perdita e' < -0.40 - r 9679"
@@ -15293,7 +15321,7 @@ class maddog:
                         
             
             
-            # 20 - SELL condizione speciale MASERATI 
+            # 41 - SELL condizione speciale MASERATI 
                     
             elif (     
                 seconds_since_last_trade > max_hold_time_in_seconds_maserati
@@ -15301,7 +15329,7 @@ class maddog:
                 and deviation_buy_crollo_1 > -1.50
                       
                 and deviation_ma100_sopra_ma300 < -0.70
-                and deviation < -0.50
+                and deviation_sell < -0.50
                         
             ):
                 buy = "SELL condizione speciale MASERATI se > 2 min dal BUY MASERATI la perdita e' < -0.50 - r 9698"
@@ -15312,14 +15340,14 @@ class maddog:
                
             
             
-            # 21 - SELL condizione speciale FERRARI 
+            # 42 - SELL condizione speciale FERRARI 
                     
             elif (     
                 seconds_since_last_trade > max_hold_time_in_seconds_ferrari
                 and deviation_buy_crollo_1 < -1.51
                         
                 and deviation_ma100_sopra_ma300 < -0.70
-                and deviation < -0.58
+                and deviation_sell < -0.58
             ):
                 buy = "SELL condizione speciale FERRARI se > 2 min dal BUY FERRARI la perdita e' < -0.70 - r 9715"
                 action = "sell"
