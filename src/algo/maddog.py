@@ -14289,7 +14289,6 @@ class maddog:
                 
                 
                 
-                
             # 4 - SELL ricordo terribile del 21 giugno 2022
             
             elif (
@@ -14300,7 +14299,24 @@ class maddog:
                 and ma2_last < ma2_2_min_ago 
              
             ):
-                sell = "SELL 21 giugno 2022 - r 9372 B"
+                sell = "SELL 21 giugno 2022 - deviation_sell < -0.69 - r 9372 Ba"
+                action = "sell"   
+             
+                # 21 giugno 2022 RICORDO TERRIBILE del 21 giugno 2022 !  9372 A ha venduto a -2.23% !!!
+                
+                
+                
+            # 4 - SELL ricordo terribile del 21 giugno 2022
+            
+            elif (
+                
+                ma3_last < ma100_last
+                and deviation_sell < -0.68
+                and deviation_ma100_sopra_ma300 < 0.20
+                and ma2_last < ma2_2_min_ago 
+             
+            ):
+                sell = "SELL 21 giugno 2022 - deviation_sell < -0.68 - r 9373 Bb"
                 action = "sell"   
              
                 # 21 giugno 2022 RICORDO TERRIBILE del 21 giugno 2022 !  9372 A ha venduto a -2.23% !!!
