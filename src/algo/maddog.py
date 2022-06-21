@@ -3389,12 +3389,13 @@ class maddog:
                     
                     
                     
-                    
-                # BUY 1 CHE MANCAVA DOPO BUY-SELL CROLLO ! 150-100 GIORNO !
+                # BUY 1 CHE MANCAVA DOPO BUY-SELL CROLLO ! 150-100 GIORNO ! E 50 > 100
                 
                 elif (
                     deviation_ma5_sopra_ma28 > 0.12
                     and deviation_ma3_sopra_ma10 > 0.05
+                    
+                    and ma50_last > ma100_last
                     
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
@@ -3409,7 +3410,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                 
                 ):
-                    buy = "BUY 1 CHE MANCAVA DOPO BUY-SELL CROLLO ! 150-100 GIORNO ! and 3-10 > 0.05 and 5-28 > 0.12 - r 3007 ok"
+                    buy = "BUY 1 CHE MANCAVA DOPO BUY-SELL CROLLO ! 50 > 100 AND 150-100 GIORNO ! and 3-10 > 0.05 and 5-28 > 0.12 - r 3007"
                     action = "buy"
                     percentage = 80
                     
@@ -3420,6 +3421,41 @@ class maddog:
                     
                     # 10 giu 5-28 0.12 da 0.09 cazzo
                     
+                    
+                    
+                    
+                # BUY 1 CHE MANCAVA DOPO BUY-SELL CROLLO ! 150-100 GIORNO ! MA 50 < 100
+                
+                elif (
+                    deviation_ma5_sopra_ma28 > 0.12
+                    and deviation_ma3_sopra_ma10 > 0.25
+                    
+                    and ma50_last < ma100_last
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and ma100_last < ma100_120_min_ago
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_120_min_ago
+                    
+                    and delta_150_100 < delta_150_100_60_min
+                    and ma100_last > ma100_3_min_ago
+                    
+                    and ma2_last > ma2_2_min_ago
+                
+                ):
+                    buy = "BUY 1 CHE MANCAVA DOPO BUY-SELL CROLLO ! 50 < 100 AND 150-100 GIORNO ! and 3-10 > 0.25 and 5-28 > 0.12 - r 3008"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # madonna compa ! 
+                    # the sound of silence
+                    # ASSURDO ! questa 100 > 100 3 min e' incredibile ! si e' verificata dopo il BUY-SELL del crollo ! NON TOCCARE
+                    # SI STA RIDUCENDO LA DISTANZA TRA 150 E 100
+                    
+                    # 10 giu 2022 5-28 0.12 da 0.09 cazzo
+                    # 21 giu 2022 3-10 > 0.25 da > 0.05 CAZZO
                     
                     
                 
@@ -14727,7 +14763,7 @@ class maddog:
                 
                 and delta_1_200_30 < delta_2_200_30_30_min
                 
-                and deviation_crollo_24_aprile < -0.57
+                and deviation_crollo_24_aprile < -0.56
                 
                 and deviation_ma5_sotto_ma200 > -1.00
             ): 
@@ -14743,6 +14779,9 @@ class maddog:
                 # -0.56 ha generato perdita -1.19 il 13 maggio 2022 cosi' ho ridotto a -0.55
                 # MA VA BENE !
                 # con delta_1_200_30 < delta_2_200_30_30_min ho aumentato a -0.56
+                
+                # 21 giu 2022 a -0.56 da -0.57
+                
                 
                 
             # 18 - SELL condizione speciale dopo crollo improvviso del 24 aprile 2022 ! and deviation_ma5_sotto_ma200 > -1.00
