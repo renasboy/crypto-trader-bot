@@ -11923,15 +11923,32 @@ class maddog:
                         # 14 giu 2022 3-28 da 3-30
                         
                     
-                    
                     elif (
                         ma50_last > ma50_2_min_ago
+                        and ma100_last < ma300_last
                         and (ma3_prev > ma30_prev and ma3_last < ma30_last)
                         and deviation_sell > 1.21 and deviation_sell < 2.70
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 3 (21-60 min) con ma50 > and incrocio 3-30 and deviation_sell 1.21 -2.70 - r 7505"
+                        sell = "SELL 3 (21-60 min) con ma50 > and incrocio 3-30 and dev_sell 1.21 -2.70 - ma100 e' ancora sotto ma300 e vende un po' prima - r 7505"
                         action = "sell"
+                        
+                        # vende un po' prima perche' e' ancora un po' preoccupato perche' ma100 sta sotto ma300
+                        
+                        
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and ma100_last > ma300_last
+                        and (ma3_prev > ma52_prev and ma3_last < ma52_last)
+                        and deviation_sell > 1.21 and deviation_sell < 2.70
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 3 (21-60 min) con ma50 > and incrocio 3-52 and dev_sell 1.21 -2.70 - ma100 e' andata sopra ma300 e si distende - r 7506"
+                        action = "sell"
+                        
+                        
+                        
+                        
                         
                         
                         
@@ -12226,15 +12243,27 @@ class maddog:
                     
                     
                     
-                    
                     elif (
                         ma50_last > ma50_2_min_ago
+                        and ma100_last < ma300_last
                         and (ma3_prev > ma20_prev and ma3_last < ma20_last)
                         and deviation_sell > 1.50 and deviation_sell < 2.70
                         and ma2_last < ma2_2_min_ago
                     ):
 
-                        sell = "SELL 3 da 60 a 90 min con ma50 > incrocio 3-20 and deviation_sell 1.50 - 2.70 - r 7809"
+                        sell = "SELL 3 da 60 a 90 min con ma50 > incrocio 3-20 and dev_sell 1.50 - 2.70 - ma100 ancora sotto ma300 e vende un po' prima - r 7809"
+                        action = "sell"
+                        
+                        
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and ma100_last > ma300_last
+                        and (ma3_prev > ma50_prev and ma3_last < ma50_last)
+                        and deviation_sell > 1.50 and deviation_sell < 2.70
+                        and ma2_last < ma2_2_min_ago
+                    ):
+
+                        sell = "SELL 3 da 60 a 90 min con ma50 > incrocio 3-50 and deviation_sell 1.50 - 2.70 - ma100 sopra ma300 e si distende - r 7810"
                         action = "sell"
                         
                         
