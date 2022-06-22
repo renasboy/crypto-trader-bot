@@ -811,8 +811,12 @@ class maddog:
             
                 # ------------------------------------------------------------ BUY 1 DURANTE IL RIALZO con INCROCIO CLASSICO 69-100 and ma78 >
                 
+                
                 if (    
                     ma20_last > ma200_last
+                    and ma10_last > ma100_last
+                    and deviation_ma3_sopra_ma10 > 0.13
+                    
                     and ma300_last > ma300_120_min_ago
                     and ma78_last > ma78_2_min_ago
                     
@@ -822,7 +826,26 @@ class maddog:
                     and ma6_last > ma39_last
                 ):    
               
-                    buy = "BUY 1 con 20>200 and 69 > 100 and deviation_bellissima > 0.14 and ma78 > - r 771"
+                    buy = "BUY 1 con 20>200 AND 10 > 100 AND 3-10 > 0.13 and 69 > 100 and deviation_bellissima > 0.14 and ma78 > - r 771A"
+                    action = "buy"
+                    percentage = 90
+                    
+                    
+                elif (    
+                    ma20_last > ma200_last
+                    and ma10_last < ma100_last
+                    and deviation_ma3_sopra_ma10 > 0.15
+                    
+                    and ma300_last > ma300_120_min_ago
+                    and ma78_last > ma78_2_min_ago
+                    
+                    and ma69_last > ma100_last
+                    and ma3_last > ma8_last
+                    and deviation_bellissima > 0.14
+                    and ma6_last > ma39_last
+                ):    
+              
+                    buy = "BUY 1 con 20>200 AND 10 > 100 AND 3-10 > 0.15 and 69 > 100 and deviation_bellissima > 0.14 and ma78 > - r 771B"
                     action = "buy"
                     percentage = 90
                     
@@ -970,9 +993,9 @@ class maddog:
                     
                     and deviation_ma3_sopra_ma10 > 0.13
                     and deviation_ma5_sopra_ma28 > 0.20
-                    and deviation_bellissima > 0.13
+                    and deviation_bellissima > 0.10
                
-                    and ma2_last > ma2_2_min_ago
+                    and ma2_last >= ma2_2_min_ago
                 ):     
                   
                     buy = "BUY 1 MOLTO RISCHIOSO modo 1 ! quando incomincia il ribasso MA ma300 120 > e ma200 120 > ANCORA IN RIALZO ! 3-10 > 0.13 - r 884 A"
@@ -1128,11 +1151,12 @@ class maddog:
                     
                     
                     
-                
                 # BUY 1 PERICOLOSA derivata dal tardo autunno ! togliendo i 40 minuti della ma30 
                 
                 elif (     
                     ma11_last > ma59_last
+                    and ma78_last > ma200_last
+                    
                     and ma39_last > ma39_30_min_ago
                     and ma69_last >= ma69_2_min_ago
                     
@@ -1149,11 +1173,49 @@ class maddog:
                     and ma2_last > ma20_last
                     and ma2_last > ma2_2_min_ago
                 ):    
-                    buy = "BUY 1 PERICOLOSA 39 > E 69 > 2min ago derivata dal tardo autunno ! togliendo i 40 minuti della ma30 con 11-59 con 5-28 > 0.19 - r 1032 A"
+                    buy = "BUY 1 PERICOLOSA 39 > E 69 > 2min ago derivata dal tardo autunno ! togliendo i 40 minuti della ma30 con 11-59 con 5-28 > 0.19 - r 1032 Aa"
                     action = "buy"
                     percentage = 90
                     
                     # 100 deve stare un po' sotto alla 300 !
+                    
+                    
+                    
+                    
+                # BUY 1 PERICOLOSA derivata dal tardo autunno ! togliendo i 40 minuti della ma30 
+                
+                elif (     
+                    ma11_last > ma59_last
+                    and ma78_last < ma200_last
+                    and deviation_ma5_sopra_ma28 > 0.30
+                    
+                    and ma39_last > ma39_30_min_ago
+                    and ma69_last >= ma69_2_min_ago
+                    
+                    and deviation_ma100_sopra_ma300 < -0.30
+                    and ma100_last < ma200_last
+                    and ma200_last < ma200_120_min_ago
+                    
+                    
+                    and deviation_ma5_sopra_ma28 > 0.18
+                    and deviation_bellissima > 0.05
+                    
+                    and ma20_last >= ma20_2_min_ago
+                    and ma5_last > ma5_2_min_ago
+                    and ma2_last > ma20_last
+                    and ma2_last > ma2_2_min_ago
+                ):    
+                    buy = "BUY 1 PERICOLOSA 39 > E 69 > 2min ago derivata dal tardo autunno ! togliendo i 40 minuti della ma30 con 11-59 con 5-28 > 0.30 - r 1032 Ab"
+                    action = "buy"
+                    percentage = 90
+                    
+                    # 100 deve stare un po' sotto alla 300 !
+                    # 22 giu 2022 se 78 >200 5-28 > 0.30
+                    
+                    
+                    
+                    
+                    
                     
                     
                     
@@ -1186,11 +1248,12 @@ class maddog:
                     
                     
                     
-                    
                 # BUY 1 PERICOLOSA derivata dal tardo autunno ! togliendo i 40 minuti della ma30 
                 
                 elif (     
                     ma11_last > ma69_last
+                    and ma78_last > ma200_last
+                    
                     and ma39_last < ma39_30_min_ago
                     and deviation_ma100_sopra_ma300 < -0.27
                     and ma100_last < ma200_last
@@ -1205,12 +1268,39 @@ class maddog:
                     and ma2_last > ma20_last
                     and ma2_last > ma2_2_min_ago
                 ):    
-                    buy = "BUY 1 PERICOLOSA 39< derivata dal tardo autunno ! togliendo i 40 minuti della ma30 con 11-59 con 5-28 > 0.20 - r 1060"
+                    buy = "BUY 1 PERICOLOSA 39< MA 78>200 derivata dal tardo autunno ! togliendo i 40 minuti della ma30 con 11-59 con 5-28 > 0.20 - r 1060 A"
                     action = "buy"
                     percentage = 90
                     
                     # 100 deve stare un po' sotto alla 300 !
                     
+                    
+                    
+                # BUY 1 PERICOLOSA derivata dal tardo autunno ! togliendo i 40 minuti della ma30 
+                
+                elif (     
+                    ma11_last > ma69_last
+                    and ma78_last < ma200_last
+                    and ma39_last < ma39_30_min_ago
+                    and deviation_ma100_sopra_ma300 < -0.27
+                    and ma100_last < ma200_last
+                    and ma200_last < ma200_120_min_ago
+                    
+                    and ma11_last > ma59_last
+                    and deviation_ma5_sopra_ma28 > 0.27
+                    and deviation_bellissima > 0.06
+                    
+                    and ma20_last > ma20_2_min_ago
+                    and ma5_last > ma5_2_min_ago
+                    and ma2_last > ma20_last
+                    and ma2_last > ma2_2_min_ago
+                ):    
+                    buy = "BUY 1 PERICOLOSA 39< AND 78 < 200 derivata dal tardo autunno ! togliendo i 40 minuti della ma30 con 11-59 con 5-28 > 0.27 - r 1060 B"
+                    action = "buy"
+                    percentage = 90
+                    
+                    # 100 deve stare un po' sotto alla 300 !
+                    # 22 GIU 2022 5-28 > 0.27 da 0.20
                     
                     
                     
@@ -1467,7 +1557,7 @@ class maddog:
                 # BUY 1 MISTERO CON 8>50 E 5-28 PIU' ALTO ! per arrivare una ndecchia prima del passare del tempo. prendendo rischio
                 
                 elif (
-                    deviation_ma5_sopra_ma28 > 0.35
+                    deviation_ma5_sopra_ma28 > 0.30
                     and ma8_last > ma50_last
                     
                     and deviation_ma100_sopra_ma200 > -0.60
@@ -1478,7 +1568,7 @@ class maddog:
                     and ma300_last < ma300_60_min_ago
                     
                     
-                    and deviation_ma13_sopra_ma25 > 0.06
+                    and deviation_ma13_sopra_ma25 > 0.04
                     and deviation_ma3_sopra_ma7 > 0.04
                     
                     and ma2_last >= ma2_2_min_ago
@@ -1492,11 +1582,15 @@ class maddog:
                     # MISTERO !
                     
                     
+                    
+                    
+                    
                 # BUY 1 MISTERO con INCROCIO 8-50 E 5-28 PIU' BASSO per arrivare una ndecchia prima del passare del tempo. prendendo rischio
                 
                 elif (
                     
                     deviation_ma5_sopra_ma28 > 0.24
+                    and ma78_last > ma200_last
                     and delta_1_200_78 < delta_2_200_78_60_min
                     
                     and (ma8_prev < ma50_prev and ma8_last > ma50_last)
@@ -1516,9 +1610,51 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
               
                 ):
-                    buy = "BUY 1 MISTERO con INCROCIO 8-50 e 5-28 > 0.28 prendendo rischio - E CON delta 200-78 - RIALZO - riga 1368 A"
+                    buy = "BUY 1 MISTERO con INCROCIO 8-50 e 5-28 > 0.28 prendendo rischio - E CON delta 200-78 - RIALZO - riga 1368 AA"
                     action = "buy"
                     percentage = 90
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                # BUY 1 MISTERO con INCROCIO 8-50 E 5-28 PIU' BASSO per arrivare una ndecchia prima del passare del tempo. prendendo rischio
+                
+                elif (
+                    
+                    deviation_ma5_sopra_ma28 > 0.24
+                    and ma78_last < ma200_last
+                    and deviation_ma3_sopra_ma10 > 0.11
+                    
+                    and delta_1_200_78 < delta_2_200_78_60_min
+                    
+                    and (ma8_prev < ma50_prev and ma8_last > ma50_last)
+                    and deviation_ma100_sopra_ma200 > -0.60
+                    and deviation_ma50_sotto_ma200 < -0.15
+                    
+                    and deviation_ma100_sopra_ma300 > -0.80
+                    
+                    and ma100_last < ma100_60_min_ago
+                    and ma200_last < ma200_60_min_ago
+                    and ma300_last < ma300_60_min_ago
+                    
+                    
+                    and deviation_ma13_sopra_ma25 > 0.06
+                    and deviation_ma3_sopra_ma7 > 0.04
+                    
+                    and ma2_last >= ma2_2_min_ago
+              
+                ):
+                    buy = "BUY 1 MISTERO con INCROCIO 8-50 e 5-28 > 0.28 prendendo rischio - E CON delta 200-78 - RIALZO - riga 1368 AB"
+                    action = "buy"
+                    percentage = 90
+                    
+                    
+                    
+                    
+                    
                     
                     
                     
@@ -3388,12 +3524,41 @@ class maddog:
                     
                     
                     
+                # BUY 1 CHE MANCAVA DOPO BUY-SELL CROLLO ! 150-100 GIORNO ! E 50 > 100
+                
+                elif (
+                    deviation_ma5_sopra_ma28 > 0.10
+                    and deviation_ma3_sopra_ma10 > 0.04
+                    and ma78_last > ma200_last
+                 
+                    and ma50_last > ma100_last
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and ma100_last < ma100_120_min_ago
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_120_min_ago
+                    
+                    and delta_150_100 < delta_150_100_60_min
+                    
+                    
+                    and ma2_last > ma2_2_min_ago
+                
+                ):
+                    buy = "BUY 1 78>200 CHE MANCAVA DOPO BUY-SELL CROLLO ! 50 > 100 AND 150-100 GIORNO ! and 3-10 > 0.05 and 5-28 > 0.12 - r 3007 a"
+                    action = "buy"
+                    percentage = 80
+                    
+                    
+                    
                     
                 # BUY 1 CHE MANCAVA DOPO BUY-SELL CROLLO ! 150-100 GIORNO ! E 50 > 100
                 
                 elif (
                     deviation_ma5_sopra_ma28 > 0.12
                     and deviation_ma3_sopra_ma10 > 0.05
+                    and ma78_last < ma200_last
                     
                     and ma50_last > ma100_last
                     
@@ -3410,7 +3575,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                 
                 ):
-                    buy = "BUY 1 CHE MANCAVA DOPO BUY-SELL CROLLO ! 50 > 100 AND 150-100 GIORNO ! and 3-10 > 0.05 and 5-28 > 0.12 - r 3007"
+                    buy = "BUY 1 78<200 CHE MANCAVA DOPO BUY-SELL CROLLO ! 50 > 100 AND 150-100 GIORNO ! and 3-10 > 0.05 and 5-28 > 0.12 - r 3007 b"
                     action = "buy"
                     percentage = 80
                     
@@ -5144,12 +5309,14 @@ class maddog:
                     deviation_buy_crollo_1 < -0.60
                     and deviation_buy_crollo_1 > -1.50
                     
+                    and deviation_ma5_sopra_ma16 > 0.01
                     and ma5_last > ma16_last
+                    
                     and ma2_last > ma2_2_min_ago
                     and ma78_last < ma200_last
-                    and deviation_ma5_sopra_ma16 > 0.12
+                    
                 ):
-                    buy = "BUY 3 importata da RCCR - AUDI CHE NON E' UN CROLLO ! con 5-16 - riga 4668"
+                    buy = "BUY 3 importata da RCCR - AUDI CHE NON E' UN CROLLO ! con 5-16 > 0.01 - riga 4668"
                     action = "buy"
                     percentage = 90
                     
@@ -7831,16 +7998,35 @@ class maddog:
                         
                         
                         
-                        
+                    
+                    
+                    
                     elif (
                         ma50_last < ma50_2_min_ago
                         and ma100_last < ma100_60_min_ago
+                        and ma100_last > ma100_30_min_ago
                         and (ma5_prev > ma100_prev and ma5_last < ma100_last)
                         and deviation_sell < -0.29
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 (21-50 min) con ma50 < e 100< and INCROCIO 3-100 (no 3<100) CUSCINO DI SANT' ANTONIO and deviation_sell < -0.29 - r 7196"
+                        sell = "SELL 1 (21-50 min) con ma50 < e 100< and INCROCIO 3-100 (no 3<100) CUSCINO DI SANT' ANTONIO and dev_sell < -0.30 - r 7196 A"
                         action = "sell"
+                        
+                        
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and ma100_last < ma100_60_min_ago
+                        and ma100_last < ma100_30_min_ago
+                        and (ma5_prev > ma100_prev and ma5_last < ma100_last)
+                        and deviation_sell < -0.29
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 1 (21-50 min) con ma50 < e 100< and INCROCIO 3-100 (no 3<100) CUSCINO DI SANT' ANTONIO and dev_sell < -0.29 - r 7196 B"
+                        action = "sell"
+                        
+                        
+                        
+                        
                         
                
                     
@@ -8008,17 +8194,37 @@ class maddog:
                         # se non ha forza dopo 1 ora e' inutile continuare a sperare !
                         
                         
+                        
+                        
                     elif (    
                         ma50_last > ma50_2_min_ago
+                        and ma100_last > ma100_60_min_ago
                         and ma100_last < ma200_last
                         and deviation_ma39 < -0.22
                         and ma2_last < ma2_2_min_ago
                     ):    
-                        sell = "SELL 1 da 50 a 90 min con ma50 > and deviation_ma39 < -0.22 - r 4382"
+                        sell = "SELL 1 da 50 a 90 min con ma50 > and deviation_ma39 < -0.22 - r 4382 a"
+                        action = "sell"
+                        
+                        # se 100 cresce da 60 min il sistema e' piu' rilassato e non ha fretta di portare a casa un guadagno minimo
+                        
+                        
+                        
+                    elif (    
+                        ma50_last > ma50_2_min_ago
+                        and ma100_last < ma100_60_min_ago
+                        and ma100_last < ma200_last
+                        and deviation_ma39 < -0.22
+                        and deviation_sell < 0.23
+                        and ma2_last < ma2_2_min_ago
+                    ):    
+                        sell = "SELL 1 da 50 a 90 min con ma50 > and deviation_ma39 < -0.22 - r 4382 b"
                         action = "sell"
                         
                         # se non ha forza dopo 1 ora e' inutile continuare a sperare !
                         # potrebbe essere situazione di crollo che vende con ma39 e senza deviation sell !
+                        # cioe' in una situazione di crollo si porta a casa lo 0.23
+                        
                         
                         
                         
@@ -9949,18 +10155,39 @@ class maddog:
                         
                         
                         
+                    # ELASTICO ALLA RONALDO SE ma200 < ma200 120 min ago
+                    
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and ma100_last > ma100_60_min_ago
+                        and ma200_last < ma200_120_min_ago
+                        
+                        and ma3_last < ma48_last
+                        and deviation_sell > 0.57 and deviation_sell < 0.90
+                        and ma2_last < ma2_2_min_ago
+                      
+                    ):
+                        sell = "SELL 2 (21-60 min) con ma50 > AND 200>120min and 100> and 3<48 and deviation_sell 0.57 - 0.90 ELASTICO ALLA RONALDO - r 5812 a"
+                        action = "sell"
+                        
+                        # deviation_sell = ma3_last/last_trade_price
+                        
+                        
+                        
                         
                     # ELASTICO ALLA RONALDO SE ma200 < ma200 120 min ago
                     
                     elif (
                         ma50_last > ma50_2_min_ago
+                        and ma100_last < ma100_60_min_ago
                         and ma200_last < ma200_120_min_ago
+                        
                         and ma3_last < ma25_last
                         and deviation_sell > 0.57 and deviation_sell < 0.90
                         and ma2_last < ma2_2_min_ago
                       
                     ):
-                        sell = "SELL 2 (21-60 min) con ma50 > AND 200>120min and 3<25 and deviation_sell 0.57 - 0.90 ELASTICO ALLA RONALDO - r 5812"
+                        sell = "SELL 2 (21-60 min) con ma50 > AND 200>120min and 100< and 3<25 and deviation_sell 0.57 - 0.90 ELASTICO ALLA RONALDO - r 5812 b"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
@@ -11565,6 +11792,9 @@ class maddog:
                         
                         # deviation_sell = ma3_last/last_trade_price
                         
+                        
+                        
+                        
                     
                     
                     
@@ -11580,6 +11810,10 @@ class maddog:
                         
                         # deviation_sell = ma3_last/last_trade_price
                         
+                    
+                    
+                    
+                    
                     
                     
                     
