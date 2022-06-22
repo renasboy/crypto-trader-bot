@@ -2907,7 +2907,7 @@ class maddog:
                     
                     and deviation_ma8_sotto_ma300 < -1.20
                     
-                    and ma5_last > ma18_last
+                    and ma5_last > ma16_last
                     
                     and ma2_last >= ma2_2_min_ago
                     and ma78_last < ma200_last
@@ -2920,7 +2920,7 @@ class maddog:
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     # questa cosa che 78 deve essere < 200 ha dell' incredibile. MA NON TOCCARE !
                     # 21 giu 2022 5-18 da 5-20
-                    
+                    # 21 giu 2022 5-16 da 5-18
                     
                     
                 # BUY 1 ultimo e meraviglioso RIBASSO AUDI con 5-16 copiata da RCCR CHE E' ANDATA BENISSIMO e che non e' un crollo ! (compare dove sei!)   
