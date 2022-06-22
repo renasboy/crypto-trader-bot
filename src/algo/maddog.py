@@ -96,6 +96,7 @@ class maddog:
         ma39_3_min_ago = self.algo_helper.ma_minutes_ago(39, 3)
         ma39_15_min_ago = self.algo_helper.ma_minutes_ago(39, 15)
         ma39_30_min_ago = self.algo_helper.ma_minutes_ago(39, 30)
+        ma48_3_min_ago = self.algo_helper.ma_minutes_ago(48, 3)
         ma50_2_min_ago = self.algo_helper.ma_minutes_ago(50, 2)
      
         ma69_2_min_ago = self.algo_helper.ma_minutes_ago(69, 2)
@@ -7673,15 +7674,17 @@ class maddog:
                         # deviation_sell = ma3_last/last_trade_price
                         
                         
+                        
+                        
                     elif (
                         ma50_last > ma50_2_min_ago
                         and ma3_last < ma300_last
-                        and (ma3_prev > ma16_prev and ma3_last < ma16_last)
+                        and (ma3_prev > ma42_prev and ma3_last < ma42_last)
                         and deviation_sell > 0.91 and deviation_sell < 1.20
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 (21-50 min) con ma50 > and incrocio 3-16 se 3 sotto 300 and deviation_sell 0.91 - 1.20 (DOPPIA FINTA DI RONALDO) - r 6893 B"
+                        sell = "SELL 1 (21-50 min) con ma50 > and incrocio 3-42 se 3 sotto 300 and deviation_sell 0.91 - 1.20 (DOPPIA FINTA DI RONALDO) - r 6893 B"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
