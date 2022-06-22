@@ -2352,13 +2352,13 @@ class maddog:
                 ############################################################################################################################################## 
                 
                 
-                
                 # BUY 1 piccola CORREZIONE FIAT = r 701 RCCR ma con rischio ridotto !
                 
                 elif (
                     
                     deviation_buy_crollo_1 < -0.29
                     and deviation_buy_crollo_1 > -0.69
+                    and ma78_last > ma200_last
                     
                     and deviation_ma3_sopra_ma10 > 0.12
                     
@@ -2368,7 +2368,29 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                 ):    
                 
-                    buy = "BUY 1 piccola CORREZIONE FIAT = r 701 RCCR ma con rischio ridotto ! 3-10 > 0.12 cazzo ! - r 1971"
+                    buy = "BUY 1 piccola CORREZIONE FIAT 78>200 = r 701 RCCR ma con rischio ridotto ! 3-10 > 0.12 cazzo ! - r 1971 a"
+                    action = "buy"
+                    percentage = 80
+                    
+                    
+                    
+                # BUY 1 piccola CORREZIONE FIAT = r 701 RCCR ma con rischio ridotto !
+                
+                elif (
+                    
+                    deviation_buy_crollo_1 < -0.29
+                    and deviation_buy_crollo_1 > -0.69
+                    and ma78_last < ma200_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.12
+                    and deviation_ma5_sopra_ma28 > 0.12
+                    
+                    and ma13_last > ma50_last
+                    and ma20_last > ma20_22_min_ago
+                    and ma2_last > ma2_2_min_ago
+                ):    
+                
+                    buy = "BUY 1 piccola CORREZIONE FIAT 78<200 = r 701 RCCR ma con rischio ridotto ! 3-10 > 0.12 cazzo ! AND 5-28>0.12 - r 1971 b"
                     action = "buy"
                     percentage = 80
                     
