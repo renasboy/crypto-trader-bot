@@ -1953,9 +1953,34 @@ class maddog:
                 ############################################################################### compra durante un rialzo improvviso ! PER ADESSO SOLO SUL BUY 1
                 ############################################################################### con ma30 che ha 30 min di andamento laterale
                 
+                
                 elif (
                     ma200_last > ma200_20_min_ago
                     and ma300_last > ma300_120_min_ago
+                    and deviation_ma100_sopra_ma300 > 0.50
+                    
+                    and deviation_rialzo_improvviso_sopra > 0.45
+                    and deviation_rialzo_improvviso_1 > 0.45
+                    and deviation_rialzo_improvviso_2 > 0.19
+                    and deviation_rialzo_improvviso_3 > 0.19
+                    and deviation_range_1 < 0.22
+                    and deviation_range_1 > -0.22
+                    and deviation_range_2 < 0.22
+                    and deviation_range_2 > -0.22
+                    and deviation_range_x < 0.22
+                    and deviation_range_x > -0.22
+                ):
+             
+                    buy = "BUY 1 RIALZO IMPROVVISO con ma200 > E 300 > 120 min ago e con > 0.45 SE MA100 MOLTO IN ALTO DA MA300 - r 1641 AA"
+                    action = "buy"
+                    percentage = 90
+                    
+                    
+                    
+                elif (
+                    ma200_last > ma200_20_min_ago
+                    and ma300_last > ma300_120_min_ago
+                    and deviation_ma100_sopra_ma300 < 0.50
                     
                     and deviation_rialzo_improvviso_sopra > 0.46
                     and deviation_rialzo_improvviso_1 > 0.46
@@ -1969,7 +1994,7 @@ class maddog:
                     and deviation_range_x > -0.22
                 ):
              
-                    buy = "BUY 1 RIALZO IMPROVVISO con ma200 > E 300 > 120 min ago e con > 0.46 - r 1641 A"
+                    buy = "BUY 1 RIALZO IMPROVVISO con ma200 > E 300 > 120 min ago e con > 0.46 - r 1641 AB"
                     action = "buy"
                     percentage = 90
                  
@@ -1983,7 +2008,17 @@ class maddog:
                     
                     
                     
-                    
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 elif (
                     ma200_last > ma200_20_min_ago
                     and ma300_last < ma300_120_min_ago
@@ -10494,13 +10529,29 @@ class maddog:
                   
                     ################################################################### RIGHE DEL COMPA DA RADDOPPIARE PER AUMENTO TOLLERANZA
                     
+                    
                     if (    
                         ma50_last > ma50_2_min_ago
                         and deviation_ma39 < -0.18
+                        and deviation_ma100_sopra_ma300 > 0.70
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 2 da 60 a 90 min con ma50 > and deviation_ma39 < -0.18 - r 6015"
+                        sell = "SELL 2 da 60 a 90 min con ma50 > and deviation_ma39 < -0.18 SE 100 MOLTO ALTA RISPETTO ALLA 300 OK COSI' - r 6015 a"
                         action = "sell"
+                        
+                        
+                    elif (    
+                        ma50_last > ma50_2_min_ago
+                        and deviation_ma39 < -0.18
+                        and deviation_ma100_sopra_ma300 < 0.70
+                        and deviation_sell < -0.10
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 2 da 60 a 90 min con ma50 > and deviation_ma39 < -0.18 SE 100 VICINA ALLA 300 C'E' DEV SELL < -0.10  - r 6015 b"
+                        action = "sell"
+                        
+                        
+                        
                         
                         
                
