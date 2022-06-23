@@ -1156,7 +1156,7 @@ class maddog:
                 # BUY 1 PERICOLOSA derivata dal tardo autunno ! togliendo i 40 minuti della ma30 
                 
                 elif (     
-                    ma11_last > ma59_last
+                    ma8_last > ma54_last
                     and ma78_last > ma200_last
                     
                     and ma39_last > ma39_30_min_ago
@@ -1175,7 +1175,7 @@ class maddog:
                     and ma2_last > ma20_last
                     and ma2_last > ma2_2_min_ago
                 ):    
-                    buy = "BUY 1 PERICOLOSA 39 > E 69 > 2min ago derivata dal tardo autunno ! togliendo i 40 minuti della ma30 con 11-59 con 5-28 > 0.19 - r 1032 Aa"
+                    buy = "BUY 1 PERICOLOSA 8-54 derivata dal tardo autunno ! togliendo i 40 minuti della ma30 con 11-59 con 5-28 > 0.19 - r 1032 Aa"
                     action = "buy"
                     percentage = 90
                     
@@ -1187,7 +1187,7 @@ class maddog:
                 # BUY 1 PERICOLOSA derivata dal tardo autunno ! togliendo i 40 minuti della ma30 
                 
                 elif (     
-                    ma11_last > ma59_last
+                    ma8_last > ma54_last
                     and ma78_last < ma200_last
                     and deviation_ma5_sopra_ma28 > 0.30
                     
@@ -1207,7 +1207,7 @@ class maddog:
                     and ma2_last > ma20_last
                     and ma2_last > ma2_2_min_ago
                 ):    
-                    buy = "BUY 1 PERICOLOSA 39 > E 69 > 2min ago derivata dal tardo autunno ! togliendo i 40 minuti della ma30 con 11-59 con 5-28 > 0.30 - r 1032 Ab"
+                    buy = "BUY 1 PERICOLOSA 8-54 derivata dal tardo autunno ! togliendo i 40 minuti della ma30 con 11-59 con 5-28 > 0.30 - r 1032 Ab"
                     action = "buy"
                     percentage = 90
                     
@@ -1224,7 +1224,7 @@ class maddog:
                 # BUY 1 PERICOLOSA derivata dal tardo autunno ! togliendo i 40 minuti della ma30 
                 
                 elif (     
-                    ma11_last > ma59_last
+                    ma8_last > ma54_last
                     and ma39_last > ma39_30_min_ago
                     and ma69_last < ma69_2_min_ago
                     
@@ -1237,11 +1237,11 @@ class maddog:
                     and deviation_bellissima > 0.06
                     
                     and ma20_last > ma20_2_min_ago
-                    and ma5_last > ma5_2_min_ago
                     and ma2_last > ma20_last
+                    
                     and ma2_last > ma2_2_min_ago
                 ):    
-                    buy = "BUY 1 PERICOLOSA 39 > E 69 < 2min agoderivata dal tardo autunno ! togliendo i 40 minuti della ma30 con 11-59 con 5-28 > 0.19 - r 1032 B"
+                    buy = "BUY 1 PERICOLOSA 8-54 derivata dal tardo autunno ! con 11-59 con 5-28 > 0.19 - r 1032 B"
                     action = "buy"
                     percentage = 90
                     
@@ -1253,7 +1253,7 @@ class maddog:
                 # BUY 1 PERICOLOSA derivata dal tardo autunno ! togliendo i 40 minuti della ma30 
                 
                 elif (     
-                    ma11_last > ma69_last
+                    ma8_last > ma54_last
                     and ma78_last > ma200_last
                     
                     and ma39_last < ma39_30_min_ago
@@ -1270,7 +1270,7 @@ class maddog:
                     and ma2_last > ma20_last
                     and ma2_last > ma2_2_min_ago
                 ):    
-                    buy = "BUY 1 PERICOLOSA 39< MA 78>200 derivata dal tardo autunno ! togliendo i 40 minuti della ma30 con 11-59 con 5-28 > 0.20 - r 1060 A"
+                    buy = "BUY 1 PERICOLOSA 8-54 and 39< MA 78>200 derivata dal tardo autunno ! con 5-28 > 0.20 - r 1060 A"
                     action = "buy"
                     percentage = 90
                     
@@ -1281,7 +1281,7 @@ class maddog:
                 # BUY 1 PERICOLOSA derivata dal tardo autunno ! togliendo i 40 minuti della ma30 
                 
                 elif (     
-                    ma11_last > ma69_last
+                    ma8_last > ma54_last
                     and ma78_last < ma200_last
                     and ma39_last < ma39_30_min_ago
                     and deviation_ma100_sopra_ma300 < -0.27
@@ -1297,7 +1297,7 @@ class maddog:
                     and ma2_last > ma20_last
                     and ma2_last > ma2_2_min_ago
                 ):    
-                    buy = "BUY 1 PERICOLOSA 39< AND 78 < 200 derivata dal tardo autunno ! togliendo i 40 minuti della ma30 con 11-59 con 5-28 > 0.27 - r 1060 B"
+                    buy = "BUY 1 PERICOLOSA 8-54 and 39< AND 78 < 200 derivata dal tardo autunno ! togliendo i 40 minuti della ma30 e con 5-28 > 0.27 - r 1060 B"
                     action = "buy"
                     percentage = 90
                     
@@ -1560,7 +1560,7 @@ class maddog:
                 
                 elif (
                     deviation_ma5_sopra_ma28 > 0.30
-                    and ma8_last > ma50_last
+                    and ma8_last > ma54_last
                     
                     and deviation_ma100_sopra_ma200 > -0.60
                     and deviation_ma50_sotto_ma200 < -0.15
@@ -1576,7 +1576,7 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
               
                 ):
-                    buy = "BUY 1 MISTERO CON 8>50 E 5-28 PIU' ALTO ! per arrivare una ndecchia prima del passare del tempo prendendo rischio - riga 1337"
+                    buy = "BUY 1 MISTERO CON 8>54 E 5-28 PIU' ALTO ! per arrivare una ndecchia prima del passare del tempo prendendo rischio - riga 1337"
                     action = "buy"
                     percentage = 90
                     
