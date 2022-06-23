@@ -4560,7 +4560,6 @@ class maddog:
                     
                     
                     
-                 
                 # BUY 2 DOCCIA
                 
                 elif (    
@@ -4570,6 +4569,34 @@ class maddog:
                     and ma300_last > ma300_120_min_ago
                     and ma20_last > ma200_last
                     
+                    and deviation_ma100_sopra_ma300 > 0.70
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    
+                    and ma3_last > ma59_last
+                    
+                    
+                    and deviation_ma5_sopra_ma30 > 0.02
+                    and deviation_buy_ma3_sopra_ma25 > 0.04
+                    
+                    and (ma4_prev < ma25_prev and ma4_last > ma25_last)
+                    and ma2_last >= ma2_2_min_ago
+                ): 
+                    buy = "BUY 2 DOCCIA se ma200 > da 90 min ! E 3-10 > 0.01 - 100 MOLTO ALTA RISPETTO A 300 - r 3910 A"
+                    action = "buy"
+                    percentage = 70
+                    
+                    
+                    
+                    
+                # BUY 2 DOCCIA
+                
+                elif (    
+
+                    ma100_last > ma100_60_min_ago
+                    and ma200_last > ma200_90_min_ago
+                    and ma300_last > ma300_120_min_ago
+                    and ma20_last > ma200_last
+                    and deviation_ma100_sopra_ma300 < 0.70
                     and deviation_ma3_sopra_ma10 > 0.01
                     
                     and ma3_last > ma59_last
@@ -4581,9 +4608,12 @@ class maddog:
                     and (ma4_prev < ma25_prev and ma4_last > ma25_last)
                     and ma2_last >= ma2_2_min_ago
                 ): 
-                    buy = "BUY 2 DOCCIA se ma200 > da 90 min ! E 3-10 > 0.01 - r 3910"
+                    buy = "BUY 2 DOCCIA se ma200 > da 90 min ! E 3-10 > 0.01 -100 NON LONTANA DA 300  r 3910 B"
                     action = "buy"
                     percentage = 70
+                    
+                    
+                    
                     
                 
                 
