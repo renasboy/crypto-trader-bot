@@ -15387,13 +15387,13 @@ class maddog:
             elif (    
                 ma2_last < ma4_last
                 and ma2_last < ma6_last
-                and deviation_crollo_24_aprile < -0.59
+                and deviation_crollo_24_aprile < -0.58
                 
                 and delta_1 > delta_2
                 and deviation_ma5_sotto_ma200 < -1.00
             ): 
                 
-                sell = "SELL condizione speciale DOPO IL CROLLO IMPROVVISO del 24 aprile 2022 - and delta_1 > delta_2 and dev_ma5_sotto_ma200 < -1.00 - r 9402b"
+                sell = "SELL condizione speciale DOPO IL CROLLO IMPROVVISO del 24 apr 2022 - and delta_1 > delta_2 and dev_ma5_sotto_ma200 < -1.00 < -0.58 - r 9402b"
                 action = "sell"
                         
                 # ho aggiunto anche questa vendita speciale dopo il 24 aprile -1%
@@ -15403,7 +15403,7 @@ class maddog:
                 
                 # -0.60 ha generato perdita -0.84 il 13 maggio 2022 cosi' ho ridotto a -0.59
                 # MA VA BENE !
-                
+                # 27 giu 2022 a -0.58 da -0.59
                 
                 
                 
