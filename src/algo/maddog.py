@@ -511,10 +511,20 @@ class maddog:
         self.algo_helper.info("deviation_ma25_sotto_ma300: {}".format(deviation_ma25_sotto_ma300))
         
         
+        
         # formula DEVIATION_ma100_sopra_ma300
         
         deviation_ma100_sopra_ma300 = (ma100_last / ma300_last - 1) * 100 if ma300_last else 0
         self.algo_helper.info("deviation_ma100_sopra_ma300: {}".format(deviation_ma100_sopra_ma300))
+        
+        
+        
+        # formula DEVIATION_ma200_sopra_ma300
+        
+        deviation_ma200_sopra_ma300 = (ma200_last / ma300_last - 1) * 100 if ma300_last else 0
+        self.algo_helper.info("deviation_ma200_sopra_ma300: {}".format(deviation_ma200_sopra_ma300))
+        
+        
        
         
         # formula DEVIATION_ma100_sopra_ma200
@@ -1862,15 +1872,15 @@ class maddog:
                     and ma11_last > ma50_last
                     and ma69_last >= ma69_2_min_ago
                     and ma300_last < ma300_120_min_ago
-                    and deviation_ma5_sopra_ma28 > 0.24
+                    and deviation_ma5_sopra_ma28 > 0.20
                     
-                    and deviation_bellissima > 0.17
-                    and price > price_2_min_ago
+                    and deviation_bellissima > 0.13
+                    and price >= price_2_min_ago
                     
                     and ma3_last > ma3_3_min_ago
                     and ma4_last > ma4_2_min_ago
                     and deviation_ma3_sopra_ma7 > 0.05
-                    and deviation_ma13_sopra_ma25 > 0.06
+                    and deviation_ma13_sopra_ma25 > 0.05
                  
                 ):
                     buy = "BUY 1 con ma20_last > ma200_last e con 11 > 59 e ma69> 2 min ago (!) r 1494"
@@ -3735,8 +3745,48 @@ class maddog:
                     # 21 giu 2022 3-10 > 0.25 da > 0.05 CAZZO
                     
                     
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                 
+                # BUY 1 che ci riprova quando se ne va lateralmente dopo il crollo
                 
+                elif (
+                    
+                    deviation_ma3_sopra_ma10 > 0.155
+                    and deviation_ma5_sopra_ma28 > 0.01
+                    
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_120_min_ago
+                    
+                    and delta_300_100 < delta_300_100_60_min
+                    
+                    and deviation_ma100_sopra_ma300 > -0.40
+                    and deviation_ma200_sopra_ma300 > -0.40
+                    
+                    and ma2_last > ma2_2_min_ago
+                
+                ):
+               
+                    buy = "BUY 1 che ci riprova quando se ne va lateralmente dopo il crollo - r 3009"
+                    action = "buy"
+                    percentage = 80
+
+                    # compare prega per me !
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                 # BUY 1 CHE MANCAVA aggressiva - (SEMBRA pari al BUY DURANTE UN RIBASSO AUDI !)
                 
                 elif (
@@ -4755,6 +4805,33 @@ class maddog:
                     # SE 100 STA VICINO ALLA 300 TREND LATERALE ! - 5-28 DEVE AVERE UNA SPINTA MAGGIORE !
                     
                     
+                    
+                    
+                    
+                # BUY 2 che ci riprova quando se ne va lateralmente dopo il crollo
+                
+                elif (
+                    
+                    deviation_ma3_sopra_ma10 > 0.14
+                    and deviation_ma5_sopra_ma28 > 0.01
+                    
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_120_min_ago
+                    
+                    and delta_300_100 < delta_300_100_60_min
+                    
+                    and deviation_ma100_sopra_ma300 > -0.40
+                    and deviation_ma200_sopra_ma300 > -0.40
+                    
+                    and ma2_last > ma2_2_min_ago
+                
+                ):
+               
+                    buy = "BUY 2 che ci riprova quando se ne va lateralmente dopo il crollo - r 3960"
+                    action = "buy"
+                    percentage = 80
+
+                    # compare prega per me !
                     
                     
                     
@@ -8126,11 +8203,13 @@ class maddog:
                     elif (    
                         ma50_last < ma50_2_min_ago 
                         and ma2_last < ma2_2_min_ago 
-                        and deviation_ma39 < -0.27
+                        and deviation_ma39 < -0.28
                         and deviation_ma50_sotto_ma300 > 0.50
                     ):
-                        sell = "SELL 1 maestro parte 1 (21-50 min) con ma50 < and deviation_ma39 < -0.27 - r 7087"
+                        sell = "SELL 1 maestro parte 1 (21-50 min) con ma50 < and deviation_ma39 < -0.28 - r 7087"
                         action = "sell"
+                        
+                        # 27 giu 2022 deviation_ma39 < -0.28 da -0.27
                         
                         
                         
