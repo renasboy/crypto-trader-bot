@@ -262,6 +262,26 @@ class maddog:
         
         
         
+        # formula delta_300_100
+        
+        delta_300_100 = (ma300_last / ma100_last - 1) * 100 if ma100_last else 0
+        self.algo_helper.info("delta_300_100: {}".format(delta_300_100))
+        
+        
+        # formula delta_300_100_60_min
+        
+        delta_300_100_60_min = (ma300_60_min_ago / ma100_60_min_ago - 1) * 100 if ma100_60_min_ago else 0
+        self.algo_helper.info("delta_300_100_60_min: {}".format(delta_300_100_60_min))
+        
+        
+        # non serve piu' il rapporto !
+        
+        
+        
+        
+        
+        
+        
         
         # formula delta_150_100
         
@@ -3664,7 +3684,7 @@ class maddog:
                     and delta_150_100 < delta_150_100_60_min
                     and ma100_last > ma100_3_min_ago
                     
-                    and ma2_last > ma2_2_min_ago
+                    and ma2_last >= ma2_2_min_ago
                 
                 ):
                     buy = "BUY 1 78<200 CHE MANCAVA DOPO BUY-SELL CROLLO ! 50 > 100 AND 150-100 GIORNO ! and 3-10 > 0.05 and 5-28 > 0.12 - r 3007 b"
@@ -7646,16 +7666,19 @@ class maddog:
                         # deviation_sell = ma3_last/last_trade_price
                         
                         
-                    
+                        
+                        
                     
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and deviation_sell < -0.32
+                        and deviation_ma8_sotto_ma300 > -1.00
+                        
+                        and deviation_sell < -0.33
                         and ma3_last < ma50_last
                         and ma2_last < ma2_2_min_ago
                     
                     ):
-                        sell = "SELL 1 (21-50 min) con ma50> and deviation_sell <-0.32 and ma3_last < ma50_last - r 6724"
+                        sell = "SELL 1 (21-50 min) con ma50> and deviation_sell <-0.32 and ma3_last < ma50_last - con 8 sotto 300 > -1.00 - r 6724a"
                         action = "sell"
                         
                         # VENDITA 1 IN ALTO dopo BUY IN RISALITA
@@ -7663,7 +7686,27 @@ class maddog:
                         # and (ma3_prev > ma39_prev and ma3_last < ma39_last)
                         # and deviation_sell < -0.26
                         # deviation_sell = ma3_last/last_trade_price
+                        # deviation_ma8_sotto_ma300 = ma8_last / ma300_last
                         
+                        
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and deviation_ma8_sotto_ma300 < -1.00
+                        
+                        and deviation_sell < -0.34
+                        and ma3_last < ma50_last
+                        and ma2_last < ma2_2_min_ago
+                    
+                    ):
+                        sell = "SELL 1 (21-50 min) con ma50> and deviation_sell <-0.34 and ma3_last < ma50_last - con 8 sotto 300 < -1.00 - r 6724b"
+                        action = "sell"
+                        
+                        # VENDITA 1 IN ALTO dopo BUY IN RISALITA
+                        # and deviation_ma39 < -0.16 or (deviation_sell < 0.10 and ma3_last < ma39_last)
+                        # and (ma3_prev > ma39_prev and ma3_last < ma39_last)
+                        # and deviation_sell < -0.26
+                        # deviation_sell = ma3_last/last_trade_price
+                        # deviation_ma8_sotto_ma300 = ma8_last / ma300_last
                         
                     
                     
@@ -11063,6 +11106,26 @@ class maddog:
                         
                         
                         
+                    # AGGIUNTA TARDIVA MA FORSE NECESSARIA !
+                    
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        
+                        and ma100_last < ma200_last
+                        and ma200_last < ma300_last
+                        
+                        and ma200_last < ma200_120_min_ago
+                        and ma300_last < ma300_120_min_ago
+                        
+                        and delta_300_100 < delta_300_100_60_min
+                   
+                        and deviation_sell < -0.12
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 2 da 60 a 90 min AGGIUNTA TARDIVA MA FORSE NECESSARIA ! delta 300-100 < and deviation_sell < -0.12 - r 6230a"
+                        action = "sell"
+                        
+                        
                         
                     # AGGIUNTA TARDIVA MA FORSE NECESSARIA !
                     
@@ -11074,11 +11137,13 @@ class maddog:
                         
                         and ma200_last < ma200_120_min_ago
                         and ma300_last < ma300_120_min_ago
+                        
+                        and delta_300_100 > delta_300_100_60_min
                    
                         and deviation_sell < -0.10
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 2 da 60 a 90 min AGGIUNTA TARDIVA MA FORSE NECESSARIA ! - r 6230"
+                        sell = "SELL 2 da 60 a 90 min AGGIUNTA TARDIVA MA FORSE NECESSARIA ! delta 300-100 > and deviation_sell < -0.10 - r 6230b"
                         action = "sell"
                         
                         
