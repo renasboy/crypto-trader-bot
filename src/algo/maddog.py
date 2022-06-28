@@ -43,7 +43,7 @@ class maddog:
         ma50_last, ma50_prev = self.algo_helper.ma_last_prev(50)
         ma52_last, ma52_prev = self.algo_helper.ma_last_prev(52)
         ma54_last, ma54_prev = self.algo_helper.ma_last_prev(54)
-        
+        ma56_last, ma56_prev = self.algo_helper.ma_last_prev(56)
         ma59_last, ma59_prev = self.algo_helper.ma_last_prev(59)
         
         ma69_last, ma69_prev = self.algo_helper.ma_last_prev(69)
