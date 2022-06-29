@@ -4046,16 +4046,25 @@ class maddog:
                     
                     
                     
-                    
-                # BUY 1 forever young 1 PIU' PRUDENTE se ma 200 > e se ma200 > ma300
+                
+                
+                
+                
+                
+                # BUY 1 forever young 1 PIU' PRUDENTE se ma 200 > e se ma200 > ma300 AND 78 > 200
                 
                 elif (  
                     ma200_last > ma300_last
+                    and ma78_last > ma200_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma5_sopra_ma28 > 0.09
+                    
                     and ma78_last < ma100_last
                     and deviation_ma100_laterale > 0.12
                     and ma11_last > ma200_last
                     and ma200_last > ma200_15_min_ago
-                    and deviation_ma5_sopra_ma28 > 0.09
+                    
                     
                     and ma3_last > ma11_last
                     and ma5_last > ma200_last
@@ -4063,7 +4072,37 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                 ):
 
-                    buy = "BUY 1 forever young 1 PIU' PRUDENTE se ma 200 > e se ma200 > ma300 - r 3188"
+                    buy = "BUY 1 forever young 1 PIU' PRUDENTE se ma 200 > e se ma200 > ma300 AND 78 > 200 - r 3188 a"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # la troppa prudenza qualche volta genera perdite
+                    
+                    
+                    
+                    
+                # BUY 1 forever young 1 PIU' PRUDENTE se ma 200 > e se ma200 > ma300 AND 78 < 200 
+                
+                elif (  
+                    ma200_last > ma300_last
+                    and ma78_last < ma200_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.07
+                    and deviation_ma5_sopra_ma28 > 0.09
+                    
+                    and ma78_last < ma100_last
+                    and deviation_ma100_laterale > 0.12
+                    and ma11_last > ma200_last
+                    and ma200_last > ma200_15_min_ago
+                    
+                    
+                    and ma3_last > ma11_last
+                    and ma5_last > ma200_last
+                    
+                    and ma2_last > ma2_2_min_ago
+                ):
+
+                    buy = "BUY 1 forever young 1 PIU' PRUDENTE se ma 200 > e se ma200 > ma300 AND 78 < 200 AND 3-10 > 0.07 - r 3188 b"
                     action = "buy"
                     percentage = 80
                     
@@ -5530,20 +5569,24 @@ class maddog:
                     
                     
                     
-                    
                 # BUY 3 nuovo TREND LATERALE !
                 
                 elif (
                     ma100_last > ma300_last
                     and ma100_last > ma200_last
+                    and ma78_last > ma200_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma5_sopra_ma28 > 0.07
+                    
                     and ma8_last > ma50_last
                     and ma2_last > ma2_2_min_ago
                         
                     and deviation_ma100_sopra_ma300 < 0.04
                     and deviation_ma100_sopra_ma200 < 0.05
-                    and deviation_ma5_sopra_ma28 > 0.07
+                    
                 ):
-                    buy = "BUY 3 nuovo TREND LATERALE ! - r 4530"
+                    buy = "BUY 3 nuovo TREND LATERALE ! - 78 > 200 con 3-10 > 0.01 - r 4530 a"
                     action = "buy"
                     percentage = 80
                     
@@ -5553,6 +5596,36 @@ class maddog:
                     
                     
                     
+                # BUY 3 nuovo TREND LATERALE !
+                
+                elif (
+                    ma100_last > ma300_last
+                    and ma100_last > ma200_last
+                    and ma78_last < ma200_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.07
+                    and deviation_ma5_sopra_ma28 > 0.07
+                    
+                    and ma8_last > ma50_last
+                    and ma2_last > ma2_2_min_ago
+                        
+                    and deviation_ma100_sopra_ma300 < 0.04
+                    and deviation_ma100_sopra_ma200 < 0.05
+                    
+                ):
+                    buy = "BUY 3 nuovo TREND LATERALE ! - 78 < 200 con 3-10 > 0.07 - r 4530 b"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # SE ma100 E' cosi' VICINA A ma200 E ma300 vuo dire che non c'e' un grande rialzo in atto ma un TREND LATERALE !
+                    
+                    
+                    
+                    
+                
+                
+                
+                
                 #  BUY 3A con ma69 > MA ma200 scende da 60 min ! and ma300_last > ma300_60_min_ago
                 
                 elif (
@@ -8120,14 +8193,16 @@ class maddog:
                         
                         and ma100_last > ma100_60_min_ago
                         and ma5_last < ma100_last
-                        and deviation_sell < -0.26
+                        and deviation_sell < -0.28
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 (21-50 min) con ma50 > and 5-100 and deviation_sell < -0.26 CUSCINO DI SANT' ANTONIO se ma100 > E 100 > 200- r 6947 A"
+                        sell = "SELL 1 (21-50 min) con ma50 > and 5-100 and deviation_sell < -0.28 CUSCINO DI SANT' ANTONIO se ma100 > E 100 > 200- r 6947 A"
                         action = "sell"
                         
                         # 19 giu 2022 dev sell a 0.26 da 0.24
+                        # 29 giu 2022 dev sell a 0.28 da 0.26
+                        
                         
                         
                     elif (
@@ -9353,12 +9428,12 @@ class maddog:
                     elif (
                         ma50_last < ma50_2_min_ago
                         
-                        and deviation_sell < -0.20
+                        and deviation_sell < -0.23
                         and ma3_last < ma39_last
                         and ma100_last > ma100_60_min_ago
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 90-110 min con ma50 < MA ma100 > and (deviation_sell < -0.20 and ma3_last < ma39_last) - r 4824"
+                        sell = "SELL 1 90-110 min con ma50 < MA ma100 > and (deviation_sell < -0.23 and ma3_last < ma39_last) - r 4824"
                         action = "sell"
                         
                     
