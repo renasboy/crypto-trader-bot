@@ -1061,11 +1061,34 @@ class maddog:
                     
                     
                     
-                    
-                # ------------------------------------------------------------ BUY 1 MOLTO RISCHIOSO modo 2 ! quando incomincia il ribasso MA ma300 >
+                # ------------------------------------------------------------ BUY 1 MOLTO RISCHIOSO modo 2 ! quando incomincia il ribasso MA ma300 > E MA 200>300
                 
                 elif (     
                     ma300_last > ma300_120_min_ago
+                    and ma200_last > ma300_last
+                    
+                    and ma8_last > ma100_last
+                    
+                    and ma200_last < ma200_60_min_ago
+                    and ma100_last < ma100_60_min_ago
+                 
+                    and deviation_bellissima > 0.12
+                    and ma2_last > ma2_2_min_ago
+                ):     
+                  
+                    buy = "BUY 1 MOLTO RISCHIOSO modo 2 ! quando incomincia il ribasso MA ma300 > E 200>300 - r 905 a"
+                    action = "buy"
+                    percentage = 90
+                    
+                    
+                    
+                    
+                # ------------------------------------------------------------ BUY 1 MOLTO RISCHIOSO modo 2 ! quando incomincia il ribasso MA ma300 > E MA 200<300
+                
+                elif (     
+                    ma300_last > ma300_120_min_ago
+                    and ma200_last < ma300_last
+                    
                     and ma8_last > ma100_last
                     and ma28_last > ma125_last
                 
@@ -1076,7 +1099,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                 ):     
                   
-                    buy = "BUY 1 MOLTO RISCHIOSO modo 2 ! quando incomincia il ribasso MA ma300> - r 905"
+                    buy = "BUY 1 MOLTO RISCHIOSO modo 2 ! quando incomincia il ribasso MA ma300> e MA 200<300 - r 905 b"
                     action = "buy"
                     percentage = 90
                     
@@ -8217,15 +8240,15 @@ class maddog:
                         
                         and ma100_last > ma100_60_min_ago
                         and ma5_last < ma100_last
-                        and deviation_sell < -0.28
+                        and deviation_sell < -0.29
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 (21-50 min) con ma50 > and 5-100 and deviation_sell < -0.28 CUSCINO DI SANT' ANTONIO se ma100 > E 100 > 200- r 6947 A"
+                        sell = "SELL 1 (21-50 min) con ma50 > and 5-100 and deviation_sell < -0.29 CUSCINO DI SANT' ANTONIO se ma100 > E 100 > 200- r 6947 A"
                         action = "sell"
                         
                         # 19 giu 2022 dev sell a 0.26 da 0.24
-                        # 29 giu 2022 dev sell a 0.28 da 0.26
+                        # 29 giu 2022 dev sell a 0.29 da 0.26
                         
                         
                         
