@@ -98,7 +98,7 @@ class maddog:
         ma39_30_min_ago = self.algo_helper.ma_minutes_ago(39, 30)
         ma48_3_min_ago = self.algo_helper.ma_minutes_ago(48, 3)
         ma50_2_min_ago = self.algo_helper.ma_minutes_ago(50, 2)
-     
+        ma59_60_min_ago = self.algo_helper.ma_minutes_ago(59, 60)
         ma69_2_min_ago = self.algo_helper.ma_minutes_ago(69, 2)
         ma69_15_min_ago = self.algo_helper.ma_minutes_ago(69, 15)
         
@@ -1091,21 +1091,45 @@ class maddog:
                 
                 # ------------------------------------------------------------ BUY 1 RAFFORZATA se ma200> and ma300 > and 8>50 AND ma78 >
                 
-                
                 elif (    
                     ma20_last > ma200_last
                     and ma50_last > ma78_last
                     and deviation_ma3_sopra_ma10 > 0.01
                     
+                    and ma59_last > ma59_60_min_ago
                     and ma78_last > ma78_2_min_ago
                     and ma200_last > ma200_120_min_ago
                     and ma300_last > ma300_120_min_ago
                     and ma8_last > ma50_last
                 ):  
                 
-                    buy = "BUY 1 RAFFORZATA (50>78) con 20>200 and 69 > 100 and deviation_bellissima > 0.14 AND ma78 > - r 931"
+                    buy = "BUY 1 RAFFORZATA (50>78) con 20>200 and 69 > 100 and deviation_bellissima > 0.14 AND ma78 > AND 59 > 59 60 min ago - r 931 a"
                     action = "buy"
-                    percentage = 90
+                    percentage = 80
+                    
+                    
+                    
+                    
+                # ------------------------------------------------------------ BUY 1 RAFFORZATA se ma200> and ma300 > and 8>50 AND ma78 > CON 3-10 > 0.12
+                
+                elif (    
+                    ma20_last > ma200_last
+                    and ma50_last > ma78_last
+                    and deviation_ma3_sopra_ma10 > 0.12
+                    
+                    and ma59_last < ma59_60_min_ago
+                    and ma78_last > ma78_2_min_ago
+                    and ma200_last > ma200_120_min_ago
+                    and ma300_last > ma300_120_min_ago
+                    and ma8_last > ma50_last
+                ):  
+                
+                    buy = "BUY 1 RAFFORZATA (50>78) con 20>200 and 69 > 100 and dev_bellissima > 0.14 AND ma78 > AND 59 > 59 60 min ago CON 3-10 > 0.12- r 931 b"
+                    action = "buy"
+                    percentage = 80
+                    
+                    
+                    
                     
                     
                     
