@@ -3989,7 +3989,7 @@ class maddog:
                 
                 elif (    
                
-                    ma8_last > ma300_last
+                    ma8_last > ma200_last
                     and ma100_last > ma200_last
                     and ma100_last > ma300_last
                     
@@ -3999,11 +3999,11 @@ class maddog:
                     
                     and ma300_last < ma300_60_min_ago
                     
-                    and deviation_ma5_sopra_ma28 > 0.16
-                    and ma2_last > ma2_2_min_ago
+                    and deviation_ma5_sopra_ma28 > 0.14
+                    and ma2_last >= ma2_2_min_ago
                 ):    
                     
-                    buy = "BUY 1 SITUAZIONE TREND LATERALE che mancava con ma300 < - SOPRA RIALZO RIALZO - GIORNO ! and 5-28 > 0.16 - riga 3128"
+                    buy = "BUY 1 SITUAZIONE TREND LATERALE che mancava con ma300 < - SOPRA RIALZO RIALZO - GIORNO ! and 5-28 > 0.14 - riga 3128"
                     action = "buy"
                     percentage = 80
                     
