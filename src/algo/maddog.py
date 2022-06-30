@@ -9193,11 +9193,11 @@ class maddog:
                         
                         
                         
-                        
                     # AGGIUNTA TARDIVA MA FORSE NECESSARIA !
                     
                     elif (
                         ma50_last < ma50_2_min_ago
+                        and delta_1 < delta_2
                         
                         and ma100_last < ma200_last
                         and ma200_last < ma300_last
@@ -9205,10 +9205,30 @@ class maddog:
                         and ma200_last < ma200_120_min_ago
                         and ma300_last < ma300_120_min_ago
                    
-                        and deviation_sell < -0.17
+                        and deviation_sell < -0.19
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 da 50-90 min AGGIUNTA TARDIVA MA FORSE NECESSARIA ! - r 4644"
+                        sell = "SELL 1 da 50-90 min AGGIUNTA TARDIVA MA FORSE NECESSARIA ! and delta_1 < delta_2 and deviation_sell < -0.19 - r 4644 a"
+                        action = "sell"
+                        
+                        
+                        
+                        
+                    # AGGIUNTA TARDIVA MA FORSE NECESSARIA !
+                    
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and delta_1 > delta_2
+                        and ma100_last < ma200_last
+                        and ma200_last < ma300_last
+                        
+                        and ma200_last < ma200_120_min_ago
+                        and ma300_last < ma300_120_min_ago
+                   
+                        and deviation_sell < -0.175
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 1 da 50-90 min AGGIUNTA TARDIVA MA FORSE NECESSARIA ! and delta_1 > delta_2 and deviation_sell < -0.175 - r 4644 b"
                         action = "sell"
                         
                         
