@@ -3878,12 +3878,11 @@ class maddog:
                     
                     
                     
-                
                 # BUY 1 che ci riprova quando se ne va lateralmente dopo il crollo
                 
                 elif (
-                    
-                    deviation_ma3_sopra_ma10 > 0.155
+                    ma28_last > ma300_last
+                    and deviation_ma3_sopra_ma10 > 0.155
                     and deviation_ma5_sopra_ma28 > 0.01
                     
                     and ma200_last < ma200_120_min_ago
@@ -3898,7 +3897,34 @@ class maddog:
                 
                 ):
                
-                    buy = "BUY 1 che ci riprova quando se ne va lateralmente dopo il crollo - r 3009"
+                    buy = "BUY 1 che ci riprova quando se ne va lateralmente dopo il crollo - SE 28 < 300 OK COSI' - r 3009 a"
+                    action = "buy"
+                    percentage = 80
+
+                    # compare prega per me !
+                    
+                    
+                    
+                # BUY 1 che ci riprova quando se ne va lateralmente dopo il crollo
+                
+                elif (
+                    ma28_last < ma300_last
+                    and deviation_ma3_sopra_ma10 > 0.22
+                    and deviation_ma5_sopra_ma28 > 0.01
+                    
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_120_min_ago
+                    
+                    and delta_300_100 < delta_300_100_60_min
+                    
+                    and deviation_ma100_sopra_ma300 > -0.40
+                    and deviation_ma200_sopra_ma300 > -0.40
+                    
+                    and ma2_last > ma2_2_min_ago
+                
+                ):
+               
+                    buy = "BUY 1 che ci riprova quando se ne va lateralmente dopo il crollo - SE 28 < 300 3-10 > 0.22- r 3009 b"
                     action = "buy"
                     percentage = 80
 
