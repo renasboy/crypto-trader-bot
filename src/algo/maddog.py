@@ -9394,6 +9394,37 @@ class maddog:
                         
                         
                         
+                    # SELL 1 eventuale guadagno con crollo (50-90 min) con ma50 < and incrocio 5-59 and deviation_sell > 0.45
+                    
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and (ma5_prev > ma59_prev and ma5_last < ma59_last)
+                        and deviation_sell > 0.45
+                        
+                        and ma100_last < ma200_last
+                        and ma200_last < ma300_last
+                        
+                        and ma100_last < ma100_120_min_ago
+                        and ma200_last < ma200_120_min_ago
+                        and ma300_last < ma300_120_min_ago
+                     
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 1 eventuale guadagno con crollo (50-90 min) con ma50 < and incrocio 5-59 and deviation_sell > 0.45 - r 4645"
+                        action = "sell"
+                        
+                        # in questa circostanza drammatica di crollo INTANTO TE LI PRENDI poi, eventualmente, ci pensa BUY 2
+                        
+                        
+                        
+                        
+                        
+                        
+                    
+                        
+                        
+                        
+                        
                 
                 
                 
