@@ -4348,6 +4348,34 @@ class maddog:
                     
                     
                     
+                # BUY 1 piccola CORREZIONE FIAT CHE FA PAURA ! ( ma la ma100 E' ANCORA VICINA alla ma300 !) NON TOCCARE 5-28 > 0.10 !
+                # ( E ANCHE la ma25 deve stare un po' distante dalla 300 !!! )
+                
+                elif (
+                    deviation_buy_crollo_1 < -0.29
+                    and deviation_buy_crollo_1 > -0.59
+                    
+                    and deviation_correzione > 0.03
+                    and deviation_ma5_sopra_ma28 > 0.05
+                    
+                    and ma200_last > ma300_last
+                    and deviation_ma100_sopra_ma300 > -0.30
+                    and deviation_ma25_sotto_ma300 < -0.60
+                    and ma2_last > ma2_2_min_ago
+                ):
+                    buy = "BUY 1 FIAT (MA ma100 E' ANCORA VICINA alla ma300 e 200 e' ancora sopra 300) (E CON ma25 un po' distante da ma300) 50% - riga 3315"
+                    action = "buy"
+                    percentage = 50
+                    
+                    # deviation_ma100_sopra_ma300 significa 100/300 ( ma100 ancora NON SI E' ALLONTANATA TROPPO DALLA ma300 )
+                    # ma200 sta ancora sopra ma300 !
+                    # deviation_ma25_sotto_ma300 significa che anche ma25 deve andare almeno un po' sotto ma300 (per evitare piccole schegge rialziste !)
+                    # NON TOCCARE 5-28 > 0.05 !
+                    
+                    
+                    
+                    
+                    
                     
                 # BUY 1 con DEVIATION ASSURDA  se ma200 > da 20 min COMPRA con INCROCIO ma8 - ma200 >
 
@@ -16009,13 +16037,13 @@ class maddog:
             elif (    
                 ma2_last < ma4_last
                 and ma2_last < ma6_last
-                and deviation_crollo_24_aprile < -0.58
+                and deviation_crollo_24_aprile < -0.57
                 
                 and delta_1 > delta_2
                 and deviation_ma5_sotto_ma200 < -1.00
             ): 
                 
-                sell = "SELL condizione speciale DOPO IL CROLLO IMPROVVISO del 24 apr 2022 - and delta_1 > delta_2 and dev_ma5_sotto_ma200 < -1.00 < -0.58 - r 9402b"
+                sell = "SELL condizione speciale DOPO IL CROLLO IMPROVVISO del 24 apr 2022 - and delta_1 > delta_2 and dev_ma5_sotto_ma200 < -1.00 < -0.57 - r 9402b"
                 action = "sell"
                         
                 # ho aggiunto anche questa vendita speciale dopo il 24 aprile -1%
@@ -16026,7 +16054,7 @@ class maddog:
                 # -0.60 ha generato perdita -0.84 il 13 maggio 2022 cosi' ho ridotto a -0.59
                 # MA VA BENE !
                 # 27 giu 2022 a -0.58 da -0.59
-                
+                # 2 lug 2022 a -0.57 da -0.58 dopo che ha fatto -0.96 durante un crollo
                 
                 
                 ######################################################################################### fine dopo il crollo improvviso del 24 aprile 2022
