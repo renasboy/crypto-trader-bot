@@ -526,7 +526,7 @@ class maddog:
         
         # deviation ribasso e rialzo velocissimo 2 ! 
         
-        deviation_ribasso_e_rialzo_velocissimo_2 = (price / ma300_last - 1) * 100 if ma300_last else 0
+        deviation_ribasso_e_rialzo_velocissimo_2 = (ma2_last / ma300_last - 1) * 100 if ma300_last else 0
         self.algo_helper.info("deviation_ribasso_e_rialzo_velocissimo_2: {}".format(deviation_rialzo_e_rialzo_velocissimo_2))
         
         
