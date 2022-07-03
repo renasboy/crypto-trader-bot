@@ -513,21 +513,24 @@ class maddog:
         
         
         
-        
-      
-        
-        
         # deviation ribasso e rialzo velocissimo 1 ! 
         
-        deviation_ribasso_e_rialzo_velocissimo_1 = (price / ma2_last - 1) * 100 if ma2_last else 0
-        self.algo_helper.info("deviation_ribasso_e_rialzo_velocissimo_1: {}".format(deviation_rialzo_e_rialzo_velocissimo_1))
+        deviation_ribasso_e_rialzo_velocissimo_1 = ( price / price_10_min_ago - 1) * 100 if price_10_min_ago else 0
+        self.algo_helper.info("deviation_ribasso_e_rialzo_velocissimo_1: {}".format(deviation_ribasso_e_rialzo_velocissimo_1))
         
         
         
         # deviation ribasso e rialzo velocissimo 2 ! 
         
-        deviation_ribasso_e_rialzo_velocissimo_2 = (ma2_last / ma300_last - 1) * 100 if ma300_last else 0
-        self.algo_helper.info("deviation_ribasso_e_rialzo_velocissimo_2: {}".format(deviation_rialzo_e_rialzo_velocissimo_2))
+        deviation_ribasso_e_rialzo_velocissimo_2 = (price / price_2_min_ago - 1) * 100 if price_2_min_ago else 0
+        self.algo_helper.info("deviation_ribasso_e_rialzo_velocissimo_2: {}".format(deviation_ribasso_e_rialzo_velocissimo_2))
+        
+        
+        
+      
+        
+        
+        
         
         
         
@@ -4535,16 +4538,18 @@ class maddog:
                     and deviation_ma3_sotto_ma100 < -1.70
                     and deviation_ma3_sotto_ma300 < -1.60
                     
-                    and deviation_ribasso_e_rialzo_velocissimo_1 > -0.50
-                    and deviation_ribasso_e_rialzo_velocissimo_2 < -1.50
+                    and deviation_ribasso_e_rialzo_velocissimo_1 < -1.50
+                    and deviation_ribasso_e_rialzo_velocissimo_2 > -0.50
+                    
                
                 ):
                     buy = "BUY 1 CROLLO IMPROVVISO e RISALITA SUPERVELOCE - la piu' pericolosa d tutte ! - BUY con il 30% - dovrebbe evitarmi il buy alto - r 3317"
                     action = "buy"
                     percentage = 30
                     
-                    # deviation_ribasso_e_rialzo_velocissimo_1 = price / price_2_min_ago
-                    # deviation_ribasso_e_rialzo_velocissimo_2 = price / price_10_min_ago
+                    
+                    # deviation_ribasso_e_rialzo_velocissimo_1 = price / price_10_min_ago
+                    # deviation_ribasso_e_rialzo_velocissimo_2 = price / price_2_min_ago
                     
                     # importante : il prezzo puo' essere anche piu' basso del prezzo di 2 min ago ! - fidati - 
                     # in questa circostanza ma2 arriva tardissimo !
