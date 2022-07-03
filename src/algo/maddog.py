@@ -147,11 +147,13 @@ class maddog:
         # PREZZO DI ADESSO (di mercato) - CURRENT PRICE
         
         price = self.algo_helper.price
+        
 
         # PREZZO di X MINUTI FA (di mercato)
-        
+        price_1_min_ago = self.algo_helper.price_minutes_ago(1)
         price_2_min_ago = self.algo_helper.price_minutes_ago(2)
         price_10_min_ago = self.algo_helper.price_minutes_ago(10)
+        
         price_15_min_ago = self.algo_helper.price_minutes_ago(15)
         price_20_min_ago = self.algo_helper.price_minutes_ago(20)
 
@@ -425,6 +427,26 @@ class maddog:
         
         
         
+        # formula DEVIATION_ma3_sotto_ma100 
+        
+        deviation_ma3_sotto_ma100 = (ma3_last / ma100_last - 1) * 100 if ma100_last else 0
+        self.algo_helper.info("deviation_ma3_sotto_ma100: {}".format(deviation_ma3_sotto_ma100))
+        
+        
+    
+        # formula DEVIATION_ma3_sotto_ma300
+        
+        deviation_ma3_sotto_ma300 = (ma3_last / ma300_last - 1) * 100 if ma300_last else 0
+        self.algo_helper.info("deviation_ma3_sotto_ma300: {}".format(deviation_ma3_sotto_ma300))
+        
+        
+        
+        
+        
+        
+        
+        
+        
         # formula DEVIATION_ma4_sopra_ma100 - BUY 4 (parliamo del BUY 4 !) DEVE STARE a una certa distanza da ma100
         
         deviation_ma4_sopra_ma100 = (ma4_last / ma100_last - 1) * 100 if ma100_last else 0
@@ -489,6 +511,23 @@ class maddog:
         deviation_ma8_sotto_ma300 = (ma8_last / ma300_last - 1) * 100 if ma300_last else 0
         self.algo_helper.info("deviation_ma8_sotto_ma300: {}".format(deviation_ma8_sotto_ma300))
         
+        
+        
+        
+      
+        
+        
+        # deviation ribasso e rialzo velocissimo 1 ! 
+        
+        deviation_ribasso_e_rialzo_velocissimo_1 = (price / price_2_min_ago - 1) * 100 if price_2_min_ago else 0
+        self.algo_helper.info("deviation_ribasso_e_rialzo_velocissimo_1: {}".format(deviation_rialzo_e_rialzo_velocissimo_1))
+        
+        
+        
+        # deviation ribasso e rialzo velocissimo 2 ! 
+        
+        deviation_ribasso_e_rialzo_velocissimo_2 = (price / price_10_min_ago - 1) * 100 if price_10_min_ago else 0
+        self.algo_helper.info("deviation_ribasso_e_rialzo_velocissimo_2: {}".format(deviation_rialzo_e_rialzo_velocissimo_2))
         
         
         
@@ -4460,7 +4499,6 @@ class maddog:
                     
                     
                     
-                    
                 # BUY 1 con DEVIATION ASSURDA  se ma200 > da 20 min COMPRA con INCROCIO ma8 - ma200 >
 
                 elif (    
@@ -4483,15 +4521,73 @@ class maddog:
                     # deviation_assurda = price / ma200_last
                     
                     
+                    
+                    
+                    
+                # BUY 1 CROLLO IMPROVVISO e RISALITA SUPERVELOCE - la piu' pericolosa d tutte ! - BUY con il 30% - dovrebbe evitarmi il "buy alto"
+
+                elif (    
+                    
+                    price >= ma3_last
+                    
+                    and ma100_last > ma300_last
+                    
+                    and deviation_ma3_sotto_ma100 < -1.70
+                    and deviation_ma3_sotto_ma300 < -1.60
+                    
+                    and deviation_ribasso_e_rialzo_velocissimo_1 > -0.50
+                    and deviation_ribasso_e_rialzo_velocissimo_2 < -1.50
+               
+                ):
+                    buy = "BUY 1 CROLLO IMPROVVISO e RISALITA SUPERVELOCE - la piu' pericolosa d tutte ! - BUY con il 30% - dovrebbe evitarmi il buy alto - r 3317"
+                    action = "buy"
+                    percentage = 30
+                    
+                    # deviation_ribasso_e_rialzo_velocissimo_1 = price / price_2_min_ago
+                    # deviation_ribasso_e_rialzo_velocissimo_2 = price / price_10_min_ago
+                    
+                    # importante : il prezzo puo' essere anche piu' basso del prezzo di 2 min ago ! - fidati - 
+                    # in questa circostanza ma2 arriva tardissimo !
+                    # se 100 > 300 NON E' UN CROLLO !
+                    
+                    
+                    # Manchester Orchestra - I Know How To Speak
+                    
+                    
+                    
+                    
+                    
            
             #############################################################################################################      COMPRA sessione 2
             
             elif self.session == 2:
                 
-                
                 if (
                     ma69_last > ma69_2_min_ago
                     and deviation_ma100_sopra_ma300 > 0.20
+                    and ma78_last > ma200_last
+                    
+                    and deviation_buy2 > 0.03
+                    and deviation_bellissima > 0.151
+                    and deviation_buy_ma3_sopra_ma13 > 0.09
+                    and deviation_ma7_sopra_ma40 > 0.05
+                    and ma2_last > ma2_2_min_ago
+                    and price > price_2_min_ago
+                    and ma3_last > ma40_last
+                ):
+                    buy = "BUY 2A rialzo o laterale con 78 > 200 - r 3341 a"
+                    action = "buy"
+                    percentage = 80
+
+                    # deviation_buy_ma3_sopra_ma13 > x e' fondamentale !
+                    # deviation_buy2 = ma8_last/ma50_last
+                    
+                    
+                    
+                elif (
+                    ma69_last > ma69_2_min_ago
+                    and deviation_ma100_sopra_ma300 > 0.20
+                    and ma78_last < ma200_last
                     
                     and deviation_buy2 > 0.04
                     and deviation_bellissima > 0.151
@@ -4501,7 +4597,7 @@ class maddog:
                     and price > price_2_min_ago
                     and ma3_last > ma40_last
                 ):
-                    buy = "BUY 2A rialzo o laterale - r 3341"
+                    buy = "BUY 2A rialzo o laterale con 78 < 200 - r 3341 b"
                     action = "buy"
                     percentage = 80
 
@@ -10308,19 +10404,38 @@ class maddog:
                         
                         
                         
-                        
                     # ATTENZIONE 3 ! > 110 min E CON 300 < 120 min FORSE E' NECESSARA SOLO QUESTA !
                     
                     elif (    
                         ma3_last < ma100_last
+                        and ma78_last > ma300_last
                         and ma300_last < ma300_120_min_ago
                         and ma100_last > ma200_last
                         and deviation_sell < -0.09
                         and ma2_last < ma2_2_min_ago
                     ):
                    
-                        sell = "SELL 1 > 110 min FORSE E' NECESSARA SOLO QUESTA 3 ! deviation_sell < -0.09 - r 5083"
+                        sell = "SELL 1 > 110 min FORSE E' NECESSARA SOLO QUESTA 3 ! deviation_sell < -0.09 CON 78 > 300 - r 5083 a"
                         action = "sell"
+                        
+                        
+                        
+                    # ATTENZIONE 3 ! > 110 min E CON 300 < 120 min FORSE E' NECESSARA SOLO QUESTA !
+                    
+                    elif (    
+                        ma3_last < ma100_last
+                        and ma78_last < ma300_last
+                        and ma300_last < ma300_120_min_ago
+                        and ma100_last > ma200_last
+                        and deviation_sell < 0.10
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                   
+                        sell = "SELL 1 > 110 min FORSE E' NECESSARA SOLO QUESTA 3 ! deviation_sell < -0.01 CON 78 < 300 (ancora ribasso !) porta a casa ! - r 5083 b"
+                        action = "sell"
+                        
+                        
+                        
                         
                         
                         
