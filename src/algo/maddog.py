@@ -4541,6 +4541,8 @@ class maddog:
                     and deviation_ribasso_e_rialzo_velocissimo_1 < -1.50
                     and deviation_ribasso_e_rialzo_velocissimo_2 > -0.50
                     
+                    and deviation_ma100_sopra_ma300 < 0.40
+                    
                
                 ):
                     buy = "BUY 1 CROLLO IMPROVVISO e RISALITA SUPERVELOCE - la piu' pericolosa d tutte ! - BUY con il 30% - dovrebbe evitarmi il buy alto - r 3317"
@@ -4555,6 +4557,9 @@ class maddog:
                     # in questa circostanza ma2 arriva tardissimo !
                     # se 100 > 300 NON E' UN CROLLO !
                     
+                    # and deviation_ma100_sopra_ma300 < 0.40 significa che CON QUESTE CONDIZIONI COSI' AGGRESSIVE 
+                    # NON COMPRA mentre scende precipitosamente dopo un grandissimo rialzo !
+                    # potra' anche farlo ma considerando il 3-10 e il 5-28
                     
                     # Manchester Orchestra - I Know How To Speak
                     
