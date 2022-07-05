@@ -4531,6 +4531,34 @@ class maddog:
                     
                     
                     
+                # BUY 1 5 LUGLIO 2022 ma100 sotto ma300 di almeno -0.90 ! E CON 3-10 > 0.12
+                
+                elif (
+                    
+                    deviation_ma100_sopra_ma300 < -0.90
+                    and ma8_last > ma50_last
+                    and deviation_ma3_sopra_ma10 > 0.12
+                    
+                    and ma100_last < ma100_120_min_ago
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_120_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and ma2_last > ma2_2_min_ago
+                    and price > price_2_min_ago
+                    
+                ):
+                    buy = "BUY 1 5 LUGLIO 2022 ma100 sotto ma300 di almeno -0.90 ! 3-10 > 0.12 - r 3317"
+                    action = "buy"
+                    percentage = 70
+
+                    # 
+                    # 
+                    
+                    
+                    
                     
                     
                 # BUY 1 CROLLO IMPROVVISO e RISALITA SUPERVELOCE - la piu' pericolosa d tutte ! - BUY con il 30% - dovrebbe evitarmi il "buy alto"
