@@ -16676,30 +16676,62 @@ class maddog:
                 
                 
              
-            
             # 30 - SELL condizione speciale ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma13 <
             
             
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
-                and deviation_ma100_sopra_ma200 > -0.70
-                
                 and deviation_sell < -0.43
+                
+                and deviation_ma100_sopra_ma200 > -0.70
+                and deviation_ma100_sopra_ma300 > 0.50
+               
                 and ma13_last < ma13_2_min_ago
                 
                 and ma2_last < last_trade_price
                 and ma2_last < ma2_2_min_ago
             ):
 
-                sell = "SELL condizione speciale 30 - DOLCE ATTESA 270 sec con ma13 < and deviation < -0.43 - r 16694"
+                sell = "SELL cond. special 30 A - DOLCE ATTESA 270 sec con ma13 < and deviation < -0.43 CON 100 sopra 300 > 0.50 statt' accorto ! - r 16694 a"
                 action = "sell"
                 
-                # il fattore tempo - la dolce attesa - solo con trend ribassista
-                # deviation = ma2_last / last_trade_price
-                # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
-                # max_hold_time_in_seconds = 270 sec = 4 min e 1/2  (con 6 min perdita di 0.60 %)
                 # 4 feb 2022 con <-0.26 ha fatto -0.88% (dopo +4.29%)
                 # 7 feb 2022 con <-0.345 e 270 sec ha fatto -0.38% - aumenta a 0.355 ! - eventualmente ci pensa la condizione CROLLO IMPROVVISO CHE FUNZIONA !
+                
+                
+                
+                
+                
+                
+                
+                
+            # 30 - SELL condizione speciale ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma13 <
+            
+            
+            elif (
+                seconds_since_last_trade > max_hold_time_in_seconds
+                and deviation_sell < -0.47
+                
+                and deviation_ma100_sopra_ma200 > -0.70
+                and deviation_ma100_sopra_ma300 < 0.50
+              
+                and ma13_last < ma13_2_min_ago
+                
+                and ma2_last < last_trade_price
+                and ma2_last < ma2_2_min_ago
+            ):
+
+                sell = "SELL cond. special 30 B - DOLCE ATTESA 270 sec con ma13 < E dev_sell < -0.43 CON 100 sopra 300 < 0.50 MA non e' situazione crollo - r 16694 b"
+                action = "sell"
+             
+                # 4 feb 2022 con <-0.26 ha fatto -0.88% (dopo +4.29%)
+                # 7 feb 2022 con <-0.345 e 270 sec ha fatto -0.38% - aumenta a 0.355 ! - eventualmente ci pensa la condizione CROLLO IMPROVVISO CHE FUNZIONA !
+                
+                
+                
+                
+                
+                
                 
                 
                 
