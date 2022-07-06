@@ -4059,11 +4059,12 @@ class maddog:
                     
                     
                     
-                    
                 # BUY 1 che ci riprova quando se ne va lateralmente dopo il crollo
                 
                 elif (
                     ma28_last > ma300_last
+                    ma20_last > ma50_last
+                    
                     and deviation_ma3_sopra_ma10 > 0.155
                     and deviation_ma5_sopra_ma28 > 0.01
                     
@@ -4079,12 +4080,41 @@ class maddog:
                 
                 ):
                
-                    buy = "BUY 1 che ci riprova quando se ne va lateralmente dopo il crollo - SE 28 < 300 OK COSI' - r 4082 a"
+                    buy = "BUY 1 che ci riprova quando se ne va lateralmente dopo il crollo - SE 28 < 300 OK COSI' CON 28>50 - r 4082 a1"
                     action = "buy"
                     percentage = 80
 
                     # compare prega per me !
                     
+                    
+                    
+                # BUY 1 che ci riprova quando se ne va lateralmente dopo il crollo
+                
+                elif (
+                    ma28_last > ma300_last
+                    ma20_last < ma50_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.155
+                    and deviation_ma5_sopra_ma28 > 0.40
+                    
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_120_min_ago
+                    
+                    and delta_300_100 < delta_300_100_60_min
+                    
+                    and deviation_ma100_sopra_ma300 > -0.40
+                    and deviation_ma200_sopra_ma300 > -0.40
+                    
+                    and ma2_last > ma2_2_min_ago
+                
+                ):
+               
+                    buy = "BUY 1 che ci riprova quando se ne va lateralmente dopo il crollo - SE 28 < 300 OK COSI' CON 20<50 - r 4082 a2"
+                    action = "buy"
+                    percentage = 80
+
+                    # compare prega per me !
+                    # 6 luglio 2022 SE 20 < 50 5-28 > 0.40 ! NON TOCCARE
                     
                     
                 # BUY 1 che ci riprova quando se ne va lateralmente dopo il crollo
@@ -5421,11 +5451,12 @@ class maddog:
                     
                     
                     
-                    
                 # BUY 2 che ci riprova quando se ne va lateralmente dopo il crollo
                 
                 elif (
                     ma78_last > ma200_last
+                    and ma28_last > ma28_30_min_ago
+                    
                     and deviation_ma3_sopra_ma10 > 0.10
                     and deviation_ma5_sopra_ma28 > -0.01
                     
@@ -5441,7 +5472,38 @@ class maddog:
                 
                 ):
                
-                    buy = "BUY 2 CON 78 > 200 che ci riprova quando se ne va lateralmente dopo il crollo - r 5444 a"
+                    buy = "BUY 2 CON 78 > 200 che ci riprova quando se ne va lateralmente dopo il crollo CON 28>28 30 min ago - r 5444 a1"
+                    action = "buy"
+                    percentage = 80
+
+                    # compare prega per me !
+                    
+                    
+                    
+                    
+                    
+                # BUY 2 che ci riprova quando se ne va lateralmente dopo il crollo
+                
+                elif (
+                    ma78_last > ma200_last
+                    and ma28_last < ma28_30_min_ago
+                    
+                    and deviation_ma3_sopra_ma10 > 0.20
+                    and deviation_ma5_sopra_ma28 > -0.01
+                    
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_120_min_ago
+                    
+                    and delta_300_100 < delta_300_100_60_min
+                    
+                    and deviation_ma100_sopra_ma300 > -0.50
+                    and deviation_ma200_sopra_ma300 > -0.50
+                    
+                    and ma2_last > ma2_2_min_ago
+                
+                ):
+               
+                    buy = "BUY 2 CON 78 > 200 che ci riprova quando se ne va lateralmente dopo il crollo CON 28 < 28 30 min ago E 3-10 > 0.20 - r 5444 a2"
                     action = "buy"
                     percentage = 80
 
@@ -5993,23 +6055,23 @@ class maddog:
             elif self.session == 3:
                 
                 if (
-                    ma10_last > ma10_2_min_ago
+                    ma10_last >= ma10_2_min_ago
                     and ma28_last > ma69_last
                     
                     and ma200_last > ma200_60_min_ago
                     and deviation > -0.30
                     and deviation_ma3_sopra_ma10 > 0.11
-                    and deviation_ma5_sopra_ma28 > 0.14
+                    and deviation_ma5_sopra_ma28 > 0.13
                     
-                    and deviation_ma4_sopra_ma30 > 0.11
+                    and deviation_ma4_sopra_ma30 > 0.10
                     and ma3_last > ma13_last
                     and ma4_last > ma9_last
-                    and deviation_ma7_sopra_ma40 > 0.08
+                    and deviation_ma7_sopra_ma40 > 0.05
                     and ma7_last > ma25_last
                     
                     and deviation_buy_ma2_sopra_ma13 > 0.10
                     and ma4_last > ma50_last
-                    and ma2_last > ma2_2_min_ago
+                    and ma2_last >= ma2_2_min_ago
                     
                 ):  
                 
@@ -13690,14 +13752,27 @@ class maddog:
                         
                         
                     
-                    
                     elif (    
                         ma50_last < ma50_2_min_ago
+                        and ma78_last > ma100_last
+                        
                         and ma300_last > ma300_120_min_ago
                         and ma2_last < ma2_2_min_ago 
-                        and deviation_sell < -0.31
+                        and deviation_sell < -0.34
                     ):
-                        sell = "SELL 3 (21-60 min) con ma50 < and ma300> and deviation_sell < -0.31 - r 13700"
+                        sell = "SELL 3 (21-60 min) con ma50 < and ma300> and deviation_sell < -0.34 CON 78>100 - r 13700 A"
+                        action = "sell"
+                        
+                        
+                    elif (    
+                        ma50_last < ma50_2_min_ago
+                        and ma78_last < ma100_last
+                        
+                        and ma300_last > ma300_120_min_ago
+                        and ma2_last < ma2_2_min_ago 
+                        and deviation_sell < -0.32
+                    ):
+                        sell = "SELL 3 (21-60 min) con ma50 < and ma300> and deviation_sell < -0.32 CON 78<100 - r 13700 B"
                         action = "sell"
                         
                     
