@@ -119,6 +119,8 @@ class maddog:
         ma100_50_min_ago = self.algo_helper.ma_minutes_ago(100, 50)
         ma100_60_min_ago = self.algo_helper.ma_minutes_ago(100, 60)
         ma100_120_min_ago = self.algo_helper.ma_minutes_ago(100, 120)
+        ma100_301_min_ago = self.algo_helper.ma_minutes_ago(100, 301)
+        
         ma150_60_min_ago = self.algo_helper.ma_minutes_ago(150, 60)
         ma200_15_min_ago = self.algo_helper.ma_minutes_ago(200, 15)
         ma200_20_min_ago = self.algo_helper.ma_minutes_ago(200, 20)
@@ -127,10 +129,13 @@ class maddog:
         ma200_90_min_ago = self.algo_helper.ma_minutes_ago(200, 90)
         ma200_120_min_ago = self.algo_helper.ma_minutes_ago(200, 120)
         ma200_120_min_ago = self.algo_helper.ma_minutes_ago(200, 120)
+        ma200_301_min_ago = self.algo_helper.ma_minutes_ago(200, 301)
+        
         ma300_20_min_ago = self.algo_helper.ma_minutes_ago(300, 20)
         ma300_60_min_ago = self.algo_helper.ma_minutes_ago(300, 60)
         ma300_120_min_ago = self.algo_helper.ma_minutes_ago(300, 120)
-
+        ma300_301_min_ago = self.algo_helper.ma_minutes_ago(300, 301)
+        
         # LAST TRADE
         
         last_trade_action = self.algo_helper.last_trade_action
@@ -416,7 +421,11 @@ class maddog:
         self.algo_helper.info("deviation_ma5_sotto_ma200: {}".format(deviation_ma5_sotto_ma200))
         
         
-    
+        # formula deviation_ma300_diviso_ma300_5_ore_ago
+        
+        deviation_ma300__diviso_ma300_5_ore_ago = (ma300_last / ma300_301_min_ago - 1) * 100 if ma300_301_min_ago else 0
+        self.algo_helper.info("deviation_ma300__diviso_ma300_5_ore_ago: {}".format(deviation_ma300__diviso_ma300_5_ore_ago))
+        
         # formula DEVIATION_ma5_sotto_ma300
         
         deviation_ma5_sotto_ma300 = (ma5_last / ma300_last - 1) * 100 if ma300_last else 0
@@ -4018,6 +4027,38 @@ class maddog:
                     
                     
                     
+                    
+                    
+                    
+                    
+                    
+                    
+                # BUY 1 CHE MANCAVA DOPO 5 ore di ribasso
+                
+                elif (
+                    deviation_ma5_sopra_ma28 > 0.01
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and ma100_last < ma100_301_min_ago
+                    and ma200_last < ma200_301_min_ago
+                    and ma300_last < ma300_301_min_ago
+                    
+                    and deviation_ma300__diviso_ma300_5_ore_ago < -0.25
+                    and deviation_ma5_sotto_ma300 < -0.43
+                    
+                    and ma2_last > ma2_2_min_ago
+                
+                ):
+                    buy = "BUY 1 CHE MANCAVA DOPO 5 ore di ribasso buy con 5-28 - r 4040"
+                    action = "buy"
+                    percentage = 80
+                    
+                    
+                    
+                    
+                 
                 # BUY 1 CHE MANCAVA DOPO BUY-SELL CROLLO ! 150-100 GIORNO ! MA 50 < 100
                 
                 elif (
@@ -4050,6 +4091,10 @@ class maddog:
                     
                     # 10 giu 2022 5-28 0.12 da 0.09 cazzo
                     # 21 giu 2022 3-10 > 0.25 da > 0.05 CAZZO
+                    
+                    
+                    
+                    
                     
                     
                     
@@ -4222,12 +4267,14 @@ class maddog:
                     
                     
                     
+                    
                 # BUY 1 SITUAZIONE TREND LATERALE che mancava con ma300 > - DOPPIO DELTA - RIALZO
                 
                 elif (    
                
                     ma8_last > ma300_last
                     and ma78_last > ma100_last
+                    and ma300_last > ma300_301_min_ago
                     
                     and ma100_last > ma200_last
                     and ma100_last > ma300_last
@@ -4239,18 +4286,52 @@ class maddog:
                     
                     and ma300_last > ma300_60_min_ago
                     
-                    and deviation_ma3_sopra_ma10 > 0.13
-                    and deviation_ma5_sopra_ma28 > 0.10
+                    and deviation_ma3_sopra_ma10 > 0.07
+                    and deviation_ma5_sopra_ma28 > 0.06
+                    and ma2_last >= ma2_2_min_ago
+                ):    
+                    
+                    buy = "BUY 1 SITUAZIONE TREND LATERALE con ma300 > - GIORNO ! and 5-28 > 0.14 MA 28 < 28 30 min ago AND 3-10 > 0.13 e 300 > 5 ore ! - riga 4246 B1x"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # ho aggiunto 5-28 > 0.05
+                    # cosa curiosa SEMBRA CHE and ma2_last > ma2_2_min_ago abbia fatto ritardare questo BUY.
+                    # ho tenuto i 2 minuti e ho ridotto 5-28    
+                # BUY 1 SITUAZIONE TREND LATERALE che mancava con ma300 > - DOPPIO DELTA - RIALZO
+                
+                elif (    
+               
+                    ma8_last > ma300_last
+                    and ma78_last > ma100_last
+                    and ma300_last < ma300_301_min_ago
+                    
+                    and ma100_last > ma200_last
+                    and ma100_last > ma300_last
+                    
+                    and ma28_last < ma28_30_min_ago
+                    
+                    and delta_1 < delta_2
+                    and ma100_last > ma100_60_min_ago
+                    
+                    and ma300_last > ma300_60_min_ago
+                    
+                    and deviation_ma3_sopra_ma10 > 0.12
+                    and deviation_ma5_sopra_ma28 > 0.09
                     and ma2_last > ma2_2_min_ago
                 ):    
                     
-                    buy = "BUY 1 SITUAZIONE TREND LATERALE con ma300 > - GIORNO ! and 5-28 > 0.14 MA 28 < 28 30 min ago AND 3-10 > 0.13 - riga 4246 B1"
+                    buy = "BUY 1 SITUAZIONE TREND LATERALE con ma300 > - GIORNO ! and 5-28 > 0.09 MA 28 < 28 30 min ago AND 3-10 > 0.12 e 300 < 5 ore !- riga 4246 B1y"
                     action = "buy"
                     percentage = 80
                     
                     # ho aggiunto 5-28 > 0.05
                     # cosa curiosa SEMBRA CHE and ma2_last > ma2_2_min_ago abbia fatto ritardare questo BUY.
                     # ho tenuto i 2 minuti e ho ridotto 5-28
+                    
+                    
+                    
+                    
                     
                     
                 # BUY 1 SITUAZIONE TREND LATERALE che mancava con ma300 > - DOPPIO DELTA - RIALZO
@@ -4354,12 +4435,42 @@ class maddog:
                     action = "buy"
                     percentage = 80
                     
-              
                 # BUY 1 forever young 1 PIU' PRUDENTE se ma 200 > e se ma200 > ma300 AND 78 < 200 
                 
                 elif (  
                     ma200_last > ma300_last
                     and ma78_last < ma200_last
+                    and ma300_last > ma300_120_min_ago
+                    
+                    and deviation_ma3_sopra_ma10 > 0.04
+                    and deviation_ma5_sopra_ma28 > 0.05
+                    
+                    and ma78_last < ma100_last
+                    and deviation_ma100_laterale > 0.10
+                    and ma11_last > ma200_last
+                    and ma200_last > ma200_15_min_ago
+                    
+                    
+                    and ma3_last > ma11_last
+                    and ma5_last > ma100_last
+                    
+                    and ma2_last >= ma2_2_min_ago
+                ):
+
+                    buy = "BUY 1 forever young 1 PIU' PRUDENTE se ma 200 > e se ma200 > ma300 AND 78 < 200 AND 3-10 > 0.04 e 300>120 min ago - r 4379 b1"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # la troppa prudenza qualche volta genera perdite
+                    
+                    
+                    
+                # BUY 1 forever young 1 PIU' PRUDENTE se ma 200 > e se ma200 > ma300 AND 78 < 200 
+                
+                elif (  
+                    ma200_last > ma300_last
+                    and ma78_last < ma200_last
+                    and ma300_last < ma300_120_min_ago
                     
                     and deviation_ma3_sopra_ma10 > 0.07
                     and deviation_ma5_sopra_ma28 > 0.09
@@ -4376,7 +4487,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                 ):
 
-                    buy = "BUY 1 forever young 1 PIU' PRUDENTE se ma 200 > e se ma200 > ma300 AND 78 < 200 AND 3-10 > 0.07 - r 4379 b"
+                    buy = "BUY 1 forever young 1 PIU' PRUDENTE se ma 200 > e se ma200 > ma300 AND 78 < 200 AND 3-10 > 0.07 e 300<120 min ago- r 4379 b2"
                     action = "buy"
                     percentage = 80
                     
@@ -9787,30 +9898,56 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                     ):
                         sell = "SELL 1 da 50 a 90 min UN PO' MEGLIO con ma50 < con incrocio 3-78 and deviation_sell < -0.17 - r 9789"
-                        action = "sell"    
+                        action = "sell"
+                        
                     
-                
                     ##################################################### sempre con ma50 discendente MA trend ma200> ET ma200 > ma300 - PERDITA TOLLERATA AUMENTA
                     
                     elif (
                         ma50_last < ma50_2_min_ago
+                        and ma300_last > ma300_120_min_ago
                         and ma200_last > ma300_last
                         and deviation_trend_ma200 > -0.10
                         
                         and ma78_last > ma200_last
                         
                         and deviation_ma39 < -0.23
-                        and deviation_sell < -0.31
+                        and deviation_sell < -0.35
                         
                         and ma2_last <= ma2_2_min_ago
                     ):
-                        sell = "SELL 1 da 50-90 min BEST sempre con ma50 < E 78 > 200 con dev_ma39 <-0.23 and dev_sell <-0.31 - CON PERDITA TOLLERATA > - r 9807 A"
+                        sell = "SELL 1 50-90 min BEST con ma50 < E 78 > 200 con dev_ma39 <-0.23 and dev_sell <-0.35 - PERDITA TOLLERATA > e 300 > 120 min ago - r 9807 A1"
                         action = "sell"
                         
                         # ha fatto perdita dell' 1% - forse succede tutto in quei 2 minuti se crolla improvvisamente
                         # con deviation_ma39 < -0.27 E CON con deviation_sell < -0.28
                         # 6 luglio 2022 dev_sell a -0.31 da -0.30
-                        # 
+                        
+                        
+                        
+                        
+                    ##################################################### sempre con ma50 discendente MA trend ma200> ET ma200 > ma300 - PERDITA TOLLERATA AUMENTA
+                    
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and ma300_last < ma300_120_min_ago
+                        and ma200_last > ma300_last
+                        and deviation_trend_ma200 > -0.10
+                        
+                        and ma78_last > ma200_last
+                        
+                        and deviation_ma39 < -0.23
+                        and deviation_sell < -0.33
+                        
+                        and ma2_last <= ma2_2_min_ago
+                    ):
+                        sell = "SELL 1 50-90 min BEST con ma50 < E 78 > 200 con dev_ma39 <-0.23 and dev_sell <-0.33 - PERDITA TOLLERATA > e 300 < 120 min ago - r 9807 A2"
+                        action = "sell"
+                        
+                        # ha fatto perdita dell' 1% - forse succede tutto in quei 2 minuti se crolla improvvisamente
+                        # con deviation_ma39 < -0.27 E CON con deviation_sell < -0.28
+                        # 6 luglio 2022 dev_sell a -0.31 da -0.30
+                        
                         
                         
                     elif (
