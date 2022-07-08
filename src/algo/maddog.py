@@ -9751,16 +9751,33 @@ class maddog:
                         
                         
                         
-                        
                     elif (    
                         ma50_last > ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 > 0.50
                         and ma100_last < ma100_60_min_ago
                         and ma100_last < ma200_last
                         and deviation_ma39 < -0.22
                         and deviation_sell < 0.23
                         and ma2_last < ma2_2_min_ago
                     ):    
-                        sell = "SELL 1 da 50 a 90 min con ma50 > and deviation_ma39 < -0.22 - r 9440 b"
+                        sell = "SELL 1 da 50 a 90 min con ma50 > and deviation_ma39 < -0.22 and deviation_sell < 0.23 con 5 sopra 300 > 0.50 - r 9440 b1"
+                        action = "sell"
+                        
+                        # se non ha forza dopo 1 ora e' inutile continuare a sperare !
+                        # potrebbe essere situazione di crollo che vende con ma39 e senza deviation sell !
+                        # cioe' in una situazione di crollo si porta a casa lo 0.23
+                        
+                        
+                    elif (    
+                        ma50_last > ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 < 0.50
+                        and ma100_last < ma100_60_min_ago
+                        and ma100_last < ma200_last
+                        and deviation_ma39 < -0.22
+                        and deviation_sell < -0.15
+                        and ma2_last < ma2_2_min_ago
+                    ):    
+                        sell = "SELL 1 da 50 a 90 min con ma50 > and deviation_ma39 < -0.22 and deviation_sell < -0.15 con 5 sopra 300 < 0.50 - r 9440 b2"
                         action = "sell"
                         
                         # se non ha forza dopo 1 ora e' inutile continuare a sperare !
