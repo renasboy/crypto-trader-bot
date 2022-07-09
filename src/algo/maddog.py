@@ -4836,6 +4836,7 @@ class maddog:
                     and deviation_ma100_sopra_ma300 < 0.20
                     and ma78_last > ma200_last
                     
+                    and deviation_ma5_sopra_ma28 > 0.15
                     and deviation_buy2 > 0.01
                     and deviation_bellissima > 0.08
                     and deviation_buy_ma3_sopra_ma13 > 0.08
@@ -13957,9 +13958,9 @@ class maddog:
                         # deviation_sell = ma3_last/last_trade_price
                         
                         
-                        
                     elif (
                         ma50_last >= ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 > 0.70
                         and deviation_sell > 0.25 and deviation_sell < 0.56
                         and (ma5_prev > ma39_prev and ma5_last < ma39_last)
                         
@@ -13968,7 +13969,25 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                    
                     ):
-                        sell = "SELL 3 (21-60 min) con ma50 > and 39>100 and incrocio 5-39 and deviation_sell 0.25 - 0.56 FINTA DI MARADONA - r 13556"
+                        sell = "SELL 3 (21-60 min) con ma50 > and 39>100 and incrocio 5-39 and dev_sell 0.25 - 0.56 FINTA MARADONA se 100 molto sopra 300 - r 13556 a"
+                        action = "sell"
+                        
+                        # deviation_sell = ma3_last/last_trade_price
+                        
+                        
+                        
+                    elif (
+                        ma50_last >= ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 < 0.70
+                        and deviation_sell > 0.25 and deviation_sell < 0.56
+                        and (ma5_prev > ma33_prev and ma5_last < ma33_last)
+                        
+                        and ma39_last > ma100_last
+                        
+                        and ma2_last < ma2_2_min_ago
+                   
+                    ):
+                        sell = "SELL 3 (21-60 min) con ma50 > and 39>100 and incr 5-33 and dev_sell 0.25 - 0.56 FINTA MARADONA se 100 NON molto sopra 300 - r 13556 b"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
