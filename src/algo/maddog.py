@@ -2833,6 +2833,20 @@ class maddog:
                     
                     
                     
+                elif (    
+                    deviation_buy_crollo_1 < -0.27
+                    and deviation_buy_crollo_1 > -0.62
+                    and ma8_last > ma50_last
+                    and ma125_last > ma300_last
+                    and ma2_last > ma2_2_min_ago
+                
+                ):
+                    buy = "BUY 1 DURANTE UNA CORREZIONE FIAT che non e' un forte ribasso e non e' un crollo ! condizione RCCR MA 125 > 300 ! - r 2793"
+                    action = "buy"
+                    percentage = 60
+                    
+                    
+                    
                     
                 # BUY 1 piccola CORREZIONE FIAT 5-50 che NON E' una grande correzione e non e' un grande ribasso e NON E' un crollo !
                 
