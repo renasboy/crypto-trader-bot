@@ -5101,9 +5101,10 @@ class maddog:
                     
                 
              
-                
                 elif (
                     ma78_last < ma78_2_min_ago
+                    and deviation_ma5_sotto_ma300 > -0.59
+                    
                     and deviation_buy2 > 0.07
                     and deviation_bellissima > 0.12
                     and deviation_ma13_sopra_ma25 > 0.06
@@ -5113,7 +5114,27 @@ class maddog:
                     and price > price_2_min_ago
                     and ma3_last > ma40_last
                 ):
-                    buy = "BUY 2B - r 4732"
+                    buy = "BUY 2B - r 4732 a"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # deviation_buy_ma3_sopra_ma13 > x e' fondamentale !
+                    # deviation_buy2 = ma8_last/ma50_last
+                    
+                    
+                    
+                    
+                elif (
+                    ma78_last < ma78_2_min_ago
+                    and deviation_ma5_sotto_ma300 < -0.59
+                    and ma5_last > ma15_last
+                    and deviation_ma3_sopra_ma10 > 0.15
+                    
+                    and ma2_last > ma2_2_min_ago
+                    and price > price_2_min_ago
+                    
+                ):
+                    buy = "BUY 2B - 5 sotto 300 di molto ! durante crollo - r 4732 b"
                     action = "buy"
                     percentage = 80
                     
