@@ -5122,11 +5122,13 @@ class maddog:
                     # deviation_buy2 = ma8_last/ma50_last
                     
                     
-                    
-                    
+                
+                
                 elif (
                     ma78_last < ma78_2_min_ago
                     and deviation_ma5_sotto_ma300 < -0.59
+                    and delta_1 < delta_2
+                    
                     and ma5_last > ma15_last
                     and deviation_ma3_sopra_ma10 > 0.15
                     
@@ -5134,7 +5136,34 @@ class maddog:
                     and price > price_2_min_ago
                     
                 ):
-                    buy = "BUY 2B - 5 sotto 300 di molto ! durante crollo - r 4732 b"
+                    buy = "BUY 2Ba durante crollo - 5 sotto 300 di molto ! PIU' AGGRESSIVO (delta 1 < delta 2) (ma100 sta risalendo) - r 4732 b1"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # deviation_buy_ma3_sopra_ma13 > x e' fondamentale !
+                    # deviation_buy2 = ma8_last/ma50_last
+                    
+                    
+                    
+                elif (
+                    ma78_last < ma78_2_min_ago
+                    and deviation_ma5_sotto_ma300 < -0.59
+                    and delta_1 > delta_2
+                    
+                    and ma5_last > ma15_last
+                    and deviation_ma3_sopra_ma10 > 0.15
+                    
+                    and deviation_buy2 > 0.04
+                    and deviation_bellissima > 0.06
+                    and deviation_ma13_sopra_ma25 > 0.03
+                    and deviation_buy_ma3_sopra_ma13 > 0.03
+                    and deviation_ma7_sopra_ma40 > 0.04
+                    
+                    and ma2_last > ma2_2_min_ago
+                    and price > price_2_min_ago
+                    
+                ):
+                    buy = "BUY 2Bb  durante crollo - 5 sotto 300 di molto ! PIU' PRUDENTE (delta 1 > delta 2) (ma100 si allontana verso il basso da ma200)- r 4732 b2"
                     action = "buy"
                     percentage = 80
                     
