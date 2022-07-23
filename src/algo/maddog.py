@@ -4246,11 +4246,11 @@ class maddog:
                     
                     
                     
-                    
                 # BUY 1 CHE MANCAVA DOPO 5 ore di ribasso
                 
                 elif (
-                    deviation_ma5_sopra_ma28 > 0.22
+                    deviation_ma5_sopra_ma28 > 0.20
+                    and deviation_ma100_laterale > -0.80
                     
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
@@ -4265,7 +4265,32 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                 
                 ):
-                    buy = "BUY 1 CHE MANCAVA DOPO 5 ore di ribasso buy con 5-28> 0.22 se entra dopo 5 ore deve essere piu' sicuro ! - r 4040"
+                    buy = "BUY 1 CHE MANCAVA DOPO 5 ore di ribasso con 5-28> 0.20 se entra dopo 5 ore deve essere piu' sicuro MA 5 non lontana da 100 - r 4040 A"
+                    action = "buy"
+                    percentage = 80
+                    
+                    
+                    
+                # BUY 1 CHE MANCAVA DOPO 5 ore di ribasso
+                
+                elif (
+                    deviation_ma5_sopra_ma28 > 0.22
+                    and deviation_ma100_laterale < -0.80
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and ma100_last < ma100_301_min_ago
+                    and ma200_last < ma200_301_min_ago
+                    and ma300_last < ma300_301_min_ago
+                    
+                    and deviation_ma300__diviso_ma300_5_ore_ago < -0.25
+                    and deviation_ma5_sotto_ma300 < -0.43
+                    
+                    and ma2_last > ma2_2_min_ago
+                
+                ):
+                    buy = "BUY 1 CHE MANCAVA DOPO 5 ore di ribasso con 5-28> 0.22 se entra dopo 5 ore deve essere piu' sicuro CON 5 molto lontana da 100- r 4040 B"
                     action = "buy"
                     percentage = 80
                     
@@ -4658,11 +4683,11 @@ class maddog:
                     and ma78_last < ma200_last
                     and ma300_last > ma300_120_min_ago
                     
-                    and deviation_ma3_sopra_ma10 > 0.04
-                    and deviation_ma5_sopra_ma28 > 0.05
+                    and deviation_ma3_sopra_ma10 > 0.02
+                    and deviation_ma5_sopra_ma28 > 0.03
                     
                     and ma78_last < ma100_last
-                    and deviation_ma100_laterale > 0.10
+                    and deviation_ma100_laterale > 0.09
                     and ma11_last > ma200_last
                     and ma200_last > ma200_15_min_ago
                     
@@ -4677,8 +4702,8 @@ class maddog:
                     action = "buy"
                     percentage = 80
                     
-                    # la troppa prudenza qualche volta genera perdite
-                    
+                    # la troppa prudenza qualche volta genera perdite !
+                    # RCCR r1852 e' arrivata una ndecchia prima. studia le piccole differenze.
                     
                     
                 # BUY 1 forever young 1 PIU' PRUDENTE se ma 200 > e se ma200 > ma300 AND 78 < 200 
@@ -10531,7 +10556,7 @@ class maddog:
                         
                         and ma2_last <= ma2_2_min_ago
                     ):
-                        sell = "SELL 1 50-90 min BEST con ma50 < E 78 > 200 con dev_ma39 <-0.23 and dev_sell <-0.35 - PERDITA TOLLERATA > e 300 > 120 min ago - r 9807 A1"
+                        sell = "SELL 1 50-90 min con ma50 < E 78 > 200 con dev_ma39 <-0.23 and dev_sell <-0.35 - PERDITA TOLLERATA > e 300 > 120 min ago - r 9807 A1"
                         action = "sell"
                         
                         # ha fatto perdita dell' 1% - forse succede tutto in quei 2 minuti se crolla improvvisamente
@@ -10556,7 +10581,7 @@ class maddog:
                         
                         and ma2_last <= ma2_2_min_ago
                     ):
-                        sell = "SELL 1 50-90 min BEST con ma50 < E 78 > 200 con dev_ma39 <-0.23 and dev_sell <-0.33 - PERDITA TOLLERATA > e 300 < 120 min ago - r 9807 A2"
+                        sell = "SELL 1 50-90 min con ma50 < E 78 > 200 con dev_ma39 <-0.23 and dev_sell <-0.33 - PERDITA TOLLERATA > e 300 < 120 min ago - r 9807 A2"
                         action = "sell"
                         
                         # ha fatto perdita dell' 1% - forse succede tutto in quei 2 minuti se crolla improvvisamente
@@ -10780,6 +10805,8 @@ class maddog:
                     
                     elif (
                         ma50_last > ma50_2_min_ago
+                        and deviation_ma5_sotto_ma300 > 0.49
+                        
                         and ma200_last > ma300_last
                         and ma3_last > ma100_last
                         and ma5_last < ma69_last
@@ -10787,8 +10814,30 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1a 90-110 min con ma50 > con 5-69 (!) and deviation_sell 0.35 - 0.64 la prima FINTA DI MARADONA 1 (non toccare) - r 10012"
+                        sell = "SELL 1a 90-110 min con ma50 > con 5-69 (!) and deviation_sell 0.35 - 0.64 la prima FINTA DI MARADONA 1 (non toccare) - r 10012 a"
                         action = "sell"
+                        
+                        # maradona mentre cresce
+                        
+                        
+                        
+                        
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and deviation_ma5_sotto_ma300 < 0.49
+                        
+                        and ma200_last > ma300_last
+                        and ma3_last > ma100_last
+                        and ma5_last < ma100_last
+                        and deviation_sell > 0.35 and deviation_sell < 0.64
+                        and ma2_last < ma2_2_min_ago
+                        
+                    ):
+                        sell = "SELL 1a 90-110 min con ma50 > con 5-100 (!) and deviation_sell 0.35 - 0.64 la prima FINTA DI MARADONA 1 (non toccare) - r 10012 b"
+                        action = "sell"
+                        
+                        # maradona laterale
+                        # 5-100 da 5-69 se andamento laterale 
                         
                     
                     
@@ -11426,13 +11475,15 @@ class maddog:
                         and ma78_last < ma300_last
                         and ma300_last < ma300_120_min_ago
                         and ma100_last > ma200_last
-                        and deviation_sell < 0.10
+                        and deviation_sell < 0.09
                         and ma2_last < ma2_2_min_ago
                     ):
                    
                         sell = "SELL 1 > 110 min FORSE E' NECESSARA SOLO QUESTA 3 ! dev_sell < -0.01 CON 78 < 300 (ancora ribasso !) porta a casa ! - r 10637 b"
                         action = "sell"
                         
+                        # 23 lug 2022 dev sell < 0.10 ha fatto fare perdita di -0.26 !
+                        # 23 ug 2022 a < 0.09 da < 0.10
                         
                         
                         
@@ -17247,12 +17298,12 @@ class maddog:
                 
                 and delta_1_200_30 < delta_2_200_30_30_min
                 
-                and deviation_crollo_24_aprile < -0.56
+                and deviation_crollo_24_aprile < -0.55
                 
                 and deviation_ma5_sotto_ma200 > -1.00
             ): 
                 
-                sell = "SELL cond. special 17 - DOPO CROLLO IMPROVVISO del 24 aprile 2022 - and dev_ma5_sotto_ma200 > -1.00 - (-0.57) giorno E 33>78 - r 16369 a1"
+                sell = "SELL cond. special 17 - DOPO CROLLO IMPROVVISO del 24 aprile 2022 - and dev_ma5_sotto_ma200 > -1.00 - (-0.55) giorno E 33>78 - r 16369 a1"
                 action = "sell"
                         
                 # ho aggiunto anche questa vendita speciale dopo il 24 aprile -1%
@@ -17261,10 +17312,13 @@ class maddog:
                 # -0.575 ha generato perdita -1.12 il 10 maggio 2022 cosi' ho ridotto a -0.57
                 # -0.57 ha generato perdita -1.37 il 12 maggio 2022 cosi' ho ridotto a -0.56
                 # -0.56 ha generato perdita -1.19 il 13 maggio 2022 cosi' ho ridotto a -0.55
-                # MA VA BENE !
+                
                 # con delta_1_200_30 < delta_2_200_30_30_min ho aumentato a -0.56
+                # -0.56 HA GENERATO PERDITA DI -1.42 il 22 luglio 2022 ! cazzo !
                 
                 # 21 giu 2022 a -0.56 da -0.57
+                # 22 lug 2022 a -0.55 da -0.56 dopo grande perdita !
+                # ATTENZIONE ! 22 lug 2022 questa condizione ha fatto -1.42 % !!! per fortuna RCCR ha fatto -0.52 e l' ho portata in MADDOG
                 
                 
                 
