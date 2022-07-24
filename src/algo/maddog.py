@@ -9420,18 +9420,18 @@ class maddog:
                         and delta_1 < delta_2
                         and ma100_last > ma100_60_min_ago
                         
-                        and ma5_last < ma22_last
+                        and ma5_last < ma39_last
                         and deviation_sell > 0.57 and deviation_sell < 0.90
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 (21-50 min) con ma50 > and 5-22 and deviation_sell 0.51 - 0.90 ELASTICO ALLA RONALDO MA 100 < 300- GIORNO - r 8761 b"
+                        sell = "SELL 1 (21-50 min) con ma50 > and 5-39 and deviation_sell 0.51 - 0.90 ELASTICO ALLA RONALDO MA 100 < 300- GIORNO - r 8761 b"
                         action = "sell"
                         
                         # dopo 26 minuti non c'e' piu' quello scatto in avanti - dribbling- che si verifica nei primi minuti
                         # deviation_sell = ma3_last/last_trade_price
                         # 5-22 (era 4-15)
-                        
+                        # 5-39 da 5-22 dopo le dolomiti !
                         
                         
                         
@@ -10290,14 +10290,30 @@ class maddog:
                     
                     ############################################################################ ronaldo 60-90 min dal buy se ma200 > somiglia a maradona
                     
+                    
                     elif (
                         ma50_last > ma50_2_min_ago
+                        and ma300_last > ma300_120_min_ago
+                        and ma200_last > ma200_120_min_ago
+                        and (ma5_prev > ma125_prev and ma5_last < ma125_last)
+                        and deviation_sell > 0.53 and deviation_sell < 0.90
+                        and ma2_last < ma2_2_min_ago
+                    ):    
+                        sell = "SELL 1 da 50 a 90 min con ma50> and incrocio 5-125 se 300> 120 min ago and deviation_sell 0.51-0.90 RONALDO - r 9514a"
+                        action = "sell"
+                        
+                        # 5-125 da 4-50 dopo le dolomiti
+                        
+                        
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and ma300_last < ma300_120_min_ago
                         and ma200_last > ma200_120_min_ago
                         and (ma4_prev > ma50_prev and ma4_last < ma50_last)
                         and deviation_sell > 0.53 and deviation_sell < 0.90
                         and ma2_last < ma2_2_min_ago
                     ):    
-                        sell = "SELL 1 da 50 a 90 min con ma50> and incrocio 4-20 and deviation_sell 0.51-0.90 RONALDO - r 9514"
+                        sell = "SELL 1 da 50 a 90 min con ma50> and incrocio 4-20 se 300 < 120 min ago and deviation_sell 0.51-0.90 RONALDO - r 9514b"
                         action = "sell"
                         
                         
