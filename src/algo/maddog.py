@@ -17177,16 +17177,16 @@ class maddog:
             # 3 - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 > -1.00
             
             elif (
-                deviation_ma39 < -0.25
-                and deviation_sell < -0.305
+                deviation_ma39 < -0.24
+                and deviation_sell < -0.30
                 and ma2_last < ma2_2_min_ago 
                 
                 and ma50_last < ma50_2_min_ago
-                and deviation_ma100_sopra_ma300 > 0.40
+                and deviation_ma100_sopra_ma300 > 0.20
                 
-                and deviation_ma5_sotto_ma200 > -1.00
+                and deviation_ma5_sotto_ma200 > -1.20
             ):
-                sell = "SELL cond. special 3 - SALVAGENTE 3 3-39 < -0.25 e dev < -0.31 and dev_sell<-0.305 con ma50< - con dev_ma5_sotto_ma200>-1.00 - r 15985 A"
+                sell = "SELL cond. special 3 - SALVAGENTE 3 3-39 < -0.25 e dev sell< -0.31 and dev_sell<-0.305 con ma50< - con dev_ma5_sotto_ma200 >-1.20 - r 15985 A"
                 action = "sell"
                 
                 # 27 giu 2022 dev sell a 0.305 da 0.31
@@ -17198,6 +17198,7 @@ class maddog:
                 # COME PRIMA COSA HO NOTATO CHE AVEVA DEVIATION INVECE DI DEVIATON SELL 
                 # ma non sapendo se era questo il problema ho creato la prossima condizione speciale.
                 
+                # > estate dev 39 -0.24 da -0.25 dev sell -0.30 da -0.31 
                 
                 
                 
