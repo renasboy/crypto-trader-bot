@@ -4282,6 +4282,7 @@ class maddog:
                 
                 elif (
                     deviation_ma5_sopra_ma28 > 0.17
+                    and deviation_ma3_sopra_ma10 > 0.07
                     and deviation_ma100_laterale > -0.80
                     
                     and ma100_last < ma200_last
@@ -4302,7 +4303,7 @@ class maddog:
                     percentage = 80
                     
                     # > estate anticipata ndecchiecella 5-28 0.17 da 0.20
-                    
+                    # aggiunta 3-10 > 0.07
                     
                     
                     
