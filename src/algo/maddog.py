@@ -4281,7 +4281,7 @@ class maddog:
                 # BUY 1 CHE MANCAVA DOPO 5 ore di ribasso
                 
                 elif (
-                    deviation_ma5_sopra_ma28 > 0.17
+                    deviation_ma5_sopra_ma28 > 0.16
                     and deviation_ma3_sopra_ma10 > 0.07
                     and deviation_ma100_laterale > -0.80
                     
@@ -4298,13 +4298,13 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                 
                 ):
-                    buy = "BUY 1 CHE MANCAVA DOPO 5 ore di ribasso con 5-28 > 0.17 se entra dopo 5 ore deve essere piu' sicuro MA 5 non lontana da 100 - r 4040 A"
+                    buy = "BUY 1 CHE MANCAVA DOPO 5 ore di ribasso con 5-28 > 0.16 se entra dopo 5 ore deve essere piu' sicuro MA 5 non lontana da 100 - r 4040 A"
                     action = "buy"
                     percentage = 80
                     
                     # > estate anticipata ndecchiecella 5-28 0.17 da 0.20
                     # aggiunta 3-10 > 0.07
-                    
+                    # 5-28 0.16 da 0.17 (adesso c'e' anche 3-10)
                     
                     
                 # BUY 1 CHE MANCAVA DOPO 5 ore di ribasso
@@ -11656,17 +11656,17 @@ class maddog:
                         and ma78_last < ma300_last
                         and ma300_last < ma300_120_min_ago
                         and ma100_last > ma200_last
-                        and deviation_sell < -0.10
+                        and deviation_sell < -0.13
                         and ma2_last < ma2_2_min_ago
                     ):
                    
-                        sell = "SELL 1 > 110 min FORSE E' NECESSARA SOLO QUESTA 3 ! dev_sell < -0.10 CON 78 < 300 (ancora ribasso !) porta a casa ! - r 10637 b"
+                        sell = "SELL 1 > 110 min FORSE E' NECESSARA SOLO QUESTA 3 ! dev_sell < -0.13 CON 78 < 300 (ancora ribasso !) porta a casa ! - r 10637 b"
                         action = "sell"
                         
                         # 23 lug 2022 dev sell < 0.10 ha fatto fare perdita di -0.26 !
                         # 23 lug 2022 a < 0.09 da < 0.10
                         # > estate -0.10 da 0.09
-                        
+                        # -0.13 da -0.10
                         
                         
                         
