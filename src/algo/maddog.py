@@ -3118,7 +3118,7 @@ class maddog:
                     
                     
                     
-                # BUY 1 con ma200> piccola CORREZIONE FIAT che NON E' un forte ribasso e NON E' un crollo ! ALTRA RIGA RCCR che e' andata bene.
+                # BUY 1 che mancava se dopo 300 min di rialzo c'e' una correzione improvvisa 
                 
                 elif (    
                
@@ -3132,7 +3132,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                 ):    
                     
-                    buy = "BUY 1 se dopo 300 min etc - riga 2860"
+                    buy = "BUY 1 che mancava se dopo 300 min di rialzo c'e' una correzione improvvisa - riga 2860"
                     action = "buy"
                     percentage = 80
                     
