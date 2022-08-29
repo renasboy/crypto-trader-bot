@@ -120,6 +120,7 @@ class maddog:
         ma100_50_min_ago = self.algo_helper.ma_minutes_ago(100, 50)
         ma100_60_min_ago = self.algo_helper.ma_minutes_ago(100, 60)
         ma100_120_min_ago = self.algo_helper.ma_minutes_ago(100, 120)
+        ma100_180_min_ago = self.algo_helper.ma_minutes_ago(100, 180)
         ma100_301_min_ago = self.algo_helper.ma_minutes_ago(100, 301)
         
         ma150_60_min_ago = self.algo_helper.ma_minutes_ago(150, 60)
@@ -130,11 +131,13 @@ class maddog:
         ma200_90_min_ago = self.algo_helper.ma_minutes_ago(200, 90)
         ma200_120_min_ago = self.algo_helper.ma_minutes_ago(200, 120)
         ma200_120_min_ago = self.algo_helper.ma_minutes_ago(200, 120)
+        ma200_180_min_ago = self.algo_helper.ma_minutes_ago(200, 180)
         ma200_301_min_ago = self.algo_helper.ma_minutes_ago(200, 301)
         
         ma300_20_min_ago = self.algo_helper.ma_minutes_ago(300, 20)
         ma300_60_min_ago = self.algo_helper.ma_minutes_ago(300, 60)
         ma300_120_min_ago = self.algo_helper.ma_minutes_ago(300, 120)
+        ma300_180_min_ago = self.algo_helper.ma_minutes_ago(300, 180)
         ma300_301_min_ago = self.algo_helper.ma_minutes_ago(300, 301)
         
         # LAST TRADE
@@ -7209,7 +7212,6 @@ class maddog:
                     
                     
                     
-                    
                 # BUY 3 che ci riprova DURANTE IL CROLLO - modo 3
                 
                 elif (
@@ -7237,6 +7239,55 @@ class maddog:
                     
                     # and deviation_ma100_laterale < -1.90 e' 5 sotto 100 (NON TI PREOCCUPARE)
                     # QUESTA CONDIZIONE E' STATA CREATA DOPO AVER VISTO UN CROLLO DOPO IL BUY 2 ma il BUY 3 non entrava in azione !
+                    
+                    
+                    
+                # BUY 3 29 ago 2022 > 120 min di ribasso
+                
+                elif (
+                    
+                    ma18_last > ma100_last
+                    
+                    and ma100_last < ma100_120_min_ago
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_120_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and deviation_ma5_sopra_ma28 > 0.08
+                    and ma2_last >= ma2_2_min_ago
+                    
+                ):
+                    buy = "BUY 3 29 ago 2022 > 120 min di ribasso - r 6570 A"
+                    action = "buy"
+                    percentage = 90
+                    
+                    
+                    
+                    
+                # BUY 3 29 ago 2022 > 180 min di ribasso
+                
+                elif (
+                    
+                    ma18_last > ma100_last
+                    
+                    and ma100_last < ma100_180_min_ago
+                    and ma200_last < ma200_180_min_ago
+                    and ma300_last < ma300_180_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and deviation_ma5_sopra_ma28 > 0.02
+                    and ma2_last >= ma2_2_min_ago
+                    
+                ):
+                    buy = "BUY 3 29 ago 2022 > 180 min di ribasso - r 6570 B"
+                    action = "buy"
+                    percentage = 90
+                    
+                    
                     
                     
                     
@@ -7799,6 +7850,50 @@ class maddog:
                     percentage = 70
                     
                     
+                # BUY 4 29 ago 2022 > 120 min di ribasso
+                
+                elif (
+                    
+                    ma18_last > ma100_last
+                    
+                    and ma100_last < ma100_120_min_ago
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_120_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and deviation_ma5_sopra_ma28 > 0.08
+                    and ma2_last >= ma2_2_min_ago
+                    
+                ):
+                    buy = "BUY 4 29 ago 2022 > 120 min di ribasso - r 7039 A"
+                    action = "buy"
+                    percentage = 90
+                    
+                    
+                    
+                # BUY 4 29 ago 2022 > 180 min di ribasso
+                
+                elif (
+                    
+                    ma18_last > ma100_last
+                    
+                    and ma100_last < ma100_180_min_ago
+                    and ma200_last < ma200_180_min_ago
+                    and ma300_last < ma300_180_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and deviation_ma5_sopra_ma28 > 0.02
+                    and ma2_last >= ma2_2_min_ago
+                    
+                ):
+                    buy = "BUY 4 29 ago 2022 > 180 min di ribasso - r 7039 B"
+                    action = "buy"
+                    percentage = 90
+                    
                     
                     
                 # BUY 4 se 8 > 200 con 5-28 > 0.20 ! e con ma69 > and deviation_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali) IMPORTATA DA BUY 5
@@ -8332,8 +8427,53 @@ class maddog:
                     
                 
                 
+                # BUY 5 29 ago 2022 > 120 min di ribasso
                 
+                elif (
+                    
+                    ma18_last > ma100_last
+                    
+                    and ma100_last < ma100_120_min_ago
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_120_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and deviation_ma5_sopra_ma28 > 0.08
+                    and ma2_last >= ma2_2_min_ago
+                    
+                ):
+                    buy = "BUY 5 29 ago 2022 > 120 min di ribasso - r 7564 A"
+                    action = "buy"
+                    percentage = 90
+                    
+                    
+                    
+                    
+                # BUY 5 29 ago 2022 > 180 min di ribasso
                 
+                elif (
+                    
+                    ma18_last > ma100_last
+                    
+                    and ma100_last < ma100_180_min_ago
+                    and ma200_last < ma200_180_min_ago
+                    and ma300_last < ma300_180_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and deviation_ma5_sopra_ma28 > 0.02
+                    and ma2_last >= ma2_2_min_ago
+                    
+                ):
+                    buy = "BUY 5 29 ago 2022 > 180 min di ribasso - r 7564 B"
+                    action = "buy"
+                    percentage = 90
+                    
+                    
+                    
                 # NELLA CORREZIONE EVENTUALE (SIAMO AL BUY 5 !) NON HO MESSO and ma50_last > ma100_last
                 
                 # BUY 5A PAZZA DURANTE UNA piccola CORREZIONE che NON E' un forte ribasso e NON E' un crollo ! (compare stammi vicino!)
