@@ -3561,14 +3561,14 @@ class maddog:
                     
                     and deviation_ma8_sotto_ma300 < -1.20
                     
-                    and ma5_last > ma15_last
+                    and ma5_last > ma25_last
                     and deviation_ma3_sopra_ma10 > 0.19
                     
                     and ma2_last >= ma2_2_min_ago
                     and ma78_last < ma200_last
                     
                 ):
-                    buy = "BUY 1 RIBASSO AUDI B importato dal BUY 2 CON 8 sotto 300 < -1.20 - 5-15 and 3-10 > 0.19 - riga 3289 B"
+                    buy = "BUY 1 RIBASSO AUDI B importato dal BUY 2 CON 8 sotto 300 < -1.20 - 5-25 and 3-10 > 0.19 - riga 3289 B"
                     action = "buy"
                     percentage = 80
                     
@@ -3578,7 +3578,7 @@ class maddog:
                     # 21 giu 2022 5-16 da 5-18
                     # 27 giu 2022 5-15 da 5-16
                     # > vacanza 3-10 > 0.19 da 0.15
-                    
+                    # roma 5-25
                     
                     
                     
@@ -4372,7 +4372,7 @@ class maddog:
                 # BUY 1 CHE MANCAVA DOPO BUY-SELL CROLLO ! 150-100 GIORNO ! MA 50 < 100
                 
                 elif (
-                    deviation_ma5_sopra_ma28 > 0.12
+                    deviation_ma5_sopra_ma28 > 0.18
                     and deviation_ma3_sopra_ma10 > 0.25
                     
                     and ma50_last < ma100_last
@@ -4390,7 +4390,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                 
                 ):
-                    buy = "BUY 1 CHE MANCAVA DOPO BUY-SELL CROLLO ! 50 < 100 AND 150-100 GIORNO ! and 3-10 > 0.25 and 5-28 > 0.12 - r 4042"
+                    buy = "BUY 1 CHE MANCAVA DOPO BUY-SELL CROLLO ! 50 < 100 AND 150-100 GIORNO ! and 3-10 > 0.25 and 5-28 > 0.18 - r 4042"
                     action = "buy"
                     percentage = 80
                     
@@ -4401,7 +4401,7 @@ class maddog:
                     
                     # 10 giu 2022 5-28 0.12 da 0.09 cazzo
                     # 21 giu 2022 3-10 > 0.25 da > 0.05 CAZZO
-                    
+                    # 29 ago 5-28 0.18
                     
                     
                     
@@ -5182,6 +5182,9 @@ class maddog:
                     and ma78_last < ma200_last
                     
                     and deviation_buy2 > 0.02
+                    and deviation_ma3_sopra_ma10 > 0.24
+                    and deviation_ma5_sopra_ma28 > 0.18
+                    
                     and deviation_bellissima > 0.12
                     and deviation_buy_ma3_sopra_ma13 > 0.08
                     and deviation_ma7_sopra_ma40 > 0.06
@@ -5189,13 +5192,13 @@ class maddog:
                     and price > price_2_min_ago
                     and ma3_last > ma40_last
                 ):
-                    buy = "BUY 2A ribasso o laterale and ma78_last < ma200_last - r 4709 b"
+                    buy = "BUY 2A ribasso o laterale and ma78_last < ma200_last - r 4709 B"
                     action = "buy"
                     percentage = 80
 
                     # deviation_buy_ma3_sopra_ma13 > x e' fondamentale !
                     # deviation_buy2 = ma8_last/ma50_last
-                    
+                    # roma aggiunta 5-28
                     
                     
                 
@@ -9042,11 +9045,11 @@ class maddog:
                     elif (
                         ma50_last >= ma50_2_min_ago
                         and (ma5_prev > ma100_prev and ma5_last < ma100_last)
-                        and deviation_sell < -0.25
+                        and deviation_sell < -0.28
                         and ma2_last < ma2_2_min_ago
                   
                     ):
-                        sell = "SELL 1 (5-12 min) con ma50 > and incrocio 5-100 (cuscino di sant' antonio) and deviation_sell < -0.25 - r 8069"
+                        sell = "SELL 1 (5-12 min) con ma50 > and incrocio 5-100 (cuscino di sant' antonio) and deviation_sell < -0.28 - r 8069"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
@@ -10435,7 +10438,7 @@ class maddog:
                         and deviation_sell < -0.27
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 piccola perdita durante il crollo (21-50 min) con ma50 < incrocio 3 - 18 and dev_sell < -0.27 non e' crollo ! - r 9353 a"
+                        sell = "SELL 1 piccola perdita durante il crollo (21-50 min) con ma50 < incrocio 3 - 18 and dev_sell < -0.27 non e' crollo ! - r 9353 A"
                         action = "sell"
                         
                     
@@ -10445,10 +10448,10 @@ class maddog:
                         and deviation_ma100_sopra_ma300 < -0.90
                         
                         and (ma3_prev > ma18_prev and ma3_last < ma18_last)
-                        and deviation_sell < -0.24
+                        and deviation_sell < -0.27
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 piccola perdita durante il crollo (21-50 min) con ma50 < incrocio 3 - 18 and dev_sell < -0.24 e' crollo !- r 9366 b"
+                        sell = "SELL 1 piccola perdita durante il crollo (21-50 min) con ma50 < incrocio 3 - 18 and dev_sell < -0.27 e' crollo ! - r 9353 B"
                         action = "sell"
                         
                         
@@ -10611,14 +10614,15 @@ class maddog:
                         ma50_last > ma50_2_min_ago
                         and ma300_last > ma300_120_min_ago
                         and ma200_last > ma200_120_min_ago
-                        and (ma5_prev > ma125_prev and ma5_last < ma125_last)
+                        and (ma5_prev > ma78_prev and ma5_last < ma78_last)
                         and deviation_sell > 0.53 and deviation_sell < 0.90
                         and ma2_last < ma2_2_min_ago
                     ):    
-                        sell = "SELL 1 da 50 a 90 min con ma50> and incrocio 5-125 se 300> 120 min ago and deviation_sell 0.51-0.90 RONALDO - r 9514a"
+                        sell = "SELL 1 da 50 a 90 min con ma50> and incrocio 5-78 se 300 > 120 min ago and deviation_sell 0.51-0.90 RONALDO - r 9514a"
                         action = "sell"
                         
                         # 5-125 da 4-50 dopo le dolomiti
+                        # 5-78 tornato a roma dopo le vacanze
                         
                         
                     elif (
@@ -18315,7 +18319,6 @@ class maddog:
                 
                 
                 
-                
             # 38 - POCHI MALEDETTI E SUBITO ma non troppo mentre scende
             
             elif (
@@ -18336,10 +18339,31 @@ class maddog:
                 
                 
                 
+                
+            # 39 - POCHI MALEDETTI E SUBITO ma non troppo mentre scende > ESTATE 
+            
+            elif (
+                ma5_last < ma28_last
+                and ma300_last < ma300_120_min_ago
+                and ma3_last < ma300_last
+                
+                and deviation_sell > 0.90
+                
+                and ma2_last > ma100_last
+                and ma2_last < ma2_2_min_ago
+            ):    
+                sell = "SELL condizione speciale 39 - POCHI MALEDETTI E SUBITO ma non troppo mentre scende > ESTATE  e con deviation > 0.90 - r 16873"
+                action = "sell"
+                    
+                # and ma2_last > ma100_last (altrimenti vende durante il crollo con la ma3-ma9)
+                
+                
+                
+                
             
             ######################################################################### vendite dedicate al BUY FIAT - AUDI - MASERATI - FERRARI 
             
-            # 39 - SELL condizione speciale FIAT 
+            # 40 - SELL condizione speciale FIAT 
                     
             elif (     
                 seconds_since_last_trade > max_hold_time_in_seconds_fiat
@@ -18360,7 +18384,7 @@ class maddog:
                         
                         
                 
-            # 40 - SELL condizione speciale AUDI 
+            # 41 - SELL condizione speciale AUDI 
                     
             elif (     
                 seconds_since_last_trade > max_hold_time_in_seconds_audi
@@ -18379,7 +18403,7 @@ class maddog:
                         
             
             
-            # 41 - SELL condizione speciale MASERATI 
+            # 42 - SELL condizione speciale MASERATI 
                     
             elif (     
                 seconds_since_last_trade > max_hold_time_in_seconds_maserati
@@ -18398,7 +18422,7 @@ class maddog:
                
             
             
-            # 42 - SELL condizione speciale FERRARI 
+            # 43 - SELL condizione speciale FERRARI 
                     
             elif (     
                 seconds_since_last_trade > max_hold_time_in_seconds_ferrari
