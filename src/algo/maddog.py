@@ -139,6 +139,8 @@ class maddog:
         ma300_120_min_ago = self.algo_helper.ma_minutes_ago(300, 120)
         ma300_180_min_ago = self.algo_helper.ma_minutes_ago(300, 180)
         ma300_301_min_ago = self.algo_helper.ma_minutes_ago(300, 301)
+        ma300_300_min_ago = self.algo_helper.ma_minutes_ago(300, 300)
+        
         
         # LAST TRADE
         
@@ -3078,7 +3080,6 @@ class maddog:
                     
                     
                     
-                    
                 # BUY 1 con ma200> piccola CORREZIONE FIAT che NON E' un forte ribasso e NON E' un crollo ! ALTRA RIGA RCCR che e' andata bene.
                 
                 elif (    
@@ -3108,6 +3109,37 @@ class maddog:
                     percentage = 80
                     
                     # > estate anticipato buy di una ndecchiecella
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                # BUY 1 con ma200> piccola CORREZIONE FIAT che NON E' un forte ribasso e NON E' un crollo ! ALTRA RIGA RCCR che e' andata bene.
+                
+                elif (    
+               
+                    ma5_last > ma50_last
+                    and ma300_last > ma300_300_min_ago
+                    
+                    and deviation_ma5_sotto_ma300 < -0.70
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma5_sopra_ma28 > 0.05
+                    
+                    and ma2_last > ma2_2_min_ago
+                ):    
+                    
+                    buy = "BUY 1 se dopo 300 min etc - riga 2860"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # > estate 
+                    
+                    
+                    
                     
                     
                     
@@ -5004,7 +5036,29 @@ class maddog:
                 
                 
                 
+                # BUY 1 DURANTE UN RIBASSO AUDI con 5-16 copiata da RCCR CHE E' ANDATA BENISSIMO ! 22 ago 2022
                 
+                elif (
+                    
+                    deviation_buy_crollo_1 < -0.60
+                    and deviation_buy_crollo_1 > -1.60
+                    
+                    and ma5_last > ma16_last
+                    and deviation_ma5_sopra_ma16 > 0.10
+                    
+                    and ma2_last > ma2_2_min_ago
+                    and ma78_last < ma200_last
+                    
+                ):
+                    buy = "BUY 1 DURANTE UN RIBASSO AUDI con 5-16 copiata da RCCR CHE E' ANDATA BENISSIMO ! 22 ago 2022 - riga 4571"
+                    action = "buy"
+                    percentage = 50
+                    
+                    # deviation_buy_crollo_1 = ma8_last / ma78_last
+                    # questa cosa che 78 deve essere < 200 ha dell' incredibile. MA NON TOCCARE !
+                    
+                    
+                    
                 # BUY 1 CROLLO IMPROVVISO e RISALITA SUPERVELOCE - la piu' pericolosa d tutte ! - BUY con il 30% - dovrebbe evitarmi il "buy alto"
 
                 elif (    
@@ -5508,7 +5562,31 @@ class maddog:
                     
                 
                 
+                # BUY 2 DURANTE UN RIBASSO AUDI con 5-16 copiata da RCCR CHE E' ANDATA BENISSIMO ! 22 ago 2022
                 
+                elif (
+                    
+                    deviation_buy_crollo_1 < -0.60
+                    and deviation_buy_crollo_1 > -1.60
+                    
+                    and ma5_last > ma16_last
+                    and deviation_ma5_sopra_ma16 > 0.10
+                    
+                    and ma2_last > ma2_2_min_ago
+                    and ma78_last < ma200_last
+                    
+                ):
+                    buy = "BUY 2 DURANTE UN RIBASSO AUDI con 5-16 copiata da RCCR CHE E' ANDATA BENISSIMO ! 22 ago 2022 - riga 4571"
+                    action = "buy"
+                    percentage = 50
+                    
+                    # deviation_buy_crollo_1 = ma8_last / ma78_last
+                    # questa cosa che 78 deve essere < 200 ha dell' incredibile. MA NON TOCCARE !
+                    
+                    
+                    
+                    
+                    
                 # IL BUY 2 CI RIPROVA MA PIU' IN ALTO ! non toccare questa altrimenti fa punti sovrapposti !
                 
                 elif (
