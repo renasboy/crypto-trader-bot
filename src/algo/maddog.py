@@ -8514,7 +8514,7 @@ class maddog:
                 elif (
                     
                     ma18_last > ma100_last
-                    ma78_last > ma150_last
+                    and ma78_last > ma150_last
                     
                     and ma100_last < ma100_120_min_ago
                     and ma200_last < ma200_120_min_ago
@@ -8540,7 +8540,7 @@ class maddog:
                 elif (
                     
                     ma18_last > ma100_last
-                    ma78_last < ma150_last
+                    and ma78_last < ma150_last
                     
                     and ma100_last < ma100_120_min_ago
                     and ma200_last < ma200_120_min_ago
@@ -8566,7 +8566,7 @@ class maddog:
                 elif (
                     
                     ma18_last > ma100_last
-                    ma78_last > ma150_last
+                    and ma78_last > ma150_last
                     
                     and ma100_last < ma100_180_min_ago
                     and ma200_last < ma200_180_min_ago
@@ -8590,7 +8590,7 @@ class maddog:
                 elif (
                     
                     ma18_last > ma100_last
-                    ma78_last < ma150_last
+                    and ma78_last < ma150_last
                     
                     and ma100_last < ma100_180_min_ago
                     and ma200_last < ma200_180_min_ago
