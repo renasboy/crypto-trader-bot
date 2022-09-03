@@ -3347,12 +3347,12 @@ class maddog:
                 
                 elif (    
                
-                    ma5_last > ma50_last
+                    ma5_last > ma48_last
                     and ma300_last > ma300_300_min_ago
                     
                     and deviation_ma5_sotto_ma300 < -0.70
                     and deviation_ma3_sopra_ma10 > 0.01
-                    and deviation_ma5_sopra_ma28 > 0.05
+                    and deviation_ma5_sopra_ma28 > 0.04
                     
                     and ma2_last > ma2_2_min_ago
                 ):    
@@ -3361,7 +3361,8 @@ class maddog:
                     action = "buy"
                     percentage = 80
                     
-                    # > estate 
+                    # 3 set 5-48 da 5-50
+                    # 3 set dev 5-28 0.04 da 0.05
                     
                     
                     
@@ -6514,12 +6515,15 @@ class maddog:
                     
                     
                
-                 
-                # --------------------------------------- BUY 2 che considera il passare del tempo con TREND IN RIALZO ! sempre 20 > 200
+                # --------------------------------------- BUY 2 che considera il passare tempo con TREND IN RIALZO ! e 78 > 200 e sempre 20 > 200
                 
                 elif (     
                     seconds_since_last_trade > max_hold_time_in_seconds_nuova
+                    and ma78_last > ma200_last
+                    
                     and deviation_ma5_sopra_ma28 > 0.10
+                    and deviation_bellissima > 0.07
+                    
                     and ma30_last > ma30_40_min_ago
                     
                     and ma20_last > ma200_last
@@ -6528,10 +6532,36 @@ class maddog:
                     and ma4_last > ma100_last
                     
                     and ma100_last < ma300_last
-                    and deviation_bellissima > 0.07
+                    
                     and ma2_last > ma2_2_min_ago
                 ):    
-                    buy = "BUY 2 che considera il passare del tempo (SE > 120 min) and 5-28 > 0.10 and ma30 > ma 30 40 min ago (TREND IN RIALZO) - r 5610"
+                    buy = "BUY 2 che considera il passare tempo (SE > 120 min) and 5-28 > 0.10 e ma30 > ma 30 40 min ago (TREND IN RIALZO) con 78>200  - r 5610 A"
+                    action = "buy"
+                    percentage = 70
+                    
+                    
+                    
+                # --------------------------------------- BUY 2 che considera il passare tempo con TREND IN RIALZO ! e 78 < 200 e sempre 20 > 200
+                
+                elif (     
+                    seconds_since_last_trade > max_hold_time_in_seconds_nuova
+                    and ma78_last < ma200_last
+                    
+                    and deviation_ma5_sopra_ma28 > 0.20
+                    and deviation_bellissima > 0.07
+                    
+                    and ma30_last > ma30_40_min_ago
+                    
+                    and ma20_last > ma200_last
+                    and ma20_last > ma100_last
+                    
+                    and ma4_last > ma100_last
+                    
+                    and ma100_last < ma300_last
+                    
+                    and ma2_last > ma2_2_min_ago
+                ):    
+                    buy = "BUY 2 che considera il passare del tempo (SE > 120 min) and 5-28 > 0.10 e ma30 > ma 30 40 min ago (TREND IN RIALZO) con 78>200 - r 5610 B"
                     action = "buy"
                     percentage = 70
                     
@@ -9906,15 +9936,17 @@ class maddog:
                         ma50_last < ma50_2_min_ago
                         and deviation_ma5_sotto_ma300 < -0.40
                         and (ma3_prev > ma36_prev and ma3_last < ma36_last)
-                        and deviation_sell < -0.30
+                        and deviation_sell < -0.325
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 torna a casa durante il crollo con minor danno  (12-21 min) con ma50 < and incrocio 3-36 and dev_sell < -0.30 - r 8551"
+                        sell = "SELL 1 torna a casa durante il crollo con minor danno  (12-21 min) con ma50 < and incrocio 3-36 and dev_sell < -0.325 - r 8551"
                         action = "sell"
                         
-                        # 1 giugno 2022 -0.27 da 0.25
-                        # 21 lug 2022 0.30 da 0.27
-                
+                        #  1 giugno 2022 -0.27 da -0.25
+                        # 21 lug 2022 -0.30 da -0.27
+                        #  3 set 2022 -0.325 da -0.30
+                        
+                        
                 
                 
                 ################################################################################################################# SESSIONE 1 ( 21-60 min )
