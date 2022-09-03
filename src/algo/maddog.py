@@ -138,9 +138,9 @@ class maddog:
         ma300_60_min_ago = self.algo_helper.ma_minutes_ago(300, 60)
         ma300_120_min_ago = self.algo_helper.ma_minutes_ago(300, 120)
         ma300_180_min_ago = self.algo_helper.ma_minutes_ago(300, 180)
-        ma300_301_min_ago = self.algo_helper.ma_minutes_ago(300, 301)
-        ma300_300_min_ago = self.algo_helper.ma_minutes_ago(300, 300)
         
+        ma300_300_min_ago = self.algo_helper.ma_minutes_ago(300, 300)
+        ma300_301_min_ago = self.algo_helper.ma_minutes_ago(300, 301)
         
         # LAST TRADE
         
@@ -1982,7 +1982,6 @@ class maddog:
                     # 28 GIU 2022 HO TOLTO 11-125 e sono tornato alle origini con 8-56 !
                     
                     
-                    
                 # BUY 1 tempo FINE AUTUNNO PRECEDENTE (quasi inverno !)
                 
                 elif (     
@@ -2014,6 +2013,40 @@ class maddog:
                     
                     
                     
+                    
+                # BUY 1 2 sett 2022 ore 5:03 - maria callas casta diva bellini
+                
+                elif (     
+                    ma5_last > ma69_last
+                    and deviation_ma50_sotto_ma300 < -0.29
+                    and ma300_last > ma300_301_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma200_120_min_ago
+                    
+                    and deviation_ma3_sopra_ma10 > 0.15
+                    and deviation_ma5_sopra_ma28 > 0.17
+                    
+                    and ma2_last > ma20_last
+                    and ma2_last > ma2_2_min_ago
+                ):    
+                    buy = "BUY 1 2 sett 2022 ore 5:03 maria callas casta diva bellini - r 1615"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # vedi che c'e' ma 300 che cresce
+                    
+                    
+                    
+                    
+                    
+                    
+                
+                
+                
+                
+                
+                
                 # BUY 1 tempo FINE AUTUNNO (quasi inverno !)
                 
                 elif (     
