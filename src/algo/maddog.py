@@ -1800,14 +1800,14 @@ class maddog:
                     
                     
                     
-                # BUY 1 tempo ESTATE PIU' VELOCE 100 > 60 min ago (solo l' estate se lo puo' perettere!) considera passare TEMPO ! ma30 > 
+                # BUY 1 tempo ESTATE PIU' VELOCE 100 > 50 min ago (solo l' estate se lo puo' perettere!) considera passare TEMPO ! ma30 > 
                 
                 elif (     
                     ma15_last > ma28_last
                     and ma78_last > ma100_last
                     
                     and ma8_last > ma200_last
-                    and ma100_last > ma100_60_min_ago
+                    and ma100_last > ma100_50_min_ago
                     
                     and ma30_last > ma30_40_min_ago
                 
@@ -1818,7 +1818,7 @@ class maddog:
                     and ma2_last > ma20_last
                     and ma2_last > ma2_2_min_ago
                 ):    
-                    buy = "BUY 1 tempo ESTATE PIU' VELOCE 100 > 60 min ago (solo l' estate se lo puo' permettere!) considera passare tempo ! ma30 > - r 1537 A"
+                    buy = "BUY 1 tempo ESTATE PIU' VELOCE 100 > 50 min ago (solo l' estate se lo puo' permettere!) considera passare tempo ! ma30 > - r 1537 A"
                     action = "buy"
                     percentage = 90
                     
@@ -1826,7 +1826,7 @@ class maddog:
                     # 9 giu 2022 8>200 al posto di 100>200
                     # 4 set 5-28 0.13 da 0.15
                     # 4 set dev bellissima 0.05 da 0.06
-                    
+                    # ma 100 50 min ago da ma 100 60 min ago
                     
                 # BUY 1 tempo ESTATE PIU' VELOCE 100 > 60 min ago (solo l' estate se lo puo' perettere!) considera il passare del TEMPO ! ma30 > 
                 
