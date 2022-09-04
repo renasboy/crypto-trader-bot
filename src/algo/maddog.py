@@ -432,10 +432,19 @@ class maddog:
         deviation_ma300__diviso_ma300_5_ore_ago = (ma300_last / ma300_301_min_ago - 1) * 100 if ma300_301_min_ago else 0
         self.algo_helper.info("deviation_ma300__diviso_ma300_5_ore_ago: {}".format(deviation_ma300__diviso_ma300_5_ore_ago))
         
+        
+        
         # formula DEVIATION_ma5_sotto_ma300
         
         deviation_ma5_sotto_ma300 = (ma5_last / ma300_last - 1) * 100 if ma300_last else 0
         self.algo_helper.info("deviation_ma5_sotto_ma300: {}".format(deviation_ma5_sotto_ma300))
+        
+        
+        
+        # formula DEVIATION_ma78_sotto_ma300
+        
+        deviation_ma78_sotto_ma300 = (ma78_last / ma300_last - 1) * 100 if ma300_last else 0
+        self.algo_helper.info("deviation_ma78_sotto_ma300: {}".format(deviation_ma78_sotto_ma300))
         
         
         
@@ -1791,7 +1800,7 @@ class maddog:
                     
                     
                     
-                # BUY 1 tempo ESTATE PIU' VELOCE 100 > 60 min ago (solo l' estate se lo puo' perettere!) considera il passare del TEMPO ! ma30 > 
+                # BUY 1 tempo ESTATE PIU' VELOCE 100 > 60 min ago (solo l' estate se lo puo' perettere!) considera passare TEMPO ! ma30 > 
                 
                 elif (     
                     ma15_last > ma28_last
@@ -1802,20 +1811,21 @@ class maddog:
                     
                     and ma30_last > ma30_40_min_ago
                 
-                    and deviation_ma5_sopra_ma28 > 0.15
-                    and deviation_bellissima > 0.06
+                    and deviation_ma5_sopra_ma28 > 0.13
+                    and deviation_bellissima > 0.05
                     and ma20_last > ma20_2_min_ago
                     and ma5_last > ma5_2_min_ago
                     and ma2_last > ma20_last
                     and ma2_last > ma2_2_min_ago
                 ):    
-                    buy = "BUY 1 tempo ESTATE PIU' VELOCE 100 > 60 min ago (solo l' estate se lo puo' permettere!) considera il passare del tempo ! ma30 > - r 1537 A"
+                    buy = "BUY 1 tempo ESTATE PIU' VELOCE 100 > 60 min ago (solo l' estate se lo puo' permettere!) considera passare tempo ! ma30 > - r 1537 A"
                     action = "buy"
                     percentage = 90
                     
                     # 9 giu 2022 15>28 al posto di 50>100 
                     # 9 giu 2022 8>200 al posto di 100>200
-                    
+                    # 4 set 5-28 0.13 da 0.15
+                    # 4 set dev bellissima 0.05 da 0.06
                     
                     
                 # BUY 1 tempo ESTATE PIU' VELOCE 100 > 60 min ago (solo l' estate se lo puo' perettere!) considera il passare del TEMPO ! ma30 > 
@@ -2013,8 +2023,7 @@ class maddog:
                     
                     
                     
-                    
-                # BUY 1 2 sett 2022 ore 5:03 - maria callas casta diva bellini
+                # BUY 1  ribasso con ma 300 che sale ! 2 sett 2022 ore 5:03 - maria callas casta diva bellini
                 
                 elif (     
                     ma5_last > ma69_last
@@ -2030,11 +2039,40 @@ class maddog:
                     and ma2_last > ma20_last
                     and ma2_last > ma2_2_min_ago
                 ):    
-                    buy = "BUY 1 2 sett 2022 ore 5:03 maria callas casta diva bellini - r 1615"
+                    buy = "BUY 1 ribasso con ma 300 che sale ! 2 sett 2022 ore 5:03 MARIA CALLAS casta diva bellini - r 1615 A"
                     action = "buy"
                     percentage = 80
                     
-                    # vedi che c'e' ma 300 che cresce
+                    # vedi che c'e' ma 300 che sale !
+                    
+                    
+                    
+                    
+                # BUY 1 ribasso con ma 300 che scende ! 4 sett 2022 ore 10:35 - maria callas core 'ngrato
+                
+                elif (     
+                    ma5_last > ma78_last
+                    
+                    and deviation_ma50_sotto_ma300 < -0.39
+                    and deviation_ma78_sotto_ma300 < -0.23
+                    
+                    and ma300_last < ma300_120_min_ago
+                    and ma200_last < ma200_120_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.08
+                    and deviation_ma5_sopra_ma28 > 0.10
+                    
+                    and ma2_last > ma20_last
+                    and ma2_last > ma2_2_min_ago
+                ):    
+                    buy = "BUY 1 ribasso con ma 300 che scende ! 4 sett 2022 ore 10:35 - MARIA CALLAS core 'ngrato - r 1615 B"
+                    action = "buy"
+                    percentage = 50
+                    
+                    # vedi che c'e' ma 300 che scende !
                     
                     
                     
@@ -7037,16 +7075,16 @@ class maddog:
                     
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
-                    and deviation_ma5_sopra_ma28 > 0.05
+                    and deviation_ma5_sopra_ma28 > 0.13
                     and deviation_buy_ma5_sopra_ma20 > 0.01
                     
                     and ma2_last > ma2_2_min_ago
                 ):    
-                    buy = "BUY 2 ULTIMA CONDIZIONE ! ma tutte negative MA 50 > 100 (integra r2505) con 78>100 - r 5980a"
+                    buy = "BUY 2 ULTIMA CONDIZIONE ! ma tutte negative MA 50 > 100 (integra r2505) con 78>100 - r 5980 A"
                     action = "buy"
                     percentage = 70
                     
-                    # aggiunta di 5-28 < 0.12
+                    # aggiunta di 5-28 > 0.13
                     
                     
                     
@@ -7067,7 +7105,7 @@ class maddog:
                     
                     and ma2_last > ma2_2_min_ago
                 ):    
-                    buy = "BUY 2 ULTIMA CONDIZIONE ! ma tutte negative MA 50 > 100 (integra r2505) con 78<100 - r 5980b"
+                    buy = "BUY 2 ULTIMA CONDIZIONE ! ma tutte negative MA 50 > 100 (integra r2505) con 78<100 - r 5980 B"
                     action = "buy"
                     percentage = 70
                     
@@ -12331,13 +12369,14 @@ class maddog:
                         
                         and ma300_last < ma300_120_min_ago
                         and ma100_last < ma200_last
-                        and deviation_sell < -0.05
+                        and deviation_sell < -0.07
                         and ma2_last < ma2_2_min_ago
                     ):
                    
-                        sell = "SELL 1 > 110 min con 5 < 200 ! FORSE E' NECESSARA SOLO QUESTA 4 ! deviation_sell < -0.05 - r 10655 B"
+                        sell = "SELL 1 > 110 min con 5 < 200 ! FORSE E' NECESSARA SOLO QUESTA 4 ! deviation_sell < -0.07 - r 10655 B"
                         action = "sell"
                         
+                        # 4 set 2022 dev sell -0.07 da -0.05 
          
         
             
