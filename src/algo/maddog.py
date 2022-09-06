@@ -232,6 +232,7 @@ class maddog:
         
         deviation_1_gabbia = (ma8_last / ma50_last - 1) * 100 if ma50_last else 0
         self.algo_helper.info("deviation_1_gabbia: {}".format(deviation_1_gabbia))
+        
 
         # formula deviation
         
@@ -3069,30 +3070,76 @@ class maddog:
                     
                 
                 
+                
                     
-                # BUY 1 FIAT problematica CHE FA PAURA ! ( ma la ma100 E' ANCORA VICINA alla ma300 !) NON TOCCARE 5-28 > 0.10 !
-                # ( E ANCHE la ma25 deve stare un po' distante dalla 300 !!! )
+                    
+                    
+                    
+                    
+                    
+                # BUY 1 FIAT 70% con 5-33 ! E ma300 > 120 min ago E 5-300 < -0.40 cazzo !
+                # la ma100 E' ANCORA VICINA alla ma300
+                # E ANCHE ma25 deve stare un po' distante dalla 300 !
                 
                 elif (
                     deviation_buy_crollo_1 < -0.29
                     and deviation_buy_crollo_1 > -0.69
                     
-                    and ma11_last > ma125_last
+                    and ma300_last > ma300_120_min_ago
                     
-                    and deviation_correzione > 0.03
-                    and deviation_ma5_sopra_ma28 > 0.05
+                    and deviation_ma5_sotto_ma300 < -0.40
+                    and ma5_last > ma33_last
+                    
                     and deviation_ma100_sopra_ma300 > -0.30
                     and deviation_ma25_sotto_ma300 < -0.60
-                    and ma2_last > ma2_2_min_ago
-                ):
-                    buy = "BUY 1 FIAT problematica CHE FA PAURA ! 11-125 (MA ma100 E' ANCORA VICINA alla ma300) (E CON ma25 un po' distante dalla ma300) - r 2623"
-                    action = "buy"
-                    percentage = 80
                     
+                    and ma2_last >= ma2_2_min_ago
+                ):
+                    buy = "BUY 1 FIAT 70% con 5-33 ! E ma300 > 120 min ago E 5-300 < -0.40 cazzo ! - r 2597 A"
+                    action = "buy"
+                    percentage = 70
+                    
+                    # ma100 E' ANCORA VICINA alla ma300 e ma25 un po' sotto ma300 (per evitare piccole schegge rialziste !)
                     # deviation_ma100_sopra_ma300 significa 100/300 ( ma100 ancora NON SI E' ALLONTANATA TROPPO DALLA ma300 )
-                    # deviation_ma25_sotto_ma300 significa che anche ma25 deve andare almeno un po' sotto ma300 (per evitare piccole schegge rialziste !)
-                    # NON TOCCARE 5-28 > 0.05 !
-                    # ho dovuto aggiungere 5-125 per inibirla. SOLO PROBLEMI !
+                    
+                    # avevo dovuto aggiungere 5-125 per inibirla ! poi ho messo 5-300 < -0.40 e sono tornato a 5>33
+                    
+                    
+                    
+                    
+                    
+                # BUY 1 FIAT 50% con 5-39 ! E ma300 < 120 min ago E 5-300 < -0.40 cazzo !
+                # la ma100 E' ANCORA VICINA alla ma300
+                # E ANCHE ma25 deve stare un po' distante dalla 300 !
+                
+                elif (
+                    deviation_buy_crollo_1 < -0.29
+                    and deviation_buy_crollo_1 > -0.69
+                    
+                    and ma300_last < ma300_120_min_ago
+                    
+                    and deviation_ma5_sotto_ma300 < -0.40
+                    and ma5_last > ma39_last
+                    
+                    and deviation_ma100_sopra_ma300 > -0.30
+                    and deviation_ma25_sotto_ma300 < -0.60
+                    
+                    and ma2_last >= ma2_2_min_ago
+                ):
+                    buy = "BUY 1 FIAT 50% con 5-39 ! E ma300 < 120 min ago E 5-300 < -0.40 cazzo ! - r 2597 B"
+                    action = "buy"
+                    percentage = 50
+                    
+                    # ma100 E' ANCORA VICINA alla ma300 e ma25 un po' sotto ma300 (per evitare piccole schegge rialziste !)
+                    # deviation_ma100_sopra_ma300 significa 100/300 ( ma100 ancora NON SI E' ALLONTANATA TROPPO DALLA ma300 )
+                    
+                    # avevo dovuto aggiungere 5-125 per inibirla ! poi ho messo 5-300 < -0.40 e sono tornato a 5>39
+                    
+                    
+                    
+                    
+                    
+                    
                
                 ############################################################################################################################################## 
                 
