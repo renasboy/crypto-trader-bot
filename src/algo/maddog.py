@@ -1304,18 +1304,21 @@ class maddog:
                     and ma200_last < ma200_60_min_ago
                     and ma100_last < ma100_60_min_ago
                     
-                    and ma8_last > ma48_last
+                    and ma5_last > ma48_last
+                    and ma3_last > ma200_last
                     
                     and deviation_ma3_sopra_ma10 > 0.12
                     and deviation_ma5_sopra_ma28 > 0.19
                     
-                    and ma5_last > ma200_last
+                    
                     and ma2_last > ma2_2_min_ago
                 ):     
                   
                     buy = "BUY 1 MOLTO RISCHIOSO modo 1 ! quando incomincia il ribasso MA ma300 ANCORA IN RIALZO MA ma200 120 < con 3-10 > 0.13 - r 1139 B1"
                     action = "buy"
-                    percentage = 90
+                    percentage = 80
+                    
+                    # 8 set 5-48 da 8-48
                     
                     
                     
@@ -1344,7 +1347,7 @@ class maddog:
                   
                     buy = "BUY 1 MOLTO RISCHIOSO modo 1 ! quando incomincia il ribasso MA ma300 ANCORA IN RIALZO MA ma200 120 < con 3-10 > 0.13 - r 1139 B2"
                     action = "buy"
-                    percentage = 90
+                    percentage = 80
                     
                     
                     
@@ -7534,13 +7537,13 @@ class maddog:
                     
                 elif (
                     deviation_ma4_sopra_ma30 > 0.15
-                    and deviation_ma3_sopra_ma10 > 0.17
+                    and deviation_ma3_sopra_ma10 > 0.08
                     and deviation_ma5_sopra_ma28 > 0.10
-                    and deviation_bellissima > 0.07
+                    and deviation_bellissima > 0.06
                     
                     and deviation > -0.30
                     
-                    and ma39_last > ma50_last
+                    and ma28_last > ma50_last
                     and delta_buy3_incrocio_ma3_ma8 >= 0.06
                     and ma3_last > ma8_last
                     and ma3_last >= ma69_last
@@ -7549,7 +7552,7 @@ class maddog:
                     and ma5_last >= ma15_last
                     and ma5_last >= ma25_last
                 ):    
-                    buy = "BUY 3B da RCCR - se ma39 > ma50 - r 6280"
+                    buy = "BUY 3B da RCCR - se ma28 > ma50 - r 6280"
                     action = "buy"
                     percentage = 80
                     
@@ -7563,7 +7566,7 @@ class maddog:
                     and (ma3_prev < ma22_prev and ma3_last > ma22_last)
                     and deviation > -0.30
                     and deviation_bellissima > 0.07
-                    and ma39_last > ma50_last
+                    and ma28_last > ma50_last
                     and delta_buy3_incrocio_ma3_ma8 >= 0.06
                     and ma3_last > ma8_last
                     and ma3_last >= ma69_last
@@ -7572,7 +7575,7 @@ class maddog:
                     and ma5_last >= ma15_last
                     and ma5_last >= ma25_last
                 ):    
-                    buy = "BUY 3C RIVOLUZIONARIO se ma39 > ma50 - r 6301"
+                    buy = "BUY 3C RIVOLUZIONARIO se ma28 > ma50 - r 6301"
                     action = "buy"
                     percentage = 80
                     
@@ -15727,10 +15730,12 @@ class maddog:
                         
                         and ma300_last > ma300_120_min_ago
                         and ma2_last < ma2_2_min_ago 
-                        and deviation_sell < -0.34
+                        and deviation_sell < -0.35
                     ):
-                        sell = "SELL 3 (21-60 min) con ma50 < and ma300> and deviation_sell < -0.34 CON 78>100 - r 13701 A"
+                        sell = "SELL 3 (21-60 min) con ma50 < and ma300> and deviation_sell < -0.35 CON 78>100 - r 13701 A"
                         action = "sell"
+                        
+                        # 0.35 da 0.34
                         
                         
                     elif (    
