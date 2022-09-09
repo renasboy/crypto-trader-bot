@@ -8992,9 +8992,9 @@ class maddog:
 
                 # VENDITA - da 12 a 21 minuti = da 720 a 1260 secondi
 
-                elif (
-                    seconds_since_last_trade > 720 and seconds_since_last_trade <= 1260
-                ):
+                elif seconds_since_last_trade > 720 and seconds_since_last_trade <= 1260:
+                    
+                
 
                     if (
                         ma50_last >= ma50_2_min_ago
@@ -9253,9 +9253,9 @@ class maddog:
 
                 # VENDITA - da 21 a 50 minuti = da 1261 a 3000 secondi
 
-                elif (
-                    seconds_since_last_trade > 1261 and seconds_since_last_trade <= 3000
-                ):
+                elif seconds_since_last_trade > 1261 and seconds_since_last_trade <= 3000:
+                    
+                
                     if (
                         ma50_last > ma50_2_min_ago
                         and (ma3_prev > ma78_prev and ma3_last < ma78_last)
@@ -10059,9 +10059,9 @@ class maddog:
 
                 # VENDITA - da 50 a 90 min - da 3001 a 5400 secondi in poi
                 
-                elif (
-                    seconds_since_last_trade > 3001 and seconds_since_last_trade <= 5400
-                ):
+                elif seconds_since_last_trade > 3001 and seconds_since_last_trade <= 5400:
+                    
+                
                     
                     if (    
                         ma50_last > ma50_2_min_ago
@@ -10695,9 +10695,6 @@ class maddog:
                         # in questa circostanza drammatica di crollo INTANTO TE LI PRENDI poi, eventualmente, ci pensa BUY 2
                         
                      
-                
-                ########################################################################################################
-                ########################################################################################################
                 ######################################################################################################## SESSIONE 1 ( da 90 min a 110 min )
 
                 # VENDITA - da 90 minuti a 110 minuti  = da 5400 secondi a 6600 secondi
@@ -13734,9 +13731,9 @@ class maddog:
 
                 # VENDITA - da 12 a 21 minuti = da 720 a 1260 secondi
 
-                elif (
-                    seconds_since_last_trade > 720 and seconds_since_last_trade <= 1260
-                ):
+                elif seconds_since_last_trade > 720 and seconds_since_last_trade <= 1260:
+                    
+                
 
                     if (
                         ma50_last >= ma50_2_min_ago
