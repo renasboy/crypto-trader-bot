@@ -4675,14 +4675,14 @@ class maddog:
                     
                     
                     
-                 
                 # BUY 1 che ci riprova quando se ne va lateralmente dopo il crollo
                 
                 elif (
                     ma28_last > ma300_last
                     and ma20_last > ma50_last
+                    and ma78_last > ma100_last
                     
-                    and deviation_ma3_sopra_ma10 > 0.155
+                    and deviation_ma3_sopra_ma10 > 0.13
                     and deviation_ma5_sopra_ma28 > 0.01
                     
                     and ma200_last < ma200_120_min_ago
@@ -4697,11 +4697,45 @@ class maddog:
                 
                 ):
                
-                    buy = "BUY 1 che ci riprova quando se ne va lateralmente dopo il crollo - SE 28 < 300 OK COSI' CON 28>50 - r 4082 a1"
+                    buy = "BUY 1 che ci riprova quando se ne va lateralmente dopo il crollo - SE 28 < 300 - r 4082 a1X"
                     action = "buy"
                     percentage = 80
 
                     # compare prega per me !
+                    
+                    
+                    
+                # BUY 1 che ci riprova quando se ne va lateralmente dopo il crollo
+                
+                elif (
+                    ma28_last > ma300_last
+                    and ma20_last > ma50_last
+                    and ma78_last < ma100_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.16
+                    and deviation_ma5_sopra_ma28 > 0.01
+                    
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_120_min_ago
+                    
+                    and delta_300_100 < delta_300_100_60_min
+                    
+                    and deviation_ma100_sopra_ma300 > -0.40
+                    and deviation_ma200_sopra_ma300 > -0.40
+                    
+                    and ma2_last > ma2_2_min_ago
+                
+                ):
+               
+                    buy = "BUY 1 che ci riprova quando se ne va lateralmente dopo il crollo - SE 28 < 300 - r 4082 a1Y"
+                    action = "buy"
+                    percentage = 80
+
+                    # compare prega per me !
+                    
+                    
+                    
+                    
                     
                     
                     
