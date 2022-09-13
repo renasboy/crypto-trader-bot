@@ -3096,7 +3096,6 @@ class maddog:
                     
                 
                 
-                    
                 # BUY 1 FIAT problematica CHE FA PAURA ! ( ma la ma100 E' ANCORA VICINA alla ma300 !) NON TOCCARE 5-28 > 0.10 !
                 # ( E ANCHE la ma25 deve stare un po' distante dalla 300 !!! )
                 
@@ -3120,6 +3119,40 @@ class maddog:
                     # deviation_ma25_sotto_ma300 significa che anche ma25 deve andare almeno un po' sotto ma300 (per evitare piccole schegge rialziste !)
                     # NON TOCCARE 5-28 > 0.05 !
                     # ho dovuto aggiungere 5-125 per inibirla. SOLO PROBLEMI !
+                    
+                    
+                    
+                    
+                # BUY 1 FIAT 5-100< -0.40 ( ma la ma100 E' ANCORA VICINA alla ma300 !) NON TOCCARE 5-28 > 0.10 !
+                # ( E ANCHE la ma25 deve stare un po' distante dalla 300 !!! )
+                
+                elif (
+                    deviation_buy_crollo_1 < -0.29
+                    and deviation_buy_crollo_1 > -0.69
+                    and deviation_ma5_sotto_ma300 < -0.40
+                    and ma5_last > ma39_last
+                    
+                    and deviation_correzione > 0.03
+                    and deviation_ma5_sopra_ma28 > 0.05
+                    and deviation_ma100_sopra_ma300 > -0.30
+                    and deviation_ma25_sotto_ma300 < -0.60
+                    and ma2_last > ma2_2_min_ago
+                ):
+                    buy = "BUY 1 FIAT 5-100< -0.40  (MA ma100 E' ANCORA VICINA alla ma300) (E CON ma25 un po' distante dalla ma300) - r 2624"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # deviation_ma100_sopra_ma300 significa 100/300 ( ma100 ancora NON SI E' ALLONTANATA TROPPO DALLA ma300 )
+                    # deviation_ma25_sotto_ma300 significa che anche ma25 deve andare almeno un po' sotto ma300 (per evitare piccole schegge rialziste !)
+                    # NON TOCCARE 5-28 > 0.05 !
+                    # ho dovuto aggiungere 5-125 per inibirla. SOLO PROBLEMI !
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                
                 ############################################################################################################################################## 
                 
