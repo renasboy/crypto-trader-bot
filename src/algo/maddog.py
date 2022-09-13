@@ -5185,6 +5185,9 @@ class maddog:
                     
                     ma200_last > ma200_20_min_ago
                     and ma3_last > ma28_last
+                    and deviation_ma3_sopra_ma10 > 0.05
+                    and deviation_ma5_sopra_ma28 > 0.05
+                    
                     and ma2_last > ma2_2_min_ago
                     
                     and ma100_last > ma200_last
@@ -5203,6 +5206,7 @@ class maddog:
                     action = "buy"
                     percentage = 40
                     
+                    # 13 set aggiunte 3-10 and 5-28
                     
                     
                     
