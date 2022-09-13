@@ -13201,15 +13201,15 @@ class maddog:
                     elif (    
                         ma50_last > ma50_2_min_ago 
                         and ma2_last < ma2_2_min_ago 
-                        and deviation_sell < -0.31
+                        and deviation_sell < -0.33
                         and ma3_last < ma50_last
                         and ma200_last > ma200_60_min_ago
                     ):
-                        sell = "SELL 2 (21-60 min) con ma50 > and (deviation_sell < -0.29 and ma3_last < ma50_last) TOLLERANTE ! - r 11423"
+                        sell = "SELL 2 (21-60 min) con ma50 > and (deviation_sell < -0.33 and ma3_last < ma50_last) TOLLERANTE ! - r 11423"
                         action = "sell"
                         
-                        # 21 giu 2022 0.31 da 0.29
-                        
+                        # 21 giu 2022 dev sell 0.31 da 0.29
+                        # 13 set 2022 dev sell 0.33 da 0.31
                         
                         
                     ##############################################################################################################################
@@ -15367,7 +15367,7 @@ class maddog:
                         and ma3_last < ma50_last
                         and ma200_last > ma200_60_min_ago
                     ):
-                        sell = "SELL 3 (21-60 min) con ma50 > and (deviation_sell < -0.27 and ma3_last < ma50_last) - r 13524"
+                        sell = "SELL 3 (21-60 min) con ma50 > and (deviation_sell < -0.30 and ma3_last < ma50_last) - r 13524"
                         action = "sell"
                         
                         # 13 set dev sell -0.30 da -0.27
