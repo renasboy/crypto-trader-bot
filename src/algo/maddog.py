@@ -49,6 +49,7 @@ class maddog:
         ma69_last, ma69_prev = self.algo_helper.ma_last_prev(69)
         ma72_last, ma72_prev = self.algo_helper.ma_last_prev(72)
         ma78_last, ma78_prev = self.algo_helper.ma_last_prev(78)
+        ma86_last, ma86_prev = self.algo_helper.ma_last_prev(86)
         ma100_last, ma100_prev = self.algo_helper.ma_last_prev(100)
         ma125_last, ma125_prev = self.algo_helper.ma_last_prev(125)
         ma130_last, ma130_prev = self.algo_helper.ma_last_prev(130)
@@ -1799,26 +1800,27 @@ class maddog:
                     percentage = 90
                     
                     
-                    
                 # BUY 1 tempo ESTATE PIU' VELOCE 100 > 60 min ago (solo l' estate se lo puo' perettere!) considera il passare del TEMPO ! ma30 > 
                 
                 elif (     
                     ma15_last > ma28_last
                     and ma78_last > ma100_last
-                    
+                    and ma18_last > ma300_last
                     and ma8_last > ma200_last
                     and ma100_last > ma100_60_min_ago
                     
                     and ma30_last > ma30_40_min_ago
-                
+                    
+                    and deviation_ma3_sopra_ma10 > 0.02
                     and deviation_ma5_sopra_ma28 > 0.13
                     and deviation_bellissima > 0.05
+                    
                     and ma20_last > ma20_2_min_ago
                     and ma5_last > ma5_2_min_ago
                     and ma2_last > ma20_last
                     and ma2_last > ma2_2_min_ago
                 ):    
-                    buy = "BUY 1 tempo ESTATE PIU' VELOCE 100 > 60 min ago (solo l' estate se lo puo' permettere!) considera il passare del tempo ! ma30 > - r 1537 A"
+                    buy = "BUY 1 tempo ESTATE PIU' VELOCE 100 > 60 min ago and 18>300 (estate se lo puo' permettere!) considera passare tempo ! ma30 > - r 1537 A1"
                     action = "buy"
                     percentage = 90
                     
@@ -1826,6 +1828,42 @@ class maddog:
                     # 9 giu 2022 8>200 al posto di 100>200
                     # 4 set 5-28 0.13 da 0.15
                     # 4 set dev bellissima 0.05 da 0.06
+                    
+                    
+                    
+                # BUY 1 tempo ESTATE PIU' VELOCE 100 > 60 min ago (estate se lo puo' perettere!) considera il passare del TEMPO ! ma30 > 
+                
+                elif (     
+                    ma15_last > ma28_last
+                    and ma78_last > ma100_last
+                    and ma18_last < ma300_last
+                    and ma8_last > ma200_last
+                    and ma100_last > ma100_60_min_ago
+                    
+                    and ma30_last > ma30_40_min_ago
+                    
+                    and deviation_ma3_sopra_ma10 > 0.10
+                    and deviation_ma5_sopra_ma28 > 0.13
+                    and deviation_bellissima > 0.05
+                    
+                    and ma20_last > ma20_2_min_ago
+                    and ma5_last > ma5_2_min_ago
+                    and ma2_last > ma20_last
+                    and ma2_last > ma2_2_min_ago
+                ):    
+                    buy = "BUY 1 tempo ESTATE PIU' VELOCE 100 > 60 min ago and 18>300 (estate se lo puo' permettere!) considera passare tempo ! ma30 > - r 1537 A2"
+                    action = "buy"
+                    percentage = 90
+                    
+                    # 9 giu 2022 15>28 al posto di 50>100 
+                    # 9 giu 2022 8>200 al posto di 100>200
+                    # 4 set 5-28 0.13 da 0.15
+                    # 4 set dev bellissima 0.05 da 0.06
+                    
+                    
+                    
+                    
+                    
                     
                     
                 # BUY 1 tempo ESTATE PIU' VELOCE 100 > 60 min ago (solo l' estate se lo puo' perettere!) considera il passare del TEMPO ! ma30 > 
@@ -16152,14 +16190,14 @@ class maddog:
                         and deviation_ma100_sopra_ma300 > 0.20
                         and ma2_last < ma2_2_min_ago 
                          
-                        and ma3_last < ma78_last
+                        and ma5_last < ma86_last
                     ):
                         sell = "SELL 3 dopo 90 min con ma50< MA ma100 > ma300 and ma3_last < ma78_last - r 14270"
                         action = "sell"
                         
                         # se sta in alto NO DEVIATION SELL - la 100 se ne sta andando in alto.
                         # > estate 3-78 da 3-39
-                        
+                        # 13 set 5-86 da 3-78
                         
                         
                     elif (    
