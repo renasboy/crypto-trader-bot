@@ -428,6 +428,17 @@ class maddog:
         self.algo_helper.info("deviation_ma5_sotto_ma200: {}".format(deviation_ma5_sotto_ma200))
         
         
+        
+        
+        # formula DEVIATION_ma3_sotto_ma200 per comprare FINO a una certa distanza da ma200
+        
+        deviation_ma3_sotto_ma200 = (ma3_last / ma200_last - 1) * 100 if ma200_last else 0
+        self.algo_helper.info("deviation_ma3_sotto_ma200: {}".format(deviation_ma3_sotto_ma200))
+        
+        # questa e' stata aggiunta il 13 settembre 2022 dopo che deviation_ma5_sotto_ma200 aveva fatto -3% !!!
+        
+        
+        
         # formula deviation_ma300_diviso_ma300_5_ore_ago
         
         deviation_ma300__diviso_ma300_5_ore_ago = (ma300_last / ma300_301_min_ago - 1) * 100 if ma300_301_min_ago else 0
@@ -17921,9 +17932,9 @@ class maddog:
                 and ma50_last < ma50_2_min_ago
                 and deviation_ma100_sopra_ma300 > 0.20
                 
-                and deviation_ma5_sotto_ma200 > -1.20
+                and deviation_ma3_sotto_ma200 > -1.20
             ):
-                sell = "SELL cond. special 3 - SALVAGENTE 3 3-39 < -0.25 e dev sell< -0.31 and dev_sell<-0.305 con ma50< - con dev_ma5_sotto_ma200 >-1.20 - r 15985 A"
+                sell = "SELL cond. special 3 - SALVAGENTE 3 3-39 < -0.25 e dev sell < -0.31 and dev_sell< -0.305 con ma50< e dev_ma3_sotto_ma200 > -1.20 - r 15985 A"
                 action = "sell"
                 
                 # 27 giu 2022 dev sell a 0.305 da 0.31
@@ -17936,7 +17947,7 @@ class maddog:
                 # ma non sapendo se era questo il problema ho creato la prossima condizione speciale.
                 
                 # > estate dev 39 -0.24 da -0.25 dev sell -0.30 da -0.31 
-                
+                # 13 sett -3% !!! deviation_ma3_sotto_ma200 > -1.20 da deviation_ma3_sotto_ma200 > -1.20 
                 
                 
             # 4 - SELL ricordo terribile del 21 giugno 2022
