@@ -49,6 +49,7 @@ class maddog:
         ma69_last, ma69_prev = self.algo_helper.ma_last_prev(69)
         ma72_last, ma72_prev = self.algo_helper.ma_last_prev(72)
         ma78_last, ma78_prev = self.algo_helper.ma_last_prev(78)
+        ma86_last, ma86_prev = self.algo_helper.ma_last_prev(86)
         ma100_last, ma100_prev = self.algo_helper.ma_last_prev(100)
         ma125_last, ma125_prev = self.algo_helper.ma_last_prev(125)
         ma130_last, ma130_prev = self.algo_helper.ma_last_prev(130)
@@ -16152,14 +16153,14 @@ class maddog:
                         and deviation_ma100_sopra_ma300 > 0.20
                         and ma2_last < ma2_2_min_ago 
                          
-                        and ma3_last < ma78_last
+                        and ma5_last < ma86_last
                     ):
-                        sell = "SELL 3 dopo 90 min con ma50< MA ma100 > ma300 and ma3_last < ma78_last - r 14270"
+                        sell = "SELL 3 dopo 90 min con ma50< MA ma100 > ma300 and 5-86 - r 14270"
                         action = "sell"
                         
                         # se sta in alto NO DEVIATION SELL - la 100 se ne sta andando in alto.
                         # > estate 3-78 da 3-39
-                        
+                        # 13 set 5-86 da 3-78
                         
                         
                     elif (    
