@@ -5424,9 +5424,6 @@ class maddog:
 
                     # 22 lug 2022 3-10 0.16 da 0.12 cazzo
                     
-                    
-                    
-               
                 
                 
                 # BUY 1 DURANTE UN RIBASSO AUDI con 5-16 copiata da RCCR CHE E' ANDATA BENISSIMO ! 22 ago 2022
@@ -5451,9 +5448,7 @@ class maddog:
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     # questa cosa che 78 deve essere < 200 ha dell' incredibile. MA NON TOCCARE !
                     
-                    
-                    
-                    
+                  
                 # BUY 1 DURANTE UN RIBASSO AUDI con 5-16 copiata da RCCR CHE E' ANDATA BENISSIMO ! 22 ago 2022
                 
                 elif (
@@ -5516,12 +5511,7 @@ class maddog:
                     # potra' anche farlo ma considerando il 3-10 e il 5-28
                     
                     # Manchester Orchestra - I Know How To Speak
-                    
-                    
-                    
-                    
-                    
-            
+                  
             
             #############################################################################################################      COMPRA sessione 2
             
@@ -5789,13 +5779,7 @@ class maddog:
                     # > estate ho alzato buy
                     
                     
-                    
-                    
-                    
-                    
-                    
-                    
-                    
+                 
                     
                 # BUY 2 300 < 120 min ago con doppio delta > 1 trend ribasso and deviation_ma5_sopra_ma28 > 0.16
                 
@@ -5953,12 +5937,7 @@ class maddog:
                     action = "buy"
                     percentage = 80
                     
-                    
-               
-            
-            
-            
-            
+                  
             
             
                 # BUY 2C con 100< and 200< con INCROCIO 7-50 PIU' FORTE (SOPRA -CRESCE-DIMINUISCE) aurora
