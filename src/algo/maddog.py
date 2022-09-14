@@ -5017,7 +5017,8 @@ class maddog:
                     and delta_1 < delta_2
                     and ma100_last > ma100_60_min_ago
                     and ma300_last < ma300_60_min_ago
-           
+                    
+                    and deviation_ma3_sopra_ma10 > 0.08
                     and deviation_ma5_sopra_ma28 > 0.17
                     and ma2_last >= ma2_2_min_ago
                 ):    
@@ -5027,7 +5028,7 @@ class maddog:
                     percentage = 80
                     
                     # 3 set modo b
-                    
+                    # 14 set aggiunta 3-10 > 0.08
                     
                     
                 # BUY 1 SITUAZIONE TREND LATERALE modo C che mancava con ma300 < - DOPPIO DELTA - RIALZO
