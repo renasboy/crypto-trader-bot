@@ -10941,14 +10941,16 @@ class maddog:
                     elif (
                         ma50_last < ma50_2_min_ago
                         and deviation_ma5_sotto_ma300 < -1.20
-                        and (ma3_prev > ma28_prev and ma3_last < ma28_last)
+                        and (ma3_prev > ma30_prev and ma3_last < ma30_last)
                         and deviation_sell > 0.30 
                         and deviation_sell < 0.54
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 eventuale GAIN nel crollo PESANTE (21-50 min) con ma50 < incR 3 - 28 and dev_sell 0.30 - 0.54 and dev 5-300 < -1.20 - r 9327 B"
+                        sell = "SELL 1 eventuale GAIN nel crollo PESANTE (21-50 min) con ma50 < incr 3-30 and dev_sell 0.30 - 0.54 and dev 5-300 < -1.20 - r 9327 B"
                         action = "sell"
+                        
+                        # 14 set 3-30 da 3-28
                         
                         
                         
@@ -13672,12 +13674,14 @@ class maddog:
 
                     elif (
                         ma50_last < ma50_2_min_ago
-                        and (ma3_prev > ma18_prev and ma3_last < ma18_last)
+                        and (ma3_prev > ma28_prev and ma3_last < ma28_last)
                         and deviation_sell > 0.23
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 2 (21-60 min) eventuale guadagno durante il crollo (21-60 min) con ma50 < incrocio 3 - 18 and dev_sell > 0.23 - r 11803"
+                        sell = "SELL 2 (21-60 min) eventuale guadagno durante il crollo (21-60 min) con ma50 < incrocio 3-28 and dev_sell > 0.23 - r 11803"
                         action = "sell"
+                        
+                        # 14 set 3-28 da 3-18
                         
                 
                 
