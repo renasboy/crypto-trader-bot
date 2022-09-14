@@ -5432,7 +5432,7 @@ class maddog:
                 
                 elif (
                     
-                    deviation_ma5_sopra_ma16 > 0.10
+                    deviation_ma5_sopra_ma16 > 0.20
                     
                     and deviation_buy_crollo_1 < -0.60
                     and deviation_buy_crollo_1 > -1.60
@@ -5444,6 +5444,10 @@ class maddog:
                     buy = "BUY 1 DURANTE UN RIBASSO AUDI con 5-16 copiata da RCCR CHE E' ANDATA BENISSIMO ! 22 ago 2022 - riga 4571"
                     action = "buy"
                     percentage = 50
+                    
+                    # 14 sett dev 5-16 ho dovuto purtroppo portarla a 0.20 da 0.10 dopo il crollo del 13 set
+                    # non e' partita ferrari
+                    # non riesco a fare 5-300 > -3.00 e 5-300 < -3.00 che casino ! il compare non risponde
                     
                     
                 
