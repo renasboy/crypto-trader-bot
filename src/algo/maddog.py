@@ -5428,7 +5428,6 @@ class maddog:
                     
                     
                     
-                
                 # BUY 1 DURANTE UN RIBASSO AUDI con 5-16 copiata da RCCR CHE E' ANDATA BENISSIMO ! 22 ago 2022
                 
                 elif (
@@ -5447,8 +5446,22 @@ class maddog:
                     action = "buy"
                     percentage = 50
                     
-                    # deviation_buy_crollo_1 = ma8_last / ma78_last
-                    # questa cosa che 78 deve essere < 200 ha dell' incredibile. MA NON TOCCARE !
+                    
+                    
+                # BUY 1 nuovo dopo crollo 13 set 2022
+                
+                elif (
+                    deviation_ma5_sotto_ma300 < -3.01
+                    and deviation_ma3_sopra_ma10 > 0.25
+                    and deviation_ma5_sopra_ma28 > 0.01
+                    and ma2_last > ma2_2_min_ago
+                  
+                ):
+                    buy = "BUY 1 nuovo dopo crollo 13 set 2022 - riga 4572"
+                    action = "buy"
+                    percentage = 50
+                   
+                    # crollo spaventoso BUY piu' prudente !
                     
                     
                     
