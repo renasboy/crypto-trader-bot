@@ -3918,19 +3918,20 @@ class maddog:
                     and delta_1 < delta_2
                     
                     and deviation_ma5_sopra_ma16 > 0.09
-                    and ma5_last > ma16_last
+                    and deviation_ma5_sopra_ma28 > 0.18
                     
                     and ma2_last > ma2_2_min_ago
                     and ma78_last < ma200_last
                     
                 ):
-                    buy = "BUY 1 RIBASSO AUDI PIU' LENTA CHE NON E' UN CROLLO ! and delta_1 < delta_2 con dev 5-16 > 0.09 - riga 3354 A"
+                    buy = "BUY 1 RIBASSO AUDI PIU' LENTA CHE NON E' UN CROLLO ! and delta_1 < delta_2 con dev 5-16 > 0.09 E 5-28 > 0.18 - riga 3354 A"
                     action = "buy"
                     percentage = 80
                     
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     # questa cosa che 78 deve essere < 200 ha dell' incredibile. MA NON TOCCARE !
-                    
+                    # ho dovuto aggiungere 5-28 > 0.18 perche' non riesco a fare modifiche con 5-300>-3.00 e 5-300<-3.00
+                    # e il compare non risponde
                     
                     
                     
@@ -5297,6 +5298,9 @@ class maddog:
                     and deviation_buy_crollo_1 > -0.69
                     and deviation_correzione > 0.03
                     
+                    and deviation_ma3_sopra_ma10 > 0.16
+                    and deviation_ma5_sopra_ma28 > 0.11
+                    
                     and ma100_last < ma100_120_min_ago
                     and ma200_last < ma200_120_min_ago
                     and ma300_last < ma300_120_min_ago
@@ -5314,7 +5318,9 @@ class maddog:
                     
                     # deve essere cosi' altrimenti la r701 RCCR genera molte perdite.
                     # ma il 9 maggio 2022 RCCR ha comprato in situazione DRAMMATICA ed e' andata benissimo mentre MADDOG DORMIVA.
-           
+                    # 14 set 2022 ho aggiunto 3-10 e 5-28
+                    
+                    
                     
                 
                 # BUY 1 piccola CORREZIONE FIAT CHE FA PAURA ! ( ma la ma100 E' ANCORA VICINA alla ma300 !) NON TOCCARE 5-28 > 0.10 !
