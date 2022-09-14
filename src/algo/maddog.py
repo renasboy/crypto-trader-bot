@@ -5432,8 +5432,8 @@ class maddog:
                 # BUY 1 DURANTE UN RIBASSO AUDI con 5-16 copiata da RCCR CHE E' ANDATA BENISSIMO ! 22 ago 2022
                 
                 elif (
-                    deviation_ma5_sotto_ma300 > -2.50
                     
+                    deviation_ma5_sotto_ma300 > -3.00
                     and deviation_buy_crollo_1 < -0.60
                     and deviation_buy_crollo_1 > -1.60
                      
@@ -5455,8 +5455,8 @@ class maddog:
                 # BUY 1 DURANTE UN RIBASSO AUDI con 5-16 copiata da RCCR CHE E' ANDATA BENISSIMO ! 22 ago 2022
                 
                 elif (
-                    deviation_ma5_sotto_ma300 < -2.50
                     
+                    deviation_ma5_sotto_ma300 < -3.00
                     and deviation_buy_crollo_1 < -0.60
                     and deviation_buy_crollo_1 > -1.60
                     
