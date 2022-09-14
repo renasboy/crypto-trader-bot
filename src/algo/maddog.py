@@ -5423,8 +5423,10 @@ class maddog:
                     percentage = 70
 
                     # 22 lug 2022 3-10 0.16 da 0.12 cazzo
+                    
+                    
+                    
                
-                
                 
                 
                 # BUY 1 DURANTE UN RIBASSO AUDI con 5-16 copiata da RCCR CHE E' ANDATA BENISSIMO ! 22 ago 2022
@@ -5433,6 +5435,7 @@ class maddog:
                     
                     deviation_buy_crollo_1 < -0.60
                     and deviation_buy_crollo_1 > -1.60
+                    and deviation_ma5_sotto_ma300 > -2.50
                     
                     and ma5_last > ma16_last
                     and deviation_ma5_sopra_ma16 > 0.10
@@ -5441,12 +5444,40 @@ class maddog:
                     and ma78_last < ma200_last
                     
                 ):
-                    buy = "BUY 1 DURANTE UN RIBASSO AUDI con 5-16 copiata da RCCR CHE E' ANDATA BENISSIMO ! 22 ago 2022 - riga 4571"
+                    buy = "BUY 1 DURANTE UN RIBASSO AUDI con 5-16 copiata da RCCR CHE E' ANDATA BENISSIMO ! 22 ago 2022 - riga 4571 A"
                     action = "buy"
                     percentage = 50
                     
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     # questa cosa che 78 deve essere < 200 ha dell' incredibile. MA NON TOCCARE !
+                    
+                    
+                    
+                    
+                # BUY 1 DURANTE UN RIBASSO AUDI con 5-16 copiata da RCCR CHE E' ANDATA BENISSIMO ! 22 ago 2022
+                
+                elif (
+                    
+                    deviation_buy_crollo_1 < -0.60
+                    and deviation_buy_crollo_1 > -1.60
+                    and deviation_ma5_sotto_ma300 < -2.50
+                    
+                    and ma5_last > ma16_last
+                    and deviation_ma5_sopra_ma16 > 0.20
+                    
+                    and ma2_last > ma2_2_min_ago
+                    and ma78_last < ma200_last
+                    
+                ):
+                    buy = "BUY 1 DURANTE UN RIBASSO AUDI con 5-16 copiata da RCCR CHE E' ANDATA BENISSIMO ! 22 ago 2022 - riga 4571 A"
+                    action = "buy"
+                    percentage = 50
+                    
+                    # deviation_buy_crollo_1 = ma8_last / ma78_last
+                    # questa cosa che 78 deve essere < 200 ha dell' incredibile. MA NON TOCCARE !
+                    # 14 set 2022 se 5 sta molto sotto da 300 devi rischiare un po' di meno ! quindi 5-16 > 0.20
+                    
+                    
                     
                     
                     
