@@ -12414,14 +12414,15 @@ class maddog:
                         and ma78_last > ma300_last
                         and ma300_last < ma300_120_min_ago
                         and ma100_last > ma200_last
-                        and deviation_sell < -0.19
+                        and deviation_sell < -0.23
                         and ma2_last < ma2_2_min_ago
                     ):
                    
-                        sell = "SELL 1 > 110 min FORSE E' NECESSARA SOLO QUESTA 3 ! deviation_sell < -0.19 CON 78 > 300 - r 10621 a"
+                        sell = "SELL 1 > 110 min FORSE E' NECESSARA SOLO QUESTA 3 ! deviation_sell < -0.23 CON 78 > 300 - r 10621 a"
                         action = "sell"
                         
                         # > estate a -0.19 da 0.09
+                        # 17 set a -0.23 da -0.19
                         
                         
                         
@@ -13407,15 +13408,16 @@ class maddog:
                     
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and (ma3_prev > ma18_prev and ma3_last < ma18_last)
+                        and (ma3_prev > ma42_prev and ma3_last < ma42_last)
                         and deviation_sell > 0.91 and deviation_sell < 1.20
                         and ma2_last < ma2_2_min_ago
                    
                     ):
-                        sell = "SELL 2 (21-60 min) con ma50 > and incrocio 3-18 and deviation_sell 0.91 - 1.20 - r 11555"
+                        sell = "SELL 2 (21-60 min) con ma50 > and incrocio 3-42 and deviation_sell 0.91 - 1.20 - r 11555"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
+                        # 17 set 3-42 da 3-18
                         
                         
                         
