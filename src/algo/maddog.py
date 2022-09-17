@@ -18739,7 +18739,7 @@ class maddog:
             
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
-                and deviation_sell < -0.47
+                and deviation_sell < -0.57
                 
                 and deviation_ma100_sopra_ma200 > -0.70
                 and deviation_ma100_sopra_ma300 < 0.50
@@ -18750,12 +18750,12 @@ class maddog:
                 and ma2_last < ma2_2_min_ago
             ):
 
-                sell = "SELL cond. special 30 B - DOLCE ATTESA 270 sec con ma13 < E dev_sell < -0.43 CON 100 sopra 300 < 0.50 MA non e' situazione crollo - r 16694 b"
+                sell = "SELL cond. special 30 B - DOLCE ATTESA 270 sec con ma13 < E dev_sell < -0.43 CON 100 sopra 300 < 0.50 MA non e' situazione crollo - r 16694 B"
                 action = "sell"
              
                 # 4 feb 2022 con <-0.26 ha fatto -0.88% (dopo +4.29%)
                 # 7 feb 2022 con <-0.345 e 270 sec ha fatto -0.38% - aumenta a 0.355 ! - eventualmente ci pensa la condizione CROLLO IMPROVVISO CHE FUNZIONA !
-                
+                # 17 set -0.57 da -0.47
                 
                 
                 
