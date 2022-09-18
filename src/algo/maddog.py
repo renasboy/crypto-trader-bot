@@ -5619,6 +5619,8 @@ class maddog:
                     and deviation_ma5_sotto_ma300 > -0.59
                     
                     and deviation_buy2 > 0.07
+                    and deviation_ma3_sopra_ma10 > 0.11
+                    
                     and deviation_bellissima > 0.12
                     and deviation_ma13_sopra_ma25 > 0.06
                     and deviation_buy_ma3_sopra_ma13 > 0.09
@@ -5633,7 +5635,7 @@ class maddog:
                     
                     # deviation_buy_ma3_sopra_ma13 > x e' fondamentale !
                     # deviation_buy2 = ma8_last/ma50_last
-                    
+                    # 18 set aggiunta 3-10 ! 0.11
                     
                 
                 
@@ -14461,16 +14463,16 @@ class maddog:
 
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and (ma3_prev > ma15_prev and ma3_last < ma15_last)
+                        and (ma4_prev > ma42_prev and ma4_last < ma42_last)
                         and deviation_sell > 0.91 and deviation_sell < 1.49
                         and ma2_last < ma2_2_min_ago
                     ):
 
-                        sell = "SELL 2 dopo 110 min con ma50 > incrocio 3-15 and deviation_sell 0.91 - 1.49 - r 12557"
+                        sell = "SELL 2 dopo 110 min con ma50 > incrocio 4-42 and deviation_sell 0.91 - 1.49 - r 12557"
                         action = "sell"
 
-                        # ma 3-48 mi evita la ricompra e la rivendita con perdita !
-                        
+                        # evitare la ricompra e la rivendita con perdita !
+                        # 18 set 4-42 da 3-15
                     
                     
                     
