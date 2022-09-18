@@ -19081,7 +19081,6 @@ class maddog:
                         
                
             
-            
             # 43 - SELL condizione speciale FERRARI 
                     
             elif (     
@@ -19092,6 +19091,19 @@ class maddog:
                 and deviation_sell < -0.58
             ):
                 buy = "SELL condizione speciale 42 - FERRARI se > 2 min dal BUY FERRARI la perdita e' < -0.70 - r 16951"
+                action = "sell"
+                        
+                # and ma2_last < ma2_2_min_ago
+                
+                
+                
+            # 44 - SELL condizione speciale SELL PIU' SEMPLICE DEL MONDO ! -0.99 %
+                    
+            elif (     
+                
+                deviation_sell < -0.99
+            ):
+                buy = "SELL condizione speciale 44 - SELL PIU' SEMPLICE DEL MONDO ! -0.99 % - r 16956"
                 action = "sell"
                         
                 # and ma2_last < ma2_2_min_ago    
