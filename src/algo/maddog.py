@@ -19106,13 +19106,13 @@ class maddog:
                 
                 
                 
-            # 44 - SELL condizione speciale SELL PIU' SEMPLICE DEL MONDO ! -0.99 %
+            # 44 - SELL condizione speciale SELL PIU' SEMPLICE DEL MONDO ! -0.78 %
                     
             elif (     
                 
-                deviation_sell < -0.99
+                deviation_sell < -0.78
             ):
-                buy = "SELL condizione speciale 44 - SELL PIU' SEMPLICE DEL MONDO ! -0.99 % - r 16956"
+                buy = "SELL condizione speciale 44 - SELL PIU' SEMPLICE DEL MONDO ! -0.78 % - r 16956"
                 action = "sell"
                         
                 # and ma2_last < ma2_2_min_ago    
