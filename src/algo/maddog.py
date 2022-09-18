@@ -10749,11 +10749,13 @@ class maddog:
                         and ma100_last < ma100_60_min_ago
                         and ma100_last < ma100_30_min_ago
                         and (ma5_prev > ma100_prev and ma5_last < ma100_last)
-                        and deviation_sell < -0.29
+                        and deviation_sell < -0.33
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 (21-50 min) con ma50 < e 100< and INCROCIO 3-100 (no 3<100) CUSCINO DI SANT' ANTONIO and dev_sell < -0.29 - r 9174 B"
+                        sell = "SELL 1 (21-50 min) con ma50 < e 100< and INCROCIO 3-100 (no 3<100) CUSCINO DI SANT' ANTONIO and dev_sell < -0.33 - r 9174 B"
                         action = "sell"
+                        
+                        # 18 set -0.33 da -0.29
                         
                         
                         
@@ -12176,7 +12178,7 @@ class maddog:
                         and deviation_sell > 1.50 and deviation_sell < 2.70
                         and ma2_last < ma2_2_min_ago
                     ):    
-                        sell = "SELL 1 dopo 110 min con ma50 > incrocio 3-100 CON 100 sopra 300 > 0.40 and deviation_sell  1.50-2.70 DOPPIO PASSO RONALDO - r 10382 a"
+                        sell = "SELL 1 dopo 110 min con ma50 > incrocio 3-100 CON 100 sopra 300 > 0.40 and deviation_sell  1.50-2.70 DOPPIO PASSO RONALDO - r 10382 A"
                         action = "sell"
                         
                         # 3 set 2022 ma100 da ma48
@@ -12185,12 +12187,14 @@ class maddog:
                     elif (
                         ma50_last > ma50_2_min_ago
                         and deviation_ma100_sopra_ma300 < 0.40
-                        and (ma3_prev > ma30_prev and ma3_last < ma30_last)
+                        and (ma3_prev > ma50_prev and ma3_last < ma50_last)
                         and deviation_sell > 1.50 and deviation_sell < 2.70
                         and ma2_last < ma2_2_min_ago
                     ):    
-                        sell = "SELL 1 dopo 110 min con ma50 > incrocio 3-30 CON 100 sopra 300 <0.40 and deviation_sell  1.50-2.70 DOPPIO PASSO RONALDO - r 10393 b"
+                        sell = "SELL 1 dopo 110 min con ma50 > incrocio 3-30 CON 100 sopra 300 <0.40 and deviation_sell  1.50-2.70 DOPPIO PASSO RONALDO - r 10393 B"
                         action = "sell"
+                        
+                        # 18 set 3-50 da 3-30
                         
                         
                         
