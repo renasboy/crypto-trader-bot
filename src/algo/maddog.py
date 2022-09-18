@@ -10844,7 +10844,7 @@ class maddog:
                         action = "sell"
                         
                         
-                    # perdita tollerata SEMLICE
+                    # perdita tollerata SEMPLICE
                     
                     elif (    
                         ma50_last < ma50_2_min_ago
@@ -12368,7 +12368,7 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                         and deviation_ma100_sopra_ma300 > 0.30
                         
-                        and deviation_ma39 < -0.23
+                        and deviation_ma39 < -0.25
                         and deviation_trend_ma200 > -0.12
                         and ma200_last > ma300_last
                         and ma2_last < ma2_2_min_ago
@@ -12376,6 +12376,9 @@ class maddog:
                     ):
                         sell = "SELL 1 compa dopo 110 min con ma50 < and deviation_ma39 < -0.23  con > PERDITA TOLLERATA - r 10530"
                         action = "sell"
+                        
+                        # 18 set dev 39 -0.25 da -0.23
+                        
                         
                         
                     elif (    
