@@ -16181,18 +16181,32 @@ class maddog:
                         
                         
                         
-                        
                     elif (
                         ma50_last > ma50_2_min_ago
+                        and deviation_ma5_sotto_ma300 > 0.30
                         and (ma3_prev > ma42_prev and ma3_last < ma42_last)
                         and deviation_sell > 2.71
                         and ma2_last < ma2_2_min_ago
                     ):
 
-                        sell = "SELL 3 dopo 90 min con ma50 > incrocio 3-42 and deviation_sell > 2.71 - r 14223"
+                        sell = "SELL 3 dopo 90 min con ma50 > incrocio 3-42 and deviation_sell > 2.71 con 5-300 > 0.30 - r 14223 A"
                         action = "sell"
                         
                         # 18 set 2022 3-42 da 3-11
+                        
+                        
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and deviation_ma5_sotto_ma300 < 0.30
+                        and (ma3_prev > ma18_prev and ma3_last < ma18_last)
+                        and deviation_sell > 2.71
+                        and ma2_last < ma2_2_min_ago
+                    ):
+
+                        sell = "SELL 3 dopo 90 min con ma50 > incrocio 3-18 and deviation_sell > 2.71 SE 5-300 < 0.30 - r 14223 B"
+                        action = "sell"
+                        
+                        # 18 set 2022 3-18 da 3-11
                         
                  
                 
