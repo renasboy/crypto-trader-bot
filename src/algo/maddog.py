@@ -2063,44 +2063,21 @@ class maddog:
                     and ma100_last < ma200_last
                     and ma200_last < ma200_120_min_ago
                     
-                    and deviation_ma3_sopra_ma10 > 0.09
-                    and deviation_ma5_sopra_ma28 > 0.13
-                    
-                    and ma2_last > ma20_last
-                    and ma2_last > ma2_2_min_ago
-                ):    
-                    buy = "BUY 1 2 sett 2022 ore 5:03 maria callas casta diva bellini - ma300 5 ore che SALE E 300 60 min che SALE - r 1615 A1"
-                    action = "buy"
-                    percentage = 80
-                    
-                    # vedi che c'e' ma 300 5 ore che cresce
-                    
-                    
-                    
-                # BUY 1 2 sett 2022 ore 5:03 - maria callas casta diva bellini - ma300 che SALE
-                
-                elif (     
-                    ma5_last > ma69_last
-                    and deviation_ma50_sotto_ma300 < -0.29
-                    and deviation_ma78_sotto_ma300 < -0.20
-                    
-                    and ma300_last > ma300_301_min_ago
-                    and ma300_last < ma300_60_min_ago
-                    
-                    and ma100_last < ma200_last
-                    and ma200_last < ma200_120_min_ago
-                    
                     and deviation_ma3_sopra_ma10 > 0.11
                     and deviation_ma5_sopra_ma28 > 0.13
                     
                     and ma2_last > ma20_last
                     and ma2_last > ma2_2_min_ago
                 ):    
-                    buy = "BUY 1 2 sett 2022 ore 5:03 maria callas casta diva bellini - ma300 5 ore che SALE MA 300 60 min che SCENDE - r 1615 A2"
+                    buy = "BUY 1 2 sett 2022 ore 5:03 maria callas casta diva bellini - ma300 5 ore che SALE - r 1615 A"
                     action = "buy"
                     percentage = 80
                     
                     # vedi che c'e' ma 300 5 ore che cresce
+                    # 18 set 3-10 a 0.11 da 0.09
+                    
+                    
+                
                     
                     
                     
