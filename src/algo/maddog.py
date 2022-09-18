@@ -6524,10 +6524,8 @@ class maddog:
                 # BUY 2 che ci riprova TORNANDO ALLE ORIGINI (TREND RIBASSO !) con ma200< and ma300< AND 5 NON MOLTO SOTTO 300
                 
                 elif (
-                    deviation_buy2 > 0.06
-                    
-                    
-                    
+                    deviation_buy2 > 0.05
+              
                     and deviation_ma100_sopra_ma300 < -0.20
                     and deviation_ma5_sotto_ma300 > -0.70
                     and deviation_ma5_sopra_ma28 > 0.29
@@ -6543,7 +6541,7 @@ class maddog:
                     and ma300_last < ma300_120_min_ago
                 ):
                
-                    buy = "BUY 2 che ci riprova TORNANDO ALLE ORIGINI (TREND RIBASSO !) con ma200< and ma300< AND 5 NON MOLTO SOTTO 300 - r 5531a"
+                    buy = "BUY 2 che ci riprova TORNANDO ALLE ORIGINI (TREND RIBASSO !) con ma200< and ma300< AND 5 NON MOLTO SOTTO 300 - r 5531 A"
                     action = "buy"
                     percentage = 70
 
@@ -6553,7 +6551,7 @@ class maddog:
                     
                     # 9 giu 2022 dev_buy2 (8-50) a 0.06 da 0.08
                     # 9 giu 2022 dev_bellissima a 0.15 da 0.16
-                    
+                    # 16 set 2022 dev buy 2 0.05 da 0.06
                     
                     
                     
@@ -6579,7 +6577,7 @@ class maddog:
                     and ma300_last < ma300_120_min_ago
                 ):
                
-                    buy = "BUY 2 che ci riprova TORNANDO ALLE ORIGINI (TREND RIBASSO !) con ma200< and ma300< AND 5 molto sotto 300 - r 5531b"
+                    buy = "BUY 2 che ci riprova TORNANDO ALLE ORIGINI (TREND RIBASSO !) con ma200< and ma300< AND 5 molto sotto 300 - r 5531 B"
                     action = "buy"
                     percentage = 70
 
