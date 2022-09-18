@@ -10828,21 +10828,38 @@ class maddog:
                         
                         
                         
-                        
-                    # rafforzativo alla perdita tollerata
+                    # perdita tollerata DOPPIA
                     
                     elif (    
                         ma50_last < ma50_2_min_ago
+                        and ma125_last > ma300_last
                         and ma200_last > ma200_120_min_ago
                         and ma2_last < ma2_2_min_ago 
-                        and deviation_sell < -0.31
+                        and deviation_sell < -0.35
                         and deviation_trend_ma200 > -0.03
                         and ma200_last > ma300_last
-                        
-                        
+                       
                     ):
-                        sell = "SELL 1 compa (21-50 min) con ma50 < and deviation_sell < -0.31 con > PERDITA TOLLERATA RAFFORZATA (200> 120 min)  - r 9255"
+                        sell = "SELL 1 compa (21-50 min) con ma50 < and dev_sell < -0.35 con > perdita tollerata doppia (200> 120 min)- r 9255 A"
                         action = "sell"
+                        
+                        
+                    # perdita tollerata SEMLICE
+                    
+                    elif (    
+                        ma50_last < ma50_2_min_ago
+                        and ma125_last < ma300_last
+                        and ma200_last > ma200_120_min_ago
+                        and ma2_last < ma2_2_min_ago 
+                        and deviation_sell < -0.33
+                        and deviation_trend_ma200 > -0.03
+                        and ma200_last > ma300_last
+                    
+                    ):
+                        sell = "SELL 1 compa (21-50 min) con ma50 < and deviation_sell < -0.33 con > perdita tollerata semplice (200> 120 min) - r 9255 B"
+                        action = "sell"
+                        
+                        
                         
                         
                         
