@@ -4797,12 +4797,15 @@ class maddog:
                     # > estate 3-10 0.17 e 5-28 0.20 DOVEVO ALZARE IL BUY quando se ne va lateralmente dopo il crollo
                     
                     
-               
-                    
+                ##################################################################################### inizio esperimento ! 
+                
+                # messo 5-28 piu' alto nella prima condizione ( che mi copre )
+                # incrocio al rialzo e ma2 > ma2 2 min ago (che mi fa comprare al secondo tentativo)
+                
                 # BUY 1 CHE MANCAVA aggressiva - (SEMBRA pari al BUY DURANTE UN RIBASSO AUDI !)
                 
                 elif (
-                    deviation_ma5_sopra_ma28 > 0.05
+                    deviation_ma5_sopra_ma28 > 0.21
                     and deviation_ma3_sopra_ma10 > 0.12
                     
                     and ma100_last < ma200_last
@@ -4819,11 +4822,45 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                 
                 ):
-                    buy = "BUY 1 CHE MANCAVA aggressiva  (SEMBRA pari al BUY DURANTE UN RIBASSO AUDI !) 3-10 > 0.12 AND 5-28 > 0.05 - r 4166"
+                    buy = "BUY 1 CHE MANCAVA aggressiva  (SEMBRA pari al BUY DURANTE RIBASSO AUDI !) 3-10 > 0.12 AND 5-28 > 0.21 - r 4166 A"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # madonna compa che ti sei dimenticato di me !
+                    
+                    
+                    
+                    
+                # BUY 1 CHE MANCAVA aggressiva - (SEMBRA pari al BUY DURANTE UN RIBASSO AUDI !)
+                
+                elif (
+                    
+                    deviation_ma3_sopra_ma10 > 0.10
+                    and (ma5_prev < ma30_prev and ma5_last > ma30_last)
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and ma100_last < ma100_60_min_ago
+                    and ma200_last < ma200_60_min_ago
+                    and ma300_last < ma300_60_min_ago
+                   
+                    and deviation_ma8_sotto_ma100 < -0.70
+                    and deviation_ma8_sotto_ma200 < -1.10
+                    and deviation_ma8_sotto_ma300 < -1.30
+                    
+                    and ma2_last > ma2_2_min_ago
+                
+                ):
+                    buy = "BUY 1 CHE MANCAVA aggressiva esperimento ! incr 5-30 (SEMBRA pari al BUY DURANTE RIBASSO AUDI !) 3-10 > 0.12 AND 5-28 > 0.05 - r 4166 B"
                     action = "buy"
                     percentage = 80
                     
                     # madonna compa che ti sei dimenticato di me ! 
+                    # ESPERIMENTO !
+                    
+                    ############################################################################################################# fine esperimento
+                    
                     
                     
                  
