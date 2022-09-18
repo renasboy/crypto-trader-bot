@@ -18134,8 +18134,8 @@ class maddog:
             # 5 - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 > -1.00
             
             elif (
-                deviation_ma39 < -0.26
-                and deviation_sell < -0.37
+                deviation_ma39 < -0.255
+                and deviation_sell < -0.36
                 and ma2_last < ma2_2_min_ago 
                 
                 and ma50_last < ma50_2_min_ago
@@ -18143,14 +18143,14 @@ class maddog:
                 
                 and deviation_ma5_sotto_ma200 > -1.00
             ):
-                sell = "SELL condizione speciale 6 - SALVAGENTE 4 deviation 3-39 <-0.26 and dev <-0.37 - con ma50 < e con ma5 sotto ma200 > -1.00 - r 16047"
+                sell = "SELL condizione speciale 6 - SALVAGENTE 4 deviation 3-39 <-0.255 and dev <-0.36 - con ma50 < e con ma5 sotto ma200 > -1.00 - r 16047"
                 action = "sell"   
                 
 
                 # deviation_ma39 = ma4_last / ma39_last QUESTA HA VENDUTO NEL CROLLO IMPROVVISO DI 1 MINUTO (con -2.06% !!!)!
                 # modifica solo devation.
                 # > estate -0.37 da -0.33
-                
+                # 18 set HA FATTO -0.84 ! dev 39 -0.255 da 0.26 E dev sell -0.36 da 0.37
                 
                 
                 #########################################################################################################################
