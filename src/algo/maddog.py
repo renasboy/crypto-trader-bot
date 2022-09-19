@@ -17457,17 +17457,32 @@ class maddog:
                     
                     
                     
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and ma100_last < ma100_60_min_ago
+                        and ma300_last < ma300_120_min_ago
+                        
+                        and ma5_last < ma100_last
+                        and deviation_sell < -0.22
+                        and ma2_last < ma2_2_min_ago
+                        
+                    ):
+                        sell = "SELL 4-5-x (21-60 min) con ma50 > and 5-100 and dev_sell < -0.22 CUSCINO DELLA MADONNA se ma100 < E DE SANTO RENATO 300 < - r 15348"
+                        action = "sell"
+                        
+                        
+                    
                     
                     elif (    
                         ma50_last < ma50_2_min_ago
                         and ma50_last < ma100_last
                         
                         and ma2_last < ma2_2_min_ago 
-                        and deviation_sell < -0.28
+                        and deviation_sell < -0.32
                         and ma3_last < ma39_last
                         and ma200_last < ma200_60_min_ago
                     ):
-                        sell = "SELL 4-5-x (21-60 min) con ma50 < and deviation_sell < 0.28 - r 15349"
+                        sell = "SELL 4-5-x (21-60 min) con ma50 < and deviation_sell < -0.32 - r 15349"
                         action = "sell"
                         
                         
@@ -18066,7 +18081,7 @@ class maddog:
                         and deviation_sell < -0.21 
                         and ma3_last < ma39_last
                     ):
-                        sell = "SELL 4-5-x dopo 90 min con ma50 < and (deviation_sell < 0.10 and ma3_last < ma39_last) - r 15906"
+                        sell = "SELL 4-5-x dopo 90 min con ma50 < and (deviation_sell < -0.21 and ma3_last < ma39_last) - r 15906"
                         action = "sell"
                         
                     
@@ -18097,7 +18112,7 @@ class maddog:
             if (        
                 deviation_sell < -0.78
             ):
-                buy = "SELL condizione speciale 44 - SELL PIU' SEMPLICE DEL MONDO ! -0.78 % - r 16956"
+                buy = "SELL condizione speciale 44 - SELL PIU' SEMPLICE DEL MONDO ! -0.78 % - r 15942"
                 action = "sell"
                         
                 # and ma2_last < ma2_2_min_ago
