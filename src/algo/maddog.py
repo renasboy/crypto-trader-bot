@@ -9060,7 +9060,8 @@ class maddog:
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
                     
-                    and deviation_ma5_sopra_ma28 > 0.13
+                    and deviation_ma3_sopra_ma10 > 0.07
+                    and deviation_ma5_sopra_ma28 > 0.12
                     and ma2_last >= ma2_2_min_ago
                     
                 ):
@@ -9068,6 +9069,7 @@ class maddog:
                     action = "buy"
                     percentage = 90
                     
+                    # 19 set 2022 aggiunta 3-10 0.07 
                     
                     
                     
