@@ -1449,7 +1449,7 @@ class maddog:
                     ma20_last > ma200_last
                     and ma50_last > ma78_last
                     
-                    and deviation_ma3_sopra_ma10 > 0.06
+                    and deviation_ma3_sopra_ma10 > 0.07
                     
                     and ma28_last > ma28_20_min_ago
                     
@@ -1464,6 +1464,7 @@ class maddog:
                     action = "buy"
                     percentage = 80
                     
+                    # 19 set 2022 aggiunta 3-10 > 0.07
                     
                     
                 # ------------------------------------------------------------ BUY 1 RAFFORZATA se ma200> and ma300 > and 8>50 AND ma78 >
