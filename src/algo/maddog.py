@@ -18089,9 +18089,21 @@ class maddog:
             # SENZA and ma2_last < ma2_2_min_ago VENDE mentre ma4 si trova sotto il BUY !
             
             
-            # 1 - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 > -1.00
             
-            if (
+            # 1 - SELL condizione speciale SELL PIU' SEMPLICE DEL MONDO ! -0.78 %
+          
+            if (        
+                deviation_sell < -0.78
+            ):
+                buy = "SELL condizione speciale 44 - SELL PIU' SEMPLICE DEL MONDO ! -0.78 % - r 16956"
+                action = "sell"
+                        
+                # and ma2_last < ma2_2_min_ago
+                
+                
+            # 2 - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 > -1.00
+            
+            elif (
                 deviation_ma39 < -0.25
                 and deviation_sell < -0.32
                 and ma2_last < ma2_2_min_ago
@@ -18111,7 +18123,7 @@ class maddog:
                 
           
             
-            # 2 - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 > -1.00   
+            # 3 - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 > -1.00   
             
             elif (
                 deviation_ma39 < -0.25
@@ -19152,9 +19164,9 @@ class maddog:
                 action = "sell"
                         
                 # and ma2_last < ma2_2_min_ago
+                
+                
                         
-               
-            
             # 43 - SELL condizione speciale FERRARI 
                     
             elif (     
@@ -19171,16 +19183,33 @@ class maddog:
                 
                 
                 
-            # 44 - SELL condizione speciale SELL PIU' SEMPLICE DEL MONDO ! -0.78 %
-                    
-            elif (     
-                
-                deviation_sell < -0.78
+            # 44 SELL condizione speciale da RCCR ! IPOTESI PEGGIORE con ma50< con dev_ma39 < -0.225 and deviation_sell < -0.22 MA DOPPIO DELTA RIALZO 
+                     
+            elif (
+                ma50_last < ma50_2_min_ago
+                and ma3_last < ma300_last
+                and ma200_last < ma300_last
+                and deviation_trend_ma200 < -0.10
+                        
+                and deviation_ma39 < -0.225
+                and deviation_sell < -0.225
+                        
+                and rapporto_delta_1_delta_2 < 1
+                        
+                and ma2_last < ma2_2_min_ago
             ):
-                buy = "SELL condizione speciale 44 - SELL PIU' SEMPLICE DEL MONDO ! -0.78 % - r 16956"
+                sell = "SELL 1 da RCCR ! IPOTESI PEGGIORE con ma50< con dev_ma39 < -0.225 and deviation_sell < -0.225 MA DOPPIO DELTA RIALZO - r 16936"
                 action = "sell"
                         
-                # and ma2_last < ma2_2_min_ago    
+                # 19 SET r 10546 la condizione precedente ha fatto -1.65 ed e' partita insieme ad altre 2 condizioni speciali ! 
+                # quindi ho aggiunto questa importata SIA QUA CHE NELLE CONDIZIONI SPECIALI ( nuova condizione speciale )
+                # 19 set 2022 IMPORTATO DA RCCR > sell 4:18 del 19 set -1.65 % !
+                # 19 set 2022 deviation_ma39 < -0.22 AND and deviation_sell < -0.22
+                
+                
+                
+                
+               
                     
                 
                 
