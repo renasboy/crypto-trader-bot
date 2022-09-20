@@ -2097,7 +2097,7 @@ class maddog:
                     and deviation_ma50_sotto_ma300 < -0.29
                     and deviation_ma78_sotto_ma300 < -0.23
                     
-                    and deviation_ma78_sotto_ma200 > -0.30
+                    
                     
                     and ma300_last < ma300_301_min_ago
                     
@@ -2120,32 +2120,7 @@ class maddog:
                     
                     
                     
-                # BUY 1 2 sett 2022 ore 5:03 - maria callas core 'ngrato - ma300 che SCENDE
                 
-                elif (     
-                    ma5_last > ma69_last
-                    and deviation_ma50_sotto_ma300 < -0.29
-                    and deviation_ma78_sotto_ma300 < -0.23
-                    
-                    and deviation_ma78_sotto_ma200 < -0.30
-                    
-                    and ma300_last < ma300_301_min_ago
-                    
-                    and ma100_last < ma200_last
-                    and ma200_last < ma200_120_min_ago
-                    
-                    and deviation_ma3_sopra_ma10 > 0.09
-                    and deviation_ma5_sopra_ma28 > 0.12
-                    
-                    and ma2_last >= ma20_last
-                    and ma2_last >= ma2_2_min_ago
-                ):    
-                    buy = "BUY 1 2 sett 2022 ore 5:03 maria callas core 'ngrato - ma300 che SCENDE - r 1615 B2"
-                    action = "buy"
-                    percentage = 80
-                    
-                    # vedi che c'e' ma 300 che scende
-                    # 19 set 2022 ho anticipato maria callas core ngrato di una ndecchiecella
                     
                     
                     
