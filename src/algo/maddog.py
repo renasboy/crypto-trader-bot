@@ -1425,9 +1425,10 @@ class maddog:
                     ma300_last > ma300_120_min_ago
                     and ma200_last < ma300_last
                     and ma5_last < ma300_last
-                    
                     and ma5_last > ma100_last
-                  
+                    
+                    and deviation_ma3_sopra_ma10 > 0.11
+                    
                     and ma200_last < ma200_60_min_ago
                     and ma100_last < ma100_60_min_ago
               
@@ -1437,6 +1438,8 @@ class maddog:
                     buy = "BUY 1 quando incomincia il ribasso MA ma300> MA 200<300 CON 5 SOTTO 300 ! E COMPRA CON 5 SOPRA 100 ! - r 1184 B1"
                     action = "buy"
                     percentage = 90
+                    
+                    # 20 set 2022 aggiunto 3-10 > 0.11
                     
                     
                     
@@ -2000,29 +2003,29 @@ class maddog:
                 # BUY 1 tempo FINE AUTUNNO PRECEDENTE (quasi inverno !)
                 
                 elif (     
-                    ma8_last > ma56_last
+                    ma8_last > ma50_last
                     and ma78_last > ma100_last
                     
                     and ma200_last < ma200_120_min_ago
                     and ma100_last < ma200_last
                     
-                    and ma30_last > ma30_30_min_ago
-                    
-                    
+                    and ma30_last >= ma30_30_min_ago
+                
                     and deviation_ma3_sopra_ma10 > 0.10
                     and deviation_ma5_sopra_ma28 > 0.15
-                    and deviation_bellissima > 0.06
+                    and deviation_bellissima > 0.05
                
                     and ma20_last > ma20_2_min_ago
                     and ma5_last > ma5_2_min_ago
                     and ma2_last > ma20_last
                     and ma2_last > ma2_2_min_ago
                 ):    
-                    buy = "BUY 1 PERICOLOSA 78>100 tempo FINE AUTUNNO (quasi inverno) con 50-78 considera passare del tempo CON 3-10>0.10 con 5-28 > 0.15 - r 1614 a"
+                    buy = "BUY 1 pericolosa MA 78 > 100 tempo FINE AUTUNNO (quasi inverno) che considera passare tempo E CON 3-10 > 0.10 con 5-28 > 0.15 - r 1614 a"
                     action = "buy"
                     percentage = 80
                     
                     # 28 GIU 2022 HO TOLTO 11-125 e sono tornato alle origini con 8-56 !
+                    # 20 set 8-50 da 8-56
                     
                     
                 # BUY 1 tempo FINE AUTUNNO PRECEDENTE (quasi inverno !)
@@ -19205,7 +19208,7 @@ class maddog:
                 and deviation_ma100_sopra_ma300 < -0.70
                 and deviation_sell < -0.58
             ):
-                buy = "SELL condizione speciale 42 - FERRARI se > 2 min dal BUY FERRARI la perdita e' < -0.70 - r 16951"
+                buy = "SELL condizione speciale 42 - FERRARI se > 2 min dal BUY FERRARI la perdita e' < -0.70 - r 16935"
                 action = "sell"
                         
                 # and ma2_last < ma2_2_min_ago
@@ -19221,20 +19224,21 @@ class maddog:
                 and deviation_trend_ma200 < -0.10
                         
                 and deviation_ma39 < -0.225
-                and deviation_sell < -0.225
+                and deviation_sell < -0.23
                         
                 and rapporto_delta_1_delta_2 < 1
                         
                 and ma2_last < ma2_2_min_ago
             ):
-                sell = "SELL 1 da RCCR ! IPOTESI PEGGIORE con ma50< con dev_ma39 < -0.225 and deviation_sell < -0.225 MA DOPPIO DELTA RIALZO - r 16936"
+                sell = "SELL 1 da RCCR ! IPOTESI PEGGIORE con ma50< con dev_ma39 < -0.225 and deviation_sell < -0.23 MA DOPPIO DELTA RIALZO - r 16936"
                 action = "sell"
                         
-                # 19 SET r 10546 la condizione precedente ha fatto -1.65 ed e' partita insieme ad altre 2 condizioni speciali ! 
-                # quindi ho aggiunto questa importata SIA QUA CHE NELLE CONDIZIONI SPECIALI ( nuova condizione speciale )
+                # 19 SET r 10546 la condizione precedente ha fatto -1.65 ed e' partita insieme ad altre 2 condizioni speciali !
+                
+                # quindi, ho aggiunto questa condizione importata da RCCR SIA QUA CHE NELLE CONDIZIONI SPECIALI ( nuova condizione speciale )
                 # 19 set 2022 IMPORTATO DA RCCR > sell 4:18 del 19 set -1.65 % !
                 # 19 set 2022 deviation_ma39 < -0.22 AND and deviation_sell < -0.22
-                
+                # 20 set 2022 ho aumentato SOLO LA dev sella a -0.23 !
                 
                 
                 
