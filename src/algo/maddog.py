@@ -459,6 +459,11 @@ class maddog:
         self.algo_helper.info("deviation_ma78_sotto_ma300: {}".format(deviation_ma78_sotto_ma300))
         
         
+        # formula DEVIATION_ma78_sotto_ma200
+        
+        deviation_ma78_sotto_ma200 = (ma78_last / ma200_last - 1) * 100 if ma200_last else 0
+        self.algo_helper.info("deviation_ma78_sotto_ma200: {}".format(deviation_ma78_sotto_ma200))
+        
         
         
         
