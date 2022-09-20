@@ -4827,7 +4827,7 @@ class maddog:
                 
                 elif (
                     ma5_last < ma33_last
-                    and deviation_ma3_sopra_ma10 > 0.09
+                    and deviation_ma3_sopra_ma10 > 0.085
                     
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
@@ -4843,13 +4843,13 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                 
                 ):
-                    buy = "BUY 1 CHE MANCAVA aggressiva 5-33 (SEMBRA pari al BUY DURANTE RIBASSO AUDI !) 3-10 > 0.09 - r 4166"
+                    buy = "BUY 1 CHE MANCAVA aggressiva 5-33 (pari al BUY AUDI !) 3-10 > 0.09 - r 4166"
                     action = "buy"
                     percentage = 80
                     
                     # madonna compa che ti sei dimenticato di me !
-                    # 18 set 5-33 e 3-10 > 0.09
-                
+                    # 18 set 5-33 e 3-10 > 0.085
+                    # 20 set 3-10 > 0.085 da 0.09
                 
                 
             
@@ -10950,7 +10950,7 @@ class maddog:
                     elif (
                         ma50_last < ma50_2_min_ago
                         and (ma5_prev > ma33_prev and ma5_last < ma33_last)
-                        and deviation_sell < 0.01
+                        and deviation_sell < -0.10
                         
                         and ma100_last < ma200_last
                         and ma200_last < ma300_last
@@ -10968,13 +10968,16 @@ class maddog:
                         
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 eventuale guadagno ANZI NON PERDITA dopo BUY AUDI E crollo SUCCESSIVO (21-50 min) - r 9312"
+                        sell = "SELL 1 eventuale guadagno ANZI NON GRANDE PERDITA dopo BUY AUDI E crollo SUCCESSIVO (21-50 min) - r 9312"
                         action = "sell"
                         
                         # in questa circostanza drammatica di crollo AUDI INTANTO TE LI PRENDI poi, eventualmente, ci pensa BUY 2
                         
                         # deviation 100 laterale =5/100 >-1.00 significa che questa condizione NON non interviene E' UNA SITUAZIONE DI CROLLO !
                         # si interviene solo nella fascia di mezza cottura ! 
+                        # 20 set 2022 dev sell -0.10 da 0.01
+                        
+                        
                         
                         
                     # -------------------------------------------------------------------------------------- guadagno durante il crollo LEGGERO
