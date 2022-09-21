@@ -2105,7 +2105,7 @@ class maddog:
                     and deviation_ma50_sotto_ma300 < -0.29
                     and deviation_ma78_sotto_ma300 < -0.23
                     and deviation_ma78_sotto_ma200 < -0.30
-                    
+                    and deviation_ma5_sotto_ma300 < -0.60
                     
                     and ma300_last < ma300_301_min_ago
                     
@@ -2118,7 +2118,7 @@ class maddog:
                     and ma2_last >= ma20_last
                     and ma2_last >= ma2_2_min_ago
                 ):    
-                    buy = "BUY 1 2 sett 2022 ore 5:03 maria callas core 'ngrato - ma300 che SCENDE - r 1615 B"
+                    buy = "BUY 1 5 sotto 300 < -0.60 - 2 sett 2022 ore 5:03 maria callas core 'ngrato - ma300 che SCENDE - r 1615 B"
                     action = "buy"
                     percentage = 80
                     
