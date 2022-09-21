@@ -2317,26 +2317,7 @@ class maddog:
                     
                     
                     
-                # BUY 1 piccola CORREZIONE FIAT CHE FA PAURA ! ( ma la ma100 E' ANCORA VICINA alla ma300 !) NON TOCCARE 5-28 > 0.10 !
-                # ( E ANCHE la ma25 deve stare un po' distante dalla 300 !!! )
                 
-                elif (
-                    deviation_buy_crollo_1 < -0.29
-                    and deviation_buy_crollo_1 > -0.59
-                    and deviation_ma5_sotto_ma300 < -0.65
-                    and deviation_correzione > 0.03
-                    and deviation_ma5_sopra_ma28 > 0.05
-                    and deviation_ma100_sopra_ma300 > -0.30
-                    and deviation_ma25_sotto_ma300 < -0.60
-                    and ma2_last > ma2_2_min_ago
-                ):
-                    buy = "BUY 1 CORREZIONE FIAT 5-300 < -0.65 cazzo! (MA ma100 E' ANCORA VICINA alla ma300) (E CON ma25 un po' distante dalla ma300) - riga 1794"
-                    action = "buy"
-                    percentage = 40
-                    
-                    # deviation_ma100_sopra_ma300 significa 100/300 ( ma100 ancora NON SI E' ALLONTANATA TROPPO DALLA ma300 )
-                    # deviation_ma25_sotto_ma300 significa che anche ma25 deve andare almeno un po' sotto ma300 (per evitare piccole schegge rialziste !)
-                    # NON TOCCARE 5-28 > 0.05 !
                     
                     
                     
@@ -3049,7 +3030,7 @@ class maddog:
                 
                 
              
-                # BUY 1 piccola CORREZIONE FIAT = r 995 RCCR medie mobili lunghe TUTE IN RIALZO ! ma si verifica una correzione fiat !
+                # BUY 1 piccola CORREZIONE FIAT = r 995 RCCR medie mobili lunghe TUTTE IN RIALZO ! ma si verifica una correzione fiat !
                 
                 elif (
                     ma3_last > ma25_last
