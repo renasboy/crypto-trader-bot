@@ -15802,7 +15802,7 @@ class maddog:
                         and ma2_last < ma2_2_min_ago 
                         and deviation_sell < -0.34
                     ):
-                        sell = "SELL 3 (21-60 min) con ma50 < and ma300> and deviation_sell < -0.34 CON 78>100 - r 13701 A"
+                        sell = "SELL 3 (21-60 min) con ma50 < and ma300> and deviation_sell < -0.34 CON 78>100 - r 13713 A"
                         action = "sell"
                         
                         
@@ -18305,7 +18305,7 @@ class maddog:
                 # deviation_ma39 = ma4_last / ma39_last QUESTA HA VENDUTO NEL CROLLO IMPROVVISO DI 1 MINUTO (con -2.06% !!!)!
                 # modifica solo devation.
                 # > estate -0.37 da -0.33
-                # 18 set HA FATTO -0.84 ! dev 39 -0.255 da 0.26 E dev sell -0.36 da 0.37
+                # 18 set HA FATTO -0.84 ! dev 39 -0.255 da 0.26 E dev sell -0.36 da -0.37
                 
                 
                 #########################################################################################################################
