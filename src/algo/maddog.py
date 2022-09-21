@@ -10132,16 +10132,16 @@ class maddog:
                         ma50_last < ma50_2_min_ago
                         and deviation_ma5_sotto_ma300 < -0.40
                         and (ma3_prev > ma36_prev and ma3_last < ma36_last)
-                        and deviation_sell < -0.325
+                        and deviation_sell < -0.335
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 torna a casa durante il crollo con minor danno  (12-21 min) con ma50 < and incrocio 3-36 and dev_sell < -0.325 - r 8551"
+                        sell = "SELL 1 torna a casa durante il crollo con minor danno  (12-21 min) con ma50 < and incrocio 3-36 and dev_sell < -0.335 - r 8551"
                         action = "sell"
                         
                         #  1 giugno 2022 -0.27 da -0.25
                         # 21 lug 2022 -0.30 da -0.27
                         #  3 set 2022 -0.325 da -0.30
-                        
+                        # 21 set 2022 -0.335 da -0.325
                         
                 
                 
