@@ -17342,22 +17342,46 @@ class maddog:
                     
                     ###################################################### and rapporto_delta_1_delta_2 > 1 AND 100> SORGERE
                     
+                    
                     elif (
                         ma50_last >= ma50_2_min_ago
                         
                         
                         and delta_1 < delta_2
                         and ma100_last > ma100_60_min_ago
+                        and ma300_last > ma300_120_min_ago
+                        
+                        and (ma5_prev > ma100_prev and ma5_last < ma100_last)
+                        and deviation_sell > 0.25 and deviation_sell < 0.56
+                        and ma2_last < ma2_2_min_ago
+                   
+                    ):
+                        sell = "SELL 4-5-x (21-60 min) 300 > 120 min ago e con ma50 > and incr 5-25 and dev_sell 0.25 - 0.56 - GIORNO - FINTA MARADONA - r 15110 A"
+                        action = "sell"
+                        
+                        # deviation_sell = ma3_last/last_trade_price
+                        # 22 set se 300 > 120 min ago 5-100 !
+                        
+                        
+                    elif (
+                        ma50_last >= ma50_2_min_ago
+                        
+                        
+                        and delta_1 < delta_2
+                        and ma100_last > ma100_60_min_ago
+                        and ma300_last < ma300_120_min_ago
                         
                         and (ma5_prev > ma25_prev and ma5_last < ma25_last)
                         and deviation_sell > 0.25 and deviation_sell < 0.56
                         and ma2_last < ma2_2_min_ago
                    
                     ):
-                        sell = "SELL 4-5-x (21-60 min) con ma50 > and incrocio 5-25 and deviation_sell 0.25 - 0.56 - GIORNO - FINTA MARADONA - r 15110"
+                        sell = "SELL 4-5-x (21-60 min) 300 < 120 min ago e con ma50 > and incr 5-25 and dev_sell 0.25 - 0.56 - GIORNO - FINTA MARADONA - r 15110 B"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
+                        
+                        
                         
                         
                         
