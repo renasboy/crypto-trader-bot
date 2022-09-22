@@ -7209,17 +7209,19 @@ class maddog:
                     
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.11
                     and deviation_ma5_sopra_ma28 > 0.13
                     and deviation_buy_ma5_sopra_ma20 > 0.01
                     
                     and ma2_last > ma2_2_min_ago
                 ):    
-                    buy = "BUY 2 ULTIMA CONDIZIONE ! ma tutte negative MA 50 > 100 (integra r2505) con 78>100 - r 5980a"
+                    buy = "BUY 2 ULTIMA CONDIZIONE ! ma tutte negative MA 50 > 100 (integra r2505) con 78>100 - r 5980 A"
                     action = "buy"
                     percentage = 70
                     
                     # aggiunta di 5-28 > 0.12
-                    
+                    # 22 set aggiunta di 3-10 > 0.11
                     
                     
                 # BUY 2 ultima condizione ! ma tutte negative MA BUY con 50-100 (integra r2505)
