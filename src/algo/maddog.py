@@ -3661,9 +3661,12 @@ class maddog:
                     
                     and deviation_buy_crollo_1 < -0.70
                     and deviation_buy_crollo_1 > -0.90
+                    
+                    and deviation_ma3_sopra_ma10 > 0.09
+                    and deviation_ma5_sopra_ma28 > 0.01
                   
                 ):
-                    buy = "BUY 1 grande CORREZIONE AUDI che NON E' un grande ribasso MASERATI e NON E' un crollo FERRARI ! con deviation trend ma200 - r 3043"
+                    buy = "BUY 1 AUDI che NON E' un grande ribasso MASERATI e NON E' un crollo FERRARI ! con deviation trend ma200 - r 3043"
                     action = "buy"
                     percentage = 80
                     
@@ -3673,7 +3676,7 @@ class maddog:
                     # compare prega per me !
                     
                     # and deviation_correzione_1 > -0.01 significa una ndecchia prima di 5-30 !
-                
+                    # 22 set aggiunte 3-10 e 5-28
                 
                 ######################################################################################################
                 ###################################################################################################### attenzione qui applico il doppio delta !
@@ -4855,7 +4858,9 @@ class maddog:
                 
                 elif (
                     ma5_last < ma33_last
+                    
                     and deviation_ma3_sopra_ma10 > 0.085
+                    and deviation_ma5_sopra_ma28 > 0.11
                     
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
@@ -4871,14 +4876,14 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                 
                 ):
-                    buy = "BUY 1 CHE MANCAVA aggressiva 5-33 (pari al BUY AUDI !) 3-10 > 0.09 - r 4166"
+                    buy = "BUY 1 pari al BUY AUDI CHE MANCAVA ! con 5-33 () 3-10 > 0.085 e 5-28 0.11 - r 4166"
                     action = "buy"
                     percentage = 80
                     
                     # madonna compa che ti sei dimenticato di me !
                     # 18 set 5-33 e 3-10 > 0.085
                     # 20 set 3-10 > 0.085 da 0.09
-                
+                    # 22 set ho aggiunto 5-28 > 0.11
                 
             
                 # BUY 1 con con 200 > 200 20 min ago (100 < and 200 < MA 300 >)
@@ -11312,6 +11317,11 @@ class maddog:
                   
                         # ma ricordati che in diverse occasioni 3-48 mi ha evitato la ricompra e la rivendita conseguente con perdita !
                     
+                    
+                    
+                    
+                    
+                        
                         
                         
                     # SELL 1 da 50 a 90 min DOPPIO PASSO ALLA RONALDO 1 (se 50-200 > 0.30 stai un po' piu' tranquillo)
