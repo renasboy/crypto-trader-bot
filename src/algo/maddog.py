@@ -17356,7 +17356,7 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                    
                     ):
-                        sell = "SELL 4-5-x (21-60 min) 300 > 120 min ago e con ma50 > and incr 5-25 and dev_sell 0.25 - 0.56 - GIORNO - FINTA MARADONA - r 15110 A"
+                        sell = "SELL 4-5-x (21-60 min) 300 > 120 min ago e con ma50 > and incr 5-100 and dev_sell 0.25 - 0.56 - GIORNO - FINTA MARADONA - r 15110 A"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
@@ -17371,12 +17371,12 @@ class maddog:
                         and ma100_last > ma100_60_min_ago
                         and ma300_last < ma300_120_min_ago
                         
-                        and (ma5_prev > ma25_prev and ma5_last < ma25_last)
+                        and (ma5_prev > ma33_prev and ma5_last < ma33_last)
                         and deviation_sell > 0.25 and deviation_sell < 0.56
                         and ma2_last < ma2_2_min_ago
                    
                     ):
-                        sell = "SELL 4-5-x (21-60 min) 300 < 120 min ago e con ma50 > and incr 5-25 and dev_sell 0.25 - 0.56 - GIORNO - FINTA MARADONA - r 15110 B"
+                        sell = "SELL 4-5-x (21-60 min) 300 < 120 min ago e con ma50 > and incr 5-33 and dev_sell 0.25 - 0.56 - GIORNO - FINTA MARADONA - r 15110 B"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
@@ -17387,25 +17387,47 @@ class maddog:
                         
                     ##################################################################### and rapporto_delta_1_delta_2 < 1 tramonto
                     
+                    
                     elif (
                         ma50_last >= ma50_2_min_ago
-                        
-                        
+                   
                         and delta_1 > delta_2
                         and ma100_last > ma100_60_min_ago
+                        and ma300_last > ma300_120_min_ago
                         
                         and deviation_ma100_sopra_ma200 > -0.10
-                        and (ma3_prev > ma50_prev and ma3_last < ma50_last)
+                        and (ma4_prev > ma100_prev and ma4_last < ma100_last)
                         and deviation_sell > 0.25 and deviation_sell < 0.56
                         and ma2_last < ma2_2_min_ago
                    
                     ):
-                        sell = "SELL 4-5-x (21-60 min) con ma50> and incrocio 5-25 and dev_sell 0.25-0.56 FINTA MARADONA -CREPUSCOLO - r 15132"
+                        sell = "SELL 4-5-x (21-60 min) con ma50> and incrocio 4-100 and dev_sell 0.25-0.56 FINTA MARADONA -CREPUSCOLO - r 15132 A"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
                         # 100 deve stare sopra 200 per non vendere con ma50 durante il crollo.
+                        # # 22 set se 300 > 120 min ago 5-100 !
                         
+                        
+                    elif (
+                        ma50_last >= ma50_2_min_ago
+                   
+                        and delta_1 > delta_2
+                        and ma100_last > ma100_60_min_ago
+                        and ma300_last < ma300_120_min_ago
+                        
+                        and deviation_ma100_sopra_ma200 > -0.10
+                        and (ma4_prev > ma50_prev and ma4_last < ma50_last)
+                        and deviation_sell > 0.25 and deviation_sell < 0.56
+                        and ma2_last < ma2_2_min_ago
+                   
+                    ):
+                        sell = "SELL 4-5-x (21-60 min) con ma50> and incrocio 4-50 and dev_sell 0.25-0.56 FINTA MARADONA -CREPUSCOLO - r 15132 B"
+                        action = "sell"
+                        
+                        # deviation_sell = ma3_last/last_trade_price
+                        # 100 deve stare sopra 200 per non vendere con ma50 durante il crollo.
+                        # # 22 set se 300 > 120 min ago 4-50 !
                         
                         
                         
