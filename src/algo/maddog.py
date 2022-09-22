@@ -10015,15 +10015,32 @@ class maddog:
                     
                     # RAFFORZATO DA 100>300
                     
+                    
                     elif (
                         ma50_last < ma50_2_min_ago
                         and ma100_last > ma300_last
+                        and ma300_last > ma300_120_min_ago
+                        and deviation_ma39 < -0.16
+                        and deviation_sell < -0.38
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 1 (12-21 min) RAFFORZATO con 300 > 120 min ago e con ma50 < and deviation_ma39 < -0.16 and deviation_sell < -0.38 - r 8431 A"
+                        action = "sell"
+                        
+                        # 22 set dev sell -0.38 da -0.36
+                        
+                        
+                        
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and ma100_last > ma300_last
+                        and ma300_last < ma300_120_min_ago
                         
                         and deviation_ma39 < -0.16
                         and deviation_sell < -0.36
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 (12-21 min) RAFFORZATO con ma50 < and deviation_ma39 < -0.16 and deviation_sell < -0.36 - r 8431"
+                        sell = "SELL 1 (12-21 min) RAFFORZATO ma 300 < 120 min ago e con ma50 < and deviation_ma39 < -0.16 and deviation_sell < -0.36 - r 8431 B"
                         action = "sell"
                         
                         
