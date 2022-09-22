@@ -2220,9 +2220,10 @@ class maddog:
                     ma200_last < ma200_20_min_ago
                     and ma11_last > ma125_last
                     and ma2_last > ma2_2_min_ago
-                    and deviation_ma5_sopra_ma28 > 0.15
                     
-                    
+                    and deviation_ma3_sopra_ma10 > 0.07
+                    and deviation_ma5_sopra_ma28 > 0.12
+                 
                     and delta_1 < delta_2
                     and ma100_last > ma100_60_min_ago
                     
@@ -2238,7 +2239,8 @@ class maddog:
                     # MA HO DOVUTO AGGIUNGERE and deviation_ma5_sopra_ma28 > 0.20
                     
                     # 14 giu 2022 11-125 da 11-150 (giorno!)
-                    
+                    # 22 set 2022 aggiunto 3-10 0.07
+                    # 22 set 2022 5-28 > 0.12
                     
                     
                     
