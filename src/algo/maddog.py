@@ -11309,42 +11309,43 @@ class maddog:
                     elif (
                         ma50_last > ma50_2_min_ago
                         and deviation_ma5_sotto_ma300 > 0.40
-                        and (ma3_prev > ma30_prev and ma3_last < ma30_last)
+                        and (ma5_prev > ma48_prev and ma5_last < ma48_last)
                         and deviation_sell > 0.91 and deviation_sell < 1.49
                         and ma2_last < ma2_2_min_ago
                     ):    
-                        sell = "SELL 1 da 50 a 90 min con ma50 > and incrocio 3-30 and deviation_sell 0.91 - 1.49 RABONA DI RONALDO  5-300 > 0.40 - r 9543 A"
+                        sell = "SELL 1 da 50 a 90 min con ma50 > and incrocio 5-48 and deviation_sell 0.91 - 1.49 RABONA DI RONALDO  5-300 > 0.40 - r 9543 A"
                         action = "sell"
                   
-                        # ma ricordati che in diverse occasioni 3-48 mi ha evitato la ricompra e la rivendita conseguente con perdita !
+                        # ricordati che in diverse occasioni 3-48 mi ha evitato la ricompra e la rivendita conseguente con perdita !
+                    
                     
                     
                     elif (
                         ma50_last > ma50_2_min_ago
                         and deviation_ma5_sotto_ma300 < 0.40
                         and deviation_ma5_sotto_ma300 > 0.01
-                        and (ma3_prev > ma30_prev and ma3_last < ma30_last)
+                        and (ma3_prev > ma33_prev and ma3_last < ma33_last)
                         and deviation_sell > 0.91 and deviation_sell < 1.49
                         and ma2_last < ma2_2_min_ago
                     ):    
-                        sell = "SELL 1 da 50 a 90 min con ma50 > and incrocio 3-30 and deviation_sell 0.91 - 1.49 RABONA DI RONALDO  5-300 0.01 - 0.40 - r 9543 B"
+                        sell = "SELL 1 da 50 a 90 min con ma50 > and incrocio 3-33 and deviation_sell 0.91 - 1.49 RABONA DI RONALDO  5-300 0.01 - 0.40 - r 9543 B"
                         action = "sell"
                   
-                        # ma ricordati che in diverse occasioni 3-48 mi ha evitato la ricompra e la rivendita conseguente con perdita !
+                        # ricordati che in diverse occasioni 3-48 mi ha evitato la ricompra e la rivendita conseguente con perdita !
                     
                     
                     elif (
                         ma50_last > ma50_2_min_ago
                         and deviation_ma5_sotto_ma300 < 0.01
                         and deviation_ma5_sotto_ma300 > -2.00
-                        and (ma3_prev > ma30_prev and ma3_last < ma30_last)
+                        and (ma4_prev > ma48_prev and ma4_last < ma48_last)
                         and deviation_sell > 0.91 and deviation_sell < 1.49
                         and ma2_last < ma2_2_min_ago
                     ):    
-                        sell = "SELL 1 da 50 a 90 min con ma50 > and incrocio 3-30 and deviation_sell 0.91 - 1.49 RABONA DI RONALDO 5-300 -2.00 - 0.01 - r 9543 C"
+                        sell = "SELL 1 da 50 a 90 min con ma50 > and incrocio 4-48 and deviation_sell 0.91 - 1.49 RABONA DI RONALDO 5-300 -2.00 - 0.01 - r 9543 C"
                         action = "sell"
                   
-                        # ma ricordati che in diverse occasioni 3-48 mi ha evitato la ricompra e la rivendita conseguente con perdita !
+                        # ricordati che in diverse occasioni 3-48 mi ha evitato la ricompra e la rivendita conseguente con perdita !
                     
                     
                     
@@ -11352,14 +11353,14 @@ class maddog:
                         ma50_last > ma50_2_min_ago
                         
                         and deviation_ma5_sotto_ma300 < -2.00
-                        and (ma3_prev > ma30_prev and ma3_last < ma30_last)
+                        and (ma3_prev > ma33_prev and ma3_last < ma33_last)
                         and deviation_sell > 0.91 and deviation_sell < 1.49
                         and ma2_last < ma2_2_min_ago
                     ):    
-                        sell = "SELL 1 da 50 a 90 min con ma50 > and incrocio 3-30 and deviation_sell 0.91 - 1.49 RABONA DI RONALDO 5-300 < -2.00 - r 9543 D"
+                        sell = "SELL 1 da 50 a 90 min con ma50 > and incrocio 3-33 and deviation_sell 0.91 - 1.49 RABONA DI RONALDO 5-300 < -2.00 - r 9543 D"
                         action = "sell"
                   
-                        # ma ricordati che in diverse occasioni 3-48 mi ha evitato la ricompra e la rivendita conseguente con perdita !
+                        # ricordati che in diverse occasioni 3-48 mi ha evitato la ricompra e la rivendita conseguente con perdita !
                     
                     
                     
