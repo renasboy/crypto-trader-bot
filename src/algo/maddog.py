@@ -14451,15 +14451,31 @@ class maddog:
                         
                         
                     
-                    
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and (ma3_prev > ma22_prev and ma3_last < ma22_last)
+                        and deviation_ma5_sotto_ma300 > 0.40
+                        and (ma4_prev > ma50_prev and ma4_last < ma50_last)
                         and deviation_sell > 0.91 and deviation_sell < 1.49
                         and ma2_last < ma2_2_min_ago
                     ):
 
-                        sell = "SELL 2 90-110 min con ma50 > incrocio 3-22 and deviation_sell 0.91 - 1.49 - r 12328"
+                        sell = "SELL 2 90-110 min con 5-300 > 0.40 e con ma50 > incrocio 4-50 and deviation_sell 0.91 - 1.49 - r 12328 A"
+                        action = "sell"
+
+                        # ma 3-48 mi evita la ricompra e la rivendita con perdita !
+                        # ma 3-15 vendeva troppo presto. guardando il grafico da piu' lontano.
+                        
+                        
+                        
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and deviation_ma5_sotto_ma300 < 0.40
+                        and (ma3_prev > ma33_prev and ma3_last < ma33_last)
+                        and deviation_sell > 0.91 and deviation_sell < 1.49
+                        and ma2_last < ma2_2_min_ago
+                    ):
+
+                        sell = "SELL 2 90-110 min con 5-300 < 0.40 e con ma50 > incrocio 3-33 and deviation_sell 0.91 - 1.49 - r 12328 B"
                         action = "sell"
 
                         # ma 3-48 mi evita la ricompra e la rivendita con perdita !
