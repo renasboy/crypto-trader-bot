@@ -17552,18 +17552,55 @@ class maddog:
                         
                       
                     
-
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and ma3_last < ma20_last
+                        and deviation_ma5_sotto_ma300 > 1.20
+                        and ma5_last < ma100_last
                         and deviation_sell > 0.91 and deviation_sell < 1.40
                         and ma2_last < ma2_2_min_ago
                        
                     ):
-                        sell = "SELL 4-5-x (21-60 min) con ma50 > and 3-20 and deviation_sell 0.91 - 1.40 - r 15236"
+                        sell = "SELL 4-5-x (21-60 min) con 5-300 > 1.20 E con ma50 > and 5-100 and deviation_sell 0.91 - 1.40 - r 15236 A"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
+                        
+                        
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and deviation_ma5_sotto_ma300 < 1.20
+                        and deviation_ma5_sotto_ma300 > 0.40
+                        and ma5_last < ma78_last
+                        and deviation_sell > 0.91 and deviation_sell < 1.40
+                        and ma2_last < ma2_2_min_ago
+                       
+                    ):
+                        sell = "SELL 4-5-x (21-60 min) con 5-300 tra 0.40 e 1.20 1.20 E con ma50 > and 5-78 and deviation_sell 0.91 - 1.40 - r 15236 B"
+                        action = "sell"
+                        
+                        # deviation_sell = ma3_last/last_trade_price
+                        
+                        
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        
+                        and deviation_ma5_sotto_ma300 < 0.40
+                        and ma3_last < ma28_last
+                        and deviation_sell > 0.91 and deviation_sell < 1.40
+                        and ma2_last < ma2_2_min_ago
+                       
+                    ):
+                        sell = "SELL 4-5-x (21-60 min) con 5-300 < 0.40 E con ma50 > and 3-28 and deviation_sell 0.91 - 1.40 - r 15236 C"
+                        action = "sell"
+                        
+                        # deviation_sell = ma3_last/last_trade_price
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                         
                         
                     
