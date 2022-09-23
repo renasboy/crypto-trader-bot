@@ -5314,12 +5314,40 @@ class maddog:
                     
                     
                     
+                # BUY 1 FOREVER YOUNG PRUDENTE se ma 200 > e se ma200 > ma300 con doppio delta > 1 (ribasso) and deviation_ma5_sopra_ma28 > 0.30
+                
+                elif (  
+                    ma200_last > ma300_last
+                    and ma300_last > ma300_60_min_ago
+                    and ma300_last > ma300_120_min_ago
+                    
+                    and ma200_last > ma200_15_min_ago
+                    
+                    
+                    and delta_1 > delta_2
+                    and ma100_last < ma100_60_min_ago
+                    
+                    and deviation_ma5_sopra_ma28 > 0.17
+                
+                    and ma6_last > ma6_2_min_ago
+                    and ma8_last > ma54_last
+                    and ma13_last > ma13_2_min_ago
+                    and ma2_last > ma2_2_min_ago
+                ):
+                    
+                    buy = "BUY 1 FOREVER YOUNG - NOTTE - MA 300 > 120 min ago and dev_ma5_sopra_ma28 > 0.30 se ma 200 > e se ma200 > ma300 - r 4440 A1"
+                    action = "buy"
+                    percentage = 80
+                    
+                    
+                    
                     
                 # BUY 1 FOREVER YOUNG PRUDENTE se ma 200 > e se ma200 > ma300 con doppio delta > 1 (ribasso) and deviation_ma5_sopra_ma28 > 0.30
                 
                 elif (  
                     ma200_last > ma300_last
                     and ma300_last > ma300_60_min_ago
+                    and ma300_last < ma300_60_min_ago
                     
                     and ma200_last > ma200_15_min_ago
                     
@@ -5335,9 +5363,11 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                 ):
                     
-                    buy = "BUY 1 FOREVER YOUNG PRUDENTE SOPRA RIBASSO RIBASSO - NOTTE - and dev_ma5_sopra_ma28 > 0.30 se ma 200 > e se ma200 > ma300 - r 4440 a"
+                    buy = "BUY 1 FOREVER YOUNG - NOTTE - con 300 > 120 min ago and dev_ma5_sopra_ma28 > 0.30 se ma 200 > e se ma200 > ma300 - r 4440 A2"
                     action = "buy"
                     percentage = 80
+                    
+                    
                     
                     
                     
@@ -5361,7 +5391,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                 ):
                     
-                    buy = "BUY 1 FOREVER YOUNG PRUDENTE SOPRA RIBASSO RIBASSO - NOTTE - and dev_ma5_sopra_ma28 > 0.30 se ma 200 > e se ma200 > ma300 - r 4466 b"
+                    buy = "BUY 1 FOREVER YOUNG PRUDENTE SOPRA RIBASSO RIBASSO - NOTTE - and dev_ma5_sopra_ma28 > 0.30 se ma 200 > e se ma200 > ma300 - r 4440 B"
                     action = "buy"
                     percentage = 80
                     
