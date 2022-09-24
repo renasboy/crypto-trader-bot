@@ -17480,7 +17480,7 @@ class maddog:
                     elif (
                         ma3_last < ma28_last
                         and ma200_last > ma200_60_min_ago
-                        and deviation > 0.78
+                        and deviation_sell > 0.78
                         and ma2_last < ma2_2_min_ago
                     ):
                         sell = "SELL 3-4-x (21-60 min) SOLO QUI tra MARADONA e RONALDO ho messo P-M-S 18 SE DA! UNA BOTTA RIALZISTA  (solo quando ma200 >) - r 15157"
@@ -17635,16 +17635,33 @@ class maddog:
                     
                     ################################################################################################# con trend discendente
                     
+                    
                     elif (
                         ma50_last < ma50_2_min_ago
                         and ma50_last > ma100_last
-                        
+                        and deviation_ma5_sotto_ma300 > 0.35
                         and ma2_last < ma2_2_min_ago 
                         and deviation_ma39 < -0.29
                         and ma200_last < ma200_60_min_ago
                     ):
-                        sell = "SELL 4-5-x RAFFORZATA (21-60 min) con ma50 < and deviation_ma39 < -0.29 - r 15277"
+                        sell = "SELL 4-5-x RAFFORZATA (21-60 min) con ma50 < and deviation_ma39 < -0.29 - r 15277 A"
                         action = "sell"
+                        
+                        
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and ma50_last > ma100_last
+                        and deviation_ma5_sotto_ma300 < 0.35
+                        and deviation_sell < -0.331
+                        and ma2_last < ma2_2_min_ago 
+                        and deviation_ma39 < -0.29
+                        and ma200_last < ma200_60_min_ago
+                    ):
+                        sell = "SELL 4-5-x RAFFORZATA (21-60 min) con ma50 < and deviation_ma39 < -0.29 - r 15277 B"
+                        action = "sell"
+                        
+                        
+                        
                         
                         
                         
