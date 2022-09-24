@@ -4772,8 +4772,8 @@ class maddog:
                 # BUY 1 che ci riprova quando se ne va lateralmente dopo il crollo
                 
                 elif (
-                    ma28_last > ma300_last
-                    and ma20_last > ma50_last
+                    ma5_last > ma300_last
+                    and ma8_last > ma50_last
                     
                     and deviation_ma3_sopra_ma10 > 0.155
                     and deviation_ma5_sopra_ma28 > 0.01
@@ -4790,7 +4790,7 @@ class maddog:
                 
                 ):
                
-                    buy = "BUY 1 che ci riprova quando se ne va lateralmente dopo il crollo - SE 28 < 300 OK COSI' CON 28>50 - r 4082 a1"
+                    buy = "BUY 1 che ci riprova quando se ne va lateralmente dopo il crollo - r 4082 A1"
                     action = "buy"
                     percentage = 80
 
@@ -4819,7 +4819,7 @@ class maddog:
                 
                 ):
                
-                    buy = "BUY 1 che ci riprova quando se ne va lateralmente dopo il crollo - SE 28 < 300 OK COSI' CON 20<50 - r 4111 a2"
+                    buy = "BUY 1 che ci riprova quando se ne va lateralmente dopo il crollo - r 4111 A2"
                     action = "buy"
                     percentage = 80
 
