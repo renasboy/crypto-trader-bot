@@ -6932,7 +6932,6 @@ class maddog:
                     
                 
                 
-                
                 # BUY 2 PENULTIMA condizione ! ma tutte negative MA BUY con 8 > 125
                 
                 elif (     
@@ -6942,17 +6941,47 @@ class maddog:
                     and ma200_last < ma200_60_min_ago
                     and ma300_last < ma300_60_min_ago
                     
+                    and ma300_last > ma300_60_min_ago
+                    
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
                     and deviation_buy_ma5_sopra_ma20 > 0.05
                     and ma2_last > ma2_2_min_ago
                 ):    
-                    buy = "BUY 2 PENUULTIMA CONDIZIONE ! ma tutte negative MA BUY con 25-200 (ho sostituito 8 > 125) - r 5794"
+                    buy = "BUY 2 PENUULTIMA CONDIZIONE ! ma tutte negative MA BUY con 25-200 (ho sostituito 8 > 125) - r 5794 A"
                     action = "buy"
                     percentage = 70
                     
                     # BUY con 25>200 ha sostituito 8>125 (che un po' mi piaceva ma era troppo rischiosa)
                     
+                    
+                    
+                # BUY 2 PENULTIMA condizione ! ma tutte negative MA BUY con 8 > 125
+                
+                elif (     
+               
+                    ma25_last > ma200_last
+                    and ma100_last < ma100_60_min_ago
+                    and ma200_last < ma200_60_min_ago
+                    and ma300_last < ma300_60_min_ago
+                    
+                    and ma300_last < ma300_60_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.16
+                    and deviation_ma5_sopra_ma28 > 0.14
+                    and deviation_buy_ma5_sopra_ma20 > 0.05
+                    
+                    and ma2_last > ma2_2_min_ago
+                ):    
+                    buy = "BUY 2 PENUULTIMA CONDIZIONE ! ma tutte negative MA BUY con 25-200 (ho sostituito 8 > 125) - r 5794 B"
+                    action = "buy"
+                    percentage = 70
+                    
+                    # BUY con 25>200 ha sostituito 8>125 (che un po' mi piaceva ma era troppo rischiosa)
+                    # se 300 < 120 min ago aggiunte 3-10 and 5-28 !
                     
                     
                     
