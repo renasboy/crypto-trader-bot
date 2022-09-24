@@ -7451,13 +7451,15 @@ class maddog:
                     
                     
                     
-                    
+                
+                
                 # BUY 3 nuovo TREND LATERALE !
                 
                 elif (
                     ma100_last > ma300_last
                     and ma100_last > ma200_last
                     and ma78_last > ma200_last
+                    and deviation_ma78_sotto_ma200 > 0.25
                     
                     and deviation_ma3_sopra_ma10 > 0.01
                     and deviation_ma5_sopra_ma28 > 0.07
@@ -7469,11 +7471,65 @@ class maddog:
                     and deviation_ma100_sopra_ma200 < 0.05
                     
                 ):
-                    buy = "BUY 3 nuovo TREND LATERALE ! - 78 > 200 con 3-10 > 0.01 - r 6187 a"
+                    buy = "BUY 3 nuovo TREND LATERALE ! dev 78-200 > 0.25 - 78 > 200 con 3-10 > 0.01 - r 6187 A1"
                     action = "buy"
                     percentage = 80
                     
                     # SE ma100 E' cosi' VICINA A ma200 E ma300 vuo dire che non c'e' un grande rialzo in atto ma un TREND LATERALE !
+                # BUY 3 nuovo TREND LATERALE !
+                
+                
+                
+                elif (
+                    ma100_last > ma300_last
+                    and ma100_last > ma200_last
+                    and ma78_last > ma200_last
+                    and deviation_ma78_sotto_ma200 < 0.25
+                    and deviation_ma78_sotto_ma200 > -0.25
+                    
+                    and deviation_ma3_sopra_ma10 > 0.16
+                    and deviation_ma5_sopra_ma28 > 0.07
+                    
+                    and ma8_last > ma50_last
+                    and ma2_last > ma2_2_min_ago
+                        
+                    and deviation_ma100_sopra_ma300 < 0.04
+                    and deviation_ma100_sopra_ma200 < 0.05
+                    
+                ):
+                    buy = "BUY 3 nuovo TREND LATERALE ! dev 78-200 > -0.25 - 0.25 - 78 > 200 con 3-10 > 0.16 - r 6187 A2"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # SE ma100 E' cosi' VICINA A ma200 E ma300 vuo dire che non c'e' un grande rialzo in atto ma un TREND LATERALE !
+                    
+                    
+                    
+                elif (
+                    ma100_last > ma300_last
+                    and ma100_last > ma200_last
+                    and ma78_last > ma200_last
+                    and deviation_ma78_sotto_ma200 < -0.25
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma5_sopra_ma28 > 0.07
+                    
+                    and ma8_last > ma50_last
+                    and ma2_last > ma2_2_min_ago
+                        
+                    and deviation_ma100_sopra_ma300 < 0.04
+                    and deviation_ma100_sopra_ma200 < 0.05
+                    
+                ):
+                    buy = "BUY 3 nuovo TREND LATERALE ! dev 78-200 < -0.25 - 78 > 200 con 3-10 > 0.01 - r 6187 A3"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # SE ma100 E' cosi' VICINA A ma200 E ma300 vuo dire che non c'e' un grande rialzo in atto ma un TREND LATERALE !
+                    
+                    
+                    
+                    
                     
                     
                     
