@@ -422,10 +422,7 @@ class maddog:
         
         
         
-        # formula DEVIATION_ma5_sotto_ma200 per comprare FINO a una certa distanza da ma200
         
-        deviation_ma5_sotto_ma200 = (ma5_last / ma200_last - 1) * 100 if ma200_last else 0
-        self.algo_helper.info("deviation_ma5_sotto_ma200: {}".format(deviation_ma5_sotto_ma200))
         
         
         
@@ -444,6 +441,17 @@ class maddog:
         deviation_ma300__diviso_ma300_5_ore_ago = (ma300_last / ma300_301_min_ago - 1) * 100 if ma300_301_min_ago else 0
         self.algo_helper.info("deviation_ma300__diviso_ma300_5_ore_ago: {}".format(deviation_ma300__diviso_ma300_5_ore_ago))
         
+        
+        # formula DEVIATION_MA100_LATERALE evita BUY CONTINUI DEL BUY ECCEZIONALE NELLA FASE LATERALE
+        
+        deviation_ma100_laterale = (ma5_last / ma100_last - 1) * 100 if ma100_last else 0
+        self.algo_helper.info("deviation_ma100_laterale: {}".format(deviation_ma100_laterale))
+        
+        
+        # formula DEVIATION_ma5_sotto_ma200 per comprare FINO a una certa distanza da ma200
+        
+        deviation_ma5_sotto_ma200 = (ma5_last / ma200_last - 1) * 100 if ma200_last else 0
+        self.algo_helper.info("deviation_ma5_sotto_ma200: {}".format(deviation_ma5_sotto_ma200))
         
         
         
@@ -5320,6 +5328,7 @@ class maddog:
                     ma200_last > ma300_last
                     and ma300_last > ma300_120_min_ago
                     and ma200_last > ma200_15_min_ago
+                    and deviation_ma100_laterale < -0.60
                     
                     and delta_1 > delta_2
                     and ma100_last < ma100_60_min_ago
@@ -5337,6 +5346,8 @@ class maddog:
                     action = "buy"
                     percentage = 80
                     
+                    # dev 100 laterale significa che 5 deve essere distante dalla 100
+                    # 24 set vuoi comprare di notte ? allora dev 5-100 = dev 100 laterale deve essere distante di almeno - 0.60 (distanza della 5 dalla 100 !)
                     
                     
                     
