@@ -8569,7 +8569,9 @@ class maddog:
                     percentage = 70
                     
                     
-                # BUY 4 29 ago 2022 > 120 min di ribasso
+                    
+                    
+                # BUY 4 29 ago 2022 > 120 min di ribasso - PENSIERO LATERALE
                 
                 elif (
                     
@@ -8582,14 +8584,17 @@ class maddog:
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
                     
+                    and deviation_ma5_sotto_ma300 < -0.35
+                    
                     and deviation_ma5_sopra_ma28 > 0.08
                     and ma2_last >= ma2_2_min_ago
                     
                 ):
-                    buy = "BUY 4 29 ago 2022 > 120 min di ribasso - r 7039 A"
+                    buy = "BUY 4 29 ago 2022 > 120 min di ribasso - deviation_ma5_sotto_ma300"
                     action = "buy"
                     percentage = 90
                     
+                    # vuoi comprare dopo 120 min di ribasso ? deve essere 5-300 < -0.35 ! voglio uno sconto ulteriore dello 0.35% ! PENSIERO LATERALE
                     
                     
                 # BUY 4 29 ago 2022 > 180 min di ribasso
