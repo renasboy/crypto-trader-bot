@@ -12371,17 +12371,8 @@ class maddog:
                     
                     ############################################################################# fare maradona 1 e maradona 2
                     
-                    elif (
-                        ma50_last > ma50_2_min_ago
-                        and ma5_last < ma100_last
-                        
-                        and ma2_last < ma2_2_min_ago
-                        
-                    ):
-                        sell = "SELL 1 dopo 110 min (5 non puo' andare sotto 100 !)  - r 10274"
-                        action = "sell"
-                        
-                        
+                    
+                       
                         
                     # MARADONA 1
                     
