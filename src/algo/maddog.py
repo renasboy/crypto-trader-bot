@@ -5350,33 +5350,7 @@ class maddog:
                     
                     
                     
-                # BUY 1 FOREVER YOUNG PRUDENTE se ma 200 > e se ma200 > ma300 con doppio delta > 1 (ribasso) and deviation_ma5_sopra_ma28 > 0.30
                 
-                elif (  
-                    ma200_last > ma300_last
-                    and ma300_last > ma300_120_min_ago
-                    and ma200_last > ma200_15_min_ago
-                    and deviation_ma100_laterale > -0.60
-                    
-                    and delta_1 > delta_2
-                    and ma100_last < ma100_60_min_ago
-                    
-                    and deviation_ma5_sopra_ma28 > 0.205
-                    
-                    and ma6_last > ma6_2_min_ago
-                    and ma8_last > ma54_last
-                    and ma13_last > ma13_2_min_ago
-                    and ma2_last > ma2_2_min_ago
-             
-                ):
-                    
-                    buy = "BUY 1 FOREVER YOUNG - NOTTE - MA 300 > 120 min ago and dev_ma5_sopra_ma28 > 0.30 se ma 200 > e se ma200 > ma300 - r 4440 A2"
-                    action = "buy"
-                    percentage = 80
-                    
-                    # dev 100 laterale significa che 5 deve essere distante dalla 100
-                    # 24 set vuoi comprare di notte ? allora dev 5-100 = dev 100 laterale deve essere distante di almeno - 0.60 (distanza della 5 dalla 100 !)
-                    # 24 sett 5-28 > 0.205 se dev 100 laterale (5-100) > - 0.60 messa per non rischiare di non essere presente.
                     
                     
                 
