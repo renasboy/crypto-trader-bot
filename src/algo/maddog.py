@@ -5303,8 +5303,6 @@ class maddog:
                     
                     ma200_last > ma200_20_min_ago
                     
-                    and (ma5_prev < ma100_prev and ma5_last > ma100_last)
-                    
                     and ma3_last > ma28_last
                     and deviation_ma3_sopra_ma10 > 0.11
                     and deviation_ma5_sopra_ma28 > 0.05
@@ -5329,6 +5327,7 @@ class maddog:
                     
                     # 13 set aggiunte 3-10 and 5-28
                     # se sta molto in alto per comprare 5 deve incrociare dal basso con la 100 ed avere 3-10 > 0.11 vedi ore 12:06 del 26 set 2022
+                    # VA IN CONFLITTO. aalora ho lasciato solo 3-10 > 0.11
                     
                     
                 
