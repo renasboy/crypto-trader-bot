@@ -12847,15 +12847,17 @@ class maddog:
                         
                         and ma300_last < ma300_120_min_ago
                         and ma100_last < ma200_last
-                        and deviation_sell < -0.07
+                        and deviation_sell < -0.10
                         and ma2_last < ma2_2_min_ago
                     ):
                    
-                        sell = "SELL 1 > 110 min con 5 < 200 ! FORSE E' NECESSARA SOLO QUESTA 4 ! deviation_sell < -0.05 - r 10655 B"
+                        sell = "SELL 1 > 110 min con 5 < 200 ! FORSE E' NECESSARA SOLO QUESTA 4 ! deviation_sell < -0.10 - r 10655 B"
                         action = "sell"
                         
-                        # 4 set 2022 dev sell -0.07 da -0.05
-         
+                        #  4 set 2022 dev sell -0.07 da -0.05
+                        # 26 set 2022 dev sell -0.10 da -0.07
+                        
+                        
         
             
             ########################################################################################################################### SESSIONE 2
