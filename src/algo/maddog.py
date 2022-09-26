@@ -7110,14 +7110,14 @@ class maddog:
                     
                     
                     
-                    
-                # BUY 2 RIVOLUZIONARIO se 39>50 E 8>200
+                # BUY 2 RIVOLUZIONARIO se 39>50 E 8>200 E and deviation_ma100_sopra_ma300 > 0.05 (100 NON E' ATTACCATA ALLA 300 !)
                 
                 elif (
                     deviation_ma4_sopra_ma30 > 0.14
                     and deviation_bellissima > 0.06
                     
                     and deviation_ma100_sopra_ma300 > 0.05
+                    
                     and ma200_last < ma200_120_min_ago
                     and ma8_last > ma200_last
                     
@@ -7132,7 +7132,40 @@ class maddog:
                     and ma5_last >= ma15_last
                     and ma5_last >= ma25_last
                 ):    
-                    buy = "BUY 2 RIVOLUZIONARIO se ma39 > ma50 - r 5945 A1"
+                    buy = "BUY 2 RIVOLUZIONARIO con 100 CHE NON E' ATTACCATA ALLA 300 ! e ma39 > ma50 - r 5945 A1"
+                    action = "buy"
+                    percentage = 70
+                    
+                    # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
+                    # 26 set 100-300 se stanno attaccate e' molto rischioso ! vedi ore 22:48 24 set 2022
+                    
+                    
+                    
+                # BUY 2 RIVOLUZIONARIO se 39>50 E 8>200 E and deviation_ma100_sopra_ma300 > 0.05 (100 E' ATTACCATA ALLA 300 !)
+                
+                elif (
+                    deviation_ma4_sopra_ma30 > 0.14
+                    and deviation_bellissima > 0.06
+                    
+                    and deviation_ma100_sopra_ma300 < 0.05
+                    and deviation_ma100_sopra_ma300 > -0.05
+                    and deviation_ma3_sopra_ma10 > 0.11
+                    
+                    and ma200_last < ma200_120_min_ago
+                    and ma8_last > ma200_last
+                    
+                    and deviation > -0.30
+                    
+                    and ma28_last > ma50_last
+                    and delta_buy3_incrocio_ma3_ma8 >= 0.06
+                    and ma3_last > ma8_last
+                    and ma3_last >= ma69_last
+                    and ma4_last >= ma4_2_min_ago
+                    and ma2_last >= ma2_2_min_ago
+                    and ma5_last >= ma15_last
+                    and ma5_last >= ma25_last
+                ):    
+                    buy = "BUY 2 RIVOLUZIONARIO con 100 CHE E' ATTACCATA ALLA 300 ! E 3-10 > 0.11 e ma39 > ma50 - r 5945 A2"
                     action = "buy"
                     percentage = 70
                     
