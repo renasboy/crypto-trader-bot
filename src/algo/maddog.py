@@ -18559,19 +18559,41 @@ class maddog:
                         action = "sell"
                         
                         
-                        
+                    
+                    
+                    
                     
                     elif (    
                         ma50_last < ma50_2_min_ago
+                        and ma300_last > ma300_301_min_ago
+                        and deviation_ma5_sotto_ma300 > 0.10
+                        and ma2_last < ma2_2_min_ago 
+                        and deviation_sell < -0.13 
+                        and ma3_last < ma39_last
+                    ):
+                        sell = "SELL 4-5-x >90 min CON 300 > 301 min ago e con 5-300 > 0.10 E ma50 < and (dev_sell < -0.13 and ma3_last < ma39_last) - r 15906 A1"
+                        action = "sell"
+                        
+                        # 26 set 2022 con 300 > 301 min ago dev sell a -0.11 da -0.13
+                        
+                        
+                    elif (    
+                        ma50_last < ma50_2_min_ago
+                        and ma300_last < ma300_301_min_ago
                         and deviation_ma5_sotto_ma300 > 0.10
                         and ma2_last < ma2_2_min_ago 
                         and deviation_sell < -0.11 
                         and ma3_last < ma39_last
                     ):
-                        sell = "SELL 4-5-x dopo 90 min con 5-300 > 0.10 E ma50 < and (deviation_sell < -0.11 and ma3_last < ma39_last) - r 15906 A"
+                        sell = "SELL 4-5-x >90 min CON 300 < 301 min ago e con 5-300 > 0.10 E ma50 < and (dev_sell < -0.11 and ma3_last < ma39_last) - r 15906 A2"
                         action = "sell"
                         
-                        
+                    
+                    
+                    
+                    
+                    
+                    
                     elif (    
                         ma50_last < ma50_2_min_ago
                         and deviation_ma5_sotto_ma300 < 0.10
