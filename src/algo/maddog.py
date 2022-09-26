@@ -5298,12 +5298,49 @@ class maddog:
                 
                 
                 
-                
                 # BUY 1 NEW FOREVER YOUNG piccola CORREZIONE FIAT - ALTRA RIGA RCCR che e' andata bene.
                 
                 elif (    
                     
                     ma200_last > ma200_20_min_ago
+                    and deviation_ma5_sotto_ma300 > 0.50
+                    and (ma5_prev < ma100_prev and ma5_last > ma100_last)
+                    
+                    and ma3_last > ma28_last
+                    and deviation_ma3_sopra_ma10 > 0.11
+                    and deviation_ma5_sopra_ma28 > 0.05
+                    
+                    and ma2_last > ma2_2_min_ago
+                    
+                    and ma100_last > ma200_last
+                    and ma200_last > ma300_last
+                    
+                    and ma100_last > ma100_60_min_ago
+                    and ma200_last > ma200_60_min_ago
+                    and ma300_last > ma300_60_min_ago
+                    and ma300_last > ma300_120_min_ago
+                    
+                    and ma18_last > ma28_last
+               
+                ):    
+                    
+                    buy = "BUY 1 NEW FOREVER YOUNG piccola CORREZIONE FIAT - ALTRA RIGA RCCR che e' andata bene - riga 4411 A"
+                    action = "buy"
+                    percentage = 40
+                    
+                    # 13 set aggiunte 3-10 and 5-28
+                    # se sta molto in alto per comprare 5 deve incrociare dal basso con la 100 ed avere 3-10 > 0.11 vedi ore 12:06 del 26 set 2022
+                    
+                    
+                    
+                    
+                # BUY 1 NEW FOREVER YOUNG piccola CORREZIONE FIAT - ALTRA RIGA RCCR che e' andata bene.
+                
+                elif (    
+                    
+                    ma200_last > ma200_20_min_ago
+                    and deviation_ma5_sotto_ma300 < 0.50
+                    
                     and ma3_last > ma28_last
                     and deviation_ma3_sopra_ma10 > 0.05
                     and deviation_ma5_sopra_ma28 > 0.05
@@ -5322,11 +5359,13 @@ class maddog:
                
                 ):    
                     
-                    buy = "BUY 1 NEW FOREVER YOUNG piccola CORREZIONE FIAT - ALTRA RIGA RCCR che e' andata bene - riga 4411"
+                    buy = "BUY 1 NEW FOREVER YOUNG piccola CORREZIONE FIAT - ALTRA RIGA RCCR che e' andata bene - riga 4411 B"
                     action = "buy"
                     percentage = 40
                     
                     # 13 set aggiunte 3-10 and 5-28
+                    
+                    
                     
                     
                 # BUY 1 FOREVER YOUNG PRUDENTE se ma 200 > e se ma200 > ma300 con doppio delta > 1 (ribasso) and deviation_ma5_sopra_ma28 > 0.30
