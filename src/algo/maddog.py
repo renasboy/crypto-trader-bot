@@ -188,10 +188,17 @@ class maddog:
         
         max_hold_time_in_seconds = 255
         
-       
+        
+        
         # vedi BUY 2 con il passare del tempo
         
         max_hold_time_in_seconds_nuova = 7200
+        
+        
+        
+        # SELL DOPO 9000 secondi = 150 min dal BUY con 5-90 cazzo
+        
+        max_hold_time_in_seconds_sell_5_90 = 9000
         
         
         ###########################################################################################################################
@@ -19475,8 +19482,7 @@ class maddog:
             
             
             
-            
-            # 32 - SELL condizione speciale ro cano VENDE " DOPO x MINUTI " and...
+            # 32 A - SELL condizione speciale ro cano VENDE " DOPO x MINUTI " and...
             
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
@@ -19486,11 +19492,31 @@ class maddog:
                 and ma2_last < ma2_2_min_ago
             ):
 
-                sell = "SELL condizione speciale 32 - TEMPO e se ma8 < ma50 and deviation_sell < -0.49 - r 16743"
+                sell = "SELL condizione speciale 32 - TEMPO e se ma8 < ma50 and deviation_sell < -0.49 - r 16743 A"
                 action = "sell"
                         
                 # ma13 troppo lenta !
                 # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
+                
+                
+                
+                
+                
+                
+            # 32 B - SELL condizione speciale ROOT DOWN DEEP - ro cano VENDE dopo 150 min = 9000 sec con 5-90
+            
+            elif (
+                seconds_since_last_trade > max_hold_time_in_seconds_sell_5_90
+                and ma5_last < ma90_last
+                and ma2_last < ma2_2_min_ago
+           
+            ):
+
+                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 150 min = 9000 sec con 5-90 - r 16743 B"
+                action = "sell"
+                        
+                # 24 set 2022 ore 17:23
+                
                         
                         
                
