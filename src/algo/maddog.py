@@ -10794,18 +10794,36 @@ class maddog:
                         # 29 giu 2022 dev sell a 0.29 da 0.26
                         
                         
+                    
+                    
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and ma100_last < ma200_last
+                        and ma300_last > ma300_301_min_ago
+                        and ma100_last > ma100_60_min_ago
+                        and ma5_last < ma100_last
+                        and deviation_sell < -0.25
+                        and ma2_last < ma2_2_min_ago
+                        
+                    ):
+                        sell = "SELL 1 (21-50 min) con ma50 > and 5-100 and deviation_sell < -0.25 CUSCINO DI SANT' ANTONIO se ma100 > MA 100 < 200 - r 8904 B1"
+                        action = "sell"
+                        
+                        # se 300 > 301 min ago aumenta tolleranza dev sell
+                        
+                        
                         
                     elif (
                         ma50_last > ma50_2_min_ago
                         and ma100_last < ma200_last
-                        
+                        and ma300_last < ma300_301_min_ago
                         and ma100_last > ma100_60_min_ago
                         and ma5_last < ma100_last
                         and deviation_sell < -0.24
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 (21-50 min) con ma50 > and 5-100 and deviation_sell < -0.24 CUSCINO DI SANT' ANTONIO se ma100 > MA 100 < 200 - r 8904 B"
+                        sell = "SELL 1 (21-50 min) con ma50 > and 5-100 and deviation_sell < -0.24 CUSCINO DI SANT' ANTONIO se ma100 > MA 100 < 200 - r 8904 B2"
                         action = "sell"
                         
                         
