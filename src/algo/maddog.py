@@ -8299,9 +8299,10 @@ class maddog:
 
             elif self.session == 4:
                 
+                
                 if (
                     ma69_last >= ma69_2_min_ago
-                    and ma300_last > ma300_60_min_ago
+                    and ma300_last > ma300_301_min_ago
                     and ma100_last > ma200_last
                     and deviation_buy3 > 0.11
                     and ma3_last > ma13_last
@@ -8314,7 +8315,34 @@ class maddog:
                     and ma13_last > ma100_last
                     and deviation_ma5_sopra_ma28 > 0.05
                 ):
-                    buy = "BUY 4A con ma 78> e 300> E ma100>ma200 - r 6668"
+                    buy = "BUY 4A con ma 78> e 300> E ma100>ma200 - r 6668 A"
+                    action = "buy"
+                    percentage = 70
+          
+                    # se al BUY 4 ha ma100 < ma200 evidentemente c'e' qualche cosa di strano 
+                    # il trend, evidentemente, e' LATERALE.
+                    # E ALLORA AGGIUNGO UN BEL 6-30 > 0.15 - TREND LATERALE
+                    
+                    
+                elif (
+                    ma69_last >= ma69_2_min_ago
+                    and ma300_last < ma300_301_min_ago
+                    and deviation_ma3_sopra_ma10 > 0.10
+                    and deviation_ma5_sopra_ma28 > 0.13
+                    
+                    and ma100_last > ma200_last
+                    and deviation_buy3 > 0.11
+                    and ma3_last > ma13_last
+                    and deviation_ma7_sopra_ma40 > 0.11
+                    and ma4_last > ma9_last
+                    and ma4_last > ma50_last
+                    and ma2_last > ma2_2_min_ago
+                    and ma7_last > ma25_last
+                    
+                    and ma13_last > ma100_last
+                    and deviation_ma5_sopra_ma28 > 0.05
+                ):
+                    buy = "BUY 4A con ma 78> e 300> E ma100>ma200 - r 6668 B"
                     action = "buy"
                     percentage = 70
           
@@ -8322,6 +8350,9 @@ class maddog:
                     # il trend, evidentemente, e' LATERALE.
                     # E ALLORA AGGIUNGO UN BEL 6-30 > 0.15 - TREND LATERALE
              
+                
+                
+                
                 
                 
                 
