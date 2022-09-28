@@ -8215,6 +8215,7 @@ class maddog:
                 elif (
                     ma69_last >= ma69_2_min_ago
                     and ma78_last > ma100_last
+                    and deviation_ma3_sopra_ma10 > 0.05
                     and deviation_ma5_sopra_ma28 > 0.01
                     
                     and deviation_bellissima > 0.12
@@ -8230,10 +8231,11 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
              
                 ):
-                    buy = "BUY 3 78>100 E con ma69 > and deviation_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali) IMPORTATA DA BUY 4 RCCR - riga 6599A"
+                    buy = "BUY 3 78>100 E con ma69 > and dev_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali) IMPORTATA DA BUY 4 RCCR - riga 6599A"
                     action = "buy"
                     percentage = 50
                     
+                    # 28 set aggiunta 3-10
                     
                     
                     
@@ -10711,16 +10713,16 @@ class maddog:
                     elif (
                         ma50_last > ma50_2_min_ago
                         and ma3_last > ma300_last
-                        and (ma3_prev > ma25_prev and ma3_last < ma25_last)
+                        and (ma4_prev > ma50_prev and ma4_last < ma50_last)
                         and deviation_sell > 0.91 and deviation_sell < 1.20
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 (21-50 min) con ma50 > and incrocio 3-25 se 3 sopra 300 and deviation_sell 0.91 - 1.20 (DOPPIA FINTA DI RONALDO) - r 8813 A"
+                        sell = "SELL 1 (21-50 min) con ma50 > and incrocio 4-50 se 3 sopra 300 and deviation_sell 0.91 - 1.20 (DOPPIA FINTA DI RONALDO) - r 8829 A"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
-                        
+                        # 28 set 4-50 da 3-25
                         
                         
                         
