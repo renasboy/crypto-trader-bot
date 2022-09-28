@@ -7523,12 +7523,12 @@ class maddog:
                     
                     and ma200_last > ma200_60_min_ago
                     and deviation > -0.30
-                    and deviation_ma5_sopra_ma28 > 0.22
+                    and deviation_ma5_sopra_ma28 > 0.18
                     
                     and deviation_ma4_sopra_ma30 > 0.11
                     and ma3_last > ma13_last
                     and ma4_last > ma9_last
-                    and deviation_ma7_sopra_ma40 > 0.08
+                    and deviation_ma7_sopra_ma40 > 0.07
                     and ma7_last > ma25_last
                     
                     and deviation_buy_ma2_sopra_ma13 > 0.10
@@ -7537,13 +7537,13 @@ class maddog:
                     
                 ):  
                 
-                    buy = "BUY 3A con ma200 che sale da 60 min and ma28_last < ma78_last - r 6121 A"
+                    buy = "BUY 3A con 300 > 300 301 min ago ! e con ma200 che sale da 60 min and ma28_last < ma78_last - r 6121 A"
                     action = "buy"
                     percentage = 80
 
                     # deviation_buy3 = ma4_last/ma30_last
                     # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
-                    
+                    # 28 set con 300 > 301 min ago anticipa ndecchia
                     
                     
                 elif (
