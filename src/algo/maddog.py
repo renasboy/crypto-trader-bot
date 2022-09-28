@@ -12356,7 +12356,26 @@ class maddog:
                         
                         
                     
+                    # ma se ma100 >
                     
+                    elif (    
+                        ma50_last < ma50_2_min_ago
+                        and deviation_ma39 < -0.23
+                        and deviation_sell > 0.20
+                        and ma5_last < ma5_2_min_ago
+                        and ma100_last > ma100_60_min_ago
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 1 90-110 min con ma50 < MA ma100 > con deviation_ma39 <-0.23 - r 10193 A"
+                        action = "sell"
+                        
+                        # ma39 NON DEVE VENDERE in fase laterale ma in alto
+                        # 28 set con 300 > 300 301 min ago !
+                        # 28 set dev 39 -0.23 da -0.20
+                        
+                        
+                        
+                        
                     # ma se ma100 >
                     
                     elif (    
@@ -12367,10 +12386,15 @@ class maddog:
                         and ma100_last > ma100_60_min_ago
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 90-110 min con ma50 < MA ma100 > con deviation_ma39 <-0.20 - r 10193"
+                        sell = "SELL 1 90-110 min con ma50 < MA ma100 > con deviation_ma39 <-0.20 - r 10193 B"
                         action = "sell"
                         
                         # ma39 NON DEVE VENDERE in fase laterale ma in alto
+                        
+                        
+                        
+                        
+                        
                         
                         
                     
