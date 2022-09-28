@@ -10980,14 +10980,35 @@ class maddog:
                     
                     elif (
                         ma50_last < ma50_2_min_ago
-                  
+                        and ma300_last > ma300_301_min_ago
+                        and deviation_sell  < -0.35
+                        
+                        and deviation_ma100_sopra_ma300 < 0.69
+                        and deviation_ma100_sopra_ma300 > -0.77
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 1 (21-50 min) con ma50 < e deviation_sell < -0.35 TREND LATERALE (100>300 <0.69 and > -0.77) - r 9017 A"
+                        action = "sell"
+                        
+                        # HO AVUTO UN PROBLEMA GRANDE ! ha venduto con -0.14 ma io avevo -0.20 e -0.27 !!! ore 15:30 25 mag 2022
+                        # DEVIATION 3-39 DIVENTA 4-39 (deviation_correzione_2)
+                        # DEVIATION SELL DIVENTA 5-last trade price (deviation)
+                        
+                        # non mi arrendo !
+                        # > estate -0.34 da -0.30
+                        # con 300 > 301 min ago -0.35 da -0.34
+                        
+                        
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and ma300_last < ma300_301_min_ago
                         and deviation_sell  < -0.34
                         
                         and deviation_ma100_sopra_ma300 < 0.69
                         and deviation_ma100_sopra_ma300 > -0.77
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 (21-50 min) con ma50 < e deviation_sell < -0.34 TREND LATERALE (100>300 <0.69 and > -0.77) - r 9017"
+                        sell = "SELL 1 (21-50 min) con ma50 < e deviation_sell < -0.34 TREND LATERALE (100>300 <0.69 and > -0.77) - r 9017 B"
                         action = "sell"
                         
                         # HO AVUTO UN PROBLEMA GRANDE ! ha venduto con -0.14 ma io avevo -0.20 e -0.27 !!! ore 15:30 25 mag 2022
