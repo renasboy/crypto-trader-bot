@@ -4178,9 +4178,10 @@ class maddog:
                 # BUY 1 CROLLO FERRARI - modo 1
                 
                 elif (
-                    ma2_last > ma2_2_min_ago
+                    ma2_last >= ma2_2_min_ago
                     and deviation_buy_crollo_1 < -2.30
                     and ma3_last > ma16_last
+                    and deviation_ma3_sopra_ma10 > 0.31
                     and ma78_last < ma300_last
                 ):
                     buy = "BUY 1 CROLLO FERRARI 3-16 - modo 1 and ma78_last < ma300_last - r 3525"
@@ -4188,7 +4189,8 @@ class maddog:
                     percentage = 80
                     
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
-                    # era 3-7 ma MI DISPIACE TANTO ma ho dovuto mettere 5-15
+                    # era 3-7 ma MI DISPIACE TANTO ma ho dovuto mettere 3-16
+                    # aggiunto 3-10 0.31
                     
                     
                 
