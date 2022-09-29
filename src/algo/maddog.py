@@ -4839,8 +4839,7 @@ class maddog:
                     and deviation_trend_ma100_180_min_ago < 0.30
                     and deviation_trend_ma100_180_min_ago > -0.30
                     
-                    and deviation_ma100_sopra_ma300 < 0.25
-                    and deviation_ma100_sopra_ma300 > -0.25
+                    
                     
                     
                 
