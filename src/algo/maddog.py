@@ -4818,34 +4818,7 @@ class maddog:
                     
                     
                     
-                # BUY 1 PROBLEMA LATERALE ! quando se ne va LATERALMENTE da 180 min - CON UN INTRUSO NON IMPAZZISCE LA MAIONESE !
                 
-                elif (
-                    ma5_last > ma28_last
-                    and ma2_last > ma2_2_min_ago
-                    
-                    and deviation_trend_ma300_180_min_ago < 0.20
-                    and deviation_trend_ma300_180_min_ago > -0.20
-                    
-                    and deviation_trend_ma100_180_min_ago < 0.30
-                    and deviation_trend_ma100_180_min_ago > -0.30
-                    
-                    and deviation_ma100_sopra_ma300 < 0.25
-                    and deviation_ma100_sopra_ma300 > -0.25
-                    
-                    and deviation_ma100_180_min_ago_sopra_ma300_180_min_ago < 0.30
-                    and deviation_ma100_180_min_ago_sopra_ma300_180_min_ago > -0.30
-                    
-                    and deviation_ma3_sopra_ma10 > 0.01
-                    and deviation_ma5_sopra_ma28 > 0.01
-                
-                ):
-               
-                    buy = "BUY 1 PROBLEMA LATERALE ! quando se ne va LATERALMENTE da 180 min - CON UN INTRUSO NON IMPAZZISCE LA MAIONESE ! - r 4044"
-                    action = "buy"
-                    percentage = 80
-
-                    # compare prega per me !
                     
                     
                     
