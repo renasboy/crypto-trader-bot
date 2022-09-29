@@ -391,12 +391,38 @@ class maddog:
         
         deviation_ma3 = (ma3_last / ma3_20_min_ago - 1) * 100 if ma3_20_min_ago else 0
         self.algo_helper.info("deviation_ma3: {}".format(deviation_ma3))
-     
+        
+        
+        
+        
+        
+        # formula deviation trend ma100
+        
+        deviation_trend_ma100_180_min_ago = (ma100_last / ma100_180_min_ago - 1) * 100 if ma100_180_min_ago else 0
+        self.algo_helper.info("deviation_trend_ma100_180_min_ago: {}".format(deviation_trend_ma100_180_min_ago))
+        
         
         # formula deviation trend ma200
         
         deviation_trend_ma200 = (ma200_last / ma200_120_min_ago - 1) * 100 if ma200_120_min_ago else 0
         self.algo_helper.info("deviation_trend_ma200: {}".format(deviation_trend_ma200))
+        
+        
+        # formula deviation trend ma300
+        
+        deviation_trend_ma300_180_min_ago = (ma300_last / ma300_180_min_ago - 1) * 100 if ma300_180_min_ago else 0
+        self.algo_helper.info("deviation_trend_ma300_180_min_ago: {}".format(deviation_trend_ma300_180_min_ago))
+        
+        
+        
+        # formula deviation_ma100_180_min_ago_sopra_ma300_180_min_ago
+        
+        deviation_ma100_180_min_ago_sopra_ma300_180_min_ago = (ma100_180_min_ago / ma300_1800_min_ago - 1) * 100 if ma300_180_min_ago else 0
+        self.algo_helper.info("deviation_ma100_180_min_ago_sopra_ma300_180_min_ago: {}".format(deviation_ma100_180_min_ago_sopra_ma300_180_min_ago))
+        
+        
+        
+        
         
         
         
@@ -4792,7 +4818,45 @@ class maddog:
                     
                     
                     
-                 
+                # BUY 1 PROBLEMA LATERALE ! quando se ne va LATERALMENTE da 180 min - CON UN INTRUSO NON IMPAZZISCE LA MAIONESE !
+                
+                elif (
+                    ma5_last > ma28_last
+                    and ma2_last > ma2_2_min_ago
+                    
+                    and deviation_trend_ma300_180_min_ago < 0.20
+                    and deviation_trend_ma300_180_min_ago > -0.20
+                    
+                    and deviation_trend_ma100_180_min_ago < 0.30
+                    and deviation_trend_ma100_180_min_ago > -0.30
+                    
+                    and deviation_ma100_sopra_ma300 < 0.25
+                    and deviation_ma100_sopra_ma300 > -0.25
+                    
+                    and deviation_ma100_180_min_ago_sopra_ma300_180_min_ago < 0.30
+                    and deviation_ma100_180_min_ago_sopra_ma300_180_min_ago > -0.30
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma5_sopra_ma28 > 0.01
+                
+                ):
+               
+                    buy = "BUY 1 PROBLEMA LATERALE ! quando se ne va LATERALMENTE da 180 min - CON UN INTRUSO NON IMPAZZISCE LA MAIONESE ! - r 4044"
+                    action = "buy"
+                    percentage = 80
+
+                    # compare prega per me !
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                 # BUY 1 che ci riprova quando se ne va lateralmente dopo il crollo
                 
                 elif (
