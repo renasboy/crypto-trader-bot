@@ -6574,14 +6574,14 @@ class maddog:
                     
                     
                     
-                # BUY 2 che ci riprova quando se ne va lateralmente dopo il crollo
+                # BUY 2 che ci riprova quando se ne va LATERALMENTE dopo il crollo
                 
                 elif (
                     ma78_last > ma200_last
-                    and ma28_last > ma28_30_min_ago
+                    and ma28_last > ma28_20_min_ago
                     
-                    and deviation_ma3_sopra_ma10 > 0.10
-                    and deviation_ma5_sopra_ma28 > -0.01
+                    and deviation_ma3_sopra_ma10 > 0.08
+                    and deviation_ma5_sopra_ma28 > -0.02
                     
                     and ma200_last < ma200_120_min_ago
                     and ma300_last < ma300_120_min_ago
@@ -6595,13 +6595,13 @@ class maddog:
                 
                 ):
                
-                    buy = "BUY 2 CON 78 > 200 che ci riprova quando se ne va lateralmente dopo il crollo CON 28>28 30 min ago - r 5445 a1"
+                    buy = "BUY 2 CON 78 > 200 che ci riprova quando se ne va lateralmente dopo il crollo CON 28>28 30 min ago - r 5445 A1"
                     action = "buy"
                     percentage = 80
 
                     # compare prega per me !
-                    
-                    
+                    # 29 set 2022 3-10 > 0.08 da 0.10
+                    # 29 set 28 20 min ago da 28 30 min ago
                     
                     
                     
