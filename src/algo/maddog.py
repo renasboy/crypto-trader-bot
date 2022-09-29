@@ -4833,7 +4833,7 @@ class maddog:
                     ma5_last > ma28_last
                     and ma2_last > ma2_2_min_ago
                     
-                    and deviation_trend_ma300_180_min_ago < 0.20
+                    
                     and deviation_trend_ma300_180_min_ago > -0.20
                     
                     
