@@ -13974,16 +13974,15 @@ class maddog:
                         
                         
                     
-                    
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and deviation_ma5_sotto_ma300 > 0.50
+                        and deviation_ma5_sotto_ma300 > 0.40
                         and ma5_last < ma69_last
                         and deviation_sell > 0.25 and deviation_sell < 0.56
                         and ma2_last < ma2_2_min_ago
                        
                     ):
-                        sell = "SELL 2 (21-60 min) con ma50 > and 5 < 69 and deviation_sell 0.25 - 0.56 MARADONA e' piu' stanco e paziente - r 11477 a"
+                        sell = "SELL 2 (21-60 min) con ma50 > and 5 < 69 and deviation_sell 0.25 - 0.56 MARADONA e' piu' stanco e paziente - r 11477 A"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
@@ -13992,13 +13991,29 @@ class maddog:
                         
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and deviation_ma5_sotto_ma300 < 0.50
+                        and deviation_ma5_sotto_ma300 < 0.40
+                        and deviation_ma5_sotto_ma300 > -0.40
+                        and ma5_last < ma39_last
+                        and deviation_sell > 0.25 and deviation_sell < 0.56
+                        and ma2_last < ma2_2_min_ago
+                       
+                    ):
+                        sell = "SELL 2 (21-60 min) con ma50 > and 5 < 39 and deviation_sell 0.25 - 0.56 MARADONA e' piu' stanco e paziente - r 11477 B"
+                        action = "sell"
+                        
+                        # deviation_sell = ma3_last/last_trade_price
+                        # 5-69 da 5-39 dopo dolomiti
+                        # 29 set 5-39 fascia mediana 5-300
+                        
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and deviation_ma5_sotto_ma300 < -0.40
                         and ma5_last < ma78_last
                         and deviation_sell > 0.25 and deviation_sell < 0.56
                         and ma2_last < ma2_2_min_ago
                        
                     ):
-                        sell = "SELL 2 (21-60 min) con ma50 > and 5 < 78 and deviation_sell 0.25 - 0.56 MARADONA e' piu' stanco e paziente - r 11477 b"
+                        sell = "SELL 2 (21-60 min) con ma50 > and 5 < 78 and deviation_sell 0.25 - 0.56 MARADONA e' piu' stanco e paziente - r 11477 C"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
