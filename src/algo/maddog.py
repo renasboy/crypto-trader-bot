@@ -417,7 +417,7 @@ class maddog:
         
         # formula deviation_ma100_180_min_ago_sopra_ma300_180_min_ago
         
-        deviation_ma100_180_min_ago_sopra_ma300_180_min_ago = (ma100_180_min_ago / ma300_1800_min_ago - 1) * 100 if ma300_180_min_ago else 0
+        deviation_ma100_180_min_ago_sopra_ma300_180_min_ago = (ma100_180_min_ago / ma300_180_min_ago - 1) * 100 if ma300_180_min_ago else 0
         self.algo_helper.info("deviation_ma100_180_min_ago_sopra_ma300_180_min_ago: {}".format(deviation_ma100_180_min_ago_sopra_ma300_180_min_ago))
         
         
