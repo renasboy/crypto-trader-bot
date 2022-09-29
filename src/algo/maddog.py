@@ -5013,7 +5013,7 @@ class maddog:
                     
                     and ma300_last > ma300_60_min_ago
                     
-                    and deviation_ma3_sopra_ma10 > 0.07
+                    and deviation_ma3_sopra_ma10 > 0.17
                     and deviation_ma5_sopra_ma28 > 0.10
                     and ma2_last >= ma2_2_min_ago
                 ):    
