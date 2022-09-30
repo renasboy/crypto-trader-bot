@@ -11594,7 +11594,7 @@ class maddog:
                         and deviation_sell > 0.32 and deviation_sell < 0.52
                         and ma2_last < ma2_2_min_ago
                     ):    
-                        sell = "SELL 1 da 50 a 90 min con ma50 > and incrocio 5-54 and deviation_sell 0.31-0.52 la prima FINTA ALLA MARADONA RAFFORZATO - r 9478"
+                        sell = "SELL 1 da 50 a 90 min con ma50 > and incrocio 5-54 and deviation_sell 0.31-0.52 la prima FINTA ALLA MARADONA RAFFORZATO - r 9493 A"
                         action = "sell"
                         
                         # MARADONA RAFFORZATO accompagna nelle prime fasi di crescita. poi interviene RONALDO se il rialzo comincia a farsi piu' consistente.
@@ -11605,11 +11605,30 @@ class maddog:
                     elif (
                         ma50_last > ma50_2_min_ago
                         and ma100_last < ma150_last
+                        and ma300_last > ma300_120_min_ago
+                        
+                        and (ma5_prev > ma59_prev and ma5_last < ma59_last)
+                        and deviation_sell > 0.32 and deviation_sell < 0.52
+                        and ma2_last < ma2_2_min_ago
+                    ):    
+                        sell = "SELL 1 da 50 a 90 min con ma50 > and incrocio 5-59 and deviation_sell 0.31-0.52 la prima FINTA ALLA MARADONA - r 9493 B"
+                        action = "sell"
+                        
+                        # MARADONA accompagna nelle prime fasi di crescita il titolo. poi interviene RONALDO se il rialzo comincia a farsi piu' consistente.
+                        # 30 set 5-59 da 5-52 se 300 > 300 120 min ago
+                        
+                        
+                        
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and ma100_last < ma150_last
+                        and ma300_last < ma300_120_min_ago
+                        
                         and (ma5_prev > ma52_prev and ma5_last < ma52_last)
                         and deviation_sell > 0.32 and deviation_sell < 0.52
                         and ma2_last < ma2_2_min_ago
                     ):    
-                        sell = "SELL 1 da 50 a 90 min con ma50 > and incrocio 5-52 and deviation_sell 0.31-0.52 la prima FINTA ALLA MARADONA - r 9493"
+                        sell = "SELL 1 da 50 a 90 min con ma50 > and incrocio 5-52 and deviation_sell 0.31-0.52 la prima FINTA ALLA MARADONA - r 9493 B"
                         action = "sell"
                         
                         # MARADONA accompagna nelle prime fasi di crescita il titolo. poi interviene RONALDO se il rialzo comincia a farsi piu' consistente.
