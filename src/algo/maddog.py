@@ -5250,7 +5250,7 @@ class maddog:
                     and ma78_last < ma200_last
                     and ma300_last > ma300_120_min_ago
                     
-                    and deviation_ma3_sopra_ma10 > 0.02
+                    and deviation_ma3_sopra_ma10 > 0.10
                     and deviation_ma5_sopra_ma28 > 0.03
                     
                     and ma78_last < ma100_last
@@ -5265,13 +5265,13 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
                 ):
 
-                    buy = "BUY 1 forever young 1 USATA MOVIMENTO LATERALE se ma 200 > e se ma200 > ma300 AND 78 < 200 AND 3-10 > 0.04 e 300>120 min ago - r 4379 b1"
+                    buy = "BUY 1 forever young 1 USATA MOVIMENTO LATERALE se ma 200 > e se ma200 > ma300 AND 78 < 200 AND 3-10 > 0.10 e 300>120 min ago - r 4379 B1"
                     action = "buy"
                     percentage = 80
                     
                     # la troppa prudenza qualche volta genera perdite !
                     # RCCR r1852 e' arrivata una ndecchia prima. studia le piccole differenze.
-                    
+                    # 30 set 3-10 a 0.10 da 0.04
                     
                     
                     
@@ -5298,7 +5298,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                 ):
 
-                    buy = "BUY 1 forever young 1 PIU' PRUDENTE se ma 200 > e se ma200 > ma300 AND 78 < 200 AND 3-10 > 0.07 e 300<120 min ago- r 4379 b2"
+                    buy = "BUY 1 forever young 1 PIU' PRUDENTE se ma 200 > e se ma200 > ma300 AND 78 < 200 AND 3-10 > 0.07 e 300<120 min ago- r 4379 B2"
                     action = "buy"
                     percentage = 80
                     
