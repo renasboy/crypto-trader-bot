@@ -5235,7 +5235,7 @@ class maddog:
                     and ma78_last < ma100_last
                     and deviation_ma100_laterale > 0.12
                     and ma11_last > ma200_last
-                    and ma200_last > ma200_15_min_ago
+                    
                     
                     
                     and ma3_last > ma11_last
@@ -5263,7 +5263,7 @@ class maddog:
                     and ma78_last < ma100_last
                     and deviation_ma100_laterale > 0.12
                     and ma11_last > ma200_last
-                    and ma200_last > ma200_15_min_ago
+                    
                     
                     
                     and ma3_last > ma11_last
