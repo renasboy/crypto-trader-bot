@@ -12840,13 +12840,15 @@ class maddog:
                     
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and (ma3_prev > ma13_prev and ma3_last < ma13_last)
+                        and (ma3_prev > ma28_prev and ma3_last < ma28_last)
                         and deviation_sell > 2.71 and deviation_sell < 5.70
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 dopo 110 min con ma50 > incrocio 3-13 (!) and deviation_sell > 2.71 TACCO DI ALLAH - r 10411"
+                        sell = "SELL 1 dopo 110 min con ma50 > incrocio 3-28 and deviation_sell > 2.71 TACCO DI ALLAH - r 10411"
                         action = "sell"
+                        
+                        # 1 ott 2022 3-28 da 3-13
                         
                 
                 
@@ -15037,13 +15039,14 @@ class maddog:
                     elif (    
                         ma50_last < ma50_2_min_ago 
                         and ma2_last < ma2_2_min_ago 
-                        and deviation_sell < -0.20 
+                        and deviation_sell < -0.22
                         and ma3_last < ma39_last
                         and deviation_trend_ma100 > 0.10
                     ):
-                        sell = "SELL 2 90-110 min con ma50 < MA ma100 > and (deviation_sell < -0.20 and ma3_last < ma39_last) - r 12383"
+                        sell = "SELL 2 90-110 min con ma50 < MA ma100 > and (deviation_sell < -0.22 and ma3_last < ma39_last) - r 12383"
                         action = "sell"
                         
+                        # 1 ott dev sell -0.22 da -0.20
                   
                 
                         
