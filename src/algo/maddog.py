@@ -5313,7 +5313,32 @@ class maddog:
                
                 ################################################################################################
                 
+                # BUY 1 correzione FIAT con riga 1384 RCCR + 3-10 - altra riga RCCR che e' andata bene.
                 
+                elif (    
+                    
+                    ma200_last > ma200_20_min_ago
+                    and ma3_last > ma28_last
+                    and ma2_last > ma2_2_min_ago
+                    
+                    and ma100_last > ma200_last
+                    and ma200_last > ma300_last
+                    
+                    and ma100_last > ma100_60_min_ago
+                    and ma200_last > ma200_60_min_ago
+                    and ma300_last > ma300_60_min_ago
+                    
+                    and deviation_ma3_sopra_ma10 > 0.07
+                 
+                ):    
+                    
+                    buy = "BUY 1 correzione FIAT con riga 1384 RCCR + 3-10 - r 4409"
+                    action = "buy"
+                    percentage = 40
+                    
+                    
+                    
+                    
                 # BUY 1 FOREVER YOUNG PIU' AGGRESSIVO con doppio delta < 1 E MA100> (rialzo) se ma 200 > e se ma200 > ma300  and deviation_ma5_sopra_ma28 > 0.10
                 
                 elif (  
