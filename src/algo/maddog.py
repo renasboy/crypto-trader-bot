@@ -1488,29 +1488,7 @@ class maddog:
                     
                     and ma200_last < ma300_last
                     and ma5_last < ma300_last
-                    and ma59_last > ma125_last
-                    
-                    and deviation_ma3_sopra_ma10 > 0.11
-                    
-                    and ma200_last < ma200_60_min_ago
-                    and ma100_last < ma100_60_min_ago
-              
-                    and ma2_last > ma2_2_min_ago
-                ):     
-                  
-                    buy = "BUY 1 quando incomincia il ribasso MA ma300> MA 200<300 CON 5 SOTTO 300 ! E COMPRA CON 5 SOPRA 100 ! - r 1184 B1x"
-                    action = "buy"
-                    percentage = 90
-                    
-                    # 20 set 2022 aggiunto 3-10 > 0.11
-                    
-                    
-                elif (     
-                    ma300_last > ma300_120_min_ago
-                    
-                    and ma200_last < ma300_last
-                    and ma5_last < ma300_last
-                    and ma59_last < ma125_last
+                    and ma5_last > ma100_last
                     
                     and deviation_ma3_sopra_ma10 > 0.135
                     
@@ -1520,11 +1498,14 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                 ):     
                   
-                    buy = "BUY 1 quando incomincia il ribasso MA ma300> MA 200<300 CON 5 SOTTO 300 ! E COMPRA CON 5 SOPRA 100 ! - r 1184 B1y"
+                    buy = "BUY 1 quando incomincia il ribasso MA ma300> MA 200<300 CON 5 SOTTO 300 ! E COMPRA CON 5 SOPRA 100 ! - r 1184 B1"
                     action = "buy"
                     percentage = 90
                     
                     # 20 set 2022 aggiunto 3-10 > 0.11
+                    #  1 ott 2022 3-10 > 0.135
+                    
+                
                     
                     
                     
