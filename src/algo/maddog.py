@@ -5226,14 +5226,15 @@ class maddog:
                 
                 elif (  
                     ma200_last > ma300_last
-                    and ma300_last > ma300_301_min_ago
+                    and deviation_ma100_laterale > 0.12
+                    and ma200_last > ma200_15_min_ago
                     and ma78_last > ma200_last
                     
-                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma10 > 0.035
                     and deviation_ma5_sopra_ma28 > 0.09
                     
                     and ma78_last < ma100_last
-                    and deviation_ma100_laterale > 0.12
+                    
                     and ma11_last > ma200_last
                     
                     
@@ -5244,37 +5245,14 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                 ):
 
-                    buy = "BUY 1 forever young 1 PIU' PRUDENTE se ma 200 > e se ma200 > ma300 AND 78 > 200 - r 4353 a1"
+                    buy = "BUY 1 forever young 1 PIU' PRUDENTE se ma 200 > e se ma200 > ma300 AND 78 > 200 - r 4353 A"
                     action = "buy"
                     percentage = 80
                     
+                    # 1 ott 2022 3-10 > 0.035
                     
                     
-                # BUY 1 forever young 1 PIU' PRUDENTE se ma 200 > e se ma200 > ma300 AND 78 > 200
                 
-                elif (  
-                    ma200_last > ma300_last
-                    and ma300_last < ma300_301_min_ago
-                    and ma78_last > ma200_last
-                    
-                    and deviation_ma3_sopra_ma10 > 0.03
-                    and deviation_ma5_sopra_ma28 > 0.09
-                    
-                    and ma78_last < ma100_last
-                    and deviation_ma100_laterale > 0.12
-                    and ma11_last > ma200_last
-                    
-                    
-                    
-                    and ma3_last > ma11_last
-                    and ma5_last > ma200_last
-                    
-                    and ma2_last > ma2_2_min_ago
-                ):
-
-                    buy = "BUY 1 forever young 1 PIU' PRUDENTE se ma 200 > e se ma200 > ma300 AND 78 > 200 - r 4353 a2"
-                    action = "buy"
-                    percentage = 80
                     
                     
                     
