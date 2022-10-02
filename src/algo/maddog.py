@@ -1519,28 +1519,7 @@ class maddog:
                     
                 
              
-                # ------------------------------------------------------------ BUY 1 laterale 1 - r 1206 AA1
                 
-                elif (    
-                    ma8_last > ma300_last
-                    
-                    and delta_300_100 < 0.20
-                    and delta_300_100 > -0.20
-                    
-                    and deviation_ma3_sopra_ma10 > 0.07
-                  
-                    and ma200_last > ma200_120_min_ago
-                    and ma300_last > ma300_120_min_ago
-               
-                ):  
-                
-                    buy = "BUY 1 laterale 1 - r 1206 AA1"
-                    action = "buy"
-                    percentage = 80
-                    
-                    # 19 set 2022 aggiunta 3-10 > 0.07
-                    
-                    
                     
                     
                 # ------------------------------------------------------------ BUY 1 laterale 2 - r 1206 AA2
