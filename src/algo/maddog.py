@@ -8201,17 +8201,18 @@ class maddog:
                     and ma200_last > ma200_60_min_ago
                     and ma300_last > ma300_60_min_ago
                     
-                    and deviation_ma3_sopra_ma10 > 0.06
+                    and deviation_ma3_sopra_ma10 > 0.10
                     and deviation_ma5_sopra_ma28 > -0.02
                 ):    
                     
-                    buy = "BUY 1 con 200 > - riga 1384 RCCR portata nel MADDOG - r 6480"
+                    buy = "BUY 3 con 200 > - riga 1384 RCCR portata nel MADDOG - r 6480"
                     action = "buy"
                     percentage = 80
                     
                     # 30 set importato r 1384 RCCR su BUY 3 MADDOG
                     # 30 set 2022 aggiunta 3-10
                     # 30 set 2022 aggiunta 5.28
+                    #  2 ott 2022 3-10 0.10 !
                     
                     
                 # BUY 3 CON IL TURBO ! (compare stammi vicino!)   
