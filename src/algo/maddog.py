@@ -20317,7 +20317,7 @@ class maddog:
                      
             elif (
                 ma300_last < ma300_301_min_ago
-                and deviation_sell > 0.59
+                and deviation_sell > 0.55
                 and (ma3_prev < ma300_prev and ma3_last > ma300_last)
                 and deviation_ma100_sopra_ma300 < -0.30
                 
@@ -20327,12 +20327,7 @@ class maddog:
                 sell = "SELL condizione speciale 44 RIMBALZO CHE ARRIVA FINO ALLA ma300 MA ma100 E' MOLTO DISTANTE quindi non vende mentre si riavvicinano - r 16938"
                 action = "sell"
                         
-                # 19 SET r 10546 la condizione precedente ha fatto -1.65 ed e' partita insieme ad altre 2 condizioni speciali !
                 
-                # quindi, ho aggiunto questa condizione importata da RCCR SIA QUA CHE NELLE CONDIZIONI SPECIALI ( nuova condizione speciale )
-                # 19 set 2022 IMPORTATO DA RCCR > sell 4:18 del 19 set -1.65 % !
-                # 19 set 2022 deviation_ma39 < -0.22 AND and deviation_sell < -0.22
-                # 20 set 2022 ho aumentato SOLO LA dev sella a -0.23 !
                 
                 
                 
