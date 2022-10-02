@@ -461,12 +461,7 @@ class maddog:
         
         
         
-        # formula DEVIATION_ma3_sotto_ma200 per comprare FINO a una certa distanza da ma200
         
-        deviation_ma3_sotto_ma200 = (ma3_last / ma200_last - 1) * 100 if ma200_last else 0
-        self.algo_helper.info("deviation_ma3_sotto_ma200: {}".format(deviation_ma3_sotto_ma200))
-        
-        # questa e' stata aggiunta il 13 settembre 2022 dopo che deviation_ma5_sotto_ma200 aveva fatto -3% !!!
         
         
         
@@ -480,6 +475,17 @@ class maddog:
         
         deviation_ma100_laterale = (ma5_last / ma100_last - 1) * 100 if ma100_last else 0
         self.algo_helper.info("deviation_ma100_laterale: {}".format(deviation_ma100_laterale))
+        
+        
+        
+        # formula DEVIATION_ma3_sotto_ma200 per comprare FINO a una certa distanza da ma200
+        
+        deviation_ma3_sotto_ma200 = (ma3_last / ma200_last - 1) * 100 if ma200_last else 0
+        self.algo_helper.info("deviation_ma3_sotto_ma200: {}".format(deviation_ma3_sotto_ma200))
+        
+        # questa e' stata aggiunta il 13 settembre 2022 dopo che deviation_ma5_sotto_ma200 aveva fatto -3% !!!
+        
+        
         
         
         # formula DEVIATION_ma5_sotto_ma200 per comprare FINO a una certa distanza da ma200
@@ -4821,6 +4827,15 @@ class maddog:
                     
                     
                     
+                
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     
                 # BUY 1 che ci riprova quando se ne va lateralmente dopo il crollo
                 
@@ -9154,6 +9169,8 @@ class maddog:
                     ma50_last >= ma50_2_min_ago
                     and ma78_last > ma150_last
                     
+                    and deviation_ma5_sopra_ma200 > 0.05
+                    
                     and deviation_ma3_sopra_ma10 > 0.17
                     and deviation_ma5_sopra_ma28 > 0.31
                     
@@ -9181,10 +9198,47 @@ class maddog:
                     # se e' arrivato il buy 5 e' molto probabile che il trend sia consolidato
                     # e, a questo punto, non importa se compra con un + 0.10 piu' in alto. NON FA UNA GRANDE DIFFERENZA !
                     
+                elif (
+                    ma50_last >= ma50_2_min_ago
+                    and ma78_last < ma150_last
+                    
+                    and deviation_ma5_sopra_ma200 < 0.05
+                    and deviation_ma5_sopra_ma200 > -0.35
+                    
+                    and deviation_ma3_sopra_ma10 > 0.17
+                    and deviation_ma5_sopra_ma28 > 0.35
+                    
+                    and ma50_last < ma100_last
+                    
+                    
+                    and deviation_buy3 > 0.10
+                    and ma3_last > ma13_last
+                    and deviation_ma7_sopra_ma40 > 0.09
+                    and ma4_last > ma9_last
+                    and ma4_last > ma50_last
+                    
+                    and ma6_last > ma15_last
+                    and ma7_last > ma25_last
+                    and deviation_bellissima > 0.12
+                    and ma2_last > ma2_2_min_ago
+                
+                ):
+                    buy = "BUY 5 con ma50 > AND 50<100 and 5-28 > 0.31 (SI !) (PER SPEZZARE LA CATENA un po' di meno - vs effetti laterali) - r 7314 b"
+                    action = "buy"
+                    percentage = 70
+                    
+                    # deviation_bellissima = 6/30
+                    # spezzare la catena dei buy - effetti laterali.
+                    # se e' arrivato il buy 5 e' molto probabile che il trend sia consolidato
+                    # e, a questo punto, non importa se compra con un + 0.10 piu' in alto. NON FA UNA GRANDE DIFFERENZA !
+                    
+                    
                     
                 elif (
                     ma50_last >= ma50_2_min_ago
                     and ma78_last < ma150_last
+                    
+                    and deviation_ma5_sopra_ma200 < -0.35
                     
                     and deviation_ma3_sopra_ma10 > 0.17
                     and deviation_ma5_sopra_ma28 > 0.33
@@ -9204,7 +9258,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                 
                 ):
-                    buy = "BUY 5 con ma50 > AND 50<100 and 5-28 > 0.31 (SI !) (PER SPEZZARE LA CATENA un po' di meno - vs effetti laterali) - r 7314 b"
+                    buy = "BUY 5 con ma50 > AND 50<100 and 5-28 > 0.31 (SI !) (PER SPEZZARE LA CATENA un po' di meno - vs effetti laterali) - r 7314 c"
                     action = "buy"
                     percentage = 70
                     
