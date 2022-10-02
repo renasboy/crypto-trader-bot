@@ -6662,7 +6662,28 @@ class maddog:
             
             
             
-            
+                # ------------------------------------------------------------ BUY 2 laterale -
+                
+                elif (    
+                    ma8_last > ma59_last
+                    
+                    and deviation_ma100_sopra_ma300 < 0.20
+                    and deviation_ma100_sopra_ma300 > -0.20
+                    
+                    and deviation_ma3_sopra_ma10 > 0.07
+                 
+                    and ma300_last > ma300_120_min_ago
+               
+                ):  
+                
+                    buy = "BUY 2 laterale - r 5412"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # 19 set 2022 aggiunta 3-10 > 0.07
+                    
+                    
+                    
                 # BUY 2 che ci riprova TORNANDO ALLE ORIGINI ( TREND LATERALE !) con ma200< and ma300< AND 100 vicina alla 300
                 
                 elif (
