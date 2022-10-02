@@ -9169,7 +9169,7 @@ class maddog:
                     ma50_last >= ma50_2_min_ago
                     and ma78_last > ma150_last
                     
-                    and deviation_ma5_sopra_ma200 > 0.05
+                    and deviation_ma5_sotto_ma200 > 0.05
                     
                     and deviation_ma3_sopra_ma10 > 0.17
                     and deviation_ma5_sopra_ma28 > 0.31
@@ -9202,8 +9202,8 @@ class maddog:
                     ma50_last >= ma50_2_min_ago
                     and ma78_last < ma150_last
                     
-                    and deviation_ma5_sopra_ma200 < 0.05
-                    and deviation_ma5_sopra_ma200 > -0.35
+                    and deviation_ma5_sotto_ma200 < 0.05
+                    and deviation_ma5_sotto_ma200 > -0.35
                     
                     and deviation_ma3_sopra_ma10 > 0.17
                     and deviation_ma5_sopra_ma28 > 0.35
@@ -9238,7 +9238,7 @@ class maddog:
                     ma50_last >= ma50_2_min_ago
                     and ma78_last < ma150_last
                     
-                    and deviation_ma5_sopra_ma200 < -0.35
+                    and deviation_ma5_sotto_ma200 < -0.35
                     
                     and deviation_ma3_sopra_ma10 > 0.17
                     and deviation_ma5_sopra_ma28 > 0.33
