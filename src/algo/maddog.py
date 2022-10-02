@@ -7249,7 +7249,7 @@ class maddog:
                     and ma78_last > ma78_30_min_ago
                     
                     and deviation > -0.30
-                    and deviation_bellissima > 0.07
+                    and deviation_bellissima > 0.06
                     and ma39_last > ma50_last
                     and delta_buy3_incrocio_ma3_ma8 >= 0.06
                     and ma3_last > ma8_last
@@ -7264,7 +7264,7 @@ class maddog:
                     percentage = 70
                     
                     # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
-                    
+                    # 2 ott dev bellissima 0.06 da 0.07
                     
                     
                 # BUY 2 RIVOLUZIONARIO se ma39 > ma50 - r 3450
