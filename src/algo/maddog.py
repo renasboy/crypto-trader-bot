@@ -453,6 +453,18 @@ class maddog:
         self.algo_helper.info("deviation_ma100_laterale: {}".format(deviation_ma100_laterale))
         
         
+        # formula DEVIATION_ma5_sotto_ma200 per comprare FINO a una certa distanza da ma200
+        
+        deviation_ma5_sotto_ma200 = (ma5_last / ma200_last - 1) * 100 if ma200_last else 0
+        self.algo_helper.info("deviation_ma5_sotto_ma200: {}".format(deviation_ma5_sotto_ma200))
+        
+        
+        
+        # formula DEVIATION_ma5_sotto_ma300
+        
+        deviation_ma5_sotto_ma300 = (ma5_last / ma300_last - 1) * 100 if ma300_last else 0
+        self.algo_helper.info("deviation_ma5_sotto_ma300: {}".format(deviation_ma5_sotto_ma300))
+        
         
         
         
@@ -488,17 +500,7 @@ class maddog:
         
         
         
-        # formula DEVIATION_ma5_sotto_ma200 per comprare FINO a una certa distanza da ma200
         
-        deviation_ma5_sotto_ma200 = (ma5_last / ma200_last - 1) * 100 if ma200_last else 0
-        self.algo_helper.info("deviation_ma5_sotto_ma200: {}".format(deviation_ma5_sotto_ma200))
-        
-        
-        
-        # formula DEVIATION_ma5_sotto_ma300
-        
-        deviation_ma5_sotto_ma300 = (ma5_last / ma300_last - 1) * 100 if ma300_last else 0
-        self.algo_helper.info("deviation_ma5_sotto_ma300: {}".format(deviation_ma5_sotto_ma300))
         
         
         # formula DEVIATION_ma78_sotto_ma300
@@ -4836,6 +4838,33 @@ class maddog:
                     
                     
                     
+                # BUY 1 PROBLEMA LATERALE
+                
+                elif (
+                    ma2_last > ma2_2_min_ago
+                    
+                    and (ma8_prev < ma59_prev and ma8_last > ma59_last)
+                    
+                    and delta_300_100 < 0.15
+                    and delta_300_100 > -0.15
+                    
+                    and deviation_ma5_sotto_ma300 < 0.35
+                    and deviation_ma5_sotto_ma300 > -0.35
+                 
+                    and deviation_ma3_sopra_ma10 > 0.05
+                 
+                ):
+               
+                    buy = "BUY 1 PROBLEMA LATERALE ! - r 4060"
+                    action = "buy"
+                    percentage = 80
+
+                    
+                    
+                    
+                    
+                    
+                    
                     
                 # BUY 1 che ci riprova quando se ne va lateralmente dopo il crollo
                 
@@ -5532,7 +5561,7 @@ class maddog:
                     and deviation_ma25_sotto_ma300 < -0.60
                     and ma2_last > ma2_2_min_ago
                 ):
-                    buy = "BUY 1 FIAT (MA ma100 ANCORA VICINA alla ma300 e 200 e' ancora sopra 300) (E CON ma25 un po' distante da ma300) 50% 78>100- riga 4514 A"
+                    buy = "BUY 1 FIAT (MA ma100 ANCORA VICINA alla ma300 e 200 e' ancora sopra 300) (E CON ma25 un po' distante da ma300) 50% 78>100 - riga 4514 A"
                     action = "buy"
                     percentage = 50
                     
