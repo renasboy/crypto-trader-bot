@@ -6002,11 +6002,15 @@ class maddog:
                     
                     
                     
-             
-                # BUY 2C se ma100 <
+                # BUY 2C dopo grande rialzo e grande ribasso 
                 
                 elif (
                     deviation_buy2 > 0.09
+                    
+                    and deviation_ma5_sotto_ma200 > 0.05
+                    
+                    and deviation_ma3_sopra_ma10 > 0.15
+                    and deviation_ma5_sopra_ma28 > 0.30
                     
                     and ma200_last > ma200_120_min_ago
                     
@@ -6022,7 +6026,72 @@ class maddog:
                     and ma3_last > ma40_last
                     and ma4_last > ma78_last
                 ):
-                    buy = "BUY 2C con 100 < MA 200 > con 5 > 18 ( NON TOCCARE ) - r 4858"
+                    buy = "BUY 2C dopo grande rialzo e grande ribasso - r 4858 a"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # deviation_buy2 = ma8_last / ma50
+                    
+                    
+                    
+                # BUY 2C dopo grande rialzo e grande ribasso
+                
+                elif (
+                    deviation_buy2 > 0.09
+                    
+                    and deviation_ma5_sotto_ma200 < 0.05
+                    and deviation_ma5_sotto_ma200 > -0.35
+                    
+                    and deviation_ma3_sopra_ma10 > 0.17
+                    and deviation_ma5_sopra_ma28 > 0.32
+                    
+                    and ma200_last > ma200_120_min_ago
+                    
+                    and ma5_last > ma18_last
+                    
+                    and ma100_last < ma100_50_min_ago
+                    and deviation_bellissima > 0.165
+                    
+                    and deviation_buy_ma3_sopra_ma13 > 0.10
+                    and deviation_ma7_sopra_ma40 > 0.10
+                    and ma4_last > ma9_last
+                    and ma2_last > ma2_2_min_ago
+                    and ma3_last > ma40_last
+                    and ma4_last > ma78_last
+                ):
+                    buy = "BUY 2C dopo grande rialzo e grande ribasso - r 4858 b"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # deviation_buy2 = ma8_last / ma50
+                    
+                    
+                    
+                # BUY 2C dopo grande rialzo e grande ribasso
+                
+                elif (
+                    deviation_buy2 > 0.09
+                    
+                    and deviation_ma5_sotto_ma200 < -0.35
+                    
+                    and deviation_ma3_sopra_ma10 > 0.15
+                    and deviation_ma5_sopra_ma28 > 0.30
+                    
+                    and ma200_last > ma200_120_min_ago
+                    
+                    and ma5_last > ma18_last
+                    
+                    and ma100_last < ma100_50_min_ago
+                    and deviation_bellissima > 0.165
+                    
+                    and deviation_buy_ma3_sopra_ma13 > 0.10
+                    and deviation_ma7_sopra_ma40 > 0.10
+                    and ma4_last > ma9_last
+                    and ma2_last > ma2_2_min_ago
+                    and ma3_last > ma40_last
+                    and ma4_last > ma78_last
+                ):
+                    buy = "BUY 2C dopo grande rialzo e grande ribasso - r 4858 c"
                     action = "buy"
                     percentage = 80
                     
