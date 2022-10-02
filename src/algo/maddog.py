@@ -4841,8 +4841,8 @@ class maddog:
                 # BUY 1 PROBLEMA LATERALE
                 
                 elif (
-                    ma2_last > ma2_2_min_ago
                     
+                    deviation_ma3_sopra_ma10 > 0.05
                     and (ma8_prev < ma59_prev and ma8_last > ma59_last)
                     
                     and delta_300_100 < 0.15
@@ -4850,9 +4850,7 @@ class maddog:
                     
                     and deviation_ma5_sotto_ma300 < 0.35
                     and deviation_ma5_sotto_ma300 > -0.35
-                 
-                    and deviation_ma3_sopra_ma10 > 0.05
-                 
+              
                 ):
                
                     buy = "BUY 1 PROBLEMA LATERALE ! - r 4060"
