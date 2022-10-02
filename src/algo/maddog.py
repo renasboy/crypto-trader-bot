@@ -1527,12 +1527,11 @@ class maddog:
                 elif (    
                     ma8_last > ma59_last
                     
-                    and delta_300_100 < 0.20
-                    and delta_300_100 > -0.20
+                    and deviation_ma100_sopra_ma300 < 0.20
+                    and deviation_ma100_sopra_ma300 > -0.20
                     
                     and deviation_ma3_sopra_ma10 > 0.07
-                  
-                    and ma200_last > ma200_120_min_ago
+                 
                     and ma300_last > ma300_120_min_ago
                
                 ):  
