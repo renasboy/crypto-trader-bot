@@ -1523,23 +1523,16 @@ class maddog:
                 # ------------------------------------------------------------ BUY 1 RAFFORZATA se ma200> and ma300 > and 8>50 AND ma78 >
                 
                 elif (    
-                    ma20_last > ma200_last
+                    ma8_last > ma59_last
                     
                     and delta_300_100 < 0.20
                     and delta_300_100 > -0.20
                     
-                    and ma50_last > ma78_last
-                    
                     and deviation_ma3_sopra_ma10 > 0.07
-                    
-                    and ma28_last > ma28_20_min_ago
-                    
-                    and ma59_last > ma59_60_min_ago
-                    and ma78_last > ma78_2_min_ago
+                  
                     and ma200_last > ma200_120_min_ago
                     and ma300_last > ma300_120_min_ago
-                    and ma8_last > ma50_last
-                  
+               
                 ):  
                 
                     buy = "BUY 1 (50>78) con 20>200 and 69 > 100 AND ma78 > AND 59 > 59 60 min ago CON 28 > 28 20 min - r 1206 aA"
