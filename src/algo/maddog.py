@@ -1535,20 +1535,7 @@ class maddog:
                     and ma200_last > ma200_120_min_ago
                     and ma300_last > ma300_120_min_ago
                     and ma8_last > ma50_last
-                    
-                 
-                
-               
-                    and deviation_ma3_sopra_ma10 > 0.05
-                    and (ma8_prev < ma59_prev and ma8_last > ma59_last)
-                    
-                    and delta_300_100 < 0.15
-                    and delta_300_100 > -0.15
-                    
-                    and deviation_ma5_sotto_ma300 < 0.35
-                    and deviation_ma5_sotto_ma300 > -0.35
-              
-                
+                  
                 ):  
                 
                     buy = "BUY 1 (50>78) con 20>200 and 69 > 100 AND ma78 > AND 59 > 59 60 min ago CON 28 > 28 20 min - r 1206 aA"
