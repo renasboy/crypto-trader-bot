@@ -1527,10 +1527,10 @@ class maddog:
                 elif (    
                     ma8_last > ma59_last
                     
-                    and deviation_ma100_sopra_ma300 < 0.20
+                    and deviation_ma100_sopra_ma300 < 0.30
                     and deviation_ma100_sopra_ma300 > -0.20
                     
-                    and deviation_ma3_sopra_ma10 > 0.07
+                    and deviation_ma3_sopra_ma10 > 0.06
                  
                     and ma300_last > ma300_120_min_ago
                
@@ -1541,7 +1541,8 @@ class maddog:
                     percentage = 80
                     
                     # 19 set 2022 aggiunta 3-10 > 0.07
-                    
+                    #  3 ott 2022 3-10 0.06 da 0.07 
+                    #  3 ott 2022 100 sopra 300 a < 0.30 da < 0.20 perche' mentre 100 scende gia' e' partito il rialzo !
                     
                     
                     
