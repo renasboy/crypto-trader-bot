@@ -102,6 +102,7 @@ class maddog:
         ma39_30_min_ago = self.algo_helper.ma_minutes_ago(39, 30)
         ma48_3_min_ago = self.algo_helper.ma_minutes_ago(48, 3)
         ma50_2_min_ago = self.algo_helper.ma_minutes_ago(50, 2)
+        ma59_2_min_ago = self.algo_helper.ma_minutes_ago(59, 2)
         ma59_60_min_ago = self.algo_helper.ma_minutes_ago(59, 60)
         ma69_2_min_ago = self.algo_helper.ma_minutes_ago(69, 2)
         ma69_15_min_ago = self.algo_helper.ma_minutes_ago(69, 15)
@@ -8473,15 +8474,15 @@ class maddog:
                 # BUY 3 con ma69 > and deviation_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali) IMPORTATA DA BUY 4 RCCR   
                 
                 elif (
-                    ma69_last >= ma69_2_min_ago
-                    and ma300_last > ma300_120_min_ago
-                    and ma78_last > ma100_last
+                    ma50_last >= ma50_2_min_ago
+                    and ma300_last > ma300_301_min_ago
+                    
                     and deviation_ma3_sopra_ma10 > 0.05
                     and deviation_ma5_sopra_ma28 > 0.01
                     
-                    and deviation_bellissima > 0.10
-                    and deviation_buy3 > 0.10
-                    and deviation_ma7_sopra_ma40 > 0.07
+                    and deviation_bellissima > 0.05
+                    and deviation_buy3 > 0.05
+                    and deviation_ma7_sopra_ma40 > 0.05
                
                     and ma3_last > ma13_last
                     and ma4_last > ma9_last
@@ -8506,7 +8507,7 @@ class maddog:
                 
                 elif (
                     ma69_last >= ma69_2_min_ago
-                    and ma300_last < ma300_120_min_ago
+                    and ma300_last < ma300_301_min_ago
                     and ma78_last > ma100_last
                     and deviation_ma3_sopra_ma10 > 0.05
                     and deviation_ma5_sopra_ma28 > 0.01
