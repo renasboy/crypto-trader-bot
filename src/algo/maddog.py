@@ -14886,16 +14886,37 @@ class maddog:
                     
                     ######################################################################################## trend discendente con PERDITA BASE
                     
-                    
                     elif (
                         ma50_last < ma50_2_min_ago
+                        and ma300_last > ma300_301_min_ago
                         and ma100_last < ma100_60_min_ago
                         
                         and deviation_ma39 < -0.17
                         and deviation_sell < -0.10
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 2 da 60 a 90 min TREND < con PERDITA BASE con ma50 < con deviation_ma39 <-0.17 and dev_sell < -0.10 - r 11999"
+                        sell = "SELL 2 da 60 a 90 min TREND < con PERDITA BASE con ma50 < con deviation_ma39 < -0.17 and dev_sell < -0.12 - r 11999 A"
+                        action = "sell"
+                        
+                        # and ma3_last < ma39_last
+                        # and deviation_sell < 0.10
+                        # se non ha forza dopo 1 ora e' inutile continuare a sperare ! POI STIAMO GIA' AL SELL 2 -le ma hanno avuto piu' tempo di salire
+                        # qui non ho messo il crollo perche' dopo 40 min o gia' ha venduto o e' gia' risalita
+                        # cuscino dell' angelo custode
+                        # > estate dev sell -0.10 da 0.10
+                        
+                        
+                        
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and ma300_last < ma300_301_min_ago
+                        and ma100_last < ma100_60_min_ago
+                        
+                        and deviation_ma39 < -0.17
+                        and deviation_sell < -0.10
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 2 da 60 a 90 min TREND < con PERDITA BASE con ma50 < con deviation_ma39 <-0.17 and dev_sell < -0.10 - r 11999 B"
                         action = "sell"
                         
                         # and ma3_last < ma39_last
