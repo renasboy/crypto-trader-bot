@@ -5430,7 +5430,7 @@ class maddog:
                     
                     
                     
-                # BUY 1 NEW FOREVER YOUNG piccola CORREZIONE FIAT in alto - ALTRA RIGA RCCR che e' andata bene.
+                # BUY 1 NEW FOREVER YOUNG piccola CORREZIONE FIAT in basso - ALTRA RIGA RCCR che e' andata bene.
                 
                 elif (    
                     
@@ -5441,16 +5441,13 @@ class maddog:
                     
                     and ma100_last > ma200_last
                     and ma200_last > ma300_last
-                    
-                    and ma100_last > ma100_60_min_ago
-                    and ma200_last > ma200_60_min_ago
                     and ma300_last > ma300_60_min_ago
                     
                     and ma2_last > ma2_2_min_ago
                  
                 ):    
                     
-                    buy = "BUY 1 NEW FOREVER YOUNG piccola CORREZIONE FIAT in alto - ALTRA RIGA RCCR che e' andata bene - riga 4411 b"
+                    buy = "BUY 1 NEW FOREVER YOUNG piccola CORREZIONE FIAT in basso - ALTRA RIGA RCCR che e' andata bene - riga 4411 b"
                     action = "buy"
                     percentage = 40
                     
