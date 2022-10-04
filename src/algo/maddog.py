@@ -5400,10 +5400,8 @@ class maddog:
                 
                 elif (    
                     
-                    
                     deviation_ma100_sopra_ma300 > 0.50
-                    
-                    
+                   
                     and ma3_last > ma28_last
                     and ma200_last > ma200_20_min_ago
                     and deviation_ma3_sopra_ma10 > 0.113
@@ -5432,42 +5430,6 @@ class maddog:
                     
                     
                     
-                    
-                # BUY 1 NEW FOREVER YOUNG piccola CORREZIONE FIAT in basso - ALTRA RIGA RCCR che e' andata bene.
-                
-                elif (    
-                    
-                    deviation_ma100_sopra_ma300 < 0.50
-                    and ma3_last > ma28_last
-                    
-                    and ma200_last > ma200_20_min_ago
-                    and deviation_ma3_sopra_ma10 > 0.07
-                    
-                    and ma100_last > ma200_last
-                    and ma200_last > ma300_last
-                    
-                    and ma100_last > ma100_60_min_ago
-                    and ma200_last > ma200_60_min_ago
-                    and ma300_last > ma300_60_min_ago
-                    
-                    and ma2_last > ma2_2_min_ago
-                 
-                ):    
-                    
-                    buy = "BUY 1 NEW FOREVER YOUNG piccola CORREZIONE FIAT in basso - ALTRA RIGA RCCR che e' andata bene - riga 4411 B"
-                    action = "buy"
-                    percentage = 40
-                    
-                    # 13 set aggiunte 3-10 and 5-28
-                    # se sta molto in alto per comprare 5 deve incrociare dal basso con la 100 ed avere 3-10 > 0.11 vedi ore 12:06 del 26 set 2022
-                    # VA IN CONFLITTO. aalora ho lasciato solo 3-10 > 0.11
-                    # BUY 1 correzione FIAT con riga 1384 RCCR + 3-10 - altra riga RCCR che e' andata bene.
-                    # vedi 30 set ore 18:26 RCCR riga 1384
-                    # in MADDOG ho aggiunto 3-10 > 0.07 e lasciato 3-28 
-                    
-                    
-                    
-                
                 
                     
                 
