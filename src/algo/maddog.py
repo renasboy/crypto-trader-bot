@@ -8215,13 +8215,14 @@ class maddog:
                     
                     
                     
-                # BUY 3 con ma200> piccola CORREZIONE FIAT che NON E' un forte ribasso e NON E' un crollo ! ALTRA RIGA RCCR che e' andata bene.
+                # BUY 3 con ma200> piccola CORREZIONE in alto FIAT che NON E' un forte ribasso e NON E' un crollo ! ALTRA RIGA RCCR che e' andata bene.
                 
                 elif (    
                     
-                    ma200_last > ma200_20_min_ago
+                    ma5_last > ma150_last
                     and deviation_ma100_sopra_ma300 > 0.50
-                    
+                     
+                    and ma200_last > ma200_20_min_ago
                     and ma3_last > ma28_last
                     and ma2_last > ma2_2_min_ago
                     
@@ -8236,7 +8237,7 @@ class maddog:
                     and deviation_ma5_sopra_ma28 > -0.02
                 ):    
                     
-                    buy = "BUY 3 con 200 > - riga 1384 RCCR portata nel MADDOG - r 6480 A"
+                    buy = "BUY 3 correzione in alto con 200 > - riga 1384 RCCR portata nel MADDOG - r 6480 A"
                     action = "buy"
                     percentage = 80
                     
@@ -8248,7 +8249,7 @@ class maddog:
                     
                     
                     
-                # BUY 3 con ma200> piccola CORREZIONE FIAT che NON E' un forte ribasso e NON E' un crollo ! ALTRA RIGA RCCR che e' andata bene.
+                # BUY 3 con ma200> piccola CORREZIONE in basso FIAT che NON E' un forte ribasso e NON E' un crollo ! ALTRA RIGA RCCR che e' andata bene.
                 
                 elif (    
                     
@@ -8269,7 +8270,7 @@ class maddog:
                     and deviation_ma5_sopra_ma28 > -0.02
                 ):    
                     
-                    buy = "BUY 3 con 200 > - riga 1384 RCCR portata nel MADDOG - r 6480 B"
+                    buy = "BUY 3 correzione in basso con 200 > - riga 1384 RCCR portata nel MADDOG - r 6480 B"
                     action = "buy"
                     percentage = 80
                     
