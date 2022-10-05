@@ -4794,13 +4794,15 @@ class maddog:
                     
                     
                     
+                
+                    
+                    
                 # BUY 1 CHE MANCAVA DOPO BUY-SELL CROLLO ! 150-100 GIORNO ! MA 50 < 100
                 
                 elif (
-                    deviation_ma5_sopra_ma28 > 0.18
+                    ma8_last > ma150_last
                     and deviation_ma3_sopra_ma10 > 0.25
-                    
-                    and deviation_ma100_sopra_ma300 > 0.25
+                    and deviation_ma5_sopra_ma28 > 0.18
                     
                     and ma50_last < ma100_last
                     
@@ -4817,37 +4819,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                 
                 ):
-                    buy = "BUY 1 in alto CHE MANCAVA DOPO BUY-SELL CROLLO ! 50 < 100 AND 150-100 GIORNO ! and 3-10 > 0.25 and 5-28 > 0.18 - r 4042 a"
-                    action = "buy"
-                    percentage = 80
-                    
-                    
-                # BUY 1 CHE MANCAVA DOPO BUY-SELL CROLLO ! 150-100 GIORNO ! MA 50 < 100
-                
-                elif (
-                    deviation_ma5_sopra_ma28 > 0.18
-                    and deviation_ma3_sopra_ma10 > 0.25
-                    
-                    and deviation_ma100_sopra_ma300 < 0.25
-                    and deviation_ma100_sopra_ma300 > -0.25
-                    and ma8_last > ma150_last
-                    
-                    and ma50_last < ma100_last
-                    
-                    and ma100_last < ma200_last
-                    and ma200_last < ma300_last
-                    
-                    and ma100_last < ma100_120_min_ago
-                    and ma200_last < ma200_120_min_ago
-                    and ma300_last < ma300_120_min_ago
-                    
-                    and delta_150_100 < delta_150_100_60_min
-                    and ma100_last > ma100_3_min_ago
-                    
-                    and ma2_last > ma2_2_min_ago
-                
-                ):
-                    buy = "BUY 1 laterale CHE MANCAVA DOPO BUY-SELL CROLLO ! 50 < 100 AND 150-100 GIORNO ! and 3-10 > 0.25 and 5-28 > 0.18 - r 4042 b"
+                    buy = "BUY 1 laterale CHE MANCAVA DOPO BUY-SELL CROLLO ! 50 < 100 AND 150-100 GIORNO ! and 3-10 > 0.25 and 5-28 > 0.18 - r 4042"
                     action = "buy"
                     percentage = 80
                     
