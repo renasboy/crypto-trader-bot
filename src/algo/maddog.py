@@ -4830,7 +4830,7 @@ class maddog:
                     
                     and deviation_ma100_sopra_ma300 < 0.25
                     and deviation_ma100_sopra_ma300 > -0.25
-                    and ma8_last < ma150_last
+                    and ma8_last > ma150_last
                     
                     and ma50_last < ma100_last
                     
