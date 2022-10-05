@@ -20533,13 +20533,13 @@ class maddog:
                 and deviation_trend_ma200 < -0.10
                         
                 and deviation_ma39 < -0.225
-                and deviation_sell < -0.23
+                and deviation_sell < -0.227
                         
                 and rapporto_delta_1_delta_2 < 1
                         
                 and ma2_last < ma2_2_min_ago
             ):
-                sell = "SELL condizione speciale 43 da RCCR ! IPOTESI PEGGIORE con ma50< con dev_ma39 < -0.225 and dev_sell < -0.23 MA DOPPIO DELTA RIALZO - r 16936"
+                sell = "SELL condizione speciale 43 da RCCR ! IPOTESI PEGGIORE con ma50< con dev_ma39 < -0.225 and dev_sell < -0.227 MA DOPPIO DELTA RIALZO - r 16936"
                 action = "sell"
                         
                 # 19 SET r 10546 la condizione precedente ha fatto -1.65 ed e' partita insieme ad altre 2 condizioni speciali !
