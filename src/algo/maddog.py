@@ -4796,41 +4796,6 @@ class maddog:
                     
                 
                     
-                # BUY 1 CHE MANCAVA DOPO BUY-SELL CROLLO ! 150-100 GIORNO ! MA 50 < 100
-                
-                elif (
-                    ma8_last > ma59_last
-                    and deviation_ma3_sopra_ma10 > 0.25
-                    and deviation_ma5_sopra_ma28 > 0.18
-                    
-                    and ma50_last < ma100_last
-                    
-                    and ma100_last < ma200_last
-                    and ma200_last < ma300_last
-                    
-                    and ma100_last < ma100_120_min_ago
-                    and ma200_last < ma200_120_min_ago
-                    and ma300_last > ma300_120_min_ago
-                    
-                    and delta_150_100 < delta_150_100_60_min
-                    and ma100_last > ma100_3_min_ago
-                    
-                    and ma2_last > ma2_2_min_ago
-                
-                ):
-                    buy = "BUY 1 laterale CHE MANCAVA DOPO BUY-SELL CROLLO ! 50 < 100 AND 150-100 GIORNO ! and 3-10 > 0.25 and 5-28 > 0.18 - r 4042 A"
-                    action = "buy"
-                    percentage = 80
-                    
-                    # madonna compa ! 
-                    # the sound of silence
-                    # ASSURDO ! questa 100 > 100 3 min e' incredibile ! si e' verificata dopo il BUY-SELL del crollo ! NON TOCCARE
-                    # SI STA RIDUCENDO LA DISTANZA TRA 150 E 100
-                    
-                    # 10 giu 2022 5-28 0.12 da 0.09 cazzo
-                    # 21 giu 2022 3-10 > 0.25 da > 0.05 CAZZO
-                    # 29 ago 5-28 0.18
-                    
                     
                     
                 # BUY 1 CHE MANCAVA DOPO BUY-SELL CROLLO ! 150-100 GIORNO ! MA 50 < 100
@@ -4855,7 +4820,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                 
                 ):
-                    buy = "BUY 1 laterale CHE MANCAVA DOPO BUY-SELL CROLLO ! 50 < 100 AND 150-100 GIORNO ! and 3-10 > 0.25 and 5-28 > 0.18 - r 4042 B"
+                    buy = "BUY 1 laterale CHE MANCAVA DOPO BUY-SELL CROLLO ! 50 < 100 AND 150-100 GIORNO ! and 3-10 > 0.25 and 5-28 > 0.18 - r 4042"
                     action = "buy"
                     percentage = 80
                     
