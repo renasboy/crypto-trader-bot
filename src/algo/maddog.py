@@ -2189,7 +2189,7 @@ class maddog:
                     and ma200_last < ma200_120_min_ago
                     
                     and deviation_ma3_sopra_ma10 > 0.07
-                    and deviation_ma5_sopra_ma28 > 0.108
+                    and deviation_ma5_sopra_ma28 > 0.105
                     
                     and ma2_last >= ma20_last
                     and ma2_last >= ma2_2_min_ago
@@ -2203,7 +2203,7 @@ class maddog:
                     # se 78 sta vicino alla 200 3-10 piu' alto ! cazzo ! vedi 20 settembre ore 14:47
                     # 24 set 2022 5-28 > 0.11 da 0.12
                     # 26 set 2022 5-28 > 0.108 da 0.11
-                    
+                    #  7 ott 2022 5-28 > 0.105 da 0.108
                 
                     
                     
