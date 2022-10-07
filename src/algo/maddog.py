@@ -1917,7 +1917,7 @@ class maddog:
                 # BUY 1 tempo ESTATE PIU' VELOCE 100 > 60 min ago (l' estate se lo puo' perettere!) considera il passare del TEMPO ! ma30 > 
                 
                 elif (     
-                    ma15_last > ma28_last
+                    ma8_last > ma28_last
                     and ma78_last > ma100_last
                     
                     and ma8_last > ma200_last
