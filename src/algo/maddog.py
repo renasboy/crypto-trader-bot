@@ -2294,7 +2294,7 @@ class maddog:
             
                 elif (       
                     ma200_last < ma200_20_min_ago
-                    and ma8_last > ma125_last
+                    and ma8_last > ma100_last
                     and ma2_last >= ma2_2_min_ago
                     
                     and deviation_ma3_sopra_ma10 > 0.07
@@ -2307,7 +2307,7 @@ class maddog:
                     and ma300_last < ma300_60_min_ago
                 ):    
         
-                    buy = "BUY 1 11-125 con ma200< 300< MA ma100> 100 60 min ago e doppio delta < MA ma100 > - GIORNO ! - riga 1712"
+                    buy = "BUY 1 8-100 con ma200< 300< MA ma100> 100 60 min ago e doppio delta < - GIORNO ! - riga 1712"
                     action = "buy"
                     percentage = 90
                     
@@ -2318,7 +2318,7 @@ class maddog:
                     # 22 set 2022 aggiunto 3-10 0.07
                     # 22 set 2022 5-28 > 0.12
                     # 30 set 5-28 0.11 da 0.12
-                    
+                    #  7 ott 8-100 da 8-125
                     
                     
                     
