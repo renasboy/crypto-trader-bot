@@ -3735,13 +3735,13 @@ class maddog:
                 elif (
                     ma2_last > ma2_2_min_ago
                     and deviation_trend_ma200 > -0.30
-                    and deviation_correzione_1 > -0.01
+                    and ma5_last > ma25_last
                     
                     and deviation_buy_crollo_1 < -0.70
                     and deviation_buy_crollo_1 > -0.90
                     
                     and deviation_ma3_sopra_ma10 > 0.09
-                    and deviation_ma5_sopra_ma28 > 0.01
+                    
                   
                 ):
                     buy = "BUY 1 AUDI che NON E' un grande ribasso MASERATI e NON E' un crollo FERRARI ! con deviation trend ma200 - r 3043"
@@ -3755,6 +3755,7 @@ class maddog:
                     
                     # and deviation_correzione_1 > -0.01 significa una ndecchia prima di 5-30 !
                     # 22 set aggiunte 3-10 e 5-28
+                    #  7 ott 2022 5-25 cosi' e' piu' chiaro chi interviene (tolta dev correzione)
                 
                 ######################################################################################################
                 ###################################################################################################### attenzione qui applico il doppio delta !
