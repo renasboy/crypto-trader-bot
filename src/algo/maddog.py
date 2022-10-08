@@ -2298,7 +2298,7 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
                     
                     and deviation_ma3_sopra_ma10 > 0.07
-                    and deviation_ma5_sopra_ma28 > 0.11
+                    and deviation_ma5_sopra_ma28 > 0.10
                  
                     and delta_1 < delta_2
                     and ma100_last > ma100_50_min_ago
@@ -2319,8 +2319,8 @@ class maddog:
                     # 22 set 2022 5-28 > 0.12
                     # 30 set 5-28 0.11 da 0.12
                     #  7 ott 8-100 da 8-125
-                    #  8 ott ma100> da 50 min non da 60 min ! e' giorno
-                    
+                    #  8 ott ma100> da 50 min non da 60 min ! e' giorno !
+                    #  8 ott 5-28 a 0.10 da 0.11 ! e' giorno !
                     
                     
                     
