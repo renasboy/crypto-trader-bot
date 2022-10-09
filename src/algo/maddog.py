@@ -4982,6 +4982,8 @@ class maddog:
                     # 18 set 5-33 e 3-10 > 0.085
                     # 20 set 3-10 > 0.085 da 0.09
                     # 22 set ho aggiunto 5-28 > 0.11
+                    
+                    
                 
             
                 # BUY 1 con con 200 > 200 20 min ago (100 < and 200 < MA 300 >)
@@ -4996,12 +4998,19 @@ class maddog:
                     
                     and ma200_last > ma200_20_min_ago
                     and ma13_last > ma200_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.05
+                    and deviation_ma5_sopra_ma28 > 0.11
+                    
                     and ma2_last > ma2_2_min_ago
                 ):    
                     
                     buy = "BUY 1 con 200 > 200 20 min ago (100 < and 200 < MA 300 >) and 13-200 !  - riga 4190"
                     action = "buy"
                     percentage = 80
+                    
+                    # aggiunta 5-28 e 3-10 vedi 9 ott 2022 ore 21:07
+                    
                     
                     
                 
