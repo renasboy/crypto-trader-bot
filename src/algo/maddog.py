@@ -5768,7 +5768,7 @@ class maddog:
                 elif (
                     ma69_last >= ma69_2_min_ago
                     and deviation_ma100_sopra_ma300 < 0.20
-                    and ma78_last > ma200_last
+                    and ma69_last > ma200_last
                     
                     and deviation_ma5_sopra_ma28 > 0.15
                     and deviation_buy2 > 0.01
@@ -5779,14 +5779,14 @@ class maddog:
                     and price > price_2_min_ago
                     
                 ):
-                    buy = "BUY 2A ribasso o laterale  and ma78_last > ma200_last - r 4685 a"
+                    buy = "BUY 2A ribasso o laterale  and ma69_last > ma200_last - r 4685 a"
                     action = "buy"
                     percentage = 80
 
                     # deviation_buy_ma3_sopra_ma13 > x e' fondamentale !
                     # deviation_buy2 = ma8_last/ma50_last  
                     # tolta and ma2_last >= ma2_2_min_ago !
-                    
+                    #  9 ott 2022 69>200 da 78>200
                     
                     
                     
