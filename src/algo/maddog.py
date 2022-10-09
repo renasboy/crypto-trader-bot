@@ -1523,6 +1523,31 @@ class maddog:
              
                 
                     
+                # BUY 1 condizione the sound of silence ! tutte le ma sono negative MA BUY con 22 > 200
+                
+                elif (     
+               
+                    ma22_last > ma200_last
+                    and ma100_last < ma100_60_min_ago
+                    and ma200_last < ma200_60_min_ago
+                    and ma300_last < ma300_60_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.06
+                    and deviation_buy_ma5_sopra_ma20 > 0.05
+                    
+                    and ma2_last > ma2_2_min_ago
+                ):    
+                    buy = "BUY 1 condizione the sound of silence ! tutte le ma sono negative MA BUY con 22-200 (ho sostituito 8 > 125) - r 1205"
+                    action = "buy"
+                    percentage = 40
+                    
+                    # BUY con 22 > 200 (ho sostituito 8 > 125 che mi piaceva ma era troppo rischiosa) 
+                    
+                    
+                    
                     
                 # ------------------------------------------------------------ BUY 1 laterale 2 - r 1206 AA2
                 
@@ -1540,7 +1565,7 @@ class maddog:
                 
                     buy = "BUY 1 laterale 2 - r 1206 AA2"
                     action = "buy"
-                    percentage = 80
+                    percentage = 50
                     
                     # 19 set 2022 aggiunta 3-10 > 0.07
                     #  3 ott 2022 3-10 0.06 da 0.07 
