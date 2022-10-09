@@ -4639,7 +4639,7 @@ class maddog:
                     
                     deviation_ma5_sotto_ma300 > -0.40
                     
-                    and deviation_ma5_sopra_ma28 > 0.18
+                    and deviation_ma5_sopra_ma28 > 0.11
                     and deviation_ma3_sopra_ma10 > 0.10
                     and ma20_last > ma200_last
                     
@@ -4656,12 +4656,12 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                 
                 ):
-                    buy = "BUY 1 20 > 200 che mancava DOPO BUY-SELL e nuovo CROLLO ! 50 > 100 AND 150-100 GIORNO ! and 5-28 > 0.18 and 3-10 > 0.10 - r 3935 A1"
+                    buy = "BUY 1 20 > 200 che mancava DOPO BUY-SELL e nuovo CROLLO ! 50 > 100 AND 150-100 GIORNO ! and 5-28 > 0.18 and 3-10 > 0.10 - r 3935"
                     action = "buy"
                     percentage = 80
                     
                     # > estate 5-28 > 0.18 da 0.12 and 3-10 > 0.10 da 0.05
-                    #  9 ott 2022 20>200 da 50>200 !
+                    #  9 ott 2022 20>200 da 50>200 ! 
                     
                     
                     
