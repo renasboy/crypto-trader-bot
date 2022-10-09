@@ -1525,23 +1525,7 @@ class maddog:
                     
                     
                     
-                # BUY 1 ultima condizione ! ma tutte negative MA BUY con 8 > 125
                 
-                elif (     
-               
-                    ma25_last > ma200_last
-                    and ma100_last < ma100_60_min_ago
-                    and ma200_last < ma200_60_min_ago
-                    and ma300_last < ma300_60_min_ago
-                    
-                    and ma100_last < ma200_last
-                    and ma200_last < ma300_last
-                    and deviation_buy_ma5_sopra_ma20 > 0.05
-                    and ma2_last > ma2_2_min_ago
-                ):    
-                    buy = "BUY 1 ULTIMA CONDIZIONE ! ma tutte negative MA BUY con 25-200 (ho sostituito 8 > 125) - r 1204"
-                    action = "buy"
-                    percentage = 30
                     
                     
                     
