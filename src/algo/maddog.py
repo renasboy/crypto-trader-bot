@@ -5970,7 +5970,7 @@ class maddog:
                     and delta_1 > delta_2
                     and ma100_last < ma100_60_min_ago
                     
-                    and deviation_ma5_sopra_ma28 > 0.15
+                    and deviation_ma5_sopra_ma28 > 0.17
                     
                     and deviation_bellissima > 0.12
                     
@@ -5987,6 +5987,7 @@ class maddog:
                     
                     # deviation_buy2 = ma8_last / ma50
                     # > estate ho alzato buy
+                    # 11 ott 2022 5-28 = 0.17 da 0.15
                     
                     
                     
@@ -6325,7 +6326,7 @@ class maddog:
                     and ma78_last < ma200_last
                     
                 ):
-                    buy = "BUY 2 DURANTE UN RIBASSO AUDI con 5-16 copiata da RCCR CHE E' ANDATA BENISSIMO ! 22 ago 2022 - riga 4571"
+                    buy = "BUY 2 DURANTE UN RIBASSO AUDI con 5-16 copiata da RCCR CHE E' ANDATA BENISSIMO ! 22 ago 2022 - riga 5019"
                     action = "buy"
                     percentage = 50
                     
