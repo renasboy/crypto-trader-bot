@@ -8464,11 +8464,15 @@ class maddog:
                     
                     
                     
+                    
+                    
+                    
                 # BUY 3 29 ago 2022 > 180 min di ribasso
                 
                 elif (
                     
                     ma18_last > ma100_last
+                    and deviation_ma5_sotto_ma300 > -0.40
                     
                     and ma100_last < ma100_180_min_ago
                     and ma200_last < ma200_180_min_ago
@@ -8481,10 +8485,35 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
                     
                 ):
-                    buy = "BUY 3 29 ago 2022 > 180 min di ribasso - r 6572"
+                    buy = "BUY 3 29 ago 2022 > 180 min di ribasso - r 6572 A"
                     action = "buy"
                     percentage = 90
                     
+                    
+                    
+                # BUY 3 29 ago 2022 > 180 min di ribasso
+                
+                elif (
+                    
+                    ma18_last > ma100_last
+                    and deviation_ma5_sotto_ma300 < -0.40
+                    
+                    and ma100_last < ma100_180_min_ago
+                    and ma200_last < ma200_180_min_ago
+                    and ma300_last < ma300_180_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and deviation_ma5_sopra_ma28 > 0.005
+                    and ma2_last >= ma2_2_min_ago
+                    
+                ):
+                    buy = "BUY 3 29 ago 2022 > 180 min di ribasso - r 6572 B"
+                    action = "buy"
+                    percentage = 90
+                    
+                    # 11 ott 2022 mentre scende dopo 3 ore se accelera al ribasso (5 si allontana da 300) interviene prima con 5-28 !
                     
                     
                     
