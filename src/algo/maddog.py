@@ -145,6 +145,8 @@ class maddog:
         
         ma300_300_min_ago = self.algo_helper.ma_minutes_ago(300, 300)
         ma300_301_min_ago = self.algo_helper.ma_minutes_ago(300, 301)
+        ma300_360_min_ago = self.algo_helper.ma_minutes_ago(300, 360)
+        
         
         # LAST TRADE
         
@@ -9242,6 +9244,30 @@ class maddog:
                     
                     # vuoi comprare dopo 120 min di ribasso ? deve essere 5-300 < -0.35 ! voglio uno sconto ulteriore dello 0.35% ! PENSIERO LATERALE
                     
+                # BUY 4 29 ago 2022 > 180 min di ribasso
+                
+                elif (
+                    
+                    ma18_last > ma100_last
+                    
+                    and ma100_last < ma100_180_min_ago
+                    and ma200_last < ma200_180_min_ago
+                    and ma300_last < ma300_180_min_ago
+                    
+                    and ma300_last > ma300_360_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and deviation_ma5_sopra_ma28 > 0.02
+                    and ma2_last >= ma2_2_min_ago
+                    
+                ):
+                    buy = "BUY 4 29 ago 2022 > 180 min di ribasso - r 7039 B1"
+                    action = "buy"
+                    percentage = 90
+                    
+                    
                     
                 # BUY 4 29 ago 2022 > 180 min di ribasso
                 
@@ -9253,16 +9279,22 @@ class maddog:
                     and ma200_last < ma200_180_min_ago
                     and ma300_last < ma300_180_min_ago
                     
+                    and ma300_last < ma300_360_min_ago
+                    
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
                     
-                    and deviation_ma5_sopra_ma28 > 0.02
+                    and deviation_ma5_sopra_ma28 > 0.13
                     and ma2_last >= ma2_2_min_ago
                     
                 ):
-                    buy = "BUY 4 29 ago 2022 > 180 min di ribasso - r 7039 B"
+                    buy = "BUY 4 29 ago 2022 > 180 min di ribasso - r 7039 B2"
                     action = "buy"
                     percentage = 90
+                    
+                    # 11 ott 2022 se ma300 < 360 min ago BUY 4 se deve comprare deve avere almeno 5-28 > 0.13 
+                    
+                    
                     
                     
                     
