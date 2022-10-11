@@ -8427,7 +8427,7 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
                     
                 ):
-                    buy = "BUY 3 29 ago 2022 > 120 min di ribasso AND 18>78 - r 6570 A"
+                    buy = "BUY 3 29 ago 2022 > 120 min di ribasso AND 18>78 - r 6570"
                     action = "buy"
                     percentage = 90
                     
@@ -8453,7 +8453,7 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
                     
                 ):
-                    buy = "BUY 3 29 ago 2022 > 180 min di ribasso - r 6570 B"
+                    buy = "BUY 3 29 ago 2022 > 180 min di ribasso - r 6570"
                     action = "buy"
                     percentage = 90
                     
