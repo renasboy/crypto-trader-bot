@@ -6204,7 +6204,29 @@ class maddog:
                     # > estate 5-28 da 5-22
                    
                     
+                # IL BUY 2 CI RIPROVA CON INCROCIO 8-50
                 
+                elif (
+                    deviation_buy2 > 0.01
+                    and ma100_last < ma100_50_min_ago
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last > ma300_301_min_ago
+                    
+                    
+                    and (ma8_prev < ma50_prev and ma8_last > ma50_last)
+                    and ma2_last > ma2_2_min_ago
+                ):
+               
+                    buy = "BUY 2C con INCROCIO 8-50 con 100< and 200< MA 300 > 300 301 min ago - r 4906"
+                    action = "buy"
+                    percentage = 70
+                    
+                    # deviation_buy2 = ma8_last / ma50
+                    # incrocio va bene nel trend laterale NON TOCCARLO ! ho messo incrocio per evitare punti sopvrapposti
+                    
+                    
+                    
+                    
                 # IL BUY 2 CI RIPROVA CON INCROCIO 8-50
                 
                 elif (
