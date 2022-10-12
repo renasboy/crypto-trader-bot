@@ -2310,7 +2310,7 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
                     
                     and deviation_ma3_sopra_ma10 > 0.07
-                    and deviation_ma5_sopra_ma28 > 0.08
+                    and deviation_ma5_sopra_ma28 > 0.075
                  
                     and delta_1 < delta_2
                     and ma100_last > ma100_50_min_ago
@@ -2335,7 +2335,7 @@ class maddog:
                     #  8 ott 5-28 a 0.10 da 0.11 ! e' giorno !
                     #  9 ott 5-28 a 0.09 da 0.10 ! e' giorno
                     #  9 ott 5-28 a 0.08 da 0.09 ! e' giorno
-                    
+                    # 12 ott 5-28 a 0.075 da 0.08
                 
             
                 
