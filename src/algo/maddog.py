@@ -4009,6 +4009,37 @@ class maddog:
                     
                     
                     
+                # BUY 1 RIBASSO AUDI B importato dal BUY 2 CON 8 sotto 300 < -1.20
+                
+                elif (
+                    
+                    deviation_buy_crollo_1 < -0.70
+                    and deviation_buy_crollo_1 > -1.50
+                    and deviation_ma8_sotto_ma300 < -1.20
+                    
+                    and ma300_last > ma300_301_min_ago
+                    and ma5_last > ma25_last
+                    and deviation_ma3_sopra_ma10 > 0.19
+                    and deviation_ma5_sopra_ma28 > 0.01
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and ma78_last < ma200_last
+                    
+                ):
+                    buy = "BUY 1 RIBASSO AUDI B importato dal BUY 2 CON 8 sotto 300 < -1.20 - 5-25 and 3-10 > 0.19 - riga 3289 B1"
+                    action = "buy"
+                    percentage = 80
+                    
+                    
+                    # deviation_buy_crollo_1 = ma8_last / ma78_last
+                    # questa cosa che 78 deve essere < 200 ha dell' incredibile. MA NON TOCCARE !
+                    # 21 giu 2022 5-18 da 5-20
+                    # 21 giu 2022 5-16 da 5-18
+                    # 27 giu 2022 5-15 da 5-16
+                    # > vacanza 3-10 > 0.19 da 0.15
+                    # roma 5-25
+                    
+                    
                     
                 # BUY 1 RIBASSO AUDI B importato dal BUY 2 CON 8 sotto 300 < -1.20
                 
@@ -4016,19 +4047,21 @@ class maddog:
                     
                     deviation_buy_crollo_1 < -0.70
                     and deviation_buy_crollo_1 > -1.50
-                    
                     and deviation_ma8_sotto_ma300 < -1.20
                     
+                    and ma300_last > ma300_301_min_ago
                     and ma5_last > ma25_last
                     and deviation_ma3_sopra_ma10 > 0.19
+                    and deviation_ma5_sopra_ma28 > 0.03
                     
                     and ma2_last >= ma2_2_min_ago
                     and ma78_last < ma200_last
                     
                 ):
-                    buy = "BUY 1 RIBASSO AUDI B importato dal BUY 2 CON 8 sotto 300 < -1.20 - 5-25 and 3-10 > 0.19 - riga 3289 B"
+                    buy = "BUY 1 RIBASSO AUDI B importato dal BUY 2 CON 8 sotto 300 < -1.20 - 5-25 and 3-10 > 0.19 - riga 3289 B2"
                     action = "buy"
                     percentage = 80
+                    
                     
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     # questa cosa che 78 deve essere < 200 ha dell' incredibile. MA NON TOCCARE !
