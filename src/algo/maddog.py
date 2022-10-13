@@ -7508,14 +7508,14 @@ class maddog:
                 
                 
                 
-                
                 # RIALZO IMPROVVISO 200< DOPO TANTO TEMPO DI TREND LATERALE - POTREBBE SUCCEDERE !
                 
                 elif (    
                    
                     ma200_last < ma200_20_min_ago
+                    and deviation_ma100_sopra_ma300 > -0.30
                     
-                    and deviation_rialzo_improvviso_1 > 0.92
+                    and deviation_rialzo_improvviso_1 > 0.99
                     and deviation_rialzo_improvviso_2 > 0.20
                     and deviation_rialzo_improvviso_3 > 0.20
                     and deviation_rialzo_improvviso_4 > 0.20
@@ -7532,7 +7532,7 @@ class maddog:
                  
                 ):
 
-                    buy = "BUY 2 RIALZO IMPROVVISO con 200 < tentando di evitare falsi acquisti DOPO TANTO TEMPO DI TREND LATERALE - POTREBBE SUCCEDERE ! - r 5978"
+                    buy = "BUY 2 RIALZO IMPROVVISO NO CROLLO con 200 < pericolo falsi acquisti DOPO TANTO TEMPO DI TREND LATERALE - POTREBBE SUCCEDERE ! - r 5978 A"
                     action = "buy"
                     percentage = 70
                     
@@ -7540,10 +7540,46 @@ class maddog:
                     
                     
                     
+                # RIALZO IMPROVVISO 200< DOPO TANTO TEMPO DI TREND LATERALE - POTREBBE SUCCEDERE !
+                
+                elif (    
+                   
+                    ma200_last < ma200_20_min_ago
+                    and deviation_ma100_sopra_ma300 < -0.30
+                    and deviation_ma3_sopra_ma10 > 0.05
+                    
+                    and deviation_rialzo_improvviso_1 > 0.99
+                    and deviation_rialzo_improvviso_2 > 0.20
+                    and deviation_rialzo_improvviso_3 > 0.20
+                    and deviation_rialzo_improvviso_4 > 0.20
+              
+                    and deviation_range_1 < 0.20
+                    and deviation_range_1 > -0.20
+                    and deviation_range_2 < 0.20
+                    and deviation_range_2 > -0.20
+                    and deviation_range_3 < 0.20
+                    and deviation_range_3 > -0.20
+             
+                    and deviation_range_x < 0.20
+                    and deviation_range_x > -0.20
+                 
+                ):
+
+                    buy = "BUY 2 RIALZO IMPROVVISO DURANTE CROLLO (aggiunta 3-10 !) con 200 < pericolo falsi acquisti - POTREBBE SUCCEDERE ! e' successo ! - r 5978 B"
+                    action = "buy"
+                    percentage = 70
+                    
+                    # 8 luglio 2022 ore 3:28 e' capitato rialzo improvviso sul BUY 2 !
+                    # 13 ott 2022 ore 14:30 ha comprato durante un crollo pesante...
+                    
+                    
+                    
+                    
                 # RIALZO IMPROVVISO 200> DOPO TANTO TEMPO DI TREND LATERALE - POTREBBE SUCCEDERE !
                 
                 elif (
                     ma200_last > ma200_20_min_ago
+                    
                     and deviation_rialzo_improvviso_sopra > 0.78
                     and deviation_rialzo_improvviso_1 > 0.46
                     and deviation_rialzo_improvviso_2 > 0.19
