@@ -9793,8 +9793,9 @@ class maddog:
                 elif (
                     ma200_last >= ma200_120_min_ago
                     and ma78_last > ma150_last
-                    
-                    and deviation_ma5_sopra_ma28 > 0.10
+                  
+                    and deviation_ma3_sopra_ma10 > 0.18
+                    and deviation_ma5_sopra_ma28 > 0.20
                     
                     and deviation_ma4_sopra_ma100 > 0.25
                     and ma3_last > ma15_last
@@ -9805,14 +9806,14 @@ class maddog:
                     and ma13_last > ma50_last
                     and ma2_last > ma2_2_min_ago
                 ):   
-                    buy = "BUY 5B RIVOLUZIONARIO che NON SPEZZA LA CATENA SE ma200> 120 min) - r 7410"
+                    buy = "BUY 5B RIVOLUZIONARIO che NON SPEZZA LA CATENA SE ma200> 120 min) con 3-10 > 0.18 e 5-28 > 0.20 - r 7410"
                     action = "buy"
                     percentage = 70
                     
                     # deviation_buy3 = ma4_last/ma30_last
                     # ok tu non voi spezzare la catena.
                     # ma per essere un BUY 5 devi avere almeno ma13>ma50 cazzo !
-                    
+                    # 14 ott 2022 aggiunto 3-10 !
                     
                     
              
