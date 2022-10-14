@@ -4020,15 +4020,16 @@ class maddog:
                     and deviation_buy_crollo_1 > -1.50
                     
                     and deviation_ma8_sotto_ma300 < -1.20
-                    
-                    and ma5_last > ma25_last
+                  
                     and deviation_ma3_sopra_ma10 > 0.19
-                    
-                    and ma2_last >= ma2_2_min_ago
+                    and deviation_ma5_sopra_ma28 > 0.03
+                  
                     and ma78_last < ma200_last
+                    and ma2_last >= ma2_2_min_ago
+                    
                     
                 ):
-                    buy = "BUY 1 RIBASSO AUDI B importato dal BUY 2 CON 8 sotto 300 < -1.20 - 5-25 and 3-10 > 0.19 - riga 3289 B"
+                    buy = "BUY 1 RIBASSO AUDI B importato dal BUY 2 CON 8 sotto 300 < -1.20 - 5-28 and 3-10 > 0.19 - riga 3289 B"
                     action = "buy"
                     percentage = 80
                     
@@ -4039,7 +4040,7 @@ class maddog:
                     # 27 giu 2022 5-15 da 5-16
                     # > vacanza 3-10 > 0.19 da 0.15
                     # roma 5-25
-                    
+                    # 14 ott aggiunta 5-28 > 0.03 attenzione ! l' aggiunta di and deviation_ma8_sotto_ma300 < -1.20 aveva fatto conflitto !
                     
                     
                 # BUY 1 ultimo e meraviglioso RIBASSO AUDI con 5-16 copiata da RCCR CHE E' ANDATA BENISSIMO e che non e' un crollo ! (compare dove sei!)   
