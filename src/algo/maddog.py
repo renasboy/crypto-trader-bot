@@ -14777,18 +14777,39 @@ class maddog:
                     ##############################################################################################################
                     
                     
+                    
                     elif (
                         ma50_last > ma50_2_min_ago
+                        and deviation_ma5_sotto_ma300 > 0.40
+                        and (ma3_prev > ma59_prev and ma3_last < ma59_last)
+                        and deviation_sell > 0.91 and deviation_sell < 1.20
+                        and ma2_last < ma2_2_min_ago
+                   
+                    ):
+                        sell = "SELL 2 (21-60 min) con ma50 > and incrocio 3-59 se 5-300>0.40 and deviation_sell 0.91 - 1.20 - r 11555 a"
+                        action = "sell"
+                        
+                        # deviation_sell = ma3_last/last_trade_price
+                        # 17 set 3-42 da 3-18
+                        
+                        
+                        
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and deviation_ma5_sotto_ma300 < 0.40
                         and (ma3_prev > ma42_prev and ma3_last < ma42_last)
                         and deviation_sell > 0.91 and deviation_sell < 1.20
                         and ma2_last < ma2_2_min_ago
                    
                     ):
-                        sell = "SELL 2 (21-60 min) con ma50 > and incrocio 3-42 and deviation_sell 0.91 - 1.20 - r 11555"
+                        sell = "SELL 2 (21-60 min) con ma50 > and incrocio 3-42 se 5-300<0.40 and deviation_sell 0.91 - 1.20 - r 11555 b"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
                         # 17 set 3-42 da 3-18
+                        
+                        
+                        
                         
                         
                         
