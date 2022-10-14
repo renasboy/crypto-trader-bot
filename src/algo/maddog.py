@@ -20899,14 +20899,18 @@ class maddog:
             elif (
                 ma300_last < ma300_301_min_ago
                 and deviation_sell > 0.55
-                and (ma3_prev < ma300_prev and ma3_last > ma300_last)
+                and (ma3_prev > ma285_prev and ma3_last < ma285_last)
                 and deviation_ma100_sopra_ma300 < -0.30
-                
+                and ma3_last < ma8_last
                 and ma200_last < ma300_last
         
             ):
                 sell = "SELL condizione speciale 44 RIMBALZO CHE ARRIVA FINO ALLA ma300 MA ma100 E' MOLTO DISTANTE quindi non vende mentre si riavvicinano - r 16938"
                 action = "sell"
+                
+                # questa condizione e' un capolavoro
+                # prima era incrocio verso l' alto 3-300 durante un ribasso
+                # 14 ottobre 2022 incrocio verso il basso 3-285 e ma3 > ma8
                         
                 
                 
