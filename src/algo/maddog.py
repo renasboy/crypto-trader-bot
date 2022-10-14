@@ -17030,24 +17030,41 @@ class maddog:
                         
                         
                         
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and deviation_ma5_sotto_ma300 > 0.60
+                        and ma5_last < ma78_last
+                        and deviation_sell > 0.57 and deviation_sell < 0.90
+                        and ma2_last < ma2_2_min_ago
+                      
+                    ):
+                        sell = "SELL 3 (21-60 min) con ma50 > and 5 < 78 and deviation_sell 0.57 - 0.90 ELASTICO ALLA RONALDO - r 13593 a"
+                        action = "sell"
+                        
+                        # deviation_sell = ma3_last/last_trade_price
+                        # 31 maggio 2022 5-39 da 5-20
+                        # 14 ott 2022 5-78 da 5-39 se 5-300 molto in alto !
+                        
                         
                     elif (
                         ma50_last > ma50_2_min_ago
+                        and deviation_ma5_sotto_ma300 < 0.60
                         and ma5_last < ma39_last
                         and deviation_sell > 0.57 and deviation_sell < 0.90
                         and ma2_last < ma2_2_min_ago
                       
                     ):
-                        sell = "SELL 3 (21-60 min) con ma50 > and 5 < 39 and deviation_sell 0.57 - 0.90 ELASTICO ALLA RONALDO - r 13593"
+                        sell = "SELL 3 (21-60 min) con ma50 > and 5 < 39 and deviation_sell 0.57 - 0.90 ELASTICO ALLA RONALDO - r 13593 b"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
                         # 31 maggio 2022 5-39 da 5-20
-                        
+                        # 14 ott 2022 5-78 da 5-39 se 5-300 in basso !
                         
                         
 
                     elif (
+                        
                         ma50_last > ma50_2_min_ago
                         and (ma3_prev > ma28_prev and ma3_last < ma28_last)
                         and deviation_sell > 0.91 and deviation_sell < 1.20
@@ -17060,6 +17077,8 @@ class maddog:
                         # deviation_sell = ma3_last/last_trade_price
                         # 14 giu 2022 3-28 da 3-30
                         
+                        
+                        
                     
                     elif (
                         ma50_last > ma50_2_min_ago
@@ -17068,7 +17087,7 @@ class maddog:
                         and deviation_sell > 1.21 and deviation_sell < 2.70
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 3 (21-60 min) con ma50 > and incrocio 3-30 and dev_sell 1.21 -2.70 - ma100 e' ancora sotto ma300 e vende un po' prima - r 13623"
+                        sell = "SELL 3 (21-60 min) con ma50 > and incrocio 3-30 and dev_sell 1.21 -2.70 - ma100 e' ancora sotto ma300 e vende un po' prima - r 13623 a"
                         action = "sell"
                         
                         # vende un po' prima perche' e' ancora un po' preoccupato perche' ma100 sta sotto ma300
@@ -17081,7 +17100,7 @@ class maddog:
                         and deviation_sell > 1.21 and deviation_sell < 2.70
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 3 (21-60 min) con ma50 > and incrocio 3-52 and dev_sell 1.21 -2.70 - ma100 e' andata sopra ma300 e si distende - r 13636"
+                        sell = "SELL 3 (21-60 min) con ma50 > and incrocio 3-52 and dev_sell 1.21 -2.70 - ma100 e' andata sopra ma300 e si distende - r 13623b"
                         action = "sell"
                         
                         
