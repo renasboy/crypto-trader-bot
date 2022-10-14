@@ -2201,7 +2201,7 @@ class maddog:
                     and ma200_last < ma200_120_min_ago
                     
                     and deviation_ma3_sopra_ma10 > 0.07
-                    and deviation_ma5_sopra_ma28 > 0.105
+                    and deviation_ma5_sopra_ma28 > 0.10
                     
                     and ma2_last >= ma20_last
                     and ma2_last >= ma2_2_min_ago
@@ -2216,7 +2216,7 @@ class maddog:
                     # 24 set 2022 5-28 > 0.11 da 0.12
                     # 26 set 2022 5-28 > 0.108 da 0.11
                     #  7 ott 2022 5-28 > 0.105 da 0.108
-                
+                    # 14 ott 2022 5-28 > 0.10 da 0.105 VIVA MARIA CALLAS ! 
                     
                     
                     
@@ -12814,14 +12814,14 @@ class maddog:
                         and ma200_last < ma200_120_min_ago
                         and ma300_last < ma300_120_min_ago
                    
-                        and deviation_sell < -0.28
+                        and deviation_sell < -0.29
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 da 50-90 min AGGIUNTA TARDIVA MA FORSE NECESSARIA ! and delta_1 < delta_2 and deviation_sell < -0.28 e 300<5 ore - r 9888 a2"
+                        sell = "SELL 1 da 50-90 min AGGIUNTA TARDIVA MA NECESSARIA ! and delta_1 < delta_2 and deviation_sell < -0.29 e 300 < 5 ore - r 9888 A2"
                         action = "sell"
                         
                         # > estate -0.28 da -0.18
-                        
+                        # 14 ott 2022 0.29 da 0.28
                         
                         
                         
