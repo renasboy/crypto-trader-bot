@@ -19226,19 +19226,34 @@ class maddog:
                         #########################################################################################################################
                         
                       
-                        
                     elif (
                         ma50_last >= ma50_2_min_ago
-                        and (ma5_prev > ma25_prev and ma5_last < ma25_last)
+                        and deviation_ma5_sotto_ma300 > 0.40
+                        and (ma5_prev > ma50_prev and ma5_last < ma50_last)
                         and deviation_sell > 0.25 and deviation_sell < 0.56
                         and ma2_last < ma2_2_min_ago
                        
                     ):
-                        sell = "SELL 4-5-x (21-60 min) con ma50 > and incrocio 5-25 and deviation_sell 0.25 - 0.56 FINTA DI MARADONA - r 15568"
+                        sell = "SELL 4-5-x (21-60 min) con ma50 > and incrocio 5-25 and deviation_sell 0.25 - 0.56 FINTA DI MARADONA - r 15568 a"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
                         
+                        
+                        
+                    elif (
+                        ma50_last >= ma50_2_min_ago
+                        and deviation_ma5_sotto_ma300 < 0.40
+                        and (ma5_prev > ma50_prev and ma5_last < ma50_last)
+                        and deviation_sell > 0.25 and deviation_sell < 0.56
+                        and ma2_last < ma2_2_min_ago
+                       
+                    ):
+                        sell = "SELL 4-5-x (21-60 min) con ma50 > and incrocio 5-50 and deviation_sell 0.25 - 0.56 FINTA DI MARADONA - r 15568 b"
+                        action = "sell"
+                        
+                        # deviation_sell = ma3_last/last_trade_price
+                        # 14 ott 2022 5-50 da 5-25
                         
                         
                         
