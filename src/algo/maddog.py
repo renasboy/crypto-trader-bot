@@ -150,6 +150,15 @@ class maddog:
         ma300_360_min_ago = self.algo_helper.ma_minutes_ago(300, 360)
         
         
+        
+        # MAC TREND
+        macd_trend = self.algo_helper.macd_trend
+        
+        
+        
+        
+        
+        
         # LAST TRADE
         
         last_trade_action = self.algo_helper.last_trade_action
