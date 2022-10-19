@@ -4798,9 +4798,8 @@ class maddog:
                 # BUY 1 CHE MANCAVA DOPO 5 ore di ribasso
                 
                 elif (
-                    
-                    delta_1 < delta_2
-                    and deviation_ma5_sopra_ma28 > 0.16
+                 
+                    deviation_ma5_sopra_ma28 > 0.16
                     and deviation_ma3_sopra_ma10 > 0.07
                     and deviation_ma100_laterale > -0.80
                     
@@ -4817,7 +4816,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                 
                 ):
-                    buy = "BUY 1 CHE MANCAVA DOPO 5 ore di ribasso con delta 1 < delta 2 (piu' sicuro) e con 5-28 > 0.16  MA 5 non lontana da 100 - r 4040 A1"
+                    buy = "BUY 1 CHE MANCAVA DOPO 5 ore di ribasso con delta 1 < delta 2 (piu' sicuro) e con 5-28 > 0.16  MA 5 non lontana da 100 - r 4040 A"
                     action = "buy"
                     percentage = 80
                     
