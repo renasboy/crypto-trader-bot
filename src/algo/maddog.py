@@ -4790,6 +4790,30 @@ class maddog:
                     
                     
                     
+                # --------------------------------------- BUY 1 che considera il passare del tempo con TREND IN RIALZO ! sempre 20 > 200
+                
+                elif (     
+                    seconds_since_last_trade > max_hold_time_in_seconds_nuova
+                    and deviation_ma5_sopra_ma28 > 0.10
+                    and ma30_last > ma30_40_min_ago
+                    
+                    and ma20_last > ma200_last
+                    and ma20_last > ma100_last
+                    
+                    and ma4_last > ma100_last
+                    
+                    and ma100_last < ma300_last
+                    and deviation_bellissima > 0.07
+                    and ma2_last > ma2_2_min_ago
+                ):    
+                    buy = "BUY 1 che considera il passare del tempo (SE > 120 min) and 5-28 > 0.10 and ma30 > ma 30 40 min ago (TREND IN RIALZO) - r 4037"
+                    action = "buy"
+                    percentage = 50
+                    
+                    # vedi RCCR 19 ottobre 2022 ore 11:05
+                    
+                    
+                    
                     
                 # BUY 1 CHE MANCAVA DOPO 5 ore di ribasso
                 
