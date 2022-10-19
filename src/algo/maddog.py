@@ -19582,31 +19582,33 @@ class maddog:
                     elif (
                         ma50_last > ma50_2_min_ago
                         and deviation_ma5_sotto_ma300 > 0.40
-                        and (ma3_prev > ma50_prev and ma3_last < ma50_last)
+                        and (ma5_prev > ma59_prev and ma5_last < ma59_last)
                         and deviation_sell > 0.91 and deviation_sell < 1.49
                         and ma2_last < ma2_2_min_ago
                     ):
 
-                        sell = "SELL 4-5-x dopo 90 min con ma50 > incrocio 3-50 con 5-300 in alto and deviation_sell 0.91 - 1.49 - r 15851 a"
+                        sell = "SELL 4-5-x dopo 90 min con ma50 > incrocio 5-59 con 5-300 in alto and deviation_sell 0.91 - 1.49 - r 15851 A"
                         action = "sell"
 
                         # ma 3-48 mi evita la ricompra e la rivendita con perdita !
                         # 14 ott 2022 5-50 da 5-30 ma 5-300 in alto
+                        # 19 ottobre 2022 5-59 da 5-50
+                        
                         
                         
                     elif (
                         ma50_last > ma50_2_min_ago
                         and deviation_ma5_sotto_ma300 < 0.40
-                        and (ma3_prev > ma30_prev and ma3_last < ma30_last)
+                        and (ma3_prev > ma39_prev and ma3_last < ma39_last)
                         and deviation_sell > 0.91 and deviation_sell < 1.49
                         and ma2_last < ma2_2_min_ago
                     ):
 
-                        sell = "SELL 4-5-x dopo 90 min con ma50 > incrocio 3-30 con 5-300 in basso and deviation_sell 0.91 - 1.49 - r 15851 b"
+                        sell = "SELL 4-5-x dopo 90 min con ma50 > incrocio 3-39 con 5-300 in basso and deviation_sell 0.91 - 1.49 - r 15851 B"
                         action = "sell"
 
                         # ma 3-48 mi evita la ricompra e la rivendita con perdita !
-                        
+                        # 19 ottobre 2022 3-39 da 3-30
                         
                     
                     
