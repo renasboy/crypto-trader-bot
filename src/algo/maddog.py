@@ -12805,7 +12805,7 @@ class maddog:
                         
                         # > estate -0.28 da -0.18
                         # 14 ott 2022 0.29 da 0.28 condizione forse senza forse NECESSARIA !
-                        
+                        # 19 ott 2022 0.31 da 0.29 delta 1< delta 2 ! bravo mario
                         
                         
                         
