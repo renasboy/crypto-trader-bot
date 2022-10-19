@@ -8606,21 +8606,24 @@ class maddog:
                 elif (     
                
                     ma8_last > ma150_last
+                    and deviation_ma5_sopra_ma28 > 0.10
+                    and deviation_buy_ma5_sopra_ma20 > 0.05
+                    
                     and ma100_last < ma100_60_min_ago
                     and ma200_last < ma200_60_min_ago
                     and ma300_last < ma300_60_min_ago
                     
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
-                    and deviation_buy_ma5_sopra_ma20 > 0.05
+                    
                     and ma2_last > ma2_2_min_ago
                 ):    
-                    buy = "BUY 3 ULTIMA CONDIZIONE che mancava ! ma tutte negative MA BUY con 8-150 - r 6598"
+                    buy = "BUY 3 ULTIMA CONDIZIONE che mancava ! ma tutte negative MA BUY con 8-150 e 5-28 > 0.10 - r 6598"
                     action = "buy"
                     percentage = 80
                     
                     # BUY 3 ULTIMA CONDIZIONE che mancava con 8-150
-                    
+                    # 19 ott aggiunto 5-28 > 0.10
                     
                     
                     
