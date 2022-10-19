@@ -4798,6 +4798,7 @@ class maddog:
                 # BUY 1 CHE MANCAVA DOPO 5 ore di ribasso
                 
                 elif (
+                    
                     deviation_ma5_sopra_ma28 > 0.16
                     and deviation_ma3_sopra_ma10 > 0.07
                     and deviation_ma100_laterale > -0.80
@@ -8567,17 +8568,17 @@ class maddog:
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
                     
-                    and deviation_ma5_sopra_ma28 > 0.08
+                    and deviation_ma5_sopra_ma28 > 0.11
                     and ma2_last >= ma2_2_min_ago
                     
                 ):
-                    buy = "BUY 3 29 ago 2022 > 120 min di ribasso AND 8>59 - r 6570 B"
+                    buy = "BUY 3 29 ago 2022 > 120 min di ribasso AND 8>59 AND 5-28 > 0.11 - r 6570 B"
                     action = "buy"
                     percentage = 90
                     
                     # 14 set 2022 18-78 da 18-100
                     # 11 ott 2022 mentre scende dopo 2 ore se accelera al ribasso (5 si allontana da 300) interviene prima con 8-59 !
-                    
+                    # 19 ottobre 2022 5-28 0.11 da 0.08
                     
                     
                     
