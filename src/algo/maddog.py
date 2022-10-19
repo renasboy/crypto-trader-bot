@@ -4798,8 +4798,8 @@ class maddog:
                 # BUY 1 CHE MANCAVA DOPO 5 ore di ribasso
                 
                 elif (
-                 
-                    deviation_ma5_sopra_ma28 > 0.16
+                    delta_1 < delta_2
+                    and deviation_ma5_sopra_ma28 > 0.16
                     and deviation_ma3_sopra_ma10 > 0.07
                     and deviation_ma100_laterale > -0.80
                     
