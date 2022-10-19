@@ -5722,6 +5722,7 @@ class maddog:
                     # non e' partita ferrari
                     # non riesco a fare 5-300 > -3.00 e 5-300 < -3.00 che casino ! il compare non risponde
                     # deviation_ma50 = ma50 di adesso / ma50 di 60 min ago
+                    # vedi 14 ottobre 2022 ore 16:35
                     
                     
                     
@@ -5747,8 +5748,8 @@ class maddog:
                     # non e' partita ferrari
                     # non riesco a fare 5-300 > -3.00 e 5-300 < -3.00 che casino ! il compare non risponde
                     # deviation_ma50 = ma50 di adesso / ma50 di 60 min ago
-                    
-                
+                    # vedi 14 ottobre 2022 ore 16:35
+                    # se ma 50 di adesso rispetto alla ma di 60 min ago indica un forte ribasso la FIAT e' meglio che non entra in azione o piu' difficile entrata
                     
                     
                     
