@@ -5699,11 +5699,13 @@ class maddog:
                     
                     
                     
+                    
+                    
                 # BUY 1 DURANTE UN RIBASSO AUDI con 5-16 copiata da RCCR CHE E' ANDATA BENISSIMO ! 22 ago 2022
                 
                 elif (
-                    
-                    deviation_ma5_sopra_ma16 > 0.20
+                    deviation_ma50 > -0.50
+                    and deviation_ma5_sopra_ma16 > 0.20
                     
                     and deviation_buy_crollo_1 < -0.60
                     and deviation_buy_crollo_1 > -1.60
@@ -5712,14 +5714,39 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                   
                 ):
-                    buy = "BUY 1 DURANTE UN RIBASSO AUDI con 5-16 copiata da RCCR CHE E' ANDATA BENISSIMO ! 22 ago 2022 - riga 4571"
+                    buy = "BUY 1 DURANTE UN RIBASSO AUDI con 5-16 copiata da RCCR CHE E' ANDATA BENISSIMO ! 22 ago 2022 - riga 4571 a"
                     action = "buy"
                     percentage = 50
                     
                     # 14 sett dev 5-16 ho dovuto purtroppo portarla a 0.20 da 0.10 dopo il crollo del 13 set
                     # non e' partita ferrari
                     # non riesco a fare 5-300 > -3.00 e 5-300 < -3.00 che casino ! il compare non risponde
+                    # deviation_ma50 = ma50 di adesso / ma50 di 60 min ago
                     
+                    
+                    
+                # BUY 1 DURANTE UN RIBASSO AUDI con 5-16 copiata da RCCR CHE E' ANDATA BENISSIMO ! 22 ago 2022
+                
+                elif (
+                    deviation_ma50 < -0.50
+                    and (ma8_prev < ma50_prev and ma8_last > ma50_last)
+                    and deviation_ma5_sopra_ma16 > 0.20
+                    
+                    and deviation_buy_crollo_1 < -0.60
+                    and deviation_buy_crollo_1 > -1.60
+                    
+                    and ma78_last < ma200_last
+                    and ma2_last > ma2_2_min_ago
+                  
+                ):
+                    buy = "BUY 1 DURANTE UN RIBASSO AUDI con 5-16 copiata da RCCR CHE E' ANDATA BENISSIMO ! 22 ago 2022 - riga 4571 b"
+                    action = "buy"
+                    percentage = 50
+                    
+                    # 14 sett dev 5-16 ho dovuto purtroppo portarla a 0.20 da 0.10 dopo il crollo del 13 set
+                    # non e' partita ferrari
+                    # non riesco a fare 5-300 > -3.00 e 5-300 < -3.00 che casino ! il compare non risponde
+                    # deviation_ma50 = ma50 di adesso / ma50 di 60 min ago
                     
                 
                     
