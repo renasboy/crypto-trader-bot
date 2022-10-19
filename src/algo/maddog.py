@@ -17045,13 +17045,13 @@ class maddog:
                         
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and deviation_ma5_sotto_ma300 > 0.60
+                        and deviation_ma5_sotto_ma300 > 0.50
                         and ma5_last < ma78_last
                         and deviation_sell > 0.57 and deviation_sell < 0.90
                         and ma2_last < ma2_2_min_ago
                       
                     ):
-                        sell = "SELL 3 (21-60 min) con ma50 > and 5 < 78 and deviation_sell 0.57 - 0.90 ELASTICO ALLA RONALDO - r 13593 a"
+                        sell = "SELL 3 (21-60 min) con ma50 > and 5 < 78 and deviation_sell 0.57 - 0.90 ELASTICO ALLA RONALDO - r 13593 A"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
@@ -17061,18 +17061,18 @@ class maddog:
                         
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and deviation_ma5_sotto_ma300 < 0.60
-                        and ma5_last < ma39_last
+                        and deviation_ma5_sotto_ma300 < 0.50
+                        and ma5_last < ma48_last
                         and deviation_sell > 0.57 and deviation_sell < 0.90
                         and ma2_last < ma2_2_min_ago
                       
                     ):
-                        sell = "SELL 3 (21-60 min) con ma50 > and 5 < 39 and deviation_sell 0.57 - 0.90 ELASTICO ALLA RONALDO - r 13593 b"
+                        sell = "SELL 3 (21-60 min) con ma50 > and 5 < 48 and deviation_sell 0.57 - 0.90 ELASTICO ALLA RONALDO - r 13593 B"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
                         # 31 maggio 2022 5-39 da 5-20
-                        # 14 ott 2022 5-78 da 5-39 se 5-300 in basso !
+                        # 14 ott 2022 5-48 da 5-39 se 5-300 in basso !
                         
                         
 
