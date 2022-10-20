@@ -63,7 +63,7 @@ class maddog:
         ma285_last, ma285_prev = self.algo_helper.ma_last_prev(285)
         ma300_last, ma300_prev = self.algo_helper.ma_last_prev(300)
         
-        
+        ma450_last, ma450_prev = self.algo_helper.ma_last_prev(450)
         
         
         
@@ -1558,7 +1558,7 @@ class maddog:
                 
                 elif (    
                     ma8_last > ma59_last
-                    
+                    and ma300_last > ma450_last
                     and deviation_ma100_sopra_ma300 < 0.30
                     and deviation_ma100_sopra_ma300 > -0.20
                     
