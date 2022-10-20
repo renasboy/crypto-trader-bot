@@ -2968,24 +2968,7 @@ class maddog:
                     
                     
                 
-                # BUY 1 the sound of silence 300-450
                 
-                elif (
-                    ma300_last > ma450_last
-                  
-                    and ma300_last < ma300_720_min_ago
-                    and ma450_last < ma450_720_min_ago
-                    
-                    and ma2_last > ma2_2_min_ago
-                ):
-
-                    buy = "BUY 1 the sound of silence 300-450 - r 2315"
-                    action = "buy"
-                    percentage = 80
-                    
-                    # r 2367 RCCR andava in conflitto quando la portavo in MADDOG cosi' e' nata questa !
-                    # vedi RCCR 19 ottobre 2022 ore 11:05
-                    # non mi arrendo.
                     
                     
                     
