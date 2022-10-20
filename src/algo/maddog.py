@@ -3019,15 +3019,6 @@ class maddog:
                 
                 
                 
-                elif (
-                    ma5_last > ma100_last
-                    and ma300_last < ma300_720_min_ago
-                    and ma2_last > ma2_2_min_ago
-                ):
-
-                    buy = "BUY 1 the sound of silence 300-450 - r 2315"
-                    action = "buy"
-                    percentage = 80
                     
                     
                     
