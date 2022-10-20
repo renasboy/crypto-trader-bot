@@ -63,7 +63,7 @@ class maddog:
         ma285_last, ma285_prev = self.algo_helper.ma_last_prev(285)
         ma300_last, ma300_prev = self.algo_helper.ma_last_prev(300)
         
-        ma450_last, ma450_prev = self.algo_helper.ma_last_prev(450)
+        
         
         
         
@@ -153,7 +153,7 @@ class maddog:
         ma300_301_min_ago = self.algo_helper.ma_minutes_ago(300, 301)
         ma300_360_min_ago = self.algo_helper.ma_minutes_ago(300, 360)
         ma300_720_min_ago = self.algo_helper.ma_minutes_ago(300, 720)
-        ma450_720_min_ago = self.algo_helper.ma_minutes_ago(450, 720)
+        
         
         
         
@@ -3020,8 +3020,8 @@ class maddog:
                 
                 
                 elif (
-                    ma300_last > ma450_last
-                    
+                    ma5_last > ma100_last
+                    and ma300_last < ma300_720_min_ago
                     and ma2_last > ma2_2_min_ago
                 ):
 
