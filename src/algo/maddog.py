@@ -1563,9 +1563,7 @@ class maddog:
                     and deviation_ma100_sopra_ma300 > -0.20
                     
                     and deviation_ma3_sopra_ma10 > 0.05
-                 
-                    and ma300_last > ma300_60_min_ago
-               
+             
                 ):  
                 
                     buy = "BUY 1 laterale 2 - r 1206 AA2"
@@ -1575,7 +1573,7 @@ class maddog:
                     # 19 set 2022 aggiunta 3-10 > 0.07
                     #  3 ott 2022 3-10 0.06 da 0.07 
                     #  3 ott 2022 100 sopra 300 a < 0.30 da < 0.20 perche' mentre 100 scende gia' e' partito il rialzo !
-                    
+                    # arriva tardi e ho tolto qualcosina.
                     
                     
                     
