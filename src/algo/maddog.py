@@ -3019,7 +3019,18 @@ class maddog:
                 
                 
                 
-                
+                elif (
+                    ma300_last > ma450_last
+                    
+                    and ma2_last > ma2_2_min_ago
+                ):
+
+                    buy = "BUY 1 the sound of silence 300-450 - r 2315"
+                    action = "buy"
+                    percentage = 80
+                    
+                    
+                    
                 # rialzo improvviso trend ribassista
                 
                 elif (    
