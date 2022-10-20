@@ -62,7 +62,10 @@ class maddog:
         ma250_last, ma250_prev = self.algo_helper.ma_last_prev(250)
         ma285_last, ma285_prev = self.algo_helper.ma_last_prev(285)
         ma300_last, ma300_prev = self.algo_helper.ma_last_prev(300)
-
+        
+        ma450_last, ma450_prev = self.algo_helper.ma_last_prev(450)
+        
+        
         
         # moving average (2-3-4-5-7-8-20-43-100) di x minuti prima
         
@@ -149,6 +152,8 @@ class maddog:
         ma300_300_min_ago = self.algo_helper.ma_minutes_ago(300, 300)
         ma300_301_min_ago = self.algo_helper.ma_minutes_ago(300, 301)
         ma300_360_min_ago = self.algo_helper.ma_minutes_ago(300, 360)
+        ma300_720_min_ago = self.algo_helper.ma_minutes_ago(300, 720)
+        ma450_720_min_ago = self.algo_helper.ma_minutes_ago(450, 720)
         
         
         
@@ -2963,7 +2968,28 @@ class maddog:
                     
                     
                 
+                # BUY 1 the sound of silence 300-450
                 
+                elif (
+                    ma5_last > ma100_last
+                    and ma300_last < ma300_720_min_ago
+                    and ma450_last < ma450_720_min_ago
+                    and (ma300_prev < ma450_prev and ma300_last > ma450_last)
+                    
+                    and ma2_last > ma2_2_min_ago
+                ):
+
+                    buy = "BUY 1 the sound of silence 300-450 - r 2315"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # r 2367 RCCR andava in conflitto quando la portavo in MADDOG cosi' e' nata questa !
+                    # vedi RCCR 19 ottobre 2022 ore 11:05
+                    # non mi arrendo.
+                    
+                    
+                    
+                    
                 # BUY 1 variazione 2 RIALZO con 20-100
                 
                 elif (
