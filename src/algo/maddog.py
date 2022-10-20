@@ -6022,7 +6022,7 @@ class maddog:
                     and delta_1 > delta_2
                     and ma100_last < ma100_60_min_ago
                     
-                    and deviation_ma5_sopra_ma28 > 0.17
+                    and deviation_ma5_sopra_ma28 > 0.20
                     
                     and deviation_bellissima > 0.12
                     
@@ -6033,17 +6033,17 @@ class maddog:
                     and ma3_last > ma40_last
                     and ma4_last > ma78_last
                 ):
-                    buy = "BUY 2C SOPRA RIBASSO RIBASSO - NOTTE - r 4796 a"
+                    buy = "BUY 2C SOPRA RIBASSO RIBASSO - NOTTE con 5-28 0.20 - r 4796 A"
                     action = "buy"
                     percentage = 80
                     
                     # deviation_buy2 = ma8_last / ma50
                     # > estate ho alzato buy
-                    # 11 ott 2022 5-28 = 0.17 da 0.15
+                    # 11 ott 2022 5-28 0.17 da 0.15
+                    # 20 ott 2022 5-28 0.20 da 0.17
                     
                     
-                    
-                # BUY 2 300 > 120 min ago MA 200< con doppio delta > 1 trend ribasso and deviation_ma5_sopra_ma28 > 0.18
+                # BUY 2 300 > 120 min ago MA 200< con doppio delta > 1 trend ribasso and deviation_ma5_sopra_ma28 > 0.19
                 
                 elif (
                     deviation_buy2 > 0.12
@@ -6064,7 +6064,7 @@ class maddog:
                     and ma3_last > ma40_last
                     and ma4_last > ma78_last
                 ):
-                    buy = "BUY 2C SOPRA RIBASSO RIBASSO - NOTTE - r 4796 b"
+                    buy = "BUY 2C SOPRA RIBASSO RIBASSO - NOTTE - r 4796 A"
                     action = "buy"
                     percentage = 80
                     
