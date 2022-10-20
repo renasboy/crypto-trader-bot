@@ -2971,8 +2971,8 @@ class maddog:
                 # BUY 1 the sound of silence 300-450
                 
                 elif (
-                    ma5_last > ma100_last
-                    and ma300_last < ma300_720_min_ago
+                    
+                    ma300_last < ma300_720_min_ago
                     and ma450_last < ma450_720_min_ago
                     and (ma300_prev < ma450_prev and ma300_last > ma450_last)
                     
