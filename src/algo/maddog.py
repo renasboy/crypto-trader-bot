@@ -1565,7 +1565,7 @@ class maddog:
              
                 ):  
                 
-                    buy = "BUY 1 laterale 2 - r 1206 AA2"
+                    buy = "BUY 1 laterale 2 - r 1206 AA2x"
                     action = "buy"
                     percentage = 50
                     
@@ -1584,12 +1584,12 @@ class maddog:
                     and ma300_last < ma450_last
                     and deviation_ma100_sopra_ma300 < 0.30
                     and deviation_ma100_sopra_ma300 > -0.20
-                    and rapporto_delta_1_delta_2 < 1
+                    
                     and deviation_ma3_sopra_ma10 > 0.05
              
                 ):  
                 
-                    buy = "BUY 1 laterale 2 - r 1206 AA2"
+                    buy = "BUY 1 laterale 2 - r 1206 AA2y"
                     action = "buy"
                     percentage = 50
                     
