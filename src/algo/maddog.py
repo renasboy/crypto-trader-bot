@@ -1203,13 +1203,12 @@ class maddog:
                 
                 elif (
                     
-                    ma8_last > ma69_last
+                    ma8_last > ma59_last
                     
-                    and deviation_ma100_sopra_ma200 > -0.30
+                    and deviation_ma100_sopra_ma200 > -0.40
                     
                     and deviation_ma5_sotto_ma300 < 0.45
                     and deviation_ma5_sotto_ma300 > -0.60
-                    
                     
                     and ma300_last < ma300_60_min_ago
                     and ma200_last < ma200_60_min_ago
@@ -1217,11 +1216,7 @@ class maddog:
                     
                     and deviation_ma3_sopra_ma10 > 0.01
                     and deviation_ma5_sopra_ma28 > 0.05
-                    and deviation_bellissima > 0.07
                     
-                    and deviation_ma13_sopra_ma25 > 0.05
-                    and deviation_ma3_sopra_ma7 > 0.05
-                    and ma3_last > ma3_3_min_ago
                     and ma2_last > ma2_2_min_ago
               
                 ):
@@ -1230,11 +1225,11 @@ class maddog:
                     percentage = 50
                     
                     # importante : ma100 sta sotto la ma200 non le e' troppo lontana
-                    # dev bellissima = 6 / 30
+                    
                     # 21 ottobre 2022  aggiunta di 3-10 e 5-28
                     # 21 ottobre 2022 3-10 = 0.01
                     # 21 ottobre 2022 5-28 = 0.05
-                    # 21 ottobre 2022 6-30 = 0.07
+                    
                     
                     
                     
