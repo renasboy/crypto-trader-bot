@@ -5459,7 +5459,7 @@ class maddog:
                     and delta_1 < delta_2
                     and ma100_last > ma100_60_min_ago
                     
-                    and deviation_ma3_sopra_ma10 > 0.07
+                    and deviation_ma3_sopra_ma10 > 0.02
                     and deviation_ma5_sopra_ma28 > 0.01
                  
                     and ma6_last > ma6_2_min_ago
@@ -5475,7 +5475,7 @@ class maddog:
                     # SITUAZIONE : dopo crollo e dopo primo grande ribalzo riprende a scendere 
                     # MA ma100 e' intanto andata > ma200 !
                     # e anche ma200 sta sopra ma300
-                    
+                    # 21 ottobre 2022 3-10 0.02 da 0.07 INCREDIBILE vedi differenza tra MADDOG e RCCR 21 ottobre 2022 BUY ore 4:39
                     
                     
                     
