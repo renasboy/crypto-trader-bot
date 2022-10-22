@@ -58,6 +58,7 @@ class maddog:
         ma130_last, ma130_prev = self.algo_helper.ma_last_prev(130)
         ma140_last, ma140_prev = self.algo_helper.ma_last_prev(140)
         ma150_last, ma150_prev = self.algo_helper.ma_last_prev(150)
+        ma180_last, ma180_prev = self.algo_helper.ma_last_prev(180)
         ma200_last, ma200_prev = self.algo_helper.ma_last_prev(200)
         ma250_last, ma250_prev = self.algo_helper.ma_last_prev(250)
         ma285_last, ma285_prev = self.algo_helper.ma_last_prev(285)
@@ -225,9 +226,9 @@ class maddog:
         
         
         
-        # SELL DOPO 18000 secondi = 300 min dal BUY con 5-180 cazzo
+        # SELL DOPO 14400 secondi = 240 min dal BUY con 5-180 cazzo
         
-        max_hold_time_in_seconds_sell_5_180 = 18000
+        max_hold_time_in_seconds_sell_5_180 = 14400
         
         
         ###########################################################################################################################
@@ -20691,7 +20692,7 @@ class maddog:
                 
                 
                 
-            # 32 B2b - SELL condizione speciale ROOT DOWN DEEP - ro cano VENDE dopo 150 min = 9000 sec con 5-90
+            # 32 B2b - SELL condizione speciale ROOT DOWN DEEP - ro cano VENDE dopo 150 min e fino a 240 min con 5-90
             
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds_sell_5_90
@@ -20704,7 +20705,7 @@ class maddog:
            
             ):
 
-                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 150 min fino a 300 min con 5-90 - r 16743 B2bxA"
+                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 150 min e fino a 240 min con 5-90 - r 16743 B2bxA"
                 action = "sell"
                         
                 # 24 set 2022 ore 17:23
@@ -20713,7 +20714,7 @@ class maddog:
                 
                 
                 
-            # 32 B2b - SELL condizione speciale ROOT DOWN DEEP - ro cano VENDE dopo 150 min = 9000 sec con 5-90
+            # 32 B2b - SELL condizione speciale ROOT DOWN DEEP - ro cano VENDE dopo 240 min = 9000 sec con 5-180
             
             elif (
                 
@@ -20726,7 +20727,7 @@ class maddog:
            
             ):
 
-                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 300 min fino a 300 min con 5-180 - r 16743 B2bxB"
+                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 240 min con 5-180 - r 16743 B2bxB"
                 action = "sell"
                         
                 # 24 set 2022 ore 17:23
