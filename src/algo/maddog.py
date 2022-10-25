@@ -15548,17 +15548,17 @@ class maddog:
                     
                     elif (
                         ma50_last < ma50_2_min_ago
-                        and ma3_last < ma59_last
+                        and ma5_last < ma90_last
                         and deviation_ma100_sopra_ma300 > 0.50
                         and deviation_trend_ma200 > -0.12
                         and ma200_last > ma300_last
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 2 da 60 a 90 min con MOLTA PERDITA TOLLERATA con ma50 < con 3 < 59 con 100 sopra 300 < 0.50 - r 12105 a"
+                        sell = "SELL 2 da 60 a 90 min con MOLTA PERDITA TOLLERATA con ma50 < con 5<90 con 100 sopra 300 < 0.50 - r 12105 A"
                         action = "sell"
                         
                         # questa anticipa di una ndecchia la prossima
-                        
+                        # 25 ottobre 2022 5-90 da 3-59
                         
                         
                         
