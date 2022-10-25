@@ -8999,13 +8999,17 @@ class maddog:
                     
                     
                 elif (
-                    deviation_ma4_sopra_ma30 > 0.10
+                    deviation_ma4_sopra_ma30 > 0.09
                     and ma300_last > ma300_120_min_ago
                     and ma100_last > ma100_60_min_ago
                     
                     and deviation > -0.30
-                    and deviation_bellissima >= 0.03
-                    and ma39_last >= ma48_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.10
+                    and deviation_ma5_sopra_ma28 > 0.13
+                    and deviation_bellissima >= 0.02
+                    
+                    and ma39_last >= ma59_last
                     and delta_buy3_incrocio_ma3_ma8 >= 0.06
                     and ma3_last > ma8_last
                     and ma3_last >= ma69_last
@@ -9014,10 +9018,13 @@ class maddog:
                     and ma5_last >= ma15_last
                     and ma5_last >= ma25_last
                 ):    
-                    buy = "BUY 4B importato da BUY 3 RCCR se ma39 > ma48 con 300 > e 100> - r 6736 a1"
+                    buy = "BUY 4B importato da BUY 3 RCCR se ma39 > ma59 con 300> e 100> - r 6736 A1"
                     action = "buy"
                     percentage = 70
                     
+                    # 25 ottobre 2022 4-30 a 0.09 da 0.10
+                    # 25 ottobre 2022 dev bellissima a 0.02 da 0.03
+                    # aggiunta 3-10 e 5-28
                     
                     
                     
