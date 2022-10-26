@@ -13429,17 +13429,35 @@ class maddog:
                     
                     #################################################################################################
                     
-                    
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and (ma5_prev > ma42_prev and ma5_last < ma42_last)
+                        and ma300_last > ma300_120_min_ago
+                        and (ma5_prev > ma90_prev and ma5_last < ma90_last)
                         and deviation_sell > 0.65 and deviation_sell < 1.49
                         and deviation_ma100_sopra_ma200 > 0.45
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 dopo 110 min con ma50 > incrocio 5-42 (!) se 100-200 > 0.45 and deviation_sell 0.65 - 1.49 RABONA ALLA RONALDO - r 10346"
+                        sell = "SELL 1 dopo 110 min con ma50 > incrocio 5-90 (!) se 100-200 > 0.45 and deviation_sell 0.65 - 1.49 RABONA ALLA RONALDO - r 10346 A"
                         action = "sell"
+                        
+                        # 26 ott se 300>300 120 min ago vende con ma90
+                        
+                        
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and ma300_last < ma300_120_min_ago
+                        and (ma5_prev > ma78_prev and ma5_last < ma78_last)
+                        and deviation_sell > 0.65 and deviation_sell < 1.49
+                        and deviation_ma100_sopra_ma200 > 0.45
+                        and ma2_last < ma2_2_min_ago
+                        
+                    ):
+                        sell = "SELL 1 dopo 110 min con ma50 > incrocio 5-78 (!) se 100-200 > 0.45 and deviation_sell 0.65 - 1.49 RABONA ALLA RONALDO - r 10346 B"
+                        action = "sell"
+                        
+                        # 26 ott se 300<300 120 min ago vende con ma 78 da 42
+                        
                         
                         
                         
@@ -20810,7 +20828,7 @@ class maddog:
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds_sell_5_90
                 and deviation_ma100_sopra_ma300 < 0.20
-                and deviation_sell < -0.10
+                and deviation_sell < -0.15
                 and ma300_last < ma300_120_min_ago
                 and ma5_last < ma300_last
                 and ma2_last < ma2_2_min_ago
@@ -20821,7 +20839,7 @@ class maddog:
                 action = "sell"
                         
                 # 24 set 2022 ore 17:23
-                
+                # 26 ottobre 2022 dev sell -0.15 da -0.10 vedi 15:40 del 25 ottobre !
                         
                         
                
