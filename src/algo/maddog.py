@@ -8741,8 +8741,8 @@ class maddog:
                     and deviation_ma100_sopra_ma300 > 0.25
                     and ma300_last > ma300_301_min_ago
                     
-                    and deviation_ma3_sopra_ma10 > 0.05
-                    and deviation_ma5_sopra_ma28 > 0.01
+                    and deviation_ma3_sopra_ma10 > 0.10
+                    and deviation_ma5_sopra_ma28 > 0.117
                     
                     and deviation_bellissima > 0.05
                     and deviation_buy3 > 0.05
@@ -8757,13 +8757,13 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
              
                 ):
-                    buy = "BUY 3 IN ALTO 78>100 E con ma69 > and dev_bellissima > 0.12 IMPORTATA DA BUY 4 RCCR - riga 6599 A1x"
+                    buy = "BUY 3 IN ALTO 78>100 E con ma69 > and dev_bellissima > 0.12 IMPORTATA DA BUY 4 RCCR - r 6599 A1x"
                     action = "buy"
                     percentage = 50
                     
                     # 28 set aggiunta 3-10
                     #  2 ott 2022 dev bellissima 0.10 da 0.12
-                    
+                    # 26 ott 2022 5-28 a 0.117 vedi 25 ottobre ore 21:16
                     
                     
                     
