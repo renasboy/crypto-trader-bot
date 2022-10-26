@@ -20789,6 +20789,7 @@ class maddog:
                 and deviation_sell > 0.80
                 and ma5_last < ma50_last
                 and deviation_ma5_sotto_ma300 > 0.25
+                and deviation_ma5_sotto_ma300 < 0.40
                 and ma300_last > ma300_120_min_ago
                 
                 and ma2_last < ma2_2_min_ago
@@ -20807,6 +20808,7 @@ class maddog:
                 seconds_since_last_trade > max_hold_time_in_seconds_sell_5_90
                 and deviation_sell < 0.80
                 and deviation_ma5_sotto_ma300 > 0.25
+                and deviation_ma5_sotto_ma300 < 0.40
                 and ma300_last > ma300_120_min_ago
                 and ma5_last < ma100_last
                 and ma2_last < ma2_2_min_ago
