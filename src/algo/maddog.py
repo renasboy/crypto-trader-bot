@@ -16065,20 +16065,42 @@ class maddog:
                         # > estate 4-78 da 4-20
                         
                         
-                        
-
+                    
+                    
+                    
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and (ma4_prev > ma42_prev and ma4_last < ma42_last)
+                        and ma300_last > ma300_120_min_ago
+                        and (ma4_prev > ma90_prev and ma4_last < ma90_last)
                         and deviation_sell > 0.91 and deviation_sell < 1.49
                         and ma2_last < ma2_2_min_ago
                     ):
 
-                        sell = "SELL 2 dopo 110 min con ma50 > incrocio 4-42 and deviation_sell 0.91 - 1.49 - r 12557"
+                        sell = "SELL 2 dopo 110 min con ma50 > incrocio 4-90 and deviation_sell 0.91 - 1.49 - r 12557 A"
                         action = "sell"
 
                         # evitare la ricompra e la rivendita con perdita !
                         # 18 set 4-42 da 3-15
+                        # 26 ott 4-90 da 4-42
+                        
+                        
+                        
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and ma300_last < ma300_120_min_ago
+                        and (ma4_prev > ma78_prev and ma4_last < ma78_last)
+                        and deviation_sell > 0.91 and deviation_sell < 1.49
+                        and ma2_last < ma2_2_min_ago
+                    ):
+
+                        sell = "SELL 2 dopo 110 min con ma50 > incrocio 4-78 and deviation_sell 0.91 - 1.49 - r 12557 B"
+                        action = "sell"
+
+                        # evitare la ricompra e la rivendita con perdita !
+                        # 18 set 4-42 da 3-15
+                        # 26 ott 4-78 da 4-42
+                        
+                        
                     
                     
                     
