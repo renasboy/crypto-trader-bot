@@ -111,6 +111,7 @@ class maddog:
         ma50_2_min_ago = self.algo_helper.ma_minutes_ago(50, 2)
         ma50_60_min_ago = self.algo_helper.ma_minutes_ago(50, 60)
         ma59_2_min_ago = self.algo_helper.ma_minutes_ago(59, 2)
+        ma59_30_min_ago = self.algo_helper.ma_minutes_ago(59, 30)
         ma59_60_min_ago = self.algo_helper.ma_minutes_ago(59, 60)
         ma69_2_min_ago = self.algo_helper.ma_minutes_ago(69, 2)
         ma69_15_min_ago = self.algo_helper.ma_minutes_ago(69, 15)
@@ -12024,13 +12025,13 @@ class maddog:
                         
                     
                     
-                    
                     # SELL 1 eventuale guadagno ANZI NON PERDITA dopo BUY AUDI E crollo SUCCESSIVO (21-50 min) 
                     
                     elif (
                         ma50_last < ma50_2_min_ago
                         and (ma5_prev > ma33_prev and ma5_last < ma33_last)
-                        and deviation_sell < -0.10
+                        and deviation_sell < -0.13
+                        and ma59_last > ma59_30_min_ago
                         
                         and ma100_last < ma200_last
                         and ma200_last < ma300_last
@@ -12048,7 +12049,7 @@ class maddog:
                         
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 eventuale guadagno ANZI NON GRANDE PERDITA dopo BUY AUDI E crollo SUCCESSIVO (21-50 min) - r 9312"
+                        sell = "SELL 1 eventuale guadagno ANZI NON GRANDE PERDITA dopo BUY AUDI E crollo SUCCESSIVO (21-50 min) - r 9312 A"
                         action = "sell"
                         
                         # in questa circostanza drammatica di crollo AUDI INTANTO TE LI PRENDI poi, eventualmente, ci pensa BUY 2
@@ -12056,7 +12057,44 @@ class maddog:
                         # deviation 100 laterale =5/100 >-1.00 significa che questa condizione NON non interviene E' UNA SITUAZIONE DI CROLLO !
                         # si interviene solo nella fascia di mezza cottura ! 
                         # 20 set 2022 dev sell -0.10 da 0.01
+                        # 26 ott 2022 dev sell -0.13 da -0.10 con ma59 > ma59 30 min ago
                         
+                        
+                        
+                        
+                    # SELL 1 eventuale guadagno ANZI NON PERDITA dopo BUY AUDI E crollo SUCCESSIVO (21-50 min) 
+                    
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and (ma5_prev > ma33_prev and ma5_last < ma33_last)
+                        and deviation_sell < -0.12
+                        and ma59_last < ma59_30_min_ago
+                        
+                        and ma100_last < ma200_last
+                        and ma200_last < ma300_last
+                        
+                        and ma100_last < ma100_120_min_ago
+                        and ma200_last < ma200_120_min_ago
+                        and ma300_last < ma300_120_min_ago
+                        
+                        and deviation_ma200_sotto_ma300 < -0.10
+                        
+                        and deviation_ma100_sopra_ma300 < -0.20
+                        and deviation_ma100_sopra_ma300 > -0.80
+                        and deviation_ma100_laterale > -1.00
+                        
+                        
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 1 eventuale guadagno ANZI NON GRANDE PERDITA dopo BUY AUDI E crollo SUCCESSIVO (21-50 min) - r 9312 B"
+                        action = "sell"
+                        
+                        # in questa circostanza drammatica di crollo AUDI INTANTO TE LI PRENDI poi, eventualmente, ci pensa BUY 2
+                        
+                        # deviation 100 laterale =5/100 >-1.00 significa che questa condizione NON non interviene E' UNA SITUAZIONE DI CROLLO !
+                        # si interviene solo nella fascia di mezza cottura ! 
+                        # 20 set 2022 dev sell -0.10 da 0.01
+                        # 26 ott 2022 dev sell -0.12 da -0.10 con ma59 > ma59 30 min ago
                         
                         
                         
