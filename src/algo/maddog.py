@@ -7161,7 +7161,26 @@ class maddog:
                     
                     
                     
-                    
+                # BUY 2 nuovo RIALZO IMPROVVISO ma trend gia' in rialzo da 120 min and 0.27 sopra ultimo sell se 300>120 min e 100 sopra 300> 0.40 
+                
+                elif (
+                    ma200_last > ma200_20_min_ago
+                    and ma100_last > ma200_last
+                    and deviation_ma100_sopra_ma300 > 0.40
+                    and ma300_last > ma300_120_min_ago
+                    and deviation_buy > 0.27
+                    and ma2_last >= ma2_2_min_ago
+              
+                ):
+             
+                    buy = "BUY 2 nuovo RIALZO IMPROVVISO ma trend gia' in rialzo da 120 min and 0.27 sopra ultimo sell se 300>120 min e 100 sopra 300> 0.40 - r 5670"
+                    action = "buy"
+                    percentage = 70
+                  
+                  
+                  
+                  
+                  
                 # BUY 2 RIALZO IMPROVVISO ! con ma200 > and ma100_last > ma200_last
                 
                 elif (
@@ -7169,7 +7188,7 @@ class maddog:
                     and ma100_last > ma200_last
                     and deviation_ma100_sopra_ma300 > 0.40
                     
-                    and deviation_rialzo_improvviso_sopra > 0.46
+                    and deviation_rialzo_improvviso_sopra > 0.40
                     and deviation_rialzo_improvviso_1 > 0.46
                     and deviation_rialzo_improvviso_2 > 0.19
                     and deviation_rialzo_improvviso_3 > 0.19
@@ -7184,6 +7203,9 @@ class maddog:
                     buy = "BUY 2 RIALZO IMPROVVISO ! con ma200 > and 100>200 (solo per il buy 2 e per il buy 3) AND 100 SOPRA 300 > 0.40 - r 5686 a"
                     action = "buy"
                     percentage = 70
+                    
+                    # 
+                  
                     
                     
                     
