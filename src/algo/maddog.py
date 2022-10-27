@@ -12515,15 +12515,29 @@ class maddog:
                         
                     ##################################################################################################################
                     
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and deviation_ma5_sotto_ma300 > 0.99
+                        and (ma5_prev > ma78_prev and ma5_last < ma78_last)
+                        and deviation_sell > 0.91 and deviation_sell < 1.49
+                        and ma2_last < ma2_2_min_ago
+                    ):    
+                        sell = "SELL 1 da 50 a 90 min con ma50 > and incrocio 5-78 and dev_sell 0.91 - 1.49 RABONA DI RONALDO  5-300 > 0.99 - r 9543 A1"
+                        action = "sell"
+                  
+                        # ricordati che in diverse occasioni 3-48 mi ha evitato la ricompra e la rivendita conseguente con perdita !
+                    
+                    
                     
                     elif (
                         ma50_last > ma50_2_min_ago
                         and deviation_ma5_sotto_ma300 > 0.40
-                        and (ma5_prev > ma48_prev and ma5_last < ma48_last)
+                        and deviation_ma5_sotto_ma300 < 0.99
+                        and (ma5_prev > ma45_prev and ma5_last < ma45_last)
                         and deviation_sell > 0.91 and deviation_sell < 1.49
                         and ma2_last < ma2_2_min_ago
                     ):    
-                        sell = "SELL 1 da 50 a 90 min con ma50 > and incrocio 5-48 and deviation_sell 0.91 - 1.49 RABONA DI RONALDO  5-300 > 0.40 - r 9543 A"
+                        sell = "SELL 1 da 50 a 90 min con ma50 > and incrocio 5-45 and dev_sell 0.91 - 1.49 RABONA DI RONALDO  5-300 > 0.40 ma < 0.99 - r 9543 A2"
                         action = "sell"
                   
                         # ricordati che in diverse occasioni 3-48 mi ha evitato la ricompra e la rivendita conseguente con perdita !
