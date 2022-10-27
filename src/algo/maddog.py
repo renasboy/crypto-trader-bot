@@ -20921,7 +20921,7 @@ class maddog:
             
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds_sell_5_90
-                and deviation_sell < 0.10
+                and deviation_sell < -0.12
                 and deviation_ma5_sotto_ma300 < 0.25
                 and ma300_last > ma300_120_min_ago
                 and ma22_last < ma300_last
@@ -20936,7 +20936,8 @@ class maddog:
                 # 11 ott 2022 dev sell 0.10 da 0.15
                 # 12 ott 2022 10-300 da 5-125
                 # 12 ott 2022 22-300 !
-                
+                # 27 ott 2022 dev sell -0.12 da < 0.10 
+                # dopo 150 min faccio cominciare i binari !
                 
                 
             elif (
