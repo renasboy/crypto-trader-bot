@@ -1169,7 +1169,7 @@ class maddog:
                     and ma6_last > ma39_last
                 ):    
               
-                    buy = "BUY 1 con 28>300 and 69 > 100 e 200> and deviation_bellissima > 0.12 and 5-28>0.18 - r 1042"
+                    buy = "BUY 1 con 28>300 and 69 > 100 e 200> and deviation_bellissima > 0.12 and 5-28>0.18 - r 1041"
                     action = "buy"
                     percentage = 90
                     
@@ -1177,8 +1177,32 @@ class maddog:
                     
                 
                
-                #
                 
+                # BUY 1 NO WAY GILMOUR doppio minimo CON 22<28 ! assurdo
+                
+                elif (
+                    deviation_buy2 > 0.005
+                    and ma50_last > ma100_last
+                    and ma22_last < ma28_last
+                    
+                    and deviation_ma100_sopra_ma300 > -0.60
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    
+                    and ma200_last < ma200_120_min_ago
+                    
+                    and ma100_last < ma100_50_min_ago
+                    and (ma7_prev < ma50_prev and ma7_last > ma50_last)
+                    and ma2_last > ma2_2_min_ago
+                ):
+               
+                    buy = "BUY 1 NO WAY GILMOUR doppio minimo CON 22<28 ! assurdo ma deve essere cosi' con 100< and 200< con INCROCIO 7-50 - r 1042"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # vedi 27 ottobre 2022 ore 14:00
+                    
+                    
+                    
                 # BUY 1 5-300 in alto
                 
                 elif (
