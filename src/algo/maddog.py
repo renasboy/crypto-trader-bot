@@ -1176,24 +1176,8 @@ class maddog:
                     
                     
                 
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
+               
+                #
                 
                 # BUY 1 5-300 in alto
                 
@@ -1421,30 +1405,8 @@ class maddog:
                     # importante : ma100 sta sotto la ma200 non le e' troppo lontana
                     
                     
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                
-                
-                
-                
-                
-                
+             
+                #
                 
                 elif (    
                     ma28_last > ma300_last
