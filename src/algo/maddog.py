@@ -1238,7 +1238,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
               
                 ):
-                    buy = "BUY 1 migliore che considera distanza 5-300 - riga 1043 B1"
+                    buy = "BUY 1 migliore che considera distanza 5-300 - riga 1043 B"
                     action = "buy"
                     percentage = 50
                     
@@ -1250,31 +1250,7 @@ class maddog:
                     
                     
                     
-                # BUY 1 5-300 zona mediana
                 
-                elif (
-                    
-                    ma8_last > ma59_last
-                    and delta_1_200_78 > delta_2_200_78_60_min
-                 
-                    and deviation_ma5_sotto_ma300 < 0.45
-                    and deviation_ma5_sotto_ma300 > -0.60
-                
-                    and deviation_ma3_sopra_ma10 > 0.01
-                    and deviation_ma5_sopra_ma28 > 0.183
-                    
-                    and ma2_last > ma2_2_min_ago
-              
-                ):
-                    buy = "BUY 1 migliore che considera distanza 5-300 - riga 1043 B2"
-                    action = "buy"
-                    percentage = 50
-                    
-                    # importante : ma100 sta sotto la ma200 non le e' troppo lontana
-                    
-                    # 21 ottobre 2022  aggiunta di 3-10 e 5-28
-                    # 21 ottobre 2022 3-10 = 0.01
-                    # 21 ottobre 2022 5-28 = 0.05
                     
                     
                     
