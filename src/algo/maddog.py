@@ -87,6 +87,7 @@ class maddog:
         ma10_2_min_ago = self.algo_helper.ma_minutes_ago(10, 2)
         ma13_2_min_ago = self.algo_helper.ma_minutes_ago(13, 2)
         ma13_10_min_ago = self.algo_helper.ma_minutes_ago(13, 10)
+        ma18_2_min_ago = self.algo_helper.ma_minutes_ago(18, 2)
         ma18_30_min_ago = self.algo_helper.ma_minutes_ago(18, 30)
         ma20_2_min_ago = self.algo_helper.ma_minutes_ago(20, 2)
         ma20_22_min_ago = self.algo_helper.ma_minutes_ago(20, 22)
@@ -3610,11 +3611,12 @@ class maddog:
                     
                     ma200_last > ma200_20_min_ago
                     and ma20_last < ma78_last
+                    and ma90_last > ma110_last
                     
-                    and deviation_ma3_sopra_ma10 > 0.17
-                    and deviation_ma5_sopra_ma28 > 0.15
+                    and deviation_ma3_sopra_ma10 > 0.12
+                    and deviation_ma5_sopra_ma28 > 0.14
                     
-                    and ma28_last > ma28_2_min_ago
+                    and ma18_last >= ma18_2_min_ago
                     
                     and ma3_last > ma28_last
                     and ma2_last > ma2_2_min_ago
