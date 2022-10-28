@@ -1182,6 +1182,7 @@ class maddog:
                     
                     ma8_last > ma150_last
                     and deviation_ma100_sopra_ma200 > -0.30
+                    and delta_1_200_78 < delta_2_200_78_60_min
                     
                     and deviation_ma5_sotto_ma300 > 0.45
                     
@@ -1236,7 +1237,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
               
                 ):
-                    buy = "BUY 1 migliore che considera distanza 5-300 - riga 1043 B1"
+                    buy = "BUY 1 migliore che considera distanza 5-300 - riga 1043 B"
                     action = "buy"
                     percentage = 50
                     
@@ -1260,6 +1261,7 @@ class maddog:
                     
                     ma8_last > ma150_last
                     and deviation_ma100_sopra_ma200 > -0.30
+                    and delta_1_200_78 < delta_2_200_78_60_min
                     
                     and deviation_ma5_sotto_ma300 < -0.60
                     
