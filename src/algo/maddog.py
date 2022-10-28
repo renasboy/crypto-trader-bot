@@ -11736,21 +11736,45 @@ class maddog:
                         action = "sell"
                         
                         
-                  
+                        
+                        
                     # TREND LATERALE (100/300  <0.69 and >-0.77) NON TOCCARE 
                     
                     elif (
                         ma50_last < ma50_2_min_ago
+                        and delta_1_200_78 < delta_2_200_78_60_min
                         and deviation_ma39 < -0.17
                         and ma2_last < ma2_2_min_ago
                         
                         and deviation_ma100_sopra_ma300 < 0.69
                         and deviation_ma100_sopra_ma300 > -0.77
-                        and deviation_sell < -0.21
+                        and deviation_sell < -0.22
                         
                         and ma3_last < ma300_last
                     ):
-                        sell = "SELL 1 NON TOCCARE (21-50 min) con ma50 < con dev_ma39 <-0.17 E dev_sell < -0.21 TREND LATERALE (100>300 <0.69 and >-0.77) - r 9016"
+                        sell = "SELL 1 NON TOCCARE (21-50 min) con ma50 < con dev_ma39 <-0.17 E dev_sell < -0.22 TREND LATERALE (100>300 <0.69 and >-0.77) - r 9016a"
+                        action = "sell"
+                        
+                        # OGGI 22 LUG 2022 QUESTA SU RCCR HA FATTO -0.56 MENTRE MADOG HA FATTO -1.43 !
+                        
+                        # > estate -0.21 da -0.18
+                        
+                        
+                    # TREND LATERALE (100/300  <0.69 and >-0.77) NON TOCCARE 
+                    
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and delta_1_200_78 > delta_2_200_78_60_min
+                        and deviation_ma39 < -0.17
+                        and ma2_last < ma2_2_min_ago
+                        
+                        and deviation_ma100_sopra_ma300 < 0.69
+                        and deviation_ma100_sopra_ma300 > -0.77
+                        and deviation_sell < -0.215
+                        
+                        and ma3_last < ma300_last
+                    ):
+                        sell = "SELL 1 NON TOCCARE (21-50 min) con ma50 < con dev_ma39 <-0.17 E dev_sell < -0.215 TREND LATERALE (100>300 <0.69 and >-0.77) - r 9016b"
                         action = "sell"
                         
                         # OGGI 22 LUG 2022 QUESTA SU RCCR HA FATTO -0.56 MENTRE MADOG HA FATTO -1.43 !
