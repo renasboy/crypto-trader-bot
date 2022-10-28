@@ -1175,7 +1175,26 @@ class maddog:
                     
                     
                     
-                    
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 # BUY 1 5-300 in alto
                 
                 elif (
@@ -1284,6 +1303,140 @@ class maddog:
                     percentage = 50
                     
                     # importante : ma100 sta sotto la ma200 non le e' troppo lontana
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                # BUY 1 5-300 in alto
+                
+                elif (
+                    
+                    ma8_last > ma150_last
+                    and deviation_ma100_sopra_ma200 > -0.30
+                    and delta_1_200_78 > delta_2_200_78_60_min
+                    
+                    and deviation_ma5_sotto_ma300 > 0.45
+                    
+                    and ma100_last > ma100_2_min_ago
+                    and ma300_last < ma300_60_min_ago
+                    and ma200_last < ma200_60_min_ago
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma5_sopra_ma28 > 0.07
+                    
+                    and deviation_bellissima > 0.17
+                    and deviation_ma13_sopra_ma25 > 0.07
+                    and deviation_ma3_sopra_ma7 > 0.05
+                  
+                    
+                    and ma72_last >= ma72_2_min_ago
+                    and ma13_last > ma69_last
+                    
+                    and ma3_last > ma3_3_min_ago
+                    and ma2_last > ma2_2_min_ago
+              
+                ):
+                    buy = "BUY 1 che considera distanza 5-300 - riga 1043 A2"
+                    action = "buy"
+                    percentage = 50
+                    
+                    # importante : ma100 sta sotto la ma200 non le e' troppo lontana
+                    
+                    
+                    
+                    
+                    
+                # BUY 1 5-300 zona mediana
+                
+                elif (
+                    
+                    ma8_last > ma59_last
+                    and delta_1_200_78 > delta_2_200_78_60_min
+                    
+                    and deviation_ma100_sopra_ma200 > -0.40
+                    
+                    and deviation_ma5_sotto_ma300 < 0.45
+                    and deviation_ma5_sotto_ma300 > -0.60
+                    
+                    and ma300_last < ma300_60_min_ago
+                    and ma200_last < ma200_60_min_ago
+                    
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma5_sopra_ma28 > 0.05
+                    
+                    and ma2_last > ma2_2_min_ago
+              
+                ):
+                    buy = "BUY 1 migliore che considera distanza 5-300 - riga 1043 B2"
+                    action = "buy"
+                    percentage = 50
+                    
+                    # importante : ma100 sta sotto la ma200 non le e' troppo lontana
+                    
+                    # 21 ottobre 2022  aggiunta di 3-10 e 5-28
+                    # 21 ottobre 2022 3-10 = 0.01
+                    # 21 ottobre 2022 5-28 = 0.05
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                    
+                    
+                # BUY 1 zona inferiore
+                
+                elif (
+                    
+                    ma8_last > ma150_last
+                    and deviation_ma100_sopra_ma200 > -0.30
+                    and delta_1_200_78 > delta_2_200_78_60_min
+                    
+                    and deviation_ma5_sotto_ma300 < -0.60
+                    
+                    
+                    and ma100_last > ma100_2_min_ago
+                    and ma300_last < ma300_60_min_ago
+                    and ma200_last < ma200_60_min_ago
+                    
+                    and ma72_last >= ma72_2_min_ago
+                    and ma13_last > ma69_last
+                    and deviation_bellissima > 0.17
+                    and deviation_ma13_sopra_ma25 > 0.07
+                    and deviation_ma3_sopra_ma7 > 0.05
+                    and ma3_last > ma3_3_min_ago
+                    and ma2_last > ma2_2_min_ago
+              
+                ):
+                    buy = "BUY 1 5-300 - riga 1043 C2"
+                    action = "buy"
+                    percentage = 50
+                    
+                    # importante : ma100 sta sotto la ma200 non le e' troppo lontana
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     
                     
                 
