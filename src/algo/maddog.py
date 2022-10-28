@@ -1253,13 +1253,13 @@ class maddog:
                     ma8_last > ma59_last
                     and delta_1_200_78 > delta_2_200_78_60_min
                     
-                    and deviation_ma100_sopra_ma200 > -0.40
+                    
                     
                     and deviation_ma5_sotto_ma300 < 0.45
                     and deviation_ma5_sotto_ma300 > -0.60
                     
                     and ma300_last < ma300_60_min_ago
-                    
+                    and ma200_last < ma200_60_min_ago
                     
                     
                     and deviation_ma3_sopra_ma10 > 0.01
