@@ -8295,10 +8295,12 @@ class maddog:
                     # > estate aggiunti 3-10 and 5-28
                     
                     
-                    
-                    
+                # BUY 3C RIVOLUZIONARIO
+                
                 elif (
                     deviation_ma4_sopra_ma30 > 0.15
+                    and deviation_ma250_sopra_ma300 > 0.04
+                    
                     and (ma3_prev < ma22_prev and ma3_last > ma22_last)
                     and deviation > -0.30
                     and deviation_bellissima > 0.07
@@ -8311,7 +8313,35 @@ class maddog:
                     and ma5_last >= ma15_last
                     and ma5_last >= ma25_last
                 ):    
-                    buy = "BUY 3C RIVOLUZIONARIO se ma39 > ma50 - r 6301"
+                    buy = "BUY 3C RIVOLUZIONARIO se ma39 > ma50 - r 6301 A"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
+                    # ho dovuto aggiungere incrocio dal basso!
+                    
+                    
+                    
+                # BUY 3C RIVOLUZIONARIO
+                
+                elif (
+                    deviation_ma4_sopra_ma30 > 0.15
+                    and deviation_ma250_sopra_ma300 < 0.04
+                    and deviation_ma250_sopra_ma300 > -0.04
+                  
+                    and (ma3_prev < ma22_prev and ma3_last > ma22_last)
+                    and deviation > -0.30
+                    and deviation_bellissima > 0.07
+                    and ma39_last > ma50_last
+                    and delta_buy3_incrocio_ma3_ma8 >= 0.06
+                    and ma3_last > ma8_last
+                    and ma3_last >= ma69_last
+                    and ma4_last >= ma4_2_min_ago
+                    and ma2_last >= ma2_2_min_ago
+                    and ma5_last >= ma15_last
+                    and ma5_last >= ma25_last
+                ):    
+                    buy = "BUY 3C RIVOLUZIONARIO se ma39 > ma50 - r 6301 B"
                     action = "buy"
                     percentage = 80
                     
