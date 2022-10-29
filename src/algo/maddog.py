@@ -7506,13 +7506,15 @@ class maddog:
                 elif (
                     deviation_ma4_sopra_ma30 > 0.15
                     and deviation_ma250_sopra_ma300 > 0.04
-                  
+                    and deviation_ma3_sopra_ma10 > 0.08
+                    and deviation_bellissima > 0.02
+                    
                     and ma200_last > ma200_120_min_ago
                     and ma78_last < ma78_30_min_ago
-                    and deviation_ma3_sopra_ma10 > 0.17
+                    
                     
                     and deviation > -0.30
-                    and deviation_bellissima > 0.07
+                    
                     and ma39_last > ma50_last
                     and delta_buy3_incrocio_ma3_ma8 >= 0.06
                     and ma3_last > ma8_last
@@ -7528,17 +7530,21 @@ class maddog:
                     
                     # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
                     
+                    
                 elif (
                     deviation_ma4_sopra_ma30 > 0.15
                     and deviation_ma250_sopra_ma300 < 0.04
                     and deviation_ma250_sopra_ma300 > -0.04
                     
+                    and deviation_ma3_sopra_ma10 > 0.10
+                    and deviation_bellissima > 0.03
+                    
                     and ma200_last > ma200_120_min_ago
                     and ma78_last < ma78_30_min_ago
-                    and deviation_ma3_sopra_ma10 > 0.17
+                    
                     
                     and deviation > -0.30
-                    and deviation_bellissima > 0.07
+                    
                     and ma39_last > ma50_last
                     and delta_buy3_incrocio_ma3_ma8 >= 0.06
                     and ma3_last > ma8_last
@@ -7560,11 +7566,12 @@ class maddog:
                     deviation_ma4_sopra_ma30 > 0.15
                     and deviation_ma250_sopra_ma300 < -0.04
                     
-                    and deviation_bellissima > 0.07
+                    and deviation_ma3_sopra_ma10 > 0.15
+                    and deviation_bellissima > 0.05
                     
                     and ma200_last > ma200_120_min_ago
                     and ma78_last < ma78_30_min_ago
-                    and deviation_ma3_sopra_ma10 > 0.17
+                    
                     
                     and deviation > -0.30
                     
