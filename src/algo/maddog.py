@@ -5888,6 +5888,7 @@ class maddog:
                     and deviation_ma100_sopra_ma300 > 0.20
                     and ma78_last > ma200_last
                     and delta_1_200_78 > delta_2_200_78_60_min
+                    and deviation_ma3_sopra_ma30 > 0.31
                     
                     and deviation_buy2 > 0.01
                     and deviation_bellissima > 0.151
@@ -5903,7 +5904,7 @@ class maddog:
 
                     # deviation_buy_ma3_sopra_ma13 > x e' fondamentale !
                     # deviation_buy2 = ma8_last/ma50_last
-                    
+                    # vedi BUY 29 ottobre 2022 ore 19:52
                 
                 
                 elif (
