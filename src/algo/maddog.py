@@ -5874,7 +5874,30 @@ class maddog:
                     and price > price_2_min_ago
                     and ma3_last > ma40_last
                 ):
-                    buy = "BUY 2A rialzo o laterale con 78 > 200 AND 300 >300 120 min ago ! - r 4639 A1"
+                    buy = "BUY 2A rialzo o laterale con 78 > 200 AND 300 >300 120 min ago ! - r 4639 A1x"
+                    action = "buy"
+                    percentage = 80
+
+                    # deviation_buy_ma3_sopra_ma13 > x e' fondamentale !
+                    # deviation_buy2 = ma8_last/ma50_last
+                    
+                    
+                elif (
+                    ma69_last > ma69_2_min_ago
+                    and ma300_last > ma300_120_min_ago
+                    and deviation_ma100_sopra_ma300 > 0.20
+                    and ma78_last > ma200_last
+                    and delta_1_200_78 > delta_2_200_78_60_min
+                    
+                    and deviation_buy2 > 0.01
+                    and deviation_bellissima > 0.151
+                    and deviation_buy_ma3_sopra_ma13 > 0.09
+                    and deviation_ma7_sopra_ma40 > 0.05
+                    and ma2_last > ma2_2_min_ago
+                    and price > price_2_min_ago
+                    and ma3_last > ma40_last
+                ):
+                    buy = "BUY 2A rialzo o laterale con 78 > 200 AND 300 >300 120 min ago ! - r 4639 A1y"
                     action = "buy"
                     percentage = 80
 
