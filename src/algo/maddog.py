@@ -293,11 +293,16 @@ class maddog:
         self.algo_helper.info("deviation_ma250_sopra_ma300: {}".format(deviation_ma250_sopra_ma300))
         
         
-        
         # formula DEVIATION_ma3_sopra_ma16
         
         deviation_ma3_sopra_ma16 = (ma3_last / ma16_last - 1) * 100 if ma16_last else 0
         self.algo_helper.info("deviation_ma3_sopra_ma16: {}".format(deviation_ma3_sopra_ma16))
+        
+        
+        # formula DEVIATION_ma3_sopra_ma30
+        
+        deviation_ma3_sopra_ma30 = (ma3_last / ma30_last - 1) * 100 if ma30_last else 0
+        self.algo_helper.info("deviation_ma3_sopra_ma30: {}".format(deviation_ma3_sopra_ma30))
         
         
         #################################################################################################################
@@ -7547,7 +7552,7 @@ class maddog:
                     deviation_ma4_sopra_ma30 > 0.15
                     and deviation_ma250_sopra_ma300 > 0.04
                     and delta_1_200_78 > delta_2_200_78_60_min
-                    
+                    and deviation_ma3_sopra_ma30 > 0.31
                     
                     and deviation_ma3_sopra_ma10 > 0.08
                     and deviation_ma5_sopra_ma28 > 0.20
@@ -7574,6 +7579,8 @@ class maddog:
                     
                     # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
                     # doppio delta > notte aumento 5-28 cazzo
+                    # aggiungo dev 3-30 ! vedi 29 ottobre 2022 ore 19:52
+                    # il BUY C'E' MA E' COME SE NON CI FOSSE !
                     
                     
                     
