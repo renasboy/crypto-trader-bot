@@ -7506,6 +7506,8 @@ class maddog:
                 elif (
                     deviation_ma4_sopra_ma30 > 0.15
                     and deviation_ma250_sopra_ma300 > 0.04
+                    and delta_1_200_78 < delta_2_200_78_60_min
+                    
                     and deviation_ma3_sopra_ma10 > 0.08
                     and deviation_bellissima > 0.02
                     
@@ -7529,6 +7531,15 @@ class maddog:
                     percentage = 70
                     
                     # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     
                     
                 elif (
