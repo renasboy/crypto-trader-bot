@@ -12015,6 +12015,7 @@ class maddog:
                         ma50_last < ma50_2_min_ago
                         and ma300_last < ma300_301_min_ago
                         and deviation_sell  < -0.34
+                        and ma5_last < ma72_last
                         
                         and deviation_ma100_sopra_ma300 < 0.69
                         and deviation_ma100_sopra_ma300 > -0.77
@@ -12029,7 +12030,11 @@ class maddog:
                         
                         # non mi arrendo !
                         # > estate -0.34 da -0.30
-                    
+                        
+                        # IO HO -0.34 MA QUESTA CONTINUA A VENDERE CON 0.02
+                        # allora ho agginto and 5-72 ! e vaffanculo ! vedi SELL ore 22:42 del 29 ottobre 2022 !
+                        
+                        
                     ######################################################################## con ma50 DISTANTE dalla ma300 # queste 2 son un souvenir !
                     
                     # ho considerato, poi, la distanza tra ma100 e ma300 (ma il principio e' lo stesso)
