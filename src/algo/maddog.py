@@ -7500,6 +7500,10 @@ class maddog:
                     # 2 ott dev bellissima 0.06 da 0.07
                     
                     
+                    
+                    
+                    
+                    
                 # BUY 2 RIVOLUZIONARIO se ma39 > ma50 - r 3450
                 
                 
@@ -7526,12 +7530,50 @@ class maddog:
                     and ma5_last >= ma15_last
                     and ma5_last >= ma25_last
                 ):    
-                    buy = "BUY 2 RIVOLUZIONARIO se ma39 > ma50 MA 78 < 78 30 min ago E CON 3-10 > 0.17 - r 5919 b1"
+                    buy = "BUY 2 RIVOLUZIONARIO se ma39 > ma50 MA 78 < 78 30 min ago E CON 3-10 > 0.17 - r 5919 b1x"
                     action = "buy"
                     percentage = 70
                     
                     # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
                     
+                    
+                    
+                    
+                    
+                # BUY 2 RIVOLUZIONARIO se ma39 > ma50 - r 3450
+                
+                
+                elif (
+                    deviation_ma4_sopra_ma30 > 0.15
+                    and deviation_ma250_sopra_ma300 > 0.04
+                    and delta_1_200_78 > delta_2_200_78_60_min
+                    
+                    
+                    and deviation_ma3_sopra_ma10 > 0.08
+                    and deviation_ma5_sopra_ma28 > 0.20
+                    and deviation_bellissima > 0.02
+                    
+                    and ma200_last > ma200_120_min_ago
+                    and ma78_last < ma78_30_min_ago
+                    
+                    
+                    and deviation > -0.30
+                    
+                    and ma39_last > ma50_last
+                    and delta_buy3_incrocio_ma3_ma8 >= 0.06
+                    and ma3_last > ma8_last
+                    and ma3_last >= ma69_last
+                    and ma4_last >= ma4_2_min_ago
+                    and ma2_last >= ma2_2_min_ago
+                    and ma5_last >= ma15_last
+                    and ma5_last >= ma25_last
+                ):    
+                    buy = "BUY 2 RIVOLUZIONARIO se ma39 > ma50 MA 78 < 78 30 min ago E CON 3-10 > 0.17 - r 5919 b1y"
+                    action = "buy"
+                    percentage = 70
+                    
+                    # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
+                    # doppio delta > notte aumento 5-28 cazzo
                     
                     
                     
