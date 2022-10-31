@@ -281,10 +281,20 @@ class maddog:
         self.algo_helper.info("deviation: {}".format(deviation))
         
         
+        
         # formula DEVIATION_ma5_sopra_ma28 - FORMULA AUREA !
         
         deviation_ma5_sopra_ma28 = (ma5_last / ma28_last - 1) * 100 if ma28_last else 0
         self.algo_helper.info("deviation_ma5_sopra_ma28: {}".format(deviation_ma5_sopra_ma28))
+        
+        
+        
+        # formula DEVIATION_ma10_sopra_ma200 - FORMULA MY COMPA !
+        
+        deviation_ma10_sopra_ma200 = (ma10_last / ma200_last - 1) * 100 if ma200_last else 0
+        self.algo_helper.info("deviation_ma10_sopra_ma200: {}".format(deviation_ma10_sopra_ma200))
+        
+        
         
         
         # formula DEVIATION_ma250_sopra_ma300
@@ -1236,6 +1246,7 @@ class maddog:
                 elif (
                     
                     ma8_last > ma59_last
+                    and deviation_ma10_sopra_ma200 < -0.24
                     
                     and deviation_ma100_sopra_ma200 > -0.40
                     
@@ -1251,7 +1262,7 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
               
                 ):
-                    buy = "BUY 1 migliore che considera distanza 5-300 - riga 1043 B"
+                    buy = "BUY 1 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 - riga 1043 B"
                     action = "buy"
                     percentage = 50
                     
@@ -1262,7 +1273,7 @@ class maddog:
                     # 21 ottobre 2022 5-28 = 0.05
                     # 28 ottobre 2022 5-28 = 0.04
                     # ave comba
-                    
+                    # 31 ottobre aggiunta dev 10-200 - formula MY COMPA
                     
                 
                     
