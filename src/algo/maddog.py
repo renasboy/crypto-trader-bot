@@ -1208,7 +1208,7 @@ class maddog:
                 elif (
                     
                     ma8_last > ma150_last
-                    and deviation_ma100_sopra_ma200 > -0.30
+                    and deviation_ma100_sopra_ma200 > -0.25
                     and delta_1_200_78 < delta_2_200_78_60_min
                     
                     and deviation_ma5_sotto_ma300 > 0.45
@@ -1218,7 +1218,7 @@ class maddog:
                     and ma200_last < ma200_60_min_ago
                     
                     and deviation_ma3_sopra_ma10 > 0.01
-                    and deviation_ma5_sopra_ma28 > 0.07
+                    and deviation_ma5_sopra_ma28 > 0.11
                     
                     and deviation_bellissima > 0.17
                     and deviation_ma13_sopra_ma25 > 0.07
@@ -1236,7 +1236,7 @@ class maddog:
                     action = "buy"
                     percentage = 50
                     
-                    # importante : ma100 sta sotto la ma200 non le e' troppo lontana
+                    # importante : ma100 sta sotto la ma200 ma non le e' troppo lontana
                     
                     
                     
@@ -1248,8 +1248,9 @@ class maddog:
                     ma8_last > ma59_last
                     
                     
-                    and deviation_ma10_sopra_ma200 < -0.30
-                    
+                    and deviation_ma10_sopra_ma200 < -0.25
+                    and deviation_ma10_sopra_ma200 > -0.40
+                  
                     and deviation_ma100_sopra_ma200 > -0.40
                     
                     and deviation_ma5_sotto_ma300 < 0.45
@@ -1296,7 +1297,8 @@ class maddog:
                 elif (
                     
                     ma8_last > ma150_last
-                    and deviation_ma100_sopra_ma200 > -0.30
+                    and deviation_ma100_sopra_ma200 < -0.40
+                    
                     and delta_1_200_78 < delta_2_200_78_60_min
                     
                     and deviation_ma5_sotto_ma300 < -0.75
