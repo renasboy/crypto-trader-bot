@@ -5130,32 +5130,6 @@ class maddog:
                 elif (    
                
                     ma3_last > ma28_last
-                    and ma300_last > ma450_last
-                    
-                    and ma100_last < ma100_60_min_ago
-                    and ma200_last < ma200_60_min_ago
-                    and ma300_last > ma300_60_min_ago
-                    
-                    and ma200_last > ma200_20_min_ago
-                    and ma13_last > ma200_last
-                    
-                    and deviation_ma3_sopra_ma10 > 0.03
-                    and deviation_ma5_sopra_ma28 > 0.08
-                    
-                    and ma2_last > ma2_2_min_ago
-                ):    
-                    
-                    buy = "BUY 1 con 200 > 200 20 min ago (100 < and 200 < MA 300 >) and 13-200 !  - riga 4190a"
-                    action = "buy"
-                    percentage = 80
-                    
-                    # aggiunta 5-28 e 3-10 vedi 9 ott 2022 ore 21:07
-                    
-                    
-                elif (    
-               
-                    ma3_last > ma28_last
-                    and ma300_last < ma450_last
                     
                     and ma100_last < ma100_60_min_ago
                     and ma200_last < ma200_60_min_ago
@@ -5170,7 +5144,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                 ):    
                     
-                    buy = "BUY 1 con 200 > 200 20 min ago (100 < and 200 < MA 300 >) and 13-200 !  - riga 4190b"
+                    buy = "BUY 1 con 200 > 200 20 min ago (100 < and 200 < MA 300 >) and 13-200 !  - riga 4190"
                     action = "buy"
                     percentage = 80
                     
@@ -9546,10 +9520,9 @@ class maddog:
                     #####################################################################
                     
                     
+                
                 elif (
                     ma28_last >= ma28_2_min_ago
-                    and ma200_last > ma200_301_min_ago
-                    
                     and ma300_last > ma300_60_min_ago
                     and deviation_ma250_sopra_ma300 > 0.04
                   
@@ -9566,44 +9539,13 @@ class maddog:
                     and ma13_last > ma100_last
                     and deviation_ma5_sopra_ma28 > 0.05
                 ):
-                    buy = "BUY 4B RIVOLUZIONARIO con ma78 > - r 6859 A1"
+                    buy = "BUY 4B RIVOLUZIONARIO con ma78 > - r 6859 A"
                     action = "buy"
                     percentage = 70
                     
                     # deviation_buy3 = ma4_last/ma30_last
                     # deviation_ma4_sopra_ma100 > 0.25 arrivati al buy 4 DEVE AVERE UNA CERTA FORZA !
                     # ma se 250 > 300 ! serve una forza minore
-                    
-                    
-                elif (
-                    ma28_last >= ma28_2_min_ago
-                    and ma200_last < ma200_301_min_ago
-                    
-                    and ma300_last > ma300_60_min_ago
-                    and deviation_ma250_sopra_ma300 > 0.04
-                  
-                    and deviation_buy3 > 0.01
-                    and delta_buy3_incrocio_ma3_ma8 > 0.04
-                    and deviation_ma4_sopra_ma30 > 0.08
-                    
-                    and ma3_last > ma8_last
-                    and ma3_last > ma78_last
-                    
-                    and ma2_last > ma2_2_min_ago
-                    and ma7_last > ma25_last
-                    
-                    and ma13_last > ma100_last
-                    and deviation_ma5_sopra_ma28 > 0.05
-                ):
-                    buy = "BUY 4B RIVOLUZIONARIO con ma78 > - r 6859 A2"
-                    action = "buy"
-                    percentage = 70
-                    
-                    # deviation_buy3 = ma4_last/ma30_last
-                    # deviation_ma4_sopra_ma100 > 0.25 arrivati al buy 4 DEVE AVERE UNA CERTA FORZA !
-                    # ma se 250 > 300 ! serve una forza minore
-                    
-                    
                     
                     
                 elif (
@@ -13241,37 +13183,18 @@ class maddog:
                     
                     
                     
+                    
                     elif (
                         ma50_last < ma50_2_min_ago
-                        and ma200_last > ma200_301_min_ago
                         and ma200_last < ma300_last
                         and deviation_trend_ma200 > -0.10
                         
                         and (ma3_prev > ma78_prev and ma3_last < ma78_last)
-                        and deviation_sell < -0.19
+                        and deviation_sell < -0.15
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 da 50 a 90 min IPOTESI un po' MENO PEGGIO con ma50 < con incrocio 3-78 and deviation_sell < -0.19 - r 9757a"
+                        sell = "SELL 1 da 50 a 90 min IPOTESI un po' MENO PEGGIO con ma50 < con incrocio 3-78 and deviation_sell < -0.15 - r 9757"
                         action = "sell"
-                        
-                        # 1 nov 2022 0.19 da 0.15 se ma200_last > ma200_301_min_ago
-                        
-                        
-                        
-                    elif (
-                        ma50_last < ma50_2_min_ago
-                        and ma200_last < ma200_301_min_ago
-                        and ma200_last < ma300_last
-                        and deviation_trend_ma200 > -0.10
-                        
-                        and (ma3_prev > ma78_prev and ma3_last < ma78_last)
-                        and deviation_sell < -0.17
-                        and ma2_last < ma2_2_min_ago
-                    ):
-                        sell = "SELL 1 da 50 a 90 min IPOTESI un po' MENO PEGGIO con ma50 < con incrocio 3-78 and deviation_sell < -0.17 - r 9757b"
-                        action = "sell"
-                        
-                        # 1 nov 2022 0.17 da 0.15
                         
                 
                 
