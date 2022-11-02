@@ -3667,6 +3667,34 @@ class maddog:
                     # > estate anticipato buy di una ndecchiecella
                     
                     
+                elif (    
+                    
+                    ma200_last > ma200_20_min_ago
+                    
+                    and deviation_ma3_sopra_ma10 > 0.05
+                    and deviation_ma5_sopra_ma28 > 0.05
+                    
+                    and ma18_last >= ma18_2_min_ago
+                    
+                    and ma3_last > ma28_last
+                    and ma2_last > ma2_2_min_ago
+                    
+                    and ma100_last > ma200_last
+                    and ma200_last > ma300_last
+                    
+                    and ma100_last > ma100_60_min_ago
+                    and ma200_last > ma200_60_min_ago
+                    
+                    and ma300_last > ma300_360_min_ago
+                ):    
+                    
+                    buy = "BUY 1 con 200 > and ma28_last > ma28_2_min_ago - 20 < 78 and dev_ma3_sopra_ma10 > 0.17 con 5-28> 0.15 - riga 2859 b2"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # > estate anticipato buy di una ndecchiecella
+                    
+                    
                     
                     
                     
