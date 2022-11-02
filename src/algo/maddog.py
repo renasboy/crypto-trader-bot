@@ -5152,6 +5152,31 @@ class maddog:
                     # aggiunta 5-28 e 3-10 vedi 9 ott 2022 ore 21:07
                     
                     
+                elif (    
+               
+                    ma3_last > ma28_last
+                    and ma300_last < ma450_last
+                    
+                    and ma100_last < ma100_60_min_ago
+                    and ma200_last < ma200_60_min_ago
+                    
+                    
+                    and ma200_last > ma200_20_min_ago
+                    and ma8_last > ma200_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.03
+                    and deviation_ma5_sopra_ma28 > 0.08
+                    
+                    and ma2_last > ma2_2_min_ago
+                ):    
+                    
+                    buy = "BUY 1 con 200 > 200 20 min ago (100 < and 200 < MA 300 >) and 8-200 !  - riga 4190b"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # aggiunta 5-28 e 3-10 vedi 9 ott 2022 ore 21:07
+                    
+                    
                 
                     
                     
