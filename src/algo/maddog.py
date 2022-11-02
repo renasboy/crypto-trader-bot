@@ -3657,10 +3657,10 @@ class maddog:
                     and ma100_last > ma100_60_min_ago
                     and ma200_last > ma200_60_min_ago
                     and ma300_last > ma300_60_min_ago
-             
+                    and ma300_last < ma300_360_min_ago
                 ):    
                     
-                    buy = "BUY 1 con 200 > and ma28_last > ma28_2_min_ago - 20 < 78 and dev_ma3_sopra_ma10 > 0.17 con 5-28> 0.15 - riga 2859 b"
+                    buy = "BUY 1 con 200 > and ma28_last > ma28_2_min_ago - 20 < 78 and dev_ma3_sopra_ma10 > 0.17 con 5-28> 0.15 - riga 2859 b1"
                     action = "buy"
                     percentage = 80
                     
