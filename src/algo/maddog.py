@@ -13212,17 +13212,32 @@ class maddog:
                     
                     
                     
-                    
                     elif (
                         ma50_last < ma50_2_min_ago
+                        and ma200_last > ma200_301_min_ago
                         and ma200_last < ma300_last
                         and deviation_trend_ma200 > -0.10
                         
                         and (ma3_prev > ma78_prev and ma3_last < ma78_last)
-                        and deviation_sell < -0.15
+                        and deviation_sell < -0.19
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 da 50 a 90 min IPOTESI un po' MENO PEGGIO con ma50 < con incrocio 3-78 and deviation_sell < -0.15 - r 9757"
+                        sell = "SELL 1 da 50 a 90 min IPOTESI un po' MENO PEGGIO con ma50 < con incrocio 3-78 and deviation_sell < -0.19 - r 9757 A"
+                        action = "sell"
+                        
+                        
+                        
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and ma200_last < ma200_301_min_ago
+                        and ma200_last < ma300_last
+                        and deviation_trend_ma200 > -0.10
+                        
+                        and (ma3_prev > ma78_prev and ma3_last < ma78_last)
+                        and deviation_sell < -0.17
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 1 da 50 a 90 min IPOTESI un po' MENO PEGGIO con ma50 < con incrocio 3-78 and deviation_sell < -0.17 - r 9757 B"
                         action = "sell"
                         
                 
