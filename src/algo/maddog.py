@@ -14230,17 +14230,33 @@ class maddog:
                     
                     
                     
-                    # ma se ma100 > 
+                    # ma se ma100 >
                     
                     elif (
                         ma50_last < ma50_2_min_ago
+                        and ma200_last > ma200_301_min_ago
+                        and ma2_last < ma2_2_min_ago
+                        and deviation_sell < -0.31
+                        and ma3_last < ma39_last
+                        and ma100_last > ma100_60_min_ago
+                        and ma78_last > ma200_last
+                    ):
+                        sell = "SELL 1 dopo 110 min con ma50 < MA ma100 > and (deviation_sell < -0.27 and ma3_last < ma39_last) - r 10489 a1"
+                        action = "sell"
+                        
+                        # 3 luglio 2022 a 0.27 da 0.20
+                        
+                        
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and ma200_last < ma200_301_min_ago
                         and ma2_last < ma2_2_min_ago
                         and deviation_sell < -0.27
                         and ma3_last < ma39_last
                         and ma100_last > ma100_60_min_ago
                         and ma78_last > ma200_last
                     ):
-                        sell = "SELL 1 dopo 110 min con ma50 < MA ma100 > and (deviation_sell < -0.27 and ma3_last < ma39_last) - r 10489 a"
+                        sell = "SELL 1 dopo 110 min con ma50 < MA ma100 > and (deviation_sell < -0.27 and ma3_last < ma39_last) - r 10489 a2"
                         action = "sell"
                         
                         # 3 luglio 2022 a 0.27 da 0.20
@@ -14257,7 +14273,7 @@ class maddog:
                         and ma100_last > ma100_60_min_ago
                         and ma78_last < ma200_last
                     ):
-                        sell = "SELL 1 dopo 110 min con ma50 < MA ma100 > and (deviation_sell < -0.23 and ma3_last < ma39_last) - r 10506 b"
+                        sell = "SELL 1 dopo 110 min con ma50 < MA ma100 > and (deviation_sell < -0.23 and ma3_last < ma39_last) - r 10589 b"
                         action = "sell"
                         
                         # 3 luglio 2022 a 0.23 da 0.20
