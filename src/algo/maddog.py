@@ -14258,9 +14258,8 @@ class maddog:
                     
                     # ma se ma100 >
                     
-                    elif (
+                    elif (    
                         ma50_last < ma50_2_min_ago
-                        
                         and ma2_last < ma2_2_min_ago
                         and deviation_sell < -0.31
                         and ma3_last < ma39_last
