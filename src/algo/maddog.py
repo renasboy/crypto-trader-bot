@@ -3495,7 +3495,7 @@ class maddog:
                     and ma78_last < ma200_last
                     and ma300_last > ma300_301_min_ago
                     
-                    and deviation_ma5_sopra_ma28 > 0.03
+                    and deviation_ma5_sopra_ma28 > 0.11
                     and deviation_ma3_sopra_ma10 > 0.01
                     
                     and deviation_ma100_sopra_ma300 > -0.50
@@ -3504,7 +3504,7 @@ class maddog:
                     and deviation_buy_crollo_1 > -0.89
                 ): 
             
-                    buy = "BUY 1 FIAT ma300 > 300 5 ore con 100 VICINA 300 NO grande correzione NO grande ribasso NO crollo ! 78 < 200  - r 2745 A"
+                    buy = "BUY 1 FIAT ma300 > 300 5 ore con 100 VICINA 300 NO grande correzione NO grande ribasso NO crollo ! 78 < 200 AND 5-28 > 0.11  - r 2745 A"
                     action = "buy"
                     percentage = 70
                     
@@ -3512,7 +3512,7 @@ class maddog:
                     # 23 lug 2022 5-28 > 0.21 deve essere sicura dopo 5 ore di ribasso !
                     # 26 ott 2022 5-28 > 0.03 da 0.21 !
                     # vedi 25 ottobre ore 22:46 forse dovrai aggiungere 5>300 !
-                    
+                    #  2 nov 2022 5-28 > 0.11 da 0.03
                     
                     
                 # BUY 1 piccola CORREZIONE FIAT 5-50 che NON E' una grande correzione e non e' un grande ribasso e NON E' un crollo !
@@ -3532,7 +3532,7 @@ class maddog:
                     and deviation_buy_crollo_1 > -0.69
                 ): 
             
-                    buy = "BUY 1 FIAT piccola CORREZIONE 100 VICINA 300  8-28 NO grande correzione NO grande ribasso NO crollo ! 78 < 200  - r 2745b"
+                    buy = "BUY 1 FIAT piccola CORREZIONE 100 VICINA 300  8-28 NO grande correzione NO grande ribasso NO crollo ! 78 < 200  - r 2745 B"
                     action = "buy"
                     percentage = 70
                     
