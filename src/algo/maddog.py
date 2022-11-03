@@ -21503,7 +21503,7 @@ class maddog:
                 action = "sell"
                         
                 # 24 set 2022 ore 17:23
-                
+                #  3 nov 2022 5-300 da 5-90
                 
                 
             elif (
