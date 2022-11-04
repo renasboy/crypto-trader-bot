@@ -21514,6 +21514,7 @@ class maddog:
                 
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds_sell_5_90
+                and delta_300_100 < delta_300_100_60_min
                 and deviation_ma100_sopra_ma300 < 0.20
                 and ma300_last > ma300_120_min_ago
                 and ma5_last < ma200_last
@@ -21521,7 +21522,7 @@ class maddog:
            
             ):
 
-                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 150 min = 9000 sec con 5-200 - r 16743 Bx2"
+                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 150 min = 9000 sec con 5-200 con doppio delta GIORNO ! - r 16743 Bx2"
                 action = "sell"
                         
                 # 24 set 2022 ore 17:23
