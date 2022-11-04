@@ -4839,9 +4839,10 @@ class maddog:
                 # BUY 1 CHE MANCAVA DOPO BUY-SELL CROLLO ! 150-100 GIORNO ! E 50 > 100
                 
                 elif (
-                    deviation_ma5_sopra_ma28 > 0.18
+                    
+                    ma78_last < ma200_last
                     and deviation_ma3_sopra_ma10 > 0.15
-                    and ma78_last < ma200_last
+                    and deviation_ma5_sopra_ma28 > 0.18
                     
                     and ma50_last > ma100_last
                     
@@ -4858,7 +4859,7 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
                 
                 ):
-                    buy = "BUY 1 78<200 CHE MANCAVA DOPO BUY-SELL CROLLO ! 50 > 100 AND 150-100 GIORNO ! and 3-10 > 0.15 and 5-28 > 0.18 - r 4005 b"
+                    buy = "BUY 1 78<200 CHE MANCAVA DOPO BUY-SELL CROLLO ! 50 > 100 AND 150-100 GIORNO ! and 3-10 > 0.15 and 5-28 > 0.18 - r 4005 B"
                     action = "buy"
                     percentage = 80
                     
