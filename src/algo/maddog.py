@@ -21509,7 +21509,8 @@ class maddog:
                 action = "sell"
                         
                 # 24 set 2022 ore 17:23
-                #  3 nov 2022 5-300 da 5-90  
+                #  3 nov 2022 5-300 da 5-90
+                
                 
                 
             elif (
@@ -21517,12 +21518,29 @@ class maddog:
                 and delta_300_100 < delta_300_100_60_min
                 and deviation_ma100_sopra_ma300 < 0.20
                 and ma300_last > ma300_120_min_ago
+                and ma5_last < ma300_last
+                and ma2_last < ma2_2_min_ago
+           
+            ):
+
+                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - maddog VENDE dopo 150 min = 9000 sec con 5-300 con doppio delta GIORNO ! cazzo - r 16743 Bx2A"
+                action = "sell"
+                        
+                # 24 set 2022 ore 17:23
+                #  3 nov 2022 5-300 da 5-200
+                
+                
+            elif (
+                seconds_since_last_trade > max_hold_time_in_seconds_sell_5_90
+                and delta_300_100 > delta_300_100_60_min
+                and deviation_ma100_sopra_ma300 < 0.20
+                and ma300_last > ma300_120_min_ago
                 and ma5_last < ma200_last
                 and ma2_last < ma2_2_min_ago
            
             ):
 
-                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 150 min = 9000 sec con 5-200 con doppio delta GIORNO ! - r 16743 Bx2"
+                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - maddog VENDE dopo 150 min = 9000 sec con 5-200 con doppio delta NOTTE ! - r 16743 Bx2B"
                 action = "sell"
                         
                 # 24 set 2022 ore 17:23
