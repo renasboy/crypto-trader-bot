@@ -21441,6 +21441,7 @@ class maddog:
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds_sell_5_90
                 and seconds_since_last_trade < max_hold_time_in_seconds_sell_5_180
+                and ma300_last > ma300_720_min_ago
                 and delta_1 > delta_2
                 and deviation_sell > 0.11
                 and deviation_ma5_sotto_ma300 < 0.25
