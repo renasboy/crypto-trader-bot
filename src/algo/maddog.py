@@ -440,6 +440,10 @@ class maddog:
         rapporto_delta_1_delta_2_69_39 = (delta_1_69_39 / delta_2_69_39) if delta_2_69_39 else 0
         self.algo_helper.info("rapporto_delta_1_delta_2_69_39: {}".format(rapporto_delta_1_delta_2_69_39))
         
+        
+        
+        
+        
        
         # formula deviation_ma3
         
