@@ -4855,7 +4855,7 @@ class maddog:
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
                   
-                    and ma59_last > ma59_45_min_ago
+                    and ma59_last > ma59_30_min_ago
                     
                     and ma100_last < ma100_120_min_ago
                     and ma200_last < ma200_120_min_ago
