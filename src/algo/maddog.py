@@ -21955,22 +21955,24 @@ class maddog:
                 # and ma2_last < ma2_2_min_ago
                 
                 
+                
             # 44 SELL condizione speciale da RCCR ! IPOTESI PEGGIORE con ma50< con dev_ma39 < -0.225 and deviation_sell < -0.22 MA DOPPIO DELTA RIALZO 
                      
             elif (
                 ma50_last < ma50_2_min_ago
+                and ma300_last > ma300_301_min_ago
                 and ma3_last < ma300_last
                 and ma200_last < ma300_last
                 and deviation_trend_ma200 < -0.10
                         
                 and deviation_ma39 < -0.225
-                and deviation_sell < -0.227
+                and deviation_sell < -0.228
                         
                 and rapporto_delta_1_delta_2 < 1
                         
                 and ma2_last < ma2_2_min_ago
             ):
-                sell = "SELL condizione speciale 43 da RCCR ! IPOTESI PEGGIORE con ma50< con dev_ma39 < -0.225 and dev_sell < -0.227 MA DOPPIO DELTA RIALZO - r 16936"
+                sell = "SELL condizione speciale 43 da RCCR ! IPOTESI PEGGIORE con dev_ma39 < -0.225 and dev_sell < -0.227 MA DOPPIO DELTA RIALZO - r 16936 A"
                 action = "sell"
                         
                 # 19 SET r 10546 la condizione precedente ha fatto -1.65 ed e' partita insieme ad altre 2 condizioni speciali !
@@ -21978,7 +21980,35 @@ class maddog:
                 # quindi, ho aggiunto questa condizione importata da RCCR SIA QUA CHE NELLE CONDIZIONI SPECIALI ( nuova condizione speciale )
                 # 19 set 2022 IMPORTATO DA RCCR > sell 4:18 del 19 set -1.65 % !
                 # 19 set 2022 deviation_ma39 < -0.22 AND and deviation_sell < -0.22
-                # 20 set 2022 ho aumentato SOLO LA dev sella a -0.23 !
+                # 20 set 2022 ho aumentato SOLO LA dev sell a -0.23 !
+                
+                
+                
+            # 44 SELL condizione speciale da RCCR ! IPOTESI PEGGIORE con ma50< con dev_ma39 < -0.225 and deviation_sell < -0.22 MA DOPPIO DELTA RIALZO 
+                     
+            elif (
+                ma50_last < ma50_2_min_ago
+                and ma300_last < ma300_301_min_ago
+                and ma3_last < ma300_last
+                and ma200_last < ma300_last
+                and deviation_trend_ma200 < -0.10
+                        
+                and deviation_ma39 < -0.225
+                and deviation_sell < -0.229
+                        
+                and rapporto_delta_1_delta_2 < 1
+                        
+                and ma2_last < ma2_2_min_ago
+            ):
+                sell = "SELL condizione speciale 43 da RCCR ! IPOTESI PEGGIORE con dev_ma39 < -0.225 and dev_sell < -0.227 MA DOPPIO DELTA RIALZO - r 16936 B"
+                action = "sell"
+                        
+                # 19 SET r 10546 la condizione precedente ha fatto -1.65 ed e' partita insieme ad altre 2 condizioni speciali !
+                
+                # quindi, ho aggiunto questa condizione importata da RCCR SIA QUA CHE NELLE CONDIZIONI SPECIALI ( nuova condizione speciale )
+                # 19 set 2022 IMPORTATO DA RCCR > sell 4:18 del 19 set -1.65 % !
+                # 19 set 2022 deviation_ma39 < -0.22 AND and deviation_sell < -0.22
+                # 20 set 2022 ho aumentato SOLO LA dev sell a -0.23 !
                 
                 
                 
