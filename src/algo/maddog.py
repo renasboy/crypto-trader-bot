@@ -151,6 +151,7 @@ class maddog:
         ma200_301_min_ago = self.algo_helper.ma_minutes_ago(200, 301)
         
         ma300_20_min_ago = self.algo_helper.ma_minutes_ago(300, 20)
+        ma300_30_min_ago = self.algo_helper.ma_minutes_ago(300, 30)
         ma300_60_min_ago = self.algo_helper.ma_minutes_ago(300, 60)
         ma300_120_min_ago = self.algo_helper.ma_minutes_ago(300, 120)
         ma300_180_min_ago = self.algo_helper.ma_minutes_ago(300, 180)
@@ -8977,7 +8978,7 @@ class maddog:
                     
                     and ma100_last < ma100_120_min_ago
                     and ma200_last < ma200_120_min_ago
-                    and ma300_last < ma300_120_min_ago
+                    and ma300_last < ma300_30_min_ago
                     
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
@@ -8991,7 +8992,7 @@ class maddog:
                     percentage = 90
                     
                     # 14 set 2022 18-78 da 18-100
-                    
+                    #  8 nov 2022 300 con 120 min faceva arrivare tardi il buy. cosi' ho ridotto a 30 min. (non era la 18-78 che faceva arrivare tardi il buy)
                     
                     
                 # BUY 3 29 ago 2022 > 120 min di ribasso
