@@ -21594,9 +21594,55 @@ class maddog:
                 
                 
                 
-                
+            ############ attenzione ! vedi giorno 7 novembre 2022 ore 21:34 MADDOG NON HA VENDUTO CON UN GUADAGNO DELL 1% MENTRE ma300 scendeva da 6 ore
+            
             # 32 B2b - SELL condizione speciale ROOT DOWN DEEP - ro cano VENDE dopo 240 min = 9000 sec con 5-180
             
+            elif (
+                
+                seconds_since_last_trade < max_hold_time_in_seconds_sell_5_180
+                and ma300_last > ma300_301_min_ago
+                
+                and deviation_sell > 0.11
+                and deviation_ma5_sotto_ma300 < 0.25
+                and ma300_last > ma300_120_min_ago
+                and ma5_last < ma180_last
+                and ma2_last < ma2_2_min_ago
+           
+            ):
+
+                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 240 min con 5-180 - r 16743 B2bxB1"
+                action = "sell"
+                        
+                # 24 set 2022 ore 17:23
+                # 11 ott 2022 dev sell 0.10 da 0.15
+                # 21 ott 2022 dev sell 0.11 da 0.10
+                
+                
+                
+            elif (
+                
+                seconds_since_last_trade < max_hold_time_in_seconds_sell_5_180
+                and ma300_last < ma300_301_min_ago
+                and deviation_sell > 0.80
+                and ma3_last < ma69_last
+                
+                and ma300_last > ma300_120_min_ago
+                
+                and ma2_last < ma2_2_min_ago
+           
+            ):
+
+                sell = "SELL condizione speciale - ro cano VENDE dopo 240 min con 3-69 SE ma300 scende da 5 ore e se guadagna almeno 0.80 - r 16743 amen"
+                action = "sell"
+                        
+                # 24 set 2022 ore 17:23
+                # 11 ott 2022 dev sell 0.10 da 0.15
+                # 21 ott 2022 dev sell 0.11 da 0.10
+                # prendi e porta a casa cazzo se 300 scende da 5 ore ! e stai guadagnando > 0.80 % - potrebbe essere un rimbalzo.
+                
+                
+                
             elif (
                 
                 seconds_since_last_trade < max_hold_time_in_seconds_sell_5_180
@@ -21614,6 +21660,9 @@ class maddog:
                 # 24 set 2022 ore 17:23
                 # 11 ott 2022 dev sell 0.10 da 0.15
                 # 21 ott 2022 dev sell 0.11 da 0.10
+                
+                
+                
                 
                 
                 
