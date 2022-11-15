@@ -21307,7 +21307,7 @@ class maddog:
                 and ma2_last < ma2_2_min_ago
             ):
 
-                sell = "SELL condizione speciale 27 - DOLCE ATTESA con ma100 < e con ma13 < and dev_sell < -0.355 ( and 20 > 100 ) - r 16614"
+                sell = "SELL condizione speciale 27 - DOLCE ATTESA con ma100 < e con ma13 < and dev_sell < -0.355 ( and 20 > 100 ! ) - r 16614"
                 action = "sell"
                 
             
@@ -21322,7 +21322,8 @@ class maddog:
                 seconds_since_last_trade > max_hold_time_in_seconds
                 and deviation_sell < -0.39
                 
-                and ma20_last < ma100_last
+                
+                and (ma20_prev > ma100_prev and ma20_last < ma100_last)
                 and ma300_last > ma300_120_min_ago
                 
                 and ma100_last < ma100_30_min_ago
@@ -21354,7 +21355,8 @@ class maddog:
                 seconds_since_last_trade > max_hold_time_in_seconds
                 and deviation_sell < -0.42
                 
-                and ma20_last < ma100_last
+                
+                and (ma20_prev > ma100_prev and ma20_last < ma100_last)
                 and ma300_last < ma300_120_min_ago
                 
                 and ma100_last < ma100_30_min_ago
@@ -21482,7 +21484,8 @@ class maddog:
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds_sell_5_90
                 and deviation_sell > 0.80
-                and ma5_last < ma50_last
+                
+                and (ma5_prev > ma50_prev and ma5_last < ma50_last)
                 and deviation_ma5_sotto_ma300 > 0.25
                 and deviation_ma5_sotto_ma300 < 0.40
                 and ma300_last > ma300_120_min_ago
@@ -21505,7 +21508,9 @@ class maddog:
                 and deviation_ma5_sotto_ma300 > 0.25
                 and deviation_ma5_sotto_ma300 < 0.40
                 and ma300_last > ma300_120_min_ago
-                and ma5_last < ma125_last
+                
+                and (ma5_prev > ma125_prev and ma5_last < ma125_last)
+                
                 and ma2_last < ma2_2_min_ago
            
             ):
@@ -21529,7 +21534,8 @@ class maddog:
                 and deviation_sell < 0.01
                 and deviation_ma5_sotto_ma300 < 0.25
                 and ma300_last > ma300_120_min_ago
-                and ma5_last < ma90_last
+                
+                and (ma5_prev > ma90_prev and ma5_last < ma90_last)
                 and ma2_last < ma2_2_min_ago
            
             ):
@@ -21553,7 +21559,9 @@ class maddog:
                 and deviation_sell > 0.11
                 and deviation_ma5_sotto_ma300 < 0.25
                 and ma300_last > ma300_120_min_ago
-                and ma5_last < ma90_last
+                
+                and (ma5_prev > ma90_prev and ma5_last < ma90_last)
+                
                 and ma2_last < ma2_2_min_ago
            
             ):
@@ -21577,7 +21585,9 @@ class maddog:
                 and deviation_sell > 0.11
                 and deviation_ma5_sotto_ma300 < 0.25
                 and ma300_last > ma300_120_min_ago
-                and ma4_last < ma86_last
+                
+                and (ma4_prev > ma86_prev and ma4_last < ma86_last)
+                
                 and ma2_last < ma2_2_min_ago
            
             ):
@@ -21606,7 +21616,8 @@ class maddog:
                 and deviation_sell > 0.11
                 and deviation_ma5_sotto_ma300 < 0.25
                 and ma300_last > ma300_120_min_ago
-                and ma5_last < ma180_last
+                
+                and (ma5_prev > ma180_prev and ma5_last < ma180_last)
                 and ma2_last < ma2_2_min_ago
            
             ):
@@ -21625,8 +21636,8 @@ class maddog:
                 seconds_since_last_trade < max_hold_time_in_seconds_sell_5_180
                 and ma300_last < ma300_301_min_ago
                 and deviation_sell > 0.80
-                and ma3_last < ma69_last
                 
+                and (ma3_prev > ma69_prev and ma3_last < ma69_last)
                 and ma300_last > ma300_120_min_ago
                 
                 and ma2_last < ma2_2_min_ago
@@ -21649,7 +21660,8 @@ class maddog:
                 and deviation_sell > 0.11
                 and deviation_ma5_sotto_ma300 < 0.25
                 and ma300_last > ma300_120_min_ago
-                and ma5_last < ma180_last
+                
+                and (ma5_prev > ma180_prev and ma5_last < ma180_last)
                 and ma2_last < ma2_2_min_ago
            
             ):
@@ -21674,7 +21686,8 @@ class maddog:
                 and deviation_sell < -0.12
                 and deviation_ma5_sotto_ma300 < 0.25
                 and ma300_last > ma300_120_min_ago
-                and ma22_last < ma300_last
+                
+                and (ma22_prev > ma300_prev and ma22_last < ma300_last)
                 and ma2_last < ma2_2_min_ago
              
             ):
@@ -21694,7 +21707,8 @@ class maddog:
                 seconds_since_last_trade > max_hold_time_in_seconds_sell_5_90
                 and deviation_ma100_sopra_ma300 > 0.20
                 and ma300_last < ma300_120_min_ago
-                and ma5_last < ma300_last
+                
+                and (ma5_prev > ma300_prev and ma5_last < ma300_last)
                 and ma2_last < ma2_2_min_ago
            
             ):
@@ -21712,7 +21726,8 @@ class maddog:
                 and delta_300_100 < delta_300_100_60_min
                 and deviation_ma100_sopra_ma300 < 0.20
                 and ma300_last > ma300_120_min_ago
-                and ma5_last < ma300_last
+                
+                and (ma5_prev > ma300_prev and ma5_last < ma300_last)
                 and ma2_last < ma2_2_min_ago
            
             ):
@@ -21729,7 +21744,8 @@ class maddog:
                 and delta_300_100 > delta_300_100_60_min
                 and deviation_ma100_sopra_ma300 < 0.20
                 and ma300_last > ma300_120_min_ago
-                and ma5_last < ma200_last
+                
+                and (ma5_prev > ma200_prev and ma5_last < ma200_last)
                 and ma2_last < ma2_2_min_ago
            
             ):
@@ -21748,7 +21764,9 @@ class maddog:
                 and deviation_ma100_sopra_ma300 < 0.20
                 and deviation_sell < -0.15
                 and ma300_last < ma300_120_min_ago
-                and ma5_last < ma300_last
+              
+                and (ma5_prev > ma300_prev and ma5_last < ma300_last)
+                
                 and ma2_last < ma2_2_min_ago
            
             ):
@@ -21894,8 +21912,8 @@ class maddog:
             elif (
                 ma5_last < ma39_last
                 and ma300_last > ma300_120_min_ago
-                and ma3_last < ma300_last
                 
+                and (ma3_prev > ma300_prev and ma3_last < ma300_last)
                 and deviation_sell > 0.90
                 
                 and ma2_last > ma100_last
@@ -21913,7 +21931,8 @@ class maddog:
             elif (
                 ma5_last < ma33_last
                 and ma300_last < ma300_120_min_ago
-                and ma3_last < ma300_last
+                
+                and (ma3_prev > ma300_prev and ma3_last < ma300_last)
                 
                 and deviation_sell > 0.90
                 
@@ -22010,7 +22029,9 @@ class maddog:
             elif (
                 ma50_last < ma50_2_min_ago
                 and ma300_last > ma300_301_min_ago
-                and ma3_last < ma300_last
+                
+                and (ma3_prev > ma300_prev and ma3_last < ma300_last)
+                
                 and ma200_last < ma300_last
                 and deviation_trend_ma200 < -0.10
                         
@@ -22038,7 +22059,8 @@ class maddog:
             elif (
                 ma50_last < ma50_2_min_ago
                 and ma300_last < ma300_301_min_ago
-                and ma3_last < ma300_last
+                
+                and (ma3_prev > ma300_prev and ma3_last < ma300_last)
                 and ma200_last < ma300_last
                 and deviation_trend_ma200 < -0.10
                         
@@ -22068,6 +22090,7 @@ class maddog:
             elif (
                 ma300_last < ma300_301_min_ago
                 and deviation_sell > 0.55
+                
                 and (ma3_prev > ma285_prev and ma3_last < ma285_last)
                 and deviation_ma100_sopra_ma300 < -0.30
                 and ma3_last < ma8_last
