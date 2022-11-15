@@ -10274,15 +10274,32 @@ class maddog:
                     
                     
                  
+                # BUY 5 di emergenza CROLLO FERRARI - modo 1
+                
+                elif (
+                    ma2_last > ma2_2_min_ago
+                    and deviation_buy_crollo_1 < -2.30
+                    and ma3_last > ma18_last
+                    and deviation_ma5_sotto_ma300 > 5.00
+                ):
+                    buy = "BUY 5 di emergenza CROLLO FERRARI - modo 1 - 3-18 - r 7282 A"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # deviation_buy_crollo_1 = ma8_last / ma78_last
+                    # SALTA IL BUY 2 allora ho fatto il BUY 3 di emergenza (se <-2.30 si attiva 8-25)
+                    
+                    
                     
                 # BUY 5 di emergenza CROLLO FERRARI - modo 1
                 
                 elif (
                     ma2_last > ma2_2_min_ago
                     and deviation_buy_crollo_1 < -2.30
-                    and ma3_last > ma28_last
+                    and ma3_last > ma9_last
+                    and deviation_ma5_sotto_ma300 < 5.00
                 ):
-                    buy = "BUY 5 di emergenza CROLLO FERRARI - modo 1 - 3-28 - r 7282"
+                    buy = "BUY 5 di emergenza CROLLO FERRARI - modo 1 - 3-9 - r 7282 B"
                     action = "buy"
                     percentage = 80
                     
