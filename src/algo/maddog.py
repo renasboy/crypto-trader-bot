@@ -5798,13 +5798,13 @@ class maddog:
                 
                
                     
-                # BUY 1 5 LUGLIO 2022 ma100 sotto ma300 di almeno -0.90 ! E CON 3-10 > 0.12
+                # BUY 1 5 LUGLIO 2022 ma100 sotto ma300 di almeno -0.90 ! E CON 3-10 > 0.16
                 
                 elif (
                     
                     deviation_ma100_sopra_ma300 < -0.90
                     
-                    and ma8_last > ma50_last
+                    and ma8_last > ma39_last
                     and deviation_ma3_sopra_ma10 > 0.16
                     
                     and ma100_last < ma100_120_min_ago
@@ -5818,12 +5818,12 @@ class maddog:
                     and price > price_2_min_ago
                     
                 ):
-                    buy = "BUY 1 5 LUGLIO 2022 ma100 sotto ma300 di almeno -0.90 ! 3-10 > 0.12 - r 4570 A"
+                    buy = "BUY 1 5 LUGLIO 2022 con 8-39 and ma100 sotto ma300 di almeno -0.90 ! 3-10 > 0.16 - r 4570 A"
                     action = "buy"
                     percentage = 70
 
                     # 22 lug 2022 3-10 0.16 da 0.12 cazzo
-                    
+                    # 15 nov 2022 8-39 da 8-54
                     
                     
                     
