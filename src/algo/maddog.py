@@ -4264,6 +4264,32 @@ class maddog:
                     and ma13_last < ma25_last
                     and deviation_ma3_sopra_ma10 > 0.35
                     
+                    and ma5_last > ma16_last
+                    
+                    
+                    and ma2_last > ma2_2_min_ago
+                    and ma78_last > ma200_last
+                    
+                ):
+                    buy = "BUY 1 RIBASSO AUDI PIU' LENTA CHE NON E' UN CROLLO ! and delta_1 > delta_2 con 4-15 > 0.10 e 13<25 E 3-10 > 0.35 ! - r 3417 B2 ko"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # deviation_buy_crollo_1 = ma8_last / ma78_last
+                    # questa cosa che 78 deve essere < 200 ha dell' incredibile. MA NON TOCCARE !
+                    # dev 5-16 c'e' perhe' sto riducendo piano piano
+                    # 15 nov 2022 8-54
+                    
+                    
+                elif (
+                    
+                    deviation_buy_crollo_1 < -0.70
+                    and deviation_buy_crollo_1 > -1.50
+                    and delta_1 > delta_2
+                    
+                    and ma13_last < ma25_last
+                    and deviation_ma3_sopra_ma10 > 0.35
+                    
                     and ma8_last > ma54_last
                     
                     
@@ -4271,7 +4297,7 @@ class maddog:
                     and ma78_last < ma200_last
                     
                 ):
-                    buy = "BUY 1 RIBASSO AUDI PIU' LENTA CHE NON E' UN CROLLO ! and delta_1 > delta_2 con 4-15 > 0.10 e 13<25 E 3-10 > 0.35 ! - r 3417 B2"
+                    buy = "BUY 1 RIBASSO AUDI PIU' LENTA CHE NON E' UN CROLLO ! and delta_1 > delta_2 con 4-15 > 0.10 e 13<25 E 3-10 > 0.35 ! - r 3417 B2 ok"
                     action = "buy"
                     percentage = 80
                     
