@@ -22065,7 +22065,7 @@ class maddog:
                 and deviation_trend_ma200 < -0.10
                         
                 and deviation_ma39 < -0.225
-                and deviation_sell < -0.229
+                and deviation_sell < -0.24
                         
                 and rapporto_delta_1_delta_2 < 1
                         
@@ -22080,7 +22080,7 @@ class maddog:
                 # 19 set 2022 IMPORTATO DA RCCR > sell 4:18 del 19 set -1.65 % !
                 # 19 set 2022 deviation_ma39 < -0.22 AND and deviation_sell < -0.22
                 # 20 set 2022 ho aumentato SOLO LA dev sell a -0.23 !
-                
+                # 15 nov 2022 dev sel -0.24 da -0.23
                 
                 
                 
