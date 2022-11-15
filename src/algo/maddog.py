@@ -8724,20 +8724,20 @@ class maddog:
                     deviation_buy_crollo_1 < -0.60
                     and deviation_buy_crollo_1 > -1.50
                     
-                    and deviation_ma5_sopra_ma16 > 0.01
                     and ma5_last > ma16_last
+                    and deviation_ma3_sopra_ma10 > 0.02
                     
                     and ma2_last > ma2_2_min_ago
                     and ma78_last < ma200_last
                     
                 ):
-                    buy = "BUY 3 importata da RCCR - AUDI CHE NON E' UN CROLLO ! con 5-16 > 0.01 - riga 6388"
+                    buy = "BUY 3 importata da RCCR - AUDI CHE NON E' UN CROLLO ! con 5-16 and 3-10 - r 6388"
                     action = "buy"
                     percentage = 90
                     
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     # questa cosa che 78 deve essere < 200 ha dell' incredibile. MA NON TOCCARE !   
-                    
+                    # 15 nov 2022 AGGIUNTA 3-10 vedi 8 nov ore 21:23
                     
                     
                     
