@@ -8991,13 +8991,17 @@ class maddog:
                     ma2_last > ma2_2_min_ago
                     and deviation_buy_crollo_1 < -2.30
                     and ma2_last > ma7_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.02
+                    and deviation_ma5_sopra_ma28 > -0.02
+                    
                 ):
                     buy = "BUY 3 che ci riprova DURANTE IL CROLLO - modo 1 2-7 - r 6520"
                     action = "buy"
                     percentage = 90
                     
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
-                    
+                    # 15 nov 2022 aggiunta 3-10 and 5-28 (STIAMO AL BUY 3!) vedi 8 nov ore 19:02 !
                     
                     
                
