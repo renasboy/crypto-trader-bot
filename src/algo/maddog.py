@@ -4912,6 +4912,8 @@ class maddog:
                 
                 elif (
                     delta_1 < delta_2
+                    and ma5_last < ma54_last
+                    
                     and deviation_ma5_sopra_ma28 > 0.16
                     and deviation_ma3_sopra_ma10 > 0.07
                     and deviation_ma100_laterale > -0.80
@@ -4936,7 +4938,7 @@ class maddog:
                     # > estate anticipata ndecchiecella 5-28 0.17 da 0.20
                     # aggiunta 3-10 > 0.07
                     # 5-28 0.16 da 0.17 (adesso c'e' anche 3-10)
-                    
+                    # 17 nov 2022 HO MESSO 5 < 54 ! vedi 16 nov ore 13:47 e ore 17:16
                     
                     
                     
