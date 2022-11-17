@@ -21780,7 +21780,7 @@ class maddog:
                 and delta_300_100 > delta_300_100_60_min
                 and deviation_ma100_sopra_ma300 < 0.20
                 and ma300_last > ma300_120_min_ago
-                
+                and ma10_last < ma78_last
                 and (ma5_prev > ma200_prev and ma5_last < ma200_last)
                 and ma2_last < ma2_2_min_ago
            
@@ -21791,7 +21791,7 @@ class maddog:
                         
                 # 24 set 2022 ore 17:23
                 #  3 nov 2022 5-300 da 5-200
-                
+                # 17 nov deve essere anche 10<78
                 
                 
                 
