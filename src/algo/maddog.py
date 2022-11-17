@@ -298,6 +298,11 @@ class maddog:
         
         
         
+        # formula DEVIATION_buy2 per la compra 2
+        
+        deviation_callas = (ma5_last / ma54_last - 1) * 100 if ma54_last else 0
+        self.algo_helper.info("deviation_callas: {}".format(deviation_callas))
+        
         
         # formula DEVIATION_ma250_sopra_ma300
         
@@ -2291,7 +2296,8 @@ class maddog:
                 # BUY 1 maria callas core 'ngrato - 2 sett 2022 ore 5:03 - ma300 che SCENDE
                 
                 elif (     
-                    ma5_last > ma59_last
+                    
+                    deviation_callas < -0.10
                     and deviation_ma50_sotto_ma300 < -0.29
                     and deviation_ma78_sotto_ma300 < -0.23
                     and deviation_ma78_sotto_ma200 < -0.30
@@ -2320,7 +2326,7 @@ class maddog:
                     #  7 ott 2022 5-28 > 0.105 da 0.108
                     # 19 ott 2022 5-28 > 0.10 da 0.105 VIVA MARIA CALLAS ! condizione meravigliosa
                     #  8 nov maria callas con 5-59 - da 5-69
-                    
+                    #  16 nov ho tolto ma5_last > ma59_last e ho messo dev callas = 5/54 <-0.10 PENSIERO LATERALE - VEDI 16 NOV ore 15 :33
                     
                     
                     
