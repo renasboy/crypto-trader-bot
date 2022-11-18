@@ -6054,8 +6054,8 @@ class maddog:
                     and deviation_ma100_sopra_ma300 < 0.20
                     
                     and deviation_buy2 > 0.01
-                    and deviation_ma5_sopra_ma28 > 0.03
-                    
+                    and deviation_ma5_sopra_ma28 > 0.11
+                    and deviation_ma3_sopra_ma10 > 0.05
                     and deviation_ma7_sopra_ma40 > 0.04
                     and deviation_buy_ma3_sopra_ma13 > 0.08
                     
@@ -6072,7 +6072,7 @@ class maddog:
                     # tolta and ma2_last >= ma2_2_min_ago !
                     #  9 ott 2022 69>200 da 78>200
                     # 12 ott 2022 7-40 0.04 da 0.05
-                    
+                    # 18 nov 2022 5-28 0.11
                     
                     
                     
@@ -13058,15 +13058,15 @@ class maddog:
                         and ma100_last < ma150_last
                         and ma300_last < ma300_120_min_ago
                         
-                        and (ma5_prev > ma52_prev and ma5_last < ma52_last)
+                        and (ma5_prev > ma59_prev and ma5_last < ma59_last)
                         and deviation_sell > 0.32 and deviation_sell < 0.52
                         and ma2_last < ma2_2_min_ago
                     ):    
-                        sell = "SELL 1 da 50 a 90 min con ma50 > and incrocio 5-52 and deviation_sell 0.31-0.52 la prima FINTA ALLA MARADONA - r 9493 B"
+                        sell = "SELL 1 da 50 a 90 min con ma50 > and incrocio 5-59 and deviation_sell 0.31-0.52 la prima FINTA ALLA MARADONA - r 9493 B"
                         action = "sell"
                         
                         # MARADONA accompagna nelle prime fasi di crescita il titolo. poi interviene RONALDO se il rialzo comincia a farsi piu' consistente.
-                        
+                        # 18 nov 2022 5-59 da 5-52
                         
                         
                         
