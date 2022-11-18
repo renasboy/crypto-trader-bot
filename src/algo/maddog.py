@@ -3697,8 +3697,8 @@ class maddog:
                 # BUY 1 che mancava se dopo 300 min di rialzo c'e' una correzione improvvisa 
                 
                 elif (    
-               
-                    ma5_last > ma48_last
+                    
+                    deviation_callas < -0.10
                     and ma300_last > ma300_300_min_ago
                     
                     and deviation_ma5_sotto_ma300 < -0.70
@@ -3714,8 +3714,8 @@ class maddog:
                     
                     # 3 set 5-48 da 5-50
                     # 3 set dev 5-28 0.04 da 0.05
-                    
-                    
+                    # dev callas - pensiero laterale 
+                    # 18 nov ho tolto ma5_last > ma54_last e ho messo dev callas = 5/54 <-0.10 PENSIERO LATERALE - VEDI 16 NOV ore 15:33
                     
                     
                     
