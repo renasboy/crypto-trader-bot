@@ -18017,22 +18017,41 @@ class maddog:
                         # 31 maggio 2022 5-39 da 5-20
                         # 14 ott 2022 5-48 da 5-39 se 5-300 in basso !
                         
-                        
-
+                    
+                    
+                    
                     elif (
                         
                         ma50_last > ma50_2_min_ago
+                        and deviation_ma10_sopra_ma200 > 1.00
+                        and (ma4_prev > ma33_prev and ma4_last < ma33_last)
+                        and deviation_sell > 0.91 and deviation_sell < 1.20
+                        and ma2_last < ma2_2_min_ago
+                       
+                    ):
+                        sell = "SELL 3 (21-60 min) con ma50 > and incrocio 4-33 and deviation_sell 0.91 - 1.20 CON 10-200 > 1.00 !- r 13609 A"
+                        action = "sell"
+                        
+                        # deviation_sell = ma3_last/last_trade_price
+                        # 14 giu 2022 3-28 da 3-30
+                        # 18 nov 2022 4-33 da 3-30 ( ho aggiunto se 10-200 > 1.00 )
+                        
+                        
+                    elif (
+                        
+                        ma50_last > ma50_2_min_ago
+                        and deviation_ma10_sopra_ma200 < 1.00
                         and (ma3_prev > ma28_prev and ma3_last < ma28_last)
                         and deviation_sell > 0.91 and deviation_sell < 1.20
                         and ma2_last < ma2_2_min_ago
                        
                     ):
-                        sell = "SELL 3 (21-60 min) con ma50 > and incrocio 3-30 and deviation_sell 0.91 - 1.20 - r 13609"
+                        sell = "SELL 3 (21-60 min) con ma50 > and incrocio 3-28 and deviation_sell 0.91 - 1.20 CON 10-200 < 1.00 !- r 13609 B"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
                         # 14 giu 2022 3-28 da 3-30
-                        
+                        # 18 nov 2022 3-28 resta uguale se 10-200<1.00
                         
                         
                     
