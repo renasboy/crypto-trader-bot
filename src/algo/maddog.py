@@ -8164,8 +8164,9 @@ class maddog:
             elif self.session == 3:
                 
                 if (
-                    ma10_last >= ma10_2_min_ago
-                    and ma28_last > ma69_last
+                    
+                    ma8_last > ma39_last
+                    and ma300_last > ma450_last
                     
                     and ma200_last > ma200_60_min_ago
                     and deviation > -0.30
@@ -8184,7 +8185,37 @@ class maddog:
                     
                 ):  
                 
-                    buy = "BUY 3A con ma200 che sale da 60 min and ma28_last > ma69_last - r 6016"
+                    buy = "BUY 3A con ma200 che sale da 60 min and ma300_last > ma450_last and ma8_last > ma39_last - r 6016 A"
+                    action = "buy"
+                    percentage = 80
+
+                    # deviation_buy3 = ma4_last/ma30_last
+                    # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
+                    
+                    
+                elif (
+                    ma10_last >= ma10_2_min_ago
+                    and ma28_last > ma69_last
+                    and ma300_last < ma450_last
+                    
+                    and ma200_last > ma200_60_min_ago
+                    and deviation > -0.30
+                    and deviation_ma3_sopra_ma10 > 0.11
+                    and deviation_ma5_sopra_ma28 > 0.13
+                    
+                    and deviation_ma4_sopra_ma30 > 0.10
+                    and ma3_last > ma13_last
+                    and ma4_last > ma9_last
+                    and deviation_ma7_sopra_ma40 > 0.05
+                    and ma7_last > ma25_last
+                    
+                    and deviation_buy_ma2_sopra_ma13 > 0.10
+                    and ma4_last > ma50_last
+                    and ma2_last >= ma2_2_min_ago
+                    
+                ):  
+                
+                    buy = "BUY 3A con ma200 che sale da 60 min and ma28_last > ma69_last - r 6016 B"
                     action = "buy"
                     percentage = 80
 
