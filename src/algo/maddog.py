@@ -2195,6 +2195,37 @@ class maddog:
                 
                 elif (     
                     ma8_last > ma50_last
+                    and ma125_last > ma450_last
+                    and ma69_last > ma100_last
+                  
+                    and ma200_last < ma200_120_min_ago
+                    and ma100_last < ma200_last
+                    
+                    and ma30_last >= ma30_30_min_ago
+                
+                    and deviation_ma3_sopra_ma10 > 0.09
+                    and deviation_ma5_sopra_ma28 > 0.14
+                    and deviation_bellissima > 0.045
+               
+                    
+                    and ma5_last > ma5_2_min_ago
+                    and ma2_last > ma20_last
+                    and ma2_last > ma2_2_min_ago
+                ):    
+                    buy = "BUY 1 pericolosa MA 69 > 100 FINE AUTUNNO (quasi inverno) passare tempo E CON 3-10 > 0.10 con 5-28 > 0.15 - r 1614 a1"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # 28 GIU 2022 HO TOLTO 11-125 e sono tornato alle origini con 8-56 !
+                    # 20 set 8-50 da 8-56
+                    # 11 ott 2022 69-100 da 78-100
+                    # 11 ott 2022 dev bellissima 0.045 da 0.05
+                    
+                    
+                elif (     
+                    ma8_last > ma50_last
+                    and ma125_last < ma450_last
+                    and ma125_last > ma450_last
                     and ma69_last > ma100_last
                   
                     and ma200_last < ma200_120_min_ago
@@ -2211,7 +2242,7 @@ class maddog:
                     and ma2_last > ma20_last
                     and ma2_last > ma2_2_min_ago
                 ):    
-                    buy = "BUY 1 pericolosa MA 69 > 100 FINE AUTUNNO (quasi inverno) passare tempo E CON 3-10 > 0.10 con 5-28 > 0.15 - r 1614 a"
+                    buy = "BUY 1 pericolosa MA 69 > 100 FINE AUTUNNO (quasi inverno) passare tempo E CON 3-10 > 0.10 con 5-28 > 0.15 - r 1614 a2"
                     action = "buy"
                     percentage = 80
                     
