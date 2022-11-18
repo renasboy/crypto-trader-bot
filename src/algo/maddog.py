@@ -112,6 +112,7 @@ class maddog:
         ma48_3_min_ago = self.algo_helper.ma_minutes_ago(48, 3)
         ma50_2_min_ago = self.algo_helper.ma_minutes_ago(50, 2)
         ma50_60_min_ago = self.algo_helper.ma_minutes_ago(50, 60)
+        ma54_15_min_ago = self.algo_helper.ma_minutes_ago(54, 15)
         ma59_2_min_ago = self.algo_helper.ma_minutes_ago(59, 2)
         ma59_30_min_ago = self.algo_helper.ma_minutes_ago(59, 30)
         ma59_45_min_ago = self.algo_helper.ma_minutes_ago(59, 45)
@@ -21813,23 +21814,46 @@ class maddog:
                 #  3 nov 2022 5-300 da 5-200
                 
                 
+                
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds_sell_5_90
                 and delta_300_100 > delta_300_100_60_min
                 and deviation_ma100_sopra_ma300 < 0.20
                 and ma300_last > ma300_120_min_ago
+                and ma54_last > ma54_15_min_ago
+                and ma13_last < ma78_last
+                and (ma5_prev > ma200_prev and ma5_last < ma200_last)
+                and ma2_last < ma2_2_min_ago
+           
+            ):
+
+                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - maddog VENDE dopo 150 min = 9000 sec con 5-200 con doppio delta NOTTE ! - r 16743 Bx2B1"
+                action = "sell"
+                        
+                # 24 set 2022 ore 17:23
+                #  3 nov 2022 5-300 da 5-200
+                # 17 nov 2022 deve essere anche 10<78
+                # 18 nov 2022 13-78
+                
+                
+            elif (
+                seconds_since_last_trade > max_hold_time_in_seconds_sell_5_90
+                and delta_300_100 > delta_300_100_60_min
+                and deviation_ma100_sopra_ma300 < 0.20
+                and ma300_last > ma300_120_min_ago
+                and ma54_last < ma54_15_min_ago
                 and ma10_last < ma78_last
                 and (ma5_prev > ma200_prev and ma5_last < ma200_last)
                 and ma2_last < ma2_2_min_ago
            
             ):
 
-                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - maddog VENDE dopo 150 min = 9000 sec con 5-200 con doppio delta NOTTE ! - r 16743 Bx2B"
+                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - maddog VENDE dopo 150 min = 9000 sec con 5-200 con doppio delta NOTTE ! - r 16743 Bx2B2"
                 action = "sell"
                         
                 # 24 set 2022 ore 17:23
                 #  3 nov 2022 5-300 da 5-200
-                # 17 nov deve essere anche 10<78
+                # 17 nov 2022 deve essere anche 10<78
                 
                 
                 
