@@ -19522,12 +19522,26 @@ class maddog:
                     if (    
                         ma50_last > ma50_2_min_ago 
                         and ma2_last < ma2_2_min_ago 
-                        and deviation_ma25 < -0.29
+                        and deviation_ma25 < -0.33
+                        and delta_1_200_78 < delta_2_200_78
                         and ma200_last < ma200_60_min_ago
                     ):
-                        sell = "SELL 4-5-x (21-60 min) con ma50 > and deviation_ma25 < -0.29 - r 15034"
+                        sell = "SELL 4-5-x (21-60 min) con ma50 > and deviation_ma25 < -0.33 - r 15034 A"
                         action = "sell"
                         
+                        # 18 nov 2022 aggiunto doppio delta 78-200
+                        
+                    elif (    
+                        ma50_last > ma50_2_min_ago 
+                        and ma2_last < ma2_2_min_ago 
+                        and deviation_ma25 < -0.30
+                        and delta_1_200_78 > delta_2_200_78
+                        and ma200_last < ma200_60_min_ago
+                    ):
+                        sell = "SELL 4-5-x (21-60 min) con ma50 > and deviation_ma25 < -0.30 - r 15034 B"
+                        action = "sell"
+                        
+                        # 18 nov 2022 aggiunto doppio delta 78-200
                      
                     
                     elif ( 
