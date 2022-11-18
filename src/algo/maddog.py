@@ -14264,18 +14264,18 @@ class maddog:
                         ma50_last > ma50_2_min_ago
                         and ma300_last < ma300_301_min_ago
                         
-                        and (ma5_prev > ma78_prev and ma5_last < ma78_last)
+                        and (ma8_prev > ma110_prev and ma8_last < ma110_last)
                         and deviation_sell > 0.65 and deviation_sell < 1.49
                         and deviation_ma100_sopra_ma200 < 0.45
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 >110 min con 300 < 5 ore ago E con ma50 > E incr 5-78 se 100-200 < 0.45 and dev_sell 0.65 - 1.49 RABONA RONALDO - r 10358 B"
+                        sell = "SELL 1 >110 min con 300 < 5 ore ago E con ma50 > E incr 8-110 se 100-200 < 0.45 and dev_sell 0.65 - 1.49 RABONA RONALDO - r 10358 B"
                         action = "sell"
                         
                         # > estate 5-78 da 5-34
                         # 5-125 se 300
-                        
+                        # 18 nov 2022 8-110 da 5-78
                         
                     
                     
