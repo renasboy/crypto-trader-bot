@@ -12108,16 +12108,30 @@ class maddog:
                         action = "sell"
                         
                   
-               
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and (ma3_prev > ma9_prev and ma3_last < ma9_last)
+                        and deviation_ma10_sopra_ma200 > 1.00
+                        and (ma3_prev > ma18_prev and ma3_last < ma18_last)
                         and deviation_sell > 2.71 and deviation_sell < 5.70
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 (21-50 min) con ma50 > and incrocio 3-9 and deviation_sell 2.71 - 5.70 (TACCO DI ALLAH) - r 8856"
+                        sell = "SELL 1 (21-50 min) con ma50 > and incrocio 3-18 and deviation_sell 2.71 - 5.70 (TACCO DI ALLAH) - r 8856 A"
                         action = "sell"
+                        
+                        
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and deviation_ma10_sopra_ma200 < 1.00
+                        and (ma3_prev > ma11_prev and ma3_last < ma11_last)
+                        and deviation_sell > 2.71 and deviation_sell < 5.70
+                        and ma2_last < ma2_2_min_ago
+                        
+                    ):
+                        sell = "SELL 1 (21-50 min) con ma50 > and incrocio 3-11 and deviation_sell 2.71 - 5.70 (TACCO DI ALLAH) - r 8856 B"
+                        action = "sell"
+                        
+                        
                         
                         
                     
