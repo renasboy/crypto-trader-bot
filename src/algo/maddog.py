@@ -15547,20 +15547,35 @@ class maddog:
                         
                   
                 
-                    
                     elif (    
-                        ma50_last > ma50_2_min_ago 
+                        ma50_last > ma50_2_min_ago
+                        and delta_1_69_39 < delta_2_69_39
                         and ma2_last < ma2_2_min_ago 
-                        and deviation_sell < -0.33
+                        and deviation_sell < -0.35
                         and ma3_last < ma50_last
                         and ma200_last > ma200_60_min_ago
                     ):
-                        sell = "SELL 2 (21-60 min) con ma50 > and (deviation_sell < -0.33 and ma3_last < ma50_last) TOLLERANTE ! - r 11423"
+                        sell = "SELL 2 (21-60 min) con ma50 > and (deviation_sell < -0.35 and ma3_last < ma50_last) TOLLERANTE ! con doppio delta giorno - r 11423 A"
                         action = "sell"
                         
-                        # 21 giu 2022 dev sell 0.31 da 0.29
-                        # 13 set 2022 dev sell 0.33 da 0.31
+                        # 21 giu 2022 dev sell -0.31 da -0.29
+                        # 13 set 2022 dev sell -0.33 da -0.31
+                        # 18 nov 2022 dev sell -0.35 da -0.33
                         
+                    elif (    
+                        ma50_last > ma50_2_min_ago
+                        and delta_1_69_39 > delta_2_69_39
+                        and ma2_last < ma2_2_min_ago 
+                        and deviation_sell < -0.34
+                        and ma3_last < ma50_last
+                        and ma200_last > ma200_60_min_ago
+                    ):
+                        sell = "SELL 2 (21-60 min) con ma50 > and (deviation_sell < -0.34 and ma3_last < ma50_last) TOLLERANTE ! con doppio delta notte - r 11423 B"
+                        action = "sell"
+                        
+                        # 21 giu 2022 dev sell -0.31 da -0.29
+                        # 13 set 2022 dev sell -0.33 da -0.31
+                        # 18 nov 2022 dev sell -0.34 da -0.33
                         
                     ##############################################################################################################################
                         
