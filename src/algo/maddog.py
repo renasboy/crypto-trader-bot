@@ -2204,8 +2204,8 @@ class maddog:
                     and ma30_last >= ma30_30_min_ago
                 
                     and deviation_ma3_sopra_ma10 > 0.09
-                    and deviation_ma5_sopra_ma28 > 0.14
-                    and deviation_bellissima > 0.045
+                    and deviation_ma5_sopra_ma28 > 0.13
+                    and deviation_bellissima > 0.04
                
                     
                     and ma5_last > ma5_2_min_ago
@@ -2220,8 +2220,8 @@ class maddog:
                     # 20 set 8-50 da 8-56
                     # 11 ott 2022 69-100 da 78-100
                     # 11 ott 2022 dev bellissima 0.045 da 0.05
-                    
-                    
+                    # 18 nov 2022 dev bellissima 0.04 da 0.045 (perche' 125 sta sopra 450 !)
+                    # 18 nov 2022 5-29 0.13 da 0.14 (perche' 125 sta sopra 450 !)
                 
                     
                     
