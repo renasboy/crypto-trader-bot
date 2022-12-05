@@ -9013,7 +9013,7 @@ class maddog:
                     and ma300_last > ma300_120_min_ago
                     
                     and deviation_ma3_sopra_ma10 > 0.057
-                    and deviation_ma5_sopra_ma28 > 0.027
+                    and deviation_ma5_sopra_ma28 > 0.057
                 ):    
                     
                     buy = "BUY 3 correzione in basso con 200 > - riga 1384 RCCR portata nel MADDOG - r 6480 B2"
@@ -9025,7 +9025,7 @@ class maddog:
                     # 30 set 2022 aggiunta 5.28
                     # 18 nov 2022 3-10 = 0.057
                     # 18 nov 2022 5-28 = 0.027
-                    
+                    # 5 dic 5-28 0.057 da 0.027
                     
                     
                     
