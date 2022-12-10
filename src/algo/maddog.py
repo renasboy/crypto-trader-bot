@@ -20734,19 +20734,34 @@ class maddog:
                     
                     
                     
-                    
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and (ma5_prev > ma30_prev and ma5_last < ma30_last)
+                        and deviation_ma5_sotto_ma300 > 0.40
+                        and (ma5_prev > ma59_prev and ma5_last < ma59_last)
                         and deviation_sell > 1.50 and deviation_sell < 2.70
                         and ma2_last < ma2_2_min_ago
                     ):
 
-                        sell = "SELL 4-5-x dopo 90 min con ma50 > incrocio 5-30 (!) and deviation_sell 1.50 - 2.70 - r 15866"
+                        sell = "SELL 4-5-x dopo 90 min con ma50 > incrocio 5-59 (!) and deviation_sell 1.50 - 2.70 - r 15866 A"
                         action = "sell"
                         
                         # 5-30 da 3-25 dopo dolomiti
+                        # 10 dic 2022 5-59 da 5-30
                         
+                        
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and deviation_ma5_sotto_ma300 < 0.40
+                        and (ma5_prev > ma33_prev and ma5_last < ma33_last)
+                        and deviation_sell > 1.50 and deviation_sell < 2.70
+                        and ma2_last < ma2_2_min_ago
+                    ):
+
+                        sell = "SELL 4-5-x dopo 90 min con ma50 > incrocio 5-33 (!) and deviation_sell 1.50 - 2.70 - r 15866 B"
+                        action = "sell"
+                        
+                        # 5-30 da 3-25 dopo dolomiti
+                        # 10 dic 2022 5-33 da 5-30
                         
                         
                     elif (
