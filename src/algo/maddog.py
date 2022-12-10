@@ -17095,18 +17095,32 @@ class maddog:
                         
                  
                     # ATTENZIONE : DOPO 110 MIN forse E' NECESSARIA SOLO QUESTA !
-                    
+                  
                     elif (    
                         ma3_last < ma100_last
-                        and deviation_sell < -0.15
+                        and ma300_last > ma300_301_min_ago
+                        and deviation_sell < -0.17
                         and ma2_last < ma2_2_min_ago
                     ):
                    
-                        sell = "SELL 2 > 110 min forse E' NECESSARA SOLO QUESTA ! - r 12681"
+                        sell = "SELL 2 > 110 min forse E' NECESSARA SOLO QUESTA ! and 300> 300 5 ore fa - r 12681 A"
                         action = "sell"
                         
                         # > estate -0.15 da +0.02
-                    
+                        # 10 dic 2022 -0.17 da -0.15
+                        
+                    elif (    
+                        ma3_last < ma100_last
+                        and ma300_last < ma300_301_min_ago
+                        and deviation_sell < -0.16
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                   
+                        sell = "SELL 2 > 110 min forse E' NECESSARA SOLO QUESTA ! and 300> 300 5 ore fa - r 12681 B"
+                        action = "sell"
+                        
+                        # > estate -0.15 da +0.02
+                        # 10 dic 2022 -0.16 da -0.15
                         
                     
                     
