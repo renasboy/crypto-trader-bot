@@ -61,6 +61,7 @@ class maddog:
         ma150_last, ma150_prev = self.algo_helper.ma_last_prev(150)
         ma180_last, ma180_prev = self.algo_helper.ma_last_prev(180)
         ma200_last, ma200_prev = self.algo_helper.ma_last_prev(200)
+        ma225_last, ma225_prev = self.algo_helper.ma_last_prev(225)
         ma250_last, ma250_prev = self.algo_helper.ma_last_prev(250)
         ma285_last, ma285_prev = self.algo_helper.ma_last_prev(285)
         ma300_last, ma300_prev = self.algo_helper.ma_last_prev(300)
@@ -22029,18 +22030,18 @@ class maddog:
                 and ma300_last > ma300_120_min_ago
                 and ma54_last < ma54_15_min_ago
                 and ma10_last < ma78_last
-                and (ma5_prev > ma200_prev and ma5_last < ma200_last)
+                and (ma8_prev > ma225_prev and ma8_last < ma225_last)
                 and ma2_last < ma2_2_min_ago
            
             ):
 
-                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - maddog VENDE dopo 150 min = 9000 sec con 5-200 con doppio delta NOTTE ! - r 16743 Bx2B2"
+                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - maddog VENDE dopo 150 min = 9000 sec con 8-225 con doppio delta NOTTE ! - r 16743 Bx2B2"
                 action = "sell"
                         
                 # 24 set 2022 ore 17:23
                 #  3 nov 2022 5-300 da 5-200
                 # 17 nov 2022 deve essere anche 10<78
-                
+                # 11 dic 2022 8-225 da 5-200
                 
                 
             elif (
