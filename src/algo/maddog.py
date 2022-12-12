@@ -1258,7 +1258,7 @@ class maddog:
                 
                 elif (
                     
-                    ma8_last > ma50_last
+                    ma8_last > ma59_last
                     
                     
                     and deviation_ma10_sopra_ma200 < -0.25
@@ -1278,7 +1278,7 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
               
                 ):
-                    buy = "BUY 1 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-50 - riga 1043 B"
+                    buy = "BUY 1 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-59 - riga 1043 B"
                     action = "buy"
                     percentage = 50
                     
@@ -1290,7 +1290,7 @@ class maddog:
                     # 28 ottobre 2022 5-28 = 0.04
                     # ave comba
                     # 31 ottobre aggiunta dev 10-200 - formula MY COMPA
-                    
+                    # 12 dic 2022 8-59 da 8-50 e aggiungo pensiero laterale (condizione sotto)
                     
                     
                 
