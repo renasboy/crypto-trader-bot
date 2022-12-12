@@ -1298,9 +1298,7 @@ class maddog:
                     
                     deviation_callas < -0.15
                     
-                    and deviation_ma10_sopra_ma200 < -0.25
-                    
-                    and ma2_last >= ma2_2_min_ago
+                    and ma5_last >= ma5_2_min_ago
               
                 ):
                     buy = "BUY 1 NON SIAMO, NON SIAMO, NON SIAMO ! migliore considera distanza 5-300 AND dev 10-200 < -0.24 - riga 1043 B2"
