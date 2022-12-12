@@ -1278,7 +1278,7 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
               
                 ):
-                    buy = "BUY 1 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-59 - riga 1043 B1"
+                    buy = "BUY 1 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-59 - riga 1043 B"
                     action = "buy"
                     percentage = 50
                     
@@ -1294,27 +1294,11 @@ class maddog:
                     
                     
                     
-                elif (
+                
                     
-                    deviation_callas < -0.15
                     
-                    and ma5_last >= ma5_2_min_ago
-              
-                ):
-                    buy = "BUY 1 NON SIAMO, NON SIAMO, NON SIAMO ! migliore considera distanza 5-300 AND dev 10-200 < -0.24 - riga 1043 B2"
-                    action = "buy"
-                    percentage = 50
                     
-                    # importante : ma100 sta sotto la ma200 non le e' troppo lontana
-                    # dev callas = 8-54 !
                     
-                    # 21 ottobre 2022  aggiunta di 3-10 e 5-28
-                    # 21 ottobre 2022 3-10 = 0.01
-                    # 21 ottobre 2022 5-28 = 0.05
-                    # 28 ottobre 2022 5-28 = 0.04
-                    # ave comba
-                    # 31 ottobre aggiunta dev 10-200 - formula MY COMPA
-                    # 12 dic 2022 8-59 da 8-50 e aggiungo pensiero laterale (condizione sotto)
                     
                     
                 
