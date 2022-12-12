@@ -1302,18 +1302,15 @@ class maddog:
                     
                     and deviation_ma10_sopra_ma200 < -0.25
                     
-                    
-                    
                     and ma300_last < ma300_60_min_ago
                     and ma200_last < ma200_60_min_ago
                     
                     and deviation_ma3_sopra_ma10 > 0.01
                     
-                    
                     and ma2_last >= ma2_2_min_ago
               
                 ):
-                    buy = "BUY 1 NON SIAMO, NON SIAMO, NON SIAMO ! migliore considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-59 -pensiero laterale- riga 1043 B2"
+                    buy = "BUY 1 NON SIAMO, NON SIAMO, NON SIAMO ! migliore considera distanza 5-300 AND dev 10-200 < -0.24 - riga 1043 B2"
                     action = "buy"
                     percentage = 50
                     
@@ -1330,16 +1327,6 @@ class maddog:
                     
                     
                 
-                    
-                
-                    
-                    
-                    
-                
-                    
-                    
-                    
-                    
                     
                 # BUY 1 zona inferiore
                 
