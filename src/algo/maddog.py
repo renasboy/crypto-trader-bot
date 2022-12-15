@@ -8800,6 +8800,8 @@ class maddog:
                     deviation_buy_crollo_1 < -0.60
                     and deviation_buy_crollo_1 > -1.50
                     
+                    and delta_1_69_39 < delta_2_69_39
+                    
                     and ma5_last > ma16_last
                     and deviation_ma3_sopra_ma10 > 0.02
                     
@@ -8807,7 +8809,30 @@ class maddog:
                     and ma78_last < ma200_last
                     
                 ):
-                    buy = "BUY 3 importata da RCCR - AUDI CHE NON E' UN CROLLO ! con 5-16 and 3-10 - r 6388"
+                    buy = "BUY 3 importata da RCCR - AUDI CHE NON E' UN CROLLO ! con 5-16 and 3-10 con DOPPIO DELTA 69-39 GIORNO - r 6388 A"
+                    action = "buy"
+                    percentage = 90
+                    
+                    # deviation_buy_crollo_1 = ma8_last / ma78_last
+                    # questa cosa che 78 deve essere < 200 ha dell' incredibile. MA NON TOCCARE !   
+                    # 15 nov 2022 AGGIUNTA 3-10 vedi 8 nov ore 21:23
+                    
+                    
+                elif (
+                    
+                    deviation_buy_crollo_1 < -0.60
+                    and deviation_buy_crollo_1 > -1.50
+                    
+                    and delta_1_69_39 > delta_2_69_39
+                    
+                    and ma5_last > ma33_last
+                    and deviation_ma3_sopra_ma10 > 0.02
+                    
+                    and ma2_last > ma2_2_min_ago
+                    and ma78_last < ma200_last
+                    
+                ):
+                    buy = "BUY 3 importata da RCCR - AUDI CHE NON E' UN CROLLO ! con 5-33 and 3-10 CON DOPPIO DELTA 69-39 NOTTE - r 6388 B"
                     action = "buy"
                     percentage = 90
                     
