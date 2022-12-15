@@ -5815,7 +5815,7 @@ class maddog:
                     
                     deviation_ma100_sopra_ma300 < -0.90
                     
-                    and ma8_last > ma39_last
+                    and ma5_last > ma39_last
                     and deviation_ma3_sopra_ma10 > 0.16
                     
                     and ma100_last < ma100_120_min_ago
@@ -5825,17 +5825,17 @@ class maddog:
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
                     
-                    and ma2_last > ma2_2_min_ago
+                    and ma2_last >= ma2_2_min_ago
                     and price > price_2_min_ago
                     
                 ):
-                    buy = "BUY 1 5 LUGLIO 2022 con 8-39 and ma100 sotto ma300 di almeno -0.90 ! 3-10 > 0.16 - r 4570 A"
+                    buy = "BUY 1 5 LUGLIO 2022 con 5-39 and ma100 sotto ma300 di almeno -0.90 ! 3-10 > 0.16 - r 4570 A"
                     action = "buy"
                     percentage = 70
 
                     # 22 lug 2022 3-10 0.16 da 0.12 cazzo
                     # 15 nov 2022 8-39 da 8-54
-                    
+                    # 15 dic 2022 5-39 da 8-39
                     
                     
                     
@@ -13999,7 +13999,7 @@ class maddog:
                         and ma100_last < ma100_60_min_ago
                         and ma300_last > ma300_120_min_ago
                     ):
-                        sell = "SELL 1 90-110 min con ma50 < and ma100 < and (deviation_sell < -0.21 and ma3_last < ma39_last) MA 300 > 120min ago - r 10158"
+                        sell = "SELL 1 90-110 min con ma50 < and ma100 < and (deviation_sell < -0.21 and ma3_last < ma39_last) MA 300 > 120 min ago - r 10158"
                         action = "sell"
                         
                         #  9 ott 2022 dev sell a -0.21 da -0.19
@@ -20702,18 +20702,18 @@ class maddog:
                     elif (
                         ma50_last > ma50_2_min_ago
                         and deviation_ma5_sotto_ma300 > 0.40
-                        and (ma5_prev > ma59_prev and ma5_last < ma59_last)
+                        and (ma5_prev > ma90_prev and ma5_last < ma90_last)
                         and deviation_sell > 0.91 and deviation_sell < 1.49
                         and ma2_last < ma2_2_min_ago
                     ):
 
-                        sell = "SELL 4-5-x dopo 90 min con ma50 > incrocio 5-59 con 5-300 in alto and deviation_sell 0.91 - 1.49 - r 15851 A"
+                        sell = "SELL 4-5-x dopo 90 min con ma50 > incrocio 5-90 con 5-300 in alto and deviation_sell 0.91 - 1.49 - r 15851 A"
                         action = "sell"
 
                         # ma 3-48 mi evita la ricompra e la rivendita con perdita !
                         # 14 ott 2022 5-50 da 5-30 ma 5-300 in alto
                         # 19 ottobre 2022 5-59 da 5-50
-                        
+                        # 15 dic 2022 5-90 da 5-59
                         
                         
                     elif (
