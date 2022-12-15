@@ -7919,11 +7919,11 @@ class maddog:
                     and deviation_ma100_sopra_ma300 < -0.05
                     
                     and ma200_last < ma200_120_min_ago
-                    and ma8_last > ma200_last
+                    and ma5_last > ma200_last
                     
                     and deviation > -0.30
                     
-                    and ma28_last > ma50_last
+                    and ma8_last > ma50_last
                     and delta_buy3_incrocio_ma3_ma8 >= 0.06
                     and ma3_last > ma8_last
                     and ma3_last >= ma69_last
@@ -7932,13 +7932,13 @@ class maddog:
                     and ma5_last >= ma15_last
                     and ma5_last >= ma25_last
                 ):    
-                    buy = "BUY 2 RIVOLUZIONARIO A3 con 100 CHE NON E' ATTACCATA ALLA 300 ! e ma39 > ma50 and 8 > 200 - r 5945 A3"
+                    buy = "BUY 2 RIVOLUZIONARIO A3 con 100 CHE NON E' ATTACCATA ALLA 300 ! e 8>50 and 5>200 - r 5945 A3"
                     action = "buy"
                     percentage = 70
                     
                     # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
                     # 26 set 100-300 se stanno attaccate e' molto rischioso ! vedi ore 22:48 24 set 2022
-                    
+                    # 15 dic 2022 8-28 da 28-50
                     
                     
                     
