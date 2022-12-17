@@ -1234,10 +1234,10 @@ class maddog:
                     
                     and deviation_ma5_sopra_ma59 < -0.15
                     
-                    and ma2_last >= ma2_2_min_ago
+                    
               
                 ):
-                    buy = "BUY 1 PENSIERO LATERALE che considera distanza 54-100 and distanza 5-59 AND dev 10-200 < -0.25 - riga 1042"
+                    buy = "BUY 1 PENSIERO LATERALE che considera distanza 5-59 and distanza 54-100 and dev 10-200 < -0.25 - riga 1042"
                     action = "buy"
                     percentage = 50
                     
