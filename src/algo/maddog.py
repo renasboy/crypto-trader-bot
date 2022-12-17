@@ -11886,16 +11886,31 @@ class maddog:
                         
                    
                         
-                    # ECCO inequivocabilmente il crollo !    
-                    
+                        
                     elif (        
                         ma50_last < ma50_2_min_ago
+                        and ma100_last > ma100_60_min_ago
+                        and ma300_last < ma300_120_min_ago
+                        and ma2_last < ma2_2_min_ago 
+                        and deviation_sell < -0.37
+                        and deviation_ma50_sotto_ma300 < 0.50
+                    ):
+                        sell = "SELL 1 maestro parte 2 (21-50 min) con ma50 < and deviation_sell < -0.37 - r 9110 A"
+                        action = "sell"
+                        
+                        # da 0.33 a 0.36 perche' durante il crollo ferrari non devi guardare i centesimi.
+                        
+                        
+                        
+                    elif (        
+                        ma50_last < ma50_2_min_ago
+                        and ma100_last < ma100_60_min_ago
                         and ma300_last < ma300_120_min_ago
                         and ma2_last < ma2_2_min_ago 
                         and deviation_sell < -0.36
                         and deviation_ma50_sotto_ma300 < 0.50
                     ):
-                        sell = "SELL 1 maestro parte 2 (21-50 min) con ma50 < and deviation_sell < -0.36 - r 9110"
+                        sell = "SELL 1 maestro parte 2 (21-50 min) con ma50 < and deviation_sell < -0.36 - r 9110 B"
                         action = "sell"
                         
                         # da 0.33 a 0.36 perche' durante il crollo ferrari non devi guardare i centesimi.
