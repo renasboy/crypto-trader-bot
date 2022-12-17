@@ -1222,30 +1222,7 @@ class maddog:
                     
                     
                     
-                
-               
-                
-                
-                # condizione PENSIERO LATERALE
-                
-                elif (
-                    
-                    ma5_last >= ma5_2_min_ago
-                    
-                    
-                    
-                    
-              
-                ):
-                    buy = "BUY 1 PENSIERO LATERALE che considera distanza 5-59 and distanza 54-100 and dev 10-200 < -0.25 - riga 1042"
-                    action = "buy"
-                    percentage = 50
-                    
-                    
-                    
-                    
-                    
-                    
+                 
                     
                     
                 # BUY 1 5-300 in alto
