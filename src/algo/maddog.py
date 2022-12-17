@@ -305,6 +305,13 @@ class maddog:
         self.algo_helper.info("deviation_ma54_sopra_ma100: {}".format(deviation_ma54_sopra_ma100))
         
         
+        # formula DEVIATION_pensiero-laterale per la compra 1
+        
+        deviation_pensiero_laterale = (ma5_last / ma59_last - 1) * 100 if ma59_last else 0
+        self.algo_helper.info("deviation_pensiero_laterale: {}".format(deviation_pensiero_laterale))
+        
+        
+        
         # formula DEVIATION_buy2 per la compra 2 - CALLAS !
         
         deviation_callas = (ma5_last / ma54_last - 1) * 100 if ma54_last else 0
@@ -1225,7 +1232,8 @@ class maddog:
                     
                     ma5_last > ma33_last
                     and deviation_ma54_sopra_ma100 < -0.40
-                    and deviation_callas < -0.15
+                    
+                    and deviation_pensiero_laterale < -0.15
                     
                     and deviation_ma10_sopra_ma200 < -0.25
                     
@@ -1239,7 +1247,7 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
               
                 ):
-                    buy = "BUY 1 PENSIERO LATERALE che considera distanza 54-100 and distanza 5-54 AND dev 10-200 < -0.25 - riga 1042"
+                    buy = "BUY 1 PENSIERO LATERALE che considera distanza 54-100 and distanza 5-59 AND dev 10-200 < -0.25 - riga 1042"
                     action = "buy"
                     percentage = 50
                     
