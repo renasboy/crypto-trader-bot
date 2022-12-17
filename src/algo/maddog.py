@@ -1230,9 +1230,8 @@ class maddog:
                 
                 elif (
                     
-                    ma5_last > ma33_last
+                    ma5_last >= ma5_2_min_ago
                     and deviation_ma54_sopra_ma100 < -0.40
-                    
                     and deviation_pensiero_laterale < -0.15
                     
                     and deviation_ma10_sopra_ma200 < -0.25
@@ -1243,7 +1242,6 @@ class maddog:
                     and deviation_ma3_sopra_ma10 > 0.01
                     and deviation_ma5_sopra_ma28 > 0.02
                     
-                    and ma5_last >= ma5_2_min_ago
                     and ma2_last >= ma2_2_min_ago
               
                 ):
