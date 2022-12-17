@@ -4883,20 +4883,11 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
                 
                 ):
-                    buy = "BUY 1 78<200 CHE MANCAVA DOPO BUY-SELL CROLLO ! 50 > 100 AND 150-100 GIORNO ! and 3-10 > 0.15 and 5-28 > 0.18 - r 4005 B"
+                    buy = "BUY 1 PENSIERO LATERALE ! - r 4000"
                     action = "buy"
                     percentage = 80
                     
-                    # madonna compa ! 
-                    # the sound of silence
-                    # ASSURDO ! questa 100 > 100 3 min e' incredibile ! si e' verificata dopo il BUY-SELL del crollo ! NON TOCCARE
-                    # SI STA RIDUCENDO LA DISTANZA TRA 150 E 100
                     
-                    # 10 giu 2022 5-28 0.12 da 0.09 cazzo
-                    #  2 lug 2022 3-10 0.15 da 0.05 cazzo
-                    # > estate 5-28 0.18 da 0.12 e 3-10 0.15 da 0.05 HO ALZATO IL BUY !
-                    # 7 nov 2022 aggiunta 59 > 59 45 min ago
-                    # 17 dic 2022 ho tolto 100 > 100 2 min ago
                     
                     
                     
