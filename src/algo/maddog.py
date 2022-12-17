@@ -4860,15 +4860,16 @@ class maddog:
                     
                     
                     
-                # BUY 1 CHE MANCAVA DOPO BUY-SELL CROLLO ! 150-100 GIORNO ! E 50 > 100
+                # BUY 1 PENSIERO LATERALE !
                 
                 elif (
                     
                     ma78_last < ma200_last
                     
                     and deviation_ma5_sopra_ma59 < -0.20
-                    and deviation_ma10_sopra_ma200 < -0.80
+                    and deviation_ma54_sopra_ma100 < -0.40
                     
+                    and deviation_ma10_sopra_ma200 < -0.80
                     
                     and deviation_ma3_sopra_ma10 > 0.01
                     and deviation_ma5_sopra_ma28 > 0.01
