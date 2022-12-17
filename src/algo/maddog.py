@@ -1223,7 +1223,7 @@ class maddog:
                 
                 elif (
                     
-                    ma5_last > ma28_last
+                    ma5_last > ma33_last
                     and deviation_ma54_sopra_ma100 < -0.40
                     and deviation_callas < -0.15
                     
@@ -1239,7 +1239,7 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
               
                 ):
-                    buy = "BUY 1 PENSIERO LAERALE che considera distanza 54-100 and distanza 5-54 AND dev 10-200 < -0.25 - riga 1042"
+                    buy = "BUY 1 PENSIERO LATERALE che considera distanza 54-100 and distanza 5-54 AND dev 10-200 < -0.25 - riga 1042"
                     action = "buy"
                     percentage = 50
                     
