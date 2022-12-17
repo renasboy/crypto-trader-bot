@@ -18053,17 +18053,18 @@ class maddog:
                         # 5-50 da 5-39 dopo le dolomiti
                         
                         
+                        
                     elif (
                         ma50_last >= ma50_2_min_ago
                         and deviation_ma100_sopra_ma300 < 0.70
-                        and deviation_sell > -0.20 and deviation_sell < 0.56
-                        and (ma5_prev > ma59_prev and ma5_last < ma59_last)
+                        and deviation_sell < -0.12
+                        and (ma5_prev > ma78_prev and ma5_last < ma78_last)
                         and ma39_last > ma100_last
                         
                         and ma2_last < ma2_2_min_ago
                    
                     ):
-                        sell = "SELL 3 (21-60 min) con ma50> and 39>100 and incr 5-59 and dev_sell -0.20 - 0.56 FINTA MARADONA se 100 NON molto sopra 300 - r 13556 B"
+                        sell = "SELL 3 (21-60 min) con ma50> and 39>100 and incr 5-78 and dev_sell < -0.12 FINTA MARADONA se 100 NON molto sopra 300 - r 13556 B1"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
@@ -18071,6 +18072,27 @@ class maddog:
                         # importantissimo ! VEDI 14 NOV 2022 -1.78% a 32 min dal BUY 3 ! - cazzo !
                         
                         
+                    elif (
+                        ma50_last >= ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 < 0.70
+                        and deviation_sell > 0.15 and deviation_sell < 0.56
+                        and (ma5_prev > ma78_prev and ma5_last < ma78_last)
+                        and ma39_last > ma100_last
+                        
+                        and ma2_last < ma2_2_min_ago
+                   
+                    ):
+                        sell = "SELL 3 (21-60 min) con ma50> and 39>100 and incr 5-78 and dev_sell 0.15 - 0.56 FINTA MARADONA se 100 NON molto sopra 300 - r 13556 B2"
+                        action = "sell"
+                        
+                        # deviation_sell = ma3_last/last_trade_price
+                        # > estate 5-78 da 5-33
+                        # importantissimo ! VEDI 14 NOV 2022 -1.78% a 32 min dal BUY 3 ! - cazzo !
+                        
+                    
+                    
+                    
+                    
                     elif (
                         ma50_last >= ma50_2_min_ago
                         and deviation_sell > 0.25 and deviation_sell < 0.56
