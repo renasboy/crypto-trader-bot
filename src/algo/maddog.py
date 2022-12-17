@@ -2296,16 +2296,6 @@ class maddog:
                     
                 
                     
-                
-                
-                elif (     
-                    
-                    deviation_callas < -0.10
-                    
-                ):    
-                    buy = "BUY 1 prova - r2320r"
-                    action = "buy"
-                    percentage = 10
                     
                     
                     
