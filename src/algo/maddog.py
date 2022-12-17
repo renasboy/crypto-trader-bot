@@ -299,8 +299,13 @@ class maddog:
         self.algo_helper.info("deviation_ma10_sopra_ma200: {}".format(deviation_ma10_sopra_ma200))
         
         
+        # formula DEVIATION_ma54_sopra_ma100 - FORMULA "quello che non" !
         
-        # formula DEVIATION_buy2 per la compra 2
+        deviation_ma54_sopra_ma100 = (ma54_last / ma100_last - 1) * 100 if ma100_last else 0
+        self.algo_helper.info("deviation_ma54_sopra_ma100: {}".format(deviation_ma54_sopra_ma100))
+        
+        
+        # formula DEVIATION_buy2 per la compra 2 - CALLAS !
         
         deviation_callas = (ma5_last / ma54_last - 1) * 100 if ma54_last else 0
         self.algo_helper.info("deviation_callas: {}".format(deviation_callas))
