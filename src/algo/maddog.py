@@ -2298,7 +2298,17 @@ class maddog:
                     
                 
                 
-                
+                elif (     
+                    
+                    deviation_callas < -0.10
+                    
+                ):    
+                    buy = "BUY 1 prova - r2320r"
+                    action = "buy"
+                    percentage = 10
+                    
+                    
+                    
                 # BUY 1 maria callas core 'ngrato - 2 sett 2022 ore 5:03 - ma300 che SCENDE
                 
                 elif (     
