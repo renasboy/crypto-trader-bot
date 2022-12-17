@@ -305,10 +305,10 @@ class maddog:
         self.algo_helper.info("deviation_ma54_sopra_ma100: {}".format(deviation_ma54_sopra_ma100))
         
         
-        # formula DEVIATION_pensiero-laterale per la compra 1
+        # formula DEVIATION_ma5_sopra_ma59 - PENSIERO LATERALE
         
-        deviation_pensiero_laterale = (ma5_last / ma59_last - 1) * 100 if ma59_last else 0
-        self.algo_helper.info("deviation_pensiero_laterale: {}".format(deviation_pensiero_laterale))
+        deviation_ma5_sopra_ma59 = (ma5_last / ma59_last - 1) * 100 if ma59_last else 0
+        self.algo_helper.info("deviation_ma5_sopra_ma59: {}".format(deviation_ma5_sopra_ma59))
         
         
         
@@ -1232,7 +1232,7 @@ class maddog:
                     
                     ma5_last >= ma5_2_min_ago
                     
-                    and deviation_pensiero_laterale < -0.15
+                    and deviation_ma5_sopra_ma59 < -0.15
                     
                     and ma2_last >= ma2_2_min_ago
               
