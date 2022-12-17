@@ -1180,8 +1180,8 @@ class maddog:
                     
                     
                 elif ( 
-                    deviation_ma54_sopra_ma100 < -0.40
                     
+                    ma5_last >= ma5_2_min_ago
                 ):    
               
                     buy = "BUY 1 - r 1000"
