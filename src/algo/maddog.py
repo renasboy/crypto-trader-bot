@@ -9215,7 +9215,7 @@ class maddog:
                 
                 elif (
                     
-                    ma18_last > ma100_last
+                    ma10_last > ma100_last
                     and deviation_ma5_sotto_ma300 > -0.40
                     
                     and ma100_last < ma100_180_min_ago
@@ -18058,13 +18058,13 @@ class maddog:
                         ma50_last >= ma50_2_min_ago
                         and deviation_ma100_sopra_ma300 < 0.70
                         and deviation_sell < -0.12
-                        and (ma5_prev > ma78_prev and ma5_last < ma78_last)
+                        and (ma5_prev > ma100_prev and ma5_last < ma100_last)
                         and ma39_last > ma100_last
                         
                         and ma2_last < ma2_2_min_ago
                    
                     ):
-                        sell = "SELL 3 (21-60 min) con ma50> and 39>100 and incr 5-78 and dev_sell < -0.12 FINTA MARADONA se 100 NON molto sopra 300 - r 13556 B1"
+                        sell = "SELL 3 (21-60 min) con ma50> and 39>100 and incr 5-100 and dev_sell < -0.12 FINTA MARADONA se 100 NON molto sopra 300 - r 13556 B1"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
