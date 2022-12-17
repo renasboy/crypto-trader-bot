@@ -1172,24 +1172,8 @@ class maddog:
                     
                     # > estate alzato buy
                     
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                elif ( 
-                    
-                    ma5_last >= ma5_2_min_ago
-                ):    
-              
-                    buy = "BUY 1 - r 1000"
-                    action = "buy"
-                    percentage = 10
-                    
-                    
-                    
+             
+                
                 # ------------------------------------------------------------ BUY 1 DURANTE IL RIALZO con INCROCIO CLASSICO 69-100 and ma78 < AND 5-28 > 0.11
                 
                 elif (    
