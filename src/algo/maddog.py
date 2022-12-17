@@ -4884,7 +4884,7 @@ class maddog:
                     and ma300_last < ma300_120_min_ago
                     
                     and delta_150_100 <= delta_150_100_60_min
-                    and ma100_last >= ma100_2_min_ago
+                    
                     
                     and ma2_last >= ma2_2_min_ago
                 
@@ -4902,7 +4902,7 @@ class maddog:
                     #  2 lug 2022 3-10 0.15 da 0.05 cazzo
                     # > estate 5-28 0.18 da 0.12 e 3-10 0.15 da 0.05 HO ALZATO IL BUY !
                     # 7 nov 2022 aggiunta 59 > 59 45 min ago
-                    
+                    # 17 dic 2022 ho tolto 100 > 100 2 min ago 
                 
                     
                     
