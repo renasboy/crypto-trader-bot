@@ -1234,7 +1234,7 @@ class maddog:
                     and deviation_ma54_sopra_ma100 < -0.40
                     and deviation_pensiero_laterale < -0.15
                     
-                    and deviation_ma10_sopra_ma200 < -0.25
+                    
                     
                     and ma2_last >= ma2_2_min_ago
               
