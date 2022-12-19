@@ -7403,12 +7403,12 @@ class maddog:
                     # 26 set 100-300 se stanno attaccate e' molto rischioso ! vedi ore 22:48 24 set 2022
                     
                     
-                # BUY 2 RIVOLUZIONARIO A3 (100 NON E' ATTACCATA ALLA 300 !) e 39>50 E 8>200 and deviation_ma100_sopra_ma300 > 0.05 
+                # BUY 2 RIVOLUZIONARIO A3x (100 NON E' ATTACCATA ALLA 300 !) e 39>50 E 8>200 and deviation_ma100_sopra_ma300 > 0.05 
                 
                 elif (
-                    deviation_ma4_sopra_ma30 > 0.14
+                    deviation_ma4_sopra_ma30 > 0.13
                     and delta_1 < delta_2
-                    and deviation_bellissima > 0.06
+                    and deviation_bellissima > 0.05
                     
                     and deviation_ma100_sopra_ma300 < -0.05
                     
@@ -7420,13 +7420,13 @@ class maddog:
                     and ma8_last > ma50_last
                     and delta_buy3_incrocio_ma3_ma8 >= 0.06
                     and ma3_last > ma8_last
-                    and ma3_last >= ma69_last
+                    and ma3_last >= ma59_last
                     and ma4_last >= ma4_2_min_ago
                     and ma2_last >= ma2_2_min_ago
                     and ma5_last >= ma15_last
                     and ma5_last >= ma25_last
                 ):    
-                    buy = "BUY 2 RIVOLUZIONARIO A3 y con delta_1 < delta_2 e con 100 CHE NON E' ATTACCATA ALLA 300 ! e 8>50 and 5>200 - r 5945 A3x"
+                    buy = "BUY 2 RIVOLUZIONARIO A3x con delta_1 < delta_2 e con 100 CHE NON E' ATTACCATA ALLA 300 ! e 8>50 and 5>200 - r 5945 A3x"
                     action = "buy"
                     percentage = 70
                     
@@ -7435,7 +7435,7 @@ class maddog:
                     # 15 dic 2022 8-28 da 28-50
                     
                     
-                # BUY 2 RIVOLUZIONARIO A3 (100 NON E' ATTACCATA ALLA 300 !) e 39>50 E 8>200 and deviation_ma100_sopra_ma300 > 0.05 
+                # BUY 2 RIVOLUZIONARIO A3y (100 NON E' ATTACCATA ALLA 300 !) e 39>50 E 8>200 and deviation_ma100_sopra_ma300 > 0.05 
                 
                 elif (
                     deviation_ma4_sopra_ma30 > 0.14
@@ -7458,7 +7458,7 @@ class maddog:
                     and ma5_last >= ma15_last
                     and ma5_last >= ma25_last
                 ):    
-                    buy = "BUY 2 RIVOLUZIONARIO A3 y CON delta_1 > delta_2 e con 100 CHE NON E' ATTACCATA ALLA 300 ! e 8>50 and 5>200 - r 5945 A3y"
+                    buy = "BUY 2 RIVOLUZIONARIO A3y CON delta_1 > delta_2 e con 100 CHE NON E' ATTACCATA ALLA 300 ! e 8>50 and 5>200 - r 5945 A3y"
                     action = "buy"
                     percentage = 70
                     
