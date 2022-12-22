@@ -354,7 +354,6 @@ class maddog:
         self.algo_helper.info("rapporto_delta_1_delta_2: {}".format(rapporto_delta_1_delta_2))
         
         
-        
         # formula delta_300_100
         
         delta_300_100 = (ma300_last / ma100_last - 1) * 100 if ma100_last else 0
@@ -367,7 +366,20 @@ class maddog:
         self.algo_helper.info("delta_300_100_60_min: {}".format(delta_300_100_60_min))
         
         
-        # non serve piu' il rapporto !
+        
+        # formula delta_100_59
+        
+        delta_100_59 = (ma100_last / ma59_last - 1) * 100 if ma59_last else 0
+        self.algo_helper.info("delta_100_59: {}".format(delta_100_59))
+        
+        
+        # formula delta_100_59_60_min
+        
+        delta_100_59_60_min = (ma100_60_min_ago / ma59_60_min_ago - 1) * 100 if ma59_60_min_ago else 0
+        self.algo_helper.info("delta_100_59_60_min: {}".format(delta_100_59_60_min))
+        
+        
+        
         
        
         
@@ -1200,6 +1212,7 @@ class maddog:
                     
                     ma8_last > ma59_last
                     and deviation_ma5_sopra_ma59 < -0.12
+                    and delta_100_59 < delta_100_59_60_min
                     
                     and deviation_ma10_sopra_ma200 < -0.25
                     and deviation_ma10_sopra_ma200 > -0.40
@@ -1232,7 +1245,8 @@ class maddog:
                     # 31 ottobre aggiunta dev 10-200 - formula MY COMPA
                     # 12 dic 2022 8-59 da 8-50 e aggiungo pensiero laterale (condizione sotto)
                     # 22 dic 2022 and deviation_ma5_sopra_ma59 < -0.10
-                    # forse agiungere anche doppio delta 59-100 
+                    # forse agiungere anche doppio delta 100-59
+                    # 22 dic 2022 aggiunto doppio delta 100-59
                   
                     
                 # BUY 1 zona inferiore
