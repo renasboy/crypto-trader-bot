@@ -8134,7 +8134,7 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
               
                 ):
-                    buy = "BUY 3 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-59 - da buy 1 riga 1043 B ma senza doppio delta - r 4742"
+                    buy = "BUY 3 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-59 - da buy 1 riga 1043 B ma senza doppio delta - r 6242"
                     action = "buy"
                     percentage = 50
                     
