@@ -1199,7 +1199,7 @@ class maddog:
                 elif (
                     
                     ma8_last > ma59_last
-                    
+                    and deviation_ma5_sopra_ma59 < -0.12
                     
                     and deviation_ma10_sopra_ma200 < -0.25
                     and deviation_ma10_sopra_ma200 > -0.40
@@ -1231,8 +1231,8 @@ class maddog:
                     # ave comba
                     # 31 ottobre aggiunta dev 10-200 - formula MY COMPA
                     # 12 dic 2022 8-59 da 8-50 e aggiungo pensiero laterale (condizione sotto)
-                    
-                    
+                    # 22 dic 2022 and deviation_ma5_sopra_ma59 < -0.10
+                    # forse agiungere anche doppio delta 59-100 
                   
                     
                 # BUY 1 zona inferiore
