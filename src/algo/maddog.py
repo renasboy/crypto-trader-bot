@@ -7041,19 +7041,19 @@ class maddog:
                     and ma100_last > ma200_last
                     and deviation_ma100_sopra_ma300 < 0.40
                     
-                    and deviation_rialzo_improvviso_sopra > 0.48
-                    and deviation_rialzo_improvviso_1 > 0.48
-                    and deviation_rialzo_improvviso_2 > 0.19
-                    and deviation_rialzo_improvviso_3 > 0.19
-                    and deviation_range_1 < 0.20
-                    and deviation_range_1 > -0.20
-                    and deviation_range_2 < 0.20
-                    and deviation_range_2 > -0.20
-                    and deviation_range_x < 0.20
-                    and deviation_range_x > -0.20
+                    and deviation_rialzo_improvviso_sopra > 0.47
+                    and deviation_rialzo_improvviso_1 > 0.47
+                    and deviation_rialzo_improvviso_2 > 0.185
+                    and deviation_rialzo_improvviso_3 > 0.185
+                    and deviation_range_1 < 0.22
+                    and deviation_range_1 > -0.22
+                    and deviation_range_2 < 0.22
+                    and deviation_range_2 > -0.22
+                    and deviation_range_x < 0.22
+                    and deviation_range_x > -0.22
                 ):
              
-                    buy = "BUY 2 RIALZO IMPROVVISO ! con ma200 > and 100>200 (solo per il buy 2 e per il buy 3) AND 100 SOPRA 300 < 0.40 - r 5711 b"
+                    buy = "BUY 2 RIALZO IMPROVVISO ! con ma200 > and 100>200 (solo per il buy 2 e per il buy 3) AND 100 SOPRA 300 < 0.40 - r 5711 B"
                     action = "buy"
                     percentage = 70
                     
@@ -8525,16 +8525,16 @@ class maddog:
                 elif (
                     ma200_last > ma200_20_min_ago
                     and ma100_last > ma200_last
-                    and deviation_rialzo_improvviso_sopra > 0.48
-                    and deviation_rialzo_improvviso_1 > 0.48
-                    and deviation_rialzo_improvviso_2 > 0.19
-                    and deviation_rialzo_improvviso_3 > 0.19
-                    and deviation_range_1 < 0.20
-                    and deviation_range_1 > -0.20
-                    and deviation_range_2 < 0.20
-                    and deviation_range_2 > -0.20
-                    and deviation_range_x < 0.20
-                    and deviation_range_x > -0.20
+                    and deviation_rialzo_improvviso_sopra > 0.47
+                    and deviation_rialzo_improvviso_1 > 0.47
+                    and deviation_rialzo_improvviso_2 > 0.185
+                    and deviation_rialzo_improvviso_3 > 0.185
+                    and deviation_range_1 < 0.21
+                    and deviation_range_1 > -0.21
+                    and deviation_range_2 < 0.21
+                    and deviation_range_2 > -0.21
+                    and deviation_range_x < 0.21
+                    and deviation_range_x > -0.21
                 ):
              
                     buy = "BUY 3 RIALZO IMPROVVISO ! con ma200 > and 100>200 (solo per il buy 2 e per il buy 3) - r 6479"
