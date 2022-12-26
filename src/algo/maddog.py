@@ -2252,12 +2252,11 @@ class maddog:
                     
                     
                 
-                    
                 # BUY 1 con ma200 < 300< MA ma100> 100 60 min ago e doppio delta < and ma100 >60_min_ago STA RISALENDO !
             
                 elif (       
                     ma200_last < ma200_20_min_ago
-                    
+                    and ma300_last > ma300_301_min_ago
                     and ma5_last > ma100_last
                     and ma2_last >= ma2_2_min_ago
                     
@@ -2271,7 +2270,31 @@ class maddog:
                     and ma300_last < ma300_60_min_ago
                 ):    
         
-                    buy = "BUY 1 5-100 con ma200< 300< MA ma100> 100 50 min ago e doppio delta < - GIORNO ! - riga 1712"
+                    buy = "BUY 1 5-100 con ma200< 300< MA ma100> 100 50 min ago e doppio delta < - GIORNO ! - riga 1712 A"
+                    action = "buy"
+                    percentage = 90
+              
+              
+              
+                # BUY 1 con ma200 < 300< MA ma100> 100 60 min ago e doppio delta < and ma100 >60_min_ago STA RISALENDO !
+            
+                elif (       
+                    ma200_last < ma200_20_min_ago
+                    and ma300_last < ma300_301_min_ago
+                    and ma5_last > ma100_last
+                    and ma2_last >= ma2_2_min_ago
+                    
+                    and deviation_ma3_sopra_ma10 > 0.05
+                    and deviation_ma5_sopra_ma28 > 0.10
+                 
+                    and delta_1 < delta_2
+                    and ma100_last > ma100_50_min_ago
+                    
+                    and ma200_last < ma200_60_min_ago
+                    and ma300_last < ma300_60_min_ago
+                ):    
+        
+                    buy = "BUY 1 5-100 con ma200< 300< MA ma100> 100 50 min ago e doppio delta < - GIORNO ! - riga 1712 B"
                     action = "buy"
                     percentage = 90
                     
@@ -2289,7 +2312,7 @@ class maddog:
                     #  9 ott 5-28 a 0.08 da 0.09 ! e' giorno
                     # 12 ott 5-28 a 0.075 da 0.08
                     #  3 nov 5-28 a 0.06 da 0.075
-            
+                    # 26 dic 5-28 > 0.10 con aggiunta 300 < 301 min ago
                 
                     
                     
