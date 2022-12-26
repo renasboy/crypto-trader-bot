@@ -1301,29 +1301,7 @@ class maddog:
                     # importante : ma100 sta sotto la ma200 non le e' troppo lontana
                     
                     
-                    
-                    
-                    
-                # BUY 1 migliore da RCCR - NATALE 2022
-                
-                elif (
-                    
-                    
-                    
-                    deviation_ma5_sotto_ma300 < -0.15
-                    and deviation_ma59_sopra_ma300 < -0.22
-                    
-                    and deviation_ma3_sopra_ma10 > 0.01
-                    and deviation_ma5_sopra_ma28 > 0.04
-                    
-                    and ma2_last >= ma2_2_min_ago
-              
-                ):
-                    buy = "BUY 1 migliore da RCCR NATALE 2022 - riga 1060"
-                    action = "buy"
-                    percentage = 50
-                    
-                    
+                 
                     
                 elif (    
                     ma28_last > ma300_last
