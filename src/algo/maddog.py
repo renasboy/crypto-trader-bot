@@ -1302,14 +1302,14 @@ class maddog:
                     
                     
                     
+                    
+                    
                 # BUY 1 migliore da RCCR - NATALE 2022
                 
                 elif (
                     
                     ma8_last > ma50_last
-                
                     
-                
                     and deviation_ma5_sotto_ma300 < -0.15
                     and deviation_ma59_sopra_ma300 < -0.22
                     
