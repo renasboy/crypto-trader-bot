@@ -21220,7 +21220,7 @@ class maddog:
                 and ma300_last > ma300_120_min_ago
                 and ma54_last < ma54_15_min_ago
                 and ma10_last < ma78_last
-                and (ma8_prev > ma225_prev and ma8_last < ma225_last)
+                and (ma8_prev > ma250_prev and ma8_last < ma250_last)
                 and ma2_last < ma2_2_min_ago
            
             ):
@@ -21232,7 +21232,7 @@ class maddog:
                 #  3 nov 2022 5-300 da 5-200
                 # 17 nov 2022 deve essere anche 10<78
                 # 11 dic 2022 8-225 da 5-200
-                
+                # 26 dic 2022 8-250 da 8 225
                 
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds_sell_5_90
