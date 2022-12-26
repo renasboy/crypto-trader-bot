@@ -310,6 +310,13 @@ class maddog:
         
         
         
+        # formula DEVIATION_ma59_sopra_ma300 -
+        
+        deviation_ma59_sopra_ma300 = (ma59_last / ma300_last - 1) * 100 if ma300_last else 0
+        self.algo_helper.info("deviation_ma59_sopra_ma300: {}".format(deviation_ma59_sopra_ma300))
+        
+        
+        
         # formula DEVIATION_buy2 per la compra 2 - CALLAS !
         
         deviation_callas = (ma5_last / ma54_last - 1) * 100 if ma54_last else 0
@@ -1232,7 +1239,7 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
               
                 ):
-                    buy = "BUY 1 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-59 - riga 1043 B"
+                    buy = "BUY 1 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-59 - riga 1043 B1"
                     action = "buy"
                     percentage = 50
                     
@@ -1248,7 +1255,52 @@ class maddog:
                     # 22 dic 2022 and deviation_ma5_sopra_ma59 < -0.10
                     # forse aggiungere anche doppio delta 100-59
                     # 22 dic 2022 aggiunto doppio delta 100-59 !
+                    
+                    
+                    
+                    
+                    
+                # BUY 1 migliore da RCCR - NATALE 2022
+                
+                elif (
+                    
+                    ma8_last > ma50_last
+                    
+                    
+                    and deviation_ma10_sopra_ma200 < -0.25
+                    and deviation_ma10_sopra_ma200 > -0.40
                   
+                    and deviation_ma100_sopra_ma200 > -0.40
+                    
+                    and deviation_ma5_sotto_ma300 < -0.15
+                    and deviation_ma59_sopra_ma300 < -0.22
+                    
+                    and ma300_last < ma300_60_min_ago
+                    and ma200_last < ma200_60_min_ago
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma5_sopra_ma28 > 0.04
+                    
+                    and ma2_last >= ma2_2_min_ago
+              
+                ):
+                    buy = "BUY 1 migliore da RCCR NATALE 2022 che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-50 - riga 1043 b2"
+                    action = "buy"
+                    percentage = 50
+                    
+                    # importante : ma100 sta sotto la ma200 non le e' troppo lontana
+                    
+                    # 21 ottobre 2022  aggiunta di 3-10 e 5-28
+                    # 21 ottobre 2022 3-10 = 0.01
+                    # 21 ottobre 2022 5-28 = 0.05
+                    # 28 ottobre 2022 5-28 = 0.04
+                    # ave comba
+                    # 31 ottobre aggiunta dev 10-200 - formula MY COMPA
+                    
+                    
+                    
+                    
+                    
                     
                 # BUY 1 zona inferiore
                 
