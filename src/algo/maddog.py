@@ -1214,7 +1214,7 @@ class maddog:
                     
                     
                 
-                # BUY 1 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-59 - riga 1043 B con doppio delta
+                # BUY 1 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-59 - riga 1043 B 
                 
                 elif (
                     
@@ -1224,7 +1224,7 @@ class maddog:
                     and deviation_ma10_sopra_ma200 < -0.25
                     
                     and deviation_ma5_sotto_ma300 < -0.17
-                    and deviation_ma59_sotto_ma300 < -0.23
+                    and deviation_ma59_sopra_ma300 < -0.23
                     
                     and ma300_last < ma300_60_min_ago
                     and ma200_last < ma200_60_min_ago
