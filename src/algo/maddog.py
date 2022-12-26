@@ -1260,35 +1260,9 @@ class maddog:
                     
                     
                     
-                # BUY 1 migliore da RCCR - NATALE 2022
                 
-                elif (
                     
-                    ma8_last > ma50_last
-                
-                    and deviation_ma10_sopra_ma200 < -0.25
-                
-                    and deviation_ma5_sotto_ma300 < -0.15
-                    and deviation_ma59_sopra_ma300 < -0.22
-                    
-                    and deviation_ma3_sopra_ma10 > 0.01
-                    and deviation_ma5_sopra_ma28 > 0.04
-                    
-                    and ma2_last >= ma2_2_min_ago
-              
-                ):
-                    buy = "BUY 1 migliore da RCCR NATALE 2022 che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-50 - riga 1043 b2"
-                    action = "buy"
-                    percentage = 50
-                    
-                    # importante : ma100 sta sotto la ma200 non le e' troppo lontana
-                    
-                    # 21 ottobre 2022  aggiunta di 3-10 e 5-28
-                    # 21 ottobre 2022 3-10 = 0.01
-                    # 21 ottobre 2022 5-28 = 0.05
-                    # 28 ottobre 2022 5-28 = 0.04
-                    # ave comba
-                    # 31 ottobre aggiunta dev 10-200 - formula MY COMPA
+                   
                     
                     
                     
@@ -1328,7 +1302,29 @@ class maddog:
                     
                     
                     
-               
+                # BUY 1 migliore da RCCR - NATALE 2022
+                
+                elif (
+                    
+                    ma8_last > ma50_last
+                
+                    and deviation_ma10_sopra_ma200 < -0.25
+                
+                    and deviation_ma5_sotto_ma300 < -0.15
+                    and deviation_ma59_sopra_ma300 < -0.22
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma5_sopra_ma28 > 0.04
+                    
+                    and ma2_last >= ma2_2_min_ago
+              
+                ):
+                    buy = "BUY 1 migliore da RCCR NATALE 2022 - riga 1060"
+                    action = "buy"
+                    percentage = 50
+                    
+                    
+                    
                 elif (    
                     ma28_last > ma300_last
                     and ma300_last < ma300_120_min_ago
