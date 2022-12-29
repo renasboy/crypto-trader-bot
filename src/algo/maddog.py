@@ -1213,14 +1213,14 @@ class maddog:
                     
                 
                 
-                # BUY 1 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-59 - riga 1043 b
+                # BUY 1 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-59 - riga 1043 B
                 
                 elif (
                     
                     ma8_last > ma59_last
                     and deviation_ma5_sopra_ma59 < -0.12
                     
-                    and deviation_ma10_sopra_ma200 < -0.25
+                    and deviation_ma10_sopra_ma200 < -0.22
                     
                     and deviation_ma5_sotto_ma300 < -0.22
                     and deviation_ma5_sotto_ma300 > -0.75
@@ -1238,7 +1238,7 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
               
                 ):
-                    buy = "BUY 1 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-59 - riga 1043 c"
+                    buy = "BUY 1 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-59 - riga 1043 B"
                     action = "buy"
                     percentage = 50
                     
@@ -1260,7 +1260,7 @@ class maddog:
                     
                     
                     
-                # BUY 1 zona inferiore
+                # BUY 1 zona inferiore 1043 C
                 
                 elif (
                     
@@ -1285,7 +1285,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
               
                 ):
-                    buy = "BUY 1 5-300 - riga 1043 c"
+                    buy = "BUY 1 5-300 - riga 1043 C"
                     action = "buy"
                     percentage = 50
                     
