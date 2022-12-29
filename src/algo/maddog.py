@@ -1183,14 +1183,14 @@ class maddog:
                     and delta_1_200_78 < delta_2_200_78_60_min
                     
                     and deviation_ma5_sotto_ma300 > 0.45
-                    
+                    and deviation_ma5_sotto_ma300 < -0.22
                   
                     and ma100_last > ma100_2_min_ago
                     and ma300_last < ma300_60_min_ago
                     and ma200_last < ma200_60_min_ago
                     
                     and deviation_ma3_sopra_ma10 > 0.01
-                    and deviation_ma5_sopra_ma28 > 0.20
+                    and deviation_ma5_sopra_ma28 > 0.22
                     
                     and deviation_bellissima > 0.17
                     and deviation_ma13_sopra_ma25 > 0.07
@@ -1213,7 +1213,7 @@ class maddog:
                     
                 
                 
-                # BUY 1 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-59 - riga 1043 B 
+                # BUY 1 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-59 - riga 1043 b
                 
                 elif (
                     
@@ -1222,7 +1222,7 @@ class maddog:
                     
                     and deviation_ma10_sopra_ma200 < -0.25
                     
-                    and deviation_ma5_sotto_ma300 < -0.17
+                    and deviation_ma5_sotto_ma300 < -0.22
                     and deviation_ma5_sotto_ma300 > -0.75
                   
                     and deviation_ma59_sopra_ma300 < -0.23
@@ -1259,14 +1259,6 @@ class maddog:
                     
                     
                     
-                
-                    
-                   
-                    
-                    
-                    
-                    
-                    
                     
                 # BUY 1 zona inferiore
                 
@@ -1293,7 +1285,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
               
                 ):
-                    buy = "BUY 1 5-300 - riga 1043 d"
+                    buy = "BUY 1 5-300 - riga 1043 c"
                     action = "buy"
                     percentage = 50
                     
