@@ -20921,7 +20921,7 @@ class maddog:
                 and ma2_last < ma2_2_min_ago
             ):
 
-                sell = "SELL condizione speciale 32 - TEMPO e se ma8 < ma50 and deviation_sell < -0.49 - r 16743 A"
+                sell = "SELL condizione speciale 32 - TEMPO e se ma8 < ma50 and deviation_sell < -0.49 - r 16720"
                 action = "sell"
                         
                 # ma13 troppo lenta !
@@ -20946,7 +20946,7 @@ class maddog:
            
             ):
 
-                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 150 min = 9000 sec con 5-50 - r 16743 B1aX"
+                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 150 min = 9000 sec con 5-50 - r 16721"
                 action = "sell"
                         
                 # 24 set 2022 ore 17:23
@@ -20967,7 +20967,7 @@ class maddog:
            
             ):
 
-                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 150 min = 9000 sec con 5-125 - r 16743 B1aY"
+                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 150 min = 9000 sec con 5-125 - r 16722"
                 action = "sell"
                         
                 # 24 set 2022 ore 17:23
@@ -20992,7 +20992,7 @@ class maddog:
            
             ):
 
-                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 150 min e fino a 240 min con 5-90 - r 16743 B2bxA1"
+                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 150 min e fino a 240 min con 5-90 - r 16723"
                 action = "sell"
                         
                 # 24 set 2022 ore 17:23
@@ -21018,7 +21018,7 @@ class maddog:
            
             ):
 
-                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 150 min e fino a 240 min con 5-90 - r 16743 B2bxA2x"
+                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 150 min e fino a 240 min con 5-90 - r 16724"
                 action = "sell"
                         
                 # 24 set 2022 ore 17:23
@@ -21044,7 +21044,7 @@ class maddog:
            
             ):
 
-                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 150 min e fino a 240 min con 4-86 - r 16743 B2bxA2y"
+                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 150 min e fino a 240 min con 4-86 - r 16725"
                 action = "sell"
                         
                 # 24 set 2022 ore 17:23
@@ -21069,18 +21069,18 @@ class maddog:
                 and deviation_ma5_sotto_ma300 < 0.25
                 and ma300_last > ma300_120_min_ago
                 
-                and (ma5_prev > ma180_prev and ma5_last < ma180_last)
+                and (ma8_prev > ma225_prev and ma8_last < ma225_last)
                 and ma2_last < ma2_2_min_ago
            
             ):
 
-                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 240 min con 5-180 - r 16743 B2bxB1"
+                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 240 min con 8-225 - r 16726"
                 action = "sell"
                         
                 # 24 set 2022 ore 17:23
                 # 11 ott 2022 dev sell 0.10 da 0.15
                 # 21 ott 2022 dev sell 0.11 da 0.10
-                
+                # 29 dic 2022 8-225 da 5-180
                 
                 
             elif (
@@ -21096,7 +21096,7 @@ class maddog:
            
             ):
 
-                sell = "SELL condizione speciale - ro cano VENDE dopo 240 min con 3-69 SE ma300 scende da 5 ore e se guadagna almeno 0.80 - r 16743 amen"
+                sell = "SELL condizione speciale - ro cano VENDE dopo 240 min con 3-69 SE ma300 scende da 5 ore e se guadagna almeno 0.80 - r 16727"
                 action = "sell"
                         
                 # 24 set 2022 ore 17:23
@@ -21118,7 +21118,7 @@ class maddog:
            
             ):
 
-                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 240 min con 5-180 - r 16743 B2bxB"
+                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 240 min con 5-180 - r 16728"
                 action = "sell"
                         
                 # 24 set 2022 ore 17:23
@@ -21144,7 +21144,7 @@ class maddog:
              
             ):
 
-                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 150 min = 9000 sec con 22-300 ! stai calmo - r 16743 B2by"
+                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 150 min = 9000 sec con 22-300 ! stai calmo - r 16729"
                 action = "sell"
                         
                 # 24 set 2022 ore 17:23
@@ -21165,7 +21165,7 @@ class maddog:
            
             ):
 
-                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 150 min = 9000 sec con 5-300 - r 16743 Bx1"
+                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 150 min = 9000 sec con 5-300 - r 16730"
                 action = "sell"
                         
                 # 24 set 2022 ore 17:23
@@ -21184,7 +21184,7 @@ class maddog:
            
             ):
 
-                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - maddog VENDE dopo 150 min = 9000 sec con 5-300 con doppio delta GIORNO ! cazzo - r 16743 Bx2A"
+                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - maddog VENDE dopo 150 min = 9000 sec con 5-300 con doppio delta GIORNO ! cazzo - r 16731"
                 action = "sell"
                         
                 # 24 set 2022 ore 17:23
@@ -21204,7 +21204,7 @@ class maddog:
            
             ):
 
-                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - maddog VENDE dopo 150 min = 9000 sec con 5-200 con doppio delta NOTTE ! - r 16743 Bx2B1"
+                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - maddog VENDE dopo 150 min = 9000 sec con 5-200 con doppio delta NOTTE ! - r 16732"
                 action = "sell"
                         
                 # 24 set 2022 ore 17:23
@@ -21225,7 +21225,7 @@ class maddog:
            
             ):
 
-                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - maddog VENDE dopo 150 min = 9000 sec con 8-225 con doppio delta NOTTE ! - r 16743 Bx2B2"
+                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - maddog VENDE dopo 150 min = 9000 sec con 8-225 con doppio delta NOTTE ! - r 16733"
                 action = "sell"
                         
                 # 24 set 2022 ore 17:23
@@ -21246,7 +21246,7 @@ class maddog:
            
             ):
 
-                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 150 min = 9000 sec con 5-90 - r 16743 B2y"
+                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 150 min = 9000 sec con 5-90 - r 16734"
                 action = "sell"
                         
                 # 24 set 2022 ore 17:23
