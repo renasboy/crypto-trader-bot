@@ -1174,7 +1174,6 @@ class maddog:
                     
                  
                     
-                    
                 # BUY 1 5-300 in alto
                 
                 elif (
@@ -1185,12 +1184,13 @@ class maddog:
                     
                     and deviation_ma5_sotto_ma300 > 0.45
                     
+                  
                     and ma100_last > ma100_2_min_ago
                     and ma300_last < ma300_60_min_ago
                     and ma200_last < ma200_60_min_ago
                     
                     and deviation_ma3_sopra_ma10 > 0.01
-                    and deviation_ma5_sopra_ma28 > 0.11
+                    and deviation_ma5_sopra_ma28 > 0.20
                     
                     and deviation_bellissima > 0.17
                     and deviation_ma13_sopra_ma25 > 0.07
@@ -1211,6 +1211,43 @@ class maddog:
                     # importante : ma100 sta sotto la ma200 ma non le e' troppo lontana
                     
                     
+                # BUY 1 5-300 in alto
+                
+                elif (
+                    
+                    ma8_last > ma150_last
+                    and deviation_ma100_sopra_ma200 > -0.25
+                    and delta_1_200_78 < delta_2_200_78_60_min
+                    
+                    and deviation_ma5_sotto_ma300 < 0.45
+                    and deviation_ma5_sotto_ma300 > -0.17
+                  
+                    and ma100_last > ma100_2_min_ago
+                    and ma300_last < ma300_60_min_ago
+                    and ma200_last < ma200_60_min_ago
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma5_sopra_ma28 > 0.20
+                    
+                    and deviation_bellissima > 0.17
+                    and deviation_ma13_sopra_ma25 > 0.07
+                    and deviation_ma3_sopra_ma7 > 0.05
+                  
+                    
+                    and ma72_last >= ma72_2_min_ago
+                    and ma13_last > ma69_last
+                    
+                    and ma3_last > ma3_3_min_ago
+                    and ma2_last > ma2_2_min_ago
+              
+                ):
+                    buy = "BUY 1 che considera distanza 5-300 - riga 1043 b"
+                    action = "buy"
+                    percentage = 50
+                    
+                    # importante : ma100 sta sotto la ma200 ma non le e' troppo lontana
+                    
+                    
                     
                     
                 
@@ -1224,7 +1261,11 @@ class maddog:
                     and deviation_ma10_sopra_ma200 < -0.25
                     
                     and deviation_ma5_sotto_ma300 < -0.17
+                    and deviation_ma5_sotto_ma300 > -0.75
+                  
                     and deviation_ma59_sopra_ma300 < -0.23
+                  
+                   
                     
                     and ma300_last < ma300_60_min_ago
                     and ma200_last < ma200_60_min_ago
@@ -1235,7 +1276,7 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
               
                 ):
-                    buy = "BUY 1 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-59 - riga 1043 B1"
+                    buy = "BUY 1 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-59 - riga 1043 c"
                     action = "buy"
                     percentage = 50
                     
@@ -1290,7 +1331,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
               
                 ):
-                    buy = "BUY 1 5-300 - riga 1043 C"
+                    buy = "BUY 1 5-300 - riga 1043 d"
                     action = "buy"
                     percentage = 50
                     
