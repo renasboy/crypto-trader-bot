@@ -1220,7 +1220,8 @@ class ro_cano_che_ritorna:
                 elif (
                     
                     ma8_last > ma150_last
-                    and deviation_ma100_sopra_ma200 > -0.25
+                    and deviation_ma100_sopra_ma200 > -0.23
+                    and deviation_ma5_sotto_ma300 < 0.45
                     and delta_1_200_78 < delta_2_200_78_60_min
                     
                     and deviation_ma5_sotto_ma300 > 0.45
@@ -1251,47 +1252,7 @@ class ro_cano_che_ritorna:
                     # importante : ma100 sta sotto la ma200 ma non le e' troppo lontana
                     
                     
-                    
-                # BUY 1 5-300 zona mediana
-                
-                elif (
-                    
-                    ma8_last > ma50_last
-                    
-                    
-                    and deviation_ma10_sopra_ma200 < 0.45
-                    and deviation_ma10_sopra_ma200 > -0.25
-                  
-                    and deviation_ma100_sopra_ma200 > -0.40
-                    
-                    and deviation_ma5_sotto_ma300 < 0.45
-                    and deviation_ma5_sotto_ma300 > -0.25
-                    
-                    and ma300_last < ma300_60_min_ago
-                    and ma200_last < ma200_60_min_ago
-                    
-                    and deviation_ma3_sopra_ma10 > 0.01
-                    and deviation_ma5_sopra_ma28 > 0.23
-                    
-                    and ma2_last >= ma2_2_min_ago
-              
-                ):
-                    buy = "BUY 1 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-50 - riga 1043 B1"
-                    action = "buy"
-                    percentage = 50
-                    
-                    # importante : ma100 sta sotto la ma200 non le e' troppo lontana
-                    
-                    # 21 ottobre 2022  aggiunta di 3-10 e 5-28
-                    # 21 ottobre 2022 3-10 = 0.01
-                    # 21 ottobre 2022 5-28 = 0.05
-                    # 28 ottobre 2022 5-28 = 0.04
-                    # ave comba
-                    # 31 ottobre aggiunta dev 10-200 - formula MY COMPA
-                    # non farlo comprare se 5-300 troppo poco. allora aumento 5-28 a 0.23
-                    
-                    
-                    
+                 
                     
                     
                 # BUY 1 5-300 zona mediana
@@ -1299,15 +1260,15 @@ class ro_cano_che_ritorna:
                 elif (
                     
                     ma8_last > ma50_last
-                    
+                    and deviation_ma5_sotto_ma300 < -0.23
+                    and deviation_ma5_sotto_ma300 > -0.75
                     
                     and deviation_ma10_sopra_ma200 < -0.25
                     and deviation_ma10_sopra_ma200 > -0.40
                   
                     and deviation_ma100_sopra_ma200 > -0.40
                     
-                    and deviation_ma5_sotto_ma300 < -0.25
-                    and deviation_ma5_sotto_ma300 > -0.75
+                    
                     
                     and ma300_last < ma300_60_min_ago
                     and ma200_last < ma200_60_min_ago
@@ -1350,11 +1311,13 @@ class ro_cano_che_ritorna:
                 elif (
                     
                     ma8_last > ma150_last
+                    and deviation_ma5_sotto_ma300 < -0.75
+                    
                     and deviation_ma100_sopra_ma200 < -0.40
                     
                     and delta_1_200_78 < delta_2_200_78_60_min
                     
-                    and deviation_ma5_sotto_ma300 < -0.75
+                    
                     
                     
                     and ma100_last > ma100_2_min_ago
