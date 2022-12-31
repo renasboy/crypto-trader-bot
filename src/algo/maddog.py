@@ -5116,7 +5116,7 @@ class maddog:
                 
                 elif (  
                     ma100_last > ma200_last
-                    and ma200_last > ma300_last
+                    and ma8_last > ma300_last
                     
                     and ma200_last > ma200_15_min_ago
                     
@@ -5133,7 +5133,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                 ):
                     
-                    buy = "BUY 1 FOREVER YOUNG PIU' AGGRESSIVO (doppio delta < 1 E 100> ) (SOPRA RIALZO RIALZO) - GIORNO - se ma 200 > e se ma200 > ma300 - r 4410"
+                    buy = "BUY 1 FOREVER YOUNG PIU' AGGRESSIVO (doppio delta < 1 E 100> ) (SOPRA RIALZO RIALZO) - GIORNO - se ma 200 > - r 4410"
                     action = "buy"
                     percentage = 80
                     
@@ -5141,7 +5141,7 @@ class maddog:
                     # MA ma100 e' intanto andata > ma200 !
                     # e anche ma200 sta sopra ma300
                     # 21 ottobre 2022 3-10 0.02 da 0.07 INCREDIBILE vedi differenza tra MADDOG e RCCR 21 ottobre 2022 BUY ore 4:39
-                    
+                    # 31 dic 8>300 da 200>300 e' giorno.
                     
                     
                     
@@ -21180,6 +21180,7 @@ class maddog:
                 and ma300_last > ma300_120_min_ago
                 
                 and (ma5_prev > ma300_prev and ma5_last < ma300_last)
+                and deviation_sell < -0.12
                 and ma2_last < ma2_2_min_ago
            
             ):
