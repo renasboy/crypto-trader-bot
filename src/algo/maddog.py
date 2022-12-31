@@ -2324,12 +2324,15 @@ class maddog:
                     
                     
                     
-                # BUY 1 MISTERO CON 8>50 E 5-28 PIU' ALTO ! per arrivare una ndecchia prima del passare del tempo. prendendo rischio
+                # BUY 1 MISTERO CON 8>28 E 5-28 PIU' ALTO ! per arrivare una ndecchia prima del passare del tempo. prendendo rischio
                 
                 elif (
                   
-                    ma8_last > ma50_last
+                    ma8_last > ma28_last
                     and ma78_last < ma200_last
+                    
+                    and deviation_ma5_sopra_ma59 < -0.15
+                    
                     and deviation_ma3_sopra_ma10 > 0.20
                     and deviation_ma5_sopra_ma28 > 0.28
                     
@@ -2348,12 +2351,14 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
               
                 ):
-                    buy = "BUY 1 MISTERO CON 8-50 and 5-28 PIU' ALTO ! and 3-10 > 0.24 prendendo rischio con 78 < 200  - riga 1783 B"
+                    buy = "BUY 1 MISTERO CON 8-28 and 5-28 PIU' ALTO ! and 3-10 > 0.24 prendendo rischio con 78 < 200  - riga 1783 B"
                     action = "buy"
                     percentage = 90
                     
                     # ma100 sta sotto la ma200 MA non le e' troppo lontana cioe' NON ci troviamo in una situazione drammatica! ( anche se ma100< e ma200< e ma300< )
                     # MISTERO !
+                    # 31 dic 2022 8-28 da 8-50
+                    # 31 dic 2022 aggiunta 5-59 < -0.15
                     
                     
                     
