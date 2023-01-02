@@ -5120,7 +5120,7 @@ class maddog:
                 # BUY 1 FOREVER YOUNG PIU' AGGRESSIVO con doppio delta < 1 E MA100> (rialzo) se ma 200 > e se ma200 > ma300  and deviation_ma5_sopra_ma28 > 0.10
                 
                 elif (  
-                    ma100_last > ma200_last
+                    ma59_last > ma200_last
                     and ma8_last > ma300_last
                     
                     and ma200_last > ma200_15_min_ago
@@ -5147,7 +5147,7 @@ class maddog:
                     # e anche ma200 sta sopra ma300
                     # 21 ottobre 2022 3-10 0.02 da 0.07 INCREDIBILE vedi differenza tra MADDOG e RCCR 21 ottobre 2022 BUY ore 4:39
                     # 31 dic 8>300 da 200>300 e' giorno.
-                    
+                    #  2 gen 59>200 da 100>200
                     
                     
                     
@@ -5558,7 +5558,7 @@ class maddog:
                     ma20_last > ma200_last
                     and ma200_last > ma200_301_min_ago
                     
-                    and ma59_last >= ma59_2_min_ago
+                    and ma100_last >= ma100_2_min_ago
                     and deviation_ma100_sopra_ma300 < 0.20
                     
                     and deviation_buy2 > 0.005
@@ -21013,7 +21013,7 @@ class maddog:
                 and seconds_since_last_trade < max_hold_time_in_seconds_sell_5_180
                 and ma300_last > ma300_720_min_ago
                 and delta_1 > delta_2
-                and deviation_sell > 0.11
+                and deviation_sell < 0.05
                 and deviation_ma5_sotto_ma300 < 0.25
                 and ma300_last > ma300_120_min_ago
                 
@@ -21028,8 +21028,8 @@ class maddog:
                         
                 # 24 set 2022 ore 17:23
                 # 11 ott 2022 dev sell 0.10 da 0.15
-                # 21 ott 2022 dev sell 0.11 da 0.10
-                
+                # 21 ott 2022 dev sell >0.11 da >0.10
+                #  2 gen 2023 dev sell <0.05 da >0.11
                 
                 
             # 32 B2b - SELL condizione speciale ROOT DOWN DEEP - ro cano VENDE dopo 150 min e fino a 240 min con 5-90
