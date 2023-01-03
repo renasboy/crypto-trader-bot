@@ -5561,8 +5561,9 @@ class maddog:
                     and ma100_last >= ma100_2_min_ago
                     and deviation_ma100_sopra_ma300 < 0.20
                     
+                    and deviation_ma100_laterale < 0.20
                     and deviation_buy2 > 0.005
-                    and deviation_ma5_sopra_ma28 > 0.02
+                    and deviation_ma5_sopra_ma28 > 0.10
                     
                     and deviation_ma7_sopra_ma40 > 0.005
                     and deviation_buy_ma3_sopra_ma13 > 0.07
@@ -5583,7 +5584,7 @@ class maddog:
                     # 1 nov se ma200 sale da 5 ore compra con 7-40 > 0.005 !
                     # 10 dic 2022 50>200 da 59>200
                     # 18 dic 2022 20>200 da 50>200
-                    
+                    #  3 gen 2023 5-28 > 0.10
                     
                 elif (
                     
