@@ -21013,7 +21013,7 @@ class maddog:
                 and seconds_since_last_trade < max_hold_time_in_seconds_sell_5_180
                 and ma300_last > ma300_720_min_ago
                 and delta_1 > delta_2
-                and deviation_sell < 0.05
+                and deviation_sell < -0.09
                 and deviation_ma5_sotto_ma300 < 0.25
                 and ma300_last > ma300_120_min_ago
                 
@@ -21023,16 +21023,18 @@ class maddog:
            
             ):
 
-                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 150 min e fino a 240 min con 5-90 - r 16724"
+                sell = "SELL condizione speciale 32 ROOT DOWN DEEP - ro cano VENDE dopo 150 min e fino a 240 min con 5-90 - r 16724"
                 action = "sell"
                         
                 # 24 set 2022 ore 17:23
                 # 11 ott 2022 dev sell 0.10 da 0.15
                 # 21 ott 2022 dev sell >0.11 da >0.10
                 #  2 gen 2023 dev sell <0.05 da >0.11
+                #  3 gen 2023 dev sell <-0.09 da <0.05
                 
                 
-            # 32 B2b - SELL condizione speciale ROOT DOWN DEEP - ro cano VENDE dopo 150 min e fino a 240 min con 5-90
+                
+            # 32 SELL condizione speciale ROOT DOWN DEEP - ro cano VENDE dopo 150 min e fino a 240 min con 5-90
             
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds_sell_5_90
@@ -21063,7 +21065,7 @@ class maddog:
                 
             ############ attenzione ! vedi giorno 7 novembre 2022 ore 21:34 MADDOG NON HA VENDUTO CON UN GUADAGNO DELL 1% MENTRE ma300 scendeva da 6 ore
             
-            # 32 B2b - SELL condizione speciale ROOT DOWN DEEP - ro cano VENDE dopo 240 min = 9000 sec con 5-180
+            # 32 SELL condizione speciale ROOT DOWN DEEP - ro cano VENDE dopo 240 min = 9000 sec con 5-180
             
             elif (
                 
@@ -21136,7 +21138,7 @@ class maddog:
                 
                 
                 
-            # 32 B2b - SELL condizione speciale ROOT DOWN DEEP - ro cano VENDE dopo 150 min = 9000 sec con 5-90
+            # 32 SELL condizione speciale ROOT DOWN DEEP - ro cano VENDE dopo 150 min = 9000 sec con 5-90
             
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds_sell_5_90
@@ -21219,6 +21221,8 @@ class maddog:
                 # 18 nov 2022 13-78
                 
                 
+                
+                
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds_sell_5_90
                 and delta_300_100 > delta_300_100_60_min
@@ -21239,6 +21243,8 @@ class maddog:
                 # 17 nov 2022 deve essere anche 10<78
                 # 11 dic 2022 8-225 da 5-200
                 # 26 dic 2022 8-250 da 8 225
+                
+                
                 
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds_sell_5_90
