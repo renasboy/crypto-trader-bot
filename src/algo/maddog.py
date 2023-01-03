@@ -5120,7 +5120,7 @@ class maddog:
                 # BUY 1 FOREVER YOUNG PIU' AGGRESSIVO con doppio delta < 1 E MA100> (rialzo) se ma 200 > e se ma200 > ma300  and deviation_ma5_sopra_ma28 > 0.10
                 
                 elif (  
-                    ma59_last > ma200_last
+                    ma8_last > ma100_last
                     and ma8_last > ma300_last
                     
                     and ma200_last > ma200_15_min_ago
@@ -5148,7 +5148,7 @@ class maddog:
                     # 21 ottobre 2022 3-10 0.02 da 0.07 INCREDIBILE vedi differenza tra MADDOG e RCCR 21 ottobre 2022 BUY ore 4:39
                     # 31 dic 8>300 da 200>300 e' giorno.
                     #  2 gen 59>200 da 100>200
-                    
+                    #  3 genn 8>100 da 59-200
                     
                     
                 # BUY 1 NEW FOREVER YOUNG piccola CORREZIONE FIAT in alto - ALTRA RIGA RCCR che e' andata bene.
