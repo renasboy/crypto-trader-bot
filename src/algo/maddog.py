@@ -8163,7 +8163,7 @@ class maddog:
                 elif (
                     
                     ma8_last > ma50_last
-                    
+                    and delta_100_59 < delta_100_59_60_min
                     
                     and deviation_ma10_sopra_ma200 < -0.25
                     and deviation_ma10_sopra_ma200 > -0.40
