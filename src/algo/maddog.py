@@ -9843,29 +9843,34 @@ class maddog:
                     and ma28_last < ma28_30_min_ago
                     and ma78_last > ma150_last
                     
-                    and deviation_ma5_sopra_ma28 > 0.17
+                    and deviation_ma3_sopra_ma10 > 0.05
+                    and deviation_ma5_sopra_ma28 > 0.12
                     
-                    and deviation_buy3 > 0.10
+                    and deviation_buy3 > 0.06
+                    and deviation_ma7_sopra_ma40 > 0.08
+                    
+                  
                     and ma3_last > ma13_last
-                    and deviation_ma7_sopra_ma40 > 0.09
                     and ma4_last > ma9_last
                     and ma4_last > ma50_last
                     
                     and ma6_last > ma15_last
                     and ma7_last > ma25_last
                     
-                    and ma2_last > ma2_2_min_ago
+                    and ma2_last >= ma2_2_min_ago
                 
                 ):
                     buy = "BUY 5 con ma50 > AND 50>100 and ma28_last < ma28_30_min_ago and 5-28 > 0.17 - riga 7203"
                     action = "buy"
                     percentage = 70
                     
-                    # 6 giu 2022 5-28 a 0.12 da 0.15
-                
-                
-                
-                
+                    #  6 giu 2022 5-28 a 0.17 da 0.19
+                    # 10 gen 2023 5-28 a 0.12 da 0.17
+                    # 10 gen 2023 dev buy 3 a 0.06 da 0.07
+                    # 10 gen 2023 dev 7-40 a 0.08 da 0.09
+                    # aggiunta 3-10 a 0.05
+                    
+                    
                 
                 elif (
                     ma50_last >= ma50_2_min_ago
