@@ -1904,7 +1904,8 @@ class maddog:
                     and ma78_last > ma100_last
                     
                     and ma8_last > ma200_last
-                    and ma100_last > ma100_60_min_ago
+                    
+                    and delta_1 < delta_2
                     
                     and ma30_last > ma30_40_min_ago
                     
