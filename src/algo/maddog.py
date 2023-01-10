@@ -19933,18 +19933,20 @@ class maddog:
                     elif (
                         ma50_last > ma50_2_min_ago
                         and deviation_ma5_sotto_ma300 > 0.40
-                        and (ma5_prev > ma90_prev and ma5_last < ma90_last)
+                        and (ma5_prev > ma100_prev and ma5_last < ma100_last)
                         and deviation_sell > 0.91 and deviation_sell < 1.49
                         and ma2_last < ma2_2_min_ago
                     ):
 
-                        sell = "SELL 4-5-x dopo 90 min con ma50 > incrocio 5-90 con 5-300 in alto and deviation_sell 0.91 - 1.49 - r 15851 A"
+                        sell = "SELL 4-5-x dopo 90 min con ma50 > incrocio 5-100 con 5-300 in alto and deviation_sell 0.91 - 1.49 - r 15851 A"
                         action = "sell"
 
                         # ma 3-48 mi evita la ricompra e la rivendita con perdita !
                         # 14 ott 2022 5-50 da 5-30 ma 5-300 in alto
                         # 19 ottobre 2022 5-59 da 5-50
                         # 15 dic 2022 5-90 da 5-59
+                        # 10 gen 2023 5-100 da 5-90
+                        
                         
                         
                     elif (
