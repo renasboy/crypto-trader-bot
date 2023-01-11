@@ -5597,8 +5597,9 @@ class maddog:
                     and deviation_ma100_sopra_ma300 < 0.20
                     
                     and deviation_buy2 > 0.01
-                    and deviation_ma5_sopra_ma28 > 0.11
-                    and deviation_ma3_sopra_ma10 > 0.05
+                    and deviation_ma5_sopra_ma28 > 0.10
+                    and deviation_ma3_sopra_ma10 > 0.04
+                    
                     and deviation_ma7_sopra_ma40 > 0.04
                     and deviation_buy_ma3_sopra_ma13 > 0.08
                     
@@ -5616,7 +5617,8 @@ class maddog:
                     #  9 ott 2022 69>200 da 78>200
                     # 12 ott 2022 7-40 0.04 da 0.05
                     # 18 nov 2022 5-28 0.11
-                    
+                    # 11 gen 2023 5-28 a 0.10 da 0.11
+                    # 11 gen 2023 3-10 a 0.04 da 0.05
                     
                     
                 elif (
