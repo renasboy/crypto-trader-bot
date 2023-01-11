@@ -1537,14 +1537,14 @@ class maddog:
                 # ------------------------------------------------------------ BUY 1 laterale 2 - r 1206 AA2x
                 
                 elif (    
-                    ma8_last > ma59_last
+                    ma8_last > ma50_last
                     and ma300_last > ma450_last
                     and ma100_last > ma100_40_min_ago
                     
                     and deviation_ma100_sopra_ma300 < 0.30
                     and deviation_ma100_sopra_ma300 > -0.20
                     
-                    and deviation_ma3_sopra_ma10 > 0.05
+                    and deviation_ma3_sopra_ma10 > 0.04
                     
                 ):  
                 
@@ -1558,7 +1558,8 @@ class maddog:
                     # arriva tardi e ho tolto qualcosina.
                     # 25 ottobre 2022 deve essere 100 > 100 40 min ago ! VEDI 24 OTTOBRE 2022 ore 2:27
                     # 25 ottobre 2022 se metto 100 < 100 40 min ago an 5-28 > 0.11 VA IN CONFLITTO !
-                    
+                    # 11 gen 2023 8-50 da 8-59
+                    # 11 gen 2023 3-10 > 0.04 da > 0.05
                     
                     
                 # ------------------------------------------------------------ BUY 1 RAFFORZATA se ma200> and ma300 > and 8>50 AND ma78 >
