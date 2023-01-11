@@ -455,6 +455,9 @@ class maddog:
         self.algo_helper.info("rapporto_delta_1_delta_2_69_39: {}".format(rapporto_delta_1_delta_2_69_39))
         
         
+        
+        
+        
        
         # formula deviation_ma3
         
@@ -4770,7 +4773,7 @@ class maddog:
                 
                     
                 
-                # BUY 1 SITUAZIONE TREND LATERALE che mancava con ma300 > - DOPPIO DELTA - RIALZO
+                # BUY 1 SITUAZIONE TREND LATERALE che mancava con DOPPIO DELTA 200-100 giorno - GIORNO
                 
                 elif (    
                
@@ -4783,13 +4786,11 @@ class maddog:
                     and delta_1 < delta_2
                     and ma100_last > ma100_60_min_ago
                     
-                    and ma300_last > ma300_60_min_ago
-                    
                     and deviation_ma5_sopra_ma28 > 0.14
-                    and ma2_last > ma2_2_min_ago
+                    and ma2_last >= ma2_2_min_ago
                 ):    
                     
-                    buy = "BUY 1 SITUAZIONE TREND LATERALE che mancava con ma300 > - GIORNO ! and 5-28 > 0.14 con 28>28 30 min ago - riga 4215 A"
+                    buy = "BUY 1 SITUAZIONE TREND LATERALE che mancava con DOPPIO DELTA 200-100 GIORNO ! and 5-28 > 0.14 con 28>28 30 min ago - riga 4215 A"
                     action = "buy"
                     percentage = 80
                     
