@@ -21390,10 +21390,12 @@ class maddog:
                 
                 
                 
+                
             # 38 - POCHI MALEDETTI E SUBITO ma non troppo mentre scende
             
             elif (
-                ma3_last < ma8_last 
+                ma3_last < ma18_last
+                and delta_150_100 < delta_150_100_60_min
                 and ma200_last < ma200_60_min_ago
                 and deviation_ma100_sopra_ma300 < 0.30
                 
@@ -21402,14 +21404,37 @@ class maddog:
                 and ma2_last > ma100_last
                 and ma2_last < ma2_2_min_ago
             ):    
-                sell = "SELL condizione speciale 38 - POCHI MALEDETTI E SUBITO 3-8 quando ma200 < e con deviation > 2.51 - dedicated to comparo meo - r 16872 b"
+                sell = "SELL condizione speciale 38 - POCHI MALEDETTI E SUBITO 3-18 quando ma200 < e con deviation > 2.51 - dedicated to comparo meo - r 16872 b1"
+                action = "sell"
+                    
+                # and ma2_last > ma100_last (altrimenti vende durante il crollo con la ma3-ma9)
+                # 12 gen 2023 3-18 da 3-8 con dppio delta 150-100 giorno
+                
+                
+                
+            # 38 - POCHI MALEDETTI E SUBITO ma non troppo mentre scende
+            
+            elif (
+                ma3_last < ma8_last
+                and delta_150_100 > delta_150_100_60_min
+                and ma200_last < ma200_60_min_ago
+                and deviation_ma100_sopra_ma300 < 0.30
+                
+                and deviation_sell > 2.51
+                and deviation_pochi_maledetti > 0.70
+                and ma2_last > ma100_last
+                and ma2_last < ma2_2_min_ago
+            ):    
+                sell = "SELL condizione speciale 38 - POCHI MALEDETTI E SUBITO 3-8 quando ma200 < e con deviation > 2.51 - dedicated to comparo meo - r 16872 b2"
                 action = "sell"
                     
                 # and ma2_last > ma100_last (altrimenti vende durante il crollo con la ma3-ma9)
                 
                 
                 
-                
+            
+            
+            
             # 39 - POCHI MALEDETTI E SUBITO ma non troppo mentre scende > ESTATE 
             
             elif (
