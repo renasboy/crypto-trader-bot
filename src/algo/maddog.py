@@ -13712,19 +13712,20 @@ class maddog:
                     elif (
                         ma50_last > ma50_2_min_ago
                         and ma3_last < ma100_last
+                        and ma5_last < ma200_last
                         and ma3_last < ma10_last
                         
                         and deviation_ma100_sopra_ma300 < 0.30
-                        and ma5_last < ma50_last
+                        
                         and deviation_sell > 0.35 and deviation_sell < 0.64
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 dopo 110 min con ma50 > con 5-50 and dev_sell 0.35 - 0.64 la prima FINTA DI MARADONA 3 CON 100 sopra 300 < 0.30 - r 10329 b"
+                        sell = "SELL 1 dopo 110 min con ma50 > AND con 5-200 and dev_sell 0.35 - 0.64 - prima FINTA MARADONA CON 100 sopra 300 < 0.30 - r 10329 b"
                         action = "sell"
                         
                         # 3 set ho aggiunto 3<10 incredibile ma vero vendeva mentre saliva !
-                        
+                        # 12 gen 2023 5-200 da 5-50 vedi 12 gen 2023 ore 00:07
                     
                     
                     #################################################################################################
