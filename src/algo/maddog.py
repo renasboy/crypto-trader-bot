@@ -14746,16 +14746,16 @@ class maddog:
                     elif (
                         ma50_last >= ma50_2_min_ago
                         and ma100_last > ma300_last
-                        and (ma3_prev > ma15_prev and ma3_last < ma15_last)
+                        and (ma3_prev > ma25_prev and ma3_last < ma25_last)
                         and deviation_sell > 0.91 and deviation_sell < 1.20
                         and ma2_last < ma2_2_min_ago
                      
                     ):
-                        sell = "SELL 2 (12-21 min) con ma50 > and incrocio 3-15 and deviation_sell 0.91 - 1.20 CON 100 > 300 RIALZO - r 11156 A"
+                        sell = "SELL 2 (12-21 min) con ma50 > and incrocio 3-25 and deviation_sell 0.91 - 1.20 CON 100 > 300 RIALZO - r 11156 A"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
-                        
+                        # 12 gen 2023 3-25 da 3-15
                         
                         
                     elif (
