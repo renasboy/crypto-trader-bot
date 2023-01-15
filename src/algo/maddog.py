@@ -4333,7 +4333,7 @@ class maddog:
                     ma2_last > ma2_2_min_ago
                     and deviation_buy_crollo_1 < -1.61
                     and deviation_buy_crollo_2 > 0.01
-                    and deviation_ma3_sopra_ma10 > 0.155
+                    and deviation_ma3_sopra_ma10 > 0.22
                 ):
                     buy = "BUY 1 CROLLO FERRARI ok CON 3-10 necessaria ! - RCCR - r 3813"
                     action = "buy"
@@ -4341,9 +4341,9 @@ class maddog:
                     
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     # deviation_buy_crollo_2 = ma3_last / ma13_last
-                    # fondamentale aggiunta 3-10 perche' anche ferrari NE HA BISOGNO ma non 5-28 CHE COMINCIA AD ESSERE INAPPROPRIATA
+                    # fondamentale aggiunta 3-10 perche' anche ferrari NE HA BISOGNO ma non 5-28 ! CHE COMINCIA AD ESSERE INAPPROPRIATA
                     # 27 giu 2022 3-10 0.155 NON MENO DI QUESTA PERDIO !
-                    
+                    # 15 gen 2023 3-10 0.22
                     
                 # BUY 1 SUL SUPPORTO 300 !
           
