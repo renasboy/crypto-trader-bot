@@ -555,6 +555,16 @@ class maddog:
         
         
         
+        
+        # formula DEVIATION_ma3_sotto_ma150 per comprare FINO a una certa distanza da ma200
+        
+        deviation_ma3_sotto_ma150 = (ma3_last / ma150_last - 1) * 100 if ma150_last else 0
+        self.algo_helper.info("deviation_ma3_sotto_ma150: {}".format(deviation_ma3_sotto_ma150))
+        
+        # questa e' stata aggiunta il 15 gennaio 2023 dopo che deviation_ma3_sotto_ma200 aveva fatto -1.36% !
+        
+        
+        
         # formula DEVIATION_ma3_sotto_ma200 per comprare FINO a una certa distanza da ma200
         
         deviation_ma3_sotto_ma200 = (ma3_last / ma200_last - 1) * 100 if ma200_last else 0
@@ -20213,7 +20223,7 @@ class maddog:
                 and ma50_last < ma50_2_min_ago
                 and deviation_ma100_sopra_ma300 > 0.20
                 
-                and deviation_ma3_sotto_ma200 > -1.20
+                and deviation_ma3_sotto_ma150 > -1.20
             ):
                 sell = "SELL cond. special 3 - SALVAGENTE 3 3-39 < -0.25 e dev sell < -0.31 and dev_sell< -0.305 con ma50< e dev_ma3_sotto_ma200 > -1.20 - r 15985 A"
                 action = "sell"
@@ -20230,6 +20240,8 @@ class maddog:
                 # > estate dev 39 -0.24 da -0.25 dev sell -0.30 da -0.31 
                 # 13 set -3% !!! deviation_ma3_sotto_ma200 > -1.20 da deviation_ma3_sotto_ma200 > -1.20 
                 # 13 set -3% <= da <
+                
+                
                 
             # 4 - SELL ricordo terribile del 21 giugno 2022
             
