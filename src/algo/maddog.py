@@ -8212,6 +8212,43 @@ class maddog:
                     ####################################################################################
                     
                     
+                # BUY 3 RCCR PORTATA MADDOG maria callas core 'ngrato - 2 sett 2022 ore 5:03 - ma300 che SCENDE
+                
+                elif (     
+                    
+                    deviation_callas < -0.10
+                    and deviation_ma50_sotto_ma300 < -0.29
+                    and deviation_ma78_sotto_ma300 < -0.23
+                    and deviation_ma78_sotto_ma200 < -0.30
+                    and deviation_ma5_sotto_ma300 < -0.60
+                    
+                    and ma300_last < ma300_301_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma200_120_min_ago
+                    
+                    and deviation_ma3_sopra_ma10 > 0.07
+                    and deviation_ma5_sopra_ma28 > 0.10
+                    
+                    and ma2_last >= ma20_last
+                    and ma2_last >= ma2_2_min_ago
+                ):    
+                    buy = "BUY 3 maria callas core 'ngrato 5-59 PORTATA DA RCCR- con 5 sotto 300 < -0.60 - 2 sett 2022 ore 5:03 - ma300 che SCENDE - r 6244"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # vedi che c'e' ma 300 che scende
+                    # 19 set 2022 ho anticipato maria callas core ngrato di una ndecchiecella
+                    # se 78 sta vicino alla 200 3-10 piu' alto ! cazzo ! vedi 20 settembre ore 14:47
+                    # 24 set 2022 5-28 > 0.11 da 0.12
+                    # 26 set 2022 5-28 > 0.108 da 0.11
+                    #  7 ott 2022 5-28 > 0.105 da 0.108
+                    # 19 ott 2022 5-28 > 0.10 da 0.105 VIVA MARIA CALLAS ! condizione meravigliosa
+                    #  8 nov maria callas con 5-59 - da 5-69
+                    #  16 nov ho tolto ma5_last > ma59_last e ho messo dev callas = 5/54 <-0.10 PENSIERO LATERALE - VEDI 16 NOV ore 15 :33
+                    
+                    
+                    
                     
                 elif (
                     deviation_ma4_sopra_ma30 > 0.15
