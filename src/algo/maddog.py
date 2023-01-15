@@ -2074,8 +2074,8 @@ class maddog:
                 
                 elif (     
                     ma8_last > ma50_last
-                    and ma125_last > ma450_last
-                    and ma69_last > ma100_last
+                    and ma100_last > ma450_last
+                    and ma59_last > ma100_last
                   
                     and ma200_last < ma200_120_min_ago
                     and ma100_last < ma200_last
@@ -2091,7 +2091,7 @@ class maddog:
                     and ma2_last > ma20_last
                     and ma2_last > ma2_2_min_ago
                 ):    
-                    buy = "BUY 1 pericolosa MA 69 > 100 FINE AUTUNNO (quasi inverno) passare tempo E CON 3-10 > 0.10 con 5-28 > 0.15 - r 1614 A"
+                    buy = "BUY 1 pericolosa MA 59 > 100 FINE AUTUNNO (quasi inverno) passare tempo E CON 3-10 > 0.10 con 5-28 > 0.15 - r 1614 A"
                     action = "buy"
                     percentage = 80
                     
@@ -2101,7 +2101,7 @@ class maddog:
                     # 11 ott 2022 dev bellissima 0.045 da 0.05
                     # 18 nov 2022 dev bellissima 0.04 da 0.045 (perche' 125 sta sopra 450 !)
                     # 18 nov 2022 5-29 0.13 da 0.14 (perche' 125 sta sopra 450 !)
-                
+                    # 15 gen 2023 59>100 da 69>100
                     
                     
                     
@@ -13619,7 +13619,7 @@ class maddog:
                     elif (    
                         ma50_last < ma50_2_min_ago
                         and ma2_last < ma2_2_min_ago
-                        and deviation_ma39 < -0.32
+                        and deviation_ma39 < -0.33
                         and deviation_trend_ma200 > -0.12
                         and ma200_last > ma300_last
                         and ma2_last < ma2_2_min_ago
@@ -13629,7 +13629,7 @@ class maddog:
                         action = "sell"
                         
                         # > estate -0.32 da -0.23
-                        
+                        # 15 gen 2023 -0.33 da -0.32
                     
                     
                     elif (     
