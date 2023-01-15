@@ -3630,6 +3630,35 @@ class maddog:
                     
                     
                     
+                elif (
+                    ma2_last >= ma2_2_min_ago
+                    and deviation_ma100_sotto_ma150 < -0.10
+                    
+                    
+                    and ma4_last > ma25_last
+                    
+                    and deviation_buy_crollo_1 < -0.70
+                    and deviation_buy_crollo_1 > -0.90
+                    
+                    and deviation_ma3_sopra_ma10 > 0.09
+                    
+                  
+                ):
+                    buy = "BUY 1 AUDI con dev 100-150 >-0.10 che NON E' un grande ribasso MASERATI e NON E' un crollo FERRARI ! con deviation trend ma200 - r 3043 B"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # deviation_buy_crollo_1 = ma8_last / ma78_last
+                    # deviation_correzione = ma5_last / ma30_last
+                    # deviation_trend_ma200 = ma200_last / ma200_120_min_ago
+                    # compare prega per me !
+                    
+                    # and deviation_correzione_1 > -0.01 significa una ndecchia prima di 5-30 !
+                    # 22 set aggiunte 3-10 e 5-28
+                    #  7 ott 2022 5-25 cosi' e' piu' chiaro chi interviene (tolta dev correzione)
+                    # 28 ott 2022 4-25
+                    
+                    
                 
                     
                 ######################################################################################################
