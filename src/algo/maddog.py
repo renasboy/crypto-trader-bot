@@ -3637,7 +3637,7 @@ class maddog:
                     
                     and ma4_last > ma25_last
                     
-                    and deviation_buy_crollo_1 < -0.70
+                    
                     and deviation_buy_crollo_1 > -0.90
                     
                     and deviation_ma3_sopra_ma10 > 0.09
