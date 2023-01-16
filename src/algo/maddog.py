@@ -11616,18 +11616,18 @@ class maddog:
                         and delta_1 < delta_2
                         and ma100_last > ma100_60_min_ago
                         
-                        and ma5_last < ma33_last
+                        and ma5_last < ma59_last
                         and deviation_sell > 0.57 and deviation_sell < 0.90
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 (21-50 min) con ma50 > and 5-33 and deviation_sell 0.51 - 0.90 ELASTICO ALLA RONALDO E 100 > 300 - GIORNO - r 8740 a"
+                        sell = "SELL 1 (21-50 min) con ma50 > and 5-33 and deviation_sell 0.51 - 0.90 ELASTICO ALLA RONALDO E 100 > 300 - GIORNO - r 8740 A"
                         action = "sell"
                         
                         # dopo 26 minuti non c'e' piu' quello scatto in avanti - dribbling- che si verifica nei primi minuti
                         # deviation_sell = ma3_last/last_trade_price
                         # 5-22 (era 4-15)
-                        
+                        # 16 gen 2023 5-59 da 5-33
                         
                         
                     elif (
