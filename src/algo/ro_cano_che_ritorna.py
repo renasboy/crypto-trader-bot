@@ -12393,17 +12393,17 @@ class ro_cano_che_ritorna:
                         
                         and deviation_ma100_sopra_ma300 < 0.69
                         and deviation_ma100_sopra_ma300 > -0.77
-                        and deviation_sell < -0.215
+                        and deviation_sell < -0.23
                         
                         and ma3_last < ma300_last
                     ):
-                        sell = "SELL 1 NON TOCCARE (21-50 min) con ma50 < con dev_ma39 <-0.17 E dev_sell < -0.215 TREND LATERALE (100>300 <0.69 and >-0.77) - r 9016b"
+                        sell = "SELL 1 (21-50 min) con ma50 < con dev_ma39 <-0.17 E dev_sell < -0.23 TREND LATERALE (100>300 <0.69 and >-0.77) - r 9016 B"
                         action = "sell"
                         
                         # OGGI 22 LUG 2022 QUESTA SU RCCR HA FATTO -0.56 MENTRE MADOG HA FATTO -1.43 !
                         
                         # > estate -0.21 da -0.18
-                        
+                        # 17 gen 2023 -0.23 da -0.21
                         
                         
                         
