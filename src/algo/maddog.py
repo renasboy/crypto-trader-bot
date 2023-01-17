@@ -133,6 +133,7 @@ class maddog:
         ma100_3_min_ago = self.algo_helper.ma_minutes_ago(100, 3)
         
         ma100_10_min_ago = self.algo_helper.ma_minutes_ago(100, 10)
+        ma100_20_min_ago = self.algo_helper.ma_minutes_ago(100, 20)
         ma100_30_min_ago = self.algo_helper.ma_minutes_ago(100, 30)
         ma100_40_min_ago = self.algo_helper.ma_minutes_ago(100, 40)
         ma100_50_min_ago = self.algo_helper.ma_minutes_ago(100, 50)
@@ -2291,7 +2292,7 @@ class maddog:
                     and deviation_ma5_sopra_ma28 > 0.10
                  
                     and delta_1 < delta_2
-                    and ma100_last > ma100_50_min_ago
+                    and ma100_last > ma100_30_min_ago
                     
                     
                     and ma300_last < ma300_301_min_ago
@@ -11346,19 +11347,15 @@ class maddog:
                         ma50_last < ma50_2_min_ago
                         and ma100_last < ma300_last
                         and deviation_ma39 < -0.159
-                        and deviation_sell < -0.34
+                        and deviation_sell < -0.35
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 (12-21 min) con ma50 < and deviation_ma39 < -0.159 and deviation_sell < -0.34 - r 8444"
+                        sell = "SELL 1 (12-21 min) con ma50 < and deviation_ma39 < -0.159 and deviation_sell < -0.35 - r 8444"
                         action = "sell"
                         
+                        # 17 gen 2023 dev sell -0.35 da -0.34
                         
-                        # and (ma3_prev > ma33_prev and ma3_last < ma33_last)
-                        # and deviation_sell < -0.25
-                        # ATTENZIONE QUESTA aveva FATTO -0.61% !
-                        # QUINDI ho abbassato da 0.17 a 0.16 a 0.15
-                        # HO NOTATO CHE ANCHE INCROCIO 5-100 SAREBBE ARRIVATO TARDI
-                        # ALLORA METTO incrocio 3-78 e deviation <0.10
+                       
                         
                         
                         
@@ -14165,15 +14162,16 @@ class maddog:
                         ma50_last < ma50_2_min_ago
                         and ma300_last < ma300_120_min_ago
                         and ma3_last < ma39_last
-                        and deviation_sell < -0.21
+                        and deviation_sell < -0.25
                         and ma2_last < ma2_2_min_ago
                         and deviation_trend_ma200 > -0.12
                         and ma200_last > ma300_last
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 dopo 110 min E 300 < 120 min ago e con ma50 < (dev_sell < -0.21 and ma3_last < ma39_last) con > PERDITA TOLLERATA - r 10572 B"
+                        sell = "SELL 1 dopo 110 min E 300 < 120 min ago e con ma50 < (dev_sell < -0.25 and ma3_last < ma39_last) con > PERDITA TOLLERATA - r 10572 B"
                         action = "sell"
                         
+                        # 17 gen 2023 dev sell 0.25
                         
                         
                     
@@ -16470,13 +16468,14 @@ class maddog:
                     elif (    
                         ma50_last < ma50_2_min_ago 
                         and ma2_last < ma2_2_min_ago 
-                        and deviation_sell < -0.18 
+                        and deviation_sell < -0.23
                         and ma3_last < ma39_last
                         and deviation_trend_ma100 < 0.10
                     ):
-                        sell = "SELL 2 dopo 110 min con ma50 < MA ma100 < and (deviation_sell < -0.18 and ma3_last < ma39_last) - r 12636"
+                        sell = "SELL 2 dopo 110 min con ma50 < MA ma100 < and (deviation_sell < -0.23 and ma3_last < ma39_last) - r 12636"
                         action = "sell"
                         
+                        # 17 gen 2023 da -0.23 da -0.18
                     
                     
                     
