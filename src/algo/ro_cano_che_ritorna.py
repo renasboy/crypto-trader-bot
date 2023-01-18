@@ -14726,6 +14726,8 @@ class ro_cano_che_ritorna:
                     
                     elif (    
                         ma3_last < ma100_last
+                        and ma450_last > ma450_720_min_ago
+                        
                         and ma78_last < ma300_last
                         and ma300_last < ma300_120_min_ago
                         and ma100_last > ma200_last
@@ -14733,7 +14735,29 @@ class ro_cano_che_ritorna:
                         and ma2_last < ma2_2_min_ago
                     ):
                    
-                        sell = "SELL 1 > 110 min FORSE E' NECESSARA SOLO QUESTA 3 ! dev_sell < -0.155 CON 78 < 300 (ancora ribasso !) porta a casa ! - r 10637 B"
+                        sell = "SELL 1 > 110 min FORSE E' NECESSARA SOLO QUESTA 3 ! dev_sell < -0.155 CON 78 < 300 (ancora ribasso !) porta a casa ! - r 10637 B1"
+                        action = "sell"
+                        
+                        # 23 lug 2022 dev sell < 0.10 ha fatto fare perdita di -0.26 !
+                        # 23 lug 2022 a < 0.09 da < 0.10
+                        # > estate -0.10 da 0.09
+                        # -0.13 da -0.10
+                        # 18 gen 2023 -0.155 da -0.13
+                        
+                    # ATTENZIONE 3 ! > 110 min E CON 300 < 120 min FORSE E' NECESSARA SOLO QUESTA !
+                    
+                    elif (    
+                        ma3_last < ma100_last
+                        and ma450_last < ma450_720_min_ago
+                        
+                        and ma78_last < ma300_last
+                        and ma300_last < ma300_120_min_ago
+                        and ma100_last > ma200_last
+                        and deviation_sell < -0.15
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                   
+                        sell = "SELL 1 > 110 min FORSE E' NECESSARA SOLO QUESTA 3 ! dev_sell < -0.15 CON 78 < 300 (ancora ribasso !) porta a casa ! - r 10637 B2"
                         action = "sell"
                         
                         # 23 lug 2022 dev sell < 0.10 ha fatto fare perdita di -0.26 !
