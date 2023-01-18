@@ -162,6 +162,7 @@ class ro_cano_che_ritorna:
         ma300_360_min_ago = self.algo_helper.ma_minutes_ago(300, 360)
         ma300_720_min_ago = self.algo_helper.ma_minutes_ago(300, 720)
         
+        ma450_720_min_ago = self.algo_helper.ma_minutes_ago(450, 720)
         
         
         
@@ -14728,17 +14729,19 @@ class ro_cano_che_ritorna:
                         and ma78_last < ma300_last
                         and ma300_last < ma300_120_min_ago
                         and ma100_last > ma200_last
-                        and deviation_sell < -0.13
+                        and deviation_sell < -0.155
                         and ma2_last < ma2_2_min_ago
                     ):
                    
-                        sell = "SELL 1 > 110 min FORSE E' NECESSARA SOLO QUESTA 3 ! dev_sell < -0.13 CON 78 < 300 (ancora ribasso !) porta a casa ! - r 10637 b"
+                        sell = "SELL 1 > 110 min FORSE E' NECESSARA SOLO QUESTA 3 ! dev_sell < -0.155 CON 78 < 300 (ancora ribasso !) porta a casa ! - r 10637 B"
                         action = "sell"
                         
                         # 23 lug 2022 dev sell < 0.10 ha fatto fare perdita di -0.26 !
                         # 23 lug 2022 a < 0.09 da < 0.10
                         # > estate -0.10 da 0.09
                         # -0.13 da -0.10
+                        # 18 gen 2023 -0.155 da -0.13
+                        
                         
                         
                     # ATTENZIONE 4 ! > 110 min E CON 300 < 120 min FORSE E' NECESSARA SOLO QUESTA !
