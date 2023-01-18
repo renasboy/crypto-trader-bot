@@ -5043,10 +5043,10 @@ class ro_cano_che_ritorna:
                 # BUY 1 che ci riprova quando se ne va lateralmente dopo il crollo
                 
                 elif (
-                    ma5_last > ma300_last
-                    and ma8_last > ma50_last
+                    ma4_last > ma300_last
+                    and ma5_last > ma50_last
                     
-                    and deviation_ma3_sopra_ma10 > 0.155
+                    and deviation_ma3_sopra_ma10 > 0.15
                     and deviation_ma5_sopra_ma28 > 0.01
                     
                     and ma200_last < ma200_120_min_ago
@@ -5066,9 +5066,10 @@ class ro_cano_che_ritorna:
                     percentage = 80
 
                     # compare prega per me !
-                    
-                    
-                    
+                    # 18 gen 2023 4-300 da 5-300 compare prego io per te !
+                    # 18 gen 2023 5-50 da 8-50 compare prego io per te !
+                
+                
                 # BUY 1 che ci riprova quando se ne va lateralmente dopo il crollo
                 
                 elif (
