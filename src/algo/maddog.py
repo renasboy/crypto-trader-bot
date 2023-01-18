@@ -2298,32 +2298,13 @@ class maddog:
                 
                 ):    
         
-                    buy = "BUY 1 5-100 con ma200< 300< MA ma100> 100 10 min ago e doppio delta < - GIORNO ! CON 450> - riga 1712 A"
+                    buy = "BUY 1 5-100 con ma200< 300< MA ma100> 100 10 min ago e doppio delta < - GIORNO ! CON 450> - riga 1712"
                     action = "buy"
                     percentage = 90
               
               
               
-                # BUY 1 con ma200 < 300< MA ma100> 100 60 min ago e doppio delta < and ma100 >60_min_ago STA RISALENDO !
-            
-                elif (       
-                    ma200_last < ma200_20_min_ago
-                    and ma450_last < ma450_720_min_ago
-                    and ma300_last < ma300_301_min_ago
-                    
-                    and ma5_last > ma100_last
-                    and ma2_last >= ma2_2_min_ago
-                    
-                    and deviation_ma3_sopra_ma10 > 0.05
-                    and deviation_ma5_sopra_ma28 > 0.10
-                    
-                    and ma100_last > ma100_30_min_ago
                 
-                ):    
-        
-                    buy = "BUY 1 5-100 con ma200< 300< MA ma100> 100 30 min ago e doppio delta < - GIORNO ! CON 450< - riga 1712 B"
-                    action = "buy"
-                    percentage = 90
               
               
               
