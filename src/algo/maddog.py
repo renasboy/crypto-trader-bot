@@ -16465,15 +16465,29 @@ class maddog:
                         
                         
                 
-                 
                     elif (    
                         ma50_last < ma50_2_min_ago 
-                        and ma2_last < ma2_2_min_ago 
+                        and ma2_last < ma2_2_min_ago
+                        and ma450_last > ma450_720_min_ago
+                        and deviation_sell < -0.235
+                        and ma3_last < ma39_last
+                        and deviation_trend_ma100 < 0.10
+                    ):
+                        sell = "SELL 2 dopo 110 min con ma50 < MA ma100 < and (deviation_sell < -0.235 and ma3_last < ma39_last) CON 450> - r 12636 A"
+                        action = "sell"
+                        
+                        # 17 gen 2023 da -0.235 da -0.18
+                        
+                        
+                    elif (    
+                        ma50_last < ma50_2_min_ago 
+                        and ma2_last < ma2_2_min_ago
+                        and ma450_last < ma450_720_min_ago
                         and deviation_sell < -0.23
                         and ma3_last < ma39_last
                         and deviation_trend_ma100 < 0.10
                     ):
-                        sell = "SELL 2 dopo 110 min con ma50 < MA ma100 < and (deviation_sell < -0.23 and ma3_last < ma39_last) - r 12636"
+                        sell = "SELL 2 dopo 110 min con ma50 < MA ma100 < and (deviation_sell < -0.23 and ma3_last < ma39_last) CON 450< - r 12636 B"
                         action = "sell"
                         
                         # 17 gen 2023 da -0.23 da -0.18
