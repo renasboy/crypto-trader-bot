@@ -5795,11 +5795,10 @@ class maddog:
                     
                     
                 # BUY 2 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-50 - formula MY COMPA (importata dal BUY 1 r 1043 B)
-                
                 elif (
                     
                     ma8_last > ma50_last
-                    
+                    delta_1 < delta_2
                     
                     and deviation_ma10_sopra_ma200 < -0.25
                     and deviation_ma10_sopra_ma200 > -0.40
@@ -5818,7 +5817,7 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
               
                 ):
-                    buy = "BUY 2 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-50 - formula MY COMPA - riga 4743"
+                    buy = "BUY 2 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-50 - formula MY COMPA - r 4743 A"
                     action = "buy"
                     percentage = 50
                     
@@ -5830,6 +5829,48 @@ class maddog:
                     # 28 ottobre 2022 5-28 = 0.04
                     # ave comba
                     # 31 ottobre aggiunta dev 10-200 - formula MY COMPA
+                    # 19 gen 2023 doppio delta 200 100 giorno
+                    
+                    
+                elif (
+                    
+                    ma8_last > ma50_last
+                    delta_1 > delta_2
+                    and deviation_ma3_sopra_ma10 > 0.12
+                    and deviation_ma5_sopra_ma28 > 0.04
+                  
+                    and deviation_ma10_sopra_ma200 < -0.25
+                    and deviation_ma10_sopra_ma200 > -0.40
+                  
+                    and deviation_ma100_sopra_ma200 > -0.40
+                    
+                    and deviation_ma5_sotto_ma300 < 0.45
+                    and deviation_ma5_sotto_ma300 > -0.75
+                    
+                    and ma300_last < ma300_60_min_ago
+                    and ma200_last < ma200_60_min_ago
+                    
+                    and ma2_last >= ma2_2_min_ago
+             
+                ):
+                    buy = "BUY 2 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-50 - formula MY COMPA - r 4743 B"
+                    action = "buy"
+                    percentage = 50
+                    
+                    # importante : ma100 sta sotto la ma200 non le e' troppo lontana
+                    
+                    # 21 ottobre 2022  aggiunta di 3-10 e 5-28
+                    # 21 ottobre 2022 3-10 = 0.01
+                    # 21 ottobre 2022 5-28 = 0.05
+                    # 28 ottobre 2022 5-28 = 0.04
+                    # ave comba
+                    # 31 ottobre aggiunta dev 10-200 - formula MY COMPA
+                    # 19 gen 2023 doppio delta notte compra ma piu' difficile
+                    
+                    
+                    
+                    
+                    
                     
                     ###########################################################################################
                     ###########################################################################################
