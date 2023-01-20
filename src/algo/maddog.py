@@ -2611,27 +2611,57 @@ class maddog:
                     
                     
                     
+                elif (
+                    ma5_last > ma300_last
+                    and delta_300_225 < delta_300_225_60_min
+                    
+                    and ma11_last > ma50_last
+                    
+                    and ma300_last < ma300_120_min_ago
+                    
+                    and deviation_ma5_sopra_ma28 > 0.13
+                    and deviation_ma3_sopra_ma7 > 0.05
+                    and deviation_ma13_sopra_ma25 > 0.04
+                    
+                    and deviation_bellissima > 0.10
+                    
+                    and price >= price_2_min_ago
+                    
+                ):
+                    buy = "BUY 1 con ma20_last > ma200_last e con 11 > 59 e ma69> 2 min ago (!) con DOPPIO DELTA 300-225 GIORNO ! - r 2065 A"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # > estate anticipato buy di una ndecchia
+                    
+                    
+                    
                     
                 elif (
-                    ma20_last > ma200_last
+                    ma10_last > ma200_last
+                    and delta_300_225 > delta_300_225_60_min
+                    
                     and ma11_last > ma50_last
-                    and ma69_last >= ma69_2_min_ago
+                    and ma39_last >= ma39_2_min_ago
                     and ma300_last < ma300_120_min_ago
                     
                     and deviation_ma5_sopra_ma28 > 0.15
                     and deviation_ma3_sopra_ma7 > 0.05
                     and deviation_ma13_sopra_ma25 > 0.05
                     
-                    and deviation_bellissima > 0.13
+                    and deviation_bellissima > 0.12
                     
                     and price >= price_2_min_ago
                     
                 ):
-                    buy = "BUY 1 con ma20_last > ma200_last e con 11 > 59 e ma69> 2 min ago (!) r 2065"
+                    buy = "BUY 1 con ma20_last > ma200_last e con 11 > 59 e ma39> 2 min ago (!) con DOPPIO DELTA 300-225 NOTTE ! - r 2065 B"
                     action = "buy"
                     percentage = 80
                     
                     # > estate anticipato buy di una ndecchia
+                    
+                    
+                    
                     
                     
                     
