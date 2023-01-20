@@ -153,6 +153,8 @@ class maddog:
         ma200_180_min_ago = self.algo_helper.ma_minutes_ago(200, 180)
         ma200_301_min_ago = self.algo_helper.ma_minutes_ago(200, 301)
         
+        ma225_60_min_ago = self.algo_helper.ma_minutes_ago(225, 60)
+        
         ma300_20_min_ago = self.algo_helper.ma_minutes_ago(300, 20)
         ma300_30_min_ago = self.algo_helper.ma_minutes_ago(300, 30)
         ma300_60_min_ago = self.algo_helper.ma_minutes_ago(300, 60)
@@ -391,6 +393,19 @@ class maddog:
         
         
        
+        # formula delta_300_225
+        
+        delta_300_225 = (ma300_last / ma225_last - 1) * 100 if ma225_last else 0
+        self.algo_helper.info("delta_300_225: {}".format(delta_300_225))
+        
+        
+        # formula delta_300_225_60_min
+        
+        delta_300_225_60_min = (ma300_60_min_ago / ma225_60_min_ago - 1) * 100 if ma225_60_min_ago else 0
+        self.algo_helper.info("delta_300_225_60_min: {}".format(delta_300_225_60_min))
+        
+        
+        
         
         # formula delta_150_100
         
