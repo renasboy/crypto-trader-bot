@@ -1250,7 +1250,6 @@ class maddog:
                 
                 
                 # BUY 1 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-59 - riga 1043 B
-                
                 elif (
                     
                     ma5_last > ma59_last
@@ -1269,7 +1268,46 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
               
                 ):
-                    buy = "BUY 1 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-59 - riga 1043 B"
+                    buy = "BUY 1 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-59 - riga 1043 B1"
+                    action = "buy"
+                    percentage = 50
+                    
+                    # importante : ma100 sta sotto la ma200 non le e' troppo lontana
+                    
+                    # 21 ottobre 2022  aggiunta di 3-10 e 5-28
+                    # 21 ottobre 2022 3-10 = 0.01
+                    # 21 ottobre 2022 5-28 = 0.05
+                    # 28 ottobre 2022 5-28 = 0.04
+                    # ave comba
+                    # 31 ottobre aggiunta dev 10-200 - formula MY COMPA
+                    # 12 dic 2022 8-59 da 8-50 e aggiungo pensiero laterale (condizione sotto)
+                    # 22 dic 2022 and deviation_ma5_sopra_ma59 < -0.10
+                    # forse aggiungere anche doppio delta 100-59
+                    # 22 dic 2022 aggiunto doppio delta 100-59 !
+                    # 20 gen 2023 5-28 a 0.10
+                    
+                    
+                    
+                elif (
+                    
+                    ma5_last > ma10_last
+                    and deviation_ma5_sopra_ma59 < -0.17
+                    and deviation_ma5_sotto_ma300 < -0.22
+                    and deviation_ma5_sotto_ma300 > -0.75
+                    
+                    and deviation_ma10_sopra_ma200 < -0.22
+                    
+                    and deviation_ma100_sopra_ma300 < -0.15
+                    and ma300_last < ma300_60_min_ago
+                    and ma200_last < ma200_60_min_ago
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma5_sopra_ma28 > 0.01
+                    
+                    and ma2_last >= ma2_2_min_ago
+              
+                ):
+                    buy = "BUY 1 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-59 - riga 1043 B2"
                     action = "buy"
                     percentage = 50
                     
