@@ -21415,10 +21415,10 @@ class maddog:
                 
                 and (ma5_prev > ma200_prev and ma5_last < ma200_last)
                 and ma2_last < ma2_2_min_ago
-                and deviation_sell > 0.70
+                and deviation_sell > 0.50
             ):
 
-                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - SELL> 150 min = 9000 sec SE GUADAGNA > 0.70 con 5-200 con doppio delta NOTTE ! - r 16733 A"
+                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - SELL> 150 min = 9000 sec SE GUADAGNA > 0.50 con 5-200 con doppio delta NOTTE ! - r 16733 A"
                 action = "sell"
                         
                 # vedi RCCR 19 GEN 2023 ore 8:35
