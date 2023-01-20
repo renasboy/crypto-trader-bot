@@ -1264,7 +1264,7 @@ class maddog:
                     and ma200_last < ma200_60_min_ago
                     
                     and deviation_ma3_sopra_ma10 > 0.01
-                    and deviation_ma5_sopra_ma28 > 0.04
+                    and deviation_ma5_sopra_ma28 > 0.10
                     
                     and ma2_last >= ma2_2_min_ago
               
@@ -1285,7 +1285,7 @@ class maddog:
                     # 22 dic 2022 and deviation_ma5_sopra_ma59 < -0.10
                     # forse aggiungere anche doppio delta 100-59
                     # 22 dic 2022 aggiunto doppio delta 100-59 !
-                    
+                    # 20 gen 2023 5-28 a 0.10
                     
                     
                     
