@@ -2643,7 +2643,7 @@ class maddog:
                     
                     and ma11_last > ma50_last
                     and ma39_last >= ma39_2_min_ago
-                    and ma300_last < ma300_120_min_ago
+                    
                     
                     and deviation_ma5_sopra_ma28 > 0.15
                     and deviation_ma3_sopra_ma7 > 0.05
