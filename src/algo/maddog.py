@@ -15707,13 +15707,26 @@ class maddog:
                         
                         
                         
+                        
                     elif (
                         ma50_last > ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 > 0.30
+                        and (ma4_prev > ma78_prev and ma4_last < ma78_last)
+                        and deviation_sell > 0.57 and deviation_sell < 0.80
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 2 da 60 a 90 min con ma50> and incrocio 4-78 CON 100-300 > 0.30 and deviation_sell 0.57-0.80 FINTA ALLA RONALDO - r 11906 A"
+                        action = "sell"
+                        
+                        
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 < 0.30
                         and (ma4_prev > ma25_prev and ma4_last < ma25_last)
                         and deviation_sell > 0.57 and deviation_sell < 0.80
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 2 da 60 a 90 min con ma50> and incrocio 4-25 and deviation_sell 0.57-0.80 FINTA ALLA RONALDO - r 11906"
+                        sell = "SELL 2 da 60 a 90 min con ma50> and incrocio 4-25 Con 100-300 < 0.30 and deviation_sell 0.57-0.80 FINTA ALLA RONALDO - r 11906 B"
                         action = "sell"
                     
                     
