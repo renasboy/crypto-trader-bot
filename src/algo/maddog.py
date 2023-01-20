@@ -21402,6 +21402,26 @@ class maddog:
                 # 18 nov 2022 13-78
                 
                 
+            
+            
+            
+            elif (
+                seconds_since_last_trade > max_hold_time_in_seconds_sell_5_90
+                and delta_300_100 > delta_300_100_60_min
+                and deviation_ma100_sopra_ma300 < 0.20
+                and ma300_last > ma300_120_min_ago
+                and ma54_last < ma54_15_min_ago
+                and ma10_last < ma78_last
+                
+                and (ma5_prev > ma200_prev and ma5_last < ma200_last)
+                and ma2_last < ma2_2_min_ago
+                and deviation_sell > 0.70
+            ):
+
+                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - SELL> 150 min = 9000 sec SE GUADAGNA > 0.70 con 5-200 con doppio delta NOTTE ! - r 16733 A"
+                action = "sell"
+                        
+                # vedi RCCR 19 GEN 2023 ore 8:35
                 
                 
             elif (
@@ -21416,7 +21436,7 @@ class maddog:
                 and deviation_sell < -0.10
             ):
 
-                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - maddog VENDE dopo 150 min = 9000 sec con 8-225 con doppio delta NOTTE ! - r 16733"
+                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - maddog VENDE dopo 150 min = 9000 sec con 8-225 con doppio delta NOTTE ! - r 16733 B"
                 action = "sell"
                         
                 # 24 set 2022 ore 17:23
