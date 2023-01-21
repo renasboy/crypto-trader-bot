@@ -5072,8 +5072,6 @@ class maddog:
                     and deviation_ma3_sopra_ma10 > 0.035
                     and deviation_ma5_sopra_ma28 > 0.09
                     
-                    
-                    
                     and ma11_last > ma200_last
                     
                     and ma3_last > ma11_last
@@ -5096,8 +5094,6 @@ class maddog:
                 elif (  
                     ma100_last > ma300_last
                     and ma300_last < ma300_301_min_ago
-                    
-                    and deviation_ma100_laterale > 0.12
                     
                     and deviation_ma3_sopra_ma10 > 0.035
                     and deviation_ma5_sopra_ma28 > 0.09
