@@ -20250,16 +20250,33 @@ class maddog:
                         # 10 dic 2022 5-33 da 5-30
                         
                         
+                        
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and (ma3_prev > ma13_prev and ma3_last < ma13_last)
+                        and ma300_last > ma300_301_min_ago
+                        and (ma3_prev > ma59_prev and ma3_last < ma59_last)
                         and deviation_sell > 2.71
                         and ma2_last < ma2_2_min_ago
                     ):
 
-                        sell = "SELL 4-5-x dopo 90 min con ma50 > incrocio 3-13 (!) and deviation_sell > 2.71 - r 15879"
+                        sell = "SELL 4-5-x dopo 90 min con ma50 > incrocio 3-59 (!) and deviation_sell > 2.71 AND 300 > 5 ore ago - r 15879 A"
                         action = "sell"
                         
+                        # 21 gen 2023 incrocio 3-59 se 300 > 5 ore ago
+                        
+                        
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and ma300_last < ma300_301_min_ago
+                        and (ma3_prev > ma15_prev and ma3_last < ma15_last)
+                        and deviation_sell > 2.71
+                        and ma2_last < ma2_2_min_ago
+                    ):
+
+                        sell = "SELL 4-5-x dopo 90 min con ma50 > incrocio 3-15 (!) and deviation_sell > 2.71 AND 300 < 5 ore ago - r 15879 B"
+                        action = "sell"
+                        
+                        # 21 gen 2023 incrocio 3-15 se 300 < 5 ore ago
                         
 
                     ######################################################################################## con trend discendente
