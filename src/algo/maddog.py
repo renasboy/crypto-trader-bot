@@ -5099,7 +5099,7 @@ class maddog:
                     and deviation_ma5_sopra_ma28 > 0.09
                     
                     and ma78_last < ma100_last
-                    and ma11_last > ma200_last
+                    
                     
                     and ma3_last > ma11_last
                     and ma5_last > ma200_last
