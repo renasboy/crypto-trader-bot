@@ -14173,19 +14173,36 @@ class maddog:
                     ############################################################################### aumento della perdita tollerata ! 50< MA 200> e 200>300
                     
                     
-                    
                     elif (    
                         ma50_last < ma50_2_min_ago
                         and ma2_last < ma2_2_min_ago
                         and deviation_ma100_sopra_ma300 > 0.30
+                        and ma300_last > ma300_301_min_ago
+                        and deviation_ma39 < -0.26
+                        and deviation_trend_ma200 > -0.12
+                        and ma200_last > ma300_last
+                        and ma2_last < ma2_2_min_ago
+                       
+                    ):
+                        sell = "SELL 1 compa dopo 110 min con ma50 < and deviation_ma39 < -0.26  con > PERDITA TOLLERATA E 300 > 5 ore ago - r 10530 A"
+                        action = "sell"
                         
+                        # 18 set dev 39 -0.25 da -0.23
+                        # 21 gen 2023 dev 39 -0.26 da -0.25
+                        
+                        
+                    elif (    
+                        ma50_last < ma50_2_min_ago
+                        and ma2_last < ma2_2_min_ago
+                        and deviation_ma100_sopra_ma300 > 0.30
+                        and ma300_last < ma300_301_min_ago
                         and deviation_ma39 < -0.25
                         and deviation_trend_ma200 > -0.12
                         and ma200_last > ma300_last
                         and ma2_last < ma2_2_min_ago
                        
                     ):
-                        sell = "SELL 1 compa dopo 110 min con ma50 < and deviation_ma39 < -0.23  con > PERDITA TOLLERATA - r 10530"
+                        sell = "SELL 1 compa dopo 110 min con ma50 < and deviation_ma39 < -0.23  con > PERDITA TOLLERATA MA 300 < 5 ore ago - r 10530 B"
                         action = "sell"
                         
                         # 18 set dev 39 -0.25 da -0.23
