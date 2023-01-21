@@ -5092,8 +5092,8 @@ class maddog:
                 # BUY 1 forever young 1 PIU' PRUDENTE se ma 200 > e se ma200 > ma300 AND 78 > 200
                 
                 elif (  
-                    ma100_last > ma300_last
-                    and ma300_last < ma300_301_min_ago
+                    
+                    ma300_last < ma300_301_min_ago
                     
                     and deviation_ma3_sopra_ma10 > 0.035
                     and deviation_ma5_sopra_ma28 > 0.09
