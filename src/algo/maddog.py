@@ -20376,7 +20376,7 @@ class maddog:
             
             elif (
                 deviation_ma39 < -0.24
-                and deviation_sell < -0.30
+                and deviation_sell < -0.303
                 and ma2_last <= ma2_2_min_ago 
                 
                 and ma50_last < ma50_2_min_ago
@@ -20387,8 +20387,6 @@ class maddog:
                 sell = "SELL cond. special 3 - SALVAGENTE 3 3-39 < -0.25 e dev sell < -0.31 and dev_sell< -0.305 con ma50< e dev_ma3_sotto_ma200 > -1.20 - r 15985 A"
                 action = "sell"
                 
-                
-                
                 # 27 giu 2022 dev sell a 0.305 da 0.31
                 # deviation_ma39 = ma4_last / ma39_last QUESTA HA VENDUTO NEL CROLLO IMPROVVISO DI 1 MINUTO (con -2.06% !)
                 # 21 giugno 2022 RICORDO TREMENDO 9372 ha venduto a -2.23% !!!
@@ -20398,7 +20396,7 @@ class maddog:
                 
                 # > estate dev 39 -0.24 da -0.25 dev sell -0.30 da -0.31 
                 # 13 set -3% !!! deviation_ma3_sotto_ma200 > -1.20 da deviation_ma3_sotto_ma200 > -1.20 
-                # 13 set -3% <= da <
+                # 21 gen 2023 dev sell -0.303 da -0.30
                 
                 
                 
