@@ -5089,30 +5089,7 @@ class maddog:
                     
                     
                     
-                # BUY 1 forever young 1 PIU' PRUDENTE se ma 200 > e se ma200 > ma300 AND 78 > 200
                 
-                elif (  
-                    
-                    ma300_last < ma300_301_min_ago
-                    
-                    and deviation_ma3_sopra_ma10 > 0.035
-                    and deviation_ma5_sopra_ma28 > 0.09
-                    
-                    and ma78_last < ma100_last
-                    
-                    
-                    and ma3_last > ma11_last
-                    and ma5_last > ma200_last
-                    
-                    and ma2_last > ma2_2_min_ago
-                ):
-
-                    buy = "BUY 1 forever young 1 PIU' PRUDENTE se ma 200 > e se ma100 > ma300 AND 78 > 200 AND 300> 5 ore ago - r 4353 B"
-                    action = "buy"
-                    percentage = 80
-                    
-                    # 1 ott 2022 3-10 > 0.035
-                    # 2 nov 2033 100 > 300 da 200 > 300 
                     
                 
                   
