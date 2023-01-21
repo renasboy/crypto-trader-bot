@@ -5098,17 +5098,12 @@ class maddog:
                     and ma300_last < ma300_301_min_ago
                     
                     and deviation_ma100_laterale > 0.12
-                    and ma200_last > ma200_15_min_ago
-                    
                     
                     and deviation_ma3_sopra_ma10 > 0.035
                     and deviation_ma5_sopra_ma28 > 0.09
                     
                     and ma78_last < ma100_last
-                    
                     and ma11_last > ma200_last
-                    
-                    
                     
                     and ma3_last > ma11_last
                     and ma5_last > ma200_last
