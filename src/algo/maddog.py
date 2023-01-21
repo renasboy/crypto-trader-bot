@@ -3589,7 +3589,7 @@ class maddog:
                 
                 elif (
                     deviation_ma3 < -1.30
-                  
+                    and deviation_ma3_sopra_ma10 > 0.06
                     
                     and delta_1 < delta_2
                     and ma100_last > ma100_60_min_ago
@@ -3597,15 +3597,16 @@ class maddog:
                     and ma3_last > ma20_last
                 ):
                 
-                    buy = "BUY 1 con RIBASSO VELOCE mentre la distanza tra ma100 e ma200 si sta riducendo - SOTTO RIALZO RIALZO - GIORNO ! - r 2998"
+                    buy = "BUY 1 con RIBASSO VELOCE mentre distanza tra ma100 e ma200 si sta riducendo - SOTTO RIALZO RIALZO - GIORNO ! and 3-10 > 0.06 - r 2998"
                     action = "buy"
                     percentage = 80
                     
                     # and delta_1 < 0.25
                     # and delta_2 > 0.40
                     # STUDIARE MEGLIO DELTA 1 E DELTA 2
-                    
                     # compare grazie. altre parole io non ho.
+                    # 21 gen 2023 aggiunta 3-10 > 0.06 vedi 21 gen 2023 ore 11:47
+                    
                     
                     
                   
