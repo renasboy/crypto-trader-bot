@@ -2013,8 +2013,37 @@ class maddog:
                     
                 # BUY 1 tempo INIZIO AUTUNNO con 78 > 150 and (200 > 200 120 min) che considera passare del tempo con ma30 > MA 100 < 200
                 
+                
                 elif (     
                     ma50_last > ma100_last
+                    and ma300_last > ma450_last
+                    
+                    
+                    and ma200_last > ma300_last
+                    and ma200_last > ma200_120_min_ago
+                    and deviation_ma5_sopra_ma28 > 0.05
+                    and ma100_last < ma200_last
+                    
+                    and ma30_last > ma30_10_min_ago
+                    
+                    
+                  
+                    and deviation_bellissima > 0.01
+                    and ma20_last > ma20_2_min_ago
+                    and ma5_last > ma5_2_min_ago
+                    and ma2_last > ma20_last
+                    and ma2_last > ma2_2_min_ago
+                ):    
+                    buy = "BUY 1 tempo INIZIO AUTUNNO con 78 > 150 and (200 > 200 120 min ago) considera passare del tempo con 5-28 > 0.05 e 200>300 - r 1586 A1x"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # > estate ho anticipato buy
+                    # 25 gen 2023 se 300>450 anticipo ndecchia
+                    
+                elif (     
+                    ma50_last > ma100_last
+                    and ma300_last < ma450_last
                     and ma78_last > ma150_last
                     
                     and ma200_last > ma300_last
@@ -2032,11 +2061,13 @@ class maddog:
                     and ma2_last > ma20_last
                     and ma2_last > ma2_2_min_ago
                 ):    
-                    buy = "BUY 1 tempo INIZIO AUTUNNO con 78 > 150 and (200 > 200 120 min ago) che considera passare del tempo con 5-28 > 0.05 e 200>300 - r 1586 A1"
+                    buy = "BUY 1 tempo INIZIO AUTUNNO con 78 > 150 and (200 > 200 120 min ago) considera passare del tempo con 5-28 > 0.05 e 200>300 - r 1586 A1y"
                     action = "buy"
                     percentage = 80
                     
                     # > estate ho anticipato buy
+                    
+                    
                     
                     
                     
