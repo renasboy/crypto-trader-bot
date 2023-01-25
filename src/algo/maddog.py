@@ -14491,11 +14491,11 @@ class maddog:
                         and ma300_last < ma300_120_min_ago
                         and ma100_last < ma200_last
                         and ma100_last < ma300_last
-                        and deviation_sell < -0.152
+                        and deviation_sell < -0.158
                         and ma2_last < ma2_2_min_ago
                     ):
                    
-                        sell = "SELL 1 > 110 min con 5 < 200 e 100 < 300 ! FORSE E' NECESSARA SOLO QUESTA 4 ! deviation_sell < -0.152 - r 10655 B2"
+                        sell = "SELL 1 > 110 min con 5 < 200 e 100 < 300 ! FORSE E' NECESSARA SOLO QUESTA 4 ! deviation_sell < -0.158 - r 10655 B2"
                         action = "sell"
                         
                         #  4 set 2022 dev sell -0.07 da -0.05
@@ -14503,7 +14503,7 @@ class maddog:
                         # 12 ott 2022 dev sell -0.13 da -0.10
                         # 19 dic 2022 dev sell -0.152 da -0.13
                         
-                        
+                        # 25 gen 2023 dev sell -0.158 da -0.152
         
             
             ########################################################################################################################### SESSIONE 2
@@ -16763,7 +16763,7 @@ class maddog:
                     elif (    
                         ma3_last < ma100_last
                         and ma300_last < ma300_301_min_ago
-                        and deviation_sell < -0.16
+                        and deviation_sell < -0.168
                         and ma2_last < ma2_2_min_ago
                     ):
                    
@@ -16772,7 +16772,7 @@ class maddog:
                         
                         # > estate -0.15 da +0.02
                         # 10 dic 2022 -0.16 da -0.15
-                        
+                        # 25 gen 2023 -0.168 da -0.16
                     
                     
             ################################################################################################### SESSIONE 3
@@ -19335,13 +19335,14 @@ class maddog:
                     elif ( 
                         ma50_last > ma50_2_min_ago 
                         and ma2_last < ma2_2_min_ago 
-                        and deviation_sell < -0.24 
+                        and deviation_sell < -0.238 
                         and ma3_last < ma50_last
                         and ma200_last < ma200_60_min_ago
                     ):
-                        sell = "SELL 4-5-x (21-60 min) con ma50 > and (deviation_sell < -0.24 and ma3_last < ma50_last) - r 15046"
+                        sell = "SELL 4-5-x (21-60 min) con ma50 > and (deviation_sell < -0.238 and ma3_last < ma50_last) - r 15046"
                         action = "sell"
                         
+                        # 25 gen 2023 dev_sell a -0.238 da 0.24 dopo -0.95% ore 10:04 del 24 gen 2023
                      
                         
                         
@@ -20602,6 +20603,7 @@ class maddog:
                 # > estate -0.37 da -0.33
                 # 18 set HA FATTO -0.84 ! dev 39 -0.255 da 0.26 E dev sell -0.362 da -0.37
                 # 25 gen 2023 HA FATTO -0.95 ! dev 39 -0.253 da 0.255 E dev sell -0.36 da -0.362
+                
                 
                 #########################################################################################################################
                 
