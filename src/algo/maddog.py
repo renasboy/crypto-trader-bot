@@ -9382,9 +9382,33 @@ class maddog:
                     
                     
                     
+                elif (
+                    ma20_last >= ma20_2_min_ago
+                    and ma300_last > ma450_last
+                    and ma300_last > ma300_60_min_ago
+                    and ma100_last < ma200_last
+                    and deviation_bellissima > 0.15
+                    and deviation_buy3 > 0.10
+                    and ma3_last > ma13_last
+                    and deviation_ma7_sopra_ma40 > 0.11
+                    and ma4_last > ma9_last
+                    and ma4_last > ma50_last
+                    and ma2_last > ma2_2_min_ago
+                    and ma7_last > ma25_last
+                    
+                    and ma13_last > ma100_last
+                    and deviation_ma5_sopra_ma28 > 0.05
+                ):
+                    buy = "BUY 4A con ma 78 > TREND LATERALE con 6-30 > 0.15 CON 300>450 - r 6780 A"
+                    action = "buy"
+                    percentage = 70
+                    
+                    # 25 gen se 300 > 450 compra prima
+                    
                     
                 elif (
                     ma69_last >= ma69_2_min_ago
+                    and ma300_last < ma450_last
                     and ma300_last > ma300_60_min_ago
                     and ma100_last < ma200_last
                     and deviation_bellissima > 0.15
@@ -9399,7 +9423,7 @@ class maddog:
                     and ma13_last > ma100_last
                     and deviation_ma5_sopra_ma28 > 0.05
                 ):
-                    buy = "BUY 4A con ma 78 > TREND LATERALE con 6-30 > 0.15 - r 6780"
+                    buy = "BUY 4A con ma 78 > TREND LATERALE con 6-30 > 0.15 CON 300<450 - r 6780 B"
                     action = "buy"
                     percentage = 70
                     
