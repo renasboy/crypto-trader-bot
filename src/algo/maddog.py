@@ -2026,8 +2026,6 @@ class maddog:
                     
                     and ma30_last > ma30_10_min_ago
                     
-                    
-                  
                     and deviation_bellissima > 0.01
                     and ma20_last > ma20_2_min_ago
                     and ma5_last > ma5_2_min_ago
@@ -2047,7 +2045,7 @@ class maddog:
                     and ma78_last > ma150_last
                     
                     and ma200_last > ma300_last
-                    and ma200_last > ma200_120_min_ago
+                    
                     and deviation_ma5_sopra_ma28 > 0.05
                     and ma100_last < ma200_last
                     
