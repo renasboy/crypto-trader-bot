@@ -2040,19 +2040,15 @@ class maddog:
                     # 25 gen 2023 se 300>450 anticipo ndecchia
                     
                 elif (     
-                    ma50_last > ma100_last
+                    
+                    ma11_last > ma125_last
                     and ma300_last < ma450_last
-                    
-                    
-                    
-                    
+                 
                     and deviation_ma5_sopra_ma28 > 0.05
                     and ma100_last < ma200_last
                     
                     and ma30_last > ma30_40_min_ago
-                    
-                    and ma11_last > ma125_last
-                  
+                
                     and deviation_bellissima > 0.02
                     and ma20_last > ma20_2_min_ago
                     and ma5_last > ma5_2_min_ago
