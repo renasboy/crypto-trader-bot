@@ -2041,8 +2041,8 @@ class maddog:
                     
                 elif (     
                     
-                    ma11_last > ma125_last
-                    and ma300_last < ma450_last
+                    
+                    ma300_last < ma450_last
                  
                     and deviation_ma5_sopra_ma28 > 0.05
                     and ma100_last < ma200_last
