@@ -1252,9 +1252,9 @@ class maddog:
                 # BUY 1 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-59 - riga 1043 B
                 elif (
                     
-                    ma5_last > ma59_last
+                    ma5_last > ma28_last
                     and deviation_ma5_sotto_ma300 < -0.22
-                    and deviation_ma5_sotto_ma300 > -0.75
+                    and deviation_ma5_sotto_ma300 > -0.99
                     
                     and deviation_ma10_sopra_ma200 < -0.22
                     
@@ -1285,7 +1285,7 @@ class maddog:
                     # forse aggiungere anche doppio delta 100-59
                     # 22 dic 2022 aggiunto doppio delta 100-59 !
                     # 20 gen 2023 5-28 a 0.10
-                    
+                    # 25 gen 5-28 da 5-50
                     
                     
                     
