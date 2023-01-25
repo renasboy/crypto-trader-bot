@@ -20842,12 +20842,12 @@ class maddog:
                 
                 and delta_1_200_30 < delta_2_200_30_30_min
                 
-                and deviation_crollo_24_aprile < -0.55
+                and deviation_crollo_24_aprile < -0.54
                 
                 and deviation_ma5_sotto_ma200 > -1.00
             ): 
                 
-                sell = "SELL cond. special 17 - DOPO CROLLO IMPROVVISO del 24 aprile 2022 - and dev_ma5_sotto_ma200 > -1.00 - (-0.55) giorno E 33>78 - r 16369 a1"
+                sell = "SELL cond. special 17 -0.54% - DOPO CROLLO IMPROVVISO del 24 aprile 2022 - and dev_ma5_sotto_ma200 > -1.00 - giorno E 33>78 - r 16369 A1"
                 action = "sell"
                         
                 # ho aggiunto anche questa vendita speciale dopo il 24 aprile -1%
@@ -20863,7 +20863,7 @@ class maddog:
                 # 21 giu 2022 a -0.56 da -0.57
                 # 22 lug 2022 a -0.55 da -0.56 dopo grande perdita !
                 # ATTENZIONE ! 22 lug 2022 questa condizione ha fatto -1.42 % !!! per fortuna RCCR ha fatto -0.52 e l' ho portata in MADDOG
-                
+                # 25 GEN 2023 a -0.54 da -0.55 dopo grande perdita -1.43 % ore 16:00 del 23 gennaio 2023 !
                 
                 
             # 18 - SELL condizione speciale dopo crollo improvviso del 24 aprile 2022 ! and deviation_ma5_sotto_ma200 > -1.00
