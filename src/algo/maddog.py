@@ -1590,7 +1590,7 @@ class maddog:
                     
                     
                     
-                    and deviation_ma100_sopra_ma300 < 0.30
+                    
                     and deviation_ma100_sopra_ma300 > -0.20
                     
                     and deviation_ma3_sopra_ma10 > 0.06
