@@ -5424,7 +5424,7 @@ class maddog:
                 elif (
                     
                     deviation_ma100_sopra_ma300 < -0.90
-                    
+                    and delta_300_225 < delta_300_225_60_min
                     and ma5_last > ma39_last
                     and deviation_ma3_sopra_ma10 > 0.16
                     
@@ -5439,13 +5439,45 @@ class maddog:
                     and price > price_2_min_ago
                     
                 ):
-                    buy = "BUY 1 5 LUGLIO 2022 con 5-39 and ma100 sotto ma300 di almeno -0.90 ! 3-10 > 0.16 - r 4570 A"
+                    buy = "BUY 1 5 LUGLIO 2022 con 5-39 and ma100 sotto ma300 di almeno -0.90 ! 3-10 > 0.16 AND giorno ! - r 4570 A1"
                     action = "buy"
                     percentage = 70
 
                     # 22 lug 2022 3-10 0.16 da 0.12 cazzo
                     # 15 nov 2022 8-39 da 8-54
                     # 15 dic 2022 5-39 da 8-39
+                    
+                    
+                elif (
+                    
+                    deviation_ma100_sopra_ma300 < -0.90
+                    and delta_300_225 > delta_300_225_60_min
+                    and ma5_last > ma39_last
+                    and deviation_ma3_sopra_ma10 > 0.16
+                    and deviation_ma5_sopra_ma59 > 0.42
+                    
+                    and ma100_last < ma100_120_min_ago
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_120_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and price > price_2_min_ago
+                    
+                ):
+                    buy = "BUY 1 5 LUGLIO 2022 con 5-39 and ma100 sotto ma300 di almeno -0.90 ! 3-10 > 0.16 AND 5-59 > 0.42 - notte - r 4570 A2"
+                    action = "buy"
+                    percentage = 70
+
+                    # 22 lug 2022 3-10 0.16 da 0.12 cazzo
+                    # 15 nov 2022 8-39 da 8-54
+                    # 15 dic 2022 5-39 da 8-39
+                    # 25 gen 2023 and deviation_ma5_sopra_ma59 > 0.42 ! se notte
+                    
+                    
+                    
                     
                     
                     
