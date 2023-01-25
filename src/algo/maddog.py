@@ -22129,5 +22129,7 @@ class maddog:
             # non siamo non siamo non siamo !
             
             # con il mio affetto piu' grande.
-        
+            # penso sempre a te.
+            # grazie sempre.
+            
         
