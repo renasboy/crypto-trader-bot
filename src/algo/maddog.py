@@ -2042,7 +2042,7 @@ class maddog:
                 elif (     
                     ma50_last > ma100_last
                     and ma300_last < ma450_last
-                    and ma78_last > ma150_last
+                    
                     
                     
                     
