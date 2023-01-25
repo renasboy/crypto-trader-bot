@@ -1568,6 +1568,7 @@ class maddog:
                 
                 elif (    
                     ma8_last > ma50_last
+                    and ma200_last > ma200_120_min_ago
                     and ma300_last > ma450_last
                     and ma100_last > ma100_40_min_ago
                     
@@ -1578,7 +1579,25 @@ class maddog:
                     
                 ):  
                 
-                    buy = "BUY 1 laterale 2 - r 1206 AA2x"
+                    buy = "BUY 1 laterale 2 con 200>120 min - r 1206 AA2xA"
+                    action = "buy"
+                    percentage = 50
+                    
+                    
+                elif (    
+                    ma8_last > ma50_last
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last > ma450_last
+                    and ma100_last > ma100_40_min_ago
+                    
+                    and deviation_ma100_sopra_ma300 < 0.30
+                    and deviation_ma100_sopra_ma300 > -0.20
+                    
+                    and deviation_ma3_sopra_ma10 > 0.06
+                    and deviation_ma5_sopra_ma28 > 0.08
+                ):  
+                
+                    buy = "BUY 1 laterale 2 con 200<120 min - r 1206 AA2xB"
                     action = "buy"
                     percentage = 50
                     
@@ -1590,6 +1609,8 @@ class maddog:
                     # 25 ottobre 2022 se metto 100 < 100 40 min ago an 5-28 > 0.11 VA IN CONFLITTO !
                     # 11 gen 2023 8-50 da 8-59
                     # 11 gen 2023 3-10 > 0.04 da > 0.05
+                    # 25 gen 2023 se 200< 120 min aggiunta 5-28
+                    
                     
                     
                 # ------------------------------------------------------------ BUY 1 RAFFORZATA se ma200> and ma300 > and 8>50 AND ma78 >
