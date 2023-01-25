@@ -2032,34 +2032,14 @@ class maddog:
                     and ma2_last > ma20_last
                     and ma2_last > ma2_2_min_ago
                 ):    
-                    buy = "BUY 1 tempo INIZIO AUTUNNO con 78 > 150 and (200 > 200 120 min ago) considera passare del tempo con 5-28 > 0.05 e 200>300 - r 1586 A1x"
+                    buy = "BUY 1 tempo INIZIO AUTUNNO con 78 > 150 and (200 > 200 120 min ago) considera passare del tempo con 5-28 > 0.05 e 200>300 - r 1586 A1"
                     action = "buy"
                     percentage = 80
                     
                     # > estate ho anticipato buy
                     # 25 gen 2023 se 300>450 anticipo ndecchia
                     
-                elif (     
-                    
-                    
-                    ma300_last < ma450_last
-                 
-                    and deviation_ma5_sopra_ma28 > 0.05
-                    and ma100_last < ma200_last
-                    
-                    and ma30_last > ma30_40_min_ago
                 
-                    and deviation_bellissima > 0.02
-                    and ma20_last > ma20_2_min_ago
-                    and ma5_last > ma5_2_min_ago
-                    and ma2_last > ma20_last
-                    and ma2_last > ma2_2_min_ago
-                ):    
-                    buy = "BUY 1 tempo INIZIO AUTUNNO con 78 > 150 and (200 > 200 120 min ago) considera passare del tempo con 5-28 > 0.05 e 200>300 - r 1586 A1y"
-                    action = "buy"
-                    percentage = 80
-                    
-                    # > estate ho anticipato buy
                     
                     
                     
