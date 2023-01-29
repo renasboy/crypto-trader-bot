@@ -2210,7 +2210,7 @@ class maddog:
                 
                 elif (     
                     
-                    deviation_callas < -0.10
+                    deviation_callas < -0.11
                     and deviation_ma50_sotto_ma300 < -0.29
                     and deviation_ma78_sotto_ma300 < -0.23
                     and deviation_ma78_sotto_ma200 < -0.30
@@ -2241,7 +2241,7 @@ class maddog:
                     #  8 nov maria callas con 5-59 - da 5-69
                     #  16 nov ho tolto ma5_last > ma59_last e ho messo dev callas = 5/54 <-0.10 PENSIERO LATERALE - VEDI 16 NOV ore 15 :33
                     # 19 GEN 2023 5-28 a 0.09 da 0.10
-                    
+                    # 29 gen 2023 deviation_callas < -0.11 da -0.10
                    
                 
                 # BUY 1 tempo FINE AUTUNNO (quasi inverno !)
