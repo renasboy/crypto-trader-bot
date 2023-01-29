@@ -20111,23 +20111,27 @@ class maddog:
                         
                     
                     
-                    # sta in alto e stai attento
+                    # sta in alto
                     
                     elif (
                         ma50_last < ma50_2_min_ago
                         and deviation_ma100_sopra_ma300 > 0.25
                         
                         and (ma3_prev > ma78_prev and ma3_last < ma78_last)
-                        and deviation_sell < -0.07
+                        and deviation_sell < -0.12
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 4-5-x da 60 a 90 min con ma50 < con incrocio 3-78 and deviation_sell < -0.07 meno tollerante (sta in alto) - r 15660"
+                        sell = "SELL 4-5-x da 60 a 90 min con ma50 < con incrocio 3-78 and deviation_sell < -0.12 (sta in alto) - r 15660 A"
                         action = "sell"
                         
+                        # 29 gen 2023 dev sell <-0.12 da -0.07
                         
                         
                         
-                    # sta in basso e, PARADOSSALMENTE, sta piu' calmo
+                        
+                        
+                        
+                    # sta in basso
                     
                     elif (
                         ma50_last < ma50_2_min_ago
@@ -20137,7 +20141,7 @@ class maddog:
                         and deviation_sell < -0.19
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 4-5-x da 60 a 90 min con ma50 < con incrocio 3-78 and deviation_sell < -0.19 piu' tollerante (sta in basso) - r 15676"
+                        sell = "SELL 4-5-x da 60 a 90 min con ma50 < con incrocio 3-78 and deviation_sell < -0.19 (sta in basso) - r 15660 B"
                         action = "sell"
                         
                         
