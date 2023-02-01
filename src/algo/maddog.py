@@ -12007,16 +12007,16 @@ class maddog:
                         
                         and ma100_last > ma100_60_min_ago
                         and ma5_last < ma100_last
-                        and deviation_sell < -0.29
+                        and deviation_sell < -0.31
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 (21-50 min) con ma50 > and 5-100 and deviation_sell < -0.29 CUSCINO DI SANT' ANTONIO se ma100 > E 100 > 200- r 8886 A"
+                        sell = "SELL 1 (21-50 min) con ma50 > and 5-100 and deviation_sell < -0.31 CUSCINO DI SANT' ANTONIO se ma100 > E 100 > 200 - r 8886 A"
                         action = "sell"
                         
-                        # 19 giu 2022 dev sell a 0.26 da 0.24
-                        # 29 giu 2022 dev sell a 0.29 da 0.26
-                        
+                        # 19 giu 2022 dev sell a -0.26 da -0.24
+                        # 29 giu 2022 dev sell a -0.29 da -0.26
+                        #  1 feb 2023 dev sell a -0.31 da -0.29
                         
                     
                     
