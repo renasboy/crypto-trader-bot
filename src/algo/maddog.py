@@ -10631,7 +10631,7 @@ class maddog:
                     
                 elif (
                     
-                    ma18_last > ma100_last
+                    ma8_last > ma100_last
                     and ma78_last < ma150_last
                     
                     and ma100_last < ma100_120_min_ago
@@ -10646,13 +10646,13 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
                     
                 ):
-                    buy = "BUY 5 29 ago 2022 > 120 min di ribasso 78<150 CON ma100<120 min ago- r 7564 A2y"
+                    buy = "BUY 5 29 ago 2022 > 120 min di ribasso 78<150 CON ma100<120 min ago - r 7564 A2y"
                     action = "buy"
                     percentage = 90
                     
                     # 19 set 2022 aggiunta 3-10 0.07 
                     # 25 gen 2023 5-28 0.15 da 0.12
-                    
+                    #  1 feb 2023 8-100 da 18-100
                     
                     
                 # BUY 5 29 ago 2022 > 180 min di ribasso 78>150
