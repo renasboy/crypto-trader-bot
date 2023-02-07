@@ -1222,15 +1222,11 @@ class maddog:
                     
                  
                 # BUY 1                        and 5-300 and dev 10-200 < -0.24 buy con 5-30 - r 1042
+                
                 elif (
                     
                     ma5_last > ma30_last
                     and deviation_ma20_sotto_ma59
-                  
-                  
-                  
-                  
-                    
                     
                     and ma2_last >= ma2_2_min_ago
               
