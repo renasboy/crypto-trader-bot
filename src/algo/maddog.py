@@ -10693,7 +10693,7 @@ class maddog:
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
                     
-                    and deviation_ma5_sopra_ma28 > 0.13
+                    and deviation_ma5_sopra_ma28 > 0.10
                     and ma2_last >= ma2_2_min_ago
                     
                 ):
@@ -10701,6 +10701,7 @@ class maddog:
                     action = "buy"
                     percentage = 90
                     
+                    # 7 feb 2023 deviation_ma5_sopra_ma28 > 0.10 da 0.13
                     
                    
                     
