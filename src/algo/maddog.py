@@ -8401,13 +8401,13 @@ class maddog:
                     and ma300_last < ma300_60_min_ago
                     and ma200_last < ma200_60_min_ago
                     
-                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma10 > 0.068
                     and deviation_ma5_sopra_ma28 > 0.04
                     
                     and ma2_last >= ma2_2_min_ago
               
                 ):
-                    buy = "BUY 3 migliore formula MY COMPA - che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-50 - riga 6243"
+                    buy = "BUY 3 migliore formula MY COMPA - che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-50 - r 6243"
                     action = "buy"
                     percentage = 50
                     
@@ -8419,6 +8419,7 @@ class maddog:
                     # 28 ottobre 2022 5-28 = 0.04
                     # ave comba
                     # 31 ottobre aggiunta dev 10-200 - formula MY COMPA
+                    # 7 feb 2023 3-10 0.068
                     
                     ####################################################################################
                     ####################################################################################
