@@ -308,10 +308,21 @@ class maddog:
         self.algo_helper.info("deviation_ma54_sopra_ma100: {}".format(deviation_ma54_sopra_ma100))
         
         
-        # formula DEVIATION_ma5_sopra_ma59 - PENSIERO LATERALE
+        
+        # formula DEVIATION_ma5_sopra_ma59 - PENSIERO LATERALE 1
         
         deviation_ma5_sopra_ma59 = (ma5_last / ma59_last - 1) * 100 if ma59_last else 0
         self.algo_helper.info("deviation_ma5_sopra_ma59: {}".format(deviation_ma5_sopra_ma59))
+        
+        
+        
+        
+        # formula DEVIATION_ma20_sotto_ma59 - PENSIERO LATERALE 2
+        
+        deviation_ma20_sotto_ma59 = (ma20_last / ma59_last - 1) * 100 if ma59_last else 0
+        self.algo_helper.info("deviation_ma20_sotto_ma59: {}".format(deviation_ma20_sotto_ma59))
+        
+        
         
         
         
