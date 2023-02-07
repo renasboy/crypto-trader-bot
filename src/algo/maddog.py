@@ -1317,7 +1317,7 @@ class maddog:
                     
                     and deviation_ma10_sopra_ma200 < -0.22
                     
-                    and deviation_ma100_sopra_ma300 < -0.15
+                    #and deviation_ma100_sopra_ma300 < -0.15
                     and ma300_last < ma300_60_min_ago
                     and ma200_last < ma200_60_min_ago
                     
