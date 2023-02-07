@@ -1312,7 +1312,7 @@ class maddog:
                     
                     ma5_last > ma28_last
                     and deviation_ma5_sotto_ma300 < -0.22
-                    and deviation_ma5_sotto_ma300 > -0.99
+                    #and deviation_ma5_sotto_ma300 > -0.99
                     and deviation_ma20_sotto_ma59 < -0.27
                     
                     and deviation_ma10_sopra_ma200 < -0.22
