@@ -12605,7 +12605,7 @@ class maddog:
                     elif (
                         ma50_last < ma50_2_min_ago
                         and (ma5_prev > ma33_prev and ma5_last < ma33_last)
-                        and deviation_sell < -0.13
+                        and deviation_sell < -0.15
                         and ma59_last > ma59_30_min_ago
                         
                         and ma100_last < ma200_last
@@ -12624,7 +12624,7 @@ class maddog:
                         
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 eventuale guadagno ANZI NON GRANDE PERDITA dopo BUY AUDI E crollo SUCCESSIVO (21-50 min) - r 9312 A"
+                        sell = "SELL 1 NON GRANDE PERDITA dopo BUY AUDI E crollo SUCCESSIVO (21-50 min) and dev sell < -0.15 - r 9312 A"
                         action = "sell"
                         
                         # in questa circostanza drammatica di crollo AUDI INTANTO TE LI PRENDI poi, eventualmente, ci pensa BUY 2
@@ -12633,7 +12633,7 @@ class maddog:
                         # si interviene solo nella fascia di mezza cottura ! 
                         # 20 set 2022 dev sell -0.10 da 0.01
                         # 26 ott 2022 dev sell -0.13 da -0.10 con ma59 > ma59 30 min ago
-                        
+                        # 12 feb 2023 dev sell -0.15 da -0.13
                         
                         
                         
