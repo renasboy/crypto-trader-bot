@@ -3502,7 +3502,7 @@ class maddog:
                 elif (    
                     
                     deviation_callas < -0.11
-                    and deviation_ma5_sopra_ma59 < -0.50
+                    and deviation_ma5_sopra_ma59 < -0.45
                     and ma300_last > ma300_300_min_ago
                     
                     and deviation_ma5_sotto_ma300 < -0.70
@@ -3521,7 +3521,7 @@ class maddog:
                     # dev callas - pensiero laterale 
                     # 18 nov ho tolto ma5_last > ma54_last e ho messo dev callas = 5/54 <-0.10 PENSIERO LATERALE - VEDI 16 NOV ore 15:33
                     # 13 feb 2023 dev callas <-0.11 da < -0.10
-                    # 13 feb 2023 per anticipare buy voglio essere ancora piu' sicuro e ho aggiunto 5-59 < -0.50
+                    # 13 feb 2023 per anticipare buy voglio essere ancora piu' sicuro e ho aggiunto 5-59 < -0.45
                     
                     
                 
