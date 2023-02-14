@@ -483,7 +483,7 @@ class maddog:
         # formula delta_2_78_39_70_min
         
         delta_2_78_39_70_min = (ma78_70_min_ago / ma39_70_min_ago - 1) * 100 if ma39_70_min_ago else 0
-        self.algo_helper.info("delta_2_78_39_70_min: {}".format(delta_2_39_70_min))
+        self.algo_helper.info("delta_2_78_39_70_min: {}".format(delta_2_78_39_70_min))
         
         
         # non serve piu' il rapporto !
