@@ -1600,7 +1600,6 @@ class maddog:
                     ma5_last > ma50_last
                     
                     and ma300_last > ma450_last
-                    and ma100_last > ma100_40_min_ago
                     
                     and deviation_ma100_sopra_ma300 < 0.30
                     and deviation_ma100_sopra_ma300 > -0.20
@@ -1624,7 +1623,7 @@ class maddog:
                     # 11 gen 2023 8-50 da 8-59
                     # 11 gen 2023 3-10 > 0.04 da > 0.05
                     # 25 gen 2023 aggiunta 5-28
-                    
+                    # 14 feb 2023 tolto 100> 40 min ago (se gia' c'e' 300 sopra 450 e che cazzo !)
                     
                     
                     
