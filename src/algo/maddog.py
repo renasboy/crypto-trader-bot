@@ -110,6 +110,7 @@ class maddog:
         ma39_3_min_ago = self.algo_helper.ma_minutes_ago(39, 3)
         ma39_15_min_ago = self.algo_helper.ma_minutes_ago(39, 15)
         ma39_30_min_ago = self.algo_helper.ma_minutes_ago(39, 30)
+        ma39_70_min_ago = self.algo_helper.ma_minutes_ago(39, 70)
         ma48_3_min_ago = self.algo_helper.ma_minutes_ago(48, 3)
         ma50_2_min_ago = self.algo_helper.ma_minutes_ago(50, 2)
         ma50_60_min_ago = self.algo_helper.ma_minutes_ago(50, 60)
@@ -129,6 +130,7 @@ class maddog:
         ma78_7_min_ago = self.algo_helper.ma_minutes_ago(78, 7)
         ma78_30_min_ago = self.algo_helper.ma_minutes_ago(78, 30)
         ma78_60_min_ago = self.algo_helper.ma_minutes_ago(78, 60)
+        ma78_70_min_ago = self.algo_helper.ma_minutes_ago(78, 70)
         ma100_2_min_ago = self.algo_helper.ma_minutes_ago(100, 2)
         ma100_3_min_ago = self.algo_helper.ma_minutes_ago(100, 3)
         
@@ -454,7 +456,6 @@ class maddog:
         # non serve piu' il rapporto !
         
         
-        
         # formula delta_1_200_78
         
         delta_1_200_78 = (ma200_last / ma78_last - 1) * 100 if ma78_last else 0
@@ -468,6 +469,26 @@ class maddog:
         
         
         # non serve piu' il rapporto !
+        
+        
+        
+        
+        
+        # formula delta_1_78_39
+        
+        delta_1_78_39 = (ma78_last / ma39_last - 1) * 100 if ma39_last else 0
+        self.algo_helper.info("delta_1_78_39: {}".format(delta_1_78_39))
+        
+        
+        # formula delta_2_78_39_70_min
+        
+        delta_2_78_39_70_min = (ma78_70_min_ago / ma39_70_min_ago - 1) * 100 if ma39_70_min_ago else 0
+        self.algo_helper.info("delta_2_78_39_70_min: {}".format(delta_2_39_70_min))
+        
+        
+        # non serve piu' il rapporto !
+        
+        
         
         
         
@@ -1279,6 +1300,7 @@ class maddog:
                     ma5_last > ma28_last
                     and deviation_ma5_sotto_ma300 < -0.22
                     and deviation_ma5_sotto_ma300 > -0.99
+                    and delta_1_78_39 < delta_2_78_39_70_min
                     
                     and deviation_ma10_sopra_ma200 < -0.22
                     
@@ -1310,7 +1332,7 @@ class maddog:
                     # 22 dic 2022 aggiunto doppio delta 100-59 !
                     # 20 gen 2023 5-28 a 0.10
                     # 25 gen 5-28 da 5-50
-                    
+                    # attenzione importante ! aggiunto doppio delta 78-39 ! (70 min ago) vedi giorno 13 feb 2023 (2 volte ha comprato 1043 B)
                     
                     
                     
