@@ -3497,7 +3497,7 @@ class maddog:
                     and deviation_ma3_sopra_ma10 > 0.05
                     and deviation_ma5_sopra_ma28 > 0.05
                     
-                    and ma18_last >= ma18_2_min_ago
+                    and ma13_last >= ma13_2_min_ago
                     
                     and ma3_last > ma28_last
                     and ma2_last > ma2_2_min_ago
@@ -3511,7 +3511,7 @@ class maddog:
                     and ma300_last > ma300_360_min_ago
                 ):    
                     
-                    buy = "BUY 1 con 200 > and ma28_last > ma28_2_min_ago - 20 < 78 and dev_ma3_sopra_ma10 > 0.17 con 5-28> 0.15 - riga 2859 B"
+                    buy = "BUY 1 con 200 > and ma13_last > ma13_2_min_ago - 20 < 78 and dev_ma3_sopra_ma10 > 0.17 con 5-28 > 0.15 - riga 2859 B"
                     action = "buy"
                     percentage = 80
                     
@@ -3519,7 +3519,7 @@ class maddog:
                     # 2 nov 2022 anticipato di molto con 300 > 360 min ago !
                     # 2 nov 3-10 = 0.05 da 0.17
                     # 2 nov 5-28 = 0.05 da 0.15
-                    
+                    # 15 feb 2023 13>13 2 min ago da 18>18 min ago
                
                 
                 # BUY 1 che mancava se dopo 300 min di rialzo c'e' una correzione improvvisa 
