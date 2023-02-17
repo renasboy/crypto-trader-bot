@@ -11149,15 +11149,31 @@ class maddog:
                         
 
                     ###########################################################################     trend in ribasso
-
+                    
                     elif (
                         ma50_last < ma50_2_min_ago
+                        and ma100_last > ma200_last
                         and (ma3_prev > ma28_prev and ma3_last < ma28_last)
-                        and deviation_sell < -0.30
+                        and deviation_sell < -0.32
                         and ma2_last < ma2_2_min_ago
                      
                     ):
-                        sell = "SELL 1 (3-5 min) con ma50 < and incrocio 3-28 - r 7964"
+                        sell = "SELL 1 (3-5 min) con ma50 < and incrocio 3-28 and dev_sell < -0.32 - r 7964 A"
+                        action = "sell"
+                        
+                        # deviation_sell_ma78 = ma3_last / ma78_last
+                        # incrocio 3 -28 e' fondamentale per evitare punto rosso sovrapposto al punto verde !
+                        
+                        
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and ma100_last < ma200_last
+                        and (ma3_prev > ma28_prev and ma3_last < ma28_last)
+                        and deviation_sell < -0.33
+                        and ma2_last < ma2_2_min_ago
+                     
+                    ):
+                        sell = "SELL 1 (3-5 min) con ma50 < and incrocio 3-28 and dev_sell < -0.32 - r 7964 B"
                         action = "sell"
                         
                         # deviation_sell_ma78 = ma3_last / ma78_last
