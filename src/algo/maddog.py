@@ -21730,7 +21730,7 @@ class maddog:
                 and ma300_last > ma300_120_min_ago
                 
                 and (ma4_prev > ma86_prev and ma4_last < ma86_last)
-                
+                and ma18_last < ma18_2_min_ago
                 and ma2_last < ma2_2_min_ago
            
             ):
@@ -21741,7 +21741,7 @@ class maddog:
                 # 24 set 2022 ore 17:23
                 # 11 ott 2022 dev sell 0.10 da 0.15
                 # 21 ott 2022 dev sell 0.11 da 0.10
-                
+                # 20 feb 2023 18 < 18 2 min ago
                 
                 
                
