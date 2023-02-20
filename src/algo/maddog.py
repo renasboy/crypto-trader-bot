@@ -1308,13 +1308,13 @@ class maddog:
                     and ma300_last < ma300_60_min_ago
                     and ma200_last < ma200_60_min_ago
                     
-                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma10 > 0.02
                     and deviation_ma5_sopra_ma28 > 0.10
                     
                     and ma2_last >= ma2_2_min_ago
               
                 ):
-                    buy = "BUY 1 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-59 - riga 1043 B"
+                    buy = "BUY 1 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-59 - r 1043 B"
                     action = "buy"
                     percentage = 50
                     
@@ -1333,7 +1333,7 @@ class maddog:
                     # 20 gen 2023 5-28 a 0.10
                     # 25 gen 5-28 da 5-50
                     # attenzione importante ! aggiunto doppio delta 78-39 ! (70 min ago) vedi giorno 13 feb 2023 (2 volte ha comprato 1043 B)
-                    
+                    # 20 feb 2023 3-10 a 0.02 da 0.01
                     
                     
                     
