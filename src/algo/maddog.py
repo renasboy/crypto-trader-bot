@@ -10116,6 +10116,7 @@ class maddog:
                     
                     and ma78_last > ma150_last
                     
+                    and deviation_ma5_sopra_ma28 > 0.058
                     and deviation_ma5_sopra_ma28 > 0.08
                     
                     and deviation_buy3 > 0.05
@@ -10138,7 +10139,7 @@ class maddog:
                     
                     # > estate anticipo buy 5-28 0.08 da 0.12
                     # 29 gen 2023 anticipato ndecchiecella questo BUY 5 !
-                    
+                    # 20 feb 2023 aggiunta 3-10 >0.058
                     
                     
                 elif (
