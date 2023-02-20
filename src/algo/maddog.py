@@ -9418,14 +9418,15 @@ class maddog:
 
             elif self.session == 4:
                 
-                
                 if (
                     ma69_last >= ma69_2_min_ago
+                    and delta_450_300 < delta_450_300_60_min
                     and ma300_last > ma300_301_min_ago
+                    
                     and ma100_last > ma200_last
-                    and deviation_buy3 > 0.10
+                    and deviation_buy3 > 0.07
                     and ma3_last > ma13_last
-                    and deviation_ma7_sopra_ma40 > 0.10
+                    and deviation_ma7_sopra_ma40 > 0.07
                     and ma4_last > ma9_last
                     and ma4_last > ma50_last
                     and ma2_last > ma2_2_min_ago
@@ -9434,14 +9435,50 @@ class maddog:
                     and ma13_last > ma100_last
                     and deviation_ma5_sopra_ma28 > 0.05
                 ):
-                    buy = "BUY 4A con ma 78> e 300> E ma100>ma200 - r 6668 A"
+                    buy = "BUY 4A GIORNO con ma 78> e 300> E ma100>ma200 - r 6668 A1"
                     action = "buy"
                     percentage = 70
           
                     # se al BUY 4 ha ma100 < ma200 evidentemente c'e' qualche cosa di strano 
                     # il trend, evidentemente, e' LATERALE.
                     # E ALLORA AGGIUNGO UN BEL 6-30 > 0.15 - TREND LATERALE
-                    # 28 ott 2022 dev buy 3 0.10 da 0.11 
+                    # 28 ott 2022 dev buy 3 0.10 da 0.11
+                    
+                    # 20 FEB 2023 GIORNO dev buy 3 0.07 da 0.10
+                    # 20 FEB 2023 GIORNO 7-40 0.07 da 0.10
+                    
+                  
+                elif (
+                    ma69_last >= ma69_2_min_ago
+                    and delta_450_300 > delta_450_300_60_min
+                    and ma300_last > ma300_301_min_ago
+                    
+                    and ma100_last > ma200_last
+                    and deviation_buy3 > 0.09
+                    and ma3_last > ma13_last
+                    and deviation_ma7_sopra_ma40 > 0.09
+                    and ma4_last > ma9_last
+                    and ma4_last > ma50_last
+                    and ma2_last > ma2_2_min_ago
+                    and ma7_last > ma25_last
+                    
+                    and ma13_last > ma100_last
+                    and deviation_ma5_sopra_ma28 > 0.05
+                ):
+                    buy = "BUY 4A NOTTE con ma 78> e 300> E ma100>ma200 - r 6668 A2"
+                    action = "buy"
+                    percentage = 70
+          
+                    # se al BUY 4 ha ma100 < ma200 evidentemente c'e' qualche cosa di strano 
+                    # il trend, evidentemente, e' LATERALE.
+                    # E ALLORA AGGIUNGO UN BEL 6-30 > 0.15 - TREND LATERALE
+                    # 28 ott 2022 dev buy 3 0.10 da 0.11
+                  
+                  
+                  
+                  
+                  
+                  
                     
                     
                 elif (
