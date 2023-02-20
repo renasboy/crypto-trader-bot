@@ -4060,7 +4060,7 @@ class maddog:
                     and deviation_buy_crollo_1 > -1.50
                     and delta_1 > delta_2
                     
-                    and ma13_last > ma25_last
+                    and ma11_last > ma25_last
                     
                     and ma5_last > ma16_last
                     and deviation_ma5_sopra_ma16 > 0.10
@@ -4069,16 +4069,16 @@ class maddog:
                     and ma78_last < ma200_last
                     
                 ):
-                    buy = "BUY 1 DURANTE UN RIBASSO AUDI PIU' LENTA CHE NON E' UN CROLLO ! and delta_1 > delta_2 con dev 5-16 > 0.10 e 13>25 - riga 3386 B1"
+                    buy = "BUY 1 DURANTE UN RIBASSO AUDI PIU' LENTA CHE NON E' UN CROLLO ! and delta_1 > delta_2 con dev 5-16 > 0.10 e 1q>25 - r 3386 B1"
                     action = "buy"
                     percentage = 80
                     
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     # questa cosa che 78 deve essere < 200 ha dell' incredibile. MA NON TOCCARE !
-                    # dev 5-16 c'e' perhe' sto riducendo piano piano
+                    # dev 5-16 c'e' perche' sto riducendo piano piano
                     
                     # > estate 5-16 0.10 da 0.05
-                    
+                    # 20 feb 2023 11-25 da 13-25
                     
                     
                     
