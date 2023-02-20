@@ -62,6 +62,7 @@ class maddog:
         ma180_last, ma180_prev = self.algo_helper.ma_last_prev(180)
         ma200_last, ma200_prev = self.algo_helper.ma_last_prev(200)
         ma225_last, ma225_prev = self.algo_helper.ma_last_prev(225)
+        ma240_last, ma240_prev = self.algo_helper.ma_last_prev(240)
         ma250_last, ma250_prev = self.algo_helper.ma_last_prev(250)
         ma285_last, ma285_prev = self.algo_helper.ma_last_prev(285)
         ma300_last, ma300_prev = self.algo_helper.ma_last_prev(300)
@@ -21951,7 +21952,7 @@ class maddog:
            
             ):
 
-                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 240 min con 8-250 - r 16726"
+                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 240 min con 8-250 - r 16735"
                 action = "sell"
                         
                 # 24 set 2022 ore 17:23
@@ -21975,7 +21976,7 @@ class maddog:
            
             ):
 
-                sell = "SELL condizione speciale - ro cano VENDE dopo 240 min con 3-69 SE ma300 scende da 5 ore e se guadagna almeno 0.80 - r 16727"
+                sell = "SELL condizione speciale - ro cano VENDE dopo 240 min con 3-69 SE ma300 scende da 5 ore e se guadagna almeno 0.80 - r 16736"
                 action = "sell"
                         
                 # 24 set 2022 ore 17:23
@@ -21992,12 +21993,12 @@ class maddog:
                 and deviation_ma5_sotto_ma300 < 0.25
                 and ma300_last > ma300_120_min_ago
                 
-                and (ma5_prev > ma180_prev and ma5_last < ma180_last)
+                and (ma5_prev > ma240_prev and ma5_last < ma240_last)
                 and ma2_last < ma2_2_min_ago
            
             ):
 
-                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 240 min con 5-180 - r 16728"
+                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 240 min con 5-240 - r 16737"
                 action = "sell"
                         
                 # 24 set 2022 ore 17:23
