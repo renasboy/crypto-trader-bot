@@ -384,7 +384,6 @@ class maddog:
         rapporto_delta_1_delta_2 = (delta_1 / delta_2) if delta_2 else 0
         self.algo_helper.info("rapporto_delta_1_delta_2: {}".format(rapporto_delta_1_delta_2))
         
-        
         # formula delta_300_100
         
         delta_300_100 = (ma300_last / ma100_last - 1) * 100 if ma100_last else 0
@@ -395,6 +394,26 @@ class maddog:
         
         delta_300_100_60_min = (ma300_60_min_ago / ma100_60_min_ago - 1) * 100 if ma100_60_min_ago else 0
         self.algo_helper.info("delta_300_100_60_min: {}".format(delta_300_100_60_min))
+        
+        
+        
+        
+        
+        
+        
+        # formula delta_450_300
+        
+        delta_450_300 = (ma450_last / ma300_last - 1) * 100 if ma300_last else 0
+        self.algo_helper.info("delta_450_300: {}".format(delta_450_300))
+        
+        
+        # formula delta_450_300_60_min
+        
+        delta_450_300_60_min = (ma450_60_min_ago / ma300_60_min_ago - 1) * 100 if ma300_60_min_ago else 0
+        self.algo_helper.info("delta_450_300_60_min: {}".format(delta_450_300_60_min))
+        
+        
+        
         
         
         
@@ -20798,18 +20817,19 @@ class maddog:
                 
          
             # 3 - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 > -1.00
-            
+          
+          
             elif (
                 deviation_ma39 < -0.24
-                and deviation_sell < -0.303
+                and deviation_sell < -0.309
                 and ma2_last <= ma2_2_min_ago 
-                
+                and delta_450_300 < delta_450_300_60_min
                 and ma50_last < ma50_2_min_ago
                 and deviation_ma100_sopra_ma300 > 0.20
                 
                 and deviation_ma3_sotto_ma150 > -1.20
             ):
-                sell = "SELL cond. special 3 - SALVAGENTE 3 3-39 < -0.25 e dev sell < -0.31 and dev_sell< -0.305 con ma50< e dev_ma3_sotto_ma200 > -1.20 - r 15985 A"
+                sell = "SELL cond. special 3 - SALVAGENTE 3 3-39 < -0.25 e dev sell < -0.31 and dev_sell< -0.309 con ma50< e dev_ma3_sotto_ma200 > -1.20 - r 15985 A1"
                 action = "sell"
                 
                 # 27 giu 2022 dev sell a 0.305 da 0.31
@@ -20822,6 +20842,36 @@ class maddog:
                 # > estate dev 39 -0.24 da -0.25 dev sell -0.30 da -0.31 
                 # 13 set -3% !!! deviation_ma3_sotto_ma200 > -1.20 da deviation_ma3_sotto_ma200 > -1.20 
                 # 21 gen 2023 dev sell -0.303 da -0.30
+                # 20 feb 2023 -0.309 da -0.303 con doppio delta 450-300 GIORNO !
+                
+                
+            elif (
+                deviation_ma39 < -0.24
+                and deviation_sell < -0.304
+                and ma2_last <= ma2_2_min_ago 
+                and delta_450_300 > delta_450_300_60_min
+                and ma50_last < ma50_2_min_ago
+                and deviation_ma100_sopra_ma300 > 0.20
+                
+                and deviation_ma3_sotto_ma150 > -1.20
+            ):
+                sell = "SELL cond. special 3 - SALVAGENTE 3 3-39 < -0.25 e dev sell < -0.31 and dev_sell< -0.304 con ma50< e dev_ma3_sotto_ma200 > -1.20 - r 15985 A2"
+                action = "sell"
+                
+                # 27 giu 2022 dev sell a 0.305 da 0.31
+                # deviation_ma39 = ma4_last / ma39_last QUESTA HA VENDUTO NEL CROLLO IMPROVVISO DI 1 MINUTO (con -2.06% !)
+                # 21 giugno 2022 RICORDO TREMENDO 9372 ha venduto a -2.23% !!!
+                # COME PRIMA COSA HO NOTATO CHE AVEVA DEVIATION INVECE DI DEVIATON SELL 
+                # ma non sapendo se era questo il problema ho creato la prossima condizione speciale.
+                
+                
+                # > estate dev 39 -0.24 da -0.25 dev sell -0.30 da -0.31 
+                # 13 set -3% !!! deviation_ma3_sotto_ma200 > -1.20 da deviation_ma3_sotto_ma200 > -1.20 
+                # 21 gen 2023 dev sell -0.303 da -0.30
+                # 20 feb 2023 -0.304 da -0.303 con doppio delta 450-300 NOTTE !
+                
+                
+                
                 
                 
                 
