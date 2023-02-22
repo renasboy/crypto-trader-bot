@@ -16733,15 +16733,32 @@ class maddog:
 
                     ######################################################################################## con trend discendente
                     
-                    
                     elif (  
-                        ma50_last < ma50_2_min_ago 
+                        ma50_last < ma50_2_min_ago
+                        and delta_450_300 < delta_450_300_60_min
+                        
                         and ma2_last < ma2_2_min_ago 
                         and deviation_ma39 < -0.25
                         and deviation_trend_ma100 > 0.10
                     ):
-                        sell = "SELL 2 90-110 min con ma50 < MA ma100 > con deviation_ma39 <-0.25 - r 12370"
+                        sell = "SELL 2 90-110 min con ma50 < MA ma100 > con deviation_ma39 <-0.25 - r 12370 A"
                         action = "sell"
+                        
+                        # se 450-300 GIORNO dev_39 0.25
+                        
+                    elif (  
+                        ma50_last < ma50_2_min_ago
+                        and delta_450_300 > delta_450_300_60_min
+                        
+                        and ma2_last < ma2_2_min_ago 
+                        and deviation_ma39 < -0.24
+                        and deviation_trend_ma100 > 0.10
+                    ):
+                        sell = "SELL 2 90-110 min con ma50 < MA ma100 > con deviation_ma39 <-0.24 - r 12370 B"
+                        action = "sell"
+                        
+                        # se 450-300 NOTTE dev_39 0.24
+                        
                         
               
                     
