@@ -171,6 +171,7 @@ class maddog:
         
         ma450_60_min_ago = self.algo_helper.ma_minutes_ago(450, 60)
         ma450_360_min_ago = self.algo_helper.ma_minutes_ago(450, 360)
+        ma450_480_min_ago = self.algo_helper.ma_minutes_ago(450, 480)
         ma450_720_min_ago = self.algo_helper.ma_minutes_ago(450, 720)
         
         
@@ -1637,21 +1638,21 @@ class maddog:
                     
                 
                     
-                # ------------------------------------------------------------ BUY 1 laterale 2 - r 1206 AA2x
+                # ------------------------------------------------------------ BUY 1 laterale 2 
                 
                 elif (    
                     ma5_last > ma50_last
-                    
+                    and ma450_last > ma450_480_min_ago
                     and ma300_last > ma450_last
                     
                     and deviation_ma100_sopra_ma300 < 0.30
-                    and deviation_ma100_sopra_ma300 > -0.20
+                    and deviation_ma100_sopra_ma300 > -0.30
                     
                     and deviation_ma3_sopra_ma10 > 0.05
                     and deviation_ma4_sopra_ma28 > 0.05
                 ):  
                 
-                    buy = "BUY 1 laterale 2 con 200>120 min - r 1206 AA2x"
+                    buy = "BUY 1 laterale 2 and ma450_last > ma450_480_min_ago e con 200>120 min - r 1206 AA2x1"
                     action = "buy"
                     percentage = 50
                     
@@ -1667,6 +1668,41 @@ class maddog:
                     # 11 gen 2023 3-10 > 0.04 da > 0.05
                     # 25 gen 2023 aggiunta 5-28
                     # 14 feb 2023 tolto 100> 40 min ago (se gia' c'e' 300 sopra 450 e che cazzo !)
+                    
+                    
+                    
+                elif (    
+                    ma5_last > ma50_last
+                    and ma450_last < ma450_480_min_ago
+                    and deviation_ma100_laterale > 0.10
+                    and ma300_last > ma450_last
+                    
+                    and deviation_ma100_sopra_ma300 < 0.30
+                    and deviation_ma100_sopra_ma300 > -0.30
+                    
+                    and deviation_ma3_sopra_ma10 > 0.05
+                    and deviation_ma4_sopra_ma28 > 0.05
+                ):  
+                
+                    buy = "BUY 1 laterale 2 and ma450_last < ma450_480_min_ago e con 200>120 min - r 1206 AA2x2"
+                    action = "buy"
+                    percentage = 50
+                    
+                   
+                    
+                    # 19 set 2022 aggiunta 3-10 > 0.07
+                    #  3 ott 2022 3-10 0.06 da 0.07 
+                    #  3 ott 2022 100 sopra 300 a < 0.30 da < 0.20 perche' mentre 100 scende gia' e' partito il rialzo !
+                    # arriva tardi e ho tolto qualcosina.
+                    # 25 ottobre 2022 deve essere 100 > 100 40 min ago ! VEDI 24 OTTOBRE 2022 ore 2:27
+                    # 25 ottobre 2022 se metto 100 < 100 40 min ago an 5-28 > 0.11 VA IN CONFLITTO !
+                    # 11 gen 2023 8-50 da 8-59
+                    # 11 gen 2023 3-10 > 0.04 da > 0.05
+                    # 25 gen 2023 aggiunta 5-28
+                    # 14 feb 2023 tolto 100> 40 min ago (se gia' c'e' 300 sopra 450 e che cazzo !)
+                    
+                    
+                    
                     
                     
                     
