@@ -1642,7 +1642,9 @@ class maddog:
                 
                 elif (    
                     ma5_last > ma50_last
-                    and ma450_last > ma450_480_min_ago
+                    and ma300_last > ma450_last
+                    
+                  
                     and deviation_ma100_sopra_ma300 < 0.30
                     and deviation_ma100_sopra_ma300 > -0.30
                     
@@ -1654,23 +1656,6 @@ class maddog:
                     action = "buy"
                     percentage = 50
                     
-                    
-                elif (    
-                    ma5_last > ma50_last
-                    and ma450_last < ma450_480_min_ago
-                    
-                    
-                    
-                    and deviation_ma3_sopra_ma10 > 0.05
-                    and deviation_ma4_sopra_ma28 > 0.20
-                ):  
-                
-                    buy = "BUY 1 laterale 2 and ma450_last > ma450_480_min_ago e con 200>120 min - r 1206 AA2x2"
-                    action = "buy"
-                    percentage = 50
-                    
-                   
-                    
                     # 19 set 2022 aggiunta 3-10 > 0.07
                     #  3 ott 2022 3-10 0.06 da 0.07 
                     #  3 ott 2022 100 sopra 300 a < 0.30 da < 0.20 perche' mentre 100 scende gia' e' partito il rialzo !
@@ -1680,7 +1665,7 @@ class maddog:
                     # 11 gen 2023 8-50 da 8-59
                     # 11 gen 2023 3-10 > 0.04 da > 0.05
                     # 25 gen 2023 aggiunta 5-28
-                    # 14 feb 2023 tolto 100> 40 min ago (se gia' c'e' 300 sopra 450 e che cazzo !)
+                    # 14 feb 2023 tolto 100 > 40 min ago (se gia' c'e' 300 sopra 450 e che cazzo !)
                     
                     
                     
