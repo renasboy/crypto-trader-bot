@@ -14205,18 +14205,18 @@ class maddog:
                     
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and ma3_last < ma100_last
+                        and ma5_last < ma180_last
                         and deviation_ma100_sopra_ma300 > 0.30
-                        and ma7_last < ma54_last
-                        and deviation_sell > 0.35 and deviation_sell < 0.64
+                        
+                        and deviation_sell > 0.32 and deviation_sell < 0.64
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 dopo 110 min con ma50 > con 7-54 and dev_sell 0.35 - 0.64 la prima FINTA DI MARADONA 2 CON 100 sopra 300 > 0.30 - r 10310 a"
+                        sell = "SELL 1 dopo 110 min con ma50 > con 5-180 and dev_sell 0.32 - 0.64 la prima FINTA DI MARADONA 2 CON 100 sopra 300 > 0.30 - r 10310 a"
                         action = "sell"
                         
-                        # se 100 sopra 300 >0.30 stai calmo
-                        
+                        # se 100 sopra 300 > 0.30 stai calmo
+                        # 23 feb 2023 5-180
                         
                         
                         
