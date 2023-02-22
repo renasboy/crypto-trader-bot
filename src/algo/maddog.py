@@ -2026,12 +2026,12 @@ class maddog:
                     and ma59_last > ma100_last
                     
                     and delta_1 < delta_2
-                    
                     and ma30_last > ma30_40_min_ago
+                    
                     
                     and deviation_ma3_sopra_ma10 > 0.08
                     and deviation_ma5_sopra_ma28 > 0.13
-                    and deviation_bellissima > 0.03
+                    and deviation_bellissima > 0.02
                     
                     and ma20_last >= ma20_2_min_ago
                     and ma5_last >= ma5_2_min_ago
@@ -2047,7 +2047,7 @@ class maddog:
                     # 4 set 5-28 0.13 da 0.15
                     # 4 set dev bellissima 0.05 da 0.06
                     # 7 ott dev bellissima 0.04 da 0.05
-                    
+                    # 22 feb 2023 dev bellissima > 0.02 da 0.03
                     
                     
                 # BUY 1 tempo ESTATE PIU' VELOCE 100 > 60 min ago (solo l' estate se lo puo' perettere!) considera il passare del TEMPO ! ma30 > 
