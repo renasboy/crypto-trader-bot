@@ -13013,16 +13013,34 @@ class maddog:
                     
                     elif (
                         ma50_last > ma50_2_min_ago
+                        and ma300_last > ma450_last
                         and ma100_last > ma150_last
                         and (ma5_prev > ma59_prev and ma5_last < ma59_last)
                         and deviation_sell > 0.32 and deviation_sell < 0.52
                         and ma2_last < ma2_2_min_ago
                     ):    
-                        sell = "SELL 1 da 50 a 90 min con ma50 > and incrocio 5-59 and deviation_sell 0.31-0.52 la prima FINTA ALLA MARADONA RAFFORZATO - r 9493 A"
+                        sell = "SELL 1 da 50 a 90 min con ma50 > and incrocio 5-59 and deviation_sell 0.31-0.52 la prima FINTA ALLA MARADONA RAFFORZATO - r 9493 Ax"
                         action = "sell"
                         
                         # MARADONA RAFFORZATO accompagna nelle prime fasi di crescita. poi interviene RONALDO se il rialzo comincia a farsi piu' consistente.
                         # 15 nov 2022 5-59 da 5-54
+                        
+                        
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and ma300_last < ma450_last
+                        and ma100_last > ma150_last
+                        and (ma5_prev > ma78_prev and ma5_last < ma78_last)
+                        and deviation_sell > 0.32 and deviation_sell < 0.52
+                        and ma2_last < ma2_2_min_ago
+                    ):    
+                        sell = "SELL 1 da 50 a 90 min con ma50 > and incrocio 5-78 and deviation_sell 0.31-0.52 la prima FINTA ALLA MARADONA RAFFORZATO - r 9493 Ay"
+                        action = "sell"
+                        
+                        # MARADONA RAFFORZATO accompagna nelle prime fasi di crescita. poi interviene RONALDO se il rialzo comincia a farsi piu' consistente.
+                        # 15 nov 2022 5-59 da 5-54
+                        # 23 feb 2023 5-78 da 5-59 se 300 < 450 fase di ribasso
+                        
                         
                         
                     # la prima FINTA ALLA MARADONA
