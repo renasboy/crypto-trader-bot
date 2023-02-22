@@ -1650,7 +1650,7 @@ class maddog:
                     and deviation_ma4_sopra_ma28 > 0.05
                 ):  
                 
-                    buy = "BUY 1 laterale 2 and ma450_last > ma450_480_min_ago e con 200>120 min - r 1206 AA2x"
+                    buy = "BUY 1 laterale 2 and ma450_last > ma450_480_min_ago e con 200>120 min - r 1206 AA2x1"
                     action = "buy"
                     percentage = 50
                     
@@ -1659,13 +1659,13 @@ class maddog:
                     ma5_last > ma50_last
                     and ma450_last < ma450_480_min_ago
                     
-                    and deviation_ma100_sopra_ma300 > -0.30
+                    
                     
                     and deviation_ma3_sopra_ma10 > 0.05
-                    and deviation_ma4_sopra_ma28 > 0.05
+                    and deviation_ma4_sopra_ma28 > 0.20
                 ):  
                 
-                    buy = "BUY 1 laterale 2 and ma450_last > ma450_480_min_ago e con 200>120 min - r 1206 AA2x"
+                    buy = "BUY 1 laterale 2 and ma450_last > ma450_480_min_ago e con 200>120 min - r 1206 AA2x2"
                     action = "buy"
                     percentage = 50
                     
