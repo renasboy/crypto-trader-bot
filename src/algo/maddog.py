@@ -20994,14 +20994,14 @@ class maddog:
                 and ma50_last > ma50_2_min_ago
                 and deviation_ma100_sopra_ma300 < 0.40
                 
-                and deviation_ma5_sotto_ma200 > -1.00
+                and deviation_ma5_sotto_ma200 > -0.90
             ):
-                sell = "SELL condizione speciale 2 - SALVAGENTE 2 3-39 con ma50 > - con deviation_ma5_sotto_ma200 > -1.00 and deviation < -0.34 - r 15965"
+                sell = "SELL condizione speciale 2 - SALVAGENTE 2 3-39 con ma50 > - con deviation_ma5_sotto_ma200 > -0.90 and deviation < -0.34 - r 15965"
                 action = "sell"   
                 
 
                 # deviation_ma39 = ma4_last / ma39_last QUESTA HA VENDUTO NEL CROLLO IMPROVVISO DI 1 MINUTO (con -2.06% !)
-                
+                # 23 feb 2023 dev 5 sotto 200 > -0.90 da > -1.00
                 
          
             # 3 - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 > -1.00
