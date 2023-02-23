@@ -18390,17 +18390,17 @@ class maddog:
                         ma50_last < ma50_2_min_ago
                         and (ma5_prev > ma100_prev and ma5_last < ma100_last)
                         and deviation_ma5_sotto_ma300 > 0.50
-                        
+                        and deviation_sell < -0.17
                         and ma2_last < ma2_2_min_ago
                        
                     ):
-                        sell = "SELL 3 (21-60 min) con ma50 < and 5 molto sopra 300 and INCROCIO 3-100 (no 3<100) CUSCINO DI SANT' ANTONIO - r 13750 a"
+                        sell = "SELL 3 (21-60 min) con ma50 < and 5 molto sopra 300 and INCROCIO 5-100 (no 3<100) CUSCINO DI SANT' ANTONIO - r 13750 A"
                         action = "sell"
                         
                         # viva sant' antonio !
                         # NON INCROCERANNO MAI DURANTE IL CROLLO !
                         # non toccare ! INCROCIO 3-100 CUSCINO DI SANT' ANTONIO !
-                        
+                        # 23 feb 2023 aggiunto dev_sell < -0.17
                         
                         
                         
