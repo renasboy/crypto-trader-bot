@@ -4863,7 +4863,7 @@ class maddog:
                 
                 ):
                
-                    buy = "BUY 1 che ci riprova quando se ne va lateralmente dopo il crollo - SE 28 < 300 3-10 > 0.21- r 4138 B1"
+                    buy = "BUY 1 che ci riprova quando se ne va lateralmente dopo il crollo - SE 28 < 300 3-10 > 0.21- r 4138 B"
                     action = "buy"
                     percentage = 80
 
@@ -4873,34 +4873,7 @@ class maddog:
                     
                     
                     
-                # BUY 1 che ci riprova quando se ne va lateralmente dopo il crollo
-                
-                elif (
-                    ma28_last < ma300_last
-                    and deviation_ma300_sopra_ma450 < -0.20
-                    
-                    and deviation_ma3_sopra_ma10 > 0.17
-                    and deviation_ma5_sopra_ma28 > 0.20
-                    
-                    and ma200_last < ma200_120_min_ago
-                    and ma300_last < ma300_120_min_ago
-                    
-                    and delta_300_100 < delta_300_100_60_min
-                    
-                    and deviation_ma100_sopra_ma300 > -0.40
-                    and deviation_ma200_sopra_ma300 > -0.40
-                    
-                    and ma2_last >= ma2_2_min_ago
-                
-                ):
                
-                    buy = "BUY 1 che ci riprova quando se ne va lateralmente dopo il crollo - SE 28 < 300 3-10 > 0.21- r 4138 B2"
-                    action = "buy"
-                    percentage = 80
-
-                    # 2 lug 2022 3-10 0.21 da 0.22
-                    
-                    # > estate 3-10 0.17 e 5-28 0.20 DOVEVO ALZARE IL BUY quando se ne va lateralmente dopo il crollo
                     
                     
                 ##################################################################################### esperimento ! andato male ! avevo messo
