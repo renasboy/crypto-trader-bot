@@ -19881,16 +19881,31 @@ class maddog:
                         
                        
                     
-                    
+                    elif (        
+                        ma50_last > ma50_2_min_ago 
+                        and ma2_last < ma2_2_min_ago 
+                        and deviation_sell < -0.28 
+                        and ma3_last < ma50_last
+                        and ma200_last > ma200_60_min_ago
+                        and ma450_last > ma450_480_min_ago
+                    ):
+                        sell = "SELL 4-5-x (21-60 min) con ma50 > and (deviation_sell < -0.28 and ma3_last < ma50_last) - r 15071 A"
+                        action = "sell"
+                        
+                        # 23 feb 2023 dev sell 0.28 da 0.26
+                        
+                        
                     elif (        
                         ma50_last > ma50_2_min_ago 
                         and ma2_last < ma2_2_min_ago 
                         and deviation_sell < -0.26 
                         and ma3_last < ma50_last
                         and ma200_last > ma200_60_min_ago
+                        and ma450_last < ma450_480_min_ago
                     ):
-                        sell = "SELL 4-5-x (21-60 min) con ma50 > and (deviation_sell < -0.26 and ma3_last < ma50_last) - r 15071"
+                        sell = "SELL 4-5-x (21-60 min) con ma50 > and (deviation_sell < -0.26 and ma3_last < ma50_last) - r 15071 B"
                         action = "sell"
+                        
                         
                       
                         #############################################################################################################
