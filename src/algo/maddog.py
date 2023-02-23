@@ -10357,7 +10357,40 @@ class maddog:
                     # aggiunta 3-10 a 0.05
                     
                     
+                elif (
+                    ma50_last >= ma50_2_min_ago
+                    and ma300_last > ma300_120_min_ago
+                    and ma300_last > ma450_last
+                  
+                    and ma78_last < ma150_last
+                    and deviation_ma5_sopra_ma28 > 0.10
+                    and ma50_last > ma100_last
+                    
+                    
+                    
+                    and deviation_ma7_sopra_ma40 > 0.09
+                    and deviation_bellissima > 0.10
+                    
+                    and ma3_last > ma13_last
+                    
+                    and ma4_last > ma9_last
+                    and ma4_last > ma50_last
+                    
+                    and ma6_last > ma15_last
+                    and ma7_last > ma25_last
+                    
+                    and ma2_last > ma2_2_min_ago
                 
+                ):
+                    buy = "BUY 5 con ma50 > AND 50<100 and 300 > 120 min ago and 5-28 > 0.23 - r 7237 A"
+                    action = "buy"
+                    percentage = 70
+                    
+                    # 7 feb 2023 dev bellissima 0.10 da 0.12
+                    # 7 feb 2023 5-28 a 0.23 da 0.27
+                    
+                    
+                    
                 elif (
                     ma50_last >= ma50_2_min_ago
                     and ma300_last > ma300_120_min_ago
@@ -10379,7 +10412,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                 
                 ):
-                    buy = "BUY 5 con ma50 > AND 50<100 and 300 > 120 min ago and 5-28 > 0.23 - r 7237"
+                    buy = "BUY 5 con ma50 > AND 50<100 and 300 > 120 min ago and 5-28 > 0.23 - r 7237 B"
                     action = "buy"
                     percentage = 70
                     
