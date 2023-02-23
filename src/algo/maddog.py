@@ -8202,19 +8202,20 @@ class maddog:
                     
                     
                 elif (
-                    ma10_last > ma10_2_min_ago
+                    ma5_last > ma5_2_min_ago
                     and ma300_last > ma300_301_min_ago
+                    
                     and ma28_last < ma78_last
                     and ma100_last < ma100_60_min_ago
                     
                     and ma200_last > ma200_60_min_ago
                     and deviation > -0.30
-                    and deviation_ma5_sopra_ma28 > 0.18
+                    and deviation_ma5_sopra_ma28 > 0.15
                     
-                    and deviation_ma4_sopra_ma30 > 0.11
+                    and deviation_ma4_sopra_ma30 > 0.10
                     and ma3_last > ma13_last
                     and ma4_last > ma9_last
-                    and deviation_ma7_sopra_ma40 > 0.07
+                    and deviation_ma7_sopra_ma40 > 0.05
                     and ma7_last > ma25_last
                     
                     and deviation_buy_ma2_sopra_ma13 > 0.10
@@ -8230,7 +8231,8 @@ class maddog:
                     # deviation_buy3 = ma4_last/ma30_last
                     # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
                     # 28 set con 300 > 301 min ago anticipa ndecchia
-                    
+                    # 23 feb 2023 5>5 2 min ago invece di 10> 10 2 min ago
+                    # 300 sale da 5 ore NON DIMENTICARLO !
                     
                 elif (
                     ma10_last > ma10_2_min_ago
@@ -18118,20 +18120,20 @@ class maddog:
                     elif (
                         ma50_last >= ma50_2_min_ago
                         and deviation_ma100_sopra_ma300 < 0.70
-                        and deviation_sell < -0.12
-                        and (ma5_prev > ma100_prev and ma5_last < ma100_last)
+                        and deviation_sell < -0.135
+                        and (ma4_prev > ma100_prev and ma4_last < ma100_last)
                         and ma39_last > ma100_last
                         
                         and ma2_last < ma2_2_min_ago
                    
                     ):
-                        sell = "SELL 3 (21-60 min) con ma50> and 39>100 and incr 5-100 and dev_sell < -0.12 FINTA MARADONA se 100 NON molto sopra 300 - r 13556 B1"
+                        sell = "SELL 3 (21-60 min) con ma50> and 39>100 and incr 4-100 and dev_sell < -0.135 FINTA MARADONA se 100 NON molto sopra 300 - r 13556 B1"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
                         # > estate 5-78 da 5-33
                         # importantissimo ! VEDI 14 NOV 2022 -1.78% a 32 min dal BUY 3 ! - cazzo !
-                        
+                        # 23 feb 2023 dev sell -0.135 da -0.12
                         
                     elif (
                         ma50_last >= ma50_2_min_ago
