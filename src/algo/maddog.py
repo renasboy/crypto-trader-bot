@@ -7754,6 +7754,7 @@ class maddog:
                 elif (
                     deviation_ma4_sopra_ma30 > 0.13
                     and delta_1 < delta_2
+                    and deviation_ma3_sopra_ma18 > 0.10
                     and deviation_bellissima > 0.05
                     
                     and deviation_ma100_sopra_ma300 < -0.05
@@ -7779,7 +7780,7 @@ class maddog:
                     # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
                     # 26 set 100-300 se stanno attaccate e' molto rischioso ! vedi ore 22:48 24 set 2022
                     # 15 dic 2022 8-28 da 28-50
-                    
+                    # 23 feb 2023 aggiunta 3-18 > 0.10
                     
                 # BUY 2 RIVOLUZIONARIO A3y (100 NON E' ATTACCATA ALLA 300 !) e 39>50 E 8>200 and deviation_ma100_sopra_ma300 > 0.05 
                 
@@ -22619,7 +22620,7 @@ class maddog:
                 
                 # questa condizione e' un capolavoro
                 # prima era incrocio verso l' alto 3-300 durante un ribasso
-                # 14 ottobre 2022 incrocio verso il basso 3-285 e ma3 > ma8
+                # 14 ottobre 2022 incrocio verso il basso 3-285 e ma3 < ma8
                         
                 
                 
