@@ -8903,7 +8903,9 @@ class maddog:
                     
                     ma5_last > ma150_last
                     and deviation_ma100_sopra_ma300 > 0.50
-                     
+                    and deviation_ma300_sopra_ma450 > 0.40
+                    and deviation_ma3_sopra_ma18 > 0.14
+                  
                     and ma200_last > ma200_20_min_ago
                     and ma3_last > ma28_last
                     and ma2_last > ma2_2_min_ago
@@ -8919,7 +8921,39 @@ class maddog:
                     and deviation_ma5_sopra_ma28 > -0.02
                 ):    
                     
-                    buy = "BUY 3 correzione in alto con 200 > - riga 1384 RCCR portata nel MADDOG - r 6480 A"
+                    buy = "BUY 3 correzione in alto con 200 > - riga 1384 RCCR portata nel MADDOG - r 6480 A1"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # 30 set importato r 1384 RCCR su BUY 3 MADDOG
+                    # 30 set 2022 aggiunta 3-10
+                    # 30 set 2022 aggiunta 5.28
+                    #  2 ott 2022 3-10 0.10 !
+                    
+                    
+                elif (    
+                    
+                    ma5_last > ma150_last
+                    and deviation_ma100_sopra_ma300 > 0.50
+                    and deviation_ma300_sopra_ma450 < 0.40
+                    and deviation_ma3_sopra_ma18 > 0.10
+                  
+                    and ma200_last > ma200_20_min_ago
+                    and ma3_last > ma28_last
+                    and ma2_last > ma2_2_min_ago
+                    
+                    and ma100_last > ma200_last
+                    and ma200_last > ma300_last
+                    
+                    and ma100_last > ma100_60_min_ago
+                    and ma200_last > ma200_60_min_ago
+                    and ma300_last > ma300_60_min_ago
+                    
+                    and deviation_ma3_sopra_ma10 > 0.113
+                    and deviation_ma5_sopra_ma28 > -0.02
+                ):    
+                    
+                    buy = "BUY 3 correzione in alto con 200 > - riga 1384 RCCR portata nel MADDOG - r 6480 A2"
                     action = "buy"
                     percentage = 80
                     
