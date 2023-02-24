@@ -381,6 +381,7 @@ class maddog:
         
         #################################################################################################################
         
+        
         # formula delta_1
         
         delta_1 = (ma200_last / ma100_last - 1) * 100 if ma100_last else 0
@@ -391,6 +392,19 @@ class maddog:
         
         delta_2 = (ma200_60_min_ago / ma100_60_min_ago - 1) * 100 if ma100_60_min_ago else 0
         self.algo_helper.info("delta_2: {}".format(delta_2))
+        
+        
+        
+        # formula delta_x
+        
+        delta_x = (ma200_last / ma100_last - 1) * 100 if ma100_last else 0
+        self.algo_helper.info("delta_x: {}".format(delta_x))
+        
+        
+        # formula delta_y
+        
+        delta_y = (ma200_120_min_ago / ma100_120_min_ago - 1) * 100 if ma100_120_min_ago else 0
+        self.algo_helper.info("delta_y: {}".format(delta_y))
         
         
         # formula rapporto_delta_1_delta_2
@@ -1340,7 +1354,7 @@ class maddog:
                     and deviation_ma5_sotto_ma300 < -0.22
                     and deviation_ma5_sotto_ma450 < -1.20
                     
-                    and delta_1_78_39 < delta_2_78_39_70_min
+                    and delta_x < delta_y
                     
                     and deviation_ma10_sopra_ma200 < -0.22
                     
@@ -1374,7 +1388,7 @@ class maddog:
                     # 25 gen 5-28 da 5-50
                     # attenzione importante ! aggiunto doppio delta 78-39 ! (70 min ago) vedi giorno 13 feb 2023 (2 volte ha comprato 1043 B)
                     # 20 feb 2023 3-10 a 0.02 da 0.01
-                    
+                    # 24 feb 2023 and delta_x < delta_y
                     
                     
                     
