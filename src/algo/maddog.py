@@ -14196,7 +14196,28 @@ class maddog:
                         
                     
                     
-                    
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and delta_300_100 > delta_300_100_60_min
+                      
+                        and deviation_ma300_sopra_ma450 > 0.10
+                        
+                        
+                        and ma2_last < ma2_2_min_ago
+                        and deviation_sell < -0.144
+                        and ma3_last < ma39_last
+                        and ma100_last < ma100_60_min_ago
+                        and ma300_last < ma300_120_min_ago
+                    ):
+                        sell = "SELL 1 90-110 min con ma50 < and ma100 < and (deviation_sell < -0.142 and ma3_last < ma39_last) 300 < 120 min ago - r 10170 B1x"
+                        action = "sell"
+                        
+                        # 27 giu 2022 dev sell 0.145 da 0.15
+                        
+                        # > estate -0.14 da -0.145
+                        # 15 dic 2022 -0.142 da -0.14 con doppio delta 300-100 notte
+                        
+                        
                     elif (
                         ma50_last < ma50_2_min_ago
                         and delta_300_100 > delta_300_100_60_min
@@ -14205,18 +14226,24 @@ class maddog:
                         and deviation_ma300_sopra_ma450 > -0.10
                         
                         and ma2_last < ma2_2_min_ago
-                        and deviation_sell < -0.142
+                        and deviation_sell < -0.143
                         and ma3_last < ma39_last
                         and ma100_last < ma100_60_min_ago
                         and ma300_last < ma300_120_min_ago
                     ):
-                        sell = "SELL 1 90-110 min con ma50 < and ma100 < and (deviation_sell < -0.142 and ma3_last < ma39_last) 300 < 120 min ago - r 10170 B1"
+                        sell = "SELL 1 90-110 min con ma50 < and ma100 < and (deviation_sell < -0.142 and ma3_last < ma39_last) 300 < 120 min ago - r 10170 B1y"
                         action = "sell"
                         
                         # 27 giu 2022 dev sell 0.145 da 0.15
                         
                         # > estate -0.14 da -0.145
                         # 15 dic 2022 -0.142 da -0.14 con doppio delta 300-100 notte
+                        
+                        
+                        
+                        
+                        
+                        
                         
                         
                     elif (
