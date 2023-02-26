@@ -9390,8 +9390,8 @@ class maddog:
                     and deviation_ma3_sopra_ma10 > 0.10
                     and deviation_ma5_sopra_ma28 > 0.01
                     
-                    and deviation_bellissima > 0.045
-                    and deviation_buy3 > 0.045
+                    and deviation_bellissima > 0.02
+                    and deviation_buy3 > 0.02
                     and deviation_ma7_sopra_ma40 > 0.05
                
                     and ma3_last > ma13_last
@@ -9403,7 +9403,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
              
                 ):
-                    buy = "BUY 3 IN MEZZO (effetti laterali) 78>100 E con ma69 > and dev_bellissima > 0.12 IMPORTATA DA BUY 4 RCCR - r 6599 A1y"
+                    buy = "BUY 3 IN MEZZO (effetti laterali) 78>100 E con ma69 > IMPORTATA DA BUY 4 RCCR - r 6599 A1y"
                     action = "buy"
                     percentage = 50
                     
@@ -9411,6 +9411,8 @@ class maddog:
                     #  2 ott 2022 dev bellissima 0.05 da 0.12
                     # 17 gen 2023 dev bellissima 0.045 da 0.05
                     # 17 gen 2023 buy3 0.045 da 0.05
+                    # 26 feb 2023 buy3 0.02 da 0.05
+                    # 17 gen 2023 dev bellissima 0.02 da 0.045
                     
                     
                     
