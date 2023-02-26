@@ -19103,18 +19103,19 @@ class maddog:
                         ma50_last < ma50_2_min_ago
                         and ma300_last > ma450_last
                         and deviation_ma5_sotto_ma300 < 0.40
-                        and deviation_ma100_sopra_ma300 > 0.20
+                        and deviation_ma100_sopra_ma300 > 0.10
                         and ma2_last < ma2_2_min_ago 
                          
                         and ma8_last < ma150_last
                     ):
-                        sell = "SELL 3 dopo 90 min CON 5-300 > 0.40 E con ma50< MA ma100 > ma300 and 5-150 AND 300>450 - r 14270 B1"
+                        sell = "SELL 3 dopo 90 min CON 5-300 < 0.40 E con ma50< MA dev100-300> 0.10 AND 300>450 - r 14270 B1"
                         action = "sell"
                         
                         # se sta in alto NO DEVIATION SELL - la 100 se ne sta andando in alto.
                         # > estate 3-78 da 3-39
                         # 13 set 5-86 da 3-78
                         # 25 sett 5-150 da 5-28
+                        # 26 feb 2023 dev_ma100_sopra_ma300 > 0.10 da > 0.20
                         
                         
                     elif (    
