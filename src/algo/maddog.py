@@ -22823,4 +22823,4 @@ class maddog:
             # penso sempre a te.
             # grazie sempre.
             # grazie.
-        
+            # compa
