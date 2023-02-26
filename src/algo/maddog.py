@@ -6167,7 +6167,7 @@ class maddog:
                 
                 
                 elif (
-                    deviation_buy2 > 0.10
+                    deviation_buy2 > 0.08
                     and ma300_last > ma300_720_min_ago
                     and ma300_last > ma300_120_min_ago
                     and ma200_last > ma200_120_min_ago
@@ -6176,10 +6176,10 @@ class maddog:
                     and ma100_last < ma100_60_min_ago
                     
                     and deviation_ma5_sopra_ma28 > 0.20
-                    and deviation_bellissima > 0.10
+                    
                     
                     and deviation_buy_ma3_sopra_ma13 > 0.10
-                    and deviation_ma7_sopra_ma40 > 0.09
+                    and deviation_ma7_sopra_ma40 > 0.05
                     and ma4_last > ma9_last
                     and ma3_last > ma40_last
                     and ma4_last > ma78_last
@@ -6194,7 +6194,7 @@ class maddog:
                     # > estate ho alzato buy
                     # 11 ott 2022 5-28 0.17 da 0.15
                     # 20 ott 2022 5-28 0.20 da 0.17
-                    
+                    # 23 feb 2023 buy2 0.08 da 0.10
                     
                     
                 elif (
