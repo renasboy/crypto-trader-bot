@@ -3789,7 +3789,7 @@ class maddog:
                     ma2_last >= ma2_2_min_ago
                     
                     and deviation_trend_ma200 > -0.30
-                    and ma4_last > ma18_last
+                    and ma4_last > ma16_last
                     
                     and deviation_buy_crollo_1 < -0.70
                     and deviation_buy_crollo_1 > -0.90
@@ -3798,7 +3798,7 @@ class maddog:
                     
                   
                 ):
-                    buy = "BUY 1 AUDI che NON E' un grande ribasso MASERATI e NON E' un crollo FERRARI ! con deviation trend ma200 e 4-18 - r 3043"
+                    buy = "BUY 1 AUDI che NON E' un grande ribasso MASERATI e NON E' un crollo FERRARI ! con deviation trend ma200 e 4-16 - r 3043"
                     action = "buy"
                     percentage = 80
                     
@@ -3813,7 +3813,7 @@ class maddog:
                     # 28 ott 2022 4-25
                     # 15 gen 2023 4-20
                     # 20 feb 2023 4-18
-                
+                    # 10 mar 2023 4-16
                     
                     
                 
