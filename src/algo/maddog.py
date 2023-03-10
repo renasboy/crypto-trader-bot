@@ -2346,7 +2346,7 @@ class maddog:
                     and ma200_last < ma200_120_min_ago
                     
                     and deviation_ma3_sopra_ma10 > 0.07
-                    and deviation_ma5_sopra_ma28 > 0.09
+                    and deviation_ma5_sopra_ma28 > 0.08
                     
                     and ma2_last >= ma20_last
                     and ma2_last >= ma2_2_min_ago
@@ -2366,7 +2366,7 @@ class maddog:
                     #  16 nov ho tolto ma5_last > ma59_last e ho messo dev callas = 5/54 <-0.10 PENSIERO LATERALE - VEDI 16 NOV ore 15 :33
                     # 19 GEN 2023 5-28 a 0.09 da 0.10
                     # 29 gen 2023 deviation_callas < -0.11 da -0.10
-                   
+                    # 10 mar 2023 5-28 > 0.08 da 0.09
                 
                 # BUY 1 tempo FINE AUTUNNO (quasi inverno !)
                 
