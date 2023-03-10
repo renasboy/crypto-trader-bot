@@ -1909,10 +1909,10 @@ class maddog:
                 # BUY 1 PERICOLOSA derivata dal tardo autunno ! togliendo i 40 minuti della ma30 
                 
                 elif (     
-                    ma8_last > ma54_last
+                    ma8_last > ma50_last
                     and ma78_last < ma200_last
                     and deviation_ma3_sopra_ma10 > 0.24
-                    and deviation_ma5_sopra_ma28 > 0.30
+                    and deviation_ma5_sopra_ma28 > 0.28
                     
                     and ma39_last > ma39_30_min_ago
                     and ma69_last >= ma69_2_min_ago
@@ -1928,14 +1928,14 @@ class maddog:
                     and ma2_last > ma20_last
                     and ma2_last > ma2_2_min_ago
                 ):    
-                    buy = "BUY 1 PERICOLOSA 8-54 derivata dal tardo autunno ! togliendo i 40 minuti della ma30 con 11-59 con 5-28 > 0.30 - r 1396 Ab"
+                    buy = "BUY 1 PERICOLOSA 8-54 derivata dal tardo autunno ! togliendo i 40 minuti della ma30 con 11-59 con 5-28 > 0.28 - r 1396 Ab"
                     action = "buy"
                     percentage = 70
                     
                     # 100 deve stare un po' sotto alla 300 !
                     # 22 giu 2022 se 78 >200 5-28 > 0.30
-                    
-                  
+                    # 10 mar 2023 8-50 da 8-54
+                    # 10 mar 2023 5-28 a 0.28 da 0.30
                     
                     
                 # BUY 1 PERICOLOSA derivata dal tardo autunno ! togliendo i 40 minuti della ma30 
