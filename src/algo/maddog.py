@@ -4686,7 +4686,7 @@ class maddog:
                     
                     and deviation_ma10_sopra_ma200 < -0.80
                     
-                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma10 > 0.102
                     and deviation_ma5_sopra_ma28 > 0.01
                     
                     and ma5_last > ma33_last
@@ -4704,6 +4704,8 @@ class maddog:
                     buy = "BUY 1 PENSIERO LATERALE ! - r 4000"
                     action = "buy"
                     percentage = 80
+                    
+                    # 10 mar 2023 3-10 a 0.102 da 0.01
                     
                     
                     
