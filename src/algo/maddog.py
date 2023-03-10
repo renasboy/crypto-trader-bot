@@ -14529,6 +14529,7 @@ class maddog:
                     
                     elif (
                         ma50_last > ma50_2_min_ago
+                        and ma300_last > ma450_last
                         and ma300_last > ma300_120_min_ago
                         and (ma5_prev > ma90_prev and ma5_last < ma90_last)
                         and deviation_sell > 0.65 and deviation_sell < 1.49
@@ -14536,10 +14537,27 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 dopo 110 min con ma50 > incrocio 5-90 (!) se 100-200 > 0.45 and deviation_sell 0.65 - 1.49 RABONA ALLA RONALDO - r 10346 A"
+                        sell = "SELL 1 dopo 110 min con ma50 > incrocio 5-90 (!) se 100-200 > 0.45 and deviation_sell 0.65 - 1.49 RABONA ALLA RONALDO - r 10346 A1"
                         action = "sell"
                         
                         # 26 ott se 300>300 120 min ago vende con ma90
+                        
+                        
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and ma300_last < ma450_last
+                        and ma300_last > ma300_120_min_ago
+                        and (ma5_prev > ma78_prev and ma5_last < ma78_last)
+                        and deviation_sell > 0.65 and deviation_sell < 1.49
+                        and deviation_ma100_sopra_ma200 > 0.45
+                        and ma2_last < ma2_2_min_ago
+                        
+                    ):
+                        sell = "SELL 1 dopo 110 min con ma50 > incrocio 5-78 (!) se 100-200 > 0.45 and deviation_sell 0.65 - 1.49 RABONA ALLA RONALDO - r 10346 A2"
+                        action = "sell"
+                        
+                        # 26 ott se 300>300 120 min ago vende con ma90
+                        # 10 mar 2023 MA se 300<450 fase crollo VENDI UN PO' PRIMA. quindi 5-78 da 5-90
                         
                         
                     elif (
