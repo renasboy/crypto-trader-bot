@@ -14773,7 +14773,7 @@ class maddog:
                         
                     elif (    
                         ma50_last < ma50_2_min_ago
-                        and deviation_ma39 < -0.197
+                        and deviation_ma39 < -0.1965
                         and deviation_sell > 0.20
                         and ma5_last < ma5_2_min_ago
                         and ma300_last > ma300_120_min_ago
@@ -14785,7 +14785,7 @@ class maddog:
                         
                         # ma39 NON DEVE VENDERE in fase laterale ma in alto
                         # 17 gen 2023 ma39 <-0.197 da <-0.195
-                        
+                        # 16 mar 2023 ma39 <-0.1965 da <-0.197
                         
                     elif (    
                         ma50_last < ma50_2_min_ago
