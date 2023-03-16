@@ -1686,32 +1686,14 @@ class maddog:
                 
                 elif (    
                     ma5_last > ma50_last
-                    and ma59_last > ma59_120_min_ago
+                    
                     and ma300_last > ma450_last
                     
-                    and deviation_ma100_sopra_ma300 < 0.30
-                    and deviation_ma100_sopra_ma300 > -0.30
+                    and deviation_ma100_sopra_ma300 < 0.27
+                    and deviation_ma100_sopra_ma300 > -0.27
                     
                     and deviation_ma3_sopra_ma10 > 0.05
-                    and deviation_ma3_sopra_ma16 > 0.223
-                    and deviation_ma4_sopra_ma28 > 0.04
-                ):  
-                
-                    buy = "BUY 1 laterale 2 and ma450_last > ma450_480_min_ago e con 200>120 min - r 1206 AA2x1"
-                    action = "buy"
-                    percentage = 50
-                    
-                    
-                elif (    
-                    ma5_last > ma50_last
-                    and ma59_last < ma59_120_min_ago
-                    and ma300_last > ma450_last
-                    
-                    and deviation_ma100_sopra_ma300 < 0.30
-                    and deviation_ma100_sopra_ma300 > -0.30
-                    
-                    and deviation_ma3_sopra_ma10 > 0.05
-                    and deviation_ma3_sopra_ma16 > 0.228
+                    and deviation_ma3_sopra_ma16 > 0.225
                     and deviation_ma4_sopra_ma28 > 0.04
                 ):  
                 
@@ -1730,7 +1712,7 @@ class maddog:
                     # 25 gen 2023 aggiunta 5-28
                     # 14 feb 2023 tolto 100 > 40 min ago (se gia' c'e' 300 sopra 450 e che cazzo !)
                     # 10 mar 2023 dev 4-28 a 0.04 da 0.05
-                    # 16 mar 2023 aggiunta 3-16 > 0.228
+                    # 16 mar 2023 aggiunta 3-16 > 0.225
                     
                 
                     
