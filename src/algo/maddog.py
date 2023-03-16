@@ -9254,19 +9254,20 @@ class maddog:
                     
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
-                    
+                    and deviation_ma3_sopra_ma16 > 0.02
                     and deviation_ma5_sopra_ma28 > 0.11
+                    
                     and ma2_last >= ma2_2_min_ago
                     
                 ):
-                    buy = "BUY 3 29 ago 2022 > 120 min di ribasso AND 8>59 AND 5-28 > 0.11 - r 6570 B"
+                    buy = "BUY 3 29 ago 2022 > 120 min di ribasso AND 8>59 AND 5-28 > 0.11 and 3-16 > 0.02 - r 6570 B"
                     action = "buy"
                     percentage = 90
                     
                     # 14 set 2022 18-78 da 18-100
                     # 11 ott 2022 mentre scende dopo 2 ore se accelera al ribasso (5 si allontana da 300) interviene prima con 8-59 !
                     # 19 ottobre 2022 5-28 0.11 da 0.08
-                    
+                    # 16 mar 2023 3-16 a > 0.02
                     
                     
                     
@@ -18105,7 +18106,7 @@ class maddog:
                     elif (
                         ma50_last < ma50_2_min_ago
                         and deviation_ma39 < -0.165
-                        and deviation_sell < -0.33
+                        and deviation_sell < -0.337
                         
                         and deviation_ma100_sopra_ma200 < 0.25
                         and deviation_ma100_sopra_ma200 > -0.70
@@ -18113,7 +18114,7 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                      
                     ):
-                        sell = "SELL 3 (12-21 min) con ma50 < and deviation_ma39 < -0.165 100 spra 200 > -0.70 - r 13282 a"
+                        sell = "SELL 3 (12-21 min) con ma50 < and deviation_ma39 < -0.165 100 sopra 200 > -0.70 - r 13282 a"
                         action = "sell"
                         
                         # and (ma3_prev > ma33_prev and ma3_last < ma33_last)
@@ -18122,7 +18123,7 @@ class maddog:
                         # QUINDI ho abbassato da 0.17 a 0.16 a 0.15
                         # HO NOTATO CHE ANCHE INCROCIO 5-100 SAREBBE ARRIVATO TARDI
                         # ALLORA METTO incrocio 3-78 e deviation < 0.10
-                        
+                        # 16 mar 2023 dev sell a -0.337 da -0.33
                         
                         
                         
