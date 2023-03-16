@@ -22959,7 +22959,7 @@ class maddog:
                 
                 and (ma3_prev > ma285_prev and ma3_last < ma285_last)
                 and deviation_ma100_sopra_ma300 < -0.30
-                and ma3_last < ma8_last
+                and ma5_last < ma39_last
                 and ma200_last < ma300_last
         
             ):
@@ -22969,7 +22969,7 @@ class maddog:
                 # questa condizione e' un capolavoro
                 # prima era incrocio verso l' alto 3-300 durante un ribasso
                 # 14 ottobre 2022 incrocio verso il basso 3-285 e ma3 < ma8
-                        
+                # 16 mar 2023 5-39 da 3-8      
                 
                 
                 
