@@ -10208,17 +10208,20 @@ class maddog:
                     
                     and deviation_ma5_sotto_ma300 < -0.35
                     
+                    and deviation_ma3_sopra_ma10 > 0.05
                     and deviation_ma5_sopra_ma28 > 0.08
+                    
                     and ma2_last >= ma2_2_min_ago
                     
                 ):
-                    buy = "BUY 4 29 ago 2022 > 120 min di ribasso - deviation_ma5_sotto_ma300"
+                    buy = "BUY 4 29 ago 2022 > 120 min di ribasso - deviation_ma5_sotto_ma300 - r 7039 A"
                     action = "buy"
                     percentage = 90
                     
                     # vuoi comprare dopo 120 min di ribasso ? deve essere 5-300 < -0.35 ! voglio uno sconto ulteriore dello 0.35% ! PENSIERO LATERALE
                     
                 # BUY 4 29 ago 2022 > 180 min di ribasso
+                # 16 mar 2023 aggiunta 3-10 > 0.05
                 
                 elif (
                     
