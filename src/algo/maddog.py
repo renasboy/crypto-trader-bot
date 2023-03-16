@@ -1692,6 +1692,7 @@ class maddog:
                     and deviation_ma100_sopra_ma300 > -0.30
                     
                     and deviation_ma3_sopra_ma10 > 0.05
+                    deviation_ma3_sopra_ma16 > 0.20
                     and deviation_ma4_sopra_ma28 > 0.04
                 ):  
                 
@@ -1710,7 +1711,7 @@ class maddog:
                     # 25 gen 2023 aggiunta 5-28
                     # 14 feb 2023 tolto 100 > 40 min ago (se gia' c'e' 300 sopra 450 e che cazzo !)
                     # 10 mar 2023 dev 4-28 a 0.04 da 0.05
-                    
+                    # 16 mar 2023 aggiunta 3-16 > 0.20
                     
                 
                     
