@@ -17331,16 +17331,32 @@ class maddog:
                         # 17 gen 2023 3-125 da 3-78
                         
                         
+                        
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and (ma3_prev > ma11_prev and ma3_last < ma11_last)
+                        and ma300_last > ma450_last
+                        and (ma3_prev > ma20_prev and ma3_last < ma20_last)
                         and deviation_sell > 2.71
                         and ma2_last < ma2_2_min_ago
                     ):
 
-                        sell = "SELL 2 dopo 110 min con ma50 > incrocio 3-11 (!) and deviation_sell > 2.71 - r 12584"
+                        sell = "SELL 2 dopo 110 min con ma50 > incrocio 3-20 con 300>450 and deviation_sell > 2.71 - r 12584 A"
                         action = "sell"
                         
+                        # 16 mar 2023 3-20 da 3-11 con 300>450
+                        
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and ma300_last < ma450_last
+                        and (ma3_prev > ma13_prev and ma3_last < ma13_last)
+                        and deviation_sell > 2.71
+                        and ma2_last < ma2_2_min_ago
+                    ):
+
+                        sell = "SELL 2 dopo 110 min con ma50 > incrocio 3-13 (!) con 300<450 and deviation_sell > 2.71 - r 12584 B"
+                        action = "sell"
+                        
+                        # 16 mar 2023 3-13 da 3-11 con 300<450
                         
 
                     ######################################################################################## con trend discendente
