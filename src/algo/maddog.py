@@ -21380,13 +21380,13 @@ class maddog:
                         and deviation_ma5_sotto_ma300 < 0.10
                         and ma2_last < ma2_2_min_ago 
                         and deviation_sell < -0.23
-                        and ma3_last < ma39_last
+                        and ma3_last < ma33_last
                     ):
                         sell = "SELL 4-5-x dopo 90 min con 5-300 < 0.10 E ma50 < and (deviation_sell < -0.23 and ma3_last < ma39_last) - r 15906 B"
                         action = "sell"
                         
-                        # 7 feb 2023 -0.23 da -0.21
-                    
+                        #  7 feb 2023 -0.23 da -0.21
+                        # 17 mar 2023 3-33 da 3-39 vedi 3 mar 2023 ore 14:46 sembra che 3-39 sia arrivata tardi.
                     
                     
             #################################################################################################################### VENDITE SPECIALI !
