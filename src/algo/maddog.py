@@ -17084,13 +17084,15 @@ class maddog:
                     elif (
                         ma50_last > ma50_2_min_ago
                         and deviation_ma100_sopra_ma300 < 0.40
-                        and ma4_last < ma20_last
+                        and ma4_last < ma69_last
                         and deviation_sell > 0.57 and deviation_sell < 0.90
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 2 90-110 min con ma50 > con 4-20 CON 100 sopra 300 > 0.40 and deviation_sell 0.57-0.90 DRIBBLING ALLA RONALDO - r 12315 b"
+                        sell = "SELL 2 90-110 min con ma50 > con 4-69 CON 100 sopra 300 > 0.40 and deviation_sell 0.57-0.90 DRIBBLING ALLA RONALDO - r 12315 B"
                         action = "sell"
                         
+                        # 17 mar 2023 4-69 da 4-20 questa e' la base
+                        # ATTENZIONE dovrai aggiungere una nuova condizione speciale pochi maledetti e subito tra 0.80 e 1.20
                         
                     
                     elif (
