@@ -20726,16 +20726,31 @@ class maddog:
                     
                     
                     # -------------------------------------------------------------------------------------- guadagno durante il crollo
-
+                    
+                    
                     elif (
                         ma50_last < ma50_2_min_ago
-                        and (ma3_prev > ma18_prev and ma3_last < ma18_last)
+                        and deviation_ma10_sopra_ma200 > 0.20
+                        and (ma3_prev > ma22_prev and ma3_last < ma22_last)
                         and deviation_sell > 0.23
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 4-5-x eventuale guadagno durante il crollo (21-60 min) con ma50 < incrocio 3 - 18 and deviation_sell > 0.23 - r 15487"
+                        sell = "SELL 4-5-x eventuale guadagno durante il crollo (21-60 min) con ma50 < incrocio 3 - 20 and deviation_sell > 0.23 - r 15487a"
                         action = "sell"
                         
+                        # 17 mar 2023 3-20 da 3-18 vedi 3 mar 2023 ore 3:43 madonna ! c'e' stato un crollo spaventoso e si e' comportato benissimo !
+                        
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        deviation_ma10_sopra_ma200 < 0.20
+                        and (ma3_prev > ma20_prev and ma3_last < ma20_last)
+                        and deviation_sell > 0.23
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 4-5-x eventuale guadagno durante il crollo (21-60 min) con ma50 < incrocio 3 - 20 and deviation_sell > 0.23 - r 15487b"
+                        action = "sell"
+                        
+                        # 17 mar 2023 3-20 da 3-18 vedi 3 mar 2023 ore 3:43 madonna ! c'e' stato un crollo spaventoso e si e' comportato benissimo !
                         
                     
                     
