@@ -2122,10 +2122,32 @@ class maddog:
                     
                     
                
-                # BUY 1 tempo PRIMAVERA che considera il passare del tempo con ma30 < 
+                # BUY 1 tempo PRIMAVERA che considera il passare del tempo con ma30 <
+                
                 
                 elif (     
                     ma50_last > ma100_last
+                    and deviation_ma300_sopra_ma450 > -0.17
+                    and ma100_last > ma200_last
+                    and deviation_buy_ma2_sopra_ma5 > 0.12
+                    
+                    and ma30_last < ma30_40_min_ago
+                 
+                    and deviation_ma5_sopra_ma28 > 0.175
+                    and deviation_bellissima > 0.03
+                    and ma2_last > ma20_last
+                    and ma5_last >= ma5_2_min_ago
+                    and ma2_last > ma2_2_min_ago
+                    
+                ):    
+                    buy = "BUY 1 tempo PRIMAVERA che considera il passare del tempo con deviation_bellissima > 0.06 and deviation_ma5_sopra_ma28 > 0.18 - r 1562a"
+                    action = "buy"
+                    percentage = 90
+                    
+                    
+                elif (     
+                    ma50_last > ma100_last
+                    and deviation_ma300_sopra_ma450 < -0.17
                     and ma100_last > ma200_last
                     and deviation_buy_ma2_sopra_ma5 > 0.12
                     
@@ -2138,7 +2160,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                     
                 ):    
-                    buy = "BUY 1 tempo PRIMAVERA che considera il passare del tempo con deviation_bellissima > 0.06 and deviation_ma5_sopra_ma28 > 0.18 - r 1562"
+                    buy = "BUY 1 tempo PRIMAVERA che considera il passare del tempo con deviation_bellissima > 0.06 and deviation_ma5_sopra_ma28 > 0.18 - r 1562b"
                     action = "buy"
                     percentage = 90
                     
