@@ -13885,16 +13885,16 @@ class maddog:
                         and ma200_last < ma200_120_min_ago
                         and ma300_last < ma300_120_min_ago
                    
-                        and deviation_sell < -0.29
+                        and deviation_sell < -0.30
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 da 50-90 min AGGIUNTA TARDIVA MA NECESSARIA ! and delta_1 < delta_2 and deviation_sell < -0.29 e 300 < 5 ore - r 9888 a2"
+                        sell = "SELL 1 da 50-90 min AGGIUNTA TARDIVA MA NECESSARIA ! and delta_1 < delta_2 and deviation_sell < -0.30 e 300 < 5 ore - r 9888 A2"
                         action = "sell"
                         
                         # > estate -0.28 da -0.18
                         # 14 ott 2022 0.29 da 0.28 condizione forse senza forse NECESSARIA !
                         # 19 ott 2022 0.31 da 0.29 delta 1< delta 2 ! bravo mario
-                        
+                        # 17 mar 2023 dev sell -0.30 da -0.29 vedi 27 feb 2023 ore 21:07
                         
                         
                         
