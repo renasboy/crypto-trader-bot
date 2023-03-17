@@ -12227,7 +12227,28 @@ class maddog:
                     
                     elif (
                         ma50_last > ma50_2_min_ago
+                        and ma300_last > ma450_last
                         
+                        and delta_1 < delta_2
+                        and ma100_last > ma100_60_min_ago
+                        
+                        and (ma5_prev > ma45_prev and ma5_last < ma45_last)
+                        
+                        and deviation_sell > 0.34 and deviation_sell < 0.56
+                        and ma2_last < ma2_2_min_ago
+                        
+                    ):
+                        sell = "SELL 1 (21-50 min) con ma50 > and INCROCIO 5-39 and deviation_sell 0.34 - 0.56 la prima FINTA ALLA MARADONA  - GIORNO - r 8680a"
+                        action = "sell"
+                        
+                        # 31 maggio 2022 5-39 da 5-20
+                        # 26 feb 2023 INCROCIO dall' ALTO verso VERSO il BASSO 5-39 VEDI 26 feb 2023 ore 20:18
+                        # 17 mar 2023 5-45 da 5-39 se 300>450
+                        
+                        
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and ma300_last < ma450_last
                         
                         and delta_1 < delta_2
                         and ma100_last > ma100_60_min_ago
@@ -12238,12 +12259,12 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 (21-50 min) con ma50 > and INCROCIO 5-39 and deviation_sell 0.34 - 0.56 la prima FINTA ALLA MARADONA  - GIORNO - r 8680"
+                        sell = "SELL 1 (21-50 min) con ma50 > and INCROCIO 5-39 and deviation_sell 0.34 - 0.56 la prima FINTA ALLA MARADONA  - GIORNO - r 8680b"
                         action = "sell"
                         
                         # 31 maggio 2022 5-39 da 5-20
                         # 26 feb 2023 INCROCIO dall' ALTO verso VERSO il BASSO 5-39 VEDI 26 feb 2023 ore 20:18
-                        
+                        # 17 mar 2023 5-39 se 300<450
                         
                         
                     ###################################################################### doppio delta < 1 TREND COMINCIA A SCENDERE ! vendi con ma50 !
