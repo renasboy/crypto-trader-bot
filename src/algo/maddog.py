@@ -21480,16 +21480,16 @@ class maddog:
             elif (
                 
                 ma3_last < ma100_last
-                and deviation_sell < -0.68
+                and deviation_sell < -0.67
                 and deviation_ma100_sopra_ma300 < 0.20
                 and ma2_last < ma2_2_min_ago 
              
             ):
-                sell = "SELL condizione speciale 5 - 21 giugno 2022 - deviation_sell < -0.68 - r 16027 Bb"
+                sell = "SELL condizione speciale 5 - 21 giugno 2022 - deviation_sell < -0.67 - r 16027 BB"
                 action = "sell"   
              
                 # 21 giugno 2022 RICORDO TERRIBILE del 21 giugno 2022 !  9372 A ha venduto a -2.23% !!!
-                
+                # 17 mar 2021 dev sel -0.67 da -0.68
                 
             
                 
@@ -21505,7 +21505,7 @@ class maddog:
                 
                 and deviation_ma5_sotto_ma200 > -0.90
             ):
-                sell = "SELL condizione speciale 6 - SALVAGENTE 4 deviation 3-39 <-0.25 and dev <-0.36 - con ma50 < e con ma5 sotto ma200 > -1.00 - r 16047"
+                sell = "SELL condizione speciale 6 - SALVAGENTE 4 deviation 3-39 <-0.25 and dev <-0.36 - con ma50 < e con ma5 sotto ma200 > -0.90 - r 16047"
                 action = "sell"   
                 
 
