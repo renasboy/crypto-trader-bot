@@ -4880,7 +4880,7 @@ class maddog:
                     and deviation_ma300_sopra_ma450 > -0.20
                     
                     and deviation_ma3_sopra_ma10 > 0.01
-                    and deviation_ma5_sopra_ma28 > 0.01
+                    and deviation_ma5_sopra_ma28 > -0.01
                     
                     and ma200_last < ma200_120_min_ago
                     and ma300_last < ma300_120_min_ago
@@ -4903,7 +4903,7 @@ class maddog:
                     # > estate 3-10 0.17 e 5-28 0.20 DOVEVO ALZARE IL BUY quando se ne va lateralmente dopo il crollo
                     # 24 feb 2023 3-10 a 0.01 da 0.10
                     # 24 feb 2023 5-28 a 0.01 da 0.10
-                    
+                    # 17 mar 2023 5-28 a -0.01 da 0.01 cazzo
                
                     
                     
