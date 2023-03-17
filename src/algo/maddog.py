@@ -6660,6 +6660,7 @@ class maddog:
                     ma2_last > ma2_2_min_ago
                     and deviation_buy_crollo_1 < -2.30
                     and ma3_last > ma15_last
+                    and deviation_ma3_sopra_ma10 > 0.125
                 ):
                     buy = "BUY 2 DURANTE IL CROLLO - modo 1 2-7 - r 5067"
                     action = "buy"
@@ -6667,7 +6668,7 @@ class maddog:
                     
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     # 14 GIU 2022 3-15 PERCHE' COMPRAVA CONTINUAMENTE DURANTE IL CROLLO CON 3-7
-                    
+                    # 17 mar 2023 ho aggiunto 3-10 > 0.125 vedi 3 mar 2023 ore 2:51
                     
                     
                 # BUY 2 secondo modo - DURANTE IL CROLLO - questa condizione e' entrata in azione ! ( e mi e' sembrata ben fatta !)
