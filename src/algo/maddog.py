@@ -1354,6 +1354,7 @@ class maddog:
                     
                 
                 # BUY 1 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-59 - riga 1043 B
+                
                 elif (
                     
                     ma5_last > ma28_last
@@ -1446,7 +1447,7 @@ class maddog:
                  
                     
                 elif (    
-                    ma28_last > ma300_last
+                    ma28_last > ma200_last
                     and ma300_last < ma300_120_min_ago
                     and ma200_last < ma200_60_min_ago
                     
@@ -1460,12 +1461,12 @@ class maddog:
                     and ma6_last > ma39_last
                 ):    
               
-                    buy = "BUY 1 con 28>300 and 69 > 100 e 200< and deviation_bellissima > 0.12 and 5-28 > 0.16 and 3-10 > 0.10 - r 1061"
+                    buy = "BUY 1 con 28>200 and 69 > 100 e 200< and deviation_bellissima > 0.12 and 5-28 > 0.16 and 3-10 > 0.10 - r 1061"
                     action = "buy"
                     percentage = 90
                     
                     # > estate dev bellissima 0.12 and 5-28 0.16 and 3-10 > 0.10
-                    
+                    # 17 mar 2023 28-200 da 28-300
                     
                     
                 # ------------------------------------------------------ BUY 1 MOLTO RISCHIOSO modo 1 ! quando incomincia il ribasso MA ma300 120 > E ma200 120 >
