@@ -7003,9 +7003,33 @@ class maddog:
                 # BUY 2 che ci riprova TORNANDO ALLE ORIGINI ( TREND LATERALE !) con ma200< and ma300< AND 100 vicina alla 300
                 
                 elif (
+                    deviation_buy2 > 0.02
+                    and deviation_ma100_sopra_ma300 > -0.20
+                    and ma300_last > ma450_last
+                    and deviation_ma3_sopra_ma10 > 0.14
+                    and deviation_ma5_sopra_ma28 > 0.18
+                    
+                    and deviation_bellissima > 0.05
+                    and ma8_last >= ma8_2_min_ago
+                    and ma2_last > ma2_2_min_ago
+                    and ma3_last > ma7_last
+                    and ma3_last > ma13_last
+                    and deviation_buy_ma3_sopra_ma20 > 0.05
+                    and deviation_ma4_sopra_ma25 > 0.04
+                    
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_120_min_ago
+                ):
+               
+                    buy = "BUY 2 che ci riprova TORNANDO ALLE ORIGINI ( TREND LATERALE !) con ma200< and ma300< AND 100 vicina alla 300 - r 5412a"
+                    action = "buy"
+                    percentage = 70
+                    
+                    
+                elif (
                     deviation_buy2 > 0.05
                     and deviation_ma100_sopra_ma300 > -0.20
-                    
+                    and ma300_last < ma450_last
                     and deviation_ma3_sopra_ma10 > 0.14
                     and deviation_ma5_sopra_ma28 > 0.18
                     
@@ -7021,7 +7045,7 @@ class maddog:
                     and ma300_last < ma300_120_min_ago
                 ):
                
-                    buy = "BUY 2 che ci riprova TORNANDO ALLE ORIGINI ( TREND LATERALE !) con ma200< and ma300< AND 100 vicina alla 300 - r 5412"
+                    buy = "BUY 2 che ci riprova TORNANDO ALLE ORIGINI ( TREND LATERALE !) con ma200< and ma300< AND 100 vicina alla 300 - r 5412b"
                     action = "buy"
                     percentage = 70
 
