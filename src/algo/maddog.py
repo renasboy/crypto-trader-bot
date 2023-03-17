@@ -1462,7 +1462,7 @@ class maddog:
                     and ma6_last > ma39_last
                 ):    
               
-                    buy = "BUY 1 con 28>200 and 69 > 100 e 200< and dev_bellissima > 0.12 and 5-28 > 0.16 and 3-10 > 0.10 CON 300 vicina o sopra alla 450 - r 1061a"
+                    buy = "BUY 1 con 28>200 and 69 > 100 e 200< and dev_bellissima > 0.12 and 5-28 > 0.16 and 3-10 > 0.10 CON 300 vicina o sopra alla 450 - r 1061"
                     action = "buy"
                     percentage = 90
                     
@@ -1470,31 +1470,7 @@ class maddog:
                     # 17 mar 2023 28-200 da 28-300
                     # 300 vicina o sopra alla 450
                     
-                elif (    
-                    ma28_last > ma200_last
-                    and ma300_last < ma300_120_min_ago
-                    and ma200_last < ma200_60_min_ago
-                  
-                    and deviation_ma300_sopra_ma450 < -0.15
-                    
-                    and deviation_ma3_sopra_ma10 > 0.10
-                    and deviation_ma5_sopra_ma28 > 0.16
-                    and deviation_bellissima > 0.12
-                    
-                    and ma69_last > ma100_last
-                    and ma3_last > ma8_last
-                    
-                    and ma6_last > ma39_last
-                ):    
-              
-                    buy = "BUY 1 con 28>200 and 69 > 100 e 200< and dev_bellissima > 0.12 and 5-28 > 0.16 and 3-10 > 0.10 CON 300 lontana e sotto alla 450 - r 1061b"
-                    action = "buy"
-                    percentage = 90
-                    
-                    # > estate dev bellissima 0.12 and 5-28 0.16 and 3-10 > 0.10
-                    # 17 mar 2023 28-200 da 28-300
-                    # 300 lontana o sotto alla 450
-                    
+                
                 # ------------------------------------------------------ BUY 1 MOLTO RISCHIOSO modo 1 ! quando incomincia il ribasso MA ma300 120 > E ma200 120 >
                   
                 elif (     
