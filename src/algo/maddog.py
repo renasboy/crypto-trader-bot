@@ -21458,7 +21458,7 @@ class maddog:
             # 5 - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 > -1.00
             
             elif (
-                deviation_ma39 < -0.251
+                deviation_ma39 < -0.25
                 and deviation_sell < -0.36
                 and ma2_last < ma2_2_min_ago 
                 
@@ -21467,7 +21467,7 @@ class maddog:
                 
                 and deviation_ma5_sotto_ma200 > -0.90
             ):
-                sell = "SELL condizione speciale 6 - SALVAGENTE 4 deviation 3-39 <-0.253 and dev <-0.36 - con ma50 < e con ma5 sotto ma200 > -1.00 - r 16047"
+                sell = "SELL condizione speciale 6 - SALVAGENTE 4 deviation 3-39 <-0.25 and dev <-0.36 - con ma50 < e con ma5 sotto ma200 > -1.00 - r 16047"
                 action = "sell"   
                 
 
@@ -21478,6 +21478,7 @@ class maddog:
                 # 25 gen 2023 HA FATTO -0.95 ! dev 39 -0.253 da 0.255 E dev sell -0.36 da -0.362
                 #  1 feb 2023 dev 39 -0.251 da -0.253 ha fatto -1.31 (RCCR -1.98% !) ( sta migliorando ! )
                 #  1 feb 2023 deviation_ma5_sotto_ma200 > -0.90 da > 1.00 se vado a vedere sell 30 gen 2023 oe 20:12 5-200 = -1.02 !
+                # 17 mar 2023 dev 39 -0.25 da -0.251
                 
                 #########################################################################################################################
                 
@@ -21709,12 +21710,12 @@ class maddog:
             elif (
                 ma2_last < ma4_last
                 and ma2_last < ma6_last
-                and deviation_sell < -0.58
+                and deviation_sell < -0.575
                 
-                and deviation_ma5_sotto_ma200 > -1.00
+                and deviation_ma5_sotto_ma200 > -0.90
             ):
                   
-                sell = "SELL condizione speciale 15 - CROLLO IMPROVVISO - and deviation_ma5_sotto_ma200 > -1.00 - r 16311"
+                sell = "SELL condizione speciale 15 - CROLLO IMPROVVISO - and deviation_ma5_sotto_ma200 > -0.90 - r 16311"
                 action = "sell"
             
                 # con -0.59 il 6 feb 2022 ha fatto -0.85
@@ -21722,7 +21723,7 @@ class maddog:
                 # deviation = ma4_last / last_trade_price
 
                 # FORSE E' L' UNICA DEVIATION CHE MI POTRA' SALVARE DA UN CROLLO IMPROVVISO COME QUELLO DEL 3 NOVEMBRE 2021
-                
+                # 17 mar 2023 dev sel -0.575 da -0.58
                 
                 
                 
