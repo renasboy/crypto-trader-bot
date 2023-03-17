@@ -3813,7 +3813,7 @@ class maddog:
                 elif (
                     ma2_last >= ma2_2_min_ago
                     and deviation_ma300_sopra_ma450 < 0.01
-                    and deviation_trend_ma200 > -0.30
+                    
                     and ma4_last > ma16_last
                     
                     and deviation_buy_crollo_1 < -0.70
