@@ -4883,6 +4883,7 @@ class maddog:
                     and deviation_ma300_sopra_ma450 > -0.20
                     
                     and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > 0.06
                     and deviation_ma5_sopra_ma28 > -0.01
                     
                     and ma200_last < ma200_120_min_ago
@@ -4907,7 +4908,7 @@ class maddog:
                     # 24 feb 2023 3-10 a 0.01 da 0.10
                     # 24 feb 2023 5-28 a 0.01 da 0.10
                     # 17 mar 2023 5-28 a -0.01 da 0.01 cazzo
-               
+                    # 17 mar 2023 agginta 3-16 > 0.06 vedi 6 mar 2023 ore 5:16
                     
                     
                 ##################################################################################### esperimento ! andato male ! avevo messo
