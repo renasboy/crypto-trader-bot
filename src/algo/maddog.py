@@ -3790,7 +3790,7 @@ class maddog:
                 
                 elif (
                     ma2_last >= ma2_2_min_ago
-                    and deviation_ma300_sopra_ma450 > 0.01
+                    
                     and deviation_trend_ma200 > -0.30
                     and ma4_last > ma16_last
                     
@@ -3801,45 +3801,14 @@ class maddog:
                     and deviation_ma3_sopra_ma16 > 0.12
                   
                 ):
-                    buy = "BUY 1 AUDI che NON E' un grande ribasso MASERATI e NON E' un crollo FERRARI ! con deviation trend ma200 e 4-16 - r 3043 A"
+                    buy = "BUY 1 AUDI che NON E' un grande ribasso MASERATI e NON E' un crollo FERRARI ! con deviation trend ma200 e 4-16 - r 3043"
                     action = "buy"
                     percentage = 80
                     
                     # CROLLO STIAMO ANCORA IN ALTO con 3-16 perche' paradossalmente serve piu'prudenza vedi 27 feb 2023 ore 17:04
                     
                     
-                # BUY 1 grande CORREZIONE AUDI che NON E' FIAT e NON E' MASERATI e NON E' FERRARI ! con deviation trend ma200
                 
-                elif (
-                    ma2_last >= ma2_2_min_ago
-                    and deviation_ma300_sopra_ma450 < 0.01
-                    
-                    and ma4_last > ma16_last
-                    
-                    and deviation_buy_crollo_1 < -0.70
-                    
-                    
-                    and deviation_ma3_sopra_ma10 > 0.09
-               
-                ):
-                    buy = "BUY 1 AUDI che NON E' un grande ribasso MASERATI e NON E' un crollo FERRARI ! con deviation trend ma200 e 4-16 - r 3043 B"
-                    action = "buy"
-                    percentage = 80
-                    
-                    # deviation_buy_crollo_1 = ma8_last / ma78_last
-                    # deviation_correzione = ma5_last / ma30_last
-                    # deviation_trend_ma200 = ma200_last / ma200_120_min_ago
-                    # compare prega per me !
-                    
-                    # and deviation_correzione_1 > -0.01 significa una ndecchia prima di 5-30 !
-                    # 22 set aggiunta 3-10
-                    #  7 ott 2022 5-25 cosi' e' piu' chiaro chi interviene (tolta dev correzione)
-                    # 28 ott 2022 4-25
-                    # 15 gen 2023 4-20
-                    # 20 feb 2023 4-18
-                    # 10 mar 2023 4-16
-                    
-                    # CROLLO STIAMO IN BASSO non ho messo 3-16
                     
                 
                     
