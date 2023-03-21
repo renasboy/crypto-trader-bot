@@ -23142,3 +23142,5 @@ class maddog:
             # grazie sempre.
             # grazie.
             # compa
+            # 21 mar 2023 ritorna il compa
+            
