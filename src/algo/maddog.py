@@ -13525,13 +13525,14 @@ class maddog:
                         ma50_last > ma50_2_min_ago
                         and ma300_last < ma300_120_min_ago
                         and ma200_last > ma200_120_min_ago
-                        and (ma4_prev > ma50_prev and ma4_last < ma50_last)
+                        and (ma5_prev > ma59_prev and ma5_last < ma59_last)
                         and deviation_sell > 0.53 and deviation_sell < 0.90
                         and ma2_last < ma2_2_min_ago
                     ):    
-                        sell = "SELL 1 da 50 a 90 min con ma50> and incrocio 4-20 se 300 < 120 min ago and deviation_sell 0.51-0.90 RONALDO - r 9514b"
+                        sell = "SELL 1 da 50 a 90 min con ma50> and incrocio 5-59 se 300 < 120 min ago and deviation_sell 0.51-0.90 RONALDO - r 9514 B"
                         action = "sell"
                         
+                        # 29 mar 2023 incrocio a 5-59 da 4-50
                         
                     
                     
