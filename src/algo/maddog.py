@@ -9942,23 +9942,23 @@ class maddog:
                     
                     
                 elif (
-                    ma28_last >= ma28_2_min_ago
+                    ma20_last >= ma20_2_min_ago
                     and ma200_last > ma200_301_min_ago
                     and ma300_last > ma300_60_min_ago
                     and deviation_ma250_sopra_ma300 > 0.04
-                  
-                    and deviation_buy3 > 0.005
-                    and delta_buy3_incrocio_ma3_ma8 > 0.04
-                    and deviation_ma4_sopra_ma30 > 0.05
                     
+                    and delta_buy3_incrocio_ma3_ma8 > 0.04
+                    and deviation_ma4_sopra_ma30 > 0.04
+                    and deviation_ma5_sopra_ma28 > 0.03
+                  
                     and ma3_last > ma8_last
-                    and ma3_last > ma78_last
+                    and ma3_last > ma50_last
                     
                     and ma2_last > ma2_2_min_ago
                     and ma7_last > ma25_last
                     
-                    and ma13_last > ma100_last
-                    and deviation_ma5_sopra_ma28 > 0.03
+                    and ma8_last > ma100_last
+                    
                 ):
                     buy = "BUY 4B RIVOLUZIONARIO con ma78 > - r 6859 A1"
                     action = "buy"
