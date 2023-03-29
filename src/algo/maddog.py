@@ -21984,12 +21984,12 @@ class maddog:
                 
                 
                 
-            # 21 - SELL condizione speciale dopo il crollo improvviso del 24 aprile 2022 ! and deviation_ma5_sotto_ma200 < -1.00
+            # 21 - SELL condizione speciale Bocelli - Core 'ngrato - dopo il crollo improvviso del 24 aprile 2022 !
                     
             elif (    
-                ma2_last < ma4_last
-                and ma2_last < ma6_last
-                and deviation_crollo_24_aprile < -0.572
+                ma2_last <= ma4_last
+                and ma2_last <= ma6_last
+                and deviation_crollo_24_aprile < -0.571
                 
                 and delta_1 > delta_2
                 and deviation_ma5_sotto_ma200 < -0.90
@@ -22007,8 +22007,9 @@ class maddog:
                 # MA VA BENE !
                 # 27 giu 2022 a -0.58 da -0.59
                 #  2 lug 2022 a -0.57 da -0.58 dopo che ha fatto -0.96 durante un crollo
-                # 10 mar 2023 5 sotto 200 a <-0.90 da <-1.00
+                # 10 mar 2023 5 sotto 200 a <-0.90 da < -1.00
                 # 10 mar 2023 a -0.572 da -0.57
+                # 29 mar 2023 a -0.571 da -0.572 dopo che ha fatto -1.59% - Bocelli- Core 'ngrato
                 
                 ######################################################################################### fine dopo il crollo improvviso del 24 aprile 2022
                 
