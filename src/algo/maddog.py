@@ -10488,6 +10488,7 @@ class maddog:
                     and ma78_last > ma150_last
                     
                     and deviation_ma3_sopra_ma10 > 0.05
+                    and deviation_ma3_sopra_ma16 > 0.165
                     and deviation_ma5_sopra_ma28 > 0.12
                     
                     and deviation_buy3 > 0.06
@@ -10512,8 +10513,8 @@ class maddog:
                     # 10 gen 2023 5-28 a 0.12 da 0.17
                     # 10 gen 2023 dev buy 3 a 0.06 da 0.07
                     # 10 gen 2023 dev 7-40 a 0.08 da 0.09
-                    # aggiunta 3-10 a 0.05
-                    
+                    # 15 mar 2023 aggiunta 3-10 a 0.05
+                    # 29 mar 2023 aggiunta 3-16 > 0.165
                     
                     
                     
