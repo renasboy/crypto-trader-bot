@@ -4880,7 +4880,8 @@ class maddog:
                     
                     
                     
-                # BUY 1 che ci riprova quando se ne va lateralmente dopo il crollo CON 100 -200 vicine E lontane
+                # BUY 1 che ci riprova quando se ne va lateralmente dopo il crollo CON 180-200 vicine E lontane
+                
                 
                 elif (
                     ma28_last < ma300_last
@@ -4906,7 +4907,7 @@ class maddog:
                 
                 ):
                
-                    buy = "BUY 1 che ci riprova quando se ne va lateralmente con 100 vicina alla 200 - r 4138 Bx"
+                    buy = "BUY 1 che ci riprova quando se ne va lateralmente con 180 vicina alla 200 no 3-16 - r 4138 Bx"
                     action = "buy"
                     percentage = 80
 
@@ -4943,7 +4944,7 @@ class maddog:
                 
                 ):
                
-                    buy = "BUY 1 che ci riprova quando se ne va lateralmente con 100 lontana dalla 200 - r 4138 By"
+                    buy = "BUY 1 che ci riprova quando se ne va lateralmente con 180 lontana dalla 200 aggiunta 3-16 - r 4138 By"
                     action = "buy"
                     percentage = 80
 
