@@ -5371,12 +5371,13 @@ class maddog:
                 elif (    
                     
                     deviation_ma100_sopra_ma300 > 0.50
-                    and ma5_last > ma150_last
+                    and deviation_ma3_sopra_ma10 > 0.113
+                    and deviation_ma3_sopra_ma16 > 0.225
                     
                     and ma3_last > ma28_last
                     and ma200_last > ma200_20_min_ago
-                    and deviation_ma3_sopra_ma10 > 0.113
                     
+                    and ma5_last > ma150_last
                     and ma100_last > ma200_last
                     and ma200_last > ma300_last
                     
@@ -5394,11 +5395,11 @@ class maddog:
                     
                     # 13 set aggiunte 3-10 and 5-28
                     # se sta molto in alto per comprare 5 deve incrociare dal basso con la 100 ed avere 3-10 > 0.11 vedi ore 12:06 del 26 set 2022
-                    # VA IN CONFLITTO. aalora ho lasciato solo 3-10 > 0.11
+                    # VA IN CONFLITTO. allora ho lasciato solo 3-10 > 0.11
                     # BUY 1 correzione FIAT con riga 1384 RCCR + 3-10 - altra riga RCCR che e' andata bene.
                     # vedi 30 set ore 18:26 RCCR riga 1384
                     # in MADDOG ho aggiunto 3-10 > 0.07 e lasciato 3-28
-                    
+                    # 29 mar 2023 aggiunta 3-16 > 0.225 (se ricompra DOPO UN GRANDE RIALZO serve prudenza) (cerca di non perdere quello che hai guadagnato)
                     
                   
                     
