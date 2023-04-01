@@ -6693,8 +6693,10 @@ class maddog:
                 # BUY 2 DURANTE UN RIBASSO AUDI con 5-16 copiata da RCCR CHE E' ANDATA BENISSIMO ! 22 ago 2022
                 
                 elif (
+                    deviation_ma300_sopra_ma450 < 0.15
+                    and deviation_ma300_sopra_ma450 > -0.15
                     
-                    deviation_buy_crollo_1 < -0.60
+                    and deviation_buy_crollo_1 < -0.60
                     and deviation_buy_crollo_1 > -1.60
                     
                     and ma4_last > ma15_last
@@ -6704,14 +6706,19 @@ class maddog:
                     and ma78_last < ma200_last
                     
                 ):
-                    buy = "BUY 2 DURANTE UN RIBASSO AUDI con 4-15 copiata da RCCR CHE E' ANDATA BENISSIMO ! 22 ago 2022 - r 5019"
+                    buy = "BUY 2 DURANTE UN RIBASSO AUDI con 4-15 copiata da RCCR CHE E' ANDATA BENISSIMO ! 22 ago 2022 - r 5019 b"
                     action = "buy"
                     percentage = 50
                     
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     # questa cosa che 78 deve essere < 200 ha dell' incredibile. MA NON TOCCARE !
                     # 16 mar 2023 aggiunta 3-10 > 0.125 3-10 deve stare sopra 0.115
+                    
+                    # se 300 e' attaccata alla 450 caso particolare crollo durante trend laterale.
                     # 1 apr 2023 tolto 5-16 > 0.10 e aggiunto 4-15 al posto di 5-16
+                    
+                    
+                    
                     
                     
                     
