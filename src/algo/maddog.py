@@ -7466,7 +7466,8 @@ class maddog:
                     and ma100_last > ma200_last
                     and deviation_ma100_sopra_ma300 > 0.40
                     and ma300_last > ma300_120_min_ago
-                    
+                  
+                    and deviation_ma3_sopra_ma18 > 0.08
                     and deviation_buy > 0.27
                     
                     and ma150_last > ma150_60_min_ago
