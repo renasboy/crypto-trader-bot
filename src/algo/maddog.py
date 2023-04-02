@@ -4888,8 +4888,8 @@ class maddog:
                     
                     and deviation_ma180_sopra_ma200 > -0.02
                   
-                    and deviation_ma300_sopra_ma450 < 0.20
-                    and deviation_ma300_sopra_ma450 > -0.20
+                    and deviation_ma300_sopra_ma450 < 0.30
+                    and deviation_ma300_sopra_ma450 > -0.30
                     
                     and deviation_ma3_sopra_ma10 > 0.01
                     
