@@ -10503,6 +10503,31 @@ class maddog:
                     
                     
                     
+                # BUY 4 DURANTE UNA CORREZIONE FIAT importata da buy 1 r 2575 che non e' un forte ribasso e non e' un crollo ! (MA ma3 > ma150 mi protegge un po')
+                
+                elif (
+                    
+                    deviation_buy_crollo_1 < -0.29
+                    and deviation_buy_crollo_1 > -0.69
+                    and ma5_last < ma22_last
+                    
+                    and deviation_correzione > 0.03
+                    and deviation_ma100_sopra_ma300 > -0.30
+                    and deviation_ma25_sotto_ma300 < -0.55
+                    
+                    and deviation_ma5_sotto_ma300 < -0.39
+                    
+                    and ma2_last > ma2_2_min_ago
+                ):
+                    buy = "BUY 4 FIAT importata da buy 1 r 2575 DEVE STARE DISTANTE DALLA 300 ! - riga 7040"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # questa e' andata benissimo su RCCR ! il 10 ottobre 2022 ! maddog dormiva !
+                    # vedi RCCR r 1294
+                    # 2 apr 2023 portata dal buy 1
+                    
+                    
                     
                 # BUY 4 se 8 > 200 con 5-28 > 0.20 ! e con ma69 > and deviation_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali) IMPORTATA DA BUY 5
                 
