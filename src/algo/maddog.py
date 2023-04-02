@@ -3272,15 +3272,16 @@ class maddog:
                     
                     and deviation_ma5_sotto_ma300 < -0.40
                     
+                    and deviation_ma3_sopra_ma10 > 0.072
                     and ma2_last > ma2_2_min_ago
                 ):
-                    buy = "BUY 1 FIAT 5 DEVE STARE DISTANTE DALLA 300 ! - riga 2575"
+                    buy = "BUY 1 FIAT 5 DEVE STARE DISTANTE DALLA 300 ! - r 2575"
                     action = "buy"
                     percentage = 80
                     
                     # questa e' andata benissimo su RCCR ! il 10 ottobre 2022 ! maddog dormiva !
                     # vedi RCCR r 1294
-                    
+                    # 2 apr 2023 aggiunta 3-10 > 0.073
                     
                     
                     
