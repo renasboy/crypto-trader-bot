@@ -3261,8 +3261,32 @@ class maddog:
                 # BUY 1 DURANTE UNA CORREZIONE FIAT che non e' un forte ribasso e non e' un crollo ! (MA ma3 > ma150 mi protegge un po')
                 
                 elif (
+                    ma300_last > ma450_last
+                    and deviation_buy_crollo_1 < -0.29
+                    and deviation_buy_crollo_1 > -0.69
+                    and ma5_last < ma22_last
                     
-                    deviation_buy_crollo_1 < -0.29
+                    and deviation_correzione > 0.03
+                    and deviation_ma100_sopra_ma300 > -0.30
+                    and deviation_ma25_sotto_ma300 < -0.60
+                    
+                    and deviation_ma5_sotto_ma300 < -0.40
+                    
+                    
+                    and ma2_last > ma2_2_min_ago
+                ):
+                    buy = "BUY 1 FIAT 5 DEVE STARE DISTANTE DALLA 300 ! - r 2575 a"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # questa e' andata benissimo su RCCR ! il 10 ottobre 2022 ! maddog dormiva !
+                    # vedi RCCR r 1294
+                    
+                    
+                    
+                elif (
+                    ma300_last < ma450_last
+                    and deviation_buy_crollo_1 < -0.29
                     and deviation_buy_crollo_1 > -0.69
                     and ma5_last < ma22_last
                     
@@ -3275,13 +3299,13 @@ class maddog:
                     and deviation_ma3_sopra_ma10 > 0.072
                     and ma2_last > ma2_2_min_ago
                 ):
-                    buy = "BUY 1 FIAT 5 DEVE STARE DISTANTE DALLA 300 ! - r 2575"
+                    buy = "BUY 1 FIAT 5 DEVE STARE DISTANTE DALLA 300 ! - r 2575 b"
                     action = "buy"
                     percentage = 80
                     
                     # questa e' andata benissimo su RCCR ! il 10 ottobre 2022 ! maddog dormiva !
                     # vedi RCCR r 1294
-                    # 2 apr 2023 aggiunta 3-10 > 0.073
+                    # 2 apr 2023 aggiunta 3-10 > 0.073 se 300<450
                     
                     
                     
