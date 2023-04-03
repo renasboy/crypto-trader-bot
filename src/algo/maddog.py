@@ -4940,80 +4940,8 @@ class maddog:
                     
                   
                   
-                elif (
-                    
-                    ma28_last < ma300_last
-                    
-                    and deviation_ma180_sopra_ma200 > -0.02
-                  
-                    and deviation_ma300_sopra_ma450 < 0.30
-                    and deviation_ma300_sopra_ma450 > -0.30
-                    
-                    and deviation_ma3_sopra_ma10 > 0.01
-                    
-                    and deviation_ma5_sopra_ma28 > -0.01
-                    
-                    and ma200_last < ma200_120_min_ago
-                    and ma300_last < ma300_120_min_ago
-                    
-                    and delta_300_100 < delta_300_100_60_min
-                    
-                    and deviation_ma100_sopra_ma300 > -0.40
-                    and deviation_ma200_sopra_ma300 > -0.40
-                    
-                    and ma2_last >= ma2_2_min_ago
                 
-                ):
-               
-                    buy = "BUY 1 che ci riprova quando se ne va lateralmente con 180 vicina alla 200 no 3-16 - r 4150 BY"
-                    action = "buy"
-                    percentage = 80
-
-                    # 2 lug 2022 3-10 0.21 da 0.22
                     
-                    # > estate 3-10 0.17 e 5-28 0.20 DOVEVO ALZARE IL BUY quando se ne va lateralmente dopo il crollo
-                    # 24 feb 2023 3-10 a 0.01 da 0.10
-                    # 24 feb 2023 5-28 a 0.01 da 0.10
-                    # 17 mar 2023 5-28 a -0.01 da 0.01 cazzo
-                    # 17 mar 2023 agginta 3-16 > 0.06 vedi 6 mar 2023 ore 5:16
-                    
-                    
-                elif (
-                    
-                    ma28_last < ma300_last
-                  
-                    and deviation_ma180_sopra_ma200 < -0.02
-                    
-                    and deviation_ma300_sopra_ma450 < 0.20
-                    and deviation_ma300_sopra_ma450 > -0.20
-                    
-                    and deviation_ma3_sopra_ma10 > 0.01
-                    and deviation_ma3_sopra_ma16 > 0.06
-                    and deviation_ma5_sopra_ma28 > -0.01
-                    
-                    and ma200_last < ma200_120_min_ago
-                    and ma300_last < ma300_120_min_ago
-                    
-                    and delta_300_100 < delta_300_100_60_min
-                    
-                    and deviation_ma100_sopra_ma300 > -0.40
-                    and deviation_ma200_sopra_ma300 > -0.40
-                    
-                    and ma2_last >= ma2_2_min_ago
-                
-                ):
-               
-                    buy = "BUY 1 che ci riprova quando se ne va lateralmente con 180 lontana dalla 200 aggiunta 3-16 - r 4150 BZ"
-                    action = "buy"
-                    percentage = 80
-
-                    # 2 lug 2022 3-10 0.21 da 0.22
-                    
-                    # > estate 3-10 0.17 e 5-28 0.20 DOVEVO ALZARE IL BUY quando se ne va lateralmente dopo il crollo
-                    # 24 feb 2023 3-10 a 0.01 da 0.10
-                    # 24 feb 2023 5-28 a 0.01 da 0.10
-                    # 17 mar 2023 5-28 a -0.01 da 0.01 cazzo
-                    # 17 mar 2023 agginta 3-16 > 0.06 vedi 6 mar 2023 ore 5:16
                     
                     
                     
