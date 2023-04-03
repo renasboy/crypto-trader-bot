@@ -1,5 +1,5 @@
-PROVA
-class maddog: BLA BLA BLA
+
+class maddog:
   
     def __init__(self, helper, buy_percentage, sell_percentage):
         self.algo_helper = helper
