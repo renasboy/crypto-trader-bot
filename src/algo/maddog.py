@@ -4908,6 +4908,7 @@ class maddog:
                 # BUY 1 che ci riprova quando se ne va lateralmente dopo il crollo CON 180-200 vicine E lontane
                 
                 elif (
+                    
                     ma28_last < ma300_last
                     ma5_last < ma59_last
                     
@@ -4940,6 +4941,7 @@ class maddog:
                   
                   
                 elif (
+                    
                     ma28_last < ma300_last
                     
                     and deviation_ma180_sopra_ma200 > -0.02
@@ -4977,6 +4979,7 @@ class maddog:
                     
                     
                 elif (
+                    
                     ma28_last < ma300_last
                   
                     and deviation_ma180_sopra_ma200 < -0.02
@@ -5026,6 +5029,7 @@ class maddog:
                 # BUY 1 CHE MANCAVA aggressiva - (SEMBRA pari al BUY DURANTE UN RIBASSO AUDI !)
                 
                 elif (
+                    
                     ma5_last < ma33_last
                     
                     and deviation_ma3_sopra_ma10 > 0.085
