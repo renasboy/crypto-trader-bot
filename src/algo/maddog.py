@@ -4907,7 +4907,38 @@ class maddog:
                     
                 # BUY 1 che ci riprova quando se ne va lateralmente dopo il crollo CON 180-200 vicine E lontane
                 
+                elif (
+                    ma28_last < ma300_last
+                    ma5_last < ma59_last
+                    
+                    and deviation_ma300_sopra_ma450 < 0.30
+                    and deviation_ma300_sopra_ma450 > -0.30
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    
+                    and deviation_ma5_sopra_ma28 > -0.01
+                    
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_120_min_ago
+                    
+                    and delta_300_100 < delta_300_100_60_min
+                    
+                    and deviation_ma100_sopra_ma300 > -0.40
+                    and deviation_ma200_sopra_ma300 > -0.40
+                    
+                    and ma2_last >= ma2_2_min_ago
                 
+                ):
+               
+                    buy = "BUY 1 che ci riprova quando se ne va lateralmente con 180 vicina alla 200 no 3-16 - r 4150 BX"
+                    action = "buy"
+                    
+                    # c'e' un problema : prende 4138 che non esiste
+                    # io avevo fatto 4138 bx e 4138 by 
+                    # cosi' per capire ho fatto 4150 BX BY BZ (e vedere se esce ancora 4138)
+                    
+                  
+                  
                 elif (
                     ma28_last < ma300_last
                     
@@ -4932,7 +4963,7 @@ class maddog:
                 
                 ):
                
-                    buy = "BUY 1 che ci riprova quando se ne va lateralmente con 180 vicina alla 200 no 3-16 - r 4138 Bx"
+                    buy = "BUY 1 che ci riprova quando se ne va lateralmente con 180 vicina alla 200 no 3-16 - r 4150 BY"
                     action = "buy"
                     percentage = 80
 
@@ -4969,7 +5000,7 @@ class maddog:
                 
                 ):
                
-                    buy = "BUY 1 che ci riprova quando se ne va lateralmente con 180 lontana dalla 200 aggiunta 3-16 - r 4138 By"
+                    buy = "BUY 1 che ci riprova quando se ne va lateralmente con 180 lontana dalla 200 aggiunta 3-16 - r 4150 BZ"
                     action = "buy"
                     percentage = 80
 
