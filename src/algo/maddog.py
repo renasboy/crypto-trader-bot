@@ -6667,19 +6667,20 @@ class maddog:
                 # BUY 2 DURANTE UN RIBASSO AUDI con 5-16 copiata da RCCR CHE E' ANDATA BENISSIMO ! 22 ago 2022
                 
                 elif (
+                    deviation_ma300_sopra_ma450 > 0.15
                     
-                    deviation_buy_crollo_1 < -0.60
+                    and deviation_buy_crollo_1 < -0.60
                     and deviation_buy_crollo_1 > -1.60
                     
                     and ma4_last > ma15_last
                     and deviation_ma3_sopra_ma10 > 0.125
-                    and deviation_ma5_sopra_ma16 > 0.10
+                    and deviation_ma5_sopra_ma16 > 0.09
                     
                     and ma2_last > ma2_2_min_ago
                     and ma78_last < ma200_last
                     
                 ):
-                    buy = "BUY 2 DURANTE UN RIBASSO AUDI con 5-16 copiata da RCCR CHE E' ANDATA BENISSIMO ! 22 ago 2022 - r 5019"
+                    buy = "BUY 2 DURANTE UN RIBASSO AUDI con 5-16 copiata da RCCR CHE E' ANDATA BENISSIMO ! 22 ago 2022 - r 5019 A"
                     action = "buy"
                     percentage = 50
                     
