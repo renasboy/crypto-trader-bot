@@ -22046,19 +22046,20 @@ class maddog:
                 
             # 18 - SELL condizione speciale dopo crollo improvviso del 24 aprile 2022 ! and deviation_ma5_sotto_ma200 > -1.00
                     
-            elif (    
-                ma2_last < ma4_last
-                and ma2_last < ma6_last
-                and ma33_last < ma78_last
+            elif (
+                ma2_last <= ma3_last
+                and ma2_last <= ma4_last
+                and ma2_last <= ma6_last
+                and ma28_last < ma78_last
                 
                 and delta_1_200_30 < delta_2_200_30_30_min
                 
-                and deviation_crollo_24_aprile < -0.56
+                and deviation_crollo_24_aprile <= -0.55
                 
-                and deviation_ma5_sotto_ma200 > -1.00
+                and deviation_ma5_sotto_ma200 > -0.95
             ): 
                 
-                sell = "SELL cond. special 18 - DOPO CROLLO IMPROVVISO del 24 aprile 2022 - and dev_ma5_sotto_ma200 > -1.00 - (-0.56) giorno MA 33<78 - r 16399 a2"
+                sell = "SELL cond. special 18 - DOPO CROLLO IMPROVVISO del 24 aprile 2022 - and dev_ma5_sotto_ma200 > -1.00 - (-0.56) giorno MA 33<78 - r 16399 A2"
                 action = "sell"
                         
                 # ho aggiunto anche questa vendita speciale dopo il 24 aprile -1%
@@ -22070,6 +22071,9 @@ class maddog:
                 # MA VA BENE !
                 # con delta_1_200_30 < delta_2_200_30_30_min ho aumentato a -0.56
                 
+                # alt fermi tutti
+                # 18 marzo 2023 ore 17:31 ha fatto -2% ! allora ho messo -0.55 da -0.56
+                #  6 apr 2023 -0.55 da -0.56
                 
                 
                 
