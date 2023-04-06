@@ -9941,7 +9941,7 @@ class maddog:
                     
                     
                 elif (
-                    ma28_last >= ma28_2_min_ago
+                    ma20_last >= ma20_2_min_ago
                     and ma200_last > ma200_301_min_ago
                     and ma300_last > ma300_60_min_ago
                     and deviation_ma250_sopra_ma300 > 0.04
@@ -9951,12 +9951,13 @@ class maddog:
                     and deviation_ma4_sopra_ma30 > 0.05
                     
                     and ma3_last > ma8_last
-                    and ma3_last > ma78_last
+                    and ma3_last > ma50_last
+                    and ma8_last > ma100_last
                     
                     and ma2_last > ma2_2_min_ago
                     and ma7_last > ma25_last
                     
-                    and ma13_last > ma100_last
+                    
                     and deviation_ma5_sopra_ma28 > 0.03
                 ):
                     buy = "BUY 4B RIVOLUZIONARIO con ma78 > - r 6859 A1"
@@ -9966,8 +9967,9 @@ class maddog:
                     # deviation_buy3 = ma4_last/ma30_last
                     # deviation_ma4_sopra_ma100 > 0.25 arrivati al buy 4 DEVE AVERE UNA CERTA FORZA !
                     # ma se 250 > 300 ! serve una forza minore
-                    
-                    
+                    # 6 apr 2023 ma20 2 min ago da ma28 min ago
+                    # 6 apr 2023 3-50 da 3-78
+                    # 6 apr 2023 8-100 da 13-100
                     
                 elif (
                     ma28_last >= ma28_2_min_ago
