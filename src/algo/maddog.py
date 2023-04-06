@@ -4851,6 +4851,7 @@ class maddog:
                 
                 elif (
                     ma28_last > ma300_last
+                  
                     and ma20_last < ma50_last
                     
                     and deviation_ma3_sopra_ma10 > 0.155
@@ -4884,7 +4885,7 @@ class maddog:
                 
                 elif (
                     ma28_last < ma300_last
-                    and MACD > MACD 2min ago
+                    and macd_trend > macd_trend_2_min_ago
                     and deviation_ma300_sopra_ma450 < 0.20
                     and deviation_ma300_sopra_ma450 > -0.20
                     
@@ -4920,7 +4921,8 @@ class maddog:
                     
                 elif (
                     ma28_last < ma300_last
-                    and MACD < MACD 2min ago
+                    and macd_trend < macd_trend_2_min_ago
+                    
                     and deviation_ma300_sopra_ma450 < 0.20
                     and deviation_ma300_sopra_ma450 > -0.20
                     
