@@ -2355,7 +2355,7 @@ class maddog:
                     and ma200_last < ma200_120_min_ago
                     
                     and deviation_ma3_sopra_ma10 > 0.07
-                    and deviation_ma5_sopra_ma28 > 0.07
+                    and deviation_ma5_sopra_ma28 > 0.06
                     
                     and ma2_last >= ma20_last
                     and ma2_last >= ma2_2_min_ago
@@ -2377,7 +2377,7 @@ class maddog:
                     # 29 gen 2023 deviation_callas < -0.11 da -0.10
                     # 10 mar 2023 5-28 > 0.08 da 0.09
                     # 6  apr 2023 5-28 > 0.07 da 0.08
-                    
+                    # 6  apr 2023 5-28 > 0.06 da 0.07
                 
                 # BUY 1 tempo FINE AUTUNNO (quasi inverno !)
                 
