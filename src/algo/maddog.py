@@ -6671,7 +6671,7 @@ class maddog:
                     deviation_buy_crollo_1 < -0.60
                     and deviation_buy_crollo_1 > -1.60
                     
-                    and ma5_last > ma16_last
+                    and ma4_last > ma15_last
                     and deviation_ma3_sopra_ma10 > 0.125
                     and deviation_ma5_sopra_ma16 > 0.10
                     
@@ -6686,7 +6686,7 @@ class maddog:
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     # questa cosa che 78 deve essere < 200 ha dell' incredibile. MA NON TOCCARE !
                     # 16 mar 2023 aggiunta 3-10 > 0.125 3-10 deve stare sopra 0.115
-                    
+                    # 6 apr 2023 4-15 da 5-16
                     
                     
                     
