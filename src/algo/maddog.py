@@ -12426,7 +12426,7 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 (21-50 min) con ma50 > and INCROCIO 5-39 and deviation_sell 0.34 - 0.56 la prima FINTA ALLA MARADONA  - GIORNO - r 8680a"
+                        sell = "SELL 1 (21-50 min) con ma50 > and INCROCIO 5-39 and deviation_sell 0.34 - 0.56 la prima FINTA ALLA MARADONA  - GIORNO - r 8680 B"
                         action = "sell"
                         
                         # 31 maggio 2022 5-39 da 5-20
@@ -12441,18 +12441,20 @@ class maddog:
                         and delta_1 < delta_2
                         and ma100_last > ma100_60_min_ago
                         
-                        and (ma5_prev > ma39_prev and ma5_last < ma39_last)
+                        and (ma5_prev > ma49_prev and ma5_last < ma49_last)
                         
                         and deviation_sell > 0.34 and deviation_sell < 0.56
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 (21-50 min) con ma50 > and INCROCIO 5-39 and deviation_sell 0.34 - 0.56 la prima FINTA ALLA MARADONA  - GIORNO - r 8680b"
+                        sell = "SELL 1 (21-50 min) con ma50 > and INCROCIO 5-49 and deviation_sell 0.34 - 0.56 la prima FINTA ALLA MARADONA  - GIORNO - r 8680 B"
                         action = "sell"
                         
                         # 31 maggio 2022 5-39 da 5-20
                         # 26 feb 2023 INCROCIO dall' ALTO verso VERSO il BASSO 5-39 VEDI 26 feb 2023 ore 20:18
                         # 17 mar 2023 5-39 se 300<450
+                        # 6 apr 2023 5-49 da 5-39
+                        
                         
                         
                     ###################################################################### doppio delta < 1 TREND COMINCIA A SCENDERE ! vendi con ma50 !
