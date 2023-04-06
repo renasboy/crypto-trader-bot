@@ -10234,7 +10234,7 @@ class maddog:
                     and deviation_ma5_sopra_ma28 > 0.12
                     
                     and deviation_bellissima > 0.11
-                    and deviation_buy3 > 0.12
+                    and deviation_buy3 > 0.10
                     and deviation_ma7_sopra_ma40 > 0.09
                
                     and ma3_last > ma13_last
@@ -10246,7 +10246,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
              
                 ):
-                    buy = "BUY 4 NUOVA (trend laterale) 8 > 100 AND ma300_last > ma300_120_min_ago AND 5-28 > 0.12 e con ma69 > - riga 7038 a"
+                    buy = "BUY 4 NUOVA (trend laterale) 8 > 100 AND ma300_last > ma300_120_min_ago AND 5-28 > 0.10 e con ma69 > - r 7038 a"
                     action = "buy"
                     percentage = 70
                     
@@ -10262,7 +10262,7 @@ class maddog:
                     and deviation_ma5_sopra_ma28 > 0.12
                     
                     and deviation_bellissima > 0.11
-                    and deviation_buy3 > 0.12
+                    and deviation_buy3 > 0.11
                     and deviation_ma7_sopra_ma40 > 0.09
                
                     and ma3_last > ma13_last
@@ -10274,7 +10274,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
              
                 ):
-                    buy = "BUY 4 NUOVA (trend laterale) 8 > 100 AND ma300_last > ma300_120_min_ago AND 5-28 > 0.12 e con ma69 > - riga 7038 b"
+                    buy = "BUY 4 NUOVA (trend laterale) 8 > 100 AND ma300_last > ma300_120_min_ago AND 5-28 > 0.11 e con ma69 > - r 7038 b"
                     action = "buy"
                     percentage = 70
                     
@@ -10303,7 +10303,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
              
                 ):
-                    buy = "BUY 4 NUOVA (trend laterale) 8 > 100 AND ma300_last > ma300_120_min_ago AND 5-28 > 0.12 e con ma69 > - riga 7038 c"
+                    buy = "BUY 4 NUOVA (trend laterale) 8 > 100 AND ma300_last > ma300_120_min_ago AND 5-28 > 0.12 e con ma69 > - r 7038 c"
                     action = "buy"
                     percentage = 70
                     
