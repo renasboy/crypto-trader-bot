@@ -179,7 +179,7 @@ class maddog:
         
         # MAC TREND
         macd_trend = self.algo_helper.macd_trend
-        
+        macd_trend_2_min_ago = self.algo_helper.macd_trend_minutes_ago(macd_trend, 2)
         
      
         
@@ -4884,12 +4884,12 @@ class maddog:
                 
                 elif (
                     ma28_last < ma300_last
-                    and deviation_ma180_sopra_ma200 > -0.02
+                    and MACD > MACD 2min ago
                     and deviation_ma300_sopra_ma450 < 0.20
                     and deviation_ma300_sopra_ma450 > -0.20
                     
                     and deviation_ma3_sopra_ma10 > 0.01
-                    and deviation_ma3_sopra_ma16 > 0.06
+                    
                     and deviation_ma5_sopra_ma28 > -0.01
                     
                     and ma200_last < ma200_120_min_ago
@@ -4904,7 +4904,7 @@ class maddog:
                 
                 ):
                
-                    buy = "BUY 1 che ci riprova quando se ne va lateralmente - r 4138 Bx"
+                    buy = "BUY 1 che ci riprova quando se ne va lateralmente macd > no 3-16 - r 4138 Bx"
                     action = "buy"
                     percentage = 80
 
@@ -4920,7 +4920,7 @@ class maddog:
                     
                 elif (
                     ma28_last < ma300_last
-                    and deviation_ma180_sopra_ma200 < -0.02
+                    and MACD < MACD 2min ago
                     and deviation_ma300_sopra_ma450 < 0.20
                     and deviation_ma300_sopra_ma450 > -0.20
                     
