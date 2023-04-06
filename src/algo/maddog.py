@@ -7443,6 +7443,7 @@ class maddog:
                     and ma300_last > ma300_120_min_ago
                     
                     and deviation_buy > 0.27
+                    and deviation_ma3_sopra_ma18 > 0.08
                     
                     and ma150_last > ma150_60_min_ago
                     and ma2_last >= ma2_2_min_ago
@@ -7452,7 +7453,8 @@ class maddog:
                     buy = "BUY 2 nuovo RIALZO IMPROVVISO ma trend gia' in rialzo da 120 min and 0.27 sopra ultimo sell se 300>120 min e 100 sopra 300> 0.40 - r 5670"
                     action = "buy"
                     percentage = 70
-                  
+                    
+                    # 6 apr 2023 3-18 > 0.08
                   
                   
                   
