@@ -5400,7 +5400,7 @@ class maddog:
                     # vedi 30 set ore 18:26 RCCR riga 1384
                     # in MADDOG ho aggiunto 3-10 > 0.07 e lasciato 3-28
                     # 6 apr 2023 5-50 da 5-150 ! 
-                    # 6 apr 2023 aggiunta 3-16 > 0.225
+                    # 6 apr 2023 aggiunta 3-16 > 0.225 (se ricompra DOPO UN GRANDE RIALZO serve prudenza) (cerca di non perdere quello che hai guadagnato)
                     
                   
                     
