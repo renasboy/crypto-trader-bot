@@ -180,7 +180,6 @@ class maddog:
         
         # MAC TREND
         
-        
         macd = self.algo_helper.macd
         macd_2_min_ago = self.algo_helper.macd_minutes_ago(macd, 2)
         
@@ -4893,9 +4892,10 @@ class maddog:
                 
                 elif (
                     ma28_last < ma300_last
+                    and macd > macd_2_min_ago
                     
-                    and deviation_ma300_sopra_ma450 < 0.20
-                    and deviation_ma300_sopra_ma450 > -0.20
+                    and deviation_ma300_sopra_ma450 < 0.25
+                    and deviation_ma300_sopra_ma450 > -0.25
                     
                     and deviation_ma3_sopra_ma10 > 0.01
                     and deviation_ma3_sopra_ma16 > 0.06
@@ -4913,7 +4913,7 @@ class maddog:
                 
                 ):
                
-                    buy = "BUY 1 che ci riprova quando se ne va lateralmente - r 4138 B"
+                    buy = "BUY 1 che ci riprova quando se ne va lateralmente AND MACD > MACD 2 min ago ! - r 4138 B"
                     action = "buy"
                     percentage = 80
 
@@ -4923,8 +4923,9 @@ class maddog:
                     # 24 feb 2023 3-10 a 0.01 da 0.10
                     # 24 feb 2023 5-28 a 0.01 da 0.10
                     # 17 mar 2023 5-28 a -0.01 da 0.01 cazzo
-                    # 17 mar 2023 agginta 3-16 > 0.06 vedi 6 mar 2023 ore 5:16
+                    # 17 mar 2023 aggiunta 3-16 > 0.06 vedi 6 mar 2023 ore 5:16
                     
+                    #  6 apr 2023 aggiunto MACD deve essere > MACD 2 min ago
                     
                     
                 
