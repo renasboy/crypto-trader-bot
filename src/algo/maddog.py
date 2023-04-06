@@ -14458,12 +14458,12 @@ class maddog:
                         and delta_300_100 < delta_300_100_60_min
                         
                         and ma2_last < ma2_2_min_ago
-                        and deviation_sell < -0.16
+                        and deviation_sell < -0.17
                         and ma3_last < ma39_last
                         and ma100_last < ma100_60_min_ago
                         and ma300_last < ma300_120_min_ago
                     ):
-                        sell = "SELL 1 90-110 min con ma50 < and ma100 < and (dev_sell < -0.16 and ma3_last < ma39_last) and 300 < 120 min ago - r 10170 A"
+                        sell = "SELL 1 90-110 min con ma50 < and ma100 < and (dev_sell < -0.17 and ma3_last < ma39_last) and 300 < 120 min ago - r 10170 A"
                         action = "sell"
                         
                         # 27 giu 2022 dev sell 0.145 da 0.15
@@ -14471,7 +14471,7 @@ class maddog:
                         # > estate -0.14 da -0.145
                         # 15 dic dev sell -0.15 da -0.14 con aggiunta doppio delta 300-100 giorno
                         # 22 dic dev sell -0.16 da -0.15
-                        
+                        # 6 apr 2023 -0.17 da -0.16
                         
                         
                         
