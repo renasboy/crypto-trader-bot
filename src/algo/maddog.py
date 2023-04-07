@@ -181,7 +181,7 @@ class maddog:
         # MAC TREND
         
         macd = self.algo_helper.macd
-        macd_2_min_ago = self.algo_helper.macd_minutes_ago(macd, 2)
+        macd_2_min_ago = self.algo_helper.macd_minutes_ago(2)
         
      
         
