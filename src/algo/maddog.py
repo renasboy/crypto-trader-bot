@@ -4899,7 +4899,7 @@ class maddog:
                     and deviation_ma300_sopra_ma450 > -0.25
                     
                     and deviation_ma3_sopra_ma10 > 0.01
-                    and deviation_ma3_sopra_ma16 > 0.06
+                    and deviation_ma3_sopra_ma16 > 0.058
                     and deviation_ma5_sopra_ma28 > -0.01
                     
                     and ma200_last < ma200_120_min_ago
@@ -4927,7 +4927,7 @@ class maddog:
                     # 17 mar 2023 aggiunta 3-16 > 0.06 vedi 6 mar 2023 ore 5:16
                     
                     #  6 apr 2023 aggiunto MACD deve essere > MACD 2 min ago
-                    
+                    # 12 apr 2023 3-16 > 0.059 da 0.06
                     
                 
                     
@@ -15133,8 +15133,8 @@ class maddog:
                         
                     elif (    
                         ma50_last < ma50_2_min_ago
-                        and deviation_ma39 < -0.193
-                        and deviation_sell < -0.12
+                        and deviation_ma39 < -0.194
+                        and deviation_sell < -0.14
                         and deviation_ma5_sotto_ma300 < 0.30
                       
                         and ma5_last < ma5_2_min_ago
@@ -15142,7 +15142,7 @@ class maddog:
                         and ma100_last > ma100_60_min_ago
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 dopo 110 min con ma50 < MA ma100 > E ma300 < e con deviation_ma39 <-0.193 and dev sell < -0.12 - r 10472 B2"
+                        sell = "SELL 1 dopo 110 min con ma50 < MA ma100 > E ma300 < e con dev_ma39 < -0.194 and dev sell < -0.14 - r 10472 B2"
                         action = "sell"
                         
                         # ma39 NON DEVE VENDERE in fase laterale ma in alto
@@ -15151,8 +15151,11 @@ class maddog:
                         # 27 nov 2022 dev sell -0.07 da -0.05
                         # 13 feb 2023 dev sell -0.10 da -0.07
                         #  9 apr 2023 dev sell -0.12 da -0.10
+                        # 12 apr 2023 dev sell -0.14 da -0.12
                         
-                    
+                        # 12 apr 2023 dev39 a 0.194 da 0.193
+                        
+                        
                     # ma se ma100 >
                     
                     elif (
