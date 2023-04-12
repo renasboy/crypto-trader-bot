@@ -21439,7 +21439,7 @@ class maddog:
                         
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and deviation_ma5_sotto_ma300 > 0.50
+                        and deviation_ma5_sotto_ma300 > 0.40
                         and ma4_last < ma125_last
                         and deviation_sell > 0.57 and deviation_sell < 0.90
                         and ma2_last < ma2_2_min_ago
@@ -21447,19 +21447,21 @@ class maddog:
                         sell = "SELL 4-5-x >90 min con ma50 > con 4 < 20 and deviation_sell 0.35 - 0.90 FINTA ALLA RONALDO - r 15839 A"
                         action = "sell"
                         
-                        # 29 ott 2022 4-125 da 4-20 con 5-300 > 0.50
+                        # 29 ott 2022 4-125 da 4-20 con 5-300 > 0.40
                         
                         
                         
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and deviation_ma5_sotto_ma300 < 0.50
-                        and ma4_last < ma20_last
+                        and deviation_ma5_sotto_ma300 < 0.40
+                        and ma4_last < ma49_last
                         and deviation_sell > 0.57 and deviation_sell < 0.90
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 4-5-x >90 min con ma50 > con 4 < 20 and deviation_sell 0.35 - 0.90 FINTA ALLA RONALDO - r 15839 B"
+                        sell = "SELL 4-5-x >90 min con ma50 > con 4 < 49 and deviation_sell 0.35 - 0.90 FINTA ALLA RONALDO - r 15839 B"
                         action = "sell"
+                        
+                        # 12 apr 2023 4-49 da 4-20
                         
                         
                         
