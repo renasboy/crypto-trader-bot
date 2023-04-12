@@ -2073,9 +2073,10 @@ class maddog:
                 
                 elif (     
                     ma8_last > ma28_last
-                    and ma59_last > ma100_last
+                    and macd > macd_2_min_ago
+                    and ma5_last > ma300_last
+                    and ma50_last > ma100_last
                     
-                    and delta_1 < delta_2
                     and ma30_last > ma30_40_min_ago
                     
                     
@@ -2088,7 +2089,7 @@ class maddog:
                     and ma2_last >= ma20_last
                     and ma2_last >= ma2_2_min_ago
                 ):    
-                    buy = "BUY 1 tempo ESTATE PIU' VELOCE 100 > 60 min ago (l' estate se lo puo' permettere!) considera il passare del tempo ! ma30 > - r 1537 A"
+                    buy = "BUY 1 tempo ESTATE PIU' VELOCE 5>300 (l' estate se lo puo' permettere!) considera il passare del tempo della ma30 > + MACD > - r 1537 A"
                     action = "buy"
                     percentage = 90
                     
