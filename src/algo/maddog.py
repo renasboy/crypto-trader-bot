@@ -14686,20 +14686,39 @@ class maddog:
                         
                         # > estate -0.32 da -0.23
                         # 15 gen 2023 -0.33 da -0.32
-                    
+                        
+                        
                     
                     elif (     
                         ma50_last < ma50_2_min_ago
+                        and deviation_ma300_sopra_ma450 > -0.10
                         and ma3_last < ma39_last
-                        and deviation_sell < -0.21
+                        and deviation_sell < -0.25
                         and ma2_last < ma2_2_min_ago
                         and deviation_trend_ma200 > -0.12
                         and ma200_last > ma300_last
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 compa 90-110 min con ma50 < (deviation_sell < -0.21 and ma3_last < ma39_last) con > PERDITA TOLLERATA - r 10241"
+                        sell = "SELL 1 compa 90-110 min con ma50 < (deviation_sell < -0.25 and ma3_last < ma39_last) con > PERDITA TOLLERATA - r 10241a"
                         action = "sell"
                         
+                        # 12 apr 2023 dev sell 0.25 da 0.21 se 300 sta poco sotto o sopra alla 450
+                        
+                        
+                    elif (     
+                        ma50_last < ma50_2_min_ago
+                        and deviation_ma300_sopra_ma450 < -0.10
+                        and ma3_last < ma39_last
+                        and deviation_sell < -0.23
+                        and ma2_last < ma2_2_min_ago
+                        and deviation_trend_ma200 > -0.12
+                        and ma200_last > ma300_last
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 1 compa 90-110 min con ma50 < (deviation_sell < -0.23 and ma3_last < ma39_last) con > PERDITA TOLLERATA - r 10241b"
+                        action = "sell"
+                        
+                        #  12 apr 2023 dev sell 0.23 da 0.21 se 300 sta sotto alla 450
                         
                     
                         
