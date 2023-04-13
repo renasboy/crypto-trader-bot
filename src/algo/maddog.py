@@ -10518,6 +10518,35 @@ class maddog:
                     
                     
                     
+                # BUY 4 13 apr 2023 zia pina > 180 min di ribasso 78 < 150
+                
+                elif (
+                    
+                    
+                    ma78_last < ma150_last
+                    and deviation_ma5_sopra_ma59 < -0.09
+                    
+                    and ma100_last < ma100_180_min_ago
+                    and ma200_last < ma200_180_min_ago
+                    and ma300_last < ma300_180_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and deviation_ma5_sopra_ma28 < 0.10
+                    and ma2_last >= ma2_2_min_ago
+                    
+                ):
+                    buy = "BUY 4 13 apr 2023 zia pina > 180 min di ribasso 78<150 - r 7564 B2"
+                    action = "buy"
+                    percentage = 90
+                    
+                    # 7 feb 2023 deviation_ma5_sopra_ma28 > 0.10 da 0.13
+                    # tolto 18>100 
+                    # aggiunto PENSIERO LATERALE and deviation_ma5_sopra_ma59 < -0.09
+                    
+                    
+                    
                     
                 # BUY 4 se 8 > 200 con 5-28 > 0.20 ! e con ma69 > and deviation_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali) IMPORTATA DA BUY 5
                 
@@ -11284,7 +11313,7 @@ class maddog:
                     #  1 feb 2023 8-100 da 18-100
                     
                     
-                # BUY 5 29 ago 2022 > 180 min di ribasso 78>150
+                # BUY 5 13 apr 2023 zia pina > 180 min di ribasso 78>150
                 
                 elif (
                     
@@ -11302,7 +11331,7 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
                     
                 ):
-                    buy = "BUY 5 29 ago 2022 > 180 min di ribasso 78>150 - r 7564 B1"
+                    buy = "BUY 5 13 apr 2023 zia pina > 180 min di ribasso 78>150 - r 7564 B1"
                     action = "buy"
                     percentage = 90
                     
