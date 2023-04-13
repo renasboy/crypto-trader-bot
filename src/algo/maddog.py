@@ -11314,7 +11314,7 @@ class maddog:
                     
                     
                     ma78_last < ma150_last
-                    and deviation_ma5_sopra_ma59 < -0.20
+                    and deviation_ma5_sopra_ma59 < -0.09
                     
                     and ma100_last < ma100_180_min_ago
                     and ma200_last < ma200_180_min_ago
@@ -11323,7 +11323,7 @@ class maddog:
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
                     
-                    and deviation_ma5_sopra_ma28 > -0.01
+                    and deviation_ma5_sopra_ma28 < 0.10
                     and ma2_last >= ma2_2_min_ago
                     
                 ):
@@ -11333,7 +11333,9 @@ class maddog:
                     
                     # 7 feb 2023 deviation_ma5_sopra_ma28 > 0.10 da 0.13
                     # tolto 18>100 
-                    # aggiunto PENSIERO LATERALE and deviation_ma5_sopra_ma59 < -0.20
+                    # aggiunto PENSIERO LATERALE and deviation_ma5_sopra_ma59 < -0.09
+                    
+                    
                     
                 # NELLA CORREZIONE EVENTUALE (SIAMO AL BUY 5 !) NON HO MESSO and ma50_last > ma100_last
                 
