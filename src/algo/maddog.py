@@ -4899,7 +4899,7 @@ class maddog:
                     and deviation_ma300_sopra_ma450 > -0.25
                     
                     and deviation_ma3_sopra_ma10 > 0.01
-                    and deviation_ma3_sopra_ma16 > 0.058
+                    and deviation_ma3_sopra_ma16 > 0.057
                     and deviation_ma5_sopra_ma28 > -0.01
                     
                     and ma200_last < ma200_120_min_ago
@@ -4928,7 +4928,7 @@ class maddog:
                     
                     #  6 apr 2023 aggiunto MACD deve essere > MACD 2 min ago
                     # 12 apr 2023 3-16 > 0.059 da 0.06
-                    
+                    # 15 apr 2023 3-16 > 0.057 da 0.058
                 
                     
                     
