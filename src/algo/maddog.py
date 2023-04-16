@@ -5361,8 +5361,44 @@ class maddog:
                 
                 
                     
-                    
                 # BUY 1 FOREVER YOUNG PIU' AGGRESSIVO con doppio delta < 1 E MA100> (rialzo) se ma 200 > e se ma250 > ma300  and deviation_ma5_sopra_ma28 > 0.10
+                
+                elif (  
+                    ma8_last > ma100_last
+                    and ma59_last > ma250_last
+                    
+                    and ma200_last > ma200_15_min_ago
+                    
+                    
+                    and delta_1 < delta_2
+                    and ma100_last > ma100_60_min_ago
+                    
+                    and deviation_ma3_sopra_ma10 > 0.02
+                    and deviation_ma5_sopra_ma28 > 0.01
+                 
+                    and ma6_last > ma6_2_min_ago
+                    and ma13_last > ma69_last
+                    and ma13_last > ma13_2_min_ago
+                    and ma2_last > ma2_2_min_ago
+                ):
+                    
+                    buy = "BUY 1 FOREVER YOUNG PIU' AGGRESSIVO (doppio delta < 1 E 100> ) (SOPRA RIALZO RIALZO) - GIORNO - se ma 200 > - r 4410a"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # SITUAZIONE : dopo crollo e dopo primo grande ribalzo riprende a scendere 
+                    # MA ma100 e' intanto andata > ma200 !
+                    # e anche ma200 sta sopra ma300
+                    # 21 ottobre 2022 3-10 0.02 da 0.07 INCREDIBILE vedi differenza tra MADDOG e RCCR 21 ottobre 2022 BUY ore 4:39
+                    # 31 dic 8>300 da 200>300 e' giorno.
+                    #  2 gen 59>200 da 100>200
+                    #  3 gen 8>100 da 59-200
+                    # 16 apr 2023 59>250
+                    
+                    
+                    
+                    
+                # BUY 1 FOREVER YOUNG PIU' AGGRESSIVO con doppio delta < 1 E MA100> (rialzo) se ma 200 > e se ma59 > ma250 and deviation_ma5_sopra_ma28 > 0.10
                 
                 elif (  
                     ma8_last > ma100_last
@@ -5383,7 +5419,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                 ):
                     
-                    buy = "BUY 1 FOREVER YOUNG PIU' AGGRESSIVO (doppio delta < 1 E 100> ) (SOPRA RIALZO RIALZO) - GIORNO - se ma 200 > - r 4410"
+                    buy = "BUY 1 FOREVER YOUNG PIU' AGGRESSIVO (doppio delta < 1 E 100> ) (SOPRA RIALZO RIALZO) - GIORNO - se ma 200 > - r 4410b"
                     action = "buy"
                     percentage = 80
                     
