@@ -1355,13 +1355,13 @@ class maddog:
                     
                     
                 
-                # BUY 1 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-59 - riga 1043 B
+                # BUY 1 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-59 - r 1043 B
                 
                 elif (
                     
                     ma5_last > ma28_last
                     and deviation_ma5_sotto_ma300 < -0.22
-                    and deviation_ma5_sotto_ma450 < -1.20
+                    and deviation_ma5_sotto_ma450 < -0.40
                     
                     and delta_x < delta_y
                     
