@@ -1360,6 +1360,8 @@ class maddog:
                 elif (
                     
                     ma5_last > ma28_last
+                    and macd >= macd_2_min_ago
+                    
                     and deviation_ma5_sotto_ma300 < -0.22
                     and deviation_ma5_sotto_ma450 < -0.40
                     
@@ -1398,8 +1400,8 @@ class maddog:
                     # attenzione importante ! aggiunto doppio delta 78-39 ! (70 min ago) vedi giorno 13 feb 2023 (2 volte ha comprato 1043 B)
                     # 20 feb 2023 3-10 a 0.02 da 0.01
                     # 24 feb 2023 and delta_x < delta_y
-                    
-                    
+                    # 18 apr 2023 5 sotto 450 < -0.40 da -1.20
+                    # 18 apr 2023 and macd >= macd_2_min_ago
                     
                 
                     
