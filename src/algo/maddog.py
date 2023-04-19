@@ -1359,7 +1359,7 @@ class maddog:
                 
                 elif (
                     
-                    ma5_last > ma28_last
+                    ma5_last > ma39_last
                     and macd >= macd_2_min_ago
                     
                     and deviation_ma5_sotto_ma300 < -0.22
@@ -1379,7 +1379,7 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
               
                 ):
-                    buy = "BUY 1 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-59 - r 1043 B"
+                    buy = "BUY 1 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND dev 5-39 - r 1043 B"
                     action = "buy"
                     percentage = 50
                     
