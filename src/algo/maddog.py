@@ -405,13 +405,13 @@ class maddog:
         
         # formula delta_x
         
-        delta_x = (ma200_last / ma100_last - 1) * 100 if ma100_last else 0
+        delta_x = (ma200_last / ma59_last - 1) * 100 if ma59_last else 0
         self.algo_helper.info("delta_x: {}".format(delta_x))
         
         
         # formula delta_y
         
-        delta_y = (ma200_120_min_ago / ma100_120_min_ago - 1) * 100 if ma100_120_min_ago else 0
+        delta_y = (ma200_60_min_ago / ma59_60_min_ago - 1) * 100 if ma59_60_min_ago else 0
         self.algo_helper.info("delta_y: {}".format(delta_y))
         
         
@@ -1374,7 +1374,7 @@ class maddog:
                     and ma200_last < ma200_60_min_ago
                     
                     and deviation_ma3_sopra_ma10 > 0.02
-                    and deviation_ma5_sopra_ma28 > 0.10
+                    and deviation_ma5_sopra_ma28 > 0.05
                     
                     and ma2_last >= ma2_2_min_ago
               
@@ -1402,7 +1402,8 @@ class maddog:
                     # 24 feb 2023 and delta_x < delta_y
                     # 18 apr 2023 5 sotto 450 < -0.40 da -1.20
                     # 18 apr 2023 and macd >= macd_2_min_ago
-                    
+                    # 19 apr 2023 5-28 a 0.05 da 0.10 dopo aggiunta macd
+                    # ma vedi x y
                 
                     
                     
