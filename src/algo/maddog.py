@@ -13542,6 +13542,7 @@ class maddog:
                     
                     elif (
                         ma50_last > ma50_2_min_ago
+                        and macd < macd_2_min_ago
                         and ma300_last > ma450_last
                         and ma100_last > ma150_last
                         and (ma5_prev > ma90_prev and ma5_last < ma90_last)
@@ -13554,6 +13555,8 @@ class maddog:
                         # MARADONA RAFFORZATO accompagna nelle prime fasi di crescita. poi interviene RONALDO se il rialzo comincia a farsi piu' consistente.
                         # 15 nov 2022 5-59 da 5-54
                         # 19 apr 2023 5-90 da 5-59
+                        # 19 apr 2023 aggiunta macd < macd 2 min ago
+                        
                         
                         
                     elif (
