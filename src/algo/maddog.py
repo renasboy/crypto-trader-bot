@@ -15079,6 +15079,7 @@ class maddog:
                     
                     elif (    
                         ma50_last < ma50_2_min_ago
+                        and macd < macd_2_min_ago
                         and ma100_last > ma150_last
                         and ma5_last < ma150_last
                         and deviation_sell > 0.20
@@ -15096,7 +15097,7 @@ class maddog:
                         # 25 gen 2023 5-125 da 3-125
                         # 7 feb 2023 and ma5_last < ma5_2_min_ago
                         # 6 apr 2023 5-150 da 5-125
-                        
+                        # 19 apr 2023 aggiunta macd > macd 2 min ago - solo dopo 110 min !
                         
                         
                     elif (    
