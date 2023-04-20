@@ -2357,6 +2357,8 @@ class maddog:
                 elif (     
                     
                     deviation_callas < -0.12
+                    and macd > macd_2_min_ago
+                    
                     and deviation_ma50_sotto_ma300 < -0.29
                     and deviation_ma78_sotto_ma300 < -0.23
                     and deviation_ma78_sotto_ma200 < -0.30
@@ -2368,7 +2370,7 @@ class maddog:
                     and ma200_last < ma200_120_min_ago
                     
                     and deviation_ma3_sopra_ma10 > 0.07
-                    and deviation_ma5_sopra_ma28 > 0.05
+                    and deviation_ma5_sopra_ma28 > 0.04
                     
                     and ma2_last >= ma20_last
                     and ma2_last >= ma2_2_min_ago
@@ -2395,7 +2397,9 @@ class maddog:
                     #  6  apr 2023 5-28 > 0.06 da 0.07
                     # 15 apr 2023 dev_callas -0.12
                     # 15 apr 2023 5-28 > 0.05 da 0.06
-                    
+                    # 15 apr 2023 5-28 > 0.05 da 0.06
+                    # 20 apr 2023 5-28 > 0.04 da 0.05
+                    # 20 apr 2023 aggiunta macd > macd_2_min_ago
                     
                 
                 # BUY 1 tempo FINE AUTUNNO (quasi inverno !)
