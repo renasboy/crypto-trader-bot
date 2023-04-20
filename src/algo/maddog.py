@@ -308,6 +308,12 @@ class maddog:
         self.algo_helper.info("deviation_ma4_sopra_ma28: {}".format(deviation_ma4_sopra_ma28))
         
         
+        # formula trend_macd
+        
+        trend_macd = (macd - macd_2_min_ago)
+        self.algo_helper.info("trend_macd: {}".format(trend_macd))
+        
+        
         
         # formula DEVIATION_ma10_sopra_ma200 - FORMULA MY COMPA !
         
