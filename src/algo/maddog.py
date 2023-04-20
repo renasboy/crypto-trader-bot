@@ -13403,8 +13403,8 @@ class maddog:
                     
                     elif (
                         ma50_last < ma50_2_min_ago
-                        and (ma5_prev > ma33_prev and ma5_last < ma33_last)
-                        and deviation_sell < -0.12
+                        and (ma5_prev > ma39_prev and ma5_last < ma39_last)
+                        and deviation_sell < -0.13
                         and ma59_last < ma59_30_min_ago
                         
                         and ma100_last < ma200_last
@@ -13428,12 +13428,12 @@ class maddog:
                         
                         # in questa circostanza drammatica di crollo AUDI INTANTO TE LI PRENDI poi, eventualmente, ci pensa BUY 2
                         
-                        # deviation 100 laterale =5/100 >-1.00 significa che questa condizione NON non interviene E' UNA SITUAZIONE DI CROLLO !
+                        # deviation 100 laterale =5/100 > -1.00 significa che questa condizione NON non interviene E' UNA SITUAZIONE DI CROLLO !
                         # si interviene solo nella fascia di mezza cottura ! 
                         # 20 set 2022 dev sell -0.10 da 0.01
                         # 26 ott 2022 dev sell -0.12 da -0.10 con ma59 > ma59 30 min ago
-                        
-                        
+                        # 20 apr 2023 dev sell -0.13 da -0.12
+                        # 20 apr 2023 5-39 da 5-33
                         
                     # -------------------------------------------------------------------------------------- guadagno durante il crollo LEGGERO
                     
