@@ -5352,6 +5352,8 @@ class maddog:
                 
                 elif (  
                     ma200_last > ma300_last
+                    and macd > macd_2_min_ago
+                    
                     and ma78_last < ma200_last
                     and ma300_last < ma300_120_min_ago
                     
@@ -5376,7 +5378,7 @@ class maddog:
                     
                     # la troppa prudenza qualche volta genera perdite
                     # 20 ottobre 2022 5-28 0.13 da 0.09
-                
+                    # 21 apr 2023 aggiunta macd >
                
                 ################################################################################################
                 
