@@ -6240,6 +6240,7 @@ class maddog:
                     ma8_last > ma50_last
                     and delta_1 > delta_2
                     and deviation_ma3_sopra_ma10 > 0.12
+                    and deviation_ma3_sopra_ma16 > 0.12
                     and deviation_ma5_sopra_ma28 > 0.04
                   
                     and deviation_ma10_sopra_ma200 < -0.25
@@ -6254,7 +6255,7 @@ class maddog:
                     and ma200_last < ma200_60_min_ago
                     
                     and ma2_last >= ma2_2_min_ago
-             
+                    and ma3_last >= ma3_2_min_ago
                 ):
                     buy = "BUY 2 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-50 - formula MY COMPA - r 4743 B"
                     action = "buy"
@@ -6269,7 +6270,7 @@ class maddog:
                     # ave comba
                     # 31 ottobre aggiunta dev 10-200 - formula MY COMPA
                     # 19 gen 2023 doppio delta notte compra ma piu' difficile
-                    
+                    # 21 apr 2023 aggiunta ma3 > ma3 2 min ago
                     
                     
                     
