@@ -2325,7 +2325,10 @@ class maddog:
                 # BUY 1 2 sett 2022 ore 5:03 - maria callas casta diva bellini - ma300 che SALE
                 
                 elif (     
-                    ma5_last > ma69_last
+                    ma5_last > ma20_last
+                    and deviation_callas < -0.12
+                    and macd > macd_2_min_ago
+                    
                     and deviation_ma50_sotto_ma300 < -0.29
                     and deviation_ma78_sotto_ma300 < -0.20
                     
@@ -2335,8 +2338,8 @@ class maddog:
                     and ma100_last < ma200_last
                     and ma200_last < ma200_120_min_ago
                     
-                    and deviation_ma3_sopra_ma10 > 0.11
-                    and deviation_ma5_sopra_ma28 > 0.13
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma5_sopra_ma28 > 0.01
                     
                     and ma2_last > ma20_last
                     and ma2_last > ma2_2_min_ago
