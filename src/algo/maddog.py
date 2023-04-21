@@ -13498,6 +13498,7 @@ class maddog:
                     
                     elif (
                         ma50_last < ma50_2_min_ago
+                        and macd < macd_2_min_ago
                         and deviation_ma100_sopra_ma300 > -0.90
                         
                         and (ma3_prev > ma18_prev and ma3_last < ma18_last)
@@ -13507,6 +13508,7 @@ class maddog:
                         sell = "SELL 1 piccola perdita durante il crollo (21-50 min) con ma50 < incrocio 3 - 18 and dev_sell < -0.27 non e' crollo ! - r 9353 A"
                         action = "sell"
                         
+                        # 21 apr 2023 aggiunto macd < macd_2_min_ago
                     
                     
                     elif (
