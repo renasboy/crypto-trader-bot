@@ -15601,9 +15601,9 @@ class maddog:
                         # 12 ott 2022 dev sell -0.14 da -0.10
                         #  7 nov 2022 dev sell -0.16 da -0.14
                         
-                        
                     elif (    
                         ma3_last < ma100_last
+                        and ma450 > ma450_720_min_ago
                         and ma5_last < ma200_last
                         
                         and ma300_last < ma300_120_min_ago
@@ -15613,7 +15613,7 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                     ):
                    
-                        sell = "SELL 1 > 110 min con 5 < 200 e 100 < 300 ! FORSE E' NECESSARA SOLO QUESTA 4 ! deviation_sell < -0.158 - r 10655 B2"
+                        sell = "SELL 1 > 110 min and 450 > 12 ore con 5 < 200 e 100 < 300 ! FORSE E' NECESSARA SOLO QUESTA ! deviation_sell < -0.158 - r 10655 B2x"
                         action = "sell"
                         
                         #  4 set 2022 dev sell -0.07 da -0.05
@@ -15622,7 +15622,32 @@ class maddog:
                         # 19 dic 2022 dev sell -0.152 da -0.13
                         
                         # 25 gen 2023 dev sell -0.158 da -0.152
-        
+                        # 21 apr 2023 dev sell -0.158 
+                        # 21 apr 2023 ma450 > 12 ore
+                        
+                    elif (    
+                        ma3_last < ma100_last
+                        and ma450 < ma450_720_min_ago
+                        and ma5_last < ma200_last
+                        
+                        and ma300_last < ma300_120_min_ago
+                        and ma100_last < ma200_last
+                        and ma100_last < ma300_last
+                        and deviation_sell < -0.156
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                   
+                        sell = "SELL 1 > 110 min and 450 < 12 ore con 5 < 200 e 100 < 300 ! FORSE E' NECESSARA SOLO QUESTA ! deviation_sell < -0.158 - r 10655 B2y"
+                        action = "sell"
+                        
+                        #  4 set 2022 dev sell -0.07 da -0.05
+                        # 26 set 2022 dev sell -0.10 da -0.07
+                        # 12 ott 2022 dev sell -0.13 da -0.10
+                        # 19 dic 2022 dev sell -0.152 da -0.13
+                        
+                        # 25 gen 2023 dev sell -0.158 da -0.152
+                        # 21 apr 2023 dev sell -0.156 da -0.158
+                        # 21 apr 2023 ma450 < 12 ore
             
             ########################################################################################################################### SESSIONE 2
             
