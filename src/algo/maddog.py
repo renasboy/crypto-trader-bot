@@ -1365,10 +1365,12 @@ class maddog:
                 
                 # BUY 1 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-59 - r 1043 B
                 
+                
                 elif (
                     
                     ma5_last > ma39_last
                     and macd >= macd_2_min_ago
+                    and ma450_last > ma450_720_min_ago
                     
                     and deviation_ma5_sotto_ma300 < -0.22
                     and deviation_ma5_sotto_ma450 < -0.40
@@ -1387,7 +1389,57 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
               
                 ):
-                    buy = "BUY 1 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND dev 5-39 - r 1043 B"
+                    buy = "BUY 1 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND dev 5-39 - r 1043 B1 prova"
+                    action = "buy"
+                    percentage = 50
+                    
+                    # importante : ma100 sta sotto la ma200 non le e' troppo lontana
+                    
+                    # 21 ottobre 2022  aggiunta di 3-10 e 5-28
+                    # 21 ottobre 2022 3-10 = 0.01
+                    # 21 ottobre 2022 5-28 = 0.05
+                    # 28 ottobre 2022 5-28 = 0.04
+                    # ave comba
+                    # 31 ottobre aggiunta dev 10-200 - formula MY COMPA
+                    # 12 dic 2022 8-59 da 8-50 e aggiungo pensiero laterale (condizione sotto)
+                    # 22 dic 2022 and deviation_ma5_sopra_ma59 < -0.10
+                    # forse aggiungere anche doppio delta 100-59
+                    # 22 dic 2022 aggiunto doppio delta 100-59 !
+                    # 20 gen 2023 5-28 a 0.10
+                    # 25 gen 5-28 da 5-50
+                    # attenzione importante ! aggiunto doppio delta 78-39 ! (70 min ago) vedi giorno 13 feb 2023 (2 volte ha comprato 1043 B)
+                    # 20 feb 2023 3-10 a 0.02 da 0.01
+                    # 24 feb 2023 and delta_x < delta_y
+                    # 18 apr 2023 5 sotto 450 < -0.40 da -1.20
+                    # 18 apr 2023 and macd >= macd_2_min_ago
+                    # 19 apr 2023 5-28 a 0.05 da 0.10 dopo aggiunta macd
+                    # ma vedi x y
+                    
+                    
+                elif (
+                    
+                    ma5_last > ma30_last
+                    and macd >= macd_2_min_ago
+                    and ma450_last < ma450_720_min_ago
+                    
+                    and deviation_ma5_sotto_ma300 < -0.22
+                    and deviation_ma5_sotto_ma450 < -0.40
+                    
+                    and delta_x < delta_y
+                    
+                    and deviation_ma10_sopra_ma200 < -0.22
+                    
+                    and deviation_ma100_sopra_ma300 < -0.15
+                    and ma300_last < ma300_60_min_ago
+                    and ma200_last < ma200_60_min_ago
+                    
+                    and deviation_ma3_sopra_ma10 > 0.02
+                    and deviation_ma5_sopra_ma28 > 0.05
+                    
+                    and ma2_last >= ma2_2_min_ago
+              
+                ):
+                    buy = "BUY 1 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND dev 5-30 - r 1043 B2 prova"
                     action = "buy"
                     percentage = 50
                     
