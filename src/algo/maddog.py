@@ -178,11 +178,16 @@ class maddog:
         
         
         
-        # MAC TREND
+        # MAC TREND 1
         
         macd = self.algo_helper.macd
         macd_2_min_ago = self.algo_helper.macd_minutes_ago(2)
         
+        
+        # formula trend_macd 2
+        
+        trend_macd = (macd - macd_2_min_ago)
+        self.algo_helper.info("trend_macd: {}".format(trend_macd))
      
         
         # LAST TRADE
@@ -308,10 +313,7 @@ class maddog:
         self.algo_helper.info("deviation_ma4_sopra_ma28: {}".format(deviation_ma4_sopra_ma28))
         
         
-        # formula trend_macd
         
-        trend_macd = (macd - macd_2_min_ago)
-        self.algo_helper.info("trend_macd: {}".format(trend_macd))
         
         
         
@@ -4853,8 +4855,9 @@ class maddog:
                 # BUY 1 che ci riprova quando se ne va lateralmente dopo il crollo
                 
                 elif (
-                    ma5_last > ma300_last
-                    and ma8_last > ma50_last
+                    ma5_last > ma225_last
+                    and ma5_last > ma50_last
+                    and trend_macd >= 2
                     
                     and deviation_ma3_sopra_ma10 > 0.155
                     and deviation_ma5_sopra_ma28 > 0.01
@@ -4871,7 +4874,7 @@ class maddog:
                 
                 ):
                
-                    buy = "BUY 1 che ci riprova quando se ne va lateralmente dopo il crollo - r 4082 A1"
+                    buy = "BUY 1 che ci riprova quando se ne va lateralmente dopo il crollo and trend_macd >= 2 - r 4082 A1"
                     action = "buy"
                     percentage = 80
 
