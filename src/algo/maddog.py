@@ -12507,6 +12507,7 @@ class maddog:
                     
                     elif (
                         ma50_last > ma50_2_min_ago
+                        and macd <= macd_2_min_ago
                         and deviation_ma8_sotto_ma300 > -1.00
                         
                         and deviation_sell < -0.33
@@ -12514,7 +12515,7 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                     
                     ):
-                        sell = "SELL 1 (21-50 min) con ma50> and deviation_sell <-0.32 and ma3_last < ma50_last - con 8 sotto 300 > -1.00 - r 8595 a"
+                        sell = "SELL 1 (21-50 min) con ma50> and deviation_sell <-0.32 and ma3_last < ma50_last - con 8 sotto 300 > -1.00 - r 8595 A"
                         action = "sell"
                         
                         # VENDITA 1 IN ALTO dopo BUY IN RISALITA
@@ -12523,7 +12524,7 @@ class maddog:
                         # and deviation_sell < -0.26
                         # deviation_sell = ma3_last/last_trade_price
                         # deviation_ma8_sotto_ma300 = ma8_last / ma300_last
-                        
+                        # 21 apr 2023 aggiunta macd >= 2 min ago
                         
                     elif (
                         ma50_last > ma50_2_min_ago
