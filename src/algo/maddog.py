@@ -300,6 +300,11 @@ class maddog:
         deviation = (ma5_last / last_trade_price - 1) * 100 if last_trade_price else 0
         self.algo_helper.info("deviation: {}".format(deviation))
         
+        # formula DEVIATION_sell
+        
+        deviation_sell = (ma4_last / last_trade_price - 1) * 100 if last_trade_price else 0
+        self.algo_helper.info("deviation_sell: {}".format(deviation_sell))
+        
         
         # formula DEVIATION_ma5_sopra_ma28 - FORMULA AUREA !
         
@@ -1066,10 +1071,7 @@ class maddog:
       
         ########################################################################################################################## deviation per vendere
 
-        # formula DEVIATION_sell
-        
-        deviation_sell = (ma4_last / last_trade_price - 1) * 100 if last_trade_price else 0
-        self.algo_helper.info("deviation_sell: {}".format(deviation_sell))    
+            
       
         # formula DEVIATION_sell_ma78
         
@@ -15444,22 +15446,23 @@ class maddog:
                         
                         
                         
-                        
                     elif (     
                         ma50_last < ma50_2_min_ago
                         and ma300_last > ma300_120_min_ago
                         and ma3_last < ma39_last
-                        and deviation_sell < -0.245
+                        and deviation_sell < -0.243
                         and ma2_last < ma2_2_min_ago
                         and deviation_trend_ma200 > -0.12
                         and ma200_last > ma300_last
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 dopo 110 min E 300 > 120 min ago e con ma50 < (dev_sell < -0.245 and ma3_last < ma39_last) con > PERDITA TOLLERATA - r 10572 A"
+                        sell = "SELL 1 > 110 min E 300 > 120 min ago e con ma50 < (dev_sell < -0.243 and ma3_last < ma39_last) con > PERDITA TOLLERATA - r 10572 A"
                         action = "sell"
                         
                         # 28 dic 2022 dev sell -0.245 da -0.23
+                        # 24 apr 2023 dev sell -0.243 da -0.245 (dopo che con -0.245 ha fatto -0.80%)
                         
+                    
                         
                         
                     elif (     
