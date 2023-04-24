@@ -12993,10 +12993,13 @@ class maddog:
                         # ho visto che ma175 andrebbe bene ma ho preferito modificare dev sell
                         
                         
-                    # TREND LATERALE (100/300  <0.69 and >-0.77) NON TOCCARE 
+                    # TREND LATERALE (100/300  <0.69 and >-0.77) NON TOCCARE
+                    
                     
                     elif (
                         ma50_last < ma50_2_min_ago
+                        and ma450_last > ma450_720_min_ago
+                        
                         and delta_1_200_78 < delta_2_200_78_60_min
                         and deviation_ma39 < -0.17
                         and ma2_last < ma2_2_min_ago
@@ -13007,17 +13010,40 @@ class maddog:
                         
                         and ma3_last < ma300_last
                     ):
-                        sell = "SELL 1 NON TOCCARE (21-50 min) con ma50 < con dev_ma39 <-0.17 E dev_sell < -0.24 TREND LATERALE (100>300 <0.69 and >-0.77) - r 9016 A"
+                        sell = "SELL 1 NO TOCCARE (21-50 min) con ma50 < con dev_ma39 <-0.17 E dev_sell < -0.235 TREND LATERALE (100>300 <0.69 and >-0.77) - r 9016 A1"
                         action = "sell"
                         
                         # OGGI 22 LUG 2022 QUESTA SU RCCR HA FATTO -0.56 MENTRE MADDOG HA FATTO -1.43 !
                         
                         # > estate -0.21 da -0.18
                         # 20 gen 2023 dev sell < -0.235 da -0.22
+                        # # 24 apr 2023 dev sell < -0.235 con 450 > 720 min ago
                         
                         
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and ma450_last < ma450_720_min_ago
+                        and delta_1_200_78 < delta_2_200_78_60_min
+                        and deviation_ma39 < -0.17
+                        and ma2_last < ma2_2_min_ago
                         
-                    # TREND LATERALE (100/300  <0.69 and >-0.77) NON TOCCARE 
+                        and deviation_ma100_sopra_ma300 < 0.69
+                        and deviation_ma100_sopra_ma300 > -0.77
+                        and deviation_sell < -0.233
+                        
+                        and ma3_last < ma300_last
+                    ):
+                        sell = "SELL 1 NO TOCCARE (21-50 min) con ma50 < con dev_ma39 <-0.17 E dev_sell < -0.233 TREND LATERALE (100>300 <0.69 and >-0.77) - r 9016 A2"
+                        action = "sell"
+                        
+                        # OGGI 22 LUG 2022 QUESTA SU RCCR HA FATTO -0.56 MENTRE MADDOG HA FATTO -1.43 !
+                        
+                        # > estate -0.21 da -0.18
+                        # 20 gen 2023 dev sell < -0.235 da -0.22
+                        # 24 apr 2023 dev sell < -0.233 da -0.255 con 450 < 720 min ago
+                        
+                        
+                    # TREND LATERALE (100/300  < 0.69 and >-0.77) NON TOCCARE 
                     
                     elif (
                         ma50_last < ma50_2_min_ago
