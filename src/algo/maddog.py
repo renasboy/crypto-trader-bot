@@ -19965,17 +19965,18 @@ class maddog:
                         and ma250_last < ma300_last
                         and deviation_ma100_sopra_ma300 < 0.20
                         and ma2_last < ma2_2_min_ago 
-                        and deviation_sell < -0.19
+                        and deviation_sell < -0.20
                         and ma3_last < ma39_last
+                        and macd < macd_2_min_ago
                     ):
-                        sell = "SELL 3 dopo 90 min con ma50 < and ma100 NON DISTANTE dalla ma300 and (dev_sell < -0.19 and ma3_last < ma39_last) - r 14283 B"
+                        sell = "SELL 3 > 90 min con ma50 < and ma100 NON DISTANTE dalla ma300 and (dev_sell < -0.20 and ma3_last < ma39_last) and macd < - r 14283 B"
                         action = "sell"
                         
                         # SE ma100 RESTA VICINA ALLA ma300 - trend laterale - allora tieniti pronto anche con la deviation sell
                         # 28 ott 2022 dev sell a 0.17 da 0.15
                         #  1 nov 2022 se 250 < 300 dev sell 0.18 da 0.17
                         # 19 apr 2023 se 250 < 300 dev sell 0.19 da 0.18
-                    
+                        # 26 apr 2023 se 250 < 300 dev sell 0.20 da 0.19
                     
                     
             #######################################################################################################
