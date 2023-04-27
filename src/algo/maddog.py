@@ -6865,7 +6865,7 @@ class maddog:
                 # se il crollo continua dopo che ha venduto sell 1 durante il crollo - ro cano CI RIPROVA !     
                 
                 # BUY 2  primo modo DURANTE IL CROLLO
-
+                
                 elif (
                     ma2_last > ma2_2_min_ago
                     and deviation_buy_crollo_1 < -2.30
@@ -6879,6 +6879,28 @@ class maddog:
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     # 14 GIU 2022 3-15 PERCHE' COMPRAVA CONTINUAMENTE DURANTE IL CROLLO CON 3-7
                     # 17 mar 2023 ho aggiunto 3-10 > 0.125 vedi 3 mar 2023 ore 2:51
+                    
+                    
+                    
+                # BUY 2 avvento del macd ! DURANTE IL CROLLO - porcupine tree - lazarus
+                
+                elif (
+                    ma2_last > ma2_2_min_ago
+                    and deviation_buy_crollo_1 < -2.30
+                    and ma3_last > ma7_last
+                    and macd > macd_2_min_ago
+                    and macd < -35
+                ):
+                    buy = "BUY 2 DURANTE IL CROLLO - AVVENTO DEL MACD ! 3-7 + MACD - porcupine tree - lazarus - r 5068"
+                    action = "buy"
+                    percentage = 90
+                    
+                    # deviation_buy_crollo_1 = ma8_last / ma78_last
+                    # 14 GIU 2022 3-15 PERCHE' COMPRAVA CONTINUAMENTE DURANTE IL CROLLO CON 3-7
+                    # 17 mar 2023 ho aggiunto 3-10 > 0.125 vedi 3 mar 2023 ore 2:51
+                    # 27 APR 2023 AVVENTO DEL MACD !
+                    
+                    
                     
                     
                 # BUY 2 secondo modo - DURANTE IL CROLLO - questa condizione e' entrata in azione ! ( e mi e' sembrata ben fatta !)
