@@ -146,7 +146,7 @@ class maddog:
         ma100_120_min_ago = self.algo_helper.ma_minutes_ago(100, 120)
         ma100_180_min_ago = self.algo_helper.ma_minutes_ago(100, 180)
         ma100_301_min_ago = self.algo_helper.ma_minutes_ago(100, 301)
-        
+        ma150_20_min_ago = self.algo_helper.ma_minutes_ago(150, 20)
         ma150_60_min_ago = self.algo_helper.ma_minutes_ago(150, 60)
         ma200_15_min_ago = self.algo_helper.ma_minutes_ago(200, 15)
         ma200_20_min_ago = self.algo_helper.ma_minutes_ago(200, 20)
@@ -15287,22 +15287,46 @@ class maddog:
                         
                         
                         
+                    elif (    
+                        ma50_last < ma50_2_min_ago
+                        and deviation_ma39 < -0.1965
+                        and deviation_sell > 0.20
+                        and ma5_last < ma5_2_min_ago
+                      
+                        and ma5_last < ma150_last
+                        and ma150_last > ma150_20_min_ago
+                        and ma300_last > ma300_120_min_ago
+                        and ma100_last > ma100_60_min_ago
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 1 dopo 110 min con ma50 < MA ma100 > E ma300 > e con deviation_ma39 < -0.197 - r 10472 A2x1"
+                        action = "sell"
+                        
+                        # ma39 NON DEVE VENDERE in fase laterale ma in alto
+                        # 17 gen 2023 ma39 <-0.197 da <-0.195
+                        # 16 mar 2023 ma39 <-0.1965 da <-0.197
+                        
                         
                     elif (    
                         ma50_last < ma50_2_min_ago
                         and deviation_ma39 < -0.1965
                         and deviation_sell > 0.20
                         and ma5_last < ma5_2_min_ago
+                      
+                        and ma150_last < ma150_20_min_ago
                         and ma300_last > ma300_120_min_ago
                         and ma100_last > ma100_60_min_ago
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 dopo 110 min con ma50 < MA ma100 > E ma300 > e con deviation_ma39 < -0.197 - r 10472 A2x"
+                        sell = "SELL 1 dopo 110 min con ma50 < MA ma100 > E ma300 > e con deviation_ma39 < -0.197 - r 10472 A2x2"
                         action = "sell"
                         
                         # ma39 NON DEVE VENDERE in fase laterale ma in alto
                         # 17 gen 2023 ma39 <-0.197 da <-0.195
                         # 16 mar 2023 ma39 <-0.1965 da <-0.197
+                        
+                        
+                        
                         
                     elif (    
                         ma50_last < ma50_2_min_ago
