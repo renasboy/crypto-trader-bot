@@ -19104,8 +19104,9 @@ class maddog:
                         and (ma3_prev > ma30_prev and ma3_last < ma30_last)
                         and deviation_sell > 1.21 and deviation_sell < 2.70
                         and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
                     ):
-                        sell = "SELL 3 (21-60 min) con ma50 > and incrocio 3-30 and dev_sell 1.21 -2.70 - ma100 e' ancora sotto ma300 e vende un po' prima - r 13623 a"
+                        sell = "SELL 3 (21-60 min) con ma50 > e incr 3-30 e dev_sell 1.21 -2.70 - ma100 e' ancora < ma300 e vende un po' prima and macd - r 13623 A"
                         action = "sell"
                         
                         # vende un po' prima perche' e' ancora un po' preoccupato perche' ma100 sta sotto ma300
