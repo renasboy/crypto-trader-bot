@@ -15143,7 +15143,7 @@ class maddog:
                         and deviation_sell > 1.50 and deviation_sell < 2.70
                         and ma2_last < ma2_2_min_ago
                     ):    
-                        sell = "SELL 1 da 110 a 239 min con ma50 > incrocio 3-30 CON 100 sopra 300 <0.40 and deviation_sell  1.50-2.70 DOPPIO PASSO RONALDO - r 10257 B"
+                        sell = "SELL 1 da 110 a 239 min con ma50 > incr 3-30 CON 100 sopra 300 <0.40 and deviation_sell  1.50-2.70 DOPPIO PASSO RONALDO - r 10257 B"
                         action = "sell"
                         
                         # 18 set 3-50 da 3-30
@@ -15507,7 +15507,7 @@ class maddog:
                         
                     
                         
-                    # SELL 1 da RCCR ! IPOTESI PEGGIORE con ma50< con dev_ma39 < -0.22 and deviation_sell < -0.22 MA DOPPIO DELTA RIALZO 
+                    # SELL 1 da RCCR ! da 110 a 239 min IPOTESI PEGGIORE con ma50< con dev_ma39 < -0.22 and deviation_sell < -0.22 MA DOPPIO DELTA RIALZO 
                     
                     elif (
                         ma50_last < ma50_2_min_ago
@@ -15591,7 +15591,7 @@ class maddog:
                         
                     
                     
-                    # ATTENZIONE 1 ! > 110 min E CON 300 > 120 min FORSE E' NECESSARA SOLO QUESTA !
+                    # ATTENZIONE 1 ! SELL 1 da 110 a 239 min CON 300 > 120 min FORSE E' NECESSARA SOLO QUESTA !
                     
                     elif (    
                         ma3_last < ma100_last
@@ -15606,7 +15606,7 @@ class maddog:
                         
                         
                         
-                    # ATTENZIONE 2 ! > 110 min E CON 300 > 120 min FORSE E' NECESSARA SOLO QUESTA !
+                    # ATTENZIONE 2 ! SELL 1 da 110 a 239 min CON 300 > 120 min FORSE E' NECESSARA SOLO QUESTA !
                     
                     elif (    
                         ma3_last < ma100_last
@@ -15623,7 +15623,7 @@ class maddog:
                         
                         
                         
-                    # ATTENZIONE 3 ! > 110 min E CON 300 < 120 min FORSE E' NECESSARA SOLO QUESTA !
+                    # ATTENZIONE 3 ! SELL 1 da 110 a 239 min CON 300 < 120 min FORSE E' NECESSARA SOLO QUESTA !
                     
                     elif (    
                         ma3_last < ma100_last
@@ -15642,7 +15642,7 @@ class maddog:
                         # 11 ott a -0.225 da -0.23
                         
                         
-                    # ATTENZIONE 3 ! > 110 min E CON 300 < 120 min FORSE E' NECESSARA SOLO QUESTA !
+                    # ATTENZIONE 3 ! SELL 1 da 110 a 239 min CON 300 < 120 min FORSE E' NECESSARA SOLO QUESTA !
                     
                     
                     elif (    
@@ -15682,7 +15682,7 @@ class maddog:
                         # 17 mar 2023 -0.18 da -0.17 con 300<450
                         
                         
-                    # ATTENZIONE 4 ! > 110 min E CON 300 < 120 min FORSE E' NECESSARA SOLO QUESTA !
+                    # ATTENZIONE 4 ! SELL 1 da 110 a 239 min CON 300 < 120 min FORSE E' NECESSARA SOLO QUESTA !
                     
                     elif (    
                         ma3_last < ma100_last
@@ -15700,7 +15700,7 @@ class maddog:
                         
                         
                         
-                    # ATTENZIONE 4 ! > 110 min E CON 300 < 120 min FORSE E' NECESSARA SOLO QUESTA !
+                    # ATTENZIONE 4 ! SELL 1 da 110 a 239 min CON 300 < 120 min FORSE E' NECESSARA SOLO QUESTA !
                     
                     
                     elif (    
@@ -16234,7 +16234,7 @@ class maddog:
                         # 12 apr 2023 dev39 a 0.194 da 0.193
                         
                         
-                    # ma se ma100 >
+                    # ma se ma100 > dopo 240 min
                     
                     elif (
                         ma50_last < ma50_2_min_ago
@@ -16267,7 +16267,7 @@ class maddog:
                         
                         
                         
-                    # ma se ma100 > 
+                    # ma se ma100 > dopo 240 min
                     
                     elif (
                         ma50_last < ma50_2_min_ago
@@ -16344,7 +16344,7 @@ class maddog:
                         
                     
                         
-                    # SELL 1 da RCCR ! IPOTESI PEGGIORE con ma50< con dev_ma39 < -0.22 and deviation_sell < -0.22 MA DOPPIO DELTA RIALZO 
+                    # SELL 1 da RCCR ! dopo 240 min IPOTESI PEGGIORE con ma50< con dev_ma39 < -0.22 and deviation_sell < -0.22 MA DOPPIO DELTA RIALZO 
                     
                     elif (
                         ma50_last < ma50_2_min_ago
@@ -16443,7 +16443,7 @@ class maddog:
                         
                         
                         
-                    # ATTENZIONE 2 ! > 110 min E CON 300 > 120 min FORSE E' NECESSARA SOLO QUESTA !
+                    # ATTENZIONE 2 ! dopo 240 min E CON 300 > 120 min FORSE E' NECESSARA SOLO QUESTA !
                     
                     elif (    
                         ma3_last < ma100_last
@@ -16460,7 +16460,7 @@ class maddog:
                         
                         
                         
-                    # ATTENZIONE 3 ! > 110 min E CON 300 < 120 min FORSE E' NECESSARA SOLO QUESTA !
+                    # ATTENZIONE 3 ! dopo 240 min CON 300 < 120 min FORSE E' NECESSARA SOLO QUESTA !
                     
                     elif (    
                         ma3_last < ma100_last
@@ -16479,7 +16479,7 @@ class maddog:
                         # 11 ott a -0.225 da -0.23
                         
                         
-                    # ATTENZIONE 3 ! > 110 min E CON 300 < 120 min FORSE E' NECESSARA SOLO QUESTA !
+                    # ATTENZIONE 3 ! dopo 240 min CON 300 < 120 min FORSE E' NECESSARA SOLO QUESTA !
                     
                     
                     elif (    
@@ -16519,7 +16519,7 @@ class maddog:
                         # 17 mar 2023 -0.18 da -0.17 con 300<450
                         
                         
-                    # ATTENZIONE 4 ! > 110 min E CON 300 < 120 min FORSE E' NECESSARA SOLO QUESTA !
+                    # ATTENZIONE 4 ! dopo 240 minCON 300 < 120 min FORSE E' NECESSARA SOLO QUESTA !
                     
                     elif (    
                         ma3_last < ma100_last
@@ -16537,7 +16537,7 @@ class maddog:
                         
                         
                         
-                    # ATTENZIONE 4 ! > 110 min E CON 300 < 120 min FORSE E' NECESSARA SOLO QUESTA !
+                    # ATTENZIONE 4 ! dopo 240 minCON 300 < 120 min FORSE E' NECESSARA SOLO QUESTA !
                     
                     
                     elif (    
