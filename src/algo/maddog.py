@@ -4354,16 +4354,17 @@ class maddog:
                 elif (
                     ma2_last > ma2_2_min_ago
                     and deviation_buy_crollo_1 < -2.60
-                    and ma3_last > ma13_last
+                    and deviation_ma3_sopra_ma16 > 0.028
                     and ma78_last < ma300_last
+                    and macd >= macd_2_min_ago
                 ):
-                    buy = "BUY 1 crollo MISSILE COMPA 3-13 and ma78_last < ma300_last - r 3561"
+                    buy = "BUY 1 crollo MISSILE COMPA con dev 3-16 > 0.028 + macd >= macd 2 min ago and ma78_last < ma300_last - r 3561"
                     action = "buy"
                     percentage = 80
                     
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
-                    
-                    
+                    # 27 apr 2023 da dev 3-16 > 0.028 da 3-13 
+                    # 27 apr 2023 aggiunto macd
                     
                 
                     
