@@ -15461,7 +15461,7 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                        
                     ):
-                        sell = "SELL 1 compa dopo 110 min con ma50 < and deviation_ma39 < -0.26  con > PERDITA TOLLERATA E 300 > 5 ore ago - r 10530 A"
+                        sell = "SELL 1 compa dopo 110 min con ma50 < and deviation_ma39 < -0.26 con > PERDITA TOLLERATA E 300 > 5 ore ago - r 10530 A"
                         action = "sell"
                         
                         # 18 set dev 39 -0.25 da -0.23
@@ -15556,20 +15556,21 @@ class maddog:
                         ma50_last < ma50_2_min_ago
                         and ma300_last > ma300_120_min_ago
                         
-                        and deviation_ma39 < -0.20
+                        and deviation_ma39 < -0.22
                         and ma3_last < ma39_last
                         
                         and deviation_trend_ma200 > -0.12
                         and ma200_last > ma300_last
                         
                         and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
                     ):
-                        sell = "SELL 1 > 110 min E 300 > 120 min ago e con ma50 < and dev3-39 < -0.20 con > PERDITA TOLLERATA - r 10572 A2"
+                        sell = "SELL 1 > 110 min E 300 > 120 min ago e con ma50 < and dev3-39 < -0.22 con > PERDITA TOLLERATA - r 10572 A2"
                         action = "sell"
                         
                         # deviation_ma39 = ma4_last / ma39
-                        # 24 apr 2023 deviation_ma39 < -0.20
-                    
+                        # 24 apr 2023 deviation_ma39 < -0.22
+                        # macd sui tempi lunghi
                         
                         
                     elif (     
