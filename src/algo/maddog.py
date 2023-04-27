@@ -4339,6 +4339,28 @@ class maddog:
                     
                     
                     
+                    
+                # BUY 1 crollo MISSILE COMPA con avvento del macd ! DURANTE IL CROLLO - rosa linn - snap
+                
+                elif (
+                    ma2_last > ma2_2_min_ago
+                    and deviation_buy_crollo_1 < -2.60
+                    
+                    and ma78_last < ma300_last
+                    
+                    and ma3_last > ma7_last
+                    and macd > macd_2_min_ago
+                    and macd < -35
+                ):
+                    buy = "BUY 1 crollo MISSILE COMPA con avvento del macd ! DURANTE IL CROLLO - rosa linn - snap - 3-7 and ma78_last < ma300_last - r 3544"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # deviation_buy_crollo_1 = ma8_last / ma78_last
+                    
+                    
+                    
+                    
                 # BUY 1 crollo MISSILE COMPA !
                 
                 elif (
