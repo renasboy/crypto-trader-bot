@@ -9766,10 +9766,38 @@ class maddog:
                     
                     
                     
-                # BUY 3 con ma69 > and deviation_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali) IMPORTATA DA BUY 4 RCCR   
+                # BUY 3 con ma69 > and deviation_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali) IMPORTATA DA BUY 4 RCCR
                 
                 elif (
                     ma69_last >= ma69_2_min_ago
+                    and ma39_last > ma150_last
+                    and ma300_last < ma300_301_min_ago
+                    and ma78_last > ma100_last
+                    and deviation_ma3_sopra_ma10 > 0.05
+                    and deviation_ma5_sopra_ma28 > 0.01
+                    
+                    and deviation_bellissima > 0.01
+                    and deviation_ma7_sopra_ma40 > 0.08
+                    
+                    and ma3_last > ma13_last
+                    and ma4_last > ma9_last
+                    and ma4_last > ma50_last
+                    and ma6_last > ma15_last
+                    and ma7_last > ma25_last
+                    
+                    and ma2_last > ma2_2_min_ago
+             
+                ):
+                    buy = "BUY 3 con 78>100 and 39>150 E con ma69 > and dev_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali) - r 6599 A2x"
+                    action = "buy"
+                    percentage = 50
+                    
+                    # 28 set aggiunta 3-10
+                    
+                    
+                elif (
+                    ma69_last >= ma69_2_min_ago
+                    and ma39_last < ma150_last
                     and ma300_last < ma300_301_min_ago
                     and ma78_last > ma100_last
                     and deviation_ma3_sopra_ma10 > 0.05
@@ -9788,7 +9816,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
              
                 ):
-                    buy = "BUY 3 78>100 E con ma69 > and dev_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali) IMPORTATA DA BUY 4 RCCR - r 6599 A2"
+                    buy = "BUY 3 con 78>100 and 39<150 E con ma69 > and dev_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali) - r 6599 A2y"
                     action = "buy"
                     percentage = 50
                     
