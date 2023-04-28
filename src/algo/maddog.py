@@ -136,7 +136,7 @@ class maddog:
         ma78_70_min_ago = self.algo_helper.ma_minutes_ago(78, 70)
         ma100_2_min_ago = self.algo_helper.ma_minutes_ago(100, 2)
         ma100_3_min_ago = self.algo_helper.ma_minutes_ago(100, 3)
-        
+        ma100_5_min_ago = self.algo_helper.ma_minutes_ago(100, 5)
         ma100_10_min_ago = self.algo_helper.ma_minutes_ago(100, 10)
         ma100_20_min_ago = self.algo_helper.ma_minutes_ago(100, 20)
         ma100_30_min_ago = self.algo_helper.ma_minutes_ago(100, 30)
@@ -2484,23 +2484,25 @@ class maddog:
                     and ma450_last > ma450_720_min_ago
                     and ma300_last > ma300_301_min_ago
                     
-                    and ma5_last > ma100_last
+                    and ma5_last > ma50_last
+                    and macd >= macd_2_min_ago
                     and ma2_last >= ma2_2_min_ago
                     
                     and deviation_ma3_sopra_ma10 > 0.05
                     and deviation_ma5_sopra_ma28 > 0.10
                  
                     and delta_1 < delta_2
-                    and ma100_last > ma100_10_min_ago
+                    and ma100_last > ma100_5_min_ago
                 
                 ):    
         
-                    buy = "BUY 1 5-100 con ma200< 300< MA ma100> 100 10 min ago e doppio delta < - GIORNO ! CON 450> - riga 1712"
+                    buy = "BUY 1 CON 450> and 5-50 and macd > macd 2 min ago e con ma200< 300< MA ma100> 100 5 min ago e doppio delta < - GIORNO ! CON 450> - r 1712"
                     action = "buy"
                     percentage = 90
               
-              
-              
+                    # 28 apr 2023 ma 100 5 min da 10 min
+                    # 28 apr 2023  5-50 da 5-100 con aggiunta macd >= 2 min ago
+                    
                 
               
               
