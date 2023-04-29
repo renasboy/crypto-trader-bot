@@ -162,6 +162,7 @@ class maddog:
         
         ma300_20_min_ago = self.algo_helper.ma_minutes_ago(300, 20)
         ma300_30_min_ago = self.algo_helper.ma_minutes_ago(300, 30)
+        ma300_50_min_ago = self.algo_helper.ma_minutes_ago(300, 50)
         ma300_60_min_ago = self.algo_helper.ma_minutes_ago(300, 60)
         ma300_120_min_ago = self.algo_helper.ma_minutes_ago(300, 120)
         ma300_180_min_ago = self.algo_helper.ma_minutes_ago(300, 180)
@@ -444,6 +445,11 @@ class maddog:
         delta_300_100_60_min = (ma300_60_min_ago / ma100_60_min_ago - 1) * 100 if ma100_60_min_ago else 0
         self.algo_helper.info("delta_300_100_60_min: {}".format(delta_300_100_60_min))
         
+        
+        # formula delta_300_100_50_min
+        
+        delta_300_100_50_min = (ma300_50_min_ago / ma100_50_min_ago - 1) * 100 if ma100_50_min_ago else 0
+        self.algo_helper.info("delta_300_100_50_min: {}".format(delta_300_100_50_min))
         
         
         
@@ -4938,9 +4944,7 @@ class maddog:
                     
                     
                     
-                    
-                # BUY 1 che ci riprova quando se ne va lateralmente dopo il crollo
-                
+                # BUY 1x che ci riprova quando se ne va lateralmente dopo il crollo
                 
                 elif (
                     ma28_last < ma300_last
@@ -4965,7 +4969,50 @@ class maddog:
                 
                 ):
                
-                    buy = "BUY 1 che ci riprova quando se ne va lateralmente AND MACD > MACD 2 min ago ! - r 4138 B"
+                    buy = "BUY 1 che ci riprova quando se ne va lateralmente AND MACD > MACD 2 min ago ! - r 4138 Bx"
+                    action = "buy"
+                    percentage = 80
+
+                    # 2 lug 2022 3-10 0.21 da 0.22
+                    
+                    # > estate 3-10 0.17 e 5-28 0.20 DOVEVO ALZARE IL BUY quando se ne va lateralmente dopo il crollo
+                    # 24 feb 2023 3-10 a 0.01 da 0.10
+                    # 24 feb 2023 5-28 a 0.01 da 0.10
+                    # 17 mar 2023 5-28 a -0.01 da 0.01 cazzo
+                    # 17 mar 2023 aggiunta 3-16 > 0.06 vedi 6 mar 2023 ore 5:16
+                    
+                    #  6 apr 2023 aggiunto MACD deve essere > MACD 2 min ago
+                    # 12 apr 2023 3-16 > 0.059 da 0.06
+                    # 15 apr 2023 3-16 > 0.057 da 0.058
+                    
+                    
+                    
+                # BUY 1y che ci riprova quando se ne va lateralmente dopo il crollo
+                
+                elif (
+                    ma8_last > ma250_last
+                    and macd > macd_2_min_ago
+                    
+                    and deviation_ma300_sopra_ma450 < 0.25
+                    and deviation_ma300_sopra_ma450 > -0.25
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > 0.057
+                    and deviation_ma5_sopra_ma28 > -0.01
+                    
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_120_min_ago
+                    
+                    and delta_300_100 < delta_300_100_50_min
+                    
+                    and deviation_ma100_sopra_ma300 > -0.40
+                    and deviation_ma200_sopra_ma300 > -0.40
+                    
+                    and ma2_last >= ma2_2_min_ago
+                
+                ):
+               
+                    buy = "BUY 1 che ci riprova quando se ne va lateralmente AND MACD > MACD 2 min ago ! - r 4138 By"
                     action = "buy"
                     percentage = 80
 
