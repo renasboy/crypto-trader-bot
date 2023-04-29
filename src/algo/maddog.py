@@ -4989,7 +4989,7 @@ class maddog:
                 # BUY 1y che ci riprova quando se ne va lateralmente dopo il crollo
                 
                 elif (
-                    ma28_last < ma300_last
+                    ma8_last > ma300_last
                     and macd > macd_2_min_ago
                     
                     and deviation_ma300_sopra_ma450 < 0.25
