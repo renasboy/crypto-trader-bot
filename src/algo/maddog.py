@@ -4949,8 +4949,8 @@ class maddog:
                 # BUY 1 che ci riprova quando se ne va lateralmente dopo il crollo
                 
                 elif (
-                    ma28_last < ma300_last
-                    and ma39_last > ma54_last
+                    
+                    ma39_last > ma54_last
                     and macd > macd_2_min_ago
                     
                     and deviation_ma300_sopra_ma450 < 0.25
@@ -4981,8 +4981,8 @@ class maddog:
                 # BUY 1x che ci riprova quando se ne va lateralmente dopo il crollo
                 
                 elif (
-                    ma28_last < ma300_last
-                    and ma39_last < ma54_last
+                    
+                    ma39_last < ma54_last
                     and macd > macd_2_min_ago
                     
                     and deviation_ma300_sopra_ma450 < 0.25
@@ -5019,7 +5019,7 @@ class maddog:
                     #  6 apr 2023 aggiunto MACD deve essere > MACD 2 min ago
                     # 12 apr 2023 3-16 > 0.059 da 0.06
                     # 15 apr 2023 3-16 > 0.057 da 0.058
-                    
+                    # ATTENZIONE TOLTO 28-300 E MESSO 39-54
                     
                     
                 
