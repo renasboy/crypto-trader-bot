@@ -4950,8 +4950,9 @@ class maddog:
                 
                 elif (
                     
-                    ma39_last > ma54_last
+                    ma28_last > ma300_last
                     and macd > macd_2_min_ago
+                    and delta_1_69_39 < delta_2_69_39
                     
                     and deviation_ma300_sopra_ma450 < 0.25
                     and deviation_ma300_sopra_ma450 > -0.25
@@ -4976,14 +4977,16 @@ class maddog:
                     action = "buy"
                     percentage = 80
                     
+                    # provo delta 39-69
                     
                     
                 # BUY 1x che ci riprova quando se ne va lateralmente dopo il crollo
                 
                 elif (
                     
-                    ma39_last < ma54_last
+                    ma28_last < ma300_last
                     and macd > macd_2_min_ago
+                    and delta_1_69_39 > delta_2_69_39
                     
                     and deviation_ma300_sopra_ma450 < 0.25
                     and deviation_ma300_sopra_ma450 > -0.25
