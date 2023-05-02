@@ -4952,10 +4952,10 @@ class maddog:
                     
                     ma28_last > ma300_last
                     and macd > macd_2_min_ago
-                    and delta_1_69_39 < delta_2_69_39
                     
-                    and deviation_ma300_sopra_ma450 < 0.25
-                    and deviation_ma300_sopra_ma450 > -0.25
+                    
+                    
+                    and deviation_ma300_sopra_ma450 > -0.05
                     
                     and deviation_ma3_sopra_ma10 > 0.01
                     and deviation_ma3_sopra_ma16 > 0.057
@@ -4980,16 +4980,16 @@ class maddog:
                     # provo delta 39-69
                     
                     
-                # BUY 1x che ci riprova quando se ne va lateralmente dopo il crollo
+                # BUY 1 che ci riprova quando se ne va lateralmente dopo il crollo
                 
                 elif (
                     
                     ma28_last < ma300_last
                     and macd > macd_2_min_ago
-                    and delta_1_69_39 > delta_2_69_39
                     
-                    and deviation_ma300_sopra_ma450 < 0.25
-                    and deviation_ma300_sopra_ma450 > -0.25
+                    
+                    
+                    and deviation_ma300_sopra_ma450 < -0.05
                     
                     and deviation_ma3_sopra_ma10 > 0.01
                     and deviation_ma3_sopra_ma16 > 0.11
