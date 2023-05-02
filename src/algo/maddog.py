@@ -6681,7 +6681,8 @@ class maddog:
                     
                     and deviation_ma100_sopra_ma300 > -0.60
                     and deviation_ma3_sopra_ma10 > 0.01
-                    
+                    and deviation_ma3_sopra_ma18 > 0.13
+                  
                     and ma200_last < ma200_120_min_ago
                     
                     and ma100_last < ma100_50_min_ago
@@ -6689,10 +6690,11 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                 ):
                
-                    buy = "BUY 2C con 100< and 200< con INCROCIO 7-50 100 NON DISTANTE DA 300 - r 4934 a"
+                    buy = "BUY 2C con 100< and 200< con INCROCIO 7-50 100 NON DISTANTE DA 300 - r 4934 A"
                     action = "buy"
                     percentage = 80
                     
+                    #  2 mag 2023 aggiunta 3-18 >0.13
                     
                     
                 # IL BUY 2 CI RIPROVA CON INCROCIO 8-50
