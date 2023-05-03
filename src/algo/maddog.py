@@ -13063,17 +13063,18 @@ class maddog:
                     elif (
                         ma50_last < ma50_2_min_ago
                         and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
                         and ma8_last < ma39_last
                         and deviation_ma100_sopra_ma300 > 0.69
                         and deviation_sell < -0.178
                         and ma5_last < ma100_last
                     ):
-                        sell = "SELL 1 (21-50 min)con ma50 < CUSCINO SANT' ANTONIO (5-100) MA SOLO con TREND CRESCITA (100 sopra 300 > 0.69) E 8<39 - r 8997 B"
+                        sell = "SELL 1 (21-50 min) con ma50 < CUSCINO SANT' ANTONIO (5-100) MA SOLO con 100 sopra 300 > 0.69 and macd < macd 2 min ago - r 8997 B"
                         action = "sell"
                         
                         # 13 gen 2023 dev sell -0.175
                         # ho visto che ma175 andrebbe bene ma ho preferito modificare dev sell
-                        
+                        # 3 mag 2023 aggiunta macd < macd 2 min ago
                         
                     # TREND LATERALE (100/300  <0.69 and >-0.77) NON TOCCARE
                     
