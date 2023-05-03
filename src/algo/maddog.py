@@ -3597,6 +3597,7 @@ class maddog:
                     
                     ma200_last > ma200_20_min_ago
                     and ma20_last > ma78_last
+                    and macd > macd_2_min_ago
                     
                     and deviation_ma5_sopra_ma28 > 0.165
                     and ma28_last > ma28_2_min_ago
@@ -3613,9 +3614,12 @@ class maddog:
              
                 ):    
                     
-                    buy = "BUY 1 con 200 > con 5-28> 0.165 and ma28_last > ma28_2_min_ago - 20 > 78 - riga 2828 a"
+                    buy = "BUY 1 con 200 > con 5-28> 0.165 and ma28_last > ma28_2_min_ago - 20 > 78 - r 2828 A"
                     action = "buy"
                     percentage = 80
+                    
+                    # 3 mag 2023 aggiunto macd > macd 2 min ago
+                    
                     
                     
                     
