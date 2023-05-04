@@ -2093,11 +2093,12 @@ class maddog:
                     
                     
                     
-                # BUY 1 tempo ESTATE PIU' VELOCE 100 > 60 min ago (l' estate se lo puo' perettere!) considera il passare del TEMPO ! ma30 > 
+                # BUY 1 tempo ESTATE PIU' VELOCE 100 > 60 min ago (l' estate se lo puo' perettere!) considera il passare del TEMPO ! ma30 >
                 
                 elif (     
                     ma8_last > ma28_last
                     and macd > macd_2_min_ago
+                    and ma450_last > ma450_480_min_ago
                     and ma5_last > ma250_last
                     and ma50_last > ma100_last
                     
@@ -2113,7 +2114,32 @@ class maddog:
                     and ma2_last >= ma20_last
                     and ma2_last >= ma2_2_min_ago
                 ):    
-                    buy = "BUY 1 tempo ESTATE PIU' VELOCE 5>250 (l' estate se lo puo' permettere!) considera il passare del tempo della ma30 > + MACD > - r 1537 A"
+                    buy = "BUY 1 tempo ESTATE PIU' VELOCE 5>250 (l' estate se lo puo' permettere!) considera il passare del tempo della ma30 > + MACD > - r 1537 A1"
+                    action = "buy"
+                    percentage = 90
+                    
+                    
+                    
+                elif (     
+                    ma8_last > ma28_last
+                    and macd > macd_2_min_ago
+                    and ma450_last < ma450_480_min_ago
+                    and ma5_last > ma300_last
+                    and ma50_last > ma100_last
+                    
+                    and ma30_last > ma30_40_min_ago
+                    
+                    
+                    and deviation_ma3_sopra_ma10 > 0.08
+                    and deviation_ma5_sopra_ma28 > 0.13
+                    and deviation_bellissima > 0.02
+                    
+                    and ma20_last >= ma20_2_min_ago
+                    and ma5_last >= ma5_2_min_ago
+                    and ma2_last >= ma20_last
+                    and ma2_last >= ma2_2_min_ago
+                ):    
+                    buy = "BUY 1 tempo ESTATE PIU' VELOCE 5>250 (l' estate se lo puo' permettere!) considera il passare del tempo della ma30 > + MACD > - r 1537 A2"
                     action = "buy"
                     percentage = 90
                     
