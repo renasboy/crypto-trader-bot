@@ -2099,11 +2099,8 @@ class maddog:
                     ma8_last > ma28_last
                     and macd > macd_2_min_ago
                     
-                    and ma5_last > ma250_last
-                    and ma50_last > ma100_last
-                    
+                    and ma5_last > ma90_last
                     and ma30_last > ma30_40_min_ago
-                    
                     
                     and deviation_ma3_sopra_ma10 > 0.08
                     and deviation_ma5_sopra_ma28 > 0.13
@@ -2114,12 +2111,12 @@ class maddog:
                     and ma2_last >= ma20_last
                     and ma2_last >= ma2_2_min_ago
                 ):    
-                    buy = "BUY 1 tempo ESTATE PIU' VELOCE 5>250 (l' estate se lo puo' permettere!) considera il passare del tempo della ma30 > + MACD > - r 1537 A"
+                    buy = "BUY 1 tempo ESTATE PIU' VELOCE 5>90 (l' estate se lo puo' permettere!) considera il passare del tempo della ma30 > + MACD > - r 1537 A"
                     action = "buy"
                     percentage = 90
                     
                     # 4 mag 2023 ho aggiunto e tolto 450>480 min ago
-                    
+                    # 4 mag 2023 5-90 da 5-250
                     
                 
                     
