@@ -5290,11 +5290,37 @@ class maddog:
                     
                     
                     
+                
                 # BUY 1 forever young 1 PIU' PRUDENTE se ma200 > e se ma200 > ma300
                 
                 elif (  
                     ma200_last > ma300_last
+                    and ma450_last < ma450_480_min_ago
+                    and ma300_last > ma300_120_min_ago
                     
+                    and ma78_last > ma100_last
+                    and deviation_ma100_laterale > 0.18
+                    and ma200_last > ma200_15_min_ago
+                    
+                    and deviation_ma5_sopra_ma28 > 0.08
+                    
+                    and ma3_last >= ma11_last
+                    
+                    and ma10_last >= ma10_2_min_ago
+                    and ma2_last >= ma2_2_min_ago
+                ):
+
+                    buy = "BUY 1 forever young 1 con 300 > 120 min ago PIU' PRUDENTE se ma 200 > e se ma200 > ma300 E CON 450> - r 4325a"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # la troppa prudenza qualche volta genera perdite
+                    #  4 mag 2023 aggiunta 3-18 > 0.20
+                    
+                    
+                elif (  
+                    ma200_last > ma300_last
+                    and ma450_last < ma450_480_min_ago
                     and ma300_last > ma300_120_min_ago
                     
                     and ma78_last > ma100_last
@@ -5308,9 +5334,10 @@ class maddog:
                     
                     and ma10_last >= ma10_2_min_ago
                     and ma2_last >= ma2_2_min_ago
+                    and macd > macd_2_min_ago
                 ):
 
-                    buy = "BUY 1 forever young 1 con 300 > 120 min ago PIU' PRUDENTE se ma 200 > e se ma200 > ma300 E CON 300>450 - r 4325"
+                    buy = "BUY 1 forever young 1 con 300 > 120 min ago PIU' PRUDENTE se ma 200 > e se ma200 > ma300 E CON 450< - r 4325b"
                     action = "buy"
                     percentage = 80
                     
