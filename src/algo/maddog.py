@@ -5322,7 +5322,7 @@ class maddog:
                     
                     ma450_last < ma450_480_min_ago
                     
-                    and ma78_last > ma100_last
+                    
                     
                     
                     
