@@ -2098,7 +2098,7 @@ class maddog:
                 elif (     
                     ma8_last > ma28_last
                     and macd > macd_2_min_ago
-                    and ma450_last > ma450_480_min_ago
+                    
                     and ma5_last > ma250_last
                     and ma50_last > ma100_last
                     
@@ -2118,7 +2118,7 @@ class maddog:
                     action = "buy"
                     percentage = 90
                     
-                    # 4 mag 2023 ho aggiunto 450>480 min ago
+                    # 4 mag 2023 ho aggiunto e tolto 450>480 min ago
                     
                     
                 
@@ -15185,7 +15185,7 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 da 110 a 239 min con 300 < 5 ore ago E con ma50 > E incr 8-110 se 100-200 < 0.45 and dev_sell 0.65 - 1.49 RABONA RONALDO - r 10256 B"
+                        sell = "SELL 1 da 110 a 239 min con 300 < 5 ore ago E con ma50 > E incr 8-110 se 100-200 < 0.45 and dev_sell 0.65 - 1.49 RONALDO - r 10256 B"
                         action = "sell"
                         
                         # > estate 5-78 da 5-34
@@ -15201,7 +15201,7 @@ class maddog:
                         and deviation_sell > 1.50 and deviation_sell < 2.70
                         and ma2_last < ma2_2_min_ago
                     ):    
-                        sell = "SELL 1 da 110 a 239 min con ma50 > incrocio 3-125 CON 100 sopra 300 > 0.40 and deviation_sell  1.50-2.70 DOPPIO PASSO RONALDO - r 10257 A"
+                        sell = "SELL 1 da 110 a 239 min con ma50 > incrocio 3-125 CON 100 sopra 300 > 0.40 and deviation_sell  1.50-2.70 RONALDO - r 10257 A"
                         action = "sell"
                         
                         # 3 set 2022 ma100 da ma48
@@ -15289,16 +15289,16 @@ class maddog:
                         ma50_last < ma50_2_min_ago
                         and ma2_last < ma2_2_min_ago
                         and ma300_last > ma300_120_min_ago
-                        and deviation_sell < -0.218
+                        and deviation_sell < -0.20
                         and ma3_last <= ma39_last
                         and ma100_last < ma100_60_min_ago
                     ):
-                        sell = "SELL 1 da 110 a 239 min con ma50 < and ma100 < MA 300 > 300 120 min ago and (dev_sell < -0.218 and ma3_last <= ma39_last) - r 10261 A"
+                        sell = "SELL 1 da 110 a 239 min con ma50 < and ma100 < MA 300 > 300 120 min ago and (dev_sell < -0.20 and ma3_last <= ma39_last) - r 10261 A"
                         action = "sell"
                         
                         # > estate -0.22 da -0.15
                         # 6 apr 2023 -0.218 da -0.219
-                        
+                        # 4 mag 2023 -0.20 da 0.218 che ha fatto -0.71 ma se 300 > 120 min ma300 diventa una resistenza !
                         
                         
                     elif (
