@@ -15402,7 +15402,8 @@ class maddog:
                         
                     elif (    
                         ma50_last < ma50_2_min_ago
-                        and deviation_ma39 < -0.193
+                        and deviation_ma39 < -0.192
+                        and macd < macd_2_min_ago
                         
                         and deviation_ma5_sotto_ma300 > 0.30
                       
@@ -15411,12 +15412,12 @@ class maddog:
                         and ma100_last > ma100_60_min_ago
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 da 110 a 239 min con ma50 < MA ma100 > E ma300 < e con deviation_ma39 <-0.193 - r 10265 B1"
+                        sell = "SELL 1 da 110 a 239 min con ma50 < MA ma100 > E ma300 < e con deviation_ma39 <-0.193 and macd < macd 2 min ago - r 10265 B1"
                         action = "sell"
                         
                         # ma39 NON DEVE VENDERE in fase laterale ma in alto
                         # 26 set dev39 a 0.193 da 0.195
-                        # 31 ott 2022 dev sell -0.05 da 0.20
+                        #  4 mag 2023 aggiunto macd < macd 2 min ago
                         
                         
                         
@@ -15571,7 +15572,7 @@ class maddog:
                         
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 da RCCR ! da 110 a 239 min IPOTESI PEGGIORE con ma50< con dev_ma39 < -0.22 and deviation_sell < -0.22 MA DOPPIO DELTA RIALZO - r 10273"
+                        sell = "SELL 1 da RCCR ! da 110 a 239 min IPOTESI PEGGIORE con ma50< con dev_ma39 < -0.22 and deviation_sell < -0.22 MA giorno - r 10273"
                         action = "sell"
                         
                         # 19 SET r 10546 la condizione precedente ha fatto -1.65 ed e' partita insieme ad altre 2 condizioni speciali ! 
@@ -15591,7 +15592,7 @@ class maddog:
                         and ma200_last > ma300_last
                         
                     ):
-                        sell = "SELL 1 da 110 a 239 min E 300 > 120 min ago e con ma50 < (dev_sell < -0.241 and ma3_last < ma39_last) con > PERDITA TOLLERATA - r 10274 A1"
+                        sell = "SELL 1 da 110 a 239 min E 300 > 120 min ago e con ma50 < (dev_sell < -0.241 and ma3_last < ma39_last) con > PERDITA TOL - r 10274 A1"
                         action = "sell"
                         
                         # 28 dic 2022 dev sell -0.245 da -0.23
@@ -15631,7 +15632,7 @@ class maddog:
                         and ma200_last > ma300_last
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 da 110 a 239 min E 300 < 120 min ago e con ma50 < (dev_sell < -0.25 and ma3_last < ma39_last) con > PERDITA TOLLERATA - r 10275 B"
+                        sell = "SELL 1 da 110 a 239 min E 300 < 120 min ago e con ma50 < (dev_sell < -0.25 and ma3_last < ma39_last) con > PERDITA TOL - r 10275 B"
                         action = "sell"
                         
                         # 17 gen 2023 dev sell 0.25
