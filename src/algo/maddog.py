@@ -2098,8 +2098,9 @@ class maddog:
                 elif (     
                     ma5_last > ma28_last
                     and macd > macd_2_min_ago
+                    and deviation_ma300_sopra_ma450 > -0.20
                     
-                    and ma5_last > ma90_last
+                    and ma5_last > ma59_last
                     and ma30_last > ma30_30_min_ago
                     
                     and deviation_ma3_sopra_ma10 > 0.08
@@ -2116,7 +2117,7 @@ class maddog:
                     percentage = 90
                     
                     # 4 mag 2023 ho aggiunto e tolto 450>480 min ago
-                    # 4 mag 2023 5-90 da 5-250
+                    # 4 mag 2023 5-59 da 5-250
                     
                 
                     
