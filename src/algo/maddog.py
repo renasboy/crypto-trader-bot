@@ -7244,11 +7244,31 @@ class maddog:
             
             
             
-                # ------------------------------------------------------------ BUY 2 laterale -
-                
+                # ------------------------------------------------------------ BUY 2 laterale
+              
                 elif (    
                     ma8_last > ma59_last
+                    and ma300_last > ma450_last
+                    and deviation_ma100_sopra_ma300 < 0.20
+                    and deviation_ma100_sopra_ma300 > -0.20
                     
+                    and deviation_ma3_sopra_ma10 > 0.07
+                 
+                    and ma300_last > ma300_120_min_ago
+               
+                ):  
+                
+                    buy = "BUY 2 laterale con 300>450 - r 5412 x"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # 19 set 2022 aggiunta 3-10 > 0.07
+                    #  3 ott 2022 3-10 0.113 da 0.07
+                    #  4 mag 2023 3-10 0.07 da 0.113 con 300>450
+                    
+                elif (    
+                    ma8_last > ma59_last
+                    and ma300_last < ma450_last
                     and deviation_ma100_sopra_ma300 < 0.20
                     and deviation_ma100_sopra_ma300 > -0.20
                     
@@ -7258,7 +7278,7 @@ class maddog:
                
                 ):  
                 
-                    buy = "BUY 2 laterale - r 5412"
+                    buy = "BUY 2 laterale con 300<450 - r 5412 y"
                     action = "buy"
                     percentage = 80
                     
