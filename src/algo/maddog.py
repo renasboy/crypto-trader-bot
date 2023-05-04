@@ -2127,7 +2127,7 @@ class maddog:
                     and ma5_last > ma300_last
                     and ma50_last > ma100_last
                     
-                    and ma30_last > ma30_40_min_ago
+                    
                     
                     
                     and deviation_ma3_sopra_ma10 > 0.08
