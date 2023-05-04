@@ -24159,7 +24159,8 @@ class maddog:
                 # 29 gen 2023 8-250 da 8-225
                 
                 
-                
+            # 32 A
+            
             elif (
                 
                 seconds_since_last_trade > max_hold_time_in_seconds_sell_5_180
@@ -24183,6 +24184,8 @@ class maddog:
                 
                 
                 
+            # 32 B 
+            
             elif (
                 
                 seconds_since_last_trade > max_hold_time_in_seconds_sell_5_180
@@ -24213,9 +24216,26 @@ class maddog:
                         
                
             
+            # OGGI 4 MAGGIO 2023
+            # POCHI MALEDETTI E SUBITO tra 0.80 e 1.20 di guadagno INTANTO TE LI PRENDI. con 3-10
             
+            # 33 
             
-            # 33 - SELL condizione speciale POCHI MALEDETTI E SUBITO QUANDO SALE FORTE ( cerca di inibirlo ) con ma200 > MA ma100 - dedicated to comparo meo
+            elif (
+                ma3_last < ma10_last
+                
+                and deviation_sell > 0.80
+                and deviation_sell < 1.20
+                
+                and ma2_last < ma2_2_min_ago
+            ):    
+                sell = "SELL cond. special 33 - POCHI MALEDETTI E SUBITO con dev_sell tra 0.80 e 1.20 - cazzo - r 16750"
+                action = "sell"
+                
+                
+                
+                
+            # 34 a - SELL condizione speciale POCHI MALEDETTI E SUBITO QUANDO SALE FORTE ( cerca di inibirlo ) con ma200 > MA ma100 - dedicated to comparo meo
             
             elif (
                 ma3_last < ma28_last
@@ -24228,7 +24248,7 @@ class maddog:
                 and ma2_last > ma100_last
                 and ma2_last < ma2_2_min_ago
             ):    
-                sell = "SELL cond. special 33 - POCHI MALEDETTI E SUBITO QUANDO SALE FORTE 3-28 ( cerca di inibirlo ) con ma200> e con dev_sell > 0.70 - r 16767"
+                sell = "SELL cond. special 34 a - POCHI MALEDETTI E SUBITO QUANDO SALE FORTE 3-28 ( cerca di inibirlo ) con ma200> e con dev_sell > 0.70 - r 16767"
                 action = "sell"
                     
                 # and ma2_last > ma100_last (altrimenti vende durante il crollo con la ma3-ma9)
@@ -24236,7 +24256,7 @@ class maddog:
                 
                 
                 
-            # 34 - SELL condizione speciale POCHI MALEDETTI E SUBITO QUANDO SALE PIANO con ma200 > MA ma100 NON DEVE SALIRE TROPPO ! - dedicated to comparo meo
+            # 34 b - SELL condizione speciale POCHI MALEDETTI E SUBITO QUANDO SALE PIANO con ma200 > MA ma100 NON DEVE SALIRE TROPPO ! - dedicated to comparo meo
             
             elif (
                 ma3_last < ma39_last
@@ -24250,7 +24270,7 @@ class maddog:
                 and ma2_last > ma100_last
                 
             ):    
-                sell = "SELL condizione speciale 34 - POCHI MALEDETTI E SUBITO 3-39 QUANDO SALE PIANO quando ma200 > e con dev_sell > 0.70 and < 0.99 - r 16789"
+                sell = "SELL condizione speciale 34 b - POCHI MALEDETTI E SUBITO 3-39 QUANDO SALE PIANO quando ma200 > e con dev_sell > 0.70 and < 0.99 - r 16789"
                 action = "sell"
                     
                 # and ma2_last > ma100_last (altrimenti vende durante il crollo con la ma3-ma9)
