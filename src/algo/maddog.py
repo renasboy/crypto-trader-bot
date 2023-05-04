@@ -24616,3 +24616,5 @@ class maddog:
             # grazie sempre.
             # grazie.
             # compa
+            # compa torna !
+            
