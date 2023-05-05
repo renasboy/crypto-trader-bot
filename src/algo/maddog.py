@@ -1747,44 +1747,7 @@ class maddog:
                     percentage = 50
                     
                     
-                elif (    
-                    ma5_last > ma50_last
-                    
-                    
-                    and deviation_ma100_sopra_ma300 < 0.27
-                    and deviation_ma100_sopra_ma300 > -0.27
-                    
-                    and deviation_ma10_sotto_ma100 < -0.05
-                    and deviation_ma10_sotto_ma100 > -0.20
-                  
-                    and macd > macd_2_min_ago
-                    and ma300_last < ma450_last
-                    
-                    and deviation_ma3_sopra_ma10 > 0.07
-                    and deviation_ma3_sopra_ma16 > 0.12
-                    and deviation_ma4_sopra_ma28 > 0.04
-                    
-                    and ma2_last > ma2_2_min_ago
-                ):  
                 
-                    buy = "BUY 1 lat 2 con 3-10 > 0.07 and 3-16 > 0.05 and macd > macd 2 min ago - r 1206 AA2x1"
-                    action = "buy"
-                    percentage = 50
-                    
-                    # 19 set 2022 aggiunta 3-10 > 0.07
-                    #  3 ott 2022 3-10 0.06 da 0.07 
-                    #  3 ott 2022 100 sopra 300 a < 0.30 da < 0.20 perche' mentre 100 scende gia' e' partito il rialzo !
-                    # arriva tardi e ho tolto qualcosina.
-                    # 25 ottobre 2022 deve essere 100 > 100 40 min ago ! VEDI 24 OTTOBRE 2022 ore 2:27
-                    # 25 ottobre 2022 se metto 100 < 100 40 min ago an 5-28 > 0.11 VA IN CONFLITTO !
-                    # 11 gen 2023 8-50 da 8-59
-                    # 11 gen 2023 3-10 > 0.04 da > 0.05
-                    # 25 gen 2023 aggiunta 5-28
-                    # 14 feb 2023 tolto 100 > 40 min ago (se gia' c'e' 300 sopra 450 e che cazzo !)
-                    # 10 mar 2023 dev 4-28 a 0.04 da 0.05
-                    # 16 mar 2023 aggiunta 3-16 > 0.225
-                    # 12 apr 2023 3-16 > 0.05 da 0.22
-                    # 12 apr 2023 aggiunta macd > macd_2_min_ago
                     
                     
                     
@@ -1806,7 +1769,7 @@ class maddog:
                     and ma8_last > ma50_last
                 ):  
                 
-                    buy = "BUY 1 (50>78) con 20>200 and 69 > 100 AND ma78 > AND 59 > 59 60 min ago CON 28 < 28 20 min AND 3-10 > 0.12- r 1227 aB"
+                    buy = "BUY 1 (50>78) con 20>200 and 69 > 100 AND ma78 > AND 59 > 59 60 min ago CON 28 < 28 20 min AND 3-10 > 0.12 - r 1227 aB"
                     action = "buy"
                     percentage = 80
                     
