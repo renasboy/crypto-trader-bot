@@ -320,13 +320,18 @@ class maddog:
         
         
         
+        # formula DEVIATION_ma10_sotto_ma100 - FORMULA dna !
         
+        deviation_ma10_sotto_ma100 = (ma10_last / ma100_last - 1) * 100 if ma100_last else 0
+        self.algo_helper.info("deviation_ma10_sotto_ma100: {}".format(deviation_ma10_sotto_ma100))
         
         
         # formula DEVIATION_ma10_sopra_ma200 - FORMULA MY COMPA !
         
         deviation_ma10_sopra_ma200 = (ma10_last / ma200_last - 1) * 100 if ma200_last else 0
         self.algo_helper.info("deviation_ma10_sopra_ma200: {}".format(deviation_ma10_sopra_ma200))
+        
+        
         
         
         # formula DEVIATION_ma54_sopra_ma100 - FORMULA "quello che non" !
@@ -1714,7 +1719,10 @@ class maddog:
                 # ------------------------------------------------------------ BUY 1 laterale 2
                 
                 elif (    
-                    ma5_last > ma50_last
+                    ma5_last > ma13_last
+                    and deviation_ma10_sotto_ma100 < -0.05
+                    and deviation_ma10_sotto_ma100 > -0.15
+                  
                     and macd > macd_2_min_ago
                     and ma300_last > ma450_last
                     
