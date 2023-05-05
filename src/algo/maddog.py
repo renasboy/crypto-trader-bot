@@ -1726,7 +1726,7 @@ class maddog:
                     and macd > macd_2_min_ago
                     and ma300_last > ma450_last
                     
-                    and deviation_ma100_sopra_ma300 < 0.27
+                    
                     and deviation_ma100_sopra_ma300 > -0.27
                     
                     and deviation_ma3_sopra_ma10 > 0.07
