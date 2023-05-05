@@ -1725,8 +1725,8 @@ class maddog:
                     
                     and macd > macd_2_min_ago
                     
-                    and deviation_ma300_sopra_ma450 < 0.20
-                    and deviation_ma300_sopra_ma450 > -0.20
+                    and deviation_ma300_sopra_ma450 < 0.40
+                    and deviation_ma300_sopra_ma450 > -0.40
                     
                     and deviation_ma3_sopra_ma10 > 0.07
                     and deviation_ma3_sopra_ma16 > 0.12
@@ -1742,14 +1742,17 @@ class maddog:
                   
                 elif (    
                     ma5_last > ma13_last
+                  
+                    and deviation_ma100_sopra_ma300 < 0.27
+                    and deviation_ma100_sopra_ma300 > -0.27
+                    
                     and deviation_ma10_sotto_ma100 < -0.05
                     and deviation_ma10_sotto_ma100 > -0.20
                   
                     and macd > macd_2_min_ago
                     and ma300_last > ma450_last
                     
-                    and deviation_ma100_sopra_ma300 < 0.27
-                    and deviation_ma100_sopra_ma300 > -0.27
+                    
                     
                     and deviation_ma3_sopra_ma10 > 0.07
                     and deviation_ma3_sopra_ma16 > 0.05
