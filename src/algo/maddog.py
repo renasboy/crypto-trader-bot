@@ -24228,7 +24228,7 @@ class maddog:
                 
                 and ma2_last < ma2_2_min_ago
             ):    
-                sell = "SELL cond. special 33 - POCHI MALEDETTI E SUBITO con dev_sell tra 0.80 e 1.20 - cazzo - r 16750"
+                sell = "SELL cond. special 33 - POCHI MALEDETTI E SUBITO con 3-10 E con dev_sell tra 0.80 e 1.20 - INTANTO TE LI PRENDI - cazzo - r 16750"
                 action = "sell"
                 
                 
