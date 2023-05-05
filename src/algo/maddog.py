@@ -14461,12 +14461,13 @@ class maddog:
                         and ma200_last < ma200_120_min_ago
                         and ma300_last < ma300_120_min_ago
                    
-                        and deviation_sell < -0.19
+                        and deviation_sell < -0.20
                         and ma2_last < ma2_2_min_ago
                     ):
                         sell = "SELL 1 da 50-90 min AGGIUNTA TARDIVA MA FORSE NECESSARIA ! and delta_1 < delta_2 and deviation_sell < -0.19 e 300>5 ore - r 9888 a1"
                         action = "sell"
                         
+                        # 5 mag 2023 -0.20 da -0.19
                         
                         
                         
