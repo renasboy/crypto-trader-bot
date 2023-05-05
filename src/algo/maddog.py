@@ -1735,7 +1735,8 @@ class maddog:
                 ):  
                 
                     buy = "BUY 1 lat 2 con ma450_last > ma450_480_min_ago e 200 > 120 min and 3-10 > 0.07 and 3-16 > 0.05 and macd > macd 2 min ago - r 1205"
-                  
+                    action = "buy"
+                    percentage = 50
                   
                   
                 elif (    
