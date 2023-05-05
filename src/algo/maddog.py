@@ -1731,6 +1731,8 @@ class maddog:
                     and deviation_ma3_sopra_ma10 > 0.07
                     and deviation_ma3_sopra_ma16 > 0.12
                     and deviation_ma4_sopra_ma28 > 0.04
+                    
+                    and ma2_last > ma2_2_min_ago
                 ):  
                 
                     buy = "BUY 1 lat 2 con ma450_last > ma450_480_min_ago e 200 > 120 min and 3-10 > 0.07 and 3-16 > 0.05 and macd > macd 2 min ago - r 1205"
@@ -1752,9 +1754,11 @@ class maddog:
                     and deviation_ma3_sopra_ma10 > 0.07
                     and deviation_ma3_sopra_ma16 > 0.05
                     and deviation_ma4_sopra_ma28 > 0.04
+                    
+                    and ma2_last > ma2_2_min_ago
                 ):  
                 
-                    buy = "BUY 1 lat 2 con ma450_last > ma450_480_min_ago e 200 > 120 min and 3-10 > 0.07 and 3-16 > 0.05 and macd > macd 2 min ago - r 1206 AA2x1"
+                    buy = "BUY 1 lat 2 con 3-10 > 0.07 and 3-16 > 0.05 and macd > macd 2 min ago - r 1206 AA2x1"
                     action = "buy"
                     percentage = 50
                     
