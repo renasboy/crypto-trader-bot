@@ -1715,6 +1715,26 @@ class maddog:
                     #  1 ott 2022 3-10 > 0.135
                     
                 
+                # ------------------------------------------------------------ BUY 1 laterale 2
+                
+                elif (    
+                    ma5_last > ma39_last
+                    
+                    and macd > macd_2_min_ago
+                    and ma300_last > ma450_last
+                    
+                    and deviation_ma100_sopra_ma300 < 0.27
+                    and deviation_ma100_sopra_ma300 > -0.27
+                    
+                    and deviation_ma3_sopra_ma10 > 0.07
+                    and deviation_ma3_sopra_ma16 > 0.05
+                    and deviation_ma4_sopra_ma28 > 0.04
+                ):  
+                
+                    buy = "BUY 1 lat 2 and ma450_last > ma450_480_min_ago e con 200 > 120 min and 3-10 > 0.07 and 3-16 > 0.05 and macd > macd 2 min ago - r 1205"
+                    action = "buy"
+                    percentage = 50
+                    
                     
                 # ------------------------------------------------------------ BUY 1 laterale 2
                 
