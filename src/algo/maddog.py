@@ -1724,7 +1724,7 @@ class maddog:
                     
                 elif (    
                     ma5_last > ma13_last
-                    and ma250_last > ma300_last
+                    
                     
                     and deviation_ma100_sopra_ma300 < 0.27
                     and deviation_ma100_sopra_ma300 > -0.27
@@ -1745,6 +1745,7 @@ class maddog:
                     action = "buy"
                     percentage = 50
                     
+                    #  5 mag 2023 ho tolto and ma250_last > ma300_last
                     
                 
                     
