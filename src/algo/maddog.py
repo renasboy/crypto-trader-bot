@@ -19067,9 +19067,10 @@ class maddog:
                         and ma300_last > ma300_301_min_ago
                         and deviation_sell < -0.19
                         and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
                     ):
                    
-                        sell = "SELL 2 > 110 min con dev sell -0.19 forse E' NECESSARA SOLO QUESTA ! and 300> 300 5 ore fa - r 12681 A"
+                        sell = "SELL 2 > 110 min con dev sell -0.19 forse E' NECESSARA SOLO QUESTA ! and 300> 300 5 ore fa and macd < macd 2 min ago - r 12681 A"
                         action = "sell"
                         
                         # > estate -0.15 da +0.02
@@ -24264,8 +24265,9 @@ class maddog:
                 and deviation_sell < 1.20
                 
                 and ma2_last < ma2_2_min_ago
+                and macd < macd_2_min_ago
             ):    
-                sell = "SELL cond. special 33 - POCHI MALEDETTI E SUBITO con 3-10 E con dev_sell tra 0.80 e 1.20 - INTANTO TE LI PRENDI - cazzo - r 16750"
+                sell = "SELL cond. special 33 - POCHI MALEDETTI E SUBITO con 3-10 E con dev_sell tra 0.80 e 1.20 and macd < - INTANTO TE LI PRENDI - cazzo - r 16750"
                 action = "sell"
                 
                 
