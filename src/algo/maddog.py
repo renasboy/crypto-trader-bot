@@ -19110,7 +19110,24 @@ class maddog:
                         and macd < macd_2_min_ago
                     ):
                    
-                        sell = "SELL 2 > 110 min con dev sell -0.19 forse E' NECESSARA SOLO QUESTA ! and 300> 300 5 ore fa and macd < macd 2 min ago - r 12681 A"
+                        sell = "SELL 2 > 110 min con dev sell -0.19 forse E' NECESSARA SOLO QUESTA ! and 300> 300 5 ore fa and macd < macd 2 min ago - r 12681 A1"
+                        action = "sell"
+                        
+                        # > estate -0.15 da +0.02
+                        # 10 dic 2022 -0.17 da -0.15
+                        # 26 feb 2023 -0.19 da -0.17
+                        
+                        
+                    elif (    
+                        ma3_last < ma100_last
+                        and ma3_last < ma450_last
+                        and ma300_last > ma300_301_min_ago
+                        and deviation_sell < -0.17
+                        and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
+                    ):
+                   
+                        sell = "SELL 2 > 110 min con dev sell -0.17 and 3 < 450 and 300 > 300 5 ore fa and macd < macd 2 min ago - r 12681 A2"
                         action = "sell"
                         
                         # > estate -0.15 da +0.02
