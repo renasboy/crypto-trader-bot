@@ -14175,8 +14175,10 @@ class maddog:
                     
                     # SELL 1 50-90 min IPOTESI PEGGIORE con ma50< con deviation_ma39 <-0.205 and deviation_sell < -0.205 and DOPPIO DELTA INFERI
                     
+                    
                     elif (
                         ma50_last < ma50_2_min_ago
+                        and ma300_last > ma300_301_min_ago
                         and ma200_last < ma300_last
                         and deviation_trend_ma200 < -0.10
                         
@@ -14189,10 +14191,33 @@ class maddog:
                         
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 50-90 min IPOTESI PEGGIORE con ma50 < con dev_ma39 <-0.19 and dev sell < -0.22 SOTTO RIBASSO RIBASSO - NOTTE - r 9633"
+                        sell = "SELL 1 50-90 min IPOTESI PEGGIORE con ma50 < con dev_ma39 <-0.19 and dev sell < -0.22 SOTTO RIBASSO RIBASSO - NOTTE - r 9633a"
                         action = "sell"
                         
                         # 6 giu 2022 deviation sell a -0.22 da -0.195
+                        
+                        
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and ma300_last < ma300_301_min_ago
+                        and ma200_last < ma300_last
+                        and deviation_trend_ma200 < -0.10
+                        
+                        and deviation_ma39 < -0.19
+                        and deviation_sell < -0.21
+                        
+                        
+                        and delta_1 > delta_2
+                        and ma100_last < ma100_60_min_ago
+                        
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 1 50-90 min IPOTESI PEGGIORE con ma50 < con dev_ma39 <-0.19 and dev sell < -0.21 SOTTO RIBASSO RIBASSO - NOTTE - r 9633b"
+                        action = "sell"
+                        
+                        # 6 giu 2022 deviation sell a -0.22 da -0.195
+                        # 6 mag 2023 deviation sell a -0.21 da -0.22
+                        # durante un ribasso evidente (ma300 scende da 6 ore !) devi perdere il meno possibile ! esci ! a ricomprare ci pensera' la condizione successiva.
                         
                         
                         
