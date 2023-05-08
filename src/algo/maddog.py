@@ -2374,7 +2374,7 @@ class maddog:
                 
                 elif (     
                     
-                    deviation_callas < -0.12
+                    deviation_callas < -0.14
                     and macd > macd_2_min_ago
                     
                     and deviation_ma50_sotto_ma300 < -0.29
@@ -2388,12 +2388,12 @@ class maddog:
                     and ma200_last < ma200_120_min_ago
                     
                     and deviation_ma3_sopra_ma10 > 0.07
-                    and deviation_ma5_sopra_ma28 > 0.04
+                    and deviation_ma5_sopra_ma28 > 0.03
                     
                     and ma2_last >= ma20_last
                     and ma2_last >= ma2_2_min_ago
                 ):    
-                    buy = "BUY 1 maria callas core 'ngrato 5-59 - con 5 sotto 300 < -0.60 - 2 sett 2022 ore 5:03 - ma300 che SCENDE - r 1615 B"
+                    buy = "BUY 1 maria callas core 'ngrato con dev_callas -0.14 e con 5 sotto 300 < -0.60 - 2 set 2022 ore 5:03 - ma300 che SCENDE - r 1615 B"
                     action = "buy"
                     percentage = 80
                     
@@ -2418,7 +2418,8 @@ class maddog:
                     # 15 apr 2023 5-28 > 0.05 da 0.06
                     # 20 apr 2023 5-28 > 0.04 da 0.05
                     # 20 apr 2023 aggiunta macd > macd_2_min_ago
-                    
+                    #  8 mag 2023 dev_callas -0.14 da -0.12
+                    #  8 mag 2023 5-28 > 0.03 da 0.04
                 
                 # BUY 1 tempo FINE AUTUNNO (quasi inverno !)
                 
