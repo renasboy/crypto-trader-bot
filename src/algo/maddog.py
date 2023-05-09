@@ -11685,6 +11685,7 @@ class maddog:
                     
                     ma78_last < ma150_last
                     and deviation_ma5_sopra_ma59 < -0.09
+                    and deviation_ma3_sopra_ma10 > 0.057
                     and deviation_ma3_sopra_ma16 > 0.06
                     
                     and ma100_last < ma100_180_min_ago
@@ -11696,9 +11697,10 @@ class maddog:
                     
                     and deviation_ma5_sopra_ma28 < 0.10
                     and ma2_last >= ma2_2_min_ago
+                    and macd > macd_2_min_ago
                     
                 ):
-                    buy = "BUY 5 29 ago 2022 > 180 min di ribasso 78<150 and 3-16 > 0.06 - r 7564 B2"
+                    buy = "BUY 5 29 ago 2022 > 180 min di ribasso 78<150 and 3-16 > 0.06 and macd > macd 2 min ago - r 7564 B2"
                     action = "buy"
                     percentage = 90
                     
@@ -11706,7 +11708,8 @@ class maddog:
                     # tolto 18>100 
                     # aggiunto PENSIERO LATERALE and deviation_ma5_sopra_ma59 < -0.09
                     # 19 apr 2023 aggiunta 3-16 > 0.06
-                    
+                    #  9 mag 2023 aggiunta 3-10 > 0.057
+                    #  9 mag 2023 aggiunto macd > macd 2 min ago
                     
                 # NELLA CORREZIONE EVENTUALE (SIAMO AL BUY 5 !) NON HO MESSO and ma50_last > ma100_last
                 
