@@ -22246,10 +22246,11 @@ class maddog:
                         sell = "SELL 4-5-x (21-60 min) con ma50 > and 5-100 and dev_sell < -0.22 CUSCINO DELLA MADONNA se ma100 < E DE SANTO RENATO 300 < - r 15348"
                         action = "sell"
                         
-                    
+                        
                     
                     elif (    
                         ma50_last < ma50_2_min_ago
+                        and ma300_last > ma300_301_min_ago
                         and ma50_last < ma100_last
                         
                         and ma2_last < ma2_2_min_ago 
@@ -22257,7 +22258,21 @@ class maddog:
                         and ma3_last < ma39_last
                         and ma200_last < ma200_60_min_ago
                     ):
-                        sell = "SELL 4-5-x (21-60 min) con ma50 < and deviation_sell < -0.32 - r 15349"
+                        sell = "SELL 4-5-x (21-60 min) con ma50 < and deviation_sell < -0.32 se 300 < 300 301 min ago - r 15349a"
+                        action = "sell"
+                        
+                        
+                    elif (    
+                        ma50_last < ma50_2_min_ago
+                        and ma300_last < ma300_301_min_ago
+                        and ma50_last < ma100_last
+                        
+                        and ma2_last < ma2_2_min_ago 
+                        and deviation_sell < -0.27
+                        and ma3_last < ma39_last
+                        and ma200_last < ma200_60_min_ago
+                    ):
+                        sell = "SELL 4-5-x (21-60 min) con ma50 < and deviation_sell < -0.27 se 300 < 300 301 min ago - r 15349b"
                         action = "sell"
                         
                       
