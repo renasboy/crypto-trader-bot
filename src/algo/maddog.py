@@ -24863,4 +24863,4 @@ class maddog:
             # grazie.
             # compa
             # compa torna !
-            
+            # ave compa caro
