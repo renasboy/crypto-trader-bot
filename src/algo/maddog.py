@@ -24434,12 +24434,6 @@ class maddog:
                 
                 
             
-                        
-                
-                
-                        
-                        
-               
             
             # OGGI 4 MAGGIO 2023
             # POCHI MALEDETTI E SUBITO tra 0.80 e 1.20 di guadagno INTANTO TE LI PRENDI. con 3-10
@@ -24447,7 +24441,8 @@ class maddog:
             # 33 
             
             elif (
-                ma3_last < ma10_last
+                seconds_since_last_trade > 0 and seconds_since_last_trade < 7220
+                and ma3_last < ma10_last
                 
                 and deviation_sell > 0.80
                 and deviation_sell < 1.20
@@ -24455,8 +24450,13 @@ class maddog:
                 and ma2_last < ma2_2_min_ago
                 and macd < macd_2_min_ago
             ):    
-                sell = "SELL cond. special 33 - POCHI MALEDETTI E SUBITO con 3-10 E con dev_sell tra 0.80 e 1.20 and macd < - INTANTO TE LI PRENDI - cazzo - r 16750"
+                sell = "SELL condizione POCHI MALEDETTI E SUBITO da 0 a 120 min con 3-10 E con dev_sell 0.80 -1.20 and macd < - INTANTO TE LI PRENDI - r 16750"
                 action = "sell"
+                
+                # pochi 0.80 - 1.20
+                # maledetti 
+                # subito da 0 a 120 minuti - dopo intervengono le medie piu' lunghe ! non piu' ma10 !
+                
                 
                 
                 
