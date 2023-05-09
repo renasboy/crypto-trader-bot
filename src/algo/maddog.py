@@ -9854,7 +9854,9 @@ class maddog:
                     
                     
                     
-                # BUY 3 IN MEZZO (effetti laterali) con ma69 > and deviation_bellissima > 0.12 IMPORTATA DA BUY 4 RCCR   
+                    
+                    
+                # BUY 3 IN MEZZO (effetti laterali) con ma69 > and deviation_bellissima > 0.12 IMPORTATA DA BUY 4 RCCR
                 
                 elif (
                     ma50_last >= ma50_2_min_ago
@@ -9880,7 +9882,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
              
                 ):
-                    buy = "BUY 3 IN MEZZO (effetti laterali) 78>100 E con ma69 > IMPORTATA DA BUY 4 RCCR - r 6599 A1y"
+                    buy = "BUY 3 IN MEZZO (effetti laterali) 78>100 E con ma69 > IMPORTATA DA BUY 4 RCCR - r 6599 A1yA"
                     action = "buy"
                     percentage = 50
                     
@@ -9891,6 +9893,43 @@ class maddog:
                     # 26 feb 2023 buy3 0.02 da 0.05
                     # 17 gen 2023 dev bellissima 0.02 da 0.045
                     
+                    
+                elif (
+                    ma50_last >= ma50_2_min_ago
+                    
+                    and deviation_ma100_sopra_ma300 < 0.25
+                    and deviation_ma100_sopra_ma300 > -0.25
+                    
+                    and ma450_last < ma450_480_min_ago
+                    
+                    and deviation_ma3_sopra_ma10 > 0.10
+                    and deviation_ma3_sopra_ma18 > 0.13
+                    and deviation_ma5_sopra_ma28 > 0.01
+                    
+                    and deviation_bellissima > 0.02
+                    and deviation_buy3 > 0.02
+                    and deviation_ma7_sopra_ma40 > 0.05
+               
+                    and ma3_last > ma13_last
+                    and ma4_last > ma9_last
+                    and ma4_last > ma50_last
+                    and ma6_last > ma15_last
+                    and ma7_last > ma25_last
+                    
+                    and ma2_last > ma2_2_min_ago
+             
+                ):
+                    buy = "BUY 3 IN MEZZO (effetti laterali) 78>100 E con ma69 > IMPORTATA DA BUY 4 RCCR - r 6599 A1yB"
+                    action = "buy"
+                    percentage = 50
+                    
+                    # 28 set aggiunta 3-10
+                    #  2 ott 2022 dev bellissima 0.05 da 0.12
+                    # 17 gen 2023 dev bellissima 0.045 da 0.05
+                    # 17 gen 2023 buy3 0.045 da 0.05
+                    # 26 feb 2023 buy3 0.02 da 0.05
+                    # 17 gen 2023 dev bellissima 0.02 da 0.045
+                    #  9 mag 2023 aggiunta 3-18> 0.13 se 450 < 450 480 min ago
                     
                     
                     
