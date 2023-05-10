@@ -1484,14 +1484,8 @@ class maddog:
                     deviation_ma5_sopra_ma59 < -0.15
                     and ma450_last > ma450_720_min_ago
                     
-                    
-                    
-                    
-                    
-                    
-                    
                     and deviation_ma3_sopra_ma10 > 0.01
-                    and deviation_ma5_sopra_ma28 > 0.04
+                    
                     
                     and ma2_last >= ma2_2_min_ago
                     and macd > macd_2_min_ago
