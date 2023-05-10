@@ -1475,27 +1475,7 @@ class maddog:
                     # importante : ma100 sta sotto la ma200 non le e' troppo lontana
                     
                     
-                    
-                    
-                # BUY 1 DNA - PENSIERO LATERALE
-                
-                elif (
-                    
-                    deviation_ma5_sopra_ma59 < -0.15
-                    and ma450_last > ma450_720_min_ago
-                    
-                    
-                    
-                    
-                    and ma2_last >= ma2_2_min_ago
-                    and macd > macd_2_min_ago
-                ):
-                    buy = "BUY 1 DNA - PENSIERO LATERALE - migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-50 - r 1050"
-                    action = "buy"
-                    percentage = 50
-                    
-                    
-                    # NONNA
+                 
                      
                 elif (    
                     ma20_last > ma200_last
