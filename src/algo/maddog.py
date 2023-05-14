@@ -325,11 +325,16 @@ class maddog:
         deviation_ma10_sotto_ma100 = (ma10_last / ma100_last - 1) * 100 if ma100_last else 0
         self.algo_helper.info("deviation_ma10_sotto_ma100: {}".format(deviation_ma10_sotto_ma100))
         
-        
         # formula DEVIATION_ma10_sopra_ma200 - FORMULA MY COMPA !
         
         deviation_ma10_sopra_ma200 = (ma10_last / ma200_last - 1) * 100 if ma200_last else 0
         self.algo_helper.info("deviation_ma10_sopra_ma200: {}".format(deviation_ma10_sopra_ma200))
+        
+        
+        # formula DEVIATION_ma5_sopra_ma200
+        
+        deviation_ma5_sopra_ma200 = (ma5_last / ma200_last - 1) * 100 if ma200_last else 0
+        self.algo_helper.info("deviation_ma5_sopra_ma200: {}".format(deviation_ma5_sopra_ma200))
         
         
         
