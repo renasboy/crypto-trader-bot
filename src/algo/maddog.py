@@ -1384,20 +1384,17 @@ class maddog:
                     ma5_last > ma30_last
                     and macd >= macd_2_min_ago
                     
+                    and deviation_ma5_sopra_ma200 < -0.30
+                    and deviation_ma5_sotto_ma300 < -0.30
+                    and deviation_ma5_sotto_ma450 < -0.30
                     
-                    and deviation_ma5_sotto_ma300 < -0.22
-                    and deviation_ma5_sotto_ma450 < -0.40
+                    and deviation_ma100_sopra_ma300 < -0.10
                     
-                    and delta_x < delta_y
-                    
-                    and deviation_ma10_sopra_ma200 < -0.22
-                    
-                    and deviation_ma100_sopra_ma300 < -0.15
                     and ma300_last < ma300_60_min_ago
                     and ma200_last < ma200_60_min_ago
                     
-                    and deviation_ma3_sopra_ma10 > 0.02
-                    and deviation_ma5_sopra_ma28 > 0.05
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma5_sopra_ma28 > 0.04
                     
                     and ma2_last >= ma2_2_min_ago
               
@@ -1428,7 +1425,7 @@ class maddog:
                     # 19 apr 2023 5-28 a 0.05 da 0.10 dopo aggiunta macd
                     # ma vedi x y
                     # 21 apr 2023 5-30 da 5-39
-                    
+                    # 14 mag 2023 no x-y e 5-200 e 5-300 e 5-450 almeno sotto 0.30 cazzo !
                 
                 
                     
