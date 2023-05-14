@@ -598,7 +598,13 @@ class maddog:
         
         
         
-       
+        # formula deviation_ma3 di adesso / ma3 di 90 min ago
+        
+        deviation_ma3_di_adesso_diviso_ma3_di_90_min_ago = (ma3_last / ma3_90_min_ago - 1) * 100 if ma3_90_min_ago else 0
+        self.algo_helper.info("deviation_ma3_di_adesso_diviso_ma3_di_90_min_ago: {}".format(deviation_ma3_di_adesso_diviso_ma3_di_90_min_ago))
+        
+        
+        
         # formula deviation_ma3
         
         deviation_ma3 = (ma3_last / ma3_20_min_ago - 1) * 100 if ma3_20_min_ago else 0
@@ -24475,6 +24481,7 @@ class maddog:
             elif (
                 seconds_since_last_trade > 0 and seconds_since_last_trade < 7220
                 and ma3_last < ma10_last
+                and deviation_ma3_di_adesso_diviso_ma3_di_90_min_ago < 1.30
                 
                 and deviation_sell > 0.80
                 and deviation_sell < 1.20
@@ -24489,7 +24496,11 @@ class maddog:
                 # maledetti 
                 # subito da 0 a 120 minuti - dopo intervengono le medie piu' lunghe ! non piu' ma10 !
                 
-                
+                # importante
+                # con aggiunta deviation_ma3_di_adesso_diviso_ma3_di_90_min_ago <1.30 che cosa fa ?
+                # compra pochi maledetti e subito la prima volta
+                # ma se continua a salire dopo che ha fatto il primo pochi maledetti e subito non interviene piu' ed entrano in azione altre medie piu' lunghe
+                # altrimenti e' un continuo 3-10
                 
                 
                 
