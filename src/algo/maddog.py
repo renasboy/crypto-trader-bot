@@ -24481,16 +24481,16 @@ class maddog:
             
             elif (
                 seconds_since_last_trade > 0 and seconds_since_last_trade < 7220
-                and ma3_last < ma10_last
+                and ma3_last < ma13_last
                 and deviation_ma3_di_adesso_diviso_ma3_di_90_min_ago < 1.30
                 
                 and deviation_sell > 0.80
-                and deviation_sell < 1.20
+                and deviation_sell < 1.05
                 
                 and ma2_last < ma2_2_min_ago
                 and macd < macd_2_min_ago
             ):    
-                sell = "SELL condizione POCHI MALEDETTI E SUBITO da 0 a 120 min con 3-10 E con dev_sell 0.80 -1.20 and macd < - INTANTO TE LI PRENDI - r 16750"
+                sell = "SELL condizione POCHI MALEDETTI E SUBITO da 0 a 120 min con 3-13 E con dev_sell 0.80 -1.05 and macd < - INTANTO TE LI PRENDI - r 16750"
                 action = "sell"
                 
                 # pochi 0.80 - 1.20
@@ -24502,8 +24502,8 @@ class maddog:
                 # compra pochi maledetti e subito la prima volta
                 # ma se continua a salire dopo che ha fatto il primo pochi maledetti e subito non interviene piu' ed entrano in azione altre medie piu' lunghe
                 # altrimenti e' un continuo 3-10
-                
-                
+                # 15 mag 2023 3-13 da 3-11 
+                # 15 mag 2023 0.80 - 1.05 da 0.80 - 1.20
                 
             # 34 a - SELL condizione speciale POCHI MALEDETTI E SUBITO QUANDO SALE FORTE ( cerca di inibirlo ) con ma200 > MA ma100 - dedicated to comparo meo
             
