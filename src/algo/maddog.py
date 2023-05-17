@@ -9934,7 +9934,7 @@ class maddog:
                     
                     
                 elif (
-                    ma50_last >= ma50_2_min_ago
+                    ma10_last >= ma10_2_min_ago
                     
                     and deviation_ma100_sopra_ma300 < 0.25
                     and deviation_ma100_sopra_ma300 > -0.25
@@ -9946,8 +9946,8 @@ class maddog:
                     and deviation_ma5_sopra_ma28 > 0.01
                     
                     and deviation_bellissima > 0.02
-                    and deviation_buy3 > 0.02
-                    and deviation_ma7_sopra_ma40 > 0.05
+                    and deviation_buy3 > 0.01
+                    and deviation_ma7_sopra_ma40 > 0.04
                
                     and ma3_last > ma13_last
                     and ma4_last > ma9_last
@@ -9956,7 +9956,7 @@ class maddog:
                     and ma7_last > ma25_last
                     
                     and ma2_last > ma2_2_min_ago
-             
+                    and macd > macd_2_min_ago
                 ):
                     buy = "BUY 3 IN MEZZO (effetti laterali) 78>100 E con ma69 > IMPORTATA DA BUY 4 RCCR - r 6599 A1yB"
                     action = "buy"
@@ -9969,7 +9969,7 @@ class maddog:
                     # 26 feb 2023 buy3 0.02 da 0.05
                     # 17 gen 2023 dev bellissima 0.02 da 0.045
                     #  9 mag 2023 aggiunta 3-18> 0.13 se 450 < 450 480 min ago
-                    
+                    # 17 mag 2023 riduzione generale dei valori per anticipare se 100 sta vicina alla 300 con aggiunta di macd > macd 2 min ago
                     
                     
                     
