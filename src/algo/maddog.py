@@ -10956,17 +10956,18 @@ class maddog:
                     and ma200_last < ma300_last
                     
                     and deviation_ma5_sopra_ma28 < 0.10
+                    and deviation_ma3_sopra_ma16 > 0.03
                     and ma2_last >= ma2_2_min_ago
                     
                 ):
-                    buy = "BUY 4 13 apr 2023 zia pina > 180 min di ribasso 78<150 - r 7564 B2"
+                    buy = "BUY 4 PENSIERO LATERALE 13 apr 2023 zia pina > 180 min di ribasso and 78<150 and 3-16 > 0.03 - r 7060"
                     action = "buy"
                     percentage = 90
                     
                     # 7 feb 2023 deviation_ma5_sopra_ma28 > 0.10 da 0.13
                     # tolto 18>100 
                     # aggiunto PENSIERO LATERALE and deviation_ma5_sopra_ma59 < -0.09
-                    
+                    # 18 mag 2023 aggiunta 3-16 > 0.03 
                     
                     
                     
