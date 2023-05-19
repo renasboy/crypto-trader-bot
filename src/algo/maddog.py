@@ -320,6 +320,11 @@ class maddog:
         self.algo_helper.info("deviation_ma4_sopra_ma28: {}".format(deviation_ma4_sopra_ma28))
         
         
+        # formula DEVIATION_ma50_sopra_o_sotto_ma100 - !
+        
+        deviation_ma50_sopra_o_sotto_ma100 = (ma59_last / ma100_last - 1) * 100 if ma100_last else 0
+        self.algo_helper.info("deviation_ma50_sopra_o_sotto_ma100: {}".format(deviation_ma50_sopra_o_sotto_ma100))
+        
         
         # formula DEVIATION_ma10_sotto_ma100 - FORMULA dna !
         
