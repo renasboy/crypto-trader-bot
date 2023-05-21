@@ -16039,10 +16039,11 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                     ):
                    
-                        sell = "SELL 1 da 110 a 239 min FORSE E' NECESSARA SOLO QUESTA 3 ! dev_sell < -0.19 CON 78 < 300 (ancora ribasso !) porta a casa ! - r 10278 B1"
+                        sell = "SELL 1 da 110 a 239 min FORSE E' NECESSARA SOLO QUESTA 3 ! dev_sell < -0.20 CON 300>450 e con 78 < 300 (ancora ribasso !) torna a casa ! - r 10278 B1"
                         action = "sell"
                        
                         # 17 mar 2023 -0.19 da -0.17 con 300>450
+                        # 21 mag 2023 -0.20 da -0.19 con 300>450
                       
                     elif (    
                         ma3_last < ma100_last
