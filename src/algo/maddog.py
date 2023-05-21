@@ -24443,7 +24443,7 @@ class maddog:
                 
                 
                 
-            # SELL condizione speciale 32 B ROOT DOWN DEEP - maddog VENDE dopo 150 min = 9000 sec e fino a 240 min con 8-225 NOTTE !
+            # SELL condizione speciale 32 B ROOT DOWN DEEP - maddog VENDE dopo 150 min = 9000 sec e fino a 240 min con 8-300 NOTTE !
             
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds_sell_5_90
@@ -24454,12 +24454,12 @@ class maddog:
                 and ma300_last > ma300_120_min_ago
                 and ma54_last < ma54_15_min_ago
                 and ma10_last < ma78_last
-                and (ma8_prev > ma250_prev and ma8_last < ma250_last)
+                and (ma8_prev > ma300_prev and ma8_last < ma300_last)
                 and ma2_last < ma2_2_min_ago
                 and deviation_sell < -0.10
             ):
 
-                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - maddog VENDE dopo 150 min = 9000 sec e fino a 240 min con 8-225 NOTTE ! - r 16733 B"
+                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - maddog VENDE dopo 150 min = 9000 sec e fino a 240 min con 8-300 NOTTE ! - r 16733 B"
                 action = "sell"
                         
                 # 24 set 2022 ore 17:23
@@ -24468,7 +24468,7 @@ class maddog:
                 # 11 dic 2022 8-225 da 5-200
                 # 26 dic 2022 8-250 da 8-225
                 #  4 gen 2023 aggiunta dev sell < -0.10 vedi 4 gen 2023 ore 1:16
-                
+                # 21 mag 2023 8-300 da 8-250
                 
                 
                 
