@@ -1741,6 +1741,9 @@ class maddog:
                 elif (    
                     ma5_last > ma13_last
                     
+                    and deviation_ma300_sopra_ma450 < 0.13
+                    and deviation_ma300_sopra_ma450 > -0.13
+                    
                     and deviation_ma100_sopra_ma300 < 0.27
                     and deviation_ma100_sopra_ma300 > -0.27
                     
