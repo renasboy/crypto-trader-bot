@@ -1748,22 +1748,22 @@ class maddog:
                     and deviation_ma10_sotto_ma100 > -0.20
                     
                     and deviation_ma3_sopra_ma10 > 0.07
-                    and deviation_ma3_sopra_ma16 > 0.05
-                    and deviation_ma4_sopra_ma28 > 0.04
+                    and deviation_ma3_sopra_ma16 > -0.02
+                    and deviation_ma4_sopra_ma28 > -0.01
                     
-                    and macd > macd_2_min_ago
-                    and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                    and ma2_last >= ma2_2_min_ago
                    
                 ):  
                 
-                    buy = "BUY 1 LATERALE 2 con 3-10 > 0.07 and 3-16 > 0.05 and macd > macd 2 min ago - r 1205"
+                    buy = "BUY 1 LATERALE 2 con 3-10 > 0.07 and macd > macd 2 min ago - r 1205"
                     action = "buy"
                     percentage = 50
                     
                     #  5 mag 2023 ho tolto and ma250_last > ma300_last
-                    # attenzione ! adesso questa condizione si attiva anche se ma250_last < ma300_last ! ma sempre durante un TREND PIU' O MENO LATERALE.
+                    # attenzione ! adesso questa condizione si attiva anche se ma250_last < ma300_last ! MA SEMPRE durante un TREND LATERALE.
                     # vediamo come va.
-                    
+                    # vedi 19 maggio 2023 ore 17:47 !
                 
                     
                 
