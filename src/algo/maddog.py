@@ -174,6 +174,7 @@ class maddog:
         ma300_720_min_ago = self.algo_helper.ma_minutes_ago(300, 720)
         
         ma450_60_min_ago = self.algo_helper.ma_minutes_ago(450, 60)
+        ma450_180_min_ago = self.algo_helper.ma_minutes_ago(450, 180)
         ma450_360_min_ago = self.algo_helper.ma_minutes_ago(450, 360)
         ma450_480_min_ago = self.algo_helper.ma_minutes_ago(450, 480)
         ma450_720_min_ago = self.algo_helper.ma_minutes_ago(450, 720)
@@ -5894,10 +5895,10 @@ class maddog:
                     
                     
                     
-                    
                 elif (
                     
-                    ma20_last > ma200_last
+                    ma10_last > ma200_last
+                    and ma450_last > ma450_180_min_ago
                     and ma200_last > ma200_301_min_ago
                     
                     and ma100_last >= ma100_2_min_ago
@@ -5914,7 +5915,42 @@ class maddog:
                     and price >= price_2_min_ago
                     
                 ):
-                    buy = "BUY 2A ribasso o laterale and ma20_last > ma200_last AND 200 > 200 301 min - r 4685 A"
+                    buy = "BUY 2A ribasso o laterale and ma20_last > ma200_last AND 200 > 200 301 min - r 4685 Ax"
+                    action = "buy"
+                    percentage = 80
+
+                    # deviation_buy_ma3_sopra_ma13 > x e' fondamentale !
+                    # deviation_buy2 = ma8_last/ma50_last  
+                    # tolta and ma2_last >= ma2_2_min_ago !
+                    #  9 ott 2022 69>200 da 78>200
+                    # 12 ott 2022 7-40 0.04 da 0.05
+                    # 1 nov se ma200 sale da 5 ore compra con 7-40 > 0.005 !
+                    # 10 dic 2022 50>200 da 59>200
+                    # 18 dic 2022 20>200 da 50>200
+                    #  3 gen 2023 5-28 > 0.10
+                    
+                    
+                elif (
+                    
+                    ma20_last > ma200_last
+                    and ma450_last < ma450_180_min_ago
+                    and ma200_last > ma200_301_min_ago
+                    
+                    and ma100_last >= ma100_2_min_ago
+                    and deviation_ma100_sopra_ma300 < 0.20
+                    
+                    and deviation_ma100_laterale < 0.20
+                    and deviation_buy2 > 0.005
+                    and deviation_ma5_sopra_ma28 > 0.10
+                    
+                    and deviation_ma7_sopra_ma40 > 0.005
+                    and deviation_buy_ma3_sopra_ma13 > 0.07
+                    
+                    and ma3_last > ma40_last
+                    and price >= price_2_min_ago
+                    
+                ):
+                    buy = "BUY 2A ribasso o laterale and ma20_last > ma200_last AND 200 > 200 301 min - r 4685 Ay"
                     action = "buy"
                     percentage = 80
 
