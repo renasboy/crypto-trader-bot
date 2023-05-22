@@ -23327,8 +23327,7 @@ class maddog:
                 
          
             # 3 - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 > -1.00
-          
-          
+            
             elif (
                 deviation_ma39 < -0.24
                 and deviation_sell < -0.308
