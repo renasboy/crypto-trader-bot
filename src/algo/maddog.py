@@ -2503,18 +2503,19 @@ class maddog:
                     percentage = 90
                     
                     
-                # BUY 1 con ma200 < 300< MA ma100> 100 60 min ago e doppio delta < and ma100 >60_min_ago STA RISALENDO !
+                # BUY 1 con ma200< e 300< MA doppio delta < and ma100 >60_min_ago STA RISALENDO !
             
                 elif (       
-                    ma200_last < ma200_20_min_ago
-                    and ma450_last > ma450_720_min_ago
+                    ma450_last > ma450_720_min_ago
                     and ma300_last > ma300_301_min_ago
+                    and ma200_last < ma200_20_min_ago
                     
                     and ma5_last > ma50_last
                     and macd >= macd_2_min_ago
                     and ma2_last >= ma2_2_min_ago
                     
                     and deviation_ma3_sopra_ma10 > 0.05
+                    and deviation_ma3_sopra_ma18 > 0.08
                     and deviation_ma5_sopra_ma28 > 0.10
                  
                     and delta_1 < delta_2
@@ -2522,7 +2523,7 @@ class maddog:
                 
                 ):    
         
-                    buy = "BUY 1 CON 450> and 5-50 and macd > macd 2 min ago e con ma200< 300< MA ma100> 100 5 min ago e doppio delta < - GIORNO ! CON 450> - r 1712"
+                    buy = "BUY 1 CON 450> e con 300> and 5-50 and macd > macd 2 min ago MA ma200 < and ma100> 100 5 min ago e doppio delta < - GIORNO ! - r 1712"
                     action = "buy"
                     percentage = 90
               
