@@ -8305,19 +8305,17 @@ class maddog:
                 elif (
                     deviation_ma4_sopra_ma30 > 0.13
                     and ma300_last > ma300_301_min_ago
+                    and ma200_last < ma200_120_min_ago
+                    
+                    and ma5_last > ma50_last
                     and delta_1 < delta_2
-                    and ma5_last > ma200_last
+                    
+                    and deviation_ma100_sopra_ma300 < -0.05
                     and deviation_ma3_sopra_ma18 > 0.10
                     and deviation_bellissima > 0.05
                     
-                    and deviation_ma100_sopra_ma300 < -0.05
-                    
-                    and ma200_last < ma200_120_min_ago
-                    and ma5_last > ma200_last
-                    
                     and deviation > -0.30
                     
-                    and ma8_last > ma50_last
                     and delta_buy3_incrocio_ma3_ma8 >= 0.06
                     and ma3_last > ma8_last
                     and ma3_last >= ma59_last
@@ -8326,7 +8324,7 @@ class maddog:
                     and ma5_last >= ma15_last
                     and ma5_last >= ma25_last
                 ):    
-                    buy = "BUY 2 RIVOLUZIONARIO A3x con delta_1 < delta_2 e con 100 CHE NON E' ATTACCATA ALLA 300 ! e 8>50 and 5>200 - r 5945 A3x1"
+                    buy = "BUY 2 RIVOLUZIONARIO A3x CON ma300_last > ma300_301_min_ago e con delta_1 < delta_2 e con 100 CHE NON E' ATTACCATA ALLA 300 ! e 5>50 - r 5945 A3x1"
                     action = "buy"
                     percentage = 70
                     
@@ -8334,7 +8332,7 @@ class maddog:
                     # 26 set 100-300 se stanno attaccate e' molto rischioso ! vedi ore 22:48 24 set 2022
                     # 15 dic 2022 8-28 da 28-50
                     # 23 feb 2023 aggiunta 3-18 > 0.10
-                    
+                    # 22 mag 2023 se ma300_last > ma300_301_min_agovbuy con 5-50 da 5-200
                     
                     
                 # BUY 2 RIVOLUZIONARIO A3x (100 NON E' ATTACCATA ALLA 300 !) e 39>50 E 8>200 and deviation_ma100_sopra_ma300 > 0.05 
