@@ -21053,19 +21053,35 @@ class maddog:
                         # > estate 4-78 da 4-30
                         
                         
-
                     elif (
                         ma50_last > ma50_2_min_ago
+                        and ma300_last > ma300_301_min_ago
+                        
+                        and (ma3_prev > ma48_prev and ma3_last < ma48_last)
+                        and deviation_sell > 0.91 and deviation_sell < 1.49
+                        and ma2_last < ma2_2_min_ago
+                    ):
+
+                        sell = "SELL 3 dopo 90 min con ma50 > E CON ma300 > ma300 300 min ago e incrocio 3-48 and deviation_sell 0.91 - 1.49 - r 14195 a"
+                        action = "sell"
+
+                        # ma 3-48 mi evita la ricompra e la rivendita con perdita !
+                        # 23 mag 2023 3-48 da 3-30 se ma300 > 300 301 min ago
+                        
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and ma300_last < ma300_301_min_ago
+                      
                         and (ma3_prev > ma30_prev and ma3_last < ma30_last)
                         and deviation_sell > 0.91 and deviation_sell < 1.49
                         and ma2_last < ma2_2_min_ago
                     ):
 
-                        sell = "SELL 3 dopo 90 min con ma50 > incrocio 3-30 (!) and deviation_sell 0.91 - 1.49 - r 14195"
+                        sell = "SELL 3 dopo 90 min con ma50 > MA CON ma300 < ma300 300 min ago e incrocio 3-33 (!) and deviation_sell 0.91 - 1.49 - r 14195 b"
                         action = "sell"
 
                         # ma 3-48 mi evita la ricompra e la rivendita con perdita !
-                    
+                        # 23 mag 2023 3-33 da 3-33 se ma300 < 300 301 min ago
                     
                     
                     elif (
