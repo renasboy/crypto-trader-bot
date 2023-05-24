@@ -7368,7 +7368,7 @@ class maddog:
                     #  4 mag 2023 3-10 0.07 da 0.113 con 300>450
                     # 23 mag 2023 3-39 da 8-59 con 300>450 e 100 attaccata alla 300
                     # 24 mag 2023 tolto 3-10 > 0.07 !
-                    # 24 mag 2023 messo 3-18 > 0.02 !
+                    # 24 mag 2023 messo 3-18 > 0.02 con 450 < 450 480 min ago !
                     
                     
                 elif (    
@@ -7380,7 +7380,7 @@ class maddog:
                     and deviation_ma100_sopra_ma300 > -0.20
                   
                     and ma300_last > ma300_120_min_ago
-                    and deviation_ma3_sopra_ma18 > 0.02
+                    and deviation_ma3_sopra_ma10 > 0.07
                     
                 ):  
                 
@@ -7392,8 +7392,8 @@ class maddog:
                     #  3 ott 2022 3-10 0.113 da 0.07
                     #  4 mag 2023 3-10 0.07 da 0.113 con 300>450
                     # 23 mag 2023 3-39 da 8-59 con 300>450 e 100 attaccata alla 300
-                    # 24 mag 2023 tolto 3-10 > 0.07 !
-                    # 24 mag 2023 messo 3-18 > 0.02 !
+                    # 24 mag 2023 3-10 > 0.07 con 450 < 450 480 min ago !
+                    
                     
                     
                     
