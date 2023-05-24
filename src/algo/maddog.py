@@ -7350,11 +7350,10 @@ class maddog:
                     and ma300_last > ma450_last
                     and deviation_ma100_sopra_ma300 < 0.20
                     and deviation_ma100_sopra_ma300 > -0.20
-                    
-                    and deviation_ma3_sopra_ma10 > 0.07
-                 
+                  
                     and ma300_last > ma300_120_min_ago
-               
+                    and deviation_ma3_sopra_ma18 > 0.02
+                    
                 ):  
                 
                     buy = "BUY 2 laterale con 300>450 - r 5412 X"
@@ -7365,6 +7364,8 @@ class maddog:
                     #  3 ott 2022 3-10 0.113 da 0.07
                     #  4 mag 2023 3-10 0.07 da 0.113 con 300>450
                     # 23 mag 2023 3-39 da 8-59 con 300>450 e 100 attaccata alla 300
+                    # 24 mag 2023 tolto 3-10 > 0.07 !
+                    # 24 mag 2023 messo 3-18 > 0.02 !
                     
                     
                 elif (    
