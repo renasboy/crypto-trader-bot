@@ -18787,7 +18787,7 @@ class maddog:
                     # AGGIUNTA TARDIVA MA FORSE NECESSARIA !
                     
                     elif (
-                        ma50_last < ma50_2_min_ago
+                        ma50_last <= ma50_2_min_ago
                         
                         and ma100_last < ma200_last
                         and ma200_last < ma300_last
@@ -18797,13 +18797,15 @@ class maddog:
                         
                         and delta_300_100 < delta_300_100_60_min
                    
-                        and deviation_sell < -0.115
-                        and ma2_last < ma2_2_min_ago
+                        and deviation_sell < -0.118
+                        and ma2_last <= ma2_2_min_ago
                     ):
                         sell = "SELL 2 da 60 a 90 min AGGIUNTA TARDIVA MA FORSE NECESSARIA ! delta 300-100 < and deviation_sell < -0.12 - r 12191 A"
                         action = "sell"
                         
                         # 20 feb 2023 dev_sell a -0.115 da -0.12
+                        # 25 mag 2023 dev_sell a -0.118 da -0.115
+                        
                         
                         
                     # AGGIUNTA TARDIVA MA FORSE NECESSARIA !
