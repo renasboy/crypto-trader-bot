@@ -1,4 +1,4 @@
-prova
+
 class maddog:
   
     def __init__(self, helper, buy_percentage, sell_percentage):
