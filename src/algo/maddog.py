@@ -7371,9 +7371,12 @@ class maddog:
                     # 24 mag 2023 messo 3-18 > 0.02 con 450 < 450 480 min ago !
                     
                     
+                    
+                    
                 elif (    
                     ma5_last > ma39_last
                     and ma450_last < ma450_480_min_ago
+                    and ma78_last > ma78_60_min_ago
                     
                     and ma300_last > ma450_last
                     and deviation_ma100_sopra_ma300 < 0.20
@@ -7384,7 +7387,33 @@ class maddog:
                     
                 ):  
                 
-                    buy = "BUY 2 laterale con 300>450 - r 5412 X2"
+                    buy = "BUY 2 laterale con 300>450 - r 5412 X2a"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # 19 set 2022 aggiunta 3-10 > 0.07
+                    #  3 ott 2022 3-10 0.113 da 0.07
+                    #  4 mag 2023 3-10 0.07 da 0.113 con 300>450
+                    # 23 mag 2023 3-39 da 8-59 con 300>450 e 100 attaccata alla 300
+                    # 24 mag 2023 3-10 > 0.07 con 450 < 450 480 min ago !
+                    
+                    
+                    
+                elif (    
+                    ma5_last > ma39_last
+                    and ma450_last < ma450_480_min_ago
+                    and ma78_last < ma78_60_min_ago
+                    
+                    and ma300_last > ma450_last
+                    and deviation_ma100_sopra_ma300 < 0.20
+                    and deviation_ma100_sopra_ma300 > -0.20
+                  
+                    and ma300_last > ma300_120_min_ago
+                    and deviation_ma3_sopra_ma10 > 0.07
+                    and deviation_ma3_sopra_ma18 > 0.169
+                ):  
+                
+                    buy = "BUY 2 piu' o meno laterale con 300>450 MA 450 < 450 480 min ago e 78 scende da 60 min ! - r 5412 X2b"
                     action = "buy"
                     percentage = 80
                     
