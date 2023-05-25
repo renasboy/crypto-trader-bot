@@ -1399,7 +1399,7 @@ class maddog:
                 
                 elif (
                     
-                    ma5_last > ma20_last
+                    ma4_last > ma20_last
                     and macd >= macd_2_min_ago
                     
                     and deviation_ma5_sopra_ma200 < -0.30
@@ -1413,7 +1413,7 @@ class maddog:
                     and ma200_last < ma200_60_min_ago
                     
                     and deviation_ma3_sopra_ma10 > 0.01
-                    and deviation_ma5_sopra_ma28 > -0.10
+                    and deviation_ma5_sopra_ma28 > -0.15
                     
                     and ma2_last >= ma2_2_min_ago
               
@@ -1446,7 +1446,9 @@ class maddog:
                     # 21 apr 2023 5-30 da 5-39
                     # 14 mag 2023 no x-y e 5-200 e 5-300 e 5-450 almeno sotto 0.30 cazzo !
                     # 18 mag 2023 5-20 da 5-30 and deviation_ma5_sopra_ma28 > -0.10 da > 0.03
-                
+                    
+                    # 25 mag 2023 4-20 da 5-20 
+                    # 25 mag 2023 deviation_ma5_sopra_ma28 > -0.15 da > -0.10
                     
                     
                     
