@@ -8398,33 +8398,36 @@ class maddog:
                     # 22 mag 2023 se ma300_last > ma300_301_min_agovbuy con 5-50 da 5-200
                     
                     
+                    
+                    
                 # BUY 2 RIVOLUZIONARIO A3x (100 NON E' ATTACCATA ALLA 300 !) e 39>50 E 8>200 and deviation_ma100_sopra_ma300 > 0.05 
                 
                 elif (
-                    deviation_ma4_sopra_ma30 > 0.13
+                    ma5_last > ma39_last
+                    
                     and ma300_last < ma300_301_min_ago
+                    
                     and delta_1 < delta_2
-                    and ma5_last > ma125_last
+                    and deviation_ma100_sopra_ma300 < -0.05 
+                    
                     and deviation_ma3_sopra_ma18 > 0.10
                     and deviation_bellissima > 0.05
-                    
-                    and deviation_ma100_sopra_ma300 < -0.05
+                    and deviation_ma4_sopra_ma30 > 0.13
                     
                     and ma200_last < ma200_120_min_ago
                     
-                    
                     and deviation > -0.30
                     
-                    and ma8_last > ma50_last
                     and delta_buy3_incrocio_ma3_ma8 >= 0.06
-                    and ma3_last > ma8_last
-                    and ma3_last >= ma59_last
-                    and ma4_last >= ma4_2_min_ago
+                    
                     and ma2_last >= ma2_2_min_ago
+                    and ma3_last > ma8_last
+                    and ma4_last >= ma4_2_min_ago
+                    
                     and ma5_last >= ma15_last
                     and ma5_last >= ma25_last
                 ):    
-                    buy = "BUY 2 RIVOLUZIONARIO A3x con ma300 < 6 ore con delta_1 < delta_2 e con 100 CHE NON E' ATTACCATA ALLA 300 ! e 8>50 and 5>125 - r 5945 A3x2"
+                    buy = "BUY 2 RIVOLUZIONARIO A3x con ma300 < 6 ore con delta_1 < delta_2 e con 100 CHE NON E' ATTACCATA ALLA 300 ! con 5-39 - r 5945 A3x2"
                     action = "buy"
                     percentage = 70
                     
