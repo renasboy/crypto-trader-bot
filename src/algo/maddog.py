@@ -18180,15 +18180,35 @@ class maddog:
                         
                     
                     
-                    
                     elif (    
-                        ma50_last < ma50_2_min_ago 
-                        and ma2_last < ma2_2_min_ago 
+                        ma50_last < ma50_2_min_ago
+                        and ma450_last > ma450_480_min_ago
                         and deviation_sell < -0.348
+                        
+                        and ma2_last < ma2_2_min_ago 
+                        
                         and ma200_last < ma200_60_min_ago
                         and ma50_last < ma100_last
                     ):
-                        sell = "SELL 2 (21-60 min) con ma50 < and deviation_sell < -0.348 - r 11663"
+                        sell = "SELL 2 (21-60 min) con ma50 < and deviation_sell < -0.348 CON ma450_last > ma450_480_min_ago - r 11663a"
+                        action = "sell"
+                        
+                        # 2 GIUGNO a 0.335 da 0.32
+                        # 0.345 da 0.335 dopo le dolomiti
+                        # 24 set 2022 -0.348 da -0.345
+                        
+                        
+                    elif (    
+                        ma50_last < ma50_2_min_ago
+                        and ma450_last < ma450_480_min_ago
+                        and deviation_sell < -0.34
+                        
+                        and ma2_last < ma2_2_min_ago 
+                        
+                        and ma200_last < ma200_60_min_ago
+                        and ma50_last < ma100_last
+                    ):
+                        sell = "SELL 2 (21-60 min) con ma50 < and deviation_sell < -0.34 CON ma450_last > ma450_480_min_ago- r 11663b"
                         action = "sell"
                         
                         # 2 GIUGNO a 0.335 da 0.32
