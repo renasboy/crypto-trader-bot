@@ -5456,7 +5456,7 @@ class maddog:
                 
                 elif (  
                     ma8_last > ma54_last
-                    and ma300_last > ma300_720_min_ago
+                    and ma450_last > ma450_720_min_ago
                     
                     and macd > macd_2_min_ago
                     
@@ -5483,12 +5483,12 @@ class maddog:
                     #  2 gen 59>200 da 100>200
                     #  3 gen 8>100 da 59-200
                     # 16 apr 2023 59>250 da 250>300 con aggiunta macd > macd 2 min ago
-                    # 28 mag 2023 anticipato ndecchiecella se 300>300 720 min ago
+                    # 28 mag 2023 anticipato ndecchiecella se 450>450 720 min ago
                     
                     
                 elif (  
                     ma8_last > ma59_last
-                    and ma300_last < ma300_720_min_ago
+                    and ma450_last < ma450_720_min_ago
                     
                     
                     and macd > macd_2_min_ago
