@@ -5493,8 +5493,8 @@ class maddog:
                     
                     and macd > macd_2_min_ago
                     
-                    and deviation_ma3_sopra_ma10 > 0.02
-                    and deviation_ma5_sopra_ma28 > 0.01
+                    and deviation_ma3_sopra_ma10 > 0.05
+                    and deviation_ma5_sopra_ma28 > 0.07
                  
                     and ma6_last > ma6_2_min_ago
                     and ma13_last > ma69_last
