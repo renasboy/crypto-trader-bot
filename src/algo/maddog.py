@@ -17128,9 +17128,10 @@ class maddog:
                         and ma100_last > ma300_last
                         and deviation_sell < -0.16
                         and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
                     ):
                    
-                        sell = "SELL 1 > 240 min con 5 < 200 MA 100 > 300 ! FORSE E' NECESSARA SOLO QUESTA 4 ! deviation_sell < -0.16 - r 10655 B1"
+                        sell = "SELL 1 > 240 min con 5 < 200 MA 100 > 300 ! FORSE E' NECESSARA SOLO QUESTA 4 ! deviation_sell < -0.16 and macd < - r 10655 B1"
                         action = "sell"
                         
                         #  4 set 2022 dev sell -0.07 da -0.05
@@ -17146,11 +17147,12 @@ class maddog:
                         and ma300_last < ma300_120_min_ago
                         and ma100_last < ma200_last
                         and ma100_last < ma300_last
-                        and deviation_sell < -0.149
+                        and deviation_sell < -0.152
                         and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
                     ):
                    
-                        sell = "SELL 1 > 240 min and 450 > 12 ore con 5 < 200 e 100 < 300 ! FORSE E' NECESSARA SOLO QUESTA ! deviation_sell < -0.149 - r 10655 B2x"
+                        sell = "SELL 1 > 240 min and 450 > 12 ore con 5 < 200 e 100 < 300 ! FORSE E' NECESSARA SOLO QUESTA ! deviation_sell < -0.152 and macd < - r 10655 B2x"
                         action = "sell"
                         
                         #  4 set 2022 dev sell -0.07 da -0.05
@@ -17161,7 +17163,7 @@ class maddog:
                         # 25 gen 2023 dev sell -0.158 da -0.152
                         # 21 apr 2023 dev sell -0.158 
                         # 21 apr 2023 ma450 > 12 ore
-                        # 28 mag 2023 dev sell -0.149 da -0.158
+                        # 28 mag 2023 dev sell -0.152 da -0.149
                         
                         
                     elif (    
@@ -17174,9 +17176,10 @@ class maddog:
                         and ma100_last < ma300_last
                         and deviation_sell < -0.156
                         and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
                     ):
                    
-                        sell = "SELL 1 > 240 min and 450 < 12 ore con 5 < 200 e 100 < 300 ! FORSE E' NECESSARA SOLO QUESTA ! deviation_sell < -0.158 - r 10655 B2y"
+                        sell = "SELL 1 > 240 min and 450 < 12 ore con 5 < 200 e 100 < 300 ! FORSE E' NECESSARA SOLO QUESTA ! deviation_sell < -0.158 and macd < - r 10655 B2y"
                         action = "sell"
                         
                         #  4 set 2022 dev sell -0.07 da -0.05
