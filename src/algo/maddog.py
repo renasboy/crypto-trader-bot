@@ -5456,7 +5456,7 @@ class maddog:
                 
                 elif (  
                     ma8_last > ma54_last
-                    and ma450_last > ma450_720_min_ago
+                    
                     
                     and macd > macd_2_min_ago
                     
@@ -5471,7 +5471,7 @@ class maddog:
                        
                 ):
                     
-                    buy = "BUY 1 FOREVER YOUNG PIU' AGGRESSIVO (doppio delta < 1 E 100> ) (SOPRA RIALZO RIALZO) - GIORNO - se ma 200 > - r 4410 a"
+                    buy = "BUY 1 FOREVER YOUNG PIU' AGGRESSIVO (doppio delta < 1 E 100> ) (SOPRA RIALZO RIALZO) - GIORNO - se ma 200 > - r 4410"
                     action = "buy"
                     percentage = 80
                     
@@ -5486,34 +5486,7 @@ class maddog:
                     # 28 mag 2023 anticipato ndecchiecella se 450>450 720 min ago
                     
                     
-                elif (  
-                    ma8_last > ma59_last
-                    and ma450_last < ma450_720_min_ago
-                    
-                    
-                    and macd > macd_2_min_ago
-                    
-                    and deviation_ma3_sopra_ma10 > 0.05
-                    and deviation_ma5_sopra_ma28 > 0.07
-                 
-                    and ma5_last > ma5_2_min_ago
-                    and ma13_last > ma69_last
-                    
-                    and ma2_last > ma2_2_min_ago
-                ):
-                    
-                    buy = "BUY 1 FOREVER YOUNG PIU' AGGRESSIVO (doppio delta < 1 E 100> ) (SOPRA RIALZO RIALZO) - GIORNO - se ma 200 > - r 4410 b"
-                    action = "buy"
-                    percentage = 80
-                    
-                    # SITUAZIONE : dopo crollo e dopo primo grande ribalzo riprende a scendere 
-                    # MA ma100 e' intanto andata > ma200 !
-                    # e anche ma200 sta sopra ma300
-                    # 21 ottobre 2022 3-10 0.02 da 0.07 INCREDIBILE vedi differenza tra MADDOG e RCCR 21 ottobre 2022 BUY ore 4:39
-                    # 31 dic 8>300 da 200>300 e' giorno.
-                    #  2 gen 59>200 da 100>200
-                    #  3 gen 8>100 da 59-200
-                    # 16 apr 2023 59>250 da 250>300 con aggiunta macd > macd 2 min ago
+                
                     
                     
                     
