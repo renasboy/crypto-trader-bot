@@ -16745,7 +16745,6 @@ class maddog:
                         
                         
                         
-                        
                     elif (    
                         ma50_last < ma50_2_min_ago
                         and deviation_ma39 < -0.194
@@ -16755,14 +16754,34 @@ class maddog:
                         and ma100_last > ma100_60_min_ago
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 dopo 240 min con ma50 < MA ma100 > E ma300 > e con deviation_ma39 < -0.194 - r 10472 A2y"
+                        sell = "SELL 1 dopo 240 min con ma50 < MA ma100 > E ma300 > e con deviation_ma39 < -0.194 - r 10472 A2y1"
                         action = "sell"
                         
                         # ma39 NON DEVE VENDERE in fase laterale ma in alto
                         # 17 gen 2023 ma39 <-0.197 da <-0.195
                         #  5 mar 2023 ma39 <-0.194 da <-0.197 ma con dev sell > 0.40 prendi e porta a casa
                         # ho aggiunto questa ma la precedente condizone rappresenta "la base" - poi condizione speciale pochi maledetti e subito tra 0.80 e 1.20
-                        # vedi 5 marzo 2023 ore 3:38 NON HA PRESO IL GUADAGNO !
+                        # vedi 5 marzo 2023 ore 3:38 NON HA PRESO IL GUADAGNO !    
+                        
+                        
+                        
+                    elif (    
+                        ma50_last < ma50_2_min_ago
+                        and deviation_ma39 < -0.01
+                        and (ma5_prev > ma100_prev and ma5_last < ma100_last)
+                        and deviation_sell > 0.80
+                        and ma5_last < ma5_2_min_ago
+                        and ma300_last > ma300_120_min_ago
+                        and ma100_last > ma100_60_min_ago
+                        and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
+                    ):
+                        sell = "SELL 1 dopo 240 min con ma50 < MA ma100 > E ma300 > e con incrocio 5-100 se guadagno > 0.80 - r 10472 A2y2"
+                        action = "sell"
+                        
+                        # 28 mag 2023 aggiunta. perche' ha venduto con la precedente perdendo un grande guadagno
+                        
+                        
                         
                         
                     elif (    
