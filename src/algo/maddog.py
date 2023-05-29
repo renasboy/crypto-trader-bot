@@ -16215,11 +16215,11 @@ class maddog:
                         and ma78_last < ma300_last
                         and ma300_last < ma300_120_min_ago
                         and ma100_last > ma200_last
-                        and deviation_sell < -0.18
+                        and deviation_sell < -0.20
                         and ma2_last < ma2_2_min_ago
                     ):
                    
-                        sell = "SELL 1 da 110 a 239 min FORSE E' NECESSARA SOLO QUESTA 3 ! dev_sell < -0.18 CON 78 < 300 (ancora ribasso !) porta a casa ! - r 10278 B2"
+                        sell = "SELL 1 da 110 a 239 min FORSE E' NECESSARA SOLO QUESTA 3 ! dev_sell < -0.20 CON 78 < 300 (ancora ribasso !) (PERDI POCO - porta a casa) - r 10278 B2"
                         action = "sell"
                         
                         # 23 lug 2022 dev sell < 0.10 ha fatto fare perdita di -0.26 !
@@ -16229,7 +16229,7 @@ class maddog:
                         # 17 dicembre 2022 -0.14 da -0.13
                         #  7 feb 2023 -0.17 da -0.14
                         # 17 mar 2023 -0.18 da -0.17 con 300<450
-                        
+                        # 29 mag 2023 -0.20 da -0.18 con 300<450
                         
                     # ATTENZIONE 4 ! SELL 1 da 110 a 239 min CON 300 < 120 min FORSE E' NECESSARA SOLO QUESTA !
                     
