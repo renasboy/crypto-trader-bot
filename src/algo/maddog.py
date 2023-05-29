@@ -134,6 +134,7 @@ class maddog:
         ma78_7_min_ago = self.algo_helper.ma_minutes_ago(78, 7)
         ma78_30_min_ago = self.algo_helper.ma_minutes_ago(78, 30)
         ma78_60_min_ago = self.algo_helper.ma_minutes_ago(78, 60)
+        ma78_120_min_ago = self.algo_helper.ma_minutes_ago(78, 120)
         ma78_70_min_ago = self.algo_helper.ma_minutes_ago(78, 70)
         ma100_2_min_ago = self.algo_helper.ma_minutes_ago(100, 2)
         ma100_3_min_ago = self.algo_helper.ma_minutes_ago(100, 3)
@@ -23692,7 +23693,8 @@ class maddog:
             # 5 - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 > -1.00
             
             elif (
-                deviation_ma39 < -0.25
+                ma78_last > ma78_120_min_ago
+                and deviation_ma39 < -0.25
                 and deviation_sell < -0.36
                 and ma2_last < ma2_2_min_ago 
                 
@@ -23701,7 +23703,22 @@ class maddog:
                 
                 and deviation_ma5_sotto_ma200 > -0.90
             ):
-                sell = "SELL condizione speciale 6 - SALVAGENTE 4 deviation 3-39 <-0.25 and dev <-0.36 - con ma50 < e con ma5 sotto ma200 > -0.90 - r 16047"
+                sell = "SELL condizione speciale 6 - SALVAGENTE 4 deviation 3-39 < -0.25 and dev_sell < -0.36 - con ma50 < e con ma5 sotto ma200 > -0.90 - r 16047a"
+                action = "sell"
+                
+                
+            elif (
+                ma78_last < ma78_120_min_ago 
+                and deviation_ma39 < -0.20
+                and deviation_sell < -0.33
+                and ma2_last < ma2_2_min_ago 
+                
+                and ma50_last < ma50_2_min_ago
+                and deviation_ma100_sopra_ma300 < 0.40
+                
+                and deviation_ma5_sotto_ma200 > -0.90
+            ):
+                sell = "SELL condizione speciale 6 - SALVAGENTE 4 deviation 3-39 < -0.20 and dev_sell < -0.33 - con ma50 < e con ma5 sotto ma200 > -0.90 - r 16047b"
                 action = "sell"   
                 
 
