@@ -2122,12 +2122,15 @@ class maddog:
                     
                     
                     
-                # BUY 1 ex tempo 
+                # BUY 1 ex tempo
+                
                 
                 elif (     
                     
                     ma5_last > ma30_last
+                    and ma78_last > ma78_60_min_ago
                     and macd > macd_2_min_ago
+                    
                     and deviation_ma300_sopra_ma450 > -0.20
                     
                     and deviation_ma3_sopra_ma10 > 0.08
@@ -2138,7 +2141,33 @@ class maddog:
                     and ma2_last >= ma20_last
                     and ma2_last >= ma2_2_min_ago
                 ):    
-                    buy = "BUY 1 con 5-30 E CON 300 ancora vicina alla 450 ( anche un poco sotto! ) + MACD > - r 1537 A"
+                    buy = "BUY 1 con 5-30 and ma78_last > ma78_60_min_ago E CON 300 ancora vicina alla 450 ( anche un poco sotto! ) + MACD > - r 1537 A1"
+                    action = "buy"
+                    percentage = 90
+                    
+                    # 4 mag 2023 ho aggiunto e tolto 450>480 min ago
+                    # 4 mag 2023 5-50 da 5-250
+                    # 9 mag 2023 5-30 da 5-50
+                    
+                    
+                elif (     
+                    
+                    ma5_last > ma30_last
+                    and ma78_last < ma78_60_min_ago
+                    and macd > macd_2_min_ago
+                    
+                    and deviation_ma300_sopra_ma450 > -0.20
+                    
+                    and deviation_ma3_sopra_ma10 > 0.08
+                    and deviation_ma3_sopra_ma16 > 0.11
+                    and deviation_ma5_sopra_ma28 > 0.03
+                    
+                    and ma3_last >= ma3_2_min_ago
+                    
+                    and ma2_last >= ma20_last
+                    and ma2_last >= ma2_2_min_ago
+                ):    
+                    buy = "BUY 1 con 5-30 and ma78_last < ma78_60_min_ago E CON 300 ancora vicina alla 450 ( anche un poco sotto! ) + MACD > - r 1537 A2"
                     action = "buy"
                     percentage = 90
                     
