@@ -24591,17 +24591,17 @@ class maddog:
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds_sell_5_90
                 and seconds_since_last_trade < max_hold_time_in_seconds_sell_5_180
-                and deviation_sell < -0.12
+                and deviation_sell < -0.10
                 
                 and deviation_ma5_sotto_ma300 < 0.25
                 and ma300_last > ma300_120_min_ago
                 
-                and (ma22_prev > ma300_prev and ma22_last < ma300_last)
+                and (ma20_prev > ma300_prev and ma20_last < ma300_last)
                 and ma2_last < ma2_2_min_ago
              
             ):
 
-                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 150 min = 9000 sec e fino a 240 min con 22-300 ! stai calmo - r 16729"
+                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 150 min = 9000 sec e fino a 240 min con 20-300 ! and dev_sell < -0.10 - stai calmo - r 16729"
                 action = "sell"
                         
                 # 24 set 2022 ore 17:23
@@ -24610,8 +24610,8 @@ class maddog:
                 # 12 ott 2022 22-300 !
                 # 27 ott 2022 dev sell -0.12 da < 0.10 
                 # dopo 150 min faccio cominciare i binari !
-                
-                
+                # 29 mag 2023 20-300 da 22-300 !
+                # 29 mag 2023 dev_sell < -0.10 da < -0.12
                 
                 
             elif (
