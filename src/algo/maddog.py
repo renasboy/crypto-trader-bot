@@ -14112,7 +14112,7 @@ class maddog:
                         and deviation_sell < -0.27
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 piccola perdita durante il crollo (21-50 min) con ma50 < incrocio 3 - 18 and dev_sell < -0.27 e' crollo ! - r 9353 B"
+                        sell = "SELL 1 (21-50 min) piccola perdita durante il crollo con ma50 < incrocio 3 - 18 and dev_sell < -0.27 e' crollo ! - r 9353 B"
                         action = "sell"
                         
                         
@@ -14133,7 +14133,7 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                         and macd < macd_2_min_ago
                     ):
-                        sell = "SELL 1 da 50-90 min AGGIUNTA TARDIVA MA FORSE NECESSARIA ! and delta_1 > delta_2 and deviation_sell < -0.10 - r 9354"
+                        sell = "SELL 1 (21-50 min)  piccola perdita durante il crollo - AGGIUNTA TARDIVA MA FORSE NECESSARIA ! and delta_1 > delta_2 and dev_sell < -0.10 - r 9354"
                         action = "sell"
                         
                         
