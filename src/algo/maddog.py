@@ -16135,7 +16135,7 @@ class maddog:
                         # 27 apr 2023 dev sell -0.241 da -0.243 (dopo che con -0.243 ha fatto -0.86% !)
                         # 27 apr 2023 and deviation_trend_ma200 a > -0.15 da > -0.13
                         
-                     elif (     
+                    elif (     
                         ma50_last < ma50_2_min_ago
                         and deviation_ma100_sopra_ma300 > 0.30
                         and ma300_last > ma300_120_min_ago
