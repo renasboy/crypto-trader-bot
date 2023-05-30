@@ -9144,8 +9144,7 @@ class maddog:
                 
                 elif (
                     
-                    ma8_last > ma50_last
-                    
+                    ma5_last > ma18_last
                     
                     and deviation_ma10_sopra_ma200 < -0.25
                     and deviation_ma10_sopra_ma200 > -0.40
@@ -9162,13 +9161,16 @@ class maddog:
                     and deviation_ma5_sopra_ma28 > 0.04
                     
                     and ma2_last >= ma2_2_min_ago
-              
+                    and macd > macd_2_min_ago
                 ):
-                    buy = "BUY 3 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-50 - formula MY COMPA - r 6243 a"
+                    buy = "BUY 3 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 5-18 and macd > macd_2_min_ago - formula MY COMPA - r 6243 A"
                     action = "buy"
                     percentage = 80
                     
                     # importante : ma100 sta sotto la ma200 non le e' troppo lontana
+                    # 30 mag 2023 5-18 da 5-50
+                    
+                    
                     
                     
                 # BUY 3 migliore formula MY COMPA - che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-50 - (importata dal BUY 1 r 1043 B)
