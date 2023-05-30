@@ -14136,17 +14136,17 @@ class maddog:
                         and ma200_last < ma200_120_min_ago
                         and ma300_last < ma300_120_min_ago
                    
-                        and deviation_sell < -0.10
+                        and deviation_sell < -0.115
                         and ma2_last < ma2_2_min_ago
                         and macd < macd_2_min_ago
                     ):
-                        sell = "SELL 1 (21-50 min)  piccola perdita durante il crollo - AGGIUNTA TARDIVA MA FORSE NECESSARIA ! and delta_1 > delta_2 and dev_sell < -0.10 - r 9354"
+                        sell = "SELL 1 (21-50 min)  piccola perdita durante il crollo - AGGIUNTA TARDIVA MA FORSE NECESSARIA ! and delta_1 > delta_2 and dev_sell < -0.115 - r 9354"
                         action = "sell"
                         
                         
                         # 29 mag 2023 AGGIUNTO 
-                        # 29 mag 2023 dev_sell < -0.10
-                        
+                        # 29 mag 2023 dev_sell a -0.10
+                        # 30 mag 2023 dev_sell a -0.115 da -0.10
                         
                     
                         
