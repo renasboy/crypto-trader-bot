@@ -23800,8 +23800,8 @@ class maddog:
                 
             elif (
                 ma78_last < ma78_120_min_ago 
-                and deviation_ma39 < -0.20
-                and deviation_sell < -0.33
+                and deviation_ma39 < -0.195
+                and deviation_sell < -0.325
                 and ma2_last < ma2_2_min_ago 
                 
                 and ma50_last < ma50_2_min_ago
@@ -23809,7 +23809,7 @@ class maddog:
                 
                 and deviation_ma5_sotto_ma200 > -0.90
             ):
-                sell = "SELL condizione speciale 6 - SALVAGENTE 4 deviation 3-39 < -0.20 and dev_sell < -0.33 - con ma50 < e con ma5 sotto ma200 > -0.90 - r 16047b"
+                sell = "SELL condizione speciale 6 - SALVAGENTE 4 deviation 3-39 < -0.195 and dev_sell < -0.325 - con ma50 < e con ma5 sotto ma200 > -0.90 - r 16047 B"
                 action = "sell"   
                 
 
@@ -23820,7 +23820,10 @@ class maddog:
                 # 25 gen 2023 HA FATTO -0.95 ! dev 39 -0.253 da 0.255 E dev sell -0.36 da -0.362
                 #  1 feb 2023 dev 39 -0.251 da -0.253 ha fatto -1.31 (RCCR -1.98% !) ( sta migliorando ! )
                 #  1 feb 2023 deviation_ma5_sotto_ma200 > -0.90 da > 1.00 se vado a vedere sell 30 gen 2023 oe 20:12 5-200 = -1.02 !
-                # 17 mar 2023 dev 39 -0.25 da -0.251
+                # 17 mar 2023 dev39 a -0.25 da -0.251
+                # 27 mag 2023 dev39 a -0.20 da -0.25
+                # 30 mag 2023 dev39 a -0.195 da -0.20
+                # 30 mag 2023 dev sell a -0.325 da -0.33
                 
                 #########################################################################################################################
                 
