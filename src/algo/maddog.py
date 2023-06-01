@@ -11154,6 +11154,7 @@ class maddog:
                     
                     and deviation_ma5_sopra_ma28 < 0.10
                     and deviation_ma3_sopra_ma16 > 0.03
+                    and deviation_ma3_sopra_ma18 > 0.093
                     and ma2_last >= ma2_2_min_ago
                     
                 ):
@@ -11165,7 +11166,7 @@ class maddog:
                     # tolto 18>100 
                     # aggiunto PENSIERO LATERALE and deviation_ma5_sopra_ma59 < -0.09
                     # 18 mag 2023 aggiunta 3-16 > 0.03 
-                    
+                    #  2 giu 2023 aggiunta 3-18 > 0.093
                     
                     
                 # BUY 4 se 8 > 200 con 5-28 > 0.20 ! e con ma69 > and deviation_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali) IMPORTATA DA BUY 5
