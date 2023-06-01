@@ -9419,6 +9419,7 @@ class maddog:
                     and ma4_last > ma4_2_min_ago
                     and ma2_last > ma2_2_min_ago
                     and ma7_last > ma25_last
+                    and ma2_last > ma3_last
                 ):
                     buy = "BUY 3D RIVOLUZIONARIO con 300 < 120 min ago e se ma69 < AND ma78_last > ma200_last - r 6329 a2"
                     action = "buy"
@@ -9426,7 +9427,7 @@ class maddog:
                     
                     # deviation_buy3 = ma4_last/ma30_last
                     # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
-                    
+                    #  1 giu 2023 ma2 > ma3 !
                     
                     
                     
