@@ -328,10 +328,20 @@ class maddog:
         self.algo_helper.info("deviation_ma50_sopra_o_sotto_ma100: {}".format(deviation_ma50_sopra_o_sotto_ma100))
         
         
+        
         # formula DEVIATION_ma10_sotto_ma100 - FORMULA dna !
         
         deviation_ma10_sotto_ma100 = (ma10_last / ma100_last - 1) * 100 if ma100_last else 0
         self.algo_helper.info("deviation_ma10_sotto_ma100: {}".format(deviation_ma10_sotto_ma100))
+        
+        
+        
+        # formula DEVIATION_ma39_sotto_ma200 - FORMULA cv!
+        
+        deviation_39_sotto_ma200 = (ma39_last / ma200_last - 1) * 100 if ma200_last else 0
+        self.algo_helper.info("deviation_ma39_sotto_ma200: {}".format(deviation_ma39_sotto_ma200))
+        
+        
         
         # formula DEVIATION_ma10_sopra_ma200 - FORMULA MY COMPA !
         
@@ -2127,8 +2137,8 @@ class maddog:
                 
                 elif (     
                     
-                    ma5_last > ma30_last
-                    
+                    ma5_last > ma20_last
+                    and deviation_39_sotto_ma200 < -0.15
                     and macd > macd_2_min_ago
                     
                     and deviation_ma300_sopra_ma450 > -0.20
@@ -2150,8 +2160,8 @@ class maddog:
                     #  4 mag 2023 5-50 da 5-250
                     #  9 mag 2023 5-30 da 5-50
                     # 29 mag 2023 3-16 > 0.11
-                    
-                
+                    #  1 giu 2023 5-20 da 5-30
+                    #  1 giu 2023 and deviation_39_sotto_ma200 < -0.15
                 
                     
                     
