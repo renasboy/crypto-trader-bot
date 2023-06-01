@@ -7546,17 +7546,17 @@ class maddog:
                     and deviation_ma200_sopra_ma300 > -0.50
                     
                     and ma2_last > ma2_2_min_ago
-                
+                    and macd > macd_2_min_ago
                 ):
                
-                    buy = "BUY 2 CON 78 > 200 che ci riprova quando se ne va lateralmente dopo il crollo CON 28>28 30 min ago - r 5445 A1"
+                    buy = "BUY 2 CON 78 > 200 che ci riprova quando se ne va lateralmente dopo il crollo CON 28>28 30 min ago and macd > macd_2_min_ago - r 5445 A1"
                     action = "buy"
                     percentage = 80
 
                     # compare prega per me !
                     # 29 set 2022 3-10 > 0.08 da 0.10
-                    # 29 set 28 20 min ago da 28 30 min ago
-                    
+                    # 29 set 2022 28 20 min ago da 28 30 min ago
+                    #  1 giu 2023 and macd > macd_2_min_ago
                     
                     
                 # BUY 2 che ci riprova quando se ne va lateralmente dopo il crollo
