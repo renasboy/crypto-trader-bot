@@ -1410,7 +1410,7 @@ class maddog:
                 
                 elif (
                     
-                    ma4_last > ma20_last
+                    ma4_last > ma18_last
                     and macd >= macd_2_min_ago
                     
                     and deviation_ma5_sopra_ma200 < -0.30
@@ -1460,14 +1460,8 @@ class maddog:
                     
                     # 25 mag 2023 4-20 da 5-20 
                     # 25 mag 2023 deviation_ma5_sopra_ma28 > -0.15 da > -0.10
+                    #  1 giu 2023 4-18 da 4-20 
                     
-                    
-                    
-                    
-                    
-                # BUY 1 5-300 zona mediana
-                
-                
                     
                     
                     
