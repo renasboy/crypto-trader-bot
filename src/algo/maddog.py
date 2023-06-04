@@ -6099,7 +6099,7 @@ class maddog:
                     and deviation_ma300_sopra_ma450 < 0.20
                     and deviation_ma300_sopra_ma450 > -0.20
                     
-                    and ma59_last >= ma59_2_min_ago
+                    and ma39_last >= ma39_2_min_ago
                     and deviation_ma100_sopra_ma300 < 0.20
                     
                     and deviation_buy2 > 0.01
