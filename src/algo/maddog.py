@@ -16370,7 +16370,7 @@ class maddog:
                         and ma300_last < ma300_120_min_ago
                         and ma100_last < ma200_last
                         and ma100_last < ma300_last
-                        and deviation_sell < -0.156
+                        and deviation_sell < -0.158
                         and ma2_last < ma2_2_min_ago
                     ):
                    
