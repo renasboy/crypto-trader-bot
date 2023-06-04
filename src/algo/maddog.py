@@ -19057,14 +19057,16 @@ class maddog:
                         
                         and delta_300_100 > delta_300_100_60_min
                    
-                        and deviation_sell < -0.12
+                        and deviation_sell < -0.123
                         and ma2_last < ma2_2_min_ago
+                        and mcad_last < macd_2_min_ago
                     ):
-                        sell = "SELL 2 da 60 a 90 min AGGIUNTA TARDIVA MA FORSE NECESSARIA ! delta 300-100 > and deviation_sell < -0.12 - r 12212 B"
+                        sell = "SELL 2 da 60 a 90 min AGGIUNTA TARDIVA MA FORSE NECESSARIA ! delta 300-100 > and deviation_sell < -0.123 and macd < macd 2 min ago - r 12212 B"
                         action = "sell"
                         
                         # 17 mar 2023 dev sell a -0.12 da -0.10
-                        
+                        #  4 giu 2023 dev sell a -0.123 da -0.12
+                        #  4 giu 2023 aggiunto macd < macd 2 min ago
                      
                 
                 ######################################################################################################### SESSIONE 2 ( da 90 min a 110 min )
