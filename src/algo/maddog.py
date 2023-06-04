@@ -7361,9 +7361,10 @@ class maddog:
             
                 # ------------------------------------------------------------ BUY 2 laterale
               
-              
                 elif (    
                     ma5_last > ma39_last
+                    and ma78_last > ma78_60_min_ago
+                    
                     and ma450_last > ma450_480_min_ago
                     
                     and ma300_last > ma450_last
@@ -7375,7 +7376,27 @@ class maddog:
                     
                 ):  
                 
-                    buy = "BUY 2 laterale con 300>450 - r 5412 X1"
+                    buy = "BUY 2 laterale con 300>450 - r 5412 X1a"
+                    action = "buy"
+                    percentage = 80
+                    
+                    
+                elif (    
+                    ma5_last > ma39_last
+                    and ma78_last < ma78_60_min_ago
+                    
+                    and ma450_last > ma450_480_min_ago
+                    
+                    and ma300_last > ma450_last
+                    and deviation_ma100_sopra_ma300 < 0.20
+                    and deviation_ma100_sopra_ma300 > -0.20
+                  
+                    and ma300_last > ma300_120_min_ago
+                    and deviation_ma3_sopra_ma18 > 0.06
+                    
+                ):  
+                
+                    buy = "BUY 2 laterale con 300>450 - r 5412 X1b"
                     action = "buy"
                     percentage = 80
                     
@@ -7385,7 +7406,7 @@ class maddog:
                     # 23 mag 2023 3-39 da 8-59 con 300>450 e 100 attaccata alla 300
                     # 24 mag 2023 tolto 3-10 > 0.07 !
                     # 24 mag 2023 messo 3-18 > 0.02 con 450 < 450 480 min ago !
-                    
+                    #  4 mag 2023 messo 3-18 > 0.06 con 450 < 450 480 min ago ma 78 scende da 60 min !
                     
                     
                     
