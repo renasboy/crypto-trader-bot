@@ -25098,17 +25098,17 @@ class maddog:
                 
             elif (
                 seconds_since_last_trade > 7200
-                and ma3_last < ma15_last
+                and ma3_last < ma20_last
                 and deviation_ma3_di_adesso_diviso_ma3_di_90_min_ago < 1.30
                 and ma450_last < ma450_720_min_ago
                 
-                and deviation_sell > 0.70
+                and deviation_sell > 0.75
                 and deviation_sell < 1.10
                 
                 and ma2_last < ma2_2_min_ago
                 and macd < macd_2_min_ago
             ):    
-                sell = "SELL condizione POCHI MALEDETTI E SUBITO da 0 a 120 min con 3-15 E con dev_sell 0.70 - 1.10 and macd < - INTANTO TE LI PRENDI - r 16750 B"
+                sell = "SELL condizione POCHI MALEDETTI E SUBITO da 0 a 120 min con 3-20 E con dev_sell 0.75 - 1.10 and macd < - INTANTO TE LI PRENDI - r 16750 B"
                 action = "sell"
                 
                 # pochi 0.80 - 1.20
@@ -25125,7 +25125,8 @@ class maddog:
                 #  1 giu 2023 0.70 - 1.10 da 0.80 - 1.05
                 
                 # 17 mag 2023 ATTENZIONE ! dopo 10860 pochi maledetti e subito vende SOLO SE il trend di lungo periodo e' ribassista.  se e' rialzista lascia correre.
-                
+                #  6 giu 2023 0.75 - 1.10 da 0.70 - 1.05
+                #  6 giu 2023 3-20 da 3-13
                 
                 #################################################################################################################################################
                 
