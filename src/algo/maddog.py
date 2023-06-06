@@ -24268,17 +24268,33 @@ class maddog:
                 
                 
             # 21 - SELL condizione special 21 Bocelli - core 'ngrato - > CROLLO IMPROVVISO - and deviation_ma5_sotto_ma200 < -0.70
-                    
+            
+            
             elif (    
                 ma2_last <= ma4_last
+                and ma300_last > ma300_301_min_ago
                 and ma2_last <= ma6_last
-                and deviation_crollo_24_aprile < -0.571
+                and deviation_crollo_24_aprile < -0.57
                 
                 and delta_1 > delta_2
                 and deviation_ma5_sotto_ma200 < -0.70
             ): 
                 
-                sell = "SELL cond special 21 Bocelli - core 'ngrato - > CROLLO IMPROVVISO - and delta_1 > delta_2 e dev_ma5_sotto_ma200 < -0.70 < -0.572 - r 16480 B"
+                sell = "SELL cond special 21 Bocelli - core 'ngrato - > CROLLO IMPROVVISO - and delta_1 > delta_2 e dev_ma5_sotto_ma200 < -0.70 < dev sell -0.572 - r 16480 Bx"
+                action = "sell"
+                
+                
+            elif (    
+                ma2_last <= ma4_last
+                and ma300_last < ma300_301_min_ago
+                and ma2_last <= ma6_last
+                and deviation_crollo_24_aprile < -0.50
+                
+                and delta_1 > delta_2
+                and deviation_ma5_sotto_ma200 < -0.70
+            ): 
+                
+                sell = "SELL cond special 21 Bocelli - core 'ngrato - > CROLLO IMPROVVISO - and delta_1 > delta_2 e dev_ma5_sotto_ma200 < -0.70 < dev sell -0.572 -0.572 - r 16480 By"
                 action = "sell"
                         
                 # ho aggiunto anche questa vendita speciale dopo il 24 aprile -1%
