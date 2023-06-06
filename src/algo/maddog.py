@@ -13643,16 +13643,16 @@ class maddog:
                         and ma300_last < ma300_180_min_ago
                         
                         and delta_1_200_78 > delta_2_200_78_60_min
-                        and deviation_ma39 < -0.165
+                        and deviation_ma39 < -0.16
                         and ma2_last < ma2_2_min_ago
                         
                         and deviation_ma100_sopra_ma300 < 0.69
                         and deviation_ma100_sopra_ma300 > -0.77
-                        and deviation_sell < -0.22
+                        and deviation_sell < -0.20
                         
                         and ma3_last < ma300_last
                     ):
-                        sell = "SELL 1 NON TOCCARE (21-50 min) con ma50 < E dev_ma39 <-0.165 E dev_sell < -0.22 TREND LATERALE (100>300 <0.69 and >-0.77) - r 9016 B2"
+                        sell = "SELL 1 NON TOCCARE (21-50 min) con ma50 < E dev_ma39 <-0.16 E dev_sell < -0.20 TREND LATERALE (100>300 <0.69 and >-0.77) - r 9016 B2"
                         action = "sell"
                         
                         # OGGI 22 LUG 2022 QUESTA SU RCCR HA FATTO -0.56 MENTRE MADOG HA FATTO -1.43 !
@@ -13660,8 +13660,8 @@ class maddog:
                         # > estate -0.21 da -0.18
                         # 17 feb 2023 dev_sell a -0.219 da -0.215
                         #  6 apr 2023 dev_sell a -0.221 da -0.219
-                        
-                        
+                        #  5 giu 2023 dev_sell a -0.20 da -0.22
+                        #  5 giu 2023 dev_39 a -0.16 da -0.165
                         
                         
                         
@@ -16291,15 +16291,17 @@ class maddog:
                         and ma78_last < ma300_last
                         and ma300_last < ma300_120_min_ago
                         and ma100_last > ma200_last
-                        and deviation_sell < -0.19
+                        and deviation_sell < -0.195
                         and ma2_last < ma2_2_min_ago
                     ):
                    
-                        sell = "SELL 1 da 110 a 239 min FORSE E' NECESSARA SOLO QUESTA 3 ! dev_sell < -0.20 CON 300>450 e con 78 < 300 (ancora ribasso !) torna a casa ! - r 10278 B1"
+                        sell = "SELL 1 da 110 a 239 min FORSE E' NECESSARA SOLO QUESTA 3 ! dev_sell < -0.195 CON 300>450 e con 78 < 300 (ancora ribasso !) torna a casa ! - r 10278 B1"
                         action = "sell"
                        
                         # 17 mar 2023 -0.19 da -0.17 con 300>450
                         # 21 mag 2023 -0.20 da -0.19 con 300>450
+                        # 21 mag 2023 -0.195 da -0.20 con 300>450
+                        
                       
                     elif (    
                         ma3_last < ma100_last
