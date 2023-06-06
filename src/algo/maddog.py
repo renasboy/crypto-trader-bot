@@ -5851,9 +5851,12 @@ class maddog:
                     and deviation_bellissima > 0.151
                     and deviation_buy_ma3_sopra_ma13 > 0.09
                     and deviation_ma7_sopra_ma40 > 0.05
-                    and ma2_last > ma2_2_min_ago
+                    
                     and price > price_2_min_ago
                     and ma3_last > ma40_last
+                    
+                    and ma2_last > ma2_2_min_ago
+                    and macd > macd_2_min_ago
                 ):
                     buy = "BUY 2A rialzo o laterale con 78 > 200 - r 4639 A2"
                     action = "buy"
@@ -5861,7 +5864,7 @@ class maddog:
 
                     # deviation_buy_ma3_sopra_ma13 > x e' fondamentale !
                     # deviation_buy2 = ma8_last/ma50_last
-                    
+                    #  6 giu 2023 aggiunto macd >
                     
                     
                 elif (
