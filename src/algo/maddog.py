@@ -16292,7 +16292,9 @@ class maddog:
                         and ma300_last < ma300_120_min_ago
                         and ma100_last > ma200_last
                         and deviation_sell < -0.195
+                        
                         and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
                     ):
                    
                         sell = "SELL 1 da 110 a 239 min FORSE E' NECESSARA SOLO QUESTA 3 ! dev_sell < -0.195 CON 300>450 e con 78 < 300 (ancora ribasso !) torna a casa ! - r 10278 B1"
@@ -16310,7 +16312,9 @@ class maddog:
                         and ma300_last < ma300_120_min_ago
                         and ma100_last > ma200_last
                         and deviation_sell < -0.20
+                        
                         and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
                     ):
                    
                         sell = "SELL 1 da 110 a 239 min FORSE E' NECESSARA SOLO QUESTA 3 ! dev_sell < -0.20 CON 78 < 300 (ancora ribasso !) (PERDI POCO - porta a casa) - r 10278 B2"
