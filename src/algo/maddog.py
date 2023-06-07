@@ -1726,7 +1726,7 @@ class maddog:
                 
                 elif (    
                     ma5_last > ma13_last
-                    and ma78_last > ma78_60_min_ago
+                    
                     and deviation_ma300_sopra_ma450 < 0.13
                     and deviation_ma300_sopra_ma450 > -0.13
                     
@@ -1737,7 +1737,7 @@ class maddog:
                     and deviation_ma10_sotto_ma100 > -0.20
                     
                     and deviation_ma3_sopra_ma10 > 0.07
-                    and deviation_ma3_sopra_ma16 > -0.02
+                    and deviation_ma3_sopra_ma16 > 0.112
                     and deviation_ma4_sopra_ma28 > -0.01
                     
                     and macd >= macd_2_min_ago
@@ -1745,7 +1745,7 @@ class maddog:
                     
                 ):  
                 
-                    buy = "BUY 1 LATERALE 2 con 3-10 > 0.07 and macd > macd 2 min ago - r 1205 a"
+                    buy = "BUY 1 LATERALE 2 con 3-10 > 0.07 and macd > macd 2 min ago and deviation_ma3_sopra_ma16 > 0.112 - r 1205"
                     action = "buy"
                     percentage = 50
                     
@@ -1753,7 +1753,7 @@ class maddog:
                     # attenzione ! adesso questa condizione si attiva anche se ma250_last < ma300_last ! MA SEMPRE durante un TREND LATERALE.
                     # vediamo come va.
                     # vedi 19 maggio 2023 ore 17:47 !
-                    
+                    # 8 giu and deviation_ma3_sopra_ma16 > 0.112
                     
                     
                 elif (    
@@ -1769,7 +1769,7 @@ class maddog:
                     and deviation_ma10_sotto_ma100 > -0.20
                     
                     and deviation_ma3_sopra_ma10 > 0.07
-                    and deviation_ma3_sopra_ma16 > 0.112
+                    
                     and deviation_ma4_sopra_ma28 > -0.01
                     
                     and macd >= macd_2_min_ago
