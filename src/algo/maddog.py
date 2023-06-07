@@ -1737,7 +1737,7 @@ class maddog:
                     and deviation_ma10_sotto_ma100 > -0.20
                     
                     and deviation_ma3_sopra_ma10 > 0.07
-                    and deviation_ma3_sopra_ma16 > 0.112
+                    
                     and deviation_ma4_sopra_ma28 > -0.01
                     
                     and macd >= macd_2_min_ago
