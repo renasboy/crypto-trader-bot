@@ -1418,7 +1418,7 @@ class maddog:
                     
                     ma4_last > ma18_last
                      
-                    and ma78_last < ma78_60_min_ago 
+                    
                     and ma450_last < ma450_360_min_ago
                     and macd >= macd_2_min_ago
                     
