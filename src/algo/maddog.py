@@ -8294,6 +8294,7 @@ class maddog:
                     and deviation_ma250_sopra_ma300 > -0.04
                     
                     and deviation_ma3_sopra_ma10 > 0.10
+                    and deviation_ma3_sopra_ma16 > 0.173
                     and deviation_bellissima > 0.03
                     
                     and ma200_last > ma200_120_min_ago
@@ -8311,12 +8312,12 @@ class maddog:
                     and ma5_last >= ma15_last
                     and ma5_last >= ma25_last
                 ):    
-                    buy = "BUY 2 RIVOLUZIONARIO se ma39 > ma50 MA 78 < 78 30 min ago E CON 3-10 > 0.17 - r 5919 b2"
+                    buy = "BUY 2 RIVOLUZIONARIO se ma39 > ma50 MA 78 < 78 30 min ago E CON 3-10 > 0.17 - r 5919 B2"
                     action = "buy"
                     percentage = 70
                     
                     # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
-                    
+                    # 8 giu aggiunta and deviation_ma3_sopra_ma16 > 0.173
                     
                     
                 elif (
