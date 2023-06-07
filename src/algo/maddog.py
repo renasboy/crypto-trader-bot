@@ -14071,7 +14071,7 @@ class maddog:
                     elif (
                         ma50_last < ma50_2_min_ago
                         and (ma5_prev > ma39_prev and ma5_last < ma39_last)
-                        and deviation_sell < -0.13
+                        and deviation_sell < -0.15
                         and ma59_last < ma59_30_min_ago
                         
                         and ma100_last < ma200_last
@@ -14090,7 +14090,7 @@ class maddog:
                         
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 NON GRANDE PERDITA dopo BUY AUDI E crollo SUCCESSIVO (21-50 min) - r 9312 B"
+                        sell = "SELL 1 NON GRANDE PERDITA dopo BUY AUDI E crollo SUCCESSIVO (21-50 min) and deviation_sell < -0.15 - r 9312 B"
                         action = "sell"
                         
                         # in questa circostanza drammatica di crollo AUDI INTANTO TE LI PRENDI poi, eventualmente, ci pensa BUY 2
@@ -14101,6 +14101,7 @@ class maddog:
                         # 26 ott 2022 dev sell -0.12 da -0.10 con ma59 > ma59 30 min ago
                         # 20 apr 2023 dev sell -0.13 da -0.12
                         # 20 apr 2023 5-39 da 5-33
+                        #  8 giu 2023 deviation_sell < -0.15 da < -0.13
                         
                     # -------------------------------------------------------------------------------------- guadagno durante il crollo LEGGERO
                     
@@ -23871,8 +23872,8 @@ class maddog:
                 
             elif (
                 ma78_last < ma78_120_min_ago 
-                and deviation_ma39 < -0.192
-                and deviation_sell < -0.323
+                and deviation_ma39 < -0.10
+                and deviation_sell < -0.34
                 and ma2_last <= ma2_2_min_ago 
                 
                 and ma50_last <= ma50_2_min_ago
@@ -23880,7 +23881,7 @@ class maddog:
                 
                 and deviation_ma5_sotto_ma200 > -0.90
             ):
-                sell = "SELL condizione speciale 6 - SALVAGENTE 4 deviation 3-39 < -0.192 and dev_sell < -0.323 - con ma50 < e con ma5 sotto ma200 > -0.90 - r 16047 B"
+                sell = "SELL condizione speciale 6 - SALVAGENTE 4 deviation 3-39 < -0.10 and dev_sell < -0.34 - con ma50 < e con ma5 sotto ma200 > -0.90 - r 16047 B"
                 action = "sell"   
                 
 
@@ -23899,6 +23900,8 @@ class maddog:
                 # 1 giu 2023 ha fatto -1.23% !
                 # 1 giu 2023 dev39 a -0.192 da -0.195
                 # 1 giu 2023 dev sell a -0.323 da -0.325
+                # 8 giu 2023  and deviation_sell < -0.34
+                
                 
                 #########################################################################################################################
                 
