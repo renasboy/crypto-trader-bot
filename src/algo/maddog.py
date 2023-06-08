@@ -4437,7 +4437,7 @@ class maddog:
                     and deviation_buy_crollo_1 < -2.30
                     and ma3_last > ma16_last
                     and deviation_ma3_sopra_ma10 > 0.31
-                    and ma78_last < 
+                    and ma78_last < < ma300_last
                     and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 1 CROLLO FERRARI 3-16 - modo 1 and ma78_last < ma300_last - r 3525"
