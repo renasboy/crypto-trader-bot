@@ -1224,6 +1224,7 @@ class maddog:
                 
                 if (    
                     ma20_last > ma200_last
+                    and macd >= macd_2_min_ago
                     and ma10_last > ma100_last
                     and deviation_ma3_sopra_ma10 > 0.13
                     
@@ -1243,6 +1244,7 @@ class maddog:
                     
                 elif (    
                     ma20_last > ma200_last
+                    and macd >= macd_2_min_ago
                     and ma10_last < ma100_last
                     and deviation_ma3_sopra_ma10 > 0.15
                     
@@ -1269,6 +1271,7 @@ class maddog:
                 
                 elif (
                     ma3_last > ma25_last
+                    and macd >= macd_2_min_ago
                     and ma100_last > ma100_10_min_ago
                     and ma33_last > ma78_last
                     
@@ -1295,6 +1298,7 @@ class maddog:
                 
                 elif (
                     ma3_last > ma25_last
+                    and macd >= macd_2_min_ago
                     and ma100_last > ma100_10_min_ago
                     and ma33_last < ma78_last
                     
@@ -1326,6 +1330,7 @@ class maddog:
                 
                 elif (    
                     ma20_last > ma200_last
+                    and macd >= macd_2_min_ago
                     and ma300_last > ma300_120_min_ago
                     and ma78_last < ma78_2_min_ago
                     and deviation_ma5_sopra_ma28 > 0.11
@@ -1347,6 +1352,7 @@ class maddog:
                 
                 elif (    
                     ma28_last > ma300_last
+                    and macd >= macd_2_min_ago
                     and ma300_last < ma300_120_min_ago
                     and ma200_last > ma200_60_min_ago
                     
@@ -1375,6 +1381,7 @@ class maddog:
                 elif (
                     
                     ma8_last > ma150_last
+                    and macd >= macd_2_min_ago
                     and deviation_ma100_sopra_ma200 < -0.25
                     and delta_1_200_78 < delta_2_200_78_60_min
                     
@@ -1417,7 +1424,7 @@ class maddog:
                 elif (
                     
                     ma4_last > ma18_last
-                     
+                    and macd >= macd_2_min_ago 
                     
                     and ma450_last < ma450_360_min_ago
                     and macd >= macd_2_min_ago
@@ -1453,6 +1460,7 @@ class maddog:
                 elif (
                     
                     ma8_last > ma150_last
+                    and macd >= macd_2_min_ago
                     and deviation_ma100_sopra_ma200 < -0.40
                     
                     and delta_1_200_78 < delta_2_200_78_60_min
@@ -1484,6 +1492,7 @@ class maddog:
                      
                 elif (    
                     ma20_last > ma200_last
+                    and macd >= macd_2_min_ago
                     and ma300_last < ma300_120_min_ago
                     and ma200_last < ma200_60_min_ago
                   
@@ -1512,6 +1521,7 @@ class maddog:
                   
                 elif (     
                     ma300_last > ma300_120_min_ago
+                    and macd >= macd_2_min_ago
                     and ma78_last > ma100_last
                     and ma200_last > ma200_120_min_ago
                     
@@ -1540,6 +1550,7 @@ class maddog:
                   
                 elif (     
                     ma300_last > ma300_120_min_ago
+                    and macd >= macd_2_min_ago
                     and ma78_last < ma100_last
                     and ma200_last > ma200_120_min_ago
                     
@@ -1568,6 +1579,7 @@ class maddog:
                   
                 elif (     
                     ma300_last > ma300_120_min_ago
+                    and macd >= macd_2_min_ago
                     and ma200_last > ma200_120_min_ago
                     
                     and ma200_last < ma200_60_min_ago
@@ -1596,6 +1608,7 @@ class maddog:
                   
                 elif (     
                     ma300_last > ma300_120_min_ago
+                    and macd >= macd_2_min_ago
                     and ma200_last < ma200_120_min_ago
                     
                     and ma200_last < ma200_60_min_ago
@@ -1608,6 +1621,7 @@ class maddog:
                     
                     and ma5_last > ma200_last
                     and ma2_last > ma2_2_min_ago
+                    
                 ):     
                   
                     buy = "BUY 1 MOLTO RISCHIOSO modo 1 ! quando incomincia il ribasso MA ma300 ANCORA IN RIALZO MA ma200 120 < con 3-10 > 0.13 - r 1139 B1"
@@ -1621,6 +1635,7 @@ class maddog:
                   
                 elif (     
                     ma300_last > ma300_120_min_ago
+                    and macd >= macd_2_min_ago
                     and deviation_ma5_sotto_ma300 < -0.40
                     
                     and ma200_last < ma200_120_min_ago
@@ -1648,6 +1663,7 @@ class maddog:
                 
                 elif (     
                     ma300_last > ma300_120_min_ago
+                    and macd >= macd_2_min_ago
                     and ma200_last > ma300_last
                     and ma78_last > ma100_last
                     and ma8_last > ma100_last
@@ -1672,7 +1688,7 @@ class maddog:
                 
                 elif (     
                     ma300_last > ma300_301_min_ago
-                    
+                    and macd >= macd_2_min_ago
                     and ma200_last > ma300_last
                     and ma78_last < ma100_last
                     and ma8_last > ma100_last
@@ -1700,7 +1716,7 @@ class maddog:
                 
                 elif (     
                     ma300_last > ma300_120_min_ago
-                    
+                    and macd >= macd_2_min_ago
                     and ma200_last < ma300_last
                     and ma5_last < ma300_last
                     and ma5_last > ma100_last
@@ -1728,7 +1744,7 @@ class maddog:
                 
                 elif (    
                     ma5_last > ma13_last
-                    
+                    and macd >= macd_2_min_ago
                     and deviation_ma300_sopra_ma450 < 0.13
                     and deviation_ma300_sopra_ma450 > -0.13
                     
@@ -1772,6 +1788,7 @@ class maddog:
                 
                 elif (    
                     ma20_last > ma200_last
+                    and macd >= macd_2_min_ago
                     and ma50_last > ma78_last
                     and deviation_ma3_sopra_ma10 > 0.12
                     and ma28_last < ma28_20_min_ago
@@ -1793,6 +1810,7 @@ class maddog:
                 
                 elif (    
                     ma20_last > ma200_last
+                    and macd >= macd_2_min_ago
                     and ma50_last > ma78_last
                     and deviation_ma3_sopra_ma10 > 0.12
                     
@@ -1812,6 +1830,7 @@ class maddog:
                 
                 elif (    
                     ma20_last > ma200_last
+                    and macd >= macd_2_min_ago
                     and ma78_last > ma100_last
                     and ma50_last < ma78_last
                     and deviation_ma5_sopra_ma28 > 0.21
@@ -1835,6 +1854,7 @@ class maddog:
                 
                 elif (    
                     ma20_last > ma200_last
+                    and macd >= macd_2_min_ago
                     and ma78_last < ma100_last
                     and ma50_last < ma78_last
                     and deviation_ma5_sopra_ma28 > 0.30
@@ -1856,6 +1876,7 @@ class maddog:
                 
                 elif (    
                     ma20_last > ma125_last
+                    and macd >= macd_2_min_ago
                     and ma78_last > ma200_last
                     
                     and ma8_last > ma78_last
@@ -1882,6 +1903,7 @@ class maddog:
                 
                 elif (    
                     ma20_last > ma125_last
+                    and macd >= macd_2_min_ago
                     and ma78_last < ma200_last
                     
                     and ma8_last > ma78_last
@@ -1908,6 +1930,7 @@ class maddog:
                 
                 elif (    
                     ma20_last > ma200_last
+                    and macd >= macd_2_min_ago
                     and ma8_last < ma78_last
                     and ma78_last < ma78_2_min_ago
                     and deviation_ma5_sopra_ma28 > 0.17
@@ -1928,6 +1951,7 @@ class maddog:
                 
                 elif (     
                     ma8_last > ma54_last
+                    and macd >= macd_2_min_ago
                     and ma78_last > ma200_last
                     
                     and ma39_last > ma39_30_min_ago
@@ -1959,6 +1983,7 @@ class maddog:
                 
                 elif (     
                     ma8_last > ma50_last
+                    and macd >= macd_2_min_ago
                     and ma78_last < ma200_last
                     and deviation_ma3_sopra_ma10 > 0.24
                     and deviation_ma5_sopra_ma28 > 0.28
@@ -1991,6 +2016,7 @@ class maddog:
                 
                 elif (     
                     ma8_last > ma54_last
+                    and macd >= macd_2_min_ago
                     and ma39_last > ma39_30_min_ago
                     and ma69_last < ma69_2_min_ago
                     
@@ -2022,6 +2048,7 @@ class maddog:
                 
                 elif (     
                     ma8_last > ma54_last
+                    and macd >= macd_2_min_ago
                     and ma78_last > ma200_last
                     
                     and ma39_last < ma39_30_min_ago
@@ -2051,6 +2078,7 @@ class maddog:
                 
                 elif (     
                     ma8_last > ma54_last
+                    and macd >= macd_2_min_ago
                     and ma78_last < ma200_last
                     
                     and deviation_ma3_sopra_ma10 > 0.27
@@ -2092,6 +2120,7 @@ class maddog:
                 
                 elif (     
                     ma50_last > ma100_last
+                    and macd >= macd_2_min_ago
                     and ma100_last > ma200_last
                     and ma100_last < ma100_60_min_ago
                     
@@ -2117,6 +2146,7 @@ class maddog:
                 elif (     
                     
                     ma5_last > ma20_last
+                    and macd >= macd_2_min_ago
                     and deviation_ma39_sotto_ma200 < -0.15
                     and macd > macd_2_min_ago
                     
@@ -2148,6 +2178,7 @@ class maddog:
                 
                 elif (     
                     ma15_last > ma28_last
+                    and macd >= macd_2_min_ago
                     and ma78_last < ma100_last
                     
                     and ma8_last > ma200_last
@@ -2176,6 +2207,7 @@ class maddog:
                 
                 elif (     
                     ma50_last > ma100_last
+                    and macd >= macd_2_min_ago
                     and deviation_ma300_sopra_ma450 > -0.17
                     and ma100_last > ma200_last
                     and deviation_buy_ma2_sopra_ma5 > 0.12
@@ -2202,6 +2234,7 @@ class maddog:
                 
                 elif (     
                     ma50_last > ma100_last
+                    and macd >= macd_2_min_ago
                     and ma300_last > ma450_last
                     
                     
@@ -2235,6 +2268,7 @@ class maddog:
                 
                 elif (     
                     ma50_last > ma100_last
+                    and macd >= macd_2_min_ago
                     and ma78_last < ma150_last
                     
                     and ma200_last > ma300_last
@@ -2267,6 +2301,7 @@ class maddog:
                 
                 elif (     
                     ma50_last > ma100_last
+                    and macd >= macd_2_min_ago
                     and ma200_last < ma300_last
                     and ma200_last > ma200_120_min_ago
                     and deviation_ma5_sopra_ma28 > 0.17
@@ -2292,6 +2327,7 @@ class maddog:
                 
                 elif (     
                     ma8_last > ma50_last
+                    and macd >= macd_2_min_ago
                     and ma100_last > ma450_last
                     and ma59_last > ma100_last
                   
@@ -2328,6 +2364,7 @@ class maddog:
                 
                 elif (     
                     ma8_last > ma56_last
+                    and macd >= macd_2_min_ago
                     and ma78_last < ma100_last
                     
                     and ma200_last < ma200_120_min_ago
@@ -2359,6 +2396,7 @@ class maddog:
                 
                 elif (     
                     ma5_last > ma20_last
+                    and macd >= macd_2_min_ago
                     and deviation_callas < -0.12
                     and macd > macd_2_min_ago
                     
@@ -2393,6 +2431,7 @@ class maddog:
                 elif (     
                     
                     deviation_callas < -0.14
+                    
                     and macd > macd_2_min_ago
                     
                     and deviation_ma50_sotto_ma300 < -0.29
@@ -2443,6 +2482,7 @@ class maddog:
                 
                 elif (     
                     ma8_last > ma50_last
+                    and macd >= macd_2_min_ago
                     and ma30_last > ma30_40_min_ago
                     
                     and ma8_last < ma100_last
@@ -2483,6 +2523,7 @@ class maddog:
                 
                 elif (     
                     ma50_last > ma100_last
+                    and macd >= macd_2_min_ago
                     and ma100_last < ma200_last
                     
                     and ma30_last < ma30_40_min_ago
@@ -2506,6 +2547,7 @@ class maddog:
             
                 elif (       
                     ma450_last > ma450_720_min_ago
+                    and macd >= macd_2_min_ago
                     and ma300_last > ma300_301_min_ago
                     and ma200_last < ma200_20_min_ago
                     
@@ -2543,6 +2585,7 @@ class maddog:
                 elif (
                     
                     ma8_last > ma50_last
+                    and macd >= macd_2_min_ago
                     and ma78_last > ma200_last
                     and deviation_ma3_sopra_ma10 > 0.05
                     and deviation_ma5_sopra_ma28 > 0.25
@@ -2576,6 +2619,7 @@ class maddog:
                 elif (
                   
                     ma8_last > ma28_last
+                    and macd >= macd_2_min_ago
                     and ma78_last < ma200_last
                     
                     and deviation_ma5_sopra_ma59 < -0.15
@@ -2614,6 +2658,7 @@ class maddog:
                 elif (
                     
                     deviation_ma5_sopra_ma28 > 0.24
+                    and macd >= macd_2_min_ago
                     and ma78_last > ma200_last
                     and delta_1_200_78 < delta_2_200_78_60_min
                     
@@ -2646,6 +2691,7 @@ class maddog:
                 elif (
                     
                     deviation_ma5_sopra_ma28 > 0.24
+                    and macd >= macd_2_min_ago
                     and ma78_last < ma200_last
                     and deviation_ma3_sopra_ma10 > 0.11
                     
@@ -2680,6 +2726,7 @@ class maddog:
                 elif (
                     
                     deviation_ma5_sopra_ma28 > 0.24
+                    and macd >= macd_2_min_ago
                     and delta_1_200_78 > delta_2_200_78_60_min
                     and deviation_ma3_sopra_ma10 > 0.22
                     
@@ -2712,6 +2759,7 @@ class maddog:
                 elif (
                     
                     deviation_ma5_sopra_ma28 > 0.14
+                    and macd >= macd_2_min_ago
                     and (ma8_prev < ma50_prev and ma8_last > ma50_last)
                     and deviation_ma100_sopra_ma200 > -0.60
                     and deviation_ma50_sotto_ma200 < -0.15
@@ -2744,6 +2792,7 @@ class maddog:
                 elif (
                     
                     ma8_last > ma140_last
+                    and macd >= macd_2_min_ago
                     and deviation_ma100_sopra_ma200 > -0.30
                     and ma20_last > ma200_last
                     
@@ -2774,6 +2823,7 @@ class maddog:
                 
                 elif (    
                     ma8_last > ma140_last
+                    and macd >= macd_2_min_ago
                     and deviation_ma100_sopra_ma200 > -0.30
                     and ma20_last < ma200_last
                     and deviation_ma3_sopra_ma10 > 0.24
@@ -2805,6 +2855,7 @@ class maddog:
                 
                 elif (
                     ma20_last > ma200_last
+                    and macd >= macd_2_min_ago
                     and ma11_last > ma50_last
                     and ma69_last >= ma69_2_min_ago
                     and ma300_last > ma300_120_min_ago
@@ -2826,6 +2877,7 @@ class maddog:
                     
                 elif (
                     ma5_last > ma300_last
+                    and macd >= macd_2_min_ago
                     and ma8_last > ma50_last
                     and ma100_last > ma150_last
                     and delta_300_225 < delta_300_225_60_min
@@ -2861,7 +2913,7 @@ class maddog:
                 
                 elif (
                     ma100_last > ma200_last
-                    
+                    and macd >= macd_2_min_ago
                     
                     and ma100_last > ma300_last
                     and ma100_last > ma100_120_min_ago
@@ -2893,6 +2945,7 @@ class maddog:
                     
                 elif (
                     ma200_last > ma200_120_min_ago
+                    and macd >= macd_2_min_ago
                     and ma20_last > ma200_last
                     and ma11_last > ma69_last
                     and deviation_ma5_sopra_ma28 > 0.15
@@ -2914,6 +2967,7 @@ class maddog:
            
                 elif (
                     ma20_last > ma200_last
+                    and macd >= macd_2_min_ago
                     and deviation_buy1 > 0.24
                     and ma13_last > ma50_last
                     and ma78_last > ma78_2_min_ago
@@ -2931,6 +2985,7 @@ class maddog:
             
                 elif (
                     ma20_last > ma200_last
+                    and macd >= macd_2_min_ago
                     and ma78_last < ma78_2_min_ago
                     and ma39_last > ma78_last
                     and deviation_buy1 > 0.14
@@ -2950,6 +3005,7 @@ class maddog:
             
                 elif (
                     ma20_last > ma200_last
+                    and macd >= macd_2_min_ago
                     and ma78_last < ma78_2_min_ago
                     and ma39_last > ma78_last
                     and deviation_bellissima > 0.17
@@ -2973,6 +3029,7 @@ class maddog:
                 
                 elif (
                     ma200_last > ma200_20_min_ago
+                    and macd >= macd_2_min_ago
                     and ma300_last > ma300_120_min_ago
                     and deviation_ma100_sopra_ma300 > 0.50
                     
@@ -2996,6 +3053,7 @@ class maddog:
                     
                 elif (
                     ma200_last > ma200_20_min_ago
+                    and macd >= macd_2_min_ago
                     and ma300_last > ma300_120_min_ago
                     and deviation_ma100_sopra_ma300 < 0.50
                     
@@ -3029,6 +3087,7 @@ class maddog:
                 
                 elif (
                     ma200_last > ma200_20_min_ago
+                    and macd >= macd_2_min_ago
                     and ma300_last < ma300_120_min_ago
                     
                     and deviation_rialzo_improvviso_sopra > 0.50
@@ -3062,6 +3121,7 @@ class maddog:
                 
                 elif (
                     ma200_last > ma200_20_min_ago
+                    and macd >= macd_2_min_ago
                     and (ma20_prev < ma69_prev and ma20_last > ma69_last)
                     and deviation_rialzo_improvviso_1 > 0.25
                     and deviation_range_1 > 0.20
@@ -3084,6 +3144,7 @@ class maddog:
                 elif (
                   
                     ma200_last > ma200_20_min_ago
+                    and macd >= macd_2_min_ago
                     and (ma20_prev < ma100_prev and ma20_last > ma100_last)
                    
                     and deviation_rialzo_improvviso_1 > 0.25
@@ -3108,6 +3169,7 @@ class maddog:
                 elif (
                   
                     ma200_last > ma200_20_min_ago
+                    and macd >= macd_2_min_ago
                     and (ma20_prev < ma200_prev and ma20_last > ma200_last)
                     and deviation_rialzo_improvviso_1 > 0.25
                     and deviation_range_1 > 0.20
@@ -3130,7 +3192,7 @@ class maddog:
                 elif (    
                    
                     ma200_last < ma200_20_min_ago
-                    
+                    and macd >= macd_2_min_ago
                     and deviation_rialzo_improvviso_1 > 1.10
                     and deviation_rialzo_improvviso_2 > 0.20
                     and deviation_rialzo_improvviso_3 > 0.20
@@ -3181,6 +3243,7 @@ class maddog:
                
                 elif (
                     ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                     and ma200_last > ma200_120_min_ago
                     and ma28_last > ma28_30_min_ago
                     
@@ -3204,6 +3267,7 @@ class maddog:
                
                 elif (
                     ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                     and ma200_last > ma200_120_min_ago
                     and ma28_last < ma28_30_min_ago
                     and deviation_ma5_sopra_ma28 > 0.13
@@ -3231,6 +3295,7 @@ class maddog:
                 elif (
 
                     ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                     and ma300_last > ma300_120_min_ago
                     and deviation_buy_crollo_1 < -0.33
                     and deviation_buy_crollo_1 > -0.69
@@ -3264,6 +3329,7 @@ class maddog:
                 
                 elif (
                     ma3_last > ma25_last
+                    and macd >= macd_2_min_ago
                     and ma100_last > ma100_10_min_ago
                     
                     and ma100_last > ma100_120_min_ago
@@ -3292,7 +3358,7 @@ class maddog:
                 
                 elif (
                     ma3_last > ma25_last
-                    
+                    and macd >= macd_2_min_ago
                     and ma100_last < ma100_10_min_ago
                     and ma11_last > ma100_last
                     
@@ -3326,6 +3392,7 @@ class maddog:
                     
                     
                     deviation_buy_crollo_1 < -0.29
+                    and macd >= macd_2_min_ago
                     and deviation_buy_crollo_1 > -0.69
                     
                     and ma5_last < ma22_last
@@ -3356,6 +3423,7 @@ class maddog:
                 elif (
                     
                     deviation_buy_crollo_1 < -0.29
+                    and macd >= macd_2_min_ago
                     and deviation_buy_crollo_1 > -0.69
                     and deviation_correzione > 0.03
                     
@@ -3376,6 +3444,7 @@ class maddog:
                 
                 elif (
                     deviation_buy_crollo_1 < -0.29
+                    and macd >= macd_2_min_ago
                     and deviation_buy_crollo_1 > -0.69
                     
                     and deviation_ma5_sotto_ma300 < -0.40
@@ -3407,6 +3476,7 @@ class maddog:
                 elif (
                     
                     deviation_buy_crollo_1 < -0.29
+                    and macd >= macd_2_min_ago
                     and deviation_buy_crollo_1 > -0.69
                     and ma78_last > ma200_last
                     
@@ -3429,6 +3499,7 @@ class maddog:
                 elif (
                     
                     deviation_buy_crollo_1 < -0.29
+                    and macd >= macd_2_min_ago
                     and deviation_buy_crollo_1 > -0.69
                     and ma78_last < ma200_last
                     
@@ -3452,6 +3523,7 @@ class maddog:
                 elif (
                     
                     deviation_buy_crollo_1 < -0.29
+                    and macd >= macd_2_min_ago
                     and deviation_buy_crollo_1 > -0.69
                     
                     and deviation_ma5_sopra_ma28 > 0.07
@@ -3479,6 +3551,7 @@ class maddog:
                 
                 elif (
                     ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                     and ma78_last > ma200_last
                     
                     and deviation_ma3_sopra_ma10 > 0.145
@@ -3500,6 +3573,7 @@ class maddog:
                 
                 elif (
                     ma2_last >= ma2_2_min_ago
+                    
                     and macd > macd_2_min_ago
                     
                     and ma78_last < ma200_last
@@ -3531,6 +3605,7 @@ class maddog:
                 
                 elif (
                     ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                     and ma78_last < ma200_last
                     and ma300_last < ma300_301_min_ago
                     
@@ -3557,6 +3632,7 @@ class maddog:
                 
                 elif (
                     ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                     and ma8_last > ma50_last
                     and deviation_ma5_sopra_ma28 > 0.20
                     and deviation_ma100_sopra_ma300 < -0.30
@@ -3576,6 +3652,7 @@ class maddog:
                     
                 elif (    
                     deviation_buy_crollo_1 < -0.27
+                    and macd >= macd_2_min_ago
                     and deviation_buy_crollo_1 > -0.62
                     and ma8_last > ma50_last
                     and ma125_last > ma300_last
@@ -3593,6 +3670,7 @@ class maddog:
                 
                 elif (
                     ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                     and ma8_last > ma50_last
                     and deviation_ma5_sopra_ma28 > 0.20
                     and deviation_ma100_sopra_ma300 < -0.30
@@ -3616,6 +3694,7 @@ class maddog:
                 elif (    
                     
                     ma200_last > ma200_20_min_ago
+                    and macd >= macd_2_min_ago
                     and ma20_last > ma78_last
                     and macd > macd_2_min_ago
                     
@@ -3648,6 +3727,7 @@ class maddog:
                 elif (    
                     
                     ma200_last > ma200_20_min_ago
+                    and macd >= macd_2_min_ago
                     and ma20_last < ma78_last
                     and ma90_last > ma110_last
                     
@@ -3686,6 +3766,7 @@ class maddog:
                 elif (    
                     
                     deviation_callas < -0.11
+                    and macd >= macd_2_min_ago
                     and deviation_ma5_sopra_ma59 < -0.45
                     and ma300_last > ma300_300_min_ago
                     
@@ -3721,6 +3802,7 @@ class maddog:
                 elif (    
                     
                     ma200_last > ma200_20_min_ago
+                    and macd >= macd_2_min_ago
                     and ma28_last > ma28_30_min_ago
                     
                     and deviation_ma5_sopra_ma28 > 0.19
@@ -3752,6 +3834,7 @@ class maddog:
                 elif (    
                     
                     ma200_last > ma200_20_min_ago
+                    and macd >= macd_2_min_ago
                     and ma28_last < ma28_30_min_ago
                     
                     and deviation_ma5_sopra_ma28 > 0.25
@@ -3780,6 +3863,7 @@ class maddog:
                 
                 elif (
                     ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                     and ma5_last > ma34_last
                     and deviation_ma5_sopra_ma28 > 0.175
                     and deviation_ma5_sotto_ma200 < -0.85
@@ -3809,6 +3893,7 @@ class maddog:
                 elif (
 
                     ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                     and ma200_last < ma200_120_min_ago
                     and ma300_last < ma300_120_min_ago
                     and ma11_last > ma69_last
@@ -3829,6 +3914,7 @@ class maddog:
                 
                 elif (
                     deviation_ma3 < -1.30
+                    and macd >= macd_2_min_ago
                     and deviation_ma3_sopra_ma10 > 0.06
                     
                     and delta_1 < delta_2
@@ -3855,6 +3941,7 @@ class maddog:
                 
                 elif (
                     ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                     and (ma20_prev < ma200_prev and ma20_last > ma200_last)
                     and deviation_correzione_1 > 0.03
                     
@@ -3875,7 +3962,7 @@ class maddog:
                 
                 elif (
                     ma2_last >= ma2_2_min_ago
-                    
+                    and macd >= macd_2_min_ago
                     and deviation_trend_ma200 > -0.30
                     and ma4_last > ma16_last
                     
@@ -3908,6 +3995,7 @@ class maddog:
                 
                 elif (    
                     deviation_buy_crollo_1 < -0.29
+                    and macd >= macd_2_min_ago
                     and deviation_buy_crollo_1 > -0.69
                     
                     and deviation_ma5_sopra_ma28 > 0.11
@@ -3948,6 +4036,7 @@ class maddog:
                 
                 elif (    
                     deviation_buy_crollo_1 < -0.29
+                    and macd >= macd_2_min_ago
                     and deviation_buy_crollo_1 > -0.69
                     and deviation_correzione > 0.10
                     and deviation_ma5_sopra_ma28 > 0.07
@@ -3981,6 +4070,7 @@ class maddog:
                 
                 elif (    
                     deviation_buy_crollo_1 < -0.29
+                    and macd >= macd_2_min_ago
                     and deviation_buy_crollo_1 > -0.69
                     
                     and ma300_last > ma300_120_min_ago
@@ -4008,6 +4098,7 @@ class maddog:
                 
                 elif (    
                     deviation_buy_crollo_1 < -0.29
+                    and macd >= macd_2_min_ago
                     and deviation_buy_crollo_1 > -0.69
                     
                     and ma300_last < ma300_120_min_ago
@@ -4059,6 +4150,7 @@ class maddog:
                     and deviation_ma5_sopra_ma28 > 0.25
                     
                     and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 1 FIAT OK (DOPPIO DELTA) RIBASSO ! 8-39  SOTTO RIBASSO RIBASSO  - NOTTE ! - r 3227"
                     action = "buy"
@@ -4095,7 +4187,7 @@ class maddog:
                     
                     and ma2_last > ma2_2_min_ago
                     and ma78_last < ma200_last
-                    
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 1 RIBASSO AUDI A importato dal BUY 2 CON 8 sotto 300 > -1.20 - 5-16 > 0.11 E 5-28 > 0.01 - riga 3264 A"
                     action = "buy"
@@ -4121,7 +4213,7 @@ class maddog:
                   
                     and ma78_last < ma200_last
                     and ma2_last >= ma2_2_min_ago
-                    
+                    and macd >= macd_2_min_ago
                     
                 ):
                     buy = "BUY 1 RIBASSO AUDI B importato dal BUY 2 CON 8 sotto 300 < -1.20 - 5-28 > 0.02 and 3-10 > 0.19 - r 3289 B"
@@ -4158,7 +4250,7 @@ class maddog:
                     and ma5_last > ma16_last
                     and ma2_last > ma2_2_min_ago
                     and ma78_last < ma200_last
-                    
+                    and macd >= macd_2_min_ago
                     
                 ):
                     buy = "BUY 1 ultimo e meraviglioso RIBASSO AUDI con 5-16 copiata da RCCR CHE E' ANDATA BENISSIMO e che non e' un crollo !  - riga 3326"
@@ -4187,7 +4279,7 @@ class maddog:
                     
                     and ma2_last > ma2_2_min_ago
                     and ma78_last < ma200_last
-                    
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 1 RIBASSO AUDI PIU' LENTA CHE NON E' UN CROLLO ! and delta_1 < delta_2 con dev 5-16 > 0.09 E 5-28 > 0.18 - riga 3354 A"
                     action = "buy"
@@ -4216,7 +4308,7 @@ class maddog:
                     
                     and ma2_last > ma2_2_min_ago
                     and ma78_last < ma200_last
-                    
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 1 DURANTE UN RIBASSO AUDI PIU' LENTA CHE NON E' UN CROLLO ! and delta_1 > delta_2 con dev 5-16 > 0.10 e 1q>25 - r 3386 B1"
                     action = "buy"
@@ -4249,7 +4341,7 @@ class maddog:
                     
                     and ma2_last > ma2_2_min_ago
                     and ma78_last < ma200_last
-                    
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 1 RIBASSO AUDI PIU' LENTA CHE NON E' UN CROLLO ! and delta_1 > delta_2 con 8-54 > 0.10 e 13<25 E 3-10 > 0.35 ! - r 3417 B2"
                     action = "buy"
@@ -4274,7 +4366,7 @@ class maddog:
                     
                     and ma2_last >= ma2_2_min_ago
                     and ma78_last < ma200_last
-                    
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 1 RIBASSO AUDI PIU' GIU' -0.70 E PIU' VELOCE CHE NON E' UN CROLLO ! con deviation 3-16 > 0.46  - riga 3452"
                     action = "buy"
@@ -4297,6 +4389,7 @@ class maddog:
                     and deviation_correzione_1 > 0.03
                     and ma13_last > ma50_last
                     and ma78_last < ma200_last
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "copia della riga 530 del RCCR ma piu' prudente ! - BUY GRANDE RIBASSO AUDI CHE NON E' UN CROLLO ! - r 3479"
                     action = "buy"
@@ -4317,6 +4410,7 @@ class maddog:
                     and deviation_buy_crollo_1 > -1.50
                     and deviation_ma5_sopra_ma28 > 0.03
                     and ma78_last < ma200_last
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 1 GRANDE RIBASSO MASERATI CHE NON E' UN CROLLO ! con 5-28 - r 3499"
                     action = "buy"
@@ -4343,7 +4437,8 @@ class maddog:
                     and deviation_buy_crollo_1 < -2.30
                     and ma3_last > ma16_last
                     and deviation_ma3_sopra_ma10 > 0.31
-                    and ma78_last < ma300_last
+                    and ma78_last < 
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 1 CROLLO FERRARI 3-16 - modo 1 and ma78_last < ma300_last - r 3525"
                     action = "buy"
@@ -4364,6 +4459,7 @@ class maddog:
                     and ma5_last > ma11_last
                     and macd > macd_2_min_ago
                     and ma78_last < ma300_last
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 1 CROLLO FERRARI 5-11 and macd > - modo 2 and ma78_last < ma300_last - r 3543"
                     action = "buy"
@@ -4410,6 +4506,7 @@ class maddog:
                     
                     and ma78_last > ma300_last
                     and deviation_ma5_sopra_ma28 > 0.05
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 1 CROLLO FERRARI - modo 1 and ma78_last > ma300_last - r 3583"
                     action = "buy"
@@ -4431,6 +4528,7 @@ class maddog:
                     
                     and ma78_last > ma300_last
                     and deviation_ma5_sopra_ma28 > 0.05
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 1 CROLLO FERRARI - modo 2 and ma78_last > ma300_last - r 3604"
                     action = "buy"
@@ -4451,6 +4549,7 @@ class maddog:
                     
                     and ma78_last > ma300_last
                     and deviation_ma5_sopra_ma28 > 0.05
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 1 crollo MISSILE COMPA 3-13 and ma78_last > ma300_last - r 3624"
                     action = "buy"
@@ -4477,7 +4576,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                     and (ma3_prev < ma8_prev and ma3_last > ma8_last)
                     and ma36_last > ma36_2_min_ago
-                  
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 1 ECCEZIONALE - se ma200 sale da 15 min e 69> COMPRA con deviation 4-25 e un po' piu' su della ma100 ! - r 3657"
                     action = "buy"
@@ -4502,7 +4601,7 @@ class maddog:
                     and deviation_buy_ma3_sopra_ma25 > 0.08
                     and deviation_ma3_sopra_ma10 > 0.10
                     and deviation_ma5_sopra_ma28 > 0.01
-                  
+                    and macd >= macd_2_min_ago
                 ):
 
                     buy = "BUY 1 DOCCIA se ma200 > da 120 min ! COMPRA - r 3680"
@@ -4526,7 +4625,7 @@ class maddog:
                     
                     and ma8_last > ma50_last
                     and ma2_last > ma2_2_min_ago
-                
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 1 ribasso AUDI o correzione FIAT che non e' un forte ribasso e non e' un crollo !  - r 3702"
                     action = "buy"
@@ -4557,6 +4656,7 @@ class maddog:
                     
                     and deviation_ma25_sotto_ma300 < -0.60
                     and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 1 CORREZIONE FIAT CHE FA PAURA ! (MA ma100 e ma200 sono ANCORA VICINE alla ma300) (SOTTO cresce diminuisce) AURORA - riga 3749"
                     action = "buy"
@@ -4587,6 +4687,7 @@ class maddog:
                     
                     and deviation_ma25_sotto_ma300 < -0.60
                     and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 1 CORREZIONE FIAT CHE FA PAURA ! (MA ma100 e ma200 sono ANCORA VICINE alla ma300) (SOTTO RIBASSO RIBASSO ) NOTTE ! - riga 3783"
                     action = "buy"
@@ -4611,6 +4712,7 @@ class maddog:
                     and deviation_buy_crollo_1 < -1.61
                     and deviation_buy_crollo_2 > 0.01
                     and deviation_ma3_sopra_ma10 > 0.22
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 1 CROLLO FERRARI ok CON 3-10 necessaria ! - RCCR - r 3813"
                     action = "buy"
@@ -4634,7 +4736,7 @@ class maddog:
                     and ma100_last > ma200_last
                     and ma2_last > ma300_last
                     and ma2_last > ma2_2_min_ago
-                
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 1 SUL SUPPORTO 300 ! - r 3837"
                     action = "buy"
@@ -4661,7 +4763,7 @@ class maddog:
                     
                     and ma2_last > ma300_last
                     and ma2_last > ma2_2_min_ago
-                
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 1 dopo ribasso MA CON TUTTE LE MA > e con incrocio al rialzo 8-140 - r 3864"
                     action = "buy"
@@ -4686,7 +4788,7 @@ class maddog:
                     
                     and deviation_ma5_sopra_ma28 > 0.20
                     and ma2_last > ma2_2_min_ago
-                    
+                    and macd >= macd_2_min_ago
             
                 ):
                     buy = "BUY 1 CHE MANCAVA ! con incrocio 11-50 AND 5-28 > 0.265 (!) ( CON 100 < AND 200 < AND 300 < ) (!)  - r 3896"
@@ -4719,7 +4821,7 @@ class maddog:
                     
                     
                     and ma2_last > ma2_2_min_ago
-                
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 1 20 > 200 che mancava DOPO BUY-SELL e nuovo CROLLO ! 50 > 100 AND 150-100 GIORNO ! and 5-28 > 0.18 and 3-10 > 0.10 - r 3935"
                     action = "buy"
@@ -4754,7 +4856,7 @@ class maddog:
                     and delta_150_100 < delta_150_100_60_min
                     
                     and ma2_last >= ma2_2_min_ago
-              
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 1 78 > 200 che mancava DOPO BUY-SELL e nuovo CROLLO ! 50 > 100 AND delta 150-100 GIORNO ! and 3-10 > 0.10 and 5-28 > 0.15 - r 3968 A2"
                     action = "buy"
@@ -4830,7 +4932,7 @@ class maddog:
                     and deviation_ma5_sotto_ma300 < -0.43
                     
                     and ma2_last > ma2_2_min_ago
-                
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 1 CHE MANCAVA DOPO 5 ore di ribasso con delta 1 < delta 2 (piu' sicuro) e con 5-28 > 0.16  MA 5 non lontana da 100 - r 4040 A"
                     action = "buy"
@@ -4862,7 +4964,7 @@ class maddog:
                     and deviation_ma5_sotto_ma300 < -0.43
                     
                     and ma2_last > ma2_2_min_ago
-                
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 1 CHE MANCAVA DOPO 5 ore di ribasso con 5-28> 0.22 se entra dopo 5 ore deve essere piu' sicuro CON 5 molto lontana da 100- r 4040 B"
                     action = "buy"
@@ -4891,7 +4993,7 @@ class maddog:
                     and ma100_last > ma100_3_min_ago
                     
                     and ma2_last > ma2_2_min_ago
-                
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 1 laterale CHE MANCAVA DOPO BUY-SELL CROLLO ! 50 < 100 AND 150-100 GIORNO ! and 3-10 > 0.25 and 5-28 > 0.18 - r 4042"
                     action = "buy"
@@ -4928,7 +5030,7 @@ class maddog:
                     and deviation_ma200_sopra_ma300 > -0.40
                     
                     and ma2_last > ma2_2_min_ago
-                
+                    and macd >= macd_2_min_ago
                 ):
                
                     buy = "BUY 1 che ci riprova quando se ne va lateralmente dopo il crollo and trend_macd >= 2 - r 4082 A1"
@@ -4958,7 +5060,7 @@ class maddog:
                     and deviation_ma200_sopra_ma300 > -0.40
                     
                     and ma2_last > ma2_2_min_ago
-                
+                    and macd >= macd_2_min_ago
                 ):
                
                     buy = "BUY 1 che ci riprova quando se ne va lateralmente dopo il crollo - r 4111 A2"
@@ -4997,7 +5099,7 @@ class maddog:
                     and deviation_ma200_sopra_ma300 > -0.40
                     
                     and ma2_last >= ma2_2_min_ago
-                
+                    and macd >= macd_2_min_ago
                 ):
                
                     buy = "BUY 1 che ci riprova quando se ne va lateralmente AND MACD > MACD 2 min ago ! - r 4138 B"
@@ -5011,18 +5113,6 @@ class maddog:
                     
                     
                 
-                    
-                    
-                    
-                
-                
-                    
-                    
-                    
-                    
-                    
-                    
-                    
                     
                     
                     
@@ -5053,7 +5143,7 @@ class maddog:
                     and deviation_ma8_sotto_ma300 < -1.30
                     
                     and ma2_last > ma2_2_min_ago
-                
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 1 pari al BUY AUDI CHE MANCAVA ! con 5-33 () 3-10 > 0.085 e 5-28 0.11 - r 4166"
                     action = "buy"
@@ -5085,6 +5175,7 @@ class maddog:
                     and deviation_ma5_sopra_ma28 > 0.08
                     
                     and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):    
                     
                     buy = "BUY 1 con 200 > 200 20 min ago (100 < and 200 < MA 300 >) and 8-200 !  - riga 4190"
@@ -5112,6 +5203,7 @@ class maddog:
                     
                     and deviation_ma5_sopra_ma28 > 0.14
                     and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):    
                     
                     buy = "BUY 1 SITUAZIONE TREND LATERALE che mancava con DOPPIO DELTA 200-100 GIORNO ! and 5-28 > 0.14 con 28>28 30 min ago - riga 4215 A"
@@ -5146,6 +5238,7 @@ class maddog:
                     and deviation_ma3_sopra_ma10 > 0.17
                     and deviation_ma5_sopra_ma28 > 0.10
                     and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):    
                     
                     buy = "BUY 1 SITUAZIONE TREND LATERALE con ma300 > - GIORNO ! and 5-28 > 0.14 MA 28 < 28 30 min ago AND 3-10 > 0.17 e 300 >5 ore! - r 4246 B1x"
@@ -5179,6 +5272,7 @@ class maddog:
                     and deviation_ma3_sopra_ma10 > 0.17
                     and deviation_ma5_sopra_ma28 > 0.10
                     and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):    
                     
                     buy = "BUY 1 SITUAZIONE TREND LATERALE con ma300 > - GIORNO !  MA 28 < 28 30 min ago AND 3-10 > 0.17 and 5-28 > 0.09 e 300 < 5 ore !- r 4246 B1y"
@@ -5215,6 +5309,7 @@ class maddog:
                     and deviation_ma3_sopra_ma10 > 0.17
                     and deviation_ma5_sopra_ma28 > 0.14
                     and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):    
                     
                     buy = "BUY 1 SITUAZIONE TREND LATERALE con ma300 > - GIORNO ! and 5-28 > 0.14 MA 28 < 28 30 min ago AND 3-10 > 0.17 - riga 4278 B2"
@@ -5243,6 +5338,7 @@ class maddog:
            
                     and deviation_ma5_sopra_ma28 > 0.13
                     and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):    
                     
                     buy = "BUY 1 SITUAZIONE TREND LATERALE modo A che mancava con ma300 < - SOPRA RIALZO RIALZO - GIORNO ! and 5-28 > 0.13 - riga 4301 A"
@@ -5272,6 +5368,7 @@ class maddog:
                     and deviation_ma3_sopra_ma10 > 0.08
                     and deviation_ma5_sopra_ma28 > 0.17
                     and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):    
                     
                     buy = "BUY 1 SITUAZIONE TREND LATERALE modo B che mancava con ma300 < - SOPRA RIALZO RIALZO - GIORNO ! and 5-28 > 0.17 - riga 4301 B"
@@ -5300,6 +5397,7 @@ class maddog:
            
                     and deviation_ma5_sopra_ma28 > 0.12
                     and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):    
                     
                     buy = "BUY 1 SITUAZIONE TREND LATERALE modo C che mancava con ma300 < - SOPRA RIALZO RIALZO - GIORNO ! and 5-28 > 0.12 - riga 4301 C"
@@ -5332,6 +5430,7 @@ class maddog:
                     
                     and ma10_last >= ma10_2_min_ago
                     and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):
 
                     buy = "BUY 1 forever young 1 con 300 > 120 min ago PIU' PRUDENTE se ma 200 > e se ma200 > ma300 E CON 3-18 > 0.20 - r 4325"
@@ -5358,10 +5457,9 @@ class maddog:
                     
                     and deviation_ma3_sopra_ma10 > 0.035
                     and deviation_ma5_sopra_ma28 > 0.09
-                    
-                    
-                    
+                   
                     and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):
 
                     buy = "BUY 1 forever young 1 PIU' PRUDENTE se ma 200 > e se ma100 > ma300 AND 78 > 200 AND 300> 5 ore ago - r 4353"
@@ -5399,6 +5497,7 @@ class maddog:
                     and ma4_last > ma100_last
                     
                     and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):
 
                     buy = "BUY 1 forever young 1 USATA MOVIMENTO LATERALE se ma 200 > e se ma200 > ma300 AND 78 < 200 AND 3-10 > 0.10 e 300>120 min ago - r 4379 B1"
@@ -5434,6 +5533,7 @@ class maddog:
                     and ma5_last > ma200_last
                     
                     and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):
 
                     buy = "BUY 1 forever young 1 PIU' PRUDENTE se ma 200 > e se ma200 > ma300 AND 78 < 200 AND 3-10 > 0.07 MA 300 < 120 min ago - r 4379 B2"
@@ -5465,7 +5565,7 @@ class maddog:
                  
                     and ma5_last > ma5_2_min_ago
                     and ma2_last > ma2_2_min_ago
-                       
+                    and macd >= macd_2_min_ago
                 ):
                     
                     buy = "BUY 1 FOREVER YOUNG PIU' AGGRESSIVO (doppio delta < 1 E 100> ) (SOPRA RIALZO RIALZO) - GIORNO - se ma 200 > - r 4410"
@@ -5511,7 +5611,7 @@ class maddog:
                     and ma300_last > ma300_60_min_ago
                     
                     and ma2_last > ma2_2_min_ago
-                 
+                    and macd >= macd_2_min_ago
                 ):    
                     
                     buy = "BUY 1 NEW FOREVER YOUNG piccola CORREZIONE FIAT in alto - ALTRA RIGA RCCR che e' andata bene - r 4411 A"
@@ -5546,7 +5646,7 @@ class maddog:
                     and ma8_last > ma54_last
                     and ma13_last > ma13_2_min_ago
                     and ma2_last > ma2_2_min_ago
-             
+                    and macd >= macd_2_min_ago
                 ):
                     
                     buy = "BUY 1 FOREVER YOUNG - NOTTE - MA 300 > 120 min ago and dev_ma5_sopra_ma28 > 0.30 se ma 200 > e se ma200 > ma300 - r 4440 A1"
@@ -5578,6 +5678,7 @@ class maddog:
                     and ma13_last > ma69_last
                     and ma13_last > ma13_2_min_ago
                     and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):
                     
                     buy = "BUY 1 FOREVER YOUNG PRUDENTE SOPRA RIBASSO RIBASSO - NOTTE - and dev_ma5_sopra_ma28 > 0.30 se ma 200 > e se ma200 > ma300 - r 4440 B"
@@ -5601,6 +5702,7 @@ class maddog:
                     
                     and deviation_ma100_sopra_ma300 <-2.30
                     and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 1 DURANTE UNA CORREZIONE FIAT da r701 RCCE ho dovuto metterla ! con deviation_correzione > 0.03 MA 100 lontana da 300 ! - riga 4485"
                     action = "buy"
@@ -5632,6 +5734,7 @@ class maddog:
                     and deviation_ma100_sopra_ma300 > -0.30
                     and deviation_ma25_sotto_ma300 < -0.60
                     and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 1 FIAT (MA ma100 ANCORA VICINA alla ma300 e 200 e' ancora sopra 300) (E CON ma25 un po' distante da ma300) 50% 78>100 - riga 4514 A"
                     action = "buy"
@@ -5662,6 +5765,7 @@ class maddog:
                     and deviation_ma100_sopra_ma300 > -0.30
                     and deviation_ma25_sotto_ma300 < -0.60
                     and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 1 FIAT (MA ma100 ANCORA VICINA alla ma300 e 200 e' ancora >300) (E CON ma25 distante da ma300) 50% E 78<100 E 3-10 > 0.15 - r 4514 B"
                     action = "buy"
@@ -5690,6 +5794,7 @@ class maddog:
                     and ma69_last > ma69_2_min_ago
                     and deviation_buy_ma3_sopra_ma25 > 0.10
                     and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 1 con DEVIATION ASSURDA se ma200 > da 120 min COMPRA con INCROCIO ma8 ma200 (ma5>ma300 evita gli EFFETTI LATERALI) - r 4542"
                     action = "buy"
@@ -5720,7 +5825,7 @@ class maddog:
                     
                     and ma2_last >= ma2_2_min_ago
                     and price > price_2_min_ago
-                    
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 1 5 LUGLIO 2022 con 5-39 and ma100 sotto ma300 di almeno -0.90 ! 3-10 > 0.16 and 5-59 > 0.42 - r 4570 A"
                     action = "buy"
@@ -5748,7 +5853,7 @@ class maddog:
                     
                     and ma78_last < ma200_last
                     and ma2_last > ma2_2_min_ago
-                  
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 1 DURANTE UN RIBASSO AUDI con 5-16 copiata da RCCR CHE E' ANDATA BENISSIMO ! 22 ago 2022 - riga 4571a"
                     action = "buy"
@@ -5781,7 +5886,7 @@ class maddog:
                     and deviation_ribasso_e_rialzo_velocissimo_2 > -0.50
                     
                     and deviation_ma100_sopra_ma300 < 0.40
-                    
+                    and macd >= macd_2_min_ago
                
                 ):
                     buy = "BUY 1 CROLLO IMPROVVISO e RISALITA SUPERVELOCE - la piu' pericolosa d tutte ! - BUY con il 30% - dovrebbe evitarmi il buy alto - r 4598"
@@ -5821,6 +5926,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                     and price > price_2_min_ago
                     and ma3_last > ma40_last
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2A rialzo o laterale con 78 > 200 AND 300 >300 120 min ago ! - r 4639 A1x"
                     action = "buy"
@@ -5845,6 +5951,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                     and price > price_2_min_ago
                     and ma3_last > ma40_last
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2A rialzo o laterale con 78 > 200 AND 300 >300 120 min ago ! - r 4639 A1y"
                     action = "buy"
@@ -5893,6 +6000,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                     and price > price_2_min_ago
                     and ma3_last > ma40_last
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2A rialzo o laterale con 78 < 200 - r 4661 b"
                     action = "buy"
@@ -5921,7 +6029,7 @@ class maddog:
                     
                     and ma3_last > ma40_last
                     and price >= price_2_min_ago
-                    
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2A ribasso o laterale and ma20_last > ma200_last AND 200 > 200 301 min - r 4685 Ax"
                     action = "buy"
@@ -5956,7 +6064,7 @@ class maddog:
                     
                     and ma3_last > ma40_last
                     and price >= price_2_min_ago
-                    
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2A ribasso o laterale and ma20_last > ma200_last AND 200 > 200 301 min - r 4685 Ay"
                     action = "buy"
@@ -5990,7 +6098,7 @@ class maddog:
                     
                     and ma3_last > ma40_last
                     and price >= price_2_min_ago
-                    
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2A ribasso o laterale  and ma69_last > ma200_last - r 4685 Bx"
                     action = "buy"
@@ -6025,7 +6133,7 @@ class maddog:
                     
                     and ma3_last > ma40_last
                     and price >= price_2_min_ago
-                    
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2A ribasso o laterale  and ma69_last > ma200_last - r 4685 By1"
                     action = "buy"
@@ -6062,7 +6170,7 @@ class maddog:
                     
                     and ma3_last > ma40_last
                     and price >= price_2_min_ago
-                    
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2A ribasso o laterale  and ma69_last > ma200_last - r 4685 By2A"
                     action = "buy"
@@ -6100,7 +6208,7 @@ class maddog:
                     
                     and ma3_last > ma30_last
                     and price >= price_2_min_ago
-                    
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2A ribasso o laterale  and ma69_last > ma200_last - r 4685 By2B"
                     action = "buy"
@@ -6131,6 +6239,7 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
                     and price > price_2_min_ago
                     and ma3_last > ma40_last
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2A ribasso o laterale and ma78_last < ma200_last - r 4709 B"
                     action = "buy"
@@ -6192,6 +6301,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                     and price > price_2_min_ago
                     and ma3_last > ma40_last
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2B - r 4732 a"
                     action = "buy"
@@ -6213,7 +6323,7 @@ class maddog:
                     
                     and ma2_last > ma2_2_min_ago
                     and price > price_2_min_ago
-                    
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2Ba durante crollo - 5 sotto 300 di molto ! PIU' AGGRESSIVO (delta 1 < delta 2) (ma100 sta risalendo) - r 4732 b1"
                     action = "buy"
@@ -6240,7 +6350,7 @@ class maddog:
                     
                     and ma2_last > ma2_2_min_ago
                     and price > price_2_min_ago
-                    
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2Bb  durante crollo - 5 sotto 300 di molto ! PIU' PRUDENTE (delta 1 > delta 2) (ma100 si allontana verso il basso da ma200)- r 4732 b2"
                     action = "buy"
@@ -6279,6 +6389,7 @@ class maddog:
                     and ma200_last > ma200_60_min_ago
                     
                     and ma300_last > ma300_360_min_ago
+                    and macd >= macd_2_min_ago
                 ):    
                     
                     buy = "BUY 2 con 200 > and ma28_last > ma28_2_min_ago - 20 < 78 and dev_ma3_sopra_ma10 > 0.17 con 5-28> 0.15 - r 4735"
@@ -6313,7 +6424,7 @@ class maddog:
                     and deviation_ma5_sopra_ma28 > 0.04
                     
                     and ma2_last >= ma2_2_min_ago
-              
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-59 - da buy 1 riga 1043 B  - r 4742"
                     action = "buy"
@@ -6358,7 +6469,7 @@ class maddog:
                     and deviation_ma5_sopra_ma28 > 0.04
                     
                     and ma2_last >= ma2_2_min_ago
-              
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-50 - formula MY COMPA - r 4743 A"
                     action = "buy"
@@ -6400,7 +6511,7 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
                     and ma3_last >= ma3_2_min_ago
                     and price > ma4_last
-                    
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-50 - formula MY COMPA - r 4743 B"
                     action = "buy"
@@ -6442,7 +6553,7 @@ class maddog:
                     and deviation_ma5_sopra_ma28 > 0.04
                     
                     and ma2_last >= ma2_2_min_ago
-              
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-50 - formula MY COMPA - r 4743 C"
                     action = "buy"
@@ -6478,6 +6589,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                     and ma3_last > ma40_last
                     and ma4_last > ma78_last
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2C (SOPRA) (delta1 > delta2 and 100 > ) - CREPUSCOLO - and dev_ma5_sopra_ma28 > 0.14 AND 3-10 > 0.16 - r 4765"
                     action = "buy"
@@ -6510,7 +6622,7 @@ class maddog:
                     and ma3_last > ma40_last
                     and ma4_last > ma78_last
                     and ma2_last > ma2_2_min_ago
-              
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2C SOPRA RIBASSO RIBASSO - NOTTE con 5-28 0.20 - r 4796 A1"
                     action = "buy"
@@ -6541,7 +6653,7 @@ class maddog:
                     and ma3_last > ma40_last
                     and ma4_last > ma78_last
                     and ma2_last > ma2_2_min_ago
-              
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2C SOPRA RIBASSO RIBASSO - NOTTE con 5-28 0.20 - r 4796 A2"
                     action = "buy"
@@ -6573,6 +6685,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                     and ma3_last > ma40_last
                     and ma4_last > ma78_last
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2C SOPRA RIBASSO RIBASSO - NOTTE - r 4796 A"
                     action = "buy"
@@ -6604,6 +6717,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                     and ma3_last > ma40_last
                     and ma4_last > ma78_last
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2C SOPRA RIBASSO RIBASSO - NOTTE - r 4827"
                     action = "buy"
@@ -6639,6 +6753,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                     and ma3_last > ma40_last
                     and ma4_last > ma78_last
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2C dopo grande rialzo e grande ribasso - r 4858 a"
                     action = "buy"
@@ -6672,6 +6787,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                     and ma3_last > ma40_last
                     and ma4_last > ma78_last
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2C dopo grande rialzo e grande ribasso - r 4858 b"
                     action = "buy"
@@ -6704,6 +6820,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                     and ma3_last > ma40_last
                     and ma4_last > ma78_last
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2C dopo grande rialzo e grande ribasso - r 4858 c"
                     action = "buy"
@@ -6733,6 +6850,7 @@ class maddog:
                         
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2 ORIGINALE CHE CI RIPROVA IMPORTATO DA SELL 1  - NOTTE - r 4887"
                     action = "sell"
@@ -6751,7 +6869,7 @@ class maddog:
                     
                     and ma2_last > ma2_2_min_ago
                     and ma78_last < ma200_last
-                    
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2 DURANTE UN RIBASSO AUDI CHE NON E' UN CROLLO ! E CHE CI RIPROVA con 5 > 28 - riga 4905"
                     action = "buy"
@@ -6780,6 +6898,7 @@ class maddog:
                     
                     and (ma8_prev < ma50_prev and ma8_last > ma50_last)
                     and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):
                
                     buy = "BUY 2C con INCROCIO 8-50 con 100< and 200< MA 300 > 300 301 min ago - r 4906 A"
@@ -6803,6 +6922,7 @@ class maddog:
                     
                     and (ma8_prev < ma50_prev and ma8_last > ma50_last)
                     and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):
                
                     buy = "BUY 2C con INCROCIO 8-50 con 100< and 200< MA 300 > 300 301 min ago - r 4906 B"
@@ -6830,6 +6950,7 @@ class maddog:
                     and ma100_last < ma100_50_min_ago
                     and (ma7_prev < ma50_prev and ma7_last > ma50_last)
                     and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):
                
                     buy = "BUY 2C con 100< and 200< con INCROCIO 7-50 100 NON DISTANTE DA 300 - r 4934 A"
@@ -6853,6 +6974,7 @@ class maddog:
                     and ma100_last < ma100_50_min_ago
                     and (ma7_prev < ma50_prev and ma7_last > ma50_last)
                     and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):
                
                     buy = "BUY 2C con 100< and 200< con INCROCIO 7-50 100 MOLTO SOTTO 300 CON 3-10 > 0.17 QUA DEVE DIMOSTRARE UNA CERTA FORZA ! - r 4956 b"
@@ -6881,6 +7003,7 @@ class maddog:
                     and ma100_last < ma100_50_min_ago
                     and (ma7_prev < ma50_prev and ma7_last > ma50_last)
                     and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):
                
                     buy = "BUY 2C con 100< and 200< con INCROCIO 7-50 and 5-28 > 0.10 (SOPRA - aurora - r 4989"
@@ -6910,6 +7033,7 @@ class maddog:
                     and ma100_last < ma100_50_min_ago
                     and (ma7_prev < ma50_prev and ma7_last > ma50_last)
                     and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):
                
                     buy = "BUY 2C con 100< and 200< con INCROCIO 7-50 and 5-28 > 0.29 - NOTTE! - r 5018"
@@ -6939,7 +7063,7 @@ class maddog:
                     
                     and ma2_last > ma2_2_min_ago
                     and ma78_last < ma200_last
-                    
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2 DURANTE UN RIBASSO AUDI con 5-16 copiata da RCCR CHE E' ANDATA BENISSIMO ! 22 ago 2022 - r 5019 A"
                     action = "buy"
@@ -6963,7 +7087,7 @@ class maddog:
                     
                     and ma2_last > ma2_2_min_ago
                     and ma78_last < ma200_last
-                    
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2 DURANTE UN RIBASSO AUDI con 5-16 copiata da RCCR CHE E' ANDATA BENISSIMO ! 22 ago 2022 - r 5019 B"
                     action = "buy"
@@ -6989,7 +7113,7 @@ class maddog:
                     
                     and ma2_last > ma2_2_min_ago
                     and ma78_last < ma200_last
-                    
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2 DURANTE UN RIBASSO AUDI con 5-16 copiata da RCCR CHE E' ANDATA BENISSIMO ! 22 ago 2022 - r 5019 C"
                     action = "buy"
@@ -7017,6 +7141,7 @@ class maddog:
                     and deviation_buy > 0.50
                     and deviation_ma5_sopra_ma28 > 0.60
                     and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):
                
                     buy = "BUY 2C con 100 < and 200 < con DEVIATION BUY > 0.50 and 5-28 > 0.60 - r 5044"
@@ -7040,6 +7165,7 @@ class maddog:
                     and deviation_buy_crollo_1 < -2.30
                     and ma3_last > ma15_last
                     and deviation_ma3_sopra_ma10 > 0.125
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2 DURANTE IL CROLLO - modo 1 2-7 - r 5067"
                     action = "buy"
@@ -7059,6 +7185,7 @@ class maddog:
                     and ma3_last > ma7_last
                     and macd > macd_2_min_ago
                     and macd < -35
+                  
                 ):
                     buy = "BUY 2 DURANTE IL CROLLO - AVVENTO DEL MACD ! 3-7 + MACD - porcupine tree - lazarus - r 5068"
                     action = "buy"
@@ -7080,6 +7207,7 @@ class maddog:
                     and deviation_buy_crollo_1 > -2.29
                     and deviation_buy_crollo_2 > 0.11
                     and deviation_ma5_sopra_ma28 > 0.03
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2 DURANTE IL CROLLO - modo 2 - r 5085"
                     action = "buy"
@@ -7110,7 +7238,7 @@ class maddog:
                     and ma100_last > ma100_3_min_ago
                     
                     and ma2_last > ma2_2_min_ago
-                
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2 CHE MANCAVA DOPO BUY-SELL CROLLO ! 150-100 GIORNO ! - r 5116"
                     action = "buy"
@@ -7142,6 +7270,7 @@ class maddog:
                     and deviation_correzione > 0.015
                     and deviation_buy_ma5_sopra_ma20 > 0.10
                     and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):
 
                     buy = "BUY 2A PAZZA AUDI che non e' un forte ribasso e non e' un crollo ! deviation 5-28 > 0.05 CON 100 non lontana dalla 300 - r 5150 a"
@@ -7170,6 +7299,7 @@ class maddog:
                     and deviation_correzione > 0.015
                     and deviation_buy_ma5_sopra_ma20 > 0.10
                     and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):
 
                     buy = "BUY 2A PAZZA AUDI che non e' un forte ribasso e non e' un crollo ! deviation 5-28 > 0.05 CON 100 MOLTO SOTTO 300 - r 5178 b"
@@ -7193,7 +7323,7 @@ class maddog:
                     and deviation_correzione_2 > 0.03
                     and deviation_buy_crollo_1 < -0.70
                     and deviation_buy_crollo_1 > -0.90
-
+                    and macd >= macd_2_min_ago
                 ):
 
                     buy = "BUY 2 CORREZIONE che NON E' un forte ribasso e NON E' un crollo ! con deviation_correzione > 0.02 - r 5207"
@@ -7217,6 +7347,7 @@ class maddog:
                     and deviation_buy_crollo_1 < -0.70
                     and deviation_buy_crollo_1 > -1.50
                     and deviation_bellissima > 0.15
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2 FORTE RIBASSO che NON E' UN CROLLO ! and deviation_bellissima > 0.15 - r 5229"
                     action = "buy"
@@ -7240,6 +7371,7 @@ class maddog:
                     and deviation_ma100_sopra_ma300 < 0.04
                     and deviation_ma100_sopra_ma200 < 0.05
                     and deviation_ma5_sopra_ma28 > 0.18
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2 nuovo TREND LATERALE ! - r 5252"
                     action = "buy"
@@ -7267,7 +7399,7 @@ class maddog:
                     
                     and deviation_ma4_sopra_ma30 > 0.17
                     and deviation_ma100_laterale > 0.49
-                    
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2 andamento laterale se ma200> da 20 min compra con 4-30 (SUL BUY 2 0.50 e 20-69 vs EFFETTI LATERALI !) - r 5279"
                     action = "buy"
@@ -7292,7 +7424,7 @@ class maddog:
                     
                     and deviation_ma4_sopra_ma30 > 0.17
                     and deviation_ma100_laterale > 0.49
-                   
+                   and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2 andamento laterale se ma200> da 20 min compra con 4-30 (SUL BUY 2 0.50 e 20-69 vs EFFETTI LATERALI !) - r 5304"
                     action = "buy"
@@ -7322,6 +7454,7 @@ class maddog:
                     
                     and (ma4_prev < ma25_prev and ma4_last > ma25_last)
                     and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ): 
                     buy = "BUY 2 DOCCIA se ma200 > da 90 min ! E 3-10 > 0.01 - 100 MOLTO ALTA RISPETTO A 300 - r 5333 A"
                     action = "buy"
@@ -7349,6 +7482,7 @@ class maddog:
                     
                     and (ma4_prev < ma25_prev and ma4_last > ma25_last)
                     and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ): 
                     buy = "BUY 2 DOCCIA se ma200 > da 90 min ! E 3-10 > 0.01 -100 NON LONTANA DA 300  r 5360 B"
                     action = "buy"
@@ -7371,6 +7505,7 @@ class maddog:
                     and deviation_ma100_laterale > 0.10
                     and (ma3_prev < ma200_prev and ma3_last > ma200_last)
                     and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2 con DEVIATION ASSURDA se ma200 sale da 120 min BUY con ma2-ma200 (ma5 > ma300 evita GLI EFFETTI LATERALI !) - r 5382"
                     action = "buy"
@@ -7396,7 +7531,7 @@ class maddog:
                   
                     and ma300_last > ma300_120_min_ago
                     and deviation_ma3_sopra_ma18 > 0.02
-                    
+                    and macd >= macd_2_min_ago
                 ):  
                 
                     buy = "BUY 2 laterale con 300>450 - r 5412 X1a"
@@ -7416,7 +7551,7 @@ class maddog:
                   
                     and ma300_last > ma300_120_min_ago
                     and deviation_ma3_sopra_ma18 > 0.06
-                    
+                    and macd >= macd_2_min_ago
                 ):  
                 
                     buy = "BUY 2 laterale con 300>450 - r 5412 X1b"
@@ -7444,7 +7579,7 @@ class maddog:
                   
                     and ma300_last > ma300_120_min_ago
                     and deviation_ma3_sopra_ma10 > 0.07
-                    
+                    and macd >= macd_2_min_ago
                 ):  
                 
                     buy = "BUY 2 laterale con 300>450 - r 5412 X2a"
@@ -7471,6 +7606,7 @@ class maddog:
                     and ma300_last > ma300_120_min_ago
                     and deviation_ma3_sopra_ma10 > 0.07
                     and deviation_ma3_sopra_ma18 > 0.169
+                    and macd >= macd_2_min_ago
                 ):  
                 
                     buy = "BUY 2 piu' o meno laterale con 300>450 MA 450 < 450 480 min ago e 78 scende da 60 min ! - r 5412 X2b"
@@ -7496,7 +7632,7 @@ class maddog:
                     and deviation_ma3_sopra_ma10 > 0.113
                  
                     and ma300_last > ma300_120_min_ago
-               
+                    and macd >= macd_2_min_ago
                 ):  
                 
                     buy = "BUY 2 laterale con 300<450 - r 5412 y"
@@ -7528,6 +7664,7 @@ class maddog:
                     
                     and ma200_last < ma200_120_min_ago
                     and ma300_last < ma300_120_min_ago
+                    and macd >= macd_2_min_ago
                 ):
                
                     buy = "BUY 2 che ci riprova TORNANDO ALLE ORIGINI ( TREND LATERALE !) con ma200< and ma300< AND 100 vicina alla 300 - r 5412a"
@@ -7552,6 +7689,7 @@ class maddog:
                     
                     and ma200_last < ma200_120_min_ago
                     and ma300_last < ma300_120_min_ago
+                    and macd >= macd_2_min_ago
                 ):
                
                     buy = "BUY 2 che ci riprova TORNANDO ALLE ORIGINI ( TREND LATERALE !) con ma200< and ma300< AND 100 vicina alla 300 - r 5412b"
@@ -7615,7 +7753,7 @@ class maddog:
                     and deviation_ma200_sopra_ma300 > -0.50
                     
                     and ma2_last > ma2_2_min_ago
-                
+                    and macd >= macd_2_min_ago
                 ):
                
                     buy = "BUY 2 CON 78 > 200 che ci riprova quando se ne va lateralmente dopo il crollo CON 28 < 28 30 min ago E 3-10 > 0.20 - r 5476 a2"
@@ -7642,7 +7780,7 @@ class maddog:
                     and deviation_ma200_sopra_ma300 > -0.50
                     
                     and ma2_last > ma2_2_min_ago
-                
+                    and macd >= macd_2_min_ago
                 ):
                
                     buy = "BUY 2 CON 78 < 200 che ci riprova quando se ne va lateralmente dopo il crollo - r 5503 b"
@@ -7673,6 +7811,7 @@ class maddog:
                     
                     and ma200_last < ma200_120_min_ago
                     and ma300_last < ma300_120_min_ago
+                    and macd >= macd_2_min_ago
                 ):
                
                     buy = "BUY 2 che ci riprova TORNANDO ALLE ORIGINI (TREND RIBASSO !) con ma200< and ma300< AND 5 NON MOLTO SOTTO 300 - r 5531 A"
@@ -7694,8 +7833,6 @@ class maddog:
                 elif (
                     deviation_buy2 > 0.07
                     
-                    
-                    
                     and deviation_ma100_sopra_ma300 < -0.20
                     and deviation_ma5_sotto_ma300 < -0.70
                     and deviation_ma5_sopra_ma28 > 0.19
@@ -7709,6 +7846,7 @@ class maddog:
                     
                     and ma200_last < ma200_120_min_ago
                     and ma300_last < ma300_120_min_ago
+                    and macd >= macd_2_min_ago
                 ):
                
                     buy = "BUY 2 che ci riprova TORNANDO ALLE ORIGINI (TREND RIBASSO !) con ma200< and ma300< AND 5 molto sotto 300 - r 5531 B"
@@ -7739,7 +7877,7 @@ class maddog:
                     and deviation_buy_crollo_1 > -0.59
                     and deviation_correzione > 0.017
                     and deviation_buy_ma5_sopra_ma20 > 0.12
-                    
+                    and macd >= macd_2_min_ago
                 ):
 
                     buy = "BUY 2 con ma200> e ma300> DURANTE UNA piccola CORREZIONE che non e' un forte ribasso e non e' un crollo - r 5562"
@@ -7764,6 +7902,7 @@ class maddog:
                     and deviation_buy_ma5_sopra_ma20 > 0.12
                     
                     and deviation_ma5_sopra_ma28 > 0.18
+                    and macd >= macd_2_min_ago
                 ):
 
                     buy = "BUY 2 con ma200> e ma300> DURANTE UNA piccola CORREZIONE che non e' un forte ribasso e non e' un crollo - r 5586"
@@ -7792,6 +7931,7 @@ class maddog:
                     and ma100_last < ma300_last
                     
                     and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):    
                     buy = "BUY 2 che considera il passare tempo (SE > 120 min) and 5-28 > 0.10 e ma30 > ma 30 40 min ago (TREND IN RIALZO) con 78>200  - r 5610 A"
                     action = "buy"
@@ -7818,6 +7958,7 @@ class maddog:
                     and ma100_last < ma300_last
                     
                     and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):    
                     buy = "BUY 2 che considera il passare del tempo (SE > 120 min) and 5-28 > 0.10 e ma30 > ma 30 40 min ago (TREND IN RIALZO) con 78>200 - r 5610 B"
                     action = "buy"
@@ -7850,6 +7991,7 @@ class maddog:
                     and ma100_last >= ma100_2_min_ago
                     
                     and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 
                 ):
                     buy = "BUY 2 laterale con 450>6 ore and 50 > 100 AND 150-100 GIORNO ! and 3-10 > 0.15 and 5-28 > 0.18 - r 5630"
@@ -7872,6 +8014,7 @@ class maddog:
                     and ma100_last < ma300_last
                     and deviation_bellissima > 0.07
                     and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):    
                     buy = "BUY 2 che considera il passare del tempo (SE > 120 min) and 5-28 > 0.17 and ma30 < ma30 40 min ago (TREND IN RIBASSO) - r 5634"
                     action = "buy"
@@ -7898,6 +8041,7 @@ class maddog:
                     
                     and deviation_ma5_sopra_ma28 > 0.07
                     and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2 FIAT che non funzionava MA CHE HA FUNZIONATO BENISSIMO ( SOTTO RIALZO RIALZO ) GIORNO ! copiato da BUY 1 - r 5660"
                     action = "buy"
@@ -7921,7 +8065,7 @@ class maddog:
                     
                     and macd > macd_2_min_ago
                     and ma2_last >= ma2_2_min_ago
-                    
+                    and macd >= macd_2_min_ago
                 ):
              
                     buy = "BUY 2 nuovo RIALZO IMPROVVISO ma trend gia' in rialzo da 120 min and 0.275 sopra ultimo sell se 300>120 min e 100 sopra 300> 0.40 - r 5670"
@@ -7952,6 +8096,7 @@ class maddog:
                     and deviation_range_2 > -0.20
                     and deviation_range_x < 0.20
                     and deviation_range_x > -0.20
+                    and macd >= macd_2_min_ago
                 ):
              
                     buy = "BUY 2 RIALZO IMPROVVISO ! con ma200 > and 100>200 (solo per il buy 2 e per il buy 3) AND 100 SOPRA 300 > 0.40 - r 5686 a"
@@ -7978,6 +8123,7 @@ class maddog:
                     and deviation_range_2 > -0.22
                     and deviation_range_x < 0.22
                     and deviation_range_x > -0.22
+                    and macd >= macd_2_min_ago
                 ):
              
                     buy = "BUY 2 RIALZO IMPROVVISO ! con ma200 > and 100>200 (solo per il buy 2 e per il buy 3) AND 100 SOPRA 300 < 0.40 - r 5711 B"
@@ -8000,6 +8146,7 @@ class maddog:
                     and ma3_last > ma8_last
                     and ma5_last > ma18_last
                     and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):    
                     buy = "BUY 2 che entra in azione se DOPO 2 MINUTI ma2 va sopra SELL 1 > 0.30 E 5-28 > 0.29 ! - r 5732"
                     action = "buy"
@@ -8030,6 +8177,7 @@ class maddog:
                     and deviation_correzione > 0.12
                     
                     and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2 ECCEZIONALE se ma200 sale da 20 min compra con deviation 4-30 and deviation 3-25 IMPORTATA DA RCCR - riga 5762"
                     action = "buy"
@@ -8058,6 +8206,7 @@ class maddog:
                     and ma200_last < ma300_last
                     and deviation_buy_ma5_sopra_ma20 > 0.05
                     and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):    
                     buy = "BUY 2 PENUULTIMA CONDIZIONE ! ma tutte negative MA BUY con 25-200 (ho sostituito 8 > 125) - r 5794 A"
                     action = "buy"
@@ -8086,6 +8235,7 @@ class maddog:
                     and deviation_buy_ma5_sopra_ma20 > 0.05
                     
                     and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):    
                     buy = "BUY 2 PENUULTIMA CONDIZIONE ! ma tutte negative MA BUY con 25-200 (ho sostituito 8 > 125) - r 5794 B"
                     action = "buy"
@@ -8121,7 +8271,7 @@ class maddog:
                     and deviation_buy_ma2_sopra_ma13 > 0.10
                     and ma4_last > ma50_last
                     and ma2_last >= ma2_2_min_ago
-                    
+                    and macd >= macd_2_min_ago
                 ):  
                 
                     buy = "BUY 2 ma300_last > ma450_last e con ma200 che sale da 30 min 33 > 78 ! and 3-10 > 0.10 - r 5829 A"
@@ -8179,7 +8329,7 @@ class maddog:
                     and deviation_buy_ma2_sopra_ma13 > 0.10
                     and ma4_last > ma50_last
                     and ma2_last >= ma2_2_min_ago
-                    
+                    and macd >= macd_2_min_ago
                 ):  
                 
                     buy = "BUY 2 con ma200 che sale da 60 min 33 < 78 ! - r 5860 B"
@@ -8208,6 +8358,7 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
                     and ma5_last >= ma15_last
                     and ma5_last >= ma25_last
+                    and macd >= macd_2_min_ago
                 ):    
                     buy = "BUY 2 RIVOLUZIONARIO se ma39 > ma50 E CON 78 > 78 30 min ago - r 5892 a"
                     action = "buy"
@@ -8246,6 +8397,7 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
                     and ma5_last >= ma15_last
                     and ma5_last >= ma25_last
+                    and macd >= macd_2_min_ago
                 ):    
                     buy = "BUY 2 RIVOLUZIONARIO se ma39 > ma50 MA 78 < 78 30 min ago E CON 3-10 > 0.17 - r 5919 b1x"
                     action = "buy"
@@ -8284,6 +8436,7 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
                     and ma5_last >= ma15_last
                     and ma5_last >= ma25_last
+                    and macd >= macd_2_min_ago
                 ):    
                     buy = "BUY 2 RIVOLUZIONARIO se ma39 > ma50 MA 78 < 78 30 min ago E CON 3-10 > 0.17 - r 5919 b1y"
                     action = "buy"
@@ -8320,6 +8473,7 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
                     and ma5_last >= ma15_last
                     and ma5_last >= ma25_last
+                    and macd >= macd_2_min_ago
                 ):    
                     buy = "BUY 2 RIVOLUZIONARIO se ma39 > ma50 MA 78 < 78 30 min ago E CON 3-10 > 0.10 and deviation_ma3_sopra_ma16 > 0.173 - r 5919 B2"
                     action = "buy"
@@ -8350,6 +8504,7 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
                     and ma5_last >= ma15_last
                     and ma5_last >= ma25_last
+                    and macd >= macd_2_min_ago
                 ):    
                     buy = "BUY 2 RIVOLUZIONARIO se ma39 > ma50 MA 78 < 78 30 min ago E CON 3-10 > 0.17 - r 5919 b3"
                     action = "buy"
@@ -8381,6 +8536,7 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
                     and ma5_last >= ma15_last
                     and ma5_last >= ma25_last
+                    and macd >= macd_2_min_ago
                 ):    
                     buy = "BUY 2 RIVOLUZIONARIO A1 (100 CHE NON E' ATTACCATA ALLA 300 !) e ma39 > ma50 E 8>200 - r 5945 A1"
                     action = "buy"
@@ -8413,6 +8569,7 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
                     and ma5_last >= ma15_last
                     and ma5_last >= ma25_last
+                    and macd >= macd_2_min_ago
                 ):    
                     buy = "BUY 2 RIVOLUZIONARIO A2 (con 100 CHE E' ATTACCATA ALLA 300 !) (pericolo !) E 3-10 > 0.11 e 39 > 50 and 8 > 200 - r 5945 A2"
                     action = "buy"
@@ -8447,6 +8604,7 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
                     and ma5_last >= ma15_last
                     and ma5_last >= ma25_last
+                    and macd >= macd_2_min_ago
                 ):    
                     buy = "BUY 2 RIVOLUZIONARIO A3x CON ma300_last > ma300_301_min_ago e con delta_1 < delta_2 e con 100 CHE NON E' ATTACCATA ALLA 300 ! e 5>50 - r 5945 A3x1"
                     action = "buy"
@@ -8487,6 +8645,7 @@ class maddog:
                     
                     and ma5_last >= ma15_last
                     and ma5_last >= ma25_last
+                    and macd >= macd_2_min_ago
                 ):    
                     buy = "BUY 2 RIVOLUZIONARIO A3x con ma300 < 6 ore con delta_1 < delta_2 e con 100 CHE NON E' ATTACCATA ALLA 300 ! con 5-39 - r 5945 A3x2"
                     action = "buy"
@@ -8523,6 +8682,7 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
                     and ma5_last >= ma15_last
                     and ma5_last >= ma25_last
+                    and macd >= macd_2_min_ago
                 ):    
                     buy = "BUY 2 RIVOLUZIONARIO A3y CON delta_1 > delta_2 e con 100 CHE NON E' ATTACCATA ALLA 300 ! e 8>50 and 5>200 - r 5945 A3y"
                     action = "buy"
@@ -8555,6 +8715,7 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
                     and ma5_last >= ma15_last
                     and ma5_last >= ma25_last
+                    and macd >= macd_2_min_ago
                 ):    
                     buy = "BUY 2 RIVOLUZIONARIO se ma39 > ma50 - r 5945 B"
                     action = "buy"
@@ -8588,7 +8749,7 @@ class maddog:
              
                     and deviation_range_x < 0.20
                     and deviation_range_x > -0.20
-                 
+                    and macd >= macd_2_min_ago
                 ):
 
                     buy = "BUY 2 RIALZO IMPROVVISO NO CROLLO con 200 < pericolo falsi acquisti DOPO TANTO TEMPO DI TREND LATERALE - POTREBBE SUCCEDERE ! - r 5978 A"
@@ -8621,7 +8782,7 @@ class maddog:
              
                     and deviation_range_x < 0.20
                     and deviation_range_x > -0.20
-                 
+                    and macd >= macd_2_min_ago
                 ):
 
                     buy = "BUY 2 RIALZO IMPROVVISO DURANTE CROLLO (aggiunta 3-10 !) con 200 < pericolo falsi acquisti - POTREBBE SUCCEDERE ! e' successo ! - r 5978 B"
@@ -8649,6 +8810,7 @@ class maddog:
                     and deviation_range_2 > -0.22
                     and deviation_range_x < 0.22
                     and deviation_range_x > -0.22
+                    and macd >= macd_2_min_ago
                 ):
              
                     buy = "BUY 2 RIALZO IMPROVVISO con 200 > e con > 0.72 DOPO TANTO TEMPO DI TREND LATERALE - POTREBBE SUCCEDERE e' successo ! - r 5979"
@@ -8680,7 +8842,7 @@ class maddog:
                     and deviation_ma5_sotto_ma300 < -0.43
                     
                     and ma2_last > ma2_2_min_ago
-                
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2 CHE MANCAVA DOPO 5 ore di ribasso buy con 5-28>0.30 perdio se entra dopo 5 ore deve essere piu' sicuro ! - r 5979"
                     action = "buy"
@@ -8708,6 +8870,7 @@ class maddog:
                     and deviation_buy_ma5_sopra_ma20 > 0.01
                     
                     and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):    
                     buy = "BUY 2 ULTIMA CONDIZIONE ! ma tutte negative MA 50 > 100 (integra r2505) con 78>100 - r 5980 A"
                     action = "buy"
@@ -8734,6 +8897,7 @@ class maddog:
                     and deviation_buy_ma5_sopra_ma20 > 0.05
                     
                     and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):    
                     buy = "BUY 2 ULTIMA CONDIZIONE ! ma tutte negative MA 50 > 100 (integra r2505) con 78<100 - r 5980b"
                     action = "buy"
@@ -8751,7 +8915,7 @@ class maddog:
                     ma4_last > ma18_last
                     and deviation_ma5_sopra_ma28 < -0.05
                     and deviation_ma3_sopra_ma10 > 0.01
-                    and macd >= macd_2_min_ago
+                    
                     
                     and deviation_ma5_sopra_ma200 < -0.30
                     and deviation_ma5_sotto_ma300 < -0.30
@@ -8764,7 +8928,7 @@ class maddog:
                     and ma200_last < ma200_60_min_ago
                     
                     and ma2_last >= ma2_2_min_ago
-              
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND dev 5-30 CON AGGIUNTA PENSIERO LATERALE and macd > macd 2 min ago - r 5981"
                     action = "buy"
