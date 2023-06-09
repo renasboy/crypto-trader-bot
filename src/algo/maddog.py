@@ -2146,22 +2146,20 @@ class maddog:
                 elif (     
                     
                     ma5_last > ma20_last
-                    and macd >= macd_2_min_ago
-                    and deviation_ma39_sotto_ma200 < -0.15
-                    and macd > macd_2_min_ago
                     
-                    and deviation_ma300_sopra_ma450 > -0.20
+                    and deviation_ma39_sotto_ma200 < -0.15
+                    and deviation_ma300_sopra_ma450 > -0.25
                     
                     and deviation_ma3_sopra_ma10 > 0.08
                     and deviation_ma3_sopra_ma16 > 0.11
-                    and deviation_ma5_sopra_ma28 > 0.03
-                    
-                    and ma3_last >= ma3_2_min_ago
+                    and deviation_ma5_sopra_ma28 > 0.02
                     
                     and ma2_last >= ma20_last
                     and ma2_last >= ma2_2_min_ago
+                    
+                    and macd >= macd_2_min_ago
                 ):    
-                    buy = "BUY 1 con 5-30 and ma78_last > ma78_60_min_ago E CON 300 ancora vicina alla 450 ( anche un poco sotto! ) + MACD > - r 1537 A"
+                    buy = "BUY 1 con 5-20 E CON 300 ancora vicina alla 450 ( anche un poco sotto! ) + MACD > - r 1537 A"
                     action = "buy"
                     percentage = 90
                     
@@ -2171,7 +2169,11 @@ class maddog:
                     # 29 mag 2023 3-16 > 0.11
                     #  1 giu 2023 5-20 da 5-30
                     #  1 giu 2023 and deviation_ma39_sotto_ma200 < -0.15
-                
+                    #  9 giu 2023 and deviation_ma300_sopra_ma450 > -0.25 da -0.20
+                    #  9 giu 2023 5-28 > 0.02 da 0.03
+                    #  9 giu 2023 tolto and ma3_last >= ma3_2_min_ago
+                    
+                    
                     
                     
                 # BUY 1 tempo ESTATE PIU' VELOCE 100 > 60 min ago (solo l' estate se lo puo' perettere!) considera il passare del TEMPO ! ma30 > 
