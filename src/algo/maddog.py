@@ -2147,7 +2147,7 @@ class maddog:
                     
                     ma5_last > ma20_last
                     
-                    and deviation_ma39_sotto_ma200 < -0.15
+                    and deviation_ma39_sotto_ma200 < -0.10
                     and deviation_ma300_sopra_ma450 > -0.25
                     
                     and deviation_ma3_sopra_ma10 > 0.08
@@ -2172,7 +2172,7 @@ class maddog:
                     #  9 giu 2023 and deviation_ma300_sopra_ma450 > -0.25 da -0.20
                     #  9 giu 2023 5-28 > 0.02 da 0.03
                     #  9 giu 2023 tolto and ma3_last >= ma3_2_min_ago
-                    
+                    #  9 giu 2023 dev_ma39_sotto_ma200 < -0.10 da -0.15 forse era questa che la faceva arrivare in ritardo perche' 39 era piu' lenta a scendere sotto -0.15 da ma200
                     
                     
                     
