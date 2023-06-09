@@ -15853,17 +15853,17 @@ class maddog:
                     
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and ma3_last < ma100_last
-                        and ma5_last < ma200_last
+                        and ma5_last < ma100_last
                         and ma3_last < ma10_last
+                        
                         
                         and deviation_ma100_sopra_ma300 < 0.30
                         
-                        and deviation_sell > 0.35 and deviation_sell < 0.64
+                        and deviation_sell > 0.32 and deviation_sell < 0.64
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 da 110 a 239 min con ma50 > AND con 5-200 and dev_sell 0.35 - 0.64 - prima FINTA MARADONA CON 100 sopra 300 < 0.30 - r 10253 b"
+                        sell = "SELL 1 da 110 a 239 min con ma50 > AND con 5-100 and dev_sell 0.32 - 0.64 - prima FINTA MARADONA CON 100 sopra 300 < 0.30 - r 10253 B"
                         action = "sell"
                         
                         # 3 set ho aggiunto 3<10 incredibile ma vero vendeva mentre saliva !
@@ -16937,7 +16937,7 @@ class maddog:
                     elif (
                         ma50_last < ma50_2_min_ago
                         and ma450_last < ma450_480_min_ago
-                        and deviation_sell < -0.216
+                        and deviation_sell < -0.202
                         
                         and ma2_last < ma2_2_min_ago
                         and ma300_last > ma300_120_min_ago
@@ -16945,13 +16945,13 @@ class maddog:
                         and ma3_last <= ma39_last
                         and ma100_last < ma100_60_min_ago
                     ):
-                        sell = "SELL 1 dopo 240 min con ma50 < and ma100 < MA 300 > 300 120 min ago and (dev_sell < -0.216 and ma3_last <= ma39_last) - r 10456 A2"
+                        sell = "SELL 1 dopo 240 min con ma50 < and ma100 < MA 300 > 300 120 min ago and dev_sell < -0.202 - r 10456 A2"
                         action = "sell"
                         
                         # > estate -0.22 da -0.15
                         # 6 apr 2023 -0.218 da -0.219
                         # 25 mag 2023 aggiunto 450 < 450 480 min ago diminuito dev sell di una ndecchiecella
-                        
+                        #  9 giu 2023 -0.202 da -0.216
                         
                         
                         
