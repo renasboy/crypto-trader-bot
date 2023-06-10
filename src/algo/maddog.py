@@ -14403,7 +14403,7 @@ class maddog:
                         # 29 mag 2023 AGGIUNTO 
                         # 29 mag 2023 dev_sell a -0.10
                         # 30 mag 2023 dev_sell a -0.115 da -0.10
-                        
+                        # 10 giu 2023 dev_sell a -0.114 da -0.115 ( dopo che ha fatto -0.54% )
                     
                         
                    
