@@ -3960,10 +3960,16 @@ class maddog:
                     
               
                 
+                
+                
                 # BUY 1 grande CORREZIONE AUDI che NON E' FIAT e NON E' MASERATI e NON E' FERRARI ! con deviation trend ma200
                 
                 elif (
                     ma2_last >= ma2_2_min_ago
+                  
+                    
+                    and deviation_ma100_sopra_ma300 > -0.20
+                    
                     and macd >= macd_2_min_ago
                     and deviation_trend_ma200 > -0.30
                     and ma4_last > ma16_last
@@ -3975,7 +3981,29 @@ class maddog:
                     and deviation_ma3_sopra_ma16 > 0.12
                   
                 ):
-                    buy = "BUY 1 AUDI che NON E' un grande ribasso MASERATI e NON E' un crollo FERRARI ! con deviation trend ma200 e 4-16 - r 3043"
+                    buy = "BUY 1 AUDI che NON E' un grande ribasso MASERATI e NON E' un crollo FERRARI ! con deviation trend ma200 e 4-16 - r 3043b"
+                    action = "buy"
+                    percentage = 80
+                    
+                    
+                elif (
+                    ma2_last >= ma2_2_min_ago
+                  
+                    and deviation_ma100_sopra_ma300 < 0.20
+                    and deviation_ma100_sopra_ma300 > -0.20
+                    
+                    and macd >= macd_2_min_ago
+                    and deviation_trend_ma200 > -0.30
+                    and ma4_last > ma16_last
+                    
+                    and deviation_buy_crollo_1 < -0.70
+                    and deviation_buy_crollo_1 > -0.90
+                    
+                    and deviation_ma3_sopra_ma10 > 0.09
+                    and deviation_ma3_sopra_ma16 > 0.12
+                  
+                ):
+                    buy = "BUY 1 AUDI che NON E' un grande ribasso MASERATI e NON E' un crollo FERRARI ! con deviation trend ma200 e 4-16 - r 3043a"
                     action = "buy"
                     percentage = 80
                     
