@@ -3966,6 +3966,7 @@ class maddog:
                 
                 elif (
                     ma2_last >= ma2_2_min_ago
+                    and deviation_ma100_sopra_ma300 < -0.20
                     
                     and macd >= macd_2_min_ago
                     and deviation_trend_ma200 > -0.30
