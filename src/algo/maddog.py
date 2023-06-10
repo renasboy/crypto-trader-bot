@@ -9408,18 +9408,19 @@ class maddog:
                     and ma200_last < ma200_60_min_ago
                     
                     and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > 0.07
                     and deviation_ma5_sopra_ma28 > 0.04
                     
                     and ma2_last >= ma2_2_min_ago
                     and macd > macd_2_min_ago
                 ):
-                    buy = "BUY 3 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 5-18 and macd > macd_2_min_ago - formula MY COMPA - r 6243 A"
+                    buy = "BUY 3 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 5-18 AND 3-16 and macd > macd_2_min_ago - formula MY COMPA - r 6243 A"
                     action = "buy"
                     percentage = 80
                     
                     # importante : ma100 sta sotto la ma200 non le e' troppo lontana
                     # 30 mag 2023 5-18 da 5-50
-                    
+                    # 10 giu 2023 aggiunta 3-16 IL BUY 3 deve avere 3-16 !
                     
                     
                     
