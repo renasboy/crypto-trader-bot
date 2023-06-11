@@ -3966,7 +3966,30 @@ class maddog:
                 
                 elif (
                     ma2_last >= ma2_2_min_ago
+                    and ma54_last > ma100_last
                     
+                    and macd >= macd_2_min_ago
+                    and deviation_trend_ma200 > -0.30
+                    and ma4_last > ma16_last
+                    
+                    and deviation_buy_crollo_1 < -0.70
+                    and deviation_buy_crollo_1 > -0.90
+                    
+                    and deviation_ma3_sopra_ma10 > 0.09
+                    and deviation_ma3_sopra_ma16 > 0.121
+                  
+                ):
+                    buy = "BUY 1 AUDI che NON E' un grande ribasso MASERATI e NON E' un crollo FERRARI ! con deviation trend ma200 e 4-16 - r 3043a"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # CROLLO STIAMO ANCORA IN ALTO con 3-16 perche' paradossalmente serve piu'prudenza vedi 27 feb 2023 ore 17:04
+                    
+                    
+                    
+                elif (
+                    ma2_last >= ma2_2_min_ago
+                    and ma54_last < ma100_last
                     
                     and macd >= macd_2_min_ago
                     and deviation_trend_ma200 > -0.30
@@ -3979,7 +4002,7 @@ class maddog:
                     and deviation_ma3_sopra_ma16 > 0.12
                   
                 ):
-                    buy = "BUY 1 AUDI che NON E' un grande ribasso MASERATI e NON E' un crollo FERRARI ! con deviation trend ma200 e 4-16 - r 3043"
+                    buy = "BUY 1 AUDI che NON E' un grande ribasso MASERATI e NON E' un crollo FERRARI ! con deviation trend ma200 e 4-16 - r 3043b"
                     action = "buy"
                     percentage = 80
                     
