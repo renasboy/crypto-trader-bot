@@ -5587,9 +5587,6 @@ class maddog:
                     ma8_last > ma54_last
                     and ma450_last < ma450_240_min_ago
                     
-                    and macd > macd_2_min_ago
-                    
-                    and delta_1 < delta_2
                     and ma100_last > ma100_60_min_ago
                     
                     and deviation_ma3_sopra_ma10 > 0.02
@@ -5598,7 +5595,7 @@ class maddog:
                  
                     and ma5_last > ma5_2_min_ago
                     and ma2_last > ma2_2_min_ago
-                    and macd >= macd_2_min_ago
+                    and macd > macd_2_min_ago
                 ):
                     
                     buy = "BUY 1 FOREVER YOUNG PIU' AGGRESSIVO (doppio delta < 1 E 100> ) (SOPRA RIALZO RIALZO) - GIORNO - se ma 200 > - r 4410b"
