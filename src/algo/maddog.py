@@ -14890,7 +14890,7 @@ class maddog:
                         and ma200_last < ma300_last
                         and deviation_trend_ma200 < -0.10
                         
-                        and deviation_ma39 < -0.215
+                        and deviation_ma39 < -0.21
                         and deviation_sell < -0.30
                         
                         
@@ -14899,11 +14899,11 @@ class maddog:
                         
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 50-90 min con ma50< e dev ma39 < -0.215 e dev sell <-0.30 SOTTO RIALZO RIALZO - GIORNO ! - r 9656"
+                        sell = "SELL 1 50-90 min con ma50< e dev ma39 < -0.21 e dev sell <-0.30 SOTTO RIALZO RIALZO - GIORNO ! - r 9656"
                         action = "sell"
                         
                         # IPOTESI PEGGIORE MA GIORNO !
-                        
+                        # 12 giu 2023 deviation_ma39 < -0.21 da 0.215
                         
                     
                     
