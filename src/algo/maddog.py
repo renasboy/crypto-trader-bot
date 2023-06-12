@@ -16492,16 +16492,18 @@ class maddog:
                         and ma78_last > ma300_last
                         and ma300_last < ma300_120_min_ago
                         and ma100_last > ma200_last
-                        and deviation_sell < -0.225
+                        and deviation_sell < -0.202
                         and ma2_last < ma2_2_min_ago
                     ):
                    
-                        sell = "SELL 1 da 110 a 239 min FORSE E' NECESSARA SOLO QUESTA 3 ! deviation_sell < -0.225 CON 78 > 300 - r 10278 A"
+                        sell = "SELL 1 da 110 a 239 min FORSE E' NECESSARA SOLO QUESTA 3 ! deviation_sell < -0.202 CON 78 > 300 - r 10278 A"
                         action = "sell"
                         
                         # > estate a -0.19 da 0.09
-                        # 17 set a -0.23 da -0.19
-                        # 11 ott a -0.225 da -0.23
+                        # 17 set 2022 a -0.23 da -0.19
+                        # 11 ott 2022 a -0.225 da -0.23
+                        # 12 giu 2023 a -0.202 da -0.225
+                        
                         
                         
                     # ATTENZIONE 3 ! SELL 1 da 110 a 239 min CON 300 < 120 min FORSE E' NECESSARA SOLO QUESTA !
