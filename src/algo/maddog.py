@@ -6016,7 +6016,7 @@ class maddog:
                     
                 elif (
                     
-                    ma10_last > ma200_last
+                    ma10_last > ma100_last
                     and ma450_last > ma450_180_min_ago
                     and ma200_last > ma200_301_min_ago
                     
@@ -6027,14 +6027,14 @@ class maddog:
                     and deviation_buy2 > 0.005
                     and deviation_ma5_sopra_ma28 > 0.10
                     
-                    and deviation_ma7_sopra_ma40 > 0.005
+                    
                     and deviation_buy_ma3_sopra_ma13 > 0.07
                     
                     and ma3_last > ma40_last
                     and price >= price_2_min_ago
                     and macd >= macd_2_min_ago
                 ):
-                    buy = "BUY 2A ribasso o laterale and ma20_last > ma200_last AND 200 > 200 301 min - r 4685 Ax"
+                    buy = "BUY 2A ribasso o laterale and ma10_last > ma200_last AND 200 > 200 301 min - r 4685 Ax"
                     action = "buy"
                     percentage = 80
 
@@ -6047,7 +6047,7 @@ class maddog:
                     # 10 dic 2022 50>200 da 59>200
                     # 18 dic 2022 20>200 da 50>200
                     #  3 gen 2023 5-28 > 0.10
-                    
+                    # 13 giu 2023 10>100 da 20>200
                     
                 elif (
                     
