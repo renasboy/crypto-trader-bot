@@ -24969,6 +24969,31 @@ class maddog:
                 
                 
                 
+            # 32 SELL condizione speciale ROOT DOWN DEEP - ro cano VENDE dopo 150 min e fino a 240 min con 5-90
+            
+            elif (
+                seconds_since_last_trade > max_hold_time_in_seconds_sell_5_90
+                and seconds_since_last_trade < max_hold_time_in_seconds_sell_5_180
+                and ma300_last < ma300_720_min_ago
+                and delta_1 > delta_2
+                and deviation_sell > 0.15
+                and deviation_ma5_sotto_ma300 < 0.25
+                and ma300_last > ma300_120_min_ago
+                
+                and (ma4_prev > ma86_prev and ma4_last < ma86_last)
+                and ma18_last < ma18_2_min_ago
+                and ma2_last < ma2_2_min_ago
+                and macd < macd_2_min_ago
+            ):
+
+                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 150 min e fino a 240 min con 4-86 - r 16725x"
+                action = "sell"
+                        
+                # 24 set 2022 ore 17:23
+                # 11 ott 2022 dev sell 0.10 da 0.15
+                # 21 ott 2022 dev sell 0.11 da 0.10
+                # 20 feb 2023 18 < 18 2 min ago
+                
                 
             # 32 SELL condizione speciale ROOT DOWN DEEP - ro cano VENDE dopo 150 min e fino a 240 min con 5-90
             
@@ -24977,17 +25002,17 @@ class maddog:
                 and seconds_since_last_trade < max_hold_time_in_seconds_sell_5_180
                 and ma300_last < ma300_720_min_ago
                 and delta_1 > delta_2
-                and deviation_sell > 0.11
+                
                 and deviation_ma5_sotto_ma300 < 0.25
                 and ma300_last > ma300_120_min_ago
                 
-                and (ma4_prev > ma86_prev and ma4_last < ma86_last)
+                and (ma4_prev > ma300_prev and ma4_last < ma300_last)
                 and ma18_last < ma18_2_min_ago
                 and ma2_last < ma2_2_min_ago
-           
+                and macd < macd_2_min_ago
             ):
 
-                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 150 min e fino a 240 min con 4-86 - r 16725"
+                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 150 min e fino a 240 min con 4-300 - r 16725y"
                 action = "sell"
                         
                 # 24 set 2022 ore 17:23
