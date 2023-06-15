@@ -21718,20 +21718,60 @@ class maddog:
                 
                     ######################################################################################## con trend discendente
                     
-                    
                     elif (      
                         ma50_last < ma50_2_min_ago
                         and deviation_ma100_sopra_ma300 > 0.30
+                        
+                        and deviation_sell > 1.70
+                        and (ma3_prev > ma100_prev and ma3_last < ma100_last)
+                      
+                        and ma200_last > ma300_last
+                        and ma2_last < ma2_2_min_ago 
+                        
+                       
+                    ):
+                        sell = "SELL 3 dopo 90 min con ma50 < con deviation_ma39 < -0.18 - r 14239 A1"
+                        action = "sell"
+                        
+                        # 29 gen 2023 se deviation_ma100_sopra_ma300 > 0.33
+                        
+                        # 15 giu 2023 incrocio 3-100
+
+                  
+                    elif (      
+                        ma50_last < ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 > 0.30
+                        
+                        and ma200_last > ma300_last
+                        and ma2_last < ma2_2_min_ago 
+                        and deviation_ma39 < -0.18
+                       
+                    ):
+                        sell = "SELL 3 dopo 90 min con ma50 < con deviation_ma39 < -0.18 - r 14239 A2"
+                        action = "sell"
+                        
+                        # 29 gen 2023 se deviation_ma100_sopra_ma300 > 0.33
+                        
+                        # 15 giu 2023 dev_39 -0.18 da -0.20
+                  
+                  
+                    elif (      
+                        ma50_last < ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 > 0.30
+                        and deviation_sell < 1.70
+                      
                         and ma200_last > ma300_last
                         and ma2_last < ma2_2_min_ago 
                         and deviation_ma39 < -0.20
                        
                     ):
-                        sell = "SELL 3 dopo 90 min con ma50 < con deviation_ma39 < -0.20 - r 14239 A"
+                        sell = "SELL 3 dopo 90 min con ma50 < con deviation_ma39 < -0.20 - r 14239 A3"
                         action = "sell"
                         
                         # 29 gen 2023 se deviation_ma100_sopra_ma300 > 0.33
                         # 29 gen 2023 dev_39 -0.21 da -0.20
+
+                  
                         
                         
                     elif (      
