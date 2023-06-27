@@ -14383,9 +14383,10 @@ class maddog:
                         
                         
                     # AGGIUNTA TARDIVA MA FORSE NECESSARIA !
-                    
+                  
                     elif (
                         ma50_last < ma50_2_min_ago
+                        and ma20_last > ma39_last
                         and delta_1 > delta_2
                         and ma100_last < ma200_last
                         and ma200_last < ma300_last
@@ -14393,11 +14394,11 @@ class maddog:
                         and ma200_last < ma200_120_min_ago
                         and ma300_last < ma300_120_min_ago
                    
-                        and deviation_sell < -0.115
+                        and deviation_sell < -0.1155
                         and ma2_last < ma2_2_min_ago
                         and macd < macd_2_min_ago
                     ):
-                        sell = "SELL 1 (21-50 min)  piccola perdita durante il crollo - AGGIUNTA TARDIVA MA FORSE NECESSARIA ! and delta_1 > delta_2 and dev_sell < -0.115 - r 9354"
+                        sell = "SELL 1 (21-50 min)  piccola perdita durante il crollo - AGGIUNTA TARDIVA MA FORSE NECESSARIA ! and delta_1 > delta_2 and dev_sell < -0.1155 - r 9354a"
                         action = "sell"
                         
                         
@@ -14405,7 +14406,32 @@ class maddog:
                         # 29 mag 2023 dev_sell a -0.10
                         # 30 mag 2023 dev_sell a -0.115 da -0.10
                         # 10 giu 2023 dev_sell a -0.114 da -0.115 ( dopo che ha fatto -0.54% )
-                    
+                        # 27 giu 2023 dev_sell a -0.1155 da -0.115 se 20>39
+                  
+                  
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and ma20_last < ma39_last
+                        and delta_1 > delta_2
+                        and ma100_last < ma200_last
+                        and ma200_last < ma300_last
+                        
+                        and ma200_last < ma200_120_min_ago
+                        and ma300_last < ma300_120_min_ago
+                   
+                        and deviation_sell < -0.1145
+                        and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
+                    ):
+                        sell = "SELL 1 (21-50 min)  piccola perdita durante il crollo - AGGIUNTA TARDIVA MA FORSE NECESSARIA ! and delta_1 > delta_2 and dev_sell < -0.1145 - r 9354b"
+                        action = "sell"
+                        
+                        
+                        # 29 mag 2023 AGGIUNTO 
+                        # 29 mag 2023 dev_sell a -0.10
+                        # 30 mag 2023 dev_sell a -0.115 da -0.10
+                        # 10 giu 2023 dev_sell a -0.114 da -0.115 ( dopo che ha fatto -0.54% )
+                        # 27 giu 2023 dev_sell a -0.1145 da -0.15 se 20<39
                         
                    
             
