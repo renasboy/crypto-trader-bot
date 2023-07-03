@@ -12108,8 +12108,8 @@ class maddog:
                 
                 elif (
                     ma200_last > ma200_20_min_ago
-                    and deviation_rialzo_improvviso_sopra > 0.69
-                    and deviation_rialzo_improvviso_1 > 0.46
+                    and deviation_rialzo_improvviso_sopra > 0.60
+                    and deviation_rialzo_improvviso_1 > 0.45
                     and deviation_rialzo_improvviso_2 > 0.19
                     and deviation_rialzo_improvviso_3 > 0.19
                     and deviation_range_1 < 0.22
@@ -12120,14 +12120,14 @@ class maddog:
                     and deviation_range_x > -0.22
                 ):
              
-                    buy = "BUY 5 RIALZO IMPROVVISO con 200 > e con > 0.72 DOPO TANTO TEMPO DI TREND LATERALE - POTREBBE SUCCEDERE e' successo ! - r 7563"
+                    buy = "BUY 5 RIALZO IMPROVVISO con 200 > e con > 0.60 DOPO TANTO TEMPO DI TREND LATERALE - POTREBBE SUCCEDERE e' successo ! - r 7563"
                     action = "buy"
                     percentage = 70
                     
                     # 6 giu 2022 deviation rialzo improvviso a 0.82 da 0.62
                     # 1 luglio a 0.72 da 0.82
                     # > estate 0.69 da 0.72
-                    
+                    #  3 lug 2023 0.60 da 0.69
                 
                 # BUY 5 29 ago 2022 > 120 min di ribasso 78>150
                 
