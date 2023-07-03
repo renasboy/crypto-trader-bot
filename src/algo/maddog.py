@@ -2236,7 +2236,7 @@ class maddog:
                 
                 
                 elif (     
-                    ma50_last > ma100_last
+                    ma5_last > ma50_last
                     and macd >= macd_2_min_ago
                     and ma300_last > ma450_last
                     
@@ -2249,7 +2249,7 @@ class maddog:
                     and ma30_last > ma30_10_min_ago
                     
                     and deviation_bellissima > 0.01
-                    and ma20_last > ma20_2_min_ago
+                    
                     and ma5_last > ma5_2_min_ago
                     and ma2_last > ma20_last
                     and ma2_last > ma2_2_min_ago
@@ -2260,8 +2260,8 @@ class maddog:
                     
                     # > estate ho anticipato buy
                     # 25 gen 2023 se 300>450 anticipo ndecchia
-                    
-                
+                    #  3 lug 2023 tolto and ma20_last > ma20_2_min_ago ( ma 300 sta sopra ma 450 )
+                    #  3 lug 2023 5-50 da 50-100 ( ma 300 sta sopra ma 450 )
                     
                     
                     
