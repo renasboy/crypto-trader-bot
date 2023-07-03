@@ -2882,18 +2882,15 @@ class maddog:
                     ma5_last > ma300_last
                     and macd >= macd_2_min_ago
                     and ma8_last > ma50_last
-                    and ma100_last > ma150_last
-                    and delta_300_225 < delta_300_225_60_min
                     
+                    and delta_300_225 < delta_300_225_60_min
                     
                     and ma300_last < ma300_120_min_ago
                     
                     and deviation_ma5_sopra_ma28 > 0.13
                     and deviation_ma3_sopra_ma7 > 0.05
                     and deviation_ma13_sopra_ma25 > 0.04
-                    
-                    and deviation_bellissima > 0.09
-                    
+                  
                     and price >= price_2_min_ago
                     
                 ):
@@ -2902,8 +2899,8 @@ class maddog:
                     percentage = 80
                     
                     # > estate anticipato buy di una ndecchia
-                    
-                    
+                    #  3 lug 2023 tolto dev bellissima
+                    #  3 lug 2023 tolto ma100_last > ma150_last
                 
                     
                     
