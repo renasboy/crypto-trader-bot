@@ -18983,19 +18983,35 @@ class maddog:
                     
                     
                     
-                    
                     elif (
                         ma50_last > ma50_2_min_ago
+                        and ma450_last > ma450_720_min_ago
+                        and (ma5_prev > ma39_prev and ma5_last < ma39_last)
+                        and deviation_sell > 0.81 and deviation_sell < 1.49
+                        and ma2_last < ma2_2_min_ago
+                    ):
+
+                        sell = "SELL 2 da 60 a 90 min con ma50 > and incrocio 5-39 and deviation_sell 0.81 - 1.49 RABONA ALLA RONALDO con 450 > 720 min - r 11919 a"
+                        action = "sell"
+
+                        # ma ricordati che in diverse occasioni 3-48 mi ha evitato la ricompra e la rivendita conseguente con perdita !
+                        # 5-28 da 3-18 dopo dolomiti
+
+                  
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and ma450_last < ma450_720_min_ago
                         and (ma5_prev > ma28_prev and ma5_last < ma28_last)
                         and deviation_sell > 0.81 and deviation_sell < 1.49
                         and ma2_last < ma2_2_min_ago
                     ):
 
-                        sell = "SELL 2 da 60 a 90 min con ma50 > and incrocio 5-28 and deviation_sell 0.81 - 1.49 RABONA ALLA RONALDO - r 11919"
+                        sell = "SELL 2 da 60 a 90 min con ma50 > and incrocio 5-28 and deviation_sell 0.81 - 1.49 RABONA ALLA RONALDO con 450 < 720 min  - r 11919 b"
                         action = "sell"
 
                         # ma ricordati che in diverse occasioni 3-48 mi ha evitato la ricompra e la rivendita conseguente con perdita !
                         # 5-28 da 3-18 dopo dolomiti
+                        
                     
                     
                     
