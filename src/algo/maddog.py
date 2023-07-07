@@ -17336,7 +17336,7 @@ class maddog:
                         ma50_last < ma50_2_min_ago
                         and ma300_last > ma300_120_min_ago
                         
-                        and deviation_ma39 < -0.22
+                        and deviation_ma39 < -0.17
                         and ma3_last < ma39_last
                         
                         and deviation_trend_ma200 > -0.12
@@ -17345,13 +17345,13 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                         and macd < macd_2_min_ago
                     ):
-                        sell = "SELL 1 > 240 min E 300 > 120 min ago e con ma50 < and dev3-39 < -0.22 con > PERDITA TOLLERATA - r 10572 A2"
+                        sell = "SELL 1 > 240 min E 300 > 120 min ago e con ma50 < and dev3-39 < -0.17 con > PERDITA TOLLERATA - r 10572 A2"
                         action = "sell"
                         
                         # deviation_ma39 = ma4_last / ma39
                         # 24 apr 2023 deviation_ma39 < -0.22
                         # macd sui tempi lunghi
-                        
+                        #  7 lug 2023 deviation_ma39 < -0.17 da < -0.22
                         
                     elif (     
                         ma50_last < ma50_2_min_ago
