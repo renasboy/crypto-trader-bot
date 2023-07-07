@@ -1428,7 +1428,7 @@ class maddog:
                     and macd >= macd_2_min_ago 
                     
                     and ma450_last < ma450_360_min_ago
-                    and macd >= macd_2_min_ago
+                    
                     
                     and deviation_ma5_sopra_ma200 < -0.30
                     and deviation_ma5_sotto_ma300 < -0.30
@@ -1443,15 +1443,16 @@ class maddog:
                     and deviation_ma3_sopra_ma10 > 0.081
                     
                     and deviation_ma5_sopra_ma28 > -0.15
-                    and deviation_ma3_sopra_ma16 > 0.12
+                    and deviation_ma3_sopra_ma16 > -0.12
                     
                     and ma2_last >= ma2_2_min_ago
-              
+                    and macd >= macd_2_min_ago
                 ):
-                    buy = "BUY 1 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND dev 5-30 and deviation_ma3_sopra_ma16 > 0.12- r 1043 B"
+                    buy = "BUY 1 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND dev 4-18 and deviation_ma3_sopra_ma16 > -0.12 - r 1043 B"
                     action = "buy"
                     percentage = 50
                     
+                    # 8 lug 2023 4-18
                     
                 
                     
