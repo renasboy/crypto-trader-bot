@@ -2148,11 +2148,11 @@ class maddog:
                     
                     ma5_last > ma20_last
                     
-                    and deviation_ma39_sotto_ma200 < -0.10
-                    and deviation_ma300_sopra_ma450 > -0.25
+                    and deviation_ma39_sotto_ma200 < -0.05
+                    and deviation_ma300_sopra_ma450 > -0.30
                     
                     and deviation_ma3_sopra_ma10 > 0.08
-                    and deviation_ma3_sopra_ma16 > 0.11
+                    and deviation_ma3_sopra_ma16 > 0.10
                     
                     
                     and ma2_last >= ma20_last
@@ -2175,7 +2175,7 @@ class maddog:
                     #  9 giu 2023 tolto and ma3_last >= ma3_2_min_ago
                     #  9 giu 2023 dev_ma39_sotto_ma200 < -0.10 da -0.15 forse era questa che la faceva arrivare in ritardo perche' 39 era piu' lenta a scendere sotto -0.15 da ma200
                     # tolto and deviation_ma5_sopra_ma28 > 0.02
-                    
+                    #  7 lug 2023 dev_ma39_sotto_ma200 < -0.05 da -0.10
                     
                 # BUY 1 tempo ESTATE PIU' VELOCE 100 > 60 min ago (solo l' estate se lo puo' perettere!) considera il passare del TEMPO ! ma30 > 
                 
