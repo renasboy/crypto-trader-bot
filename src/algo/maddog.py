@@ -5465,9 +5465,9 @@ class maddog:
                     and deviation_ma100_laterale > 0.12
                     
                     and deviation_ma3_sopra_ma10 > 0.035
-                    and deviation_ma5_sopra_ma28 > 0.09
+                    and deviation_ma5_sopra_ma28 > 0.05
                    
-                    and ma2_last > ma2_2_min_ago
+                    and ma2_last >= ma2_2_min_ago
                     and macd >= macd_2_min_ago
                 ):
 
@@ -5475,9 +5475,9 @@ class maddog:
                     action = "buy"
                     percentage = 80
                     
-                    # 1 ott 2022 3-10 > 0.035
-                    # 2 nov 2033 100 > 300 da 200 > 300
-                    
+                    # 1 ott 2023 3-10 > 0.035
+                    # 2 nov 2023 100 > 300 da 200 > 300
+                    # 7 lug 2023 5-28 a 0.05 da 0.09 (300> 5 ore ago!)
                     
                     
                 
