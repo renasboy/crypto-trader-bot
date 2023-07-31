@@ -11328,7 +11328,7 @@ class maddog:
                 
                 elif (
                     
-                    ma18_last > ma100_last
+                    ma8_last > ma54_last
                     
                     and ma100_last < ma100_180_min_ago
                     and ma200_last < ma200_180_min_ago
@@ -11348,7 +11348,7 @@ class maddog:
                     percentage = 90
                     
                     # 11 ott 2022 se ma300 < 360 min ago BUY 4 se deve comprare deve avere almeno 5-28 > 0.13 
-                    
+                    # 31 lug ma8_last > ma54_last da 18-100
                     
                     
                     
