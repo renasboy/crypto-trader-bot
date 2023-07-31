@@ -10276,8 +10276,8 @@ class maddog:
                 # BUY 3 IN MEZZO (effetti laterali) con ma69 > and deviation_bellissima > 0.12 IMPORTATA DA BUY 4 RCCR
                 
                 elif (
-                    ma28_last >= ma28_2_min_ago
                     
+                    ma4_last > ma50_last
                     and deviation_ma100_sopra_ma300 < 0.25
                     and deviation_ma100_sopra_ma300 > -0.25
                     
@@ -10285,14 +10285,10 @@ class maddog:
                     
                     and deviation_ma3_sopra_ma10 > 0.07
                     and deviation_ma5_sopra_ma28 > 0.01
-                    
-                    and deviation_buy3 > 0.01
-                    and deviation_ma7_sopra_ma40 > 0.01
-               
+                  
                     and ma3_last > ma13_last
                     and ma4_last > ma9_last
-                    and ma4_last > ma50_last
-                    
+                   
                     and ma2_last > ma2_2_min_ago
                     and macd > macd_2_min_ago
                 ):
@@ -10306,7 +10302,7 @@ class maddog:
                     # 17 gen 2023 buy3 0.045 da 0.05
                     # 26 feb 2023 buy3 0.02 da 0.05
                     # 17 gen 2023 dev bellissima 0.02 da 0.045
-                    
+                    # 31 lug anticipata (ma450_last > ma450_480_min_ago !)
                     
                 elif (
                     ma10_last >= ma10_2_min_ago
