@@ -16384,24 +16384,25 @@ class maddog:
                         
                         and ma3_last < ma300_last
                         and ma200_last < ma300_last
-                        and deviation_trend_ma200 < -0.10
+                        and deviation_trend_ma200 < -0.08
                         
-                        and deviation_ma39 < -0.22
+                        and deviation_ma39 < -0.10
                         and deviation_sell < -0.22
                         
                         and rapporto_delta_1_delta_2 < 1
                         
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 da RCCR ! da 110 a 239 min IPOTESI PEGGIORE con ma50< con dev_ma39 < -0.22 and deviation_sell < -0.22 MA giorno - r 10273"
+                        sell = "SELL 1 da RCCR ! da 110 a 239 min IPOTESI PEGGIORE con ma50< con dev_ma39 < -0.10 and deviation_sell < -0.22 MA giorno - r 10273"
                         action = "sell"
                         
                         # 19 SET r 10546 la condizione precedente ha fatto -1.65 ed e' partita insieme ad altre 2 condizioni speciali ! 
                         # quindi ho aggiunto questa importata SIA QUA CHE NELLE CONDIZIONI SPECIALI ( nuova condizione speciale )
                         # 19 set 2022 IMPORTATO DA RCCR > sell 4:18 del 19 set -1.65 % !
                         # 19 set 2022 deviation_ma39 < -0.22 AND and deviation_sell < -0.22
-                        
-                        
+                        # 31 lug 2023 and deviation_ma39 < -0.10 da -0.22
+                        # 31 lug 2023 and deviation_trend_ma200 < -0.08 da < -0.08 
+                  
                     elif (     
                         ma50_last < ma50_2_min_ago
                         and ma300_last > ma300_120_min_ago
