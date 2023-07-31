@@ -2154,14 +2154,14 @@ class maddog:
                     
                     and deviation_ma3_sopra_ma10 > 0.08
                     and deviation_ma3_sopra_ma16 > 0.10
-                    
+                    and deviation_ma3_sopra_ma18 > 0.12
                     
                     and ma2_last >= ma20_last
                     and ma2_last >= ma2_2_min_ago
                     
                     and macd >= macd_2_min_ago
                 ):    
-                    buy = "BUY 1 con 5-20 E CON 300 ancora vicina alla 450 ( anche un poco sotto! ) + MACD > - r 1537 A"
+                    buy = "BUY 1 con 5-20 E CON 300 ancora vicina alla 450 ( anche un poco sotto! ) and 3-18 > 0.12 + MACD > - r 1537 A"
                     action = "buy"
                     percentage = 90
                     
@@ -2177,7 +2177,8 @@ class maddog:
                     #  9 giu 2023 dev_ma39_sotto_ma200 < -0.10 da -0.15 forse era questa che la faceva arrivare in ritardo perche' 39 era piu' lenta a scendere sotto -0.15 da ma200
                     # tolto and deviation_ma5_sopra_ma28 > 0.02
                     #  7 lug 2023 dev_ma39_sotto_ma200 < -0.05 da -0.10
-                    
+                    # 31 lug 2023 and deviation_ma3_sopra_ma18 > 0.12
+              
                 # BUY 1 tempo ESTATE PIU' VELOCE 100 > 60 min ago (solo l' estate se lo puo' perettere!) considera il passare del TEMPO ! ma30 > 
                 
                 elif (     
