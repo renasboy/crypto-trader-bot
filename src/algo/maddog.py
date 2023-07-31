@@ -4465,9 +4465,9 @@ class maddog:
                 # BUY 1 CROLLO FERRARI - modo 2 questa condizione e' entrata in azione ! ( e mi e' sembrata ben fatta !)
 
                 elif (
-                    ma2_last >= ma2_2_min_ago
+                    ma5_last > ma11_last
                     and deviation_buy_crollo_1 < -1.61
-                    and ma5_last > ma11_last
+                     
                     and macd > macd_2_min_ago
                     and ma78_last < ma300_last
                     and macd >= macd_2_min_ago
@@ -4479,7 +4479,7 @@ class maddog:
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     # 14 GIU 2022 5-18
                     # 19 apr 2023 5-11 and macd > macd_2_min_ago
-                    
+                    # 31 lug 2023 tolto ma2_last >= ma2_2_min_ago c'e' il MACD per la ferrari
                     
                     
                     
