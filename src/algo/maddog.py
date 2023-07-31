@@ -5463,7 +5463,7 @@ class maddog:
                     and ma5_last > ma200_last
                     and ma3_last > ma11_last
                     
-                    and deviation_ma100_laterale > 0.12
+                    and deviation_ma100_laterale > 0.07
                     
                     and deviation_ma3_sopra_ma10 > 0.035
                     and deviation_ma5_sopra_ma28 > 0.05
@@ -5479,7 +5479,7 @@ class maddog:
                     # 1 ott 2023 3-10 > 0.035
                     # 2 nov 2023 100 > 300 da 200 > 300
                     # 7 lug 2023 5-28 a 0.05 da 0.09 (300> 5 ore ago!)
-                    
+                    # 31 lug and deviation_ma100_laterale > 0.07 da 0.12
                     
                 
                     
