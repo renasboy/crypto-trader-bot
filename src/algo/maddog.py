@@ -25276,7 +25276,7 @@ class maddog:
                 and ma10_last < ma78_last
                 and (ma8_prev > ma300_prev and ma8_last < ma300_last)
                 and ma2_last < ma2_2_min_ago
-                and deviation_sell < -0.10
+                and deviation_sell < -0.12
             ):
 
                 sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - maddog VENDE dopo 150 min = 9000 sec e fino a 240 min con 8-300 NOTTE ! - r 16733 B"
@@ -25289,7 +25289,7 @@ class maddog:
                 # 26 dic 2022 8-250 da 8-225
                 #  4 gen 2023 aggiunta dev sell < -0.10 vedi 4 gen 2023 ore 1:16
                 # 21 mag 2023 8-300 da 8-250
-                
+                # 31 lug 2023 -0.12 da -0.10
                 
                 
             # SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 150 min = 9000 sec e fino a 240 min con 5-90
