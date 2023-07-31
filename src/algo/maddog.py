@@ -5493,14 +5493,14 @@ class maddog:
                 elif (  
                     ma200_last > ma300_last
                     and ma78_last < ma200_last
-                    and ma300_last > ma300_120_min_ago
+                    and ma300_last > ma300_60_min_ago
                     
                     and deviation_ma3_sopra_ma10 > 0.10
                     and deviation_ma5_sopra_ma28 > 0.03
                     
                     and ma78_last < ma100_last
                     and deviation_ma100_laterale > 0.07
-                    and ma11_last > ma200_last
+                    and ma8_last > ma100_last
                     and ma200_last > ma200_15_min_ago
                     
                     
@@ -5511,14 +5511,14 @@ class maddog:
                     and macd >= macd_2_min_ago
                 ):
 
-                    buy = "BUY 1 forever young 1 USATA MOVIMENTO LATERALE se ma 200 > e se ma200 > ma300 AND 78 < 200 AND 3-10 > 0.10 e 300>120 min ago - r 4379 B1"
+                    buy = "BUY 1 forever young 1 USATA MOVIMENTO LATERALE se ma 200 > e se ma200 > ma300 AND 78 < 200 AND 3-10 > 0.10 e 300>60 min ago - r 4379 B1"
                     action = "buy"
                     percentage = 80
                     
                     # la troppa prudenza qualche volta genera perdite !
                     # RCCR r1852 e' arrivata una ndecchia prima. studia le piccole differenze.
                     # 30 set 3-10 a 0.10 da 0.04
-                    
+                    # 21 lug 2023 300 > 60 min no 120 min
                     
                     
                     
