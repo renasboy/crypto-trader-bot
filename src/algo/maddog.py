@@ -8815,7 +8815,7 @@ class maddog:
                     and macd >= macd_2_min_ago
                 ):
              
-                    buy = "BUY 2 RIALZO IMPROVVISO con 200 > e con > 0.72 DOPO TANTO TEMPO DI TREND LATERALE - POTREBBE SUCCEDERE e' successo ! - r 5979"
+                    buy = "BUY 2 RIALZO IMPROVVISO con 200 > e con > 0.72 DOPO TANTO TEMPO DI TREND LATERALE - POTREBBE SUCCEDERE e' successo ! - r 5979 A"
                     action = "buy"
                     percentage = 70
                     
@@ -8846,7 +8846,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                     and macd >= macd_2_min_ago
                 ):
-                    buy = "BUY 2 CHE MANCAVA DOPO 5 ore di ribasso buy con 5-28>0.30 perdio se entra dopo 5 ore deve essere piu' sicuro ! - r 5979"
+                    buy = "BUY 2 CHE MANCAVA DOPO 5 ore di ribasso buy con 5-28>0.30 perdio se entra dopo 5 ore deve essere piu' sicuro ! - r 5979 B"
                     action = "buy"
                     percentage = 80
                     
@@ -8874,7 +8874,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                     and macd >= macd_2_min_ago
                 ):    
-                    buy = "BUY 2 ULTIMA CONDIZIONE ! ma tutte negative MA 50 > 100 (integra r2505) con 78>100 - r 5980 A"
+                    buy = "BUY 2 ULTIMA CONDIZIONE ! ma tutte negative MA 50 > 100 (integra r2505) con 78>100 - r 5980 a"
                     action = "buy"
                     percentage = 70
                     
@@ -8901,7 +8901,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                     and macd >= macd_2_min_ago
                 ):    
-                    buy = "BUY 2 ULTIMA CONDIZIONE ! ma tutte negative MA 50 > 100 (integra r2505) con 78<100 - r 5980b"
+                    buy = "BUY 2 ULTIMA CONDIZIONE ! ma tutte negative MA 50 > 100 (integra r2505) con 78<100 - r 5980 b"
                     action = "buy"
                     percentage = 70
                     
@@ -8915,8 +8915,8 @@ class maddog:
                 elif (
                     
                     ma4_last > ma18_last
-                    and deviation_ma5_sopra_ma28 < -0.05
-                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma5_sopra_ma28 < 0.05
+                    and deviation_ma3_sopra_ma10 > 0.107
                     
                     
                     and deviation_ma5_sopra_ma200 < -0.30
@@ -8935,7 +8935,9 @@ class maddog:
                     buy = "BUY 2 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND dev 5-30 CON AGGIUNTA PENSIERO LATERALE and macd > macd 2 min ago - r 5981"
                     action = "buy"
                     percentage = 50
-                    
+                  
+                    #  1 ago 2023 5-28 < 0.05
+                    #  1 ago 2023 3-10 > 0.107
                     
                 
                 
