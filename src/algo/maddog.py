@@ -25394,7 +25394,7 @@ class maddog:
             elif (
                 
                 seconds_since_last_trade > max_hold_time_in_seconds_sell_5_180
-                and deviation_sell > 0.11
+                and deviation_sell < -0.10
                 and deviation_ma5_sotto_ma300 < 0.25
                 and ma300_last > ma300_120_min_ago
                 
@@ -25409,7 +25409,7 @@ class maddog:
                 # 24 set 2022 ore 17:23
                 # 11 ott 2022 dev sell 0.10 da 0.15
                 # 21 ott 2022 dev sell 0.11 da 0.10
-                
+                #  1 ago 2023 dev sell -0.10 da +0.10
                 
                 
                 
