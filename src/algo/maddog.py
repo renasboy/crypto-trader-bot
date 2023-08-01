@@ -5090,7 +5090,7 @@ class maddog:
                 
                 elif (
                     
-                    ma28_last > ma300_last
+                    ma13_last > ma200_last
                     and macd > macd_2_min_ago
                     
                     
@@ -5113,12 +5113,12 @@ class maddog:
                     and macd >= macd_2_min_ago
                 ):
                
-                    buy = "BUY 1 che ci riprova quando se ne va lateralmente AND MACD > MACD 2 min ago ! - r 4138 B"
+                    buy = "BUY 1 che ci riprova con 13-300 quando se ne va lateralmente AND MACD > MACD 2 min ago ! - r 4138 B"
                     action = "buy"
                     percentage = 80
                     
                     # provo delta 39-69
-                    
+                    # 1 ago 2023 ma13_last > ma200_last invece di 28-300
                     
                 
                     
