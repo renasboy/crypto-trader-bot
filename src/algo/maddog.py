@@ -11412,8 +11412,33 @@ class maddog:
                     # aggiunto PENSIERO LATERALE and deviation_ma5_sopra_ma59 < -0.09
                     # 18 mag 2023 aggiunta 3-16 > 0.03 
                     #  2 giu 2023 aggiunta 3-18 > 0.093
+              
                     
+                # BUY 4 importato da buy 5 rccr
+                
+                elif (
                     
+                    ma8_last > ma59_last
+                    and ma78_last > ma150_last
+                    
+                    and ma100_last < ma100_180_min_ago
+                    and ma200_last < ma200_180_min_ago
+                    and ma300_last < ma300_180_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and deviation_ma5_sopra_ma28 > 0.02
+                    and ma2_last >= ma2_2_min_ago
+                    
+                ):
+                    buy = "BUY 4 importato da buy 5 rccr - r 7063"
+                    action = "buy"
+                    percentage = 90
+                  
+                    #  1 ago 2023 importato buy 4 da buy 5
+              
+              
                 # BUY 4 se 8 > 200 con 5-28 > 0.20 ! e con ma69 > and deviation_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali) IMPORTATA DA BUY 5
                 
                 elif (
