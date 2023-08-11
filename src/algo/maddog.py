@@ -7526,15 +7526,15 @@ class maddog:
               
                 elif (    
                     ma5_last > ma39_last
-                    and ma78_last > ma78_60_min_ago
                     
+                    and ma300_last > ma300_120_min_ago
                     and ma450_last > ma450_480_min_ago
                     
                     and ma300_last > ma450_last
+                    
                     and deviation_ma100_sopra_ma300 < 0.20
                     and deviation_ma100_sopra_ma300 > -0.20
-                  
-                    and ma300_last > ma300_120_min_ago
+                    
                     and deviation_ma3_sopra_ma18 > 0.02
                     and macd >= macd_2_min_ago
                 ):  
@@ -7542,7 +7542,10 @@ class maddog:
                     buy = "BUY 2 laterale con 300>450 - r 5412 X1a"
                     action = "buy"
                     percentage = 80
-                    
+                  
+                    # 11 ago 2023 anticipato ndecchiecella
+
+
                     
                 elif (    
                     ma5_last > ma39_last
