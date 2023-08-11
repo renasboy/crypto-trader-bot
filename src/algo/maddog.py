@@ -10283,7 +10283,7 @@ class maddog:
                 
                 elif (
                     
-                    ma4_last > ma50_last
+                    ma4_last > ma30_last
                     and deviation_ma100_sopra_ma300 < 0.25
                     and deviation_ma100_sopra_ma300 > -0.25
                     
@@ -10309,6 +10309,9 @@ class maddog:
                     # 26 feb 2023 buy3 0.02 da 0.05
                     # 17 gen 2023 dev bellissima 0.02 da 0.045
                     # 31 lug anticipata (ma450_last > ma450_480_min_ago !)
+                    # 11 ago 2023 4-30 da 4-50
+
+                  
                     
                 elif (
                     ma10_last >= ma10_2_min_ago
