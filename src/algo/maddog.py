@@ -25568,17 +25568,19 @@ class maddog:
                 
                 and (ma5_prev > ma240_prev and ma5_last < ma240_last)
                 and ma2_last < ma2_2_min_ago
-           
+                and macd < macd_2_min_ago
+                and macd < -6
             ):
 
-                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 240 min con 5-240 - r 16737"
+                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 240 min con 5-240 con macd < and macd < -6 - r 16737"
                 action = "sell"
                         
                 # 24 set 2022 ore 17:23
                 # 11 ott 2022 dev sell 0.10 da 0.15
                 # 21 ott 2022 dev sell 0.11 da 0.10
                 #  1 ago 2023 dev sell -0.10 da +0.10
-                
+                # 11 ago 2023 macd < 2 min ago
+                # 11 ago macd < -6
                 
                 
             
