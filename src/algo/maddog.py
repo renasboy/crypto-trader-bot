@@ -20102,8 +20102,7 @@ class maddog:
                         # > estate -0.15 da +0.02
                         # 10 dic 2022 -0.17 da -0.15
                         # 26 feb 2023 -0.19 da -0.17
-                        
-                        
+                  
                     elif (    
                         ma3_last < ma100_last
                         and ma300_last < ma300_301_min_ago
@@ -20117,6 +20116,24 @@ class maddog:
                         # > estate -0.15 da +0.02
                         # 10 dic 2022 -0.16 da -0.15
                         # 25 gen 2023 -0.168 da -0.16
+
+                  
+                    elif (    
+                        ma3_last < ma39_last
+                        and deviation_sell > 0.50
+                        
+                        and ma2_last < ma2_2_min_ago
+                        and macd < macd 2_min_ago
+                        and macd < -6
+                    ):
+                   
+                        sell = "SELL 2 > 110 min forse E' NECESSARA SOLO QUESTA ! vedi 25 luglio 2023 ore 16:28 NON AVEVA VENDUTO NULLA ! - r 12682"
+                        action = "sell"
+                        
+                        
+
+                  
+                    
                     
                     
             ################################################################################################### SESSIONE 3
