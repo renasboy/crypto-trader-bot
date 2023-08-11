@@ -11158,10 +11158,10 @@ class maddog:
                 
                 
                 # BUY 4 se 11 > 200 e con ma69 > and deviation_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali) IMPORTATA DA BUY 5
-                
+              
                 elif (
-                    ma69_last >= ma69_2_min_ago
-                    and ma11_last > ma200_last
+                    ma5_last > ma200_last
+                    and ma300_last > ma300_180_min_ago
                     
                     and deviation_buy3 > 0.12
                     and deviation_bellissima > 0.14
@@ -11176,12 +11176,38 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
              
                 ):
-                    buy = "BUY 4 se 11 > 200 e con ma69 > and dev_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali) DA BUY 5 RCCR - riga 7008"
+                    buy = "BUY 4 se 11 > 200 e con ma69 > and dev_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali) DA BUY 5 RCCR - r 7008 a"
+                    action = "buy"
+                    percentage = 70
+                  
+                    # 11 ago 2023 aggiunta se 300 sale da 3 ore
+                
+
+              
+                elif (
+                    ma69_last >= ma69_2_min_ago
+                    and ma11_last > ma200_last
+                    and ma300_last < ma300_180_min_ago
+                    
+                    and deviation_buy3 > 0.12
+                    and deviation_bellissima > 0.14
+                    and deviation_ma7_sopra_ma40 > 0.12
+                    
+                    and ma3_last > ma13_last
+                    and ma4_last > ma9_last
+                    and ma4_last > ma50_last
+                    and ma6_last > ma15_last
+                    and ma7_last > ma25_last
+                    
+                    and ma2_last > ma2_2_min_ago
+             
+                ):
+                    buy = "BUY 4 se 11 > 200 e con ma69 > and dev_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali) DA BUY 5 RCCR - r 7008 b"
                     action = "buy"
                     percentage = 70
                     
                     # > estate 7-40 0.12 da 0.09 and dev bellissima 0.14 da 0.12
-                    
+                    # 11 ago 2023 aggiunta se 300 scende da 3 ore
                     
                     
                     
