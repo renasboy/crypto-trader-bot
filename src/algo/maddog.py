@@ -8912,7 +8912,29 @@ class maddog:
                     
                     
                     
+                elif (
                     
+                    ma18_last > ma100_last
+                    and deviation_ma5_sotto_ma300 > -0.40
+                    
+                    and ma100_last < ma100_180_min_ago
+                    and ma200_last < ma200_180_min_ago
+                    and ma300_last < ma300_180_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and deviation_ma5_sopra_ma28 > 0.02
+                    and ma2_last >= ma2_2_min_ago
+                    
+                ):
+                    buy = "BUY 2 > 180 min di ribasso  26 luglio 2023 - r 5984"
+                    action = "buy"
+                    percentage = 90
+
+              
+
+                  
                 # BUY 2 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND dev 5-30 CON AGGIUNTA PENSIERO LATERALE
                 
                 elif (
@@ -8935,7 +8957,7 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
                     and macd >= macd_2_min_ago
                 ):
-                    buy = "BUY 2 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND dev 5-30 CON AGGIUNTA PENSIERO LATERALE and macd > macd 2 min ago - r 5981"
+                    buy = "BUY 2 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND dev 5-30 CON AGGIUNTA PENSIERO LATERALE and macd > macd 2 min ago - r 5985"
                     action = "buy"
                     percentage = 50
                   
