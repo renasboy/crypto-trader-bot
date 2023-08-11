@@ -86,6 +86,7 @@ class maddog:
         ma4_2_min_ago = self.algo_helper.ma_minutes_ago(4, 2)
         ma4_4_min_ago = self.algo_helper.ma_minutes_ago(4, 4)
         ma5_2_min_ago = self.algo_helper.ma_minutes_ago(5, 2)
+        ma5_12_min_ago = self.algo_helper.ma_minutes_ago(5, 12)
         ma6_2_min_ago = self.algo_helper.ma_minutes_ago(6, 2)
         ma8_2_min_ago = self.algo_helper.ma_minutes_ago(8, 2)
         ma8_4_min_ago = self.algo_helper.ma_minutes_ago(8, 4)
@@ -25728,8 +25729,7 @@ class maddog:
                 # and ma2_last > ma100_last (altrimenti vende durante il crollo con la ma3-ma9)
                 
                 
-                
-            # 39 - POCHI MALEDETTI E SUBITO ma non troppo mentre scende > ESTATE 
+            # 39 - POCHI MALEDETTI E SUBITO ma non troppo mentre scende > ESTATE 2022
             
             elif (
                 ma5_last < ma33_last
@@ -25742,10 +25742,29 @@ class maddog:
                 and ma2_last > ma100_last
                 and ma2_last < ma2_2_min_ago
             ):    
-                sell = "SELL condizione speciale 39 5-33 - POCHI MALEDETTI E SUBITO ma non troppo mentre scende > ESTATE  e con deviation > 0.90 - r 16873 B"
+                sell = "SELL condizione speciale 39 5-33 - POCHI MALEDETTI E SUBITO ma non troppo mentre scende > ESTATE 2022 e con deviation > 0.90 - r 16873 B"
                 action = "sell"
                     
                 # and ma2_last > ma100_last (altrimenti vende durante il crollo con la ma3-ma9)
+
+
+          
+            # 40 - POCHI MALEDETTI E SUBITO ma non troppo mentre scende > ESTATE 2023
+            
+            elif (
+                deviation_sell > 0.80
+                and ma5_last < ma5_12_min_ago
+                
+                and (ma3_prev > ma28_prev and ma3_last < ma28_last)
+                and ma2_last < ma2_2_min_ago
+               
+            ):    
+                sell = "SELL condizione speciale 40 5-28 - POCHI MALEDETTI E SUBITO ma non troppo mentre scende > ESTATE 2023 e con deviation > 0.80 - r 16873 C"
+                action = "sell"
+                    
+                
+
+          
                 
                 
                 
@@ -25753,7 +25772,7 @@ class maddog:
             
             ######################################################################### vendite dedicate al BUY FIAT - AUDI - MASERATI - FERRARI 
             
-            # 40 - SELL condizione speciale FIAT 
+            # 41 - SELL condizione speciale FIAT 
                     
             elif (     
                 seconds_since_last_trade > max_hold_time_in_seconds_fiat
@@ -25774,7 +25793,7 @@ class maddog:
                         
                         
                 
-            # 41 - SELL condizione speciale AUDI 
+            # 42 - SELL condizione speciale AUDI 
                     
             elif (     
                 seconds_since_last_trade > max_hold_time_in_seconds_audi
@@ -25793,7 +25812,7 @@ class maddog:
                         
             
             
-            # 42 - SELL condizione speciale MASERATI 
+            # 43 - SELL condizione speciale MASERATI 
                     
             elif (     
                 seconds_since_last_trade > max_hold_time_in_seconds_maserati
@@ -25811,7 +25830,7 @@ class maddog:
                 
                 
                         
-            # 43 - SELL condizione speciale FERRARI 
+            # 44 - SELL condizione speciale FERRARI 
                     
             elif (     
                 seconds_since_last_trade > max_hold_time_in_seconds_ferrari
@@ -25827,7 +25846,7 @@ class maddog:
                 
                 
                 
-            # 44 SELL condizione speciale da RCCR ! IPOTESI PEGGIORE con ma50< con dev_ma39 < -0.225 and deviation_sell < -0.22 MA DOPPIO DELTA RIALZO 
+            # 45 SELL condizione speciale da RCCR ! IPOTESI PEGGIORE con ma50< con dev_ma39 < -0.225 and deviation_sell < -0.22 MA DOPPIO DELTA RIALZO 
                      
             elif (
                 ma50_last < ma50_2_min_ago
@@ -25857,7 +25876,7 @@ class maddog:
                 
                 
                 
-            # 44 SELL condizione speciale da RCCR ! IPOTESI PEGGIORE con ma50< con dev_ma39 < -0.225 and deviation_sell < -0.22 MA DOPPIO DELTA RIALZO 
+            # 46 SELL condizione speciale da RCCR ! IPOTESI PEGGIORE con ma50< con dev_ma39 < -0.225 and deviation_sell < -0.22 MA DOPPIO DELTA RIALZO 
                      
             elif (
                 ma50_last < ma50_2_min_ago
@@ -25888,7 +25907,7 @@ class maddog:
                 
                 
                 
-            # 44 SELL condizione speciale RIMBALZO CHE ARRIVA FINO ALLA ma300 MA LA 100 E' MOLTO DISTANTE quindi non vende mentre si riavvicinano 
+            # 47 SELL condizione speciale RIMBALZO CHE ARRIVA FINO ALLA ma300 MA LA 100 E' MOLTO DISTANTE quindi non vende mentre si riavvicinano 
                      
             elif (
                 ma300_last < ma300_301_min_ago
