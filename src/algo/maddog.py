@@ -2248,11 +2248,13 @@ class maddog:
                     
                     and ma200_last > ma300_last
                     and ma200_last > ma200_120_min_ago
-                    and deviation_ma5_sopra_ma28 > 0.05
+                    
                     and ma100_last < ma200_last
                     
                     and ma30_last > ma30_10_min_ago
-                    
+                  
+                    and deviation_ma3_sopra_ma16 > 0.055
+                    and deviation_ma5_sopra_ma28 > 0.05
                     and deviation_bellissima > 0.01
                     
                     and ma5_last > ma5_2_min_ago
@@ -2267,7 +2269,7 @@ class maddog:
                     # 25 gen 2023 se 300>450 anticipo ndecchia
                     #  3 lug 2023 tolto and ma20_last > ma20_2_min_ago ( ma 300 sta sopra ma 450 )
                     #  3 lug 2023 5-50 da 50-100 ( ma 300 sta sopra ma 450 )
-                    
+                    # 11 ago 2023 aggiunta and deviation_ma3_sopra_ma16 > 0.055
                     
                     
                     
