@@ -1425,8 +1425,8 @@ class maddog:
                 
                 elif (
                     
-                    ma4_last > ma18_last
-                    and macd >= macd_2_min_ago 
+                    ma3_last > ma18_last
+                    
                     
                     and ma450_last < ma450_360_min_ago
                     
@@ -1453,8 +1453,8 @@ class maddog:
                     action = "buy"
                     percentage = 50
                     
-                    # 8 lug 2023 4-18
-                    
+                    #  8 lug 2023 4-18
+                    # 11 ago 2023 3-18
                 
                     
                     
