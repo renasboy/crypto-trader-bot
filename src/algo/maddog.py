@@ -25881,7 +25881,7 @@ class maddog:
                 deviation_sell > 0.80
                 and ma5_last < ma5_12_min_ago
                 
-                and (ma3_prev > ma28_prev and ma3_last < ma28_last)
+                and ma3_last < ma28_last
                 and ma2_last < ma2_2_min_ago
                
             ):    
