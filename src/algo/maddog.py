@@ -5569,13 +5569,12 @@ class maddog:
                     and macd > macd_2_min_ago
                     
                     and delta_1 < delta_2
-                    and ma100_last > ma100_60_min_ago
+                    and ma100_last > ma100_30_min_ago
                     
                     and deviation_ma3_sopra_ma10 > 0.02
                     and deviation_ma3_sopra_ma18 > 0.055
                     and deviation_ma5_sopra_ma28 > 0.01
-                 
-                    and ma5_last > ma5_2_min_ago
+               
                     and ma2_last > ma2_2_min_ago
                     and macd >= macd_2_min_ago
                 ):
@@ -5585,7 +5584,7 @@ class maddog:
                     percentage = 80
                     
                     # 12 giu 2023 aggiunta 3-18 > 0.055
-                    
+                    # 11 ago 2023 tolta ma5 > ma5 2 min ago
                 
                     
                     
