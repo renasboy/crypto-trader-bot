@@ -5095,9 +5095,7 @@ class maddog:
                 
                 elif (
                     
-                    ma13_last > ma200_last
-                    and macd > macd_2_min_ago
-                    
+                    ma5_last > ma200_last
                     
                     and deviation_ma300_sopra_ma450 < 0.25
                     and deviation_ma300_sopra_ma450 > -0.05
@@ -5123,8 +5121,8 @@ class maddog:
                     percentage = 80
                     
                     # provo delta 39-69
-                    # 1 ago 2023 ma13_last > ma200_last invece di 28-300
-                    
+                    #  1 ago 2023 ma13_last > ma200_last invece di 28-300
+                    # 11 ago 2023 ma5_last > ma200_last invece di 13-200
                 
                     
                     
