@@ -22049,7 +22049,7 @@ class maddog:
                         ma50_last < ma50_2_min_ago
                         and delta_450_300 > delta_450_300_60_min
                         and ma250_last > ma300_last
-                        and deviation_ma100_sopra_ma300 < 0.20
+                        and deviation_ma100_sopra_ma300 < 0.30
                         and ma2_last < ma2_2_min_ago 
                         and deviation_sell < -0.195
                         and ma3_last < ma39_last
@@ -22063,6 +22063,7 @@ class maddog:
                         # 20 feb 2023 doppio delta 450-300 NOTTE
                         # 20 feb 2023 dev_sell a -0.20 da -0.19
                         #  1 ago 2023 dev_sell a -0.195 da -0.20
+                  
                         
                     elif (    
                         ma50_last < ma50_2_min_ago
