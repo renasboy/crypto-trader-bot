@@ -24109,7 +24109,6 @@ class maddog:
                     
                     
                     
-                    
                     elif (    
                         ma50_last < ma50_2_min_ago
                         and deviation_ma5_sotto_ma300 < 0.10
@@ -24122,7 +24121,21 @@ class maddog:
                         
                         #  7 feb 2023 -0.23 da -0.21
                         # 17 mar 2023 3-33 da 3-39 vedi 3 mar 2023 ore 14:46 sembra che 3-39 sia arrivata tardi.
-                    
+
+                  
+                    elif (    
+                        ma50_last < ma50_2_min_ago
+                        and deviation_ma5_sotto_ma200 < 0.10
+                        and ma2_last < ma2_2_min_ago 
+                        and deviation_sell < -0.225
+                        and ma3_last < ma33_last
+                    ):
+                        sell = "SELL 4-5-x dopo 90 min con 5-300 < 0.10 E ma50 < and (deviation_sell < -0.225 and ma3_last < ma39_last) - r 15906 c"
+                        action = "sell"
+                        
+                        #  7 feb 2023 -0.23 da -0.21
+                        # 17 mar 2023 3-33 da 3-39 vedi 3 mar 2023 ore 14:46 sembra che 3-39 sia arrivata tardi. vedi 25 luglio 2023 ore 21:50
+                        # 11 ago 2023 5 sotto 200 ma ho lasciato 5 sotto 300 condizione precedente.
                     
             #################################################################################################################### VENDITE SPECIALI !
             ####################################################################################
