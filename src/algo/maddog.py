@@ -20148,7 +20148,7 @@ class maddog:
 
                   
                     elif (    
-                        ma3_last < ma39_last
+                        ma3_last < ma78_last
                         and deviation_sell > 0.50
                         
                         and ma2_last < ma2_2_min_ago
@@ -20156,9 +20156,10 @@ class maddog:
                         and macd < -6
                     ):
                    
-                        sell = "SELL 2 > 110 min forse E' NECESSARA SOLO QUESTA ! vedi 25 luglio 2023 ore 16:28 NON AVEVA VENDUTO NULLA ! - r 12682"
+                        sell = "SELL 2 > 110 min con 3-78 forse E' NECESSARA SOLO QUESTA ! vedi 25 luglio 2023 ore 16:28 NON AVEVA VENDUTO NULLA ! - r 12682"
                         action = "sell"
                         
+                        # 16 ago 2023 3-78 da 3-39
                         
 
                   
