@@ -24371,6 +24371,7 @@ class maddog:
                 and deviation_ma100_sopra_ma300 < 0.40
                 
                 and deviation_ma5_sotto_ma200 > -0.90
+                and macd < macd_2_min_ago
             ):
                 sell = "SELL condizione speciale 6 - SALVAGENTE 4 deviation 3-39 < -0.05 and dev_sell < -0.30 - con ma50 < e con ma5 sotto ma200 > -0.90 - r 16047 B"
                 action = "sell"   
@@ -24395,6 +24396,7 @@ class maddog:
                 # 15 giu 2023 and deviation_sell < -0.335 da -0.34
                 # 31 lug 2023 and deviation_sell < -0.32 da -0.335
                 # 11 ago 2023 and deviation_sell < -0.30 da -0.32
+                # 16 ago 2023 aggiunto macd < macd 2 min ago
           
                 #########################################################################################################################
                 
