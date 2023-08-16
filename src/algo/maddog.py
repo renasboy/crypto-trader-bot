@@ -21631,21 +21631,22 @@ class maddog:
                     elif (
                         ma50_last < ma50_2_min_ago
                         and delta_1_200_78 < delta_2_200_78_60_min
-                        and deviation_ma39 < -0.175
+                        and deviation_ma39 < -0.10
                         and ma2_last < ma2_2_min_ago
                         
                         and deviation_ma100_sopra_ma300 < 0.69
                         and deviation_sell < -0.20
                        
                     ):
-                        sell = "SELL 3 da 60 a 90 min con ma50 < con deviation_ma39 < -0.17 and deviation_sell < -0.20 TREND LATERALE (100>300 MA <0.69) - r 14021 A"
+                        sell = "SELL 3 da 60 a 90 min con ma50 < con deviation_ma39 < -0.10 and deviation_sell < -0.20 TREND LATERALE (100>300 MA <0.69) - r 14021 A"
                         action = "sell"
                         
                         # 27 giu 2022 deviation_sell < -0.16 da 0.15
                         # 11 ott 2022 deviation_sell < -0.17 da 0.16
                         # 11 ott 2022 deviation_ma39 < -0.175 da 0.17
                         # 18 nov 2022 dev sell -0.20 con aggiunta doppio delta
-                        
+                        # 16 ago 2023 deviation_ma39 < -0.10 da 0.17
+                  
                         
                     elif (
                         ma50_last < ma50_2_min_ago
