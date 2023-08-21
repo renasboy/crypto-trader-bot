@@ -10186,7 +10186,7 @@ class maddog:
                 
                 elif (
                     
-                    ma8_last > ma59_last
+                    ma8_last > ma39_last
                     and deviation_ma5_sotto_ma300 < -0.40
                     
                     and ma100_last < ma100_120_min_ago
@@ -10196,12 +10196,12 @@ class maddog:
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
                     and deviation_ma3_sopra_ma16 > 0.02
-                    and deviation_ma5_sopra_ma28 > 0.11
-                    
+                    and deviation_ma5_sopra_ma28 > 0.10
+                    and macd > macd_2_min_ago
                     and ma2_last >= ma2_2_min_ago
                     
                 ):
-                    buy = "BUY 3 29 ago 2022 > 120 min di ribasso AND 8>59 AND 5-28 > 0.11 and 3-16 > 0.02 - r 6570 B"
+                    buy = "BUY 3 29 ago 2022 > 120 min di ribasso AND 8>39 AND 5-28 > 0.10 and 3-16 > 0.02 and macd > macd 2 min ago - r 6570 B"
                     action = "buy"
                     percentage = 90
                     
@@ -10209,9 +10209,9 @@ class maddog:
                     # 11 ott 2022 mentre scende dopo 2 ore se accelera al ribasso (5 si allontana da 300) interviene prima con 8-59 !
                     # 19 ottobre 2022 5-28 0.11 da 0.08
                     # 16 mar 2023 3-16 a > 0.02
-                    
-                    
-                    
+                    # 21 agosto 2023 5-28 0.10 da 0.11
+                    # 21 agosto 2023 8-39 da 8-59
+                    # 21 agosto 2023 and macd > macd 2 min ago
                     
                 # BUY 3 29 ago 2022 > 180 min di ribasso
                 
