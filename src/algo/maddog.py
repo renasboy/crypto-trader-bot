@@ -4492,8 +4492,7 @@ class maddog:
                     
                     
                     
-                    
-                # BUY 1 crollo MISSILE COMPA !
+                # BUY 1 crollo MISSILE COMPA ! modo 1
                 
                 elif (
                     ma2_last > ma2_2_min_ago
@@ -4502,13 +4501,29 @@ class maddog:
                     and ma78_last < ma300_last
                     and macd >= macd_2_min_ago
                 ):
-                    buy = "BUY 1 crollo MISSILE COMPA con dev 3-16 > 0.028 + macd >= macd 2 min ago and ma78_last < ma300_last - r 3561"
+                    buy = "BUY 1 crollo MISSILE COMPA modo 1 con dev 3-16 > 0.028 + macd >= macd 2 min ago and ma78_last < ma300_last - r 3561"
                     action = "buy"
                     percentage = 80
                     
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     # 27 apr 2023 da dev 3-16 > 0.028 da 3-13 
                     # 27 apr 2023 aggiunto macd
+
+
+
+
+                # BUY 1 crollo MISSILE COMPA ! modo 2
+                 
+                elif (    
+                    ma3_last > ma4_last
+                    and ma78_last < ma300_last
+                    and macd < -245
+                ):
+                    buy = "BUY 1 crollo MISSILE COMPA modo 2 con 3>4 AND MACD < -245 ! and ma78_last < ma300_last - AGOSTO 2023 - r 3562"
+                    action = "buy"
+                    percentage = 80
+                    
+                    
                     
                 
                     
@@ -8937,7 +8952,20 @@ class maddog:
 
               
 
-                  
+                # BUY 2 crollo MISSILE COMPA ! modo 2
+                 
+                elif (    
+                    ma3_last > ma4_last
+                    and ma78_last < ma300_last
+                    and macd < -245
+                ):
+                    buy = "BUY 2 crollo MISSILE COMPA modo 2 con 3>4 AND MACD < -245 ! and ma78_last < ma300_last - AGOSTO 2023 - r 5985"
+                    action = "buy"
+                    percentage = 80
+
+
+
+
                 # BUY 2 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND dev 5-30 CON AGGIUNTA PENSIERO LATERALE
                 
                 elif (
@@ -8960,7 +8988,7 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
                     and macd >= macd_2_min_ago
                 ):
-                    buy = "BUY 2 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND dev 5-30 CON AGGIUNTA PENSIERO LATERALE and macd > macd 2 min ago - r 5985"
+                    buy = "BUY 2 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND dev 5-30 CON AGGIUNTA PENSIERO LATERALE and macd > macd 2 min ago - r 6000"
                     action = "buy"
                     percentage = 50
                   
