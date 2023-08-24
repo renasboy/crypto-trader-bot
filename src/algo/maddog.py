@@ -24471,7 +24471,7 @@ class maddog:
 
             elif (
                 ma78_last < ma78_120_min_ago 
-                and deviation_ma39 < -0.05
+                and deviation_ma39 < 0.05
                 and deviation_sell < -0.30
                 and ma2_last <= ma2_2_min_ago 
                 
@@ -24505,7 +24505,7 @@ class maddog:
                 # 31 lug 2023 and deviation_sell < -0.32 da -0.335
                 # 11 ago 2023 and deviation_sell < -0.30 da -0.32
                 # 16 ago 2023 aggiunto macd < macd 2 min ago
-          
+                # 24 ago 2023 and deviation_ma39 < 0.05 ! il 22 ago ha fatto -1.20 !
                 #########################################################################################################################
                 
                 
