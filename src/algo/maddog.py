@@ -25558,16 +25558,16 @@ class maddog:
                 seconds_since_last_trade > max_hold_time_in_seconds_sell_5_180
                 and ma300_last > ma300_301_min_ago
                 
-                and deviation_sell > 0.11
+                and deviation_sell < -0.09
                 and deviation_ma5_sotto_ma300 < 0.25
                 and ma300_last > ma300_120_min_ago
                 
-                and (ma8_prev > ma250_prev and ma8_last < ma250_last)
+                and (ma8_prev > ma300_prev and ma8_last < ma300_last)
                 and ma2_last < ma2_2_min_ago
            
             ):
 
-                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 240 min con 8-250 - r 16735"
+                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 240 min con 8-300 - r 16735"
                 action = "sell"
                         
                 # 24 set 2022 ore 17:23
@@ -25575,7 +25575,8 @@ class maddog:
                 # 21 ott 2022 dev sell 0.11 da 0.10
                 # 29 dic 2022 8-225 da 5-180
                 # 29 gen 2023 8-250 da 8-225
-                
+                # 24 ago 2023 8-300 da 8-250
+          
                 
             # 32 A
             
