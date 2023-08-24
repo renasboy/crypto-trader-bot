@@ -10230,8 +10230,10 @@ class maddog:
                     
                     and deviation_ma3_sopra_ma10 > 0.02
                     and deviation_ma5_sopra_ma28 > 0.02
-                    and ma2_last >= ma2_2_min_ago
                     
+                    and ma2_last >= ma2_2_min_ago
+                    and macd > macd_2_min_ago
+                    and macd > 5
                 ):
                     buy = "BUY 3 29 ago 2022 > 180 min di ribasso con 5-200 - r 6572 A"
                     action = "buy"
@@ -10239,7 +10241,8 @@ class maddog:
                     
                     # 13 feb 2023 3-10 > 0.02
                     #  1 ago 2023 5-200 invece di 10-100
-              
+                    # 24 ago 2023 and macd > macd_2_min_ago
+                    # 24 ago 2023 and macd > 5
                     
                     
                 # BUY 3 29 ago 2022 > 180 min di ribasso
