@@ -8971,12 +8971,17 @@ class maddog:
                     and ma200_last < ma300_last
                     
                     and deviation_ma5_sopra_ma28 > 0.02
-                    and ma2_last >= ma2_2_min_ago
                     
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                    and macd > 5
                 ):
-                    buy = "BUY 2 > 180 min di ribasso  26 luglio 2023 - r 5984"
+                    buy = "BUY 2 > 180 min di ribasso 26 luglio 2023 - r 5984"
                     action = "buy"
                     percentage = 90
+                    
+                    # 24 ago 2023 macd > macd 2 min ago
+                    # 24 ago 2023 macd > 5
 
               
 
