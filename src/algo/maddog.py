@@ -10792,26 +10792,28 @@ class maddog:
                     deviation_ma4_sopra_ma30 > 0.14
                     and ma300_last > ma300_120_min_ago
                     and ma100_last < ma100_60_min_ago
-                    and macd > macd_2_min_ago
+                    
                     and deviation > -0.30
-                    and deviation_bellissima >= 0.06
-                    and ma39_last >= ma48_last
+                    
+                    and ma5_last >= ma48_last
                     and delta_buy3_incrocio_ma3_ma8 >= 0.06
                     and ma3_last > ma8_last
                     and ma3_last >= ma69_last
-                    and ma4_last >= ma4_2_min_ago
-                    and ma2_last >= ma2_2_min_ago
+                    
+                    
                     and ma5_last >= ma15_last
                     and ma5_last >= ma25_last
+                    and ma2_last >= ma2_2_min_ago
+                    and macd > macd_2_min_ago
                 ):    
-                    buy = "BUY 4B importato da BUY 3 RCCR se ma39 > ma48 con 300 > e 100 < - r 6736 a1z"
+                    buy = "BUY 4B importato da BUY 3 RCCR se ma5 > ma48 con 300 > e 100 < - r 6736 a1z"
                     action = "buy"
                     percentage = 70
                     
                     # 28 apr 2023 aggiunta macd > macd 2 min ago
-                
-                
-                
+                    # 24 ago 2023 tolta and ma4_last >= ma4_2_min_ago
+                    # 24 ago 2023 tolta deviation_bellissima >= 0.03
+                    # 24 ago 2023 5-48 da 39-48
                 
                 elif (
                     deviation_ma4_sopra_ma30 > 0.15
