@@ -21524,15 +21524,29 @@ class maddog:
                       
                         ############################################################################################################
                        
-                     
                     elif (
                         ma50_last >= ma50_2_min_ago
+                        and ma100_last > ma150_last
+                        and (ma5_prev > ma100_prev and ma5_last < ma100_last)
+                        and deviation_sell > 0.25 and deviation_sell < 0.56
+                        and ma2_last < ma2_2_min_ago
+                       
+                    ):
+                        sell = "SELL 3 (21-60 min) con ma50 > and incrocio 5-100 and deviation_sell 0.25 - 0.56 FINTA DI MARADONA - r 13901a"
+                        action = "sell"
+                        
+                        # deviation_sell = ma3_last/last_trade_price
+
+                  
+                    elif (
+                        ma50_last >= ma50_2_min_ago
+                        and ma100_last < ma150_last
                         and (ma5_prev > ma50_prev and ma5_last < ma50_last)
                         and deviation_sell > 0.25 and deviation_sell < 0.56
                         and ma2_last < ma2_2_min_ago
                        
                     ):
-                        sell = "SELL 3 (21-60 min) con ma50 > and incrocio 5-50 and deviation_sell 0.25 - 0.56 FINTA DI MARADONA - r 13901"
+                        sell = "SELL 3 (21-60 min) con ma50 > and incrocio 5-50 and deviation_sell 0.25 - 0.56 FINTA DI MARADONA - r 13901b"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
