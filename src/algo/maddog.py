@@ -23574,14 +23574,26 @@ class maddog:
                     ######################################################################### RIGHE DEL COMPA raddoppiate PER AUMENTARE LA TOLLERANZA
                     
                     
-                    
                     if ( 
-                        ma50_last > ma50_2_min_ago 
+                        ma50_last > ma50_2_min_ago
+                        and ma78_last > ma100_last
+                        and ma2_last < ma2_2_min_ago 
+                        and deviation_ma25 < -0.23
+                        and ma200_last < ma200_60_min_ago
+                    ):
+                        sell = "SELL 4-5-x da 60 a 90 min con ma50 > and deviation_ma25 < -0.23 con 78>100 - r 15514a"
+                        action = "sell"
+                        
+                        # 24 ago 2023 and deviation_ma25 < -0.23 da -0.22
+                  
+                    elif ( 
+                        ma50_last > ma50_2_min_ago
+                        and ma78_last < ma100_last
                         and ma2_last < ma2_2_min_ago 
                         and deviation_ma25 < -0.22
                         and ma200_last < ma200_60_min_ago
                     ):
-                        sell = "SELL 4-5-x da 60 a 90 min con ma50 > and deviation_ma25 < -0.19 - r 15514"
+                        sell = "SELL 4-5-x da 60 a 90 min con ma50 > and deviation_ma25 < -0.22 con 78<100 - r 15514b"
                         action = "sell"
                         
                         
