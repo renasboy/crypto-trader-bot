@@ -1761,9 +1761,8 @@ class maddog:
                     and deviation_ma3_sopra_ma16 > 0.112
                     and deviation_ma4_sopra_ma28 > -0.01
                     
-                    and macd >= macd_2_min_ago
                     and ma2_last >= ma2_2_min_ago
-                    
+                    and macd >= macd_2_min_ago
                 ):  
                 
                     buy = "BUY 1 LATERALE 2 con 3-10 > 0.07 and macd > macd 2 min ago and deviation_ma3_sopra_ma16 > 0.112 - r 1205"
@@ -1774,8 +1773,8 @@ class maddog:
                     # attenzione ! adesso questa condizione si attiva anche se ma250_last < ma300_last ! MA SEMPRE durante un TREND LATERALE.
                     # vediamo come va.
                     # vedi 19 maggio 2023 ore 17:47 !
-                    # 8 giu and deviation_ma3_sopra_ma16 > 0.112
-                    
+                    #  8 giu 2023 and deviation_ma3_sopra_ma16 > 0.112
+                    # 24 ago 2023 forse in futuro dovrai mettere macd > 5
                     
                
                 
@@ -2151,16 +2150,17 @@ class maddog:
                     ma5_last > ma20_last
                     
                     and deviation_ma39_sotto_ma200 < -0.05
-                    and deviation_ma300_sopra_ma450 > -0.30
+                    and deviation_ma300_sopra_ma450 > -0.35
                     
                     and deviation_ma3_sopra_ma10 > 0.06
                     and deviation_ma3_sopra_ma16 > 0.08
                     and deviation_ma3_sopra_ma18 > 0.10
                     
                     and ma2_last >= ma20_last
+                  
                     and ma2_last >= ma2_2_min_ago
-                    
                     and macd >= macd_2_min_ago
+                    
                 ):    
                     buy = "BUY 1 con 5-20 E CON 300 ancora vicina alla 450 ( anche un poco sotto! ) and 3-18 > 0.12 + MACD > - r 1537 A"
                     action = "buy"
@@ -5472,7 +5472,6 @@ class maddog:
                 
                     
                 
-                   
                 # BUY 1 forever young 1 PIU' PRUDENTE se ma 200 > e se ma200 > ma300 AND 78 > 200
                 
                 elif (  
@@ -5498,7 +5497,35 @@ class maddog:
                     # 1 ott 2023 3-10 > 0.035
                     # 2 nov 2023 100 > 300 da 200 > 300
                     # 7 lug 2023 5-28 a 0.05 da 0.09 (300> 5 ore ago!)
-                    # 31 lug and deviation_ma100_laterale > 0.07 da 0.12
+                    # 31 lug 2023 and deviation_ma100_laterale > 0.07 da 0.12
+
+
+
+          
+                # BUY 1 forever young 2 un po' meno PRUDENTE se ma 200 > 300 e se 100 > 300 
+                
+                elif (  
+                    ma100_last > ma300_last
+                    and ma200_last > ma300_last
+                    
+                    and ma5_last > ma200_last
+                    and ma3_last > ma11_last
+                    
+                    and deviation_ma100_laterale > 0.05
+                    
+                    and deviation_ma3_sopra_ma10 > 0.035
+                    and deviation_ma5_sopra_ma28 > 0.05
+                   
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                ):
+
+                    buy = "BUY 1 forever young 2 un po' meno PRUDENTE se ma 200 > 300  e se ma100 > ma300 - r 4355"
+                    action = "buy"
+                    percentage = 80
+                    
+                    
+                    # 24 ago 2023 and deviation_ma100_laterale > 0.05 da 0.07 con 200>300
                     
                 
                     
