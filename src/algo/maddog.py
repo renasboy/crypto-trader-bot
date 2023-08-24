@@ -7581,6 +7581,7 @@ class maddog:
                     
                     and deviation_ma3_sopra_ma18 > 0.02
                     and macd >= macd_2_min_ago
+                    and macd > 4
                 ):  
                 
                     buy = "BUY 2 laterale con 300>450 - r 5412 X1a"
@@ -7588,7 +7589,7 @@ class maddog:
                     percentage = 80
                   
                     # 11 ago 2023 anticipato ndecchiecella
-
+                    # 11 ago 2023 and macd > 4
 
                     
                 elif (    
