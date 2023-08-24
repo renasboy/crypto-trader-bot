@@ -17293,7 +17293,7 @@ class maddog:
                     elif (    
                         ma50_last < ma50_2_min_ago
                         and deviation_ma39 < -0.01
-                        and (ma5_prev > ma90_prev and ma5_last < ma90_last)
+                        and (ma5_prev > ma100_prev and ma5_last < ma100_last)
                         and deviation_sell > 0.80
                         and ma5_last < ma5_2_min_ago
                         and ma300_last > ma300_120_min_ago
@@ -17301,11 +17301,11 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                         and macd < macd_2_min_ago
                     ):
-                        sell = "SELL 1 dopo 240 min con ma50 < MA ma100 > E ma300 > e con incrocio 5-90 se guadagno > 0.80 - r 10472 A2y2"
+                        sell = "SELL 1 dopo 240 min con ma50 < MA ma100 > E ma300 > e con incrocio 5-100 se guadagno > 0.80 - r 10472 A2y2"
                         action = "sell"
                         
                         # 28 mag 2023 aggiunta. perche' ha venduto con la precedente perdendo un grande guadagno
-                        
+                        # 24 ago 2023 5-100 da 5-90
                         
                         
                         
