@@ -1763,6 +1763,7 @@ class maddog:
                     
                     and ma2_last >= ma2_2_min_ago
                     and macd >= macd_2_min_ago
+                    and macd > 5
                 ):  
                 
                     buy = "BUY 1 LATERALE 2 con 3-10 > 0.07 and macd > macd 2 min ago and deviation_ma3_sopra_ma16 > 0.112 - r 1205"
@@ -1775,7 +1776,7 @@ class maddog:
                     # vedi 19 maggio 2023 ore 17:47 !
                     #  8 giu 2023 and deviation_ma3_sopra_ma16 > 0.112
                     # 24 ago 2023 forse in futuro dovrai mettere macd > 5
-                    
+                    # 24 ago 2023 and macd > 5
                
                 
                     
