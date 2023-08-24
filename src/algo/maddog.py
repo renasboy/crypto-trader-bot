@@ -11786,16 +11786,19 @@ class maddog:
                     and ma7_last > ma25_last
                     
                     and ma2_last > ma2_2_min_ago
-                
+                    
+                    and macd > macd_2_min_ago
+                    and macd > 3
                 ):
-                    buy = "BUY 5 con 300 > 450 and ma50 > AND 50<100 and 300 > 120 min ago and 5-28 > 0.23 - r 7237 A2"
+                    buy = "BUY 5 con 300 > 450 and ma50 > AND 50<100 and 300 > 120 min ago and 5-28 > 0.23 and macd > macd 2 min ago and macd > 3 - r 7237 A2"
                     action = "buy"
                     percentage = 70
                     
                     # 7 feb 2023 dev bellissima 0.10 da 0.12
                     # 7 feb 2023 5-28 a 0.23 da 0.27
-                    
-                    
+                    # 24 ago 2023 macd > macd 2 min ago
+                    # 24 ago 2023 macd > 3
+              
                     
                 elif (
                     ma50_last >= ma50_2_min_ago
