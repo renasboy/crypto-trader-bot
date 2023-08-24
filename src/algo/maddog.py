@@ -5594,15 +5594,16 @@ class maddog:
                
                     and ma2_last > ma2_2_min_ago
                     and macd >= macd_2_min_ago
+                    and macd > 5
                 ):
                     
-                    buy = "BUY 1 FOREVER YOUNG PIU' AGGRESSIVO (doppio delta < 1 E 100> ) (SOPRA RIALZO RIALZO) - GIORNO - se ma 200 > - r 4410"
+                    buy = "BUY 1 FOREVER YOUNG PIU' AGGRESSIVO (doppio delta < 1 E 100> ) (SOPRA RIALZO RIALZO) - GIORNO - se ma 200 > and macd > 2 min and macd >5 - r 4410"
                     action = "buy"
                     percentage = 80
                     
                     # 12 giu 2023 aggiunta 3-18 > 0.055
                     # 11 ago 2023 tolta ma5 > ma5 2 min ago
-                
+                    # 24 ago 2023 macd>5
                     
                     
                     
