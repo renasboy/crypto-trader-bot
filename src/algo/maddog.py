@@ -5503,16 +5503,15 @@ class maddog:
 
 
           
-                # BUY 1 forever young 2 un po' meno PRUDENTE se ma 200 > 300 e se 100 > 300 
+                # BUY 1 forever young 2 un po' meno PRUDENTE se 150 > 300 
                 
                 elif (  
-                    ma100_last > ma300_last
-                    and ma200_last > ma300_last
+                    ma100_last > ma150_last
                     
                     and ma5_last > ma200_last
                     and ma3_last > ma11_last
                     
-                    and deviation_ma100_laterale > 0.05
+                    and deviation_ma100_laterale > 0.03
                     
                     and deviation_ma3_sopra_ma10 > 0.035
                     and deviation_ma5_sopra_ma28 > 0.05
@@ -5521,13 +5520,13 @@ class maddog:
                     and macd >= macd_2_min_ago
                 ):
 
-                    buy = "BUY 1 forever young 2 un po' meno PRUDENTE se ma 200 > 300  e se ma100 > ma300 - r 4355"
+                    buy = "BUY 1 forever young 2 un po' meno PRUDENTE se ma100 > ma150 - r 4355"
                     action = "buy"
                     percentage = 80
                     
                     
                     # 24 ago 2023 and deviation_ma100_laterale > 0.05 da 0.07 con 200>300
-                    
+                    # 28 ago 2023 100>150
                 
                     
                 
