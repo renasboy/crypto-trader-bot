@@ -5042,7 +5042,37 @@ class maddog:
                     
                     
                     
+                # BUY 1 CHE MANCAVA DOPO BUY-SELL CROLLO ! 150-100 GIORNO ! E 50 > 100
+                
+                elif (
                     
+                    ma78_last < ma200_last
+                    and deviation_ma5_sopra_ma300 > -0.20
+                    and deviation_ma10_sopra_ma200 > -0.20
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma5_sopra_ma28 > 0.01
+                    
+                    and ma5_last > ma10_last
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and ma100_last < ma100_120_min_ago
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_120_min_ago
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd > macd_2_min_ago
+                ):
+                    buy = "BUY 1 78<200 pensiero laterale - r 4005 B RCCR MODIFICATA"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # 28 AGO 2023 forse aggiungere macd > 5
+
+
+              
                 # BUY 1 che ci riprova quando se ne va lateralmente dopo il crollo
                 
                 elif (
