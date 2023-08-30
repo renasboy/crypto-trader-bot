@@ -20034,16 +20034,17 @@ class maddog:
                         and ma5_last < ma100_last
                         and ma300_last < ma300_180_min_ago
                         and deviation_sell > 0.25 and deviation_sell < 0.56
+                        
                         and ma2_last < ma2_2_min_ago
-                       
+                        and macd < macd_2_min_ago
                     ):
                         sell = "SELL 2 dopo 110 min ma300 > 300 180 min ago e con ma50 > and 5-100 (!) and dev_sell 0.25-0.56 - FINTA ALLA MARADONA - r 12530 B"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
-                        # 9 GIU 2022 5-59 da 5-50
+                        #  9 GIU 2022 5-59 da 5-50
                         # > estate 5-100 da 5-59
-                        
+                        # 30 ago 2023 macd < macd 2 min ago
                         
                     
                     
