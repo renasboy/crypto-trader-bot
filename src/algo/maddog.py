@@ -15229,15 +15229,16 @@ class maddog:
                         and deviation_trend_ma200 > -0.10
                         
                         
-                        and deviation_ma39 < -0.20
+                        and deviation_ma39 < -0.05
                         and ma2_last < ma2_2_min_ago
-                        and deviation_sell < -0.21
+                        and deviation_sell < -0.15
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 50-90 min IPOTESI mediana 1 RAFFORZATA un po' MENO PEGGIO con ma50< E dev_ma39 <-0.20 E deviation_sell < -0.21- r 9694"
+                        sell = "SELL 1 50-90 min IPOTESI mediana 1 RAFFORZATA un po' MENO PEGGIO con ma50< E dev_ma39 <-0.05 E deviation_sell < -0.15 - r 9694"
                         action = "sell"
                         
-                        
+                        # 30 ago 2023 dev 39 < -0.05 crolla mentre 3-39 (dev 39) stanno attaccate !
+                        # 30 ago 2023 dev sell -0.15 
                         
                         
                     ############################################################### ipotesi mediana 1 un po' meno peggio ( sempre con ma50 < )
