@@ -2150,12 +2150,12 @@ class maddog:
                     
                     ma5_last > ma20_last
                     
-                    and deviation_ma39_sotto_ma200 < -0.05
+                    and deviation_ma39_sotto_ma200 < -0.01
                     and deviation_ma300_sopra_ma450 > -0.35
                     
-                    and deviation_ma3_sopra_ma10 > 0.06
-                    and deviation_ma3_sopra_ma16 > 0.08
-                    and deviation_ma3_sopra_ma18 > 0.10
+                    and deviation_ma3_sopra_ma10 > 0.05
+                    and deviation_ma3_sopra_ma16 > 0.07
+                    and deviation_ma3_sopra_ma18 > 0.09
                     
                     and ma2_last >= ma20_last
                   
@@ -2181,7 +2181,7 @@ class maddog:
                     #  7 lug 2023 dev_ma39_sotto_ma200 < -0.05 da -0.10
                     # 31 lug 2023 and deviation_ma3_sopra_ma18 > 0.12
                     # 11 ago 2023 0.06 0.08 0.10 antcipo ndecchiecella
-              
+                    # 30 ago 2023 0.05 0.07 0.09 antcipo ndecchiecella
               
                 # BUY 1 tempo ESTATE PIU' VELOCE 100 > 60 min ago (solo l' estate se lo puo' perettere!) considera il passare del TEMPO ! ma30 > 
                 
