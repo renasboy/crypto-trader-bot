@@ -14130,16 +14130,17 @@ class maddog:
                         and ma300_last < ma300_180_min_ago
                         
                         and delta_1_200_78 > delta_2_200_78_60_min
-                        and deviation_ma39 < -0.16
-                        and ma2_last < ma2_2_min_ago
+                        and deviation_ma39 < -0.01
+                        and deviation_sell < -0.02
                         
                         and deviation_ma100_sopra_ma300 < 0.69
                         and deviation_ma100_sopra_ma300 > -0.77
-                        and deviation_sell < -0.20
                         
                         and ma3_last < ma300_last
+                        and ma2_last < ma2_2_min_ago
+                        
                     ):
-                        sell = "SELL 1 NON TOCCARE (21-50 min) con ma50 < E dev_ma39 <-0.16 E dev_sell < -0.20 TREND LATERALE (100>300 <0.69 and >-0.77) - r 9016 B2"
+                        sell = "SELL 1 NON TOCCARE (21-50 min) con ma50 < E dev_ma39 <-0.01 E dev_sell < -0.02 TREND LATERALE (100>300 <0.69 and >-0.77) - r 9016 B2"
                         action = "sell"
                         
                         # OGGI 22 LUG 2022 QUESTA SU RCCR HA FATTO -0.56 MENTRE MADOG HA FATTO -1.43 !
@@ -14149,8 +14150,8 @@ class maddog:
                         #  6 apr 2023 dev_sell a -0.221 da -0.219
                         #  5 giu 2023 dev_sell a -0.20 da -0.22
                         #  5 giu 2023 dev_39 a -0.16 da -0.165
-                        
-                        
+                        # 30 ago 2023 dev_39 a -0.01 da -0.16
+                        # 30 ago 2023 dev_sell a -0.02 da -0.20
                         
                         
                     # TREND LATERALE (100/300  < 0.69 and > -0.77)
