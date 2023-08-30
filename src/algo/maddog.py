@@ -26094,8 +26094,9 @@ class maddog:
                     
                 # and ma2_last > ma100_last (altrimenti vende durante il crollo con la ma3-ma9)
 
-
           
+
+
             # 40 - POCHI MALEDETTI E SUBITO ma non troppo mentre scende > ESTATE 2023
             
             elif (
@@ -26107,6 +26108,22 @@ class maddog:
                
             ):    
                 sell = "SELL condizione speciale 40 5-28 - POCHI MALEDETTI E SUBITO ma non troppo mentre scende > ESTATE 2023 e con deviation > 0.80 - r 16873 C"
+                action = "sell"
+
+
+          
+            # 41 - POCHI MALEDETTI E SUBITO con deviation > 5.01 e macd < -35
+            
+            elif (
+                deviation_sell > 5.01
+                
+                and ma4_last < ma20_last
+                and ma2_last < ma2_2_min_ago
+                
+                and macd < macd_2_min_ago
+                and macd < -35
+            ):    
+                sell = "SELL condizione speciale 41 4-20 - POCHI MALEDETTI E SUBITO se con deviation > 5.01 e macd < -35 ! - r 16874"
                 action = "sell"
                     
                 
