@@ -6668,11 +6668,15 @@ class maddog:
                     
                     and ma2_last >= ma2_2_min_ago
                     and macd >= macd_2_min_ago
+                    and macd >= macd_3_min_ago
+                    and macd > 1
                 ):
-                    buy = "BUY 2 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-50 - formula MY COMPA - r 4743 C"
+                    buy = "BUY 2 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-50 - formula MY COMPA and macd >= macd_3_min_ago and macd > 1 - r 4743 C"
                     action = "buy"
                     percentage = 80
                     
+                    # 30 ago 2023 and macd > 3 min ago
+                    # 30 ago 2023 and macd > 1
                     
                 
                     
