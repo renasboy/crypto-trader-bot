@@ -17161,21 +17161,23 @@ class maddog:
                         
                         
                     
-                    
                     elif (
                         ma50_last > ma50_2_min_ago
                         and deviation_ma300_sopra_ma450 > 0.30
                         and (ma5_prev > ma45_prev and ma5_last < ma45_last)
                         and deviation_sell > 2.71 and deviation_sell < 5.70
                         and ma2_last < ma2_2_min_ago
-                        
+                        and macd>-50
                     ):
                         sell = "SELL 1 dopo 240 min con ma50 > incrocio 5-45 and deviation_sell > 2.71 TACCO DI ALLAH se dev 300-450 > 0.30 - r 10411 A"
                         action = "sell"
                         
                         # 1 ott 2022 3-28 da 3-13
                         # 17 mar 2023 4-39 con aggiunta dev 300-450 > 0.30
-                        # 6 apr 2023 5-45 da 4-39 
+                        # 6 apr 2023 5-45 da 4-39
+
+                  
+                    
                         
                         
                     elif (
@@ -25214,7 +25216,7 @@ class maddog:
             
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
-                and deviation_sell < -0.43
+                and deviation_sell < -0.36
                 
                 and deviation_ma100_sopra_ma200 > -0.70
                 and deviation_ma100_sopra_ma300 > 0.50
@@ -25225,12 +25227,12 @@ class maddog:
                 and ma2_last < ma2_2_min_ago
             ):
 
-                sell = "SELL cond. special 30 A - DOLCE ATTESA 270 sec con ma13 < and deviation < -0.43 CON 100 sopra 300 > 0.50 statt' accorto ! - r 16694 a"
+                sell = "SELL cond. special 30 A - DOLCE ATTESA 270 sec con ma13 < and deviation < -0.36 CON 100 sopra 300 > 0.50 statt' accorto ! - r 16694 A"
                 action = "sell"
                 
                 # 4 feb 2022 con <-0.26 ha fatto -0.88% (dopo +4.29%)
                 # 7 feb 2022 con <-0.345 e 270 sec ha fatto -0.38% - aumenta a 0.355 ! - eventualmente ci pensa la condizione CROLLO IMPROVVISO CHE FUNZIONA !
-                
+                # 30 ago 2023 and deviation_sell -0.36 da -0.43
                 
                 
                 
