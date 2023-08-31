@@ -6366,7 +6366,50 @@ class maddog:
                     
                     
                     
+                # BUY 2 CHE MANCAVA DOPO BUY-SELL CROLLO ! 150-100 GIORNO ! E 50 > 100
                 
+                elif (
+                    
+                    ma78_last < ma200_last
+                    
+                    and deviation_ma10_sopra_ma200 > -0.16
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma5_sopra_ma28 > 0.01
+                    
+                    and ma5_last > ma100_last
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                  
+                    and ma59_last > ma59_30_min_ago
+                    
+                    and ma100_last < ma100_120_min_ago
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_120_min_ago
+                    
+                    and delta_150_100 <= delta_150_100_60_min
+                    and ma100_last >= ma100_2_min_ago
+                    
+                    and ma2_last >= ma2_2_min_ago
+                
+                ):
+                    buy = "BUY 2 78<200 CHE MANCAVA DOPO BUY-SELL CROLLO ! 50 > 100 AND 150-100 GIORNO ! and 3-10 > 0.15 and 5-28 > 0.18 - r 4710"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # madonna compa ! 
+                    # the sound of silence
+                    # ASSURDO ! questa 100 > 100 3 min e' incredibile ! si e' verificata dopo il BUY-SELL del crollo ! NON TOCCARE
+                    # SI STA RIDUCENDO LA DISTANZA TRA 150 E 100
+                    
+                    # 10 giu 2022 5-28 0.12 da 0.09 cazzo
+                    #  2 lug 2022 3-10 0.15 da 0.05 cazzo
+                    # > estate 5-28 0.18 da 0.12 e 3-10 0.15 da 0.05 HO ALZATO IL BUY !
+                    # 7 nov 2022 aggiunta 59 > 59 45 min ago
+                    # aggiunta 31 ago 2023 rccr ok m ko
+
+
                 # BUY 2 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-59
                 
                 elif (
