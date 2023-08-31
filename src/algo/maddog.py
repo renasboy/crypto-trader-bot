@@ -190,11 +190,20 @@ class maddog:
         macd = self.algo_helper.macd
         macd_2_min_ago = self.algo_helper.macd_minutes_ago(2)
         macd_3_min_ago = self.algo_helper.macd_minutes_ago(3)
-        
+        macd_5_min_ago = self.algo_helper.macd_minutes_ago(5)
+      
         # formula trend_macd 2
         
         trend_macd = (macd - macd_2_min_ago)
         self.algo_helper.info("trend_macd: {}".format(trend_macd))
+
+      
+        # formula trend_macd_differenza
+        
+        trend_macd_differenza = (macd - macd_5_min_ago)
+        self.algo_helper.info("trend_macd_differenza: {}".format(trend_macd_differenza))
+
+        
      
         
         # LAST TRADE
