@@ -89,7 +89,7 @@ class maddog:
         ma5_12_min_ago = self.algo_helper.ma_minutes_ago(5, 12)
         ma6_2_min_ago = self.algo_helper.ma_minutes_ago(6, 2)
         ma8_2_min_ago = self.algo_helper.ma_minutes_ago(8, 2)
-        ma8_4_min_ago = self.algo_helper.ma_minutes_ago(8, 4)
+        
         ma10_2_min_ago = self.algo_helper.ma_minutes_ago(10, 2)
         ma10_300_min_ago = self.algo_helper.ma_minutes_ago(10, 300)
         ma13_2_min_ago = self.algo_helper.ma_minutes_ago(13, 2)
@@ -109,10 +109,10 @@ class maddog:
         ma30_30_min_ago = self.algo_helper.ma_minutes_ago(30, 30)
         ma30_40_min_ago = self.algo_helper.ma_minutes_ago(30, 40)
       
-        ma33_5_min_ago = self.algo_helper.ma_minutes_ago(33, 5)
+        
         ma36_2_min_ago = self.algo_helper.ma_minutes_ago(36, 2)
         ma39_2_min_ago = self.algo_helper.ma_minutes_ago(39, 2)
-        ma39_3_min_ago = self.algo_helper.ma_minutes_ago(39, 3)
+        
         ma39_15_min_ago = self.algo_helper.ma_minutes_ago(39, 15)
         ma39_30_min_ago = self.algo_helper.ma_minutes_ago(39, 30)
         ma39_70_min_ago = self.algo_helper.ma_minutes_ago(39, 70)
