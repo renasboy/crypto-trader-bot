@@ -16583,7 +16583,7 @@ class maddog:
                         
                     elif (    
                         ma50_last < ma50_2_min_ago
-                        and deviation_ma39 < -0.10
+                        and deviation_ma39 < -0.01
                         and deviation_sell < -0.15
                         and deviation_ma5_sotto_ma300 < 0.30
                       
@@ -16592,7 +16592,7 @@ class maddog:
                         and ma100_last > ma100_60_min_ago
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 da 110 a 239 min con ma50 < MA ma100 > E ma300 < e con dev_ma39 < -0.10 and dev sell < -0.15 - r 10265 B2"
+                        sell = "SELL 1 da 110 a 239 min con ma50 < MA ma100 > E ma300 < e con dev_ma39 < -0.01 and dev sell < -0.15 - r 10265 B2"
                         action = "sell"
                         
                         # ma39 NON DEVE VENDERE in fase laterale ma in alto
@@ -16607,7 +16607,10 @@ class maddog:
                         # 18 mag 2023 dev39 a 0.1935 da 0.194
                         #  7 lug dev39 a 0.15 da 0.1935
                         # 24 ago 2023 dev sell -0.15 da -0.14
-                        # 24 ago 2023 dev39 a 0.10 da 0.15
+                        # 24 ago 2023 dev39 a -0.10 da -0.15
+                        #  1 set 2023 dev39 a -0.01 da -0.10
+                  
+
                   
                     # ma se ma100 >
                     
