@@ -191,6 +191,8 @@ class maddog:
         macd_2_min_ago = self.algo_helper.macd_minutes_ago(2)
         macd_3_min_ago = self.algo_helper.macd_minutes_ago(3)
         macd_5_min_ago = self.algo_helper.macd_minutes_ago(5)
+
+      
       
         # formula trend_macd 2
         
@@ -198,10 +200,17 @@ class maddog:
         self.algo_helper.info("trend_macd: {}".format(trend_macd))
 
       
+
         # formula macd_differenza
         
         macd_differenza = (macd - macd_5_min_ago)
         self.algo_helper.info("macd_differenza: {}".format(macd_differenza))
+
+      
+        # formula macd_differenza
+        
+        macd_differenza_2_min_ago = (macd - macd_2_min_ago)
+        self.algo_helper.info("macd_differenza_2_min_ago: {}".format(macd_differenza_2_min_ago))
 
         
      
@@ -10353,9 +10362,10 @@ class maddog:
                     and ma200_last < ma300_last
                     and deviation_ma3_sopra_ma16 > 0.02
                     and deviation_ma5_sopra_ma28 > 0.10
-                    and macd > macd_2_min_ago
-                    and ma2_last >= ma2_2_min_ago
                     
+                    and ma2_last >= ma2_2_min_ago
+                    and macd > macd_2_min_ago
+                    and macd_differenza_2_min_ago > 1
                 ):
                     buy = "BUY 3 29 ago 2022 > 120 min di ribasso AND 8>39 AND 5-28 > 0.10 and 3-16 > 0.02 and macd > macd 2 min ago - r 6570 B"
                     action = "buy"
@@ -10368,6 +10378,8 @@ class maddog:
                     # 21 agosto 2023 5-28 0.10 da 0.11
                     # 21 agosto 2023 8-39 da 8-59
                     # 21 agosto 2023 and macd > macd 2 min ago
+                    #  1 set sembra che macd> macd 2 min ago non prende se sta nella stessa unita' per es 7.75 - 5-44 allora mi sono inventato differenza macd che deve essere > 1
+              
                     
                 # BUY 3 29 ago 2022 > 180 min di ribasso
                 
