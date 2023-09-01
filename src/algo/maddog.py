@@ -198,10 +198,10 @@ class maddog:
         self.algo_helper.info("trend_macd: {}".format(trend_macd))
 
       
-        # formula trend_macd_differenza
+        # formula macd_differenza
         
-        trend_macd_differenza = (macd - macd_5_min_ago)
-        self.algo_helper.info("trend_macd_differenza: {}".format(trend_macd_differenza))
+        macd_differenza = (macd - macd_5_min_ago)
+        self.algo_helper.info("macd_differenza: {}".format(macd_differenza))
 
         
      
@@ -26166,7 +26166,7 @@ class maddog:
                 action = "sell"
 
 
-          
+            
             # 41 - POCHI MALEDETTI E SUBITO con deviation > 5.01 e macd < -35
             
             elif (
@@ -26180,7 +26180,22 @@ class maddog:
             ):    
                 sell = "SELL condizione speciale 41 4-20 - POCHI MALEDETTI E SUBITO se con deviation > 5.01 e macd < -35 ! - r 16874"
                 action = "sell"
-                    
+
+          
+            # 42 - POCHI MALEDETTI E SUBITO con deviation > 1.01 e macd < -10 e MACD DIFFERENZA < -25
+            
+            elif (
+                deviation_sell > 0.91
+                and macd < macd_2_min_ago
+                and macd < -10
+                and macd_differenza < -25
+                
+                and ma2_last < ma2_2_min_ago
+                 
+            ):    
+                sell = "SELL condizione speciale 42 - POCHI MALEDETTI E SUBITO con deviation > 1.01 e macd < -10 e MACD DIFFERENZA < -25 - r 16875"
+                action = "sell"
+                #  1 set 2023 se per es macd passa da 18 a -11 vendi     
                 
 
           
