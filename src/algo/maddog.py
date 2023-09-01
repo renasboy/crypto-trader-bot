@@ -225,12 +225,12 @@ class maddog:
         
 
         # PREZZO di X MINUTI FA (di mercato)
-        price_1_min_ago = self.algo_helper.price_minutes_ago(1)
+        
         price_2_min_ago = self.algo_helper.price_minutes_ago(2)
         price_10_min_ago = self.algo_helper.price_minutes_ago(10)
         
-        price_15_min_ago = self.algo_helper.price_minutes_ago(15)
-        price_20_min_ago = self.algo_helper.price_minutes_ago(20)
+        
+        
 
         ###################################################################################################################### TEMPO
         
