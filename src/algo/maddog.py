@@ -116,24 +116,24 @@ class maddog:
         ma39_15_min_ago = self.algo_helper.ma_minutes_ago(39, 15)
         ma39_30_min_ago = self.algo_helper.ma_minutes_ago(39, 30)
         ma39_70_min_ago = self.algo_helper.ma_minutes_ago(39, 70)
-        ma48_3_min_ago = self.algo_helper.ma_minutes_ago(48, 3)
+        
         ma50_2_min_ago = self.algo_helper.ma_minutes_ago(50, 2)
         ma50_60_min_ago = self.algo_helper.ma_minutes_ago(50, 60)
         ma54_15_min_ago = self.algo_helper.ma_minutes_ago(54, 15)
         ma59_2_min_ago = self.algo_helper.ma_minutes_ago(59, 2)
         ma59_30_min_ago = self.algo_helper.ma_minutes_ago(59, 30)
-        ma59_45_min_ago = self.algo_helper.ma_minutes_ago(59, 45)
+        
         ma59_60_min_ago = self.algo_helper.ma_minutes_ago(59, 60)
-        ma59_120_min_ago = self.algo_helper.ma_minutes_ago(59, 120)
+        
         ma69_2_min_ago = self.algo_helper.ma_minutes_ago(69, 2)
         ma69_15_min_ago = self.algo_helper.ma_minutes_ago(69, 15)
         
-        ma69_45_min_ago = self.algo_helper.ma_minutes_ago(69, 45)
+        
         ma72_2_min_ago = self.algo_helper.ma_minutes_ago(72, 2)
         ma78_2_min_ago = self.algo_helper.ma_minutes_ago(78, 2)
-        ma78_4_min_ago = self.algo_helper.ma_minutes_ago(78, 4)
-        ma78_5_min_ago = self.algo_helper.ma_minutes_ago(78, 5)
-        ma78_7_min_ago = self.algo_helper.ma_minutes_ago(78, 7)
+        
+        
+        
         ma78_30_min_ago = self.algo_helper.ma_minutes_ago(78, 30)
         ma78_60_min_ago = self.algo_helper.ma_minutes_ago(78, 60)
         ma78_120_min_ago = self.algo_helper.ma_minutes_ago(78, 120)
@@ -142,7 +142,7 @@ class maddog:
         ma100_3_min_ago = self.algo_helper.ma_minutes_ago(100, 3)
         ma100_5_min_ago = self.algo_helper.ma_minutes_ago(100, 5)
         ma100_10_min_ago = self.algo_helper.ma_minutes_ago(100, 10)
-        ma100_20_min_ago = self.algo_helper.ma_minutes_ago(100, 20)
+        
         ma100_30_min_ago = self.algo_helper.ma_minutes_ago(100, 30)
         
         ma100_50_min_ago = self.algo_helper.ma_minutes_ago(100, 50)
