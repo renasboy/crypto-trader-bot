@@ -183,9 +183,12 @@ class maddog:
         ma450_480_min_ago = self.algo_helper.ma_minutes_ago(450, 480)
         ma450_720_min_ago = self.algo_helper.ma_minutes_ago(450, 720)
         
-        
-        
-        # MAC TREND 1
+
+
+      
+        # viaggio in italia del compare mio !
+      
+        # MACD trend 1
         
         macd = self.algo_helper.macd
         macd_2_min_ago = self.algo_helper.macd_minutes_ago(2)
@@ -194,39 +197,47 @@ class maddog:
 
       
       
-        # formula trend_macd 2
+        # MACD trend 2
         
         trend_macd = (macd - macd_2_min_ago)
         self.algo_helper.info("trend_macd: {}".format(trend_macd))
-
       
 
-        # formula macd_differenza
         
-        macd_differenza = (macd - macd_5_min_ago)
-        self.algo_helper.info("macd_differenza: {}".format(macd_differenza))
-
-      
-        # formula macd_differenza
+        # formula macd_differenza di 2 min ago
         
         macd_differenza_2_min_ago = (macd - macd_2_min_ago)
         self.algo_helper.info("macd_differenza_2_min_ago: {}".format(macd_differenza_2_min_ago))
 
+
+      
+        # formula macd_differenza di 5 min ago
+        
+        macd_differenza = (macd - macd_5_min_ago)
+        self.algo_helper.info("macd_differenza: {}".format(macd_differenza))
         
      
-        
+
+
+      
         # LAST TRADE
         
         last_trade_action = self.algo_helper.last_trade_action
         last_trade_price = self.algo_helper.last_trade_price
         seconds_since_last_trade = self.algo_helper.seconds_since_last_trade
 
+      
+
         # PREV TRADE
         
-        prev_trade_action = self.algo_helper.prev_trade_action
-        prev_trade_time = self.algo_helper.prev_trade_time
-        prev_trade_price = self.algo_helper.prev_trade_price
-        seconds_since_prev_trade = self.algo_helper.seconds_since_prev_trade
+        # prev_trade_action = self.algo_helper.prev_trade_action
+        # prev_trade_time = self.algo_helper.prev_trade_time
+        # prev_trade_price = self.algo_helper.prev_trade_price
+        # seconds_since_prev_trade = self.algo_helper.seconds_since_prev_trade
+        
+        # queste condizioni non le sto usando - grazie compa
+
+        
 
         # PREZZO DI ADESSO (di mercato) - CURRENT PRICE
         
