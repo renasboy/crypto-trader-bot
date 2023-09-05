@@ -23714,10 +23714,13 @@ class maddog:
                     ):
                         sell = "SELL 4-5-x (21-60 min) con ma50 < and 200> 60 min and 300 > 120 min and deviation_sell < -0.33 CON ma78 < 78 260 min ago - r 15422 a"
                         action = "sell"
-                        
+
+                  
                         
                     elif (    
                         ma50_last < ma50_2_min_ago
+                        and ma450_last > ma450_480_min_ago
+                        
                         and ma78_last < ma78_60_min_ago
                         and ma2_last < ma2_2_min_ago 
                         and deviation_sell < -0.32
@@ -23725,11 +23728,27 @@ class maddog:
                         and ma200_last > ma200_60_min_ago
                         and ma300_last > ma300_120_min_ago
                     ):
-                        sell = "SELL 4-5-x (21-60 min) con ma50 < and 200> 60 min and 300 > 120 min and deviation_sell < -0.32 CON ma78 < 78 260 min ago - r 15422 b"
+                        sell = "SELL 4-5-x (21-60 min) con ma50 < and 200> 60 min and 300 > 120 min and deviation_sell < -0.32 CON ma78 < 78 60 min ago and 450 > - r 15422 B1"
                         action = "sell"
                         
                         # 26 mag 2023 dev sell a -0.32 da -0.33 se 78 < 78 60 min ago
+                  
+                    elif (    
+                        ma50_last < ma50_2_min_ago
+                        and ma450_last < ma450_480_min_ago
                         
+                        and ma78_last < ma78_60_min_ago
+                        and ma2_last < ma2_2_min_ago 
+                        and deviation_sell < -0.10
+                        and ma3_last < ma39_last
+                        and ma200_last > ma200_60_min_ago
+                        and ma300_last > ma300_120_min_ago
+                    ):
+                        sell = "SELL 4-5-x (21-60 min) con ma50 < and 200> 60 min and 300 > 120 min and deviation_sell < -0.10 CON ma78 < 78 60 min ago and 450 < - r 15422 B2"
+                        action = "sell"
+                        
+                        # 26 mag 2023 dev sell a -0.32 da -0.33 se 78 < 78 60 min ago
+                        #  5 set 2023 dev sell a -0.10 da -0.32 se 450 < 450 480 min ago
                         
                         
                     elif (    
