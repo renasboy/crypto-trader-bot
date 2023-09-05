@@ -12578,7 +12578,7 @@ class maddog:
                     
                     
                     ma78_last < ma150_last
-                    and deviation_ma5_sopra_ma300 > -0.10
+                    and deviation_ma5_sotto_ma300 > -0.10
                     
                     and deviation_ma5_sopra_ma59 < -0.10
                     and deviation_ma3_sopra_ma10 > 0.057
@@ -12606,7 +12606,7 @@ class maddog:
                     
                     
                     ma78_last < ma150_last
-                    and deviation_ma5_sopra_ma300 < -0.10
+                    and deviation_ma5_sotto_ma300 < -0.10
                     
                     and deviation_ma5_sopra_ma59 > 0.01
                     and deviation_ma3_sopra_ma10 > 0.057
