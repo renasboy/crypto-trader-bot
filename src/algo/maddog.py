@@ -11439,8 +11439,8 @@ class maddog:
                     ma5_last > ma200_last
                     and ma300_last > ma300_180_min_ago
                     
-                    and deviation_buy3 > 0.12
-                    and deviation_bellissima > 0.14
+                    and deviation_buy3 > 0.10
+                    and deviation_bellissima > 0.10
                     and deviation_ma7_sopra_ma40 > 0.12
                     
                     and ma3_last > ma13_last
@@ -11452,12 +11452,14 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
              
                 ):
-                    buy = "BUY 4 se 11 > 200 e con ma69 > and dev_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali) DA BUY 5 RCCR - r 7008 a"
+                    buy = "BUY 4 con ma300_last > ma300_180_min_ago and dev_bellissima > 0.10 - r 7008 A"
                     action = "buy"
                     percentage = 70
                   
                     # 11 ago 2023 aggiunta se 300 sale da 3 ore
-                
+                    #  6 set 2023 and deviation_buy3 > 0.10 da 0.12
+                    #  6 set 2023 and deviation_bellissima > 0.10 da 0.12
+                    #  6 set 2023 and deviation_ma7_sopra_ma40 > 0.10 da 0.12
 
               
                 elif (
