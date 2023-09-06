@@ -5698,7 +5698,6 @@ class maddog:
                 ################################################################################################
                 
                 
-                    
                 # BUY 1 FOREVER YOUNG PIU' AGGRESSIVO con doppio delta < 1 E MA100> (rialzo) se ma 200 > e se ma250 > ma300  and deviation_ma5_sopra_ma28 > 0.10
                 
                 elif (  
@@ -5716,10 +5715,39 @@ class maddog:
                
                     and ma2_last > ma2_2_min_ago
                     and macd >= macd_2_min_ago
+                    and macd > 3
+                ):
+                    
+                    buy = "BUY 1 FOREVER YOUNG PIU' AGGRESSIVO (doppio delta < 1 E 100> ) (SOPRA RIALZO RIALZO) - GIORNO - se ma 200 > and macd > 2 min and macd >3 - r 4410a"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # 12 giu 2023 aggiunta 3-18 > 0.055
+                    # 11 ago 2023 tolta ma5 > ma5 2 min ago
+                    # 24 ago 2023 macd>3
+
+
+                # BUY 1 FOREVER YOUNG PIU' AGGRESSIVO con doppio delta < 1 E MA100> (rialzo) se ma 200 > e se ma250 > ma300  and deviation_ma5_sopra_ma28 > 0.10
+                
+                elif (  
+                    ma8_last > ma54_last
+                    and ma450_last < ma450_240_min_ago
+                    
+                    and macd > macd_2_min_ago
+                    
+                    and delta_1 < delta_2
+                    and ma100_last > ma100_30_min_ago
+                    
+                    and deviation_ma3_sopra_ma10 > 0.02
+                    and deviation_ma3_sopra_ma18 > 0.055
+                    and deviation_ma5_sopra_ma28 > 0.01
+               
+                    and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                     and macd > 5
                 ):
                     
-                    buy = "BUY 1 FOREVER YOUNG PIU' AGGRESSIVO (doppio delta < 1 E 100> ) (SOPRA RIALZO RIALZO) - GIORNO - se ma 200 > and macd > 2 min and macd >5 - r 4410"
+                    buy = "BUY 1 FOREVER YOUNG PIU' AGGRESSIVO (doppio delta < 1 E 100> ) (SOPRA RIALZO RIALZO) - GIORNO - se ma 200 > and macd > 2 min and macd >5 - r 4410b"
                     action = "buy"
                     percentage = 80
                     
