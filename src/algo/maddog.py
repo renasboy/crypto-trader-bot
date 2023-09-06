@@ -101,6 +101,7 @@ class maddog:
         ma20_60_min_ago = self.algo_helper.ma_minutes_ago(20, 60)
         ma25_2_min_ago = self.algo_helper.ma_minutes_ago(25, 2)
         ma28_2_min_ago = self.algo_helper.ma_minutes_ago(28, 2)
+        ma28_10_min_ago = self.algo_helper.ma_minutes_ago(28, 10)
         ma28_20_min_ago = self.algo_helper.ma_minutes_ago(28, 20)
         ma28_30_min_ago = self.algo_helper.ma_minutes_ago(28, 30)
         
@@ -7930,7 +7931,7 @@ class maddog:
                 
                 elif (
                     ma5_last > ma78_last
-                    and ma28_last > ma28_20_min_ago
+                    and ma28_last > ma28_10_min_ago
                     
                     and deviation_ma3_sopra_ma10 > 0.08
                     and deviation_ma5_sopra_ma28 > -0.02
@@ -7947,7 +7948,7 @@ class maddog:
                     and macd > macd_2_min_ago
                 ):
                
-                    buy = "BUY 2 con 5 > 78 che ci riprova quando se ne va lateralmente dopo il crollo CON 28>28 30 min ago and macd > macd_2_min_ago - r 5445 A1"
+                    buy = "BUY 2 con 5 > 78 che ci riprova quando se ne va lateralmente dopo il crollo CON 28>28 10 min ago and macd > macd_2_min_ago - r 5445 A1"
                     action = "buy"
                     percentage = 80
 
@@ -7956,6 +7957,8 @@ class maddog:
                     # 29 set 2022 28 20 min ago da 28 30 min ago
                     #  1 giu 2023 and macd > macd_2_min_ago
                     # 11 ago 2023 5-78 da 78-200
+                    #  6 set 2023 28 10 min da 28 20 min
+              
                     
                 # BUY 2 che ci riprova quando se ne va lateralmente dopo il crollo
                 
@@ -19041,15 +19044,15 @@ class maddog:
                     elif (    
                         ma50_last < ma50_2_min_ago 
                         and ma2_last < ma2_2_min_ago 
-                        and deviation_sell < -0.318
+                        and deviation_sell < -0.12
                         and ma200_last < ma200_60_min_ago
                         and ma50_last > ma100_last
                     ):
-                        sell = "SELL 2 (21-60 min) con ma50 < and deviation_sell < -0.318 - r 11650"
+                        sell = "SELL 2 (21-60 min) con ma50 < and deviation_sell < -0.12 - r 11650"
                         action = "sell"
                         
-                        # 26 set -0.318 da -0.32
-                        
+                        # 26 set 2022 -0.318 da -0.32
+                        #  6 set 2023 -0.12 da -0.32
                     
                     
                     elif (    
