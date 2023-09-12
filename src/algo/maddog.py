@@ -14319,7 +14319,7 @@ class maddog:
                         
                         and delta_1_200_78 > delta_2_200_78_60_min
                         and deviation_ma39 < -0.01
-                        and deviation_sell < -0.03
+                        and deviation_sell < -0.05
                         
                         and deviation_ma100_sopra_ma300 < 0.69
                         and deviation_ma100_sopra_ma300 > -0.77
@@ -14342,6 +14342,8 @@ class maddog:
                         # 30 ago 2023 dev_sell a -0.02 da -0.20
                         # 31 ago 2023 and macd < macd_2_min_ago
                         # 31 ago 2023 dev_sell a -0.03 da -0.02
+                        # 12 set 2023 dev_sell a -0.05 da -0.03
+                  
                         
                     # TREND LATERALE (100/300  < 0.69 and > -0.77)
                     
