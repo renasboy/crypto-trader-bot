@@ -12593,7 +12593,7 @@ class maddog:
               
                 elif (
                     
-                    ma8_last > ma100_last
+                    ma8_last > ma54_last
                     and ma78_last < ma150_last
                     
                     and ma100_last < ma100_120_min_ago
@@ -12617,7 +12617,7 @@ class maddog:
                     # 19 set 2022 aggiunta 3-10 0.07 
                     # 25 gen 2023 5-28 0.15 da 0.12
                     #  1 feb 2023 8-100 da 18-100
-
+                    # 12 set 2023 8-54 da 8-100
               
                     
                     
