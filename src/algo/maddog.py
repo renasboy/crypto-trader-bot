@@ -14327,6 +14327,7 @@ class maddog:
                         and ma3_last < ma300_last
                         and ma2_last < ma2_2_min_ago
                         and macd < macd_2_min_ago
+                        and macd < -1
                     ):
                         sell = "SELL 1 (21-50 min) con ma50 < E dev_ma39 <-0.01 E dev_sell < -0.02 TREND LATERALE (100>300 <0.69 and >-0.77) - r 9016 B2"
                         action = "sell"
@@ -14343,7 +14344,7 @@ class maddog:
                         # 31 ago 2023 and macd < macd_2_min_ago
                         # 31 ago 2023 dev_sell a -0.03 da -0.02
                         # 12 set 2023 dev_sell a -0.05 da -0.03
-                  
+                        # 12 set 2023 and macd < -1
                         
                     # TREND LATERALE (100/300  < 0.69 and > -0.77)
                     
