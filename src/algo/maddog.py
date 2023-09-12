@@ -23856,6 +23856,7 @@ class maddog:
                         action = "sell"
 
                   
+
                     elif (    
                         ma50_last < ma50_2_min_ago
                        
@@ -23874,6 +23875,58 @@ class maddog:
                     ):
                         sell = "SELL 4-5-x (21-60 min) con ma50 < and deviation_sell < -0.27 se 300 < 300 301 min ago - r 15349 B prova 2"
                         action = "sell"
+
+                  
+
+                    elif (    
+                        ma50_last < ma50_2_min_ago
+                       
+                        and deviation_sell < -0.12
+                        and ma3_last < ma39_last
+                        
+                        and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago < 1.50
+                        and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago > -1.50
+                        
+                        and deviation_ma78_sopra_o_sotto_ma78_600_min_ago > 0.10
+                        
+                        and ma300_last < ma300_301_min_ago
+                        and ma50_last < ma100_last
+                        
+                        and ma2_last < ma2_2_min_ago 
+                        
+                        and ma200_last < ma200_60_min_ago
+                    ):
+                        sell = "SELL 4-5-x (21-60 min) con ma50 < and deviation_sell < -0.27 se 300 < 300 301 min ago - r 15349 B prova 3"
+                        action = "sell"
+
+
+                  
+                    elif (    
+                        ma50_last < ma50_2_min_ago
+                       
+                        and deviation_sell < -0.01
+                        and ma3_last < ma39_last
+                        
+                        and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago < 1.50
+                        and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago > -1.50
+                        
+                        and deviation_ma78_sopra_o_sotto_ma78_600_min_ago < 0.10
+                        
+                        and ma300_last < ma300_301_min_ago
+                        and ma50_last < ma100_last
+                        
+                        and ma2_last < ma2_2_min_ago 
+                        
+                        and ma200_last < ma200_60_min_ago
+                    ):
+                        sell = "SELL 4-5-x (21-60 min) con ma50 < and deviation_sell < -0.27 se 300 < 300 301 min ago - r 15349 B prova 4"
+                        action = "sell"
+
+
+
+
+
+                  
 
                   
                     elif (    
