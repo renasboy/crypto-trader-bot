@@ -137,8 +137,10 @@ class maddog:
         ma78_2_min_ago = self.algo_helper.ma_minutes_ago(78, 2)
         ma78_30_min_ago = self.algo_helper.ma_minutes_ago(78, 30)
         ma78_60_min_ago = self.algo_helper.ma_minutes_ago(78, 60)
-        ma78_120_min_ago = self.algo_helper.ma_minutes_ago(78, 120)
+        
         ma78_70_min_ago = self.algo_helper.ma_minutes_ago(78, 70)
+        ma78_120_min_ago = self.algo_helper.ma_minutes_ago(78, 120)
+        ma78_240_min_ago = self.algo_helper.ma_minutes_ago(78, 240)
         ma78_600_min_ago = self.algo_helper.ma_minutes_ago(78, 600)
         
         ma100_2_min_ago = self.algo_helper.ma_minutes_ago(100, 2)
@@ -20448,7 +20450,9 @@ class maddog:
                         
                         
                         
-                 
+
+
+                  
                     # ATTENZIONE : DOPO 110 MIN forse E' NECESSARIA SOLO QUESTA !
                   
                     elif (    
@@ -20465,6 +20469,10 @@ class maddog:
                         # > estate -0.15 da +0.02
                         # 10 dic 2022 -0.17 da -0.15
                         # 26 feb 2023 -0.19 da -0.17
+
+
+
+                  
                         
                         
                     elif (    
