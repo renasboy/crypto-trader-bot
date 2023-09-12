@@ -2223,9 +2223,9 @@ class maddog:
                     and deviation_ma39_sotto_ma200 < -0.01
                     and deviation_ma300_sopra_ma450 > -0.35
                     
-                    and deviation_ma3_sopra_ma10 > 0.05
-                    and deviation_ma3_sopra_ma16 > 0.07
-                    and deviation_ma3_sopra_ma18 > 0.09
+                    and deviation_ma3_sopra_ma10 > 0.03
+                    and deviation_ma3_sopra_ma16 > 0.05
+                    and deviation_ma3_sopra_ma18 > 0.07
                     
                     and ma2_last >= ma20_last
                   
@@ -2252,6 +2252,7 @@ class maddog:
                     # 31 lug 2023 and deviation_ma3_sopra_ma18 > 0.12
                     # 11 ago 2023 0.06 0.08 0.10 antcipo ndecchiecella
                     # 30 ago 2023 0.05 0.07 0.09 antcipo ndecchiecella
+                    # 12 set 2023 0.03 0.05 0.07 antcipo ndecchiecella
               
                 # BUY 1 tempo ESTATE PIU' VELOCE 100 > 60 min ago (solo l' estate se lo puo' perettere!) considera il passare del TEMPO ! ma30 > 
                 
@@ -25156,7 +25157,7 @@ class maddog:
             elif (
                 ma78_last < ma78_120_min_ago 
                 and deviation_ma39 < 0.05
-                and deviation_sell < -0.30
+                and deviation_sell < -0.05
                 and ma2_last <= ma2_2_min_ago 
                 
                 and ma50_last <= ma50_2_min_ago
@@ -25190,6 +25191,8 @@ class maddog:
                 # 11 ago 2023 and deviation_sell < -0.30 da -0.32
                 # 16 ago 2023 aggiunto macd < macd 2 min ago
                 # 24 ago 2023 and deviation_ma39 < 0.05 ! il 22 ago ha fatto -1.20 !
+                # 12 set 2023 and dev sell < -0.05 da -0.30
+          
                 #########################################################################################################################
                 
                 
