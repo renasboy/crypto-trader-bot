@@ -17528,7 +17528,8 @@ class maddog:
                         # 6 apr 2023 5-150 da 5-125
                         # 19 apr 2023 aggiunta macd > macd 2 min ago - solo dopo 110 min !
                         #  3 mag 2023 5-250 da 5-150 e vendita con pareggio.
-                        # 12 ago 2023 8-300 da 5-250 
+                        # 12 ago 2023 8-300 da 5-250
+                  
                         
                     elif (    
                         ma50_last < ma50_2_min_ago
@@ -18621,12 +18622,13 @@ class maddog:
                     elif (
                         ma50_last < ma50_2_min_ago
                         and deviation_ma5_sotto_ma300 < 0.50
-                        and deviation_ma39 < -0.199
-                        and deviation_sell < -0.30
+                        and deviation_ma39 < -0.05
+                        and deviation_sell < -0.12
+                        
                         and ma2_last < ma2_2_min_ago
                       
                     ):
-                        sell = "SELL 2 (12-21 min) con ma50 < and deviation_ma39 < -0.199 and dev sell -0.30 - r 11206 B"
+                        sell = "SELL 2 (12-21 min) con ma50 < and deviation_ma39 < -0.05 and dev sell -0.12 - r 11206 B"
                         action = "sell"
                         
                         
@@ -18634,8 +18636,8 @@ class maddog:
                         # HO NOTATO CHE ANCHE INCROCIO 5-100 SAREBBE ARRIVATO TARDI
                         
                         # > estate se 5 vicina 300 ma39 -0.199 da -0.19 e dev sell -0.30
-                    
-                    
+                        # 12 set 2023 dev 39 a -0.05 da -0.199
+                        # 12 set 2023 dev sell a -0.12 da -0.30
                     
                     elif (
                         ma50_last < ma50_2_min_ago
