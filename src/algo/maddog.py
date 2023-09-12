@@ -10012,15 +10012,17 @@ class maddog:
                 elif (
                     
                     deviation_buy_crollo_1 < -0.60
-                    and deviation_buy_crollo_1 > -1.50
+                    and deviation_buy_crollo_1 > -1.60
+                    
+                    and ma78_last < ma200_last
                     
                     and delta_1_69_39 < delta_2_69_39
                     
-                    and ma5_last > ma16_last
+                    and ma5_last > ma13_last
                     and deviation_ma3_sopra_ma10 > 0.02
                     
                     and ma2_last > ma2_2_min_ago
-                    and ma78_last < ma200_last
+                    and macd > macd_2_min_ago
                     
                 ):
                     buy = "BUY 3 importata da RCCR - AUDI CHE NON E' UN CROLLO ! con 5-16 and 3-10 con DOPPIO DELTA 69-39 GIORNO - r 6388 A"
@@ -10030,7 +10032,7 @@ class maddog:
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     # questa cosa che 78 deve essere < 200 ha dell' incredibile. MA NON TOCCARE !   
                     # 15 nov 2022 AGGIUNTA 3-10 vedi 8 nov ore 21:23
-                    
+                    # 12 set 2023 dev sell 5-13 da 5-16 con aggiunta di macd > macd 2 min ago
                     
                 elif (
                     
