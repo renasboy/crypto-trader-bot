@@ -14180,20 +14180,20 @@ class maddog:
                     
                     elif (
                         ma50_last < ma50_2_min_ago
-                        and deviation_ma39 < -0.16
-                        and deviation_sell < -0.29
+                        and deviation_ma39 < -0.01
+                        and deviation_sell < -0.10
                         and ma2_last < ma2_2_min_ago
                         
                         and deviation_ma100_sopra_ma300 > 0.69
                     ):   
-                        sell = "SELL 1 (21-50 min) con ma50 < con deviation_ma39 <-0.16 and dev_sell< -0.29 TREND CRESCITA (100 sopra 300 > 0.69) - r 8978"
+                        sell = "SELL 1 (21-50 min) con ma50 < con deviation_ma39 <-0.01 and dev_sell< -0.10 TREND CRESCITA (100 sopra 300 > 0.69) - r 8978"
                         action = "sell"
                         
                         # se non ha forza dopo 1 ora e' inutile continuare a sperare !
                         # qui non ho messo il crollo perche' dopo 40 min o gia' ha venduto o e' gia' risalita
                         # cuscino dell' angelo custode
-                        
-                        
+                        # 12 set 2023dev 39 -0.01 da -0.15
+                        # 12 set 2023 dev sell -0.10 da -0.20
                         
                     
                     # cuscino sant' antonio
