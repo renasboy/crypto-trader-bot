@@ -20530,8 +20530,8 @@ class maddog:
                    
                         sell = "SELL 2 > 110 min con dev sell -0.19 forse E' NECESSARA SOLO QUESTA ! and 300> 300 5 ore fa and macd < macd 2 min ago - r 12681 A1 prova 4"
                         action = "sell"
+                      
 
-                  
                     elif (    
                         ma3_last < ma100_last
                         and deviation_sell < -0.10
@@ -20546,6 +20546,23 @@ class maddog:
                     ):
                    
                         sell = "SELL 2 > 110 min con dev sell -0.19 forse E' NECESSARA SOLO QUESTA ! and 300> 300 5 ore fa and macd < macd 2 min ago - r 12681 A1 prova 5"
+                        action = "sell"
+
+                    
+                    elif (    
+                        ma3_last < ma100_last
+                        and deviation_sell < -0.01
+                        
+                        and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago < -1.50
+                        and deviation_ma78_sopra_o_sotto_ma78_240_min_ago < 0.10
+                        
+                        and ma300_last > ma300_301_min_ago
+                        
+                        and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
+                    ):
+                   
+                        sell = "SELL 2 > 110 min con dev sell -0.19 forse E' NECESSARA SOLO QUESTA ! and 300> 300 5 ore fa and macd < macd 2 min ago - r 12681 A1 prova 6"
                         action = "sell"
                         
                         
