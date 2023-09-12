@@ -376,6 +376,11 @@ class maddog:
 
 
 
+        # formula DEVIATION_ma78_sopra_o_sotto_ma78_240_min_ago - !
+        
+        deviation_ma78_sopra_o_sotto_ma78_240_min_ago = (ma78_last / ma78_240_min_ago - 1) * 100 if ma78_240_min_ago else 0
+        self.algo_helper.info("deviation_ma78_sopra_o_sotto_ma78_240_min_ago: {}".format(deviation_ma78_sopra_o_sotto_ma78_240_min_ago))
+
       
         # formula DEVIATION_ma78_sopra_o_sotto_ma78_600_min_ago - !
         
@@ -20457,6 +20462,26 @@ class maddog:
                   
                     elif (    
                         ma3_last < ma100_last
+                        and deviation_sell < -0.19
+                        
+                        and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago > 1.50
+                        and deviation_ma78_sopra_o_sotto_ma78_240_min_ago > 0.10
+                        
+                        and ma300_last > ma300_301_min_ago
+                        
+                        and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
+                    ):
+                   
+                        sell = "SELL 2 > 110 min con dev sell -0.19 forse E' NECESSARA SOLO QUESTA ! and 300> 300 5 ore fa and macd < macd 2 min ago - r 12681 A1 prova 1"
+                        action = "sell"
+                        
+                        
+
+                  
+                    elif (    
+                        ma3_last < ma100_last
+                        
                         and ma300_last > ma300_301_min_ago
                         and deviation_sell < -0.19
                         and ma2_last < ma2_2_min_ago
@@ -20469,6 +20494,9 @@ class maddog:
                         # > estate -0.15 da +0.02
                         # 10 dic 2022 -0.17 da -0.15
                         # 26 feb 2023 -0.19 da -0.17
+
+
+                  
 
 
 
