@@ -24633,9 +24633,33 @@ class maddog:
                 # deviation_ma39 = ma4_last / ma39_last QUESTA HA VENDUTO NEL CROLLO IMPROVVISO DI 1 MINUTO (con -2.06% !)
                 # 23 feb 2023 dev 5 sotto 200 > -0.90 da > -1.00
                 
-            
+
+
+
+
+
+          
             # 3 - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 > -1.00
-            
+
+          
+            elif (
+                deviation_ma39 < -0.20
+                and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago > 1.50
+                and deviation_ma78_sopra_o_sotto_ma78_600_min_ago > 0.30
+                
+                and deviation_ma39 < -0.20
+                and deviation_sell < -0.308
+                and ma2_last <= ma2_2_min_ago 
+                and delta_450_300 < delta_450_300_60_min
+                and ma50_last < ma50_2_min_ago
+                and deviation_ma100_sopra_ma300 > 0.20
+                
+                and deviation_ma3_sotto_ma150 > -1.20
+            ):
+                sell = "SELL cond. special 3 - SALVAGENTE 3 3-39 < -0.20 e dev sell < -0.31 and dev_sell< -0.308 con ma50< e dev_ma3_sotto_ma200 > -1.20 - r 15985 A1 prova 1"
+                action = "sell"
+
+          
             elif (
                 deviation_ma39 < -0.20
                 and deviation_sell < -0.308
@@ -24662,6 +24686,13 @@ class maddog:
                 # 20 feb 2023 -0.309 da -0.303 con doppio delta 450-300 GIORNO !
                 # 22 feb 2023 -0.308 da -0.309 con doppio delta 450-300 GIORNO !
                 #  9 lug 2023 deviation_ma39 < -0.20 da < -0.24
+
+
+
+
+
+
+          
                 
             elif (
                 deviation_ma39 < -0.24
