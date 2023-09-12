@@ -24926,7 +24926,7 @@ class maddog:
 
             elif (
                 deviation_ma39 < -0.01
-                and deviation_sell < -0.10
+                and deviation_sell < -0.01
                 and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago > 1.50
                 and deviation_ma10_sopra_o_sotto_ma10_30_min_ago < 0.10
                 
