@@ -16869,18 +16869,22 @@ class maddog:
                         # 19 set 2022 IMPORTATO DA RCCR > sell 4:18 del 19 set -1.65 % !
                         # 19 set 2022 deviation_ma39 < -0.22 AND and deviation_sell < -0.22
                         # 31 lug 2023 and deviation_ma39 < -0.10 da -0.22
-                        # 31 lug 2023 and deviation_trend_ma200 < -0.08 da < -0.08 
+                        # 31 lug 2023 and deviation_trend_ma200 < -0.08 da < -0.08
+
+                  
                   
                     elif (     
                         ma50_last < ma50_2_min_ago
                         and ma300_last > ma300_120_min_ago
                         and ma3_last < ma39_last
-                        and deviation_sell < -0.241
+                        and deviation_sell < 0.20
                         
-                        and ma2_last <= ma2_2_min_ago
+                        
                         and deviation_trend_ma200 > -0.15
                         and ma200_last > ma300_last
                         
+                        and ma2_last <= ma2_2_min_ago
+                        and macd < macd_2_min_ago
                     ):
                         sell = "SELL 1 da 110 a 239 min E 300 > 120 min ago e con ma50 < (dev_sell < -0.241 and ma3_last < ma39_last) con > PERDITA TOL - r 10274 A1"
                         action = "sell"
@@ -16890,6 +16894,9 @@ class maddog:
                         # 27 apr 2023 dev sell -0.241 da -0.243 (dopo che con -0.243 ha fatto -0.86% !)
                         # 27 apr 2023 and deviation_trend_ma200 a > -0.15 da > -0.13
                         
+                        # 12 set 2023 and dev sell 0.20 da -0.24 (con il macd che comincia a scendere puo' vendere anche con un po' di guadagno invece di vendere in perdita.)
+                        # 12 set 2023 and macd < macd 2 min ago
+                  
                     elif (     
                         ma50_last < ma50_2_min_ago
                         and deviation_ma100_sopra_ma300 > 0.30
