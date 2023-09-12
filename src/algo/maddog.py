@@ -26478,17 +26478,18 @@ class maddog:
             elif (
                 deviation_sell > 0.91
                 and macd < macd_2_min_ago
-                and macd < -10
-                and macd_differenza < -25
+                and macd < -9
+                and macd_differenza < -24
                 
                 and ma2_last < ma2_2_min_ago
                  
             ):    
                 sell = "SELL condizione speciale 42 - POCHI MALEDETTI E SUBITO con deviation > 1.01 e macd < -10 e MACD DIFFERENZA < -25 - r 16875"
                 action = "sell"
-                #  1 set 2023 se per es macd passa da 18 a -11 vendi     
                 
-
+                #  1 set 2023 se per es macd passa da 18 a -11 vendi     
+                # 12 set 2023 macd < -9 da -10
+                # 12 set 2023 macd DIFFERENZA -24 da -25
           
                 
                 
