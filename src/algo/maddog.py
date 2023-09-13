@@ -19781,13 +19781,13 @@ class maddog:
                         
                     elif (
                         ma50_last < ma50_2_min_ago
-                        and deviation_ma39 < -0.29
+                        and deviation_ma39 < -0.22
                         
                         and deviation_trend_ma200 > -0.12
                         and ma200_last > ma300_last
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 2 da 60 a 90 min con MOLTA PERDITA TOLLERATA con ma50 < con deviation_ma39 < -0.29 - r 12140"
+                        sell = "SELL 2 da 60 a 90 min con MOLTA PERDITA TOLLERATA con ma50 < con deviation_ma39 < -0.22 - r 12140"
                         action = "sell"
                         
                         # and ma3_last < ma33_last
@@ -19797,7 +19797,7 @@ class maddog:
                         # cuscino dell' angelo custode
                         
                         # > vacanza -0.29 da -0.19
-                        
+                        # 13 set 2023 dev 39 -0.22 da -0.29
                         
                     
                     elif (
