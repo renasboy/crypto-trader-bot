@@ -10600,7 +10600,7 @@ class maddog:
                     and ma450_last > ma450_480_min_ago
                     
                     and deviation_ma3_sopra_ma10 > 0.07
-                    and deviation_ma5_sopra_ma28 > 0.01
+                    and deviation_ma5_sopra_ma28 > -0.01
                   
                     and ma3_last > ma13_last
                     and ma4_last > ma9_last
@@ -10608,7 +10608,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                     and macd > macd_2_min_ago
                 ):
-                    buy = "BUY 3 laterale IMPORTATA DA BUY 4 RCCR - r 6599 A1yA"
+                    buy = "BUY 3 con 450 > 450 480 min MA CONSIDERATA ANCORA LATERALE - r 6599 A1yA"
                     action = "buy"
                     percentage = 60
                     
@@ -10620,7 +10620,8 @@ class maddog:
                     # 17 gen 2023 dev bellissima 0.02 da 0.045
                     # 31 lug anticipata (ma450_last > ma450_480_min_ago !)
                     # 11 ago 2023 4-30 da 4-50
-
+                    # 13 set 2023 5-28 a -0.01 da 0.01 ( cioe' un po' prima se ma450 sale da 480 min! )
+              
                   
                     
                 elif (
