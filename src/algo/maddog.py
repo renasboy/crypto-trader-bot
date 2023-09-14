@@ -2221,11 +2221,11 @@ class maddog:
                     ma5_last > ma20_last
                     
                     and deviation_ma39_sotto_ma200 < -0.01
-                    and deviation_ma300_sopra_ma450 > -0.35
+                    and deviation_ma300_sopra_ma450 > -0.45
                     
-                    and deviation_ma3_sopra_ma10 > 0.03
-                    and deviation_ma3_sopra_ma16 > 0.05
-                    and deviation_ma3_sopra_ma18 > 0.07
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > 0.03
+                    and deviation_ma3_sopra_ma18 > 0.05
                     
                     and ma2_last >= ma20_last
                   
@@ -2252,7 +2252,11 @@ class maddog:
                     # 31 lug 2023 and deviation_ma3_sopra_ma18 > 0.12
                     # 11 ago 2023 0.06 0.08 0.10 antcipo ndecchiecella
                     # 30 ago 2023 0.05 0.07 0.09 antcipo ndecchiecella
-                    # 12 set 2023 0.03 0.05 0.07 antcipo ndecchiecella
+                    # 12 set 2023 0.03 0.05 0.07 antcipo ndecchiecella 
+                    
+                    # 13 set 2023 and deviation_ma300_sopra_ma450 > -0.35 da -0.45
+                    # 13 set 2023 0.01 0.03 0.05 antcipo ndecchiecella 
+
               
                 # BUY 1 tempo ESTATE PIU' VELOCE 100 > 60 min ago (solo l' estate se lo puo' perettere!) considera il passare del TEMPO ! ma30 > 
                 
@@ -7780,7 +7784,7 @@ class maddog:
                 # ------------------------------------------------------------ BUY 2 laterale
               
                 elif (    
-                    ma5_last > ma39_last
+                    ma5_last > ma28_last
                     
                     and ma300_last > ma300_120_min_ago
                     and ma450_last > ma450_480_min_ago
@@ -7788,11 +7792,12 @@ class maddog:
                     and ma300_last > ma450_last
                     
                     and deviation_ma100_sopra_ma300 < 0.20
-                    and deviation_ma100_sopra_ma300 > -0.20
+                    and deviation_ma100_sopra_ma300 > -0.30
                     
                     and deviation_ma3_sopra_ma18 > 0.02
+                    
                     and macd >= macd_2_min_ago
-                    and macd > 4
+                    and macd > 3.70
                 ):  
                 
                     buy = "BUY 2 laterale con 300>450 - r 5412 X1a"
@@ -7801,8 +7806,10 @@ class maddog:
                   
                     # 11 ago 2023 anticipato ndecchiecella
                     # 11 ago 2023 and macd > 4
-
-                    
+                    # 14 set 2023 and deviation_ma100_sopra_ma300 > -0.30 da -0.20
+                    # 14 set 2023 5-28 da 5-39
+                    # 14 set 2023 and macd > 3.70 da 4
+              
                 elif (    
                     ma5_last > ma39_last
                     and ma78_last < ma78_60_min_ago
@@ -10675,9 +10682,9 @@ class maddog:
                     and deviation_ma3_sopra_ma10 > 0.05
                     and deviation_ma5_sopra_ma28 > 0.01
                     
-                    and deviation_bellissima > 0.05
-                    and deviation_buy3 > 0.05
-                    and deviation_ma7_sopra_ma40 > 0.05
+                    and deviation_bellissima > 0.04
+                    and deviation_buy3 > 0.04
+                    and deviation_ma7_sopra_ma40 > 0.04
                
                     and ma3_last > ma13_last
                     and ma4_last > ma9_last
@@ -10686,17 +10693,20 @@ class maddog:
                     and ma7_last > ma25_last
                     
                     and ma2_last > ma2_2_min_ago
-             
+                    and macd > macd_2_min_ago
                 ):
                     buy = "BUY 3 IN BASSO 78>100 E con ma69 > and dev_bellissima > 0.12 IMPORTATA DA BUY 4 RCCR - r 6599 A1z"
                     action = "buy"
                     percentage = 50
                     
-                    # 28 set aggiunta 3-10
+                    # 28 set 2022 aggiunta 3-10
                     #  2 ott 2022 dev bellissima 0.10 da 0.12
                     
-                    
-                    
+                    # 14 set 2023 bellissima a 0.04 da 0.05
+                    # 14 set 2023 buy3 a 0.04 da 0.05
+                    # 14 set 2023 7-40 a 0.04 da 0.05
+
+              
                     
                 # BUY 3 con ma69 > and deviation_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali) IMPORTATA DA BUY 4 RCCR
                 
@@ -16615,23 +16625,28 @@ class maddog:
                         
                     elif (    
                         ma50_last < ma50_2_min_ago
+                        and ma4_last < ma150_last
+                        
                         and ma100_last > ma150_last
-                        and ma5_last < ma150_last
-                        and deviation_sell > 0.20
-                        and ma5_last < ma5_2_min_ago
                         and ma300_last > ma300_120_min_ago
                         and ma100_last > ma100_60_min_ago
+                        
+                        and deviation_sell > 0.20
+                        and deviation_ma39 < -0.05
+                        
+                        and ma5_last < ma5_2_min_ago
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 da 110 a 239 min con ma50 < MA ma100 > E ma300 > e con 5-150 - r 10262 A1y"
+                        sell = "SELL 1 da 110 a 239 min con ma50 < MA ma100 > E ma300 > e con 4-150 - r 10262 A1y"
                         action = "sell"
                         
                         # ma39 NON DEVE VENDERE in fase laterale ma in alto
                         # 17 gen 2023 dwc ma39 <-0.197 da <-0.195
                         # 25 gen 2023 5-125 da 3-125
                         # 29 gen 2023 5-150 da 5-125
-                        
-                        
+                        # 14 set 2023 aggiunta and deviation_ma39 < -0.05
+                        # 14 set and 4-150 da 5-150 
+                  
                         
                     elif (    
                         ma50_last < ma50_2_min_ago
