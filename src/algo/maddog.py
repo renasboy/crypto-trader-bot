@@ -10414,7 +10414,7 @@ class maddog:
                 
                 elif (
                     
-                    ma18_last > ma78_last
+                    ma8_last > ma78_last
                     and deviation_ma5_sotto_ma300 > -0.40
                     
                     and ma100_last < ma100_120_min_ago
@@ -10426,17 +10426,18 @@ class maddog:
                     
                     and deviation_ma3_sopra_ma16 > 0.12
                     and deviation_ma5_sopra_ma28 > 0.08
-                    and ma2_last >= ma2_2_min_ago
                     
+                    and ma2_last >= ma2_2_min_ago
+                    and macd > macd_2_min_ago
                 ):
-                    buy = "BUY 3 29 ago 2022 > 120 min di ribasso AND 18>78 - r 6570 A"
+                    buy = "BUY 3 29 ago 2022 > 120 min di ribasso AND 8>78 - r 6570 A"
                     action = "buy"
                     percentage = 90
                     
                     # 14 set 2022 18-78 da 18-100
                     #  8 nov 2022 300 con 120 min faceva arrivare tardi il buy. cosi' ho ridotto a 30 min. (non era la 18-78 che faceva arrivare tardi il buy)
                     # 17 mar 2023 aggiunta 3-16 >0.12
-                    
+                    # 14 set 2023 8-78 da 18-78
                     
                     
                 # BUY 3 29 ago 2022 > 120 min di ribasso
