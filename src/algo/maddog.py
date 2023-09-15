@@ -103,7 +103,9 @@ class maddog:
         ma20_22_min_ago = self.algo_helper.ma_minutes_ago(20, 22)
         ma20_60_min_ago = self.algo_helper.ma_minutes_ago(20, 60)
         ma25_2_min_ago = self.algo_helper.ma_minutes_ago(25, 2)
+        
         ma28_2_min_ago = self.algo_helper.ma_minutes_ago(28, 2)
+        ma28_5_min_ago = self.algo_helper.ma_minutes_ago(28, 5)
         ma28_10_min_ago = self.algo_helper.ma_minutes_ago(28, 10)
         ma28_20_min_ago = self.algo_helper.ma_minutes_ago(28, 20)
         ma28_30_min_ago = self.algo_helper.ma_minutes_ago(28, 30)
@@ -8088,7 +8090,7 @@ class maddog:
                 
                 elif (
                     ma5_last > ma78_last
-                    and ma28_last > ma28_10_min_ago
+                    and ma28_last > ma28_5_min_ago
                     
                     and deviation_ma3_sopra_ma10 > 0.08
                     and deviation_ma5_sopra_ma28 > -0.02
@@ -8105,7 +8107,7 @@ class maddog:
                     and macd > macd_2_min_ago
                 ):
                
-                    buy = "BUY 2 con 5 > 78 che ci riprova quando se ne va lateralmente dopo il crollo CON 28>28 10 min ago and macd > macd_2_min_ago - r 5445 A1"
+                    buy = "BUY 2 con 5 > 78 che ci riprova quando se ne va lateralmente dopo il crollo CON 28>28 5 min ago and macd > macd_2_min_ago - r 5445 A1"
                     action = "buy"
                     percentage = 80
 
@@ -8115,7 +8117,7 @@ class maddog:
                     #  1 giu 2023 and macd > macd_2_min_ago
                     # 11 ago 2023 5-78 da 78-200
                     #  6 set 2023 28 10 min da 28 20 min
-              
+                    # 15 set 2023 28 5 min da 28 10 min
                     
                 # BUY 2 che ci riprova quando se ne va lateralmente dopo il crollo
                 
