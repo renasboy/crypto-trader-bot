@@ -1,4 +1,4 @@
-
+compa ho scritto il tuo nome sulla sabbia
 class maddog:
   
     def __init__(self, helper, buy_percentage, sell_percentage):
