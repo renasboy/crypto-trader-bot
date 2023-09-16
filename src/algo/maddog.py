@@ -11529,26 +11529,22 @@ class maddog:
                     
                     
                 elif (
-                    ma39_last >= ma39_2_min_ago
-                    and ma300_last > ma300_60_min_ago
-                    and deviation_ma250_sopra_ma300 < 0.04
-                    and deviation_ma250_sopra_ma300 > -0.04
+                    ma28_last >= ma28_2_min_ago
+                    and ma3_last > ma8_last
+                    and ma5_last > ma54_last
+                    and ma7_last > ma25_last
                     
-                    and deviation_buy3 > 0.015
-                    and deviation_ma5_sopra_ma28 > 0.05
-                    and deviation_ma4_sopra_ma30 > 0.08
+                    and ma300_last > ma300_60_min_ago
+                    and deviation_ma250_sopra_ma300 < 0.10
+                    and deviation_ma250_sopra_ma300 > -0.10
                     
                     and delta_buy3_incrocio_ma3_ma8 > 0.05
                     
-                    
-                    and ma3_last > ma8_last
-                    and ma3_last > ma78_last
-                    
+                    and deviation_ma4_sopra_ma30 > 0.08
+                    and deviation_ma5_sopra_ma28 > 0.05
+              
                     and ma2_last > ma2_2_min_ago
-                    and ma7_last > ma25_last
-                    
-                    and ma13_last > ma100_last
-                    
+             
                 ):
                     buy = "BUY 4B RIVOLUZIONARIO con ma78 > - r 6859 B"
                     action = "buy"
@@ -11557,7 +11553,7 @@ class maddog:
                     # deviation_buy3 = ma4_last/ma30_last
                     # deviation_ma4_sopra_ma100 > 0.25 arrivati al buy 4 DEVE AVERE UNA CERTA FORZA !
                     # ma se 250 > 300 ! serve una forza minore
-                    
+                    # 16 set 2023 anticipato ndecchiecella
                     
                     
                 elif (
@@ -25496,8 +25492,8 @@ class maddog:
                 ma78_last < ma78_120_min_ago
                 and ma300_last < ma300_301_min_ago
                 
-                and deviation_ma39 < 0.10
-                and deviation_sell < 0.10
+                and deviation_ma39 < 0.05
+                and deviation_sell < -0.05
                 
                 
                 and ma50_last <= ma50_2_min_ago
@@ -25508,7 +25504,7 @@ class maddog:
                 and ma2_last <= ma2_2_min_ago 
                 and macd < macd_2_min_ago
             ):
-                sell = "SELL condizione speciale 6 con ma300> 5 ore - SALVAGENTE 4 deviation 3-39 < 0.10 and dev_sell < 0.10 - con ma50 < e con ma5 sotto ma200 > -0.90 - r 16047 B2"
+                sell = "SELL condizione speciale 6 con ma300> 5 ore - SALVAGENTE 4 deviation 3-39 < 0.05 and dev_sell < -0.05 - con ma50 < e con ma5 sotto ma200 > -0.90 - r 16047 B2"
                 action = "sell"
                 
                 # 15 set 2023 quando 300 scende da 5 ore non devi vendere in perdita ! a ricomprare ci penseranno altre condizioni !
