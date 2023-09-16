@@ -10620,7 +10620,6 @@ class maddog:
                     # 16 set 2023 5-78 invece di 5-200
               
 
-                
                 elif (
                     
                     ma5_last > ma54_last
@@ -10641,6 +10640,37 @@ class maddog:
                     and macd > 5
                 ):
                     buy = "BUY 3 29 ago 2022 > 180 min di ribasso con 5-78 - r 6572 A2"
+                    action = "buy"
+                    percentage = 90
+                    
+                    # 13 feb 2023 3-10 > 0.02
+                    #  1 ago 2023 5-200 invece di 10-100
+                    # 24 ago 2023 and macd > macd_2_min_ago
+                    # 24 ago 2023 and macd > 5
+                    # 16 set 2023 5-78 invece di 5-200
+
+                
+                elif (
+                    
+                    ma5_last > ma59_last
+                    and deviation_ma5_sotto_ma300 < -0.17
+                    and deviation_ma5_sotto_ma300 > -0.42
+                    
+                    and ma100_last < ma100_180_min_ago
+                    and ma200_last < ma200_180_min_ago
+                    and ma300_last < ma300_180_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.02
+                    and deviation_ma5_sopra_ma28 > 0.02
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd > macd_2_min_ago
+                    and macd > 5
+                ):
+                    buy = "BUY 3 29 ago 2022 > 180 min di ribasso con 5-78 - r 6572 A3"
                     action = "buy"
                     percentage = 90
                     
