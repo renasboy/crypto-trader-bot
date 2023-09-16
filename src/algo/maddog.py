@@ -10589,7 +10589,7 @@ class maddog:
                 
                 elif (
                     
-                    ma5_last > ma200_last
+                    ma5_last > ma78_last
                     and deviation_ma5_sotto_ma300 > -0.45
                     
                     and ma100_last < ma100_180_min_ago
@@ -10606,7 +10606,7 @@ class maddog:
                     and macd > macd_2_min_ago
                     and macd > 5
                 ):
-                    buy = "BUY 3 29 ago 2022 > 180 min di ribasso con 5-200 - r 6572 A"
+                    buy = "BUY 3 29 ago 2022 > 180 min di ribasso con 5-78 - r 6572 A"
                     action = "buy"
                     percentage = 90
                     
@@ -10614,7 +10614,8 @@ class maddog:
                     #  1 ago 2023 5-200 invece di 10-100
                     # 24 ago 2023 and macd > macd_2_min_ago
                     # 24 ago 2023 and macd > 5
-                    
+                    # 16 ago 2023 5-78 invece di 5-200
+                
                     
                 # BUY 3 29 ago 2022 > 180 min di ribasso
                 
