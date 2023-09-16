@@ -12522,25 +12522,62 @@ class maddog:
                 # ATTENZIONE ! AL BUY 5 TRANNE CHE IN UNA EVENTUALE CORREZIONE HO MESSO 78>150 STIAMO AL BUY 5 PERDIO !
                 # SENZA QUESTA 78>150 HO AVUTO MOLTI PROBLEMI !
                 
+                elif (
+                    
+                    ma450_last > ma450_360_min_ago
+                    and ma78_last > ma150_last
+                    
+                    and deviation_ma4_sopra_ma100 > 0.01
+                    
+                    and deviation_buy3 > 0.01
+                    and deviation_bellissima > 0.01
+                    and deviation_ma7_sopra_ma40 > 0.10
+                    
+                    and ma3_last > ma13_last
+                    
+                    and ma4_last > ma9_last
+                    and ma4_last > ma50_last
+                    and ma6_last > ma15_last
+                    and ma7_last > ma25_last
+                    
+                    and ma2_last >= ma2_2_min_ago
+              
+                ):
+                    buy = "BUY 5A con ma450_last > ma450_360_min_ago - r 7384 A"
+                    action = "buy"
+                    percentage = 70
+                    
+                    # deviation_bellissima = 6/30
+                    # spezzare la catena dei buy - effetti laterali !
+                    # se e' arrivato il buy 5 e' molto probabile che il trend sia consolidato
+                    # e, a questo punto, non importa se compra con un + 0.10 piu' in alto. NON FA UNA GRANDE DIFFERENZA !
+                    
+                    # > vacanza anticipato buy
+
                 
                 elif (
-                    ma78_last >= ma78_2_min_ago
+                    
+                    ma450_last < ma450_360_min_ago
                     and ma78_last > ma150_last
                     
                     and deviation_ma4_sopra_ma100 > 0.10
                     
                     and deviation_buy3 > 0.10
                     and deviation_bellissima > 0.10
-                    and ma3_last > ma13_last
                     and deviation_ma7_sopra_ma40 > 0.10
+                    
+                    
                     and ma4_last > ma9_last
                     and ma4_last > ma50_last
                     and ma6_last > ma15_last
                     and ma7_last > ma25_last
+                    
+                    and ma3_last > ma13_last
+                    
                     and ma2_last >= ma2_2_min_ago
               
                 ):
-                    buy = "BUY 5A con ma78 > and deviation_bellissima > 0.163 (PER SPEZZARE LA CATENA - effetti laterali) - r 7384"
+                    buy = "BUY 5A con con ma450_last > ma450_360_min_ago and deviation_bellissima > 0.163 (PER SPEZZARE LA CATENA - effetti laterali) - r 7384 B"
                     action = "buy"
                     percentage = 70
                     
