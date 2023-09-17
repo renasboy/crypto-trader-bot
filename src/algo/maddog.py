@@ -10809,12 +10809,13 @@ class maddog:
                     
                     
                     
-                    
+                # deviation_ma5_sopra_o_sotto_ma100    
                 # BUY 3 IN MEZZO (effetti laterali) con ma69 > and deviation_bellissima > 0.12 IMPORTATA DA BUY 4 RCCR
-                
                 elif (
                     
                     ma4_last > ma30_last
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.11
+                    
                     and deviation_ma100_sopra_ma300 < 0.25
                     and deviation_ma100_sopra_ma300 > -0.25
                     
@@ -10829,7 +10830,55 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                     and macd > macd_2_min_ago
                 ):
-                    buy = "BUY 3 con 450 > 450 480 min MA CONSIDERATA ANCORA LATERALE - r 6599 A1yA"
+                    buy = "BUY 3 con 450 > 450 480 min MA CONSIDERATA ANCORA LATERALE - r 6599 A1yA1"
+                    action = "buy"
+                    percentage = 60
+
+                elif (
+                    
+                    ma4_last > ma20_last
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.11
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.20
+                    
+                    and deviation_ma100_sopra_ma300 < 0.25
+                    and deviation_ma100_sopra_ma300 > -0.25
+                    
+                    and ma450_last > ma450_480_min_ago
+                    
+                    and deviation_ma3_sopra_ma10 > 0.07
+                    and deviation_ma5_sopra_ma28 > -0.01
+                  
+                    and ma3_last > ma13_last
+                    and ma4_last > ma9_last
+                   
+                    and ma2_last > ma2_2_min_ago
+                    and macd > macd_2_min_ago
+                ):
+                    buy = "BUY 3 con 450 > 450 480 min MA CONSIDERATA ANCORA LATERALE - r 6599 A1yA2"
+                    action = "buy"
+                    percentage = 60
+
+                
+                elif (
+                    
+                    ma4_last > ma16_last
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.20
+                    
+                    and deviation_ma100_sopra_ma300 < 0.25
+                    and deviation_ma100_sopra_ma300 > -0.25
+                    
+                    and ma450_last > ma450_480_min_ago
+                    
+                    and deviation_ma3_sopra_ma10 > 0.07
+                    and deviation_ma5_sopra_ma28 > -0.10
+                  
+                    and ma3_last > ma13_last
+                    and ma4_last > ma9_last
+                   
+                    and ma2_last > ma2_2_min_ago
+                    and macd > macd_2_min_ago
+                ):
+                    buy = "BUY 3 con 450 > 450 480 min MA CONSIDERATA ANCORA LATERALE - r 6599 A1yA3"
                     action = "buy"
                     percentage = 60
                     
@@ -10842,6 +10891,17 @@ class maddog:
                     # 31 lug anticipata (ma450_last > ma450_480_min_ago !)
                     # 11 ago 2023 4-30 da 4-50
                     # 13 set 2023 5-28 a -0.01 da 0.01 ( cioe' un po' prima se ma450 sale da 480 min! )
+
+
+          
+
+
+
+
+
+
+
+          
               
                   
                     
