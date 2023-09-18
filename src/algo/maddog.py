@@ -1310,6 +1310,11 @@ class maddog:
                 
                 if (    
                     ma20_last > ma200_last
+
+                    
+                    and ma20_last < ma200_last
+
+                    
                     and macd >= macd_2_min_ago
                     and ma10_last > ma100_last
                     and deviation_ma3_sopra_ma10 > 0.13
