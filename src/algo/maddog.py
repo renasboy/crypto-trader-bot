@@ -25466,7 +25466,7 @@ class maddog:
 
             elif (
                 deviation_ma39 < -0.01
-                and deviation_sell < -0.01
+                and deviation_sell < -0.02
                 and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago > 1.50
                 and deviation_ma10_sopra_o_sotto_ma10_30_min_ago < 0.10
                 
@@ -25478,9 +25478,11 @@ class maddog:
                 
                 and deviation_ma3_sotto_ma150 > -1.20
             ):
-                sell = "SELL cond. special 3 - SALVAGENTE 3 3-39 < -0.20 e dev sell < -0.31 and dev_sell< -0.308 con ma50< e dev_ma3_sotto_ma200 > -1.20 - r 15985 A1 prova 2"
+                sell = "SELL cond. special 3 - SALVAGENTE 3 3-39 < -0.20 e dev sell < -0.02 and dev_sell< -0.308 con ma50< e dev_ma3_sotto_ma200 > -1.20 - r 15985 A1 ok 2"
                 action = "sell"
-              
+                
+                # 18 set 2023 dev sell -0.02 da -0.01
+          
 
             elif (
                 deviation_ma39 < -0.20
@@ -25500,6 +25502,8 @@ class maddog:
             ):
                 sell = "SELL cond. special 3 - SALVAGENTE 3 3-39 < -0.20 e dev sell < -0.31 and dev_sell< -0.308 con ma50< e dev_ma3_sotto_ma200 > -1.20 - r 15985 A1 prova 3"
                 action = "sell"
+                
+          
               
 
             elif (
