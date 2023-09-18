@@ -13721,8 +13721,6 @@ class maddog:
                         
                         
                         
-                        
-                        
                     elif (
                         ma50_last < ma50_2_min_ago
                         and ma3_last < ma16_last
@@ -13735,10 +13733,36 @@ class maddog:
                         and delta_1 > delta_2
                         and ma100_last < ma100_60_min_ago
                     ):
-                        sell = "SELL 1 PARACADUTE CROLLO 300 < distanza> ma100-ma200 (5-12 min) e ma50< and ma3 < ma16 and dev_sell < -0.47  - NOTTE - r 8267"
+                        sell = "SELL 1 PARACADUTE CROLLO 300 < distanza> ma100-ma200 (5-12 min) e ma50< and ma3 < ma16 and dev_sell < -0.47  - NOTTE - r 8260"
                         action = "sell"
 
                         # AGGIUNTA PER SICUREZZA SE CONTINUA A PRECIPITARE ma sta continuando a scendere
+
+
+                    
+                    # ----------------------------------------------------------------------------- CONDIZIONE SPECIALE NEL SELL 1 !
+                    
+                    elif (
+                        ma78_last < ma78_120_min_ago
+                        and ma300_last < ma300_301_min_ago
+                
+                        and deviation_ma39 < 0.05
+                        and deviation_sell < -0.06
+                
+                
+                        and ma50_last <= ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 < 0.40
+                
+                        and deviation_ma5_sotto_ma200 > -0.90
+                
+                        and ma2_last <= ma2_2_min_ago 
+                        and macd < macd_2_min_ago
+                    ):
+                        sell = "SELL cond. spec. (5-12 min) r 16047 B2 con ma300> 5 ore - dev 3-39 < 0.05 and dev_sell < -0.06 - con ma50 < e con ma5 sotto ma200 > -0.90 - r 8261"
+                        action = "sell"
+
+                    
+                    
                         
                         
                         
