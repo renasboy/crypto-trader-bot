@@ -137,6 +137,7 @@ class maddog:
         
         ma72_2_min_ago = self.algo_helper.ma_minutes_ago(72, 2)
         ma78_2_min_ago = self.algo_helper.ma_minutes_ago(78, 2)
+        ma78_20_min_ago = self.algo_helper.ma_minutes_ago(78, 20)
         ma78_30_min_ago = self.algo_helper.ma_minutes_ago(78, 30)
         ma78_60_min_ago = self.algo_helper.ma_minutes_ago(78, 60)
         
@@ -8734,19 +8735,22 @@ class maddog:
                 
                 elif (
                     deviation_ma4_sopra_ma30 > 0.15
+                    and ma8_last > ma50_last
                     and ma200_last > ma200_120_min_ago
-                    and ma78_last > ma78_30_min_ago
+                    and ma78_last > ma78_20_min_ago
                     
                     and deviation > -0.30
                     and deviation_bellissima > 0.06
-                    and ma39_last > ma50_last
+                    
                     and delta_buy3_incrocio_ma3_ma8 >= 0.06
-                    and ma3_last > ma8_last
+                    
                     and ma3_last >= ma69_last
-                    and ma4_last >= ma4_2_min_ago
-                    and ma2_last >= ma2_2_min_ago
+                    
+                    and ma3_last > ma8_last
                     and ma5_last >= ma15_last
                     and ma5_last >= ma25_last
+                    
+                    and ma2_last >= ma2_2_min_ago
                     and macd >= macd_2_min_ago
                 ):    
                     buy = "BUY 2 RIVOLUZIONARIO se ma39 > ma50 E CON 78 > 78 30 min ago - r 5892 a"
