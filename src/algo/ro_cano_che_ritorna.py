@@ -8767,7 +8767,8 @@ class ro_cano_che_ritorna:
                 elif (
                     ma69_last < ma69_2_min_ago
                     and deviation > -0.30
-                    
+                    and ma200_last < ma250_last
+                    and ma200_last > ma250_last
                     and ma78_last < ma200_last
                     and deviation_ma3_sopra_ma10 > 0.15
                     
