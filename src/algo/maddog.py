@@ -2282,12 +2282,12 @@ class maddog:
                     and deviation_ma54_sopra_o_sotto_ma72 < 0.015
                     and deviation_ma54_sopra_o_sotto_ma72 > -0.015
                     
-                    and deviation_ma39_sotto_ma200 < -0.01
+                    and deviation_ma39_sotto_ma200 < 0.10
                     and deviation_ma300_sopra_ma450 > -0.45
                     
                     and deviation_ma3_sopra_ma10 > 0.005
-                    and deviation_ma3_sopra_ma16 > 0.02
-                    and deviation_ma3_sopra_ma18 > 0.04
+                    and deviation_ma3_sopra_ma16 > 0.01
+                    and deviation_ma3_sopra_ma18 > 0.03
                     
                     and ma2_last >= ma20_last
                   
