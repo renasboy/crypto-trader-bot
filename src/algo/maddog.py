@@ -14028,7 +14028,24 @@ class maddog:
                   
                         
                    
-                
+                    # ----------------------------------------------------------------------------- torna a casa durante il crollo con minor danno 
+                    
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and deviation_ma5_sotto_ma300 < -0.40
+                        and (ma3_prev > ma36_prev and ma3_last < ma36_last)
+                        and deviation_sell < -0.335
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 1 torna a casa durante il crollo con minor danno  (12-21 min) con ma50 < and incrocio 3-36 and dev_sell < -0.335 - r 8551"
+                        action = "sell"
+                        
+                        #  1 giugno 2022 -0.27 da -0.25
+                        # 21 lug 2022 -0.30 da -0.27
+                        #  3 set 2022 -0.325 da -0.30
+                        # 21 set 2022 -0.335 da -0.325
+
+                    
                     # ----------------------------------------------------------------------------- CONDIZIONE SPECIALE NEL SELL 1 !
                     
                     elif (
@@ -14047,27 +14064,12 @@ class maddog:
                         and ma2_last <= ma2_2_min_ago 
                         and macd < macd_2_min_ago
                     ):
-                        sell = "SELL cond. spec. (12-21 min) r 16047 B2 con ma300> 5 ore - dev 3-39 < 0.05 and dev_sell < -0.06 - con ma50 < e con ma5 sotto ma200 > -0.90 - r 8539"
+                        sell = "SELL cond. spec. (12-21 min) r 16047 B2 con ma300> 5 ore - dev 3-39 < 0.05 and dev_sell < -0.06 - con ma50 < e con ma5 sotto ma200 > -0.90 - r 8552"
                         action = "sell"
 
                   
 
-                    # ----------------------------------------------------------------------------- torna a casa durante il crollo con minor danno 
                     
-                    elif (
-                        ma50_last < ma50_2_min_ago
-                        and deviation_ma5_sotto_ma300 < -0.40
-                        and (ma3_prev > ma36_prev and ma3_last < ma36_last)
-                        and deviation_sell < -0.335
-                        and ma2_last < ma2_2_min_ago
-                    ):
-                        sell = "SELL 1 torna a casa durante il crollo con minor danno  (12-21 min) con ma50 < and incrocio 3-36 and dev_sell < -0.335 - r 8551"
-                        action = "sell"
-                        
-                        #  1 giugno 2022 -0.27 da -0.25
-                        # 21 lug 2022 -0.30 da -0.27
-                        #  3 set 2022 -0.325 da -0.30
-                        # 21 set 2022 -0.335 da -0.325
                         
                 
                 
