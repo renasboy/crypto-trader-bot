@@ -13081,7 +13081,8 @@ class maddog:
                     ma78_last < ma150_last
                     and deviation_ma5_sotto_ma300 < -0.10
                     
-                    and deviation_ma5_sopra_ma59 > 0.01
+                    and deviation_ma5_sopra_ma39 > 0.01
+                    
                     and deviation_ma3_sopra_ma10 > 0.057
                     and deviation_ma3_sopra_ma16 > 0.06
                   
@@ -13109,7 +13110,7 @@ class maddog:
                     #  9 mag 2023 aggiunta 3-10 > 0.057
                     #  9 mag 2023 aggiunto macd > macd 2 min ago
                     # 24 ago 2023 and deviation_ma5_sopra_ma59 < -0.10
-
+                    # 27 set 2023 5-39 da 5-59
 
               
 
