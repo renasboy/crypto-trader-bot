@@ -27322,12 +27322,14 @@ class maddog:
                 and ma5_last < ma5_12_min_ago
                 
                 and ma3_last < ma28_last
+                
                 and ma2_last < ma2_2_min_ago
-               
+                and macd < macd_2_min_ago
             ):    
-                sell = "SELL condizione speciale 40 5-28 - POCHI MALEDETTI E SUBITO ma non troppo mentre scende > ESTATE 2023 e con deviation > 0.80 - r 16873 C"
+                sell = "SELL condizione speciale 40 3-28 - POCHI MALEDETTI E SUBITO (ma non troppo !) mentre scende > ESTATE 2023 e con deviation > 0.80 - r 16873 C"
                 action = "sell"
-
+                
+                # 27 set 2023 macd < macd 2 min ago
 
             
             # 41 - POCHI MALEDETTI E SUBITO con deviation > 5.01 e macd < -35
