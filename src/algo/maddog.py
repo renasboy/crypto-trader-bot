@@ -13081,11 +13081,8 @@ class maddog:
                     ma78_last < ma150_last
                     and deviation_ma5_sotto_ma300 < -0.10
                     
-                    and ma3_last < ma39_last
-                    
                     and deviation_ma3_sopra_ma10 > 0.057
                     and deviation_ma3_sopra_ma16 > 0.06
-                  
                     and deviation_ma5_sopra_ma28 < 0.10
                     
                     and ma100_last < ma100_180_min_ago
