@@ -187,6 +187,7 @@ class maddog:
         ma450_60_min_ago = self.algo_helper.ma_minutes_ago(450, 60)
         ma450_180_min_ago = self.algo_helper.ma_minutes_ago(450, 180)
         ma450_240_min_ago = self.algo_helper.ma_minutes_ago(450, 240)
+        ma450_300_min_ago = self.algo_helper.ma_minutes_ago(450, 300)
         ma450_360_min_ago = self.algo_helper.ma_minutes_ago(450, 360)
         ma450_480_min_ago = self.algo_helper.ma_minutes_ago(450, 480)
         ma450_720_min_ago = self.algo_helper.ma_minutes_ago(450, 720)
@@ -6415,10 +6416,10 @@ class maddog:
                     #  3 gen 2023 5-28 > 0.10
                     
                     
-                    
                 elif (
                     
-                    ma59_last > ma200_last
+                    ma5_last > ma54_last
+                    and ma450_last > ma450_300_min_ago
                     
                     and ma59_last >= ma59_2_min_ago
                     and deviation_ma100_sopra_ma300 < 0.20
@@ -6434,7 +6435,33 @@ class maddog:
                     and price >= price_2_min_ago
                     and macd >= macd_2_min_ago
                 ):
-                    buy = "BUY 2A ribasso o laterale  and ma69_last > ma200_last - r 4685 Bx"
+                    buy = "BUY 2A ribasso o laterale and ma5_last > ma59_last con 450 > 450 300 min ago - r 4685 Bx1"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # 27 set 2023 se 450 > 450 300 min ago
+                    # 27 set 2023 5-54 da 59-200
+              
+                elif (
+                    
+                    ma59_last > ma200_last
+                    and ma450_last < ma450_300_min_ago
+                    
+                    and ma59_last >= ma59_2_min_ago
+                    and deviation_ma100_sopra_ma300 < 0.20
+                    
+                    and deviation_buy2 > 0.01
+                    and deviation_ma5_sopra_ma28 > 0.10
+                    and deviation_ma3_sopra_ma10 > 0.04
+                    
+                    and deviation_ma7_sopra_ma40 > 0.04
+                    and deviation_buy_ma3_sopra_ma13 > 0.08
+                    
+                    and ma3_last > ma40_last
+                    and price >= price_2_min_ago
+                    and macd >= macd_2_min_ago
+                ):
+                    buy = "BUY 2A ribasso o laterale  and ma69_last > ma200_last - r 4685 Bx2"
                     action = "buy"
                     percentage = 80
 
