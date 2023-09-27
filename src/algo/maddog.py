@@ -8702,15 +8702,15 @@ class maddog:
                     
                     
                 elif (
-                    ma5_last >= ma5_2_min_ago
-                    and ma5_last > ma50_last
-                    and ma200_last > ma200_30_min_ago
-                    and ma300_last < ma450_last
                     
-                    and deviation > -0.40
+                    ma5_last > ma50_last
+                    and ma300_last < ma450_last
+                    and ma200_last > ma200_20_min_ago
+                    
+                    and deviation > -0.50
                     
                     and deviation_ma3_sopra_ma10 > 0.10
-                    and deviation_ma5_sopra_ma28 > 0.14
+                    and deviation_ma5_sopra_ma28 > 0.13
                     and deviation_buy_ma2_sopra_ma13 > 0.10
                     
                     and ma3_last > ma13_last
@@ -8722,14 +8722,14 @@ class maddog:
                     and macd >= macd_2_min_ago
                 ):  
                 
-                    buy = "BUY 2 ma300_last > ma450_last e con ma200 che sale da 30 min 5>50! and 3-10 > 0.10 - r 5829 B"
+                    buy = "BUY 2 con ma300 < ma450 e con ma200 che sale da 20 min 5>50 and 3-10 > 0.10 - r 5829 B"
                     action = "buy"
                     percentage = 70
                     
                     # 21 mag 2023 5-50 da 33-78 !
                     # 21 mag 2023 aggiunta macd > macd 2 min ago
-                    
-                    
+                    # 27 set 2023 5-28 0.13 da 0.14
+                    # 27 set 2023 and ma200_last > ma200_20_min_ago da ma200_last > ma200_20_min_ago
                     
                 # BUY 2 con ma200 che sale da 60 min etc. importata dal BUY 3 RCCR
                 
