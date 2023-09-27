@@ -26792,7 +26792,7 @@ class maddog:
                 
                 
             # SELL condizione speciale 32 B ROOT DOWN DEEP - maddog VENDE dopo 150 min = 9000 sec e fino a 240 min con 5-300 GIORNO ! cazzo
-            
+          
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds_sell_5_90
                 and seconds_since_last_trade < max_hold_time_in_seconds_sell_5_180
@@ -26804,15 +26804,39 @@ class maddog:
                 and (ma5_prev > ma300_prev and ma5_last < ma300_last)
                 and deviation_sell < -0.12
                 and ma2_last < ma2_2_min_ago
-           
+                and macd > -10
             ):
 
-                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - maddog VENDE dopo 150 min = 9000 sec e fino a 240 min con 5-300 GIORNO ! cazzo - r 16731"
+                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - maddog VENDE dopo 150 min = 9000 sec e fino a 240 min con 5-300 GIORNO ! cazzo con macd > -10 - r 16731 a"
                 action = "sell"
                         
                 # 24 set 2022 ore 17:23
                 #  3 nov 2022 5-300 da 5-200
                 
+                # 27 set 2023 se macd > -10 vende con 5-300 !
+            
+            elif (
+                seconds_since_last_trade > max_hold_time_in_seconds_sell_5_90
+                and seconds_since_last_trade < max_hold_time_in_seconds_sell_5_180
+                
+                and delta_300_100 < delta_300_100_60_min
+                and deviation_ma100_sopra_ma300 < 0.20
+                and ma300_last > ma300_120_min_ago
+                
+                and (ma5_prev > ma200_prev and ma5_last < ma200_last)
+                and deviation_sell < -0.05
+                
+                and ma2_last < ma2_2_min_ago
+                and macd < -10
+            ):
+
+                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - maddog VENDE dopo 150 min = 9000 sec e fino a 240 min con 5-200 GIORNO ! cazzo con macd < -10 - r 16731 b"
+                action = "sell"
+                        
+                # 24 set 2022 ore 17:23
+                #  3 nov 2022 5-300 da 5-200
+                
+                # 27 set 2023 se macd < -10 vende con 5-200 !
                 
                 
                 
