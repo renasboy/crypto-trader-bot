@@ -11025,9 +11025,9 @@ class maddog:
                     and deviation_ma3_sopra_ma10 > 0.05
                     and deviation_ma5_sopra_ma28 > 0.01
                     
-                    and deviation_bellissima > 0.04
-                    and deviation_buy3 > 0.04
-                    and deviation_ma7_sopra_ma40 > 0.04
+                    and deviation_bellissima > 0.03
+                    and deviation_buy3 > 0.03
+                    and deviation_ma7_sopra_ma40 > 0.03
                
                     and ma3_last > ma13_last
                     and ma4_last > ma9_last
@@ -11038,7 +11038,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                     and macd > macd_2_min_ago
                 ):
-                    buy = "BUY 3 IN BASSO 78>100 E con ma69 > and dev_bellissima > 0.12 IMPORTATA DA BUY 4 RCCR - r 6599 A1z"
+                    buy = "BUY 3 IN BASSO 78>100 E con ma69 > and dev_bellissima > 0.04 IMPORTATA DA BUY 4 RCCR - r 6599 A1z"
                     action = "buy"
                     percentage = 50
                     
@@ -11048,8 +11048,9 @@ class maddog:
                     # 14 set 2023 bellissima a 0.04 da 0.05
                     # 14 set 2023 buy3 a 0.04 da 0.05
                     # 14 set 2023 7-40 a 0.04 da 0.05
-
-              
+                    # 27 set 2023 dev bel a 0.03 da 0.04
+                    # 27 set 2023 dev buy 3 a 0.03 da 0.04
+                    # 27 set 2023 dev 7 sopra 40 a 0.03 da 0.04
                     
                 # BUY 3 con ma69 > and deviation_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali) IMPORTATA DA BUY 4 RCCR
                 
