@@ -12094,7 +12094,7 @@ class maddog:
                     
                     
                     ma78_last < ma150_last
-                    and deviation_ma5_sopra_ma59 < -0.09
+                    and deviation_ma5_sopra_ma59 < -0.10
                     
                     and ma100_last < ma100_180_min_ago
                     and ma200_last < ma200_180_min_ago
@@ -12103,7 +12103,7 @@ class maddog:
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
                     
-                    and deviation_ma5_sopra_ma28 < 0.10
+                    and deviation_ma5_sopra_ma28 < 0.08
                     and deviation_ma3_sopra_ma16 > 0.03
                     and deviation_ma3_sopra_ma18 > 0.093
                     
@@ -12120,6 +12120,8 @@ class maddog:
                     # 18 mag 2023 aggiunta 3-16 > 0.03 
                     #  2 giu 2023 aggiunta 3-18 > 0.093
                     # 24 ago 2023 aggiunta and macd > macd_2_min_ago
+                    # 27 set 2023 5.28 0.08 da 0.10
+                    # 27 set 2023 and deviation_ma5_sopra_ma59 < -0.10 da -0.09
                     
                 # BUY 4 importato da buy 5 rccr
                 
