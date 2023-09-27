@@ -22221,23 +22221,46 @@ class maddog:
                         
                     
                     
-                    
                     elif (     
                         ma50_last < ma50_2_min_ago
+                        and ma300_last > ma300_301_min_ago
                         
-                        and ma2_last < ma2_2_min_ago 
-                        and deviation_ma39 < -0.23
+                        and deviation_sell < -0.15
+                        and deviation_ma39 < -0.15
                         
                         and deviation_ma100_sopra_ma300 < 0.50
-                        and deviation_sell < -0.28
+                        
+                        and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
                     ):
-                        sell = "SELL 3 (21-60 min) con ma50 < and deviation_ma39 < -0.23 and deviation_sell < -0.28 con 50 sopra 300 < 0.50 - r 13685"
+                        sell = "SELL 3 (21-60 min) con ma50 < and dev_ma39 < -0.15 and dev_sell < -0.15 con 50 sopra 300 < 0.50 and macd < macd_2_min_ago - r 13685 a"
+                        action = "sell"
+                        
+                        # attenzione se ma100 sta molto sopra ma 300 basta deviation ma39
+                        # ma se trend laterale metto anche una deviation sell
+                        # dev sell 0.28 da 0.25 dopo dolomiti
+                        # 27 set 2023 dev sell a -0.15 da -0.28
+                  
+                    elif (     
+                        ma50_last < ma50_2_min_ago
+                        and ma300_last < ma300_301_min_ago
+                        
+                        and deviation_sell < -0.10
+                        and deviation_ma39 < -0.10
+                        
+                        and deviation_ma100_sopra_ma300 < 0.50
+                        
+                        and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
+                    ):
+                        sell = "SELL 3 (21-60 min) con ma50 < and dev_ma39 < -0.10 and dev_sell < -0.10 con 50 sopra 300 < 0.50 and macd < macd_2_min_ago - r 13685 b"
                         action = "sell"
                         
                         # attenzione se ma100 sta molto sopra ma 300 basta deviation ma39
                         # ma se trend laterale metto anche una deviation sell
                         # dev sell 0.28 da 0.25 dopo dolomiti
                         
+                        # 27 set 2023 dev sell a -0.10 da -0.28
                     
                     elif (    
                         ma50_last < ma50_2_min_ago
