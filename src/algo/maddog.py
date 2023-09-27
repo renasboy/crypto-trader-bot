@@ -10635,7 +10635,7 @@ class maddog:
                 
                 elif (
                     
-                    ma5_last > ma78_last
+                    ma5_last > ma54_last
                     and deviation_ma5_sotto_ma300 > -0.45
                     
                     and ma100_last < ma100_180_min_ago
@@ -10661,7 +10661,7 @@ class maddog:
                     # 24 ago 2023 and macd > macd_2_min_ago
                     # 24 ago 2023 and macd > 5
                     # 16 set 2023 5-78 invece di 5-200
-              
+                    # 27 set 2023 5-54 invece di 5-78
 
                 elif (
                     
