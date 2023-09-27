@@ -11038,7 +11038,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                     and macd > macd_2_min_ago
                 ):
-                    buy = "BUY 3 IN BASSO 78>100 E con ma69 > and dev_bellissima > 0.04 IMPORTATA DA BUY 4 RCCR - r 6599 A1z"
+                    buy = "BUY 3 IN BASSO con ma300_last > ma300_301_min_ago E con dev_bellissima > 0.04 IMPORTATA DA BUY 4 RCCR - r 6599 A1z"
                     action = "buy"
                     percentage = 50
                     
