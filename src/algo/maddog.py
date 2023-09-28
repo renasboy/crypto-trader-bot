@@ -88,6 +88,7 @@ class maddog:
         ma4_2_min_ago = self.algo_helper.ma_minutes_ago(4, 2)
         
         ma5_2_min_ago = self.algo_helper.ma_minutes_ago(5, 2)
+        
         ma5_12_min_ago = self.algo_helper.ma_minutes_ago(5, 12)
         ma5_1080_min_ago = self.algo_helper.ma_minutes_ago(5, 1080)
         
@@ -11700,7 +11701,7 @@ class maddog:
                     # 28 set 2023 tolto 5-54
     
                 elif (
-                    ma5_last >= ma5_3_min_ago
+                    ma5_last >= ma5_2_min_ago
                     
                     and ma300_last > ma300_60_min_ago
                     and ma450_last < ma450_300_min_ago
@@ -11711,7 +11712,7 @@ class maddog:
                     and delta_buy3_incrocio_ma3_ma8 > 0.05
                     
                     and deviation_ma4_sopra_ma30 > 0.08
-                    and deviation_ma5_sopra_ma28 > 0.05
+                    and deviation_ma5_sopra_ma28 > 0.06
                     
                     and ma3_last > ma8_last
                     and ma7_last > ma25_last
@@ -11726,9 +11727,9 @@ class maddog:
                     # deviation_ma4_sopra_ma100 > 0.25 arrivati al buy 4 DEVE AVERE UNA CERTA FORZA !
                     # ma se 250 > 300 ! serve una forza minore
                     # 16 set 2023 anticipato ndecchiecella
-                    # 28 set 2023 con ma5 > ma5 3 min ago da ma28 > ma28 2 min ago (con 450 < 450 300 min)
+                    # 28 set 2023 con ma5 > ma5 2 min ago da ma28 > ma28 2 min ago 
                     # 28 set 2023 tolto 5-54
-
+                    # 28 set 2023 5-28 >0.06 da 0.06 (con 450 < 450 300 min)
 
 
                 
