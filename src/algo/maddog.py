@@ -2339,7 +2339,7 @@ class maddog:
                     and deviation_ma39_sotto_ma200 < -0.01
                     and deviation_ma300_sopra_ma450 > -0.50
                     
-                    and deviation_ma3_sopra_ma10 > 0.005
+                    and deviation_ma3_sopra_ma10 > 0.017
                     and deviation_ma3_sopra_ma16 > 0.01
                     and deviation_ma3_sopra_ma18 > 0.03
                     
@@ -2375,7 +2375,7 @@ class maddog:
                     
                     # 27 set 2023 and deviation_ma300_sopra_ma450 > -0.50 da -0.45
                     # 27 set 2023 0.005 - 0.01 - 0.03
-                   
+                    # 28 set and deviation_ma3_sopra_ma10 > 0.017 da > 0.005 ( potevo mettere macd > 5 ma ho preferito aumentare di un nulla 3-10 )
 
 
 
