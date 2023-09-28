@@ -21746,8 +21746,7 @@ class maddog:
                         sell = "SELL 3 guadagno con crollo (5-12 min) con ma50 < and incrocio 3-23 - r 13138"
                         action = "sell"
                         
-                        
-
+                    
                     # ------------------------------------------------------------------------------------------------------------ PARACADUTE crollo
                     
                     elif (
@@ -21756,10 +21755,35 @@ class maddog:
                         and deviation_sell < -0.48
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 3 PARACADUTE CROLLO (0-3 min) con ma50 < and ma3<ma16 (no incrocio) and deviation_sell < -0.48 - r 13151"
+                        sell = "SELL 3 PARACADUTE CROLLO (5-12 min) con ma50 < and ma3<ma16 (no incrocio) and deviation_sell < -0.48 - r 13151"
                         action = "sell"
 
                         # AGGIUNTA PER SICUREZZA SE CONTINUA A PRECIPITARE
+
+                    ######################################################################################################## EX CONDIZIONI SPECIALI importate !
+                    
+                    elif (
+                        ma78_last < ma78_120_min_ago
+                        and ma300_last < ma300_301_min_ago
+                        and delta_150_100 <= delta_150_100_60_min
+                
+                        and deviation_ma39 < 0.05
+                        and deviation_sell < -0.10
+                
+                
+                        and ma50_last <= ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 < 0.40
+                
+                        and deviation_ma5_sotto_ma200 > -0.90
+                
+                        and ma2_last <= ma2_2_min_ago 
+                        and macd < macd_2_min_ago
+                    ):
+                        sell = "SELL 3 5-12 min EX cond speciale 6 GIORNO con ma300> 5 ore - dev 3-39 < 0.05 and dev_sell < -0.10 - con ma50 < e con ma5 sotto ma200 > -0.90 - r 13153"
+                        action = "sell"
+
+                  
+                    
                         
                         
                         
@@ -25949,7 +25973,7 @@ class maddog:
                 and delta_150_100 <= delta_150_100_60_min
                 
                 and deviation_ma39 < 0.05
-                and deviation_sell < -0.10
+                and deviation_sell < -0.105
                 
                 
                 and ma50_last <= ma50_2_min_ago
@@ -25960,11 +25984,11 @@ class maddog:
                 and ma2_last <= ma2_2_min_ago 
                 and macd < macd_2_min_ago
             ):
-                sell = "SELL condizione speciale 6 GIORNO con ma300> 5 ore - SALVAGENTE 4 dev 3-39 < 0.05 and dev_sell < -0.10 - con ma50 < e con ma5 sotto ma200 > -0.90 - r 16047 B2"
+                sell = "SELL condizione speciale 6 GIORNO con ma300> 5 ore - dev 3-39 < 0.05 and dev_sell < -0.105 - con ma50 < e con ma5 sotto ma200 > -0.90 - r 16047 B2"
                 action = "sell"
                 
                 # 15 set 2023 quando 300 scende da 5 ore non devi vendere in perdita ! a ricomprare ci penseranno altre condizioni !
-                # 15 set 2023 quando GIORNO a -0.10 da -0.07
+                # 15 set 2023 quando GIORNO a -0.11 da -0.07
           
             elif (
                 ma78_last < ma78_120_min_ago
