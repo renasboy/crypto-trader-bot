@@ -16720,8 +16720,9 @@ class maddog:
                         
                         and ma2_last < ma2_2_min_ago
                         and macd < macd_2_min_ago
+                        and macd < -4
                     ):
-                        sell = "SELL 1 90-110 min con ma50< MA 300 > and (dev_sell < -0.12 and ma3_last < ma39_last) con 5-100 > -0.50 and macd < macd 2 min ago - r 10211 A1"
+                        sell = "SELL 1 90-110 min con ma50< MA 300> and dev_sell < -0.12 and ma3 < ma39 con 5-100 > -0.50 and macd < macd 2 min ago and macd < -4 - r 10211 A1"
                         action = "sell"
                         
                         # 2 ott dev sell -0.243 da -0.23
