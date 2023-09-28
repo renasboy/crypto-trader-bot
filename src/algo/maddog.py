@@ -11669,9 +11669,9 @@ class maddog:
                     
                     
                 elif (
-                    ma28_last >= ma28_2_min_ago
+                    ma5_last >= ma5_2_min_ago
                     and ma3_last > ma8_last
-                    and ma5_last > ma54_last
+                    
                     and ma7_last > ma25_last
                     
                     and ma300_last > ma300_60_min_ago
@@ -11694,8 +11694,10 @@ class maddog:
                     # deviation_ma4_sopra_ma100 > 0.25 arrivati al buy 4 DEVE AVERE UNA CERTA FORZA !
                     # ma se 250 > 300 ! serve una forza minore
                     # 16 set 2023 anticipato ndecchiecella
-                    
-                    
+                    # 28 set 2023 con ma5 > ma5 2 min ago da ma28 > ma28 2 min ago
+                    # 28 set 2023 tolto 5-54
+
+              
                 elif (
                     ma78_last >= ma78_2_min_ago
                     and ma300_last > ma300_60_min_ago
