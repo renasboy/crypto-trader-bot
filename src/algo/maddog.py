@@ -12263,8 +12263,42 @@ class maddog:
             #  piu' alto il BUY - "effetti laterali"
 
             else:
-                if (
+                if (    
+                    ma5_last > ma50_last
+                    and ma450_last >= ma450_120_min_ago
+                  
+                    and ma100_last > ma450_last
+                    and ma78_last > ma450_last
+                    
+                    and deviation_ma5_sopra_ma28 > 0.05
+                    
+                    and ma3_last > ma13_last
+                    
+                    and ma4_last > ma9_last
+                    
+                    and ma6_last > ma15_last
+                    and ma7_last > ma25_last
+                    
+                    and ma2_last > ma2_2_min_ago
+                    and macd > macd_2_min_ago
+                ):
+                    buy = "BUY 5 con ma450_last >= ma450_120_min_ago and 5-28 > 0.08 CON ma100_last > ma450_last - r 7144 A1"
+                    action = "buy"
+                    percentage = 70
+                    
+                    # 6 giu 2022 5-28 a 0.12 da 0.15
+                    
+                    # > estate anticipo buy 5-28 0.08 da 0.12
+                    # 29 gen 2023 anticipato ndecchiecella questo BUY 5 !
+                    # 20 feb 2023 aggiunta 3-10 >0.058
+                    # 16 set 2023 tolto and deviation_buy3 > 0.05
+                    # 16 set 2023 aggiunta and macd > macd_2_min_ago
+                    # 28 set 2023 se 450 > 450 120 min ago anticipato ndechiecella
+              
+                elif (
                     ma50_last >= ma50_2_min_ago
+                    and ma450_last < ma450_120_min_ago
+                  
                     and ma100_last > ma300_last
                     and ma78_last > ma150_last
                     
@@ -12280,7 +12314,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                     and macd > macd_2_min_ago
                 ):
-                    buy = "BUY 5 con ma50 > AND 50>100 and ma28_last > ma28_30_min_ago and 5-28 > 0.08 CON ma100_last > ma300_last - r 7144 A"
+                    buy = "BUY 5 con ma50 > AND 50>100 and ma28_last > ma28_30_min_ago and 5-28 > 0.08 CON ma100_last > ma300_last - r 7144 A2"
                     action = "buy"
                     percentage = 70
                     
@@ -12291,7 +12325,7 @@ class maddog:
                     # 20 feb 2023 aggiunta 3-10 >0.058
                     # 16 set 2023 tolto and deviation_buy3 > 0.05
                     # 16 set 2023 aggiunta and macd > macd_2_min_ago
-
+                    # 28 set 2023 aggiunta 450 < 450 120 min ago 
               
                 elif (
                     ma50_last < ma50_2_min_ago
