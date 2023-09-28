@@ -6622,20 +6622,19 @@ class maddog:
                 
                 elif (
                     
-                    ma5_last > ma100_last
+                    ma5_last > ma59_last
+                    and ma100_last >= ma100_2_min_ago
                     
-                    and ma78_last < ma200_last
                     and ma100_last < ma100_120_min_ago
                     and ma200_last < ma200_120_min_ago
                     and ma300_last < ma300_120_min_ago
+                    
+                    and ma78_last < ma200_last
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
                     
                     and delta_150_100 <= delta_150_100_60_min
-                    and ma59_last > ma59_30_min_ago
-                    and ma100_last >= ma100_2_min_ago
-                    
-                    and deviation_ma10_sopra_ma200 > -0.16
+                    and deviation_ma10_sopra_ma200 > -0.20
                     
                     and deviation_ma3_sopra_ma10 > 0.01
                     and deviation_ma5_sopra_ma28 > 0.01
@@ -6657,7 +6656,7 @@ class maddog:
                     # > estate 5-28 0.18 da 0.12 e 3-10 0.15 da 0.05 HO ALZATO IL BUY !
                     # 7 nov 2022 aggiunta 59 > 59 45 min ago
                     # aggiunta 31 ago 2023 rccr ok m ko
-
+                    # 28 set 2023 anticipata ndecchiecella
 
 
 
