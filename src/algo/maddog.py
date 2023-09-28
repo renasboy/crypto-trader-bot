@@ -6644,9 +6644,9 @@ class maddog:
                     and ma100_last >= ma100_2_min_ago
                     
                     and ma2_last >= ma2_2_min_ago
-                
+                    and macd >= macd_2_min_ago
                 ):
-                    buy = "BUY 2 78<200 CHE MANCAVA DOPO BUY-SELL CROLLO ! 50 > 100 AND 150-100 GIORNO ! and 3-10 > 0.15 and 5-28 > 0.18 - r 4710"
+                    buy = "BUY 2 78<200 CHE MANCAVA DOPO BUY-SELL CROLLO ! 50 > 100 AND 150-100 GIORNO ! and 3-10 > 0.15 and 5-28 > 0.18 and macd > macd 2 min ago - r 4710"
                     action = "buy"
                     percentage = 80
                     
