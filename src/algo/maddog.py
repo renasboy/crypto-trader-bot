@@ -11670,11 +11670,10 @@ class maddog:
                     
                 elif (
                     ma5_last >= ma5_2_min_ago
-                    and ma3_last > ma8_last
-                    
-                    and ma7_last > ma25_last
                     
                     and ma300_last > ma300_60_min_ago
+                    and ma450_last > ma450_300_min_ago
+                    
                     and deviation_ma250_sopra_ma300 < 0.10
                     and deviation_ma250_sopra_ma300 > -0.10
                     
@@ -11682,9 +11681,11 @@ class maddog:
                     
                     and deviation_ma4_sopra_ma30 > 0.08
                     and deviation_ma5_sopra_ma28 > 0.05
-              
+                    
+                    and ma3_last > ma8_last
+                    and ma7_last > ma25_last
+                    
                     and ma2_last > ma2_2_min_ago
-             
                 ):
                     buy = "BUY 4B RIVOLUZIONARIO con ma78 > - r 6859 B"
                     action = "buy"
