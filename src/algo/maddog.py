@@ -10912,16 +10912,16 @@ class maddog:
                 elif (
                     
                     ma4_last > ma20_last
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.11
-                    and deviation_ma5_sopra_o_sotto_ma100 > -0.20
-                    
-                    and deviation_ma100_sopra_ma300 < 0.25
-                    and deviation_ma100_sopra_ma300 > -0.25
-                    
                     and ma450_last > ma450_480_min_ago
                     
-                    and deviation_ma3_sopra_ma10 > 0.07
-                    and deviation_ma5_sopra_ma28 > -0.01
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.21
+                    
+                    and deviation_ma100_sopra_ma300 < 0.27
+                    and deviation_ma100_sopra_ma300 > -0.27
+                    
+                    and deviation_ma3_sopra_ma10 > 0.05
+                    and deviation_ma5_sopra_ma28 > -0.02
                   
                     and ma3_last > ma13_last
                     and ma4_last > ma9_last
@@ -10932,7 +10932,11 @@ class maddog:
                     buy = "BUY 3 con 450 > 450 480 min MA CONSIDERATA ANCORA LATERALE - r 6599 A1yA2"
                     action = "buy"
                     percentage = 60
-
+                    
+                    # 28 set 2023 5-28 a -0.02 da -0.01
+                    # 28 set 2023 3-10 a 0.05 da 0.07
+                    # 28 set 2023 fascia 100-300 portata a +-0.27 da +-0.25 - aumentata un pochino ( ma450>ma450 480 min ago !)
+                    # 28 set 2023 fascia 5-100 portata a < -0.12 - -0.21 da < -0.11 - -0.20 - aumentata un pochino ( ma450>ma450 480 min ago !)
                 
                 elif (
                     
