@@ -6776,39 +6776,39 @@ class maddog:
                 
                 # BUY 2 con ma200> piccola CORREZIONE FIAT che NON E' un forte ribasso e NON E' un crollo ! ALTRA RIGA RCCR che e' andata bene.
                 
-                elif (    
-                    
+                elif (     
                     ma200_last > ma200_20_min_ago
+                    
+                    and ma100_last > ma100_60_min_ago
+                    and ma200_last > ma200_60_min_ago
+                    and ma300_last > ma300_360_min_ago
+                    
+                    and ma100_last > ma200_last
+                    and ma200_last > ma300_last
+                    
                     and ma20_last < ma78_last
                     and ma90_last > ma110_last
                     
                     and deviation_ma3_sopra_ma10 > 0.05
                     and deviation_ma5_sopra_ma28 > 0.05
                     
-                    and ma18_last >= ma18_2_min_ago
+                    and ma5_last >= ma5_2_min_ago
                     
                     and ma3_last > ma28_last
+                    
                     and ma2_last > ma2_2_min_ago
-                    
-                    and ma100_last > ma200_last
-                    and ma200_last > ma300_last
-                    
-                    and ma100_last > ma100_60_min_ago
-                    and ma200_last > ma200_60_min_ago
-                    
-                    and ma300_last > ma300_360_min_ago
                     and macd >= macd_2_min_ago
                 ):    
                     
-                    buy = "BUY 2 con 200 > and ma28_last > ma28_2_min_ago - 20 < 78 and dev_ma3_sopra_ma10 > 0.17 con 5-28> 0.15 - r 4735"
+                    buy = "BUY 2 con 300 > 300 360 min ago and ma5_last > ma5_2_min_ago - 20 < 78 and 3-10 > 0.05 con 5-28 > 0.05 E con macd> macd 2 min ago - r 4735"
                     action = "buy"
                     percentage = 80
                     
-                    # > estate anticipato buy di una ndecchiecella
-                    # 2 nov 2022 anticipato di molto con 300 > 360 min ago !
-                    # 2 nov 3-10 = 0.05 da 0.17
-                    # 2 nov 5-28 = 0.05 da 0.15
-                    
+                    #  > estate anticipato buy di una ndecchiecella
+                    #  2 nov 2022 anticipato di molto con 300 > 360 min ago !
+                    #  2 nov 3-10 = 0.05 da 0.17
+                    #  2 nov 5-28 = 0.05 da 0.15
+                    # 28 set 2023 5> 5 2 min ago da 28> 28 min ago (ma300 sale da 360 min !)
                     
                     
                 elif (
