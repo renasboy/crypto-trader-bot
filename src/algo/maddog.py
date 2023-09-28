@@ -22873,7 +22873,7 @@ class maddog:
                         and deviation_ma100_sopra_ma200 > 0.20
                        
                     ):
-                        sell = "SELL 3 (12-21 min) con ma50 > and 5-78 and deviation_sell 0.29 - 0.59 - FINTA ALLA MARADONA se sale tanto - r 14147"
+                        sell = "SELL 3 dopo 90 min con ma50 > and 5-78 and deviation_sell 0.29 - 0.59 - FINTA ALLA MARADONA se sale tanto - r 14147"
                         action = "sell"
                         
                         # > estate 5-78 da 5-39
@@ -22887,7 +22887,7 @@ class maddog:
                         and deviation_ma100_sopra_ma200 < 0.20
                        
                     ):
-                        sell = "SELL 3 (12-21 min) con ma50 > and 5-150 (!) and deviation_sell 0.25 - 0.59 - FINTA ALLA MARADONA se sale poco - r 14159"
+                        sell = "SELL 3 dopo 90 min con ma50 > and 5-150 (!) and deviation_sell 0.25 - 0.59 - FINTA ALLA MARADONA se sale poco - r 14159"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
@@ -23286,8 +23286,8 @@ class maddog:
                         # 20 feb 2023 doppio delta 450-300 NOTTE
                         # 20 feb 2023 dev_sell a -0.20 da -0.19
                         #  1 ago 2023 dev_sell a -0.195 da -0.20
+
                   
-                        
                     elif (    
                         ma50_last < ma50_2_min_ago
                         and ma250_last < ma300_last
@@ -23307,6 +23307,33 @@ class maddog:
                         # 19 apr 2023 se 250 < 300 dev sell 0.19 da 0.18
                         # 26 apr 2023 se 250 < 300 dev sell 0.20 da 0.19
                         # 11 ago 2023 aggiunto and macd < -6
+
+                  
+                  
+
+                    ############################################################################# HO PORTATO QUI UNA CONDIZIONE SPECIALE ABBASSANDO IL SELL DI UNA NDECCHIECELLA
+                    
+                    elif (
+                        ma78_last < ma78_120_min_ago
+                        and ma300_last > ma300_301_min_ago
+                
+                        and deviation_ma39 < 0.06
+                        and deviation_sell < -0.09
+                
+                
+                        and ma50_last <= ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 < 0.50
+                
+                        and deviation_ma5_sotto_ma200 > -0.90
+                
+                        and ma2_last <= ma2_2_min_ago 
+                        and macd <= macd_2_min_ago
+                    ):
+                        sell = "SELL EX condizione speciale 6 con ma300 > 5 ore - 4 dev 3-39 < 0.06 and dev_sell < -0.09 con ma50 < e con ma5 sotto ma200 > -0.90 - r 14290"
+                        action = "sell"
+
+              
+                    
                     
             #######################################################################################################
             
