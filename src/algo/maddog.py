@@ -18098,14 +18098,14 @@ class maddog:
                     
                     elif (    
                         ma50_last < ma50_2_min_ago
-                        and ma8_last < ma300_last
-                        and ma3_last < ma18_last
-                        and ma100_last > ma150_last
-                        
-                        and deviation_sell > -0.05
-                        
                         and ma300_last > ma300_120_min_ago
                         and ma100_last > ma100_60_min_ago
+                        and ma100_last > ma150_last
+                        
+                        and ma8_last < ma300_last
+                        and deviation_sell < -0.05
+                        
+                        and ma3_last < ma18_last
                         and ma5_last < ma5_2_min_ago
                         
                         and macd < macd_2_min_ago
@@ -18123,7 +18123,7 @@ class maddog:
                         #  3 mag 2023 5-250 da 5-150 e vendita con pareggio.
                         # 12 ago 2023 8-300 da 5-250
                         # 13 set 2023 aggiunta 3 < 18 !
-                  
+                        # 13 set 2023 dev sell a -0.05 da > 0.05 ! (ma300 sale da 2 ore !)
                         
                     elif (    
                         ma50_last < ma50_2_min_ago
