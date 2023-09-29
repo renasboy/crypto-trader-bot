@@ -18667,6 +18667,7 @@ class maddog:
                         # 26 set 2022 dev sell -0.10 da -0.07
                         # 12 ott 2022 dev sell -0.14 da -0.10
                         #  7 nov 2022 dev sell -0.16 da -0.14
+                  
                         
                     elif (    
                         ma3_last < ma100_last
@@ -18676,12 +18677,15 @@ class maddog:
                         and ma300_last < ma300_120_min_ago
                         and ma100_last < ma200_last
                         and ma100_last < ma300_last
-                        and deviation_sell < -0.15
+                        
+                        and deviation_sell < -0.149
+                        
                         and ma2_last < ma2_2_min_ago
                         and macd < macd_2_min_ago
+                        and macd < 3.0
                     ):
                    
-                        sell = "SELL 1 > 240 min and 450 > 12 ore con 5 < 200 e 100 < 300 ! FORSE E' NECESSARA SOLO QUESTA ! deviation_sell < -0.15 and macd < - r 10655 B2x"
+                        sell = "SELL 1 > 240 min and 450 > 12 ore con 5 < 200 e 100 < 300 ! FORSE E' NECESSARA SOLO QUESTA ! dev_sell < -0.149 and macd < and macd < -3 - r 10655 B2x"
                         action = "sell"
                         
                         #  4 set 2022 dev sell -0.07 da -0.05
@@ -18695,6 +18699,9 @@ class maddog:
                         # 28 mag 2023 dev sell -0.152 da -0.149
                         # 28 mag 2023 dev sell -0.15 da -0.15
                         # 13 ago 2023 dev sell a -0.15 da -0.152
+                        
+                        # 29 set 2023 dev sell a -0.149 da -0.15
+                        # 29 set 2023 macd < -3
                   
                         
                     elif (    
