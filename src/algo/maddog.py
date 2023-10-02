@@ -10824,7 +10824,35 @@ class maddog:
                     
                 
                 
+                # BUY 3 del 2 ottobre 2023 NON COMPRAVA !
                 
+                elif (
+                    
+                    ma4_last > ma30_last
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.11
+                    
+                    and deviation_ma100_sopra_ma300 < 0.30
+                    and deviation_ma100_sopra_ma300 > -0.30
+                    
+                    and ma450_last > ma450_60_min_ago
+                    
+                    and deviation_ma3_sopra_ma10 > 0.07
+                    and deviation_ma5_sopra_ma28 > 0.02
+                  
+                    and ma3_last > ma13_last
+                    and ma4_last > ma9_last
+                   
+                    and ma2_last > ma2_2_min_ago
+                    and macd > macd_2_min_ago
+                ):
+                    buy = "BUY 3 del 2 ottobre 2023 NON COMPRAVA ! con 450 > 450 60 min MA CONSIDERATA ANCORA LATERALE - r 6574"
+                    action = "buy"
+                    percentage = 60
+                    
+                    #  2 ottobre 2023 aggiunta perche' BUY 3 NON ENTRAVA IN AZIONE
+
+
+              
                 # BUY 3 ultima condizione che mancava ! ma tutte negative MA BUY con 8 > 125
                 
                 elif (     
@@ -10888,13 +10916,14 @@ class maddog:
                     
                 # deviation_ma5_sopra_o_sotto_ma100    
                 # BUY 3 IN MEZZO (effetti laterali) con ma69 > and deviation_bellissima > 0.12 IMPORTATA DA BUY 4 RCCR
+                
                 elif (
                     
                     ma4_last > ma30_last
-                    and deviation_ma5_sopra_o_sotto_ma100 > -0.11
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.15
                     
-                    and deviation_ma100_sopra_ma300 < 0.25
-                    and deviation_ma100_sopra_ma300 > -0.25
+                    and deviation_ma100_sopra_ma300 < 0.27
+                    and deviation_ma100_sopra_ma300 > -0.27
                     
                     and ma450_last > ma450_480_min_ago
                     
@@ -10910,6 +10939,9 @@ class maddog:
                     buy = "BUY 3 con 450 > 450 480 min MA CONSIDERATA ANCORA LATERALE - r 6599 A1yA1"
                     action = "buy"
                     percentage = 60
+                    
+                    #  2 ottobre 2023 and deviation_ma5_sopra_o_sotto_ma100 > -0.15 da > -0.10 questa anticipata ndecchiecella e creata altra condizione sempre da questa
+              
 
                 elif (
                     
