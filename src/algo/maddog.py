@@ -25126,16 +25126,35 @@ class maddog:
                         # deviation_sell = ma3_last/last_trade_price
                         # 19 ottobre 2022 5-69 da 5-50
                         
-                        
+
+
                     elif (
                         ma50_last >= ma50_2_min_ago
+                        and ma450_last > ma450_360_min_ago
+                        and deviation_ma5_sotto_ma300 < 0.40
+                        and (ma5_prev > ma78_prev and ma5_last < ma78_last)
+                        and deviation_sell > 0.25 and deviation_sell < 0.56
+                        and ma2_last < ma2_2_min_ago
+                       
+                    ):
+                        sell = "SELL 4-5-x (21-60 min) con ma450 > ma450 360 min ago e con ma50 > and incrocio 5-50 and deviation_sell 0.25 - 0.56 FINTA DI MARADONA - r 15568 B1"
+                        action = "sell"
+                        
+                        # deviation_sell = ma3_last/last_trade_price
+                        # 14 ott 2022 5-50 da 5-25
+                        #  2 ott 2023 aggiunta ma450 > ma450 360 min ago
+                        #  2 ott 2023 5-78 da 5-50
+                    
+                    elif (
+                        ma50_last >= ma50_2_min_ago
+                        and ma450_last < ma450_360_min_ago
                         and deviation_ma5_sotto_ma300 < 0.40
                         and (ma5_prev > ma50_prev and ma5_last < ma50_last)
                         and deviation_sell > 0.25 and deviation_sell < 0.56
                         and ma2_last < ma2_2_min_ago
                        
                     ):
-                        sell = "SELL 4-5-x (21-60 min) con ma50 > and incrocio 5-50 and deviation_sell 0.25 - 0.56 FINTA DI MARADONA - r 15568 B"
+                        sell = "SELL 4-5-x (21-60 min) con ma450 < ma450 360 min ago e con ma50 > and incrocio 5-50 and deviation_sell 0.25 - 0.56 FINTA DI MARADONA - r 15568 B2"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
