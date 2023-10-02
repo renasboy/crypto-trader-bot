@@ -16352,8 +16352,34 @@ class maddog:
 
 
                   
-                    # ----------------------------------------------------------------------------- CONDIZIONE SPECIALE NEL SELL 1 !
+                    # ----------------------------------------------------------------------------- CONDIZIONI SPECIALI NEL SELL 1 !
                     
+                    
+                    elif (
+                        ma78_last > ma78_120_min_ago
+                        and deviation_ma39 < -0.01
+                        and deviation_sell < -0.30
+                        and ma2_last < ma2_2_min_ago 
+                
+                        and ma50_last < ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 < 0.40
+                
+                        and deviation_ma5_sotto_ma200 > -0.80
+                    ):
+                        sell = "SELL condizione speciale (50-90 min) - deviation 3-39 < -0.01 and dev_sell < -0.30 - con ma50 < e con ma5 sotto ma200 > -0.80 - r 9931 A"
+                        action = "sell"
+                        
+                        #   9 GIU 2023 dev 3-39 a -0.17 da -0.25
+                        #   9 GIU 2023 dev sell a -0.35 da -0.36
+                        #  15 GIU 2023 dev_39 -0.15 da -0.17 dopo che ha fatto -1.15% il 14 giu 2023 ore 22:06
+                        #  15 GIU 2023 dev sell a -0.349 da -0.35
+                        #   7 lug 2023 dev sell a -0.348 da -0.349
+                        #   7 lug 2023 deviation 3-39 < -0.10 da < -0.15
+                        #  1 set 2023 and deviation_ma5_sotto_ma200 > -0.80 da -0.90
+                        #  1 set 2023 and deviation_ma39 < -0.01 da -0.10 aveva fatto -0.66
+                        #  1 set 2023 dev sell a -0.34 da -0.348
+                        #  1 set 2023 dev sell a -0.34 da -0.348
+           
                     elif (
                         ma78_last < ma78_120_min_ago
                         and ma300_last < ma300_301_min_ago
@@ -16371,7 +16397,7 @@ class maddog:
                         and macd < macd_2_min_ago
                         and macd < -2
                     ):
-                        sell = "SELL 1 cond. spec. (50-90 min) r 16047 B2 con ma300> 5 ore - dev 3-39 < 0.05 and dev_sell < -0.06 - con ma50 < e con ma5 sotto ma200 > -0.90 - r 9931"
+                        sell = "SELL 1 cond. spec. (50-90 min) r 16047 B2 con ma300> 5 ore - dev 3-39 < 0.05 and dev_sell < -0.06 - con ma50 < e con ma5 sotto ma200 > -0.90 - r 9931 B"
                         action = "sell"
 
                     
@@ -26066,9 +26092,9 @@ class maddog:
                 #  15 GIU 2023 dev sell a -0.349 da -0.35
                 #   7 lug 2023 dev sell a -0.348 da -0.349
                 #   7 lug 2023 deviation 3-39 < -0.10 da < -0.15
-                #  1 sett 2023 and deviation_ma5_sotto_ma200 > -0.80 da -0.90
-                #  1 sett 2023 and deviation_ma39 < -0.01 da -0.10 aveva fatto -0.66
-                #  1 sett 2023 dev sell a -0.34 da -0.348
+                #  1 set 2023 and deviation_ma5_sotto_ma200 > -0.80 da -0.90
+                #  1 set 2023 and deviation_ma39 < -0.01 da -0.10 aveva fatto -0.66
+                #  1 set 2023 dev sell a -0.34 da -0.348
 
 
 
