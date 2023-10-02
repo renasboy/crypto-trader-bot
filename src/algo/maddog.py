@@ -16357,7 +16357,7 @@ class maddog:
                     
                     elif (
                         ma78_last > ma78_120_min_ago
-                        and deviation_ma39 < -0.01
+                        and deviation_ma39 < 0.01
                         and deviation_sell < -0.30
                         and ma2_last < ma2_2_min_ago 
                 
@@ -16366,7 +16366,7 @@ class maddog:
                 
                         and deviation_ma5_sotto_ma200 > -0.80
                     ):
-                        sell = "SELL condizione speciale (50-90 min) - deviation 3-39 < -0.01 and dev_sell < -0.30 - con ma50 < e con ma5 sotto ma200 > -0.80 - r 9931 A"
+                        sell = "SELL condizione speciale (50-90 min) - deviation 3-39 < 0.01 and dev_sell < -0.30 - con ma50 < e con ma5 sotto ma200 > -0.80 - r 9931 A"
                         action = "sell"
                         
                         #   9 GIU 2023 dev 3-39 a -0.17 da -0.25
@@ -16375,11 +16375,13 @@ class maddog:
                         #  15 GIU 2023 dev sell a -0.349 da -0.35
                         #   7 lug 2023 dev sell a -0.348 da -0.349
                         #   7 lug 2023 deviation 3-39 < -0.10 da < -0.15
-                        #  1 set 2023 and deviation_ma5_sotto_ma200 > -0.80 da -0.90
-                        #  1 set 2023 and deviation_ma39 < -0.01 da -0.10 aveva fatto -0.66
-                        #  1 set 2023 dev sell a -0.34 da -0.348
-                        #  1 set 2023 dev sell a -0.34 da -0.348
-           
+                        #   1 set 2023 and deviation_ma5_sotto_ma200 > -0.80 da -0.90
+                        #   1 set 2023 and deviation_ma39 < -0.01 da -0.10 aveva fatto -0.66
+                        #   1 set 2023 dev sell a -0.34 da -0.348
+                        #   1 set 2023 dev sell a -0.34 da -0.348
+                        #   2 ott 2023 dev sell a -0.30 da -0.34
+                        #   2 ott 2023 dev 39 a 0.01 da -0.01
+                  
                     elif (
                         ma78_last < ma78_120_min_ago
                         and ma300_last < ma300_301_min_ago
