@@ -21381,7 +21381,7 @@ class maddog:
                         and ma2_last <= ma2_2_min_ago 
                         and macd < macd_2_min_ago
                     ):
-                        sell = "SELL ex cond. spec r 15985 A1 ok 2 - SALVAGENTE 3 3-39 < -0.01 e dev sell < -0.013 and dev_sell< -0.308 con ma50 < - r 12683"
+                        sell = "SELL 2 > 110 min ex cond. spec r 15985 A1 ok 2 - SALVAGENTE con 3-39 < -0.01 e dev sell < -0.013 and dev_sell< -0.308 con ma50 < - r 12683"
                         action = "sell"
                 
                         #  2 ott 2023 dev sell -0.013 da -0.02
