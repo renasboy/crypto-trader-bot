@@ -2332,7 +2332,7 @@ class maddog:
                 
                 elif (     
                     
-                    ma5_last > ma20_last
+                    ma3_last > ma20_last
                     
                     and deviation_ma54_sopra_o_sotto_ma72 < -0.015
                     
@@ -2340,8 +2340,8 @@ class maddog:
                     and deviation_ma300_sopra_ma450 > -0.50
                     
                     and deviation_ma3_sopra_ma10 > 0.017
-                    and deviation_ma3_sopra_ma16 > 0.01
-                    and deviation_ma3_sopra_ma18 > 0.03
+                    and deviation_ma3_sopra_ma16 > 0.001
+                    and deviation_ma3_sopra_ma18 > 0.001
                     
                     and ma2_last >= ma20_last
                   
@@ -2349,7 +2349,7 @@ class maddog:
                     and macd >= macd_2_min_ago
                     
                 ):    
-                    buy = "BUY 1 compare forever - con 5-20 E CON 300 ancora vicina alla 450 ( anche un poco sotto ! ) and 3-18 > 0.03 + MACD > - r 1537 A3"
+                    buy = "BUY 1 compare forever - con 3-20 E CON 300 ancora vicina alla 450 ( anche un poco sotto ! ) and 3-18 > 0.001 + MACD > - r 1537 A3"
                     action = "buy"
                     percentage = 90
                     
@@ -2375,9 +2375,9 @@ class maddog:
                     
                     # 27 set 2023 and deviation_ma300_sopra_ma450 > -0.50 da -0.45
                     # 27 set 2023 0.005 - 0.01 - 0.03
-                    # 28 set and deviation_ma3_sopra_ma10 > 0.017 da > 0.005 ( potevo mettere macd > 5 ma ho preferito aumentare di un nulla 3-10 )
-
-
+                    # 28 set 2023 and deviation_ma3_sopra_ma10 > 0.017 da > 0.005 ( potevo mettere macd > 5 ma ho preferito aumentare di un nulla 3-10 )
+                    #  2 ott 2023 3-16 e 3-18 abbassati da 0.03 a 0.01 
+                    #  2 ott 2023 3-20 da 5-20
 
               
 
