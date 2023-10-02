@@ -21347,8 +21347,9 @@ class maddog:
                         # > estate -0.15 da +0.02
                         # 10 dic 2022 -0.16 da -0.15
                         # 25 gen 2023 -0.168 da -0.16
+                    
+                    
 
-                  
                     elif (    
                         ma3_last < ma78_last
                         and deviation_sell > 0.50
@@ -21362,6 +21363,31 @@ class maddog:
                         action = "sell"
                         
                         # 16 ago 2023 3-78 da 3-39
+
+                    ################################################################################## importate condizioni speciali
+                  
+                    elif (
+                        deviation_ma39 < -0.01
+                        and deviation_sell < -0.013
+                        and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago > 1.50
+                        and deviation_ma10_sopra_o_sotto_ma10_30_min_ago < 0.10
+                        
+                        and delta_450_300 < delta_450_300_60_min
+                        and ma50_last < ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 > 0.20
+                
+                        and deviation_ma3_sotto_ma150 > -1.20
+                        
+                        and ma2_last <= ma2_2_min_ago 
+                        and macd < macd_2_min_ago
+                    ):
+                        sell = "SELL ex cond. spec r 15985 A1 ok 2 - SALVAGENTE 3 3-39 < -0.01 e dev sell < -0.013 and dev_sell< -0.308 con ma50 < - r 12683"
+                        action = "sell"
+                
+                        #  2 ott 2023 dev sell -0.013 da -0.02
+
+                  
+                    
                         
 
                   
