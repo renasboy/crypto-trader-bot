@@ -2329,10 +2329,10 @@ class maddog:
                     
                     # 15 set 2023
 
-                
                 elif (     
                     
                     ma3_last > ma20_last
+                    and ma100_last > ma100_60_min_ago
                     
                     and deviation_ma54_sopra_o_sotto_ma72 < -0.015
                     
@@ -2349,7 +2349,32 @@ class maddog:
                     and macd >= macd_2_min_ago
                     
                 ):    
-                    buy = "BUY 1 compare forever - con 3-20 E CON 300 ancora vicina alla 450 ( anche un poco sotto ! ) and 3-18 > 0.001 + MACD > - r 1537 A3"
+                    buy = "BUY 1 compare forever - con 3-20 E CON 300 ancora vicina alla 450 ( anche un poco sotto ! ) and 3-18 > 0.001 + MACD > - r 1537 A3x"
+                    action = "buy"
+                    percentage = 90
+
+              
+                elif (     
+                    
+                    ma3_last > ma20_last
+                    and ma100_last < ma100_60_min_ago
+                    
+                    and deviation_ma54_sopra_o_sotto_ma72 < -0.015
+                    
+                    and deviation_ma39_sotto_ma200 < -0.01
+                    and deviation_ma300_sopra_ma450 > -0.50
+                    
+                    and deviation_ma3_sopra_ma10 > 0.025
+                    and deviation_ma3_sopra_ma16 > 0.001
+                    and deviation_ma3_sopra_ma18 > 0.001
+                    
+                    and ma2_last >= ma20_last
+                  
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                    
+                ):    
+                    buy = "BUY 1 compare forever - con 3-20 E CON 300 ancora vicina alla 450 ( anche un poco sotto ! ) and 3-18 > 0.001 + MACD > - r 1537 A3y"
                     action = "buy"
                     percentage = 90
                     
@@ -2378,7 +2403,7 @@ class maddog:
                     # 28 set 2023 and deviation_ma3_sopra_ma10 > 0.017 da > 0.005 ( potevo mettere macd > 5 ma ho preferito aumentare di un nulla 3-10 )
                     #  2 ott 2023 3-16 e 3-18 abbassati da 0.03 a 0.01 
                     #  2 ott 2023 3-20 da 5-20
-
+                    #  5 ott 2023 se ma 100 piega al ribasso da 60 min allora 3-10 > 0.025 ASSOLUTAMENTE COSI' ALTRIMENTI COMPRA CONTINUAMENTE
               
 
               
