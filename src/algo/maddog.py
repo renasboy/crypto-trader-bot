@@ -12112,12 +12112,12 @@ class maddog:
                     #  5 ott 2023 and macd > macd_2_min_ago
 
                 
-                    
                 # BUY 4 29 ago 2022 > 180 min di ribasso
                 
                 elif (
                     
                     ma8_last > ma54_last
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.05
                     
                     and ma100_last < ma100_180_min_ago
                     and ma200_last < ma200_180_min_ago
@@ -12132,14 +12132,44 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
                     
                 ):
-                    buy = "BUY 4 29 ago 2022 > 180 min di ribasso - r 7039 B2"
+                    buy = "BUY 4 29 ago 2022 > 180 min di ribasso - r 7039 B2x"
+                    action = "buy"
+                    percentage = 90
+                    
+                    # 11 ott 2022 se ma300 < 360 min ago BUY 4 se deve comprare deve avere almeno 5-28 > 0.13 
+                    # 31 lug 2023 ma8_last > ma54_last da 18-100
+                    #  5 ott 2023 and deviation_ma5_sopra_o_sotto_ma100 > -0.05
+              
+
+              
+                # BUY 4 29 ago 2022 > 180 min di ribasso
+                
+                elif (
+                    
+                    ma5_last > ma54_last
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.05
+                    
+                    and ma100_last < ma100_180_min_ago
+                    and ma200_last < ma200_180_min_ago
+                    and ma300_last < ma300_180_min_ago
+                    
+                    and ma300_last < ma300_360_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and deviation_ma5_sopra_ma28 > 0.13
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                ):
+                    buy = "BUY 4 29 ago 2022 > 180 min di ribasso - r 7039 B2y"
                     action = "buy"
                     percentage = 90
                     
                     # 11 ott 2022 se ma300 < 360 min ago BUY 4 se deve comprare deve avere almeno 5-28 > 0.13 
                     # 31 lug ma8_last > ma54_last da 18-100
-                    
-                    
+                    #  5 ott 2023 and deviation_ma5_sopra_o_sotto_ma100 < -0.05 ( per comprare meglio, perche' la precedente 7039 B2 comprava tardi !) 
+                    #  5 ott 2023 and macd >= macd_2_min_ago
                     
                 # BUY 4 DURANTE UNA CORREZIONE FIAT importata da buy 1 r 2575 che non e' un forte ribasso e non e' un crollo ! (MA ma3 > ma150 mi protegge un po')
 
