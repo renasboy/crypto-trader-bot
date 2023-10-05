@@ -17576,7 +17576,7 @@ class maddog:
                         and ma450_last > ma450_360_min_ago
                         and ma300_last > ma300_120_min_ago
                         and ma3_last < ma39_last
-                        and deviation_sell < 0.10
+                        and deviation_sell < 0.05
                         
                         
                         and deviation_trend_ma200 > -0.15
@@ -17586,7 +17586,7 @@ class maddog:
                         and macd < macd_2_min_ago
                         and macd < -3
                     ):
-                        sell = "SELL 1 da 110 a 239 min con ma450 > 6 ore ago E 300 > 120 min ago con ma50 < (dev_sell < 0.20 and ma3_last < ma39_last) con > PERDITA TOL - r 10274 A1x"
+                        sell = "SELL 1 da 110 a 239 min con ma450 > 6 ore ago E 300 > 120 min ago con ma50 < (dev_sell < 0.05 and ma3_last < ma39_last) - r 10274 A1x"
                         action = "sell"
                         
                         # 28 dic 2022 dev sell -0.245 da -0.23
@@ -17598,7 +17598,7 @@ class maddog:
                         # 12 set 2023 and macd < macd 2 min ago
                         # 18 set 2023 and macd < -3
                         # 28 set 2023 se 450 scende da 6 ore ma 300 sale da 2 ore aspetta un poco prima di vendere.
-
+                        #  5 ott 2023 dev sell 0.05 da 0.10
                   
                     elif (     
                         ma50_last < ma50_2_min_ago
