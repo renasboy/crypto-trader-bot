@@ -10895,14 +10895,15 @@ class maddog:
                     and ma200_last < ma300_last
                     
                     and ma2_last > ma2_2_min_ago
+                    and macd > macd_2_min_ago
                 ):    
-                    buy = "BUY 3 ULTIMA CONDIZIONE che mancava ! ma tutte negative MA BUY con 8-150 e 5-28 > 0.10 - r 6598"
+                    buy = "BUY 3 ULTIMA CONDIZIONE che mancava ! ma tutte negative MA BUY con 8-150 e 5-28 > 0.10 and macd > macd_2_min_ago - r 6598"
                     action = "buy"
                     percentage = 80
                     
                     # BUY 3 ULTIMA CONDIZIONE che mancava con 8-150
-                    # 19 ott aggiunto 5-28 > 0.10
-                    
+                    # 19 ott 2022 aggiunto 5-28 > 0.10
+                    #  6 ott 2023 aggiunto and macd > macd_2_min_ago
                     
                     
                     
