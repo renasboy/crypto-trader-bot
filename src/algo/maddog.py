@@ -25183,7 +25183,7 @@ class maddog:
                         # 17 mar 2023 3-20 da 3-18 vedi 3 mar 2023 ore 3:43 madonna ! c'e' stato un crollo spaventoso e si e' comportato benissimo !
 
 
-                   elif (
+                    elif (
                         ma50_last < ma50_2_min_ago
                         and deviation_ma10_sopra_ma200 < 0.20
                         and (ma3_prev > ma20_prev and ma3_last < ma20_last)
