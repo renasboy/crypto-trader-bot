@@ -7968,7 +7968,7 @@ class maddog:
                     and deviation_ma3_sopra_ma18 > 0.02
                     
                     and macd >= macd_2_min_ago
-                    and macd > 2.0
+                    and macd > -11.0
                 ):  
                 
                     buy = "BUY 2 laterale con 300>450 and 4-28 and macd > 2.0 - r 5412 X1a"
@@ -7983,6 +7983,8 @@ class maddog:
                     # 27 set 2023 4-28 da 5-28 
                     # 27 set 2023 and macd > 3.20 da 3.70
                     #  2 ott 2023 tolto and ma300_last > ma450_last c'e' and ma450_last > ma450_480_min_ago !
+                    #  2 ott 2023 and macd > -11.0 da macd > 2.0
+                  
               
                 elif (    
                     ma5_last > ma39_last
