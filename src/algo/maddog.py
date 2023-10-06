@@ -11495,27 +11495,51 @@ class maddog:
                     # 24 ago 2023 tolta and ma4_last >= ma4_2_min_ago
                     # 24 ago 2023 tolta deviation_bellissima >= 0.03
                     # 24 ago 2023 5-48 da 39-48
-                
+
+              
+
+                  
                 elif (
                     deviation_ma4_sopra_ma30 > 0.15
                     and ma300_last < ma300_120_min_ago
-                    
+                    and ma100_last > ma100_60_min_ago
                     and deviation > -0.30
                     
-                    and ma5_last > ma54_last
-                    and ma3_last >= ma69_last
+                    and ma3_last >= ma54_last
                     and delta_buy3_incrocio_ma3_ma8 >= 0.06
+                    
+                    and ma3_last >= ma15_last
                     and ma3_last > ma8_last
-                    
-                    
-                    and ma2_last >= ma2_2_min_ago
-                    and ma5_last >= ma15_last
                     
                     and ma2_last >= ma2_2_min_ago
                     and macd > macd_2_min_ago
                     
                 ):    
-                    buy = "BUY 4B importato da BUY 3 RCCR se ma39 > ma50 con 300 < - r 6756 B"
+                    buy = "BUY 4B importato da BUY 3 RCCR con 300 < MA 100 < 100 60 min ago - r 6756 Bx"
+                    action = "buy"
+                    percentage = 70
+                    
+                    #  5 set 2023 anticipata ndecchiecella
+
+              
+                elif (
+                    deviation_ma4_sopra_ma30 > 0.15
+                    and ma300_last < ma300_120_min_ago
+                    and ma100_last < ma100_60_min_ago
+                    
+                    and deviation > -0.30
+                    
+                    and ma3_last >= ma54_last
+                    and delta_buy3_incrocio_ma3_ma8 >= 0.06
+                    
+                    and ma3_last >= ma15_last
+                    and ma3_last > ma8_last
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd > macd_2_min_ago
+                    
+                ):    
+                    buy = "BUY 4B importato da BUY 3 RCCR con 300 < E 100 < 100 60 min ago - r 6756 By"
                     action = "buy"
                     percentage = 70
                     
