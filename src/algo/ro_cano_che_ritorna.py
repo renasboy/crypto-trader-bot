@@ -1,5 +1,4 @@
 class ro_cano_che_ritorna:
-
   
     def __init__(self, helper, buy_percentage, sell_percentage):
         self.algo_helper = helper
@@ -42,6 +41,7 @@ class ro_cano_che_ritorna:
         ma45_last, ma45_prev = self.algo_helper.ma_last_prev(45)
         ma47_last, ma47_prev = self.algo_helper.ma_last_prev(47)
         ma48_last, ma48_prev = self.algo_helper.ma_last_prev(48)
+        ma49_last, ma49_prev = self.algo_helper.ma_last_prev(49)
         ma50_last, ma50_prev = self.algo_helper.ma_last_prev(50)
         ma52_last, ma52_prev = self.algo_helper.ma_last_prev(52)
         ma54_last, ma54_prev = self.algo_helper.ma_last_prev(54)
@@ -61,6 +61,8 @@ class ro_cano_che_ritorna:
         ma150_last, ma150_prev = self.algo_helper.ma_last_prev(150)
         ma180_last, ma180_prev = self.algo_helper.ma_last_prev(180)
         ma200_last, ma200_prev = self.algo_helper.ma_last_prev(200)
+        ma225_last, ma225_prev = self.algo_helper.ma_last_prev(225)
+        ma240_last, ma240_prev = self.algo_helper.ma_last_prev(240)
         ma250_last, ma250_prev = self.algo_helper.ma_last_prev(250)
         ma285_last, ma285_prev = self.algo_helper.ma_last_prev(285)
         ma300_last, ma300_prev = self.algo_helper.ma_last_prev(300)
@@ -72,29 +74,40 @@ class ro_cano_che_ritorna:
         # moving average (2-3-4-5-7-8-20-43-100) di x minuti prima
         
         ma2_2_min_ago = self.algo_helper.ma_minutes_ago(2, 2)
-        ma2_3_min_ago = self.algo_helper.ma_minutes_ago(2, 3)
-        ma2_4_min_ago = self.algo_helper.ma_minutes_ago(2, 4)
+        
+        
         ma3_2_min_ago = self.algo_helper.ma_minutes_ago(3, 2)
         ma3_3_min_ago = self.algo_helper.ma_minutes_ago(3, 3)
-        ma3_9_min_ago = self.algo_helper.ma_minutes_ago(3, 9)
+        
         ma3_20_min_ago = self.algo_helper.ma_minutes_ago(3, 20)
+        ma3_90_min_ago = self.algo_helper.ma_minutes_ago(3, 90)
+        
         ma4_2_min_ago = self.algo_helper.ma_minutes_ago(4, 2)
         
-        ma4_4_min_ago = self.algo_helper.ma_minutes_ago(4, 4)
         ma5_2_min_ago = self.algo_helper.ma_minutes_ago(5, 2)
+        
+        ma5_12_min_ago = self.algo_helper.ma_minutes_ago(5, 12)
+        ma5_1080_min_ago = self.algo_helper.ma_minutes_ago(5, 1080)
+        
         ma6_2_min_ago = self.algo_helper.ma_minutes_ago(6, 2)
         ma8_2_min_ago = self.algo_helper.ma_minutes_ago(8, 2)
-        ma8_4_min_ago = self.algo_helper.ma_minutes_ago(8, 4)
+        
         ma10_2_min_ago = self.algo_helper.ma_minutes_ago(10, 2)
+        ma10_30_min_ago = self.algo_helper.ma_minutes_ago(10, 30)
+        ma10_300_min_ago = self.algo_helper.ma_minutes_ago(10, 300)
         ma13_2_min_ago = self.algo_helper.ma_minutes_ago(13, 2)
         ma13_10_min_ago = self.algo_helper.ma_minutes_ago(13, 10)
         ma18_2_min_ago = self.algo_helper.ma_minutes_ago(18, 2)
         ma18_30_min_ago = self.algo_helper.ma_minutes_ago(18, 30)
         ma20_2_min_ago = self.algo_helper.ma_minutes_ago(20, 2)
+        ma20_5_min_ago = self.algo_helper.ma_minutes_ago(20, 5)
         ma20_22_min_ago = self.algo_helper.ma_minutes_ago(20, 22)
         ma20_60_min_ago = self.algo_helper.ma_minutes_ago(20, 60)
         ma25_2_min_ago = self.algo_helper.ma_minutes_ago(25, 2)
+        
         ma28_2_min_ago = self.algo_helper.ma_minutes_ago(28, 2)
+        
+        
         ma28_20_min_ago = self.algo_helper.ma_minutes_ago(28, 20)
         ma28_30_min_ago = self.algo_helper.ma_minutes_ago(28, 30)
         
@@ -103,43 +116,50 @@ class ro_cano_che_ritorna:
         ma30_30_min_ago = self.algo_helper.ma_minutes_ago(30, 30)
         ma30_40_min_ago = self.algo_helper.ma_minutes_ago(30, 40)
       
-        ma33_5_min_ago = self.algo_helper.ma_minutes_ago(33, 5)
+        
         ma36_2_min_ago = self.algo_helper.ma_minutes_ago(36, 2)
         ma39_2_min_ago = self.algo_helper.ma_minutes_ago(39, 2)
-        ma39_3_min_ago = self.algo_helper.ma_minutes_ago(39, 3)
+        
         ma39_15_min_ago = self.algo_helper.ma_minutes_ago(39, 15)
         ma39_30_min_ago = self.algo_helper.ma_minutes_ago(39, 30)
-        ma48_3_min_ago = self.algo_helper.ma_minutes_ago(48, 3)
+        ma39_70_min_ago = self.algo_helper.ma_minutes_ago(39, 70)
+        
         ma50_2_min_ago = self.algo_helper.ma_minutes_ago(50, 2)
         ma50_60_min_ago = self.algo_helper.ma_minutes_ago(50, 60)
         ma54_15_min_ago = self.algo_helper.ma_minutes_ago(54, 15)
         ma59_2_min_ago = self.algo_helper.ma_minutes_ago(59, 2)
         ma59_30_min_ago = self.algo_helper.ma_minutes_ago(59, 30)
-        ma59_45_min_ago = self.algo_helper.ma_minutes_ago(59, 45)
+        
         ma59_60_min_ago = self.algo_helper.ma_minutes_ago(59, 60)
+        
         ma69_2_min_ago = self.algo_helper.ma_minutes_ago(69, 2)
         ma69_15_min_ago = self.algo_helper.ma_minutes_ago(69, 15)
         
-        ma69_45_min_ago = self.algo_helper.ma_minutes_ago(69, 45)
+        
         ma72_2_min_ago = self.algo_helper.ma_minutes_ago(72, 2)
         ma78_2_min_ago = self.algo_helper.ma_minutes_ago(78, 2)
-        ma78_4_min_ago = self.algo_helper.ma_minutes_ago(78, 4)
-        ma78_5_min_ago = self.algo_helper.ma_minutes_ago(78, 5)
-        ma78_7_min_ago = self.algo_helper.ma_minutes_ago(78, 7)
+        ma78_20_min_ago = self.algo_helper.ma_minutes_ago(78, 20)
         ma78_30_min_ago = self.algo_helper.ma_minutes_ago(78, 30)
         ma78_60_min_ago = self.algo_helper.ma_minutes_ago(78, 60)
+        
+        ma78_70_min_ago = self.algo_helper.ma_minutes_ago(78, 70)
+        ma78_120_min_ago = self.algo_helper.ma_minutes_ago(78, 120)
+        ma78_240_min_ago = self.algo_helper.ma_minutes_ago(78, 240)
+        ma78_600_min_ago = self.algo_helper.ma_minutes_ago(78, 600)
+        
         ma100_2_min_ago = self.algo_helper.ma_minutes_ago(100, 2)
         ma100_3_min_ago = self.algo_helper.ma_minutes_ago(100, 3)
-        
+        ma100_5_min_ago = self.algo_helper.ma_minutes_ago(100, 5)
         ma100_10_min_ago = self.algo_helper.ma_minutes_ago(100, 10)
+        
         ma100_30_min_ago = self.algo_helper.ma_minutes_ago(100, 30)
-        ma100_40_min_ago = self.algo_helper.ma_minutes_ago(100, 40)
+        
         ma100_50_min_ago = self.algo_helper.ma_minutes_ago(100, 50)
         ma100_60_min_ago = self.algo_helper.ma_minutes_ago(100, 60)
         ma100_120_min_ago = self.algo_helper.ma_minutes_ago(100, 120)
         ma100_180_min_ago = self.algo_helper.ma_minutes_ago(100, 180)
         ma100_301_min_ago = self.algo_helper.ma_minutes_ago(100, 301)
-        
+        ma150_20_min_ago = self.algo_helper.ma_minutes_ago(150, 20)
         ma150_60_min_ago = self.algo_helper.ma_minutes_ago(150, 60)
         ma200_15_min_ago = self.algo_helper.ma_minutes_ago(200, 15)
         ma200_20_min_ago = self.algo_helper.ma_minutes_ago(200, 20)
@@ -151,8 +171,11 @@ class ro_cano_che_ritorna:
         ma200_180_min_ago = self.algo_helper.ma_minutes_ago(200, 180)
         ma200_301_min_ago = self.algo_helper.ma_minutes_ago(200, 301)
         
+        ma225_60_min_ago = self.algo_helper.ma_minutes_ago(225, 60)
+        
         ma300_20_min_ago = self.algo_helper.ma_minutes_ago(300, 20)
         ma300_30_min_ago = self.algo_helper.ma_minutes_ago(300, 30)
+        ma300_50_min_ago = self.algo_helper.ma_minutes_ago(300, 50)
         ma300_60_min_ago = self.algo_helper.ma_minutes_ago(300, 60)
         ma300_120_min_ago = self.algo_helper.ma_minutes_ago(300, 120)
         ma300_180_min_ago = self.algo_helper.ma_minutes_ago(300, 180)
@@ -162,30 +185,70 @@ class ro_cano_che_ritorna:
         ma300_360_min_ago = self.algo_helper.ma_minutes_ago(300, 360)
         ma300_720_min_ago = self.algo_helper.ma_minutes_ago(300, 720)
         
+        ma450_60_min_ago = self.algo_helper.ma_minutes_ago(450, 60)
+        ma450_120_min_ago = self.algo_helper.ma_minutes_ago(450, 120)
+        ma450_180_min_ago = self.algo_helper.ma_minutes_ago(450, 180)
+        ma450_240_min_ago = self.algo_helper.ma_minutes_ago(450, 240)
+        ma450_300_min_ago = self.algo_helper.ma_minutes_ago(450, 300)
+        ma450_360_min_ago = self.algo_helper.ma_minutes_ago(450, 360)
+        ma450_480_min_ago = self.algo_helper.ma_minutes_ago(450, 480)
         ma450_720_min_ago = self.algo_helper.ma_minutes_ago(450, 720)
         
+
+
+      
+        # viaggio in italia del compare mio !
+      
+        # MACD trend 1
         
+        macd = self.algo_helper.macd
+        macd_2_min_ago = self.algo_helper.macd_minutes_ago(2)
+        macd_3_min_ago = self.algo_helper.macd_minutes_ago(3)
+        macd_5_min_ago = self.algo_helper.macd_minutes_ago(5)
+
+      
+      
+        # MACD trend 2
         
-        # MAC TREND
-        macd_trend = self.algo_helper.macd_trend
+        trend_macd = (macd - macd_2_min_ago)
+        self.algo_helper.info("trend_macd: {}".format(trend_macd))
+      
+
         
+        # formula macd_differenza di 2 min ago
         
+        macd_differenza_2_min_ago = (macd - macd_2_min_ago)
+        self.algo_helper.info("macd_differenza_2_min_ago: {}".format(macd_differenza_2_min_ago))
+
+
+      
+        # formula macd_differenza di 5 min ago
         
+        macd_differenza = (macd - macd_5_min_ago)
+        self.algo_helper.info("macd_differenza: {}".format(macd_differenza))
         
-        
-        
+     
+
+
+      
         # LAST TRADE
         
         last_trade_action = self.algo_helper.last_trade_action
         last_trade_price = self.algo_helper.last_trade_price
         seconds_since_last_trade = self.algo_helper.seconds_since_last_trade
 
+      
+
         # PREV TRADE
         
-        prev_trade_action = self.algo_helper.prev_trade_action
-        prev_trade_time = self.algo_helper.prev_trade_time
-        prev_trade_price = self.algo_helper.prev_trade_price
-        seconds_since_prev_trade = self.algo_helper.seconds_since_prev_trade
+        # prev_trade_action = self.algo_helper.prev_trade_action
+        # prev_trade_time = self.algo_helper.prev_trade_time
+        # prev_trade_price = self.algo_helper.prev_trade_price
+        # seconds_since_prev_trade = self.algo_helper.seconds_since_prev_trade
+        
+        # queste condizioni non le sto usando - grazie compa
+
+        
 
         # PREZZO DI ADESSO (di mercato) - CURRENT PRICE
         
@@ -193,12 +256,12 @@ class ro_cano_che_ritorna:
         
 
         # PREZZO di X MINUTI FA (di mercato)
-        price_1_min_ago = self.algo_helper.price_minutes_ago(1)
+        
         price_2_min_ago = self.algo_helper.price_minutes_ago(2)
         price_10_min_ago = self.algo_helper.price_minutes_ago(10)
         
-        price_15_min_ago = self.algo_helper.price_minutes_ago(15)
-        price_20_min_ago = self.algo_helper.price_minutes_ago(20)
+        
+        
 
         ###################################################################################################################### TEMPO
         
@@ -284,12 +347,89 @@ class ro_cano_che_ritorna:
         deviation = (ma5_last / last_trade_price - 1) * 100 if last_trade_price else 0
         self.algo_helper.info("deviation: {}".format(deviation))
         
+        # formula DEVIATION_sell
+        
+        deviation_sell = (ma4_last / last_trade_price - 1) * 100 if last_trade_price else 0
+        self.algo_helper.info("deviation_sell: {}".format(deviation_sell))
         
         
         # formula DEVIATION_ma5_sopra_ma28 - FORMULA AUREA !
         
         deviation_ma5_sopra_ma28 = (ma5_last / ma28_last - 1) * 100 if ma28_last else 0
         self.algo_helper.info("deviation_ma5_sopra_ma28: {}".format(deviation_ma5_sopra_ma28))
+        
+        
+        # formula DEVIATION_ma4_sopra_ma28
+        
+        deviation_ma4_sopra_ma28 = (ma4_last / ma28_last - 1) * 100 if ma28_last else 0
+        self.algo_helper.info("deviation_ma4_sopra_ma28: {}".format(deviation_ma4_sopra_ma28))
+
+
+
+
+      
+        # formula DEVIATION_ma10_sopra_o_sotto_ma10_30_min_ago - !
+        
+        deviation_ma10_sopra_o_sotto_ma10_30_min_ago = (ma10_last / ma10_30_min_ago - 1) * 100 if ma10_30_min_ago else 0
+        self.algo_helper.info("deviation_ma10_sopra_o_sotto_ma10_30_min_ago: {}".format(deviation_ma10_sopra_o_sotto_ma10_30_min_ago))
+
+
+      
+        # formula DEVIATION_ma5_sopra_o_sotto_ma5_1080_min_ago - !
+        
+        deviation_ma5_sopra_o_sotto_ma5_1080_min_ago = (ma5_last / ma5_1080_min_ago - 1) * 100 if ma5_1080_min_ago else 0
+        self.algo_helper.info("deviation_ma5_sopra_o_sotto_ma5_1080_min_ago: {}".format(deviation_ma5_sopra_o_sotto_ma5_1080_min_ago))
+
+
+
+        # formula DEVIATION_ma78_sopra_o_sotto_ma78_240_min_ago - !
+        
+        deviation_ma78_sopra_o_sotto_ma78_240_min_ago = (ma78_last / ma78_240_min_ago - 1) * 100 if ma78_240_min_ago else 0
+        self.algo_helper.info("deviation_ma78_sopra_o_sotto_ma78_240_min_ago: {}".format(deviation_ma78_sopra_o_sotto_ma78_240_min_ago))
+
+      
+        # formula DEVIATION_ma78_sopra_o_sotto_ma78_600_min_ago - !
+        
+        deviation_ma78_sopra_o_sotto_ma78_600_min_ago = (ma78_last / ma78_600_min_ago - 1) * 100 if ma78_600_min_ago else 0
+        self.algo_helper.info("deviation_ma78_sopra_o_sotto_ma78_600_min_ago: {}".format(deviation_ma78_sopra_o_sotto_ma78_600_min_ago))
+
+
+
+
+
+
+
+        # formula DEVIATION_ma5_sopra_o_sotto_ma100 !
+        
+        deviation_ma5_sopra_o_sotto_ma100 = (ma5_last / ma100_last - 1) * 100 if ma100_last else 0
+        self.algo_helper.info("deviation_ma5_sopra_o_sotto_ma100: {}".format(deviation_ma5_sopra_o_sotto_ma100))
+
+        
+        # formula DEVIATION_ma50_sopra_o_sotto_ma100 !
+        
+        deviation_ma50_sopra_o_sotto_ma100 = (ma59_last / ma100_last - 1) * 100 if ma100_last else 0
+        self.algo_helper.info("deviation_ma50_sopra_o_sotto_ma100: {}".format(deviation_ma50_sopra_o_sotto_ma100))
+
+
+      
+        # formula DEVIATION_ma54_sopra_o_sotto_ma72 !
+        
+        deviation_ma54_sopra_o_sotto_ma72 = (ma54_last / ma72_last - 1) * 100 if ma72_last else 0
+        self.algo_helper.info("deviation_ma54_sopra_o_sotto_ma72: {}".format(deviation_ma54_sopra_o_sotto_ma72))
+        
+        
+        
+        # formula DEVIATION_ma10_sotto_ma100 - FORMULA dna !
+        
+        deviation_ma10_sotto_ma100 = (ma10_last / ma100_last - 1) * 100 if ma100_last else 0
+        self.algo_helper.info("deviation_ma10_sotto_ma100: {}".format(deviation_ma10_sotto_ma100))
+        
+        
+        
+        # formula DEVIATION_ma39_sotto_ma200 - FORMULA cv!
+        
+        deviation_ma39_sotto_ma200 = (ma39_last / ma200_last - 1) * 100 if ma200_last else 0
+        self.algo_helper.info("deviation_ma39_sotto_ma200: {}".format(deviation_ma39_sotto_ma200))
         
         
         
@@ -299,8 +439,52 @@ class ro_cano_che_ritorna:
         self.algo_helper.info("deviation_ma10_sopra_ma200: {}".format(deviation_ma10_sopra_ma200))
         
         
+        # formula DEVIATION_ma5_sopra_ma200
         
-        # formula DEVIATION_buy2 per la compra 2
+        deviation_ma5_sopra_ma200 = (ma5_last / ma200_last - 1) * 100 if ma200_last else 0
+        self.algo_helper.info("deviation_ma5_sopra_ma200: {}".format(deviation_ma5_sopra_ma200))
+        
+        
+        
+        
+        # formula DEVIATION_ma54_sopra_ma100 - FORMULA "quello che non" !
+        
+        deviation_ma54_sopra_ma100 = (ma54_last / ma100_last - 1) * 100 if ma100_last else 0
+        self.algo_helper.info("deviation_ma54_sopra_ma100: {}".format(deviation_ma54_sopra_ma100))
+        
+        
+        
+        # formula DEVIATION_ma5_sopra_ma59 - PENSIERO LATERALE 1
+        
+        deviation_ma5_sopra_ma59 = (ma5_last / ma59_last - 1) * 100 if ma59_last else 0
+        self.algo_helper.info("deviation_ma5_sopra_ma59: {}".format(deviation_ma5_sopra_ma59))
+        
+        
+        
+        
+        # formula DEVIATION_ma20_sotto_ma59 - PENSIERO LATERALE 2
+        
+        deviation_ma20_sotto_ma59 = (ma20_last / ma59_last - 1) * 100 if ma59_last else 0
+        self.algo_helper.info("deviation_ma20_sotto_ma59: {}".format(deviation_ma20_sotto_ma59))
+        
+        
+        
+        
+        # formula DEVIATION_ma300_sopra_ma450 -
+        
+        deviation_ma300_sopra_ma450 = (ma300_last / ma450_last - 1) * 100 if ma450_last else 0
+        self.algo_helper.info("deviation_ma300_sopra_ma450: {}".format(deviation_ma300_sopra_ma450))
+        
+        
+        
+        # formula DEVIATION_ma59_sopra_ma300 -
+        
+        deviation_ma59_sopra_ma300 = (ma59_last / ma300_last - 1) * 100 if ma300_last else 0
+        self.algo_helper.info("deviation_ma59_sopra_ma300: {}".format(deviation_ma59_sopra_ma300))
+        
+        
+        
+        # formula DEVIATION_CALLAS - MARIA CALLAS !
         
         deviation_callas = (ma5_last / ma54_last - 1) * 100 if ma54_last else 0
         self.algo_helper.info("deviation_callas: {}".format(deviation_callas))
@@ -318,13 +502,25 @@ class ro_cano_che_ritorna:
         self.algo_helper.info("deviation_ma3_sopra_ma16: {}".format(deviation_ma3_sopra_ma16))
         
         
+        # formula DEVIATION_ma3_sopra_ma18
+        
+        deviation_ma3_sopra_ma18 = (ma3_last / ma18_last - 1) * 100 if ma18_last else 0
+        self.algo_helper.info("deviation_ma3_sopra_ma18: {}".format(deviation_ma3_sopra_ma18))
+        
         # formula DEVIATION_ma3_sopra_ma30
         
         deviation_ma3_sopra_ma30 = (ma3_last / ma30_last - 1) * 100 if ma30_last else 0
         self.algo_helper.info("deviation_ma3_sopra_ma30: {}".format(deviation_ma3_sopra_ma30))
         
         
+        # formula DEVIATION_ma180_sopra_ma200
+        
+        deviation_ma180_sopra_ma200 = (ma180_last / ma200_last - 1) * 100 if ma200_last else 0
+        self.algo_helper.info("deviation_ma180_sopra_ma200: {}".format(deviation_ma180_sopra_ma200))
+        
+        
         #################################################################################################################
+        
         
         # formula delta_1
         
@@ -338,14 +534,23 @@ class ro_cano_che_ritorna:
         self.algo_helper.info("delta_2: {}".format(delta_2))
         
         
+        
+        # formula delta_x
+        
+        delta_x = (ma200_last / ma59_last - 1) * 100 if ma59_last else 0
+        self.algo_helper.info("delta_x: {}".format(delta_x))
+        
+        
+        # formula delta_y
+        
+        delta_y = (ma200_60_min_ago / ma59_60_min_ago - 1) * 100 if ma59_60_min_ago else 0
+        self.algo_helper.info("delta_y: {}".format(delta_y))
+        
+        
         # formula rapporto_delta_1_delta_2
         
         rapporto_delta_1_delta_2 = (delta_1 / delta_2) if delta_2 else 0
         self.algo_helper.info("rapporto_delta_1_delta_2: {}".format(rapporto_delta_1_delta_2))
-        
-        
-        
-        
         
         # formula delta_300_100
         
@@ -359,11 +564,57 @@ class ro_cano_che_ritorna:
         self.algo_helper.info("delta_300_100_60_min: {}".format(delta_300_100_60_min))
         
         
-        # non serve piu' il rapporto !
+        # formula delta_300_100_50_min
+        
+        delta_300_100_50_min = (ma300_50_min_ago / ma100_50_min_ago - 1) * 100 if ma100_50_min_ago else 0
+        self.algo_helper.info("delta_300_100_50_min: {}".format(delta_300_100_50_min))
         
         
         
         
+        
+        
+        # formula delta_450_300
+        
+        delta_450_300 = (ma450_last / ma300_last - 1) * 100 if ma300_last else 0
+        self.algo_helper.info("delta_450_300: {}".format(delta_450_300))
+        
+        
+        # formula delta_450_300_60_min
+        
+        delta_450_300_60_min = (ma450_60_min_ago / ma300_60_min_ago - 1) * 100 if ma300_60_min_ago else 0
+        self.algo_helper.info("delta_450_300_60_min: {}".format(delta_450_300_60_min))
+        
+        
+        
+        
+        
+        
+        # formula delta_100_59
+        
+        delta_100_59 = (ma100_last / ma59_last - 1) * 100 if ma59_last else 0
+        self.algo_helper.info("delta_100_59: {}".format(delta_100_59))
+        
+        
+        # formula delta_100_59_60_min
+        
+        delta_100_59_60_min = (ma100_60_min_ago / ma59_60_min_ago - 1) * 100 if ma59_60_min_ago else 0
+        self.algo_helper.info("delta_100_59_60_min: {}".format(delta_100_59_60_min))
+        
+        
+        
+        
+       
+        # formula delta_300_225
+        
+        delta_300_225 = (ma300_last / ma225_last - 1) * 100 if ma225_last else 0
+        self.algo_helper.info("delta_300_225: {}".format(delta_300_225))
+        
+        
+        # formula delta_300_225_60_min
+        
+        delta_300_225_60_min = (ma300_60_min_ago / ma225_60_min_ago - 1) * 100 if ma225_60_min_ago else 0
+        self.algo_helper.info("delta_300_225_60_min: {}".format(delta_300_225_60_min))
         
         
         
@@ -383,10 +634,6 @@ class ro_cano_che_ritorna:
         # non serve piu' il rapporto !
         
         
-        
-        
-        
-        
         # formula delta_1_200_30
         
         delta_1_200_30 = (ma200_last / ma30_last - 1) * 100 if ma30_last else 0
@@ -400,9 +647,6 @@ class ro_cano_che_ritorna:
         
         
         # non serve piu' il rapporto !
-        
-        
-        
         
         
         # formula delta_1_200_78
@@ -420,12 +664,22 @@ class ro_cano_che_ritorna:
         # non serve piu' il rapporto !
         
         
-       
         
         
         
+        # formula delta_1_78_39
+        
+        delta_1_78_39 = (ma78_last / ma39_last - 1) * 100 if ma39_last else 0
+        self.algo_helper.info("delta_1_78_39: {}".format(delta_1_78_39))
         
         
+        # formula delta_2_78_39_70_min
+        
+        delta_2_78_39_70_min = (ma78_70_min_ago / ma39_70_min_ago - 1) * 100 if ma39_70_min_ago else 0
+        self.algo_helper.info("delta_2_78_39_70_min: {}".format(delta_2_78_39_70_min))
+        
+        
+        # non serve piu' il rapporto !
         
         
         
@@ -452,7 +706,13 @@ class ro_cano_che_ritorna:
         
         
         
-       
+        # formula deviation_ma3 di adesso / ma3 di 90 min ago
+        
+        deviation_ma3_di_adesso_diviso_ma3_di_90_min_ago = (ma3_last / ma3_90_min_ago - 1) * 100 if ma3_90_min_ago else 0
+        self.algo_helper.info("deviation_ma3_di_adesso_diviso_ma3_di_90_min_ago: {}".format(deviation_ma3_di_adesso_diviso_ma3_di_90_min_ago))
+        
+        
+        
         # formula deviation_ma3
         
         deviation_ma3 = (ma3_last / ma3_20_min_ago - 1) * 100 if ma3_20_min_ago else 0
@@ -494,10 +754,6 @@ class ro_cano_che_ritorna:
         
         
         
-        
-        
-        
-        
         # formula deviation trend ma100 - se dopo 60 min cresce > 1%  NON FA PARTIRE LA VENDITA POCHI MALEDETTI E SUBITO !
         # diversamente succederebbero punti sovrapposti !
         
@@ -531,21 +787,23 @@ class ro_cano_che_ritorna:
         self.algo_helper.info("deviation_ma5_sotto_ma200: {}".format(deviation_ma5_sotto_ma200))
         
         
-        
         # formula DEVIATION_ma5_sotto_ma300
         
         deviation_ma5_sotto_ma300 = (ma5_last / ma300_last - 1) * 100 if ma300_last else 0
         self.algo_helper.info("deviation_ma5_sotto_ma300: {}".format(deviation_ma5_sotto_ma300))
         
         
+        # formula DEVIATION_ma5_sotto_ma450
+        
+        deviation_ma5_sotto_ma450 = (ma5_last / ma450_last - 1) * 100 if ma450_last else 0
+        self.algo_helper.info("deviation_ma5_sotto_ma450: {}".format(deviation_ma5_sotto_ma450))
         
         
         
+        # formula deviation_ma10_diviso_ma10_5_ore_ago
         
-        
-        
-        
-        
+        deviation_ma10__diviso_ma10_5_ore_ago = (ma10_last / ma10_300_min_ago - 1) * 100 if ma10_300_min_ago else 0
+        self.algo_helper.info("deviation_ma10__diviso_ma10_5_ore_ago: {}".format(deviation_ma10__diviso_ma10_5_ore_ago))
         
         
         
@@ -562,15 +820,22 @@ class ro_cano_che_ritorna:
         
         
         
+        
+        # formula DEVIATION_ma3_sotto_ma150 per comprare FINO a una certa distanza da ma200
+        
+        deviation_ma3_sotto_ma150 = (ma3_last / ma150_last - 1) * 100 if ma150_last else 0
+        self.algo_helper.info("deviation_ma3_sotto_ma150: {}".format(deviation_ma3_sotto_ma150))
+        
+        # questa e' stata aggiunta il 15 gennaio 2023 dopo che deviation_ma3_sotto_ma200 aveva fatto -1.36% !
+        
+        
+        
         # formula DEVIATION_ma3_sotto_ma200 per comprare FINO a una certa distanza da ma200
         
         deviation_ma3_sotto_ma200 = (ma3_last / ma200_last - 1) * 100 if ma200_last else 0
         self.algo_helper.info("deviation_ma3_sotto_ma200: {}".format(deviation_ma3_sotto_ma200))
         
         # questa e' stata aggiunta il 13 settembre 2022 dopo che deviation_ma5_sotto_ma200 aveva fatto -3% !!!
-        
-        
-        
         
         
         
@@ -588,8 +853,6 @@ class ro_cano_che_ritorna:
         
         
         
-        
-        
         # formula DEVIATION_ma3_sotto_ma100 
         
         deviation_ma3_sotto_ma100 = (ma3_last / ma100_last - 1) * 100 if ma100_last else 0
@@ -601,10 +864,6 @@ class ro_cano_che_ritorna:
         
         deviation_ma3_sotto_ma300 = (ma3_last / ma300_last - 1) * 100 if ma300_last else 0
         self.algo_helper.info("deviation_ma3_sotto_ma300: {}".format(deviation_ma3_sotto_ma300))
-        
-        
-        
-        
         
         
         
@@ -690,25 +949,18 @@ class ro_cano_che_ritorna:
         
         
         
-      
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         # formula DEVIATION_ma28_sotto_ma100
         
         deviation_ma28_sotto_ma100 = (ma28_last / ma100_last - 1) * 100 if ma100_last else 0
         self.algo_helper.info("deviation_ma28_sotto_ma100: {}".format(deviation_ma28_sotto_ma100))
         
         
+        
+        
+        # formula DEVIATION_ma100_sotto_ma150
+        
+        deviation_ma100_sotto_ma150 = (ma100_last / ma150_last - 1) * 100 if ma150_last else 0
+        self.algo_helper.info("deviation_ma100_sotto_ma150: {}".format(deviation_ma100_sotto_ma150))
         
         
         
@@ -955,10 +1207,7 @@ class ro_cano_che_ritorna:
       
         ########################################################################################################################## deviation per vendere
 
-        # formula DEVIATION_sell
-        
-        deviation_sell = (ma4_last / last_trade_price - 1) * 100 if last_trade_price else 0
-        self.algo_helper.info("deviation_sell: {}".format(deviation_sell))    
+            
       
         # formula DEVIATION_sell_ma78
         
@@ -1064,6 +1313,8 @@ class ro_cano_che_ritorna:
                 
                 if (    
                     ma20_last > ma200_last
+                    
+                    and macd >= macd_2_min_ago
                     and ma10_last > ma100_last
                     and deviation_ma3_sopra_ma10 > 0.13
                     
@@ -1083,6 +1334,7 @@ class ro_cano_che_ritorna:
                     
                 elif (    
                     ma20_last > ma200_last
+                    and macd >= macd_2_min_ago
                     and ma10_last < ma100_last
                     and deviation_ma3_sopra_ma10 > 0.15
                     
@@ -1109,6 +1361,7 @@ class ro_cano_che_ritorna:
                 
                 elif (
                     ma3_last > ma25_last
+                    and macd >= macd_2_min_ago
                     and ma100_last > ma100_10_min_ago
                     and ma33_last > ma78_last
                     
@@ -1135,6 +1388,7 @@ class ro_cano_che_ritorna:
                 
                 elif (
                     ma3_last > ma25_last
+                    and macd >= macd_2_min_ago
                     and ma100_last > ma100_10_min_ago
                     and ma33_last < ma78_last
                     
@@ -1160,18 +1414,13 @@ class ro_cano_che_ritorna:
                     
                     # > estate alzato buy
                     
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
+             
+                
                 # ------------------------------------------------------------ BUY 1 DURANTE IL RIALZO con INCROCIO CLASSICO 69-100 and ma78 < AND 5-28 > 0.11
                 
                 elif (    
                     ma20_last > ma200_last
+                    and macd >= macd_2_min_ago
                     and ma300_last > ma300_120_min_ago
                     and ma78_last < ma78_2_min_ago
                     and deviation_ma5_sopra_ma28 > 0.11
@@ -1193,6 +1442,7 @@ class ro_cano_che_ritorna:
                 
                 elif (    
                     ma28_last > ma300_last
+                    and macd >= macd_2_min_ago
                     and ma300_last < ma300_120_min_ago
                     and ma200_last > ma200_60_min_ago
                     
@@ -1209,11 +1459,11 @@ class ro_cano_che_ritorna:
                     percentage = 90
                     
                     
+                 
                     
-                
-               
-                
-                
+                    
+                    
+                    
                     
                     
                 # BUY 1 5-300 in alto
@@ -1221,18 +1471,19 @@ class ro_cano_che_ritorna:
                 elif (
                     
                     ma8_last > ma150_last
-                    and deviation_ma100_sopra_ma200 > -0.23
-                    and deviation_ma5_sotto_ma300 < 0.45
+                    and macd >= macd_2_min_ago
+                    and deviation_ma100_sopra_ma200 < -0.25
                     and delta_1_200_78 < delta_2_200_78_60_min
                     
-                    and deviation_ma5_sotto_ma300 > 0.45
-                    
+                    and deviation_ma5_sotto_ma300 < 0.45
+                    and deviation_ma5_sotto_ma300 > -0.22
+                  
                     and ma100_last > ma100_2_min_ago
                     and ma300_last < ma300_60_min_ago
                     and ma200_last < ma200_60_min_ago
                     
                     and deviation_ma3_sopra_ma10 > 0.01
-                    and deviation_ma5_sopra_ma28 > 0.11
+                    and deviation_ma5_sopra_ma28 > 0.22
                     
                     and deviation_bellissima > 0.17
                     and deviation_ma13_sopra_ma25 > 0.07
@@ -1253,72 +1504,59 @@ class ro_cano_che_ritorna:
                     # importante : ma100 sta sotto la ma200 ma non le e' troppo lontana
                     
                     
-                 
                     
                     
-                # BUY 1 5-300 zona mediana
+                    
+                    
+                
+                # BUY 1 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-59 - r 1043 B
                 
                 elif (
                     
-                    ma8_last > ma50_last
-                    and deviation_ma5_sotto_ma300 < -0.23
-                    and deviation_ma5_sotto_ma300 > -0.75
-                    
-                    and deviation_ma10_sopra_ma200 < -0.25
-                    and deviation_ma10_sopra_ma200 > -0.40
-                  
-                    and deviation_ma100_sopra_ma200 > -0.40
+                    ma3_last > ma18_last
                     
                     
+                    and ma450_last < ma450_360_min_ago
+                    
+                    
+                    and deviation_ma5_sopra_ma200 < -0.30
+                    and deviation_ma5_sotto_ma300 < -0.30
+                    and deviation_ma5_sotto_ma450 < -0.30
+                    and deviation_ma50_sopra_o_sotto_ma100 < -0.01
+                    
+                    and deviation_ma100_sopra_ma300 < -0.10
                     
                     and ma300_last < ma300_60_min_ago
                     and ma200_last < ma200_60_min_ago
                     
-                    and deviation_ma3_sopra_ma10 > 0.01
-                    and deviation_ma5_sopra_ma28 > 0.04
+                    and deviation_ma3_sopra_ma10 > 0.081
+                    
+                    and deviation_ma5_sopra_ma28 > -0.15
+                    and deviation_ma3_sopra_ma16 > -0.12
                     
                     and ma2_last >= ma2_2_min_ago
-              
+                    and macd >= macd_2_min_ago
                 ):
-                    buy = "BUY 1 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-50 - riga 1043 B2"
+                    buy = "BUY 1 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND dev 4-18 and deviation_ma3_sopra_ma16 > -0.12 - r 1043 B"
                     action = "buy"
                     percentage = 50
                     
-                    # importante : ma100 sta sotto la ma200 non le e' troppo lontana
-                    
-                    # 21 ottobre 2022  aggiunta di 3-10 e 5-28
-                    # 21 ottobre 2022 3-10 = 0.01
-                    # 21 ottobre 2022 5-28 = 0.05
-                    # 28 ottobre 2022 5-28 = 0.04
-                    # ave comba
-                    # 31 ottobre aggiunta dev 10-200 - formula MY COMPA
-                    
-                    
-                    
-                
-                    
+                    #  8 lug 2023 4-18
+                    # 11 ago 2023 3-18
                 
                     
                     
-                    
-                
-                    
-                    
-                    
-                    
-                    
-                # BUY 1 zona inferiore
+                # BUY 1 zona inferiore 1043 C
                 
                 elif (
                     
                     ma8_last > ma150_last
-                    and deviation_ma5_sotto_ma300 < -0.75
-                    
+                    and macd >= macd_2_min_ago
                     and deviation_ma100_sopra_ma200 < -0.40
                     
                     and delta_1_200_78 < delta_2_200_78_60_min
                     
-                    
+                    and deviation_ma5_sotto_ma300 < -0.75
                     
                     
                     and ma100_last > ma100_2_min_ago
@@ -1341,25 +1579,19 @@ class ro_cano_che_ritorna:
                     # importante : ma100 sta sotto la ma200 non le e' troppo lontana
                     
                     
-                    
-                    
-                    
-                    
-                    
-                
-                    
-                    
-             
-                
-                
+                 
+                     
                 elif (    
-                    ma28_last > ma300_last
+                    ma20_last > ma200_last
+                    and macd >= macd_2_min_ago
                     and ma300_last < ma300_120_min_ago
                     and ma200_last < ma200_60_min_ago
+                  
+                    and deviation_ma300_sopra_ma450 > -0.15
                     
                     and deviation_ma3_sopra_ma10 > 0.10
-                    and deviation_ma5_sopra_ma28 > 0.16
-                    and deviation_bellissima > 0.12
+                    and deviation_ma5_sopra_ma28 > 0.15
+                    and deviation_bellissima > 0.10
                     
                     and ma69_last > ma100_last
                     and ma3_last > ma8_last
@@ -1367,18 +1599,20 @@ class ro_cano_che_ritorna:
                     and ma6_last > ma39_last
                 ):    
               
-                    buy = "BUY 1 con 28>300 and 69 > 100 e 200< and deviation_bellissima > 0.12 and 5-28 > 0.16 and 3-10 > 0.10 - r 1061"
+                    buy = "BUY 1 con 28>200 and 69 > 100 e 200< and dev_bellissima > 0.12 and 5-28 > 0.16 and 3-10 > 0.10 CON 300 vicina o sopra alla 450 - r 1061"
                     action = "buy"
                     percentage = 90
                     
                     # > estate dev bellissima 0.12 and 5-28 0.16 and 3-10 > 0.10
+                    # 17 mar 2023 28-200 da 28-300
+                    # 300 vicina o sopra alla 450
                     
-                    
-                    
+                
                 # ------------------------------------------------------ BUY 1 MOLTO RISCHIOSO modo 1 ! quando incomincia il ribasso MA ma300 120 > E ma200 120 >
                   
                 elif (     
                     ma300_last > ma300_120_min_ago
+                    and macd >= macd_2_min_ago
                     and ma78_last > ma100_last
                     and ma200_last > ma200_120_min_ago
                     
@@ -1407,6 +1641,7 @@ class ro_cano_che_ritorna:
                   
                 elif (     
                     ma300_last > ma300_120_min_ago
+                    and macd >= macd_2_min_ago
                     and ma78_last < ma100_last
                     and ma200_last > ma200_120_min_ago
                     
@@ -1428,18 +1663,14 @@ class ro_cano_che_ritorna:
                     action = "buy"
                     percentage = 80
                     
-                    
-                    
-                    
-                    
-                    
-                    
+                  
                     
                     
                 # ------------------------------------------------------ BUY 1 MOLTO RISCHIOSO modo 1 ! quando incomincia il ribasso MA ma300 120 > E ma200 120 >
                   
                 elif (     
                     ma300_last > ma300_120_min_ago
+                    and macd >= macd_2_min_ago
                     and ma200_last > ma200_120_min_ago
                     
                     and ma200_last < ma200_60_min_ago
@@ -1461,21 +1692,14 @@ class ro_cano_che_ritorna:
                     percentage = 70
                     
                     
-                    
-                    
-                    
-                
-                    
-                    
-                    
-                    
-                    
+                  
                     
                     
                 # ------------------------------------------------------------ BUY 1 MOLTO RISCHIOSO modo 1 ! quando incomincia il ribasso MA ma300 > MA ma200 120 <
                   
                 elif (     
                     ma300_last > ma300_120_min_ago
+                    and macd >= macd_2_min_ago
                     and ma200_last < ma200_120_min_ago
                     
                     and ma200_last < ma200_60_min_ago
@@ -1488,6 +1712,7 @@ class ro_cano_che_ritorna:
                     
                     and ma5_last > ma200_last
                     and ma2_last > ma2_2_min_ago
+                    
                 ):     
                   
                     buy = "BUY 1 MOLTO RISCHIOSO modo 1 ! quando incomincia il ribasso MA ma300 ANCORA IN RIALZO MA ma200 120 < con 3-10 > 0.13 - r 1139 B1"
@@ -1495,15 +1720,13 @@ class ro_cano_che_ritorna:
                     percentage = 90
                     
                     
-                    
-                    
-                    
-                    
+                 
                     
                 # ------------------------------------------------------------ BUY 1 MOLTO RISCHIOSO modo 1 ! quando incomincia il ribasso MA ma300 > MA ma200 120 <
                   
                 elif (     
                     ma300_last > ma300_120_min_ago
+                    and macd >= macd_2_min_ago
                     and deviation_ma5_sotto_ma300 < -0.40
                     
                     and ma200_last < ma200_120_min_ago
@@ -1524,17 +1747,14 @@ class ro_cano_che_ritorna:
                     percentage = 90
                     
                     
-                    
-                    
-                    
-                    
-                    
+                  
                     
                     
                 # ------------------------------------------------------------ BUY 1 MOLTO RISCHIOSO modo 2 ! quando incomincia il ribasso MA ma300 > E MA 200>300
                 
                 elif (     
                     ma300_last > ma300_120_min_ago
+                    and macd >= macd_2_min_ago
                     and ma200_last > ma300_last
                     and ma78_last > ma100_last
                     and ma8_last > ma100_last
@@ -1553,17 +1773,13 @@ class ro_cano_che_ritorna:
                     action = "buy"
                     percentage = 80
                     
-                    
-                    
-                    
-                    
-                    
+                  
                     
                 # ----------------------------------------------------- BUY 1 MOLTO RISCHIOSO modo 2 ! quando incomincia il ribasso MA ma300 > E MA 200>300
                 
                 elif (     
                     ma300_last > ma300_301_min_ago
-                    
+                    and macd >= macd_2_min_ago
                     and ma200_last > ma300_last
                     and ma78_last < ma100_last
                     and ma8_last > ma100_last
@@ -1586,25 +1802,12 @@ class ro_cano_che_ritorna:
                 
                     
                     
-                    
-                
-                    
-                    
-                    
-                    
-                    
-                
-                
-                
-                    
-                    
-                    
                 # ------------------------------------------------------------ BUY 1 MOLTO RISCHIOSO modo 2 ! quando incomincia il ribasso MA ma300 > E MA 200<300
                 
                 
                 elif (     
                     ma300_last > ma300_120_min_ago
-                    
+                    and macd >= macd_2_min_ago
                     and ma200_last < ma300_last
                     and ma5_last < ma300_last
                     and ma5_last > ma100_last
@@ -1625,43 +1828,47 @@ class ro_cano_che_ritorna:
                     #  1 ott 2022 3-10 > 0.135
                     
                 
-                    
-                    
-                    
-                
-             
                
                     
                     
-                # ------------------------------------------------------------ BUY 1 laterale 2 - r 1206 AA2x
+                # ------------------------------------------------------------ BUY 1 LATERALE 2
                 
                 elif (    
-                    ma8_last > ma59_last
-                    and ma300_last > ma450_last
-                    and ma100_last > ma100_40_min_ago
+                    ma5_last > ma13_last
                     
-                    and deviation_ma100_sopra_ma300 < 0.30
-                    and deviation_ma100_sopra_ma300 > -0.20
+                    and deviation_ma300_sopra_ma450 < 0.13
+                    and deviation_ma300_sopra_ma450 > -0.13
+                    
+                    and deviation_ma100_sopra_ma300 < 0.27
+                    and deviation_ma100_sopra_ma300 > -0.27
+                    
+                    and deviation_ma10_sotto_ma100 < -0.05
+                    and deviation_ma10_sotto_ma100 > -0.20
                     
                     and deviation_ma3_sopra_ma10 > 0.05
+                    and deviation_ma3_sopra_ma16 > 0.08
+                    and deviation_ma4_sopra_ma28 > -0.02
                     
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                    and macd > 5
                 ):  
                 
-                    buy = "BUY 1 laterale 2 - r 1206 AA2x"
+                    buy = "BUY 1 LATERALE 2 con 3-10 > 0.07 and macd > macd 2 min ago and deviation_ma3_sopra_ma16 > 0.112 - r 1205"
                     action = "buy"
                     percentage = 50
                     
-                    # 19 set 2022 aggiunta 3-10 > 0.07
-                    #  3 ott 2022 3-10 0.06 da 0.07 
-                    #  3 ott 2022 100 sopra 300 a < 0.30 da < 0.20 perche' mentre 100 scende gia' e' partito il rialzo !
-                    # arriva tardi e ho tolto qualcosina.
-                    # 25 ottobre 2022 deve essere 100 > 100 40 min ago ! VEDI 24 OTTOBRE 2022 ore 2:27
-                    # 25 ottobre 2022 se metto 100 < 100 40 min ago an 5-28 > 0.11 VA IN CONFLITTO !
-                    
-                    
-                    
+                    #  5 mag 2023 ho tolto and ma250_last > ma300_last
+                    # attenzione ! adesso questa condizione si attiva anche se ma250_last < ma300_last ! MA SEMPRE durante un TREND LATERALE.
+                    # vediamo come va.
+                    # vedi 19 maggio 2023 ore 17:47 !
+                    #  8 giu 2023 and deviation_ma3_sopra_ma16 > 0.112
+                    # 24 ago 2023 forse in futuro dovrai mettere macd > 5
+                    # 24 ago 2023 and macd > 5
+                    #  5 ott 2023 ridotto ndecchiecella
                 
                     
+                
                     
                     
                     
@@ -1672,6 +1879,7 @@ class ro_cano_che_ritorna:
                 
                 elif (    
                     ma20_last > ma200_last
+                    and macd >= macd_2_min_ago
                     and ma50_last > ma78_last
                     and deviation_ma3_sopra_ma10 > 0.12
                     and ma28_last < ma28_20_min_ago
@@ -1683,7 +1891,7 @@ class ro_cano_che_ritorna:
                     and ma8_last > ma50_last
                 ):  
                 
-                    buy = "BUY 1 (50>78) con 20>200 and 69 > 100 AND ma78 > AND 59 > 59 60 min ago CON 28 < 28 20 min AND 3-10 > 0.12- r 1227 aB"
+                    buy = "BUY 1 (50>78) con 20>200 and 69 > 100 AND ma78 > AND 59 > 59 60 min ago CON 28 < 28 20 min AND 3-10 > 0.12 - r 1227 aB"
                     action = "buy"
                     percentage = 80
                     
@@ -1693,6 +1901,7 @@ class ro_cano_che_ritorna:
                 
                 elif (    
                     ma20_last > ma200_last
+                    and macd >= macd_2_min_ago
                     and ma50_last > ma78_last
                     and deviation_ma3_sopra_ma10 > 0.12
                     
@@ -1712,6 +1921,7 @@ class ro_cano_che_ritorna:
                 
                 elif (    
                     ma20_last > ma200_last
+                    and macd >= macd_2_min_ago
                     and ma78_last > ma100_last
                     and ma50_last < ma78_last
                     and deviation_ma5_sopra_ma28 > 0.21
@@ -1735,6 +1945,7 @@ class ro_cano_che_ritorna:
                 
                 elif (    
                     ma20_last > ma200_last
+                    and macd >= macd_2_min_ago
                     and ma78_last < ma100_last
                     and ma50_last < ma78_last
                     and deviation_ma5_sopra_ma28 > 0.30
@@ -1750,18 +1961,13 @@ class ro_cano_che_ritorna:
                     percentage = 90
                     
                     
-                    
-                    
-                    
-                    
-                    
-                    
                    
                     
                 # BUY 1 se ma200> and ma300 > and 8>50 AND ma78 > AND 8 > 78 AND 5-28 > 0.11 
                 
                 elif (    
                     ma20_last > ma125_last
+                    and macd >= macd_2_min_ago
                     and ma78_last > ma200_last
                     
                     and ma8_last > ma78_last
@@ -1788,6 +1994,7 @@ class ro_cano_che_ritorna:
                 
                 elif (    
                     ma20_last > ma125_last
+                    and macd >= macd_2_min_ago
                     and ma78_last < ma200_last
                     
                     and ma8_last > ma78_last
@@ -1814,6 +2021,7 @@ class ro_cano_che_ritorna:
                 
                 elif (    
                     ma20_last > ma200_last
+                    and macd >= macd_2_min_ago
                     and ma8_last < ma78_last
                     and ma78_last < ma78_2_min_ago
                     and deviation_ma5_sopra_ma28 > 0.17
@@ -1834,6 +2042,7 @@ class ro_cano_che_ritorna:
                 
                 elif (     
                     ma8_last > ma54_last
+                    and macd >= macd_2_min_ago
                     and ma78_last > ma200_last
                     
                     and ma39_last > ma39_30_min_ago
@@ -1864,10 +2073,11 @@ class ro_cano_che_ritorna:
                 # BUY 1 PERICOLOSA derivata dal tardo autunno ! togliendo i 40 minuti della ma30 
                 
                 elif (     
-                    ma8_last > ma54_last
+                    ma8_last > ma50_last
+                    and macd >= macd_2_min_ago
                     and ma78_last < ma200_last
                     and deviation_ma3_sopra_ma10 > 0.24
-                    and deviation_ma5_sopra_ma28 > 0.30
+                    and deviation_ma5_sopra_ma28 > 0.28
                     
                     and ma39_last > ma39_30_min_ago
                     and ma69_last >= ma69_2_min_ago
@@ -1883,20 +2093,21 @@ class ro_cano_che_ritorna:
                     and ma2_last > ma20_last
                     and ma2_last > ma2_2_min_ago
                 ):    
-                    buy = "BUY 1 PERICOLOSA 8-54 derivata dal tardo autunno ! togliendo i 40 minuti della ma30 con 11-59 con 5-28 > 0.30 - r 1396 Ab"
+                    buy = "BUY 1 PERICOLOSA 8-54 derivata dal tardo autunno ! togliendo i 40 minuti della ma30 con 11-59 con 5-28 > 0.28 - r 1396 Ab"
                     action = "buy"
                     percentage = 70
                     
                     # 100 deve stare un po' sotto alla 300 !
                     # 22 giu 2022 se 78 >200 5-28 > 0.30
-                    
-                  
+                    # 10 mar 2023 8-50 da 8-54
+                    # 10 mar 2023 5-28 a 0.28 da 0.30
                     
                     
                 # BUY 1 PERICOLOSA derivata dal tardo autunno ! togliendo i 40 minuti della ma30 
                 
                 elif (     
                     ma8_last > ma54_last
+                    and macd >= macd_2_min_ago
                     and ma39_last > ma39_30_min_ago
                     and ma69_last < ma69_2_min_ago
                     
@@ -1921,12 +2132,14 @@ class ro_cano_che_ritorna:
                     # 100 deve stare un po' sotto alla 300 !
                     
                     
-                    
+                
+                
                     
                 # BUY 1 PERICOLOSA derivata dal tardo autunno ! togliendo i 40 minuti della ma30 
                 
                 elif (     
                     ma8_last > ma54_last
+                    and macd >= macd_2_min_ago
                     and ma78_last > ma200_last
                     
                     and ma39_last < ma39_30_min_ago
@@ -1956,6 +2169,7 @@ class ro_cano_che_ritorna:
                 
                 elif (     
                     ma8_last > ma54_last
+                    and macd >= macd_2_min_ago
                     and ma78_last < ma200_last
                     
                     and deviation_ma3_sopra_ma10 > 0.27
@@ -1986,12 +2200,9 @@ class ro_cano_che_ritorna:
                     
                     
                     
-                    
-                    
-                    
-                    
-                    
-               
+                
+                
+                
                     
                 #################################################################################################################### ecco le 4 stagioni !  
                 
@@ -2000,6 +2211,7 @@ class ro_cano_che_ritorna:
                 
                 elif (     
                     ma50_last > ma100_last
+                    and macd >= macd_2_min_ago
                     and ma100_last > ma200_last
                     and ma100_last < ma100_60_min_ago
                     
@@ -2017,55 +2229,186 @@ class ro_cano_che_ritorna:
                     percentage = 90
                     
                     
+                    
+                ############################################################################################################
                 
-                
-                
-                
-                
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                # BUY 1 tempo ESTATE PIU' VELOCE 100 > 60 min ago (l' estate se lo puo' perettere!) considera il passare del TEMPO ! ma30 > 
+                # BUY 1 compare forever - 15 settembre 2023
                 
                 elif (     
-                    ma8_last > ma28_last
-                    and ma78_last > ma100_last
                     
-                    and ma8_last > ma200_last
-                    and ma100_last > ma100_60_min_ago
+                    ma5_last > ma20_last
                     
-                    and ma30_last > ma30_40_min_ago
+                    and deviation_ma54_sopra_o_sotto_ma72 > 0.015
                     
-                    and deviation_ma3_sopra_ma10 > 0.08
-                    and deviation_ma5_sopra_ma28 > 0.13
-                    and deviation_bellissima > 0.04
-                    and ma20_last >= ma20_2_min_ago
-                    and ma5_last >= ma5_2_min_ago
+                    and deviation_ma39_sotto_ma200 < -0.01
+                    and deviation_ma300_sopra_ma450 > -0.45
+                    
+                    and deviation_ma3_sopra_ma10 > 0.005
+                    and deviation_ma3_sopra_ma16 > 0.025
+                    and deviation_ma3_sopra_ma18 > 0.045
+                    
                     and ma2_last >= ma20_last
+                  
                     and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                    
                 ):    
-                    buy = "BUY 1 tempo ESTATE PIU' VELOCE 100 > 60 min ago (l' estate se lo puo' permettere!) considera il passare del tempo ! ma30 > - r 1537 A"
+                    buy = "BUY 1 compare forever - con 5-20 E CON 300 ancora vicina alla 450 ( anche un poco sotto! ) and 3-18 > 0.12 + MACD > - r 1537 A1"
                     action = "buy"
                     percentage = 90
                     
-                    # 9 giu 2022 15>28 al posto di 50>100 
-                    # 9 giu 2022 8>200 al posto di 100>200
-                    # 4 set 5-28 0.13 da 0.15
-                    # 4 set dev bellissima 0.05 da 0.06
-                    # 7 ott dev bellissima 0.04 da 0.05
+                    #  4 mag 2023 ho aggiunto e tolto 450>480 min ago
+                    #  4 mag 2023 5-50 da 5-250
+                    #  9 mag 2023 5-30 da 5-50
+                    # 29 mag 2023 3-16 > 0.11
+                    #  1 giu 2023 5-20 da 5-30
+                    #  1 giu 2023 and deviation_ma39_sotto_ma200 < -0.15
+                    #  9 giu 2023 and deviation_ma300_sopra_ma450 > -0.25 da -0.20
+                    #  9 giu 2023 5-28 > 0.02 da 0.03
+                    #  9 giu 2023 tolto and ma3_last >= ma3_2_min_ago
+                    #  9 giu 2023 dev_ma39_sotto_ma200 < -0.10 da -0.15 forse era questa che la faceva arrivare in ritardo perche' 39 era piu' lenta a scendere sotto -0.15 da ma200
+                    # tolto and deviation_ma5_sopra_ma28 > 0.02
+                    #  7 lug 2023 dev_ma39_sotto_ma200 < -0.05 da -0.10
+                    # 31 lug 2023 and deviation_ma3_sopra_ma18 > 0.12
+                    # 11 ago 2023 0.06 0.08 0.10 antcipo ndecchiecella
+                    # 30 ago 2023 0.05 0.07 0.09 antcipo ndecchiecella
+                    # 12 set 2023 0.03 0.05 0.07 antcipo ndecchiecella 
                     
+                    # 13 set 2023 and deviation_ma300_sopra_ma450 > -0.35 da -0.45
+                    # 13 set 2023 0.01 0.03 0.05 antcipo ndecchiecella
                     
+                    # 15 set 2023
+
+              
+                elif (     
                     
+                    ma5_last > ma20_last
+                    
+                    and deviation_ma54_sopra_o_sotto_ma72 < 0.015
+                    and deviation_ma54_sopra_o_sotto_ma72 > -0.015
+                    
+                    and deviation_ma39_sotto_ma200 < 0.10
+                    and deviation_ma300_sopra_ma450 > -0.45
+                    
+                    and deviation_ma3_sopra_ma10 > 0.005
+                    and deviation_ma3_sopra_ma16 > 0.01
+                    and deviation_ma3_sopra_ma18 > 0.03
+                    
+                    and ma2_last >= ma20_last
+                  
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                    
+                ):    
+                    buy = "BUY 1 compare forever - con 5-20 E CON 300 ancora vicina alla 450 ( anche un poco sotto! ) and 3-18 > 0.12 + MACD > - r 1537 A2"
+                    action = "buy"
+                    percentage = 90
+                    
+                    #  4 mag 2023 ho aggiunto e tolto 450>480 min ago
+                    #  4 mag 2023 5-50 da 5-250
+                    #  9 mag 2023 5-30 da 5-50
+                    # 29 mag 2023 3-16 > 0.11
+                    #  1 giu 2023 5-20 da 5-30
+                    #  1 giu 2023 and deviation_ma39_sotto_ma200 < -0.15
+                    #  9 giu 2023 and deviation_ma300_sopra_ma450 > -0.25 da -0.20
+                    #  9 giu 2023 5-28 > 0.02 da 0.03
+                    #  9 giu 2023 tolto and ma3_last >= ma3_2_min_ago
+                    #  9 giu 2023 dev_ma39_sotto_ma200 < -0.10 da -0.15 forse era questa che la faceva arrivare in ritardo perche' 39 era piu' lenta a scendere sotto -0.15 da ma200
+                    # tolto and deviation_ma5_sopra_ma28 > 0.02
+                    #  7 lug 2023 dev_ma39_sotto_ma200 < -0.05 da -0.10
+                    # 31 lug 2023 and deviation_ma3_sopra_ma18 > 0.12
+                    # 11 ago 2023 0.06 0.08 0.10 antcipo ndecchiecella
+                    # 30 ago 2023 0.05 0.07 0.09 antcipo ndecchiecella
+                    # 12 set 2023 0.03 0.05 0.07 antcipo ndecchiecella 
+                    
+                    # 13 set 2023 and deviation_ma300_sopra_ma450 > -0.35 da -0.45
+                    # 13 set 2023 0.01 0.03 0.05 antcipo ndecchiecella
+                    
+                    # 15 set 2023
+
+                elif (     
+                    
+                    ma3_last > ma20_last
+                    and ma100_last > ma100_60_min_ago
+                    
+                    and deviation_ma54_sopra_o_sotto_ma72 < -0.015
+                    
+                    and deviation_ma39_sotto_ma200 < -0.01
+                    and deviation_ma300_sopra_ma450 > -0.50
+                    
+                    and deviation_ma3_sopra_ma10 > 0.017
+                    and deviation_ma3_sopra_ma16 > 0.001
+                    and deviation_ma3_sopra_ma18 > 0.001
+                    
+                    and ma2_last >= ma20_last
+                  
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                    
+                ):    
+                    buy = "BUY 1 compare forever - con 3-20 E CON 300 ancora vicina alla 450 ( anche un poco sotto ! ) and 3-18 > 0.001 + MACD > - r 1537 A3x"
+                    action = "buy"
+                    percentage = 90
+
+              
+                elif (     
+                    
+                    ma3_last > ma20_last
+                    and ma100_last < ma100_60_min_ago
+                    
+                    and deviation_ma54_sopra_o_sotto_ma72 < -0.015
+                    
+                    and deviation_ma39_sotto_ma200 < -0.01
+                    and deviation_ma300_sopra_ma450 > -0.50
+                    
+                    and deviation_ma3_sopra_ma10 > 0.025
+                    and deviation_ma3_sopra_ma16 > 0.001
+                    and deviation_ma3_sopra_ma18 > 0.001
+                    
+                    and ma2_last >= ma20_last
+                  
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                    
+                ):    
+                    buy = "BUY 1 compare forever - con 3-20 E CON 300 ancora vicina alla 450 ( anche un poco sotto ! ) and 3-18 > 0.001 + MACD > - r 1537 A3y"
+                    action = "buy"
+                    percentage = 90
+                    
+                    #  4 mag 2023 ho aggiunto e tolto 450>480 min ago
+                    #  4 mag 2023 5-50 da 5-250
+                    #  9 mag 2023 5-30 da 5-50
+                    # 29 mag 2023 3-16 > 0.11
+                    #  1 giu 2023 5-20 da 5-30
+                    #  1 giu 2023 and deviation_ma39_sotto_ma200 < -0.15
+                    #  9 giu 2023 and deviation_ma300_sopra_ma450 > -0.25 da -0.20
+                    #  9 giu 2023 5-28 > 0.02 da 0.03
+                    #  9 giu 2023 tolto and ma3_last >= ma3_2_min_ago
+                    #  9 giu 2023 dev_ma39_sotto_ma200 < -0.10 da -0.15 forse era questa che la faceva arrivare in ritardo perche' 39 era piu' lenta a scendere sotto -0.15 da ma200
+                    # tolto and deviation_ma5_sopra_ma28 > 0.02
+                    #  7 lug 2023 dev_ma39_sotto_ma200 < -0.05 da -0.10
+                    # 31 lug 2023 and deviation_ma3_sopra_ma18 > 0.12
+                    # 11 ago 2023 0.06 0.08 0.10 antcipo ndecchiecella
+                    # 30 ago 2023 0.05 0.07 0.09 antcipo ndecchiecella
+                    # 12 set 2023 0.03 0.05 0.07 antcipo ndecchiecella 
+                    
+                    # 13 set 2023 and deviation_ma300_sopra_ma450 > -0.35 da -0.45
+                    # 13 set 2023 0.01 0.03 0.05 antcipo ndecchiecella
+                    
+                    # 27 set 2023 and deviation_ma300_sopra_ma450 > -0.50 da -0.45
+                    # 27 set 2023 0.005 - 0.01 - 0.03
+                    # 28 set 2023 and deviation_ma3_sopra_ma10 > 0.017 da > 0.005 ( potevo mettere macd > 5 ma ho preferito aumentare di un nulla 3-10 )
+                    #  2 ott 2023 3-16 e 3-18 abbassati da 0.03 a 0.01 
+                    #  2 ott 2023 3-20 da 5-20
+                    #  5 ott 2023 se ma 100 piega al ribasso da 60 min allora 3-10 > 0.025 ASSOLUTAMENTE COSI' ALTRIMENTI COMPRA CONTINUAMENTE
+              
+
+              
                 # BUY 1 tempo ESTATE PIU' VELOCE 100 > 60 min ago (solo l' estate se lo puo' perettere!) considera il passare del TEMPO ! ma30 > 
                 
                 elif (     
                     ma15_last > ma28_last
+                    and macd >= macd_2_min_ago
                     and ma78_last < ma100_last
                     
                     and ma8_last > ma200_last
@@ -2089,17 +2432,20 @@ class ro_cano_che_ritorna:
                     
                     
                
-                # BUY 1 tempo PRIMAVERA che considera il passare del tempo con ma30 < 
+                # BUY 1 tempo PRIMAVERA che considera il passare del tempo con ma30 <
+                
                 
                 elif (     
                     ma50_last > ma100_last
+                    and macd >= macd_2_min_ago
+                    and deviation_ma300_sopra_ma450 > -0.17
                     and ma100_last > ma200_last
                     and deviation_buy_ma2_sopra_ma5 > 0.12
                     
                     and ma30_last < ma30_40_min_ago
                  
                     and deviation_ma5_sopra_ma28 > 0.175
-                    and deviation_bellissima > 0.06
+                    and deviation_bellissima > 0.03
                     and ma2_last > ma20_last
                     and ma5_last >= ma5_2_min_ago
                     and ma2_last > ma2_2_min_ago
@@ -2109,34 +2455,44 @@ class ro_cano_che_ritorna:
                     action = "buy"
                     percentage = 90
                     
+                    # 17 mar 2023 per anticipare buy ho rafforzato dicendo che 300 non deve stare lontana dalla 450 (trend laterale)
+                
                     
                     
                 # BUY 1 tempo INIZIO AUTUNNO con 78 > 150 and (200 > 200 120 min) che considera passare del tempo con ma30 > MA 100 < 200
                 
+                
                 elif (     
-                    ma50_last > ma100_last
-                    and ma78_last > ma150_last
+                    ma5_last > ma50_last
+                    and macd >= macd_2_min_ago
+                    and ma300_last > ma450_last
+                    
                     
                     and ma200_last > ma300_last
                     and ma200_last > ma200_120_min_ago
-                    and deviation_ma5_sopra_ma28 > 0.05
+                    
                     and ma100_last < ma200_last
                     
-                    and ma30_last > ma30_40_min_ago
-                    
-                    and ma11_last > ma125_last
+                    and ma30_last > ma30_10_min_ago
                   
-                    and deviation_bellissima > 0.02
-                    and ma20_last > ma20_2_min_ago
+                    and deviation_ma3_sopra_ma16 > 0.055
+                    and deviation_ma5_sopra_ma28 > 0.05
+                    and deviation_bellissima > 0.01
+                    
                     and ma5_last > ma5_2_min_ago
                     and ma2_last > ma20_last
                     and ma2_last > ma2_2_min_ago
                 ):    
-                    buy = "BUY 1 tempo INIZIO AUTUNNO con 78 > 150 and (200 > 200 120 min ago) che considera passare del tempo con 5-28 > 0.05 e 200>300 - r 1586 A1"
+                    buy = "BUY 1 tempo INIZIO AUTUNNO con 78 > 150 and (200 > 200 120 min ago) considera passare del tempo con 5-28 > 0.05 e 200>300 - r 1586 A1"
                     action = "buy"
                     percentage = 80
                     
                     # > estate ho anticipato buy
+                    # 25 gen 2023 se 300>450 anticipo ndecchia
+                    #  3 lug 2023 tolto and ma20_last > ma20_2_min_ago ( ma 300 sta sopra ma 450 )
+                    #  3 lug 2023 5-50 da 50-100 ( ma 300 sta sopra ma 450 )
+                    # 11 ago 2023 aggiunta and deviation_ma3_sopra_ma16 > 0.055
+                    
                     
                     
                     
@@ -2144,6 +2500,7 @@ class ro_cano_che_ritorna:
                 
                 elif (     
                     ma50_last > ma100_last
+                    and macd >= macd_2_min_ago
                     and ma78_last < ma150_last
                     
                     and ma200_last > ma300_last
@@ -2176,6 +2533,7 @@ class ro_cano_che_ritorna:
                 
                 elif (     
                     ma50_last > ma100_last
+                    and macd >= macd_2_min_ago
                     and ma200_last < ma300_last
                     and ma200_last > ma200_120_min_ago
                     and deviation_ma5_sopra_ma28 > 0.17
@@ -2201,8 +2559,9 @@ class ro_cano_che_ritorna:
                 
                 elif (     
                     ma8_last > ma50_last
-                    and ma125_last > ma450_last
-                    and ma69_last > ma100_last
+                    and macd >= macd_2_min_ago
+                    and ma100_last > ma450_last
+                    and ma59_last > ma100_last
                   
                     and ma200_last < ma200_120_min_ago
                     and ma100_last < ma200_last
@@ -2218,7 +2577,7 @@ class ro_cano_che_ritorna:
                     and ma2_last > ma20_last
                     and ma2_last > ma2_2_min_ago
                 ):    
-                    buy = "BUY 1 pericolosa MA 69 > 100 FINE AUTUNNO (quasi inverno) passare tempo E CON 3-10 > 0.10 con 5-28 > 0.15 - r 1614 A"
+                    buy = "BUY 1 pericolosa MA 59 > 100 FINE AUTUNNO (quasi inverno) passare tempo E CON 3-10 > 0.10 con 5-28 > 0.15 - r 1614 A"
                     action = "buy"
                     percentage = 80
                     
@@ -2228,7 +2587,7 @@ class ro_cano_che_ritorna:
                     # 11 ott 2022 dev bellissima 0.045 da 0.05
                     # 18 nov 2022 dev bellissima 0.04 da 0.045 (perche' 125 sta sopra 450 !)
                     # 18 nov 2022 5-29 0.13 da 0.14 (perche' 125 sta sopra 450 !)
-                
+                    # 15 gen 2023 59>100 da 69>100
                     
                     
                     
@@ -2237,6 +2596,7 @@ class ro_cano_che_ritorna:
                 
                 elif (     
                     ma8_last > ma56_last
+                    and macd >= macd_2_min_ago
                     and ma78_last < ma100_last
                     
                     and ma200_last < ma200_120_min_ago
@@ -2261,19 +2621,17 @@ class ro_cano_che_ritorna:
                     # 28 GIU 2022 HO TOLTO 11-125 e sono tornato alle origini con 8-56 !
                     
                     
-                    
-                
-                
-                
-                
-                    
-                    
+                   
                     
                     
                 # BUY 1 2 sett 2022 ore 5:03 - maria callas casta diva bellini - ma300 che SALE
                 
                 elif (     
-                    ma5_last > ma69_last
+                    ma5_last > ma20_last
+                    and macd >= macd_2_min_ago
+                    and deviation_callas < -0.12
+                    and macd > macd_2_min_ago
+                    
                     and deviation_ma50_sotto_ma300 < -0.29
                     and deviation_ma78_sotto_ma300 < -0.20
                     
@@ -2283,8 +2641,8 @@ class ro_cano_che_ritorna:
                     and ma100_last < ma200_last
                     and ma200_last < ma200_120_min_ago
                     
-                    and deviation_ma3_sopra_ma10 > 0.11
-                    and deviation_ma5_sopra_ma28 > 0.13
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma5_sopra_ma28 > 0.01
                     
                     and ma2_last > ma20_last
                     and ma2_last > ma2_2_min_ago
@@ -2298,15 +2656,16 @@ class ro_cano_che_ritorna:
                     # se 78 sta lontana dalla 200 3-10 e' ok ! cazzo ! vedi 20 settembre ore 12:26
                     
                 
+                   
                     
-                
-                
-                
                 # BUY 1 maria callas core 'ngrato - 2 sett 2022 ore 5:03 - ma300 che SCENDE
                 
                 elif (     
                     
-                    deviation_callas < -0.10
+                    deviation_callas < -0.14
+                    
+                    and macd > macd_2_min_ago
+                    
                     and deviation_ma50_sotto_ma300 < -0.29
                     and deviation_ma78_sotto_ma300 < -0.23
                     and deviation_ma78_sotto_ma200 < -0.30
@@ -2318,14 +2677,16 @@ class ro_cano_che_ritorna:
                     and ma200_last < ma200_120_min_ago
                     
                     and deviation_ma3_sopra_ma10 > 0.07
-                    and deviation_ma5_sopra_ma28 > 0.10
+                    and deviation_ma5_sopra_ma28 > 0.03
                     
                     and ma2_last >= ma20_last
                     and ma2_last >= ma2_2_min_ago
                 ):    
-                    buy = "BUY 1 maria callas core 'ngrato 5-59 - con 5 sotto 300 < -0.60 - 2 sett 2022 ore 5:03 - ma300 che SCENDE - r 1615 B"
+                    buy = "BUY 1 maria callas core 'ngrato con dev_callas -0.14 e con 5 sotto 300 < -0.60 - 2 set 2022 ore 5:03 - ma300 che SCENDE - r 1615 B"
                     action = "buy"
                     percentage = 80
+                    
+                    # deviation_callas = ma5_last / ma54_last
                     
                     # vedi che c'e' ma 300 che scende
                     # 19 set 2022 ho anticipato maria callas core ngrato di una ndecchiecella
@@ -2335,22 +2696,25 @@ class ro_cano_che_ritorna:
                     #  7 ott 2022 5-28 > 0.105 da 0.108
                     # 19 ott 2022 5-28 > 0.10 da 0.105 VIVA MARIA CALLAS ! condizione meravigliosa
                     #  8 nov maria callas con 5-59 - da 5-69
-                    #  16 nov ho tolto ma5_last > ma59_last e ho messo dev callas = 5/54 <-0.10 PENSIERO LATERALE - VEDI 16 NOV ore 15 :33
-                    
-                    
-                    
-                
-                
-                
-                
-                
-                
-                
+                    # 16 nov ho tolto ma5_last > ma59_last e ho messo dev callas = 5/54 <-0.10 PENSIERO LATERALE - VEDI 16 NOV ore 15 :33
+                    # 19 GEN 2023 5-28 a 0.09 da 0.10
+                    # 29 gen 2023 deviation_callas < -0.11 da -0.10
+                    # 10 mar 2023 5-28 > 0.08 da 0.09
+                    #  6  apr 2023 5-28 > 0.07 da 0.08
+                    #  6  apr 2023 5-28 > 0.06 da 0.07
+                    # 15 apr 2023 dev_callas -0.12
+                    # 15 apr 2023 5-28 > 0.05 da 0.06
+                    # 15 apr 2023 5-28 > 0.05 da 0.06
+                    # 20 apr 2023 5-28 > 0.04 da 0.05
+                    # 20 apr 2023 aggiunta macd > macd_2_min_ago
+                    #  8 mag 2023 dev_callas -0.14 da -0.12
+                    #  8 mag 2023 5-28 > 0.03 da 0.04
                 
                 # BUY 1 tempo FINE AUTUNNO (quasi inverno !)
                 
                 elif (     
                     ma8_last > ma50_last
+                    and macd >= macd_2_min_ago
                     and ma30_last > ma30_40_min_ago
                     
                     and ma8_last < ma100_last
@@ -2387,16 +2751,11 @@ class ro_cano_che_ritorna:
               
                 
                 
-                
-                
-                
-                
-                
-                
                 # BUY 1 tempo INVERNO che considera il passare del tempo con ma30 < MA 100 < 200
                 
                 elif (     
                     ma50_last > ma100_last
+                    and macd >= macd_2_min_ago
                     and ma100_last < ma200_last
                     
                     and ma30_last < ma30_40_min_ago
@@ -2416,45 +2775,39 @@ class ro_cano_che_ritorna:
                     percentage = 90
                     
                     
-                
-                    
-                # BUY 1 con ma200 < 300< MA ma100> 100 60 min ago e doppio delta < and ma100 >60_min_ago STA RISALENDO !
+                # BUY 1 con ma200< e 300< MA doppio delta < and ma100 >60_min_ago STA RISALENDO !
             
                 elif (       
-                    ma200_last < ma200_20_min_ago
+                    ma450_last > ma450_720_min_ago
+                    and macd >= macd_2_min_ago
+                    and ma300_last > ma300_301_min_ago
+                    and ma200_last < ma200_20_min_ago
                     
-                    and ma5_last > ma100_last
+                    and ma5_last > ma50_last
+                    and macd >= macd_2_min_ago
                     and ma2_last >= ma2_2_min_ago
                     
                     and deviation_ma3_sopra_ma10 > 0.05
-                    and deviation_ma5_sopra_ma28 > 0.06
+                    and deviation_ma3_sopra_ma18 > 0.08
+                    and deviation_ma5_sopra_ma28 > 0.10
                  
                     and delta_1 < delta_2
-                    and ma100_last > ma100_50_min_ago
-                    
-                    and ma200_last < ma200_60_min_ago
-                    and ma300_last < ma300_60_min_ago
+                    and ma100_last > ma100_5_min_ago
+                
                 ):    
         
-                    buy = "BUY 1 5-100 con ma200< 300< MA ma100> 100 50 min ago e doppio delta < - GIORNO ! - riga 1712"
+                    buy = "BUY 1 CON 450> e con 300> and 5-50 and macd > macd 2 min ago MA ma200 < and ma100> 100 5 min ago e doppio delta < - GIORNO ! - r 1712"
                     action = "buy"
                     percentage = 90
+              
+                    # 28 apr 2023 ma 100 5 min da 10 min
+                    # 28 apr 2023  5-50 da 5-100 con aggiunta macd >= 2 min ago
                     
-                    # 11-150 perche' doppio delta sta risalendo !
-                    # MA HO DOVUTO AGGIUNGERE and deviation_ma5_sopra_ma28 > 0.20
-                    
-                    # 14 giu 2022 11-125 da 11-150 (giorno!)
-                    # 22 set 2022 aggiunto 3-10 0.07
-                    # 22 set 2022 5-28 > 0.12
-                    # 30 set 5-28 0.11 da 0.12
-                    #  7 ott 8-100 da 8-125
-                    #  8 ott ma100> da 50 min non da 60 min ! e' giorno !
-                    #  8 ott 5-28 a 0.10 da 0.11 ! e' giorno !
-                    #  9 ott 5-28 a 0.09 da 0.10 ! e' giorno
-                    #  9 ott 5-28 a 0.08 da 0.09 ! e' giorno
-                    # 12 ott 5-28 a 0.075 da 0.08
-                    #  3 nov 5-28 a 0.06 da 0.075
-            
+                
+              
+              
+              
+               
                 
                     
                     
@@ -2464,6 +2817,7 @@ class ro_cano_che_ritorna:
                 elif (
                     
                     ma8_last > ma50_last
+                    and macd >= macd_2_min_ago
                     and ma78_last > ma200_last
                     and deviation_ma3_sopra_ma10 > 0.05
                     and deviation_ma5_sopra_ma28 > 0.25
@@ -2492,12 +2846,16 @@ class ro_cano_che_ritorna:
                     
                     
                     
-                # BUY 1 MISTERO CON 8>50 E 5-28 PIU' ALTO ! per arrivare una ndecchia prima del passare del tempo. prendendo rischio
+                # BUY 1 MISTERO CON 8>28 E 5-28 PIU' ALTO ! per arrivare una ndecchia prima del passare del tempo. prendendo rischio
                 
                 elif (
                   
-                    ma8_last > ma50_last
+                    ma8_last > ma28_last
+                    and macd >= macd_2_min_ago
                     and ma78_last < ma200_last
+                    
+                    and deviation_ma5_sopra_ma59 < -0.15
+                    
                     and deviation_ma3_sopra_ma10 > 0.20
                     and deviation_ma5_sopra_ma28 > 0.28
                     
@@ -2516,25 +2874,14 @@ class ro_cano_che_ritorna:
                     and ma2_last >= ma2_2_min_ago
               
                 ):
-                    buy = "BUY 1 MISTERO CON 8-50 and 5-28 PIU' ALTO ! and 3-10 > 0.24 prendendo rischio con 78 < 200  - riga 1783 B"
+                    buy = "BUY 1 MISTERO CON 8-28 and 5-28 PIU' ALTO ! and 3-10 > 0.24 prendendo rischio con 78 < 200  - riga 1783 B"
                     action = "buy"
                     percentage = 90
                     
                     # ma100 sta sotto la ma200 MA non le e' troppo lontana cioe' NON ci troviamo in una situazione drammatica! ( anche se ma100< e ma200< e ma300< )
                     # MISTERO !
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                
-                    
-                    
+                    # 31 dic 2022 8-28 da 8-50
+                    # 31 dic 2022 aggiunta 5-59 < -0.15
                     
                     
                     
@@ -2543,6 +2890,7 @@ class ro_cano_che_ritorna:
                 elif (
                     
                     deviation_ma5_sopra_ma28 > 0.24
+                    and macd >= macd_2_min_ago
                     and ma78_last > ma200_last
                     and delta_1_200_78 < delta_2_200_78_60_min
                     
@@ -2568,16 +2916,14 @@ class ro_cano_che_ritorna:
                     percentage = 80
                     
                     
-                    
-                    
-                    
-                    
+                   
                     
                 # BUY 1 MISTERO con INCROCIO 8-50 E 5-28 PIU' BASSO per arrivare una ndecchia prima del passare del tempo. prendendo rischio
                 
                 elif (
                     
                     deviation_ma5_sopra_ma28 > 0.24
+                    and macd >= macd_2_min_ago
                     and ma78_last < ma200_last
                     and deviation_ma3_sopra_ma10 > 0.11
                     
@@ -2605,17 +2951,14 @@ class ro_cano_che_ritorna:
                     percentage = 80
                     
                     
-                    
-                    
-                    
-                    
-                    
+                   
                     
                 # BUY 1 MISTERO con INCROCIO 8-50 E 5-28 PIU' BASSO per arrivare una ndecchia prima del passare del tempo. prendendo rischio
                 
                 elif (
                     
                     deviation_ma5_sopra_ma28 > 0.24
+                    and macd >= macd_2_min_ago
                     and delta_1_200_78 > delta_2_200_78_60_min
                     and deviation_ma3_sopra_ma10 > 0.22
                     
@@ -2640,16 +2983,7 @@ class ro_cano_che_ritorna:
                     action = "buy"
                     percentage = 80
                     
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
+                   
                     
                     
                 # BUY 1 MISTERO con INCROCIO 8-50 E 5-28 PIU' BASSO per arrivare una ndecchia prima del passare del tempo. prendendo rischio
@@ -2657,6 +2991,7 @@ class ro_cano_che_ritorna:
                 elif (
                     
                     deviation_ma5_sopra_ma28 > 0.14
+                    and macd >= macd_2_min_ago
                     and (ma8_prev < ma50_prev and ma8_last > ma50_last)
                     and deviation_ma100_sopra_ma200 > -0.60
                     and deviation_ma50_sotto_ma200 < -0.15
@@ -2681,16 +3016,7 @@ class ro_cano_che_ritorna:
                     # ma100 sta sotto la ma200 MA non le e' troppo lontana cioe' NON ci troviamo in una situazione drammatica! ( anche se ma100< e ma200< e ma300< )
                     # MISTERO !
                     
-                    
-                
-                
-                
-                
-                
-                
-                
-                
-                
+                 
                 
                 
                 # BUY 1 copiata e modificata da RCCR che e' arrivata una ndecchia prima del passare del tempo.
@@ -2698,6 +3024,7 @@ class ro_cano_che_ritorna:
                 elif (
                     
                     ma8_last > ma140_last
+                    and macd >= macd_2_min_ago
                     and deviation_ma100_sopra_ma200 > -0.30
                     and ma20_last > ma200_last
                     
@@ -2728,6 +3055,7 @@ class ro_cano_che_ritorna:
                 
                 elif (    
                     ma8_last > ma140_last
+                    and macd >= macd_2_min_ago
                     and deviation_ma100_sopra_ma200 > -0.30
                     and ma20_last < ma200_last
                     and deviation_ma3_sopra_ma10 > 0.24
@@ -2755,19 +3083,11 @@ class ro_cano_che_ritorna:
                     
                 
                 
-                
-                
-                
-                
-                
-                
-                
-                
-                
                 # ------------------------------------------------------------  BUY 1 con incrocio 11-69 and ma69_last >= ma69_2_min_ago  "MI PIACE!"
                 
                 elif (
                     ma20_last > ma200_last
+                    and macd >= macd_2_min_ago
                     and ma11_last > ma50_last
                     and ma69_last >= ma69_2_min_ago
                     and ma300_last > ma300_120_min_ago
@@ -2788,41 +3108,33 @@ class ro_cano_che_ritorna:
                     
                     
                 elif (
-                    ma20_last > ma200_last
-                    and ma11_last > ma50_last
-                    and ma69_last >= ma69_2_min_ago
+                    ma5_last > ma300_last
+                    and macd >= macd_2_min_ago
+                    and ma8_last > ma50_last
+                    
+                    and delta_300_225 < delta_300_225_60_min
+                    
                     and ma300_last < ma300_120_min_ago
                     
-                    and deviation_ma5_sopra_ma28 > 0.15
+                    and deviation_ma5_sopra_ma28 > 0.13
                     and deviation_ma3_sopra_ma7 > 0.05
-                    and deviation_ma13_sopra_ma25 > 0.05
-                    
-                    and deviation_bellissima > 0.13
-                    
+                    and deviation_ma13_sopra_ma25 > 0.04
+                  
                     and price >= price_2_min_ago
                     
                 ):
-                    buy = "BUY 1 con ma20_last > ma200_last e con 11 > 59 e ma69> 2 min ago (!) r 2065"
+                    buy = "BUY 1 con ma20_last > ma200_last e con 11 > 59 e ma69> 2 min ago (!) con DOPPIO DELTA 300-225 GIORNO ! - r 2065 A"
                     action = "buy"
                     percentage = 80
                     
                     # > estate anticipato buy di una ndecchia
+                    #  3 lug 2023 tolto dev bellissima
+                    #  3 lug 2023 tolto ma100_last > ma150_last
+                
                     
                     
                     
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
+                
                     
                     
                     
@@ -2830,6 +3142,8 @@ class ro_cano_che_ritorna:
                 
                 elif (
                     ma100_last > ma200_last
+                    and macd >= macd_2_min_ago
+                    
                     and ma100_last > ma300_last
                     and ma100_last > ma100_120_min_ago
                     
@@ -2860,6 +3174,7 @@ class ro_cano_che_ritorna:
                     
                 elif (
                     ma200_last > ma200_120_min_ago
+                    and macd >= macd_2_min_ago
                     and ma20_last > ma200_last
                     and ma11_last > ma69_last
                     and deviation_ma5_sopra_ma28 > 0.15
@@ -2881,6 +3196,7 @@ class ro_cano_che_ritorna:
            
                 elif (
                     ma20_last > ma200_last
+                    and macd >= macd_2_min_ago
                     and deviation_buy1 > 0.24
                     and ma13_last > ma50_last
                     and ma78_last > ma78_2_min_ago
@@ -2898,6 +3214,7 @@ class ro_cano_che_ritorna:
             
                 elif (
                     ma20_last > ma200_last
+                    and macd >= macd_2_min_ago
                     and ma78_last < ma78_2_min_ago
                     and ma39_last > ma78_last
                     and deviation_buy1 > 0.14
@@ -2917,6 +3234,7 @@ class ro_cano_che_ritorna:
             
                 elif (
                     ma20_last > ma200_last
+                    and macd >= macd_2_min_ago
                     and ma78_last < ma78_2_min_ago
                     and ma39_last > ma78_last
                     and deviation_bellissima > 0.17
@@ -2940,6 +3258,7 @@ class ro_cano_che_ritorna:
                 
                 elif (
                     ma200_last > ma200_20_min_ago
+                    and macd >= macd_2_min_ago
                     and ma300_last > ma300_120_min_ago
                     and deviation_ma100_sopra_ma300 > 0.50
                     
@@ -2963,6 +3282,7 @@ class ro_cano_che_ritorna:
                     
                 elif (
                     ma200_last > ma200_20_min_ago
+                    and macd >= macd_2_min_ago
                     and ma300_last > ma300_120_min_ago
                     and deviation_ma100_sopra_ma300 < 0.50
                     
@@ -2994,17 +3314,9 @@ class ro_cano_che_ritorna:
                     
                 
                 
-                
-                
-                
-                
-                
-                
-                
-                
-                
                 elif (
                     ma200_last > ma200_20_min_ago
+                    and macd >= macd_2_min_ago
                     and ma300_last < ma300_120_min_ago
                     
                     and deviation_rialzo_improvviso_sopra > 0.50
@@ -3032,19 +3344,13 @@ class ro_cano_che_ritorna:
                     # deviation_range_x = ma30_last / ma30_20_min_ago
                     
                     
-                    
-                    
-                    
-                    
-                    
-                 
-                
-                
+               
                 
                 # BUY 1 variazione 1 RIALZO con 20-69
                 
                 elif (
                     ma200_last > ma200_20_min_ago
+                    and macd >= macd_2_min_ago
                     and (ma20_prev < ma69_prev and ma20_last > ma69_last)
                     and deviation_rialzo_improvviso_1 > 0.25
                     and deviation_range_1 > 0.20
@@ -3059,10 +3365,7 @@ class ro_cano_che_ritorna:
                     # deviation_range_1 = ma30_last / ma30_10_min_ago
                     
                     
-                
-                
-                    
-                    
+              
                     
                     
                 # BUY 1 variazione 2 RIALZO con 20-100
@@ -3070,6 +3373,7 @@ class ro_cano_che_ritorna:
                 elif (
                   
                     ma200_last > ma200_20_min_ago
+                    and macd >= macd_2_min_ago
                     and (ma20_prev < ma100_prev and ma20_last > ma100_last)
                    
                     and deviation_rialzo_improvviso_1 > 0.25
@@ -3094,6 +3398,7 @@ class ro_cano_che_ritorna:
                 elif (
                   
                     ma200_last > ma200_20_min_ago
+                    and macd >= macd_2_min_ago
                     and (ma20_prev < ma200_prev and ma20_last > ma200_last)
                     and deviation_rialzo_improvviso_1 > 0.25
                     and deviation_range_1 > 0.20
@@ -3109,9 +3414,6 @@ class ro_cano_che_ritorna:
                     # deviation_range_1 = ma30_last / ma30_10_min_ago
                 
                 
-                
-                
-                    
                     
                     
                 # rialzo improvviso trend ribassista
@@ -3119,7 +3421,7 @@ class ro_cano_che_ritorna:
                 elif (    
                    
                     ma200_last < ma200_20_min_ago
-                    
+                    and macd >= macd_2_min_ago
                     and deviation_rialzo_improvviso_1 > 1.10
                     and deviation_rialzo_improvviso_2 > 0.20
                     and deviation_rialzo_improvviso_3 > 0.20
@@ -3170,6 +3472,7 @@ class ro_cano_che_ritorna:
                
                 elif (
                     ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                     and ma200_last > ma200_120_min_ago
                     and ma28_last > ma28_30_min_ago
                     
@@ -3193,6 +3496,7 @@ class ro_cano_che_ritorna:
                
                 elif (
                     ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                     and ma200_last > ma200_120_min_ago
                     and ma28_last < ma28_30_min_ago
                     and deviation_ma5_sopra_ma28 > 0.13
@@ -3212,9 +3516,7 @@ class ro_cano_che_ritorna:
                     
                     
                     
-                    
-                    
-                    
+                 
                 
                 
                 # BUY 1 con ma300 > piccola CORREZIONE FIAT che NON E' AUDI e non e' MASERATI e NON E' FERRARI ! (compare stammi vicino!)
@@ -3222,6 +3524,7 @@ class ro_cano_che_ritorna:
                 elif (
 
                     ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                     and ma300_last > ma300_120_min_ago
                     and deviation_buy_crollo_1 < -0.33
                     and deviation_buy_crollo_1 > -0.69
@@ -3255,6 +3558,7 @@ class ro_cano_che_ritorna:
                 
                 elif (
                     ma3_last > ma25_last
+                    and macd >= macd_2_min_ago
                     and ma100_last > ma100_10_min_ago
                     
                     and ma100_last > ma100_120_min_ago
@@ -3283,7 +3587,7 @@ class ro_cano_che_ritorna:
                 
                 elif (
                     ma3_last > ma25_last
-                    
+                    and macd >= macd_2_min_ago
                     and ma100_last < ma100_10_min_ago
                     and ma11_last > ma100_last
                     
@@ -3307,24 +3611,19 @@ class ro_cano_che_ritorna:
                     
                 
                 
-                
-                
-                
-                
-                
                 ################################################################################################### ecco le 2 CONDIZIONI PIU' PERICOLOSE !
                 
-                
-                    
-                    
-                    
+               
                     
                 # BUY 1 DURANTE UNA CORREZIONE FIAT che non e' un forte ribasso e non e' un crollo ! (MA ma3 > ma150 mi protegge un po')
                 
                 elif (
                     
+                    
                     deviation_buy_crollo_1 < -0.29
+                    and macd >= macd_2_min_ago
                     and deviation_buy_crollo_1 > -0.69
+                    
                     and ma5_last < ma22_last
                     
                     and deviation_correzione > 0.03
@@ -3335,12 +3634,15 @@ class ro_cano_che_ritorna:
                     
                     and ma2_last > ma2_2_min_ago
                 ):
-                    buy = "BUY 1 FIAT 5 DEVE STARE DISTANTE DALLA 300 ! - riga 2575"
+                    buy = "BUY 1 FIAT 5 DEVE STARE DISTANTE DALLA 300 ! - r 2575"
                     action = "buy"
                     percentage = 80
                     
                     # questa e' andata benissimo su RCCR ! il 10 ottobre 2022 ! maddog dormiva !
                     # vedi RCCR r 1294
+                    
+                    
+                
                     
                     
                     
@@ -3350,6 +3652,7 @@ class ro_cano_che_ritorna:
                 elif (
                     
                     deviation_buy_crollo_1 < -0.29
+                    and macd >= macd_2_min_ago
                     and deviation_buy_crollo_1 > -0.69
                     and deviation_correzione > 0.03
                     
@@ -3362,15 +3665,7 @@ class ro_cano_che_ritorna:
                     percentage = 80
                     
                     
-                    
-                    
-                    
-                    
-                    
-                
-                
-                    
-                    
+                   
                     
                     
                 # BUY 1 FIAT 5-300 ( ma la ma100 E' ANCORA VICINA alla ma300 !) 
@@ -3378,6 +3673,7 @@ class ro_cano_che_ritorna:
                 
                 elif (
                     deviation_buy_crollo_1 < -0.29
+                    and macd >= macd_2_min_ago
                     and deviation_buy_crollo_1 > -0.69
                     
                     and deviation_ma5_sotto_ma300 < -0.40
@@ -3400,15 +3696,7 @@ class ro_cano_che_ritorna:
                     # 19 set 2022 aggiunto 3-10 > 0.22
                     
                     
-                    
-                    
-                    
-                    
-                
-                    
-                    
-                    
-               
+                  
                 ############################################################################################################################################## 
                 
                 
@@ -3417,6 +3705,7 @@ class ro_cano_che_ritorna:
                 elif (
                     
                     deviation_buy_crollo_1 < -0.29
+                    and macd >= macd_2_min_ago
                     and deviation_buy_crollo_1 > -0.69
                     and ma78_last > ma200_last
                     
@@ -3439,6 +3728,7 @@ class ro_cano_che_ritorna:
                 elif (
                     
                     deviation_buy_crollo_1 < -0.29
+                    and macd >= macd_2_min_ago
                     and deviation_buy_crollo_1 > -0.69
                     and ma78_last < ma200_last
                     
@@ -3462,6 +3752,7 @@ class ro_cano_che_ritorna:
                 elif (
                     
                     deviation_buy_crollo_1 < -0.29
+                    and macd >= macd_2_min_ago
                     and deviation_buy_crollo_1 > -0.69
                     
                     and deviation_ma5_sopra_ma28 > 0.07
@@ -3489,6 +3780,7 @@ class ro_cano_che_ritorna:
                 
                 elif (
                     ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                     and ma78_last > ma200_last
                     
                     and deviation_ma3_sopra_ma10 > 0.145
@@ -3504,21 +3796,19 @@ class ro_cano_che_ritorna:
                     action = "buy"
                     percentage = 70
                     
-                    
-                
-                
-                
-                
-                
+               
                 
                 # BUY 1 piccola CORREZIONE FIAT ma300 > 300 5 ore con 5-50 che NON E' una grande correzione e non e' un grande ribasso e NON E' un crollo !
                 
                 elif (
                     ma2_last >= ma2_2_min_ago
+                    
+                    and macd > macd_2_min_ago
+                    
                     and ma78_last < ma200_last
                     and ma300_last > ma300_301_min_ago
                     
-                    and deviation_ma5_sopra_ma28 > 0.11
+                    and deviation_ma5_sopra_ma28 > 0.08
                     and deviation_ma3_sopra_ma10 > 0.01
                     
                     and deviation_ma100_sopra_ma300 > -0.50
@@ -3527,7 +3817,7 @@ class ro_cano_che_ritorna:
                     and deviation_buy_crollo_1 > -0.89
                 ): 
             
-                    buy = "BUY 1 FIAT ma300 > 300 5 ore con 100 VICINA 300 NO grande correzione NO grande ribasso NO crollo ! 78 < 200 AND 5-28 > 0.11  - r 2745 A"
+                    buy = "BUY 1 FIAT ma300 > 300 5 ore con 100 VICINA 300 no GC no GR no C ! 78 < 200 AND 5-28 > 0.08 + macd  - r 2745 A"
                     action = "buy"
                     percentage = 70
                     
@@ -3536,12 +3826,15 @@ class ro_cano_che_ritorna:
                     # 26 ott 2022 5-28 > 0.03 da 0.21 !
                     # vedi 25 ottobre ore 22:46 forse dovrai aggiungere 5>300 !
                     #  2 nov 2022 5-28 > 0.11 da 0.03
-                    
+                    # 27 apr 2023 5-28 > 0.08 da 0.11
+                    # 27 apr 2023 aggiunto macd
+                    # NO GC grande correzione NO GR grande ribasso NO C crollo
                     
                 # BUY 1 piccola CORREZIONE FIAT 5-50 che NON E' una grande correzione e non e' un grande ribasso e NON E' un crollo !
                 
                 elif (
                     ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                     and ma78_last < ma200_last
                     and ma300_last < ma300_301_min_ago
                     
@@ -3562,16 +3855,13 @@ class ro_cano_che_ritorna:
                     # 28 giu 2022 se 78 < 200 ho messo 3-10 > 0.24 
                     
                     
-                    
-                    
-                    
-                    
-                    
+                  
                     
                 # BUY 1 piccola CORREZIONE FIAT 5-50 che NON E' una grande correzione e non e' un grande ribasso e NON E' un crollo !
                 
                 elif (
                     ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                     and ma8_last > ma50_last
                     and deviation_ma5_sopra_ma28 > 0.20
                     and deviation_ma100_sopra_ma300 < -0.30
@@ -3591,6 +3881,7 @@ class ro_cano_che_ritorna:
                     
                 elif (    
                     deviation_buy_crollo_1 < -0.27
+                    and macd >= macd_2_min_ago
                     and deviation_buy_crollo_1 > -0.62
                     and ma8_last > ma50_last
                     and ma125_last > ma300_last
@@ -3608,6 +3899,7 @@ class ro_cano_che_ritorna:
                 
                 elif (
                     ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                     and ma8_last > ma50_last
                     and deviation_ma5_sopra_ma28 > 0.20
                     and deviation_ma100_sopra_ma300 < -0.30
@@ -3624,18 +3916,16 @@ class ro_cano_che_ritorna:
                     percentage = 80
                     
                     
-                    
-                
-                
-                
-                
+              
                 
                 # BUY 1 con ma200> piccola CORREZIONE FIAT che NON E' un forte ribasso e NON E' un crollo ! ALTRA RIGA RCCR che e' andata bene.
                 
                 elif (    
                     
                     ma200_last > ma200_20_min_ago
+                    and macd >= macd_2_min_ago
                     and ma20_last > ma78_last
+                    and macd > macd_2_min_ago
                     
                     and deviation_ma5_sopra_ma28 > 0.165
                     and ma28_last > ma28_2_min_ago
@@ -3652,9 +3942,12 @@ class ro_cano_che_ritorna:
              
                 ):    
                     
-                    buy = "BUY 1 con 200 > con 5-28> 0.165 and ma28_last > ma28_2_min_ago - 20 > 78 - riga 2828 a"
+                    buy = "BUY 1 con 200 > con 5-28> 0.165 and ma28_last > ma28_2_min_ago - 20 > 78 - r 2828 A"
                     action = "buy"
                     percentage = 80
+                    
+                    # 3 mag 2023 aggiunto macd > macd 2 min ago
+                    
                     
                     
                     
@@ -3663,13 +3956,15 @@ class ro_cano_che_ritorna:
                 elif (    
                     
                     ma200_last > ma200_20_min_ago
+                    and macd >= macd_2_min_ago
                     and ma20_last < ma78_last
                     and ma90_last > ma110_last
                     
                     and deviation_ma3_sopra_ma10 > 0.05
+                    and deviation_ma3_sopra_ma18 > 0.265
                     and deviation_ma5_sopra_ma28 > 0.05
                     
-                    and ma18_last >= ma18_2_min_ago
+                    and ma13_last >= ma13_2_min_ago
                     
                     and ma3_last > ma28_last
                     and ma2_last > ma2_2_min_ago
@@ -3683,7 +3978,7 @@ class ro_cano_che_ritorna:
                     and ma300_last > ma300_360_min_ago
                 ):    
                     
-                    buy = "BUY 1 con 200 > and ma28_last > ma28_2_min_ago - 20 < 78 and dev_ma3_sopra_ma10 > 0.17 con 5-28> 0.15 - riga 2859 b"
+                    buy = "BUY 1 con 200 > and ma13_last > ma13_2_min_ago - 20 < 78 and dev_ma3_sopra_ma10 > 0.17 con 5-28 > 0.15 - r 2859 B"
                     action = "buy"
                     percentage = 80
                     
@@ -3691,19 +3986,17 @@ class ro_cano_che_ritorna:
                     # 2 nov 2022 anticipato di molto con 300 > 360 min ago !
                     # 2 nov 3-10 = 0.05 da 0.17
                     # 2 nov 5-28 = 0.05 da 0.15
-                    
+                    # 15 feb 2023 13>13 2 min ago da 18>18 min ago
+                    # 16 mar 2023 aggiunta 3-18 > 0.265
                
-                    
-                    
-                   
-                    
-                    
-                    
+                
                 # BUY 1 che mancava se dopo 300 min di rialzo c'e' una correzione improvvisa 
                 
                 elif (    
                     
-                    deviation_callas < -0.10
+                    deviation_callas < -0.11
+                    and macd >= macd_2_min_ago
+                    and deviation_ma5_sopra_ma59 < -0.45
                     and ma300_last > ma300_300_min_ago
                     
                     and deviation_ma5_sotto_ma300 < -0.70
@@ -3721,14 +4014,15 @@ class ro_cano_che_ritorna:
                     # 3 set dev 5-28 0.04 da 0.05
                     # dev callas - pensiero laterale 
                     # 18 nov ho tolto ma5_last > ma54_last e ho messo dev callas = 5/54 <-0.10 PENSIERO LATERALE - VEDI 16 NOV ore 15:33
-                    
-                    
-                    
-                    
+                    # 13 feb 2023 dev callas <-0.11 da < -0.10
+                    # 13 feb 2023 per anticipare buy voglio essere ancora piu' sicuro e ho aggiunto 5-59 < -0.45
                     
                     
                 
-                
+                    
+                    
+                    
+                    
                 
                 
                 
@@ -3737,6 +4031,7 @@ class ro_cano_che_ritorna:
                 elif (    
                     
                     ma200_last > ma200_20_min_ago
+                    and macd >= macd_2_min_ago
                     and ma28_last > ma28_30_min_ago
                     
                     and deviation_ma5_sopra_ma28 > 0.19
@@ -3768,6 +4063,7 @@ class ro_cano_che_ritorna:
                 elif (    
                     
                     ma200_last > ma200_20_min_ago
+                    and macd >= macd_2_min_ago
                     and ma28_last < ma28_30_min_ago
                     
                     and deviation_ma5_sopra_ma28 > 0.25
@@ -3790,17 +4086,13 @@ class ro_cano_che_ritorna:
                     percentage = 80
                     
                     
-                    
-                    
-                    
-                    
-                    
-                 
+                  
                 
                 # BUY 1 piccola CORREZIONE FIAT 5-39 ma con ma5 piu' distante da ma200 che NON E' un grande ribasso e NON E' un crollo ! STA RISALENDO
                 
                 elif (
                     ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                     and ma5_last > ma34_last
                     and deviation_ma5_sopra_ma28 > 0.175
                     and deviation_ma5_sotto_ma200 < -0.85
@@ -3830,6 +4122,7 @@ class ro_cano_che_ritorna:
                 elif (
 
                     ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                     and ma200_last < ma200_120_min_ago
                     and ma300_last < ma300_120_min_ago
                     and ma11_last > ma69_last
@@ -3850,7 +4143,8 @@ class ro_cano_che_ritorna:
                 
                 elif (
                     deviation_ma3 < -1.30
-                  
+                    and macd >= macd_2_min_ago
+                    and deviation_ma3_sopra_ma10 > 0.06
                     
                     and delta_1 < delta_2
                     and ma100_last > ma100_60_min_ago
@@ -3858,15 +4152,16 @@ class ro_cano_che_ritorna:
                     and ma3_last > ma20_last
                 ):
                 
-                    buy = "BUY 1 con RIBASSO VELOCE mentre la distanza tra ma100 e ma200 si sta riducendo - SOTTO RIALZO RIALZO - GIORNO ! - r 2998"
+                    buy = "BUY 1 con RIBASSO VELOCE mentre distanza tra ma100 e ma200 si sta riducendo - SOTTO RIALZO RIALZO - GIORNO ! and 3-10 > 0.06 - r 2998"
                     action = "buy"
                     percentage = 80
                     
                     # and delta_1 < 0.25
                     # and delta_2 > 0.40
                     # STUDIARE MEGLIO DELTA 1 E DELTA 2
-                    
                     # compare grazie. altre parole io non ho.
+                    # 21 gen 2023 aggiunta 3-10 > 0.06 vedi 21 gen 2023 ore 11:47
+                    
                     
                     
                   
@@ -3875,6 +4170,7 @@ class ro_cano_che_ritorna:
                 
                 elif (
                     ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                     and (ma20_prev < ma200_prev and ma20_last > ma200_last)
                     and deviation_correzione_1 > 0.03
                     
@@ -3892,33 +4188,39 @@ class ro_cano_che_ritorna:
               
                 
                 
-                # BUY 1 grande CORREZIONE AUDI che NON E' FIAT e NON E' MASERATI e NON E' FERRARI ! con deviation trend ma200 
+                
+                # BUY 1 grande CORREZIONE AUDI che NON E' FIAT e NON E' MASERATI e NON E' FERRARI ! con deviation trend ma200
                 
                 elif (
                     ma2_last >= ma2_2_min_ago
+                    
+                    and macd >= macd_2_min_ago
                     and deviation_trend_ma200 > -0.30
-                    and ma4_last > ma25_last
+                    and ma4_last > ma16_last
                     
                     and deviation_buy_crollo_1 < -0.70
                     and deviation_buy_crollo_1 > -0.90
                     
-                    and deviation_ma3_sopra_ma10 > 0.09
-                    
+                    and deviation_ma3_sopra_ma10 > 0.12
+                    and deviation_ma3_sopra_ma16 > 0.121
                   
                 ):
-                    buy = "BUY 1 AUDI che NON E' un grande ribasso MASERATI e NON E' un crollo FERRARI ! con deviation trend ma200 - r 3043"
+                    buy = "BUY 1 AUDI che NON E' un grande ribasso MASERATI e NON E' un crollo FERRARI ! con deviation trend ma200 e 4-16 and 3-10 > 0.12 - r 3043"
                     action = "buy"
                     percentage = 80
                     
-                    # deviation_buy_crollo_1 = ma8_last / ma78_last
-                    # deviation_correzione = ma5_last / ma30_last
-                    # deviation_trend_ma200 = ma200_last / ma200_120_min_ago
-                    # compare prega per me !
+                    # CROLLO STIAMO ANCORA IN ALTO con 3-16 perche' paradossalmente serve piu'prudenza vedi 27 feb 2023 ore 17:04
+                    # 11 giu 2023 aggiunto 3-10 > 0.12
                     
-                    # and deviation_correzione_1 > -0.01 significa una ndecchia prima di 5-30 !
-                    # 22 set aggiunte 3-10 e 5-28
-                    #  7 ott 2022 5-25 cosi' e' piu' chiaro chi interviene (tolta dev correzione)
-                    # 28 ott 2022 4-25
+                    
+                
+                     
+                   
+                    
+                    
+                
+                    
+                
                     
                 ######################################################################################################
                 ###################################################################################################### attenzione qui applico il doppio delta !
@@ -3931,6 +4233,7 @@ class ro_cano_che_ritorna:
                 
                 elif (    
                     deviation_buy_crollo_1 < -0.29
+                    and macd >= macd_2_min_ago
                     and deviation_buy_crollo_1 > -0.69
                     
                     and deviation_ma5_sopra_ma28 > 0.11
@@ -3971,6 +4274,7 @@ class ro_cano_che_ritorna:
                 
                 elif (    
                     deviation_buy_crollo_1 < -0.29
+                    and macd >= macd_2_min_ago
                     and deviation_buy_crollo_1 > -0.69
                     and deviation_correzione > 0.10
                     and deviation_ma5_sopra_ma28 > 0.07
@@ -4000,13 +4304,11 @@ class ro_cano_che_ritorna:
                 
                 
                 
-                
-                
-                
                 #  BUY 1 FIAT copia BIS della r701 del RCCR che non funzionava e che invece HA FUNZIONATO ! ( CON DOPPIO DELTA in RIBASSO !) 8-39
                 
                 elif (    
                     deviation_buy_crollo_1 < -0.29
+                    and macd >= macd_2_min_ago
                     and deviation_buy_crollo_1 > -0.69
                     
                     and ma300_last > ma300_120_min_ago
@@ -4034,6 +4336,7 @@ class ro_cano_che_ritorna:
                 
                 elif (    
                     deviation_buy_crollo_1 < -0.29
+                    and macd >= macd_2_min_ago
                     and deviation_buy_crollo_1 > -0.69
                     
                     and ma300_last < ma300_120_min_ago
@@ -4064,12 +4367,6 @@ class ro_cano_che_ritorna:
                     # compare prega per me !
                     
                     
-                   
-                
-                
-                
-                
-                
                 
                 
                 # BUY 1 FIAT OK ( con doppio delta in ribasso !) 8-39
@@ -4091,6 +4388,7 @@ class ro_cano_che_ritorna:
                     and deviation_ma5_sopra_ma28 > 0.25
                     
                     and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 1 FIAT OK (DOPPIO DELTA) RIBASSO ! 8-39  SOTTO RIBASSO RIBASSO  - NOTTE ! - r 3227"
                     action = "buy"
@@ -4127,7 +4425,7 @@ class ro_cano_che_ritorna:
                     
                     and ma2_last > ma2_2_min_ago
                     and ma78_last < ma200_last
-                    
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 1 RIBASSO AUDI A importato dal BUY 2 CON 8 sotto 300 > -1.20 - 5-16 > 0.11 E 5-28 > 0.01 - riga 3264 A"
                     action = "buy"
@@ -4148,26 +4446,26 @@ class ro_cano_che_ritorna:
                     
                     and deviation_ma8_sotto_ma300 < -1.20
                   
-                    and deviation_ma3_sopra_ma10 > 0.19
-                    and deviation_ma5_sopra_ma28 > 0.03
+                    and deviation_ma3_sopra_ma10 > 0.18
+                    and deviation_ma5_sopra_ma28 > 0.02
                   
                     and ma78_last < ma200_last
                     and ma2_last >= ma2_2_min_ago
-                    
+                    and macd >= macd_2_min_ago
                     
                 ):
-                    buy = "BUY 1 RIBASSO AUDI B importato dal BUY 2 CON 8 sotto 300 < -1.20 - 5-28 and 3-10 > 0.19 - riga 3289 B"
+                    buy = "BUY 1 RIBASSO AUDI B importato dal BUY 2 CON 8 sotto 300 < -1.20 - 5-28 > 0.02 and 3-10 > 0.19 - r 3289 B"
                     action = "buy"
                     percentage = 80
                     
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     # questa cosa che 78 deve essere < 200 ha dell' incredibile. MA NON TOCCARE !
-                    # 21 giu 2022 5-18 da 5-20
-                    # 21 giu 2022 5-16 da 5-18
-                    # 27 giu 2022 5-15 da 5-16
+                    
                     # > vacanza 3-10 > 0.19 da 0.15
                     # roma 5-25
                     # 14 ott aggiunta 5-28 > 0.03 attenzione ! l' aggiunta di and deviation_ma8_sotto_ma300 < -1.20 aveva fatto conflitto !
+                    # 17 feb 2023 3-10 a 0.18 da 0.19
+                    # 17 feb 2023 5-28 a 0.02 da 0.18
                     
                     
                 # BUY 1 ultimo e meraviglioso RIBASSO AUDI con 5-16 copiata da RCCR CHE E' ANDATA BENISSIMO e che non e' un crollo ! (compare dove sei!)   
@@ -4190,7 +4488,7 @@ class ro_cano_che_ritorna:
                     and ma5_last > ma16_last
                     and ma2_last > ma2_2_min_ago
                     and ma78_last < ma200_last
-                    
+                    and macd >= macd_2_min_ago
                     
                 ):
                     buy = "BUY 1 ultimo e meraviglioso RIBASSO AUDI con 5-16 copiata da RCCR CHE E' ANDATA BENISSIMO e che non e' un crollo !  - riga 3326"
@@ -4219,7 +4517,7 @@ class ro_cano_che_ritorna:
                     
                     and ma2_last > ma2_2_min_ago
                     and ma78_last < ma200_last
-                    
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 1 RIBASSO AUDI PIU' LENTA CHE NON E' UN CROLLO ! and delta_1 < delta_2 con dev 5-16 > 0.09 E 5-28 > 0.18 - riga 3354 A"
                     action = "buy"
@@ -4231,10 +4529,6 @@ class ro_cano_che_ritorna:
                     # e il compare non risponde
                     
                     
-                    
-                
-                
-                
                 
                 
                 # BUY 1 DURANTE UN RIBASSO AUDI PIU' LENTA LENTA copiata da RCCR CHE E' ANDATA BENISSIMO CHE NON E' UN CROLLO ! (compare stammi vicino!)
@@ -4245,25 +4539,25 @@ class ro_cano_che_ritorna:
                     and deviation_buy_crollo_1 > -1.50
                     and delta_1 > delta_2
                     
-                    and ma13_last > ma25_last
+                    and ma11_last > ma25_last
                     
                     and ma5_last > ma16_last
                     and deviation_ma5_sopra_ma16 > 0.10
                     
                     and ma2_last > ma2_2_min_ago
                     and ma78_last < ma200_last
-                    
+                    and macd >= macd_2_min_ago
                 ):
-                    buy = "BUY 1 DURANTE UN RIBASSO AUDI PIU' LENTA CHE NON E' UN CROLLO ! and delta_1 > delta_2 con dev 5-16 > 0.10 e 13>25 - riga 3386 B1"
+                    buy = "BUY 1 DURANTE UN RIBASSO AUDI PIU' LENTA CHE NON E' UN CROLLO ! and delta_1 > delta_2 con dev 5-16 > 0.10 e 1q>25 - r 3386 B1"
                     action = "buy"
                     percentage = 80
                     
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     # questa cosa che 78 deve essere < 200 ha dell' incredibile. MA NON TOCCARE !
-                    # dev 5-16 c'e' perhe' sto riducendo piano piano
+                    # dev 5-16 c'e' perche' sto riducendo piano piano
                     
                     # > estate 5-16 0.10 da 0.05
-                    
+                    # 20 feb 2023 11-25 da 13-25
                     
                     
                     
@@ -4285,7 +4579,7 @@ class ro_cano_che_ritorna:
                     
                     and ma2_last > ma2_2_min_ago
                     and ma78_last < ma200_last
-                    
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 1 RIBASSO AUDI PIU' LENTA CHE NON E' UN CROLLO ! and delta_1 > delta_2 con 8-54 > 0.10 e 13<25 E 3-10 > 0.35 ! - r 3417 B2"
                     action = "buy"
@@ -4298,20 +4592,6 @@ class ro_cano_che_ritorna:
                     
                     
                 
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
                 # BUY 1 DURANTE UN RIBASSO AUDI PIU' GIU' E PIU' VELOCE LENTA copiata da RCCR CHE E' ANDATA BENISSIMO CHE NON E' UN CROLLO !
                 
                 elif (
@@ -4324,7 +4604,7 @@ class ro_cano_che_ritorna:
                     
                     and ma2_last >= ma2_2_min_ago
                     and ma78_last < ma200_last
-                    
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 1 RIBASSO AUDI PIU' GIU' -0.70 E PIU' VELOCE CHE NON E' UN CROLLO ! con deviation 3-16 > 0.46  - riga 3452"
                     action = "buy"
@@ -4336,12 +4616,7 @@ class ro_cano_che_ritorna:
                     # 7 giugno 2022 3-16> 0.20
                     
                     
-                    
-                    
-                    
-                    
-                    
-                    
+                 
                 # copia della riga 530 del RCCR CHE FUNZIONA BENISSIMO ma solo un po' piu' prudente ! - BUY grande ribasso AUDI CHE NON E' UN CROLLO !
                 
                 elif (
@@ -4352,6 +4627,7 @@ class ro_cano_che_ritorna:
                     and deviation_correzione_1 > 0.03
                     and ma13_last > ma50_last
                     and ma78_last < ma200_last
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "copia della riga 530 del RCCR ma piu' prudente ! - BUY GRANDE RIBASSO AUDI CHE NON E' UN CROLLO ! - r 3479"
                     action = "buy"
@@ -4372,6 +4648,7 @@ class ro_cano_che_ritorna:
                     and deviation_buy_crollo_1 > -1.50
                     and deviation_ma5_sopra_ma28 > 0.03
                     and ma78_last < ma200_last
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 1 GRANDE RIBASSO MASERATI CHE NON E' UN CROLLO ! con 5-28 - r 3499"
                     action = "buy"
@@ -4397,59 +4674,83 @@ class ro_cano_che_ritorna:
                     ma2_last >= ma2_2_min_ago
                     and deviation_buy_crollo_1 < -2.30
                     and ma3_last > ma16_last
-                    and deviation_ma3_sopra_ma10 > 0.31
+                    and deviation_ma3_sopra_ma10 > 0.20
                     and ma78_last < ma300_last
+                    and macd >= macd_2_min_ago
                 ):
-                    buy = "BUY 1 CROLLO FERRARI 3-16 - modo 1 and ma78_last < ma300_last - r 3525"
+                    buy = "BUY 1 CROLLO FERRARI 3-16 and deviation_ma3_sopra_ma10 > 0.20 - modo 1 and ma78_last < ma300_last - r 3525"
                     action = "buy"
                     percentage = 80
                     
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     # era 3-7 ma MI DISPIACE TANTO ma ho dovuto mettere 3-16
                     # aggiunto 3-10 0.31
-                    
+                    # 24 ago 2023 3-10 a 0.20 da 0.31
                     
                 
                 
                 # BUY 1 CROLLO FERRARI - modo 2 questa condizione e' entrata in azione ! ( e mi e' sembrata ben fatta !)
 
                 elif (
-                    ma2_last >= ma2_2_min_ago
+                    ma5_last > ma11_last
                     and deviation_buy_crollo_1 < -1.61
-                    and ma5_last > ma18_last
+                     
+                    and macd > macd_2_min_ago
                     and ma78_last < ma300_last
+                    and macd >= macd_2_min_ago
                 ):
-                    buy = "BUY 1 CROLLO FERRARI - modo 2 and ma78_last < ma300_last - r 3543"
+                    buy = "BUY 1 CROLLO FERRARI 5-11 and macd > - modo 2 and ma78_last < ma300_last - r 3543"
                     action = "buy"
                     percentage = 80
                     
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     # 14 GIU 2022 5-18
+                    # 19 apr 2023 5-11 and macd > macd_2_min_ago
+                    # 31 lug 2023 tolto ma2_last >= ma2_2_min_ago c'e' il MACD per la ferrari
                     
                     
                     
+                
                     
-                # BUY 1 crollo MISSILE COMPA !
+                    
+                    
+                # BUY 1 crollo MISSILE COMPA ! modo 1
                 
                 elif (
                     ma2_last > ma2_2_min_ago
                     and deviation_buy_crollo_1 < -2.60
-                    and ma3_last > ma13_last
+                    and deviation_ma3_sopra_ma16 > 0.028
                     and ma78_last < ma300_last
+                    and macd >= macd_2_min_ago
                 ):
-                    buy = "BUY 1 crollo MISSILE COMPA 3-13 and ma78_last < ma300_last - r 3561"
+                    buy = "BUY 1 crollo MISSILE COMPA modo 1 con dev 3-16 > 0.028 + macd >= macd 2 min ago and ma78_last < ma300_last - r 3561"
                     action = "buy"
                     percentage = 80
                     
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
+                    # 27 apr 2023 da dev 3-16 > 0.028 da 3-13 
+                    # 27 apr 2023 aggiunto macd
+
+
+
+
+                # BUY 1 crollo MISSILE COMPA ! modo 2
+                 
+                elif (    
+                    ma3_last > ma4_last
+                    and ma78_last < ma300_last
+                    and macd < -245
+                ):
+                    buy = "BUY 1 crollo MISSILE COMPA modo 2 con 3>4 AND MACD < -245 ! and ma78_last < ma300_last - AGOSTO 2023 - r 3562"
+                    action = "buy"
+                    percentage = 80
                     
                     
                     
+                
                     
                     
-                    
-                    
-                    
+                 
                     
                 elif (
                     ma2_last > ma2_2_min_ago
@@ -4458,6 +4759,7 @@ class ro_cano_che_ritorna:
                     
                     and ma78_last > ma300_last
                     and deviation_ma5_sopra_ma28 > 0.05
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 1 CROLLO FERRARI - modo 1 and ma78_last > ma300_last - r 3583"
                     action = "buy"
@@ -4479,6 +4781,7 @@ class ro_cano_che_ritorna:
                     
                     and ma78_last > ma300_last
                     and deviation_ma5_sopra_ma28 > 0.05
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 1 CROLLO FERRARI - modo 2 and ma78_last > ma300_last - r 3604"
                     action = "buy"
@@ -4499,6 +4802,7 @@ class ro_cano_che_ritorna:
                     
                     and ma78_last > ma300_last
                     and deviation_ma5_sopra_ma28 > 0.05
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 1 crollo MISSILE COMPA 3-13 and ma78_last > ma300_last - r 3624"
                     action = "buy"
@@ -4507,13 +4811,7 @@ class ro_cano_che_ritorna:
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     
                     
-                    
-                    
-                    
-                    
-                    
-                    
-                    
+                  
             
                 ##################################################################################################### CONDIZIONI ESPERIMENTALI !
                 
@@ -4531,7 +4829,7 @@ class ro_cano_che_ritorna:
                     and ma2_last > ma2_2_min_ago
                     and (ma3_prev < ma8_prev and ma3_last > ma8_last)
                     and ma36_last > ma36_2_min_ago
-                  
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 1 ECCEZIONALE - se ma200 sale da 15 min e 69> COMPRA con deviation 4-25 e un po' piu' su della ma100 ! - r 3657"
                     action = "buy"
@@ -4556,7 +4854,7 @@ class ro_cano_che_ritorna:
                     and deviation_buy_ma3_sopra_ma25 > 0.08
                     and deviation_ma3_sopra_ma10 > 0.10
                     and deviation_ma5_sopra_ma28 > 0.01
-                  
+                    and macd >= macd_2_min_ago
                 ):
 
                     buy = "BUY 1 DOCCIA se ma200 > da 120 min ! COMPRA - r 3680"
@@ -4580,7 +4878,7 @@ class ro_cano_che_ritorna:
                     
                     and ma8_last > ma50_last
                     and ma2_last > ma2_2_min_ago
-                
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 1 ribasso AUDI o correzione FIAT che non e' un forte ribasso e non e' un crollo !  - r 3702"
                     action = "buy"
@@ -4588,23 +4886,6 @@ class ro_cano_che_ritorna:
                     
                     
                     
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                
-                
                 
                 # ECCO LA CONDIZIONE FIAT CHE FA PAURA ! MA CERCHIAMO DI FARLA ATTIVARE NEL MOMENTO GIUSTO (SOTTO RIALZO RIBASSO) AURORA
                 
@@ -4628,17 +4909,14 @@ class ro_cano_che_ritorna:
                     
                     and deviation_ma25_sotto_ma300 < -0.60
                     and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 1 CORREZIONE FIAT CHE FA PAURA ! (MA ma100 e ma200 sono ANCORA VICINE alla ma300) (SOTTO cresce diminuisce) AURORA - riga 3749"
                     action = "buy"
                     percentage = 80
                     
                     
-                    
-                    
-                    
-                    
-                    
+                  
                     
                 # FIAT SOTTO RIBASSO RIBASSO - NOTTE
                 
@@ -4662,6 +4940,7 @@ class ro_cano_che_ritorna:
                     
                     and deviation_ma25_sotto_ma300 < -0.60
                     and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 1 CORREZIONE FIAT CHE FA PAURA ! (MA ma100 e ma200 sono ANCORA VICINE alla ma300) (SOTTO RIBASSO RIBASSO ) NOTTE ! - riga 3783"
                     action = "buy"
@@ -4677,13 +4956,7 @@ class ro_cano_che_ritorna:
                     # NON TOCCARE 5-28 > 0.05 !
                     
                     
-                    
-                    
-                    
-                    
-                    
-              
-                
+                 
                 
                 # BUY 1 CROLLO FERRARI ok - RCCR - questa condizione mi e' sembrata ben fatta !
 
@@ -4691,7 +4964,8 @@ class ro_cano_che_ritorna:
                     ma2_last > ma2_2_min_ago
                     and deviation_buy_crollo_1 < -1.61
                     and deviation_buy_crollo_2 > 0.01
-                    and deviation_ma3_sopra_ma10 > 0.155
+                    and deviation_ma3_sopra_ma10 > 0.22
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 1 CROLLO FERRARI ok CON 3-10 necessaria ! - RCCR - r 3813"
                     action = "buy"
@@ -4699,9 +4973,9 @@ class ro_cano_che_ritorna:
                     
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     # deviation_buy_crollo_2 = ma3_last / ma13_last
-                    # fondamentale aggiunta 3-10 perche' anche ferrari NE HA BISOGNO ma non 5-28 CHE COMINCIA AD ESSERE INAPPROPRIATA
+                    # fondamentale aggiunta 3-10 perche' anche ferrari NE HA BISOGNO ma non 5-28 ! CHE COMINCIA AD ESSERE INAPPROPRIATA
                     # 27 giu 2022 3-10 0.155 NON MENO DI QUESTA PERDIO !
-                    
+                    # 15 gen 2023 3-10 0.22
                     
                 # BUY 1 SUL SUPPORTO 300 !
           
@@ -4715,7 +4989,7 @@ class ro_cano_che_ritorna:
                     and ma100_last > ma200_last
                     and ma2_last > ma300_last
                     and ma2_last > ma2_2_min_ago
-                
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 1 SUL SUPPORTO 300 ! - r 3837"
                     action = "buy"
@@ -4742,7 +5016,7 @@ class ro_cano_che_ritorna:
                     
                     and ma2_last > ma300_last
                     and ma2_last > ma2_2_min_ago
-                
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 1 dopo ribasso MA CON TUTTE LE MA > e con incrocio al rialzo 8-140 - r 3864"
                     action = "buy"
@@ -4752,13 +5026,7 @@ class ro_cano_che_ritorna:
                     
                     
                     
-                    
-                    
-                    
-                    
-                    
-                    
-                    
+                   
                     
                 # BUY 1 CHE MANCAVA ! con incrocio 11-50 AND 5-28 > 0.20 ( CON 100 < AND 200 < AND 300 < ) (!)
                 
@@ -4773,7 +5041,7 @@ class ro_cano_che_ritorna:
                     
                     and deviation_ma5_sopra_ma28 > 0.20
                     and ma2_last > ma2_2_min_ago
-                    
+                    and macd >= macd_2_min_ago
             
                 ):
                     buy = "BUY 1 CHE MANCAVA ! con incrocio 11-50 AND 5-28 > 0.265 (!) ( CON 100 < AND 200 < AND 300 < ) (!)  - r 3896"
@@ -4783,12 +5051,7 @@ class ro_cano_che_ritorna:
                     # madonna compa !
                     
                     
-                    
-                    
-                    
-                    
-                    
-                    
+                 
                     
                 # BUY 1 CHE MANCAVA DOPO BUY-SELL CROLLO ! 150-100 GIORNO ! E 50 > 100
                 
@@ -4811,7 +5074,7 @@ class ro_cano_che_ritorna:
                     
                     
                     and ma2_last > ma2_2_min_ago
-                
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 1 20 > 200 che mancava DOPO BUY-SELL e nuovo CROLLO ! 50 > 100 AND 150-100 GIORNO ! and 5-28 > 0.18 and 3-10 > 0.10 - r 3935"
                     action = "buy"
@@ -4846,7 +5109,7 @@ class ro_cano_che_ritorna:
                     and delta_150_100 < delta_150_100_60_min
                     
                     and ma2_last >= ma2_2_min_ago
-              
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 1 78 > 200 che mancava DOPO BUY-SELL e nuovo CROLLO ! 50 > 100 AND delta 150-100 GIORNO ! and 3-10 > 0.10 and 5-28 > 0.15 - r 3968 A2"
                     action = "buy"
@@ -4855,71 +5118,49 @@ class ro_cano_che_ritorna:
                     # > estate 5-28 0.15 e 3-10 0.10
                     
                     
+                
                     
                     
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                # BUY 1 CHE MANCAVA DOPO BUY-SELL CROLLO ! 150-100 GIORNO ! E 50 > 100
+                # BUY 1 PENSIERO LATERALE !
                 
                 elif (
                     
                     ma78_last < ma200_last
                     
-                    and deviation_ma10_sopra_ma200 > -0.16
+                    and deviation_ma5_sopra_ma59 < -0.20
+                    and deviation_ma54_sopra_ma100 < -0.40
                     
-                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma10_sopra_ma200 < -0.80
+                    
+                    and deviation_ma3_sopra_ma10 > 0.102
+                    and deviation_ma3_sopra_ma16 > 0.148
                     and deviation_ma5_sopra_ma28 > 0.01
                     
-                    and ma5_last > ma100_last
+                    and ma5_last > ma33_last
                     
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
-                  
-                    and ma59_last > ma59_30_min_ago
                     
                     and ma100_last < ma100_120_min_ago
                     and ma200_last < ma200_120_min_ago
                     and ma300_last < ma300_120_min_ago
                     
-                    and delta_150_100 <= delta_150_100_60_min
-                    and ma100_last >= ma100_2_min_ago
-                    
                     and ma2_last >= ma2_2_min_ago
-                
+                    and macd >= macd_2_min_ago
+                  
                 ):
-                    buy = "BUY 1 78<200 CHE MANCAVA DOPO BUY-SELL CROLLO ! 50 > 100 AND 150-100 GIORNO ! and 3-10 > 0.15 and 5-28 > 0.18 - r 4005 B"
+                    buy = "BUY 1 PENSIERO LATERALE ! - r 4000"
                     action = "buy"
                     percentage = 80
                     
-                    # madonna compa ! 
-                    # the sound of silence
-                    # ASSURDO ! questa 100 > 100 3 min e' incredibile ! si e' verificata dopo il BUY-SELL del crollo ! NON TOCCARE
-                    # SI STA RIDUCENDO LA DISTANZA TRA 150 E 100
-                    
-                    # 10 giu 2022 5-28 0.12 da 0.09 cazzo
-                    #  2 lug 2022 3-10 0.15 da 0.05 cazzo
-                    # > estate 5-28 0.18 da 0.12 e 3-10 0.15 da 0.05 HO ALZATO IL BUY !
-                    # 7 nov 2022 aggiunta 59 > 59 45 min ago
-                    
-                
-                    
-                    
-                
-                    
-                    
-                    
-                    
+                    # 10 mar 2023 3-10 a 0.102 da 0.01
+                    # 7 mag 2023 aggiunto macd > macd 2 min ago
+                    # 7 mag 2023 aggiunto 3-16 > 0.148
                     
                     
                     
                     
                 
-                    
                     
                     
                     
@@ -4944,7 +5185,7 @@ class ro_cano_che_ritorna:
                     and deviation_ma5_sotto_ma300 < -0.43
                     
                     and ma2_last > ma2_2_min_ago
-                
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 1 CHE MANCAVA DOPO 5 ore di ribasso con delta 1 < delta 2 (piu' sicuro) e con 5-28 > 0.16  MA 5 non lontana da 100 - r 4040 A"
                     action = "buy"
@@ -4956,10 +5197,7 @@ class ro_cano_che_ritorna:
                     # 17 nov 2022 HO MESSO 5 < 54 ! vedi 16 nov ore 13:47 e ore 17:16
                     
                     
-                    
-                    
-                    
-                    
+                  
                     
                     
                 # BUY 1 CHE MANCAVA DOPO 5 ore di ribasso
@@ -4979,18 +5217,14 @@ class ro_cano_che_ritorna:
                     and deviation_ma5_sotto_ma300 < -0.43
                     
                     and ma2_last > ma2_2_min_ago
-                
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 1 CHE MANCAVA DOPO 5 ore di ribasso con 5-28> 0.22 se entra dopo 5 ore deve essere piu' sicuro CON 5 molto lontana da 100- r 4040 B"
                     action = "buy"
                     percentage = 80
                     
                     
-                    
-                    
-                
-                    
-                    
+                  
                     
                 # BUY 1 CHE MANCAVA DOPO BUY-SELL CROLLO ! 150-100 GIORNO ! MA 50 < 100
                 
@@ -5012,7 +5246,7 @@ class ro_cano_che_ritorna:
                     and ma100_last > ma100_3_min_ago
                     
                     and ma2_last > ma2_2_min_ago
-                
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 1 laterale CHE MANCAVA DOPO BUY-SELL CROLLO ! 50 < 100 AND 150-100 GIORNO ! and 3-10 > 0.25 and 5-28 > 0.18 - r 4042"
                     action = "buy"
@@ -5029,24 +5263,45 @@ class ro_cano_che_ritorna:
                     
                     
                     
+                # BUY 1 CHE MANCAVA DOPO BUY-SELL CROLLO ! 150-100 GIORNO ! E 50 > 100
                 
+                elif (
                     
+                    ma78_last < ma200_last
+                    and deviation_ma5_sotto_ma300 > -0.20
+                    and deviation_ma10_sopra_ma200 > -0.20
                     
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma5_sopra_ma28 > 0.01
                     
+                    and ma5_last > ma10_last
                     
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
                     
+                    and ma100_last < ma100_120_min_ago
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_120_min_ago
                     
+                    and ma2_last >= ma2_2_min_ago
+                    and macd > macd_2_min_ago
+                ):
+                    buy = "BUY 1 78<200 pensiero laterale - r 4005 B RCCR MODIFICATA"
+                    action = "buy"
+                    percentage = 80
                     
-                    
-                    
-                    
+                    # 28 AGO 2023 forse aggiungere macd > 5
+
+
+              
                 # BUY 1 che ci riprova quando se ne va lateralmente dopo il crollo
                 
                 elif (
-                    ma4_last > ma300_last
+                    ma5_last > ma225_last
                     and ma5_last > ma50_last
+                    and trend_macd >= 2
                     
-                    and deviation_ma3_sopra_ma10 > 0.15
+                    and deviation_ma3_sopra_ma10 > 0.155
                     and deviation_ma5_sopra_ma28 > 0.01
                     
                     and ma200_last < ma200_120_min_ago
@@ -5058,22 +5313,22 @@ class ro_cano_che_ritorna:
                     and deviation_ma200_sopra_ma300 > -0.40
                     
                     and ma2_last > ma2_2_min_ago
-                
+                    and macd >= macd_2_min_ago
                 ):
                
-                    buy = "BUY 1 che ci riprova quando se ne va lateralmente dopo il crollo - r 4082 A1"
+                    buy = "BUY 1 che ci riprova quando se ne va lateralmente dopo il crollo and trend_macd >= 2 - r 4082 A1"
                     action = "buy"
                     percentage = 80
 
                     # compare prega per me !
-                    # 18 gen 2023 4-300 da 5-300 compare prego io per te !
-                    # 18 gen 2023 5-50 da 8-50 compare prego io per te !
-                
-                
+                    
+                    
+                    
                 # BUY 1 che ci riprova quando se ne va lateralmente dopo il crollo
                 
                 elif (
                     ma28_last > ma300_last
+                  
                     and ma20_last < ma50_last
                     
                     and deviation_ma3_sopra_ma10 > 0.155
@@ -5088,7 +5343,7 @@ class ro_cano_che_ritorna:
                     and deviation_ma200_sopra_ma300 > -0.40
                     
                     and ma2_last > ma2_2_min_ago
-                
+                    and macd >= macd_2_min_ago
                 ):
                
                     buy = "BUY 1 che ci riprova quando se ne va lateralmente dopo il crollo - r 4111 A2"
@@ -5101,12 +5356,20 @@ class ro_cano_che_ritorna:
                     
                     
                     
+                    
                 # BUY 1 che ci riprova quando se ne va lateralmente dopo il crollo
                 
                 elif (
-                    ma28_last < ma300_last
-                    and deviation_ma3_sopra_ma10 > 0.17
-                    and deviation_ma5_sopra_ma28 > 0.20
+                    
+                    ma5_last > ma200_last
+                    and ma450_last > ma450_180_min_ago
+                    
+                    and deviation_ma300_sopra_ma450 < 0.25
+                    and deviation_ma300_sopra_ma450 > -0.05
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > 0.057
+                    and deviation_ma5_sopra_ma28 > -0.01
                     
                     and ma200_last < ma200_120_min_ago
                     and ma300_last < ma300_120_min_ago
@@ -5117,16 +5380,57 @@ class ro_cano_che_ritorna:
                     and deviation_ma200_sopra_ma300 > -0.40
                     
                     and ma2_last >= ma2_2_min_ago
-                
+                    and macd >= macd_2_min_ago
                 ):
                
-                    buy = "BUY 1 che ci riprova quando se ne va lateralmente dopo il crollo - SE 28 < 300 3-10 > 0.21- r 4138 b"
+                    buy = "BUY 1 che ci riprova con 13-300 quando se ne va lateralmente AND MACD > MACD 2 min ago ! - r 4138 B1"
                     action = "buy"
                     percentage = 80
-
-                    # 2 lug 2022 3-10 0.21 da 0.22
                     
-                    # > estate 3-10 0.17 e 5-28 0.20 DOVEVO ALZARE IL BUY quando se ne va lateralmente dopo il crollo
+                    # provo delta 39-69
+                    #  1 ago 2023 ma13_last > ma200_last invece di 28-300
+                    # 11 ago 2023 ma5_last > ma200_last invece di 13-200
+
+
+                # BUY 1 che ci riprova quando se ne va lateralmente dopo il crollo
+                
+                elif (
+                    
+                    ma5_last > ma200_last
+                    and ma450_last < ma450_180_min_ago
+                    
+                    and deviation_ma300_sopra_ma450 < 0.25
+                    and deviation_ma300_sopra_ma450 > -0.05
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > 0.057
+                    and deviation_ma5_sopra_ma28 > -0.01
+                    
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_120_min_ago
+                    
+                    and delta_300_100 < delta_300_100_60_min
+                    
+                    and deviation_ma100_sopra_ma300 > -0.40
+                    and deviation_ma200_sopra_ma300 > -0.40
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                    and macd > 8
+                ):
+               
+                    buy = "BUY 1 che ci riprova con 13-300 quando se ne va lateralmente AND MACD > MACD 2 min ago ! - r 4138 B2"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # provo delta 39-69
+                    #  1 ago 2023 ma13_last > ma200_last invece di 28-300
+                    # 11 ago 2023 ma5_last > ma200_last invece di 13-200
+                
+                    
+                    
+                
+                    
                     
                     
                 ##################################################################################### esperimento ! andato male ! avevo messo
@@ -5156,7 +5460,7 @@ class ro_cano_che_ritorna:
                     and deviation_ma8_sotto_ma300 < -1.30
                     
                     and ma2_last > ma2_2_min_ago
-                
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 1 pari al BUY AUDI CHE MANCAVA ! con 5-33 () 3-10 > 0.085 e 5-28 0.11 - r 4166"
                     action = "buy"
@@ -5188,6 +5492,7 @@ class ro_cano_che_ritorna:
                     and deviation_ma5_sopra_ma28 > 0.08
                     
                     and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):    
                     
                     buy = "BUY 1 con 200 > 200 20 min ago (100 < and 200 < MA 300 >) and 8-200 !  - riga 4190"
@@ -5199,13 +5504,8 @@ class ro_cano_che_ritorna:
                     
                 
                     
-                    
                 
-                    
-                    
-                    
-                
-                # BUY 1 SITUAZIONE TREND LATERALE che mancava con ma300 > - DOPPIO DELTA - RIALZO
+                # BUY 1 SITUAZIONE TREND LATERALE che mancava con DOPPIO DELTA 200-100 giorno - GIORNO
                 
                 elif (    
                
@@ -5218,13 +5518,12 @@ class ro_cano_che_ritorna:
                     and delta_1 < delta_2
                     and ma100_last > ma100_60_min_ago
                     
-                    and ma300_last > ma300_60_min_ago
-                    
                     and deviation_ma5_sopra_ma28 > 0.14
-                    and ma2_last > ma2_2_min_ago
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):    
                     
-                    buy = "BUY 1 SITUAZIONE TREND LATERALE che mancava con ma300 > - GIORNO ! and 5-28 > 0.14 con 28>28 30 min ago - riga 4215 A"
+                    buy = "BUY 1 SITUAZIONE TREND LATERALE che mancava con DOPPIO DELTA 200-100 GIORNO ! and 5-28 > 0.14 con 28>28 30 min ago - riga 4215 A"
                     action = "buy"
                     percentage = 80
                     
@@ -5256,6 +5555,7 @@ class ro_cano_che_ritorna:
                     and deviation_ma3_sopra_ma10 > 0.17
                     and deviation_ma5_sopra_ma28 > 0.10
                     and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):    
                     
                     buy = "BUY 1 SITUAZIONE TREND LATERALE con ma300 > - GIORNO ! and 5-28 > 0.14 MA 28 < 28 30 min ago AND 3-10 > 0.17 e 300 >5 ore! - r 4246 B1x"
@@ -5289,6 +5589,7 @@ class ro_cano_che_ritorna:
                     and deviation_ma3_sopra_ma10 > 0.17
                     and deviation_ma5_sopra_ma28 > 0.10
                     and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):    
                     
                     buy = "BUY 1 SITUAZIONE TREND LATERALE con ma300 > - GIORNO !  MA 28 < 28 30 min ago AND 3-10 > 0.17 and 5-28 > 0.09 e 300 < 5 ore !- r 4246 B1y"
@@ -5325,6 +5626,7 @@ class ro_cano_che_ritorna:
                     and deviation_ma3_sopra_ma10 > 0.17
                     and deviation_ma5_sopra_ma28 > 0.14
                     and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):    
                     
                     buy = "BUY 1 SITUAZIONE TREND LATERALE con ma300 > - GIORNO ! and 5-28 > 0.14 MA 28 < 28 30 min ago AND 3-10 > 0.17 - riga 4278 B2"
@@ -5353,6 +5655,7 @@ class ro_cano_che_ritorna:
            
                     and deviation_ma5_sopra_ma28 > 0.13
                     and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):    
                     
                     buy = "BUY 1 SITUAZIONE TREND LATERALE modo A che mancava con ma300 < - SOPRA RIALZO RIALZO - GIORNO ! and 5-28 > 0.13 - riga 4301 A"
@@ -5382,6 +5685,7 @@ class ro_cano_che_ritorna:
                     and deviation_ma3_sopra_ma10 > 0.08
                     and deviation_ma5_sopra_ma28 > 0.17
                     and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):    
                     
                     buy = "BUY 1 SITUAZIONE TREND LATERALE modo B che mancava con ma300 < - SOPRA RIALZO RIALZO - GIORNO ! and 5-28 > 0.17 - riga 4301 B"
@@ -5390,6 +5694,8 @@ class ro_cano_che_ritorna:
                     
                     # 3 set modo b
                     # 14 set aggiunta 3-10 > 0.08
+                    
+                    
                     
                     
                 # BUY 1 SITUAZIONE TREND LATERALE modo C che mancava con ma300 < - DOPPIO DELTA - RIALZO
@@ -5408,6 +5714,7 @@ class ro_cano_che_ritorna:
            
                     and deviation_ma5_sopra_ma28 > 0.12
                     and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):    
                     
                     buy = "BUY 1 SITUAZIONE TREND LATERALE modo C che mancava con ma300 < - SOPRA RIALZO RIALZO - GIORNO ! and 5-28 > 0.12 - riga 4301 C"
@@ -5421,77 +5728,96 @@ class ro_cano_che_ritorna:
                     
                     
                     
-                    
-                    
-                    
-                    
-                # BUY 1 forever young 1 PIU' PRUDENTE se ma200 > e se ma200 > ma300 - che si preoccupa degli effetti laterali
+                
+                # BUY 1 forever young 1 PIU' PRUDENTE se ma200 > e se ma200 > ma300
                 
                 elif (  
                     ma200_last > ma300_last
+                    
                     and ma300_last > ma300_120_min_ago
                     
                     and ma78_last > ma100_last
-                    and deviation_ma100_laterale > 0.18
+                    
                     and ma200_last > ma200_15_min_ago
+                    
                     and deviation_ma5_sopra_ma28 > 0.08
+                    and deviation_ma3_sopra_ma18 > 0.20
                     
                     and ma3_last >= ma11_last
                     
                     and ma10_last >= ma10_2_min_ago
                     and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):
 
-                    buy = "BUY 1 forever young 1 con 300 > 120 min ago PIU' PRUDENTE se ma 200 > e se ma200 > ma300 - si preoccupa degli effetti laterali - r 4325"
+                    buy = "BUY 1 forever young 1 con 300 > 120 min ago PIU' PRUDENTE se ma 200 > e se ma200 > ma300 E CON 3-18 > 0.20 - r 4325"
                     action = "buy"
                     percentage = 80
                     
                     # la troppa prudenza qualche volta genera perdite
-                    
-                    
+                    #  4 mag 2023 aggiunta 3-18 > 0.20
                     
                 
                     
-                    
-                    
-                    
-                    
-              
+                
                 # BUY 1 forever young 1 PIU' PRUDENTE se ma 200 > e se ma200 > ma300 AND 78 > 200
                 
                 elif (  
                     ma100_last > ma300_last
-                    and deviation_ma100_laterale > 0.12
-                    and ma200_last > ma200_15_min_ago
-                    and ma78_last > ma200_last
+                    and ma300_last > ma300_301_min_ago
+                    
+                    and ma5_last > ma200_last
+                    and ma3_last > ma11_last
+                    
+                    and deviation_ma100_laterale > 0.07
                     
                     and deviation_ma3_sopra_ma10 > 0.035
-                    and deviation_ma5_sopra_ma28 > 0.09
-                    
-                    and ma78_last < ma100_last
-                    
-                    and ma11_last > ma200_last
-                    
-                    
-                    
-                    and ma3_last > ma11_last
-                    and ma5_last > ma200_last
-                    
-                    and ma2_last > ma2_2_min_ago
+                    and deviation_ma5_sopra_ma28 > 0.05
+                   
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):
 
-                    buy = "BUY 1 forever young 1 PIU' PRUDENTE se ma 200 > e se ma100 > ma300 AND 78 > 200 - r 4353"
+                    buy = "BUY 1 forever young 1 PIU' PRUDENTE se ma 200 > e se ma100 > ma300 AND 78 > 200 AND 300> 5 ore ago - r 4353"
                     action = "buy"
                     percentage = 80
                     
-                    # 1 ott 2022 3-10 > 0.035
-                    # 2 nov 2033 100 > 300 da 200 > 300 
+                    # 1 ott 2023 3-10 > 0.035
+                    # 2 nov 2023 100 > 300 da 200 > 300
+                    # 7 lug 2023 5-28 a 0.05 da 0.09 (300> 5 ore ago!)
+                    # 31 lug 2023 and deviation_ma100_laterale > 0.07 da 0.12
+
+
+
+          
+                # BUY 1 forever young 2 un po' meno PRUDENTE se 150 > 300 
+                
+                elif (  
+                    ma100_last > ma150_last
                     
+                    and ma5_last > ma200_last
+                    and ma3_last > ma11_last
+                    
+                    and deviation_ma100_laterale > 0.03
+                    
+                    and deviation_ma3_sopra_ma10 > 0.035
+                    and deviation_ma5_sopra_ma28 > 0.05
+                   
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                ):
+
+                    buy = "BUY 1 forever young 2 un po' meno PRUDENTE se ma100 > ma150 - r 4355"
+                    action = "buy"
+                    percentage = 80
+                    
+                    
+                    # 24 ago 2023 and deviation_ma100_laterale > 0.05 da 0.07 con 200>300
+                    # 28 ago 2023 100>150
                 
                     
-                    
-                    
-                    
+                
+                  
                     
                     
                 # BUY 1 forever young 1 PIU' PRUDENTE se ma 200 > e se ma200 > ma300 AND 78 < 200 
@@ -5499,14 +5825,14 @@ class ro_cano_che_ritorna:
                 elif (  
                     ma200_last > ma300_last
                     and ma78_last < ma200_last
-                    and ma300_last > ma300_120_min_ago
+                    and ma300_last > ma300_60_min_ago
                     
                     and deviation_ma3_sopra_ma10 > 0.10
                     and deviation_ma5_sopra_ma28 > 0.03
                     
                     and ma78_last < ma100_last
                     and deviation_ma100_laterale > 0.07
-                    and ma11_last > ma200_last
+                    and ma8_last > ma100_last
                     and ma200_last > ma200_15_min_ago
                     
                     
@@ -5514,16 +5840,17 @@ class ro_cano_che_ritorna:
                     and ma4_last > ma100_last
                     
                     and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):
 
-                    buy = "BUY 1 forever young 1 USATA MOVIMENTO LATERALE se ma 200 > e se ma200 > ma300 AND 78 < 200 AND 3-10 > 0.10 e 300>120 min ago - r 4379 B1"
+                    buy = "BUY 1 forever young 1 USATA MOVIMENTO LATERALE se ma 200 > e se ma200 > ma300 AND 78 < 200 AND 3-10 > 0.10 e 300>60 min ago - r 4379 B1"
                     action = "buy"
                     percentage = 80
                     
                     # la troppa prudenza qualche volta genera perdite !
                     # RCCR r1852 e' arrivata una ndecchia prima. studia le piccole differenze.
                     # 30 set 3-10 a 0.10 da 0.04
-                    
+                    # 21 lug 2023 300 > 60 min no 120 min
                     
                     
                     
@@ -5531,6 +5858,8 @@ class ro_cano_che_ritorna:
                 
                 elif (  
                     ma200_last > ma300_last
+                    and macd > macd_2_min_ago
+                    
                     and ma78_last < ma200_last
                     and ma300_last < ma300_120_min_ago
                     
@@ -5547,6 +5876,7 @@ class ro_cano_che_ritorna:
                     and ma5_last > ma200_last
                     
                     and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):
 
                     buy = "BUY 1 forever young 1 PIU' PRUDENTE se ma 200 > e se ma200 > ma300 AND 78 < 200 AND 3-10 > 0.07 MA 300 < 120 min ago - r 4379 B2"
@@ -5555,44 +5885,68 @@ class ro_cano_che_ritorna:
                     
                     # la troppa prudenza qualche volta genera perdite
                     # 20 ottobre 2022 5-28 0.13 da 0.09
-                
+                    # 21 apr 2023 aggiunta macd >
                
                 ################################################################################################
                 
                 
-                    
-                    
-                    
-                    
-                # BUY 1 FOREVER YOUNG PIU' AGGRESSIVO con doppio delta < 1 E MA100> (rialzo) se ma 200 > e se ma200 > ma300  and deviation_ma5_sopra_ma28 > 0.10
+                # BUY 1 FOREVER YOUNG PIU' AGGRESSIVO con doppio delta < 1 E MA100> (rialzo) se ma 200 > e se ma250 > ma300  and deviation_ma5_sopra_ma28 > 0.10
                 
                 elif (  
-                    ma100_last > ma200_last
-                    and ma200_last > ma300_last
+                    ma8_last > ma54_last
+                    and ma450_last > ma450_240_min_ago
                     
-                    and ma200_last > ma200_15_min_ago
-                    
+                    and macd > macd_2_min_ago
                     
                     and delta_1 < delta_2
-                    and ma100_last > ma100_60_min_ago
+                    and ma100_last > ma100_30_min_ago
                     
                     and deviation_ma3_sopra_ma10 > 0.02
+                    and deviation_ma3_sopra_ma18 > 0.055
                     and deviation_ma5_sopra_ma28 > 0.01
-                 
-                    and ma6_last > ma6_2_min_ago
-                    and ma13_last > ma69_last
-                    and ma13_last > ma13_2_min_ago
+               
                     and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                    and macd > 3
                 ):
                     
-                    buy = "BUY 1 FOREVER YOUNG PIU' AGGRESSIVO (doppio delta < 1 E 100> ) (SOPRA RIALZO RIALZO) - GIORNO - se ma 200 > e se ma200 > ma300 - r 4410"
+                    buy = "BUY 1 FOREVER YOUNG PIU' AGGRESSIVO (doppio delta < 1 E 100> ) (SOPRA RIALZO RIALZO) - GIORNO - se ma 200 > and macd > 2 min and macd >3 - r 4410a"
                     action = "buy"
                     percentage = 80
                     
-                    # SITUAZIONE : dopo crollo e dopo primo grande ribalzo riprende a scendere 
-                    # MA ma100 e' intanto andata > ma200 !
-                    # e anche ma200 sta sopra ma300
-                    # 21 ottobre 2022 3-10 0.02 da 0.07 INCREDIBILE vedi differenza tra MADDOG e RCCR 21 ottobre 2022 BUY ore 4:39
+                    # 12 giu 2023 aggiunta 3-18 > 0.055
+                    # 11 ago 2023 tolta ma5 > ma5 2 min ago
+                    # 24 ago 2023 macd>3
+
+
+                # BUY 1 FOREVER YOUNG PIU' AGGRESSIVO con doppio delta < 1 E MA100> (rialzo) se ma 200 > e se ma250 > ma300  and deviation_ma5_sopra_ma28 > 0.10
+                
+                elif (  
+                    ma8_last > ma54_last
+                    and ma450_last < ma450_240_min_ago
+                    
+                    and macd > macd_2_min_ago
+                    
+                    and delta_1 < delta_2
+                    and ma100_last > ma100_30_min_ago
+                    
+                    and deviation_ma3_sopra_ma10 > 0.02
+                    and deviation_ma3_sopra_ma18 > 0.055
+                    and deviation_ma5_sopra_ma28 > 0.01
+               
+                    and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                    and macd > 5
+                ):
+                    
+                    buy = "BUY 1 FOREVER YOUNG PIU' AGGRESSIVO (doppio delta < 1 E 100> ) (SOPRA RIALZO RIALZO) - GIORNO - se ma 200 > and macd > 2 min and macd >5 - r 4410b"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # 12 giu 2023 aggiunta 3-18 > 0.055
+                    # 11 ago 2023 tolta ma5 > ma5 2 min ago
+                    # 24 ago 2023 macd>5
+                    
                     
                     
                     
@@ -5603,11 +5957,13 @@ class ro_cano_che_ritorna:
                 elif (    
                     
                     deviation_ma100_sopra_ma300 > 0.50
-                    and ma5_last > ma150_last
+                    and ma5_last > ma50_last
                     
                     and ma3_last > ma28_last
                     and ma200_last > ma200_20_min_ago
+                    
                     and deviation_ma3_sopra_ma10 > 0.113
+                    and deviation_ma3_sopra_ma16 > 0.225
                     
                     and ma100_last > ma200_last
                     and ma200_last > ma300_last
@@ -5617,25 +5973,23 @@ class ro_cano_che_ritorna:
                     and ma300_last > ma300_60_min_ago
                     
                     and ma2_last > ma2_2_min_ago
-                 
+                    and macd >= macd_2_min_ago
                 ):    
                     
-                    buy = "BUY 1 NEW FOREVER YOUNG piccola CORREZIONE FIAT in alto - ALTRA RIGA RCCR che e' andata bene - riga 4411 A"
+                    buy = "BUY 1 NEW FOREVER YOUNG piccola CORREZIONE FIAT in alto - ALTRA RIGA RCCR che e' andata bene - r 4411 A"
                     action = "buy"
                     percentage = 40
                     
                     # 13 set aggiunte 3-10 and 5-28
                     # se sta molto in alto per comprare 5 deve incrociare dal basso con la 100 ed avere 3-10 > 0.11 vedi ore 12:06 del 26 set 2022
-                    # VA IN CONFLITTO. aalora ho lasciato solo 3-10 > 0.11
+                    # VA IN CONFLITTO. allora ho lasciato solo 3-10 > 0.11
                     # BUY 1 correzione FIAT con riga 1384 RCCR + 3-10 - altra riga RCCR che e' andata bene.
                     # vedi 30 set ore 18:26 RCCR riga 1384
                     # in MADDOG ho aggiunto 3-10 > 0.07 e lasciato 3-28
+                    # 6 apr 2023 5-50 da 5-150 ! 
+                    # 6 apr 2023 aggiunta 3-16 > 0.225 (se ricompra DOPO UN GRANDE RIALZO serve prudenza) (cerca di non perdere quello che hai guadagnato)
                     
-                    
-                    
-                
-                    
-                    
+                  
                     
                 # BUY 1 FOREVER YOUNG PRUDENTE se ma 200 > e se ma200 > ma300 con doppio delta > 1 (ribasso) and deviation_ma5_sopra_ma28 > 0.30
                 
@@ -5654,7 +6008,7 @@ class ro_cano_che_ritorna:
                     and ma8_last > ma54_last
                     and ma13_last > ma13_2_min_ago
                     and ma2_last > ma2_2_min_ago
-             
+                    and macd >= macd_2_min_ago
                 ):
                     
                     buy = "BUY 1 FOREVER YOUNG - NOTTE - MA 300 > 120 min ago and dev_ma5_sopra_ma28 > 0.30 se ma 200 > e se ma200 > ma300 - r 4440 A1"
@@ -5665,14 +6019,7 @@ class ro_cano_che_ritorna:
                     # 24 set vuoi comprare di notte ? allora dev 5-100 = dev 100 laterale deve essere distante di almeno - 0.60 (distanza della 5 dalla 100 !)
                     
                     
-                    
-                
-                    
-                    
-                
-                    
-                    
-                    
+                   
                     
                     
                 # BUY 1 FOREVER YOUNG PRUDENTE se ma 200 > e se ma200 > ma300 con doppio delta > 1 (ribasso) and deviation_ma5_sopra_ma28 > 0.30
@@ -5693,6 +6040,7 @@ class ro_cano_che_ritorna:
                     and ma13_last > ma69_last
                     and ma13_last > ma13_2_min_ago
                     and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):
                     
                     buy = "BUY 1 FOREVER YOUNG PRUDENTE SOPRA RIBASSO RIBASSO - NOTTE - and dev_ma5_sopra_ma28 > 0.30 se ma 200 > e se ma200 > ma300 - r 4440 B"
@@ -5716,6 +6064,7 @@ class ro_cano_che_ritorna:
                     
                     and deviation_ma100_sopra_ma300 <-2.30
                     and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 1 DURANTE UNA CORREZIONE FIAT da r701 RCCE ho dovuto metterla ! con deviation_correzione > 0.03 MA 100 lontana da 300 ! - riga 4485"
                     action = "buy"
@@ -5747,6 +6096,7 @@ class ro_cano_che_ritorna:
                     and deviation_ma100_sopra_ma300 > -0.30
                     and deviation_ma25_sotto_ma300 < -0.60
                     and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 1 FIAT (MA ma100 ANCORA VICINA alla ma300 e 200 e' ancora sopra 300) (E CON ma25 un po' distante da ma300) 50% 78>100 - riga 4514 A"
                     action = "buy"
@@ -5777,6 +6127,7 @@ class ro_cano_che_ritorna:
                     and deviation_ma100_sopra_ma300 > -0.30
                     and deviation_ma25_sotto_ma300 < -0.60
                     and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 1 FIAT (MA ma100 ANCORA VICINA alla ma300 e 200 e' ancora >300) (E CON ma25 distante da ma300) 50% E 78<100 E 3-10 > 0.15 - r 4514 B"
                     action = "buy"
@@ -5805,6 +6156,7 @@ class ro_cano_che_ritorna:
                     and ma69_last > ma69_2_min_ago
                     and deviation_buy_ma3_sopra_ma25 > 0.10
                     and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 1 con DEVIATION ASSURDA se ma200 > da 120 min COMPRA con INCROCIO ma8 ma200 (ma5>ma300 evita gli EFFETTI LATERALI) - r 4542"
                     action = "buy"
@@ -5822,8 +6174,9 @@ class ro_cano_che_ritorna:
                     
                     deviation_ma100_sopra_ma300 < -0.90
                     
-                    and ma8_last > ma39_last
+                    and ma5_last > ma39_last
                     and deviation_ma3_sopra_ma10 > 0.16
+                    and deviation_ma5_sopra_ma59 > 0.42
                     
                     and ma100_last < ma100_120_min_ago
                     and ma200_last < ma200_120_min_ago
@@ -5832,16 +6185,21 @@ class ro_cano_che_ritorna:
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
                     
-                    and ma2_last > ma2_2_min_ago
+                    and ma2_last >= ma2_2_min_ago
                     and price > price_2_min_ago
-                    
+                    and macd >= macd_2_min_ago
                 ):
-                    buy = "BUY 1 5 LUGLIO 2022 con 8-39 and ma100 sotto ma300 di almeno -0.90 ! 3-10 > 0.16 - r 4570 A"
+                    buy = "BUY 1 5 LUGLIO 2022 con 5-39 and ma100 sotto ma300 di almeno -0.90 ! 3-10 > 0.16 and 5-59 > 0.42 - r 4570 A"
                     action = "buy"
                     percentage = 70
 
                     # 22 lug 2022 3-10 0.16 da 0.12 cazzo
                     # 15 nov 2022 8-39 da 8-54
+                    # 15 dic 2022 5-39 da 8-39
+                    # 25 gen 2023 and deviation_ma5_sopra_ma59 > 0.42
+                 
+                    
+                    
                     
                     
                     
@@ -5857,7 +6215,7 @@ class ro_cano_che_ritorna:
                     
                     and ma78_last < ma200_last
                     and ma2_last > ma2_2_min_ago
-                  
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 1 DURANTE UN RIBASSO AUDI con 5-16 copiata da RCCR CHE E' ANDATA BENISSIMO ! 22 ago 2022 - riga 4571a"
                     action = "buy"
@@ -5872,20 +6230,6 @@ class ro_cano_che_ritorna:
                     
                     
                 
-                    
-                    
-                    
-                
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                
-                    
-                    
                     
                     
                     
@@ -5904,7 +6248,7 @@ class ro_cano_che_ritorna:
                     and deviation_ribasso_e_rialzo_velocissimo_2 > -0.50
                     
                     and deviation_ma100_sopra_ma300 < 0.40
-                    
+                    and macd >= macd_2_min_ago
                
                 ):
                     buy = "BUY 1 CROLLO IMPROVVISO e RISALITA SUPERVELOCE - la piu' pericolosa d tutte ! - BUY con il 30% - dovrebbe evitarmi il buy alto - r 4598"
@@ -5944,6 +6288,7 @@ class ro_cano_che_ritorna:
                     and ma2_last > ma2_2_min_ago
                     and price > price_2_min_ago
                     and ma3_last > ma40_last
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2A rialzo o laterale con 78 > 200 AND 300 >300 120 min ago ! - r 4639 A1x"
                     action = "buy"
@@ -5968,6 +6313,7 @@ class ro_cano_che_ritorna:
                     and ma2_last > ma2_2_min_ago
                     and price > price_2_min_ago
                     and ma3_last > ma40_last
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2A rialzo o laterale con 78 > 200 AND 300 >300 120 min ago ! - r 4639 A1y"
                     action = "buy"
@@ -5988,9 +6334,12 @@ class ro_cano_che_ritorna:
                     and deviation_bellissima > 0.151
                     and deviation_buy_ma3_sopra_ma13 > 0.09
                     and deviation_ma7_sopra_ma40 > 0.05
-                    and ma2_last > ma2_2_min_ago
+                    
                     and price > price_2_min_ago
                     and ma3_last > ma40_last
+                    
+                    and ma2_last > ma2_2_min_ago
+                    and macd > macd_2_min_ago
                 ):
                     buy = "BUY 2A rialzo o laterale con 78 > 200 - r 4639 A2"
                     action = "buy"
@@ -5998,7 +6347,7 @@ class ro_cano_che_ritorna:
 
                     # deviation_buy_ma3_sopra_ma13 > x e' fondamentale !
                     # deviation_buy2 = ma8_last/ma50_last
-                    
+                    #  6 giu 2023 aggiunto macd >
                     
                     
                 elif (
@@ -6013,6 +6362,7 @@ class ro_cano_che_ritorna:
                     and ma2_last > ma2_2_min_ago
                     and price > price_2_min_ago
                     and ma3_last > ma40_last
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2A rialzo o laterale con 78 < 200 - r 4661 b"
                     action = "buy"
@@ -6023,26 +6373,27 @@ class ro_cano_che_ritorna:
                     
                     
                     
-                    
                 elif (
                     
-                    ma59_last > ma200_last
+                    ma10_last > ma100_last
+                    and ma450_last > ma450_180_min_ago
                     and ma200_last > ma200_301_min_ago
                     
-                    and ma59_last >= ma59_2_min_ago
+                    and ma100_last >= ma100_2_min_ago
                     and deviation_ma100_sopra_ma300 < 0.20
                     
-                    and deviation_buy2 > 0.01
-                    and deviation_ma5_sopra_ma28 > 0.03
+                    and deviation_ma100_laterale < 0.20
+                    and deviation_buy2 > 0.005
+                    and deviation_ma5_sopra_ma28 > 0.10
                     
-                    and deviation_ma7_sopra_ma40 > 0.005
-                    and deviation_buy_ma3_sopra_ma13 > 0.08
+                    
+                    and deviation_buy_ma3_sopra_ma13 > 0.07
                     
                     and ma3_last > ma40_last
                     and price >= price_2_min_ago
-                    
+                    and macd >= macd_2_min_ago
                 ):
-                    buy = "BUY 2A ribasso o laterale  and ma69_last > ma200_last - r 4685 A"
+                    buy = "BUY 2A ribasso o laterale and ma10_last > ma200_last AND 200 > 200 301 min - r 4685 Ax"
                     action = "buy"
                     percentage = 80
 
@@ -6051,25 +6402,93 @@ class ro_cano_che_ritorna:
                     # tolta and ma2_last >= ma2_2_min_ago !
                     #  9 ott 2022 69>200 da 78>200
                     # 12 ott 2022 7-40 0.04 da 0.05
-                    # 1 nov se ma200 sale da 5 ore compra con 7-40 > 0.005 ! 
+                    # 1 nov se ma200 sale da 5 ore compra con 7-40 > 0.005 !
+                    # 10 dic 2022 50>200 da 59>200
+                    # 18 dic 2022 20>200 da 50>200
+                    #  3 gen 2023 5-28 > 0.10
+                    # 13 giu 2023 10>100 da 20>200
                     
                 elif (
                     
-                    ma59_last > ma200_last
+                    ma20_last > ma200_last
+                    and ma450_last < ma450_180_min_ago
+                    and ma200_last > ma200_301_min_ago
+                    
+                    and ma100_last >= ma100_2_min_ago
+                    and deviation_ma100_sopra_ma300 < 0.20
+                    
+                    and deviation_ma100_laterale < 0.20
+                    and deviation_buy2 > 0.005
+                    and deviation_ma5_sopra_ma28 > 0.10
+                    
+                    and deviation_ma7_sopra_ma40 > 0.005
+                    and deviation_buy_ma3_sopra_ma13 > 0.07
+                    
+                    and ma3_last > ma40_last
+                    and price >= price_2_min_ago
+                    and macd >= macd_2_min_ago
+                ):
+                    buy = "BUY 2A ribasso o laterale and ma20_last > ma200_last AND 200 > 200 301 min - r 4685 Ay"
+                    action = "buy"
+                    percentage = 80
+
+                    # deviation_buy_ma3_sopra_ma13 > x e' fondamentale !
+                    # deviation_buy2 = ma8_last/ma50_last  
+                    # tolta and ma2_last >= ma2_2_min_ago !
+                    #  9 ott 2022 69>200 da 78>200
+                    # 12 ott 2022 7-40 0.04 da 0.05
+                    # 1 nov se ma200 sale da 5 ore compra con 7-40 > 0.005 !
+                    # 10 dic 2022 50>200 da 59>200
+                    # 18 dic 2022 20>200 da 50>200
+                    #  3 gen 2023 5-28 > 0.10
+                    
+                    
+                elif (
+                    
+                    ma5_last > ma54_last
+                    and ma450_last > ma450_300_min_ago
+                    
                     and ma59_last >= ma59_2_min_ago
                     and deviation_ma100_sopra_ma300 < 0.20
                     
                     and deviation_buy2 > 0.01
-                    and deviation_ma5_sopra_ma28 > 0.11
-                    and deviation_ma3_sopra_ma10 > 0.05
+                    and deviation_ma5_sopra_ma28 > 0.10
+                    and deviation_ma3_sopra_ma10 > 0.04
+                    
                     and deviation_ma7_sopra_ma40 > 0.04
                     and deviation_buy_ma3_sopra_ma13 > 0.08
                     
                     and ma3_last > ma40_last
                     and price >= price_2_min_ago
-                    
+                    and macd >= macd_2_min_ago
                 ):
-                    buy = "BUY 2A ribasso o laterale  and ma69_last > ma200_last - r 4685 B"
+                    buy = "BUY 2A ribasso o laterale and ma5_last > ma59_last con 450 > 450 300 min ago - r 4685 Bx1"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # 27 set 2023 se 450 > 450 300 min ago
+                    # 27 set 2023 5-54 da 59-200
+              
+                elif (
+                    
+                    ma59_last > ma200_last
+                    and ma450_last < ma450_300_min_ago
+                    
+                    and ma59_last >= ma59_2_min_ago
+                    and deviation_ma100_sopra_ma300 < 0.20
+                    
+                    and deviation_buy2 > 0.01
+                    and deviation_ma5_sopra_ma28 > 0.10
+                    and deviation_ma3_sopra_ma10 > 0.04
+                    
+                    and deviation_ma7_sopra_ma40 > 0.04
+                    and deviation_buy_ma3_sopra_ma13 > 0.08
+                    
+                    and ma3_last > ma40_last
+                    and price >= price_2_min_ago
+                    and macd >= macd_2_min_ago
+                ):
+                    buy = "BUY 2A ribasso o laterale  and ma69_last > ma200_last - r 4685 Bx2"
                     action = "buy"
                     percentage = 80
 
@@ -6079,8 +6498,120 @@ class ro_cano_che_ritorna:
                     #  9 ott 2022 69>200 da 78>200
                     # 12 ott 2022 7-40 0.04 da 0.05
                     # 18 nov 2022 5-28 0.11
+                    # 11 gen 2023 5-28 a 0.10 da 0.11
+                    # 11 gen 2023 3-10 a 0.04 da 0.05
                     
                     
+                elif (
+                    
+                    ma8_last > ma59_last
+                    and ma100_last > ma125_last
+                    and deviation_ma300_sopra_ma450 < 0.20
+                    and deviation_ma300_sopra_ma450 > -0.20
+                    
+                    and ma59_last >= ma59_2_min_ago
+                    and deviation_ma100_sopra_ma300 < 0.20
+                    
+                    and deviation_buy2 > 0.01
+                    and deviation_ma5_sopra_ma28 > 0.10
+                    and deviation_ma3_sopra_ma10 > 0.04
+                    
+                    and deviation_ma7_sopra_ma40 > 0.04
+                    and deviation_buy_ma3_sopra_ma13 > 0.08
+                    
+                    and ma3_last > ma40_last
+                    and price >= price_2_min_ago
+                    and macd >= macd_2_min_ago
+                ):
+                    buy = "BUY 2A ribasso o laterale  and ma69_last > ma200_last - r 4685 By1"
+                    action = "buy"
+                    percentage = 80
+
+                    # deviation_buy_ma3_sopra_ma13 > x e' fondamentale !
+                    # deviation_buy2 = ma8_last/ma50_last  
+                    # tolta and ma2_last >= ma2_2_min_ago !
+                    #  9 ott 2022 69>200 da 78>200
+                    # 12 ott 2022 7-40 0.04 da 0.05
+                    # 18 nov 2022 5-28 0.11
+                    # 11 gen 2023 5-28 a 0.10 da 0.11
+                    # 11 gen 2023 3-10 a 0.04 da 0.05
+                    
+                elif (
+                    
+                    ma8_last > ma59_last
+                    and ma450_last > ma450_480_min_ago
+                    
+                    and ma100_last < ma125_last
+                    and deviation_ma300_sopra_ma450 < 0.20
+                    and deviation_ma300_sopra_ma450 > -0.20
+                    
+                    and ma59_last >= ma59_2_min_ago
+                    and deviation_ma100_sopra_ma300 < 0.20
+                    
+                    and deviation_buy2 > 0.01
+                    and deviation_ma5_sopra_ma28 > 0.10
+                    and deviation_ma3_sopra_ma10 > 0.04
+                    and deviation_ma3_sopra_ma18 > 0.169
+                    
+                    and deviation_ma7_sopra_ma40 > 0.04
+                    and deviation_buy_ma3_sopra_ma13 > 0.08
+                    
+                    and ma3_last > ma40_last
+                    and price >= price_2_min_ago
+                    and macd >= macd_2_min_ago
+                ):
+                    buy = "BUY 2A ribasso o laterale  and ma69_last > ma200_last - r 4685 By2A"
+                    action = "buy"
+                    percentage = 80
+
+                    # deviation_buy_ma3_sopra_ma13 > x e' fondamentale !
+                    # deviation_buy2 = ma8_last/ma50_last  
+                    # tolta and ma2_last >= ma2_2_min_ago !
+                    #  9 ott 2022 69>200 da 78>200
+                    # 12 ott 2022 7-40 0.04 da 0.05
+                    # 18 nov 2022 5-28 0.11
+                    # 11 gen 2023 5-28 a 0.10 da 0.11
+                    # 11 gen 2023 3-10 a 0.04 da 0.05
+                    
+                    
+                elif (
+                    
+                    ma8_last > ma39_last
+                    and ma3_last > ma30_last
+                    and deviation_ma7_sopra_ma40 > 0.04
+                  
+                    and ma450_last < ma450_480_min_ago
+                    
+                    and ma100_last < ma125_last
+                    and deviation_ma300_sopra_ma450 < 0.20
+                    and deviation_ma300_sopra_ma450 > -0.20
+                    
+                    and deviation_ma100_sopra_ma300 < 0.20
+                    
+                    and deviation_ma5_sopra_ma28 > 0.10
+                    and deviation_ma3_sopra_ma10 > 0.04
+                    and deviation_ma3_sopra_ma18 > 0.169
+                    
+                    
+                    and deviation_buy_ma3_sopra_ma13 > 0.08
+                    
+                    
+                    and price >= price_2_min_ago
+                    and macd >= macd_2_min_ago
+                ):
+                    buy = "BUY 2A laterale - r 4685 By2B"
+                    action = "buy"
+                    percentage = 80
+
+                    # deviation_buy_ma3_sopra_ma13 > x e' fondamentale !
+                    # deviation_buy2 = ma8_last/ma50_last  
+                    # tolta and ma2_last >= ma2_2_min_ago !
+                    #  9 ott 2022 69>200 da 78>200
+                    # 12 ott 2022 7-40 0.04 da 0.05
+                    # 18 nov 2022 5-28 0.11
+                    # 11 gen 2023 5-28 a 0.10 da 0.11
+                    # 11 gen 2023 3-10 a 0.04 da 0.05
+                    # 11 ago 2023 8-39
                     
                 elif (
                     ma69_last >= ma69_2_min_ago
@@ -6097,6 +6628,7 @@ class ro_cano_che_ritorna:
                     and ma2_last >= ma2_2_min_ago
                     and price > price_2_min_ago
                     and ma3_last > ma40_last
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2A ribasso o laterale and ma78_last < ma200_last - r 4709 B"
                     action = "buy"
@@ -6107,8 +6639,84 @@ class ro_cano_che_ritorna:
                     # roma aggiunta 5-28
                     
                     
+                    
+                    
+                # BUY 2 CHE MANCAVA DOPO BUY-SELL CROLLO ! 150-100 GIORNO ! E 50 > 100
                 
-             
+                elif (
+                    
+                    ma5_last > ma59_last
+                    and ma100_last >= ma100_2_min_ago
+                    
+                    and ma100_last < ma100_120_min_ago
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_120_min_ago
+                    
+                    and ma78_last < ma200_last
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and delta_150_100 <= delta_150_100_60_min
+                    and deviation_ma10_sopra_ma200 > -0.20
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma5_sopra_ma28 > 0.01
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                ):
+                    buy = "BUY 2 78<200 CHE MANCAVA DOPO BUY-SELL CROLLO ! 50 > 100 AND 150-100 GIORNO ! and 3-10 > 0.15 and 5-28 > 0.18 and macd > macd 2 min ago - r 4710"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # madonna compa ! 
+                    # the sound of silence
+                    # ASSURDO ! questa 100 > 100 3 min e' incredibile ! si e' verificata dopo il BUY-SELL del crollo ! NON TOCCARE
+                    # SI STA RIDUCENDO LA DISTANZA TRA 150 E 100
+                    
+                    # 10 giu 2022 5-28 0.12 da 0.09 cazzo
+                    #  2 lug 2022 3-10 0.15 da 0.05 cazzo
+                    # > estate 5-28 0.18 da 0.12 e 3-10 0.15 da 0.05 HO ALZATO IL BUY !
+                    # 7 nov 2022 aggiunta 59 > 59 45 min ago
+                    # aggiunta 31 ago 2023 rccr ok m ko
+                    # 28 set 2023 anticipata ndecchiecella
+
+
+
+                # BUY 2 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-59
+                
+                elif (
+                    
+                    ma4_last > ma18_last
+                     
+                    
+                    and ma450_last < ma450_360_min_ago
+                    and macd >= macd_2_min_ago
+                    
+                    and deviation_ma5_sopra_ma200 < -0.30
+                    and deviation_ma5_sotto_ma300 < -0.30
+                    and deviation_ma5_sotto_ma450 < -0.30
+                    and deviation_ma50_sopra_o_sotto_ma100 < -0.01
+                    
+                    and deviation_ma100_sopra_ma300 < -0.10
+                    
+                    and ma300_last < ma300_60_min_ago
+                    and ma200_last < ma200_60_min_ago
+                    
+                    and deviation_ma3_sopra_ma10 > 0.081
+                    
+                    and deviation_ma5_sopra_ma28 > -0.15
+                    and deviation_ma3_sopra_ma16 > 0.12
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                ):
+                    buy = "BUY 2 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND dev 5-30 and deviation_ma3_sopra_ma16 > 0.12 - r 4713"
+                    action = "buy"
+                    percentage = 70
+                    
+                    
+                    
                 elif (
                     ma78_last < ma78_2_min_ago
                     and deviation_ma5_sotto_ma300 > -0.59
@@ -6123,6 +6731,7 @@ class ro_cano_che_ritorna:
                     and ma2_last > ma2_2_min_ago
                     and price > price_2_min_ago
                     and ma3_last > ma40_last
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2B - r 4732 a"
                     action = "buy"
@@ -6144,7 +6753,7 @@ class ro_cano_che_ritorna:
                     
                     and ma2_last > ma2_2_min_ago
                     and price > price_2_min_ago
-                    
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2Ba durante crollo - 5 sotto 300 di molto ! PIU' AGGRESSIVO (delta 1 < delta 2) (ma100 sta risalendo) - r 4732 b1"
                     action = "buy"
@@ -6171,7 +6780,7 @@ class ro_cano_che_ritorna:
                     
                     and ma2_last > ma2_2_min_ago
                     and price > price_2_min_ago
-                    
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2Bb  durante crollo - 5 sotto 300 di molto ! PIU' PRUDENTE (delta 1 > delta 2) (ma100 si allontana verso il basso da ma200)- r 4732 b2"
                     action = "buy"
@@ -6185,6 +6794,173 @@ class ro_cano_che_ritorna:
                 ##################################################################################
                 ##################################################################################
                 
+                
+                
+                # BUY 2 con ma200> piccola CORREZIONE FIAT che NON E' un forte ribasso e NON E' un crollo ! ALTRA RIGA RCCR che e' andata bene.
+                
+                elif (     
+                    ma200_last > ma200_20_min_ago
+                    
+                    and ma100_last > ma100_60_min_ago
+                    and ma200_last > ma200_60_min_ago
+                    and ma300_last > ma300_360_min_ago
+                    
+                    and ma100_last > ma200_last
+                    and ma200_last > ma300_last
+                    
+                    and ma20_last < ma78_last
+                    and ma90_last > ma110_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.05
+                    and deviation_ma5_sopra_ma28 > 0.05
+                    
+                    and ma5_last >= ma5_2_min_ago
+                    
+                    and ma3_last > ma28_last
+                    
+                    and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                ):    
+                    
+                    buy = "BUY 2 con 300 > 300 360 min ago and ma5_last > ma5_2_min_ago - 20 < 78 and 3-10 > 0.05 con 5-28 > 0.05 E con macd> macd 2 min ago - r 4735"
+                    action = "buy"
+                    percentage = 80
+                    
+                    #  > estate anticipato buy di una ndecchiecella
+                    #  2 nov 2022 anticipato di molto con 300 > 360 min ago !
+                    #  2 nov 3-10 = 0.05 da 0.17
+                    #  2 nov 5-28 = 0.05 da 0.15
+                    # 28 set 2023 5> 5 2 min ago da 28> 28 min ago (ma300 sale da 360 min !)
+                    
+                    
+                elif (
+                    
+                    ma8_last > ma59_last
+                    and deviation_ma5_sopra_ma59 < -0.12
+                    
+                    
+                    and deviation_ma10_sopra_ma200 < -0.25
+                    and deviation_ma10_sopra_ma200 > -0.40
+                  
+                    and deviation_ma100_sopra_ma200 > -0.40
+                    
+                    and deviation_ma5_sotto_ma300 < 0.45
+                    and deviation_ma5_sotto_ma300 > -0.75
+                    
+                    and ma300_last < ma300_60_min_ago
+                    and ma200_last < ma200_60_min_ago
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma5_sopra_ma28 > 0.04
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                ):
+                    buy = "BUY 2 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-59 - da buy 1 riga 1043 B  - r 4742"
+                    action = "buy"
+                    percentage = 50
+                    
+                    # importante : ma100 sta sotto la ma200 non le e' troppo lontana
+                    
+                    # 21 ottobre 2022  aggiunta di 3-10 e 5-28
+                    # 21 ottobre 2022 3-10 = 0.01
+                    # 21 ottobre 2022 5-28 = 0.05
+                    # 28 ottobre 2022 5-28 = 0.04
+                    # ave comba
+                    # 31 ottobre aggiunta dev 10-200 - formula MY COMPA
+                    # 12 dic 2022 8-59 da 8-50 e aggiungo pensiero laterale (condizione sotto)
+                    # 22 dic 2022 and deviation_ma5_sopra_ma59 < -0.10
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                # BUY 2 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-50 - formula MY COMPA (importata dal BUY 1 r 1043 B)
+                
+                elif (
+                    
+                    ma8_last > ma50_last
+                    and delta_1 < delta_2
+                    
+                    and deviation_ma10_sopra_ma200 < -0.25
+                    and deviation_ma10_sopra_ma200 > -0.40
+                  
+                    and deviation_ma100_sopra_ma200 > -0.40
+                    
+                    and deviation_ma5_sotto_ma300 < 0.45
+                    and deviation_ma5_sotto_ma300 > -0.75
+                    
+                    and ma300_last < ma300_60_min_ago
+                    and ma200_last < ma200_60_min_ago
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma5_sopra_ma28 > 0.04
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                ):
+                    buy = "BUY 2 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-50 - formula MY COMPA - r 4743 A"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # importante : ma100 sta sotto la ma200 non le e' troppo lontana
+                    
+                    # 21 ottobre 2022  aggiunta di 3-10 e 5-28
+                    # 21 ottobre 2022 3-10 = 0.01
+                    # 21 ottobre 2022 5-28 = 0.05
+                    # 28 ottobre 2022 5-28 = 0.04
+                    # ave comba
+                    # 31 ottobre aggiunta dev 10-200 - formula MY COMPA
+                    # 19 gen 2023 doppio delta 200 100 giorno
+                    
+                    
+                
+                elif (
+                    
+                    ma8_last > ma50_last
+                    
+                    and delta_1 > delta_2
+                    and deviation_ma3_sopra_ma10 > 0.12
+                    and deviation_ma3_sopra_ma16 > 0.12
+                    and deviation_ma5_sopra_ma28 > 0.04
+                  
+                    and deviation_ma10_sopra_ma200 < -0.25
+                    and deviation_ma10_sopra_ma200 > -0.40
+                  
+                    and deviation_ma100_sopra_ma200 > -0.40
+                    
+                    and deviation_ma5_sotto_ma300 < 0.45
+                    and deviation_ma5_sotto_ma300 > -0.75
+                    
+                    and ma300_last < ma300_60_min_ago
+                    and ma200_last < ma200_60_min_ago
+                    
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and ma3_last >= ma3_2_min_ago
+                    and price > ma4_last
+                    and macd >= macd_2_min_ago
+                ):
+                    buy = "BUY 2 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-50 - formula MY COMPA - r 4743 B"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # importante : ma100 sta sotto la ma200 non le e' troppo lontana
+                    
+                    # 21 ottobre 2022  aggiunta di 3-10 e 5-28
+                    # 21 ottobre 2022 3-10 = 0.01
+                    # 21 ottobre 2022 5-28 = 0.05
+                    # 28 ottobre 2022 5-28 = 0.04
+                    # ave comba
+                    # 31 ottobre aggiunta dev 10-200 - formula MY COMPA
+                    # 19 gen 2023 doppio delta notte compra ma piu' difficile
+                    # 21 apr 2023 aggiunta ma3 > ma3 2 min ago
+                    # 21 apr 2023 price > ma4 !
+                    
+                    
+                    
                 # BUY 2 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-50 - formula MY COMPA (importata dal BUY 1 r 1043 B)
                 
                 elif (
@@ -6207,20 +6983,21 @@ class ro_cano_che_ritorna:
                     and deviation_ma5_sopra_ma28 > 0.04
                     
                     and ma2_last >= ma2_2_min_ago
-              
+                    and macd >= macd_2_min_ago
+                    and macd >= macd_3_min_ago
+                    and macd > 1
                 ):
-                    buy = "BUY 2 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-50 - formula MY COMPA - riga 4743"
+                    buy = "BUY 2 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-50 - formula MY COMPA and macd >= macd_3_min_ago and macd > 1 - r 4743 C"
                     action = "buy"
-                    percentage = 50
+                    percentage = 80
                     
-                    # importante : ma100 sta sotto la ma200 non le e' troppo lontana
+                    # 30 ago 2023 and macd > 3 min ago
+                    # 30 ago 2023 and macd > 1
                     
-                    # 21 ottobre 2022  aggiunta di 3-10 e 5-28
-                    # 21 ottobre 2022 3-10 = 0.01
-                    # 21 ottobre 2022 5-28 = 0.05
-                    # 28 ottobre 2022 5-28 = 0.04
-                    # ave comba
-                    # 31 ottobre aggiunta dev 10-200 - formula MY COMPA
+                
+                    
+                    
+                    
                     
                     ###########################################################################################
                     ###########################################################################################
@@ -6246,6 +7023,7 @@ class ro_cano_che_ritorna:
                     and ma2_last > ma2_2_min_ago
                     and ma3_last > ma40_last
                     and ma4_last > ma78_last
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2C (SOPRA) (delta1 > delta2 and 100 > ) - CREPUSCOLO - and dev_ma5_sopra_ma28 > 0.14 AND 3-10 > 0.16 - r 4765"
                     action = "buy"
@@ -6261,7 +7039,7 @@ class ro_cano_che_ritorna:
                 
                 
                 elif (
-                    deviation_buy2 > 0.10
+                    deviation_buy2 > 0.08
                     and ma300_last > ma300_720_min_ago
                     and ma300_last > ma300_120_min_ago
                     and ma200_last > ma200_120_min_ago
@@ -6270,15 +7048,15 @@ class ro_cano_che_ritorna:
                     and ma100_last < ma100_60_min_ago
                     
                     and deviation_ma5_sopra_ma28 > 0.20
-                    and deviation_bellissima > 0.10
+                    
                     
                     and deviation_buy_ma3_sopra_ma13 > 0.10
-                    and deviation_ma7_sopra_ma40 > 0.09
+                    and deviation_ma7_sopra_ma40 > 0.05
                     and ma4_last > ma9_last
                     and ma3_last > ma40_last
                     and ma4_last > ma78_last
                     and ma2_last > ma2_2_min_ago
-              
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2C SOPRA RIBASSO RIBASSO - NOTTE con 5-28 0.20 - r 4796 A1"
                     action = "buy"
@@ -6288,7 +7066,7 @@ class ro_cano_che_ritorna:
                     # > estate ho alzato buy
                     # 11 ott 2022 5-28 0.17 da 0.15
                     # 20 ott 2022 5-28 0.20 da 0.17
-                    
+                    # 23 feb 2023 buy2 0.08 da 0.10
                     
                     
                 elif (
@@ -6309,7 +7087,7 @@ class ro_cano_che_ritorna:
                     and ma3_last > ma40_last
                     and ma4_last > ma78_last
                     and ma2_last > ma2_2_min_ago
-              
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2C SOPRA RIBASSO RIBASSO - NOTTE con 5-28 0.20 - r 4796 A2"
                     action = "buy"
@@ -6341,6 +7119,7 @@ class ro_cano_che_ritorna:
                     and ma2_last > ma2_2_min_ago
                     and ma3_last > ma40_last
                     and ma4_last > ma78_last
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2C SOPRA RIBASSO RIBASSO - NOTTE - r 4796 A"
                     action = "buy"
@@ -6372,6 +7151,7 @@ class ro_cano_che_ritorna:
                     and ma2_last > ma2_2_min_ago
                     and ma3_last > ma40_last
                     and ma4_last > ma78_last
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2C SOPRA RIBASSO RIBASSO - NOTTE - r 4827"
                     action = "buy"
@@ -6407,6 +7187,7 @@ class ro_cano_che_ritorna:
                     and ma2_last > ma2_2_min_ago
                     and ma3_last > ma40_last
                     and ma4_last > ma78_last
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2C dopo grande rialzo e grande ribasso - r 4858 a"
                     action = "buy"
@@ -6440,6 +7221,7 @@ class ro_cano_che_ritorna:
                     and ma2_last > ma2_2_min_ago
                     and ma3_last > ma40_last
                     and ma4_last > ma78_last
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2C dopo grande rialzo e grande ribasso - r 4858 b"
                     action = "buy"
@@ -6472,6 +7254,7 @@ class ro_cano_che_ritorna:
                     and ma2_last > ma2_2_min_ago
                     and ma3_last > ma40_last
                     and ma4_last > ma78_last
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2C dopo grande rialzo e grande ribasso - r 4858 c"
                     action = "buy"
@@ -6501,6 +7284,7 @@ class ro_cano_che_ritorna:
                         
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2 ORIGINALE CHE CI RIPROVA IMPORTATO DA SELL 1  - NOTTE - r 4887"
                     action = "sell"
@@ -6519,7 +7303,7 @@ class ro_cano_che_ritorna:
                     
                     and ma2_last > ma2_2_min_ago
                     and ma78_last < ma200_last
-                    
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2 DURANTE UN RIBASSO AUDI CHE NON E' UN CROLLO ! E CHE CI RIPROVA con 5 > 28 - riga 4905"
                     action = "buy"
@@ -6532,7 +7316,33 @@ class ro_cano_che_ritorna:
                     # 9 luglio ho messo 5>22 perche' cosi' e' chiaro chi interviene e comunque 5-16 >0.08 era arrivata molto tardi e 5-16 arriva una ndecchia prima
                     
                     # > estate 5-28 da 5-22
+                    
+                    
+                    
                    
+                # IL BUY 2 CI RIPROVA CON INCROCIO 8-50
+                
+                elif (
+                    deviation_buy2 > 0.01
+                    and ma100_last > ma100_50_min_ago
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last > ma300_301_min_ago
+                    
+                    
+                    
+                    and (ma8_prev < ma50_prev and ma8_last > ma50_last)
+                    and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                ):
+               
+                    buy = "BUY 2C con INCROCIO 8-50 con 100< and 200< MA 300 > 300 301 min ago - r 4906 A"
+                    action = "buy"
+                    percentage = 70
+                    
+                    # deviation_buy2 = ma8_last / ma50
+                    # incrocio va bene nel trend laterale NON TOCCARLO ! ho messo incrocio per evitare punti sopvrapposti
+                    # 1 feb 2023 aggiunto 5-28 > 0.12
+                    
                     
                 # IL BUY 2 CI RIPROVA CON INCROCIO 8-50
                 
@@ -6542,18 +7352,20 @@ class ro_cano_che_ritorna:
                     and ma200_last < ma200_120_min_ago
                     and ma300_last > ma300_301_min_ago
                     
+                    and deviation_ma5_sopra_ma28 > 0.12
                     
                     and (ma8_prev < ma50_prev and ma8_last > ma50_last)
                     and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):
                
-                    buy = "BUY 2C con INCROCIO 8-50 con 100< and 200< MA 300 > 300 301 min ago - r 4906"
+                    buy = "BUY 2C con INCROCIO 8-50 con 100< and 200< MA 300 > 300 301 min ago - r 4906 B"
                     action = "buy"
                     percentage = 70
                     
                     # deviation_buy2 = ma8_last / ma50
                     # incrocio va bene nel trend laterale NON TOCCARLO ! ho messo incrocio per evitare punti sopvrapposti
-                    
+                    # 1 feb 2023 aggiunto 5-28 > 0.12
                     
                     
                     
@@ -6565,18 +7377,21 @@ class ro_cano_che_ritorna:
                     
                     and deviation_ma100_sopra_ma300 > -0.60
                     and deviation_ma3_sopra_ma10 > 0.01
-                    
+                    and deviation_ma3_sopra_ma18 > 0.13
+                  
                     and ma200_last < ma200_120_min_ago
                     
                     and ma100_last < ma100_50_min_ago
                     and (ma7_prev < ma50_prev and ma7_last > ma50_last)
                     and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):
                
-                    buy = "BUY 2C con 100< and 200< con INCROCIO 7-50 100 NON DISTANTE DA 300 - r 4934 a"
+                    buy = "BUY 2C con 100< and 200< con INCROCIO 7-50 100 NON DISTANTE DA 300 - r 4934 A"
                     action = "buy"
                     percentage = 80
                     
+                    #  2 mag 2023 aggiunta 3-18 >0.13
                     
                     
                 # IL BUY 2 CI RIPROVA CON INCROCIO 8-50
@@ -6593,6 +7408,7 @@ class ro_cano_che_ritorna:
                     and ma100_last < ma100_50_min_ago
                     and (ma7_prev < ma50_prev and ma7_last > ma50_last)
                     and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):
                
                     buy = "BUY 2C con 100< and 200< con INCROCIO 7-50 100 MOLTO SOTTO 300 CON 3-10 > 0.17 QUA DEVE DIMOSTRARE UNA CERTA FORZA ! - r 4956 b"
@@ -6621,6 +7437,7 @@ class ro_cano_che_ritorna:
                     and ma100_last < ma100_50_min_ago
                     and (ma7_prev < ma50_prev and ma7_last > ma50_last)
                     and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):
                
                     buy = "BUY 2C con 100< and 200< con INCROCIO 7-50 and 5-28 > 0.10 (SOPRA - aurora - r 4989"
@@ -6650,6 +7467,7 @@ class ro_cano_che_ritorna:
                     and ma100_last < ma100_50_min_ago
                     and (ma7_prev < ma50_prev and ma7_last > ma50_last)
                     and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):
                
                     buy = "BUY 2C con 100< and 200< con INCROCIO 7-50 and 5-28 > 0.29 - NOTTE! - r 5018"
@@ -6666,24 +7484,81 @@ class ro_cano_che_ritorna:
                 
                 # BUY 2 DURANTE UN RIBASSO AUDI con 5-16 copiata da RCCR CHE E' ANDATA BENISSIMO ! 22 ago 2022
                 
+                
                 elif (
+                    deviation_ma300_sopra_ma450 > 0.15
                     
-                    deviation_buy_crollo_1 < -0.60
+                    and deviation_buy_crollo_1 < -0.60
                     and deviation_buy_crollo_1 > -1.60
                     
-                    and ma5_last > ma16_last
-                    and deviation_ma5_sopra_ma16 > 0.10
+                    and ma4_last > ma15_last
+                    and deviation_ma3_sopra_ma10 > 0.125
+                    and deviation_ma5_sopra_ma16 > 0.09
                     
                     and ma2_last > ma2_2_min_ago
                     and ma78_last < ma200_last
-                    
+                    and macd >= macd_2_min_ago
                 ):
-                    buy = "BUY 2 DURANTE UN RIBASSO AUDI con 5-16 copiata da RCCR CHE E' ANDATA BENISSIMO ! 22 ago 2022 - riga 5019"
+                    buy = "BUY 2 DURANTE UN RIBASSO AUDI con 5-16 copiata da RCCR CHE E' ANDATA BENISSIMO ! 22 ago 2022 - r 5019 A"
                     action = "buy"
                     percentage = 50
                     
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     # questa cosa che 78 deve essere < 200 ha dell' incredibile. MA NON TOCCARE !
+                    # 16 mar 2023 aggiunta 3-10 > 0.125 3-10 deve stare sopra 0.115
+                    # 6 apr 2023 4-15 da 5-16
+                    
+                elif (
+                    deviation_ma300_sopra_ma450 < 0.15
+                    and deviation_ma300_sopra_ma450 > -0.15
+                    
+                    and deviation_buy_crollo_1 < -0.60
+                    and deviation_buy_crollo_1 > -1.60
+                    
+                    and ma4_last > ma15_last
+                    and deviation_ma3_sopra_ma10 > 0.125
+                    and deviation_ma5_sopra_ma16 > 0.09
+                    
+                    and ma2_last > ma2_2_min_ago
+                    and ma78_last < ma200_last
+                    and macd >= macd_2_min_ago
+                ):
+                    buy = "BUY 2 DURANTE UN RIBASSO AUDI con 5-16 copiata da RCCR CHE E' ANDATA BENISSIMO ! 22 ago 2022 - r 5019 B"
+                    action = "buy"
+                    percentage = 50
+                    
+                    # deviation_buy_crollo_1 = ma8_last / ma78_last
+                    # questa cosa che 78 deve essere < 200 ha dell' incredibile. MA NON TOCCARE !
+                    # 16 mar 2023 aggiunta 3-10 > 0.125 3-10 deve stare sopra 0.115
+                    # 6 apr 2023 4-15 da 5-16
+                    
+                    
+                    
+                elif (
+                    
+                    deviation_ma300_sopra_ma450 < -0.15
+                    
+                    and deviation_buy_crollo_1 < -0.60
+                    and deviation_buy_crollo_1 > -1.60
+                    
+                    and ma5_last > ma15_last
+                    and deviation_ma3_sopra_ma10 > 0.125
+                    and deviation_ma5_sopra_ma16 > 0.09
+                    
+                    and ma2_last > ma2_2_min_ago
+                    and ma78_last < ma200_last
+                    and macd >= macd_2_min_ago
+                ):
+                    buy = "BUY 2 DURANTE UN RIBASSO AUDI con 5-16 copiata da RCCR CHE E' ANDATA BENISSIMO ! 22 ago 2022 - r 5019 C"
+                    action = "buy"
+                    percentage = 50
+                    
+                    # deviation_buy_crollo_1 = ma8_last / ma78_last
+                    # questa cosa che 78 deve essere < 200 ha dell' incredibile. MA NON TOCCARE !
+                    # 16 mar 2023 aggiunta 3-10 > 0.125 3-10 deve stare sopra 0.115
+                    # 6 apr 2023 4-15 da 5-16
+                    
+                    
                     
                     
                     
@@ -6700,6 +7575,7 @@ class ro_cano_che_ritorna:
                     and deviation_buy > 0.50
                     and deviation_ma5_sopra_ma28 > 0.60
                     and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):
                
                     buy = "BUY 2C con 100 < and 200 < con DEVIATION BUY > 0.50 and 5-28 > 0.60 - r 5044"
@@ -6711,19 +7587,19 @@ class ro_cano_che_ritorna:
                     
                     
                     
-                    
-                    
                 
                 ####################################################################################################### BUY 2 DURANTE IL CROLLO CHE CONTINUA !
                 
                 # se il crollo continua dopo che ha venduto sell 1 durante il crollo - ro cano CI RIPROVA !     
                 
                 # BUY 2  primo modo DURANTE IL CROLLO
-
+                
                 elif (
                     ma2_last > ma2_2_min_ago
                     and deviation_buy_crollo_1 < -2.30
                     and ma3_last > ma15_last
+                    and deviation_ma3_sopra_ma10 > 0.125
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2 DURANTE IL CROLLO - modo 1 2-7 - r 5067"
                     action = "buy"
@@ -6731,6 +7607,29 @@ class ro_cano_che_ritorna:
                     
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     # 14 GIU 2022 3-15 PERCHE' COMPRAVA CONTINUAMENTE DURANTE IL CROLLO CON 3-7
+                    # 17 mar 2023 ho aggiunto 3-10 > 0.125 vedi 3 mar 2023 ore 2:51
+                    
+                    
+                    
+                # BUY 2 avvento del macd ! DURANTE IL CROLLO - porcupine tree - lazarus
+                
+                elif (
+                    ma2_last > ma2_2_min_ago
+                    and deviation_buy_crollo_1 < -2.30
+                    and ma3_last > ma7_last
+                    and macd > macd_2_min_ago
+                    and macd < -35
+                  
+                ):
+                    buy = "BUY 2 DURANTE IL CROLLO - AVVENTO DEL MACD ! 3-7 + MACD - porcupine tree - lazarus - r 5068"
+                    action = "buy"
+                    percentage = 90
+                    
+                    # deviation_buy_crollo_1 = ma8_last / ma78_last
+                    # 14 GIU 2022 3-15 PERCHE' COMPRAVA CONTINUAMENTE DURANTE IL CROLLO CON 3-7
+                    # 17 mar 2023 ho aggiunto 3-10 > 0.125 vedi 3 mar 2023 ore 2:51
+                    # 27 APR 2023 AVVENTO DEL MACD !
+                    
                     
                     
                     
@@ -6742,6 +7641,7 @@ class ro_cano_che_ritorna:
                     and deviation_buy_crollo_1 > -2.29
                     and deviation_buy_crollo_2 > 0.11
                     and deviation_ma5_sopra_ma28 > 0.03
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2 DURANTE IL CROLLO - modo 2 - r 5085"
                     action = "buy"
@@ -6772,7 +7672,7 @@ class ro_cano_che_ritorna:
                     and ma100_last > ma100_3_min_ago
                     
                     and ma2_last > ma2_2_min_ago
-                
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2 CHE MANCAVA DOPO BUY-SELL CROLLO ! 150-100 GIORNO ! - r 5116"
                     action = "buy"
@@ -6785,9 +7685,7 @@ class ro_cano_che_ritorna:
                     # and deviation_ma100_sopra_ma300 < -0.20 significa che stiamo ancora in una situazione di ribasso !
                     
                     
-                    
-                
-                    
+                  
                     
               
                 ################################################### per comprare durante UNA piccola CORREZIONE che NON E' un forte ribasso e NON E' un crollo
@@ -6806,6 +7704,7 @@ class ro_cano_che_ritorna:
                     and deviation_correzione > 0.015
                     and deviation_buy_ma5_sopra_ma20 > 0.10
                     and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):
 
                     buy = "BUY 2A PAZZA AUDI che non e' un forte ribasso e non e' un crollo ! deviation 5-28 > 0.05 CON 100 non lontana dalla 300 - r 5150 a"
@@ -6834,6 +7733,7 @@ class ro_cano_che_ritorna:
                     and deviation_correzione > 0.015
                     and deviation_buy_ma5_sopra_ma20 > 0.10
                     and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):
 
                     buy = "BUY 2A PAZZA AUDI che non e' un forte ribasso e non e' un crollo ! deviation 5-28 > 0.05 CON 100 MOLTO SOTTO 300 - r 5178 b"
@@ -6846,12 +7746,7 @@ class ro_cano_che_ritorna:
                     # compare prega per me !
                     
                     
-                    
-                    
-                    
-                    
-              
-                
+                   
                 
                 # BUY 2 CORREZIONE che NON E' un forte ribasso e NON E' un crollo ! con deviation_correzione > 0.02
                  
@@ -6862,7 +7757,7 @@ class ro_cano_che_ritorna:
                     and deviation_correzione_2 > 0.03
                     and deviation_buy_crollo_1 < -0.70
                     and deviation_buy_crollo_1 > -0.90
-
+                    and macd >= macd_2_min_ago
                 ):
 
                     buy = "BUY 2 CORREZIONE che NON E' un forte ribasso e NON E' un crollo ! con deviation_correzione > 0.02 - r 5207"
@@ -6886,6 +7781,7 @@ class ro_cano_che_ritorna:
                     and deviation_buy_crollo_1 < -0.70
                     and deviation_buy_crollo_1 > -1.50
                     and deviation_bellissima > 0.15
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2 FORTE RIBASSO che NON E' UN CROLLO ! and deviation_bellissima > 0.15 - r 5229"
                     action = "buy"
@@ -6909,6 +7805,7 @@ class ro_cano_che_ritorna:
                     and deviation_ma100_sopra_ma300 < 0.04
                     and deviation_ma100_sopra_ma200 < 0.05
                     and deviation_ma5_sopra_ma28 > 0.18
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2 nuovo TREND LATERALE ! - r 5252"
                     action = "buy"
@@ -6936,7 +7833,7 @@ class ro_cano_che_ritorna:
                     
                     and deviation_ma4_sopra_ma30 > 0.17
                     and deviation_ma100_laterale > 0.49
-                    
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2 andamento laterale se ma200> da 20 min compra con 4-30 (SUL BUY 2 0.50 e 20-69 vs EFFETTI LATERALI !) - r 5279"
                     action = "buy"
@@ -6961,7 +7858,7 @@ class ro_cano_che_ritorna:
                     
                     and deviation_ma4_sopra_ma30 > 0.17
                     and deviation_ma100_laterale > 0.49
-                   
+                   and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2 andamento laterale se ma200> da 20 min compra con 4-30 (SUL BUY 2 0.50 e 20-69 vs EFFETTI LATERALI !) - r 5304"
                     action = "buy"
@@ -6991,6 +7888,7 @@ class ro_cano_che_ritorna:
                     
                     and (ma4_prev < ma25_prev and ma4_last > ma25_last)
                     and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ): 
                     buy = "BUY 2 DOCCIA se ma200 > da 90 min ! E 3-10 > 0.01 - 100 MOLTO ALTA RISPETTO A 300 - r 5333 A"
                     action = "buy"
@@ -7018,6 +7916,7 @@ class ro_cano_che_ritorna:
                     
                     and (ma4_prev < ma25_prev and ma4_last > ma25_last)
                     and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ): 
                     buy = "BUY 2 DOCCIA se ma200 > da 90 min ! E 3-10 > 0.01 -100 NON LONTANA DA 300  r 5360 B"
                     action = "buy"
@@ -7040,6 +7939,7 @@ class ro_cano_che_ritorna:
                     and deviation_ma100_laterale > 0.10
                     and (ma3_prev < ma200_prev and ma3_last > ma200_last)
                     and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2 con DEVIATION ASSURDA se ma200 sale da 120 min BUY con ma2-ma200 (ma5 > ma300 evita GLI EFFETTI LATERALI !) - r 5382"
                     action = "buy"
@@ -7051,21 +7951,136 @@ class ro_cano_che_ritorna:
             
             
             
-                # ------------------------------------------------------------ BUY 2 laterale -
+                # ------------------------------------------------------------ BUY 2 laterale
+              
+                elif (    
+                    ma4_last > ma28_last
+                    
+                    and ma300_last > ma300_120_min_ago
+                    and ma450_last > ma450_480_min_ago
+                    
+                    and deviation_ma100_sopra_ma300 < 0.20
+                    and deviation_ma100_sopra_ma300 > -0.30
+                    
+                    and deviation_ma3_sopra_ma18 > 0.02
+                    
+                    and macd >= macd_2_min_ago
+                    and macd > 2.0
+                ):  
                 
+                    buy = "BUY 2 laterale con 300>450 and 4-28 and macd > 2.0 - r 5412 X1a"
+                    action = "buy"
+                    percentage = 80
+                  
+                    # 11 ago 2023 anticipato ndecchiecella
+                    # 11 ago 2023 and macd > 4
+                    # 14 set 2023 and deviation_ma100_sopra_ma300 > -0.30 da -0.20
+                    # 14 set 2023 5-28 da 5-39
+                    # 14 set 2023 and macd > 3.70 da 4
+                    # 27 set 2023 4-28 da 5-28 
+                    # 27 set 2023 and macd > 3.20 da 3.70
+                    #  2 ott 2023 tolto and ma300_last > ma450_last c'e' and ma450_last > ma450_480_min_ago !
+              
+                elif (    
+                    ma5_last > ma39_last
+                    and ma78_last < ma78_60_min_ago
+                    
+                    and ma450_last > ma450_480_min_ago
+                    
+                    and ma300_last > ma450_last
+                    and deviation_ma100_sopra_ma300 < 0.20
+                    and deviation_ma100_sopra_ma300 > -0.20
+                  
+                    and ma300_last > ma300_120_min_ago
+                    and deviation_ma3_sopra_ma18 > 0.13
+                    and macd >= macd_2_min_ago
+                ):  
+                
+                    buy = "BUY 2 laterale con 300>450 MA ma78 scende da 1 ora ! - r 5412 X1b"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # 19 set 2022 aggiunta 3-10 > 0.07
+                    #  3 ott 2022 3-10 0.113 da 0.07
+                    #  4 mag 2023 3-10 0.07 da 0.113 con 300>450
+                    # 23 mag 2023 3-39 da 8-59 con 300>450 e 100 attaccata alla 300
+                    # 24 mag 2023 tolto 3-10 > 0.07 !
+                    # 24 mag 2023 messo 3-18 > 0.02 con 450 < 450 480 min ago !
+                    #  4 mag 2023 messo 3-18 > 0.06 con 450 > 450 480 min ago MA ma78 scende da 60 min !
+                    # 11 ago 2023 messo 3-18 > 0.13
+                    
+                    
+                elif (    
+                    ma5_last > ma39_last
+                    and ma450_last < ma450_480_min_ago
+                    and ma78_last > ma78_60_min_ago
+                    
+                    and ma300_last > ma450_last
+                    and deviation_ma100_sopra_ma300 < 0.20
+                    and deviation_ma100_sopra_ma300 > -0.20
+                  
+                    and ma300_last > ma300_120_min_ago
+                    and deviation_ma3_sopra_ma10 > 0.07
+                    and macd >= macd_2_min_ago
+                ):  
+                
+                    buy = "BUY 2 laterale con 300>450 - r 5412 X2a"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # 19 set 2022 aggiunta 3-10 > 0.07
+                    #  3 ott 2022 3-10 0.113 da 0.07
+                    #  4 mag 2023 3-10 0.07 da 0.113 con 300>450
+                    # 23 mag 2023 3-39 da 8-59 con 300>450 e 100 attaccata alla 300
+                    # 24 mag 2023 3-10 > 0.07 con 450 < 450 480 min ago !
+                    
+                    
+                    
+                elif (    
+                    ma5_last > ma39_last
+                    and ma450_last < ma450_480_min_ago
+                    
+                    and ma300_last > ma450_last
+                    and ma300_last > ma300_120_min_ago
+                  
+                    and ma78_last < ma78_60_min_ago
+                    
+                    and deviation_ma100_sopra_ma300 < 0.20
+                    and deviation_ma100_sopra_ma300 > -0.30
+                  
+                    
+                    and deviation_ma3_sopra_ma10 > 0.07
+                    and deviation_ma3_sopra_ma18 > 0.16
+                    and macd >= macd_2_min_ago
+                ):  
+                
+                    buy = "BUY 2 piu' o meno laterale con 450 < 450 480 min ago MA 300>450 MA 78 scende da 60 min ! - r 5412 X2b"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # 19 set 2022 aggiunta 3-10 > 0.07
+                    #  3 ott 2022 3-10 0.113 da 0.07
+                    #  4 mag 2023 3-10 0.07 da 0.113 con 300>450
+                    # 23 mag 2023 3-39 da 8-59 con 300>450 e 100 attaccata alla 300
+                    # 24 mag 2023 3-10 > 0.07 con 450 < 450 480 min ago !
+                    # 27 set 2023 and deviation_ma100_sopra_ma300 > -0.30 da -0.20
+                    # 27 set 2023 and deviation_ma3_sopra_ma18 > 0.16 da 0.169
+                    
+                    
+                    
                 elif (    
                     ma8_last > ma59_last
-                    
+                    and ma300_last < ma450_last
                     and deviation_ma100_sopra_ma300 < 0.20
                     and deviation_ma100_sopra_ma300 > -0.20
                     
                     and deviation_ma3_sopra_ma10 > 0.113
                  
                     and ma300_last > ma300_120_min_ago
-               
+                    and macd >= macd_2_min_ago
                 ):  
                 
-                    buy = "BUY 2 laterale - r 5412"
+                    buy = "BUY 2 laterale con 300<450 - r 5412 y"
                     action = "buy"
                     percentage = 80
                     
@@ -7078,9 +8093,34 @@ class ro_cano_che_ritorna:
                 # BUY 2 che ci riprova TORNANDO ALLE ORIGINI ( TREND LATERALE !) con ma200< and ma300< AND 100 vicina alla 300
                 
                 elif (
+                    deviation_buy2 > 0.02
+                    and deviation_ma100_sopra_ma300 > -0.20
+                    and ma300_last > ma450_last
+                    and deviation_ma3_sopra_ma10 > 0.14
+                    and deviation_ma5_sopra_ma28 > 0.18
+                    
+                    and deviation_bellissima > 0.05
+                    and ma8_last >= ma8_2_min_ago
+                    and ma2_last > ma2_2_min_ago
+                    and ma3_last > ma7_last
+                    and ma3_last > ma13_last
+                    and deviation_buy_ma3_sopra_ma20 > 0.05
+                    and deviation_ma4_sopra_ma25 > 0.04
+                    
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_120_min_ago
+                    and macd >= macd_2_min_ago
+                ):
+               
+                    buy = "BUY 2 che ci riprova TORNANDO ALLE ORIGINI ( TREND LATERALE !) con ma200< and ma300< AND 100 vicina alla 300 - r 5412a"
+                    action = "buy"
+                    percentage = 70
+                    
+                    
+                elif (
                     deviation_buy2 > 0.05
                     and deviation_ma100_sopra_ma300 > -0.20
-                    
+                    and ma300_last < ma450_last
                     and deviation_ma3_sopra_ma10 > 0.14
                     and deviation_ma5_sopra_ma28 > 0.18
                     
@@ -7094,9 +8134,10 @@ class ro_cano_che_ritorna:
                     
                     and ma200_last < ma200_120_min_ago
                     and ma300_last < ma300_120_min_ago
+                    and macd >= macd_2_min_ago
                 ):
                
-                    buy = "BUY 2 che ci riprova TORNANDO ALLE ORIGINI ( TREND LATERALE !) con ma200< and ma300< AND 100 vicina alla 300 - r 5412"
+                    buy = "BUY 2 che ci riprova TORNANDO ALLE ORIGINI ( TREND LATERALE !) con ma200< and ma300< AND 100 vicina alla 300 - r 5412b"
                     action = "buy"
                     percentage = 70
 
@@ -7111,8 +8152,8 @@ class ro_cano_che_ritorna:
                 # BUY 2 che ci riprova quando se ne va LATERALMENTE dopo il crollo
                 
                 elif (
-                    ma78_last > ma200_last
-                    and ma28_last > ma28_20_min_ago
+                    ma5_last > ma39_last
+                    and ma20_last > ma20_5_min_ago
                     
                     and deviation_ma3_sopra_ma10 > 0.08
                     and deviation_ma5_sopra_ma28 > -0.02
@@ -7122,22 +8163,25 @@ class ro_cano_che_ritorna:
                     
                     and delta_300_100 < delta_300_100_60_min
                     
-                    and deviation_ma100_sopra_ma300 > -0.50
-                    and deviation_ma200_sopra_ma300 > -0.50
+                    and deviation_ma100_sopra_ma300 > -0.60
+                    and deviation_ma200_sopra_ma300 > -0.60
                     
-                    and ma2_last > ma2_2_min_ago
-                
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):
                
-                    buy = "BUY 2 CON 78 > 200 che ci riprova quando se ne va lateralmente dopo il crollo CON 28>28 30 min ago - r 5445 A1"
+                    buy = "BUY 2 con 5-39 che ci riprova quando se ne va lateralmente dopo il crollo CON 28>28 5 min ago and macd > macd_2_min_ago - r 5445 A1"
                     action = "buy"
                     percentage = 80
 
                     # compare prega per me !
                     # 29 set 2022 3-10 > 0.08 da 0.10
-                    # 29 set 28 20 min ago da 28 30 min ago
-                    
-                    
+                    # 29 set 2022 28 20 min ago da 28 30 min ago
+                    #  1 giu 2023 and macd > macd_2_min_ago
+                    # 11 ago 2023 5-78 da 78-200
+                    #  6 set 2023 28 10 min da 28 20 min
+                    # 15 set 2023 28 5 min da 28 10 min
+                    # 27 set 2023 20 5 min da 28 10 min
                     
                 # BUY 2 che ci riprova quando se ne va lateralmente dopo il crollo
                 
@@ -7157,7 +8201,7 @@ class ro_cano_che_ritorna:
                     and deviation_ma200_sopra_ma300 > -0.50
                     
                     and ma2_last > ma2_2_min_ago
-                
+                    and macd >= macd_2_min_ago
                 ):
                
                     buy = "BUY 2 CON 78 > 200 che ci riprova quando se ne va lateralmente dopo il crollo CON 28 < 28 30 min ago E 3-10 > 0.20 - r 5476 a2"
@@ -7184,7 +8228,7 @@ class ro_cano_che_ritorna:
                     and deviation_ma200_sopra_ma300 > -0.50
                     
                     and ma2_last > ma2_2_min_ago
-                
+                    and macd >= macd_2_min_ago
                 ):
                
                     buy = "BUY 2 CON 78 < 200 che ci riprova quando se ne va lateralmente dopo il crollo - r 5503 b"
@@ -7215,6 +8259,7 @@ class ro_cano_che_ritorna:
                     
                     and ma200_last < ma200_120_min_ago
                     and ma300_last < ma300_120_min_ago
+                    and macd >= macd_2_min_ago
                 ):
                
                     buy = "BUY 2 che ci riprova TORNANDO ALLE ORIGINI (TREND RIBASSO !) con ma200< and ma300< AND 5 NON MOLTO SOTTO 300 - r 5531 A"
@@ -7236,8 +8281,6 @@ class ro_cano_che_ritorna:
                 elif (
                     deviation_buy2 > 0.07
                     
-                    
-                    
                     and deviation_ma100_sopra_ma300 < -0.20
                     and deviation_ma5_sotto_ma300 < -0.70
                     and deviation_ma5_sopra_ma28 > 0.19
@@ -7251,6 +8294,7 @@ class ro_cano_che_ritorna:
                     
                     and ma200_last < ma200_120_min_ago
                     and ma300_last < ma300_120_min_ago
+                    and macd >= macd_2_min_ago
                 ):
                
                     buy = "BUY 2 che ci riprova TORNANDO ALLE ORIGINI (TREND RIBASSO !) con ma200< and ma300< AND 5 molto sotto 300 - r 5531 B"
@@ -7281,7 +8325,7 @@ class ro_cano_che_ritorna:
                     and deviation_buy_crollo_1 > -0.59
                     and deviation_correzione > 0.017
                     and deviation_buy_ma5_sopra_ma20 > 0.12
-                    
+                    and macd >= macd_2_min_ago
                 ):
 
                     buy = "BUY 2 con ma200> e ma300> DURANTE UNA piccola CORREZIONE che non e' un forte ribasso e non e' un crollo - r 5562"
@@ -7306,6 +8350,7 @@ class ro_cano_che_ritorna:
                     and deviation_buy_ma5_sopra_ma20 > 0.12
                     
                     and deviation_ma5_sopra_ma28 > 0.18
+                    and macd >= macd_2_min_ago
                 ):
 
                     buy = "BUY 2 con ma200> e ma300> DURANTE UNA piccola CORREZIONE che non e' un forte ribasso e non e' un crollo - r 5586"
@@ -7334,6 +8379,7 @@ class ro_cano_che_ritorna:
                     and ma100_last < ma300_last
                     
                     and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):    
                     buy = "BUY 2 che considera il passare tempo (SE > 120 min) and 5-28 > 0.10 e ma30 > ma 30 40 min ago (TREND IN RIALZO) con 78>200  - r 5610 A"
                     action = "buy"
@@ -7360,6 +8406,7 @@ class ro_cano_che_ritorna:
                     and ma100_last < ma300_last
                     
                     and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):    
                     buy = "BUY 2 che considera il passare del tempo (SE > 120 min) and 5-28 > 0.10 e ma30 > ma 30 40 min ago (TREND IN RIALZO) con 78>200 - r 5610 B"
                     action = "buy"
@@ -7367,6 +8414,37 @@ class ro_cano_che_ritorna:
                     
                     
                     
+                    
+                elif (
+                    
+                    ma78_last < ma200_last
+                    and ma450_last > ma450_720_min_ago
+                    and deviation_ma10_sopra_ma200 > -0.16
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma5_sopra_ma28 > 0.01
+                    
+                    and ma5_last > ma100_last
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                  
+                    and ma59_last > ma59_30_min_ago
+                    
+                    and ma100_last < ma100_120_min_ago
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_120_min_ago
+                    
+                    and delta_150_100 <= delta_150_100_60_min
+                    and ma100_last >= ma100_2_min_ago
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                
+                ):
+                    buy = "BUY 2 laterale con 450>6 ore and 50 > 100 AND 150-100 GIORNO ! and 3-10 > 0.15 and 5-28 > 0.18 - r 5630"
+                    action = "buy"
+                    percentage = 80
                     
                     
                 # --------------------------------------- BUY 2 che considera il passare del tempo con TREND IN RIBASSO ! sempre 20 > 200
@@ -7384,6 +8462,7 @@ class ro_cano_che_ritorna:
                     and ma100_last < ma300_last
                     and deviation_bellissima > 0.07
                     and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):    
                     buy = "BUY 2 che considera il passare del tempo (SE > 120 min) and 5-28 > 0.17 and ma30 < ma30 40 min ago (TREND IN RIBASSO) - r 5634"
                     action = "buy"
@@ -7410,6 +8489,7 @@ class ro_cano_che_ritorna:
                     
                     and deviation_ma5_sopra_ma28 > 0.07
                     and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2 FIAT che non funzionava MA CHE HA FUNZIONATO BENISSIMO ( SOTTO RIALZO RIALZO ) GIORNO ! copiato da BUY 1 - r 5660"
                     action = "buy"
@@ -7425,20 +8505,27 @@ class ro_cano_che_ritorna:
                     and deviation_ma100_sopra_ma300 > 0.40
                     and ma300_last > ma300_120_min_ago
                     
-                    and deviation_buy > 0.27
+                    and deviation_buy > 0.272
+                    and deviation_ma3_sopra_ma16 > 0.11
+                    and deviation_ma3_sopra_ma18 > 0.08
                     
                     and ma150_last > ma150_60_min_ago
+                    
                     and ma2_last >= ma2_2_min_ago
-              
+                    and macd >= macd_2_min_ago
+               
                 ):
              
-                    buy = "BUY 2 nuovo RIALZO IMPROVVISO ma trend gia' in rialzo da 120 min and 0.27 sopra ultimo sell se 300>120 min e 100 sopra 300> 0.40 - r 5670"
+                    buy = "BUY 2 nuovo RIALZO IMPROVVISO ma trend gia' in rialzo da 120 min and 0.272 sopra ultimo sell se 300>120 min e 100 sopra 300> 0.40 - r 5670"
                     action = "buy"
                     percentage = 70
-                  
-                  
-                  
-                  
+                    
+                    # 6 apr 2023 3-18 > 0.08
+                    # 5 mag 2023 3-16 > 0.11
+                    # 5 mag 2023 and deviation_buy > 0.275 da 0.27
+                    # 5 mag 2023 and macd > macd 2 min ago
+                    # 27 set 2023 and deviation_buy > 0.272 da > 0.275
+                    
                   
                 # BUY 2 RIALZO IMPROVVISO ! con ma200 > and ma100_last > ma200_last
                 
@@ -7457,15 +8544,14 @@ class ro_cano_che_ritorna:
                     and deviation_range_2 > -0.20
                     and deviation_range_x < 0.20
                     and deviation_range_x > -0.20
+                    and macd >= macd_2_min_ago
                 ):
              
                     buy = "BUY 2 RIALZO IMPROVVISO ! con ma200 > and 100>200 (solo per il buy 2 e per il buy 3) AND 100 SOPRA 300 > 0.40 - r 5686 a"
                     action = "buy"
                     percentage = 70
                     
-                    # 
                   
-                    
                     
                     
                 # BUY 2 RIALZO IMPROVVISO ! con ma200 > and ma100_last > ma200_last
@@ -7475,19 +8561,20 @@ class ro_cano_che_ritorna:
                     and ma100_last > ma200_last
                     and deviation_ma100_sopra_ma300 < 0.40
                     
-                    and deviation_rialzo_improvviso_sopra > 0.48
-                    and deviation_rialzo_improvviso_1 > 0.48
-                    and deviation_rialzo_improvviso_2 > 0.19
-                    and deviation_rialzo_improvviso_3 > 0.19
-                    and deviation_range_1 < 0.20
-                    and deviation_range_1 > -0.20
-                    and deviation_range_2 < 0.20
-                    and deviation_range_2 > -0.20
-                    and deviation_range_x < 0.20
-                    and deviation_range_x > -0.20
+                    and deviation_rialzo_improvviso_sopra > 0.47
+                    and deviation_rialzo_improvviso_1 > 0.47
+                    and deviation_rialzo_improvviso_2 > 0.185
+                    and deviation_rialzo_improvviso_3 > 0.185
+                    and deviation_range_1 < 0.22
+                    and deviation_range_1 > -0.22
+                    and deviation_range_2 < 0.22
+                    and deviation_range_2 > -0.22
+                    and deviation_range_x < 0.22
+                    and deviation_range_x > -0.22
+                    and macd >= macd_2_min_ago
                 ):
              
-                    buy = "BUY 2 RIALZO IMPROVVISO ! con ma200 > and 100>200 (solo per il buy 2 e per il buy 3) AND 100 SOPRA 300 < 0.40 - r 5711 b"
+                    buy = "BUY 2 RIALZO IMPROVVISO ! con ma200 > and 100>200 (solo per il buy 2 e per il buy 3) AND 100 SOPRA 300 < 0.40 - r 5711 B"
                     action = "buy"
                     percentage = 70
                     
@@ -7507,6 +8594,7 @@ class ro_cano_che_ritorna:
                     and ma3_last > ma8_last
                     and ma5_last > ma18_last
                     and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):    
                     buy = "BUY 2 che entra in azione se DOPO 2 MINUTI ma2 va sopra SELL 1 > 0.30 E 5-28 > 0.29 ! - r 5732"
                     action = "buy"
@@ -7537,6 +8625,7 @@ class ro_cano_che_ritorna:
                     and deviation_correzione > 0.12
                     
                     and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2 ECCEZIONALE se ma200 sale da 20 min compra con deviation 4-30 and deviation 3-25 IMPORTATA DA RCCR - riga 5762"
                     action = "buy"
@@ -7545,11 +8634,6 @@ class ro_cano_che_ritorna:
                     # deviation_correzione = 3/25    
                     # non toccare 5 > 15 !
                     # and deviation_buy_ma2_sopra_ma5 > 0.10 FONDAMENTALE
-                    
-                    
-                    
-                    
-                    
                     
                     
                     
@@ -7570,6 +8654,7 @@ class ro_cano_che_ritorna:
                     and ma200_last < ma300_last
                     and deviation_buy_ma5_sopra_ma20 > 0.05
                     and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):    
                     buy = "BUY 2 PENUULTIMA CONDIZIONE ! ma tutte negative MA BUY con 25-200 (ho sostituito 8 > 125) - r 5794 A"
                     action = "buy"
@@ -7598,6 +8683,7 @@ class ro_cano_che_ritorna:
                     and deviation_buy_ma5_sopra_ma20 > 0.05
                     
                     and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):    
                     buy = "BUY 2 PENUULTIMA CONDIZIONE ! ma tutte negative MA BUY con 25-200 (ho sostituito 8 > 125) - r 5794 B"
                     action = "buy"
@@ -7612,10 +8698,12 @@ class ro_cano_che_ritorna:
                 
                 
                 # BUY 2 con ma200 che sale da 60 min etc. importata dal BUY 3 RCCR
-                
+            
                 elif (
                     ma10_last >= ma10_2_min_ago
-                    and ma200_last > ma200_60_min_ago
+                    and ma300_last > ma450_last
+                    
+                    and ma200_last > ma200_30_min_ago
                     and deviation > -0.40
                     
                     and deviation_ma3_sopra_ma10 > 0.10
@@ -7631,16 +8719,43 @@ class ro_cano_che_ritorna:
                     and deviation_buy_ma2_sopra_ma13 > 0.10
                     and ma4_last > ma50_last
                     and ma2_last >= ma2_2_min_ago
-                    
+                    and macd >= macd_2_min_ago
                 ):  
                 
-                    buy = "BUY 2 con ma200 che sale da 60 min 33 > 78 ! and 3-10 > 0.10 - r 5829 A"
+                    buy = "BUY 2 ma300_last > ma450_last e con ma200 che sale da 30 min 33 > 78 ! and 3-10 > 0.10 - r 5829 A"
                     action = "buy"
                     percentage = 70
                     
                     
+                elif (
                     
+                    ma5_last > ma50_last
+                    and ma300_last < ma450_last
+                    and ma200_last > ma200_20_min_ago
                     
+                    and deviation > -0.50
+                    
+                    and deviation_ma3_sopra_ma10 > 0.10
+                    and deviation_ma5_sopra_ma28 > 0.13
+                    and deviation_buy_ma2_sopra_ma13 > 0.10
+                    
+                    and ma3_last > ma13_last
+                    and ma4_last > ma9_last
+                    and ma4_last > ma50_last
+                    and ma7_last > ma25_last
+                  
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                ):  
+                
+                    buy = "BUY 2 con ma300 < ma450 e con ma200 che sale da 20 min 5>50 and 3-10 > 0.10 - r 5829 B"
+                    action = "buy"
+                    percentage = 70
+                    
+                    # 21 mag 2023 5-50 da 33-78 !
+                    # 21 mag 2023 aggiunta macd > macd 2 min ago
+                    # 27 set 2023 5-28 0.13 da 0.14
+                    # 27 set 2023 and ma200_last > ma200_20_min_ago da ma200_last > ma200_20_min_ago
                     
                 # BUY 2 con ma200 che sale da 60 min etc. importata dal BUY 3 RCCR
                 
@@ -7662,7 +8777,7 @@ class ro_cano_che_ritorna:
                     and deviation_buy_ma2_sopra_ma13 > 0.10
                     and ma4_last > ma50_last
                     and ma2_last >= ma2_2_min_ago
-                    
+                    and macd >= macd_2_min_ago
                 ):  
                 
                     buy = "BUY 2 con ma200 che sale da 60 min 33 < 78 ! - r 5860 B"
@@ -7670,34 +8785,66 @@ class ro_cano_che_ritorna:
                     percentage = 70
                     
                     
+                  
                     
                     
                     
-                    
-                    
-                    
-                    
-                    
-                    
+                
                 # BUY 2 RIVOLUZIONARIO se ma39 > ma50 - r 3450
                 
                 elif (
                     deviation_ma4_sopra_ma30 > 0.15
+                    and ma200_last > ma250_last
+                    and ma8_last > ma50_last
                     and ma200_last > ma200_120_min_ago
-                    and ma78_last > ma78_30_min_ago
+                    and ma78_last > ma78_20_min_ago
+                    
+                    and deviation > -0.30
+                    and deviation_bellissima > 0.02
+                    
+                    and delta_buy3_incrocio_ma3_ma8 >= 0.06
+                    
+                    and ma3_last >= ma69_last
+                    
+                    and ma3_last > ma8_last
+                    and ma5_last >= ma15_last
+                    and ma5_last >= ma25_last
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                ):    
+                    buy = "BUY 2 RIVOLUZIONARIO se ma39 > ma50 E CON 78 > 78 30 min ago - r 5892 A1"
+                    action = "buy"
+                    percentage = 70
+                    
+                    # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
+                    # 2 ott dev bellissima 0.06 da 0.07
+
+              
+                elif (
+                    deviation_ma4_sopra_ma30 > 0.15
+                    and ma200_last < ma250_last
+                    
+                    
+                    and ma8_last > ma50_last
+                    and ma200_last > ma200_120_min_ago
+                    and ma78_last > ma78_20_min_ago
                     
                     and deviation > -0.30
                     and deviation_bellissima > 0.06
-                    and ma39_last > ma50_last
+                    
                     and delta_buy3_incrocio_ma3_ma8 >= 0.06
-                    and ma3_last > ma8_last
+                    
                     and ma3_last >= ma69_last
-                    and ma4_last >= ma4_2_min_ago
-                    and ma2_last >= ma2_2_min_ago
+                    
+                    and ma3_last > ma8_last
                     and ma5_last >= ma15_last
                     and ma5_last >= ma25_last
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):    
-                    buy = "BUY 2 RIVOLUZIONARIO se ma39 > ma50 E CON 78 > 78 30 min ago - r 5892 a"
+                    buy = "BUY 2 RIVOLUZIONARIO se ma39 > ma50 E CON 78 > 78 30 min ago - r 5892 A2"
                     action = "buy"
                     percentage = 70
                     
@@ -7734,6 +8881,7 @@ class ro_cano_che_ritorna:
                     and ma2_last >= ma2_2_min_ago
                     and ma5_last >= ma15_last
                     and ma5_last >= ma25_last
+                    and macd >= macd_2_min_ago
                 ):    
                     buy = "BUY 2 RIVOLUZIONARIO se ma39 > ma50 MA 78 < 78 30 min ago E CON 3-10 > 0.17 - r 5919 b1x"
                     action = "buy"
@@ -7772,6 +8920,7 @@ class ro_cano_che_ritorna:
                     and ma2_last >= ma2_2_min_ago
                     and ma5_last >= ma15_last
                     and ma5_last >= ma25_last
+                    and macd >= macd_2_min_ago
                 ):    
                     buy = "BUY 2 RIVOLUZIONARIO se ma39 > ma50 MA 78 < 78 30 min ago E CON 3-10 > 0.17 - r 5919 b1y"
                     action = "buy"
@@ -7783,13 +8932,7 @@ class ro_cano_che_ritorna:
                     # il BUY C'E' MA E' COME SE NON CI FOSSE !
                     
                     
-                    
-                    
-                    
-                    
-                    
-                    
-                    
+                 
                     
                 elif (
                     deviation_ma4_sopra_ma30 > 0.15
@@ -7797,6 +8940,7 @@ class ro_cano_che_ritorna:
                     and deviation_ma250_sopra_ma300 > -0.04
                     
                     and deviation_ma3_sopra_ma10 > 0.10
+                    and deviation_ma3_sopra_ma16 > 0.173
                     and deviation_bellissima > 0.03
                     
                     and ma200_last > ma200_120_min_ago
@@ -7813,13 +8957,14 @@ class ro_cano_che_ritorna:
                     and ma2_last >= ma2_2_min_ago
                     and ma5_last >= ma15_last
                     and ma5_last >= ma25_last
+                    and macd >= macd_2_min_ago
                 ):    
-                    buy = "BUY 2 RIVOLUZIONARIO se ma39 > ma50 MA 78 < 78 30 min ago E CON 3-10 > 0.17 - r 5919 b2"
+                    buy = "BUY 2 RIVOLUZIONARIO se ma39 > ma50 MA 78 < 78 30 min ago E CON 3-10 > 0.10 and deviation_ma3_sopra_ma16 > 0.173 - r 5919 B2"
                     action = "buy"
                     percentage = 70
                     
                     # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
-                    
+                    # 8 giu aggiunta and deviation_ma3_sopra_ma16 > 0.173
                     
                     
                 elif (
@@ -7843,6 +8988,7 @@ class ro_cano_che_ritorna:
                     and ma2_last >= ma2_2_min_ago
                     and ma5_last >= ma15_last
                     and ma5_last >= ma25_last
+                    and macd >= macd_2_min_ago
                 ):    
                     buy = "BUY 2 RIVOLUZIONARIO se ma39 > ma50 MA 78 < 78 30 min ago E CON 3-10 > 0.17 - r 5919 b3"
                     action = "buy"
@@ -7874,6 +9020,7 @@ class ro_cano_che_ritorna:
                     and ma2_last >= ma2_2_min_ago
                     and ma5_last >= ma15_last
                     and ma5_last >= ma25_last
+                    and macd >= macd_2_min_ago
                 ):    
                     buy = "BUY 2 RIVOLUZIONARIO A1 (100 CHE NON E' ATTACCATA ALLA 300 !) e ma39 > ma50 E 8>200 - r 5945 A1"
                     action = "buy"
@@ -7906,6 +9053,7 @@ class ro_cano_che_ritorna:
                     and ma2_last >= ma2_2_min_ago
                     and ma5_last >= ma15_last
                     and ma5_last >= ma25_last
+                    and macd >= macd_2_min_ago
                 ):    
                     buy = "BUY 2 RIVOLUZIONARIO A2 (con 100 CHE E' ATTACCATA ALLA 300 !) (pericolo !) E 3-10 > 0.11 e 39 > 50 and 8 > 200 - r 5945 A2"
                     action = "buy"
@@ -7916,20 +9064,101 @@ class ro_cano_che_ritorna:
                     
                     
                     
-                # BUY 2 RIVOLUZIONARIO A3 (100 NON E' ATTACCATA ALLA 300 !) e 39>50 E 8>200 and deviation_ma100_sopra_ma300 > 0.05 
+                    
+                # BUY 2 RIVOLUZIONARIO A3x (100 NON E' ATTACCATA ALLA 300 !) e 39>50 E 8>200 and deviation_ma100_sopra_ma300 > 0.05 
+                
+                elif (
+                    deviation_ma4_sopra_ma30 > 0.13
+                    and ma300_last > ma300_301_min_ago
+                    and ma200_last < ma200_120_min_ago
+                    
+                    and ma5_last > ma50_last
+                    and delta_1 < delta_2
+                    
+                    and deviation_ma100_sopra_ma300 < -0.05
+                    and deviation_ma3_sopra_ma18 > 0.10
+                    and deviation_bellissima > 0.05
+                    
+                    and deviation > -0.30
+                    
+                    and delta_buy3_incrocio_ma3_ma8 >= 0.06
+                    and ma3_last > ma8_last
+                    and ma3_last >= ma59_last
+                    and ma4_last >= ma4_2_min_ago
+                    and ma2_last >= ma2_2_min_ago
+                    and ma5_last >= ma15_last
+                    and ma5_last >= ma25_last
+                    and macd >= macd_2_min_ago
+                ):    
+                    buy = "BUY 2 RIVOLUZIONARIO A3x CON ma300_last > ma300_301_min_ago e con delta_1 < delta_2 e con 100 CHE NON E' ATTACCATA ALLA 300 ! e 5>50 - r 5945 A3x1"
+                    action = "buy"
+                    percentage = 70
+                    
+                    # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
+                    # 26 set 100-300 se stanno attaccate e' molto rischioso ! vedi ore 22:48 24 set 2022
+                    # 15 dic 2022 8-28 da 28-50
+                    # 23 feb 2023 aggiunta 3-18 > 0.10
+                    # 22 mag 2023 se ma300_last > ma300_301_min_agovbuy con 5-50 da 5-200
+                    
+                    
+                    
+                    
+                # BUY 2 RIVOLUZIONARIO A3x (100 NON E' ATTACCATA ALLA 300 !) e 39>50 E 8>200 and deviation_ma100_sopra_ma300 > 0.05 
+                
+                elif (
+                    ma5_last > ma39_last
+                    
+                    and ma300_last < ma300_301_min_ago
+                    
+                    and delta_1 < delta_2
+                    and deviation_ma100_sopra_ma300 < -0.05 
+                    
+                    and deviation_ma3_sopra_ma18 > 0.10
+                    and deviation_bellissima > 0.05
+                    and deviation_ma4_sopra_ma30 > 0.13
+                    
+                    and ma200_last < ma200_120_min_ago
+                    
+                    and deviation > -0.30
+                    
+                    and delta_buy3_incrocio_ma3_ma8 >= 0.06
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and ma3_last > ma8_last
+                    and ma4_last >= ma4_2_min_ago
+                    
+                    and ma5_last >= ma15_last
+                    and ma5_last >= ma25_last
+                    and macd >= macd_2_min_ago
+                ):    
+                    buy = "BUY 2 RIVOLUZIONARIO A3x con ma300 < 6 ore con delta_1 < delta_2 e con 100 CHE NON E' ATTACCATA ALLA 300 ! con 5-39 - r 5945 A3x2"
+                    action = "buy"
+                    percentage = 70
+                    
+                    # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
+                    # 26 set 100-300 se stanno attaccate e' molto rischioso ! vedi ore 22:48 24 set 2022
+                    # 15 dic 2022 8-28 da 28-50
+                    # 23 feb 2023 aggiunta 3-18 > 0.10
+                    
+                    
+                    
+                    
+                    
+                # BUY 2 RIVOLUZIONARIO A3y (100 NON E' ATTACCATA ALLA 300 !) e 39>50 E 8>200 and deviation_ma100_sopra_ma300 > 0.05 
                 
                 elif (
                     deviation_ma4_sopra_ma30 > 0.14
+                    and delta_1 > delta_2
                     and deviation_bellissima > 0.06
                     
                     and deviation_ma100_sopra_ma300 < -0.05
                     
                     and ma200_last < ma200_120_min_ago
-                    and ma8_last > ma200_last
+                    and ma5_last > ma200_last
                     
                     and deviation > -0.30
                     
-                    and ma28_last > ma50_last
+                    and ma8_last > ma50_last
                     and delta_buy3_incrocio_ma3_ma8 >= 0.06
                     and ma3_last > ma8_last
                     and ma3_last >= ma69_last
@@ -7937,18 +9166,17 @@ class ro_cano_che_ritorna:
                     and ma2_last >= ma2_2_min_ago
                     and ma5_last >= ma15_last
                     and ma5_last >= ma25_last
+                    and macd >= macd_2_min_ago
                 ):    
-                    buy = "BUY 2 RIVOLUZIONARIO A3 con 100 CHE NON E' ATTACCATA ALLA 300 ! e ma39 > ma50 and 8 > 200 - r 5945 A3"
+                    buy = "BUY 2 RIVOLUZIONARIO A3y CON delta_1 > delta_2 e con 100 CHE NON E' ATTACCATA ALLA 300 ! e 8>50 and 5>200 - r 5945 A3y"
                     action = "buy"
                     percentage = 70
                     
                     # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
                     # 26 set 100-300 se stanno attaccate e' molto rischioso ! vedi ore 22:48 24 set 2022
+                    # 15 dic 2022 8-28 da 28-50
                     
-                    
-                    
-                    
-                    
+                  
                     
                     
                     
@@ -7971,6 +9199,7 @@ class ro_cano_che_ritorna:
                     and ma2_last >= ma2_2_min_ago
                     and ma5_last >= ma15_last
                     and ma5_last >= ma25_last
+                    and macd >= macd_2_min_ago
                 ):    
                     buy = "BUY 2 RIVOLUZIONARIO se ma39 > ma50 - r 5945 B"
                     action = "buy"
@@ -8004,7 +9233,7 @@ class ro_cano_che_ritorna:
              
                     and deviation_range_x < 0.20
                     and deviation_range_x > -0.20
-                 
+                    and macd >= macd_2_min_ago
                 ):
 
                     buy = "BUY 2 RIALZO IMPROVVISO NO CROLLO con 200 < pericolo falsi acquisti DOPO TANTO TEMPO DI TREND LATERALE - POTREBBE SUCCEDERE ! - r 5978 A"
@@ -8037,7 +9266,7 @@ class ro_cano_che_ritorna:
              
                     and deviation_range_x < 0.20
                     and deviation_range_x > -0.20
-                 
+                    and macd >= macd_2_min_ago
                 ):
 
                     buy = "BUY 2 RIALZO IMPROVVISO DURANTE CROLLO (aggiunta 3-10 !) con 200 < pericolo falsi acquisti - POTREBBE SUCCEDERE ! e' successo ! - r 5978 B"
@@ -8065,9 +9294,10 @@ class ro_cano_che_ritorna:
                     and deviation_range_2 > -0.22
                     and deviation_range_x < 0.22
                     and deviation_range_x > -0.22
+                    and macd >= macd_2_min_ago
                 ):
              
-                    buy = "BUY 2 RIALZO IMPROVVISO con 200 > e con > 0.72 DOPO TANTO TEMPO DI TREND LATERALE - POTREBBE SUCCEDERE e' successo ! - r 5979"
+                    buy = "BUY 2 RIALZO IMPROVVISO con 200 > e con > 0.72 DOPO TANTO TEMPO DI TREND LATERALE - POTREBBE SUCCEDERE e' successo ! - r 5979 A"
                     action = "buy"
                     percentage = 70
                     
@@ -8096,9 +9326,9 @@ class ro_cano_che_ritorna:
                     and deviation_ma5_sotto_ma300 < -0.43
                     
                     and ma2_last > ma2_2_min_ago
-                
+                    and macd >= macd_2_min_ago
                 ):
-                    buy = "BUY 2 CHE MANCAVA DOPO 5 ore di ribasso buy con 5-28>0.30 perdio se entra dopo 5 ore deve essere piu' sicuro ! - r 5979"
+                    buy = "BUY 2 CHE MANCAVA DOPO 5 ore di ribasso buy con 5-28>0.30 perdio se entra dopo 5 ore deve essere piu' sicuro ! - r 5979 B"
                     action = "buy"
                     percentage = 80
                     
@@ -8124,13 +9354,15 @@ class ro_cano_che_ritorna:
                     and deviation_buy_ma5_sopra_ma20 > 0.01
                     
                     and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):    
-                    buy = "BUY 2 ULTIMA CONDIZIONE ! ma tutte negative MA 50 > 100 (integra r2505) con 78>100 - r 5980 A"
+                    buy = "BUY 2 ULTIMA CONDIZIONE ! ma tutte negative MA 50 > 100 (integra r2505) con 78>100 - r 5980 a"
                     action = "buy"
                     percentage = 70
                     
                     # aggiunta di 5-28 > 0.12
                     # 22 set aggiunta di 3-10 > 0.11
+                    
                     
                     
                 # BUY 2 ultima condizione ! ma tutte negative MA BUY con 50-100 (integra r2505)
@@ -8149,12 +9381,89 @@ class ro_cano_che_ritorna:
                     and deviation_buy_ma5_sopra_ma20 > 0.05
                     
                     and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):    
-                    buy = "BUY 2 ULTIMA CONDIZIONE ! ma tutte negative MA 50 > 100 (integra r2505) con 78<100 - r 5980b"
+                    buy = "BUY 2 ULTIMA CONDIZIONE ! ma tutte negative MA 50 > 100 (integra r2505) con 78<100 - r 5980 b"
                     action = "buy"
                     percentage = 70
                     
                     # aggiunta di 5-28 < 0.12
+                    
+                    
+                    
+                elif (
+                    
+                    ma18_last > ma100_last
+                    and deviation_ma5_sotto_ma300 > -0.40
+                    
+                    and ma100_last < ma100_180_min_ago
+                    and ma200_last < ma200_180_min_ago
+                    and ma300_last < ma300_180_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and deviation_ma5_sopra_ma28 > 0.02
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                    and macd > 5
+                ):
+                    buy = "BUY 2 > 180 min di ribasso 26 luglio 2023 - r 5984"
+                    action = "buy"
+                    percentage = 90
+                    
+                    # 24 ago 2023 macd > macd 2 min ago
+                    # 24 ago 2023 macd > 5
+
+              
+
+                # BUY 2 crollo MISSILE COMPA ! modo 2
+                 
+                elif (    
+                    ma3_last > ma4_last
+                    and ma78_last < ma300_last
+                    and macd < -245
+                ):
+                    buy = "BUY 2 crollo MISSILE COMPA modo 2 con 3>4 AND MACD < -245 ! and ma78_last < ma300_last - AGOSTO 2023 - r 5985"
+                    action = "buy"
+                    percentage = 80
+
+
+
+
+                # BUY 2 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND dev 5-30 CON AGGIUNTA PENSIERO LATERALE
+                
+                elif (
+                    
+                    ma4_last > ma18_last
+                    and deviation_ma5_sopra_ma28 < 0.01
+                    and deviation_ma3_sopra_ma10 > 0.107
+                    
+                    
+                    and deviation_ma5_sopra_ma200 < -0.30
+                    and deviation_ma5_sotto_ma300 < -0.30
+                    and deviation_ma5_sotto_ma450 < -0.30
+                    and deviation_ma50_sopra_o_sotto_ma100 < -0.01
+                    
+                    and deviation_ma100_sopra_ma300 < -0.10
+                    
+                    and ma300_last < ma300_60_min_ago
+                    and ma200_last < ma200_60_min_ago
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                ):
+                    buy = "BUY 2 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 CON AGGIUNTA PENSIERO LATERALE and macd > macd 2 min ago - r 6000"
+                    action = "buy"
+                    percentage = 50
+                  
+                    #  1 ago 2023 5-28 < 0.05
+                    #  1 ago 2023 3-10 > 0.107
+                    # 12 set 2023 5-28 < 0.01 da 0.05
+                
+                
+                
                     
                     
                     
@@ -8173,7 +9482,7 @@ class ro_cano_che_ritorna:
                     
                     ma8_last > ma39_last
                     and ma300_last > ma450_last
-                    
+                    and ma450_last > ma450_360_min_ago
                     and ma200_last > ma200_60_min_ago
                     and deviation > -0.30
                     and deviation_ma3_sopra_ma10 > 0.11
@@ -8191,12 +9500,42 @@ class ro_cano_che_ritorna:
                     
                 ):  
                 
-                    buy = "BUY 3A con ma200 che sale da 60 min and ma300_last > ma450_last and ma8_last > ma39_last - r 6016 A"
+                    buy = "BUY 3A con ma200 che sale da 60 min and ma300_last > ma450_last and ma8_last > ma39_last - r 6016 A1"
+                    action = "buy"
+                    percentage = 80
+                    
+                    #  1 gen 2023 se 450 > 450 360 min ago 5-28 > 0.13
+                    
+                elif (
+                    
+                    ma8_last > ma39_last
+                    and ma300_last > ma450_last
+                    and ma450_last < ma450_360_min_ago
+                    and ma200_last > ma200_60_min_ago
+                    and deviation > -0.30
+                    and deviation_ma3_sopra_ma10 > 0.11
+                    and deviation_ma5_sopra_ma28 > 0.20
+                    
+                    and deviation_ma4_sopra_ma30 > 0.10
+                    and ma3_last > ma13_last
+                    and ma4_last > ma9_last
+                    and deviation_ma7_sopra_ma40 > 0.05
+                    and ma7_last > ma25_last
+                    
+                    and deviation_buy_ma2_sopra_ma13 > 0.10
+                    and ma4_last > ma50_last
+                    and ma2_last >= ma2_2_min_ago
+                    
+                ):  
+                
+                    buy = "BUY 3A con ma200 che sale da 60 min and ma300_last > ma450_last and ma8_last > ma39_last - r 6016 A2"
                     action = "buy"
                     percentage = 80
 
                     # deviation_buy3 = ma4_last/ma30_last
                     # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
+                    #  1 gen 2023 se 450 < 450 360 min ago 5-28 > 0.20 !
+                    
                     
                     
                 elif (
@@ -8227,10 +9566,6 @@ class ro_cano_che_ritorna:
 
                     # deviation_buy3 = ma4_last/ma30_last
                     # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
-                    
-                    
-                    
-                    
                     
                     
                 
@@ -8305,19 +9640,20 @@ class ro_cano_che_ritorna:
                     
                     
                 elif (
-                    ma10_last > ma10_2_min_ago
+                    ma5_last > ma5_2_min_ago
                     and ma300_last > ma300_301_min_ago
+                    
                     and ma28_last < ma78_last
                     and ma100_last < ma100_60_min_ago
                     
                     and ma200_last > ma200_60_min_ago
                     and deviation > -0.30
-                    and deviation_ma5_sopra_ma28 > 0.18
+                    and deviation_ma5_sopra_ma28 > 0.15
                     
-                    and deviation_ma4_sopra_ma30 > 0.11
+                    and deviation_ma4_sopra_ma30 > 0.10
                     and ma3_last > ma13_last
                     and ma4_last > ma9_last
-                    and deviation_ma7_sopra_ma40 > 0.07
+                    and deviation_ma7_sopra_ma40 > 0.05
                     and ma7_last > ma25_last
                     
                     and deviation_buy_ma2_sopra_ma13 > 0.10
@@ -8333,6 +9669,9 @@ class ro_cano_che_ritorna:
                     # deviation_buy3 = ma4_last/ma30_last
                     # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
                     # 28 set con 300 > 301 min ago anticipa ndecchia
+                    # 23 feb 2023 5>5 2 min ago invece di 10> 10 2 min ago
+                    # 300 sale da 5 ore NON DIMENTICARLO !
+                    
                     
                     
                 elif (
@@ -8365,19 +9704,7 @@ class ro_cano_che_ritorna:
                     # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
                     
                     
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
+                   
                     
                     
                 # BUY 3A con ma69 > MA ma200 scende da 60 min ! MA CON ma300>60 min ago
@@ -8485,12 +9812,7 @@ class ro_cano_che_ritorna:
                     # SE ma100 E' cosi' VICINA A ma200 E ma300 vuo dire che non c'e' un grande rialzo in atto ma un TREND LATERALE !
                     
                     
-                    
-                    
-                    
-                    
-                    
-                    
+               
                     
                 # BUY 3 nuovo TREND LATERALE !
                 
@@ -8516,11 +9838,7 @@ class ro_cano_che_ritorna:
                     # SE ma100 E' cosi' VICINA A ma200 E ma300 vuo dire che non c'e' un grande rialzo in atto ma un TREND LATERALE !
                     
                     
-                    
-                    
-                
-                
-                
+                   
                 
                 #  BUY 3A con ma69 > MA ma200 scende da 60 min ! and ma300_last > ma300_60_min_ago
                 
@@ -8554,12 +9872,12 @@ class ro_cano_che_ritorna:
                 ####################################################################################
                 ####################################################################################
                 
-                
-                # BUY 3 migliore formula MY COMPA - che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-50 - (importata dal BUY 1 r 1043 B)
+                # BUY 3 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-59 - da buy 1 riga 1043 B - ma senza doppio delta
                 
                 elif (
                     
-                    ma8_last > ma50_last
+                    ma8_last > ma59_last
+                    and deviation_ma5_sopra_ma59 < -0.12
                     
                     
                     and deviation_ma10_sopra_ma200 < -0.25
@@ -8579,7 +9897,7 @@ class ro_cano_che_ritorna:
                     and ma2_last >= ma2_2_min_ago
               
                 ):
-                    buy = "BUY 3 migliore formula MY COMPA - che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-50 - riga 6243"
+                    buy = "BUY 3 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-59 - da buy 1 riga 1043 B ma senza doppio delta - r 6242"
                     action = "buy"
                     percentage = 50
                     
@@ -8591,9 +9909,122 @@ class ro_cano_che_ritorna:
                     # 28 ottobre 2022 5-28 = 0.04
                     # ave comba
                     # 31 ottobre aggiunta dev 10-200 - formula MY COMPA
+                    # 12 dic 2022 8-59 da 8-50 e aggiungo pensiero laterale (condizione sotto)
+                    # 22 dic 2022 and deviation_ma5_sopra_ma59 < -0.10
+                    
+                    
+                    
+                # BUY 3 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-50 - formula MY COMPA (importata dal BUY 1 r 1043 B)
+                
+                elif (
+                    
+                    ma5_last > ma18_last
+                    
+                    and deviation_ma10_sopra_ma200 < -0.25
+                    and deviation_ma10_sopra_ma200 > -0.40
+                  
+                    and deviation_ma100_sopra_ma200 > -0.40
+                    
+                    and deviation_ma5_sotto_ma300 < 0.45
+                    and deviation_ma5_sotto_ma300 > -0.75
+                    
+                    and ma300_last < ma300_60_min_ago
+                    and ma200_last < ma200_60_min_ago
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > 0.075
+                    and deviation_ma5_sopra_ma28 > 0.04
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd > macd_2_min_ago
+                ):
+                    buy = "BUY 3 che considera distanza 5-300 AND dev 10-200 < -0.25 and > -0.40 (laterale!) AND 5-18 AND 3-16 and macd > macd_2_min_ago - formula MY COMPA - r 6243 A"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # importante : ma100 sta sotto la ma200 non le e' troppo lontana
+                    # 30 mag 2023 5-18 da 5-50
+                    # 10 giu 2023 aggiunta 3-16 IL BUY 3 deve avere 3-16 !
+                    
+                    
+                    
+                # BUY 3 migliore formula MY COMPA - che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-50 - (importata dal BUY 1 r 1043 B)
+                
+                elif (
+                    
+                    ma8_last > ma50_last
+                    and delta_100_59 < delta_100_59_60_min
+                    
+                    and deviation_ma10_sopra_ma200 < -0.25
+                    and deviation_ma10_sopra_ma200 > -0.40
+                  
+                    and deviation_ma100_sopra_ma200 > -0.40
+                    
+                    and deviation_ma5_sotto_ma300 < 0.45
+                    and deviation_ma5_sotto_ma300 > -0.75
+                    
+                    and ma300_last < ma300_60_min_ago
+                    and ma200_last < ma200_60_min_ago
+                    
+                    and deviation_ma3_sopra_ma10 > 0.068
+                    and deviation_ma5_sopra_ma28 > 0.04
+                    
+                    and ma2_last >= ma2_2_min_ago
+              
+                ):
+                    buy = "BUY 3 migliore formula MY COMPA - che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-50 - r 6243 b"
+                    action = "buy"
+                    percentage = 50
+                    
+                    # importante : ma100 sta sotto la ma200 non le e' troppo lontana
+                    
+                    # 21 ottobre 2022  aggiunta di 3-10 e 5-28
+                    # 21 ottobre 2022 3-10 = 0.01
+                    # 21 ottobre 2022 5-28 = 0.05
+                    # 28 ottobre 2022 5-28 = 0.04
+                    # ave comba
+                    # 31 ottobre aggiunta dev 10-200 - formula MY COMPA
+                    # 7 feb 2023 3-10 0.068
                     
                     ####################################################################################
                     ####################################################################################
+                    
+                    
+                # BUY 3 RCCR PORTATA MADDOG maria callas core 'ngrato - 2 sett 2022 ore 5:03 - ma300 che SCENDE
+                
+                elif (     
+                    
+                    deviation_callas < -0.10
+                    and deviation_ma50_sotto_ma300 < -0.29
+                    and deviation_ma78_sotto_ma300 < -0.23
+                    and deviation_ma78_sotto_ma200 < -0.30
+                    and deviation_ma5_sotto_ma300 < -0.60
+                    
+                    and ma300_last < ma300_301_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma200_120_min_ago
+                    
+                    and deviation_ma3_sopra_ma10 > 0.07
+                    and deviation_ma5_sopra_ma28 > 0.07
+                    
+                    and ma2_last >= ma20_last
+                    and ma2_last >= ma2_2_min_ago
+                ):    
+                    buy = "BUY 3 maria callas core 'ngrato 5-59 PORTATA DA RCCR- con 5 sotto 300 < -0.60 - 2 sett 2022 ore 5:03 - ma300 che SCENDE - r 6244"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # vedi che c'e' ma 300 che scende
+                    # 19 set 2022 ho anticipato maria callas core ngrato di una ndecchiecella
+                    # se 78 sta vicino alla 200 3-10 piu' alto ! cazzo ! vedi 20 settembre ore 14:47
+                    # 24 set 2022 5-28 > 0.11 da 0.12
+                    # 26 set 2022 5-28 > 0.108 da 0.11
+                    #  7 ott 2022 5-28 > 0.105 da 0.108
+                    # 19 ott 2022 5-28 > 0.10 da 0.105 VIVA MARIA CALLAS ! condizione meravigliosa
+                    #  8 nov maria callas con 5-59 - da 5-69
+                    #  16 nov ho tolto ma5_last > ma59_last e ho messo dev callas = 5/54 <-0.10 PENSIERO LATERALE - VEDI 16 NOV ore 15 :33
+                    # 20 aper 2023 5-28 a 0.07 da 0.10
                     
                     
                     
@@ -8753,6 +10184,7 @@ class ro_cano_che_ritorna:
                     and ma4_last > ma4_2_min_ago
                     and ma2_last > ma2_2_min_ago
                     and ma7_last > ma25_last
+                    and ma2_last > ma3_last
                 ):
                     buy = "BUY 3D RIVOLUZIONARIO con 300 < 120 min ago e se ma69 < AND ma78_last > ma200_last - r 6329 a2"
                     action = "buy"
@@ -8760,15 +10192,14 @@ class ro_cano_che_ritorna:
                     
                     # deviation_buy3 = ma4_last/ma30_last
                     # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
-                    
+                    #  1 giu 2023 ma2 > ma3 !
                     
                     
                     
                 elif (
                     ma69_last < ma69_2_min_ago
                     and deviation > -0.30
-                    and ma200_last < ma250_last
-                    and ma200_last > ma250_last
+                    
                     and ma78_last < ma200_last
                     and deviation_ma3_sopra_ma10 > 0.15
                     
@@ -8791,13 +10222,7 @@ class ro_cano_che_ritorna:
                     
                     
                     
-                    
-                    
-                    
-                    
-                    
-                    
-                    
+                 
                     
                     
                 # BUY 3 importata da RCCR - AUDI CHE NON E' UN CROLLO ! con 5-16
@@ -8805,16 +10230,43 @@ class ro_cano_che_ritorna:
                 elif (
                     
                     deviation_buy_crollo_1 < -0.60
+                    and deviation_buy_crollo_1 > -1.60
+                    
+                    and ma78_last < ma200_last
+                    
+                    and delta_1_69_39 < delta_2_69_39
+                    
+                    and ma5_last > ma13_last
+                    and deviation_ma3_sopra_ma10 > 0.02
+                    
+                    and ma2_last > ma2_2_min_ago
+                    and macd > macd_2_min_ago
+                    
+                ):
+                    buy = "BUY 3 importata da RCCR - AUDI CHE NON E' UN CROLLO ! con 5-16 and 3-10 con DOPPIO DELTA 69-39 GIORNO - r 6388 A"
+                    action = "buy"
+                    percentage = 90
+                    
+                    # deviation_buy_crollo_1 = ma8_last / ma78_last
+                    # questa cosa che 78 deve essere < 200 ha dell' incredibile. MA NON TOCCARE !   
+                    # 15 nov 2022 AGGIUNTA 3-10 vedi 8 nov ore 21:23
+                    # 12 set 2023 dev sell 5-13 da 5-16 con aggiunta di macd > macd 2 min ago
+                    
+                elif (
+                    
+                    deviation_buy_crollo_1 < -0.60
                     and deviation_buy_crollo_1 > -1.50
                     
-                    and ma5_last > ma16_last
+                    and delta_1_69_39 > delta_2_69_39
+                    
+                    and ma5_last > ma33_last
                     and deviation_ma3_sopra_ma10 > 0.02
                     
                     and ma2_last > ma2_2_min_ago
                     and ma78_last < ma200_last
                     
                 ):
-                    buy = "BUY 3 importata da RCCR - AUDI CHE NON E' UN CROLLO ! con 5-16 and 3-10 - r 6388"
+                    buy = "BUY 3 importata da RCCR - AUDI CHE NON E' UN CROLLO ! con 5-33 and 3-10 CON DOPPIO DELTA 69-39 NOTTE - r 6388 B"
                     action = "buy"
                     percentage = 90
                     
@@ -8882,9 +10334,7 @@ class ro_cano_che_ritorna:
                     # deviation_buy2 = ma8_last / ma50_last
                     
                     
-                    
-                    
-                    
+                   
                     
                     
                 # BUY 3 nuovo RIALZO IMPROVVISO ma trend gia' in rialzo da 120 min and 0.27 sopra ultimo sell se 300>120 min e 100 sopra 300> 0.40 
@@ -8896,6 +10346,7 @@ class ro_cano_che_ritorna:
                     and ma300_last > ma300_120_min_ago
                     
                     and deviation_buy > 0.27
+                    and deviation_ma3_sopra_ma10 > 0.10
                     
                     and ma150_last > ma150_60_min_ago
                     and ma2_last >= ma2_2_min_ago
@@ -8905,23 +10356,26 @@ class ro_cano_che_ritorna:
                     buy = "BUY 3 nuovo RIALZO IMPROVVISO ma trend gia' in rialzo da 120 min and 0.27 sopra ultimo sell se 300>120 min e 100 sopra 300> 0.40 - r 6470"
                     action = "buy"
                     percentage = 70
-                  
+                    
+                    # 31 lug 2023 aggiunta and deviation_ma3_sopra_ma10 > 0.10
+
+              
                   
                 # BUY 3 RIALZO IMPROVVISO ! con ma200 > and ma100_last > ma200_last
                 
                 elif (
                     ma200_last > ma200_20_min_ago
                     and ma100_last > ma200_last
-                    and deviation_rialzo_improvviso_sopra > 0.48
-                    and deviation_rialzo_improvviso_1 > 0.48
-                    and deviation_rialzo_improvviso_2 > 0.19
-                    and deviation_rialzo_improvviso_3 > 0.19
-                    and deviation_range_1 < 0.20
-                    and deviation_range_1 > -0.20
-                    and deviation_range_2 < 0.20
-                    and deviation_range_2 > -0.20
-                    and deviation_range_x < 0.20
-                    and deviation_range_x > -0.20
+                    and deviation_rialzo_improvviso_sopra > 0.47
+                    and deviation_rialzo_improvviso_1 > 0.47
+                    and deviation_rialzo_improvviso_2 > 0.185
+                    and deviation_rialzo_improvviso_3 > 0.185
+                    and deviation_range_1 < 0.21
+                    and deviation_range_1 > -0.21
+                    and deviation_range_2 < 0.21
+                    and deviation_range_2 > -0.21
+                    and deviation_range_x < 0.21
+                    and deviation_range_x > -0.21
                 ):
              
                     buy = "BUY 3 RIALZO IMPROVVISO ! con ma200 > and 100>200 (solo per il buy 2 e per il buy 3) - r 6479"
@@ -8929,11 +10383,7 @@ class ro_cano_che_ritorna:
                     percentage = 80
                     
                     
-                    
-                    
-                    
-                    
-                    
+                 
                     
                     
                 # BUY 3 con ma200> piccola CORREZIONE in alto FIAT che NON E' un forte ribasso e NON E' un crollo ! ALTRA RIGA RCCR che e' andata bene.
@@ -8942,7 +10392,9 @@ class ro_cano_che_ritorna:
                     
                     ma5_last > ma150_last
                     and deviation_ma100_sopra_ma300 > 0.50
-                     
+                    and deviation_ma300_sopra_ma450 > 0.40
+                    and deviation_ma3_sopra_ma18 > 0.14
+                  
                     and ma200_last > ma200_20_min_ago
                     and ma3_last > ma28_last
                     and ma2_last > ma2_2_min_ago
@@ -8958,7 +10410,39 @@ class ro_cano_che_ritorna:
                     and deviation_ma5_sopra_ma28 > -0.02
                 ):    
                     
-                    buy = "BUY 3 correzione in alto con 200 > - riga 1384 RCCR portata nel MADDOG - r 6480 A"
+                    buy = "BUY 3 correzione in alto con 200 > - riga 1384 RCCR portata nel MADDOG - r 6480 A1"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # 30 set importato r 1384 RCCR su BUY 3 MADDOG
+                    # 30 set 2022 aggiunta 3-10
+                    # 30 set 2022 aggiunta 5.28
+                    #  2 ott 2022 3-10 0.10 !
+                    
+                    
+                elif (    
+                    
+                    ma5_last > ma150_last
+                    and deviation_ma100_sopra_ma300 > 0.50
+                    and deviation_ma300_sopra_ma450 < 0.40
+                    and deviation_ma3_sopra_ma18 > 0.10
+                  
+                    and ma200_last > ma200_20_min_ago
+                    and ma3_last > ma28_last
+                    and ma2_last > ma2_2_min_ago
+                    
+                    and ma100_last > ma200_last
+                    and ma200_last > ma300_last
+                    
+                    and ma100_last > ma100_60_min_ago
+                    and ma200_last > ma200_60_min_ago
+                    and ma300_last > ma300_60_min_ago
+                    
+                    and deviation_ma3_sopra_ma10 > 0.113
+                    and deviation_ma5_sopra_ma28 > -0.02
+                ):    
+                    
+                    buy = "BUY 3 correzione in alto con 200 > - riga 1384 RCCR portata nel MADDOG - r 6480 A2"
                     action = "buy"
                     percentage = 80
                     
@@ -9020,7 +10504,7 @@ class ro_cano_che_ritorna:
                     and ma300_last > ma300_120_min_ago
                     
                     and deviation_ma3_sopra_ma10 > 0.057
-                    and deviation_ma5_sopra_ma28 > 0.027
+                    and deviation_ma5_sopra_ma28 > 0.057
                 ):    
                     
                     buy = "BUY 3 correzione in basso con 200 > - riga 1384 RCCR portata nel MADDOG - r 6480 B2"
@@ -9032,7 +10516,7 @@ class ro_cano_che_ritorna:
                     # 30 set 2022 aggiunta 5.28
                     # 18 nov 2022 3-10 = 0.057
                     # 18 nov 2022 5-28 = 0.027
-                    
+                    # 5 dic 5-28 0.057 da 0.027
                     
                     
                     
@@ -9141,7 +10625,7 @@ class ro_cano_che_ritorna:
                 
                 elif (
                     
-                    ma18_last > ma78_last
+                    ma8_last > ma78_last
                     and deviation_ma5_sotto_ma300 > -0.40
                     
                     and ma100_last < ma100_120_min_ago
@@ -9151,23 +10635,27 @@ class ro_cano_che_ritorna:
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
                     
+                    and deviation_ma3_sopra_ma16 > 0.12
                     and deviation_ma5_sopra_ma28 > 0.08
-                    and ma2_last >= ma2_2_min_ago
                     
+                    and ma2_last >= ma2_2_min_ago
+                    and macd > macd_2_min_ago
                 ):
-                    buy = "BUY 3 29 ago 2022 > 120 min di ribasso AND 18>78 - r 6570 A"
+                    buy = "BUY 3 29 ago 2022 > 120 min di ribasso AND 8>78 - r 6570 A"
                     action = "buy"
                     percentage = 90
                     
                     # 14 set 2022 18-78 da 18-100
                     #  8 nov 2022 300 con 120 min faceva arrivare tardi il buy. cosi' ho ridotto a 30 min. (non era la 18-78 che faceva arrivare tardi il buy)
+                    # 17 mar 2023 aggiunta 3-16 >0.12
+                    # 14 set 2023 8-78 da 18-78
                     
                     
                 # BUY 3 29 ago 2022 > 120 min di ribasso
                 
                 elif (
                     
-                    ma8_last > ma59_last
+                    ma8_last > ma39_last
                     and deviation_ma5_sotto_ma300 < -0.40
                     
                     and ma100_last < ma100_120_min_ago
@@ -9176,29 +10664,36 @@ class ro_cano_che_ritorna:
                     
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
+                    and deviation_ma3_sopra_ma16 > 0.02
+                    and deviation_ma5_sopra_ma28 > 0.10
                     
-                    and deviation_ma5_sopra_ma28 > 0.11
                     and ma2_last >= ma2_2_min_ago
-                    
+                    and macd > macd_2_min_ago
+                    and macd_differenza_2_min_ago > 1
                 ):
-                    buy = "BUY 3 29 ago 2022 > 120 min di ribasso AND 8>59 AND 5-28 > 0.11 - r 6570 B"
+                    buy = "BUY 3 29 ago 2022 > 120 min di ribasso AND 8>39 AND 5-28 > 0.10 and 3-16 > 0.02 and macd > macd 2 min ago - r 6570 B"
                     action = "buy"
                     percentage = 90
                     
                     # 14 set 2022 18-78 da 18-100
                     # 11 ott 2022 mentre scende dopo 2 ore se accelera al ribasso (5 si allontana da 300) interviene prima con 8-59 !
                     # 19 ottobre 2022 5-28 0.11 da 0.08
-                    
-                    
-                    
-                    
-                    
+                    # 16 mar 2023 3-16 a > 0.02
+                    # 21 agosto 2023 5-28 0.10 da 0.11
+                    # 21 agosto 2023 8-39 da 8-59
+                    # 21 agosto 2023 and macd > macd 2 min ago
+                    #  1 set sembra che macd> macd 2 min ago non prende se sta nella stessa unita' per es 7.75 - 5-44 allora mi sono inventato differenza macd che deve essere > 1
+              
+
+
+
+              
                 # BUY 3 29 ago 2022 > 180 min di ribasso
                 
                 elif (
                     
-                    ma18_last > ma100_last
-                    and deviation_ma5_sotto_ma300 > -0.40
+                    ma4_last > ma39_last
+                    and deviation_ma5_sotto_ma300 > -0.45
                     
                     and ma100_last < ma100_180_min_ago
                     and ma200_last < ma200_180_min_ago
@@ -9207,15 +10702,119 @@ class ro_cano_che_ritorna:
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
                     
+                    and deviation_ma3_sopra_ma10 > 0.02
                     and deviation_ma5_sopra_ma28 > 0.02
-                    and ma2_last >= ma2_2_min_ago
                     
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                    and macd > 4
                 ):
-                    buy = "BUY 3 29 ago 2022 > 180 min di ribasso - r 6572 A"
+                    buy = "BUY 3 29 ago 2022 > 180 min di ribasso con 4-39 - r 6572 A1"
                     action = "buy"
                     percentage = 90
                     
+                    # 13 feb 2023 3-10 > 0.02
+                    #  1 ago 2023 5-200 invece di 10-100
+                    # 24 ago 2023 and macd > macd_2_min_ago
+                    # 24 ago 2023 and macd > 5
+                    # 16 set 2023 5-78 invece di 5-200
+                    # 17 set 2023 5-54 invece di 5-78
+                    # 28 set 2023 5-39 invece di 5-54 (5 sotto 300> -0.45 significa che non e' piu' una fase di crollo !)
+                    # 28 set 2023 and macd > 4
+                    # 28 set 2023 4-39 da 5-39
+
+                elif (
                     
+                    ma5_last > ma54_last
+                    and deviation_ma5_sotto_ma300 < -0.42
+                    
+                    and ma100_last < ma100_180_min_ago
+                    and ma200_last < ma200_180_min_ago
+                    and ma300_last < ma300_180_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.02
+                    and deviation_ma5_sopra_ma28 > 0.02
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd > macd_2_min_ago
+                    and macd > 5
+                ):
+                    buy = "BUY 3 29 ago 2022 > 180 min di ribasso con 5-78 - r 6572 A2"
+                    action = "buy"
+                    percentage = 90
+                    
+                    # 13 feb 2023 3-10 > 0.02
+                    #  1 ago 2023 5-200 invece di 10-100
+                    # 24 ago 2023 and macd > macd_2_min_ago
+                    # 24 ago 2023 and macd > 5
+                    # 16 set 2023 5-78 invece di 5-200
+
+                
+                elif (
+                    
+                    ma5_last > ma59_last
+                    and deviation_ma5_sotto_ma300 < -0.17
+                    and deviation_ma5_sotto_ma300 > -0.42
+                    
+                    and ma100_last < ma100_180_min_ago
+                    and ma200_last < ma200_180_min_ago
+                    and ma300_last < ma300_180_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.02
+                    and deviation_ma5_sopra_ma28 > 0.02
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd > macd_2_min_ago
+                    and macd > 5
+                ):
+                    buy = "BUY 3 29 ago 2022 > 180 min di ribasso con 5-78 - r 6572 A3"
+                    action = "buy"
+                    percentage = 90
+                    
+                    # 13 feb 2023 3-10 > 0.02
+                    #  1 ago 2023 5-200 invece di 10-100
+                    # 24 ago 2023 and macd > macd_2_min_ago
+                    # 24 ago 2023 and macd > 5
+                    # 16 set 2023 5-78 invece di 5-200
+
+
+
+              
+                elif (
+                    
+                    ma5_last > ma78_last
+                    and deviation_ma5_sotto_ma300 > -0.45
+                    
+                    and ma100_last < ma100_180_min_ago
+                    and ma200_last < ma200_180_min_ago
+                    and ma300_last < ma300_180_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.02
+                    and deviation_ma5_sopra_ma28 > 0.02
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd > macd_2_min_ago
+                    and macd > 5
+                ):
+                    buy = "BUY 3 29 ago 2022 > 180 min di ribasso con 5-78 - r 6572 A"
+                    action = "buy"
+                    percentage = 90
+                    
+                    # 13 feb 2023 3-10 > 0.02
+                    #  1 ago 2023 5-200 invece di 10-100
+                    # 24 ago 2023 and macd > macd_2_min_ago
+                    # 24 ago 2023 and macd > 5
+                    # 16 set 2023 5-78 invece di 5-200
+                
                     
                 # BUY 3 29 ago 2022 > 180 min di ribasso
                 
@@ -9244,12 +10843,37 @@ class ro_cano_che_ritorna:
                     
                     
                     
-                    
-                    
-                    
                 
                 
+                # BUY 3 del 2 ottobre 2023 NON COMPRAVA !
                 
+                elif (
+                    
+                    ma4_last > ma30_last
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.11
+                    
+                    and deviation_ma100_sopra_ma300 < 0.30
+                    and deviation_ma100_sopra_ma300 > -0.30
+                    
+                    and ma450_last > ma450_60_min_ago
+                    
+                    and deviation_ma3_sopra_ma10 > 0.07
+                    and deviation_ma5_sopra_ma28 > 0.02
+                  
+                    and ma3_last > ma13_last
+                    and ma4_last > ma9_last
+                   
+                    and ma2_last > ma2_2_min_ago
+                    and macd > macd_2_min_ago
+                ):
+                    buy = "BUY 3 del 2 ottobre 2023 NON COMPRAVA ! con 450 > 450 60 min MA CONSIDERATA ANCORA LATERALE - r 6574"
+                    action = "buy"
+                    percentage = 60
+                    
+                    #  2 ottobre 2023 aggiunta perche' BUY 3 NON ENTRAVA IN AZIONE
+
+
+              
                 # BUY 3 ultima condizione che mancava ! ma tutte negative MA BUY con 8 > 125
                 
                 elif (     
@@ -9310,21 +10934,126 @@ class ro_cano_che_ritorna:
                     
                     
                     
-                # BUY 3 IN MEZZO (effetti laterali) con ma69 > and deviation_bellissima > 0.12 IMPORTATA DA BUY 4 RCCR   
+                    
+                # deviation_ma5_sopra_o_sotto_ma100    
+                # BUY 3 IN MEZZO (effetti laterali) con ma69 > and deviation_bellissima > 0.12 IMPORTATA DA BUY 4 RCCR
                 
                 elif (
-                    ma50_last >= ma50_2_min_ago
+                    
+                    ma4_last > ma30_last
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.15
+                    
+                    and deviation_ma100_sopra_ma300 < 0.27
+                    and deviation_ma100_sopra_ma300 > -0.27
+                    
+                    and ma450_last > ma450_480_min_ago
+                    
+                    and deviation_ma3_sopra_ma10 > 0.07
+                    and deviation_ma5_sopra_ma28 > -0.01
+                  
+                    and ma3_last > ma13_last
+                    and ma4_last > ma9_last
+                   
+                    and ma2_last > ma2_2_min_ago
+                    and macd > macd_2_min_ago
+                ):
+                    buy = "BUY 3 con 450 > 450 480 min MA CONSIDERATA ANCORA LATERALE - r 6599 A1yA1"
+                    action = "buy"
+                    percentage = 60
+                    
+                    #  2 ottobre 2023 and deviation_ma5_sopra_o_sotto_ma100 > -0.15 da > -0.10 questa anticipata ndecchiecella e creata altra condizione sempre da questa
+              
+
+                elif (
+                    
+                    ma4_last > ma20_last
+                    and ma450_last > ma450_480_min_ago
+                    
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.21
+                    
+                    and deviation_ma100_sopra_ma300 < 0.27
+                    and deviation_ma100_sopra_ma300 > -0.27
+                    
+                    and deviation_ma3_sopra_ma10 > 0.05
+                    and deviation_ma5_sopra_ma28 > -0.02
+                  
+                    and ma3_last > ma13_last
+                    and ma4_last > ma9_last
+                   
+                    and ma2_last > ma2_2_min_ago
+                    and macd > macd_2_min_ago
+                ):
+                    buy = "BUY 3 con 450 > 450 480 min MA CONSIDERATA ANCORA LATERALE - r 6599 A1yA2"
+                    action = "buy"
+                    percentage = 60
+                    
+                    # 28 set 2023 5-28 a -0.02 da -0.01
+                    # 28 set 2023 3-10 a 0.05 da 0.07
+                    # 28 set 2023 fascia 100-300 portata a +-0.27 da +-0.25 - aumentata un pochino ( ma450>ma450 480 min ago !)
+                    # 28 set 2023 fascia 5-100 portata a < -0.12 - -0.21 da < -0.11 - -0.20 - aumentata un pochino ( ma450>ma450 480 min ago !)
+                
+                elif (
+                    
+                    ma4_last > ma16_last
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.20
+                    
                     and deviation_ma100_sopra_ma300 < 0.25
                     and deviation_ma100_sopra_ma300 > -0.25
                     
-                    and ma300_last > ma300_301_min_ago
+                    and ma450_last > ma450_480_min_ago
+                    
+                    and deviation_ma3_sopra_ma10 > 0.07
+                    and deviation_ma5_sopra_ma28 > -0.10
+                  
+                    and ma3_last > ma13_last
+                    and ma4_last > ma9_last
+                   
+                    and ma2_last > ma2_2_min_ago
+                    and macd > macd_2_min_ago
+                ):
+                    buy = "BUY 3 con 450 > 450 480 min MA CONSIDERATA ANCORA LATERALE - r 6599 A1yA3"
+                    action = "buy"
+                    percentage = 60
+                    
+                    # 28 set aggiunta 3-10
+                    #  2 ott 2022 dev bellissima 0.05 da 0.12
+                    # 17 gen 2023 dev bellissima 0.045 da 0.05
+                    # 17 gen 2023 buy3 0.045 da 0.05
+                    # 26 feb 2023 buy3 0.02 da 0.05
+                    # 17 gen 2023 dev bellissima 0.02 da 0.045
+                    # 31 lug anticipata (ma450_last > ma450_480_min_ago !)
+                    # 11 ago 2023 4-30 da 4-50
+                    # 13 set 2023 5-28 a -0.01 da 0.01 ( cioe' un po' prima se ma450 sale da 480 min! )
+
+
+          
+
+
+
+
+
+
+
+          
+              
+                  
+                    
+                elif (
+                    ma10_last >= ma10_2_min_ago
+                    
+                    and deviation_ma100_sopra_ma300 < 0.25
+                    and deviation_ma100_sopra_ma300 > -0.25
+                    
+                    and ma450_last < ma450_480_min_ago
                     
                     and deviation_ma3_sopra_ma10 > 0.10
+                    and deviation_ma3_sopra_ma18 > 0.13
                     and deviation_ma5_sopra_ma28 > 0.01
                     
-                    and deviation_bellissima > 0.05
-                    and deviation_buy3 > 0.05
-                    and deviation_ma7_sopra_ma40 > 0.05
+                    and deviation_bellissima > 0.02
+                    and deviation_buy3 > 0.01
+                    and deviation_ma7_sopra_ma40 > 0.04
                
                     and ma3_last > ma13_last
                     and ma4_last > ma9_last
@@ -9333,16 +11062,20 @@ class ro_cano_che_ritorna:
                     and ma7_last > ma25_last
                     
                     and ma2_last > ma2_2_min_ago
-             
+                    and macd > macd_2_min_ago
                 ):
-                    buy = "BUY 3 IN MEZZO (effetti laterali) 78>100 E con ma69 > and dev_bellissima > 0.12 IMPORTATA DA BUY 4 RCCR - riga 6599 A1y"
+                    buy = "BUY 3 IN MEZZO (effetti laterali) 78>100 E con ma69 > IMPORTATA DA BUY 4 RCCR - r 6599 A1yB"
                     action = "buy"
                     percentage = 50
                     
                     # 28 set aggiunta 3-10
-                    #  2 ott 2022 dev bellissima 0.10 da 0.12
-                    
-                    
+                    #  2 ott 2022 dev bellissima 0.05 da 0.12
+                    # 17 gen 2023 dev bellissima 0.045 da 0.05
+                    # 17 gen 2023 buy3 0.045 da 0.05
+                    # 26 feb 2023 buy3 0.02 da 0.05
+                    # 17 gen 2023 dev bellissima 0.02 da 0.045
+                    #  9 mag 2023 aggiunta 3-18> 0.13 se 450 < 450 480 min ago
+                    # 17 mag 2023 riduzione generale dei valori per anticipare se 100 sta vicina alla 300 con aggiunta di macd > macd 2 min ago
                     
                     
                     
@@ -9357,10 +11090,46 @@ class ro_cano_che_ritorna:
                     and deviation_ma3_sopra_ma10 > 0.05
                     and deviation_ma5_sopra_ma28 > 0.01
                     
-                    and deviation_bellissima > 0.05
-                    and deviation_buy3 > 0.05
-                    and deviation_ma7_sopra_ma40 > 0.05
+                    and deviation_bellissima > 0.03
+                    and deviation_buy3 > 0.03
+                    and deviation_ma7_sopra_ma40 > 0.03
                
+                    and ma3_last > ma13_last
+                    and ma4_last > ma9_last
+                    and ma4_last > ma50_last
+                    and ma6_last > ma15_last
+                    and ma7_last > ma25_last
+                    
+                    and ma2_last > ma2_2_min_ago
+                    and macd > macd_2_min_ago
+                ):
+                    buy = "BUY 3 IN BASSO con ma300_last > ma300_301_min_ago E con dev_bellissima > 0.04 IMPORTATA DA BUY 4 RCCR - r 6599 A1z"
+                    action = "buy"
+                    percentage = 50
+                    
+                    # 28 set 2022 aggiunta 3-10
+                    #  2 ott 2022 dev bellissima 0.10 da 0.12
+                    
+                    # 14 set 2023 bellissima a 0.04 da 0.05
+                    # 14 set 2023 buy3 a 0.04 da 0.05
+                    # 14 set 2023 7-40 a 0.04 da 0.05
+                    # 27 set 2023 dev bel a 0.03 da 0.04
+                    # 27 set 2023 dev buy 3 a 0.03 da 0.04
+                    # 27 set 2023 dev 7 sopra 40 a 0.03 da 0.04
+                    
+                # BUY 3 con ma69 > and deviation_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali) IMPORTATA DA BUY 4 RCCR
+                
+                elif (
+                    ma69_last >= ma69_2_min_ago
+                    and ma39_last > ma150_last
+                    and ma300_last < ma300_301_min_ago
+                    and ma78_last > ma100_last
+                    and deviation_ma3_sopra_ma10 > 0.05
+                    and deviation_ma5_sopra_ma28 > 0.01
+                    
+                    and deviation_bellissima > 0.01
+                    and deviation_ma7_sopra_ma40 > 0.08
+                    
                     and ma3_last > ma13_last
                     and ma4_last > ma9_last
                     and ma4_last > ma50_last
@@ -9370,20 +11139,16 @@ class ro_cano_che_ritorna:
                     and ma2_last > ma2_2_min_ago
              
                 ):
-                    buy = "BUY 3 IN BASSO 78>100 E con ma69 > and dev_bellissima > 0.12 IMPORTATA DA BUY 4 RCCR - riga 6599 A1z"
+                    buy = "BUY 3 con 78>100 and 39>150 E con ma69 > and dev_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali) - r 6599 A2x"
                     action = "buy"
                     percentage = 50
                     
                     # 28 set aggiunta 3-10
-                    #  2 ott 2022 dev bellissima 0.10 da 0.12
                     
                     
-                    
-                    
-                # BUY 3 con ma69 > and deviation_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali) IMPORTATA DA BUY 4 RCCR   
-                
                 elif (
                     ma69_last >= ma69_2_min_ago
+                    and ma39_last < ma150_last
                     and ma300_last < ma300_301_min_ago
                     and ma78_last > ma100_last
                     and deviation_ma3_sopra_ma10 > 0.05
@@ -9402,7 +11167,7 @@ class ro_cano_che_ritorna:
                     and ma2_last > ma2_2_min_ago
              
                 ):
-                    buy = "BUY 3 78>100 E con ma69 > and dev_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali) IMPORTATA DA BUY 4 RCCR - riga 6599 A2"
+                    buy = "BUY 3 con 78>100 and 39<150 E con ma69 > and dev_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali) - r 6599 A2y"
                     action = "buy"
                     percentage = 50
                     
@@ -9430,7 +11195,7 @@ class ro_cano_che_ritorna:
                     and ma2_last > ma2_2_min_ago
              
                 ):
-                    buy = "BUY 3 78<100 E con ma69 > and deviation_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali) IMPORTATA DA BUY 4 RCCR - riga 6599B"
+                    buy = "BUY 3 78<100 E con ma69 > and deviation_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali) IMPORTATA DA BUY 4 RCCR - r 6599 B"
                     action = "buy"
                     percentage = 50
                     
@@ -9438,8 +11203,27 @@ class ro_cano_che_ritorna:
                     
                     
                     
+                elif (    
+                    ma5_last > ma39_last
+                    and ma300_last > ma450_last
+                    and deviation_ma100_sopra_ma300 < 0.30
+                    and deviation_ma100_sopra_ma300 > -0.30
                     
+                    and deviation_ma3_sopra_ma10 > 0.07
+                 
+                    and ma300_last > ma300_60_min_ago
+               
+                ):  
+                
+                    buy = "BUY 3 laterale importata da buy 2 con 300>450 - r 6622"
+                    action = "buy"
+                    percentage = 80
                     
+                    # 19 set 2022 aggiunta 3-10 > 0.07
+                    #  3 ott 2022 3-10 0.113 da 0.07
+                    #  4 mag 2023 3-10 0.07 da 0.113 con 300>450
+                    # 23 mag 2023 3-39 da 8-59 con 300>450 e 100 attaccata alla 300
+                    # 11 ago 2023 anticipata ndecchiecella
                     
                     
                 # BUY 3 PAZZA piccola CORREZIONE FIAT
@@ -9468,16 +11252,7 @@ class ro_cano_che_ritorna:
                     
                     # > estate 5-20 0.15 da 0.12 e dev correzione  0.02 da 0.015
                     
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
+                 
                     
          
             # ########################################################################################################## COMPRA sessione 4
@@ -9488,14 +11263,15 @@ class ro_cano_che_ritorna:
 
             elif self.session == 4:
                 
-                
                 if (
                     ma69_last >= ma69_2_min_ago
+                    and delta_450_300 < delta_450_300_60_min
                     and ma300_last > ma300_301_min_ago
+                    
                     and ma100_last > ma200_last
-                    and deviation_buy3 > 0.10
+                    and deviation_buy3 > 0.07
                     and ma3_last > ma13_last
-                    and deviation_ma7_sopra_ma40 > 0.10
+                    and deviation_ma7_sopra_ma40 > 0.07
                     and ma4_last > ma9_last
                     and ma4_last > ma50_last
                     and ma2_last > ma2_2_min_ago
@@ -9504,14 +11280,50 @@ class ro_cano_che_ritorna:
                     and ma13_last > ma100_last
                     and deviation_ma5_sopra_ma28 > 0.05
                 ):
-                    buy = "BUY 4A con ma 78> e 300> E ma100>ma200 - r 6668 A"
+                    buy = "BUY 4A GIORNO con ma 78> e 300> E ma100>ma200 - r 6668 A1"
                     action = "buy"
                     percentage = 70
           
                     # se al BUY 4 ha ma100 < ma200 evidentemente c'e' qualche cosa di strano 
                     # il trend, evidentemente, e' LATERALE.
                     # E ALLORA AGGIUNGO UN BEL 6-30 > 0.15 - TREND LATERALE
-                    # 28 ott 2022 dev buy 3 0.10 da 0.11 
+                    # 28 ott 2022 dev buy 3 0.10 da 0.11
+                    
+                    # 20 FEB 2023 GIORNO dev buy 3 0.07 da 0.10
+                    # 20 FEB 2023 GIORNO 7-40 0.07 da 0.10
+                    
+                  
+                elif (
+                    ma69_last >= ma69_2_min_ago
+                    and delta_450_300 > delta_450_300_60_min
+                    and ma300_last > ma300_301_min_ago
+                    
+                    and ma100_last > ma200_last
+                    and deviation_buy3 > 0.09
+                    and ma3_last > ma13_last
+                    and deviation_ma7_sopra_ma40 > 0.09
+                    and ma4_last > ma9_last
+                    and ma4_last > ma50_last
+                    and ma2_last > ma2_2_min_ago
+                    and ma7_last > ma25_last
+                    
+                    and ma13_last > ma100_last
+                    and deviation_ma5_sopra_ma28 > 0.05
+                ):
+                    buy = "BUY 4A NOTTE con ma 78> e 300> E ma100>ma200 - r 6668 A2"
+                    action = "buy"
+                    percentage = 70
+          
+                    # se al BUY 4 ha ma100 < ma200 evidentemente c'e' qualche cosa di strano 
+                    # il trend, evidentemente, e' LATERALE.
+                    # E ALLORA AGGIUNGO UN BEL 6-30 > 0.15 - TREND LATERALE
+                    # 28 ott 2022 dev buy 3 0.10 da 0.11
+                  
+                  
+                  
+                  
+                  
+                  
                     
                     
                 elif (
@@ -9540,12 +11352,6 @@ class ro_cano_che_ritorna:
                     # il trend, evidentemente, e' LATERALE.
                     # E ALLORA AGGIUNGO UN BEL 6-30 > 0.15 - TREND LATERALE
              
-                
-                
-                
-                
-                
-                
                 
                 
                 
@@ -9587,8 +11393,45 @@ class ro_cano_che_ritorna:
                     
                     
                     
+                    
                 elif (
                     deviation_ma4_sopra_ma30 > 0.09
+                    and ma8_last >= ma59_last
+                    and delta_450_300 < delta_450_300_60_min
+                    
+                    and ma300_last > ma300_120_min_ago
+                    and ma100_last > ma100_60_min_ago
+                    
+                    and deviation > -0.30
+                    
+                    and deviation_ma3_sopra_ma10 > 0.10
+                    and deviation_ma5_sopra_ma28 > 0.13
+                    and deviation_bellissima >= 0.02
+                    
+                    
+                    and delta_buy3_incrocio_ma3_ma8 >= 0.06
+                    and ma3_last > ma8_last
+                    and ma3_last >= ma69_last
+                    and ma4_last >= ma4_2_min_ago
+                    and ma2_last >= ma2_2_min_ago
+                    and ma5_last >= ma15_last
+                    and ma5_last >= ma25_last
+                ):    
+                    buy = "BUY 4B GIORNO - importato da BUY 3 RCCR se ma39 > ma59 con 300> e 100> - r 6736 A1x"
+                    action = "buy"
+                    percentage = 70
+                    
+                    # 25 ottobre 2022 4-30 a 0.09 da 0.10
+                    # 25 ottobre 2022 dev bellissima a 0.02 da 0.03
+                    # aggiunta 3-10 e 5-28
+                    # 20 feb 2023 8-59 da 39-59 GIORNO
+                    
+             
+                elif (
+                    deviation_ma4_sopra_ma30 > 0.09
+                    and ma18_last >= ma59_last
+                    and delta_450_300 < delta_450_300_60_min
+                    
                     and ma300_last > ma300_120_min_ago
                     and ma100_last > ma100_60_min_ago
                     
@@ -9607,13 +11450,17 @@ class ro_cano_che_ritorna:
                     and ma5_last >= ma15_last
                     and ma5_last >= ma25_last
                 ):    
-                    buy = "BUY 4B importato da BUY 3 RCCR se ma39 > ma59 con 300> e 100> - r 6736 A1"
+                    buy = "BUY 4B NOTTE - importato da BUY 3 RCCR se ma39 > ma59 con 300> e 100> - r 6736 A1y"
                     action = "buy"
                     percentage = 70
                     
                     # 25 ottobre 2022 4-30 a 0.09 da 0.10
                     # 25 ottobre 2022 dev bellissima a 0.02 da 0.03
                     # aggiunta 3-10 e 5-28
+                    # 20 feb 2023 18-59 da 39-59 NOTTE
+                    
+                    
+                    
                     
                     
                     
@@ -9623,53 +11470,81 @@ class ro_cano_che_ritorna:
                     and ma100_last < ma100_60_min_ago
                     
                     and deviation > -0.30
-                    and deviation_bellissima >= 0.06
-                    and ma39_last >= ma48_last
+                    
+                    and ma5_last >= ma48_last
                     and delta_buy3_incrocio_ma3_ma8 >= 0.06
                     and ma3_last > ma8_last
                     and ma3_last >= ma69_last
-                    and ma4_last >= ma4_2_min_ago
-                    and ma2_last >= ma2_2_min_ago
+                    
+                    
                     and ma5_last >= ma15_last
                     and ma5_last >= ma25_last
+                    and ma2_last >= ma2_2_min_ago
+                    and macd > macd_2_min_ago
                 ):    
-                    buy = "BUY 4B importato da BUY 3 RCCR se ma39 > ma48 con 300 > e 100< - r 6736 2"
+                    buy = "BUY 4B importato da BUY 3 RCCR se ma5 > ma48 con 300 > e 100 < - r 6736 a1z"
                     action = "buy"
-                    percentage = 70  
+                    percentage = 70
                     
-                
-                
-                
-                
-                
-                
-                
+                    # 28 apr 2023 aggiunta macd > macd 2 min ago
+                    # 24 ago 2023 tolta and ma4_last >= ma4_2_min_ago
+                    # 24 ago 2023 tolta deviation_bellissima >= 0.03
+                    # 24 ago 2023 5-48 da 39-48
                 
                 elif (
                     deviation_ma4_sopra_ma30 > 0.15
                     and ma300_last < ma300_120_min_ago
                     
                     and deviation > -0.30
-                    and deviation_bellissima > 0.07
-                    and ma39_last > ma50_last
+                    
+                    and ma5_last > ma54_last
+                    and ma3_last >= ma69_last
                     and delta_buy3_incrocio_ma3_ma8 >= 0.06
                     and ma3_last > ma8_last
-                    and ma3_last >= ma69_last
-                    and ma4_last >= ma4_2_min_ago
+                    
+                    
                     and ma2_last >= ma2_2_min_ago
                     and ma5_last >= ma15_last
-                    and ma5_last >= ma25_last
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd > macd_2_min_ago
+                    
                 ):    
-                    buy = "BUY 4B importato da BUY 3 RCCR se ma39 > ma50 con 300 < - r 6756 b"
+                    buy = "BUY 4B importato da BUY 3 RCCR se ma39 > ma50 con 300 < - r 6756 B"
                     action = "buy"
                     percentage = 70
                     
-                    
+                    #  5 set 2023 anticipata ndecchiecella
                     
                     
                     
                 elif (
+                    ma20_last >= ma20_2_min_ago
+                    and ma300_last > ma450_last
+                    and ma300_last > ma300_60_min_ago
+                    and ma100_last < ma200_last
+                    and deviation_bellissima > 0.15
+                    and deviation_buy3 > 0.10
+                    and ma3_last > ma13_last
+                    and deviation_ma7_sopra_ma40 > 0.11
+                    and ma4_last > ma9_last
+                    and ma4_last > ma50_last
+                    and ma2_last > ma2_2_min_ago
+                    and ma7_last > ma25_last
+                    
+                    and ma13_last > ma100_last
+                    and deviation_ma5_sopra_ma28 > 0.05
+                ):
+                    buy = "BUY 4A con ma 78 > TREND LATERALE con 6-30 > 0.15 CON 300>450 - r 6780 A"
+                    action = "buy"
+                    percentage = 70
+                    
+                    # 25 gen se 300 > 450 compra prima
+                    
+                    
+                elif (
                     ma69_last >= ma69_2_min_ago
+                    and ma300_last < ma450_last
                     and ma300_last > ma300_60_min_ago
                     and ma100_last < ma200_last
                     and deviation_bellissima > 0.15
@@ -9684,7 +11559,7 @@ class ro_cano_che_ritorna:
                     and ma13_last > ma100_last
                     and deviation_ma5_sopra_ma28 > 0.05
                 ):
-                    buy = "BUY 4A con ma 78 > TREND LATERALE con 6-30 > 0.15 - r 6780"
+                    buy = "BUY 4A con ma 78 > TREND LATERALE con 6-30 > 0.15 CON 300<450 - r 6780 B"
                     action = "buy"
                     percentage = 70
                     
@@ -9748,33 +11623,80 @@ class ro_cano_che_ritorna:
                     
                     #####################################################################
                     
-                    
                 elif (
-                    ma28_last >= ma28_2_min_ago
+                    ma20_last >= ma20_2_min_ago
                     and ma200_last > ma200_301_min_ago
                     and ma300_last > ma300_60_min_ago
                     and deviation_ma250_sopra_ma300 > 0.04
-                  
+                    
+                    and ma78_last > ma78_60_min_ago
+                    
                     and deviation_buy3 > 0.005
                     and delta_buy3_incrocio_ma3_ma8 > 0.04
                     and deviation_ma4_sopra_ma30 > 0.05
                     
                     and ma3_last > ma8_last
-                    and ma3_last > ma78_last
+                    and ma3_last > ma50_last
+                    and ma8_last > ma100_last
                     
-                    and ma2_last > ma2_2_min_ago
+                    
                     and ma7_last > ma25_last
                     
-                    and ma13_last > ma100_last
+                    
                     and deviation_ma5_sopra_ma28 > 0.03
+                    and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):
-                    buy = "BUY 4B RIVOLUZIONARIO con ma78 > - r 6859 A1"
+                    buy = "BUY 4B RIVOLUZIONARIO con ma78 > - r 6859 A1x"
                     action = "buy"
                     percentage = 70
                     
                     # deviation_buy3 = ma4_last/ma30_last
                     # deviation_ma4_sopra_ma100 > 0.25 arrivati al buy 4 DEVE AVERE UNA CERTA FORZA !
                     # ma se 250 > 300 ! serve una forza minore
+                    # 6 apr 2023 ma20 2 min ago da ma28 min ago
+                    # 6 apr 2023 3-50 da 3-78
+                    # 6 apr 2023 8-100 da 13-100
+                    
+                    
+                elif (
+                    ma20_last >= ma20_2_min_ago
+                    and ma200_last > ma200_301_min_ago
+                    and ma300_last > ma300_60_min_ago
+                    and deviation_ma250_sopra_ma300 > 0.04
+                    
+                    and ma78_last < ma78_60_min_ago
+                    and deviation_ma3_sopra_ma18 > 0.07
+                    
+                    and deviation_buy3 > 0.005
+                    and delta_buy3_incrocio_ma3_ma8 > 0.04
+                    and deviation_ma4_sopra_ma30 > 0.05
+                    
+                    and ma3_last > ma8_last
+                    and ma3_last > ma50_last
+                    and ma8_last > ma100_last
+                    
+                    
+                    and ma7_last > ma25_last
+                    
+                    
+                    and deviation_ma5_sopra_ma28 > 0.03
+                    and ma2_last > ma2_2_min_ago
+                    and macd > macd_2_min_ago
+                ):
+                    buy = "BUY 4B RIVOLUZIONARIO MA ma78 < 60 min ! and macd > 2 min ago - r 6859 A1y"
+                    action = "buy"
+                    percentage = 70
+                    
+                    # deviation_buy3 = ma4_last/ma30_last
+                    # deviation_ma4_sopra_ma100 > 0.25 arrivati al buy 4 DEVE AVERE UNA CERTA FORZA !
+                    # ma se 250 > 300 ! serve una forza minore
+                    # 6 apr 2023 ma20 2 min ago da ma28 min ago
+                    # 6 apr 2023 3-50 da 3-78
+                    # 6 apr 2023 8-100 da 13-100
+                    
+                    
+                    
                     
                     
                     
@@ -9804,40 +11726,72 @@ class ro_cano_che_ritorna:
                     # deviation_buy3 = ma4_last/ma30_last
                     # deviation_ma4_sopra_ma100 > 0.25 arrivati al buy 4 DEVE AVERE UNA CERTA FORZA !
                     # ma se 250 > 300 ! serve una forza minore
-                    
+
+              
                     
                 elif (
-                    ma39_last >= ma39_2_min_ago
-                    and ma300_last > ma300_60_min_ago
-                    and deviation_ma250_sopra_ma300 < 0.04
-                    and deviation_ma250_sopra_ma300 > -0.04
+                    ma5_last >= ma5_2_min_ago
                     
-                    and deviation_buy3 > 0.015
-                    and deviation_ma5_sopra_ma28 > 0.05
-                    and deviation_ma4_sopra_ma30 > 0.08
+                    and ma300_last > ma300_60_min_ago
+                    and ma450_last > ma450_300_min_ago
+                    
+                    and deviation_ma250_sopra_ma300 < 0.10
+                    and deviation_ma250_sopra_ma300 > -0.10
                     
                     and delta_buy3_incrocio_ma3_ma8 > 0.05
                     
+                    and deviation_ma4_sopra_ma30 > 0.08
+                    and deviation_ma5_sopra_ma28 > 0.05
                     
                     and ma3_last > ma8_last
-                    and ma3_last > ma78_last
-                    
-                    and ma2_last > ma2_2_min_ago
                     and ma7_last > ma25_last
                     
-                    and ma13_last > ma100_last
-                    
+                    and ma2_last > ma2_2_min_ago
                 ):
-                    buy = "BUY 4B RIVOLUZIONARIO con ma78 > - r 6859 B"
+                    buy = "BUY 4B RIVOLUZIONARIO con ma78 > - r 6859 B1"
                     action = "buy"
                     percentage = 70
                     
                     # deviation_buy3 = ma4_last/ma30_last
                     # deviation_ma4_sopra_ma100 > 0.25 arrivati al buy 4 DEVE AVERE UNA CERTA FORZA !
                     # ma se 250 > 300 ! serve una forza minore
+                    # 16 set 2023 anticipato ndecchiecella
+                    # 28 set 2023 con ma5 > ma5 2 min ago da ma28 > ma28 2 min ago
+                    # 28 set 2023 tolto 5-54
+    
+                elif (
+                    ma5_last >= ma5_2_min_ago
                     
+                    and ma300_last > ma300_60_min_ago
+                    and ma450_last < ma450_300_min_ago
                     
+                    and deviation_ma250_sopra_ma300 < 0.10
+                    and deviation_ma250_sopra_ma300 > -0.10
                     
+                    and delta_buy3_incrocio_ma3_ma8 > 0.05
+                    
+                    and deviation_ma4_sopra_ma30 > 0.08
+                    and deviation_ma5_sopra_ma28 > 0.06
+                    
+                    and ma3_last > ma8_last
+                    and ma7_last > ma25_last
+                    
+                    and ma2_last > ma2_2_min_ago
+                ):
+                    buy = "BUY 4B RIVOLUZIONARIO con ma78 > - r 6859 B2"
+                    action = "buy"
+                    percentage = 70
+                    
+                    # deviation_buy3 = ma4_last/ma30_last
+                    # deviation_ma4_sopra_ma100 > 0.25 arrivati al buy 4 DEVE AVERE UNA CERTA FORZA !
+                    # ma se 250 > 300 ! serve una forza minore
+                    # 16 set 2023 anticipato ndecchiecella
+                    # 28 set 2023 con ma5 > ma5 2 min ago da ma28 > ma28 2 min ago 
+                    # 28 set 2023 tolto 5-54
+                    # 28 set 2023 5-28 >0.06 da 0.06 (con 450 < 450 300 min)
+
+
+                
                 elif (
                     ma78_last >= ma78_2_min_ago
                     and ma300_last > ma300_60_min_ago
@@ -9865,12 +11819,6 @@ class ro_cano_che_ritorna:
                     # deviation_buy3 = ma4_last/ma30_last
                     # deviation_ma4_sopra_ma100 > 0.25 arrivati al buy 4 DEVE AVERE UNA CERTA FORZA !
                     
-                
-                
-                
-                
-                
-                
                 
                 
                 
@@ -9930,12 +11878,6 @@ class ro_cano_che_ritorna:
                     
                     
                     
-                    
-                    
-                    
-                    
-                    
-                    
                 ###################################################################################################
                
                 elif (
@@ -9990,10 +11932,38 @@ class ro_cano_che_ritorna:
                 
                 
                 # BUY 4 se 11 > 200 e con ma69 > and deviation_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali) IMPORTATA DA BUY 5
-                
+              
+                elif (
+                    ma5_last > ma200_last
+                    and ma300_last > ma300_180_min_ago
+                    
+                    and deviation_buy3 > 0.10
+                    and deviation_bellissima > 0.10
+                    and deviation_ma7_sopra_ma40 > 0.12
+                    
+                    and ma3_last > ma13_last
+                    and ma4_last > ma9_last
+                    and ma4_last > ma50_last
+                    and ma6_last > ma15_last
+                    and ma7_last > ma25_last
+                    
+                    and ma2_last > ma2_2_min_ago
+             
+                ):
+                    buy = "BUY 4 con ma300_last > ma300_180_min_ago and dev_bellissima > 0.10 - r 7008 A"
+                    action = "buy"
+                    percentage = 70
+                  
+                    # 11 ago 2023 aggiunta se 300 sale da 3 ore
+                    #  6 set 2023 and deviation_buy3 > 0.10 da 0.12
+                    #  6 set 2023 and deviation_bellissima > 0.10 da 0.12
+                    #  6 set 2023 and deviation_ma7_sopra_ma40 > 0.10 da 0.12
+
+              
                 elif (
                     ma69_last >= ma69_2_min_ago
                     and ma11_last > ma200_last
+                    and ma300_last < ma300_180_min_ago
                     
                     and deviation_buy3 > 0.12
                     and deviation_bellissima > 0.14
@@ -10008,19 +11978,79 @@ class ro_cano_che_ritorna:
                     and ma2_last > ma2_2_min_ago
              
                 ):
-                    buy = "BUY 4 se 11 > 200 e con ma69 > and dev_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali) DA BUY 5 RCCR - riga 7008"
+                    buy = "BUY 4 se 11 > 200 e con ma69 > and dev_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali) DA BUY 5 RCCR - r 7008 b"
                     action = "buy"
                     percentage = 70
                     
                     # > estate 7-40 0.12 da 0.09 and dev bellissima 0.14 da 0.12
-                    
+                    # 11 ago 2023 aggiunta se 300 scende da 3 ore
                     
                     
                     
                 # BUY 4 NUOVA (trend laterale) con ma8_last > ma100_last AND and ma300_last > ma300_120_min_ago
                 
+                
                 elif (
                     ma69_last >= ma69_2_min_ago
+                    and deviation_ma300_sopra_ma450 > 0.12
+                    
+                    and ma8_last > ma100_last
+                    and ma100_last > ma300_last
+                    and ma100_last > ma100_60_min_ago
+                    and ma300_last > ma300_120_min_ago
+                    and deviation_ma5_sopra_ma28 > 0.12
+                    
+                    and deviation_bellissima > 0.11
+                    and deviation_buy3 > 0.10
+                    and deviation_ma7_sopra_ma40 > 0.09
+               
+                    and ma3_last > ma13_last
+                    and ma4_last > ma9_last
+                    and ma4_last > ma50_last
+                    and ma6_last > ma15_last
+                    and ma7_last > ma25_last
+                    
+                    and ma2_last > ma2_2_min_ago
+             
+                ):
+                    buy = "BUY 4 NUOVA (trend laterale) 8 > 100 AND ma300_last > ma300_120_min_ago AND 5-28 > 0.10 e con ma69 > - r 7038 a"
+                    action = "buy"
+                    percentage = 70
+                    
+                elif (
+                    ma69_last >= ma69_2_min_ago
+                    and deviation_ma300_sopra_ma450 < 0.12
+                    and deviation_ma300_sopra_ma450 > -0.12
+                    
+                    and ma8_last > ma100_last
+                    and ma100_last > ma300_last
+                    and ma100_last > ma100_60_min_ago
+                    and ma300_last > ma300_120_min_ago
+                    and deviation_ma5_sopra_ma28 > 0.12
+                    
+                    and deviation_bellissima > 0.11
+                    and deviation_buy3 > 0.11
+                    and deviation_ma7_sopra_ma40 > 0.09
+               
+                    and ma3_last > ma13_last
+                    and ma4_last > ma9_last
+                    and ma4_last > ma50_last
+                    and ma6_last > ma15_last
+                    and ma7_last > ma25_last
+                    
+                    and ma2_last > ma2_2_min_ago
+             
+                ):
+                    buy = "BUY 4 NUOVA (trend laterale) 8 > 100 AND ma300_last > ma300_120_min_ago AND 5-28 > 0.11 e con ma69 > - r 7038 b"
+                    action = "buy"
+                    percentage = 70
+                    
+                    
+                elif (
+                    ma69_last >= ma69_2_min_ago
+                    and deviation_ma300_sopra_ma450 < -0.12
+                    
+                    
                     and ma8_last > ma100_last
                     and ma100_last > ma300_last
                     and ma100_last > ma100_60_min_ago
@@ -10040,7 +12070,7 @@ class ro_cano_che_ritorna:
                     and ma2_last > ma2_2_min_ago
              
                 ):
-                    buy = "BUY 4 NUOVA (trend laterale) 8 > 100 AND ma300_last > ma300_120_min_ago AND 5-28 > 0.12 e con ma69 > - riga 7038"
+                    buy = "BUY 4 NUOVA (trend laterale) 8 > 100 AND ma300_last > ma300_120_min_ago AND 5-28 > 0.12 e con ma69 > - r 7038 c"
                     action = "buy"
                     percentage = 70
                     
@@ -10062,21 +12092,24 @@ class ro_cano_che_ritorna:
                     
                     and deviation_ma5_sotto_ma300 < -0.35
                     
+                    and deviation_ma3_sopra_ma10 > 0.05
                     and deviation_ma5_sopra_ma28 > 0.08
+                    
                     and ma2_last >= ma2_2_min_ago
                     
                 ):
-                    buy = "BUY 4 29 ago 2022 > 120 min di ribasso - deviation_ma5_sotto_ma300"
+                    buy = "BUY 4 29 ago 2022 > 120 min di ribasso - deviation_ma5_sotto_ma300 - r 7039 A"
                     action = "buy"
                     percentage = 90
                     
                     # vuoi comprare dopo 120 min di ribasso ? deve essere 5-300 < -0.35 ! voglio uno sconto ulteriore dello 0.35% ! PENSIERO LATERALE
                     
                 # BUY 4 29 ago 2022 > 180 min di ribasso
+                # 16 mar 2023 aggiunta 3-10 > 0.05
                 
                 elif (
                     
-                    ma18_last > ma100_last
+                    ma5_last > ma54_last
                     
                     and ma100_last < ma100_180_min_ago
                     and ma200_last < ma200_180_min_ago
@@ -10088,20 +12121,25 @@ class ro_cano_che_ritorna:
                     and ma200_last < ma300_last
                     
                     and deviation_ma5_sopra_ma28 > 0.02
+                    
                     and ma2_last >= ma2_2_min_ago
+                    and macd > macd_2_min_ago
                     
                 ):
-                    buy = "BUY 4 29 ago 2022 > 180 min di ribasso - r 7039 B1"
+                    buy = "BUY 4 29 ago 2022 > 180 min di ribasso con 5-54 - r 7039 B1"
                     action = "buy"
                     percentage = 90
                     
-                    
-                    
+                    #  5 ott 2023 a 5-54 da 18-100
+                    #  5 ott 2023 and macd > macd_2_min_ago
+
+                
                 # BUY 4 29 ago 2022 > 180 min di ribasso
                 
                 elif (
                     
-                    ma18_last > ma100_last
+                    ma8_last > ma54_last
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.05
                     
                     and ma100_last < ma100_180_min_ago
                     and ma200_last < ma200_180_min_ago
@@ -10116,16 +12154,133 @@ class ro_cano_che_ritorna:
                     and ma2_last >= ma2_2_min_ago
                     
                 ):
-                    buy = "BUY 4 29 ago 2022 > 180 min di ribasso - r 7039 B2"
+                    buy = "BUY 4 29 ago 2022 > 180 min di ribasso - r 7039 B2x"
                     action = "buy"
                     percentage = 90
                     
                     # 11 ott 2022 se ma300 < 360 min ago BUY 4 se deve comprare deve avere almeno 5-28 > 0.13 
+                    # 31 lug 2023 ma8_last > ma54_last da 18-100
+                    #  5 ott 2023 and deviation_ma5_sopra_o_sotto_ma100 > -0.05
+              
+
+              
+                # BUY 4 29 ago 2022 > 180 min di ribasso
+                
+                elif (
+                    
+                    ma5_last > ma54_last
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.05
+                    
+                    and ma100_last < ma100_180_min_ago
+                    and ma200_last < ma200_180_min_ago
+                    and ma300_last < ma300_180_min_ago
+                    
+                    and ma300_last < ma300_360_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and deviation_ma5_sopra_ma28 > 0.13
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                ):
+                    buy = "BUY 4 29 ago 2022 > 180 min di ribasso - r 7039 B2y"
+                    action = "buy"
+                    percentage = 90
+                    
+                    # 11 ott 2022 se ma300 < 360 min ago BUY 4 se deve comprare deve avere almeno 5-28 > 0.13 
+                    # 31 lug ma8_last > ma54_last da 18-100
+                    #  5 ott 2023 and deviation_ma5_sopra_o_sotto_ma100 < -0.05 ( per comprare meglio, perche' la precedente 7039 B2 comprava tardi !) 
+                    #  5 ott 2023 and macd >= macd_2_min_ago
+                    
+                # BUY 4 DURANTE UNA CORREZIONE FIAT importata da buy 1 r 2575 che non e' un forte ribasso e non e' un crollo ! (MA ma3 > ma150 mi protegge un po')
+
+                elif (
+
+                    deviation_buy_crollo_1 < -0.29
+                    and deviation_buy_crollo_1 > -0.69
+                    and ma5_last < ma22_last
+
+                    and deviation_correzione > 0.03
+                    and deviation_ma100_sopra_ma300 > -0.30
+                    and deviation_ma25_sotto_ma300 < -0.55
+
+                    and deviation_ma5_sotto_ma300 < -0.39
+
+                    and ma2_last > ma2_2_min_ago
+                ):
+                    buy = "BUY 4 FIAT importata da buy 1 r 2575 DEVE STARE DISTANTE DALLA 300 ! - r 7050"
+                    action = "buy"
+                    percentage = 80
+
+                    # questa e' andata benissimo su RCCR ! il 10 ottobre 2022 ! maddog dormiva !
+                    # vedi RCCR r 1294
+                    # 2 apr 2023 portata dal buy 1
                     
                     
                     
+                # BUY 4 13 apr 2023 zia pina > 180 min di ribasso 78 < 150
+                
+                elif (
                     
                     
+                    ma78_last < ma150_last
+                    and deviation_ma5_sopra_ma59 < -0.10
+                    
+                    and ma100_last < ma100_180_min_ago
+                    and ma200_last < ma200_180_min_ago
+                    and ma300_last < ma300_180_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and deviation_ma5_sopra_ma28 < 0.08
+                    and deviation_ma3_sopra_ma16 > 0.03
+                    and deviation_ma3_sopra_ma18 > 0.093
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd > macd_2_min_ago
+                ):
+                    buy = "BUY 4 PENSIERO LATERALE 13 apr 2023 zia pina > 180 min di ribasso and 78<150 and 3-16 > 0.03 and macd > 2 min ago  - r 7060"
+                    action = "buy"
+                    percentage = 90
+                    
+                    # 7 feb 2023 deviation_ma5_sopra_ma28 > 0.10 da 0.13
+                    # tolto 18>100 
+                    # aggiunto PENSIERO LATERALE and deviation_ma5_sopra_ma59 < -0.09
+                    # 18 mag 2023 aggiunta 3-16 > 0.03 
+                    #  2 giu 2023 aggiunta 3-18 > 0.093
+                    # 24 ago 2023 aggiunta and macd > macd_2_min_ago
+                    # 27 set 2023 5.28 0.08 da 0.10
+                    # 27 set 2023 and deviation_ma5_sopra_ma59 < -0.10 da -0.09
+                    
+                # BUY 4 importato da buy 5 rccr
+                
+                elif (
+                    
+                    ma5_last > ma54_last
+                    and ma78_last > ma100_last
+                    
+                    and ma100_last < ma100_180_min_ago
+                    and ma200_last < ma200_180_min_ago
+                    and ma300_last < ma300_180_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and deviation_ma5_sopra_ma28 > 0.02
+                    and ma2_last >= ma2_2_min_ago
+                    
+                ):
+                    buy = "BUY 4 con 5-54 importato da buy 5 rccr - r 7063"
+                    action = "buy"
+                    percentage = 90
+                  
+                    #  1 ago 2023 importato buy 4 da buy 5
+                    # 27 set 2023 78-100 da 78-150
+                    # 27 set 2023 5-54 da 8-59
+              
+              
                 # BUY 4 se 8 > 200 con 5-28 > 0.20 ! e con ma69 > and deviation_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali) IMPORTATA DA BUY 5
                 
                 elif (
@@ -10157,14 +12312,7 @@ class ro_cano_che_ritorna:
                     
                     
                     
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
+                
           
                 #############################################################################################
              
@@ -10204,38 +12352,102 @@ class ro_cano_che_ritorna:
             #  piu' alto il BUY - "effetti laterali"
 
             else:
-                
-                if (
-                    ma50_last >= ma50_2_min_ago
-                    and ma100_last > ma300_last
-                    and ma28_last > ma28_30_min_ago
-                    and ma78_last > ma150_last
+                if (    
+                    ma5_last > ma50_last
+                    and ma450_last >= ma450_120_min_ago
+                  
+                    and ma100_last > ma450_last
+                    and ma78_last > ma450_last
                     
-                    and deviation_ma5_sopra_ma28 > 0.08
+                    and deviation_ma5_sopra_ma28 > 0.05
                     
-                    and deviation_buy3 > 0.06
                     and ma3_last > ma13_last
-                    and deviation_ma7_sopra_ma40 > 0.09
+                    
                     and ma4_last > ma9_last
-                    and ma4_last > ma50_last
                     
                     and ma6_last > ma15_last
                     and ma7_last > ma25_last
                     
                     and ma2_last > ma2_2_min_ago
-                
+                    and macd > macd_2_min_ago
                 ):
-                    buy = "BUY 5 con ma50 > AND 50>100 and ma28_last > ma28_30_min_ago and 5-28 > 0.08 CON ma100_last > ma300_last - riga 7144 a"
+                    buy = "BUY 5 con ma450_last >= ma450_120_min_ago and 5-28 > 0.08 CON ma100_last > ma450_last - r 7144 A1"
                     action = "buy"
                     percentage = 70
                     
                     # 6 giu 2022 5-28 a 0.12 da 0.15
                     
                     # > estate anticipo buy 5-28 0.08 da 0.12
+                    # 29 gen 2023 anticipato ndecchiecella questo BUY 5 !
+                    # 20 feb 2023 aggiunta 3-10 >0.058
+                    # 16 set 2023 tolto and deviation_buy3 > 0.05
+                    # 16 set 2023 aggiunta and macd > macd_2_min_ago
+                    # 28 set 2023 se 450 > 450 120 min ago anticipato ndechiecella
+              
+                elif (
+                    ma50_last >= ma50_2_min_ago
+                    and ma450_last < ma450_120_min_ago
+                  
+                    and ma100_last > ma300_last
+                    and ma78_last > ma150_last
                     
+                    and deviation_ma5_sopra_ma28 > 0.05
                     
+                    and ma3_last > ma13_last
+                    and deviation_ma7_sopra_ma40 > 0.08
+                    and ma4_last > ma9_last
+                    and ma4_last > ma50_last
+                    and ma6_last > ma15_last
+                    and ma7_last > ma25_last
                     
+                    and ma2_last > ma2_2_min_ago
+                    and macd > macd_2_min_ago
+                ):
+                    buy = "BUY 5 con ma50 > AND 50>100 and ma28_last > ma28_30_min_ago and 5-28 > 0.08 CON ma100_last > ma300_last - r 7144 A2"
+                    action = "buy"
+                    percentage = 70
                     
+                    # 6 giu 2022 5-28 a 0.12 da 0.15
+                    
+                    # > estate anticipo buy 5-28 0.08 da 0.12
+                    # 29 gen 2023 anticipato ndecchiecella questo BUY 5 !
+                    # 20 feb 2023 aggiunta 3-10 >0.058
+                    # 16 set 2023 tolto and deviation_buy3 > 0.05
+                    # 16 set 2023 aggiunta and macd > macd_2_min_ago
+                    # 28 set 2023 aggiunta 450 < 450 120 min ago 
+              
+                elif (
+                    ma50_last < ma50_2_min_ago
+                    
+                    and ma300_last > ma300_301_min_ago
+                    and ma100_last > ma300_last
+                    and ma78_last > ma150_last
+                    
+                    and deviation_ma5_sopra_ma28 > 0.05
+                    and deviation_ma7_sopra_ma40 > 0.06
+                    
+                    and ma3_last > ma13_last
+                    and ma4_last > ma9_last
+                    and ma4_last > ma50_last
+                    and ma6_last > ma15_last
+                    and ma7_last > ma25_last
+                    
+                    and ma2_last > ma2_2_min_ago
+                    and macd > macd_2_min_ago
+                ):
+                    buy = "BUY 5 con ma50 > AND 50>100 and ma28_last > ma28_30_min_ago and 5-28 > 0.08 CON ma100_last > ma300_last - r 7144 b"
+                    action = "buy"
+                    percentage = 70
+                    
+                    # 6 giu 2022 5-28 a 0.12 da 0.15
+                    
+                    # > estate anticipo buy 5-28 0.08 da 0.12
+                    # 29 gen 2023 anticipato ndecchiecella questo BUY 5 !
+                    # 20 feb 2023 aggiunta 3-10 >0.058
+                    # 16 set 2023 tolto and deviation_buy3 > 0.05
+                    # 16 set 2023 aggiunta and macd > macd_2_min_ago
+                    # 28 set 2023 con ma50< ma50 2 min ago MA con ma300>ma300 301 min ago
+              
                 elif (
                     ma50_last >= ma50_2_min_ago
                     and ma100_last < ma300_last
@@ -10266,17 +12478,96 @@ class ro_cano_che_ritorna:
                     
                     
                     
-                    
                 elif (
                     ma50_last >= ma50_2_min_ago
+                    and ma300_last > ma450_last
+                    
                     and ma28_last < ma28_30_min_ago
                     and ma78_last > ma150_last
                     
-                    and deviation_ma5_sopra_ma28 > 0.17
+                    and deviation_ma3_sopra_ma10 > 0.05
+                    and deviation_ma5_sopra_ma28 > 0.10
                     
-                    and deviation_buy3 > 0.10
+                    and deviation_buy3 > 0.02
+                    and deviation_ma7_sopra_ma40 > 0.02
+                    
+                  
                     and ma3_last > ma13_last
-                    and deviation_ma7_sopra_ma40 > 0.09
+                    and ma4_last > ma9_last
+                    and ma4_last > ma50_last
+                    
+                    and ma6_last > ma15_last
+                    and ma7_last > ma25_last
+                    
+                    and ma2_last >= ma2_2_min_ago
+                
+                ):
+                    buy = "BUY 5 con ma50 > AND 50>100 and ma28_last < ma28_30_min_ago and 5-28 > 0.10 - r 7203 A"
+                    action = "buy"
+                    percentage = 70
+                    
+                    #  6 giu 2022 5-28 a 0.17 da 0.19
+                    # 10 gen 2023 5-28 a 0.12 da 0.17
+                    # 10 gen 2023 dev buy 3 a 0.06 da 0.07
+                    # 10 gen 2023 dev 7-40 a 0.08 da 0.09
+                    # aggiunta 3-10 a 0.05
+                    # 26 feb 2023 se 300>450 buy 3 a 0.02 da 0.06
+                    # 26 feb 2023 se 300>450 7 sopra 40 a 0.02 da 0.08
+                    
+                    
+                elif (
+                    ma50_last >= ma50_2_min_ago
+                    and ma300_last < ma450_last
+                    
+                    and ma28_last < ma28_30_min_ago
+                    and ma78_last > ma150_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.05
+                    and deviation_ma3_sopra_ma16 > 0.165
+                    and deviation_ma5_sopra_ma28 > 0.12
+                    
+                    and deviation_buy3 > 0.06
+                    and deviation_ma7_sopra_ma40 > 0.08
+                    
+                  
+                    and ma3_last > ma13_last
+                    and ma4_last > ma9_last
+                    and ma4_last > ma50_last
+                    
+                    and ma6_last > ma15_last
+                    and ma7_last > ma25_last
+                    
+                    and ma2_last >= ma2_2_min_ago
+                
+                ):
+                    buy = "BUY 5 con ma50 > AND 50>100 and ma28_last < ma28_30_min_ago and 5-28 > 0.17 - r 7203 B"
+                    action = "buy"
+                    percentage = 70
+                    
+                    #  6 giu 2022 5-28 a 0.17 da 0.19
+                    # 10 gen 2023 5-28 a 0.12 da 0.17
+                    # 10 gen 2023 dev buy 3 a 0.06 da 0.07
+                    # 10 gen 2023 dev 7-40 a 0.08 da 0.09
+                    # aggiunta 3-10 a 0.05
+                    # # 6 apr 2023 aggiunta 3-16 > 0.165
+                    
+                    
+                    
+                    
+                    
+                elif (
+                    ma5_last >= ma5_2_min_ago
+                    and deviation_ma300_sopra_ma450 > 0.10
+                    and ma300_last > ma300_120_min_ago
+                    and ma300_last > ma450_last
+                  
+                    and ma78_last < ma150_last
+                    and deviation_ma5_sopra_ma28 > 0.05
+                    
+                    and deviation_ma7_sopra_ma40 > 0.01
+                    
+                    and ma3_last > ma13_last
+                    
                     and ma4_last > ma9_last
                     and ma4_last > ma50_last
                     
@@ -10286,22 +12577,53 @@ class ro_cano_che_ritorna:
                     and ma2_last > ma2_2_min_ago
                 
                 ):
-                    buy = "BUY 5 con ma50 > AND 50>100 and ma28_last < ma28_30_min_ago and 5-28 > 0.17 - riga 7203"
+                    buy = "BUY 5 con 300 > 450 and ma50 > AND 50<100 and 300 > 120 min ago and 5-28 > 0.23 - r 7237 A1"
                     action = "buy"
                     percentage = 70
                     
-                    # 6 giu 2022 5-28 a 0.12 da 0.15
-                
-                
-                
-                
-                
-                
-                
-                
+                    # 7 feb 2023 dev bellissima 0.10 da 0.12
+                    # 7 feb 2023 5-28 a 0.23 da 0.27
+                    
+                    
+                elif (
+                    ma5_last >= ma5_2_min_ago
+                    and deviation_ma300_sopra_ma450 < 0.10
+                    
+                    and ma300_last > ma300_120_min_ago
+                    and ma300_last > ma450_last
+                  
+                    and ma78_last < ma150_last
+                    and deviation_ma5_sopra_ma28 > 0.07
+                    
+                    and deviation_ma7_sopra_ma40 > 0.01
+                    
+                    and ma3_last > ma13_last
+                    
+                    and ma4_last > ma9_last
+                    and ma4_last > ma50_last
+                    
+                    and ma6_last > ma15_last
+                    and ma7_last > ma25_last
+                    
+                    and ma2_last > ma2_2_min_ago
+                    
+                    and macd > macd_2_min_ago
+                    and macd > 3
+                ):
+                    buy = "BUY 5 con 300 > 450 and ma50 > AND 50<100 and 300 > 120 min ago and 5-28 > 0.23 and macd > macd 2 min ago and macd > 3 - r 7237 A2"
+                    action = "buy"
+                    percentage = 70
+                    
+                    # 7 feb 2023 dev bellissima 0.10 da 0.12
+                    # 7 feb 2023 5-28 a 0.23 da 0.27
+                    # 24 ago 2023 macd > macd 2 min ago
+                    # 24 ago 2023 macd > 3
+              
+                    
                 elif (
                     ma50_last >= ma50_2_min_ago
                     and ma300_last > ma300_120_min_ago
+                    and ma300_last < ma450_last
                     
                     and ma78_last < ma150_last
                     and deviation_ma5_sopra_ma28 > 0.27
@@ -10309,21 +12631,26 @@ class ro_cano_che_ritorna:
                     
                     
                     and deviation_buy3 > 0.10
+                    and deviation_ma7_sopra_ma40 > 0.10
+                    and deviation_bellissima > 0.10
+                    
                     and ma3_last > ma13_last
-                    and deviation_ma7_sopra_ma40 > 0.09
+                    
                     and ma4_last > ma9_last
                     and ma4_last > ma50_last
                     
                     and ma6_last > ma15_last
                     and ma7_last > ma25_last
-                    and deviation_bellissima > 0.12
+                    
                     and ma2_last > ma2_2_min_ago
                 
                 ):
-                    buy = "BUY 5 con ma50 > AND 50<100 and 300 > 60 min ago and 5-28 > 0.27 (SI !) - riga 7237"
+                    buy = "BUY 5 con 300 > 450 and ma50 > AND 50<100 and 300 > 120 min ago and 5-28 > 0.23 - r 7237 B"
                     action = "buy"
                     percentage = 70
                     
+                    # 7 feb 2023 dev bellissima 0.10 da 0.12
+                    # 7 feb 2023 5-28 a 0.23 da 0.27
                     
                     
                 elif (
@@ -10497,11 +12824,7 @@ class ro_cano_che_ritorna:
                     # e, a questo punto, non importa se compra con un + 0.10 piu' in alto. NON FA UNA GRANDE DIFFERENZA !
                     
                     
-                    
-                    
-                    
-                
-                
+                   
                 
                 
                 # BUY 5 TUTTE LE ma IN CRESCITA
@@ -10539,25 +12862,62 @@ class ro_cano_che_ritorna:
                 # ATTENZIONE ! AL BUY 5 TRANNE CHE IN UNA EVENTUALE CORREZIONE HO MESSO 78>150 STIAMO AL BUY 5 PERDIO !
                 # SENZA QUESTA 78>150 HO AVUTO MOLTI PROBLEMI !
                 
+                elif (
+                    
+                    ma450_last > ma450_360_min_ago
+                    and ma78_last > ma150_last
+                    
+                    and deviation_ma4_sopra_ma100 > 0.01
+                    
+                    and deviation_buy3 > 0.01
+                    and deviation_bellissima > 0.01
+                    and deviation_ma7_sopra_ma40 > 0.10
+                    
+                    and ma3_last > ma13_last
+                    
+                    and ma4_last > ma9_last
+                    and ma4_last > ma50_last
+                    and ma6_last > ma15_last
+                    and ma7_last > ma25_last
+                    
+                    and ma2_last >= ma2_2_min_ago
+              
+                ):
+                    buy = "BUY 5A con ma450_last > ma450_360_min_ago - r 7384 A"
+                    action = "buy"
+                    percentage = 70
+                    
+                    # deviation_bellissima = 6/30
+                    # spezzare la catena dei buy - effetti laterali !
+                    # se e' arrivato il buy 5 e' molto probabile che il trend sia consolidato
+                    # e, a questo punto, non importa se compra con un + 0.10 piu' in alto. NON FA UNA GRANDE DIFFERENZA !
+                    
+                    # > vacanza anticipato buy
+
                 
                 elif (
-                    ma78_last >= ma78_2_min_ago
+                    
+                    ma450_last < ma450_360_min_ago
                     and ma78_last > ma150_last
                     
                     and deviation_ma4_sopra_ma100 > 0.10
                     
                     and deviation_buy3 > 0.10
                     and deviation_bellissima > 0.10
-                    and ma3_last > ma13_last
                     and deviation_ma7_sopra_ma40 > 0.10
+                    
+                    
                     and ma4_last > ma9_last
                     and ma4_last > ma50_last
                     and ma6_last > ma15_last
                     and ma7_last > ma25_last
+                    
+                    and ma3_last > ma13_last
+                    
                     and ma2_last >= ma2_2_min_ago
               
                 ):
-                    buy = "BUY 5A con ma78 > and deviation_bellissima > 0.163 (PER SPEZZARE LA CATENA - effetti laterali) - r 7384"
+                    buy = "BUY 5A con con ma450_last > ma450_360_min_ago and deviation_bellissima > 0.163 (PER SPEZZARE LA CATENA - effetti laterali) - r 7384 B"
                     action = "buy"
                     percentage = 70
                     
@@ -10682,12 +13042,7 @@ class ro_cano_che_ritorna:
                     percentage = 70
                     
                     
-                    
-                    
-                    
-                
-                
-                
+                   
                 
                 
                 # RIALZO IMPROVVISO 200< DOPO TANTO TEMPO DI TREND LATERALE - POTREBBE SUCCEDERE !
@@ -10726,8 +13081,8 @@ class ro_cano_che_ritorna:
                 
                 elif (
                     ma200_last > ma200_20_min_ago
-                    and deviation_rialzo_improvviso_sopra > 0.69
-                    and deviation_rialzo_improvviso_1 > 0.46
+                    and deviation_rialzo_improvviso_sopra > 0.60
+                    and deviation_rialzo_improvviso_1 > 0.45
                     and deviation_rialzo_improvviso_2 > 0.19
                     and deviation_rialzo_improvviso_3 > 0.19
                     and deviation_range_1 < 0.22
@@ -10738,14 +13093,14 @@ class ro_cano_che_ritorna:
                     and deviation_range_x > -0.22
                 ):
              
-                    buy = "BUY 5 RIALZO IMPROVVISO con 200 > e con > 0.72 DOPO TANTO TEMPO DI TREND LATERALE - POTREBBE SUCCEDERE e' successo ! - r 7563"
+                    buy = "BUY 5 RIALZO IMPROVVISO con 200 > e con > 0.60 DOPO TANTO TEMPO DI TREND LATERALE - POTREBBE SUCCEDERE e' successo ! - r 7563"
                     action = "buy"
                     percentage = 70
                     
                     # 6 giu 2022 deviation rialzo improvviso a 0.82 da 0.62
                     # 1 luglio a 0.72 da 0.82
                     # > estate 0.69 da 0.72
-                    
+                    #  3 lug 2023 0.60 da 0.69
                 
                 # BUY 5 29 ago 2022 > 120 min di ribasso 78>150
                 
@@ -10780,7 +13135,7 @@ class ro_cano_che_ritorna:
                     ma18_last > ma100_last
                     and ma78_last < ma150_last
                     
-                    and ma100_last < ma100_120_min_ago
+                    and ma100_last > ma100_120_min_ago
                     and ma200_last < ma200_120_min_ago
                     and ma300_last < ma300_120_min_ago
                     
@@ -10792,20 +13147,78 @@ class ro_cano_che_ritorna:
                     and ma2_last >= ma2_2_min_ago
                     
                 ):
-                    buy = "BUY 5 29 ago 2022 > 120 min di ribasso 78<150 - r 7564 A2"
+                    buy = "BUY 5 29 ago 2022 > 120 min di ribasso 78<150 CON ma100>120 min ago - r 7564 A2x"
+                    action = "buy"
+                    percentage = 90
+                    
+                    # 19 set 2022 aggiunta 3-10 a 0.07
+                    # 25 gen 2023 5-28 a 0.12
+
+              
+                elif (
+                    
+                    ma8_last > ma54_last
+                    and ma78_last < ma150_last
+                    
+                    and ma100_last < ma100_120_min_ago
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_120_min_ago
+                  
+                    and ma450_last > ma450_480_min_ago
+                  
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.07
+                    and deviation_ma5_sopra_ma28 > 0.15
+                    and ma2_last >= ma2_2_min_ago
+                    
+                ):
+                    buy = "BUY 5 29 ago 2022 > 120 min di ribasso 78<150 CON ma100<120 min ago - r 7564 A2yx"
                     action = "buy"
                     percentage = 90
                     
                     # 19 set 2022 aggiunta 3-10 0.07 
+                    # 25 gen 2023 5-28 0.15 da 0.12
+                    #  1 feb 2023 8-100 da 18-100
+
+
+              
+                elif (
+                    
+                    ma8_last > ma54_last
+                    and ma78_last < ma150_last
+                    
+                    and ma100_last < ma100_120_min_ago
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_120_min_ago
+                  
+                    and ma450_last < ma450_480_min_ago
+                  
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.07
+                    and deviation_ma5_sopra_ma28 > 0.15
+                    and ma2_last >= ma2_2_min_ago
+                    
+                ):
+                    buy = "BUY 5 29 ago 2022 > 120 min di ribasso 78<150 CON ma100<120 min ago - r 7564 A2yy"
+                    action = "buy"
+                    percentage = 90
+                    
+                    # 19 set 2022 aggiunta 3-10 0.07 
+                    # 25 gen 2023 5-28 0.15 da 0.12
+                    #  1 feb 2023 8-100 da 18-100
+                    # 12 set 2023 8-54 da 8-100
+              
                     
                     
-                    
-                    
-                # BUY 5 29 ago 2022 > 180 min di ribasso 78>150
+                # BUY 5 13 apr 2023 zia pina > 180 min di ribasso 78>150
                 
                 elif (
                     
-                    ma18_last > ma100_last
+                    ma5_last > ma54_last
                     and ma78_last > ma150_last
                     
                     and ma100_last < ma100_180_min_ago
@@ -10819,18 +13232,28 @@ class ro_cano_che_ritorna:
                     and ma2_last >= ma2_2_min_ago
                     
                 ):
-                    buy = "BUY 5 29 ago 2022 > 180 min di ribasso 78>150 - r 7564 B1"
+                    buy = "BUY 5 13 apr 2023 zia pina > 180 min di ribasso 78>150 - r 7564 B1"
                     action = "buy"
                     percentage = 90
+                    
+                    # 27 set 2023 5-54 da 18-100
                     
                     
                     
                 # BUY 5 29 ago 2022 > 180 min di ribasso 78<150
                 
+                
                 elif (
                     
-                    ma18_last > ma100_last
-                    and ma78_last < ma150_last
+                    
+                    ma78_last < ma150_last
+                    and deviation_ma5_sotto_ma300 > -0.10
+                    
+                    and deviation_ma5_sopra_ma59 < -0.10
+                    and deviation_ma3_sopra_ma10 > 0.057
+                    and deviation_ma3_sopra_ma16 > 0.06
+                  
+                    and deviation_ma5_sopra_ma28 < 0.10
                     
                     and ma100_last < ma100_180_min_ago
                     and ma200_last < ma200_180_min_ago
@@ -10839,20 +13262,52 @@ class ro_cano_che_ritorna:
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
                     
-                    and deviation_ma5_sopra_ma28 > 0.13
                     and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                     
                 ):
-                    buy = "BUY 5 29 ago 2022 > 180 min di ribasso 78<150 - r 7564 B2"
+                    buy = "BUY 5 29 ago 2022 > 180 min di ribasso 78<150 and 3-16 > 0.06 and macd > macd 2 min ago - r 7564 B2x"
+                    action = "buy"
+                    percentage = 90
+
+              
+                elif (
+                    
+                    
+                    ma78_last < ma150_last
+                    and deviation_ma5_sotto_ma300 < -0.10
+                    
+                    and deviation_ma3_sopra_ma10 > 0.057
+                    and deviation_ma3_sopra_ma16 > 0.06
+                    and deviation_ma5_sopra_ma28 < 0.10
+                    
+                    and ma100_last < ma100_180_min_ago
+                    and ma200_last < ma200_180_min_ago
+                    and ma300_last < ma300_180_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                    
+                ):
+                    buy = "BUY 5 29 ago 2022 > 180 min di ribasso 78<150 and 3-16 > 0.06 and macd > macd 2 min ago - r 7564 B2y"
                     action = "buy"
                     percentage = 90
                     
-                    
-                    
-                    
-                    
-                    
-                    
+                    # 7 feb 2023 deviation_ma5_sopra_ma28 > 0.10 da 0.13
+                    # tolto 18>100 
+                    # aggiunto PENSIERO LATERALE and deviation_ma5_sopra_ma59 < -0.09
+                    # 19 apr 2023 aggiunta 3-16 > 0.06
+                    #  9 mag 2023 aggiunta 3-10 > 0.057
+                    #  9 mag 2023 aggiunto macd > macd 2 min ago
+                    # 24 ago 2023 and deviation_ma5_sopra_ma59 < -0.10
+                    # 27 set 2023 3-39 da 3-59
+
+              
+
+              
                 # NELLA CORREZIONE EVENTUALE (SIAMO AL BUY 5 !) NON HO MESSO and ma50_last > ma100_last
                 
                 # BUY 5A PAZZA DURANTE UNA piccola CORREZIONE che NON E' un forte ribasso e NON E' un crollo ! (compare stammi vicino!)
@@ -10875,13 +13330,7 @@ class ro_cano_che_ritorna:
                     # ma5 non deve allontanarsi troppo dalla ma200 !
                     
                     
-                    
-                    
-                    
-                    
-                    
-                    
-                    
+                  
         
         ############################################################################################
 
@@ -11234,15 +13683,31 @@ class ro_cano_che_ritorna:
                         
 
                     ###########################################################################     trend in ribasso
-
+                    
                     elif (
                         ma50_last < ma50_2_min_ago
+                        and ma100_last > ma200_last
                         and (ma3_prev > ma28_prev and ma3_last < ma28_last)
-                        and deviation_sell < -0.30
+                        and deviation_sell < -0.32
                         and ma2_last < ma2_2_min_ago
                      
                     ):
-                        sell = "SELL 1 (3-5 min) con ma50 < and incrocio 3-28 - r 7964"
+                        sell = "SELL 1 (3-5 min) con ma50 < and incrocio 3-28 and dev_sell < -0.32 - r 7964 A"
+                        action = "sell"
+                        
+                        # deviation_sell_ma78 = ma3_last / ma78_last
+                        # incrocio 3 -28 e' fondamentale per evitare punto rosso sovrapposto al punto verde !
+                        
+                        
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and ma100_last < ma200_last
+                        and (ma3_prev > ma28_prev and ma3_last < ma28_last)
+                        and deviation_sell < -0.33
+                        and ma2_last < ma2_2_min_ago
+                     
+                    ):
+                        sell = "SELL 1 (3-5 min) con ma50 < and incrocio 3-28 and dev_sell < -0.32 - r 7964 B"
                         action = "sell"
                         
                         # deviation_sell_ma78 = ma3_last / ma78_last
@@ -11531,8 +13996,6 @@ class ro_cano_che_ritorna:
                         
                         
                         
-                        
-                        
                     elif (
                         ma50_last < ma50_2_min_ago
                         and ma3_last < ma16_last
@@ -11545,17 +14008,40 @@ class ro_cano_che_ritorna:
                         and delta_1 > delta_2
                         and ma100_last < ma100_60_min_ago
                     ):
-                        sell = "SELL 1 PARACADUTE CROLLO 300 < distanza> ma100-ma200 (5-12 min) e ma50< and ma3 < ma16 and dev_sell < -0.47  - NOTTE - r 8267"
+                        sell = "SELL 1 PARACADUTE CROLLO 300 < distanza> ma100-ma200 (5-12 min) e ma50< and ma3 < ma16 and dev_sell < -0.47  - NOTTE - r 8260"
                         action = "sell"
 
                         # AGGIUNTA PER SICUREZZA SE CONTINUA A PRECIPITARE ma sta continuando a scendere
-                        
-                        
-                        
-                        
-                        
-                 
+
+
+                    
+                    # ----------------------------------------------------------------------------- CONDIZIONE SPECIALE NEL SELL 1 !
+                    
+                    elif (
+                        ma78_last < ma78_120_min_ago
+                        and ma300_last < ma300_301_min_ago
                 
+                        and deviation_ma39 < 0.05
+                        and deviation_sell < -0.06
+                
+                
+                        and ma50_last <= ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 < 0.40
+                
+                        and deviation_ma5_sotto_ma200 > -0.90
+                
+                        and ma2_last <= ma2_2_min_ago 
+                        and macd < macd_2_min_ago
+                    ):
+                        sell = "SELL cond. spec. (5-12 min) r 16047 B2 con ma300> 5 ore - dev 3-39 < 0.05 and dev_sell < -0.06 - con ma50 < e con ma5 sotto ma200 > -0.90 - r 8261"
+                        action = "sell"
+
+                    
+                    
+                        
+                        
+                        
+                        
                 
                 ###################################################################################################################  SESSIONE 1 ( 12-21 min )
 
@@ -11646,9 +14132,7 @@ class ro_cano_che_ritorna:
                         # deviation_sell = ma3_last/last_trade_price
                         
                         
-                        
-                        
-                        
+                       
 
                     elif (
                         ma50_last >= ma50_2_min_ago
@@ -11731,32 +14215,38 @@ class ro_cano_che_ritorna:
                         
                         
                         
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and ma450_last > ma450_720_min_ago
+                        and ma100_last < ma300_last
+                        and deviation_ma39 < -0.159
+                        and deviation_sell < -0.355
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 1 (12-21 min) con ma50 < and deviation_ma39 < -0.159 and deviation_sell < -0.355 CON 450> - r 8444 A"
+                        action = "sell"
+                        
+                        # 17 gen 2023 dev sell -0.35 da -0.34
+                        
                         
                     elif (
                         ma50_last < ma50_2_min_ago
+                        and ma450_last < ma450_720_min_ago
                         and ma100_last < ma300_last
                         and deviation_ma39 < -0.159
-                        and deviation_sell < -0.34
+                        and deviation_sell < -0.36
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 (12-21 min) con ma50 < and deviation_ma39 < -0.159 and deviation_sell < -0.34 - r 8444"
+                        sell = "SELL 1 (12-21 min) con ma50 < and deviation_ma39 < -0.159 and deviation_sell < -0.36 CON 450< - r 8444 B"
                         action = "sell"
                         
-                        
-                        # and (ma3_prev > ma33_prev and ma3_last < ma33_last)
-                        # and deviation_sell < -0.25
-                        # ATTENZIONE QUESTA aveva FATTO -0.61% !
-                        # QUINDI ho abbassato da 0.17 a 0.16 a 0.15
-                        # HO NOTATO CHE ANCHE INCROCIO 5-100 SAREBBE ARRIVATO TARDI
-                        # ALLORA METTO incrocio 3-78 e deviation <0.10
+                        # 17 gen 2023 dev sell -0.35 da -0.34
+                        # 10 mar 2023 dev sell -0.36 da -0.35
+                       
                         
                         
                         
-                        
-                        
-                        
-                        
-                    
+                     
                     
                     elif (
                         ma50_last < ma50_2_min_ago
@@ -11823,10 +14313,6 @@ class ro_cano_che_ritorna:
                     
                     
                     
-                    
-                    
-                    
-                    
                     elif (
                         ma50_last < ma50_2_min_ago
                         and (ma3_prev > ma11_prev and ma3_last < ma11_last)
@@ -11835,9 +14321,12 @@ class ro_cano_che_ritorna:
                     ):
                         sell = "SELL 1 eventuale guadagno con crollo (12-21 min) con ma50 < and incrocio 3-11 and deviation_sell > 0.81 - r 8538"
                         action = "sell"
+
+
+
+                  
                         
                    
-                
                     # ----------------------------------------------------------------------------- torna a casa durante il crollo con minor danno 
                     
                     elif (
@@ -11854,6 +14343,32 @@ class ro_cano_che_ritorna:
                         # 21 lug 2022 -0.30 da -0.27
                         #  3 set 2022 -0.325 da -0.30
                         # 21 set 2022 -0.335 da -0.325
+
+                    
+                    # ----------------------------------------------------------------------------- CONDIZIONE SPECIALE NEL SELL 1 !
+                    
+                    elif (
+                        ma78_last < ma78_120_min_ago
+                        and ma300_last < ma300_301_min_ago
+                
+                        and deviation_ma39 < 0.05
+                        and deviation_sell < -0.06
+                
+                
+                        and ma50_last <= ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 < 0.40
+                
+                        and deviation_ma5_sotto_ma200 > -0.90
+                
+                        and ma2_last <= ma2_2_min_ago 
+                        and macd < macd_2_min_ago
+                    ):
+                        sell = "SELL cond. spec. (12-21 min) r 16047 B2 con ma300> 5 ore - dev 3-39 < 0.05 and dev_sell < -0.06 - con ma50 < e con ma5 sotto ma200 > -0.90 - r 8552"
+                        action = "sell"
+
+                  
+
+                    
                         
                 
                 
@@ -11881,11 +14396,11 @@ class ro_cano_che_ritorna:
                         # deviation_sell = ma3_last/last_trade_price
                         
                         
-                        
-                        
+                      
                     
                     elif (
                         ma50_last > ma50_2_min_ago
+                        and macd <= macd_2_min_ago
                         and deviation_ma8_sotto_ma300 > -1.00
                         
                         and deviation_sell < -0.33
@@ -11893,7 +14408,7 @@ class ro_cano_che_ritorna:
                         and ma2_last < ma2_2_min_ago
                     
                     ):
-                        sell = "SELL 1 (21-50 min) con ma50> and deviation_sell <-0.32 and ma3_last < ma50_last - con 8 sotto 300 > -1.00 - r 8595 a"
+                        sell = "SELL 1 (21-50 min) con ma50> and deviation_sell <-0.32 and ma3_last < ma50_last - con 8 sotto 300 > -1.00 - r 8595 A"
                         action = "sell"
                         
                         # VENDITA 1 IN ALTO dopo BUY IN RISALITA
@@ -11902,7 +14417,7 @@ class ro_cano_che_ritorna:
                         # and deviation_sell < -0.26
                         # deviation_sell = ma3_last/last_trade_price
                         # deviation_ma8_sotto_ma300 = ma8_last / ma300_last
-                        
+                        # 21 apr 2023 aggiunta macd >= 2 min ago
                         
                     elif (
                         ma50_last > ma50_2_min_ago
@@ -11958,31 +14473,49 @@ class ro_cano_che_ritorna:
                     
                     
                     
-                    
-                    
-                    
-                    
-                    
-                    
                     ######################################################################################### doppio delta > 1 TREND CONTINUA AL RIALZO vendi cosi'
                     
                     elif (
                         ma50_last > ma50_2_min_ago
-                        
+                        and ma300_last > ma450_last
                         
                         and delta_1 < delta_2
                         and ma100_last > ma100_60_min_ago
                         
-                        and ma5_last < ma39_last
+                        and (ma5_prev > ma45_prev and ma5_last < ma45_last)
+                        
                         and deviation_sell > 0.34 and deviation_sell < 0.56
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 (21-50 min) con ma50 > and 5-39 and deviation_sell 0.34 - 0.56 la prima FINTA ALLA MARADONA  - GIORNO - r 8680"
+                        sell = "SELL 1 (21-50 min) con ma50 > and INCROCIO 5-39 and deviation_sell 0.34 - 0.56 la prima FINTA ALLA MARADONA  - GIORNO - r 8680 B"
                         action = "sell"
                         
                         # 31 maggio 2022 5-39 da 5-20
+                        # 26 feb 2023 INCROCIO dall' ALTO verso VERSO il BASSO 5-39 VEDI 26 feb 2023 ore 20:18
+                        # 17 mar 2023 5-45 da 5-39 se 300>450
                         
+                        
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and ma300_last < ma450_last
+                        
+                        and delta_1 < delta_2
+                        and ma100_last > ma100_60_min_ago
+                        
+                        and (ma5_prev > ma49_prev and ma5_last < ma49_last)
+                        
+                        and deviation_sell > 0.34 and deviation_sell < 0.56
+                        and ma2_last < ma2_2_min_ago
+                        
+                    ):
+                        sell = "SELL 1 (21-50 min) con ma50 > and INCROCIO 5-49 and deviation_sell 0.34 - 0.56 la prima FINTA ALLA MARADONA  - GIORNO - r 8680 B"
+                        action = "sell"
+                        
+                        # 31 maggio 2022 5-39 da 5-20
+                        # 26 feb 2023 INCROCIO dall' ALTO verso VERSO il BASSO 5-39 VEDI 26 feb 2023 ore 20:18
+                        # 17 mar 2023 5-39 se 300<450
+                        # 6 apr 2023 5-49 da 5-39
                         
                         
                         
@@ -12008,19 +14541,7 @@ class ro_cano_che_ritorna:
                         
                         ###########################################################################################################
                         
-                        
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
+                   
                     
                     ############################################################################## doppio delta > 1 TREND CONTINUA AL RIALZO vendi cosi'
                     
@@ -12033,18 +14554,18 @@ class ro_cano_che_ritorna:
                         and delta_1 < delta_2
                         and ma100_last > ma100_60_min_ago
                         
-                        and ma5_last < ma33_last
+                        and ma5_last < ma59_last
                         and deviation_sell > 0.57 and deviation_sell < 0.90
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 (21-50 min) con ma50 > and 5-33 and deviation_sell 0.51 - 0.90 ELASTICO ALLA RONALDO E 100 > 300 - GIORNO - r 8740 a"
+                        sell = "SELL 1 (21-50 min) con ma50 > and 5-33 and deviation_sell 0.51 - 0.90 ELASTICO ALLA RONALDO E 100 > 300 - GIORNO - r 8740 A"
                         action = "sell"
                         
                         # dopo 26 minuti non c'e' piu' quello scatto in avanti - dribbling- che si verifica nei primi minuti
                         # deviation_sell = ma3_last/last_trade_price
                         # 5-22 (era 4-15)
-                        
+                        # 16 gen 2023 5-59 da 5-33
                         
                         
                     elif (
@@ -12066,10 +14587,6 @@ class ro_cano_che_ritorna:
                         # deviation_sell = ma3_last/last_trade_price
                         # 5-22 (era 4-15)
                         # 5-39 da 5-22 dopo le dolomiti !
-                        
-                        
-                        
-                        
                         
                         
                     ########################################################################## doppio delta < 1 TREND COMINCIA A SCENDERE ! vendi con ma50 !
@@ -12096,10 +14613,6 @@ class ro_cano_che_ritorna:
                         
                         
                         
-                        
-                        
-                        
-                 
                     #######################################################################################################
                     
                     
@@ -12149,14 +14662,15 @@ class ro_cano_che_ritorna:
                     elif (
                         ma50_last > ma50_2_min_ago
                         and deviation_ma10_sopra_ma200 > 1.00
-                        and (ma3_prev > ma18_prev and ma3_last < ma18_last)
+                        and (ma3_prev > ma28_prev and ma3_last < ma28_last)
                         and deviation_sell > 2.71 and deviation_sell < 5.70
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 (21-50 min) con ma50 > and incrocio 3-18 and deviation_sell 2.71 - 5.70 (TACCO DI ALLAH) - r 8856 A"
+                        sell = "SELL 1 (21-50 min) con ma50 > and incrocio 3-28 and deviation_sell 2.71 - 5.70 (TACCO DI ALLAH) - r 8856 A"
                         action = "sell"
                         
+                        # 6 apr 2023 3-28 da 3-18
                         
                     elif (
                         ma50_last > ma50_2_min_ago
@@ -12168,8 +14682,6 @@ class ro_cano_che_ritorna:
                     ):
                         sell = "SELL 1 (21-50 min) con ma50 > and incrocio 3-11 and deviation_sell 2.71 - 5.70 (TACCO DI ALLAH) - r 8856 B"
                         action = "sell"
-                        
-                        
                         
                         
                     
@@ -12194,16 +14706,16 @@ class ro_cano_che_ritorna:
                         
                         and ma100_last > ma100_60_min_ago
                         and ma5_last < ma100_last
-                        and deviation_sell < -0.29
+                        and deviation_sell < -0.31
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 (21-50 min) con ma50 > and 5-100 and deviation_sell < -0.29 CUSCINO DI SANT' ANTONIO se ma100 > E 100 > 200- r 8886 A"
+                        sell = "SELL 1 (21-50 min) con ma50 > and 5-100 and deviation_sell < -0.31 CUSCINO DI SANT' ANTONIO se ma100 > E 100 > 200 - r 8886 A"
                         action = "sell"
                         
-                        # 19 giu 2022 dev sell a 0.26 da 0.24
-                        # 29 giu 2022 dev sell a 0.29 da 0.26
-                        
+                        # 19 giu 2022 dev sell a -0.26 da -0.24
+                        # 29 giu 2022 dev sell a -0.29 da -0.26
+                        #  1 feb 2023 dev sell a -0.31 da -0.29
                         
                     
                     
@@ -12273,9 +14785,6 @@ class ro_cano_che_ritorna:
                         
                     
                     
-                    
-                    
-                    
                     elif (
                         ma50_last > ma50_2_min_ago
                         and ma100_last < ma100_60_min_ago
@@ -12318,20 +14827,20 @@ class ro_cano_che_ritorna:
                     
                     elif (
                         ma50_last < ma50_2_min_ago
-                        and deviation_ma39 < -0.16
-                        and deviation_sell < -0.29
+                        and deviation_ma39 < -0.01
+                        and deviation_sell < -0.10
                         and ma2_last < ma2_2_min_ago
                         
                         and deviation_ma100_sopra_ma300 > 0.69
                     ):   
-                        sell = "SELL 1 (21-50 min) con ma50 < con deviation_ma39 <-0.16 and dev_sell< -0.29 TREND CRESCITA (100 sopra 300 > 0.69) - r 8978"
+                        sell = "SELL 1 (21-50 min) con ma50 < con deviation_ma39 <-0.01 and dev_sell< -0.10 TREND CRESCITA (100 sopra 300 > 0.69) - r 8978"
                         action = "sell"
                         
                         # se non ha forza dopo 1 ora e' inutile continuare a sperare !
                         # qui non ho messo il crollo perche' dopo 40 min o gia' ha venduto o e' gia' risalita
                         # cuscino dell' angelo custode
-                        
-                        
+                        # 12 set 2023dev 39 -0.01 da -0.15
+                        # 12 set 2023 dev sell -0.10 da -0.20
                         
                     
                     # cuscino sant' antonio
@@ -12353,63 +14862,143 @@ class ro_cano_che_ritorna:
                     elif (
                         ma50_last < ma50_2_min_ago
                         and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
                         and ma8_last < ma39_last
                         and deviation_ma100_sopra_ma300 > 0.69
-                        and deviation_sell < -0.12
+                        and deviation_sell < -0.178
                         and ma5_last < ma100_last
                     ):
-                        sell = "SELL 1 (21-50 min)con ma50 < CUSCINO SANT' ANTONIO (5-100) MA SOLO con TREND CRESCITA (100 sopra 300 > 0.69) E 8<39 - r 8997 b"
+                        sell = "SELL 1 (21-50 min) con ma50 < CUSCINO SANT' ANTONIO (5-100) MA SOLO con 100 sopra 300 > 0.69 and macd < macd 2 min ago - r 8997 B"
                         action = "sell"
                         
+                        # 13 gen 2023 dev sell -0.175
+                        # ho visto che ma175 andrebbe bene ma ho preferito modificare dev sell
+                        # 3 mag 2023 aggiunta macd < macd 2 min ago
                         
-                        
-                        
-                    # TREND LATERALE (100/300  <0.69 and >-0.77) NON TOCCARE 
+                    # TREND LATERALE (100/300  <0.69 and >-0.77) NON TOCCARE
+                    
                     
                     elif (
                         ma50_last < ma50_2_min_ago
+                        and ma450_last > ma450_720_min_ago
+                        
+                        and delta_1_200_78 < delta_2_200_78_60_min
+                        and deviation_ma39 < -0.17
+                        
+                        and deviation_sell < -0.235
+                        and ma2_last < ma2_2_min_ago
+                        
+                        and deviation_ma100_sopra_ma300 < 0.69
+                        and deviation_ma100_sopra_ma300 > -0.77
+                        and deviation_sell < -0.232
+                        
+                        and ma3_last < ma300_last
+                    ):
+                        sell = "SELL 1 (21-50 min) con ma50 < con dev_ma39 <-0.17 E dev_sell < -0.232 TREND LATERALE (100>300 <0.69 and >-0.77) - r 9016 A1"
+                        action = "sell"
+                        
+                        # OGGI 22 LUG 2022 QUESTA SU RCCR HA FATTO -0.56 MENTRE MADDOG HA FATTO -1.43 !
+                        
+                        # > estate -0.21 da -0.18
+                        # 20 gen 2023 dev sell < -0.235 da -0.22
+                        # 24 apr 2023 dev sell < -0.235 con 450 > 720 min ago
+                        # 28 apr 2023 dev sell < -0.235
+                        # 28 apr 2023 dev sell < -0.232 da 0.235
+                        
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and ma450_last < ma450_720_min_ago
                         and delta_1_200_78 < delta_2_200_78_60_min
                         and deviation_ma39 < -0.17
                         and ma2_last < ma2_2_min_ago
                         
                         and deviation_ma100_sopra_ma300 < 0.69
                         and deviation_ma100_sopra_ma300 > -0.77
-                        and deviation_sell < -0.22
+                        and deviation_sell < -0.233
                         
                         and ma3_last < ma300_last
                     ):
-                        sell = "SELL 1 NON TOCCARE (21-50 min) con ma50 < con dev_ma39 <-0.17 E dev_sell < -0.22 TREND LATERALE (100>300 <0.69 and >-0.77) - r 9016a"
+                        sell = "SELL 1 NO TOCCARE (21-50 min) con ma50 < con dev_ma39 <-0.17 E dev_sell < -0.233 TREND LATERALE (100>300 <0.69 and >-0.77) - r 9016 A2"
                         action = "sell"
                         
-                        # OGGI 22 LUG 2022 QUESTA SU RCCR HA FATTO -0.56 MENTRE MADOG HA FATTO -1.43 !
+                        # OGGI 22 LUG 2022 QUESTA SU RCCR HA FATTO -0.56 MENTRE MADDOG HA FATTO -1.43 !
                         
                         # > estate -0.21 da -0.18
+                        # 20 gen 2023 dev sell < -0.235 da -0.22
+                        # 24 apr 2023 dev sell < -0.233 da -0.255 con 450 < 720 min ago
                         
                         
-                    # TREND LATERALE (100/300  <0.69 and >-0.77) NON TOCCARE 
+                        
+                        
+                    # TREND LATERALE (100/300  < 0.69 and >-0.77) NON TOCCARE
+                    
                     
                     elif (
                         ma50_last < ma50_2_min_ago
+                        and ma300_last > ma300_180_min_ago
+                        
                         and delta_1_200_78 > delta_2_200_78_60_min
-                        and deviation_ma39 < -0.17
+                        and deviation_ma39 < -0.01
                         and ma2_last < ma2_2_min_ago
                         
                         and deviation_ma100_sopra_ma300 < 0.69
                         and deviation_ma100_sopra_ma300 > -0.77
-                        and deviation_sell < -0.23
+                        and deviation_sell < -0.221
                         
                         and ma3_last < ma300_last
                     ):
-                        sell = "SELL 1 (21-50 min) con ma50 < con dev_ma39 <-0.17 E dev_sell < -0.23 TREND LATERALE (100>300 <0.69 and >-0.77) - r 9016 B"
+                        sell = "SELL 1 NON TOCCARE (21-50 min) con ma50 < E dev_ma39 <-0.01 E dev_sell < -0.221 TREND LATERALE (100>300 <0.69 and >-0.77) - r 9016 B1"
                         action = "sell"
                         
                         # OGGI 22 LUG 2022 QUESTA SU RCCR HA FATTO -0.56 MENTRE MADOG HA FATTO -1.43 !
                         
                         # > estate -0.21 da -0.18
-                        # 17 gen 2023 -0.23 da -0.21
+                        # 17 feb 2023 dev_sell a -0.219 da -0.215
+                        #  6 apr 2023 dev_sell a -0.221 da -0.219
+                        # 11 ago 2023 aggiunto and deviation_ma39 < -0.01
+
+                  
                         
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and ma300_last < ma300_180_min_ago
                         
+                        and delta_1_200_78 > delta_2_200_78_60_min
+                        and deviation_ma39 < 0.06
+                        and deviation_sell < -0.04
                         
+                        and deviation_ma100_sopra_ma300 < 0.69
+                        and deviation_ma100_sopra_ma300 > -0.77
+                        
+                        and ma3_last < ma300_last
+                        
+                        and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
+                        and macd < -1
+                    ):
+                        sell = "SELL 1 (21-50 min) con ma50 < CON dev_sell < -0.04 E dev_ma39 < 0.06 E TREND LATERALE (100>300 <0.69 and >-0.77) - r 9016 B2"
+                        action = "sell"
+                        
+                        # OGGI 22 LUG 2022 QUESTA SU RCCR HA FATTO -0.56 MENTRE MADOG HA FATTO -1.43 !
+                        
+                        # > estate -0.21 da -0.18
+                        # 17 feb 2023 dev_sell a -0.219 da -0.215
+                        #  6 apr 2023 dev_sell a -0.221 da -0.219
+                        #  5 giu 2023 dev_sell a -0.20 da -0.22
+                        #  5 giu 2023 dev_39 a -0.16 da -0.165
+                        # 30 ago 2023 dev_39 a -0.01 da -0.16
+                        # 30 ago 2023 dev_sell a -0.02 da -0.20
+                        # 31 ago 2023 and macd < macd_2_min_ago
+                        # 31 ago 2023 dev_sell a -0.03 da -0.02
+                        # 12 set 2023 dev_sell a -0.05 da -0.03
+                        # 12 set 2023 and macd < -1
+                        # 12 set 2023 dev_39 a 0.05 da -0.01
+                        # 29 set 2023 dev_sell a -0.06 da -0.05
+                        
+                        #  5 ott 2023 dev_sell a -0.04 da -0.06
+                        #  5 ott 2023 dev_39 a 0.06 da 0.05
+
+                    
                         
                     # TREND LATERALE (100/300  < 0.69 and > -0.77)
                     
@@ -12485,9 +15074,7 @@ class ro_cano_che_ritorna:
                         # 27 giu 2022 deviation_ma39 < -0.28 da -0.27
                         
                         
-                        
-                    
-                    
+                       
                     
                     # RAFFORZATIVO CON 300 > 300 120 AGO (TREND RIALZO) OPPURE CON 300< 300 120 min ago (CROLLO)
                     
@@ -12523,36 +15110,39 @@ class ro_cano_che_ritorna:
                         
                         
                         
+                   
                         
                         
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                    # ECCO inequivocabilmente il crollo !    
-                    
                     elif (        
                         ma50_last < ma50_2_min_ago
+                        and ma100_last > ma100_60_min_ago
                         and ma300_last < ma300_120_min_ago
                         and ma2_last < ma2_2_min_ago 
-                        and deviation_sell < -0.36
+                        and deviation_sell < -0.37
                         and deviation_ma50_sotto_ma300 < 0.50
                     ):
-                        sell = "SELL 1 maestro parte 2 (21-50 min) con ma50 < and deviation_sell < -0.36 - r 9110"
+                        sell = "SELL 1 maestro parte 2 (21-50 min) con ma50 < and deviation_sell < -0.37 - r 9110 A"
                         action = "sell"
                         
                         # da 0.33 a 0.36 perche' durante il crollo ferrari non devi guardare i centesimi.
                         
                         
                         
+                    elif (        
+                        ma50_last < ma50_2_min_ago
+                        and ma100_last < ma100_60_min_ago
+                        and ma300_last < ma300_120_min_ago
+                        and ma2_last < ma2_2_min_ago 
+                        and deviation_sell < -0.36
+                        and deviation_ma50_sotto_ma300 < 0.50
+                    ):
+                        sell = "SELL 1 maestro parte 2 (21-50 min) con ma50 < and deviation_sell < -0.36 - r 9110 B"
+                        action = "sell"
                         
-                
-                 
-                    
-                    
+                        # da 0.33 a 0.36 perche' durante il crollo ferrari non devi guardare i centesimi.
+                        
+                        
+                     
                     #####################################################################################
                     
                     elif (
@@ -12567,9 +15157,6 @@ class ro_cano_che_ritorna:
                     
                     
                     
-                    
-                    
-                    
                     elif (
                         ma50_last < ma50_2_min_ago
                         and ma100_last > ma100_60_min_ago
@@ -12580,9 +15167,7 @@ class ro_cano_che_ritorna:
                         sell = "SELL 1 (21-50 min) con ma50 < e 100> and INCROCIO 3-100 (no 3<100) CUSCINO DI SANT' ANTONIO and deviation_sell < -0.31 - r 9146"
                         action = "sell"
                         
-                        
-                        
-                    
+                      
                     
                     
                     elif (
@@ -12610,11 +15195,7 @@ class ro_cano_che_ritorna:
                         
                         # 18 set -0.33 da -0.29
                         
-                        
-                        
-                        
-                        
-               
+                       
                     
                 
                     ############################################################# con ma50 discendente MA ma200 ET ma200>ma300 - PERDITA TOLLERATA AUMENTA
@@ -12653,7 +15234,7 @@ class ro_cano_che_ritorna:
                         and deviation_ma100_sopra_ma300 < 0.60
                     
                         and deviation_ma39 < -0.28
-                        and deviation_sell < -0.25
+                        and deviation_sell < -0.26
                         
                         and ma2_last < ma2_2_min_ago
                         
@@ -12662,7 +15243,7 @@ class ro_cano_che_ritorna:
                         
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 (21-50 min) con ma50 < and dev_ma39 < -0.28 AND DEV SELL<-0.25 con > PERDITA TOLLERATA 100 SOPRA 300 NON DI MOLTO - r 9229 B"
+                        sell = "SELL 1 (21-50 min) con ma50 < and dev_ma39 < -0.28 AND DEV SELL< -0.26 con > PERDITA TOLLERATA 100 SOPRA 300 NON DI MOLTO - r 9229 B"
                         action = "sell"
                         
                         # and deviation_ma39 < -0.15 or (deviation_sell < 0.10 and ma3_last < ma39_last)
@@ -12672,7 +15253,7 @@ class ro_cano_che_ritorna:
                         # and ma2_last < ma2_2_min_ago
                         # and deviation_ma39 < -0.25
                         # or deviation_sell < -0.26
-                        
+                        # 21 mar 2023 deviation_sell -0.26 da -0.25
                         
                         
                     # perdita tollerata DOPPIA
@@ -12707,9 +15288,7 @@ class ro_cano_che_ritorna:
                         action = "sell"
                         
                         
-                        
-                        
-                        
+                     
                         
                     # rafforzativo alla perdita tollerata
                     
@@ -12766,12 +15345,12 @@ class ro_cano_che_ritorna:
                         
                     
                     
-                    # SELL 1 eventuale guadagno ANZI NON PERDITA dopo BUY AUDI E crollo SUCCESSIVO (21-50 min) 
+                    # SELL 1 NON grande PERDITA dopo BUY AUDI E crollo SUCCESSIVO (21-50 min) 
                     
                     elif (
                         ma50_last < ma50_2_min_ago
                         and (ma5_prev > ma33_prev and ma5_last < ma33_last)
-                        and deviation_sell < -0.13
+                        and deviation_sell < -0.17
                         and ma59_last > ma59_30_min_ago
                         
                         and ma100_last < ma200_last
@@ -12790,7 +15369,7 @@ class ro_cano_che_ritorna:
                         
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 eventuale guadagno ANZI NON GRANDE PERDITA dopo BUY AUDI E crollo SUCCESSIVO (21-50 min) - r 9312 A"
+                        sell = "SELL 1 NON GRANDE PERDITA dopo BUY AUDI E crollo SUCCESSIVO (21-50 min) and dev sell < -0.17 - r 9312 A"
                         action = "sell"
                         
                         # in questa circostanza drammatica di crollo AUDI INTANTO TE LI PRENDI poi, eventualmente, ci pensa BUY 2
@@ -12799,16 +15378,16 @@ class ro_cano_che_ritorna:
                         # si interviene solo nella fascia di mezza cottura ! 
                         # 20 set 2022 dev sell -0.10 da 0.01
                         # 26 ott 2022 dev sell -0.13 da -0.10 con ma59 > ma59 30 min ago
+                        # 12 feb 2023 dev sell -0.15 da -0.13
+                        # 17 mar 2023 dev sell -0.17 da -0.15
                         
                         
-                        
-                        
-                    # SELL 1 eventuale guadagno ANZI NON PERDITA dopo BUY AUDI E crollo SUCCESSIVO (21-50 min) 
+                    # SELL 1 NON grande PERDITA dopo BUY AUDI E crollo SUCCESSIVO (21-50 min) 
                     
                     elif (
                         ma50_last < ma50_2_min_ago
-                        and (ma5_prev > ma33_prev and ma5_last < ma33_last)
-                        and deviation_sell < -0.12
+                        and (ma5_prev > ma39_prev and ma5_last < ma39_last)
+                        and deviation_sell < -0.15
                         and ma59_last < ma59_30_min_ago
                         
                         and ma100_last < ma200_last
@@ -12827,17 +15406,18 @@ class ro_cano_che_ritorna:
                         
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 eventuale guadagno ANZI NON GRANDE PERDITA dopo BUY AUDI E crollo SUCCESSIVO (21-50 min) - r 9312 B"
+                        sell = "SELL 1 NON GRANDE PERDITA dopo BUY AUDI E crollo SUCCESSIVO (21-50 min) and deviation_sell < -0.15 - r 9312 B"
                         action = "sell"
                         
                         # in questa circostanza drammatica di crollo AUDI INTANTO TE LI PRENDI poi, eventualmente, ci pensa BUY 2
                         
-                        # deviation 100 laterale =5/100 >-1.00 significa che questa condizione NON non interviene E' UNA SITUAZIONE DI CROLLO !
+                        # deviation 100 laterale =5/100 > -1.00 significa che questa condizione NON non interviene E' UNA SITUAZIONE DI CROLLO !
                         # si interviene solo nella fascia di mezza cottura ! 
                         # 20 set 2022 dev sell -0.10 da 0.01
                         # 26 ott 2022 dev sell -0.12 da -0.10 con ma59 > ma59 30 min ago
-                        
-                        
+                        # 20 apr 2023 dev sell -0.13 da -0.12
+                        # 20 apr 2023 5-39 da 5-33
+                        #  8 giu 2023 deviation_sell < -0.15 da < -0.13
                         
                     # -------------------------------------------------------------------------------------- guadagno durante il crollo LEGGERO
                     
@@ -12871,11 +15451,7 @@ class ro_cano_che_ritorna:
                         
                         # 14 set 3-30 da 3-28
                         
-                        
-                        
-                        
-                        
-                        
+                       
                         
                     elif (
                         ma50_last < ma50_2_min_ago
@@ -12892,6 +15468,7 @@ class ro_cano_che_ritorna:
                     
                     elif (
                         ma50_last < ma50_2_min_ago
+                        and macd < macd_2_min_ago
                         and deviation_ma100_sopra_ma300 > -0.90
                         
                         and (ma3_prev > ma18_prev and ma3_last < ma18_last)
@@ -12901,8 +15478,9 @@ class ro_cano_che_ritorna:
                         sell = "SELL 1 piccola perdita durante il crollo (21-50 min) con ma50 < incrocio 3 - 18 and dev_sell < -0.27 non e' crollo ! - r 9353 A"
                         action = "sell"
                         
-                    
-                    
+                        # 21 apr 2023 aggiunto macd < macd_2_min_ago
+                        
+                        
                     elif (
                         ma50_last < ma50_2_min_ago
                         and deviation_ma100_sopra_ma300 < -0.90
@@ -12911,11 +15489,92 @@ class ro_cano_che_ritorna:
                         and deviation_sell < -0.27
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 piccola perdita durante il crollo (21-50 min) con ma50 < incrocio 3 - 18 and dev_sell < -0.27 e' crollo ! - r 9353 B"
+                        sell = "SELL 1 (21-50 min) piccola perdita durante il crollo con ma50 < incrocio 3 - 18 and dev_sell < -0.27 e' crollo ! - r 9353 B"
                         action = "sell"
                         
                         
-              
+                        
+                        
+                    # AGGIUNTA TARDIVA MA FORSE NECESSARIA !
+                  
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and ma20_last > ma39_last
+                        and delta_1 > delta_2
+                        and ma100_last < ma200_last
+                        and ma200_last < ma300_last
+                        
+                        and ma200_last < ma200_120_min_ago
+                        and ma300_last < ma300_120_min_ago
+                   
+                        and deviation_sell < -0.1155
+                        and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
+                    ):
+                        sell = "SELL 1 (21-50 min)  piccola perdita durante il crollo - AGGIUNTA TARDIVA MA FORSE NECESSARIA ! and delta_1 > delta_2 and dev_sell < -0.1155 - r 9354a"
+                        action = "sell"
+                        
+                        
+                        # 29 mag 2023 AGGIUNTO 
+                        # 29 mag 2023 dev_sell a -0.10
+                        # 30 mag 2023 dev_sell a -0.115 da -0.10
+                        # 10 giu 2023 dev_sell a -0.114 da -0.115 ( dopo che ha fatto -0.54% )
+                        # 27 giu 2023 dev_sell a -0.1155 da -0.115 se 20>39
+
+
+                             
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and ma20_last < ma39_last
+                        and delta_1 > delta_2
+                        and ma100_last < ma200_last
+                        and ma200_last < ma300_last
+                        
+                        and ma200_last < ma200_120_min_ago
+                        and ma300_last < ma300_120_min_ago
+                   
+                        and deviation_sell < -0.1145
+                        and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
+                    ):
+                        sell = "SELL 1 (21-50 min)  piccola perdita durante il crollo - AGGIUNTA TARDIVA MA FORSE NECESSARIA ! and delta_1 > delta_2 and dev_sell < -0.1145 - r 9354b"
+                        action = "sell"
+                        
+                        
+                        # 29 mag 2023 AGGIUNTO 
+                        # 29 mag 2023 dev_sell a -0.10
+                        # 30 mag 2023 dev_sell a -0.115 da -0.10
+                        # 10 giu 2023 dev_sell a -0.114 da -0.115 ( dopo che ha fatto -0.54% )
+                        # 27 giu 2023 dev_sell a -0.1145 da -0.15 se 20<39
+
+
+                    
+                    # ----------------------------------------------------------------------------- CONDIZIONE SPECIALE NEL SELL 1 !
+                    
+                    elif (
+                        ma78_last < ma78_120_min_ago
+                        and ma50_last <= ma50_2_min_ago
+                        and ma300_last < ma300_301_min_ago
+                
+                        and deviation_ma39 < 0.05
+                        and deviation_sell < -0.07
+                        
+                        and deviation_ma100_sopra_ma300 < 0.40
+                        and deviation_ma5_sotto_ma200 > -0.90
+                        
+                        and ma2_last <= ma2_2_min_ago 
+                        and macd < macd_2_min_ago
+                        and macd < -3
+                    ):
+                        sell = "SELL 1 cond. spec. (21-50 min) EX r 16047 B2 con ma300> 5 ore - dev 3-39 < 0.05 and dev_sell<-0.06 and macd < macd 2 min ago and macd < -3 - r 9355"
+                        action = "sell"
+                        # 28 set 2023 dev sell -0.07 da -0.06
+                        # 28 set 2023 and macd a -3 da -2
+
+                    
+                    
+                        
+                   
             
             
                 #############################################################################################################  SESSIONE 1 ( da 50 a 90 min )
@@ -13009,10 +15668,7 @@ class ro_cano_che_ritorna:
                         # cioe' in una situazione di crollo si porta a casa lo 0.23
                         
                         
-                        
-                   
                      
-                    
                     
                     elif (    
                         ma50_last > ma50_2_min_ago
@@ -13032,16 +15688,38 @@ class ro_cano_che_ritorna:
                     
                     elif (
                         ma50_last > ma50_2_min_ago
+                        and macd < macd_2_min_ago
+                        and ma300_last > ma450_last
                         and ma100_last > ma150_last
-                        and (ma5_prev > ma59_prev and ma5_last < ma59_last)
+                        and (ma5_prev > ma90_prev and ma5_last < ma90_last)
                         and deviation_sell > 0.32 and deviation_sell < 0.52
                         and ma2_last < ma2_2_min_ago
                     ):    
-                        sell = "SELL 1 da 50 a 90 min con ma50 > and incrocio 5-59 and deviation_sell 0.31-0.52 la prima FINTA ALLA MARADONA RAFFORZATO - r 9493 A"
+                        sell = "SELL 1 da 50 a 90 min con ma50 > and incrocio 5-90 and deviation_sell 0.31-0.52 la prima FINTA ALLA MARADONA RAFFORZATO - r 9493 Ax"
                         action = "sell"
                         
                         # MARADONA RAFFORZATO accompagna nelle prime fasi di crescita. poi interviene RONALDO se il rialzo comincia a farsi piu' consistente.
                         # 15 nov 2022 5-59 da 5-54
+                        # 19 apr 2023 5-90 da 5-59
+                        # 19 apr 2023 aggiunta macd < macd 2 min ago
+                        
+                        
+                        
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and ma300_last < ma450_last
+                        and ma100_last > ma150_last
+                        and (ma5_prev > ma78_prev and ma5_last < ma78_last)
+                        and deviation_sell > 0.32 and deviation_sell < 0.52
+                        and ma2_last < ma2_2_min_ago
+                    ):    
+                        sell = "SELL 1 da 50 a 90 min con ma50 > and incrocio 5-78 and deviation_sell 0.31-0.52 la prima FINTA ALLA MARADONA RAFFORZATO - r 9493 Ay"
+                        action = "sell"
+                        
+                        # MARADONA RAFFORZATO accompagna nelle prime fasi di crescita. poi interviene RONALDO se il rialzo comincia a farsi piu' consistente.
+                        # 15 nov 2022 5-59 da 5-54
+                        # 23 feb 2023 5-78 da 5-59 se 300 < 450 fase di ribasso
+                        
                         
                         
                     # la prima FINTA ALLA MARADONA
@@ -13120,10 +15798,6 @@ class ro_cano_che_ritorna:
                         # MARADONA accompagna nelle prime fasi di crescita il titolo. poi interviene RONALDO se il rialzo comincia a farsi piu' consistente.
                         # 18 nov 2022 5-59 da 5-52
                         
-                        
-                        
-                        
-                    
                     
                     
                     ############################################################################ ronaldo 60-90 min dal buy se ma200 > somiglia a maradona
@@ -13148,13 +15822,14 @@ class ro_cano_che_ritorna:
                         ma50_last > ma50_2_min_ago
                         and ma300_last < ma300_120_min_ago
                         and ma200_last > ma200_120_min_ago
-                        and (ma4_prev > ma50_prev and ma4_last < ma50_last)
+                        and (ma4_prev > ma59_prev and ma4_last < ma59_last)
                         and deviation_sell > 0.53 and deviation_sell < 0.90
                         and ma2_last < ma2_2_min_ago
                     ):    
-                        sell = "SELL 1 da 50 a 90 min con ma50> and incrocio 4-20 se 300 < 120 min ago and deviation_sell 0.51-0.90 RONALDO - r 9514b"
+                        sell = "SELL 1 da 50 a 90 min con ma50> and incrocio 4-59 se 300 < 120 min ago and deviation_sell 0.51-0.90 RONALDO - r 9514 B"
                         action = "sell"
                         
+                        # 6 apr 4-59 da 4-50
                         
                     
                     
@@ -13264,16 +15939,6 @@ class ro_cano_che_ritorna:
                     
                     
                     
-                    
-                        
-                        
-                    
-                    
-                    
-                    
-                    
-                    
-                    
                     # SELL 1 da 50 a 90 min DOPPIO PASSO ALLA RONALDO 1 (se 50-200 > 0.30 stai un po' piu' tranquillo)
                     
                     elif (
@@ -13331,11 +15996,7 @@ class ro_cano_che_ritorna:
                         action = "sell"
                         
                         
-                        
-                        
-                        
-                        
-                        
+                
                   
                     ######################################################################################## con trend discendente ma50 <
                     
@@ -13343,8 +16004,10 @@ class ro_cano_che_ritorna:
                     
                     # SELL 1 50-90 min IPOTESI PEGGIORE con ma50< con deviation_ma39 <-0.205 and deviation_sell < -0.205 and DOPPIO DELTA INFERI
                     
+                    
                     elif (
                         ma50_last < ma50_2_min_ago
+                        and ma300_last > ma300_301_min_ago
                         and ma200_last < ma300_last
                         and deviation_trend_ma200 < -0.10
                         
@@ -13357,10 +16020,33 @@ class ro_cano_che_ritorna:
                         
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 50-90 min IPOTESI PEGGIORE con ma50 < con dev_ma39 <-0.19 and dev sell < -0.22 SOTTO RIBASSO RIBASSO - NOTTE - r 9633"
+                        sell = "SELL 1 50-90 min IPOTESI PEGGIORE con ma50 < con dev_ma39 <-0.19 and dev sell < -0.22 SOTTO RIBASSO RIBASSO - NOTTE - r 9633a"
                         action = "sell"
                         
                         # 6 giu 2022 deviation sell a -0.22 da -0.195
+                        
+                        
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and ma300_last < ma300_301_min_ago
+                        and ma200_last < ma300_last
+                        and deviation_trend_ma200 < -0.10
+                        
+                        and deviation_ma39 < -0.19
+                        and deviation_sell < -0.21
+                        
+                        
+                        and delta_1 > delta_2
+                        and ma100_last < ma100_60_min_ago
+                        
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 1 50-90 min IPOTESI PEGGIORE con ma50 < con dev_ma39 <-0.19 and dev sell < -0.21 SOTTO RIBASSO RIBASSO - NOTTE - r 9633b"
+                        action = "sell"
+                        
+                        # 6 giu 2022 deviation sell a -0.22 da -0.195
+                        # 6 mag 2023 deviation sell a -0.21 da -0.22
+                        # durante un ribasso evidente (ma300 scende da 6 ore !) devi perdere il meno possibile ! esci ! a ricomprare ci pensera' la condizione successiva.
                         
                         
                         
@@ -13371,8 +16057,8 @@ class ro_cano_che_ritorna:
                         and ma200_last < ma300_last
                         and deviation_trend_ma200 < -0.10
                         
-                        and deviation_ma39 < -0.215
-                        and deviation_sell < -0.30
+                        and deviation_ma39 < -0.05
+                        and deviation_sell < -0.10
                         
                         
                         and delta_1 < delta_2
@@ -13380,12 +16066,13 @@ class ro_cano_che_ritorna:
                         
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 50-90 min con ma50< e dev ma39 < -0.215 e dev sell <-0.30 SOTTO RIALZO RIALZO - GIORNO ! - r 9656"
+                        sell = "SELL 1 50-90 min con ma50< e dev ma39 < -0.05 e dev sell < -0.10 SOTTO RIALZO RIALZO - GIORNO ! - r 9656"
                         action = "sell"
                         
                         # IPOTESI PEGGIORE MA GIORNO !
-                        
-                        
+                        # 12 giu 2023 deviation_ma39 < -0.21 da 0.215
+                        # 12 set 2023 dev 39 -0.05 da -0.21
+                        # 12 set 2023 dev sell -0.10 da -0.30
                     
                     
                     elif (
@@ -13395,14 +16082,16 @@ class ro_cano_che_ritorna:
                         
                         and (ma5_prev > ma78_prev and ma5_last < ma78_last)
                         and deviation_sell < -0.24
+                      
                         and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
                     ):
                         sell = "SELL 1 da 50 a 90 min IPOTESI PEGGIORE con ma50 < con incrocio 5-78 and deviation_sell < -0.24 - r 9674"
                         action = "sell"
                         
                         # > estate 5-78 da 3-78 e dev sell -0.20 da -0.15
                         # 3 set dev sell -0.24 da -0.20
-                        
+                        # 18 mag 2023 aggiunto macd < macd 2 min ago
                         
                         
                
@@ -13416,15 +16105,16 @@ class ro_cano_che_ritorna:
                         and deviation_trend_ma200 > -0.10
                         
                         
-                        and deviation_ma39 < -0.20
+                        and deviation_ma39 < -0.05
                         and ma2_last < ma2_2_min_ago
-                        and deviation_sell < -0.21
+                        and deviation_sell < -0.15
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 50-90 min IPOTESI mediana 1 RAFFORZATA un po' MENO PEGGIO con ma50< E dev_ma39 <-0.20 E deviation_sell < -0.21- r 9694"
+                        sell = "SELL 1 50-90 min IPOTESI mediana 1 RAFFORZATA un po' MENO PEGGIO con ma50< E dev_ma39 <-0.05 E deviation_sell < -0.15 - r 9694"
                         action = "sell"
                         
-                        
+                        # 30 ago 2023 dev 39 < -0.05 crolla mentre 3-39 (dev 39) stanno attaccate !
+                        # 30 ago 2023 dev sell -0.15 
                         
                         
                     ############################################################### ipotesi mediana 1 un po' meno peggio ( sempre con ma50 < )
@@ -13492,12 +16182,7 @@ class ro_cano_che_ritorna:
                         action = "sell"
                         
                         
-                    
-                    
-                    
-                    
-                    
-                    
+                   
                     
                     elif (
                         ma50_last < ma50_2_min_ago
@@ -13616,22 +16301,21 @@ class ro_cano_che_ritorna:
                         
                         and ma78_last < ma200_last
                         
-                        and deviation_ma39 < -0.23
+                        and deviation_ma39 < -0.225
                         and deviation_sell < -0.29
                         
                         and ma2_last <= ma2_2_min_ago
+                        and macd < macd_2_min_ago
                     ):
-                        sell = "SELL 1 da 50-90 min BEST sempre con ma50< MA 78 < 200 con dev_ma39 <-0.23 and dev_sell <-0.29 - CON PERDITA TOLLERATA > - r 9828 B"
+                        sell = "SELL 1 da 50-90 min BEST con ma50< MA 78 < 200 con dev_ma39 <-0.23 and dev_sell <-0.29 - CON PERDITA TOLLERATA > and macd < macd_2_min_ago - r 9828 B"
                         action = "sell"
                         
                         # ha fatto perdita dell' 1% - forse succede tutto in quei 2 minuti se crolla improvvisamente
                         # con deviation_ma39 < -0.27
                         # con deviation_sell < -0.28
                         # DEV SELL 0.29 DA 0.295 dopo dolomiti
-                        
-                    
-                    
-                    
+                        # 30 mag 2023 dev 39 da -0.225 da -0.23
+                        # 30 mag 2023 macd <
                     
                     elif (
                         ma50_last < ma50_2_min_ago
@@ -13678,12 +16362,13 @@ class ro_cano_che_ritorna:
                         and ma200_last < ma200_120_min_ago
                         and ma300_last < ma300_120_min_ago
                    
-                        and deviation_sell < -0.19
+                        and deviation_sell < -0.20
                         and ma2_last < ma2_2_min_ago
                     ):
                         sell = "SELL 1 da 50-90 min AGGIUNTA TARDIVA MA FORSE NECESSARIA ! and delta_1 < delta_2 and deviation_sell < -0.19 e 300>5 ore - r 9888 a1"
                         action = "sell"
                         
+                        # 5 mag 2023 -0.20 da -0.19
                         
                         
                         
@@ -13700,16 +16385,16 @@ class ro_cano_che_ritorna:
                         and ma200_last < ma200_120_min_ago
                         and ma300_last < ma300_120_min_ago
                    
-                        and deviation_sell < -0.29
+                        and deviation_sell < -0.30
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 da 50-90 min AGGIUNTA TARDIVA MA NECESSARIA ! and delta_1 < delta_2 and deviation_sell < -0.29 e 300 < 5 ore - r 9888 a2"
+                        sell = "SELL 1 da 50-90 min AGGIUNTA TARDIVA MA NECESSARIA ! and delta_1 < delta_2 and deviation_sell < -0.30 e 300 < 5 ore - r 9888 A2"
                         action = "sell"
                         
                         # > estate -0.28 da -0.18
                         # 14 ott 2022 0.29 da 0.28 condizione forse senza forse NECESSARIA !
                         # 19 ott 2022 0.31 da 0.29 delta 1< delta 2 ! bravo mario
-                        
+                        # 17 mar 2023 dev sell -0.30 da -0.29 vedi 27 feb 2023 ore 21:07
                         
                         
                         
@@ -13724,21 +16409,22 @@ class ro_cano_che_ritorna:
                         and ma200_last < ma200_120_min_ago
                         and ma300_last < ma300_120_min_ago
                    
-                        and deviation_sell < -0.22
+                        and deviation_sell < -0.26
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 da 50-90 min AGGIUNTA TARDIVA MA FORSE NECESSARIA ! and delta_1 > delta_2 and deviation_sell < -0.22 - r 9908 b"
+                        sell = "SELL 1 da 50-90 min AGGIUNTA TARDIVA MA FORSE NECESSARIA ! and delta_1 > delta_2 and deviation_sell < -0.26 - r 9908 B"
                         action = "sell"
                         
                         # 21 lug 2022 0.22 da 0.175
-                        
-                        
-                        
+                        # 10 mar 2023 0.25 da 0.22
+                        # 29 mag 2023 0.26 da 0.25
+
+                    
                     # SELL 1 eventuale guadagno con crollo (50-90 min) con ma50 < and incrocio 5-59 and deviation_sell > 0.45
                     
                     elif (
                         ma50_last < ma50_2_min_ago
-                        and (ma5_prev > ma59_prev and ma5_last < ma59_last)
+                        and (ma5_prev > ma90_prev and ma5_last < ma90_last)
                         and deviation_sell > 0.45
                         
                         and ma100_last < ma200_last
@@ -13750,24 +16436,69 @@ class ro_cano_che_ritorna:
                      
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 eventuale guadagno con crollo (50-90 min) con ma50 < and incrocio 5-59 and deviation_sell > 0.45 - r 9930"
+                        sell = "SELL 1 eventuale guadagno con crollo (50-90 min) con ma50 < and incrocio 5-90 and deviation_sell > 0.45 - r 9930"
                         action = "sell"
                         
                         # in questa circostanza drammatica di crollo INTANTO TE LI PRENDI poi, eventualmente, ci pensa BUY 2
+                        # 2 mag 2023 5-90 da 5-59
+
+
+                  
+                    # ----------------------------------------------------------------------------- CONDIZIONI SPECIALI NEL SELL 1 !
+                    
+                    
+                    elif (
+                        ma78_last > ma78_120_min_ago
+                        and deviation_ma39 < 0.01
+                        and deviation_sell < -0.30
+                        and ma2_last < ma2_2_min_ago 
+                
+                        and ma50_last < ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 < 0.40
+                
+                        and deviation_ma5_sotto_ma200 > -0.80
+                    ):
+                        sell = "SELL condizione speciale (50-90 min) - deviation 3-39 < 0.01 and dev_sell < -0.30 - con ma50 < e con ma5 sotto ma200 > -0.80 - r 9931 A"
+                        action = "sell"
                         
-                        
-                        
-                        
-                        
-                        
+                        #   9 GIU 2023 dev 3-39 a -0.17 da -0.25
+                        #   9 GIU 2023 dev sell a -0.35 da -0.36
+                        #  15 GIU 2023 dev_39 -0.15 da -0.17 dopo che ha fatto -1.15% il 14 giu 2023 ore 22:06
+                        #  15 GIU 2023 dev sell a -0.349 da -0.35
+                        #   7 lug 2023 dev sell a -0.348 da -0.349
+                        #   7 lug 2023 deviation 3-39 < -0.10 da < -0.15
+                        #   1 set 2023 and deviation_ma5_sotto_ma200 > -0.80 da -0.90
+                        #   1 set 2023 and deviation_ma39 < -0.01 da -0.10 aveva fatto -0.66
+                        #   1 set 2023 dev sell a -0.34 da -0.348
+                        #   1 set 2023 dev sell a -0.34 da -0.348
+                        #   2 ott 2023 dev sell a -0.30 da -0.34
+                        #   2 ott 2023 dev 39 a 0.01 da -0.01
+                  
+                    elif (
+                        ma78_last < ma78_120_min_ago
+                        and ma300_last < ma300_301_min_ago
+                
+                        and deviation_ma39 < 0.05
+                        and deviation_sell < -0.06
+                
+                
+                        and ma50_last <= ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 < 0.40
+                
+                        and deviation_ma5_sotto_ma200 > -0.90
+                
+                        and ma2_last <= ma2_2_min_ago 
+                        and macd < macd_2_min_ago
+                        and macd < -2
+                    ):
+                        sell = "SELL 1 cond. spec. (50-90 min) r 16047 B2 con ma300> 5 ore - dev 3-39 < 0.05 and dev_sell < -0.06 - con ma50 < e con ma5 sotto ma200 > -0.90 - r 9931 B"
+                        action = "sell"
+
+                    
                     
                         
                         
-                        
-                        
-                
-                
-                
+                   
                 ########################################################################################################
                 ########################################################################################################
                 ######################################################################################################## SESSIONE 1 ( da 90 min a 110 min )
@@ -13793,19 +16524,17 @@ class ro_cano_che_ritorna:
                     if (    
                         ma50_last > ma50_2_min_ago
                         and ma100_last < ma200_last
-                        and deviation_ma39 < -0.22 
+                        and deviation_ma39 < -0.23
                         
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 90-110 min con ma50 > and deviation_ma39 <-0.22 - r 9977"
+                        sell = "SELL 1 90-110 min con ma50 > and deviation_ma39 < -0.23 - r 9977"
                         action = "sell"
                         
-                        # potrebbe essere una situazione di crollo con 39 senza deviation sell !
+                        # potrebbe essere una situazione di CROLLO IN ALTO con 39 senza deviation sell !
+                        # and deviation_ma39 < -0.23 da -0.22
                         
-                        
-                        
-                        
-                        
+                   
                        
                     elif (     
                         ma50_last > ma50_2_min_ago
@@ -13861,9 +16590,6 @@ class ro_cano_che_ritorna:
                         
                     
                     
-                    
-                    
-                    
                     # MARADONA 1b FASE LATERALE
                     
                     elif (
@@ -13898,27 +16624,23 @@ class ro_cano_che_ritorna:
                         sell = "SELL 1b FASE RIBASSO 90-110 min con ma50 > con 5-69 (!) and deviation_sell 0.35 - 0.64 la prima FINTA DI MARADONA 1 - r 10051"
                         action = "sell"
                         
-                        
-                    
-                    
-                    
-                    
-                    
+                      
                     
                     # MARADONA 2
                     
                     elif (
                         ma50_last > ma50_2_min_ago
                         and ma3_last < ma100_last
-                        and ma5_last < ma50_last
+                        and ma5_last < ma100_last
                         and deviation_sell > 0.35 and deviation_sell < 0.64
                         and ma2_last < ma2_2_min_ago
-                        
+                        and macd < macd_2_min_ago
                     ):
-                        sell = "SELL 1 90-110 min con ma50 > con 5-50 (!) and deviation_sell 0.35 - 0.64 la prima FINTA DI MARADONA 1 - r 10071"
+                        sell = "SELL 1 90-110 min con ma50 > con 5-100 (!) and deviation_sell 0.35 - 0.64 la prima FINTA DI MARADONA 1 - r 10071"
                         action = "sell"
-                        
-                    
+                      
+                        # 28 giu 2023 5-100 da 5-50
+                        # 28 giu 2023 aggiunta macd <
                     
                     
                     elif (
@@ -14001,32 +16723,136 @@ class ro_cano_che_ritorna:
                     elif (
                         ma50_last < ma50_2_min_ago
                         and ma2_last < ma2_2_min_ago
-                        and deviation_sell < -0.21
+                        and deviation_sell < -0.22
                         and ma3_last < ma39_last
                         and ma100_last < ma100_60_min_ago
                         and ma300_last > ma300_120_min_ago
                     ):
-                        sell = "SELL 1 90-110 min con ma50 < and ma100 < and (deviation_sell < -0.21 and ma3_last < ma39_last) MA 300 > 120min ago - r 10158"
+                        sell = "SELL 1 90-110 min con ma50 < and ma100 < and (deviation_sell < -0.22 and ma3_last < ma39_last) MA 300 > 120 min ago - r 10158"
                         action = "sell"
                         
                         #  9 ott 2022 dev sell a -0.21 da -0.19
+                        #  7 lug 2023 dev sell a -0.22 da -0.21
                         
                         
                         
                     elif (
                         ma50_last < ma50_2_min_ago
+                        and delta_300_100 < delta_300_100_60_min
+                        
                         and ma2_last < ma2_2_min_ago
-                        and deviation_sell < -0.14
+                        and deviation_sell < -0.18
                         and ma3_last < ma39_last
                         and ma100_last < ma100_60_min_ago
                         and ma300_last < ma300_120_min_ago
                     ):
-                        sell = "SELL 1 90-110 min con ma50 < and ma100 < and (deviation_sell < -0.14 and ma3_last < ma39_last) 300 < 120 min ago - r 10170"
+                        sell = "SELL 1 90-110 min con ma50 < and ma100 < and (dev_sell < -0.18 and ma3_last < ma39_last) and 300 < 120 min ago - r 10170 A"
                         action = "sell"
                         
                         # 27 giu 2022 dev sell 0.145 da 0.15
                         
                         # > estate -0.14 da -0.145
+                        # 15 dic dev sell -0.15 da -0.14 con aggiunta doppio delta 300-100 giorno
+                        # 22 dic dev sell -0.16 da -0.15
+                        #  6 apr 2023 -0.17 da -0.16
+                        # 15 apr 2023 -0.18 da -0.17
+                        
+                        
+                    
+                    
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and delta_300_100 > delta_300_100_60_min
+                      
+                        and deviation_ma300_sopra_ma450 > 0.10
+                        
+                        
+                        and ma2_last < ma2_2_min_ago
+                        and deviation_sell < -0.144
+                        and ma3_last < ma39_last
+                        and ma100_last < ma100_60_min_ago
+                        and ma300_last < ma300_120_min_ago
+                    ):
+                        sell = "SELL 1 90-110 min con ma50 < and ma100 < and (deviation_sell < -0.142 and ma3_last < ma39_last) 300 < 120 min ago - r 10170 B1x"
+                        action = "sell"
+                        
+                        # 27 giu 2022 dev sell 0.145 da 0.15
+                        
+                        # > estate -0.14 da -0.145
+                        # 15 dic 2022 -0.142 da -0.14 con doppio delta 300-100 notte
+                        
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and delta_300_100 > delta_300_100_60_min
+                      
+                        and deviation_ma300_sopra_ma450 < 0.10
+                        and deviation_ma300_sopra_ma450 > -0.10
+                        
+                        and ma2_last < ma2_2_min_ago
+                        and deviation_sell < -0.143
+                        and ma3_last < ma39_last
+                        and ma100_last < ma100_60_min_ago
+                        and ma300_last < ma300_120_min_ago
+                    ):
+                        sell = "SELL 1 90-110 min con ma50 < and ma100 < and (deviation_sell < -0.142 and ma3_last < ma39_last) 300 < 120 min ago - r 10170 B1y"
+                        action = "sell"
+                        
+                        # 27 giu 2022 dev sell 0.145 da 0.15
+                        
+                        # > estate -0.14 da -0.145
+                        # 15 dic 2022 -0.142 da -0.14 con doppio delta 300-100 notte
+                        
+                        
+                        
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and ma300_last < ma300_120_min_ago
+                        and ma100_last < ma100_60_min_ago
+                        
+                        and delta_300_100 > delta_300_100_60_min
+                      
+                        and deviation_ma300_sopra_ma450 < -0.10
+                        
+                        
+                        and ma2_last < ma2_2_min_ago
+                        and deviation_sell < -0.10
+                        and ma3_last < ma39_last
+                        
+                        
+                    ):
+                        sell = "SELL 1 90-110 min con ma50 < and ma100 < and (deviation_sell < -0.10 and ma3_last < ma39_last) 300 < 120 min ago - r 10170 B1z"
+                        action = "sell"
+                        
+                        # 27 giu 2022 dev sell 0.145 da 0.15
+                        
+                        # > estate -0.14 da -0.145
+                        # 15 dic 2022 -0.142 da -0.14 con doppio delta 300-100 notte
+                        #  1 set 2023 -0.10 da -0.142 a ricomprare durante il crollo (ma300 scende da 2 ore !) eventualmente ci pensano le altre condizioni, che ci sono.
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and delta_300_100 > delta_300_100_60_min
+                        
+                        and ma2_last < ma2_2_min_ago
+                        and deviation_sell < -0.142
+                        and ma3_last < ma39_last
+                        and ma100_last < ma100_60_min_ago
+                        and ma300_last < ma300_120_min_ago
+                    ):
+                        sell = "SELL 1 90-110 min con ma50 < and ma100 < and (deviation_sell < -0.142 and ma3_last < ma39_last) 300 < 120 min ago - r 10170 B2"
+                        action = "sell"
+                        
+                        # 27 giu 2022 dev sell 0.145 da 0.15
+                        
+                        # > estate -0.14 da -0.145
+                        # 15 dic 2022 -0.142 da -0.14 con doppio delta 300-100 notte
+                        
                         
                         
                         
@@ -14069,32 +16895,30 @@ class ro_cano_che_ritorna:
                         # ma39 NON DEVE VENDERE in fase laterale ma in alto
                         
                         
-                        
-                        
-                        
-                        
-                        
-                    
+                     
                     
                     # ma se ma100 >
                     
                     elif (
                         ma50_last < ma50_2_min_ago
-                        and deviation_ma5_sotto_ma300 > -0.50
-                        and ma100_last > ma100_60_min_ago
                         and ma300_last > ma300_120_min_ago
+                        and ma100_last > ma100_60_min_ago
                         
-                        and deviation_sell < -0.243
+                        and deviation_ma5_sotto_ma300 > -0.50
+                        
+                        and deviation_sell < -0.12
                         and ma3_last < ma39_last
                         
                         and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
+                        and macd < -4
                     ):
-                        sell = "SELL 1 90-110 min con ma50< MA ma100> E 300> and (dev_sell < -0.23 and ma3_last < ma39_last) con 5-100 > -0.50 - r 10211 A1"
+                        sell = "SELL 1 90-110 min con ma50< MA 300> and dev_sell < -0.12 and ma3 < ma39 con 5-100 > -0.50 and macd < macd 2 min ago and macd < -4 - r 10211 A1"
                         action = "sell"
                         
                         # 2 ott dev sell -0.243 da -0.23
-                        
-                        
+                        # 29 gen 2023 dev sell -0.248 da -0.243
+                        # 28 set 2023 dev sell -0.10 da -0.248
                         
                         
                     elif (
@@ -14103,17 +16927,18 @@ class ro_cano_che_ritorna:
                         and ma100_last > ma100_60_min_ago
                         and ma300_last < ma300_120_min_ago
                         
-                        and deviation_sell < -0.225
+                        and deviation_sell < -0.05
                         and ma3_last < ma39_last
                         
                         and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
                     ):
-                        sell = "SELL 1 90-110 min con ma50< MA ma100> E 300< and (dev_sell < -0.225 and ma3_last < ma39_last) con 5-100 > -0.50 - r 10211 A2"
+                        sell = "SELL 1 90-110 min con ma50< MA ma100> E 300< and (dev_sell < -0.05 and ma3_last < ma39_last) con 5-100 > -0.50 and macd < - r 10211 A2"
                         action = "sell"
                         
                         # 19 set dev sell -0.225 da -0.23
-                        
-                        
+                        # 19 set 2023 dev sell -0.05 da -0.225
+                        # 19 set 2023 and macd < macd 2 min ago
                         
                         
                         
@@ -14138,40 +16963,62 @@ class ro_cano_che_ritorna:
                     
                     elif (    
                         ma50_last < ma50_2_min_ago
-                        and ma2_last < ma2_2_min_ago
-                        and deviation_ma39 < -0.32
+                        
+                        and deviation_ma39 < -0.10
+                        and deviation_sell < -0.28
                         and deviation_trend_ma200 > -0.12
                         and ma200_last > ma300_last
+                        
                         and ma2_last < ma2_2_min_ago
                        
                     ):
-                        sell = "SELL 1 compa 90-110 min con ma50 < and deviation_ma39 < -0.32  con > PERDITA TOLLERATA - r 10227"
+                        sell = "SELL 1 compa 90-110 min con ma50 < and deviation_ma39 < -0.10 and dev sell -0.28 con > PERDITA TOLLERATA - r 10227"
                         action = "sell"
                         
                         # > estate -0.32 da -0.23
+                        # 15 gen 2023 dev 39 a -0.33 da -0.32
+                        # 21 ago 2023 dev 39 a -0.10 da -0.33
+                        # 21 ago 2023 aggiunta dev sell -0.28
                         
-                    
                     
                     elif (     
                         ma50_last < ma50_2_min_ago
+                        and deviation_ma300_sopra_ma450 > -0.10
                         and ma3_last < ma39_last
-                        and deviation_sell < -0.21
+                        and deviation_sell < -0.25
                         and ma2_last < ma2_2_min_ago
                         and deviation_trend_ma200 > -0.12
                         and ma200_last > ma300_last
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 compa 90-110 min con ma50 < (deviation_sell < -0.21 and ma3_last < ma39_last) con > PERDITA TOLLERATA - r 10241"
+                        sell = "SELL 1 compa 90-110 min con ma50 < (deviation_sell < -0.25 and ma3_last < ma39_last) con > PERDITA TOLLERATA - r 10241a"
                         action = "sell"
                         
+                        # 12 apr 2023 dev sell 0.25 da 0.21 se 300 sta poco sotto o sopra alla 450
+                        
+                        
+                    elif (     
+                        ma50_last < ma50_2_min_ago
+                        and deviation_ma300_sopra_ma450 < -0.10
+                        and ma3_last < ma39_last
+                        and deviation_sell < -0.23
+                        and ma2_last < ma2_2_min_ago
+                        and deviation_trend_ma200 > -0.12
+                        and ma200_last > ma300_last
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 1 compa 90-110 min con ma50 < (deviation_sell < -0.23 and ma3_last < ma39_last) con > PERDITA TOLLERATA - r 10241b"
+                        action = "sell"
+                        
+                        #  12 apr 2023 dev sell 0.23 da 0.21 se 300 sta sotto alla 450
                         
                     
                         
-                ############################################################################################################################ SESSIONE 1 ( > 110 min )
-
-                # VENDITA - da 110 minuti in poi = da 6601 secondi in poi
-
-                elif seconds_since_last_trade > 6601:
+                ################################################################################################################# SESSIONE 1 ( da 110 min a 239 min )
+                
+                # VENDITA - da 110 minuti a 239 minuti  = da 6601 secondi a 14340 secondi
+                
+                elif seconds_since_last_trade > 6601 and seconds_since_last_trade <= 14340:
 
                     
                     if (    
@@ -14180,7 +17027,7 @@ class ro_cano_che_ritorna:
                         and deviation_sell < -0.21
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 dopo 110 min con ma50 > and deviation_ma39 <-0.22 and deviation_sell < -0.21 - r 10260"
+                        sell = "SELL 1 da 110 a 239 min con ma50 > and deviation_ma39 <-0.22 and deviation_sell < -0.21 - r 10250"
                         action = "sell"
                         
                         
@@ -14193,7 +17040,7 @@ class ro_cano_che_ritorna:
                         and ma25_last < ma25_2_min_ago
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 dopo 110 min con ma50 > and ma3_last < ma50_last and deviation_sell < -0.22 and ma25 < - r 10273"
+                        sell = "SELL 1 da 110 a 239 min con ma50 > and ma3_last < ma50_last and deviation_sell < -0.22 and ma25 < - r 10251"
                         action = "sell"
                         
                     
@@ -14214,31 +17061,30 @@ class ro_cano_che_ritorna:
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 dopo 110 min con ma50 > con 5-100 (!) and deviation_sell 0.35 - 0.64 la prima FINTA DI MARADONA 1 (non toccare) - r 10291"
+                        sell = "SELL 1 da 110 a 239 min con ma50 > con 5-100 (!) and deviation_sell 0.35 - 0.64 la prima FINTA DI MARADONA 1 (non toccare) - r 10252"
                         action = "sell"
                         
                         # 10 GIU 2022 5-78 da 5-69
                         # > estate 100 da 78
                         
-                        
-                        
+                      
                         
                     # MARADONA 2
                     
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and ma3_last < ma100_last
+                        and ma5_last < ma180_last
                         and deviation_ma100_sopra_ma300 > 0.30
-                        and ma7_last < ma54_last
-                        and deviation_sell > 0.35 and deviation_sell < 0.64
+                        
+                        and deviation_sell > 0.32 and deviation_sell < 0.64
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 dopo 110 min con ma50 > con 7-54 and dev_sell 0.35 - 0.64 la prima FINTA DI MARADONA 2 CON 100 sopra 300 > 0.30 - r 10310 a"
+                        sell = "SELL 1 da 110 a 239 min con ma50 > con 5-180 and dev_sell 0.32 - 0.64 la prima FINTA DI MARADONA 2 CON 100 sopra 300 > 0.30 - r 10253 a"
                         action = "sell"
                         
-                        # se 100 sopra 300 >0.30 stai calmo
-                        
+                        # se 100 sopra 300 > 0.30 stai calmo
+                        # 23 feb 2023 5-180
                         
                         
                         
@@ -14246,26 +17092,28 @@ class ro_cano_che_ritorna:
                     
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and ma3_last < ma100_last
+                        and ma5_last < ma200_last
                         and ma3_last < ma10_last
                         
+                        
                         and deviation_ma100_sopra_ma300 < 0.30
-                        and ma5_last < ma50_last
-                        and deviation_sell > 0.35 and deviation_sell < 0.64
+                        
+                        and deviation_sell > 0.32 and deviation_sell < 0.64
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 dopo 110 min con ma50 > con 5-50 and dev_sell 0.35 - 0.64 la prima FINTA DI MARADONA 3 CON 100 sopra 300 < 0.30 - r 10329 b"
+                        sell = "SELL 1 da 110 a 239 min con ma50 > AND con 5-100 and dev_sell 0.32 - 0.64 - prima FINTA MARADONA CON 100 sopra 300 < 0.30 - r 10253 B"
                         action = "sell"
                         
                         # 3 set ho aggiunto 3<10 incredibile ma vero vendeva mentre saliva !
-                        
+                        # 12 gen 2023 5-200 da 5-50 vedi 12 gen 2023 ore 00:07
                     
                     
                     #################################################################################################
                     
                     elif (
                         ma50_last > ma50_2_min_ago
+                        and ma300_last > ma450_last
                         and ma300_last > ma300_120_min_ago
                         and (ma5_prev > ma90_prev and ma5_last < ma90_last)
                         and deviation_sell > 0.65 and deviation_sell < 1.49
@@ -14273,10 +17121,27 @@ class ro_cano_che_ritorna:
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 dopo 110 min con ma50 > incrocio 5-90 (!) se 100-200 > 0.45 and deviation_sell 0.65 - 1.49 RABONA ALLA RONALDO - r 10346 A"
+                        sell = "SELL 1 da 110 a 239 min con ma50 > incrocio 5-90 (!) se 100-200 > 0.45 and deviation_sell 0.65 - 1.49 RABONA ALLA RONALDO - r 10254 A1"
                         action = "sell"
                         
                         # 26 ott se 300>300 120 min ago vende con ma90
+                        
+                        
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and ma300_last < ma450_last
+                        and ma300_last > ma300_120_min_ago
+                        and (ma5_prev > ma78_prev and ma5_last < ma78_last)
+                        and deviation_sell > 0.65 and deviation_sell < 1.49
+                        and deviation_ma100_sopra_ma200 > 0.45
+                        and ma2_last < ma2_2_min_ago
+                        
+                    ):
+                        sell = "SELL 1 da 110 a 239 min con ma50 > incrocio 5-78 (!) se 100-200 > 0.45 and deviation_sell 0.65 - 1.49 RABONA ALLA RONALDO - r 10254 A2"
+                        action = "sell"
+                        
+                        # 26 ott se 300>300 120 min ago vende con ma90
+                        # 10 mar 2023 MA se 300<450 fase crollo VENDI UN PO' PRIMA. quindi 5-78 da 5-90
                         
                         
                     elif (
@@ -14288,7 +17153,7 @@ class ro_cano_che_ritorna:
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 dopo 110 min con ma50 > incrocio 5-78 (!) se 100-200 > 0.45 and deviation_sell 0.65 - 1.49 RABONA ALLA RONALDO - r 10346 B"
+                        sell = "SELL 1 da 110 a 239 min con ma50 > incrocio 5-78 (!) se 100-200 > 0.45 and deviation_sell 0.65 - 1.49 RABONA ALLA RONALDO - r 10255 B"
                         action = "sell"
                         
                         # 26 ott se 300<300 120 min ago vende con ma 78 da 42
@@ -14300,16 +17165,18 @@ class ro_cano_che_ritorna:
                         ma50_last > ma50_2_min_ago
                         and ma300_last > ma300_301_min_ago
                         
-                        and (ma5_prev > ma125_prev and ma5_last < ma125_last)
+                        and (ma5_prev > ma200_prev and ma5_last < ma200_last)
                         and deviation_sell > 0.65 and deviation_sell < 1.49
                         and deviation_ma100_sopra_ma200 < 0.45
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 >110 min con 300 > 5 ore ago E con ma50 > E incr 5-125 se 100-200 < 0.45 and dev_sell 0.65 - 1.49 RABONA RONALDO - r 10358 A"
+                        sell = "SELL 1 da 110 a 239 min con 300 > 5 ore ago E con ma50 > E incr 5-200 se 100-200 < 0.45 and dev_sell 0.65 - 1.49 RABONA RONALDO - r 10256 A"
                         action = "sell"
                         
                         # > estate 5-78 da 5-34
+                        # 10 gen 2023 5-200 da 5-125
+                        
                         
                         
                     elif (
@@ -14322,7 +17189,7 @@ class ro_cano_che_ritorna:
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 >110 min con 300 < 5 ore ago E con ma50 > E incr 8-110 se 100-200 < 0.45 and dev_sell 0.65 - 1.49 RABONA RONALDO - r 10358 B"
+                        sell = "SELL 1 da 110 a 239 min con 300 < 5 ore ago E con ma50 > E incr 8-110 se 100-200 < 0.45 and dev_sell 0.65 - 1.49 RONALDO - r 10256 B"
                         action = "sell"
                         
                         # > estate 5-78 da 5-34
@@ -14331,25 +17198,14 @@ class ro_cano_che_ritorna:
                         
                     
                     
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
                     elif (
                         ma50_last > ma50_2_min_ago
                         and deviation_ma100_sopra_ma300 > 0.40
-                        and (ma3_prev > ma100_prev and ma3_last < ma100_last)
+                        and (ma3_prev > ma125_prev and ma3_last < ma125_last)
                         and deviation_sell > 1.50 and deviation_sell < 2.70
                         and ma2_last < ma2_2_min_ago
                     ):    
-                        sell = "SELL 1 dopo 110 min con ma50 > incrocio 3-100 CON 100 sopra 300 > 0.40 and deviation_sell  1.50-2.70 DOPPIO PASSO RONALDO - r 10382 A"
+                        sell = "SELL 1 da 110 a 239 min con ma50 > incrocio 3-125 CON 100 sopra 300 > 0.40 and deviation_sell  1.50-2.70 RONALDO - r 10257 A"
                         action = "sell"
                         
                         # 3 set 2022 ma100 da ma48
@@ -14362,31 +17218,43 @@ class ro_cano_che_ritorna:
                         and deviation_sell > 1.50 and deviation_sell < 2.70
                         and ma2_last < ma2_2_min_ago
                     ):    
-                        sell = "SELL 1 dopo 110 min con ma50 > incrocio 3-30 CON 100 sopra 300 <0.40 and deviation_sell  1.50-2.70 DOPPIO PASSO RONALDO - r 10393 B"
+                        sell = "SELL 1 da 110 a 239 min con ma50 > incr 3-30 CON 100 sopra 300 <0.40 and deviation_sell  1.50-2.70 DOPPIO PASSO RONALDO - r 10257 B"
                         action = "sell"
                         
                         # 18 set 3-50 da 3-30
                         
                         
-                        
-                        
-                        
-                        
-                    
                     
                     
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and (ma3_prev > ma28_prev and ma3_last < ma28_last)
+                        and deviation_ma300_sopra_ma450 > 0.30
+                        and (ma5_prev > ma45_prev and ma5_last < ma45_last)
                         and deviation_sell > 2.71 and deviation_sell < 5.70
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 dopo 110 min con ma50 > incrocio 3-28 and deviation_sell > 2.71 TACCO DI ALLAH - r 10411"
+                        sell = "SELL 1 da 110 a 239 min con ma50 > incrocio 5-45 and deviation_sell > 2.71 TACCO DI ALLAH se dev 300-450 > 0.30 - r 10258 A"
                         action = "sell"
                         
                         # 1 ott 2022 3-28 da 3-13
+                        # 17 mar 2023 4-39 con aggiunta dev 300-450 > 0.30
+                        # 6 apr 2023 5-45 da 4-39 
                         
+                        
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and deviation_ma300_sopra_ma450 < 0.30
+                        and (ma3_prev > ma33_prev and ma3_last < ma33_last)
+                        and deviation_sell > 2.71 and deviation_sell < 5.70
+                        and ma2_last < ma2_2_min_ago
+                        
+                    ):
+                        sell = "SELL 1 da 110 a 239 min con ma50 > incrocio 3-33 and deviation_sell > 2.71 TACCO DI ALLAH se dev 300-450 < 0.30 - r 10258 B"
+                        action = "sell"
+                        
+                        # 1 ott 2022 3-28 da 3-13
+                        # 17 mar 2023 3-33 con aggiunta dev 300-450 < 0.30 
                 
                 
                 
@@ -14397,7 +17265,7 @@ class ro_cano_che_ritorna:
                         and ma2_last < ma2_2_min_ago
                     ):
 
-                        sell = "SELL 1 dopo 110 min con ma50 > incrocio 3-69 (!) and deviation_sell > 5.71 SI STA TRA GLI ANGELI, compa ! - r 10424"
+                        sell = "SELL 1 da 110 a 239 min con ma50 > incrocio 3-69 (!) and deviation_sell > 5.71 SI STA TRA GLI ANGELI, compa ! - r 10259"
                         action = "sell"
                         
                     
@@ -14414,7 +17282,7 @@ class ro_cano_che_ritorna:
                         and ma100_last < ma100_60_min_ago
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 dopo 110 min con ma50 <  and ma100 < con deviation_ma39 <-0.17 - r 10441"
+                        sell = "SELL 1 da 110 a 239 min con ma50 <  and ma100 < con deviation_ma39 <-0.17 - r 10260"
                         action = "sell"
                         
                         # ma39 non deve vendere laterale (!) quindi per farlo vendere in alto ho dato 0.20
@@ -14425,54 +17293,151 @@ class ro_cano_che_ritorna:
                         ma50_last < ma50_2_min_ago
                         and ma2_last < ma2_2_min_ago
                         and ma300_last > ma300_120_min_ago
-                        and deviation_sell < -0.219
-                        and ma3_last < ma39_last
+                        and deviation_sell < -0.20
+                        and ma3_last <= ma39_last
                         and ma100_last < ma100_60_min_ago
                     ):
-                        sell = "SELL 1 dopo 110 min con ma50 < and ma100 < MA 300 > 300 120 min ago and (dev_sell < -0.219 and ma3_last < ma39_last) - r 10456 a"
+                        sell = "SELL 1 da 110 a 239 min con ma50 < and ma100 < MA 300 > 300 120 min ago and (dev_sell < -0.20 and ma3_last <= ma39_last) - r 10261 A"
                         action = "sell"
                         
                         # > estate -0.22 da -0.15
-                        # 24 set 2022 -0.218 da -0.22
+                        # 6 apr 2023 -0.218 da -0.219
+                        # 4 mag 2023 -0.20 da 0.218 che ha fatto -0.71 ma se 300 > 120 min ma300 diventa una resistenza !
                         
                         
                     elif (
                         ma50_last < ma50_2_min_ago
-                        and ma2_last < ma2_2_min_ago
                         and ma300_last < ma300_120_min_ago
-                        and deviation_sell < -0.218
+                        
+                        and deviation_sell < -0.21
                         and ma3_last < ma39_last
                         and ma100_last < ma100_60_min_ago
+                        and ma2_last <= ma2_2_min_ago
                     ):
-                        sell = "SELL 1 dopo 110 min con ma50 < and ma100 < E 300 < 300 120 min ago and (dev_sell < -0.218 and ma3_last < ma39_last) - r 10456 b"
+                        sell = "SELL 1 da 110 a 239 min con ma50 < and ma100 < E 300 < 300 120 min ago and (dev_sell < -0.21 and ma3_last < ma39_last) - r 10261 B"
                         action = "sell"
                         
                         # > estate -0.22 da -0.15
                         # 24 set 2022 -0.218 da -0.22
-                        
+                        # 24 ago 2023 -0.21 da -0.218
                         
                         
               
                     # ma se ma100 >
-                
+                    
                     elif (    
                         ma50_last < ma50_2_min_ago
-                        and deviation_ma39 < -0.195
+                        and macd < macd_2_min_ago
+                        and ma100_last > ma150_last
+                        and ma5_last < ma150_last
+                        and deviation_sell > 0.30
+                        and ma5_last < ma5_2_min_ago
+                        and ma300_last > ma300_120_min_ago
+                        and ma100_last > ma100_60_min_ago
+                        and ma5_last < ma5_2_min_ago
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 1 da 110 a 239 min con ma50 < MA ma100 > E ma300 > e con 5-150 and ma5_last < ma5_2_min_ago and deviation_sell > 0.30 - r 10262 A1x"
+                        action = "sell"
+                        
+                        # ma39 NON DEVE VENDERE in fase laterale ma in alto
+                        # 17 gen 2023 dwc ma39 <-0.197 da <-0.195
+                        # 25 gen 2023 5-125 da 3-125
+                        # 7 feb 2023 and ma5_last < ma5_2_min_ago
+                        # 6 apr 2023 5-150 da 5-125
+                        # 19 apr 2023 aggiunta macd > macd 2 min ago - solo dopo 110 min !
+                        # 7 lug 2023 and deviation_sell > 0.30 da > 0.20
+                  
+                        
+                    elif (    
+                        ma50_last < ma50_2_min_ago
+                        and ma4_last < ma150_last
+                        
+                        and ma100_last > ma150_last
+                        and ma300_last > ma300_120_min_ago
+                        and ma100_last > ma100_60_min_ago
+                        
                         and deviation_sell > 0.20
+                        and deviation_ma39 < -0.05
+                        
+                        and ma5_last < ma5_2_min_ago
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 1 da 110 a 239 min con ma50 < MA ma100 > E ma300 > e con 4-150 - r 10262 A1y"
+                        action = "sell"
+                        
+                        # ma39 NON DEVE VENDERE in fase laterale ma in alto
+                        # 17 gen 2023 dwc ma39 <-0.197 da <-0.195
+                        # 25 gen 2023 5-125 da 3-125
+                        # 29 gen 2023 5-150 da 5-125
+                        # 14 set 2023 aggiunta and deviation_ma39 < -0.05
+                        # 14 set and 4-150 da 5-150 
+                  
+                        
+                    elif (    
+                        ma50_last < ma50_2_min_ago
+                        and deviation_ma39 < -0.1965
+                        and deviation_sell > 0.20
+                        and ma5_last < ma5_2_min_ago
+                      
+                        and ma5_last < ma150_last
+                        and ma150_last > ma150_20_min_ago
+                        and ma300_last > ma300_120_min_ago
+                        and ma100_last > ma100_60_min_ago
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 1 da 110 a 239 min con ma50 < MA ma100 > E ma300 > e con deviation_ma39 < -0.197 - r 10263 A2x1"
+                        action = "sell"
+                        
+                        # ma39 NON DEVE VENDERE in fase laterale ma in alto
+                        # 17 gen 2023 ma39 <-0.197 da <-0.195
+                        # 16 mar 2023 ma39 <-0.1965 da <-0.197
+                        
+                        
+                    elif (    
+                        ma50_last < ma50_2_min_ago
+                        and deviation_ma39 < -0.1965
+                        and deviation_sell > 0.20
+                        and ma5_last < ma5_2_min_ago
+                      
+                        and ma150_last < ma150_20_min_ago
+                        and ma300_last > ma300_120_min_ago
+                        and ma100_last > ma100_60_min_ago
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 1 da 110 a 239 min con ma50 < MA ma100 > E ma300 > e con deviation_ma39 < -0.197 - r 10263 A2x2"
+                        action = "sell"
+                        
+                        # ma39 NON DEVE VENDERE in fase laterale ma in alto
+                        # 17 gen 2023 ma39 <-0.197 da <-0.195
+                        # 16 mar 2023 ma39 <-0.1965 da <-0.197
+                        
+                        
+                        
+                        
+                    elif (    
+                        ma50_last < ma50_2_min_ago
+                        and deviation_ma39 < -0.194
+                        and deviation_sell > 0.40
                         and ma5_last < ma5_2_min_ago
                         and ma300_last > ma300_120_min_ago
                         and ma100_last > ma100_60_min_ago
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 dopo 110 min con ma50 < MA ma100 > E ma300 > e con deviation_ma39 <-0.195 - r 10472 A"
+                        sell = "SELL 1 da 110 a 239 min con ma50 < MA ma100 > E ma300 > e con deviation_ma39 < -0.194 - r 10264 A2y"
                         action = "sell"
                         
                         # ma39 NON DEVE VENDERE in fase laterale ma in alto
+                        # 17 gen 2023 ma39 <-0.197 da <-0.195
+                        #  5 mar 2023 ma39 <-0.194 da <-0.197 ma con dev sell > 0.40 prendi e porta a casa
+                        # ho aggiunto questa ma la precedente condizone rappresenta "la base" - poi condizione speciale pochi maledetti e subito tra 0.80 e 1.20
+                        # vedi 5 marzo 2023 ore 3:38 NON HA PRESO IL GUADAGNO !
                         
                         
                     elif (    
                         ma50_last < ma50_2_min_ago
-                        and deviation_ma39 < -0.193
+                        and deviation_ma39 < -0.192
+                        and macd < macd_2_min_ago
                         
                         and deviation_ma5_sotto_ma300 > 0.30
                       
@@ -14481,35 +17446,50 @@ class ro_cano_che_ritorna:
                         and ma100_last > ma100_60_min_ago
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 dopo 110 min con ma50 < MA ma100 > E ma300 < e con deviation_ma39 <-0.193 - r 10472 B1"
+                        sell = "SELL 1 da 110 a 239 min con ma50 < MA ma100 > E ma300 < e con deviation_ma39 <-0.193 and macd < macd 2 min ago - r 10265 B1"
                         action = "sell"
                         
                         # ma39 NON DEVE VENDERE in fase laterale ma in alto
                         # 26 set dev39 a 0.193 da 0.195
-                        # 31 ott 2022 dev sell -0.05 da 0.20
+                        #  4 mag 2023 aggiunto macd < macd 2 min ago
                         
                         
                         
                     elif (    
                         ma50_last < ma50_2_min_ago
-                        and deviation_ma39 < -0.193
-                        and deviation_sell < -0.07
+                        and deviation_ma39 < -0.01
+                        and deviation_sell < -0.02
                         and deviation_ma5_sotto_ma300 < 0.30
                       
-                        and ma5_last < ma5_2_min_ago
+                        
                         and ma300_last < ma300_120_min_ago
                         and ma100_last > ma100_60_min_ago
+                      
+                        and ma5_last < ma5_2_min_ago
                         and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
                     ):
-                        sell = "SELL 1 dopo 110 min con ma50 < MA ma100 > E ma300 < e con deviation_ma39 <-0.193 and dev sell < -0.07 - r 10472 B2"
+                        sell = "SELL 1 da 110 a 239 min con ma50 < MA ma100 > E ma300 < e con dev_ma39 < -0.01 and dev sell < -0.02 - r 10265 B2"
                         action = "sell"
                         
                         # ma39 NON DEVE VENDERE in fase laterale ma in alto
                         # 26 set dev39 a 0.193 da 0.195
                         # 31 ott 2022 dev sell -0.05 da 0.20
                         # 27 nov 2022 dev sell -0.07 da -0.05
-                    
-                    
+                        # 13 feb 2023 dev sell -0.10 da -0.07
+                        #  9 apr 2023 dev sell -0.12 da -0.10
+                        # 12 apr 2023 dev sell -0.14 da -0.12
+                        
+                        # 12 apr 2023 dev39 a 0.194 da 0.193
+                        # 18 mag 2023 dev39 a 0.1935 da 0.194
+                        #  7 lug dev39 a 0.15 da 0.1935
+                        # 24 ago 2023 dev sell -0.15 da -0.14
+                        # 24 ago 2023 dev 39 a -0.10 da -0.15
+                        #  1 set 2023 dev 39 a -0.01 da -0.10
+                        
+                        # 12 set 2023 dev sell a -0.02 da -0.15
+                        # 12 set 2023 aggiunta macd < mad 2 min ago
+                  
                     # ma se ma100 >
                     
                     elif (
@@ -14521,7 +17501,7 @@ class ro_cano_che_ritorna:
                         and ma100_last > ma100_60_min_ago
                         and ma78_last > ma200_last
                     ):
-                        sell = "SELL 1 dopo 110 min con ma50 < MA ma100 > and (deviation_sell < -0.27 and ma3_last < ma39_last) - r 10489 a1"
+                        sell = "SELL 1 da 110 a 239 min con ma50 < MA ma100 > and (deviation_sell < -0.27 and ma3_last < ma39_last) - r 10266 a1"
                         action = "sell"
                         
                         # 3 luglio 2022 a 0.27 da 0.20
@@ -14536,7 +17516,7 @@ class ro_cano_che_ritorna:
                         and ma100_last > ma100_60_min_ago
                         and ma78_last > ma200_last
                     ):
-                        sell = "SELL 1 dopo 110 min con ma50 < MA ma100 > and (deviation_sell < -0.27 and ma3_last < ma39_last) - r 10489 a2"
+                        sell = "SELL 1 da 110 a 239 min con ma50 < MA ma100 > and (deviation_sell < -0.27 and ma3_last < ma39_last) - r 10267 a2"
                         action = "sell"
                         
                         # 3 luglio 2022 a 0.27 da 0.20
@@ -14553,7 +17533,7 @@ class ro_cano_che_ritorna:
                         and ma100_last > ma100_60_min_ago
                         and ma78_last < ma200_last
                     ):
-                        sell = "SELL 1 dopo 110 min con ma50 < MA ma100 > and (deviation_sell < -0.23 and ma3_last < ma39_last) - r 10589 b"
+                        sell = "SELL 1 da 110 a 239 min con ma50 < MA ma100 > and (deviation_sell < -0.23 and ma3_last < ma39_last) - r 10270 b"
                         action = "sell"
                         
                         # 3 luglio 2022 a 0.23 da 0.20
@@ -14563,21 +17543,36 @@ class ro_cano_che_ritorna:
                     ############################################################################### aumento della perdita tollerata ! 50< MA 200> e 200>300
                     
                     
-                    
-                    
-                    
                     elif (    
                         ma50_last < ma50_2_min_ago
                         and ma2_last < ma2_2_min_ago
                         and deviation_ma100_sopra_ma300 > 0.30
+                        and ma300_last > ma300_301_min_ago
+                        and deviation_ma39 < -0.26
+                        and deviation_trend_ma200 > -0.12
+                        and ma200_last > ma300_last
+                        and ma2_last < ma2_2_min_ago
+                       
+                    ):
+                        sell = "SELL 1 compa da 110 a 239 min con ma50 < and deviation_ma39 < -0.26 con > PERDITA TOLLERATA E 300 > 5 ore ago - r 10271 A"
+                        action = "sell"
                         
+                        # 18 set dev 39 -0.25 da -0.23
+                        # 21 gen 2023 dev 39 -0.26 da -0.25
+                        
+                        
+                    elif (    
+                        ma50_last < ma50_2_min_ago
+                        and ma2_last < ma2_2_min_ago
+                        and deviation_ma100_sopra_ma300 > 0.30
+                        and ma300_last < ma300_301_min_ago
                         and deviation_ma39 < -0.25
                         and deviation_trend_ma200 > -0.12
                         and ma200_last > ma300_last
                         and ma2_last < ma2_2_min_ago
                        
                     ):
-                        sell = "SELL 1 compa dopo 110 min con ma50 < and deviation_ma39 < -0.23  con > PERDITA TOLLERATA - r 10530"
+                        sell = "SELL 1 compa da 110 a 239 min con ma50 < and deviation_ma39 < -0.23  con > PERDITA TOLLERATA MA 300 < 5 ore ago - r 10271 B"
                         action = "sell"
                         
                         # 18 set dev 39 -0.25 da -0.23
@@ -14596,23 +17591,989 @@ class ro_cano_che_ritorna:
                         and ma2_last < ma2_2_min_ago
                        
                     ):
-                        sell = "SELL 1 compa dopo 110 min con ma50 < and deviation_ma39 < -0.23  and deviation_sell < -0.27 con > PERDITA TOLLERATA - r 10546"
+                        sell = "SELL 1 compa da 110 a 239 min con ma50 < and deviation_ma39 < -0.23  and deviation_sell < -0.27 con > PERDITA TOLLERATA - r 10272"
                         action = "sell"
                         
                         # se 100 > 300 di poco metto anche deviation_sell < -0.21
                         # > estate -0.27 da -0.21
                         
                         
+                    
+                        
+                    # SELL 1 da RCCR ! da 110 a 239 min IPOTESI PEGGIORE con ma50< con dev_ma39 < -0.22 and deviation_sell < -0.22 MA DOPPIO DELTA RIALZO 
+                    
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        
+                        and ma3_last < ma300_last
+                        and ma200_last < ma300_last
+                        and deviation_trend_ma200 < -0.08
+                        
+                        and deviation_ma39 < -0.10
+                        and deviation_sell < -0.22
+                        
+                        and rapporto_delta_1_delta_2 < 1
+                        
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 1 da RCCR ! da 110 a 239 min IPOTESI PEGGIORE con ma50< con dev_ma39 < -0.10 and deviation_sell < -0.22 MA giorno - r 10273"
+                        action = "sell"
+                        
+                        # 19 SET r 10546 la condizione precedente ha fatto -1.65 ed e' partita insieme ad altre 2 condizioni speciali ! 
+                        # quindi ho aggiunto questa importata SIA QUA CHE NELLE CONDIZIONI SPECIALI ( nuova condizione speciale )
+                        # 19 set 2022 IMPORTATO DA RCCR > sell 4:18 del 19 set -1.65 % !
+                        # 19 set 2022 deviation_ma39 < -0.22 AND and deviation_sell < -0.22
+                        # 31 lug 2023 and deviation_ma39 < -0.10 da -0.22
+                        # 31 lug 2023 and deviation_trend_ma200 < -0.08 da < -0.08
+
+                  
+                    elif (     
+                        ma50_last < ma50_2_min_ago
+                        and ma450_last > ma450_360_min_ago
+                        and ma300_last > ma300_120_min_ago
+                        and ma3_last < ma39_last
+                        and deviation_sell < 0.05
+                        
+                        
+                        and deviation_trend_ma200 > -0.15
+                        and ma200_last > ma300_last
+                        
+                        and ma2_last <= ma2_2_min_ago
+                        and macd < macd_2_min_ago
+                        and macd < -3
+                    ):
+                        sell = "SELL 1 da 110 a 239 min con ma450 > 6 ore ago E 300 > 120 min ago con ma50 < (dev_sell < 0.05 and ma3_last < ma39_last) - r 10274 A1x"
+                        action = "sell"
+                        
+                        # 28 dic 2022 dev sell -0.245 da -0.23
+                        # 24 apr 2023 dev sell -0.243 da -0.245 (dopo che con -0.245 ha fatto -0.80%)
+                        # 27 apr 2023 dev sell -0.241 da -0.243 (dopo che con -0.243 ha fatto -0.86% !)
+                        # 27 apr 2023 and deviation_trend_ma200 a > -0.15 da > -0.13
+                        
+                        # 12 set 2023 and dev sell 0.20 da -0.24 (con il macd che comincia a scendere puo' vendere anche con un po' di guadagno invece di vendere in perdita.)
+                        # 12 set 2023 and macd < macd 2 min ago
+                        # 18 set 2023 and macd < -3
+                        # 28 set 2023 se 450 scende da 6 ore ma 300 sale da 2 ore aspetta un poco prima di vendere.
+                        #  5 ott 2023 dev sell 0.05 da 0.10
+                  
+                    elif (     
+                        ma50_last < ma50_2_min_ago
+                        and ma450_last < ma450_360_min_ago
+                        and ma300_last > ma300_120_min_ago
+                        and ma3_last < ma39_last
+                        and deviation_sell < 0.20
+                        
+                        
+                        and deviation_trend_ma200 > -0.15
+                        and ma200_last > ma300_last
+                        
+                        and ma2_last <= ma2_2_min_ago
+                        and macd < macd_2_min_ago
+                        and macd < -3
+                    ):
+                        sell = "SELL 1 da 110 a 239 min con ma450 > 6 ore ago E 300 > 120 min ago con ma50 < (dev_sell < 0.20 and ma3_last < ma39_last) con > PERDITA TOL - r 10274 A1y"
+                        action = "sell"
+                        
+                        # 28 dic 2022 dev sell -0.245 da -0.23
+                        # 24 apr 2023 dev sell -0.243 da -0.245 (dopo che con -0.245 ha fatto -0.80%)
+                        # 27 apr 2023 dev sell -0.241 da -0.243 (dopo che con -0.243 ha fatto -0.86% !)
+                        # 27 apr 2023 and deviation_trend_ma200 a > -0.15 da > -0.13
+                        
+                        # 12 set 2023 and dev sell 0.20 da -0.24 (con il macd che comincia a scendere puo' vendere anche con un po' di guadagno invece di vendere in perdita.)
+                        # 12 set 2023 and macd < macd 2 min ago
+                        # 18 set 2023 and macd < -3
+                   
+                  
+                    elif (     
+                        ma50_last < ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 > 0.30
+                        and ma300_last > ma300_120_min_ago
+                        
+                        and deviation_ma39 < -0.22
+                        and ma3_last < ma39_last
+                        
+                        and deviation_trend_ma200 > -0.12
+                        and ma200_last > ma300_last
+                        
+                        and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
+                    ):
+                        sell = "SELL 1 da 110 a 239 min E 300 > 120 min ago e con ma50 < and dev3-39 < -0.22 con > PERDITA TOLLERATA - r 10274 A2x"
+                        action = "sell"
+                        
+                        
+                        
+                    elif (     
+                        ma50_last < ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 < 0.30
+                        and ma300_last > ma300_120_min_ago
+                        
+                        and deviation_sell < -0.155
+                        
+                        and ma3_last < ma39_last
+                        
+                        and deviation_trend_ma200 > -0.12
+                        and ma200_last > ma300_last
+                        
+                        and ma2_last < ma2_2_min_ago
+                        and macd < macd_3_min_ago
+                        
+                    ):
+                        sell = "SELL 1 da 110 a 239 min E 300 > 120 min ago e con ma50 < and dev sell < -0.155 con > PERDITA TOLLERATA and macd < macd_3_min_ago - r 10274 A2y"
+                        action = "sell"
+                        
+                        
+                        # 24 apr 2023 deviation_ma39 < -0.22
+                        # macd sui tempi lunghi
+                        #  3 lug 2023 deviation_sell < -0.16 da < -0.15
+                        # 11 ago 2023 deviation_sell < -0.155 da < -0.16
+                        #  1 set 2023 and macd < macd_3_min_ago (macd < macd 2 min ago qualche volta non prende...)
+
+                  
+                    elif (     
+                        ma50_last < ma50_2_min_ago
+                        and ma300_last < ma300_120_min_ago
+                        and ma3_last < ma39_last
+                        and deviation_sell < -0.25
+                        and ma2_last < ma2_2_min_ago
+                        and deviation_trend_ma200 > -0.12
+                        and ma200_last > ma300_last
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 1 da 110 a 239 min E 300 < 120 min ago e con ma50 < (dev_sell < -0.25 and ma3_last < ma39_last) con > PERDITA TOL - r 10275 B"
+                        action = "sell"
+                        
+                        # 17 gen 2023 dev sell 0.25
+                        
+                        
+                    
+                    
+                    # ATTENZIONE 1 ! SELL 1 da 110 a 239 min CON 300 > 120 min FORSE E' NECESSARA SOLO QUESTA !
+                    
+                    elif (    
+                        ma3_last < ma100_last
+                        and ma300_last > ma300_120_min_ago
+                        and ma100_last > ma200_last
+                        and deviation_sell < -0.27
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                   
+                        sell = "SELL 1 da 110 a 239 min FORSE E' NECESSARA SOLO QUESTA 1 ! deviation_sell < -0.27 - r 10276"
+                        action = "sell"
+                        
+                        
+                        
+                    # ATTENZIONE 2 ! SELL 1 da 110 a 239 min CON 300 > 120 min FORSE E' NECESSARA SOLO QUESTA !
+                    
+                    elif (    
+                        ma3_last < ma100_last
+                        and ma300_last > ma300_120_min_ago
+                        and ma100_last < ma200_last
+                        and deviation_sell < -0.22
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                   
+                        sell = "SELL 1 da 110 a 239 min FORSE E' NECESSARA SOLO QUESTA 2 ! deviation_sell < -0.22 - r 10277"
+                        action = "sell"
                         
                         
                         
                         
                         
+                    # ATTENZIONE 3 ! SELL 1 da 110 a 239 min CON 300 < 120 min FORSE E' NECESSARA SOLO QUESTA !
+                    
+                    elif (    
+                        ma3_last < ma100_last
+                        and ma78_last > ma300_last
+                        and ma300_last < ma300_120_min_ago
+                        and ma100_last > ma200_last
+                        and deviation_sell < -0.202
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                   
+                        sell = "SELL 1 da 110 a 239 min FORSE E' NECESSARA SOLO QUESTA 3 ! deviation_sell < -0.202 CON 78 > 300 - r 10278 A"
+                        action = "sell"
+                        
+                        # > estate a -0.19 da 0.09
+                        # 17 set 2022 a -0.23 da -0.19
+                        # 11 ott 2022 a -0.225 da -0.23
+                        # 12 giu 2023 a -0.202 da -0.225
+                        
+                        
+                        
+                    # ATTENZIONE 3 ! SELL 1 da 110 a 239 min CON 300 < 120 min FORSE E' NECESSARA SOLO QUESTA !
+                    
+                    
+                    elif (    
+                        ma3_last < ma100_last
+                        and deviation_ma300_sopra_ma450 > -0.20
+                        and ma78_last < ma300_last
+                        and ma300_last < ma300_120_min_ago
+                        and ma100_last > ma200_last
+                        and deviation_sell < -0.195
+                        
+                        and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
+                    ):
+                   
+                        sell = "SELL 1 da 110 a 239 min FORSE E' NECESSARA SOLO QUESTA 3 ! dev_sell < -0.195 CON 300>450 e con 78 < 300 (ancora ribasso !) torna a casa ! - r 10278 B1"
+                        action = "sell"
+                       
+                        # 17 mar 2023 -0.19 da -0.17 con 300>450
+                        # 21 mag 2023 -0.20 da -0.19 con 300>450
+                        # 21 mag 2023 -0.195 da -0.20 con 300>450
+                        
+                      
+                    elif (    
+                        ma3_last < ma100_last
+                        and deviation_ma300_sopra_ma450 < -0.20
+                        and ma78_last < ma300_last
+                        and ma300_last < ma300_120_min_ago
+                        and ma100_last > ma200_last
+                        and deviation_sell < -0.20
+                        
+                        and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
+                    ):
+                   
+                        sell = "SELL 1 da 110 a 239 min FORSE E' NECESSARA SOLO QUESTA 3 ! dev_sell < -0.20 CON 78 < 300 (ancora ribasso !) (PERDI POCO - porta a casa) - r 10278 B2"
+                        action = "sell"
+                        
+                        # 23 lug 2022 dev sell < 0.10 ha fatto fare perdita di -0.26 !
+                        # 23 lug 2022 a < 0.09 da < 0.10
+                        # > estate -0.10 da 0.09
+                        # -0.13 da -0.10
+                        # 17 dicembre 2022 -0.14 da -0.13
+                        #  7 feb 2023 -0.17 da -0.14
+                        # 17 mar 2023 -0.18 da -0.17 con 300<450
+                        # 29 mag 2023 -0.20 da -0.18 con 300<450
+                        
+                    # ATTENZIONE 4 ! SELL 1 da 110 a 239 min CON 300 < 120 min FORSE E' NECESSARA SOLO QUESTA !
+                    
+                    elif (    
+                        ma3_last < ma100_last
+                        and ma5_last > ma200_last
+                        
+                        and ma300_last < ma300_120_min_ago
+                        and ma100_last < ma200_last
+                        and deviation_sell < -0.15
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                   
+                        sell = "SELL 1 da 110 a 239 min con 5 > 200 ! FORSE E' NECESSARA SOLO QUESTA 4 ! deviation_sell < -0.15 - r 10279 A"
+                        action = "sell"
                         
                         
                         
                         
-                    # SELL 1 da RCCR ! IPOTESI PEGGIORE con ma50< con dev_ma39 < -0.22 and deviation_sell < -0.22 MA DOPPIO DELTA RIALZO 
+                    # ATTENZIONE 4 ! SELL 1 da 110 a 239 min CON 300 < 120 min FORSE E' NECESSARA SOLO QUESTA !
+                    
+                    
+                    elif (    
+                        ma3_last < ma100_last
+                        and ma5_last < ma200_last
+                        
+                        and ma300_last < ma300_120_min_ago
+                        
+                        and ma100_last < ma200_last
+                        and ma100_last > ma300_last
+                        and deviation_sell < -0.16
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                   
+                        sell = "SELL 1 da 110 a 239 min con 5 < 200 MA 100 > 300 ! FORSE E' NECESSARA SOLO QUESTA 4 ! deviation_sell < -0.16 - r 10280 B1"
+                        action = "sell"
+                        
+                        #  4 set 2022 dev sell -0.07 da -0.05
+                        # 26 set 2022 dev sell -0.10 da -0.07
+                        # 12 ott 2022 dev sell -0.14 da -0.10
+                        #  7 nov 2022 dev sell -0.16 da -0.14
+                        
+                    elif (    
+                        ma3_last < ma100_last
+                        and ma450_last > ma450_720_min_ago
+                        and ma5_last < ma200_last
+                        
+                        and ma300_last < ma300_120_min_ago
+                        and ma100_last < ma200_last
+                        and ma100_last < ma300_last
+                        and deviation_sell < -0.158
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                   
+                        sell = "SELL 1 da 110 a 239 min and 450 > 12 ore con 5 < 200 e 100 < 300 ! FORSE E' NECESSARA SOLO QUESTA ! deviation_sell < -0.158 - r 10281 B2x"
+                        action = "sell"
+                        
+                        #  4 set 2022 dev sell -0.07 da -0.05
+                        # 26 set 2022 dev sell -0.10 da -0.07
+                        # 12 ott 2022 dev sell -0.13 da -0.10
+                        # 19 dic 2022 dev sell -0.152 da -0.13
+                        
+                        # 25 gen 2023 dev sell -0.158 da -0.152
+                        # 21 apr 2023 dev sell -0.158 
+                        # 21 apr 2023 ma450 > 12 ore
+
+                  
+                        
+                        
+                    elif (    
+                        ma3_last < ma100_last
+                        and deviation_sell < -0.01
+                      
+                        and ma450_last < ma450_720_min_ago
+                        and ma5_last < ma200_last
+                        
+                        and ma300_last < ma300_120_min_ago
+                        and ma100_last < ma200_last
+                        and ma100_last < ma300_last
+                        
+                        
+                        and ma2_last < ma2_2_min_ago
+                        and macd_differenza_2_min_ago < -1
+                    ):
+                   
+                        sell = "SELL 1 da 110 a 239 min and 450 < 12 ore con 5 < 200 e 100 < 300 ! deviation_sell < -0.01 and macd_differenza_2_min_ago < -1 - r 10281 B2y"
+                        action = "sell"
+                        
+                        #  4 set 2022 dev sell -0.07 da -0.05
+                        # 26 set 2022 dev sell -0.10 da -0.07
+                        # 12 ott 2022 dev sell -0.13 da -0.10
+                        # 19 dic 2022 dev sell -0.152 da -0.13
+                        
+                        # 25 gen 2023 dev sell -0.158 da -0.152
+                        # 21 apr 2023 dev sell -0.156 da -0.158
+                        # 21 apr 2023 ma450 < 12 ore
+                        # 30 ago 2023 dev sell -0.05 da -0.156
+                        #  1 set 2023 dev sell -0.01 da -0.05
+                        
+                        
+                        
+                ############################################################################ vendita > 240 min
+                
+                # VENDITA - da 240 minuti in poi = da 14400 secondi in poi
+                
+                elif seconds_since_last_trade > 14400:
+
+                    
+                    if (    
+                        ma50_last > ma50_2_min_ago
+                        and deviation_ma39 < -0.22 
+                        and deviation_sell < -0.21
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 1 dopo 240 min con ma50 > and deviation_ma39 <-0.22 and deviation_sell < -0.21 - r 10290"
+                        action = "sell"
+                        
+                        
+                    
+                    
+                    elif (     
+                        ma50_last > ma50_2_min_ago
+                        and ma3_last < ma50_last 
+                        and deviation_sell < -0.22
+                        and ma25_last < ma25_2_min_ago
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 1 dopo 240 min con ma50 > and ma3_last < ma50_last and deviation_sell < -0.22 and ma25 < - r 10291"
+                        action = "sell"
+                        
+                    
+                    
+                    
+                    ############################################################################# fare maradona 1 e maradona 2
+                    
+                    
+                       
+                        
+                    # MARADONA 1
+                    
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and ma3_last > ma100_last
+                        and ma5_last < ma100_last
+                        and deviation_sell > 0.35 and deviation_sell < 0.64
+                        and ma2_last < ma2_2_min_ago
+                        
+                    ):
+                        sell = "SELL 1 dopo 240 min con ma50 > con 5-100 (!) and deviation_sell 0.35 - 0.64 la prima FINTA DI MARADONA 1 (non toccare) - r 10292"
+                        action = "sell"
+                        
+                        # 10 GIU 2022 5-78 da 5-69
+                        # > estate 100 da 78
+                        
+                      
+                        
+                    # MARADONA 2
+                    
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and ma5_last < ma180_last
+                        and deviation_ma100_sopra_ma300 > 0.30
+                        
+                        and deviation_sell > 0.32 and deviation_sell < 0.64
+                        and ma2_last < ma2_2_min_ago
+                        
+                    ):
+                        sell = "SELL 1 dopo 240 min con ma50 > con 5-180 and dev_sell 0.32 - 0.64 la prima FINTA DI MARADONA 2 CON 100 sopra 300 > 0.30 - r 10310 a"
+                        action = "sell"
+                        
+                        # se 100 sopra 300 > 0.30 stai calmo
+                        # 23 feb 2023 5-180
+                        
+                        
+                        
+                    # MARADONA 3
+                    
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and ma3_last < ma100_last
+                        and ma5_last < ma200_last
+                        and ma3_last < ma10_last
+                        
+                        and deviation_ma100_sopra_ma300 < 0.30
+                        
+                        and deviation_sell > 0.35 and deviation_sell < 0.64
+                        and ma2_last < ma2_2_min_ago
+                        
+                    ):
+                        sell = "SELL 1 dopo 240 min con ma50 > AND con 5-200 and dev_sell 0.35 - 0.64 - prima FINTA MARADONA CON 100 sopra 300 < 0.30 - r 10329 b"
+                        action = "sell"
+                        
+                        # 3 set ho aggiunto 3<10 incredibile ma vero vendeva mentre saliva !
+                        # 12 gen 2023 5-200 da 5-50 vedi 12 gen 2023 ore 00:07
+                    
+                    
+                    #################################################################################################
+                    
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and ma300_last > ma450_last
+                        and ma300_last > ma300_120_min_ago
+                        and (ma5_prev > ma90_prev and ma5_last < ma90_last)
+                        and deviation_sell > 0.65 and deviation_sell < 1.49
+                        and deviation_ma100_sopra_ma200 > 0.45
+                        and ma2_last < ma2_2_min_ago
+                        
+                    ):
+                        sell = "SELL 1 dopo 240 min con ma50 > incrocio 5-90 (!) se 100-200 > 0.45 and deviation_sell 0.65 - 1.49 RABONA ALLA RONALDO - r 10346 A1"
+                        action = "sell"
+                        
+                        # 26 ott se 300>300 120 min ago vende con ma90
+                        
+                        
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and ma300_last < ma450_last
+                        and ma300_last > ma300_120_min_ago
+                        and (ma5_prev > ma78_prev and ma5_last < ma78_last)
+                        and deviation_sell > 0.65 and deviation_sell < 1.49
+                        and deviation_ma100_sopra_ma200 > 0.45
+                        and ma2_last < ma2_2_min_ago
+                        
+                    ):
+                        sell = "SELL 1 dopo 240 min con ma50 > incrocio 5-78 (!) se 100-200 > 0.45 and deviation_sell 0.65 - 1.49 RABONA ALLA RONALDO - r 10346 A2"
+                        action = "sell"
+                        
+                        # 26 ott se 300>300 120 min ago vende con ma90
+                        # 10 mar 2023 MA se 300<450 fase crollo VENDI UN PO' PRIMA. quindi 5-78 da 5-90
+                        
+                        
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and ma300_last < ma300_120_min_ago
+                        and (ma5_prev > ma78_prev and ma5_last < ma78_last)
+                        and deviation_sell > 0.65 and deviation_sell < 1.49
+                        and deviation_ma100_sopra_ma200 > 0.45
+                        and ma2_last < ma2_2_min_ago
+                        
+                    ):
+                        sell = "SELL 1 dopo 240 min con ma50 > incrocio 5-78 (!) se 100-200 > 0.45 and deviation_sell 0.65 - 1.49 RABONA ALLA RONALDO - r 10346 B"
+                        action = "sell"
+                        
+                        # 26 ott se 300<300 120 min ago vende con ma 78 da 42
+                        
+                        
+                        
+                        
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and ma300_last > ma300_301_min_ago
+                        
+                        and (ma5_prev > ma200_prev and ma5_last < ma200_last)
+                        and deviation_sell > 0.65 and deviation_sell < 1.49
+                        and deviation_ma100_sopra_ma200 < 0.45
+                        and ma2_last < ma2_2_min_ago
+                        
+                    ):
+                        sell = "SELL 1 >240 min con 300 > 5 ore ago E con ma50 > E incr 5-200 se 100-200 < 0.45 and dev_sell 0.65 - 1.49 RABONA RONALDO - r 10358 A"
+                        action = "sell"
+                        
+                        # > estate 5-78 da 5-34
+                        # 10 gen 2023 5-200 da 5-125
+                        
+                        
+                        
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and ma300_last < ma300_301_min_ago
+                        
+                        and (ma8_prev > ma110_prev and ma8_last < ma110_last)
+                        and deviation_sell > 0.65 and deviation_sell < 1.49
+                        and deviation_ma100_sopra_ma200 < 0.45
+                        and ma2_last < ma2_2_min_ago
+                        
+                    ):
+                        sell = "SELL 1 >240 min con 300 < 5 ore ago E con ma50 > E incr 8-110 se 100-200 < 0.45 and dev_sell 0.65 - 1.49 RABONA RONALDO - r 10358 B"
+                        action = "sell"
+                        
+                        # > estate 5-78 da 5-34
+                        # 5-125 se 300
+                        # 18 nov 2022 8-110 da 5-78
+                        
+                    
+                    
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 > 0.40
+                        and (ma3_prev > ma125_prev and ma3_last < ma125_last)
+                        and deviation_sell > 1.50 and deviation_sell < 2.70
+                        and ma2_last < ma2_2_min_ago
+                    ):    
+                        sell = "SELL 1 dopo 240 min con ma50 > incrocio 3-125 CON 100 sopra 300 > 0.40 and deviation_sell  1.50-2.70 DOPPIO PASSO RONALDO - r 10382 A"
+                        action = "sell"
+                        
+                        # 3 set 2022 ma100 da ma48
+                        
+                        
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 < 0.40
+                        and (ma3_prev > ma50_prev and ma3_last < ma50_last)
+                        and deviation_sell > 1.50 and deviation_sell < 2.70
+                        and ma2_last < ma2_2_min_ago
+                    ):    
+                        sell = "SELL 1 dopo 240 min con ma50 > incrocio 3-30 CON 100 sopra 300 <0.40 and deviation_sell  1.50-2.70 DOPPIO PASSO RONALDO - r 10393 B"
+                        action = "sell"
+                        
+                        # 18 set 3-50 da 3-30
+                        
+                        
+                    
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and deviation_ma300_sopra_ma450 > 0.30
+                        and (ma5_prev > ma45_prev and ma5_last < ma45_last)
+                        and deviation_sell > 2.71 and deviation_sell < 5.70
+                        and ma2_last < ma2_2_min_ago
+                        and macd>-50
+                    ):
+                        sell = "SELL 1 dopo 240 min con ma50 > incrocio 5-45 and deviation_sell > 2.71 TACCO DI ALLAH se dev 300-450 > 0.30 - r 10411 A"
+                        action = "sell"
+                        
+                        # 1 ott 2022 3-28 da 3-13
+                        # 17 mar 2023 4-39 con aggiunta dev 300-450 > 0.30
+                        # 6 apr 2023 5-45 da 4-39
+
+                  
+                    
+                        
+                        
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and deviation_ma300_sopra_ma450 < 0.30
+                        and (ma3_prev > ma33_prev and ma3_last < ma33_last)
+                        and deviation_sell > 2.71 and deviation_sell < 5.70
+                        and ma2_last < ma2_2_min_ago
+                        
+                    ):
+                        sell = "SELL 1 dopo 240 min con ma50 > incrocio 3-33 and deviation_sell > 2.71 TACCO DI ALLAH se dev 300-450 < 0.30 - r 10411 B"
+                        action = "sell"
+                        
+                        # 1 ott 2022 3-28 da 3-13
+                        # 17 mar 2023 3-33 con aggiunta dev 300-450 < 0.30 
+                
+                
+                
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and (ma3_prev > ma69_prev and ma3_last < ma69_last)
+                        and deviation_sell > 5.71
+                        and ma2_last < ma2_2_min_ago
+                    ):
+
+                        sell = "SELL 1 dopo 240 min con ma50 > incrocio 3-69 (!) and deviation_sell > 5.71 SI STA TRA GLI ANGELI, compa ! - r 10424"
+                        action = "sell"
+                        
+                    
+                    
+                    ######################################################################################## con trend discendente
+                    
+                    # con or IL MAESTRO HA FATTO LA CORREZIONE ! questa che vedi e' stata corretta dal maestro
+                    
+                    elif (    
+                        ma50_last < ma50_2_min_ago
+                        and deviation_ma39 < -0.17
+                        and deviation_sell > 0.20
+                        and ma5_last < ma5_2_min_ago
+                        and ma100_last < ma100_60_min_ago
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 1 dopo 240 min con ma50 <  and ma100 < con deviation_ma39 <-0.17 - r 10441"
+                        action = "sell"
+                        
+                        # ma39 non deve vendere laterale (!) quindi per farlo vendere in alto ho dato 0.20
+                        
+                        
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and ma450_last > ma450_480_min_ago
+                        and deviation_sell < -0.20
+                        
+                        and ma2_last <= ma2_2_min_ago
+                        and ma300_last > ma300_120_min_ago
+                        
+                        and ma2_last <= ma39_last
+                        and ma100_last < ma100_60_min_ago
+                    ):
+                        sell = "SELL 1 dopo 240 min con ma50 < and ma100 < MA 300 > 300 120 min ago and (dev_sell < -0.21 and ma2_last <= ma39_last) - r 10456 A1"
+                        action = "sell"
+                        
+                        # > estate -0.22 da -0.15
+                        # 6 apr 2023 -0.218 da -0.219
+                        # 25 mag 2023 aggiunto 450 > 450 480 min ago ok cosi'
+                        # 31 lug 2023 -0.21 da -0.218
+                        # 24 ago 2023 -0.20 da -0.21 and ma2_last <= ma39_last invece di 3-39 ha fatto -0.80 !
+                  
+                        
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and ma450_last < ma450_480_min_ago
+                        and deviation_sell < -0.202
+                        
+                        and ma2_last < ma2_2_min_ago
+                        and ma300_last > ma300_120_min_ago
+                        
+                        and ma3_last <= ma39_last
+                        and ma100_last < ma100_60_min_ago
+                    ):
+                        sell = "SELL 1 dopo 240 min con ma50 < and ma100 < MA 300 > 300 120 min ago and dev_sell < -0.202 - r 10456 A2"
+                        action = "sell"
+                        
+                        # > estate -0.22 da -0.15
+                        # 6 apr 2023 -0.218 da -0.219
+                        # 25 mag 2023 aggiunto 450 < 450 480 min ago diminuito dev sell di una ndecchiecella
+                        #  9 giu 2023 -0.202 da -0.216
+                        
+                        
+                        
+                        
+                        
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and ma2_last < ma2_2_min_ago
+                        and ma300_last < ma300_120_min_ago
+                        and deviation_sell < -0.214
+                        and ma3_last < ma39_last
+                        and ma100_last < ma100_60_min_ago
+                    ):
+                        sell = "SELL 1 dopo 240 min con ma50 < and ma100 < E 300 < 300 120 min ago and (dev_sell < -0.214 and ma3_last < ma39_last) - r 10456 B"
+                        action = "sell"
+                        
+                        # > estate -0.22 da -0.15
+                        # 24 set 2022 -0.218 da -0.22
+                        # 11 ago 2023 -0.214 da -0.218
+                        
+                        
+              
+                    # ma se ma100 >
+                    
+                    elif (    
+                        ma50_last < ma50_2_min_ago
+                        and ma300_last > ma300_120_min_ago
+                        and ma100_last > ma100_60_min_ago
+                        and ma100_last > ma150_last
+                        
+                        and ma8_last < ma300_last
+                        and deviation_sell < -0.05
+                        
+                        and ma3_last < ma18_last
+                        and ma5_last < ma5_2_min_ago
+                        
+                        and macd < macd_2_min_ago
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 1 dopo 240 min con ma50 < MA ma100 > E ma300 > e con 8-300 and ma5_last < ma5_2_min_ago and macd < macd_2_min_ago - r 10472 A1x"
+                        action = "sell"
+                        
+                        # ma39 NON DEVE VENDERE in fase laterale ma in alto
+                        # 17 gen 2023 dwc ma39 <-0.197 da <-0.195
+                        # 25 gen 2023 5-125 da 3-125
+                        # 7 feb 2023 and ma5_last < ma5_2_min_ago
+                        # 6 apr 2023 5-150 da 5-125
+                        # 19 apr 2023 aggiunta macd > macd 2 min ago - solo dopo 110 min !
+                        #  3 mag 2023 5-250 da 5-150 e vendita con pareggio.
+                        # 12 ago 2023 8-300 da 5-250
+                        # 13 set 2023 aggiunta 3 < 18 !
+                        # 13 set 2023 dev sell a -0.05 da > 0.05 ! (ma300 sale da 2 ore !)
+                        
+                    elif (    
+                        ma50_last < ma50_2_min_ago
+                        and macd < macd_2_min_ago
+                        and ma100_last > ma150_last
+                        and ma5_last < ma250_last
+                        and deviation_sell > 0.10
+                        and ma5_last < ma5_2_min_ago
+                        and ma300_last > ma300_120_min_ago
+                        and ma100_last > ma100_60_min_ago
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 1 dopo 240 min con ma50 < MA ma100 > E ma300 > e con 5-250 e con macd < macd 2 min ago - r 10472 A1y"
+                        action = "sell"
+                        
+                        # ma39 NON DEVE VENDERE in fase laterale ma in alto
+                        # 17 gen 2023 dwc ma39 <-0.197 da <-0.195
+                        # 25 gen 2023 5-125 da 3-125
+                        # 29 gen 2023 5-150 da 5-125
+                        #  4 mag 2023 5-250 con aggiunta macd < macd 2 min ago
+                        
+                        
+                    elif (    
+                        ma50_last < ma50_2_min_ago
+                        and deviation_ma39 < -0.1965
+                        and deviation_sell > 0.20
+                        and ma5_last < ma5_2_min_ago
+                      
+                        and ma5_last < ma150_last
+                        and ma150_last > ma150_20_min_ago
+                        and ma300_last > ma300_120_min_ago
+                        and ma100_last > ma100_60_min_ago
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 1 dopo 240 min con ma50 < MA ma100 > E ma300 > e con deviation_ma39 < -0.197 - r 10472 A2x1"
+                        action = "sell"
+                        
+                        # ma39 NON DEVE VENDERE in fase laterale ma in alto
+                        # 17 gen 2023 ma39 <-0.197 da <-0.195
+                        # 16 mar 2023 ma39 <-0.1965 da <-0.197
+                        
+                        
+                    elif (    
+                        ma50_last < ma50_2_min_ago
+                        and deviation_ma39 < -0.1965
+                        and deviation_sell > 0.20
+                        and ma5_last < ma5_2_min_ago
+                      
+                        and ma150_last < ma150_20_min_ago
+                        and ma300_last > ma300_120_min_ago
+                        and ma100_last > ma100_60_min_ago
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 1 dopo 240 min con ma50 < MA ma100 > E ma300 > e con deviation_ma39 < -0.197 - r 10472 A2x2"
+                        action = "sell"
+                        
+                        # ma39 NON DEVE VENDERE in fase laterale ma in alto
+                        # 17 gen 2023 ma39 <-0.197 da <-0.195
+                        # 16 mar 2023 ma39 <-0.1965 da <-0.197
+                        
+                        
+                        
+                    elif (    
+                        ma50_last < ma50_2_min_ago
+                        and deviation_ma39 < -0.194
+                        and deviation_sell > 0.40
+                        and ma5_last < ma5_2_min_ago
+                        and ma300_last > ma300_120_min_ago
+                        and ma100_last > ma100_60_min_ago
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 1 dopo 240 min con ma50 < MA ma100 > E ma300 > e con deviation_ma39 < -0.194 - r 10472 A2y1"
+                        action = "sell"
+                        
+                        # ma39 NON DEVE VENDERE in fase laterale ma in alto
+                        # 17 gen 2023 ma39 <-0.197 da <-0.195
+                        #  5 mar 2023 ma39 <-0.194 da <-0.197 ma con dev sell > 0.40 prendi e porta a casa
+                        # ho aggiunto questa ma la precedente condizone rappresenta "la base" - poi condizione speciale pochi maledetti e subito tra 0.80 e 1.20
+                        # vedi 5 marzo 2023 ore 3:38 NON HA PRESO IL GUADAGNO !    
+                        
+                        
+                        
+                    elif (    
+                        ma50_last < ma50_2_min_ago
+                        and deviation_ma39 < -0.01
+                        and (ma5_prev > ma100_prev and ma5_last < ma100_last)
+                        and deviation_sell > 0.80
+                        and ma5_last < ma5_2_min_ago
+                        and ma300_last > ma300_120_min_ago
+                        and ma100_last > ma100_60_min_ago
+                        and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
+                    ):
+                        sell = "SELL 1 dopo 240 min con ma50 < MA ma100 > E ma300 > e con incrocio 5-100 se guadagno > 0.80 - r 10472 A2y2"
+                        action = "sell"
+                        
+                        # 28 mag 2023 aggiunta. perche' ha venduto con la precedente perdendo un grande guadagno
+                        # 24 ago 2023 5-100 da 5-90
+                        
+                        
+                        
+                    elif (    
+                        ma50_last < ma50_2_min_ago
+                        and deviation_ma39 < -0.193
+                        
+                        and deviation_ma5_sotto_ma300 > 0.30
+                      
+                        and ma5_last < ma5_2_min_ago
+                        and ma300_last < ma300_120_min_ago
+                        and ma100_last > ma100_60_min_ago
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 1 dopo 240 min con ma50 < MA ma100 > E ma300 < e con deviation_ma39 <-0.193 - r 10472 B1"
+                        action = "sell"
+                        
+                        # ma39 NON DEVE VENDERE in fase laterale ma in alto
+                        # 26 set dev39 a 0.193 da 0.195
+                        # 31 ott 2022 dev sell -0.05 da 0.20
+                        
+                        
+                        
+                    elif (    
+                        ma50_last < ma50_2_min_ago
+                        and deviation_ma39 < -0.13
+                        and deviation_sell < -0.125
+                        and deviation_ma5_sotto_ma300 < 0.30
+                      
+                        and ma5_last < ma5_2_min_ago
+                        and ma300_last < ma300_120_min_ago
+                        and ma100_last > ma100_60_min_ago
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 1 dopo 240 min CON ma300 < e con ma50 < MA ma100 > e con dev_ma39 < -0.13 and dev sell < -0.125 - r 10472 B2"
+                        action = "sell"
+                        
+                        # ma39 NON DEVE VENDERE in fase laterale ma in alto
+                        # 26 set dev39 a 0.193 da 0.195
+                        # 31 ott 2022 dev sell -0.05 da 0.20
+                        # 27 nov 2022 dev sell -0.07 da -0.05
+                        # 13 feb 2023 dev sell -0.10 da -0.07
+                        #  9 apr 2023 dev sell -0.12 da -0.10
+                        # 12 apr 2023 dev sell -0.14 da -0.12
+                        
+                        # 22 mag 2023 dev39 a 0.194 da 0.193
+                        # 22 mag 2023 dev39 a 0.1935 da 0.194
+                        # 31 lug 2023 and deviation_ma39 < -0.13 da -0.1935
+                        # 31 lug 2023 dev sell -0.125 da -0.14
+                        
+                    # ma se ma100 > dopo 240 min
+                    
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and ma200_last > ma200_301_min_ago
+                        and ma2_last < ma2_2_min_ago
+                        and deviation_sell < -0.31
+                        and ma3_last < ma39_last
+                        and ma100_last > ma100_60_min_ago
+                        and ma78_last > ma200_last
+                    ):
+                        sell = "SELL 1 dopo 240 min con ma50 < MA ma100 > and (deviation_sell < -0.27 and ma3_last < ma39_last) - r 10489 a1"
+                        action = "sell"
+                        
+                        # 3 luglio 2022 a 0.27 da 0.20
+                        
+                        
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and ma200_last < ma200_301_min_ago
+                        and ma2_last < ma2_2_min_ago
+                        and deviation_sell < -0.22
+                        and ma3_last < ma39_last
+                        and ma100_last > ma100_60_min_ago
+                        and ma78_last > ma200_last
+                    ):
+                        sell = "SELL 1 dopo 240 min con ma50 < MA ma100 > and (deviation_sell < -0.22 and ma3_last < ma39_last) - r 10489 A2"
+                        action = "sell"
+                        
+                        # 3 luglio 2022 a 0.27 da 0.20
+                        # 30ago 2023 a 0.22 da 0.27
+                        
+                        
+                    # ma se ma100 > dopo 240 min
+                    
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and ma2_last < ma2_2_min_ago
+                        and deviation_sell < -0.23
+                        and ma3_last < ma39_last
+                        and ma100_last > ma100_60_min_ago
+                        and ma78_last < ma200_last
+                    ):
+                        sell = "SELL 1 dopo 240 min con ma50 < MA ma100 > and (deviation_sell < -0.23 and ma3_last < ma39_last) - r 10489 b"
+                        action = "sell"
+                        
+                        # 3 luglio 2022 a 0.23 da 0.20
+                        
+                    
+                   
+                    ############################################################################### aumento della perdita tollerata ! 50< MA 200> e 200>300
+                    
+                    
+                    elif (    
+                        ma50_last < ma50_2_min_ago
+                        and ma2_last < ma2_2_min_ago
+                        and deviation_ma100_sopra_ma300 > 0.30
+                        and ma300_last > ma300_301_min_ago
+                        and deviation_ma39 < -0.26
+                        and deviation_trend_ma200 > -0.12
+                        and ma200_last > ma300_last
+                        and ma2_last < ma2_2_min_ago
+                       
+                    ):
+                        sell = "SELL 1 compa dopo 240 min con ma50 < and deviation_ma39 < -0.26 con > PERDITA TOLLERATA E 300 > 5 ore ago - r 10530 A"
+                        action = "sell"
+                        
+                        # 18 set dev 39 -0.25 da -0.23
+                        # 21 gen 2023 dev 39 -0.26 da -0.25
+                        
+                        
+                    elif (    
+                        ma50_last < ma50_2_min_ago
+                        and ma2_last < ma2_2_min_ago
+                        and deviation_ma100_sopra_ma300 > 0.30
+                        and ma300_last < ma300_301_min_ago
+                        and deviation_ma39 < -0.25
+                        and deviation_trend_ma200 > -0.12
+                        and ma200_last > ma300_last
+                        and ma2_last < ma2_2_min_ago
+                       
+                    ):
+                        sell = "SELL 1 compa dopo 240 min con ma50 < and deviation_ma39 < -0.23  con > PERDITA TOLLERATA MA 300 < 5 ore ago - r 10530 B"
+                        action = "sell"
+                        
+                        # 18 set dev 39 -0.25 da -0.23
+                        
+                        
+                        
+                    elif (    
+                        ma50_last < ma50_2_min_ago
+                        and ma2_last < ma2_2_min_ago
+                        and deviation_ma100_sopra_ma300 < 0.30
+                        and deviation_sell < -0.27
+                        
+                        and deviation_ma39 < -0.23
+                        and deviation_trend_ma200 > -0.12
+                        and ma200_last > ma300_last
+                        and ma2_last < ma2_2_min_ago
+                       
+                    ):
+                        sell = "SELL 1 compa dopo 240 min con ma50 < and deviation_ma39 < -0.23  and deviation_sell < -0.27 con > PERDITA TOLLERATA - r 10546"
+                        action = "sell"
+                        
+                        # se 100 > 300 di poco metto anche deviation_sell < -0.21
+                        # > estate -0.27 da -0.21
+                        
+                        
+                    
+                        
+                    # SELL 1 da RCCR ! dopo 240 min IPOTESI PEGGIORE con ma50< con dev_ma39 < -0.22 and deviation_sell < -0.22 MA DOPPIO DELTA RIALZO 
                     
                     elif (
                         ma50_last < ma50_2_min_ago
@@ -14628,7 +18589,7 @@ class ro_cano_che_ritorna:
                         
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 da RCCR ! IPOTESI PEGGIORE con ma50< con dev_ma39 < -0.22 and deviation_sell < -0.22 MA DOPPIO DELTA RIALZO - r 10571"
+                        sell = "SELL 1 da RCCR ! da 240 min in poi IPOTESI PEGGIORE con ma50< con dev_ma39 < -0.22 and deviation_sell < -0.22 MA DOPPIO DELTA RIALZO - r 10571"
                         action = "sell"
                         
                         # 19 SET r 10546 la condizione precedente ha fatto -1.65 ed e' partita insieme ad altre 2 condizioni speciali ! 
@@ -14637,40 +18598,63 @@ class ro_cano_che_ritorna:
                         # 19 set 2022 deviation_ma39 < -0.22 AND and deviation_sell < -0.22
                         
                         
+                    elif (     
+                        ma50_last < ma50_2_min_ago
+                        and ma300_last > ma300_120_min_ago
+                        and ma3_last < ma39_last
+                        and deviation_sell < -0.241
+                        
+                        and ma2_last <= ma2_2_min_ago
+                        and deviation_trend_ma200 > -0.15
+                        and ma200_last > ma300_last
+                        
+                    ):
+                        sell = "SELL 1 > 240 min E 300 > 120 min ago e con ma50 < (dev_sell < -0.241 and ma3_last < ma39_last) con > PERDITA TOLLERATA - r 10572 A1"
+                        action = "sell"
+                        
+                        # 28 dic 2022 dev sell -0.245 da -0.23
+                        # 24 apr 2023 dev sell -0.243 da -0.245 (dopo che con -0.245 ha fatto -0.80%)
+                        # 27 apr 2023 dev sell -0.241 da -0.243 (dopo che con -0.243 ha fatto -0.86% !)
+                        # 27 apr 2023 and deviation_trend_ma200 a > -0.15 da > -0.13
                         
                         
                     elif (     
                         ma50_last < ma50_2_min_ago
                         and ma300_last > ma300_120_min_ago
+                        
+                        and deviation_ma39 < -0.17
                         and ma3_last < ma39_last
-                        and deviation_sell < -0.23
-                        and ma2_last < ma2_2_min_ago
+                        
                         and deviation_trend_ma200 > -0.12
                         and ma200_last > ma300_last
-                        and ma2_last < ma2_2_min_ago
-                    ):
-                        sell = "SELL 1 dopo 110 min E 300 > 120 min ago e con ma50 < (dev_sell < -0.23 and ma3_last < ma39_last) con > PERDITA TOLLERATA - r 10572 A"
-                        action = "sell"    
                         
+                        and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
+                    ):
+                        sell = "SELL 1 > 240 min E 300 > 120 min ago e con ma50 < and dev3-39 < -0.17 con > PERDITA TOLLERATA - r 10572 A2"
+                        action = "sell"
+                        
+                        # deviation_ma39 = ma4_last / ma39
+                        # 24 apr 2023 deviation_ma39 < -0.22
+                        # macd sui tempi lunghi
+                        #  7 lug 2023 deviation_ma39 < -0.17 da < -0.22
                         
                     elif (     
                         ma50_last < ma50_2_min_ago
                         and ma300_last < ma300_120_min_ago
                         and ma3_last < ma39_last
-                        and deviation_sell < -0.21
+                        and deviation_sell < -0.25
                         and ma2_last < ma2_2_min_ago
                         and deviation_trend_ma200 > -0.12
                         and ma200_last > ma300_last
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 dopo 110 min E 300 < 120 min ago e con ma50 < (dev_sell < -0.21 and ma3_last < ma39_last) con > PERDITA TOLLERATA - r 10572 B"
+                        sell = "SELL 1 dopo 240 min E 300 < 120 min ago e con ma50 < (dev_sell < -0.25 and ma3_last < ma39_last) con > PERDITA TOLLERATA - r 10572 B"
                         action = "sell"
                         
+                        # 17 gen 2023 dev sell 0.25
                         
                         
-                    
-                    
-                    
                     
                     
                     # ATTENZIONE 1 ! > 110 min E CON 300 > 120 min FORSE E' NECESSARA SOLO QUESTA !
@@ -14683,12 +18667,12 @@ class ro_cano_che_ritorna:
                         and ma2_last < ma2_2_min_ago
                     ):
                    
-                        sell = "SELL 1 > 110 min FORSE E' NECESSARA SOLO QUESTA 1 ! deviation_sell < -0.27 - r 10588"
+                        sell = "SELL 1 > 240 min FORSE E' NECESSARA SOLO QUESTA 1 ! deviation_sell < -0.27 - r 10588"
                         action = "sell"
                         
                         
                         
-                    # ATTENZIONE 2 ! > 110 min E CON 300 > 120 min FORSE E' NECESSARA SOLO QUESTA !
+                    # ATTENZIONE 2 ! dopo 240 min E CON 300 > 120 min FORSE E' NECESSARA SOLO QUESTA !
                     
                     elif (    
                         ma3_last < ma100_last
@@ -14698,14 +18682,14 @@ class ro_cano_che_ritorna:
                         and ma2_last < ma2_2_min_ago
                     ):
                    
-                        sell = "SELL 1 > 110 min FORSE E' NECESSARA SOLO QUESTA 2 ! deviation_sell < -0.22 - r 10603"
+                        sell = "SELL 1 > 240 min FORSE E' NECESSARA SOLO QUESTA 2 ! deviation_sell < -0.22 - r 10603"
                         action = "sell"
                         
                         
                         
                         
                         
-                    # ATTENZIONE 3 ! > 110 min E CON 300 < 120 min FORSE E' NECESSARA SOLO QUESTA !
+                    # ATTENZIONE 3 ! dopo 240 min CON 300 < 120 min FORSE E' NECESSARA SOLO QUESTA !
                     
                     elif (    
                         ma3_last < ma100_last
@@ -14716,7 +18700,7 @@ class ro_cano_che_ritorna:
                         and ma2_last < ma2_2_min_ago
                     ):
                    
-                        sell = "SELL 1 > 110 min FORSE E' NECESSARA SOLO QUESTA 3 ! deviation_sell < -0.225 CON 78 > 300 - r 10621 a"
+                        sell = "SELL 1 > 240 min FORSE E' NECESSARA SOLO QUESTA 3 ! deviation_sell < -0.225 CON 78 > 300 - r 10621 A"
                         action = "sell"
                         
                         # > estate a -0.19 da 0.09
@@ -14724,53 +18708,47 @@ class ro_cano_che_ritorna:
                         # 11 ott a -0.225 da -0.23
                         
                         
-                    # ATTENZIONE 3 ! > 110 min E CON 300 < 120 min FORSE E' NECESSARA SOLO QUESTA !
+                    # ATTENZIONE 3 ! dopo 240 min CON 300 < 120 min FORSE E' NECESSARA SOLO QUESTA !
+                    
                     
                     elif (    
                         ma3_last < ma100_last
-                        and ma450_last > ma450_720_min_ago
-                        
+                        and deviation_ma300_sopra_ma450 > -0.20
                         and ma78_last < ma300_last
                         and ma300_last < ma300_120_min_ago
                         and ma100_last > ma200_last
-                        and deviation_sell < -0.155
+                        and deviation_sell < -0.19
                         and ma2_last < ma2_2_min_ago
                     ):
                    
-                        sell = "SELL 1 > 110 min FORSE E' NECESSARA SOLO QUESTA 3 ! dev_sell < -0.155 CON 78 < 300 (ancora ribasso !) porta a casa ! - r 10637 B1"
+                        sell = "SELL 1 > 240 min FORSE E' NECESSARA SOLO QUESTA 3 ! dev_sell < -0.19 CON 78 < 300 (ancora ribasso !) porta a casa ! - r 10637 B1"
+                        action = "sell"
+                       
+                        # 17 mar 2023 -0.19 da -0.17 con 300>450
+                      
+                    elif (    
+                        ma3_last < ma100_last
+                        and deviation_ma300_sopra_ma450 < -0.20
+                        and ma78_last < ma300_last
+                        and ma300_last < ma300_120_min_ago
+                        and ma100_last > ma200_last
+                        and deviation_sell < -0.18
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                   
+                        sell = "SELL 1 > 240 min FORSE E' NECESSARA SOLO QUESTA 3 ! dev_sell < -0.18 CON 78 < 300 (ancora ribasso !) porta a casa ! - r 10637 B2"
                         action = "sell"
                         
                         # 23 lug 2022 dev sell < 0.10 ha fatto fare perdita di -0.26 !
                         # 23 lug 2022 a < 0.09 da < 0.10
                         # > estate -0.10 da 0.09
                         # -0.13 da -0.10
-                        # 18 gen 2023 -0.155 da -0.13
-                        
-                    # ATTENZIONE 3 ! > 110 min E CON 300 < 120 min FORSE E' NECESSARA SOLO QUESTA !
-                    
-                    elif (    
-                        ma3_last < ma100_last
-                        and ma450_last < ma450_720_min_ago
-                        
-                        and ma78_last < ma300_last
-                        and ma300_last < ma300_120_min_ago
-                        and ma100_last > ma200_last
-                        and deviation_sell < -0.15
-                        and ma2_last < ma2_2_min_ago
-                    ):
-                   
-                        sell = "SELL 1 > 110 min FORSE E' NECESSARA SOLO QUESTA 3 ! dev_sell < -0.15 CON 78 < 300 (ancora ribasso !) porta a casa ! - r 10637 B2"
-                        action = "sell"
-                        
-                        # 23 lug 2022 dev sell < 0.10 ha fatto fare perdita di -0.26 !
-                        # 23 lug 2022 a < 0.09 da < 0.10
-                        # > estate -0.10 da 0.09
-                        # -0.13 da -0.10
-                        # 18 gen 2023 -0.155 da -0.13
+                        # 17 dicembre 2022 -0.14 da -0.13
+                        #  7 feb 2023 -0.17 da -0.14
+                        # 17 mar 2023 -0.18 da -0.17 con 300<450
                         
                         
-                        
-                    # ATTENZIONE 4 ! > 110 min E CON 300 < 120 min FORSE E' NECESSARA SOLO QUESTA !
+                    # ATTENZIONE 4 ! dopo 240 minCON 300 < 120 min FORSE E' NECESSARA SOLO QUESTA !
                     
                     elif (    
                         ma3_last < ma100_last
@@ -14782,13 +18760,13 @@ class ro_cano_che_ritorna:
                         and ma2_last < ma2_2_min_ago
                     ):
                    
-                        sell = "SELL 1 > 110 min con 5 > 200 ! FORSE E' NECESSARA SOLO QUESTA 4 ! deviation_sell < -0.15 - r 10655 A"
+                        sell = "SELL 1 > 240 min con 5 > 200 ! FORSE E' NECESSARA SOLO QUESTA 4 ! deviation_sell < -0.15 - r 10655 A"
                         action = "sell"
                         
                         
                         
                         
-                    # ATTENZIONE 4 ! > 110 min E CON 300 < 120 min FORSE E' NECESSARA SOLO QUESTA !
+                    # ATTENZIONE 4 ! dopo 240 minCON 300 < 120 min FORSE E' NECESSARA SOLO QUESTA !
                     
                     
                     elif (    
@@ -14799,44 +18777,89 @@ class ro_cano_che_ritorna:
                         
                         and ma100_last < ma200_last
                         and ma100_last > ma300_last
-                        and deviation_sell < -0.17
+                        and deviation_sell < -0.16
                         and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
                     ):
                    
-                        sell = "SELL 1 > 110 min con 5 < 200 MA 100 > 300 ! FORSE E' NECESSARA SOLO QUESTA 4 ! deviation_sell < -0.17 - r 10655 B1"
+                        sell = "SELL 1 > 240 min con 5 < 200 MA 100 > 300 ! FORSE E' NECESSARA SOLO QUESTA 4 ! deviation_sell < -0.16 and macd < - r 10655 B1"
                         action = "sell"
                         
                         #  4 set 2022 dev sell -0.07 da -0.05
                         # 26 set 2022 dev sell -0.10 da -0.07
                         # 12 ott 2022 dev sell -0.14 da -0.10
                         #  7 nov 2022 dev sell -0.16 da -0.14
-                        # 29 dic 2022 dev sell -0.17 da -0.16
+                  
                         
                     elif (    
                         ma3_last < ma100_last
+                        and ma450_last > ma450_720_min_ago
                         and ma5_last < ma200_last
                         
                         and ma300_last < ma300_120_min_ago
                         and ma100_last < ma200_last
                         and ma100_last < ma300_last
-                        and deviation_sell < -0.13
+                        
+                        and deviation_sell < -0.149
+                        
                         and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
+                        and macd < 3.0
                     ):
                    
-                        sell = "SELL 1 > 110 min con 5 < 200 e 100 < 300 ! FORSE E' NECESSARA SOLO QUESTA 4 ! deviation_sell < -0.10 - r 10655 B2"
+                        sell = "SELL 1 > 240 min and 450 > 12 ore con 5 < 200 e 100 < 300 ! FORSE E' NECESSARA SOLO QUESTA ! dev_sell < -0.149 and macd < and macd < -3 - r 10655 B2x"
                         action = "sell"
                         
                         #  4 set 2022 dev sell -0.07 da -0.05
                         # 26 set 2022 dev sell -0.10 da -0.07
                         # 12 ott 2022 dev sell -0.13 da -0.10
+                        # 19 dic 2022 dev sell -0.152 da -0.13
                         
+                        # 25 gen 2023 dev sell -0.158 da -0.152
+                        # 21 apr 2023 dev sell -0.158 
+                        # 21 apr 2023 ma450 > 12 ore
+                        # 28 mag 2023 dev sell -0.152 da -0.149
+                        # 28 mag 2023 dev sell -0.15 da -0.15
+                        # 13 ago 2023 dev sell a -0.15 da -0.152
                         
+                        # 29 set 2023 dev sell a -0.149 da -0.15
+                        # 29 set 2023 macd < -3
+                  
                         
-        
-            
+                    elif (    
+                        ma3_last < ma100_last
+                        and ma450_last < ma450_720_min_ago
+                        and ma5_last < ma200_last
+                        
+                        and ma300_last < ma300_120_min_ago
+                        and ma100_last < ma200_last
+                        and ma100_last < ma300_last
+                      
+                        and deviation_sell < 0.10
+                        
+                        and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
+                    ):
+                   
+                        sell = "SELL 1 > 240 min and 450 < 12 ore con 5 < 200 e 100 < 300 ! FORSE E' NECESSARA SOLO QUESTA ! deviation_sell < 0.10 and macd < - r 10655 B2y"
+                        action = "sell"
+                        
+                        #  4 set 2022 dev sell -0.07 da -0.05
+                        # 26 set 2022 dev sell -0.10 da -0.07
+                        # 12 ott 2022 dev sell -0.13 da -0.10
+                        # 19 dic 2022 dev sell -0.152 da -0.13
+                        
+                        # 25 gen 2023 dev sell -0.158 da -0.152
+                        # 21 apr 2023 dev sell -0.156 da -0.158
+                        # 21 apr 2023 ma450 < 12 ore
+                        # 16 ago 2023 dev sell -0.10 da -0.156
+                        #  5 set 2023 dev sell -0.05 da -0.10
+                        # 12 set 2023 dev sell < 0.10 da -0.05
+
+          
             ########################################################################################################################### SESSIONE 2
             
-            # ALLA SESSIONE 2 MANCAva UN ACQUISTO DURANTE IL CROLLO SE PER ES SESSIONE 1 HA GIA' VENDUTO MA IL TITOLO RESTA IN IPERVENDUTO
+            # ALLA SESSIONE 2 MANCAVA UN ACQUISTO DURANTE IL CROLLO SE PER ES SESSIONE 1 HA GIA' VENDUTO MA IL TITOLO RESTA IN IPERVENDUTO
             
             elif self.session == 2:
 
@@ -15326,16 +19349,16 @@ class ro_cano_che_ritorna:
                     elif (
                         ma50_last >= ma50_2_min_ago
                         and ma100_last > ma300_last
-                        and (ma3_prev > ma15_prev and ma3_last < ma15_last)
+                        and (ma3_prev > ma25_prev and ma3_last < ma25_last)
                         and deviation_sell > 0.91 and deviation_sell < 1.20
                         and ma2_last < ma2_2_min_ago
                      
                     ):
-                        sell = "SELL 2 (12-21 min) con ma50 > and incrocio 3-15 and deviation_sell 0.91 - 1.20 CON 100 > 300 RIALZO - r 11156 A"
+                        sell = "SELL 2 (12-21 min) con ma50 > and incrocio 3-25 and deviation_sell 0.91 - 1.20 CON 100 > 300 RIALZO - r 11156 A"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
-                        
+                        # 12 gen 2023 3-25 da 3-15
                         
                         
                     elif (
@@ -15352,11 +19375,7 @@ class ro_cano_che_ritorna:
                         # deviation_sell = ma3_last/last_trade_price
                         
                         
-                        
-                        
-                        
-                        
-                        
+                       
                         
 
                     elif (
@@ -15399,12 +19418,13 @@ class ro_cano_che_ritorna:
                     elif (
                         ma50_last < ma50_2_min_ago
                         and deviation_ma5_sotto_ma300 < 0.50
-                        and deviation_ma39 < -0.199
-                        and deviation_sell < -0.30
+                        and deviation_ma39 < -0.03
+                        and deviation_sell < -0.12
+                        
                         and ma2_last < ma2_2_min_ago
                       
                     ):
-                        sell = "SELL 2 (12-21 min) con ma50 < and deviation_ma39 < -0.199 and dev sell -0.30 - r 11206 B"
+                        sell = "SELL 2 (12-21 min) con ma50 < and deviation_ma39 < -0.03 and dev sell -0.12 - r 11206 B"
                         action = "sell"
                         
                         
@@ -15412,9 +19432,10 @@ class ro_cano_che_ritorna:
                         # HO NOTATO CHE ANCHE INCROCIO 5-100 SAREBBE ARRIVATO TARDI
                         
                         # > estate se 5 vicina 300 ma39 -0.199 da -0.19 e dev sell -0.30
-                    
-                    
-                    
+                        # 12 set 2023 dev 39 a -0.05 da -0.199
+                        # 12 set 2023 dev sell a -0.12 da -0.30
+                        #  2 ott 2023 and deviation_ma39 < -0.03 da < -0.05 dopo che ha fatto -0.46 
+                  
                     elif (
                         ma50_last < ma50_2_min_ago
                         and (ma3_prev > ma78_prev and ma3_last < ma78_last)
@@ -15518,10 +19539,7 @@ class ro_cano_che_ritorna:
                         action = "sell"
                         
                         
-                    
-                    
-                    
-                    
+                   
                     
                     # situazione post crollo
                     
@@ -15541,14 +19559,6 @@ class ro_cano_che_ritorna:
                     
                         
                         
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
                     # situazione in miglioramento
                     
                     elif (    
@@ -15565,9 +19575,7 @@ class ro_cano_che_ritorna:
                         action = "sell"
                         
                         
-                        
-                   
-                        
+                     
                   
                     
                     # situazione post crollo
@@ -15589,26 +19597,16 @@ class ro_cano_che_ritorna:
                         
                     
                     
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
                     elif (        
                         ma50_last > ma50_2_min_ago 
                         and ma2_last < ma2_2_min_ago 
-                        and deviation_ma39 < -0.29
+                        and deviation_ma39 < -0.295
                         and ma200_last > ma200_60_min_ago
                     ):
                         sell = "SELL 2 (21-60 min) con ma50 > and deviation_ma39 < -0.29 - TOLLERANTE ! - r 11410"
                         action = "sell"
                         
+                        # 17 feb 2013 dev_39 a -0.295 da -0.29
                   
                 
                     elif (    
@@ -15673,11 +19671,7 @@ class ro_cano_che_ritorna:
                         # molto guadagno ma piu' bassa
                         
                         
-                        
-                        
-                        
-                        
-                        
+                      
                     
                     elif (
                         ma50_last > ma50_2_min_ago
@@ -15698,17 +19692,18 @@ class ro_cano_che_ritorna:
                         ma50_last > ma50_2_min_ago
                         and deviation_ma5_sotto_ma300 < 0.40
                         and deviation_ma5_sotto_ma300 > -0.40
-                        and ma5_last < ma39_last
+                        and ma5_last < ma45_last
                         and deviation_sell > 0.25 and deviation_sell < 0.56
                         and ma2_last < ma2_2_min_ago
                        
                     ):
-                        sell = "SELL 2 (21-60 min) con ma50 > and 5 < 39 and deviation_sell 0.25 - 0.56 MARADONA e' piu' stanco e paziente - r 11477 B"
+                        sell = "SELL 2 (21-60 min) con ma50 > and 5 < 45 and deviation_sell 0.25 - 0.56 MARADONA e' piu' stanco e paziente - r 11477 B"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
                         # 5-69 da 5-39 dopo dolomiti
                         # 29 set 5-39 fascia mediana 5-300
+                        # 17 mar 2023 5-45 da 5-39
                         
                     elif (
                         ma50_last > ma50_2_min_ago
@@ -15820,10 +19815,7 @@ class ro_cano_che_ritorna:
                         # deviation_sell = ma3_last/last_trade_price
                         # 17 set 3-42 da 3-18
                         
-                        
-                        
-                        
-                        
+                       
                         
                     elif (
                         ma50_last > ma50_2_min_ago
@@ -15880,12 +19872,7 @@ class ro_cano_che_ritorna:
                         action = "sell"
                         
                         
-                        
-                        
-                        
-                        
-                        
-                        
+                      
                         
                     # ecco inequivocabilmente il crollo !
                     
@@ -15902,33 +19889,51 @@ class ro_cano_che_ritorna:
                         # durante il crollo non devi pensare ai centesimi !
                         
                   
-                    
-                    
-                    
+                  
                     
                     elif (    
                         ma50_last < ma50_2_min_ago 
                         and ma2_last < ma2_2_min_ago 
-                        and deviation_sell < -0.318
+                        and deviation_sell < -0.12
                         and ma200_last < ma200_60_min_ago
                         and ma50_last > ma100_last
                     ):
-                        sell = "SELL 2 (21-60 min) con ma50 < and deviation_sell < -0.318 - r 11650"
+                        sell = "SELL 2 (21-60 min) con ma50 < and deviation_sell < -0.12 - r 11650"
                         action = "sell"
                         
-                        # 26 set -0.318 da -0.32
-                        
-                    
+                        # 26 set 2022 -0.318 da -0.32
+                        #  6 set 2023 -0.12 da -0.32
                     
                     
                     elif (    
-                        ma50_last < ma50_2_min_ago 
-                        and ma2_last < ma2_2_min_ago 
+                        ma50_last < ma50_2_min_ago
+                        and ma450_last > ma450_480_min_ago
                         and deviation_sell < -0.348
+                        
+                        and ma2_last < ma2_2_min_ago 
+                        
                         and ma200_last < ma200_60_min_ago
                         and ma50_last < ma100_last
                     ):
-                        sell = "SELL 2 (21-60 min) con ma50 < and deviation_sell < -0.348 - r 11663"
+                        sell = "SELL 2 (21-60 min) con ma50 < and deviation_sell < -0.348 CON ma450_last > ma450_480_min_ago - r 11663a"
+                        action = "sell"
+                        
+                        # 2 GIUGNO a 0.335 da 0.32
+                        # 0.345 da 0.335 dopo le dolomiti
+                        # 24 set 2022 -0.348 da -0.345
+                        
+                        
+                    elif (    
+                        ma50_last < ma50_2_min_ago
+                        and ma450_last < ma450_480_min_ago
+                        and deviation_sell < -0.34
+                        
+                        and ma2_last < ma2_2_min_ago 
+                        
+                        and ma200_last < ma200_60_min_ago
+                        and ma50_last < ma100_last
+                    ):
+                        sell = "SELL 2 (21-60 min) con ma50 < and deviation_sell < -0.34 CON ma450_last > ma450_480_min_ago- r 11663b"
                         action = "sell"
                         
                         # 2 GIUGNO a 0.335 da 0.32
@@ -15949,11 +19954,7 @@ class ro_cano_che_ritorna:
                         sell = "SELL 2 (21-60 min) con ma50 < and incrocio 3-78 and deviation_sell < -0.37 - r 11681"
                         action = "sell"
                         
-                        
-                   
-                    
-                    
-                    
+                       
                     
                     elif (
                         ma50_last < ma50_2_min_ago
@@ -15982,13 +19983,7 @@ class ro_cano_che_ritorna:
                         sell = "SELL 2 (21-60 min) con ma50< 200< e 100< and INCROCIO 3-100 (no 3<100) CUSCINO DI SANT' ANTONIO con dev_sell < -0.29 - r 11714"
                         action = "sell"
                         
-                        
-                        
-                        
-                        
-                        
-                      
-                    
+                       
                     ############################################################################################################## con > PERDITA TOLLERATA !
                     
                     # ATTENZIONE ! AUMENTA LA PERDITA TOLLERATA  ! PERCHE' ma200 sale e perche' ma200 > ma300
@@ -16016,21 +20011,26 @@ class ro_cano_che_ritorna:
                         
                     elif (  
                         ma50_last < ma50_2_min_ago 
-                        and ma2_last < ma2_2_min_ago 
-                        and deviation_sell < -0.37
+                        
+                        and deviation_sell < -0.30
+                        
                         and ma300_last > ma300_301_min_ago
                         and ma200_last > ma200_60_min_ago
                         and deviation_trend_ma200 > -0.10
                         and ma200_last > ma300_last
-                     
+                        
+                        and ma2_last < ma2_2_min_ago
+                        and macd_differenza_2_min_ago < -1
                     ):
-                        sell = "SELL 2 (21-60 min) con ma50 < and deviation_sell < -0.37 con > PERDITA TOLLERATA ! - r 11755 A"
+                        sell = "SELL 2 (21-60 min) con ma50 < and deviation_sell < -0.30 con > PERDITA TOLLERATA ! and macd_differenza_2_min_ago < -1 - r 11755 A"
                         action = "sell"
                         
                         # 28 set se 300 > 300 301 min ago allora dev sell a -0.36 da -0.35
                         # 22 otobre 2022 dev sell 0.37 da 0.36
-                        
-                        
+                        # 27 set 2023 aggiunto and macd_differenza_2_min_ago < -1
+                        # 27 set 2023 dev sell 0.30 da 0.37
+
+                    
                     elif (  
                         ma50_last < ma50_2_min_ago 
                         and ma2_last < ma2_2_min_ago 
@@ -16105,18 +20105,33 @@ class ro_cano_che_ritorna:
                 
                 
                     # -------------------------------------------------------------------------------------- guadagno durante il crollo
-
+                    
                     elif (
                         ma50_last < ma50_2_min_ago
-                        and (ma3_prev > ma28_prev and ma3_last < ma28_last)
+                        and delta_450_300 < delta_450_300_60_min
+                        and (ma3_prev > ma45_prev and ma3_last < ma45_last)
                         and deviation_sell > 0.23
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 2 (21-60 min) eventuale guadagno durante il crollo (21-60 min) con ma50 < incrocio 3-28 and dev_sell > 0.23 - r 11803"
+                        sell = "SELL 2 (21-60 min) eventuale guadagno durante il crollo (21-60 min) con ma50 < incrocio 3-45 and dev_sell > 0.23 - r 11803 A"
                         action = "sell"
                         
                         # 14 set 3-28 da 3-18
+                        # 16 mar 2023 3-39 da 3-28 giorno
                         
+                        
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and delta_450_300 > delta_450_300_60_min
+                        and (ma3_prev > ma39_prev and ma3_last < ma39_last)
+                        and deviation_sell > 0.23
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 2 (21-60 min) eventuale guadagno durante il crollo (21-60 min) con ma50 < incrocio 3-45 and dev_sell > 0.23 - r 11803 B"
+                        action = "sell"
+                        
+                        # 14 set 3-28 da 3-18
+                        # 16 mar 2023 3-39 da 3-28 notte
                 
                 
                 
@@ -16163,29 +20178,59 @@ class ro_cano_che_ritorna:
                         action = "sell"
                         
                         
-                        
-                        
-                        
-               
+                     
                     elif (      
                         ma50_last > ma50_2_min_ago
-                        and deviation_sell < -0.18
+                        and ma300_last > ma450_last
+                        and deviation_sell < -0.215
                         and ma3_last < ma50_last
                         and ma2_last < ma2_2_min_ago 
                     ):
-                        sell = "SELL 2 da 60 a 90 min con ma50 > and (deviation_sell < -0.18 and ma3_last < ma50_last)  - r 11853"
+                        sell = "SELL 2 da 60 a 90 min con ma50 > and (deviation_sell < -0.215 and ma3_last < ma50_last)  - r 11853 A"
                         action = "sell"
                         
+                        # 20 feb 2023 aggiunta se 200>450
+                        # 20 feb 2023 dev_sell a -0.20 da -0.18
+                        # 24 feb 2023 dev_sell -0.215 da -0.20
                         
+                    elif (      
+                        ma50_last > ma50_2_min_ago
+                        and ma300_last < ma450_last
+                        and deviation_sell < -0.19
+                        and ma3_last < ma50_last
+                        and ma2_last < ma2_2_min_ago 
+                    ):
+                        sell = "SELL 2 da 60 a 90 min con ma50 > and (deviation_sell < -0.18 and ma3_last < ma50_last)  - r 11853 B"
+                        action = "sell"
+                        
+                        # 20 feb 2023 aggiunta se 300<450
+                        # 20 feb 2023 dev_sell a -0.19 da -0.18
                     
+                    
+                    
+                    elif (    
+                        ma50_last > ma50_2_min_ago
+                        and deviation_ma39 < -0.23
+                        and ma2_last < ma2_2_min_ago
+                        and ma200_last > ma200_60_min_ago
+                        and ma300_last > ma300_301_min_ago
+                    ):
+                        sell = "SELL 2 da 60 a 90 min con ma50 > and deviation_ma39 <-0.23 - r 11864 A"
+                        action = "sell"
+                        
+                        # 21 gen 2023 con 300> 5 ore dev ma39 <-0.23 da -0.22 
+                        
+                        
                     elif (    
                         ma50_last > ma50_2_min_ago
                         and deviation_ma39 < -0.22
                         and ma2_last < ma2_2_min_ago
                         and ma200_last > ma200_60_min_ago
+                        and ma300_last < ma300_301_min_ago
                     ):
-                        sell = "SELL 2 da 60 a 90 min con ma50 > and deviation_ma39 <-0.22 - r 11864"
+                        sell = "SELL 2 da 60 a 90 min con ma50 > and deviation_ma39 <-0.22 - r 11864 B"
                         action = "sell"
+                        
                         
                         
                   
@@ -16222,37 +20267,59 @@ class ro_cano_che_ritorna:
                         
                         
                         
+                        
                     elif (
                         ma50_last > ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 > 0.30
+                        and (ma4_prev > ma78_prev and ma4_last < ma78_last)
+                        and deviation_sell > 0.57 and deviation_sell < 0.80
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 2 da 60 a 90 min con ma50> and incrocio 4-78 CON 100-300 > 0.30 and deviation_sell 0.57-0.80 FINTA ALLA RONALDO - r 11906 A"
+                        action = "sell"
+                        
+                        
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 < 0.30
                         and (ma4_prev > ma25_prev and ma4_last < ma25_last)
                         and deviation_sell > 0.57 and deviation_sell < 0.80
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 2 da 60 a 90 min con ma50> and incrocio 4-25 and deviation_sell 0.57-0.80 FINTA ALLA RONALDO - r 11906"
+                        sell = "SELL 2 da 60 a 90 min con ma50> and incrocio 4-25 Con 100-300 < 0.30 and deviation_sell 0.57-0.80 FINTA ALLA RONALDO - r 11906 B"
                         action = "sell"
-                    
                     
                     
                     
                     elif (
                         ma50_last > ma50_2_min_ago
+                        and ma450_last > ma450_720_min_ago
+                        and (ma5_prev > ma39_prev and ma5_last < ma39_last)
+                        and deviation_sell > 0.81 and deviation_sell < 1.49
+                        and ma2_last < ma2_2_min_ago
+                    ):
+
+                        sell = "SELL 2 da 60 a 90 min con ma50 > and incrocio 5-39 and deviation_sell 0.81 - 1.49 RABONA ALLA RONALDO con 450 > 720 min - r 11919 a"
+                        action = "sell"
+
+                        # ma ricordati che in diverse occasioni 3-48 mi ha evitato la ricompra e la rivendita conseguente con perdita !
+                        # 5-28 da 3-18 dopo dolomiti
+
+                  
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and ma450_last < ma450_720_min_ago
                         and (ma5_prev > ma28_prev and ma5_last < ma28_last)
                         and deviation_sell > 0.81 and deviation_sell < 1.49
                         and ma2_last < ma2_2_min_ago
                     ):
 
-                        sell = "SELL 2 da 60 a 90 min con ma50 > and incrocio 5-28 and deviation_sell 0.81 - 1.49 RABONA ALLA RONALDO - r 11919"
+                        sell = "SELL 2 da 60 a 90 min con ma50 > and incrocio 5-28 and deviation_sell 0.81 - 1.49 RABONA ALLA RONALDO con 450 < 720 min  - r 11919 b"
                         action = "sell"
 
                         # ma ricordati che in diverse occasioni 3-48 mi ha evitato la ricompra e la rivendita conseguente con perdita !
                         # 5-28 da 3-18 dopo dolomiti
-                    
-                    
-                    
-                    
-                    
-                    
-                    
+                        
                     
                     
                     
@@ -16287,15 +20354,6 @@ class ro_cano_che_ritorna:
                         # 6 giu 2022 3-16 da 3-13
                         # 5-25 da 3-16 dopo dolomiti
                         
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
                     
                     
                     elif (
@@ -16339,18 +20397,18 @@ class ro_cano_che_ritorna:
                         and ma100_last < ma100_60_min_ago
                         
                         and deviation_ma39 < -0.17
-                        and deviation_sell < -0.10
+                        and deviation_sell < -0.11
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 2 da 60 a 90 min TREND < con PERDITA BASE con ma50 < con deviation_ma39 <-0.17 and dev_sell < -0.10 - r 11999 B"
+                        sell = "SELL 2 da 60 a 90 min TREND < con PERDITA BASE con ma50 < con deviation_ma39 <-0.17 and dev_sell < -0.11 - r 11999 B"
                         action = "sell"
                         
                         # and ma3_last < ma39_last
                         # and deviation_sell < 0.10
-                        # se non ha forza dopo 1 ora e' inutile continuare a sperare ! POI STIAMO GIA' AL SELL 2 -le ma hanno avuto piu' tempo di salire
+                        # se non ha forza dopo 1 ora e' inutile continuare a sperare ! POI STIAMO GIA' AL SELL 2 - le ma hanno avuto piu' tempo di salire
                         # qui non ho messo il crollo perche' dopo 40 min o gia' ha venduto o e' gia' risalita
                         # cuscino dell' angelo custode
-                        # > estate dev sell -0.10 da 0.10
+                        #  9 mag 2023 dev sell a -0.11 da -0.10
                         
                     
                     
@@ -16365,9 +20423,7 @@ class ro_cano_che_ritorna:
                         sell = "SELL 2 da 60 a 90 min TREND < con PERDITA BASE  con ma50 < con incrocio 3-78 and dev_sell < -0.13 - r 12018"
                         action = "sell"
                         
-                        
-                        
-                        
+                       
                         
                     ######################################################################################## trend discendente con POCA PERDITA TOLLERATA
                     
@@ -16435,10 +20491,7 @@ class ro_cano_che_ritorna:
                         # qui non ho messo il crollo perche' dopo 40 min o gia' ha venduto o e' gia' risalita
                         # cuscino dell' angelo custode
                         
-                        
-                        
-                        
-                        
+                       
                         
                     elif (
                         ma50_last < ma50_2_min_ago
@@ -16458,15 +20511,7 @@ class ro_cano_che_ritorna:
                         # qui non ho messo il crollo perche' dopo 40 min o gia' ha venduto o e' gia' risalita
                         # cuscino dell' angelo custode
                         
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                    
+                       
                     
 
                     elif (
@@ -16489,9 +20534,11 @@ class ro_cano_che_ritorna:
                     elif (
                         ma50_last < ma50_2_min_ago
                         and ma5_last < ma90_last
+                        and deviation_sell < -0.15
                         and deviation_ma100_sopra_ma300 > 0.50
                         and deviation_trend_ma200 > -0.12
                         and ma200_last > ma300_last
+                        
                         and ma2_last < ma2_2_min_ago
                     ):
                         sell = "SELL 2 da 60 a 90 min con MOLTA PERDITA TOLLERATA con ma50 < con 5<90 con 100 sopra 300 < 0.50 - r 12105 A"
@@ -16499,7 +20546,7 @@ class ro_cano_che_ritorna:
                         
                         # questa anticipa di una ndecchia la prossima
                         # 25 ottobre 2022 5-90 da 3-59
-                        
+                        # 23 feb 2023 aggiunta di deviation_sell < -0.15
                         
                         
                     elif (
@@ -16523,13 +20570,13 @@ class ro_cano_che_ritorna:
                         
                     elif (
                         ma50_last < ma50_2_min_ago
-                        and deviation_ma39 < -0.29
+                        and deviation_ma39 < -0.22
                         
                         and deviation_trend_ma200 > -0.12
                         and ma200_last > ma300_last
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 2 da 60 a 90 min con MOLTA PERDITA TOLLERATA con ma50 < con deviation_ma39 < -0.29 - r 12140"
+                        sell = "SELL 2 da 60 a 90 min con MOLTA PERDITA TOLLERATA con ma50 < con deviation_ma39 < -0.22 - r 12140"
                         action = "sell"
                         
                         # and ma3_last < ma33_last
@@ -16539,15 +20586,8 @@ class ro_cano_che_ritorna:
                         # cuscino dell' angelo custode
                         
                         # > vacanza -0.29 da -0.19
+                        # 13 set 2023 dev 39 -0.22 da -0.29
                         
-                        
-                        
-                    
-                    
-                    
-                    
-                    
-                    
                     
                     elif (
                         ma50_last < ma50_2_min_ago
@@ -16567,7 +20607,7 @@ class ro_cano_che_ritorna:
                     # AGGIUNTA TARDIVA MA FORSE NECESSARIA !
                     
                     elif (
-                        ma50_last < ma50_2_min_ago
+                        ma50_last <= ma50_2_min_ago
                         
                         and ma100_last < ma200_last
                         and ma200_last < ma300_last
@@ -16577,11 +20617,14 @@ class ro_cano_che_ritorna:
                         
                         and delta_300_100 < delta_300_100_60_min
                    
-                        and deviation_sell < -0.12
-                        and ma2_last < ma2_2_min_ago
+                        and deviation_sell < -0.118
+                        and ma2_last <= ma2_2_min_ago
                     ):
-                        sell = "SELL 2 da 60 a 90 min AGGIUNTA TARDIVA MA FORSE NECESSARIA ! delta 300-100 < and deviation_sell < -0.12 - r 12191 a"
+                        sell = "SELL 2 da 60 a 90 min AGGIUNTA TARDIVA MA FORSE NECESSARIA ! delta 300-100 < and deviation_sell < -0.12 - r 12191 A"
                         action = "sell"
+                        
+                        # 20 feb 2023 dev_sell a -0.115 da -0.12
+                        # 25 mag 2023 dev_sell a -0.118 da -0.115
                         
                         
                         
@@ -16598,18 +20641,17 @@ class ro_cano_che_ritorna:
                         
                         and delta_300_100 > delta_300_100_60_min
                    
-                        and deviation_sell < -0.10
+                        and deviation_sell < -0.123
                         and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
                     ):
-                        sell = "SELL 2 da 60 a 90 min AGGIUNTA TARDIVA MA FORSE NECESSARIA ! delta 300-100 > and deviation_sell < -0.10 - r 12212 b"
+                        sell = "SELL 2 da 60 a 90 min AGGIUNTA TARDIVA MA FORSE NECESSARIA ! delta 300-100 > and deviation_sell < -0.123 and macd < macd 2 min ago - r 12212 B"
                         action = "sell"
                         
-                        
-                        
-                    
-                        
-                    
-                
+                        # 17 mar 2023 dev sell a -0.12 da -0.10
+                        #  4 giu 2023 dev sell a -0.123 da -0.12
+                        #  4 giu 2023 aggiunto macd < macd 2 min ago
+                     
                 
                 ######################################################################################################### SESSIONE 2 ( da 90 min a 110 min )
                 
@@ -16670,15 +20712,29 @@ class ro_cano_che_ritorna:
                         
                     #########################################################################################################
                    
+                    elif (
+                        ma50_last >= ma50_2_min_ago
+                        and ma100_last > ma200_last
+                        and ma5_last < ma78_last
+                        and deviation_sell > 0.25 and deviation_sell < 0.56
+                        and ma2_last < ma2_2_min_ago
+                       
+                    ):
+                        sell = "SELL 2 90-110 min con ma50 > and 5-78 (!) and deviation_sell 0.25-0.56 - FINTA ALLA MARADONA and ma100_last > ma200_last - r 12289 A"
+                        action = "sell"
+                        
+                        # deviation_sell = ma3_last/last_trade_price
+                        
                         
                     elif (
                         ma50_last >= ma50_2_min_ago
+                        and ma100_last < ma200_last
                         and ma5_last < ma50_last
                         and deviation_sell > 0.25 and deviation_sell < 0.56
                         and ma2_last < ma2_2_min_ago
                        
                     ):
-                        sell = "SELL 2 90-110 min con ma50 > and 5-50 (!) and deviation_sell 0.25-0.56 - FINTA ALLA MARADONA (non toccare) - r 12289"
+                        sell = "SELL 2 90-110 min con ma50 > and 5-50 (!) and deviation_sell 0.25-0.56 - FINTA ALLA MARADONA and ma100_last > ma200_last - r 12289 B"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
@@ -16700,13 +20756,15 @@ class ro_cano_che_ritorna:
                     elif (
                         ma50_last > ma50_2_min_ago
                         and deviation_ma100_sopra_ma300 < 0.40
-                        and ma4_last < ma20_last
+                        and ma4_last < ma69_last
                         and deviation_sell > 0.57 and deviation_sell < 0.90
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 2 90-110 min con ma50 > con 4-20 CON 100 sopra 300 > 0.40 and deviation_sell 0.57-0.90 DRIBBLING ALLA RONALDO - r 12315 b"
+                        sell = "SELL 2 90-110 min con ma50 > con 4-69 CON 100 sopra 300 > 0.40 and deviation_sell 0.57-0.90 DRIBBLING ALLA RONALDO - r 12315 B"
                         action = "sell"
                         
+                        # 17 mar 2023 4-69 da 4-20 questa e' la base
+                        # ATTENZIONE dovrai aggiungere una nuova condizione speciale pochi maledetti e subito tra 0.80 e 1.20
                         
                     
                     elif (
@@ -16740,15 +20798,27 @@ class ro_cano_che_ritorna:
                         # ma 3-15 vendeva troppo presto. guardando il grafico da piu' lontano.
                     
                     
-                    
                     elif (
                         ma50_last > ma50_2_min_ago
+                        and ma300_last > ma300_120_min_ago
+                        and (ma3_prev > ma28_prev and ma3_last < ma28_last)
+                        and deviation_sell > 1.50 and deviation_sell < 2.70
+                        and ma2_last < ma2_2_min_ago
+                    ):
+
+                        sell = "SELL 2 90-110 min con ma50 > incrocio 3-28 con ma300 > 120_min_ago and deviation_sell 1.50 - 2.70 - r 12343a"
+                        action = "sell"
+
+                  
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and ma300_last < ma300_120_min_ago
                         and (ma3_prev > ma18_prev and ma3_last < ma18_last)
                         and deviation_sell > 1.50 and deviation_sell < 2.70
                         and ma2_last < ma2_2_min_ago
                     ):
 
-                        sell = "SELL 2 90-110 min con ma50 > incrocio 3-18 and deviation_sell 1.50 - 2.70 - r 12343"
+                        sell = "SELL 2 90-110 min con ma50 > incrocio 3-18 con ma300 < 120_min_ago and deviation_sell 1.50 - 2.70 - r 12343b"
                         action = "sell"
                         
                         
@@ -16768,15 +20838,32 @@ class ro_cano_che_ritorna:
 
                     ######################################################################################## con trend discendente
                     
-                    
                     elif (  
-                        ma50_last < ma50_2_min_ago 
+                        ma50_last < ma50_2_min_ago
+                        and delta_450_300 < delta_450_300_60_min
+                        
                         and ma2_last < ma2_2_min_ago 
                         and deviation_ma39 < -0.25
                         and deviation_trend_ma100 > 0.10
                     ):
-                        sell = "SELL 2 90-110 min con ma50 < MA ma100 > con deviation_ma39 <-0.25 - r 12370"
+                        sell = "SELL 2 90-110 min con ma50 < MA ma100 > con deviation_ma39 <-0.25 - r 12370 A"
                         action = "sell"
+                        
+                        # se 450-300 GIORNO dev_39 0.25
+                        
+                    elif (  
+                        ma50_last < ma50_2_min_ago
+                        and delta_450_300 > delta_450_300_60_min
+                        
+                        and ma2_last < ma2_2_min_ago 
+                        and deviation_ma39 < -0.24
+                        and deviation_trend_ma100 > 0.10
+                    ):
+                        sell = "SELL 2 90-110 min con ma50 < MA ma100 > con deviation_ma39 <-0.24 - r 12370 B"
+                        action = "sell"
+                        
+                        # se 450-300 NOTTE dev_39 0.24
+                        
                         
               
                     
@@ -16807,18 +20894,33 @@ class ro_cano_che_ritorna:
                         
                         
                 
-                 
                     elif (    
-                        ma50_last < ma50_2_min_ago 
+                        ma50_last < ma50_2_min_ago
+                        and ma300_last > ma300_120_min_ago
                         and ma2_last < ma2_2_min_ago 
-                        and deviation_sell < -0.20
+                        and deviation_sell < -0.24
                         and ma3_last < ma39_last
                         and deviation_trend_ma100 < 0.10
                     ):
-                        sell = "SELL 2 90-110 min con ma50 < MA ma100 < and (deviation_sell < -0.20 and ma3_last < ma39_last) - r 12408"
+                        sell = "SELL 2 90-110 min con ma50 < MA ma100 < and (deviation_sell < -0.24 and ma3_last < ma39_last) - r 12408a"
                         action = "sell"
                         
-                    
+                        # 14 feb 2023 -0.24 da -0.20
+
+                  
+                    elif (    
+                        ma50_last < ma50_2_min_ago
+                        and ma300_last < ma300_120_min_ago
+                        and ma2_last < ma2_2_min_ago 
+                        and deviation_sell < -0.22
+                        and ma3_last < ma39_last
+                        and deviation_trend_ma100 < 0.10
+                    ):
+                        sell = "SELL 2 90-110 min con ma50 < MA ma100 < and (deviation_sell < -0.24 and ma3_last < ma39_last) - r 12408b"
+                        action = "sell"
+                        
+                        # 14 feb 2023 -0.24 da -0.20
+                        #  1 ago 2023 dev sell -0.22 da -0.24 con 300 < 300 120 min ago
                     
                     
                     ########################################################################################## AUMENTA PERDITA TOLLERATA e divido in 2 il compa
@@ -16885,9 +20987,7 @@ class ro_cano_che_ritorna:
                         
                         # POTREBBE ESSERE SITUAZIONE DI CROLLO SOLO CON 39 E SENZA DEVIATION SELL
                         
-                        
-                        
-                   
+                    
                 
                     elif (      
                         ma50_last > ma50_2_min_ago 
@@ -16953,16 +21053,17 @@ class ro_cano_che_ritorna:
                         and ma5_last < ma100_last
                         and ma300_last < ma300_180_min_ago
                         and deviation_sell > 0.25 and deviation_sell < 0.56
+                        
                         and ma2_last < ma2_2_min_ago
-                       
+                        and macd < macd_2_min_ago
                     ):
                         sell = "SELL 2 dopo 110 min ma300 > 300 180 min ago e con ma50 > and 5-100 (!) and dev_sell 0.25-0.56 - FINTA ALLA MARADONA - r 12530 B"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
-                        # 9 GIU 2022 5-59 da 5-50
+                        #  9 GIU 2022 5-59 da 5-50
                         # > estate 5-100 da 5-59
-                        
+                        # 30 ago 2023 macd < macd 2 min ago
                         
                     
                     
@@ -17013,34 +21114,48 @@ class ro_cano_che_ritorna:
                         # 18 set 4-42 da 3-15
                         # 26 ott 4-78 da 4-42
                         
-                        
-                    
-                    
+                     
                     
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and (ma3_prev > ma78_prev and ma3_last < ma78_last)
+                        and (ma3_prev > ma125_prev and ma3_last < ma125_last)
                         and deviation_sell > 1.50 and deviation_sell < 2.70
                         and ma2_last < ma2_2_min_ago
                     ):
 
-                        sell = "SELL 2 dopo 110 min con ma50 > incrocio 3-78 and deviation_sell 1.50 - 2.70 - r 12572"
+                        sell = "SELL 2 dopo 110 min con ma50 > incrocio 3-125 and deviation_sell 1.50 - 2.70 - r 12572"
                         action = "sell"
                         
                         # > estate 3-78 da 3-13
+                        # 17 gen 2023 3-125 da 3-78
                         
                         
                         
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and (ma3_prev > ma11_prev and ma3_last < ma11_last)
+                        and ma300_last > ma450_last
+                        and (ma3_prev > ma20_prev and ma3_last < ma20_last)
                         and deviation_sell > 2.71
                         and ma2_last < ma2_2_min_ago
                     ):
 
-                        sell = "SELL 2 dopo 110 min con ma50 > incrocio 3-11 (!) and deviation_sell > 2.71 - r 12584"
+                        sell = "SELL 2 dopo 110 min con ma50 > incrocio 3-20 con 300>450 and deviation_sell > 2.71 - r 12584 A"
                         action = "sell"
                         
+                        # 16 mar 2023 3-20 da 3-11 con 300>450
+                        
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and ma300_last < ma450_last
+                        and (ma3_prev > ma13_prev and ma3_last < ma13_last)
+                        and deviation_sell > 2.71
+                        and ma2_last < ma2_2_min_ago
+                    ):
+
+                        sell = "SELL 2 dopo 110 min con ma50 > incrocio 3-13 (!) con 300<450 and deviation_sell > 2.71 - r 12584 B"
+                        action = "sell"
+                        
+                        # 16 mar 2023 3-13 da 3-11 con 300<450
                         
 
                     ######################################################################################## con trend discendente
@@ -17049,12 +21164,13 @@ class ro_cano_che_ritorna:
                     elif (  
                         ma50_last < ma50_2_min_ago 
                         and ma2_last < ma2_2_min_ago 
-                        and deviation_ma39 < -0.25
+                        and deviation_ma39 < -0.245
                         and deviation_trend_ma100 > 0.10
                     ):
-                        sell = "SELL 2 dopo 110 min con ma50 < MA ma100 > con deviation_ma39 <-0.25 - r 12598"
+                        sell = "SELL 2 dopo 110 min con ma50 < MA ma100 > con deviation_ma39 <-0.245 - r 12598"
                         action = "sell"
                         
+                        # 12 apr 2023 dev_ma39 < -0.245 da -0.25
               
                     
                 
@@ -17070,29 +21186,57 @@ class ro_cano_che_ritorna:
                         
                   
                         
-                    
                     elif (  
-                        ma50_last < ma50_2_min_ago 
+                        ma50_last < ma50_2_min_ago
+                        and ma150_last > ma300_last
                         and ma2_last < ma2_2_min_ago 
                         and deviation_ma39 < -0.22
                         and deviation_trend_ma100 < 0.10
                     ):
-                        sell = "SELL 2 dopo 110 min con ma50 < MA ma100 < con deviation_ma39 <-0.22 - r 12623"
+                        sell = "SELL 2 dopo 110 min con ma50 < MA ma100 < con deviation_ma39 <-0.22 and 150 > 300 - r 12623 A"
                         action = "sell"
+                        
+                        
+                    elif (  
+                        ma50_last < ma50_2_min_ago
+                        and ma150_last < ma300_last
+                        and ma2_last < ma2_2_min_ago 
+                        and deviation_ma39 < -0.215
+                        and deviation_trend_ma100 < 0.10
+                    ):
+                        sell = "SELL 2 dopo 110 min con ma50 < MA ma100 < con deviation_ma39 <-0.215 and 150 < 300 - r 12623 B"
+                        action = "sell"
+                        
+                        # 25 gen 2023 dev_39 0.215 da 0.22
                         
                         
                 
-                 
                     elif (    
                         ma50_last < ma50_2_min_ago 
-                        and ma2_last < ma2_2_min_ago 
-                        and deviation_sell < -0.18 
+                        and ma2_last < ma2_2_min_ago
+                        and ma450_last > ma450_720_min_ago
+                        and deviation_sell < -0.235
                         and ma3_last < ma39_last
                         and deviation_trend_ma100 < 0.10
                     ):
-                        sell = "SELL 2 dopo 110 min con ma50 < MA ma100 < and (deviation_sell < -0.18 and ma3_last < ma39_last) - r 12636"
+                        sell = "SELL 2 dopo 110 min con ma50 < MA ma100 < and (deviation_sell < -0.235 and ma3_last < ma39_last) CON 450> - r 12636 A"
                         action = "sell"
                         
+                        # 17 gen 2023 da -0.235 da -0.18
+                        
+                        
+                    elif (    
+                        ma50_last < ma50_2_min_ago 
+                        and ma2_last < ma2_2_min_ago
+                        and ma450_last < ma450_720_min_ago
+                        and deviation_sell < -0.23
+                        and ma3_last < ma39_last
+                        and deviation_trend_ma100 < 0.10
+                    ):
+                        sell = "SELL 2 dopo 110 min con ma50 < MA ma100 < and (deviation_sell < -0.23 and ma3_last < ma39_last) CON 450< - r 12636 B"
+                        action = "sell"
+                        
+                        # 17 gen 2023 da -0.23 da -0.18
                     
                     
                     
@@ -17126,21 +21270,221 @@ class ro_cano_che_ritorna:
                         
                         
                         
-                 
+
+
+                  
                     # ATTENZIONE : DOPO 110 MIN forse E' NECESSARIA SOLO QUESTA !
                     
                     elif (    
                         ma3_last < ma100_last
-                        and deviation_sell < -0.15
+                        and deviation_sell < -0.19
+                        
+                        and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago > 1.50
+                        and deviation_ma78_sopra_o_sotto_ma78_240_min_ago > 0.10
+                        
+                        and ma300_last > ma300_301_min_ago
+                        
                         and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
                     ):
                    
-                        sell = "SELL 2 > 110 min forse E' NECESSARA SOLO QUESTA ! - r 12681"
+                        sell = "SELL 2 > 110 min con dev sell -0.19 forse E' NECESSARA SOLO QUESTA ! and 300> 300 5 ore fa and macd < macd 2 min ago - r 12681 A1 prova 1"
+                        action = "sell"
+                      
+
+                    elif (    
+                        ma3_last < ma100_last
+                        and deviation_sell < -0.01
+                        
+                        and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago > 1.50
+                        and deviation_ma78_sopra_o_sotto_ma78_240_min_ago < 0.10
+                        
+                        and ma300_last > ma300_301_min_ago
+                        
+                        and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
+                    ):
+                   
+                        sell = "SELL 2 > 110 min con dev sell -0.19 forse E' NECESSARA SOLO QUESTA ! and 300> 300 5 ore fa and macd < macd 2 min ago - r 12681 A1 prova 2"
+                        action = "sell"
+                      
+
+                    elif (    
+                        ma3_last < ma100_last
+                        and deviation_sell < -0.10
+                        
+                        and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago < 1.50
+                        and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago > -1.50
+                        
+                        and deviation_ma78_sopra_o_sotto_ma78_240_min_ago > 0.10
+                        
+                        and ma300_last > ma300_301_min_ago
+                        
+                        and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
+                    ):
+                   
+                        sell = "SELL 2 > 110 min con dev sell -0.19 forse E' NECESSARA SOLO QUESTA ! and 300> 300 5 ore fa and macd < macd 2 min ago - r 12681 A1 prova 3"
+                        action = "sell"
+                      
+
+                    elif (    
+                        ma3_last < ma100_last
+                        and deviation_sell < 0.01
+                        
+                        and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago < 1.50
+                        and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago > -1.50
+                        
+                        and deviation_ma78_sopra_o_sotto_ma78_240_min_ago < 0.10
+                        
+                        and ma300_last > ma300_301_min_ago
+                        
+                        and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
+                    ):
+                   
+                        sell = "SELL 2 > 110 min con dev sell < 0.01 forse E' NECESSARA SOLO QUESTA ! and 300> 300 5 ore fa and macd < macd 2 min ago - r 12681 A1 prova 4"
+                        action = "sell"
+                        
+                        # 16 set 2023 and dev_sell a 0.01 da -0.01
+                      
+
+                    elif (    
+                        ma3_last < ma100_last
+                        and deviation_sell < -0.10
+                        
+                        and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago < -1.50
+                        and deviation_ma78_sopra_o_sotto_ma78_240_min_ago > 0.10
+                        
+                        and ma300_last > ma300_301_min_ago
+                        
+                        and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
+                    ):
+                   
+                        sell = "SELL 2 > 110 min con dev sell -0.19 forse E' NECESSARA SOLO QUESTA ! and 300> 300 5 ore fa and macd < macd 2 min ago - r 12681 A1 prova 5"
+                        action = "sell"
+
+                    
+                    elif (    
+                        ma3_last < ma100_last
+                        and deviation_sell < -0.01
+                        
+                        and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago < -1.50
+                        and deviation_ma78_sopra_o_sotto_ma78_240_min_ago < 0.10
+                        
+                        and ma300_last > ma300_301_min_ago
+                        
+                        and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
+                    ):
+                   
+                        sell = "SELL 2 > 110 min con dev sell -0.19 forse E' NECESSARA SOLO QUESTA ! and 300> 300 5 ore fa and macd < macd 2 min ago - r 12681 A1 prova 6"
+                        action = "sell"
+                        
+                        
+
+                  
+                    elif (    
+                        ma3_last < ma100_last
+                        
+                        and ma300_last > ma300_301_min_ago
+                        and deviation_sell < -0.19
+                        and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
+                    ):
+                   
+                        sell = "SELL 2 > 110 min con dev sell -0.19 forse E' NECESSARA SOLO QUESTA ! and 300> 300 5 ore fa and macd < macd 2 min ago - r 12681 A1"
                         action = "sell"
                         
                         # > estate -0.15 da +0.02
+                        # 10 dic 2022 -0.17 da -0.15
+                        # 26 feb 2023 -0.19 da -0.17
+
+
+                  
+
+
+
+                  
+                        
+                        
+                    elif (    
+                        ma3_last < ma100_last
+                        and ma3_last < ma450_last
+                        and ma300_last > ma300_301_min_ago
+                        and deviation_sell < -0.165
+                        
+                        and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
+                    ):
+                   
+                        sell = "SELL 2 > 110 min con dev sell -0.165 and 3 < 450 and 300 > 300 5 ore fa and macd < macd 2 min ago - r 12681 A2"
+                        action = "sell"
+                        
+                        # > estate -0.15 da +0.02
+                        # 10 dic 2022 -0.17 da -0.15
+                        # 11 ago 2023 -0.165 da -0.17
+                  
+                  
+                    elif (    
+                        ma3_last < ma100_last
+                        and ma300_last < ma300_301_min_ago
+                        and deviation_sell < -0.168
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                   
+                        sell = "SELL 2 > 110 min forse E' NECESSARA SOLO QUESTA ! and 300> 300 5 ore fa - r 12681 B"
+                        action = "sell"
+                        
+                        # > estate -0.15 da +0.02
+                        # 10 dic 2022 -0.16 da -0.15
+                        # 25 gen 2023 -0.168 da -0.16
+                    
+                    
+
+                    elif (    
+                        ma3_last < ma78_last
+                        and deviation_sell > 0.50
+                        
+                        and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
+                        and macd < -6
+                    ):
+                   
+                        sell = "SELL 2 > 110 min con 3-78 forse E' NECESSARA SOLO QUESTA ! vedi 25 luglio 2023 ore 16:28 NON AVEVA VENDUTO NULLA ! - r 12682"
+                        action = "sell"
+                        
+                        # 16 ago 2023 3-78 da 3-39
+
+                    ################################################################################## importate condizioni speciali
+                  
+                    elif (
+                        deviation_ma39 < -0.01
+                        and deviation_sell < -0.013
+                        and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago > 1.50
+                        and deviation_ma10_sopra_o_sotto_ma10_30_min_ago < 0.10
+                        
+                        and delta_450_300 < delta_450_300_60_min
+                        and ma50_last < ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 > 0.20
+                
+                        and deviation_ma3_sotto_ma150 > -1.20
+                        
+                        and ma2_last <= ma2_2_min_ago 
+                        and macd < macd_2_min_ago
+                    ):
+                        sell = "SELL 2 > 110 min ex cond. spec r 15985 A1 ok 2 - SALVAGENTE con 3-39 < -0.01 e dev sell < -0.013 and dev_sell< -0.308 con ma50 < - r 12683"
+                        action = "sell"
+                
+                        #  2 ott 2023 dev sell -0.013 da -0.02
+
+                  
                     
                         
+
+                  
+                    
                     
                     
             ################################################################################################### SESSIONE 3
@@ -17486,8 +21830,7 @@ class ro_cano_che_ritorna:
                         
                         # deviation_sell = ma3_last/last_trade_price
                         
-                        
-                        
+                       
                         
                     elif (
                         ma50_last >= ma50_2_min_ago
@@ -17597,8 +21940,7 @@ class ro_cano_che_ritorna:
                         sell = "SELL 3 guadagno con crollo (5-12 min) con ma50 < and incrocio 3-23 - r 13138"
                         action = "sell"
                         
-                        
-
+                    
                     # ------------------------------------------------------------------------------------------------------------ PARACADUTE crollo
                     
                     elif (
@@ -17607,10 +21949,35 @@ class ro_cano_che_ritorna:
                         and deviation_sell < -0.48
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 3 PARACADUTE CROLLO (0-3 min) con ma50 < and ma3<ma16 (no incrocio) and deviation_sell < -0.48 - r 13151"
+                        sell = "SELL 3 PARACADUTE CROLLO (5-12 min) con ma50 < and ma3<ma16 (no incrocio) and deviation_sell < -0.48 - r 13151"
                         action = "sell"
 
                         # AGGIUNTA PER SICUREZZA SE CONTINUA A PRECIPITARE
+
+                    ######################################################################################################## EX CONDIZIONI SPECIALI importate !
+                    
+                    elif (
+                        ma78_last < ma78_120_min_ago
+                        and ma300_last < ma300_301_min_ago
+                        and delta_150_100 <= delta_150_100_60_min
+                
+                        and deviation_ma39 < 0.05
+                        and deviation_sell < -0.10
+                
+                
+                        and ma50_last <= ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 < 0.40
+                
+                        and deviation_ma5_sotto_ma200 > -0.90
+                
+                        and ma2_last <= ma2_2_min_ago 
+                        and macd < macd_2_min_ago
+                    ):
+                        sell = "SELL 3 5-12 min EX cond speciale 6 GIORNO con ma300> 5 ore - dev 3-39 < 0.05 and dev_sell < -0.10 - con ma50 < e con ma5 sotto ma200 > -0.90 - r 13153"
+                        action = "sell"
+
+                  
+                    
                         
                         
                         
@@ -17671,10 +22038,7 @@ class ro_cano_che_ritorna:
                         # deviation_sell = ma3_last/last_trade_price
                         
                         
-                        
-                        
-                    
-                    
+                       
                     
                     elif (
                         ma50_last >= ma50_2_min_ago
@@ -17688,10 +22052,6 @@ class ro_cano_che_ritorna:
                         
                         # deviation_sell = ma3_last/last_trade_price
                         
-                    
-                    
-                    
-                    
                     
                     
                     
@@ -17733,7 +22093,7 @@ class ro_cano_che_ritorna:
                     elif (
                         ma50_last < ma50_2_min_ago
                         and deviation_ma39 < -0.165
-                        and deviation_sell < -0.33
+                        and deviation_sell < -0.337
                         
                         and deviation_ma100_sopra_ma200 < 0.25
                         and deviation_ma100_sopra_ma200 > -0.70
@@ -17741,7 +22101,7 @@ class ro_cano_che_ritorna:
                         and ma2_last < ma2_2_min_ago
                      
                     ):
-                        sell = "SELL 3 (12-21 min) con ma50 < and deviation_ma39 < -0.165 100 spra 200 > -0.70 - r 13282 a"
+                        sell = "SELL 3 (12-21 min) con ma50 < and deviation_ma39 < -0.165 100 sopra 200 > -0.70 - r 13282 a"
                         action = "sell"
                         
                         # and (ma3_prev > ma33_prev and ma3_last < ma33_last)
@@ -17750,7 +22110,7 @@ class ro_cano_che_ritorna:
                         # QUINDI ho abbassato da 0.17 a 0.16 a 0.15
                         # HO NOTATO CHE ANCHE INCROCIO 5-100 SAREBBE ARRIVATO TARDI
                         # ALLORA METTO incrocio 3-78 e deviation < 0.10
-                        
+                        # 16 mar 2023 dev sell a -0.337 da -0.33
                         
                         
                         
@@ -17773,13 +22133,7 @@ class ro_cano_che_ritorna:
                         # HO NOTATO CHE ANCHE INCROCIO 5-100 SAREBBE ARRIVATO TARDI
                         # ALLORA METTO incrocio 3-78 e deviation < 0.10
                         
-                        
-                        
-                        
-                        
-                        
-                        
-                        
+                       
                         
 
                     elif (
@@ -17899,9 +22253,7 @@ class ro_cano_che_ritorna:
                         sell = "SELL 3 eventuale guadagno con crollo (12-21 min) con ma50 < and incrocio 3 - 18 and deviation_sell > 0.23 - r 13437"
                         action = "sell"
                         
-                        
-                        
-                        
+                
 
                 ################################################################################################################## sessione 3-4-x ( 21-60 min )
 
@@ -17942,13 +22294,7 @@ class ro_cano_che_ritorna:
                         # in basso con deviation sell 
                         
                     
-                    
-                    
-                    
-                    
-                    
-                    
-                    
+                 
                     
                     elif (      
                         ma50_last > ma50_2_min_ago 
@@ -18025,24 +22371,46 @@ class ro_cano_che_ritorna:
                         # 5-50 da 5-39 dopo le dolomiti
                         
                         
+                        
                     elif (
                         ma50_last >= ma50_2_min_ago
                         and deviation_ma100_sopra_ma300 < 0.70
-                        and deviation_sell > -0.20 and deviation_sell < 0.56
-                        and (ma5_prev > ma59_prev and ma5_last < ma59_last)
+                        and deviation_sell < -0.135
+                        and (ma4_prev > ma100_prev and ma4_last < ma100_last)
                         and ma39_last > ma100_last
                         
                         and ma2_last < ma2_2_min_ago
                    
                     ):
-                        sell = "SELL 3 (21-60 min) con ma50> and 39>100 and incr 5-59 and dev_sell -0.20 - 0.56 FINTA MARADONA se 100 NON molto sopra 300 - r 13556 B"
+                        sell = "SELL 3 (21-60 min) con ma50> and 39>100 and incr 4-100 and dev_sell < -0.135 FINTA MARADONA se 100 NON molto sopra 300 - r 13556 B1"
+                        action = "sell"
+                        
+                        # deviation_sell = ma3_last/last_trade_price
+                        # > estate 5-78 da 5-33
+                        # importantissimo ! VEDI 14 NOV 2022 -1.78% a 32 min dal BUY 3 ! - cazzo !
+                        # 23 feb 2023 dev sell -0.135 da -0.12
+                        
+                    elif (
+                        ma50_last >= ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 < 0.70
+                        and deviation_sell > 0.15 and deviation_sell < 0.56
+                        and (ma5_prev > ma78_prev and ma5_last < ma78_last)
+                        and ma39_last > ma100_last
+                        
+                        and ma2_last < ma2_2_min_ago
+                   
+                    ):
+                        sell = "SELL 3 (21-60 min) con ma50> and 39>100 and incr 5-78 and dev_sell 0.15 - 0.56 FINTA MARADONA se 100 NON molto sopra 300 - r 13556 B2"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
                         # > estate 5-78 da 5-33
                         # importantissimo ! VEDI 14 NOV 2022 -1.78% a 32 min dal BUY 3 ! - cazzo !
                         
-                        
+                    
+                    
+                    
+                    
                     elif (
                         ma50_last >= ma50_2_min_ago
                         and deviation_sell > 0.25 and deviation_sell < 0.56
@@ -18057,10 +22425,6 @@ class ro_cano_che_ritorna:
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
-                        
-                        
-                        
-                        
                         
                         
                         
@@ -18140,8 +22504,9 @@ class ro_cano_che_ritorna:
                         and (ma3_prev > ma30_prev and ma3_last < ma30_last)
                         and deviation_sell > 1.21 and deviation_sell < 2.70
                         and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
                     ):
-                        sell = "SELL 3 (21-60 min) con ma50 > and incrocio 3-30 and dev_sell 1.21 -2.70 - ma100 e' ancora sotto ma300 e vende un po' prima - r 13623 a"
+                        sell = "SELL 3 (21-60 min) con ma50 > e incr 3-30 e dev_sell 1.21 -2.70 - ma100 e' ancora < ma300 e vende un po' prima and macd - r 13623 A"
                         action = "sell"
                         
                         # vende un po' prima perche' e' ancora un po' preoccupato perche' ma100 sta sotto ma300
@@ -18156,10 +22521,6 @@ class ro_cano_che_ritorna:
                     ):
                         sell = "SELL 3 (21-60 min) con ma50 > and incrocio 3-52 and dev_sell 1.21 -2.70 - ma100 e' andata sopra ma300 e si distende - r 13623b"
                         action = "sell"
-                        
-                        
-                        
-                        
                         
                         
                         
@@ -18193,23 +22554,46 @@ class ro_cano_che_ritorna:
                         
                     
                     
-                    
                     elif (     
                         ma50_last < ma50_2_min_ago
+                        and ma300_last > ma300_301_min_ago
                         
-                        and ma2_last < ma2_2_min_ago 
-                        and deviation_ma39 < -0.23
+                        and deviation_sell < -0.15
+                        and deviation_ma39 < -0.15
                         
                         and deviation_ma100_sopra_ma300 < 0.50
-                        and deviation_sell < -0.28
+                        
+                        and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
                     ):
-                        sell = "SELL 3 (21-60 min) con ma50 < and deviation_ma39 < -0.23 and deviation_sell < -0.28 con 50 sopra 300 < 0.50 - r 13685"
+                        sell = "SELL 3 (21-60 min) con ma50 < and dev_ma39 < -0.15 and dev_sell < -0.15 con 50 sopra 300 < 0.50 and macd < macd_2_min_ago - r 13685 a"
+                        action = "sell"
+                        
+                        # attenzione se ma100 sta molto sopra ma 300 basta deviation ma39
+                        # ma se trend laterale metto anche una deviation sell
+                        # dev sell 0.28 da 0.25 dopo dolomiti
+                        # 27 set 2023 dev sell a -0.15 da -0.28
+                  
+                    elif (     
+                        ma50_last < ma50_2_min_ago
+                        and ma300_last < ma300_301_min_ago
+                        
+                        and deviation_sell < -0.10
+                        and deviation_ma39 < -0.10
+                        
+                        and deviation_ma100_sopra_ma300 < 0.50
+                        
+                        and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
+                    ):
+                        sell = "SELL 3 (21-60 min) con ma50 < and dev_ma39 < -0.10 and dev_sell < -0.10 con 50 sopra 300 < 0.50 and macd < macd_2_min_ago - r 13685 b"
                         action = "sell"
                         
                         # attenzione se ma100 sta molto sopra ma 300 basta deviation ma39
                         # ma se trend laterale metto anche una deviation sell
                         # dev sell 0.28 da 0.25 dopo dolomiti
                         
+                        # 27 set 2023 dev sell a -0.10 da -0.28
                     
                     elif (    
                         ma50_last < ma50_2_min_ago
@@ -18255,14 +22639,25 @@ class ro_cano_che_ritorna:
                         
                     
                     
-                    
                     elif (    
                         ma50_last < ma50_2_min_ago
+                        and ma450_last > ma450_480_min_ago
                         and ma300_last < ma300_120_min_ago
                         and ma2_last < ma2_2_min_ago 
                         and deviation_sell < -0.28
                     ):
-                        sell = "SELL 3 (21-60 min) con ma50 < and ma300< and deviation_sell < -0.28 - r 13725"
+                        sell = "SELL 3 (21-60 min) con ma50 < and ma300< and deviation_sell < -0.28 - r 13725 x"
+                        action = "sell"
+                        
+                        
+                    elif (    
+                        ma50_last < ma50_2_min_ago
+                        and ma450_last < ma450_480_min_ago
+                        and ma300_last < ma300_120_min_ago
+                        and ma2_last < ma2_2_min_ago 
+                        and deviation_sell < -0.22
+                    ):
+                        sell = "SELL 3 (21-60 min) con ma50 < and ma300< and deviation_sell < -0.22 - r 13725 y"
                         action = "sell"
                         
                      
@@ -18283,17 +22678,17 @@ class ro_cano_che_ritorna:
                         ma50_last < ma50_2_min_ago
                         and (ma5_prev > ma100_prev and ma5_last < ma100_last)
                         and deviation_ma5_sotto_ma300 > 0.50
-                        
+                        and deviation_sell < -0.17
                         and ma2_last < ma2_2_min_ago
                        
                     ):
-                        sell = "SELL 3 (21-60 min) con ma50 < and 5 molto sopra 300 and INCROCIO 3-100 (no 3<100) CUSCINO DI SANT' ANTONIO - r 13750 a"
+                        sell = "SELL 3 (21-60 min) con ma50 < and 5 molto sopra 300 and INCROCIO 5-100 (no 3<100) CUSCINO DI SANT' ANTONIO - r 13750 A"
                         action = "sell"
                         
                         # viva sant' antonio !
                         # NON INCROCERANNO MAI DURANTE IL CROLLO !
                         # non toccare ! INCROCIO 3-100 CUSCINO DI SANT' ANTONIO !
-                        
+                        # 23 feb 2023 aggiunto dev_sell < -0.17
                         
                         
                         
@@ -18465,15 +22860,29 @@ class ro_cano_che_ritorna:
                       
                         ############################################################################################################
                        
-                     
                     elif (
                         ma50_last >= ma50_2_min_ago
+                        and ma100_last > ma150_last
+                        and (ma5_prev > ma100_prev and ma5_last < ma100_last)
+                        and deviation_sell > 0.25 and deviation_sell < 0.56
+                        and ma2_last < ma2_2_min_ago
+                       
+                    ):
+                        sell = "SELL 3 (60-90 min) con ma50 > and incrocio 5-100 and deviation_sell 0.25 - 0.56 FINTA DI MARADONA - r 13901a"
+                        action = "sell"
+                        
+                        # deviation_sell = ma3_last/last_trade_price
+
+                  
+                    elif (
+                        ma50_last >= ma50_2_min_ago
+                        and ma100_last < ma150_last
                         and (ma5_prev > ma50_prev and ma5_last < ma50_last)
                         and deviation_sell > 0.25 and deviation_sell < 0.56
                         and ma2_last < ma2_2_min_ago
                        
                     ):
-                        sell = "SELL 3 (21-60 min) con ma50 > and incrocio 5-50 and deviation_sell 0.25 - 0.56 FINTA DI MARADONA - r 13901"
+                        sell = "SELL 3 (60-90 min) con ma50 > and incrocio 5-50 and deviation_sell 0.25 - 0.56 FINTA DI MARADONA - r 13901b"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
@@ -18487,22 +22896,36 @@ class ro_cano_che_ritorna:
                         and deviation_sell > 0.57 and deviation_sell < 0.90
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 3 >60 min con ma50> and 4-78 and deviation_sell 0.57-0.90 DRIBBLING ALLA RONALDO - r 13915"
+                        sell = "SELL 3 60-90 min con ma50> and 4-78 and deviation_sell 0.57-0.90 DRIBBLING ALLA RONALDO - r 13915"
                         action = "sell"
                         
                         # > estate 4-78 da 4-18
                         
                         
                         
-
                     elif (
                         ma50_last > ma50_2_min_ago
+                        and ma300_last > ma300_301_min_ago
+                        and (ma3_prev > ma59_prev and ma3_last < ma59_last)
+                        and deviation_sell > 0.91 and deviation_sell < 1.49
+                        and ma2_last < ma2_2_min_ago
+                    ):
+
+                        sell = "SELL 3 da 60 a 90 min con ma50 > AND 300> 5 ORE ago and incrocio 3-59 and deviation_sell 0.91 - 1.49 - r 13928 A"
+                        action = "sell"
+
+                        # ma ricordati che in diverse occasioni 3-48 mi ha evitato la ricompra e la rivendita conseguente con perdita !
+                        
+                        
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and ma300_last < ma300_301_min_ago
                         and (ma3_prev > ma30_prev and ma3_last < ma30_last)
                         and deviation_sell > 0.91 and deviation_sell < 1.49
                         and ma2_last < ma2_2_min_ago
                     ):
 
-                        sell = "SELL 3 da 60 a 90 min con ma50 > and incrocio 3-30 and deviation_sell 0.91 - 1.49 - r 13928"
+                        sell = "SELL 3 da 60 a 90 min con ma50 > AND 300< 5 ORE ago and incrocio 3-30 and deviation_sell 0.91 - 1.49 - r 13928 B"
                         action = "sell"
 
                         # ma ricordati che in diverse occasioni 3-48 mi ha evitato la ricompra e la rivendita conseguente con perdita !
@@ -18590,21 +23013,22 @@ class ro_cano_che_ritorna:
                     elif (
                         ma50_last < ma50_2_min_ago
                         and delta_1_200_78 < delta_2_200_78_60_min
-                        and deviation_ma39 < -0.175
+                        and deviation_ma39 < -0.10
                         and ma2_last < ma2_2_min_ago
                         
                         and deviation_ma100_sopra_ma300 < 0.69
                         and deviation_sell < -0.20
                        
                     ):
-                        sell = "SELL 3 da 60 a 90 min con ma50 < con deviation_ma39 < -0.17 and deviation_sell < -0.20 TREND LATERALE (100>300 MA <0.69) - r 14021 A"
+                        sell = "SELL 3 da 60 a 90 min con ma50 < con deviation_ma39 < -0.10 and deviation_sell < -0.20 TREND LATERALE (100>300 MA <0.69) - r 14021 A"
                         action = "sell"
                         
                         # 27 giu 2022 deviation_sell < -0.16 da 0.15
                         # 11 ott 2022 deviation_sell < -0.17 da 0.16
                         # 11 ott 2022 deviation_ma39 < -0.175 da 0.17
                         # 18 nov 2022 dev sell -0.20 con aggiunta doppio delta
-                        
+                        # 16 ago 2023 deviation_ma39 < -0.10 da 0.17
+                  
                         
                     elif (
                         ma50_last < ma50_2_min_ago
@@ -18643,13 +23067,27 @@ class ro_cano_che_ritorna:
                     
                     elif (
                         deviation_trend_ma200 > -0.10
+                        and ma300_last > ma450_last
                         and ma200_last > ma300_last
                         and ma50_last < ma50_2_min_ago
-                        and deviation_ma39 < -0.20
+                        and deviation_ma39 < -0.23
                         and ma2_last < ma2_2_min_ago
                        
                     ):
-                        sell = "SELL 3 da 60 a 90 min con ma50 < con deviation_ma39 <-0.20 and deviation_sell < 0.10 con > perdita tollerata - r 14052"
+                        sell = "SELL 3 da 60 a 90 min con ma50 < AND 300>450 e con deviation_ma39 <-0.23 and dev_sell < 0.10 con > perdita tollerata - r 14052 A"
+                        action = "sell"
+                        
+                        
+                    elif (
+                        deviation_trend_ma200 > -0.10
+                        and ma300_last < ma450_last
+                        and ma200_last > ma300_last
+                        and ma50_last < ma50_2_min_ago
+                        and deviation_ma39 < -0.22
+                        and ma2_last < ma2_2_min_ago
+                       
+                    ):
+                        sell = "SELL 3 da 60 a 90 min con ma50 < AND 300>450 e con deviation_ma39 <-0.22 and dev_sell < 0.10 con > perdita tollerata - r 14052 B"
                         action = "sell"
                         
                         # and ma3_last < ma33_last
@@ -18659,8 +23097,6 @@ class ro_cano_che_ritorna:
                         # cuscino dell' angelo custode
                         
                         
-                    
-
                     elif (
                         deviation_trend_ma200 > -0.10
                         and ma200_last > ma300_last
@@ -18671,6 +23107,35 @@ class ro_cano_che_ritorna:
                     ):
                         sell = "SELL 3 da 60 a 90 min con ma50 < con incrocio 3-78 and deviation_sell < -0.10 con > perdita tollerata - r 14072"
                         action = "sell"
+
+                  
+                    ################################################################################## ex condizioni speciali
+                  
+                    elif (
+                        ma78_last < ma78_120_min_ago
+                        and ma300_last < ma300_301_min_ago
+                        and delta_150_100 <= delta_150_100_60_min
+                
+                        and deviation_ma39 < 0.05
+                        and deviation_sell < -0.102
+                
+                
+                        and ma50_last <= ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 < 0.40
+                
+                        and deviation_ma5_sotto_ma200 > -0.90
+                
+                        and ma2_last <= ma2_2_min_ago 
+                        and macd < macd_2_min_ago
+                    ):
+                        sell = "SELL EX condizione speciale 6 GIORNO con ma300> 5 ore - dev 3-39 < 0.05 and dev_sell < -0.102 - con ma50 < e con ma5 sotto ma200 > -0.90 - r 14073"
+                        action = "sell"
+                
+                        # 15 set 2023 quando 300 scende da 5 ore non devi vendere in perdita ! a ricomprare ci penseranno altre condizioni !
+                        # 15 set 2023 quando GIORNO a -0.11 da -0.07
+                        # 15 set 2023 quando GIORNO a -0.102 da -0.11
+                  
+                    
                         
                         
                  
@@ -18695,7 +23160,17 @@ class ro_cano_che_ritorna:
                     
                     
                     
-                    
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and (ma3_prev > ma13_prev and ma3_last < ma13_last)
+                        and deviation_sell > 2.71
+                        and ma2_last < ma2_2_min_ago
+                    ):
+
+                        sell = "SELL 3 dopo 90 min (dopo 110 min RCCR) con ma50 > incrocio 3-13 (!) and deviation_sell > 2.71 - r 14094"
+                        action = "sell"
+                        
+                        
                     elif (     
                         ma50_last > ma50_2_min_ago 
                         and ma2_last < ma2_2_min_ago 
@@ -18731,8 +23206,7 @@ class ro_cano_che_ritorna:
                         action = "sell"
                         
                        
-                        
-                        
+                     
                         
                     ############################################################################################################################### 
                     
@@ -18744,7 +23218,7 @@ class ro_cano_che_ritorna:
                         and deviation_ma100_sopra_ma200 > 0.20
                        
                     ):
-                        sell = "SELL 3 (12-21 min) con ma50 > and 5-78 and deviation_sell 0.29 - 0.59 - FINTA ALLA MARADONA se sale tanto - r 14147"
+                        sell = "SELL 3 dopo 90 min con ma50 > and 5-78 and deviation_sell 0.29 - 0.59 - FINTA ALLA MARADONA se sale tanto - r 14147"
                         action = "sell"
                         
                         # > estate 5-78 da 5-39
@@ -18758,21 +23232,14 @@ class ro_cano_che_ritorna:
                         and deviation_ma100_sopra_ma200 < 0.20
                        
                     ):
-                        sell = "SELL 3 (12-21 min) con ma50 > and 5-150 (!) and deviation_sell 0.25 - 0.59 - FINTA ALLA MARADONA se sale poco - r 14159"
+                        sell = "SELL 3 dopo 90 min con ma50 > and 5-150 (!) and deviation_sell 0.25 - 0.59 - FINTA ALLA MARADONA se sale poco - r 14159"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
                         # al SELL 3 maradona e' ancora piu' stanco di quello che pensavo !
                         
                         
-                        
-                    
-                    
-                    
-                    
-                    
-                    
-                    
+                      
                     
                     elif (
                         ma50_last > ma50_2_min_ago
@@ -18787,30 +23254,62 @@ class ro_cano_che_ritorna:
                         # > estate 4-78 da 4-30
                         
                         
-
                     elif (
                         ma50_last > ma50_2_min_ago
+                        and ma300_last > ma300_301_min_ago
+                        
+                        and (ma3_prev > ma48_prev and ma3_last < ma48_last)
+                        and deviation_sell > 0.91 and deviation_sell < 1.49
+                        and ma2_last < ma2_2_min_ago
+                    ):
+
+                        sell = "SELL 3 dopo 90 min con ma50 > E CON ma300 > ma300 300 min ago e incrocio 3-48 and deviation_sell 0.91 - 1.49 - r 14195 a"
+                        action = "sell"
+
+                        # ma 3-48 mi evita la ricompra e la rivendita con perdita !
+                        # 23 mag 2023 3-48 da 3-30 se ma300 > 300 301 min ago
+                        
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and ma300_last < ma300_301_min_ago
+                      
                         and (ma3_prev > ma30_prev and ma3_last < ma30_last)
                         and deviation_sell > 0.91 and deviation_sell < 1.49
                         and ma2_last < ma2_2_min_ago
                     ):
 
-                        sell = "SELL 3 dopo 90 min con ma50 > incrocio 3-30 (!) and deviation_sell 0.91 - 1.49 - r 14195"
+                        sell = "SELL 3 dopo 90 min con ma50 > MA CON ma300 < ma300 300 min ago e incrocio 3-33 (!) and deviation_sell 0.91 - 1.49 - r 14195 b"
                         action = "sell"
 
                         # ma 3-48 mi evita la ricompra e la rivendita con perdita !
-                    
-                    
+                        # 23 mag 2023 3-33 da 3-33 se ma300 < 300 301 min ago
                     
                     
                     elif (
                         ma50_last > ma50_2_min_ago
+                        and deviation_ma5_sotto_ma300 > 0.30
+                        and (ma3_prev > ma110_prev and ma3_last < ma110_last)
+                        and deviation_sell > 1.50 and deviation_sell < 2.70
+                        and ma2_last < ma2_2_min_ago
+                    ):
+
+                        sell = "SELL 3 dopo 90 min con ma50 > incrocio 3-110 (!) and deviation_sell 1.50 - 2.70 - r 14210 A"
+                        action = "sell"
+                        
+                        # > estate 3-78 da 3-30
+                        # 6 apr 2023 3-110 da 3-78 se 5-300 > 0.30
+                        
+                        
+                        
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and deviation_ma5_sotto_ma300 < 0.30
                         and (ma3_prev > ma78_prev and ma3_last < ma78_last)
                         and deviation_sell > 1.50 and deviation_sell < 2.70
                         and ma2_last < ma2_2_min_ago
                     ):
 
-                        sell = "SELL 3 dopo 90 min con ma50 > incrocio 3-78 (!) and deviation_sell 1.50 - 2.70 - r 14210"
+                        sell = "SELL 3 dopo 90 min con ma50 > incrocio 3-78 (!) and deviation_sell 1.50 - 2.70 - r 14210 B"
                         action = "sell"
                         
                         # > estate 3-78 da 3-30
@@ -18849,102 +23348,398 @@ class ro_cano_che_ritorna:
                 
                     ######################################################################################## con trend discendente
                     
-                    
                     elif (      
                         ma50_last < ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 > 0.30
+                        
+                        and deviation_sell > 1.70
+                        and (ma3_prev > ma100_prev and ma3_last < ma100_last)
+                      
+                        and ma200_last > ma300_last
+                        and ma2_last < ma2_2_min_ago 
+                        
+                       
+                    ):
+                        sell = "SELL 3 dopo 90 min con ma50 < con deviation_ma39 < -0.18 - r 14239 A1"
+                        action = "sell"
+                        
+                        # 29 gen 2023 se deviation_ma100_sopra_ma300 > 0.33
+                        
+                        # 15 giu 2023 incrocio 3-100
+
+                  
+                    elif (      
+                        ma50_last < ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 > 0.30
+                        
+                        and ma200_last > ma300_last
+                        and ma2_last < ma2_2_min_ago 
+                        and deviation_ma39 < -0.18
+                       
+                    ):
+                        sell = "SELL 3 dopo 90 min con ma50 < con deviation_ma39 < -0.18 - r 14239 A2"
+                        action = "sell"
+                        
+                        # 29 gen 2023 se deviation_ma100_sopra_ma300 > 0.33
+                        
+                        # 15 giu 2023 dev_39 -0.18 da -0.20
+                  
+                  
+                    elif (      
+                        ma50_last < ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 > 0.30
+                        and deviation_sell < 1.70
+                      
                         and ma200_last > ma300_last
                         and ma2_last < ma2_2_min_ago 
                         and deviation_ma39 < -0.20
                        
                     ):
-                        sell = "SELL 3 dopo 90 min con ma50 < con deviation_ma39 < -0.20 - r 14239"
+                        sell = "SELL 3 dopo 90 min con ma50 < con deviation_ma39 < -0.20 - r 14239 A3"
                         action = "sell"
+                        
+                        # 29 gen 2023 se deviation_ma100_sopra_ma300 > 0.33
+                        # 29 gen 2023 dev_39 -0.21 da -0.20
+
+                  
                         
                         
                     elif (      
                         ma50_last < ma50_2_min_ago
-                        and ma200_last < ma300_last
+                        and deviation_ma100_sopra_ma300 < 0.33
+                        and ma5_last > ma125_last
+                        and ma200_last > ma300_last
                         and ma2_last < ma2_2_min_ago 
-                        and deviation_ma39 < -0.16
+                        and deviation_ma39 < -0.22
                        
                     ):
-                        sell = "SELL 3 dopo 90 min con ma50 < con deviation_ma39 < -0.16 - r 14250"
+                        sell = "SELL 3 dopo 90 min con ma50 < con deviation_ma39 < -0.22 - r 14239 B"
                         action = "sell"
                         
-                     
-                    
-                    
-                    
-                    
-                    
-                    
-                    
+                        # 29 gen 2023 se and deviation_ma100_sopra_ma300 < 0.33
+                        # 29 gen 2023 dev_39 -0.22 da -0.20
+                        
+                        
+                        
+                    elif (      
+                        ma50_last < ma50_2_min_ago
+                        and ma450_last > ma450_360_min_ago
+                      
+                        and ma200_last < ma300_last
+                        and ma2_last < ma2_2_min_ago 
+                        and deviation_ma39 < -0.17
+                       
+                    ):
+                        sell = "SELL 3 dopo 90 min con ma50 < con deviation_ma39 < -0.16 - r 14250 a"
+                        action = "sell"
+                        
+                        # 30 mag 2023 dev 39 a -0.17 da -0.16 se 450 > 4 ore
+
+                  
+                        
+                    elif (      
+                        ma50_last < ma50_2_min_ago
+                        and ma450_last < ma450_360_min_ago
+                        
+                        and ma200_last < ma300_last
+                        and ma54_last > ma72_last
+                        
+                        and deviation_ma39 < -0.03
+                        and deviation_sell < -0.065
+                        
+                        and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
+                    ):
+                        sell = "SELL 3 dopo 90 min con ma50 < MA 54>72 e con deviation_ma39 < -0.03 and dev sell -0.065 and macd < macd 2 min ago - r 14250 B1"
+                        action = "sell"
+                        
+                        # 12 set 2023 dev 39 -0.03 da -0.16
+                        # 12 set 2023 aggiunta dev sell -0.05
+
+                  
+                    elif (      
+                        ma50_last < ma50_2_min_ago
+                        and ma450_last < ma450_360_min_ago
+                        
+                        and ma200_last < ma300_last
+                        and ma54_last < ma72_last
+                        
+                        and deviation_ma39 < -0.03
+                        and deviation_sell < -0.05
+                        
+                        and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
+                    ):
+                        sell = "SELL 3 dopo 90 min con ma50 < E 54 >72 e con deviation_ma39 < -0.03 and dev sell -0.05 and macd < macd 2 min ago - r 14250 B2"
+                        action = "sell"
+                        
+                        # 12 set 2023 dev 39 -0.03 da -0.16
+                        # 12 set 2023 aggiunta dev sell -0.05
+
+                  
+
+                  
+                  
                     
                     elif (    
                         ma50_last < ma50_2_min_ago
+                        and ma300_last > ma450_last
+                        
                         and deviation_ma5_sotto_ma300 > 0.40
                         and deviation_ma100_sopra_ma300 > 0.20
                         and ma2_last < ma2_2_min_ago 
                          
-                        and ma3_last < ma78_last
+                        and ma3_last < ma100_last
+                        and macd < macd_2_min_ago
                     ):
-                        sell = "SELL 3 dopo 90 min CON 5-300 > 0.40 E con ma50< MA ma100 > ma300 and 5-86 - r 14270 A"
+                        sell = "SELL 3 dopo 90 min CON 5-300 > 0.40 E con ma50< MA ma100 > ma300 and 5-86 - r 14270 A1"
+                        action = "sell"
+                        
+                        # se sta in alto NO DEVIATION SELL - la 100 se ne sta andando in alto.
+                        # > estate 3-78 da 3-39
+                        # 13 set 2023 5-86 da 3-78
+                        # 15 mag 2023 5-100 da 3-86
+                        # 15 mag 2023 aggiunta macd > macd 2 min ago
+
+          
+                        
+                    elif (    
+                        ma50_last < ma50_2_min_ago
+                        and ma300_last < ma450_last
+                        
+                        and deviation_ma5_sotto_ma300 > 0.40
+                        and deviation_ma100_sopra_ma300 > 0.20
+                        and ma2_last < ma2_2_min_ago 
+                         
+                        and ma5_last < ma100_last
+                    ):
+                        sell = "SELL 3 dopo 90 min CON 5-300 > 0.40 E con ma50< MA ma100 > ma300 and 5-100 - r 14270 A2"
                         action = "sell"
                         
                         # se sta in alto NO DEVIATION SELL - la 100 se ne sta andando in alto.
                         # > estate 3-78 da 3-39
                         # 13 set 5-86 da 3-78
-                        
-                        
+                        #  3 set 5-100 da 5-86
+                    
                     elif (    
                         ma50_last < ma50_2_min_ago
+                        and ma450_last > ma450_720_min_ago
+                        
+                        and ma300_last > ma450_last
+                        and deviation_sell < -0.15
                         and deviation_ma5_sotto_ma300 < 0.40
-                        and deviation_ma100_sopra_ma300 > 0.20
+                        and deviation_ma100_sopra_ma300 > 0.10
                         and ma2_last < ma2_2_min_ago 
                          
-                        and ma5_last < ma150_last
+                        and ma8_last < ma150_last
                     ):
-                        sell = "SELL 3 dopo 90 min CON 5-300 > 0.40 E con ma50< MA ma100 > ma300 and 5-150 - r 14270 B"
+                        sell = "SELL 3 dopo 90 min CON 5-300 < 0.40 E con ma50< MA dev100-300> 0.10 AND 300>450 - r 14270 B1x"
                         action = "sell"
                         
                         # se sta in alto NO DEVIATION SELL - la 100 se ne sta andando in alto.
                         # > estate 3-78 da 3-39
                         # 13 set 5-86 da 3-78
                         # 25 sett 5-150 da 5-28
-                    
-                    
+                        # 26 feb 2023 dev_ma100_sopra_ma300 > 0.10 da > 0.20
+                        # 17 mag 2023 450 in crescita
+                        
+                        
+                        
+                    elif (    
+                        ma50_last < ma50_2_min_ago
+                        and ma450_last < ma450_720_min_ago
+                        
+                        and deviation_ma100_sopra_ma300 > 0.10
+                        and ma300_last > ma450_last
+                        and deviation_sell < -0.15
+                        and deviation_ma5_sotto_ma300 < 0.40
+                        
+                        and ma2_last < ma2_2_min_ago 
+                         
+                        and ma8_last < ma150_last
+                    ):
+                        sell = "SELL 3 dopo 90 min CON 5-300 < 0.40 E con ma50< MA dev100-300> 0.10 AND 300>450 and deviation_sell < -0.15 - r 14270 B1y"
+                        action = "sell"
+                        
+                        # se sta in alto NO DEVIATION SELL - la 100 se ne sta andando in alto.
+                        # > estate 3-78 da 3-39
+                        # 13 set 5-86 da 3-78
+                        # 25 sett 5-150 da 5-28
+                        # 26 feb 2023 dev_ma100_sopra_ma300 > 0.10 da > 0.20
+                        # 17 mag 2023 450 in decrescita da 720 min ! ridotto di una ndecchiecella dev sell a -0.145 da -0.15
+                        # 31 lug 2023 and deviation_sell < -0.15 da 0.145
+                        
+                        
+                    elif (    
+                        ma50_last < ma50_2_min_ago
+                        and ma300_last < ma450_last
+                        and deviation_ma5_sotto_ma300 < 0.40
+                        and deviation_ma100_sopra_ma300 > 0.20
+                        and ma2_last < ma2_2_min_ago 
+                         
+                        and ma5_last < ma150_last
+                    ):
+                        sell = "SELL 3 dopo 90 min CON 5-300 > 0.40 E con ma50< MA ma100 > ma300 and 5-150 AND 300<450 - r 14270 B2"
+                        action = "sell"
+                        
+                        # se sta in alto NO DEVIATION SELL - la 100 se ne sta andando in alto.
+                        # > estate 3-78 da 3-39
+                        # 13 set 5-86 da 3-78
+                        # 25 sett 5-150 da 5-28
+
+                  
                     
                     elif (    
                         ma50_last < ma50_2_min_ago
+                        and ma300_last > ma300_301_min_ago
+                        
+                        and delta_450_300 < delta_450_300_60_min
                         and ma250_last > ma300_last
                         and deviation_ma100_sopra_ma300 < 0.20
-                        and ma2_last < ma2_2_min_ago 
-                        and deviation_sell < -0.19
+                        
+                        and deviation_sell < -0.21
                         and ma3_last < ma39_last
+                        
+                        and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
                     ):
-                        sell = "SELL 3 dopo 90 min con ma50 < and ma100 NON DISTANTE dalla ma300 and (dev_sell < -0.19 and ma3_last < ma39_last) - r 14283 A"
+                        sell = "SELL 3 > 90 min GIORNO con ma50 < and ma100 NON DISTANTE dalla ma300 and (dev_sell < -0.21 and ma3_last < ma39_last) - r 14283 A1x"
                         action = "sell"
                         
                         # SE ma100 RESTA VICINA ALLA ma300 - trend laterale - allora tieniti pronto anche con la deviation sell
                         # 28 ott 2022 dev sell a 0.17 da 0.15
                         #  1 nov 2022 se 250 > 300 dev sell 0.19 da 0.17
+                        # 20 feb 2023 doppio delta 450-300 GIORNO
+                        # 20 feb 2023 dev_sell a -0.21 da -0.19
+
+                  
+                    elif (    
+                        ma50_last < ma50_2_min_ago
+                        and ma300_last < ma300_301_min_ago
                         
+                        and delta_450_300 < delta_450_300_60_min
+                        and ma250_last > ma300_last
+                        and deviation_ma100_sopra_ma300 < 0.20
+                        
+                        and deviation_sell < -0.01
+                        and ma3_last < ma39_last
+                        
+                        and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
+                    ):
+                        sell = "SELL 3 > 90 min GIORNO con ma50 < and ma100 NON DISTANTE dalla ma300 and (dev_sell < -0.01 and ma3_last < ma39_last) - r 14283 A1y"
+                        action = "sell"
+                        
+                        # SE ma100 RESTA VICINA ALLA ma300 - trend laterale - allora tieniti pronto anche con la deviation sell
+                        # 28 ott 2022 dev sell a 0.17 da 0.15
+                        #  1 nov 2022 se 250 > 300 dev sell 0.19 da 0.17
+                        # 20 feb 2023 doppio delta 450-300 GIORNO
+                        # 20 feb 2023 dev_sell a -0.21 da -0.19
+                        # 15 set 2023 dev_sell a -0.01 da -0.21 se ma300 scende da 5 ore !
+
+
+
+
+                  
+                        
+                    elif (    
+                        ma50_last < ma50_2_min_ago
+                        and delta_450_300 > delta_450_300_60_min
+                        and ma250_last > ma300_last
+                        and deviation_ma100_sopra_ma300 < 0.30
+                        and ma2_last < ma2_2_min_ago 
+                        and deviation_sell < -0.195
+                        and ma3_last < ma39_last
+                    ):
+                        sell = "SELL 3 > 90 min NOTTE con ma50 < and ma100 NON DISTANTE dalla ma300 and (dev_sell < -0.195 and ma3_last < ma39_last) - r 14283 A2"
+                        action = "sell"
+                        
+                        # SE ma100 RESTA VICINA ALLA ma300 - trend laterale - allora tieniti pronto anche con la deviation sell
+                        # 28 ott 2022 dev sell a 0.17 da 0.15
+                        #  1 nov 2022 se 250 > 300 dev sell 0.19 da 0.17
+                        # 20 feb 2023 doppio delta 450-300 NOTTE
+                        # 20 feb 2023 dev_sell a -0.20 da -0.19
+                        #  1 ago 2023 dev_sell a -0.195 da -0.20
+
+                  
                     elif (    
                         ma50_last < ma50_2_min_ago
                         and ma250_last < ma300_last
                         and deviation_ma100_sopra_ma300 < 0.20
                         and ma2_last < ma2_2_min_ago 
-                        and deviation_sell < -0.18 
+                        and deviation_sell < -0.20
                         and ma3_last < ma39_last
+                        and macd < macd_2_min_ago
+                        and macd < -6
                     ):
-                        sell = "SELL 3 dopo 90 min con ma50 < and ma100 NON DISTANTE dalla ma300 and (dev_sell < -0.18 and ma3_last < ma39_last) - r 14283 B"
+                        sell = "SELL 3 > 90 min con ma50 < and ma100 NON DISTANTE dalla ma300 and (dev_sell < -0.20 and ma3_last < ma39_last) and macd < and macd < -6 - r 14283 B"
                         action = "sell"
                         
                         # SE ma100 RESTA VICINA ALLA ma300 - trend laterale - allora tieniti pronto anche con la deviation sell
                         # 28 ott 2022 dev sell a 0.17 da 0.15
-                        #  1 nov se 250 < 300 dev sell 0.18 da 0.17
-                        
+                        #  1 nov 2022 se 250 < 300 dev sell 0.18 da 0.17
+                        # 19 apr 2023 se 250 < 300 dev sell 0.19 da 0.18
+                        # 26 apr 2023 se 250 < 300 dev sell 0.20 da 0.19
+                        # 11 ago 2023 aggiunto and macd < -6
+
+                  
+                  
+
+                    ############################################################################# HO PORTATO QUI UNA CONDIZIONE SPECIALE ABBASSANDO IL SELL DI UNA NDECCHIECELLA
+                    ################################################################################## ex condizioni speciali
                     
+                    elif (
+                        ma78_last < ma78_120_min_ago
+                        and ma300_last > ma300_301_min_ago
+                
+                        and deviation_ma39 < 0.06
+                        and deviation_sell < -0.095
+                
+                
+                        and ma50_last <= ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 < 0.50
+                
+                        and deviation_ma5_sotto_ma200 > -0.90
+                
+                        and ma2_last <= ma2_2_min_ago 
+                        and macd <= macd_2_min_ago
+                    ):
+                        sell = "SELL EX condizione speciale 6 con ma300 > 5 ore - 4 dev 3-39 < 0.06 and dev_sell < -0.095 con ma50 < e con ma5 sotto ma200 > -0.90 - r 14290"
+                        action = "sell"
+                        
+                        # 29 set stessa condizione speciale ma vedi che cambia di pochissimo dev 39 e anche deviation_ma100_sopra_ma300
+                        
+                       
+                  
+                    elif (
+                        ma78_last < ma78_120_min_ago
+                        and ma300_last < ma300_301_min_ago
+                        and delta_150_100 <= delta_150_100_60_min
+                
+                        and deviation_ma39 < 0.05
+                        and deviation_sell < -0.102
+                
+                
+                        and ma50_last <= ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 < 0.40
+                
+                        and deviation_ma5_sotto_ma200 > -0.90
+                
+                        and ma2_last <= ma2_2_min_ago 
+                        and macd < macd_2_min_ago
+                    ):
+                        sell = "SELL EX condizione speciale 6 GIORNO con ma300> 5 ore - dev 3-39 < 0.05 and dev_sell < -0.102 - con ma50 < e con ma5 sotto ma200 > -0.90 - r 14291"
+                        action = "sell"
+                
+                        # 15 set 2023 quando 300 scende da 5 ore non devi vendere in perdita ! a ricomprare ci penseranno altre condizioni !
+                        # 15 set 2023 quando GIORNO a -0.11 da -0.07
+                        # 15 set 2023 quando GIORNO a -0.102 da -0.11
+                        
+                        # 29 set stessa condizione speciale ma vedi che cambia di pochissimo dev 39 e anche deviation_ma100_sopra_ma300
+                  
+                    
+
+              
                     
                     
             #######################################################################################################
@@ -19128,11 +23923,6 @@ class ro_cano_che_ritorna:
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
-                        
-                        
-                        
-                        
-                        
                         
                         
                         
@@ -19440,11 +24230,6 @@ class ro_cano_che_ritorna:
                     
                     
                     
-                    
-                    
-                    
-                    
-                    
                     #################################################################### and rapporto_delta_1_delta_2 > 1 and ma100_last > ma100_60_min_ago
                     
                     elif (
@@ -19463,9 +24248,6 @@ class ro_cano_che_ritorna:
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
-                        
-                        
-                        
                         
                         
                         
@@ -19494,15 +24276,6 @@ class ro_cano_che_ritorna:
                         ###################################################################
                         
                         
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                    
                     ######################################################## and rapporto_delta_1_delta_2 > 1 AND 100> SORGERE
                     
                     elif (
@@ -19522,10 +24295,7 @@ class ro_cano_che_ritorna:
                         
                         # deviation_sell = ma3_last/last_trade_price
                         
-                        
-                        
-                        
-                        
+                      
                         
                     ################################################################## and rapporto_delta_1_delta_2 < 1 TRAMONTO
                     
@@ -19550,11 +24320,7 @@ class ro_cano_che_ritorna:
                         
                         ###############################################################
                         
-                        
-                        
-                        
-                        
-                    
+                      
                     
                     elif (
                         ma50_last >= ma50_2_min_ago
@@ -19710,13 +24476,14 @@ class ro_cano_che_ritorna:
                     elif ( 
                         ma50_last > ma50_2_min_ago 
                         and ma2_last < ma2_2_min_ago 
-                        and deviation_sell < -0.24 
+                        and deviation_sell < -0.238 
                         and ma3_last < ma50_last
                         and ma200_last < ma200_60_min_ago
                     ):
-                        sell = "SELL 4-5-x (21-60 min) con ma50 > and (deviation_sell < -0.24 and ma3_last < ma50_last) - r 15046"
+                        sell = "SELL 4-5-x (21-60 min) con ma50 > and (deviation_sell < -0.238 and ma3_last < ma50_last) - r 15046"
                         action = "sell"
                         
+                        # 25 gen 2023 dev_sell a -0.238 da 0.24 dopo -0.95% ore 10:04 del 24 gen 2023
                      
                         
                         
@@ -19731,16 +24498,31 @@ class ro_cano_che_ritorna:
                         
                        
                     
-                    
+                    elif (        
+                        ma50_last > ma50_2_min_ago 
+                        and ma2_last < ma2_2_min_ago 
+                        and deviation_sell < -0.28 
+                        and ma3_last < ma50_last
+                        and ma200_last > ma200_60_min_ago
+                        and ma450_last > ma450_480_min_ago
+                    ):
+                        sell = "SELL 4-5-x (21-60 min) con ma50 > and (deviation_sell < -0.28 and ma3_last < ma50_last) - r 15071 A"
+                        action = "sell"
+                        
+                        # 23 feb 2023 dev sell 0.28 da 0.26
+                        
+                        
                     elif (        
                         ma50_last > ma50_2_min_ago 
                         and ma2_last < ma2_2_min_ago 
                         and deviation_sell < -0.26 
                         and ma3_last < ma50_last
                         and ma200_last > ma200_60_min_ago
+                        and ma450_last < ma450_480_min_ago
                     ):
-                        sell = "SELL 4-5-x (21-60 min) con ma50 > and (deviation_sell < -0.26 and ma3_last < ma50_last) - r 15071"
+                        sell = "SELL 4-5-x (21-60 min) con ma50 > and (deviation_sell < -0.26 and ma3_last < ma50_last) - r 15071 B"
                         action = "sell"
+                        
                         
                       
                         #############################################################################################################
@@ -19805,9 +24587,7 @@ class ro_cano_che_ritorna:
                         
                         # deviation_sell = ma3_last/last_trade_price
                         
-                        
-                        
-                        
+                       
                         
                     ##################################################################### and rapporto_delta_1_delta_2 < 1 tramonto
                     
@@ -19856,13 +24636,6 @@ class ro_cano_che_ritorna:
                         
                         
                         
-                        
-                        
-                        
-                        
-                        
-                        
-                        
                     # tra MARADONA e RONALDO ho messo POCHI MALEDETTI E SUBITO se alla fine del trend da' una botta rialzista
                     
                     elif (
@@ -19878,12 +24651,7 @@ class ro_cano_che_ritorna:
                         # > estate 3-28 da 3-18
                         
                         
-                        
-                    
-                    
-                    
-                    
-                    
+                     
                     
                     # FINTA ALLA RONALDO
                     
@@ -19936,14 +24704,7 @@ class ro_cano_che_ritorna:
                         ###################################################################################################
                         
                         
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                      
+                       
                     
                     elif (
                         ma50_last > ma50_2_min_ago
@@ -19988,14 +24749,7 @@ class ro_cano_che_ritorna:
                         
                         # deviation_sell = ma3_last/last_trade_price
                         
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
+                      
                     
                     
                     elif (
@@ -20048,10 +24802,7 @@ class ro_cano_che_ritorna:
                         sell = "SELL 4-5-x RAFFORZATA (21-60 min) con ma50 < and deviation_ma39 < -0.29 - r 15277 B"
                         action = "sell"
                         
-                        
-                        
-                        
-                        
+                      
                         
                     elif (
                         ma50_last < ma50_2_min_ago
@@ -20065,11 +24816,7 @@ class ro_cano_che_ritorna:
                         action = "sell"
                         
                         
-                    
-                    
-                    
-                    
-                    
+                   
                     
                     elif (    
                         ma50_last < ma50_2_min_ago
@@ -20103,13 +24850,6 @@ class ro_cano_che_ritorna:
                     
                     
                     
-                    
-                    
-                    
-                    
-                    
-                    
-                    
                     elif (
                         ma50_last > ma50_2_min_ago
                         and ma100_last < ma100_60_min_ago
@@ -20125,9 +24865,9 @@ class ro_cano_che_ritorna:
                         
                         
                     
-                    
                     elif (    
                         ma50_last < ma50_2_min_ago
+                        and ma300_last > ma300_301_min_ago
                         and ma50_last < ma100_last
                         
                         and ma2_last < ma2_2_min_ago 
@@ -20135,17 +24875,158 @@ class ro_cano_che_ritorna:
                         and ma3_last < ma39_last
                         and ma200_last < ma200_60_min_ago
                     ):
-                        sell = "SELL 4-5-x (21-60 min) con ma50 < and deviation_sell < -0.32 - r 15349"
+                        sell = "SELL 4-5-x (21-60 min) con ma50 < and deviation_sell < -0.32 se 300 < 300 301 min ago - r 15349a"
+                        action = "sell"
+
+
+                  
+                    elif (    
+                        ma50_last < ma50_2_min_ago
+                       
+                        and deviation_sell < -0.27
+                        and ma3_last < ma39_last
+                        
+                        and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago > 1.50
+                        and deviation_ma78_sopra_o_sotto_ma78_600_min_ago > 0.10
+                        
+                        and ma300_last < ma300_301_min_ago
+                        and ma50_last < ma100_last
+                        
+                        and ma2_last < ma2_2_min_ago 
+                        
+                        and ma200_last < ma200_60_min_ago
+                    ):
+                        sell = "SELL 4-5-x (21-60 min) con ma50 < and deviation_sell < -0.27 se 300 < 300 301 min ago - r 15349 B prova 1"
+                        action = "sell"
+
+                  
+
+                    elif (    
+                        ma50_last < ma50_2_min_ago
+                       
+                        and deviation_sell < -0.05
+                        and ma3_last < ma39_last
+                        
+                        and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago > 1.50
+                        and deviation_ma78_sopra_o_sotto_ma78_600_min_ago < 0.10
+                        
+                        and ma300_last < ma300_301_min_ago
+                        and ma50_last < ma100_last
+                        
+                        and ma2_last < ma2_2_min_ago 
+                        
+                        and ma200_last < ma200_60_min_ago
+                    ):
+                        sell = "SELL 4-5-x (21-60 min) con ma50 < and deviation_sell < -0.27 se 300 < 300 301 min ago - r 15349 B prova 2"
+                        action = "sell"
+
+                  
+
+                    elif (    
+                        ma50_last < ma50_2_min_ago
+                       
+                        and deviation_sell < -0.12
+                        and ma3_last < ma39_last
+                        
+                        and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago < 1.50
+                        and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago > -1.50
+                        
+                        and deviation_ma78_sopra_o_sotto_ma78_600_min_ago > 0.10
+                        
+                        and ma300_last < ma300_301_min_ago
+                        and ma50_last < ma100_last
+                        
+                        and ma2_last < ma2_2_min_ago 
+                        
+                        and ma200_last < ma200_60_min_ago
+                    ):
+                        sell = "SELL 4-5-x (21-60 min) con ma50 < and deviation_sell < -0.27 se 300 < 300 301 min ago - r 15349 B prova 3"
+                        action = "sell"
+
+
+                    elif (    
+                        ma50_last < ma50_2_min_ago
+                       
+                        and deviation_sell < -0.01
+                        and ma3_last < ma39_last
+                        
+                        and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago < 1.50
+                        and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago > -1.50
+                        
+                        and deviation_ma78_sopra_o_sotto_ma78_600_min_ago < 0.10
+                        
+                        and ma300_last < ma300_301_min_ago
+                        and ma50_last < ma100_last
+                        
+                        and ma2_last < ma2_2_min_ago 
+                        
+                        and ma200_last < ma200_60_min_ago
+                    ):
+                        sell = "SELL 4-5-x (21-60 min) con ma50 < and deviation_sell < -0.27 se 300 < 300 301 min ago - r 15349 B prova 4"
+                        action = "sell"
+
+                  
+
+                    elif (    
+                        ma50_last < ma50_2_min_ago
+                       
+                        and deviation_sell < -0.01
+                        and ma3_last < ma39_last
+                        
+                        and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago < -1.50
+                        and deviation_ma78_sopra_o_sotto_ma78_600_min_ago < 0.10
+                        
+                        and ma300_last < ma300_301_min_ago
+                        and ma50_last < ma100_last
+                        
+                        and ma2_last < ma2_2_min_ago 
+                        
+                        and ma200_last < ma200_60_min_ago
+                    ):
+                        sell = "SELL 4-5-x (21-60 min) con ma50 < and deviation_sell < -0.27 se 300 < 300 301 min ago - r 15349 B prova 5"
+                        action = "sell"
+
+                  
+                    elif (    
+                        ma50_last < ma50_2_min_ago
+                       
+                        and deviation_sell < -0.13
+                        and ma3_last < ma39_last
+                        
+                        and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago < -1.50
+                        and deviation_ma78_sopra_o_sotto_ma78_600_min_ago > 0.10
+                        
+                        and ma300_last < ma300_301_min_ago
+                        and ma50_last < ma100_last
+                        
+                        and ma2_last < ma2_2_min_ago 
+                        
+                        and ma200_last < ma200_60_min_ago
+                    ):
+                        sell = "SELL 4-5-x (21-60 min) con ma50 < and deviation_sell < -0.27 se 300 < 300 301 min ago - r 15349 B prova 6"
+                        action = "sell"
+
+
+
+
+
+                  
+
+                  
+                    elif (    
+                        ma50_last < ma50_2_min_ago
+                        and ma300_last < ma300_301_min_ago
+                        and ma50_last < ma100_last
+                        
+                        and ma2_last < ma2_2_min_ago 
+                        and deviation_sell < -0.27
+                        and ma3_last < ma39_last
+                        and ma200_last < ma200_60_min_ago
+                    ):
+                        sell = "SELL 4-5-x (21-60 min) con ma50 < and deviation_sell < -0.27 se 300 < 300 301 min ago - r 15349 B"
                         action = "sell"
                         
-                        
-                        
-                        
-                        
-                        
-                        
-              
-            
+                      
             
                     elif (
                         ma50_last < ma50_2_min_ago
@@ -20178,12 +25059,6 @@ class ro_cano_che_ritorna:
                         
                         
                         
-                        
-                        
-                        
-                        
-                        
-                        
                     ##################################################################################################### aumenta la tolleranza    
                         
                     elif (
@@ -20196,21 +25071,53 @@ class ro_cano_che_ritorna:
                         action = "sell"
                         
                  
-                    
-                    
-                    
-                    
                     elif (    
                         ma50_last < ma50_2_min_ago 
+                        and ma78_last > ma78_60_min_ago
+                        
                         and ma2_last < ma2_2_min_ago 
                         and deviation_sell < -0.33
                         and ma3_last < ma39_last
                         and ma200_last > ma200_60_min_ago
                         and ma300_last > ma300_120_min_ago
                     ):
-                        sell = "SELL 4-5-x (21-60 min) con ma50 < and 200> 60 min and 300 > 120 min and deviation_sell < -0.33 - r 15422"
+                        sell = "SELL 4-5-x (21-60 min) con ma50 < and 200> 60 min and 300 > 120 min and deviation_sell < -0.33 CON ma78 < 78 260 min ago - r 15422 a"
+                        action = "sell"
+
+                  
+                        
+                    elif (    
+                        ma50_last < ma50_2_min_ago
+                        and ma450_last > ma450_480_min_ago
+                        
+                        and ma78_last < ma78_60_min_ago
+                        and ma2_last < ma2_2_min_ago 
+                        and deviation_sell < -0.32
+                        and ma3_last < ma39_last
+                        and ma200_last > ma200_60_min_ago
+                        and ma300_last > ma300_120_min_ago
+                    ):
+                        sell = "SELL 4-5-x (21-60 min) con ma50 < and 200> 60 min and 300 > 120 min and deviation_sell < -0.32 CON ma78 < 78 60 min ago and 450 > - r 15422 B1"
                         action = "sell"
                         
+                        # 26 mag 2023 dev sell a -0.32 da -0.33 se 78 < 78 60 min ago
+                  
+                    elif (    
+                        ma50_last < ma50_2_min_ago
+                        and ma450_last < ma450_480_min_ago
+                        
+                        and ma78_last < ma78_60_min_ago
+                        and ma2_last < ma2_2_min_ago 
+                        and deviation_sell < -0.10
+                        and ma3_last < ma39_last
+                        and ma200_last > ma200_60_min_ago
+                        and ma300_last > ma300_120_min_ago
+                    ):
+                        sell = "SELL 4-5-x (21-60 min) con ma50 < and 200> 60 min and 300 > 120 min and deviation_sell < -0.10 CON ma78 < 78 60 min ago and 450 < - r 15422 B2"
+                        action = "sell"
+                        
+                        # 26 mag 2023 dev sell a -0.32 da -0.33 se 78 < 78 60 min ago
+                        #  5 set 2023 dev sell a -0.10 da -0.32 se 450 < 450 480 min ago
                         
                         
                     elif (    
@@ -20225,14 +25132,6 @@ class ro_cano_che_ritorna:
                         action = "sell"
                         
               
-                    
-                
-                    
-                    
-                    
-                    
-                    
-                    
                     
                     
                     elif (
@@ -20266,16 +25165,65 @@ class ro_cano_che_ritorna:
                     
                     
                     # -------------------------------------------------------------------------------------- guadagno durante il crollo
-
+                    
+                    
                     elif (
                         ma50_last < ma50_2_min_ago
-                        and (ma3_prev > ma18_prev and ma3_last < ma18_last)
+                        and deviation_ma10_sopra_ma200 > 0.20
+                        and (ma3_prev > ma22_prev and ma3_last < ma22_last)
                         and deviation_sell > 0.23
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 4-5-x eventuale guadagno durante il crollo (21-60 min) con ma50 < incrocio 3 - 18 and deviation_sell > 0.23 - r 15487"
+                        sell = "SELL 4-5-x eventuale guadagno durante il crollo (21-60 min) con ma50 < incrocio 3 - 20 and deviation_sell > 0.23 - r 15487a"
                         action = "sell"
                         
+                        # 17 mar 2023 3-20 da 3-18 vedi 3 mar 2023 ore 3:43 madonna ! c'e' stato un crollo spaventoso e si e' comportato benissimo !
+
+
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and deviation_ma10_sopra_ma200 < 0.20
+                        and (ma3_prev > ma20_prev and ma3_last < ma20_last)
+                        and deviation_sell > 0.23
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 4-5-x eventuale guadagno durante il crollo (21-60 min) con ma50 < incrocio 3 - 20 and deviation_sell > 0.23 - r 15487b"
+                        action = "sell"
+                        
+                        # 17 mar 2023 3-20 da 3-18 vedi 3 mar 2023 ore 3:43 madonna ! c'e' stato un crollo spaventoso e si e' comportato benissimo !
+
+
+                  
+
+                    ################################################################# CONDIZIONE SPECIALE IMPORTATA RIDOTTA
+
+                  
+                    elif (
+                        ma78_last < ma78_120_min_ago
+                        and ma300_last < ma300_301_min_ago
+                        and delta_150_100 <= delta_150_100_60_min
+                
+                        and deviation_ma39 < 0.07
+                        and deviation_sell < -0.05
+                
+                
+                        and ma50_last <= ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 < 0.40
+                
+                        and deviation_ma5_sotto_ma200 > -0.50
+                
+                        and ma2_last <= ma2_2_min_ago 
+                
+                    ):
+                        sell = "SELL (21-60 min) EX cond spec 6 GIORNO con ma300> 5 ore - dev 3-39 < 0.05 and dev_sell < -0.05 - con ma50 < e con ma5 sotto ma200 > -0.90 - r 15500"
+                        action = "sell"
+                
+                        # 15 set 2023 quando 300 scende da 5 ore non devi vendere in perdita ! a ricomprare ci penseranno altre condizioni !
+                        # 15 set 2023 quando GIORNO a -0.11 da -0.07
+                        #  2 ott 2023 DOPO UN AKTRO -1 HO FATTO QUESTA and deviation_ma5_sotto_ma200 > -0.50
+                        #  2 ott 2023 TOLTO and macd < macd_2_min_ago ARRIVATO TARDI ! VEDI 2 OTTOBRE 2023 ORE 20 e 40 - r 16047 B2
+                        #  5 ott dev_sell -0.05 da -0.105
+                    
                         
                     
                     
@@ -20293,14 +25241,26 @@ class ro_cano_che_ritorna:
                     ######################################################################### RIGHE DEL COMPA raddoppiate PER AUMENTARE LA TOLLERANZA
                     
                     
-                    
                     if ( 
-                        ma50_last > ma50_2_min_ago 
+                        ma50_last > ma50_2_min_ago
+                        and ma78_last > ma100_last
+                        and ma2_last < ma2_2_min_ago 
+                        and deviation_ma25 < -0.23
+                        and ma200_last < ma200_60_min_ago
+                    ):
+                        sell = "SELL 4-5-x da 60 a 90 min con ma50 > and deviation_ma25 < -0.23 con 78>100 - r 15514a"
+                        action = "sell"
+                        
+                        # 24 ago 2023 and deviation_ma25 < -0.23 da -0.22
+                  
+                    elif ( 
+                        ma50_last > ma50_2_min_ago
+                        and ma78_last < ma100_last
                         and ma2_last < ma2_2_min_ago 
                         and deviation_ma25 < -0.22
                         and ma200_last < ma200_60_min_ago
                     ):
-                        sell = "SELL 4-5-x da 60 a 90 min con ma50 > and deviation_ma25 < -0.19 - r 15514"
+                        sell = "SELL 4-5-x da 60 a 90 min con ma50 > and deviation_ma25 < -0.22 con 78<100 - r 15514b"
                         action = "sell"
                         
                         
@@ -20317,14 +25277,30 @@ class ro_cano_che_ritorna:
                         
                         
                         
+                    elif ( 
+                        ma50_last > ma50_2_min_ago
+                        and ma450_last > ma450_360_min_ago
+                        
+                        and ma2_last < ma2_2_min_ago 
+                        and deviation_ma25 < -0.26
+                        and ma200_last > ma200_60_min_ago
+                    ):
+                        sell = "SELL 4-5-x da 60 a 90 min con ma50 > and deviation_ma25 < -0.26 and ma450_last > ma450_360_min_ago - r 15538 a"
+                        action = "sell"
+                        
+                        # 30 mag 2023 dev_25 a -0.26 da -0.25
+                        
+                        
                         
                     elif ( 
-                        ma50_last > ma50_2_min_ago 
+                        ma50_last > ma50_2_min_ago
+                        and ma450_last < ma450_360_min_ago
+                        
                         and ma2_last < ma2_2_min_ago 
                         and deviation_ma25 < -0.25
                         and ma200_last > ma200_60_min_ago
                     ):
-                        sell = "SELL 4-5-x da 60 a 90 min con ma50 > and deviation_ma25 < -0.25 - r 15538"
+                        sell = "SELL 4-5-x da 60 a 90 min con ma50 > and deviation_ma25 < -0.25 and ma450_last < ma450_360_min_ago - r 15538 b"
                         action = "sell"
                         
                         
@@ -20360,16 +25336,35 @@ class ro_cano_che_ritorna:
                         # deviation_sell = ma3_last/last_trade_price
                         # 19 ottobre 2022 5-69 da 5-50
                         
-                        
+
+
                     elif (
                         ma50_last >= ma50_2_min_ago
+                        and ma450_last > ma450_360_min_ago
+                        and deviation_ma5_sotto_ma300 < 0.40
+                        and (ma5_prev > ma78_prev and ma5_last < ma78_last)
+                        and deviation_sell > 0.25 and deviation_sell < 0.56
+                        and ma2_last < ma2_2_min_ago
+                       
+                    ):
+                        sell = "SELL 4-5-x (21-60 min) con ma450 > ma450 360 min ago e con ma50 > and incrocio 5-50 and deviation_sell 0.25 - 0.56 FINTA DI MARADONA - r 15568 B1"
+                        action = "sell"
+                        
+                        # deviation_sell = ma3_last/last_trade_price
+                        # 14 ott 2022 5-50 da 5-25
+                        #  2 ott 2023 aggiunta ma450 > ma450 360 min ago
+                        #  2 ott 2023 5-78 da 5-50
+                    
+                    elif (
+                        ma50_last >= ma50_2_min_ago
+                        and ma450_last < ma450_360_min_ago
                         and deviation_ma5_sotto_ma300 < 0.40
                         and (ma5_prev > ma50_prev and ma5_last < ma50_last)
                         and deviation_sell > 0.25 and deviation_sell < 0.56
                         and ma2_last < ma2_2_min_ago
                        
                     ):
-                        sell = "SELL 4-5-x (21-60 min) con ma50 > and incrocio 5-50 and deviation_sell 0.25 - 0.56 FINTA DI MARADONA - r 15568 B"
+                        sell = "SELL 4-5-x (21-60 min) con ma450 < ma450 360 min ago e con ma50 > and incrocio 5-50 and deviation_sell 0.25 - 0.56 FINTA DI MARADONA - r 15568 B2"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
@@ -20492,23 +25487,27 @@ class ro_cano_che_ritorna:
                         
                     
                     
-                    # sta in alto e stai attento
+                    # sta in alto
                     
                     elif (
                         ma50_last < ma50_2_min_ago
                         and deviation_ma100_sopra_ma300 > 0.25
                         
                         and (ma3_prev > ma78_prev and ma3_last < ma78_last)
-                        and deviation_sell < -0.07
+                        and deviation_sell < -0.12
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 4-5-x da 60 a 90 min con ma50 < con incrocio 3-78 and deviation_sell < -0.07 meno tollerante (sta in alto) - r 15660"
+                        sell = "SELL 4-5-x da 60 a 90 min con ma50 < con incrocio 3-78 and deviation_sell < -0.12 (sta in alto) - r 15660 A"
                         action = "sell"
                         
+                        # 29 gen 2023 dev sell <-0.12 da -0.07
                         
                         
                         
-                    # sta in basso e, PARADOSSALMENTE, sta piu' calmo
+                        
+                        
+                        
+                    # sta in basso
                     
                     elif (
                         ma50_last < ma50_2_min_ago
@@ -20518,7 +25517,7 @@ class ro_cano_che_ritorna:
                         and deviation_sell < -0.19
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 4-5-x da 60 a 90 min con ma50 < con incrocio 3-78 and deviation_sell < -0.19 piu' tollerante (sta in basso) - r 15676"
+                        sell = "SELL 4-5-x da 60 a 90 min con ma50 < con incrocio 3-78 and deviation_sell < -0.19 (sta in basso) - r 15660 B"
                         action = "sell"
                         
                         
@@ -20561,8 +25560,6 @@ class ro_cano_che_ritorna:
                       
                     
                     
-                    
-                    
                     elif (     
                         ma50_last > ma50_2_min_ago
                         and ma50_last > ma100_last
@@ -20592,12 +25589,37 @@ class ro_cano_che_ritorna:
                         
                       
                         
-                    
-                    
-                    
-                    
-                    
-                    
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and deviation_ma59_sopra_ma300 > 0.50
+                        and (ma3_prev > ma20_prev and ma3_last < ma20_last)
+                        and deviation_sell > 2.71
+                        and ma2_last < ma2_2_min_ago
+                    ):
+
+                        sell = "SELL 4-5-x dopo 90 min (dopo 110 min RCCR) con ma50 > incrocio 3-13 (!) and deviation_sell > 2.71 - r 15763 A"
+                        action = "sell"
+                        
+                        # 23 feb 2023 3-20 da 3-13 se 59 sopra 300 di molto
+                        
+                        
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and deviation_ma59_sopra_ma300 < 0.50
+                        and (ma3_prev > ma15_prev and ma3_last < ma15_last)
+                        and deviation_sell > 2.71
+                        and ma2_last < ma2_2_min_ago
+                    ):
+
+                        sell = "SELL 4-5-x dopo 90 min (dopo 110 min RCCR) con ma50 > incrocio 3-13 (!) and deviation_sell > 2.71 - r 15763 B"
+                        action = "sell"
+                        
+                        # 23 feb 2023 3-15 da 3-13 se 59 sopra 300 non di molto
+                        
+                        
+                        
+                        
+                        
                     elif (    
                         ma50_last > ma50_2_min_ago
                         and ma50_last > ma100_last
@@ -20663,36 +25685,39 @@ class ro_cano_che_ritorna:
                     elif (
                         ma50_last >= ma50_2_min_ago
                         and ma100_last > ma100_120_min_ago
+                        and ma5_last < ma125_last
+                        and deviation_sell > 0.25 and deviation_sell < 0.56
+                        
+                        and ma2_last <= ma2_2_min_ago
+                        and macd <= macd_2_min_ago
+                    ):
+                        sell = "SELL 4-5-x (12-21 min) con ma50 > and 100 > 100 120 min ago AND 5-125 and dev_sell 0.25-0.56 - FINTA ALLA MARADONA - r 15825 A"
+                        action = "sell"
+                        
+                        # deviation_sell = ma3_last/last_trade_price
+                        # 13 feb 2023 5-100 da 5-59
+                        #  5 ott 2023 5-125 da 5-100
+                        #  5 ott 2023 and macd <= macd 2 min ago
+                        
+                    elif (
+                        ma50_last >= ma50_2_min_ago
+                        and ma100_last < ma100_120_min_ago
                         and ma5_last < ma59_last
                         and deviation_sell > 0.25 and deviation_sell < 0.56
                         and ma2_last < ma2_2_min_ago
                        
                     ):
-                        sell = "SELL 4-5-x (12-21 min) con ma50 > and 100 > 100 120 min ago and 5-59 and deviation_sell 0.25-0.56 - FINTA ALLA MARADONA - r 15825 A"
+                        sell = "SELL 4-5-x (12-21 min) con ma50 > and 5-59 and 100 < 100 120 min ago and dev_sell 0.25-0.56 - FINTA ALLA MARADONA - r 15825 B"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
-                        
-                        
-                    elif (
-                        ma50_last >= ma50_2_min_ago
-                        and ma100_last < ma100_120_min_ago
-                        and ma5_last < ma25_last
-                        and deviation_sell > 0.25 and deviation_sell < 0.56
-                        and ma2_last < ma2_2_min_ago
-                       
-                    ):
-                        sell = "SELL 4-5-x (12-21 min) con ma50 > and 5-25 and 100 < 100 120 min ago and deviation_sell 0.25-0.56 - FINTA ALLA MARADONA - r 15825 B"
-                        action = "sell"
-                        
-                        # deviation_sell = ma3_last/last_trade_price
-                        
+                        # 24 apr 2023 5-59 da 5-25
                         
                         
                         
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and deviation_ma5_sotto_ma300 > 0.50
+                        and deviation_ma5_sotto_ma300 > 0.40
                         and ma4_last < ma125_last
                         and deviation_sell > 0.57 and deviation_sell < 0.90
                         and ma2_last < ma2_2_min_ago
@@ -20700,19 +25725,21 @@ class ro_cano_che_ritorna:
                         sell = "SELL 4-5-x >90 min con ma50 > con 4 < 20 and deviation_sell 0.35 - 0.90 FINTA ALLA RONALDO - r 15839 A"
                         action = "sell"
                         
-                        # 29 ott 2022 4-125 da 4-20 con 5-300 > 0.50
+                        # 29 ott 2022 4-125 da 4-20 con 5-300 > 0.40
                         
                         
                         
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and deviation_ma5_sotto_ma300 < 0.50
-                        and ma4_last < ma20_last
+                        and deviation_ma5_sotto_ma300 < 0.40
+                        and ma4_last < ma49_last
                         and deviation_sell > 0.57 and deviation_sell < 0.90
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 4-5-x >90 min con ma50 > con 4 < 20 and deviation_sell 0.35 - 0.90 FINTA ALLA RONALDO - r 15839 B"
+                        sell = "SELL 4-5-x >90 min con ma50 > con 4 < 49 and deviation_sell 0.35 - 0.90 FINTA ALLA RONALDO - r 15839 B"
                         action = "sell"
+                        
+                        # 12 apr 2023 4-49 da 4-20
                         
                         
                         
@@ -20721,17 +25748,19 @@ class ro_cano_che_ritorna:
                     elif (
                         ma50_last > ma50_2_min_ago
                         and deviation_ma5_sotto_ma300 > 0.40
-                        and (ma5_prev > ma59_prev and ma5_last < ma59_last)
+                        and (ma5_prev > ma100_prev and ma5_last < ma100_last)
                         and deviation_sell > 0.91 and deviation_sell < 1.49
                         and ma2_last < ma2_2_min_ago
                     ):
 
-                        sell = "SELL 4-5-x dopo 90 min con ma50 > incrocio 5-59 con 5-300 in alto and deviation_sell 0.91 - 1.49 - r 15851 A"
+                        sell = "SELL 4-5-x dopo 90 min con ma50 > incrocio 5-100 con 5-300 in alto and deviation_sell 0.91 - 1.49 - r 15851 A"
                         action = "sell"
 
                         # ma 3-48 mi evita la ricompra e la rivendita con perdita !
                         # 14 ott 2022 5-50 da 5-30 ma 5-300 in alto
                         # 19 ottobre 2022 5-59 da 5-50
+                        # 15 dic 2022 5-90 da 5-59
+                        # 10 gen 2023 5-100 da 5-90
                         
                         
                         
@@ -20752,31 +25781,63 @@ class ro_cano_che_ritorna:
                     
                     
                     
-                    
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and (ma5_prev > ma30_prev and ma5_last < ma30_last)
+                        and deviation_ma5_sotto_ma300 > 0.40
+                        and (ma5_prev > ma59_prev and ma5_last < ma59_last)
                         and deviation_sell > 1.50 and deviation_sell < 2.70
                         and ma2_last < ma2_2_min_ago
                     ):
 
-                        sell = "SELL 4-5-x dopo 90 min con ma50 > incrocio 5-30 (!) and deviation_sell 1.50 - 2.70 - r 15866"
+                        sell = "SELL 4-5-x dopo 90 min con ma50 > incrocio 5-59 (!) and deviation_sell 1.50 - 2.70 - r 15866 A"
                         action = "sell"
                         
                         # 5-30 da 3-25 dopo dolomiti
+                        # 10 dic 2022 5-59 da 5-30
+                        
+                        
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and deviation_ma5_sotto_ma300 < 0.40
+                        and (ma5_prev > ma33_prev and ma5_last < ma33_last)
+                        and deviation_sell > 1.50 and deviation_sell < 2.70
+                        and ma2_last < ma2_2_min_ago
+                    ):
+
+                        sell = "SELL 4-5-x dopo 90 min con ma50 > incrocio 5-33 (!) and deviation_sell 1.50 - 2.70 - r 15866 B"
+                        action = "sell"
+                        
+                        # 5-30 da 3-25 dopo dolomiti
+                        # 10 dic 2022 5-33 da 5-30
                         
                         
                         
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and (ma3_prev > ma13_prev and ma3_last < ma13_last)
+                        and ma300_last > ma300_301_min_ago
+                        and (ma3_prev > ma59_prev and ma3_last < ma59_last)
                         and deviation_sell > 2.71
                         and ma2_last < ma2_2_min_ago
                     ):
 
-                        sell = "SELL 4-5-x dopo 90 min con ma50 > incrocio 3-13 (!) and deviation_sell > 2.71 - r 15879"
+                        sell = "SELL 4-5-x dopo 90 min con ma50 > incrocio 3-59 (!) and deviation_sell > 2.71 AND 300 > 5 ore ago - r 15879 A"
                         action = "sell"
                         
+                        # 21 gen 2023 incrocio 3-59 se 300 > 5 ore ago
+                        
+                        
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and ma300_last < ma300_301_min_ago
+                        and (ma3_prev > ma15_prev and ma3_last < ma15_last)
+                        and deviation_sell > 2.71
+                        and ma2_last < ma2_2_min_ago
+                    ):
+
+                        sell = "SELL 4-5-x dopo 90 min con ma50 > incrocio 3-15 (!) and deviation_sell > 2.71 AND 300 < 5 ore ago - r 15879 B"
+                        action = "sell"
+                        
+                        # 21 gen 2023 incrocio 3-15 se 300 < 5 ore ago
                         
 
                     ######################################################################################## con trend discendente
@@ -20786,12 +25847,13 @@ class ro_cano_che_ritorna:
                         ma50_last < ma50_2_min_ago
                         and ma100_last > ma100_120_min_ago
                         and ma2_last < ma2_2_min_ago 
-                        and deviation_ma39 < -0.235
+                        and deviation_ma39 < -0.243
                     ):
-                        sell = "SELL 4-5-x dopo 90 min con ma50 < con deviation_ma39 < -0.235 and 100 > 100 120 min ago - r 15893 A"
+                        sell = "SELL 4-5-x dopo 90 min con ma50 < con deviation_ma39 < -0.243 and 100 > 100 120 min ago - r 15893 A"
                         action = "sell"
                         
-                        
+                        # 29 gen 2023 dev_39 -0.239 da -0.235
+                        #  1 feb 2023 dev_39 -0.243 da -0.239
                         
                     elif (    
                         ma50_last < ma50_2_min_ago
@@ -20835,21 +25897,35 @@ class ro_cano_che_ritorna:
                     
                     
                     
-                    
-                    
-                    
                     elif (    
                         ma50_last < ma50_2_min_ago
                         and deviation_ma5_sotto_ma300 < 0.10
+                        
+                        and deviation_sell < -0.05
+                        and ma3_last < ma33_last
+                        
                         and ma2_last < ma2_2_min_ago 
-                        and deviation_sell < -0.21 
-                        and ma3_last < ma39_last
                     ):
-                        sell = "SELL 4-5-x dopo 90 min con 5-300 < 0.10 E ma50 < and (deviation_sell < -0.21 and ma3_last < ma39_last) - r 15906 B"
+                        sell = "SELL 4-5-x dopo 90 min con 5-300 < 0.10 E ma50 < and (deviation_sell < -0.05 and ma3_last < ma33_last) - r 15906 B"
                         action = "sell"
                         
-                    
-                    
+                        #  7 feb 2023 -0.23 da -0.21
+                        # 17 mar 2023 3-33 da 3-39 vedi 3 mar 2023 ore 14:46 sembra che 3-39 sia arrivata tardi.
+                        # 27 mar 2023 dev sell -0.05 da -0.23 (stiamo al sell 4-5-x e pure dopo 90 min ! esci !)
+                  
+                    elif (    
+                        ma50_last < ma50_2_min_ago
+                        and deviation_ma5_sotto_ma200 < 0.10
+                        and ma2_last < ma2_2_min_ago 
+                        and deviation_sell < -0.225
+                        and ma3_last < ma33_last
+                    ):
+                        sell = "SELL 4-5-x dopo 90 min con 5-300 < 0.10 E ma50 < and (deviation_sell < -0.225 and ma3_last < ma39_last) - r 15906 c"
+                        action = "sell"
+                        
+                        #  7 feb 2023 -0.23 da -0.21
+                        # 17 mar 2023 3-33 da 3-39 vedi 3 mar 2023 ore 14:46 sembra che 3-39 sia arrivata tardi. vedi 25 luglio 2023 ore 21:50
+                        # 11 ago 2023 5 sotto 200 ma ho lasciato 5 sotto 300 condizione precedente.
                     
             #################################################################################################################### VENDITE SPECIALI !
             ####################################################################################
@@ -20914,32 +25990,155 @@ class ro_cano_che_ritorna:
                 and ma50_last > ma50_2_min_ago
                 and deviation_ma100_sopra_ma300 < 0.40
                 
-                and deviation_ma5_sotto_ma200 > -1.00
+                and deviation_ma5_sotto_ma200 > -0.90
             ):
-                sell = "SELL condizione speciale 2 - SALVAGENTE 2 3-39 con ma50 > - con deviation_ma5_sotto_ma200 > -1.00 and deviation < -0.34 - r 15965"
+                sell = "SELL condizione speciale 2 - SALVAGENTE 2 3-39 con ma50 > - con deviation_ma5_sotto_ma200 > -0.90 and deviation < -0.34 - r 15965"
                 action = "sell"   
                 
 
                 # deviation_ma39 = ma4_last / ma39_last QUESTA HA VENDUTO NEL CROLLO IMPROVVISO DI 1 MINUTO (con -2.06% !)
+                # 23 feb 2023 dev 5 sotto 200 > -0.90 da > -1.00
                 
-                
-         
+
+
+
+
+
+          
             # 3 - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 > -1.00
-            
+
             elif (
-                deviation_ma39 < -0.24
-                and deviation_sell < -0.30
-                and ma2_last <= ma2_2_min_ago 
+                deviation_ma39 < -0.20
+                and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago > 1.50
+                and deviation_ma10_sopra_o_sotto_ma10_30_min_ago > 0.10
                 
+                and deviation_ma39 < -0.20
+                and deviation_sell < -0.308
+                and ma2_last <= ma2_2_min_ago 
+                and delta_450_300 < delta_450_300_60_min
                 and ma50_last < ma50_2_min_ago
                 and deviation_ma100_sopra_ma300 > 0.20
                 
-                and deviation_ma3_sotto_ma200 > -1.20
+                and deviation_ma3_sotto_ma150 > -1.20
             ):
-                sell = "SELL cond. special 3 - SALVAGENTE 3 3-39 < -0.25 e dev sell < -0.31 and dev_sell< -0.305 con ma50< e dev_ma3_sotto_ma200 > -1.20 - r 15985 A"
+                sell = "SELL cond. special 3 - SALVAGENTE 3 3-39 < -0.20 e dev sell < -0.31 and dev_sell< -0.308 con ma50< e dev_ma3_sotto_ma200 > -1.20 - r 15985 A1 prova 1"
+                action = "sell"
+
+            elif (
+                deviation_ma39 < -0.01
+                and deviation_sell < -0.02
+                and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago > 1.50
+                and deviation_ma10_sopra_o_sotto_ma10_30_min_ago < 0.10
+                
+                
+                and ma2_last <= ma2_2_min_ago 
+                and delta_450_300 < delta_450_300_60_min
+                and ma50_last < ma50_2_min_ago
+                and deviation_ma100_sopra_ma300 > 0.20
+                
+                and deviation_ma3_sotto_ma150 > -1.20
+            ):
+                sell = "SELL cond. special 3 - SALVAGENTE 3 3-39 < -0.20 e dev sell < -0.02 and dev_sell< -0.308 con ma50< e dev_ma3_sotto_ma200 > -1.20 - r 15985 A1 ok 2"
                 action = "sell"
                 
+                # 18 set 2023 dev sell -0.02 da -0.01
+          
+
+            elif (
+                deviation_ma39 < -0.20
+                and deviation_sell < -0.15
                 
+                and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago < 1.50
+                and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago > -1.50
+                
+                and deviation_ma10_sopra_o_sotto_ma10_30_min_ago > 0.10
+                
+                and ma2_last <= ma2_2_min_ago 
+                and delta_450_300 < delta_450_300_60_min
+                and ma50_last < ma50_2_min_ago
+                and deviation_ma100_sopra_ma300 > 0.20
+                
+                and deviation_ma3_sotto_ma150 > -1.20
+            ):
+                sell = "SELL cond. special 3 - SALVAGENTE 3 3-39 < -0.20 e dev sell < -0.31 and dev_sell< -0.308 con ma50< e dev_ma3_sotto_ma200 > -1.20 - r 15985 A1 prova 3"
+                action = "sell"
+                
+          
+              
+
+            elif (
+                deviation_ma39 < -0.01
+                and deviation_sell < -0.11
+                
+                and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago < 1.50
+                and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago > -1.50
+                
+                and deviation_ma10_sopra_o_sotto_ma10_30_min_ago < 0.10
+                
+                and ma2_last <= ma2_2_min_ago 
+                and delta_450_300 < delta_450_300_60_min
+                and ma50_last < ma50_2_min_ago
+                and deviation_ma100_sopra_ma300 > 0.20
+                
+                and deviation_ma3_sotto_ma150 > -1.20
+            ):
+                sell = "SELL cond. special 3 - SALVAGENTE 3 3-39 < -0.01 e dev sell < -0.11 and dev_sell< -0.308 con ma50< e dev_ma3_sotto_ma200 > -1.20 - r 15985 A1 ok 4"
+                action = "sell"
+              
+                # 27 set 2023 dev sell -0.11 da -0.10
+
+
+            elif (
+                deviation_ma39 < -0.01
+                and deviation_sell < -0.01
+                
+                and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago < -1.50
+                and deviation_ma10_sopra_o_sotto_ma10_30_min_ago < 0.10
+                
+                and ma2_last <= ma2_2_min_ago 
+                and delta_450_300 < delta_450_300_60_min
+                and ma50_last < ma50_2_min_ago
+                and deviation_ma100_sopra_ma300 > 0.20
+                
+                and deviation_ma3_sotto_ma150 > -1.20
+            ):
+                sell = "SELL cond. special 3 - SALVAGENTE 3 3-39 < -0.20 e dev sell < -0.31 and dev_sell< -0.308 con ma50< e dev_ma3_sotto_ma200 > -1.20 - r 15985 A1 prova 5"
+                action = "sell"
+
+          
+            elif (
+                deviation_ma39 < -0.01
+                and deviation_sell < -0.15
+                
+                and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago < -1.50
+                and deviation_ma10_sopra_o_sotto_ma10_30_min_ago > 0.10
+                
+                and ma2_last <= ma2_2_min_ago 
+                and delta_450_300 < delta_450_300_60_min
+                and ma50_last < ma50_2_min_ago
+                and deviation_ma100_sopra_ma300 > 0.20
+                
+                and deviation_ma3_sotto_ma150 > -1.20
+            ):
+                sell = "SELL cond. special 3 - SALVAGENTE 3 3-39 < -0.20 e dev sell < -0.31 and dev_sell< -0.308 con ma50< e dev_ma3_sotto_ma200 > -1.20 - r 15985 A1 prova 6"
+                action = "sell"
+
+
+          
+
+          
+            elif (
+                deviation_ma39 < -0.20
+                and deviation_sell < -0.308
+                and ma2_last <= ma2_2_min_ago 
+                and delta_450_300 < delta_450_300_60_min
+                and ma50_last < ma50_2_min_ago
+                and deviation_ma100_sopra_ma300 > 0.20
+                
+                and deviation_ma3_sotto_ma150 > -1.20
+            ):
+                sell = "SELL cond. special 3 - SALVAGENTE 3 3-39 < -0.20 e dev sell < -0.31 and dev_sell< -0.308 con ma50< e dev_ma3_sotto_ma200 > -1.20 - r 15985 A1"
+                action = "sell"
                 
                 # 27 giu 2022 dev sell a 0.305 da 0.31
                 # deviation_ma39 = ma4_last / ma39_last QUESTA HA VENDUTO NEL CROLLO IMPROVVISO DI 1 MINUTO (con -2.06% !)
@@ -20950,7 +26149,47 @@ class ro_cano_che_ritorna:
                 
                 # > estate dev 39 -0.24 da -0.25 dev sell -0.30 da -0.31 
                 # 13 set -3% !!! deviation_ma3_sotto_ma200 > -1.20 da deviation_ma3_sotto_ma200 > -1.20 
-                # 13 set -3% <= da <
+                # 21 gen 2023 dev sell -0.303 da -0.30
+                # 20 feb 2023 -0.309 da -0.303 con doppio delta 450-300 GIORNO !
+                # 22 feb 2023 -0.308 da -0.309 con doppio delta 450-300 GIORNO !
+                #  9 lug 2023 deviation_ma39 < -0.20 da < -0.24
+
+
+
+
+
+
+          
+                
+            elif (
+                deviation_ma39 < -0.24
+                and deviation_sell < -0.304
+                and ma2_last <= ma2_2_min_ago 
+                and delta_450_300 > delta_450_300_60_min
+                and ma50_last < ma50_2_min_ago
+                and deviation_ma100_sopra_ma300 > 0.20
+                
+                and deviation_ma3_sotto_ma150 > -1.20
+            ):
+                sell = "SELL cond. special 3 - SALVAGENTE 3 3-39 < -0.25 e dev sell < -0.31 and dev_sell< -0.304 con ma50< e dev_ma3_sotto_ma200 > -1.20 - r 15985 A2"
+                action = "sell"
+                
+                # 27 giu 2022 dev sell a 0.305 da 0.31
+                # deviation_ma39 = ma4_last / ma39_last QUESTA HA VENDUTO NEL CROLLO IMPROVVISO DI 1 MINUTO (con -2.06% !)
+                # 21 giugno 2022 RICORDO TREMENDO 9372 ha venduto a -2.23% !!!
+                # COME PRIMA COSA HO NOTATO CHE AVEVA DEVIATION INVECE DI DEVIATON SELL 
+                # ma non sapendo se era questo il problema ho creato la prossima condizione speciale.
+                
+                
+                # > estate dev 39 -0.24 da -0.25 dev sell -0.30 da -0.31 
+                # 13 set -3% !!! deviation_ma3_sotto_ma200 > -1.20 da deviation_ma3_sotto_ma200 > -1.20 
+                # 21 gen 2023 dev sell -0.303 da -0.30
+                # 20 feb 2023 -0.304 da -0.303 con doppio delta 450-300 NOTTE !
+                
+                
+                
+                
+                
                 
             # 4 - SELL ricordo terribile del 21 giugno 2022
             
@@ -20974,32 +26213,96 @@ class ro_cano_che_ritorna:
             elif (
                 
                 ma3_last < ma100_last
-                and deviation_sell < -0.68
+                and deviation_sell < -0.67
                 and deviation_ma100_sopra_ma300 < 0.20
                 and ma2_last < ma2_2_min_ago 
              
             ):
-                sell = "SELL condizione speciale 5 - 21 giugno 2022 - deviation_sell < -0.68 - r 16027 Bb"
+                sell = "SELL condizione speciale 5 - 21 giugno 2022 - deviation_sell < -0.67 - r 16027 BB"
                 action = "sell"   
              
                 # 21 giugno 2022 RICORDO TERRIBILE del 21 giugno 2022 !  9372 A ha venduto a -2.23% !!!
-                
+                # 17 mar 2021 dev sel -0.67 da -0.68
                 
             
                 
-            # 5 - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 > -1.00
-            
+            # 5 - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 > -0.50
+
             elif (
-                deviation_ma39 < -0.255
-                and deviation_sell < -0.362
+                ma78_last < ma78_120_min_ago
+                and ma300_last < ma300_301_min_ago
+                and delta_150_100 <= delta_150_100_60_min
+                
+                and deviation_ma39 < 0.05
+                and deviation_sell < -0.105
+                
+                
+                and ma50_last <= ma50_2_min_ago
+                and deviation_ma100_sopra_ma300 < 0.40
+                
+                and deviation_ma5_sotto_ma200 > -0.50
+                
+                and ma2_last <= ma2_2_min_ago 
+                
+            ):
+                sell = "SELL condizione speciale 6 GIORNO con ma300> 5 ore - dev 3-39 < 0.05 and dev_sell < -0.105 - con ma50 < e con ma5 sotto ma200 > -0.90 - r 16045"
+                action = "sell"
+                
+                # 15 set 2023 quando 300 scende da 5 ore non devi vendere in perdita ! a ricomprare ci penseranno altre condizioni !
+                # 15 set 2023 quando GIORNO a -0.11 da -0.07
+                #  2 ott 2023 DOPO UN AKTRO -1 HO FATTO QUESTA and deviation_ma5_sotto_ma200 > -0.50
+                #  2 ott 2023 TOLTO and macd < macd_2_min_ago ARRIVATO TARDI ! VEDI 2 OTTOBRE 2023 ORE 20 e 40 - r 16047 B2
+
+            # 5 - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 > -1.00
+
+            elif (
+                ma78_last > ma78_120_min_ago
+                and deviation_ma39 < -0.01
+                and deviation_sell < -0.34
                 and ma2_last < ma2_2_min_ago 
                 
                 and ma50_last < ma50_2_min_ago
                 and deviation_ma100_sopra_ma300 < 0.40
                 
-                and deviation_ma5_sotto_ma200 > -1.00
+                and deviation_ma5_sotto_ma200 > -0.80
             ):
-                sell = "SELL condizione speciale 6 - SALVAGENTE 4 deviation 3-39 <-0.255 and dev <-0.362 - con ma50 < e con ma5 sotto ma200 > -1.00 - r 16047"
+                sell = "SELL condizione speciale 6 - SALVAGENTE 4 deviation 3-39 < -0.10 and dev_sell < -0.34 - con ma50 < e con ma5 sotto ma200 > -0.80 - r 16047 A"
+                action = "sell"
+                
+                #   9 GIU 2023 dev 3-39 a -0.17 da -0.25
+                #   9 GIU 2023 dev sell a -0.35 da -0.36
+                #  15 GIU 2023 dev_39 -0.15 da -0.17 dopo che ha fatto -1.15% il 14 giu 2023 ore 22:06
+                #  15 GIU 2023 dev sell a -0.349 da -0.35
+                #   7 lug 2023 dev sell a -0.348 da -0.349
+                #   7 lug 2023 deviation 3-39 < -0.10 da < -0.15
+                #  1 set 2023 and deviation_ma5_sotto_ma200 > -0.80 da -0.90
+                #  1 set 2023 and deviation_ma39 < -0.01 da -0.10 aveva fatto -0.66
+                #  1 set 2023 dev sell a -0.34 da -0.348
+
+
+
+
+
+
+
+          
+            elif (
+                ma78_last < ma78_120_min_ago
+                and ma300_last > ma300_301_min_ago
+                
+                and deviation_ma39 < 0.06
+                and deviation_sell < -0.10
+                
+                
+                and ma50_last <= ma50_2_min_ago
+                and deviation_ma100_sopra_ma300 < 0.40
+                
+                and deviation_ma5_sotto_ma200 > -0.90
+                
+                and ma2_last <= ma2_2_min_ago 
+                and macd < 5
+            ):
+                sell = "SELL condizione speciale 6 con ma300> 5 ore - SALVAGENTE 4 deviation 3-39 < 0.05 and dev_sell < -0.10 - con ma50 < e con ma5 sotto ma200 > -0.90 - r 16047 B1"
                 action = "sell"   
                 
 
@@ -21007,16 +26310,78 @@ class ro_cano_che_ritorna:
                 # modifica solo devation.
                 # > estate -0.37 da -0.33
                 # 18 set HA FATTO -0.84 ! dev 39 -0.255 da 0.26 E dev sell -0.362 da -0.37
+                # 25 gen 2023 HA FATTO -0.95 ! dev 39 -0.253 da 0.255 E dev sell -0.36 da -0.362
+                #  1 feb 2023 dev 39 -0.251 da -0.253 ha fatto -1.31 (RCCR -1.98% !) ( sta migliorando ! )
+                #  1 feb 2023 deviation_ma5_sotto_ma200 > -0.90 da > 1.00 se vado a vedere sell 30 gen 2023 oe 20:12 5-200 = -1.02 !
+                # 17 mar 2023 dev39 a -0.25 da -0.251
+                # 27 mag 2023 dev39 a -0.20 da -0.25
+                # 30 mag 2023 dev39 a -0.195 da -0.20
+                # 30 mag 2023 dev sell a -0.325 da -0.33
+                
+                #  1 giu 2023 ha fatto -1.23% !
+                #  1 giu 2023 dev39 a -0.192 da -0.195
+                #  1 giu 2023 dev sell a -0.323 da -0.325
+                #  8 giu 2023 and deviation_sell < -0.34
+                # 15 giu 2023 and deviation_sell < -0.335 da -0.34
+                # 31 lug 2023 and deviation_sell < -0.32 da -0.335
+                # 11 ago 2023 and deviation_sell < -0.30 da -0.32
+                # 16 ago 2023 aggiunto macd < macd 2 min ago
+                # 24 ago 2023 and deviation_ma39 < 0.05 ! il 22 ago ha fatto -1.20 !
+                # 12 set 2023 and dev sell < -0.05 da -0.30
+                #  2 ott 2023 -1 tolto macd < 2 min ago era < 5
+
+
+            elif (
+                ma78_last < ma78_120_min_ago
+                and ma300_last < ma300_301_min_ago
+                and delta_150_100 <= delta_150_100_60_min
+                
+                and deviation_ma39 < 0.05
+                and deviation_sell < -0.105
                 
                 
+                and ma50_last <= ma50_2_min_ago
+                and deviation_ma100_sopra_ma300 < 0.40
+                
+                and deviation_ma5_sotto_ma200 > -0.90
+                
+                and ma2_last <= ma2_2_min_ago 
+                and macd < macd_2_min_ago
+            ):
+                sell = "SELL condizione speciale 6 GIORNO con ma300> 5 ore - dev 3-39 < 0.05 and dev_sell < -0.105 - con ma50 < e con ma5 sotto ma200 > -0.90 - r 16047 B2"
+                action = "sell"
+                
+                # 15 set 2023 quando 300 scende da 5 ore non devi vendere in perdita ! a ricomprare ci penseranno altre condizioni !
+                # 15 set 2023 quando GIORNO a -0.11 da -0.07
+          
+            elif (
+                ma78_last < ma78_120_min_ago
+                and ma300_last > ma300_301_min_ago
+                and delta_150_100 <= delta_150_100_60_min
+                
+                and deviation_ma39 < 0.05
+                and deviation_sell < -0.07
+                
+                
+                and ma50_last <= ma50_2_min_ago
+                and deviation_ma100_sopra_ma300 < 0.40
+                
+                and deviation_ma5_sotto_ma200 > -0.90
+                
+                and ma2_last <= ma2_2_min_ago 
+                and macd < macd_2_min_ago
+            ):
+                sell = "SELL condizione speciale 6 NOTTE con ma300> 5 ore - SALVAGENTE 4 dev 3-39 < 0.05 and dev_sell < -0.07 - con ma50 < e con ma5 sotto ma200 > -0.90 - r 16047 B3"
+                action = "sell"
+                
+                # 15 set 2023 quando 300 scende da 5 ore non devi vendere in perdita ! a ricomprare ci penseranno altre condizioni !
+
+                
+          
                 #########################################################################################################################
                 
                 
-                
-                
-                
-            
-            
+              
             
             ############################################################################## SALVAGENTE con deviation_ma5_sotto_ma200 < -1.00 and > -1.50
             
@@ -21140,10 +26505,6 @@ class ro_cano_che_ritorna:
                 
                 
                 
-                
-                
-                
-                
             ##################################################################################### SALVAGENTE con deviation_ma5_sotto_ma200 < -1.50
             
             
@@ -21189,9 +26550,6 @@ class ro_cano_che_ritorna:
          
             
             
-            
-            
-            
             # 13 - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 < -1.50
             
             elif (
@@ -21235,19 +26593,11 @@ class ro_cano_che_ritorna:
 
                 # deviation_ma39 = ma4_last / ma39_last QUESTA HA VENDUTO NEL CROLLO IMPROVVISO DI 1 MINUTO (con -2.06% !!!)!
                 # 14 giu 2022 -0.52 da 0.50
-                
-                
-                
+              
                 
                 ##################################################################################################################### fine salvagente
                 
                 
-              
-            
-            
-            
-            
-            
             
             ################################################################################################################## CROLLO IMPROVVISO !
             
@@ -21258,12 +26608,12 @@ class ro_cano_che_ritorna:
             elif (
                 ma2_last < ma4_last
                 and ma2_last < ma6_last
-                and deviation_sell < -0.58
+                and deviation_sell < -0.575
                 
-                and deviation_ma5_sotto_ma200 > -1.00
+                and deviation_ma5_sotto_ma200 > -0.90
             ):
                   
-                sell = "SELL condizione speciale 15 - CROLLO IMPROVVISO - and deviation_ma5_sotto_ma200 > -1.00 - r 16311"
+                sell = "SELL condizione speciale 15 - CROLLO IMPROVVISO - and deviation_ma5_sotto_ma200 > -0.90 - r 16311"
                 action = "sell"
             
                 # con -0.59 il 6 feb 2022 ha fatto -0.85
@@ -21271,7 +26621,7 @@ class ro_cano_che_ritorna:
                 # deviation = ma4_last / last_trade_price
 
                 # FORSE E' L' UNICA DEVIATION CHE MI POTRA' SALVARE DA UN CROLLO IMPROVVISO COME QUELLO DEL 3 NOVEMBRE 2021
-                
+                # 17 mar 2023 dev sel -0.575 da -0.58
                 
                 
                 
@@ -21316,12 +26666,12 @@ class ro_cano_che_ritorna:
                 
                 and delta_1_200_30 < delta_2_200_30_30_min
                 
-                and deviation_crollo_24_aprile < -0.55
+                and deviation_crollo_24_aprile < -0.54
                 
                 and deviation_ma5_sotto_ma200 > -1.00
             ): 
                 
-                sell = "SELL cond. special 17 - DOPO CROLLO IMPROVVISO del 24 aprile 2022 - and dev_ma5_sotto_ma200 > -1.00 - (-0.55) giorno E 33>78 - r 16369 a1"
+                sell = "SELL cond. special 17 -0.54% - DOPO CROLLO IMPROVVISO del 24 aprile 2022 - and dev_ma5_sotto_ma200 > -1.00 - giorno E 33>78 - r 16369 A1"
                 action = "sell"
                         
                 # ho aggiunto anche questa vendita speciale dopo il 24 aprile -1%
@@ -21337,24 +26687,25 @@ class ro_cano_che_ritorna:
                 # 21 giu 2022 a -0.56 da -0.57
                 # 22 lug 2022 a -0.55 da -0.56 dopo grande perdita !
                 # ATTENZIONE ! 22 lug 2022 questa condizione ha fatto -1.42 % !!! per fortuna RCCR ha fatto -0.52 e l' ho portata in MADDOG
-                
+                # 25 GEN 2023 a -0.54 da -0.55 dopo grande perdita -1.43 % ore 16:00 del 23 gennaio 2023 !
                 
                 
             # 18 - SELL condizione speciale dopo crollo improvviso del 24 aprile 2022 ! and deviation_ma5_sotto_ma200 > -1.00
                     
-            elif (    
-                ma2_last < ma4_last
-                and ma2_last < ma6_last
-                and ma33_last < ma78_last
+            elif (
+                ma2_last <= ma3_last
+                and ma2_last <= ma4_last
+                and ma2_last <= ma6_last
+                and ma28_last < ma78_last
                 
                 and delta_1_200_30 < delta_2_200_30_30_min
                 
-                and deviation_crollo_24_aprile < -0.56
+                and deviation_crollo_24_aprile <= -0.55
                 
-                and deviation_ma5_sotto_ma200 > -1.00
+                and deviation_ma5_sotto_ma200 > -0.95
             ): 
                 
-                sell = "SELL cond. special 18 - DOPO CROLLO IMPROVVISO del 24 aprile 2022 - and dev_ma5_sotto_ma200 > -1.00 - (-0.56) giorno MA 33<78 - r 16399 a2"
+                sell = "SELL cond. special 18 - DOPO CROLLO IMPROVVISO del 24 aprile 2022 - and dev_ma5_sotto_ma200 > -1.00 - (-0.56) giorno MA 33<78 - r 16399 A2"
                 action = "sell"
                         
                 # ho aggiunto anche questa vendita speciale dopo il 24 aprile -1%
@@ -21366,6 +26717,9 @@ class ro_cano_che_ritorna:
                 # MA VA BENE !
                 # con delta_1_200_30 < delta_2_200_30_30_min ho aumentato a -0.56
                 
+                # alt fermi tutti
+                # 18 marzo 2023 ore 17:31 ha fatto -2% ! allora ho messo -0.55 da -0.56
+                #  6 apr 2023 -0.55 da -0.56
                 
                 
                 
@@ -21398,8 +26752,6 @@ class ro_cano_che_ritorna:
             
             
             
-            
-            
             # 20 - SELL condizione speciale dopo il crollo improvviso del 24 aprile 2022 ! and deviation_ma5_sotto_ma200 < -1.00
                     
             elif (    
@@ -21426,18 +26778,34 @@ class ro_cano_che_ritorna:
                 
                 
                 
-            # 21 - SELL condizione speciale dopo il crollo improvviso del 24 aprile 2022 ! and deviation_ma5_sotto_ma200 < -1.00
-                    
+            # 21 - SELL condizione special 21 Bocelli - core 'ngrato - > CROLLO IMPROVVISO - and deviation_ma5_sotto_ma200 < -0.70
+            
+            
             elif (    
-                ma2_last < ma4_last
-                and ma2_last < ma6_last
+                ma2_last <= ma4_last
+                and ma300_last > ma300_301_min_ago
+                and ma2_last <= ma6_last
                 and deviation_crollo_24_aprile < -0.57
                 
                 and delta_1 > delta_2
-                and deviation_ma5_sotto_ma200 < -1.00
+                and deviation_ma5_sotto_ma200 < -0.70
             ): 
                 
-                sell = "SELL cond special 21 - DOPO IL CROLLO IMPROVVISO del 24 apr 2022 - and delta_1 > delta_2 and dev_ma5_sotto_ma200 < -1.00 < -0.57 - r 16480 b"
+                sell = "SELL cond special 21 Bocelli - core 'ngrato - > CROLLO IMPROVVISO - and delta_1 > delta_2 e dev_ma5_sotto_ma200 < -0.70 < dev sell -0.572 - r 16480 Bx"
+                action = "sell"
+                
+                
+            elif (    
+                ma2_last <= ma4_last
+                and ma300_last < ma300_301_min_ago
+                and ma2_last <= ma6_last
+                and deviation_crollo_24_aprile < -0.50
+                
+                and delta_1 > delta_2
+                and deviation_ma5_sotto_ma200 < -0.70
+            ): 
+                
+                sell = "SELL cond special 21 Bocelli - core 'ngrato - > CROLLO IMPROVVISO - and delta_1 > delta_2 e dev_ma5_sotto_ma200 < -0.70 < dev sell -0.572 -0.572 - r 16480 By"
                 action = "sell"
                         
                 # ho aggiunto anche questa vendita speciale dopo il 24 aprile -1%
@@ -21448,7 +26816,12 @@ class ro_cano_che_ritorna:
                 # -0.60 ha generato perdita -0.84 il 13 maggio 2022 cosi' ho ridotto a -0.59
                 # MA VA BENE !
                 # 27 giu 2022 a -0.58 da -0.59
-                # 2 lug 2022 a -0.57 da -0.58 dopo che ha fatto -0.96 durante un crollo
+                #  2 lug 2022 a -0.57 da -0.58 dopo che ha fatto -0.96 durante un crollo
+                # 10 mar 2023 5 sotto 200 a <-0.90 da <-1.00
+                # 10 mar 2023 a -0.572 da -0.57
+                # 6 apr 2023 dev crollo -0.571 da -0.572
+                # 6 apr 2023 dev 5 sotto 200 < -0.70 da < -0.90
+                
                 
                 
                 ######################################################################################### fine dopo il crollo improvviso del 24 aprile 2022
@@ -21643,7 +27016,7 @@ class ro_cano_che_ritorna:
             
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
-                and deviation_sell < -0.43
+                and deviation_sell < -0.36
                 
                 and deviation_ma100_sopra_ma200 > -0.70
                 and deviation_ma100_sopra_ma300 > 0.50
@@ -21654,12 +27027,12 @@ class ro_cano_che_ritorna:
                 and ma2_last < ma2_2_min_ago
             ):
 
-                sell = "SELL cond. special 30 A - DOLCE ATTESA 270 sec con ma13 < and deviation < -0.43 CON 100 sopra 300 > 0.50 statt' accorto ! - r 16694 a"
+                sell = "SELL cond. special 30 A - DOLCE ATTESA 270 sec con ma13 < and deviation < -0.36 CON 100 sopra 300 > 0.50 statt' accorto ! - r 16694 A"
                 action = "sell"
                 
                 # 4 feb 2022 con <-0.26 ha fatto -0.88% (dopo +4.29%)
                 # 7 feb 2022 con <-0.345 e 270 sec ha fatto -0.38% - aumenta a 0.355 ! - eventualmente ci pensa la condizione CROLLO IMPROVVISO CHE FUNZIONA !
-                
+                # 30 ago 2023 and deviation_sell -0.36 da -0.43
                 
                 
                 
@@ -21733,7 +27106,7 @@ class ro_cano_che_ritorna:
                 and ma2_last < ma2_2_min_ago
             ):
 
-                sell = "SELL condizione speciale 32 - TEMPO e se ma8 < ma50 and deviation_sell < -0.49 - r 16743 A"
+                sell = "SELL condizione speciale 32 - TEMPO e se ma8 < ma50 and deviation_sell < -0.49 - r 16720"
                 action = "sell"
                         
                 # ma13 troppo lenta !
@@ -21743,47 +27116,64 @@ class ro_cano_che_ritorna:
                 
                 
                 
-            # 32 B1a - SELL condizione speciale ROOT DOWN DEEP - ro cano VENDE dopo 150 min = 9000 sec con 5-90
+                
+                
+                
+                
+                
+                
+                
+            # dopo 150 min fino a 240 min
+            # dopo 240 min
+            
+            
+            # 32 B1a - SELL condizione speciale ROOT DOWN DEEP - ro cano VENDE dopo 150 min = 9000 sec e fino a 14400 sec = 240 min con 5-90
             
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds_sell_5_90
+                and seconds_since_last_trade < max_hold_time_in_seconds_sell_5_180
                 and deviation_sell > 0.80
                 
                 and (ma5_prev > ma50_prev and ma5_last < ma50_last)
                 and deviation_ma5_sotto_ma300 > 0.25
                 and deviation_ma5_sotto_ma300 < 0.40
                 and ma300_last > ma300_120_min_ago
-                
                 and ma2_last < ma2_2_min_ago
-           
+          
             ):
-
-                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 150 min = 9000 sec con 5-50 - r 16743 B1aX"
+                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 150 min = 9000 sec e fino a 14400 sec = 240 min con 5-50 - r 16721"
                 action = "sell"
-                        
+                
                 # 24 set 2022 ore 17:23
                 
                 
-            # 32 B1a - SELL condizione speciale ROOT DOWN DEEP - ro cano VENDE dopo 150 min = 9000 sec con 5-90
+                
+                
+            # 32 B1a - SELL condizione speciale ROOT DOWN DEEP - ro cano VENDE dopo 150 min = 9000 sec e fino a 14400 sec = 240 min con 5-90
             
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds_sell_5_90
+                and seconds_since_last_trade < max_hold_time_in_seconds_sell_5_180
                 and deviation_sell < 0.80
+              
                 and deviation_ma5_sotto_ma300 > 0.25
                 and deviation_ma5_sotto_ma300 < 0.40
                 and ma300_last > ma300_120_min_ago
                 
-                and (ma5_prev > ma125_prev and ma5_last < ma125_last)
+                and (ma5_prev > ma150_prev and ma5_last < ma150_last)
                 
                 and ma2_last < ma2_2_min_ago
-           
+                and macd < macd_2_min_ago
             ):
 
-                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 150 min = 9000 sec con 5-125 - r 16743 B1aY"
+                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 150 min = 9000 sec e fino a 14400 sec = 240 min con 5-150 - r 16722"
                 action = "sell"
                         
                 # 24 set 2022 ore 17:23
                 #  3 nov 2022 5-125 da 5-100
+                # 15 gen 2023 5-150 da 5-125
+                
+                
                 
                 
                 
@@ -21799,17 +27189,20 @@ class ro_cano_che_ritorna:
                 and deviation_ma5_sotto_ma300 < 0.25
                 and ma300_last > ma300_120_min_ago
                 
-                and (ma5_prev > ma90_prev and ma5_last < ma90_last)
+                and (ma5_prev > ma100_prev and ma5_last < ma100_last)
                 and ma2_last < ma2_2_min_ago
            
             ):
 
-                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 150 min e fino a 240 min con 5-90 - r 16743 B2bxA1"
+                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 150 min e fino a 240 min con 5-90 - r 16723"
                 action = "sell"
                         
                 # 24 set 2022 ore 17:23
                 # 11 ott 2022 dev sell 0.10 da 0.15
                 # 21 ott 2022 dev sell 0.11 da 0.10
+                #  3 lug 2023 5-100 da 5-90
+                
+                
                 
                 
                 
@@ -21820,143 +27213,100 @@ class ro_cano_che_ritorna:
                 and seconds_since_last_trade < max_hold_time_in_seconds_sell_5_180
                 and ma300_last > ma300_720_min_ago
                 and delta_1 > delta_2
-                and deviation_sell > 0.11
+                and deviation_sell < -0.11
                 and deviation_ma5_sotto_ma300 < 0.25
                 and ma300_last > ma300_120_min_ago
                 
-                and (ma5_prev > ma90_prev and ma5_last < ma90_last)
+                and (ma5_prev > ma100_prev and ma5_last < ma100_last)
                 
                 and ma2_last < ma2_2_min_ago
            
             ):
 
-                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 150 min e fino a 240 min con 5-90 - r 16743 B2bxA2x"
+                sell = "SELL condizione speciale 32 ROOT DOWN DEEP - ro cano VENDE dopo 150 min e fino a 240 min con 5-100 - r 16724"
                 action = "sell"
                         
                 # 24 set 2022 ore 17:23
                 # 11 ott 2022 dev sell 0.10 da 0.15
-                # 21 ott 2022 dev sell 0.11 da 0.10
+                # 21 ott 2022 dev sell >0.11 da >0.10
+                #  2 gen 2023 dev sell <0.05 da >0.11
+                #  3 gen 2023 dev sell <-0.09 da <0.05
+                # 1 lug 2023 5-100 da 5-90
+                # 1 lug 2023 dev sell <-0.11 da <0.09
                 
                 
                 
-            # 32 B2b - SELL condizione speciale ROOT DOWN DEEP - ro cano VENDE dopo 150 min e fino a 240 min con 5-90
+            # 32 SELL condizione speciale ROOT DOWN DEEP - ro cano VENDE dopo 150 min e fino a 240 min con 5-90
             
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds_sell_5_90
                 and seconds_since_last_trade < max_hold_time_in_seconds_sell_5_180
                 and ma300_last < ma300_720_min_ago
                 and delta_1 > delta_2
-                and deviation_sell > 0.11
+                and deviation_sell > 0.15
                 and deviation_ma5_sotto_ma300 < 0.25
                 and ma300_last > ma300_120_min_ago
                 
                 and (ma4_prev > ma86_prev and ma4_last < ma86_last)
-                
+                and ma18_last < ma18_2_min_ago
                 and ma2_last < ma2_2_min_ago
-           
+                and macd < macd_2_min_ago
             ):
 
-                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 150 min e fino a 240 min con 4-86 - r 16743 B2bxA2y"
+                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 150 min e fino a 240 min con 4-86 - r 16725x"
                 action = "sell"
                         
                 # 24 set 2022 ore 17:23
                 # 11 ott 2022 dev sell 0.10 da 0.15
                 # 21 ott 2022 dev sell 0.11 da 0.10
+                # 20 feb 2023 18 < 18 2 min ago
                 
                 
-                
-                
-                
-                
-            ############ attenzione ! vedi giorno 7 novembre 2022 ore 21:34 MADDOG NON HA VENDUTO CON UN GUADAGNO DELL 1% MENTRE ma300 scendeva da 6 ore
-            
-            # 32 B2b - SELL condizione speciale ROOT DOWN DEEP - ro cano VENDE dopo 240 min = 9000 sec con 5-180
-            
-            elif (
-                
-                seconds_since_last_trade < max_hold_time_in_seconds_sell_5_180
-                and ma300_last > ma300_301_min_ago
-                
-                and deviation_sell > 0.11
-                and deviation_ma5_sotto_ma300 < 0.25
-                and ma300_last > ma300_120_min_ago
-                
-                and (ma5_prev > ma180_prev and ma5_last < ma180_last)
-                and ma2_last < ma2_2_min_ago
-           
-            ):
-
-                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 240 min con 5-180 - r 16743 B2bxB1"
-                action = "sell"
-                        
-                # 24 set 2022 ore 17:23
-                # 11 ott 2022 dev sell 0.10 da 0.15
-                # 21 ott 2022 dev sell 0.11 da 0.10
-                
-                
-                
-            elif (
-                
-                seconds_since_last_trade < max_hold_time_in_seconds_sell_5_180
-                and ma300_last < ma300_301_min_ago
-                and deviation_sell > 0.80
-                
-                and (ma3_prev > ma69_prev and ma3_last < ma69_last)
-                and ma300_last > ma300_120_min_ago
-                
-                and ma2_last < ma2_2_min_ago
-           
-            ):
-
-                sell = "SELL condizione speciale - ro cano VENDE dopo 240 min con 3-69 SE ma300 scende da 5 ore e se guadagna almeno 0.80 - r 16743 amen"
-                action = "sell"
-                        
-                # 24 set 2022 ore 17:23
-                # 11 ott 2022 dev sell 0.10 da 0.15
-                # 21 ott 2022 dev sell 0.11 da 0.10
-                # prendi e porta a casa cazzo se 300 scende da 5 ore ! e stai guadagnando > 0.80 % - potrebbe essere un rimbalzo.
-                
-                
-                
-            elif (
-                
-                seconds_since_last_trade < max_hold_time_in_seconds_sell_5_180
-                and deviation_sell > 0.11
-                and deviation_ma5_sotto_ma300 < 0.25
-                and ma300_last > ma300_120_min_ago
-                
-                and (ma5_prev > ma180_prev and ma5_last < ma180_last)
-                and ma2_last < ma2_2_min_ago
-           
-            ):
-
-                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 240 min con 5-180 - r 16743 B2bxB"
-                action = "sell"
-                        
-                # 24 set 2022 ore 17:23
-                # 11 ott 2022 dev sell 0.10 da 0.15
-                # 21 ott 2022 dev sell 0.11 da 0.10
-                
-                
-                
-                
-                
-                
-                
-            # 32 B2b - SELL condizione speciale ROOT DOWN DEEP - ro cano VENDE dopo 150 min = 9000 sec con 5-90
+            # 32 SELL condizione speciale ROOT DOWN DEEP - ro cano VENDE dopo 150 min e fino a 240 min con 5-90
             
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds_sell_5_90
-                and deviation_sell < -0.12
+                and seconds_since_last_trade < max_hold_time_in_seconds_sell_5_180
+                and ma300_last < ma300_720_min_ago
+                and delta_1 > delta_2
+                
                 and deviation_ma5_sotto_ma300 < 0.25
                 and ma300_last > ma300_120_min_ago
                 
-                and (ma22_prev > ma300_prev and ma22_last < ma300_last)
+                and (ma4_prev > ma300_prev and ma4_last < ma300_last)
+                and ma18_last < ma18_2_min_ago
+                and ma2_last < ma2_2_min_ago
+                and macd < macd_2_min_ago
+            ):
+
+                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 150 min e fino a 240 min con 4-300 - r 16725y"
+                action = "sell"
+                        
+                # 24 set 2022 ore 17:23
+                # 11 ott 2022 dev sell 0.10 da 0.15
+                # 21 ott 2022 dev sell 0.11 da 0.10
+                # 20 feb 2023 18 < 18 2 min ago
+                
+                
+               
+                
+                
+            # 32 SELL condizione speciale ROOT DOWN DEEP - ro cano VENDE dopo 150 min = 9000 sec e fino a 240 min con 22-300
+            
+            elif (
+                seconds_since_last_trade > max_hold_time_in_seconds_sell_5_90
+                and seconds_since_last_trade < max_hold_time_in_seconds_sell_5_180
+                and deviation_sell < -0.10
+                
+                and deviation_ma5_sotto_ma300 < 0.25
+                and ma300_last > ma300_120_min_ago
+                
+                and (ma20_prev > ma300_prev and ma20_last < ma300_last)
                 and ma2_last < ma2_2_min_ago
              
             ):
 
-                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 150 min = 9000 sec con 22-300 ! stai calmo - r 16743 B2by"
+                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 150 min = 9000 sec e fino a 240 min con 20-300 ! and dev_sell < -0.10 - stai calmo - r 16729"
                 action = "sell"
                         
                 # 24 set 2022 ore 17:23
@@ -21965,89 +27315,171 @@ class ro_cano_che_ritorna:
                 # 12 ott 2022 22-300 !
                 # 27 ott 2022 dev sell -0.12 da < 0.10 
                 # dopo 150 min faccio cominciare i binari !
+                # 29 mag 2023 20-300 da 22-300 !
+                # 29 mag 2023 dev_sell < -0.10 da < -0.12
                 
                 
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds_sell_5_90
+                and seconds_since_last_trade < max_hold_time_in_seconds_sell_5_180
                 and deviation_ma100_sopra_ma300 > 0.20
+                
                 and ma300_last < ma300_120_min_ago
                 
-                and (ma5_prev > ma300_prev and ma5_last < ma300_last)
+                and (ma8_prev > ma300_prev and ma8_last < ma300_last)
                 and ma2_last < ma2_2_min_ago
            
             ):
 
-                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 150 min = 9000 sec con 5-300 - r 16743 Bx1"
+                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 150 min = 9000 sec e fino a 240 min con 8-300 - r 16730"
                 action = "sell"
                         
                 # 24 set 2022 ore 17:23
                 #  3 nov 2022 5-300 da 5-90
+                # 24 apr 2023 8-300 da 5-300
                 
                 
                 
+            # SELL condizione speciale 32 B ROOT DOWN DEEP - maddog VENDE dopo 150 min = 9000 sec e fino a 240 min con 5-300 GIORNO ! cazzo
+          
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds_sell_5_90
+                and seconds_since_last_trade < max_hold_time_in_seconds_sell_5_180
+                
                 and delta_300_100 < delta_300_100_60_min
                 and deviation_ma100_sopra_ma300 < 0.20
                 and ma300_last > ma300_120_min_ago
                 
                 and (ma5_prev > ma300_prev and ma5_last < ma300_last)
+                and deviation_sell < -0.12
                 and ma2_last < ma2_2_min_ago
-           
+                and macd > -10
             ):
 
-                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - maddog VENDE dopo 150 min = 9000 sec con 5-300 con doppio delta GIORNO ! cazzo - r 16743 Bx2A"
+                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - maddog VENDE dopo 150 min = 9000 sec e fino a 240 min con 5-300 GIORNO ! cazzo con macd > -10 - r 16731 a"
                 action = "sell"
                         
                 # 24 set 2022 ore 17:23
                 #  3 nov 2022 5-300 da 5-200
                 
-                
-                
+                # 27 set 2023 se macd > -10 vende con 5-300 !
+            
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds_sell_5_90
+                and seconds_since_last_trade < max_hold_time_in_seconds_sell_5_180
+                
+                and delta_300_100 < delta_300_100_60_min
+                and deviation_ma100_sopra_ma300 < 0.20
+                and ma300_last > ma300_120_min_ago
+                
+                and (ma5_prev > ma200_prev and ma5_last < ma200_last)
+                and deviation_sell < -0.05
+                
+                and ma2_last < ma2_2_min_ago
+                and macd < -10
+            ):
+
+                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - maddog VENDE dopo 150 min = 9000 sec e fino a 240 min con 5-200 GIORNO ! cazzo con macd < -10 - r 16731 b"
+                action = "sell"
+                        
+                # 24 set 2022 ore 17:23
+                #  3 nov 2022 5-300 da 5-200
+                
+                # 27 set 2023 se macd < -10 vende con 5-200 !
+                
+                
+                
+                
+                
+            # SELL condizione speciale 32 B ROOT DOWN DEEP - maddog VENDE dopo 150 min = 9000 sec e fino a 240 min con 5-200 NOTTE !
+            
+            elif (
+                seconds_since_last_trade > max_hold_time_in_seconds_sell_5_90
+                and seconds_since_last_trade < max_hold_time_in_seconds_sell_5_180
+                
                 and delta_300_100 > delta_300_100_60_min
                 and deviation_ma100_sopra_ma300 < 0.20
                 and ma300_last > ma300_120_min_ago
                 and ma54_last > ma54_15_min_ago
                 and ma13_last < ma78_last
-                and (ma5_prev > ma200_prev and ma5_last < ma200_last)
+                and (ma5_prev > ma300_prev and ma5_last < ma300_last)
+                and ma5_last < ma20_last
+                
                 and ma2_last < ma2_2_min_ago
-           
+                and macd < macd_2_min_ago
             ):
 
-                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - maddog VENDE dopo 150 min = 9000 sec con 5-200 con doppio delta NOTTE ! - r 16743 Bx2B1"
+                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - maddog VENDE dopo 150 min = 9000 sec e fino a 240 min con 5-300 NOTTE ! - r 16732"
                 action = "sell"
                         
                 # 24 set 2022 ore 17:23
                 #  3 nov 2022 5-300 da 5-200
                 # 17 nov 2022 deve essere anche 10<78
                 # 18 nov 2022 13-78
-                
-                
+                # 31 lug 2023 5-300 da 5-200
+                # 11 ago 2022 aggiunta macd <
+            
+            
+            # SELL condizione speciale 32 B ROOT DOWN DEEP - SELL> 150 min = 9000 sec SE GUADAGNA > 0.50 e fino a 240 min con 5-200 NOTTE !
+            
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds_sell_5_90
+                and seconds_since_last_trade < max_hold_time_in_seconds_sell_5_180
+                
                 and delta_300_100 > delta_300_100_60_min
                 and deviation_ma100_sopra_ma300 < 0.20
                 and ma300_last > ma300_120_min_ago
                 and ma54_last < ma54_15_min_ago
                 and ma10_last < ma78_last
+                
                 and (ma5_prev > ma200_prev and ma5_last < ma200_last)
                 and ma2_last < ma2_2_min_ago
-           
+                and deviation_sell > 0.50
             ):
 
-                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - maddog VENDE dopo 150 min = 9000 sec con 5-200 con doppio delta NOTTE ! - r 16743 Bx2B2"
+                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - SELL> 150 min = 9000 sec SE GUADAGNA > 0.50 e fino a 240 min con 5-200 NOTTE ! - r 16733 A"
+                action = "sell"
+                        
+                # vedi RCCR 19 GEN 2023 ore 8:35
+                
+                
+                
+                
+            # SELL condizione speciale 32 B ROOT DOWN DEEP - maddog VENDE dopo 150 min = 9000 sec e fino a 240 min con 8-300 NOTTE !
+            
+            elif (
+                seconds_since_last_trade > max_hold_time_in_seconds_sell_5_90
+                and seconds_since_last_trade < max_hold_time_in_seconds_sell_5_180
+                
+                and delta_300_100 > delta_300_100_60_min
+                and deviation_ma100_sopra_ma300 < 0.20
+                and ma300_last > ma300_120_min_ago
+                and ma54_last < ma54_15_min_ago
+                and ma10_last < ma78_last
+                and (ma8_prev > ma300_prev and ma8_last < ma300_last)
+                and ma2_last < ma2_2_min_ago
+                and deviation_sell < -0.12
+            ):
+
+                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - maddog VENDE dopo 150 min = 9000 sec e fino a 240 min con 8-300 NOTTE ! - r 16733 B"
                 action = "sell"
                         
                 # 24 set 2022 ore 17:23
                 #  3 nov 2022 5-300 da 5-200
                 # 17 nov 2022 deve essere anche 10<78
+                # 11 dic 2022 8-225 da 5-200
+                # 26 dic 2022 8-250 da 8-225
+                #  4 gen 2023 aggiunta dev sell < -0.10 vedi 4 gen 2023 ore 1:16
+                # 21 mag 2023 8-300 da 8-250
+                # 31 lug 2023 -0.12 da -0.10
                 
                 
-                
+            # SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 150 min = 9000 sec e fino a 240 min con 5-90
+            
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds_sell_5_90
+                and seconds_since_last_trade < max_hold_time_in_seconds_sell_5_180
+                
                 and deviation_ma100_sopra_ma300 < 0.20
                 and deviation_sell < -0.15
                 and ma300_last < ma300_120_min_ago
@@ -22058,18 +27490,249 @@ class ro_cano_che_ritorna:
            
             ):
 
-                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 150 min = 9000 sec con 5-90 - r 16743 B2y"
+                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 150 min = 9000 sec e fino a 240 min con 5-90 - r 16734 A"
                 action = "sell"
                         
                 # 24 set 2022 ore 17:23
                 # 26 ottobre 2022 dev sell -0.15 da -0.10 vedi 15:40 del 25 ottobre !
+                
+                
+                
+                
+            
+            # SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 150 min = 9000 sec e fino a 240 min
+            
+            elif (
+                seconds_since_last_trade > max_hold_time_in_seconds_sell_5_90
+                and seconds_since_last_trade < max_hold_time_in_seconds_sell_5_180
+                
+                and deviation_ma100_sopra_ma300 < 0.20
+                and deviation_sell < -0.15
+                
+                and (ma3_prev > ma150_prev and ma3_last < ma150_last)
+                
+                and ma2_last < ma2_2_min_ago
+           
+            ):
+
+                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 150 min = 9000 sec e fino a 240 min - r 16734 B"
+                action = "sell"
+                
+                
+                
+                
+                
+            ############ attenzione ! vedi giorno 7 novembre 2022 ore 21:34 MADDOG NON HA VENDUTO CON UN GUADAGNO DELL 1% MENTRE ma300 scendeva da 6 ore
+            
+            # 32 SELL condizione speciale ROOT DOWN DEEP - ro cano VENDE dopo 240 min = 9000 sec con 5-180
+            
+            elif (
+                
+                seconds_since_last_trade > max_hold_time_in_seconds_sell_5_180
+                and ma300_last > ma300_301_min_ago
+                
+                and deviation_sell < -0.09
+                and deviation_ma5_sotto_ma300 < 0.25
+                and ma300_last > ma300_120_min_ago
+                
+                and (ma8_prev > ma300_prev and ma8_last < ma300_last)
+                and ma2_last < ma2_2_min_ago
+                and macd < macd_2_min_ago
+            ):
+
+                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 240 min con 8-300 and macd < macd 2 min ago - r 16735"
+                action = "sell"
                         
+                # 24 set 2022 ore 17:23
+                # 11 ott 2022 dev sell 0.10 da 0.15
+                # 21 ott 2022 dev sell 0.11 da 0.10
+                # 29 dic 2022 8-225 da 5-180
+                # 29 gen 2023 8-250 da 8-225
+                # 24 ago 2023 8-300 da 8-250
+                # 24 ago 2023 macd < macd 2 min ago
+                # forse in futuro aggiungere macd < -5 deve avere una certa forza ( al contrario ) per vendere
+                
+            # 32 A
+            
+            elif (
+                
+                seconds_since_last_trade > max_hold_time_in_seconds_sell_5_180
+                and ma300_last < ma300_301_min_ago
+                and deviation_sell > 0.80
+                
+                and (ma3_prev > ma69_prev and ma3_last < ma69_last)
+                and ma300_last > ma300_120_min_ago
+                
+                and ma2_last < ma2_2_min_ago
+           
+            ):
+
+                sell = "SELL condizione speciale - ro cano VENDE dopo 240 min con 3-69 SE ma300 scende da 5 ore e se guadagna almeno 0.80 - r 16736"
+                action = "sell"
                         
-               
+                # 24 set 2022 ore 17:23
+                # 11 ott 2022 dev sell 0.10 da 0.15
+                # 21 ott 2022 dev sell 0.11 da 0.10
+                # prendi e porta a casa cazzo se 300 scende da 5 ore ! e stai guadagnando > 0.80 % - potrebbe essere un rimbalzo.
+                
+                
+                
+            # 32 B 
+            
+            elif (
+                
+                seconds_since_last_trade > max_hold_time_in_seconds_sell_5_180
+                and deviation_sell < -0.10
+                and deviation_ma5_sotto_ma300 < 0.25
+                and ma300_last > ma300_120_min_ago
+                
+                and (ma5_prev > ma240_prev and ma5_last < ma240_last)
+                and ma2_last < ma2_2_min_ago
+                and macd < macd_2_min_ago
+                and macd < -6
+            ):
+
+                sell = "SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 240 min con 5-240 con macd < and macd < -6 - r 16737"
+                action = "sell"
+                        
+                # 24 set 2022 ore 17:23
+                # 11 ott 2022 dev sell 0.10 da 0.15
+                # 21 ott 2022 dev sell 0.11 da 0.10
+                #  1 ago 2023 dev sell -0.10 da +0.10
+                # 11 ago 2023 macd < 2 min ago
+                # 11 ago macd < -6
+                
+                
             
             
             
-            # 33 - SELL condizione speciale POCHI MALEDETTI E SUBITO QUANDO SALE FORTE ( cerca di inibirlo ) con ma200 > MA ma100 - dedicated to comparo meo
+            ###################################################################################################################################################
+            
+            # OGGI 25 MAGGIO 2023 - IMPORTANTE !
+            
+            # nelle prime 2 ore media bassa
+            # POCHI MALEDETTI E SUBITO tra 0.70 e 1.05 di guadagno INTANTO TE LI PRENDI. con 3-13
+             
+            # dopo 2 ore 
+            # POCHI MALEDETTI E SUBITO tra 0.80 e 1.05 di guadagno INTANTO TE LI PRENDI. con 3-15
+            
+            
+            # 33
+            
+            elif (
+                seconds_since_last_trade > 0 and seconds_since_last_trade < 7200
+                and deviation_ma10__diviso_ma10_5_ore_ago > 1.50
+                and ma3_last < ma20_last
+                and deviation_ma3_di_adesso_diviso_ma3_di_90_min_ago < 1.30
+                
+                and deviation_sell > 0.70
+                and deviation_sell < 1.05
+                
+                and ma2_last < ma2_2_min_ago
+                and macd < macd_2_min_ago
+                and macd < -5
+            ):    
+                sell = "SELL condizione POCHI MALEDETTI E SUBITO da 0 a 120 min con 3-13 E con dev_sell 0.70 - 1.05 and macd < and macd < -5 - INTANTO TE LI PRENDI - r 16750 A1"
+                action = "sell"
+                
+                # 24 ago 2023 and macd < -5
+          
+          
+                
+            elif (
+                seconds_since_last_trade > 0 and seconds_since_last_trade < 3600
+                and deviation_ma10__diviso_ma10_5_ore_ago < 1.50
+                and ma3_last < ma28_last
+                and deviation_ma3_di_adesso_diviso_ma3_di_90_min_ago < 1.30
+                
+                and deviation_sell > 0.75
+                and deviation_sell < 1.05
+                
+                and ma2_last < ma2_2_min_ago
+                and macd < macd_2_min_ago
+            ):    
+                sell = "SELL condizione POCHI MALEDETTI E SUBITO da 0 a 60 min con 3-28 E con dev_sell 0.75 - 1.05 and macd < - INTANTO TE LI PRENDI - r 16750 A2x"
+                action = "sell"
+                
+                # pochi 0.80 - 1.20
+                # maledetti 
+                # subito da 0 a 120 minuti - dopo intervengono le medie piu' lunghe ! non piu' ma13 !
+                
+                # importante
+                # con aggiunta deviation_ma3_di_adesso_diviso_ma3_di_90_min_ago <1.30 che cosa fa ?
+                # compra pochi maledetti e subito la prima volta
+                # ma se continua a salire dopo che ha fatto il primo pochi maledetti e subito non interviene piu' ed entrano in azione altre medie piu' lunghe
+                # altrimenti e' un continuo 3-10
+                # 15 mag 2023 3-13 da 3-11 
+                # 15 mag 2023 0.80 - 1.05 da 0.80 - 1.20
+                # 15 mag 2023 0.70 - 1.05 da 0.80 - 1.05
+                #  7 lug 2023 0.75 - 1.05 da 0.70 - 1.05
+                #  7 lug 2023 0.75 - 1.05 da 0.70 - 1.05
+                #  7 lug 2023 3-28 da 3-13
+          
+
+          
+            elif (
+                seconds_since_last_trade > 3601 and seconds_since_last_trade < 7200
+                and deviation_ma10__diviso_ma10_5_ore_ago < 1.50
+                and ma3_last < ma39_last
+                and deviation_ma3_di_adesso_diviso_ma3_di_90_min_ago < 1.30
+                
+                and deviation_sell > 0.75
+                and deviation_sell < 1.05
+                
+                and ma2_last < ma2_2_min_ago
+                and macd < macd_2_min_ago
+            ):    
+                sell = "SELL condizione POCHI MALEDETTI E SUBITO da 60 a 120 min con 3-39 E con dev_sell 0.75 - 1.05 and macd < - INTANTO TE LI PRENDI - r 16750 A2y"
+                action = "sell"
+                
+                
+
+          
+          
+            elif (
+                seconds_since_last_trade > 7200
+                and ma3_last < ma28_last
+                and deviation_ma3_di_adesso_diviso_ma3_di_90_min_ago < 1.30
+                and ma450_last < ma450_720_min_ago
+                
+                and deviation_sell > 0.75
+                and deviation_sell < 1.10
+                
+                and ma2_last < ma2_2_min_ago
+                and macd < macd_2_min_ago
+                and macd < -12
+            ):    
+                sell = "SELL condizione POCHI MALEDETTI E SUBITO da 0 a 120 min con 3-28 E con dev_sell 0.75 - 1.10 and macd < - INTANTO TE LI PRENDI - r 16750 B"
+                action = "sell"
+                
+                # pochi 0.80 - 1.20
+                # maledetti 
+                # subito da 0 a 120 minuti - dopo intervengono le medie piu' lunghe ! non piu' ma13 !
+                
+                # importante
+                # con aggiunta deviation_ma3_di_adesso_diviso_ma3_di_90_min_ago < 1.30 che cosa fa ?
+                # compra pochi maledetti e subito la prima volta
+                # ma se continua a salire dopo che ha fatto il primo pochi maledetti e subito non interviene piu' ed entrano in azione altre medie piu' lunghe
+                # altrimenti e' un continuo 3-10
+                # 15 mag 2023 3-13 da 3-11 
+                # 15 mag 2023 0.80 - 1.05 da 0.70 - 1.20
+                #  1 giu 2023 0.70 - 1.10 da 0.80 - 1.05
+                
+                # 17 mag 2023 ATTENZIONE ! dopo 10860 pochi maledetti e subito vende SOLO SE il trend di lungo periodo e' ribassista.  se e' rialzista lascia correre.
+                #  6 giu 2023 0.75 - 1.10 da 0.70 - 1.05
+                #  6 giu 2023 3-20 da 3-13
+                #  8 lug 2023 aggiunto and macd < -12
+                #  11 ago 2023 3-28 da 3-20 dopo 3 ore cazzo (non e' piu' subito)
+
+                #################################################################################################################################################
+                
+                
+                
+                
+                
+            # 34 a - SELL condizione speciale POCHI MALEDETTI E SUBITO QUANDO SALE FORTE ( cerca di inibirlo ) con ma200 > MA ma100 - dedicated to comparo meo
             
             elif (
                 ma3_last < ma28_last
@@ -22082,7 +27745,7 @@ class ro_cano_che_ritorna:
                 and ma2_last > ma100_last
                 and ma2_last < ma2_2_min_ago
             ):    
-                sell = "SELL cond. special 33 - POCHI MALEDETTI E SUBITO QUANDO SALE FORTE 3-28 ( cerca di inibirlo ) con ma200> e con dev_sell > 0.70 - r 16767"
+                sell = "SELL cond. special 34 a - POCHI MALEDETTI E SUBITO QUANDO SALE FORTE 3-28 ( cerca di inibirlo ) con ma200> e con dev_sell > 0.70 - r 16767"
                 action = "sell"
                     
                 # and ma2_last > ma100_last (altrimenti vende durante il crollo con la ma3-ma9)
@@ -22090,7 +27753,7 @@ class ro_cano_che_ritorna:
                 
                 
                 
-            # 34 - SELL condizione speciale POCHI MALEDETTI E SUBITO QUANDO SALE PIANO con ma200 > MA ma100 NON DEVE SALIRE TROPPO ! - dedicated to comparo meo
+            # 34 b - SELL condizione speciale POCHI MALEDETTI E SUBITO QUANDO SALE PIANO con ma200 > MA ma100 NON DEVE SALIRE TROPPO ! - dedicated to comparo meo
             
             elif (
                 ma3_last < ma39_last
@@ -22104,7 +27767,7 @@ class ro_cano_che_ritorna:
                 and ma2_last > ma100_last
                 
             ):    
-                sell = "SELL condizione speciale 34 - POCHI MALEDETTI E SUBITO 3-39 QUANDO SALE PIANO quando ma200 > e con dev_sell > 0.70 and < 0.99 - r 16789"
+                sell = "SELL condizione speciale 34 b - POCHI MALEDETTI E SUBITO 3-39 QUANDO SALE PIANO quando ma200 > e con dev_sell > 0.70 and < 0.99 - r 16789"
                 action = "sell"
                     
                 # and ma2_last > ma100_last (altrimenti vende durante il crollo con la ma3-ma9)
@@ -22174,10 +27837,12 @@ class ro_cano_che_ritorna:
                 
                 
                 
+                
             # 38 - POCHI MALEDETTI E SUBITO ma non troppo mentre scende
             
             elif (
-                ma3_last < ma8_last 
+                ma3_last < ma18_last
+                and delta_150_100 < delta_150_100_60_min
                 and ma200_last < ma200_60_min_ago
                 and deviation_ma100_sopra_ma300 < 0.30
                 
@@ -22186,14 +27851,37 @@ class ro_cano_che_ritorna:
                 and ma2_last > ma100_last
                 and ma2_last < ma2_2_min_ago
             ):    
-                sell = "SELL condizione speciale 38 - POCHI MALEDETTI E SUBITO 3-8 quando ma200 < e con deviation > 2.51 - dedicated to comparo meo - r 16872 b"
+                sell = "SELL condizione speciale 38 - POCHI MALEDETTI E SUBITO 3-18 quando ma200 < e con deviation > 2.51 - dedicated to comparo meo - r 16872 b1"
+                action = "sell"
+                    
+                # and ma2_last > ma100_last (altrimenti vende durante il crollo con la ma3-ma9)
+                # 12 gen 2023 3-18 da 3-8 con dppio delta 150-100 giorno
+                
+                
+                
+            # 38 - POCHI MALEDETTI E SUBITO ma non troppo mentre scende
+            
+            elif (
+                ma3_last < ma8_last
+                and delta_150_100 > delta_150_100_60_min
+                and ma200_last < ma200_60_min_ago
+                and deviation_ma100_sopra_ma300 < 0.30
+                
+                and deviation_sell > 2.51
+                and deviation_pochi_maledetti > 0.70
+                and ma2_last > ma100_last
+                and ma2_last < ma2_2_min_ago
+            ):    
+                sell = "SELL condizione speciale 38 - POCHI MALEDETTI E SUBITO 3-8 quando ma200 < e con deviation > 2.51 - dedicated to comparo meo - r 16872 b2"
                 action = "sell"
                     
                 # and ma2_last > ma100_last (altrimenti vende durante il crollo con la ma3-ma9)
                 
                 
                 
-                
+            
+            
+            
             # 39 - POCHI MALEDETTI E SUBITO ma non troppo mentre scende > ESTATE 
             
             elif (
@@ -22212,8 +27900,7 @@ class ro_cano_che_ritorna:
                 # and ma2_last > ma100_last (altrimenti vende durante il crollo con la ma3-ma9)
                 
                 
-                
-            # 39 - POCHI MALEDETTI E SUBITO ma non troppo mentre scende > ESTATE 
+            # 39 - POCHI MALEDETTI E SUBITO ma non troppo mentre scende > ESTATE 2022
             
             elif (
                 ma5_last < ma33_last
@@ -22226,10 +27913,91 @@ class ro_cano_che_ritorna:
                 and ma2_last > ma100_last
                 and ma2_last < ma2_2_min_ago
             ):    
-                sell = "SELL condizione speciale 39 5-33 - POCHI MALEDETTI E SUBITO ma non troppo mentre scende > ESTATE  e con deviation > 0.90 - r 16873 B"
+                sell = "SELL condizione speciale 39 5-33 - POCHI MALEDETTI E SUBITO ma non troppo mentre scende > ESTATE 2022 e con deviation > 0.90 - r 16873 B"
                 action = "sell"
                     
                 # and ma2_last > ma100_last (altrimenti vende durante il crollo con la ma3-ma9)
+
+          
+
+
+            # 40 - POCHI MALEDETTI E SUBITO ma non troppo mentre scende > ESTATE 2023
+            
+            elif (
+                deviation_sell > 0.80
+                and ma5_last < ma5_12_min_ago
+                
+                and ma3_last < ma28_last
+                
+                and ma2_last < ma2_2_min_ago
+                and macd < macd_2_min_ago
+                and macd_differenza_2_min_ago < -1
+            ):    
+                sell = "SELL cond. speciale 40 3-28 - POCHI MALEDETTI E SUBITO (ma non troppo !) mentre scende > ESTATE 2023 con dev > 0.80 and macd < macd 2 min ago - r 16873 C"
+                action = "sell"
+                
+                # 27 set 2023 macd < macd 2 min ago 
+                # 27 set 2023 and macd_differenza_2_min_ago < -1
+          
+            
+            # 41 - POCHI MALEDETTI E SUBITO con deviation > 5.01 e macd < -35
+            
+            elif (
+                deviation_sell > 5.01
+                
+                and ma4_last < ma20_last
+                and ma2_last < ma2_2_min_ago
+                
+                and macd < macd_2_min_ago
+                and macd < -35
+            ):    
+                sell = "SELL condizione speciale 41 4-20 - POCHI MALEDETTI E SUBITO se con deviation > 5.01 e macd < -35 ! - r 16874"
+                action = "sell"
+
+
+          
+
+          
+            # 42 - POCHI MALEDETTI E SUBITO con deviation > 1.01 e macd < -10 e MACD DIFFERENZA < -25
+          
+            elif (
+                deviation_sell > 0.91
+                and ma300_last > ma300_301_min_ago
+                and ma5_last < ma20_last
+                
+                and macd < macd_2_min_ago
+                and macd < -9
+                and macd_differenza < -24
+                
+                and ma2_last < ma2_2_min_ago
+                 
+            ):    
+                sell = "SELL condizione speciale 42 - POCHI MALEDETTI E SUBITO CON ma300 che sale da 5 ore ! e con deviation > 1.01 e macd < -10 e MACD DIFFERENZA < -25 - r 16875 A"
+                action = "sell"
+                
+                #  1 set 2023 se per es macd passa da 18 a -11 vendi     
+                # 12 set 2023 macd < -9 da -10
+                # 12 set 2023 macd DIFFERENZA -24 da -25
+
+          
+            elif (
+                deviation_sell > 0.91
+                and ma300_last < ma300_301_min_ago
+                
+                and macd < macd_2_min_ago
+                and macd < -9
+                and macd_differenza < -24
+                
+                and ma2_last < ma2_2_min_ago
+                 
+            ):    
+                sell = "SELL condizione speciale 42 - POCHI MALEDETTI E SUBITO CON ma300 che scende da 5 ore ! e con deviation > 1.01 e macd < -10 e MACD DIFFERENZA < -25 - r 16875 B"
+                action = "sell"
+                
+                #  1 set 2023 se per es macd passa da 18 a -11 vendi     
+                # 12 set 2023 macd < -9 da -10
+                # 12 set 2023 macd DIFFERENZA -24 da -25
+          
                 
                 
                 
@@ -22237,7 +28005,7 @@ class ro_cano_che_ritorna:
             
             ######################################################################### vendite dedicate al BUY FIAT - AUDI - MASERATI - FERRARI 
             
-            # 40 - SELL condizione speciale FIAT 
+            # 41 - SELL condizione speciale FIAT 
                     
             elif (     
                 seconds_since_last_trade > max_hold_time_in_seconds_fiat
@@ -22258,7 +28026,7 @@ class ro_cano_che_ritorna:
                         
                         
                 
-            # 41 - SELL condizione speciale AUDI 
+            # 42 - SELL condizione speciale AUDI 
                     
             elif (     
                 seconds_since_last_trade > max_hold_time_in_seconds_audi
@@ -22277,7 +28045,7 @@ class ro_cano_che_ritorna:
                         
             
             
-            # 42 - SELL condizione speciale MASERATI 
+            # 43 - SELL condizione speciale MASERATI 
                     
             elif (     
                 seconds_since_last_trade > max_hold_time_in_seconds_maserati
@@ -22295,7 +28063,7 @@ class ro_cano_che_ritorna:
                 
                 
                         
-            # 43 - SELL condizione speciale FERRARI 
+            # 44 - SELL condizione speciale FERRARI 
                     
             elif (     
                 seconds_since_last_trade > max_hold_time_in_seconds_ferrari
@@ -22311,7 +28079,7 @@ class ro_cano_che_ritorna:
                 
                 
                 
-            # 44 SELL condizione speciale da RCCR ! IPOTESI PEGGIORE con ma50< con dev_ma39 < -0.225 and deviation_sell < -0.22 MA DOPPIO DELTA RIALZO 
+            # 45 SELL condizione speciale da RCCR ! IPOTESI PEGGIORE con ma50< con dev_ma39 < -0.225 and deviation_sell < -0.22 MA DOPPIO DELTA RIALZO 
                      
             elif (
                 ma50_last < ma50_2_min_ago
@@ -22341,7 +28109,7 @@ class ro_cano_che_ritorna:
                 
                 
                 
-            # 44 SELL condizione speciale da RCCR ! IPOTESI PEGGIORE con ma50< con dev_ma39 < -0.225 and deviation_sell < -0.22 MA DOPPIO DELTA RIALZO 
+            # 46 SELL condizione speciale da RCCR ! IPOTESI PEGGIORE con ma50< con dev_ma39 < -0.225 and deviation_sell < -0.22 MA DOPPIO DELTA RIALZO 
                      
             elif (
                 ma50_last < ma50_2_min_ago
@@ -22372,7 +28140,7 @@ class ro_cano_che_ritorna:
                 
                 
                 
-            # 44 SELL condizione speciale RIMBALZO CHE ARRIVA FINO ALLA ma300 MA LA 100 E' MOLTO DISTANTE quindi non vende mentre si riavvicinano 
+            # 47 SELL condizione speciale RIMBALZO CHE ARRIVA FINO ALLA ma300 MA LA 100 E' MOLTO DISTANTE quindi non vende mentre si riavvicinano 
                      
             elif (
                 ma300_last < ma300_301_min_ago
@@ -22380,7 +28148,7 @@ class ro_cano_che_ritorna:
                 
                 and (ma3_prev > ma285_prev and ma3_last < ma285_last)
                 and deviation_ma100_sopra_ma300 < -0.30
-                and ma3_last < ma8_last
+                and ma5_last < ma39_last
                 and ma200_last < ma300_last
         
             ):
@@ -22389,8 +28157,8 @@ class ro_cano_che_ritorna:
                 
                 # questa condizione e' un capolavoro
                 # prima era incrocio verso l' alto 3-300 durante un ribasso
-                # 14 ottobre 2022 incrocio verso il basso 3-285 e ma3 > ma8
-                        
+                # 14 ottobre 2022 incrocio verso il basso 3-285 e ma3 < ma8
+                # 16 mar 2023 5-39 da 3-8      
                 
                 
                 
@@ -22438,7 +28206,18 @@ class ro_cano_che_ritorna:
             # core 'ngrato - enrico caruso
             # not dark yet (nyc)(bd) 
             # ti voglio bene, compa.
-            # 
-        
+            # non siamo non siamo non siamo !
+            
+            # con il mio affetto piu' grande.
+            # penso sempre a te.
+            # grazie sempre.
+            # grazie.
+            # compa
+            # compa torna !
+            # ave compa caro
+            #
+  
+                        
+                  
         
         
