@@ -26284,7 +26284,7 @@ class maddog:
                 and ma2_last <= ma2_2_min_ago 
                 
             ):
-                sell = "SELL condizione speciale 6 GIORNO con ma300> 5 ore - dev 3-39 < 0.05 and dev_sell < -0.105 - con ma50 < e con ma5 sotto ma200 > -0.90 - r 16045"
+                sell = "SELL condizione speciale 6 GIORNO con ma300 < 5 ore - dev 3-39 < 0.05 and dev_sell < -0.105 - con ma50 < e con ma5 sotto ma200 > -0.90 - r 16045"
                 action = "sell"
                 
                 # 15 set 2023 quando 300 scende da 5 ore non devi vendere in perdita ! a ricomprare ci penseranno altre condizioni !
