@@ -16079,7 +16079,22 @@ class maddog:
                         # durante un ribasso evidente (ma300 scende da 6 ore !) devi perdere il meno possibile ! esci ! a ricomprare ci pensera' la condizione successiva.
                         
                         
+                    elif ( 
+                        ma50_last > ma50_2_min_ago 
+                        and ma2_last < ma2_2_min_ago 
+                        and deviation_sell < -0.05
                         
+                        and ma3_last < ma50_last
+                        and ma200_last < ma200_60_min_ago
+                    ):
+                        sell = "SELL 1 50-90 min con ma50 > and (deviation_sell < -0.05 and ma3_last < ma50_last) - r 9634"
+                        action = "sell"
+                        
+                        # 25 gen 2023 dev_sell a -0.238 da 0.24 dopo -0.95% ore 10:04 del 24 gen 2023
+                        # 10 ott 2023 dev_sell a -0.05 da -0.238
+
+                  
+                  
                     # SELL 1 50-90 min IPOTESI PEGGIORE MA DOPPIO DELTA RISALITA con ma50< con deviation_ma39 <-0.205 and deviation_sell < -0.205
                     
                     elif (
