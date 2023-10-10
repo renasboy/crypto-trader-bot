@@ -15590,7 +15590,7 @@ class maddog:
                         and ma3_last < ma50_last
                         
                         and ma2_last < ma2_2_min_ago
-                        and maacd < macd_2_min_ago
+                        and macd < macd_2_min_ago
                     ):
                         sell = "SELL 1 (21-50 min) con ma50 > and (deviation_sell < -0.05 and ma3_last < ma50_last) - r 9354"
                         action = "sell"
