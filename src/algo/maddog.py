@@ -9152,35 +9152,34 @@ class maddog:
                 # BUY 2 RIVOLUZIONARIO A3y (100 NON E' ATTACCATA ALLA 300 !) e 39>50 E 8>200 and deviation_ma100_sopra_ma300 > 0.05 
                 
                 elif (
-                    deviation_ma4_sopra_ma30 > 0.14
+                    ma8_last > ma50_last
+                    and ma5_last > ma72_last
                     and delta_1 > delta_2
-                    and deviation_bellissima > 0.06
-                    
+                    and ma200_last < ma200_120_min_ago
                     and deviation_ma100_sopra_ma300 < -0.05
                     
-                    and ma200_last < ma200_120_min_ago
-                    and ma5_last > ma200_last
+                    and deviation_bellissima > 0.04
+                    and deviation_ma4_sopra_ma30 > 0.12
                     
                     and deviation > -0.30
                     
-                    and ma8_last > ma50_last
                     and delta_buy3_incrocio_ma3_ma8 >= 0.06
                     and ma3_last > ma8_last
-                    and ma3_last >= ma69_last
-                    and ma4_last >= ma4_2_min_ago
-                    and ma2_last >= ma2_2_min_ago
+                    
                     and ma5_last >= ma15_last
                     and ma5_last >= ma25_last
+                    
+                    and ma2_last >= ma2_2_min_ago
                     and macd >= macd_2_min_ago
                 ):    
-                    buy = "BUY 2 RIVOLUZIONARIO A3y CON delta_1 > delta_2 e con 100 CHE NON E' ATTACCATA ALLA 300 ! e 8>50 and 5>200 - r 5945 A3y"
+                    buy = "BUY 2 RIVOLUZIONARIO A3y CON delta_1 > delta_2 e con 100 CHE NON E' ATTACCATA ALLA 300 ! e 8>50 and 5>72 - r 5945 A3y"
                     action = "buy"
                     percentage = 70
                     
                     # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
                     # 26 set 100-300 se stanno attaccate e' molto rischioso ! vedi ore 22:48 24 set 2022
                     # 15 dic 2022 8-28 da 28-50
-                    
+                    # 10 nov 2023 5-72 da 5-200
                   
                     
                     
