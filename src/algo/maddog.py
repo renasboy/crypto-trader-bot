@@ -2365,8 +2365,8 @@ class maddog:
                     and deviation_ma300_sopra_ma450 > -0.50
                     
                     and deviation_ma3_sopra_ma10 > 0.025
-                    and deviation_ma3_sopra_ma16 > 0.001
-                    and deviation_ma3_sopra_ma18 > 0.001
+                    and deviation_ma3_sopra_ma16 > -0.01
+                    and deviation_ma3_sopra_ma18 > -0.01
                     
                     and ma2_last >= ma20_last
                   
@@ -2374,7 +2374,7 @@ class maddog:
                     and macd >= macd_2_min_ago
                     
                 ):    
-                    buy = "BUY 1 compare forever - con 3-20 E CON 300 ancora vicina alla 450 ( anche un poco sotto ! ) and 3-18 > 0.001 + MACD > - r 1537 A3y"
+                    buy = "BUY 1 compare forever - con 3-20 E CON 300 ancora vicina alla 450 ( anche un poco sotto ! ) and 3-18 > -0.01 + MACD > - r 1537 A3y"
                     action = "buy"
                     percentage = 90
                     
@@ -2404,8 +2404,8 @@ class maddog:
                     #  2 ott 2023 3-16 e 3-18 abbassati da 0.03 a 0.01 
                     #  2 ott 2023 3-20 da 5-20
                     #  5 ott 2023 se ma 100 piega al ribasso da 60 min allora 3-10 > 0.025 ASSOLUTAMENTE COSI' ALTRIMENTI COMPRA CONTINUAMENTE
-              
-
+                    # 10 ott 2023 3-16 a -0.01 da 0.001
+                    # 10 ott 2023 3-18 a -0.01 da 0.001
               
                 # BUY 1 tempo ESTATE PIU' VELOCE 100 > 60 min ago (solo l' estate se lo puo' perettere!) considera il passare del TEMPO ! ma30 > 
                 
