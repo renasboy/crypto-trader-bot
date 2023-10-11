@@ -26316,7 +26316,7 @@ class maddog:
                 
                 and deviation_ma5_sotto_ma200 > -0.50
                 
-                and ma2_last <= ma2_2_min_ago 
+                and ma2_last < ma2_2_min_ago 
                 
             ):
                 sell = "SELL condizione speciale 6 GIORNO con ma300 < 5 ore - dev 3-39 < 0.05 and dev_sell < -0.105 - con ma50 < e con ma5 sotto ma200 > -0.90 - r 16045"
@@ -26326,6 +26326,7 @@ class maddog:
                 # 15 set 2023 quando GIORNO a -0.11 da -0.07
                 #  2 ott 2023 DOPO UN AKTRO -1 HO FATTO QUESTA and deviation_ma5_sotto_ma200 > -0.50
                 #  2 ott 2023 TOLTO and macd < macd_2_min_ago ARRIVATO TARDI ! VEDI 2 OTTOBRE 2023 ORE 20 e 40 - r 16047 B2
+                
 
             # 5 - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 > -1.00
 
