@@ -10834,15 +10834,16 @@ class maddog:
                     and ma200_last < ma300_last
                     
                     and deviation_ma5_sopra_ma28 > 0.005
-                    and ma2_last >= ma2_2_min_ago
                     
+                    and ma2_last >= ma2_2_min_ago
+                    and macd > macd_2_min_ago
                 ):
                     buy = "BUY 3 29 ago 2022 > 180 min di ribasso - r 6572 B"
                     action = "buy"
                     percentage = 90
                     
-                    # 11 ott 2022 mentre scende dopo 3 ore se accelera al ribasso (5 si allontana da 300) interviene prima con 5-28 !
-                    
+                    # 11 ott 2022 mentre scende dopo 3 ore se accelera al ribasso (5 si allontana da 300) interviene prima con 5-28 and macd > macd 2 min ago !
+                    # 10 ott 2023 and macd > macd 2 min ago
                     
                     
                     
