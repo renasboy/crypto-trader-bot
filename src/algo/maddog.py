@@ -1839,8 +1839,8 @@ class maddog:
                 elif (    
                     ma5_last > ma13_last
                     
-                    and deviation_ma300_sopra_ma450 < 0.13
-                    and deviation_ma300_sopra_ma450 > -0.13
+                    and deviation_ma300_sopra_ma450 < 0.15
+                    and deviation_ma300_sopra_ma450 > -0.15
                     
                     and deviation_ma100_sopra_ma300 < 0.27
                     and deviation_ma100_sopra_ma300 > -0.27
@@ -1849,15 +1849,15 @@ class maddog:
                     and deviation_ma10_sotto_ma100 > -0.20
                     
                     and deviation_ma3_sopra_ma10 > 0.05
-                    and deviation_ma3_sopra_ma16 > 0.08
-                    and deviation_ma4_sopra_ma28 > -0.02
+                    and deviation_ma3_sopra_ma16 > 0.07
+                    and deviation_ma4_sopra_ma28 > -0.03
                     
                     and ma2_last >= ma2_2_min_ago
                     and macd >= macd_2_min_ago
-                    and macd > 5
+                    and macd > 0
                 ):  
                 
-                    buy = "BUY 1 LATERALE 2 con 3-10 > 0.07 and macd > macd 2 min ago and deviation_ma3_sopra_ma16 > 0.112 - r 1205"
+                    buy = "BUY 1 LATERALE 2 con 3-10 > 0.07 and macd > macd 2 min ago and deviation_ma3_sopra_ma16 > 0.112 con macd > 0 - r 1205"
                     action = "buy"
                     percentage = 50
                     
@@ -1869,9 +1869,9 @@ class maddog:
                     # 24 ago 2023 forse in futuro dovrai mettere macd > 5
                     # 24 ago 2023 and macd > 5
                     #  5 ott 2023 ridotto ndecchiecella
-                
-                    
-                
+                    # 11 ott 2023 macd > 0 da macd > 5
+                    # 11 ott 2023 dev 3-16 a 0.07 da 0.08
+                    # 11 ott 2023 dev 4-28 a -0.03 da -0.02
                     
                     
                     
