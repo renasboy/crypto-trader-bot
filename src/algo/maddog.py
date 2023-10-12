@@ -1541,7 +1541,7 @@ class maddog:
                     percentage = 50
                     
                     #  8 lug 2023 4-18
-                    
+                    # 10 ago 2023 3-18
                     # 12 ott 2023 3-16 a -0.125 da -0.12
                     # 12 ott 2023 5-28 a -0.155 da -0.15
                     
