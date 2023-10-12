@@ -13,9 +13,9 @@ class maddog:
     @property
     def action(self):
 
-        # price_volume.mean
+        # price_volume
         
-        price_volume.mean
+        price_volume_last, price_volume_prev = self.algo_helper.price_volume_last_prev
 
         
         # moving average (2-3-4-5-x)
