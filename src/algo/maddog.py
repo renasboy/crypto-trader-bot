@@ -1518,36 +1518,32 @@ class maddog:
                     
                     ma3_last > ma18_last
                     
-                    
                     and ma450_last < ma450_360_min_ago
-                    
+                    and ma300_last < ma300_60_min_ago
+                    and ma200_last < ma200_60_min_ago
                     
                     and deviation_ma5_sopra_ma200 < -0.30
                     and deviation_ma5_sotto_ma300 < -0.30
                     and deviation_ma5_sotto_ma450 < -0.30
-                    and deviation_ma50_sopra_o_sotto_ma100 < -0.01
                     
+                    and deviation_ma50_sopra_o_sotto_ma100 < -0.01
                     and deviation_ma100_sopra_ma300 < -0.10
                     
-                    and ma300_last < ma300_60_min_ago
-                    and ma200_last < ma200_60_min_ago
-                    
                     and deviation_ma3_sopra_ma10 > 0.081
-                    
-                    and deviation_ma5_sopra_ma28 > -0.15
-                    and deviation_ma3_sopra_ma16 > -0.12
+                    and deviation_ma3_sopra_ma16 > -0.125
+                    and deviation_ma5_sopra_ma28 > -0.155
                     
                     and ma2_last >= ma2_2_min_ago
                     and macd >= macd_2_min_ago
                 ):
-                    buy = "BUY 1 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND dev 4-18 and deviation_ma3_sopra_ma16 > -0.12 - r 1043 B"
+                    buy = "BUY 1 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND dev 3-18 and deviation_ma3_sopra_ma16 > -0.125 - r 1043 B"
                     action = "buy"
                     percentage = 50
                     
                     #  8 lug 2023 4-18
-                    # 11 ago 2023 3-18
-                
                     
+                    # 12 ott 2023 3-16 a -0.125 da -0.12
+                    # 12 ott 2023 5-28 a -0.155 da -0.15
                     
                 # BUY 1 zona inferiore 1043 C
                 
