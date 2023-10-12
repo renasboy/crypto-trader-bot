@@ -8791,30 +8791,56 @@ class maddog:
                     
                     
                 
-                # BUY 2 RIVOLUZIONARIO se ma39 > ma50 - r 3450
+                # BUY 2 RIVOLUZIONARIO se ma39 > ma50
                 
                 elif (
-                    deviation_ma4_sopra_ma30 > 0.15
+                    ma8_last > ma50_last
+                    and ma450_last > ma450_120_min_ago
+                    
+                    
                     and ma200_last > ma250_last
-                    and ma8_last > ma50_last
                     and ma200_last > ma200_120_min_ago
-                    and ma78_last > ma78_20_min_ago
                     
                     and deviation > -0.30
                     and deviation_bellissima > 0.02
-                    
+                    and deviation_ma4_sopra_ma30 > 0.15
                     and delta_buy3_incrocio_ma3_ma8 >= 0.06
                     
-                    and ma3_last >= ma69_last
+                    and ma3_last > ma8_last
+                    and ma3_last >= ma39_last
+                    and ma5_last >= ma15_last
+                    
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                ):    
+                    buy = "BUY 2 RIVOLUZIONARIO CON ma450_last > ma450_120_min_ago E con 8-50 - r 5892 A1x"
+                    action = "buy"
+                    percentage = 70
+
+                
+                elif (
+                    ma8_last > ma50_last
+                    and ma450_last < ma450_120_min_ago
+                    
+                    and ma200_last > ma250_last
+                    and ma78_last > ma78_20_min_ago
+                    and ma200_last > ma200_120_min_ago
+                    
+                    and deviation > -0.30
+                    and deviation_bellissima > 0.02
+                    and deviation_ma4_sopra_ma30 > 0.15
+                    and delta_buy3_incrocio_ma3_ma8 >= 0.06
                     
                     and ma3_last > ma8_last
+                    and ma3_last >= ma69_last
                     and ma5_last >= ma15_last
                     and ma5_last >= ma25_last
                     
                     and ma2_last >= ma2_2_min_ago
                     and macd >= macd_2_min_ago
                 ):    
-                    buy = "BUY 2 RIVOLUZIONARIO se ma39 > ma50 E CON 78 > 78 30 min ago - r 5892 A1"
+                    buy = "BUY 2 RIVOLUZIONARIO CON ma450_last > ma450_120_min_ago E con 78 > 78 20 min ago - r 5892 A1y"
                     action = "buy"
                     percentage = 70
                     
