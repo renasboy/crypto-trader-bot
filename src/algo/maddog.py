@@ -16,7 +16,9 @@ class maddog:
         # price_volume
         
         price_volume_last, price_volume_prev = self.algo_helper.price_volume_last_prev
-
+        
+        price_volume_2_min_ago = self.algo_helper.price_volume_minutes_ago(2)
+      
         
         # moving average (2-3-4-5-x)
         
