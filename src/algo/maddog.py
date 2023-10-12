@@ -1845,7 +1845,7 @@ class maddog:
                     and deviation_ma10_sotto_ma100 < -0.05
                     and deviation_ma10_sotto_ma100 > -0.20
                     
-                    and deviation_ma3_sopra_ma10 > 0.05
+                    and deviation_ma3_sopra_ma10 > 0.04
                     and deviation_ma3_sopra_ma16 > 0.07
                     and deviation_ma4_sopra_ma28 > -0.03
                     
@@ -1867,6 +1867,7 @@ class maddog:
                     # 24 ago 2023 and macd > 5
                     #  5 ott 2023 ridotto ndecchiecella
                     # 11 ott 2023 macd > 0 da macd > 5
+                    # 11 ott 2023 dev 3-10 a 0.04 da 0.05
                     # 11 ott 2023 dev 3-16 a 0.07 da 0.08
                     # 11 ott 2023 dev 4-28 a -0.03 da -0.02
                     
