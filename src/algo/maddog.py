@@ -11319,21 +11319,24 @@ class maddog:
             elif self.session == 4:
                 
                 if (
-                    ma69_last >= ma69_2_min_ago
+                    ma59_last >= ma59_2_min_ago
                     and delta_450_300 < delta_450_300_60_min
                     and ma300_last > ma300_301_min_ago
-                    
                     and ma100_last > ma200_last
-                    and deviation_buy3 > 0.07
-                    and ma3_last > ma13_last
+                    
+                    and ma10_last > ma100_last
+                    
+                    and deviation_buy3 > 0.06
                     and deviation_ma7_sopra_ma40 > 0.07
+                    
+                    and ma3_last > ma13_last
+                    
                     and ma4_last > ma9_last
                     and ma4_last > ma50_last
-                    and ma2_last > ma2_2_min_ago
                     and ma7_last > ma25_last
                     
-                    and ma13_last > ma100_last
                     and deviation_ma5_sopra_ma28 > 0.05
+                    and ma2_last > ma2_2_min_ago
                 ):
                     buy = "BUY 4A GIORNO con ma 78> e 300> E ma100>ma200 - r 6668 A1"
                     action = "buy"
@@ -11346,7 +11349,9 @@ class maddog:
                     
                     # 20 FEB 2023 GIORNO dev buy 3 0.07 da 0.10
                     # 20 FEB 2023 GIORNO 7-40 0.07 da 0.10
-                    
+                    # 14 ott 2023 59 >59 2 min ago da 69 > 69 2 min ago
+                    # 14 ott 2023 dev_buy3 > 0.06 da 0.07
+                    # 14 ott 2023 10-100 da 13-100
                   
                 elif (
                     ma69_last >= ma69_2_min_ago
