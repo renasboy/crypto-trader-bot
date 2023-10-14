@@ -15642,13 +15642,15 @@ class maddog:
                         
                         and ma2_last < ma2_2_min_ago
                         and macd < macd_2_min_ago
+                        and macd_differenza_2_min_ago < -0.25
                     ):
                         sell = "SELL 1 (21-50 min) con ma50 > and (deviation_sell < -0.05 and ma3_last < ma50_last) - r 9354"
                         action = "sell"
 
                         # 25 gen 2023 dev_sell a -0.238 da 0.24 dopo -0.95% ore 10:04 del 24 gen 2023
                         # 10 ott 2023 dev_sell a 0.05 da -0.238
-
+                        # 14 ott 2023 aggiunta and macd_differenza_2_min_ago < -0.25
+                        
                   
 
                     # ----------------------------------------------------------------------------- CONDIZIONE SPECIALE NEL SELL 1 !
