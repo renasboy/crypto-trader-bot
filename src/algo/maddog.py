@@ -23309,11 +23309,12 @@ class maddog:
                     if (    
                         ma50_last > ma50_2_min_ago 
                         and ma2_last < ma2_2_min_ago 
-                        and deviation_ma25 < -0.21
+                        and deviation_ma25 < -0.20
                     ):
-                        sell = "SELL 3 dopo 90 min con ma50> and deviation_ma25 <-0.18 (no ma3<ma39) - r 14093"
+                        sell = "SELL 3 dopo 90 min con ma50> and deviation_ma25 < -0.21 (no ma 3 < ma39) - r 14093"
                         action = "sell"
-                    
+                        
+                        # 14 ott 2023 and dev_ma25 a < -0.20 da < -0.21
                     
                     
                     elif (
