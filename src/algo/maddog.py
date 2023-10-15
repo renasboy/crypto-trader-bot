@@ -9504,6 +9504,26 @@ class maddog:
 
 
 
+                elif (    
+                    ma50_last < ma50_2_min_ago
+                    and ma5_last > ma39_last
+                     
+                    and deviation_ma5_sotto_ma300 < 0.30
+                      
+                        
+                    and ma300_last < ma300_120_min_ago
+                    and ma100_last > ma100_60_min_ago
+                      
+                    and ma5_last > ma5_2_min_ago
+                     
+                    and ma2_last > ma2_2_min_ago
+                    and macd > macd_2_min_ago
+                ):
+                    sell = "BUY 2 ZIA MARIA con ma50 < MA ma100 > E ma300 < e con 5-39 - r 5987"
+                    action = "sell"
+
+
+
 
                 # BUY 2 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND dev 5-30 CON AGGIUNTA PENSIERO LATERALE
                 
