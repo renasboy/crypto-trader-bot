@@ -12537,12 +12537,11 @@ class maddog:
                     and ma100_last > ma450_last
                     and ma78_last > ma450_last
                     
+                    and deviation_ma3_sopra_ma18 > 0.077
                     and deviation_ma5_sopra_ma28 > 0.05
                     
                     and ma3_last > ma13_last
-                    
                     and ma4_last > ma9_last
-                    
                     and ma6_last > ma15_last
                     and ma7_last > ma25_last
                     
@@ -12561,7 +12560,8 @@ class maddog:
                     # 16 set 2023 tolto and deviation_buy3 > 0.05
                     # 16 set 2023 aggiunta and macd > macd_2_min_ago
                     # 28 set 2023 se 450 > 450 120 min ago anticipato ndechiecella
-              
+                    # 17 ott 2023 and deviation_ma3_sopra_ma18 > 0.077
+                    
                 elif (
                     ma50_last >= ma50_2_min_ago
                     and ma450_last < ma450_120_min_ago
