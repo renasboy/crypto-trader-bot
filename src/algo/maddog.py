@@ -8010,10 +8010,10 @@ class maddog:
                     
                     and macd >= macd_2_min_ago
                     and macd > -11.0
-                    and macd_differenza_2_min_ago > 0.25
+                    and macd_differenza_2_min_ago > 0.20
                 ):  
                 
-                    buy = "BUY 2 laterale con 300>450 and 4-28 and macd > 2.0 and macd_differenza_2_min_ago > 0.25 - r 5412 X1A"
+                    buy = "BUY 2 laterale con 300>450 and 4-28 and macd > 2.0 and macd_differenza_2_min_ago > 0.20 - r 5412 X1A"
                     action = "buy"
                     percentage = 80
                   
