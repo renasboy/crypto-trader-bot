@@ -21425,11 +21425,14 @@ class maddog:
                     
                     elif (  
                         ma50_last < ma50_2_min_ago 
-                        and ma2_last < ma2_2_min_ago 
+                        
                         and deviation_ma39 < -0.245
                         and deviation_trend_ma100 > 0.10
+                        
+                        and ma2_last < ma2_2_min_ago 
+                        and macd_differenza_2_min_ago < -0.25
                     ):
-                        sell = "SELL 2 dopo 110 min con ma50 < MA ma100 > con deviation_ma39 <-0.245 - r 12598"
+                        sell = "SELL 2 dopo 110 min con ma50 < MA ma100 > con deviation_ma39 <-0.245 and macd_differenza_2_min_ago < -0.25 - r 12598"
                         action = "sell"
                         
                         # 12 apr 2023 dev_ma39 < -0.245 da -0.25
