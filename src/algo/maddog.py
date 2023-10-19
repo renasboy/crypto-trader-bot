@@ -21450,17 +21450,33 @@ class maddog:
 
                     ######################################################################################## con trend discendente
                     
-                    
                     elif (  
                         ma50_last < ma50_2_min_ago 
+                        and deviation_ma100_sopra_ma300 > 0.30
                         
-                        and deviation_ma39 < -0.245
+                        and deviation_ma39 < -0.23
                         and deviation_trend_ma100 > 0.10
                         
                         and ma2_last < ma2_2_min_ago 
                         and macd_differenza_2_min_ago < -0.25
                     ):
-                        sell = "SELL 2 dopo 110 min con ma50 < MA ma100 > con deviation_ma39 <-0.245 and macd_differenza_2_min_ago < -0.25 - r 12598"
+                        sell = "SELL 2 dopo 110 min con ma50 < MA ma100 > con deviation_ma39 <-0.23 and macd_differenza_2_min_ago < -0.23 - r 12598 a"
+                        action = "sell"
+                        
+                        # 12 apr 2023 dev_ma39 < -0.245 da -0.25
+                        # 19 ott 2023 dev_ma39 < -0.23 da -0.245 con dev 100-300 > 0.30
+
+                  
+                  
+                    elif (  
+                        ma50_last < ma50_2_min_ago 
+                        and deviation_ma100_sopra_ma300 < 0.30
+                        and deviation_sell < -0.10
+                        
+                        and ma2_last < ma2_2_min_ago 
+                        and macd_differenza_2_min_ago < -0.25
+                    ):
+                        sell = "SELL 2 dopo 110 min con ma50 < MA ma100 > con dev sell < -0.10 and macd_differenza_2_min_ago < -0.25 - r 12598 b"
                         action = "sell"
                         
                         # 12 apr 2023 dev_ma39 < -0.245 da -0.25
