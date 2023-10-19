@@ -10700,6 +10700,29 @@ class maddog:
                 
                 ################################################################### condizioni che mancavano !!!
                 
+                # ------------------------------------------------------------ BUY 3 laterale
+              
+                elif (    
+                    ma4_last > ma28_last
+                    
+                    and ma300_last > ma300_120_min_ago
+                    and ma450_last > ma450_480_min_ago
+                    
+                    and deviation_ma100_sopra_ma300 < 0.20
+                    and deviation_ma100_sopra_ma300 > -0.30
+                    
+                    and deviation_ma3_sopra_ma18 > 0.02
+                    
+                    and macd >= macd_2_min_ago
+                    and macd > -11.0
+                    and macd_differenza_2_min_ago > 0.20
+                ):  
+                
+                    buy = "BUY 3 laterale IMPORTATA dal buy 2 con 300>450 and 4-28 and macd > 2.0 and macd_differenza_2_min_ago > 0.20 - r 6510"
+                    action = "buy"
+                    percentage = 80
+                    
+                  
                 # BUY 3 primo modo che ci riprova DURANTE IL CROLLO !
 
                 elif (
