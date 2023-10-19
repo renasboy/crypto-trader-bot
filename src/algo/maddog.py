@@ -2308,7 +2308,7 @@ class maddog:
               
                 elif (     
                     
-                    ma5_last > ma20_last
+                    ma4_last > ma13_last
                     and ma100_last < ma100_120_min_ago
                     
                     and deviation_ma54_sopra_o_sotto_ma72 < 0.015
@@ -2319,15 +2319,16 @@ class maddog:
                     
                     and deviation_ma3_sopra_ma10 > 0.005
                     and deviation_ma3_sopra_ma16 > 0.01
-                    and deviation_ma3_sopra_ma18 > 0.048
+                    and deviation_ma3_sopra_ma18 > -0.01
                     
                     and ma2_last >= ma20_last
                   
                     and ma2_last >= ma2_2_min_ago
                     and macd >= macd_2_min_ago
+                    and macd > -40
                     
                 ):    
-                    buy = "BUY 1 compare forever - con 5-20 E CON 300 ancora vicina alla 450 ( anche un poco sotto! ) and 3-18 > 0.12 + MACD > - r 1537 A2y"
+                    buy = "BUY 1 compare forever - con 5-20 E CON 300 ancora vicina alla 450 ( anche un poco sotto! ) + MACD > - r 1537 A2y"
                     action = "buy"
                     percentage = 90
                     
@@ -2351,7 +2352,7 @@ class maddog:
                     # 13 set 2023 and deviation_ma300_sopra_ma450 > -0.35 da -0.45
                     # 13 set 2023 0.01 0.03 0.05 antcipo ndecchiecella
                     
-                    # 15 set 2023
+                    # 19 ott 2023 4-13 da 5-20
 
                 elif (     
                     
@@ -25630,6 +25631,7 @@ class maddog:
                         # 14 ott 2022 5-50 da 5-25
                         #  2 ott 2023 aggiunta ma450 > ma450 360 min ago
                         #  2 ott 2023 5-78 da 5-50
+                  
                     
                     elif (
                         ma50_last >= ma50_2_min_ago
@@ -25637,16 +25639,20 @@ class maddog:
                         and deviation_ma5_sotto_ma300 < 0.40
                         and (ma5_prev > ma50_prev and ma5_last < ma50_last)
                         and deviation_sell > 0.25 and deviation_sell < 0.56
+                        
                         and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
+                        and macd_differenza_2_min_ago < -0.50
                        
                     ):
-                        sell = "SELL 4-5-x (21-60 min) con ma450 < ma450 360 min ago e con ma50 > and incrocio 5-50 and deviation_sell 0.25 - 0.56 FINTA DI MARADONA - r 15568 B2"
+                        sell = "SELL 4-5-x (21-60 min) FINTA DI MARADONA con ma450 < ma450 360 min ago con ma50 > and 5-50 and dev_sell 0.25-0.56 and macd<macd 2 min ago - r 15568 B2"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
                         # 14 ott 2022 5-50 da 5-25
-                        
-                        
+                        # 19 ott 2022 and macd < macd_2_min_ago
+                        # 19 ott 2022 and macd_differenza_2_min_ago < -0.50
+                  
                         
                     elif (
                         ma50_last > ma50_2_min_ago
