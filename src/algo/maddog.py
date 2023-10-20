@@ -1879,28 +1879,31 @@ class maddog:
                     
                     
                     
-                # ------------------------------------------------------------ BUY 1 RAFFORZATA se ma200> and ma300 > and 8>50 AND ma78 >
+                # ------------------------------------------------------------ BUY 1 RAFFORZATA se ma200> and ma300 > and 8>39
                 
                 elif (    
                     ma20_last > ma200_last
-                    and macd >= macd_2_min_ago
+                    and ma5_last > ma39_last
                     and ma50_last > ma78_last
-                    and deviation_ma3_sopra_ma10 > 0.12
-                    and ma28_last < ma28_20_min_ago
                     
                     and ma59_last > ma59_60_min_ago
-                    and ma78_last > ma78_2_min_ago
                     and ma200_last > ma200_120_min_ago
                     and ma300_last > ma300_120_min_ago
-                    and ma8_last > ma50_last
+                    
+                    and ma28_last < ma28_20_min_ago
+                    
+                    and deviation_ma3_sopra_ma10 > 0.12
+                    
+                    and macd >= macd_2_min_ago
                 ):  
                 
-                    buy = "BUY 1 (50>78) con 20>200 and 69 > 100 AND ma78 > AND 59 > 59 60 min ago CON 28 < 28 20 min AND 3-10 > 0.12 - r 1227 aB"
+                    buy = "BUY 1 (50>78) con 20>200 and 5-39 and 69>100 AND ma78 > AND 59 > 59 60 min ago CON 28 < 28 20 min AND 3-10 > 0.12 - r 1227 AB"
                     action = "buy"
                     percentage = 80
-                    
-             
-                    
+                    # 20 ott 2023 and 8-39 da 8-50
+                    # 20 ott 2023 tolto and ma78_last > ma78_2_min_ago
+                    # 20 ott 2023 5-39 da 8-39
+              
                 # ------------------------------------------------------------ BUY 1 RAFFORZATA se ma200> and ma300 > and 8>50 AND ma78 > CON 3-10 > 0.12
                 
                 elif (    
