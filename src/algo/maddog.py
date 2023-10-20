@@ -15785,6 +15785,7 @@ class maddog:
                   
 
                     # ----------------------------------------------------------------------------- CONDIZIONE SPECIALE NEL SELL 1 !
+                  
                     elif (
                         ma78_last < ma78_120_min_ago
                         and ma300_last > ma300_301_min_ago
@@ -15804,6 +15805,7 @@ class maddog:
                     ):
                         sell = "SELL 1 (21-50 min) cond spec EX r 16047 B2 con ma300> 5 ore - SALVAGENTE 4 deviation 3-39 < 0.05 and dev_sell < -0.10 - con ma50 <  - r 9355a"
                         action = "sell"
+
 
                   
                     elif (
@@ -15825,6 +15827,12 @@ class maddog:
                         action = "sell"
                         # 28 set 2023 dev sell -0.07 da -0.06
                         # 28 set 2023 and macd a -3 da -2
+
+                  
+                    
+
+                  
+                    
 
                     
                     
@@ -23662,9 +23670,8 @@ class maddog:
                         # non toccare ! INCROCIO 3-100 CUSCINO DI SANT' ANTONIO !
                     
                  
-                    
                     # -------------------------------------------------------------------------------------- guadagno durante il crollo
-
+                  
                     elif (
                         ma50_last < ma50_2_min_ago
                         and (ma3_prev > ma18_prev and ma3_last < ma18_last)
@@ -23673,6 +23680,37 @@ class maddog:
                     ):
                         sell = "SELL 3 eventuale guadagno durante il crollo (21-60 min) con ma50 < incrocio 3 - 18 and deviation_sell > 0.23 - r 13831"
                         action = "sell"
+
+
+                    
+                    # -------------------------------------------------------------------------------------------------------------------------------- condizione speciale importata
+                    
+                    elif (
+                        ma8_last < ma8_2_min_ago 
+                        and deviation_ma39 < 0.01
+                        and deviation_sell < -0.02
+                        and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago > 1.50
+                        and deviation_ma10_sopra_o_sotto_ma10_30_min_ago < 0.10
+                
+                        and delta_450_300 < delta_450_300_60_min
+                        and ma50_last <= ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 > 0.10
+                
+                        and deviation_ma3_sotto_ma150 > -1.20
+                        and ma2_last <= ma2_2_min_ago 
+                        and macd_differenza_2_min_ago < -0.24
+                    ):
+                        sell = "SELL 3 ex cond. spec. r 15985 A1ok2B - CON 50< e ma8 < ma8_2_min_ago e dev 3-39 < 0.01 e dev sell < -0.015 and macd_diff_2_min_ago < -0.25 - r 13835"
+                        action = "sell"
+                
+                        # 18 set 2023 dev sell -0.02 da -0.01
+                        # 18 set 2023 dev 39 da 0.01 da -0.01
+                        # 17 OTT 2023 NON METTERE MACD <  MACD 2 MIN AGO
+                        # 17 ott 2023 and macd_differenza_2_min_ago < -0.24
+
+                  
+
+                    
                         
                  
                 ######################################################################################################## sessione 3-4-x ( da 60 a 90 min )
