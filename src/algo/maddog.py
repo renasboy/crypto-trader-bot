@@ -14013,9 +14013,9 @@ class maddog:
                         sell = "SELL 1 (5-12 min) con ma50 > and incrocio 3-78 and deviation_sell < -0.41 - r 8052"
                         action = "sell"
 
-                    # guardare la stella (guardare da una stella!)
-                    # QUESTO E' IL RISCHIO PIU' GRANDE CHE PRENDO ! ( ma con ma50 > ma50 2 min ago DOPO 5 min (+2))
-                    # deviation_sell = ma3_last/last_trade_price 
+                        # guardare la stella (guardare da una stella!)
+                        # QUESTO E' IL RISCHIO PIU' GRANDE CHE PRENDO ! ( ma con ma50 > ma50 2 min ago DOPO 5 min (+2))
+                        # deviation_sell = ma3_last/last_trade_price 
                     
                     
                       
@@ -14172,12 +14172,10 @@ class maddog:
                         and deviation_sell < -0.45
                         and ma2_last < ma2_2_min_ago
                         
-                        
-                        
                         and delta_1 < delta_2
                         and ma100_last > ma100_60_min_ago
                     ):
-                        sell = "SELL 1 PARACADUTE CROLLO distanza< ma100-ma200 (5-12 min) Ema50< E ma3<ma16 and deviation_sell< -0.35 - GIORNO- r 8219"
+                        sell = "SELL 1 (5-12 min) PARACADUTE CROLLO distanza< ma100-ma200  E ma50< E ma3<ma16 and deviation_sell< -0.35 - GIORNO- r 8219"
                         action = "sell"
 
                         # AGGIUNTA PER SICUREZZA SE CONTINUA A PRECIPITARE ma sta risalendo
@@ -14204,7 +14202,7 @@ class maddog:
                         and delta_1 > delta_2
                         and ma100_last < ma100_60_min_ago
                     ):
-                        sell = "SELL 1 PARACADUTE CROLLO 300 > distanza> ma100-ma200 (5-12 min) e ma50< and ma3 < ma16 and dev_sell < -0.35  - NOTTE - r 8246"
+                        sell = "SELL 1 (5-12 min) PARACADUTE CROLLO 300 > distanza> ma100-ma200  e ma50< and ma3 < ma16 and dev_sell < -0.35  - NOTTE - r 8246"
                         action = "sell"
 
                         # AGGIUNTA PER SICUREZZA SE CONTINUA A PRECIPITARE ma sta continuando a scendere
@@ -14223,7 +14221,7 @@ class maddog:
                         and delta_1 > delta_2
                         and ma100_last < ma100_60_min_ago
                     ):
-                        sell = "SELL 1 PARACADUTE CROLLO 300 < distanza> ma100-ma200 (5-12 min) e ma50< and ma3 < ma16 and dev_sell < -0.47  - NOTTE - r 8260"
+                        sell = "SELL 1 (5-12 min) PARACADUTE CROLLO 300 < distanza> ma100-ma200  e ma50< and ma3 < ma16 and dev_sell < -0.47  - NOTTE - r 8260"
                         action = "sell"
 
                         # AGGIUNTA PER SICUREZZA SE CONTINUA A PRECIPITARE ma sta continuando a scendere
@@ -14231,7 +14229,7 @@ class maddog:
 
                     
                     # ----------------------------------------------------------------------------- CONDIZIONE SPECIALE NEL SELL 1 !
-                    
+
                     elif (
                         ma78_last < ma78_120_min_ago
                         and ma300_last < ma300_301_min_ago
@@ -14250,8 +14248,30 @@ class maddog:
                         and macd < 4
                     
                     ):
-                        sell = "SELL 1 (5-12 min) EX cond. spec. r 16047 B2 con ma300> 5 ore - dev 3-39 < 0.05 and dev_sell < -0.06 con ma50 < e con macd < 2 min e macd < 4 - r 8261"
+                        sell = "SELL 1 (5-12 min) EX cond. spec. r 16047 B2 con ma300> 5 ore - dev 3-39 < 0.05 and dev_sell < -0.06 con ma50 < e con macd < 2 min e macd < 4 - r 6261"
                         action = "sell"
+
+                    
+                    elif (
+                        ma8_last < ma8_2_min_ago 
+                        and deviation_ma39 < 0.02
+                        and deviation_sell < -0.02
+                        and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago > 1.50
+                        and deviation_ma10_sopra_o_sotto_ma10_30_min_ago < 0.10
+                
+                        and delta_450_300 < delta_450_300_60_min
+                        and ma50_last <= ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 > 0.10
+                
+                        and deviation_ma3_sotto_ma150 > -1.20
+                        and ma2_last <= ma2_2_min_ago 
+                        and macd_differenza_2_min_ago < -0.25
+                    ):
+                        sell = "SELL 1 (5-12 min) EX cond. spec 15985 A1 ok 2B - CON ma8 < ma8 2 min ago e dev 3-39 < 0.02 e dev sell < -0.02 e macd_dif_2_min_ago < -0.25 - r 6262"
+                        action = "sell"
+
+                    
+                    
 
                     
                     
