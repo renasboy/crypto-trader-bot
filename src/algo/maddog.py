@@ -212,10 +212,7 @@ class maddog:
 
       
       
-        # MACD trend 2
         
-        trend_macd = (macd - macd_2_min_ago)
-        self.algo_helper.info("trend_macd: {}".format(trend_macd))
       
 
         
@@ -230,7 +227,13 @@ class maddog:
         
         macd_differenza = (macd - macd_5_min_ago)
         self.algo_helper.info("macd_differenza: {}".format(macd_differenza))
+
+
+      
+        # MACD trend 2 VEDI SOPRA
         
+        trend_macd = (macd - macd_2_min_ago)
+        self.algo_helper.info("trend_macd: {}".format(trend_macd))
      
 
 
@@ -21782,9 +21785,10 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                         and macd < macd_2_min_ago
                         and macd < -6
+                        and macd_differenza_2_min_ago < -0.25
                     ):
                    
-                        sell = "SELL 2 110-240 min con 3-78 forse E' NECESSARA SOLO QUESTA ! vedi 25 luglio 2023 ore 16:28 NON AVEVA VENDUTO NULLA ! - r 12474"
+                        sell = "SELL 2 110-240 min con 3-78 vedi 25 luglio 2023 ore 16:28 NON AVEVA VENDUTO NULLA ! and macd_differenza_2_min_ago < -0.25 - r 12474"
                         action = "sell"
                         
                         # 16 ago 2023 3-78 da 3-39
