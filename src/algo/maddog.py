@@ -11455,8 +11455,9 @@ class maddog:
                     
                     and ma10_last > ma100_last
                     
-                    and deviation_buy3 > 0.06
-                    and deviation_ma7_sopra_ma40 > 0.07
+                    and deviation_ma5_sopra_ma28 > 0.10
+                    and deviation_buy3 > 0.04
+                    and deviation_ma7_sopra_ma40 > 0.05
                     
                     and ma3_last > ma13_last
                     
@@ -11464,10 +11465,11 @@ class maddog:
                     and ma4_last > ma50_last
                     and ma7_last > ma25_last
                     
-                    and deviation_ma5_sopra_ma28 > 0.05
+                    
                     and ma2_last > ma2_2_min_ago
+                    and macd > macd_2_min_ago
                 ):
-                    buy = "BUY 4A GIORNO con ma 78> e 300> E ma100>ma200 - r 6668 A1"
+                    buy = "BUY 4A GIORNO con ma 78> e 300> E ma100>ma200 con macd > macd 2 min ago - r 6668 A1x"
                     action = "buy"
                     percentage = 70
           
@@ -11481,6 +11483,40 @@ class maddog:
                     # 14 ott 2023 59 >59 2 min ago da 69 > 69 2 min ago
                     # 14 ott 2023 dev_buy3 > 0.06 da 0.07
                     # 14 ott 2023 10-100 da 13-100
+                    # 21 ott 2023 and macd > macd_2_min_ago
+
+                
+                elif (
+                    ma59_last >= ma59_2_min_ago
+                    and delta_450_300 < delta_450_300_60_min
+                    and ma300_last > ma300_301_min_ago
+                    and ma100_last > ma200_last
+                    
+                    and ma10_last > ma100_last
+                    
+                    and deviation_ma5_sopra_ma28 > 0.05
+                    and deviation_buy3 > 0.07
+                    and deviation_ma7_sopra_ma40 > 0.08
+                    
+                    and ma3_last > ma13_last
+                    
+                    and ma4_last > ma9_last
+                    and ma4_last > ma50_last
+                    and ma7_last > ma25_last
+                    
+                    and ma2_last > ma2_2_min_ago
+                    and macd < macd_2_min_ago
+                ):
+                    buy = "BUY 4A GIORNO con ma 78> e 300> E ma100>ma200 con macd < macd 2 min ago - r 6668 A1y"
+                    action = "buy"
+                    percentage = 70
+                    
+                    # 21 ott 2023 and macd < macd_2_min_ago - SE MACD DISCENDENTE IL BUY LO FACCIO PIU' ALTO ! - C'E' MA NON SI VEDE
+
+              
+                
+
+              
                   
                 elif (
                     ma69_last >= ma69_2_min_ago
