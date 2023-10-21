@@ -26498,8 +26498,6 @@ class maddog:
                         
                         
                         
-                        
-                        
                     # sta in basso
                     
                     elif (
@@ -26507,11 +26505,32 @@ class maddog:
                         and deviation_ma100_sopra_ma300 < 0.25
                         
                         and (ma3_prev > ma78_prev and ma3_last < ma78_last)
+                        
                         and deviation_sell < -0.19
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 4-5-x da 60 a 90 min con ma50 < con incrocio 3-78 and deviation_sell < -0.19 (sta in basso) - r 15660 B"
+                        sell = "SELL 4-5-x (60-90 min)  con ma50 < con incrocio 3-78 and deviation_sell < -0.19 (sta in basso) - r 15660 B"
                         action = "sell"
+
+                  
+                    elif (
+                        ma78_last < ma78_120_min_ago
+                        and ma300_last > ma300_301_min_ago
+                        and ma50_last <= ma50_2_min_ago
+                
+                        and deviation_ma39 < 0.06
+                        and deviation_sell < -0.11
+                
+                        and deviation_ma5_sotto_ma200 > -0.64
+                
+                        and ma2_last <= ma2_2_min_ago 
+                        and macd < -1.7
+                    ):
+                        sell = "SELL 4-5-x (60-90 min)  r 16047 B1 modificata con ma300 > 5 ore - dev 3-39 < 0.05 and dev_sell < -0.11 - con ma50 < - r 15661"
+                        action = "sell"
+
+                  
+                    
                         
                         
 
@@ -27315,20 +27334,17 @@ class maddog:
             elif (
                 ma78_last < ma78_120_min_ago
                 and ma300_last > ma300_301_min_ago
-                
-                and deviation_ma39 < 0.06
-                and deviation_sell < -0.102
-                
-                
                 and ma50_last <= ma50_2_min_ago
                 
+                and deviation_ma39 < 0.06
+                and deviation_sell < -0.107
                 
                 and deviation_ma5_sotto_ma200 > -0.64
                 
                 and ma2_last <= ma2_2_min_ago 
                 and macd < 5
             ):
-                sell = "SELL condizione speciale 6 con ma300> 5 ore - SALVAGENTE 4 deviation 3-39 < 0.05 and dev_sell < -0.102 - con ma50 < e con ma5 sotto ma200 > -0.64 - r 16047 B1"
+                sell = "SELL condizione speciale 6 con ma300 > 5 ore - SALVAGENTE 4 dev 3-39 < 0.05 and dev_sell < -0.107 - con ma50 < e con ma5 sotto ma200 > -0.64 - r 16047 B1"
                 action = "sell"   
                 
 
@@ -27354,10 +27370,10 @@ class maddog:
                 # 16 ago 2023 aggiunto macd < macd 2 min ago
                 # 24 ago 2023 and deviation_ma39 < 0.05 ! il 22 ago ha fatto -1.20 !
                 # 12 set 2023 and dev sell < -0.05 da -0.30
-                #  2 ott 2023 -1 tolto macd < 2 min ago era < 5
+                #  2 ott 2023 -1% tolto macd < 2 min ago era < 5 !
                 # 19 ott 2023 tolto and deviation_ma100_sopra_ma300 < 0.40 ! ha fatto -0.85 !
                 # 19 ott 2023 and deviation_ma5_sotto_ma200 > -0.64
-          
+                # 19 ott 2023 and dev sell < -0.107 da -0.102
 
             elif (
                 ma78_last < ma78_120_min_ago
