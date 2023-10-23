@@ -9813,11 +9813,12 @@ class maddog:
                     
                     and deviation_buy_ma2_sopra_ma13 > 0.10
                     and ma4_last > ma50_last
-                    and ma2_last > ma2_2_min_ago
                     
+                    and ma2_last > ma2_2_min_ago
+                    and macd_differenza_2_min_ago > 0.15
                 ):  
                 
-                    buy = "BUY 3A con 300 > 300 301 min ago ! e con ma200 che sale da 60 min and ma28_last < ma78_last - r 6121 A"
+                    buy = "BUY 3A con 300 > 300 301 min ago ! e con ma200 che sale da 60 min and ma28_last < ma78_last and macd_dif_2_min_ago > 0.15 - r 6121 A"
                     action = "buy"
                     percentage = 80
 
