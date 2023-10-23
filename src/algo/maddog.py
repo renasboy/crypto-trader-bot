@@ -14283,12 +14283,41 @@ class maddog:
                         and ma2_last <= ma2_2_min_ago 
                         and macd < macd_2_min_ago
                         and macd < 4
-                    
+                        
                     ):
-                        sell = "SELL 1 (5-12 min) EX cond. spec. r 16047 B2 con ma300> 5 ore - dev 3-39 < 0.05 and dev_sell < -0.06 con ma50 < e con macd < 2 min e macd < 4 - r 6261"
+                        sell = "SELL 1 (5-12 min) EX cond. spec. r 16047 B2 con ma300> 5 ore - dev 3-39 < 0.05 and dev_sell < -0.06 con ma50 < e con macd < 2 min e macd < 4 - r 8261"
                         action = "sell"
 
+                  
                     
+                    elif (
+                        ma78_last < ma78_120_min_ago
+                        and ma300_last > ma300_301_min_ago
+                        and delta_150_100 <= delta_150_100_60_min
+                
+                        and deviation_ma39 < 0.06
+                        and deviation_sell < -0.05
+                
+                
+                        and ma50_last <= ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 < 0.40
+                
+                        and deviation_ma5_sotto_ma200 > -0.90
+                
+                        and ma2_last <= ma2_2_min_ago
+                        and macd_differenza_2_min_ago < -0.25
+                        
+                    ):
+                        sell = "SELL 1 (5-12 min) EX cond spec 16047 B3 NOTTE con ma300> 5 ore e dev 3-39 < 0.05 e dev_sell < -0.07 e ma50 < and macd_diff_2_min_ago < -0.25 - r 8262"
+                        action = "sell"
+                
+                        # 23 ott 2023 quando 300 scende da 5 ore non devi vendere in perdita ! a ricomprare ci penseranno altre condizioni !
+                        # 23 ott 2023 dev 3-39 a 0.06 da 0.05
+                        # 23 ott 2023 dev_sell a -0.05 da -0.07
+                        # 23 ott 2023 tolyo and macd < macd_2_min_ago e aggiunta diff macd 2 min ago < -0.25
+
+                    
+              
                     elif (
                         ma8_last < ma8_2_min_ago 
                         and deviation_ma39 < 0.02
@@ -14304,7 +14333,7 @@ class maddog:
                         and ma2_last <= ma2_2_min_ago 
                         and macd_differenza_2_min_ago < -0.25
                     ):
-                        sell = "SELL 1 (5-12 min) EX cond. spec 15985 A1 ok 2B - CON ma8 < ma8 2 min ago e dev 3-39 < 0.02 e dev sell < -0.02 e macd_dif_2_min_ago < -0.25 - r 6262"
+                        sell = "SELL 1 (5-12 min) EX cond. spec 15985 A1 ok 2B - CON ma8 < ma8 2 min ago e dev 3-39 < 0.02 e dev sell < -0.02 e macd_dif_2_min_ago < -0.25 - r 8263"
                         action = "sell"
 
                     
