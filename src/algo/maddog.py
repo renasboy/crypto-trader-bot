@@ -26571,6 +26571,9 @@ class maddog:
                         sell = "SELL 4-5-x (60-90 min)  con ma50 < con incrocio 3-78 and deviation_sell < -0.19 (sta in basso) - r 15660 B"
                         action = "sell"
 
+                    
+
+                    ################################################################################################################## CONDIZIONI SPECIALI IMPORTATE NEL SEL 4-5-x
                   
                     elif (
                         ma78_last < ma78_120_min_ago
@@ -26585,8 +26588,35 @@ class maddog:
                         and ma2_last <= ma2_2_min_ago 
                         and macd < -1.7
                     ):
-                        sell = "SELL 4-5-x (60-90 min)  r 16047 B1 modificata con ma300 > 5 ore - dev 3-39 < 0.05 and dev_sell < -0.11 - con ma50 < - r 15661"
+                        sell = "SELL 4-5-x (60-90 min) r 16047 B1 modificata con ma300 > 5 ore - dev 3-39 < 0.05 and dev_sell < -0.11 - con ma50 < - r 15661"
                         action = "sell"
+
+                    
+                    elif (
+                        ma78_last < ma78_120_min_ago
+                        and ma300_last > ma300_301_min_ago
+                        and delta_150_100 <= delta_150_100_60_min
+                
+                        and deviation_ma39 < 0.06
+                        and deviation_sell < -0.03
+                
+                
+                        and ma50_last <= ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 < 0.40
+                
+                        and deviation_ma5_sotto_ma200 > -0.90
+                
+                        and ma2_last <= ma2_2_min_ago 
+                        and macd < macd_2_min_ago
+                    ):
+                        sell = "SELL cond spec 4-5-x (60-90 min) EX cond spec r 16047 B3 NOTTE con ma300> 5 ore - con dev 3-39 < 0.06 and dev_sell < -0.03 e ma50 < - r 15662"
+                        action = "sell"
+                        
+                        # 23 ott 2023 dev 3-39 a 0.06 da 0.05
+                        # 23 ott 2023 dev sell -0.03 da -0.07
+
+                     
+                    
 
                   
                     
