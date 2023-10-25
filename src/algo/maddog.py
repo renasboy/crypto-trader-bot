@@ -26278,6 +26278,37 @@ class maddog:
                         
                         # 23 ott 2023 dev 3-39 a 0.06 da 0.05
                         # 23 ott 2023 dev sell -0.03 da -0.07
+
+
+          
+                    elif (
+                        deviation_ma39 < -0.10
+                        and deviation_sell < -0.20
+                        and ma2_last <= ma2_2_min_ago 
+                        and delta_450_300 > delta_450_300_60_min
+                        and ma50_last < ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 > 0.20
+                
+                        and deviation_ma3_sotto_ma150 > -1.20
+                    ):
+                        sell = "SELL 4-5-x (21-60 min) EX cond. spec 15985 A2 - con 3-39 < -0.10 e dev sell < -0.20 e con ma50 < e dev_ma3_sotto_ma200 > -1.20 - r 15500"
+                        action = "sell"
+                
+                        # 27 giu 2022 dev sell a 0.305 da 0.31
+                        # deviation_ma39 = ma4_last / ma39_last QUESTA HA VENDUTO NEL CROLLO IMPROVVISO DI 1 MINUTO (con -2.06% !)
+                        # 21 giugno 2022 RICORDO TREMENDO 9372 ha venduto a -2.23% !!!
+                        # COME PRIMA COSA HO NOTATO CHE AVEVA DEVIATION INVECE DI DEVIATON SELL 
+                        # ma non sapendo se era questo il problema ho creato la prossima condizione speciale.
+                
+                
+                        # > estate dev 39 -0.24 da -0.25 dev sell -0.30 da -0.31 
+                        # 13 set -3% !!! deviation_ma3_sotto_ma200 > -1.20 da deviation_ma3_sotto_ma200 > -1.20 
+                        # 21 gen 2023 dev sell -0.303 da -0.30
+                        # 20 feb 2023 -0.304 da -0.303 con doppio delta 450-300 NOTTE !
+                        # 25 ott 2023 dev 39 -0.10
+                        # 25 ott 2023 dev sell -0.20 da -0.304
+
+                    
               
                     elif (
                         ma78_last < ma78_120_min_ago
@@ -26296,7 +26327,7 @@ class maddog:
                         and ma2_last <= ma2_2_min_ago 
                 
                     ):
-                        sell = "SELL 4-5-x (21-60 min) EX cond spec GIORNO con ma300> 5 ore - dev 3-39 < 0.05 and dev_sell < -0.05 - con ma50 < e ma5 sotto ma200 > -0.90 - r 15500"
+                        sell = "SELL 4-5-x (21-60 min) EX cond spec GIORNO con ma300> 5 ore - dev 3-39 < 0.05 and dev_sell < -0.05 - con ma50 < e ma5 sotto ma200 > -0.90 - r 15502"
                         action = "sell"
                 
                         # 15 set 2023 quando 300 scende da 5 ore non devi vendere in perdita ! a ricomprare ci penseranno altre condizioni !
