@@ -199,8 +199,12 @@ class maddog:
         ma450_720_min_ago = self.algo_helper.ma_minutes_ago(450, 720)
         
 
+        # PREZZO
+        
+        price = self.algo_helper.price
 
-      
+        
+        
         # viaggio in italia del compare mio !
       
         # MACD trend 1
@@ -27280,15 +27284,19 @@ class maddog:
                 
                 and deviation_ma3_sotto_ma150 > -1.20
                 
-                and ma2_last < ma5_last
+                
                 and ma2_last <= ma2_2_min_ago
+                and ma2_last < ma5_last
+                and price < ma3_last
             ):
-                sell = "SELL cond. special 3 - SALVAGENTE 3 3-39 < -0.01 e dev sell < -0.12 con ma50< e dev_ma3_sotto_ma200 > -1.20 - r 15985 A1 ok 4"
+                sell = "SELL cond. special 3 - SALVAGENTE 3 3-39 < -0.01 e dev sell < -0.12 con ma50< e dev_ma3_sotto_ma200 > -1.20 and price < ma3 - r 15985 A1 ok 4"
                 action = "sell"
               
                 # 27 set 2023 dev sell -0.11 da -0.10
                 # 25 ott 2023 aggiunta ma2 < ma5
                 # 27 ott 2023 dev sell -0.12 da -0.11
+                # 27 ott 2023 aggiunto price < ma3 !
+         
 
             elif (
                 deviation_ma39 < -0.01
