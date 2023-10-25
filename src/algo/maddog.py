@@ -2372,7 +2372,7 @@ class maddog:
                     
                     and deviation_ma3_sopra_ma10 > 0.017
                     and deviation_ma3_sopra_ma16 > 0.001
-                    and deviation_ma3_sopra_ma18 > 0.001
+                    and deviation_ma3_sopra_ma18 > -0.01
                     
                     and ma2_last >= ma20_last
                   
@@ -2380,10 +2380,11 @@ class maddog:
                     and macd >= macd_2_min_ago
                     
                 ):    
-                    buy = "BUY 1 compare forever - con 3-20 E CON 300 ancora vicina alla 450 ( anche un poco sotto ! ) and 3-18 > 0.001 + MACD > - r 1537 A3x"
+                    buy = "BUY 1 compare forever - con 3-20 E CON 300 ancora vicina alla 450 ( anche un poco sotto ! ) and 3-18 > -0.01 + MACD > - r 1537 A3X"
                     action = "buy"
                     percentage = 90
-
+                    
+                    # 25 ott 2023 and deviation_ma3_sopra_ma18 > -0.01 da 0.001
               
                 elif (     
                     
