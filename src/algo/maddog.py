@@ -25522,9 +25522,6 @@ class maddog:
                         
                         
                     
-                    
-                    # --------------------------------------------------------------------------------- PARACADUTE crollo
-                    
                     elif (
                         ma50_last < ma50_2_min_ago
                         and ma3_last < ma16_last
@@ -25535,10 +25532,7 @@ class maddog:
                         action = "sell"
 
                         # AGGIUNTA PER SICUREZZA SE CONTINUA A PRECIPITARE
-                        
-                        
-                        
-                  
+
                     # ----------------------------------------------------------------------------- guadagno con crollo
                     
                     elif (
@@ -25549,6 +25543,46 @@ class maddog:
                     ):
                         sell = "SELL 4-5-x eventuale guadagno con crollo (12-21 min) con ma50 < and incrocio 3 - 18 and deviation_sell > 0.23 - r 15011"
                         action = "sell"
+
+                  
+                    # --------------------------------------------------------------------------------- EX CONDIZIONI SPECIALI IMPORTATE ridotte
+                  
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        
+                        and deviation_ma39 < -0.01
+                        and deviation_sell < -0.05
+                        
+                        and deviation_ma100_sopra_ma300 > 0.20
+                        
+                        and delta_450_300 < delta_450_300_60_min
+                
+                        and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago < 1.50
+                        and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago > -1.50
+                
+                        and deviation_ma10_sopra_o_sotto_ma10_30_min_ago < 0.12
+                
+                        and deviation_ma3_sotto_ma150 > -1.20
+                
+                
+                        and ma2_last <= ma2_2_min_ago
+                        and ma2_last < ma5_last
+                        and price < ma3_last
+                    ):
+                        sell = "SELL 3-4-x (12-21 min) EX cond. special 15985 A1 ok 4 con 3-39 < 0.06 e dev sell < -0.05 con ma50 < and price < ma3 - r 15012"
+                        action = "sell"
+              
+                        # 27 set 2023 dev sell -0.11 da -0.10
+                        # 25 ott 2023 aggiunta ma2 < ma5
+                        # 25 ott 2023 dev sell -0.12 da -0.11
+                        # 25 ott 2023 aggiunto price < ma3 !
+                        # 25 ott 2023 3-39 < 0.06 da < -0.01
+                        # 25 ott 2023 dev sell < -0.05 da < -0.12
+                        
+                        
+                        
+                  
+                    
                         
                         
 
