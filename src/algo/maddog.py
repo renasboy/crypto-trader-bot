@@ -11042,10 +11042,10 @@ class maddog:
                 elif (
                     
                     ma4_last > ma30_last
-                    and deviation_ma5_sopra_o_sotto_ma100 > -0.11
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.15
                     
-                    and deviation_ma100_sopra_ma300 < 0.30
-                    and deviation_ma100_sopra_ma300 > -0.30
+                    and deviation_ma100_sopra_ma300 < 0.35
+                    and deviation_ma100_sopra_ma300 > -0.35
                     
                     and ma450_last > ma450_60_min_ago
                     
@@ -11063,9 +11063,11 @@ class maddog:
                     percentage = 60
                     
                     #  2 ottobre 2023 aggiunta perche' BUY 3 NON ENTRAVA IN AZIONE
+                    # 25 ottobre 2023 and deviation_ma5_sopra_o_sotto_ma100 > -0.15 da > -0.11
+                    # 25 ottobre 2023 and deviation_ma100_sopra_ma300 < 0.35 da < 0.30
+                    # 25 ottobre 2023 and deviation_ma100_sopra_ma300 > -0.35 da > -0.30
 
-
-              
+                
                 # BUY 3 ultima condizione che mancava ! ma tutte negative MA BUY con 8 > 125
                 
                 elif (     
