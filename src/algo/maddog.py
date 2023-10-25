@@ -21290,14 +21290,14 @@ class maddog:
                         and delta_450_300 > delta_450_300_60_min
                         
                         and ma2_last < ma2_2_min_ago 
-                        and deviation_ma39 < -0.24
+                        and deviation_ma39 < -0.23
                         and deviation_trend_ma100 > 0.10
                     ):
-                        sell = "SELL 2 90-110 min con ma50 < MA ma100 > con deviation_ma39 <-0.24 - r 12370 B"
+                        sell = "SELL 2 90-110 min con ma50 < MA ma100 > con deviation_ma39 <-0.23 - r 12370 B"
                         action = "sell"
                         
                         # se 450-300 NOTTE dev_39 0.24
-                        
+                        # 25 ott 2023 and deviation_ma39 < -0.23 da < -0.24
                         
               
                     
