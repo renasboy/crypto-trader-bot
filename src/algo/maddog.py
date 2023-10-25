@@ -19924,8 +19924,8 @@ class maddog:
                         action = "sell"
                         
                         # 19 giu 2022 4-33 da 4-20
-                        
-                        
+
+                   
                     elif (
                         ma50_last < ma50_2_min_ago
                         and ma18_last < ma18_30_min_ago
@@ -19934,10 +19934,32 @@ class maddog:
                         and deviation_sell > 0.22
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 2 eventuale guadagno con crollo (12-21 min) con ma50 < and incrocio 4 - 20 se 18< and deviation_sell > 0.22 - r 11290 b"
+                        sell = "SELL 2 eventuale guadagno con crollo (12-21 min) con ma50 < and incrocio 4 - 20 se 18< and deviation_sell > 0.22 - r 11276 b"
                         action = "sell"
                         
                         # 19 giu 2022 4-33 da 4-20
+
+
+                    
+                    elif (
+                        ma78_last < ma78_120_min_ago
+                        and ma300_last > ma300_301_min_ago
+                        and ma50_last > ma50_2_min_ago
+                
+                        and deviation_ma39 < 0.06
+                        and deviation_sell < -0.117
+                
+                        and deviation_ma5_sotto_ma200 > -0.64
+                
+                        and ma2_last <= ma2_2_min_ago 
+                        and macd < 5
+                    ):
+                        sell = "SELL EX cond spec 16047 B1x con ma 50 > ma 50 2 min ago con ma300 > 5 ore - dev 3-39 < 0.05 and dev_sell < -0.117 e ma5 sotto ma200 > -0.64 - r 11277"
+                        action = "sell"
+                        # 25 ott 2023 dev sell -0.117 da -0.107
+
+                  
+                    
             
             
             
@@ -27504,16 +27526,17 @@ class maddog:
                 and ma50_last > ma50_2_min_ago
                 
                 and deviation_ma39 < 0.06
-                and deviation_sell < -0.107
+                and deviation_sell < -0.12
                 
                 and deviation_ma5_sotto_ma200 > -0.64
                 
                 and ma2_last <= ma2_2_min_ago 
                 and macd < 5
             ):
-                sell = "SELL cond spec SALVAGENTE 4 con ma 50 > ma 50 2 min ago con ma300 > 5 ore - dev 3-39 < 0.05 and dev_sell < -0.107 e ma5 sotto ma200 > -0.64 - r 16047 B1x"
+                sell = "SELL cond spec SALVAGENTE 4 con ma 50 > ma 50 2 min ago con ma300 > 5 ore - dev 3-39 < 0.05 and dev_sell < -0.12 e ma5 sotto ma200 > -0.64 - r 16047 B1x"
                 action = "sell"
-
+                
+                # dev_sell < -0.12 da < -0.107 ( portata con -0.119 nel sell 2 )
           
             elif (
                 ma78_last < ma78_120_min_ago
