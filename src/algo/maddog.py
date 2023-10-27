@@ -21452,8 +21452,6 @@ class maddog:
                         action = "sell"
                         
                         
-                    
-                    
                     elif (    
                         ma50_last < ma50_2_min_ago 
                         and ma2_last < ma2_2_min_ago 
@@ -21465,6 +21463,33 @@ class maddog:
                     ):
                         sell = "SELL 2 compa 90-110 min con ma50 < (deviation_sell < -0.24 and ma3_last < ma39_last) con > PERDITA TOLLERATA - r 12440"
                         action = "sell"
+
+                  
+
+                    #............................................................................................................................ CONDIZIONI SPECIALI IMPORTATE
+                    
+                    elif (
+                        ma78_last < ma78_120_min_ago
+                        and ma300_last < ma300_301_min_ago
+                        and delta_150_100 <= delta_150_100_60_min
+                
+                        and deviation_ma39 < 0.05
+                        and deviation_sell < -0.05
+                
+                
+                        and ma50_last <= ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 < 0.40
+                
+                        and deviation_ma5_sotto_ma200 > -0.50
+                
+                        and ma2_last < ma2_2_min_ago 
+                
+                    ):
+                        sell = "SELL 2 90-110 min EX condizione speciale r 16045 GIORNO con ma300 < 5 ore - dev 3-39 < 0.05 and dev_sell < -0.05 - con ma50 < - r 12441"
+                        action = "sell"
+                        # 27 ott 2023 and deviation_sell < -0.05 da -0.105
+                  
+                    
                         
                         
                  
