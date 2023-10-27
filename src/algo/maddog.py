@@ -20881,11 +20881,11 @@ class maddog:
                         and ma300_last < ma300_301_min_ago
                         and ma100_last < ma100_60_min_ago
                         
-                        and deviation_ma39 < -0.17
+                        and deviation_ma39 < -0.01
                         and deviation_sell < -0.11
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 2 da 60 a 90 min TREND < con PERDITA BASE con ma50 < con deviation_ma39 <-0.17 and dev_sell < -0.11 - r 11999 B"
+                        sell = "SELL 2 da 60 a 90 min TREND < con PERDITA BASE con ma50 < con deviation_ma39 < -0.01 and dev_sell < -0.11 - r 11999 B"
                         action = "sell"
                         
                         # and ma3_last < ma39_last
@@ -20894,7 +20894,7 @@ class maddog:
                         # qui non ho messo il crollo perche' dopo 40 min o gia' ha venduto o e' gia' risalita
                         # cuscino dell' angelo custode
                         #  9 mag 2023 dev sell a -0.11 da -0.10
-                        
+                        #  9 mag 2023 dev 39 a -0.01 da -0.17
                     
                     
 
