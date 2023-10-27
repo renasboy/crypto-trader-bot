@@ -26446,7 +26446,7 @@ class maddog:
                         and deviation_ma5_sotto_ma200 > -0.50
                 
                         and ma2_last <= ma2_2_min_ago 
-                
+                        and ma2_last < ma5_last
                     ):
                         sell = "SELL 4-5-x (21-60 min) EX cond spec GIORNO con ma300> 5 ore - dev 3-39 < 0.05 and dev_sell < -0.05 - con ma50 < e ma5 sotto ma200 > -0.90 - r 15502"
                         action = "sell"
@@ -26456,8 +26456,7 @@ class maddog:
                         #  2 ott 2023 DOPO UN AKTRO -1 HO FATTO QUESTA and deviation_ma5_sotto_ma200 > -0.50
                         #  2 ott 2023 TOLTO and macd < macd_2_min_ago ARRIVATO TARDI ! VEDI 2 OTTOBRE 2023 ORE 20 e 40 - r 16047 B2
                         #  5 ott dev_sell -0.05 da -0.105
-                    
-                        
+                        # 27 ott 2023 aggiunta 2<5                        
                     
                     
 
