@@ -10153,10 +10153,11 @@ class maddog:
                     # 31 ottobre aggiunta dev 10-200 - formula MY COMPA
                     # 7 feb 2023 3-10 0.068
                     
-                    ####################################################################################
-                    ####################################################################################
                     
                     
+                ####################################################################################
+                #################################################################################### 
+                
                 # BUY 3 RCCR PORTATA MADDOG maria callas core 'ngrato - 2 sett 2022 ore 5:03 - ma300 che SCENDE
                 
                 elif (     
@@ -10172,8 +10173,8 @@ class maddog:
                     and ma100_last < ma200_last
                     and ma200_last < ma200_120_min_ago
                     
-                    and deviation_ma3_sopra_ma10 > 0.07
-                    and deviation_ma5_sopra_ma28 > 0.07
+                    and deviation_ma3_sopra_ma10 > 0.03
+                    and deviation_ma5_sopra_ma28 > 0.02
                     
                     and ma2_last >= ma20_last
                     and ma2_last >= ma2_2_min_ago
@@ -10191,8 +10192,8 @@ class maddog:
                     # 19 ott 2022 5-28 > 0.10 da 0.105 VIVA MARIA CALLAS ! condizione meravigliosa
                     #  8 nov maria callas con 5-59 - da 5-69
                     #  16 nov ho tolto ma5_last > ma59_last e ho messo dev callas = 5/54 <-0.10 PENSIERO LATERALE - VEDI 16 NOV ore 15 :33
-                    # 20 aper 2023 5-28 a 0.07 da 0.10
-                    
+                    # 20 apr 2023 5-28 a 0.07 da 0.10
+                    # 20 apr 2023 5-28 a 0.03 da 0.07
                     
                     
                 elif (
