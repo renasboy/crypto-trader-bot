@@ -2401,15 +2401,16 @@ class maddog:
                     and deviation_ma300_sopra_ma450 > -0.55
                     
                     and deviation_ma3_sopra_ma10 > 0.025
-                    and deviation_ma3_sopra_ma16 > -0.02
-                    and deviation_ma3_sopra_ma18 > -0.03
+                    and deviation_ma3_sopra_ma16 > -0.03
+                    and deviation_ma3_sopra_ma18 > -0.04
                     
                     and ma2_last >= ma20_last
                     
                     and ma2_last > ma5_last
                     and ma2_last >= ma2_2_min_ago
                     and macd >= macd_2_min_ago
-                    
+                    and macd_differenza_2_min_ago > 2
+                  
                 ):    
                     buy = "BUY 1 compare forever - con 3-18 E CON 300 ancora vicina alla 450 ( anche un poco sotto ! ) and 3-18 > -0.02 + MACD > AND 2>5 ! - r 1537 A3Y"
                     action = "buy"
@@ -2448,7 +2449,9 @@ class maddog:
                     # 20 ott 2023 ho dovuto aggiungere SOLO SU QUESTA and ma2_last > ma5_last !
                     # 20 ott 2023 and deviation_ma3_sopra_ma16 > -0.02 da -0.01
                     # 20 ott 2023 and deviation_ma3_sopra_ma18 > -0.03 da -0.02
-              
+                    # 27 ott 2023 and deviation_ma3_sopra_ma16 > -0.03 da -0.02
+                    # 27 ott 2023 and deviation_ma3_sopra_ma18 > -0.04 da -0.03
+                    # 27 ott 2023 aggiunta diff macd > 2
                     
                 # BUY 1 tempo ESTATE PIU' VELOCE 100 > 60 min ago (solo l' estate se lo puo' perettere!) considera il passare del TEMPO ! ma30 > 
                 
