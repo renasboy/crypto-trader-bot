@@ -207,7 +207,7 @@ class maddog:
         
         # viaggio in italia del compare mio !
       
-        # MACD trend 1
+        # MACD di x min ago
         
         macd = self.algo_helper.macd
         macd_2_min_ago = self.algo_helper.macd_minutes_ago(2)
@@ -27730,8 +27730,9 @@ class maddog:
                 and deviation_ma100_sopra_ma300 < 0.40
                 
                 and deviation_ma5_sotto_ma200 > -0.80
+                and macd_differenza_2_min_ago < -0.20
             ):
-                sell = "SELL condizione speciale 6 - SALVAGENTE 4 deviation 3-39 < -0.10 and dev_sell < -0.12 - con ma50 < e con ma5 sotto ma200 > -0.80 - r 16047 A1"
+                sell = "SELL condizione speciale 6 - SALVAGENTE dev 3-39 < -0.10 e dev_sell < -0.12 - con ma50 < and macd_diff_2_min_ago < -0.20 - r 16047 A1"
                 action = "sell"
                 
                 #   9 GIU 2023 dev 3-39 a -0.17 da -0.25
