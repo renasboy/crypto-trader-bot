@@ -215,10 +215,6 @@ class maddog:
         macd_5_min_ago = self.algo_helper.macd_minutes_ago(5)
 
       
-      
-        
-      
-
         
         # formula macd_differenza di 2 min ago
         
@@ -26227,11 +26223,12 @@ class maddog:
                         and ma300_last < ma300_301_min_ago
                         and ma50_last < ma100_last
                         
-                        and ma2_last < ma2_2_min_ago 
-                        
                         and ma200_last < ma200_60_min_ago
+                        
+                        and ma2_last < ma2_2_min_ago 
+                        and macd_differenza_2_min_ago < -0.20
                     ):
-                        sell = "SELL 4-5-x (21-60 min) con ma50 < and deviation_sell < -0.27 se 300 < 300 301 min ago - r 15349 B prova 4"
+                        sell = "SELL 4-5-x (21-60 min) con ma50 < and deviation_sell < -0.27 se 300 < 300 301 min ago and macd_differenza_2_min_ago < -0.20 - r 15349 B prova 4"
                         action = "sell"
 
                   
