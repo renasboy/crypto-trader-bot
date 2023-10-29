@@ -12516,13 +12516,14 @@ class maddog:
                     # 24 ago 2023 aggiunta and macd > macd_2_min_ago
                     # 27 set 2023 5.28 0.08 da 0.10
                     # 27 set 2023 and deviation_ma5_sopra_ma59 < -0.10 da -0.09
+                
                     
                 # BUY 4 importato da buy 5 rccr
                 
                 elif (
                     
                     ma5_last > ma54_last
-                    and ma78_last > ma100_last
+                    and ma59_last >= ma100_last
                     
                     and ma100_last < ma100_180_min_ago
                     and ma200_last < ma200_180_min_ago
@@ -12531,18 +12532,24 @@ class maddog:
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
                     
-                    and deviation_ma5_sopra_ma28 > 0.02
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > 0.02
+                    and deviation_ma5_sopra_ma28 > 0.03
+                    
                     and ma2_last >= ma2_2_min_ago
+                    and macd > macd_2_min_ago
                     
                 ):
-                    buy = "BUY 4 con 5-54 importato da buy 5 rccr - r 7063"
+                    buy = "BUY 4 con 5-54 importato da buy 5 rccr con 59-100 and macd > macd_2_min_ago - r 7063"
                     action = "buy"
                     percentage = 90
                   
                     #  1 ago 2023 importato buy 4 da buy 5
                     # 27 set 2023 78-100 da 78-150
                     # 27 set 2023 5-54 da 8-59
-              
+                    # 29 ott 2023 59-100 da 78-100
+
+                
               
                 # BUY 4 se 8 > 200 con 5-28 > 0.20 ! e con ma69 > and deviation_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali) IMPORTATA DA BUY 5
                 
