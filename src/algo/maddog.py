@@ -89,7 +89,7 @@ class maddog:
         ma4_2_min_ago = self.algo_helper.ma_minutes_ago(4, 2)
         
         ma5_2_min_ago = self.algo_helper.ma_minutes_ago(5, 2)
-        
+        ma5_10_min_ago = self.algo_helper.ma_minutes_ago(5, 10)
         ma5_12_min_ago = self.algo_helper.ma_minutes_ago(5, 12)
         ma5_1080_min_ago = self.algo_helper.ma_minutes_ago(5, 1080)
         
@@ -26510,7 +26510,7 @@ class maddog:
                         and ma2_last <= ma2_2_min_ago 
                         and macd < macd_2_min_ago
                     ):
-                        sell = "SELL cond spec 4-5-x (21-60 min) EX cond spec r 16047 B3 NOTTE con ma300> 5 ore - con dev 3-39 < 0.06 and dev_sell < -0.03 e ma50 < - r 15499"
+                        sell = "SELL 4-5-x (21-60 min) EX cond spec r 16047 B3 NOTTE con ma300> 5 ore - con dev 3-39 < 0.06 and dev_sell < -0.03 e ma50 < - r 15499"
                         action = "sell"
                         
                         # 23 ott 2023 dev 3-39 a 0.06 da 0.05
@@ -26536,8 +26536,7 @@ class maddog:
                         # 21 giugno 2022 RICORDO TREMENDO 9372 ha venduto a -2.23% !!!
                         # COME PRIMA COSA HO NOTATO CHE AVEVA DEVIATION INVECE DI DEVIATON SELL 
                         # ma non sapendo se era questo il problema ho creato la prossima condizione speciale.
-                
-                
+                        
                         # > estate dev 39 -0.24 da -0.25 dev sell -0.30 da -0.31 
                         # 13 set -3% !!! deviation_ma3_sotto_ma200 > -1.20 da deviation_ma3_sotto_ma200 > -1.20 
                         # 21 gen 2023 dev sell -0.303 da -0.30
@@ -27318,6 +27317,7 @@ class maddog:
                         #  7 feb 2023 -0.23 da -0.21
                         # 17 mar 2023 3-33 da 3-39 vedi 3 mar 2023 ore 14:46 sembra che 3-39 sia arrivata tardi.
                         # 27 mar 2023 dev sell -0.05 da -0.23 (stiamo al sell 4-5-x e pure dopo 90 min ! esci !)
+
                   
                     elif (    
                         ma50_last < ma50_2_min_ago
@@ -27326,12 +27326,35 @@ class maddog:
                         and deviation_sell < -0.225
                         and ma3_last < ma33_last
                     ):
-                        sell = "SELL 4-5-x dopo 90 min con 5-300 < 0.10 E ma50 < and (deviation_sell < -0.225 and ma3_last < ma39_last) - r 15906 c"
+                        sell = "SELL 4-5-x dopo 90 min dopo 90 min con 5-300 < 0.10 E ma50 < and (deviation_sell < -0.225 and ma3_last < ma39_last) - r 15906 c"
                         action = "sell"
                         
                         #  7 feb 2023 -0.23 da -0.21
                         # 17 mar 2023 3-33 da 3-39 vedi 3 mar 2023 ore 14:46 sembra che 3-39 sia arrivata tardi. vedi 25 luglio 2023 ore 21:50
                         # 11 ago 2023 5 sotto 200 ma ho lasciato 5 sotto 300 condizione precedente.
+                  
+
+
+                    ##################################################################################################################### CONDIZIONI SPECIALI IMPORTATE RIDOTTE
+                    
+                    elif (
+                        deviation_sell > 0.80
+                        and ma5_last < ma5_10_min_ago
+                
+                        and ma3_last < ma28_last
+                
+                        and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
+                        and macd_differenza_2_min_ago < -1
+                    ):    
+                        sell = "SELL 4-5-x dopo 90 min EX cond. spec POCHI MALEDETTI E SUBITO con ma5 < ma5_10_min_ago e dev > 0.80 and macd < macd 2 min ago - r 15910"
+                        action = "sell"
+                
+                        # 27 set 2023 macd < macd 2 min ago 
+                        # 27 set 2023 and macd_differenza_2_min_ago < -1
+
+              
+                    
                     
             #################################################################################################################### VENDITE SPECIALI !
             ####################################################################################
