@@ -12523,7 +12523,7 @@ class maddog:
                 elif (
                     
                     ma5_last > ma54_last
-                    and ma59_last >= ma100_last
+                    and ma50_last >= ma59_last
                     
                     and ma100_last < ma100_180_min_ago
                     and ma200_last < ma200_180_min_ago
@@ -12540,14 +12540,14 @@ class maddog:
                     and macd > macd_2_min_ago
                     
                 ):
-                    buy = "BUY 4 con 5-54 importato da buy 5 rccr con 59-100 and macd > macd_2_min_ago - r 7063"
+                    buy = "BUY 4 con 5-54 importato da buy 5 rccr con 50>59 and macd > macd_2_min_ago - r 7063"
                     action = "buy"
                     percentage = 90
                   
                     #  1 ago 2023 importato buy 4 da buy 5
                     # 27 set 2023 78-100 da 78-150
                     # 27 set 2023 5-54 da 8-59
-                    # 29 ott 2023 59-100 da 78-100
+                    # 29 ott 2023 50-59 da 78-100
 
                 
               
