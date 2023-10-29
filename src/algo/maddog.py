@@ -13579,10 +13579,33 @@ class maddog:
               
 
               
-                # NELLA CORREZIONE EVENTUALE (SIAMO AL BUY 5 !) NON HO MESSO and ma50_last > ma100_last
+                # NELLA CORREZIONE EVENTUALE (SIAMO AL BUY 5 !)   qui NON HO messo and ma50_last > ma100_last
                 
-                # BUY 5A PAZZA DURANTE UNA piccola CORREZIONE che NON E' un forte ribasso e NON E' un crollo ! (compare stammi vicino!)
+                # BUY 5 DURANTE UNA piccola CORREZIONE che NON E' un forte ribasso e NON E' un crollo ! (compare stammi vicino!)
                 
+                elif (    
+                    ma3_last > ma39_last
+                        
+                    and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago < 1.50
+                    and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago > -1.50
+                        
+                    and deviation_ma78_sopra_o_sotto_ma78_600_min_ago < 0.10
+                        
+                    and ma300_last < ma300_301_min_ago
+                    and ma200_last < ma200_60_min_ago
+                    and ma50_last < ma100_last
+                        
+                    and ma3_last < ma5_last
+                    and ma2_last > ma2_2_min_ago
+                    and ma8_last > ma8_2_min_ago 
+                    and macd_differenza_2_min_ago > 0.20
+                ):
+                    sell = "BUY 5 con and ma8_last > ma8_2_min_ago se 300 < 300 301 min ago and macd_differenza_2_min_ago > 0.20 - r 7587"
+                    action = "sell"
+                        
+                    # 29 ott 2023 non aveva comprato e ho aggiunto questa
+
+              
                 elif (
                     ma2_last >= ma2_2_min_ago
                     and deviation_buy_crollo_1 < -0.29
