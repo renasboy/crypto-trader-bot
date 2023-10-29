@@ -230,13 +230,7 @@ class maddog:
 
 
       
-        # MACD trend 2 VEDI SOPRA
         
-        trend_macd = (macd - macd_2_min_ago)
-        self.algo_helper.info("trend_macd: {}".format(trend_macd))
-     
-
-
       
         # LAST TRADE
         
