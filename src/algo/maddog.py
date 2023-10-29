@@ -5346,7 +5346,7 @@ class maddog:
                 elif (
                     ma5_last > ma225_last
                     and ma5_last > ma50_last
-                    and trend_macd >= 2
+                    and macd_differenza_2_min_ago >= 2
                     
                     and deviation_ma3_sopra_ma10 > 0.155
                     and deviation_ma5_sopra_ma28 > 0.01
@@ -5363,7 +5363,7 @@ class maddog:
                     and macd >= macd_2_min_ago
                 ):
                
-                    buy = "BUY 1 che ci riprova quando se ne va lateralmente dopo il crollo and trend_macd >= 2 - r 4082 A1"
+                    buy = "BUY 1 che ci riprova quando se ne va lateralmente dopo il crollo and macd_differenza >= 2 - r 4082 A1"
                     action = "buy"
                     percentage = 80
 
