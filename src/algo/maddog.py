@@ -20625,8 +20625,10 @@ class maddog:
                         
                         # 14 set 3-28 da 3-18
                         # 16 mar 2023 3-39 da 3-28 giorno
-                        
-                        
+
+                  
+                  
+                    
                     elif (
                         ma50_last < ma50_2_min_ago
                         and delta_450_300 > delta_450_300_60_min
@@ -20639,6 +20641,30 @@ class maddog:
                         
                         # 14 set 3-28 da 3-18
                         # 16 mar 2023 3-39 da 3-28 notte
+
+                    
+
+                    ##################################################################################################################### condizioni speciali importate ridotte
+                  
+                    elif (
+                        ma78_last < ma78_120_min_ago
+                        and ma300_last > ma300_301_min_ago
+                        and ma50_last <= ma50_2_min_ago
+                
+                        and deviation_ma39 < 0.06
+                        and deviation_sell < -0.107
+                
+                        and deviation_ma5_sotto_ma200 > -0.64
+                
+                        and ma2_last <= ma2_2_min_ago
+                        and ma2_last < ma5_last
+                        and macd < 5
+                    ):
+                        sell = "SELL 2 (21-60 min) EX cond spec r 16047 B1Y con ma 50 < ma 50 2 min ago  con ma300 > 5 ore - CON dev 3-39 < 0.05 and dev_sell < -0.107 - r 11805"
+                        action = "sell"
+
+                  
+                    
                 
                 
                 
@@ -27704,7 +27730,7 @@ class maddog:
                 and ma50_last <= ma50_2_min_ago
                 
                 and deviation_ma39 < 0.06
-                and deviation_sell < -0.107
+                and deviation_sell < -0.109
                 
                 and deviation_ma5_sotto_ma200 > -0.64
                 
@@ -27742,6 +27768,8 @@ class maddog:
                 # 19 ott 2023 tolto and deviation_ma100_sopra_ma300 < 0.40 ! ha fatto -0.85 !
                 # 19 ott 2023 and deviation_ma5_sotto_ma200 > -0.64
                 # 19 ott 2023 and dev sell < -0.107 da -0.102
+                # 29 ott 2023 and and deviation_sell -0.109 da -0.107
+          
 
             elif (
                 ma78_last < ma78_120_min_ago
