@@ -12855,32 +12855,31 @@ class maddog:
                     
                     
                 elif (
-                    ma5_last >= ma5_2_min_ago
+                    
+                    ma4_last > ma50_last
                     and deviation_ma300_sopra_ma450 < 0.10
-                    
-                    and ma300_last > ma300_120_min_ago
+                    and ma300_last > ma300_60_min_ago
                     and ma300_last > ma450_last
-                  
-                    and ma78_last < ma150_last
-                    and deviation_ma5_sopra_ma28 > 0.07
                     
+                    and ma78_last < ma150_last
+                    
+                    and deviation_ma5_sopra_ma28 > 0.07
                     and deviation_ma7_sopra_ma40 > 0.01
                     
                     and ma3_last > ma13_last
-                    
                     and ma4_last > ma9_last
-                    and ma4_last > ma50_last
                     
                     and ma6_last > ma15_last
                     and ma7_last > ma25_last
                     
-                    and ma2_last > ma2_2_min_ago
                     
+                    and ma5_last >= ma5_2_min_ago
+                    and ma2_last > ma2_2_min_ago
                     and macd > macd_2_min_ago
                     and macd_differenza_2_min_ago > 0.25
                     and macd > 2
                 ):
-                    buy = "BUY 5 con 300 > 450 and ma50 > AND 50<100 and 300 > 120 min ago and 5-28 > 0.23 and macd > macd 2 min ago and macd > 2 and diff macd > 0.25 - r 7237 A2"
+                    buy = "BUY 5 con 300 > 450 and ma50 > AND 50<100 and 300 > 60 min ago and 5-28 > 0.07 and macd > macd 2 min ago and macd > 2 and diff macd > 0.25 - r 7237 A2"
                     action = "buy"
                     percentage = 70
                     
@@ -12889,7 +12888,9 @@ class maddog:
                     # 24 ago 2023 macd > macd 2 min ago
                     # 24 ago 2023 macd > 3
                     # 19 ott 2023 macd > 2
-                    
+                    # 30 ott 2023 300> 60 min invece di 300> 120 min ago
+
+                
                 elif (
                     ma50_last >= ma50_2_min_ago
                     and ma300_last > ma300_120_min_ago
