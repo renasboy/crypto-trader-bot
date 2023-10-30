@@ -24569,16 +24569,16 @@ class maddog:
                         
                         and ma200_last > ma300_last
                         and ma2_last < ma2_2_min_ago 
-                        and deviation_ma39 < -0.18
+                        and deviation_ma39 < -0.17
                        
                     ):
-                        sell = "SELL 3 dopo 90 min con ma50 < con deviation_ma39 < -0.18 - r 14239 A2"
+                        sell = "SELL 3 dopo 90 min con ma50 < con deviation_ma39 < -0.17 - r 14239 A2"
                         action = "sell"
                         
                         # 29 gen 2023 se deviation_ma100_sopra_ma300 > 0.33
                         
                         # 15 giu 2023 dev_39 -0.18 da -0.20
-                  
+                        # 30 ott 2023 dev_39 -0.17 da -0.18
                   
                     elif (      
                         ma50_last < ma50_2_min_ago
