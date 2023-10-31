@@ -9551,7 +9551,8 @@ class maddog:
                     and deviation_ma3_sopra_ma18 > -0.02
                     
                     and ma2_last >= ma20_last
-                  
+                    
+                    and ma2_last > ma5_last
                     and ma2_last >= ma2_2_min_ago
                     and macd >= macd_2_min_ago
                     
@@ -9563,6 +9564,8 @@ class maddog:
                     # 17 ott 2023 and deviation_ma3_sopra_ma10 > 0.027 da > 0.025 (per favore lascia almeno 0.027 al 3-10)
                     # 17 ott 2023 3-18 > -0.02 da > -0.02
                     # 17 ott 2023 3-18 da 3-20
+                    # 31 ott 2023 aggiunto and ma2_last > ma5_last
+              
               
                 elif (     
                     
