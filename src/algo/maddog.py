@@ -5843,16 +5843,17 @@ class maddog:
                    
                     and ma2_last >= ma2_2_min_ago
                     and macd >= macd_2_min_ago
+                    and macd_differenza_2_min_ago > 0.25
                 ):
 
-                    buy = "BUY 1 forever young 2 un po' meno PRUDENTE se ma100 > ma150 - r 4355"
+                    buy = "BUY 1 forever young 2 un po' meno PRUDENTE se ma100 > ma150 and macd_differenza_2_min_ago > 0.25 - r 4355"
                     action = "buy"
                     percentage = 80
                     
                     
                     # 24 ago 2023 and deviation_ma100_laterale > 0.05 da 0.07 con 200>300
                     # 28 ago 2023 100>150
-                
+                    # 31 ott 2023 aggiunto and macd_differenza_2_min_ago > 0.25
                     
                 
                   
