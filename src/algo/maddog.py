@@ -26923,7 +26923,7 @@ class maddog:
                     
 
                     ################################################################################################################## CONDIZIONI SPECIALI IMPORTATE NEL SEL 4-5-x
-                  
+                    
                     elif (
                         ma78_last < ma78_120_min_ago
                         and ma300_last > ma300_301_min_ago
@@ -26958,11 +26958,33 @@ class maddog:
                         and ma2_last <= ma2_2_min_ago 
                         and macd < macd_2_min_ago
                     ):
-                        sell = "SELL cond spec 4-5-x (60-90 min) EX cond spec r 16047 B3 NOTTE con ma300> 5 ore - con dev 3-39 < 0.06 and dev_sell < -0.03 e ma50 < - r 15662"
+                        sell = "SELL 4-5-x (60-90 min) EX cond spec r 16047 B3 NOTTE con ma300> 5 ore - con dev 3-39 < 0.06 and dev_sell < -0.03 e ma50 < - r 15662"
                         action = "sell"
                         
                         # 23 ott 2023 dev 3-39 a 0.06 da 0.05
                         # 23 ott 2023 dev sell -0.03 da -0.07
+
+
+                    
+                    elif (
+                        ma78_last > ma78_120_min_ago
+                        and deviation_ma39 < 0.02
+                        and deviation_sell < -0.05
+                        and ma2_last < ma2_2_min_ago 
+                
+                        and ma50_last < ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 < 0.40
+                
+                        and deviation_ma5_sotto_ma200 > -0.80
+                        and macd_differenza_2_min_ago < -0.20
+                    ):
+                        sell = "SELL 4-5-x (60-90 min) EX cond spec r 16047 A1 - dev 3-39 < 0.02 e dev_sell < -0.05 con ma50 < and macd_diff_2_min_ago < -0.20 - r 15663"
+                        action = "sell"
+                        
+                        # 31 ott 2023 and deviation_ma39 < 0.02 da <0.01
+                        # 31 ott 2023 and deviation_sell < -0.05 da dev_sell < -0.11
+                    
+                    
 
                      
                     
