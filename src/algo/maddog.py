@@ -26751,10 +26751,30 @@ class maddog:
                         # 14 ott 2022 5-50 da 5-25
                         #  2 ott 2023 aggiunta ma450 > ma450 360 min ago
                         #  2 ott 2023 5-78 da 5-50
+
                   
+                  
+                    elif (
+                        ma50_last >= ma50_2_min_ago
+                        and ma50_last > ma59_last
+                        
+                        and ma450_last < ma450_360_min_ago
+                        and deviation_ma5_sotto_ma300 < 0.40
+                        and (ma8_prev > ma78_prev and ma8_last < ma78_last)
+                        and deviation_sell > 0.25 and deviation_sell < 0.56
+                        
+                        and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
+                        and macd_differenza_2_min_ago < -0.50
+                       
+                    ):
+                        sell = "SELL 4-5-x (21-60 min) FINTA MARADONA con ma450 < ma450 360 min ago con ma50 > and 5-50 and dev_sell 0.25-0.56 and macd<macd 2 min ago - r 15568 B2x"
+                        action = "sell"
+
                     
                     elif (
                         ma50_last >= ma50_2_min_ago
+                        and ma50_last < ma59_last
                         and ma450_last < ma450_360_min_ago
                         and deviation_ma5_sotto_ma300 < 0.40
                         and (ma5_prev > ma50_prev and ma5_last < ma50_last)
@@ -26765,14 +26785,14 @@ class maddog:
                         and macd_differenza_2_min_ago < -0.50
                        
                     ):
-                        sell = "SELL 4-5-x (21-60 min) FINTA DI MARADONA con ma450 < ma450 360 min ago con ma50 > and 5-50 and dev_sell 0.25-0.56 and macd<macd 2 min ago - r 15568 B2"
+                        sell = "SELL 4-5-x (21-60 min) FINTA MARADONA con ma450 < ma450 360 min ago con ma50 > and 5-50 and dev_sell 0.25-0.56 and macd<macd 2 min ago - r 15568 B2y"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
                         # 14 ott 2022 5-50 da 5-25
                         # 19 ott 2022 and macd < macd_2_min_ago
                         # 19 ott 2022 and macd_differenza_2_min_ago < -0.50
-                  
+                        
                         
                     elif (
                         ma50_last > ma50_2_min_ago
