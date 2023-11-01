@@ -20847,6 +20847,20 @@ class maddog:
                     ##################################################################################################################### condizioni speciali importate ridotte
                     
                     elif (
+                        deviation_sell > 0.80
+                        and ma5_last < ma5_10_min_ago
+                
+                        and ma3_last < ma28_last
+                
+                        and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
+                        and macd_differenza_2_min_ago < -1
+                    ):    
+                        sell = "SELL 2 (21-60 min) EX cond. spec r 16873 C - POC MALED E SUB mentre scende con dev > 0.80 and macd < macd 2 min ago con ma5_10_min_ago - r 11804"
+                        action = "sell"
+
+                  
+                    elif (
                         ma78_last < ma78_120_min_ago
                         and ma300_last > ma300_301_min_ago
                         and ma50_last <= ma50_2_min_ago
