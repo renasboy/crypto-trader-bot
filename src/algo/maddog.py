@@ -23515,7 +23515,7 @@ class maddog:
                         and deviation_sell < -0.50
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 3 PARACADUTE CROLLO (12-21min) con ma50< and ma3<ma16 (no incrocio) and deviation_sell < -0.50 - r 13419"
+                        sell = "SELL 3 (12-21min) PARACADUTE CROLLO  con ma50< and ma3<ma16 (no incrocio) and deviation_sell < -0.50 - r 13419"
                         action = "sell"
 
                         # AGGIUNTA PER SICUREZZA SE CONTINUA A PRECIPITARE
@@ -23535,6 +23535,32 @@ class maddog:
                     ):
                         sell = "SELL 3 eventuale guadagno con crollo (12-21 min) con ma50 < and incrocio 3 - 18 and deviation_sell > 0.23 - r 13437"
                         action = "sell"
+
+                  
+
+                    ################################################################################################################# EX CONDIZIONI SPECIALI IMPORTATE RIDOTTE
+                    
+                    elif (
+                        ma78_last < ma78_120_min_ago
+                        and ma300_last > ma300_301_min_ago
+                        and ma50_last <= ma50_2_min_ago
+                
+                        and deviation_ma39 < 0.06
+                        and deviation_sell < -0.05
+                
+                        and deviation_ma5_sotto_ma200 > -0.64
+                
+                        and ma2_last <= ma2_2_min_ago
+                        and ma2_last < ma5_last
+                        and macd < 5
+                    ):
+                        sell = "SELL (12-21 min) EX cond spec r 16047 B1Y con ma 50 < ma 50 2 min ago  con ma300 > 5 ore E dev 3-39 < 0.05 and dev_sell < -0.05 - r 13440"
+                        action = "sell"
+                        
+                        #  1 nov 2023 dev_sell a -0.05 da -0.112
+
+                  
+                    
                         
                 
 
