@@ -595,7 +595,13 @@ class maddog:
         
         delta_100_59 = (ma100_last / ma59_last - 1) * 100 if ma59_last else 0
         self.algo_helper.info("delta_100_59: {}".format(delta_100_59))
+
         
+        # formula delta_100_59_30_min
+        
+        delta_100_59_30_min = (ma100_30_min_ago / ma59_30_min_ago - 1) * 100 if ma59_30_min_ago else 0
+        self.algo_helper.info("delta_100_59_30_min: {}".format(delta_100_59_30_min))
+
         
         # formula delta_100_59_60_min
         
@@ -8035,7 +8041,7 @@ class maddog:
                 
                 elif (    
                     ma4_last > ma28_last
-                    and delta_100_59 < delta_100_59_60_min
+                    and delta_100_59 < delta_100_59_30_min
                     
                     and ma300_last > ma300_120_min_ago
                     and ma450_last > ma450_480_min_ago
@@ -8053,10 +8059,11 @@ class maddog:
                     buy = "BUY 2 laterale con 300>450 and 4-28 and macd > 2.0 and macd_differenza_2_min_ago > 0.20 and deviation_ma3_sopra_ma18 > 0.02 SE GIORNO - r 5412 X1Ax"
                     action = "buy"
                     percentage = 80
+                  
                     
                 elif (    
                     ma4_last > ma28_last
-                    and delta_100_59 > delta_100_59_60_min
+                    and delta_100_59 > delta_100_59_30_min
                     
                     and ma300_last > ma300_120_min_ago
                     and ma450_last > ma450_480_min_ago
