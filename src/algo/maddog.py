@@ -335,7 +335,7 @@ class maddog:
         #########################################################################################################################################################
         #########################################################################################################################################################
 
-        #                                                         T U T T E    L E   D E V I A T I O N  !
+        ############################################################################################################################ FORMULE  D E V I A T I O N  !
         
 
         # formula DEVIATION_1_gabbia
@@ -520,7 +520,7 @@ class maddog:
         self.algo_helper.info("deviation_ma180_sopra_ma200: {}".format(deviation_ma180_sopra_ma200))
         
         
-        #################################################################################################################
+        ############################################################################################################################################ FORMULE D E L T A
         
         
         # formula delta_1
@@ -8032,9 +8032,10 @@ class maddog:
             
             
                 # ------------------------------------------------------------ BUY 2 laterale
-              
+                
                 elif (    
                     ma4_last > ma28_last
+                    and delta_100_59 < delta_100_59_60_min
                     
                     and ma300_last > ma300_120_min_ago
                     and ma450_last > ma450_480_min_ago
@@ -8049,7 +8050,28 @@ class maddog:
                     and macd_differenza_2_min_ago > 0.20
                 ):  
                 
-                    buy = "BUY 2 laterale con 300>450 and 4-28 and macd > 2.0 and macd_differenza_2_min_ago > 0.20 - r 5412 X1A"
+                    buy = "BUY 2 laterale con 300>450 and 4-28 and macd > 2.0 and macd_differenza_2_min_ago > 0.20 and deviation_ma3_sopra_ma18 > 0.02 SE GIORNO - r 5412 X1Ax"
+                    action = "buy"
+                    percentage = 80
+                    
+                elif (    
+                    ma4_last > ma28_last
+                    and delta_100_59 > delta_100_59_60_min
+                    
+                    and ma300_last > ma300_120_min_ago
+                    and ma450_last > ma450_480_min_ago
+                    
+                    and deviation_ma100_sopra_ma300 < 0.20
+                    and deviation_ma100_sopra_ma300 > -0.30
+                    
+                    and deviation_ma3_sopra_ma18 > 0.11
+                    
+                    and macd >= macd_2_min_ago
+                    and macd > -11.0
+                    and macd_differenza_2_min_ago > 0.20
+                ):  
+                
+                    buy = "BUY 2 laterale con 300>450 and 4-28 and macd > 2.0 and macd_differenza_2_min_ago > 0.20 and deviation_ma3_sopra_ma18 > 0.11 se NOTTE - r 5412 X1Ax"
                     action = "buy"
                     percentage = 80
                   
@@ -8063,6 +8085,8 @@ class maddog:
                     #  2 ott 2023 tolto and ma300_last > ma450_last c'e' and ma450_last > ma450_480_min_ago !
                     #  2 ott 2023 and macd > -11.0 da macd > 2.0
                     #  2 ott 2023 and macd_differenza_2_min_ago > 0.25
+
+              
               
                 elif (    
                     ma5_last > ma39_last
