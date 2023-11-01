@@ -90,7 +90,7 @@ class maddog:
         
         ma5_2_min_ago = self.algo_helper.ma_minutes_ago(5, 2)
         ma5_10_min_ago = self.algo_helper.ma_minutes_ago(5, 10)
-        
+        ma5_11_min_ago = self.algo_helper.ma_minutes_ago(5, 11)
         ma5_1080_min_ago = self.algo_helper.ma_minutes_ago(5, 1080)
         
         ma6_2_min_ago = self.algo_helper.ma_minutes_ago(6, 2)
@@ -29744,7 +29744,7 @@ class maddog:
             
             elif (
                 deviation_sell > 0.80
-                and ma5_last < ma5_10_min_ago
+                and ma5_last < ma5_11_min_ago
                 
                 and ma3_last < ma28_last
                 
@@ -29752,12 +29752,12 @@ class maddog:
                 and macd < macd_2_min_ago
                 and macd_differenza_2_min_ago < -1
             ):    
-                sell = "SELL cond. speciale 3-28 - POCHI MALEDETTI E SUBITO (ma non troppo !) mentre scende con dev > 0.80 and macd < macd 2 min ago con ma5_12_min_ago - r 16873 C"
+                sell = "SELL cond. speciale 3-28 - POCHI MALEDETTI E SUBITO (ma non troppo !) mentre scende con dev > 0.80 and macd < macd 2 min ago con ma5_11_min_ago - r 16873 C"
                 action = "sell"
                 
                 # 27 set 2023 macd < macd 2 min ago 
                 # 27 set 2023 and macd_differenza_2_min_ago < -1
-                #  1 nov 2023 ma5_10_min_ago da ma5_12_min_ago
+                #  1 nov 2023 ma5_11_min_ago da ma5_12_min_ago
             
             # 41 - POCHI MALEDETTI E SUBITO con deviation > 5.01 e macd < -35
             
