@@ -26696,7 +26696,7 @@ class maddog:
                         and delta_150_100 <= delta_150_100_60_min
                 
                         and deviation_ma39 < 0.07
-                        and deviation_sell < -0.05
+                        and deviation_sell < -0.01
                 
                 
                         and ma50_last <= ma50_2_min_ago
@@ -26707,7 +26707,7 @@ class maddog:
                         and ma2_last <= ma2_2_min_ago 
                         and ma2_last < ma5_last
                     ):
-                        sell = "SELL 4-5-x (21-60 min) EX cond spec GIORNO con ma300> 5 ore - dev 3-39 < 0.05 and dev_sell < -0.05 - con ma50 < e ma5 sotto ma200 > -0.90 - r 15502"
+                        sell = "SELL 4-5-x (21-60 min) EX cond spec GIORNO con ma300> 5 ore - dev 3-39 < 0.05 and dev_sell < -0.01 - con ma50 < e ma5 sotto ma200 > -0.90 - r 15502"
                         action = "sell"
                 
                         # 15 set 2023 quando 300 scende da 5 ore non devi vendere in perdita ! a ricomprare ci penseranno altre condizioni !
@@ -26716,7 +26716,7 @@ class maddog:
                         #  2 ott 2023 TOLTO and macd < macd_2_min_ago ARRIVATO TARDI ! VEDI 2 OTTOBRE 2023 ORE 20 e 40 - r 16047 B2
                         #  5 ott dev_sell -0.05 da -0.105
                         # 27 ott 2023 aggiunta 2<5                        
-                    
+                        #  1 nov 2023 dev_sell a -0.01 da -0.05 
                     
 
                 ############################################################################################################# sessione 3-4-x ( da 60 a 90 min )
