@@ -19594,8 +19594,6 @@ class maddog:
                         sell = "SELL 2 CROLLO (0-3 min) con ma50 < and incrocio 3-23 and deviation_sell > 0.23 - r 10782"
                         action = "sell"
                    
-                    
-                    
                     elif (
                         ma50_last < ma50_2_min_ago
                         and (ma3_prev > ma8_prev and ma3_last < ma8_last)
@@ -19605,6 +19603,28 @@ class maddog:
 
                         sell = "SELL 2 CROLLO (0-3 min) con ma50 < and incrocio 3-8 and deviation_sell > 0.60 - r 10794"
                         action = "sell"
+                        
+
+                    ################################################################################################################### CONDIZIONI SPECIAL IMPORTATE RIDOTTE
+                    
+                    elif (
+                        ma78_last > ma78_120_min_ago
+                        and deviation_ma39 < 0.01
+                        and deviation_sell < -0.05
+                        and ma2_last < ma2_2_min_ago 
+                
+                        and ma50_last < ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 < 0.40
+                
+                        and deviation_ma5_sotto_ma200 > -0.80
+                        and macd_differenza_2_min_ago < -0.20
+                    ):
+                        sell = "SELL (0-3 min) EX condizione speciale R 16047 A1 con dev 3-39 < 0.01 e dev_sell < -0.05 e con ma50 < and macd_diff_2_min_ago < -0.20 - r 10798"
+                        action = "sell"
+                        
+                        #  1 nov 2023 dev sell a -0.05 da -0.11
+                      
+                    
                         
                         
                         
@@ -19715,7 +19735,7 @@ class maddog:
                         and deviation_sell < -0.50
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 2 PARACADUTE CROLLO (0-3 min) con ma50 < and ma3<ma16 (no incrocio) and deviation_sell < -0.50 - r 10904"
+                        sell = "SELL 2 (0-3 min) PARACADUTE CROLLO  con ma50 < and ma3<ma16 (no incrocio) and deviation_sell < -0.50 - r 10904"
                         action = "sell"
 
                         # AGGIUNTA PER SICUREZZA SE CONTINUA A PRECIPITARE
@@ -19872,11 +19892,9 @@ class maddog:
                         and deviation_sell > 0.23
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 2 guadagno con crollo (5-12 min) con ma50 < and incrocio 3-23 - r 11061"
+                        sell = "SELL 2 (5-12 min) guadagno con crollo  con ma50 < and incrocio 3-23 - r 11061"
                         action = "sell"
                         
-                        
-
                     # ------------------------------------------------------------------------------------------------------------ PARACADUTE crollo
                     
                     elif (
@@ -19885,10 +19903,32 @@ class maddog:
                         and deviation_sell < -0.48
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 2 PARACADUTE CROLLO (0-3 min) con ma50 < and ma3<ma16 (no incrocio) and deviation_sell < -0.48 - r 11074"
+                        sell = "SELL 2 (5-12 min) PARACADUTE CROLLO  con ma50 < and ma3<ma16 (no incrocio) and deviation_sell < -0.48 - r 11074"
                         action = "sell"
 
                         # AGGIUNTA PER SICUREZZA SE CONTINUA A PRECIPITARE
+
+
+                    ############################################################################################################# CONDIZIONI SPECIALI IMPORTATE RIDOTTE
+                    
+                    elif (
+                        ma78_last > ma78_120_min_ago
+                        and deviation_ma39 < 0.01
+                        and deviation_sell < -0.05
+                        and ma2_last < ma2_2_min_ago 
+                
+                        and ma50_last < ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 < 0.40
+                
+                        and deviation_ma5_sotto_ma200 > -0.80
+                        and macd_differenza_2_min_ago < -0.20
+                    ):
+                        sell = "SELL 2 (5-12 min) EX condizione speciale R 16047 A1 con dev 3-39 < 0.01 e dev_sell < -0.05 e con ma50 < and macd_diff_2_min_ago < -0.20 - r 11080"
+                        action = "sell"
+                        
+                        #  1 nov 2023 dev sell a -0.05 da -0.11
+                    
+                    
                         
                         
                    
