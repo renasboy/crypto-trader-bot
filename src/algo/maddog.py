@@ -2397,8 +2397,8 @@ class maddog:
                     and deviation_ma300_sopra_ma450 > -0.55
                     
                     and deviation_ma3_sopra_ma10 > 0.025
-                    and deviation_ma3_sopra_ma16 > -0.03
-                    and deviation_ma3_sopra_ma18 > -0.04
+                    and deviation_ma3_sopra_ma16 > -0.04
+                    and deviation_ma3_sopra_ma18 > -0.05
                     
                     and ma2_last >= ma20_last
                     
@@ -2408,7 +2408,7 @@ class maddog:
                     and macd_differenza_2_min_ago > 1.05
                   
                 ):    
-                    buy = "BUY 1 compare forever - con 3-18 E CON 300 ancora vicina alla 450 ( anche un poco sotto ! ) and 3-18 > -0.02 + diff macd > 1.05 AND 2>5 ! - r 1537 A3Y"
+                    buy = "BUY 1 compare forever - con 3-18 E CON 300 ancora vicina alla 450 ( anche un poco sotto ! ) and 3-18 > -0.05 + diff macd > 1.05 AND 2>5 ! - r 1537 A3Y"
                     action = "buy"
                     percentage = 90
                     
@@ -2450,6 +2450,10 @@ class maddog:
                     # 27 ott 2023 aggiunta diff macd > 2
                     # 27 ott 2023 tolto and macd >= macd_2_min_ago
                     # 27 ott 2023 diff macd > 1.05
+                    #  2 nov 2023 and deviation_ma3_sopra_ma16 a -0.04 da -0.03 ! Solo et pensoso i più deserti campi vo mesurando a passi tardi et lenti !
+                    #  2 nov 2023 and deviation_ma3_sopra_ma18 a -0.05 da -0.04 !
+                    
+
                     
                 # BUY 1 tempo ESTATE PIU' VELOCE 100 > 60 min ago (solo l' estate se lo puo' perettere!) considera il passare del TEMPO ! ma30 > 
                 
