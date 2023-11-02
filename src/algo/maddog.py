@@ -10720,13 +10720,13 @@ class maddog:
                     
                     and deviation_ma100_sopra_ma300 < 0.50
                     
-                    and deviation_ma3_sopra_ma10 > 0.10
+                    and deviation_ma3_sopra_ma10 > 0.08
                     
                     and ma2_last > ma2_2_min_ago
-                    
+                    and macd > macd_2_min_ago
                 ):    
                     
-                    buy = "BUY 3 correzione in basso con 200 > - riga 1384 RCCR portata nel MADDOG ma3_last > ma28_last - r 6480 B1"
+                    buy = "BUY 3 correzione in basso con 200 > - riga 1384 RCCR portata nel MADDOG ma3_last > ma28_last and macd > macd_2_min_ago con 3-10 > 0.08 - r 6480 B1"
                     action = "buy"
                     percentage = 80
                     
@@ -10735,7 +10735,9 @@ class maddog:
                     # 30 set 2022 aggiunta 5.28
                     #  2 ott 2022 3-10 0.10 !
                     #  2 nov 2023 tolto 5-28
-                    
+                    #  2 nov 2023 aggiunto macd > macd_2_min_ago
+                    #  2 nov 2022 3-10 0.08 ! se c'e' la presenza del macd >
+                
                 elif (    
                     
                     ma200_last > ma200_20_min_ago
