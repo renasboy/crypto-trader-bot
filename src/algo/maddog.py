@@ -771,6 +771,10 @@ class maddog:
         
         deviation_trend_ma100 = (ma100_last / ma100_60_min_ago - 1) * 100 if ma100_60_min_ago else 0
         self.algo_helper.info("deviation_trend_ma100: {}".format(deviation_trend_ma100))
+
+        
+        deviation_trend_ma100_90_min = (ma100_last / ma100_90_min_ago - 1) * 100 if ma100_90_min_ago else 0
+        self.algo_helper.info("deviation_trend_ma100_90_min: {}".format(deviation_trend_ma100_90_min))
         
         
         
@@ -12760,10 +12764,14 @@ class maddog:
                 
           
                 #############################################################################################
-              
+                # se ma100 dopo 90 min e' orizzontale PARTE QUESTA CONDIZIONE QUA che e' andata benissimo !
+                
                 elif (
                     
                     ma78_last < ma150_last
+                    and deviation_trend_ma100_90_min < 0.045
+                    and deviation_trend_ma100_90_min > -0.045
+                    
                     and deviation_ma5_sotto_ma300 < -0.10
                     
                     and deviation_ma3_sopra_ma10 > 0.057
@@ -12781,7 +12789,7 @@ class maddog:
                     and macd >= macd_2_min_ago
                     
                 ):
-                    buy = "BUY 4 importata dal BUY 5 r 7564 B2y RCCR del 29 ago 2022 > 180 min di ribasso 78<150 and 3-16 > 0.06 and macd > macd 2 min ago - r 7075"
+                    buy = "BUY 4 LATERALE importata dal BUY 5 r 7564 B2y RCCR del 29 ago 2022 > 180 min di ribasso 78<150 and 3-16 > 0.06 and macd > macd 2 min ago - r 7075"
                     action = "buy"
                     percentage = 90
 
