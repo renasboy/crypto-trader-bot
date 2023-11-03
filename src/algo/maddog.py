@@ -214,15 +214,20 @@ class maddog:
         macd_3_min_ago = self.algo_helper.macd_minutes_ago(3)
         macd_5_min_ago = self.algo_helper.macd_minutes_ago(5)
 
-      
+        ################################################################################################# CONFORTABLY NUMB
+        
+        # formula ma2_differenza di 2 min ago
+        
+        ma2_differenza_2_min_ago = (ma2_last - ma2_2_min_ago)
+        self.algo_helper.info("ma2_differenza_2_min_ago: {}".format(ma2_differenza_2_min_ago))
+
         
         # formula macd_differenza di 2 min ago
         
         macd_differenza_2_min_ago = (macd - macd_2_min_ago)
         self.algo_helper.info("macd_differenza_2_min_ago: {}".format(macd_differenza_2_min_ago))
 
-
-      
+        
         # formula macd_differenza di 5 min ago
         
         macd_differenza = (macd - macd_5_min_ago)
@@ -2406,6 +2411,7 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
                     
                     and macd_differenza_2_min_ago > 1.05
+                    and ma2_differenza_2_min_ago >= 11
                   
                 ):    
                     buy = "BUY 1 compare forever - con 3-18 E CON 300 ancora vicina alla 450 ( anche un poco sotto ! ) and 3-18 > -0.05 + diff macd > 1.05 AND 2>5 ! - r 1537 A3Y"
@@ -2452,7 +2458,7 @@ class maddog:
                     # 27 ott 2023 diff macd > 1.05
                     #  2 nov 2023 and deviation_ma3_sopra_ma16 a -0.04 da -0.03 ! Solo et pensoso i più deserti campi vo mesurando a passi tardi et lenti !
                     #  2 nov 2023 and deviation_ma3_sopra_ma18 a -0.05 da -0.04 !
-                    
+                    #  3 NOVEMBRE 2023 CONFORTABLY NUMB - ingresso monumentale di ma2_differenza_2_min_ago - ave compare mio
 
                     
                 # BUY 1 tempo ESTATE PIU' VELOCE 100 > 60 min ago (solo l' estate se lo puo' perettere!) considera il passare del TEMPO ! ma30 > 
