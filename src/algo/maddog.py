@@ -10941,7 +10941,7 @@ class maddog:
                 
                 elif (
                     
-                    ma5_last > ma28_last
+                    ma4_last > ma28_last
                     and deviation_ma5_sotto_ma300 < -0.40
                     
                     and ma100_last < ma100_120_min_ago
@@ -10950,12 +10950,14 @@ class maddog:
                     
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
+                    
                     and deviation_ma3_sopra_ma16 > 0.02
-                    and deviation_ma5_sopra_ma28 > 0.05
+                    and deviation_ma5_sopra_ma28 > 0.001
                     
                     and ma2_last >= ma2_2_min_ago
                     and macd > macd_2_min_ago
                     and macd_differenza_2_min_ago > 1
+                    and ma2_differenza_2_min_ago > 11
                 ):
                     buy = "BUY 3 29 ago 2022 > 120 min di ribasso AND 5 > 28 AND 5-28 > 0.10 and 3-16 > 0.02 and macd > macd 2 min ago - r 6570 B"
                     action = "buy"
@@ -10970,8 +10972,8 @@ class maddog:
                     # 21 agosto 2023 and macd > macd 2 min ago
                     #  1 set sembra che macd> macd 2 min ago non prende se sta nella stessa unita' per es 7.75 - 5-44 allora mi sono inventato differenza macd che deve essere > 1
                     # 27 ott 2023 5-28 da 8-39
-
-
+                    #  3 nov 2023 4-28 da 5-28 
+                    #  3 nov 2023 aggiunta and ma2_differenza_2_min_ago > 11
 
               
                 # BUY 3 29 ago 2022 > 180 min di ribasso
