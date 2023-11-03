@@ -12760,7 +12760,32 @@ class maddog:
                 
           
                 #############################################################################################
-             
+              
+                elif (
+                    
+                    ma78_last < ma150_last
+                    and deviation_ma5_sotto_ma300 < -0.10
+                    
+                    and deviation_ma3_sopra_ma10 > 0.057
+                    and deviation_ma3_sopra_ma16 > 0.06
+                    and deviation_ma5_sopra_ma28 < 0.10
+                    
+                    and ma100_last < ma100_180_min_ago
+                    and ma200_last < ma200_180_min_ago
+                    and ma300_last < ma300_180_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                    
+                ):
+                    buy = "BUY 4 importata dal BUY 5 r 7564 B2y RCCR del 29 ago 2022 > 180 min di ribasso 78<150 and 3-16 > 0.06 and macd > macd 2 min ago - r 7075"
+                    action = "buy"
+                    percentage = 90
+
+              
                 # BUY 4A PAZZA DURANTE UNA piccola CORREZIONE che NON E' un forte ribasso e NON E' un crollo ! (compare stammi vicino!)
                 
                 elif (
