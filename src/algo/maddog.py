@@ -773,8 +773,8 @@ class maddog:
         self.algo_helper.info("deviation_trend_ma100: {}".format(deviation_trend_ma100))
 
         
-        deviation_trend_ma100_90_min = (ma100_last / ma100_90_min_ago - 1) * 100 if ma100_90_min_ago else 0
-        self.algo_helper.info("deviation_trend_ma100_90_min: {}".format(deviation_trend_ma100_90_min))
+        deviation_trend_ma100_90_min_ago = (ma100_last / ma100_90_min_ago - 1) * 100 if ma100_90_min_ago else 0
+        self.algo_helper.info("deviation_trend_ma100_90_min_ago: {}".format(deviation_trend_ma100_90_min_ago))
         
         
         
@@ -12764,13 +12764,14 @@ class maddog:
                 
           
                 #############################################################################################
+                
                 # se ma100 dopo 90 min e' orizzontale PARTE QUESTA CONDIZIONE QUA che e' andata benissimo !
                 
                 elif (
                     
                     ma78_last < ma150_last
-                    and deviation_trend_ma100_90_min < 0.045
-                    and deviation_trend_ma100_90_min > -0.045
+                    and deviation_trend_ma100_90_min_ago < 0.045
+                    and deviation_trend_ma100_90_min_ago > -0.045
                     
                     and deviation_ma5_sotto_ma300 < -0.10
                     
