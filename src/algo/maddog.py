@@ -6781,15 +6781,13 @@ class maddog:
 
 
 
-                # BUY 2 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-59
+                # BUY 2 migliore che considera distanza 5-300 AND dev 10-200 < -0.24
                 
                 elif (
                     
-                    ma4_last > ma18_last
-                     
-                    
+                    ma3_last > ma18_last
                     and ma450_last < ma450_360_min_ago
-                    and macd >= macd_2_min_ago
+                    
                     
                     and deviation_ma5_sopra_ma200 < -0.30
                     and deviation_ma5_sotto_ma300 < -0.30
@@ -6801,10 +6799,9 @@ class maddog:
                     and ma300_last < ma300_60_min_ago
                     and ma200_last < ma200_60_min_ago
                     
-                    and deviation_ma3_sopra_ma10 > 0.081
-                    and deviation_ma3_sopra_ma16 > 0.12
+                    and deviation_ma3_sopra_ma10 > 0.02
+                    and deviation_ma3_sopra_ma16 > 0.08
                     and deviation_ma5_sopra_ma28 > -0.15
-                    
                     
                     and ma2_last >= ma2_2_min_ago
                     and macd > -3
@@ -6814,6 +6811,8 @@ class maddog:
                     percentage = 70
                     
                     #  3 nov 2023 tolto macd ! al buy 2
+                    # 3 nov 2023 mi basta che macd > -3
+                    #  3 nov 2023 and deviation_ma3_sopra_ma16 > 0.08 da 0.12
                     
                     
                 elif (
