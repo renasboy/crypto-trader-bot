@@ -6802,17 +6802,18 @@ class maddog:
                     and ma200_last < ma200_60_min_ago
                     
                     and deviation_ma3_sopra_ma10 > 0.081
-                    
-                    and deviation_ma5_sopra_ma28 > -0.15
                     and deviation_ma3_sopra_ma16 > 0.12
+                    and deviation_ma5_sopra_ma28 > -0.15
+                    
                     
                     and ma2_last >= ma2_2_min_ago
-                    and macd >= macd_2_min_ago
+                    and macd > -3
                 ):
-                    buy = "BUY 2 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND dev 5-30 and deviation_ma3_sopra_ma16 > 0.12 - r 4713"
+                    buy = "BUY 2 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND dev 4-18 and deviation_ma3_sopra_ma16 > 0.12 - r 4713"
                     action = "buy"
                     percentage = 70
                     
+                    #  3 nov 2023 tolto macd ! al buy 2
                     
                     
                 elif (
