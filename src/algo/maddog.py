@@ -29927,6 +29927,26 @@ class maddog:
             
             elif (
                 deviation_sell > 0.80
+                and seconds_since_last_trade > 7200
+                and ma5_last < ma5_11_min_ago
+                
+                and ma3_last < ma33_last
+                
+                and ma2_last < ma2_2_min_ago
+                and macd < macd_2_min_ago
+                and macd_differenza_2_min_ago < -1
+            ):    
+                sell = "SELL cond. speciale 3-33 - POC MAL E SUB (ma non troppo !) (> 120 min ) scende con dev > 0.80 and macd < macd 2 min ago con ma5_11_min_ago - r 16873 C1"
+                action = "sell"
+                
+                # 27 set 2023 macd < macd 2 min ago 
+                # 27 set 2023 and macd_differenza_2_min_ago < -1
+                #  1 nov 2023 ma5_11_min_ago da ma5_12_min_ago
+
+            
+            elif (
+                deviation_sell > 0.80
+                and seconds_since_last_trade < 7200
                 and ma5_last < ma5_11_min_ago
                 
                 and ma3_last < ma28_last
@@ -29935,7 +29955,7 @@ class maddog:
                 and macd < macd_2_min_ago
                 and macd_differenza_2_min_ago < -1
             ):    
-                sell = "SELL cond. speciale 3-28 - POCHI MALEDETTI E SUBITO (ma non troppo !) mentre scende con dev > 0.80 and macd < macd 2 min ago con ma5_11_min_ago - r 16873 C"
+                sell = "SELL cond. spec 3-28 - POC MAL E SUB (ma non troppo !) (> 120 min ) scende con dev > 0.80 and macd < macd 2 min ago con ma5_11_min_ago - r 16873 C2"
                 action = "sell"
                 
                 # 27 set 2023 macd < macd 2 min ago 
