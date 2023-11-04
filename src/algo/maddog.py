@@ -26274,21 +26274,20 @@ class maddog:
                     elif (
                         ma50_last >= ma50_2_min_ago
                         
-                        
                         and delta_1 < delta_2
                         and ma100_last > ma100_60_min_ago
                         and ma300_last < ma300_120_min_ago
                         
-                        and (ma5_prev > ma33_prev and ma5_last < ma33_last)
+                        and (ma4_prev > ma28_prev and ma4_last < ma28_last)
                         and deviation_sell > 0.25 and deviation_sell < 0.56
                         and ma2_last < ma2_2_min_ago
                    
                     ):
-                        sell = "SELL 4-5-x (21-60 min) 300 < 120 min ago e con ma50 > and incr 5-33 and dev_sell 0.25 - 0.56 - GIORNO - FINTA MARADONA - r 15110 B"
+                        sell = "SELL 4-5-x (21-60 min) 300 < 120 min ago e con ma50 > and incr 4-28 and dev_sell 0.25 - 0.56 - GIORNO - FINTA MARADONA - r 15110 B"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
-                        
+                        #  4 nov 2023 4-28 da 5-33
                        
                         
                     ##################################################################### and rapporto_delta_1_delta_2 < 1 tramonto
