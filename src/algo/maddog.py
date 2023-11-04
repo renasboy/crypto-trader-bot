@@ -20996,7 +20996,7 @@ class maddog:
                         and deviation_ma5_sotto_ma200 > -0.80
                         and macd_differenza_2_min_ago < -0.20
                     ):
-                        sell = "SELL 2 (21-60 min) ex condizione speciale r 16047 A1 con dev 3-39 < 0.01 e dev_sell < -0.11 con ma50 < and macd_diff_2_min_ago < -0.20 - r 11807"
+                        sell = "SELL 2 (21-60 min) ex condizione speciale r 16047 A1 con dev 3-39 < 0.01 e dev_sell < -0.05 con ma50 < and macd_diff_2_min_ago < -0.20 - r 11807"
                         action = "sell"
                         
                         #  4 ott 2023 ex condizione speciale r 16047 A1 ridotta
@@ -23731,7 +23731,7 @@ class maddog:
                         and deviation_sell < -0.50
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 3 (12-21min) PARACADUTE CROLLO  con ma50< and ma3<ma16 (no incrocio) and deviation_sell < -0.50 - r 13419"
+                        sell = "SELL 3 (12-21 min) PARACADUTE CROLLO  con ma50< and ma3<ma16 (no incrocio) and deviation_sell < -0.50 - r 13419"
                         action = "sell"
 
                         # AGGIUNTA PER SICUREZZA SE CONTINUA A PRECIPITARE
@@ -24334,7 +24334,7 @@ class maddog:
                         sell = "SELL 3 (21-60 min) EX cond spec r 16047 B1Y (+ macd) con ma 50 < ma 50 2 min ago con ma300 > 5 ore e dev 3-39 < 0.05 and dev_sell < -0.112 - r 13834"
                         action = "sell"
 
-                  
+                    
                     elif (
                         ma8_last < ma8_2_min_ago 
                         and deviation_ma39 < 0.01
@@ -24357,6 +24357,27 @@ class maddog:
                         # 18 set 2023 dev 39 da 0.01 da -0.01
                         # 17 OTT 2023 NON METTERE MACD <  MACD 2 MIN AGO
                         # 17 ott 2023 and macd_differenza_2_min_ago < -0.24
+
+                    
+                    elif (
+                        ma78_last > ma78_120_min_ago
+                        and deviation_ma39 < 0.01
+                        and deviation_sell < -0.05
+                        and ma2_last < ma2_2_min_ago 
+                
+                        and ma50_last < ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 < 0.40
+                
+                        and deviation_ma5_sotto_ma200 > -0.80
+                        and macd_differenza_2_min_ago < -0.20
+                    ):
+                        sell = "SELL 3 (21-60 min) ex condizione speciale r 16047 A1 con dev 3-39 < 0.01 e dev_sell < -0.05 con ma50 < and macd_diff_2_min_ago < -0.20 - r 13836"
+                        action = "sell"
+                        
+                        #  4 ott 2023 ex condizione speciale r 16047 A1 ridotta
+
+                    
+                    
 
                   
 
