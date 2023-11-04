@@ -9694,7 +9694,24 @@ class maddog:
 
               
 
+                elif (     
+                        ma3_last > ma39_last
+                        
+                        and ma200_last > ma300_last
+                        and ma300_last > ma300_120_min_ago
+                  
+                        and ma50_last < ma50_2_min_ago
+                        and ma450_last < ma450_360_min_ago
+                        
+                        and ma2_last > ma2_2_min_ago
+                        and macd > macd_2_min_ago
+                        and macd > -3
+                    ):
+                        sell = "BUY 2 novembre 2023 con ma450 > 6 ore E 300 > 120 min ago con ma50 < and ma3_last > ma39_last - r 5999"
+                        action = "buy"
+                      
 
+              
                 # BUY 2 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND dev 5-30 CON AGGIUNTA PENSIERO LATERALE
                 
                 elif (
@@ -18442,7 +18459,7 @@ class maddog:
                         and macd < macd_2_min_ago
                         and macd < -3
                     ):
-                        sell = "SELL 1 da 110 a 239 min con ma450 > 6 ore ago E 300 > 120 min ago con ma50 < (dev_sell < 0.20 and ma3_last < ma39_last) con > PERDITA TOL - r 10274 A1y"
+                        sell = "SELL 1 da 110 a 239 min con ma450 > 6 ore E 300 > 120 min ago con ma50 < (dev_sell < 0.20 and ma3_last < ma39_last) con > PERDITA TOL - r 10274 A1y"
                         action = "sell"
                         
                         # 28 dic 2022 dev sell -0.245 da -0.23
