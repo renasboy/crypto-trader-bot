@@ -11002,8 +11002,9 @@ class maddog:
                     and macd >= macd_2_min_ago
                     and macd > -11
                     and macd_differenza_2_min_ago > 0.25
+                    and ma2_differenza_2_min_ago > 7
                 ):
-                    buy = "BUY 3 29 ago 2022 > 180 min di ribasso con 4-28 - r 6572 A1"
+                    buy = "BUY 3 29 ago 2022 > 180 min di ribasso con 4-28 and ma2_differenza_2_min_ago > 7 - r 6572 A1"
                     action = "buy"
                     percentage = 90
                     
@@ -11018,7 +11019,7 @@ class maddog:
                     # 28 set 2023 4-39 da 5-39
                     # 15 ott 2023 4-28 da 4-39
                     # 15 ott 2023 and macd_differenza_2_min_ago > 0.25
-              
+                    #  4 nov 2023 and ma2_differenza_2_min_ago > 7
               
                 elif (
                     
