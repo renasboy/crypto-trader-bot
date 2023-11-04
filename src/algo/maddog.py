@@ -20963,7 +20963,7 @@ class maddog:
                         sell = "SELL 2 (21-60 min) EX cond spec r 16047 B1Y con ma 50 < ma 50 2 min ago  con ma300 > 5 ore - CON dev 3-39 < 0.05 and dev_sell < -0.107 - r 11805"
                         action = "sell"
 
-                    
+                  
                     elif (
                         ma78_last < ma78_120_min_ago
                         and ma300_last > ma300_301_min_ago
@@ -20982,6 +20982,26 @@ class maddog:
                         action = "sell"
                         
                         # 31 ott 2023 and deviation_sell < -0.05 invece di -0.10 IMPORTATA RIDOTTA !
+
+                    
+                    elif (
+                        ma78_last > ma78_120_min_ago
+                        and deviation_ma39 < 0.01
+                        and deviation_sell < -0.05
+                        and ma2_last < ma2_2_min_ago 
+                
+                        and ma50_last < ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 < 0.40
+                
+                        and deviation_ma5_sotto_ma200 > -0.80
+                        and macd_differenza_2_min_ago < -0.20
+                    ):
+                        sell = "SELL 2 (21-60 min) ex condizione speciale r 16047 A1 con dev 3-39 < 0.01 e dev_sell < -0.11 con ma50 < and macd_diff_2_min_ago < -0.20 - r 11807"
+                        action = "sell"
+                        
+                        #  4 ott 2023 ex condizione speciale r 16047 A1 ridotta
+                  
+                    
 
                   
                     
