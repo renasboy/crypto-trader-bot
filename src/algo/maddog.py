@@ -8093,9 +8093,10 @@ class maddog:
                     and macd >= macd_2_min_ago
                     and macd > -11.0
                     and macd_differenza_2_min_ago > 0.20
+                    and ma2_differenza_2_min_ago > 3
                 ):  
                 
-                    buy = "BUY 2 laterale con 300>450 and 4-28 and macd > 2.0 and macd_differenza_2_min_ago > 0.20 and deviation_ma3_sopra_ma18 > 0.11 se NOTTE - r 5412 X1Ax"
+                    buy = "BUY 2 laterale con 300>450 and 4-28 and macd > 2.0 and macd_differenza_2_min_ago > 0.20 and deviation_ma3_sopra_ma18 > 0.11 se NOTTE - r 5412 X1AX"
                     action = "buy"
                     percentage = 80
                   
@@ -8109,7 +8110,7 @@ class maddog:
                     #  2 ott 2023 tolto and ma300_last > ma450_last c'e' and ma450_last > ma450_480_min_ago !
                     #  2 ott 2023 and macd > -11.0 da macd > 2.0
                     #  2 ott 2023 and macd_differenza_2_min_ago > 0.25
-
+                    #  5 nov 2023 and ma2_differenza_2_min_ago > 3
               
               
                 elif (    
