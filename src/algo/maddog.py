@@ -21041,6 +21041,7 @@ class maddog:
                         and ma2_last <= ma2_2_min_ago
                         and ma2_last < ma5_last
                         and macd < 5
+                        and ma2_differenza_2_min_ago < -3
                     ):
                         sell = "SELL 2 (21-60 min) EX cond spec r 16047 B1Y con ma 50 < ma 50 2 min ago e ma300 > 5 ore e dev 3-39 < 0.05 and dev_sell < -0.107  - r 11806"
                         action = "sell"
