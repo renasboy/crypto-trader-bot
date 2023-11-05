@@ -18203,14 +18203,16 @@ class maddog:
                         
                     elif (    
                         ma50_last < ma50_2_min_ago
-                        and deviation_ma39 < -0.194
+                        and deviation_ma39 < -0.19
                         and deviation_sell > 0.40
                         and ma5_last < ma5_2_min_ago
                         and ma300_last > ma300_120_min_ago
                         and ma100_last > ma100_60_min_ago
+                        
                         and ma2_last < ma2_2_min_ago
+                        and ma2_differenza_2_min_ago < -8
                     ):
-                        sell = "SELL 1 da 110 a 239 min con ma50 < MA ma100 > E ma300 > e con deviation_ma39 < -0.194 - r 10264 A2y"
+                        sell = "SELL 1 da 110 a 239 min con ma50 < MA ma100 > E ma300 > e con deviation_ma39 < -0.19 - r 10264 A2y"
                         action = "sell"
                         
                         # ma39 NON DEVE VENDERE in fase laterale ma in alto
@@ -18219,6 +18221,8 @@ class maddog:
                         # ho aggiunto questa ma la precedente condizone rappresenta "la base" - poi condizione speciale pochi maledetti e subito tra 0.80 e 1.20
                         # vedi 5 marzo 2023 ore 3:38 NON HA PRESO IL GUADAGNO !
                         
+                        #  5 nov 2023 and deviation_ma39 < -0.19 da < -0.194
+                        #  5 nov 2023 aggiunta and ma2_differenza_2_min_ago < -8
                         
                     elif (    
                         ma50_last < ma50_2_min_ago
