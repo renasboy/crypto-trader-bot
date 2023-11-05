@@ -17241,7 +17241,7 @@ class maddog:
                         sell = "SELL 1 (50-90 min) EX cond spec r 16047 B3 NOTTE con ma300> 5 ore - dev 3-39 < 0.05 and dev_sell < -0.04 - con ma50 > - r 9935 a"
                         action = "sell"
 
-                  
+                    
                     elif (
                         ma78_last < ma78_120_min_ago
                         and ma50_last <= ma50_2_min_ago
@@ -17262,6 +17262,31 @@ class maddog:
                     ):
                         sell = "SELL 1 (50-90 min) EX cond spec r 16047 B3 NOTTE con ma300> 5 ore - dev 3-39 < 0.05 and dev_sell < -0.03 - con ma50 <= - r 9935 b"
                         action = "sell"
+
+                    
+                    elif (
+                        ma78_last < ma78_120_min_ago
+                        and ma300_last < ma300_301_min_ago
+                        and delta_150_100 <= delta_150_100_60_min
+                
+                        and deviation_ma39 < 0.05
+                        and deviation_sell < -0.10
+                
+                
+                        and ma50_last <= ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 < 0.40
+                
+                        and deviation_ma5_sotto_ma200 > -0.50
+                
+                        and ma2_last < ma2_2_min_ago
+                        and ma2_differenza_2_min_ago < -5
+                
+                    ):
+                        sell = "SELL 1 (50-90 min) EX cond spec r 16045 B GIORNO con ma300 < 5 ore - dev 3-39 < 0.05 and dev_sell < -0.10 - con ma50 < e con ma78 < - r 9940"
+                        action = "sell"
+
+                  
+                    
 
               
                     
@@ -28309,7 +28334,7 @@ class maddog:
                 and ma2_last < ma2_2_min_ago 
                 
             ):
-                sell = "SELL condizione speciale 6 GIORNO con ma300 < 5 ore - dev 3-39 < 0.05 and dev_sell < -0.105 - con ma50 < e con ma78 < - r 16045b"
+                sell = "SELL condizione speciale 6 GIORNO con ma300 < 5 ore - dev 3-39 < 0.05 and dev_sell < -0.105 - con ma50 < e con ma78 < - r 16045 B"
                 action = "sell"
                 
                 # 15 set 2023 quando 300 scende da 5 ore non devi vendere in perdita ! a ricomprare ci penseranno altre condizioni !
