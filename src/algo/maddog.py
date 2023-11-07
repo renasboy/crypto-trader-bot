@@ -2464,7 +2464,7 @@ class maddog:
                     and deviation_ma300_sopra_ma450 > -0.50
                     
                     and deviation_ma3_sopra_ma10 > 0.017
-                    and deviation_ma3_sopra_ma16 > 0.001
+                    and deviation_ma3_sopra_ma16 > 0.10
                     and deviation_ma3_sopra_ma18 > -0.01
                     
                     and ma2_last >= ma20_last
@@ -2480,7 +2480,7 @@ class maddog:
                     
                     # 25 ott 2023 and deviation_ma3_sopra_ma18 > -0.01 da 0.001
                     #  3 nov 2023 and ma2_differenza_2_min_ago > 3
-
+                    #  7 nov 2023 and deviation_ma3_sopra_ma16 > 0.10 ! ASSOLUTAMENTE ! VEDI 7 NOVEMBRE 2023 ore 11:36 e ore 12:03 CAMBIA la dev 3-16
               
               
                 elif (     
