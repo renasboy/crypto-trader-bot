@@ -28347,8 +28347,8 @@ class maddog:
             
             elif (
                 ma78_last > ma78_120_min_ago
-                and deviation_ma39 < 0.01
-                and deviation_sell < -0.11
+                and deviation_ma39 < 0.02
+                and deviation_sell < -0.10
                 and ma2_last < ma2_2_min_ago 
                 
                 and ma50_last < ma50_2_min_ago
@@ -28357,7 +28357,7 @@ class maddog:
                 and deviation_ma5_sotto_ma200 > -0.80
                 and macd_differenza_2_min_ago < -0.20
             ):
-                sell = "SELL condizione speciale 6 - SALVAGENTE dev 3-39 < 0.01 e dev_sell < -0.11 con ma50 < and macd_diff_2_min_ago < -0.20 - r 16047 A1"
+                sell = "SELL condizione speciale 6 - SALVAGENTE dev 3-39 < 0.02 e dev_sell < -0.10 con ma50 < and macd_diff_2_min_ago < -0.20 - r 16047 A1"
                 action = "sell"
                 
                 #   9 GIU 2023 dev 3-39 a -0.17 da -0.25
@@ -28372,6 +28372,9 @@ class maddog:
                 # 29 ott 2023 dev sell a -0.12 da -0.24
                 # 30 ott 2023 dev sell a -0.11 da -0.12
                 # 30 ott 2023 a 0.01 da -0.01
+                # 30 ott 2023 dev 39 a 0.02 da 0.01
+                # 30 ott 2023 dev sell a -0.10 da -0.11
+                
             # nuova condizione AUDI TROVATA
             
             elif (
