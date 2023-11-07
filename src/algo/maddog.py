@@ -22006,7 +22006,7 @@ class maddog:
                         and delta_150_100 <= delta_150_100_60_min
                 
                         and deviation_ma39 < 0.05
-                        and deviation_sell < -0.05
+                        and deviation_sell < -0.06
                         
                         and deviation_ma100_sopra_ma300 < 0.40
                         and deviation_ma5_sotto_ma200 > -0.50
@@ -22014,11 +22014,11 @@ class maddog:
                         and ma2_last < ma2_2_min_ago 
                 
                     ):
-                        sell = "SELL 2 90-110 min EX condizione speciale r 16045 GIORNO con ma300 < 5 ore - dev 3-39 < 0.05 and dev_sell < -0.05 - con ma50 < e con ma78 < - r 12441b"
+                        sell = "SELL 2 90-110 min EX condizione speciale r 16045 GIORNO con ma300 < 5 ore - dev 3-39 < 0.05 and dev_sell < -0.06 - con ma50 < e con ma78 < - r 12441 B"
                         action = "sell"
                         
                         # 27 ott 2023 and deviation_sell < -0.05 da -0.105
-                  
+                        #  7 NOV 2023 and deviation_sell < -0.06 da -0.05
                     
                         
                         
