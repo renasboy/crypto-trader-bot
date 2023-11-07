@@ -11099,10 +11099,10 @@ class maddog:
                     and ma200_last < ma300_last
                     
                     and deviation_ma3_sopra_ma10 > 0.02
-                    and deviation_ma5_sopra_ma28 > 0.02
+                    and deviation_ma5_sopra_ma28 > 0.01
                     
                     and ma2_last >= ma2_2_min_ago
-                    and macd >= macd_2_min_ago
+                    
                     and macd > -11
                     and macd_differenza_2_min_ago > 0.25
                     and ma2_differenza_2_min_ago > 7
@@ -11123,7 +11123,9 @@ class maddog:
                     # 15 ott 2023 4-28 da 4-39
                     # 15 ott 2023 and macd_differenza_2_min_ago > 0.25
                     #  4 nov 2023 and ma2_differenza_2_min_ago > 7
-              
+                    #  7 nov 2023 and deviation_ma5_sopra_ma28 > 0.01 da 0.02
+                    #  7 nov 2023 tolto macd > macd 2 min ago perche' ho gia' tante differenze positive ! vedi 7 nov 2023 ore 5:49 
+                
                 elif (
                     
                     ma5_last > ma54_last
@@ -28451,7 +28453,7 @@ class maddog:
                 
                 # 15 set 2023 quando 300 scende da 5 ore non devi vendere in perdita ! a ricomprare ci penseranno altre condizioni !
                 # 15 set 2023 quando GIORNO a -0.11 da -0.07
-                #  2 ott 2023 DOPO UN AKTRO -1 HO FATTO QUESTA and deviation_ma5_sotto_ma200 > -0.50
+                #  2 ott 2023 DOPO UN ALTRO -1 HO FATTO QUESTA and deviation_ma5_sotto_ma200 > -0.50
                 #  2 ott 2023 TOLTO and macd < macd_2_min_ago ARRIVATO TARDI ! VEDI 2 OTTOBRE 2023 ORE 20 e 40 - r 16047 B2
                 
 
