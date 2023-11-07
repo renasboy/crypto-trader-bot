@@ -12749,7 +12749,34 @@ class maddog:
                     # 29 ott 2023 50-59 da 78-100
 
                 
+                elif (
+                    
+                    ma5_last > ma54_last
+                    ma28_last > ma50_last
+                    and ma78_last > ma100_last
+                    
+                    and ma100_last < ma100_180_min_ago
+                    and ma200_last < ma200_180_min_ago
+                    and ma300_last < ma300_180_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and deviation_ma5_sopra_ma28 > 0.02
+                    and ma2_last >= ma2_2_min_ago
+                    
+                ):
+                    buy = "BUY 4 ex 7063 RCCR con 5-54 - r 7064"
+                    action = "buy"
+                    percentage = 90
+                  
+                    #  1 ago 2023 importato buy 4 da buy 5
+                    # 27 set 2023 78-100 da 78-150
+                    # 27 set 2023 5-54 da 8-59
+                    #  7 nov 2023 se ma28_last > ma50_last puoi comprare !
+
               
+                
                 # BUY 4 se 8 > 200 con 5-28 > 0.20 ! e con ma69 > and deviation_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali) IMPORTATA DA BUY 5
                 
                 elif (
