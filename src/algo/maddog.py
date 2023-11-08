@@ -28443,7 +28443,7 @@ class maddog:
                 and delta_150_100 <= delta_150_100_60_min
                 
                 and deviation_ma39 < 0.05
-                and deviation_sell < -0.104
+                and deviation_sell < -0.107
                 
                 
                 and ma50_last <= ma50_2_min_ago
@@ -28454,7 +28454,7 @@ class maddog:
                 and ma2_last < ma2_2_min_ago 
                 
             ):
-                sell = "SELL condizione speciale 6 GIORNO con ma300 < 5 ore - dev 3-39 < 0.05 and dev_sell < -0.105 - con ma50 < e con ma78 > - r 16045a"
+                sell = "SELL condizione speciale 6 GIORNO con ma300 < 5 ore - dev 3-39 < 0.05 and dev_sell < -0.107 - con ma50 < e con ma78 > - r 16045 A"
                 action = "sell"
 
             
