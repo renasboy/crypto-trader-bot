@@ -14741,6 +14741,21 @@ class maddog:
                         # 23 ott 2023 tolyo and macd < macd_2_min_ago e aggiunta diff macd 2 min ago < -0.25
 
                     
+                    elif (    
+                        ma2_last < ma4_last
+                        and ma2_last < ma6_last
+                        and delta_1_200_30 > delta_2_200_30_30_min
+                
+                        and deviation_crollo_24_aprile < -0.35
+                
+                        and deviation_ma5_sotto_ma200 > -1.00
+                    ): 
+                
+                        sell = "SELL 1 (5-12 min) EX cond. spec r 16427 B - > CROLLO IMPROVVISO del 24 apr 2022 - and dev_ma5_sotto_ma200 > -1.00 - notte - r 8264"
+                        action = "sell"
+                        
+                        #  9 nov 2023 and deviation_crollo_24_aprile a < -0.35 da < -0.45
+                        
               
                     elif (
                         ma8_last < ma8_2_min_ago 
