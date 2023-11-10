@@ -11833,10 +11833,11 @@ class maddog:
                     and ma300_last > ma300_301_min_ago
                     and ma100_last > ma200_last
                     
+                    and deviation_ma3_sopra_ma16 > 0.045
                     
                     and deviation_buy3 > 0.08
                     and deviation_ma7_sopra_ma40 > 0.07
-                    
+                    and deviation_ma3_sopra_ma16 > 0.045
                     and deviation_ma5_sopra_ma28 > 0.05
                     
                     and ma3_last > ma13_last
@@ -11847,7 +11848,7 @@ class maddog:
                     
                     and ma2_last > ma2_2_min_ago
                 ):
-                    buy = "BUY 4 con ma300_last > ma300_301_min_ago MA NOTTE ! e con 50> e 300> E 100 > 200 and deviation_buy3 > 0.08 - r 6668 A2"
+                    buy = "BUY 4 con ma300_last > ma300_301_min_ago MA NOTTE ! e con 50> e 300> E 100 > 200 and 3-16 > 0.045 and deviation_buy3 > 0.08 - r 6668 A2"
                     action = "buy"
                     percentage = 70
           
@@ -11855,7 +11856,7 @@ class maddog:
                     # il trend, evidentemente, e' LATERALE.
                     # E ALLORA AGGIUNGO UN BEL 6-30 > 0.15 - TREND LATERALE
                     # 28 ott 2022 dev buy 3 a 0.08 da 0.11
-                  
+                    # 10 nov 2023 aggiunta FINALMENTE and deviation_ma3_sopra_ma16 > 0.045 
                   
                   
                   
