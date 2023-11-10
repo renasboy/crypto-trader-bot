@@ -27721,7 +27721,7 @@ class maddog:
                         # 31 ott 2023 and deviation_ma39 < 0.02 da <0.01
                         # 31 ott 2023 and deviation_sell < -0.05 da dev_sell < -0.11
 
-                    
+                  
                     elif (
                         ma78_last > ma78_120_min_ago
                         and ma50_last <= ma50_2_min_ago
@@ -27741,6 +27741,30 @@ class maddog:
                         
                         # 31 ott 2023 and deviation_ma39 < 0.02 da <0.01
                         # 31 ott 2023 and deviation_sell < -0.05 da dev_sell < -0.11
+
+
+                    
+                    elif (
+                        ma8_last < ma8_2_min_ago 
+                        and deviation_ma39 < 0.05
+                        and deviation_sell < 0.02
+                        and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago > 1.50
+                        and deviation_ma10_sopra_o_sotto_ma10_30_min_ago < 0.12
+                
+                        and delta_450_300 < delta_450_300_60_min
+                        and ma50_last <= ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 > 0.10
+                
+                        and deviation_ma3_sotto_ma150 > -1.20
+                        and ma2_last <= ma2_2_min_ago 
+                        and macd_differenza_2_min_ago < -0.25
+                    ):
+                        sell = "SELL 4-5-x (60-90 min) EX cond. spec 15985 A1 ok 2B - CON ma8_last < ma8_2_min_ago and dev 3-39 < 0.06 e dev sell < 0.02 con ma50 < - r 15664"
+                        action = "sell"
+
+
+              
+                    
                     
                     
 
