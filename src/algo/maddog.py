@@ -17987,8 +17987,7 @@ class maddog:
                         action = "sell"
                         
                         # 12 apr 2023 dev sell 0.25 da 0.21 se 300 sta poco sotto o sopra alla 450
-                        
-                        
+                    
                     elif (     
                         ma50_last < ma50_2_min_ago
                         and deviation_ma300_sopra_ma450 < -0.10
@@ -18003,6 +18002,30 @@ class maddog:
                         action = "sell"
                         
                         #  12 apr 2023 dev sell 0.23 da 0.21 se 300 sta sotto alla 450
+
+                    
+
+                    ############################################################################################################### EX CONDIZIONI SPECIALI IMPORTATR RIDOTTE
+                  
+                    elif (
+                        ma78_last < ma78_120_min_ago
+                        and ma300_last > ma300_301_min_ago
+                        and ma50_last <= ma50_2_min_ago
+                
+                        and deviation_ma39 < 0.06
+                        and deviation_sell < -0.05
+                
+                        and deviation_ma5_sotto_ma200 > -0.64
+                
+                        and ma2_last <= ma2_2_min_ago
+                        and ma2_last < ma5_last
+                        and macd < 5
+                    ):
+                        sell = "SELL 1 (90-110 min) EX cond spec r 16047 B1Y con ma 50 < ma 50 2 min ago E ma300 > 5 ore E dev 3-39 < 0.05 and dev_sell < -0.05 - r 10245"
+                        action = "sell"
+
+                    
+                    
                         
                     
                         
