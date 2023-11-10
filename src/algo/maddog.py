@@ -30032,8 +30032,9 @@ class maddog:
                 
                 and ma2_last < ma2_2_min_ago
                 and macd < macd_2_min_ago
+                and ma2_differenza_2_min_ago < -3
             ):    
-                sell = "SELL condizione POCHI MALEDETTI E SUBITO da 0 a 60 min con 3-28 E con dev_sell 0.75 - 1.05 and macd < - INTANTO TE LI PRENDI - r 16750 A2x"
+                sell = "SELL condizione POCHI MALEDETTI E SUBITO da 0 a 60 min con 3-28 E con dev_sell 0.75 - 1.05 and macd < - INTANTO TE LI PRENDI - r 16750 A2X"
                 action = "sell"
                 
                 # pochi 0.80 - 1.20
@@ -30051,7 +30052,7 @@ class maddog:
                 #  7 lug 2023 0.75 - 1.05 da 0.70 - 1.05
                 #  7 lug 2023 0.75 - 1.05 da 0.70 - 1.05
                 #  7 lug 2023 3-28 da 3-13
-          
+                # 10 ago 2023 aggiunta and ma2_differenza_2_min_ago < -3
 
           
             elif (
