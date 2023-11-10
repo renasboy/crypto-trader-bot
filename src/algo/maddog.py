@@ -27258,17 +27258,18 @@ class maddog:
 
           
                     elif (
-                        deviation_ma39 < -0.10
-                        and deviation_sell < -0.20
-                        and ma2_last <= ma2_2_min_ago 
+                        deviation_ma39 < -0.05
+                        and deviation_sell < -0.10
+                        
                         and delta_450_300 > delta_450_300_60_min
                         and ma50_last < ma50_2_min_ago
                         and deviation_ma100_sopra_ma300 > 0.20
-                
+                        
+                        and ma2_last <= ma2_2_min_ago 
                         and deviation_ma3_sotto_ma150 > -1.20
                         and ma2_differenza_2_min_ago < -6
                     ):
-                        sell = "SELL 4-5-x (21-60 min) EX cond. spec 15985 A2 - con 3-39 < -0.10 e dev sell < -0.20 e con ma50 < e dev_ma3_sotto_ma200 > -1.20 - r 15500"
+                        sell = "SELL 4-5-x (21-60 min) EX cond. spec 15985 A2 - con 3-39 < -0.05 e dev sell < -0.10 e con ma50 < e dev_ma3_sotto_ma200 > -1.20 - r 15500"
                         action = "sell"
                 
                         # 27 giu 2022 dev sell a 0.305 da 0.31
@@ -27283,8 +27284,8 @@ class maddog:
                         # 20 feb 2023 -0.304 da -0.303 con doppio delta 450-300 NOTTE !
                         # 25 ott 2023 dev 39 -0.10
                         # 25 ott 2023 dev sell -0.20 da -0.304
-
-                    
+                        # 25 nov 2023 dev sell -0.10 da -0.20
+                        # 25 nov 2023 dev 39 a -0.05 da -0.10
               
                     elif (
                         ma78_last < ma78_120_min_ago
