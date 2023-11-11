@@ -13522,6 +13522,7 @@ class maddog:
                     
                     and deviation_ma4_sopra_ma100 > 0.01
                     
+                    
                     and deviation_buy3 > 0.01
                     and deviation_bellissima > 0.01
                     and deviation_ma7_sopra_ma40 > 0.10
@@ -13548,17 +13549,22 @@ class maddog:
                     # > vacanza anticipato buy
 
                 
+
                 elif (
                     
                     ma450_last < ma450_360_min_ago
+                    and ma100_last > ma300_last
                     and ma78_last > ma150_last
                     
                     and deviation_ma4_sopra_ma100 > 0.10
                     
-                    and deviation_buy3 > 0.10
-                    and deviation_bellissima > 0.10
-                    and deviation_ma7_sopra_ma40 > 0.10
+                    and deviation_ma3_sopra_ma10 > 0.12
+                    and deviation_ma3_sopra_ma16 > 0.12
+                    and deviation_ma5_sopra_ma28 > 0.04
                     
+                    and deviation_buy3 > 0.05
+                    and deviation_bellissima > 0.05
+                    and deviation_ma7_sopra_ma40 > 0.05
                     
                     and ma4_last > ma9_last
                     and ma4_last > ma50_last
@@ -13570,7 +13576,39 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
               
                 ):
-                    buy = "BUY 5A con con ma450_last > ma450_360_min_ago and deviation_bellissima > 0.163 (PER SPEZZARE LA CATENA - effetti laterali) - r 7384 B"
+                    buy = "BUY 5A con 100>300 e con ma450_last > ma450_360_min_ago and deviation_bellissima > 0.05 (PER SPEZZARE LA CATENA - effetti laterali) - r 7384 B1"
+                    action = "buy"
+                    percentage = 70
+                    
+                    # importante : aggiunta triade della salvezza
+                
+                
+                elif (    
+                    ma450_last < ma450_360_min_ago
+                    and ma100_last < ma300_last
+                    and ma78_last > ma150_last
+                    
+                    and deviation_ma4_sopra_ma100 > 0.10
+                    
+                    and deviation_ma3_sopra_ma10 > 0.12
+                    and deviation_ma3_sopra_ma16 > 0.12
+                    and deviation_ma5_sopra_ma28 > 0.04
+                    
+                    and deviation_buy3 > 0.10
+                    and deviation_bellissima > 0.10
+                    and deviation_ma7_sopra_ma40 > 0.10
+                    
+                    and ma4_last > ma9_last
+                    and ma4_last > ma50_last
+                    and ma6_last > ma15_last
+                    and ma7_last > ma25_last
+                    
+                    and ma3_last > ma13_last
+                    
+                    and ma2_last >= ma2_2_min_ago
+              
+                ):
+                    buy = "BUY 5A con 100<300 e con con ma450_last > ma450_360_min_ago and deviation_bellissima > 0.10 (PER SPEZZARE LA CATENA - effetti laterali) - r 7384 B2"
                     action = "buy"
                     percentage = 70
                     
@@ -13580,7 +13618,9 @@ class maddog:
                     # e, a questo punto, non importa se compra con un + 0.10 piu' in alto. NON FA UNA GRANDE DIFFERENZA !
                     
                     # > vacanza anticipato buy
-                    
+                    # importante : aggiunta triade della salvezza
+
+                
                 
                 elif (
                     ma200_last >= ma200_120_min_ago
