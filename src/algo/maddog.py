@@ -22232,7 +22232,7 @@ class maddog:
                         
                         # 27 ott 2023 and deviation_sell < -0.05 da -0.105
 
-                    
+                     
                     elif (
                         ma78_last < ma78_120_min_ago
                         and ma300_last < ma300_301_min_ago
@@ -22254,6 +22254,31 @@ class maddog:
                         
                         # 27 ott 2023 and deviation_sell < -0.05 da -0.105
                         #  7 NOV 2023 and deviation_sell < -0.06 da -0.05
+
+                    
+                    elif (
+                        ma78_last < ma78_120_min_ago
+                        and ma300_last > ma300_301_min_ago
+                        and ma50_last <= ma50_2_min_ago
+                
+                        and deviation_ma39 < 0.06
+                        and deviation_sell < -0.03
+                
+                        and deviation_ma5_sotto_ma200 > -0.64
+                
+                        and ma2_last <= ma2_2_min_ago
+                        and ma2_last < ma5_last
+                        and macd < 6
+                        and ma2_differenza_2_min_ago < -2
+                    ):
+                        sell = "SELL 2 90-110 min EX cond spec 16047 B1Y con ma 50 < ma 50 2 min ago con ma300 > 5 ore e dev 3-39 < 0.05 and dev_sell < -0.03 - r 12442"
+                        action = "sell"
+                        
+                        # 11 nov 2023 dev sell -0.03 da -0.112
+                        # 11 nov 2023 aggiunta and ma2_differenza_2_min_ago < -2
+
+              
+                    
                     
                         
                         
