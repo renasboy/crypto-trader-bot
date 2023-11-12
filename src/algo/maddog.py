@@ -9734,10 +9734,10 @@ class maddog:
                     # aggiunta di 5-28 < 0.12
                     
                     
-                    
                 elif (
                     
-                    ma18_last > ma100_last
+                    ma8_last > ma54_last
+                    and ma78_last > ma200_last
                     and deviation_ma5_sotto_ma300 > -0.40
                     
                     and ma100_last < ma100_180_min_ago
@@ -9753,7 +9753,35 @@ class maddog:
                     and macd >= macd_2_min_ago
                     and macd > 5
                 ):
-                    buy = "BUY 2 > 180 min di ribasso 26 luglio 2023 - r 5984"
+                    buy = "BUY 2 > 180 min di ribasso 26 luglio 2023 MA SE ma78_last > ma200_last COMPRA 8-54 - r 5984a"
+                    action = "buy"
+                    percentage = 90
+                    
+                    # 24 ago 2023 macd > macd 2 min ago
+                    # 24 ago 2023 macd > 5
+
+                
+                elif (
+                    
+                    ma18_last > ma100_last
+                    and ma78_last < ma200_last
+                    
+                    and deviation_ma5_sotto_ma300 > -0.40
+                    
+                    and ma100_last < ma100_180_min_ago
+                    and ma200_last < ma200_180_min_ago
+                    and ma300_last < ma300_180_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and deviation_ma5_sopra_ma28 > 0.02
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                    and macd > 5
+                ):
+                    buy = "BUY 2 > 180 min di ribasso 26 luglio 2023 CON 78<200 - r 5984b"
                     action = "buy"
                     percentage = 90
                     
