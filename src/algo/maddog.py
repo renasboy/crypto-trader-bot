@@ -14734,11 +14734,11 @@ class maddog:
                     elif (
                         ma78_last < ma78_120_min_ago
                         and ma300_last < ma300_301_min_ago
-                
+                        and ma2_differenza_2_min_ago < -9
+                        
                         and deviation_ma39 < 0.05
-                        and deviation_sell < -0.06
-                
-                
+                        and deviation_sell < -0.07
+                        
                         and ma50_last <= ma50_2_min_ago
                         and deviation_ma100_sopra_ma300 < 0.40
                 
@@ -14750,9 +14750,10 @@ class maddog:
                         and macd_differenza_2_min_ago < -0.25
                         and ma2_differenza_2_min_ago < -9
                     ):
-                        sell = "SELL 1 (5-12 min) EX cond. spec. r 16047 B2 con ma300> 5 ore - dev 3-39 < 0.05 and dev_sell < -0.06 con ma50 < e con macd < 2 min e macd < 17 - r 8261"
+                        sell = "SELL 1 (5-12 min) EX cond. spec. r 16047 B2 con ma300> 5 ore - dev 3-39 < 0.05 and dev_sell < -0.07 con ma50 < e con macd < 2 min e macd < 17 - r 8261"
                         action = "sell"
-
+                        
+                        # 12 nov 2023 ho messo 2 volte and ma2_differenza_2_min_ago < -9 perche' non l' ha presa !
                   
                     
                     elif (
