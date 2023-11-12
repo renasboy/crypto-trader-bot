@@ -245,8 +245,8 @@ class maddog:
       
         # formula macd_differenza di 5 min ago
         
-        macd_differenza = (macd - macd_5_min_ago)
-        self.algo_helper.info("macd_differenza: {}".format(macd_differenza))
+        macd_differenza_5_min_ago = (macd - macd_5_min_ago)
+        self.algo_helper.info("macd_differenza_5_min_ago: {}".format(macd_differenza_5_min_ago))
 
 
       
@@ -30621,12 +30621,12 @@ class maddog:
                 
                 and macd < macd_2_min_ago
                 and macd < -9
-                and macd_differenza < -11
+                and macd_differenza_5_min_ago < -11
                 
                 and ma2_last < ma2_2_min_ago
                  
             ):    
-                sell = "SELL condizione speciale 42 - POCHI MALEDETTI E SUBITO CON ma300 che sale da 5 ore ! e con deviation > 1.01 e macd < -10 e MACD DIFFERENZA < -11 - r 16875 A"
+                sell = "SELL cond spec - POCHI MALEDETTI E SUBITO CON ma300 che sale da 5 ore ! e con deviation > 1.01 e macd < -10 e MACD DIFFERENZA_5_min_ago < -11 - r 16875 A"
                 action = "sell"
                 
                 #  1 set 2023 se per es macd passa da 18 a -11 vendi     
@@ -30642,12 +30642,12 @@ class maddog:
                 
                 and macd < macd_2_min_ago
                 and macd < -9
-                and macd_differenza < -24
+                and macd_differenza_5_min_ago < -24
                 
                 and ma2_last < ma2_2_min_ago
                 
             ):    
-                sell = "SELL condizione speciale 42 - POCHI MALEDETTI E SUBITO CON ma300 che scende da 5 ore ! e con deviation > 1.01 e macd < -10 e MACD DIFFERENZA < -25 - r 16875 B"
+                sell = "SELL cond spec - POCHI MALEDETTI E SUBITO CON ma300 che scende da 5 ore ! e con deviation > 1.01 e macd < -10 e MACD DIFFERENZA_5_min_ago < -25 - r 16875 B"
                 action = "sell"
                 
                 #  1 set 2023 se per es macd passa da 18 a -11 vendi     
