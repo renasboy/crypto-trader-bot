@@ -30634,7 +30634,6 @@ class maddog:
                 # 12 set 2023 macd DIFFERENZA -24 da -25
                 #  8 nov 2023 macd DIFFERENZA -11 da -24
 
-          
             # 17
             
             elif (
@@ -30646,7 +30645,7 @@ class maddog:
                 and macd_differenza < -24
                 
                 and ma2_last < ma2_2_min_ago
-                 
+                
             ):    
                 sell = "SELL condizione speciale 42 - POCHI MALEDETTI E SUBITO CON ma300 che scende da 5 ore ! e con deviation > 1.01 e macd < -10 e MACD DIFFERENZA < -25 - r 16875 B"
                 action = "sell"
@@ -30654,6 +30653,30 @@ class maddog:
                 #  1 set 2023 se per es macd passa da 18 a -11 vendi     
                 # 12 set 2023 macd < -9 da -10
                 # 12 set 2023 macd DIFFERENZA -24 da -25
+
+            
+            # 18
+            
+            elif (
+                seconds_since_last_trade > 0 and seconds_since_last_trade < 3000
+                and ma300_last < ma300_180_min_ago
+                and ma3_last < ma25_last
+                
+                and deviation_sell > 0.60
+                and deviation_sell < 1.05
+                
+                and ma2_last < ma2_2_min_ago
+                and macd < macd_2_min_ago
+                and macd < -20
+                and macd_differenza_2_min_ago < -0.40
+            ):    
+                sell = "SELL condizione POCHI MALEDETTI E SUBITO da 0 a 50 min con 3-25 E con dev_sell 0.60 - 1.05 and macd < -20 - INTANTO TE LI PRENDI - r 16888"
+                action = "sell"
+                
+                # 24 ago 2023 and macd < -5
+
+          
+            
           
                 
                 
