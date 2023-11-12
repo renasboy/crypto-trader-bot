@@ -223,12 +223,26 @@ class maddog:
         self.algo_helper.info("ma2_differenza_2_min_ago: {}".format(ma2_differenza_2_min_ago))
 
         
+
+        # formula differenza ma50 - ma59
+        
+        ma50_differenza_ma59 = (ma50_last - ma59_last)
+        self.algo_helper.info("ma50_differenza_ma59: {}".format(ma50_differenza_ma59))
+
+        
         # formula macd_differenza di 2 min ago
         
         macd_differenza_2_min_ago = (macd - macd_2_min_ago)
         self.algo_helper.info("macd_differenza_2_min_ago: {}".format(macd_differenza_2_min_ago))
 
-        
+
+
+
+
+
+
+
+      
         # formula macd_differenza di 5 min ago
         
         macd_differenza = (macd - macd_5_min_ago)
