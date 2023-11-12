@@ -30231,7 +30231,7 @@ class maddog:
             
             
             
-            ###################################################################################################################################################
+            ################################################################################################################################## POCHI MALEDETTI E SUBITO
             
             # OGGI 25 MAGGIO 2023 - IMPORTANTE !
             
@@ -30242,7 +30242,7 @@ class maddog:
             # POCHI MALEDETTI E SUBITO tra 0.80 e 1.05 di guadagno INTANTO TE LI PRENDI. con 3-15
             
             
-            # 33
+            # 1
             
             elif (
                 seconds_since_last_trade > 0 and seconds_since_last_trade < 7200
@@ -30263,7 +30263,8 @@ class maddog:
                 # 24 ago 2023 and macd < -5
           
           
-                
+            # 2
+          
             elif (
                 seconds_since_last_trade > 0 and seconds_since_last_trade < 3600
                 and deviation_ma10__diviso_ma10_5_ore_ago < 1.50
@@ -30297,7 +30298,8 @@ class maddog:
                 #  7 lug 2023 3-28 da 3-13
                 # 10 ago 2023 aggiunta and ma2_differenza_2_min_ago < -3
 
-          
+            # 3
+            
             elif (
                 seconds_since_last_trade > 3601 and seconds_since_last_trade < 7200
                 and deviation_ma10__diviso_ma10_5_ore_ago < 1.50
@@ -30316,7 +30318,8 @@ class maddog:
                 
 
           
-          
+            # 4
+            
             elif (
                 seconds_since_last_trade > 7200
                 and ma3_last < ma28_last
@@ -30352,13 +30355,13 @@ class maddog:
                 #  8 lug 2023 aggiunto and macd < -12
                 #  11 ago 2023 3-28 da 3-20 dopo 3 ore cazzo (non e' piu' subito)
 
-                #################################################################################################################################################
                 
                 
                 
                 
                 
-            # 34 a - SELL condizione speciale POCHI MALEDETTI E SUBITO QUANDO SALE FORTE ( cerca di inibirlo ) con ma200 > MA ma100 - dedicated to comparo meo
+                
+            # 5 - SELL condizione speciale POCHI MALEDETTI E SUBITO QUANDO SALE FORTE ( cerca di inibirlo ) con ma200 > MA ma100 - dedicated to comparo meo
             
             elif (
                 ma3_last < ma28_last
@@ -30379,7 +30382,7 @@ class maddog:
                 
                 
                 
-            # 34 b - SELL condizione speciale POCHI MALEDETTI E SUBITO QUANDO SALE PIANO con ma200 > MA ma100 NON DEVE SALIRE TROPPO ! - dedicated to comparo meo
+            # 6 - SELL condizione speciale POCHI MALEDETTI E SUBITO QUANDO SALE PIANO con ma200 > MA ma100 NON DEVE SALIRE TROPPO ! - dedicated to comparo meo
             
             elif (
                 ma3_last < ma39_last
@@ -30402,7 +30405,7 @@ class maddog:
                 
                 
             
-            # 35 - SELL condizione speciale POCHI MALEDETTI E SUBITO con ma200 < - dedicated to comparo meo
+            # 7 SELL condizione speciale POCHI MALEDETTI E SUBITO con ma200 < - dedicated to comparo meo
             
             elif (
                 ma3_last < ma20_last 
@@ -30421,7 +30424,7 @@ class maddog:
                 
                 
                 
-            # 36 - SELL condizione speciale POCHI MALEDETTI E SUBITO ma non troppo ! 3-18 quando ma200 < e con deviation_sell > 1.31 and < 2.50
+            # 8 SELL condizione speciale POCHI MALEDETTI E SUBITO ma non troppo ! 3-18 quando ma200 < e con deviation_sell > 1.31 and < 2.50
             
             elif (
                 ma3_last < ma18_last 
@@ -30444,7 +30447,7 @@ class maddog:
             
             
             
-            # 37 - POCHI MALEDETTI E SUBITO ma non troppo 3-28 mentre sale
+            # 9 POCHI MALEDETTI E SUBITO ma non troppo 3-28 mentre sale
             
             elif (
                 ma3_last < ma28_last 
@@ -30464,7 +30467,7 @@ class maddog:
                 
                 
                 
-            # 38 - POCHI MALEDETTI E SUBITO ma non troppo mentre scende
+            # 10 POCHI MALEDETTI E SUBITO ma non troppo mentre scende
             
             elif (
                 ma3_last < ma18_last
@@ -30485,7 +30488,7 @@ class maddog:
                 
                 
                 
-            # 38 - POCHI MALEDETTI E SUBITO ma non troppo mentre scende
+            # 11 POCHI MALEDETTI E SUBITO ma non troppo mentre scende
             
             elif (
                 ma3_last < ma8_last
@@ -30508,7 +30511,7 @@ class maddog:
             
             
             
-            # 39 - POCHI MALEDETTI E SUBITO ma non troppo mentre scende > ESTATE 
+            # 12 POCHI MALEDETTI E SUBITO ma non troppo mentre scende > ESTATE 
             
             elif (
                 ma5_last < ma39_last
@@ -30526,7 +30529,7 @@ class maddog:
                 # and ma2_last > ma100_last (altrimenti vende durante il crollo con la ma3-ma9)
                 
                 
-            # 39 - POCHI MALEDETTI E SUBITO ma non troppo mentre scende > ESTATE 2022
+            # 13 POCHI MALEDETTI E SUBITO ma non troppo mentre scende > ESTATE 2022
             
             elif (
                 ma5_last < ma33_last
@@ -30547,7 +30550,7 @@ class maddog:
           
 
 
-            # 40 - POCHI MALEDETTI E SUBITO ma non troppo mentre scende > ESTATE 2023
+            # 14 POCHI MALEDETTI E SUBITO ma non troppo mentre scende > ESTATE 2023
             
             elif (
                 deviation_sell > 0.80
@@ -30568,6 +30571,9 @@ class maddog:
                 #  1 nov 2023 ma5_11_min_ago da ma5_12_min_ago
 
             
+
+            # 14 
+            
             elif (
                 deviation_sell > 0.80
                 and seconds_since_last_trade < 7200
@@ -30585,8 +30591,10 @@ class maddog:
                 # 27 set 2023 macd < macd 2 min ago 
                 # 27 set 2023 and macd_differenza_2_min_ago < -1
                 #  1 nov 2023 ma5_11_min_ago da ma5_12_min_ago
+
+          
             
-            # 41 - POCHI MALEDETTI E SUBITO con deviation > 5.01 e macd < -35
+            # 15 - POCHI MALEDETTI E SUBITO con deviation > 5.01 e macd < -35
             
             elif (
                 deviation_sell > 5.01
@@ -30604,7 +30612,7 @@ class maddog:
           
 
           
-            # 42 - POCHI MALEDETTI E SUBITO con deviation > 1.01 e macd < -10 e MACD DIFFERENZA < -25
+            # 16 POCHI MALEDETTI E SUBITO con deviation > 1.01 e macd < -10 e MACD DIFFERENZA < -25
           
             elif (
                 deviation_sell > 0.91
@@ -30625,7 +30633,10 @@ class maddog:
                 # 12 set 2023 macd < -9 da -10
                 # 12 set 2023 macd DIFFERENZA -24 da -25
                 #  8 nov 2023 macd DIFFERENZA -11 da -24
+
           
+            # 17
+            
             elif (
                 deviation_sell > 0.91
                 and ma300_last < ma300_301_min_ago
@@ -30648,6 +30659,11 @@ class maddog:
                 
                 
                 
+
+
+
+
+
             
             ######################################################################### vendite dedicate al BUY FIAT - AUDI - MASERATI - FERRARI 
             
