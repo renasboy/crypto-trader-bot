@@ -2335,10 +2335,9 @@ class maddog:
                     action = "buy"
                     percentage = 90
 
-              
                 elif (     
                     
-                    ma4_last > ma13_last
+                    ma3_last > ma13_last
                     and ma100_last < ma100_120_min_ago
                     
                     and deviation_ma54_sopra_o_sotto_ma72 < 0.015
@@ -2347,18 +2346,19 @@ class maddog:
                     and deviation_ma39_sotto_ma200 < 0.10
                     and deviation_ma300_sopra_ma450 > -0.35
                     
-                    and deviation_ma3_sopra_ma10 > -0.005
+                    and deviation_ma3_sopra_ma10 > -0.01
                     and deviation_ma3_sopra_ma16 > 0.01
-                    and deviation_ma3_sopra_ma18 > -0.01
+                    and deviation_ma3_sopra_ma18 > -0.02
                     
                     and ma2_last >= ma20_last
                   
                     and ma2_last >= ma2_2_min_ago
                     and macd >= macd_2_min_ago
                     and macd > -40
+                    and ma50_differenza_ma59 > -5
                     
                 ):    
-                    buy = "BUY 1 compare forever - con 5-20 E CON 300 ancora vicina alla 450 ( anche un poco sotto! ) + MACD > - r 1537 A2y"
+                    buy = "BUY 1 compare forever - con 5-20 E CON 300 ancora vicina alla 450 ( anche un poco sotto! ) + MACD > and ma50_differenza_ma59 > -5 - r 1537 A2y1"
                     action = "buy"
                     percentage = 90
                     
@@ -2383,7 +2383,59 @@ class maddog:
                     # 13 set 2023 0.01 0.03 0.05 antcipo ndecchiecella
                     
                     # 19 ott 2023 4-13 da 5-20
+                    # 12 nov 2023 aggiunta and ma50_differenza_ma59 > -5 cioe' se 50 sta VICINO alla 59
 
+                
+                
+                elif (     
+                    
+                    ma4_last > ma13_last
+                    and ma100_last < ma100_120_min_ago
+                    
+                    and deviation_ma54_sopra_o_sotto_ma72 < 0.015
+                    and deviation_ma54_sopra_o_sotto_ma72 > -0.015
+                    
+                    and deviation_ma39_sotto_ma200 < 0.10
+                    and deviation_ma300_sopra_ma450 > -0.35
+                    
+                    and deviation_ma3_sopra_ma10 > -0.005
+                    and deviation_ma3_sopra_ma16 > 0.01
+                    and deviation_ma3_sopra_ma18 > -0.01
+                    
+                    and ma2_last >= ma20_last
+                  
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                    and macd > -40
+                    and ma50_differenza_ma59 < -5
+                    
+                ):    
+                    buy = "BUY 1 compare forever - con 5-20 E CON 300 ancora vicina alla 450 ( anche un poco sotto! ) + MACD > and ma50_differenza_ma59 < -5 - r 1537 A2y2"
+                    action = "buy"
+                    percentage = 90
+                    
+                    #  4 mag 2023 ho aggiunto e tolto 450>480 min ago
+                    #  4 mag 2023 5-50 da 5-250
+                    #  9 mag 2023 5-30 da 5-50
+                    # 29 mag 2023 3-16 > 0.11
+                    #  1 giu 2023 5-20 da 5-30
+                    #  1 giu 2023 and deviation_ma39_sotto_ma200 < -0.15
+                    #  9 giu 2023 and deviation_ma300_sopra_ma450 > -0.25 da -0.20
+                    #  9 giu 2023 5-28 > 0.02 da 0.03
+                    #  9 giu 2023 tolto and ma3_last >= ma3_2_min_ago
+                    #  9 giu 2023 dev_ma39_sotto_ma200 < -0.10 da -0.15 forse era questa che la faceva arrivare in ritardo perche' 39 era piu' lenta a scendere sotto -0.15 da ma200
+                    # tolto and deviation_ma5_sopra_ma28 > 0.02
+                    #  7 lug 2023 dev_ma39_sotto_ma200 < -0.05 da -0.10
+                    # 31 lug 2023 and deviation_ma3_sopra_ma18 > 0.12
+                    # 11 ago 2023 0.06 0.08 0.10 antcipo ndecchiecella
+                    # 30 ago 2023 0.05 0.07 0.09 antcipo ndecchiecella
+                    # 12 set 2023 0.03 0.05 0.07 antcipo ndecchiecella 
+                    
+                    # 13 set 2023 and deviation_ma300_sopra_ma450 > -0.35 da -0.45
+                    # 13 set 2023 0.01 0.03 0.05 antcipo ndecchiecella
+                    
+                    # 19 ott 2023 4-13 da 5-20
+                    # 12 nov 2023 aggiunta and ma50_differenza_ma59 > -5 cioe' se 50 sta LONTANA alla 59
               
                 elif (     
                     
