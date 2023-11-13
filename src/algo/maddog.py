@@ -28356,19 +28356,52 @@ class maddog:
                         
 
                     ######################################################################################## con trend discendente
-                    
-                    
+
                     elif (    
                         ma50_last < ma50_2_min_ago
+                        
+                        and deviation_ma100_sopra_ma300 > 0.25
+                        and deviation_ma39 < -0.20
+                        
                         and ma100_last > ma100_120_min_ago
-                        and ma2_last < ma2_2_min_ago 
-                        and deviation_ma39 < -0.243
+                        and ma2_last < ma2_2_min_ago
+                        
                     ):
-                        sell = "SELL 4-5-x dopo 90 min con ma50 < con deviation_ma39 < -0.243 and 100 > 100 120 min ago - r 15893 A"
+                        sell = "SELL 4-5-x dopo 90 min con ma50 < E dev_ma100_sopra_ma300 > 0.25 con deviation_ma39 < -0.20 and 100 > 100 120 min ago - r 15893 A1"
                         action = "sell"
                         
                         # 29 gen 2023 dev_39 -0.239 da -0.235
                         #  1 feb 2023 dev_39 -0.243 da -0.239
+                        # 13 nov 2023 se 100 sta sopra 300 allora vende solo dev 3-39
+
+                    
+                    elif (    
+                        ma50_last < ma50_2_min_ago
+                        
+                        and deviation_ma100_sopra_ma300 < 0.25
+                        and deviation_ma39 < 0.05
+                        and deviation_sell < 0.04
+                        
+                        and ma100_last > ma100_120_min_ago
+                        
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 4-5-x dopo 90 min con ma50 < E dev_ma100_sopra_ma300 < 0.25 con dev_ma39 < 0.05 and dev_sell < 0.04 and 100 > 100 120 min ago - r 15893 A2"
+                        action = "sell"
+                        
+                        # 29 gen 2023 dev_39 -0.239 da -0.235
+                        #  1 feb 2023 dev_39 -0.243 da -0.239
+                        # 13 nov 2023 se 100 sta vicina alla 300 allora c'e' anche dev sell
+
+                    
+                    
+
+                    
+                    
+
+
+                  
+                    
                         
                     elif (    
                         ma50_last < ma50_2_min_ago
