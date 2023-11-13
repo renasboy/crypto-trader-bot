@@ -2584,11 +2584,13 @@ class maddog:
                     # 25 ott 2023 and deviation_ma3_sopra_ma18 > -0.01 da 0.001
                     #  3 nov 2023 and ma2_differenza_2_min_ago > 3
                     #  7 nov 2023 and deviation_ma3_sopra_ma16 > 0.10 ! ASSOLUTAMENTE ! VEDI 7 NOVEMBRE 2023 ore 11:36 e ore 12:03 CAMBIA la dev 3-16
+
               
               
                 elif (     
                     
                     ma3_last > ma18_last
+                    and ma50_differenza_ma59 >= -13
                     and ma100_last < ma100_60_min_ago
                     
                     and deviation_ma54_sopra_o_sotto_ma72 < -0.015
@@ -2609,7 +2611,37 @@ class maddog:
                     and ma2_differenza_2_min_ago >= 11
                   
                 ):    
-                    buy = "BUY 1 compare forever - con 3-18 E CON 300 ancora vicina alla 450 ( anche un poco sotto ! ) and 3-18 > -0.05 + diff macd > 1.05 AND 2>5 ! - r 1537 A3Y"
+                    buy = "BUY 1 compare forever - con 3-18 E CON 300 ancora vicina alla 450 ( anche un poco sotto ! ) and 3-18 > -0.05 + diff macd > 1.05 AND 2>5 ! - r 1537 A3Y1"
+                    action = "buy"
+                    percentage = 90
+
+
+              
+                elif (     
+                    
+                    ma3_last > ma18_last
+                    and ma50_differenza_ma59 < -13
+                    and ma100_last < ma100_60_min_ago
+                    
+                    and deviation_ma54_sopra_o_sotto_ma72 < -0.015
+                    
+                    and deviation_ma39_sotto_ma200 < -0.01
+                    and deviation_ma300_sopra_ma450 > -0.55
+                    
+                    and deviation_ma3_sopra_ma10 > 0.068
+                    and deviation_ma3_sopra_ma16 > -0.04
+                    and deviation_ma3_sopra_ma18 > -0.05
+                    
+                    and ma2_last >= ma20_last
+                    
+                    and ma2_last > ma5_last
+                    and ma2_last >= ma2_2_min_ago
+                    
+                    and macd_differenza_2_min_ago > 1.05
+                    and ma2_differenza_2_min_ago >= 17
+                  
+                ):    
+                    buy = "BUY 1 compare forever - con 3-18 E CON 300 ancora vicina alla 450 ( anche un poco sotto ! ) and 3-18 > -0.05 + diff macd > 1.05 AND 2>5 ! - r 1537 A3Y2"
                     action = "buy"
                     percentage = 90
                     
@@ -2654,7 +2686,7 @@ class maddog:
                     #  2 nov 2023 and deviation_ma3_sopra_ma16 a -0.04 da -0.03 ! Solo et pensoso i più deserti campi vo mesurando a passi tardi et lenti !
                     #  2 nov 2023 and deviation_ma3_sopra_ma18 a -0.05 da -0.04 !
                     #  3 NOVEMBRE 2023 CONFORTABLY NUMB - ingresso monumentale di ma2_differenza_2_min_ago - ave compare mio
-
+                    # 13 nov 2023 se diff 50-59 < -13 aumento 3-10 a 0.068 e diff ma2 > 17 ! cazzo
                     
                 # BUY 1 tempo ESTATE PIU' VELOCE 100 > 60 min ago (solo l' estate se lo puo' perettere!) considera il passare del TEMPO ! ma30 > 
                 
