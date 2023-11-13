@@ -18913,7 +18913,7 @@ class maddog:
                         
                         and ma2_last <= ma2_2_min_ago
                         and macd < macd_2_min_ago
-                        and macd < -3
+                        and macd < -2
                     ):
                         sell = "SELL 1 da 110 a 239 min con ma450 > 6 ore ago E 300 > 120 min ago con ma50 < (dev_sell < 0.05 and ma3_last < ma39_last) - r 10274 A1x"
                         action = "sell"
@@ -18928,6 +18928,8 @@ class maddog:
                         # 18 set 2023 and macd < -3
                         # 28 set 2023 se 450 scende da 6 ore ma 300 sale da 2 ore aspetta un poco prima di vendere.
                         #  5 ott 2023 dev sell 0.05 da 0.10
+                        # 13 nov 2023 and macd < -2 da -3
+                  
                   
                     elif (     
                         ma50_last < ma50_2_min_ago
