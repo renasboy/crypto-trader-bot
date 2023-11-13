@@ -11287,11 +11287,44 @@ class maddog:
                     # 15 ott 2023 and macd_differenza_2_min_ago > 0.25
                     #  4 nov 2023 and ma2_differenza_2_min_ago > 7
                     #  7 nov 2023 and deviation_ma5_sopra_ma28 > 0.01 da 0.02
-                    #  7 nov 2023 tolto macd > macd 2 min ago perche' ho gia' tante differenze positive ! vedi 7 nov 2023 ore 5:49 
+                    #  7 nov 2023 tolto macd > macd 2 min ago perche' ho gia' tante differenze positive ! vedi 7 nov 2023 ore 5:49
+
                 
                 elif (
                     
                     ma5_last > ma54_last
+                    and ma50_differenza_ma59 >= -5
+                    and macd > macd_2_min_ago
+                    and deviation_ma5_sotto_ma300 < -0.42
+                    
+                    and ma100_last < ma100_180_min_ago
+                    and ma200_last < ma200_180_min_ago
+                    and ma300_last < ma300_180_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.02
+                    and deviation_ma5_sopra_ma28 > 0.01
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd > macd_2_min_ago
+                    and macd > 5
+                ):
+                    buy = "BUY 3 29 ago 2022 > 180 min di ribasso and ma50_differenza_ma59 >= -5 con 5-78 - r 6572 A2x"
+                    action = "buy"
+                    percentage = 90
+                    
+                    # 13 nov 2023 aggiunta and ma50_differenza_ma59 >= -5
+                    # 13 nov 2023 se 50 sta vicina alla 59 (anche un poco sotto) allora compra prima
+                    # 13 nov 2023 and deviation_ma5_sopra_ma28 > 0.01 da > 0.02
+                    
+              
+                elif (
+                    
+                    ma5_last > ma54_last
+                    and ma50_differenza_ma59 < -5
+                    and macd > macd_2_min_ago
                     and deviation_ma5_sotto_ma300 < -0.42
                     
                     and ma100_last < ma100_180_min_ago
@@ -11308,7 +11341,7 @@ class maddog:
                     and macd > macd_2_min_ago
                     and macd > 5
                 ):
-                    buy = "BUY 3 29 ago 2022 > 180 min di ribasso con 5-78 - r 6572 A2"
+                    buy = "BUY 3 29 ago 2022 > 180 min di ribasso con 5-78 - r 6572 A2y"
                     action = "buy"
                     percentage = 90
                     
@@ -11317,6 +11350,7 @@ class maddog:
                     # 24 ago 2023 and macd > macd_2_min_ago
                     # 24 ago 2023 and macd > 5
                     # 16 set 2023 5-78 invece di 5-200
+                    # 13 nov non ha preso macd > !!! allora l' ho messo anche sopra
 
                 
                 elif (
