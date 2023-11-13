@@ -2590,7 +2590,7 @@ class maddog:
                 elif (     
                     
                     ma3_last > ma18_last
-                    and ma50_differenza_ma59 >= -13
+                    and ma50_differenza_ma59 >= -14
                     and ma100_last < ma100_60_min_ago
                     
                     and deviation_ma54_sopra_o_sotto_ma72 < -0.015
@@ -2620,7 +2620,7 @@ class maddog:
                 elif (     
                     
                     ma3_last > ma18_last
-                    and ma50_differenza_ma59 < -13
+                    and ma50_differenza_ma59 < -14
                     and ma100_last < ma100_60_min_ago
                     
                     and deviation_ma54_sopra_o_sotto_ma72 < -0.015
@@ -15955,6 +15955,7 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                         and macd < macd_2_min_ago
                         and macd < -1
+                        and macd_differenza_2_min_ago < -0.25
                     ):
                         sell = "SELL 1 (21-50 min) con ma50 < CON dev_sell < -0.055 E dev_ma39 < 0.06 E TREND LATERALE (100>300 <0.69 and >-0.77) - r 9016 B2"
                         action = "sell"
