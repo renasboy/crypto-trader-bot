@@ -2569,7 +2569,7 @@ class maddog:
                     and deviation_ma300_sopra_ma450 > -0.50
                     
                     and deviation_ma3_sopra_ma10 > 0.017
-                    and deviation_ma3_sopra_ma16 > 0.01
+                    and deviation_ma3_sopra_ma16 > 0.025
                     and deviation_ma3_sopra_ma18 > -0.01
                     
                     and ma2_last >= ma20_last
