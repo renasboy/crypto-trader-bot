@@ -2559,7 +2559,7 @@ class maddog:
                 elif (     
                     
                     ma3_last > ma20_last
-                    and ma3_last > ma39_last
+                    and ma3_last < ma39_last
                     and ma100_last < ma100_60_min_ago
                     and ma100_last < ma100_120_min_ago
                   
@@ -2582,12 +2582,12 @@ class maddog:
                     buy = "BUY 1 compare forever 3>39 - con 3-20 E 300 vicina 450 ( anche poco sotto ! ) e 3-16 > 0.01 + MACD > E ma2_differenza_2_min_ago > 3 - r 1537 A3X4a prova"
                     action = "buy"
                     percentage = 90
-
+                    # 15 nov 2023 se compra quando 3<39 allora riduco dev 3-16 
               
                 elif (     
                     
                     ma3_last > ma20_last
-                    and ma3_last < ma39_last
+                    and ma3_last > ma39_last
                     
                     and ma100_last < ma100_60_min_ago
                     and ma100_last < ma100_120_min_ago
@@ -2598,7 +2598,7 @@ class maddog:
                     and deviation_ma300_sopra_ma450 > -0.50
                     
                     and deviation_ma3_sopra_ma10 > 0.017
-                    and deviation_ma3_sopra_ma16 > 0.10
+                    and deviation_ma3_sopra_ma16 > 0.105
                     and deviation_ma3_sopra_ma18 > -0.01
                     
                     and ma2_last >= ma20_last
@@ -2608,14 +2608,14 @@ class maddog:
                     and ma2_differenza_2_min_ago > 3
                     
                 ):    
-                    buy = "BUY 1 compare forever 3<39 - con 3-20 E 300 vicina 450 ( anche poco sotto ! ) e 3-16 > 0.10 + MACD > E ma2_differenza_2_min_ago > 3 - r 1537 A3X4b prova"
+                    buy = "BUY 1 compare forever 3<39 - con 3-20 E 300 vicina 450 ( anche poco sotto ! ) e 3-16 > 0.105 + MACD > E ma2_differenza_2_min_ago > 3 - r 1537 A3X4b prova"
                     action = "buy"
                     percentage = 90
                     
                     # 25 ott 2023 and deviation_ma3_sopra_ma18 > -0.01 da 0.001
                     #  3 nov 2023 and ma2_differenza_2_min_ago > 3
                     #  7 nov 2023 and deviation_ma3_sopra_ma16 > 0.10 ! ASSOLUTAMENTE ! VEDI 7 NOVEMBRE 2023 ore 11:36 e ore 12:03 CAMBIA la dev 3-16
-
+                    # 15 nov 2023 se compra quando 3>39 (e' capitato) allora metto ASSOLUTAMENTE dev 3-16 > 0.105
               
               
                 elif (     
