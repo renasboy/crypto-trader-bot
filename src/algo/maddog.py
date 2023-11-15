@@ -30848,7 +30848,7 @@ class maddog:
                 # 12 set 2023 macd < -9 da -10
                 # 12 set 2023 macd DIFFERENZA -24 da -25
                 #  8 nov 2023 macd DIFFERENZA -11 da -24
-            
+                # 15 nov 2023 3-18 da 5-20 
 
             # 17
             
