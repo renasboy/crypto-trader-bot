@@ -30832,7 +30832,7 @@ class maddog:
             elif (
                 deviation_sell > 0.91
                 and ma300_last > ma300_301_min_ago
-                and ma5_last < ma20_last
+                and ma3_last < ma18_last
                 
                 and macd < macd_2_min_ago
                 and macd < -9
@@ -30841,13 +30841,14 @@ class maddog:
                 and ma2_last < ma2_2_min_ago
                  
             ):    
-                sell = "SELL cond spec - POCHI MALEDETTI E SUBITO CON ma300 che sale da 5 ore ! e con deviation > 1.01 e macd < -10 e MACD DIFFERENZA_5_min_ago < -11 - r 16875 A"
+                sell = "SELL cond spec - POCHI MALEDETTI E SUBITO con ma300 che sale da 5 ore ! e con deviation > 1.01 e macd < -10 e MACD DIFFERENZA_5_min_ago < -11 - r 16875 A"
                 action = "sell"
                 
                 #  1 set 2023 se per es macd passa da 18 a -11 vendi     
                 # 12 set 2023 macd < -9 da -10
                 # 12 set 2023 macd DIFFERENZA -24 da -25
                 #  8 nov 2023 macd DIFFERENZA -11 da -24
+            
 
             # 17
             
