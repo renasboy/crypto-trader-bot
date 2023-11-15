@@ -28787,11 +28787,33 @@ class maddog:
 
 
           
-
-          
             elif (
-                deviation_ma39 < -0.20
-                and deviation_sell < -0.308
+                
+                ma50_last > ma50_2_min_ago
+                
+                and deviation_ma39 < -0.10
+                and deviation_sell < -0.20
+                
+                and ma2_last <= ma2_2_min_ago 
+                and delta_450_300 < delta_450_300_60_min
+                
+                and deviation_ma100_sopra_ma300 > 0.20
+                
+                and deviation_ma3_sotto_ma150 > -1.20
+            ):
+                sell = "SELL cond. spec - ma50_last > ma50_2_min_ago con 3-39 < -0.20 e dev sell < -0.31 and dev_sell< -0.308 con ma50< e dev_ma3_sotto_ma200 > -1.20 - r 15985 A1x"
+                action = "sell"
+                
+                # aggiunta il 15 nov 2023 con ma50> !
+                # 15 nov 2023 deviation_ma39 < -0.10 da < -0.20
+                # 15 nov 2023 deviation_sell < -0.20 < -0.31
+
+            
+            elif (
+                
+                ma50_last < ma50_2_min_ago
+                and deviation_ma39 < -0.10
+                and deviation_sell < -0.15
                 and ma2_last <= ma2_2_min_ago 
                 and delta_450_300 < delta_450_300_60_min
                 and ma50_last < ma50_2_min_ago
@@ -28799,7 +28821,7 @@ class maddog:
                 
                 and deviation_ma3_sotto_ma150 > -1.20
             ):
-                sell = "SELL cond. special 3 - SALVAGENTE 3 3-39 < -0.20 e dev sell < -0.31 and dev_sell< -0.308 con ma50< e dev_ma3_sotto_ma200 > -1.20 - r 15985 A1"
+                sell = "SELL cond. spec - ma50_last > ma50_2_min_ago con 3-39 < -0.20 e dev sell < -0.31 and dev_sell< -0.308 con ma50< e dev_ma3_sotto_ma200 > -1.20 - r 15985 A1y"
                 action = "sell"
                 
                 # 27 giu 2022 dev sell a 0.305 da 0.31
@@ -28808,14 +28830,15 @@ class maddog:
                 # COME PRIMA COSA HO NOTATO CHE AVEVA DEVIATION INVECE DI DEVIATON SELL 
                 # ma non sapendo se era questo il problema ho creato la prossima condizione speciale.
                 
-                
                 # > estate dev 39 -0.24 da -0.25 dev sell -0.30 da -0.31 
                 # 13 set -3% !!! deviation_ma3_sotto_ma200 > -1.20 da deviation_ma3_sotto_ma200 > -1.20 
                 # 21 gen 2023 dev sell -0.303 da -0.30
                 # 20 feb 2023 -0.309 da -0.303 con doppio delta 450-300 GIORNO !
                 # 22 feb 2023 -0.308 da -0.309 con doppio delta 450-300 GIORNO !
                 #  9 lug 2023 deviation_ma39 < -0.20 da < -0.24
-
+                
+                # 15 nov 2023 deviation_ma39 < -0.10 da < -0.20
+                # 15 nov 2023 deviation_sell < -0.15 da < -0.31
 
 
 
