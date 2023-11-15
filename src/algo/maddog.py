@@ -11956,6 +11956,7 @@ class maddog:
                 
                 elif (
                     ma59_last >= ma59_2_min_ago
+                    and ma2_differenza_2_min_ago > 5
                     and delta_450_300 < delta_450_300_60_min
                     and ma300_last > ma300_301_min_ago
                     and ma100_last > ma200_last
@@ -11975,12 +11976,12 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                     and macd < macd_2_min_ago
                 ):
-                    buy = "BUY 4A GIORNO con ma 78> e 300> E ma100>ma200 con macd < macd 2 min ago - r 6668 A1y"
+                    buy = "BUY 4A GIORNO con ma 78> e 300> E ma100>ma200 con macd < macd 2 min ago and ma2_differenza_2_min_ago > 5 - r 6668 A1y"
                     action = "buy"
                     percentage = 70
                     
                     # 21 ott 2023 and macd < macd_2_min_ago - SE MACD DISCENDENTE IL BUY LO FACCIO PIU' ALTO ! - C'E' MA NON SI VEDE
-
+                    # 15 nov 2022 aggiunta and ma2_differenza_2_min_ago > 5 ( ma2 > ma2 min non l' ha letta !) ( allora metto un rafforzativo )
               
                 
 
