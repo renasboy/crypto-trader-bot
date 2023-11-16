@@ -10012,11 +10012,13 @@ class maddog:
                     
                     and deviation_ma100_sopra_ma300 < -0.10
                     
-                    and ma300_last < ma300_60_min_ago
                     and ma200_last < ma200_60_min_ago
+                    and ma300_last < ma300_60_min_ago
+                    
                     
                     and ma2_last >= ma2_2_min_ago
                     and macd >= macd_2_min_ago
+                    
                 ):
                     buy = "BUY 2 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 CON AGGIUNTA PENSIERO LATERALE and macd > macd 2 min ago - r 6000"
                     action = "buy"
