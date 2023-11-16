@@ -29798,13 +29798,13 @@ class maddog:
                 ma2_last <= ma4_last
                 and ma300_last < ma300_301_min_ago
                 and ma2_last <= ma6_last
-                and deviation_crollo_24_aprile < -0.50
+                and deviation_crollo_24_aprile < -0.30
                 
                 and delta_1 > delta_2
-                and deviation_ma5_sotto_ma200 < -0.70
+                and deviation_ma5_sotto_ma200 < -0.50
             ): 
                 
-                sell = "SELL cond special 21 Bocelli - core 'ngrato - > CROLLO IMPROVVISO - and delta_1 > delta_2 e dev_ma5_sotto_ma200 < -0.70 < dev sell -0.572 -0.572 - r 16480 By"
+                sell = "SELL cond special 21 Bocelli - core 'ngrato - > CROLLO IMPROVVISO - and delta_1 > delta_2 e dev_ma5_sotto_ma200 < -0.70 <  - r 16480 BY"
                 action = "sell"
                         
                 # ho aggiunto anche questa vendita speciale dopo il 24 aprile -1%
@@ -29818,11 +29818,12 @@ class maddog:
                 #  2 lug 2022 a -0.57 da -0.58 dopo che ha fatto -0.96 durante un crollo
                 # 10 mar 2023 5 sotto 200 a <-0.90 da <-1.00
                 # 10 mar 2023 a -0.572 da -0.57
-                # 6 apr 2023 dev crollo -0.571 da -0.572
-                # 6 apr 2023 dev 5 sotto 200 < -0.70 da < -0.90
+                #  6 apr 2023 dev crollo -0.571 da -0.572
+                #  6 apr 2023 dev 5 sotto 200 < -0.70 da < -0.90
                 
-                
-                
+                # 16 nov 2023 ha fatto -0.59
+                # 16 nov 2023 and deviation_crollo_24_aprile < -0.30 da -0.50
+                # 16 nov 2023 and deviation_ma5_sotto_ma200 < -0.50 da -0.70
                 ######################################################################################### fine dopo il crollo improvviso del 24 aprile 2022
                 
                 
