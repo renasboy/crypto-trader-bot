@@ -27637,6 +27637,8 @@ class maddog:
               
                     elif (
                         ma78_last < ma78_120_min_ago
+                        and macd_differenza_2_min_ago < -0.25
+                        
                         and ma300_last < ma300_301_min_ago
                         and delta_150_100 <= delta_150_100_60_min
                 
@@ -27651,7 +27653,8 @@ class maddog:
                 
                         and ma2_last <= ma2_2_min_ago 
                         and ma2_last < ma5_last
-                        and ma2_differenza_2_min_ago < -6
+                        and ma2_differenza_2_min_ago < -7
+                        
                     ):
                         sell = "SELL 4-5-x (21-60 min) EX cond spec GIORNO con ma300> 5 ore - dev 3-39 < 0.05 and dev_sell < -0.01 - con ma50 < e ma5 sotto ma200 > -0.90 - r 15502"
                         action = "sell"
@@ -27663,8 +27666,9 @@ class maddog:
                         #  5 ott dev_sell -0.05 da -0.105
                         # 27 ott 2023 aggiunta 2<5                        
                         #  1 nov 2023 dev_sell a -0.01 da -0.05 
-                    
-
+                        # 16 nov 2023 aggiunta and macd_differenza_2_min_ago < -0.25 e l' ho messa sopra cazzo NON HA PRESO DIFFERENZA MA2
+                        # 16 nov 2023 and ma2_differenza_2_min a -7 da -6
+                        
                 ############################################################################################################# sessione 3-4-x ( da 60 a 90 min )
 
                 # VENDITA - da 60 a 90 min - da 3600 a 5400 secondi in poi
