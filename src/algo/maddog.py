@@ -2577,13 +2577,16 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
                     and macd >= macd_2_min_ago
                     and ma2_differenza_2_min_ago > 3
-                    
+                    and macd > 8
                 ):    
-                    buy = "BUY 1 compare forever 3>39 - con 3-20 E 300 vicina 450 ( anche poco sotto ! ) e 3-16 > 0.01 + MACD > E ma2_differenza_2_min_ago > 3 - r 1537 A3X4a prova"
+                    buy = "BUY 1 compare forever 3>39 con 3-20 E 300 vicina 450 ( anche poco sotto ! ) e 3-16 > 0.01 + MACD > E ma2_diff_2_min_ago > 3 E MACD > 8 - r 1537 A3X 4A"
                     action = "buy"
                     percentage = 90
+                    
                     # 15 nov 2023 se compra quando 3<39 allora riduco dev 3-16 
-              
+                    # 16 nov 2023 AGGIUNTO SOLO SU QUESTA CONDIZIONE E DOPO ATTENTA ANALISI STATISTICA and macd > 8
+
+                
                 elif (     
                     
                     ma3_last > ma20_last
