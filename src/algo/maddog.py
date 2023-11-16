@@ -14249,8 +14249,9 @@ class maddog:
                     action = "sell"
                         
                     # 29 ott 2023 non aveva comprato e ho aggiunto questa
+                
 
-              
+                
                 elif (
                     ma2_last >= ma2_2_min_ago
                     and deviation_buy_crollo_1 < -0.29
@@ -14267,6 +14268,43 @@ class maddog:
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     # deviation_correzione = ma3_last / ma25_last
                     # ma5 non deve allontanarsi troppo dalla ma200 !
+
+
+                
+                # BUY 5 migliore EX r 1043 B che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-59
+                
+                elif (
+                    
+                    ma3_last > ma18_last
+                
+                    and ma450_last < ma450_360_min_ago
+                    
+                    and deviation_ma5_sopra_ma200 < -0.30
+                    and deviation_ma5_sotto_ma300 < -0.30
+                    and deviation_ma5_sotto_ma450 < -0.30
+                    and deviation_ma50_sopra_o_sotto_ma100 < -0.01
+                    
+                    and deviation_ma100_sopra_ma300 < -0.10
+                    
+                    and ma300_last < ma300_60_min_ago
+                    and ma200_last < ma200_60_min_ago
+                    
+                    and deviation_ma3_sopra_ma10 > 0.081
+                    
+                    and deviation_ma5_sopra_ma28 > -0.15
+                    and deviation_ma3_sopra_ma16 > -0.12
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                ):
+                    buy = "BUY 5 EX BUY 1 1043 B migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND dev 4-18 and deviation_ma3_sopra_ma16 > -0.12 - r 7590"
+                    action = "buy"
+                    percentage = 50
+                    
+                    # 16 nov 2023 questa condizione l'ho importata dal BUY 1 perche' ha comprato benissimo e mi ha fatto risparmiare un sacco di SELL
+
+                
+                
                     
                     
                   
