@@ -28194,6 +28194,25 @@ class maddog:
                         # 31 ott 2023 and deviation_sell < -0.05 da dev_sell < -0.11
 
 
+                    elif (
+                        ma78_last > ma78_120_min_ago
+                        and ma50_last < ma59_last
+                
+                        and deviation_ma39 < 0.05
+                        and deviation_sell < 0.05
+                
+                        and ma2_last < ma2_2_min_ago 
+                
+                        and ma50_last < ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 < 0.40
+                
+                        and deviation_ma5_sotto_ma200 > -0.80
+                        and macd < macd_2_min_ago
+                        and macd < -1
+                    ):
+                        sell = "SELL 4-5-x (60-90 min) EX cond spec 16047 A1Y CON 50<59 - dev 3-39 < 0.05 e dev_sell < 0.05 con ma50< and macd < macd_2_min_ago - r 15665"
+                        action = "sell"
+
                     
                     elif (
                         ma8_last < ma8_2_min_ago 
@@ -29191,7 +29210,7 @@ class maddog:
                 and deviation_ma5_sotto_ma200 > -0.80
                 and macd_differenza_2_min_ago < -0.20
             ):
-                sell = "SELL condizione speciale 6 CON 50<59 - SALVAGENTE dev 3-39 < 0.05 e dev_sell < 0.05 con ma50 < and macd_diff_2_min_ago < -0.20 - r 16047 A1y"
+                sell = "SELL condizione speciale 6 CON 50<59 - SALVAGENTE dev 3-39 < 0.05 e dev_sell < 0.05 con ma50 < and macd_diff_2_min_ago < -0.20 - r 16047 A1Y"
                 action = "sell"
                 
                 #   9 GIU 2023 dev 3-39 a -0.17 da -0.25
