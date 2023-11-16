@@ -12251,7 +12251,34 @@ class maddog:
                     # 31 ott 2023 3-30 da 5-48 aggiunta per anticipare la precedente ( che resta comunque perche' prevede la ma100 < )
               
 
+                elif (
+                    
+                    ma4_last > ma20_last
+                    and ma450_last > ma450_480_min_ago
+                    
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.21
+                    
+                    and deviation_ma100_sopra_ma300 < 0.27
+                    and deviation_ma100_sopra_ma300 > -0.27
+                    
+                    and deviation_ma3_sopra_ma10 > 0.05
+                    and deviation_ma5_sopra_ma28 > -0.02
                   
+                    and ma3_last > ma13_last
+                    and ma4_last > ma9_last
+                   
+                    and ma2_last > ma2_2_min_ago
+                    and macd > macd_2_min_ago
+                ):
+                    buy = "BUY 4 importata da RCCR BUY3 r 6599 A1yA2 - ANDATA BENISSIMO - con 450 > 450 480 min MA CONSIDERATA ANCORA LATERALE - r 6740"
+                    action = "buy"
+                    percentage = 60
+                    
+                    # questa condizione importata da RCCR e' arrivata un po' prima.
+
+
+                
                 elif (
                     deviation_ma4_sopra_ma30 > 0.15
                     and ma300_last < ma300_120_min_ago
