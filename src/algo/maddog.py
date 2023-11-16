@@ -18882,11 +18882,10 @@ class maddog:
                         action = "sell"
                         # dal 16 novembre 2023 ANCHE CON 50> !
 
-                  
                     elif (    
                         ma50_last < ma50_2_min_ago
-                        and deviation_ma39 < 0.05
-                        and deviation_sell < 0.04
+                        and deviation_ma39 < 0.06
+                        and deviation_sell < 0.05
                         and deviation_ma5_sotto_ma300 < 0.30
                       
                         
@@ -18897,7 +18896,7 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                         and macd < macd_2_min_ago
                     ):
-                        sell = "SELL 1 da 110 a 239 min con ma50 < MA ma100 > E ma300 < e con dev_ma39 < 0.05 and dev sell < 0.04 - r 10265 B2y"
+                        sell = "SELL 1 da 110 a 239 min con ma50 < MA ma100 > E ma300 < e con dev_ma39 < 0.06 and dev sell < 0.05 - r 10265 B2Y"
                         action = "sell"
                         
                         # ma39 NON DEVE VENDERE in fase laterale ma in alto
@@ -18921,6 +18920,31 @@ class maddog:
                         
                         # 13 nov 2023 dev sell a 0.04 da -0.04 
                         # 13 nov 2023 dev 39 a 0.05 da -0.01
+                        # 16 nov 2023 dev sell a 0.05 da 0.04
+                        # 16 nov 2023 dev 39 a 0.06 da 0.05
+                    
+                    elif (    
+                        ma50_last < ma50_2_min_ago
+                        and deviation_ma39 < 0.05
+                        and deviation_sell < 0.04
+                        and deviation_ma5_sotto_ma300 < 0.30
+                      
+                        
+                        and ma300_last < ma300_120_min_ago
+                        and ma100_last < ma100_60_min_ago
+                      
+                        and ma5_last < ma5_2_min_ago
+                        and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
+                    ):
+                        sell = "SELL 1 da 110 a 239 min con ma50 < E ma100 > E ma300 < e con dev_ma39 < 0.05 and dev sell < 0.04 - r 10265 B2z"
+                        action = "sell"
+                        
+                        
+                        # 16 nov 2023 AGGIUNTA sia con 100< che con 300<
+
+
+                  
                     
                     
                     elif (
