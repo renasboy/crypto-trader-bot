@@ -223,7 +223,12 @@ class maddog:
         self.algo_helper.info("ma2_differenza_2_min_ago: {}".format(ma2_differenza_2_min_ago))
 
         
+        # formula differenza ma2 - ma4
+        
+        ma2_differenza_ma4 = (ma2_last - ma4_last)
+        self.algo_helper.info("ma2_differenza_ma4: {}".format(ma2_differenza_ma4))
 
+      
         # formula differenza ma50 - ma59
         
         ma50_differenza_ma59 = (ma50_last - ma59_last)
@@ -30814,6 +30819,12 @@ class maddog:
             
             elif (
                 seconds_since_last_trade > 7200
+                
+                and ma2_differenza_ma4 < -10
+                and ma2_last < ma2_2_min_ago
+                and macd < macd_2_min_ago
+                and macd < -12
+              
                 and ma3_last < ma28_last
                 and deviation_ma3_di_adesso_diviso_ma3_di_90_min_ago < 1.30
                 and ma450_last < ma450_720_min_ago
@@ -30821,11 +30832,8 @@ class maddog:
                 and deviation_sell > 0.75
                 and deviation_sell < 1.10
                 
-                and ma2_last < ma2_2_min_ago
-                and macd < macd_2_min_ago
-                and macd < -12
             ):    
-                sell = "SELL condizione POCHI MALEDETTI E SUBITO da 0 a 120 min con 3-28 E con dev_sell 0.75 - 1.10 and macd < - INTANTO TE LI PRENDI - r 16750 B"
+                sell = "SELL condizione POCHI MALEDETTI E SUBITO dopo 120 min con 3-28 E con dev_sell 0.75 - 1.10 and macd < - INTANTO TE LI PRENDI - r 16750 B"
                 action = "sell"
                 
                 # pochi 0.80 - 1.20
@@ -30846,7 +30854,7 @@ class maddog:
                 #  6 giu 2023 3-20 da 3-13
                 #  8 lug 2023 aggiunto and macd < -12
                 #  11 ago 2023 3-28 da 3-20 dopo 3 ore cazzo (non e' piu' subito)
-
+                #  17 nov 2023 aggiunta and ma2_differenza_ma4 < -10
                 
                 
                 
