@@ -1546,6 +1546,7 @@ class maddog:
                     
                 
                 # BUY 1 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-59 - r 1043 B
+                
                 elif (
                     
                     ma3_last > ma18_last
@@ -1571,7 +1572,10 @@ class maddog:
                     buy = "BUY 1 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND dev 3-18 and deviation_ma3_sopra_ma16 > -0.125 - r 1043 B1"
                     action = "buy"
                     percentage = 50
-
+                    
+                    # ma200 ha fatto lo scherzetto ERA SUPERIORE E HA FATTO COMPRARE IN RITARDO !
+                    # ma300 e ma450 erano inferiori
+              
                 
                 elif (
                     
@@ -7354,8 +7358,8 @@ class maddog:
                     # 19 gen 2023 doppio delta notte compra ma piu' difficile
                     # 21 apr 2023 aggiunta ma3 > ma3 2 min ago
                     # 21 apr 2023 price > ma4 !
-                    
-                    
+
+                
                     
                 # BUY 2 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-50 - formula MY COMPA (importata dal BUY 1 r 1043 B)
                 
@@ -7389,6 +7393,37 @@ class maddog:
                     
                     # 30 ago 2023 and macd > 3 min ago
                     # 30 ago 2023 and macd > 1
+
+
+                
+                elif (
+                    
+                    ma3_last > ma18_last
+                    
+                    and ma450_last < ma450_360_min_ago
+                    and ma300_last < ma300_60_min_ago
+                    
+                    
+                    and deviation_ma5_sopra_ma200 < -0.30
+                    and deviation_ma5_sotto_ma300 < -0.30
+                    and deviation_ma5_sotto_ma450 < -0.30
+                    
+                    and deviation_ma50_sopra_o_sotto_ma100 < -0.01
+                    and deviation_ma100_sopra_ma300 < -0.10
+                    
+                    and deviation_ma3_sopra_ma10 > 0.081
+                    and deviation_ma3_sopra_ma16 > -0.125
+                    and deviation_ma5_sopra_ma28 > -0.155
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                ):
+                    buy = "BUY 2 IMPORTATA da BUY 1 r 1043 B2 che considera distanza 5-300 AND dev 10-200 < -0.24 AND dev 3-18 and deviation_ma3_sopra_ma16 > -0.125 - r 4760"
+                    action = "buy"
+                    percentage = 50
+
+                
+                
                     
                 
                     
