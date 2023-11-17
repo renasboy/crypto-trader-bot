@@ -29435,6 +29435,8 @@ class maddog:
           
             elif (
                 ma78_last < ma78_120_min_ago
+                and ma2_differenza_2_min_ago < -5
+                
                 and ma300_last > ma300_301_min_ago
                 and delta_150_100 <= delta_150_100_60_min
                 
@@ -29454,7 +29456,7 @@ class maddog:
                 action = "sell"
                 
                 # 15 set 2023 quando 300 scende da 5 ore non devi vendere in perdita ! a ricomprare ci penseranno altre condizioni !
-
+                # 17 nov 203 aggiunto and ma2_differenza_2_min_ago < -5
                 
           
                 #########################################################################################################################
