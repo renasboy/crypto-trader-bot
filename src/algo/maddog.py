@@ -227,8 +227,14 @@ class maddog:
         
         ma2_differenza_ma4 = (ma2_last - ma4_last)
         self.algo_helper.info("ma2_differenza_ma4: {}".format(ma2_differenza_ma4))
-
       
+
+        # formula differenza ma2 - ma8
+        
+        ma2_differenza_ma8 = (ma2_last - ma8_last)
+        self.algo_helper.info("ma2_differenza_ma8: {}".format(ma2_differenza_ma8))
+
+        
         # formula differenza ma50 - ma59
         
         ma50_differenza_ma59 = (ma50_last - ma59_last)
@@ -16748,7 +16754,7 @@ class maddog:
                         ma50_last > ma50_2_min_ago 
                         and ma200_last < ma200_60_min_ago
                         
-                        and deviation_sell < -0.06
+                        and deviation_sell < -0.065
 
                         and ma3_last < ma50_last
                         
@@ -16756,6 +16762,7 @@ class maddog:
                         and macd < macd_2_min_ago
                         and macd_differenza_2_min_ago < -0.25
                         and ma2_differenza_2_min_ago < -6
+                        and ma2_differenza_ma8 < -27
                     ):
                         sell = "SELL 1 (21-50 min) con ma50 > and deviation_sell < -0.06 and ma3_last < ma50_last - r 9354"
                         action = "sell"
@@ -16764,8 +16771,11 @@ class maddog:
                         # 10 ott 2023 dev_sell a 0.05 da -0.238
                         # 14 ott 2023 aggiunta and macd_differenza_2_min_ago < -0.25
                         #  3 nov 2023 aggiunta and ma2_differenza_2_min_ago < -6
-                  
+                        # 17 nov 2023 aggiunta and ma2_differenza_ma8 < -27
+                        # 17 nov 2023 deviation_sell a -0.065 da -0.06
 
+                  
+                     
                     # ------------------------------------------------------------------------------------------------------------------ CONDIZIONI SPECIALI NEL SELL 1 !
 
                     
