@@ -6980,12 +6980,10 @@ class maddog:
                     # 11 gen 2023 3-10 a 0.04 da 0.05
                     
                     
-                elif (
+                
+                elif (    
+                    ma3_last > ma28_last
                     
-                    ma8_last > ma39_last
-                    and ma3_last > ma30_last
-                    and deviation_ma7_sopra_ma40 > 0.04
-                  
                     and ma450_last < ma450_480_min_ago
                     
                     and ma100_last < ma125_last
@@ -6994,23 +6992,20 @@ class maddog:
                     
                     and deviation_ma100_sopra_ma300 < 0.20
                     
-                    and deviation_ma5_sopra_ma28 > 0.10
-                    and deviation_ma3_sopra_ma10 > 0.04
-                    and deviation_ma3_sopra_ma18 > 0.169
-                    
-                    
-                    and deviation_buy_ma3_sopra_ma13 > 0.08
-                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > 0.07
+                    and deviation_ma5_sopra_ma28 > -0.10
                     
                     and price >= price_2_min_ago
-                    and macd >= macd_2_min_ago
+                    and macd_differenza_2_min_ago > -1.7
+                    
                 ):
-                    buy = "BUY 2A laterale - r 4685 By2B"
+                    buy = "BUY 2A laterale - r 4685 BY2B"
                     action = "buy"
                     percentage = 80
 
                     # deviation_buy_ma3_sopra_ma13 > x e' fondamentale !
-                    # deviation_buy2 = ma8_last/ma50_last  
+                    
                     # tolta and ma2_last >= ma2_2_min_ago !
                     #  9 ott 2022 69>200 da 78>200
                     # 12 ott 2022 7-40 0.04 da 0.05
@@ -7018,6 +7013,9 @@ class maddog:
                     # 11 gen 2023 5-28 a 0.10 da 0.11
                     # 11 gen 2023 3-10 a 0.04 da 0.05
                     # 11 ago 2023 8-39
+                    # 17 nov 2023 macd >2 min ago e' arrivato tardi !
+                    # 17 nov 2023 gli ho detto basta che il macd di adeso rispetto aquello di 2 min fa NON SCENDE TROPPO ! (and macd_differenza_2_min_ago > -1.7)
+              
                     
                 elif (
                     ma69_last >= ma69_2_min_ago
