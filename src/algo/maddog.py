@@ -2473,6 +2473,7 @@ class maddog:
                 elif (     
                     
                     ma3_last > ma39_last
+                    and ma2_last > ma8_last
                     and deviation_ma50_sotto_ma300 > -0.12
                     
                     and ma100_last < ma100_60_min_ago
@@ -2490,7 +2491,6 @@ class maddog:
                     and ma2_last >= ma20_last
                   
                     and ma2_last >= ma2_2_min_ago
-                    and macd >= macd_2_min_ago
                     and ma2_differenza_2_min_ago > 3
                     
                 ):    
@@ -2499,8 +2499,10 @@ class maddog:
                     percentage = 90
                     
                     # attenzione se 50 e' ancora vicina alla 300 compra piu' alto
+                    # 17 nov 2023 tolto and macd >= macd_2_min_ago ! 
+                    # 17 nov 2023 aggiunto and ma2_last > ma8_last ! al suo posto. cazzo.
 
-              
+                
                 elif (     
                     
                     ma3_last > ma20_last
