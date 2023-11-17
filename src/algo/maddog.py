@@ -16760,7 +16760,7 @@ class maddog:
                         
                         and ma2_last < ma2_2_min_ago
                         and macd < macd_2_min_ago
-                        and macd_differenza_2_min_ago < -0.25
+                        and macd_differenza_2_min_ago < -0.50
                         and ma2_differenza_2_min_ago < -6
                         and ma2_differenza_ma8 < -27
                     ):
@@ -16773,7 +16773,7 @@ class maddog:
                         #  3 nov 2023 aggiunta and ma2_differenza_2_min_ago < -6
                         # 17 nov 2023 aggiunta and ma2_differenza_ma8 < -27
                         # 17 nov 2023 deviation_sell a -0.065 da -0.06
-
+                        # 17 nov 2023 macd_differenza_2_min_ago a -0.50 da -0.25
                   
                      
                     # ------------------------------------------------------------------------------------------------------------------ CONDIZIONI SPECIALI NEL SELL 1 !
