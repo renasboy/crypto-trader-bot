@@ -2572,7 +2572,7 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
                     and macd >= macd_2_min_ago
                     and ma2_differenza_2_min_ago > 3
-                    and macd_differenza_2_min_ago > 2.1
+                    and macd_differenza_2_min_ago > 0.5
                 ):    
                     buy = "BUY 1 compare forever - con 3-20 E CON 300 ancora vicina 450 ( anche un poco sotto ! ) e 3-18 > -0.02 + MACD > E ma2_diff_2_min_ago > 3 - r 1537 A3X2Y"
                     action = "buy"
@@ -2581,7 +2581,7 @@ class maddog:
                     # 25 ott 2023 and deviation_ma3_sopra_ma18 > -0.01 da 0.001
                     #  3 nov 2023 and ma2_differenza_2_min_ago > 3
                     # attenzione se 50 e' sotto la 300 compra cosi'
-                    # 20 nov 2023 and macd_differenza_2_min_ago > 2.1
+                    # 20 nov 2023 and macd_differenza_2_min_ago > 0.5
                     # 20 nov 2023 and deviation_ma3_sopra_ma18 > -0.02 da > -0.01
 
                 elif (     
