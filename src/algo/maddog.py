@@ -29453,25 +29453,29 @@ class maddog:
                 
             # 5 - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 > -0.50
             
+            
             elif (
                 ma78_last > ma78_120_min_ago
+                
+                and ma2_last < ma2_2_min_ago 
+                and ma2_differenza_2_min_ago < -5
+                
                 and ma300_last < ma300_301_min_ago
                 and delta_150_100 <= delta_150_100_60_min
                 
                 and deviation_ma39 < 0.05
                 and deviation_sell < -0.107
                 
-                
                 and ma50_last <= ma50_2_min_ago
                 and deviation_ma100_sopra_ma300 < 0.40
                 
                 and deviation_ma5_sotto_ma200 > -0.50
-                
-                and ma2_last < ma2_2_min_ago 
-                
+                  
             ):
-                sell = "SELL condizione speciale 6 GIORNO con ma300 < 5 ore - dev 3-39 < 0.05 and dev_sell < -0.107 - con ma50 < e con ma78 > - r 16045 A"
+                sell = "SELL condizione speciale 6 GIORNO con ma300 < 5 ore - dev 3-39 < 0.05 and dev_sell < -0.107 e con ma50 < e con ma78 > and diff ma2 < -5 - r 16045 A"
                 action = "sell"
+                
+                # 20 nov 2023 aggiunta and diff ma2 < -5 
 
             
             elif (
