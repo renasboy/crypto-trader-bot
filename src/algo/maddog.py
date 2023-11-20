@@ -26726,10 +26726,12 @@ class maddog:
                 
                         and deviation_ma5_sotto_ma200 > -0.80
                         and macd_differenza_2_min_ago < -0.20
+                        and ma2_differenza_2_min_ago < -6
                     ):
-                        sell = "SELL 4-5-x (3-7 min) EX cond spec 16047 A1Y CON 50<59 -  dev 3-39 < 0.05 e dev_sell < 0.05 con ma50 < and macd_diff_2_min_ago < -0.20 - r 14588"
+                        sell = "SELL 4-5-x (3-7 min) EX cond spec 16047 A1Y CON 50<59 con dev 3-39 < 0.05 e dev_sell < 0.05 con ma50 < and macd_diff_2_min_ago < -0.20 - r 14588"
                         action = "sell"
-
+                        
+                        # 20 nov 2023 aggiunta and ma2_differenza_2_min_ago < -6
                   
                     
 
