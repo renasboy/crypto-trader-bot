@@ -11221,10 +11221,10 @@ class maddog:
                 # ------------------------------------------------------------ BUY 3 laterale
               
                 elif (    
-                    ma4_last > ma28_last
+                    ma3_last > ma28_last
                     
                     and macd >= macd_2_min_ago
-                    and macd > -11.0
+                    and macd > -24.0
                     and macd_differenza_2_min_ago > 0.20
                     and ma2_differenza_2_min_ago > 3
                     
