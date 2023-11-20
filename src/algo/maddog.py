@@ -26682,7 +26682,8 @@ class maddog:
                         # AGGIUNTA PER SICUREZZA SE CONTINUA A PRECIPITARE
                   
 
-                    ######################################################################################################################### condizioni speciali importate ridotte
+                    ######################################################################################################################   condizioni speciali importate ridotte
+
                     
                     elif (
                         ma78_last < ma78_120_min_ago
@@ -26708,6 +26709,29 @@ class maddog:
                 
                         # 15 set 2023 quando 300 scende da 5 ore non devi vendere in perdita ! a ricomprare ci penseranno altre condizioni !
                         # 17 nov 203 aggiunto and ma2_differenza_2_min_ago < -5
+                    
+
+                    
+                    elif (
+                        ma78_last > ma78_120_min_ago
+                        and ma50_last < ma59_last
+                
+                        and deviation_ma39 < 0.05
+                        and deviation_sell < 0.05
+                
+                        and ma2_last < ma2_2_min_ago 
+                
+                        and ma50_last < ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 < 0.40
+                
+                        and deviation_ma5_sotto_ma200 > -0.80
+                        and macd_differenza_2_min_ago < -0.20
+                    ):
+                        sell = "SELL 4-5-x (3-7 min) EX cond spec 16047 A1Y CON 50<59 -  dev 3-39 < 0.05 e dev_sell < 0.05 con ma50 < and macd_diff_2_min_ago < -0.20 - r 14588"
+                        action = "sell"
+
+                  
+                    
 
 
               
