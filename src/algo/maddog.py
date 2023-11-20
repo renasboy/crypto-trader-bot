@@ -16476,15 +16476,15 @@ class maddog:
                         # and ma2_last < ma2_2_min_ago
                         # and deviation_ma39 < -0.25
                         # or deviation_sell < -0.26
-                        
+                  
                         
                     elif (
                         
-                        ma50_last < ma50_2_min_ago
+                        ma50_last > ma50_2_min_ago
                         and deviation_ma100_sopra_ma300 < 0.60
                     
-                        and deviation_ma39 < -0.28
-                        and deviation_sell < -0.26
+                        and deviation_ma39 < -0.08
+                        and deviation_sell < -0.10
                         
                         and ma2_last < ma2_2_min_ago
                         
@@ -16492,8 +16492,37 @@ class maddog:
                         and ma200_last > ma300_last
                         
                         and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago 
+                        and macd_differenza_2_min_ago < -2
                     ):
-                        sell = "SELL 1 (21-50 min) con ma50 < and dev_ma39 < -0.28 AND DEV SELL< -0.26 con > PERDITA TOLLERATA 100 SOPRA 300 NON DI MOLTO - r 9229 B"
+                        sell = "SELL 1 (21-50 min) con ma50 > and dev_ma39 < -0.08 AND dev_sell < -0.10 con > PERDITA TOLLERATA 100 SOPRA 300 NON DI MOLTO - r 9229 Bx"
+                        action = "sell"
+                        
+                        # 20 nov 2023 aggiunto con 50 >
+                        # 20 nov 2023 dev_ma39 < -0.08 da -0.28
+                        # 20 nov 2023 dev_sell < -0.10 da -0.26
+                        # 20 nov 2023 and macd < macd_2_min_ago 
+                        # 20 nov 2023 and macd_differenza_2_min_ago < -2
+
+                    
+                    elif (
+                        
+                        ma50_last < ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 < 0.60
+                    
+                        and deviation_ma39 < -0.08
+                        and deviation_sell < -0.08
+                        
+                        and ma2_last < ma2_2_min_ago
+                        
+                        and deviation_trend_ma200 > -0.10
+                        and ma200_last > ma300_last
+                        
+                        and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
+                        and macd_differenza_2_min_ago < -2
+                    ):
+                        sell = "SELL 1 (21-50 min) con ma50 < and dev_ma39 < -0.28 AND DEV SELL< -0.26 con > PERDITA TOLLERATA 100 SOPRA 300 NON DI MOLTO - r 9229 By"
                         action = "sell"
                         
                         # and deviation_ma39 < -0.15 or (deviation_sell < 0.10 and ma3_last < ma39_last)
@@ -16505,7 +16534,11 @@ class maddog:
                         # or deviation_sell < -0.26
                         # 21 mar 2023 deviation_sell -0.26 da -0.25
                         
-                        
+                        # 20 nov 2023 dev_ma39 < -0.08 da -0.28
+                        # 20 nov 2023 dev_sell < -0.08 da -0.26
+                        # 20 nov 2023 and macd < macd_2_min_ago 
+                        # 20 nov 2023 and macd_differenza_2_min_ago < -2
+                    
                     # perdita tollerata DOPPIA
                     
                     elif (    
