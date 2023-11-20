@@ -22475,7 +22475,7 @@ class maddog:
                         
                         
                     # AGGIUNTA TARDIVA MA FORSE NECESSARIA !
-                    
+
                     elif (
                         ma50_last < ma50_2_min_ago
                         
@@ -22491,12 +22491,44 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                         and macd < macd_2_min_ago
                     ):
-                        sell = "SELL 2 da 60 a 90 min AGGIUNTA TARDIVA MA FORSE NECESSARIA ! delta 300-100 > and deviation_sell < -0.123 and macd < macd 2 min ago - r 12212 B"
+                        sell = "SELL 2 da 60 a 90 min AGGIUNTA TARDIVA MA FORSE NECESSARIA ! delta 300-100 > and deviation_sell < -0.123 and macd < macd 2 min ago - r 12191 B"
                         action = "sell"
                         
                         # 17 mar 2023 dev sell a -0.12 da -0.10
                         #  4 giu 2023 dev sell a -0.123 da -0.12
                         #  4 giu 2023 aggiunto macd < macd 2 min ago
+
+
+                    
+                    elif (
+                        ma78_last > ma78_120_min_ago
+                        
+                        and macd_differenza_2_min_ago < -0.30
+                        and macd < macd_2_min_ago
+                        
+                        and ma50_last < ma59_last
+                
+                        and deviation_ma39 < 0.05
+                        and deviation_sell < 0.02
+                
+                        and ma2_last < ma2_2_min_ago 
+                
+                        and ma50_last < ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 < 0.40
+                
+                        and deviation_ma5_sotto_ma200 > -0.80
+                
+                    ):
+                        sell = "SELL 2 (60 -90 min) EX cond spec r 16047 A1Y CON 50<59 E dev 3-39 < 0.05 e dev_sell < 0.02 e ma50 < e diff macd < -0.30 e macd < macd 2 min - r 12230"
+                        action = "sell"
+                        
+                        # 20 nov 2023 and macd < macd_2_min_ago
+
+                  
+                    
+
+
+              
                      
                 
                 ######################################################################################################### SESSIONE 2 ( da 90 min a 110 min )
@@ -29499,7 +29531,7 @@ class maddog:
                 and ma50_last < ma59_last
                 
                 and deviation_ma39 < 0.05
-                and deviation_sell < 0.02
+                and deviation_sell < 0.01
                 
                 and ma2_last < ma2_2_min_ago 
                 
@@ -29509,7 +29541,7 @@ class maddog:
                 and deviation_ma5_sotto_ma200 > -0.80
                 
             ):
-                sell = "SELL condizione speciale 6 CON 50<59 - SALVAGENTE dev 3-39 < 0.05 e dev_sell < 0.02 e ma50 < and macd_diff_2_min_ago < -0.20 e diff macd < -0.30 - r 16047 A1Y"
+                sell = "SELL condizione speciale 6 CON 50<59 - SALVAGENTE dev 3-39 < 0.05 e dev_sell < 0.01 e ma50 < and macd_diff_2_min_ago < -0.20 e diff macd < -0.30 - r 16047 A1Y"
                 action = "sell"
                 
                 #   9 GIU 2023 dev 3-39 a -0.17 da -0.25
@@ -29532,7 +29564,7 @@ class maddog:
                 # 14 nov 2023 dev 39 a 0.05 da 0.02
                 # 14 nov 2023 dev sell a 0.02 da 0.05
                 # 20 nov 2023 non ha preso and macd_differenza_2_min_ago < -0.20 allora l' ho messa in alto e portata a -0.30
-
+                # 20 nov 2023 dev sell a 0.01 da 0.02
             
                 
             # nuova condizione AUDI TROVATA
