@@ -261,7 +261,6 @@ class maddog:
 
 
 
-
       
         # formula macd_differenza di 5 min ago
         
@@ -6689,6 +6688,9 @@ class maddog:
                 
                 if (
                     ma69_last > ma69_2_min_ago
+                    and ma2_differenza_2_min_ago > 5
+                    and macd_differenza_2_min_ago > 0.5
+                    
                     and ma300_last > ma300_120_min_ago
                     and deviation_ma100_sopra_ma300 > 0.20
                     and ma78_last > ma200_last
@@ -6704,6 +6706,7 @@ class maddog:
                     and price > price_2_min_ago
                     and macd >= macd_2_min_ago
                     
+                    
                 ):
                     buy = "BUY 2A rialzo o laterale con 78 > 200 AND 300 >300 120 min ago ! - r 4639 A1x"
                     action = "buy"
@@ -6714,7 +6717,11 @@ class maddog:
                     # 16 nov 2023 tolta deviation bellissima. (ma300 sale da 2 ore e devo anticipare il buy) (poi mettero' 3-10 e 3-16 e 5-28)
                     # 16 nov 2023 tolta dev 7>40 (ma300 sale da 2 ore e devo anticipare il buy)
 
-                    
+                    # 20 nov 2023 ha comprato con ma2 piu' basso di 2 min ago e allora ho aggiunto le prossime 2
+                    # 20 nov 2023 and and ma2_differenza_2_min_ago > 5
+                    # 20 nov 2023 and macd_differenza_2_min_ago > 0.5
+
+              
                 elif (
                     ma69_last > ma69_2_min_ago
                     and ma300_last > ma300_120_min_ago
