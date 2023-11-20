@@ -29494,6 +29494,8 @@ class maddog:
             
             elif (
                 ma78_last > ma78_120_min_ago
+                and macd_differenza_2_min_ago < -0.30
+                
                 and ma50_last < ma59_last
                 
                 and deviation_ma39 < 0.05
@@ -29505,9 +29507,9 @@ class maddog:
                 and deviation_ma100_sopra_ma300 < 0.40
                 
                 and deviation_ma5_sotto_ma200 > -0.80
-                and macd_differenza_2_min_ago < -0.20
+                
             ):
-                sell = "SELL condizione speciale 6 CON 50<59 - SALVAGENTE dev 3-39 < 0.05 e dev_sell < 0.02 con ma50 < and macd_diff_2_min_ago < -0.20 - r 16047 A1Y"
+                sell = "SELL condizione speciale 6 CON 50<59 - SALVAGENTE dev 3-39 < 0.05 e dev_sell < 0.02 e ma50 < and macd_diff_2_min_ago < -0.20 e diff macd < -0.30 - r 16047 A1Y"
                 action = "sell"
                 
                 #   9 GIU 2023 dev 3-39 a -0.17 da -0.25
@@ -29529,7 +29531,9 @@ class maddog:
                 # 14 nov 2023 dev sell a 0.05 da -0.10
                 # 14 nov 2023 dev 39 a 0.05 da 0.02
                 # 14 nov 2023 dev sell a 0.02 da 0.05
-          
+                # 20 nov 2023 non ha preso and macd_differenza_2_min_ago < -0.20 allora l' ho messa in alto e portata a -0.30
+
+            
                 
             # nuova condizione AUDI TROVATA
             
