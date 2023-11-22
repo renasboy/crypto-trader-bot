@@ -1,9 +1,8 @@
-import base64
+import uuid
 import hashlib
 import hmac
 import json
 import time
-import urllib
 
 import requests
 import websocket
@@ -15,15 +14,14 @@ class coinbasepro:
     FEE = 0.005
 
     def __init__(
-        self, symbol_1, symbol_2, public_key, private_key, passphrase, *args, **kwargs
+        self, symbol_1, symbol_2, public_key, private_key, *args, **kwargs
     ):
         self.symbol_1 = symbol_1.upper()
         self.symbol_2 = symbol_2.upper()
         self.symbol = self.symbol_1 + "-" + self.symbol_2
         self.public_key = public_key
         self.private_key = private_key
-        self.passphrase = passphrase
-        self.url = "https://api.pro.coinbase.com"
+        self.url = "https://api.coinbase.com"
         self.websocket = "wss://ws-feed.pro.coinbase.com/"
 
     def start_listener(self, on_msg, on_err, on_open, on_close):
@@ -50,7 +48,7 @@ class coinbasepro:
         return msg["date"], msg["type"], float(price), float(volume), float(fee)
 
     def ticker(self):
-        ticker = self.call("GET", "/products/" + self.symbol + "/ticker", {})
+        ticker = self.call("GET", "/products/" + self.symbol, {})
         price = float(ticker["price"])
         fee = price * self.FEE
         return float(price), float(fee)
@@ -60,83 +58,97 @@ class coinbasepro:
 
     def balance(self, symbol):
         return next(
-            float(b["available"]) for b in self.balances() if b["currency"] == symbol
+            float(b["available_balance"]["value"]) for b in self.balances()["accounts"] if b["currency"] == symbol
         )
 
     def orders(self):
-        return self.call("GET", "/orders", {})
+        return self.call("GET", "/orders/historical/batch?order_status=OPEN", {})
 
     def active_order_id(self):
         orders = self.orders()
-        if orders:
-            for order in orders:
-                if order["status"] == "open":
-                    return order["id"]
+        if orders and "orders" in orders:
+            for order in orders["orders"]:
+                if order["status"] == "OPEN":
+                    return order["order_id"]
 
     def orderbook(self):
-        return self.call("GET", "/products/" + self.symbol + "/book", {})
+        return self.call("GET", "/product_book?product_id=" + self.symbol, {})
 
     def highest_bid(self):
         orderbook = self.orderbook()
-        return float(orderbook["bids"][0][0])
+        return float(orderbook["pricebook"]["bids"][0]["price"])
 
     def lowest_ask(self):
         orderbook = self.orderbook()
-        return float(orderbook["asks"][0][0])
+        return float(orderbook["pricebook"]["asks"][0]["price"])
 
     def closed_order(self, id):
-        order = self.call("GET", "/orders/" + str(id), {})
-        if order and order["status"] == "done" and order["done_reason"] == "filled":
-            type = order["side"]
-            volume = float(order["filled_size"])
-            price = float(order["executed_value"]) / volume
-            fee = float(order["fill_fees"])
+        order = self.call("GET", "/orders/historical/" + str(id), {})
+        if order:
+            print(json.dumps(order))
+        if order and "order" in order and order["order"]["status"] == "FILLED":
+            type = order["order"]["side"].lower()
+            volume = float(order["order"]["filled_size"])
+            price = float(order["order"]["average_filled_price"])
+            fee = float(order["order"]["total_fees"])
             return type, price, volume, fee
         return None, None, None, None
 
     def delete_order(self, id):
-        return self.call("DELETE", "/orders/" + str(id), {})
+        return self.call("POST", "/orders/batch_cancel", dict(order_ids=[str(id)]))
 
     def market_order(self, type, amount):
-        data = dict(type="market", side=type, product_id=self.symbol)
-        # size or funds is required
+        data = dict(
+            client_order_id=str(uuid.uuid4()),
+            product_id=self.symbol,
+            side=type.upper(),
+            order_configuration=dict(
+                market_market_ioc=dict()
+            )
+        )
         if type == "buy":
-            data["funds"] = round(amount, 2)
+            data["order_configuration"]["market_market_ioc"]["quote_size"] = str(round(amount, 2))
         elif type == "sell":
-            # data["size"] = round(amount, 8)
-            data["size"] = int(amount * 100000000) / 100000000
-        print(data)
+            data["order_configuration"]["market_market_ioc"]["base_size"] = str(int(amount * 100000000) / 100000000)
+        print(json.dumps(data))
         order = self.call("POST", "/orders/", data)
         print(order)
-        if order:
-            return order["id"]
+        print(json.dumps(order))
+        if order and "success" in order and order["success"]:
+            return order["success_response"]["order_id"]
 
     def limit_order(self, type, volume, price):
-        # default type=limit
-        data = dict(side=type, size=volume, price=price, product_id=self.symbol)
-        print(data)
+        data = dict(
+            client_order_id=str(uuid.uuid4()),
+            product_id=self.symbol,
+            side=type.upper(),
+            order_configuration=dict(
+                limit_limit_gtc=dict(
+                    base_size=str(volume),
+                    limit_price=str(price)
+                )
+            )
+        )
+        print(json.dumps(data))
         order = self.call("POST", "/orders/", data)
-        print(order)
-        if order:
-            return order["id"]
+        print(json.dumps(order))
+        if order and "success" in order and order["success"]:
+            return order["success_response"]["order_id"]
 
     def call(self, method, path, data):
         if data:
             data = json.dumps(data)
-        full_path = "%s%s" % (self.url, path)
-        timestamp = str(time.time())
-        signature = base64.b64encode(
-            hmac.new(
-                base64.b64decode(self.private_key),
-                (timestamp + method + path + (data or "")).encode("ascii"),
-                hashlib.sha256,
-            ).digest()
-        ).decode("utf-8")
+        full_path = "%s%s%s" % (self.url, "/api/v3/brokerage",  path)
+        timestamp = str(int(time.time()))
+        signature = hmac.new(
+            self.private_key.encode("utf-8"),
+            (timestamp + method + "/api/v3/brokerage" + path.split('?')[0] + str(data or "")).encode("utf-8"),
+            digestmod=hashlib.sha256,
+        ).digest().hex()
         headers = {
             "CB-ACCESS-SIGN": signature,
             "CB-ACCESS-TIMESTAMP": timestamp,
             "CB-ACCESS-KEY": self.public_key,
-            "CB-ACCESS-PASSPHRASE": self.passphrase,
             "Content-Type": "application/json",
         }
         try:
@@ -156,21 +168,22 @@ class coinbasepro:
             pass
 
 
-# if __name__ == '__main__':
-# exchange = coinbasepro('BTC', 'EUR', coinbasepro.PUBLIC_KEY, coinbasepro.PRIVATE_KEY, coinbasepro.PASSPHRASE)
+#if __name__ == '__main__':
+# exchange = coinbasepro('BTC', 'EUR', 'API_KEY', 'PRIVATE_KEY')
 # print(exchange.ticker())
+# print(json.dumps(exchange.balances()))
 # print(exchange.balance('BTC'))
 # print(exchange.balance('EUR'))
-# print(exchange.orders())
-# print(exchange.orderbook())
+# print(json.dumps(exchange.orders()))
+# print(json.dumps(exchange.orderbook()))
 # print(exchange.highest_bid())
 # print(exchange.lowest_ask())
-# print(exchange.closed_order('949f38ca-8494-4ce2-b5c7-fb2782114d66'))
-# print(exchange.closed_order('dd426289-29f6-406a-9a9f-0775a58c3fb8'))
+# print(exchange.closed_order('3e4695f6-5eec-4d07-b9f1-27fb3c41ef42'))
 # print(exchange.active_order_id())
-# print(exchange.delete_order('6eb75320-de55-44dd-8af8-8d16880b8ffb'))
-# print(exchange.limit_order('buy', 1, 1))
-# print(exchange.market_order('buy', 70))
-# print(exchange.market_order('sell', 0.0001))
-# print(exchange.limit_order('sell', 0.0001, 50380))
-# print(exchange.closed_order('dbc39ae4-039a-4351-9121-6abd8e19e0b1'))
+# print(json.dumps(exchange.delete_order('98d6d3aa-58b1-4c24-873c-ce6a7864342c')))
+# print(exchange.limit_order('buy', 0.0001, 10000))
+# print(exchange.market_order('buy', 30))
+# print(exchange.market_order('sell', 0.0008927884609665))
+# print(json.dumps(exchange.limit_order('sell', 0.0001, 50380)))
+# print(json.dumps(exchange.delete_order('8ed72001-4333-426a-920c-c6c9f3db237f')))
+# print(exchange.closed_order('6b6628f4-44df-482f-a7e2-3c0eb9b5b34d'))
