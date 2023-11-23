@@ -28164,7 +28164,7 @@ class maddog:
                         # 25 ott 2023 dev sell -0.20 da -0.304
                         # 25 nov 2023 dev sell -0.10 da -0.20
                         # 25 nov 2023 dev 39 a -0.05 da -0.10
-              
+
                     elif (
                         ma78_last < ma78_120_min_ago
                         and macd_differenza_2_min_ago < -0.25
@@ -28198,6 +28198,30 @@ class maddog:
                         #  1 nov 2023 dev_sell a -0.01 da -0.05 
                         # 16 nov 2023 aggiunta and macd_differenza_2_min_ago < -0.25 e l' ho messa sopra cazzo NON HA PRESO DIFFERENZA MA2
                         # 16 nov 2023 and ma2_differenza_2_min a -7 da -6
+
+                    
+                    elif (
+                
+                        ma50_last < ma50_2_min_ago
+                        and deviation_ma39 < -0.05
+                        and deviation_sell < -0.10
+                        and ma2_last <= ma2_2_min_ago 
+                        and delta_450_300 < delta_450_300_60_min
+                        and ma50_last < ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 > 0.20
+                
+                        and deviation_ma3_sotto_ma150 > -1.20
+                    ):
+                        sell = "SELL 4-5-x (21-60 min) EX cond. spec 15985 A1y - con dev 3-39 < -0.05 e dev sell < -0.10 con ma50 < - r 15503"
+                        action = "sell"
+                        
+                        # 23 nov 2023 and deviation_ma39 < -0.05 da -0.10
+                        # 23 nov 2023 and deviation_sell < -0.10 da -0.15
+
+                  
+                    
+
+                
                         
                 ############################################################################################################# sessione 3-4-x ( da 60 a 90 min )
 
