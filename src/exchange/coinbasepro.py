@@ -45,7 +45,7 @@ class coinbasepro:
         price = msg["price_int"]
         volume = msg["amount_int"]
         fee = price * self.FEE
-        return msg["date"], msg["type"], float(price), float(volume), float(fee)
+        return msg["date"], msg["type"].lower(), float(price), float(volume), float(fee)
 
     def ticker(self):
         ticker = self.call("GET", "/products/" + self.symbol, {})
