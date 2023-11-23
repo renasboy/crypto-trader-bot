@@ -62,14 +62,14 @@ class coinbasepro:
         )
 
     def orders(self):
-        return self.call("GET", "/orders/historical/batch?order_status=OPEN", {})
+        orders = self.call("GET", "/orders/historical/batch?order_status=OPEN", {})
+        return orders["orders"] if orders else []
 
     def active_order_id(self):
         orders = self.orders()
-        if orders and "orders" in orders:
-            for order in orders["orders"]:
-                if order["status"] == "OPEN":
-                    return order["order_id"]
+        for order in orders:
+            if order["status"] == "OPEN":
+                return order["order_id"]
 
     def orderbook(self):
         return self.call("GET", "/product_book?product_id=" + self.symbol, {})
