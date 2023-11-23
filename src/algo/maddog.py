@@ -27282,7 +27282,7 @@ class maddog:
 
                   
                     # --------------------------------------------------------------------------------- EX CONDIZIONI SPECIALI IMPORTATE ridotte
-                  
+                    
                     elif (
                         ma50_last < ma50_2_min_ago
                         
@@ -27314,6 +27314,30 @@ class maddog:
                         # 25 ott 2023 aggiunto price < ma3 !
                         # 25 ott 2023 3-39 < 0.06 da < -0.01
                         # 25 ott 2023 dev sell < -0.05 da < -0.12
+
+                    
+                    elif (
+                
+                        ma50_last > ma50_2_min_ago
+                
+                        and deviation_ma39 < -0.05
+                        and deviation_sell < -0.10
+                
+                        and ma2_last <= ma2_2_min_ago 
+                        and delta_450_300 < delta_450_300_60_min
+                
+                        and deviation_ma100_sopra_ma300 > 0.20
+                
+                        and deviation_ma3_sotto_ma150 > -1.20
+                    ):
+                        sell = "SELL 3-4-x (12-21 min) EX cond. spec 15985 A1x - ma50_last > ma50_2_min_ago con 3-39 < -0.05 e dev sell < -0.10 - r 15013"
+                        action = "sell"
+                        
+                        # 23 nov 2023 and deviation_sell < -0.10 da -0.31
+                        # 23 nov 2023 and deviation_ma39 < -0.05 da -0.20
+
+                    
+                    
                         
                         
                         
@@ -28277,7 +28301,7 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                        
                     ):
-                        sell = "SELL 4-5-x (21-60 min) con ma50 > and incrocio 5-69 and deviation_sell 0.25 - 0.56 FINTA DI MARADONA - r 15568 A"
+                        sell = "SELL 4-5-x (60-90 min) con ma50 > and incrocio 5-69 and deviation_sell 0.25 - 0.56 FINTA DI MARADONA - r 15568 A"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
@@ -28294,7 +28318,7 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                        
                     ):
-                        sell = "SELL 4-5-x (21-60 min) con ma450 > ma450 360 min ago e con ma50 > and incrocio 5-50 and deviation_sell 0.25 - 0.56 FINTA DI MARADONA - r 15568 B1"
+                        sell = "SELL 4-5-x (60-90 min) con ma450 > ma450 360 min ago e con ma50 > and incrocio 5-50 and deviation_sell 0.25 - 0.56 FINTA DI MARADONA - r 15568 B1"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
@@ -28318,7 +28342,7 @@ class maddog:
                         and macd_differenza_2_min_ago < -0.50
                        
                     ):
-                        sell = "SELL 4-5-x (21-60 min) FINTA MARADONA con ma450 < ma450 360 min ago con ma50 > and 5-50 and dev_sell 0.25-0.56 and macd<macd 2 min ago - r 15568 B2x"
+                        sell = "SELL 4-5-x (60-90 min) FINTA MARADONA con ma450 < ma450 360 min ago con ma50 > and 5-50 and dev_sell 0.25-0.56 and macd<macd 2 min ago - r 15568 B2x"
                         action = "sell"
 
                     
@@ -28335,7 +28359,7 @@ class maddog:
                         and macd_differenza_2_min_ago < -0.50
                        
                     ):
-                        sell = "SELL 4-5-x (21-60 min) FINTA MARADONA con ma450 < ma450 360 min ago con ma50 > and 5-50 and dev_sell 0.25-0.56 and macd<macd 2 min ago - r 15568 B2y"
+                        sell = "SELL 4-5-x (60-90 min) FINTA MARADONA con ma450 < ma450 360 min ago con ma50 > and 5-50 and dev_sell 0.25-0.56 and macd<macd 2 min ago - r 15568 B2y"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
@@ -28350,7 +28374,7 @@ class maddog:
                         and deviation_sell > 0.57 and deviation_sell < 0.90
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 4-5-x >60 min con ma50> and 4-78 and deviation_sell 0.57-0.90 DRIBBLING ALLA RONALDO - r 15582"
+                        sell = "SELL 4-5-x da 60 a 90 min con ma50> and 4-78 and deviation_sell 0.57-0.90 DRIBBLING ALLA RONALDO - r 15582"
                         action = "sell"
                         
                         # > estate 4-78 da 4-20
