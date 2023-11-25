@@ -7011,9 +7011,9 @@ class maddog:
                     
                     and deviation_ma100_sopra_ma300 < 0.20
                     
-                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma10 > -0.01
                     and deviation_ma3_sopra_ma16 > 0.07
-                    and deviation_ma5_sopra_ma28 > -0.10
+                    and deviation_ma5_sopra_ma28 > -0.11
                     
                     and price >= price_2_min_ago
                     and macd_differenza_2_min_ago > -1.7
@@ -7033,7 +7033,7 @@ class maddog:
                     # 11 gen 2023 3-10 a 0.04 da 0.05
                     # 11 ago 2023 8-39
                     # 17 nov 2023 macd >2 min ago e' arrivato tardi !
-                    # 17 nov 2023 gli ho detto basta che il macd di adeso rispetto aquello di 2 min fa NON SCENDE TROPPO ! (and macd_differenza_2_min_ago > -1.7)
+                    # 17 nov 2023 gli ho detto basta che il macd di adeso rispetto a quello di 2 min fa NON SCENDE TROPPO ! (and macd_differenza_2_min_ago > -1.7)
               
                     
                 elif (
