@@ -21365,21 +21365,23 @@ class maddog:
                         and ma2_last <= ma2_2_min_ago 
                         and macd < 5
                     ):
-                        sell = "SELL EX cond spec 16047 B1x con ma 50 > ma 50 2 min ago con ma300 > 5 ore - dev 3-39 < 0.05 and dev_sell < -0.117 e ma5 sotto ma200 > -0.64 - r 11277"
+                        sell = "SELL 2 (12-21 min) EX cond spec 16047 B1x con ma 50 > ma 50 2 min ago con ma300 > 5 ore e dev 3-39 < 0.05 e dev_sell < -0.117 - r 11277"
                         action = "sell"
                         
                         # 25 ott 2023 dev sell -0.117 da -0.107
-
                     
+
                     elif (
                         ma78_last < ma78_120_min_ago
+                        and ma18_last > ma28_last
+                        
                         and ma2_differenza_2_min_ago < -8
                 
                         and ma300_last > ma300_301_min_ago
                         and delta_150_100 <= delta_150_100_60_min
                 
                         and deviation_ma39 < 0.05
-                        and deviation_sell < -0.079
+                        and deviation_sell < -0.084
                 
                         and ma50_last <= ma50_2_min_ago
                         and deviation_ma100_sopra_ma300 < 0.40
@@ -21389,7 +21391,31 @@ class maddog:
                         and ma2_last <= ma2_2_min_ago 
                         and macd < macd_2_min_ago
                     ):
-                        sell = "SELL 2 (12-21 min) EX cond spec r 16047 B3 con ma300 > 5 ore con dev 3-39 < 0.05 e dev_sell < -0.083 e ma50 < and ma2_diff_2_min_ago < -8 - r 11280"
+                        sell = "SELL 2 (12-21 min) EX cond spec r 16047 B3 con ma300 > 5 ore con dev 3-39 < 0.05 e dev_sell < -0.084 e ma50 < and ma2_diff_2_min_ago < -8 - r 11280a"
+                        action = "sell"
+
+                  
+                    elif (
+                        ma78_last < ma78_120_min_ago
+                        and ma18_last < ma28_last
+                        
+                        and ma2_differenza_2_min_ago < -6
+                
+                        and ma300_last > ma300_301_min_ago
+                        and delta_150_100 <= delta_150_100_60_min
+                
+                        and deviation_ma39 < 0.05
+                        and deviation_sell < -0.076
+                
+                        and ma50_last <= ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 < 0.40
+                
+                        and deviation_ma5_sotto_ma200 > -0.90
+                
+                        and ma2_last <= ma2_2_min_ago 
+                        and macd < macd_2_min_ago
+                    ):
+                        sell = "SELL 2 (12-21 min) EX cond spec r 16047 B3 con ma300 > 5 ore con dev 3-39 < 0.05 e dev_sell < -0.076 e ma50 < and ma2_diff_2_min_ago < -6 - r 11280b"
                         action = "sell"
 
                   
