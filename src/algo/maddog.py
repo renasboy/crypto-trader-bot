@@ -27396,18 +27396,36 @@ class maddog:
                         # 25 gen 2023 dev_sell a -0.238 da 0.24 dopo -0.95% ore 10:04 del 24 gen 2023
                      
                         
-                        
                     elif (    
-                        ma50_last > ma50_2_min_ago 
+                        ma50_last > ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 > 0.30
                         and ma2_last < ma2_2_min_ago 
-                        and deviation_ma25 < -0.20
+                        and deviation_ma25 < -0.19
                         and ma200_last > ma200_60_min_ago
                     ):
-                        sell = "SELL 4-5-x (21-60 min) con ma50 > and deviation_ma25 < -0.20 - r 15058"
+                        sell = "SELL 4-5-x (21-60 min) con ma50 > and deviation_ma25 < -0.20 - r 15058a"
+                        action = "sell"
+
+                        # 25 nov 2023 and deviation_ma100_sopra_ma300 > 0.30
+                        # 25 nov 2023 and deviation_ma25 < -0.19 da -0.20
+                  
+                  
+                    elif (    
+                        ma50_last > ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 < 0.30
+                        and ma2_last < ma2_2_min_ago 
+                        and deviation_ma25 < -0.20
+                        and deviation_sell < -0.02
+                        and ma200_last > ma200_60_min_ago
+                    ):
+                        sell = "SELL 4-5-x (21-60 min) con ma50 > and deviation_ma25 < -0.20 and deviation_sell < -0.02 - r 15058b"
                         action = "sell"
                         
                         # 30 ott 2023 and deviation_ma25 a -0.25 da -0.30
                         #  8 nov 2023 and deviation_ma25 a -0.20 da -0.25
+                        
+                        # 25 nov 2023 and deviation_ma100_sopra_ma300 < 0.30
+                        # 25 nov 2023 and deviation_sell < -0.04
                        
                     
                     elif (        
