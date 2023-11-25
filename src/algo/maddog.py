@@ -29916,7 +29916,7 @@ class maddog:
                 and delta_150_100 <= delta_150_100_60_min
                 
                 and deviation_ma39 < 0.05
-                and deviation_sell < -0.079
+                and deviation_sell < -0.083
                 
                 and ma50_last <= ma50_2_min_ago
                 and deviation_ma100_sopra_ma300 < 0.40
@@ -29926,12 +29926,13 @@ class maddog:
                 and ma2_last <= ma2_2_min_ago 
                 and macd < macd_2_min_ago
             ):
-                sell = "SELL condizione speciale 6 NOTTE con ma300> 5 ore - SALVAGENTE 4 dev 3-39 < 0.05 and dev_sell < -0.079 - con ma50 < e con ma5 sotto ma200 > -0.90 - r 16047 B3"
+                sell = "SELL condizione speciale 6 NOTTE con ma300> 5 ore - SALVAGENTE 4 dev 3-39 < 0.05 and dev_sell < -0.083 - con ma50 < e con ma5 sotto ma200 > -0.90 - r 16047 B3"
                 action = "sell"
                 
                 # 15 set 2023 quando 300 scende da 5 ore non devi vendere in perdita ! a ricomprare ci penseranno altre condizioni !
                 # 17 nov 203 aggiunto and ma2_differenza_2_min_ago < -5
-                # 24 nov 203 ma2_differenza_2_min_ago < -7 da -5 VENDE MENTRE MA2 E' IN CRESCITA ! credo che sia una questione di CANDELE allora aumento un po' la differenza 
+                # 24 nov 203 ma2_differenza_2_min_ago < -7 da -5 VENDE MENTRE MA2 E' IN CRESCITA ! credo che sia una questione di CANDELE allora aumento un po' la differenza
+                # 24 nov 203 dev sell 0.083 da -0.079
           
                 #########################################################################################################################
                 
