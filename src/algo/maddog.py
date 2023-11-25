@@ -29728,7 +29728,7 @@ class maddog:
                 
                 ma50_last > ma50_2_min_ago
                 and deviation_ma39 < 0.01
-                and deviation_sell < -0.14
+                and deviation_sell < -0.10
                 
                 
                 and deviation_ma5_sotto_ma200 > -0.60
@@ -29736,13 +29736,16 @@ class maddog:
                 
                 and ma2_last < ma2_2_min_ago 
                 and macd < macd_2_min_ago
-                and macd < -16
+                and macd < -13
                 and macd_differenza_2_min_ago < -3
             ):
-                sell = "SELL nuova condizione speciale - deviation 3-39 < 0.01 and dev_sell < -0.14 - con ma50 > e con ma5 sotto ma200 > -0.60 and MACD < - r 16047 A2"
+                sell = "SELL nuova condizione speciale - deviation 3-39 < 0.01 and dev_sell < -0.14 con ma50 > e con ma5 sotto ma200 > -0.60 and MACD < and macd < -13 - r 16047 A2"
                 action = "sell"
+                
+                # 25 nov 2023 and deviation_sell < -0.10 da < -0.14
+                # 25 nov 2023 and macd < -13 da -16
 
-            
+
             # nuova condizione AUDI RUBATA 
             
             elif (
