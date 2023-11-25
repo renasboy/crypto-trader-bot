@@ -159,6 +159,7 @@ class maddog:
         ma100_30_min_ago = self.algo_helper.ma_minutes_ago(100, 30)
         
         ma100_50_min_ago = self.algo_helper.ma_minutes_ago(100, 50)
+        ma100_65_min_ago = self.algo_helper.ma_minutes_ago(100, 65)
         ma100_60_min_ago = self.algo_helper.ma_minutes_ago(100, 60)
         ma100_90_min_ago = self.algo_helper.ma_minutes_ago(100, 90)
         ma100_120_min_ago = self.algo_helper.ma_minutes_ago(100, 120)
@@ -2491,7 +2492,7 @@ class maddog:
                 elif (     
                     
                     ma3_last > ma20_last
-                    and ma100_last > ma100_60_min_ago
+                    and ma100_last > ma100_65_min_ago
                     and ma100_last > ma100_120_min_ago
                     and deviation_ma54_sopra_o_sotto_ma72 < -0.015
                     
@@ -2509,10 +2510,11 @@ class maddog:
                     and ma2_differenza_2_min_ago > 3
                     
                 ):    
-                    buy = "BUY 1 compare forever - con 3-20 E CON 300 ancora vicina 450 ( anche un poco sotto ! ) e 3-18 > -0.01 + MACD > E ma2_differenza_2_min_ago > 3 - r 1537 A3X1"
+                    buy = "BUY 1 compare forever - con 3-20 E CON 300 ancora vicina 450 ( anche un poco sotto ! ) e 3-18 > -0.01 + MACD > E ma2_diff_2_min_ago > 3 - r 1537 A3 X1"
                     action = "buy"
                     percentage = 90
-
+                    
+                    # 25 nov 2023 per anticipare di una ndecchiecella SEMBRA STRANO MA HO DOVUTO METTERE ma100>65 min
 
 
                 
