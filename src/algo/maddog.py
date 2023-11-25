@@ -26240,7 +26240,22 @@ class maddog:
                         # 29 gen 2023 dev_39 -0.22 da -0.20
                         
                         
+                    elif (      
+                        ma50_last > ma50_2_min_ago
+                        and ma450_last > ma450_360_min_ago
+                        and macd_differenza_2_min_ago < -1
+                        and ma200_last < ma300_last
+                        and ma2_last < ma2_2_min_ago 
+                        and deviation_ma39 < -0.15
+                       
+                    ):
+                        sell = "SELL 3 dopo 90 min con ma50 < con deviation_ma39 < -0.15 - r 14250 a1"
+                        action = "sell"
                         
+                        # 30 mag 2023 dev 39 a -0.17 da -0.16 se 450 > 4 ore
+                        # 25 nov 2023 aggiunta and macd_differenza_2_min_ago < -1
+                        # 25 nov 2023 dev 39 a -0.15 se macd_differenza_2_min_ago < -1
+                  
                     elif (      
                         ma50_last < ma50_2_min_ago
                         and ma450_last > ma450_360_min_ago
@@ -26250,7 +26265,7 @@ class maddog:
                         and deviation_ma39 < -0.17
                        
                     ):
-                        sell = "SELL 3 dopo 90 min con ma50 < con deviation_ma39 < -0.16 - r 14250 a"
+                        sell = "SELL 3 dopo 90 min con ma50 < con deviation_ma39 < -0.16 - r 14250 a2"
                         action = "sell"
                         
                         # 30 mag 2023 dev 39 a -0.17 da -0.16 se 450 > 4 ore
