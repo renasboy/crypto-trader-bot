@@ -29910,14 +29910,13 @@ class maddog:
           
             elif (
                 ma78_last < ma78_120_min_ago
-                and ma2_differenza_2_min_ago < -5
+                and ma2_differenza_2_min_ago < -7
                 
                 and ma300_last > ma300_301_min_ago
                 and delta_150_100 <= delta_150_100_60_min
                 
                 and deviation_ma39 < 0.05
                 and deviation_sell < -0.079
-                
                 
                 and ma50_last <= ma50_2_min_ago
                 and deviation_ma100_sopra_ma300 < 0.40
@@ -29932,7 +29931,7 @@ class maddog:
                 
                 # 15 set 2023 quando 300 scende da 5 ore non devi vendere in perdita ! a ricomprare ci penseranno altre condizioni !
                 # 17 nov 203 aggiunto and ma2_differenza_2_min_ago < -5
-                
+                # 24 nov 203 ma2_differenza_2_min_ago < -7 da -5 VENDE MENTRE MA2 E' IN CRESCITA ! credo che sia una questione di CANDELE allora aumento un po' la differenza 
           
                 #########################################################################################################################
                 
