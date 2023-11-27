@@ -12369,9 +12369,9 @@ class maddog:
                     # 24 ago 2023 tolta deviation_bellissima >= 0.03
                     # 24 ago 2023 5-48 da 39-48
 
-                
                 elif (
                     ma3_last > ma30_last
+                    and ma50_last > ma59_last
                     
                     and ma300_last > ma450_last
                     and ma300_last > ma300_120_min_ago
@@ -12389,11 +12389,43 @@ class maddog:
                     and macd_differenza_2_min_ago > 0.25
                     
                 ):    
-                    buy = "BUY 4B importato da BUY 3 RCCR con 3-30 con 300 > - r 6737"
+                    buy = "BUY 4B importato da BUY 3 RCCR con 3-30 con 300 > and ma50_last > ma59_last - r 6737a"
+                    action = "buy"
+                    percentage = 70
+                    
+                    # 27 nov 2023 se sta scendendo da molto tempo E SE se ma50_last > ma59_last
+              
+                
+                elif (
+                    ma3_last > ma30_last
+                    and ma50_last < ma59_last
+                    and ma2_differenza_2_min_ago > 3
+                    
+                    and ma300_last > ma450_last
+                    and ma300_last > ma300_120_min_ago
+
+                    and deviation_ma100_sopra_ma300 < 0.30
+                    and deviation_ma100_sopra_ma300 > -0.30
+
+                    and deviation_ma3_sopra_ma10 > 0.03
+                    
+                    and deviation > -0.30
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                    and macd > -11
+                    and macd_differenza_2_min_ago > 0.25
+                    
+                ):    
+                    buy = "BUY 4B CON ma50_last < ma59_last importato da BUY 3 RCCR con 3-30 con 300 > and ma50_last < ma59_last and ma2_differenza_2_min_ago > 3 - r 6737b"
                     action = "buy"
                     percentage = 70
                     
                     # 31 ott 2023 3-30 da 5-48 aggiunta per anticipare la precedente ( che resta comunque perche' prevede la ma100 < )
+                    # 27 nov 2023 se sta scendendo da molto tempo E SE se ma50_last < ma59_last la differenza prezzo deve essere > 3 ! cazzo
+              
+
+              
               
 
                 elif (
