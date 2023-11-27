@@ -18130,11 +18130,12 @@ class maddog:
                 
                         and ma2_last < ma2_2_min_ago
                         and ma2_differenza_2_min_ago < -5
-                
+                        and macd_differenza_2_min_ago < -0.20
                     ):
                         sell = "SELL 1 (50-90 min) EX cond spec r 16045 B GIORNO con ma300 < 5 ore - dev 3-39 < 0.05 and dev_sell < -0.10 - con ma50 < e con ma78 < - r 9940"
                         action = "sell"
-
+                        
+                        # 27 nov 2023 metto diff macd SOLO nel GIORNO ! PERCHE' LA SITUAZIONE STA MIGLIORANDO ! 
                   
                     
 
