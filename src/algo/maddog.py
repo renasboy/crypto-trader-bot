@@ -27451,7 +27451,7 @@ class maddog:
                         and ma2_last < ma5_last
                         and price < ma3_last
                     ):
-                        sell = "SELL 3-4-x (12-21 min) EX cond. special 15985 A1 ok 4 con 3-39 < 0.06 e dev sell < -0.05 con ma50 < and price < ma3 - r 15012"
+                        sell = "SELL 4-5-x (12-21 min) EX cond. special 15985 A1 ok 4 con 3-39 < 0.06 e dev sell < -0.05 con ma50 < and price < ma3 - r 15012"
                         action = "sell"
               
                         # 27 set 2023 dev sell -0.11 da -0.10
@@ -27476,7 +27476,7 @@ class maddog:
                 
                         and deviation_ma3_sotto_ma150 > -1.20
                     ):
-                        sell = "SELL 3-4-x (12-21 min) EX cond. spec 15985 A1x - ma50_last > ma50_2_min_ago con 3-39 < -0.05 e dev sell < -0.10 - r 15013"
+                        sell = "SELL 4-5-x (12-21 min) EX cond. spec 15985 A1x - ma50_last > ma50_2_min_ago con 3-39 < -0.05 e dev sell < -0.10 - r 15013"
                         action = "sell"
                         
                         # 23 nov 2023 and deviation_sell < -0.10 da -0.31
@@ -27502,7 +27502,7 @@ class maddog:
                         and macd_differenza_2_min_ago < -0.10
                         and ma2_differenza_2_min_ago < -7
                     ):
-                        sell = "SELL 4-5-x (21-60 min) r 15349 B PROVA 4 se ma50<= e dev_sell < 0.03 E 300 < 300 301 min ago e macd_diff_2_min_ago < -0.10 e diff ma2 < -7 - r 15014"
+                        sell = "SELL 4-5-x (12-21 min) r 15349 B PROVA 4 se ma50<= e dev_sell < 0.03 E 300 < 300 301 min ago e macd_diff_2_min_ago < -0.10 e diff ma2 < -7 - r 15014"
                         action = "sell"
                         
                         # 18 nov 2023 and deviation_sell < 0.02 da < -0.01
@@ -28314,7 +28314,7 @@ class maddog:
 
                   
 
-                    ################################################################# CONDIZIONI SPECIALI IMPORTATE RIDOTTE
+                    ############################################################################################################ CONDIZIONI SPECIALI IMPORTATE RIDOTTE
 
                     elif (
                         ma78_last < ma78_120_min_ago
@@ -28405,7 +28405,7 @@ class maddog:
                         # 16 nov 2023 aggiunta and macd_differenza_2_min_ago < -0.25 e l' ho messa sopra cazzo NON HA PRESO DIFFERENZA MA2
                         # 16 nov 2023 and ma2_differenza_2_min a -7 da -6
 
-                    
+
                     elif (
                 
                         ma50_last < ma50_2_min_ago
@@ -28424,12 +28424,44 @@ class maddog:
                         # 23 nov 2023 and deviation_ma39 < -0.05 da -0.10
                         # 23 nov 2023 and deviation_sell < -0.10 da -0.15
 
+
+                    
+                    elif (    
+                        ma50_last <= ma50_2_min_ago
+                        
+                        and ma300_last < ma300_301_min_ago
+                        and ma200_last < ma200_60_min_ago
+                        and ma50_last < ma100_last
+                        
+                        and deviation_sell < 0.03
+                        and ma3_last < ma39_last
+                        
+                        and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago < 1.50
+                        and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago > -1.50
+                        
+                        and deviation_ma78_sopra_o_sotto_ma78_600_min_ago < 0.15
+                        
+                        and ma2_last < ma2_2_min_ago 
+                        and macd_differenza_2_min_ago < -0.10
+                        and ma2_differenza_2_min_ago < -7
+                    ):
+                        sell = "SELL 4-5-x (21-60 min) r 15349 B PROVA 4 se ma50<= e dev_sell < 0.03 E 300 < 300 301 min ago e macd_diff_2_min_ago < -0.10 e diff ma2 < -7 - r 15504"
+                        action = "sell"
+                        
+                        # 18 nov 2023 and deviation_sell < 0.02 da < -0.01
+                        # 27 nov 2023 and deviation_ma78_sopra_o_sotto_ma78_600_min_ago < 0.15 da < 0.10
+                        # 27 nov 2023 ma50_last <= da ma50_last <
+                        # 27 nov 2023 and deviation_sell < 0.03 da < 0.02
+
+                    
+                    
+
                   
                     
 
                 
                         
-                ############################################################################################################# sessione 3-4-x ( da 60 a 90 min )
+                ############################################################################################################# sessione 4-5-x ( da 60 a 90 min )
 
                 # VENDITA - da 60 a 90 min - da 3600 a 5400 secondi in poi
                 
