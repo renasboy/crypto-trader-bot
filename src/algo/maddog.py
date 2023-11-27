@@ -14487,6 +14487,8 @@ class maddog:
                 elif (     
                     
                     ma3_last > ma13_last
+                    and ma2_differenza_2_min_ago > 3
+                    
                     and ma100_last < ma100_120_min_ago
                     and ma100_last < ma100_120_min_ago
                     
@@ -14509,9 +14511,11 @@ class maddog:
                     and ma50_differenza_ma59 > -5
                     
                 ):    
-                    buy = "BUY 5 compare forever EX BUY 1 r 1537 A2y1 - 100<120 min ago E 100<60 min ago con 5-20 E CON 300 vicina alla 450 + MACD > E ma50_diff_ma59 > -5 - r 7589b"
+                    buy = "BUY 5 compare forever EX BUY 1 r 1537 A2y1 - 100<120 min ago E 100<60 min ago con 5-20 E CON 300 vicina alla 450 + MACD > E ma50_diff_ma59 > -5 - r 7589 B"
                     action = "buy"
                     percentage = 90
+                    
+                    # 27 nov 2023 aggiunta and ma2_differenza_2_min_ago > 3 
 
               
                 # BUY 5 migliore EX r 1043 B che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-59
