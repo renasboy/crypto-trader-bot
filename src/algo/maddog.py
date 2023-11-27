@@ -29933,8 +29933,8 @@ class maddog:
                 and ma300_last < ma300_301_min_ago
                 and delta_150_100 <= delta_150_100_60_min
                 
-                and deviation_ma39 < 0.05
-                and deviation_sell < -0.103
+                and deviation_ma39 < 0.07
+                and deviation_sell < -0.01
                 
                 
                 and ma50_last <= ma50_2_min_ago
@@ -29953,6 +29953,8 @@ class maddog:
                 #  2 ott 2023 DOPO UN ALTRO -1 HO FATTO QUESTA and deviation_ma5_sotto_ma200 > -0.50
                 #  2 ott 2023 TOLTO and macd < macd_2_min_ago ARRIVATO TARDI ! VEDI 2 OTTOBRE 2023 ORE 20 e 40 - r 16047 B2
                 # 13 nov 2023 aggiunto and macd_differenza_2_min_ago < -0.25
+                # 27 nov 2023 and deviation_sell < -0.01 da < -0.105
+          
 
             # 5 - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 > -1.00
 
