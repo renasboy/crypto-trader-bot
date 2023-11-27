@@ -428,7 +428,15 @@ class maddog:
         deviation_ma78_sopra_o_sotto_ma78_240_min_ago = (ma78_last / ma78_240_min_ago - 1) * 100 if ma78_240_min_ago else 0
         self.algo_helper.info("deviation_ma78_sopra_o_sotto_ma78_240_min_ago: {}".format(deviation_ma78_sopra_o_sotto_ma78_240_min_ago))
 
-      
+        
+
+        
+        # formula DEVIATION_ma78_sopra_o_sotto_ma78_30_min_ago - !
+        
+        deviation_ma78_sopra_o_sotto_ma78_30_min_ago = (ma78_last / ma78_30_min_ago - 1) * 100 if ma78_30_min_ago else 0
+        self.algo_helper.info("deviation_ma78_sopra_o_sotto_ma78_30_min_ago: {}".format(deviation_ma78_sopra_o_sotto_ma78_30_min_ago))
+
+        
         # formula DEVIATION_ma78_sopra_o_sotto_ma78_600_min_ago - !
         
         deviation_ma78_sopra_o_sotto_ma78_600_min_ago = (ma78_last / ma78_600_min_ago - 1) * 100 if ma78_600_min_ago else 0
