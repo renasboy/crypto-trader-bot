@@ -27573,8 +27573,8 @@ class maddog:
                         and ma200_last < ma200_60_min_ago
                         and ma50_last < ma100_last
                         
+                        and deviation_ma39 < 0.13
                         and deviation_sell < 0.03
-                        and ma3_last < ma39_last
                         
                         and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago < 1.50
                         and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago > -1.50
@@ -27591,8 +27591,10 @@ class maddog:
                         # 18 nov 2023 and deviation_sell < 0.02 da < -0.01
                         # 27 nov 2023 and deviation_ma78_sopra_o_sotto_ma78_600_min_ago < 0.15 da < 0.10
                         # 27 nov 2023 ma50_last <= da ma50_last <
+                        
+                        # 27 nov 2023 and dev 39 < 0.03 da 3<39
                         # 27 nov 2023 and deviation_sell < 0.03 da < 0.02
-
+                        
                     
                     
 
