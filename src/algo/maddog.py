@@ -25548,7 +25548,7 @@ class maddog:
 
 
                     
-                    # -------------------------------------------------------------------------------------------------------------------------------- condizioni speciali importate
+                    # -------------------------------------------------------------------------------------------------------------------------- condizioni speciali importate
                     
                     elif (
                         ma78_last < ma78_120_min_ago
@@ -25612,7 +25612,7 @@ class maddog:
                         # 17 OTT 2023 NON METTERE MACD <  MACD 2 MIN AGO
                         # 17 ott 2023 and macd_differenza_2_min_ago < -0.24
 
-                    
+                  
                     elif (
                         ma78_last > ma78_120_min_ago
                         and deviation_ma39 < 0.01
@@ -25629,6 +25629,38 @@ class maddog:
                         action = "sell"
                         
                         #  4 ott 2023 ex condizione speciale r 16047 A1 ridotta
+
+                    
+                    elif (    
+                        ma50_last <= ma50_2_min_ago
+                        
+                        and ma300_last < ma300_301_min_ago
+                        and ma200_last < ma200_60_min_ago
+                        and ma50_last < ma100_last
+                        
+                        and deviation_sell < 0.03
+                        and ma3_last < ma39_last
+                        
+                        and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago < 1.50
+                        and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago > -1.50
+                        
+                        and deviation_ma78_sopra_o_sotto_ma78_600_min_ago < 0.15
+                        
+                        and ma2_last < ma2_2_min_ago 
+                        and macd_differenza_2_min_ago < -0.10
+                        and ma2_differenza_2_min_ago < -7
+                    ):
+                        sell = "SELL 3 (21-60 min) r 15349 B PROVA 4 se ma50<= e dev_sell < 0.03 E 300 < 300 301 min ago e macd_diff_2_min_ago < -0.10 e diff ma2 < -7 - r 13840"
+                        action = "sell"
+                        
+                        # 18 nov 2023 and deviation_sell < 0.02 da < -0.01
+                        # 27 nov 2023 and deviation_ma78_sopra_o_sotto_ma78_600_min_ago < 0.15 da < 0.10
+                        # 27 nov 2023 ma50_last <= da ma50_last <
+                        # 27 nov 2023 and deviation_sell < 0.03 da < 0.02
+
+
+                    
+                    
 
                     
                     
