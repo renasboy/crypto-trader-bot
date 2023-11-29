@@ -19821,9 +19821,9 @@ class maddog:
                         
                         and deviation_sell > 0.35 and deviation_sell < 0.64
                         and ma2_last < ma2_2_min_ago
-                        and macd < -2
+                        and macd_differenza_2_min_ago < -0.9
                     ):
-                        sell = "SELL 1 dopo 240 min con ma50 > AND con 5-200 and dev_sell 0.35 - 0.64 - prima FINTA MARADONA CON 100 sopra 300 < 0.30 and macd < -2 - r 10329 B"
+                        sell = "SELL 1 >240 min con ma50> e con 5-200 and dev_sell 0.35 - 0.64 - prima FINTA MARADONA CON 100 sopra 300< 0.30 and macd_diff_2_min_ago < -0.9 - r 10329 B"
                         action = "sell"
                         
                         # 3 set ho aggiunto 3<10 incredibile ma vero vendeva mentre saliva !
