@@ -19821,14 +19821,14 @@ class maddog:
                         
                         and deviation_sell > 0.35 and deviation_sell < 0.64
                         and ma2_last < ma2_2_min_ago
-                        
+                        and macd < -2
                     ):
-                        sell = "SELL 1 dopo 240 min con ma50 > AND con 5-200 and dev_sell 0.35 - 0.64 - prima FINTA MARADONA CON 100 sopra 300 < 0.30 - r 10329 b"
+                        sell = "SELL 1 dopo 240 min con ma50 > AND con 5-200 and dev_sell 0.35 - 0.64 - prima FINTA MARADONA CON 100 sopra 300 < 0.30 and macd < -2 - r 10329 B"
                         action = "sell"
                         
                         # 3 set ho aggiunto 3<10 incredibile ma vero vendeva mentre saliva !
                         # 12 gen 2023 5-200 da 5-50 vedi 12 gen 2023 ore 00:07
-                    
+                        # 29 nov 2023 and macd < -2
                     
                     #################################################################################################
                     
