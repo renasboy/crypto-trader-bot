@@ -28502,8 +28502,10 @@ class maddog:
                     elif (
                 
                         ma50_last < ma50_2_min_ago
-                        and deviation_ma39 < -0.05
-                        and deviation_sell < -0.10
+                        
+                        and deviation_ma39 < 0.05
+                        and deviation_sell < -0.05
+                        
                         and ma2_last <= ma2_2_min_ago 
                         and delta_450_300 < delta_450_300_60_min
                         and ma50_last < ma50_2_min_ago
@@ -28511,13 +28513,13 @@ class maddog:
                 
                         and deviation_ma3_sotto_ma150 > -1.20
                     ):
-                        sell = "SELL 4-5-x (21-60 min) EX cond. spec 15985 A1y - con dev 3-39 < -0.05 e dev sell < -0.10 con ma50 < - r 15503"
+                        sell = "SELL 4-5-x (21-60 min) EX cond. spec 15985 A1y - con dev 3-39 < 0.05 e dev sell < -0.05 con ma50 < - r 15503"
                         action = "sell"
                         
-                        # 23 nov 2023 and deviation_ma39 < -0.05 da -0.10
-                        # 23 nov 2023 and deviation_sell < -0.10 da -0.15
-
-
+                        # 23 nov 2023 and deviation_ma39 a -0.05 da -0.10
+                        # 23 nov 2023 and deviation_sell a -0.10 da -0.15
+                        # 29 nov 2023 and deviation_ma39 a 0.05 da -0.05
+                        # 23 nov 2023 and deviation_sell a -0.05 da -0.10
                     
                     elif (    
                         ma50_last <= ma50_2_min_ago
