@@ -11507,10 +11507,13 @@ class maddog:
                     # 13 nov 2023 se 50 sta vicina alla 59 (anche un poco sotto) allora compra prima
                     # 13 nov 2023 and deviation_ma5_sopra_ma28 > 0.01 da > 0.02
                     # 13 nov 2023 5-39 da 5-54 posso farlo perche' il sell e' molto piu' reattivo ! RICORDA dev 39 < 0.13 !
-              
+
+                  
                 elif (
+                    deviation_ma78_sopra_o_sotto_ma78_30_min_ago > -0.10
+                    and ma3_last > ma39_last
+                    and ma18_last > ma100_last
                     
-                    ma5_last > ma39_last
                     and ma50_differenza_ma59 < -5
                     and macd > macd_2_min_ago
                     and deviation_ma5_sotto_ma300 < -0.42
@@ -11529,9 +11532,38 @@ class maddog:
                     and macd > macd_2_min_ago
                     and macd > 5
                 ):
-                    buy = "BUY 3 29 ago 2022 > 180 min di ribasso con 5-78 - r 6572 A2Y"
+                    buy = "BUY 3 29 ago 2022 > 180 min di ribasso con 18-100 - r 6572 A2Y1"
                     action = "buy"
-                    percentage = 90
+                    percentage = 80
+                    
+                    # 30 nov 2023 ma 78 NON E' PROPRIO DISCENDENTE o scende di pochissimo. il titolo non ha intrapreso un vero e proprio trend ribassista
+              
+              
+                elif (
+                    deviation_ma78_sopra_o_sotto_ma78_30_min_ago < -0.10
+                    and ma5_last > ma39_last
+                    
+                    and ma50_differenza_ma59 < -5
+                    and macd > macd_2_min_ago
+                    and deviation_ma5_sotto_ma300 < -0.42
+                    
+                    and ma100_last < ma100_180_min_ago
+                    and ma200_last < ma200_180_min_ago
+                    and ma300_last < ma300_180_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.02
+                    and deviation_ma5_sopra_ma28 > 0.02
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd > macd_2_min_ago
+                    and macd > 5
+                ):
+                    buy = "BUY 3 29 ago 2022 > 180 min di ribasso con 5-78 - r 6572 A2Yy"
+                    action = "buy"
+                    percentage = 80
                     
                     # 13 feb 2023 3-10 > 0.02
                     #  1 ago 2023 5-200 invece di 10-100
@@ -11540,6 +11572,7 @@ class maddog:
                     # 16 set 2023 5-78 invece di 5-200
                     # 13 nov 2023 non ha preso macd > !!! allora l' ho messo anche sopra
                     # 13 nov 2023 5-39 da 5-54 posso farlo perche' il sell e' molto piu' reattivo ! RICORDA dev 39 < 0.13 !
+                    # 30 nov 2023 ma78 e' proprio discendente. continuava a comprare inutilmente. IL TITOLO SEMBRA AVER INTRAPRESO UN VERO E PRORIO TREND RIBASSISTA !
                 
                 elif (
                     
