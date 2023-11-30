@@ -11508,13 +11508,12 @@ class maddog:
                     # 13 nov 2023 and deviation_ma5_sopra_ma28 > 0.01 da > 0.02
                     # 13 nov 2023 5-39 da 5-54 posso farlo perche' il sell e' molto piu' reattivo ! RICORDA dev 39 < 0.13 !
 
-                  
+              
+
                 elif (
-                    deviation_ma78_sopra_o_sotto_ma78_30_min_ago > -0.10
-                    and ma2_differenza_2_min_ago > 5
-                    
-                    
+                    deviation_ma78_sopra_o_sotto_ma78_30_min_ago > -0.03
                     and ma3_last > ma39_last
+                    and ma2_differenza_2_min_ago > 5
                     
                     and ma50_differenza_ma59 < -5
                     and macd > macd_2_min_ago
@@ -11538,15 +11537,46 @@ class maddog:
                     action = "buy"
                     percentage = 80
                     
-                    # 30 nov 2023 ma 78 NON E' PROPRIO DISCENDENTE o scende di pochissimo. il titolo non ha intrapreso un vero e proprio trend ribassista
+                    # 30 nov 2023 ma 78 scende di pochissimo o sale COMPRA PRIMA
+
+              
+                elif (
+                    deviation_ma78_sopra_o_sotto_ma78_30_min_ago < -0.03
+                    and deviation_ma78_sopra_o_sotto_ma78_30_min_ago > -0.11
+                    and ma10_last > ma78_last
+                    and ma2_differenza_2_min_ago > 5
+                    
+                    and ma50_differenza_ma59 < -5
+                    and macd > macd_2_min_ago
+                    and deviation_ma5_sotto_ma300 < -0.42
+                    
+                    and ma100_last < ma100_180_min_ago
+                    and ma200_last < ma200_180_min_ago
+                    and ma300_last < ma300_180_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.02
+                    and deviation_ma5_sopra_ma28 > 0.02
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd > macd_2_min_ago
+                    and macd > 5
+                ):
+                    buy = "BUY 3 29 ago 2022 > 180 min di ribasso con 3-39 E ma2_differenza_2_min_ago > 5 - r 6572 A2Y2"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # 30 nov 2023 ma 78 leggermente ribassista TREND PERICOLOSISSIMO compra tardi ! 
               
               
                 elif (
-                    deviation_ma78_sopra_o_sotto_ma78_30_min_ago < -0.10
+                    deviation_ma78_sopra_o_sotto_ma78_30_min_ago < -0.11
                     
                     and ma2_differenza_2_min_ago > 5
-                    and ma10_last > ma78_last
-                    and ma5_last > ma39_last
+                    
+                    and ma3_last > ma39_last
                     
                     
                     and ma50_differenza_ma59 < -5
@@ -11567,7 +11597,7 @@ class maddog:
                     and macd > macd_2_min_ago
                     and macd > 5
                 ):
-                    buy = "BUY 3 29 ago 2022 > 180 min di ribasso con 10-78 E ma2_differenza_2_min_ago > 5 - r 6572 A2Yy"
+                    buy = "BUY 3 con ma78 TREND CHIARAMENTE RIBASSISTA compra prima ! 29 ago 2022 > 180 min di ribasso con 10-78 E ma2_differenza_2_min_ago > 5 - r 6572 A2Y3"
                     action = "buy"
                     percentage = 80
                     
@@ -11579,6 +11609,11 @@ class maddog:
                     # 13 nov 2023 non ha preso macd > !!! allora l' ho messo anche sopra
                     # 13 nov 2023 5-39 da 5-54 posso farlo perche' il sell e' molto piu' reattivo ! RICORDA dev 39 < 0.13 !
                     # 30 nov 2023 ma78 e' proprio discendente. continuava a comprare inutilmente. IL TITOLO SEMBRA AVER INTRAPRESO UN VERO E PRORIO TREND RIBASSISTA !
+
+
+
+
+                  
                 
                 elif (
                     
