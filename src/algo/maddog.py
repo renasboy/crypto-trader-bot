@@ -13493,14 +13493,14 @@ class maddog:
                     
                     and deviation_ma3_sopra_ma10 > 0.01
                     and deviation_ma3_sopra_ma18 > 0.077
-                    and deviation_ma5_sopra_ma28 > 0.05
+                    and deviation_ma5_sopra_ma28 > 0.02
                     
                     and ma3_last > ma13_last
                     
                     and ma2_last > ma2_2_min_ago
                     and macd > macd_2_min_ago
                 ):
-                    buy = "BUY 5 con 450_last >= 450_120_min_ago and 5-28 > 0.05 CON 50 > 450 - r 7144 A1"
+                    buy = "BUY 5 con 450_last >= 450_120_min_ago and 5-28 > 0.02 CON 50 > 450 - r 7144 A1"
                     action = "buy"
                     percentage = 70
                     
@@ -13515,7 +13515,7 @@ class maddog:
                     # 17 ott 2023 and deviation_ma3_sopra_ma18 > 0.077
                     # 17 ott 2023 50>450 da 100>450
                     # 31 ott 2023 3-39 da 5-50
-
+                    #  1 dic 2023 5-28 a 0.02 da 0.05
                 
                 elif (
                     
