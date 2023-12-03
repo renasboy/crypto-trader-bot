@@ -31999,13 +31999,13 @@ class maddog:
                 and ma3_last < ma18_last
                 
                 and macd < macd_2_min_ago
-                and macd < 10
+                and macd < 16
                 and macd_differenza_5_min_ago < -9
                 
                 and ma2_last < ma2_2_min_ago
                  
             ):    
-                sell = "SELL cond spec - POCHI MALEDETTI E SUBITO con ma300 che sale da 5 ore ! e con deviation > 0.81 e macd < 10 e MACD DIFFERENZA_5_min_ago < -9 - r 16875 A"
+                sell = "SELL cond spec - POCHI MALEDETTI E SUBITO con ma300 che sale da 5 ore ! e con deviation > 0.81 e macd < 16 e MACD DIFFERENZA_5_min_ago < -9 - r 16875 A"
                 action = "sell"
                 
                 #  1 set 2023 se per es macd passa da 18 a -11 vendi     
@@ -32018,7 +32018,7 @@ class maddog:
                 #  1 dic 2023 -0.81 da -0.91
                 #  1 dic 2023 and macd_differenza_5_min_ago < -9 da < -10
                 #  1 dic 2023 and macd < 10 da -6
-
+                #  3 dic 2023 and macd < 16 da 10
           
             # 17
             
