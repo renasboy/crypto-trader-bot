@@ -25650,17 +25650,37 @@ class maddog:
                         
                         
                      
-                    
                     elif ( 
-                        ma50_last < ma50_2_min_ago 
+                        ma50_last < ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 > 0.40
+                        and macd_differenza_2_min_ago < -2
+                        
                         and ma2_last < ma2_2_min_ago 
                         and deviation_sell < -0.29
                         and deviation_trend_ma200 > -0.10
                         and ma200_last > ma300_last
                     ):
-                        sell = "SELL 3 compa (21-60 min) con ma50 < and deviation_sell < 0.29 con PERDITA TOLLERATA > - r 13786"
+                        sell = "SELL 3 compa (21-60 min) con 100 sopra molto 300 e ma50 < and deviation_sell < 0.29 con PERDITA TOLLERATA > and macd_diff_2_min_ago < -2 - r 13786a"
                         action = "sell"
                         
+                        #  4 dic 2023 aggiunto and deviation_ma100_sopra_ma300 > 0.40
+                        #  4 dic 2023 aggiunto and macd_differenza_2_min_ago < -2
+                   
+                  
+                    elif ( 
+                        ma50_last < ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 < 0.40
+                        
+                        and ma2_last < ma2_2_min_ago 
+                        and deviation_sell < -0.25
+                        
+                        and deviation_trend_ma200 > -0.10
+                        and ma200_last > ma300_last
+                    ):
+                        sell = "SELL 3 compa (21-60 min) con 100 sopra poco 300 con ma50 < and deviation_sell < 0.25 con PERDITA TOLLERATA > - r 13786b"
+                        action = "sell"
+                        
+                        #  4 dic 2023 aggiunto and deviation_ma100_sopra_ma300 < 0.40
                         
                         
                     
