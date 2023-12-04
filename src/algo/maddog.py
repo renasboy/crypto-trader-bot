@@ -22300,7 +22300,7 @@ class maddog:
                     ):
                         sell = "SELL 2 da 60 a 90 min con ma50 > and deviation_ma39 < -0.18 SE 100 MOLTO ALTA RISPETTO ALLA 300 OK COSI' - r 11828 a1"
                         action = "sell"
-                        
+                      
                         
                     elif (    
                         ma50_last > ma50_2_min_ago
@@ -22309,10 +22309,25 @@ class maddog:
                         
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 2 da 60 a 90 min con ma50 > and 5 < 39 SE 100 MOLTO ALTA RISPETTO ALLA 300 OK COSI' - r 11828 A2"
+                        sell = "SELL 2 da 60 a 90 min con ma50 > and 5 < 39 SE 100 MOLTO ALTA RISPETTO ALLA 300 OK COSI' - r 11828 A2x"
                         action = "sell"
                         
                         # 20 ott 2023 5-39 da 3-39
+                  
+                  
+                    elif (    
+                        ma50_last > ma50_2_min_ago
+                        and macd_differenza_2_min_ago < -13
+                        and ma3_last < ma28_last
+                        and deviation_ma100_sopra_ma300 > 0.70
+                        
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 2 da 60 a 90 min con ma50 > and 3<28 SE 100 MOLTO ALTA RISPETTO ALLA 300 OK COSI' and macd_differenza_2_min_ago < -13 - r 11828 A2y"
+                        action = "sell"
+                        
+                        # 20 ott 2023 5-39 da 3-39
+                        #  4 dic 2023 vende con 3-28 se macd diff 2 min ago < -13
 
                     
                         
