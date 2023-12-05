@@ -30328,7 +30328,7 @@ class maddog:
                 
                 ma50_last < ma50_2_min_ago
                 and deviation_ma39 < 0.10
-                and deviation_sell < -0.05
+                and deviation_sell < 0.05
                 
                 
                 and deviation_ma5_sotto_ma200 > -0.60
@@ -30344,7 +30344,7 @@ class maddog:
                 
                 # 30 nov 2023 dev 39 a 0.10 da 0.03
                 # 30 nov 2023 dev sell a -0.05 da -0.14
-                
+                #  5 dic 2023 dev sell a 0.05 da -0.05
 
 
 
