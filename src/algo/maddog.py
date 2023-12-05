@@ -15409,23 +15409,6 @@ class maddog:
                         # 23 ott 2023 dev_sell a -0.05 da -0.07
                         # 23 ott 2023 tolyo and macd < macd_2_min_ago e aggiunta diff macd 2 min ago < -0.25
 
-                    
-                    elif (    
-                        ma2_last < ma4_last
-                        and ma2_last < ma6_last
-                        and delta_1_200_30 > delta_2_200_30_30_min
-                
-                        and deviation_crollo_24_aprile < -0.35
-                
-                        and deviation_ma5_sotto_ma200 > -1.00
-                    ): 
-                
-                        sell = "SELL 1 (5-12 min) EX cond. spec r 16427 B - > CROLLO IMPROVVISO del 24 apr 2022 - and dev_ma5_sotto_ma200 > -1.00 - notte - r 8264"
-                        action = "sell"
-                        
-                        #  9 nov 2023 and deviation_crollo_24_aprile a < -0.35 da < -0.45
-                        
-              
                     elif (
                         ma8_last < ma8_2_min_ago 
                         and deviation_ma39 < 0.02
@@ -15443,6 +15426,25 @@ class maddog:
                     ):
                         sell = "SELL 1 (5-12 min) EX cond. spec 15985 A1 ok 2B - CON ma8 < ma8 2 min ago e dev 3-39 < 0.02 e dev sell < -0.02 e macd_dif_2_min_ago < -0.25 - r 8263"
                         action = "sell"
+
+                  
+                    elif (    
+                        ma2_last < ma4_last
+                        and ma2_last < ma6_last
+                        and delta_1_200_30 > delta_2_200_30_30_min
+                
+                        and deviation_crollo_24_aprile < -0.33
+                
+                        and deviation_ma5_sotto_ma200 > -1.00
+                    ): 
+                
+                        sell = "SELL 1 (5-12 min) EX cond. spec r 16427 B - > CROLLO IMPROVVISO del 24 apr 2022 < -0.33 - and dev_ma5_sotto_ma200 > -1.00 - notte - r 8264"
+                        action = "sell"
+                        
+                        #  9 nov 2023 and deviation_crollo_24_aprile a < -0.35 da < -0.45
+                        #  5 dic 2023 and deviation_crollo_24_aprile a < -0.33 da < -0.35
+              
+                    
 
                     
                     
