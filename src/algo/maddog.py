@@ -26131,9 +26131,11 @@ class maddog:
                     
                     elif (
                         deviation_trend_ma200 > -0.10
+                        and ma50_last > ma50_2_min_ago
+                        
                         and ma300_last > ma450_last
                         and ma200_last > ma300_last
-                        and ma50_last < ma50_2_min_ago
+                        
                         
                         and deviation_ma39 < -0.15
                         
@@ -26141,11 +26143,35 @@ class maddog:
                         and macd < macd_2_min_ago
                        
                     ):
-                        sell = "SELL 3 da 60 a 90 min con ma50 < AND 300>450 e con deviation_ma39 < -0.15 and macd < macd_2_min_ago - r 14052 A"
+                        sell = "SELL 3 (60-90 min) con ma50 > AND 300>450 e con deviation_ma39 < -0.15 and macd < macd_2_min_ago - r 14052 A1"
                         action = "sell"
-                        
+
+                        #  5 dic 2023 con ma50 >
                         #  5 dic 2023 and deviation_ma39 < -0.15 da -0.23
                         #  5 dic 2023 aggiunta and macd < macd_2_min_ago
+
+                    
+                    elif (
+                        deviation_trend_ma200 > -0.10
+                        and ma50_last < ma50_2_min_ago
+                        
+                        and ma300_last > ma450_last
+                        and ma200_last > ma300_last
+                        
+                        
+                        and deviation_ma39 < -0.13
+                        
+                        and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
+                       
+                    ):
+                        sell = "SELL 3 (60-90 min) con ma50 < AND 300>450 e con deviation_ma39 < -0.13 and macd < macd_2_min_ago - r 14052 A2"
+                        action = "sell"
+
+                        #  5 dic 2023 con ma50 <
+                        #  5 dic 2023 and deviation_ma39 < -0.13 da -0.23
+                        #  5 dic 2023 aggiunta and macd < macd_2_min_ago
+                  
                         
                     elif (
                         deviation_trend_ma200 > -0.10
