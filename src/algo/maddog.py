@@ -27960,10 +27960,10 @@ class maddog:
                     elif (
                         ma3_last < ma28_last
                         and ma200_last > ma200_60_min_ago
-                        and deviation_sell > 0.78
+                        and deviation_sell > 0.68
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 3-4-x (21-60 min) SOLO QUI tra MARADONA e RONALDO ho messo P-M-S 18 SE DA! UNA BOTTA RIALZISTA  (solo quando ma200 >) - r 15157"
+                        sell = "SELL 3-4-x (21-60 min) SOLO QUI tra MARADONA e RONALDO ho messo P-M-S 18 SE DA UNA BOTTA RIALZISTA  (solo quando ma200 >) and dev_sell > 0.68 - r 15157"
                         action = "sell"
                         
                         # 3-18 da 3-13 dopo dolomiti
