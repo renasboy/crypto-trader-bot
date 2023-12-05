@@ -1967,6 +1967,7 @@ class maddog:
                 
                 elif (    
                     ma20_last > ma200_last
+                    and ma2_differenza_2_min_ago > 5
                     and ma5_last > ma39_last
                     and ma50_last > ma78_last
                     
@@ -1984,9 +1985,11 @@ class maddog:
                     buy = "BUY 1 (50>78) con 20>200 and 5-39 and 69>100 AND ma78 > AND 59 > 59 60 min ago CON 28 < 28 20 min AND 3-10 > 0.12 - r 1227 AB"
                     action = "buy"
                     percentage = 80
+                    
                     # 20 ott 2023 and 8-39 da 8-50
                     # 20 ott 2023 tolto and ma78_last > ma78_2_min_ago
                     # 20 ott 2023 5-39 da 8-39
+                    #  5 dic 2023 aggiunta and ma2_differenza_2_min_ago > 5
               
                 # ------------------------------------------------------------ BUY 1 RAFFORZATA se ma200> and ma300 > and 8>50 AND ma78 > CON 3-10 > 0.12
                 
