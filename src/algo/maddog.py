@@ -32099,6 +32099,8 @@ class maddog:
           
             elif (
                 deviation_sell > 0.81
+                and ma2_differenza_2_min_ago < -5
+                
                 and ma300_last > ma300_301_min_ago
                 and ma3_last < ma18_last
                 
@@ -32123,6 +32125,7 @@ class maddog:
                 #  1 dic 2023 and macd_differenza_5_min_ago < -9 da < -10
                 #  1 dic 2023 and macd < 10 da -6
                 #  3 dic 2023 and macd < 16 da 10
+                #  3 dic 2023 aggiunta and ma2_differenza_2_min_ago < -5
           
             # 17
             
