@@ -30128,6 +30128,7 @@ class maddog:
             
             elif (
                 ma78_last < ma78_120_min_ago
+                and ma2_differenza_2_min_ago < -7
                 and ma300_last < ma300_301_min_ago
                 and delta_150_100 <= delta_150_100_60_min
                 
@@ -30142,6 +30143,7 @@ class maddog:
                 
                 and ma2_last < ma2_2_min_ago 
                 and macd_differenza_2_min_ago < -0.35
+                
             ):
                 sell = "SELL cond spec 6 GIORNO con ma300 < 5 ore - dev 3-39 < 0.13 and dev_sell < 0.03 - con ma50 < e con ma78 < and macd_differenza_2_min_ago < -0.35 - r 16045 B"
                 action = "sell"
@@ -30155,6 +30157,7 @@ class maddog:
                 # 27 nov 2023 and deviation_ma39 a 0.13 da 0.07
                 # 27 nov 2023 and deviation_sell < 0.03 da < -0.105
                 # 29 nov 2023 and macd_differenza_2_min_ago < -0.35 da -0.25
+                #  5 dic 2023 aggiunta and ma2_differenza_2_min_ago < -7
                 
 
             # 5 - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 > -1.00
