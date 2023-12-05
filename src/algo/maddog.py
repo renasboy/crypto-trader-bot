@@ -11071,6 +11071,8 @@ class maddog:
                 elif (    
                     
                     ma5_last > ma150_last
+                    and ma2_differenza_2_min_ago > 5
+                    
                     and deviation_ma100_sopra_ma300 > 0.50
                     and deviation_ma300_sopra_ma450 > 0.40
                     and deviation_ma3_sopra_ma18 > 0.14
@@ -11090,7 +11092,7 @@ class maddog:
                     and deviation_ma5_sopra_ma28 > -0.02
                 ):    
                     
-                    buy = "BUY 3 correzione in alto con 200 > - riga 1384 RCCR portata nel MADDOG - r 6480 A1"
+                    buy = "BUY 3 correzione in alto con 200 > - riga 1384 RCCR portata nel MADDOG and ma2_differenza_2_min_ago > 5 - r 6480 A1"
                     action = "buy"
                     percentage = 80
                     
@@ -11098,7 +11100,7 @@ class maddog:
                     # 30 set 2022 aggiunta 3-10
                     # 30 set 2022 aggiunta 5.28
                     #  2 ott 2022 3-10 0.10 !
-                    
+                    #  4 dic 2023 aggiunta and ma2_differenza_2_min_ago > 5
                     
                 elif (    
                     
@@ -30828,6 +30830,7 @@ class maddog:
                     
             elif (    
                 ma2_last < ma4_last
+                and ma2_differenza_2_min_ago < -21
                 and ma2_last < ma6_last
                 and delta_1_200_30 > delta_2_200_30_30_min
                 
@@ -30849,7 +30852,7 @@ class maddog:
                 # 0.55 ha generato una perdita di -1.00 % il 7 ott 2022 cosi' ho ridotto a -0.548
                 #  5 nov 2023 dev crollo 24 apr a -0.45 da -0.548 (su RCCR ha generato perdita di -0.79) (io ho voluto cambiare anche su maddog)
                 #  5 dic 2023 dev crollo 24 apr a -0.35 da -0.45 ( su MADDOG ha generato perdita di -0.81) VEDI 4 DICEMBRE 2023
-            
+                #  5 dic 2023 aggiunta and ma2_differenza_2_min_ago < -21 ! 
             
             
             # 20 - SELL condizione speciale dopo il crollo improvviso del 24 aprile 2022 ! and deviation_ma5_sotto_ma200 < -1.00
@@ -30979,7 +30982,8 @@ class maddog:
            
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
-                and deviation_sell < -0.39
+                and ma2_differenza_2_min_ago < -5
+                and deviation_sell < -0.25
                 and ma2_last < last_trade_price
                 
                 and ma100_last > ma100_30_min_ago
@@ -30987,10 +30991,11 @@ class maddog:
                 and ma2_last < ma2_2_min_ago
             ):
 
-                sell = "SELL condizione speciale 24 - DOLCE ATTESA con ma100 > e ma13 > and deviation < -0.39 - r 16556"
+                sell = "SELL condizione speciale 24 - DOLCE ATTESA con ma100 > e ma13 > and deviation_sell < -0.25 and ma2_differenza_2_min_ago < -5 - r 16556"
                 action = "sell"
                 
-            
+                #  5 dic 2023 aggiunto and ma2_differenza_2_min_ago < -5
+                #  5 dic 2023 dev sell a -0.25 da -0.35 
             
             
             # 25 - SELL condizione speciale ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma100 > e ma13 <
