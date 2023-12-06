@@ -1922,7 +1922,7 @@ class maddog:
                 
                 elif (    
                     ma5_last > ma13_last
-                    
+                    and ma2_differenza_2_min_ago > 7
                     and deviation_ma300_sopra_ma450 < 0.15
                     and deviation_ma300_sopra_ma450 > -0.15
                     
@@ -1941,7 +1941,7 @@ class maddog:
                     and macd > 0
                 ):  
                 
-                    buy = "BUY 1 LATERALE 2 con 3-10 > 0.07 and macd > macd 2 min ago and deviation_ma3_sopra_ma16 > 0.112 con macd > 0 - r 1205"
+                    buy = "BUY 1 LATERALE 2 con 3-10 > 0.07 and macd > macd 2 min ago and deviation_ma3_sopra_ma16 > 0.112 con macd > 0 and ma2_differenza_2_min_ago > 7 - r 1205"
                     action = "buy"
                     percentage = 50
                     
@@ -2006,7 +2006,7 @@ class maddog:
                     and ma8_last > ma50_last
                 ):  
                 
-                    buy = "BUY 1 RAFFORZATA (50>78) con 20>200 and 69 > 100 and dev_bellissima > 0.14 AND ma78 > AND 59 > 59 60 min ago CON 3-10 > 0.12- r 1247 b"
+                    buy = "BUY 1 RAFFORZATA (50>78) con 20>200 and 69 > 100 and dev_bellissima > 0.14 AND ma78 > AND 59 > 59 60 min ago CON 3-10 > 0.12 - r 1247 b"
                     action = "buy"
                     percentage = 80
                     
