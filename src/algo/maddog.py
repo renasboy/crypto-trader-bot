@@ -18184,7 +18184,7 @@ class maddog:
                         and delta_150_100 <= delta_150_100_60_min
                 
                         and deviation_ma39 < 0.05
-                        and deviation_sell < -0.04
+                        and deviation_sell < 0.04
                         
                         and ma50_last > ma50_2_min_ago
                         and deviation_ma100_sopra_ma300 < 0.40
@@ -18192,9 +18192,9 @@ class maddog:
                         and deviation_ma5_sotto_ma200 > -0.90
                 
                         and ma2_last <= ma2_2_min_ago 
-                        and macd < macd_2_min_ago
+                        and ma2_differenza_2_min_ago < -30
                     ):
-                        sell = "SELL 1 (50-90 min) EX cond spec r 16047 B3 NOTTE con ma300> 5 ore - dev 3-39 < 0.05 and dev_sell < -0.04 - con ma50 > - r 9935 a"
+                        sell = "SELL 1 (50-90 min) EX cond spec r 16047 B3 NOTTE con ma300> 5 ore - dev 3-39 < 0.05 and dev_sell < 0.04 - con ma50 > - r 9935 a"
                         action = "sell"
 
                     
@@ -18212,7 +18212,8 @@ class maddog:
                         and deviation_ma5_sotto_ma200 > -0.90
                         
                         and ma2_last <= ma2_2_min_ago 
-                        and macd < macd_2_min_ago
+                        and ma2_differenza_2_min_ago < -11
+                      
                     ):
                         sell = "SELL 1 (50-90 min) EX cond spec r 16047 B3 NOTTE con ma300> 5 ore - dev 3-39 < 0.05 and dev_sell < 0.05 - con ma50 <= - r 9935 B"
                         action = "sell"
