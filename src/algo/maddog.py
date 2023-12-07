@@ -265,10 +265,6 @@ class maddog:
 
 
 
-
-
-
-
       
         # formula macd_differenza di 5 min ago
         
@@ -16913,7 +16909,8 @@ class maddog:
                         #  8 giu 2023 deviation_sell < -0.15 da < -0.13
                         
                     # -------------------------------------------------------------------------------------- guadagno durante il crollo LEGGERO
-                    
+
+                  
                     elif (
                         ma50_last < ma50_2_min_ago
                         and deviation_ma5_sotto_ma300 > -1.20
@@ -16923,9 +16920,25 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 eventuale GAIN nel crollo LEGGERO (21-50 min) con ma50 < incr 3 -30 and dev_sell 0.30 - 0.54 and dev 5-300 > -1.20- r 9327 A"
+                        sell = "SELL 1 eventuale GAIN nel crollo LEGGERO (21-50 min) con ma50 < incr 3 -30 and dev_sell 0.30 - 0.54 and dev 5-300 > -1.20- r 9327 A1"
+                        action = "sell"
+
+                  
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and deviation_ma5_sotto_ma300 > -1.20
+                        and (ma3_prev > ma25_prev and ma3_last < ma25_last)
+                        and deviation_sell > 0.30 
+                        and deviation_sell < 0.54
+                        and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
+                        and macd_differenza_2_min_ago < -11
+                        and macd < 60
+                    ):
+                        sell = "SELL 1 eventuale GAIN nel crollo LEGGERO (21-50 min) con ma50 < incr 3 -25 con diff macd < -11 e dev_sell 0.30 - 0.54 and dev 5-300 > -1.20 - r 9327 A2"
                         action = "sell"
                         
+                        #  7 dic 2023 se macd da una botta al ribasso allora vende con un ma 25
                         
                         
                     # -------------------------------------------------------------------------------------- guadagno durante il crollo PESANTE
