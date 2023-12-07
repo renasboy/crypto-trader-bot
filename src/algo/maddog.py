@@ -11724,6 +11724,7 @@ class maddog:
                 elif (
                     
                     ma4_last > ma30_last
+                    and ma2_differenza_2_min_ago > 6
                     and deviation_ma5_sopra_o_sotto_ma100 > -0.15
                     
                     and deviation_ma100_sopra_ma300 < 0.35
@@ -11739,8 +11740,9 @@ class maddog:
                    
                     and ma2_last > ma2_2_min_ago
                     and macd > macd_2_min_ago
+                    and ma2_last > ma5_last
                 ):
-                    buy = "BUY 3 del 2 ottobre 2023 NON COMPRAVA ! con 450 > 450 60 min MA CONSIDERATA ANCORA LATERALE - r 6574"
+                    buy = "BUY 3 del 2 ottobre 2023 NON COMPRAVA ! con 450 > 450 60 min MA CONSIDERATA ANCORA LATERALE and ma2_differenza_2_min_ago > 7 - r 6574"
                     action = "buy"
                     percentage = 60
                     
@@ -11748,7 +11750,9 @@ class maddog:
                     # 25 ottobre 2023 and deviation_ma5_sopra_o_sotto_ma100 > -0.15 da > -0.11
                     # 25 ottobre 2023 and deviation_ma100_sopra_ma300 < 0.35 da < 0.30
                     # 25 ottobre 2023 and deviation_ma100_sopra_ma300 > -0.35 da > -0.30
+                    #  7 dic 2023 aggiunta and ma2_differenza_2_min_ago > 7
 
+              
                 
                 # BUY 3 ultima condizione che mancava ! ma tutte negative MA BUY con 8 > 125
                 
