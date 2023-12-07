@@ -30170,9 +30170,10 @@ class maddog:
                 
                 # 20 nov 2023 aggiunta and diff ma2 < -5 
 
-            
+
             elif (
                 ma78_last < ma78_120_min_ago
+                and ma50_last > ma50_2_min_ago
                 and ma2_differenza_2_min_ago < -15
                 and ma300_last < ma300_301_min_ago
                 and delta_150_100 <= delta_150_100_60_min
@@ -30180,8 +30181,6 @@ class maddog:
                 and deviation_ma39 < 0.13
                 and deviation_sell < 0.03
                 
-                
-                and ma50_last <= ma50_2_min_ago
                 and deviation_ma100_sopra_ma300 < 0.40
                 
                 and deviation_ma5_sotto_ma200 > -0.50
@@ -30190,7 +30189,29 @@ class maddog:
                 and macd_differenza_2_min_ago < -0.35
                 
             ):
-                sell = "SELL cond spec 6 GIORNO con ma300 < 5 ore e dev 3-39 < 0.13 and dev_sell < 0.03 con ma50 < e con ma78 < and macd_differenza_2_min_ago < -0.35 - r 16045 B"
+                sell = "SELL cond spec 6 GIORNO con ma300 < 5 ore con ma50 > e dev 3-39 < 0.13 and dev_sell < 0.03 e con ma78 < and macd_differenza_2_min_ago < -0.35 - r 16045 B1"
+                action = "sell"
+
+            
+            elif (
+                ma78_last < ma78_120_min_ago
+                and ma50_last <= ma50_2_min_ago
+                and ma2_differenza_2_min_ago < -15
+                and ma300_last < ma300_301_min_ago
+                and delta_150_100 <= delta_150_100_60_min
+                
+                and deviation_ma39 < 0.13
+                and deviation_sell < 0.03
+                
+                and deviation_ma100_sopra_ma300 < 0.40
+                
+                and deviation_ma5_sotto_ma200 > -0.50
+                
+                and ma2_last < ma2_2_min_ago 
+                and macd_differenza_2_min_ago < -0.35
+                
+            ):
+                sell = "SELL cond spec 6 GIORNO con ma300 < 5 ore con ma50 <= e dev 3-39 < 0.13 and dev_sell < 0.03  e con ma78 < and macd_differenza_2_min_ago < -0.35 - r 16045 B2"
                 action = "sell"
                 
                 # 15 set 2023 quando 300 scende da 5 ore non devi vendere in perdita ! a ricomprare ci penseranno altre condizioni !
@@ -30204,6 +30225,8 @@ class maddog:
                 # 29 nov 2023 and macd_differenza_2_min_ago < -0.35 da -0.25
                 #  5 dic 2023 aggiunta and ma2_differenza_2_min_ago < -7
                 #  6 dic 2023 diff ma2 da -7 a -15
+
+            
 
             # 5 - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 > -1.00
 
