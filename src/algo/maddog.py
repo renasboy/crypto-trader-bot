@@ -10016,7 +10016,9 @@ class maddog:
                 elif (     
                     
                     ma3_last > ma18_last
-                    and ma2_differenza_2_min_ago > 5
+                    and ma2_differenza_2_min_ago > 6
+                    and ma3_differenza_2_min_ago > 5
+                    
                     and ma100_last < ma100_30_min_ago
                     and ma450_last > ma450_360_min_ago
                     
@@ -10045,8 +10047,10 @@ class maddog:
                     # 17 ott 2023 3-18 da 3-20
                     # 31 ott 2023 aggiunto and ma2_last > ma5_last
                     #  1 dic 2023 aggiunto and ma2_differenza_2_min_ago > 5
-                
-              
+                    #  7 dic 2023 aggiunta and ma3_differenza_2_min_ago > 5
+                    #  7 dic 2023 diff ma2 a > 6 da > 5
+
+
                 elif (     
                     
                     ma3_last > ma20_last
