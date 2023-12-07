@@ -217,11 +217,18 @@ class maddog:
         macd_5_min_ago = self.algo_helper.macd_minutes_ago(5)
 
         ################################################################################################# CONFORTABLY NUMB
-        
+      
         # formula ma2_differenza di 2 min ago
         
         ma2_differenza_2_min_ago = (ma2_last - ma2_2_min_ago)
         self.algo_helper.info("ma2_differenza_2_min_ago: {}".format(ma2_differenza_2_min_ago))
+
+
+        
+        # formula ma3_differenza di 2 min ago
+        
+        ma3_differenza_2_min_ago = (ma3_last - ma3_2_min_ago)
+        self.algo_helper.info("ma3_differenza_2_min_ago: {}".format(ma3_differenza_2_min_ago))
 
       
 
@@ -2504,6 +2511,9 @@ class maddog:
                 elif (     
                     
                     ma3_last > ma20_last
+                    and ma2_differenza_2_min_ago > 7
+                    and ma3_differenza_2_min_ago > 8
+                    
                     and ma100_last > ma100_65_min_ago
                     and ma100_last > ma100_120_min_ago
                     and deviation_ma54_sopra_o_sotto_ma72 < -0.015
@@ -2519,16 +2529,16 @@ class maddog:
                   
                     and ma2_last >= ma2_2_min_ago
                     and macd >= macd_2_min_ago
-                    and ma2_differenza_2_min_ago > 3
+                    
                     
                 ):    
-                    buy = "BUY 1 compare forever - con 3-20 E CON 300 ancora vicina 450 ( anche un poco sotto ! ) e 3-18 > -0.01 + MACD > E ma2_diff_2_min_ago > 3 - r 1537 A3 X1"
+                    buy = "BUY 1 compare forever - con 3-20 E CON 300 ancora vicina 450 ( anche un poco sotto ! ) e 3-18 > -0.01 + MACD > E ma2_diff_2_min_ago > 7 - r 1537 A3 X1"
                     action = "buy"
                     percentage = 90
                     
                     # 25 nov 2023 per anticipare di una ndecchiecella SEMBRA STRANO MA HO DOVUTO METTERE ma100>65 min
-
-
+                    #  7 dic 2023 aggiunta and ma3_differenza_2_min_ago > 8
+                    #  7 dic 2023 ma2_differenza_2_min_ago > 7 da > 3
                 
                 elif (     
                     
