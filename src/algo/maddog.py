@@ -2753,7 +2753,7 @@ class maddog:
                     and ma2_differenza_2_min_ago >= 17
                   
                 ):    
-                    buy = "BUY 1 compare forever - con 3-18 E CON 300 ancora vicina alla 450 ( anche un poco sotto ! ) and 3-18 > -0.05 + diff macd > 1.05 AND 2>5 ! - r 1537 A3Y2"
+                    buy = "BUY 1 compare forever - con 3-18 E CON 300 ancora vicina alla 450 ( anche un poco sotto ! ) and 3-18 > -0.05 + diff macd > 1.05 AND 2>5 ! - r 1537 A3 Y2"
                     action = "buy"
                     percentage = 90
                     
@@ -7447,7 +7447,7 @@ class maddog:
                 elif (
                     
                     ma3_last > ma18_last
-                    
+                    and ma2_differenza_2_min_ago > 7
                     and ma450_last < ma450_360_min_ago
                     and ma300_last < ma300_60_min_ago
                     
@@ -7469,7 +7469,8 @@ class maddog:
                     buy = "BUY 2 IMPORTATA da BUY 1 r 1043 B2 che considera distanza 5-300 AND dev 10-200 < -0.24 AND dev 3-18 and deviation_ma3_sopra_ma16 > -0.125 - r 4760"
                     action = "buy"
                     percentage = 50
-
+                    
+                    #  7 dic 2023 aggiunta and ma2_differenza_2_min_ago
                 
                 
                     
