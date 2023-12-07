@@ -12467,6 +12467,7 @@ class maddog:
 
                 elif (
                     ma3_last > ma30_last
+                    and ma2_differenza_2_min_ago > 5
                     and ma50_last > ma59_last
                     
                     and ma300_last > ma450_last
@@ -12485,11 +12486,12 @@ class maddog:
                     and macd_differenza_2_min_ago > 0.25
                     
                 ):    
-                    buy = "BUY 4B importato da BUY 3 RCCR con 3-30 con 300 > and ma50_last > ma59_last - r 6737a"
+                    buy = "BUY 4B importato da BUY 3 RCCR con 3-30 con 300 > and ma50_last > ma59_last and ma2_differenza_2_min_ago > 5 - r 6737 A"
                     action = "buy"
                     percentage = 70
                     
                     # 27 nov 2023 se sta scendendo da molto tempo E SE se ma50_last > ma59_last
+                    # 7 dic 2023 and ma2_differenza_2_min_ago > 5
               
                 
                 elif (
