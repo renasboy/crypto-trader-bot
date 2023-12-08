@@ -14601,14 +14601,16 @@ class maddog:
                     # deviation_correzione = ma3_last / ma25_last
                     # ma5 non deve allontanarsi troppo dalla ma200 !
 
+
                 
 
+                
                 # BUY 5 compare forever EX BUY 1 r 1537 A2y1 - con 5-20 E CON 300 ancora vicina alla 450 ( anche un poco sotto !)
                 
                 elif (     
                     
                     ma3_last > ma13_last
-                    
+                    and deviation_ma78_sopra_o_sotto_ma200 > -0.028
                     and ma100_last < ma100_120_min_ago
                     and ma100_last > ma100_60_min_ago
                     
@@ -14631,11 +14633,51 @@ class maddog:
                     and ma50_differenza_ma59 > -5
                     
                 ):    
-                    buy = "BUY 5 compare forever EX BUY 1 r 1537 A2y1 - 100<120 min ago MA 100>60 min ago con 5-20 E 300 vicina alla 450 + MACD > E ma50_diff_ma59 > -5 - r 7589a"
+                    buy = "BUY 5 compare forever EX BUY 1 r 1537 A2y1 - 100<120 min ago MA 100>60 min ago con 5-20 E 300 vicina alla 450 + MACD > E ma50_diff_ma59 > -5 - r 7589 a1"
                     action = "buy"
                     percentage = 90
                     
                     # 20 nov 2023 ma100 < 100 120 min ago MA ma 100> 60 min allora compra una ndecchiecella prima
+
+
+                
+                # BUY 5 compare forever EX BUY 1 r 1537 A2y1 - con 5-20 E CON 300 ancora vicina alla 450 ( anche un poco sotto !)
+                
+                elif (     
+                    
+                    ma3_last > ma13_last
+                    and deviation_ma78_sopra_o_sotto_ma200 < -0.028
+                    and ma2_differenza_2_min_ago > 10
+                    and ma100_last < ma100_120_min_ago
+                    and ma100_last > ma100_60_min_ago
+                    
+                    
+                    and deviation_ma54_sopra_o_sotto_ma72 < 0.015
+                    and deviation_ma54_sopra_o_sotto_ma72 > -0.015
+                    
+                    and deviation_ma39_sotto_ma200 < 0.10
+                    and deviation_ma300_sopra_ma450 > -0.35
+                    
+                    and deviation_ma3_sopra_ma10 > -0.015
+                    and deviation_ma3_sopra_ma16 > 0.01
+                    and deviation_ma3_sopra_ma18 > -0.03
+                    
+                    and ma2_last >= ma20_last
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and ma50_differenza_ma59 > -5
+                    and macd > -40
+                    and macd >= macd_2_min_ago
+                    and macd_differenza_2_min_ago > 2
+                    
+                ):    
+                    buy = "BUY 5 compare forever EX BUY 1 r 1537 A2y1 - 100<120 min ago MA 100>60 min ago con 5-20 E 300 vicina alla 450 + MACD > E ma50_diff_ma59 > -5 - r 7589 a2"
+                    action = "buy"
+                    percentage = 90
+                    
+                    # 20 nov 2023 ma100 < 100 120 min ago MA ma 100> 60 min allora compra una ndecchiecella prima
+                    # ATTENZIONE 8 dic 2023 se 78 sotto 200 allora aggiunto diff ma2 > 10 e diff macd >2 CIOE' basta BUY 5 continui ! (se 78 molto sotto 200)
+              
 
 
                 elif (     
