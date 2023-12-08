@@ -28935,10 +28935,10 @@ class maddog:
                         and ma200_last > ma200_60_min_ago
                         
                         and ma2_last < ma2_2_min_ago
-                        and macd_last < macd_2_min_ago
+                        and macd < macd_2_min_ago
                         and macd_differenza_2_min_ago < 2
                     ):
-                        sell = "SELL 4-5-x da 60 a 90 min con ma50 > and deviation_ma25 < -0.23 and ma450_last > ma450_360_min_ago and macd_last < macd_2_min_ago - r 15538 A"
+                        sell = "SELL 4-5-x da 60 a 90 min con ma50 > and deviation_ma25 < -0.23 and ma450_last > ma450_360_min_ago and macd < macd_2_min_ago - r 15538 A"
                         action = "sell"
                         
                         # 30 mag 2023 dev_25 a -0.26 da -0.25
