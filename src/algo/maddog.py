@@ -7026,13 +7026,38 @@ class maddog:
                     # 11 gen 2023 3-10 a 0.04 da 0.05
                     
                     
-                
                 elif (    
                     ma3_last > ma28_last
+                    and ma450_last > ma450_180_min_ago
                     
                     and ma450_last < ma450_480_min_ago
-                    
                     and ma100_last < ma125_last
+                    
+                    and deviation_ma300_sopra_ma450 < 0.25
+                    and deviation_ma300_sopra_ma450 > -0.25
+                    
+                    and deviation_ma100_sopra_ma300 < 0.25
+                    
+                    and deviation_ma3_sopra_ma10 > -0.01
+                    and deviation_ma3_sopra_ma16 > 0.07
+                    and deviation_ma5_sopra_ma28 > -0.11
+                    
+                    and price >= price_2_min_ago
+                    and macd_differenza_2_min_ago > -3
+                    
+                ):
+                    buy = "BUY 2A laterale - r 4685 BY2Bx"
+                    action = "buy"
+                    percentage = 80
+
+
+                elif (    
+                    ma3_last > ma28_last
+                    and ma450_last < ma450_180_min_ago
+                    
+                    and ma450_last < ma450_480_min_ago
+                    and ma100_last < ma125_last
+                    
                     and deviation_ma300_sopra_ma450 < 0.20
                     and deviation_ma300_sopra_ma450 > -0.20
                     
@@ -7046,7 +7071,7 @@ class maddog:
                     and macd_differenza_2_min_ago > -1.7
                     
                 ):
-                    buy = "BUY 2A laterale - r 4685 BY2B"
+                    buy = "BUY 2A laterale - r 4685 BY2By"
                     action = "buy"
                     percentage = 80
 
