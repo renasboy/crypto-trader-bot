@@ -13527,7 +13527,7 @@ class maddog:
                     
                     and deviation_ma3_sopra_ma10 > 0.01
                     and deviation_ma3_sopra_ma18 > 0.077
-                    and deviation_ma5_sopra_ma28 > 0.02
+                    and deviation_ma5_sopra_ma28 > -0.02
                     
                     and ma3_last > ma13_last
                     
@@ -13551,7 +13551,7 @@ class maddog:
                     # 31 ott 2023 3-39 da 5-50
                     #  1 dic 2023 5-28 a 0.02 da 0.05
                     #  5 dic 2023 and ma2_differenza_ma5 > 8
-
+                    #  8 dic 2023 dev_ma5_sopra_ma28 a 0.02 da -0.02
               
                 elif (
                     
