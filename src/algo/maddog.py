@@ -12755,25 +12755,20 @@ class maddog:
                     ma20_last >= ma20_2_min_ago
                     and ma200_last > ma200_301_min_ago
                     and ma300_last > ma300_60_min_ago
-                    and deviation_ma250_sopra_ma300 > 0.04
+                    and deviation_ma250_sopra_ma300 > 0.03
                     
                     and ma78_last > ma78_60_min_ago
                     
-                    and deviation_buy3 > 0.005
-                    and delta_buy3_incrocio_ma3_ma8 > 0.04
-                    and deviation_ma4_sopra_ma30 > 0.05
-                    
                     and ma3_last > ma8_last
-                    and ma3_last > ma50_last
-                    and ma8_last > ma100_last
-                    
-                    
-                    and ma7_last > ma25_last
-                    
-                    
+                    and deviation_buy3 > -0.005
                     and deviation_ma5_sopra_ma28 > 0.03
+                    and deviation_ma4_sopra_ma30 > 0.05
+                    and delta_buy3_incrocio_ma3_ma8 > 0.03
+                    and ma3_last > ma50_last
+                    
                     and ma2_last > ma2_2_min_ago
                     and macd >= macd_2_min_ago
+                    and macd_differenza_2_min_ago > 3
                 ):
                     buy = "BUY 4B RIVOLUZIONARIO con ma78 > - r 6859 A1x"
                     action = "buy"
