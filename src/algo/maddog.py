@@ -25423,14 +25423,34 @@ class maddog:
                         # 16 GIU 2022 3-42 da 3-50
                         
                         
-                        
                     elif (    
-                        ma50_last > ma50_2_min_ago 
-                        and ma2_last < ma2_2_min_ago 
-                        and deviation_ma25 < -0.31
+                        ma50_last > ma50_2_min_ago
+                        and ma300_last > ma300_301_min_ago
                         and ma200_last > ma200_60_min_ago
+                        
+                        and deviation_ma25 < -0.22
+                        
+                        and ma2_last < ma2_2_min_ago 
+                        and macd_differenza_2_min_ago < -3
                     ):
-                        sell = "SELL 3 (21-60 min) con ma50 > and deviation_ma25 < -0.28 - r 13511"
+                        sell = "SELL 3 (21-60 min) con ma50 > and deviation_ma25 < -0.22 and macd_differenza_2_min_ago < -3 - r 13511 a"
+                        action = "sell"
+                        
+                        # 20 nov 2023 deviation_ma25 a -0.28 da -0.31
+                        #  9 dic 2023 deviation_ma25 a -0.22 da -0.28
+                    
+                    
+                    elif (    
+                        ma50_last > ma50_2_min_ago
+                        and ma300_last < ma300_301_min_ago
+                        and ma200_last > ma200_60_min_ago
+                        
+                        and deviation_ma25 < -0.28
+                        
+                        and ma2_last < ma2_2_min_ago
+                        and macd_differenza_2_min_ago < -2
+                    ):
+                        sell = "SELL 3 (21-60 min) con ma50 > and deviation_ma25 < -0.28 and macd_differenza_2_min_ago < -2 - r 13511 b"
                         action = "sell"
                         
                         # 20 nov 2023 deviation_ma25 a -0.28 da -0.31
