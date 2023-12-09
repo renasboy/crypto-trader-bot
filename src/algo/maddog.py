@@ -1580,7 +1580,7 @@ class maddog:
                 elif (
                     
                     ma3_last > ma18_last
-                    
+                    and ma2_differenza_2_min_ago > 3
                     and ma450_last < ma450_360_min_ago
                     and ma300_last < ma300_60_min_ago
                     and ma200_last < ma200_60_min_ago
@@ -1599,13 +1599,13 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
                     and macd >= macd_2_min_ago
                 ):
-                    buy = "BUY 1 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND dev 3-18 and deviation_ma3_sopra_ma16 > -0.125 - r 1043 B1"
+                    buy = "BUY 1 migliore che considera distanza 5-300 E dev 10-200 < -0.24 E dev 3-18 and deviation_ma3_sopra_ma16 > -0.125 and ma2_diff_2_min_ago > 3 - r 1043 B1"
                     action = "buy"
                     percentage = 50
                     
                     # ma200 ha fatto lo scherzetto ERA SUPERIORE E HA FATTO COMPRARE IN RITARDO !
                     # ma300 e ma450 erano inferiori
-              
+                    #  9 dic 2023 aggiunto and ma2_differenza_2_min_ago > 3
                 
                 elif (
                     
@@ -13783,6 +13783,7 @@ class maddog:
                 elif (
                     
                     ma4_last > ma50_last
+                    and ma2_differenza_2_min_ago > 3
                     and deviation_ma300_sopra_ma450 < 0.10
                     and ma300_last > ma300_60_min_ago
                     and ma300_last > ma450_last
@@ -13815,7 +13816,7 @@ class maddog:
                     # 24 ago 2023 macd > 3
                     # 19 ott 2023 macd > 2
                     # 30 ott 2023 300> 60 min invece di 300> 120 min ago
-
+                    #  9 dic 2023 aggiunto and ma2_differenza_2_min_ago > 3
                 
                 elif (
                     ma50_last >= ma50_2_min_ago
