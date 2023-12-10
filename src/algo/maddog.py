@@ -256,12 +256,18 @@ class maddog:
         
         ma50_differenza_ma59 = (ma50_last - ma59_last)
         self.algo_helper.info("ma50_differenza_ma59: {}".format(ma50_differenza_ma59))
+      
 
-        
         # formula macd_differenza di 2 min ago
         
         macd_differenza_2_min_ago = (macd - macd_2_min_ago)
         self.algo_helper.info("macd_differenza_2_min_ago: {}".format(macd_differenza_2_min_ago))
+
+      
+        # formula macd_differenza di 3 min ago
+        
+        macd_differenza_3_min_ago = (macd - macd_3_min_ago)
+        self.algo_helper.info("macd_differenza_3_min_ago: {}".format(macd_differenza_3_min_ago))
 
 
 
@@ -30384,7 +30390,7 @@ class maddog:
                 and macd_differenza_2_min_ago < -0.35
                 
             ):
-                sell = "SELL cond spec 6 GIORNO con ma300 < 5 ore con ma50 <= e dev 3-39 < 0.13 and dev_sell < 0.03  e con ma78 < and macd_differenza_2_min_ago < -0.35 - r 16045 B2"
+                sell = "SELL cond spec 6 GIORNO con ma300 < 5 ore con ma50 <= e dev 3-39 < 0.13 and dev_sell < 0.03 e con ma78 < and macd_differenza_2_min_ago < -0.35 - r 16045 B2"
                 action = "sell"
                 
                 # 15 set 2023 quando 300 scende da 5 ore non devi vendere in perdita ! a ricomprare ci penseranno altre condizioni !
@@ -30426,7 +30432,6 @@ class maddog:
                 # 14 nov 2023 se ma50_last > ma59_last
                 # 27 nov 2023 dev_sell < -0.02 da -0.10
                 
-            
             elif (
                 ma78_last > ma78_120_min_ago
                 and ma50_last < ma59_last
@@ -30444,7 +30449,28 @@ class maddog:
                 and deviation_ma5_sotto_ma200 > -0.80
                 
             ):
-                sell = "SELL condizione speciale 6 CON 50<59 - SALVAGENTE dev 3-39 < 0.05 e dev_sell < 0.01 e ma50 < e macd_diff_2_min_ago < -0.20 e diff macd < -0.30 - r 16047 A1Y"
+                sell = "SELL condizione speciale 6 CON 50<59 - SALVAGENTE dev 3-39 < 0.05 e dev_sell < 0.01 e ma50 < e macd_diff_2_min_ago < -0.20 e diff macd < -0.30 - r 16047 A1Y1"
+                action = "sell"
+
+          
+            elif (
+                ma78_last > ma78_120_min_ago
+                and ma50_last < ma59_last
+                
+                and ma2_differenza_2_min_ago < -3
+                and macd_differenza_3_min_ago < 0.30
+                and ma2_last < ma2_2_min_ago
+                
+                and deviation_ma39 < 0.05
+                and deviation_sell < 0.01
+                
+                and ma50_last < ma50_2_min_ago
+                and deviation_ma100_sopra_ma300 < 0.40
+                
+                and deviation_ma5_sotto_ma200 > -0.80
+                
+            ):
+                sell = "SELL condizione speciale 6 CON 50<59 - SALVAGENTE dev 3-39 < 0.05 e dev_sell < 0.01 e ma50 < e macd_diff_3_min_ago < -0.20 e diff macd < -0.30 - r 16047 A1Y2"
                 action = "sell"
                 
                 #   9 GIU 2023 dev 3-39 a -0.17 da -0.25
@@ -30469,7 +30495,7 @@ class maddog:
                 # 20 nov 2023 non ha preso and macd_differenza_2_min_ago < -0.20 allora l' ho messa in alto e portata a -0.30
                 # 20 nov 2023 dev sell a 0.01 da 0.02
                 # 27 nov 2023 aggiunta and ma2_differenza_2_min_ago < -3
-
+                # 10 dic 2023 and macd_differenza_3_min_ago < 0.30 significa che se macd non cresce abbastanza vuol dire che non ha forza quindi puoi vendere
           
                 
             # nuova condizione AUDI TROVATA
