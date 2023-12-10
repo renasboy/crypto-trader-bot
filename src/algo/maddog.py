@@ -1928,20 +1928,20 @@ class maddog:
                 # ------------------------------------------------------------ BUY 1 LATERALE 2
                 
                 elif (    
-                    ma5_last > ma13_last
+                    ma4_last > ma13_last
                     and ma2_differenza_2_min_ago > 7
-                    and deviation_ma300_sopra_ma450 < 0.15
-                    and deviation_ma300_sopra_ma450 > -0.15
+                    and deviation_ma300_sopra_ma450 < 0.17
+                    and deviation_ma300_sopra_ma450 > -0.17
                     
-                    and deviation_ma100_sopra_ma300 < 0.27
-                    and deviation_ma100_sopra_ma300 > -0.27
+                    and deviation_ma100_sopra_ma300 < 0.29
+                    and deviation_ma100_sopra_ma300 > -0.29
                     
-                    and deviation_ma10_sotto_ma100 < -0.05
-                    and deviation_ma10_sotto_ma100 > -0.20
+                    and deviation_ma10_sotto_ma100 < -0.06
+                    and deviation_ma10_sotto_ma100 > -0.21
                     
-                    and deviation_ma3_sopra_ma10 > 0.04
+                    and deviation_ma3_sopra_ma10 > 0.03
                     and deviation_ma3_sopra_ma16 > 0.07
-                    and deviation_ma4_sopra_ma28 > -0.03
+                    and deviation_ma4_sopra_ma28 > -0.04
                     
                     and ma2_last >= ma2_2_min_ago
                     and macd >= macd_2_min_ago
@@ -1964,7 +1964,7 @@ class maddog:
                     # 11 ott 2023 dev 3-10 a 0.04 da 0.05
                     # 11 ott 2023 dev 3-16 a 0.07 da 0.08
                     # 11 ott 2023 dev 4-28 a -0.03 da -0.02
-                    
+                    # 10 dic 2023 anticipato ndecchiecella
                     
                     
                     
@@ -11494,8 +11494,8 @@ class maddog:
                 
                 elif (
                     
-                    ma4_last > ma28_last
-                    and deviation_ma5_sotto_ma300 > -0.55
+                    ma3_last > ma28_last
+                    and deviation_ma5_sotto_ma300 > -0.57
                     
                     and ma100_last < ma100_180_min_ago
                     and ma200_last < ma200_180_min_ago
@@ -11505,7 +11505,7 @@ class maddog:
                     and ma200_last < ma300_last
                     
                     and deviation_ma3_sopra_ma10 > 0.02
-                    and deviation_ma5_sopra_ma28 > -0.01
+                    and deviation_ma5_sopra_ma28 > -0.02
                     
                     and ma2_last >= ma2_2_min_ago
                     
@@ -11531,7 +11531,7 @@ class maddog:
                     #  4 nov 2023 and ma2_differenza_2_min_ago > 7
                     #  7 nov 2023 and deviation_ma5_sopra_ma28 > 0.01 da 0.02
                     #  7 nov 2023 tolto macd > macd 2 min ago perche' ho gia' tante differenze positive ! vedi 7 nov 2023 ore 5:49
-
+                    # 10 dic 2023 3-28 da 4-28
                 
                 elif (
                     
