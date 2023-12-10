@@ -8480,15 +8480,19 @@ class maddog:
                     
                     and deviation_ma3_sopra_ma18 > 0.02
                     
+                    and ma2_last > ma5_last
                     and macd >= macd_2_min_ago
                     and macd > -11.0
-                    and macd_differenza_2_min_ago > 0.20
+                    and macd_differenza_2_min_ago > 0.30
                 ):  
                 
-                    buy = "BUY 2 laterale con 300>450 and 4-28 and macd > 2.0 and macd_differenza_2_min_ago > 0.20 and deviation_ma3_sopra_ma18 > 0.02 SE GIORNO - r 5412 X1Ax"
+                    buy = "BUY 2 laterale con 300>450 and 4-28 and macd > 2.0 and macd_differenza_2_min_ago > 0.20 and deviation_ma3_sopra_ma18 > 0.02 SE GIORNO - r 5412 X1Ax1"
                     action = "buy"
                     percentage = 80
-                  
+                    
+                    # 10 dic 2023 aggiunta and ma2_last > ma5_last
+
+              
                     
                 elif (    
                     ma4_last > ma28_last
@@ -8503,13 +8507,13 @@ class maddog:
                     
                     and deviation_ma3_sopra_ma18 > 0.11
                     
+                    and ma2_last > ma5_last
                     and macd >= macd_2_min_ago
                     and macd > -11.0
                     and macd_differenza_2_min_ago > 1.3
-                    
-                ):  
                 
-                    buy = "BUY 2 laterale con 300>450 and 4-28 and macd > 2.0 and macd_differenza_2_min_ago > 1.30 and deviation_ma3_sopra_ma18 > 0.11 se NOTTE - r 5412 X1 AX"
+                ):
+                    buy = "BUY 2 laterale con 300>450 and 4-28 and macd > 2.0 and macd_differenza_2_min_ago > 1.30 and deviation_ma3_sopra_ma18 > 0.11 se NOTTE - r 5412 X1 AX2"
                     action = "buy"
                     percentage = 80
                   
@@ -8526,7 +8530,7 @@ class maddog:
                     #  5 nov 2023 and ma2_differenza_2_min_ago > 3
                     #  9 dic 2023 and ma2_differenza_2_min_ago a >5 da >3
                     #  2 ott 2023 and macd_differenza_2_min_ago a >1.3 da > 0.25
-
+                    # 10 dic 2023 aggiunta and ma2_last > ma5_last      
               
                 elif (    
                     ma5_last > ma39_last
