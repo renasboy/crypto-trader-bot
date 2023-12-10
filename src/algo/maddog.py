@@ -30653,7 +30653,7 @@ class maddog:
                 and ma300_last > ma300_301_min_ago
                 
                 
-                and deviation_ma39 < 0.06
+                and deviation_ma39 < 0.07
                 and deviation_sell < 0.02
                 
                 and deviation_ma5_sotto_ma200 > -0.64
@@ -30679,7 +30679,7 @@ class maddog:
                 and ma300_last > ma300_301_min_ago
                 
                 
-                and deviation_ma39 < 0.06
+                and deviation_ma39 < 0.07
                 and deviation_sell < 0.05
                 
                 and deviation_ma5_sotto_ma200 > -0.64
