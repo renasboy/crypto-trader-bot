@@ -5102,9 +5102,9 @@ class maddog:
                     # era 3-7 ma MI DISPIACE TANTO ma ho dovuto mettere 3-16
                     # aggiunto 3-10 0.31
                     # 24 ago 2023 3-10 a 0.20 da 0.31
+
+
                     
-                
-                
                 # BUY 1 CROLLO FERRARI - modo 2 questa condizione e' entrata in azione ! ( e mi e' sembrata ben fatta !)
 
                 elif (
@@ -5123,6 +5123,35 @@ class maddog:
                     # 14 GIU 2022 5-18
                     # 19 apr 2023 5-11 and macd > macd_2_min_ago
                     # 31 lug 2023 tolto ma2_last >= ma2_2_min_ago c'e' il MACD per la ferrari
+
+                
+
+                # condizione crollo ferrari - bird of paradise - snowy white
+                
+                elif (
+                    ma3_last > ma7_last
+                    and deviation_buy_crollo_1 < -2.30
+                    
+                    and ma2_differenza_2_min_ago > 15
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.20
+                    and macd < -150
+                    and macd_differenza_2_min_ago > -18 
+                  
+                ):
+                    buy = "BUY 1 DURANTE IL CROLLO - and ma2_differenza_2_min_ago > 15 E macd_differenza_2_min_ago > -18 ! 3-7 + MACD - bird of paradise - snowy white - r 3545"
+                    action = "buy"
+                    percentage = 90
+
+                    # oggi 11 dic 2023 ore 3:19 il macd e' arrivato tardi !
+                    # ma2 quando il macd risaliva e' andato per 2 min lateralmente o poco sotto e quindi non ha comprato dopo che era gia' un po' tardi
+                    # 11 dic 2023 aggiunto and ma2_differenza_2_min_ago > 15
+                    # 11 dic 2023 aggiunto and macd < -150 CIOE' STA CROLLANDO
+                    # 11 dic 2023 aggiunto and macd_differenza_2_min_ago > -18 CIOE' IL MACD STA COMINCIANDO A NON CROLLARE CIOE' A RALLENTARE IL CROLLO
+                    # 11 dic 2023 and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.20 significa che ma2 sta crescendo
+
+
+
+                
                     
                     
                     
@@ -8157,9 +8186,8 @@ class maddog:
 
 
                 elif (
-                    ma2_last > ma2_2_min_ago
+                    ma3_last > ma7_last
                     and deviation_buy_crollo_1 < -2.30
-                    and ma3_last > ma7_last
                     
                     and ma2_differenza_2_min_ago > 15
                     and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.20
