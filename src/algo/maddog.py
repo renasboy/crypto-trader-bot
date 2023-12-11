@@ -8162,6 +8162,7 @@ class maddog:
                     and ma3_last > ma7_last
                     
                     and ma2_differenza_2_min_ago > 15
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.20
                     and macd < -150
                     and macd_differenza_2_min_ago > -18 
                   
@@ -8179,6 +8180,8 @@ class maddog:
                     # 11 dic 2023 aggiunto and ma2_differenza_2_min_ago > 15
                     # 11 dic 2023 aggiunto and macd < -150 CIOE' STA CROLLANDO
                     # 11 dic 2023 aggiunto and macd_differenza_2_min_ago > -18 CIOE' IL MACD STA COMINCIANDO A NON CROLLARE CIOE' A RALLENTARE IL CROLLO
+                    # 11 dic 2023 and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.20 significa che ma2 sta crescendo
+
                     
                 # BUY 2 secondo modo - DURANTE IL CROLLO - questa condizione e' entrata in azione ! ( e mi e' sembrata ben fatta !)
 
