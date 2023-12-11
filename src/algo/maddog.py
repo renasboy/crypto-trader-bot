@@ -1610,8 +1610,8 @@ class maddog:
                     and deviation_ma5_sopra_ma28 > -0.155
                     
                     and ma2_last >= ma2_2_min_ago
+                    and macd > -8
                     
-                    and macd > -5
                 ):
                     buy = "BUY 1 migliore che considera distanza 5-300 E dev 10-200 < -0.24 E dev 3-18 and deviation_ma3_sopra_ma16 > -0.125 and ma2_diff_2_min_ago > 3 - r 1043 B1"
                     action = "buy"
@@ -1622,7 +1622,7 @@ class maddog:
                     #  9 dic 2023 aggiunto and ma2_differenza_2_min_ago > 3
                     # 11 dic 2023 aggiunto and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.0175 = +7 pts
                     # 11 dic 2023 tolto and macd >= macd_2_min_ago che ha fatto arrivare tardi !
-                    # 11 dic 2023 aggiunto and macd > -5 cioe' IL MACD COMINCIA A NON PERDERE COSI' TANTO
+                    # 11 dic 2023 aggiunto and macd > -8 cioe' IL MACD COMINCIA A NON PERDERE COSI' TANTO
               
                 elif (
                     
