@@ -16036,6 +16036,7 @@ class maddog:
                 
                         and ma2_last <= ma2_2_min_ago 
                         and macd < macd_2_min_ago
+                        and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.015
                     ):
                         sell = "SELL 1 (12-21 min) EX cond.spec. r 16047 B2 con ma300> 5 ore E dev 3-39 < 0.13 and dev_sell < 0.02 con ma50 < e con ma5 sotto ma200 > -0.90 - r 8552"
                         action = "sell"
@@ -16044,7 +16045,7 @@ class maddog:
                         
                         # 27 nov 2023 dev sell a 0.02 da -0.069
                         # 27 nov 2023 dev 39 a 0.13 da 0.05 INCREDIBILE ! 3-39 STAVA A 0.13 ! quando doveva vendere ! nonno mario.
-                    
+                        # 11 dic 2023 aggiunta and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.015 che sarebbero 6 pts !
                         
                 
                 
