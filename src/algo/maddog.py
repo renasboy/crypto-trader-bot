@@ -8146,7 +8146,27 @@ class maddog:
                     and macd < -35
                   
                 ):
-                    buy = "BUY 2 DURANTE IL CROLLO - AVVENTO DEL MACD ! 3-7 + MACD - porcupine tree - lazarus - r 5068"
+                    buy = "BUY 2 DURANTE IL CROLLO - AVVENTO DEL MACD ! 3-7 + MACD - porcupine tree - lazarus - r 5068a"
+                    action = "buy"
+                    percentage = 90
+                    
+                    # deviation_buy_crollo_1 = ma8_last / ma78_last
+                    # 14 GIU 2022 3-15 PERCHE' COMPRAVA CONTINUAMENTE DURANTE IL CROLLO CON 3-7
+                    # 17 mar 2023 ho aggiunto 3-10 > 0.125 vedi 3 mar 2023 ore 2:51
+                    # 27 APR 2023 AVVENTO DEL MACD !
+
+
+                elif (
+                    ma2_last > ma2_2_min_ago
+                    and deviation_buy_crollo_1 < -2.30
+                    and ma3_last > ma7_last
+                    
+                    and ma2_differenza_2_min_ago > 15
+                    and macd < -150
+                    and macd_differenza_2_min_ago > -18 
+                  
+                ):
+                    buy = "BUY 2 DURANTE IL CROLLO - and ma2_differenza_2_min_ago > 15 E macd_differenza_2_min_ago > -18 ! 3-7 + MACD - bird of paradise - snowy white - r 5068b"
                     action = "buy"
                     percentage = 90
                     
@@ -8155,8 +8175,10 @@ class maddog:
                     # 17 mar 2023 ho aggiunto 3-10 > 0.125 vedi 3 mar 2023 ore 2:51
                     # 27 APR 2023 AVVENTO DEL MACD !
                     
-                    
-                    
+                    # 11 dic 2023 tolto macd
+                    # 11 dic 2023 aggiunto and ma2_differenza_2_min_ago > 15
+                    # 11 dic 2023 aggiunto and macd < -150 CIOE' STA CROLLANDO
+                    # 11 dic 2023 aggiunto and macd_differenza_2_min_ago > -18 CIOE' IL MACD STA COMINCIANDO A NON CROLLARE CIOE' A RALLENTARE IL CROLLO
                     
                 # BUY 2 secondo modo - DURANTE IL CROLLO - questa condizione e' entrata in azione ! ( e mi e' sembrata ben fatta !)
 
