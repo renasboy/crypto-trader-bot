@@ -17240,7 +17240,27 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                         and macd < macd_2_min_ago
                     ):
-                        sell = "SELL 1 (21-50 min)  piccola perdita durante il crollo - AGGIUNTA TARDIVA MA FORSE NECESSARIA ! and delta_1 > delta_2 and dev_sell < -0.1155 - r 9354a"
+                        sell = "SELL 1 (21-50 min)  piccola perdita durante il crollo - AGGIUNTA TARDIVA MA FORSE NECESSARIA ! and delta_1 > delta_2 and dev_sell < -0.1155 - r 9354 A1"
+                        action = "sell" 
+
+                  
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and ma20_last > ma39_last
+                        and delta_1 > delta_2
+                        and ma100_last < ma200_last
+                        and ma200_last < ma300_last
+                        
+                        and ma200_last < ma200_120_min_ago
+                        and ma300_last < ma300_120_min_ago
+                   
+                        and deviation_sell < -0.05
+                        and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
+                        and macd_differenza_2_min_ago < -7
+                        and macd < -20
+                    ):
+                        sell = "SELL 1 (21-50 min)  piccola perdita durante il crollo - AGGIUNTA TARDIVA MA forse NECESSARIA ! and delta_1>delta_2 and dev_sell < -0.05 - r 9354 A2"
                         action = "sell"
                         
                         
@@ -17249,8 +17269,9 @@ class maddog:
                         # 30 mag 2023 dev_sell a -0.115 da -0.10
                         # 10 giu 2023 dev_sell a -0.114 da -0.115 ( dopo che ha fatto -0.54% )
                         # 27 giu 2023 dev_sell a -0.1155 da -0.115 se 20>39
-
-
+                        
+                        # 11 dic 2023 aggiunta and macd_differenza_2_min_ago < -7
+                        # 11 dic 2023 aggiunta and macd < -20
                              
                     elif (
                         ma50_last < ma50_2_min_ago
@@ -17293,7 +17314,7 @@ class maddog:
                         and ma2_differenza_2_min_ago < -6
                         
                     ):
-                        sell = "SELL 1 (21-50 min) con ma50 > and deviation_sell < -0.06 and ma3_last < ma50_last - r 9354"
+                        sell = "SELL 1 (21-50 min) con ma50 > and deviation_sell < -0.06 and ma3_last < ma50_last - r 9354x"
                         action = "sell"
 
                         # 25 gen 2023 dev_sell a -0.238 da 0.24 dopo -0.95% ore 10:04 del 24 gen 2023
