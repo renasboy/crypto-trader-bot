@@ -10950,15 +10950,18 @@ class maddog:
                     and ma4_last > ma4_2_min_ago
                     and ma2_last > ma2_2_min_ago
                     and ma7_last > ma25_last
+                    
+                    and ma2_last > ma2_2_min_ago
+                    and macd_differenza_2_min_ago > -3
                 ):
-                    buy = "BUY 3D RIVOLUZIONARIO se ma69 < AND ma78_last < ma200_last AND deviation_ma3_sopra_ma10 > 0.07- r 6356 b"
+                    buy = "BUY 3D RIVOLUZIONARIO se ma69 < AND ma78_last < ma200_last AND deviation_ma3_sopra_ma10 > 0.07 - r 6356 B"
                     action = "buy"
                     percentage = 80
                     
                     # deviation_buy3 = ma4_last/ma30_last
                     # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
-                    
-                    
+                    # 10 dic 2023 aggiunta and ma2_last > ma2_2_min_ago
+                    # 10 dic 2023 aggiunta and macd_differenza_2_min_ago > -3
                     
                  
                     
