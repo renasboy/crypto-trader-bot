@@ -217,7 +217,15 @@ class maddog:
         macd_5_min_ago = self.algo_helper.macd_minutes_ago(5)
 
         ################################################################################################# CONFORTABLY NUMB
-      
+    
+
+
+        # formula DEVIATION_ma2_sopra_o_sotto_ma2_2_min_ago !
+        
+        deviation_ma2_sopra_o_sotto_ma2_2_min_ago = (ma2_last / ma2_2_min_ago - 1) * 100 if ma2_2_min_ago else 0
+        self.algo_helper.info("deviation_ma2_sopra_o_sotto_ma2_2_min_ago: {}".format(deviation_ma2_sopra_o_sotto_ma2_2_min_ago))
+
+        
         # formula ma2_differenza di 2 min ago
         
         ma2_differenza_2_min_ago = (ma2_last - ma2_2_min_ago)
