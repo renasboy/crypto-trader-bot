@@ -14555,7 +14555,7 @@ class maddog:
                 elif (
                  
                     ma78_last < ma150_last
-                    and ma2_differenza_2_min_ago > 5
+                    and ma2_differenza_2_min_ago > 7
                     and deviation_ma5_sotto_ma300 < -0.10
                     
                     and deviation_ma3_sopra_ma10 > 0.057
@@ -14571,9 +14571,9 @@ class maddog:
                     
                     and ma2_last >= ma2_2_min_ago
                     and macd >= macd_2_min_ago
-                    
+                    and ma2_last > ma5_last
                 ):
-                    buy = "BUY 5 29 ago 2022 > 180 min di ribasso 78<150 and 3-16 > 0.06 and macd > macd 2 min ago and ma2_differenza_2_min_ago > 5 - r 7564 B2Y"
+                    buy = "BUY 5 29 ago 2022 > 180 min di ribasso 78<150 and 3-16 > 0.06 and macd > macd 2 min ago and ma2_differenza_2_min_ago > 7 - r 7564 B2Y"
                     action = "buy"
                     percentage = 90
                     
@@ -14588,9 +14588,11 @@ class maddog:
                     
                     # 18 nov 2023 and deviation_ma5_sopra_ma28 < 0.03 da < 0.05
                     #  6 dic 2023 aggiunto and ma2_differenza_2_min_ago > 5
+                    # 10 dic 2023 aggiunto and ma2_last > ma5_last 
+                    # 10 dic 2023 ma2_differenza_2_min_ago >7 da >5
 
               
-                # NELLA CORREZIONE EVENTUALE (SIAMO AL BUY 5 !)   qui NON HO messo and ma50_last > ma100_last
+                # NELLA CORREZIONE EVENTUALE (SIAMO AL BUY 5 !) qui NON HO messo and ma50_last > ma100_last
                 
                 # BUY 5 DURANTE UNA piccola CORREZIONE che NON E' un forte ribasso e NON E' un crollo ! (compare stammi vicino!)
                 
