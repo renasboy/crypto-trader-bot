@@ -217,9 +217,7 @@ class maddog:
         macd_5_min_ago = self.algo_helper.macd_minutes_ago(5)
 
         ################################################################################################# CONFORTABLY NUMB
-    
-
-
+        
         # formula DEVIATION_ma2_sopra_o_sotto_ma2_2_min_ago !
         
         deviation_ma2_sopra_o_sotto_ma2_2_min_ago = (ma2_last / ma2_2_min_ago - 1) * 100 if ma2_2_min_ago else 0
@@ -1594,6 +1592,7 @@ class maddog:
                 elif (
                     
                     ma3_last > ma18_last
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.0175
                     and ma2_differenza_2_min_ago > 3
                     and ma450_last < ma450_360_min_ago
                     and ma300_last < ma300_60_min_ago
