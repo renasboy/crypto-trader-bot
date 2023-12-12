@@ -6211,22 +6211,24 @@ class maddog:
                 # BUY 1 forever young 1 PIU' PRUDENTE se ma 200 > e se ma200 > ma300 AND 78 > 200
                 
                 elif (  
-                    ma100_last > ma300_last
-                    and ma300_last > ma300_301_min_ago
+                    ma5_last > ma28_last
+                    
+                    and ma300_last > ma300_360_min_ago
+                    and ma100_last > ma300_last
+                    
+                    and deviation_ma100_laterale > 0.07
                     
                     and ma5_last > ma200_last
                     and ma3_last > ma11_last
                     
-                    and deviation_ma100_laterale > 0.07
-                    
-                    and deviation_ma3_sopra_ma10 > 0.035
-                    and deviation_ma5_sopra_ma28 > 0.05
+                    and deviation_ma3_sopra_ma10 > 0.02
+                    and deviation_ma3_sopra_ma16 > 0.07
                    
                     and ma2_last >= ma2_2_min_ago
                     and macd >= macd_2_min_ago
                 ):
 
-                    buy = "BUY 1 forever young 1 PIU' PRUDENTE se ma 200 > e se ma100 > ma300 AND 78 > 200 AND 300> 5 ore ago - r 4353"
+                    buy = "BUY 1 forever young 1 PIU' PRUDENTE se ma 200 > e se ma100 > ma300 AND 300> 6 ore ago - r 4353"
                     action = "buy"
                     percentage = 80
                     
