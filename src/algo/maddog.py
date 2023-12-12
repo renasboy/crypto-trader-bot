@@ -12933,6 +12933,7 @@ class maddog:
                     
                 elif (
                     ma5_last >= ma5_2_min_ago
+                    and ma4_last > ma39_last
                     
                     and ma300_last > ma300_60_min_ago
                     and ma450_last > ma450_300_min_ago
@@ -12940,14 +12941,11 @@ class maddog:
                     and deviation_ma250_sopra_ma300 < 0.10
                     and deviation_ma250_sopra_ma300 > -0.10
                     
-                    and delta_buy3_incrocio_ma3_ma8 > 0.05
-                    
-                    and deviation_ma4_sopra_ma30 > 0.08
-                    and deviation_ma5_sopra_ma28 > 0.05
+                    and deviation_ma3_sopra_ma10 > 0.02
+                    and deviation_ma3_sopra_ma16 > 0.03
                     
                     and ma3_last > ma8_last
-                    and ma7_last > ma25_last
-                    
+                    and delta_buy3_incrocio_ma3_ma8 > 0.01
                     and ma2_last > ma2_2_min_ago
                 ):
                     buy = "BUY 4B RIVOLUZIONARIO con ma78 > - r 6859 B1"
@@ -12960,7 +12958,8 @@ class maddog:
                     # 16 set 2023 anticipato ndecchiecella
                     # 28 set 2023 con ma5 > ma5 2 min ago da ma28 > ma28 2 min ago
                     # 28 set 2023 tolto 5-54
-    
+                    # 12 dic 2023 4-39 con aggiunta 3-10 and 3-16  
+              
                 elif (
                     ma5_last >= ma5_2_min_ago
                     
