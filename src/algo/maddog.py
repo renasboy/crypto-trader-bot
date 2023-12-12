@@ -30508,7 +30508,6 @@ class maddog:
             # 5 - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 > -1.00
 
 
-            
             elif (
                 ma78_last > ma78_120_min_ago
                 and ma50_last > ma59_last
@@ -30524,14 +30523,40 @@ class maddog:
                 and deviation_ma5_sotto_ma200 > -0.80
                 and macd_differenza_2_min_ago < -0.20
             ):
-                sell = "SELL condizione speciale CON 50>59 - SALVAGENTE dev 3-39 < 0.02 e dev_sell < -0.02 con ma50 < and macd_diff_2_min_ago < -0.20 - r 16047 A1x"
+                sell = "SELL condizione speciale CON 50>59 - SALVAGENTE dev 3-39 < 0.02 e dev_sell < -0.02 con ma50> and macd_diff_2_min_ago < -0.20 - r 16047 A1x1"
                 action = "sell"
                 
                 # 14 nov 2023 se ma50_last > ma59_last
                 # 27 nov 2023 dev_sell < -0.02 da -0.10
 
+            
+            elif (
+                ma78_last > ma78_120_min_ago
+                and ma50_last > ma59_last
+                and ma50_last < ma50_2_min_ago
+                
+                and deviation_ma39 < 0.10
+                and deviation_sell < 0.02
+                
+                
+                and ma50_last < ma50_2_min_ago
+                and deviation_ma100_sopra_ma300 < 0.40
+                
+                and deviation_ma5_sotto_ma200 > -0.80
+                and ma2_last < ma2_2_min_ago 
+                and macd_differenza_2_min_ago < -5.00
+                and macd < -28
+            ):
+                sell = "SELL condizione speciale SALVAGENTE  CON 50 > 59 - MA macd < -28 and macd_diff_2_min_ago < -5.00 e dev 3-39 < 0.10 e dev_sell < 0.02 con ma50 > - r 16047 A1x2"
+                action = "sell"
+                
+                # 14 nov 2023 se ma50_last > ma59_last
+                # 27 nov 2023 dev_sell < -0.02 da -0.10
+                # 12 dic 2023 MA SE and macd < -28 AND and macd_differenza_2_min_ago < -5.00 vendi un po' prima !
+                # 12 dic 2023 dev 3-39 a 0.10 da 0.05
+                # 12 dic 2023 dev_sell a 0.02 da -0.02
 
-             
+
             elif (
                 ma78_last > ma78_120_min_ago
                 and ma50_last < ma59_last
