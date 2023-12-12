@@ -30818,12 +30818,16 @@ class maddog:
                 
                 and ma2_last <= ma2_2_min_ago 
                 and macd < 5
+                and macd_differenza_2_min_ago < -3
+                and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.018
             ):
-                sell = "SELL cond spec SALVAGENTE 4 con ma 50 > ma 50 2 min ago con ma300 > 5 ore - dev 3-39 < 0.08 and dev_sell < -0.08 e ma5 sotto ma200 > -0.64 - r 16047 B1x"
+                sell = "SELL cond spec SALVAGENTE 4 con ma 50 > ma 50 2 min ago con ma300 > 5 ore - dev 3-39 < 0.08 and dev_sell < -0.08 e ma5 sotto ma200 > -0.64 - r 16047 B1X"
                 action = "sell"
                 
                 # dev_sell < -0.12 da < -0.107 ( portata con -0.119 nel sell 2 )
                 # 12 dic 203 and dev_sell < -0.08 da -0.12
+                # 12 dic 203 aaggiunta nd macd_differenza_2_min_ago < -2
+                # 12 dic 203 aggiunta and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.018 = 7 pts
           
             elif (
                 ma78_last < ma78_120_min_ago
