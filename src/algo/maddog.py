@@ -2671,12 +2671,13 @@ class maddog:
                     and deviation_ma3_sopra_ma18 > -0.03
                     
                     and ma2_last >= ma20_last
-                  
+                    
                     and ma2_last >= ma2_2_min_ago
-                    and macd >= macd_2_min_ago
                     and ma2_differenza_2_min_ago > 3
-                    and macd > -8
                     and ma2_differenza_ma5 > 26
+                    and macd > -10
+                    and macd >= macd_2_min_ago
+                    
                 ):    
                     buy = "BUY 1 compare forever 3>39 con 3-20 E 300 vicina 450 ( anche poco sotto ! ) e 3-16 > 0.01 + MACD > E ma2_diff_2_min_ago > 3 E MACD > -8 - r 1537 A3X 4A"
                     action = "buy"
