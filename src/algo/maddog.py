@@ -11623,7 +11623,7 @@ class maddog:
                 
                 elif (
                     
-                    ma5_last > ma39_last
+                    ma4_last > ma18_last
                     and ma50_differenza_ma59 >= -5
                     and macd > macd_2_min_ago
                     and deviation_ma5_sotto_ma300 < -0.42
@@ -11634,15 +11634,20 @@ class maddog:
                     
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
+
+                    and deviation_ma5_sopra_ma200 < -0.30
+                    and deviation_ma5_sotto_ma300 < -0.30
+                    and deviation_ma5_sotto_ma450 < -0.30
                     
-                    and deviation_ma3_sopra_ma10 > 0.02
-                    and deviation_ma5_sopra_ma28 > 0.01
+                    and deviation_ma3_sopra_ma10 > 0.078
+                    and deviation_ma5_sopra_ma28 < 0.01
                     
                     and ma2_last >= ma2_2_min_ago
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
                     and macd > macd_2_min_ago
-                    and macd > 5
+                    and macd > -5
                 ):
-                    buy = "BUY 3 29 ago 2022 > 180 min di ribasso and ma50_differenza_ma59 >= -5 con 5-39 - r 6572 A2x"
+                    buy = "BUY 3 29 ago 2022 > 180 min di ribasso and ma50_differenza_ma59 >= -5 con 5-39 - r 6572 A2X"
                     action = "buy"
                     percentage = 90
                     
@@ -11650,8 +11655,8 @@ class maddog:
                     # 13 nov 2023 se 50 sta vicina alla 59 (anche un poco sotto) allora compra prima
                     # 13 nov 2023 and deviation_ma5_sopra_ma28 > 0.01 da > 0.02
                     # 13 nov 2023 5-39 da 5-54 posso farlo perche' il sell e' molto piu' reattivo ! RICORDA dev 39 < 0.13 !
-
-              
+                    # 13 dic 2023 4-18 da 5-39
+                    # 13 dic 2023 aggiunta and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02 = 8 pts
 
                 elif (
                     deviation_ma78_sopra_o_sotto_ma78_30_min_ago > -0.03
