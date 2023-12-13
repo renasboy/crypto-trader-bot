@@ -30673,12 +30673,13 @@ class maddog:
                 ma78_last > ma78_120_min_ago
                 and ma50_last < ma59_last
                 
+                and ma2_last < ma2_2_min_ago
                 and ma2_differenza_2_min_ago < -3
                 and macd_differenza_3_min_ago < 0.30
-                and ma2_last < ma2_2_min_ago
                 
-                and deviation_ma39 < 0.05
-                and deviation_sell < 0.01
+                
+                and deviation_ma39 < 0.09
+                and deviation_sell < 0.02
                 
                 and ma50_last < ma50_2_min_ago
                 and deviation_ma100_sopra_ma300 < 0.40
@@ -30686,7 +30687,7 @@ class maddog:
                 and deviation_ma5_sotto_ma200 > -0.80
                 
             ):
-                sell = "SELL condizione speciale 6 CON 50<59 - SALVAGENTE dev 3-39 < 0.05 e dev_sell < 0.01 e ma50 < e macd_diff_3_min_ago < -0.20 e diff macd < -0.30 - r 16047 A1Y2"
+                sell = "SELL condizione speciale 6 CON 50<59 - SALVAGENTE dev 3-39 < 0.09 e dev_sell < 0.02 e ma50 < e macd_diff_3_min_ago < -0.20 e diff macd < -0.30 - r 16047 A1Y2"
                 action = "sell"
                 
                 #   9 GIU 2023 dev 3-39 a -0.17 da -0.25
