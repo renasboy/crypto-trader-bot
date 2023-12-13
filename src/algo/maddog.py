@@ -9144,10 +9144,11 @@ class maddog:
                     and ma150_last > ma150_60_min_ago
                     
                     and ma2_last >= ma2_2_min_ago
+                    and ma2_differenza_2_min_ago > 10
                     and macd >= macd_2_min_ago
-               
+                    and macd_differenza_2_min_ago > 1.50
                 ):
-             
+                    
                     buy = "BUY 2 nuovo RIALZO IMPROVVISO ma trend gia' in rialzo da 120 min and 0.22 sopra ultimo sell se 300>120 min e 100 sopra 300> 0.40 - r 5670a"
                     action = "buy"
                     percentage = 70
@@ -9157,6 +9158,7 @@ class maddog:
                     # 5 mag 2023 and deviation_buy > 0.275 da 0.27
                     # 5 mag 2023 and macd > macd 2 min ago
                     # 27 set 2023 and deviation_buy > 0.272 da > 0.275
+                    # 13 dic 2023 anticipato ndecchiecella se ma20 >= ma20 2 min ago
 
               
                 elif (
@@ -9166,18 +9168,20 @@ class maddog:
                     and deviation_ma100_sopra_ma300 > 0.40
                     and ma300_last > ma300_120_min_ago
                     
-                    and deviation_buy > 0.272
-                    and deviation_ma3_sopra_ma16 > 0.11
-                    and deviation_ma3_sopra_ma18 > 0.08
+                    and deviation_buy > 0.262
+                    and deviation_ma3_sopra_ma10 > 0.05
+                    and deviation_ma3_sopra_ma16 > 0.09
+                    
                     
                     and ma150_last > ma150_60_min_ago
                     
                     and ma2_last >= ma2_2_min_ago
+                    and ma2_differenza_2_min_ago > 10
                     and macd >= macd_2_min_ago
-               
-                ):
-             
-                    buy = "BUY 2 nuovo RIALZO IMPROVVISO ma trend gia' in rialzo da 120 min and 0.272 sopra ultimo sell se 300>120 min e 100 sopra 300> 0.40 - r 5670b"
+                    and macd_differenza_2_min_ago > 1.50
+                ):  
+                    
+                    buy = "BUY 2 nuovo RIALZO IMPROVVISO ma trend gia' in rialzo da 120 min and 0.262 sopra ultimo sell se 300>120 min e 100 sopra 300> 0.40 - r 5670b"
                     action = "buy"
                     percentage = 70
                     
@@ -9186,7 +9190,7 @@ class maddog:
                     # 5 mag 2023 and deviation_buy > 0.275 da 0.27
                     # 5 mag 2023 and macd > macd 2 min ago
                     # 27 set 2023 and deviation_buy > 0.272 da > 0.275
-                    
+                    # 13 dic 2023 and deviation_buy a 0.262 da 0.272
                   
                 # BUY 2 RIALZO IMPROVVISO ! con ma200 > and ma100_last > ma200_last
                 
