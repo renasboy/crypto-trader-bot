@@ -2728,7 +2728,7 @@ class maddog:
               
                 elif (     
                     
-                    ma3_last > ma18_last
+                    ma3_last > ma20_last
                     and ma50_differenza_ma59 >= -14
                     and ma100_last < ma100_60_min_ago
                     
@@ -2750,13 +2750,14 @@ class maddog:
                     and ma2_differenza_2_min_ago >= 12
                     and ma2_differenza_ma5 > 8
                 ):    
-                    buy = "BUY 1 compare forever - con 3-18 E CON 300 ancora vicina alla 450 ( anche un poco sotto ! ) and 3-18 > -0.05 + diff macd > 1.50 AND 2>5 ! - r 1537 A3 Y1"
+                    buy = "BUY 1 compare forever - con 3-18 E CON 300 ancora vicina alla 450 ( anche un poco sotto ! ) and 3-20 + diff macd > 1.50 AND 2>5 ! - r 1537 A3 Y1"
                     action = "buy"
                     percentage = 90
                     
                     #  7 dic 2023 aggiunta and ma2_differenza_ma5 > 7
                     # 11 dic 2023 ma2_differenza_ma5 a 8 da 7
                     # 11 dic 2023 diff macd a 1.50 da 1.05
+                    # 13 dic 2023 3-20 da 3-18
               
                 elif (     
                     
@@ -7102,12 +7103,14 @@ class maddog:
                     and deviation_ma5_sopra_ma28 > -0.11
                     
                     and price >= price_2_min_ago
+                    and ma2_differenza_2_min_ago > 7
                     and macd_differenza_2_min_ago > -3
-                    
                 ):
-                    buy = "BUY 2A laterale - r 4685 BY2Bx"
+                    buy = "BUY 2A laterale - r 4685 BY 2 BX"
                     action = "buy"
                     percentage = 80
+                    
+                    # 13 dic 2023 aggiunta and macd_differenza_2_min_ago > -3
 
 
                 elif (    
