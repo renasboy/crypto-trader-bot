@@ -11635,12 +11635,12 @@ class maddog:
                     and deviation_ma5_sopra_ma28 > -0.02
                     
                     and ma2_last >= ma2_2_min_ago
-                    
-                    and macd > -11
-                    and macd_differenza_2_min_ago > 0.25
                     and ma2_differenza_2_min_ago > 7
+                    and macd > -11
+                    and macd_differenza_2_min_ago > 1.00
+                    
                 ):
-                    buy = "BUY 3 29 ago 2022 > 180 min di ribasso con 4-28 and ma2_differenza_2_min_ago > 7 - r 6572 A1"
+                    buy = "BUY 3 29 ago 2022 > 180 min di ribasso con 4-28 and ma2_differenza_2_min_ago > 7 and macd_differenza_2_min_ago > 1.00 - r 6572 A1"
                     action = "buy"
                     percentage = 90
                     
@@ -11659,6 +11659,7 @@ class maddog:
                     #  7 nov 2023 and deviation_ma5_sopra_ma28 > 0.01 da 0.02
                     #  7 nov 2023 tolto macd > macd 2 min ago perche' ho gia' tante differenze positive ! vedi 7 nov 2023 ore 5:49
                     # 10 dic 2023 3-28 da 4-28
+                    # 13 dic 2023 and macd_differenza_2_min_ago > 1.00
                 
                 elif (
                     
