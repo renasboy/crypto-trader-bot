@@ -14944,8 +14944,6 @@ class maddog:
                     # 27 nov 2023 aggiunta and ma2_differenza_2_min_ago > 3
                     
                     # ATTENZIONE 8 dic 2023 se 78 sotto 200 allora aggiunto diff ma2 > 10 e diff macd >2 CIOE' basta BUY 5 continui ! (se 78 molto sotto 200)
-
-              
                 # BUY 5 migliore EX r 1043 B che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-59
                 
                 elif (
@@ -14977,6 +14975,40 @@ class maddog:
                     percentage = 50
                     
                     # 16 nov 2023 questa condizione l'ho importata dal BUY 1 perche' ha comprato benissimo e mi ha fatto risparmiare un sacco di SELL
+
+
+              
+                elif (     
+                    
+                    ma3_last > ma18_last
+                    and ma2_differenza_2_min_ago > 6
+                    and ma3_differenza_2_min_ago > 5
+                    
+                    and ma100_last < ma100_30_min_ago
+                    and ma450_last > ma450_360_min_ago
+                    
+                    and deviation_ma54_sopra_o_sotto_ma72 < -0.015
+                    
+                    and deviation_ma39_sotto_ma200 < -0.01
+                    and deviation_ma300_sopra_ma450 > -0.50
+                    
+                    and deviation_ma3_sopra_ma10 > 0.027
+                    and deviation_ma3_sopra_ma16 > -0.01
+                    and deviation_ma3_sopra_ma18 > -0.02
+                    
+                    and ma2_last >= ma20_last
+                    
+                    and ma2_last > ma5_last
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                    
+                ):    
+                    buy = "BUY 5 compare forever importato da r 1537 A3y - con 3-18 E CON 300 ancora vicina alla 450 ( anche un poco sotto ! ) and 3-18 > -0.01 + MACD > - r 7600"
+                    action = "buy"
+                    percentage = 90
+
+              
+                
 
                 
                 
