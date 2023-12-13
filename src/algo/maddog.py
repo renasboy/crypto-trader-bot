@@ -30277,10 +30277,12 @@ class maddog:
                 # 18 set 2023 dev 39 da 0.01 da -0.01
                 # 17 OTT 2023 NON METTERE MACD <  MACD 2 MIN AGO
 
+          
             elif (
-                ma8_last < ma8_2_min_ago 
+                ma8_last < ma8_2_min_ago
+                and ma20_last > ma20_2_min_ago
                 and deviation_ma39 < 0.05
-                and deviation_sell < -0.03
+                and deviation_sell < -0.04
                 and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago > 1.50
                 and deviation_ma10_sopra_o_sotto_ma10_30_min_ago < 0.12
                 
@@ -30292,7 +30294,37 @@ class maddog:
                 and ma2_last <= ma2_2_min_ago 
                 and macd_differenza_2_min_ago < -0.25
             ):
-                sell = "SELL cond. special 3 - con ma50 > e CON ma8_last < ma8_2_min_ago and dev 3-39 < 0.05 e dev sell < -0.02  and macd_dif_2_min_ago < -0.25 - r 15985 A1 ok 2Bx"
+                sell = "SELL cond. special 3 - con ma50 > e CON ma8_last < ma8_2_min_ago and dev 3-39 < 0.05 e dev sell < -0.04  and macd_dif_2_min_ago < -0.25 - r 15985 A1 ok 2Bx1"
+                action = "sell"
+                
+                # 18 set 2023 dev sell -0.02 da -0.01
+                # 18 set 2023 dev 39 da 0.01 da -0.01
+                # 17 OTT 2023 NON METTERE MACD <  MACD 2 MIN AGO
+                # 17 ott 2023 and macd_differenza_2_min_ago < -0.25
+                #  9 nov 2023 and deviation_ma10_sopra_o_sotto_ma10_30_min_ago < 0.12 da < 0.10
+                # 15 nov 2023 dev 39 da 0.05 da 0.01
+                # 15 nov 2023 ma50>
+                # 13 dic 2023 dev sell a -0.04 da -0.02 SE ma20_last > ma20_2_min_ago
+            
+          
+            elif (
+                ma8_last < ma8_2_min_ago
+                and ma20_last <= ma20_2_min_ago
+                and deviation_ma39 < 0.05
+                and deviation_sell < -0.03
+                
+                and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago > 1.50
+                and deviation_ma10_sopra_o_sotto_ma10_30_min_ago < 0.12
+                
+                and delta_450_300 < delta_450_300_60_min
+                and ma50_last > ma50_2_min_ago
+                and deviation_ma100_sopra_ma300 > 0.10
+                
+                and deviation_ma3_sotto_ma150 > -1.20
+                and ma2_last <= ma2_2_min_ago 
+                and macd_differenza_2_min_ago < -0.25
+            ):
+                sell = "SELL cond. special 3 - con ma50 > e CON ma8_last < ma8_2_min_ago and dev 3-39 < 0.05 e dev sell < -0.03  and macd_dif_2_min_ago < -0.25 - r 15985 A1 ok 2Bx2"
                 action = "sell"
                 
                 # 18 set 2023 dev sell -0.02 da -0.01
