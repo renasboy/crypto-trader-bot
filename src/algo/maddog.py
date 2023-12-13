@@ -6219,12 +6219,12 @@ class maddog:
                 # BUY 1 forever young 1 PIU' PRUDENTE se ma 200 > e se ma200 > ma300 AND 78 > 200
                 
                 elif (  
-                    ma5_last > ma28_last
+                    ma3_last > ma28_last
                     
                     and ma300_last > ma300_360_min_ago
                     and ma100_last > ma300_last
                     
-                    and deviation_ma100_laterale > 0.07
+                    and deviation_ma100_laterale > 0.05
                     
                     and ma5_last > ma200_last
                     and ma3_last > ma11_last
@@ -6244,8 +6244,8 @@ class maddog:
                     # 2 nov 2023 100 > 300 da 200 > 300
                     # 7 lug 2023 5-28 a 0.05 da 0.09 (300> 5 ore ago!)
                     # 31 lug 2023 and deviation_ma100_laterale > 0.07 da 0.12
-
-
+                    # 13 dic 2023 3-28 da 5-28
+                    # 13 dic 2023 and deviation_ma100_laterale a 0.05 da 0.07
 
           
                 # BUY 1 forever young 2 un po' meno PRUDENTE se 150 > 300 
