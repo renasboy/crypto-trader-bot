@@ -13670,25 +13670,25 @@ class maddog:
                     #  5 dic 2023 and ma2_differenza_ma5 > 8
                     #  8 dic 2023 dev_ma5_sopra_ma28 a 0.02 da -0.02
               
-                elif (
-                    
+                
+                elif (    
                     ma4_last > ma50_last
                     and ma450_last < ma450_120_min_ago
-                    
                     
                     and ma50_last > ma59_last
                     and ma100_last > ma300_last
                     
-                    and deviation_ma5_sopra_ma28 > 0.03
-                    and deviation_ma7_sopra_ma40 > 0.05
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > 0.077
+                    and deviation_ma5_sopra_ma28 > -0.01
                     
                     and ma3_last > ma13_last
                     
                     and ma2_last > ma2_2_min_ago
                     and macd_differenza_2_min_ago > 0.20
-                    and macd > macd_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):
-                    buy = "BUY 5 con 50>59 AND and ma450_last < ma450_120_min_ago and 5-28 > 0.08 CON ma100_last > ma300_last and macd > macd_2_min_ago - r 7144 A2"
+                    buy = "BUY 5 con 50>59 AND and ma450_last < ma450_120_min_ago CON ma100_last > ma300_last and macd > macd_2_min_ago - r 7144 A2"
                     action = "buy"
                     percentage = 70
                     
