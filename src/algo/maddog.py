@@ -14978,6 +14978,8 @@ class maddog:
                     # 27 nov 2023 aggiunta and ma2_differenza_2_min_ago > 3
                     
                     # ATTENZIONE 8 dic 2023 se 78 sotto 200 allora aggiunto diff ma2 > 10 e diff macd >2 CIOE' basta BUY 5 continui ! (se 78 molto sotto 200)
+
+                  
                 # BUY 5 migliore EX r 1043 B che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-59
                 
                 elif (
@@ -15010,6 +15012,42 @@ class maddog:
                     
                     # 16 nov 2023 questa condizione l'ho importata dal BUY 1 perche' ha comprato benissimo e mi ha fatto risparmiare un sacco di SELL
 
+
+                # BUY 1 GRANDE RIBASSO MASERATI CHE NON E' UN CROLLO ! (compare stammi vicino!) HA FUNZIONATO ! viva ro combaro meo !
+              
+                elif (
+                    ma2_last > ma2_2_min_ago
+                    and deviation_buy_crollo_1 < -0.91
+                    and deviation_buy_crollo_1 > -1.80
+                    and deviation_ma5_sopra_ma28 > 0.03
+                    and ma78_last < ma200_last
+                    and macd >= macd_2_min_ago
+                ):
+                    buy = "BUY 5 GRANDE RIBASSO MASERATI CHE NON E' UN CROLLO che ho dovuto mettere! con 5-28 - r 7592"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # deviation_buy_crollo_1 = ma8_last / ma78_last
+                    # questa cosa che 78 deve essere < 200 ha dell' incredibile. MA NON TOCCARE !
+
+              
+
+                # BUY 1 CROLLO FERRARI ! (compare stammi vicino!) HA FUNZIONATO ! viva ro combaro meo !
+              
+                elif (
+                    ma2_last > ma2_2_min_ago
+                    and deviation_buy_crollo_1 < -1.81
+                    
+                    and deviation_ma5_sopra_ma28 > 0.03
+                    and ma78_last < ma200_last
+                    and macd >= macd_2_min_ago
+                ):
+                    buy = "BUY 5 CROLLO FERRARI che ho dovuto mettere! con 5-28 - r 7593"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # deviation_buy_crollo_1 = ma8_last / ma78_last
+                    # questa cosa che 78 deve essere < 200 ha dell' incredibile. MA NON TOCCARE !
 
               
                 elif (     
