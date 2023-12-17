@@ -15765,8 +15765,8 @@ class maddog:
                         and ma300_last < ma300_301_min_ago
                         and ma2_differenza_2_min_ago < -9
                         
-                        and deviation_ma39 < 0.05
-                        and deviation_sell < -0.07
+                        and deviation_ma39 < 0.08
+                        and deviation_sell < -0.05
                         
                         and ma50_last <= ma50_2_min_ago
                         and deviation_ma100_sopra_ma300 < 0.40
@@ -15780,14 +15780,16 @@ class maddog:
                         and ma2_differenza_2_min_ago < -9
                         and ma50_differenza_ma59 < -6
                     ):
-                        sell = "SELL 1 (5-12 min) EX cond. spec. r 16047 B2 con ma300> 5 ore - dev 3-39 < 0.05 E dev_sell < -0.07 con ma50 < e con macd < 2 min e macd < 17 - r 8261b"
+                        sell = "SELL 1 (5-12 min) EX cond. spec. r 16047 B2 con ma300> 5 ore - dev 3-39 < 0.08 E dev_sell < -0.05 con ma50 < e con macd < 2 min e macd < 17 - r 8261 B"
                         action = "sell"
                         
                         # 12 nov 2023 ho messo 2 volte and ma2_differenza_2_min_ago < -9 perche' non l' ha presa !
                         # 12 nov 2023 and deviation_sell < -0.07
                         # 12 nov 2023 aggiunta and ma50_differenza_ma59 < -6 se ma 50 sta LONTANA alla ma59 allora DIMINUISCO la perdita.
+                        # 17 dic  2023 and deviation_ma39 a 0.08 da 0.05
+                        # 17 dic  2023 and deviation_sell a -0.05 da -0.07
+
                   
-                    
                     elif (
                         ma78_last < ma78_120_min_ago
                         and ma2_differenza_2_min_ago < -17
