@@ -13776,7 +13776,7 @@ class maddog:
 
             else:
                 if (    
-                    ma3_last > ma39_last
+                    ma3_last > ma20_last
                     and ma2_differenza_ma5 > 8
                     and ma2_differenza_2_min_ago > 5
                     and ma450_last >= ma450_120_min_ago
@@ -13785,14 +13785,14 @@ class maddog:
                     
                     and deviation_ma3_sopra_ma10 > 0.01
                     and deviation_ma3_sopra_ma18 > 0.077
-                    and deviation_ma5_sopra_ma28 > -0.02
+                    and deviation_ma5_sopra_ma28 > -0.03
                     
                     and ma3_last > ma13_last
                     
                     and ma2_last > ma2_2_min_ago
                     and macd > macd_2_min_ago
                 ):
-                    buy = "BUY 5 con 450_last >= 450_120_min_ago and 5-28 > 0.02 CON 50 > 450 and ma2_differenza_ma5 > 8 - r 7144 A1"
+                    buy = "BUY 5 con 3-20 and 450_last >= 450_120_min_ago and 5-28 > 0.02 CON 50 > 450 and ma2_differenza_ma5 > 8 - r 7144 A1"
                     action = "buy"
                     percentage = 70
                     
@@ -13810,7 +13810,7 @@ class maddog:
                     #  1 dic 2023 5-28 a 0.02 da 0.05
                     #  5 dic 2023 and ma2_differenza_ma5 > 8
                     #  8 dic 2023 dev_ma5_sopra_ma28 a 0.02 da -0.02
-              
+                    # 18 dic 2023 3-20 da 3-39
                 
                 elif (    
                     ma4_last > ma50_last
