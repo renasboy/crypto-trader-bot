@@ -2562,7 +2562,8 @@ class maddog:
                 
                 elif (     
                     
-                    ma3_last > ma39_last
+                    ma3_last > ma30_last
+                    
                     and ma2_differenza_2_min_ago > 5
                     and ma2_last > ma8_last
                     and deviation_ma50_sotto_ma300 > -0.13
@@ -2573,19 +2574,16 @@ class maddog:
                     and deviation_ma54_sopra_o_sotto_ma72 < -0.015
                     
                     and deviation_ma39_sotto_ma200 < -0.02
-                    and deviation_ma300_sopra_ma450 > -0.50
+                    and deviation_ma300_sopra_ma450 > -0.60
                     
                     and deviation_ma3_sopra_ma10 > 0.017
-                    and deviation_ma3_sopra_ma16 > 0.09
+                    and deviation_ma3_sopra_ma16 > 0.08
                     and deviation_ma3_sopra_ma18 > -0.01
                     
-                    and ma2_last >= ma20_last
-                  
                     and ma2_last >= ma2_2_min_ago
                     
-                    
                 ):    
-                    buy = "BUY 1 compare forever - con 3-20 E CON 300 ancora vicina 450 ( anche un poco sotto ! ) e 3-16 > 0.09 + MACD > E ma2_diff_2_min_ago > 5 - r 1537 A3 X2 X"
+                    buy = "BUY 1 compare forever - con 3-30 E CON 300 ancora vicina 450 ( anche un poco sotto ! ) e 3-16 > 0.09 + MACD > E ma2_diff_2_min_ago > 5 - r 1537 A3 X2 X"
                     action = "buy"
                     percentage = 90
                     
@@ -2593,7 +2591,10 @@ class maddog:
                     # 17 nov 2023 tolto and macd >= macd_2_min_ago ! 
                     # 17 nov 2023 aggiunto and ma2_last > ma8_last ! al suo posto. cazzo.
                     # 17 nov 2023 and deviation_ma3_sopra_ma16 a 0.09 da 0.001
-                
+                    # 18 dic 2023 ma3_last > ma30_last da 3-39
+                    # 17 nov 2023 and deviation_ma3_sopra_ma16 a 0.08 da 0.09
+              
+              
                 elif (     
                     
                     ma3_last > ma20_last
