@@ -33157,7 +33157,7 @@ class maddog:
             elif (
                 seconds_since_last_trade > 0 and seconds_since_last_trade < 3000
                 and ma300_last < ma300_180_min_ago
-                and ma3_last < ma25_last
+                and ma3_last < ma20_last
                 
                 and deviation_sell > 0.60
                 and deviation_sell < 1.05
@@ -33167,11 +33167,11 @@ class maddog:
                 and macd < -20
                 and macd_differenza_2_min_ago < -0.40
             ):    
-                sell = "SELL condizione POCHI MALEDETTI E SUBITO da 0 a 50 min con 3-25 E con dev_sell 0.60 - 1.05 and macd < -20 - INTANTO TE LI PRENDI - r 16888"
+                sell = "SELL condizione POCHI MALEDETTI E SUBITO da 0 a 50 min con 3-20 E con dev_sell 0.60 - 1.05 and macd < -20 - INTANTO TE LI PRENDI - r 16888"
                 action = "sell"
                 
                 # 24 ago 2023 and macd < -5
-
+                # 18 dic 203 3-20 da 3-25
           
             
           
