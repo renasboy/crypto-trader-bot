@@ -12296,15 +12296,18 @@ class maddog:
                     and ma7_last > ma25_last
                     
                     and ma2_last > ma2_2_min_ago
-             
+                    and ma2_differenza_2_min_ago > 0.02
+                    and macd_differenza_2_min_ago > 1.10
                 ):
-                    buy = "BUY 3 con 39>100 - r 6599 A2x"
+                    buy = "BUY 3 con 39>100 and ma2_differenza_2_min_ago > 0.02 and macd_differenza_2_min_ago > 1.10 - r 6599 A2x"
                     action = "buy"
                     percentage = 50
                     
                     # 28 set aggiunta 3-10
-                    
-                    
+                    # 18 dic 2023 aggiunta and ma2_differenza_2_min_ago > 0.02
+                    # 18 dic 2023 aggiunta and macd_differenza_2_min_ago > 1.10
+
+                
                 elif (
                     ma69_last >= ma69_2_min_ago
                     and ma39_last < ma150_last
