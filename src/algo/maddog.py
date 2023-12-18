@@ -13778,7 +13778,7 @@ class maddog:
                 if (    
                     ma3_last > ma20_last
                     and ma2_differenza_ma5 > 8
-                    and ma2_differenza_2_min_ago > 5
+                    and ma2_differenza_2_min_ago > 8
                     and ma450_last >= ma450_120_min_ago
                     
                     and ma50_last > ma450_last
