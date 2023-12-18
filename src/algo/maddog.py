@@ -13079,23 +13079,24 @@ class maddog:
                 elif (
                     ma5_last >= ma5_2_min_ago
                     
-                    and ma300_last > ma300_60_min_ago
                     and ma450_last < ma450_300_min_ago
+                    and ma300_last > ma300_60_min_ago
                     
-                    and deviation_ma250_sopra_ma300 < 0.10
-                    and deviation_ma250_sopra_ma300 > -0.10
+                    and deviation_ma250_sopra_ma300 < 0.12
+                    and deviation_ma250_sopra_ma300 > -0.12
                     
                     and delta_buy3_incrocio_ma3_ma8 > 0.05
                     
-                    and deviation_ma4_sopra_ma30 > 0.08
-                    and deviation_ma5_sopra_ma28 > 0.06
-                    
-                    and ma3_last > ma8_last
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > 0.077
+                    and deviation_ma4_sopra_ma30 > 0.02
                     and ma7_last > ma25_last
                     
+                    and ma3_last > ma8_last
                     and ma2_last > ma2_2_min_ago
+                    
                 ):
-                    buy = "BUY 4B RIVOLUZIONARIO con ma78 > - r 6859 B2"
+                    buy = "BUY 4B RIVOLUZIONARIO situazione laterale - r 6859 B2"
                     action = "buy"
                     percentage = 70
                     
@@ -13105,8 +13106,9 @@ class maddog:
                     # 16 set 2023 anticipato ndecchiecella
                     # 28 set 2023 con ma5 > ma5 2 min ago da ma28 > ma28 2 min ago 
                     # 28 set 2023 tolto 5-54
-                    # 28 set 2023 5-28 >0.06 da 0.06 (con 450 < 450 300 min)
-
+                    # 28 set 2023 5-28 a 0.06 (con 450 < 450 300 min)
+                    # 18 dic 2023 deviation_ma250_sopra_ma300 a 0.12 da 0.10
+                    # 18 dic 2023 deviation_ma250_sopra_ma300 a -0.12 da -0.10
 
                 
                 elif (
