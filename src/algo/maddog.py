@@ -2527,7 +2527,6 @@ class maddog:
                     
                     # 19 ott 2023 4-13 da 5-20
                     # 12 nov 2023 aggiunta and ma50_differenza_ma59 > -5 cioe' se 50 sta LONTANA alla 59
-              
                 elif (     
                     
                     ma3_last > ma20_last
@@ -2549,17 +2548,45 @@ class maddog:
                   
                     and ma2_last >= ma2_2_min_ago
                     and macd >= macd_2_min_ago
-                    
-                    
+                  
                 ):    
-                    buy = "BUY 1 compare forever - con 3-20 E CON 300 ancora vicina 450 ( anche un poco sotto ! ) e 3-18 > -0.01 + MACD > E ma2_diff_2_min_ago > 7 - r 1537 A3 X1"
+                    buy = "BUY 1 compare forever - con 3-20 E CON 300 ancora vicina 450 ( anche un poco sotto ! ) e 3-18 > -0.01 + MACD > E ma2_diff_2_min_ago > 7 - r 1537 A3 X1 x"
+                    action = "buy"
+                    percentage = 90
+                  
+                elif (     
+                    
+                    ma3_last > ma15_last
+                    and (ma3_prev < ma250_prev and ma3_last > ma250_last)
+                    and ma2_differenza_2_min_ago > 7
+                    and ma3_differenza_2_min_ago > 8
+                    
+                    and ma200_last > ma300_last
+                    and ma100_last > ma100_65_min_ago
+                    and ma100_last > ma100_120_min_ago
+                    and deviation_ma54_sopra_o_sotto_ma72 < -0.015
+                    
+                    and deviation_ma39_sotto_ma200 < -0.01
+                    and deviation_ma300_sopra_ma450 > -0.50
+                    
+                    and deviation_ma3_sopra_ma10 > 0.017
+                    and deviation_ma3_sopra_ma16 > 0.001
+                    and deviation_ma3_sopra_ma18 > -0.01
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    
+                    and macd_differenza_2_min_ago > 1.20
+                   
+                ):    
+                    buy = "BUY 1 compare forever - con 200>300 e incrocio al rialzo 3-250 e 3-15 e 300 ancora vicina 450 + MACD > E ma2_diff_2_min_ago >7 e diff macd - r 1537 A3 X1 y"
                     action = "buy"
                     percentage = 90
                     
                     # 25 nov 2023 per anticipare di una ndecchiecella SEMBRA STRANO MA HO DOVUTO METTERE ma100>65 min
                     #  7 dic 2023 aggiunta and ma3_differenza_2_min_ago > 8
                     #  7 dic 2023 ma2_differenza_2_min_ago > 7 da > 3
-                
+                    # 18 dic 2023 aggiunta incrocio al rialzo 3-250 mentre CRESCE evidentemente e con il conforto di diff ma2 e diff macd !
+              
                 elif (     
                     
                     ma3_last > ma30_last
