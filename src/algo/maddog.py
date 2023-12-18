@@ -3986,7 +3986,7 @@ class maddog:
                 
                 elif (
                     ma3_last > ma25_last
-                    and macd >= macd_2_min_ago
+                    
                     and ma100_last > ma100_10_min_ago
                     
                     and ma100_last > ma100_120_min_ago
@@ -3998,18 +3998,25 @@ class maddog:
                     
                     and deviation_buy_crollo_1 < -0.33
                     and deviation_buy_crollo_1 > -0.69
+                    
+                    
                     and ma2_last > ma2_2_min_ago
-                    
-                    and deviation_ma5_sopra_ma28 > 0.10
-                    
+                    and ma2_last > ma3_last
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
+                    and macd_differenza_2_min_ago > 1.10
+                    and macd > -40
                 ):    
                     
                     buy = "BUY 1 piccola CORREZIONE FIAT = r 995 RCCR medie mobili lunghe TUTTE IN RIALZO ! ma si verifica una correzione fiat ! - r 2527"
                     action = "buy"
                     percentage = 80
-                    
-                    
-                
+
+                    # 18 dic 2023 tolta macd > macd 2 min ago (fa arrivare in ritardo)
+                    # 18 dic 2023 aggiunta and ma2_last > ma3_last
+                    # 18 dic 2023 aggiunta and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
+                    # 18 dic 2023 aggiunta and macd_differenza_2_min_ago > 1.10
+
+
                 
                 # BUY 1 piccola CORREZIONE FIAT = r 995 RCCR medie mobili lunghe TUTTE IN RIALZO MA ma100 COMINCIA A RIPIEGARE ! correzione fiat
                 
