@@ -31305,15 +31305,16 @@ class maddog:
                 #  6 dic 2023 dev_sell < 0.05 da -0.06
                 
                 # oggi 10 dicembre 2023 ascolta mario ! SE ma20_last <= ma20_2_min_ago DEV SELL a 0.05
-          
+
+            
             elif (
                 ma78_last < ma78_120_min_ago
+                and ma20_last > ma20_2_min_ago
                 and ma300_last < ma300_301_min_ago
                 and delta_150_100 <= delta_150_100_60_min
                 
                 and deviation_ma39 < 0.05
                 and deviation_sell < -0.109
-                
                 
                 and ma50_last <= ma50_2_min_ago
                 and deviation_ma100_sopra_ma300 < 0.40
@@ -31323,13 +31324,39 @@ class maddog:
                 and ma2_last <= ma2_2_min_ago 
                 and macd < macd_2_min_ago
             ):
-                sell = "SELL condizione speciale 6 GIORNO con ma300> 5 ore - dev 3-39 < 0.05 and dev_sell < -0.109 - con ma50 < e con ma5 sotto ma200 > -0.90 - r 16047 B2"
+                sell = "SELL condizione speciale 6 GIORNO con ma300> 5 ore - dev 3-39 < 0.05 and dev_sell < -0.109 - con ma50 < e con ma5 sotto ma200 > -0.90 - r 16047 B2x"
                 action = "sell"
                 
                 # 15 set 2023 quando 300 scende da 5 ore non devi vendere in perdita ! a ricomprare ci penseranno altre condizioni !
                 # 15 set 2023 quando GIORNO a -0.11 da -0.07
-          
-          
+                # oggi 18 dicembre 2023 ascolta mario ! SE ma20_last > ma20_2_min_ago DEV SELL a -0.105
+            
+            elif (
+                ma78_last < ma78_120_min_ago
+                and ma20_last <= ma20_2_min_ago
+                and ma300_last < ma300_301_min_ago
+                and delta_150_100 <= delta_150_100_60_min
+                
+                and deviation_ma39 < 0.10
+                and deviation_sell < -0.02
+                
+                and ma50_last <= ma50_2_min_ago
+                and deviation_ma100_sopra_ma300 < 0.40
+                
+                and deviation_ma5_sotto_ma200 > -0.90
+                
+                and ma2_last <= ma2_2_min_ago 
+                and macd < macd_2_min_ago
+            ):
+                sell = "SELL condizione speciale 6 GIORNO con ma300> 5 ore - dev 3-39 < 0.10 and dev_sell < -0.01 - con ma50 < e con ma5 sotto ma200 > -0.90 - r 16047 B2y"
+                action = "sell"
+                
+                # 15 set 2023 quando 300 scende da 5 ore non devi vendere in perdita ! a ricomprare ci penseranno altre condizioni !
+                # 15 set 2023 quando GIORNO a -0.11 da -0.07
+                # oggi 18 dicembre 2023 ascolta mario ! SE ma20_last <= ma20_2_min_ago DEV SELL a -0.01 da -0.109
+                # oggi 18 dicembre 2023 ascolta mario ! SE ma20_last <= ma20_2_min_ago DEV 39 a 0.10 da 0.05
+
+            
             elif (
                 ma78_last < ma78_120_min_ago
                 and ma2_differenza_2_min_ago < -7
