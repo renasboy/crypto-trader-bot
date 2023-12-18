@@ -24154,16 +24154,19 @@ class maddog:
                     elif (  
                         ma50_last < ma50_2_min_ago
                         and ma150_last < ma300_last
-                        and ma2_last < ma2_2_min_ago 
-                        and deviation_ma39 < -0.215
                         and deviation_trend_ma100 < 0.10
+                        
+                        and deviation_ma39 < 0.05
+                        and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
                     ):
-                        sell = "SELL 2 110-240 min con ma50 < MA ma100 < con deviation_ma39 <-0.215 and 150 < 300 - r 12462 B"
+                        sell = "SELL 2 110-240 min con ma50 < MA ma100 < con deviation_ma39 <-0.215 and 150 < 300 and deviation_sell < -0.01 - r 12462 B"
                         action = "sell"
                         
                         # 25 gen 2023 dev_39 0.215 da 0.22
-                        
-                        
+                        # 18 dic 2023 aggiunta and deviation_sell < -0.01
+                        # 18 dic 2023 and deviation_ma39 a 0.05 da -0.21 ( ma39 va da sola soltanto con grande rialzo cioe' con ma100 molto sopra ma300 )
+                        # 18 dic 2023 aggiunta and macd < macd_2_min_ago
                 
                     elif (    
                         ma50_last < ma50_2_min_ago 
