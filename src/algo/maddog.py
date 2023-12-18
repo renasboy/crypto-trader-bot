@@ -14254,33 +14254,62 @@ class maddog:
                 
                 
                 # BUY 5 TUTTE LE ma IN CRESCITA
-                
                 elif (
                     ma69_last < ma69_2_min_ago
-                    and deviation > -0.30
-                    
-                    and deviation_buy3 > 0.03
-                    and deviation_ma13_sopra_ma25 > 0.040
-                    and delta_buy3_incrocio_ma3_ma8 > 0.07
-                    and deviation_ma4_sopra_ma30 > 0.15
-                    and ma3_last > ma8_last
-                    and ma3_last > ma78_last
-                    and ma4_last > ma4_2_min_ago
-                    and ma2_last > ma2_2_min_ago
-                    and ma7_last > ma25_last
-                    
                     and ma100_last > ma200_last
                     and ma200_last > ma300_last
                     
                     and ma300_last > ma300_60_min_ago
+                    
+                    and deviation > -0.30
+                    
+                    and deviation_ma4_sopra_ma30 > 0.10
+                    and deviation_ma13_sopra_ma25 > 0.03
+                    and delta_buy3_incrocio_ma3_ma8 > 0.07
+                    
+                    
+                    and ma7_last > ma25_last
+                    
+                    and ma3_last > ma8_last
+                    and ma3_last > ma78_last
+                    and ma4_last > ma4_2_min_ago
+                    and ma2_last > ma2_2_min_ago
+                    
                 ):
-                    buy = "BUY 5 CON TUTTE LE ma IN CRESCITA - r 7352"
+                    buy = "BUY 5 con 69< MA CON TUTTE LE ma IN CRESCITA - r 7352"
                     action = "buy"
                     percentage = 70
                     
                     # deviation_buy3 = ma4_last/ma30_last
                     # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
+
+                
+                elif (
+                    ma69_last < ma69_2_min_ago
+                    and ma100_last > ma200_last
+                    and ma200_last > ma300_last
+                    and (ma5_prev < ma100_prev and ma5_last > ma100_last)
+                    and ma300_last > ma300_60_min_ago
                     
+                    and deviation > -0.30
+                    
+                    and deviation_ma4_sopra_ma30 > 0.10
+                    and delta_buy3_incrocio_ma3_ma8 > 0.07
+                    and ma7_last > ma25_last
+                    
+                    and ma3_last > ma8_last
+                    and ma3_last > ma78_last
+                    
+                    and ma2_last > ma2_2_min_ago
+                    
+                ):
+                    buy = "BUY 5 nuova condizione con 69< MA CON TUTTE LE ma IN CRESCITA con incrocio dal basso 5-100 vocazione tardiva - r 7353"
+                    action = "buy"
+                    percentage = 70
+                    
+                    # deviation_buy3 = ma4_last/ma30_last
+                    # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
+                    # 18 dic 2023 nuova condizione con (ma5_prev < ma100_prev and ma5_last > ma100_last) vedi 14 dic 2023 ore 20:52
                     
                     
                     
