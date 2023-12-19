@@ -91,6 +91,7 @@ class maddog:
         ma5_2_min_ago = self.algo_helper.ma_minutes_ago(5, 2)
         ma5_10_min_ago = self.algo_helper.ma_minutes_ago(5, 10)
         ma5_11_min_ago = self.algo_helper.ma_minutes_ago(5, 11)
+        ma5_30_min_ago = self.algo_helper.ma_minutes_ago(5, 30)
         ma5_60_min_ago = self.algo_helper.ma_minutes_ago(5, 60)
         ma5_1080_min_ago = self.algo_helper.ma_minutes_ago(5, 1080)
         
@@ -435,7 +436,15 @@ class maddog:
         deviation_ma10_sopra_o_sotto_ma10_30_min_ago = (ma10_last / ma10_30_min_ago - 1) * 100 if ma10_30_min_ago else 0
         self.algo_helper.info("deviation_ma10_sopra_o_sotto_ma10_30_min_ago: {}".format(deviation_ma10_sopra_o_sotto_ma10_30_min_ago))
 
+        
 
+        # formula DEVIATION_ma5_sopra_o_sotto_ma5_30_min_ago
+        
+        deviation_ma5_sopra_o_sotto_ma5_30_min_ago = (ma5_last / ma5_30_min_ago - 1) * 100 if ma5_30_min_ago else 0
+        self.algo_helper.info("deviation_ma5_sopra_o_sotto_ma5_30_min_ago: {}".format(deviation_ma5_sopra_o_sotto_ma5_30_min_ago))
+
+
+      
         # formula DEVIATION_ma5_sopra_o_sotto_ma5_60_min_ago
         
         deviation_ma5_sopra_o_sotto_ma5_60_min_ago = (ma5_last / ma5_60_min_ago - 1) * 100 if ma5_60_min_ago else 0
@@ -13095,7 +13104,6 @@ class maddog:
                     # ma se 250 > 300 ! serve una forza minore
 
               
-                    
                 elif (
                     ma5_last >= ma5_2_min_ago
                     and ma4_last > ma39_last
@@ -13113,7 +13121,41 @@ class maddog:
                     and delta_buy3_incrocio_ma3_ma8 > 0.01
                     and ma2_last > ma2_2_min_ago
                 ):
-                    buy = "BUY 4B RIVOLUZIONARIO con ma78 > - r 6859 B1"
+                    buy = "BUY 4B RIVOLUZIONARIO con ma78 > - r 6859 B1x"
+                    action = "buy"
+                    percentage = 70
+                    
+                    # deviation_buy3 = ma4_last/ma30_last
+                    # deviation_ma4_sopra_ma100 > 0.25 arrivati al buy 4 DEVE AVERE UNA CERTA FORZA !
+                    # ma se 250 > 300 ! serve una forza minore
+                    # 16 set 2023 anticipato ndecchiecella
+                    # 28 set 2023 con ma5 > ma5 2 min ago da ma28 > ma28 2 min ago
+                    # 28 set 2023 tolto 5-54
+                    # 12 dic 2023 4-39 con aggiunta 3-10 and 3-16
+
+                
+                elif (
+                    ma5_last >= ma5_2_min_ago
+                    and ma3_last > ma20_last
+                    and ma20_last < ma20_10_min_ago
+                    and deviation_ma5_sopra_o_sotto_ma5_30_min_ago < -0.40
+                    
+                    and ma50_last > ma50_50_min_ago
+                    and ma100_last > ma100_60_min_ago
+                    and ma200_last > ma200_60_min_ago
+                    and ma300_last > ma300_60_min_ago
+                    
+                    and deviation_ma3_sopra_ma10 > 0.02
+                    and deviation_ma3_sopra_ma16 > 0.03
+                    
+                    and ma3_last > ma8_last
+                    
+                    and ma2_last > ma2_2_min_ago
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
+                    and macd > macd_2_min_ago
+                    and macd_differenza_2_min_ago > 0.30
+                ):
+                    buy = "BUY 4B nuovo durante una correzione ma tutte le ma continuano ad essere crescenti - r 6859 B1y"
                     action = "buy"
                     percentage = 70
                     
