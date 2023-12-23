@@ -10261,8 +10261,8 @@ class maddog:
                 elif (     
                     
                     ma3_last > ma18_last
-                    and ma2_differenza_2_min_ago > 6
-                    and ma3_differenza_2_min_ago > 5
+                    and ma2_differenza_2_min_ago > 9
+                    and ma3_differenza_2_min_ago > 6
                     
                     and ma100_last < ma100_30_min_ago
                     and ma450_last > ma450_360_min_ago
@@ -10281,9 +10281,10 @@ class maddog:
                     and ma2_last > ma5_last
                     and ma2_last >= ma2_2_min_ago
                     and macd >= macd_2_min_ago
-                    
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
+                    and macd_differenza_2_min_ago > 0.30
                 ):    
-                    buy = "BUY 2 compare forever importato da r 1537 A3y - con 3-18 E CON 300 ancora vicina alla 450 ( anche un poco sotto ! ) and 3-18 > -0.01 + MACD > - r 5995 A"
+                    buy = "BUY 2 compare forever importato da r 1537 A3y con 3-18 E CON 300 ancora vicina alla 450 ( anche un poco sotto ! ) and 3-18 > -0.01 + MACD > - r 5995 A"
                     action = "buy"
                     percentage = 90
                     
@@ -10294,8 +10295,12 @@ class maddog:
                     #  1 dic 2023 aggiunto and ma2_differenza_2_min_ago > 5
                     #  7 dic 2023 aggiunta and ma3_differenza_2_min_ago > 5
                     #  7 dic 2023 diff ma2 a > 6 da > 5
-
-
+                    
+                    # 23 dic 2023 diff ma2 a 9 da 6
+                    # 23 dic 2023 and ma3_differenza_2_min_ago a 6 da 5
+                    # 23 dic 2023 aggiunta and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
+                    # 23 dic 2023 aggiunta and macd_differenza_2_min_ago > 0.30
+                
                 elif (     
                     
                     ma3_last > ma20_last
@@ -11543,8 +11548,10 @@ class maddog:
                     
                     and macd >= macd_2_min_ago
                     and macd > -24.0
-                    and macd_differenza_2_min_ago > 0.20
-                    and ma2_differenza_2_min_ago > 3
+                    and macd_differenza_2_min_ago > 0.30
+                    
+                    and ma2_differenza_2_min_ago > 8
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
                     
                     and ma300_last > ma300_120_min_ago
                     and ma450_last > ma450_480_min_ago
@@ -11553,18 +11560,20 @@ class maddog:
                     and deviation_ma100_sopra_ma300 > -0.30
                     
                     and deviation_ma3_sopra_ma18 > 0.02
-                     
+                    and ma2_last > ma5_last 
                 ):  
                 
-                    buy = "BUY 3 laterale IMPORTATA dal buy 2 con 300>450 and 4-28 and macd > 2.0 and macd_differenza_2_min_ago > 0.20 - r 6510"
+                    buy = "BUY 3 laterale IMPORTATA dal buy 2 con 300>450 and 4-28 and macd > 2.0 and macd_differenza_2_min_ago > 0.30 - r 6510"
                     action = "buy"
                     percentage = 80
 
                     # sembra che non legga and macd >= macd_2_min_ago (forse se e' poca la differenza)
                     # 18 nov 2023 aggiunta anche and ma2_differenza_2_min_ago > 3
-                           
-                    
-                  
+                    # 23 dic 2023 and ma2_differenza_2_min_ago a 8 da 3      
+                    # 23 dic 2023 and macd_differenza_2_min_ago a 0.30 da 0.20
+                    # 23 dic 2023 aggiunta and ma2_last > ma5_last
+
+                
                 # BUY 3 primo modo che ci riprova DURANTE IL CROLLO !
 
                 elif (
