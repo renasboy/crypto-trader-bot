@@ -28149,9 +28149,35 @@ class maddog:
                         # 17 nov 203 aggiunto and ma2_differenza_2_min_ago < -5
                     
 
+                    elif (
+                        ma78_last > ma78_120_min_ago
+                        and ma10_last > ma20_last
+                        and ma50_last < ma59_last
+                
+                        and deviation_ma39 < 0.05
+                        and deviation_sell < 0.01
+                
+                        and ma2_last < ma2_2_min_ago 
+                
+                        and ma50_last < ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 < 0.40
+                
+                        and deviation_ma5_sotto_ma200 > -0.80
+                        
+                        and ma2_last < ma3_last
+                        and macd_differenza_2_min_ago < -0.20
+                        and ma2_differenza_2_min_ago < -8
+                    ):
+                        sell = "SELL 4-5-x (3-7 min) EX cond spec 16047 A1Y CON 50<59 con dev 3-39 < 0.05 e dev_sell < 0.05 con ma50 < and macd_diff_2_min_ago < -0.20 - r 14588x"
+                        action = "sell"
+                        
+                        # 24 dic 2023 se 10>20 and deviation_sell a 0.01 da 0.05
+                        # 24 dic 2023 se 10>20 and ma2_differenza_2_min_ago < -8 da -6
+
                     
                     elif (
                         ma78_last > ma78_120_min_ago
+                        and ma10_last < ma20_last
                         and ma50_last < ma59_last
                 
                         and deviation_ma39 < 0.05
@@ -28166,7 +28192,7 @@ class maddog:
                         and macd_differenza_2_min_ago < -0.20
                         and ma2_differenza_2_min_ago < -6
                     ):
-                        sell = "SELL 4-5-x (3-7 min) EX cond spec 16047 A1Y CON 50<59 con dev 3-39 < 0.05 e dev_sell < 0.05 con ma50 < and macd_diff_2_min_ago < -0.20 - r 14588"
+                        sell = "SELL 4-5-x (3-7 min) EX cond spec 16047 A1Y CON 50<59 con dev 3-39 < 0.05 e dev_sell < 0.05 con ma50 < and macd_diff_2_min_ago < -0.20 - r 14588y"
                         action = "sell"
                         
                         # 20 nov 2023 aggiunta and ma2_differenza_2_min_ago < -6
