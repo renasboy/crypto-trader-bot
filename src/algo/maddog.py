@@ -22208,7 +22208,8 @@ class maddog:
                         and deviation_sell < -0.12
                         
                         and ma2_last < ma2_2_min_ago
-                      
+                        and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.018
+                        and macd_differenza_2_min_ago < -0.50
                     ):
                         sell = "SELL 2 (12-21 min) con ma50 < and deviation_ma39 < -0.03 and dev sell -0.12 - r 11206 B"
                         action = "sell"
@@ -22220,7 +22221,10 @@ class maddog:
                         # > estate se 5 vicina 300 ma39 -0.199 da -0.19 e dev sell -0.30
                         # 12 set 2023 dev 39 a -0.05 da -0.199
                         # 12 set 2023 dev sell a -0.12 da -0.30
-                        #  2 ott 2023 and deviation_ma39 < -0.03 da < -0.05 dopo che ha fatto -0.46 
+                        #  2 ott 2023 and deviation_ma39 < -0.03 da < -0.05 dopo che ha fatto -0.46
+                        
+                        # 24 dic 2023 aggiunta and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.018
+                        # 24 dic 2023 aggiunta and macd_differenza_2_min_ago < -0.50
                   
                     elif (
                         ma50_last < ma50_2_min_ago
