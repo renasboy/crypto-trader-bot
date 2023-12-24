@@ -24200,22 +24200,25 @@ class maddog:
                         
                     elif (
                         ma50_last >= ma50_2_min_ago
-                        and ma5_last < ma100_last
+                        and ma5_last < ma125_last
                         and ma300_last < ma300_180_min_ago
                         and deviation_sell > 0.25 and deviation_sell < 0.56
                         
                         and ma2_last < ma2_2_min_ago
                         and macd < macd_2_min_ago
+                        and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.018
+                        and macd_differenza_2_min_ago < -0.50
                     ):
-                        sell = "SELL 2 110-240 min con ma300 > 300 180 min ago e con ma50 > and 5-100 (!) and dev_sell 0.25-0.56 - FINTA ALLA MARADONA - r 12455 B"
+                        sell = "SELL 2 110-240 min con ma300 > 300 180 min ago e con ma50 > and 5-125 (!) and dev_sell 0.25-0.56 - FINTA ALLA MARADONA - r 12455 B"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
                         #  9 GIU 2022 5-59 da 5-50
                         # > estate 5-100 da 5-59
                         # 30 ago 2023 macd < macd 2 min ago
-                        
-                    
+                        # 24 dic 2022 5-125 da 5-100
+                        # 24 dic 2022 aggiunta and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.018
+                        # 24 dic 2022 and aggiunta macd_differenza_2_min_ago < -0.50
                     
                     elif (
                         ma50_last > ma50_2_min_ago
