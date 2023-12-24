@@ -22795,25 +22795,26 @@ class maddog:
                   
                     elif (        
                         ma50_last < ma50_2_min_ago
-                        and ma30_last <= ma30_2_min_ago
+                        and ma20_last <= ma20_2_min_ago
                         
                         and ma300_last < ma300_120_min_ago
                         and ma200_last < ma200_60_min_ago
                         
                         and deviation_ma39 < 0.13
-                        and deviation_sell < 0.02
+                        and deviation_sell < 0.10
                         
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 2 (21-60 min) con ma50 < MA CON ma30> and deviation_ma39 < 0.13 and deviation_sell < 0.02 - r 11633y"
+                        sell = "SELL 2 (21-60 min) con ma50 < and ma20_last <= ma20_2_min_ago and deviation_ma39 < 0.13 and deviation_sell < 0.02 - r 11633 Y"
                         action = "sell"
                         
                         # durante il crollo non devi pensare ai centesimi !
                         # cazzo oggi 13 dic 2013 and deviation_ma39 < 0.13 da -0.31 !
                         # 17 dic 2023 and ma2_differenza_2_min_ago < -10
                         # 17 dic 2023 and ma2_differenza_ma5 < -9
-                  
+                        # 24 dic 2023 a 0.10 da 0.02
+                        # 24 dic 2023 and ma20_last <= ma20_2_min_ago da ma30 < 30 2 min ago
                     
                     elif (    
                         ma50_last < ma50_2_min_ago 
