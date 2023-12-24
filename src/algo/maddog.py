@@ -15375,6 +15375,7 @@ class maddog:
                     
                     ma3_last >= ma30_last
                     and ma2_differenza_2_min_ago > 8
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
                     and ma3_differenza_2_min_ago > 6
                     
                     and ma100_last < ma100_30_min_ago
@@ -15403,7 +15404,7 @@ class maddog:
                     # 18 dic 2023 and ma3_differenza_2_min_ago > 6 da 5
                     # 18 dic 2023 tolto macd > macd 2 min ago
                     # 18 dic 2023 aggiunto and macd_differenza_2_min_ago > 1.10 (per anticipare di una ndecchiecella)
-
+                    # 24 dic 2023 aggiunto and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
                 
                 
                     
