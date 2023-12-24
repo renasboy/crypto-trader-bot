@@ -12168,20 +12168,23 @@ class maddog:
                     and ma450_last > ma450_480_min_ago
                     
                     and deviation_ma3_sopra_ma10 > 0.07
+                    and deviation_ma3_sopra_ma16 > 0.01
                     and deviation_ma5_sopra_ma28 > -0.01
-                  
+                    
+                    and ma10_last > ma20_last
                     and ma3_last > ma13_last
                     and ma4_last > ma9_last
                    
                     and ma2_last > ma2_2_min_ago
-                    and macd > macd_2_min_ago
+                    
                 ):
-                    buy = "BUY 3 con 450 > 450 480 min MA CONSIDERATA ANCORA LATERALE - r 6599 A1yA1"
+                    buy = "BUY 3 con 450 > 450 480 min MA CONSIDERATA ANCORA LATERALE - r 6599 A1 y A1"
                     action = "buy"
                     percentage = 60
                     
                     #  2 ottobre 2023 and deviation_ma5_sopra_o_sotto_ma100 > -0.15 da > -0.10 questa anticipata ndecchiecella e creata altra condizione sempre da questa
-              
+                    # 24 dic 2023 and ma10_last > ma20_last al posto di macd > macd 2 min ago
+                
 
                 elif (
                     
