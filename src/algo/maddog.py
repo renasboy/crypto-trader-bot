@@ -15249,6 +15249,8 @@ class maddog:
                   
                     and ma2_last >= ma2_2_min_ago
                     and macd >= macd_2_min_ago
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
+                    and macd_differenza_2_min_ago > 0.50
                     and macd > -40
                     and ma50_differenza_ma59 > -5
                     
@@ -15256,7 +15258,11 @@ class maddog:
                     buy = "BUY 5 compare forever EX BUY 1 r 1537 A2y1 - 100<120 min ago E 100<60 min ago con 5-20 E CON 300 vicina alla 450 + MACD > E ma50_diff_ma59 > -5 - r 7589 B1"
                     action = "buy"
                     percentage = 90
+                    
+                    # 24 dic 2023 aggiunta and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
+                    # 24 dic 2023 aggiunta and macd_differenza_2_min_ago > 0.50
 
+                
               
                 elif (     
                     
