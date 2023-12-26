@@ -19030,13 +19030,15 @@ class maddog:
                         
                         and ma2_last <= ma2_2_min_ago 
                         and ma2_differenza_2_min_ago < -11
-                      
+                        and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.018
+                        and macd_differenza_2_min_ago < -0.50
                     ):
-                        sell = "SELL 1 (50-90 min) EX cond spec r 16047 B3 NOTTE con ma300> 5 ore - dev 3-39 < 0.05 and dev_sell < 0.05 - con ma50 <= - r 9935 B"
+                        sell = "SELL 1 (50-90 min) EX cond spec r 16047 B3 NOTTE con ma300> 5 ore - dev 3-39 < 0.05 e dev_sell < 0.05 e ma50 <= and dev ma2 e diff macd - r 9935 B"
                         action = "sell"
                         
                         # 16 nov 2023 dev sell a 0.05 da -0.03
-
+                        # 26 dic 2023 aggiunta and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.018
+                        # 26 dic 2023 aggiunta and macd_differenza_2_min_ago < -0.50
                     
                     elif (
                         ma78_last < ma78_120_min_ago
