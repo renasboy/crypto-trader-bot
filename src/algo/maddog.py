@@ -13515,15 +13515,18 @@ class maddog:
                     and ma7_last > ma25_last
                     
                     and ma2_last > ma2_2_min_ago
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
+                    and macd_differenza_2_min_ago > 0.50
              
                 ):
-                    buy = "BUY 4 se 11 > 200 e con ma69 > and dev_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali) DA BUY 5 RCCR - r 7008 b"
+                    buy = "BUY 4 se 11 > 200 e con ma69 > and dev_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali) DA BUY 5 RCCR and diff ma2 e diff macd - r 7008 B"
                     action = "buy"
                     percentage = 70
                     
                     # > estate 7-40 0.12 da 0.09 and dev bellissima 0.14 da 0.12
                     # 11 ago 2023 aggiunta se 300 scende da 3 ore
-                    
+                    # 26 dic 2023 aggiunta and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
+                    # 26 dic 2023 aggiunta and macd_differenza_2_min_ago > 0.50
                     
                     
                 # BUY 4 NUOVA (trend laterale) con ma8_last > ma100_last AND and ma300_last > ma300_120_min_ago
