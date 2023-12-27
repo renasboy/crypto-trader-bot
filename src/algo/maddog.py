@@ -12525,7 +12525,7 @@ class maddog:
                   
                 elif (    
                     ma3_last > ma39_last
-                    and ma18_last < ma18_2_min_ago
+                    and ma10_last < ma20_last
                     and ma300_last > ma450_last
                     and ma300_last > ma300_120_min_ago
                     
@@ -12535,13 +12535,16 @@ class maddog:
                     and deviation_ma3_sopra_ma10 > 0.03
                     and deviation_ma3_sopra_ma16 > 0.07
                     
+                    and ma2_last > ma5_last
                     and ma2_last >= ma2_2_min_ago
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
+                    
                     and macd >= macd_2_min_ago
+                    and macd_differenza_2_min_ago > 1.25
                     and macd > -11
-                    and macd_differenza_2_min_ago > 0.25
                 ): 
                 
-                    buy = "BUY 3 laterale 3-39 importata da buy 2 con 300 > 450 and dev 3-10 > 0.03 MA CON ma18< ma18 2 min ago 3-16 > 0.07 - r 6622a"
+                    buy = "BUY 3 laterale 3-39 importata da buy 2 con 300 > 450 and dev 3-10 > 0.03 MA CON ma10<ma20 and 3-16 > 0.07 E dev ma2 e diff macd - r 6622 A"
                     action = "buy"
                     percentage = 80
                     
@@ -12552,7 +12555,7 @@ class maddog:
                     # 11 ago 2023 anticipata ndecchiecella
                     # 31 ott 2023 3-39 da 5-39
                     # 31 ott 2023 and deviation_ma3_sopra_ma10 > 0.03 da > 0.07
-
+                    # 27 dic 2023 se ma10 < ma20 aggiunta dev ma2 e diff macd
               
                 
                 # BUY 3 PAZZA piccola CORREZIONE FIAT
