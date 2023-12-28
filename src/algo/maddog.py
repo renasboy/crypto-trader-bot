@@ -432,6 +432,11 @@ class maddog:
         self.algo_helper.info("deviation_ma78_sopra_o_sotto_ma200: {}".format(deviation_ma78_sopra_o_sotto_ma200))
       
 
+        # formula DEVIATION_ma5_sotto_ma450
+        
+        deviation_ma5_sotto_ma450 = (ma5_last / ma450_last - 1) * 100 if ma450_last else 0
+        self.algo_helper.info("deviation_ma5_sotto_ma450: {}".format(deviation_ma5_sotto_ma450))
+
         
         # formula DEVIATION_ma10_sopra_o_sotto_ma10_30_min_ago - !
         
@@ -2773,7 +2778,6 @@ class maddog:
                     # 15 nov 2023 se compra quando 3>39 (e' capitato) allora metto ASSOLUTAMENTE dev 3-16 > 0.105
 
                 
-              
                 elif (     
                     
                     ma3_last > ma20_last
@@ -2799,11 +2803,43 @@ class maddog:
                     and ma2_differenza_2_min_ago >= 12
                     and ma2_differenza_ma5 > 8
                 ):    
-                    buy = "BUY 1 compare forever - con 18> e con 3-18 E CON 300 ancora vicina alla 450 ( anche un poco sotto ! ) and 3-20 + diff macd > 1.50 AND 2>5 ! - r 1537 A3 Y1x"
+                    buy = "BUY 1 compare forever - con 18> e con 3-18 CON 300 ancora vicina alla 450 ( anche un poco sotto ! ) and 3-20 + diff macd > 1.50 AND 2>5 ! - r 1537 A3 Y1 x1"
                     action = "buy"
                     percentage = 90
-
                 
+                elif (     
+                    
+                    ma3_last > ma20_last
+                    and ma10_last > ma20_last
+                    and deviation_ma5_sotto_ma450 < -0.75
+                    
+                    and ma50_differenza_ma59 >= -14
+                    and ma100_last < ma100_60_min_ago
+                    
+                    and deviation_ma54_sopra_o_sotto_ma72 < -0.015
+                    
+                    and deviation_ma39_sotto_ma200 < -0.01
+                    and deviation_ma300_sopra_ma450 > -0.75
+                    
+                    and deviation_ma3_sopra_ma10 > 0.025
+                    and deviation_ma3_sopra_ma16 > -0.04
+                    and deviation_ma3_sopra_ma18 > -0.05
+                    
+                    and ma2_last >= ma20_last
+                    
+                    and ma2_last > ma5_last
+                    and ma2_last >= ma2_2_min_ago
+                    
+                    and macd_differenza_2_min_ago > 1.50
+                    and ma2_differenza_2_min_ago >= 12
+                    and ma2_differenza_ma5 > 8
+                ):    
+                    buy = "BUY 1 compare forever - con 10>20 e dev_ma5_sotto_ma450 < -0.75 e 3-18 E CON 300 vicina alla 450 and 3-20 + diff macd > 1.50 AND 2>5 ! - r 1537 A3 Y1 x2"
+                    action = "buy"
+                    percentage = 90
+                    
+                    # questa interviene quando si e' gia' manifestato un certo ribasso (and deviation_ma5_sotto_ma450 < -0.75)
+                    # se siamo in presenza di un ribasso piu' marcato HO TOLTO 18 10 min e ho messo 10>20 piu' veloce (che mi evita molti buy inutili sempre durante il ribasso)
                 elif (     
                     
                     ma3_last > ma20_last
