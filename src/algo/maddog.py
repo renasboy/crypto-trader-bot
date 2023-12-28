@@ -31385,8 +31385,35 @@ class maddog:
                 # 10 dic 2023 and deviation_sell a -0.10 da -0.0107
                 # 26 dic 2023 con 10<20 vendi prima a -0.03 da -0.10
 
+            
             elif (
                 ma78_last < ma78_120_min_ago
+                and ma40_last > ma50_last
+                and ma50_last > ma50_2_min_ago
+                and ma2_differenza_2_min_ago < -15
+                and ma300_last < ma300_301_min_ago
+                and delta_150_100 <= delta_150_100_60_min
+                
+                and deviation_ma39 < 0.13
+                and deviation_sell < 0.01
+                
+                and deviation_ma100_sopra_ma300 < 0.40
+                
+                and deviation_ma5_sotto_ma200 > -0.50
+                
+                and ma2_last < ma2_2_min_ago 
+                and macd_differenza_2_min_ago < -0.35
+                
+            ):
+                sell = "SELL cond spec 6 GIORNO con ma300 < 5 ore con ma50 > E 40>50 e dev 3-39 < 0.13 e dev_sell < 0.01 e ma78 < and macd_diff_2_min_ago < -0.35 - r 16045 B1x"
+                action = "sell"
+                
+                # 28 dic 2023 se anche 40>50 dev sell a 0.01 da 0.03
+            
+            
+            elif (
+                ma78_last < ma78_120_min_ago
+                and ma40_last <= ma50_last
                 and ma50_last > ma50_2_min_ago
                 and ma2_differenza_2_min_ago < -15
                 and ma300_last < ma300_301_min_ago
@@ -31403,7 +31430,7 @@ class maddog:
                 and macd_differenza_2_min_ago < -0.35
                 
             ):
-                sell = "SELL cond spec 6 GIORNO con ma300 < 5 ore con ma50 > e dev 3-39 < 0.13 and dev_sell < 0.03 e con ma78 < and macd_differenza_2_min_ago < -0.35 - r 16045 B1"
+                sell = "SELL cond spec 6 GIORNO con ma300 < 5 ore con ma50 > e dev 3-39 < 0.13 and dev_sell < 0.03 e con ma78 < and macd_differenza_2_min_ago < -0.35 - r 16045 B1y"
                 action = "sell"
 
             elif (
