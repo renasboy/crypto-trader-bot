@@ -31951,9 +31951,9 @@ class maddog:
                 # 12 dic 203 aaggiunta nd macd_differenza_2_min_ago < -2
                 # 12 dic 203 aggiunta and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.018 = 7 pts
           
-          
             elif (
                 ma78_last < ma78_120_min_ago
+                and ma20_last >= ma40_last
                 and ma20_last > ma20_2_min_ago
                 and ma50_last <= ma50_2_min_ago
                 and ma2_differenza_2_min_ago < -8
@@ -31970,7 +31970,30 @@ class maddog:
                 and macd < 14
             
             ):
-                sell = "SELL cond spec con ma20>ma20 2 min ago e con ma 50<= ma 50 2 min ago con ma300 > 5 ore - SALVAGENTE 4 dev 3-39 < 0.08 and dev_sell < -0.03 - r 16047 B1 Y1"
+                sell = "SELL cond spec con ma20>ma20 2 min ago e con ma 50<= ma 50 2 min ago con ma300 > 5 ore - SALVAGENTE 4 dev 3-39 < 0.08 and dev_sell < -0.03 - r 16047 B1 Y1 x"
+                action = "sell"
+
+            
+            elif (
+                ma78_last < ma78_120_min_ago
+                and ma20_last < ma40_last
+                and ma20_last > ma20_2_min_ago
+                and ma50_last <= ma50_2_min_ago
+                and ma2_differenza_2_min_ago < -8
+                
+                and ma300_last > ma300_301_min_ago
+                
+                and deviation_ma39 < 0.08
+                and deviation_sell < 0.01
+                
+                and ma2_last <= ma2_2_min_ago
+                and ma2_last < ma5_last
+                
+                and macd_differenza_2_min_ago < -1.0
+                and macd < 14
+            
+            ):
+                sell = "SELL cond spec con ma20>ma20 2 min ago e con ma 50<= ma 50 2 min ago con ma300 > 5 ore - SALVAGENTE 4 dev 3-39 < 0.08 and dev_sell < 0.01 - r 16047 B1 Y1 y"
                 action = "sell"
                 
                 # oggi 10 dicembre 2023 ascolta mario ! SE ma20_last > ma20_2_min_ago DEV SELL a 0.02 da 0.05
@@ -31978,7 +32001,7 @@ class maddog:
                 # oggi 10 dicembre 2023 ascolta mario ! SE ma20_last > ma20_2_min_ago and deviation_sell 0.01 da 0.02
                 # oggi 10 dicembre 2023 ascolta mario ! SE ma20_last > ma20_2_min_ago and ma2_differenza_2_min_ago a -6 da -5
                 # 19 dic 2023 deviation_sell a -0.03 da 0.01 con ma20 che sta salendo !
-
+                # 19 dic 2023 se 20 e' ancora sotto 40 esci prima cazzo ! and deviation_sell < 0.01 da < -0.03
           
             elif (
                 ma78_last < ma78_120_min_ago
