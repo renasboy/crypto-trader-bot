@@ -23387,23 +23387,79 @@ class maddog:
                         
                         # 31 ott 2023 and deviation_sell < -0.05 invece di -0.10 IMPORTATA RIDOTTA !
 
+
+
+                  
                     elif (
                         ma78_last > ma78_120_min_ago
-                        and deviation_ma39 < 0.01
-                        and deviation_sell < -0.05
+                        and deviation_ma100_sopra_ma300 > 0.25
+                        and deviation_ma39 < 0.07
+                        and deviation_sell < -0.06
                         and ma2_last < ma2_2_min_ago 
                 
                         and ma50_last >= ma50_2_min_ago
-                        and deviation_ma100_sopra_ma300 < 0.40
+                        
                 
                         and deviation_ma5_sotto_ma200 > -0.80
                         and macd_differenza_2_min_ago < -0.20
                     ):
-                        sell = "SELL 2 (21-60 min) con ma50 >= EX condizione speciale r 16047 A1 con dev 3-39 < 0.01 e dev_sell < -0.05 and macd_diff_2_min_ago < -0.20 - r 11807 a"
+                        sell = "SELL 2 (21-60 min) con ma50 >= EX condizione speciale r 16047 A1 con dev 3-39 < 0.07 e dev_sell < -0.06 and macd_diff_2_min_ago < -0.20 - r 11807 a1"
                         action = "sell"
                         
                         #  4 ott 2023 ex condizione speciale r 16047 A1 ridotta
                         #  4 nov 2023 ex condizione speciale r 16047 A1 con ma50 >=
+                        # 29 dic 2023 SITUAZIONE DI CRESCITA dev_sell a -0.04 da -0.05
+
+                    elif (
+                        ma78_last > ma78_120_min_ago
+                        and deviation_ma100_sopra_ma300 < 0.25
+                        and deviation_ma100_sopra_ma300 > -0.25
+                        
+                        and deviation_ma39 < 0.07
+                        and deviation_sell < -0.07
+                        and ma2_last < ma2_2_min_ago 
+                
+                        and ma50_last >= ma50_2_min_ago
+                        
+                
+                        and deviation_ma5_sotto_ma200 > -0.80
+                        and macd_differenza_2_min_ago < -0.20
+                    ):
+                        sell = "SELL 2 (21-60 min) con ma50 >= EX condizione speciale r 16047 A1 con dev 3-39 < 0.07 e dev_sell < -0.07 and macd_diff_2_min_ago < -0.20 - r 11807 a2"
+                        action = "sell"
+                        
+                        #  4 ott 2023 ex condizione speciale r 16047 A1 ridotta
+                        #  4 nov 2023 ex condizione speciale r 16047 A1 con ma50 >=
+                        # 29 dic 2023 SITUAZIONE LATERALE dev_sell a -0.07 da -0.07
+
+                    
+                    elif (
+                        ma78_last > ma78_120_min_ago
+                        and deviation_ma100_sopra_ma300 < -0.25
+                        
+                        and deviation_ma39 < 0.07
+                        and deviation_sell < -0.05
+                        and ma2_last < ma2_2_min_ago 
+                
+                        and ma50_last >= ma50_2_min_ago
+                        
+                
+                        and deviation_ma5_sotto_ma200 > -0.80
+                        and macd_differenza_2_min_ago < -0.20
+                    ):
+                        sell = "SELL 2 (21-60 min) con ma50 >= EX condizione speciale r 16047 A1 con dev 3-39 < 0.07 e dev_sell < -0.05 and macd_diff_2_min_ago < -0.20 - r 11807 a3"
+                        action = "sell"
+                        
+                        #  4 ott 2023 ex condizione speciale r 16047 A1 ridotta
+                        #  4 nov 2023 ex condizione speciale r 16047 A1 con ma50 >=
+                        # 29 dic 2023 SITUAZIONE DI RIBASSO
+                        
+
+
+
+
+
+                  
                     
                     elif (
                         ma78_last > ma78_120_min_ago
