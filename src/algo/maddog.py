@@ -11582,11 +11582,13 @@ class maddog:
                 ):
                     buy = "BUY 3 migliore importata da RCCR r 1043 B che considera distanza 5-300 AND dev 10-200 < -0.24 AND dev 4-18 and deviation_ma3_sopra_ma16 > -0.12 - r 6490"
                     action = "buy"
-                    percentage = 50
+                    percentage = 80
                     
                     #  8 lug 2023 4-18
                     # 11 ago 2023 3-18
-                    # IMPORTATA DA RCCR il 13 dic 2023 
+                    # IMPORTATA DA RCCR il 13 dic 2023
+                    # 29 dic 2023 percentage a 80 da 50
+                
                 
                 # BUY 3 CON IL TURBO ! (compare stammi vicino!)   
                 
