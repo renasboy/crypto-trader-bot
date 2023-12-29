@@ -2616,7 +2616,7 @@ class maddog:
                     ma3_last > ma30_last
                     
                     and ma2_differenza_2_min_ago > 8
-                    and ma2_last > ma8_last
+                    and ma3_last > ma8_last
                     and deviation_ma50_sotto_ma300 > -0.13
                     
                     and ma100_last < ma100_60_min_ago
@@ -2647,6 +2647,7 @@ class maddog:
                     # 18 dic 2023 ma3_last > ma30_last da 3-39
                     # 17 nov 2023 and deviation_ma3_sopra_ma16 a 0.08 da 0.09
                     # 28 dic 2023 and ma2_differenza_2_min_ago a 8 da 5
+                    # 28 dic 2023 and ma3_last > ma8_last da 2>8
               
                 elif (     
                     
