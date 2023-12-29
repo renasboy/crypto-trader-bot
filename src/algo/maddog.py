@@ -23403,7 +23403,7 @@ class maddog:
                         and deviation_ma5_sotto_ma200 > -0.80
                         and macd_differenza_2_min_ago < -0.20
                     ):
-                        sell = "SELL 2 (21-60 min) con ma50 >= EX condizione speciale r 16047 A1 con dev 3-39 < 0.07 e dev_sell < -0.06 and macd_diff_2_min_ago < -0.20 - r 11807 a1"
+                        sell = "SELL 2 (21-60 min) CRESCITA con ma50 >= EX cond spec r 16047 A1 con dev 3-39 < 0.07 e dev_sell < -0.06 and macd_diff_2_min_ago < -0.20 - r 11807 a1"
                         action = "sell"
                         
                         #  4 ott 2023 ex condizione speciale r 16047 A1 ridotta
@@ -23425,7 +23425,7 @@ class maddog:
                         and deviation_ma5_sotto_ma200 > -0.80
                         and macd_differenza_2_min_ago < -0.20
                     ):
-                        sell = "SELL 2 (21-60 min) con ma50 >= EX condizione speciale r 16047 A1 con dev 3-39 < 0.07 e dev_sell < -0.07 and macd_diff_2_min_ago < -0.20 - r 11807 a2"
+                        sell = "SELL 2 (21-60 min) LATERALE con ma50 >= EX cond spec r 16047 A1 con dev 3-39 < 0.07 e dev_sell < -0.07 and macd_diff_2_min_ago < -0.20 - r 11807 a2"
                         action = "sell"
                         
                         #  4 ott 2023 ex condizione speciale r 16047 A1 ridotta
@@ -23447,7 +23447,7 @@ class maddog:
                         and deviation_ma5_sotto_ma200 > -0.80
                         and macd_differenza_2_min_ago < -0.20
                     ):
-                        sell = "SELL 2 (21-60 min) con ma50 >= EX condizione speciale r 16047 A1 con dev 3-39 < 0.07 e dev_sell < -0.05 and macd_diff_2_min_ago < -0.20 - r 11807 a3"
+                        sell = "SELL 2 (21-60 min) RIBASSO con ma50 >= EX cond spec r 16047 A1 con dev 3-39 < 0.07 e dev_sell < -0.05 and macd_diff_2_min_ago < -0.20 - r 11807 a3"
                         action = "sell"
                         
                         #  4 ott 2023 ex condizione speciale r 16047 A1 ridotta
