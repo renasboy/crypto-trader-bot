@@ -13083,9 +13083,35 @@ class maddog:
                     
                     #  5 set 2023 anticipata ndecchiecella
 
-              
+                elif (
+                    deviation_ma4_sopra_ma30 > 0.12
+                    and ma20_last >= ma39_last
+                    and ma300_last < ma300_120_min_ago
+                    and ma100_last < ma100_60_min_ago
+                    
+                    and deviation > -0.30
+                    
+                    and ma3_last >= ma39_last
+                    and delta_buy3_incrocio_ma3_ma8 >= 0.06
+                    
+                    and ma3_last >= ma15_last
+                    and ma3_last > ma8_last
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd > macd_2_min_ago
+                    
+                ):    
+                    buy = "BUY 4B importato da BUY 3 RCCR con 300 < E 100 < 100 60 min ago - r 6756 By1"
+                    action = "buy"
+                    percentage = 70
+                    
+                    # 29 dic 2023 se 20>39 anticipa ndecchiecella 
+                    # 29 dic 2023 deviation_ma4_sopra_ma30 > 0.12 da 0.15
+
+                
                 elif (
                     deviation_ma4_sopra_ma30 > 0.15
+                    and ma20_last < ma39_last
                     and ma300_last < ma300_120_min_ago
                     and ma100_last < ma100_60_min_ago
                     
@@ -13101,7 +13127,7 @@ class maddog:
                     and macd > macd_2_min_ago
                     
                 ):    
-                    buy = "BUY 4B importato da BUY 3 RCCR con 300 < E 100 < 100 60 min ago - r 6756 By"
+                    buy = "BUY 4B importato da BUY 3 RCCR con 300 < E 100 < 100 60 min ago - r 6756 By2"
                     action = "buy"
                     percentage = 70
                     
