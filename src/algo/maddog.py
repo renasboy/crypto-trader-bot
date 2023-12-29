@@ -31964,7 +31964,7 @@ class maddog:
                 
                 and ma2_last < ma2_2_min_ago 
                 and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.018
-                and macd < 7
+                and macd < 13
                 and macd_differenza_2_min_ago < -3
             ):
                 sell = "SELL nuova condizione speciale CON ma20 <= ma20 2 min ago e dev 3-39 < 0.10 e dev_sell < 0.05 - con ma50 < and diff ma2 e diff macd - r 16047 A3 Y"
@@ -31973,8 +31973,8 @@ class maddog:
                 # 30 nov 2023 dev 39 a 0.10 da 0.03
                 # 30 nov 2023 dev sell a -0.05 da -0.14
                 #  5 dic 2023 dev sell a 0.05 da -0.05
-                # MINGHIA il 26 dic ha fatto -0.73 ! eho fatto delle modifiche meravigliose
-
+                # MINGHIA il 26 dic ha fatto -0.73 ! e ho fatto delle modifiche meravigliose
+                # 29 dic 2023 and macd a 13 da 7
 
 
 
