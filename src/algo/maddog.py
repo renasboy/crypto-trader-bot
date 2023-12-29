@@ -11579,9 +11579,12 @@ class maddog:
                     and deviation_ma3_sopra_ma16 > -0.12
                     
                     and ma2_last >= ma2_2_min_ago
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
+                    
                     and macd >= macd_2_min_ago
+                    and macd_differenza_2_min_ago > 1.25
                 ):
-                    buy = "BUY 3 migliore importata da RCCR r 1043 B che considera distanza 5-300 AND dev 10-200 < -0.24 AND dev 4-18 and deviation_ma3_sopra_ma16 > -0.12 - r 6490"
+                    buy = "BUY 3 migliore importata da RCCR r 1043 B con dist 5-300 E dev 10-200 < -0.24 E dev 4-18 and dev_ma3_sopra_ma16 > -0.12 AND dev ma2 e diff macd - r 6490"
                     action = "buy"
                     percentage = 80
                     
@@ -11589,7 +11592,9 @@ class maddog:
                     # 11 ago 2023 3-18
                     # IMPORTATA DA RCCR il 13 dic 2023
                     # 29 dic 2023 percentage a 80 da 50
-                
+                    # 29 dic 2023 aggiunta and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
+                    # 29 dic 2023 aggiunta and macd_differenza_2_min_ago > 1.25
+
                 
                 # BUY 3 CON IL TURBO ! (compare stammi vicino!)   
                 
