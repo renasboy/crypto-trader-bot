@@ -7524,10 +7524,43 @@ class maddog:
                 
                 
                 # BUY 2 con ma200> piccola CORREZIONE FIAT che NON E' un forte ribasso e NON E' un crollo ! ALTRA RIGA RCCR che e' andata bene.
+                elif (     
+                    ma200_last > ma200_20_min_ago
+                    and ma10_last > ma20_last
+                    and ma100_last > ma100_60_min_ago
+                    and ma200_last > ma200_60_min_ago
+                    and ma300_last > ma300_360_min_ago
+                    
+                    and ma100_last > ma200_last
+                    and ma200_last > ma300_last
+                    
+                    and ma20_last < ma78_last
+                    and ma90_last > ma110_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.02
+                    and deviation_ma5_sopra_ma28 > 0.02
+                    
+                    and ma5_last >= ma5_2_min_ago
+                    
+                    and ma3_last > ma28_last
+                    
+                    and ma2_last > ma2_2_min_ago
+                    
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
+                    and macd_differenza_2_min_ago > 1.25
+                ):    
+                    
+                    buy = "BUY 2 con 300 > 300 360 min ago and ma5_last > ma5_2_min_ago - 20 < 78 and 3-10 > 0.05 con 5-28 > 0.05 E con dev ma2 e diff macd - r 4735 a"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # 29 dic 2023 and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
+                    # 29 dic 2023 and macd_differenza_2_min_ago > 1.25
+
                 
                 elif (     
                     ma200_last > ma200_20_min_ago
-                    
+                    and ma10_last <= ma20_last
                     and ma100_last > ma100_60_min_ago
                     and ma200_last > ma200_60_min_ago
                     and ma300_last > ma300_360_min_ago
@@ -7549,7 +7582,7 @@ class maddog:
                     and macd >= macd_2_min_ago
                 ):    
                     
-                    buy = "BUY 2 con 300 > 300 360 min ago and ma5_last > ma5_2_min_ago - 20 < 78 and 3-10 > 0.05 con 5-28 > 0.05 E con macd> macd 2 min ago - r 4735"
+                    buy = "BUY 2 con 300 > 300 360 min ago and ma5_last > ma5_2_min_ago - 20 < 78 and 3-10 > 0.05 con 5-28 > 0.05 E con macd> macd 2 min ago - r 4735 b"
                     action = "buy"
                     percentage = 80
                     
