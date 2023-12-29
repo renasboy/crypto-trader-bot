@@ -11691,24 +11691,25 @@ class maddog:
                 elif (    
                     ma3_last > ma28_last
                     
-                    and macd >= macd_2_min_ago
-                    and macd > -24.0
-                    and macd_differenza_2_min_ago > 0.30
-                    
-                    and ma2_differenza_2_min_ago > 8
                     and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
                     
                     and ma300_last > ma300_120_min_ago
                     and ma450_last > ma450_480_min_ago
                     
-                    and deviation_ma100_sopra_ma300 < 0.20
+                    and deviation_ma100_sopra_ma300 < 0.30
                     and deviation_ma100_sopra_ma300 > -0.30
                     
-                    and deviation_ma3_sopra_ma18 > 0.02
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > 0.01
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and ma2_differenza_2_min_ago > 8
+                    and macd > -24.0
+                    and macd_differenza_2_min_ago > 0.30
                     and ma2_last > ma5_last 
                 ):  
                 
-                    buy = "BUY 3 laterale IMPORTATA dal buy 2 con 300>450 and 4-28 and macd > 2.0 and macd_differenza_2_min_ago > 0.30 - r 6510"
+                    buy = "BUY 3 laterale IMPORTATA dal BUY 2 con 300 > 450 and 3-28 and macd > -24 and macd_differenza_2_min_ago > 0.30 - r 6510"
                     action = "buy"
                     percentage = 80
 
