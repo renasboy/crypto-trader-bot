@@ -6383,7 +6383,7 @@ class maddog:
                     
                     and ma2_last >= ma2_2_min_ago
                     and macd >= macd_2_min_ago
-                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.020
                 ):
 
                     buy = "BUY 1 forever young 1 con 300 che scende da 5 ore ! MA 300 > 120 min ago e ma200 > e se ma200 > ma300 E CON 3-16 > 0.07 - r 4325 a2"
@@ -20278,8 +20278,8 @@ class maddog:
                     elif (    
                         ma50_last < ma50_2_min_ago
                         and macd < macd_2_min_ago
-                        and ma100_last > ma150_last
-                        and ma5_last < ma150_last
+                        and ma100_last > ma140_last
+                        and ma4_last < ma150_last
                         and deviation_sell > 0.30
                         and ma5_last < ma5_2_min_ago
                         and ma300_last > ma300_120_min_ago
@@ -20287,7 +20287,7 @@ class maddog:
                         and ma5_last < ma5_2_min_ago
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 da 110 a 239 min con ma50 < MA ma100 > E ma300 > e con 5-150 and ma5_last < ma5_2_min_ago and deviation_sell > 0.30 - r 10262 A1x"
+                        sell = "SELL 1 da 110 a 239 min con ma50 < MA ma100 > E ma300 > e con 4-140 and ma5_last < ma5_2_min_ago and deviation_sell > 0.30 - r 10262 A1x"
                         action = "sell"
                         
                         # ma39 NON DEVE VENDERE in fase laterale ma in alto
@@ -20297,7 +20297,7 @@ class maddog:
                         # 6 apr 2023 5-150 da 5-125
                         # 19 apr 2023 aggiunta macd > macd 2 min ago - solo dopo 110 min !
                         # 7 lug 2023 and deviation_sell > 0.30 da > 0.20
-                  
+                        # 7 lug 2023 dev sell 4-140 da 5-150
                         
                     elif (
                         ma3_last < ma100_last
