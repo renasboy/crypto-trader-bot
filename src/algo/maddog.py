@@ -30698,9 +30698,12 @@ class maddog:
                         and deviation_ma5_sotto_ma300 < 0.40
                         and ma4_last < ma49_last
                         and deviation_sell > 0.57 and deviation_sell < 0.90
+                        
                         and ma2_last < ma2_2_min_ago
+                        and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.018
+                        and macd_differenza_2_min_ago < -1.25
                     ):
-                        sell = "SELL 4-5-x >90 min con ma50 > con 4 < 49 and deviation_sell 0.35 - 0.90 FINTA ALLA RONALDO - r 15839 B"
+                        sell = "SELL 4-5-x >90 min con ma50 > con 4 < 49 and deviation_sell 0.35 - 0.90 FINTA ALLA RONALDO and dev ma2 and diff macd - r 15839 B"
                         action = "sell"
                         
                         # 12 apr 2023 4-49 da 4-20
