@@ -7315,8 +7315,8 @@ class maddog:
                     and deviation_ma100_sopra_ma300 < 0.25
                     
                     and deviation_ma3_sopra_ma10 > -0.01
-                    and deviation_ma3_sopra_ma16 > 0.07
-                    and deviation_ma5_sopra_ma28 > -0.11
+                    and deviation_ma3_sopra_ma16 > 0.01
+                    and deviation_ma5_sopra_ma28 > -0.12
                     
                     and price >= price_2_min_ago
                     and ma2_differenza_2_min_ago > 7
@@ -7327,7 +7327,7 @@ class maddog:
                     percentage = 80
                     
                     # 13 dic 2023 aggiunta and macd_differenza_2_min_ago > -3
-
+                    # 30 dic 2023 anticipata ndecchiecella
 
                 elif (    
                     ma3_last > ma28_last
@@ -32060,12 +32060,13 @@ class maddog:
                 
                 ma50_last > ma50_2_min_ago
                 and ma20_last > ma20_2_min_ago
+                
                 and ma2_differenza_2_min_ago < -3
                 and ma13_last > ma50_last
                 and ma100_last < ma100_60_min_ago
                 
                 and deviation_ma39 < 0.13
-                and deviation_sell < -0.02
+                and deviation_sell < -0.03
                 
                 
                 and deviation_ma5_sotto_ma200 > -0.60
@@ -32079,13 +32080,13 @@ class maddog:
                 and ma2_differenza_ma5 < -7
                 
             ):
-                sell = "SELL nuova condizione speciale - dev 3-39 < 0.13 and dev_sell < -0.02 con ma50 > e con ma5 sotto ma200 > -0.60 and MACD < and macd < 15 - r 16047 A2 Y1x"
+                sell = "SELL nuova condizione speciale - dev 3-39 < 0.13 and dev_sell < -0.03 con ma50 > e con ma5 sotto ma200 > -0.60 and MACD < and macd < 15 - r 16047 A2 Y1 X"
                 action = "sell"
                 
                 # oggi 10 dicembre 2023 ascolta mario ! SE ma20_last > ma20_2_min_ago DEV SELL a -0.02 da -0.01
                 # oggi 18 dicembre 2023 ascolta mario ! SE ma20_last > ma20_2_min_ago aggiunta and ma2_differenza_ma5 < -7
                 # oggi 18 dicembre 2023 ascolta mario ! SE ma20_last > ma20_2_min_ago aggiunta and ma2_differenza_2_min_ago < -2
-
+                # oggi 30 dicembre 2023 ascolta mario ! SE ma20_last > ma20_2_min_ago DEV SELL a -0.03 da -0.02
             
             elif (
                 
