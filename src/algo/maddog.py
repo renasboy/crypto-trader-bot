@@ -14237,10 +14237,36 @@ class maddog:
                     # 20 dic 2023 aggiunta and macd_differenza_2_min_ago > 0.30
                     # 20 dic 2023 aggiunta and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
 
+               
 
+                elif (    
+                    ma3_last > ma30_last
+                    and ma450_last < ma450_120_min_ago
+                    and ma100_last > ma200_last
+                    
+                    and ma50_last > ma59_last
+                    and ma100_last > ma300_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > 0.05
+                    and deviation_ma5_sopra_ma28 > -0.05
+                    
+                    and ma3_last > ma13_last
+                    
+                    and ma2_last > ma2_2_min_ago
+                    and macd_differenza_2_min_ago > 0.20
+                    
+                ):
+                    buy = "BUY 5 con 50>59 AND and ma450_last < ma450_120_min_ago CON ma100_last > ma300_last E 100>200 and macd > macd_2_min_ago - r 7144 A2x"
+                    action = "buy"
+                    percentage = 70
+                    
+                    # 3-30 da 4-50 se 100>200
+                
                 elif (    
                     ma4_last > ma50_last
                     and ma450_last < ma450_120_min_ago
+                    and ma100_last <= ma200_last
                     
                     and ma50_last > ma59_last
                     and ma100_last > ma300_last
@@ -14255,7 +14281,7 @@ class maddog:
                     and macd_differenza_2_min_ago > 0.20
                     and macd >= macd_2_min_ago
                 ):
-                    buy = "BUY 5 con 50>59 AND and ma450_last < ma450_120_min_ago CON ma100_last > ma300_last and macd > macd_2_min_ago - r 7144 A2"
+                    buy = "BUY 5 con 50>59 AND and ma450_last < ma450_120_min_ago CON ma100_last > ma300_last MA 100<200 and macd > macd_2_min_ago - r 7144 A2y"
                     action = "buy"
                     percentage = 70
                     
