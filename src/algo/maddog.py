@@ -3064,8 +3064,12 @@ class maddog:
                     
                     and ma5_last > ma5_2_min_ago
                     and ma2_last > ma20_last
+                    
                     and ma2_last > ma2_2_min_ago
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
                     and macd >= macd_2_min_ago
+                    and macd_differenza_2_min_ago > 0.50
+                    
                 ):    
                     buy = "BUY 1 tempo INIZIO AUTUNNO and (200 > 200 120 min ago) considera passare del tempo ( ma18>ma18 10 min ago !) con 5-28 > 0.05 e 200>300 - r 1586 A1"
                     action = "buy"
@@ -3076,7 +3080,7 @@ class maddog:
                     #  3 lug 2023 tolto and ma20_last > ma20_2_min_ago ( ma 300 sta sopra ma 450 )
                     #  3 lug 2023 5-50 da 50-100 ( ma 300 sta sopra ma 450 )
                     # 11 ago 2023 aggiunta and deviation_ma3_sopra_ma16 > 0.055
-                    
+                    # 31 dic 2023 il MACD non soltanto deve essere > del macd di 2 min fa MA deve essere anche > di 0.50 (pensa se il macd e' superiore di 0.08 (e' capitato !))
                     
                     
                     
