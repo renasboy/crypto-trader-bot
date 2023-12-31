@@ -12472,9 +12472,10 @@ class maddog:
                     and ma4_last > ma9_last
                    
                     and ma2_last > ma2_2_min_ago
-                    and macd > macd_2_min_ago
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
+                    and macd_differenza_2_min_ago > 0.50
                 ):
-                    buy = "BUY 3 con 450 > 450 480 min MA CONSIDERATA ANCORA LATERALE - r 6599 A1yA2"
+                    buy = "BUY 3 con 450 > 450 480 min MA CONSIDERATA ANCORA LATERALE con dev ma2 e diff macd - r 6599 A1 y A2"
                     action = "buy"
                     percentage = 60
                     
@@ -12482,8 +12483,10 @@ class maddog:
                     # 28 set 2023 3-10 a 0.05 da 0.07
                     # 28 set 2023 fascia 100-300 portata a +-0.27 da +-0.25 - aumentata un pochino ( ma450>ma450 480 min ago !)
                     # 28 set 2023 fascia 5-100 portata a < -0.12 - -0.21 da < -0.11 - -0.20 - aumentata un pochino ( ma450>ma450 480 min ago !)
+                    # 31 dic 2023 aggiunta and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
+                    # 31 dic 2023 and macd_differenza_2_min_ago > 0.50
 
-
+                
                 elif (
                     
                     ma4_last > ma16_last
