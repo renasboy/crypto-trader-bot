@@ -14068,11 +14068,11 @@ class maddog:
                     
                     
                 # BUY 4 13 apr 2023 zia pina > 180 min di ribasso 78 < 150
-                
                 elif (
                     
-                    
-                    ma78_last < ma150_last
+                    ma3_last > ma15_last
+                    and ma78_last < ma150_last
+                    and deviation_ma39 > -0.30
                     and deviation_ma5_sopra_ma59 < -0.10
                     
                     and ma100_last < ma100_180_min_ago
@@ -14087,9 +14087,43 @@ class maddog:
                     and deviation_ma3_sopra_ma18 > 0.093
                     
                     and ma2_last >= ma2_2_min_ago
-                    and macd > macd_2_min_ago
+                    and ma2_differenza_2_min_ago > 7
+                    and ma2_differenza_ma5 > 10
+                    and macd > -20
+                    and macd_differenza_2_min_ago > 1.25
+                    and ma2_last >= ma10_last
                 ):
-                    buy = "BUY 4 PENSIERO LATERALE 13 apr 2023 zia pina > 180 min di ribasso and 78<150 and 3-16 > 0.03 and macd > 2 min ago  - r 7060"
+                    buy = "BUY 4 PENSIERO LATERALE 13 apr 2023 zia pina > 180 min di ribasso and 78<150 and 3-16 > 0.03 and macd > 2 min ago  - r 7060a"
+                    action = "buy"
+                    percentage = 90
+
+                
+                elif (
+                    
+                    ma3_last > ma15_last
+                    and ma78_last < ma150_last
+                    and deviation_ma39 <= -0.30
+                    and deviation_ma5_sopra_ma59 < -0.10
+                    
+                    and ma100_last < ma100_180_min_ago
+                    and ma200_last < ma200_180_min_ago
+                    and ma300_last < ma300_180_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and deviation_ma5_sopra_ma28 < 0.01
+                    and deviation_ma3_sopra_ma16 > 0.02
+                    and deviation_ma3_sopra_ma18 > 0.04
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and ma2_differenza_2_min_ago > 8
+                    and ma2_differenza_ma5 > 10
+                    and macd > -20
+                    and macd_differenza_2_min_ago > 1.25
+                    and ma2_last >= ma10_last
+                ):
+                    buy = "BUY 4 ENTRA DNA - IPERVENUTO - PENSIERO LATERALE 13 apr 2023 zia pina > 180 min di ribasso and 78<150 and 3-16 > 0.03 and macd > 2 min ago  - r 7060b"
                     action = "buy"
                     percentage = 90
                     
