@@ -1973,7 +1973,7 @@ class maddog:
                 
                 elif (    
                     ma4_last > ma13_last
-                    and ma2_differenza_2_min_ago > 7
+                    
                     and deviation_ma300_sopra_ma450 < 0.17
                     and deviation_ma300_sopra_ma450 > -0.17
                     
@@ -1981,15 +1981,18 @@ class maddog:
                     and deviation_ma100_sopra_ma300 > -0.29
                     
                     and deviation_ma10_sotto_ma100 < -0.06
-                    and deviation_ma10_sotto_ma100 > -0.21
+                    and deviation_ma10_sotto_ma100 > -0.31
                     
-                    and deviation_ma3_sopra_ma10 > 0.03
-                    and deviation_ma3_sopra_ma16 > 0.07
-                    and deviation_ma4_sopra_ma28 > -0.04
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > 0.06
+                    and deviation_ma4_sopra_ma28 > -0.05
                     
                     and ma2_last >= ma2_2_min_ago
-                    and macd >= macd_2_min_ago
-                    and macd > 0
+                    
+                    and ma2_differenza_2_min_ago > 7
+                    and ma2_differenza_ma5 > 10
+                    and macd > -20
+                    and macd_differenza_2_min_ago > 1.25
                 ):  
                 
                     buy = "BUY 1 LATERALE 2 con 3-10 > 0.07 and macd > macd 2 min ago and deviation_ma3_sopra_ma16 > 0.112 con macd > 0 and ma2_differenza_2_min_ago > 7 - r 1205"
