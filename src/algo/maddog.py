@@ -2797,13 +2797,14 @@ class maddog:
                     and deviation_ma3_sopra_ma18 > -0.04
                     
                     and ma2_last >= ma2_2_min_ago
-                    and ma2_differenza_2_min_ago > 3
-                    and ma2_differenza_ma5 > 10
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
+                    and ma2_differenza_2_min_ago > 8
+                    and ma2_differenza_ma5 > 11
                     and macd > -20
                     and macd_differenza_2_min_ago > 1.25
                     
                 ):    
-                    buy = "BUY 1 condizione DNA IPERVENDUTO 3-39 con 3-10 E 300 vicina 450 e 3-16 > 0.01 + > E ma2_diff_2_min_ago > 3 E dev ma2 e diff MACD > -20 - r 1537 A3X 4A y"
+                    buy = "BUY 1 condizione DNA IPERVENDUTO 3-39 con 3-10 E 300 vicina 450 e 3-16 > 0.01 + > E ma2_diff_2_min_ago > 3 E dev ma2 e MACD > -20 - r 1537 A3X 4A Y"
                     action = "buy"
                     percentage = 90
                     
