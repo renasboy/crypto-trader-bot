@@ -11572,9 +11572,9 @@ class maddog:
                 
                 elif (
                     ma200_last > ma200_20_min_ago
-                    and ma100_last > ma200_last
-                    and deviation_rialzo_improvviso_sopra > 0.47
-                    and deviation_rialzo_improvviso_1 > 0.47
+                    and ma78_last > ma150_last
+                    and deviation_rialzo_improvviso_sopra > 0.24
+                    and deviation_rialzo_improvviso_1 > 0.24
                     and deviation_rialzo_improvviso_2 > 0.185
                     and deviation_rialzo_improvviso_3 > 0.185
                     and deviation_range_1 < 0.21
@@ -11585,11 +11585,12 @@ class maddog:
                     and deviation_range_x > -0.21
                 ):
              
-                    buy = "BUY 3 RIALZO IMPROVVISO ! con ma200 > and 100>200 (solo per il buy 2 e per il buy 3) - r 6479"
+                    buy = "BUY 3 RIALZO IMPROVVISO ! con ma200 > and 78>150 (solo per il buy 2 e per il buy 3) - r 6479"
                     action = "buy"
                     percentage = 80
                     
-                    
+                    #  8 gen 2024 78>150 al posto di 100>200
+                    #  8 gen 2024 and deviation_rialzo_improvviso_sopra > 0.24 da 0.47
                  
                     
                     
