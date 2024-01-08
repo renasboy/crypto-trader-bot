@@ -28663,7 +28663,7 @@ class maddog:
                         and ma50_last < ma59_last
                 
                         and deviation_ma39 < 0.05
-                        and deviation_sell < 0.01
+                        and deviation_sell < -0.02
                 
                         and ma2_last < ma2_2_min_ago 
                 
@@ -28676,12 +28676,12 @@ class maddog:
                         and macd_differenza_2_min_ago < -0.20
                         and ma2_differenza_2_min_ago < -8
                     ):
-                        sell = "SELL 4-5-x (3-7 min) EX cond spec 16047 A1Y CON 50<59 con dev 3-39 < 0.05 e dev_sell < 0.05 con ma50 < and macd_diff_2_min_ago < -0.20 - r 14588x"
+                        sell = "SELL 4-5-x (3-7 min) EX cond spec 16047 A1Y CON 50<59 con dev 3-39 < 0.05 e dev_sell < -0.02 con ma50 < and macd_diff_2_min_ago < -0.20 - r 14588 X"
                         action = "sell"
                         
                         # 24 dic 2023 se 10>20 and deviation_sell a 0.01 da 0.05
                         # 24 dic 2023 se 10>20 and ma2_differenza_2_min_ago < -8 da -6
-
+                        #  8 gen 2024 se 10>20 and deviation_sell a -0.02 da 0.01
                     
                     elif (
                         ma78_last > ma78_120_min_ago
