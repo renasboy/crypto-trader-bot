@@ -2473,14 +2473,25 @@ class maddog:
                     
                     and ma2_last >= ma20_last
                   
-                    and ma2_last >= ma2_2_min_ago
+                    
+                    and ma2_last > ma2_2_min_ago
                     and macd >= macd_2_min_ago
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
+                    and ma2_differenza_2_min_ago > 8
+                    and ma2_differenza_ma5 > 11
+                    and macd_differenza_2_min_ago > 1.25
                     
                 ):    
-                    buy = "BUY 1 compare forever - con 5-20 E CON 300 ancora vicina alla 450 ( anche un poco sotto! ) and 3-18 > 0.02 + MACD > - r 1537 A2x"
+                    buy = "BUY 1 compare forever - con 5-20 E CON 300 ancora vicina alla 450 ( anche un poco sotto! ) and 3-18 > 0.02 + MACD > - r 1537 A2 X"
                     action = "buy"
                     percentage = 90
+                    
+                    #  8 gen 2024 aggiunto and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
+                    #  8 gen 2024 aggiunto and ma2_differenza_2_min_ago > 8 
+                    #  8 gen 2024 aggiunto and ma2_differenza_ma5 > 11 
+                    #  8 gen 2024 aggiunto and macd_differenza_2_min_ago > 1.25
 
+                
                 elif (     
                     
                     ma3_last > ma13_last
