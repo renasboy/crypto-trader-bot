@@ -32215,18 +32215,19 @@ class maddog:
                 # oggi 18 dicembre 2023 ascolta mario ! SE ma20_last > ma20_2_min_ago aggiunta and ma2_differenza_ma5 < -7
                 # oggi 18 dicembre 2023 ascolta mario ! SE ma20_last > ma20_2_min_ago aggiunta and ma2_differenza_2_min_ago < -2
                 # oggi 30 dicembre 2023 ascolta mario ! SE ma20_last > ma20_2_min_ago DEV SELL a -0.03 da -0.02
+
             
             elif (
                 
                 ma50_last > ma50_2_min_ago
+                and ma5_last > ma10_last
                 and ma20_last <= ma20_2_min_ago
                 and ma2_differenza_2_min_ago < -3
                 and ma13_last > ma50_last
                 and ma100_last < ma100_60_min_ago
                 
                 and deviation_ma39 < 0.13
-                and deviation_sell < 0.01
-                
+                and deviation_sell < -0.02
                 
                 and deviation_ma5_sotto_ma200 > -0.60
                 and deviation_ma100_sopra_ma300 < 0.40
@@ -32236,7 +32237,33 @@ class maddog:
                 and macd < 15
                 and macd_differenza_2_min_ago < -1.5
             ):
-                sell = "SELL nuova condizione speciale - dev 3-39 < 0.13 and dev_sell < 0.01 con ma50 > e con ma5 sotto ma200 > -0.60 and MACD < and macd < 15 - r 16047 A2 Y1 Y"
+                sell = "SELL nuova cond spec CON 5 > 10 e dev 3-39 < 0.13 and dev_sell < -0.02 con ma50 > e con ma5 sotto ma200 > -0.60 and MACD < and macd < 15 - r 16047 A2 Y1 Y1"
+                action = "sell"
+                
+                #  8 gen 2024 dev sell a -0.02 da 0.01 ! con 5>10
+            
+            
+            elif (
+                
+                ma50_last > ma50_2_min_ago
+                and ma5_last < ma10_last
+                and ma20_last <= ma20_2_min_ago
+                and ma2_differenza_2_min_ago < -3
+                and ma13_last > ma50_last
+                and ma100_last < ma100_60_min_ago
+                
+                and deviation_ma39 < 0.13
+                and deviation_sell < -0.01
+                
+                and deviation_ma5_sotto_ma200 > -0.60
+                and deviation_ma100_sopra_ma300 < 0.40
+                
+                and ma2_last < ma2_2_min_ago 
+                and macd < macd_2_min_ago
+                and macd < 15
+                and macd_differenza_2_min_ago < -1.5
+            ):
+                sell = "SELL nuova cond spec CON 5 < 10 e dev 3-39 < 0.13 and dev_sell < -0.01 con ma50 > e con ma5 sotto ma200 > -0.60 and MACD < and macd < 15 - r 16047 A2 Y1 Y2"
                 action = "sell"
                 
                 # 25 nov 2023 and deviation_sell < -0.10 da < -0.14
@@ -32252,6 +32279,7 @@ class maddog:
                 # oggi 10 dicembre 2023 ascolta mario ! SE ma20_last <= ma20_2_min_ago DEV SELL a -0.01
                 # 29 dic 2023 dev sell a 0.01 da -0.01
                 # 29 dic 2023 diff macd a -1.5 da -2
+                #  8 gen 2024 dev sell a -0.01 da 0.01 ! con 5<10
           
             elif (
                 
