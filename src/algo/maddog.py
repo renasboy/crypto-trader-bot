@@ -9097,8 +9097,8 @@ class maddog:
                 
                 elif (
                     ma5_last > ma39_last
-                    and ma20_last > ma20_5_min_ago
                     
+                    and ma10_last > ma20_last
                     and deviation_ma3_sopra_ma10 > 0.08
                     and deviation_ma5_sopra_ma28 > -0.02
                     
@@ -9111,10 +9111,12 @@ class maddog:
                     and deviation_ma200_sopra_ma300 > -0.60
                     
                     and ma2_last >= ma2_2_min_ago
-                    and macd >= macd_2_min_ago
+                    
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
+                    and macd_differenza_2_min_ago > 1.00
                 ):
                
-                    buy = "BUY 2 con 5-39 che ci riprova quando se ne va lateralmente dopo il crollo CON 28>28 5 min ago and macd > macd_2_min_ago - r 5445 A1"
+                    buy = "BUY 2 con 5-39 che ci riprova quando se ne va lateralmente dopo il crollo CON 10>20 and macd_differenza_2_min_ago > 1.00  - r 5445 A1"
                     action = "buy"
                     percentage = 80
 
@@ -9127,6 +9129,9 @@ class maddog:
                     # 15 set 2023 28 5 min da 28 10 min
                     # 27 set 2023 20 5 min da 28 10 min
                     
+                    #  8 gen 2024 10>20 al posto di 20> 20 5 min ago 
+                    #  8 gen 2024 macd_differenza_2_min_ago > 1.00
+                
                 # BUY 2 che ci riprova quando se ne va lateralmente dopo il crollo
                 
                 elif (
@@ -31716,25 +31721,25 @@ class maddog:
                 and ma10_last >= ma20_last
                 and ma50_last <= ma50_2_min_ago
                 
-                and ma2_last < ma2_2_min_ago 
-                and ma2_differenza_2_min_ago < -7
-                
                 and ma300_last < ma300_301_min_ago
                 and delta_150_100 <= delta_150_100_60_min
                 
                 and deviation_ma39 < 0.07
-                and deviation_sell < -0.10
-                
+                and deviation_sell < -0.12
                 
                 and deviation_ma100_sopra_ma300 < 0.40
                 and deviation_ma5_sotto_ma200 > -0.50
                 
+                and ma2_last < ma2_2_min_ago 
+                and ma2_differenza_2_min_ago < -8
             ):
-                sell = "SELL cond spec 6 GIORNO con ma300 < 5 ore MA CON 10>=20 and dev 3-39 < 0.07 and dev_sell < -0.09 e con ma50 < e con ma78 > and diff ma2 < -7 - r 16045 Ax"
+                sell = "SELL cond spec 6 GIORNO con ma300 < 5 ore MA CON 10>=20 and dev 3-39 < 0.07 and dev_sell < -0.12 e con ma50 < e con ma78 > and diff ma2 < -7 - r 16045 AX"
                 action = "sell"
                 
                 # 26 dic 2023 con 10>=20 vendi dopo a -0.09 da -0.10
-                
+                #  8 gen 2024 dev sell a -0.12 da -0.09
+
+             
             
             elif (
                 ma78_last > ma78_120_min_ago
