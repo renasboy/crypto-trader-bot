@@ -31604,10 +31604,31 @@ class maddog:
                 # 15 nov 2023 deviation_sell < -0.20 < -0.31
 
             
+            elif (    
+                ma50_last <= ma50_2_min_ago
+                and ma10_last > ma20_last
+                and deviation_ma39 < 0.11
+                and deviation_sell < -0.01
+                
+                and delta_450_300 < delta_450_300_60_min
+                
+                and deviation_ma100_sopra_ma300 > 0.20
+                and deviation_ma3_sotto_ma150 > -1.20
+                
+                and ma2_last <= ma2_2_min_ago
+                and ma2_differenza_2_min_ago < -7
+                and macd < macd_2_min_ago
+                and macd_differenza_2_min_ago < -2
+                and ma2_last < ma10_last
+            ):
+                sell = "SELL cond. spec - con ma50_last <= ma50_2_min_ago MA CON 10>20 con 3-39 < 0.11 and dev_sell < -0.01 e dev_ma3_sotto_ma200 > -1.20 - r 15985 A1 Y1"
+                action = "sell"
+                
+                #  8 gen 2024 and deviation_sell < -0.01 da 0.01 se 10>20
             
             elif (    
                 ma50_last <= ma50_2_min_ago
-                
+                and ma10_last < ma20_last
                 and deviation_ma39 < 0.11
                 and deviation_sell < 0.01
                 
@@ -31622,7 +31643,7 @@ class maddog:
                 and macd_differenza_2_min_ago < -2
                 
             ):
-                sell = "SELL cond. spec - con ma50_last <= ma50_2_min_ago con 3-39 < 0.11 and dev_sell < 0.01 e dev_ma3_sotto_ma200 > -1.20 - r 15985 A1Y"
+                sell = "SELL cond. spec - con ma50_last <= ma50_2_min_ago MA CON 10>20 con 3-39 < 0.11 and dev_sell < 0.01 e dev_ma3_sotto_ma200 > -1.20 - r 15985 A1 Y2"
                 action = "sell"
                 
                 # 27 giu 2022 dev sell a 0.305 da 0.31
@@ -31644,7 +31665,8 @@ class maddog:
                 #  8 dic 2023 deviation_sell < -0.05 da < -0.15
                 # 13 dic 2023 deviation_ma39 a 0.11 da 0.01
                 # 13 dic 2023 deviation_sell a 0.01 da -0.05
-
+                
+                #  8 gen 2024 aggiunta and ma2_last < ma10_last se 10>20
 
           
                 
