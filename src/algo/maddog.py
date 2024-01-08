@@ -2495,7 +2495,7 @@ class maddog:
                 elif (     
                     
                     ma3_last > ma13_last
-                    and ma2_differenza_2_min_ago > 4
+                    
                     and ma100_last < ma100_120_min_ago
                     
                     and deviation_ma54_sopra_o_sotto_ma72 < 0.015
@@ -2513,7 +2513,11 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
                     and macd >= macd_2_min_ago
                     and macd > -40
+                    
                     and ma50_differenza_ma59 > -5
+                    and ma2_differenza_2_min_ago > 11
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
+                    and macd_differenza_2_min_ago > 0.50
                     
                 ):    
                     buy = "BUY 1 compare forever - con 5-20 E CON 300 ancora vicina alla 450 ( anche un poco sotto! ) + MACD > and ma50_differenza_ma59 > -5 - r 1537 A2 Y1"
@@ -2543,7 +2547,7 @@ class maddog:
                     # 19 ott 2023 4-13 da 5-20
                     # 12 nov 2023 aggiunta and ma50_differenza_ma59 > -5 cioe' se 50 sta VICINO alla 59
                     #  1 dic 2023 aggiunta and ma2_differenza_2_min_ago > 3
-                
+                    #  8 gen 2024 and ma2_differenza_2_min_ago > 11
                 
                 elif (     
                     
