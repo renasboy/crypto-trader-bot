@@ -11575,8 +11575,8 @@ class maddog:
                 elif (
                     ma200_last > ma200_20_min_ago
                     and ma78_last > ma150_last
-                    and deviation_rialzo_improvviso_sopra > 0.24
-                    and deviation_rialzo_improvviso_1 > 0.24
+                    and deviation_rialzo_improvviso_sopra > 0.28
+                    and deviation_rialzo_improvviso_1 > 0.28
                     and deviation_rialzo_improvviso_2 > 0.185
                     and deviation_rialzo_improvviso_3 > 0.185
                     and deviation_range_1 < 0.21
@@ -11585,6 +11585,7 @@ class maddog:
                     and deviation_range_2 > -0.21
                     and deviation_range_x < 0.21
                     and deviation_range_x > -0.21
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.088
                 ):
              
                     buy = "BUY 3 RIALZO IMPROVVISO ! con ma200 > and 78>150 (solo per il buy 2 e per il buy 3) - r 6479"
@@ -11593,8 +11594,10 @@ class maddog:
                     
                     #  8 gen 2024 78>150 al posto di 100>200
                     #  8 gen 2024 and deviation_rialzo_improvviso_sopra > 0.24 da 0.47
-                 
-                    
+                    #  9 gen 2024 and deviation_rialzo_improvviso_sopra > 0.28 da 0.24
+                    #  9 gen 2024 aggiunta and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.088
+
+                
                     
                 # BUY 3 con ma200> piccola CORREZIONE in alto FIAT che NON E' un forte ribasso e NON E' un crollo ! ALTRA RIGA RCCR che e' andata bene.
                 
