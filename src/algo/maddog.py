@@ -10519,27 +10519,26 @@ class maddog:
                 elif (     
                     
                     ma3_last > ma18_last
-                    and ma2_differenza_2_min_ago > 9
-                    and ma3_differenza_2_min_ago > 6
+                    and ma2_last >= ma20_last
                     
-                    and ma100_last < ma100_30_min_ago
                     and ma450_last > ma450_360_min_ago
+                    and ma100_last < ma100_30_min_ago
                     
                     and deviation_ma54_sopra_o_sotto_ma72 < -0.015
                     
                     and deviation_ma39_sotto_ma200 < -0.01
-                    and deviation_ma300_sopra_ma450 > -0.50
+                    and deviation_ma300_sopra_ma450 > -0.60
                     
-                    and deviation_ma3_sopra_ma10 > 0.027
+                    and deviation_ma3_sopra_ma10 > 0.01
                     and deviation_ma3_sopra_ma16 > -0.01
                     and deviation_ma3_sopra_ma18 > -0.02
                     
-                    and ma2_last >= ma20_last
-                    
                     and ma2_last > ma5_last
+                    and ma3_differenza_2_min_ago > 4
+                    
                     and ma2_last >= ma2_2_min_ago
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.18
                     and macd >= macd_2_min_ago
-                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
                     and macd_differenza_2_min_ago > 0.30
                 ):    
                     buy = "BUY 2 compare forever importato da r 1537 A3y con 3-18 E CON 300 ancora vicina alla 450 ( anche un poco sotto ! ) and 3-18 > -0.01 + MACD > - r 5995 A"
