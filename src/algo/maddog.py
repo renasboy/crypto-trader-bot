@@ -32229,14 +32229,13 @@ class maddog:
                 and macd_differenza_3_min_ago < 0.10
                 
                 and deviation_ma39 < 0.09
-                and deviation_sell < 0.02
-                
+                and deviation_sell < 0.005
                 
                 and deviation_ma100_sopra_ma300 < 0.40
                 and deviation_ma5_sotto_ma200 > -0.80
                 
             ):
-                sell = "SELL cond spec con ma10<ma10 2 min ago e CON 50<59 e dev 3-39 < 0.09 e dev_sell < 0.02 e ma50 < e macd_diff_3_min_ago< -0.20 e diff macd<-0.30 - r 16047 A1 Y2y"
+                sell = "SELL cond spec con ma10<ma10 2 min ago e 50<59 e dev 3-39 < 0.09 e dev_sell < 0.005 e ma50< e macd_diff_3_min_ago < -0.20 e diff macd <-0.30 - r 16047 A1 Y2 Y"
                 action = "sell"
                 
                 #   9 GIU 2023 dev 3-39 a -0.17 da -0.25
@@ -32263,7 +32262,7 @@ class maddog:
                 # 27 nov 2023 aggiunta and ma2_differenza_2_min_ago < -3
                 # 10 dic 2023 and macd_differenza_3_min_ago < 0.30 significa che se macd non cresce abbastanza vuol dire che non ha forza quindi puoi vendere
                 # 22 dic 2023 aggiunta and ma10_last <= ma10_2_min_ago
-                
+                #  8 gen 2024 and deviation_sell < 0.005 da 0.02
             
             elif (
                 
