@@ -31835,9 +31835,77 @@ class maddog:
             ):
                 sell = "SELL cond spec 6 GIORNO con ma300 < 5 ore con ma50 > e dev 3-39 < 0.13 and dev_sell < 0.03 e con ma78 < and macd_differenza_2_min_ago < -0.35 - r 16045 B1y"
                 action = "sell"
+              
+
 
             elif (
                 ma78_last < ma78_120_min_ago
+                
+                and deviation_ma250_sopra_ma300 > 0.12
+                
+                and ma20_last > ma20_2_min_ago
+                and ma50_last <= ma50_2_min_ago
+                and ma2_differenza_2_min_ago < -15
+                and ma2_differenza_ma5 < -8
+                and ma300_last < ma300_301_min_ago
+                and delta_150_100 <= delta_150_100_60_min
+                
+                and deviation_ma39 < 0.13
+                and deviation_sell < -0.02
+                
+                
+                and deviation_ma100_sopra_ma300 < 0.40
+                and deviation_ma5_sotto_ma200 > -0.50
+                
+                and ma2_last < ma2_2_min_ago 
+                and macd_differenza_2_min_ago < -0.35
+                
+            ):
+                sell = "SELL cond spec 6 GIORNO con ma300 < 5 ore con ma50 <= e dev 3-39 < 0.13 and dev_sell < -0.01 e con ma78 < and macd_differenza_2_min_ago < -0.35 - r 16045 B2 X1"
+                action = "sell"
+                
+                #  9 gen 2024 and deviation_sell < -0.02 SE deviation_ma250_sopra_ma300 > 0.12
+          
+            
+            elif (
+                ma78_last < ma78_120_min_ago
+                
+                and deviation_ma250_sopra_ma300 < 0.12
+                and deviation_ma250_sopra_ma300 > -0.12
+                
+                and ma20_last > ma20_2_min_ago
+                and ma50_last <= ma50_2_min_ago
+                and ma2_differenza_2_min_ago < -15
+                and ma2_differenza_ma5 < -8
+                and ma300_last < ma300_301_min_ago
+                and delta_150_100 <= delta_150_100_60_min
+                
+                and deviation_ma39 < 0.13
+                and deviation_sell < -0.05
+                
+                
+                and deviation_ma100_sopra_ma300 < 0.40
+                and deviation_ma5_sotto_ma200 > -0.50
+                
+                and ma2_last < ma2_2_min_ago 
+                and macd_differenza_2_min_ago < -0.35
+                
+            ):
+                sell = "SELL cond spec 6 GIORNO con ma300 < 5 ore con ma50 <= e dev 3-39 < 0.13 and dev_sell < -0.01 e con ma78 < and macd_differenza_2_min_ago < -0.35 - r 16045 B2 X2"
+                action = "sell"
+                
+                # 17 dic 2023 mario se ma20>ma20 2 min ago dev sell a 0.005 da 0.03 vedi 17 di 2023 ore 9:33
+                # 17 dic 2023 mario se ma20>ma20 and ma2_differenza_ma5 < -8
+                # 24 dic 2023 mario se ma20>ma20 deviation_sell < -0.01 da > 0.005
+                
+                #  9 gen 2024 and deviation_sell < -0.05 SE ANDAMENTO LATERALE CONSOLIDATO
+            
+            
+            elif (
+                ma78_last < ma78_120_min_ago
+                
+                and deviation_ma250_sopra_ma300 < -0.12
+                
                 and ma20_last > ma20_2_min_ago
                 and ma50_last <= ma50_2_min_ago
                 and ma2_differenza_2_min_ago < -15
@@ -31848,20 +31916,25 @@ class maddog:
                 and deviation_ma39 < 0.13
                 and deviation_sell < -0.01
                 
-                and deviation_ma100_sopra_ma300 < 0.40
                 
+                and deviation_ma100_sopra_ma300 < 0.40
                 and deviation_ma5_sotto_ma200 > -0.50
                 
                 and ma2_last < ma2_2_min_ago 
                 and macd_differenza_2_min_ago < -0.35
                 
             ):
-                sell = "SELL cond spec 6 GIORNO con ma300 < 5 ore con ma50 <= e dev 3-39 < 0.13 and dev_sell < -0.01 e con ma78 < and macd_differenza_2_min_ago < -0.35 - r 16045 B2 X"
+                sell = "SELL cond spec 6 GIORNO con ma300 < 5 ore con ma50 <= e dev 3-39 < 0.13 and dev_sell < -0.01 e con ma78 < and macd_differenza_2_min_ago < -0.35 - r 16045 B2 X3"
                 action = "sell"
                 
                 # 17 dic 2023 mario se ma20>ma20 2 min ago dev sell a 0.005 da 0.03 vedi 17 di 2023 ore 9:33
                 # 17 dic 2023 mario se ma20>ma20 and ma2_differenza_ma5 < -8
                 # 24 dic 2023 mario se ma20>ma20 deviation_sell < -0.01 da > 0.005
+                
+                #  9 gen 2024 and deviation_sell < -0.01 SE deviation_ma250_sopra_ma300 < -0.12
+
+
+            
             
             elif (
                 ma78_last < ma78_120_min_ago
