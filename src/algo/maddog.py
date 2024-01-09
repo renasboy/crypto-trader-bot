@@ -2002,11 +2002,12 @@ class maddog:
                     
                     # 8 gen 2024 incrocio 3-30 piu' veloce di 10>20 !
                 
+                
                 elif (    
-                    ma4_last > ma13_last
+                    ma3_last > ma13_last
                     
-                    and deviation_ma300_sopra_ma450 < 0.17
-                    and deviation_ma300_sopra_ma450 > -0.17
+                    and deviation_ma300_sopra_ma450 < 0.18
+                    and deviation_ma300_sopra_ma450 > -0.18
                     
                     and deviation_ma100_sopra_ma300 < 0.29
                     and deviation_ma100_sopra_ma300 > -0.29
@@ -2015,23 +2016,23 @@ class maddog:
                     and deviation_ma10_sotto_ma100 > -0.31
                     
                     and deviation_ma3_sopra_ma10 > 0.01
-                    and deviation_ma3_sopra_ma16 > 0.06
+                    and deviation_ma3_sopra_ma16 > -0.01
                     and deviation_ma4_sopra_ma28 > -0.05
                     
-                    and ma2_last >= ma2_2_min_ago
                     
+                    and ma2_last >= ma2_2_min_ago
                     and ma2_differenza_2_min_ago > 7
                     and ma2_differenza_ma5 > 10
                     and macd > -20
                     and macd_differenza_2_min_ago > 1.25
                 ):  
                 
-                    buy = "BUY 1 LATERALE 2 con 3-10 > 0.07 and macd > macd 2 min ago and deviation_ma3_sopra_ma16 > 0.112 con macd > 0 and ma2_differenza_2_min_ago > 7 - r 1205"
+                    buy = "BUY 1 CONSOLIDATO TREND LATERALE con 3-10 > 0.01 con macd > -20 and ma2_differenza_2_min_ago > 7 - r 1205"
                     action = "buy"
                     percentage = 50
                     
                     #  5 mag 2023 ho tolto and ma250_last > ma300_last
-                    # attenzione ! adesso questa condizione si attiva anche se ma250_last < ma300_last ! MA SEMPRE durante un TREND LATERALE.
+                    # attenzione ! adesso questa condizione si attiva anche se ma250_last < ma300_last ! MA SEMPRE durante un CONSOLIDATO TREND LATERALE.
                     # vediamo come va.
                     # vedi 19 maggio 2023 ore 17:47 !
                     #  8 giu 2023 and deviation_ma3_sopra_ma16 > 0.112
@@ -2043,7 +2044,7 @@ class maddog:
                     # 11 ott 2023 dev 3-16 a 0.07 da 0.08
                     # 11 ott 2023 dev 4-28 a -0.03 da -0.02
                     # 10 dic 2023 anticipato ndecchiecella
-                    
+                    #  9 gen 2024 anticipato ancora
                     
                     
                     
