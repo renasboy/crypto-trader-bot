@@ -31744,7 +31744,7 @@ class maddog:
             
             elif (
                 ma78_last > ma78_120_min_ago
-                and ma10_last >= ma20_last
+                and ma3_last >= ma20_last
                 and ma50_last <= ma50_2_min_ago
                 
                 and ma300_last < ma300_301_min_ago
@@ -31764,12 +31764,11 @@ class maddog:
                 
                 # 26 dic 2023 con 10>=20 vendi dopo a -0.09 da -0.10
                 #  8 gen 2024 dev sell a -0.12 da -0.09
-
+                #  9 gen 2024 3>20 sostituisce 10>20 ! (CHE E' ARRIVATO TARDI)
              
-            
             elif (
                 ma78_last > ma78_120_min_ago
-                and ma10_last < ma20_last
+                and ma3_last < ma20_last
                 and ma50_last <= ma50_2_min_ago
                 
                 and ma2_last < ma2_2_min_ago 
@@ -31785,14 +31784,99 @@ class maddog:
                 and deviation_ma5_sotto_ma200 > -0.50
                 
             ):
-                sell = "SELL cond spec 6 GIORNO con ma300 < 5 ore e con 10<20 and dev 3-39 < 0.07 and dev_sell < -0.03 e con ma50 < e con ma78 > and diff ma2 < -7 - r 16045 Ay"
+                sell = "SELL cond spec 6 GIORNO con ma300 < 5 ore e con 10<20 and dev 3-39 < 0.07 and dev_sell < -0.03 e con ma50 < e con ma78 > and diff ma2 < -7 - r 16045 AY"
                 action = "sell"
                 
                 # 20 nov 2023 aggiunta and diff ma2 < -5 
                 # 10 dic 2023 and deviation_sell a -0.10 da -0.0107
                 # 26 dic 2023 con 10<20 vendi prima a -0.03 da -0.10
+                #  9 gen 2024 questa ha fatto -0.86 ! ALLORA FACCIO LA PROSSIMA r 16045 AZ1 e AZ2
+                #  9 gen 2024 3<20 sostituisce 10<20 ! (CHE E' ARRIVATO TARDI)
 
             
+            elif (
+                ma78_last > ma78_120_min_ago
+                and ma3_last < ma20_last
+                and ma50_last < ma50_2_min_ago
+                
+                and ma300_last < ma300_301_min_ago
+                and delta_150_100 <= delta_150_100_60_min
+                
+                and deviation_ma39 < 0.07
+                and deviation_sell < -0.03
+                
+                and deviation_ma100_sopra_ma300 < 0.40
+                and deviation_ma5_sotto_ma200 > -0.50
+                
+                and ma2_last < ma2_2_min_ago 
+                and ma2_differenza_2_min_ago < -7
+            ):
+                sell = "SELL cond spec 6 GIORNO con ma300 < 5 ore e con 10<20 and dev 3-39 < 0.07 and dev_sell < -0.03 e con ma50 < e con ma78 > and diff ma2 < -7 - r 16045 AZ1"
+                action = "sell"
+                
+                # 20 nov 2023 aggiunta and diff ma2 < -5 
+                # 10 dic 2023 and deviation_sell a -0.10 da -0.0107
+                # 26 dic 2023 con 10<20 vendi prima a -0.03 da -0.10
+                #  9 gen 2024 questa ha fatto -0.86 !
+                #  9 gen 2024 3<20 sostituisce 10<20 ! (CHE E' ARRIVATO TARDI)
+          
+            elif (
+                ma78_last > ma78_120_min_ago
+                and ma3_last < ma20_last
+                and ma50_last >= ma50_2_min_ago
+                
+                and ma300_last < ma300_301_min_ago
+                and delta_150_100 <= delta_150_100_60_min
+                
+                and deviation_ma39 < 0.07
+                and deviation_sell < -0.03
+                
+                and deviation_ma100_sopra_ma300 < 0.40
+                and deviation_ma5_sotto_ma200 > -0.50
+                
+                and ma2_last < ma2_2_min_ago 
+                and ma2_differenza_2_min_ago < -7
+            ):
+                sell = "SELL cond spec 6 GIORNO con ma300 < 5 ore e con 10<20 and dev 3-39 < 0.07 and dev_sell < -0.03 e con ma50 < e con ma78 > and diff ma2 < -7 - r 16045 AZ 2A"
+                action = "sell"
+                
+                # 20 nov 2023 aggiunta and diff ma2 < -5 
+                # 10 dic 2023 and deviation_sell a -0.10 da -0.0107
+                # 26 dic 2023 con 10<20 vendi prima a -0.03 da -0.10
+                #  9 gen 2024 questa ha fatto -0.86 !
+                #  9 gen 2024 3<20 sostituisce 10<20 ! (CHE E' ARRIVATO TARDI)
+
+            
+            elif (
+                ma78_last > ma78_120_min_ago
+                and ma3_last < ma20_last
+                and ma50_last >= ma50_2_min_ago
+                
+                and ma300_last < ma300_301_min_ago
+                and delta_150_100 <= delta_150_100_60_min
+                
+                and deviation_ma39 < 0.07
+                and deviation_sell < 0.03
+                
+                and deviation_ma100_sopra_ma300 < 0.40
+                and deviation_ma5_sotto_ma200 > -0.50
+                
+                and ma2_last < ma2_2_min_ago 
+                and ma2_differenza_2_min_ago < -7
+                and macd_differenza_2_min_ago < -8
+            ):
+                sell = "SELL cond spec 6 GIORNO con ma300 < 5 ore e con 10<20 and dev 3-39 < 0.07 and dev_sell < -0.03 e con ma50 < e con ma78 > and diff macd < -6 - r 16045 AZ 2B"
+                action = "sell"
+                
+                # 20 nov 2023 aggiunta and diff ma2 < -5 
+                # 10 dic 2023 and deviation_sell a -0.10 da -0.0107
+                # 26 dic 2023 con 10<20 vendi prima a -0.03 da -0.10
+                #  9 gen 2024 questa ha fatto -0.86 !
+                #  9 gen 2024 3<20 sostituisce 10<20 ! (CHE E' ARRIVATO TARDI)
+                #  9 gen 2024 se il macd da' una grande botta al ribaso allora anticipo il buy
+          
+          
+             
             elif (
                 ma78_last < ma78_120_min_ago
                 and ma40_last > ma50_last
