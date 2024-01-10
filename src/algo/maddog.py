@@ -15648,7 +15648,7 @@ class maddog:
                 elif (
                  
                     ma78_last < ma150_last
-                    and ma39_last < ma20_13_min_ago
+                    and ma39_last < ma39_13_min_ago
                     and ma20_last > ma20_2_min_ago
                     and deviation_ma39 > 0.33
                     
@@ -15912,10 +15912,12 @@ class maddog:
                     # 24 dic 2023 aggiunta and macd_differenza_2_min_ago > 0.50
 
                 
-              
                 elif (     
                     
                     ma3_last > ma13_last
+                    and deviation_ma39 > 0.23
+                    and deviation_ma5_sotto_ma300 > -1.00
+              
                     and deviation_ma78_sopra_o_sotto_ma200 < -0.028
                     and ma2_differenza_2_min_ago > 10
                     
@@ -15941,13 +15943,53 @@ class maddog:
                     and ma50_differenza_ma59 > -5
                     and macd_differenza_2_min_ago > 2
                 ):    
-                    buy = "BUY 5 compare forever EX BUY 1 r 1537 A2y1 - 100<120 min ago E 100<60 min ago con 5-20 E CON 300 vicina alla 450 + MACD > E ma50_diff_ma59 > -5 - r 7589 B2"
+                    buy = "BUY 5 compare forever EX BUY 1 r 1537 A2y1 - 100<120 min ago E 100<60 min ago con 5-20 E CON 300 vicina alla 450 + MACD > E ma50_diff_ma59 > -5 - r 7589 B2x"
+                    action = "buy"
+                    percentage = 90
+                    
+                    #  10 gen 2023 se 5 e' vicina alla 300 E STIAMO AL BUY 5 deve essere almeno 3-39
+
+    
+                elif (     
+                    
+                    ma3_last > ma13_last
+                    and deviation_ma5_sotto_ma300 < -1.00
+                    
+              
+                    and deviation_ma78_sopra_o_sotto_ma200 < -0.028
+                    and ma2_differenza_2_min_ago > 10
+                    
+                    and ma100_last < ma100_120_min_ago
+                    and ma100_last < ma100_60_min_ago
+                    
+                    
+                    and deviation_ma54_sopra_o_sotto_ma72 < 0.015
+                    and deviation_ma54_sopra_o_sotto_ma72 > -0.015
+                    
+                    and deviation_ma39_sotto_ma200 < 0.10
+                    and deviation_ma300_sopra_ma450 > -0.37
+                    
+                    and deviation_ma3_sopra_ma10 > -0.01
+                    and deviation_ma3_sopra_ma16 > 0.01
+                    and deviation_ma3_sopra_ma18 > -0.03
+                    
+                    and ma2_last >= ma20_last
+                  
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                    and macd > -40
+                    and ma50_differenza_ma59 > -5
+                    and macd_differenza_2_min_ago > 2
+                ):    
+                    buy = "BUY 5 compare forever EX BUY 1 r 1537 A2y1 - 100<120 min ago E 100<60 min ago con 5-20 E CON 300 vicina alla 450 + MACD > E ma50_diff_ma59 > -5 - r 7589 B2y"
                     action = "buy"
                     percentage = 90
                     
                     # 27 nov 2023 aggiunta and ma2_differenza_2_min_ago > 3
                     
                     # ATTENZIONE 8 dic 2023 se 78 sotto 200 allora aggiunto diff ma2 > 10 e diff macd >2 CIOE' basta BUY 5 continui ! (se 78 molto sotto 200)
+                    #  10 gen 2023 se 5 molto sotto alla 300 E STIAMO AL BUY 5 e' comunque un crollo e sono aggressivo ! e' una occasione.
+              
 
                   
                 # BUY 5 migliore EX r 1043 B che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-59
