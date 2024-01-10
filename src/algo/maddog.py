@@ -27825,9 +27825,29 @@ class maddog:
                         #  5 dic 2023 and deviation_ma39 < -0.13 da -0.23
                         #  5 dic 2023 aggiunta and macd < macd_2_min_ago
                   
-                        
                     elif (
                         deviation_trend_ma200 > -0.10
+                        and deviation_ma100_sopra_ma300 > 0.50
+                        and ma300_last < ma450_last
+                        and ma200_last > ma300_last
+                        
+                        and ma50_last < ma50_2_min_ago
+                        
+                        and deviation_ma39 < -0.10
+                        
+                        
+                        and ma2_last < ma2_2_min_ago
+                       
+                    ):
+                        sell = "SELL 3 da 60 a 90 min con ma50 < AND300 <450 MA 200>300  e con deviation_ma39 <-0.10 - r 14052 B1"
+                        action = "sell"
+                        
+                        # 10 gen 2024 se sta molto in alto entra in azione solo dev39
+                  
+                    
+                    elif (
+                        deviation_trend_ma200 > -0.10
+                        and deviation_ma100_sopra_ma300 < 0.50
                         and ma300_last < ma450_last
                         and ma200_last > ma300_last
                         
@@ -27839,7 +27859,7 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                        
                     ):
-                        sell = "SELL 3 da 60 a 90 min con ma50 < AND300 <450 MA 200>300  e con deviation_ma39 <-0.15 and dev_sell < 0.10 con > perdita tollerata - r 14052 B"
+                        sell = "SELL 3 da 60 a 90 min con ma50 < AND300 <450 MA 200>300  e con deviation_ma39 <-0.15 and dev_sell < 0.10 con > perdita tollerata - r 14052 B2"
                         action = "sell"
                         
                         # and ma3_last < ma33_last
