@@ -10596,10 +10596,10 @@ class maddog:
                     and deviation_ma3_sopra_ma18 > -0.02
                     
                     and ma2_last > ma5_last
-                    and ma3_differenza_2_min_ago > 4
+                    and ma3_differenza_2_min_ago > 3
                     
                     and ma2_last >= ma2_2_min_ago
-                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.18
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
                     and macd >= macd_2_min_ago
                     and macd_differenza_2_min_ago > 0.30
                 ):    
@@ -10619,6 +10619,8 @@ class maddog:
                     # 23 dic 2023 and ma3_differenza_2_min_ago a 6 da 5
                     # 23 dic 2023 aggiunta and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
                     # 23 dic 2023 aggiunta and macd_differenza_2_min_ago > 0.30
+
+                  
                 
                 elif (     
                     
