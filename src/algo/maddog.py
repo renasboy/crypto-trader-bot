@@ -10633,7 +10633,7 @@ class maddog:
                     and deviation_ma54_sopra_o_sotto_ma72 < -0.015
                     
                     and deviation_ma39_sotto_ma200 < -0.01
-                    and deviation_ma300_sopra_ma450 > -0.60
+                    and deviation_ma300_sopra_ma450 > -0.70
                     
                     and deviation_ma3_sopra_ma10 > 0.01
                     and deviation_ma3_sopra_ma16 > -0.01
@@ -10645,9 +10645,9 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
                     and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
                     and macd >= macd_2_min_ago
-                    and macd_differenza_2_min_ago > 0.30
+                    and macd_differenza_2_min_ago > 0.10
                 ):    
-                    buy = "BUY 2 compare forever importato da r 1537 A3y con 3-18 E CON 300 ancora vicina alla 450 ( anche un poco sotto ! ) and 3-18 > -0.01 + MACD > - r 5995 A"
+                    buy = "BUY 2 compare forever importato da r 1537 A3y con 3-18 E CON 300 ancora vicina alla 450 ( anche un poco sotto ! ) and 3-18 > -0.02 + MACD > - r 5995 A"
                     action = "buy"
                     percentage = 90
                     
@@ -10663,8 +10663,8 @@ class maddog:
                     # 23 dic 2023 and ma3_differenza_2_min_ago a 6 da 5
                     # 23 dic 2023 aggiunta and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
                     # 23 dic 2023 aggiunta and macd_differenza_2_min_ago > 0.30
-
-                  
+                    # 11 gen 2024 and deviation_ma300_sopra_ma450 > -0.70 da -0.60
+                    # 11 gen 2024 and macd_differenza_2_min_ago > 0.10 da 0.30 
                 
                 elif (     
                     
