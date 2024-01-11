@@ -32095,7 +32095,7 @@ class maddog:
                 and ma2_differenza_2_min_ago < -8
                 and macd_differenza_2_min_ago < -0.5
             ):
-                sell = "SELL cond spec 6 GIORNO con ma300 < 5 ore e con 10<20 and dev 3-39 < 0.07 and dev_sell < -0.03 e con ma50 < e con ma78 > and diff ma2 < -7 - r 16045 AZ 2A"
+                sell = "SELL cond spec 6 GIORNO con ma300 < 5 ore e con 10<20 and dev 3-39 < 0.07 and dev_sell < -0.03 e con ma50 < e con ma78 > and diff ma2 < -8 - r 16045 AZ 2A"
                 action = "sell"
                 
                 # 20 nov 2023 aggiunta and diff ma2 < -5 
@@ -32103,7 +32103,9 @@ class maddog:
                 # 26 dic 2023 con 10<20 vendi prima a -0.03 da -0.10
                 #  9 gen 2024 questa ha fatto -0.86 !
                 #  9 gen 2024 3<20 sostituisce 10<20 ! (CHE E' ARRIVATO TARDI)
-                # 11 gen 2024 and macd_differenza_2_min_ago < -0.5
+                # 11 gen 2024 and ma2_differenza_2_min_ago < -8 da -7
+                # 11 gen 2024 and macd_differenza_2_min_ago < -0.5 (sperando che non faccia arrivare tardi il sell)
+                
             
             elif (
                 ma78_last > ma78_120_min_ago
