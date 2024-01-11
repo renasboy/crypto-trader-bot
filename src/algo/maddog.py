@@ -8214,8 +8214,6 @@ class maddog:
                     
                     # deviation_buy2 = ma8_last / ma50
                     
-                    
-                    
                 # BUY 2C dopo grande rialzo e grande ribasso
                 
                 elif (
@@ -8246,6 +8244,27 @@ class maddog:
                     percentage = 80
                     
                     # deviation_buy2 = ma8_last / ma50
+
+
+                
+                elif (
+                    ma4_last > ma11_last
+                    and deviation_buy_crollo_1 < -1.61
+
+                    and ma78_last < ma300_last
+
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
+                    and macd_differenza_2_min_ago > -12
+
+                ):
+                    buy = "BUY 2 CROLLO FERRARI importato da BUY 1 3543 B con 5-11 and macd > - modo 2 and ma78_last < ma300_last and macd_differenza_2_min_ago > -12 - r 4880"
+                    action = "buy"
+                    percentage = 80
+
+              
+
+              
+                
                     
                     
                 
