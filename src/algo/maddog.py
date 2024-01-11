@@ -34755,21 +34755,21 @@ class maddog:
                 and seconds_since_last_trade > 7200
                 and ma5_last < ma5_11_min_ago
                 
-                and ma3_last < ma33_last
+                and ma3_last < ma36_last
                 
                 and ma2_last < ma2_2_min_ago
                 and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.018
                 and macd < macd_2_min_ago
                 and macd_differenza_2_min_ago < -1
             ):    
-                sell = "SELL cond. speciale 3-33 - POC MAL E SUB (ma non troppo !) (> 120 min ) scende con dev > 0.80 and macd < macd 2 min ago con ma5_11_min_ago - r 16873 C1"
+                sell = "SELL cond. speciale 3-36 - POC MAL E SUB (ma non troppo !) (> 120 min ) scende con dev > 0.80 and macd < macd 2 min ago con ma5_11_min_ago - r 16873 C1"
                 action = "sell"
                 
                 # 27 set 2023 macd < macd 2 min ago 
                 # 27 set 2023 and macd_differenza_2_min_ago < -1
                 #  1 nov 2023 ma5_11_min_ago da ma5_12_min_ago
                 # 11 gen 2024 aggiunta and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.018
-            
+                # 11 gen 2024 3-36 da 3-33 dopo 2 ore di rialzo non e' proprio un pochi maledetti e SUBITO !
 
             # 14 
             
