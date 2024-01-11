@@ -33607,15 +33607,17 @@ class maddog:
                 ma2_last <= ma4_last
                 and ma300_last > ma300_301_min_ago
                 and ma2_last <= ma6_last
-                and deviation_crollo_24_aprile < -0.57
+                and deviation_crollo_24_aprile < -0.37
                 
                 and delta_1 > delta_2
                 and deviation_ma5_sotto_ma200 < -0.70
             ): 
                 
-                sell = "SELL cond special 21 Bocelli - core 'ngrato - > CROLLO IMPROVVISO - and delta_1 > delta_2 e dev_ma5_sotto_ma200 < -0.70 < dev sell -0.572 - r 16480 Bx"
+                sell = "SELL cond special 21 Bocelli - core 'ngrato - > CROLLO IMPROVVISO - and delta_1 > delta_2 e dev_ma5_sotto_ma200 < -0.70 < dev sell -0.37 - r 16480 Bx"
                 action = "sell"
                 
+                # 11 gen 2024 -0.37 da -0.57
+            
                 
             elif (    
                 ma2_last <= ma4_last
