@@ -12863,12 +12863,12 @@ class maddog:
                     # 17 mag 2023 riduzione generale dei valori per anticipare se 100 sta vicina alla 300 con aggiunta di macd > macd 2 min ago
                     
                     
-                    
                 # BUY 3 IN BASSO con ma69 > and deviation_bellissima > 0.12 IMPORTATA DA BUY 4 RCCR   
                 
                 elif (
                     ma50_last >= ma50_2_min_ago
                     and deviation_ma100_sopra_ma300 < -0.25
+                    and deviation_ma5_sotto_ma300 > -1.80
                     
                     and ma300_last > ma300_301_min_ago
                     
@@ -12890,7 +12890,40 @@ class maddog:
                     and macd > macd_2_min_ago
                     and macd_differenza_2_min_ago > 1.20
                 ):
-                    buy = "BUY 3 IN BASSO con ma300_last > ma300_301_min_ago E con dev_bellissima > 0.04 IMPORTATA DA BUY 4 RCCR - r 6599 A1z"
+                    buy = "BUY 3 IN BASSO con ma300_last > ma300_301_min_ago E con dev_bellissima > 0.04 IMPORTATA DA BUY 4 RCCR - r 6599 A1 z1"
+                    action = "buy"
+                    percentage = 50
+
+                
+                # BUY 3 IN BASSO con ma69 > and deviation_bellissima > 0.12 IMPORTATA DA BUY 4 RCCR   
+                
+                elif (
+                    ma50_last >= ma50_2_min_ago
+                    and deviation_ma100_sopra_ma300 < -0.25
+                    and deviation_ma5_sotto_ma300 < -1.80
+                    and deviation_ma39 > 0.33
+                    
+                    and ma300_last > ma300_301_min_ago
+                    
+                    and deviation_ma3_sopra_ma10 > 0.05
+                    and deviation_ma5_sopra_ma28 > 0.01
+                    
+                    and deviation_bellissima > 0.03
+                    and deviation_buy3 > 0.03
+                    and deviation_ma7_sopra_ma40 > 0.03
+               
+                    and ma3_last > ma13_last
+                    and ma4_last > ma9_last
+                    and ma4_last > ma50_last
+                    and ma6_last > ma15_last
+                    and ma7_last > ma25_last
+                    
+                    and ma2_last > ma2_2_min_ago
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
+                    and macd > macd_2_min_ago
+                    and macd_differenza_2_min_ago > 1.20
+                ):
+                    buy = "BUY 3 IN BASSO con ma300_last > ma300_301_min_ago E con dev_bellissima > 0.04 IMPORTATA DA BUY 4 RCCR - r 6599 A1 z2"
                     action = "buy"
                     percentage = 50
                     
@@ -12903,6 +12936,8 @@ class maddog:
                     # 27 set 2023 dev bel a 0.03 da 0.04
                     # 27 set 2023 dev buy 3 a 0.03 da 0.04
                     # 27 set 2023 dev 7 sopra 40 a 0.03 da 0.04
+                    # 11 gen 2024 durante il crollo il BUY 3 DEVE STARE ALMENO DI 0.33% SOPRA LA ma39 - PUGNO FANTASMA DI MOHAMMAD ALI
+                
                     
                 # BUY 3 con ma69 > and deviation_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali) IMPORTATA DA BUY 4 RCCR
                 
