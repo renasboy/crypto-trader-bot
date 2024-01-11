@@ -5334,16 +5334,33 @@ class maddog:
 
                     
                 # BUY 1 CROLLO FERRARI - modo 2 questa condizione e' entrata in azione ! ( e mi e' sembrata ben fatta !)
-
+                
                 elif (
                     ma5_last > ma11_last
                     and deviation_buy_crollo_1 < -1.61
-                     
-                    and macd > macd_2_min_ago
+                    
                     and ma78_last < ma300_last
+                    
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
                     and macd >= macd_2_min_ago
+                    
                 ):
-                    buy = "BUY 1 CROLLO FERRARI 5-11 and macd > - modo 2 and ma78_last < ma300_last - r 3543"
+                    buy = "BUY 1 CROLLO FERRARI 5-11 and macd > - modo 2 and ma78_last < ma300_last - r 3543a"
+                    action = "buy"
+                    percentage = 80
+
+                
+                elif (
+                    ma4_last > ma11_last
+                    and deviation_buy_crollo_1 < -1.61
+                    
+                    and ma78_last < ma300_last
+                    
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
+                    and macd_differenza_2_min_ago > -12
+                    
+                ):
+                    buy = "BUY 1 CROLLO FERRARI 5-11 and macd > - modo 2 and ma78_last < ma300_last and macd_differenza_2_min_ago > -12 - r 3543b"
                     action = "buy"
                     percentage = 80
                     
@@ -5351,7 +5368,7 @@ class maddog:
                     # 14 GIU 2022 5-18
                     # 19 apr 2023 5-11 and macd > macd_2_min_ago
                     # 31 lug 2023 tolto ma2_last >= ma2_2_min_ago c'e' il MACD per la ferrari
-
+                    # 11 gen 2024 la diifferenza MACD durante il crollo ferrari RALLENTA IL CROLLO con il confortp della ma2 che sale !
                 
 
                 # condizione crollo ferrari - bird of paradise - snowy white
