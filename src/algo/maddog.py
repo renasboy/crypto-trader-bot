@@ -34728,6 +34728,7 @@ class maddog:
                 and ma3_last < ma33_last
                 
                 and ma2_last < ma2_2_min_ago
+                and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.018
                 and macd < macd_2_min_ago
                 and macd_differenza_2_min_ago < -1
             ):    
@@ -34737,7 +34738,7 @@ class maddog:
                 # 27 set 2023 macd < macd 2 min ago 
                 # 27 set 2023 and macd_differenza_2_min_ago < -1
                 #  1 nov 2023 ma5_11_min_ago da ma5_12_min_ago
-
+                # 11 gen 2024 aggiunta and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.018
             
 
             # 14 
