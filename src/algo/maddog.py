@@ -170,6 +170,7 @@ class maddog:
         ma100_90_min_ago = self.algo_helper.ma_minutes_ago(100, 90)
         ma100_120_min_ago = self.algo_helper.ma_minutes_ago(100, 120)
         ma100_180_min_ago = self.algo_helper.ma_minutes_ago(100, 180)
+        
         ma100_301_min_ago = self.algo_helper.ma_minutes_ago(100, 301)
         ma150_20_min_ago = self.algo_helper.ma_minutes_ago(150, 20)
         ma150_60_min_ago = self.algo_helper.ma_minutes_ago(150, 60)
@@ -34439,7 +34440,7 @@ class maddog:
             
             elif (
                 seconds_since_last_trade > 0 and seconds_since_last_trade < 7200
-                and ma100_last > ma100_300_min_ago
+                and ma100_last > ma100_301_min_ago
                 and deviation_ma10__diviso_ma10_5_ore_ago > 1.50
                 
                 and ma3_last < ma30_last
@@ -34459,7 +34460,7 @@ class maddog:
             
             elif (
                 seconds_since_last_trade > 0 and seconds_since_last_trade < 7200
-                and ma100_last < ma100_300_min_ago
+                and ma100_last < ma100_301_min_ago
                 and deviation_ma10__diviso_ma10_5_ore_ago > 1.50
                 and ma3_last < ma20_last
                 and deviation_ma3_di_adesso_diviso_ma3_di_90_min_ago < 1.30
