@@ -34439,6 +34439,27 @@ class maddog:
             
             elif (
                 seconds_since_last_trade > 0 and seconds_since_last_trade < 7200
+                and ma100_last > ma100_300_min_ago
+                and deviation_ma10__diviso_ma10_5_ore_ago > 1.50
+                
+                and ma3_last < ma30_last
+                and deviation_ma3_di_adesso_diviso_ma3_di_90_min_ago < 1.30
+                
+                and deviation_sell > 0.70
+                and deviation_sell < 1.05
+                
+                and ma2_last < ma2_2_min_ago
+                and macd < macd_2_min_ago
+                and macd < -5
+            ):    
+                sell = "SELL cond POCHI MALEDETTI E SUBITO da 0 a 120 min con ma100> 5 ore e 3-30 E con dev_sell 0.70 - 1.05 e macd < e macd < -5 - PRENDILI ! - r 16750 A1x"
+                action = "sell"
+                
+                # 24 ago 2023 and macd < -5
+            
+            elif (
+                seconds_since_last_trade > 0 and seconds_since_last_trade < 7200
+                and ma100_last < ma100_300_min_ago
                 and deviation_ma10__diviso_ma10_5_ore_ago > 1.50
                 and ma3_last < ma20_last
                 and deviation_ma3_di_adesso_diviso_ma3_di_90_min_ago < 1.30
@@ -34450,7 +34471,7 @@ class maddog:
                 and macd < macd_2_min_ago
                 and macd < -5
             ):    
-                sell = "SELL condizione POCHI MALEDETTI E SUBITO da 0 a 120 min con 3-13 E con dev_sell 0.70 - 1.05 and macd < and macd < -5 - INTANTO TE LI PRENDI - r 16750 A1"
+                sell = "SELL condizione POCHI MALEDETTI E SUBITO da 0 a 120 min con ma100 < 5 ore e 3-20 E dev_sell 0.70 - 1.05 e macd < and macd < -5 - PRENDILI ! - r 16750 A1y"
                 action = "sell"
                 
                 # 24 ago 2023 and macd < -5
