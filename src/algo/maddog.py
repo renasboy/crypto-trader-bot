@@ -7316,12 +7316,37 @@ class maddog:
                     
                     # 27 set 2023 se 450 > 450 300 min ago
                     # 27 set 2023 5-54 da 59-200
-              
-                elif (
-                    
+
+                
+                elif (    
                     ma59_last > ma200_last
                     and ma450_last < ma450_300_min_ago
+                    and ma100_last > ma100_120_min_ago
+                    and ma59_last >= ma59_2_min_ago
+                    and deviation_ma100_sopra_ma300 < 0.20
                     
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > 0.02
+                    and deviation_ma5_sopra_ma28 > 0.03
+                    
+                    and deviation_ma7_sopra_ma40 > 0.01
+                    and deviation_buy_ma3_sopra_ma13 > 0.08
+                    
+                    and price >= price_2_min_ago
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
+                    and macd >= macd_2_min_ago
+                ):
+                    buy = "BUY 2A ribasso o laterale  and ma69_last > ma200_last - r 4685 BX 2x"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # 11 gen 2024 anticipato ndecchiecella se ma100 sale da 120 min
+
+                
+                elif (    
+                    ma59_last > ma200_last
+                    and ma450_last < ma450_300_min_ago
+                    and ma100_last < ma100_120_min_ago
                     and ma59_last >= ma59_2_min_ago
                     and deviation_ma100_sopra_ma300 < 0.20
                     
@@ -7334,9 +7359,10 @@ class maddog:
                     
                     and ma3_last > ma40_last
                     and price >= price_2_min_ago
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
                     and macd >= macd_2_min_ago
                 ):
-                    buy = "BUY 2A ribasso o laterale  and ma69_last > ma200_last - r 4685 Bx2"
+                    buy = "BUY 2A ribasso o laterale  and ma69_last > ma200_last - r 4685 BX 2y"
                     action = "buy"
                     percentage = 80
 
@@ -7348,7 +7374,7 @@ class maddog:
                     # 18 nov 2022 5-28 0.11
                     # 11 gen 2023 5-28 a 0.10 da 0.11
                     # 11 gen 2023 3-10 a 0.04 da 0.05
-                    
+                    # 11 gen 2024 aggiunta and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
                     
                 elif (
                     
