@@ -33741,8 +33741,9 @@ class maddog:
                 # 11 dic 2023 and deviation_crollo_24_aprile a -0.28 da -0.30
                 # 26 dic 2023 and deviation_crollo_24_aprile a -0.24 da -0.28
                 
-                # 12 gen 2024 and deviation_crollo_24_aprile a -0.15 da -0.20
+                # 12 gen 2024 and deviation_crollo_24_aprile a -0.15 da -0.20 - 12 gen 2024 con -0.20 ha fatto -0.99 % ! ore 17:54
                 
+
                 ######################################################################################### fine dopo il crollo improvviso del 24 aprile 2022
                 
                 
