@@ -32505,25 +32505,25 @@ class maddog:
                 ma78_last > ma78_120_min_ago
                 and ma50_last < ma59_last
                 and ma20_last > ma20_2_min_ago
-                and ma2_differenza_2_min_ago < -3
-                and macd_differenza_2_min_ago < -0.30
-                and ma2_last < ma2_2_min_ago
-                
-                and deviation_ma39 < 0.05
-                and deviation_sell < -0.03
+               
+                and deviation_ma39 < 0.08
+                and deviation_sell < -0.04
                 
                 and ma50_last < ma50_2_min_ago
                 and deviation_ma100_sopra_ma300 < 0.40
-                
                 and deviation_ma5_sotto_ma200 > -0.80
                 
+                and ma2_last < ma2_2_min_ago
+                and ma2_differenza_2_min_ago < -9
+                and macd_differenza_2_min_ago < -0.30
             ):
-                sell = "SELL cond spec 6 CON 50<59 - SALVAGENTE dev 3-39 < 0.05 e dev_sell < -0.03 e ma50 < e macd_diff_2_min_ago < -0.20 e diff macd < -0.30 - r 16047 A1 Y1 X"
+                sell = "SELL cond spec 6 CON 50<59 - SALVAGENTE dev 3-39 < 0.05 e dev_sell < -0.04 e ma50 < e macd_diff_2_min_ago < -0.30 e diff macd < -0.30 - r 16047 A1 Y1 X"
                 action = "sell"
                 
                 # oggi 10 dicembre 2023 ascolta mario ! SE ma20_last > ma20_2_min_ago DEV SELL a -0.01 da 0.01
                 # oggi 13 dicembre 2023 ascolta mario ! SE ma20_last > ma20_2_min_ago DEV SELL a -0.03 da -0.01
-
+                
+                # oggi 12 gen 2024 ascolta mario ! SE ma20_last > ma20_2_min_ago DEV SELL a -0.04 da -0.03
           
             
             elif (
