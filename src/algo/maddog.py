@@ -16202,13 +16202,16 @@ class maddog:
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     # questa cosa che 78 deve essere < 200 ha dell' incredibile. MA NON TOCCARE !
 
-              
                 elif (     
                     
                     ma3_last >= ma30_last
+                    
+                    and ma100_last > ma100_10_min_ago
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.57
+                    
                     and ma2_differenza_2_min_ago > 8
                     and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
-                    and ma3_differenza_2_min_ago > 6
+                    and ma3_differenza_2_min_ago > 7
                     
                     and ma100_last < ma100_30_min_ago
                     and ma450_last > ma450_360_min_ago
@@ -16227,7 +16230,40 @@ class maddog:
                     and macd_differenza_2_min_ago > 1.10
                     
                 ):    
-                    buy = "BUY 5 compare forever importato da r 1537 A3y - con 3-30 E CON 300 ancora vicina alla 450 ( anche un poco sotto ! ) and 3-18 > -0.01 + diff macd > - r 7600"
+                    buy = "BUY 5 compare forever importato da r 1537 A3y - con 3-30 E CON 300 ancora vicina alla 450 ( anche un poco sotto ! ) and 3-18 > -0.01 + diff macd > - r 7600 NUOVA 1"
+                    action = "buy"
+                    percentage = 90
+
+                
+                elif (     
+                    
+                    ma3_last >= ma30_last
+                    
+                    and ma100_last > ma100_10_min_ago
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.57
+                    
+                    and ma2_differenza_2_min_ago > 8
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
+                    and ma3_differenza_2_min_ago > 7
+                    
+                    and ma100_last < ma100_30_min_ago
+                    and ma450_last > ma450_360_min_ago
+                    
+                    and deviation_ma54_sopra_o_sotto_ma72 < -0.015
+                    
+                    and deviation_ma39_sotto_ma200 < -0.01
+                    and deviation_ma300_sopra_ma450 > -0.50
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > -0.02
+                    and deviation_ma3_sopra_ma18 > -0.03
+                    
+                    and ma2_last > ma5_last
+                    and ma2_last >= ma2_2_min_ago
+                    and macd_differenza_2_min_ago > 1.10
+                    
+                ):    
+                    buy = "BUY 5 compare forever importato da r 1537 A3y - con 3-30 E CON 300 ancora vicina alla 450 ( anche un poco sotto ! ) and 3-18 > -0.01 + diff macd > - r 7600 NUOVA 2"
                     action = "buy"
                     percentage = 90
                     
