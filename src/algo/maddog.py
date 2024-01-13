@@ -2429,10 +2429,12 @@ class maddog:
                     and deviation_ma3_sopra_ma18 > 0.045
                     
                     and ma2_last >= ma20_last
-                  
+                    and ma2_last >= ma5_last
+                    
                     and ma2_last >= ma2_2_min_ago
                     and macd >= macd_2_min_ago
-                    
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.020
+                    and macd_differenza_2_min_ago > 0.50
                 ):    
                     buy = "BUY 1 compare forever - con 5-20 E CON 300 ancora vicina alla 450 ( anche un poco sotto! ) and 3-18 > 0.12 + MACD > - r 1537 A1"
                     action = "buy"
@@ -2458,8 +2460,10 @@ class maddog:
                     # 13 set 2023 and deviation_ma300_sopra_ma450 > -0.35 da -0.45
                     # 13 set 2023 0.01 0.03 0.05 antcipo ndecchiecella
                     
-                    # 15 set 2023
-
+                    # 13 gen 2024 aggiunto and macd_differenza_2_min_ago > 0.50
+                    # 13 gen 2024 aggiunto and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.020
+                    # 13 gen 2024 aggiunto and ma2_last >= ma5_last
+                
                 elif (     
                     
                     ma5_last > ma20_last
