@@ -1976,7 +1976,8 @@ class maddog:
                 
                 elif (     
                     
-                    ma3_last > ma30_last
+                    ma3_last > ma20_last
+                    and ma5_last >= ma10_last
                     and ma450_last >= ma450_360_min_ago
                     
                     and ma100_last < ma100_60_min_ago
@@ -1986,12 +1987,10 @@ class maddog:
                     and deviation_ma39_sotto_ma200 < -0.01
                     and deviation_ma300_sopra_ma450 > -0.50
                     
-                    and deviation_ma3_sopra_ma10 > 0.025
+                    and deviation_ma3_sopra_ma10 > -0.01
                     and deviation_ma3_sopra_ma16 > 0.001
-                    and deviation_ma3_sopra_ma18 > 0.001
+                    and deviation_ma3_sopra_ma18 > -0.01
                     
-                    and ma2_last >= ma20_last
-                  
                     and ma2_last >= ma2_2_min_ago
                     and macd >= macd_2_min_ago
                     and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
@@ -12444,12 +12443,9 @@ class maddog:
               
               
                 elif (
-                    deviation_ma78_sopra_o_sotto_ma78_30_min_ago < -0.11
-                    
-                    and ma2_differenza_2_min_ago > 5
+                    deviation_ma78_sopra_o_sotto_ma78_30_min_ago < -0.10
                     
                     and ma3_last > ma39_last
-                    
                     
                     and ma50_differenza_ma59 < -5
                     and macd > macd_2_min_ago
@@ -12463,13 +12459,14 @@ class maddog:
                     and ma200_last < ma300_last
                     
                     and deviation_ma3_sopra_ma10 > 0.02
-                    and deviation_ma5_sopra_ma28 > 0.02
+                    and deviation_ma5_sopra_ma28 > -0.02
                     
                     and ma2_last >= ma2_2_min_ago
+                    and ma2_differenza_2_min_ago > 5
                     and macd > macd_2_min_ago
                     and macd > 5
                 ):
-                    buy = "BUY 3 con ma78 TREND CHIARAMENTE RIBASSISTA compra prima ! 29 ago 2022 > 180 min di ribasso con 10-78 E ma2_differenza_2_min_ago > 5 - r 6572 A2Y3"
+                    buy = "BUY 3 con ma78 TREND CHIARAMENTE RIBASSISTA compra prima ! 29 ago 2022 > 180 min di ribasso con 10-78 E ma2_differenza_2_min_ago > 5 - r 6572 A2 Y3"
                     action = "buy"
                     percentage = 80
                     
@@ -12539,7 +12536,7 @@ class maddog:
                     and macd > macd_2_min_ago
                     and macd > 5
                 ):
-                    buy = "BUY 3 29 ago 2022 > 180 min di ribasso con 5-78 - r 6572 A"
+                    buy = "BUY 3 29 ago 2022 > 180 min di ribasso con 5-78 - r 6572 A originario"
                     action = "buy"
                     percentage = 90
                     
