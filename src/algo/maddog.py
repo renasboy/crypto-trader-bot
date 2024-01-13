@@ -57,6 +57,7 @@ class maddog:
         ma69_last, ma69_prev = self.algo_helper.ma_last_prev(69)
         ma72_last, ma72_prev = self.algo_helper.ma_last_prev(72)
         ma78_last, ma78_prev = self.algo_helper.ma_last_prev(78)
+        ma80_last, ma80_prev = self.algo_helper.ma_last_prev(80)
         ma86_last, ma86_prev = self.algo_helper.ma_last_prev(86)
         ma90_last, ma90_prev = self.algo_helper.ma_last_prev(90)
         ma100_last, ma100_prev = self.algo_helper.ma_last_prev(100)
@@ -11759,7 +11760,6 @@ class maddog:
                     # 30 set 2022 aggiunta 5.28
                     #  2 ott 2022 3-10 0.10 !
                     #  4 dic 2023 aggiunta and ma2_differenza_2_min_ago > 5
-                    
                 elif (    
                     
                     ma5_last > ma150_last
@@ -11783,6 +11783,36 @@ class maddog:
                 ):    
                     
                     buy = "BUY 3 correzione in alto con 200 > - riga 1384 RCCR portata nel MADDOG - r 6480 A2"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # 30 set importato r 1384 RCCR su BUY 3 MADDOG
+                    # 30 set 2022 aggiunta 3-10
+                    # 30 set 2022 aggiunta 5.28
+                    #  2 ott 2022 3-10 0.10 !
+
+                 
+                elif (      
+                    ma5_last > ma150_last
+                    and (ma3_prev < ma80_prev and ma3_last > ma80_last)
+                    and deviation_ma100_sopra_ma300 > 0.50
+                    
+                    and ma200_last > ma200_20_min_ago
+                    
+                    and ma100_last > ma200_last
+                    and ma200_last > ma300_last
+                    
+                    and ma100_last > ma100_60_min_ago
+                    and ma200_last > ma200_60_min_ago
+                    and ma300_last > ma300_60_min_ago
+                    
+                    and deviation_ma3_sopra_ma10 > 0.113
+                    and deviation_ma5_sopra_ma28 > -0.02
+                    
+                    and ma2_last > ma2_2_min_ago
+                ):    
+                    
+                    buy = "BUY 3 con incrocio al rialzo 3-80 mentre TUTTO SALE - r 6480 A3"
                     action = "buy"
                     percentage = 80
                     
