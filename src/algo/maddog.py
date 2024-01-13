@@ -33271,7 +33271,7 @@ class maddog:
                 and delta_150_100 <= delta_150_100_60_min
                 
                 and deviation_ma39 < 0.05
-                and deviation_sell < -0.09
+                and deviation_sell < -0.10
                 
                 and ma50_last <= ma50_2_min_ago
                 and deviation_ma100_sopra_ma300 < 0.40
@@ -33280,15 +33280,17 @@ class maddog:
                 
                 and ma2_last <= ma2_2_min_ago 
                 
-                and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.018
+                and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.02
                 and macd_differenza_2_min_ago < -0.50
             ):
-                sell = "SELL condizione speciale 6 NOTTE con ma300> 5 ore - SALVAGENTE 4 dev 3-39 < 0.05 and dev_sell < -0.09 con ma50 < e con ma5 sotto ma200 > -0.90 - r 16047 B3x"
+                sell = "SELL condizione speciale 6 NOTTE con ma300> 5 ore - SALVAGENTE 4 dev 3-39 < 0.05 and dev_sell < -0.010 con ma50 < e con ma5 sotto ma200 > -0.90 - r 16047 B3 X"
                 action = "sell"
                 
                 # 27 dic 2023 se 10 va sopra 20 and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.018
                 # 27 dic 2023 se 10 va sopra 20 and macd_differenza_2_min_ago < -0.50
                 # 27 dic 2023 se 10 va sopra 20 deviation_sell a -0.09 da 0.083
+                # 13 gen 2024 se 10 va sopra 20 and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.02 da -0.018
+                # 13 gen 2024 se 10 va sopra 20 and deviation_sell < -0.10
           
             elif (
                 ma78_last < ma78_120_min_ago
