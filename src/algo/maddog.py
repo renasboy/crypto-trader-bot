@@ -16298,8 +16298,8 @@ class maddog:
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     # questa cosa che 78 deve essere < 200 ha dell' incredibile. MA NON TOCCARE !
 
-                elif (     
                     
+                elif (        
                     ma3_last >= ma30_last
                     
                     and ma100_last > ma100_10_min_ago
