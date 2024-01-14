@@ -15833,7 +15833,7 @@ class maddog:
                     and deviation_ma5_sotto_ma300 < -0.10
                     and deviation_ma5_sotto_ma300 > -1.20
                     
-                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma10 > 0.022
                     and deviation_ma3_sopra_ma16 > 0.05
                     and deviation_ma5_sopra_ma28 < -0.02
                     
@@ -15848,12 +15848,14 @@ class maddog:
                     and ma2_differenza_2_min_ago > 8
                     and macd >= macd_2_min_ago
                     and ma2_last > ma5_last
+                    and ma3_differenza_2_min_ago > 1
                 ):
-                    buy = "BUY 5 29 ago 2022 > 180 min ribasso CON 5-300 <0.10 ma > -1.20 e 78<150 e 3-16 > 0.05 e macd > macd 2 min ago e ma2_diff_2_min_ago > 8 - r 7564 B2 Y2 x"
+                    buy = "BUY 5 29 ago 2022 > 180 min ribasso CON 5-300 <0.10 ma > -1.20 e 78<150 e 3-16 > 0.05 e macd > macd 2 min ago e ma2_diff_2_min_ago > 8 - r 7564 B2 Y2 X"
                     action = "buy"
                     percentage = 90
-
-
+                    
+                    # 14 gen 2024 aggiunta and ma3_differenza_2_min_ago > 1
+                    # 14 gen 2024 deviation_ma3_sopra_ma10 > 0.022 da 0.01
                 
                 elif ( 
                     ma78_last < ma150_last
