@@ -2032,13 +2032,16 @@ class maddog:
                     and deviation_ma4_sopra_ma28 > -0.05
                     
                     
+                    
                     and ma2_last >= ma2_2_min_ago
-                    and ma2_differenza_2_min_ago > 7
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
                     and ma2_differenza_ma5 > 10
+                    
+                    and macd >= macd_2_min_ago
                     and macd > -20
-                    and macd_differenza_2_min_ago > 1.25
+                    and macd_differenza_2_min_ago > 0.50
                 ):  
-                
+                    
                     buy = "BUY 1 CONSOLIDATO TREND LATERALE con 3-10 > 0.01 con macd > -20 and ma2_differenza_2_min_ago > 7 - r 1205"
                     action = "buy"
                     percentage = 50
