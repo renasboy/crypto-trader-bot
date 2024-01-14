@@ -33077,10 +33077,10 @@ class maddog:
                 #  8 gen 2024 dev sell a -0.01 da 0.01 ! con 5<10
                 #  8 gen 2024 dev sell a -0.02 da -0.01 !
 
-            
             elif (
                 
                 ma50_last > ma50_2_min_ago
+                and ma100_last > ma100_10_min_ago
                 and ma13_last < ma50_last
                 and ma100_last < ma100_60_min_ago
                 
@@ -33096,7 +33096,7 @@ class maddog:
                 and macd < 15
                 and macd_differenza_2_min_ago < -2
             ):
-                sell = "SELL nuova condizione speciale - devi 3-39 < 0.13 and dev_sell < -0.01 con ma50 > e con ma5 sotto ma200 > -0.60 and MACD < and macd < 15 - r 16047 A2Y2"
+                sell = "SELL nuova condizione speciale - devi 3-39 < 0.13 and dev_sell < -0.01 con ma50 > e con ma5 sotto ma200 > -0.60 and MACD < and macd < 15 - r 16047 A2 Y2 x"
                 action = "sell"
                 
                 # 25 nov 2023 and deviation_sell < -0.10 da < -0.14
@@ -33107,7 +33107,40 @@ class maddog:
                 # 27 nov 2023 and deviation_sell < 0.02  !
                 # 27 nov 2023 nonno mario
                 #  1 dic 2023 and deviation_sell < -0.01 da 0.02  !
-          
+
+            
+            
+            elif (    
+                ma50_last > ma50_2_min_ago
+                and ma100_last < ma100_10_min_ago
+                
+                and ma13_last < ma50_last
+                and ma100_last < ma100_60_min_ago
+                
+                and deviation_ma39 < 0.13
+                and deviation_sell < 0.01
+                
+                
+                and deviation_ma5_sotto_ma200 > -0.60
+                and deviation_ma100_sopra_ma300 < 0.40
+                
+                and ma2_last < ma2_2_min_ago 
+                and macd < macd_2_min_ago
+                and macd < 15
+                and macd_differenza_2_min_ago < -2
+            ):
+                sell = "SELL nuova condizione speciale - devi 3-39 < 0.13 and dev_sell < 0.01 con ma50 > e con ma5 sotto ma200 > -0.60 and MACD < and macd < 15 - r 16047 A2 Y2 y"
+                action = "sell"
+                
+                # 25 nov 2023 and deviation_sell < -0.10 da < -0.14
+                # 25 nov 2023 and macd < -13 da -16
+                
+                # 27 nov 2023 and macd a 15 da -13 !
+                # 27 nov 2023 and deviation_ma39 < 0.13 !
+                # 27 nov 2023 and deviation_sell < 0.02  !
+                # 27 nov 2023 nonno mario
+                #  1 dic 2023 and deviation_sell < -0.01 da 0.02  !
+                # 14 gen 2024 con 100< 100 10 min ago dev_sell a 0.01 da -0.01 
 
             # nuova condizione AUDI RUBATA
           
