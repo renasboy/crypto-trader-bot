@@ -32768,11 +32768,12 @@ class maddog:
                 and ma50_last < ma50_2_min_ago
                 
                 and ma2_last < ma2_2_min_ago
-                and ma2_differenza_2_min_ago < -5
+                and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.018
+                and ma2_differenza_2_min_ago < -8
                 and macd_differenza_3_min_ago < 0.10
                 
                 and deviation_ma39 < 0.09
-                and deviation_sell < 0.005
+                and deviation_sell < -0.01
                 
                 and deviation_ma100_sopra_ma300 < 0.40
                 and deviation_ma5_sotto_ma200 > -0.80
@@ -32806,6 +32807,9 @@ class maddog:
                 # 10 dic 2023 and macd_differenza_3_min_ago < 0.30 significa che se macd non cresce abbastanza vuol dire che non ha forza quindi puoi vendere
                 # 22 dic 2023 aggiunta and ma10_last <= ma10_2_min_ago
                 #  8 gen 2024 and deviation_sell < 0.005 da 0.02
+                
+                # 14 gen 2024 and deviation_sell < 0.01 da 0.005
+                # 14 gen 2024 and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.018
             
             elif (
                 
