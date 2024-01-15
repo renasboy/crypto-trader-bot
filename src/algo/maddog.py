@@ -6681,11 +6681,12 @@ class maddog:
                     and ma3_last >= ma11_last
                     
                     and ma2_last >= ma2_2_min_ago
-                    and macd >= macd_2_min_ago
                     and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.020
+                    and macd >= macd_2_min_ago
+                    and macd_differenza_2_min_ago > 2.7
                 ):
 
-                    buy = "BUY 1 forever young 1 con 300 che scende da 5 ore ! MA 300 > 120 min ago e ma200 > e se ma200 > ma300 E CON 3-16 > 0.07 - r 4325 a2"
+                    buy = "BUY 1 forever young 1 con 300 che scende da 5 ore ! MA 300 > 120 min ago e ma200 > e se ma200 > ma300 E 3-16 > 0.07 e macd_diff_2_min_ago > 2.7 - r 4325 A2"
                     action = "buy"
                     percentage = 80
                     
@@ -6695,7 +6696,7 @@ class maddog:
                     # 17 ott 2023 3-18 > 0.10 da > 0.20
                     # 17 ott 2023 5-28 > 0.04 da > 0.08
                     # 12 dic 2023 aggiunta and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
-
+                    # 15 gen 2024 aggiunta and macd_differenza_2_min_ago > 3
    
                 # BUY 1 forever young 1 PIU' PRUDENTE se ma200 > e se ma200 > ma300
                 
