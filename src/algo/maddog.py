@@ -1637,7 +1637,9 @@ class maddog:
                     
                     ma3_last > ma18_last
                     and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
                     and deviation_ma5_sopra_o_sotto_ma100 > -0.30
+                    
                     and deviation_ma5_sopra_o_sotto_ma100 > 0.28
                     
                     and ma450_last < ma450_360_min_ago
@@ -1672,6 +1674,7 @@ class maddog:
                 elif (    
                     ma3_last > ma18_last
                     and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.30
                     
                     and ma450_last < ma450_360_min_ago
@@ -1706,6 +1709,7 @@ class maddog:
                 elif (    
                     ma3_last > ma18_last
                     and ma100_last > ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
                     and deviation_ma5_sopra_o_sotto_ma100 > -0.30
                     
                     and ma450_last < ma450_360_min_ago
@@ -1740,6 +1744,7 @@ class maddog:
                 elif (    
                     ma3_last > ma18_last
                     and ma100_last > ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.30
                     
                     and ma450_last < ma450_360_min_ago
