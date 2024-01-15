@@ -35361,9 +35361,11 @@ class maddog:
                 and deviation_sell < 1.05
                 
                 and ma2_last < ma2_2_min_ago
+                and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.02
                 and macd < macd_2_min_ago
-                and macd < -20
                 and macd_differenza_2_min_ago < -0.40
+                and macd < -20
+                
             ):    
                 sell = "SELL condizione POCHI MALEDETTI E SUBITO da 0 a 50 min con 3-20 E con dev_sell 0.60 - 1.05 and macd < -20 - INTANTO TE LI PRENDI - r 16888"
                 action = "sell"
