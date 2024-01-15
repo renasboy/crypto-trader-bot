@@ -14857,9 +14857,34 @@ class maddog:
                     
                     
                     
-                    
                 elif (
                     ma50_last >= ma50_2_min_ago
+                    and ma100_last > ma125_last
+                    and ma300_last > ma450_last
+                    
+                    and ma28_last < ma28_30_min_ago
+                    and ma78_last > ma150_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > 0.077
+                    
+                    and ma3_last > ma13_last
+                    and ma4_last > ma9_last
+                    
+                    and ma6_last > ma15_last
+                    and ma7_last > ma25_last
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd > macd_2_min_ago
+                ):
+                    buy = "BUY 5 con ma50 > AND 50>100 and ma28_last < ma28_30_min_ago and 5-28 > 0.08 - r 7203 A1"
+                    action = "buy"
+                    percentage = 70
+
+                
+                elif (
+                    ma50_last >= ma50_2_min_ago
+                    and ma100_last < ma125_last
                     and ma300_last > ma450_last
                     
                     and ma28_last < ma28_30_min_ago
@@ -14883,7 +14908,7 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
                     and macd > macd_2_min_ago
                 ):
-                    buy = "BUY 5 con ma50 > AND 50>100 and ma28_last < ma28_30_min_ago and 5-28 > 0.08 - r 7203 A"
+                    buy = "BUY 5 con ma50 > AND 50>100 and ma28_last < ma28_30_min_ago and 5-28 > 0.08 - r 7203 A2"
                     action = "buy"
                     percentage = 70
                     
