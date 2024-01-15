@@ -35354,6 +35354,30 @@ class maddog:
             
             elif (
                 seconds_since_last_trade > 0 and seconds_since_last_trade < 3000
+                and ma5_last > ma100_last
+                and ma300_last < ma300_180_min_ago
+                and ma3_last < ma28_last
+                
+                and deviation_sell > 0.60
+                and deviation_sell < 1.05
+                
+                and ma2_last < ma2_2_min_ago
+                and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.02
+                and macd < macd_2_min_ago
+                and macd_differenza_2_min_ago < -0.40
+                and macd < -20
+                
+            ):    
+                sell = "SELL condizione POCHI MALEDETTI E SUBITO da 0 a 50 min con 3-28 se sta sopra ma100 E con dev_sell 0.60 - 1.05 e macd < -20 - INTANTO TE LI PRENDI - r 16888 a"
+                action = "sell"
+                
+                # 24 ago 2023 and macd < -5
+                # 18 dic 203 3-20 da 3-25
+                # 15 gen 2024 con 3-28 se sta sopra ma100 ! stai piu' tranquillo
+               
+            elif (
+                seconds_since_last_trade > 0 and seconds_since_last_trade < 3000
+                and ma5_last < ma100_last
                 and ma300_last < ma300_180_min_ago
                 and ma3_last < ma20_last
                 
@@ -35367,7 +35391,7 @@ class maddog:
                 and macd < -20
                 
             ):    
-                sell = "SELL condizione POCHI MALEDETTI E SUBITO da 0 a 50 min con 3-20 E con dev_sell 0.60 - 1.05 and macd < -20 - INTANTO TE LI PRENDI - r 16888"
+                sell = "SELL condizione POCHI MALEDETTI E SUBITO da 0 a 50 min con 3-20 se sta sotto ma100 E con dev_sell 0.60 - 1.05 e macd < -20 - INTANTO TE LI PRENDI - r 16888 b"
                 action = "sell"
                 
                 # 24 ago 2023 and macd < -5
