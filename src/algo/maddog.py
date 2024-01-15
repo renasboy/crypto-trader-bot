@@ -32742,7 +32742,7 @@ class maddog:
 
             elif (
                 ma78_last > ma78_120_min_ago
-                and ma100_last > ma120_last
+                and ma100_last > ma125_last
                 and ma50_last > ma59_last
                 and ma50_last < ma50_2_min_ago
                 
@@ -32758,11 +32758,11 @@ class maddog:
                 sell = "SELL condizione speciale CON 50>59 and ma50< - SALVAGENTE dev 3-39 < 0.07 e dev_sell < -0.03 and macd_diff_2_min_ago < -0.20 - r 16047 A1 x1 a"
                 action = "sell"
                 
-                # 15 gen 2024 and deviation_sell < -0.03 da -0.01 
+                # 15 gen 2024 and deviation_sell < -0.03 da -0.01 se 100 >125 stai piu' tranquillo
             
             elif (
                 ma78_last > ma78_120_min_ago
-                and ma100_last < ma120_last
+                and ma100_last < ma125_last
                 and ma50_last > ma59_last
                 and ma50_last < ma50_2_min_ago
                 
