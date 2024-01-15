@@ -450,8 +450,8 @@ class maddog:
 
         # formula DEVIATION_ma10_sopra_o_sotto_ma10_10_min_ago - !
         
-        deviation_ma10_sopra_o_sotto_ma10_10_min_ago = (ma10_last / ma10_10_min_ago - 1) * 100 if ma10_10_min_ago else 0
-        self.algo_helper.info("deviation_ma10_sopra_o_sotto_ma10_10_min_ago: {}".format(deviation_ma10_sopra_o_sotto_ma10_10_min_ago))
+        deviation_ma100_sopra_o_sotto_ma100_10_min_ago = (ma100_last / ma100_10_min_ago - 1) * 100 if ma10_100_min_ago else 0
+        self.algo_helper.info("deviation_ma100_sopra_o_sotto_ma100_10_min_ago: {}".format(deviation_ma100_sopra_o_sotto_ma100_10_min_ago))
 
         
         # formula DEVIATION_ma10_sopra_o_sotto_ma10_30_min_ago - !
@@ -1638,7 +1638,7 @@ class maddog:
                     ma3_last > ma18_last
                     and ma100_last < ma100_10_min_ago
                     and deviation_ma5_sopra_o_sotto_ma100 > -0.30
-                    and deviation_ma5_sopra_o_sotto_ma99 > 0.28
+                    and deviation_ma5_sopra_o_sotto_ma100 > 0.28
                     
                     and ma450_last < ma450_360_min_ago
                     and ma300_last < ma300_60_min_ago
