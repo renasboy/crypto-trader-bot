@@ -14690,9 +14690,11 @@ class maddog:
                     buy = "BUY 5 con 3-20 and 450_last >= 450_120_min_ago and 5-28 > 0.02 CON 50 > 450 and ma2_differenza_ma5 > 8 - r 7144 A1x"
                     action = "buy"
                     percentage = 70
-                  
+
+                
                 elif (    
                     ma3_last > ma20_last
+                    and ma50_differenza_ma59 > -5
                     and ma10_last < ma30_last
                     
                     and ma2_differenza_ma5 > 8
@@ -14702,8 +14704,8 @@ class maddog:
                     and ma50_last > ma450_last
                     
                     and deviation_ma3_sopra_ma10 > 0.01
-                    and deviation_ma3_sopra_ma18 > 0.077
-                    and deviation_ma5_sopra_ma28 > -0.03
+                    and deviation_ma3_sopra_ma16 > 0.02
+                    and deviation_ma5_sopra_ma28 > -0.02
                     
                     and ma3_last > ma13_last
                     
@@ -14711,7 +14713,35 @@ class maddog:
                     and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
                     and macd_differenza_2_min_ago > 0.30
                 ):
-                    buy = "BUY 5 con 3-20 and 450_last >= 450_120_min_ago and 5-28 > 0.02 CON 50 > 450 and ma2_differenza_ma5 > 8 - r 7144 A1y"
+                    buy = "BUY 5 con 3-20 and 450_last >= 450_120_min_ago and 5-28 > -0.02 CON 50 > 450 and ma2_differenza_ma5 > 8 - r 7144 A1 Y1"
+                    action = "buy"
+                    percentage = 70
+                    
+                    # 15 gen 2024 se 50 vicinissima anche un poco sotto alla 59 compra prima (ma450 sale da 2 ore)
+
+                
+                elif (    
+                    ma3_last > ma20_last
+                    and ma50_differenza_ma59 < -5
+                    and ma10_last < ma30_last
+                    
+                    and ma2_differenza_ma5 > 8
+                    and ma2_differenza_2_min_ago > 8
+                    and ma450_last >= ma450_120_min_ago
+                    
+                    and ma50_last > ma450_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > 0.02
+                    and deviation_ma5_sopra_ma28 > -0.02
+                    
+                    and ma3_last > ma13_last
+                    
+                    and ma2_last > ma2_2_min_ago
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
+                    and macd_differenza_2_min_ago > 0.30
+                ):
+                    buy = "BUY 5 con 3-20 and 450_last >= 450_120_min_ago and 5-28 > -0.02 CON 50 > 450 and ma2_differenza_ma5 > 8 - r 7144 A1 Y2"
                     action = "buy"
                     percentage = 70
                     
@@ -14733,7 +14763,7 @@ class maddog:
                     # 20 dic 2023 tolto and macd > macd_2_min_ago
                     # 20 dic 2023 aggiunta and macd_differenza_2_min_ago > 0.30
                     # 20 dic 2023 aggiunta and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
-
+                    # 15 gen 2024 5-28 > -0.02 da 0.02
                
 
                 elif (    
