@@ -32794,7 +32794,7 @@ class maddog:
             
 
             # 5 - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 > -1.00
-
+            
             elif (
                 ma78_last > ma78_120_min_ago
                 and ma100_last > ma125_last
@@ -32810,10 +32810,33 @@ class maddog:
                 
                 and macd_differenza_2_min_ago < -0.20
             ):
-                sell = "SELL condizione speciale CON 50>59 and ma50< - SALVAGENTE dev 3-39 < 0.07 e dev_sell < -0.03 and macd_diff_2_min_ago < -0.20 - r 16047 A1 x1 a"
+                sell = "SELL condizione speciale CON 50>59 and ma50< - SALVAGENTE dev 3-39 < 0.07 e dev_sell < -0.03 and macd_diff_2_min_ago < -0.20 - r 16047 A1 x1 a1"
                 action = "sell"
                 
                 # 15 gen 2024 and deviation_sell < -0.03 da -0.01 se 100 >125 stai piu' tranquillo
+            elif (
+                ma78_last > ma78_120_min_ago
+                and ma100_last > ma125_last
+                and ma50_last > ma59_last
+                and ma50_last < ma50_2_min_ago
+                
+                and deviation_ma39 < 0.07
+                and deviation_sell < 0.01
+                
+                and deviation_ma100_sopra_ma300 < 0.40
+                and deviation_ma5_sotto_ma200 > -0.80
+                
+                and ma5_last < ma5_5_min_ago
+                
+                and ma2_last < ma2_2_min_ago
+                and macd_differenza_2_min_ago < -7
+                and macd < -27
+            ):
+                sell = "SELL condizione speciale CON 50>59 and ma50< - SALVAGENTE dev 3-39 < 0.07 e dev_sell < -0.03 and macd_diff_2_min_ago < -0.20 - r 16047 A1 x1 a2"
+                action = "sell"
+                
+                # 15 gen 2024 and deviation_sell < -0.03 da -0.01 se 100 >125 stai piu' tranquillo
+                # 15 gen 2024 se macd accelera spaventosamente al ribasso sia come differenza che come valore assoluto vendi un po' prima della precedente !
             
             elif (
                 ma78_last > ma78_120_min_ago
