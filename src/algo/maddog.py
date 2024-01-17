@@ -12621,7 +12621,8 @@ class maddog:
                     
                     # 29 dic 2023 3-20 da 3-28 se 50>59
                     #  9 gen 2024 cor cazzo che compri mentre ma 39 scende da 30 min e ma 39 scende anche da 2 min ! cioe' compri con 3-39 > 0.33 ! PUGNO FANTASMA DI ALI'
-                
+
+
                 elif (    
                     ma3_last > ma28_last
                     and ma50_last <= ma59_last
@@ -12643,7 +12644,32 @@ class maddog:
                     and ma2_last > ma5_last 
                 ):  
                 
-                    buy = "BUY 3 laterale IMPORTATA dal BUY 2 con 300 > 450 and 3-28 and macd > -24 and macd_differenza_2_min_ago > 0.30 - r 6510 b"
+                    buy = "BUY 3 laterale IMPORTATA dal BUY 2 con 300 > 450 and 3-28 and macd > -24 and macd_differenza_2_min_ago > 0.30 - r 6510 b1"
+                    action = "buy"
+                    percentage = 80
+                  
+                elif (    
+                    ma3_last > ma10_last
+                    and ma50_last <= ma59_last
+                    
+                    and ma300_last > ma300_301_min_ago
+                    and ma450_last > ma450_480_min_ago
+                    
+                    and deviation_ma100_sopra_ma300 < 0.20
+                    and deviation_ma5_sopra_o_sotto_ma100 < -1.20
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > -0.02
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
+                    and ma2_differenza_2_min_ago > 8
+                    and macd > -24.0
+                    and macd_differenza_2_min_ago > 0.30
+                    and ma2_last > ma5_last 
+                ):  
+                
+                    buy = "BUY 3 laterale SE CROLLA con 300> e 450> and 3-10 and macd > -24 and macd_differenza_2_min_ago > 0.30 - r 6510 b2"
                     action = "buy"
                     percentage = 80
 
