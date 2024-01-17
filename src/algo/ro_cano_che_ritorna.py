@@ -17,7 +17,7 @@ class ro_cano_che_ritorna:
         
         # moving average (2-3-4-5-x)
         
-        ma2_last, ma2_prev = self.algo_helper.ma_last_prev(444)
+        ma2_last, ma2_prev = self.algo_helper.ma_last_prev(2)
         ma3_last, ma3_prev = self.algo_helper.ma_last_prev(3)
         ma4_last, ma4_prev = self.algo_helper.ma_last_prev(4)
         ma5_last, ma5_prev = self.algo_helper.ma_last_prev(5)
@@ -4008,7 +4008,7 @@ class ro_cano_che_ritorna:
                 elif (
                     ma200_last > ma200_20_min_ago
                     and macd >= macd_2_min_ago
-                    and (ma20_prev < ma69_prev and ma20_last > ma69_last)
+                    and (ma20_prev < ma69_prev and ma20_last > ma71_last)
                     and deviation_rialzo_improvviso_1 > 0.25
                     and deviation_range_1 > 0.20
                     and ma2_last > ma2_2_min_ago
