@@ -11069,15 +11069,15 @@ class maddog:
                     and deviation_ma39_sotto_ma200 < -0.01
                     and deviation_ma300_sopra_ma450 > -0.70
                     
-                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma10 > 0.017
                     and deviation_ma3_sopra_ma16 > -0.01
                     and deviation_ma3_sopra_ma18 > -0.02
                     
                     and ma2_last > ma5_last
-                    and ma3_differenza_2_min_ago > 3
+                    and ma3_differenza_2_min_ago > 4
                     
                     and ma2_last >= ma2_2_min_ago
-                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.021
                     and macd >= macd_2_min_ago
                     and macd_differenza_2_min_ago > 0.10
                 ):    
