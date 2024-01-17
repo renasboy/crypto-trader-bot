@@ -15823,7 +15823,11 @@ class maddog:
                     and ma200_last < ma300_last
                     
                     and deviation_ma5_sopra_ma28 > 0.02
+                    
                     and ma2_last >= ma2_2_min_ago
+                    and ma2_differenza_2_min_ago > 8
+                    and macd >= macd_2_min_ago
+                    and macd_differenza_2_min_ago > 0.25
                     
                 ):
                     buy = "BUY 4 ex 7063 RCCR con 5-54 - r 7064"
