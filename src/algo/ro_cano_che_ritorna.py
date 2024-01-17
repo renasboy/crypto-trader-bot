@@ -4008,7 +4008,7 @@ class ro_cano_che_ritorna:
                 elif (
                     ma200_last > ma200_20_min_ago
                     and macd >= macd_2_min_ago
-                    and (ma20_prev < ma69_prev and ma20_last > ma71_last)
+                    and (ma20_prev < ma69_prev and ma20_last > ma69_last)
                     and deviation_rialzo_improvviso_1 > 0.25
                     and deviation_range_1 > 0.20
                     and ma2_last > ma2_2_min_ago
