@@ -15824,10 +15824,10 @@ class ro_cano_che_ritorna:
               
                 elif (
                     
-                    ma5_last > ma54_last
+                    ma5_last > ma39_last
                     and deviation_ma78_sopra_o_sotto_ma200 < -0.028
                     and ma2_differenza_2_min_ago > 10
-                    and ma78_last > ma100_last
+                    and ma39_last > ma100_last
                     
                     and ma100_last < ma100_180_min_ago
                     and ma200_last < ma200_180_min_ago
@@ -15836,13 +15836,13 @@ class ro_cano_che_ritorna:
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
                     
-                    and deviation_ma5_sopra_ma28 > 0.02
+                    and deviation_ma3_sopra_ma16 > 0.02
                     
                     and ma2_last >= ma2_2_min_ago
                     and macd >= macd_2_min_ago
                     and macd_differenza_2_min_ago > 2
                 ):
-                    buy = "BUY 5 13 apr 2023 zia pina > 180 min di ribasso 78>100 and macd >= macd_2_min_ago - r 7564 B1y"
+                    buy = "BUY 5 13 apr 2023 zia pina > 180 min di ribasso 78>100 and macd >= macd_2_min_ago - r 7564 B1 Y"
                     action = "buy"
                     percentage = 90
                     
@@ -15851,8 +15851,8 @@ class ro_cano_che_ritorna:
                     #  6 dic 2023 and macd >= macd_2_min_ago
                     
                     # ATTENZIONE 8 dic 2023 se 78 sotto 200 allora aggiunto diff ma2 > 10 e diff macd >2 CIOE' basta BUY 5 continui ! (se 78 molto sotto 200)
-
-              
+                    # 17 gen 2024 ma39_last > ma100_last invece di 78>100
+                    # 17 gen 2024 ma5_last > ma39_last invece di 5-54
                     
                 # BUY 5 29 ago 2022 > 180 min di ribasso 78<150
                 
