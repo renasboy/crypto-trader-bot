@@ -1,7 +1,7 @@
- A.D. 2024 
+# A.D. 2024 
 # sono 20 anni compa !
+
 class ro_cano_che_ritorna:
-prova errore
   
     def __init__(self, helper, buy_percentage, sell_percentage):
         self.algo_helper = helper
@@ -17,7 +17,7 @@ prova errore
         
         # moving average (2-3-4-5-x)
         
-        ma2_last, ma2_prev = self.algo_helper.ma_last_prev(2)
+        ma2_last, ma2_prev = self.algo_helper.ma_last_prev(444)
         ma3_last, ma3_prev = self.algo_helper.ma_last_prev(3)
         ma4_last, ma4_prev = self.algo_helper.ma_last_prev(4)
         ma5_last, ma5_prev = self.algo_helper.ma_last_prev(5)
