@@ -14686,13 +14686,17 @@ class maddog:
                     # importato da BUY 3 il 20 dic 2023
 
               
+
                 elif (
                     
                     ma4_last > ma20_last
-                    and ma450_last > ma450_480_min_ago
                     
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.12
-                    and deviation_ma5_sopra_o_sotto_ma100 > -0.21
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.40
+                    and deviation_ma5_sopra_o_sotto_ma100 > 0.28
+                   
+                    and ma450_last > ma450_480_min_ago
                     
                     and deviation_ma100_sopra_ma300 < 0.27
                     and deviation_ma100_sopra_ma300 > -0.27
@@ -14706,7 +14710,149 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                     and macd > macd_2_min_ago
                 ):
-                    buy = "BUY 4 importata da RCCR BUY3 r 6599 A1yA2 - ANDATA BENISSIMO - con 450 > 450 480 min MA CONSIDERATA ANCORA LATERALE - r 6740"
+                    buy = "BUY 4 importata da RCCR BUY3 r 6599 A1yA2 - ANDATA BENISSIMO - con 450 > 450 480 min MA CONSIDERATA ANCORA LATERALE - r 6740 NUOVA ERA A1 SOFT"
+                    action = "buy"
+                    percentage = 60
+
+                elif (
+                    
+                    ma4_last > ma20_last
+                    
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.40
+                   
+                    and ma450_last > ma450_480_min_ago
+                    
+                    and deviation_ma100_sopra_ma300 < 0.27
+                    and deviation_ma100_sopra_ma300 > -0.27
+                    
+                    and deviation_ma3_sopra_ma10 > 0.05
+                    and deviation_ma5_sopra_ma28 > -0.02
+                  
+                    and ma3_last > ma13_last
+                    and ma4_last > ma9_last
+                   
+                    and ma2_last > ma2_2_min_ago
+                    and macd > macd_2_min_ago
+                ):
+                    buy = "BUY 4 importata da RCCR BUY3 r 6599 A1yA2 - ANDATA BENISSIMO - con 450 > 450 480 min MA CONSIDERATA ANCORA LATERALE - r 6740 NUOVA ERA A2 SOFT"
+                    action = "buy"
+                    percentage = 60
+                    
+                    # questa condizione importata da RCCR e' arrivata un po' prima.
+
+                elif (
+                    
+                    ma4_last > ma20_last
+                    
+                    and ma100_last > ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.40
+                   
+                    and ma450_last > ma450_480_min_ago
+                    
+                    and deviation_ma100_sopra_ma300 < 0.27
+                    and deviation_ma100_sopra_ma300 > -0.27
+                    
+                    and deviation_ma3_sopra_ma10 > 0.05
+                    and deviation_ma5_sopra_ma28 > -0.02
+                  
+                    and ma3_last > ma13_last
+                    and ma4_last > ma9_last
+                   
+                    and ma2_last > ma2_2_min_ago
+                    and macd > macd_2_min_ago
+                ):
+                    buy = "BUY 4 importata da RCCR BUY3 r 6599 A1yA2 - ANDATA BENISSIMO - con 450 > 450 480 min MA CONSIDERATA ANCORA LATERALE - r 6740 NUOVA ERA A3 SOFT"
+                    action = "buy"
+                    percentage = 60
+                    
+                    # questa condizione importata da RCCR e' arrivata un po' prima.
+
+                elif (
+                    
+                    ma4_last > ma20_last
+                    
+                    and ma100_last > ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.40
+                   
+                    and ma450_last > ma450_480_min_ago
+                    
+                    and deviation_ma100_sopra_ma300 < 0.27
+                    and deviation_ma100_sopra_ma300 > -0.27
+                    
+                    and deviation_ma3_sopra_ma10 > 0.05
+                    and deviation_ma5_sopra_ma28 > -0.02
+                  
+                    and ma3_last > ma13_last
+                    and ma4_last > ma9_last
+                   
+                    and ma2_last > ma2_2_min_ago
+                    and macd > macd_2_min_ago
+                ):
+                    buy = "BUY 4 importata da RCCR BUY3 r 6599 A1yA2 - ANDATA BENISSIMO - con 450 > 450 480 min MA CONSIDERATA ANCORA LATERALE - r 6740 NUOVA ERA A4 SOFT"
+                    action = "buy"
+                    percentage = 60
+                    
+                    # questa condizione importata da RCCR e' arrivata un po' prima.
+
+
+                elif (
+                    
+                    ma4_last > ma20_last
+                    
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.40
+                    and ma3_last > ma54_last
+                   
+                    and ma450_last > ma450_480_min_ago
+                    
+                    and deviation_ma100_sopra_ma300 < 0.27
+                    and deviation_ma100_sopra_ma300 > -0.27
+                    
+                    and deviation_ma3_sopra_ma10 > 0.05
+                    and deviation_ma5_sopra_ma28 > -0.02
+                  
+                    and ma3_last > ma13_last
+                    and ma4_last > ma9_last
+                   
+                    and ma2_last > ma2_2_min_ago
+                    and macd > macd_2_min_ago
+                ):
+                    buy = "BUY 4 importata da RCCR BUY3 r 6599 A1yA2 - ANDATA BENISSIMO - con 450 > 450 480 min MA CONSIDERATA ANCORA LATERALE - r 6740 NUOVA ERA A1 STRONG"
+                    action = "buy"
+                    percentage = 60
+                    
+                    # questa condizione importata da RCCR e' arrivata un po' prima.
+
+                
+                elif (
+                    
+                    ma4_last > ma20_last
+                    
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.40
+                    and ma3_last > ma39_last
+                   
+                    and ma450_last > ma450_480_min_ago
+                    
+                    and deviation_ma100_sopra_ma300 < 0.27
+                    and deviation_ma100_sopra_ma300 > -0.27
+                    
+                    and deviation_ma3_sopra_ma10 > 0.05
+                    and deviation_ma5_sopra_ma28 > -0.02
+                  
+                    and ma3_last > ma13_last
+                    and ma4_last > ma9_last
+                   
+                    and ma2_last > ma2_2_min_ago
+                    and macd > macd_2_min_ago
+                ):
+                    buy = "BUY 4 importata da RCCR BUY3 r 6599 A1yA2 - ANDATA BENISSIMO - con 450 > 450 480 min MA CONSIDERATA ANCORA LATERALE - r 6740 NUOVA ERA A2 STRONG"
                     action = "buy"
                     percentage = 60
                     
