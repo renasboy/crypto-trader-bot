@@ -1,7 +1,7 @@
  A.D. 2024 
 # sono 20 anni compa !
 class ro_cano_che_ritorna:
-
+prova errore
   
     def __init__(self, helper, buy_percentage, sell_percentage):
         self.algo_helper = helper
