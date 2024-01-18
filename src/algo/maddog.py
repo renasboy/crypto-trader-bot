@@ -1857,21 +1857,18 @@ class maddog:
                     action = "buy"
                     percentage = 50
 
-                
-                
-
-
-
-              
-              
-
-                
+               
+                  
                 elif (    
                     ma3_last > ma18_last
+                  
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.40
+                    and deviation_ma5_sopra_o_sotto_ma100 > 0.28
                     
                     and ma450_last < ma450_360_min_ago
                     and ma300_last < ma300_60_min_ago
-                    
                     
                     and deviation_ma5_sopra_ma200 < -0.30
                     and deviation_ma5_sotto_ma300 < -0.30
@@ -1887,7 +1884,165 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
                     and macd >= macd_2_min_ago
                 ):
-                    buy = "BUY 1 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND dev 3-18 and deviation_ma3_sopra_ma16 > -0.125 - r 1043 B2"
+                    buy = "BUY 1 migliore che considera distanza 5-300 E dev 10-200 < -0.24 AND dev 3-18 and dev_ma3_sopra_ma16 > -0.125 - r 1043 B2 NUOVA ERA A1 SOFT"
+                    action = "buy"
+                    percentage = 50
+
+                
+                elif (    
+                    ma3_last > ma18_last
+                    
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.40
+                    
+                    and ma450_last < ma450_360_min_ago
+                    and ma300_last < ma300_60_min_ago
+                    
+                    and deviation_ma5_sopra_ma200 < -0.30
+                    and deviation_ma5_sotto_ma300 < -0.30
+                    and deviation_ma5_sotto_ma450 < -0.30
+                    
+                    and deviation_ma50_sopra_o_sotto_ma100 < -0.01
+                    and deviation_ma100_sopra_ma300 < -0.10
+                    
+                    and deviation_ma3_sopra_ma10 > 0.081
+                    and deviation_ma3_sopra_ma16 > -0.125
+                    and deviation_ma5_sopra_ma28 > -0.155
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                ):
+                    buy = "BUY 1 migliore che considera distanza 5-300 E dev 10-200 < -0.24 AND dev 3-18 and dev_ma3_sopra_ma16 > -0.125 - r 1043 B2 NUOVA ERA A2 SOFT"
+                    action = "buy"
+                    percentage = 50
+
+                
+                elif (    
+                    ma3_last > ma18_last
+                    
+                    and ma100_last > ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.40
+                    
+                    and ma450_last < ma450_360_min_ago
+                    and ma300_last < ma300_60_min_ago
+                    
+                    and deviation_ma5_sopra_ma200 < -0.30
+                    and deviation_ma5_sotto_ma300 < -0.30
+                    and deviation_ma5_sotto_ma450 < -0.30
+                    
+                    and deviation_ma50_sopra_o_sotto_ma100 < -0.01
+                    and deviation_ma100_sopra_ma300 < -0.10
+                    
+                    and deviation_ma3_sopra_ma10 > 0.081
+                    and deviation_ma3_sopra_ma16 > -0.125
+                    and deviation_ma5_sopra_ma28 > -0.155
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                ):
+                    buy = "BUY 1 migliore che considera distanza 5-300 E dev 10-200 < -0.24 AND dev 3-18 and dev_ma3_sopra_ma16 > -0.125 - r 1043 B2 NUOVA ERA A3 SOFT"
+                    action = "buy"
+                    percentage = 50
+
+                elif (    
+                    ma3_last > ma18_last
+                    
+                    and ma100_last > ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.40
+                    
+                    and ma450_last < ma450_360_min_ago
+                    and ma300_last < ma300_60_min_ago
+                    
+                    and deviation_ma5_sopra_ma200 < -0.30
+                    and deviation_ma5_sotto_ma300 < -0.30
+                    and deviation_ma5_sotto_ma450 < -0.30
+                    
+                    and deviation_ma50_sopra_o_sotto_ma100 < -0.01
+                    and deviation_ma100_sopra_ma300 < -0.10
+                    
+                    and deviation_ma3_sopra_ma10 > 0.081
+                    and deviation_ma3_sopra_ma16 > -0.125
+                    and deviation_ma5_sopra_ma28 > -0.155
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                ):
+                    buy = "BUY 1 migliore che considera distanza 5-300 E dev 10-200 < -0.24 AND dev 3-18 and dev_ma3_sopra_ma16 > -0.125 - r 1043 B2 NUOVA ERA A3 SOFT"
+                    action = "buy"
+                    percentage = 50
+
+                elif (    
+                    ma3_last > ma18_last
+                    
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.40
+                    and ma3_last > ma54_last
+                    
+                    and ma100_last > ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.40
+                    
+                    and ma450_last < ma450_360_min_ago
+                    and ma300_last < ma300_60_min_ago
+                    
+                    and deviation_ma5_sopra_ma200 < -0.30
+                    and deviation_ma5_sotto_ma300 < -0.30
+                    and deviation_ma5_sotto_ma450 < -0.30
+                    
+                    and deviation_ma50_sopra_o_sotto_ma100 < -0.01
+                    and deviation_ma100_sopra_ma300 < -0.10
+                    
+                    and deviation_ma3_sopra_ma10 > 0.081
+                    and deviation_ma3_sopra_ma16 > -0.125
+                    and deviation_ma5_sopra_ma28 > -0.155
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                ):
+                    buy = "BUY 1 migliore che considera distanza 5-300 E dev 10-200 < -0.24 AND dev 3-18 and dev_ma3_sopra_ma16 > -0.125 - r 1043 B2 NUOVA ERA A1 STRONG"
+                    action = "buy"
+                    percentage = 50
+
+                
+                elif (    
+                    ma3_last > ma18_last
+                    
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.40
+                    and ma3_last > ma39_last
+                    
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.40
+                    and ma3_last > ma54_last
+                    
+                    and ma100_last > ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.40
+                    
+                    and ma450_last < ma450_360_min_ago
+                    and ma300_last < ma300_60_min_ago
+                    
+                    and deviation_ma5_sopra_ma200 < -0.30
+                    and deviation_ma5_sotto_ma300 < -0.30
+                    and deviation_ma5_sotto_ma450 < -0.30
+                    
+                    and deviation_ma50_sopra_o_sotto_ma100 < -0.01
+                    and deviation_ma100_sopra_ma300 < -0.10
+                    
+                    and deviation_ma3_sopra_ma10 > 0.081
+                    and deviation_ma3_sopra_ma16 > -0.125
+                    and deviation_ma5_sopra_ma28 > -0.155
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                ):
+                    buy = "BUY 1 migliore che considera distanza 5-300 E dev 10-200 < -0.24 AND dev 3-18 and dev_ma3_sopra_ma16 > -0.125 - r 1043 B2 NUOVA ERA A2 STRONG"
                     action = "buy"
                     percentage = 50
                     
@@ -1896,6 +2051,9 @@ class maddog:
                     # 12 ott 2023 3-16 a -0.125 da -0.12
                     # 12 ott 2023 5-28 a -0.155 da -0.15
                     # 17 nov 2023 tolto ma200 < alla 1043 B1 perche' era superiore !
+
+
+              
               
                     
                 # BUY 1 zona inferiore 1043 C
