@@ -225,12 +225,20 @@ class maddog:
         macd_3_min_ago = self.algo_helper.macd_minutes_ago(3)
         macd_5_min_ago = self.algo_helper.macd_minutes_ago(5)
 
+        
+
         ################################################################################################# CONFORTABLY NUMB
         
         # formula DEVIATION_ma2_sopra_o_sotto_ma2_2_min_ago !
         
         deviation_ma2_sopra_o_sotto_ma2_2_min_ago = (ma2_last / ma2_2_min_ago - 1) * 100 if ma2_2_min_ago else 0
         self.algo_helper.info("deviation_ma2_sopra_o_sotto_ma2_2_min_ago: {}".format(deviation_ma2_sopra_o_sotto_ma2_2_min_ago))
+      
+
+        # formula DEVIATION_ma2_sopra_o_sotto_ma5 !
+        
+        deviation_ma2_sopra_o_sotto_ma5 = (ma2_last / ma5_last - 1) * 100 if ma5_last else 0
+        self.algo_helper.info("deviation_ma2_sopra_o_sotto_ma5: {}".format(deviation_ma2_sopra_o_sotto_ma5))
 
         
         # formula ma2_differenza di 2 min ago
@@ -34420,7 +34428,7 @@ class maddog:
                 and ma20_last > ma20_10_min_ago
                 
                 and ma50_last <= ma50_2_min_ago
-                and ma2_differenza_2_min_ago < -15
+                
                 and ma300_last < ma300_301_min_ago
                 and delta_150_100 <= delta_150_100_60_min
                 
@@ -34430,15 +34438,17 @@ class maddog:
                 and deviation_ma100_sopra_ma300 < 0.40
                 and deviation_ma5_sotto_ma200 > -0.50
                 
-                and ma2_last < ma2_2_min_ago 
+                and ma2_last < ma2_2_min_ago
+                and ma2_differenza_2_min_ago < -15
                 and macd_differenza_2_min_ago < -0.35
-                
+                and deviation_ma2_sopra_o_sotto_ma5 < -0.064
             ):
-                sell = "SELL C.S. GIORNO con ma300 < 5 ore e 30>50 e ma50 <= e dev 3-39 < 0.13 and dev_sell < -0.01 e con ma78 < e macd_differenza_2_min_ago < -0.35 - r 16045 B2 Y1 x"
+                sell = "SELL C.S. GIORNO con ma300 < 5 ore e 30>50 e ma50 <= e dev 3-39 < 0.13 e dev_sell < -0.01 e ma78 < e macd_diff < -0.35 E dev 2-5 < -0.064 - r 16045 B2 Y1 x"
                 action = "sell"
                 
                 # 23 dic 2023 dev_sell < 0.01 se ma20 cresce da 10 min
-                # 18 gen 2024 dev_sell < a -0.01 da 0.01 (ma30 e' andata sopra ma50 sembra una chiara inversione di tendenza !) 
+                # 18 gen 2024 dev_sell < a -0.01 da 0.01 (ma30 e' andata sopra ma50 sembra una chiara inversione di tendenza !)
+                # 18 gen 2024 ho aggiunto and deviation_ma2_sopra_o_sotto_ma5 < -0.064 MA SOLO QUI
             
             elif (
                 ma78_last < ma78_120_min_ago
