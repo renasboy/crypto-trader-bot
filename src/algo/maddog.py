@@ -20114,20 +20114,39 @@ class maddog:
                         # da 0.33 a 0.36 perche' durante il crollo ferrari non devi guardare i centesimi.
                         
                         
-                        
                     elif (        
                         ma50_last < ma50_2_min_ago
                         and ma100_last < ma100_60_min_ago
                         and ma300_last < ma300_120_min_ago
-                        and ma2_last < ma2_2_min_ago 
+                        
                         and deviation_sell < -0.36
                         and deviation_ma50_sotto_ma300 < 0.50
+                        
+                        and ma2_last < ma2_2_min_ago
+                        and macd >= macd_2_min_ago
                     ):
-                        sell = "SELL 1 maestro parte 2 (21-50 min) con ma50 < and deviation_sell < -0.36 - r 9110 B"
+                        sell = "SELL 1 maestro parte 2 (21-50 min) con ma50 < and deviation_sell < -0.36 and macd >= macd_2_min_ago - r 9110 Bx"
                         action = "sell"
                         
                         # da 0.33 a 0.36 perche' durante il crollo ferrari non devi guardare i centesimi.
+
+                    
+                    elif (        
+                        ma50_last < ma50_2_min_ago
+                        and ma100_last < ma100_60_min_ago
+                        and ma300_last < ma300_120_min_ago
                         
+                        and deviation_sell < -0.02
+                        and deviation_ma50_sotto_ma300 < 0.50
+                        
+                        and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
+                    ):
+                        sell = "SELL 1 maestro parte 2 (21-50 min) con ma50 < and deviation_sell < -0.02 and macd < macd_2_min_ago - r 9110 By"
+                        action = "sell"
+                        
+                        # da 0.33 a 0.36 perche' durante il crollo ferrari non devi guardare i centesimi.
+                        # 18 gen 2024 se macd e 100< 100 60 min < vendi con -0.02 da -0.36 
                         
                      
                     #####################################################################################
