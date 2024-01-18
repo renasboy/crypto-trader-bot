@@ -2594,10 +2594,26 @@ class maddog:
                     buy = "BUY 1 CONSOLIDATO TREND LATERALE con ma300_last > ma300_180_min_ago e con 3-10 > 0.01 con macd > -20 and ma2_differenza_2_min_ago > 7 - r 1205a"
                     action = "buy"
                     percentage = 70
+                    
+                    #  5 mag 2023 ho tolto and ma250_last > ma300_last
+                    # attenzione ! adesso questa condizione si attiva anche se ma250_last < ma300_last ! MA SEMPRE durante un CONSOLIDATO TREND LATERALE.
+                    # vediamo come va.
+                    # vedi 19 maggio 2023 ore 17:47 !
+                    #  8 giu 2023 and deviation_ma3_sopra_ma16 > 0.112
+                    # 24 ago 2023 forse in futuro dovrai mettere macd > 5
+                    # 24 ago 2023 and macd > 5
+                    #  5 ott 2023 ridotto ndecchiecella
+                    # 11 ott 2023 macd > 0 da macd > 5
+                    # 11 ott 2023 dev 3-10 a 0.04 da 0.05
+                    # 11 ott 2023 dev 3-16 a 0.07 da 0.08
+                    # 11 ott 2023 dev 4-28 a -0.03 da -0.02
+                    # 10 dic 2023 anticipato ndecchiecella
+                    #  9 gen 2024 anticipato ancora
+                    # 18 gen 2024 qui ma300 sale da 3 ore.
 
                 
                 elif (    
-                    ma3_last > ma13_last
+                    ma3_last > ma54_last
                     and ma300_last < ma300_180_min_ago
                     
                     and deviation_ma300_sopra_ma450 < 0.18
@@ -2640,7 +2656,7 @@ class maddog:
                     # 11 ott 2023 dev 4-28 a -0.03 da -0.02
                     # 10 dic 2023 anticipato ndecchiecella
                     #  9 gen 2024 anticipato ancora
-                    
+                    # 18 gen 2024 attenzione ! 5-54 se ma 300 scende da 3 ore NON E' PROPRIAMENTE UN MOVIMENTO LATERALE CONSOLIDATO.
                     
                     
                     
