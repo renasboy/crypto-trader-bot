@@ -8616,10 +8616,17 @@ class maddog:
 
 
                 # BUY 2 migliore che considera distanza 5-300 AND dev 10-200 < -0.24
+
                 
-                elif (
-                    
+                
+                elif (    
                     ma3_last > ma18_last
+                  
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.40
+                    and deviation_ma5_sopra_o_sotto_ma100 > 0.28
+                    
                     and ma450_last < ma450_360_min_ago
                     
                     and deviation_ma5_sopra_ma200 < -0.30
@@ -8641,13 +8648,203 @@ class maddog:
                     and macd > -30
                     and macd_differenza_2_min_ago > 1.30
                 ):
-                    buy = "BUY 2 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND dev 4-18 and deviation_ma3_sopra_ma16 > 0.12 - r 4713"
+                    buy = "BUY 2 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND dev 4-18 and deviation_ma3_sopra_ma16 > 0.12 - r 4713 NUOVA ERA A1 SOFT"
                     action = "buy"
                     percentage = 70
                     
                     #  3 nov 2023 tolto macd ! al buy 2
                     # 3 nov 2023 mi basta che macd > -3
                     #  3 nov 2023 and deviation_ma3_sopra_ma16 > 0.08 da 0.12
+              
+
+                
+                elif (    
+                    ma3_last > ma18_last
+                    
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.40
+                    
+                    and ma450_last < ma450_360_min_ago
+                    
+                    and deviation_ma5_sopra_ma200 < -0.30
+                    and deviation_ma5_sotto_ma300 < -0.30
+                    and deviation_ma5_sotto_ma450 < -0.30
+                    and deviation_ma50_sopra_o_sotto_ma100 < -0.01
+                    
+                    and deviation_ma100_sopra_ma300 < -0.10
+                    
+                    and ma300_last < ma300_60_min_ago
+                    and ma200_last < ma200_60_min_ago
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > 0.07
+                    and deviation_ma5_sopra_ma28 > -0.15
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
+                    and macd > -30
+                    and macd_differenza_2_min_ago > 1.30
+                ):
+                    buy = "BUY 2 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND dev 4-18 and deviation_ma3_sopra_ma16 > 0.12 - r 4713 NUOVA ERA A2 SOFT"
+                    action = "buy"
+                    percentage = 70
+                    
+                    #  3 nov 2023 tolto macd ! al buy 2
+                    # 3 nov 2023 mi basta che macd > -3
+                    #  3 nov 2023 and deviation_ma3_sopra_ma16 > 0.08 da 0.12
+
+              
+
+                
+                elif (    
+                    ma3_last > ma18_last
+                    
+                    and ma100_last > ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.40
+                    
+                    and ma450_last < ma450_360_min_ago
+                    
+                    and deviation_ma5_sopra_ma200 < -0.30
+                    and deviation_ma5_sotto_ma300 < -0.30
+                    and deviation_ma5_sotto_ma450 < -0.30
+                    and deviation_ma50_sopra_o_sotto_ma100 < -0.01
+                    
+                    and deviation_ma100_sopra_ma300 < -0.10
+                    
+                    and ma300_last < ma300_60_min_ago
+                    and ma200_last < ma200_60_min_ago
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > 0.07
+                    and deviation_ma5_sopra_ma28 > -0.15
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
+                    and macd > -30
+                    and macd_differenza_2_min_ago > 1.30
+                ):
+                    buy = "BUY 2 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND dev 4-18 and deviation_ma3_sopra_ma16 > 0.12 - r 4713 NUOVA ERA A3 SOFT"
+                    action = "buy"
+                    percentage = 70
+                    
+                    #  3 nov 2023 tolto macd ! al buy 2
+                    # 3 nov 2023 mi basta che macd > -3
+                    #  3 nov 2023 and deviation_ma3_sopra_ma16 > 0.08 da 0.12
+               
+
+          
+                elif (    
+                    ma3_last > ma18_last
+                    
+                    and ma100_last > ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.40
+                    
+                    and ma450_last < ma450_360_min_ago
+                    
+                    and deviation_ma5_sopra_ma200 < -0.30
+                    and deviation_ma5_sotto_ma300 < -0.30
+                    and deviation_ma5_sotto_ma450 < -0.30
+                    and deviation_ma50_sopra_o_sotto_ma100 < -0.01
+                    
+                    and deviation_ma100_sopra_ma300 < -0.10
+                    
+                    and ma300_last < ma300_60_min_ago
+                    and ma200_last < ma200_60_min_ago
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > 0.07
+                    and deviation_ma5_sopra_ma28 > -0.15
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
+                    and macd > -30
+                    and macd_differenza_2_min_ago > 1.30
+                ):
+                    buy = "BUY 2 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND dev 4-18 and deviation_ma3_sopra_ma16 > 0.12 - r 4713 NUOVA ERA A4 SOFT"
+                    action = "buy"
+                    percentage = 70
+
+                elif (    
+                    ma3_last > ma18_last
+                    
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.40
+                    and ma3_last > ma54_last
+                    
+                    and ma450_last < ma450_360_min_ago
+                    
+                    and deviation_ma5_sopra_ma200 < -0.30
+                    and deviation_ma5_sotto_ma300 < -0.30
+                    and deviation_ma5_sotto_ma450 < -0.30
+                    and deviation_ma50_sopra_o_sotto_ma100 < -0.01
+                    
+                    and deviation_ma100_sopra_ma300 < -0.10
+                    
+                    and ma300_last < ma300_60_min_ago
+                    and ma200_last < ma200_60_min_ago
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > 0.07
+                    and deviation_ma5_sopra_ma28 > -0.15
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
+                    and macd > -30
+                    and macd_differenza_2_min_ago > 1.30
+                ):
+                    buy = "BUY 2 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND dev 4-18 and deviation_ma3_sopra_ma16 > 0.12 - r 4713 NUOVA ERA A1 STRONG"
+                    action = "buy"
+                    percentage = 70
+                    
+                    #  3 nov 2023 tolto macd ! al buy 2
+                    # 3 nov 2023 mi basta che macd > -3
+                    #  3 nov 2023 and deviation_ma3_sopra_ma16 > 0.08 da 0.12
+
+                
+                elif (    
+                    ma3_last > ma18_last
+                    
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.40
+                    and ma3_last > ma39_last
+                    
+                    and ma450_last < ma450_360_min_ago
+                    
+                    and deviation_ma5_sopra_ma200 < -0.30
+                    and deviation_ma5_sotto_ma300 < -0.30
+                    and deviation_ma5_sotto_ma450 < -0.30
+                    and deviation_ma50_sopra_o_sotto_ma100 < -0.01
+                    
+                    and deviation_ma100_sopra_ma300 < -0.10
+                    
+                    and ma300_last < ma300_60_min_ago
+                    and ma200_last < ma200_60_min_ago
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > 0.07
+                    and deviation_ma5_sopra_ma28 > -0.15
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
+                    and macd > -30
+                    and macd_differenza_2_min_ago > 1.30
+                ):
+                    buy = "BUY 2 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND dev 4-18 and deviation_ma3_sopra_ma16 > 0.12 - r 4713 NUOVA ERA A2 STRONG"
+                    action = "buy"
+                    percentage = 70
+                    
+                    #  3 nov 2023 tolto macd ! al buy 2
+                    # 3 nov 2023 mi basta che macd > -3
+                    #  3 nov 2023 and deviation_ma3_sopra_ma16 > 0.08 da 0.12
+
+
+
+              
                     
                     
                 elif (
