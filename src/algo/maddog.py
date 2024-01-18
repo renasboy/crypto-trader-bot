@@ -15254,7 +15254,7 @@ class maddog:
 
                 elif (
                     deviation_ma4_sopra_ma30 > 0.12
-                    and ma20_last >= ma39_last
+                    and ma10_last >= ma39_last
                     and ma300_last < ma300_120_min_ago
                     and ma100_last < ma100_60_min_ago
                     
@@ -15271,13 +15271,15 @@ class maddog:
                     and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
                     and macd_differenza_2_min_ago > 1.25
                 ):    
-                    buy = "BUY 4B importato da BUY 3 RCCR con 300 < E 100 < 100 60 min ago AND dev ma2 and diff macd - r 6756 By1"
+                    buy = "BUY 4B importato da BUY 3 RCCR con 300 < E 100 < 100 60 min ago AND dev ma2 and diff macd - r 6756 BY1"
                     action = "buy"
                     percentage = 70
                     
                     # 29 dic 2023 se 20>39 anticipa ndecchiecella 
                     # 29 dic 2023 deviation_ma4_sopra_ma30 > 0.12 da 0.15
                     # deviation = ma5_last / last_trade_price
+                    # 18 gen 2024 10-39 da and ma10_last >= ma39_last
+              
                 
                 elif (
                     deviation_ma4_sopra_ma30 > 0.15
