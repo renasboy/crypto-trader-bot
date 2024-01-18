@@ -1970,7 +1970,7 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
                     and macd >= macd_2_min_ago
                 ):
-                    buy = "BUY 1 migliore che considera distanza 5-300 E dev 10-200 < -0.24 AND dev 3-18 and dev_ma3_sopra_ma16 > -0.125 - r 1043 B2 NUOVA ERA A3 SOFT"
+                    buy = "BUY 1 migliore che considera distanza 5-300 E dev 10-200 < -0.24 AND dev 3-18 and dev_ma3_sopra_ma16 > -0.125 - r 1043 B2 NUOVA ERA A4 SOFT"
                     action = "buy"
                     percentage = 50
 
