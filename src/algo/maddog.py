@@ -36682,7 +36682,7 @@ class maddog:
                 and delta_1 > delta_2
                 and deviation_ma5_sotto_ma200 < -0.40
                 
-                and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.015
+                and deviation_ma2_sopra_o_sotto_ma2_2_min_ago <= -0.015
                 and macd_differenza_2_min_ago < -0.50
             ): 
                 
@@ -36712,7 +36712,7 @@ class maddog:
                 # 26 dic 2023 and deviation_crollo_24_aprile a -0.24 da -0.28
                 
                 # 12 gen 2024 and deviation_crollo_24_aprile a -0.15 da -0.20 - 12 gen 2024 con -0.20 ha fatto -0.99 % ! ore 17:54
-                
+                # 19 gen 2024 and deviation_crollo_24_aprile a -0.14 da -0.15 - con -0.15 ha fatto -0.54 % 
 
                 ######################################################################################### fine dopo il crollo improvviso del 24 aprile 2022
                 
