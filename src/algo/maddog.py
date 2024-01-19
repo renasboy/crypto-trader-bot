@@ -3644,10 +3644,13 @@ class maddog:
                     percentage = 90
 
                 
-                
                 elif (    
                     ma3_last > ma15_last
                     
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
+                    and deviation_ma5_sopra_o_sotto_ma100 > 0.28
                     
                     and ma100_last < ma100_60_min_ago
                     and ma100_last < ma100_120_min_ago
@@ -3674,7 +3677,199 @@ class maddog:
                     and macd_differenza_2_min_ago > 1.25
                     
                 ):    
-                    buy = "BUY 1 condizione DNA IPERVENDUTO 3-39 con 3-10 E 300 vicina 450 e 3-16 > 0.01 + > E ma2_diff_2_min_ago > 3 E dev ma2 e MACD > -20 - r 1537 A3X 4A Y"
+                    buy = "BUY 1 condizione DNA IPERVENDUTO 3-39 con 300 vicina 450 E ma2_diff_2_min_ago > 3 E dev ma2 e MACD > -20 - r 1537 A3X 4A Y NUOVA ERA A1 SOFT"
+                    action = "buy"
+                    percentage = 90
+                    
+
+                elif (    
+                    ma3_last > ma15_last
+                    
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.50
+                    
+                    and ma100_last < ma100_60_min_ago
+                    and ma100_last < ma100_120_min_ago
+                    
+                    and ma2_last >= ma10_last
+                    and deviation_ma39 <= -0.30
+                    and ma3_last < ma39_last
+                    
+                  
+                    and deviation_ma54_sopra_o_sotto_ma72 < -0.015
+                    
+                    and deviation_ma39_sotto_ma200 < -0.01
+                    and deviation_ma300_sopra_ma450 > -0.60
+                    
+                    and deviation_ma3_sopra_ma10 > 0.015
+                    and deviation_ma3_sopra_ma16 > 0.02
+                    and deviation_ma3_sopra_ma18 > -0.04
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
+                    and ma2_differenza_2_min_ago > 8
+                    and ma2_differenza_ma5 > 11
+                    and macd > -20
+                    and macd_differenza_2_min_ago > 1.25
+                    
+                ):    
+                    buy = "BUY 1 condizione DNA IPERVENDUTO 3-39 con 300 vicina 450 E ma2_diff_2_min_ago > 3 E dev ma2 e MACD > -20 - r 1537 A3X 4A Y NUOVA ERA A2 SOFT"
+                    action = "buy"
+                    percentage = 90
+                    
+                    # 15 nov 2023 se compra quando 3<39 allora riduco dev 3-16 
+                    # 16 nov 2023 AGGIUNTO SOLO SU QUESTA CONDIZIONE E DOPO ATTENTA ANALISI STATISTICA and macd > 8
+                    #  5 dic 2023 aggiunta and ma2_differenza_ma5 > 26 vedi 4 dic 2023 ore 16:45
+                    #  5 dic 2023 macd >-8 da >8
+                    # 12 dic 2023 macd a -10 da -8
+                    # 29 dicembre 2023 entra in gioco CONDIZIONE DNA - IPERVENDUTO 3-39 < -0.30
+
+                elif (    
+                    ma3_last > ma15_last
+                    
+                    and ma100_last > ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
+                    
+                    and ma100_last < ma100_60_min_ago
+                    and ma100_last < ma100_120_min_ago
+                    
+                    and ma2_last >= ma10_last
+                    and deviation_ma39 <= -0.30
+                    and ma3_last < ma39_last
+                    
+                  
+                    and deviation_ma54_sopra_o_sotto_ma72 < -0.015
+                    
+                    and deviation_ma39_sotto_ma200 < -0.01
+                    and deviation_ma300_sopra_ma450 > -0.60
+                    
+                    and deviation_ma3_sopra_ma10 > 0.015
+                    and deviation_ma3_sopra_ma16 > 0.02
+                    and deviation_ma3_sopra_ma18 > -0.04
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
+                    and ma2_differenza_2_min_ago > 8
+                    and ma2_differenza_ma5 > 11
+                    and macd > -20
+                    and macd_differenza_2_min_ago > 1.25
+                    
+                ):    
+                    buy = "BUY 1 condizione DNA IPERVENDUTO 3-39 con 300 vicina 450 E ma2_diff_2_min_ago > 3 E dev ma2 e MACD > -20 - r 1537 A3X 4A Y NUOVA ERA A3 SOFT"
+                    action = "buy"
+                    percentage = 90
+
+                elif (    
+                    ma3_last > ma15_last
+                    
+                    and ma100_last > ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.50
+                    
+                    and ma100_last < ma100_60_min_ago
+                    and ma100_last < ma100_120_min_ago
+                    
+                    and ma2_last >= ma10_last
+                    and deviation_ma39 <= -0.30
+                    and ma3_last < ma39_last
+                    
+                  
+                    and deviation_ma54_sopra_o_sotto_ma72 < -0.015
+                    
+                    and deviation_ma39_sotto_ma200 < -0.01
+                    and deviation_ma300_sopra_ma450 > -0.60
+                    
+                    and deviation_ma3_sopra_ma10 > 0.015
+                    and deviation_ma3_sopra_ma16 > 0.02
+                    and deviation_ma3_sopra_ma18 > -0.04
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
+                    and ma2_differenza_2_min_ago > 8
+                    and ma2_differenza_ma5 > 11
+                    and macd > -20
+                    and macd_differenza_2_min_ago > 1.25
+                    
+                ):    
+                    buy = "BUY 1 condizione DNA IPERVENDUTO 3-39 con 300 vicina 450 E ma2_diff_2_min_ago > 3 E dev ma2 e MACD > -20 - r 1537 A3X 4A Y NUOVA ERA A4 SOFT"
+                    action = "buy"
+                    percentage = 90
+                    
+
+                elif (    
+                    ma3_last > ma15_last
+                    
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
+                    and ma3_last > ma54_last
+                    
+                    and ma100_last < ma100_60_min_ago
+                    and ma100_last < ma100_120_min_ago
+                    
+                    and ma2_last >= ma10_last
+                    and deviation_ma39 <= -0.30
+                    and ma3_last < ma39_last
+                    
+                  
+                    and deviation_ma54_sopra_o_sotto_ma72 < -0.015
+                    
+                    and deviation_ma39_sotto_ma200 < -0.01
+                    and deviation_ma300_sopra_ma450 > -0.60
+                    
+                    and deviation_ma3_sopra_ma10 > 0.015
+                    and deviation_ma3_sopra_ma16 > 0.02
+                    and deviation_ma3_sopra_ma18 > -0.04
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
+                    and ma2_differenza_2_min_ago > 8
+                    and ma2_differenza_ma5 > 11
+                    and macd > -20
+                    and macd_differenza_2_min_ago > 1.25
+                    
+                ):    
+                    buy = "BUY 1 condizione DNA IPERVENDUTO 3-39 con 300 vicina 450 E ma2_diff_2_min_ago > 3 E dev ma2 e MACD > -20 - r 1537 A3X 4A Y NUOVA ERA A1 STRONG"
+                    action = "buy"
+                    percentage = 90
+
+                
+                elif (    
+                    ma3_last > ma15_last
+                    
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.50
+                    and ma3_last > ma39_last
+                    
+                    and ma100_last < ma100_60_min_ago
+                    and ma100_last < ma100_120_min_ago
+                    
+                    and ma2_last >= ma10_last
+                    and deviation_ma39 <= -0.30
+                    and ma3_last < ma39_last
+                    
+                  
+                    and deviation_ma54_sopra_o_sotto_ma72 < -0.015
+                    
+                    and deviation_ma39_sotto_ma200 < -0.01
+                    and deviation_ma300_sopra_ma450 > -0.60
+                    
+                    and deviation_ma3_sopra_ma10 > 0.015
+                    and deviation_ma3_sopra_ma16 > 0.02
+                    and deviation_ma3_sopra_ma18 > -0.04
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
+                    and ma2_differenza_2_min_ago > 8
+                    and ma2_differenza_ma5 > 11
+                    and macd > -20
+                    and macd_differenza_2_min_ago > 1.25
+                    
+                ):    
+                    buy = "BUY 1 condizione DNA IPERVENDUTO 3-39 con 300 vicina 450 E ma2_diff_2_min_ago > 3 E dev ma2 e MACD > -20 - r 1537 A3X 4A Y NUOVA ERA A2 STRONG"
                     action = "buy"
                     percentage = 90
                     
