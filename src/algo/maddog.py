@@ -8830,7 +8830,7 @@ class maddog:
                   
                     and ma100_last < ma100_10_min_ago
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
-                    and deviation_ma5_sopra_o_sotto_ma100 > -0.40
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.52
                     and deviation_ma5_sopra_o_sotto_ma100 > 0.28
                     
                     and ma450_last < ma450_360_min_ago
@@ -8869,7 +8869,7 @@ class maddog:
                     
                     and ma100_last < ma100_10_min_ago
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.40
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.52
                     
                     and ma450_last < ma450_360_min_ago
                     
@@ -8908,7 +8908,7 @@ class maddog:
                     
                     and ma100_last > ma100_10_min_ago
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
-                    and deviation_ma5_sopra_o_sotto_ma100 > -0.40
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.52
                     
                     and ma450_last < ma450_360_min_ago
                     
@@ -8946,7 +8946,7 @@ class maddog:
                     
                     and ma100_last > ma100_10_min_ago
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.40
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.52
                     
                     and ma450_last < ma450_360_min_ago
                     
@@ -8972,13 +8972,14 @@ class maddog:
                     buy = "BUY 2 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND dev 4-18 and deviation_ma3_sopra_ma16 > 0.12 - r 4713 NUOVA ERA A4 SOFT"
                     action = "buy"
                     percentage = 70
+                  
 
                 elif (    
                     ma3_last > ma18_last
                     
                     and ma100_last < ma100_10_min_ago
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.12
-                    and deviation_ma5_sopra_o_sotto_ma100 > -0.40
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.52
                     and ma3_last > ma54_last
                     
                     and ma450_last < ma450_360_min_ago
@@ -9016,7 +9017,7 @@ class maddog:
                     
                     and ma100_last < ma100_10_min_ago
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.12
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.40
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.52
                     and ma3_last > ma39_last
                     
                     and ma450_last < ma450_360_min_ago
