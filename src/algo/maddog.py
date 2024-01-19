@@ -35802,7 +35802,7 @@ class maddog:
                 #  5 dic 2023 dev sell a 0.05 da -0.05
                 # MINGHIA il 26 dic ha fatto -0.73 ! e ho fatto delle modifiche meravigliose
                 # 29 dic 2023 and macd a 13 da 7
-
+                # 19 gen 2024 ha fatto -0.60 HO NOTATO CHE ma20 era in crescita ! e ho aggiunto questa 
             
             elif (
                 
