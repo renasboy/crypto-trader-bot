@@ -17044,9 +17044,9 @@ class maddog:
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
                     
-                    and deviation_ma5_sopra_ma28 < 0.01
-                    and deviation_ma3_sopra_ma16 > 0.02
-                    and deviation_ma3_sopra_ma18 > 0.04
+                    
+                    and deviation_ma3_sopra_ma16 > 0.01
+                    and deviation_ma3_sopra_ma18 > 0.02
                     
                     and ma2_last >= ma2_2_min_ago
                     and ma2_differenza_2_min_ago > 8
@@ -17055,7 +17055,7 @@ class maddog:
                     and macd_differenza_2_min_ago > 1.25
                     and ma2_last >= ma10_last
                 ):
-                    buy = "BUY 4 ENTRA DNA - IPERVENUTO - PENSIERO LATERALE 13 apr 2023 zia pina > 180 min di ribasso and 78<150 and 3-16 > 0.03 and macd > 2 min ago  - r 7060b"
+                    buy = "BUY 4 ENTRA DNA - IPERVENUTO - PENSIERO LATERALE 13 apr 2023 zia pina > 180 min di ribasso and 78<150 and 3-16 > 0.03 and macd > 2 min ago  - r 7060 B"
                     action = "buy"
                     percentage = 90
                     
