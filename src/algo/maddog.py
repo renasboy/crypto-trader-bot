@@ -16289,10 +16289,17 @@ class maddog:
                     # deviation_ma4_sopra_ma100 > 0.25 arrivati al buy 4 DEVE AVERE UNA CERTA FORZA !
                     # ma se 250 > 300 ! serve una forza minore
 
+
               
+
                 elif (
                     ma5_last >= ma5_2_min_ago
                     and ma4_last > ma39_last
+                    
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
+                    and deviation_ma5_sopra_o_sotto_ma100 > 0.28
                     
                     and ma300_last > ma300_60_min_ago
                     and ma450_last > ma450_300_min_ago
@@ -16307,7 +16314,138 @@ class maddog:
                     and delta_buy3_incrocio_ma3_ma8 > 0.01
                     and ma2_last > ma2_2_min_ago
                 ):
-                    buy = "BUY 4B RIVOLUZIONARIO con ma78 > - r 6859 B1x"
+                    buy = "BUY 4B RIVOLUZIONARIO con ma78 > - r 6859 B1x NUOVA ERA A1 SOFT"
+                    action = "buy"
+                    percentage = 70
+                  
+
+                elif (
+                    ma5_last >= ma5_2_min_ago
+                    and ma4_last > ma39_last
+                  
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.50
+                    and ma5_last > ma50_last
+                    
+                    and ma300_last > ma300_60_min_ago
+                    and ma450_last > ma450_300_min_ago
+                    
+                    and deviation_ma250_sopra_ma300 < 0.10
+                    and deviation_ma250_sopra_ma300 > -0.10
+                    
+                    and deviation_ma3_sopra_ma10 > 0.02
+                    and deviation_ma3_sopra_ma16 > 0.03
+                    
+                    and ma3_last > ma8_last
+                    and delta_buy3_incrocio_ma3_ma8 > 0.01
+                    and ma2_last > ma2_2_min_ago
+                ):
+                    buy = "BUY 4B RIVOLUZIONARIO con ma78 > - r 6859 B1x NUOVA ERA A2 SOFT"
+                    action = "buy"
+                    percentage = 70
+                  
+
+                elif (
+                    ma5_last >= ma5_2_min_ago
+                    and ma4_last > ma39_last
+                    
+                    and ma100_last > ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
+                    
+                    and ma300_last > ma300_60_min_ago
+                    and ma450_last > ma450_300_min_ago
+                    
+                    and deviation_ma250_sopra_ma300 < 0.10
+                    and deviation_ma250_sopra_ma300 > -0.10
+                    
+                    and deviation_ma3_sopra_ma10 > 0.02
+                    and deviation_ma3_sopra_ma16 > 0.03
+                    
+                    and ma3_last > ma8_last
+                    and delta_buy3_incrocio_ma3_ma8 > 0.01
+                    and ma2_last > ma2_2_min_ago
+                ):
+                    buy = "BUY 4B RIVOLUZIONARIO con ma78 > - r 6859 B1x NUOVA ERA A3 SOFT"
+                    action = "buy"
+                    percentage = 70
+
+                elif (
+                    ma5_last >= ma5_2_min_ago
+                    and ma4_last > ma39_last
+                    
+                    and ma100_last > ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.50
+                    
+                    and ma300_last > ma300_60_min_ago
+                    and ma450_last > ma450_300_min_ago
+                    
+                    and deviation_ma250_sopra_ma300 < 0.10
+                    and deviation_ma250_sopra_ma300 > -0.10
+                    
+                    and deviation_ma3_sopra_ma10 > 0.02
+                    and deviation_ma3_sopra_ma16 > 0.03
+                    
+                    and ma3_last > ma8_last
+                    and delta_buy3_incrocio_ma3_ma8 > 0.01
+                    and ma2_last > ma2_2_min_ago
+                ):
+                    buy = "BUY 4B RIVOLUZIONARIO con ma78 > - r 6859 B1x NUOVA ERA A4 SOFT"
+                    action = "buy"
+                    percentage = 70
+
+                elif (
+                    ma5_last >= ma5_2_min_ago
+                    and ma4_last > ma39_last
+                    
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
+                    and ma3_last > ma54_last
+                    
+                    and ma300_last > ma300_60_min_ago
+                    and ma450_last > ma450_300_min_ago
+                    
+                    and deviation_ma250_sopra_ma300 < 0.10
+                    and deviation_ma250_sopra_ma300 > -0.10
+                    
+                    and deviation_ma3_sopra_ma10 > 0.02
+                    and deviation_ma3_sopra_ma16 > 0.03
+                    
+                    and ma3_last > ma8_last
+                    and delta_buy3_incrocio_ma3_ma8 > 0.01
+                    and ma2_last > ma2_2_min_ago
+                ):
+                    buy = "BUY 4B RIVOLUZIONARIO con ma78 > - r 6859 B1x NUOVA ERA A1 STRONG"
+                    action = "buy"
+                    percentage = 70
+
+                
+                elif (
+                    ma5_last >= ma5_2_min_ago
+                    and ma4_last > ma39_last
+                    
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.50
+                    and ma3_last > ma39_last
+                    
+                    and ma300_last > ma300_60_min_ago
+                    and ma450_last > ma450_300_min_ago
+                    
+                    and deviation_ma250_sopra_ma300 < 0.10
+                    and deviation_ma250_sopra_ma300 > -0.10
+                    
+                    and deviation_ma3_sopra_ma10 > 0.02
+                    and deviation_ma3_sopra_ma16 > 0.03
+                    
+                    and ma3_last > ma8_last
+                    and delta_buy3_incrocio_ma3_ma8 > 0.01
+                    and ma2_last > ma2_2_min_ago
+                ):
+                    buy = "BUY 4B RIVOLUZIONARIO con ma78 > - r 6859 B1x NUOVA ERA A2 STRONG"
                     action = "buy"
                     percentage = 70
                     
@@ -16318,6 +16456,11 @@ class maddog:
                     # 28 set 2023 con ma5 > ma5 2 min ago da ma28 > ma28 2 min ago
                     # 28 set 2023 tolto 5-54
                     # 12 dic 2023 4-39 con aggiunta 3-10 and 3-16
+
+
+
+
+              
 
                 
                 elif (
