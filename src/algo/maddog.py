@@ -3644,14 +3644,18 @@ class maddog:
                     percentage = 90
 
                 
-                elif (     
-                    
+                
+                elif (    
                     ma3_last > ma15_last
+                    
+                    
+                    and ma100_last < ma100_60_min_ago
+                    and ma100_last < ma100_120_min_ago
+                    
                     and ma2_last >= ma10_last
                     and deviation_ma39 <= -0.30
                     and ma3_last < ma39_last
-                    and ma100_last < ma100_60_min_ago
-                    and ma100_last < ma100_120_min_ago
+                    
                   
                     and deviation_ma54_sopra_o_sotto_ma72 < -0.015
                     
@@ -3680,6 +3684,13 @@ class maddog:
                     #  5 dic 2023 macd >-8 da >8
                     # 12 dic 2023 macd a -10 da -8
                     # 29 dicembre 2023 entra in gioco CONDIZIONE DNA - IPERVENDUTO 3-39 < -0.30
+
+
+
+
+
+
+              
               
                 elif (     
                     
