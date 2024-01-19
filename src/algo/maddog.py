@@ -10565,9 +10565,8 @@ class maddog:
                 # ------------------------------------------------------------ BUY 2 laterale
                 
                 elif (    
-                    ma4_last > ma28_last
+                    ma3_last > ma28_last
                     and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
-                    and delta_100_59 < delta_100_59_30_min
                     
                     and ma300_last > ma300_120_min_ago
                     and ma450_last > ma450_480_min_ago
