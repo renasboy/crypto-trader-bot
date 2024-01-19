@@ -38282,7 +38282,7 @@ class maddog:
             # 17
             
             elif (
-                deviation_sell > 0.91
+                deviation_sell > 0.81
                 and ma300_last < ma300_301_min_ago
                 
                 and macd < macd_2_min_ago
@@ -38299,6 +38299,8 @@ class maddog:
                 # 12 set 2023 macd < -9 da -10
                 # 12 set 2023 macd DIFFERENZA -24 da -25
                 # 18 dic 2023 aggiunto and ma3_last < ma10_last (almeno un minimo la media deve esserci) (le medie sono piu' forti del MACD)
+                # 19 gen 2024 deviation_sell a 0.81 da 0.91
+
             
             # 18
             
