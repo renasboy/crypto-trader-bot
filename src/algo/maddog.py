@@ -8714,8 +8714,16 @@ class maddog:
                     # 13 dic 2023 aggiunta and macd_differenza_2_min_ago > -3
                     # 30 dic 2023 anticipata ndecchiecella
 
+
+       
                 elif (    
                     ma3_last > ma28_last
+                    
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
+                    and deviation_ma5_sopra_o_sotto_ma100 > 0.28
+                    
                     and ma450_last < ma450_180_min_ago
                     
                     and ma450_last < ma450_480_min_ago
@@ -8734,7 +8742,155 @@ class maddog:
                     and macd_differenza_2_min_ago > -1.7
                     
                 ):
-                    buy = "BUY 2A laterale - r 4685 BY2By"
+                    buy = "BUY 2A laterale - r 4685 BY 2B y NUOVA ERA A1 SOFT"
+                    action = "buy"
+                    percentage = 80
+
+                elif (    
+                    ma3_last > ma28_last
+                    
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.50
+                    
+                    and ma450_last < ma450_180_min_ago
+                    
+                    and ma450_last < ma450_480_min_ago
+                    and ma100_last < ma125_last
+                    
+                    and deviation_ma300_sopra_ma450 < 0.20
+                    and deviation_ma300_sopra_ma450 > -0.20
+                    
+                    and deviation_ma100_sopra_ma300 < 0.20
+                    
+                    and deviation_ma3_sopra_ma10 > -0.01
+                    and deviation_ma3_sopra_ma16 > 0.07
+                    and deviation_ma5_sopra_ma28 > -0.11
+                    
+                    and price >= price_2_min_ago
+                    and macd_differenza_2_min_ago > -1.7
+                    
+                ):
+                    buy = "BUY 2A laterale - r 4685 BY 2B y NUOVA ERA A2 SOFT"
+                    action = "buy"
+                    percentage = 80
+
+                elif (    
+                    ma3_last > ma28_last
+                    
+                    and ma100_last > ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
+                    
+                    and ma450_last < ma450_180_min_ago
+                    
+                    and ma450_last < ma450_480_min_ago
+                    and ma100_last < ma125_last
+                    
+                    and deviation_ma300_sopra_ma450 < 0.20
+                    and deviation_ma300_sopra_ma450 > -0.20
+                    
+                    and deviation_ma100_sopra_ma300 < 0.20
+                    
+                    and deviation_ma3_sopra_ma10 > -0.01
+                    and deviation_ma3_sopra_ma16 > 0.07
+                    and deviation_ma5_sopra_ma28 > -0.11
+                    
+                    and price >= price_2_min_ago
+                    and macd_differenza_2_min_ago > -1.7
+                    
+                ):
+                    buy = "BUY 2A laterale - r 4685 BY 2B y NUOVA ERA A3 SOFT"
+                    action = "buy"
+                    percentage = 80
+
+                elif (    
+                    ma3_last > ma28_last
+                    
+                    and ma100_last > ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.50
+                    
+                    and ma450_last < ma450_180_min_ago
+                    
+                    and ma450_last < ma450_480_min_ago
+                    and ma100_last < ma125_last
+                    
+                    and deviation_ma300_sopra_ma450 < 0.20
+                    and deviation_ma300_sopra_ma450 > -0.20
+                    
+                    and deviation_ma100_sopra_ma300 < 0.20
+                    
+                    and deviation_ma3_sopra_ma10 > -0.01
+                    and deviation_ma3_sopra_ma16 > 0.07
+                    and deviation_ma5_sopra_ma28 > -0.11
+                    
+                    and price >= price_2_min_ago
+                    and macd_differenza_2_min_ago > -1.7
+                    
+                ):
+                    buy = "BUY 2A laterale - r 4685 BY 2B y NUOVA ERA A4 SOFT"
+                    action = "buy"
+                    percentage = 80
+
+                elif (    
+                    ma3_last > ma28_last
+                    
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
+                    and ma3_last > ma54_last
+                    
+                    and ma450_last < ma450_180_min_ago
+                    
+                    and ma450_last < ma450_480_min_ago
+                    and ma100_last < ma125_last
+                    
+                    and deviation_ma300_sopra_ma450 < 0.20
+                    and deviation_ma300_sopra_ma450 > -0.20
+                    
+                    and deviation_ma100_sopra_ma300 < 0.20
+                    
+                    and deviation_ma3_sopra_ma10 > -0.01
+                    and deviation_ma3_sopra_ma16 > 0.07
+                    and deviation_ma5_sopra_ma28 > -0.11
+                    
+                    and price >= price_2_min_ago
+                    and macd_differenza_2_min_ago > -1.7
+                    
+                ):
+                    buy = "BUY 2A laterale - r 4685 BY 2B y NUOVA ERA A1 STRONG"
+                    action = "buy"
+                    percentage = 80
+
+                
+                elif (    
+                    ma3_last > ma28_last
+                    
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.50
+                    and ma3_last > ma39_last
+                    
+                    and ma450_last < ma450_180_min_ago
+                    
+                    and ma450_last < ma450_480_min_ago
+                    and ma100_last < ma125_last
+                    
+                    and deviation_ma300_sopra_ma450 < 0.20
+                    and deviation_ma300_sopra_ma450 > -0.20
+                    
+                    and deviation_ma100_sopra_ma300 < 0.20
+                    
+                    and deviation_ma3_sopra_ma10 > -0.01
+                    and deviation_ma3_sopra_ma16 > 0.07
+                    and deviation_ma5_sopra_ma28 > -0.11
+                    
+                    and price >= price_2_min_ago
+                    and macd_differenza_2_min_ago > -1.7
+                    
+                ):
+                    buy = "BUY 2A laterale - r 4685 BY 2B y NUOVA ERA A2 STRONG"
                     action = "buy"
                     percentage = 80
 
@@ -8748,7 +8904,9 @@ class maddog:
                     # 11 gen 2023 3-10 a 0.04 da 0.05
                     # 11 ago 2023 8-39
                     # 17 nov 2023 macd >2 min ago e' arrivato tardi !
-                    # 17 nov 2023 gli ho detto basta che il macd di adeso rispetto a quello di 2 min fa NON SCENDE TROPPO ! (and macd_differenza_2_min_ago > -1.7)
+                    # 17 nov 2023 gli ho detto basta che il macd di adesso rispetto a quello di 2 min fa NON SCENDE TROPPO ! (and macd_differenza_2_min_ago > -1.7)
+
+
               
                     
                 elif (
