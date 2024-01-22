@@ -12573,19 +12573,23 @@ class maddog:
                     
                     
                     
-                # BUY 2 RIVOLUZIONARIO A3y (100 NON E' ATTACCATA ALLA 300 !) e 39>50 E 8>200 and deviation_ma100_sopra_ma300 > 0.05 
+                # BUY 2 RIVOLUZIONARIO A3y (100 NON E' ATTACCATA ALLA 300 !) e 39>50 E 8>200 and deviation_ma100_sopra_ma300 > 0.05
+
                 
                 elif (
                     ma5_last > ma50_last
                     
-                    and delta_1 > delta_2
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
+                    and deviation_ma5_sopra_o_sotto_ma100 > 0.28
+                    
                     and ma200_last < ma200_120_min_ago
+                    and delta_1 > delta_2
+                    
                     and deviation_ma100_sopra_ma300 < -0.05
-                    
-                    and deviation_ma4_sopra_ma30 > 0.04
-                    
                     and deviation > -0.30
-                    
+                    and deviation_ma4_sopra_ma30 > 0.04
                     and delta_buy3_incrocio_ma3_ma8 >= 0.06
                     
                     and ma3_last > ma8_last
@@ -12595,7 +12599,145 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
                     and macd >= macd_2_min_ago
                 ):    
-                    buy = "BUY 2 RIVOLUZIONARIO con 5-50 e CON delta_1 > delta_2 e con 100 CHE NON E' ATTACCATA ALLA 300 ! e 8>50 and 5>72 - r 5945 A3y"
+                    buy = "BUY 2 RIVOLUZIONARIO con 5-50 e CON delta_1 > delta_2 e con 100 CHE NON E' ATTACCATA ALLA 300 ! e 8>50 and 5>72 - r 5945 A3 Y NUOVA ERA A1 SOFT"
+                    action = "buy"
+                    percentage = 70
+
+                
+                elif (
+                    ma5_last > ma50_last
+                    
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.50
+                    and ma5_last > ma50_last
+                    
+                    and ma200_last < ma200_120_min_ago
+                    and delta_1 > delta_2
+                    
+                    and deviation_ma100_sopra_ma300 < -0.05
+                    and deviation > -0.30
+                    and deviation_ma4_sopra_ma30 > 0.04
+                    and delta_buy3_incrocio_ma3_ma8 >= 0.06
+                    
+                    and ma3_last > ma8_last
+                    and ma5_last >= ma15_last
+                    and ma5_last >= ma25_last
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                ):    
+                    buy = "BUY 2 RIVOLUZIONARIO con 5-50 e CON delta_1 > delta_2 e con 100 CHE NON E' ATTACCATA ALLA 300 ! e 8>50 and 5>72 - r 5945 A3 Y NUOVA ERA A2 SOFT"
+                    action = "buy"
+                    percentage = 70
+
+                
+                elif (
+                    ma3_last > ma39_last
+                    
+                    and ma100_last > ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
+                    
+                    and ma200_last < ma200_120_min_ago
+                    and delta_1 > delta_2
+                    
+                    and deviation_ma100_sopra_ma300 < -0.05
+                    and deviation > -0.30
+                    and deviation_ma4_sopra_ma30 > 0.04
+                    and delta_buy3_incrocio_ma3_ma8 >= 0.06
+                    
+                    and ma3_last > ma8_last
+                    and ma5_last >= ma15_last
+                    and ma5_last >= ma25_last
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                ):    
+                    buy = "BUY 2 RIVOLUZIONARIO con 5-50 e CON delta_1 > delta_2 e con 100 CHE NON E' ATTACCATA ALLA 300 ! e 8>50 and 5>72 - r 5945 A3 Y NUOVA ERA A3 SOFT"
+                    action = "buy"
+                    percentage = 70
+
+                
+                elif (
+                    ma3_last > ma39_last
+                    
+                    and ma100_last > ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.50
+                    
+                    and ma200_last < ma200_120_min_ago
+                    and delta_1 > delta_2
+                    
+                    and deviation_ma100_sopra_ma300 < -0.05
+                    and deviation > -0.30
+                    and deviation_ma4_sopra_ma30 > 0.04
+                    and delta_buy3_incrocio_ma3_ma8 >= 0.06
+                    
+                    and ma3_last > ma8_last
+                    and ma5_last >= ma15_last
+                    and ma5_last >= ma25_last
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                ):    
+                    buy = "BUY 2 RIVOLUZIONARIO con 5-50 e CON delta_1 > delta_2 e con 100 CHE NON E' ATTACCATA ALLA 300 ! e 8>50 and 5>72 - r 5945 A3 Y NUOVA ERA A4 SOFT"
+                    action = "buy"
+                    percentage = 70
+
+                
+                elif (
+                    ma5_last > ma50_last
+                    
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
+                    and ma3_last > ma54_last
+                    
+                    and ma200_last < ma200_120_min_ago
+                    and delta_1 > delta_2
+                    
+                    and deviation_ma100_sopra_ma300 < -0.05
+                    and deviation > -0.30
+                    and deviation_ma4_sopra_ma30 > 0.04
+                    and delta_buy3_incrocio_ma3_ma8 >= 0.06
+                    
+                    and ma3_last > ma8_last
+                    and ma5_last >= ma15_last
+                    and ma5_last >= ma25_last
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                ):    
+                    buy = "BUY 2 RIVOLUZIONARIO con 5-50 e CON delta_1 > delta_2 e con 100 CHE NON E' ATTACCATA ALLA 300 ! e 8>50 and 5>72 - r 5945 A3 Y NUOVA ERA A1 STRONG"
+                    action = "buy"
+                    percentage = 70
+
+                
+                elif (
+                    ma3_last > ma39_last
+                    
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.50
+                    and ma3_last > ma39_last
+                    
+                    and ma200_last < ma200_120_min_ago
+                    and delta_1 > delta_2
+                    
+                    and deviation_ma100_sopra_ma300 < -0.05
+                    and deviation > -0.30
+                    and deviation_ma4_sopra_ma30 > 0.04
+                    and delta_buy3_incrocio_ma3_ma8 >= 0.06
+                    
+                    and ma3_last > ma8_last
+                    and ma5_last >= ma15_last
+                    and ma5_last >= ma25_last
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                ):    
+                    buy = "BUY 2 RIVOLUZIONARIO con 5-50 e CON delta_1 > delta_2 e con 100 CHE NON E' ATTACCATA ALLA 300 ! e 8>50 and 5>72 - r 5945 A3 Y NUOVA ERA A2 STRONG"
                     action = "buy"
                     percentage = 70
                     
