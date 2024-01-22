@@ -7559,7 +7559,7 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
                     and macd > macd_2_min_ago
                 ):
-                    buy = "BUY 1 78<200 pensiero laterale - r 4005 B RCCR MODIFICATA"
+                    buy = "BUY 1 78<200 pensiero laterale - r 4050"
                     action = "buy"
                     percentage = 80
                     
