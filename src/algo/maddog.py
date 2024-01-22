@@ -36879,12 +36879,39 @@ class maddog:
                 #  1 dic 2023 and deviation_sell < -0.01 da 0.02  !
                 # 14 gen 2024 con 100< 100 10 min ago dev_sell a 0.01 da -0.01 
 
-            # nuova condizione AUDI RUBATA
           
+
+            # nuova condizione AUDI RUBATA
+
             elif (
                 
                 ma50_last < ma50_2_min_ago
                 and ma20_last > ma20_2_min_ago
+                and ma5_last >= ma5_2_min_ago
+                
+                and deviation_ma39 < 0.10
+                and deviation_sell < -0.01
+                
+                
+                and deviation_ma5_sotto_ma200 > -0.60
+                and deviation_ma100_sopra_ma300 < 0.40
+                
+                and ma2_last < ma2_2_min_ago 
+                and macd < macd_2_min_ago
+                and macd < -16
+                and macd_differenza_2_min_ago < -3
+            ):
+                sell = "SELL nuova condizione speciale CON ma20 > ma20 2 min ago e dev 3-39 < 0.10 e dev_sell < -0.01 - con ma50 > e ma5 sotto ma200 > -0.60 and MACD < - r 16047 A3x1"
+                action = "sell"
+                
+                # 22 gen 2024 se ma5 > ma5 2 min ago dev sell a -0.01 da 0.01
+            
+            
+            elif (
+                
+                ma50_last < ma50_2_min_ago
+                and ma20_last > ma20_2_min_ago
+                and ma5_last < ma5_2_min_ago
                 
                 and deviation_ma39 < 0.10
                 and deviation_sell < 0.01
@@ -36898,7 +36925,7 @@ class maddog:
                 and macd < -16
                 and macd_differenza_2_min_ago < -3
             ):
-                sell = "SELL nuova condizione speciale CON ma20 > ma20 2 min ago e dev 3-39 < 0.10 e dev_sell < 0.01 - con ma50 > e ma5 sotto ma200 > -0.60 and MACD < - r 16047 A3x"
+                sell = "SELL nuova condizione speciale CON ma20 > ma20 2 min ago e dev 3-39 < 0.10 e dev_sell < 0.01 - con ma50 > e ma5 sotto ma200 > -0.60 and MACD < - r 16047 A3x2"
                 action = "sell"
                 
                 # 30 nov 2023 dev 39 a 0.10 da 0.03
