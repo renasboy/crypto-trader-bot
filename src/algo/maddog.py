@@ -7537,17 +7537,18 @@ class maddog:
                     
                     
                 # BUY 1 CHE MANCAVA DOPO BUY-SELL CROLLO ! 150-100 GIORNO ! E 50 > 100
+
                 
-                elif (
-                    
+                elif (    
                     ma78_last < ma200_last
+                    
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
+                    and deviation_ma5_sopra_o_sotto_ma100 > 0.28
+                    
                     and deviation_ma5_sotto_ma300 > -0.20
                     and deviation_ma10_sopra_ma200 > -0.20
-                    
-                    and deviation_ma3_sopra_ma10 > 0.01
-                    and deviation_ma5_sopra_ma28 > 0.01
-                    
-                    and ma5_last > ma10_last
                     
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
@@ -7556,14 +7557,170 @@ class maddog:
                     and ma200_last < ma200_120_min_ago
                     and ma300_last < ma300_120_min_ago
                     
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma5_sopra_ma28 > 0.01
+                    
+                    and ma5_last > ma10_last
                     and ma2_last >= ma2_2_min_ago
                     and macd > macd_2_min_ago
                 ):
-                    buy = "BUY 1 78<200 pensiero laterale - r 4050"
+                    buy = "BUY 1 78<200 pensiero laterale - r 4050 NUOVA ERA A1 SOFT"
+                    action = "buy"
+                    percentage = 80
+
+
+                elif (    
+                    ma78_last < ma200_last
+                    
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.50
+                    and ma5_last > ma50_last
+                    
+                    and deviation_ma5_sotto_ma300 > -0.20
+                    and deviation_ma10_sopra_ma200 > -0.20
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and ma100_last < ma100_120_min_ago
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_120_min_ago
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma5_sopra_ma28 > 0.01
+                    
+                    and ma5_last > ma10_last
+                    and ma2_last >= ma2_2_min_ago
+                    and macd > macd_2_min_ago
+                ):
+                    buy = "BUY 1 78<200 pensiero laterale - r 4050 NUOVA ERA A2 SOFT"
+                    action = "buy"
+                    percentage = 80
+
+
+
+                elif (    
+                    ma78_last < ma200_last
+                    
+                    and ma100_last > ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
+                    
+                    and deviation_ma5_sotto_ma300 > -0.20
+                    and deviation_ma10_sopra_ma200 > -0.20
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and ma100_last < ma100_120_min_ago
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_120_min_ago
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma5_sopra_ma28 > 0.01
+                    
+                    and ma5_last > ma10_last
+                    and ma2_last >= ma2_2_min_ago
+                    and macd > macd_2_min_ago
+                ):
+                    buy = "BUY 1 78<200 pensiero laterale - r 4050 NUOVA ERA A3 SOFT"
+                    action = "buy"
+                    percentage = 80
+
+
+                elif (    
+                    ma78_last < ma200_last
+                    
+                    and ma100_last > ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.50
+                    
+                    and deviation_ma5_sotto_ma300 > -0.20
+                    and deviation_ma10_sopra_ma200 > -0.20
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and ma100_last < ma100_120_min_ago
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_120_min_ago
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma5_sopra_ma28 > 0.01
+                    
+                    and ma5_last > ma10_last
+                    and ma2_last >= ma2_2_min_ago
+                    and macd > macd_2_min_ago
+                ):
+                    buy = "BUY 1 78<200 pensiero laterale - r 4050 NUOVA ERA A4 SOFT"
+                    action = "buy"
+                    percentage = 80
+
+
+
+                elif (    
+                    ma78_last < ma200_last
+                    
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
+                    and ma3_last > ma54_last
+                    
+                    and deviation_ma5_sotto_ma300 > -0.20
+                    and deviation_ma10_sopra_ma200 > -0.20
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and ma100_last < ma100_120_min_ago
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_120_min_ago
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma5_sopra_ma28 > 0.01
+                    
+                    and ma5_last > ma10_last
+                    and ma2_last >= ma2_2_min_ago
+                    and macd > macd_2_min_ago
+                ):
+                    buy = "BUY 1 78<200 pensiero laterale - r 4050 NUOVA ERA A1 STRONG"
+                    action = "buy"
+                    percentage = 80
+
+
+                elif (    
+                    ma78_last < ma200_last
+                    
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.50
+                    and ma3_last > ma39_last
+                    
+                    and deviation_ma5_sotto_ma300 > -0.20
+                    and deviation_ma10_sopra_ma200 > -0.20
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and ma100_last < ma100_120_min_ago
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_120_min_ago
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma5_sopra_ma28 > 0.01
+                    
+                    and ma5_last > ma10_last
+                    and ma2_last >= ma2_2_min_ago
+                    and macd > macd_2_min_ago
+                ):
+                    buy = "BUY 1 78<200 pensiero laterale - r 4050 NUOVA ERA A2 STRONG"
                     action = "buy"
                     percentage = 80
                     
                     # 28 AGO 2023 forse aggiungere macd > 5
+
+   
 
 
               
