@@ -3690,19 +3690,23 @@ class maddog:
                     #  7 dic 2023 aggiunta and ma3_differenza_2_min_ago > 8
                     #  7 dic 2023 ma2_differenza_2_min_ago > 7 da > 3
                     # 18 dic 2023 aggiunta incrocio al rialzo 3-250 mentre CRESCE evidentemente e con il conforto di diff ma2 e diff macd !
+
+
+
               
-                elif (     
-                    
+                elif (    
                     ma3_last > ma30_last
                     
-                    and ma2_differenza_2_min_ago > 8
-                    and ma3_last > ma8_last
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
+                    and deviation_ma5_sopra_o_sotto_ma100 > 0.28
+                    
+                    and deviation_ma54_sopra_o_sotto_ma72 < -0.015
                     and deviation_ma50_sotto_ma300 > -0.13
                     
                     and ma100_last < ma100_60_min_ago
                     and ma100_last > ma100_120_min_ago
-                  
-                    and deviation_ma54_sopra_o_sotto_ma72 < -0.015
                     
                     and deviation_ma39_sotto_ma200 < -0.02
                     and deviation_ma300_sopra_ma450 > -0.60
@@ -3711,12 +3715,251 @@ class maddog:
                     and deviation_ma3_sopra_ma16 > 0.08
                     and deviation_ma3_sopra_ma18 > -0.01
                     
+                    and ma3_last > ma8_last
+                    
                     and ma2_last >= ma2_2_min_ago
+                    and ma2_differenza_2_min_ago > 8
                     and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
                     and macd_differenza_2_min_ago > 0.50
                     
                 ):    
-                    buy = "BUY 1 compare forever - con 3-30 E CON 300 ancora vicina 450 ( anche un poco sotto ! ) e 3-16 > 0.09 + MACD > E ma2_diff_2_min_ago > 8 - r 1537 A3 X2 X"
+                    buy = "BUY 1 compare forever - con 3-30 E 300 vicina 450 ( anche sotto ! ) e 3-16 > 0.09 + MACD > E ma2_diff_2_min_ago > 8 - r 1537 A3 X2 X NUOVA ERA A1 SOFT"
+                    action = "buy"
+                    percentage = 90
+
+                
+                elif (    
+                    ma3_last > ma30_last
+                    
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.40
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.60
+                    and ma5_last > ma50_last
+                    
+                    and deviation_ma54_sopra_o_sotto_ma72 < -0.015
+                    and deviation_ma50_sotto_ma300 > -0.13
+                    
+                    and ma100_last < ma100_60_min_ago
+                    and ma100_last > ma100_120_min_ago
+                    
+                    and deviation_ma39_sotto_ma200 < -0.02
+                    and deviation_ma300_sopra_ma450 > -0.60
+                    
+                    and deviation_ma3_sopra_ma10 > 0.017
+                    and deviation_ma3_sopra_ma16 > 0.08
+                    and deviation_ma3_sopra_ma18 > -0.01
+                    
+                    and ma3_last > ma8_last
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and ma2_differenza_2_min_ago > 8
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
+                    and macd_differenza_2_min_ago > 0.50
+                    
+                ):    
+                    buy = "BUY 1 compare forever - con 3-30 E 300 vicina 450 ( anche sotto ! ) e 3-16 > 0.09 + MACD > E ma2_diff_2_min_ago > 8 - r 1537 A3 X2 X NUOVA ERA A2 SOFT 1"
+                    action = "buy"
+                    percentage = 90
+
+              
+                elif (    
+                    ma3_last > ma39_last
+                    
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.60
+                    
+                    and deviation_ma54_sopra_o_sotto_ma72 < -0.015
+                    and deviation_ma50_sotto_ma300 > -0.13
+                    
+                    and ma100_last < ma100_60_min_ago
+                    and ma100_last > ma100_120_min_ago
+                    
+                    and deviation_ma39_sotto_ma200 < -0.02
+                    and deviation_ma300_sopra_ma450 > -0.60
+                    
+                    and deviation_ma3_sopra_ma10 > 0.017
+                    and deviation_ma3_sopra_ma16 > 0.08
+                    and deviation_ma3_sopra_ma18 > -0.01
+                    
+                    and ma3_last > ma8_last
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and ma2_differenza_2_min_ago > 8
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
+                    and macd_differenza_2_min_ago > 0.50
+                    
+                ):    
+                    buy = "BUY 1 compare forever - con 3-30 E 300 vicina 450 ( anche sotto ! ) e 3-16 > 0.09 + MACD > E ma2_diff_2_min_ago > 8 - r 1537 A3 X2 X NUOVA ERA A2 SOFT 2"
+                    action = "buy"
+                    percentage = 90
+
+              
+                elif (    
+                    ma3_last > ma30_last
+                    
+                    and ma100_last > ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
+                    
+                    and deviation_ma54_sopra_o_sotto_ma72 < -0.015
+                    and deviation_ma50_sotto_ma300 > -0.13
+                    
+                    and ma100_last < ma100_60_min_ago
+                    and ma100_last > ma100_120_min_ago
+                    
+                    and deviation_ma39_sotto_ma200 < -0.02
+                    and deviation_ma300_sopra_ma450 > -0.60
+                    
+                    and deviation_ma3_sopra_ma10 > 0.017
+                    and deviation_ma3_sopra_ma16 > 0.08
+                    and deviation_ma3_sopra_ma18 > -0.01
+                    
+                    and ma3_last > ma8_last
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and ma2_differenza_2_min_ago > 8
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
+                    and macd_differenza_2_min_ago > 0.50
+                    
+                ):    
+                    buy = "BUY 1 compare forever - con 3-30 E 300 vicina 450 ( anche sotto ! ) e 3-16 > 0.09 + MACD > E ma2_diff_2_min_ago > 8 - r 1537 A3 X2 X NUOVA ERA A3 SOFT"
+                    action = "buy"
+                    percentage = 90
+
+                
+                elif (    
+                    ma3_last > ma30_last
+                    
+                    and ma100_last > ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.50
+                    
+                    and deviation_ma54_sopra_o_sotto_ma72 < -0.015
+                    and deviation_ma50_sotto_ma300 > -0.13
+                    
+                    and ma100_last < ma100_60_min_ago
+                    and ma100_last > ma100_120_min_ago
+                    
+                    and deviation_ma39_sotto_ma200 < -0.02
+                    and deviation_ma300_sopra_ma450 > -0.60
+                    
+                    and deviation_ma3_sopra_ma10 > 0.017
+                    and deviation_ma3_sopra_ma16 > 0.08
+                    and deviation_ma3_sopra_ma18 > -0.01
+                    
+                    and ma3_last > ma8_last
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and ma2_differenza_2_min_ago > 8
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
+                    and macd_differenza_2_min_ago > 0.50
+                    
+                ):    
+                    buy = "BUY 1 compare forever - con 3-30 E 300 vicina 450 ( anche sotto ! ) e 3-16 > 0.09 + MACD > E ma2_diff_2_min_ago > 8 - r 1537 A3 X2 X NUOVA ERA A4 SOFT"
+                    action = "buy"
+                    percentage = 90
+
+                
+                elif (    
+                    ma3_last > ma30_last
+                    
+                    and ma3_last > ma54_last
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.40
+                    and deviation_ma5_sopra_o_sotto_ma100 > 0.28
+                    
+                    and deviation_ma54_sopra_o_sotto_ma72 < -0.015
+                    and deviation_ma50_sotto_ma300 > -0.13
+                    
+                    and ma100_last < ma100_60_min_ago
+                    and ma100_last > ma100_120_min_ago
+                    
+                    and deviation_ma39_sotto_ma200 < -0.02
+                    and deviation_ma300_sopra_ma450 > -0.60
+                    
+                    and deviation_ma3_sopra_ma10 > 0.017
+                    and deviation_ma3_sopra_ma16 > 0.08
+                    and deviation_ma3_sopra_ma18 > -0.01
+                    
+                    and ma3_last > ma8_last
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and ma2_differenza_2_min_ago > 8
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
+                    and macd_differenza_2_min_ago > 0.50
+                    
+                ):    
+                    buy = "BUY 1 compare forever - con 3-30 E 300 vicina 450 ( anche sotto ! ) e 3-16 > 0.09 + MACD > E ma2_diff_2_min_ago > 8 - r 1537 A3 X2 X NUOVA ERA A1 STRONG"
+                    action = "buy"
+                    percentage = 90
+
+                elif (    
+                    ma3_last > ma39_last
+                    
+                    and ma5_last > ma50_last
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.40
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.60
+                    
+                    and deviation_ma54_sopra_o_sotto_ma72 < -0.015
+                    and deviation_ma50_sotto_ma300 > -0.13
+                    
+                    and ma100_last < ma100_60_min_ago
+                    and ma100_last > ma100_120_min_ago
+                    
+                    and deviation_ma39_sotto_ma200 < -0.02
+                    and deviation_ma300_sopra_ma450 > -0.60
+                    
+                    and deviation_ma3_sopra_ma10 > 0.017
+                    and deviation_ma3_sopra_ma16 > 0.08
+                    and deviation_ma3_sopra_ma18 > -0.01
+                    
+                    and ma3_last > ma8_last
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and ma2_differenza_2_min_ago > 8
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
+                    and macd_differenza_2_min_ago > 0.50
+                    
+                ):    
+                    buy = "BUY 1 compare forever - con 3-30 E 300 vicina 450 ( anche sotto ! ) e 3-16 > 0.09 + MACD > E ma2_diff_2_min_ago > 8 - r 1537 A3 X2 X NUOVA ERA A2 STRONG"
+                    action = "buy"
+                    percentage = 90
+
+                
+                elif (    
+                    ma3_last > ma30_last
+                    
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.60
+                    
+                    and deviation_ma54_sopra_o_sotto_ma72 < -0.015
+                    and deviation_ma50_sotto_ma300 > -0.13
+                    
+                    and ma100_last < ma100_60_min_ago
+                    and ma100_last > ma100_120_min_ago
+                    
+                    and deviation_ma39_sotto_ma200 < -0.02
+                    and deviation_ma300_sopra_ma450 > -0.60
+                    
+                    and deviation_ma3_sopra_ma10 > 0.017
+                    and deviation_ma3_sopra_ma16 > 0.08
+                    and deviation_ma3_sopra_ma18 > -0.01
+                    
+                    and ma3_last > ma8_last
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and ma2_differenza_2_min_ago > 8
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
+                    and macd_differenza_2_min_ago > 0.50
+                    
+                ):    
+                    buy = "BUY 1 compare forever - con 3-30 E 300 vicina 450 ( anche sotto ! ) e 3-16 > 0.09 + MACD > E ma2_diff_2_min_ago > 8 - r 1537 A3 X2 X NUOVA ERA A3 STRONG"
                     action = "buy"
                     percentage = 90
                     
@@ -3728,6 +3971,10 @@ class maddog:
                     # 17 nov 2023 and deviation_ma3_sopra_ma16 a 0.08 da 0.09
                     # 28 dic 2023 and ma2_differenza_2_min_ago a 8 da 5
                     # 28 dic 2023 and ma3_last > ma8_last da 2>8
+
+
+
+              
               
                 elif (     
                     
