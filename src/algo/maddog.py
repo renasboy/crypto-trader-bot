@@ -3003,24 +3003,27 @@ class maddog:
                 
                 elif (     
                     ma8_last > ma54_last
-                    and macd >= macd_2_min_ago
+                    and ma11_last > ma59_last
+                    
                     and ma78_last < ma200_last
                     
                     and deviation_ma3_sopra_ma10 > 0.27
                     and deviation_ma5_sopra_ma28 > 0.30
-                    
                     
                     and ma39_last < ma39_30_min_ago
                     and deviation_ma100_sopra_ma300 < -0.27
                     and ma100_last < ma200_last
                     and ma200_last < ma200_120_min_ago
                     
-                    and ma11_last > ma59_last
-                    
-                    and ma20_last > ma20_2_min_ago
                     and ma5_last > ma5_2_min_ago
+                    and ma20_last > ma20_2_min_ago
+                    
                     and ma2_last > ma20_last
+                    
                     and ma2_last > ma2_2_min_ago
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
+                    and macd >= macd_2_min_ago
+                    and macd_differenza_2_min_ago > 1.25
                 ):    
                     buy = "BUY 1 PERICOLOSA 8-54 and 39< derivata dal tardo autunno !  AND 78 < 200 CON 3-10 > 0.24 CON 5-28 > 0.27 - r 1486 B"
                     action = "buy"
