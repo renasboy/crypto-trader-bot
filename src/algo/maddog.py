@@ -3404,16 +3404,16 @@ class maddog:
 
                 
                 
-                elif (     
-                    
-                    ma4_last > ma13_last
+                
+                elif (    
+                    ma3_last > ma15_last
                     and ma100_last < ma100_120_min_ago
                     
                     and deviation_ma54_sopra_o_sotto_ma72 < 0.015
                     and deviation_ma54_sopra_o_sotto_ma72 > -0.015
                     
-                    and deviation_ma39_sotto_ma200 < 0.10
-                    and deviation_ma300_sopra_ma450 > -0.35
+                    and deviation_ma39_sotto_ma200 < 0.20
+                    and deviation_ma300_sopra_ma450 > -0.45
                     
                     and deviation_ma3_sopra_ma10 > -0.005
                     and deviation_ma3_sopra_ma16 > 0.03
