@@ -19551,10 +19551,42 @@ class maddog:
                     # aggiunta 3-10 a 0.05
                     # 26 feb 2023 se 300>450 buy 3 a 0.02 da 0.06
                     # 26 feb 2023 se 300>450 7 sopra 40 a 0.02 da 0.08
-                    
+
+              
                     
                 elif (
                     ma50_last >= ma50_2_min_ago
+                    and ma100_last >= ma100_60_min_ago
+                    and (ma3_prev < ma90_prev and ma3_last > ma90_last)
+                    
+                    and ma300_last < ma450_last
+                    
+                    and ma28_last < ma28_30_min_ago
+                    and ma78_last > ma150_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > 0.077
+                    
+                    and ma3_last > ma13_last
+                    and ma4_last > ma9_last
+                    and ma4_last > ma50_last
+                    
+                    and ma6_last > ma15_last
+                    and ma7_last > ma25_last
+                    
+                    and ma2_last >= ma2_2_min_ago
+                ):
+                    buy = "BUY 5 con ma50 > AND 50>100 and ma28_last < ma28_30_min_ago and 5-28 > 0.17 - r 7203 B1"
+                    action = "buy"
+                    percentage = 70
+                    
+                    # 25 gen 2024 se ma100_last >= ma100_60_min_ago compra anche con 3-90
+                
+                
+                elif (
+                    ma50_last >= ma50_2_min_ago
+                    and ma100_last < ma100_60_min_ago
+                    
                     and ma300_last < ma450_last
                     
                     and ma28_last < ma28_30_min_ago
@@ -19578,7 +19610,7 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
                 
                 ):
-                    buy = "BUY 5 con ma50 > AND 50>100 and ma28_last < ma28_30_min_ago and 5-28 > 0.17 - r 7203 B"
+                    buy = "BUY 5 con ma50 > AND 50>100 and ma28_last < ma28_30_min_ago and 5-28 > 0.17 - r 7203 B2"
                     action = "buy"
                     percentage = 70
                     
