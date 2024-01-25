@@ -3033,8 +3033,8 @@ class maddog:
                     # 22 GIU 2022 5-28 > 0.27 da 0.20
                     
                     # > estate 3-10 0.27 and 5-28 0.30 HO ALZATO IL BUY ! e forse qua un giorno metto incrocio al rialzo 8-54
-                    
-                    
+                    # 25 gen 2024 aggiunto and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
+                    # 25 gen 2024 aggiunto and macd_differenza_2_min_ago > 1.25
                     
                     
                 
