@@ -33938,7 +33938,6 @@ class maddog:
                         
                         
                         
-
                     elif (
                         ma50_last < ma50_2_min_ago
                         and (ma3_prev > ma33_prev and ma3_last < ma33_last)
@@ -33947,8 +33946,20 @@ class maddog:
                     ):
                         sell = "SELL 4-5-x (3-7 min) con ma50 < and incrocio 3-33 and deviation_sell < -0.23 - r 14562"
                         action = "sell"
+
+                    
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and (ma3_prev > ma30_prev and ma3_last < ma30_last)
+                        and deviation_sell < -0.05
+                        and ma2_last < ma2_2_min_ago
+                        and macd_differenza_2_min_ago < -8
+                    ):
+                        sell = "SELL 4-5-x (3-7 min) con ma50 < and incrocio 3-30 and deviation_sell < -0.23 - r 14565"
+                        action = "sell"
                         
-                        
+                        # 27 gen 2024 se il macd ha una grande accelerazione al ribasso vendo prima con dev sell a -0.05 da -0.23
+                        # 27 gen 2024 3-30 da 3-33
 
                     # --------------------------------------------------------------------------------------------------------------- guadagno con crollo
                     
