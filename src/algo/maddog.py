@@ -18075,15 +18075,17 @@ class maddog:
                     and ma3_last >= ma39_last
                     and delta_buy3_incrocio_ma3_ma8 >= 0.06
                     
-                    and ma3_last >= ma15_last
                     and ma3_last > ma8_last
+                    and ma3_last >= ma15_last
+                    
+                    and ma2_last > ma5_last
                     
                     and ma2_last >= ma2_2_min_ago
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.020
                     and macd > macd_2_min_ago
-                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
                     and macd_differenza_2_min_ago > 1.25
                 ):    
-                    buy = "BUY 4B importato da BUY 3 RCCR con 300 < E 100 < 100 60 min ago AND dev ma2 and diff macd - r 6756 BY1"
+                    buy = "BUY 4B importato da BUY 3 RCCR con 300 < E 100 < 100 60 min ago AND dev ma2 and diff macd - r 6756 BY 1"
                     action = "buy"
                     percentage = 70
                     
@@ -18091,7 +18093,7 @@ class maddog:
                     # 29 dic 2023 deviation_ma4_sopra_ma30 > 0.12 da 0.15
                     # deviation = ma5_last / last_trade_price
                     # 18 gen 2024 10-39 da and ma10_last >= ma39_last
-              
+                    # 27 gen 2024 aggiunta 2>5 (e' necessaria !) vedi 27 gen 2024 ore 9:51
                 
                 elif (
                     deviation_ma4_sopra_ma30 > 0.15
