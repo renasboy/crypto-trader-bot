@@ -21435,24 +21435,22 @@ class maddog:
 
                   
 
-                elif (
-                 
+                
+                elif ( 
                     ma78_last < ma150_last
                     and ma20_last <= ma20_2_min_ago
                     
-                    and deviation_ma5_sotto_ma300 < -0.10
-                    and deviation_ma5_sotto_ma300 > -1.20
-                    
-                    and deviation_ma3_sopra_ma10 > 0.022
-                    and deviation_ma3_sopra_ma16 > 0.05
-                    and deviation_ma5_sopra_ma28 < -0.02
-                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
                     and ma100_last < ma100_180_min_ago
                     and ma200_last < ma200_180_min_ago
                     and ma300_last < ma300_180_min_ago
                     
-                    and ma100_last < ma200_last
-                    and ma200_last < ma300_last
+                    and deviation_ma5_sotto_ma300 < -0.10
+                    
+                    and deviation_ma3_sopra_ma10 > 0.022
+                    and deviation_ma3_sopra_ma16 > 0.05
+                    and deviation_ma5_sopra_ma28 < -0.02
                     
                     and ma2_last >= ma2_2_min_ago
                     and ma2_differenza_2_min_ago > 8
@@ -21460,7 +21458,7 @@ class maddog:
                     and ma2_last > ma5_last
                     and ma3_differenza_2_min_ago > 1
                 ):
-                    buy = "BUY 5 29 ago 2022 > 180 min ribasso CON 5-300 <0.10 ma > -1.20 e 78<150 e 3-16 > 0.05 e macd > macd 2 min ago e ma2_diff_2_min_ago > 8 - r 7564 B2 Y2 X"
+                    buy = "BUY 5 29 ago 2022 > 180 min ribasso CON 5-300 < 0.10 ma > -1.20 e 78<150 e 3-16 > 0.05 e macd > - r 7564 B2 Y2 X"
                     action = "buy"
                     percentage = 90
                     
