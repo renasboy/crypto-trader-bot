@@ -21435,11 +21435,18 @@ class maddog:
 
                   
 
-                
-                elif ( 
-                    ma78_last < ma150_last
-                    and ma20_last <= ma20_2_min_ago
+
+                elif (     
+                    ma5_last > ma54_last
+
                     
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
+                    and deviation_ma5_sopra_o_sotto_ma100 > 0.20
+                 
+                    and ma20_last <= ma20_2_min_ago
+                    and ma78_last < ma150_last
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
                     and ma100_last < ma100_180_min_ago
@@ -21458,12 +21465,244 @@ class maddog:
                     and ma2_last > ma5_last
                     and ma3_differenza_2_min_ago > 1
                 ):
-                    buy = "BUY 5 29 ago 2022 > 180 min ribasso CON 5-300 < 0.10 ma > -1.20 e 78<150 e 3-16 > 0.05 e macd > - r 7564 B2 Y2 X"
+                    buy = "BUY 5 29 ago 2022 > 180 min ribasso CON 5-300 < 0.10 ma > -1.20 e 78<150 e 3-16 > 0.05 e macd > - r 7564 B2 Y2 X NUOVA ERA A1 SOFT"
+                    action = "buy"
+                    percentage = 90
+
+              
+
+                
+                elif (     
+                    ma5_last > ma54_last
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.40
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.60
+                    
+                    and ma20_last <= ma20_2_min_ago
+                    and ma78_last < ma150_last
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    and ma100_last < ma100_180_min_ago
+                    and ma200_last < ma200_180_min_ago
+                    and ma300_last < ma300_180_min_ago
+                    
+                    and deviation_ma5_sotto_ma300 < -0.10
+                    
+                    and deviation_ma3_sopra_ma10 > 0.022
+                    and deviation_ma3_sopra_ma16 > 0.05
+                    and deviation_ma5_sopra_ma28 < -0.02
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and ma2_differenza_2_min_ago > 8
+                    and macd >= macd_2_min_ago
+                    and ma2_last > ma5_last
+                    and ma3_differenza_2_min_ago > 1
+                ):
+                    buy = "BUY 5 29 ago 2022 > 180 min ribasso CON 5-300 < 0.10 ma > -1.20 e 78<150 e 3-16 > 0.05 e macd > - r 7564 B2 Y2 X NUOVA ERA A2 SOFT 1"
+                    action = "buy"
+                    percentage = 90
+                  
+
+                
+                elif (     
+                    ma5_last > ma50_last
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.60 
+                    
+                    and ma20_last <= ma20_2_min_ago
+                    and ma78_last < ma150_last
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    and ma100_last < ma100_180_min_ago
+                    and ma200_last < ma200_180_min_ago
+                    and ma300_last < ma300_180_min_ago
+                    
+                    and deviation_ma5_sotto_ma300 < -0.10
+                    
+                    and deviation_ma3_sopra_ma10 > 0.022
+                    and deviation_ma3_sopra_ma16 > 0.05
+                    and deviation_ma5_sopra_ma28 < -0.02
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and ma2_differenza_2_min_ago > 8
+                    and macd >= macd_2_min_ago
+                    and ma2_last > ma5_last
+                    and ma3_differenza_2_min_ago > 1
+                ):
+                    buy = "BUY 5 29 ago 2022 > 180 min ribasso CON 5-300 < 0.10 ma > -1.20 e 78<150 e 3-16 > 0.05 e macd > - r 7564 B2 Y2 X NUOVA ERA A2 SOFT 2"
+                    action = "buy"
+                    percentage = 90
+                  
+
+                elif ( 
+                    ma5_last > ma54_last
+                    and ma100_last > ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
+                    
+                    and ma20_last <= ma20_2_min_ago
+                    and ma78_last < ma150_last
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    and ma100_last < ma100_180_min_ago
+                    and ma200_last < ma200_180_min_ago
+                    and ma300_last < ma300_180_min_ago
+                    
+                    and deviation_ma5_sotto_ma300 < -0.10
+                    
+                    and deviation_ma3_sopra_ma10 > 0.022
+                    and deviation_ma3_sopra_ma16 > 0.05
+                    and deviation_ma5_sopra_ma28 < -0.02
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and ma2_differenza_2_min_ago > 8
+                    and macd >= macd_2_min_ago
+                    and ma2_last > ma5_last
+                    and ma3_differenza_2_min_ago > 1
+                ):
+                    buy = "BUY 5 29 ago 2022 > 180 min ribasso CON 5-300 < 0.10 ma > -1.20 e 78<150 e 3-16 > 0.05 e macd > - r 7564 B2 Y2 X NUOVA ERA A3 SOFT"
+                    action = "buy"
+                    percentage = 90
+
+              
+
+                
+                elif (     
+                    ma3_last > ma39_last
+                    and ma100_last > ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.50
+                    
+                    and ma20_last <= ma20_2_min_ago
+                    and ma78_last < ma150_last
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    and ma100_last < ma100_180_min_ago
+                    and ma200_last < ma200_180_min_ago
+                    and ma300_last < ma300_180_min_ago
+                    
+                    and deviation_ma5_sotto_ma300 < -0.10
+                    
+                    and deviation_ma3_sopra_ma10 > 0.022
+                    and deviation_ma3_sopra_ma16 > 0.05
+                    and deviation_ma5_sopra_ma28 < -0.02
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and ma2_differenza_2_min_ago > 8
+                    and macd >= macd_2_min_ago
+                    and ma2_last > ma5_last
+                    and ma3_differenza_2_min_ago > 1
+                ):
+                    buy = "BUY 5 29 ago 2022 > 180 min ribasso CON 5-300 < 0.10 ma > -1.20 e 78<150 e 3-16 > 0.05 e macd > - r 7564 B2 Y2 X NUOVA ERA A4 SOFT"
+                    action = "buy"
+                    percentage = 90
+
+               
+
+                
+                elif (     
+                    ma5_last > ma54_last
+                    and ma3_last > ma54_last
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.40
+                    and deviation_ma5_sopra_o_sotto_ma100 > 0.22
+                    
+                    and ma20_last <= ma20_2_min_ago
+                    and ma78_last < ma150_last
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    and ma100_last < ma100_180_min_ago
+                    and ma200_last < ma200_180_min_ago
+                    and ma300_last < ma300_180_min_ago
+                    
+                    and deviation_ma5_sotto_ma300 < -0.10
+                    
+                    and deviation_ma3_sopra_ma10 > 0.022
+                    and deviation_ma3_sopra_ma16 > 0.05
+                    and deviation_ma5_sopra_ma28 < -0.02
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and ma2_differenza_2_min_ago > 8
+                    and macd >= macd_2_min_ago
+                    and ma2_last > ma5_last
+                    and ma3_differenza_2_min_ago > 1
+                ):
+                    buy = "BUY 5 29 ago 2022 > 180 min ribasso CON 5-300 < 0.10 ma > -1.20 e 78<150 e 3-16 > 0.05 e macd > - r 7564 B2 Y2 X NUOVA ERA A1 STRONG"
+                    action = "buy"
+                    percentage = 90
+                  
+
+                
+                elif (     
+                    ma5_last > ma50_last
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.40
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.60
+                    
+                    and ma20_last <= ma20_2_min_ago
+                    and ma78_last < ma150_last
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    and ma100_last < ma100_180_min_ago
+                    and ma200_last < ma200_180_min_ago
+                    and ma300_last < ma300_180_min_ago
+                    
+                    and deviation_ma5_sotto_ma300 < -0.10
+                    
+                    and deviation_ma3_sopra_ma10 > 0.022
+                    and deviation_ma3_sopra_ma16 > 0.05
+                    and deviation_ma5_sopra_ma28 < -0.02
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and ma2_differenza_2_min_ago > 8
+                    and macd >= macd_2_min_ago
+                    and ma2_last > ma5_last
+                    and ma3_differenza_2_min_ago > 1
+                ):
+                    buy = "BUY 5 29 ago 2022 > 180 min ribasso CON 5-300 < 0.10 ma > -1.20 e 78<150 e 3-16 > 0.05 e macd > - r 7564 B2 Y2 X NUOVA ERA A2 STRONG"
+                    action = "buy"
+                    percentage = 90
+
+                
+                
+                elif (     
+                    ma3_last > ma30_last
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.60
+                    
+                    and ma20_last <= ma20_2_min_ago
+                    and ma78_last < ma150_last
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    and ma100_last < ma100_180_min_ago
+                    and ma200_last < ma200_180_min_ago
+                    and ma300_last < ma300_180_min_ago
+                    
+                    and deviation_ma5_sotto_ma300 < -0.10
+                    
+                    and deviation_ma3_sopra_ma10 > 0.022
+                    and deviation_ma3_sopra_ma16 > 0.05
+                    and deviation_ma5_sopra_ma28 < -0.02
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and ma2_differenza_2_min_ago > 8
+                    and macd >= macd_2_min_ago
+                    and ma2_last > ma5_last
+                    and ma3_differenza_2_min_ago > 1
+                ):
+                    buy = "BUY 5 29 ago 2022 > 180 min ribasso CON 5-300 < 0.10 ma > -1.20 e 78<150 e 3-16 > 0.05 e macd > - r 7564 B2 Y2 X NUOVA ERA A3 STRONG"
                     action = "buy"
                     percentage = 90
                     
                     # 14 gen 2024 aggiunta and ma3_differenza_2_min_ago > 1
                     # 14 gen 2024 deviation_ma3_sopra_ma10 > 0.022 da 0.01
+
+              
 
               
                 
