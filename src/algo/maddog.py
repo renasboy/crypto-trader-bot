@@ -17065,16 +17065,20 @@ class maddog:
                     
                 # deviation_ma5_sopra_o_sotto_ma100    
                 # BUY 3 IN MEZZO (effetti laterali) con ma69 > and deviation_bellissima > 0.12 IMPORTATA DA BUY 4 RCCR
+
                 
-                elif (
-                    
+                elif (    
                     ma3_last > ma30_last
-                    and deviation_ma5_sopra_o_sotto_ma100 > -0.15
+                    
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
+                    and deviation_ma5_sopra_o_sotto_ma100 > 0.20
+                    
+                    and ma450_last > ma450_480_min_ago
                     
                     and deviation_ma100_sopra_ma300 < 0.27
                     and deviation_ma100_sopra_ma300 > -0.27
-                    
-                    and ma450_last > ma450_480_min_ago
                     
                     and deviation_ma3_sopra_ma10 > 0.07
                     and deviation_ma3_sopra_ma16 > 0.01
@@ -17083,16 +17087,216 @@ class maddog:
                     and ma10_last > ma30_last
                     and ma3_last > ma13_last
                     and ma4_last > ma9_last
-                   
-                    and ma2_last > ma2_2_min_ago
                     
+                    and ma2_last > ma2_2_min_ago
                 ):
-                    buy = "BUY 3 con 3>30 con 450 > 450 480 min and ma10_last > ma30_last CONSIDERATA LATERALE - r 6599 A1 Y A1"
+                    buy = "BUY 3 con 3>30 con 450 > 450 480 min and ma10_last > ma30_last CONSIDERATA LATERALE - r 6599 A1 Y A1 NUOVA ERA A1 SOFT"
                     action = "buy"
                     percentage = 60
+                  
+
+                elif (    
+                    ma3_last > ma30_last
+                    
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.40
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.60
+                    and ma5_last > ma50_last
+                    
+                    and ma450_last > ma450_480_min_ago
+                    
+                    and deviation_ma100_sopra_ma300 < 0.27
+                    and deviation_ma100_sopra_ma300 > -0.27
+                    
+                    and deviation_ma3_sopra_ma10 > 0.07
+                    and deviation_ma3_sopra_ma16 > 0.01
+                    and deviation_ma5_sopra_ma28 > -0.01
+                    
+                    and ma10_last > ma30_last
+                    and ma3_last > ma13_last
+                    and ma4_last > ma9_last
+                    
+                    and ma2_last > ma2_2_min_ago
+                ):
+                    buy = "BUY 3 con 3>30 con 450 > 450 480 min and ma10_last > ma30_last CONSIDERATA LATERALE - r 6599 A1 Y A1 NUOVA ERA A2 SOFT 1"
+                    action = "buy"
+                    percentage = 60
+                  
+
+                elif (    
+                    ma3_last > ma30_last
+                    
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.60 
+                    
+                    and ma450_last > ma450_480_min_ago
+                    
+                    and deviation_ma100_sopra_ma300 < 0.27
+                    and deviation_ma100_sopra_ma300 > -0.27
+                    
+                    and deviation_ma3_sopra_ma10 > 0.07
+                    and deviation_ma3_sopra_ma16 > 0.01
+                    and deviation_ma5_sopra_ma28 > -0.01
+                    
+                    and ma10_last > ma30_last
+                    and ma3_last > ma13_last
+                    and ma4_last > ma9_last
+                    
+                    and ma2_last > ma2_2_min_ago
+                ):
+                    buy = "BUY 3 con 3>30 con 450 > 450 480 min and ma10_last > ma30_last CONSIDERATA LATERALE - r 6599 A1 Y A1 NUOVA ERA A2 SOFT 2"
+                    action = "buy"
+                    percentage = 60
+
+
+                elif (    
+                    ma3_last > ma30_last
+                    
+                    and ma100_last > ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
+                    
+                    and ma450_last > ma450_480_min_ago
+                    
+                    and deviation_ma100_sopra_ma300 < 0.27
+                    and deviation_ma100_sopra_ma300 > -0.27
+                    
+                    and deviation_ma3_sopra_ma10 > 0.07
+                    and deviation_ma3_sopra_ma16 > 0.01
+                    and deviation_ma5_sopra_ma28 > -0.01
+                    
+                    and ma10_last > ma30_last
+                    and ma3_last > ma13_last
+                    and ma4_last > ma9_last
+                    
+                    and ma2_last > ma2_2_min_ago
+                ):
+                    buy = "BUY 3 con 3>30 con 450 > 450 480 min and ma10_last > ma30_last CONSIDERATA LATERALE - r 6599 A1 Y A1 NUOVA ERA A3 SOFT"
+                    action = "buy"
+                    percentage = 60
+
+          
+
+                elif (    
+                    ma3_last > ma30_last
+                    
+                    and ma100_last > ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.50
+                    
+                    and ma450_last > ma450_480_min_ago
+                    
+                    and deviation_ma100_sopra_ma300 < 0.27
+                    and deviation_ma100_sopra_ma300 > -0.27
+                    
+                    and deviation_ma3_sopra_ma10 > 0.07
+                    and deviation_ma3_sopra_ma16 > 0.01
+                    and deviation_ma5_sopra_ma28 > -0.01
+                    
+                    and ma10_last > ma30_last
+                    and ma3_last > ma13_last
+                    and ma4_last > ma9_last
+                    
+                    and ma2_last > ma2_2_min_ago
+                ):
+                    buy = "BUY 3 con 3>30 con 450 > 450 480 min and ma10_last > ma30_last CONSIDERATA LATERALE - r 6599 A1 Y A1 NUOVA ERA A4 SOFT"
+                    action = "buy"
+                    percentage = 60
+
+
+                elif (    
+                    ma3_last > ma30_last
+                    
+                    and ma3_last > ma54_last
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.40
+                    and deviation_ma5_sopra_o_sotto_ma100 > 0.22
+                    
+                    and ma450_last > ma450_480_min_ago
+                    
+                    and deviation_ma100_sopra_ma300 < 0.27
+                    and deviation_ma100_sopra_ma300 > -0.27
+                    
+                    and deviation_ma3_sopra_ma10 > 0.07
+                    and deviation_ma3_sopra_ma16 > 0.01
+                    and deviation_ma5_sopra_ma28 > -0.01
+                    
+                    and ma10_last > ma30_last
+                    and ma3_last > ma13_last
+                    and ma4_last > ma9_last
+                    
+                    and ma2_last > ma2_2_min_ago
+                ):
+                    buy = "BUY 3 con 3>30 con 450 > 450 480 min and ma10_last > ma30_last CONSIDERATA LATERALE - r 6599 A1 Y A1 NUOVA ERA A1 STRONG"
+                    action = "buy"
+                    percentage = 60
+
+          
+
+                elif (    
+                    ma3_last > ma30_last
+                    
+                    and ma5_last > ma50_last
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.40
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.60
+                    
+                    and ma450_last > ma450_480_min_ago
+                    
+                    and deviation_ma100_sopra_ma300 < 0.27
+                    and deviation_ma100_sopra_ma300 > -0.27
+                    
+                    and deviation_ma3_sopra_ma10 > 0.07
+                    and deviation_ma3_sopra_ma16 > 0.01
+                    and deviation_ma5_sopra_ma28 > -0.01
+                    
+                    and ma10_last > ma30_last
+                    and ma3_last > ma13_last
+                    and ma4_last > ma9_last
+                    
+                    and ma2_last > ma2_2_min_ago
+                ):
+                    buy = "BUY 3 con 3>30 con 450 > 450 480 min and ma10_last > ma30_last CONSIDERATA LATERALE - r 6599 A1 Y A1 NUOVA ERA A2 STRONG"
+                    action = "buy"
+                    percentage = 70
+
+                
+                elif (    
+                    ma3_last > ma30_last
+                    
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.60
+                    
+                    and ma450_last > ma450_480_min_ago
+                    
+                    and deviation_ma100_sopra_ma300 < 0.27
+                    and deviation_ma100_sopra_ma300 > -0.27
+                    
+                    and deviation_ma3_sopra_ma10 > 0.07
+                    and deviation_ma3_sopra_ma16 > 0.01
+                    and deviation_ma5_sopra_ma28 > -0.01
+                    
+                    and ma10_last > ma30_last
+                    and ma3_last > ma13_last
+                    and ma4_last > ma9_last
+                    
+                    and ma2_last > ma2_2_min_ago
+                ):
+                    buy = "BUY 3 con 3>30 con 450 > 450 480 min and ma10_last > ma30_last CONSIDERATA LATERALE - r 6599 A1 Y A1 NUOVA ERA A3 STRONG"
+                    action = "buy"
+                    percentage = 80
                     
                     #  2 ottobre 2023 and deviation_ma5_sopra_o_sotto_ma100 > -0.15 da > -0.10 questa anticipata ndecchiecella e creata altra condizione sempre da questa
                     # 24 dic 2023 and ma10_last > ma20_last al posto di macd > macd 2 min ago
+
+
+
+              
                 
 
                 elif (
