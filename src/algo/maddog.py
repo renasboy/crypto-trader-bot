@@ -19308,14 +19308,18 @@ class maddog:
                     # 24 ago 2023 aggiunta and macd > macd_2_min_ago
                     # 27 set 2023 5.28 0.08 da 0.10
                     # 27 set 2023 and deviation_ma5_sopra_ma59 < -0.10 da -0.09
+              
                 
                     
                 # BUY 4 importato da buy 5 rccr
                 
-                elif (
-                    
+                elif (    
                     ma5_last > ma54_last
-                    and ma50_last >= ma59_last
+                   
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
+                    and deviation_ma5_sopra_o_sotto_ma100 > 0.20
                     
                     and ma100_last < ma100_180_min_ago
                     and ma200_last < ma200_180_min_ago
@@ -19332,7 +19336,202 @@ class maddog:
                     and macd > macd_2_min_ago
                     
                 ):
-                    buy = "BUY 4 con 5-54 importato da buy 5 rccr con 50>59 and macd > macd_2_min_ago - r 7063"
+                    buy = "BUY 4 con 5-54 importato da buy 5 rccr con 50>59 and macd > macd_2_min_ago - r 7063 NUOVA ERA A1 SOFT"
+                    action = "buy"
+                    percentage = 90
+
+                
+                elif (    
+                    ma5_last > ma54_last
+                    
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.40
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.60
+                    and ma5_last > ma50_last
+                    
+                    and ma100_last < ma100_180_min_ago
+                    and ma200_last < ma200_180_min_ago
+                    and ma300_last < ma300_180_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > 0.02
+                    and deviation_ma5_sopra_ma28 > 0.03
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd > macd_2_min_ago
+                    
+                ):
+                    buy = "BUY 4 con 5-54 importato da buy 5 rccr con 50>59 and macd > macd_2_min_ago - r 7063 NUOVA ERA A2 SOFT 1"
+                    action = "buy"
+                    percentage = 90
+                  
+
+                elif (    
+                    ma5_last > ma54_last
+                    
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.60 
+                    
+                    and ma100_last < ma100_180_min_ago
+                    and ma200_last < ma200_180_min_ago
+                    and ma300_last < ma300_180_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > 0.02
+                    and deviation_ma5_sopra_ma28 > 0.03
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd > macd_2_min_ago
+                    
+                ):
+                    buy = "BUY 4 con 5-54 importato da buy 5 rccr con 50>59 and macd > macd_2_min_ago - r 7063 NUOVA ERA A2 SOFT 2"
+                    action = "buy"
+                    percentage = 90
+                    
+
+                elif (    
+                    ma5_last > ma54_last
+                    
+                    and ma100_last > ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
+                    
+                    and ma100_last < ma100_180_min_ago
+                    and ma200_last < ma200_180_min_ago
+                    and ma300_last < ma300_180_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > 0.02
+                    and deviation_ma5_sopra_ma28 > 0.03
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd > macd_2_min_ago
+                    
+                ):
+                    buy = "BUY 4 con 5-54 importato da buy 5 rccr con 50>59 and macd > macd_2_min_ago - r 7063 NUOVA ERA A3 SOFT"
+                    action = "buy"
+                    percentage = 90
+                  
+
+                elif (    
+                    ma3_last > ma39_last
+                    
+                    and ma100_last > ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.50
+                    
+                    and ma100_last < ma100_180_min_ago
+                    and ma200_last < ma200_180_min_ago
+                    and ma300_last < ma300_180_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > 0.02
+                    and deviation_ma5_sopra_ma28 > 0.03
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd > macd_2_min_ago
+                    
+                ):
+                    buy = "BUY 4 con 5-54 importato da buy 5 rccr con 50>59 and macd > macd_2_min_ago - r 7063 NUOVA ERA A4 SOFT"
+                    action = "buy"
+                    percentage = 90
+                  
+
+                elif (    
+                    ma5_last > ma54_last
+                    
+                    and ma3_last > ma54_last
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.40
+                    and deviation_ma5_sopra_o_sotto_ma100 > 0.22
+                    
+                    and ma100_last < ma100_180_min_ago
+                    and ma200_last < ma200_180_min_ago
+                    and ma300_last < ma300_180_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > 0.02
+                    and deviation_ma5_sopra_ma28 > 0.03
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd > macd_2_min_ago
+                    
+                ):
+                    buy = "BUY 4 con 5-54 importato da buy 5 rccr con 50>59 and macd > macd_2_min_ago - r 7063 NUOVA ERA A1 STRONG"
+                    action = "buy"
+                    percentage = 90
+                  
+
+                elif (    
+                    ma5_last > ma54_last
+                    
+                    and ma5_last > ma50_last
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.40
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.60
+                    
+                    and ma100_last < ma100_180_min_ago
+                    and ma200_last < ma200_180_min_ago
+                    and ma300_last < ma300_180_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > 0.02
+                    and deviation_ma5_sopra_ma28 > 0.03
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd > macd_2_min_ago
+                    
+                ):
+                    buy = "BUY 4 con 5-54 importato da buy 5 rccr con 50>59 and macd > macd_2_min_ago - r 7063 NUOVA ERA A2 STONG"
+                    action = "buy"
+                    percentage = 90
+
+                
+                elif (    
+                    ma3_last > ma30_last
+                    
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.60
+                    
+                    and ma100_last < ma100_180_min_ago
+                    and ma200_last < ma200_180_min_ago
+                    and ma300_last < ma300_180_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > 0.02
+                    and deviation_ma5_sopra_ma28 > 0.03
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd > macd_2_min_ago
+                    
+                ):
+                    buy = "BUY 4 con 5-54 importato da buy 5 rccr con 50>59 and macd > macd_2_min_ago - r 7063 NUOVA ERA A3 STONG"
                     action = "buy"
                     percentage = 90
                   
@@ -19340,6 +19539,8 @@ class maddog:
                     # 27 set 2023 78-100 da 78-150
                     # 27 set 2023 5-54 da 8-59
                     # 29 ott 2023 50-59 da 78-100
+
+              
 
                 
                 elif (
