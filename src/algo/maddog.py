@@ -19323,16 +19323,21 @@ class maddog:
                     
                     # 15 gen 2024 se 50 vicinissima anche un poco sotto alla 59 compra prima (ma450 sale da 2 ore)
 
-                
+              
+
+
                 elif (    
                     ma3_last > ma20_last
-                    and ma50_differenza_ma59 < -5
+                    
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
+                    and deviation_ma5_sopra_o_sotto_ma100 > 0.20
+
                     and ma10_last < ma30_last
+                    and ma50_differenza_ma59 < -5
                     
-                    and ma2_differenza_ma5 > 8
-                    and ma2_differenza_2_min_ago > 8
                     and ma450_last >= ma450_120_min_ago
-                    
                     and ma50_last > ma450_last
                     
                     and deviation_ma3_sopra_ma10 > 0.01
@@ -19343,14 +19348,231 @@ class maddog:
                     
                     and ma2_last > ma2_2_min_ago
                     and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
+                    and ma2_differenza_2_min_ago > 8
+                    and ma2_differenza_ma5 > 8
                     and macd_differenza_2_min_ago > 0.30
                 ):
-                    buy = "BUY 5 con 3-20 and 450_last >= 450_120_min_ago and 5-28 > -0.02 CON 50 > 450 and ma2_differenza_ma5 > 8 - r 7144 A1 Y2"
+                    buy = "BUY 5 con 3-20 and 450_last >= 450_120_min_ago and 5-28 > -0.02 CON 50 > 450 and ma2_differenza_ma5 > 8 - r 7144 A1 Y2 NUOVA ERA A1 SOFT"
+                    action = "buy"
+                    percentage = 70
+
+                
+                elif (    
+                    ma3_last > ma20_last
+                    
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.40
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.60
+                    and ma5_last > ma50_last
+
+                    and ma10_last < ma30_last
+                    and ma50_differenza_ma59 < -5
+                    
+                    and ma450_last >= ma450_120_min_ago
+                    and ma50_last > ma450_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > 0.02
+                    and deviation_ma5_sopra_ma28 > -0.02
+                    
+                    and ma3_last > ma13_last
+                    
+                    and ma2_last > ma2_2_min_ago
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
+                    and ma2_differenza_2_min_ago > 8
+                    and ma2_differenza_ma5 > 8
+                    and macd_differenza_2_min_ago > 0.30
+                ):
+                    buy = "BUY 5 con 3-20 and 450_last >= 450_120_min_ago and 5-28 > -0.02 CON 50 > 450 and ma2_differenza_ma5 > 8 - r 7144 A1 Y2 NUOVA ERA A2 SOFT 1"
+                    action = "buy"
+                    percentage = 70
+
+                
+                elif (    
+                    ma3_last > ma20_last
+                    
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.60
+
+                    and ma10_last < ma30_last
+                    and ma50_differenza_ma59 < -5
+                    
+                    and ma450_last >= ma450_120_min_ago
+                    and ma50_last > ma450_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > 0.02
+                    and deviation_ma5_sopra_ma28 > -0.02
+                    
+                    and ma3_last > ma13_last
+                    
+                    and ma2_last > ma2_2_min_ago
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
+                    and ma2_differenza_2_min_ago > 8
+                    and ma2_differenza_ma5 > 8
+                    and macd_differenza_2_min_ago > 0.30
+                ):
+                    buy = "BUY 5 con 3-20 and 450_last >= 450_120_min_ago and 5-28 > -0.02 CON 50 > 450 and ma2_differenza_ma5 > 8 - r 7144 A1 Y2 NUOVA ERA A1 SOFT 2"
+                    action = "buy"
+                    percentage = 70
+
+                
+                elif (    
+                    ma3_last > ma20_last
+                    
+                    and ma100_last > ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
+
+                    and ma10_last < ma30_last
+                    and ma50_differenza_ma59 < -5
+                    
+                    and ma450_last >= ma450_120_min_ago
+                    and ma50_last > ma450_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > 0.02
+                    and deviation_ma5_sopra_ma28 > -0.02
+                    
+                    and ma3_last > ma13_last
+                    
+                    and ma2_last > ma2_2_min_ago
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
+                    and ma2_differenza_2_min_ago > 8
+                    and ma2_differenza_ma5 > 8
+                    and macd_differenza_2_min_ago > 0.30
+                ):
+                    buy = "BUY 5 con 3-20 and 450_last >= 450_120_min_ago and 5-28 > -0.02 CON 50 > 450 and ma2_differenza_ma5 > 8 - r 7144 A1 Y2 NUOVA ERA A3 SOFT"
+                    action = "buy"
+                    percentage = 70
+
+                
+                elif (    
+                    ma3_last > ma20_last
+                    
+                    and ma100_last > ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.50
+
+                    and ma10_last < ma30_last
+                    and ma50_differenza_ma59 < -5
+                    
+                    and ma450_last >= ma450_120_min_ago
+                    and ma50_last > ma450_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > 0.02
+                    and deviation_ma5_sopra_ma28 > -0.02
+                    
+                    and ma3_last > ma13_last
+                    
+                    and ma2_last > ma2_2_min_ago
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
+                    and ma2_differenza_2_min_ago > 8
+                    and ma2_differenza_ma5 > 8
+                    and macd_differenza_2_min_ago > 0.30
+                ):
+                    buy = "BUY 5 con 3-20 and 450_last >= 450_120_min_ago and 5-28 > -0.02 CON 50 > 450 and ma2_differenza_ma5 > 8 - r 7144 A1 Y2 NUOVA ERA A4 SOFT"
+                    action = "buy"
+                    percentage = 70
+
+                
+                elif (    
+                    ma3_last > ma20_last
+                    
+                    and ma3_last > ma54_last
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.40
+                    and deviation_ma5_sopra_o_sotto_ma100 > 0.22
+
+                    and ma10_last < ma30_last
+                    and ma50_differenza_ma59 < -5
+                    
+                    and ma450_last >= ma450_120_min_ago
+                    and ma50_last > ma450_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > 0.02
+                    and deviation_ma5_sopra_ma28 > -0.02
+                    
+                    and ma3_last > ma13_last
+                    
+                    and ma2_last > ma2_2_min_ago
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
+                    and ma2_differenza_2_min_ago > 8
+                    and ma2_differenza_ma5 > 8
+                    and macd_differenza_2_min_ago > 0.30
+                ):
+                    buy = "BUY 5 con 3-20 and 450_last >= 450_120_min_ago and 5-28 > -0.02 CON 50 > 450 and ma2_differenza_ma5 > 8 - r 7144 A1 Y2 NUOVA ERA A1 STRONG"
+                    action = "buy"
+                    percentage = 70
+                    
+
+                elif (    
+                    ma3_last > ma20_last
+                    
+                    and ma5_last > ma50_last
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.40
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.60
+
+                    and ma10_last < ma30_last
+                    and ma50_differenza_ma59 < -5
+                    
+                    and ma450_last >= ma450_120_min_ago
+                    and ma50_last > ma450_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > 0.02
+                    and deviation_ma5_sopra_ma28 > -0.02
+                    
+                    and ma3_last > ma13_last
+                    
+                    and ma2_last > ma2_2_min_ago
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
+                    and ma2_differenza_2_min_ago > 8
+                    and ma2_differenza_ma5 > 8
+                    and macd_differenza_2_min_ago > 0.30
+                ):
+                    buy = "BUY 5 con 3-20 and 450_last >= 450_120_min_ago and 5-28 > -0.02 CON 50 > 450 and ma2_differenza_ma5 > 8 - r 7144 A1 Y2 NUOVA ERA A2 STRONG"
+                    action = "buy"
+                    percentage = 70
+
+                
+                elif (    
+                    ma3_last > ma20_last
+                    
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.60
+
+                    and ma10_last < ma30_last
+                    and ma50_differenza_ma59 < -5
+                    
+                    and ma450_last >= ma450_120_min_ago
+                    and ma50_last > ma450_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > 0.02
+                    and deviation_ma5_sopra_ma28 > -0.02
+                    
+                    and ma3_last > ma13_last
+                    
+                    and ma2_last > ma2_2_min_ago
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
+                    and ma2_differenza_2_min_ago > 8
+                    and ma2_differenza_ma5 > 8
+                    and macd_differenza_2_min_ago > 0.30
+                ):
+                    buy = "BUY 5 con 3-20 and 450_last >= 450_120_min_ago and 5-28 > -0.02 CON 50 > 450 and ma2_differenza_ma5 > 8 - r 7144 A1 Y2 NUOVA ERA A3 STRONG"
                     action = "buy"
                     percentage = 70
                     
                     # 6 giu 2022 5-28 a 0.12 da 0.15
-                    
                     # > estate anticipo buy 5-28 0.08 da 0.12
                     # 29 gen 2023 anticipato ndecchiecella questo BUY 5 !
                     # 20 feb 2023 aggiunta 3-10 >0.058
@@ -19368,6 +19590,9 @@ class maddog:
                     # 20 dic 2023 aggiunta and macd_differenza_2_min_ago > 0.30
                     # 20 dic 2023 aggiunta and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
                     # 15 gen 2024 5-28 > -0.02 da 0.02
+
+
+              
                
 
                 elif (    
