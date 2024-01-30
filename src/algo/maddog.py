@@ -39155,7 +39155,7 @@ class maddog:
                 and ma50_last < ma50_2_min_ago
                 
                 and ma2_last < ma2_2_min_ago
-                and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.018
+                and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.02
                 and ma2_differenza_2_min_ago < -8
                 and macd_differenza_3_min_ago < 0.10
                 
@@ -39170,6 +39170,8 @@ class maddog:
                 action = "sell"
                 
                 # 30 gen 2024 se ma20> aumento sell a -0.02 da -0.01
+                # 30 gen 2024 se ma20> and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.02 da -0.018
+
             
             elif (
                 ma78_last > ma78_120_min_ago
