@@ -10536,29 +10536,27 @@ class maddog:
                     
                 elif (
                     
-                    ma8_last > ma59_last
-                    and ma450_last > ma450_480_min_ago
+                    ma8_last > ma54_last
                     
-                    and ma100_last < ma125_last
+                    and ma450_last > ma450_480_min_ago
+                    and ma59_last >= ma59_2_min_ago
                     and deviation_ma300_sopra_ma450 < 0.20
                     and deviation_ma300_sopra_ma450 > -0.20
                     
-                    and ma59_last >= ma59_2_min_ago
+                    
                     and deviation_ma100_sopra_ma300 < 0.20
+                    and ma100_last < ma125_last
                     
-                    and deviation_buy2 > 0.01
-                    and deviation_ma5_sopra_ma28 > 0.10
                     and deviation_ma3_sopra_ma10 > 0.04
-                    and deviation_ma3_sopra_ma18 > 0.169
+                    and deviation_ma3_sopra_ma16 > 0.077
                     
-                    and deviation_ma7_sopra_ma40 > 0.04
                     and deviation_buy_ma3_sopra_ma13 > 0.08
                     
-                    and ma3_last > ma40_last
                     and price >= price_2_min_ago
+                    and ma2_last >= ma2_2_min_ago
                     and macd >= macd_2_min_ago
                 ):
-                    buy = "BUY 2A ribasso o laterale  and ma69_last > ma200_last - r 4685 By2A"
+                    buy = "BUY 2A ribasso o laterale  and ma69_last > ma200_last - r 4685 BY 2A"
                     action = "buy"
                     percentage = 80
 
