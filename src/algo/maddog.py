@@ -9823,7 +9823,7 @@ class maddog:
                     
                     and deviation_ma100_laterale < 0.20
                     
-                    and deviation_ma5_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma10 > 0.01
                     and deviation_ma5_sopra_ma16 > 0.077
                     
                     and ma3_last > ma40_last
