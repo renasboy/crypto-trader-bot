@@ -18289,14 +18289,10 @@ class maddog:
                     
                     and ma450_last < ma450_480_min_ago
                     
-                    and deviation_ma3_sopra_ma10 > 0.10
-                    and deviation_ma3_sopra_ma18 > 0.13
-                    and deviation_ma5_sopra_ma28 > 0.01
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > 0.077
+                    and deviation_ma5_sopra_ma18 > -0.01
                     
-                    and deviation_bellissima > 0.02
-                    and deviation_buy3 > 0.01
-                    and deviation_ma7_sopra_ma40 > 0.04
-               
                     and ma3_last > ma13_last
                     and ma4_last > ma9_last
                     and ma4_last > ma50_last
@@ -18306,7 +18302,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                     and macd > macd_2_min_ago
                 ):
-                    buy = "BUY 3 IN MEZZO (effetti laterali) 78>100 E con ma69 > IMPORTATA DA BUY 4 RCCR - r 6599 A1yB"
+                    buy = "BUY 3 IN MEZZO (effetti laterali) 78>100 E con ma69 > IMPORTATA DA BUY 4 RCCR - r 6599 A1 YB"
                     action = "buy"
                     percentage = 50
                     
