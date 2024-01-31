@@ -17774,10 +17774,42 @@ class maddog:
                 
                     
                 # BUY 3 29 ago 2022 > 180 min di ribasso
+
                 
-                elif (
+                elif (    
+                    ma3_last > ma30_last
+                    and ma30_last > ma50_last
                     
+                    and ma50_last > ma59_last
+                    and deviation_ma5_sotto_ma300 < -0.40
+                    
+                    and ma100_last < ma100_180_min_ago
+                    and ma200_last < ma200_180_min_ago
+                    and ma300_last < ma300_180_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.005
+                    and deviation_ma3_sopra_ma16 > 0.077
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd > macd_2_min_ago
+                ):
+                    buy = "BUY 3 29 ago 2022 > 180 min di ribasso MA SE and ma30_last > ma50_last E 50>59 compra con 3-30 - r 6572 Bx A"
+                    action = "buy"
+                    percentage = 90
+                    
+                    # 11 ott 2022 mentre scende dopo 3 ore se accelera al ribasso (5 si allontana da 300) interviene prima con 5-28 and macd > macd 2 min ago !
+                    # 10 ott 2023 and macd > macd 2 min ago
+                    # 18 dic 2023 SE ma50_last > ma59_last compra con 8-50
+
+                 
+                
+                elif (    
                     ma5_last > ma50_last
+                    and ma30_last > ma50_last
+                    
                     and ma50_last > ma59_last
                     and deviation_ma5_sotto_ma300 < -0.40
                     
@@ -17793,13 +17825,15 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
                     and macd > macd_2_min_ago
                 ):
-                    buy = "BUY 3 29 ago 2022 > 180 min di ribasso MA SE 50>59 compra con 8-50 - r 6572 Bx"
+                    buy = "BUY 3 29 ago 2022 > 180 min di ribasso MA SE 50>59 compra con 8-50 - r 6572 Bx B"
                     action = "buy"
                     percentage = 90
                     
                     # 11 ott 2022 mentre scende dopo 3 ore se accelera al ribasso (5 si allontana da 300) interviene prima con 5-28 and macd > macd 2 min ago !
                     # 10 ott 2023 and macd > macd 2 min ago
                     # 18 dic 2023 SE ma50_last > ma59_last compra con 8-50
+
+
                 
                 elif (
                     
