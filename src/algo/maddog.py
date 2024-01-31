@@ -21132,18 +21132,18 @@ class maddog:
 
                 elif (    
                     ma3_last > ma30_last
-                    and ma450_last < ma450_120_min_ago
-                    and ma100_last > ma200_last
                     
-                    and ma50_last > ma59_last
+                    and ma450_last < ma450_120_min_ago
+                    
+                    and ma39_last > ma100_last
+                    and ma100_last > ma200_last
                     and ma100_last > ma300_last
                     
                     and deviation_ma3_sopra_ma10 > 0.01
-                    and deviation_ma3_sopra_ma16 > 0.05
-                    and deviation_ma5_sopra_ma28 > -0.05
+                    and deviation_ma3_sopra_ma16 > 0.02
                     
-                    and ma3_last > ma13_last
                     and ma2_last > ma5_last
+                    and ma3_last > ma13_last
                     
                     and ma2_last > ma2_2_min_ago
                     and macd_differenza_2_min_ago > 0.20
@@ -21151,12 +21151,13 @@ class maddog:
                     and macd_differenza_2_min_ago > 0.50
                     
                 ):
-                    buy = "BUY 5 con 50>59 AND and ma450_last < ma450_120_min_ago CON ma100_last > ma300_last E 100>200 and macd > macd_2_min_ago - r 7144 A2 X"
+                    buy = "BUY 5 con 39>100 AND and ma450_last < ma450_120_min_ago CON ma100_last > ma300_last E 100>200 and macd > macd_2_min_ago - r 7144 A2 X"
                     action = "buy"
                     percentage = 70
                     
                     # 3-30 da 4-50 se 100>200
                     # 13 gen 2024 aggiunta 2 > 5
+                    # 31 gen 2024 39>100 al posto di 50>59
                 
                 elif (    
                     ma4_last > ma50_last
