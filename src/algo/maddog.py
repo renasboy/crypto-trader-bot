@@ -19402,12 +19402,19 @@ class maddog:
                     # 27 nov 2023 se sta scendendo da molto tempo E SE se ma50_last > ma59_last
                     # 7 dic 2023 and ma2_differenza_2_min_ago > 5
                     # 22 dic 2023 3-20 da 3-30
-               
+
+
+              
                 
                 elif (
                     ma3_last > ma30_last
+                    
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.40
+                    and deviation_ma5_sopra_o_sotto_ma100 > 0.20
+                    
                     and ma50_last < ma59_last
-                    and ma2_differenza_2_min_ago > 8
                     
                     and ma300_last > ma450_last
                     and ma300_last > ma300_120_min_ago
@@ -19420,12 +19427,233 @@ class maddog:
                     and deviation > -0.30
                     
                     and ma2_last >= ma2_2_min_ago
+                    and ma2_differenza_2_min_ago > 8
                     and macd >= macd_2_min_ago
                     and macd > -11
                     and macd_differenza_2_min_ago > 0.25
                     
                 ):    
-                    buy = "BUY 4B CON ma50_last < ma59_last importato da BUY 3 RCCR con 3-30 con 300 > and ma50_last < ma59_last and ma2_differenza_2_min_ago > 8 - r 6737 B"
+                    buy = "BUY 4B CON 50<59 importato da BUY 3 RCCR con 3-30 e 300> e ma2_diff_2_min_ago > 8 - r 6737 B NUOVA ERA A1 SOFT"
+                    action = "buy"
+                    percentage = 70
+
+                elif (
+                    ma3_last > ma30_last
+                    
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.40
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.60
+                    and ma5_last > ma50_last
+                    
+                    and ma50_last < ma59_last
+                    
+                    and ma300_last > ma450_last
+                    and ma300_last > ma300_120_min_ago
+
+                    and deviation_ma100_sopra_ma300 < 0.30
+                    and deviation_ma100_sopra_ma300 > -0.30
+
+                    and deviation_ma3_sopra_ma10 > 0.03
+                    
+                    and deviation > -0.30
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and ma2_differenza_2_min_ago > 8
+                    and macd >= macd_2_min_ago
+                    and macd > -11
+                    and macd_differenza_2_min_ago > 0.25
+                    
+                ):    
+                    buy = "BUY 4B CON 50<59 importato da BUY 3 RCCR con 3-30 e 300> e ma2_diff_2_min_ago > 8 - r 6737 B NUOVA ERA A2 SOFT 1"
+                    action = "buy"
+                    percentage = 70
+
+                elif (
+                    ma3_last > ma30_last
+                    
+                    and ma3_last > ma20_last
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.60
+                    
+                    and ma50_last < ma59_last
+                    
+                    and ma300_last > ma450_last
+                    and ma300_last > ma300_120_min_ago
+
+                    and deviation_ma100_sopra_ma300 < 0.30
+                    and deviation_ma100_sopra_ma300 > -0.30
+
+                    and deviation_ma3_sopra_ma10 > 0.03
+                    
+                    and deviation > -0.30
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and ma2_differenza_2_min_ago > 8
+                    and macd >= macd_2_min_ago
+                    and macd > -11
+                    and macd_differenza_2_min_ago > 0.25
+                    
+                ):    
+                    buy = "BUY 4B CON 50<59 importato da BUY 3 RCCR con 3-30 e 300> e ma2_diff_2_min_ago > 8 - r 6737 B NUOVA ERA A2 SOFT 2"
+                    action = "buy"
+                    percentage = 70
+
+                elif (
+                    ma3_last > ma30_last
+                    
+                    and ma100_last > ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
+                    
+                    and ma50_last < ma59_last
+                    
+                    and ma300_last > ma450_last
+                    and ma300_last > ma300_120_min_ago
+
+                    and deviation_ma100_sopra_ma300 < 0.30
+                    and deviation_ma100_sopra_ma300 > -0.30
+
+                    and deviation_ma3_sopra_ma10 > 0.03
+                    
+                    and deviation > -0.30
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and ma2_differenza_2_min_ago > 8
+                    and macd >= macd_2_min_ago
+                    and macd > -11
+                    and macd_differenza_2_min_ago > 0.25
+                    
+                ):    
+                    buy = "BUY 4B CON 50<59 importato da BUY 3 RCCR con 3-30 e 300> e ma2_diff_2_min_ago > 8 - r 6737 B NUOVA ERA A3 SOFT"
+                    action = "buy"
+                    percentage = 70
+
+                elif (
+                    ma3_last > ma30_last
+                    
+                    and ma3_last > ma20_last
+                    and ma100_last > ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.50
+                    
+                    and ma50_last < ma59_last
+                    
+                    and ma300_last > ma450_last
+                    and ma300_last > ma300_120_min_ago
+
+                    and deviation_ma100_sopra_ma300 < 0.30
+                    and deviation_ma100_sopra_ma300 > -0.30
+
+                    and deviation_ma3_sopra_ma10 > 0.03
+                    
+                    and deviation > -0.30
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and ma2_differenza_2_min_ago > 8
+                    and macd >= macd_2_min_ago
+                    and macd > -11
+                    and macd_differenza_2_min_ago > 0.25
+                    
+                ):    
+                    buy = "BUY 4B CON 50<59 importato da BUY 3 RCCR con 3-30 e 300> e ma2_diff_2_min_ago > 8 - r 6737 B NUOVA ERA A4 SOFT"
+                    action = "buy"
+                    percentage = 70
+
+                elif (
+                    ma3_last > ma30_last
+                    
+                    and ma3_last > ma54_last
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.40
+                    and deviation_ma5_sopra_o_sotto_ma100 > 0.22
+                    
+                    and ma50_last < ma59_last
+                    
+                    and ma300_last > ma450_last
+                    and ma300_last > ma300_120_min_ago
+
+                    and deviation_ma100_sopra_ma300 < 0.30
+                    and deviation_ma100_sopra_ma300 > -0.30
+
+                    and deviation_ma3_sopra_ma10 > 0.03
+                    
+                    and deviation > -0.30
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and ma2_differenza_2_min_ago > 8
+                    and macd >= macd_2_min_ago
+                    and macd > -11
+                    and macd_differenza_2_min_ago > 0.25
+                    
+                ):    
+                    buy = "BUY 4B CON 50<59 importato da BUY 3 RCCR con 3-30 e 300> e ma2_diff_2_min_ago > 8 - r 6737 B NUOVA ERA A1 STRONG"
+                    action = "buy"
+                    percentage = 70
+
+                elif (
+                    ma3_last > ma30_last
+                    
+                    and ma5_last > ma39_last
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.40
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.60
+                    
+                    and ma50_last < ma59_last
+                    
+                    and ma300_last > ma450_last
+                    and ma300_last > ma300_120_min_ago
+
+                    and deviation_ma100_sopra_ma300 < 0.30
+                    and deviation_ma100_sopra_ma300 > -0.30
+
+                    and deviation_ma3_sopra_ma10 > 0.03
+                    
+                    and deviation > -0.30
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and ma2_differenza_2_min_ago > 8
+                    and macd >= macd_2_min_ago
+                    and macd > -11
+                    and macd_differenza_2_min_ago > 0.25
+                    
+                ):    
+                    buy = "BUY 4B CON 50<59 importato da BUY 3 RCCR con 3-30 e 300> e ma2_diff_2_min_ago > 8 - r 6737 B NUOVA ERA A2 STRONG"
+                    action = "buy"
+                    percentage = 70
+
+                
+                elif (
+                    ma3_last > ma30_last
+                    
+                    and ma3_last > ma20_last
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.60
+                    
+                    and ma50_last < ma59_last
+                    
+                    and ma300_last > ma450_last
+                    and ma300_last > ma300_120_min_ago
+
+                    and deviation_ma100_sopra_ma300 < 0.30
+                    and deviation_ma100_sopra_ma300 > -0.30
+
+                    and deviation_ma3_sopra_ma10 > 0.03
+                    
+                    and deviation > -0.30
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and ma2_differenza_2_min_ago > 8
+                    and macd >= macd_2_min_ago
+                    and macd > -11
+                    and macd_differenza_2_min_ago > 0.25
+                    
+                ):    
+                    buy = "BUY 4B CON 50<59 importato da BUY 3 RCCR con 3-30 e 300> e ma2_diff_2_min_ago > 8 - r 6737 B NUOVA ERA A3 STRONG"
                     action = "buy"
                     percentage = 70
                     
