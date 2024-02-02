@@ -12868,10 +12868,14 @@ class maddog:
             
             
                 # ------------------------------------------------------------ BUY 2 laterale
-                
+
                 elif (    
                     ma3_last > ma28_last
-                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
+                    
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.40
+                    and deviation_ma5_sopra_o_sotto_ma100 > 0.20
                     
                     and ma300_last > ma300_120_min_ago
                     and ma450_last > ma450_480_min_ago
@@ -12884,13 +12888,243 @@ class maddog:
                     and ma2_last > ma3_last
                     and ma2_last > ma5_last
                     
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
                     and ma2_differenza_2_min_ago > 7
+                    
                     and macd >= macd_2_min_ago
                     and macd > -11.0
                     and macd_differenza_2_min_ago > 0.30
                 ):  
                 
-                    buy = "BUY 2 laterale con 300>450 and 4-28 and macd > 2.0 and macd_differenza_2_min_ago > 0.20 and deviation_ma3_sopra_ma18 > 0.02 SE GIORNO - r 5412 X1 AX 1"
+                    buy = "BUY 2 laterale con 300>450 and 4-28 e macd > 2.0 and macd_diff_2_min_ago > 0.20 e dev 3-18 > 0.02 - r 5412 X1 AX 1 NUOVA ERA A1 SOFT"
+                    action = "buy"
+                    percentage = 80
+
+
+   
+                elif (    
+                    ma3_last > ma28_last
+                    
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.40
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.60
+                    and ma5_last > ma50_last
+                    
+                    and ma300_last > ma300_120_min_ago
+                    and ma450_last > ma450_480_min_ago
+                    
+                    and deviation_ma100_sopra_ma300 < 0.20
+                    and deviation_ma100_sopra_ma300 > -0.30
+                    
+                    and deviation_ma3_sopra_ma18 > 0.02
+                    
+                    and ma2_last > ma3_last
+                    and ma2_last > ma5_last
+                    
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
+                    and ma2_differenza_2_min_ago > 7
+                    
+                    and macd >= macd_2_min_ago
+                    and macd > -11.0
+                    and macd_differenza_2_min_ago > 0.30
+                ):  
+                
+                    buy = "BUY 2 laterale con 300>450 and 4-28 e macd > 2.0 and macd_diff_2_min_ago > 0.20 e dev 3-18 > 0.02 - r 5412 X1 AX 1 NUOVA ERA A2 SOFT 1"
+                    action = "buy"
+                    percentage = 80
+
+  
+                elif (    
+                    ma3_last > ma28_last
+                    
+                    and ma3_last > ma20_last
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.60
+                    
+                    and ma300_last > ma300_120_min_ago
+                    and ma450_last > ma450_480_min_ago
+                    
+                    and deviation_ma100_sopra_ma300 < 0.20
+                    and deviation_ma100_sopra_ma300 > -0.30
+                    
+                    and deviation_ma3_sopra_ma18 > 0.02
+                    
+                    and ma2_last > ma3_last
+                    and ma2_last > ma5_last
+                    
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
+                    and ma2_differenza_2_min_ago > 7
+                    
+                    and macd >= macd_2_min_ago
+                    and macd > -11.0
+                    and macd_differenza_2_min_ago > 0.30
+                ):  
+                
+                    buy = "BUY 2 laterale con 300>450 and 4-28 e macd > 2.0 and macd_diff_2_min_ago > 0.20 e dev 3-18 > 0.02 - r 5412 X1 AX 1 NUOVA ERA A2 SOFT 2"
+                    action = "buy"
+                    percentage = 80
+
+  
+                elif (    
+                    ma3_last > ma28_last
+                    
+                    and ma100_last > ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
+                    
+                    and ma300_last > ma300_120_min_ago
+                    and ma450_last > ma450_480_min_ago
+                    
+                    and deviation_ma100_sopra_ma300 < 0.20
+                    and deviation_ma100_sopra_ma300 > -0.30
+                    
+                    and deviation_ma3_sopra_ma18 > 0.02
+                    
+                    and ma2_last > ma3_last
+                    and ma2_last > ma5_last
+                    
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
+                    and ma2_differenza_2_min_ago > 7
+                    
+                    and macd >= macd_2_min_ago
+                    and macd > -11.0
+                    and macd_differenza_2_min_ago > 0.30
+                ):  
+                
+                    buy = "BUY 2 laterale con 300>450 and 4-28 e macd > 2.0 and macd_diff_2_min_ago > 0.20 e dev 3-18 > 0.02 - r 5412 X1 AX 1 NUOVA ERA A3 SOFT"
+                    action = "buy"
+                    percentage = 80
+
+    
+                elif (    
+                    ma3_last > ma28_last
+                    
+                    and ma3_last > ma20_last
+                    and ma100_last > ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.50
+                    
+                    and ma300_last > ma300_120_min_ago
+                    and ma450_last > ma450_480_min_ago
+                    
+                    and deviation_ma100_sopra_ma300 < 0.20
+                    and deviation_ma100_sopra_ma300 > -0.30
+                    
+                    and deviation_ma3_sopra_ma18 > 0.02
+                    
+                    and ma2_last > ma3_last
+                    and ma2_last > ma5_last
+                    
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
+                    and ma2_differenza_2_min_ago > 7
+                    
+                    and macd >= macd_2_min_ago
+                    and macd > -11.0
+                    and macd_differenza_2_min_ago > 0.30
+                ):  
+                
+                    buy = "BUY 2 laterale con 300>450 and 4-28 e macd > 2.0 and macd_diff_2_min_ago > 0.20 e dev 3-18 > 0.02 - r 5412 X1 AX 1 NUOVA ERA A4 SOFT"
+                    action = "buy"
+                    percentage = 80
+
+
+
+                elif (    
+                    ma3_last > ma28_last
+                    
+                    and ma3_last > ma54_last
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.40
+                    and deviation_ma5_sopra_o_sotto_ma100 > 0.22
+                    
+                    and ma300_last > ma300_120_min_ago
+                    and ma450_last > ma450_480_min_ago
+                    
+                    and deviation_ma100_sopra_ma300 < 0.20
+                    and deviation_ma100_sopra_ma300 > -0.30
+                    
+                    and deviation_ma3_sopra_ma18 > 0.02
+                    
+                    and ma2_last > ma3_last
+                    and ma2_last > ma5_last
+                    
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
+                    and ma2_differenza_2_min_ago > 7
+                    
+                    and macd >= macd_2_min_ago
+                    and macd > -11.0
+                    and macd_differenza_2_min_ago > 0.30
+                ):  
+                
+                    buy = "BUY 2 laterale con 300>450 and 4-28 e macd > 2.0 and macd_diff_2_min_ago > 0.20 e dev 3-18 > 0.02 - r 5412 X1 AX 1 NUOVA ERA A1 STRONG"
+                    action = "buy"
+                    percentage = 80
+
+
+                elif (    
+                    ma3_last > ma28_last
+                    
+                    and ma5_last > ma39_last
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.40
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.60
+                    
+                    and ma300_last > ma300_120_min_ago
+                    and ma450_last > ma450_480_min_ago
+                    
+                    and deviation_ma100_sopra_ma300 < 0.20
+                    and deviation_ma100_sopra_ma300 > -0.30
+                    
+                    and deviation_ma3_sopra_ma18 > 0.02
+                    
+                    and ma2_last > ma3_last
+                    and ma2_last > ma5_last
+                    
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
+                    and ma2_differenza_2_min_ago > 7
+                    
+                    and macd >= macd_2_min_ago
+                    and macd > -11.0
+                    and macd_differenza_2_min_ago > 0.30
+                ):  
+                
+                    buy = "BUY 2 laterale con 300>450 and 4-28 e macd > 2.0 and macd_diff_2_min_ago > 0.20 e dev 3-18 > 0.02 - r 5412 X1 AX 1 NUOVA ERA A2 STRONG"
+                    action = "buy"
+                    percentage = 80
+
+                
+                elif (    
+                    ma3_last > ma28_last
+                    
+                    and ma3_last > ma20_last
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.60
+                    
+                    and ma300_last > ma300_120_min_ago
+                    and ma450_last > ma450_480_min_ago
+                    
+                    and deviation_ma100_sopra_ma300 < 0.20
+                    and deviation_ma100_sopra_ma300 > -0.30
+                    
+                    and deviation_ma3_sopra_ma18 > 0.02
+                    
+                    and ma2_last > ma3_last
+                    and ma2_last > ma5_last
+                    
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
+                    and ma2_differenza_2_min_ago > 7
+                    
+                    and macd >= macd_2_min_ago
+                    and macd > -11.0
+                    and macd_differenza_2_min_ago > 0.30
+                ):  
+                
+                    buy = "BUY 2 laterale con 300>450 and 4-28 e macd > 2.0 and macd_diff_2_min_ago > 0.20 e dev 3-18 > 0.02 - r 5412 X1 AX 1 NUOVA ERA A3 STRONG"
                     action = "buy"
                     percentage = 80
                     
@@ -12898,6 +13132,15 @@ class maddog:
                     # 10 dic 2023 aggiunta and ma2_last > ma3_last
                     # 18 dic 2023 aggiunta and ma2_differenza_2_min_ago > 7
                     # 18 dic 2023 and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
+
+
+
+
+
+
+
+
+
 
 
                 elif (    
