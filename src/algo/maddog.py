@@ -16142,29 +16142,222 @@ class maddog:
                     
                     
                     
-                elif (
-                    ma10_last > ma10_2_min_ago
+                elif (    
+                    ma4_last > ma50_last
+                    
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.40
+                    and deviation_ma5_sopra_o_sotto_ma100 > 0.20
+                    
                     and ma300_last < ma300_301_min_ago
-                    and ma28_last < ma78_last
                     and ma100_last < ma100_60_min_ago
+                    and ma28_last < ma78_last
                     
                     and ma200_last > ma200_60_min_ago
                     and deviation > -0.30
-                    and deviation_ma5_sopra_ma28 > 0.22
                     
-                    and deviation_ma4_sopra_ma30 > 0.11
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > 0.077
+                  
                     and ma3_last > ma13_last
                     and ma4_last > ma9_last
-                    and deviation_ma7_sopra_ma40 > 0.08
-                    and ma7_last > ma25_last
-                    
-                    and deviation_buy_ma2_sopra_ma13 > 0.10
-                    and ma4_last > ma50_last
                     and ma2_last > ma2_2_min_ago
-                    
-                ):  
+                ):    
                 
-                    buy = "BUY 3A con ma200 che sale da 60 min and ma28_last < ma78_last - r 6121 B"
+                    buy = "BUY 3A con ma200 che sale da 60 min and ma28_last < ma78_last - r 6121 B NUOVA ERA A1 SOFT"
+                    action = "buy"
+                    percentage = 80
+
+                elif (    
+                    ma4_last > ma50_last
+                    
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.40
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.60
+                    and ma5_last > ma50_last
+                    
+                    and ma300_last < ma300_301_min_ago
+                    and ma100_last < ma100_60_min_ago
+                    and ma28_last < ma78_last
+                    
+                    and ma200_last > ma200_60_min_ago
+                    and deviation > -0.30
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > 0.077
+                  
+                    and ma3_last > ma13_last
+                    and ma4_last > ma9_last
+                    and ma2_last > ma2_2_min_ago
+                ):    
+                
+                    buy = "BUY 3A con ma200 che sale da 60 min and ma28_last < ma78_last - r 6121 B NUOVA ERA A2 SOFT 1"
+                    action = "buy"
+                    percentage = 80
+
+                elif (    
+                    ma3_last > ma28_last
+                    
+                    and ma3_last > ma20_last
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.60
+                    
+                    and ma300_last < ma300_301_min_ago
+                    and ma100_last < ma100_60_min_ago
+                    and ma28_last < ma78_last
+                    
+                    and ma200_last > ma200_60_min_ago
+                    and deviation > -0.30
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > 0.077
+                  
+                    and ma3_last > ma13_last
+                    and ma4_last > ma9_last
+                    and ma2_last > ma2_2_min_ago
+                ):    
+                
+                    buy = "BUY 3A con ma200 che sale da 60 min and ma28_last < ma78_last - r 6121 B NUOVA ERA A2 SOFT 2"
+                    action = "buy"
+                    percentage = 80
+
+                elif (    
+                    ma3_last > ma30_last
+                    
+                    and ma100_last > ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
+                    
+                    and ma300_last < ma300_301_min_ago
+                    and ma100_last < ma100_60_min_ago
+                    and ma28_last < ma78_last
+                    
+                    and ma200_last > ma200_60_min_ago
+                    and deviation > -0.30
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > 0.077
+                  
+                    and ma3_last > ma13_last
+                    and ma4_last > ma9_last
+                    and ma2_last > ma2_2_min_ago
+                ):    
+                
+                    buy = "BUY 3A con ma200 che sale da 60 min and ma28_last < ma78_last - r 6121 B NUOVA ERA A3 SOFT"
+                    action = "buy"
+                    percentage = 80
+
+                elif (    
+                    ma3_last > ma28_last
+                    
+                    and ma3_last > ma20_last
+                    and ma100_last > ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.50
+                    
+                    and ma300_last < ma300_301_min_ago
+                    and ma100_last < ma100_60_min_ago
+                    and ma28_last < ma78_last
+                    
+                    and ma200_last > ma200_60_min_ago
+                    and deviation > -0.30
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > 0.077
+                  
+                    and ma3_last > ma13_last
+                    and ma4_last > ma9_last
+                    and ma2_last > ma2_2_min_ago
+                ):    
+                
+                    buy = "BUY 3A con ma200 che sale da 60 min and ma28_last < ma78_last - r 6121 B NUOVA ERA A4 SOFT"
+                    action = "buy"
+                    percentage = 80
+
+                elif (    
+                    ma4_last > ma54_last
+                    
+                    and ma5_last > ma54_last
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.40
+                    and deviation_ma5_sopra_o_sotto_ma100 > 0.22
+                    
+                    and ma300_last < ma300_301_min_ago
+                    and ma100_last < ma100_60_min_ago
+                    and ma28_last < ma78_last
+                    
+                    and ma200_last > ma200_60_min_ago
+                    and deviation > -0.30
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > 0.077
+                  
+                    and ma3_last > ma13_last
+                    and ma4_last > ma9_last
+                    and ma2_last > ma2_2_min_ago
+                ):    
+                
+                    buy = "BUY 3A con ma200 che sale da 60 min and ma28_last < ma78_last - r 6121 B NUOVA ERA A1 STRONG"
+                    action = "buy"
+                    percentage = 80
+
+                elif (    
+                    ma3_last > ma30_last
+                    
+                    and ma5_last > ma39_last
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.40
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.60
+                    
+                    and ma300_last < ma300_301_min_ago
+                    and ma100_last < ma100_60_min_ago
+                    and ma28_last < ma78_last
+                    
+                    and ma200_last > ma200_60_min_ago
+                    and deviation > -0.30
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > 0.077
+                  
+                    and ma3_last > ma13_last
+                    and ma4_last > ma9_last
+                    and ma2_last > ma2_2_min_ago
+                ):    
+                
+                    buy = "BUY 3A con ma200 che sale da 60 min and ma28_last < ma78_last - r 6121 B NUOVA ERA A2 STRONG"
+                    action = "buy"
+                    percentage = 80
+
+                
+                elif (    
+                    ma3_last > ma30_last
+                    
+                    and ma3_last > ma20_last
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.60
+                    
+                    and ma300_last < ma300_301_min_ago
+                    and ma100_last < ma100_60_min_ago
+                    and ma28_last < ma78_last
+                    
+                    and ma200_last > ma200_60_min_ago
+                    and deviation > -0.30
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > 0.077
+                  
+                    and ma3_last > ma13_last
+                    and ma4_last > ma9_last
+                    and ma2_last > ma2_2_min_ago
+                ):    
+                
+                    buy = "BUY 3A con ma200 che sale da 60 min and ma28_last < ma78_last - r 6121 B NUOVA ERA A3 STRONG"
                     action = "buy"
                     percentage = 80
 
