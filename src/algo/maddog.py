@@ -41262,14 +41262,15 @@ class maddog:
 
           
 
-            elif (
-                
+          
+            elif (    
                 ma50_last > ma50_2_min_ago
                 and ma100_last > ma100_60_min_ago
+                
                 and ma3_last < ma28_last
                 
                 and deviation_ma39 < 0.13
-                and deviation_sell < 0.02
+                and deviation_sell < -0.02
                 
                 and deviation_ma5_sotto_ma200 > -0.60
                 and deviation_ma100_sopra_ma300 < 0.40
@@ -41281,11 +41282,13 @@ class maddog:
                 and macd > 0
                 and macd_differenza_2_min_ago < 1.00
             ):
-                sell = "SELL nuova cond spec - se 100> vende con 3-28 dev 3-39 < 0.13 E dev_sell < 0.02 e ma50 > CON MACD IN TERRITORIO POSITIVO e MACD > 0 e macd < 15 - r 16047 A2X2x"
+                sell = "SELL NCS - se 100> vende con 3-28 dev 3-39 < 0.13 E dev_sell < -0.02 e ma50 > CON MACD IN TERRITORIO POSITIVO e MACD > 0 e macd < 15 - r 16047 A2 X2 X"
                 action = "sell"
                 
                 # 30 dic 2023 situazione MACD in territorio positivo
-            
+                #  2 feb 2024 and deviation_sell < -0.02 da 0.02
+
+          
             elif (
                 
                 ma50_last > ma50_2_min_ago
