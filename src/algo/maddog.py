@@ -380,28 +380,6 @@ class maddog:
         max_hold_time_in_seconds_sell_5_180 = 14400
         
         
-        ###########################################################################################################################
-        
-        # vedi SELL 1 FIAT - 2 minuti = 120 secondi
-        
-        max_hold_time_in_seconds_fiat = 120
-        
-       
-        # vedi SELL 1 AUDI - 2 minuti = 120 secondi
-        
-        max_hold_time_in_seconds_audi = 120
-        
-      
-        # vedi SELL 1 MASERATI - 2 minuti = 120 secondi
-        
-        max_hold_time_in_seconds_maserati = 120
-        
-        
-        # vedi SELL 1 FERRARI - 2 minuti = 120 secondi
-        
-        max_hold_time_in_seconds_ferrari = 120
-        
-        
         ###############################################################################################################################
         
         # vedi DELTA BUY 2 DAL SELL 1  > 2 minuti = 120 secondi
