@@ -18868,9 +18868,9 @@ class maddog:
                     
                     ma4_last > ma20_last
                     and ma450_last > ma450_480_min_ago
-                    
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.12
-                    and deviation_ma5_sopra_o_sotto_ma100 > -0.21
+                  
+                    and deviation_ma250_sopra_ma300 < 0.12
+                    and deviation_ma250_sopra_ma300 > -0.12
                     
                     and deviation_ma100_sopra_ma300 < 0.27
                     and deviation_ma100_sopra_ma300 > -0.27
@@ -18885,7 +18885,7 @@ class maddog:
                     and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
                     and macd_differenza_2_min_ago > 0.50
                 ):
-                    buy = "BUY 3 con 450 > 450 480 min MA CONSIDERATA ANCORA LATERALE con dev ma2 e diff macd - r 6599 A1 y A2"
+                    buy = "BUY 3 con 450 > 450 480 min MA CONSIDERATA ANCORA LATERALE con dev ma2 e diff macd - r 6599 A1 Y A2"
                     action = "buy"
                     percentage = 60
                     
@@ -18895,7 +18895,8 @@ class maddog:
                     # 28 set 2023 fascia 5-100 portata a < -0.12 - -0.21 da < -0.11 - -0.20 - aumentata un pochino ( ma450>ma450 480 min ago !)
                     # 31 dic 2023 aggiunta and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
                     # 31 dic 2023 and macd_differenza_2_min_ago > 0.50
-
+                    
+                    #  7 feb 2023 se laterale deve essere and deviation_ma250_sopra_ma300 < 0.12 e and deviation_ma250_sopra_ma300 > -0.12 e vaffanculo.
                 
                 elif (
                     
