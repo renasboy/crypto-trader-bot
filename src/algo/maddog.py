@@ -5990,75 +5990,9 @@ class maddog:
                 # BUY 1 tempo INIZIO AUTUNNO con 78 > 150 and (200 > 200 120 min) che considera passare del tempo con ma30 > MA 100 < 200
                 
                 
-                elif (     
-                    ma5_last > ma39_last
-                    
-                    and ma300_last > ma450_last
-                    
-                    
-                    and ma200_last > ma300_last
-                    and ma200_last > ma200_120_min_ago
-                    
-                    and ma100_last < ma200_last
-                    
-                    and ma18_last >= ma18_10_min_ago
-                  
-                    and deviation_ma3_sopra_ma16 > 0.055
-                    and deviation_ma5_sopra_ma28 > 0.05
-                    and deviation_bellissima > 0.01
-                    
-                    and ma5_last > ma5_2_min_ago
-                    and ma2_last > ma20_last
-                    
-                    and ma2_last > ma2_2_min_ago
-                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
-                    and macd >= macd_2_min_ago
-                    and macd_differenza_2_min_ago > 0.50
-                    
-                ):    
-                    buy = "BUY 1 tempo INIZIO AUTUNNO and (200 > 200 120 min ago) considera passare del tempo ( ma18>ma18 10 min ago !) con 5-28 > 0.05 e 200>300 - r 1586 A1"
-                    action = "buy"
-                    percentage = 80
-                    
-                    # > estate ho anticipato buy
-                    # 25 gen 2023 se 300>450 anticipo ndecchia
-                    #  3 lug 2023 tolto and ma20_last > ma20_2_min_ago ( ma 300 sta sopra ma 450 )
-                    #  3 lug 2023 5-50 da 50-100 ( ma 300 sta sopra ma 450 )
-                    # 11 ago 2023 aggiunta and deviation_ma3_sopra_ma16 > 0.055
-                    # 31 dic 2023 il MACD non soltanto deve essere > del macd di 2 min fa MA deve essere anche > di 0.50 (pensa se il macd e' superiore di 0.08 (e' capitato !))
-                    
-                    
-                    
-                # BUY 1 tempo INIZIO AUTUNNO con 78 < 150 and (200 > 200 120 min) che considera passare del tempo con ma30 > MA 100 < 200
                 
-                elif (     
-                    ma50_last > ma100_last
-                    and macd >= macd_2_min_ago
-                    and ma78_last < ma150_last
                     
-                    and ma200_last > ma300_last
-                    and ma200_last > ma200_120_min_ago
-                    and deviation_ma5_sopra_ma28 > 0.25
-                    and ma100_last < ma200_last
-                    
-                    and ma30_last > ma30_40_min_ago
-                    
-                    and ma11_last > ma125_last
-                  
-                    and deviation_bellissima > 0.02
-                    and ma20_last > ma20_2_min_ago
-                    and ma5_last > ma5_2_min_ago
-                    and ma2_last > ma20_last
-                    and ma2_last > ma2_2_min_ago
-                ):    
-                    buy = "BUY 1 tempo INIZIO AUTUNNO con 78 < 150 and (200 > 200 120 min ago) che considera passare del tempo con 5-28 > 0.25 e 200>300 - r 1586 A2"
-                    action = "buy"
-                    percentage = 80
-                    
-                    # > estate ho anticipato buy
-                    
-                    
-                    
+                
                     
                     
                     
@@ -13162,34 +13096,7 @@ class maddog:
                     #  2 ott 2023 and macd_differenza_2_min_ago a >1.3 da > 0.25
                     # 10 dic 2023 aggiunta and ma2_last > ma5_last      
               
-                elif (    
-                    ma5_last > ma39_last
-                    and ma78_last < ma78_60_min_ago
-                    
-                    and ma450_last > ma450_480_min_ago
-                    
-                    and ma300_last > ma450_last
-                    and deviation_ma100_sopra_ma300 < 0.20
-                    and deviation_ma100_sopra_ma300 > -0.20
-                  
-                    and ma300_last > ma300_120_min_ago
-                    and deviation_ma3_sopra_ma18 > 0.13
-                    and macd >= macd_2_min_ago
-                ):  
-                
-                    buy = "BUY 2 laterale con 300>450 MA ma78 scende da 1 ora ! - r 5412 X1b"
-                    action = "buy"
-                    percentage = 80
-                    
-                    # 19 set 2022 aggiunta 3-10 > 0.07
-                    #  3 ott 2022 3-10 0.113 da 0.07
-                    #  4 mag 2023 3-10 0.07 da 0.113 con 300>450
-                    # 23 mag 2023 3-39 da 8-59 con 300>450 e 100 attaccata alla 300
-                    # 24 mag 2023 tolto 3-10 > 0.07 !
-                    # 24 mag 2023 messo 3-18 > 0.02 con 450 < 450 480 min ago !
-                    #  4 mag 2023 messo 3-18 > 0.06 con 450 > 450 480 min ago MA ma78 scende da 60 min !
-                    # 11 ago 2023 messo 3-18 > 0.13
-                    
+               
                     
                 elif (    
                     ma3_last > ma39_last
