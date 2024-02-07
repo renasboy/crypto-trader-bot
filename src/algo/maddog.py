@@ -8936,10 +8936,13 @@ class maddog:
                     and ma5_last > ma10_last
                     and ma2_last >= ma2_2_min_ago
                     and macd > macd_2_min_ago
+                    and macd_differenza_2_min_ago > 1.25
                 ):
                     buy = "BUY 1 78<200 pensiero laterale - r 4050 NUOVA ERA A3 SOFT"
                     action = "buy"
                     percentage = 80
+                    
+                    #  7 feb 2024 aggiunto and macd_differenza_2_min_ago > 1.25
 
 
                 elif (    
@@ -19410,6 +19413,31 @@ class maddog:
                 
                 
                 
+                elif (
+                    ma78_last < ma150_last
+                    
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.23
+                    and deviation_ma5_sotto_ma300 < -0.10
+                    
+                    and deviation_ma3_sopra_ma10 > 0.057
+                    and deviation_ma3_sopra_ma16 > 0.06
+                    and deviation_ma5_sopra_ma28 < 0.10
+                    
+                    and ma100_last < ma100_180_min_ago
+                    and ma200_last < ma200_180_min_ago
+                    and ma300_last < ma300_180_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                    
+                ):
+                    buy = "BUY 4 feb 2024 > 180 min di ribasso 78<150 and 3-16 > 0.06 and macd > macd 2 min ago - r 6670"
+                    action = "buy"
+                    percentage = 90
+
                 
                 # BUY 4 di emergenza CROLLO FERRARI - modo 1
                 
@@ -22136,9 +22164,36 @@ class maddog:
                     percentage = 70
                     
                     # 6 giu 2022 5-28 a 0.12 da 0.15
+
+              
                     
                     
+                elif (
+                    ma78_last < ma150_last
                     
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.23
+                    and deviation_ma5_sotto_ma300 < -0.10
+                    
+                    and deviation_ma3_sopra_ma10 > 0.057
+                    and deviation_ma3_sopra_ma16 > 0.06
+                    and deviation_ma5_sopra_ma28 < 0.10
+                    
+                    and ma100_last < ma100_180_min_ago
+                    and ma200_last < ma200_180_min_ago
+                    and ma300_last < ma300_180_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                    
+                ):
+                    buy = "BUY 5 oggi 7 feb 2024 > 180 min di ribasso 78<150 and 3-16 > 0.06 and macd > macd 2 min ago - r 7200"
+                    action = "buy"
+                    percentage = 90
+
+              
                 elif (
                     ma50_last >= ma50_2_min_ago
                     and ma100_last > ma125_last
