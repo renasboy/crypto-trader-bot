@@ -21474,7 +21474,7 @@ class maddog:
                     ma3_last > ma13_last
                     and ma3_last > ma30_last
                     
-                    and ma100_last > ma100_10_min_ago
+                    and ma100_last > ma100_5_min_ago
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
                     and deviation_ma5_sopra_o_sotto_ma100 > -0.50
                     
@@ -21482,9 +21482,9 @@ class maddog:
                     and ma50_last > ma450_last
                     
                     and deviation_ma3_sopra_ma10 > 0.01
-                    and deviation_ma3_sopra_ma16 > 0.02
+                    and deviation_ma3_sopra_ma16 > 0.01
                     
-                    and ma2_last > ma2_2_min_ago
+                    and ma2_last >= ma2_2_min_ago
                     and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
                     and ma2_differenza_ma5 > 5
                     and macd_differenza_2_min_ago > 0.10
@@ -21492,7 +21492,9 @@ class maddog:
                     buy = "BUY 5 con 3-20 and 450_last >= 450_120_min_ago and 5-28 > 0.02 CON 50 > 450 and ma2_differenza_ma5 > 8 - r 7144 A1 X NUOVA ERA A3 SOFT"
                     action = "buy"
                     percentage = 70
-
+                    
+                    #  9 feb 2024 IMPORTANTE ! solo BUY 5 NUOVA ERA A3 SOFT con ma100> ma100 5 min ago !!!
+                   
                 elif (    
                     ma3_last > ma13_last
                     and ma3_last > ma30_last
@@ -21697,7 +21699,7 @@ class maddog:
                 elif (    
                     ma3_last > ma20_last
                     
-                    and ma100_last > ma100_10_min_ago
+                    and ma100_last > ma100_5_min_ago
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
                     and deviation_ma5_sopra_o_sotto_ma100 > -0.50
                     
@@ -21724,6 +21726,9 @@ class maddog:
                     buy = "BUY 5 con 3-20 and 450_last >= 450_120_min_ago and 5-28 > -0.02 CON 50 > 450 and ma2_differenza_ma5 > 8 - r 7144 A1 Y1 NUOVA ERA A3 SOFT"
                     action = "buy"
                     percentage = 70
+                    
+                    #  9 feb 2024 IMPORTANTE ! solo BUY 5 NUOVA ERA A3 SOFT con ma100> ma100 5 min ago !!!
+              
 
                 elif (    
                     ma3_last > ma20_last
@@ -21958,7 +21963,7 @@ class maddog:
                 elif (    
                     ma3_last > ma20_last
                     
-                    and ma100_last > ma100_10_min_ago
+                    and ma100_last > ma100_5_min_ago
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
                     and deviation_ma5_sopra_o_sotto_ma100 > -0.50
 
@@ -21989,6 +21994,7 @@ class maddog:
                     #  7 feb 2024 and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.021 da > 0.02
                     #  7 feb 2024 aggiunto and ma3_last > ma5_last
                     #  7 feb 2024 aggiunta and ma3_last >= ma3_2_min_ago
+                    #  9 feb 2024 IMPORTANTE ! solo BUY 5 NUOVA ERA A3 SOFT con ma100> ma100 5 min ago !!!
                 
                 elif (    
                     ma3_last > ma20_last
@@ -22522,7 +22528,7 @@ class maddog:
                 elif (
                     ma5_last >= ma5_2_min_ago
                     
-                    and ma100_last > ma100_10_min_ago
+                    and ma100_last > ma100_5_min_ago
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
                     and deviation_ma5_sopra_o_sotto_ma100 > -0.50
                     
@@ -22549,7 +22555,8 @@ class maddog:
                     buy = "BUY 5 con 300 > 450 and ma50 > E 50<100 and 300 > 120 min ago e 5-28 > 0.23 and ma2_diff_2_min_ago > 10 - r 7237 A1 NUOVA ERA A3 SOFT"
                     action = "buy"
                     percentage = 70
-
+                    
+                    #  9 feb 2024 IMPORTANTE ! solo BUY 5 NUOVA ERA A3 SOFT con ma100> ma100 5 min ago !!!
 
                 elif (
                     ma5_last >= ma5_2_min_ago
@@ -22891,7 +22898,7 @@ class maddog:
                 elif (    
                     ma3_last > ma20_last
                     
-                    and ma100_last > ma100_10_min_ago
+                    and ma100_last > ma100_5_min_ago
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
                     and deviation_ma5_sopra_o_sotto_ma100 > -0.50
                     
@@ -22916,7 +22923,8 @@ class maddog:
                     buy = "BUY 5 da r 1537 A3X 4A compare forever + 300>180 min con 3-20 E 300 vicina 450 e 3-16 > 0.01 + MACD > - r 7270 NUOVA ERA A3 SOFT"
                     action = "buy"
                     percentage = 90
-
+                    
+                    #  9 feb 2024 IMPORTANTE ! solo BUY 5 NUOVA ERA A3 SOFT con ma100 > ma100 5 min ago !!!
               
 
                 elif (    
@@ -23707,6 +23715,8 @@ class maddog:
                     buy = "BUY 5 29 ago 2022 > 120 min di ribasso 78<150 CON ma100 < 120 min ago - r 7564 A2 YX1 NUOVA ERA A3 SOFT"
                     action = "buy"
                     percentage = 90
+                    
+                    #  9 feb 2024 IMPORTANTE ! solo BUY 5 NUOVA ERA A3 SOFT con ma100 > ma100 5 min ago !!!
 
                 elif (    
                     ma3_last > ma39_last
@@ -24148,7 +24158,7 @@ class maddog:
 
                 elif ( 
                     ma5_last > ma54_last
-                    and ma100_last > ma100_10_min_ago
+                    and ma100_last > ma100_5_min_ago
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
                     and deviation_ma5_sopra_o_sotto_ma100 > -0.50
                     
@@ -24175,9 +24185,9 @@ class maddog:
                     buy = "BUY 5 29 ago 2022 > 180 min ribasso CON 5-300 < 0.10 ma > -1.20 e 78<150 e 3-16 > 0.05 e macd > - r 7564 B2 Y2 X NUOVA ERA A3 SOFT"
                     action = "buy"
                     percentage = 90
-
-              
-
+                    
+                    #  9 feb 2024 IMPORTANTE ! solo BUY 5 NUOVA ERA A3 SOFT con ma100 > ma100 5 min ago !!!
+                
                 
                 elif (     
                     ma3_last > ma39_last
@@ -24729,6 +24739,7 @@ class maddog:
                     buy = "BUY 5 compare forever - con 3-30 E CON 300 ancora vicina alla 450 ( anche un poco sotto ! ) and 3-18 > -0.01 + diff macd > - r 7600 NUOVA ERA 1"
                     action = "buy"
                     percentage = 90
+                  
 
                 elif (     
                     
