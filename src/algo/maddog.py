@@ -687,6 +687,18 @@ class maddog:
         
         
         
+        # formula delta_50_39
+        
+        delta_50_39 = (ma50_last / ma39_last - 1) * 100 if ma39_last else 0
+        self.algo_helper.info("delta_50_39: {}".format(delta_50_39))
+
+        
+        # formula delta_50_39_30_min
+        
+        delta_50_39_30_min = (ma50_30_min_ago / ma39_30_min_ago - 1) * 100 if ma39_30_min_ago else 0
+        self.algo_helper.info("delta_50_39_30_min: {}".format(delta_50_39_30_min))
+
+
         
         # formula delta_100_59
         
