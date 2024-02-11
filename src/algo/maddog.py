@@ -36268,6 +36268,27 @@ class maddog:
                         
                         #  4 ott 2023 ex condizione speciale r 16047 A1 ridotta
 
+                    elif (
+                        deviation_sell > 0.81
+                        and deviation_ma3_sopra_ma18 < -0.056
+                        and ma300_last > ma300_301_min_ago
+                        
+                        and ma3_last < ma18_last
+                        and ma2_last < ma5_last
+                
+                        and ma2_last < ma2_2_min_ago
+                        and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.02
+                        and ma2_differenza_2_min_ago < -5
+                        
+                        and macd < macd_2_min_ago
+                        and macd < 16
+                        and macd_differenza_5_min_ago < -9
+                        
+                    ):    
+                        sell = "SELL 3 (21 a 60 min) ex cond spec P M S con ma300 > 5 ore ! e dev sell > 0.81 e macd < 16 e MACD diff_5_min_ago < -9 e dev 3-18 < -0.056 - r 13838"
+                        action = "sell"
+                      
+
                     
                     elif (    
                         ma50_last <= ma50_2_min_ago
@@ -36342,7 +36363,27 @@ class maddog:
                         
                         
                         
-                     
+                    elif (
+                        deviation_sell > 0.81
+                        and deviation_ma3_sopra_ma18 < -0.056
+                        and ma300_last > ma300_301_min_ago
+                        
+                        and ma3_last < ma18_last
+                        and ma2_last < ma5_last
+                
+                        and ma2_last < ma2_2_min_ago
+                        and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.02
+                        and ma2_differenza_2_min_ago < -5
+                        
+                        and macd < macd_2_min_ago
+                        and macd < 16
+                        and macd_differenza_5_min_ago < -9
+                        
+                    ):    
+                        sell = "SELL 3 da 60 a 90 min ex cond spec P M e S con ma300 > 5 ore ! e dev sell > 0.81 e macd < 16 e MACD diff_5_min_ago < -9 e dev 3-18 < -0.056 - r 13870"
+                        action = "sell"
+
+              
                     elif (    
                         ma50_last > ma50_2_min_ago 
                         and ma2_last < ma2_2_min_ago
