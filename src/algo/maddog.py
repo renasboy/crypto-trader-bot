@@ -42172,7 +42172,7 @@ class maddog:
                 and macd < 28
             
             ):
-                sell = "SELL cond spec con ma20>ma20 2 min ago e con ma 50<= ma 50 2 min ago con ma300 > 5 ore - SALVAGENTE 4 dev 3-39 < 0.08 and dev_sell < -0.045 - r 16047 B1 Y1 x1"
+                sell = "SELL cond spec con ma20>ma20 2 min ago e con ma 50<= ma 50 2 min ago con ma300 > 5 ore - SALVAGENTE 4 dev 3-39 < 0.08 and dev_sell < -0.045 - r 16047 B1 Y1 X1"
                 action = "sell"
                 
                 # 11 feb 2024 dev sell a -0.045 da -0.03
