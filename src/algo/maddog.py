@@ -41724,8 +41724,8 @@ class maddog:
                 #  2 feb 2024 and deviation_sell < -0.02 da 0.02
 
           
-            elif (
-                
+            
+            elif (    
                 ma50_last > ma50_2_min_ago
                 and ma100_last > ma100_60_min_ago
                 and ma3_last < ma28_last
@@ -41733,23 +41733,22 @@ class maddog:
                 and deviation_ma39 < 0.13
                 and deviation_sell < 0.02
                 
-                and deviation_ma5_sotto_ma200 > -0.60
+                and deviation_ma5_sotto_ma200 > -0.70
                 and deviation_ma100_sopra_ma300 < 0.40
                 
                 and ma2_last < ma5_last
                 and ma2_last < ma2_2_min_ago
-                and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.018
+                and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.017
                 
-                and macd < 0
+                and macd < 1
                 and macd_differenza_2_min_ago < -1.00
             ):
-                sell = "SELL nuova cond spec - se 100> vende con 3-28 dev 3-39 < 0.13 and dev_sell < 0.02 e ma50 > con MACD IN TERRITORIO NEG and DIFF MACD < -1 - r 16047 A2X2y"
+                sell = "SELL nuova cond spec - se 100> vende con 3-28 e dev 3-39 < 0.13 and dev_sell < 0.02 e ma50 > con MACD IN TERRITORIO NEG and DIFF MACD < -1 - r 16047 A2 X2 Y"
                 action = "sell"
                 
                 # 29 nov 2023 vende con 3-28 se ma 100 > 100 60 min
                 #  5 dic 2023 aggiunto and ma2_last < ma5_last
                 #  5 dic 2023 aggiunto and ma2_differenza_2_min_ago < -3
-                
                 
                 # 29 dic 2023 tolto macd < macd 2 min ago che faceva arrivare in ritardo la vendita
                 # 29 dic 2023 ATTENZIONE ! macd diff < -1 significa CHE HA PIU' FORZA mentre scende ! scende piu' con vigore !
