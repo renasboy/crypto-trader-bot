@@ -41857,20 +41857,23 @@ class maddog:
                 and ma100_last < ma100_60_min_ago
                 
                 and deviation_ma39 < 0.13
-                and deviation_sell < -0.02
+                and deviation_sell < -0.03
                 
                 and deviation_ma5_sotto_ma200 > -0.60
                 and deviation_ma100_sopra_ma300 < 0.40
                 
                 and ma2_last < ma2_2_min_ago
-                and ma2_differenza_2_min_ago < -3
+                and ma2_differenza_2_min_ago < -5
+                
                 and macd < macd_2_min_ago
                 and macd < 15
                 and macd_differenza_2_min_ago < -1.5
             ):
-                sell = "SELL nuova cond spec CON 5 < 10 e dev 3-39 < 0.13 and dev_sell < -0.02 con ma50 > e con ma5 sotto ma200 > -0.60 and MACD < and macd < 15 - r 16047 A2 Y1 Y2 x"
+                sell = "SELL nuova cond spec CON 5 < 10 e dev 3-39 < 0.13 and dev_sell < -0.03 con ma50 > e con ma5 sotto ma200 > -0.60 and MACD < and macd < 15 - r 16047 A2 Y1 Y2 X"
                 action = "sell"
-
+                
+                # 12 feb 2023 and dev_sell a -0.03 da -0.02
+          
             
             elif (    
                 ma50_last > ma50_2_min_ago
