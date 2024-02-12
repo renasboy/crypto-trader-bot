@@ -41843,16 +41843,21 @@ class maddog:
                 action = "sell"
                 
                 #  8 gen 2024 dev sell a -0.02 da 0.01 ! con 5>10
-            
+
+
+
+          
             
             elif (    
                 ma50_last > ma50_2_min_ago
-                and ma100_last > ma100_10_min_ago
                 and ma13_last > ma50_last
+                and ma100_last > ma100_10_min_ago
+                
+                and deviation_ma250_sopra_ma300 > 0.12
+                
                 
                 and ma5_last < ma10_last
                 and ma20_last <= ma20_2_min_ago
-                
                 
                 and ma100_last < ma100_60_min_ago
                 
@@ -41863,13 +41868,79 @@ class maddog:
                 and deviation_ma100_sopra_ma300 < 0.40
                 
                 and ma2_last < ma2_2_min_ago
+                and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.017
                 and ma2_differenza_2_min_ago < -5
                 
                 and macd < macd_2_min_ago
                 and macd < 15
                 and macd_differenza_2_min_ago < -1.5
             ):
-                sell = "SELL nuova cond spec CON 5 < 10 e dev 3-39 < 0.13 and dev_sell < -0.03 con ma50 > e con ma5 sotto ma200 > -0.60 and MACD < and macd < 15 - r 16047 A2 Y1 Y2 X"
+                sell = "SELL NCS con 5 < 10 e dev 3-39 < 0.13 e dev_sell < -0.03 con ma50 > con ma5 sotto ma200 > -0.60 and MACD < e macd < 15 - r 16047 A2 Y1 Y2 X1"
+                action = "sell"
+                
+                # 12 feb 2023 and dev_sell a -0.03 da -0.02
+
+            elif (    
+                ma50_last > ma50_2_min_ago
+                and ma13_last > ma50_last
+                and ma100_last > ma100_10_min_ago
+                
+                and deviation_ma250_sopra_ma300 < 0.12
+                and deviation_ma250_sopra_ma300 > -0.12
+                
+                and ma5_last < ma10_last
+                and ma20_last <= ma20_2_min_ago
+                
+                and ma100_last < ma100_60_min_ago
+                
+                and deviation_ma39 < 0.13
+                and deviation_sell < -0.03
+                
+                and deviation_ma5_sotto_ma200 > -0.60
+                and deviation_ma100_sopra_ma300 < 0.40
+                
+                and ma2_last < ma2_2_min_ago
+                and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.017
+                and ma2_differenza_2_min_ago < -5
+                
+                and macd < macd_2_min_ago
+                and macd < 15
+                and macd_differenza_2_min_ago < -1.5
+            ):
+                sell = "SELL NCS con 5 < 10 e dev 3-39 < 0.13 e dev_sell < -0.03 con ma50 > con ma5 sotto ma200 > -0.60 and MACD < e macd < 15 - r 16047 A2 Y1 Y2 X2"
+                action = "sell"
+                
+                # 12 feb 2023 and dev_sell a -0.03 da -0.02
+
+            
+            elif (    
+                ma50_last > ma50_2_min_ago
+                and ma13_last > ma50_last
+                and ma100_last > ma100_10_min_ago
+                
+                and deviation_ma250_sopra_ma300 < -0.12
+                
+                
+                and ma5_last < ma10_last
+                and ma20_last <= ma20_2_min_ago
+                
+                and ma100_last < ma100_60_min_ago
+                
+                and deviation_ma39 < 0.13
+                and deviation_sell < -0.03
+                
+                and deviation_ma5_sotto_ma200 > -0.60
+                and deviation_ma100_sopra_ma300 < 0.40
+                
+                and ma2_last < ma2_2_min_ago
+                and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.017
+                and ma2_differenza_2_min_ago < -5
+                
+                and macd < macd_2_min_ago
+                and macd < 15
+                and macd_differenza_2_min_ago < -1.5
+            ):
+                sell = "SELL NCS con 5 < 10 e dev 3-39 < 0.13 e dev_sell < -0.03 con ma50 > con ma5 sotto ma200 > -0.60 and MACD < e macd < 15 - r 16047 A2 Y1 Y2 X3"
                 action = "sell"
                 
                 # 12 feb 2023 and dev_sell a -0.03 da -0.02
