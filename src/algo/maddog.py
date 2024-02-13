@@ -13958,6 +13958,23 @@ class maddog:
                     
                     
                 
+                
+                elif (
+                    
+                    ma450_last > ma450_120_min_ago
+                    and (ma5_prev < ma90_prev and ma5_last > ma90_last)
+                    and ma100_last > ma300_last
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                ):    
+                    buy = "BUY 2 con ma450_last > ma450_120_min_ago E incrocio 5-90 - r 5870"
+                    action = "buy"
+                    percentage = 70
+                    
+                    # 13 feb 2023 aggiunta questa
+              
+
                 # BUY 2 RIVOLUZIONARIO se ma39 > ma50
                 
                 elif (
@@ -16588,7 +16605,22 @@ class maddog:
                     # 20 apr 2023 5-28 a 0.07 da 0.10
                     # 20 apr 2023 5-28 a 0.03 da 0.07
                     
+                
+                elif (    
+                    ma450_last > ma450_120_min_ago
+                    and (ma5_prev < ma90_prev and ma5_last > ma90_last)
+                    and ma100_last > ma300_last
                     
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                ):    
+                    buy = "BUY 3 con ma450_last > ma450_120_min_ago E incrocio 5-90 - r 6270"
+                    action = "buy"
+                    percentage = 70
+                    
+                    # 13 feb 2023 aggiunta questa
+
+                
                 elif (
                     deviation_ma4_sopra_ma30 > 0.15
                     and deviation_ma3_sopra_ma10 > 0.17
