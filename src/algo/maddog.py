@@ -9480,9 +9480,9 @@ class maddog:
                     
                     # tolto and ma10_last >= ma20_last se 300> 5 ore e incrocio al rialzo 3-180
 
-                
                 elif (  
                     ma3_last > ma28_last
+                    and ma100_last >= ma100_10_min_ago
                     and ma300_last < ma300_301_min_ago
                     and ma10_last >= ma20_last
                     and ma200_last > ma300_last
@@ -9500,7 +9500,35 @@ class maddog:
                     and macd_differenza_2_min_ago > 2.7
                 ):
 
-                    buy = "BUY 1 forever young 1 con 300 che scende da 5 ore ! MA 300 > 120 min ago e ma200 > e se ma200 > ma300 E 3-16 > 0.07 e macd_diff_2_min_ago > 2.7 - r 4325 A2"
+                    buy = "BUY 1 forever young 1 con 300 che scende da 5 ore ! MA 300 > 120 min ago e ma200 > e ma200 > ma300 E 3-16 > 0.07 e macd_diff_2_min_ago > 2.7 - r 4325 A2 X"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # 13 feb 2024 se 100 > ok cosi'
+
+                elif (  
+                    ma3_last > ma28_last
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.40
+                    
+                    and ma300_last < ma300_301_min_ago
+                    and ma10_last >= ma20_last
+                    and ma200_last > ma300_last
+                    and ma300_last >= ma300_120_min_ago
+                    and ma200_last >= ma200_15_min_ago
+                    
+                    and deviation_ma3_sopra_ma16 > 0.005
+                    and deviation_ma3_sopra_ma16 > 0.03
+                    
+                    and ma3_last >= ma11_last
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.020
+                    and macd >= macd_2_min_ago
+                    and macd_differenza_2_min_ago > 2.7
+                ):
+
+                    buy = "BUY 1 forever young 1 con 300 che scende da 5 ore ! MA 300 > 120 min ago e ma200 > e ma200 > ma300 E 3-16 > 0.07 e macd_diff_2_min_ago > 2.7 - r 4325 A2 Y"
                     action = "buy"
                     percentage = 80
                     
@@ -9511,6 +9539,8 @@ class maddog:
                     # 17 ott 2023 5-28 > 0.04 da > 0.08
                     # 12 dic 2023 aggiunta and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
                     # 15 gen 2024 aggiunta and macd_differenza_2_min_ago > 3
+                    # 13 feb 2024 se 100< 100 10 min ago allora 5 deve stare sotto 100 di almeno -0.40 ! (una specie di nuoa era)
+
    
                 # BUY 1 forever young 1 PIU' PRUDENTE se ma200 > e se ma200 > ma300
                 
