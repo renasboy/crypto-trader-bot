@@ -75,7 +75,7 @@ class maddog:
         ma250_last, ma250_prev = self.algo_helper.ma_last_prev(250)
         ma285_last, ma285_prev = self.algo_helper.ma_last_prev(285)
         ma300_last, ma300_prev = self.algo_helper.ma_last_prev(300)
-        
+        ma425_last, ma425_prev = self.algo_helper.ma_last_prev(425)
         ma450_last, ma450_prev = self.algo_helper.ma_last_prev(450)
         
         
@@ -21837,7 +21837,7 @@ class maddog:
                     action = "buy"
                     percentage = 70
 
-                
+              
                 elif (    
                     ma3_last > ma20_last
                     
@@ -21885,6 +21885,37 @@ class maddog:
                     # 20 dic 2023 aggiunta and macd_differenza_2_min_ago > 0.30
                     # 20 dic 2023 aggiunta and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
                     # 15 gen 2024 5-28 > -0.02 da 0.02
+
+
+                
+                elif (    
+                    ma3_last > ma20_last
+                    and (ma3_prev < ma425_prev and ma3_last > ma425_last)
+                    and ma50_differenza_ma59 < -5
+                    and ma10_last < ma30_last
+                    
+                    and ma2_differenza_ma5 > 8
+                    and ma2_differenza_2_min_ago > 8
+                    and ma450_last >= ma450_120_min_ago
+                    
+                    and ma50_last > ma450_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > 0.02
+                    and deviation_ma5_sopra_ma28 > -0.02
+                    
+                    and ma3_last > ma13_last
+                    
+                    and ma2_last > ma2_2_min_ago
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
+                    and macd_differenza_2_min_ago > 0.30
+                ):
+                    buy = "BUY 5 con inrocio al rialzo 3-425 and 3-20 and 450_last >= 450_120_min_ago and 5-28 > -0.02 CON 50 > 450 and ma2_differenza_ma5 > 8 - r 7144 A1 Y3"
+                    action = "buy"
+                    percentage = 70
+
+              
+                
 
 
               
