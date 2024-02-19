@@ -23556,37 +23556,6 @@ class maddog:
 
               
               
-                elif (
-                    
-                    ma5_last > ma54_last
-                    and ma39_last <= ma78_last
-                    
-                    and ma450_last > ma450_480_min_ago
-                    and ma78_last < ma150_last
-                    
-                    and ma100_last < ma100_120_min_ago
-                    and ma200_last < ma200_120_min_ago
-                    and ma300_last < ma300_120_min_ago
-                    
-                    and ma100_last < ma200_last
-                    and ma200_last < ma300_last
-                    
-                    and deviation_ma3_sopra_ma10 > 0.01
-                    and deviation_ma5_sopra_ma28 > 0.02
-                    
-                    and ma2_last >= ma2_2_min_ago
-                    and macd_differenza_2_min_ago > 2
-                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.020
-                ):
-                    buy = "BUY 5 29 ago 2022 > 120 min di ribasso 78<150 CON ma100<120 min ago E CON ma39 <= ma78- r 7564 A2 YX2"
-                    action = "buy"
-                    percentage = 80
-                    
-                    # 19 set 2022 aggiunta 3-10 0.07 
-                    # 25 gen 2023 5-28 0.15 da 0.12
-                    #  1 feb 2023 8-100 da 18-100
-                    # 12 dic 2023 aggiunta and macd_differenza_2_min_ago > 2
-                    
               
                 elif (
                     
