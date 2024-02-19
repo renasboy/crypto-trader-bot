@@ -42269,7 +42269,7 @@ class maddog:
                 and delta_150_100 <= delta_150_100_60_min
                 
                 and deviation_ma39 < 0.10
-                and deviation_sell < -0.02
+                and deviation_sell < -0.03
                 
                 and ma50_last <= ma50_2_min_ago
                 and deviation_ma100_sopra_ma300 < 0.40
@@ -42279,10 +42279,10 @@ class maddog:
                 and ma2_last <= ma2_2_min_ago 
                 and macd < macd_2_min_ago
             ):
-                sell = "SELL cond spec 6 GIORNO con ma300 < 5 ore e 50 < - dev 3-39 < 0.10 and dev_sell < -0.04 con ma50 < e con ma5 sotto ma200 > -0.90 - r 16047 B2 Y2 A"
+                sell = "SELL cond spec 6 GIORNO con ma300 < 5 ore e 50 < - dev 3-39 < 0.10 and dev_sell < -0.03 con ma50 < e con ma5 sotto ma200 > -0.90 - r 16047 B2 Y2 A"
                 action = "sell"
                 
-                # 31 gen 2024 dev sell a -0.04 da -0.02 con ma30_last > ma50_last. 
+                # 19 feb 2024 dev sell a -0.03 da -0.02 con ma30_last > ma50_last. 
             
           
             elif (
