@@ -75,7 +75,7 @@ class maddog:
         ma250_last, ma250_prev = self.algo_helper.ma_last_prev(250)
         ma285_last, ma285_prev = self.algo_helper.ma_last_prev(285)
         ma300_last, ma300_prev = self.algo_helper.ma_last_prev(300)
-        
+        ma425_last, ma425_prev = self.algo_helper.ma_last_prev(425)
         ma450_last, ma450_prev = self.algo_helper.ma_last_prev(450)
         
         
@@ -1859,7 +1859,39 @@ class maddog:
                     percentage = 50
 
                
-                  
+                # BUY 1 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-59 - r 1043 B
+                
+                elif (
+                    
+                    ma3_last > ma18_last
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.020
+                    and ma2_differenza_2_min_ago > 3
+                    and ma450_last < ma450_360_min_ago
+                    and ma300_last < ma300_60_min_ago
+                    and ma200_last < ma200_60_min_ago
+                    
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.30
+                    and deviation_ma5_sopra_ma200 < -0.30
+                    and deviation_ma5_sotto_ma300 < -0.30
+                    and deviation_ma5_sotto_ma450 < -0.30
+                    
+                    and deviation_ma50_sopra_o_sotto_ma100 < -0.01
+                    and deviation_ma100_sopra_ma300 < -0.10
+                    
+                    and deviation_ma3_sopra_ma10 > 0.081
+                    and deviation_ma3_sopra_ma16 > -0.125
+                    and deviation_ma5_sopra_ma28 > -0.155
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
+                    and macd > -40
+                    and macd_differenza_2_min_ago > 0.50
+                ):
+                    buy = "BUY 1 migliore con distanza 5-300 E dev TRIADE e dev ma2 e diff macd - r 1043 B1"
+                    action = "buy"
+                    percentage = 50
+
+                
                 elif (    
                     ma3_last > ma18_last
                   
@@ -19106,8 +19138,7 @@ class maddog:
                     and ma10_last > ma100_last
                     
                     and deviation_ma5_sopra_ma28 > 0.05
-                    and deviation_buy3 > 0.07
-                    and deviation_ma7_sopra_ma40 > 0.08
+                    
                     
                     and ma3_last > ma13_last
                     
@@ -19135,11 +19166,7 @@ class maddog:
                     
                     and ma300_last > ma300_301_min_ago
                     and ma100_last > ma200_last
-                    
-                    and deviation_ma3_sopra_ma16 > 0.045
-                    
-                    and deviation_buy3 > 0.08
-                    and deviation_ma7_sopra_ma40 > 0.07
+                   
                     and deviation_ma3_sopra_ma16 > 0.045
                     and deviation_ma5_sopra_ma28 > 0.05
                     
@@ -19200,7 +19227,7 @@ class maddog:
                     ma78_last < ma150_last
                     
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.23
-                    and deviation_ma5_sotto_ma300 < -0.10
+                    and deviation_ma5_sotto_ma300 < -0.30
                     
                     and deviation_ma3_sopra_ma10 > 0.057
                     and deviation_ma3_sopra_ma16 > 0.06
@@ -19305,13 +19332,10 @@ class maddog:
                     
                     and deviation_ma3_sopra_ma10 > 0.10
                     and deviation_ma5_sopra_ma28 > 0.13
-                    and deviation_bellissima >= 0.02
-                    
-                    and ma39_last >= ma59_last
-                    and delta_buy3_incrocio_ma3_ma8 >= 0.06
+           
                     and ma3_last > ma8_last
                     and ma3_last >= ma69_last
-                    and ma4_last >= ma4_2_min_ago
+                    
                     and ma2_last >= ma2_2_min_ago
                     and ma5_last >= ma15_last
                     and ma5_last >= ma25_last
@@ -19864,6 +19888,8 @@ class maddog:
                     
                     #  5 set 2023 anticipata ndecchiecella
 
+              
+
                 elif (
                     deviation_ma4_sopra_ma30 > 0.12
                     and ma10_last >= ma39_last
@@ -19894,6 +19920,8 @@ class maddog:
                     # deviation = ma5_last / last_trade_price
                     # 18 gen 2024 10-39 da and ma10_last >= ma39_last
                     # 27 gen 2024 aggiunta 2>5 (e' necessaria !) vedi 27 gen 2024 ore 9:51
+
+              
                 
                 elif (
                     deviation_ma4_sopra_ma30 > 0.15
@@ -19946,26 +19974,7 @@ class maddog:
                     # 25 gen se 300 > 450 compra prima
                     
                     
-                elif (
-                    ma69_last >= ma69_2_min_ago
-                    and ma300_last < ma450_last
-                    and ma300_last > ma300_60_min_ago
-                    and ma100_last < ma200_last
-                    and deviation_bellissima > 0.15
-                    and deviation_buy3 > 0.11
-                    and ma3_last > ma13_last
-                    and deviation_ma7_sopra_ma40 > 0.11
-                    and ma4_last > ma9_last
-                    and ma4_last > ma50_last
-                    and ma2_last > ma2_2_min_ago
-                    and ma7_last > ma25_last
-                    
-                    and ma13_last > ma100_last
-                    and deviation_ma5_sopra_ma28 > 0.05
-                ):
-                    buy = "BUY 4A con ma 78 > TREND LATERALE con 6-30 > 0.15 CON 300<450 - r 6780 B"
-                    action = "buy"
-                    percentage = 70
+                
                     
                
                 ##############################################################################################
@@ -20058,42 +20067,7 @@ class maddog:
                     # 6 apr 2023 8-100 da 13-100
                     
                     
-                elif (
-                    ma20_last >= ma20_2_min_ago
-                    and ma200_last > ma200_301_min_ago
-                    and ma300_last > ma300_60_min_ago
-                    and deviation_ma250_sopra_ma300 > 0.04
-                    
-                    and ma78_last < ma78_60_min_ago
-                    and deviation_ma3_sopra_ma18 > 0.07
-                    
-                    and deviation_buy3 > 0.005
-                    and delta_buy3_incrocio_ma3_ma8 > 0.04
-                    and deviation_ma4_sopra_ma30 > 0.05
-                    
-                    and ma3_last > ma8_last
-                    and ma3_last > ma50_last
-                    and ma8_last > ma100_last
-                    
-                    
-                    and ma7_last > ma25_last
-                    
-                    
-                    and deviation_ma5_sopra_ma28 > 0.03
-                    and ma2_last > ma2_2_min_ago
-                    and macd > macd_2_min_ago
-                ):
-                    buy = "BUY 4B RIVOLUZIONARIO MA ma78 < 60 min ! and macd > 2 min ago - r 6859 A1y"
-                    action = "buy"
-                    percentage = 70
-                    
-                    # deviation_buy3 = ma4_last/ma30_last
-                    # deviation_ma4_sopra_ma100 > 0.25 arrivati al buy 4 DEVE AVERE UNA CERTA FORZA !
-                    # ma se 250 > 300 ! serve una forza minore
-                    # 6 apr 2023 ma20 2 min ago da ma28 min ago
-                    # 6 apr 2023 3-50 da 3-78
-                    # 6 apr 2023 8-100 da 13-100
-                    
+                
                     
                     
                     
@@ -20369,6 +20343,8 @@ class maddog:
                     #  9 gen 2024 and ma10_last > ma10_2_min_ago da 20 2 min ago
                     #  9 gen 2024 aggiunto and macd_differenza_2_min_ago > 1.25
                     #  9 gen 2024 deviation_ma250_sopra_ma300 a 0.13 da 0.12
+
+              
                 
                 elif (
                     ma5_last >= ma5_2_min_ago
@@ -20404,6 +20380,8 @@ class maddog:
                     # 18 dic 2023 deviation_ma250_sopra_ma300 a 0.12 da 0.10
                     # 18 dic 2023 deviation_ma250_sopra_ma300 a -0.12 da -0.10
 
+              
+
                 
                 elif (
                     ma78_last >= ma78_2_min_ago
@@ -20433,115 +20411,7 @@ class maddog:
                     # deviation_ma4_sopra_ma100 > 0.25 arrivati al buy 4 DEVE AVERE UNA CERTA FORZA !
                     
                 
-                
-                
-                elif (
-                    ma78_last >= ma78_2_min_ago
-                    and ma300_last < ma300_60_min_ago
-                    and deviation_ma4_sopra_ma100 > 0.24
-                    and ma39_last > ma100_last
                     
-                    and deviation_buy3 > 0.01
-                    and delta_buy3_incrocio_ma3_ma8 > 0.05
-                    and deviation_ma4_sopra_ma30 > 0.15
-                    and ma3_last > ma8_last
-                    and ma3_last > ma78_last
-                    and ma4_last >= ma4_2_min_ago
-                    and ma2_last > ma2_2_min_ago
-                    and ma7_last > ma25_last
-                    
-                    and ma13_last > ma100_last
-                    and deviation_ma5_sopra_ma28 > 0.10
-                ):
-                    buy = "BUY 4B RIVOLUZIONARIO con ma78 > and ma39_last > ma100_last - r 6893"
-                    action = "buy"
-                    percentage = 70
-                    
-                    # deviation_buy3 = ma4_last/ma30_last
-                    # deviation_ma4_sopra_ma100 > 0.25 arrivati al buy 4 DEVE AVERE UNA CERTA FORZA !
-                    
-                    
-                    
-                    
-                elif (
-                    ma78_last >= ma78_2_min_ago
-                    and ma300_last < ma300_60_min_ago
-                    and deviation_ma4_sopra_ma100 > 0.25
-                    and ma39_last < ma100_last
-                    
-                    and deviation_buy3 > 0.02
-                    and delta_buy3_incrocio_ma3_ma8 > 0.05
-                    and deviation_ma4_sopra_ma30 > 0.16
-                    and ma3_last > ma8_last
-                    and ma3_last > ma78_last
-                    and ma4_last >= ma4_2_min_ago
-                    and ma2_last > ma2_2_min_ago
-                    and ma7_last > ma25_last
-                    
-                    and ma13_last > ma100_last
-                    and deviation_ma5_sopra_ma28 > 0.10
-                ):
-                    buy = "BUY 4B RIVOLUZIONARIO con ma78 > and ma39_last < ma100_last - r 6921"
-                    action = "buy"
-                    percentage = 70
-                    
-                    # deviation_buy3 = ma4_last/ma30_last
-                    # deviation_ma4_sopra_ma100 > 0.25 arrivati al buy 4 DEVE AVERE UNA CERTA FORZA !
-                    
-                    
-                    
-                    
-                ###################################################################################################
-               
-                elif (
-                    ma78_last < ma78_2_min_ago
-                    and ma300_last > ma300_60_min_ago
-                    
-                    and deviation_buy3 > 0.04
-                    and delta_buy3_incrocio_ma3_ma8 > 0.08
-                    and deviation_ma4_sopra_ma30 > 0.20
-                    and ma3_last > ma8_last
-                    and ma3_last > ma78_last
-                    and ma4_last > ma4_2_min_ago
-                    and ma2_last > ma2_2_min_ago
-                    and ma7_last > ma25_last
-                    
-                    and ma13_last > ma100_last
-                    and deviation_ma5_sopra_ma28 > 0.05
-                ):
-                    buy = "BUY 4C RIVOLUZIONARIO con ma78 < - r 6955"
-                    action = "buy"
-                    percentage = 70
-                    
-                    
-                    
-                
-                # BUY 4C RIVOLUZIONARIO con ma78 <
-                
-                elif (
-                    ma78_last < ma78_2_min_ago
-                    and ma300_last < ma300_60_min_ago
-                    and deviation_ma4_sopra_ma100 > 0.25
-                    
-                    and deviation_buy3 > 0.04
-                    and delta_buy3_incrocio_ma3_ma8 > 0.08
-                    and deviation_ma4_sopra_ma30 > 0.20
-                    and ma3_last > ma8_last
-                    and ma3_last > ma78_last
-                    and ma4_last > ma4_2_min_ago
-                    and ma2_last > ma2_2_min_ago
-                    and ma7_last > ma25_last
-                    
-                    and ma13_last > ma100_last
-                    and deviation_ma5_sopra_ma28 > 0.05
-                ):
-                    buy = "BUY 4C RIVOLUZIONARIO con ma78 < - r 6981"
-                    action = "buy"
-                    percentage = 70
-                    
-                    
-                
-                
                 
                 
                 # BUY 4 se 11 > 200 e con ma69 > and deviation_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali) IMPORTATA DA BUY 5
@@ -20719,7 +20589,9 @@ class maddog:
                     percentage = 90
                     
                     # vuoi comprare dopo 120 min di ribasso ? deve essere 5-300 < -0.35 ! voglio uno sconto ulteriore dello 0.35% ! PENSIERO LATERALE
-                    
+
+
+              
                 # BUY 4 29 ago 2022 > 180 min di ribasso
                 # 16 mar 2023 aggiunta 3-10 > 0.05
                 
@@ -20755,7 +20627,7 @@ class maddog:
                 elif (
                     
                     ma8_last > ma54_last
-                    and deviation_ma5_sopra_o_sotto_ma100 > -0.05
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.30
                     
                     and ma100_last < ma100_180_min_ago
                     and ma200_last < ma200_180_min_ago
@@ -20785,7 +20657,7 @@ class maddog:
                 elif (
                     
                     ma5_last > ma33_last
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.05
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.30
                     
                     and ma100_last < ma100_180_min_ago
                     and ma200_last < ma200_180_min_ago
@@ -20837,8 +20709,8 @@ class maddog:
                     
                     
                 # BUY 4 13 apr 2023 zia pina > 180 min di ribasso 78 < 150
-                elif (
-                    
+                
+                elif (    
                     ma3_last > ma15_last
                     and ma78_last < ma150_last
                     and deviation_ma39 > -0.30
@@ -20867,8 +20739,9 @@ class maddog:
                     percentage = 90
 
                 
-                elif (
-                    
+                # IPERVENDUTO DNA 
+                
+                elif (    
                     ma3_last > ma15_last
                     and ma78_last < ma150_last
                     and deviation_ma39 <= -0.30
@@ -21100,7 +20973,7 @@ class maddog:
                     and macd > macd_2_min_ago
                     
                 ):
-                    buy = "BUY 4 con 5-54 importato da buy 5 rccr con 50>59 and macd > macd_2_min_ago - r 7063 NUOVA ERA A2 STONG"
+                    buy = "BUY 4 con 5-54 importato da buy 5 rccr con 50>59 and macd > macd_2_min_ago - r 7063 NUOVA ERA A2 STRONG"
                     action = "buy"
                     percentage = 90
 
@@ -21964,7 +21837,7 @@ class maddog:
                     action = "buy"
                     percentage = 70
 
-                
+              
                 elif (    
                     ma3_last > ma20_last
                     
@@ -22012,6 +21885,37 @@ class maddog:
                     # 20 dic 2023 aggiunta and macd_differenza_2_min_ago > 0.30
                     # 20 dic 2023 aggiunta and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
                     # 15 gen 2024 5-28 > -0.02 da 0.02
+
+
+                
+                elif (    
+                    ma3_last > ma20_last
+                    and (ma3_prev < ma425_prev and ma3_last > ma425_last)
+                    and ma50_differenza_ma59 < -5
+                    and ma10_last < ma30_last
+                    
+                    and ma2_differenza_ma5 > 8
+                    and ma2_differenza_2_min_ago > 8
+                    and ma450_last >= ma450_120_min_ago
+                    
+                    and ma50_last > ma450_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > 0.02
+                    and deviation_ma5_sopra_ma28 > -0.02
+                    
+                    and ma3_last > ma13_last
+                    
+                    and ma2_last > ma2_2_min_ago
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
+                    and macd_differenza_2_min_ago > 0.30
+                ):
+                    buy = "BUY 5 con inrocio al rialzo 3-425 and 3-20 and 450_last >= 450_120_min_ago and 5-28 > -0.02 CON 50 > 450 and ma2_differenza_ma5 > 8 - r 7144 A1 Y3"
+                    action = "buy"
+                    percentage = 70
+
+              
+                
 
 
               
@@ -22110,32 +22014,7 @@ class maddog:
                     # 16 set 2023 aggiunta and macd > macd_2_min_ago
                     # 28 set 2023 con ma50< ma50 2 min ago MA con ma300>ma300 301 min ago
               
-                elif (
-                    ma50_last >= ma50_2_min_ago
-                    and ma100_last < ma300_last
-                    and ma28_last > ma28_30_min_ago
-                    and ma78_last > ma150_last
-                    
-                    and deviation_ma3_sopra_ma10 > 0.22
-                    and deviation_ma5_sopra_ma28 > 0.12
-                    
-                    and deviation_buy3 > 0.09
-                    and ma3_last > ma13_last
-                    and deviation_ma7_sopra_ma40 > 0.09
-                    and ma4_last > ma9_last
-                    and ma4_last > ma50_last
-                    
-                    and ma6_last > ma15_last
-                    and ma7_last > ma25_last
-                    
-                    and ma2_last > ma2_2_min_ago
                 
-                ):
-                    buy = "BUY 5 con ma50 > AND 50>100 and ma28_last > ma28_30_min_ago and 5-28 > 0.12  CON ma100_last < ma300_last AND 3-10 > 0.22 - riga 7174 b"
-                    action = "buy"
-                    percentage = 70
-                    
-                    # 6 giu 2022 5-28 a 0.12 da 0.15
 
               
                     
