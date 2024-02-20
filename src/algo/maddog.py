@@ -19056,13 +19056,57 @@ class maddog:
                     percentage = 50
                     
                     
-                   
-                  
+                # CONDIZIONE IPERVENDUTO DNA
+                #    
+                elif (     
+
+                    ma3_last > ma15_last
+                    and ma2_last >= ma10_last
+                    and deviation_ma39 <= -0.30
+                    and ma3_last < ma39_last
+                    and ma100_last < ma100_60_min_ago
+                    and ma100_last < ma100_120_min_ago
+
+                    and deviation_ma54_sopra_o_sotto_ma72 < -0.015
+
+                    and deviation_ma39_sotto_ma200 < -0.01
+                    and deviation_ma300_sopra_ma450 > -0.60
+
+                    and deviation_ma3_sopra_ma10 > 0.015
+                    and deviation_ma3_sopra_ma16 > 0.02
+                    and deviation_ma3_sopra_ma18 > -0.04
+
+                    and ma2_last >= ma2_2_min_ago
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
+                    and ma2_differenza_2_min_ago > 8
+                    and ma2_differenza_ma5 > 11
+                    and macd > -20
+                    and macd_differenza_2_min_ago > 1.25
+
+                ):    
+                    buy = "BUY 3 condizione DNA IPERVENDUTO 3-39 con 3-10 E 300 vicina 450 e 3-16 > 0.01 + > E ma2_diff_2_min_ago > 3 E dev ma2 e MACD > -20 - r 6620"
+                    action = "buy"
+                    percentage = 90
+
+                    # 15 nov 2023 se compra quando 3<39 allora riduco dev 3-16 
+                    # 16 nov 2023 AGGIUNTO SOLO SU QUESTA CONDIZIONE E DOPO ATTENTA ANALISI STATISTICA and macd > 8
+                    #  5 dic 2023 aggiunta and ma2_differenza_ma5 > 26 vedi 4 dic 2023 ore 16:45
+                    #  5 dic 2023 macd >-8 da >8
+                    # 12 dic 2023 macd a -10 da -8
+                    # 29 dicembre 2023 entra in gioco CONDIZIONE DNA - IPERVENDUTO 3-39 < -0.30
+                    # 19 feb 2024 aggiunta 
+                    # 
+                    # 
                 elif (    
                     ma3_last > ma39_last
+                    and ma100_last > ma100_10_min_ago
+                    
                     and ma10_last < ma20_last
                     and ma300_last > ma450_last
                     and ma300_last > ma300_120_min_ago
+                    
+                    and deviation_ma250_sopra_ma300 < 0.12
+                    and deviation_ma250_sopra_ma300 > -0.12
                     
                     and deviation_ma100_sopra_ma300 < 0.30
                     and deviation_ma100_sopra_ma300 > -0.30
@@ -19079,7 +19123,46 @@ class maddog:
                     and macd > -11
                 ): 
                 
-                    buy = "BUY 3 laterale 3-39 importata da buy 2 con 300 > 450 and dev 3-10 > 0.03 MA CON ma10<ma20 and 3-16 > 0.07 E dev ma2 e diff macd - r 6622 A"
+                    buy = "BUY 3 laterale 3-39 importata da buy 2 con 300 > 450 and dev 3-10 > 0.03 MA CON ma10<ma20 and 3-16 > 0.07 E dev ma2 e diff macd - r 6622 A1"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # 19 set 2022 aggiunta 3-10 > 0.07
+                    #  3 ott 2022 3-10 0.113 da 0.07
+                    #  4 mag 2023 3-10 0.07 da 0.113 con 300>450
+                    # 23 mag 2023 3-39 da 8-59 con 300>450 e 100 attaccata alla 300
+                    # 11 ago 2023 anticipata ndecchiecella
+                    # 31 ott 2023 3-39 da 5-39
+                    # 31 ott 2023 and deviation_ma3_sopra_ma10 > 0.03 da > 0.07
+                    # 27 dic 2023 se ma10 < ma20 aggiunta dev ma2 e diff macd
+                    # 
+                    #     #   
+                elif (    
+                    ma5_last > ma54_last
+                    and ma100_last < ma100_10_min_ago
+                    and ma10_last < ma20_last
+                    and ma300_last > ma450_last
+                    and ma300_last > ma300_120_min_ago
+                    
+                    and deviation_ma250_sopra_ma300 < 0.12
+                    and deviation_ma250_sopra_ma300 > -0.12
+                    
+                    and deviation_ma100_sopra_ma300 < 0.30
+                    and deviation_ma100_sopra_ma300 > -0.30
+                    
+                    and deviation_ma3_sopra_ma10 > 0.03
+                    and deviation_ma3_sopra_ma16 > 0.07
+                    
+                    and ma2_last > ma5_last
+                    and ma2_last >= ma2_2_min_ago
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
+                    
+                    and macd >= macd_2_min_ago
+                    and macd_differenza_2_min_ago > 1.25
+                    and macd > -11
+                ): 
+                
+                    buy = "BUY 3 laterale 5-54 importata da buy 2 con 300 > 450 and dev 3-10 > 0.03 MA CON ma10<ma20 and 3-16 > 0.07 E dev ma2 e diff macd - r 6622 A2"
                     action = "buy"
                     percentage = 80
                     
@@ -19707,7 +19790,50 @@ class maddog:
                     # 27 nov 2023 se sta scendendo da molto tempo E SE se ma50_last < ma59_last la differenza prezzo deve essere > 3 ! cazzo
                     # 24 dic 2023 and ma2_differenza_2_min_ago a 8 da 3
 
-              
+                
+                # condizione ipervenduto DNA
+                
+                elif (     
+
+                    ma3_last > ma15_last
+                    and ma2_last >= ma10_last
+                    and deviation_ma39 <= -0.30
+                    and ma3_last < ma39_last
+                    and ma100_last < ma100_60_min_ago
+                    and ma100_last < ma100_120_min_ago
+
+                    and deviation_ma54_sopra_o_sotto_ma72 < -0.015
+
+                    and deviation_ma39_sotto_ma200 < -0.01
+                    and deviation_ma300_sopra_ma450 > -0.60
+
+                    and deviation_ma3_sopra_ma10 > 0.015
+                    and deviation_ma3_sopra_ma16 > 0.02
+                    and deviation_ma3_sopra_ma18 > -0.04
+
+                    and ma2_last >= ma2_2_min_ago
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
+                    and ma2_differenza_2_min_ago > 8
+                    and ma2_differenza_ma5 > 11
+                    and macd > -20
+                    and macd_differenza_2_min_ago > 1.25
+
+                ):    
+                    buy = "BUY 4 condizione DNA IPERVENDUTO 3-39 con 3-10 E 300 vicina 450 e 3-16 > 0.01 + > E ma2_diff_2_min_ago > 3 E dev ma2 e MACD > -20 - r 6738"
+                    action = "buy"
+                    percentage = 90
+
+                    # 15 nov 2023 se compra quando 3<39 allora riduco dev 3-16 
+                    # 16 nov 2023 AGGIUNTO SOLO SU QUESTA CONDIZIONE E DOPO ATTENTA ANALISI STATISTICA and macd > 8
+                    #  5 dic 2023 aggiunta and ma2_differenza_ma5 > 26 vedi 4 dic 2023 ore 16:45
+                    #  5 dic 2023 macd >-8 da >8
+                    # 12 dic 2023 macd a -10 da -8
+                    # 29 dicembre 2023 entra in gioco CONDIZIONE DNA - IPERVENDUTO 3-39 < -0.30
+                    # 19 feb 2024 aggiunta 
+                    # 
+                    #
+
+
                 elif (    
                     ma3_last > ma39_last
                     and ma100_last > ma100_10_min_ago
