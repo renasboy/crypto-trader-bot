@@ -19865,6 +19865,7 @@ class maddog:
                 elif (    
                     ma3_last > ma39_last
                     and ma100_last < ma100_10_min_ago
+                    and deviation_ma39 <= -0.30
                     
                     and ma300_last > ma450_last
                     and ma300_last > ma300_120_min_ago
@@ -19888,8 +19889,8 @@ class maddog:
                     percentage = 80
                     
                     # importato da BUY 3 il 20 dic 2023
-
-              
+                    # 20 feb 2024 se deve comprare con 100< allora al cane devi dare un osso cioe' and deviation_ma39 deve essere <= -0.30
+                    # 20 feb 2024 prendi il coltello che cade con il piede
 
                 elif (
                     
