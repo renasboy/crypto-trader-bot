@@ -19708,12 +19708,15 @@ class maddog:
                     # 24 dic 2023 and ma2_differenza_2_min_ago a 8 da 3
 
               
-              
                 elif (    
                     ma3_last > ma39_last
+                    and ma100_last > ma100_10_min_ago
                     
                     and ma300_last > ma450_last
                     and ma300_last > ma300_120_min_ago
+                    
+                    and deviation_ma250_sopra_ma300 < 0.12
+                    and deviation_ma250_sopra_ma300 > -0.12
                     
                     and deviation_ma100_sopra_ma300 < 0.30
                     and deviation_ma100_sopra_ma300 > -0.30
@@ -19726,7 +19729,35 @@ class maddog:
                     and macd_differenza_2_min_ago > 0.25
                 ): 
                 
-                    buy = "BUY 4 importato da BUY 3 laterale 3-39 importata da buy 2 con 300 > 450 and dev 3-10 > 0.03 - r 6739"
+                    buy = "BUY 4 importato da BUY 3 laterale 3-39 importata da buy 2 con 300 > 450 and dev 3-10 > 0.03 - r 6739a"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # importato da BUY 3 il 20 dic 2023
+
+
+                elif (    
+                    ma3_last > ma39_last
+                    and ma100_last < ma100_10_min_ago
+                    
+                    and ma300_last > ma450_last
+                    and ma300_last > ma300_120_min_ago
+                    
+                    and deviation_ma250_sopra_ma300 < 0.12
+                    and deviation_ma250_sopra_ma300 > -0.12
+                    
+                    and deviation_ma100_sopra_ma300 < 0.30
+                    and deviation_ma100_sopra_ma300 > -0.30
+                    
+                    and deviation_ma3_sopra_ma10 > 0.03
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                    and macd > -11
+                    and macd_differenza_2_min_ago > 0.25
+                ): 
+                
+                    buy = "BUY 4 importato da BUY 3 laterale 3-39 importata da buy 2 con 300 > 450 and dev 3-10 > 0.03 - r 6739b"
                     action = "buy"
                     percentage = 80
                     
