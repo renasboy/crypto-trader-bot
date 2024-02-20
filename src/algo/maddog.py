@@ -7546,6 +7546,8 @@ class maddog:
                     
                     and deviation_ma3_sopra_ma10 > 0.12
                     and deviation_ma3_sopra_ma16 > 0.121
+                    
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.50
                   
                 ):
                     buy = "BUY 1 AUDI che NON E' un grande ribasso MASERATI e NON E' un crollo FERRARI ! con deviation trend ma200 e 4-16 and 3-10 > 0.12 - r 3043"
@@ -7554,7 +7556,7 @@ class maddog:
                     
                     # CROLLO STIAMO ANCORA IN ALTO con 3-16 perche' paradossalmente serve piu'prudenza vedi 27 feb 2023 ore 17:04
                     # 11 giu 2023 aggiunto 3-10 > 0.12
-                    
+                    # 20 feb 2024 aggiunta and deviation_ma5_sopra_o_sotto_ma100 < -0.50 prendi il coltello con il piede
                     
                 
                      
