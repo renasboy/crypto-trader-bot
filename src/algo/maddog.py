@@ -19140,6 +19140,8 @@ class maddog:
                 elif (    
                     ma5_last > ma54_last
                     and ma100_last < ma100_10_min_ago
+                    and deviation_ma39 <= -0.30
+                    
                     and ma10_last < ma20_last
                     and ma300_last > ma450_last
                     and ma300_last > ma300_120_min_ago
@@ -19174,7 +19176,7 @@ class maddog:
                     # 31 ott 2023 3-39 da 5-39
                     # 31 ott 2023 and deviation_ma3_sopra_ma10 > 0.03 da > 0.07
                     # 27 dic 2023 se ma10 < ma20 aggiunta dev ma2 e diff macd
-              
+                    # 20 feb 2024 prendi il coltello che cade con il piede ! grazie compa
                 
                 # BUY 3 PAZZA piccola CORREZIONE FIAT
                 
