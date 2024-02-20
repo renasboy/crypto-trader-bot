@@ -2615,9 +2615,9 @@ class maddog:
               
                 
                 elif (
-                    ma3_last > ma20_last
+                    ma3_last > ma18_last
                   
-                    and ma3_last > ma20_last
+                    and ma3_last > ma18_last
                     and ma100_last < ma100_10_min_ago
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.12
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.60
@@ -2641,12 +2641,12 @@ class maddog:
                     and macd_differenza_2_min_ago > 0.50
                     
                 ):    
-                    buy = "BUY 1 compare forever - ex 1537 A3y RCCR con 3-30 E CON 300 vicina alla 450 ( anche poco sotto ! ) and 3-18 > 0.001 + MACD > - r 1204 NUOVA ERA A3 STRONG"
+                    buy = "BUY 1 compare forever - ex 1537 A3y RCCR con 3-18 con 300 vicina alla 450 ( anche poco sotto ! ) and 3-18 > 0.001 + MACD > - r 1204 NUOVA ERA A3 STRONG"
                     action = "buy"
                     percentage = 90
                     
-                    # 8 gen 2024 incrocio 3-30 piu' veloce di 10>20 !
-
+                    # 8  gen 2024 incrocio 3-30 piu' veloce di 10>20 !
+                    # 20 feb 2024 3-18 da 3-20
 
 
                 elif (
