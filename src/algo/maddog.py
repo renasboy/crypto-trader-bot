@@ -24418,11 +24418,10 @@ class maddog:
                     # 24 dic 2023 aggiunta and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
                     # 24 dic 2023 aggiunta and macd_differenza_2_min_ago > 0.50
 
-                
                 elif (     
                     
                     ma3_last > ma13_last
-                    and deviation_ma39 > 0.23
+                    
                     and deviation_ma5_sotto_ma300 > -1.00
               
                     and deviation_ma78_sopra_o_sotto_ma200 < -0.028
@@ -24430,7 +24429,7 @@ class maddog:
                     
                     and ma100_last < ma100_120_min_ago
                     and ma100_last < ma100_60_min_ago
-                    
+                    and deviation_ma5_sopra_o_sotto_ma100 > 0.22
                     
                     and deviation_ma54_sopra_o_sotto_ma72 < 0.015
                     and deviation_ma54_sopra_o_sotto_ma72 > -0.015
@@ -24450,11 +24449,52 @@ class maddog:
                     and ma50_differenza_ma59 > -5
                     and macd_differenza_2_min_ago > 2
                 ):    
-                    buy = "BUY 5 compare forever EX BUY 1 r 1537 A2y1 - 100<120 min ago E 100<60 min ago con 5-20 E CON 300 vicina alla 450 + MACD > E ma50_diff_ma59 > -5 - r 7589 B2x"
+                    buy = "BUY 5 compare forever EX BUY 1 r 1537 A2y1 - 100<120 min ago E 100<60 min ago con 5-20 E CON 300 vicina alla 450 + MACD > E ma50_diff_ma59 > -5 - r 7589 B2x1"
                     action = "buy"
                     percentage = 90
                     
                     #  10 gen 2023 se 5 e' vicina alla 300 E STIAMO AL BUY 5 deve essere almeno 3-39
+
+
+
+                elif (     
+                    
+                    ma3_last > ma13_last
+                    and deviation_ma39 <= -0.30
+                    and ma100_last < ma100_120_min_ago
+                    and ma100_last < ma100_60_min_ago
+
+                    and deviation_ma5_sotto_ma300 > -1.00
+              
+                    and deviation_ma78_sopra_o_sotto_ma200 < -0.028
+                    and ma2_differenza_2_min_ago > 10
+                    
+                    and deviation_ma54_sopra_o_sotto_ma72 < 0.015
+                    
+                    
+                    and deviation_ma39_sotto_ma200 < 0.10
+                    
+                    
+                    and deviation_ma3_sopra_ma10 > -0.01
+                    and deviation_ma3_sopra_ma16 > 0.01
+                    and deviation_ma3_sopra_ma18 > -0.03
+                    
+                    and ma2_last >= ma20_last
+                  
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                    and macd > -40
+                    
+                    and macd_differenza_2_min_ago > 2
+                ):    
+                    buy = "BUY 5 ipervenduto DNA - 100<120 min ago E 100<60 min ago con 5-20 + MACD > E ma50_diff_ma59 > -5 - r 7589 B2x2"
+                    action = "buy"
+                    percentage = 90
+                    
+                    # 10 gen 2023 se 5 e' vicina alla 300 E STIAMO AL BUY 5 deve essere almeno 3-39
+                    # 21 feb 2024 ipervenduto DNA
+
+
 
     
                 elif (     
