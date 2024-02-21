@@ -41722,10 +41722,43 @@ class maddog:
                 # 29 dic 2023 ATTENZIONE ! macd diff < -1 significa CHE HA PIU' FORZA mentre scende ! scende piu' con vigore !
                 # 30 dic 2023 situazione MACD in territorio negativo
 
-          
+
+
             elif (
                 
                 ma50_last > ma50_2_min_ago
+                and ma10_last > ma30_last
+                and ma20_last > ma20_2_min_ago
+                and ma20_last > ma40_last
+                
+                and ma13_last > ma50_last
+                and ma100_last < ma100_60_min_ago
+                
+                and deviation_ma39 < 0.13
+                and deviation_sell < -0.07
+                
+                
+                and deviation_ma5_sotto_ma200 > -0.60
+                and deviation_ma100_sopra_ma300 < 0.40
+                
+                and ma2_last < ma2_2_min_ago
+                and ma2_differenza_2_min_ago < -3
+                
+                and macd < macd_2_min_ago
+                and macd < 15
+                and macd_differenza_2_min_ago < -2
+                and ma2_differenza_ma5 < -8
+                
+            ):
+                sell = "SELL nuova condizione speciale - dev 3-39 < 0.13 and dev_sell < -0.07 con ma50 > e con ma5 sotto ma200 > -0.60 and MACD < and macd < 15 - r 16047 A2 Y1 X1a"
+                action = "sell"
+                
+                # 21 feb 2024 se ANCHE 10>30 dev sell a -0.07 da -0.05
+
+            
+            elif (    
+                ma50_last > ma50_2_min_ago
+                and ma10_last < ma30_last
                 and ma20_last > ma20_2_min_ago
                 and ma20_last > ma40_last
                 
@@ -41748,7 +41781,7 @@ class maddog:
                 and ma2_differenza_ma5 < -8
                 
             ):
-                sell = "SELL nuova condizione speciale - dev 3-39 < 0.13 and dev_sell < -0.03 con ma50 > e con ma5 sotto ma200 > -0.60 and MACD < and macd < 15 - r 16047 A2 Y1 X1"
+                sell = "SELL nuova condizione speciale - dev 3-39 < 0.13 and dev_sell < -0.05 con ma50 > e con ma5 sotto ma200 > -0.60 and MACD < and macd < 15 - r 16047 A2 Y1 X1b"
                 action = "sell"
 
             
