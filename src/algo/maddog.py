@@ -4430,11 +4430,14 @@ class maddog:
                 elif (     
                     
                     ma3_last > ma20_last
-                    and ma100_last > ma100_60_min_ago
+                    
+                    
                     and ma100_last < ma100_120_min_ago
-                  
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.30
+                    
                     and deviation_ma54_sopra_o_sotto_ma72 < -0.015
                     
+                    and ma100_last > ma100_60_min_ago
                     and deviation_ma39_sotto_ma200 < -0.01
                     and deviation_ma300_sopra_ma450 > -0.50
                     
@@ -4449,7 +4452,7 @@ class maddog:
                     and ma2_differenza_2_min_ago > 3
                     
                 ):    
-                    buy = "BUY 1 compare forever - con 3-20 E CON 300 ancora vicina 450 ( anche un poco sotto ! ) e 3-18 > -0.01 + MACD > E ma2_differenza_2_min_ago > 3 - r 1537 A3X3"
+                    buy = "BUY 1 compare forever - con 3-20 E CON 300 ancora vicina 450 ( anche un poco sotto ! ) e 3-18 > -0.01 + MACD > E ma2_differenza_2_min_ago > 3 - r 1537 A3 X3"
                     action = "buy"
                     percentage = 90
                   
@@ -8480,47 +8483,14 @@ class maddog:
                     
                     
                  
-                    
-                # BUY 1 CHE MANCAVA DOPO BUY-SELL CROLLO ! 150-100 GIORNO ! E 50 > 100
-                
-                elif (
-                    
-                    deviation_ma5_sotto_ma300 > -0.40
-                    
-                    and deviation_ma5_sopra_ma28 > 0.11
-                    and deviation_ma3_sopra_ma10 > 0.10
-                    and ma20_last > ma200_last
-                    
-                    and ma100_last < ma200_last
-                    and ma200_last < ma300_last
-                    
-                    and ma100_last < ma100_120_min_ago
-                    and ma200_last < ma200_120_min_ago
-                    and ma300_last < ma300_120_min_ago
-                    
-                    and delta_150_100 < delta_150_100_60_min
-                    
-                    
-                    and ma2_last > ma2_2_min_ago
-                    and macd >= macd_2_min_ago
-                ):
-                    buy = "BUY 1 20 > 200 che mancava DOPO BUY-SELL e nuovo CROLLO ! 50 > 100 AND 150-100 GIORNO ! and 5-28 > 0.18 and 3-10 > 0.10 - r 3935"
-                    action = "buy"
-                    percentage = 80
-                    
-                    # > estate 5-28 > 0.18 da 0.12 and 3-10 > 0.10 da 0.05
-                    #  9 ott 2022 20>200 da 50>200 ! 
-                    
-                    
-                    
-                    
+                   
                     
                 # BUY 1 CHE MANCAVA DOPO BUY-SELL CROLLO ! delta 150-100 GIORNO ! E 50 > 100
                 
                 elif (
                     deviation_ma5_sotto_ma300 < -0.40
                     and ma8_last > ma50_last
-                    
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.30
                     and deviation_ma5_sopra_ma28 > 0.15
                     and deviation_ma3_sopra_ma10 > 0.10
                     
@@ -14244,8 +14214,10 @@ class maddog:
                 elif (
                     ma4_last > ma30_last
                     
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.30
                     and ma300_last < ma300_301_min_ago
                     and ma200_last < ma200_120_min_ago
+                    
                     and delta_1 < delta_2
                     and deviation_ma100_sopra_ma300 < -0.05 
                     
@@ -18932,15 +18904,16 @@ class maddog:
                     
                 elif (
                     ma10_last >= ma10_2_min_ago
-                    
-                    and deviation_ma100_sopra_ma300 < 0.25
-                    and deviation_ma100_sopra_ma300 > -0.25
-                    
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.40
+                  
                     and ma450_last < ma450_480_min_ago
                     
                     and deviation_ma3_sopra_ma10 > 0.01
                     and deviation_ma3_sopra_ma16 > 0.077
                     and deviation_ma3_sopra_ma18 > -0.01
+
+                    and deviation_ma100_sopra_ma300 < 0.25
+                    and deviation_ma100_sopra_ma300 > -0.25
                     
                     and ma3_last > ma13_last
                     and ma4_last > ma9_last
@@ -19422,12 +19395,12 @@ class maddog:
                 elif (
                     ma78_last < ma150_last
                     
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.23
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.40
                     and deviation_ma5_sotto_ma300 < -0.30
                     
                     and deviation_ma3_sopra_ma10 > 0.057
                     and deviation_ma3_sopra_ma16 > 0.06
-                    and deviation_ma5_sopra_ma28 < 0.10
+                    
                     
                     and ma100_last < ma100_180_min_ago
                     and ma200_last < ma200_180_min_ago
