@@ -4132,7 +4132,7 @@ class maddog:
                     and macd_differenza_2_min_ago > 1.20
                    
                 ):    
-                    buy = "BUY 1 compare forever - con 200>300 e incrocio al rialzo 3-250 e 3-15 e 300 ancora vicina 450 + MACD > E ma2_diff_2_min_ago >7 e diff macd - r 1537 A3 X1 y"
+                    buy = "BUY 1 con incrocio al rialzo 3-250 3 200>300 e 300 vicina 450 + MACD > E ma2_diff_2_min_ago >7 e diff macd - r 1537 A3 X1 Y"
                     action = "buy"
                     percentage = 90
                     
@@ -4140,7 +4140,7 @@ class maddog:
                     #  7 dic 2023 aggiunta and ma3_differenza_2_min_ago > 8
                     #  7 dic 2023 ma2_differenza_2_min_ago > 7 da > 3
                     # 18 dic 2023 aggiunta incrocio al rialzo 3-250 mentre CRESCE evidentemente e con il conforto di diff ma2 e diff macd !
-
+                    # 22 feb 2024 mela voglio tenere cosi' anche se avrei potuto metter un po' di prendi il coltello con il piede 5-100 < -0.36
 
 
               
@@ -14754,6 +14754,51 @@ class maddog:
 
               
 
+                elif (     
+                    
+                    ma3_last > ma18_last
+                    and ma2_last >= ma20_last
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.36
+                    
+                    and ma450_last > ma450_360_min_ago
+                    and ma100_last < ma100_30_min_ago
+                    
+                    and deviation_ma54_sopra_o_sotto_ma72 < -0.015
+                    
+                    and deviation_ma39_sotto_ma200 < -0.01
+                    and deviation_ma300_sopra_ma450 > -0.70
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > -0.01
+                    and deviation_ma3_sopra_ma18 > -0.02
+                    
+                    and ma2_last > ma5_last
+                    and ma3_differenza_2_min_ago > 3
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
+                    and macd >= macd_2_min_ago
+                    and macd_differenza_2_min_ago > 0.10
+                ):    
+                    buy = "BUY 2 prendo coltello con il piede E CON 300 ancora vicina 450 ( anche sotto ! ) and 3-18 > -0.02 + MACD > - r 5994"
+                    action = "buy"
+                    percentage = 90
+                    
+                    # 17 ott 2023 and deviation_ma3_sopra_ma10 > 0.027 da > 0.025 (per favore lascia almeno 0.027 al 3-10)
+                    # 17 ott 2023 3-18 > -0.02 da > -0.02
+                    # 17 ott 2023 3-18 da 3-20
+                    # 31 ott 2023 aggiunto and ma2_last > ma5_last
+                    #  1 dic 2023 aggiunto and ma2_differenza_2_min_ago > 5
+                    #  7 dic 2023 aggiunta and ma3_differenza_2_min_ago > 5
+                    #  7 dic 2023 diff ma2 a > 6 da > 5
+                    
+                    # 23 dic 2023 diff ma2 a 9 da 6
+                    # 23 dic 2023 and ma3_differenza_2_min_ago a 6 da 5
+                    # 23 dic 2023 aggiunta and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
+                    # 23 dic 2023 aggiunta and macd_differenza_2_min_ago > 0.30
+                    # 11 gen 2024 and deviation_ma300_sopra_ma450 > -0.70 da -0.60
+                    # 11 gen 2024 and macd_differenza_2_min_ago > 0.10 da 0.30 
+                    # 22 feb 2024 aggiunta perche' sul RCCR e' andata benissimo (ma ho aggiunto anche and deviation_ma5_sopra_o_sotto_ma100 < -0.36)
 
                 elif (
                     ma3_last > ma18_last
