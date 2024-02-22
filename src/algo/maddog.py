@@ -2691,8 +2691,8 @@ class maddog:
                     
                     and ma100_last < ma100_10_min_ago
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
-                    and deviation_ma5_sopra_o_sotto_ma100 > -0.40
-                    and deviation_ma5_sopra_o_sotto_ma100 > 0.20
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.36
+                    and deviation_ma5_sopra_o_sotto_ma100 > 0.22
                     
                     and ma100_last > ma100_120_min_ago
                     and ma300_last > ma300_180_min_ago
@@ -2725,7 +2725,7 @@ class maddog:
                     
                     and ma100_last < ma100_10_min_ago
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.40
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.36
                     and deviation_ma5_sopra_o_sotto_ma100 > -0.60
                     and ma5_last > ma50_last
                     
@@ -3306,7 +3306,40 @@ class maddog:
                     # 18 gen 2024 attenzione ! 5-54 se ma 300 scende da 3 ore NON E' PROPRIAMENTE UN MOVIMENTO LATERALE CONSOLIDATO.
                     
                     
+                elif (    
+                    ma3_last > ma13_last
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.33
                     
+                    and deviation_ma300_sopra_ma450 < 0.18
+                    and deviation_ma300_sopra_ma450 > -0.18
+                    
+                    and deviation_ma100_sopra_ma300 < 0.29
+                    and deviation_ma100_sopra_ma300 > -0.29
+                    
+                    and deviation_ma10_sotto_ma100 < -0.06
+                 
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > -0.01
+                    and deviation_ma4_sopra_ma28 > -0.05
+                 
+                    and ma2_last >= ma2_2_min_ago
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
+                    and ma2_differenza_ma5 > 10
+                    
+                    and macd >= macd_2_min_ago
+                    and macd > -20
+                    and macd_differenza_2_min_ago > 0.50
+                ):  
+                    
+                    buy = "BUY 1 CONSOLIDATO TREND LATERALE con 3-10 > 0.01 con macd > -20 and ma2_differenza_2_min_ago > 7 - r 1210"
+                    action = "buy"
+                    percentage = 70
+                    
+                    # 22 feb 2024 solo in una condizione di trend laterale consolidato e con deviation_ma5_sopra_o_sotto_ma100 < -0.33
+
+
+
+
                 # ------------------------------------------------------------ BUY 1 RAFFORZATA se ma200> and ma300 > and 8>39
                 
                 elif (    
