@@ -41475,12 +41475,41 @@ class maddog:
                 #  5 dic 2023 aggiunta and ma2_differenza_2_min_ago < -7
                 #  6 dic 2023 diff ma2 da -7 a -15
                 # 23 dic 2023 dev_sell < 0.03 se ma20 scende da 10 min
+
+
             
 
             # 5 - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 > -1.00
-            
+                
             elif (
                 ma78_last > ma78_120_min_ago
+                and ma10_last > ma30_last
+
+                and ma100_last > ma125_last
+                and ma50_last > ma59_last
+                and ma50_last < ma50_2_min_ago
+                
+                and deviation_ma39 < 0.07
+                and deviation_sell < -0.045
+                and ma2_last < ma2_2_min_ago 
+                
+                and deviation_ma100_sopra_ma300 < 0.40
+                and deviation_ma5_sotto_ma200 > -0.80
+                
+                and macd_differenza_2_min_ago < -0.20
+            ):
+                sell = "SELL condizione speciale CON 50>59 and ma50< - SALVAGENTE dev 3-39 < 0.07 e dev_sell < -0.045 and macd_diff_2_min_ago < -0.20 - r 16047 A1 x1 a1 X"
+                action = "sell"
+                
+                # 15 gen 2024 and deviation_sell < -0.03 da -0.01 se 100 >125 stai piu' tranquillo
+                # 24 feb 2024 se 10>30 stai ancora piu' tranquillo cazzo !
+                # 24 feb 2024 dev sell a -0.045 da -0.03
+
+
+            elif (
+                ma78_last > ma78_120_min_ago
+                and ma10_last < ma30_last
+                
                 and ma100_last > ma125_last
                 and ma50_last > ma59_last
                 and ma50_last < ma50_2_min_ago
@@ -41494,10 +41523,14 @@ class maddog:
                 
                 and macd_differenza_2_min_ago < -0.20
             ):
-                sell = "SELL condizione speciale CON 50>59 and ma50< - SALVAGENTE dev 3-39 < 0.07 e dev_sell < -0.03 and macd_diff_2_min_ago < -0.20 - r 16047 A1 x1 a1"
+                sell = "SELL condizione speciale CON 50>59 and ma50< - SALVAGENTE dev 3-39 < 0.07 e dev_sell < -0.03 and macd_diff_2_min_ago < -0.20 - r 16047 A1 x1 a1 Y"
                 action = "sell"
                 
                 # 15 gen 2024 and deviation_sell < -0.03 da -0.01 se 100 >125 stai piu' tranquillo
+
+
+
+
             elif (
                 ma78_last > ma78_120_min_ago
                 and ma100_last > ma125_last
