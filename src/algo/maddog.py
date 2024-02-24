@@ -619,9 +619,26 @@ class maddog:
         self.algo_helper.info("deviation_ma180_sopra_ma200: {}".format(deviation_ma180_sopra_ma200))
         
         
-        ############################################################################################################################################ FORMULE D E L T A
+        ######################################################################################################################### FORMULE D E L T A
         
+
+        # formula delta_100_200_last
         
+        delta_100_200_last = (ma200_last / ma100_last - 1) * 100 if ma100_last else 0
+        self.algo_helper.info("delta_100_200_last: {}".format(delta_100_200_last))
+
+
+        # formula delta_100_200_120_min_ago
+        
+        delta_100_200_120_min_ago = (ma200_last / ma100_last - 1) * 100 if ma100_last else 0
+        self.algo_helper.info("delta_100_200_120_min_ago: {}".format(delta_100_200_120_min_ago))
+        
+        # se GIORNO cieo' se la 100 si avvicina alla 200 deve essere delta_100_200_last < delta_100_200_120_min_ago
+        
+
+
+
+
         # formula delta_1
         
         delta_1 = (ma200_last / ma100_last - 1) * 100 if ma100_last else 0
@@ -635,6 +652,8 @@ class maddog:
         
         
         
+
+
         # formula delta_x
         
         delta_x = (ma200_last / ma59_last - 1) * 100 if ma59_last else 0
@@ -1858,15 +1877,15 @@ class maddog:
                     action = "buy"
                     percentage = 50
 
+
+
                
                 
                 # BUY 1 migliore che considera distanza 5-300
 
-
-                
                 elif (    
-                    ma3_last > ma18_last
-                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
+                    ma3_last > ma16_last
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.017
                     and ma2_differenza_2_min_ago > 3
                     and ma450_last < ma450_360_min_ago
                     and ma300_last < ma300_60_min_ago
@@ -1881,7 +1900,7 @@ class maddog:
                     and deviation_ma50_sopra_o_sotto_ma100 < -0.01
                     and deviation_ma100_sopra_ma300 < -0.10
                     
-                    and deviation_ma3_sopra_ma10 > 0.05
+                    and deviation_ma3_sopra_ma10 > 0.04
                     and deviation_ma3_sopra_ma16 > -0.125
                     and deviation_ma5_sopra_ma28 > -0.155
                     
@@ -1890,9 +1909,51 @@ class maddog:
                     and macd > -40
                     and macd_differenza_2_min_ago > 0.50
                 ):
-                    buy = "BUY 1 migliore con distanza 5-300 e distanza 5-100 E dev TRIADE e dev ma2 e diff macd - r 1043 B1x"
+                    buy = "BUY 1 migliore con distanza 5-300 e distanza 5-100 con 3-16 E dev TRIADE e dev ma2 e diff macd - r 1043 B1x1"
                     action = "buy"
                     percentage = 70
+
+                    # 24 feb 2024  3-16 da 3-18
+
+
+                elif (
+                    
+                    ma3_last > ma28_last
+                    and ma10_last >= ma20_last
+                    
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.21
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
+                    
+                    and delta_100_200_last < delta_100_200_120_min_ago
+
+                    
+                    and ma100_last < ma100_180_min_ago
+                    and ma200_last < ma200_180_min_ago
+                    and ma300_last < ma300_180_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.02
+                    and deviation_ma5_sopra_ma28 > -0.02
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and ma2_differenza_2_min_ago > 9
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
+                    and macd > -11
+                    and macd_differenza_2_min_ago > 1.00
+                    
+                ):
+                    buy = "BUY 1 24 feb 2024 > 180 min di ribasso con 4-28 5-100<-0.21 se doppio delta 100-200 GIORNO - r 1043 B1x2"
+                    action = "buy"
+                    percentage = 90
+
+
+                
+                
+
+
+
 
 
                 
@@ -11181,7 +11242,39 @@ class maddog:
 
               
                     
+                elif (
                     
+                    ma3_last > ma28_last
+                    and ma10_last >= ma20_last
+                    
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.21
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
+                    
+                    and delta_100_200_last < delta_100_200_120_min_ago
+
+                    
+                    and ma100_last < ma100_180_min_ago
+                    and ma200_last < ma200_180_min_ago
+                    and ma300_last < ma300_180_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.02
+                    and deviation_ma5_sopra_ma28 > -0.02
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and ma2_differenza_2_min_ago > 9
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
+                    and macd > -11
+                    and macd_differenza_2_min_ago > 1.00
+                    
+                ):
+                    buy = "BUY 1 24 feb 2024 > 180 min di ribasso con 4-28 5-100 < -0.21 SE doppio delta 100-200 GIORNO - r 4714"
+                    action = "buy"
+                    percentage = 90
+                    
+
                 elif (
                     ma78_last < ma78_2_min_ago
                     and deviation_ma5_sotto_ma300 > -0.59
