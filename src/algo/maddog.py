@@ -21656,9 +21656,12 @@ class maddog:
                     action = "buy"
                     percentage = 70
 
+
+
                 elif (    
                     ma3_last > ma13_last
-                    
+                    and ma39_last > ma39_5_min_ago
+                    and ma3_last > ma30_last
                     and ma100_last > ma100_5_min_ago
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
                     and deviation_ma5_sopra_o_sotto_ma100 > -0.50
@@ -21674,12 +21677,63 @@ class maddog:
                     and ma2_differenza_ma5 > 5
                     and macd_differenza_2_min_ago > 0.10
                 ):
-                    buy = "BUY 5 con 3-20 and 450_last >= 450_120_min_ago e 50 > 450 and ma2_differenza_ma5 > 8 - r 7144 A1 X NUOVA ERA A3 SOFT"
+                    buy = "BUY 5 con 3-20 and 450_last >= 450_120_min_ago e 50 > 450 and ma2_differenza_ma5 > 8 - r 7144 A1 X NUOVA ERA A3 SOFT x"
+                    action = "buy"
+                    percentage = 70
+
+
+                elif (    
+                    ma3_last > ma13_last
+                    and ma39_last < ma39_5_min_ago
+                    and deviation_ma39 > 0.10
+                    and ma3_last > ma30_last
+                    and ma100_last > ma100_5_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
+                    
+                    and ma450_last >= ma450_120_min_ago
+                    and ma50_last > ma450_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.005
+                    and deviation_ma3_sopra_ma16 > 0.005
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.017
+                    and ma2_differenza_ma5 > 5
+                    and macd_differenza_2_min_ago > 0.10
+                ):
+                    buy = "BUY 5 con 3-20 and 450_last >= 450_120_min_ago e 50 > 450 and ma2_differenza_ma5 > 8 - r 7144 A1 X NUOVA ERA A3 SOFT y"
+                    action = "buy"
+                    percentage = 70
+                    
+                    # 24 feb 2024 se ma39 < ma39 5 min ago BUY con deviation_ma39 > 0.10 CAZZO sta ritracciando dopo il rialzo
+
+
+
+                elif (    
+                    ma3_last > ma13_last
+                    and ma3_prev < ma140_prev and ma3_last > ma140_last
+                    and ma100_last > ma100_5_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
+                    
+                    and ma450_last >= ma450_120_min_ago
+                    and ma50_last > ma450_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.005
+                    and deviation_ma3_sopra_ma16 > 0.005
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.017
+                    and ma2_differenza_ma5 > 5
+                    and macd_differenza_2_min_ago > 0.10
+                ):
+                    buy = "BUY 5 con incrocio 3-140 and 450_last >= 450_120_min_ago e 50 > 450 and ma2_diff_ma5 > 8 - r 7144 A1 X NUOVA ERA A3 SOFT z"
                     action = "buy"
                     percentage = 70
                     
                     #  9 feb 2024 IMPORTANTE ! solo BUY 5 NUOVA ERA A3 SOFT con ma100> ma100 5 min ago !!!
-                    # 24 feb 2024 tolto and ma3_last > ma30_last
+                    # 24 feb 2024 tolto and ma3_last > ma30_last e aggiunto incrocio al rialzo 3-140
 
                    
                 elif (    
