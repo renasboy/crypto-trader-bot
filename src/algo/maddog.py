@@ -21670,7 +21670,7 @@ class maddog:
                     and deviation_ma3_sopra_ma16 > 0.005
                     
                     and ma2_last >= ma2_2_min_ago
-                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.017
                     and ma2_differenza_ma5 > 5
                     and macd_differenza_2_min_ago > 0.10
                 ):
