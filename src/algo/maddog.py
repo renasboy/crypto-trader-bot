@@ -3185,10 +3185,12 @@ class maddog:
                     action = "buy"
                     percentage = 50
 
+
+
                 elif (    
-                    ma3_last > ma54_last
+                    ma3_last > ma30_last
                     
-                    and ma100_last > ma100_10_min_ago
+                    and ma100_last > ma100_5_min_ago
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
                     and deviation_ma5_sopra_o_sotto_ma100 > -0.50
                     
@@ -3216,6 +3218,7 @@ class maddog:
                     action = "buy"
                     percentage = 50
                     
+                    # 26 feb 2024 anticipato ndecchiecella se 100> 100 5 min ago e consolidato laterale
 
                 elif (    
                     ma3_last > ma20_last
