@@ -3998,8 +3998,12 @@ class maddog:
 
 
 
+
                 elif (    
                     ma3_last > ma50_last
+                    
+                    and ma39_last > ma39_15_min_ago
+
                     and ma100_last < ma100_120_min_ago
                     and ma200_last < ma200_120_min_ago
                     
@@ -4023,7 +4027,77 @@ class maddog:
                     and ma50_differenza_ma59 < -5
                     
                 ):    
-                    buy = "BUY 1 compare forever - con 5-20 E CON 300 ancora vicina alla 450 ( anche un poco sotto! ) + MACD > and ma50_differenza_ma59 < -5 - r 1537 A2 Y3"
+                    buy = "BUY 1 compare forever - con 5-20 E CON 300 vicina alla 450 + MACD > and ma50_differenza_ma59 < -5 - r 1537 A2 Y3 x"
+                    action = "buy"
+                    percentage = 90
+
+
+                elif (    
+                    ma3_last > ma50_last
+                    
+                    and ma39_last < ma39_15_min_ago
+                    and deviation_ma39 > 0.192
+                    
+                    and ma100_last < ma100_120_min_ago
+                    and ma200_last < ma200_120_min_ago
+                    
+                    and deviation_ma54_sopra_o_sotto_ma72 < 0.015
+                    and deviation_ma54_sopra_o_sotto_ma72 > -0.015
+                    
+                    and deviation_ma39_sotto_ma200 < 0.20
+                    and deviation_ma300_sopra_ma450 > -0.45
+                    
+                    and deviation_ma3_sopra_ma10 > -0.005
+                    and deviation_ma3_sopra_ma16 > 0.03
+                    and deviation_ma3_sopra_ma18 > -0.01
+                    
+                    and ma2_last >= ma20_last
+                  
+                    and ma2_last >= ma2_2_min_ago
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.020
+                    and macd >= macd_2_min_ago
+                    and macd_differenza_2_min_ago > 1.25
+                    and macd > -40
+                    and ma50_differenza_ma59 < -5
+                    
+                ):    
+                    buy = "BUY 1 compare forever - con 5-20 E CON 300 vicina alla 450 + MACD > and ma50_differenza_ma59 < -5 - r 1537 A2 Y3 y"
+                    action = "buy"
+                    percentage = 90
+                    
+                    #  5 mar 2024 se ma39 < ma39 15 min ago pugno fantasma di mohammad ali'
+
+
+                elif (    
+                    ma3_last > ma50_last
+
+                    and ma39_last < ma39_15_min_ago
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.30
+
+                    and ma100_last < ma100_120_min_ago
+                    and ma200_last < ma200_120_min_ago
+                    
+                    and deviation_ma54_sopra_o_sotto_ma72 < 0.015
+                    and deviation_ma54_sopra_o_sotto_ma72 > -0.015
+                    
+                    and deviation_ma39_sotto_ma200 < 0.20
+                    and deviation_ma300_sopra_ma450 > -0.45
+                    
+                    and deviation_ma3_sopra_ma10 > -0.005
+                    and deviation_ma3_sopra_ma16 > 0.03
+                    and deviation_ma3_sopra_ma18 > -0.01
+                    
+                    and ma2_last >= ma20_last
+                  
+                    and ma2_last >= ma2_2_min_ago
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.020
+                    and macd >= macd_2_min_ago
+                    and macd_differenza_2_min_ago > 1.25
+                    and macd > -40
+                    and ma50_differenza_ma59 < -5
+                    
+                ):    
+                    buy = "BUY 1 compare forever - con 5-20 E CON 300 vicina alla 450 + MACD > and ma50_differenza_ma59 < -5 - r 1537 A2 Y3 z"
                     action = "buy"
                     percentage = 90
                     
@@ -4036,7 +4110,7 @@ class maddog:
                     #  9 giu 2023 and deviation_ma300_sopra_ma450 > -0.25 da -0.20
                     #  9 giu 2023 5-28 > 0.02 da 0.03
                     #  9 giu 2023 tolto and ma3_last >= ma3_2_min_ago
-                    #  9 giu 2023 dev_ma39_sotto_ma200 < -0.10 da -0.15 forse era questa che la faceva arrivare in ritardo perche' 39 era piu' lenta a scendere sotto -0.15 da ma200
+                    #  9 giu 2023 dev_ma39_sotto_ma200 < -0.10 da -0.15 forse era questa che la faceva arrivare in ritardo 
                     #  tolto and deviation_ma5_sopra_ma28 > 0.02
                     #  7 lug 2023 dev_ma39_sotto_ma200 < -0.05 da -0.10
                     # 31 lug 2023 and deviation_ma3_sopra_ma18 > 0.12
@@ -4051,6 +4125,8 @@ class maddog:
                     # 12 nov 2023 aggiunta and ma50_differenza_ma59 < -5 cioe' se 50 sta LONTANA alla 59
                     # 30 dic 2023 and deviation_ma3_sopra_ma16 > 0.03 ! NON METTERE MENO DI QUESTO ! con ma50_differenza_ma59 < -5
                     # 20 feb 2024 3-50 da 3-15 se 200 < 2 ore !
+
+                    #  5 mar 2024 se ma39 < ma39 15 min ago prendi il coltello con il piede
               
   
                 elif (     
@@ -19915,7 +19991,7 @@ class maddog:
                     percentage = 70
 
                     #  5 mar 2024 se 39 > 100 ok cosi'
-
+                    
 
                 elif (
                     deviation_ma4_sopra_ma30 > 0.01
