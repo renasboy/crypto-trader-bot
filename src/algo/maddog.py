@@ -13178,11 +13178,9 @@ class maddog:
 
 
 
-
-
-
                 elif (    
                     ma3_last > ma28_last
+                    and ma39_last > ma39_15_min_ago
                     and ma2_differenza_2_min_ago > 5
                     and delta_100_59 > delta_100_59_30_min
                     
@@ -13198,10 +13196,65 @@ class maddog:
                     and macd_differenza_2_min_ago > 1.3
                 
                 ):
-                    buy = "BUY 2 laterale con 300>450 and 4-28 and macd > 2.0 and macd_differenza_2_min_ago > 1.30 - NOTTE - r 5412 X1 AX 2"
+                    buy = "BUY 2 laterale con 300>450 and 4-28 and macd > 2.0 and macd_differenza_2_min_ago > 1.30 - NOTTE - r 5412 X1 AX 2x"
                     action = "buy"
                     percentage = 80
-                  
+
+                    #  5 mar 2024 se ma39 > ma39 15 min ago ok cosi'
+
+
+                elif (    
+                    ma3_last > ma28_last
+                    and ma39_last < ma39_15_min_ago
+                    and deviation_ma39 > 0.192
+                    
+                    and ma2_differenza_2_min_ago > 5
+                    and delta_100_59 > delta_100_59_30_min
+                    
+                    and ma300_last > ma300_120_min_ago
+                    and ma450_last > ma450_480_min_ago
+                    
+                    and deviation_ma100_sopra_ma300 < 0.20
+                    and deviation_ma100_sopra_ma300 > -0.30
+                    
+                    and ma2_last > ma5_last
+                    and macd >= macd_2_min_ago
+                    and macd > -11.0
+                    and macd_differenza_2_min_ago > 1.3
+                
+                ):
+                    buy = "BUY 2 laterale con 300>450 and 4-28 and macd > 2.0 and macd_differenza_2_min_ago > 1.30 - NOTTE - r 5412 X1 AX 2y"
+                    action = "buy"
+                    percentage = 80
+                    
+                    #  5 mar 2024 se ma39 < ma39 15 min ago BUY con deviation_ma39 > 0.192 ( pugno fantasma di mohammad ali' )
+
+
+
+                elif (    
+                    ma3_last > ma28_last
+                    and ma39_last < ma39_15_min_ago
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.30
+                    
+                    and ma2_differenza_2_min_ago > 5
+                    and delta_100_59 > delta_100_59_30_min
+                    
+                    and ma300_last > ma300_120_min_ago
+                    and ma450_last > ma450_480_min_ago
+                    
+                    and deviation_ma100_sopra_ma300 < 0.20
+                    and deviation_ma100_sopra_ma300 > -0.30
+                    
+                    and ma2_last > ma5_last
+                    and macd >= macd_2_min_ago
+                    and macd > -11.0
+                    and macd_differenza_2_min_ago > 1.3
+                
+                ):
+                    buy = "BUY 2 laterale con 300>450 and 4-28 and macd > 2.0 and macd_differenza_2_min_ago > 1.30 - NOTTE - r 5412 X1 AX 2z"
+                    action = "buy"
+                    percentage = 80
+               
                     # 11 ago 2023 anticipato ndecchiecella
                     # 11 ago 2023 and macd > 4
                     # 14 set 2023 and deviation_ma100_sopra_ma300 > -0.30 da -0.20
@@ -13217,7 +13270,8 @@ class maddog:
                     #  2 ott 2023 and macd_differenza_2_min_ago a >1.3 da > 0.25
                     # 10 dic 2023 aggiunta and ma2_last > ma5_last      
                     # 11 feb 2024 tolta and deviation_ma3_sopra_ma18 > 0.11
-               
+                    
+                    #  5 mar 2024 se ma39 < ma39 15 min ago BUY con and deviation_ma5_sopra_o_sotto_ma100 < -0.30 ( prendi il coltello con il piede )
                     
                 elif (    
                     ma3_last > ma39_last
