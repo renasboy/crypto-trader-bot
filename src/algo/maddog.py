@@ -2850,10 +2850,12 @@ class maddog:
                     buy = "BUY 1 CONSOLIDATO TREND LATERALE con ma300_last > 3 ore e 3-10 > 0.01 e macd > -20 e ma2_diff_2_min_ago > 7 - r 1205 AX NUOVA ERA A2 SOFT 2"
                     action = "buy"
                     percentage = 70
-                  
 
+
+                  
                 elif (    
                     ma3_last > ma13_last
+                    and ma39_last > ma39_15_min_ago
                     
                     and ma100_last > ma100_10_min_ago
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
@@ -2881,9 +2883,90 @@ class maddog:
                     and ma2_differenza_ma5 > 10
                 ):  
                     
-                    buy = "BUY 1 CONSOLIDATO TREND LATERALE con ma300_last > 3 ore e 3-10 > 0.01 e macd > -20 e ma2_diff_2_min_ago > 7 - r 1205 AX NUOVA ERA A3 SOFT"
+                    buy = "BUY 1 TREND LAT con ma300 > 3 ore e 3-10 > 0.01 e macd > -20 e ma2_diff_2_min_ago > 7 - r 1205 AX NUOVA ERA A3 SOFT x"
                     action = "buy"
                     percentage = 70
+
+                    #  5 mar 2024 se 39 sale da 15 min ok cosi'
+
+
+
+                elif (    
+                    ma3_last > ma13_last
+                    and ma39_last < ma39_15_min_ago
+                    and deviation_ma39 > 0.192
+
+                    and ma100_last > ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
+                    
+                    and ma100_last > ma100_120_min_ago
+                    and ma300_last > ma300_180_min_ago
+                    
+                    and deviation_ma300_sopra_ma450 < 0.18
+                    and deviation_ma300_sopra_ma450 > -0.18
+                    
+                    and deviation_ma100_sopra_ma300 < 0.29
+                    and deviation_ma100_sopra_ma300 > -0.29
+                    
+                    and deviation_ma3_sopra_ma10 > 0.02
+                    and deviation_ma3_sopra_ma16 > -0.01
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.021
+                    
+                    and macd >= macd_2_min_ago
+                    and macd > -20
+                    and macd_differenza_2_min_ago > 0.50
+                    
+                    and ma2_differenza_ma5 > 10
+                ):  
+                    
+                    buy = "BUY 1 TREND LAT con ma300 > 3 ore e 3-10 > 0.01 e macd > -20 e ma2_diff_2_min_ago > 7 - r 1205 AX NUOVA ERA A3 SOFT y1"
+                    action = "buy"
+                    percentage = 70
+                    
+                    #  5 mar 2024 se 39 scende da 15 min allora deve comprare con dev 39 > 0.192
+
+
+                elif (    
+                    ma3_last > ma13_last
+                    and ma39_last < ma39_15_min_ago
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.30
+
+                    and ma100_last > ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.60
+                    
+                    and ma100_last > ma100_120_min_ago
+                    and ma300_last > ma300_180_min_ago
+                    
+                    and deviation_ma300_sopra_ma450 < 0.18
+                    and deviation_ma300_sopra_ma450 > -0.18
+                    
+                    and deviation_ma100_sopra_ma300 < 0.29
+                    and deviation_ma100_sopra_ma300 > -0.29
+                    
+                    and deviation_ma3_sopra_ma10 > 0.02
+                    and deviation_ma3_sopra_ma16 > -0.01
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.021
+                    
+                    and macd >= macd_2_min_ago
+                    and macd > -20
+                    and macd_differenza_2_min_ago > 0.50
+                    
+                    and ma2_differenza_ma5 > 10
+                ):  
+                    
+                    buy = "BUY 1 TREND LAT con ma300 > 3 ore e 3-10 > 0.01 e macd > -20 e ma2_diff_2_min_ago > 7 - r 1205 AX NUOVA ERA A3 SOFT y2"
+                    action = "buy"
+                    percentage = 70
+
+                    #  5 mar 2024 se 39 scende da 15 min allora deve comprare con dev 5-100 < -0.30
+
+
 
                 elif (    
                     ma3_last > ma13_last
@@ -2891,7 +2974,7 @@ class maddog:
                     and ma3_last > ma20_last
                     and ma100_last > ma100_10_min_ago
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.50
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.60
                     
                     and ma100_last > ma100_120_min_ago
                     and ma300_last > ma300_180_min_ago
@@ -41377,7 +41460,7 @@ class maddog:
                 and delta_150_100 <= delta_150_100_60_min
                 
                 and deviation_ma39 < 0.13
-                and deviation_sell < 0.02
+                and deviation_sell < -0.02
                 
                 and deviation_ma100_sopra_ma300 < 0.40
                 
@@ -41387,11 +41470,13 @@ class maddog:
                 and macd_differenza_2_min_ago < -0.35
                 
             ):
-                sell = "SELL cond spec 6 GIORNO con ma300 < 5 ore con ma50 > E 40>50 e dev 3-39 < 0.13 e dev_sell < 0.01 e ma78 < e macd_diff_2_min_ago < -0.35 - r 16045 B1x"
+                sell = "SELL C S 6 GIORNO con ma300 < 5 ore con ma50 > E 40>50 e dev 3-39 < 0.13 e dev_sell < -0.02 e ma78 < e macd_diff_2_min_ago < -0.35 - r 16045 B1x"
                 action = "sell"
                 
                 # 28 dic 2023 se anche 40>50 dev sell a 0.01 da 0.03
                 # 28 dic 2023 se anche 40>50 dev sell a 0.02 da 0.01
+                #  5 mar 2024 se anche 40>50 dev sell a -0.02 da 0.02
+
             
             elif (
                 ma78_last < ma78_120_min_ago
