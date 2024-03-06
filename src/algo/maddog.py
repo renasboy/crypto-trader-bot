@@ -41941,24 +41941,56 @@ class maddog:
                 #  6 mar 2024 and deviation_sell < -0.01 da 0.01
                 #  6 mar 2024 and delta_450_300 < delta_450_300_60_min significa che sta salendo molto - statte calmo - GIORNO !
 
-          
+
+
             elif (
                 ma50_last <= ma50_2_min_ago
-                and ma100_last > ma100_10_min_ago
-                and macd_differenza_2_min_ago < -4
-                and deviation_ma39 < 0.05
-                and deviation_sell < 0.005
-                and ma2_last <= ma2_2_min_ago 
-                and delta_450_300 > delta_450_300_60_min
+                and ma450_last > ma450_180_min_ago
                 
+                and ma100_last > ma100_10_min_ago
                 and deviation_ma100_sopra_ma300 > 0.20
                 and deviation_ma3_sotto_ma150 > -1.20
                 
+                and deviation_ma39 < 0.05
+                and deviation_sell < -0.02
+                
+                and delta_450_300 > delta_450_300_60_min
+                
+                and ma2_last <= ma2_2_min_ago
+                and macd_differenza_2_min_ago < -4
             ):
-                sell = "SELL cond. special 3 - SALVAGENTE 3 3-39 < 0.05 e dev sell < 0.05 con ma50 <= e dev_ma3_sotto_ma200 > -1.20 - r 15985 A2 X"
+                sell = "SELL cond. special 3 - SALVAGENTE 3 3-39 < 0.05 e dev sell < -0.02 con ma50 <= e dev_ma3_sotto_ma200 > -1.20 - r 15985 A2 X1"
                 action = "sell"
                 
                 #  2 feb 2024 se ma 100 sale da 10 min dev sell a 0.05 da 0.05 aspetta un po' prima di vendere se 100 cresce.
+                
+                #  6 mar 2024 aggiunto and ma450_last > ma450_180_min_ago
+                #  6 mar 2024 and deviation_sell < -0.02 da 0.005
+                
+
+            elif (
+                ma50_last <= ma50_2_min_ago
+                and ma450_last < ma450_180_min_ago
+                
+                and ma100_last > ma100_10_min_ago
+                and deviation_ma100_sopra_ma300 > 0.20
+                and deviation_ma3_sotto_ma150 > -1.20
+                
+                and deviation_ma39 < 0.05
+                and deviation_sell < 0.005
+                
+                and delta_450_300 > delta_450_300_60_min
+               
+                and ma2_last <= ma2_2_min_ago 
+                and macd_differenza_2_min_ago < -4
+            ):
+                sell = "SELL cond. special 3 - SALVAGENTE 3 3-39 < 0.05 e dev sell < 0.005 con ma50 <= e dev_ma3_sotto_ma200 > -1.20 - r 15985 A2 X2"
+                action = "sell"
+                
+                #  2 feb 2024 se ma 100 sale da 10 min dev sell a 0.05 da 0.05 aspetta un po' prima di vendere se 100 cresce.
+                
+                #  6 mar 2024 aggiunto and ma450_last < ma450_180_min_ago
+                #  6 mar 2024 and deviation_sell < -0.005
             
             elif (
                 ma50_last <= ma50_2_min_ago
