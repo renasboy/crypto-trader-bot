@@ -41082,9 +41082,36 @@ class maddog:
                 sell = "SELL cond. special 3 - SALVAGENTE 3 3-39 < -0.20 e dev sell < -0.31 and dev_sell< -0.308 con ma50< e dev_ma3_sotto_ma200 > -1.20 - r 15985 A1 prova 1"
                 action = "sell"
 
-          
+
+
             elif (
-                ma8_last > ma8_2_min_ago 
+                ma8_last > ma8_2_min_ago
+                and ma39_last > ma39_15_min_ago
+                
+                and deviation_ma39 < 0.01
+                and deviation_sell < -0.03
+                and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago > 1.50
+                and deviation_ma10_sopra_o_sotto_ma10_30_min_ago < 0.10
+                
+                and delta_450_300 < delta_450_300_60_min
+                and ma50_last < ma50_2_min_ago
+                and deviation_ma100_sopra_ma300 > 0.20
+                
+                and deviation_ma3_sotto_ma150 > -1.20
+                and ma2_last <= ma2_2_min_ago 
+                
+            ):
+                sell = "SELL cond. special 3 - CON ma8_last < ma8_2_min_ago and dev 3-39 < 0.01 e dev sell < -0.03 con ma50 < - r 15985 A1 ok 2A 1"
+                action = "sell"
+                
+                #  6 mar 2024 se 39 > 39 15 min ago allora deviation_sell < -0.03 da -0.025 ( sta salendo da molto tempo )
+
+
+
+            elif (
+                ma8_last > ma8_2_min_ago
+                and ma39_last > ma39_15_min_ago
+                
                 and deviation_ma39 < 0.01
                 and deviation_sell < -0.025
                 and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago > 1.50
@@ -41098,12 +41125,14 @@ class maddog:
                 and ma2_last <= ma2_2_min_ago 
                 
             ):
-                sell = "SELL cond. special 3 - CON ma8_last < ma8_2_min_ago and dev 3-39 < 0.01 e dev sell < -0.025 con ma50 < - r 15985 A1 ok 2A"
+                sell = "SELL cond. special 3 - CON ma8_last < ma8_2_min_ago and dev 3-39 < 0.01 e dev sell < -0.025 con ma50 < - r 15985 A1 ok 2A 2"
                 action = "sell"
                 
                 # 18 set 2023 dev sell -0.02 da -0.01
-                # 18 set 2023 dev 39 da 0.01 da -0.01
-                # 17 OTT 2023 NON METTERE MACD <  MACD 2 MIN AGO
+                # 18 set 2023 dev 39 a 0.01 da -0.01
+                # 17 ott 2023 NON METTERE MACD <  MACD 2 MIN AGO
+
+                #  6 mar 2024 vedi che qua 39 < 39 15 min ago quindi meno tolleranza anche se sale da molto tempo
 
           
             elif (
