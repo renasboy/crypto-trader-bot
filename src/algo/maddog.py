@@ -14255,11 +14255,15 @@ class maddog:
                     # 21 mag 2023 aggiunta macd > macd 2 min ago
                     # 27 set 2023 5-28 0.13 da 0.14
                     # 27 set 2023 and ma200_last > ma200_20_min_ago da ma200_last > ma200_20_min_ago
+
+
                     
                 # BUY 2 con ma200 che sale da 60 min etc. importata dal BUY 3 RCCR
-                
+
                 elif (
                     ma10_last >= ma10_2_min_ago
+                    and ma39_last > ma39_15_min_ago
+                    
                     and ma200_last > ma200_60_min_ago
                     and deviation > -0.40
                     
@@ -14279,10 +14283,72 @@ class maddog:
                     and macd >= macd_2_min_ago
                 ):  
                 
-                    buy = "BUY 2 con ma200 che sale da 60 min 33 < 78 ! - r 5860 B"
+                    buy = "BUY 2 con ma200 che sale da 60 min 33 < 78 ! - r 5860 B1"
                     action = "buy"
                     percentage = 70
                     
+                    #  6 mar 2024 and ma39_last > ma39_15_min_ago
+
+                elif (
+                    ma10_last >= ma10_2_min_ago
+                    and ma39_last < ma39_15_min_ago
+                    and deviation_ma39 > 0.192
+
+                    and ma200_last > ma200_60_min_ago
+                    and deviation > -0.40
+                    
+                    and ma33_last < ma78_last
+                    and deviation_ma3_sopra_ma10 > 0.20
+                    and deviation_ma5_sopra_ma28 > 0.14
+                    
+                    and deviation_ma4_sopra_ma30 > 0.11
+                    and ma3_last > ma13_last
+                    and ma4_last > ma9_last
+                    and deviation_ma7_sopra_ma40 > 0.03
+                    and ma7_last > ma25_last
+                    
+                    and deviation_buy_ma2_sopra_ma13 > 0.10
+                    and ma4_last > ma50_last
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                ):  
+                
+                    buy = "BUY 2 PUGNO FANTASMA DI MOHAMMAD ALI' con ma200 che sale da 60 min 33 < 78 ! - r 5860 B2"
+                    action = "buy"
+                    percentage = 70
+
+                    #  6 mar 2024 and ma39_last < ma39_15_min_ago PUGNO FANTASMA DI MOHAMMAD ALI'
+
+
+                elif (
+                    ma10_last >= ma10_2_min_ago
+                    and ma39_last < ma39_15_min_ago
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.25
+
+                    and ma200_last > ma200_60_min_ago
+                    and deviation > -0.40
+                    
+                    and ma33_last < ma78_last
+                    and deviation_ma3_sopra_ma10 > 0.20
+                    and deviation_ma5_sopra_ma28 > 0.14
+                    
+                    and deviation_ma4_sopra_ma30 > 0.11
+                    and ma3_last > ma13_last
+                    and ma4_last > ma9_last
+                    and deviation_ma7_sopra_ma40 > 0.03
+                    and ma7_last > ma25_last
+                    
+                    and deviation_buy_ma2_sopra_ma13 > 0.10
+                    and ma4_last > ma50_last
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                ):  
+                
+                    buy = "BUY 2 PRENDI IL COLTELLO CON IL PIEDE con ma200 che sale da 60 min 33 < 78 ! - r 5860 B3"
+                    action = "buy"
+                    percentage = 70
+
+                    #  6 mar 2024 and ma39_last < ma39_15_min_ago PRENDI IL COLTELLO CON IL PIEDE
                     
                   
                     
