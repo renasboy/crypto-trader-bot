@@ -41101,7 +41101,7 @@ class maddog:
                 and ma2_last <= ma2_2_min_ago 
                 
             ):
-                sell = "SELL cond. special 3 - CON ma8_last < ma8_2_min_ago and dev 3-39 < 0.01 e dev sell < -0.03 con ma50 < - r 15985 A1 ok 2A 1"
+                sell = "SELL C.S. con trend rialzista e ma8_last < ma8_2_min_ago e dev 3-39 < 0.01 e dev sell < -0.03 e ma50 < - r 15985 A1 ok 2A 1"
                 action = "sell"
                 
                 #  6 mar 2024 se 39 > 39 15 min ago allora deviation_sell < -0.03 da -0.025 ( sta salendo da molto tempo )
@@ -41125,7 +41125,7 @@ class maddog:
                 and ma2_last <= ma2_2_min_ago 
                 
             ):
-                sell = "SELL cond. special 3 - CON ma8_last < ma8_2_min_ago and dev 3-39 < 0.01 e dev sell < -0.025 con ma50 < - r 15985 A1 ok 2A 2"
+                sell = "SELL C.S. con trend rialzista e ma8_last < ma8_2_min_ago e dev 3-39 < 0.01 e dev sell < -0.025 e ma50 < - r 15985 A1 ok 2A 2"
                 action = "sell"
                 
                 # 18 set 2023 dev sell -0.02 da -0.01
