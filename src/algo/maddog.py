@@ -39159,21 +39159,49 @@ class maddog:
                         
                         
                     # tra MARADONA e RONALDO ho messo POCHI MALEDETTI E SUBITO se alla fine del trend da' una botta rialzista
-                    
+                        
+                    elif (
+                        ma3_last < ma33_last
+                        and ma300_last > ma300_301_min_ago
+                        and ma200_last > ma200_60_min_ago
+                        
+                        and deviation_sell > 0.68
+                        
+                        and ma2_last < ma2_2_min_ago
+                        and ma2_differenza_2_min_ago < -7
+                        
+                        and macd_differenza_2_min_ago < -2
+                    ):
+                        sell = "SELL 3-4-x (21-60 min) con 300> 5 ore tra MARADONA e RONALDO ho messo P-M-S 33 and dev_sell > 0.68 - r 15157 a"
+                        action = "sell"
+                         
+                        # 6 mar 2024 dev sell 3-33 da 3-28
+
+
                     elif (
                         ma3_last < ma28_last
+                        
+                        and ma300_last < ma300_301_min_ago
                         and ma200_last > ma200_60_min_ago
+                        
                         and deviation_sell > 0.68
+                        
                         and ma2_last < ma2_2_min_ago
+                        and ma2_differenza_2_min_ago < -7
+                        and macd < macd_2_min_ago
+                        and macd_differenza_2_min_ago < -2
                     ):
-                        sell = "SELL 3-4-x (21-60 min) SOLO QUI tra MARADONA e RONALDO ho messo P-M-S 18 SE DA UNA BOTTA RIALZISTA  (solo quando ma200 >) and dev_sell > 0.68 - r 15157"
+                        sell = "SELL 3-4-x (21-60 min) con 300> 5 ore tra MARADONA e RONALDO ho messo P-M-S 18 and dev_sell > 0.68 - r 15157 b"
                         action = "sell"
                         
                         # 3-18 da 3-13 dopo dolomiti
                         # > estate 3-28 da 3-18
                         
+                        #  6 mar 2024 aggiunto and ma2_differenza_2_min_ago < -7
+                        #  6 mar 2024 aggiunto and macd_differenza_2_min_ago < -2
                         
-                     
+                        
+                        
                     
                     # FINTA ALLA RONALDO
                     
@@ -41114,7 +41142,7 @@ class maddog:
                 and ma50_last > ma50_2_min_ago
                 
                 and deviation_ma39 < 0.07
-                and deviation_sell < 0.01
+                and deviation_sell < -0.01
                 
                 and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago > 1.50
                 and deviation_ma10_sopra_o_sotto_ma10_30_min_ago < 0.12
@@ -41129,7 +41157,7 @@ class maddog:
                 and macd_differenza_2_min_ago < -0.30
                
             ):
-                sell = "SELL cond. special 3 - con ma50 > e CON ma8_last < ma8_2_min_ago and dev 3-39 < 0.05 e dev sell < 0.01 and macd_dif_2_min_ago < -0.25 - r 15985 A1 ok 2B X2"
+                sell = "SELL C.S. 3 - con ma50 > e ma8_last < ma8_2_min_ago e dev 3-39 < 0.05 e dev sell < -0.01 - r 15985 A1 ok 2B X2"
                 action = "sell"
                 
                 # 18 set 2023 dev sell -0.02 da -0.01
@@ -41139,16 +41167,19 @@ class maddog:
                 #  9 nov 2023 and deviation_ma10_sopra_o_sotto_ma10_30_min_ago < 0.12 da < 0.10
                 # 15 nov 2023 dev 39 da 0.05 da 0.01
                 # 15 nov 2023 ma50>
-                # 13 dic 2023 dev sell a 0.01 da -0.03
+                # 13 dic 2023 dev sell a 0.01 da -0.03 
                 
                 # 19 dic 2023 and macd_differenza_2_min_ago a -0.30 da -0.25
                 # 19 dic 2023 and deviation_ma2_sopra_o_sotto_ma2_2_min_ago a -0.02 da -0.018
+                
+                #  6 mar 2024 and deviation_sell < -0.01 da 0.01 (ma300 si sta alzando rispetto alla 450 - sta salendo !)
+
             
             elif (
                 ma8_last < ma8_2_min_ago
                 and ma2_differenza_2_min_ago < -15
                 and deviation_ma39 < 0.05
-                and deviation_sell < -0.03
+                and deviation_sell < -0.04
                 
                 and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago > 1.50
                 and deviation_ma10_sopra_o_sotto_ma10_30_min_ago < 0.12
@@ -41161,7 +41192,7 @@ class maddog:
                 and ma2_last <= ma2_2_min_ago 
                 and macd_differenza_2_min_ago < -0.25
             ):
-                sell = "SELL cond. special 3 - con ma50< MA ma100 sopra ma300 > 0.10 and dev 3-39 < 0.05 e dev sell < -0.03 and macd_difF_2_min_ago < -0.25 - r 15985 A1 ok 2BY"
+                sell = "SELL C.S. con ma50 < MA ma100 sopra ma300 > 0.10 e dev 3-39 < 0.05 e dev sell < -0.04 - r 15985 A1 ok 2BY"
                 action = "sell"
                 
                 # 18 set 2023 dev sell -0.02 da -0.01
@@ -41170,7 +41201,10 @@ class maddog:
                 # 17 ott 2023 and macd_differenza_2_min_ago < -0.25
                 #  9 nov 2023 and deviation_ma10_sopra_o_sotto_ma10_30_min_ago < 0.12 da < 0.10
                 # 15 nov 2023 dev 39 da 0.05 da 0.01
-                # 15 nov 2023 ma50<
+                # 15 nov 2023 ma50 <
+
+                #  6 mar 2024 and delta_450_300 < delta_450_300_60_min significa che e' GIORNO
+                #  6 mar 2024 and deviation_sell < -0.04 da -0.03
 
             
             elif (
@@ -41396,7 +41430,7 @@ class maddog:
                 ma50_last <= ma50_2_min_ago
                 and ma10_last < ma20_last
                 and deviation_ma39 < 0.11
-                and deviation_sell < 0.01
+                and deviation_sell < -0.01
                 
                 and delta_450_300 < delta_450_300_60_min
                 
@@ -41409,7 +41443,7 @@ class maddog:
                 and macd_differenza_2_min_ago < -2
                 
             ):
-                sell = "SELL cond. spec - con ma50_last <= ma50_2_min_ago MA CON 10>20 con 3-39 < 0.11 and dev_sell < 0.01 e dev_ma3_sotto_ma200 > -1.20 - r 15985 A1 Y2"
+                sell = "SELL C.S. con ma50_last <= ma50_2_min_ago MA CON 10>20 con 3-39 < 0.11 and dev_sell < -0.01 - r 15985 A1 Y2"
                 action = "sell"
                 
                 # 27 giu 2022 dev sell a 0.305 da 0.31
@@ -41433,6 +41467,9 @@ class maddog:
                 # 13 dic 2023 deviation_sell a 0.01 da -0.05
                 
                 #  8 gen 2024 aggiunta and ma2_last < ma10_last se 10>20
+                
+                #  6 mar 2024 and deviation_sell < -0.01 da 0.01
+                #  6 mar 2024 and delta_450_300 < delta_450_300_60_min significa che sta salendo molto - statte calmo - GIORNO !
 
           
             elif (
