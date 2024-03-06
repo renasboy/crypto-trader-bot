@@ -20228,18 +20228,17 @@ class maddog:
                     and ma300_last > ma300_301_min_ago
                     and ma100_last > ma200_last
                    
-                    and deviation_ma3_sopra_ma16 > 0.045
-                    and deviation_ma5_sopra_ma28 > 0.05
+                    and deviation_ma3_sopra_ma10 > 0.045
+                    and deviation_ma5_sopra_ma16 > 0.05
                     
                     and ma3_last > ma13_last
                     and ma4_last > ma9_last
                     and ma4_last > ma50_last
                     and ma7_last > ma25_last
-                    and ma13_last > ma100_last
                     
                     and ma2_last > ma2_2_min_ago
                 ):
-                    buy = "BUY 4 con ma300_last > ma300_301_min_ago MA NOTTE ! e con 50> e 300> E 100 > 200 and 3-16 > 0.045 and deviation_buy3 > 0.08 - r 6668 A2"
+                    buy = "BUY 4 con ma300_last > 5 ore MA NOTTE ! e con 50> e 300> E 100 > 200 and 3-16 > 0.05 - r 6668 A2"
                     action = "buy"
                     percentage = 70
           
@@ -20247,8 +20246,9 @@ class maddog:
                     # il trend, evidentemente, e' LATERALE.
                     # E ALLORA AGGIUNGO UN BEL 6-30 > 0.15 - TREND LATERALE
                     # 28 ott 2022 dev buy 3 a 0.08 da 0.11
-                    # 10 nov 2023 aggiunta FINALMENTE and deviation_ma3_sopra_ma16 > 0.045 
-                  
+                    # 10 nov 2023 aggiunta FINALMENTE and deviation_ma3_sopra_ma16 > 0.045
+
+                    #  6 mar 2024 anticipato ndecchiecella
                   
                   
                   
