@@ -15297,12 +15297,13 @@ class maddog:
                     action = "sell"
 
               
-
-                elif (     
                     
+                elif (     
                     ma3_last > ma18_last
+                    and ma39_last > ma39_15_min_ago
+                    
                     and ma2_last >= ma20_last
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.36
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.30
                     
                     and ma450_last > ma450_360_min_ago
                     and ma100_last < ma100_30_min_ago
@@ -15324,7 +15325,73 @@ class maddog:
                     and macd >= macd_2_min_ago
                     and macd_differenza_2_min_ago > 0.10
                 ):    
-                    buy = "BUY 2 prendo coltello con il piede E CON 300 ancora vicina 450 ( anche sotto ! ) and 3-18 > -0.02 + MACD > - r 5994"
+                    buy = "BUY 2 prendo coltello con il piede E ma450 che sale da 6 ore and 3-18 > -0.02 + MACD > - r 5994 a"
+                    action = "buy"
+                    percentage = 90
+
+
+                elif (     
+                    ma3_last > ma18_last
+                    
+                    and ma39_last < ma39_15_min_ago
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.35
+                   
+                    and ma450_last > ma450_360_min_ago
+                    and ma100_last < ma100_30_min_ago
+                    and deviation_ma54_sopra_o_sotto_ma72 < -0.015
+                    
+                    
+                    and deviation_ma39_sotto_ma200 < -0.01
+                    and deviation_ma300_sopra_ma450 > -0.70
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > -0.01
+                    and deviation_ma3_sopra_ma18 > -0.02
+                    
+                    and ma2_last > ma5_last
+                    and ma2_last >= ma20_last
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
+                    and ma3_differenza_2_min_ago > 3
+                    and macd >= macd_2_min_ago
+                    and macd_differenza_2_min_ago > 0.10
+                ):    
+                    buy = "BUY 2 prendo coltello con il piede E ma450 che sale da 6 ore and 3-18 > -0.02 + MACD > - r 5994 b"
+                    action = "buy"
+                    percentage = 90
+                    
+                    
+
+                elif (     
+                    ma3_last > ma18_last
+                    
+                    and ma39_last < ma39_15_min_ago
+                    and deviation_ma39 > 0.192
+               
+                    and ma450_last > ma450_360_min_ago
+                    and ma100_last < ma100_30_min_ago
+                    and deviation_ma54_sopra_o_sotto_ma72 < -0.015
+                    
+                    
+                    and deviation_ma39_sotto_ma200 < -0.01
+                    and deviation_ma300_sopra_ma450 > -0.70
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > -0.01
+                    and deviation_ma3_sopra_ma18 > -0.02
+                    
+                    and ma2_last > ma5_last
+                    and ma2_last >= ma20_last
+                    
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
+                    and ma3_differenza_2_min_ago > 3
+                    and macd >= macd_2_min_ago
+                    and macd_differenza_2_min_ago > 0.10
+                ):    
+                    buy = "BUY 2 pugno fantasma di mohammad ali' E ma450 che sale da 6 ore and 3-18 > -0.02 + MACD > - r 5994 c"
                     action = "buy"
                     percentage = 90
                     
@@ -15343,6 +15410,9 @@ class maddog:
                     # 11 gen 2024 and deviation_ma300_sopra_ma450 > -0.70 da -0.60
                     # 11 gen 2024 and macd_differenza_2_min_ago > 0.10 da 0.30 
                     # 22 feb 2024 aggiunta perche' sul RCCR e' andata benissimo (ma ho aggiunto anche and deviation_ma5_sopra_o_sotto_ma100 < -0.36)
+
+
+
 
                 elif (
                     ma3_last > ma18_last
