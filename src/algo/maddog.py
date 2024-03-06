@@ -14371,7 +14371,7 @@ class maddog:
                     action = "buy"
                     percentage = 70
 
-                    #  6 mar 2024 and ma39_last < ma39_15_min_ago PRENDI IL COLTELLO CON IL PIEDE
+                    #  6 mar 2024 aggiunto anche incrocio al rialzo 3-180
                     
                   
                     
@@ -17161,8 +17161,61 @@ class maddog:
                     #  16 nov ho tolto ma5_last > ma59_last e ho messo dev callas = 5/54 <-0.10 PENSIERO LATERALE - VEDI 16 NOV ore 15 :33
                     # 20 apr 2023 5-28 a 0.07 da 0.10
                     # 20 apr 2023 5-28 a 0.03 da 0.07
+
+
+                elif (
+                    ma5_last >= ma5_2_min_ago
+                    and ma450_last > ma450_120_min_ago
+                    and ma200_last > ma200_60_min_ago
                     
+                    and ma39_last < ma39_15_min_ago
+                    and (ma3_prev < ma180_prev and ma3_last > ma180_last)
+                    
+                    and ma33_last < ma78_last
+               
+                    and ma3_last > ma13_last
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and ma2_differenza_2_min_ago > 8
+                    
+                    and macd_differenza_2_min_ago > 0.25
+                ):  
                 
+                    buy = "BUY 3 incrocio al rialzo 3-180 con ma450 > 2 ore e ma200 che sale da 1 ora con 33<78 ! - r 6260 a"
+                    action = "buy"
+                    percentage = 70
+
+                    # 6 mar 2024 aggiunto incrocio al rialzo 3-180
+                    
+                    
+                     
+                elif (
+                    ma5_last >= ma5_2_min_ago
+                    and ma450_last > ma450_120_min_ago
+                    and ma200_last > ma200_60_min_ago
+                    
+                    and ma39_last < ma39_15_min_ago
+                    and (ma3_prev < ma180_prev and ma3_last > ma180_last)
+                    
+                    and ma33_last < ma78_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and ma2_differenza_2_min_ago > 8
+                    
+                    and macd_differenza_2_min_ago > 0.25
+                ):  
+                
+                    buy = "BUY 3 incrocio al rialzo 3-180 con ma450 > 2 ore e ma200 che sale da 1 ora con 33<78 ! - r 6260 b"
+                    action = "buy"
+                    percentage = 70
+
+                    # 6 mar 2024 aggiunto incrocio al rialzo 3-180
+
+
+
                 elif (    
                     ma450_last > ma450_120_min_ago
                     and (ma5_prev < ma90_prev and ma5_last > ma90_last)
