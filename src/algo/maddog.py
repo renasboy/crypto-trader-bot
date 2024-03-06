@@ -3684,9 +3684,10 @@ class maddog:
                 ############################################################################################################
                 
                 
-                elif (     
-                    
+                elif (      
                     ma5_last > ma20_last
+                    and ma39_last > ma39_15_min_ago
+                    
                     and ma100_last > ma100_120_min_ago
                     
                     and deviation_ma54_sopra_o_sotto_ma72 < 0.015
@@ -3710,7 +3711,78 @@ class maddog:
                     and macd_differenza_2_min_ago > 1.25
                     
                 ):    
-                    buy = "BUY 1 compare forever - con 5-20 E CON 300 ancora vicina alla 450 ( anche un poco sotto! ) and 3-18 > 0.02 + MACD > - r 1537 A2 X"
+                    buy = "BUY 1 compare forever - con 5-20 E CON 300 ancora vicina alla 450 and 3-18 > 0.02 + MACD > - r 1537 A2 X1"
+                    action = "buy"
+                    percentage = 90
+                    
+                elif (      
+                    ma3_last > ma20_last
+                    
+                    and ma39_last < ma39_15_min_ago
+                    and deviation_ma39 > 0.192
+                    
+                    and ma100_last > ma100_120_min_ago
+                    
+                    and deviation_ma54_sopra_o_sotto_ma72 < 0.015
+                    and deviation_ma54_sopra_o_sotto_ma72 > -0.015
+                    
+                    and deviation_ma39_sotto_ma200 < 0.10
+                    and deviation_ma300_sopra_ma450 > -0.45
+                    
+                    and deviation_ma3_sopra_ma10 > -0.005
+                    and deviation_ma3_sopra_ma16 > 0.01
+                    and deviation_ma3_sopra_ma18 > 0.02
+                    
+                    and ma2_last >= ma20_last
+                  
+                    
+                    and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
+                    and ma2_differenza_2_min_ago > 8
+                    and ma2_differenza_ma5 > 11
+                    and macd_differenza_2_min_ago > 1.25
+                    
+                ):    
+                    buy = "BUY 1 compare forever pugno fantasma di mohammad ali' - con 5-20 and 3-18 > 0.02 + MACD > - r 1537 A2 X2"
+                    action = "buy"
+                    percentage = 70
+                    
+                    #  6 mar 2024 aggiunto pugno fantasma di mohammad ali'
+                    
+
+
+
+                elif (      
+                    ma3_last > ma20_last
+                    
+                    and ma39_last < ma39_15_min_ago
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.30
+                    
+                    and ma100_last > ma100_120_min_ago
+                    
+                    and deviation_ma54_sopra_o_sotto_ma72 < 0.015
+                    and deviation_ma54_sopra_o_sotto_ma72 > -0.015
+                    
+                    and deviation_ma39_sotto_ma200 < 0.10
+                    and deviation_ma300_sopra_ma450 > -0.45
+                    
+                    and deviation_ma3_sopra_ma10 > -0.005
+                    and deviation_ma3_sopra_ma16 > 0.01
+                    and deviation_ma3_sopra_ma18 > 0.02
+                    
+                    and ma2_last >= ma20_last
+                  
+                    
+                    and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
+                    and ma2_differenza_2_min_ago > 8
+                    and ma2_differenza_ma5 > 11
+                    and macd_differenza_2_min_ago > 1.25
+                    
+                ):    
+                    buy = "BUY 1 compare forever prende coltello con il piede - con 5-20 and 3-18 > 0.02 + MACD > - r 1537 A2 X3"
                     action = "buy"
                     percentage = 90
                     
@@ -3718,7 +3790,9 @@ class maddog:
                     #  8 gen 2024 aggiunto and ma2_differenza_2_min_ago > 8 
                     #  8 gen 2024 aggiunto and ma2_differenza_ma5 > 11 
                     #  8 gen 2024 aggiunto and macd_differenza_2_min_ago > 1.25
-
+                    
+                    #  6 mar 2024 compare prende il coltello con il piede
+                    
               
 
                 elif (     
@@ -3753,7 +3827,7 @@ class maddog:
                     and macd_differenza_2_min_ago > 0.50
                     
                 ):    
-                    buy = "BUY 1 compare forever - con 5-20 E CON 300 vicina alla 450 ( anche poco sotto! ) + MACD > and ma50_diff_ma59 > -5 - r 1537 A2 Y1 NUOVA ERA A1 SOFT"
+                    buy = "BUY 1 compare forever - con 5-20 E CON 300 vicina alla 450 + MACD > and ma50_diff_ma59 > -5 - r 1537 A2 Y1 NUOVA ERA A1 SOFT"
                     action = "buy"
                     percentage = 90
                   
