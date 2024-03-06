@@ -42168,9 +42168,10 @@ class maddog:
                 #  9 gen 2024 se il macd da' una grande botta al ribaso allora anticipo il buy
           
           
-             
             elif (
                 ma78_last < ma78_120_min_ago
+                and ma450_last > ma450_120_min_ago
+
                 and ma40_last > ma50_last
                 and ma50_last > ma50_2_min_ago
                 and ma2_differenza_2_min_ago < -15
@@ -42188,12 +42189,46 @@ class maddog:
                 and macd_differenza_2_min_ago < -0.35
                 
             ):
-                sell = "SELL C S 6 GIORNO con ma300 < 5 ore con ma50 > E 40>50 e dev 3-39 < 0.13 e dev_sell < -0.02 e ma78 < e macd_diff_2_min_ago < -0.35 - r 16045 B1x"
+                sell = "SELL C S 6 GIORNO con ma300 < 5 ore con ma50 > E 40>50 e dev 3-39 < 0.13 e dev_sell < -0.02 e ma78 < - r 16045 B1 x1"
+                action = "sell"
+                
+                # 28 dic 2023 se anche 40>50 dev sell a 0.01 da 0.03
+                # 28 dic 2023 se anche 40>50 dev sell a 0.02 da 0.01
+                
+                #  5 mar 2024 se anche 40>50 dev sell a -0.02 da 0.02
+                #  6 mar 2024 aggiunta and ma450_last > ma450_120_min_ago
+                
+                
+                
+            elif (
+                ma78_last < ma78_120_min_ago
+                and ma450_last < ma450_120_min_ago
+
+                and ma40_last > ma50_last
+                and ma50_last > ma50_2_min_ago
+                and ma2_differenza_2_min_ago < -15
+                and ma300_last < ma300_301_min_ago
+                and delta_150_100 <= delta_150_100_60_min
+                
+                and deviation_ma39 < 0.13
+                and deviation_sell < -0.02
+                
+                and deviation_ma100_sopra_ma300 < 0.40
+                
+                and deviation_ma5_sotto_ma200 > -0.50
+                
+                and ma2_last < ma2_2_min_ago 
+                and macd_differenza_2_min_ago < -0.35
+                
+            ):
+                sell = "SELL C S 6 GIORNO con ma300 < 5 ore con ma50 > E 40>50 e dev 3-39 < 0.13 e dev_sell < -0.02 e ma78 < - r 16045 B1 x2"
                 action = "sell"
                 
                 # 28 dic 2023 se anche 40>50 dev sell a 0.01 da 0.03
                 # 28 dic 2023 se anche 40>50 dev sell a 0.02 da 0.01
                 #  5 mar 2024 se anche 40>50 dev sell a -0.02 da 0.02
+                #  6 mar 2024 aggiunta and ma450_last < ma450_120_min_ago
+
 
             
             elif (
