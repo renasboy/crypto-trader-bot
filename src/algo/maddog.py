@@ -9701,12 +9701,15 @@ class maddog:
                     # 12 dic 2023 aggiunta and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
 
                 
-                # BUY 1 forever young 1 PIU' PRUDENTE se ma 200 > e se ma200 > ma300 AND 78 > 200
 
+
+                # BUY 1 forever young 1 PIU' PRUDENTE se ma 200 > e se ma200 > ma300 AND 78 > 200
 
                 elif (  
                     ma3_last > ma28_last
-                    and ma39_last > ma39_15_min_ago
+                    and ma39_last > ma39_5_min_ago
+
+
                     and ma300_last > ma300_360_min_ago
                     and ma100_last > ma300_last
                     
@@ -9722,11 +9725,39 @@ class maddog:
                     and macd >= macd_2_min_ago
                 ):
 
-                    buy = "BUY 1 forever young 1 PIU' PRUDENTE se ma 200 > e se ma100 > ma300 AND 300> 6 ore ago - r 4353 x"
+                    buy = "BUY 1 forever young 1 PIU' PRUDENTE se ma 200 > e se ma100 > ma300 AND 300> 6 ore ago - r 4353 x1"
                     action = "buy"
                     percentage = 80
                     
-                    #  6 mar 2024 and ma39_last > ma39_15_min_ago ok cosi'
+                    #  6 mar 2024 and ma39_last > ma39_5_min_ago ok cosi'
+                    
+
+                elif (  
+                    ma3_last > ma28_last
+                    and ma39_last > ma39_5_min_ago
+                    and ma3_prev < ma100_prev and ma3_last > ma100_last
+                    
+                    and ma300_last > ma300_360_min_ago
+                    and ma100_last > ma300_last
+                    
+                    and deviation_ma100_laterale > 0.05
+                    
+                    and ma5_last > ma200_last
+                    and ma3_last > ma11_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.02
+                    and deviation_ma3_sopra_ma16 > 0.07
+                   
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                ):
+
+                    buy = "BUY 1 forever young 1 PIU' PRUDENTE se ma 200 > e se ma100 > ma300 AND 300> 6 ore ago - r 4353 x2"
+                    action = "buy"
+                    percentage = 80
+                    
+                    #  6 mar 2024 and ma39_last > ma39_5_min_ago con incrocio al rialzo 3-100
+                    
 
 
                 elif (  
