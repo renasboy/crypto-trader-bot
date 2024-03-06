@@ -9702,10 +9702,11 @@ class maddog:
 
                 
                 # BUY 1 forever young 1 PIU' PRUDENTE se ma 200 > e se ma200 > ma300 AND 78 > 200
-                
+
+
                 elif (  
                     ma3_last > ma28_last
-                    
+                    and ma39_last > ma39_15_min_ago
                     and ma300_last > ma300_360_min_ago
                     and ma100_last > ma300_last
                     
@@ -9721,7 +9722,61 @@ class maddog:
                     and macd >= macd_2_min_ago
                 ):
 
-                    buy = "BUY 1 forever young 1 PIU' PRUDENTE se ma 200 > e se ma100 > ma300 AND 300> 6 ore ago - r 4353"
+                    buy = "BUY 1 forever young 1 PIU' PRUDENTE se ma 200 > e se ma100 > ma300 AND 300> 6 ore ago - r 4353 x"
+                    action = "buy"
+                    percentage = 80
+                    
+                    #  6 mar 2024 and ma39_last > ma39_15_min_ago ok cosi'
+
+
+                elif (  
+                    ma3_last > ma28_last
+                    and ma39_last < ma39_15_min_ago
+                    and deviation_ma39 > 0.192
+
+                    and ma300_last > ma300_360_min_ago
+                    and ma100_last > ma300_last
+                    
+                    and deviation_ma100_laterale > 0.05
+                    
+                    and ma5_last > ma200_last
+                    and ma3_last > ma11_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.02
+                    and deviation_ma3_sopra_ma16 > 0.07
+                   
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                ):
+
+                    buy = "BUY 1 forever young 1 PIU' PRUDENTE se ma 200 > e se ma100 > ma300 AND 300> 6 ore ago - r 4353 y"
+                    action = "buy"
+                    percentage = 80
+
+                    #  6 mar 2024 se ma39_last < ma39_15_min_ago PUGNO FANTASMA DI MOHAMMAD ALI'
+
+
+                elif (  
+                    ma3_last > ma28_last
+                    and ma39_last < ma39_15_min_ago
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.24
+
+                    and ma300_last > ma300_360_min_ago
+                    and ma100_last > ma300_last
+                    
+                    and deviation_ma100_laterale > 0.05
+                    
+                    and ma5_last > ma200_last
+                    and ma3_last > ma11_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.02
+                    and deviation_ma3_sopra_ma16 > 0.07
+                   
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                ):
+
+                    buy = "BUY 1 forever young 1 PIU' PRUDENTE se ma 200 > e se ma100 > ma300 AND 300> 6 ore ago - r 4353 z"
                     action = "buy"
                     percentage = 80
                     
@@ -9731,6 +9786,10 @@ class maddog:
                     # 31 lug 2023 and deviation_ma100_laterale > 0.07 da 0.12
                     # 13 dic 2023 3-28 da 5-28
                     # 13 dic 2023 and deviation_ma100_laterale a 0.05 da 0.07
+
+                    #  6 mar 2024 se ma39_last < ma39_15_min_ago PRENDI IL COLTELLO CON IL PIEDE
+
+
 
           
                 # BUY 1 forever young 2 un po' meno PRUDENTE se 150 > 300 
