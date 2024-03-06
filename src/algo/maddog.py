@@ -42913,9 +42913,38 @@ class maddog:
                 # 18 gen 2024 se ma20 > ma20 2 min ago dev sell a -0.01 da 0.02
                 
             
-            
             elif (    
                 ma50_last > ma50_2_min_ago
+                and ma450_last > ma450_180_min_ago
+
+                and ma20_last < ma20_2_min_ago
+                and ma100_last > ma100_60_min_ago
+                and ma3_last < ma28_last
+                
+                and deviation_ma39 < 0.13
+                and deviation_sell < -0.02
+                
+                and deviation_ma5_sotto_ma200 > -0.60
+                and deviation_ma100_sopra_ma300 < 0.40
+                
+                and ma2_last < ma2_2_min_ago 
+                and macd < macd_2_min_ago
+                and macd < 15
+                and macd_differenza_2_min_ago < -2
+                and ma2_last < ma5_last
+                and ma2_differenza_2_min_ago < -3
+            ):
+                sell = "SELL N C S - con 450 > 3 ore e dev 3-39 < 0.13 e dev_sell < -0.02 e ma50 > e ma5 sotto ma200 > -0.60 - r 16047 A2 X1 Y1"
+                action = "sell"
+                
+                #  7 feb 2024 and deviation_sell < -0.01 da 0.02
+                #  6 mar 2024 aggiunto and ma450_last > ma450_180_min_ago
+                #  6 mar 2024 and deviation_sell < -0.02 da -0.01
+          
+            elif (    
+                ma50_last > ma50_2_min_ago
+                and ma450_last < ma450_180_min_ago
+                
                 and ma20_last < ma20_2_min_ago
                 and ma100_last > ma100_60_min_ago
                 and ma3_last < ma28_last
@@ -42933,11 +42962,11 @@ class maddog:
                 and ma2_last < ma5_last
                 and ma2_differenza_2_min_ago < -3
             ):
-                sell = "SELL nuova cond spec - se 100> vende con 3-28 dev 3-39 < 0.13 e dev_sell < -0.01 e ma50 > e ma5 sotto ma200 > -0.60 e MACD < and macd < 15 - r 16047 A2 X1 Y"
+                sell = "SELL N C S - con 450 > 3 ore e dev 3-39 < 0.13 e dev_sell < -0.01 e ma50 > e ma5 sotto ma200 > -0.60 - r 16047 A2 X1 Y2"
                 action = "sell"
                 
                 #  7 feb 2024 and deviation_sell < -0.01 da 0.02
-          
+                #  6 mar 2024 aggiunto and ma450_last < ma450_180_min_ago
 
           
             elif (    
