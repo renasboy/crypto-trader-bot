@@ -17497,10 +17497,14 @@ class maddog:
                     #  2 nov 2023 tolto 5-28
                     #  2 nov 2023 aggiunto macd > macd_2_min_ago
                     #  2 nov 2022 3-10 0.08 ! se c'e' la presenza del macd >
-                
+
+
+
                 elif (    
                     
                     ma200_last > ma200_20_min_ago
+                    and ma39_last > ma39_15_min_ago
+
                     and deviation_ma100_sopra_ma300 < 0.50
                     
                     and ma3_last > ma28_last
@@ -17518,7 +17522,67 @@ class maddog:
                     and deviation_ma5_sopra_ma28 > 0.057
                 ):    
                     
-                    buy = "BUY 3 correzione in basso con 200 > - riga 1384 RCCR portata nel MADDOG - r 6480 B2"
+                    buy = "BUY 3 con 39 > 39 15 min ago correzione in basso con 200 > - riga 1384 RCCR portata nel MADDOG - r 6480 B2 x"
+                    action = "buy"
+                    percentage = 80
+
+                    #  6 mar 2024 se 39 > 39 15 min ago ok cosi'
+                    
+
+                elif (    
+                    
+                    ma200_last > ma200_20_min_ago
+                    and ma39_last < ma39_15_min_ago
+                    and deviation_ma39 > 0.192
+
+                    and deviation_ma100_sopra_ma300 < 0.50
+                    
+                    and ma3_last > ma28_last
+                    and ma2_last > ma2_2_min_ago
+                    
+                    and ma100_last > ma200_last
+                    and ma200_last > ma300_last
+                    
+                    and ma100_last > ma100_60_min_ago
+                    and ma200_last > ma200_60_min_ago
+                    and ma300_last > ma300_60_min_ago
+                    and ma300_last > ma300_120_min_ago
+                    
+                    and deviation_ma3_sopra_ma10 > 0.057
+                    and deviation_ma5_sopra_ma28 > 0.057
+                ):    
+                    
+                    buy = "BUY 3 con 39 < 39 15 min ago PUGNO FANTASMA DI ALI' dev39 > 0.192 con 200 > - riga 1384 RCCR portata nel MADDOG - r 6480 B2 y"
+                    action = "buy"
+                    percentage = 80
+
+                    #  6 mar 2024 se 39 < 39 15 min ago PUGNO FANTASMA DI MOHAMMAD ALI' ( and deviation_ma39 > 0.192 )
+
+
+                elif (    
+                    
+                    ma200_last > ma200_20_min_ago
+                    and ma39_last < ma39_15_min_ago
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.24
+
+                    and deviation_ma100_sopra_ma300 < 0.50
+                    
+                    and ma3_last > ma28_last
+                    and ma2_last > ma2_2_min_ago
+                    
+                    and ma100_last > ma200_last
+                    and ma200_last > ma300_last
+                    
+                    and ma100_last > ma100_60_min_ago
+                    and ma200_last > ma200_60_min_ago
+                    and ma300_last > ma300_60_min_ago
+                    and ma300_last > ma300_120_min_ago
+                    
+                    and deviation_ma3_sopra_ma10 > 0.057
+                    and deviation_ma5_sopra_ma28 > 0.057
+                ):    
+                    
+                    buy = "BUY 3 con 39 < 39 15 min ago PRENDE IL COLTELLO CON IL PIEDE 5-100 < -0.22 e con 200 > - r 6480 B2 z"
                     action = "buy"
                     percentage = 80
                     
@@ -17527,9 +17591,9 @@ class maddog:
                     # 30 set 2022 aggiunta 5.28
                     # 18 nov 2022 3-10 = 0.057
                     # 18 nov 2022 5-28 = 0.027
-                    # 5 dic 5-28 0.057 da 0.027
+                    #  5 dic 5-28 0.057 da 0.027
                     
-                    
+                    #  6 mar 2024 se 39 < 39 15 min ago PRENDI IL COLTELLO CON IL PIEDE ( dev 5-100 < -0.22 )
                     
                     
                     
@@ -45139,9 +45203,35 @@ class maddog:
 
 
             # 14 POCHI MALEDETTI E SUBITO ma non troppo mentre scende > ESTATE 2023
-            
+
             elif (
                 deviation_sell > 0.80
+                and ma39_last > ma39_15_min_ago
+                and seconds_since_last_trade > 7200
+                and ma5_last < ma5_12_min_ago
+                
+                and ma3_last < ma36_last
+                
+                and ma2_last < ma2_2_min_ago
+                and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.018
+                and macd < macd_2_min_ago
+                and macd_differenza_2_min_ago < -1
+            ):    
+                sell = "SELL C.S. 3-36 - P M e S (ma non troppo !) (> 120 min ) con dev > 0.80 e ma5_12_min_ago - r 16873 C1x"
+                action = "sell"
+                
+                # 27 set 2023 macd < macd 2 min ago 
+                # 27 set 2023 and macd_differenza_2_min_ago < -1
+                #  1 nov 2023 ma5_11_min_ago da ma5_12_min_ago
+                # 11 gen 2024 aggiunta and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.018
+                # 11 gen 2024 3-36 da 3-33 dopo 2 ore di rialzo non e' proprio un pochi maledetti e SUBITO !
+                
+                #  6 mar 2024 se ma39_last > ma39_15_min_ago allora vende con ma5_last < ma5_12_min_ago ( dico 12 min invece di 11 )
+
+
+            elif (
+                deviation_sell > 0.80
+                and ma39_last < ma39_15_min_ago
                 and seconds_since_last_trade > 7200
                 and ma5_last < ma5_11_min_ago
                 
@@ -45152,7 +45242,7 @@ class maddog:
                 and macd < macd_2_min_ago
                 and macd_differenza_2_min_ago < -1
             ):    
-                sell = "SELL cond. speciale 3-36 - POC MAL E SUB (ma non troppo !) (> 120 min ) scende con dev > 0.80 and macd < macd 2 min ago con ma5_11_min_ago - r 16873 C1"
+                sell = "SELL C.S. 3-36 - P M e S (ma non troppo !) (> 120 min ) con dev > 0.80 e ma5_11_min_ago - r 16873 C1y"
                 action = "sell"
                 
                 # 27 set 2023 macd < macd 2 min ago 
@@ -45160,6 +45250,9 @@ class maddog:
                 #  1 nov 2023 ma5_11_min_ago da ma5_12_min_ago
                 # 11 gen 2024 aggiunta and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.018
                 # 11 gen 2024 3-36 da 3-33 dopo 2 ore di rialzo non e' proprio un pochi maledetti e SUBITO !
+
+                #  6 mar 2024 se ma39_last < ma39_15_min_ago allora vende con ma5_last < ma5_11_min_ago ( dico 11 min )
+
 
             # 14 
             
