@@ -391,16 +391,32 @@ class maddog:
         max_hold_time_in_seconds_delta_buy2_sell1 = 120
         
         
-        #########################################################################################################################################################
-        #########################################################################################################################################################
+        ###############################################################################################################################
+        ###############################################################################################################################
 
-        ############################################################################################################################ FORMULE  D E V I A T I O N  !
+        ################################################################################################### FORMULE  D E V I A T I O N  !
         
 
         # formula DEVIATION_1_gabbia
         
         deviation_1_gabbia = (ma8_last / ma50_last - 1) * 100 if ma50_last else 0
         self.algo_helper.info("deviation_1_gabbia: {}".format(deviation_1_gabbia))
+
+
+        ######################################## formula DEVIATION_buy per comprare UN PO' PIU' SOPRA DEL LAST TRADE ( l' ultimo SELL )
+        
+        deviation_buy = (ma2_last / last_trade_price - 1) * 100 if last_trade_price else 0
+        self.algo_helper.info("deviation_buy: {}".format(deviation_buy))
+        
+        
+        # formula DELTA_buy2 per la compra 2
+        
+        delta_buy2_dal_sell1 = (ma3_last / last_trade_price - 1) * 100 if last_trade_price else 0
+        self.algo_helper.info("delta_buy2_dal_sell1: {}".format(delta_buy2_dal_sell1))
+        
+
+        ##############################################################################################################################
+
 
         # formula deviation
         
@@ -571,8 +587,13 @@ class maddog:
         
         
         
+        # formula deviation_ma100_sopra_ma450
+        deviation_ma100_sopra_ma450 = (ma100_last / ma450_last - 1) * 100 if ma450_last else 0
+        self.algo_helper.info("deviation_ma100_sopra_ma450: {}".format(deviation_ma100_sopra_ma450))
         
-        # formula DEVIATION_ma300_sopra_ma450 -
+        
+        
+        # formula DEVIATION_ma300_sopra_ma450 
         
         deviation_ma300_sopra_ma450 = (ma300_last / ma450_last - 1) * 100 if ma450_last else 0
         self.algo_helper.info("deviation_ma300_sopra_ma450: {}".format(deviation_ma300_sopra_ma450))
@@ -1238,27 +1259,30 @@ class maddog:
         deviation_buy2 = (ma8_last / ma50_last - 1) * 100 if ma50_last else 0
         self.algo_helper.info("deviation_buy2: {}".format(deviation_buy2))
         
-        
-        # formula DELTA_buy2 per la compra 2
-        
-        delta_buy2_dal_sell1 = (ma3_last / last_trade_price - 1) * 100 if last_trade_price else 0
-        self.algo_helper.info("delta_buy2_dal_sell1: {}".format(delta_buy2_dal_sell1))
-    
+     
+       
         # formula DEVIATION_buy3 per la compra 3
         
         deviation_buy3 = (ma4_last / ma30_last - 1) * 100 if ma30_last else 0
         self.algo_helper.info("deviation_buy3: {}".format(deviation_buy3))
+
+
+
+
         
+
+
+
+
 
         # formula delta_buy3_incrocio_ma3_ma8 > 0.10 per la compra 3
         
         delta_buy3_incrocio_ma3_ma8 = (ma3_last / ma8_last - 1) * 100 if ma8_last else 0
         self.algo_helper.info("delta_buy3_incrocio_ma3_ma8: {}".format(delta_buy3_incrocio_ma3_ma8))
        
-        # formula DEVIATION_buy per comprare UN PO' PIU' SOPRA DEL LAST TRADE ( di solito l' ultimo SELL )
         
-        deviation_buy = (ma2_last / last_trade_price - 1) * 100 if last_trade_price else 0
-        self.algo_helper.info("deviation_buy: {}".format(deviation_buy))
+        
+        
         
       
         ############################################################################################     DEVIATION_buy_crollo
@@ -45812,9 +45836,10 @@ class maddog:
 
           
             # 16 POCHI MALEDETTI E SUBITO con deviation > 1.01 e macd < -10 e MACD DIFFERENZA < -25
-          
+                
             elif (
                 deviation_sell > 0.81
+                and deviation_sell < 1.25
                 and ma300_last > ma300_301_min_ago
                 
                 and deviation_ma3_sopra_ma18 < -0.056
@@ -45829,7 +45854,52 @@ class maddog:
                 and macd_differenza_3_min_ago < -7
                 
             ):    
-                sell = "SELL CS - P M e S con ma300 > 5 ore ! e dev > 0.81 e macd < 16 e MACD diff_5_min_ago < -9 e dev 3-18 < -0.056 - r 16875 A"
+                sell = "SELL CS - P M e S con ma300 > 5 ore e dev 0.81 - 1.25 e macd < 16 e MACD diff_5_min_ago < -9 e dev 3-18 < -0.056 - r 16875 A1"
+                action = "sell"
+
+
+
+            elif (
+                deviation_sell > 1.25
+                and ma300_last > ma300_301_min_ago
+                and deviation_ma100_sopra_ma450 > 1.75
+                and ma3_last < ma30_last
+                
+                and deviation_ma3_sopra_ma18 < -0.056
+                and ma3_last < ma30_last
+                and ma2_last < ma5_last
+                
+                and ma2_last < ma2_2_min_ago
+                and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.02
+                and ma2_differenza_2_min_ago < -5
+                and macd < macd_2_min_ago
+                and macd < 20
+                and macd_differenza_3_min_ago < -7
+                
+            ):    
+                sell = "SELL CS - P M e S con ma300 > 5 ore 3-30 e dev > 1.25 e macd < 16 e MACD diff_5_min_ago < -9 e dev 3-18 < -0.056 - r 16875 A2x"
+                action = "sell"
+
+
+            elif (
+                deviation_sell > 1.25
+                and ma300_last > ma300_301_min_ago
+                and deviation_ma100_sopra_ma450 < 1.75
+                and ma3_last < ma28_last
+                
+                and deviation_ma3_sopra_ma18 < -0.056
+                and ma3_last < ma30_last
+                and ma2_last < ma5_last
+                
+                and ma2_last < ma2_2_min_ago
+                and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.02
+                and ma2_differenza_2_min_ago < -5
+                and macd < macd_2_min_ago
+                and macd < 20
+                and macd_differenza_3_min_ago < -7
+                
+            ):    
+                sell = "SELL CS - P M e S con ma300 > 5 ore 3-30 e dev > 1.25 e macd < 16 e MACD diff_5_min_ago < -9 e dev 3-18 < -0.056 - r 16875 A2y"
                 action = "sell"
                 
                 #  1 set 2023 se per es macd passa da 18 a -11 vendi     
