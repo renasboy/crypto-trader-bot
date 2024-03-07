@@ -41601,12 +41601,14 @@ class maddog:
 
                 #  6 mar 2024 vedi che qua 39 < 39 15 min ago quindi meno tolleranza anche se sale da molto tempo
 
-          
             elif (
                 ma8_last < ma8_2_min_ago
                 and ma20_last > ma20_2_min_ago
+                and deviation_ma100_sopra_ma450 > 1.50
+                
                 and deviation_ma39 < 0.05
-                and deviation_sell < -0.04
+                and deviation_sell < -0.05
+
                 and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago > 1.50
                 and deviation_ma10_sopra_o_sotto_ma10_30_min_ago < 0.12
                 
@@ -41619,7 +41621,31 @@ class maddog:
                 and macd_differenza_2_min_ago < -0.25
                 and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.018
             ):
-                sell = "SELL cond. special 3 - con ma50 > e CON ma8_last < ma8_2_min_ago and dev 3-39 < 0.05 e dev sell < -0.04  and macd_dif_2_min_ago < -0.25 - r 15985 A1 ok 2Bx1"
+                sell = "SELL C S con ma50 > e ma8_last < ma8_2_min_ago e dev 3-39 < 0.05 e dev sell < -0.04 - r 15985 A1 ok 2B x1 x"
+                action = "sell"
+
+
+            elif (
+                ma8_last < ma8_2_min_ago
+                and ma20_last > ma20_2_min_ago
+                and deviation_ma100_sopra_ma450 < 1.50
+                
+                and deviation_ma39 < 0.05
+                and deviation_sell < -0.05
+
+                and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago > 1.50
+                and deviation_ma10_sopra_o_sotto_ma10_30_min_ago < 0.12
+                
+                and delta_450_300 < delta_450_300_60_min
+                and ma50_last > ma50_2_min_ago
+                and deviation_ma100_sopra_ma300 > 0.10
+                
+                and deviation_ma3_sotto_ma150 > -1.20
+                and ma2_last <= ma2_2_min_ago 
+                and macd_differenza_2_min_ago < -0.25
+                and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.018
+            ):
+                sell = "SELL C S con ma50 > e ma8_last < ma8_2_min_ago e dev 3-39 < 0.05 e dev sell < -0.04 - r 15985 A1 ok 2B x1 y"
                 action = "sell"
                 
                 # 18 set 2023 dev sell -0.02 da -0.01
