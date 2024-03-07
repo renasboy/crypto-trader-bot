@@ -45615,10 +45615,11 @@ class maddog:
                 
                 
                 
-            # 5 - SELL condizione speciale POCHI MALEDETTI E SUBITO QUANDO SALE FORTE ( cerca di inibirlo ) con ma200 > MA ma100 - dedicated to comparo meo
-            
+            # 5 - SELL condizione speciale POCHI MALEDETTI E SUBITO QUANDO SALE FORTE ( cerca di inibirlo ) - dedicated to comparo meo
             elif (
-                ma3_last < ma28_last
+                ma3_last < ma33_last
+                and ma450_last > ma450_360_min_ago
+                
                 and deviation_ma100_sopra_ma200 > 0.40    
                 and ma200_last > ma200_60_min_ago
                     
@@ -45628,12 +45629,33 @@ class maddog:
                 and ma2_last > ma100_last
                 and ma2_last < ma2_2_min_ago
             ):    
-                sell = "SELL cond. special 34 a - POCHI MALEDETTI E SUBITO QUANDO SALE FORTE 3-28 ( cerca di inibirlo ) con ma200> e con dev_sell > 0.70 - r 16767"
+                sell = "SELL CS - POCHI MALEDETTI E SUBITO QUANDO SALE FORTE 3-28 ( cerca di inibirlo ) con ma200> e con dev_sell > 0.70 - r 16767 a"
+                action = "sell"
+
+                #  7 mar 2024 aggiunto and ma450_last > ma450_360_min_ago
+                #  7 mar 2024 3-33 da 3-28 LASCIA CORRERE ! vattene a pescare.
+
+            elif (
+                ma3_last < ma28_last
+                and ma450_last < ma450_360_min_ago
+                
+                and deviation_ma100_sopra_ma200 > 0.40    
+                and ma200_last > ma200_60_min_ago
+                    
+                and deviation_sell > 0.70
+                and deviation_trend_ma100 < 1.00
+                and deviation_pochi_maledetti > 0.25
+                and ma2_last > ma100_last
+                and ma2_last < ma2_2_min_ago
+            ):    
+                sell = "SELL CS - POCHI MALEDETTI E SUBITO QUANDO SALE FORTE 3-28 ( cerca di inibirlo ) con ma200> e con dev_sell > 0.70 - r 16767 b"
                 action = "sell"
                     
                 # and ma2_last > ma100_last (altrimenti vende durante il crollo con la ma3-ma9)
                 # incredibile questa and deviation_trend_ma100 < 1.00 - se ma100 sale "forte" da 60 min non deve intervenire sell 3-9
-                
+
+                #  7 mar 2024 aggiunto and ma450_last < ma450_360_min_ago
+
                 
                 
             # 6 - SELL condizione speciale POCHI MALEDETTI E SUBITO QUANDO SALE PIANO con ma200 > MA ma100 NON DEVE SALIRE TROPPO ! - dedicated to comparo meo
