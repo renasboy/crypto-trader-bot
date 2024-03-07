@@ -41624,6 +41624,9 @@ class maddog:
                 sell = "SELL C S con ma50 > e ma8_last < ma8_2_min_ago e dev 3-39 < 0.05 e dev sell < -0.04 - r 15985 A1 ok 2B x1 x"
                 action = "sell"
 
+                #  7 mar 2024 fatta modifica vedi and deviation_ma100_sopra_ma450 > 1.50
+
+
 
             elif (
                 ma8_last < ma8_2_min_ago
@@ -41657,6 +41660,10 @@ class maddog:
                 # 15 nov 2023 ma50>
                 # 13 dic 2023 dev sell a -0.04 da -0.02 SE ma20_last > ma20_2_min_ago
                 # 13 dic 2023 aggiunta and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.018 = 7 pts
+
+                #  7 mar 2024 fatta modifica vedi and deviation_ma100_sopra_ma450 < 1.50
+
+
           
             elif (
                 ma8_last < ma8_2_min_ago
@@ -41923,10 +41930,38 @@ class maddog:
                 # 15 nov 2023 deviation_ma39 < -0.10 da < -0.20
                 # 15 nov 2023 deviation_sell < -0.20 < -0.31
 
-            
+
+
             elif (    
                 ma50_last <= ma50_2_min_ago
                 and ma10_last > ma20_last
+                and deviation_ma100_sopra_ma450 > 1.50
+                
+                and deviation_ma39 < 0.11
+                and deviation_sell < -0.03
+                
+                and delta_450_300 < delta_450_300_60_min
+                
+                and deviation_ma100_sopra_ma300 > 0.20
+                and deviation_ma3_sotto_ma150 > -1.20
+                
+                and ma2_last <= ma2_2_min_ago
+                and ma2_differenza_2_min_ago < -7
+                and macd < macd_2_min_ago
+                and macd_differenza_2_min_ago < -2
+                and ma2_last < ma10_last
+            ):
+                sell = "SELL CS con ma50 <= ma50_2_min_ago MA CON 10>20 e 3-39 < 0.11 e dev_sell < -0.03 - r 15985 A1 Y1 x"
+                action = "sell"
+
+                #  7 mar 2024 con 100 sopra 450 > 1.50 (trend chiaramente rialzista) dev sell a -0.03 da -0.02
+
+
+            elif (    
+                ma50_last <= ma50_2_min_ago
+                and ma10_last > ma20_last
+                and deviation_ma100_sopra_ma450 < 1.50
+                
                 and deviation_ma39 < 0.11
                 and deviation_sell < -0.02
                 
@@ -41941,12 +41976,12 @@ class maddog:
                 and macd_differenza_2_min_ago < -2
                 and ma2_last < ma10_last
             ):
-                sell = "SELL cond. spec - con ma50_last <= ma50_2_min_ago MA CON 10>20 con 3-39 < 0.11 and dev_sell < -0.02 e dev_ma3_sotto_ma200 > -1.20 - r 15985 A1 Y1"
+                sell = "SELL CS con ma50 <= ma50_2_min_ago MA CON 10>20 e 3-39 < 0.11 e dev_sell < -0.02 - r 15985 A1 Y1 y"
                 action = "sell"
                 
                 #  8 gen 2024 and deviation_sell < -0.01 da 0.01 se 10>20
                 #  8 gen 2024 and deviation_sell < -0.02 da -0.01
-          
+                #  7 mar 2024 con 100 sopra 450 < 1.50 dev sell a -0.02
             
             elif (    
                 ma50_last <= ma50_2_min_ago
@@ -45882,7 +45917,8 @@ class maddog:
             ):    
                 sell = "SELL CS - P M e S con ma300 > 5 ore e dev 0.81 - 1.25 e macd < 16 e MACD diff_5_min_ago < -9 e dev 3-18 < -0.056 - r 16875 A1"
                 action = "sell"
-
+                
+                #  7 mar 2024 fatta modifica
 
 
             elif (
@@ -45905,7 +45941,8 @@ class maddog:
             ):    
                 sell = "SELL CS - P M e S con ma300 > 5 ore 3-30 e dev > 1.25 e macd < 16 e MACD diff_5_min_ago < -9 e dev 3-18 < -0.056 - r 16875 A2x"
                 action = "sell"
-
+                
+                #  7 mar 2024 fatta modifica vedi and deviation_ma100_sopra_ma450 > 1.75
 
             elif (
                 deviation_sell > 1.25
@@ -45950,6 +45987,8 @@ class maddog:
                 #  6 mar 2024 and macd < 20 da -16
                 #  6 mar 2024 and deviation_ma3_sopra_ma18 a -0.056 da -0.06 
                 #  6 mar 2024 vediamo come va una volta e' arrivata in anticipo un' altra volta in ritardo
+                #  7 mar 2024 fatta modifica vedi and deviation_ma100_sopra_ma450 < 1.75
+
 
             # 17
             
