@@ -2033,7 +2033,7 @@ class maddog:
                     buy = "BUY 1 migliore con distanza 5-300 e distanza 5-100 E dev TRIADE e dev ma2 e diff macd - r 1043 B1y"
                     action = "buy"
                     percentage = 80
-
+                    
                     #  8 mar 2024 anticipata ndecchiecella
 
 
@@ -46373,19 +46373,20 @@ class maddog:
                 and seconds_since_last_trade < 7200
                 and ma5_last < ma5_11_min_ago
                 
-                and ma3_last < ma28_last
-                
+                and ma3_last < ma39_last
                 and ma2_last < ma2_2_min_ago
+                
                 and macd < macd_2_min_ago
                 and macd_differenza_2_min_ago < -1
             ):    
-                sell = "SELL cond. spec 3-28 - POC MAL E SUB (ma non troppo !) (> 120 min ) scende con dev > 0.80 and macd < macd 2 min ago con ma5_11_min_ago - r 16873 C2"
+                sell = "SELL CS 3-39 - P M e S (ma non troppo !) scende con dev > 0.80 and macd < macd 2 min ago con ma5_11_min_ago - r 16873 C2"
                 action = "sell"
                 
                 # 27 set 2023 macd < macd 2 min ago 
                 # 27 set 2023 and macd_differenza_2_min_ago < -1
                 #  1 nov 2023 ma5_11_min_ago da ma5_12_min_ago
-
+                
+                #  8 mar 2024 3-39 da 3-28
           
             
             # 15 - POCHI MALEDETTI E SUBITO con deviation > 5.01 e macd < -35
