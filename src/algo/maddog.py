@@ -24414,7 +24414,7 @@ class maddog:
                     and ma450_last > ma450_360_min_ago
                     and ma78_last > ma150_last
                     
-                    and deviation_ma3_sopra_ma100 > -0.01
+                    and deviation_ma3_sotto_ma100 > -0.01
                     
                     and deviation_ma3_sopra_ma10 > 0.01
                     and deviation_ma3_sopra_ma16 > 0.01
@@ -24425,7 +24425,7 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
               
                 ):
-                    buy = "BUY 5A con ma450_last > ma450_360_min_ago and deviation_ma3_sopra_ma100 > -0.01 - r 7384 A2"
+                    buy = "BUY 5A con ma450_last > ma450_360_min_ago and deviation_ma3_sotto_ma100 > -0.01 - r 7384 A2"
                     action = "buy"
                     percentage = 70
                     
