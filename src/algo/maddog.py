@@ -43097,11 +43097,40 @@ class maddog:
 
                 # 15 gen 2024 se ma10_last > ma10_2_min_ago aumentato dev sell a -0.03 da -0.01
                 # 21 feb 2024 dev_sell a -0.04 da -0.03
+                
 
 
-            
             elif (
                 ma78_last > ma78_120_min_ago
+                and ma450_last > ma450_360_min_ago
+                
+                and ma10_last < ma10_2_min_ago
+                and ma50_last < ma59_last
+                and ma20_last <= ma20_2_min_ago
+                
+                and deviation_ma39 < 0.07
+                and deviation_sell < -0.015
+                
+                and ma50_last < ma50_2_min_ago
+                and deviation_ma100_sopra_ma300 < 0.40
+                and deviation_ma5_sotto_ma200 > -0.80
+                
+                and ma2_last < ma2_2_min_ago
+                and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.018
+                and ma2_differenza_2_min_ago < -8
+                and macd_differenza_2_min_ago < -1.30
+                
+            ):
+                sell = "SELL CS - SALVAGENTE dev 3-39 < 0.05 e dev_sell < -0.015 e ma50 < e macd_diff_2_min_ago < -0.20 - r 16047 A1 Y1 Y2 a"
+                action = "sell"
+                
+                #  8 mar 2024 se ma450_last > ma450_360_min_ago dev_sell a -0.015 da -0.005
+                
+
+            elif (
+                ma78_last > ma78_120_min_ago
+                and ma450_last < ma450_360_min_ago
+                
                 and ma10_last < ma10_2_min_ago
                 and ma50_last < ma59_last
                 and ma20_last <= ma20_2_min_ago
@@ -43119,7 +43148,7 @@ class maddog:
                 and macd_differenza_2_min_ago < -1.30
                 
             ):
-                sell = "SELL cond speciale CON 50<59 - SALVAGENTE dev 3-39 < 0.05 e dev_sell < -0.005 e ma50 < e macd_diff_2_min_ago < -0.20 e diff macd < -1.30 - r 16047 A1 Y1 Y2"
+                sell = "SELL CS - SALVAGENTE dev 3-39 < 0.05 e dev_sell < -0.005 e ma50 < e macd_diff_2_min_ago < -0.20 - r 16047 A1 Y1 Y2 b"
                 action = "sell"
                 
                 # oggi 10 dicembre 2023 ascolta mario ! SE ma20_last <= ma20_2_min_ago DEV SELL a 0.01
@@ -43129,6 +43158,9 @@ class maddog:
                 # 15 gen 2024 and macd_differenza_2_min_ago < -1.30
                 # 25 gen 2024 deviation_sell a -0.005 da -0.01
                 # 25 gen 2024 aggiunto and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.018
+                
+                #  8 mar 2024 se ma450_last < ma450_360_min_ago dev_sell a -0.005
+
             
             elif (
                 ma78_last > ma78_120_min_ago
