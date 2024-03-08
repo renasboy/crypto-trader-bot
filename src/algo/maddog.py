@@ -45836,7 +45836,7 @@ class maddog:
             # 11 POCHI MALEDETTI E SUBITO ma non troppo mentre scende
             
             elif (
-                ma3_last < ma8_last
+                ma3_last < ma10_last
                 and delta_150_100 > delta_150_100_60_min
                 and ma200_last < ma200_60_min_ago
                 and deviation_ma100_sopra_ma300 < 0.30
@@ -45846,11 +45846,12 @@ class maddog:
                 and ma2_last > ma100_last
                 and ma2_last < ma2_2_min_ago
             ):    
-                sell = "SELL condizione speciale 38 - POCHI MALEDETTI E SUBITO 3-8 quando ma200 < e con deviation > 2.51 - dedicated to comparo meo - r 16872 b2"
+                sell = "SELL condizione speciale 38 - P M e S con 3-10 quando ma200 < e con deviation > 2.51 - dedicated to comparo meo - r 16872 B2"
                 action = "sell"
                     
                 # and ma2_last > ma100_last (altrimenti vende durante il crollo con la ma3-ma9)
-                
+
+                #  8 mar 2024 che spettacolo ! faccio comunque una piccolissima variazione : vende con 3-10 da 3-8 
                 
                 
             
