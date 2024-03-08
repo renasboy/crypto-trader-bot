@@ -2006,7 +2006,7 @@ class maddog:
 
                 
                 elif (    
-                    ma3_last > ma18_last
+                    ma3_last > ma10_last
                     and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.01
                     and ma2_differenza_2_min_ago > 3
                     and ma450_last < ma450_360_min_ago
@@ -2021,9 +2021,9 @@ class maddog:
                     and deviation_ma50_sopra_o_sotto_ma100 < -0.01
                     and deviation_ma100_sopra_ma300 < -0.10
                     
-                    and deviation_ma3_sopra_ma10 > 0.01
-                    and deviation_ma3_sopra_ma16 > -0.125
-                    and deviation_ma5_sopra_ma28 > -0.155
+                    and deviation_ma3_sopra_ma10 > -0.01
+                    and deviation_ma3_sopra_ma16 > -0.13
+                    and deviation_ma5_sopra_ma28 > -0.16
                     
                     and ma2_last >= ma2_2_min_ago
                     and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.01
@@ -2033,6 +2033,8 @@ class maddog:
                     buy = "BUY 1 migliore con distanza 5-300 e distanza 5-100 E dev TRIADE e dev ma2 e diff macd - r 1043 B1y"
                     action = "buy"
                     percentage = 80
+
+                    #  8 mar 2024 anticipata ndecchiecella
 
 
 
@@ -45092,7 +45094,6 @@ class maddog:
                 
                 # 11 gen 2024 -0.37 da -0.57
             
-                
             elif (    
                 ma2_last <= ma4_last
                 and ma300_last < ma300_301_min_ago
@@ -45104,9 +45105,31 @@ class maddog:
                 
                 and deviation_ma2_sopra_o_sotto_ma2_2_min_ago <= -0.015
                 and macd_differenza_2_min_ago < -0.50
+                
+                and macd > 1
             ): 
                 
-                sell = "SELL cond spec 21 Bocelli - core 'ngrato - CROLLO IMPROVVISO E delta_1 > delta_2 e dev_crollo_24_aprile < -0.13 E dev_ma2 < -0.015 e diff macd - r 16480 BY"
+                sell = "SELL cond spec 21 Bocelli - core 'ngrato - CROLLO IMPROVVISO E delta_1 > delta_2 e dev_crollo_24_aprile < -0.13 E dev_ma2 < -0.015 e diff macd - r 16480 BYa"
+                action = "sell"
+
+                #  8 mar 2024 con macd > 1 deviation_crollo_24_aprile < -0.13
+
+            elif (    
+                ma2_last <= ma4_last
+                and ma300_last < ma300_301_min_ago
+                and ma2_last <= ma5_last
+                and deviation_crollo_24_aprile < -0.15
+                
+                and delta_1 > delta_2
+                and deviation_ma5_sotto_ma200 < -0.40
+                
+                and deviation_ma2_sopra_o_sotto_ma2_2_min_ago <= -0.015
+                and macd_differenza_2_min_ago < -0.50
+                and macd > -40
+                and macd < 1
+            ): 
+                
+                sell = "SELL cond spec 21 Bocelli - core 'ngrato - CROLLO IMPROVVISO E delta_1 > delta_2 e dev_crollo_24_aprile < -0.13 E dev_ma2 < -0.015 e diff macd - r 16480 BYb"
                 action = "sell"
                         
                 # ho aggiunto anche questa vendita speciale dopo il 24 aprile -1%
@@ -45134,6 +45157,8 @@ class maddog:
                 # 12 gen 2024 and deviation_crollo_24_aprile a -0.15 da -0.20 - 12 gen 2024 con -0.20 ha fatto -0.99 % ! ore 17:54
                 # 19 gen 2024 and deviation_crollo_24_aprile a -0.14 da -0.15 - con -0.15 ha fatto -0.54 % 
                 # 19 gen 2024 and deviation_crollo_24_aprile a -0.13 da -0.14
+                
+                #  8 mar 2024 con macd tra -40 e 1 deviation_crollo_24_aprile a -0.135 da -0.13
 
                 ######################################################################################### fine dopo il crollo improvviso del 24 aprile 2022
                 
