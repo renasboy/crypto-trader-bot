@@ -46220,7 +46220,7 @@ class maddog:
                 and deviation_sell < 1.25
                 and ma300_last > ma300_301_min_ago
                 
-                and deviation_ma3_sopra_ma18 < -0.056
+                and ma3_last < ma33_last
                 and ma3_last < ma18_last
                 and ma2_last < ma5_last
                 
@@ -46232,11 +46232,11 @@ class maddog:
                 and macd_differenza_3_min_ago < -7
                 
             ):    
-                sell = "SELL CS - P M e S con ma300 > 5 ore e dev 0.81 - 1.25 e macd < 16 e MACD diff_5_min_ago < -9 e dev 3-18 < -0.056 - r 16875 A1"
+                sell = "SELL CS - P M e S con 3-33 e ma300 > 5 ore e dev 0.81 - 1.25 e macd < 16 e MACD diff_5_min_ago < -9 - r 16875 A1"
                 action = "sell"
                 
                 #  7 mar 2024 fatta modifica
-
+                #  8 mar 2024 tolto dev 3-18 < -0.056 solo tra dev sell > 0.81 e dev sell < 1.25 e aggiunto sell con 3-33
 
             elif (
                 deviation_sell > 1.25
