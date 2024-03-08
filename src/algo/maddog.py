@@ -7879,21 +7879,89 @@ class maddog:
                     
                     
                     
+
                 
                 # BUY 1 con RIBASSO VELOCE MA la distanza tra ma100 e ma200 si sta riducendo - USANDO UN DOPPIO DELTA ! STA RISALENDO
-                
-                elif (
-                    deviation_ma3 < -1.30
-                    and macd >= macd_2_min_ago
-                    and deviation_ma3_sopra_ma10 > 0.06
                     
-                    and delta_1 < delta_2
+                elif (
+                    ma3_last > ma13_last
+                    and deviation_ma100_sopra_ma450 > 1.50
                     and ma100_last > ma100_60_min_ago
                     
-                    and ma3_last > ma20_last
-                ):
+                    and deviation_ma3 < -1.30
+                    and delta_1 < delta_2
+                    and deviation_ma3_sopra_ma10 > 0.03
+                    
+                    and macd >= macd_2_min_ago
                 
-                    buy = "BUY 1 con RIBASSO VELOCE mentre distanza tra ma100 e ma200 si sta riducendo - SOTTO RIALZO RIALZO - GIORNO ! and 3-10 > 0.06 - r 2998"
+                ):
+                    buy = "BUY 1 con RIBASSO VELOCE mentre distanza tra ma100 e ma200 si sta riducendo - GIORNO ! - r 2998 a1"
+                    action = "buy"
+                    percentage = 80
+
+                    #  8 mar 2024 modificato se trend CHIARAMENTE crescente and ma100_last > ma100_60_min_ago
+
+
+
+                elif (
+                    ma3_last > ma13_last
+                    and deviation_ma100_sopra_ma450 > 1.50
+                    and ma100_last < ma100_60_min_ago
+                    
+                    and deviation_ma3 < -1.30
+                    and delta_1 < delta_2
+                    and deviation_ma3_sopra_ma10 > 0.06
+                    
+                    and macd >= macd_2_min_ago
+                
+                ):
+                    buy = "BUY 1 con RIBASSO VELOCE mentre distanza tra ma100 e ma200 si sta riducendo - GIORNO ! - r 2998 a2"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # and delta_1 < 0.25
+                    # and delta_2 > 0.40
+                    # STUDIARE MEGLIO DELTA 1 E DELTA 2
+                    # compare grazie. altre parole io non ho.
+                    # 21 gen 2023 aggiunta 3-10 > 0.06 vedi 21 gen 2023 ore 11:47
+
+                    #  8 mar 2024 modificato se trend CHIARAMENTE crescente and ma100_last < ma100_60_min_ago
+
+
+
+                elif (
+                    ma3_last > ma20_last
+                    and deviation_ma100_sopra_ma450 < 1.50
+                    and ma100_last > ma100_60_min_ago
+                    
+                    and deviation_ma3 < -1.30
+                    and delta_1 < delta_2
+                    and deviation_ma3_sopra_ma10 > 0.05
+                    
+                    and macd >= macd_2_min_ago
+                
+                ):
+                    buy = "BUY 1 con RIBASSO VELOCE mentre distanza tra ma100 e ma200 si sta riducendo - GIORNO ! - r 2998 b1"
+                    action = "buy"
+                    percentage = 80
+                    
+                    #  8 mar 2024 modificato se trend crescente and ma100_last > ma100_60_min_ago
+
+
+
+                elif (
+                    ma3_last > ma20_last
+                    and deviation_ma100_sopra_ma450 < 1.50
+                    and ma100_last < ma100_60_min_ago
+                    
+                    and deviation_ma3 < -1.30
+                    and delta_1 < delta_2
+                    and deviation_ma3_sopra_ma10 > 0.06
+                    
+                    and macd >= macd_2_min_ago
+                
+                ):
+                    buy = "BUY 1 con RIBASSO VELOCE mentre distanza tra ma100 e ma200 si sta riducendo - GIORNO ! - r 2998 b2"
                     action = "buy"
                     percentage = 80
                     
@@ -7903,6 +7971,7 @@ class maddog:
                     # compare grazie. altre parole io non ho.
                     # 21 gen 2023 aggiunta 3-10 > 0.06 vedi 21 gen 2023 ore 11:47
                     
+                    #  8 mar 2024 modificato se trend crescente and ma100_last > ma100_60_min_ago
                     
                     
                   
