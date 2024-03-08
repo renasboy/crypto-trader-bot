@@ -2296,10 +2296,12 @@ class maddog:
                     # > estate dev bellissima 0.12 and 5-28 0.16 and 3-10 > 0.10
                     # 17 mar 2023 28-200 da 28-300
                     # 300 vicina o sopra alla 450
+
+
                     
                 
-                # ------------------------------------------------------ BUY 1 MOLTO RISCHIOSO modo 1 ! quando incomincia il ribasso MA ma300 120 > E ma200 120 >
-                  
+                # -------------------------------------------------- BUY 1 MOLTO RISCHIOSO modo 1 ! quando incomincia il ribasso MA ma300 120 > E ma200 120 >
+                    
                 elif (     
                     ma300_last > ma300_120_min_ago
                     and macd >= macd_2_min_ago
@@ -2313,17 +2315,42 @@ class maddog:
                     
                     and ma8_last > ma78_last
                     
-                    and deviation_ma3_sopra_ma10 > 0.10
-                    and deviation_ma5_sopra_ma28 > 0.18
+                    and deviation_ma3_sopra_ma10 > 0.077
+                    and deviation_ma5_sopra_ma28 > 0.10
                     and deviation_bellissima > 0.07
                
                     and ma2_last >= ma2_2_min_ago
                 ):     
                   
-                    buy = "BUY 1 - 80% - RISCHIOSO ! incomincia il ribasso MA ma300 120 > e ma200 120 > ANCORA IN RIALZO ! E 200 > 300 e 3-10 > 0.10 - r 1088 A1x"
+                    buy = "BUY 1 70% - ma300 > 120 min e ma200 > 120 min E 200 > 300 MA incomincia il ribasso e 3-10 > 0.10 - r 1088 A1 x1"
                     action = "buy"
-                    percentage = 80
+                    percentage = 70
+
+                    #  8 mar 2024 aggiunta questa condizione per anticipare durante il rialzo
+
+
+                elif (
+                    ma200_last > ma300_last
+                    and ma300_last > ma300_120_min_ago
+                    and ma200_last > ma200_120_min_ago
                     
+                    and ma100_last < ma100_60_min_ago
+                    and ma200_last < ma200_60_min_ago
+                    
+                    and ma5_last > ma100_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.077
+                    and deviation_ma3_sopra_ma16 > 0.10
+                  
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                ):     
+                  
+                    buy = "BUY 1 70% - ma300 > 120 min e ma200 > 120 min E 200 > 300 MA incomincia il ribasso e 3-10 > 0.077 - r 1088 A1 x2"
+                    action = "buy"
+                    percentage = 70
+
+                    #  8 mar 2024 anticipato ndecchiecella
                     
                     
                     
