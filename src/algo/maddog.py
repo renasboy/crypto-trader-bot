@@ -7776,22 +7776,13 @@ class maddog:
                     
                     
                 # BUY 1 con ma200> piccola CORREZIONE FIAT che NON E' un forte ribasso e NON E' un crollo ! ALTRA RIGA RCCR che e' andata bene.
-                
-                elif (    
                     
-                    ma200_last > ma200_20_min_ago
-                    and macd >= macd_2_min_ago
-                    and ma20_last < ma78_last
-                    and ma90_last > ma110_last
+                elif (
+                    ma3_last > ma13_last
+                    and ma39_last > ma39_15_min_ago
                     
-                    and deviation_ma3_sopra_ma10 > 0.05
-                    and deviation_ma3_sopra_ma18 > 0.265
-                    and deviation_ma5_sopra_ma28 > 0.05
-                    
-                    and ma13_last >= ma13_2_min_ago
-                    
-                    and ma3_last > ma28_last
-                    and ma2_last > ma2_2_min_ago
+                    and ma300_last > ma300_360_min_ago
+                    and ma200_last > ma200_20_min_ago
                     
                     and ma100_last > ma200_last
                     and ma200_last > ma300_last
@@ -7799,10 +7790,79 @@ class maddog:
                     and ma100_last > ma100_60_min_ago
                     and ma200_last > ma200_60_min_ago
                     
-                    and ma300_last > ma300_360_min_ago
+                    and ma20_last < ma78_last
+                    and ma90_last > ma110_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma18 > 0.02
+                  
+                    and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
                 ):    
                     
-                    buy = "BUY 1 con 200 > and ma13_last > ma13_2_min_ago - 20 < 78 and dev_ma3_sopra_ma10 > 0.17 con 5-28 > 0.15 - r 2859 B"
+                    buy = "BUY 1 trend CHIARAMENTE rialzista con 200 > and 20<78 - r 2859 B1"
+                    action = "buy"
+                    percentage = 80
+
+                    #  8 mar 2024 modificato 
+
+                elif (
+                    ma3_last > ma13_last
+                    and ma39_last < ma39_15_min_ago
+                    and deviation_ma39 > 0.192
+                    
+                    and ma300_last > ma300_360_min_ago
+                    and ma200_last > ma200_20_min_ago
+                    
+                    and ma100_last > ma200_last
+                    and ma200_last > ma300_last
+                    
+                    and ma100_last > ma100_60_min_ago
+                    and ma200_last > ma200_60_min_ago
+                    
+                    and ma20_last < ma78_last
+                    and ma90_last > ma110_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma18 > 0.02
+                  
+                    and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                ):    
+                    
+                    buy = "BUY 1 trend CHIARAMENTE rialzista PUGNO FANTASMA DI MOHAMMAD ALI' con 200 > and 20<78 and - r 2859 B2"
+                    action = "buy"
+                    percentage = 80
+
+                    #  8 mar 2024 modificato
+
+
+
+                elif (
+                    ma3_last > ma28_last
+                    and ma39_last < ma39_15_min_ago
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.30
+                    
+                    and ma300_last > ma300_360_min_ago
+                    and ma200_last > ma200_20_min_ago
+                    
+                    and ma100_last > ma200_last
+                    and ma200_last > ma300_last
+                    
+                    and ma100_last > ma100_60_min_ago
+                    and ma200_last > ma200_60_min_ago
+                    
+                    and ma20_last < ma78_last
+                    and ma90_last > ma110_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > 0.01
+                  
+                    and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                ):    
+                    
+                    buy = "BUY 1 trend CHIARAMENTE rialzista PRENDE IL COLTELLO CON IL PIEDE con 200 > and 20<78 - r 2859 B3"
                     action = "buy"
                     percentage = 80
                     
@@ -7812,7 +7872,10 @@ class maddog:
                     # 2 nov 5-28 = 0.05 da 0.15
                     # 15 feb 2023 13>13 2 min ago da 18>18 min ago
                     # 16 mar 2023 aggiunta 3-18 > 0.265
-               
+                    
+                    #  8 mar 2024 modificato
+
+
                 
                 # BUY 1 che mancava se dopo 300 min di rialzo c'e' una correzione improvvisa 
                 
