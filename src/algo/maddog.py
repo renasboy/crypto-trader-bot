@@ -43859,7 +43859,7 @@ class maddog:
                 and ma20_last <= ma20_2_min_ago
                 
                 and deviation_ma39 < 0.10
-                and deviation_sell < -0.01
+                and deviation_sell < -0.017
                 
                 and deviation_ma5_sopra_ma200 < -0.30
                 and deviation_ma5_sotto_ma300 < -0.30
@@ -43872,7 +43872,7 @@ class maddog:
                 and macd < 13
                 and macd_differenza_2_min_ago < -3
             ):
-                sell = "SELL nuova condizione speciale CON ma20 <= ma20 2 min ago e dev 3-39 < 0.10 e dev_sell < 0.05 - con ma50 < and diff ma2 e diff macd - r 16047 A3 Y2b"
+                sell = "SELL NCS con ma20 <= ma20 2 min ago e dev 3-39 < 0.10 e dev_sell < -0.017 and diff ma2 e diff macd - r 16047 A3 Y2b"
                 action = "sell"
                 
                 # 30 nov 2023 dev 39 a 0.10 da 0.03
@@ -43880,7 +43880,7 @@ class maddog:
                 #  5 dic 2023 dev sell a 0.05 da -0.05
                 # MINGHIA il 26 dic ha fatto -0.73 ! e ho fatto delle modifiche meravigliose
                 # 29 dic 2023 and macd a 13 da 7
-
+                #  7 mar 2024 dev sell a -0.017 da -0.01
 
 
 
