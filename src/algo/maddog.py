@@ -9894,9 +9894,11 @@ class maddog:
                     
                     
                 # BUY 1 forever young 1 PIU' PRUDENTE se ma200 > e se ma200 > ma300
-                
+
                 elif (  
                     ma3_last > ma15_last
+                    and ma39_last > ma39_15_min_ago
+                    
                     and ma300_last > ma300_301_min_ago
                     and (ma3_prev < ma180_prev and ma3_last > ma180_last)
                     
@@ -9914,11 +9916,71 @@ class maddog:
                     and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
                 ):
 
-                    buy = "BUY 1 forever young 1 con 300 che sale da 5 ore ! e 300 > 120 min ago e ma200 > e se ma200 > ma300 E CON 3-16 > 0.07 - r 4325 a1"
+                    buy = "BUY 1 ma 39 > 39 15 min ago con 300 > 5 ore ! e ma200 > ma300 E CON 3-16 > 0.07 - r 4325 a1 x"
+                    action = "buy"
+                    percentage = 80
+                    
+                    #  8 mar 2024 modificato
+
+
+                elif (  
+                    ma3_last > ma15_last
+                    and ma39_last < ma39_15_min_ago
+                    and deviation_ma39 > 0.192
+
+                    and ma300_last > ma300_301_min_ago
+                    and (ma3_prev < ma180_prev and ma3_last > ma180_last)
+                    
+                    and ma200_last > ma300_last
+                    and ma300_last >= ma300_120_min_ago
+                    and ma200_last >= ma200_15_min_ago
+                    
+                    and deviation_ma3_sopra_ma10 > 0.005
+                    and deviation_ma3_sopra_ma16 > 0.001
+                    
+                    and ma3_last >= ma11_last
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
+                ):
+
+                    buy = "BUY 1 PUGNO FANTASMA DI MOHAMMAD ALI' con 300 > 5 ore ! e ma200 > e se ma200 > ma300 E CON 3-16 > 0.07 - r 4325 a1 y"
+                    action = "buy"
+                    percentage = 80
+
+                    #  8 mar 2024 modificato
+
+
+                elif (  
+                    ma3_last > ma15_last
+                    and ma39_last < ma39_15_min_ago
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.30
+                    
+                    and ma300_last > ma300_301_min_ago
+                    and (ma3_prev < ma180_prev and ma3_last > ma180_last)
+                    
+                    and ma200_last > ma300_last
+                    and ma300_last >= ma300_120_min_ago
+                    and ma200_last >= ma200_15_min_ago
+                    
+                    and deviation_ma3_sopra_ma10 > 0.005
+                    and deviation_ma3_sopra_ma16 > 0.001
+                    
+                    and ma3_last >= ma11_last
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
+                ):
+
+                    buy = "BUY 1 PRENDE IL COLTELLO CON IL PIEDE con 300 > 5 ore ! e ma200 > ma300 E CON 3-16 > 0.07 - r 4325 a1 z"
                     action = "buy"
                     percentage = 80
                     
                     # tolto and ma10_last >= ma20_last se 300> 5 ore e incrocio al rialzo 3-180
+                    #  8 mar 2024 modificato 
+
 
                 elif (  
                     ma3_last > ma28_last
