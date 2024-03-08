@@ -97,6 +97,7 @@ class maddog:
         ma5_11_min_ago = self.algo_helper.ma_minutes_ago(5, 11)
         ma5_12_min_ago = self.algo_helper.ma_minutes_ago(5, 12)
         ma5_30_min_ago = self.algo_helper.ma_minutes_ago(5, 30)
+        ma5_50_min_ago = self.algo_helper.ma_minutes_ago(5, 50)
         ma5_60_min_ago = self.algo_helper.ma_minutes_ago(5, 60)
         ma5_1080_min_ago = self.algo_helper.ma_minutes_ago(5, 1080)
         
@@ -115,6 +116,7 @@ class maddog:
         
         ma20_10_min_ago = self.algo_helper.ma_minutes_ago(20, 10)
         ma20_22_min_ago = self.algo_helper.ma_minutes_ago(20, 22)
+        ma20_30_min_ago = self.algo_helper.ma_minutes_ago(20, 30)
         ma20_60_min_ago = self.algo_helper.ma_minutes_ago(20, 60)
         ma25_2_min_ago = self.algo_helper.ma_minutes_ago(25, 2)
         
@@ -137,6 +139,8 @@ class maddog:
         ma39_15_min_ago = self.algo_helper.ma_minutes_ago(39, 15)
         ma39_30_min_ago = self.algo_helper.ma_minutes_ago(39, 30)
         ma39_70_min_ago = self.algo_helper.ma_minutes_ago(39, 70)
+        
+        ma40_30_min_ago = self.algo_helper.ma_minutes_ago(40, 30)
         
         ma50_2_min_ago = self.algo_helper.ma_minutes_ago(50, 2)
         ma50_30_min_ago = self.algo_helper.ma_minutes_ago(50, 30)
@@ -473,7 +477,12 @@ class maddog:
         self.algo_helper.info("deviation_ma5_sopra_o_sotto_ma5_30_min_ago: {}".format(deviation_ma5_sopra_o_sotto_ma5_30_min_ago))
 
 
-      
+        # formula DEVIATION_ma5_sopra_o_sotto_ma5_50_min_ago
+        
+        deviation_ma5_sopra_o_sotto_ma5_50_min_ago = (ma5_last / ma5_50_min_ago - 1) * 100 if ma5_50_min_ago else 0
+        self.algo_helper.info("deviation_ma5_sopra_o_sotto_ma5_50_min_ago: {}".format(deviation_ma5_sopra_o_sotto_ma5_50_min_ago))
+
+
         # formula DEVIATION_ma5_sopra_o_sotto_ma5_60_min_ago
         
         deviation_ma5_sopra_o_sotto_ma5_60_min_ago = (ma5_last / ma5_60_min_ago - 1) * 100 if ma5_60_min_ago else 0
@@ -843,7 +852,20 @@ class maddog:
         
         
         
+        # formula delta_1_40_20
         
+        delta_1_40_20 = (ma40_last / ma20_last - 1) * 100 if ma20_last else 0
+        self.algo_helper.info("delta_1_40_20: {}".format(delta_1_40_20))
+        
+        
+        # formula delta_2_69_39
+        
+        delta_2_40_20 = (ma40_30_min_ago / ma20_30_min_ago - 1) * 100 if ma20_30_min_ago else 0
+        self.algo_helper.info("delta_2_40_20: {}".format(delta_2_40_20))
+
+        # delta_1_40_20 < delta_2_40_20 GIORNO !
+
+
         
         # formula delta_1_69_39
         
@@ -17467,9 +17489,16 @@ class maddog:
                     
                     # 13 feb 2023 aggiunta questa
 
-                
+
+                    
+
                 elif (
                     deviation_ma4_sopra_ma30 > 0.15
+                    and deviation_ma5_sopra_o_sotto_ma5_50_min_ago > 1.80
+                    and ma10_last > ma20_last
+                    and delta_1_40_20 < delta_2_40_20
+                    
+                    
                     and deviation_ma3_sopra_ma10 > 0.17
                     and deviation_ma5_sopra_ma28 > 0.10
                     and deviation_bellissima > 0.07
@@ -17485,12 +17514,97 @@ class maddog:
                     and ma5_last >= ma15_last
                     and ma5_last >= ma25_last
                 ):    
-                    buy = "BUY 3B da RCCR - se ma39 > ma50 - r 6280"
+                    buy = "BUY 3B da RCCR - se ma39 > ma50 - r 6280 a1x"
+                    action = "buy"
+                    percentage = 80
+
+                    #  8 mar 2024 modificato ma20-ma40 GIORNO
+
+
+
+                elif (
+                    deviation_ma4_sopra_ma30 > 0.15
+                    and deviation_ma5_sopra_o_sotto_ma5_50_min_ago > 1.80
+                    and ma10_last > ma20_last
+                    and delta_1_40_20 > delta_2_40_20
+                    and deviation_buy > 0.15
+                    
+                    
+                    and deviation_ma3_sopra_ma10 > 0.17
+                    and deviation_ma5_sopra_ma28 > 0.10
+                    and deviation_bellissima > 0.07
+                    
+                    and deviation > -0.30
+                    
+                    and ma39_last > ma50_last
+                    and delta_buy3_incrocio_ma3_ma8 >= 0.06
+                    and ma3_last > ma8_last
+                    and ma3_last >= ma69_last
+                    and ma4_last >= ma4_2_min_ago
+                    and ma2_last >= ma2_2_min_ago
+                    and ma5_last >= ma15_last
+                    and ma5_last >= ma25_last
+                ):    
+                    buy = "BUY 3B da RCCR - se ma39 > ma50 - r 6280 a1y"
+                    action = "buy"
+                    percentage = 80
+
+                    #  8 mar 2024 modificato se 20-40 NOTTE allora compra sopra 0.15 dal precedente SELL
+
+
+
+                elif (
+                    deviation_ma4_sopra_ma30 > 0.15
+                    and deviation_ma5_sopra_o_sotto_ma5_50_min_ago > 1.80
+                    and ma10_last < ma20_last
+
+                    and deviation_ma3_sopra_ma10 > 0.17
+                    and deviation_ma5_sopra_ma28 > 0.11
+                    and deviation_bellissima > 0.07
+                    
+                    and deviation > -0.30
+                    
+                    and ma39_last > ma50_last
+                    and delta_buy3_incrocio_ma3_ma8 >= 0.06
+                    and ma3_last > ma8_last
+                    and ma3_last >= ma69_last
+                    and ma4_last >= ma4_2_min_ago
+                    and ma2_last >= ma2_2_min_ago
+                    and ma5_last >= ma15_last
+                    and ma5_last >= ma25_last
+                ):    
+                    buy = "BUY 3B da RCCR - se ma39 > ma50 - r 6280 a2"
+                    action = "buy"
+                    percentage = 80
+
+                    #  8 mar 2024 modificato
+
+
+                elif (
+                    deviation_ma4_sopra_ma30 > 0.15
+                    and deviation_ma5_sopra_o_sotto_ma5_50_min_ago < 1.80
+                    
+                    and deviation_ma3_sopra_ma10 > 0.17
+                    and deviation_ma5_sopra_ma28 > 0.10
+                    and deviation_bellissima > 0.07
+                    
+                    and deviation > -0.30
+                    
+                    and ma39_last > ma50_last
+                    and delta_buy3_incrocio_ma3_ma8 >= 0.06
+                    and ma3_last > ma8_last
+                    and ma3_last >= ma69_last
+                    and ma4_last >= ma4_2_min_ago
+                    and ma2_last >= ma2_2_min_ago
+                    and ma5_last >= ma15_last
+                    and ma5_last >= ma25_last
+                ):    
+                    buy = "BUY 3B da RCCR - se ma39 > ma50 - r 6280 b"
                     action = "buy"
                     percentage = 80
                     
                     # > estate aggiunti 3-10 and 5-28
-                    
+                    #  8 mar 2024 modificato
                     
                     
                     
