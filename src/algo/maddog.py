@@ -37785,18 +37785,36 @@ class maddog:
                         
                     
                     
-                    
                     elif (
                         ma50_last > ma50_2_min_ago
+                        and ma33_last > ma300_last
+                        and ma100_last < ma300_last
+                        and (ma3_prev > ma39_prev and ma3_last < ma39_last)
+                        and deviation_sell > 1.50 and deviation_sell < 2.70
+                        and ma2_last < ma2_2_min_ago
+                    ):
+
+                        sell = "SELL 3 (60-90 min) con ma50 > incrocio 3-20 e dev_sell 1.50 - 2.70 - ma100 sotto ma300 ma 33 e' andata sopra 300 ! - r 13944 a"
+                        action = "sell"
+
+                        #  8 mar 2024 se ma33 va sopra ma300 allora vende con incrocio al rialzo 3-39 invece di 3-20 LASCIA CORRERE !
+
+
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and ma33_last < ma300_last
                         and ma100_last < ma300_last
                         and (ma3_prev > ma20_prev and ma3_last < ma20_last)
                         and deviation_sell > 1.50 and deviation_sell < 2.70
                         and ma2_last < ma2_2_min_ago
                     ):
 
-                        sell = "SELL 3 da 60 a 90 min con ma50 > incrocio 3-20 and dev_sell 1.50 - 2.70 - ma100 ancora sotto ma300 e vende un po' prima - r 13944"
+                        sell = "SELL 3 (60-90 min) con ma50 > incrocio 3-20 e dev_sell 1.50 - 2.70 - ma100 ancora sotto ma300 e vende un po' prima - r 13944 b"
                         action = "sell"
-                        
+
+                        #  8 mar 2024 se ma33 sta ancora sotto ma300 vende con incrocio al rialzo 3-20
+
+
                         
                     elif (
                         ma50_last > ma50_2_min_ago
