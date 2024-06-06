@@ -20,7 +20,7 @@ class binance:
         self.public_key = public_key
         self.private_key = private_key
         self.private_url = "https://api.binance.com/api/v3/"
-        self.public_url = "https://api.binance.com/api/v1/"
+        self.public_url = "https://api.binance.com/api/v3/"
         self.websocket = (
             "wss://stream.binance.com:9443/ws/" + self.symbol.lower() + "@trade"
         )
@@ -70,11 +70,11 @@ class binance:
 
     def highest_bid(self):
         orderbook = self.orderbook()
-        return float(orderbook["bids"][1][0])
+        return float(orderbook["bids"][0][0])
 
     def lowest_ask(self):
         orderbook = self.orderbook()
-        return float(orderbook["asks"][1][0])
+        return float(orderbook["asks"][0][0])
 
     def closed_order(self, id):
         types = dict(BUY="buy", SELL="sell")
@@ -107,7 +107,6 @@ class binance:
     def call(self, method, path, data):
         data["timestamp"] = int(1000 * time.time())
         post_data = urllib.parse.urlencode(data)
-        # post_data = urllib.urlencode(data)
         signature = hmac.new(
             self.private_key.encode("utf-8"), post_data.encode("utf-8"), hashlib.sha256
         ).hexdigest()
@@ -123,11 +122,11 @@ class binance:
             if path in ("depth", "ticker/price"):
                 del data["timestamp"]
                 full_path = "%s%s" % (self.public_url, path)
-                response = requests.get(full_path, data)
+                response = requests.get(full_path, params=data)
             elif method == "post":
                 response = requests.post(full_path, data=post_data, headers=headers)
             else:
-                response = requests.get(full_path, post_data, headers=headers)
+                response = requests.get(full_path, headers=headers, params=data)
         except requests.exceptions.ConnectionError:
             print("API failure connection error")
             return False
