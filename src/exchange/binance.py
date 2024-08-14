@@ -11,7 +11,7 @@ import websocket
 
 class binance:
 
-    FEE = 0.001
+    FEE = 0.0075
 
     def __init__(self, symbol_1, symbol_2, public_key, private_key, *args, **kwargs):
         self.symbol_1 = symbol_1.upper()
@@ -80,27 +80,55 @@ class binance:
         types = dict(BUY="buy", SELL="sell")
         order = self.call("get", "order", {"symbol": self.symbol, "orderId": id})
         if order and order["status"] == "FILLED":
-            price = float(order["price"])
+            price = float(order["cummulativeQuoteQty"]) / float(order["origQty"])
             volume = float(order["origQty"])
+            # TODO get proper fee
             fee = 0
             type = types[order["side"]]
             return type, price, volume, fee
         return None, None, None, None
 
-    def limit_order(self, type, volume, price):
+    def delete_order(self, type, id):
+        types = dict(buy="BUY", sell="SELL")
+        data = dict(
+            symbol=self.symbol,
+            orderId=id
+        )
+        print(json.dumps(data))
+        return self.call("delete", "order", data)
+
+    def market_order(self, type, volume):
         types = dict(buy="BUY", sell="SELL")
         data = dict(
             symbol=self.symbol,
             side=types[type],
-            type="LIMIT",  # MARKET
+            type="MARKET",
+            newOrderRespType="ACK",
+        )
+        if type == "buy":
+            data["quoteOrderQty"] = str(round(volume, 2))
+        elif type == "sell":
+            data["quantity"] = f'{volume:.8f}'
+        print(json.dumps(data))
+        market_order = self.call('post', 'order', data)
+        if market_order:
+            return market_order["orderId"]
+
+    def limit_order(self, type, volume, price):
+        types = dict(buy="BUY", sell="SELL")
+        if type == "sell":
+            volume = f'{volume:.8f}'
+        data = dict(
+            symbol=self.symbol,
+            side=types[type],
+            type="LIMIT",
             timeInForce="GTC",
             quantity=volume,
             price=price,
             newOrderRespType="ACK",
         )
-        print(data)
-        limit_order = {"orderId": 1}
-        # limit_order = self.call('post', 'order', data)
+        print(json.dumps(data))
+        limit_order = self.call('post', 'order', data)
         if limit_order:
             return limit_order["orderId"]
 
@@ -122,30 +150,43 @@ class binance:
             if path in ("depth", "ticker/price"):
                 del data["timestamp"]
                 full_path = "%s%s" % (self.public_url, path)
-                response = requests.get(full_path, params=data)
+                response = requests.get(full_path, data)
             elif method == "post":
                 response = requests.post(full_path, data=post_data, headers=headers)
+            elif method == "delete":
+                response = requests.delete(full_path, data=post_data, headers=headers)
             else:
-                response = requests.get(full_path, headers=headers, params=data)
+                response = requests.get(full_path, post_data, headers=headers)
         except requests.exceptions.ConnectionError:
             print("API failure connection error")
             return False
         if response.status_code != 200:
             print("API failure: {} {}".format(response.status_code, response.content))
             return False
-        print(response.content)
+        # print(response.content)
         return json.loads(response.content)
 
 
 # if __name__ == '__main__':
-# exchange = binance('ETH', 'TRX')
+# exchange = binance('EUR', 'BTC', 'PUBLIC_KEY', 'PRIVATE_KEY')
 # print(exchange.ticker())
-# print(exchange.balance('ETH'))
-# print(exchange.balance('TRX'))
+# print(json.dumps(exchange.balances()))
+# print(exchange.balance('BTC'))
+# print(exchange.balance('EUR'))
+# print(json.dumps(exchange.orders()))
+# print(json.dumps(exchange.orderbook()))
 # print(exchange.orders())
 # print(exchange.orderbook())
 # print(exchange.highest_bid())
 # print(exchange.lowest_ask())
-# print(exchange.closed_order('17391295'))
+# print(exchange.limit_order('buy', 0.001, 40000))
 # print(exchange.active_order_id())
-# print(exchange.limit_order('sell', 1, 1))
+# print(exchange.closed_order('3783136926'))
+# print(json.dumps(exchange.delete_order('buy', 3783136926)))
+# print(exchange.limit_order('sell', 0.00009, 60000))
+# print(json.dumps(exchange.limit_order('sell', 0.0001, 50380)))
+# print(json.dumps(exchange.delete_order('sell', 3783225301)))
+# print(exchange.market_order('buy', 5))
+# print(exchange.closed_order('3783179682'))
+# print(exchange.market_order('sell', 0.00018))
+# print(exchange.closed_order('3783249838'))
