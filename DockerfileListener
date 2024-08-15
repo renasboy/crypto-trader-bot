@@ -1,7 +1,9 @@
-FROM python:3
+FROM python:3-alpine
 ENV PYTHONUNBUFFERED 1
-RUN mkdir /crypto-trader-bot
 WORKDIR /crypto-trader-bot
-ADD . /crypto-trader-bot/
+ADD src /crypto-trader-bot/src/
+ADD conf/*.conf /crypto-trader-bot/conf/
+ADD docker-entrypoint-listener.sh /crypto-trader-bot/
+ADD requirements.txt /crypto-trader-bot/
 RUN pip install -r requirements.txt
 ENTRYPOINT [ "/crypto-trader-bot/docker-entrypoint-listener.sh" ]

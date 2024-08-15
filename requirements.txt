@@ -2,4 +2,3 @@ influxdb
 websocket-client
 requests
 urllib3
-pylint
