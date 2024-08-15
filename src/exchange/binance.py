@@ -16,7 +16,7 @@ class binance:
     def __init__(self, symbol_1, symbol_2, public_key, private_key, *args, **kwargs):
         self.symbol_1 = symbol_1.upper()
         self.symbol_2 = symbol_2.upper()
-        self.symbol = self.symbol_2 + self.symbol_1
+        self.symbol = self.symbol_1 + self.symbol_2
         self.public_key = public_key
         self.private_key = private_key
         self.private_url = "https://api.binance.com/api/v3/"
