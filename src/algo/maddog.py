@@ -22890,7 +22890,7 @@ class maddog:
                     and ma3_last > ma30_last
                     and ma100_last > ma100_5_min_ago
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
-                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.05
                     
                     and ma450_last >= ma450_120_min_ago
                     and ma50_last > ma450_last
@@ -22903,9 +22903,11 @@ class maddog:
                     and ma2_differenza_ma5 > 5
                     and macd_differenza_2_min_ago > 0.10
                 ):
-                    buy = "BUY 5 con 3-20 and 450_last >= 450_120_min_ago e 50 > 450 and ma2_differenza_ma5 > 8 - r 7144 A1 X NUOVA ERA A3 SOFT x"
+                    buy = "BUY 5 con 3-20 and 450_last >= 450_120_min_ago e 50 > 450 and ma2_differenza_ma5 > 5 - r 7144 A1 X NUOVA ERA A3 SOFT x"
                     action = "buy"
                     percentage = 70
+
+                    # 02 SET 2024 RO CANO E' TORNATO
 
 
                 elif (    
