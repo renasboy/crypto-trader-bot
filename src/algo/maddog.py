@@ -20772,7 +20772,7 @@ class maddog:
                     and deviation_ma5_sotto_ma300 < -0.30
                     
                     and deviation_ma3_sopra_ma10 > 0.057
-                    and deviation_ma3_sopra_ma16 > 0.06
+                    and deviation_ma3_sopra_ma16 > 0.05
                     
                     
                     and ma100_last < ma100_180_min_ago
@@ -20783,12 +20783,14 @@ class maddog:
                     and ma200_last < ma300_last
                     
                     and ma2_last >= ma2_2_min_ago
-                    and macd >= macd_2_min_ago
+                    and macd >= -10
                     
                 ):
                     buy = "BUY 4 feb 2024 > 180 min di ribasso 78<150 and 3-16 > 0.06 and macd > macd 2 min ago - r 6670"
                     action = "buy"
                     percentage = 90
+                    
+                    # modificato il 3 set 2024 non ho scritto caratteri strani ^M
 
                 
                 # BUY 4 di emergenza CROLLO FERRARI - modo 1
