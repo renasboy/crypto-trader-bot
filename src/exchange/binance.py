@@ -108,7 +108,7 @@ class binance:
         if type == "buy":
             data["quoteOrderQty"] = str(round(volume, 2))
         elif type == "sell":
-            data["quantity"] = f'{volume:.8f}'
+            data["quantity"] = f'{volume:.5f}'
         print(json.dumps(data))
         market_order = self.call('post', 'order', data)
         if market_order:
