@@ -12759,7 +12759,7 @@ class ro_cano_che_ritorna:
                     and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2 ORIGINALE CHE CI RIPROVA IMPORTATO DA SELL 1  - NOTTE - r 4887"
-                    action = "sell"
+                    action = "buy"
                     percentage = 80
                     
 
@@ -16565,7 +16565,7 @@ class ro_cano_che_ritorna:
                         and macd > macd_2_min_ago
                         and macd > -3
                     ):
-                        sell = "BUY 2 novembre 2023 con ma450 > 6 ore E 300 > 120 min ago con ma50 < and ma3_last > ma39_last - r 5999"
+                        buy = "BUY 2 novembre 2023 con ma450 > 6 ore E 300 > 120 min ago con ma50 < and ma3_last > ma39_last - r 5999"
                         action = "buy"
                       
 
@@ -41969,7 +41969,7 @@ class ro_cano_che_ritorna:
             if (        
                 deviation_sell < -0.78
             ):
-                buy = "SELL condizione speciale 44 - SELL PIU' SEMPLICE DEL MONDO ! -0.78 % - r 15942"
+                sell = "SELL condizione speciale 44 - SELL PIU' SEMPLICE DEL MONDO ! -0.78 % - r 15942"
                 action = "sell"
                         
                 # and ma2_last < ma2_2_min_ago
