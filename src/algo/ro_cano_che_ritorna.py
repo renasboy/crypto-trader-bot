@@ -78,7 +78,7 @@ class ro_cano_che_ritorna:
         
         
         
-        # moving average (2-3-4-5-7-8-20-43-100) di x minuti prima
+        # moving average (2-3-4-5-7-8-20-43-100) di x Y minuti prima
         
         ma2_2_min_ago = self.algo_helper.ma_minutes_ago(2, 2)
         
