@@ -1,3 +1,4 @@
+from decimal import Decimal, ROUND_DOWN
 import hashlib
 import hmac
 import json
@@ -108,7 +109,8 @@ class binance:
         if type == "buy":
             data["quoteOrderQty"] = str(round(volume, 2))
         elif type == "sell":
-            data["quantity"] = f'{volume:.5f}'
+            volume = Decimal(volume)
+            data["quantity"] = str(volume.quantize(Decimal('.00001'), rounding=ROUND_DOWN))
         print(json.dumps(data))
         market_order = self.call('post', 'order', data)
         if market_order:
