@@ -41973,9 +41973,9 @@ class maddog:
             # SENZA and ma2_last < ma2_2_min_ago VENDE mentre ma4 si trova sotto il BUY !
             
             
-            
+            """
             # 1 - SELL condizione speciale SELL PIU' SEMPLICE DEL MONDO ! -0.78 %
-          
+            
             if (        
                 deviation_sell < -0.78
                 and ma2_last < ma2_2_min_ago
@@ -41985,11 +41985,11 @@ class maddog:
                 
                 # riga che si ripete all' infinito che forse blocca
                 
-                
+             """
                 
             # 2 - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 > -1.00
             
-            elif (
+            if (
                 deviation_ma39 < -0.25
                 and deviation_sell < -0.32
                 and ma2_last < ma2_2_min_ago
