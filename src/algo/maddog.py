@@ -41978,11 +41978,13 @@ class maddog:
           
             if (        
                 deviation_sell < -0.78
+                and ma2_last < ma2_2_min_ago
             ):
                 sell = "SELL condizione speciale 44 - SELL PIU' SEMPLICE DEL MONDO ! -0.78 % - r 15942"
                 action = "sell"
-                        
-                # and ma2_last < ma2_2_min_ago
+                
+                # riga che si ripete all' infinito che forse blocca
+                
                 
                 
             # 2 - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 > -1.00
