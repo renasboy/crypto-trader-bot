@@ -1485,7 +1485,7 @@ class maddog:
             
             percentage = self.buy_percentage
             
-            # NON TOCCARE  ! DI DEFAULT E' IL 2%
+            # NON TOCCARE  !
             
             
             
@@ -41973,7 +41973,7 @@ class maddog:
             # SENZA and ma2_last < ma2_2_min_ago VENDE mentre ma4 si trova sotto il BUY !
             
             
-            """
+            
             # 1 - SELL condizione speciale SELL PIU' SEMPLICE DEL MONDO ! -0.78 %
             
             if (        
@@ -41985,11 +41985,11 @@ class maddog:
                 
                 # riga che si ripete all' infinito che forse blocca
                 
-             """
+             
                 
             # 2 - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 > -1.00
             
-            if (
+            elif (
                 deviation_ma39 < -0.25
                 and deviation_sell < -0.32
                 and ma2_last < ma2_2_min_ago
@@ -45455,24 +45455,26 @@ class maddog:
             
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
-                and deviation_sell < -0.57
+                
                 
                 and deviation_ma100_sopra_ma200 > -0.70
                 and deviation_ma100_sopra_ma300 < 0.50
               
                 and ma13_last < ma13_2_min_ago
-                
+                and ma100_last < ma100_30_min_ago
+
                 and ma2_last < last_trade_price
                 and ma2_last < ma2_2_min_ago
             ):
 
-                sell = "SELL cond. special 30 B - DOLCE ATTESA 270 sec con ma13 < E dev_sell < -0.43 CON 100 sopra 300 < 0.50 MA non e' situazione crollo - r 16694 B"
+                sell = "SELL cond. special 30 B - DOLCE ATTESA 270 sec con ma13 < E 100<100 30 min ago e 100 sopra 300 < 0.50 MA non e' crollo - r 16694 B"
                 action = "sell"
              
                 # 4 feb 2022 con <-0.26 ha fatto -0.88% (dopo +4.29%)
                 # 7 feb 2022 con <-0.345 e 270 sec ha fatto -0.38% - aumenta a 0.355 ! - eventualmente ci pensa la condizione CROLLO IMPROVVISO CHE FUNZIONA !
                 # 17 set -0.57 da -0.47
-                
+
+                # 7 set 2004 ro cano e' tornato ! questa condizione interviene solo quando ma100 < ma100 30 min ago
                 
                 
                 
