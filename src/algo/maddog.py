@@ -22813,27 +22813,30 @@ class maddog:
             else:
                 if (    
                     ma3_last > ma13_last
-                    and ma10_last > ma30_last
+                    
                   
                     and ma100_last < ma100_10_min_ago
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
                     and deviation_ma5_sopra_o_sotto_ma100 > -0.40
-                    and deviation_ma5_sopra_o_sotto_ma100 > 0.20
+                    
                     
                     and ma450_last >= ma450_120_min_ago
                     and ma50_last > ma450_last
                     
                     and deviation_ma3_sopra_ma10 > 0.01
-                    and deviation_ma3_sopra_ma16 > 0.02
+                    
                     
                     and ma2_last > ma2_2_min_ago
                     and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
                     and ma2_differenza_ma5 > 5
                     and macd_differenza_2_min_ago > 0.10
                 ):
-                    buy = "BUY 5 con 3-20 and 450_last >= 450_120_min_ago and 5-28 > 0.02 CON 50 > 450 and ma2_differenza_ma5 > 8 - r 7144 A1 X NUOVA ERA A1 SOFT"
+                    buy = "BUY 5 con 450_last >= 450_120_min_ago e 50 > 450 and ma2_differenza_ma5 > 8 - r 7144 A1 X NUOVA ERA A1 SOFT"
                     action = "buy"
                     percentage = 70
+
+                    #  8 set 2024 anticipata perche' CONSOLIDATO trend in crescita
+
 
                 elif (    
                     ma3_last > ma13_last
@@ -23192,41 +23195,7 @@ class maddog:
                     action = "buy"
                     percentage = 70
 
-                elif (    
-                    ma3_last > ma20_last
-                    and ma450_last >= ma450_120_min_ago
-                    
-                    and ma100_last >= ma100_3_min_ago
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
-                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
-                    
-                    and ma10_last < ma30_last
-                    
-                    
-                    and ma20_last > ma450_last
-                    and ma50_differenza_ma59 > -5
-                    
-                    and deviation_ma3_sopra_ma10 > 0.005
-                    and deviation_ma3_sopra_ma16 > 0.01
-                    
-                    
-                    and ma3_last > ma13_last
-                    
-                    and ma2_last >= ma2_2_min_ago
-                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
-                    and ma2_differenza_2_min_ago > 8
-                    
-                    and macd_differenza_2_min_ago > 0.30
-                    
-                    and ma2_differenza_ma5 > 5
-                ):
-                    buy = "BUY 5 con 3-20 e 450_last >= 450_120_min_ago e 5-28 > -0.02 e 20 > 450 e ma2_differenza_ma5 > 8 - r 7144 A1 Y1 NUOVA ERA A3 SOFT"
-                    action = "buy"
-                    percentage = 70
-                    
-                    #  9 feb 2024 IMPORTANTE ! solo BUY 5 NUOVA ERA A3 SOFT con ma100> ma100 5 min ago !!!
-                    #  6 mar 2024 se 450 > 450 2 ore ago BUY 5 NUOVA ERA A3 SOFT con ma100> ma100 3 min ago
-                    #  6 mar 2024 anticipato ndecchiecella
+                
 
                 elif (    
                     ma3_last > ma20_last
@@ -23328,7 +23297,11 @@ class maddog:
                     action = "buy"
                     percentage = 70
 
-              
+
+
+                # 8 set 2024 CANCELLATA r 7144 A1 Y1 NUOVA ERA A3 SOFT
+
+
                 elif (    
                     ma3_last > ma20_last
                     
@@ -25221,36 +25194,9 @@ class maddog:
 
 
 
-                elif (    
-                    ma3_last > ma30_last
-                    
-                    and ma100_last > ma100_5_min_ago
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
-                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
-                    
-                    and ma450_last > ma450_480_min_ago
-                    
-                    and ma100_last < ma100_120_min_ago
-                    and ma200_last < ma200_120_min_ago
-                    and ma300_last < ma300_120_min_ago
-                    
-                    and ma78_last < ma150_last
-                    and ma100_last < ma200_last
-                    and ma200_last < ma300_last
-                    
-                    and deviation_ma3_sopra_ma10 > 0.01
-                    and deviation_ma3_sopra_ma16 > 0.01
-                    
-                    and ma2_last >= ma2_2_min_ago
-                    and macd_differenza_2_min_ago > 1
-                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
-                ):
-                    buy = "BUY 5 29 ago 2022 > 120 min di ribasso 78<150 CON ma100 < 120 min ago - r 7564 A2 YX1 NUOVA ERA A3 SOFT"
-                    action = "buy"
-                    percentage = 90
-                    
-                    #  9 feb 2024 IMPORTANTE ! solo BUY 5 NUOVA ERA A3 SOFT con ma100 > ma100 5 min ago !!!
-                    # 26 feb 2024 piccola modifica per anticipare ndecchiecella
+                # 8 set 2024 CANCELLATA r 7564 A2 YX1 NUOVA ERA A3 SOFT
+
+
 
                 elif (    
                     ma3_last > ma39_last
@@ -45464,18 +45410,19 @@ class maddog:
                 and ma100_last < ma100_30_min_ago
 
                 and ma2_last < last_trade_price
+                and ma3_last < ma3_2_min_ago
                 and ma2_last < ma2_2_min_ago
             ):
 
-                sell = "SELL cond. special 30 B - DOLCE ATTESA 270 sec con ma13 < E 100<100 30 min ago e 100 sopra 300 < 0.50 MA non e' crollo - r 16694 B"
+                sell = "SELL cond. special 30 B - DOLCE ATTESA 270 sec con ma13 < E 100<100 30 min ago e 100 sopra 300 < 0.50 - r 16694 B"
                 action = "sell"
              
                 # 4 feb 2022 con <-0.26 ha fatto -0.88% (dopo +4.29%)
                 # 7 feb 2022 con <-0.345 e 270 sec ha fatto -0.38% - aumenta a 0.355 ! - eventualmente ci pensa la condizione CROLLO IMPROVVISO CHE FUNZIONA !
                 # 17 set -0.57 da -0.47
 
-                # 7 set 2004 ro cano e' tornato ! questa condizione interviene solo quando ma100 < ma100 30 min ago
-                
+                #  7 set 2004 ro cano e' tornato ! questa condizione interviene solo quando ma100 < ma100 30 min ago
+                #  8 set 2024 aggiunta ma3 < ma3 2 min agoand ma2_last < ma2_2_min_ago
                 
                 
                 
