@@ -46062,10 +46062,12 @@ class maddog:
                 
                 and ma2_last < ma2_2_min_ago
                 and macd < macd_2_min_ago
+                and macd_differenza_2_min_ago < -0.75
             ):    
-                sell = "SELL condizione POCHI MALEDETTI E SUBITO da 60 a 120 min con 3-39 E con dev_sell 0.75 - 1.05 and macd < - INTANTO TE LI PRENDI - r 16750 A2y"
+                sell = "SELL condizione PMS da 60 a 120 min con 3-39 E con dev_sell 0.75 - 1.05 and macd < E diff MACD < -0.75 - INTANTO TE LI PRENDI - r 16750 A2y"
                 action = "sell"
-                
+
+                #  9 set 2024 aggiunta diff macd < -0.75
                 
 
           
