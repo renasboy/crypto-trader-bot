@@ -24799,7 +24799,7 @@ class maddog:
                     and ma450_last > ma450_360_min_ago
                     and ma78_last > ma150_last
                     
-                    and deviation_ma3_sotto_ma100 > -0.01
+                    and deviation_ma3_sotto_ma100 < 0.02
                     
                     and deviation_ma3_sopra_ma10 > 0.01
                     and deviation_ma3_sopra_ma16 > 0.01
@@ -24810,7 +24810,7 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
               
                 ):
-                    buy = "BUY 5A con ma450_last > ma450_360_min_ago and deviation_ma3_sotto_ma100 > -0.01 - r 7384 A2"
+                    buy = "BUY 5A con ma450_last > ma450_360_min_ago and deviation_ma3_sotto_ma100 < 0.02 - r 7384 A2"
                     action = "buy"
                     percentage = 70
                     
@@ -24822,7 +24822,7 @@ class maddog:
                     
                     #  7 mar 2024 con ma450_last > ma450_360_min_ago and deviation_ma3_sopra_ma100 > -0.01 da 0.01
                     #  7 mar 2024 con ma450_last > ma450_360_min_ago 4-20 da 4-30
-                    
+                    #  9 set 2024 dopo un grande rialzo la faccio comprare SOLO quando ma3 e' ancora vicina alla ma100
 
                 elif (
                     
@@ -42179,6 +42179,9 @@ class maddog:
                 and deviation_ma100_sopra_ma300 > 0.10
                 
                 and deviation_ma3_sotto_ma150 > -1.20
+
+                and ma3_last < ma33_last
+
                 and ma2_last <= ma2_2_min_ago 
                 and macd_differenza_2_min_ago < -0.25
             ):
@@ -42195,7 +42198,7 @@ class maddog:
 
                 #  6 mar 2024 and delta_450_300 < delta_450_300_60_min significa che e' GIORNO
                 #  6 mar 2024 and deviation_sell < -0.04 da -0.03
-
+                #  9 set 2024 aggiunta 3<33
             
             elif (
                 deviation_ma39 < -0.20
