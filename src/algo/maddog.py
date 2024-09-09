@@ -2928,16 +2928,18 @@ class maddog:
                     
                     and macd >= macd_2_min_ago
                     and macd > -20
-                    and macd_differenza_2_min_ago > 0.50
+
+                    and macd_differenza_2_min_ago > -2
                     
-                    and ma2_differenza_ma5 > 10
+                    and ma2_differenza_ma5 > 8
                 ):  
                     
-                    buy = "BUY 1 CONSOLIDATO TREND LATERALE con ma300_last > 3 ore e 3-10 > 0.01 e macd > -20 e ma2_diff_2_min_ago > 7 - r 1205 AX NUOVA ERA A2 SOFT 2"
+                    buy = "BUY 1 TREND LATERALE con ma300_last > 3 ore e 3-10 > 0.01 e macd > -20 e macd_differenza_2_min_ago > -2 - r 1205 AX NUOVA ERA A2 SOFT 2"
                     action = "buy"
                     percentage = 70
 
-
+                    #  9 set 2024 tolta diff macd in questa situazione (and deviation_ma5_sopra_o_sotto_ma100 < -0.60)
+                    #  9 set 2024 aggiunta and macd_differenza_2_min_ago > -2 (cioe' il MACD SMETTE DI DECRESCERE BRUSCAMENTE)
                   
                 elif (    
                     ma3_last > ma13_last
@@ -11016,9 +11018,9 @@ class maddog:
                     
                     and deviation_ma3_sopra_ma10 > 0.01
                     and deviation_ma3_sopra_ma16 > 0.02
-                    and deviation_ma5_sopra_ma28 > 0.03
                     
-                    and deviation_ma7_sopra_ma40 > 0.01
+                    
+                    
                     and deviation_buy_ma3_sopra_ma13 > 0.08
                     
                     and price >= price_2_min_ago
@@ -11030,7 +11032,7 @@ class maddog:
                     percentage = 80
                     
                     # 11 gen 2024 anticipato ndecchiecella se ma100 sale da 120 min
-
+                    #  9 set 2024 anticipato ndecchiecella
                 
                 elif (    
                     ma59_last > ma200_last
@@ -23794,7 +23796,7 @@ class maddog:
                     
                 elif (
                     ma78_last < ma150_last
-                    
+                    and ma5_last > ma200_last
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.23
                     and deviation_ma5_sotto_ma300 < -0.10
                     
@@ -23816,6 +23818,8 @@ class maddog:
                     buy = "BUY 5 oggi 7 feb 2024 > 180 min di ribasso 78<150 and 3-16 > 0.06 and macd > macd 2 min ago - r 7200"
                     action = "buy"
                     percentage = 90
+
+                    #  9 set 2024 e' un buy 5 e scende tutto ho aggiunto 5>200 MA FORSE VA CANCELLATA
 
               
                 elif (
