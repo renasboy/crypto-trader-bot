@@ -7854,9 +7854,9 @@ class maddog:
 
 
                 elif (
-                    ma3_last > ma28_last
+                    ma3_last > ma13_last
                     and ma39_last < ma39_15_min_ago
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.30
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.40
                     
                     and ma300_last > ma300_360_min_ago
                     and ma200_last > ma200_20_min_ago
@@ -7868,16 +7868,16 @@ class maddog:
                     and ma200_last > ma200_60_min_ago
                     
                     and ma20_last < ma78_last
-                    and ma90_last > ma110_last
+                    
                     
                     and deviation_ma3_sopra_ma10 > 0.01
-                    and deviation_ma3_sopra_ma16 > 0.01
+                    and deviation_ma3_sopra_ma16 > -0.01
                   
                     and ma2_last > ma2_2_min_ago
                     and macd >= macd_2_min_ago
                 ):    
                     
-                    buy = "BUY 1 trend CHIARAMENTE rialzista PRENDE IL COLTELLO CON IL PIEDE con 200 > and 20<78 - r 2859 B3"
+                    buy = "BUY 1 trend CHIARAMENTE rialzista PRENDE IL COLTELLO CON IL PIEDE dev_ma5_sopra_o_sotto_ma100 < -0.40 e 200 > e 20<78 - r 2859 B3"
                     action = "buy"
                     percentage = 80
                     
@@ -7889,6 +7889,8 @@ class maddog:
                     # 16 mar 2023 aggiunta 3-18 > 0.265
                     
                     #  8 mar 2024 modificato
+                    #  9 set 2024 and deviation_ma5_sopra_o_sotto_ma100 < -0.40 da -0.30 MA FORSE E' DA TOGLIERE
+                    
 
 
                 
@@ -15724,7 +15726,7 @@ class maddog:
                     ma3_last > ma18_last
                     
                     and ma39_last < ma39_15_min_ago
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.35
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.40
                    
                     and ma450_last > ma450_360_min_ago
                     and ma100_last < ma100_30_min_ago
@@ -15750,7 +15752,8 @@ class maddog:
                     buy = "BUY 2 prendo coltello con il piede E ma450 che sale da 6 ore and 3-18 > -0.02 + MACD > - r 5994 b"
                     action = "buy"
                     percentage = 90
-                    
+
+                    #  9 set 2024 and deviation_ma5_sopra_o_sotto_ma100 < -0.40 da -0.35 MA FORSE E' DA TOGLIERE
                     
 
                 elif (     
@@ -41097,14 +41100,15 @@ class maddog:
                     
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and (ma3_prev > ma25_prev and ma3_last < ma25_last)
+                        and (ma3_prev > ma30_prev and ma3_last < ma30_last)
                         and deviation_sell > 1.50 and deviation_sell < 2.70
                         and ma2_last < ma2_2_min_ago
                     ):
 
-                        sell = "SELL 4-5-x da 60 a 90 min con ma50 > incrocio 3-25 and deviation_sell 1.50 - 2.70 - r 15610"
+                        sell = "SELL 4-5-x da 60 a 90 min con ma50 > incrocio 3-30 and deviation_sell 1.50 - 2.70 - r 15610"
                         action = "sell"
-                        
+
+                        # 9 set 2023 3-30 da 3-25
                         
                         
                         
@@ -44152,7 +44156,9 @@ class maddog:
                 #  5 dic 2023 dev sell a 0.05 da -0.05
                 # MINGHIA il 26 dic ha fatto -0.73 ! e ho fatto delle modifiche meravigliose
                 # 29 dic 2023 and macd a 13 da 7
-                # 19 gen 2024 ha fatto -0.60 HO NOTATO CHE ma20 era in crescita ! e ho aggiunto questa 
+                # 19 gen 2024 ha fatto -0.60 HO NOTATO CHE ma20 era in crescita ! e ho aggiunto questa
+
+
             
             elif (
                 
