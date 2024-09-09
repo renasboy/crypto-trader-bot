@@ -195,7 +195,8 @@ class maddog:
         ma200_301_min_ago = self.algo_helper.ma_minutes_ago(200, 301)
         
         ma225_60_min_ago = self.algo_helper.ma_minutes_ago(225, 60)
-        
+
+        ma300_10_min_ago = self.algo_helper.ma_minutes_ago(300, 10)
         ma300_20_min_ago = self.algo_helper.ma_minutes_ago(300, 20)
         ma300_30_min_ago = self.algo_helper.ma_minutes_ago(300, 30)
         ma300_50_min_ago = self.algo_helper.ma_minutes_ago(300, 50)
@@ -3347,37 +3348,38 @@ class maddog:
 
 
                 elif (    
-                    ma3_last > ma30_last
+                    ma3_last > ma13_last
                     
-                    and ma100_last > ma100_5_min_ago
+                    
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
                     and deviation_ma5_sopra_o_sotto_ma100 > -0.50
                     
                     and ma300_last < ma300_180_min_ago
                     
-                    and deviation_ma300_sopra_ma450 < 0.18
-                    and deviation_ma300_sopra_ma450 > -0.18
+                    and deviation_ma300_sopra_ma450 < 0.20
+                    and deviation_ma300_sopra_ma450 > -0.20
                     
-                    and deviation_ma100_sopra_ma300 < 0.29
-                    and deviation_ma100_sopra_ma300 > -0.29
+                    and deviation_ma100_sopra_ma300 < 0.30
+                    and deviation_ma100_sopra_ma300 > -0.30
                     
-                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma10 > -0.01
                     and deviation_ma3_sopra_ma16 > -0.01
                     
                     and ma2_last >= ma2_2_min_ago
                     and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
                     
                     and macd >= macd_2_min_ago
-                    and macd > -20
-                    and macd_differenza_2_min_ago > 0.50
+                    and macd > -30
+                    and macd_differenza_2_min_ago > 0.30
                     
                     and ma2_differenza_ma5 > 10
                 ):
-                    buy = "BUY 1 CONSOLIDATO TREND LATERALE con ma300_last < 3 ore e 3-10 > 0.01 e macd > -20 and ma2_diff_2_min_ago > 7 - r 1205 B NUOVA ERA A3 SOFT"
+                    buy = "BUY 1 CONSOLIDATO TREND LATERALE con ma300_last < 3 ore e 3-10 > -0.01 e macd > -30 and ma2_diff_2_min_ago > 7 - r 1205 B NUOVA ERA A3 SOFT"
                     action = "buy"
                     percentage = 50
                     
                     # 26 feb 2024 anticipato ndecchiecella se 100> 100 5 min ago e consolidato laterale
+                    #  9 set 2024 anticipato ancora ndecchiecella
 
                 elif (    
                     ma3_last > ma20_last
@@ -11599,11 +11601,11 @@ class maddog:
                     
                     
                     
-                # BUY 2 CHE MANCAVA DOPO BUY-SELL CROLLO ! 150-100 GIORNO ! E 50 > 100
+                # BUY 2 CHE MANCAVA con 150-100 GIORNO !
                 
                 elif (    
                     ma5_last > ma30_last
-                    and ma100_last >= ma100_2_min_ago
+                    and ma300_last >= ma300_10_min_ago
                     
                     and ma100_last < ma100_120_min_ago
                     and ma200_last < ma200_120_min_ago
@@ -11638,7 +11640,7 @@ class maddog:
                     # 7 nov 2022 aggiunta 59 > 59 45 min ago
                     # aggiunta 31 ago 2023 rccr ok m ko
                     # 28 set 2023 anticipata ndecchiecella
-
+                    #  9 set 2024 fatta piccola modifica MA FORSE E' DA CANCELLARE
 
 
                 # BUY 2 migliore che considera distanza 5-300 AND dev 10-200 < -0.24
@@ -41920,22 +41922,12 @@ class maddog:
             
             
             
-            # 1 - SELL condizione speciale SELL PIU' SEMPLICE DEL MONDO ! -0.78 %
-            
-            if (        
-                deviation_sell < -0.78
-                and ma2_last < ma2_2_min_ago
-            ):
-                sell = "SELL condizione speciale 44 - SELL PIU' SEMPLICE DEL MONDO ! -0.78 % - r 15942"
-                action = "sell"
-                
-                # riga che si ripete all' infinito che forse blocca
-                
+            #  9 set 2024 cancellata r 15942
              
                 
-            # 2 - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 > -1.00
+            # 1 - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 > -1.00
             
-            elif (
+            if (
                 deviation_ma39 < -0.25
                 and deviation_sell < -0.32
                 and ma2_last < ma2_2_min_ago
@@ -46435,7 +46427,7 @@ class maddog:
                 and deviation_sell < 1.25
                 and ma300_last > ma300_301_min_ago
                 
-                and ma3_last < ma39_last
+                and ma3_last < ma50_last
                 and ma3_last < ma18_last
                 and ma2_last < ma5_last
                 
@@ -46447,11 +46439,12 @@ class maddog:
                 and macd_differenza_3_min_ago < -7
                 
             ):    
-                sell = "SELL CS - P M e S con 3-39 e ma300 > 5 ore e dev 0.81 - 1.25 e macd < 16 e MACD diff_5_min_ago < -9 - r 16875 A1"
+                sell = "SELL CS - P M e S con 3-50 e ma300 > 5 ore e dev 0.81 - 1.25 e macd < 16 e MACD diff_5_min_ago < -9 - r 16875 A1"
                 action = "sell"
                 
                 #  7 mar 2024 fatta modifica
                 #  8 mar 2024 tolto dev 3-18 < -0.056 solo tra dev sell > 0.81 e dev sell < 1.25 e aggiunto sell con 3-39
+                #  9 set 2024 modificato da 3-39 a 3-50
 
             elif (
                 deviation_sell > 1.25
