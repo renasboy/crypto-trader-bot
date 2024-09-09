@@ -526,11 +526,20 @@ class maddog:
         deviation_ma3_sopra_o_sotto_ma99 = (ma3_last / ma99_last - 1) * 100 if ma99_last else 0
         self.algo_helper.info("deviation_ma3_sopra_o_sotto_ma99: {}".format(deviation_ma3_sopra_o_sotto_ma99))
 
-        
+
+
         # formula DEVIATION_ma5_sopra_o_sotto_ma100 !
         
         deviation_ma5_sopra_o_sotto_ma100 = (ma5_last / ma100_last - 1) * 100 if ma100_last else 0
         self.algo_helper.info("deviation_ma5_sopra_o_sotto_ma100: {}".format(deviation_ma5_sopra_o_sotto_ma100))
+
+
+        # formula DEVIATION_ma11_sopra_o_sotto_ma300 !
+        
+        deviation_ma11_sopra_o_sotto_ma300 = (ma11_last / ma300_last - 1) * 100 if ma300_last else 0
+        self.algo_helper.info("deviation_ma11_sopra_o_sotto_ma300: {}".format(deviation_ma11_sopra_o_sotto_ma300))
+
+
 
         
         # formula DEVIATION_ma50_sopra_o_sotto_ma100 !
@@ -3534,6 +3543,8 @@ class maddog:
                     
                 elif (    
                     ma3_last > ma13_last
+                    and deviation_ma11_sopra_o_sotto_ma300 > -0.25
+
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.33
                     
                     and deviation_ma300_sopra_ma450 < 0.18
@@ -3562,7 +3573,7 @@ class maddog:
                     percentage = 70
                     
                     # 22 feb 2024 solo in una condizione di trend laterale consolidato e con deviation_ma5_sopra_o_sotto_ma100 < -0.33
-
+                    #  9 set 2024 aggiunta and deviation_ma11_sopra_o_sotto_ma300 > -0.25 ( perche' ha comprato mentre scendeva molto) (non era laterale !)
 
 
 
