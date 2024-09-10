@@ -29937,10 +29937,10 @@ class maddog:
                     elif (
                         ma78_last < ma78_120_min_ago
                         and ma50_last <= ma50_2_min_ago
-                        
+                        and ma100_last < ma200_last
+
                         and ma300_last > ma300_301_min_ago
-                        and delta_150_100 <= delta_150_100_60_min
-                
+                        
                         and deviation_ma39 < 0.05
                         and deviation_sell < 0.05
                         
@@ -29948,16 +29948,18 @@ class maddog:
                         and deviation_ma5_sotto_ma200 > -0.90
                         
                         and ma2_last <= ma2_2_min_ago 
-                        and ma2_differenza_2_min_ago < -11
-                        and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.018
-                        and macd_differenza_2_min_ago < -0.50
+                        and ma2_differenza_2_min_ago < -10
+                        and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.017
+                        
                     ):
-                        sell = "SELL 1 (50-90 min) EX cond spec r 16047 B3 NOTTE con ma300> 5 ore - dev 3-39 < 0.05 e dev_sell < 0.05 e ma50 <= and dev ma2 e diff macd - r 9935 B"
+                        sell = "SELL 1 (50-90 min) con ma300> 5 ore - dev 3-39 < 0.05 e dev_sell < 0.05 e ma50 <= and dev ma2 - r 9935 B"
                         action = "sell"
                         
                         # 16 nov 2023 dev sell a 0.05 da -0.03
                         # 26 dic 2023 aggiunta and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.018
                         # 26 dic 2023 aggiunta and macd_differenza_2_min_ago < -0.50
+                        # 10 set 2024 aggiunto 100<200 e TOLTA macd_differenza_2_min_ago < -0.50 ! (il macd saliva e il prezzo scendeva !)
+
                     
                     elif (
                         ma78_last < ma78_120_min_ago
