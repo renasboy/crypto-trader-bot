@@ -2666,37 +2666,9 @@ class maddog:
                     # 8 gen 2024 incrocio 3-30 piu' veloce di 10>20 !
 
                   
-                elif (
-                    ma3_last > ma20_last
-                    
-                    and ma100_last > ma100_10_min_ago
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
-                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
+                
+                # 10 set 2024 cancellata r 1204 NUOVA ERA A3 SOFT
 
-                    and ma100_last < ma100_60_min_ago
-                    and ma5_last >= ma10_last
-                    and ma450_last >= ma450_360_min_ago
-             
-                    and deviation_ma54_sopra_o_sotto_ma72 < -0.015
-                    
-                    and deviation_ma39_sotto_ma200 < -0.01
-                    and deviation_ma300_sopra_ma450 > -0.50
-                    
-                    and deviation_ma3_sopra_ma10 > -0.01
-                    and deviation_ma3_sopra_ma16 > 0.001
-                    and deviation_ma3_sopra_ma18 > -0.01
-                    
-                    and ma2_last >= ma2_2_min_ago
-                    and macd >= macd_2_min_ago
-                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
-                    and macd_differenza_2_min_ago > 0.50
-                    
-                ):    
-                    buy = "BUY 1 compare forever - ex 1537 A3y RCCR con 3-30 E CON 300 vicina alla 450 ( anche un poco sotto ! ) and 3-18 > 0.001 + MACD > - r 1204 NUOVA ERA A3 SOFT"
-                    action = "buy"
-                    percentage = 90
-
-                   
                 elif (
                     ma3_last > ma20_last
                     
@@ -12120,27 +12092,22 @@ class maddog:
                 
                 elif (
                     
-                    ma4_last > ma39_last
+                    ma3_last > ma39_last
                     and delta_1 < delta_2
-                    
-                    and deviation_ma10_sopra_ma200 < -0.25
-                    and deviation_ma10_sopra_ma200 > -0.45
-                  
-                    and deviation_ma100_sopra_ma200 > -0.45
-                    
-                    and deviation_ma5_sotto_ma300 < 0.45
-                    and deviation_ma5_sotto_ma300 > -0.80
+
+                    and deviation_ma5_sotto_ma300 < -0.40
+                    and deviation_ma10_sopra_ma200 < -0.30
                     
                     and ma300_last < ma300_60_min_ago
                     and ma200_last < ma200_60_min_ago
                     
                     and deviation_ma3_sopra_ma10 > 0.01
-                    and deviation_ma5_sopra_ma28 > -0.02
+                    and deviation_ma5_sopra_ma28 > -0.03
                     
                     and ma2_last >= ma2_2_min_ago
-                    and macd >= macd_2_min_ago
+                    and macd_differenza_2_min_ago > 1.25
                 ):
-                    buy = "BUY 2 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 4-39 - formula MY COMPA - r 4743 A"
+                    buy = "BUY 2 che considera distanza 5-300 AND dev 10-200 < -0.30 AND 3-39 E dif MACD - formula MY COMPA - r 4743 A"
                     action = "buy"
                     percentage = 80
                     
@@ -12157,6 +12124,8 @@ class maddog:
                     # 11 ott 2023 5-28 a 0.02 da 0.04
                     #  6 dic 2023 and deviation_ma5_sopra_ma28 > -0.02 da 0.02
                     #  6 dic 2023 ma4_last > ma39_last da 5-39
+                    # 10 set 2024 MODIFICATA
+
               
                 elif (
                     
@@ -17628,31 +17597,10 @@ class maddog:
                     # 20 apr 2023 5-28 a 0.03 da 0.07
 
 
-                elif (
-                    ma5_last >= ma5_2_min_ago
-                    and ma450_last > ma450_120_min_ago
-                    and ma200_last > ma200_60_min_ago
-                    
-                    and ma39_last < ma39_15_min_ago
-                    and (ma3_prev < ma180_prev and ma3_last > ma180_last)
-                    
-                    and ma33_last < ma78_last
-               
-                    and ma3_last > ma13_last
-                    
-                    and ma2_last >= ma2_2_min_ago
-                    and ma2_differenza_2_min_ago > 8
-                    
-                    and macd_differenza_2_min_ago > 0.25
-                ):  
-                
-                    buy = "BUY 3 incrocio al rialzo 3-180 con ma450 > 2 ore e ma200 che sale da 1 ora con 33<78 ! - r 6260 a"
-                    action = "buy"
-                    percentage = 70
 
-                    # 6 mar 2024 aggiunto incrocio al rialzo 3-180
-                    
-                    
+                # 10 set 2024 CANCELLATA r 6260 a
+
+               
                      
                 elif (
                     ma5_last >= ma5_2_min_ago
@@ -19281,35 +19229,30 @@ class maddog:
               
                 
 
-                # BUY 3 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-50 - formula MY COMPA (importata dal BUY 1 r 1043 B)
+
+
+                # BUY 3 migliore che considera distanza 5-100
                 
                 elif (
                     
-                    ma8_last > ma50_last
+                    ma3_last > ma28_last
                     and delta_1 < delta_2
                     
-                    and deviation_ma10_sopra_ma200 < -0.25
-                    and deviation_ma10_sopra_ma200 > -0.40
-                  
-                    and deviation_ma100_sopra_ma200 > -0.40
-                    
-                    and deviation_ma5_sotto_ma300 < 0.45
-                    and deviation_ma5_sotto_ma300 > -0.75
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.30
                     
                     and ma300_last < ma300_60_min_ago
                     and ma200_last < ma200_60_min_ago
                     
                     and deviation_ma3_sopra_ma10 > 0.01
-                    and deviation_ma5_sopra_ma28 > 0.04
-                    
+                  
                     and ma2_last >= ma2_2_min_ago
                     and macd >= macd_2_min_ago
                 ):
-                    buy = "BUY 3 migliore IMPORTATO dal BUY 2 r 4743 A de RCCR che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-50 - formula MY COMPA - r 6571"
+                    buy = "BUY 3 che considera distanza 10-200 - r 6571"
                     action = "buy"
                     percentage = 80
                     
-                    # importante : ma100 sta sotto la ma200 MA non le e' troppo lontana
+                    # importante : ma5 sta sotto la ma100 almeno di -0.30
 
                 
                 # BUY 3 29 ago 2022 > 180 min di ribasso
@@ -22309,8 +22252,8 @@ class maddog:
                 
                 elif (
                     
-                    ma8_last > ma54_last
-                    and deviation_ma5_sopra_o_sotto_ma100 > -0.30
+                    ma3_last > ma39_last
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.30
                     
                     and ma100_last < ma100_180_min_ago
                     and ma200_last < ma200_180_min_ago
@@ -22321,9 +22264,9 @@ class maddog:
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
                     
-                    and deviation_ma5_sopra_ma28 > 0.13
-                    and ma2_last >= ma2_2_min_ago
                     
+                    and ma2_last >= ma2_2_min_ago
+                    and macd_differenza_2_min_ago > -2
                 ):
                     buy = "BUY 4 29 ago 2022 > 180 min di ribasso - r 7039 B2x"
                     action = "buy"
@@ -22332,7 +22275,10 @@ class maddog:
                     # 11 ott 2022 se ma300 < 360 min ago BUY 4 se deve comprare deve avere almeno 5-28 > 0.13 
                     # 31 lug 2023 ma8_last > ma54_last da 18-100
                     #  5 ott 2023 and deviation_ma5_sopra_o_sotto_ma100 > -0.05
-              
+
+                    # 10 set 2024 and macd_differenza_2_min_ago > -2 
+                    # 10 set 2024 significa che la differenza del MACD di adesso E del MACD di 2 min ago NON E' TANTA cioe' STA SMETTENDO DI CROLLARE
+
 
               
                 # BUY 4 29 ago 2022 > 180 min di ribasso
@@ -24827,29 +24773,20 @@ class maddog:
                     
                     ma450_last < ma450_360_min_ago
                     and ma100_last > ma300_last
-                    and ma78_last > ma150_last
                     
-                    and deviation_ma4_sopra_ma100 > 0.10
+                    and deviation_ma4_sopra_ma100 > 0.05
                     
                     and deviation_ma3_sopra_ma10 > 0.12
                     and deviation_ma3_sopra_ma16 > 0.12
                     and deviation_ma5_sopra_ma28 > 0.04
-                    
-                    and deviation_buy3 > 0.05
-                    and deviation_bellissima > 0.05
-                    and deviation_ma7_sopra_ma40 > 0.05
-                    
-                    and ma4_last > ma9_last
-                    and ma4_last > ma50_last
-                    and ma6_last > ma15_last
-                    and ma7_last > ma25_last
-                    
+
                     and ma3_last > ma13_last
+                    and ma4_last > ma9_last
                     
                     and ma2_last >= ma2_2_min_ago
               
                 ):
-                    buy = "BUY 5A con 100>300 e con ma450_last > ma450_360_min_ago and deviation_bellissima > 0.05 (PER SPEZZARE LA CATENA - effetti laterali) - r 7384 B1"
+                    buy = "BUY 5A con 100>300 MA ma450_last < ma450_360_min_ago (SPEZZARE LA CATENA - effetti laterali) - r 7384 B1"
                     action = "buy"
                     percentage = 70
                     
@@ -25399,12 +25336,10 @@ class maddog:
                     #  6 dic 2023 and macd >= macd_2_min_ago
 
               
-                elif (
-                    
+                
+                elif (    
                     ma5_last > ma54_last
-                    and deviation_ma78_sopra_o_sotto_ma200 < -0.028
-                    and ma2_differenza_2_min_ago > 10
-                    and ma78_last > ma100_last
+                    and ma30_last > ma300_last
                     
                     and ma100_last < ma100_180_min_ago
                     and ma200_last < ma200_180_min_ago
@@ -25413,13 +25348,13 @@ class maddog:
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
                     
-                    and deviation_ma5_sopra_ma28 > 0.02
+                    and deviation_ma5_sopra_ma28 > 0.01
+                    
                     
                     and ma2_last >= ma2_2_min_ago
-                    and macd >= macd_2_min_ago
-                    and macd_differenza_2_min_ago > 2
+                    and macd_differenza_2_min_ago > -2
                 ):
-                    buy = "BUY 5 13 apr 2023 zia pina > 180 min di ribasso 78>100 and macd >= macd_2_min_ago - r 7564 B1y"
+                    buy = "BUY 5 13 apr 2023 zia pina > 180 min di ribasso 20>200 and macd >= macd_2_min_ago - r 7564 B1y"
                     action = "buy"
                     percentage = 90
                     
@@ -25427,8 +25362,8 @@ class maddog:
                     #  6 dic 2023 78>100 da 78>150
                     #  6 dic 2023 and macd >= macd_2_min_ago
                     
-                    # ATTENZIONE 8 dic 2023 se 78 sotto 200 allora aggiunto diff ma2 > 10 e diff macd >2 CIOE' basta BUY 5 continui ! (se 78 molto sotto 200)
-
+                    # ATTENZIONE 8 dic 2023 basta BUY 5 continui !
+                    # 10 set 2024 ma30 deve andara sopra la ma300
               
                     
                 # BUY 5 29 ago 2022 > 180 min di ribasso 78<150
@@ -42168,7 +42103,7 @@ class maddog:
                 ma8_last < ma8_2_min_ago
                 and ma2_differenza_2_min_ago < -15
                 and deviation_ma39 < 0.05
-                and deviation_sell < -0.04
+                and deviation_sell < -0.05
                 
                 and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago > 1.50
                 and deviation_ma10_sopra_o_sotto_ma10_30_min_ago < 0.12
@@ -42182,9 +42117,9 @@ class maddog:
                 and ma3_last < ma33_last
 
                 and ma2_last <= ma2_2_min_ago 
-                and macd_differenza_2_min_ago < -0.25
+                and macd_differenza_2_min_ago < -1.25
             ):
-                sell = "SELL C.S. con ma50 < MA ma100 sopra ma300 > 0.10 e dev 3-39 < 0.05 e dev sell < -0.04 - r 15985 A1 ok 2BY"
+                sell = "SELL C.S. con ma50 < MA ma100 sopra ma300 > 0.10 e dev 3-39 < 0.05 e dev sell < -0.045 - r 15985 A1 ok 2BY"
                 action = "sell"
                 
                 # 18 set 2023 dev sell -0.02 da -0.01
@@ -42198,6 +42133,8 @@ class maddog:
                 #  6 mar 2024 and delta_450_300 < delta_450_300_60_min significa che e' GIORNO
                 #  6 mar 2024 and deviation_sell < -0.04 da -0.03
                 #  9 set 2024 aggiunta 3<33
+                # 10 set 2024 and deviation_sell < -0.045 da -0.04
+                # 10 set 2024 and macd_differenza_2_min_ago < -1.25 da < -0.25
             
             elif (
                 deviation_ma39 < -0.20
@@ -46001,19 +45938,21 @@ class maddog:
                 and deviation_ma10__diviso_ma10_5_ore_ago > 1.50
                 
                 and ma3_last < ma30_last
-                and deviation_ma3_di_adesso_diviso_ma3_di_90_min_ago < 1.30
+                and deviation_ma3_di_adesso_diviso_ma3_di_90_min_ago < 1.40
                 
                 and deviation_sell > 0.70
-                and deviation_sell < 1.05
+                and deviation_sell < 1.50
                 
-                and ma2_last < ma2_2_min_ago
+                and ma2_last <= ma2_2_min_ago
                 and macd < macd_2_min_ago
-                and macd < -5
+                and macd_differenza_2_min_ago < -2
             ):    
-                sell = "SELL cond POCHI MALEDETTI E SUBITO da 0 a 120 min con ma100> 5 ore e 3-30 E con dev_sell 0.70 - 1.05 e macd < e macd < -5 - PRENDILI ! - r 16750 A1x"
+                sell = "SELL cond PMS da 0 a 120 min con ma100> 5 ore e 3-30 E con dev_sell 0.70 - 1.50 e macd <  - PRENDILI ! - r 16750 A1X"
                 action = "sell"
                 
                 # 24 ago 2023 and macd < -5
+                # 10 set 2024 AGGIUNTA and macd_differenza_2_min_ago < -2 AL POSTO DI MACD deve essere <-5
+
             
             elif (
                 seconds_since_last_trade > 0 and seconds_since_last_trade < 7200
