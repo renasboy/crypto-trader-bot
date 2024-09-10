@@ -3264,18 +3264,18 @@ class maddog:
                     ma3_last > ma15_last
                   
                     and ma100_last < ma100_10_min_ago
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.13
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.33
-                    and deviation_ma5_sopra_o_sotto_ma100 > -0.60
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.70
                     
                     
                     and ma300_last < ma300_180_min_ago
                     
                     and deviation_ma300_sopra_ma450 < 0.18
-                    and deviation_ma300_sopra_ma450 > -0.18
+                    and deviation_ma300_sopra_ma450 > -0.29
                     
                     and deviation_ma100_sopra_ma300 < 0.29
-                    and deviation_ma100_sopra_ma300 > -0.29
+                    and deviation_ma100_sopra_ma300 > -0.33
                     
                     and deviation_ma3_sopra_ma10 > 0.01
                     and deviation_ma3_sopra_ma16 > -0.01
@@ -3289,12 +3289,13 @@ class maddog:
                     
                     and ma2_differenza_ma5 > 8
                 ):
-                    buy = "BUY 1 CONSOLIDATO TREND LATERALE con ma300_last < 3 ore e 3-10 > 0.01 e macd > -20 and ma2_diff_2_min_ago > 7 - r 1205 B NUOVA ERA A2 SOFT 1"
+                    buy = "BUY 1 TREND LATERALE con ma300_last < 3 ore e 3-10 > 0.01 e macd > -20 and ma2_diff_2_min_ago > 7 - r 1205 B NUOVA ERA A2 SOFT 1"
                     action = "buy"
                     percentage = 50
 
                     # 19 feb 2024 3-15 ! da 5-50
                     # 21 feb 2024 anticipato ndecchiecella
+                    # 10 set 2024 anticipato ndecchiecella tolta la parola CONSOLIDATO trend laterale SE ma300_last < ma300_180_min_ago
 
                 elif (    
                     ma3_last > ma39_last
