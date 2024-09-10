@@ -10189,8 +10189,8 @@ class maddog:
 
 
           
-                # BUY 1 forever young 2 un po' meno PRUDENTE se 150 > 300 
-                
+                # BUY 1 forever young 2 un po' meno PRUDENTE se 150 > 300
+                 
                 elif (  
                     ma100_last > ma150_last
                     
@@ -10215,6 +10215,39 @@ class maddog:
                     # 24 ago 2023 and deviation_ma100_laterale > 0.05 da 0.07 con 200>300
                     # 28 ago 2023 100>150
                     # 31 ott 2023 aggiunto and macd_differenza_2_min_ago > 0.25
+
+
+
+                # BUY 1 legge della minore decrescenza ! RITORNO ESTATE 2024 con ma450_last > ma450_120_min_ago
+
+                elif (      
+                    ma450_last > ma450_120_min_ago
+                    and deviation_ma100_sopra_ma300 > 0.10
+                    and deviation_ma100_laterale > 0.01
+
+                    and ma50_last < ma50_2_min_ago
+                    and deviation_ma39 < -0.25    
+                    
+                    and (ma5_prev < ma450_prev and ma5_last > ma450_last)
+
+                    and ma3_last > ma11_last
+                  
+                    and deviation_ma3_sopra_ma10 > 0.035
+                    and deviation_ma5_sopra_ma28 > 0.01
+                   
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd_differenza_2_min_ago > -1.25
+                ):
+
+                    buy = "BUY 1 legge della minore decrescenza ! - RITORNO ESTATE 2024 con ma450_last > ma450_120_min_ago - r 4356"
+                    action = "buy"
+                    percentage = 80
+                    
+                    
+                    # 10 set 2024 and deviation_ma39 < -0.25 (da un precedente sell) significa che PRENDO IL COLTELLO CON IL PIEDE !
+                    # 10 set 2024 and macd_differenza_2_min_ago > -1.25 significa che il MACD ha rallentato da un crollo - decresce di meno !
+                    # 10 set 2024 LEGGE DELLA MINORE DECRESCENZA !
                     
                 
                   
