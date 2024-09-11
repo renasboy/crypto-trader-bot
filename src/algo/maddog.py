@@ -21090,6 +21090,9 @@ class maddog:
                     action = "buy"
                     percentage = 70
 
+
+
+
                 elif (
                     ma3_last > ma30_last
                     
@@ -21098,7 +21101,8 @@ class maddog:
                     and deviation_ma5_sopra_o_sotto_ma100 > -0.50
                     
                     and ma50_last < ma59_last
-                    
+
+                    and ma250_last > ma300_last
                     and ma300_last > ma450_last
                     and ma300_last > ma300_120_min_ago
 
@@ -21116,9 +21120,11 @@ class maddog:
                     and macd_differenza_2_min_ago > 0.25
                     
                 ):    
-                    buy = "BUY 4B CON 50<59 importato da BUY 3 RCCR con 3-30 e 300> e ma2_diff_2_min_ago > 8 - r 6737 B NUOVA ERA A3 SOFT"
+                    buy = "BUY 4B CON 50<59 MA 250>300 e con 3-30 e 300> e ma2_diff_2_min_ago > 8 - r 6737 B NUOVA ERA A3 SOFT"
                     action = "buy"
                     percentage = 70
+
+
 
                 elif (
                     ma3_last > ma30_last
