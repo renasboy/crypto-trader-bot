@@ -11861,7 +11861,7 @@ class maddog:
                     and ma100_last < ma100_10_min_ago
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.12
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.52
-                    and ma3_last > ma39_last
+                    
                     
                     and ma450_last < ma450_360_min_ago
                     
@@ -11876,22 +11876,22 @@ class maddog:
                     and ma200_last < ma200_60_min_ago
                     
                     and deviation_ma3_sopra_ma10 > 0.01
-                    and deviation_ma3_sopra_ma16 > 0.07
-                    and deviation_ma5_sopra_ma28 > -0.15
+                    and deviation_ma3_sopra_ma16 > -0.01
+                    and deviation_ma5_sopra_ma28 > -0.16
                     
                     and ma2_last >= ma2_2_min_ago
                     and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
                     and macd > -30
-                    and macd_differenza_2_min_ago > 1.30
+                    and macd_differenza_2_min_ago > 1.25
                 ):
-                    buy = "BUY 2 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND dev 4-18 and deviation_ma3_sopra_ma16 > 0.12 - r 4713 NUOVA ERA A2 STRONG"
+                    buy = "BUY 2 che considera distanza 5-300 AND dev 10-200 < -0.24 AND dev_ma3_sopra_ma16 > -0.01 - r 4713 NUOVA ERA A2 STRONG"
                     action = "buy"
                     percentage = 70
                     
                     #  3 nov 2023 tolto macd ! al buy 2
-                    # 3 nov 2023 mi basta che macd > -3
+                    #  3 nov 2023 mi basta che macd > -3
                     #  3 nov 2023 and deviation_ma3_sopra_ma16 > 0.08 da 0.12
-
+                    # 11 set 2024 anticipata ndecchiecella
 
 
               
@@ -45386,23 +45386,25 @@ class maddog:
                 
             # 30 - SELL condizione speciale ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma13 <
             
-            
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
-                
-                
+                and ma450_last > ma450_10_min_ago
+
+                and ma100_last < ma100_30_min_ago
+                and ma13_last <= ma13_2_min_ago
+
                 and deviation_ma100_sopra_ma200 > -0.70
                 and deviation_ma100_sopra_ma300 < 0.50
-              
-                and ma13_last < ma13_2_min_ago
-                and ma100_last < ma100_30_min_ago
 
+                and ma3_last <= ma3_2_min_ago
                 and ma2_last < last_trade_price
-                and ma3_last < ma3_2_min_ago
-                and ma2_last < ma2_2_min_ago
+                and ma2_last <= ma2_2_min_ago
+                
+                and deviation_sell < -0.02
+                
             ):
 
-                sell = "SELL cond. special 30 B - DOLCE ATTESA 270 sec con ma13 < E 100<100 30 min ago e 100 sopra 300 < 0.50 - r 16694 B"
+                sell = "SELL cond. special 30 B - DOLCE ATTESA 270 sec con ma13 < E 100<100 30 min ago e 100 sopra 300 < 0.50 - r 16694 B1"
                 action = "sell"
              
                 # 4 feb 2022 con <-0.26 ha fatto -0.88% (dopo +4.29%)
@@ -45410,7 +45412,34 @@ class maddog:
                 # 17 set -0.57 da -0.47
 
                 #  7 set 2004 ro cano e' tornato ! questa condizione interviene solo quando ma100 < ma100 30 min ago
-                #  8 set 2024 aggiunta ma3 < ma3 2 min agoand ma2_last < ma2_2_min_ago
+                #  8 set 2024 aggiunta ma3 < ma3 2 min ago and ma2_last < ma2_2_min_ago
+
+
+            elif (
+                seconds_since_last_trade > max_hold_time_in_seconds
+                and ma450_last < ma450_10_min_ago
+
+                and ma100_last < ma100_30_min_ago
+                and ma13_last <= ma13_2_min_ago
+
+                and deviation_ma100_sopra_ma200 > -0.70
+                and deviation_ma100_sopra_ma300 < 0.50
+
+                and ma3_last <= ma3_2_min_ago
+                and ma2_last < last_trade_price
+                and ma2_last <= ma2_2_min_ago
+            
+            ):
+
+                sell = "SELL cond. special 30 B - DOLCE ATTESA 270 sec con ma13 < E 100<100 30 min ago e 100 sopra 300 < 0.50 - r 16694 B2"
+                action = "sell"
+             
+                # 4 feb 2022 con <-0.26 ha fatto -0.88% (dopo +4.29%)
+                # 7 feb 2022 con <-0.345 e 270 sec ha fatto -0.38% - aumenta a 0.355 ! - eventualmente ci pensa la condizione CROLLO IMPROVVISO CHE FUNZIONA !
+                # 17 set -0.57 da -0.47
+
+                #  7 set 2004 ro cano e' tornato ! questa condizione interviene solo quando ma100 < ma100 30 min ago
+                #  8 set 2024 aggiunta ma3 < ma3 2 min ago and ma2_last < ma2_2_min_ago
                 
                 
                 
