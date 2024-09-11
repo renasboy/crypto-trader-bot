@@ -2341,24 +2341,29 @@ class maddog:
                     #  8 mar 2024 aggiunta questa condizione per anticipare durante il rialzo
 
 
-                elif (
-                    ma200_last > ma300_last
-                    and ma300_last > ma300_120_min_ago
+                
+                elif (    
+                    ma3_last > ma39_last
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.30
+
+                    and ma200_last > ma300_last
                     and ma200_last > ma200_120_min_ago
+                    and ma300_last > ma300_120_min_ago
+                    
                     
                     and ma100_last < ma100_60_min_ago
                     and ma200_last < ma200_60_min_ago
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.30
                     
-                    and ma5_last > ma100_last
                     
-                    and deviation_ma3_sopra_ma10 > 0.077
-                    and deviation_ma3_sopra_ma16 > 0.10
+                    and deviation_ma3_sopra_ma10 > 0.04
+                    and deviation_ma3_sopra_ma16 > 0.05
                   
                     and ma2_last >= ma2_2_min_ago
                     and macd >= macd_2_min_ago
                 ):     
                   
-                    buy = "BUY 1 70% - ma300 > 120 min e ma200 > 120 min E 200 > 300 MA incomincia il ribasso e 3-10 > 0.077 - r 1088 A1 x2"
+                    buy = "BUY 1 70% - ma300 > 120 min e ma200 > 120 min E 200 > 300 MA incomincia il ribasso e prendo coltello con il piede - r 1088 A1 x2"
                     action = "buy"
                     percentage = 70
 
