@@ -45404,7 +45404,7 @@ class maddog:
                 
             ):
 
-                sell = "SELL cond. special 30 B - DOLCE ATTESA 270 sec con ma13 < E 100<100 30 min ago e 100 sopra 300 < 0.50 - r 16694 B1"
+                sell = "SELL CS - DOLCE ATTESA 270 sec con ma13 < and con 450 > E 100<100 30 min ago e 100 sopra 300 < 0.50 - r 16694 B1"
                 action = "sell"
              
                 # 4 feb 2022 con <-0.26 ha fatto -0.88% (dopo +4.29%)
@@ -45431,7 +45431,7 @@ class maddog:
             
             ):
 
-                sell = "SELL cond. special 30 B - DOLCE ATTESA 270 sec con ma13 < E 100<100 30 min ago e 100 sopra 300 < 0.50 - r 16694 B2"
+                sell = "SELL CS - DOLCE ATTESA 270 sec and ma13 < and con 450 < E 100<100 30 min ago e 100 sopra 300 < 0.50 - r 16694 B2"
                 action = "sell"
              
                 # 4 feb 2022 con <-0.26 ha fatto -0.88% (dopo +4.29%)
