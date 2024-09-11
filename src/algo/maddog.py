@@ -22265,11 +22265,15 @@ class maddog:
               
                 # BUY 4 29 ago 2022 > 180 min di ribasso
                 # 16 mar 2023 aggiunta 3-10 > 0.05
+
+
                 
                 elif (
                     
-                    ma5_last > ma54_last
-                    
+                    ma3_last > ma39_last
+                    and ma300_last > ma300_360_min_ago
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.20
+
                     and ma100_last < ma100_180_min_ago
                     and ma200_last < ma200_180_min_ago
                     and ma300_last < ma300_180_min_ago
@@ -22279,18 +22283,19 @@ class maddog:
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
                     
-                    and deviation_ma5_sopra_ma28 > 0.02
+                    and deviation_ma5_sopra_ma28 > -0.02
                     
                     and ma2_last >= ma2_2_min_ago
                     and macd > macd_2_min_ago
                     
                 ):
-                    buy = "BUY 4 29 ago 2022 > 180 min di ribasso con 5-54 - r 7039 B1"
+                    buy = "BUY 4 29 ago 2022 > 180 min di ribasso con aggiunta prendo il coltello con il piede - r 7039 B1"
                     action = "buy"
                     percentage = 90
                     
                     #  5 ott 2023 a 5-54 da 18-100
                     #  5 ott 2023 and macd > macd_2_min_ago
+                    # 11 set 2024 aggiunto prendo coltello con il piede (ma non troppo in basso poiche' ma300>ma300 360 min ago)
 
                 
                 # BUY 4 29 ago 2022 > 180 min di ribasso
