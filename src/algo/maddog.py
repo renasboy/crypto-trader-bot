@@ -14819,11 +14819,42 @@ class maddog:
 
 
                 # BUY 2 RIVOLUZIONARIO se ma39 > ma50
-                
+
+                elif (
+                    ma3_last > ma39_last
+                    and ma450_last > ma450_120_min_ago
+                    and ma300_last > ma300_60_min_ago
+                    
+                    
+                    and ma200_last > ma250_last
+                    and ma200_last > ma200_120_min_ago
+                    
+                    and deviation > -0.30
+                    
+                    and deviation_ma4_sopra_ma30 > 0.15
+                    and delta_buy3_incrocio_ma3_ma8 >= 0.06
+                    
+                    and ma3_last > ma8_last
+                    and ma3_last >= ma39_last
+                    and ma5_last >= ma15_last
+                    
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                ):    
+                    buy = "BUY 2 con ma450_last > ma450_120_min_ago E con 3-39 e con 300>300 60 min ago  - r 5892 A1x1"
+                    action = "buy"
+                    percentage = 70
+
+                    # 11 set 2024 forse e' d cancellare
+
+
+
                 elif (
                     ma8_last > ma50_last
                     and ma450_last > ma450_120_min_ago
-                    
+                    and ma300_last < ma300_60_min_ago
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.30
                     
                     and ma200_last > ma250_last
                     and ma200_last > ma200_120_min_ago
@@ -14841,9 +14872,12 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
                     and macd >= macd_2_min_ago
                 ):    
-                    buy = "BUY 2 RIVOLUZIONARIO CON ma450_last > ma450_120_min_ago E con 8-50 - r 5892 A1x"
+                    buy = "BUY 2 con ma450_last > ma450_120_min_ago E con 8-50 e e con prendi il coltello con il piede se 300<300 60 min ago - r 5892 A1x2"
                     action = "buy"
                     percentage = 70
+
+                    # 11 set 2024 aggiunta coltello con il piede se ma300<300 60 min ago
+
 
                 
                 elif (
