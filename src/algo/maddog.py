@@ -5391,10 +5391,10 @@ class maddog:
                     
                     ma3_last > ma15_last
                     and ma2_last >= ma10_last
-                    and deviation_ma39 <= -0.30
+                    and deviation_ma39 <= -0.40
                     and ma3_last < ma39_last
                     and ma100_last < ma100_60_min_ago
-                    and ma100_last < ma100_120_min_ago
+                    
                   
                     and deviation_ma54_sopra_o_sotto_ma72 < -0.015
                     
@@ -5406,14 +5406,14 @@ class maddog:
                     and deviation_ma3_sopra_ma18 > -0.04
                     
                     and ma2_last >= ma2_2_min_ago
-                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
                     and ma2_differenza_2_min_ago > 8
-                    and ma2_differenza_ma5 > 11
-                    and macd > -20
+                    and ma2_differenza_ma5 > 8
+                    and macd > -50
                     and macd_differenza_2_min_ago > 1.25
                     
                 ):    
-                    buy = "BUY 1 condizione DNA IPERVENDUTO 3-39 con 3-10 E 300 vicina 450 e 3-16 > 0.01 + > E ma2_diff_2_min_ago > 3 E dev ma2 e MACD > -20 - r 1537 A3X 4A Y x"
+                    buy = "BUY 1 condizione DNA IPERVENDUTO 3-39 con 3-10 E 300 vicina 450 E MACD > -20 - r 1537 A3X 4A Y x"
                     action = "buy"
                     percentage = 90
                     
@@ -5424,7 +5424,7 @@ class maddog:
                     # 12 dic 2023 macd a -10 da -8
                     # 29 dicembre 2023 entra in gioco CONDIZIONE DNA - IPERVENDUTO 3-39 < -0.30
                     # 19 feb 2024 aggiunta 
-
+                    # 11 set 2024 and deviation_ma39 <= -0.40 da -0.30
 
                 elif (    
                     ma3_last > ma20_last
