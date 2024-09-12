@@ -40016,7 +40016,7 @@ class maddog:
                         and ma100_last > ma100_60_min_ago
                         and ma300_last < ma300_120_min_ago
                         
-                        and (ma4_prev > ma30_prev and ma4_last < ma30_last)
+                        and (ma4_prev > ma39_prev and ma4_last < ma39_last)
                         and deviation_sell > 0.25 and deviation_sell < 0.56
                         
                         and ma2_last < ma2_2_min_ago
@@ -40024,7 +40024,7 @@ class maddog:
                         and ma2_last < ma5_last
                         and macd_differenza_2_min_ago < -0.50
                     ):
-                        sell = "SELL 4-5-x (21-60 min) 300< 120 min CON ma50> e incr 4-30 E dev_sell 0.25-0.56 -GIORNO- MARADONA E dev_ma2_sopra_o_sotto_ma2_2_min < -0.02 - r 15110 B"
+                        sell = "SELL 4-5-x (21-60 min) 300< 120 min CON ma50> e incr 4-39 E dev_sell 0.25-0.56 - GIORNO- MARADONA - r 15110 B"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
@@ -40032,7 +40032,7 @@ class maddog:
                         # 12 dic 2023 4-30 da 4-28 
                         # 12 dic 2023 aggiunta and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.02 = -8 pts
                         # 26 dic 2023 aggiunta and macd_differenza_2_min_ago < -0.50
-
+                        # 12 set 2024 4-39 da 4-30
                      
                     ##################################################################### and rapporto_delta_1_delta_2 < 1 tramonto
                     
