@@ -15436,34 +15436,34 @@ class maddog:
                     
                     
                     
-                # BUY 2 RIVOLUZIONARIO se 39>50 E 8<200 
+                # BUY 2 nuovo tentando di prendere il coltello con il piede
                 
                 elif (
-                    deviation_ma4_sopra_ma30 > 0.20
-                    and deviation_bellissima > 0.10
-                    
-                    and ma200_last < ma200_120_min_ago
+                    deviation_ma3_sopra_ma39 < -0.10
+
+                    and ma300_last > ma300_301_min_ago
+
                     and ma8_last < ma200_last
+                    and ma78_last < ma78_120_min_ago
+                    and ma200_last < ma200_120_min_ago
+                    and ma20_last <= ma20_2_min_ago
+                    and ma50_last <= ma50_2_min_ago
+
+                    and ma10_last > ma20_last
+                    and deviation_ma5_sotto_ma200 > -0.64
                     
-                    and deviation > -0.30
-                    
-                    and ma28_last > ma50_last
-                    and delta_buy3_incrocio_ma3_ma8 >= 0.06
                     and ma3_last > ma8_last
-                    and ma3_last >= ma69_last
-                    and ma4_last >= ma4_2_min_ago
                     and ma2_last >= ma2_2_min_ago
-                    and ma5_last >= ma15_last
-                    and ma5_last >= ma25_last
                     and macd >= macd_2_min_ago
+               
                 ):    
-                    buy = "BUY 2 RIVOLUZIONARIO se ma39 > ma50 - r 5945 B"
+                    buy = "BUY 2 nuovo tentando di prendere il coltello con il piede - r 5945 B"
                     action = "buy"
                     percentage = 70
                     
                     # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
                     # > estate se 8 sta sotto 200 4-30 >0.20 and dev bellissima >0.10
-                    
+                    # 12 set 2024 modificata radicalmente questa condizione
                     
                 
                 
@@ -24794,7 +24794,7 @@ class maddog:
                     
                 elif (    
                     ma3_last > ma20_last
-                    
+                    and ma100_last > ma100_30_min_ago
                     and ma100_last > ma100_5_min_ago
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
                     and deviation_ma5_sopra_o_sotto_ma100 > -0.50
@@ -24821,11 +24821,13 @@ class maddog:
                     buy = "BUY 5 laterale IMPORTATA dal BUY 2 con 300 > 450 and 3-28 E macd > -24 and macd_diff_2_min_ago > 0.30 - r 7384 A1"
                     action = "buy"
                     percentage = 80
-                    
+
+                    # 12 set 2024 ho aggiunto and ma100_last > ma100_30_min_ago altrimenti devo CANCELLARE
 
 
                 elif (
                     ma3_last > ma13_last
+                    and ma300_last > ma300_30_min_ago
                     and ma450_last > ma450_360_min_ago
                     and ma78_last > ma150_last
                     
@@ -24853,6 +24855,8 @@ class maddog:
                     #  7 mar 2024 con ma450_last > ma450_360_min_ago and deviation_ma3_sopra_ma100 > -0.01 da 0.01
                     #  7 mar 2024 con ma450_last > ma450_360_min_ago 4-20 da 4-30
                     #  9 set 2024 dopo un grande rialzo la faccio comprare SOLO quando ma3 e' ancora vicina alla ma100
+                    # 12 set 2024 aggiunta and ma300_last > ma300_30_min_ago prima di CANCELLARE
+
 
                 elif (
                     
@@ -38882,11 +38886,31 @@ class maddog:
                         # 11 ago 2023 aggiunto and macd < -6
 
                   
-                  
+
+
+                    elif (    
+                        ma50_last < ma50_2_min_ago
+                        
+                        and deviation_ma100_sopra_ma300 > 0.25
+                        and deviation_ma39 < -0.20
+                        
+                        and ma100_last > ma100_120_min_ago
+                        and ma2_last < ma2_2_min_ago
+                        
+                    ):
+                        sell = "SELL 3 >90 min con ma50 < E dev_ma100_sopra_ma300 > 0.25 con dev_ma39 < -0.20 and 100 > 100 120 min ago - r 14285"
+                        action = "sell"
+                        
+                        # 29 gen 2023 dev_39 -0.239 da -0.235
+                        #  1 feb 2023 dev_39 -0.243 da -0.239
+                        # 13 nov 2023 se 100 sta sopra 300 allora vende solo dev 3-39
+                        # 12 set 2024 aggiunta questa condizione presa da RCCR
+
+
 
                     ############################################################################# HO PORTATO QUI UNA CONDIZIONE SPECIALE ABBASSANDO IL SELL DI UNA NDECCHIECELLA
                     ################################################################################## ex condizioni speciali
-                    
+
                     elif (
                         ma78_last < ma78_120_min_ago
                         and ma300_last > ma300_301_min_ago
@@ -44476,7 +44500,7 @@ class maddog:
                 and macd < 16
                 
             ):
-                sell = "SELL cond spec con ma 50 <= ma 50 2 min ago  con ma300 > 5 ore - SALVAGENTE 4 dev 3-39 < 0.08 and dev_sell < 0.02 e ma5 sotto ma200 > -0.64 - r 16047 B1 Y2"
+                sell = "SELL CS con ma50 <= ma 50 2 min ago E ma300 > 5 ore E dev 3-39 < 0.08 E dev_sell < 0.02 e ma5 sotto ma200 > -0.64 - r 16047 B1 Y2"
                 action = "sell"
                 
                 # 24 dic 2023 se 10>20 dev sell a 0.02 da 0.04
