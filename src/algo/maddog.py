@@ -19560,8 +19560,9 @@ class maddog:
                     and ma2_differenza_2_min_ago > 5
                     and macd > macd_2_min_ago
                     and macd > 5
+                    and macd_differenza_2_min_ago > 1.25
                 ):
-                    buy = "BUY 3 con ma78 TREND CHIARAMENTE RIBASSISTA compra prima ! 29 ago 2022 > 180 min di ribasso con 10-78 E ma2_differenza_2_min_ago > 5 - r 6572 A2 Y3"
+                    buy = "BUY 3 con ma78 TREND CHIARAMENTE RIBASSISTA 29 ago 2022 > 180 min di ribasso con macd dif > 1.25 - r 6572 A2 Y3"
                     action = "buy"
                     percentage = 80
                     
@@ -19573,7 +19574,7 @@ class maddog:
                     # 13 nov 2023 non ha preso macd > !!! allora l' ho messo anche sopra
                     # 13 nov 2023 5-39 da 5-54 posso farlo perche' il sell e' molto piu' reattivo ! RICORDA dev 39 < 0.13 !
                     # 30 nov 2023 ma78 e' proprio discendente. continuava a comprare inutilmente. IL TITOLO SEMBRA AVER INTRAPRESO UN VERO E PRORIO TREND RIBASSISTA !
-
+                    # 12 set 2024 aggiunta and macd_differenza_2_min_ago > 1.25
 
 
 
