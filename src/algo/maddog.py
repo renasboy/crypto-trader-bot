@@ -22887,7 +22887,7 @@ class maddog:
                     action = "buy"
                     percentage = 70
 
-
+                
                 elif (    
                     ma3_last > ma13_last
                     and ma10_last > ma30_last
@@ -22913,7 +22913,7 @@ class maddog:
                     percentage = 70
 
 
-
+                
                 elif (    
                     ma3_last > ma13_last
                     and ma39_last > ma39_5_min_ago
@@ -24768,38 +24768,38 @@ class maddog:
                     
                 # ATTENZIONE ! AL BUY 5 TRANNE CHE IN UNA EVENTUALE CORREZIONE HO MESSO 78>150 STIAMO AL BUY 5 PERDIO !
                 # SENZA QUESTA 78>150 HO AVUTO MOLTI PROBLEMI !
-                    
+
+
                 elif (    
-                    ma3_last > ma20_last
-                    and ma100_last > ma100_30_min_ago
-                    and ma100_last > ma100_5_min_ago
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    ma3_last > ma13_last
+                    and ma300_last < ma300_120_min_ago
+                    and ma3_last > ma28_last
+                  
+                    and ma100_last < ma100_10_min_ago
+                    
+
                     and deviation_ma5_sopra_o_sotto_ma100 > -0.50
+                    and deviation_ma5_sopra_o_sotto_ma100 > 0.20
                     
-                    and ma300_last > ma300_120_min_ago
-                    and ma450_last > ma450_480_min_ago
-                    
-                    and deviation_ma100_sopra_ma300 < 0.30
-                    and deviation_ma100_sopra_ma300 > -0.30
+                    and ma450_last >= ma450_120_min_ago
+                    and ma50_last > ma450_last
                     
                     and deviation_ma3_sopra_ma10 > 0.01
-                    and deviation_ma3_sopra_ma16 > 0.01
+                    and deviation_ma3_sopra_ma16 > 0.02
                     
-                    and ma2_last > ma5_last
-                    
-                    and ma2_last >= ma2_2_min_ago
-                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.017
-                    and ma2_differenza_2_min_ago > 8
-                    
-                    and macd > -24.0
-                    and macd_differenza_2_min_ago > 0.30
-                ):    
-                
-                    buy = "BUY 5 laterale IMPORTATA dal BUY 2 con 300 > 450 and 3-28 E macd > -24 and macd_diff_2_min_ago > 0.30 - r 7384 A1"
+                    and ma2_last > ma2_2_min_ago
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
+                    and ma2_differenza_ma5 > 5
+                    and macd_differenza_2_min_ago > 0.10
+                ):
+                    buy = "BUY 5 con 3-20 and 450_last >= 450_120_min_ago and 5-28 > 0.02 CON 50 > 450 and ma2_differenza_ma5 > 8 - r 7384 A1"
                     action = "buy"
-                    percentage = 80
+                    percentage = 70
 
-                    # 12 set 2024 ho aggiunto and ma100_last > ma100_30_min_ago altrimenti devo CANCELLARE
+                    # 12 set 2024 aggiunta questa condizione che compra quando ma300 curva al ribasso GIA' DA UN PO'. NO se comincia a curvare !
+                    
+
+                
 
 
                 elif (
