@@ -22856,37 +22856,13 @@ class maddog:
             #################################################### STIAMO AL BUY 5 PERDIO !
             
             
-            #  piu' alto il BUY - "effetti laterali"
+            
 
-            else:
+            # 12 set 2024 CANCELLATA r 7144 A1 X NUOVA ERA A1 SOFT
+
+            
+            else: 
                 if (    
-                    ma3_last > ma13_last
-                    
-                  
-                    and ma100_last < ma100_10_min_ago
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
-                    and deviation_ma5_sopra_o_sotto_ma100 > -0.40
-                    
-                    
-                    and ma450_last >= ma450_120_min_ago
-                    and ma50_last > ma450_last
-                    
-                    and deviation_ma3_sopra_ma10 > 0.01
-                    
-                    
-                    and ma2_last > ma2_2_min_ago
-                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
-                    and ma2_differenza_ma5 > 5
-                    and macd_differenza_2_min_ago > 0.10
-                ):
-                    buy = "BUY 5 con 450_last >= 450_120_min_ago e 50 > 450 and ma2_differenza_ma5 > 8 - r 7144 A1 X NUOVA ERA A1 SOFT"
-                    action = "buy"
-                    percentage = 70
-
-                    #  8 set 2024 anticipata perche' CONSOLIDATO trend in crescita
-
-
-                elif (    
                     ma3_last > ma13_last
                     and ma10_last > ma30_last
                     
@@ -22907,9 +22883,10 @@ class maddog:
                     and ma2_differenza_ma5 > 5
                     and macd_differenza_2_min_ago > 0.10
                 ):
-                    buy = "BUY 5 con 3-20 and 450_last >= 450_120_min_ago and 5-28 > 0.02 CON 50 > 450 and ma2_differenza_ma5 > 8 - r 7144 A1 X NUOVA ERA A2 SOFT 1"
+                    buy = "BUY 5 con 3-20 and 450>= 450_120_min_ago e 5-28 > 0.02 e 50 > 450 and ma2_dif_ma5 > 8 - r 7144 A1 X NUOVA ERA A2 SOFT 1"
                     action = "buy"
                     percentage = 70
+
 
                 elif (    
                     ma3_last > ma13_last
