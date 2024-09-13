@@ -16584,8 +16584,8 @@ class maddog:
 
                 
                 elif (     
-                        ma3_last > ma39_last
-                        
+                        ma3_last > ma28_last
+                        and deviation_ma5_sopra_o_sotto_ma100 < -0.15
                         and ma200_last > ma300_last
                         and ma300_last > ma300_120_min_ago
                   
@@ -16594,11 +16594,15 @@ class maddog:
                         
                         and ma2_last > ma2_2_min_ago
                         and macd > macd_2_min_ago
-                        and macd > -3
+                        and macd > -20
                     ):
                         buy = "BUY 2 novembre 2023 con ma450 > 6 ore E 300 > 120 min ago con ma50 < and ma3_last > ma39_last - r 5999"
                         action = "buy"
-                      
+                        percentage = 70
+
+                        # anticipato ndecchiecella
+                        # aggiunto prendi il coltello con il piede
+                        # la cosa curiosa e' che mancava percentage e faceva acquisti di 3,94 euro
 
               
                 # BUY 2 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND dev 5-30 CON AGGIUNTA PENSIERO LATERALE
