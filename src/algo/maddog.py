@@ -15407,8 +15407,8 @@ class maddog:
                 # BUY 2 nuovo tentando di prendere il coltello con il piede
                 
                 elif (
-                    deviation_ma3_sopra_ma39 < -0.10
-
+                    
+                    deviation_ma39 < -0.10
                     and ma300_last > ma300_301_min_ago
 
                     and ma8_last < ma200_last
