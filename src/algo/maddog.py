@@ -16585,7 +16585,7 @@ class maddog:
                 
                 elif (     
                         ma3_last > ma28_last
-                        and deviation_ma5_sopra_o_sotto_ma100 < -0.15
+                        and deviation_ma5_sopra_o_sotto_ma100 < -0.09
                         and ma200_last > ma300_last
                         and ma300_last > ma300_120_min_ago
                   
