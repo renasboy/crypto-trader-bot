@@ -44604,9 +44604,36 @@ class maddog:
                 # 15 set 2023 quando GIORNO a -0.11 da -0.07
                 # oggi 18 dicembre 2023 ascolta mario ! SE ma20_last > ma20_2_min_ago DEV SELL a -0.105
 
-            
+
+
             elif (
                 ma78_last < ma78_120_min_ago
+                and ma100_last > ma300_last
+                and ma20_last <= ma20_2_min_ago
+                and ma300_last < ma300_301_min_ago
+                and delta_150_100 <= delta_150_100_60_min
+                
+                and deviation_ma39 < 0.10
+                and deviation_sell < -0.045
+                
+                and ma50_last > ma50_2_min_ago
+                and deviation_ma100_sopra_ma300 < 0.40
+                
+                and deviation_ma5_sotto_ma200 > -0.90
+                
+                and ma2_last <= ma2_2_min_ago 
+                and macd < macd_2_min_ago
+            ):
+                sell = "SELL CS GIORNO con ma300< 5 ore MA 50> - dev 3-39 < 0.10 and dev_sell < -0.01 E ma5 sotto ma200 > -0.90 - r 16047 B2 Y1 A"
+                action = "sell"
+                
+                # 10 gen 2024 ha fatto -0.40 ho notato che ma50 era > quindi ho aggiunto questa !
+                # 15 set 2024 and deviation_sell < -0.045 da < -0.03 se ma100_last > ma300_last
+
+            elif (
+                ma78_last < ma78_120_min_ago
+                and ma100_last < ma300_last
+
                 and ma20_last <= ma20_2_min_ago
                 and ma300_last < ma300_301_min_ago
                 and delta_150_100 <= delta_150_100_60_min
@@ -44622,7 +44649,7 @@ class maddog:
                 and ma2_last <= ma2_2_min_ago 
                 and macd < macd_2_min_ago
             ):
-                sell = "SELL cond spec 6 GIORNO con ma300 < 5 ore e 50> - dev 3-39 < 0.10 and dev_sell < -0.01 - con ma50 < e con ma5 sotto ma200 > -0.90 - r 16047 B2 y1"
+                sell = "SELL CS GIORNO con ma300< 5 ore MA 50> - dev 3-39 < 0.10 and dev_sell < -0.01 E ma5 sotto ma200 > -0.90 - r 16047 B2 Y1 B"
                 action = "sell"
                 
                 # 10 gen 2024 ha fatto -0.40 ho notato che ma50 era > quindi ho aggiunto questa !
@@ -44631,6 +44658,7 @@ class maddog:
            
             elif (
                 ma78_last < ma78_120_min_ago
+
                 and ma30_last > ma50_last
                 and ma20_last <= ma20_2_min_ago
                 and ma300_last < ma300_301_min_ago
