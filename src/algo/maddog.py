@@ -21833,12 +21833,14 @@ class maddog:
                     buy = "BUY 4B RIVOLUZIONARIO con ma78 > - r 6859 B1x NUOVA ERA A2 SOFT"
                     action = "buy"
                     percentage = 70
+
                   
 
                 elif (
                     ma5_last >= ma5_2_min_ago
                     and ma4_last > ma39_last
-                    
+                    and deviation_ma39 > 0.10
+
                     and ma100_last > ma100_10_min_ago
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
                     and deviation_ma5_sopra_o_sotto_ma100 > -0.50
@@ -21859,6 +21861,9 @@ class maddog:
                     buy = "BUY 4B RIVOLUZIONARIO con ma78 > - r 6859 B1x NUOVA ERA A3 SOFT"
                     action = "buy"
                     percentage = 70
+
+                    # 15 set 2024 aggiunto and deviation_ma39 > 0.10 MA forse la condizione e' da cancellare
+
 
                 elif (
                     ma5_last >= ma5_2_min_ago
