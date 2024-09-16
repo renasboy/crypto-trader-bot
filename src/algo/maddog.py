@@ -542,11 +542,16 @@ class maddog:
 
 
 
-        
         # formula DEVIATION_ma50_sopra_o_sotto_ma100 !
         
         deviation_ma50_sopra_o_sotto_ma100 = (ma59_last / ma100_last - 1) * 100 if ma100_last else 0
         self.algo_helper.info("deviation_ma50_sopra_o_sotto_ma100: {}".format(deviation_ma50_sopra_o_sotto_ma100))
+
+
+        # formula DEVIATION_ma50_sopra_o_sotto_ma300 !
+        
+        deviation_ma50_sopra_o_sotto_ma300 = (ma59_last / ma300_last - 1) * 100 if ma300_last else 0
+        self.algo_helper.info("deviation_ma50_sopra_o_sotto_ma300: {}".format(deviation_ma50_sopra_o_sotto_ma300))
 
 
       
@@ -12754,12 +12759,15 @@ class maddog:
                         
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
+                    and deviation_ma50_sopra_o_sotto_ma300 < -0.30
+
                     and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2 ORIGINALE CHE CI RIPROVA IMPORTATO DA SELL 1  - NOTTE - r 4887"
                     action = "buy"
                     percentage = 80
-                    
+
+                    # 16 set 2024 aggiunta and deviation_ma50_sopra_o_sotto_ma300 < -0.30
 
                         
                 # BUY 2 DURANTE UN RIBASSO AUDI CHE NON E' UN CROLLO ! E CHE CI RIPROVA (compare stammi vicino!)
