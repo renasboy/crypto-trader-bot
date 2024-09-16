@@ -5367,8 +5367,8 @@ class maddog:
                     
                     ma3_last > ma15_last
                     and ma2_last >= ma10_last
-                    and deviation_ma39 <= -0.40
-                    and ma3_last < ma39_last
+                    and deviation_ma39 <= -0.45
+                    
                     and ma100_last < ma100_60_min_ago
                     
                   
@@ -5378,18 +5378,18 @@ class maddog:
                     and deviation_ma300_sopra_ma450 > -0.60
                     
                     and deviation_ma3_sopra_ma10 > 0.015
-                    and deviation_ma3_sopra_ma16 > 0.02
+                    and deviation_ma3_sopra_ma16 > -0.02
                     and deviation_ma3_sopra_ma18 > -0.04
                     
                     and ma2_last >= ma2_2_min_ago
-                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
-                    and ma2_differenza_2_min_ago > 8
-                    and ma2_differenza_ma5 > 8
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.017
+                    and ma2_differenza_2_min_ago > 7
+                    
                     and macd > -50
-                    and macd_differenza_2_min_ago > 1.25
+                    and macd_differenza_2_min_ago > -1.25
                     
                 ):    
-                    buy = "BUY 1 condizione DNA IPERVENDUTO 3-39 con 3-10 E 300 vicina 450 E MACD > -20 - r 1537 A3X 4A Y x"
+                    buy = "BUY 1 condizione DNA IPERVENDUTO con 3-15 E MACD > -50 - r 1537 A3X 4A Y x"
                     action = "buy"
                     percentage = 90
                     
@@ -5401,6 +5401,8 @@ class maddog:
                     # 29 dicembre 2023 entra in gioco CONDIZIONE DNA - IPERVENDUTO 3-39 < -0.30
                     # 19 feb 2024 aggiunta 
                     # 11 set 2024 and deviation_ma39 <= -0.40 da -0.30
+                    # 16 set 2024 anticipata ndecchiecella. mantienila ! mantieni DNA !
+
 
                 elif (    
                     ma3_last > ma20_last
@@ -19522,11 +19524,11 @@ class maddog:
                 elif (
                     deviation_ma78_sopra_o_sotto_ma78_30_min_ago < -0.10
                     
-                    and ma3_last > ma39_last
+                    and ma3_last > ma28_last
                     
                     and ma50_differenza_ma59 < -5
-                    and macd > macd_2_min_ago
-                    and deviation_ma5_sotto_ma300 < -0.42
+                    
+                    and deviation_ma5_sotto_ma300 < -0.52
                     
                     and ma100_last < ma100_180_min_ago
                     and ma200_last < ma200_180_min_ago
@@ -19541,8 +19543,8 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
                     and ma2_differenza_2_min_ago > 5
                     and macd > macd_2_min_ago
-                    and macd > 5
-                    and macd_differenza_2_min_ago > 1.25
+                    
+                    and macd_differenza_2_min_ago > -1.25
                 ):
                     buy = "BUY 3 con ma78 TREND CHIARAMENTE RIBASSISTA 29 ago 2022 > 180 min di ribasso con macd dif > 1.25 - r 6572 A2 Y3"
                     action = "buy"
@@ -19557,7 +19559,7 @@ class maddog:
                     # 13 nov 2023 5-39 da 5-54 posso farlo perche' il sell e' molto piu' reattivo ! RICORDA dev 39 < 0.13 !
                     # 30 nov 2023 ma78 e' proprio discendente. continuava a comprare inutilmente. IL TITOLO SEMBRA AVER INTRAPRESO UN VERO E PRORIO TREND RIBASSISTA !
                     # 12 set 2024 aggiunta and macd_differenza_2_min_ago > 1.25
-
+                    # 16 set 2024 forse da cancellare
 
 
                   
