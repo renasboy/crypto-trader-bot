@@ -13964,14 +13964,14 @@ class maddog:
                     
                     
                     
-                # BUY 2 che ci riprova quando se ne va LATERALMENTE dopo il crollo
+                # BUY 2 che ci riprova quando se ne va LATERALMENTE dopo il crollo. ma non deve comprare quando ma450 scende da 3 ore !
                 
                 elif (
-                    ma5_last > ma39_last
-                    
+                    ma3_last > ma39_last
+                    and ma450_last < ma450_180_min_ago
                     and ma10_last > ma20_last
                     and deviation_ma3_sopra_ma10 > 0.08
-                    and deviation_ma5_sopra_ma28 > -0.02
+                    and deviation_ma5_sopra_ma28 > -0.03
                     
                     and ma200_last < ma200_120_min_ago
                     and ma300_last < ma300_120_min_ago
@@ -14002,6 +14002,7 @@ class maddog:
                     
                     #  8 gen 2024 10>20 al posto di 20> 20 5 min ago 
                     #  8 gen 2024 macd_differenza_2_min_ago > 1.00
+                    # 16 set 2024 esta condizione non deve comprare quando ma450 scende da 3 ore !
                 
                 # BUY 2 che ci riprova quando se ne va lateralmente dopo il crollo
                 
@@ -19400,7 +19401,7 @@ class maddog:
                     and macd_differenza_2_min_ago > 1.00
                     
                 ):
-                    buy = "BUY 3 29 ago 2022 > 180 min di ribasso CON ma10<ma20 con 3-28 and ma2_differenza_2_min_ago > 12 and macd_differenza_2_min_ago > 1.00 - r 6572 A1 Y2"
+                    buy = "BUY 3 29 ago 2022 > 180 min di ribasso CON ma10<ma20 con 3-28 and ma2_dif_2_min_ago > 12 and macd_dif_2_min_ago > 1.00 - r 6572 A1 Y2"
                     action = "buy"
                     percentage = 90
                     
@@ -19525,7 +19526,7 @@ class maddog:
               
                 elif (
                     deviation_ma78_sopra_o_sotto_ma78_30_min_ago < -0.10
-                    
+                    and deviation_ma39 < -0.30
                     and ma3_last > ma28_last
                     
                     and ma50_differenza_ma59 < -5
@@ -19561,9 +19562,9 @@ class maddog:
                     # 13 nov 2023 5-39 da 5-54 posso farlo perche' il sell e' molto piu' reattivo ! RICORDA dev 39 < 0.13 !
                     # 30 nov 2023 ma78 e' proprio discendente. continuava a comprare inutilmente. IL TITOLO SEMBRA AVER INTRAPRESO UN VERO E PRORIO TREND RIBASSISTA !
                     # 12 set 2024 aggiunta and macd_differenza_2_min_ago > 1.25
+                    
+                    # 16 set 2024 aggiunto and deviation_ma39 < -0.30
                     # 16 set 2024 forse da cancellare
-
-
                   
                 
                 elif (
