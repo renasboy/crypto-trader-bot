@@ -19379,10 +19379,10 @@ class maddog:
               
                 elif (
                     
-                    ma3_last > ma28_last
+                    ma3_last > ma22_last
                     and ma39_last < ma100_last
                     and ma10_last < ma20_last
-                    and deviation_ma5_sotto_ma300 > -0.57
+                    and deviation_ma5_sotto_ma300 > -0.60
                     
                     and ma100_last < ma100_180_min_ago
                     and ma200_last < ma200_180_min_ago
@@ -19398,14 +19398,14 @@ class maddog:
                     
                     and ma2_last >= ma2_2_min_ago
                     and ma2_differenza_2_min_ago > 12
-                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
-                    and macd > -11
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
+                    and macd > -15
                     and macd_differenza_2_min_ago > 1.00
                     
                 ):
-                    buy = "BUY 3 29 ago 2022 > 180 min di ribasso CON ma10<ma20 con 3-28 and ma2_dif_2_min_ago > 12 and macd_dif_2_min_ago > 1.00 - r 6572 A1 Y2"
+                    buy = "BUY 3 29 ago 2022 > 180 min di ribasso CON ma10<ma20 e 3-22 e ma2_dif_2_min_ago > 12 e macd_dif_2_min_ago > 1.00 - r 6572 A1 Y2"
                     action = "buy"
-                    percentage = 90
+                    percentage = 80
                     
                     # 13 feb 2023 3-10 > 0.02
                     #  1 ago 2023 5-200 invece di 10-100
@@ -19426,7 +19426,7 @@ class maddog:
                     # 26 dic 2023 aggiunto and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
                     # 26 dic 2023 and ma2_differenza_2_min_ago > 12 da 7 se BUY 3 con 10<20 e SOPRATTUTTO ma300_last < ma300_180_min_ago
                     # 13 gen 2024 aggiunto 2>5
-
+                    # 16 set 2024 3-22 da 3-28
                 
                 elif (
                     
@@ -43671,7 +43671,7 @@ class maddog:
                 and ma3_last < ma28_last
                 
                 and deviation_ma39 < 0.13
-                and deviation_sell < 0.02
+                and deviation_sell < 0.01
                 
                 and deviation_ma5_sotto_ma200 > -0.70
                 and deviation_ma100_sopra_ma300 < 0.40
@@ -43683,7 +43683,7 @@ class maddog:
                 and macd < 1
                 and macd_differenza_2_min_ago < -1.00
             ):
-                sell = "SELL nuova cond spec - se 100> vende con 3-28 e dev 3-39 < 0.13 and dev_sell < 0.02 e ma50 > con MACD IN TERRITORIO NEG and DIFF MACD < -1 - r 16047 A2 X2 Y"
+                sell = "SELL CS se 100> vende con 3-28 e dev 3-39 < 0.13 and dev_sell < 0.01 e ma50 > con MACD IN TERRITORIO NEG and DIFF MACD < -1 - r 16047 A2 X2 Y"
                 action = "sell"
                 
                 # 29 nov 2023 vende con 3-28 se ma 100 > 100 60 min
@@ -43693,7 +43693,7 @@ class maddog:
                 # 29 dic 2023 tolto macd < macd 2 min ago che faceva arrivare in ritardo la vendita
                 # 29 dic 2023 ATTENZIONE ! macd diff < -1 significa CHE HA PIU' FORZA mentre scende ! scende piu' con vigore !
                 # 30 dic 2023 situazione MACD in territorio negativo
-
+                # 16 set 2024 and dev_sell < 0.01 da < 0.02
 
 
             elif (
