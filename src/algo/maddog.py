@@ -5949,17 +5949,17 @@ class maddog:
                 
                 elif (     
                     
-                    ma3_last > ma20_last
+                    ma3_last > ma18_last
                     and ma10_last > ma20_last
                     and deviation_ma5_sotto_ma450 < -0.75
                     
-                    and ma50_differenza_ma59 >= -14
+                    and ma50_differenza_ma59 >= -16
                     and ma100_last < ma100_60_min_ago
                     
                     and deviation_ma54_sopra_o_sotto_ma72 < -0.015
                     
-                    and deviation_ma39_sotto_ma200 < -0.01
-                    and deviation_ma300_sopra_ma450 > -0.75
+                    and deviation_ma39_sotto_ma200 < -0.02
+                    and deviation_ma300_sopra_ma450 > -0.85
                     
                     and deviation_ma3_sopra_ma10 > 0.025
                     and deviation_ma3_sopra_ma16 > -0.04
@@ -5970,9 +5970,9 @@ class maddog:
                     and ma2_last > ma5_last
                     and ma2_last >= ma2_2_min_ago
                     
-                    and macd_differenza_2_min_ago > 1.50
-                    and ma2_differenza_2_min_ago >= 12
-                    and ma2_differenza_ma5 > 8
+                    and macd_differenza_2_min_ago > -1.50
+                    and ma2_differenza_2_min_ago >= 8
+                    and ma2_differenza_ma5 > 7
                 ):    
                     buy = "BUY 1 compare forever - con 10>20 e dev_ma5_sotto_ma450 < -0.75 e 3-18 E CON 300 vicina alla 450 and 3-20 + diff macd > 1.50 AND 2>5 ! - r 1537 A3 Y1 x2"
                     action = "buy"
@@ -5980,7 +5980,9 @@ class maddog:
                     
                     # questa interviene quando si e' gia' manifestato un certo ribasso (and deviation_ma5_sotto_ma450 < -0.75)
                     # se siamo in presenza di un ribasso piu' marcato HO TOLTO 18 10 min e ho messo 10>20 piu' veloce (che mi evita molti buy inutili sempre durante il ribasso)
-                    
+                    # 16 set 2024 anticipato ndecchiecella
+
+
                 elif (     
                     
                     ma3_last > ma20_last
@@ -42868,26 +42870,26 @@ class maddog:
             
             elif (
                 ma78_last < ma78_120_min_ago
+                and ma300_last < ma300_301_min_ago
+                and deviation_ma100_sopra_ma300 < 0.40
+                and deviation_ma5_sotto_ma200 > -0.70
                 and ma40_last <= ma50_last
                 and ma50_last > ma50_2_min_ago
-                and ma2_differenza_2_min_ago < -15
-                and ma300_last < ma300_301_min_ago
+                
                 and delta_150_100 <= delta_150_100_60_min
                 
                 and deviation_ma39 < 0.13
-                and deviation_sell < 0.03
-                
-                and deviation_ma100_sopra_ma300 < 0.40
-                
-                and deviation_ma5_sotto_ma200 > -0.50
-                
-                and ma2_last < ma2_2_min_ago 
+                and deviation_sell < 0.01
+            
+                and ma2_last < ma2_2_min_ago
+                and ma2_differenza_2_min_ago < -15
                 and macd_differenza_2_min_ago < -0.35
                 
             ):
-                sell = "SELL cond spec 6 GIORNO con ma300 < 5 ore con ma50 > e dev 3-39 < 0.13 e dev_sell < 0.03 e ma78 < and macd_diff_2_min_ago < -0.35 - r 16045 B1y"
+                sell = "SELL CS GIORNO con ma300 <5 ore con ma50 > e dev_sell < 0.01 e dev 3-39 < 0.13 e ma78 < - r 16045 B1Y"
                 action = "sell"
-              
+
+                # 16 set 2024 and deviation_sell < 0.01 da 0.03
 
 
             elif (
