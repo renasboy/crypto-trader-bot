@@ -3312,7 +3312,8 @@ class maddog:
 
                 elif (    
                     ma3_last > ma13_last
-                    
+                    and deviation_ma100_sopra_ma450 > -0.23
+
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
                     and deviation_ma5_sopra_o_sotto_ma100 > -0.60
                     
@@ -3341,6 +3342,9 @@ class maddog:
                     # 26 feb 2024 anticipato ndecchiecella se 100> 100 5 min ago e consolidato laterale
                     #  9 set 2024 anticipato ancora ndecchiecella
                     # 16 set 2024 anticipato ancora ndecchiecella
+                    # 16 set 2016 aggiunto and deviation_ma100_sopra_ma450 > -0.23 
+                    # 16 set 2024 (perche' se il TREND E' LATERALE allora la ma100 non deve stare troppo sotto alla ma450)
+                    # 16 set 2024 pero' prima io avevo anticipato. vediamo che succede.
 
                 elif (    
                     ma3_last > ma20_last
