@@ -3313,36 +3313,34 @@ class maddog:
                 elif (    
                     ma3_last > ma13_last
                     
-                    
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
-                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.60
                     
                     and ma300_last < ma300_180_min_ago
                     
-                    and deviation_ma300_sopra_ma450 < 0.20
-                    and deviation_ma300_sopra_ma450 > -0.20
+                    and deviation_ma300_sopra_ma450 < 0.25
+                    and deviation_ma300_sopra_ma450 > -0.25
                     
                     and deviation_ma100_sopra_ma300 < 0.30
-                    and deviation_ma100_sopra_ma300 > -0.30
+                    and deviation_ma100_sopra_ma300 > -0.40
                     
                     and deviation_ma3_sopra_ma10 > -0.01
                     and deviation_ma3_sopra_ma16 > -0.01
                     
                     and ma2_last >= ma2_2_min_ago
-                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
-                    
+                   
                     and macd >= macd_2_min_ago
-                    and macd > -30
+                    and macd > -40
                     and macd_differenza_2_min_ago > 0.30
-                    
-                    and ma2_differenza_ma5 > 10
+                   
                 ):
-                    buy = "BUY 1 CONSOLIDATO TREND LATERALE con ma300_last < 3 ore e 3-10 > -0.01 e macd > -30 and ma2_diff_2_min_ago > 7 - r 1205 B NUOVA ERA A3 SOFT"
+                    buy = "BUY 1 TREND LATERALE con ma300_last < 3 ore e 3-10 > -0.01 e macd > -40 - r 1205 B NUOVA ERA A3 SOFT"
                     action = "buy"
                     percentage = 50
                     
                     # 26 feb 2024 anticipato ndecchiecella se 100> 100 5 min ago e consolidato laterale
                     #  9 set 2024 anticipato ancora ndecchiecella
+                    # 16 set 2024 anticipato ancora ndecchiecella
 
                 elif (    
                     ma3_last > ma20_last
