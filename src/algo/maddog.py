@@ -14813,20 +14813,20 @@ class maddog:
                 
                 elif (    
                     ma450_last > ma450_120_min_ago
-                    and ma100_last > ma100_10_min_ago
-                    and (ma5_prev < ma90_prev and ma5_last > ma90_last)
+                    and ma100_last >= ma100_10_min_ago
+                    and (ma3_prev < ma90_prev and ma3_last > ma90_last)
                     and ma100_last > ma300_last
                     
                     and ma2_last >= ma2_2_min_ago
                     and macd >= macd_2_min_ago
                 ):    
-                    buy = "BUY 2 con ma450_last > ma450_120_min_ago E incrocio 5-90 - r 5870a"
+                    buy = "BUY 2 con ma450_last > ma450_120_min_ago E incrocio 3-90 - r 5870 A"
                     action = "buy"
                     percentage = 70
                     
                     # 13 feb 2023 aggiunta questa
                     # 22 feb 2024 aggiunta and ma100_last > ma100_10_min_ago
-
+                    # 17 set 2024 3-90 invece di 5-90
                 
                 elif (    
                     ma450_last > ma450_120_min_ago
