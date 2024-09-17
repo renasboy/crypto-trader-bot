@@ -2886,6 +2886,48 @@ class maddog:
                     action = "buy"
                     percentage = 70
 
+
+                elif (    
+                    ma3_last > ma13_last
+                    
+                    and ma3_last > ma20_last
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.13
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.60
+                    
+                    and ma100_last > ma100_120_min_ago
+                    and ma300_last > ma300_180_min_ago
+                    and ma450_last > ma450_180_min_ago
+
+                    and deviation_ma300_sopra_ma450 < 0.19
+                    and deviation_ma300_sopra_ma450 > -0.19
+                    
+                    and deviation_ma100_sopra_ma300 < 0.30
+                    and deviation_ma100_sopra_ma300 > -0.30
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > -0.02
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.017
+                    
+                    and macd >= macd_2_min_ago
+                    and macd > -30
+
+                    and macd_differenza_2_min_ago > -2
+                    
+                    and ma2_differenza_ma5 > 5
+                ):  
+                    
+                    buy = "BUY 1 TL con ma300_last > 3 ore e 3-10 > 0.01 e macd_dif_2_min_ago > -2 con 450 < 3h - r 1205 AX NUOVA ERA A2 SOFT 2x"
+                    action = "buy"
+                    percentage = 70
+
+                    #  9 set 2024 tolta diff macd in questa situazione (and deviation_ma5_sopra_o_sotto_ma100 < -0.60)
+                    #  9 set 2024 aggiunta and macd_differenza_2_min_ago > -2 (cioe' il MACD SMETTE DI DECRESCERE BRUSCAMENTE)
+                    # 17 set 2024 con 450 > 3h (anticipato ndecchiecella)
+
+
                 elif (    
                     ma3_last > ma13_last
                     
@@ -2896,7 +2938,8 @@ class maddog:
                     
                     and ma100_last > ma100_120_min_ago
                     and ma300_last > ma300_180_min_ago
-                    
+                    and ma450_last < ma450_180_min_ago
+
                     and deviation_ma300_sopra_ma450 < 0.18
                     and deviation_ma300_sopra_ma450 > -0.18
                     
@@ -2917,12 +2960,13 @@ class maddog:
                     and ma2_differenza_ma5 > 8
                 ):  
                     
-                    buy = "BUY 1 TREND LATERALE con ma300_last > 3 ore e 3-10 > 0.01 e macd > -20 e macd_differenza_2_min_ago > -2 - r 1205 AX NUOVA ERA A2 SOFT 2"
+                    buy = "BUY 1 TREND LATERALE con ma300_last > 3 ore e 3-10 > 0.01 e macd > -20 con 450 < 3h - r 1205 AX NUOVA ERA A2 SOFT 2y"
                     action = "buy"
                     percentage = 70
 
                     #  9 set 2024 tolta diff macd in questa situazione (and deviation_ma5_sopra_o_sotto_ma100 < -0.60)
                     #  9 set 2024 aggiunta and macd_differenza_2_min_ago > -2 (cioe' il MACD SMETTE DI DECRESCERE BRUSCAMENTE)
+                    # 17 set 2024 450 < 3h
                   
                 elif (    
                     ma3_last > ma13_last
