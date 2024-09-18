@@ -15710,7 +15710,51 @@ class maddog:
                     
                     # aggiunta di 5-28 < 0.12
                     
+                elif (
+                    deviation_ma78_sopra_o_sotto_ma78_30_min_ago < -0.10
+                    and ma300_last < ma300_301_min_ago
+                    and deviation_ma5_sotto_ma200 < -0.40
+                    and delta_1 > delta_2
+                    and ma3_last > ma20_last
+
+                    and ma50_differenza_ma59 < -5
                     
+                    and deviation_ma5_sotto_ma300 < -0.42
+                    
+                    and ma100_last < ma100_180_min_ago
+                    and ma200_last < ma200_180_min_ago
+                    and ma300_last < ma300_180_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+
+                    and ma2_last >= ma5_last
+                    and deviation_ma3_sopra_ma10 > 0.02
+                    and deviation_ma5_sopra_ma28 > -0.02
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and ma2_differenza_2_min_ago > 2
+                    
+                    and macd_differenza_2_min_ago > -1.50
+ 
+                ):
+                    buy = "BUY 2 con ma78 TREND RIBASSISTA 18 set 2024 - prendi il coltello con il piede + vendita bocelli - r 5983"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # 13 feb 2023 3-10 > 0.02
+                    #  1 ago 2023 5-200 invece di 10-100
+                    # 24 ago 2023 and macd > macd_2_min_ago
+                    # 24 ago 2023 and macd > 5
+                    # 16 set 2023 5-78 invece di 5-200
+                    # 13 nov 2023 non ha preso macd > !!! allora l' ho messo anche sopra
+                    # 13 nov 2023 5-39 da 5-54 posso farlo perche' il sell e' molto piu' reattivo ! RICORDA dev 39 < 0.13 !
+                    # 30 nov 2023 ma78 e' proprio discendente. continuava a comprare inutilmente. 
+                    # 30 nov 2023 IL TITOLO SEMBRA AVER INTRAPRESO UN VERO E PRORIO TREND RIBASSISTA !
+                    # 18 set 2024 aggiunta perche' non aveva comprato come, invece, aveva fatto RCCR ma con l' avvento di prendi il coltello con il piede !
+                    # 18 set 2024 E DELLA VENDITA BOCELLI. perche' mi e' sembrato giusto comprare quando ha venduto !!!
+                    
+                        
                 elif (
                     
                     ma8_last > ma54_last
