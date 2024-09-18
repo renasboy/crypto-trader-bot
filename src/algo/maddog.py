@@ -15709,7 +15709,11 @@ class maddog:
                     percentage = 70
                     
                     # aggiunta di 5-28 < 0.12
-                    
+
+
+
+                # LA MIA OPERA D' ARTE - prendi il coltello con il piede + vendita bocelli
+
                 elif (
                     deviation_ma78_sopra_o_sotto_ma78_30_min_ago < -0.10
                     and ma300_last < ma300_301_min_ago
@@ -15738,7 +15742,7 @@ class maddog:
                     and macd_differenza_2_min_ago > -1.50
  
                 ):
-                    buy = "BUY 2 con ma78 TREND RIBASSISTA 18 set 2024 - prendi il coltello con il piede + vendita bocelli - r 5983"
+                    buy = "BUY 2 con TREND RIBASSISTA 18 set 2024 LA MIA OPERA D' ARTE - prendi il coltello con il piede + vendita bocelli - r 5983"
                     action = "buy"
                     percentage = 80
                     
