@@ -19455,6 +19455,7 @@ class maddog:
                 ):
                     buy = "BUY 3 29 ago 2022 > 180 min di ribasso CON ma10<ma20 con 3-28 and ma2_differenza_2_min_ago > 12 and macd_differenza_2_min_ago > 1.00 - r 6572 A1 Y1"
                     action = "buy"
+                    percentage = 80
 
               
                 elif (
