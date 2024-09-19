@@ -42688,7 +42688,9 @@ class maddog:
                 and deviation_ma3_sotto_ma150 > -1.20
                 
                 and ma2_last <= ma2_2_min_ago
+                and ma2_last <= ma2_3_min_ago
                 and ma2_differenza_2_min_ago < -7
+
                 and macd < macd_2_min_ago
                 and macd_differenza_2_min_ago < -2
                 and ma2_last < ma10_last
@@ -42699,8 +42701,8 @@ class maddog:
                 #  8 gen 2024 and deviation_sell < -0.01 da 0.01 se 10>20
                 #  8 gen 2024 and deviation_sell < -0.02 da -0.01
                 #  7 mar 2024 con 100 sopra 450 < 1.50 dev sell a -0.02
-                # 19 set 2024 se ma 200> ma200 180 min ago allora aumento tolleranza dev sell a -0.03 da -0.02
-
+                # 19 set 2024 se ma 200> ma200 180 min ago allora aumento tolleranza dev sell a -0.03 da -0.02 
+                # 19 set 2024 se ma 200> ma200 180 min ago aggiungo anche ma2 < ma2 3 min ago
 
             elif (    
                 ma50_last <= ma50_2_min_ago
