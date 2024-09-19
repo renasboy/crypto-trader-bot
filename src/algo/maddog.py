@@ -42671,8 +42671,41 @@ class maddog:
                 #  7 mar 2024 con 100 sopra 450 > 1.50 (trend chiaramente rialzista) dev sell a -0.03 da -0.02
 
 
+
             elif (    
                 ma50_last <= ma50_2_min_ago
+                and ma200_last > ma200_180_min_ago
+
+                and ma10_last > ma20_last
+                and deviation_ma100_sopra_ma450 < 1.50
+                
+                and deviation_ma39 < 0.11
+                and deviation_sell < -0.03
+                
+                and delta_450_300 < delta_450_300_60_min
+                
+                and deviation_ma100_sopra_ma300 > 0.20
+                and deviation_ma3_sotto_ma150 > -1.20
+                
+                and ma2_last <= ma2_2_min_ago
+                and ma2_differenza_2_min_ago < -7
+                and macd < macd_2_min_ago
+                and macd_differenza_2_min_ago < -2
+                and ma2_last < ma10_last
+            ):
+                sell = "SELL CS con ma50 <= ma50_2_min_ago MA CON 200 che sale da 3 ore e 10>20 e 3-39 < 0.11 e dev_sell < -0.03 - r 15985 A1 Y1 YX"
+                action = "sell"
+                
+                #  8 gen 2024 and deviation_sell < -0.01 da 0.01 se 10>20
+                #  8 gen 2024 and deviation_sell < -0.02 da -0.01
+                #  7 mar 2024 con 100 sopra 450 < 1.50 dev sell a -0.02
+                # 19 set 2024 se ma 200> ma200 180 min ago allora aumento tolleranza dev sell a -0.03 da -0.02
+
+
+            elif (    
+                ma50_last <= ma50_2_min_ago
+                and ma200_last < ma200_180_min_ago
+
                 and ma10_last > ma20_last
                 and deviation_ma100_sopra_ma450 < 1.50
                 
@@ -42690,12 +42723,14 @@ class maddog:
                 and macd_differenza_2_min_ago < -2
                 and ma2_last < ma10_last
             ):
-                sell = "SELL CS con ma50 <= ma50_2_min_ago MA CON 10>20 e 3-39 < 0.11 e dev_sell < -0.02 - r 15985 A1 Y1 y"
+                sell = "SELL CS con ma50 <= ma50_2_min_ago e con 200 che scende da 3 ore e 10>20 e 3-39 < 0.11 e dev_sell < -0.02 - r 15985 A1 Y1 YY"
                 action = "sell"
                 
                 #  8 gen 2024 and deviation_sell < -0.01 da 0.01 se 10>20
                 #  8 gen 2024 and deviation_sell < -0.02 da -0.01
                 #  7 mar 2024 con 100 sopra 450 < 1.50 dev sell a -0.02
+                
+
             
             elif (    
                 ma50_last <= ma50_2_min_ago
