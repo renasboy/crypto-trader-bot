@@ -45718,10 +45718,37 @@ class maddog:
                 # 17 set 2024 aggiunto and deviation_sell < -0.03 CON 100 >300 
 
 
+
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
                 and ma450_last < ma450_10_min_ago
                 and ma100_last < ma300_last
+                and ma100_last > ma200_last
+
+                and ma100_last < ma100_30_min_ago
+                and ma13_last <= ma13_2_min_ago
+
+                and deviation_ma100_sopra_ma200 > -0.70
+                and deviation_ma100_sopra_ma300 < 0.50
+
+                and ma3_last <= ma3_2_min_ago
+                and ma2_last < ma5_last
+                and ma2_last < last_trade_price
+                and ma2_last <= ma2_2_min_ago
+            
+            ):
+
+                sell = "SELL CS - DOLCE ATTESA 270 sec and ma13 < and con 450 < E 100<100 30 min ago MA 100>200 - r 16694 B2y1"
+                action = "sell"
+
+                # 19 set 2024 con 100>200 aggiunto and ma2_last < ma5_last cioe' aspetta ancora un pochino
+                # 19 set 2024 forse in futuro dovrai mettere and ma2_last < ma6_last cioe' aspetta un pochino di piu'
+
+            elif (
+                seconds_since_last_trade > max_hold_time_in_seconds
+                and ma450_last < ma450_10_min_ago
+                and ma100_last < ma300_last
+                and ma100_last < ma200_last
 
                 and ma100_last < ma100_30_min_ago
                 and ma13_last <= ma13_2_min_ago
@@ -45735,9 +45762,10 @@ class maddog:
             
             ):
 
-                sell = "SELL CS - DOLCE ATTESA 270 sec and ma13 < and con 450 < E 100<100 30 min ago e 100 sopra 300 < 0.50 - r 16694 B2y"
+                sell = "SELL CS - DOLCE ATTESA 270 sec and ma13 < and con 450 < E 100<100 30 min ago e 100 sopra 300 < 0.50 - r 16694 B2y2"
                 action = "sell"
-             
+
+
                 # 4 feb 2022 con <-0.26 ha fatto -0.88% (dopo +4.29%)
                 # 7 feb 2022 con <-0.345 e 270 sec ha fatto -0.38% - aumenta a 0.355 ! - eventualmente ci pensa la condizione CROLLO IMPROVVISO CHE FUNZIONA !
                 # 17 set -0.57 da -0.47
