@@ -43018,14 +43018,14 @@ class maddog:
                 and ma300_last < ma300_301_min_ago
                 and delta_150_100 <= delta_150_100_60_min
                 
-                and deviation_ma39 < 0.07
+                and deviation_ma39 < 0.10
                 and deviation_sell < -0.03
                 
                 and deviation_ma100_sopra_ma300 < 0.40
                 and deviation_ma5_sotto_ma200 > -0.50
                 
             ):
-                sell = "SELL cond spec 6 GIORNO con ma300 < 5 ore e con 10<20 and dev 3-39 < 0.07 and dev_sell < -0.03 e con ma50 < e con ma78 > and diff ma2 < -7 - r 16045 AY"
+                sell = "SELL CS GIORNO con ma300 < 5 ore e 10<20 e dev 3-39 < 0.10 and dev_sell < -0.03 e con ma50 < e con ma78 > - r 16045 AY"
                 action = "sell"
                 
                 # 20 nov 2023 aggiunta and diff ma2 < -5 
@@ -43033,7 +43033,7 @@ class maddog:
                 # 26 dic 2023 con 10<20 vendi prima a -0.03 da -0.10
                 #  9 gen 2024 questa ha fatto -0.86 ! ALLORA FACCIO LA PROSSIMA r 16045 AZ1 e AZ2
                 #  9 gen 2024 3<20 sostituisce 10<20 ! (CHE E' ARRIVATO TARDI)
-
+                # 20 set 2024 dev_sell < 0.03 da < -0.03
             
             elif (
                 ma78_last > ma78_120_min_ago
