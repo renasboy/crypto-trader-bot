@@ -18270,27 +18270,54 @@ class maddog:
                     
                     
                     
-                
                 # BUY 3 NUOVO che ci riprova TORNANDO ALLE ORIGINI con ma200< and ma300<
                 
                 elif (
                     deviation_buy2 > 0.05
-                    and deviation_ma5_sopra_ma28 > 0.15
-                    
+                    and deviation_ma3_sopra_ma28 > 0.15
+                    and ma100_last > ma200_last
+                    and ma200_last > ma200_60_min_ago
+
                     and ma8_last > ma8_2_min_ago
                     and ma2_last > ma2_2_min_ago
                     and ma3_last > ma7_last
                     and ma3_last > ma13_last
                     and deviation_buy_ma3_sopra_ma20 > 0.05
                     and deviation_ma4_sopra_ma25 > 0.05
-                    
-                    
-                    and ma100_last > ma200_last
-                    and ma200_last > ma200_60_min_ago
-                    
+                 
                 ):
                
-                    buy = "BUY 3 NUOVO che ci riprova TORNANDO ALLE ORIGINI MA SOLO SE ma200 >  MA 100 e' andata sopra 200 ! - r 6447"
+                    buy = "BUY 3 NUOVO che ci riprova TORNANDO ALLE ORIGINI MA SOLO SE ma200 >  MA 100 e' andata sopra 200 ! - r 6447 a"
+                    action = "buy"
+                    percentage = 90
+
+                    # compare prega per me !
+                    # se ma200< MA 100 e' andata sopra 200 ! si torna alle origini ! 8-50 ! (con ma2 > ma2 2 min ago)
+                    # deviation_buy2 = ma8_last / ma50_last
+                    # 20 set 2024 questa condizione si deve attivare SOLO SE and ma200_last > ma200_60_min_ago
+                    # 20 set 2024 per evitare di cancellarla. e vafanculo.
+
+
+
+                # BUY 3 NUOVO che ci riprova TORNANDO ALLE ORIGINI con ma200 < da 5 ore ! and ma300<
+                
+                elif (
+                    deviation_buy2 > 0.05
+                    and deviation_ma3_sopra_ma28 > 0.15
+                    and ma100_last > ma200_last
+                    and ma200_last < ma200_300_min_ago
+                    and ma300_last < ma300_60_min_ago
+
+                    and ma8_last > ma8_2_min_ago
+                    and ma2_last > ma2_2_min_ago
+                    and ma3_last > ma7_last
+                    and ma3_last > ma13_last
+                    and deviation_buy_ma3_sopra_ma20 > 0.05
+                    and deviation_ma4_sopra_ma25 > 0.05
+                 
+                ):
+               
+                    buy = "BUY 3 NUOVO che ci riprova TORNANDO ALLE ORIGINI MA SOLO SE ma200 scende da almeno 5 ore ! cazzo - r 6447 b"
                     action = "buy"
                     percentage = 90
 
