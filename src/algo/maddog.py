@@ -6054,6 +6054,8 @@ class maddog:
                 elif (     
                     
                     ma3_last > ma18_last
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.25
+
                     and ma10_last > ma20_last
                     and deviation_ma5_sotto_ma450 < -0.75
                     
@@ -6090,6 +6092,8 @@ class maddog:
                 elif (     
                     
                     ma3_last > ma20_last
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.25
+
                     and ma18_last <= ma18_10_min_ago
                     and ma50_differenza_ma59 >= -14
                     and ma100_last < ma100_60_min_ago
@@ -6100,28 +6104,27 @@ class maddog:
                     and deviation_ma300_sopra_ma450 > -0.55
                     
                     and deviation_ma3_sopra_ma10 > 0.025
-                    and deviation_ma3_sopra_ma16 > 0.125
+                    and deviation_ma3_sopra_ma16 > -0.01
                     and deviation_ma3_sopra_ma18 > -0.05
                     
                     and ma2_last >= ma20_last
                     
                     and ma2_last > ma5_last
                     and ma2_last >= ma2_2_min_ago
-                    
-                    and macd_differenza_2_min_ago > 1.50
-                    and ma2_differenza_2_min_ago >= 12
-                    and ma2_differenza_ma5 > 8
+                    and macd > -50
+                    and macd_differenza_2_min_ago > -1.50
+                 
                 ):    
-                    buy = "BUY 1 compare forever - con 18< e con 3-18 E CON 300 ancora vicina alla 450 ( anche un poco sotto ! ) and 3-20 + diff macd > 1.50 AND 2>5 ! - r 1537 A3 Y1y"
+                    buy = "BUY 1 compare forever - con 18 < e con 3-20 E CON 300 ancora vicina alla 450 ( anche un poco sotto ! ) - r 1537 A3 Y1y"
                     action = "buy"
-                    percentage = 90
+                    percentage = 80
                     
                     #  7 dic 2023 aggiunta and ma2_differenza_ma5 > 7
                     # 11 dic 2023 ma2_differenza_ma5 a 8 da 7
                     # 11 dic 2023 diff macd a 1.50 da 1.05
                     # 13 dic 2023 3-20 da 3-18
                     # 22 dic 2023 and deviation_ma3_sopra_ma16 > 0.125 da -0.04 se ma 18 di adesso e' piu' bassa di ma18 di 10 min ago
-
+                    # 20 set 2024 anticipata ndecchiecella e aggiunto prendi coltello con il piede
                   
                 
                 elif (     
