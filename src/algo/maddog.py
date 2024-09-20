@@ -83,7 +83,8 @@ class maddog:
         # moving average (2-3-4-5-7-8-20-43-100) di x minuti prima
         
         ma2_2_min_ago = self.algo_helper.ma_minutes_ago(2, 2)
-        
+        ma2_3_min_ago = self.algo_helper.ma_minutes_ago(2, 3)
+
         ma3_2_min_ago = self.algo_helper.ma_minutes_ago(3, 2)
         ma3_3_min_ago = self.algo_helper.ma_minutes_ago(3, 3)
         
@@ -433,18 +434,28 @@ class maddog:
         
         deviation_sell = (ma4_last / last_trade_price - 1) * 100 if last_trade_price else 0
         self.algo_helper.info("deviation_sell: {}".format(deviation_sell))
+
+
         
+        # formula DEVIATION_ma3_sopra_ma28 - FORMULA AUREA !
         
+        deviation_ma3_sopra_ma28 = (ma3_last / ma28_last - 1) * 100 if ma28_last else 0
+        self.algo_helper.info("deviation_ma3_sopra_ma28: {}".format(deviation_ma3_sopra_ma28))
+
+
+        # formula DEVIATION_ma4_sopra_ma28
+        
+        deviation_ma4_sopra_ma28 = (ma4_last / ma28_last - 1) * 100 if ma28_last else 0
+        self.algo_helper.info("deviation_ma4_sopra_ma28: {}".format(deviation_ma4_sopra_ma28))
+
+
         # formula DEVIATION_ma5_sopra_ma28 - FORMULA AUREA !
         
         deviation_ma5_sopra_ma28 = (ma5_last / ma28_last - 1) * 100 if ma28_last else 0
         self.algo_helper.info("deviation_ma5_sopra_ma28: {}".format(deviation_ma5_sopra_ma28))
         
         
-        # formula DEVIATION_ma4_sopra_ma28
         
-        deviation_ma4_sopra_ma28 = (ma4_last / ma28_last - 1) * 100 if ma28_last else 0
-        self.algo_helper.info("deviation_ma4_sopra_ma28: {}".format(deviation_ma4_sopra_ma28))
 
 
         # formula DEVIATION_ma78_sopra_o_sotto_ma200 !
@@ -42628,7 +42639,7 @@ class maddog:
 
                 and ma200_last > ma200_301_min_ago
                 and ma300_last > ma300_301_min_ago
-                and ma450_last > ma4500_301_min_ago
+                and ma450_last > ma450_301_min_ago
 
                 and delta_50_39 > delta_50_39_30_min
                 and ma10_last <= ma20_last
