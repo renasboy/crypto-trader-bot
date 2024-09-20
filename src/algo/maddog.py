@@ -42639,7 +42639,7 @@ class maddog:
 
                 and ma200_last > ma200_301_min_ago
                 and ma300_last > ma300_301_min_ago
-                and ma450_last > ma450_301_min_ago
+                and ma450_last > ma450_300_min_ago
 
                 and delta_50_39 > delta_50_39_30_min
                 and ma10_last <= ma20_last
