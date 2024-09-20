@@ -718,18 +718,29 @@ class maddog:
         
         rapporto_delta_1_delta_2 = (delta_1 / delta_2) if delta_2 else 0
         self.algo_helper.info("rapporto_delta_1_delta_2: {}".format(rapporto_delta_1_delta_2))
+
+
         
         # formula delta_300_100
         
         delta_300_100 = (ma300_last / ma100_last - 1) * 100 if ma100_last else 0
         self.algo_helper.info("delta_300_100: {}".format(delta_300_100))
         
-        
         # formula delta_300_100_60_min
         
         delta_300_100_60_min = (ma300_60_min_ago / ma100_60_min_ago - 1) * 100 if ma100_60_min_ago else 0
         self.algo_helper.info("delta_300_100_60_min: {}".format(delta_300_100_60_min))
+
+
+        # formula delta_300_100_120_min
         
+        delta_300_100_120_min = (ma300_120_min_ago / ma100_120_min_ago - 1) * 100 if ma100_120_min_ago else 0
+        self.algo_helper.info("delta_300_100_120_min: {}".format(delta_300_100_120_min))
+
+
+        # ESEMPIO and delta_300_100 < delta_300_100_120_min
+
+
         
         # formula delta_300_100_50_min
         
@@ -22923,16 +22934,17 @@ class maddog:
 
               
                 
-                # BUY 4 se 8 > 200 con 5-28 > 0.20 ! e con ma69 > and deviation_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali) IMPORTATA DA BUY 5
-                
+                # BUY 4 se 8 > 200 con 5-28 > 0.20 ! e con ma69 > and deviation_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali)
+
                 elif (
-                    ma69_last >= ma69_2_min_ago
-                    and ma8_last > ma200_last
-                    and deviation_ma5_sopra_ma28 > 0.20
+                    ma59_last >= ma59_2_min_ago
                     
-                    and deviation_bellissima > 0.12
-                    and deviation_buy3 > 0.12
-                    and deviation_ma7_sopra_ma40 > 0.09
+                    and ma8_last > ma200_last
+                    and deviation_ma3_sopra_ma28 > 0.07
+                    
+                    and deviation_bellissima > 0.10
+                    
+                    and deviation_ma7_sopra_ma40 > 0.05
                
                     and ma3_last > ma13_last
                     and ma4_last > ma9_last
@@ -22946,11 +22958,35 @@ class maddog:
                     buy = "BUY 4 se 11 > 200 con 5-28 > 0.20 ! e con ma69 > (PER SPEZZARE LA CATENA - effetti laterali) DA BUY 5 RCCR - riga 7065"
                     action = "buy"
                     percentage = 70
-                    
+
                     # deviation_bellissima = 6/30
                     # spezzare la catena dei buy - effetti laterali.
-                    # se e' arrivato il buy 5 e' molto probabile che il trend sia consolidato
-                    # e, a questo punto, non importa se compra con un + 0.10 piu' in alto. NON FA UNA GRANDE DIFFERENZA !
+                    # non importa se compra con un + 0.10 piu' in alto. NON FA UNA GRANDE DIFFERENZA !
+                    
+                    # 20 set 2024 anticipata ndecchiecella 
+
+
+                
+                elif ( 
+                    delta_300_100 < delta_300_100_120_min
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.30
+                    
+                    and deviation_ma3_sopra_ma28 > -0.05
+                   
+                    and ma3_last > ma13_last
+                    and ma4_last > ma9_last
+                    and ma4_last > ma50_last
+                    and ma6_last > ma15_last
+                    
+                    and ma2_last > ma2_2_min_ago
+                    and macd > -40
+                ):
+                    buy = "BUY 4 prende il coltello con il piede ma doppio delta giorno - riga 7070"
+                    action = "buy"
+                    percentage = 70
+
+                    # 20 set 2024 prendi il coltello con il piede !
+                    
                     
                     
                     
@@ -22983,7 +23019,7 @@ class maddog:
                     and macd >= macd_2_min_ago
                     
                 ):
-                    buy = "BUY 4 LATERALE importata dal BUY 5 r 7564 B2y RCCR del 29 ago 2022 > 180 min di ribasso 78<150 and 3-16 > 0.06 and macd > macd 2 min ago - r 7075"
+                    buy = "BUY 4 LATERALE > 180 min di ribasso 78<150 and 3-16 > 0.06 and macd > macd 2 min ago - r 7075"
                     action = "buy"
                     percentage = 90
 
