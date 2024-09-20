@@ -18270,7 +18270,7 @@ class maddog:
                     
                     
                     
-                    
+                
                 # BUY 3 NUOVO che ci riprova TORNANDO ALLE ORIGINI con ma200< and ma300<
                 
                 elif (
@@ -18286,18 +18286,19 @@ class maddog:
                     
                     
                     and ma100_last > ma200_last
-                    and ma200_last < ma200_60_min_ago
+                    and ma200_last > ma200_60_min_ago
                     
                 ):
                
-                    buy = "BUY 3 NUOVO che ci riprova TORNANDO ALLE ORIGINI con ma200<  MA 100 e' andata sopra 200 ! - r 6447"
+                    buy = "BUY 3 NUOVO che ci riprova TORNANDO ALLE ORIGINI MA SOLO SE ma200 >  MA 100 e' andata sopra 200 ! - r 6447"
                     action = "buy"
                     percentage = 90
 
                     # compare prega per me !
                     # se ma200< MA 100 e' andata sopra 200 ! si torna alle origini ! 8-50 ! (con ma2 > ma2 2 min ago)
                     # deviation_buy2 = ma8_last / ma50_last
-                    
+                    # 20 set 2024 questa condizione si deve attivare SOLO SE and ma200_last > ma200_60_min_ago
+                    # 20 set 2024 per evitare di cancellarla.
                     
                    
                     
