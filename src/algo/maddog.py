@@ -22953,28 +22953,23 @@ class maddog:
 
               
                 
-                # BUY 4 se 8 > 200 con 5-28 > 0.20 ! e con ma69 > and deviation_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali)
+                # BUY 4 se 100>200 non devi spezzare proprio un cazzo
 
                 elif (
                     ma59_last >= ma59_2_min_ago
-                    
+                    and ma100_last > ma200_last
                     and ma8_last > ma200_last
+
                     and deviation_ma3_sopra_ma28 > 0.07
                     
-                    and deviation_bellissima > 0.10
-                    
-                    and deviation_ma7_sopra_ma40 > 0.05
-               
                     and ma3_last > ma13_last
                     and ma4_last > ma9_last
                     and ma4_last > ma50_last
-                    and ma6_last > ma15_last
-                    and ma7_last > ma25_last
-                    
+
                     and ma2_last > ma2_2_min_ago
              
                 ):
-                    buy = "BUY 4 se 11 > 200 con 5-28 > 0.20 ! e con ma69 > (PER SPEZZARE LA CATENA - effetti laterali) DA BUY 5 RCCR - riga 7065"
+                    buy = "BUY 4 se 100>200 NON DEVI SPEZZARE LA CATENA ! - r 7065"
                     action = "buy"
                     percentage = 70
 
@@ -22983,7 +22978,7 @@ class maddog:
                     # non importa se compra con un + 0.10 piu' in alto. NON FA UNA GRANDE DIFFERENZA !
                     
                     # 20 set 2024 anticipata ndecchiecella 
-
+                    # 21 set 2024 se 100 > 200 non devi spezzare proprio un cazzo ! - anticipata
 
                 
                 elif ( 
