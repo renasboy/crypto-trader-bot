@@ -43698,11 +43698,38 @@ class maddog:
                 
                 #  8 mar 2024 se ma450_last > ma450_360_min_ago dev_sell a -0.015 da -0.005
                 
+            elif (
+                ma78_last > ma78_120_min_ago
+                and ma450_last < ma450_360_min_ago
+                and ma300_last > ma450_last
+
+                and ma10_last < ma10_2_min_ago
+                and ma50_last < ma59_last
+                and ma20_last <= ma20_2_min_ago
+                
+                and deviation_ma39 < 0.07
+                and deviation_sell < -0.02
+                
+                and ma50_last < ma50_2_min_ago
+                and deviation_ma100_sopra_ma300 < 0.40
+                and deviation_ma5_sotto_ma200 > -0.80
+                
+                and ma2_last < ma2_2_min_ago
+                and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.018
+                and ma2_differenza_2_min_ago < -8
+                and macd_differenza_2_min_ago < -1.30
+                
+            ):
+                sell = "SELL CS - SALVAGENTE dev 3-39 < 0.05 e dev_sell < -0.02 e ma50 < e macd_diff_2_min_ago < -0.20 - r 16047 A1 Y1 Y2 bx"
+                action = "sell"
+                # 21 set 2024 and deviation_sell < -0.01 da  < -0.005 se 300 > 450
+
 
             elif (
                 ma78_last > ma78_120_min_ago
                 and ma450_last < ma450_360_min_ago
-                
+                and ma300_last < ma450_last
+
                 and ma10_last < ma10_2_min_ago
                 and ma50_last < ma59_last
                 and ma20_last <= ma20_2_min_ago
@@ -43720,7 +43747,7 @@ class maddog:
                 and macd_differenza_2_min_ago < -1.30
                 
             ):
-                sell = "SELL CS - SALVAGENTE dev 3-39 < 0.05 e dev_sell < -0.005 e ma50 < e macd_diff_2_min_ago < -0.20 - r 16047 A1 Y1 Y2 b"
+                sell = "SELL CS - SALVAGENTE dev 3-39 < 0.05 e dev_sell < -0.005 e ma50 < e macd_diff_2_min_ago < -0.20 - r 16047 A1 Y1 Y2 by"
                 action = "sell"
                 
                 # oggi 10 dicembre 2023 ascolta mario ! SE ma20_last <= ma20_2_min_ago DEV SELL a 0.01
@@ -45847,7 +45874,10 @@ class maddog:
                 seconds_since_last_trade > max_hold_time_in_seconds
                 and ma450_last < ma450_10_min_ago
                 and ma100_last > ma300_last
-                and deviation_sell < -0.03
+                and ma200_last > ma300_last
+                and ma300_last > ma450_last
+
+                and deviation_sell < -0.04
 
                 and ma100_last < ma100_30_min_ago
                 and ma13_last <= ma13_2_min_ago
@@ -45870,8 +45900,8 @@ class maddog:
 
                 #  7 set 2004 ro cano e' tornato ! questa condizione interviene solo quando ma100 < ma100 30 min ago
                 #  8 set 2024 aggiunta ma3 < ma3 2 min ago and ma2_last < ma2_2_min_ago
-                # 17 set 2024 aggiunto and deviation_sell < -0.03 CON 100 >300 
-
+                # 17 set 2024 aggiunto and deviation_sell < -0.03 CON 100 > 300 
+                # 17 set 2024 and deviation_sell < -0.04 da < -0.03
 
 
             elif (
