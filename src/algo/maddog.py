@@ -25050,28 +25050,7 @@ class maddog:
                     # 12 set 2024 aggiunta and ma300_last > ma300_30_min_ago prima di CANCELLARE
 
 
-                elif (
-                    
-                    ma450_last < ma450_360_min_ago
-                    and ma100_last > ma300_last
-                    
-                    and deviation_ma4_sopra_ma100 > 0.05
-                    
-                    and deviation_ma3_sopra_ma10 > 0.12
-                    and deviation_ma3_sopra_ma16 > 0.12
-                    and deviation_ma5_sopra_ma28 > 0.04
-
-                    and ma3_last > ma13_last
-                    and ma4_last > ma9_last
-                    
-                    and ma2_last >= ma2_2_min_ago
-              
-                ):
-                    buy = "BUY 5A con 100>300 MA ma450_last < ma450_360_min_ago (SPEZZARE LA CATENA - effetti laterali) - r 7384 B1"
-                    action = "buy"
-                    percentage = 70
-                    
-                    # importante : aggiunta triade della salvezza
+                # 21 set 2024 cancellata r 7384 B1
                 
                 
                 elif (    
@@ -43722,6 +43701,7 @@ class maddog:
             ):
                 sell = "SELL CS - SALVAGENTE dev 3-39 < 0.05 e dev_sell < -0.02 e ma50 < e macd_diff_2_min_ago < -0.20 - r 16047 A1 Y1 Y2 bx"
                 action = "sell"
+
                 # 21 set 2024 and deviation_sell < -0.01 da  < -0.005 se 300 > 450
 
 
