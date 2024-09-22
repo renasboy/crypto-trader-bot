@@ -19377,7 +19377,7 @@ class ro_cano_che_ritorna:
                     and macd_differenza_2_min_ago > 1.00
                     
                 ):
-                    buy = "BUY 3 29 ago 2022 > 180 min di ribasso CON ma10<ma20 con 3-28 and ma2_differenza_2_min_ago > 12 and macd_differenza_2_min_ago > 1.00 - r 6572 A1 Y2"
+                    buy = "BUY 3 29 > 180 min di ribasso CON ma10<ma20 con 3-28 - r 6572 A1 Y2"
                     action = "buy"
                     percentage = 90
                     

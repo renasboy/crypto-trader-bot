@@ -18966,10 +18966,45 @@ class maddog:
                 
                 # ------------------------------------------------------------ BUY 3 laterale
 
-                
+                elif (
+                    
+                    ma3_last > ma28_last
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.33
+
+                    and ma39_last < ma100_last
+                    and ma10_last < ma20_last
+                    and deviation_ma5_sotto_ma300 > -0.57
+                    
+                    and ma100_last < ma100_180_min_ago
+                    and ma200_last < ma200_180_min_ago
+                    and ma300_last < ma300_180_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.02
+                    and deviation_ma5_sopra_ma28 > -0.02
+                    
+                    and ma2_last > ma5_last
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and ma2_differenza_2_min_ago > 12
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
+                    and macd > -11
+                    and macd_differenza_2_min_ago > 1.00
+                    
+                ):
+                    buy = "BUY 3 29 > 180 min di ribasso CON ma10<ma20 con 3-28 - r 6509"
+                    action = "buy"
+                    percentage = 90
+
+                    # 22 set 2024 aggiunta questa condizione + prendi il coltello con il piede
+
+
                 elif (    
                     ma3_last > ma20_last
-                  
+                    and ma100_last > ma100_60_min_ago
+
                     and ma50_last > ma59_last
                     and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
                     
@@ -18995,6 +19030,8 @@ class maddog:
                     percentage = 80
                     
                     # 29 dic 2023 3-20 da 3-28 se 50>59
+                    # 22 set 20234 questa la faccio entrare in azione soltanto se 100> 100 60 min
+
 
                 elif (    
                     ma3_last > ma20_last
@@ -19019,7 +19056,7 @@ class maddog:
                     and ma2_last > ma5_last 
                 ):  
                 
-                    buy = "BUY 3 laterale IMPORTATA dal BUY 2 con 300 > 450 and 3-20 and macd > -24 and macd_differenza_2_min_ago > 0.30 - r 6510 A2 x"
+                    buy = "BUY 3 con 300 > 450 and 3-20 and macd > -24 and macd_differenza_2_min_ago > 0.30 - r 6510 A2 x"
                     action = "buy"
                     percentage = 80
                     
@@ -22686,38 +22723,11 @@ class maddog:
                     # 24 ago 2023 aggiunta and macd > macd_2_min_ago
                     # 27 set 2023 5.28 0.08 da 0.10
                     # 27 set 2023 and deviation_ma5_sopra_ma59 < -0.10 da -0.09
+
               
                 
-                    
-                # BUY 4 importato da buy 5 rccr
+                # 22 set 2024 cancellata r 7063 NUOVA ERA A1 SOFT
                 
-                elif (    
-                    ma5_last > ma54_last
-                   
-                    and ma100_last < ma100_10_min_ago
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
-                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
-                    and deviation_ma5_sopra_o_sotto_ma100 > 0.20
-                    
-                    and ma100_last < ma100_180_min_ago
-                    and ma200_last < ma200_180_min_ago
-                    and ma300_last < ma300_180_min_ago
-                    
-                    and ma100_last < ma200_last
-                    and ma200_last < ma300_last
-                    
-                    and deviation_ma3_sopra_ma10 > 0.01
-                    and deviation_ma3_sopra_ma16 > 0.02
-                    and deviation_ma5_sopra_ma28 > 0.03
-                    
-                    and ma2_last >= ma2_2_min_ago
-                    and macd > macd_2_min_ago
-                    
-                ):
-                    buy = "BUY 4 con 5-54 importato da buy 5 rccr con 50>59 and macd > macd_2_min_ago - r 7063 NUOVA ERA A1 SOFT"
-                    action = "buy"
-                    percentage = 90
-
                 
                 elif (    
                     ma5_last > ma54_last
