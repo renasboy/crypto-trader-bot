@@ -15613,7 +15613,7 @@ class ro_cano_che_ritorna:
                 
                 elif (
                     
-                    ma18_last > ma100_last
+                    ma8_last > ma100_last
                     and ma78_last < ma200_last
                     
                     and deviation_ma5_sotto_ma300 > -0.40
@@ -15625,19 +15625,19 @@ class ro_cano_che_ritorna:
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
                     
-                    and deviation_ma5_sopra_ma28 > 0.02
+                    and deviation_ma5_sopra_ma28 > -0.02
                     
                     and ma2_last >= ma2_2_min_ago
                     and macd >= macd_2_min_ago
-                    and macd > 5
+                    and macd > 3
                 ):
-                    buy = "BUY 2 > 180 min di ribasso 26 luglio 2023 CON 78<200 - r 5984b"
+                    buy = "BUY 2 > 180 min di ribasso 26 luglio 2023 CON 78<200 - r 5984 B"
                     action = "buy"
                     percentage = 90
                     
                     # 24 ago 2023 macd > macd 2 min ago
                     # 24 ago 2023 macd > 5
-
+                    # 22 set 2024 anticipata ndecchiecella forse aggiungere in un futuro non remoto prendi il coltello con il piede
               
 
                 # BUY 2 crollo MISSILE COMPA ! modo 2
