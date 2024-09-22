@@ -14723,7 +14723,6 @@ class ro_cano_che_ritorna:
                     action = "buy"
                     percentage = 70
 
-
                 elif (
                     ma5_last >= ma5_2_min_ago
                     and ma450_last > ma450_120_min_ago
@@ -14742,12 +14741,37 @@ class ro_cano_che_ritorna:
                     and macd_differenza_2_min_ago > 0.25
                 ):  
                 
-                    buy = "BUY 2 incrocio al rialzo 3-180 con ma450 > 2 ore e ma200 che sale da 1 ora con 33<78 ! - r 5860 B4"
+                    buy = "BUY 2 incrocio al rialzo 3-180 con ma450 > 2 ore e ma200 che sale da 1 ora con 33<78 ! - r 5860 B4 x"
                     action = "buy"
                     percentage = 70
 
                     #  6 mar 2024 aggiunto anche incrocio al rialzo 3-180
+
+
+                elif (
+                    ma5_last >= ma5_2_min_ago
+                    and ma450_last > ma450_120_min_ago
+                    and ma200_last > ma200_60_min_ago
                     
+                    and ma39_last < ma39_15_min_ago
+                    and (ma3_prev < ma100_prev and ma3_last > ma100_last)
+                    
+                    and ma33_last < ma78_last
+               
+                    and ma3_last > ma13_last
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and ma2_differenza_2_min_ago > 8
+                    
+                    and macd_differenza_2_min_ago > -0.25
+                ):  
+                
+                    buy = "BUY 2 incrocio al rialzo 3-100 con ma450 > 2 ore e ma200 che sale da 1 ora con 33<78 ! - r 5860 B4 Y"
+                    action = "buy"
+                    percentage = 70
+
+                    #  6 mar 2024 aggiunto anche incrocio al rialzo 3-180
+                    # 22 set 2024 aggiunto anche incrocio 3-100 TI VOGLIO BENE COMPA !
                   
                     
                     
