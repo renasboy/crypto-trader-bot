@@ -495,11 +495,16 @@ class maddog:
         deviation_ma5_sopra_o_sotto_ma5_50_min_ago = (ma5_last / ma5_50_min_ago - 1) * 100 if ma5_50_min_ago else 0
         self.algo_helper.info("deviation_ma5_sopra_o_sotto_ma5_50_min_ago: {}".format(deviation_ma5_sopra_o_sotto_ma5_50_min_ago))
 
-
         # formula DEVIATION_ma5_sopra_o_sotto_ma5_60_min_ago
         
         deviation_ma5_sopra_o_sotto_ma5_60_min_ago = (ma5_last / ma5_60_min_ago - 1) * 100 if ma5_60_min_ago else 0
         self.algo_helper.info("deviation_ma5_sopra_o_sotto_ma5_60_min_ago: {}".format(deviation_ma5_sopra_o_sotto_ma5_60_min_ago))
+
+
+        # formula DEVIATION_ma5_sopra_o_sotto_ma5_120_min_ago
+        
+        deviation_ma5_sopra_o_sotto_ma5_120_min_ago = (ma5_last / ma5_120_min_ago - 1) * 100 if ma5_120_min_ago else 0
+        self.algo_helper.info("deviation_ma5_sopra_o_sotto_ma5_120_min_ago: {}".format(deviation_ma5_sopra_o_sotto_ma5_120_min_ago))
 
         
         # formula DEVIATION_ma5_sopra_o_sotto_ma5_1080_min_ago - !
@@ -10289,9 +10294,62 @@ class maddog:
 
           
                 # BUY 1 forever young 2 un po' meno PRUDENTE se 150 > 300
-                 
+
+
                 elif (  
                     ma100_last > ma150_last
+                    and ma28_last >= ma28_10_min_ago
+                    and ma5_last > ma200_last
+                    and ma3_last > ma11_last
+                    
+                    and deviation_ma100_laterale > 0.03
+                    
+                    and deviation_ma3_sopra_ma10 > 0.035
+                    and deviation_ma5_sopra_ma28 > 0.05
+                   
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                    and macd_differenza_2_min_ago > 0.25
+                ):
+
+                    buy = "BUY 1 forever young 2 con 28> se ma100 > ma150 and macd_differenza_2_min_ago > 0.25 - r 4355 a"
+                    action = "buy"
+                    percentage = 80
+                    
+                    
+                    # 24 ago 2023 and deviation_ma100_laterale > 0.05 da 0.07 con 200>300
+                    # 28 ago 2023 100>150
+                    # 31 ott 2023 aggiunto and macd_differenza_2_min_ago > 0.25
+
+                elif (  
+                    ma100_last > ma150_last
+                    and ma28_last < ma28_10_min_ago
+                    and deviation_ma5_sopra_o_sotto_ma5_120_min_ago > 0.80
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.25
+
+                    and ma5_last > ma200_last
+                    and ma3_last > ma11_last
+                    
+                    and deviation_ma100_laterale > 0.03
+                    
+                    and deviation_ma3_sopra_ma10 > 0.035
+                    and deviation_ma5_sopra_ma28 > 0.05
+                   
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                    and macd_differenza_2_min_ago > 0.25
+                ):
+
+                    buy = "BUY 1 forever young 2 con 28< con aggiunta di prendi il coltello e ma100 > ma150 - r 4355 b1"
+                    action = "buy"
+                    percentage = 80
+
+                    # 23 set 2024 aggiunta di prendi il coltello con il piede SE e' cresciuta tanto e ma28 SCENDE !
+
+                elif (  
+                    ma100_last > ma150_last
+                    and ma28_last < ma28_10_min_ago
+                    and deviation_ma5_sopra_o_sotto_ma5_120_min_ago < 0.80
                     
                     and ma5_last > ma200_last
                     and ma3_last > ma11_last
@@ -10306,7 +10364,7 @@ class maddog:
                     and macd_differenza_2_min_ago > 0.25
                 ):
 
-                    buy = "BUY 1 forever young 2 un po' meno PRUDENTE se ma100 > ma150 and macd_differenza_2_min_ago > 0.25 - r 4355"
+                    buy = "BUY 1 forever young 2 con 28< con aggiunta di prendi il coltello e ma100 > ma150 - r 4355 b2"
                     action = "buy"
                     percentage = 80
                     
@@ -10314,7 +10372,7 @@ class maddog:
                     # 24 ago 2023 and deviation_ma100_laterale > 0.05 da 0.07 con 200>300
                     # 28 ago 2023 100>150
                     # 31 ott 2023 aggiunto and macd_differenza_2_min_ago > 0.25
-
+                    
 
 
                 # BUY 1 legge della minore decrescenza ! RITORNO ESTATE 2024 con ma450_last > ma450_120_min_ago
@@ -12126,6 +12184,8 @@ class maddog:
                 elif (     
                     ma200_last > ma200_20_min_ago
                     and ma10_last <= ma20_last
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.25
+
                     and ma100_last > ma100_60_min_ago
                     and ma200_last > ma200_60_min_ago
                     and ma300_last > ma300_360_min_ago
@@ -12147,7 +12207,7 @@ class maddog:
                     and macd >= macd_2_min_ago
                 ):    
                     
-                    buy = "BUY 2 con 300 > 300 360 min ago and ma5_last > ma5_2_min_ago - 20 < 78 and 3-10 > 0.05 con 5-28 > 0.05 E con macd> macd 2 min ago - r 4735 b"
+                    buy = "BUY 2 con 300 > 300 360 min ago E 20 < 78 CON prendi il coltello con il piede E con macd> macd 2 min ago - r 4735 b"
                     action = "buy"
                     percentage = 80
                     
@@ -12156,7 +12216,7 @@ class maddog:
                     #  2 nov 3-10 = 0.05 da 0.17
                     #  2 nov 5-28 = 0.05 da 0.15
                     # 28 set 2023 5> 5 2 min ago da 28> 28 min ago (ma300 sale da 360 min !)
-                    
+                    # 23 set 2024 aggiunta di prendi il coltello con il piede
                     
                 elif (
                     
@@ -19881,12 +19941,67 @@ class maddog:
                 
                 
                 # BUY 3 del 2 ottobre 2023 NON COMPRAVA !
+                elif (
+                    
+                    ma3_last > ma28_last
+                    and ma450_last > ma450_60_min_ago
+                    and ma300_last > ma450_last
+                    
+
+                    and deviation_ma250_sopra_ma300 < 0.15
+                    and deviation_ma250_sopra_ma300 > -0.15
+                    
+                    and deviation_ma3_sopra_ma10 > 0.05
+                    and deviation_ma5_sopra_ma28 > -0.02
+                  
+                    and ma3_last > ma13_last
+                    and ma4_last > ma9_last
+                    and ma2_last > ma5_last
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and ma2_differenza_2_min_ago > 6
+                    and macd > macd_2_min_ago
+                    
+                ):
+                    buy = "BUY 3 del 2 ottobre 2023 NON COMPRAVA ! con 450 > 450 60 min MA LATERALE and ma2_differenza_2_min_ago > 7 - r 6574 a1x"
+                    action = "buy"
+                    percentage = 70
 
 
                 elif (
                     
-                    ma4_last > ma28_last
+                    ma3_last > ma28_last
                     and ma450_last > ma450_60_min_ago
+                    and ma300_last > ma450_last
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.33
+
+                    and deviation_ma250_sopra_ma300 < 0.15
+                    and deviation_ma250_sopra_ma300 > -0.15
+                    
+                    and deviation_ma3_sopra_ma10 > 0.05
+                    and deviation_ma5_sopra_ma28 > -0.02
+                  
+                    and ma3_last > ma13_last
+                    
+                    and ma2_last > ma5_last
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and ma2_differenza_2_min_ago > 6
+                    and macd > macd_2_min_ago
+                    
+                ):
+                    buy = "BUY 3 del 2 ottobre 2023 NON COMPRAVA ! con 450 > 450 60 min MA LATERALE and ma2_differenza_2_min_ago > 7 - r 6574 a1y"
+                    action = "buy"
+                    percentage = 70
+
+                    # 23 set 2024 se anche 300 > 450 compra anche quando cade il coltello. ma lo prendi con il piede.
+
+
+                elif (
+                    
+                    ma3_last > ma28_last
+                    and ma450_last > ma450_60_min_ago
+                    and ma300_last > ma450_last
 
                     and ma100_last > ma100_30_min_ago
                     
@@ -19905,7 +20020,7 @@ class maddog:
                     and macd > macd_2_min_ago
                     
                 ):
-                    buy = "BUY 3 del 2 ottobre 2023 NON COMPRAVA ! con 450 > 450 60 min MA LATERALE and ma2_differenza_2_min_ago > 7 - r 6574 a"
+                    buy = "BUY 3 del 2 ottobre 2023 NON COMPRAVA ! con 450 > 450 60 min MA LATERALE and ma2_differenza_2_min_ago > 7 - r 6574 a2"
                     action = "buy"
                     percentage = 60
                     
@@ -23976,13 +24091,15 @@ class maddog:
 
                     #  9 set 2024 e' un buy 5 e scende tutto ho aggiunto 5>200 MA FORSE VA CANCELLATA
 
-              
                 elif (
                     ma50_last >= ma50_2_min_ago
                     and ma100_last > ma125_last
                     and ma300_last > ma450_last
                     
                     and ma28_last < ma28_30_min_ago
+                    and deviation_ma5_sopra_o_sotto_ma5_120_min_ago > 0.80
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.30
+
                     and ma78_last > ma150_last
                     
                     and deviation_ma3_sopra_ma10 > 0.01
@@ -23997,9 +24114,39 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
                     and macd > macd_2_min_ago
                 ):
-                    buy = "BUY 5 con ma50 > AND 50>100 and ma28_last < ma28_30_min_ago and 5-28 > 0.08 - r 7203 A1"
+                    buy = "BUY 5 con ma50 > AND 50>100 and ma28_last < ma28_30_min_ago and 5-28 > 0.08 - r 7203 A1x"
                     action = "buy"
                     percentage = 70
+
+                    # 23 set 2024 quando sale e ma28 scende FACCIO COMPRARE SOLO PRENDENDO IL COLTELLO CON IL PIEDE 
+
+
+                elif (
+                    ma50_last >= ma50_2_min_ago
+                    and ma100_last > ma125_last
+                    and ma300_last > ma450_last
+                    
+                    and ma28_last < ma28_30_min_ago
+                    and deviation_ma5_sopra_o_sotto_ma5_120_min_ago < 0.80
+                  
+                    and ma78_last > ma150_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > 0.077
+                    
+                    and ma3_last > ma13_last
+                    and ma4_last > ma9_last
+                    
+                    and ma6_last > ma15_last
+                    and ma7_last > ma25_last
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd > macd_2_min_ago
+                ):
+                    buy = "BUY 5 con ma50 > AND 50>100 and ma28_last < ma28_30_min_ago and 5-28 > 0.08 - r 7203 A1y"
+                    action = "buy"
+                    percentage = 70
+
 
                 
                 elif (
@@ -42788,9 +42935,13 @@ class maddog:
                 
                 #  6 mar 2024 aggiunto and ma450_last < ma450_180_min_ago
                 #  6 mar 2024 and deviation_sell < -0.005
-            
+
+
             elif (
                 ma50_last <= ma50_2_min_ago
+                and ma5_last > ma5_5_min_ago
+                and price < last_trade_price
+
                 and ma100_last <= ma100_10_min_ago
                 and macd_differenza_2_min_ago < -4
                 and deviation_ma39 < 0.05
@@ -42802,7 +42953,29 @@ class maddog:
                 and deviation_ma3_sotto_ma150 > -1.20
                 
             ):
-                sell = "SELL cond. special 3 - SALVAGENTE 3 3-39 < 0.05 e dev sell < 0.05 con ma50 <= e dev_ma3_sotto_ma200 > -1.20 - r 15985 A2y"
+                sell = "SELL cond. special 3 - SALVAGENTE 3 3-39 < 0.05 e dev sell < 0.05 con ma50 <= e dev_ma3_sotto_ma200 > -1.20 - r 15985 A2yx"
+                action = "sell"
+
+                # 23 set 2024 se ma5 sale da 5 min PER VENDERE il prezzo deve essere < dell' ultimo trade (che e' il buy)
+                # 23 set 2024 ha venduto mentre stava risalendo bello bello. statte fermo !
+
+
+            elif (
+                ma50_last <= ma50_2_min_ago
+                and ma5_last <= ma5_5_min_ago
+
+                and ma100_last <= ma100_10_min_ago
+                and macd_differenza_2_min_ago < -4
+                and deviation_ma39 < 0.05
+                and deviation_sell < 0.05
+                and ma2_last <= ma2_2_min_ago 
+                and delta_450_300 > delta_450_300_60_min
+                
+                and deviation_ma100_sopra_ma300 > 0.20
+                and deviation_ma3_sotto_ma150 > -1.20
+                
+            ):
+                sell = "SELL cond. special 3 - SALVAGENTE 3 3-39 < 0.05 e dev sell < 0.05 con ma50 <= e dev_ma3_sotto_ma200 > -1.20 - r 15985 A2yy"
                 action = "sell"
                 
                 # 27 giu 2022 dev sell a 0.305 da 0.31
