@@ -24121,32 +24121,8 @@ class maddog:
                     # 23 set 2024 quando sale e ma28 scende FACCIO COMPRARE SOLO PRENDENDO IL COLTELLO CON IL PIEDE 
 
 
-                elif (
-                    ma50_last >= ma50_2_min_ago
-                    and ma100_last > ma125_last
-                    and ma300_last > ma450_last
-                    
-                    and ma28_last < ma28_30_min_ago
-                    and deviation_ma5_sopra_o_sotto_ma5_120_min_ago < 0.80
-                  
-                    and ma78_last > ma150_last
-                    
-                    and deviation_ma3_sopra_ma10 > 0.01
-                    and deviation_ma3_sopra_ma16 > 0.077
-                    
-                    and ma3_last > ma13_last
-                    and ma4_last > ma9_last
-                    
-                    and ma6_last > ma15_last
-                    and ma7_last > ma25_last
-                    
-                    and ma2_last >= ma2_2_min_ago
-                    and macd > macd_2_min_ago
-                ):
-                    buy = "BUY 5 con ma50 > AND 50>100 and ma28_last < ma28_30_min_ago and 5-28 > 0.08 - r 7203 A1y"
-                    action = "buy"
-                    percentage = 70
 
+                    # 25 set 2024 cancellata r 7203 A1y
 
                 
                 elif (
@@ -25196,13 +25172,31 @@ class maddog:
                     # ok tu non voi spezzare la catena.
                     # ma per essere un BUY 5 devi avere almeno ma13>ma50 cazzo !
                     # 14 ott 2022 aggiunto 3-10 !
+
                     
                     
-             
                 elif (
                     ma78_last >= ma78_2_min_ago
                     and ma78_last > ma150_last
+                    and ma300_last > ma450_last
+                    and ma3_last > ma78_last
                     
+                    and deviation_ma3_sopra_ma10 > 0.07
+                  
+                    and ma3_last > ma8_last
+                    and ma2_last > ma2_2_min_ago
+                    and macd > -30
+                ):
+                    buy = "BUY 5C RIVOLUZIONARIO con 300>450 NON C'E' NIENTE DA SPEZZARE (la catena) - r 7441 a"
+                    action = "buy"
+                    percentage = 70
+
+
+                elif (
+                    ma78_last >= ma78_2_min_ago
+                    and ma78_last > ma150_last
+                    and ma300_last < ma450_last
+
                     and deviation_ma4_sopra_ma100 > 0.25
                     
                     and deviation_ma3_sopra_ma10 > 0.07
@@ -25219,7 +25213,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                     
                 ):
-                    buy = "BUY 5C RIVOLUZIONARIO con ma78 > and deviation_bellissima > 0.163 (PER SPEZZARE LA CATENA -effetti laterali) - r 7441"
+                    buy = "BUY 5C RIVOLUZIONARIO con ma78 > and deviation_bellissima > 0.163 (PER SPEZZARE LA CATENA - effetti laterali) - r 7441 b"
                     action = "buy"
                     percentage = 70
                     
