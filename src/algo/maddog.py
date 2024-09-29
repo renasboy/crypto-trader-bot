@@ -23882,7 +23882,7 @@ class maddog:
                    
                     and deviation_ma3_sopra_ma10 > 0.01
                   
-                    and ma2_last >= ma2_2_min_ago
+                    
                     and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.01
                     and macd_differenza_2_min_ago > -1.30
                 ):
@@ -23890,7 +23890,8 @@ class maddog:
                     action = "buy"
                     percentage = 70
 
-              
+                    # 29 set 2024 anticipata cazzo
+                    # 29 set 2024 tolta and ma2_last >= ma2_2_min_ago e vaffanculo.
 
               
                
