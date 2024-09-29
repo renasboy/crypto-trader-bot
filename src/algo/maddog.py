@@ -31126,6 +31126,8 @@ class maddog:
                         # 19 apr 2023 aggiunta macd > macd 2 min ago - solo dopo 110 min !
                         # 7 lug 2023 and deviation_sell > 0.30 da > 0.20
                         # 7 lug 2023 dev sell 4-140 da 5-150
+
+
                         
                     elif (
                         ma3_last < ma100_last
@@ -31136,7 +31138,7 @@ class maddog:
                         and ma300_last > ma300_120_min_ago
                         and ma100_last > ma100_60_min_ago
                         
-                        and deviation_sell < 0.15
+                        and deviation_sell < 0.10
                         and deviation_ma39 < 0.05
                         
                         
@@ -31146,7 +31148,7 @@ class maddog:
                         and macd_differenza_2_min_ago < -0.25
                         and ma2_differenza_ma5 < -6
                     ):
-                        sell = "SELL 1 da 110 a 239 min con ma50 < MA ma100 > E ma300 > e 3-100 and macd_differenza_2_min_ago < -0.25 and ma2 < ma5 a dev_sell < 0.15 - r 10262 A1Y"
+                        sell = "SELL 1 da 110 a 239 min con ma50 < MA ma100 > E ma300 > E dev_sell < 0.10 - r 10262 A1 Y"
                         action = "sell"
                         
                         # ma39 NON DEVE VENDERE in fase laterale ma in alto
@@ -31166,8 +31168,10 @@ class maddog:
                         # 17 nov 2023 tolto macd < -2.5 aggiunta in compenso diff macd < -0.25
                         # 17 nov 2023 3-100 da 3-125
                         
-                        # 20 NOV 2023 TOLTO ma5 < ma5 2 min ago ( LA VENDITA !ARRIVATA TARDI !)  
+                        # 20 NOV 2023 TOLTO ma5 < ma5 2 min ago ( LA VENDITA E' ARRIVATA TARDI !)  
                         # 20 NOV 2023 aggiunta and ma2_differenza_ma5 < -6
+                        # 29 set 2024 and deviation_sell < 0.10 da < 0.15
+
                   
                     
                     elif (
