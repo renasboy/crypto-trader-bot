@@ -920,6 +920,9 @@ class maddog:
         
         delta_2_69_39 = (ma69_15_min_ago / ma39_15_min_ago - 1) * 100 if ma39_15_min_ago else 0
         self.algo_helper.info("delta_2_69_39: {}".format(delta_2_69_39))
+
+        # delta_1_69_39 < delta_2_69_39 GIORNO !
+
         
         
         # formula rapporto_delta_1_delta_2_69_39
@@ -9426,6 +9429,8 @@ class maddog:
                     percentage = 80
 
                     # modificata aggiungendo prendi il coltello con il piede
+                    #  2 ott 2024 E' ANDATA BENISSIMO
+
 
                 elif (    
                     ma78_last < ma200_last
@@ -26351,7 +26356,7 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
                     and macd >= macd_2_min_ago
                 ):
-                    buy = "BUY 5 EX BUY 1 1043 B migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND dev 4-18 and deviation_ma3_sopra_ma16 > -0.12 - r 7590"
+                    buy = "BUY 5 EX BUY 1 1043 B considera distanza 5-300 AND dev 10-200 < -0.24 AND dev 4-18 - r 7590"
                     action = "buy"
                     percentage = 50
                     
@@ -46018,8 +46023,12 @@ class maddog:
                 # 19 set 2024 con 100>200 aggiunto and ma2_last < ma5_last cioe' aspetta ancora un pochino
                 # 19 set 2024 forse in futuro dovrai mettere and ma2_last < ma6_last cioe' aspetta un pochino di piu'
 
+
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
+                and delta_1_69_39 < delta_2_69_39
+                and deviation_sell < -0.05
+
                 and ma450_last < ma450_10_min_ago
                 and ma100_last < ma300_last
                 and ma100_last < ma200_last
@@ -46036,7 +46045,42 @@ class maddog:
             
             ):
 
-                sell = "SELL CS - DOLCE ATTESA 270 sec and ma13 < and con 450 < E 100<100 30 min ago e 100 sopra 300 < 0.50 - r 16694 B2y2"
+                sell = "SELL CS - DOLCE ATTESA 270 sec and ma13 < and con 450 < E 100<100 30 min ago MA GIORNO ! - r 16694 B2 Y2 A"
+                action = "sell"
+
+
+                # 4 feb 2022 con <-0.26 ha fatto -0.88% (dopo +4.29%)
+                # 7 feb 2022 con <-0.345 e 270 sec ha fatto -0.38% - aumenta a 0.355 ! - eventualmente ci pensa la condizione CROLLO IMPROVVISO CHE FUNZIONA !
+                # 17 set -0.57 da -0.47
+
+                #  7 set 2004 ro cano e' tornato ! questa condizione interviene solo quando ma100 < ma100 30 min ago
+                #  8 set 2024 aggiunta ma3 < ma3 2 min ago and ma2_last < ma2_2_min_ago
+                # 17 set 2024  questa e' SENZA dev_sell CAZZO con 100<300 !
+                #  2 ott 2024 SE e SOLTANTO SE delta_1_69_39 < delta_2_69_39 aggiungo deviation_sell < -0.05
+                #  2 ott 2024 delta_1_69_39 < delta_2_69_39 significa che e' GIORNO
+
+
+            elif (
+                seconds_since_last_trade > max_hold_time_in_seconds
+                and delta_1_69_39 > delta_2_69_39
+
+                and ma450_last < ma450_10_min_ago
+                and ma100_last < ma300_last
+                and ma100_last < ma200_last
+
+                and ma100_last < ma100_30_min_ago
+                and ma13_last <= ma13_2_min_ago
+
+                and deviation_ma100_sopra_ma200 > -0.70
+                and deviation_ma100_sopra_ma300 < 0.50
+
+                and ma3_last <= ma3_2_min_ago
+                and ma2_last < last_trade_price
+                and ma2_last <= ma2_2_min_ago
+            
+            ):
+
+                sell = "SELL CS - DOLCE ATTESA 270 sec and ma13 < and con 450 < E 100<100 30 min ago e 100 sopra 300 < 0.50 - r 16694 B2 Y2 B"
                 action = "sell"
 
 
