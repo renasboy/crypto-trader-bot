@@ -23923,10 +23923,11 @@ class maddog:
                     #  5 mar 2024 se ma10 < ma20 
                     # 29 set 2024 anticipata di molto prima di cancellare
 
+
                 elif (    
                     ma3_last > ma30_last
                     and ma10_last < ma20_last
-                    
+                    and deviation_ma5_sotto_ma200 < -0.30
                     and ma450_last < ma450_120_min_ago
                     
                     and ma39_last > ma100_last
@@ -23947,7 +23948,7 @@ class maddog:
                     and macd_differenza_2_min_ago > 0.50
                     
                 ):
-                    buy = "BUY 5 con 39>100 e ma450_last < ma450_120_min_ago e ma100_last > ma300_last E 100>200 and macd > macd_2_min_ago - r 7144 A2 X2"
+                    buy = "BUY 5 con ma450_last < ma450_120_min_ago e ma100_last > ma300_last E 100>200 and macd > macd_2_min_ago - r 7144 A2 X2"
                     action = "buy"
                     percentage = 70
                     
@@ -23956,7 +23957,9 @@ class maddog:
                     # 31 gen 2024 39>100 al posto di 50>59
 
                     #  5 mar 2024 se ma10 < ma20 con ma450 che scende deve essere anche and ma3_last > ma3_2_min_ago
-                    # qua potrai aggiugere se 39 < 39 15 min ago il pugno fantasma e prendere il coltello con il piede
+                    #  5 mar 2024 qua potrai aggiugere se 39 < 39 15 min ago il pugno fantasma e prendere il coltello con il piede
+                    #  2 ott 2024 al BUY 5 se 450 < aggiunto and deviation_ma5_sotto_ma200 < -0.30
+
                 
                 elif (    
                     ma4_last > ma50_last
@@ -25308,7 +25311,8 @@ class maddog:
                     
                     ma18_last > ma100_last
                     and ma78_last > ma150_last
-                    
+                    and deviation_ma5_sotto_ma200 < -0.30
+
                     and ma100_last < ma100_120_min_ago
                     and ma200_last < ma200_120_min_ago
                     and ma300_last < ma300_120_min_ago
@@ -25323,8 +25327,9 @@ class maddog:
                     buy = "BUY 5 29 ago 2022 > 120 min di ribasso 78>150 - r 7564 A1"
                     action = "buy"
                     percentage = 90
-                    
-                    
+
+                    #  2 ott 2024 con ma300_last < ma300_120_min_ago al BUY 5 aggiunto and deviation_ma5_sotto_ma200 < -0.50
+                    #  2 ott 2024 nota bene quando si tratta di BUY 5 non dev 5-100 ma dev 5-200 
                     
                     
                     
