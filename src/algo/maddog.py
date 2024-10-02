@@ -17760,10 +17760,11 @@ class maddog:
                     
                 # BUY 3 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-50 - formula MY COMPA (importata dal BUY 1 r 1043 B)
                 
-                elif (
-                    
-                    ma5_last > ma18_last
-                    
+                elif (  
+                    ma3_last > ma18_last
+
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
+
                     and deviation_ma10_sopra_ma200 < -0.25
                     and deviation_ma10_sopra_ma200 > -0.40
                   
@@ -17776,20 +17777,21 @@ class maddog:
                     and ma200_last < ma200_60_min_ago
                     
                     and deviation_ma3_sopra_ma10 > 0.01
-                    and deviation_ma3_sopra_ma16 > 0.075
-                    and deviation_ma5_sopra_ma28 > 0.04
+                    and deviation_ma3_sopra_ma16 > -0.075
+                    and deviation_ma5_sopra_ma28 > -0.04
                     
                     and ma2_last >= ma2_2_min_ago
                     and macd > macd_2_min_ago
                 ):
-                    buy = "BUY 3 che considera distanza 5-300 AND dev 10-200 < -0.25 and > -0.40 (laterale!) AND 5-18 AND 3-16 and macd > macd_2_min_ago - formula MY COMPA - r 6243 A"
+                    buy = "BUY 3 con 5-300 AND dev 10-200 < -0.25 and > -0.40 - formula MY COMPA - r 6243 A"
                     action = "buy"
                     percentage = 80
                     
                     # importante : ma100 sta sotto la ma200 non le e' troppo lontana
                     # 30 mag 2023 5-18 da 5-50
                     # 10 giu 2023 aggiunta 3-16 IL BUY 3 deve avere 3-16 !
-                    
+                    #  2 ott 2024 con 300< aggiunta da staf and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
+                    #  2 ott 2024 ma forse e' da cancellare ma prima aggiungi and deviation_ma5_sopra_o_sotto_ma100 < -0.27
                     
                     
                 # BUY 3 migliore formula MY COMPA - che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-50 - (importata dal BUY 1 r 1043 B)
