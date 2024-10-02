@@ -12035,7 +12035,8 @@ class maddog:
                 
                 elif (    
                     ma3_last > ma18_last
-                    
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
+
                     and ma100_last < ma100_10_min_ago
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.12
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.52
@@ -12062,7 +12063,7 @@ class maddog:
                     and macd > -30
                     and macd_differenza_2_min_ago > 1.25
                 ):
-                    buy = "BUY 2 che considera distanza 5-300 AND dev 10-200 < -0.24 AND dev_ma3_sopra_ma16 > -0.01 - r 4713 NUOVA ERA A2 STRONG"
+                    buy = "BUY 2 che considera distanza 5-300 AND dev 10-200 < -0.24 AND cano STAF - r 4713 NUOVA ERA A2 STRONG"
                     action = "buy"
                     percentage = 70
                     
@@ -12070,8 +12071,8 @@ class maddog:
                     #  3 nov 2023 mi basta che macd > -3
                     #  3 nov 2023 and deviation_ma3_sopra_ma16 > 0.08 da 0.12
                     # 11 set 2024 anticipata ndecchiecella
-
-
+                    #  2 ott 2024 se 300< allora aggiunta solo sul BUY 2 and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15 da cano STAF
+                    #  2 ott 2024 cioe' ma100 decresce ma non cosi' tanto ! 
               
                     
                 elif (
