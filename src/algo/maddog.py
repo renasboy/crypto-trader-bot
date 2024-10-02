@@ -4158,9 +4158,10 @@ class maddog:
 
 
                 
-                
                 elif (    
                     ma3_last > ma15_last
+                    and ma450_last > ma450_120_min_ago
+                    
                     and ma100_last < ma100_120_min_ago
                     and ma200_last > ma200_120_min_ago
                     
@@ -4184,10 +4185,44 @@ class maddog:
                     and ma50_differenza_ma59 < -5
                     
                 ):    
-                    buy = "BUY 1 compare forever - con 5-20 E CON 300 ancora vicina alla 450 ( anche un poco sotto! ) + MACD > and ma50_differenza_ma59 < -5 - r 1537 A2 Y2"
+                    buy = "BUY 1 compare forever - con 5-20 E CON 300 ancora vicina alla 450 ( anche un poco sotto! ) + MACD > - r 1537 A2 Y2a"
                     action = "buy"
                     percentage = 90
 
+
+                elif (    
+                    ma3_last > ma15_last
+                    and ma450_last < ma450_120_min_ago
+                    and deviation_ma5_sotto_ma200 < -0.25
+                    
+                    and ma100_last < ma100_120_min_ago
+                    and ma200_last > ma200_120_min_ago
+                    
+                    and deviation_ma54_sopra_o_sotto_ma72 < 0.015
+                    and deviation_ma54_sopra_o_sotto_ma72 > -0.015
+                    
+                    and deviation_ma39_sotto_ma200 < 0.20
+                    and deviation_ma300_sopra_ma450 > -0.45
+                    
+                    and deviation_ma3_sopra_ma10 > -0.005
+                    and deviation_ma3_sopra_ma16 > 0.03
+                    and deviation_ma3_sopra_ma18 > -0.01
+                    
+                    and ma2_last >= ma20_last
+                  
+                    and ma2_last >= ma2_2_min_ago
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.020
+                    and macd >= macd_2_min_ago
+                    and macd_differenza_2_min_ago > 1.25
+                    and macd > -40
+                    and ma50_differenza_ma59 < -5
+                    
+                ):    
+                    buy = "BUY 1 compare forever - con 5-20 E CON 300 ancora vicina alla 450 ( anche un poco sotto! ) + MACD > - r 1537 A2 Y2b"
+                    action = "buy"
+                    percentage = 90
+
+                    #  2 ott 2024 se 450 < allora dev 5 -200 < -0.25 cazzo
 
 
 
@@ -23963,6 +23998,7 @@ class maddog:
                 
                 elif (    
                     ma4_last > ma50_last
+                    and deviation_ma5_sotto_ma200 < -0.25
                     and ma450_last < ma450_120_min_ago
                     and ma100_last <= ma200_last
                     
@@ -23979,7 +24015,7 @@ class maddog:
                     and macd_differenza_2_min_ago > 0.20
                     and macd >= macd_2_min_ago
                 ):
-                    buy = "BUY 5 con 50>59 AND and ma450_last < ma450_120_min_ago CON ma100_last > ma300_last MA 100<200 and macd > macd_2_min_ago - r 7144 A2y"
+                    buy = "BUY 5 con ma450_last < ma450_120_min_ago CON ma100_last > ma300_last MA 100<200 and macd > macd_2_min_ago - r 7144 A2y"
                     action = "buy"
                     percentage = 70
                     
@@ -23991,7 +24027,7 @@ class maddog:
                     # 16 set 2023 tolto and deviation_buy3 > 0.05
                     # 16 set 2023 aggiunta and macd > macd_2_min_ago
                     # 28 set 2023 aggiunta 450 < 450 120 min ago
-              
+                    #  2 ott 2024 se 450< al BUY 5 AGGIUNTO and deviation_ma5_sotto_ma200 < -0.25
               
                 elif (
                     ma50_last < ma50_2_min_ago
