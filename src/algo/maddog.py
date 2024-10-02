@@ -26361,6 +26361,8 @@ class maddog:
                     percentage = 50
                     
                     # 16 nov 2023 questa condizione l'ho importata dal BUY 1 perche' ha comprato benissimo e mi ha fatto risparmiare un sacco di SELL
+                    #  2 ott 2024 lasciala per il momento (ha comprato appena ha ripreso a scendere e con 450 che scendeva da gia' da tanto...)
+
 
 
                 # BUY 1 GRANDE RIBASSO MASERATI CHE NON E' UN CROLLO ! (compare stammi vicino!) HA FUNZIONATO ! viva ro combaro meo !
@@ -46056,6 +46058,7 @@ class maddog:
                 #  7 set 2004 ro cano e' tornato ! questa condizione interviene solo quando ma100 < ma100 30 min ago
                 #  8 set 2024 aggiunta ma3 < ma3 2 min ago and ma2_last < ma2_2_min_ago
                 # 17 set 2024  questa e' SENZA dev_sell CAZZO con 100<300 !
+
                 #  2 ott 2024 SE e SOLTANTO SE delta_1_69_39 < delta_2_69_39 aggiungo deviation_sell < -0.05
                 #  2 ott 2024 delta_1_69_39 < delta_2_69_39 significa che e' GIORNO
 
