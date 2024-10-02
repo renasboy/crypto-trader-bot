@@ -12038,10 +12038,8 @@ class maddog:
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
 
                     and ma100_last < ma100_10_min_ago
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.12
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.52
-                    
-                    
+                  
                     and ma450_last < ma450_360_min_ago
                     
                     and deviation_ma5_sopra_ma200 < -0.30
@@ -21191,7 +21189,7 @@ class maddog:
                     and ma5_last >= ma15_last
                     and ma5_last >= ma25_last
                 ):    
-                    buy = "BUY 4B NOTTE - importato da BUY 3 RCCR se ma39 > ma59 con 300> e 100> - r 6736 A1y"
+                    buy = "BUY 4 NOTTE - importato da BUY 3 RCCR se ma39 > ma59 con 300> e 100> - r 6736 A1y"
                     action = "buy"
                     percentage = 70
                     
@@ -21217,18 +21215,20 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
                     and macd > macd_2_min_ago
                 ):    
-                    buy = "BUY 4B importato da BUY 3 RCCR con 4-30 con 300 > e 100 < - r 6736 A1 Z1"
+                    buy = "BUY 4 importato da BUY 3 RCCR con 4-30 con 300 > e 100 < - r 6736 A1 Z1"
                     action = "buy"
                     percentage = 70
 
                     #  5 mar 2024 se 39 > 100 ok cosi'
-                    
 
+
+                    
                 elif (
                     deviation_ma4_sopra_ma30 > 0.01
                     and ma39_last < ma100_last
                     and deviation_ma39 > 0.192
-                    
+
+                    and ma450_last > ma450_120_min_ago
                     and ma300_last > ma300_120_min_ago
                     and ma100_last < ma100_60_min_ago
                     
@@ -21240,12 +21240,39 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
                     and macd > macd_2_min_ago
                 ):    
-                    buy = "BUY 4B importato da BUY 3 RCCR con 4-30 con 300 > e 100 < - r 6736 A1 Z2"
+                    buy = "BUY 4 importato da BUY 3 RCCR con 4-30 con 300 > e 100 < - r 6736 A1 Z2x"
                     action = "buy"
                     percentage = 70
                     
                     #  5 mar 2024 se 39 < 100 pugno fantasma
+
+
+                
+                elif (    
+                    ma3_last > ma20_last
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.52
+
+                    and ma450_last < ma450_120_min_ago
+                    and ma300_last > ma300_120_min_ago
+                    and ma100_last < ma100_60_min_ago
+                    and ma39_last < ma100_last
+
+                    and deviation > -0.30
+                
+                    and ma3_last > ma8_last
+                    and ma5_last >= ma15_last
                     
+                    and ma2_last >= ma2_2_min_ago
+                    and macd > macd_2_min_ago
+                ):    
+                    buy = "BUY 4 importato da BUY 3 RCCR con 4-30 con 300 > e 100 < - r 6736 A1 Z2y"
+                    action = "buy"
+                    percentage = 70
+                    
+                    #  5 mar 2024 se 39 < 100 pugno fantasma
+                    #  2 ott 2024 con 450 < cano staf cioe' aggiunta and deviation_ma5_sopra_o_sotto_ma100 < -0.52
+
+
                     
                 elif (
                     deviation_ma4_sopra_ma30 > 0.01
