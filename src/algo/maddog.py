@@ -26337,7 +26337,8 @@ class maddog:
                     ma3_last > ma18_last
                 
                     and ma450_last < ma450_360_min_ago
-                    
+                    and deviation_ma100_sopra_ma450 > -0.27
+
                     and deviation_ma5_sopra_ma200 < -0.30
                     and deviation_ma5_sotto_ma300 < -0.30
                     and deviation_ma5_sotto_ma450 < -0.30
@@ -26358,10 +26359,12 @@ class maddog:
                 ):
                     buy = "BUY 5 EX BUY 1 1043 B considera distanza 5-300 AND dev 10-200 < -0.24 AND dev 4-18 - r 7590"
                     action = "buy"
-                    percentage = 50
+                    percentage = 70
                     
                     # 16 nov 2023 questa condizione l'ho importata dal BUY 1 perche' ha comprato benissimo e mi ha fatto risparmiare un sacco di SELL
                     #  2 ott 2024 lasciala per il momento (ha comprato appena ha ripreso a scendere e con 450 che scendeva da gia' da tanto...)
+                    #  2 ott 2024 se e' un BUY 5 e 450 scende da tanto tempo la ma100 NON DEVE STARE TROPPO LONTANA DALLA ma450 ! 
+                    #  2 ott 2024 perche' altrimenti sta scendendo ed e' inutile andare contro il mercato. lasciala scendere !
 
 
 
