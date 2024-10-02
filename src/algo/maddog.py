@@ -26106,7 +26106,10 @@ class maddog:
                 
                 elif ( 
                     ma78_last < ma150_last
-                   
+
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.27
+
                     and deviation_ma5_sotto_ma300 < -1.20
                     
                     and deviation_ma3_sopra_ma10 > 0.077
@@ -26125,7 +26128,7 @@ class maddog:
                     and macd >= macd_2_min_ago
                     and ma2_last > ma5_last
                 ):
-                    buy = "BUY 5 29 ago 2022 > 180 min ribasso CON 5-300 < -1.20 E 78<150 and 3-16 > 0.08 e macd > macd 2 min ago e ma2_diff_2_min_ago > 8 - r 7564 B2 Y2 y"
+                    buy = "BUY 5 29 ago 2022 > 180 min ribasso CON 5-300 < -1.20 E 78<150 + cano STAF - r 7564 B2 Y2 y"
                     action = "buy"
                     percentage = 90
                     
@@ -26144,7 +26147,12 @@ class maddog:
                     # 10 dic 2023 ma2_differenza_2_min_ago >7 da >5
                     # 18 dic 2023 aggiunto ma20 <= ma20 2 min ago
                     # 18 dic 2023 and deviation_ma3_sopra_ma16 > 0.08 da 0.06
-              
+
+                    #  2 ott 2024 aggiunta da CANO STAF and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
+                    #  2 ott 2024 aggiunta da CANO STAF and deviation_ma5_sopra_o_sotto_ma100 < -0.27
+                    #  2 ott 2024 e' una condizione che ha continuato a comprare diverse volte durante il ribasso !
+
+
                 
               
                 # NELLA CORREZIONE EVENTUALE (SIAMO AL BUY 5 !) qui NON HO messo and ma50_last > ma100_last
@@ -45713,9 +45721,36 @@ class maddog:
                 action = "sell"
                 
                 # 11 gen 2024 -0.37 da -0.57
-            
+
+
             elif (    
                 ma2_last <= ma4_last
+                and ma10_last > ma30_last
+
+                and ma300_last < ma300_301_min_ago
+                and ma2_last <= ma5_last
+                and deviation_crollo_24_aprile < -0.14
+                
+                and delta_1 > delta_2
+                and deviation_ma5_sotto_ma200 < -0.40
+                
+                and deviation_ma2_sopra_o_sotto_ma2_2_min_ago <= -0.015
+                and macd_differenza_2_min_ago < -0.50
+                
+                and macd > 1
+            ): 
+                
+                sell = "SELL CS Bocelli - CROLLO IMPROVVISO E delta_1 > delta_2 e dev_crollo_24_aprile < -0.14 MA ma10 > ma30 - r 16480 BYaA"
+                action = "sell"
+
+                #  8 mar 2024 con macd > 1 deviation_crollo_24_aprile < -0.13
+                #  2 ott 2024 CON ma10_last > ma30_last and deviation_crollo_24_aprile < -0.14 da < -0.13
+
+
+            elif (    
+                ma2_last <= ma4_last
+                and ma10_last < ma30_last
+
                 and ma300_last < ma300_301_min_ago
                 and ma2_last <= ma5_last
                 and deviation_crollo_24_aprile < -0.13
@@ -45729,10 +45764,12 @@ class maddog:
                 and macd > 1
             ): 
                 
-                sell = "SELL cond spec 21 Bocelli - core 'ngrato - CROLLO IMPROVVISO E delta_1 > delta_2 e dev_crollo_24_aprile < -0.13 E dev_ma2 < -0.015 e diff macd - r 16480 BYa"
+                sell = "SELL CS Bocelli - CROLLO IMPROVVISO E delta_1 > delta_2 e dev_crollo_24_aprile < -0.13 E ma10 < ma30 - r 16480 BYaB"
                 action = "sell"
 
                 #  8 mar 2024 con macd > 1 deviation_crollo_24_aprile < -0.13
+
+
 
             elif (    
                 ma2_last <= ma4_last
