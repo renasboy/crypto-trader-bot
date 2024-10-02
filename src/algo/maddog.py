@@ -25116,18 +25116,15 @@ class maddog:
                     and ma450_last > ma450_360_min_ago
                     and ma78_last > ma150_last
                     
-                    and deviation_ma3_sotto_ma100 < 0.02
-                    
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.03
+
                     and deviation_ma3_sopra_ma10 > 0.01
-                    and deviation_ma3_sopra_ma16 > 0.01
-                    
-                    and ma4_last > ma9_last
-                    and ma4_last > ma20_last
+                    and deviation_ma3_sopra_ma16 > -0.01
                     
                     and ma2_last >= ma2_2_min_ago
               
                 ):
-                    buy = "BUY 5A con ma450_last > ma450_360_min_ago and deviation_ma3_sotto_ma100 < 0.02 - r 7384 A2"
+                    buy = "BUY 5A con ma450_last > ma450_360_min_ago and deviation_ma5_sopra_o_sotto_ma100 < -0.03 - r 7384 A2"
                     action = "buy"
                     percentage = 70
                     
@@ -25141,6 +25138,8 @@ class maddog:
                     #  7 mar 2024 con ma450_last > ma450_360_min_ago 4-20 da 4-30
                     #  9 set 2024 dopo un grande rialzo la faccio comprare SOLO quando ma3 e' ancora vicina alla ma100
                     # 12 set 2024 aggiunta and ma300_last > ma300_30_min_ago prima di CANCELLARE
+                    #  2 ott 2024 aggiunta and deviation_ma5_sopra_o_sotto_ma100 < -0.05 e anticipata una ndecchiecella
+                    #  2 ott 2024 sempre prima di cancellare. dare un' altra possibilita'.
 
 
                 # 21 set 2024 cancellata r 7384 B1
