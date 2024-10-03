@@ -7523,14 +7523,13 @@ class maddog:
 
                 elif (
                     ma3_last > ma18_last
-                    and ma450_last > ma450_120_min_ago
-
+                    and ma450_last > ma450_360_min_ago
                     
                     
                     and ma100_last > ma100_120_min_ago
                     and ma200_last > ma200_120_min_ago
                     and ma300_last > ma300_120_min_ago
-                    
+
                     and ma100_last > ma200_last
                     and ma200_last > ma300_last
                     
@@ -7545,7 +7544,38 @@ class maddog:
                     and macd > -40
                 ):    
                     
-                    buy = "BUY 1 CORREZIONE FIAT con medie lunghe TUTTE IN RIALZO ! anche ma450 ! - r 2527a"
+                    buy = "BUY 1 CORREZIONE FIAT con medie lunghe TUTTE IN RIALZO ! anche ma450 ! - r 2527a1"
+                    action = "buy"
+                    percentage = 80
+
+
+
+                elif (
+                    ma3_last > ma18_last
+                    and ma450_last < ma450_360_min_ago
+                    and ma28_last > ma28_30_min_ago
+                    
+                    and ma100_last > ma100_120_min_ago
+                    and ma200_last > ma200_120_min_ago
+                    and ma300_last > ma300_120_min_ago
+
+                    
+
+                    and ma100_last > ma200_last
+                    and ma200_last > ma300_last
+                    
+                    and deviation_buy_crollo_1 < -0.33
+                    and deviation_buy_crollo_1 > -0.69
+                    
+                    
+                    and ma2_last > ma2_2_min_ago
+                    and ma2_last > ma3_last
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
+                    and macd_differenza_2_min_ago > 1.10
+                    and macd > -40
+                ):    
+                    
+                    buy = "BUY 1 CORREZIONE FIAT con medie lunghe TUTTE IN RIALZO ! MA NON ma450 ! - r 2527a2"
                     action = "buy"
                     percentage = 80
 
@@ -7554,7 +7584,7 @@ class maddog:
                     # 18 dic 2023 aggiunta and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
                     # 18 dic 2023 aggiunta and macd_differenza_2_min_ago > 1.10
                     # 19 set 2024 se 450 > allora anticipa e tolgo 100>10 min perche' fa arrivare tardi
-
+                    #  3 ott 2024 compra solo se and ma28_last > ma28_30_min_ago
 
                 elif (
                     ma3_last > ma25_last
@@ -17936,6 +17966,7 @@ class maddog:
                     ma450_last > ma450_120_min_ago
                     and (ma5_prev < ma90_prev and ma5_last > ma90_last)
                     and ma100_last > ma300_last
+                    and ma28_last > ma28_30_min_ago
                     
                     and ma2_last >= ma2_2_min_ago
                     and macd >= macd_2_min_ago
@@ -17945,7 +17976,7 @@ class maddog:
                     percentage = 70
                     
                     # 13 feb 2023 aggiunta questa
-
+                    #  3 ott 2024 compra solo se and ma28_last > ma28_30_min_ago
 
                     
 
