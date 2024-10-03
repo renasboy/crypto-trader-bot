@@ -6145,15 +6145,21 @@ class maddog:
                     # se siamo in presenza di un ribasso piu' marcato HO TOLTO 18 10 min e ho messo 10>20 piu' veloce (che mi evita molti buy inutili sempre durante il ribasso)
                     # 16 set 2024 anticipato ndecchiecella
 
+                
 
                 elif (     
                     
                     ma3_last > ma20_last
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.27
+                    and ma100_last < ma100_60_min_ago
+
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
+                    and ma200_last < ma200_120_min_ago
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.30
 
                     and ma18_last <= ma18_10_min_ago
                     and ma50_differenza_ma59 >= -14
-                    and ma100_last < ma100_60_min_ago
+                    
                     
                     and deviation_ma54_sopra_o_sotto_ma72 < -0.015
                     
@@ -6182,8 +6188,11 @@ class maddog:
                     # 13 dic 2023 3-20 da 3-18
                     # 22 dic 2023 and deviation_ma3_sopra_ma16 > 0.125 da -0.04 se ma 18 di adesso e' piu' bassa di ma18 di 10 min ago
                     # 20 set 2024 anticipata ndecchiecella e aggiunto prendi coltello con il piede
+
+                    #  3 ott 2024 modificata con ma200_last < ma200_120_min_ago aggiunto deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
+
+
                   
-                
                 elif (     
                     ma3_last > ma18_last
 
@@ -9418,6 +9427,8 @@ class maddog:
                     
                     and ma100_last < ma100_10_min_ago
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
+                    and ma200_last < ma200_120_min_ago
+
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.27
                     
                     
@@ -9428,7 +9439,7 @@ class maddog:
                     and ma200_last < ma300_last
                     
                     and ma100_last < ma100_120_min_ago
-                    and ma200_last < ma200_120_min_ago
+                    
                     and ma300_last < ma300_120_min_ago
                     
                     and deviation_ma3_sopra_ma10 > 0.01
