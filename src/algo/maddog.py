@@ -23058,7 +23058,31 @@ class maddog:
                 # BUY 4 se 100>200 non devi spezzare proprio un cazzo
 
                 elif (
+                    ma4_last > ma50_last
+                    and delta_450_200 < delta_450_200_60_min
+
+                    and ma100_last > ma200_last
+                   
+                    and deviation_ma3_sopra_ma28 > -0.07
+                    
+                    and ma3_last > ma13_last
+                    and ma4_last > ma9_last
+                    
+
+                    and ma2_last > ma2_2_min_ago
+             
+                ):
+                    buy = "BUY 4 con 100>200 E doppio delta GIORNO (non spezzo la catena !) ! - r 7065 a"
+                    action = "buy"
+                    percentage = 70
+
+                    #  3 ott 2024 aggiunto doppio delta GIORNO  e anticipato.
+
+
+                elif (
                     ma59_last >= ma59_2_min_ago
+                    and delta_450_200 > delta_450_200_60_min
+
                     and ma100_last > ma200_last
                     and ma8_last > ma200_last
 
@@ -23071,7 +23095,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
              
                 ):
-                    buy = "BUY 4 se 100>200 NON DEVI SPEZZARE LA CATENA ! - r 7065"
+                    buy = "BUY 4 con 100>200 MA doppio delta NOTTE - r 7065 b"
                     action = "buy"
                     percentage = 70
 
@@ -23081,6 +23105,7 @@ class maddog:
                     
                     # 20 set 2024 anticipata ndecchiecella 
                     # 21 set 2024 se 100 > 200 non devi spezzare proprio un cazzo ! - anticipata
+                    #  3 ott 2024 aggiunto doppio delta
 
                 
                 elif ( 
