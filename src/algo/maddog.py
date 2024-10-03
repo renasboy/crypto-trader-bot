@@ -43510,9 +43510,12 @@ class maddog:
                 #  9 gen 2024 and deviation_sell < -0.01 SE deviation_ma250_sopra_ma300 < -0.12
 
 
-            
             elif (
                 ma78_last < ma78_120_min_ago
+
+                and delta_450_200 < delta_450_200_60_min
+                and delta_150_100 <= delta_150_100_60_min
+
                 and ma30_last > ma50_last
                 and ma20_last <= ma20_2_min_ago
                 and ma20_last > ma20_10_min_ago
@@ -43520,7 +43523,38 @@ class maddog:
                 and ma50_last <= ma50_2_min_ago
                 
                 and ma300_last < ma300_301_min_ago
+                
+                and deviation_ma39 < 0.10
+                and deviation_sell < -0.05
+                
+                and deviation_ma100_sopra_ma300 < 0.40
+                and deviation_ma5_sotto_ma200 > -0.50
+                
+                and ma2_last < ma2_2_min_ago
+                and ma2_differenza_2_min_ago < -15
+                and macd_differenza_2_min_ago < -0.35
+                and deviation_ma2_sopra_o_sotto_ma5 < -0.064
+            ):
+                sell = "SELL C.S. GIORNO-GIORNO con ma300 < 5 ore e 30>50 e ma50 <= e dev 3-39 < 0.10 e dev_sell < -0.05 e ma78 < - r 16045 B2 Y1 x1"
+                action = "sell"
+
+                #  3 ott 2023 se e' GIORNO- GIORNO dev sell a -0.05 da -0.01 
+                #  3 ott 2023 se e' GIORNO- GIORNO dev_ma39 < 0.10 da -0.13
+
+            elif (
+                ma78_last < ma78_120_min_ago
+
+                and delta_450_200 > delta_450_200_60_min
                 and delta_150_100 <= delta_150_100_60_min
+
+                and ma30_last > ma50_last
+                and ma20_last <= ma20_2_min_ago
+                and ma20_last > ma20_10_min_ago
+                
+                and ma50_last <= ma50_2_min_ago
+                
+                and ma300_last < ma300_301_min_ago
+
                 
                 and deviation_ma39 < 0.13
                 and deviation_sell < -0.01
@@ -43533,12 +43567,14 @@ class maddog:
                 and macd_differenza_2_min_ago < -0.35
                 and deviation_ma2_sopra_o_sotto_ma5 < -0.064
             ):
-                sell = "SELL C.S. GIORNO con ma300 < 5 ore e 30>50 e ma50 <= e dev 3-39 < 0.13 e dev_sell < -0.01 e ma78 < e macd_diff < -0.35 E dev 2-5 < -0.064 - r 16045 B2 Y1 x"
+                sell = "SELL C.S. GIORNO-NOTTE con ma300 < 5 ore e 30>50 e ma50 <= e dev 3-39 < 0.13 e dev_sell < -0.01 e ma78 < - r 16045 B2 Y1 x2"
                 action = "sell"
                 
                 # 23 dic 2023 dev_sell < 0.01 se ma20 cresce da 10 min
                 # 18 gen 2024 dev_sell < a -0.01 da 0.01 (ma30 e' andata sopra ma50 sembra una chiara inversione di tendenza !)
                 # 18 gen 2024 ho aggiunto and deviation_ma2_sopra_o_sotto_ma5 < -0.064 MA SOLO QUI
+
+
             
             elif (
                 ma78_last < ma78_120_min_ago
