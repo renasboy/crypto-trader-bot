@@ -3397,43 +3397,10 @@ class maddog:
                     percentage = 50
 
 
+                #  3 ott 2024 r 1205 B NUOVA ERA A3 SOFT cancellata
 
-                elif (    
-                    ma3_last > ma13_last
-                    and deviation_ma100_sopra_ma450 > -0.23
 
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
-                    and deviation_ma5_sopra_o_sotto_ma100 > -0.60
-                    
-                    and ma300_last < ma300_180_min_ago
-                    
-                    and deviation_ma300_sopra_ma450 < 0.25
-                    and deviation_ma300_sopra_ma450 > -0.25
-                    
-                    and deviation_ma100_sopra_ma300 < 0.30
-                    and deviation_ma100_sopra_ma300 > -0.40
-                    
-                    and deviation_ma3_sopra_ma10 > -0.01
-                    and deviation_ma3_sopra_ma16 > -0.01
-                    
-                    and ma2_last >= ma2_2_min_ago
-                   
-                    and macd >= macd_2_min_ago
-                    and macd > -40
-                    and macd_differenza_2_min_ago > 0.30
-                   
-                ):
-                    buy = "BUY 1 TREND LATERALE con ma300_last < 3 ore e 3-10 > -0.01 e macd > -40 - r 1205 B NUOVA ERA A3 SOFT"
-                    action = "buy"
-                    percentage = 50
-                    
-                    # 26 feb 2024 anticipato ndecchiecella se 100> 100 5 min ago e consolidato laterale
-                    #  9 set 2024 anticipato ancora ndecchiecella
-                    # 16 set 2024 anticipato ancora ndecchiecella
-                    # 16 set 2016 aggiunto and deviation_ma100_sopra_ma450 > -0.23 
-                    # 16 set 2024 (perche' se il TREND E' LATERALE allora la ma100 non deve stare troppo sotto alla ma450)
-                    # 16 set 2024 pero' prima io avevo anticipato. vediamo che succede.
-
+                
                 elif (    
                     ma3_last > ma20_last
                     
@@ -5624,39 +5591,8 @@ class maddog:
                     percentage = 90
 
 
-                  
-                elif (    
-                    ma3_last > ma20_last
-                    
-                    and ma100_last > ma100_5_min_ago
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
-                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
-                    
-                    and ma100_last < ma100_60_min_ago
-                    and ma100_last < ma100_120_min_ago
-                    
-                    and deviation_ma39_sotto_ma200 < -0.01
-                    and deviation_ma54_sopra_o_sotto_ma72 < -0.015
-                    
-                    
-                    and deviation_ma3_sopra_ma10 > 0.017
-                    and deviation_ma3_sopra_ma16 > 0.05
-                    and deviation_ma3_sopra_ma18 > -0.01
-                    
-                    and ma2_last >= ma20_last
-                    
-                    and ma2_last >= ma2_2_min_ago
-                    and macd >= macd_2_min_ago
-                    and ma2_differenza_2_min_ago > 3
-                    
-                ):    
-                    buy = "BUY 1 CF 3>20 - 300 vicina 450 (anche sotto !) - r 1537 A3X 4B NUOVA ERA A3 SOFT a"
-                    action = "buy"
-                    percentage = 90
-
-                    # 18 set 2024 anticipata ndecchiecella ! vediamo come va
-
-
+                #  3 ott 2024 cancellata r 1537 A3X 4B NUOVA ERA A3 SOFT a
+                
 
                 elif (    
                     ma3_last > ma20_last
@@ -11826,20 +11762,24 @@ class maddog:
               
                     
                 elif (
-                    ma69_last >= ma69_2_min_ago
+                    ma3_last > ma20_last
+                    
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
+                    and ma200_last < ma200_120_min_ago
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.20
+                    
+
                     and deviation_ma100_sopra_ma300 < 0.20
                     and ma78_last < ma200_last
                     
-                    and deviation_buy2 > 0.02
-                    and deviation_ma3_sopra_ma10 > 0.24
-                    and deviation_ma5_sopra_ma28 > 0.18
                     
-                    and deviation_bellissima > 0.12
-                    and deviation_buy_ma3_sopra_ma13 > 0.08
-                    and deviation_ma7_sopra_ma40 > 0.06
+                    and deviation_ma3_sopra_ma10 > 0.02
+                    and deviation_ma5_sopra_ma28 > -0.10
+                    
                     and ma2_last >= ma2_2_min_ago
                     and price > price_2_min_ago
-                    and ma3_last > ma40_last
+                    
                     and macd >= macd_2_min_ago
                 ):
                     buy = "BUY 2A ribasso o laterale and ma78_last < ma200_last - r 4709 B"
@@ -11849,7 +11789,7 @@ class maddog:
                     # deviation_buy_ma3_sopra_ma13 > x e' fondamentale !
                     # deviation_buy2 = ma8_last/ma50_last
                     # roma aggiunta 5-28
-                    
+                    #  3 ott 2024 aggiunto cane STAF
                     
                     
                 
