@@ -47261,9 +47261,9 @@ class maddog:
                 and ma2_last < ma2_2_min_ago
                 and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.018
                 and macd < macd_2_min_ago
-                and macd_differenza_2_min_ago < -1
+                and macd_differenza_2_min_ago < -1.50
             ):    
-                sell = "SELL C.S. 3-36 - P M e S (ma non troppo !) (> 120 min ) con dev > 0.80 e ma5_12_min_ago - r 16873 C1x"
+                sell = "SELL C.S. 3-36 - PMS (ma non troppo !) (> 120 min) e dev > 0.80 e ma5_12_min_ago E macd_diff_2_min_ago < -1.50 - r 16873 C1x"
                 action = "sell"
                 
                 # 27 set 2023 macd < macd 2 min ago 
@@ -47273,7 +47273,7 @@ class maddog:
                 # 11 gen 2024 3-36 da 3-33 dopo 2 ore di rialzo non e' proprio un pochi maledetti e SUBITO !
                 
                 #  6 mar 2024 se ma39_last > ma39_15_min_ago allora vende con ma5_last < ma5_12_min_ago ( dico 12 min invece di 11 )
-
+                #  3 ott 2024 and macd_differenza_2_min_ago < -1.50 da <-1.00
 
             elif (
                 deviation_sell > 0.80
