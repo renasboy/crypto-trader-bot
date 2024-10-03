@@ -25115,9 +25115,10 @@ class maddog:
                     and ma300_last > ma300_30_min_ago
                     and ma450_last > ma450_360_min_ago
                     and ma78_last > ma150_last
-                    
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.03
 
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.15
+                    
                     and deviation_ma3_sopra_ma10 > 0.01
                     and deviation_ma3_sopra_ma16 > -0.01
                     
@@ -25140,6 +25141,8 @@ class maddog:
                     # 12 set 2024 aggiunta and ma300_last > ma300_30_min_ago prima di CANCELLARE
                     #  2 ott 2024 aggiunta and deviation_ma5_sopra_o_sotto_ma100 < -0.05 e anticipata una ndecchiecella
                     #  2 ott 2024 sempre prima di cancellare. dare un' altra possibilita'.
+                    #  3 ott 2024 aggiunta da CANO STAF and deviation_ma5_sopra_o_sotto_ma100 < -0.15 (ma e' -0.30)
+                    #  3 ott 2024 aggiunta da CANO STAF and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
 
 
                 # 21 set 2024 cancellata r 7384 B1
@@ -28963,9 +28966,31 @@ class maddog:
                         
                         
                     # -------------------------------------------------------------------------------------- guadagno durante il crollo PESANTE
-                    
+
                     elif (
                         ma50_last < ma50_2_min_ago
+                        and ma39_last > ma100_last
+                        and (ma3_prev > ma90_prev and ma3_last < ma90_last)
+
+                        and deviation_ma5_sotto_ma300 < -1.20
+                        
+                        and deviation_sell > 0.25 
+                        and deviation_sell < 0.60
+                        and ma2_last < ma2_2_min_ago
+                        
+                    ):
+                        sell = "SELL 1 eventuale GAIN nel crollo (21-50 min) con ma50< e incr 3-90 (ma39 e' andata sopra ma100) E dev_sell 0.25-0.60 - r 9327 Bx"
+                        action = "sell"
+                        
+                        # 14 set 3-30 da 3-28
+                        #  3 ott 2024 se durante il crollo ma39 e' andata sopra ma100 allora statti un poco piu' calmo. 
+                        #  3 ott 2024 se durante il crollo ma39 e' andata sopra ma100 vende con incrocio al ribasso 3-90 da 3-30 !
+
+
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and ma39_last < ma100_last
+
                         and deviation_ma5_sotto_ma300 < -1.20
                         and (ma3_prev > ma30_prev and ma3_last < ma30_last)
                         and deviation_sell > 0.30 
@@ -28973,7 +28998,7 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 eventuale GAIN nel crollo PESANTE (21-50 min) con ma50 < incr 3-30 and dev_sell 0.30 - 0.54 and dev 5-300 < -1.20 - r 9327 B"
+                        sell = "SELL 1 eventuale GAIN nel crollo (21-50 min) con ma50< E incr 3-30 (ma39 sta ancora sotto ma100) E dev_sell 0.30-0.54 - r 9327 By"
                         action = "sell"
                         
                         # 14 set 3-30 da 3-28
@@ -37867,17 +37892,20 @@ class maddog:
                         sell = "SELL 3 (21-60 min) con ma50 < and ma300< and deviation_sell < -0.28 - r 13725 x"
                         action = "sell"
                         
+                    
                         
                     elif (    
                         ma50_last < ma50_2_min_ago
                         and ma450_last < ma450_480_min_ago
                         and ma300_last < ma300_120_min_ago
                         and ma2_last < ma2_2_min_ago 
+                        and ma3_last < ma18_last
                         and deviation_sell < -0.22
                     ):
                         sell = "SELL 3 (21-60 min) con ma50 < and ma300< and deviation_sell < -0.22 - r 13725 y"
                         action = "sell"
-                        
+
+                        #  3 ott 2024 aggiunta and ma3_last < ma18_last ha venduto a +0.58 ! strano. ma vabbe'
                      
                     
 
