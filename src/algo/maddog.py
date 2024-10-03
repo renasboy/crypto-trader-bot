@@ -42131,19 +42131,40 @@ class maddog:
                         #  1 feb 2023 dev_39 -0.243 da -0.239
                         # 13 nov 2023 se 100 sta sopra 300 allora vende solo dev 3-39
 
-                    
+
+
                     elif (    
                         ma50_last < ma50_2_min_ago
-                        
+                        and ma450_last > ma450_120_min_ago
+                        and ma100_last > ma100_120_min_ago
+                        and ma8_last < ma90_last
                         and deviation_ma100_sopra_ma300 > 0.25
                         and deviation_ma39 < -0.01
                         
-                        and ma100_last > ma100_120_min_ago
                         and ma2_last < ma2_2_min_ago
                         and macd_differenza_2_min_ago < -2.50
                         and macd < -6
                     ):
-                        sell = "SELL 4-5-x dopo 90 min con ma50 < E dev_ma100_sopra_ma300 > 0.25 con deviation_ma39 < -0.20 and 100 > 100 120 min ago - r 15893 A1 Y2"
+                        sell = "SELL 4-5-x >90 min con ma50< E ma100 sopra ma300 > 0.25 E dev_ma39 < -0.20 E 100 > 100 120 min ago - r 15893 A1 Y2a"
+                        action = "sell"
+
+                        #  3 ott 2024 se ma450 > 2 ore vendi con ma8_last < ma90_last - stai calmo
+
+
+                    elif (    
+                        ma50_last < ma50_2_min_ago
+                        and ma450_last < ma450_120_min_ago
+                        and ma100_last > ma100_120_min_ago
+
+                        and deviation_ma100_sopra_ma300 > 0.25
+                        and deviation_ma39 < -0.01
+                        
+                        
+                        and ma2_last < ma2_2_min_ago
+                        and macd_differenza_2_min_ago < -2.50
+                        and macd < -6
+                    ):
+                        sell = "SELL 4-5-x >90 min con ma50< E ma100 sopra ma300 > 0.25 E dev_ma39 < -0.20 E 100 > 100 120 min ago - r 15893 A1 Y2b"
                         action = "sell"
                         
                         # 29 gen 2023 dev_39 -0.239 da -0.235
@@ -42151,7 +42172,9 @@ class maddog:
                         # 13 nov 2023 se 100 sta sopra 300 allora vende solo dev 3-39
                         #  7 feb 2024 se MACD < -6 e diff macd <-2.50 vendi prima anche se soltanto con dev 39
 
+
                     
+
                     elif (    
                         ma50_last < ma50_2_min_ago
                         
@@ -44837,11 +44860,11 @@ class maddog:
             elif (
                 
                 ma50_last < ma50_2_min_ago
-                and deviation_ma5_sopra_o_sotto_ma100 < -0.21
+                and deviation_ma5_sopra_o_sotto_ma100 < -0.10
                 and ma20_last <= ma20_2_min_ago
                 
-                and deviation_ma39 < 0.10
-                and deviation_sell < -0.017
+                and deviation_ma39 < 0.12
+                and deviation_sell < -0.015
                 
                 and deviation_ma5_sopra_ma200 < -0.30
                 and deviation_ma5_sotto_ma300 < -0.30
@@ -44850,9 +44873,9 @@ class maddog:
                 and deviation_ma100_sopra_ma300 < 0.40
                 
                 and ma2_last < ma2_2_min_ago 
-                and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.018
-                and macd < 13
-                and macd_differenza_2_min_ago < -3
+                
+                and macd < 20
+                and macd_differenza_2_min_ago < -1.30
             ):
                 sell = "SELL NCS con ma20 <= ma20 2 min ago e dev 3-39 < 0.10 e dev_sell < -0.017 and diff ma2 e diff macd - r 16047 A3 Y2b"
                 action = "sell"
@@ -44861,11 +44884,11 @@ class maddog:
                 # 30 nov 2023 dev sell a -0.05 da -0.14
                 #  5 dic 2023 dev sell a 0.05 da -0.05
                 # MINGHIA il 26 dic ha fatto -0.73 ! e ho fatto delle modifiche meravigliose
-                # 29 dic 2023 and macd a 13 da 7
+                # 29 dic 2023 macd a 13 da 7
                 #  7 mar 2024 dev sell a -0.017 da -0.01
-
-
-
+                #  3 ott 2024 and deviation_ma39 < 0.12 da 0.10
+                #  3 ott 2024 and deviation_sell < -0.015 da -0.017
+                #  3 ott 2024 anticipata vendita (ha fatto -0.62)
 
             elif (
                 ma78_last < ma78_120_min_ago
