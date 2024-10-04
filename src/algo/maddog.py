@@ -25236,21 +25236,26 @@ class maddog:
                     
                     
                 elif (
-                    ma78_last >= ma78_2_min_ago
-                    and ma78_last > ma150_last
-                    and ma300_last > ma450_last
-                    and ma3_last > ma78_last
+                    and ma3_last > ma10_last
                     
-                    and deviation_ma3_sopra_ma10 > 0.07
+                    ma50_last > ma50_2_min_ago
+                    and ma450_last > ma450_360_min_ago
+                    and ma200_last > ma200_60_min_ago
+                    and ma300_last > ma450_last
+                    and deviation_ma25 < -0.17
+                    
+                    and deviation_ma3_sopra_ma10 > 0.02
                   
                     and ma3_last > ma8_last
-                    and ma2_last > ma2_2_min_ago
-                    and macd > -30
+                    and ma2_last >= ma2_2_min_ago
+                    
+                    and macd > -50
                 ):
-                    buy = "BUY 5C RIVOLUZIONARIO con 300>450 NON C'E' NIENTE DA SPEZZARE (la catena) - r 7441 a"
+                    buy = "BUY 5C RIVOLUZIONARIO con 300>450 NON C'E' proprio NIENTE DA SPEZZARE ! (la catena) - r 7441 a"
                     action = "buy"
                     percentage = 70
 
+                    #  4 ott 2924 ho preso da un sell precedente e ho modificato questa anticipandola !
 
                 elif (
                     ma78_last >= ma78_2_min_ago
@@ -41326,13 +41331,14 @@ class maddog:
                         and ma450_last > ma450_360_min_ago
                         
                         and deviation_ma25 < -0.23
+
                         and ma200_last > ma200_60_min_ago
                         
                         and ma2_last < ma2_2_min_ago
                         and macd < macd_2_min_ago
                         and macd_differenza_2_min_ago < 2
                     ):
-                        sell = "SELL 4-5-x da 60 a 90 min con ma50 > and deviation_ma25 < -0.23 and ma450_last > ma450_360_min_ago and macd < macd_2_min_ago - r 15538 A"
+                        sell = "SELL 4-5-x 60-90 min con ma50> E dev_ma25 < -0.23 E ma450_last > ma450_360_min_ago - r 15538 A"
                         action = "sell"
                         
                         # 30 mag 2023 dev_25 a -0.26 da -0.25
