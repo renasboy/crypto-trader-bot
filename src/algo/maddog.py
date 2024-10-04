@@ -2841,25 +2841,25 @@ class maddog:
                     and deviation_ma54_sopra_o_sotto_ma72 < -0.015
                     
                     and deviation_ma39_sotto_ma200 < -0.01
-                    and deviation_ma300_sopra_ma450 > -0.50
+                    and deviation_ma300_sopra_ma450 > -0.55
                     
                     and deviation_ma3_sopra_ma10 > -0.01
-                    and deviation_ma3_sopra_ma16 > 0.001
-                    and deviation_ma3_sopra_ma18 > -0.01
+                    and deviation_ma3_sopra_ma16 > -0.01
+                    and deviation_ma3_sopra_ma18 > -0.02
                     
                     and ma2_last >= ma2_2_min_ago
                     and macd >= macd_2_min_ago
-                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.015
                     and macd_differenza_2_min_ago > 0.50
                     
                 ):    
-                    buy = "BUY 1 compare forever - ex 1537 A3y RCCR con 3-18 con 300 vicina alla 450 ( anche poco sotto ! ) and 3-18 > 0.001 + MACD > - r 1204 NUOVA ERA A3 STRONG"
+                    buy = "BUY 1 compare forever - con 3-18 E 300 vicina alla 450 ( anche poco sotto ! ) - r 1204 NUOVA ERA A3 STRONG"
                     action = "buy"
                     percentage = 90
                     
                     # 8  gen 2024 incrocio 3-30 piu' veloce di 10>20 !
                     # 20 feb 2024 3-18 da 3-20
-
+                    #  4 ott 2024 va bene cosi'. ci prova. anticipata di meno di una ndecchiecella
 
                 elif (
                     ma3_last > ma13_last
@@ -46327,6 +46327,7 @@ class maddog:
                 seconds_since_last_trade > max_hold_time_in_seconds
                 and delta_1_69_39 < delta_2_69_39
                 and deviation_sell < -0.05
+                and ma3_last < ma10_last
 
                 and ma450_last < ma450_10_min_ago
                 and ma100_last < ma300_last
@@ -46347,7 +46348,6 @@ class maddog:
                 sell = "SELL CS - DOLCE ATTESA 270 sec and ma13 < and con 450 < E 100<100 30 min ago MA GIORNO ! - r 16694 B2 Y2 A"
                 action = "sell"
 
-
                 # 4 feb 2022 con <-0.26 ha fatto -0.88% (dopo +4.29%)
                 # 7 feb 2022 con <-0.345 e 270 sec ha fatto -0.38% - aumenta a 0.355 ! - eventualmente ci pensa la condizione CROLLO IMPROVVISO CHE FUNZIONA !
                 # 17 set -0.57 da -0.47
@@ -46358,7 +46358,7 @@ class maddog:
 
                 #  2 ott 2024 SE e SOLTANTO SE delta_1_69_39 < delta_2_69_39 aggiungo deviation_sell < -0.05
                 #  2 ott 2024 delta_1_69_39 < delta_2_69_39 significa che e' GIORNO
-
+                #  3 ott 2024 aggiunta 3<10 ma vane cosi' ! 
 
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
