@@ -25227,9 +25227,9 @@ class maddog:
                     
                     
                 elif (
-                    and ma3_last > ma10_last
+                    ma3_last > ma10_last
                     
-                    ma50_last > ma50_2_min_ago
+                    and ma50_last > ma50_2_min_ago
                     and ma450_last > ma450_360_min_ago
                     and ma200_last > ma200_60_min_ago
                     and ma300_last > ma450_last
