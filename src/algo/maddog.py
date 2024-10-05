@@ -7956,9 +7956,10 @@ class maddog:
                     #  8 mar 2024 modificato
 
 
-
                 elif (
                     ma3_last > ma13_last
+                    and ma50_last > ma100_last
+
                     and ma39_last < ma39_15_min_ago
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.40
                     
@@ -7981,7 +7982,43 @@ class maddog:
                     and macd >= macd_2_min_ago
                 ):    
                     
-                    buy = "BUY 1 trend CHIARAMENTE rialzista PRENDE IL COLTELLO CON IL PIEDE dev_ma5_sopra_o_sotto_ma100 < -0.40 e 200 > e 20<78 - r 2859 B3"
+                    buy = "BUY 1 trend rialzista con ma50 ancora >ma100 PRENDE IL COLTELLO CON IL PIEDE - r 2859 B3x"
+                    action = "buy"
+                    percentage = 80
+
+
+                elif (
+                    ma3_last > ma13_last
+                    and ma25_last < ma50_last
+                    and ma50_last < ma100_last
+                    
+                    
+                    and ma200_last > ma200_60_min_ago
+
+                    and ma39_last < ma39_15_min_ago
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.40
+                    and deviation_ma5_sopra_o_sotto_ma200 < -0.70
+
+                    and ma300_last > ma300_360_min_ago
+                    and ma200_last > ma200_20_min_ago
+                    
+                    and ma100_last > ma200_last
+                    and ma200_last > ma300_last
+                    
+                    and ma100_last > ma100_60_min_ago
+                    and ma200_last > ma200_60_min_ago
+                    
+                    and ma20_last < ma78_last
+                    
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > -0.01
+                  
+                    and ma2_last > ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                ):    
+                    
+                    buy = "BUY 1 trend rialzista MA ha cominciato a scenere forte ! PRENDE IL COLTELLO CON IL PIEDE - r 2859 B3y"
                     action = "buy"
                     percentage = 80
                     
@@ -7994,7 +8031,8 @@ class maddog:
                     
                     #  8 mar 2024 modificato
                     #  9 set 2024 and deviation_ma5_sopra_o_sotto_ma100 < -0.40 da -0.30 MA FORSE E' DA TOGLIERE
-                    
+                    #  5 ott 2024 trend rialzista MA HA COMINCIATO A SCENDERE FORTE !
+                    #  5 ott 2024 aggiunta and deviation_ma5_sopra_o_sotto_ma200 < -0.70 ! cazzo 
 
 
                 
