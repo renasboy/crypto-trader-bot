@@ -41463,7 +41463,25 @@ class maddog:
                         # 23 nov 2023 and deviation_sell a -0.05 da -0.10
 
 
-                    
+                    elif (
+                        deviation_sell > 0.80
+                        and ma39_last > ma39_15_min_ago
+                        
+                        and ma5_last < ma5_12_min_ago
+                
+                        and ma3_last < ma36_last
+                
+                        and ma2_last < ma2_2_min_ago
+                        and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.018
+                        and macd < macd_2_min_ago
+                        and macd_differenza_2_min_ago < -1.50
+                    ):    
+                        sell = "SELL 4-5-x (21-60 min) C.S. 3-36 - PMS (ma non troppo !) e dev>0.80 e ma5_12_min_ago - r 15503 xyz"
+                        action = "sell"
+
+                        #  6 ottobre 2024 aggiuta perche' sul BUY 5 E' MEGLIO COMINCIARE A PRENDERE !
+
+
                     elif (    
                         ma50_last <= ma50_2_min_ago
                         
@@ -41928,7 +41946,26 @@ class maddog:
                         sell = "SELL 4-5-x (60-90 min) EX cond. spec 15985 A1 ok 2B - CON ma8_last < ma8_2_min_ago and dev 3-39 < 0.06 e dev sell < 0.02 con ma50 < - r 15664"
                         action = "sell"
 
-                    
+
+
+                    elif (
+                        deviation_sell > 0.80
+                        and ma39_last > ma39_15_min_ago
+                        
+                        and ma5_last < ma5_12_min_ago
+                
+                        and ma3_last < ma36_last
+                
+                        and ma2_last < ma2_2_min_ago
+                        and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.018
+                        and macd < macd_2_min_ago
+                        and macd_differenza_2_min_ago < -1.50
+                    ):    
+                        sell = "SELL 4-5-x (60-80 min) C.S. 3-36 - PMS (ma non troppo !) e dev>0.80 e ma5_12_min_ago - r 15664 xyz"
+                        action = "sell"
+
+
+
                     elif (
                         ma78_last > ma78_120_min_ago
                         and ma50_last < ma59_last
@@ -42542,7 +42579,25 @@ class maddog:
 
 
                     ##################################################################################################################### CONDIZIONI SPECIALI IMPORTATE RIDOTTE
-                    
+                    elif (
+                        deviation_sell > 0.80
+                        and ma39_last > ma39_15_min_ago
+                        
+                        and ma5_last < ma5_12_min_ago
+                
+                        and ma3_last < ma36_last
+                
+                        and ma2_last < ma2_2_min_ago
+                        and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.018
+                        and macd < macd_2_min_ago
+                        and macd_differenza_2_min_ago < -1.50
+                    ):    
+                        sell = "SELL 4-5-x (>90 min) C.S. 3-36 - PMS (ma non troppo !) e dev>0.80 e ma5_12_min_ago - r 15908"
+                        action = "sell"
+
+                        #  6 ottobre 2024 aggiuta perche' sul BUY 5 E' MEGLIO COMINCIARE A PRENDERE !
+
+
                     elif (
                         deviation_sell > 0.80
                         and ma5_last < ma5_10_min_ago
