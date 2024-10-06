@@ -7984,7 +7984,7 @@ class maddog:
                     and macd >= macd_2_min_ago
                 ):    
                     
-                    buy = "BUY 1 trend rialzista con ma50 ancora >ma100 PRENDE IL COLTELLO CON IL PIEDE - r 2859 B3x"
+                    buy = "BUY 1 trend rialzista con ma50 ancora > ma100 PRENDE IL COLTELLO CON IL PIEDE - r 2859 B3x"
                     action = "buy"
                     percentage = 80
 
@@ -10572,34 +10572,54 @@ class maddog:
                     # 24 ago 2023 macd>3
 
 
-                # BUY 1 FOREVER YOUNG PIU' AGGRESSIVO con doppio delta < 1 E MA100> (rialzo) se ma 200 > e se ma250 > ma300  and deviation_ma5_sopra_ma28 > 0.10
+                # BUY 1 FOREVER YOUNG AGGRESSIVO 
                 
-                elif (  
-                    ma8_last > ma54_last
+                
+                elif (      
+                    ma3_last > ma20_last
                     and ma450_last < ma450_240_min_ago
+
+                    and ma39_last < ma39_15_min_ago
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.04
+                    and deviation_ma5_sotto_ma200 < -0.08
+                    and deviation_ma5_sotto_ma450 < -0.15
+
+                    deviation_ma25_sotto_ma300 < -0.04
                     
-                    and macd > macd_2_min_ago
+
+                    and ma39_last < ma100_last
+                    and ma10_last < ma20_last
                     
-                    and delta_1 < delta_2
-                    and ma100_last > ma100_30_min_ago
                     
-                    and deviation_ma3_sopra_ma10 > 0.02
-                    and deviation_ma3_sopra_ma18 > 0.055
-                    and deviation_ma5_sopra_ma28 > 0.01
-               
-                    and ma2_last > ma2_2_min_ago
-                    and macd >= macd_2_min_ago
-                    and macd > 5
+                    and ma100_last < ma100_180_min_ago
+                    and ma200_last < ma200_180_min_ago
+                    and ma300_last < ma300_180_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma5_sopra_ma28 > -0.03
+                    
+                    
+                    and ma2_last > ma5_last
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.010
+
+                    and macd > -50
+                    and macd_differenza_2_min_ago > -3.25
+  
                 ):
                     
-                    buy = "BUY 1 FOREVER YOUNG PIU' AGGRESSIVO (doppio delta < 1 E 100> ) (SOPRA RIALZO RIALZO) - GIORNO - se ma 200 > and macd > 2 min and macd >5 - r 4410b"
+                    buy = "BUY 1 FY AGGRESSIVO - se ma 200 > and macd > 2 min and macd > 5 - r 4410 B"
                     action = "buy"
                     percentage = 80
                     
                     # 12 giu 2023 aggiunta 3-18 > 0.055
                     # 11 ago 2023 tolta ma5 > ma5 2 min ago
                     # 24 ago 2023 macd>5
-                    
+                    #  6 ott 2024 MODIFICATO RADICALMENTE per anticipare
                     
                     
                     
@@ -19637,7 +19657,7 @@ class maddog:
                     and macd_differenza_2_min_ago > 1.00
                     
                 ):
-                    buy = "BUY 3 29 ago 2022 > 180 min di ribasso CON ma10<ma20 e 3-22 e ma2_dif_2_min_ago > 12 e macd_dif_2_min_ago > 1.00 - r 6572 A1 Y2"
+                    buy = "BUY 3 29 ago 2022 > 180 min di ribasso CON 10<20 e 3-22 e ma2_diff_2_min_ago > 12 - r 6572 A1 Y2"
                     action = "buy"
                     percentage = 80
                     
@@ -24192,10 +24212,10 @@ class maddog:
 
                     # 25 set 2024 cancellata r 7203 A1y
 
-                
                 elif (
                     ma50_last >= ma50_2_min_ago
                     and ma300_last > ma450_last
+                    and ma100_last > ma100_120_min_ago
 
                     and ma28_last < ma28_30_min_ago
                     and ma3_last < ma28_last
@@ -24215,7 +24235,36 @@ class maddog:
                     and macd > -50
 
                 ):
-                    buy = "BUY 5 con ma3000 >ma450 AND ma28_last < ma28_30_min_ago - r 7203 A2"
+                    buy = "BUY 5 con ma3000 >ma450 AND ma28_last < ma28_30_min_ago - r 7203 A2x"
+                    action = "buy"
+                    percentage = 70
+
+
+                elif (
+                    ma50_last >= ma50_2_min_ago
+                    and ma300_last > ma450_last
+                    and ma100_last < ma100_120_min_ago
+                    and deviation_ma5_sotto_ma450 < -0.33
+
+                    and ma28_last < ma28_30_min_ago
+                    and ma3_last < ma28_last
+                    and deviation_ma39 < 0.10
+                    
+                    and deviation_ma5_sotto_ma200 > -0.70
+                    and deviation_ma100_sopra_ma300 < 0.40
+                
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > -0.05
+                    and deviation_ma5_sopra_ma28 > -0.08
+                    
+                    and ma3_last > ma13_last
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    
+                    and macd > -50
+
+                ):
+                    buy = "BUY 5 con ma3000 >ma450 AND ma28_last < ma28_30_min_ago - r 7203 A2y"
                     action = "buy"
                     percentage = 70
                     
@@ -24227,7 +24276,9 @@ class maddog:
                     # 26 feb 2023 se 300>450 buy 3 a 0.02 da 0.06
                     # 26 feb 2023 se 300>450 7 sopra 40 a 0.02 da 0.08
                     #  4 ott 2024 anticipata ndecchia prendendo ispirazione da un precedente sell CON 300 > 400 !
-              
+                    #  6 ott 2024 se 100 > 100 120 min ago ok come precedente
+                    #  6 ott 2024 MA SE 100 < 100 120 min ago allora mi devi dare un osso (and deviation_ma5_sotto_ma450 < -0.33)
+
                     
                 elif (
                     ma50_last >= ma50_2_min_ago
