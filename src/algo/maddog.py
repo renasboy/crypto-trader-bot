@@ -19978,13 +19978,15 @@ class maddog:
                 
                 
                 # BUY 3 del 2 ottobre 2023 NON COMPRAVA !
+
                 elif (
                     
                     ma3_last > ma28_last
                     and ma450_last > ma450_60_min_ago
                     and ma300_last > ma450_last
                     
-
+                    and ma100_last > ma100_60_min_ago
+                    
                     and deviation_ma250_sopra_ma300 < 0.15
                     and deviation_ma250_sopra_ma300 > -0.15
                     
@@ -20000,10 +20002,40 @@ class maddog:
                     and macd > macd_2_min_ago
                     
                 ):
-                    buy = "BUY 3 del 2 ottobre 2023 NON COMPRAVA ! con 450 > 450 60 min MA LATERALE and ma2_differenza_2_min_ago > 7 - r 6574 a1x"
+                    buy = "BUY 3 del 2 ottobre 2023 NON COMPRAVA ! con 450 > 450 60 min MA LATERALE and ma2_differenza_2_min_ago > 7 - r 6574 a1xx"
                     action = "buy"
                     percentage = 70
 
+
+                elif (
+                    
+                    ma3_last > ma28_last
+                    and ma450_last > ma450_60_min_ago
+                    and ma300_last > ma450_last
+                    
+                    and ma100_last < ma100_60_min_ago
+                    and deviation_ma5_sotto_ma200 < -0.10
+                    
+                    and deviation_ma250_sopra_ma300 < 0.15
+                    and deviation_ma250_sopra_ma300 > -0.15
+                    
+                    and deviation_ma3_sopra_ma10 > 0.05
+                    and deviation_ma5_sopra_ma28 > -0.02
+                  
+                    and ma3_last > ma13_last
+                    and ma4_last > ma9_last
+                    and ma2_last > ma5_last
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and ma2_differenza_2_min_ago > 6
+                    and macd > macd_2_min_ago
+                    
+                ):
+                    buy = "BUY 3 del 2 ottobre 2023 NON COMPRAVA ! con 450 > 450 60 min MA LATERALE and ma2_differenza_2_min_ago > 7 - r 6574 a1xy"
+                    action = "buy"
+                    percentage = 70
+
+                    #  6 ott 2024 se ma100_last < ma100_60_min_ago allora mi devi dare un osso (and deviation_ma5_sotto_ma200 < -0.10)
 
                 elif (
                     
@@ -21331,9 +21363,40 @@ class maddog:
                     #  5 mar 2024 se 39 < 100 prendi il coltello con il piede
 
 
-                
                 elif (
                     ma3_last > ma20_last
+                    and ma100_last > ma100_60_min_ago
+                    
+                    and ma2_differenza_2_min_ago > 5
+                    and ma50_last > ma59_last
+                    
+                    and ma300_last > ma450_last
+                    and ma300_last > ma300_120_min_ago
+
+                    and deviation_ma100_sopra_ma300 < 0.30
+                    and deviation_ma100_sopra_ma300 > -0.30
+
+                    and deviation_ma3_sopra_ma10 > 0.03
+                    
+                    and deviation > -0.30
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    
+                    and macd > -50
+                    and macd_differenza_2_min_ago > -1.25
+                    
+                ):    
+                    buy = "BUY 4B importato da BUY 3 RCCR con 3-20 con 300 > and ma50_last > ma59_last and ma2_differenza_2_min_ago > 5 - r 6737 A1"
+                    action = "buy"
+                    percentage = 70
+
+
+
+                elif (
+                    ma3_last > ma20_last
+                    and ma100_last < ma100_60_min_ago
+                    and deviation_ma5_sotto_ma200 < -0.10
+
                     and ma2_differenza_2_min_ago > 5
                     and ma50_last > ma59_last
                     
@@ -21353,14 +21416,14 @@ class maddog:
                     and macd_differenza_2_min_ago > 0.25
                     
                 ):    
-                    buy = "BUY 4B importato da BUY 3 RCCR con 3-20 con 300 > and ma50_last > ma59_last and ma2_differenza_2_min_ago > 5 - r 6737 A"
+                    buy = "BUY 4B importato da BUY 3 RCCR con 3-20 con 300 > and ma50_last > ma59_last and ma2_differenza_2_min_ago > 5 - r 6737 A2"
                     action = "buy"
                     percentage = 70
                     
                     # 27 nov 2023 se sta scendendo da molto tempo E SE se ma50_last > ma59_last
                     # 7 dic 2023 and ma2_differenza_2_min_ago > 5
                     # 22 dic 2023 3-20 da 3-30
-
+                    #  6 ott 2024 se 100< 60 min ago allora mi devi dare un osso
 
               
                 
@@ -25213,13 +25276,14 @@ class maddog:
                 elif (
                     ma3_last > ma13_last
                     and ma100_last < ma100_60_min_ago
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.50
 
                     and ma300_last > ma300_30_min_ago
                     and ma450_last > ma450_360_min_ago
                     and ma78_last > ma150_last
 
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.50
+                    
                     
                     and deviation_ma3_sopra_ma10 > 0.01
                     and deviation_ma3_sopra_ma16 > -0.01
