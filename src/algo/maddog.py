@@ -14966,16 +14966,39 @@ class maddog:
                     and ma3_last > ma13_last
                     
                     and ma2_last >= ma2_2_min_ago
-                    and ma2_differenza_2_min_ago > 8
                     
-                    and macd_differenza_2_min_ago > 0.25
+                    and macd_differenza_2_min_ago > -1.25
                 ):  
                 
-                    buy = "BUY 2 incrocio al rialzo 3-180 con ma450 > 2 ore e ma200 che sale da 1 ora con 33<78 ! - r 5860 B4"
+                    buy = "BUY 2 incrocio al rialzo 3-180 con ma450 > 2 ore e ma200 che sale da 1 ora con 33<78 ! - r 5860 B4a"
                     action = "buy"
                     percentage = 70
 
                     #  6 mar 2024 aggiunto anche incrocio al rialzo 3-180
+
+
+                elif (
+                    ma5_last >= ma5_2_min_ago
+                    and ma450_last > ma450_120_min_ago
+                    and ma200_last > ma200_60_min_ago
+                    
+                    and ma39_last < ma39_15_min_ago
+                    and (ma3_prev < ma150_prev and ma3_last > ma150_last)
+                    
+                    and ma33_last < ma78_last
+               
+                    and ma3_last > ma13_last
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    
+                    and macd_differenza_2_min_ago > -1.25
+                ):  
+                
+                    buy = "BUY 2 incrocio al rialzo 3-150 con ma450 > 2 ore e ma200 che sale da 1 ora con 33<78 ! - r 5860 B4b"
+                    action = "buy"
+                    percentage = 70
+
+                    #  6 ott 2024 aggiunto anche incrocio al rialzo 3-150
                     
                   
                     
