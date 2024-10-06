@@ -24078,15 +24078,47 @@ class maddog:
                     # 29 set 2024 tolta and ma2_last >= ma2_2_min_ago e vaffanculo.
 
               
-               
                 elif (    
                     ma3_last > ma20_last
                     and ma10_last > ma20_last
+
+                    and ma450_last < ma450_120_min_ago
+                    and ma200_last > ma300_last
+
+                    and ma50_last < ma50_2_min_ago
+                  
+                    and deviation_ma100_sopra_ma300 < 0.40
+                   
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    
+                    and ma2_last > ma5_last
+                    and ma3_last > ma13_last
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd_differenza_2_min_ago > -3.50
+                    
+                ):
+                    buy = "BUY 5 ma450_last < ma450_120_min_ago E 200>300 MA ma100_last > ma200_last E 100>200 - r 7144 A2 X1A"
+                    action = "buy"
+                    percentage = 70
+                    
+                    #  5 mar 2024 se ma10 < ma20 
+                    # 29 set 2024 anticipata di molto prima di cancellare
+                    #  6 ott 2024 con 200>300 anticipata ancora NON FARTI TROPPI PROBLEMI !
+
+
+                elif (    
+                    ma3_last > ma20_last
+                    and ma10_last > ma20_last
+
+                    and ma450_last < ma450_120_min_ago
+                    and ma200_last < ma300_last
+
                     and ma100_last > ma200_last
                     and ma100_last > ma100_120_min_ago
 
                     and ma50_last < ma50_2_min_ago
-                    and ma450_last < ma450_120_min_ago
+                    
                        
                     and deviation_ma100_sopra_ma300 < 0.25
                     and deviation_ma39 < 0.05
@@ -24100,7 +24132,7 @@ class maddog:
                     and macd_differenza_2_min_ago > -0.50
                     
                 ):
-                    buy = "BUY 5 ma450_last < ma450_120_min_ago MA ma100_last > ma200_last E 100>200 - r 7144 A2 X1"
+                    buy = "BUY 5 ma450_last < ma450_120_min_ago E 200<300 MA ma100_last > ma200_last E 100>200 - r 7144 A2 X1B"
                     action = "buy"
                     percentage = 70
                     
