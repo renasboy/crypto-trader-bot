@@ -10584,7 +10584,7 @@ class maddog:
                     and deviation_ma5_sotto_ma200 < -0.08
                     and deviation_ma5_sotto_ma450 < -0.15
 
-                    deviation_ma25_sotto_ma300 < -0.04
+                    and deviation_ma25_sotto_ma300 < -0.04
                     
 
                     and ma39_last < ma100_last
