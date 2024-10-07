@@ -4147,31 +4147,29 @@ class maddog:
                 elif (    
                     ma3_last > ma15_last
                     and ma450_last > ma450_120_min_ago
-                    
+
                     and ma100_last < ma100_120_min_ago
-                    and ma200_last > ma200_120_min_ago
-                    
                     and deviation_ma54_sopra_o_sotto_ma72 < 0.015
-                    and deviation_ma54_sopra_o_sotto_ma72 > -0.015
-                    
+                    and deviation_ma5_sotto_ma200 < -0.15
+                  
                     and deviation_ma39_sotto_ma200 < 0.20
                     and deviation_ma300_sopra_ma450 > -0.45
                     
                     and deviation_ma3_sopra_ma10 > -0.005
-                    and deviation_ma3_sopra_ma16 > 0.03
-                    and deviation_ma3_sopra_ma18 > -0.01
+                    and deviation_ma3_sopra_ma16 > -0.01
+                    and deviation_ma3_sopra_ma18 > -0.03
                     
                     and ma2_last >= ma20_last
                   
                     and ma2_last >= ma2_2_min_ago
-                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.020
-                    and macd >= macd_2_min_ago
-                    and macd_differenza_2_min_ago > 1.25
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.015
+                    
+                    and macd_differenza_2_min_ago > -3.25
                     and macd > -40
-                    and ma50_differenza_ma59 < -5
+                    
                     
                 ):    
-                    buy = "BUY 1 compare forever - con 5-20 E CON 300 ancora vicina alla 450 ( anche un poco sotto! ) + MACD > - r 1537 A2 Y2a"
+                    buy = "BUY 1 CF CON ma450> MA ma100< + OSSO E CON 300 ancora vicina alla 450 ( anche un poco sotto! ) - r 1537 A2 Y2 A"
                     action = "buy"
                     percentage = 90
 
