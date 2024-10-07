@@ -47839,7 +47839,7 @@ class maddog:
                 and ma3_last < ma28_last
                 
                 and deviation_ma3_sopra_ma18 < -0.056
-                and ma3_last < ma30_last
+                and ma3_last < ma48_last
                 and ma2_last < ma5_last
                 
                 and ma2_last < ma2_2_min_ago
@@ -47850,7 +47850,7 @@ class maddog:
                 and macd_differenza_3_min_ago < -7
                 
             ):    
-                sell = "SELL CS - P M e S con ma300 > 5 ore 3-30 e dev > 1.25 e macd < 16 e MACD diff_5_min_ago < -9 e dev 3-18 < -0.056 - r 16875 A2y"
+                sell = "SELL CS - PMS con ma300 > 5 ore 3-48 e dev > 1.25 e macd < 16 e MACD diff_5_min_ago < -9 e dev 3-18 < -0.056 - r 16875 A2y"
                 action = "sell"
                 
                 #  1 set 2023 se per es macd passa da 18 a -11 vendi     
@@ -47876,7 +47876,7 @@ class maddog:
                 #  6 mar 2024 and deviation_ma3_sopra_ma18 a -0.056 da -0.06 
                 #  6 mar 2024 vediamo come va una volta e' arrivata in anticipo un' altra volta in ritardo
                 #  7 mar 2024 fatta modifica vedi and deviation_ma100_sopra_ma450 < 1.75
-
+                #  7 ott 2024 vendita con 3-48 da 3-30 statte tranquillo
 
             # 17
             
