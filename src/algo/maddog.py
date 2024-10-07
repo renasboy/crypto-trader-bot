@@ -6681,7 +6681,8 @@ class maddog:
                     and ma100_last < ma100_90_min_ago
                     and ma200_last < ma200_20_min_ago
                     and ma300_last < ma450_last
-                    
+
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.15
                     and deviation_ma5_sotto_ma200 < -0.25
                     and deviation_ma25_sotto_ma300 < -0.29
 
@@ -6701,7 +6702,7 @@ class maddog:
                     
                     #  7 ott 2024 DATEMI UN OSSO (and deviation_ma5_sotto_ma200 < -0.30)
                     #  7 ott 2024 DATEMI UN OSSO (and deviation_ma25_sotto_ma300 < -0.60)
-              
+                    #  7 ott 2024 aggiunta and deviation_ma5_sopra_o_sotto_ma100 < -0.15
               
               
                
@@ -11168,7 +11169,8 @@ class maddog:
                     and ma100_last < ma100_90_min_ago
                     and ma200_last < ma200_20_min_ago
                     and ma300_last < ma450_last
-                    
+
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.13
                     and deviation_ma5_sotto_ma200 < -0.25
                     and deviation_ma25_sotto_ma300 < -0.29
 
@@ -11188,7 +11190,7 @@ class maddog:
                     
                     #  7 ott 2024 DATEMI UN OSSO (and deviation_ma5_sotto_ma200 < -0.30)
                     #  7 ott 2024 DATEMI UN OSSO (and deviation_ma25_sotto_ma300 < -0.60)
-
+                    #  7 ott 2024 aggiunta anche and deviation_ma5_sopra_o_sotto_ma100 < -0.13
 
                         
                 elif (
@@ -16102,7 +16104,7 @@ class maddog:
                     and ma100_last < ma100_30_min_ago
                     and deviation_ma54_sopra_o_sotto_ma72 < -0.015
                     
-                    
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.13
                     and deviation_ma39_sotto_ma200 < -0.01
                     and deviation_ma300_sopra_ma450 > -0.70
                     
@@ -16119,12 +16121,12 @@ class maddog:
                     and macd >= macd_2_min_ago
                     and macd_differenza_2_min_ago > 0.10
                 ):    
-                    buy = "BUY 2 prendo coltello con il piede E ma450 che sale da 6 ore and 3-18 > -0.02 + MACD > - r 5994 b"
+                    buy = "BUY 2 prendo coltello con il piede E ma450 che sale da 6 ore and 3-18 > -0.02 + MACD > - r 5994 B"
                     action = "buy"
                     percentage = 90
 
                     #  9 set 2024 and deviation_ma5_sopra_o_sotto_ma100 < -0.40 da -0.35 MA FORSE E' DA TOGLIERE
-                    
+                    #  7 ott 2024 aggiunto osso and deviation_ma5_sopra_o_sotto_ma100 < -0.13 
 
                 elif (     
                     ma3_last > ma18_last
@@ -17864,15 +17866,17 @@ class maddog:
                 elif (  
                     ma3_last > ma18_last
 
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.13
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.13
+                    
 
                     and deviation_ma10_sopra_ma200 < -0.25
-                    and deviation_ma10_sopra_ma200 > -0.40
+                    and deviation_ma10_sopra_ma200 > -0.60
                   
                     and deviation_ma100_sopra_ma200 > -0.40
                     
                     and deviation_ma5_sotto_ma300 < 0.45
-                    and deviation_ma5_sotto_ma300 > -0.75
+                    and deviation_ma5_sotto_ma300 > -0.80
                     
                     and ma300_last < ma300_60_min_ago
                     and ma200_last < ma200_60_min_ago
@@ -17893,7 +17897,7 @@ class maddog:
                     # 10 giu 2023 aggiunta 3-16 IL BUY 3 deve avere 3-16 !
                     #  2 ott 2024 con 300< aggiunta da staf and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
                     #  2 ott 2024 ma forse e' da cancellare ma prima aggiungi and deviation_ma5_sopra_o_sotto_ma100 < -0.27
-                    
+                    #  7 ott 2024 aggiunta 5-100 <-0.13 e anticipata ndecchiecella
                     
                 # BUY 3 migliore formula MY COMPA - che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-50 - (importata dal BUY 1 r 1043 B)
                 
