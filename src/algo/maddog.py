@@ -23948,9 +23948,11 @@ class maddog:
                     percentage = 70
 
                 
+
                 elif (    
                     ma3_last > ma20_last
                     and ma450_last >= ma450_120_min_ago
+                    and ma100_last >= ma100_60_min_ago
                     and ma100_last > ma450_last
 
                     
@@ -23971,7 +23973,39 @@ class maddog:
                     and macd_differenza_2_min_ago > -3.25
                 
                 ):
-                    buy = "BUY 5 con 450_last >= 450_120_min_ago E ma100>ma450 - r 7144 A1 Y2 NUOVA ERA A3 SOFT"
+                    buy = "BUY 5 con 450_last >= 450_120_min_ago E ma100>ma450 - r 7144 A1 Y2 NUOVA ERA A3 SOFT x"
+                    action = "buy"
+                    percentage = 70
+                    
+
+                elif (    
+                    ma3_last > ma20_last
+                    and ma450_last >= ma450_120_min_ago
+                    and ma100_last > ma450_last
+
+                    and ma100_last < ma100_60_min_ago
+                    and deviation_ma5_sotto_ma200 < -0.25
+                    
+
+                    
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.20
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
+
+                    and ma10_last < ma30_last
+                   
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > -0.02
+                    
+                    
+                    and ma3_last > ma13_last
+                    and ma3_last > ma5_last
+                    
+                    and ma2_last > ma2_2_min_ago
+                    and macd_differenza_2_min_ago > -3.25
+                
+                ):
+                    buy = "BUY 5 con 450_last >= 450_120_min_ago E ma100>ma450 MA ma100< ma100 60 min ago ! (OSSO) - r 7144 A1 Y2 NUOVA ERA A3 SOFT y"
                     action = "buy"
                     percentage = 70
                     
