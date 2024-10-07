@@ -6649,7 +6649,7 @@ class maddog:
                     
                     
                 # BUY 1 con ma200< e 300< MA doppio delta < and ma100 >60_min_ago STA RISALENDO !
-            
+
                 elif (       
                     ma450_last > ma450_720_min_ago
                     and macd >= macd_2_min_ago
@@ -6669,14 +6669,40 @@ class maddog:
                 
                 ):    
         
-                    buy = "BUY 1 CON 450> e con 300> and 5-50 and macd > macd 2 min ago MA ma200 < and ma100> 100 5 min ago e doppio delta < - GIORNO ! - r 1712"
+                    buy = "BUY 1 CON 450> E 300> E 5-50 E ma100> 100 5 min ago E doppio delta < - GIORNO ! MA ma200 <  - r 1712"
                     action = "buy"
                     percentage = 90
-              
+                    
                     # 28 apr 2023 ma 100 5 min da 10 min
                     # 28 apr 2023  5-50 da 5-100 con aggiunta macd >= 2 min ago
+
+
+
+                elif (  
+                    ma450_last > ma450_720_min_ago
+                    and ma100_last < ma100_90_min_ago
+                    and ma200_last < ma200_20_min_ago
+                    and ma300_last < ma450_last
                     
-                
+                    and deviation_ma5_sotto_ma200 < -0.25
+                    and deviation_ma25_sotto_ma300 < -0.29
+
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma18 > -0.08
+                    and deviation_ma5_sopra_ma28 > -0.10
+
+                    and macd >= macd_2_min_ago
+                    and macd > -50
+                    and ma2_last >= ma2_2_min_ago
+               
+                ):    
+        
+                    buy = "BUY 1 CON 450> MA ma100< 100 90 min ago CON dev 5-200 < -0.25 E CON dev 25-300 < -0.29 (osso) - r 1720"
+                    action = "buy"
+                    percentage = 90
+                    
+                    #  7 ott 2024 DATEMI UN OSSO (and deviation_ma5_sotto_ma200 < -0.30)
+                    #  7 ott 2024 DATEMI UN OSSO (and deviation_ma25_sotto_ma300 < -0.60)
               
               
               
