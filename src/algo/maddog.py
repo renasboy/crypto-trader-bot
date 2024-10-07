@@ -11161,9 +11161,38 @@ class maddog:
 
                     # deviation_buy_ma3_sopra_ma13 > x e' fondamentale !
                     # deviation_buy2 = ma8_last/ma50_last
+
+
                     
                     
+                elif (  
+                    ma450_last > ma450_720_min_ago
+                    and ma100_last < ma100_90_min_ago
+                    and ma200_last < ma200_20_min_ago
+                    and ma300_last < ma450_last
                     
+                    and deviation_ma5_sotto_ma200 < -0.25
+                    and deviation_ma25_sotto_ma300 < -0.29
+
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma18 > -0.08
+                    and deviation_ma5_sopra_ma28 > -0.10
+
+                    and macd >= macd_2_min_ago
+                    and macd > -50
+                    and ma2_last >= ma2_2_min_ago
+               
+                ):    
+        
+                    buy = "BUY 2 CON 450> MA ma100< 100 90 min ago CON dev 5-200 < -0.25 E CON dev 25-300 < -0.29 (osso) - r 4670"
+                    action = "buy"
+                    percentage = 90
+                    
+                    #  7 ott 2024 DATEMI UN OSSO (and deviation_ma5_sotto_ma200 < -0.30)
+                    #  7 ott 2024 DATEMI UN OSSO (and deviation_ma25_sotto_ma300 < -0.60)
+
+
+                        
                 elif (
                     
                     ma3_last > ma100_last
