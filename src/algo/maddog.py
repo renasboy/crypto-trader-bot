@@ -44385,11 +44385,11 @@ class maddog:
                 # 21 feb 2024 dev_sell a -0.04 da -0.03
                 
 
-
             elif (
                 ma78_last > ma78_120_min_ago
                 and ma450_last > ma450_360_min_ago
-                
+                and ma100_last > ma200_last
+
                 and ma10_last < ma10_2_min_ago
                 and ma50_last < ma59_last
                 and ma20_last <= ma20_2_min_ago
@@ -44407,10 +44407,40 @@ class maddog:
                 and macd_differenza_2_min_ago < -1.30
                 
             ):
-                sell = "SELL CS - SALVAGENTE dev 3-39 < 0.05 e dev_sell < -0.015 e ma50 < e macd_diff_2_min_ago < -0.20 - r 16047 A1 Y1 Y2 a"
+                sell = "SELL CS - SALVAGENTE dev 3-39 < 0.05 e dev_sell < -0.015 e ma50 < e macd_diff_2_min_ago < -0.20 - r 16047 A1 Y1 Y2 ax"
+                action = "sell"
+
+
+            elif (
+                ma78_last > ma78_120_min_ago
+                and ma450_last > ma450_360_min_ago
+                and ma100_last < ma200_last
+
+                and ma10_last < ma10_2_min_ago
+                and ma50_last < ma59_last
+                and ma20_last <= ma20_2_min_ago
+                
+                and deviation_ma39 < 0.08
+                and deviation_sell < -0.011
+                
+                and ma50_last < ma50_2_min_ago
+                and deviation_ma100_sopra_ma300 < 0.40
+                and deviation_ma5_sotto_ma200 > -0.80
+                
+                and ma2_last < ma2_2_min_ago
+                and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.017
+                
+                and macd_differenza_2_min_ago < -1.30
+                
+            ):
+                sell = "SELL CS - SALVAGENTE dev 3-39 < 0.08 e dev_sell < -0.011 e ma50 < e macd_diff_2_min_ago < -0.20 - r 16047 A1 Y1 Y2 ay"
                 action = "sell"
                 
                 #  8 mar 2024 se ma450_last > ma450_360_min_ago dev_sell a -0.015 da -0.005
+                #  7 ott 2024 se 100<200 anticipato di una ndecchiecella
+                # 7 ott 2024 and deviation_ma39 < 0.08 da < 0.05
+                # 7 ott 2024 and deviation_sell < -0.011 da < -0.015
+
                 
             elif (
                 ma78_last > ma78_120_min_ago
