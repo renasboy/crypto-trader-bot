@@ -23211,25 +23211,24 @@ class maddog:
                 # BUY 4 se 100>200 non devi spezzare proprio un cazzo
 
                 elif (
-                    ma4_last > ma50_last
+                    ma3_last > ma20_last
                     and delta_450_200 < delta_450_200_60_min
-
+                    and ma25_last > ma300_last
                     and ma100_last > ma200_last
-                   
-                    and deviation_ma3_sopra_ma28 > -0.07
+                    
+                    and deviation_ma3_sopra_ma28 > -0.10
                     
                     and ma3_last > ma13_last
-                    and ma4_last > ma9_last
-                    
-
                     and ma2_last > ma2_2_min_ago
-             
+                    and macd > -50
+                    
                 ):
-                    buy = "BUY 4 con 100>200 E doppio delta GIORNO (non spezzo la catena !) ! - r 7065 a"
+                    buy = "BUY 4 con 100>200 E doppio delta GIORNO e 25>300 (non spezzo la catena !) - r 7065 A"
                     action = "buy"
                     percentage = 70
 
                     #  3 ott 2024 aggiunto doppio delta GIORNO  e anticipato.
+                    #  7 ott 2024 anticipata ancora
 
 
                 elif (
