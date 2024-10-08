@@ -14367,8 +14367,6 @@ class maddog:
                     and deviation_ma100_sopra_ma300 > -0.60
                     and deviation_ma200_sopra_ma300 > -0.60
                     
-                    and ma2_last >= ma2_2_min_ago
-                    
                     and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.010
                     and macd_differenza_2_min_ago > -3.25
                 ):
@@ -14391,7 +14389,7 @@ class maddog:
                     # 16 set 2024 esta condizione non deve comprare quando ma450 scende da 3 ore !
                     #  8 ott 2024 forse cancellare
                     #  8 ott 2024 qua NON SERVE L' OSSO PERCHE' STA RISALENDO !
-
+                    #  8 ott 2024 ho tolto anche ma2 > ma2 2 min ago
                 
                 # BUY 2 che ci riprova quando se ne va lateralmente dopo il crollo
                 
