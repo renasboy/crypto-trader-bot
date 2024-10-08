@@ -46808,10 +46808,13 @@ class maddog:
 
                 #  2 ott 2024 SE e SOLTANTO SE delta_1_69_39 < delta_2_69_39 aggiungo deviation_sell < -0.05
                 #  2 ott 2024 delta_1_69_39 < delta_2_69_39 significa che e' GIORNO
-                #  3 ott 2024 aggiunta 3<10 ma vane cosi' ! 
+                #  3 ott 2024 aggiunta 3<10 ma vane cosi' !
+
 
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
+                and ma200_last > ma200_120_min_ago
+
                 and delta_1_69_39 > delta_2_69_39
 
                 and ma450_last < ma450_10_min_ago
@@ -46830,7 +46833,64 @@ class maddog:
             
             ):
 
-                sell = "SELL CS - DOLCE ATTESA 270 sec and ma13 < and con 450 < E 100<100 30 min ago e 100 sopra 300 < 0.50 - r 16694 B2 Y2 B"
+                sell = "SELL CS - DOLCE ATTESA 270 sec and ma13 < and con 450 < E 100<100 30 min ago e 100 sopra 300 < 0.50 - r 16694 B2 Y2 Ba"
+                action = "sell"
+
+            elif (
+                seconds_since_last_trade > max_hold_time_in_seconds
+                and ma200_last < ma200_120_min_ago
+                and ma25_last > ma25_2_min_ago
+                and deviation_sell < -0.0942
+
+                and delta_1_69_39 > delta_2_69_39
+
+                and ma450_last < ma450_10_min_ago
+                and ma100_last < ma300_last
+                and ma100_last < ma200_last
+
+                and ma100_last < ma100_30_min_ago
+                and ma13_last <= ma13_2_min_ago
+
+                and deviation_ma100_sopra_ma200 > -0.70
+                and deviation_ma100_sopra_ma300 < 0.50
+
+                and ma3_last <= ma3_2_min_ago
+                and ma2_last < last_trade_price
+                and ma2_last <= ma2_2_min_ago
+            
+            ):
+
+                sell = "SELL CS ZIA AMALIA ! - DOLCE ATTESA 270 sec and ma13 < MA ma25> and con 450< E dev_sell < -0.0942 - r 16694 B2 Y2 Bbx"
+                action = "sell"
+
+                #  8 ott 2024 se ma200_last < ma200_120_min_ago MA ma25_last > ma25_2_min_ago and deviation_sell < -0.09 ! statti calmo
+                #  8 ott 2024 durante il crollo aggiunto dev sell < -0.0942 che prima non c' era.
+
+
+            elif (
+                seconds_since_last_trade > max_hold_time_in_seconds
+                and ma200_last < ma200_120_min_ago
+                and ma25_last <= ma25_2_min_ago
+
+                and delta_1_69_39 > delta_2_69_39
+
+                and ma450_last < ma450_10_min_ago
+                and ma100_last < ma300_last
+                and ma100_last < ma200_last
+
+                and ma100_last < ma100_30_min_ago
+                and ma13_last <= ma13_2_min_ago
+
+                and deviation_ma100_sopra_ma200 > -0.70
+                and deviation_ma100_sopra_ma300 < 0.50
+
+                and ma3_last <= ma3_2_min_ago
+                and ma2_last < last_trade_price
+                and ma2_last <= ma2_2_min_ago
+            
+            ):
+
+                sell = "SELL CS - DOLCE ATTESA 270 sec and ma13 < E MA25< and con 450 < - r 16694 B2 Y2 Bby"
                 action = "sell"
 
 
