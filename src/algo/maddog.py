@@ -14273,16 +14273,18 @@ class maddog:
                     
                     
                 # BUY 2 che ci riprova quando se ne va LATERALMENTE dopo il crollo. ma non deve comprare quando ma450 scende da 3 ore !
-                
+
                 elif (
                     ma3_last > ma39_last
                     and ma450_last < ma450_180_min_ago
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_120_min_ago
+
                     and ma10_last > ma20_last
                     and deviation_ma3_sopra_ma10 > 0.08
                     and deviation_ma5_sopra_ma28 > -0.03
                     
-                    and ma200_last < ma200_120_min_ago
-                    and ma300_last < ma300_120_min_ago
+                    
                     
                     and delta_300_100 < delta_300_100_60_min
                     
@@ -14295,7 +14297,7 @@ class maddog:
                     and macd_differenza_2_min_ago > 1.00
                 ):
                
-                    buy = "BUY 2 con 5-39 che ci riprova quando se ne va lateralmente dopo il crollo CON 10>20 and macd_differenza_2_min_ago > 1.00  - r 5445 A1"
+                    buy = "BUY 2 con 3-39 che ci riprova quando se ne va lateralmente > crollo CON 10>20 and macd_diff_2_min_ago > 1.00  - r 5445 A1"
                     action = "buy"
                     percentage = 80
 
@@ -14311,6 +14313,48 @@ class maddog:
                     #  8 gen 2024 10>20 al posto di 20> 20 5 min ago 
                     #  8 gen 2024 macd_differenza_2_min_ago > 1.00
                     # 16 set 2024 esta condizione non deve comprare quando ma450 scende da 3 ore !
+                    #  8 ott 2024 forse cancellare
+
+
+                elif (
+                    ma3_last > ma20_last
+                    and ma450_last < ma450_180_min_ago
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_120_min_ago
+
+                    and ma10_last > ma20_last
+                    and deviation_ma3_sopra_ma10 > 0.08
+                    and deviation_ma5_sopra_ma28 > -0.03
+
+                    
+                    and ma5_last > ma100_last
+                    and deviation_ma100_sopra_ma300 > -0.60
+                    and deviation_ma200_sopra_ma300 > -0.60
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
+                    and macd_differenza_2_min_ago > -1.25
+                ):
+               
+                    buy = "BUY 2 con 3-20 che ci riprova quando se ne va lateralmente > crollo e 5 e' andata sopra 100  CON 10>20 - r 5445 A2"
+                    action = "buy"
+                    percentage = 80
+
+                    # compare prega per me !
+                    # 29 set 2022 3-10 > 0.08 da 0.10
+                    # 29 set 2022 28 20 min ago da 28 30 min ago
+                    #  1 giu 2023 and macd > macd_2_min_ago
+                    # 11 ago 2023 5-78 da 78-200
+                    #  6 set 2023 28 10 min da 28 20 min
+                    # 15 set 2023 28 5 min da 28 10 min
+                    # 27 set 2023 20 5 min da 28 10 min
+                    
+                    #  8 gen 2024 10>20 al posto di 20> 20 5 min ago 
+                    #  8 gen 2024 macd_differenza_2_min_ago > 1.00
+                    # 16 set 2024 esta condizione non deve comprare quando ma450 scende da 3 ore !
+                    #  8 ott 2024 forse cancellare
+
                 
                 # BUY 2 che ci riprova quando se ne va lateralmente dopo il crollo
                 
