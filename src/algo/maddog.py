@@ -24187,15 +24187,18 @@ class maddog:
                     # 29 set 2024 anticipata cazzo
                     # 29 set 2024 tolta and ma2_last >= ma2_2_min_ago e vaffanculo.
 
-              
+
+
                 elif (    
                     ma3_last > ma20_last
-                    and ma10_last > ma20_last
-
                     and ma450_last < ma450_120_min_ago
+                    and ma100_last > ma100_60_min_ago
+                    and ma50_last < ma50_2_min_ago
+                    
+                    and ma10_last > ma20_last
                     and ma200_last > ma300_last
 
-                    and ma50_last < ma50_2_min_ago
+                    
                   
                     and deviation_ma100_sopra_ma300 < 0.40
                    
@@ -24208,13 +24211,43 @@ class maddog:
                     and macd_differenza_2_min_ago > -3.50
                     
                 ):
-                    buy = "BUY 5 ma450_last < ma450_120_min_ago E 200>300 MA ma100_last > ma200_last E 100>200 - r 7144 A2 X1A"
+                    buy = "BUY 5 ma450_last < ma450_120_min_ago E 200>300 MA ma100_last > ma200_last E 100>200 - r 7144 A2 X1Aa"
+                    action = "buy"
+                    percentage = 70
+
+
+                elif (    
+                    ma3_last > ma20_last
+                    and ma450_last < ma450_120_min_ago
+                    and ma100_last < ma100_60_min_ago
+                    and ma50_last < ma50_2_min_ago
+
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.10
+                    and deviation_ma5_sotto_ma200 < -0.10
+                    and deviation_ma25_sotto_ma300 < -0.11
+                    
+                    and ma10_last > ma20_last
+                    and ma200_last > ma300_last
+                    
+                    and deviation_ma100_sopra_ma300 < 0.40
+                   
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    
+                    and ma2_last > ma5_last
+                    and ma3_last > ma13_last
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd_differenza_2_min_ago > -3.50
+                    
+                ):
+                    buy = "BUY 5 con ma450_last<ma450_120_min_ago E ma200>ma300 MA SE ma100<ma100 60 min ago IL CANE VUOLE L' OSSO ! - r 7144 A2 X1Ab"
                     action = "buy"
                     percentage = 70
                     
                     #  5 mar 2024 se ma10 < ma20 
                     # 29 set 2024 anticipata di molto prima di cancellare
                     #  6 ott 2024 con 200>300 anticipata ancora NON FARTI TROPPI PROBLEMI !
+                    #  8 ott 2024 SE ma100<ma100 60 min ago IL CANE VUOLE L' OSSO !
 
 
                 elif (    
