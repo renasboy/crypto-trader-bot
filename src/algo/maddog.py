@@ -150,6 +150,7 @@ class maddog:
         ma50_30_min_ago = self.algo_helper.ma_minutes_ago(50, 30)
         ma50_50_min_ago = self.algo_helper.ma_minutes_ago(50, 50)
         ma50_60_min_ago = self.algo_helper.ma_minutes_ago(50, 60)
+        ma50_90_min_ago = self.algo_helper.ma_minutes_ago(50, 90)
         ma54_15_min_ago = self.algo_helper.ma_minutes_ago(54, 15)
         ma59_2_min_ago = self.algo_helper.ma_minutes_ago(59, 2)
         ma59_30_min_ago = self.algo_helper.ma_minutes_ago(59, 30)
@@ -486,6 +487,11 @@ class maddog:
         self.algo_helper.info("deviation_ma10_sopra_o_sotto_ma10_30_min_ago: {}".format(deviation_ma10_sopra_o_sotto_ma10_30_min_ago))
 
         
+        # formula DEVIATION_ma50_sopra_o_sotto_ma50_90_min_ago
+        
+        deviation_ma50_sopra_o_sotto_ma50_90_min_ago = (ma50_last / ma50_90_min_ago - 1) * 100 if ma50_90_min_ago else 0
+        self.algo_helper.info("deviation_ma50_sopra_o_sotto_ma50_90_min_ago: {}".format(deviation_ma50_sopra_o_sotto_ma50_90_min_ago))
+
 
         # formula DEVIATION_ma5_sopra_o_sotto_ma5_30_min_ago
         
@@ -14315,7 +14321,6 @@ class maddog:
                     # 16 set 2024 esta condizione non deve comprare quando ma450 scende da 3 ore !
                     #  8 ott 2024 forse cancellare
 
-
                 elif (
                     ma3_last > ma20_last
                     and ma450_last < ma450_180_min_ago
@@ -14341,6 +14346,37 @@ class maddog:
                     action = "buy"
                     percentage = 80
 
+
+
+                elif (
+                    ma3_last > ma20_last
+                    and ma450_last < ma450_180_min_ago
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_120_min_ago
+
+                    
+                    and deviation_ma50_sopra_o_sotto_ma50_90_min_ago > -0.015
+
+                    and ma10_last > ma20_last
+                    and deviation_ma3_sopra_ma10 > 0.08
+                    and deviation_ma5_sopra_ma28 > -0.03
+
+                    and ma5_last > ma5_2_min_ago
+                    
+                    
+                    and deviation_ma100_sopra_ma300 > -0.60
+                    and deviation_ma200_sopra_ma300 > -0.60
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.010
+                    and macd_differenza_2_min_ago > -3.25
+                ):
+               
+                    buy = "BUY 2 che ci riprova quando ma50 > ma50 di 90 min ago MENTRE se ne va lateralmente > crollo e 5 CON 10>20 - r 5445 A3"
+                    action = "buy"
+                    percentage = 80
+
                     # compare prega per me !
                     # 29 set 2022 3-10 > 0.08 da 0.10
                     # 29 set 2022 28 20 min ago da 28 30 min ago
@@ -14354,6 +14390,7 @@ class maddog:
                     #  8 gen 2024 macd_differenza_2_min_ago > 1.00
                     # 16 set 2024 esta condizione non deve comprare quando ma450 scende da 3 ore !
                     #  8 ott 2024 forse cancellare
+                    #  8 ott 2024 qua NON SERVE L' OSSO PERCHE' STA RISALENDO !
 
                 
                 # BUY 2 che ci riprova quando se ne va lateralmente dopo il crollo
