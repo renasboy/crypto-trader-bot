@@ -717,6 +717,7 @@ class maddog:
         self.algo_helper.info("delta_2: {}".format(delta_2))
         
         
+        # delta_1 < delta_2 GIORNO !
         
 
 
@@ -19676,12 +19677,47 @@ class maddog:
                     
                     # importante : ma5 sta sotto la ma100 almeno di -0.30
 
+
                 
                 # BUY 3 29 ago 2022 > 180 min di ribasso
+
+
                 
-                elif (
-                    
+                elif (    
                     ma3_last > ma28_last
+                    and delta_1 < delta_2
+
+                    and ma10_last >= ma20_last
+                    and deviation_ma5_sotto_ma300 > -0.62
+                    
+                    and ma100_last < ma100_180_min_ago
+                    and ma200_last < ma200_180_min_ago
+                    and ma300_last < ma300_180_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma5_sopra_ma28 > -0.03
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.010
+                    and macd > -20
+                    and macd_differenza_2_min_ago > -1.25
+                    
+                ):
+                    buy = "BUY 3 29 ago 2022 > 180 min di ribasso MA GIORNO con 4-28 and macd_differenza_2_min_ago > 1.00 - r 6572 A1 xa"
+                    action = "buy"
+                    percentage = 90
+
+                    #  8 ott 2024 se GIORNO se cioe' all' appuntamento con il BUY 3 la ma100 si avvicina alla BUY 2 allora anticipo ndechiecella
+
+
+                elif (    
+                    ma3_last > ma28_last
+                    and delta_1 > delta_2
+
                     and ma10_last >= ma20_last
                     and deviation_ma5_sotto_ma300 > -0.57
                     
@@ -19702,9 +19738,10 @@ class maddog:
                     and macd_differenza_2_min_ago > 1.00
                     
                 ):
-                    buy = "BUY 3 29 ago 2022 > 180 min di ribasso con 4-28 and ma2_differenza_2_min_ago > 7 and macd_differenza_2_min_ago > 1.00 - r 6572 A1 x"
+                    buy = "BUY 3 29 ago 2022 > 180 min di ribasso E NOTTE con 4-28 and macd_differenza_2_min_ago > 1.00 - r 6572 A1 xb"
                     action = "buy"
                     percentage = 90
+
 
 
                 # 21 settembre 2024 cancellata r 6572 A1 Y1
