@@ -140,6 +140,7 @@ class maddog:
         ma39_5_min_ago = self.algo_helper.ma_minutes_ago(39, 5)
         ma39_13_min_ago = self.algo_helper.ma_minutes_ago(39, 13)
         ma39_15_min_ago = self.algo_helper.ma_minutes_ago(39, 15)
+        ma39_20_min_ago = self.algo_helper.ma_minutes_ago(39, 20)
         ma39_30_min_ago = self.algo_helper.ma_minutes_ago(39, 30)
         ma39_70_min_ago = self.algo_helper.ma_minutes_ago(39, 70)
         
@@ -1669,11 +1670,13 @@ class maddog:
              
                 
                 # ------------------------------------------------------------ BUY 1 DURANTE IL RIALZO con INCROCIO CLASSICO 69-100 and ma78 < AND 5-28 > 0.11
-                
                 elif (    
                     ma20_last > ma200_last
-                    and macd >= macd_2_min_ago
                     and ma300_last > ma300_120_min_ago
+                    and ma39_last > ma39_20_min_ago
+
+                    and macd >= macd_2_min_ago
+                    
                     and ma78_last < ma78_2_min_ago
                     and deviation_ma5_sopra_ma28 > 0.11
                     
@@ -1683,9 +1686,33 @@ class maddog:
                     and ma6_last > ma39_last
                 ):    
               
-                    buy = "BUY 1 con 20>200 and 69 > 100 and deviation_bellissima > 0.14 and ma78 < AND 5-28 > 0.11 - r 1021"
+                    buy = "BUY 1 con 300> 120 min E 39>39 20 min ago E 69> 100 E dev_bellissima > 0.14 and ma78 < AND 5-28 > 0.11 - r 1021x"
                     action = "buy"
                     percentage = 90
+
+
+                elif (    
+                    ma20_last > ma200_last
+                    and ma300_last > ma300_120_min_ago
+                    and ma39_last < ma39_20_min_ago
+                    and (ma10_prev < ma200_prev and ma10_last > ma200_last)
+
+                    and macd >= macd_2_min_ago
+                    
+                    and ma78_last < ma78_2_min_ago
+                    and deviation_ma5_sopra_ma28 > 0.11
+                    
+                    and ma69_last > ma100_last
+                    and ma3_last > ma8_last
+                    and deviation_bellissima > 0.14
+                    and ma6_last > ma39_last
+                ):    
+              
+                    buy = "BUY 1 con 300> 120 min MA 39<39 20 min ago E 69> 100 E dev_bellissima > 0.14 and ma78 < AND 5-28 > 0.11 - r 1021y"
+                    action = "buy"
+                    percentage = 90
+
+                    #  8 ott 2024 SE 39<39 20 min ago ho messo incrocio al rialzo 10-200 invece dell' osso (per non farla comprare!)
                     
                     
                     
