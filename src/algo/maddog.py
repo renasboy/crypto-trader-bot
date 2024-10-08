@@ -21012,14 +21012,38 @@ class maddog:
                     # 27 set 2023 dev buy 3 a 0.03 da 0.04
                     # 27 set 2023 dev 7 sopra 40 a 0.03 da 0.04
                     # 11 gen 2024 durante il crollo il BUY 3 DEVE STARE ALMENO DI 0.33% SOPRA LA ma39 - PUGNO FANTASMA DI MOHAMMAD ALI
+
+
                 
                     
                 # BUY 3 con ma69 > and deviation_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali) IMPORTATA DA BUY 4 RCCR
-                
+
+                elif (    
+                    ma300_last < ma300_301_min_ago
+                    and deviation_ma50_sopra_o_sotto_ma50_90_min_ago > -0.015
+                    and ma100_last > ma300_last
+
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma5_sopra_ma28 > -0.03
+                    
+                    and ma3_last > ma20_last
+                 
+                    and ma2_differenza_2_min_ago > 0.01
+                    and macd_differenza_2_min_ago > -1.25
+                ):
+                    buy = "BUY 3 con 100>300 E CON i minimi che crescono and macd_differenza_2_min_ago > -1.25 - r 6599 A2x1"
+                    action = "buy"
+                    percentage = 70
+
+                    #  8 ott 2024 se i minimi crescono allora anticipo ndecchia !
+
+
+
                 elif (
                     
                     ma300_last < ma300_301_min_ago
-                    and ma39_last > ma100_last
+                    and deviation_ma50_sopra_o_sotto_ma50_90_min_ago < -0.015
+                    and ma100_last > ma300_last
                     
                     and deviation_ma3_sopra_ma10 > 0.05
                     and deviation_ma5_sopra_ma28 > 0.01
@@ -21034,9 +21058,9 @@ class maddog:
                     
                     and ma2_last > ma2_2_min_ago
                     and ma2_differenza_2_min_ago > 0.02
-                    and macd_differenza_2_min_ago > 1.10
+                    and macd_differenza_2_min_ago > 1.00
                 ):
-                    buy = "BUY 3 con 39>100 and ma2_differenza_2_min_ago > 0.02 and macd_differenza_2_min_ago > 1.10 - r 6599 A2x"
+                    buy = "BUY 3 con 100>300 MA CON I MINIMI CHE DECRESCONO and macd_differenza_2_min_ago > 1.00 - r 6599 A2x2"
                     action = "buy"
                     percentage = 50
                     
