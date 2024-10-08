@@ -4150,8 +4150,11 @@ class maddog:
                     and ma450_last > ma450_120_min_ago
 
                     and ma100_last < ma100_120_min_ago
-                    and deviation_ma54_sopra_o_sotto_ma72 < 0.015
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.35
                     and deviation_ma5_sotto_ma200 < -0.15
+
+                    and deviation_ma54_sopra_o_sotto_ma72 < 0.015
+                    
                   
                     and deviation_ma39_sotto_ma200 < 0.20
                     and deviation_ma300_sopra_ma450 > -0.45
@@ -4174,6 +4177,7 @@ class maddog:
                     action = "buy"
                     percentage = 90
 
+                    #  8 ott 2024 se ma100_last < ma100_120_min_ago allora il cane vuole l' osso (and deviation_ma5_sopra_o_sotto_ma100 < -0.35)
 
                 elif (    
                     ma3_last > ma15_last
