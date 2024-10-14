@@ -42903,17 +42903,19 @@ class maddog:
                         and ma100_last > ma100_120_min_ago
                         and ma8_last < ma90_last
                         and deviation_ma100_sopra_ma300 > 0.25
+
                         and deviation_ma39 < -0.01
-                        
+                        and deviation_sell < -0.02
+
                         and ma2_last < ma2_2_min_ago
                         and macd_differenza_2_min_ago < -2.50
                         and macd < -6
                     ):
-                        sell = "SELL 4-5-x >90 min con ma50< E ma100 sopra ma300 > 0.25 E dev_ma39 < -0.20 E 100 > 100 120 min ago - r 15893 A1 Y2a"
+                        sell = "SELL 4-5-x >90 min con ma50< E ma100 sopra ma300 > 0.25 E dev_ma39 < -0.01 E 100 > 100 120 min ago - r 15893 A1 Y2 A"
                         action = "sell"
 
                         #  3 ott 2024 se ma450 > 2 ore vendi con ma8_last < ma90_last - stai calmo
-
+                        # 14 ott 2024 aggiunta and deviation_sell < -0.02 stai molto calmo
 
                     elif (    
                         ma50_last < ma50_2_min_ago
@@ -42928,7 +42930,7 @@ class maddog:
                         and macd_differenza_2_min_ago < -2.50
                         and macd < -6
                     ):
-                        sell = "SELL 4-5-x >90 min con ma50< E ma100 sopra ma300 > 0.25 E dev_ma39 < -0.20 E 100 > 100 120 min ago - r 15893 A1 Y2b"
+                        sell = "SELL 4-5-x >90 min con ma50< E ma100 sopra ma300 > 0.25 E dev_ma39 < -0.01 E 100 > 100 120 min ago - r 15893 A1 Y2 B"
                         action = "sell"
                         
                         # 29 gen 2023 dev_39 -0.239 da -0.235
