@@ -43303,14 +43303,14 @@ class maddog:
                 #  7 mar 2024 fatta modifica vedi and deviation_ma100_sopra_ma450 > 1.50
 
 
-
             elif (
                 ma8_last < ma8_2_min_ago
+                and ma300_last > ma450_last
                 and ma20_last > ma20_2_min_ago
                 and deviation_ma100_sopra_ma450 < 1.50
                 
                 and deviation_ma39 < 0.05
-                and deviation_sell < -0.05
+                and deviation_sell < -0.065
 
                 and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago > 1.50
                 and deviation_ma10_sopra_o_sotto_ma10_30_min_ago < 0.12
@@ -43324,7 +43324,35 @@ class maddog:
                 and macd_differenza_2_min_ago < -0.25
                 and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.018
             ):
-                sell = "SELL C S con ma50 > e ma8_last < ma8_2_min_ago e dev 3-39 < 0.05 e dev sell < -0.04 - r 15985 A1 ok 2B x1 y"
+                sell = "SELL C S con ma50 > e ma8_last < ma8_2_min_ago e dev 3-39 < 0.05 e dev sell < -0.04 - r 15985 A1 ok 2B x1 yx"
+                action = "sell"
+
+                # 14 ott 2024 se ANCHE 300>450 and deviation_sell < -0.065 da < -0.05
+
+
+            elif (
+                ma8_last < ma8_2_min_ago
+                and ma300_last < ma450_last
+
+                and ma20_last > ma20_2_min_ago
+                and deviation_ma100_sopra_ma450 < 1.50
+                
+                and deviation_ma39 < 0.05
+                and deviation_sell < -0.06
+
+                and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago > 1.50
+                and deviation_ma10_sopra_o_sotto_ma10_30_min_ago < 0.12
+                
+                and delta_450_300 < delta_450_300_60_min
+                and ma50_last > ma50_2_min_ago
+                and deviation_ma100_sopra_ma300 > 0.10
+                
+                and deviation_ma3_sotto_ma150 > -1.20
+                and ma2_last <= ma2_2_min_ago 
+                and macd_differenza_2_min_ago < -0.25
+                and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.018
+            ):
+                sell = "SELL C S con ma50 > e ma8_last < ma8_2_min_ago e dev 3-39 < 0.05 e dev sell < -0.04 - r 15985 A1 ok 2B x1 yy"
                 action = "sell"
                 
                 # 18 set 2023 dev sell -0.02 da -0.01
@@ -43338,7 +43366,7 @@ class maddog:
                 # 13 dic 2023 aggiunta and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.018 = 7 pts
 
                 #  7 mar 2024 fatta modifica vedi and deviation_ma100_sopra_ma450 < 1.50
-                
+                # 14 ott 2024 and deviation_sell < -0.06 da < -0.05
 
           
             elif (
