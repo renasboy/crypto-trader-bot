@@ -24784,6 +24784,7 @@ class maddog:
                     percentage = 70
 
 
+
                 elif (
                     ma50_last >= ma50_2_min_ago
                     and ma300_last > ma450_last
@@ -25642,21 +25643,14 @@ class maddog:
                     and ma200_last > ma300_last
                     
                     and ma300_last > ma300_60_min_ago
-                    
+                    and ma450_last > ma450_120_min_ago
                     and deviation > -0.30
                     
-                    and deviation_ma4_sopra_ma30 > 0.10
-                    and deviation_ma13_sopra_ma25 > 0.03
-                    and delta_buy3_incrocio_ma3_ma8 > 0.07
-                    
-                    
-                    and ma7_last > ma25_last
-                    
                     and ma3_last > ma8_last
-                    and ma3_last > ma78_last
-                    and ma4_last > ma4_2_min_ago
+                  
                     and ma2_last > ma2_2_min_ago
-                    
+                    and macd > -40
+                    and macd_differenza_2_min_ago > -2
                 ):
                     buy = "BUY 5 con 69< MA CON TUTTE LE ma IN CRESCITA - r 7352"
                     action = "buy"
@@ -25664,7 +25658,8 @@ class maddog:
                     
                     # deviation_buy3 = ma4_last/ma30_last
                     # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
-
+                    # 14 ott 2024 anticipata di molto (tutte le ma sono in crescita !)
+                    # 14 ott 2024 aggiunto MACD e diff macd
                 
                 elif (
                     ma69_last < ma69_2_min_ago
