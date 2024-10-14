@@ -9469,8 +9469,6 @@ class maddog:
                     and ma200_last < ma200_120_min_ago
 
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.27
-                    
-                    
                     and deviation_ma5_sotto_ma300 < -0.20
                     and deviation_ma10_sopra_ma200 < -0.20
                     
@@ -9494,7 +9492,7 @@ class maddog:
 
                     # modificata aggiungendo prendi il coltello con il piede
                     #  2 ott 2024 E' ANDATA BENISSIMO
-
+                    # 13 ott 2024 e' andata benissimo !
 
                 elif (    
                     ma78_last < ma200_last
@@ -12254,7 +12252,7 @@ class maddog:
                     and macd_differenza_2_min_ago > 1.00
                     
                 ):
-                    buy = "BUY 1 24 feb 2024 > 180 min di ribasso con 4-28 5-100 < -0.21 SE doppio delta 100-200 GIORNO - r 4714"
+                    buy = "BUY 2 24 feb 2024 > 180 min di ribasso con 4-28 5-100 < -0.21 SE doppio delta 100-200 GIORNO - r 4714"
                     action = "buy"
                     percentage = 90
                     
@@ -17319,7 +17317,8 @@ class maddog:
                     action = "buy"
                     percentage = 50
 
-                
+
+
                 elif (
                     
                     ma4_last > ma18_last
@@ -17352,6 +17351,41 @@ class maddog:
                     #  1 ago 2023 5-28 < 0.05
                     #  1 ago 2023 3-10 > 0.107
                     # 12 set 2023 5-28 < 0.01 da 0.05
+
+
+
+                elif (    
+                    ma78_last < ma200_last
+                    
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
+                    and ma200_last < ma200_120_min_ago
+
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.27
+                    and deviation_ma5_sotto_ma300 < -0.20
+                    and deviation_ma10_sopra_ma200 < -0.20
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and ma100_last < ma100_120_min_ago
+                    
+                    and ma300_last < ma300_120_min_ago
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    
+                    
+                    and ma5_last > ma10_last
+                    and ma2_last >= ma2_2_min_ago
+                    and macd > macd_2_min_ago
+                ):
+                    buy = "BUY 2 CANE STAF 78<200 pensiero laterale - PRENDI IL COLTELLO CON IL PIEDE - r 6001 CANE STAF"
+                    action = "buy"
+                    percentage = 80
+
+
+
+                
                 
                 
                 
