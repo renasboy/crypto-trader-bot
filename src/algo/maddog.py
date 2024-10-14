@@ -26232,10 +26232,10 @@ class maddog:
 
               
               
-              
                 elif (
                     
                     ma8_last > ma54_last
+                    and ma39_last > ma100_last
                     and ma78_last < ma150_last
                     
                     and ma100_last < ma100_120_min_ago
@@ -26252,7 +26252,7 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
                     
                 ):
-                    buy = "BUY 5 29 ago 2022 > 120 min di ribasso 78<150 CON ma100<120 min ago - r 7564 A2yy"
+                    buy = "BUY 5 29 ago 2022 > 120 min di ribasso 78<150 CON ma100<120 min ago MA 39>100 senza osso - r 7564 A2yy1"
                     action = "buy"
                     percentage = 90
                     
@@ -26260,7 +26260,42 @@ class maddog:
                     # 25 gen 2023 5-28 0.15 da 0.12
                     #  1 feb 2023 8-100 da 18-100
                     # 12 set 2023 8-54 da 8-100
-              
+
+
+                elif (
+                    
+                    ma8_last > ma54_last
+                    and ma39_last < ma100_last
+
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.10
+                    and deviation_ma5_sotto_ma200 < -0.10
+                    and deviation_ma25_sotto_ma300 < -0.11
+
+                    and ma78_last < ma150_last
+                    
+                    and ma100_last < ma100_120_min_ago
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_120_min_ago
+                  
+                    and ma450_last < ma450_480_min_ago
+                  
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma5_sopra_ma28 > -0.10
+                    and ma2_last >= ma2_2_min_ago
+                    
+                ):
+                    buy = "BUY 5 29 ago 2022 > 120 min di ribasso E 78<150 CON ma100<120 min ago E 39<100 aggiunta OSSO - r 7564 A2yy2"
+                    action = "buy"
+                    percentage = 90
+                    
+                    # 19 set 2022 aggiunta 3-10 0.07 
+                    # 25 gen 2023 5-28 0.15 da 0.12
+                    #  1 feb 2023 8-100 da 18-100
+                    # 12 set 2023 8-54 da 8-100
+                    # 14 ott 2024 se anche 39<100 allora diamogli un osso !
                     
                     
                 # BUY 5 13 apr 2023 zia pina > 180 min di ribasso 78>150
