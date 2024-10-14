@@ -25734,8 +25734,11 @@ class maddog:
                 
                 elif (
                     ma3_last > ma13_last
+                    and ma100_last > ma100_60_min_ago
+
                     and ma450_last > ma450_360_min_ago
                     and ma300_last > ma450_last
+                    
 
                     and deviation_ma3_sopra_ma10 > 0.01
                     and deviation_ma3_sopra_ma16 > -0.01
@@ -25753,7 +25756,11 @@ class maddog:
 
                 elif (
                     ma3_last > ma13_last
-                    and ma100_last > ma100_60_min_ago
+
+                    and ma100_last < ma100_60_min_ago
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.10
+                    and deviation_ma5_sotto_ma200 < -0.10
+                    and deviation_ma25_sotto_ma300 < -0.11
 
                     and ma300_last > ma300_30_min_ago
                     and ma450_last > ma450_360_min_ago
@@ -25772,6 +25779,7 @@ class maddog:
                     action = "buy"
                     percentage = 70
 
+                    # 14 ott 2024 se ma100< 100 60 min ago allora OSSO !
 
 
                 elif (
@@ -25812,6 +25820,8 @@ class maddog:
                     #  3 ott 2024 aggiunta da CANO STAF and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
                     #  4 ott 2024 se 100 scende da 60 min allora compro soltanto se dev 5-100 < -0.50
                     #  4 ott 2024 se devo comprare con 100 che sta scendendo da 60 min mi devi dare un osso !
+
+
 
                 # 21 set 2024 cancellata r 7384 B1
                 
