@@ -24223,14 +24223,10 @@ class maddog:
 
                 elif (    
                     ma3_last > ma20_last
+
                     and ma450_last >= ma450_120_min_ago
-                    and ma100_last >= ma100_60_min_ago
                     and ma100_last > ma450_last
-
                     
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.20
-                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
-
                     and ma10_last < ma30_last
                    
                     
@@ -24242,13 +24238,17 @@ class maddog:
                     and ma3_last > ma5_last
                     
                     and ma2_last > ma2_2_min_ago
+                    and macd > -40
                     and macd_differenza_2_min_ago > -3.25
                 
                 ):
                     buy = "BUY 5 con 450_last >= 450_120_min_ago E ma100>ma450 - r 7144 A1 Y2 NUOVA ERA A3 SOFT x"
                     action = "buy"
                     percentage = 70
-                    
+
+                    # 14 ott 2024 anticipata con 450 che sale da 120 min NON FARTI TROPPI PROBLEMI. PROVACI.
+
+
 
                 elif (    
                     ma3_last > ma20_last
@@ -24762,6 +24762,12 @@ class maddog:
                     and ma100_last > ma100_120_min_ago
 
                     and ma28_last < ma28_30_min_ago
+
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.10
+                    and deviation_ma5_sotto_ma200 < -0.10
+                    and deviation_ma25_sotto_ma300 < -0.11
+
+
                     and ma3_last < ma28_last
                     and deviation_ma39 < 0.10
                     
@@ -24779,10 +24785,11 @@ class maddog:
                     and macd > -50
 
                 ):
-                    buy = "BUY 5 con ma3000 >ma450 AND ma28_last < ma28_30_min_ago - r 7203 A2x"
+                    buy = "BUY 5 con ma300 > ma450 AND ma28_last < ma28_30_min_ago + OSSO - r 7203 A2x"
                     action = "buy"
                     percentage = 70
 
+                    # 14 ott 2024 gli ho dato un osso - prima di cancellare
 
 
                 elif (
@@ -25725,6 +25732,24 @@ class maddog:
                     
 
                 
+                elif (
+                    ma3_last > ma13_last
+                    and ma450_last > ma450_360_min_ago
+                    and ma300_last > ma450_last
+
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > -0.01
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd > -40
+                    and macd_differenza_2_min_ago > -2
+                ):
+                    buy = "BUY 5A con ma450_last > ma450_360_min_ago E CON ma100 > E deviation_ma5_sopra_o_sotto_ma100 < -0.03 - r 7384 A2xx"
+                    action = "buy"
+                    percentage = 70
+
+                    # 14 ott 2024 se 450 sale da 6 ore NON FARTI TROPPI PROBLEMI !
+
 
                 elif (
                     ma3_last > ma13_last
@@ -25743,7 +25768,7 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
               
                 ):
-                    buy = "BUY 5A con ma450_last > ma450_360_min_ago E CON ma100 > E deviation_ma5_sopra_o_sotto_ma100 < -0.03 - r 7384 A2x"
+                    buy = "BUY 5A con ma450_last > ma450_360_min_ago E CON ma100 > E deviation_ma5_sopra_o_sotto_ma100 < -0.03 - r 7384 A2xy"
                     action = "buy"
                     percentage = 70
 
