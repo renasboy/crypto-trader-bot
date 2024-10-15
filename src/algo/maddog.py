@@ -44583,8 +44583,11 @@ class maddog:
                 # 24 feb 2024 se 10>30 stai ancora piu' tranquillo cazzo !
                 # 24 feb 2024 dev sell a -0.045 da -0.03
 
+
             elif (
                 ma78_last > ma78_120_min_ago
+                and ma200_last > ma300_last
+
                 and ma10_last < ma30_last
                 and ma5_last > ma150_last
 
@@ -44593,18 +44596,47 @@ class maddog:
                 and ma50_last < ma50_2_min_ago
                 
                 and deviation_ma39 < 0.07
-                and deviation_sell < -0.03
-                and ma2_last < ma2_2_min_ago 
+                and deviation_sell < -0.05
+                
                 
                 and deviation_ma100_sopra_ma300 < 0.40
                 and deviation_ma5_sotto_ma200 > -0.80
-                
+
+                and ma2_last < ma2_2_min_ago 
                 and macd_differenza_2_min_ago < -0.20
             ):
-                sell = "SELL CS CON 50>59 and ma50< - SALVAGENTE dev 3-39 < 0.07 e dev_sell < -0.03 - r 16047 A1 x1 a1 Y"
+                sell = "SELL CS CON 50>59 and ma50< - SALVAGENTE dev 3-39 < 0.07 e dev_sell < -0.03 - r 16047 A1 x1 a1 Y1"
                 action = "sell"
                 
                 # 15 gen 2024 and deviation_sell < -0.03 da -0.01 se 100>125 stai piu' tranquillo
+                # 15 ott 2024 se 200>300 and deviation_sell < -0.05 da < -0.03
+
+            elif (
+                ma78_last > ma78_120_min_ago
+                and ma200_last < ma300_last
+
+                and ma10_last < ma30_last
+                and ma5_last > ma150_last
+
+                and ma100_last > ma125_last
+                and ma50_last > ma59_last
+                and ma50_last < ma50_2_min_ago
+                
+                and deviation_ma39 < 0.07
+                and deviation_sell < -0.04
+                
+                
+                and deviation_ma100_sopra_ma300 < 0.40
+                and deviation_ma5_sotto_ma200 > -0.80
+
+                and ma2_last < ma2_2_min_ago 
+                and macd_differenza_2_min_ago < -0.20
+            ):
+                sell = "SELL CS CON 50>59 and ma50< - SALVAGENTE dev 3-39 < 0.07 e dev_sell < -0.04 - r 16047 A1 x1 a1 Y2"
+                action = "sell"
+                
+                # 15 gen 2024 and deviation_sell < -0.03 da -0.01 se 100>125 stai piu' tranquillo
+                # 15 ott 2024 deviation_sell < -0.04 da < -0.03
 
 
             elif (
