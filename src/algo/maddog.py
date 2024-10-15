@@ -14354,8 +14354,11 @@ class maddog:
                     # 16 set 2024 esta condizione non deve comprare quando ma450 scende da 3 ore !
                     #  8 ott 2024 forse cancellare
 
+
                 elif (
                     ma3_last > ma20_last
+                    and ma100_last > ma100_60_min_ago
+
                     and ma450_last < ma450_180_min_ago
                     and ma200_last < ma200_120_min_ago
                     and ma300_last < ma300_120_min_ago
@@ -14364,21 +14367,53 @@ class maddog:
                     and deviation_ma3_sopra_ma10 > 0.08
                     and deviation_ma5_sopra_ma28 > -0.03
 
-                    
                     and ma5_last > ma100_last
                     and deviation_ma100_sopra_ma300 > -0.60
                     and deviation_ma200_sopra_ma300 > -0.60
                     
                     and ma2_last >= ma2_2_min_ago
                     
-                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.010
                     and macd_differenza_2_min_ago > -1.25
                 ):
                
-                    buy = "BUY 2 con 3-20 che ci riprova quando se ne va lateralmente > crollo e 5 e' andata sopra 100  CON 10>20 - r 5445 A2"
+                    buy = "BUY 2 con 3-20 che ci riprova quando se ne va lateralmente > crollo CON 10>20 - r 5445 A2 x"
                     action = "buy"
                     percentage = 80
 
+                    # 15 ott 2024 con 100>100 60 min ago
+
+
+                elif (
+                    ma3_last > ma20_last
+                    and ma100_last < ma100_60_min_ago
+
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.10
+                    and deviation_ma5_sotto_ma200 < -0.10
+                    and deviation_ma25_sotto_ma300 < -0.11
+
+                    and ma450_last < ma450_180_min_ago
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_120_min_ago
+
+                    and ma10_last > ma20_last
+                    and deviation_ma3_sopra_ma10 > 0.08
+                    and deviation_ma5_sopra_ma28 > -0.03
+
+                    and deviation_ma100_sopra_ma300 > -0.60
+                    and deviation_ma200_sopra_ma300 > -0.60
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.010
+                    and macd_differenza_2_min_ago > -1.25
+                ):
+               
+                    buy = "BUY 2 con 3-20 che ci riprova quando se ne va lateralmente > crollo CON 10>20 E 100 < 100 60 min + OSSO - r 5445 A2 y"
+                    action = "buy"
+                    percentage = 80
+
+                    # 15 ott 2024 SE 100<100 60 min ago + OSSO
 
 
                 elif (
