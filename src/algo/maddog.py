@@ -11250,9 +11250,18 @@ class maddog:
                     and ma200_last < ma200_20_min_ago
                     and ma300_last < ma450_last
 
+                    # CANO STAF
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.27
+                    and deviation_ma10_sopra_ma200 < -0.20
+                    and deviation_ma5_sotto_ma300 < -0.20
+                    # CANO STAF
+
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.13
                     and deviation_ma5_sotto_ma200 < -0.25
                     and deviation_ma25_sotto_ma300 < -0.29
+
 
                     and deviation_ma3_sopra_ma10 > 0.01
                     and deviation_ma3_sopra_ma18 > -0.08
@@ -11264,14 +11273,15 @@ class maddog:
                
                 ):    
         
-                    buy = "BUY 2 CON 450> MA ma100< 100 90 min ago CON dev 5-200 < -0.25 E CON dev 25-300 < -0.29 (osso) - r 4670"
+                    buy = "BUY 2 CON 450> MA ma100< 100 90 min ago CON dev 5-200 < -0.25 E CON dev 25-300 < -0.29 (osso) + CANO STAF - r 4670"
                     action = "buy"
                     percentage = 90
                     
                     #  7 ott 2024 DATEMI UN OSSO (and deviation_ma5_sotto_ma200 < -0.30)
                     #  7 ott 2024 DATEMI UN OSSO (and deviation_ma25_sotto_ma300 < -0.60)
                     #  7 ott 2024 aggiunta anche and deviation_ma5_sopra_o_sotto_ma100 < -0.13
-
+                    # 15 ott 2024 inervento del CANO STAF che forse ha un piccolo segreto 
+                    # 15 ott 2024 che forse e' prorio questo ! and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
                         
                 elif (
                     
