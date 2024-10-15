@@ -43770,6 +43770,35 @@ class maddog:
                 #  8 feb 2024 aggiunto and ma5_last <= ma100_last
 
 
+            elif (
+                ma50_last < ma50_2_min_ago
+                and macd < -40
+                and ma3_last <= ma200_last
+
+                and ma200_last > ma200_301_min_ago
+                and ma300_last > ma300_301_min_ago
+                and ma450_last > ma450_300_min_ago
+
+                and delta_50_39 > delta_50_39_30_min
+                and ma10_last <= ma20_last
+                
+                
+                and deviation_ma39 < 0.07
+                and deviation_sell < 0.02
+                
+                and deviation_ma100_sopra_ma300 > 0.10
+                
+                and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.02
+                and macd_differenza_2_min_ago < -0.5
+                and ma2_last < ma5_last
+                and price < ma3_last
+                
+            ):
+                sell = "SELL CS - SALVAGENTE - se MACD < -40 vende con 3-200 E dev 3-39 < 0.05 e dev sell < 0.02 e se ma50 < - r 15985 A1 ok 4Y 2B Y1"
+                action = "sell"
+
+                # 19 set 2024 se macd -40 vende con 3-200
+                # 15 ott 2024 quando MACD < -40 vende anche con 3-200 
 
             elif (
                 ma50_last < ma50_2_min_ago
@@ -43795,7 +43824,7 @@ class maddog:
                 and price < ma3_last
                 
             ):
-                sell = "SELL CS - SALVAGENTE - se MACD < -40 vende con 3-300 E dev 3-39 < 0.05 e dev sell < 0.02 e se ma50 < - r 15985 A1 ok 4Y 2BY"
+                sell = "SELL CS - SALVAGENTE - se MACD < -40 vende con 3-300 E dev 3-39 < 0.05 e dev sell < 0.02 e se ma50 < - r 15985 A1 ok 4Y 2B Y2"
                 action = "sell"
 
                 # 19 set 2024 se macd -40 vende con 3-300
@@ -47363,10 +47392,35 @@ class maddog:
                 
                 
             # 30 - SELL condizione speciale ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma13 <
-            
+
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
                 and ma450_last > ma450_10_min_ago
+                and ma39_last > ma100_last
+
+                and ma100_last < ma100_30_min_ago
+                and ma13_last <= ma13_2_min_ago
+
+                and deviation_ma100_sopra_ma200 > -0.70
+                and deviation_ma100_sopra_ma300 < 0.50
+
+                and ma3_last <= ma3_2_min_ago
+                and ma2_last < last_trade_price
+                and ma2_last <= ma2_2_min_ago
+                
+                and deviation_sell < -0.03
+            ):
+          
+                sell = "SELL CS - DOLCE ATTESA 270 sec con ma13 < and con 450 > E 100<100 30 min ago E dev sell -0.03 - r 16694 B1x"
+                action = "sell"
+
+                # 15 ott 2024 se 39>100 deviation_sell < -0.03 da < -0.02
+
+
+            elif (
+                seconds_since_last_trade > max_hold_time_in_seconds
+                and ma450_last > ma450_10_min_ago
+                and ma39_last < ma100_last
 
                 and ma100_last < ma100_30_min_ago
                 and ma13_last <= ma13_2_min_ago
@@ -47379,10 +47433,9 @@ class maddog:
                 and ma2_last <= ma2_2_min_ago
                 
                 and deviation_sell < -0.02
-                
-            ):
-
-                sell = "SELL CS - DOLCE ATTESA 270 sec con ma13 < and con 450 > E 100<100 30 min ago e 100 sopra 300 < 0.50 - r 16694 B1"
+            ):    
+            
+                sell = "SELL CS - DOLCE ATTESA 270 sec con ma13 < and con 450 > E 100<100 30 min ago e 100 sopra 300 < 0.50 - r 16694 B1y"
                 action = "sell"
              
                 # 4 feb 2022 con <-0.26 ha fatto -0.88% (dopo +4.29%)
