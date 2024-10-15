@@ -6720,9 +6720,20 @@ class maddog:
                     and ma200_last < ma200_20_min_ago
                     and ma300_last < ma450_last
 
+
+                    # CANO STAF
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.27
+                    and deviation_ma10_sopra_ma200 < -0.20
+                    and deviation_ma5_sotto_ma300 < -0.20
+                    # CANO STAF
+
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.15
                     and deviation_ma5_sotto_ma200 < -0.25
                     and deviation_ma25_sotto_ma300 < -0.29
+
+
 
                     and deviation_ma3_sopra_ma10 > 0.01
                     and deviation_ma3_sopra_ma18 > -0.08
@@ -6734,14 +6745,14 @@ class maddog:
                
                 ):    
         
-                    buy = "BUY 1 CON 450> MA ma100< 100 90 min ago CON dev 5-200 < -0.25 E CON dev 25-300 < -0.29 (osso) - r 1720"
+                    buy = "BUY 1 CON 450> MA ma100< 100 90 min ago CON dev 5-200 < -0.25 E CON dev 25-300 < -0.29 (osso) + CANO STAF - r 1720"
                     action = "buy"
                     percentage = 90
                     
                     #  7 ott 2024 DATEMI UN OSSO (and deviation_ma5_sotto_ma200 < -0.30)
                     #  7 ott 2024 DATEMI UN OSSO (and deviation_ma25_sotto_ma300 < -0.60)
                     #  7 ott 2024 aggiunta and deviation_ma5_sopra_o_sotto_ma100 < -0.15
-              
+                    # 15 ott 2024 entra il CANO STAF !
               
                
                 
@@ -9466,8 +9477,6 @@ class maddog:
                     
                     and ma100_last < ma100_10_min_ago
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
-                    and ma200_last < ma200_120_min_ago
-
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.27
                     and deviation_ma5_sotto_ma300 < -0.20
                     and deviation_ma10_sopra_ma200 < -0.20
@@ -9476,7 +9485,7 @@ class maddog:
                     and ma200_last < ma300_last
                     
                     and ma100_last < ma100_120_min_ago
-                    
+                    and ma200_last < ma200_120_min_ago
                     and ma300_last < ma300_120_min_ago
                     
                     and deviation_ma3_sopra_ma10 > 0.01
