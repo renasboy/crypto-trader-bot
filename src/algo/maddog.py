@@ -18675,11 +18675,41 @@ class maddog:
 
 
                 # BUY 3 NUOVO che ci riprova TORNANDO ALLE ORIGINI MA on ma200 < da ALMENO 5 ore ! and ma300<
-                
+
+                elif (
+                    deviation_buy2 > 0.01
+
+                    and ma100_last > ma200_last
+                    and ma200_last > ma300_last
+
+                    and deviation_ma3_sopra_ma28 > 0.01
+                    
+                    and ma450_last < ma450_300_min_ago
+                    and ma300_last < ma300_60_min_ago
+
+                    
+                    and ma2_last > ma2_2_min_ago
+                    
+                    and ma3_last > ma13_last
+                    and deviation_buy_ma3_sopra_ma20 > 0.01
+                    and deviation_ma4_sopra_ma25 > 0.01
+                 
+                ):
+               
+                    buy = "BUY 3 NUOVO che ci riprova TORNANDO ALLE ORIGINI MA SOLO SE ma450 scende da almeno 5 ore ! cazzo E 200 > 300 - r 6447 bx"
+                    action = "buy"
+                    percentage = 90
+
+                    # 15 ott 2024 se 200>300 anticipato ndecchiecella
+
+
                 elif (
                     deviation_buy2 > 0.05
-                    and deviation_ma3_sopra_ma28 > 0.15
                     and ma100_last > ma200_last
+                    and ma200_last < ma300_last
+
+                    and deviation_ma3_sopra_ma28 > 0.15
+                    
                     and ma450_last < ma450_300_min_ago
                     and ma300_last < ma300_60_min_ago
 
@@ -18692,7 +18722,7 @@ class maddog:
                  
                 ):
                
-                    buy = "BUY 3 NUOVO che ci riprova TORNANDO ALLE ORIGINI MA SOLO SE ma450 scende da almeno 5 ore ! cazzo - r 6447 b"
+                    buy = "BUY 3 NUOVO che ci riprova TORNANDO ALLE ORIGINI MA SOLO SE ma450 scende da almeno 5 ore ! cazzo MA 200 < 300 - r 6447 by"
                     action = "buy"
                     percentage = 90
 
