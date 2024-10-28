@@ -25766,11 +25766,14 @@ class maddog:
                 
                 
                 # BUY 5 TUTTE LE ma IN CRESCITA
+
                 elif (
                     ma69_last < ma69_2_min_ago
                     and ma100_last > ma200_last
                     and ma200_last > ma300_last
-                    
+
+                    and ma100_last > ma100_10_min_ago
+
                     and ma300_last > ma300_60_min_ago
                     and ma450_last > ma450_120_min_ago
                     and deviation > -0.30
@@ -25781,7 +25784,7 @@ class maddog:
                     and macd > -40
                     and macd_differenza_2_min_ago > -2
                 ):
-                    buy = "BUY 5 con 69< MA CON TUTTE LE ma IN CRESCITA - r 7352"
+                    buy = "BUY 5 con 69< MA TUTTE LE ma IN CRESCITA E ma100> - r 7352 a"
                     action = "buy"
                     percentage = 70
                     
@@ -25789,6 +25792,72 @@ class maddog:
                     # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
                     # 14 ott 2024 anticipata di molto (tutte le ma sono in crescita !)
                     # 14 ott 2024 aggiunto MACD e diff macd
+
+                elif (
+                    ma69_last < ma69_2_min_ago
+                    and ma100_last > ma200_last
+                    and ma200_last > ma300_last
+
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma5_sopra_o_sotto_ma5_30_min_ago > -0.08
+
+                    and ma300_last > ma300_60_min_ago
+                    and ma450_last > ma450_120_min_ago
+                    and deviation > -0.30
+                    
+                    and ma3_last > ma8_last
+                  
+                    and ma2_last > ma2_2_min_ago
+                    and macd > -40
+                    and macd_differenza_2_min_ago > -2
+                ):
+                    buy = "BUY 5 con 69< MA TUTTE LE ma IN CRESCITA MA ma100< E ma5 last non scende molto dalla ma5 di 30 min ago - r 7352 b1"
+                    action = "buy"
+                    percentage = 70
+                    
+                    # deviation_buy3 = ma4_last/ma30_last
+                    # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
+                    # 14 ott 2024 anticipata di molto (tutte le ma sono in crescita !)
+                    # 14 ott 2024 aggiunto MACD e diff macd
+
+                    # 28 ott 2024 se ma100 scende MA se ma5 last non scende molto dalla ma5 di 30 min ago ok cosi
+
+
+                elif (
+                    ma69_last < ma69_2_min_ago
+                    and ma100_last > ma200_last
+                    and ma200_last > ma300_last
+
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma5_sopra_o_sotto_ma5_30_min_ago < -0.08
+
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.27
+                    and deviation_ma10_sopra_ma200 < -0.20
+                    and deviation_ma5_sotto_ma300 < -0.20
+
+                    and ma300_last > ma300_60_min_ago
+                    and ma450_last > ma450_120_min_ago
+                    and deviation > -0.30
+                    
+                    and ma3_last > ma8_last
+                  
+                    and ma2_last > ma2_2_min_ago
+                    and macd > -40
+                    and macd_differenza_2_min_ago > -2
+                ):
+                    buy = "BUY 5 con 69< MA TUTTE LE ma IN CRESCITA MA ma100< E ma5 last scende molto dalla ma5 di 30 min ago (+OSSO !)- r 7352 b2"
+                    action = "buy"
+                    percentage = 70
+                    
+                    # deviation_buy3 = ma4_last/ma30_last
+                    # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
+                    # 14 ott 2024 anticipata di molto (tutte le ma sono in crescita !)
+                    # 14 ott 2024 aggiunto MACD e diff macd
+
+                    # 28 ott 2024 se ma100 scende E se ma5 last scende molto dalla ma5 di 30 min ago ALLORA OSSO CANO STAF !
+
                 
                 elif (
                     ma69_last < ma69_2_min_ago
