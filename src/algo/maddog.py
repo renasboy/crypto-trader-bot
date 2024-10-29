@@ -10288,8 +10288,9 @@ class maddog:
 
                 elif (  
                     ma3_last > ma28_last
-                    and ma39_last > ma39_5_min_ago
-
+                    
+                    
+                    and ma5_last > ma39_last
 
                     and ma300_last > ma300_360_min_ago
                     and ma100_last > ma300_last
@@ -10299,19 +10300,23 @@ class maddog:
                     and ma5_last > ma200_last
                     and ma3_last > ma11_last
                     
-                    and deviation_ma3_sopra_ma10 > 0.02
-                    and deviation_ma3_sopra_ma16 > 0.07
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > 0.05
                    
                     and ma2_last >= ma2_2_min_ago
-                    and macd >= macd_2_min_ago
+                    and macd > -40
+                    and macd_differenza_2_min_ago > -3.25
                 ):
 
-                    buy = "BUY 1 forever young 1 PIU' PRUDENTE se ma 200 > e se ma100 > ma300 AND 300> 6 ore ago - r 4353 x1"
+                    buy = "BUY 1 forever young 1 PIU' PRUDENTE se ma 200 > e se ma100 > ma300 AND 300> 6 ore ago - r 4353 X1"
                     action = "buy"
                     percentage = 80
                     
                     #  6 mar 2024 and ma39_last > ma39_5_min_ago ok cosi'
-                    
+                    # 29 ott 2024 5>39 al posto di 39 > 39 5 min ago
+                    # 29 ott 2024 and macd > -40 al posto di macd > macd 2 min ago
+                    # 29 ott 2024 and macd_differenza_2_min_ago > -3.25
+
 
                 elif (  
                     ma3_last > ma28_last
