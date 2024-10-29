@@ -25767,8 +25767,11 @@ class maddog:
                 
                 # BUY 5 TUTTE LE ma IN CRESCITA
 
+
                 elif (
                     ma69_last < ma69_2_min_ago
+                    and ma39_last > ma39_20_min_ago
+
                     and ma100_last > ma200_last
                     and ma200_last > ma300_last
 
@@ -25784,7 +25787,33 @@ class maddog:
                     and macd > -40
                     and macd_differenza_2_min_ago > -2
                 ):
-                    buy = "BUY 5 con 69< MA TUTTE LE ma IN CRESCITA E ma100> - r 7352 a"
+                    buy = "BUY 5 con 69< MA TUTTE LE ma IN CRESCITA E ma100> - r 7352 ax"
+                    action = "buy"
+                    percentage = 70
+
+
+                elif (
+                    ma69_last < ma69_2_min_ago
+
+                    and ma39_last < ma39_20_min_ago
+                    and deviation_ma39 < -0.17
+
+                    and ma100_last > ma200_last
+                    and ma200_last > ma300_last
+
+                    and ma100_last > ma100_10_min_ago
+
+                    and ma300_last > ma300_60_min_ago
+                    and ma450_last > ma450_120_min_ago
+                    and deviation > -0.30
+                    
+                    and ma3_last > ma8_last
+                  
+                    and ma2_last > ma2_2_min_ago
+                    and macd > -40
+                    and macd_differenza_2_min_ago > -2
+                ):
+                    buy = "BUY 5 con 69< E CON ma39 che scende da 20 min MA TUTTE LE ma IN CRESCITA E ma100> - r 7352 ay"
                     action = "buy"
                     percentage = 70
                     
@@ -25792,6 +25821,8 @@ class maddog:
                     # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
                     # 14 ott 2024 anticipata di molto (tutte le ma sono in crescita !)
                     # 14 ott 2024 aggiunto MACD e diff macd
+                    # 29 ott 2024 se ma39 scende da 20 min and deviation_ma39 < -0.17 (una specie di osso)
+
 
                 elif (
                     ma69_last < ma69_2_min_ago
