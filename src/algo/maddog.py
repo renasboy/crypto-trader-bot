@@ -24613,8 +24613,13 @@ class maddog:
 
 
 
+
                 elif (    
                     ma3_last > ma20_last
+
+                    and ma39_last > ma39_30_min_ago
+                    
+
                     and ma450_last < ma450_120_min_ago
                     and ma100_last > ma100_60_min_ago
                     and ma50_last < ma50_2_min_ago
@@ -24635,7 +24640,38 @@ class maddog:
                     and macd_differenza_2_min_ago > -3.50
                     
                 ):
-                    buy = "BUY 5 ma450_last < ma450_120_min_ago E 200>300 MA ma100_last > ma200_last E 100>200 - r 7144 A2 X1Aa"
+                    buy = "BUY 5 ma450_last < ma450_120_min_ago E 200>300 E 100>200 E 39>39 30 min ago - r 7144 A2 X1Aa 1"
+                    action = "buy"
+                    percentage = 70
+
+
+                elif (    
+                    ma3_last > ma20_last
+
+                    and ma39_last < ma39_30_min_ago
+                    and deviation_ma39 < -0.17
+
+                    and ma450_last < ma450_120_min_ago
+                    and ma100_last > ma100_60_min_ago
+                    and ma50_last < ma50_2_min_ago
+                    
+                    and ma10_last > ma20_last
+                    and ma200_last > ma300_last
+
+                    
+                  
+                    and deviation_ma100_sopra_ma300 < 0.40
+                   
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    
+                    and ma2_last > ma5_last
+                    and ma3_last > ma13_last
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd_differenza_2_min_ago > -3.50
+                    
+                ):
+                    buy = "BUY 5 CON ma450_last<ma450_120_min_ago E 200>300 E 100>200 MA 39<39 30 min ago + specie di osso - r 7144 A2 X1Aa 2"
                     action = "buy"
                     percentage = 70
 
