@@ -14806,9 +14806,12 @@ class maddog:
                     
                     
                 # BUY 2 nuovo RIALZO IMPROVVISO ma trend gia' in rialzo da 120 min and 0.27 sopra ultimo sell se 300>120 min e 100 sopra 300> 0.40
-                
+
                 elif (
                     ma200_last > ma200_20_min_ago
+
+                    and ma39_last < ma39_20_min_ago
+                    
                     and ma20_last >= ma20_2_min_ago
                     and ma100_last > ma200_last
                     and deviation_ma100_sopra_ma300 > 0.40
@@ -14826,7 +14829,35 @@ class maddog:
                     and macd_differenza_2_min_ago > 1.50
                 ):
                     
-                    buy = "BUY 2 nuovo RIALZO IMPROVVISO ma trend gia' in rialzo da 120 min and 0.22 sopra ultimo sell se 300>120 min e 100 sopra 300> 0.40 - r 5670a"
+                    buy = "BUY 2 RIALZO CON trend in rialzo E 0.22 sopra ultimo sell se 300>120 min  - r 5670 a1"
+                    action = "buy"
+                    percentage = 70
+
+
+                elif (
+                    ma200_last > ma200_20_min_ago
+
+                    and ma39_last < ma39_20_min_ago
+                    and deviation_ma39 < -0.17
+
+                    and ma20_last >= ma20_2_min_ago
+                    and ma100_last > ma200_last
+                    and deviation_ma100_sopra_ma300 > 0.40
+                    and ma300_last > ma300_120_min_ago
+                    
+                    and deviation_buy > 0.22
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > 0.07
+                    
+                    and ma150_last > ma150_60_min_ago
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and ma2_differenza_2_min_ago > 10
+                    and macd >= macd_2_min_ago
+                    and macd_differenza_2_min_ago > 1.50
+                ):
+                    
+                    buy = "BUY 2 RIALZO CON trend in rialzo E 0.22 sopra ultimo sell se 300>120 min + specie di osso - r 5670 a2"
                     action = "buy"
                     percentage = 70
                     
@@ -14858,7 +14889,7 @@ class maddog:
                     and macd_differenza_2_min_ago > 1.50
                 ):  
                     
-                    buy = "BUY 2 nuovo RIALZO IMPROVVISO ma trend gia' in rialzo da 120 min and 0.262 sopra ultimo sell se 300>120 min e 100 sopra 300> 0.40 - r 5670b"
+                    buy = "BUY 2 RIALZO IMPROVVISO con trend in rialzo and 0.262 sopra ultimo sell se 300>120 min e 100 sopra 300> 0.40 - r 5670b"
                     action = "buy"
                     percentage = 70
                     
