@@ -9489,6 +9489,9 @@ class maddog:
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.27
                     and deviation_ma5_sotto_ma300 < -0.20
                     and deviation_ma10_sopra_ma200 < -0.20
+
+                    and deviation_ma25_sotto_ma300 < -0.39
+                    and deviation_ma50_sotto_ma300 < -0.36
                     
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
@@ -9504,13 +9507,15 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
                     and macd > macd_2_min_ago
                 ):
-                    buy = "BUY 1 78<200 pensiero laterale - PRENDI IL COLTELLO CON IL PIEDE - r 4050 CANE STAF"
+                    buy = "BUY 1 78<200 pensiero laterale - PRENDI IL COLTELLO CON IL PIEDE - r 4050 CANE STAF + zia amalia"
                     action = "buy"
                     percentage = 80
 
                     # modificata aggiungendo prendi il coltello con il piede
                     #  2 ott 2024 E' ANDATA BENISSIMO
                     # 13 ott 2024 e' andata benissimo !
+                    #  4 nov 2024 aggiunta and deviation_ma25_sotto_ma300 < -0.39
+                    #  4 nov 2024 aggiunta and deviation_ma50_sotto_ma300 < -0.36
 
                 elif (    
                     ma78_last < ma200_last
