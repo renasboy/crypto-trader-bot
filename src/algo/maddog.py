@@ -240,6 +240,8 @@ class maddog:
         macd_3_min_ago = self.algo_helper.macd_minutes_ago(3)
         macd_5_min_ago = self.algo_helper.macd_minutes_ago(5)
 
+        # ADX
+        adx = self.algo_helper.adx
         
 
         ################################################################################################# CONFORTABLY NUMB
