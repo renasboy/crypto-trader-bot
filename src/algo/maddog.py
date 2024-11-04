@@ -443,7 +443,7 @@ class maddog:
 
 
         
-        # formula DEVIATION_ma3_sopra_ma28 - FORMULA AUREA !
+        # formula DEVIATION_ma3_sopra_ma28
         
         deviation_ma3_sopra_ma28 = (ma3_last / ma28_last - 1) * 100 if ma28_last else 0
         self.algo_helper.info("deviation_ma3_sopra_ma28: {}".format(deviation_ma3_sopra_ma28))
@@ -7514,7 +7514,7 @@ class maddog:
                 elif (
                     ma3_last > ma18_last
                     and ma450_last > ma450_360_min_ago
-                    
+                    and deviation_ma3_sotto_ma50 < -0.02
                     
                     and ma100_last > ma100_120_min_ago
                     and ma200_last > ma200_120_min_ago
@@ -7534,10 +7534,11 @@ class maddog:
                     and macd > -40
                 ):    
                     
-                    buy = "BUY 1 CORREZIONE FIAT con medie lunghe TUTTE IN RIALZO ! anche ma450 ! - r 2527a1"
+                    buy = "BUY 1 CORREZIONE FIAT con medie lunghe TUTTE IN RIALZO ! anche ma450 ! E dev 3-50 < -0.02 ! - r 2527 A1"
                     action = "buy"
                     percentage = 80
 
+                    #  4 nov 2024 aggiunta dev 3-50 < -0.02
 
 
                 elif (
