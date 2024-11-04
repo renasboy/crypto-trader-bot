@@ -454,11 +454,17 @@ class maddog:
         deviation_ma4_sopra_ma28 = (ma4_last / ma28_last - 1) * 100 if ma28_last else 0
         self.algo_helper.info("deviation_ma4_sopra_ma28: {}".format(deviation_ma4_sopra_ma28))
 
-
-        # formula DEVIATION_ma5_sopra_ma28 - FORMULA AUREA !
+        # formula DEVIATION_ma5_sopra_ma28
         
         deviation_ma5_sopra_ma28 = (ma5_last / ma28_last - 1) * 100 if ma28_last else 0
         self.algo_helper.info("deviation_ma5_sopra_ma28: {}".format(deviation_ma5_sopra_ma28))
+
+
+
+        # formula DEVIATION_ma3_sotto_ma50 - FORMULA AUREA !
+        
+        deviation_ma3_sotto_ma50 = (ma3_last / ma50_last - 1) * 100 if ma50_last else 0
+        self.algo_helper.info("deviation_ma3_sotto_ma50: {}".format(deviation_ma3_sotto_ma50))
         
         
         
