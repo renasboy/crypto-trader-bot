@@ -7534,7 +7534,7 @@ class maddog:
                     and macd > -40
                 ):    
                     
-                    buy = "BUY 1 CORREZIONE FIAT con medie lunghe TUTTE IN RIALZO ! anche ma450 ! E dev 3-50 < -0.02 ! - r 2527 A1"
+                    buy = "BUY 1 CORREZIONE FIAT con medie lunghe TUTTE IN RIALZO ! anche ma450 ! E - r 2527 A1"
                     action = "buy"
                     percentage = 80
 
@@ -16347,7 +16347,8 @@ class maddog:
 
                 elif (     
                     ma3_last > ma18_last
-                    
+                    and deviation_ma3_sotto_ma50 < -0.02
+
                     and ma39_last < ma39_15_min_ago
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.40
                    
@@ -16378,6 +16379,8 @@ class maddog:
 
                     #  9 set 2024 and deviation_ma5_sopra_o_sotto_ma100 < -0.40 da -0.35 MA FORSE E' DA TOGLIERE
                     #  7 ott 2024 aggiunto osso and deviation_ma5_sopra_o_sotto_ma100 < -0.13 
+                    #  4 nov 2024 aggiunta and deviation_ma3_sotto_ma50 < -0.02
+
 
                 elif (     
                     ma3_last > ma18_last
