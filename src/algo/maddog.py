@@ -11967,7 +11967,9 @@ class maddog:
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
                     and ma200_last < ma200_120_min_ago
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.20
-                    
+
+                    and deviation_ma25_sotto_ma300 < -0.39
+                    and deviation_ma50_sotto_ma300 < -0.36
 
                     and deviation_ma100_sopra_ma300 < 0.20
                     and ma78_last < ma200_last
@@ -11981,7 +11983,7 @@ class maddog:
                     
                     and macd >= macd_2_min_ago
                 ):
-                    buy = "BUY 2A ribasso o laterale and ma78_last < ma200_last - r 4709 B"
+                    buy = "BUY 2A ribasso o laterale and ma78_last < ma200_last + zia amalia - r 4709 B"
                     action = "buy"
                     percentage = 80
 
@@ -11989,7 +11991,7 @@ class maddog:
                     # deviation_buy2 = ma8_last/ma50_last
                     # roma aggiunta 5-28
                     #  3 ott 2024 aggiunto cane STAF
-                    
+                    #  5 ott 2024 aggiunta zia amalia
                     
                 
 
