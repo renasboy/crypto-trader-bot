@@ -18629,34 +18629,25 @@ class maddog:
                     
                     
                 elif (
-                    ma69_last < ma69_2_min_ago
-                    and deviation > -0.30
+                    ma3_last > ma20_last
+                    
+                    and deviation_ma25_sotto_ma300 < -0.50
+                    and deviation_ma50_sotto_ma300 < -0.60
                     
                     and ma78_last < ma200_last
-                    and deviation_ma3_sopra_ma10 > 0.15
+                    and deviation_ma3_sopra_ma10 > 0.07
                     
-                    and deviation_buy3 > 0.02
-                    and deviation_ma13_sopra_ma25 > 0.040
-                    and delta_buy3_incrocio_ma3_ma8 > 0.07
-                    and deviation_ma4_sopra_ma30 > 0.14
-                    and ma3_last > ma8_last
-                    and ma3_last > ma78_last
-                    and ma4_last > ma4_2_min_ago
-                    and ma2_last > ma2_2_min_ago
-                    and ma7_last > ma25_last
-                    
-                    and ma2_last > ma2_2_min_ago
+                    and ma2_last >= ma2_2_min_ago
                     and macd_differenza_2_min_ago > -3
                 ):
-                    buy = "BUY 3D RIVOLUZIONARIO se ma69 < AND ma78_last < ma200_last AND deviation_ma3_sopra_ma10 > 0.07 - r 6356 B"
+                    buy = "BUY 3 RIVOLUZIONARIO con 3-20 se ma78 < ma200 + zia amalia - r 6356 B"
                     action = "buy"
                     percentage = 80
                     
-                    # deviation_buy3 = ma4_last/ma30_last
-                    # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
+                    
                     # 10 dic 2023 aggiunta and ma2_last > ma2_2_min_ago
                     # 10 dic 2023 aggiunta and macd_differenza_2_min_ago > -3
-                    
+                    #  5 nov 2024 + zia amalia
                  
                     
                     
