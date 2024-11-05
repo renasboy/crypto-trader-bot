@@ -23177,8 +23177,9 @@ class maddog:
                 
                 elif (
                     
-                    ma18_last > ma100_last
-                    
+                    ma3_last > ma39_last
+                    and ma100_last > ma100_30_min_ago
+
                     and ma100_last < ma100_120_min_ago
                     and ma200_last < ma200_120_min_ago
                     and ma300_last < ma300_120_min_ago
@@ -23199,13 +23200,10 @@ class maddog:
                     percentage = 90
                     
                     # vuoi comprare dopo 120 min di ribasso ? deve essere 5-300 < -0.35 ! voglio uno sconto ulteriore dello 0.35% ! PENSIERO LATERALE
-
+                    #  5 nov 2024 100 deve essere > 30 min ago stiamo al buy 4 cazzo.
 
               
                 # BUY 4 29 ago 2022 > 180 min di ribasso
-                # 16 mar 2023 aggiunta 3-10 > 0.05
-
-
                 
                 elif (
                     
@@ -26202,45 +26200,8 @@ class maddog:
 
 
                 # 21 set 2024 cancellata r 7384 B1
+                #  5 nov 2024 cancellata r 7384 B2
                 
-                
-                elif (    
-                    ma450_last < ma450_360_min_ago
-                    and ma100_last < ma300_last
-                    and ma78_last > ma150_last
-                    
-                    and deviation_ma4_sopra_ma100 > 0.10
-                    
-                    and deviation_ma3_sopra_ma10 > 0.12
-                    and deviation_ma3_sopra_ma16 > 0.12
-                    and deviation_ma5_sopra_ma28 > 0.04
-                    
-                    and deviation_buy3 > 0.10
-                    and deviation_bellissima > 0.10
-                    and deviation_ma7_sopra_ma40 > 0.10
-                    
-                    and ma4_last > ma9_last
-                    and ma4_last > ma50_last
-                    and ma6_last > ma15_last
-                    and ma7_last > ma25_last
-                    
-                    and ma3_last > ma13_last
-                    
-                    and ma2_last >= ma2_2_min_ago
-              
-                ):
-                    buy = "BUY 5A con 100<300 e con con ma450_last > ma450_360_min_ago and deviation_bellissima > 0.10 (PER SPEZZARE LA CATENA - effetti laterali) - r 7384 B2"
-                    action = "buy"
-                    percentage = 70
-                    
-                    # deviation_bellissima = 6/30
-                    # spezzare la catena dei buy - effetti laterali !
-                    # se e' arrivato il buy 5 e' molto probabile che il trend sia consolidato
-                    # e, a questo punto, non importa se compra con un + 0.10 piu' in alto. NON FA UNA GRANDE DIFFERENZA !
-                    
-                    # > vacanza anticipato buy
-                    # importante : aggiunta triade della salvezza
-
                 
                 
                 elif (
@@ -26778,14 +26739,14 @@ class maddog:
                     # 14 ott 2024 se anche 39<100 allora diamogli un osso !
                     
                     
-                # BUY 5 13 apr 2023 zia pina > 180 min di ribasso 78>150
+                # BUY 5 13 apr 2023 zia pina > 180 min di ribasso MA 39>100
 
-                  
                 elif (
                     
-                    ma5_last > ma54_last
+                    ma3_last > ma28_last
+                    and ma39_last > ma100_last
+
                     and deviation_ma78_sopra_o_sotto_ma200 > -0.028
-                    and ma78_last > ma100_last
                     
                     and ma100_last < ma100_180_min_ago
                     and ma200_last < ma200_180_min_ago
@@ -26794,18 +26755,18 @@ class maddog:
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
                     
-                    and deviation_ma5_sopra_ma28 > 0.02
                     and ma2_last >= ma2_2_min_ago
-                    and macd >= macd_2_min_ago
+                    and macd > -40
+                    and macd_differenza_2_min_ago < -1.30
                 ):
-                    buy = "BUY 5 13 apr 2023 zia pina > 180 min di ribasso 78>100 and macd >= macd_2_min_ago - r 7564 B1x"
+                    buy = "BUY 5 13 apr 2023 zia pina > 180 min di ribasso MA 39>100 - r 7564 B1 X"
                     action = "buy"
                     percentage = 90
                     
                     # 27 set 2023 5-54 da 18-100
                     #  6 dic 2023 78>100 da 78>150
                     #  6 dic 2023 and macd >= macd_2_min_ago
-
+                    #  5 nov 2024 se ma39_last > ma100_last fai un BUY
               
                 
                 elif (    
@@ -27333,7 +27294,7 @@ class maddog:
                     and macd > -40
                     and macd >= macd_2_min_ago
                     and macd_differenza_2_min_ago > 2
-                    
+   
                 ):    
                     buy = "BUY 5 compare forever EX BUY 1 r 1537 A2y1 - 100<120 min ago MA 100>60 min ago con 5-20 E 300 vicina alla 450 + MACD > E ma50_diff_ma59 > -5 - r 7589 a2"
                     action = "buy"
