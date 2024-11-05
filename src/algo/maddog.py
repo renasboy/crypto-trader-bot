@@ -46755,11 +46755,9 @@ class maddog:
                 and ma5_differenza_2_min_ago < -6
                 and ma10_last < ma20_last
                 and ma20_last <= ma20_2_min_ago
-                and ma50_last <= ma50_2_min_ago
                 
+                and ma39_last < ma100_last
                 and ma300_last > ma300_301_min_ago
-                
-                
                 
                 and deviation_ma5_sotto_ma200 > -0.64
                 
@@ -46772,7 +46770,7 @@ class maddog:
                 and deviation_ma39 < 0.08
                 and deviation_sell < 0.01
             ):
-                sell = "SELL cond spec con ma 50 <= ma 50 2 min ago  con ma300 > 5 ore - SALVAGENTE 4 dev 3-39 < 0.06 e dev_sell < 0.01 e ma5 sotto ma200 > -0.64 - r 16047 B1 Y2 Y2 z"
+                sell = "SELL CS con 39<100 E ma300 > 5 ore e dev 3-39 < 0.06 e dev_sell < 0.01 - r 16047 B1 Y2 Y2 z"
                 action = "sell"   
                 
 
@@ -46813,7 +46811,7 @@ class maddog:
                 #  6 dic 2023 dev_sell < 0.05 da -0.06
                 
                 # oggi 10 dicembre 2023 ascolta mario ! SE ma20_last <= ma20_2_min_ago DEV SELL a 0.05
-
+                #  5 nov 2024 ho sostituito ma50<ma50 2min ago (che e' arrivata tardi) con 39<100
             
             elif (
                 ma78_last < ma78_120_min_ago
