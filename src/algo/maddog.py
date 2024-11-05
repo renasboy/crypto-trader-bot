@@ -20114,6 +20114,10 @@ class maddog:
                     ma3_last > ma22_last
                     and ma39_last < ma100_last
                     and ma10_last < ma20_last
+
+                    and deviation_ma25_sotto_ma300 < -0.39
+                    and deviation_ma50_sotto_ma300 < -0.36
+
                     and deviation_ma5_sotto_ma300 > -0.60
                     
                     and ma100_last < ma100_180_min_ago
@@ -20135,7 +20139,7 @@ class maddog:
                     and macd_differenza_2_min_ago > 1.00
                     
                 ):
-                    buy = "BUY 3 29 ago 2022 > 180 min di ribasso CON 10<20 e 3-22 e ma2_diff_2_min_ago > 12 - r 6572 A1 Y2"
+                    buy = "BUY 3 29 ago 2022 > 180 min di ribasso CON 10<20 e 3-22 e ma2_diff_2_min_ago > 12 + zia amalia - r 6572 A1 Y2"
                     action = "buy"
                     percentage = 80
                     
