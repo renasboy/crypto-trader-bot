@@ -13148,15 +13148,16 @@ class maddog:
                 
                 elif (
                     ma50_last < ma50_2_min_ago
+                    and deviation_ma25_sotto_ma300 < -0.70
+                    and deviation_ma50_sopra_o_sotto_ma300 < -0.70
 
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.10
-                    and deviation_ma5_sotto_ma200 < -0.10
-                    and deviation_ma25_sotto_ma300 < -0.11
-
-                    and ma3_last > ma20_last
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.25
+                    and deviation_ma5_sotto_ma200 < -0.20
+                  
+                    and ma3_last > ma20_last
                     
-                    and ma2_last > ma2_2_min_ago
+                    
+                    and ma2_last >= ma2_2_min_ago
                         
                     and delta_1 > delta_2
                     and ma100_last < ma100_60_min_ago
@@ -13167,18 +13168,18 @@ class maddog:
                         
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
-                    and deviation_ma50_sopra_o_sotto_ma300 < -0.30
+                    
 
                     and macd > -40
                 ):
-                    buy = "BUY 2 ORIGINALE CHE CI RIPROVA IMPORTATO DA SELL 1  - NOTTE - prende il coltello con il piede -0.25 + OSSO - r 4887"
+                    buy = "BUY 2 ORIGINALE CHE CI RIPROVA IMPORTATO DA SELL 1 !  - NOTTE - prende il coltello con il piede + OSSO - r 4887"
                     action = "buy"
                     percentage = 80
 
                     # 16 set 2024 aggiunta and deviation_ma50_sopra_o_sotto_ma300 < -0.30
                     # 20 set 2024 ho aggiunto prendi il coltello con il piede
                     # 15 ott 2024 aggiunto osso (anche 5 sotto 200 ! e 25 sotto 300)
-
+                    #  5 nov 2024 aggiunta zia amalia
 
                         
                 # BUY 2 DURANTE UN RIBASSO AUDI CHE NON E' UN CROLLO ! E CHE CI RIPROVA (compare stammi vicino!)
