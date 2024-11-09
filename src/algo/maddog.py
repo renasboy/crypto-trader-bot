@@ -26268,9 +26268,33 @@ class maddog:
 
                     #  4 ott 2924 ho preso da un sell precedente e ho modificato questa anticipandola !
 
-                elif (
-                    ma78_last >= ma78_2_min_ago
+
+
+                
+                elif (    
+                    ma450_last > ma450_360_min_ago
                     and ma78_last > ma150_last
+
+                    and ma300_last < ma450_last
+
+                    and deviation_ma3_sopra_ma10 > 0.07
+                    
+                    and ma3_last > ma8_last
+                    and ma2_last > ma2_2_min_ago
+                    
+                ):
+                    buy = "BUY 5C RIVOLUZIONARIO con ma450 > ma450 360 min ago - r 7441 A"
+                    action = "buy"
+                    percentage = 70
+
+                    #  9 nov 2024 se 450 sale da 6 ore non devi spezzare la catena !
+
+
+                elif (    
+                    ma450_last < ma450_360_min_ago
+
+                    and ma78_last > ma150_last
+
                     and ma300_last < ma450_last
 
                     and deviation_ma4_sopra_ma100 > 0.25
@@ -26289,7 +26313,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                     
                 ):
-                    buy = "BUY 5C RIVOLUZIONARIO con ma78 > and deviation_bellissima > 0.163 (PER SPEZZARE LA CATENA - effetti laterali) - r 7441 b"
+                    buy = "BUY 5C RIVOLUZIONARIO con ma78 > and deviation_bellissima > 0.163 (PER SPEZZARE LA CATENA - effetti laterali) - r 7441 B"
                     action = "buy"
                     percentage = 70
                     
