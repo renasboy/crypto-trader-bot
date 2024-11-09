@@ -45310,9 +45310,37 @@ class maddog:
                 # 15 gen 2024 se ma10_last > ma10_2_min_ago aumentato dev sell a -0.03 da -0.01
                 # 21 feb 2024 dev_sell a -0.04 da -0.03
                 
+            elif (
+                ma78_last > ma78_120_min_ago
+                and deviation_ma50_sopra_o_sotto_ma300 > 0.02
+                and ma450_last > ma450_360_min_ago
+                and ma100_last > ma200_last
+
+                and ma10_last < ma10_2_min_ago
+                and ma50_last < ma59_last
+                and ma20_last <= ma20_2_min_ago
+                
+                and deviation_ma39 < 0.07
+                and deviation_sell < -0.02
+                
+                and ma50_last < ma50_2_min_ago
+                and deviation_ma100_sopra_ma300 < 0.40
+                and deviation_ma5_sotto_ma200 > -0.80
+                
+                and ma2_last < ma2_2_min_ago
+                and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.018
+                and ma2_differenza_2_min_ago < -8
+                and macd_differenza_2_min_ago < -1.30
+                
+            ):
+                sell = "SELL CS - SALVAGENTE dev 3-39 < 0.05 e dev_sell < -0.02 e ma50 < e macd_diff_2_min_ago < -0.20 - r 16047 A1 Y1 Y2 AX 1"
+                action = "sell"
+
+                #  9 nov 2024 se deviation_ma50_sopra_o_sotto_ma300 > 0.02 allora dev sell a < -0.02 da -0.015
 
             elif (
                 ma78_last > ma78_120_min_ago
+                and deviation_ma50_sopra_o_sotto_ma300 < 0.02
                 and ma450_last > ma450_360_min_ago
                 and ma100_last > ma200_last
 
@@ -45333,7 +45361,7 @@ class maddog:
                 and macd_differenza_2_min_ago < -1.30
                 
             ):
-                sell = "SELL CS - SALVAGENTE dev 3-39 < 0.05 e dev_sell < -0.015 e ma50 < e macd_diff_2_min_ago < -0.20 - r 16047 A1 Y1 Y2 ax"
+                sell = "SELL CS - SALVAGENTE dev 3-39 < 0.05 e dev_sell < -0.015 e ma50 < e macd_diff_2_min_ago < -0.20 - r 16047 A1 Y1 Y2 ax 2"
                 action = "sell"
 
 
