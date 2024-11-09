@@ -6675,26 +6675,34 @@ class maddog:
               
                 
                 
-                # BUY 1 tempo INVERNO che considera il passare del tempo con ma30 < MA 100 < 200
+                # BUY 1 tempo INVERNO 
                 
                 elif (     
                     ma50_last > ma100_last
+
+                    and ma100_last < ma100_30_min_ago
+
+                    and deviation_ma25_sotto_ma300 < -0.50
+                    and deviation_ma50_sotto_ma300 < -0.15
+                    and deviation_ma39 < -0.06
+                    and deviation_ma3_sotto_ma50 < -0.25
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.37
+                    and deviation_ma5_sotto_ma200 < -0.27
+                    and deviation_ma5_sotto_ma300 < -0.39
                     and macd >= macd_2_min_ago
                     and ma100_last < ma200_last
                     
-                    and ma30_last < ma30_40_min_ago
                     
+                    and ma30_last < ma30_40_min_ago
                     and ma11_last > ma125_last
                     
-                    and deviation_ma3_sopra_ma10 > 0.09
-                    and deviation_ma5_sopra_ma28 > 0.175
-                    and deviation_bellissima > 0.06
+                    and deviation_ma3_sopra_ma10 > 0.01
+                   
                     and ma2_last > ma20_last
-                    and ma5_last >= ma5_2_min_ago
                     and ma2_last > ma2_2_min_ago
-                    
+                
                 ):    
-                    buy = "BUY 1 tempo INVERNO che considera il passare del tempo con dev_bellissima > 0.06 and dev_ma5_sopra_ma28 > 0.18 E 3-10 > 0.09 - r 1688"
+                    buy = "BUY 1 INVERNO che considera passare tempo con 100 < 100 30 min ago + NUOVE CONDIZIONI GRAFANA - r 1688"
                     action = "buy"
                     percentage = 90
                     
