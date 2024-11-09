@@ -14147,29 +14147,28 @@ class maddog:
 
 
                 elif (    
-                    ma3_last > ma28_last
-                    and ma39_last > ma39_15_min_ago
-                    and ma2_differenza_2_min_ago > 5
-                    and delta_100_59 > delta_100_59_30_min
-                    
+                    ma3_last > ma20_last
                     and ma300_last > ma300_120_min_ago
                     and ma450_last > ma450_480_min_ago
+
+                    and delta_100_59 > delta_100_59_30_min
                     
                     and deviation_ma100_sopra_ma300 < 0.20
                     and deviation_ma100_sopra_ma300 > -0.30
                     
                     and ma2_last > ma5_last
+
                     and macd >= macd_2_min_ago
                     and macd > -11.0
-                    and macd_differenza_2_min_ago > 1.3
+                    and macd_differenza_2_min_ago > -1.3
                 
                 ):
-                    buy = "BUY 2 laterale con 300>450 and 4-28 and macd > 2.0 and macd_differenza_2_min_ago > 1.30 - NOTTE - r 5412 X1 AX 2x"
+                    buy = "BUY 2 laterale con 300>450 and 4-20 and macd > 2.0 and macd_diff_2_min_ago > 1.30 - NOTTE - r 5412 X1 AX 2x"
                     action = "buy"
                     percentage = 80
 
                     #  5 mar 2024 se ma39 > ma39 15 min ago ok cosi'
-
+                    #  9 nov 2024 anticipata ndecchiecella
 
                 elif (    
                     ma3_last > ma28_last
@@ -26283,7 +26282,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                     
                 ):
-                    buy = "BUY 5C RIVOLUZIONARIO con ma450 > ma450 360 min ago - r 7441 A"
+                    buy = "BUY 5C RIVOLUZIONARIO con ma450 > ma450 360 min ago - r 7441 B1"
                     action = "buy"
                     percentage = 70
 
@@ -26313,7 +26312,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                     
                 ):
-                    buy = "BUY 5C RIVOLUZIONARIO con ma78 > and deviation_bellissima > 0.163 (PER SPEZZARE LA CATENA - effetti laterali) - r 7441 B"
+                    buy = "BUY 5C RIVOLUZIONARIO con ma78 > and deviation_bellissima > 0.163 (PER SPEZZARE LA CATENA - effetti laterali) - r 7441 B2"
                     action = "buy"
                     percentage = 70
                     
