@@ -16367,16 +16367,23 @@ class maddog:
 
                 elif (     
                     ma3_last > ma18_last
-                    and deviation_ma3_sotto_ma50 < -0.02
 
+                    and ma100_last < ma100_30_min_ago
+
+                    and deviation_ma25_sotto_ma300 < -0.50
+                    and deviation_ma50_sotto_ma300 < -0.36
+                    and deviation_ma39 < 0.13
+                    and deviation_ma3_sotto_ma50 < -0.02
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.13
+                    and deviation_ma5_sotto_ma200 < -0.25
+                    and deviation_ma5_sotto_ma300 < -0.37
+                    
                     and ma39_last < ma39_15_min_ago
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.40
                    
                     and ma450_last > ma450_360_min_ago
-                    and ma100_last < ma100_30_min_ago
-                    and deviation_ma54_sopra_o_sotto_ma72 < -0.015
                     
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.13
+                    and deviation_ma54_sopra_o_sotto_ma72 < -0.015
                     and deviation_ma39_sotto_ma200 < -0.01
                     and deviation_ma300_sopra_ma450 > -0.70
                     
@@ -16388,10 +16395,10 @@ class maddog:
                     and ma2_last >= ma20_last
                     
                     and ma2_last >= ma2_2_min_ago
-                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.010
                     and ma3_differenza_2_min_ago > 3
-                    and macd >= macd_2_min_ago
-                    and macd_differenza_2_min_ago > 0.10
+                    and macd >= -40
+                    and macd_differenza_2_min_ago > -1.30
                 ):    
                     buy = "BUY 2 prendo coltello con il piede E ma450 che sale da 6 ore and 3-18 > -0.02 + MACD > - r 5994 B"
                     action = "buy"
@@ -16400,7 +16407,7 @@ class maddog:
                     #  9 set 2024 and deviation_ma5_sopra_o_sotto_ma100 < -0.40 da -0.35 MA FORSE E' DA TOGLIERE
                     #  7 ott 2024 aggiunto osso and deviation_ma5_sopra_o_sotto_ma100 < -0.13 
                     #  4 nov 2024 aggiunta and deviation_ma3_sotto_ma50 < -0.02
-
+                    #  9 nov 2024 aggiunte tutte le NUOVE DEVIATION GRAFANA
 
                 elif (     
                     ma3_last > ma18_last
