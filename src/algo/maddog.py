@@ -11388,13 +11388,17 @@ class maddog:
                     # 10 dic 2022 50>200 da 59>200
                     # 18 dic 2022 20>200 da 50>200
                     #  3 gen 2023 5-28 > 0.10
-                    
+
+
+
                     
                 elif (
                     
                     ma5_last > ma54_last
                     and ma450_last > ma450_300_min_ago
-                    
+
+                    and ma100_last > ma100_60_min_ago
+
                     and ma59_last >= ma59_2_min_ago
                     and deviation_ma100_sopra_ma300 < 0.20
                     
@@ -11409,12 +11413,46 @@ class maddog:
                     and price >= price_2_min_ago
                     and macd >= macd_2_min_ago
                 ):
-                    buy = "BUY 2A ribasso o laterale and ma5_last > ma59_last con 450 > 450 300 min ago - r 4685 Bx1"
+                    buy = "BUY 2A ribasso o laterale and ma5_last > ma59_last con 450 > 450 300 min ago - r 4685 Bx 1x"
                     action = "buy"
                     percentage = 80
                     
                     # 27 set 2023 se 450 > 450 300 min ago
                     # 27 set 2023 5-54 da 59-200
+
+
+                        
+                elif (
+                    
+                    ma3_last > ma20_last
+                    and ma450_last > ma450_300_min_ago
+
+                    and ma100_last < ma100_60_min_ago
+
+                    and deviation_ma25_sotto_ma300 < -0.40
+                    and deviation_ma50_sotto_ma300 < -0.40
+                    and deviation_ma39 < 0.02
+                    and deviation_ma3_sotto_ma50 < -0.02
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.10
+                    and deviation_ma5_sotto_ma200 < -0.25
+                    and deviation_ma5_sotto_ma300 < -0.40
+
+                    and deviation_ma100_sopra_ma300 < 0.20
+                    
+                    and deviation_ma3_sopra_ma10 > 0.02
+                    and deviation_ma5_sopra_ma28 > -0.10
+                    
+                    and price >= price_2_min_ago
+                    and macd >= -40
+                ):
+                    buy = "BUY 2A ribasso o laterale and ma3_last > ma20_last con 450 > 450 300 min ago - r 4685 Bx 1y"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # 27 set 2023 se 450 > 450 300 min ago
+                    # 27 set 2023 5-54 da 59-200
+                    # 10 nov 2024 aggiunte NUOVE CONDIZIONI GRAFANA - ZIA AMALIA
+
 
 
 
