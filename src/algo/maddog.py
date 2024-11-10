@@ -6216,22 +6216,31 @@ class maddog:
                     action = "buy"
                     percentage = 90
 
+
+
                 elif (     
                     ma3_last > ma18_last
+                    and deviation_ma39_sotto_ma200 < -0.01
 
-                    and ma100_last > ma100_10_min_ago
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
-                    and deviation_ma5_sopra_o_sotto_ma100 > -0.40
-                    
-                    and ma50_differenza_ma59 < -14
                     and ma100_last < ma100_60_min_ago
+
+                    and deviation_ma25_sotto_ma300 < -0.0.36
+                    and deviation_ma50_sotto_ma300 < -0.29
+                    and deviation_ma39 < 0.03
+                    and deviation_ma3_sotto_ma50 < 0.01
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.01
+                    and deviation_ma5_sotto_ma200 < -0.20
+                    and deviation_ma5_sotto_ma300 < -0.35
+
                     
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.20
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.60
+                    and deviation_ma300_sopra_ma450 > -0.60
+                   
+                    and ma50_differenza_ma59 < -14
                     and deviation_ma54_sopra_o_sotto_ma72 < -0.015
                     
-                    and deviation_ma39_sotto_ma200 < -0.01
-                    and deviation_ma300_sopra_ma450 > -0.55
-                    
-                    and deviation_ma3_sopra_ma10 > 0.068
+                    and deviation_ma3_sopra_ma10 > 0.02
                     and deviation_ma3_sopra_ma16 > -0.04
                     and deviation_ma3_sopra_ma18 > -0.05
                     
@@ -6239,13 +6248,16 @@ class maddog:
                     
                     and ma2_last > ma5_last
                     and ma2_last >= ma2_2_min_ago
-                    and ma2_differenza_2_min_ago >= 17
-                    and macd_differenza_2_min_ago > 1.05
+                    
+                    and macd_differenza_2_min_ago > -1.50
                  
                 ):    
-                    buy = "BUY 1 compare forever - con 3-18 E CON 300 vicina alla 450 ( anche sotto ! ) e 3-18 > -0.05 + diff macd > 1.05 AND 2>5 ! - r 1537 A3 Y2 NUOVA ERA A3 SOFT"
+                    buy = "BUY 1 CF - con 3-18 E CON 300 vicina alla 450 + diff macd > -1.50 + ZIA AMALIA - r 1537 A3 Y2 NUOVA ERA A3 SOFT"
                     action = "buy"
                     percentage = 90
+
+                    # 10 nov 2024 non e' ancora una situazione di crollo ma 
+                    # 10 nov 2024 intervengono le condizioni zia amalia
 
                 elif (     
                     ma3_last > ma18_last
