@@ -20477,30 +20477,31 @@ class maddog:
                 elif (
                     
                     ma3_last > ma28_last
-                    and ma450_last > ma450_60_min_ago
+                    and ma450_last > ma450_480_min_ago
                     and ma300_last > ma450_last
                     
                     and ma100_last > ma100_60_min_ago
                     
-                    and deviation_ma250_sopra_ma300 < 0.15
-                    and deviation_ma250_sopra_ma300 > -0.15
+                    and deviation_ma250_sopra_ma300 < 0.16
+                    and deviation_ma250_sopra_ma300 > -0.16
                     
-                    and deviation_ma3_sopra_ma10 > 0.05
+                    and deviation_ma3_sopra_ma10 > 0.01
                     and deviation_ma5_sopra_ma28 > -0.02
                   
+                    
                     and ma3_last > ma13_last
-                    and ma4_last > ma9_last
                     and ma2_last > ma5_last
                     
                     and ma2_last >= ma2_2_min_ago
-                    and ma2_differenza_2_min_ago > 6
-                    and macd > macd_2_min_ago
                     
+                    and macd >= macd_2_min_ago
+                    and macd > -40
                 ):
-                    buy = "BUY 3 del 2 ottobre 2023 NON COMPRAVA ! con 450 > 450 60 min MA LATERALE and ma2_differenza_2_min_ago > 7 - r 6574 a1xx"
+                    buy = "BUY 3 del 2 ottobre 2023 NON COMPRAVA ! con 450 > 450 480 min MA LATERALE - r 6574 a1xx"
                     action = "buy"
                     percentage = 70
 
+                    # 10 nov 2024 anticipato ndecchiecella.
 
                 elif (
                     
