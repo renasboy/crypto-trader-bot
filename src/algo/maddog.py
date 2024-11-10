@@ -583,7 +583,7 @@ class maddog:
 
         # formula DEVIATION_ma50_sopra_o_sotto_ma300 !
         
-        deviation_ma50_sopra_o_sotto_ma300 = (ma59_last / ma300_last - 1) * 100 if ma300_last else 0
+        deviation_ma50_sopra_o_sotto_ma300 = (ma50_last / ma300_last - 1) * 100 if ma300_last else 0
         self.algo_helper.info("deviation_ma50_sopra_o_sotto_ma300: {}".format(deviation_ma50_sopra_o_sotto_ma300))
 
 
@@ -26096,14 +26096,12 @@ class maddog:
 
                 elif (
                     ma3_last > ma13_last
-                    and ma100_last > ma100_60_min_ago
-
-                    and ma39_last > ma39_20_min_ago
-                    
                     and ma450_last > ma450_360_min_ago
                     and ma300_last > ma450_last
                     
-
+                    and ma5_last > ma100_last
+                    and deviation_ma50_sopra_o_sotto_ma300 > -0.10
+                    
                     and deviation_ma3_sopra_ma10 > 0.01
                     and deviation_ma3_sopra_ma16 > -0.01
                     
@@ -26116,7 +26114,7 @@ class maddog:
                     percentage = 70
 
                     # 14 ott 2024 se 450 sale da 6 ore NON FARTI TROPPI PROBLEMI !
-
+                    #  10 nov 2024 anticipata ancora di una ndecchiecella
 
                 elif (
                     ma3_last > ma13_last
