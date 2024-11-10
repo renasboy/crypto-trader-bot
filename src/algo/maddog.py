@@ -16318,10 +16318,20 @@ class maddog:
                 
                 elif (
                     
-                    ma18_last > ma100_last
+                    ma3_last > ma20_last
                     and ma78_last < ma200_last
-                    
-                    and deviation_ma5_sotto_ma300 > -0.40
+
+                    and ma100_last < ma100_60_min_ago
+
+                    and deviation_ma25_sotto_ma300 < -0.40
+                    and deviation_ma50_sotto_ma300 < -0.30
+                    and deviation_ma39 < 0.02
+                    and deviation_ma3_sotto_ma50 < 0.04
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.01
+                    and deviation_ma5_sotto_ma200 < -0.10
+                    and deviation_ma5_sotto_ma300 < -0.25
+
+                    and deviation_ma5_sotto_ma300 > -0.60
                     
                     and ma100_last < ma100_180_min_ago
                     and ma200_last < ma200_180_min_ago
@@ -16330,19 +16340,21 @@ class maddog:
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
                     
-                    and deviation_ma5_sopra_ma28 > 0.02
+                    and deviation_ma5_sopra_ma28 > -0.02
                     
                     and ma2_last >= ma2_2_min_ago
                     and macd >= macd_2_min_ago
-                    and macd > 5
+                    and macd > -40
                 ):
-                    buy = "BUY 2 > 180 min di ribasso 26 luglio 2023 CON 78<200 - r 5984b"
+                    buy = "BUY 2 > 180 min di ribasso 26 luglio 2023 CON 78<200 - r 5984 B"
                     action = "buy"
                     percentage = 90
                     
                     # 24 ago 2023 macd > macd 2 min ago
                     # 24 ago 2023 macd > 5
-
+                    # 10 nov 2024 aggiunta ZIA AMALIA 
+                    # 10 nov 2024 ho tenuto and deviation_ma5_sotto_ma300 > -0.60 perche' non e' una condizione di crollo
+                    # 10 nov 2024 durante il crollo intervengono altre condizioni
               
 
                 # BUY 2 crollo MISSILE COMPA ! modo 2
