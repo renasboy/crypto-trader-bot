@@ -162,6 +162,34 @@ class influx_algo_helper:
         return rsi
 
     @property
+    def adx(self):
+        # ADX 14
+        query_adx = """
+        SELECT
+            mean(abs(max_price - mean_price) - abs(mean_price - min_price)) / 
+            mean(abs(max_price - min_price)) * 100 as adx
+        FROM (
+            SELECT
+                max(price) as max_price,
+                min(price) as min_price,
+                mean(price) as mean_price
+            FROM price_volume
+            WHERE exchange = '{}' and symbol_1 = '{}' and symbol_2 = '{}' and time > now() - 1h
+            GROUP BY time(1m)
+        ) 
+        GROUP BY time(14m) fill(linear)
+        """.format(self.exchange, self.symbol_1, self.symbol_2)
+        
+        # Execute the query
+        result = self.influx.query(query_adx)
+        results = list(result.get_points())
+        
+        # Extract the latest ADX value if it exists
+        adx = results[-1]["adx"] if results else 25
+        self.info("ADX: {}".format(adx))
+        return adx
+
+    @property
     def macd(self):
         # MACD 12, 26, 9
         query_macd = "SELECT mean(proper) - moving_average(mean(proper), 9) as macd FROM (SELECT moving_average(mean(price), 12) - moving_average(mean(price), 26) as proper FROM price_volume WHERE exchange = '{}' and symbol_1 = '{}' and symbol_2 = '{}' and time > now() - 5h GROUP BY time(1m) fill(previous)) WHERE time > now() - 1d GROUP BY time(1m) fill(previous)".format(
