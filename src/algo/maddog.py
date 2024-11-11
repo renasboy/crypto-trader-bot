@@ -2872,38 +2872,42 @@ class maddog:
                 
                 elif (
                     ma3_last > ma18_last
-                  
-                    and ma3_last > ma18_last
-                    and ma100_last < ma100_10_min_ago
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.12
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.60
-                
-                    and ma100_last < ma100_60_min_ago
-                    and ma5_last >= ma10_last
                     and ma450_last >= ma450_360_min_ago
-                
+
+                    and ma100_last < ma100_30_min_ago
+                    and deviation_ma25_sotto_ma300 < -1.70
+                    and deviation_ma50_sotto_ma300 < -1.10
+                    and deviation_ma39 < -0.20
+                    and deviation_ma3_sotto_ma50 < -0.40
+                    and deviation_ma5_sopra_o_sotto_ma100 < -1.30
+                    and deviation_ma5_sotto_ma200 < -1.60
+                    and deviation_ma5_sotto_ma300 < 1.80
+
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.12
                     and deviation_ma54_sopra_o_sotto_ma72 < -0.015
-                    
                     and deviation_ma39_sotto_ma200 < -0.01
-                    and deviation_ma300_sopra_ma450 > -0.55
+                    
+                    and ma5_last >= ma10_last
                     
                     and deviation_ma3_sopra_ma10 > -0.01
                     and deviation_ma3_sopra_ma16 > -0.01
                     and deviation_ma3_sopra_ma18 > -0.02
                     
                     and ma2_last >= ma2_2_min_ago
-                    and macd >= macd_2_min_ago
-                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.015
-                    and macd_differenza_2_min_ago > 0.50
+                    and macd >= -40
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.012
+                    and macd_differenza_2_min_ago > -1.50
                     
                 ):    
-                    buy = "BUY 1 compare forever - con 3-18 E 300 vicina alla 450 ( anche poco sotto ! ) - r 1204 NUOVA ERA A3 STRONG"
+                    buy = "BUY 1 compare forever - con 3-18 + ZIA AMALIA GRAFANA - r 1204 NUOVA ERA A3 STRONG"
                     action = "buy"
                     percentage = 90
                     
                     # 8  gen 2024 incrocio 3-30 piu' veloce di 10>20 !
                     # 20 feb 2024 3-18 da 3-20
                     #  4 ott 2024 va bene cosi'. ci prova. anticipata di meno di una ndecchiecella
+                    # 11 nov 2024 ZIA AMALIA GRAFANA
+
 
                 elif (
                     ma3_last > ma13_last
@@ -14235,9 +14239,11 @@ class maddog:
 
 
 
-
                 elif (    
                     ma3_last > ma20_last
+
+                    and ma100_last > ma100_30_min_ago
+                    
                     and ma300_last > ma300_120_min_ago
                     and ma450_last > ma450_480_min_ago
 
@@ -14253,12 +14259,50 @@ class maddog:
                     and macd_differenza_2_min_ago > -1.3
                 
                 ):
-                    buy = "BUY 2 laterale con 300>450 and 4-20 and macd > 2.0 and macd_diff_2_min_ago > 1.30 - NOTTE - r 5412 X1 AX 2x"
+                    buy = "BUY 2 laterale con 300>450 and 4-20 and macd > 2.0 and macd_diff_2_min_ago > 1.30 - NOTTE - r 5412 X1 AX 2x1"
                     action = "buy"
                     percentage = 80
 
                     #  5 mar 2024 se ma39 > ma39 15 min ago ok cosi'
                     #  9 nov 2024 anticipata ndecchiecella
+                    # 11 nov 2024 con 100 > 100 30 min ago
+
+
+                elif (    
+                    ma3_last > ma20_last
+
+                    and ma100_last < ma100_30_min_ago
+                    and deviation_ma25_sotto_ma300 < -1.70
+                    and deviation_ma50_sotto_ma300 < -1.10
+                    and deviation_ma39 < -0.20
+                    and deviation_ma3_sotto_ma50 < -0.40
+                    and deviation_ma5_sopra_o_sotto_ma100 < -1.30
+                    and deviation_ma5_sotto_ma200 < -1.60
+                    and deviation_ma5_sotto_ma300 < 1.80
+
+                    and ma300_last > ma300_120_min_ago
+                    and ma450_last > ma450_480_min_ago
+
+                    and delta_100_59 > delta_100_59_30_min
+                    
+                    and deviation_ma100_sopra_ma300 < 0.20
+                    and deviation_ma100_sopra_ma300 > -0.30
+                    
+                    and ma2_last > ma5_last
+
+                    and macd >= macd_2_min_ago
+                    and macd > -11.0
+                    and macd_differenza_2_min_ago > -1.3
+                
+                ):
+                    buy = "BUY 2 laterale con 300>450 and 4-20 and macd > 2.0 and macd_diff_2_min_ago > 1.30 - NOTTE - r 5412 X1 AX 2x2"
+                    action = "buy"
+                    percentage = 80
+
+                    #  5 mar 2024 se ma39 > ma39 15 min ago ok cosi'
+                    #  9 nov 2024 anticipata ndecchiecella
+                    # # 11 nov 2024 con 100 < 100 30 min ago zia amalia grafana
+
 
                 elif (    
                     ma3_last > ma28_last
