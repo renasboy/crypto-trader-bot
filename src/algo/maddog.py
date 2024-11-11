@@ -23678,10 +23678,10 @@ class maddog:
               
 
                 
-                elif (
+                
+                elif (    
+                    ma3_last > ma20_last
                     
-                    ma5_last > ma54_last
-                    and ma28_last > ma50_last
                     and ma78_last > ma100_last
                     
                     and ma100_last < ma100_180_min_ago
@@ -23691,15 +23691,16 @@ class maddog:
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
                     
-                    and deviation_ma5_sopra_ma28 > 0.02
+                    and deviation_ma5_sopra_ma28 > -0.02
+                    
                     
                     and ma2_last >= ma2_2_min_ago
-                    and ma2_differenza_2_min_ago > 8
-                    and macd >= macd_2_min_ago
-                    and macd_differenza_2_min_ago > 0.25
+                    
+                    and macd > -40
+                    and macd_differenza_2_min_ago > -1.25
                     
                 ):
-                    buy = "BUY 4 ex 7063 RCCR con 5-54 - r 7064"
+                    buy = "BUY 4 ex 7063 RCCR con ma tutte discendenti MA ma78 > ma100 - r 7064"
                     action = "buy"
                     percentage = 90
                   
@@ -23707,7 +23708,7 @@ class maddog:
                     # 27 set 2023 78-100 da 78-150
                     # 27 set 2023 5-54 da 8-59
                     #  7 nov 2023 se ma28_last > ma50_last puoi comprare !
-
+                    # 11 nov 2024 e' un BUY 4 ma78 e' andata sopra ma100 : anticipata ndecchiecella. sono relativamente fiducioso.
               
                 
                 # BUY 4 se 100>200 non devi spezzare proprio un cazzo
