@@ -1595,12 +1595,15 @@ class maddog:
                     and ma3_last > ma8_last
                     and deviation_bellissima > 0.14
                     and ma6_last > ma39_last
+
+                    and adx > -0.90
                 ):    
               
                     buy = "BUY 1 con 20>200 AND 10 > 100 AND 3-10 > 0.13 and 69 > 100 and deviation_bellissima > 0.14 and ma78 > - r 916A"
                     action = "buy"
                     percentage = 90
-                    
+
+                    # 11 nov 2024 prova adx
                     
                 elif (    
                     ma20_last > ma200_last
