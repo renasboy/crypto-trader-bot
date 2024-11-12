@@ -15523,7 +15523,6 @@ class maddog:
                     and ma450_last > ma450_120_min_ago
                     and ma300_last > ma300_60_min_ago
                     
-                    
                     and ma200_last > ma250_last
                     and ma200_last > ma200_120_min_ago
                     
@@ -15544,7 +15543,7 @@ class maddog:
                     action = "buy"
                     percentage = 70
 
-                    # 11 set 2024 forse e' d cancellare
+                    # 11 set 2024 forse e' da cancellare
 
 
 
@@ -29348,17 +29347,33 @@ class maddog:
                         
                     
                     
-                    
                     elif (
                         ma50_last > ma50_2_min_ago
+                        and ma100_last > ma300_last
+                        and (ma4_prev > ma39_prev and ma4_last < ma39_last)
+                        and deviation_sell > 1.21 and deviation_sell < 2.70
+                        and ma2_last < ma2_2_min_ago
+                        
+                    ):
+                        sell = "SELL 1 (21-50 min) con ma50 > and incrocio 4-39 and dev_sell 1.21 - 2.70 (DOPPIO PASSO DI RONALDO) - r 8844 a"
+                        action = "sell"
+
+                        # 12 nov 2024 se 100>300 stai calmo
+
+
+
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and ma100_last < ma300_last
                         and (ma4_prev > ma28_prev and ma4_last < ma28_last)
                         and deviation_sell > 1.21 and deviation_sell < 2.70
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 (21-50 min) con ma50 > and incrocio 4-28 and deviation_sell 1.21 - 2.70 (DOPPIO PASSO DI RONALDO)- r 8844"
+                        sell = "SELL 1 (21-50 min) con ma50 > and incrocio 4-28 and dev_sell 1.21 - 2.70 (DOPPIO PASSO DI RONALDO) - r 8844 b"
                         action = "sell"
-                        
+
+                        # 12 nov 2024 
                   
                     elif (
                         ma50_last > ma50_2_min_ago
