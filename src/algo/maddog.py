@@ -244,7 +244,7 @@ class maddog:
 
         # ADX
 
-        adx = self.algo_helper.adx()
+        # adx = self.algo_helper.adx()
         
 
         ################################################################################################# CONFORTABLY NUMB
@@ -1596,7 +1596,7 @@ class maddog:
                     and deviation_bellissima > 0.14
                     and ma6_last > ma39_last
 
-                    and adx > -0.90
+                    # and adx > -0.90
                 ):    
               
                     buy = "BUY 1 con 20>200 AND 10 > 100 AND 3-10 > 0.13 and 69 > 100 and deviation_bellissima > 0.14 and ma78 > - r 916A"
