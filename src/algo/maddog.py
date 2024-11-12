@@ -49365,12 +49365,13 @@ class maddog:
                 #  7 mar 2024 fatta modifica vedi and deviation_ma100_sopra_ma450 < 1.75
                 #  7 ott 2024 vendita con 3-48 da 3-30 statte tranquillo
 
-            # 17
             
             elif (
                 deviation_sell > 0.81
                 and ma300_last < ma300_301_min_ago
-                
+                and ma300_last > ma450_last
+                and ma3_last < ma50_last
+
                 and macd < macd_2_min_ago
                 and macd < -9
                 and macd_differenza_5_min_ago < -24
@@ -49379,7 +49380,7 @@ class maddog:
                 and ma3_last < ma10_last
                 and ma2_last < ma18_last
             ):    
-                sell = "SELL cond spec - POCHI MALEDETTI E SUBITO CON ma300 che scende da 5 ore ! e con deviation > 1.01 e macd < -10 e MACD DIFFERENZA_5_min_ago < -25 - r 16875 B"
+                sell = "SELL CS - PMS CON ma300 < 5 ore ! MA 300>450 e con dev > 1.01 e macd < -10 e MACD DIFF_5_min_ago < -25 - r 16875 B1"
                 action = "sell"
                 
                 #  1 set 2023 se per es macd passa da 18 a -11 vendi     
@@ -49388,8 +49389,34 @@ class maddog:
                 # 18 dic 2023 aggiunto and ma3_last < ma10_last (almeno un minimo la media deve esserci) (le medie sono piu' forti del MACD)
                 # 19 gen 2024 deviation_sell a 0.81 da 0.91
                 # 21 feb 2024 aggunta 2-18
-            
-            # 18
+                # 12 nov 2024 se 300>450 aggiunto and ma3_last < ma50_last - stai calmo
+                
+
+            elif (
+                deviation_sell > 0.81
+                and ma300_last < ma300_301_min_ago
+                and ma300_last < ma450_last
+
+                and macd < macd_2_min_ago
+                and macd < -9
+                and macd_differenza_5_min_ago < -24
+                
+                and ma2_last < ma2_2_min_ago
+                and ma3_last < ma10_last
+                and ma2_last < ma18_last
+            ):    
+                sell = "SELL CS - PMS CON ma300 < 5 ore ! E 300<450 e con dev > 1.01 e macd < -10 e MACD DIFF_5_min_ago < -25 - r 16875 B2"
+                action = "sell"
+                
+                #  1 set 2023 se per es macd passa da 18 a -11 vendi     
+                # 12 set 2023 macd < -9 da -10
+                # 12 set 2023 macd DIFFERENZA -24 da -25
+                # 18 dic 2023 aggiunto and ma3_last < ma10_last (almeno un minimo la media deve esserci) (le medie sono piu' forti del MACD)
+                # 19 gen 2024 deviation_sell a 0.81 da 0.91
+                # 21 feb 2024 aggunta 2-18
+
+
+
             
             elif (
                 seconds_since_last_trade > 0 and seconds_since_last_trade < 3000
