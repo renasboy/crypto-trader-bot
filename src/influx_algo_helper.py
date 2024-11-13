@@ -164,28 +164,42 @@ class influx_algo_helper:
     @property
     def adx(self):
         # ADX 14
-        query_adx = """
-        SELECT
-            mean(abs(max_price - mean_price) - abs(mean_price - min_price)) / 
-            mean(abs(max_price - min_price)) * 100 as adx
-        FROM (
-            SELECT
-                max(price) as max_price,
-                min(price) as min_price,
-                mean(price) as mean_price
-            FROM price_volume
-            WHERE exchange = '{}' and symbol_1 = '{}' and symbol_2 = '{}' and time > now() - 1h
-            GROUP BY time(1m)
-        ) 
-        GROUP BY time(14m) fill(linear)
-        """.format(self.exchange, self.symbol_1, self.symbol_2)
-        
-        # Execute the query
-        result = self.influx.query(query_adx)
+        query = "SELECT max(price) as high, min(price) as low, last(price) as close FROM price_volume WHERE exchange = '{}' AND symbol_1 = '{}' AND symbol_2 = '{}' AND time > now() - 14d GROUP BY time(1d) fill(previous)".format(
+            self.exchange, self.symbol_1, self.symbol_2
+        )
+        result = self.influx.query(query)
         results = list(result.get_points())
-        
-        # Extract the latest ADX value if it exists
-        adx = results[-1]["adx"] if results else 25
+
+        # Initialize lists for TR, DM+, DM-
+        tr_list, dm_plus_list, dm_minus_list = [], [], []
+
+        # Calculate TR, DM+, and DM-
+        for i in range(1, len(results)):
+            high, low, close_prev = results[i]['high'], results[i]['low'], results[i-1]['close']
+            tr = max(high - low, abs(high - close_prev), abs(low - close_prev))
+            dm_plus = max(high - results[i-1]['high'], 0) if high - results[i-1]['high'] > low - results[i-1]['low'] else 0
+            dm_minus = max(results[i-1]['low'] - low, 0) if low - results[i-1]['low'] > high - results[i-1]['high'] else 0
+            tr_list.append(tr)
+            dm_plus_list.append(dm_plus)
+            dm_minus_list.append(dm_minus)
+
+        # Smooth TR, DM+, and DM- with Moving Average (e.g., 14-period)
+        smoothed_tr = sum(tr_list[:14])
+        smoothed_dm_plus = sum(dm_plus_list[:14])
+        smoothed_dm_minus = sum(dm_minus_list[:14])
+
+        # Calculate DI+ and DI-
+        di_plus = [(dm_plus / smoothed_tr) * 100 for dm_plus in dm_plus_list[13:]]
+        di_minus = [(dm_minus / smoothed_tr) * 100 for dm_minus in dm_minus_list[13:]]
+
+        # Calculate DX
+        dx = [100 * abs(di_plus[i] - di_minus[i]) / (di_plus[i] + di_minus[i]) for i in range(len(di_plus))]
+
+        # Smooth DX to get ADX
+        adx = sum(dx[:14]) / 14
+        for i in range(14, len(dx)):
+            adx = (adx * 13 + dx[i]) / 14  # Smoothing with previous ADX values
+
         self.info("ADX: {}".format(adx))
         return adx
 
