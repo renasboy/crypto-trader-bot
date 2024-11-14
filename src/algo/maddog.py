@@ -23494,9 +23494,19 @@ class maddog:
                 
                 elif (    
                     ma3_last > ma15_last
-                    and ma78_last < ma150_last
-                    and deviation_ma39 > -0.30
-                    and deviation_ma5_sopra_ma59 < -0.10
+                    
+
+                    and ma100_last < ma100_30_min_ago
+                    and deviation_ma25_sotto_ma300 < -1.70
+                    and deviation_ma50_sotto_ma300 < -1.30
+                    and deviation_ma39 < -0.20
+                    and deviation_ma3_sotto_ma50 < -0.30
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.59
+                    and deviation_ma5_sotto_ma200 < -1.30
+                    and deviation_ma5_sotto_ma300 < -1.80
+
+
+                    
                     
                     and ma100_last < ma100_180_min_ago
                     and ma200_last < ma200_180_min_ago
@@ -23504,21 +23514,28 @@ class maddog:
                     
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
+
+                    and ma78_last < ma150_last
+                    and deviation_ma5_sopra_ma59 < -0.10
                     
-                    and deviation_ma5_sopra_ma28 < 0.08
-                    and deviation_ma3_sopra_ma16 > 0.03
-                    and deviation_ma3_sopra_ma18 > 0.093
+                    and deviation_ma3_sopra_ma10 > -0.01
+                    and deviation_ma3_sopra_ma16 > -0.03
+                    and deviation_ma3_sopra_ma18 > -0.05
                     
+                    and ma2_last > ma5_last
+                    and ma2_last >= ma8_last
+
                     and ma2_last >= ma2_2_min_ago
-                    and ma2_differenza_2_min_ago > 7
-                    and ma2_differenza_ma5 > 10
-                    and macd > -20
-                    and macd_differenza_2_min_ago > 1.25
-                    and ma2_last >= ma10_last
+                    and macd > -40
+                    and macd_differenza_2_min_ago > -1.25
+                    
                 ):
-                    buy = "BUY 4 PENSIERO LATERALE 13 apr 2023 zia pina > 180 min di ribasso and 78<150 and 3-16 > 0.03 and macd > 2 min ago  - r 7060a"
+                    buy = "BUY 4 PENSIERO LATERALE 13 apr 2023 zia pina > 180 min di ribasso CON zia amalia grafana - r 7060 A"
                     action = "buy"
                     percentage = 90
+
+                    # 14 nov 2024 aggiunta zia amalia grafana
+
 
                 
                 # IPERVENDUTO DNA 
