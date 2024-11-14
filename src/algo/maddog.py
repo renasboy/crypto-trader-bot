@@ -20001,26 +20001,34 @@ class maddog:
                   
                 elif (    
                     ma3_last > ma10_last
+
+                    and ma100_last < ma100_30_min_ago
+                    and deviation_ma25_sotto_ma300 < -1.70
+                    and deviation_ma50_sotto_ma300 < -1.30
+                    and deviation_ma39 < -0.20
+                    and deviation_ma3_sotto_ma50 < -0.30
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.69
+                    and deviation_ma5_sotto_ma200 < -1.30
+                    and deviation_ma5_sotto_ma300 < -1.80
+
+
                     and ma50_last <= ma59_last
                     
                     and ma300_last > ma300_301_min_ago
                     and ma450_last > ma450_480_min_ago
                     
-                    and deviation_ma100_sopra_ma300 < 0.20
-                    and deviation_ma5_sopra_o_sotto_ma100 < -1.10
                     
                     and deviation_ma3_sopra_ma10 > 0.01
                     and deviation_ma3_sopra_ma16 > -0.02
                     
+                    
                     and ma2_last >= ma2_2_min_ago
-                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
-                    and ma2_differenza_2_min_ago > 8
-                    and macd > -24.0
-                    and macd_differenza_2_min_ago > 0.30
+                    and macd > -40.0
+                    and macd_differenza_2_min_ago > -1.30
                     and ma2_last > ma5_last 
                 ):  
                 
-                    buy = "BUY 3 laterale SE CROLLA con 300> e 450> and 3-10 and macd > -24 and macd_differenza_2_min_ago > 0.30 - r 6510 b2"
+                    buy = "BUY 3 laterale SE CROLLA con 300> e 450> and 3-10 and macd > -40 AND zia amalia grafana - r 6510 B2"
                     action = "buy"
                     percentage = 80
 
@@ -23506,8 +23514,6 @@ class maddog:
                     and deviation_ma5_sotto_ma300 < -1.80
 
 
-                    
-                    
                     and ma100_last < ma100_180_min_ago
                     and ma200_last < ma200_180_min_ago
                     and ma300_last < ma300_180_min_ago
