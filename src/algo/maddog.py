@@ -26865,7 +26865,7 @@ class maddog:
                     percentage = 90
                     
                     #  2 feb 2024 tolto 39>78
-
+                    # 14 nov 2024 aggiunta di zia amalia grafana
               
               
                 elif (
