@@ -2887,7 +2887,7 @@ class maddog:
                     and deviation_ma3_sotto_ma50 < -0.40
                     and deviation_ma5_sopra_o_sotto_ma100 < -1.30
                     and deviation_ma5_sotto_ma200 < -1.60
-                    and deviation_ma5_sotto_ma300 < 1.80
+                    and deviation_ma5_sotto_ma300 < -1.80
 
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.12
                     and deviation_ma54_sopra_o_sotto_ma72 < -0.015
@@ -14284,7 +14284,7 @@ class maddog:
                     and deviation_ma3_sotto_ma50 < -0.40
                     and deviation_ma5_sopra_o_sotto_ma100 < -1.30
                     and deviation_ma5_sotto_ma200 < -1.60
-                    and deviation_ma5_sotto_ma300 < 1.80
+                    and deviation_ma5_sotto_ma300 < -1.80
 
                     and ma300_last > ma300_120_min_ago
                     and ma450_last > ma450_480_min_ago
@@ -14301,7 +14301,7 @@ class maddog:
                     and macd_differenza_2_min_ago > -1.3
                 
                 ):
-                    buy = "BUY 2 laterale con 300>450 and 4-20 and macd > 2.0 and macd_diff_2_min_ago > 1.30 - NOTTE - r 5412 X1 AX 2x2"
+                    buy = "BUY 2 laterale con 300>450 and 4-20 con zia amalia grafana - NOTTE - r 5412 X1 AX 2x2"
                     action = "buy"
                     percentage = 80
 
@@ -26831,30 +26831,36 @@ class maddog:
                 
                 elif (    
                     ma3_last > ma20_last
-                    
-                    and ma3_last > ma20_last
-                    and ma100_last < ma100_10_min_ago
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.12
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.60
-                    
+
+                    and ma100_last < ma100_30_min_ago
+                    and deviation_ma25_sotto_ma300 < -1.55
+                    and deviation_ma50_sotto_ma300 < -1.55
+                    and deviation_ma39 < 0.13
+                    and deviation_ma3_sotto_ma50 < 0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.35
+                    and deviation_ma5_sotto_ma200 < -0.60
+                    and deviation_ma5_sotto_ma300 < -1.50
+
                     and ma450_last > ma450_480_min_ago
-                    
                     and ma100_last < ma100_120_min_ago
                     and ma200_last < ma200_120_min_ago
                     and ma300_last < ma300_120_min_ago
+                    
                     
                     and ma78_last < ma150_last
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
                     
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.12
+                    
                     and deviation_ma3_sopra_ma10 > 0.01
-                    and deviation_ma5_sopra_ma28 > 0.01
+                    
                     
                     and ma2_last >= ma2_2_min_ago
-                    and macd_differenza_2_min_ago > 1
-                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
+                    and macd_differenza_2_min_ago > -40
+                    
                 ):
-                    buy = "BUY 5 29 ago 2022 > 120 min di ribasso 78<150 CON ma100 < 120 min ago - r 7564 A2 YX1 NUOVA ERA A3 STRONG"
+                    buy = "BUY 5 29 ago 2022 > 120 min di ribasso 78<150 CON aggiunta zia amalia grafana - r 7564 A2 YX1 NUOVA ERA A3 STRONG"
                     action = "buy"
                     percentage = 90
                     
