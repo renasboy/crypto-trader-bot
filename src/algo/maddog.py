@@ -6230,44 +6230,49 @@ class maddog:
 
                 elif (     
                     ma3_last > ma18_last
-                    and deviation_ma39_sotto_ma200 < -0.01
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
+                    
 
-                    and ma100_last < ma100_60_min_ago
+                    and ma100_last < ma100_10_min_ago
 
                     and deviation_ma25_sotto_ma300 < -0.36
-                    and deviation_ma50_sotto_ma300 < -0.29
+                    and deviation_ma50_sotto_ma300 < -0.30
                     and deviation_ma39 < 0.03
                     and deviation_ma3_sotto_ma50 < 0.01
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.01
-                    and deviation_ma5_sotto_ma200 < -0.20
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.52
+                    and deviation_ma5_sopra_ma200 < -0.30
                     and deviation_ma5_sotto_ma300 < -0.35
 
+                    and deviation_ma5_sotto_ma450 < -0.30
+                    and deviation_ma39_sotto_ma200 < -0.01
+                    and deviation_ma50_sopra_o_sotto_ma100 < -0.01
+                    and deviation_ma100_sopra_ma300 < -0.10
                     
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.20
-                    and deviation_ma5_sopra_o_sotto_ma100 > -0.60
-                    and deviation_ma300_sopra_ma450 > -0.60
-                   
-                    and ma50_differenza_ma59 < -14
-                    and deviation_ma54_sopra_o_sotto_ma72 < -0.015
                     
-                    and deviation_ma3_sopra_ma10 > 0.02
-                    and deviation_ma3_sopra_ma16 > -0.04
-                    and deviation_ma3_sopra_ma18 > -0.05
+                    and ma300_last < ma300_60_min_ago
+                    and ma200_last < ma200_60_min_ago
+                    and ma450_last < ma450_360_min_ago
+
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > -0.01
+                    and deviation_ma5_sopra_ma28 > -0.16
                     
-                    and ma2_last >= ma20_last
-                    
-                    and ma2_last > ma5_last
-                    and ma2_last >= ma2_2_min_ago
-                    
+                    and macd > -30
                     and macd_differenza_2_min_ago > -1.50
+                    and ma2_last >= ma2_2_min_ago
+                    and ma2_last > ma5_last
+   
                  
                 ):    
-                    buy = "BUY 1 CF - con 3-18 E CON 300 vicina alla 450 + diff macd > -1.50 + ZIA AMALIA - r 1537 A3 Y2 NUOVA ERA A3 SOFT"
+                    buy = "BUY 1 CF - zia amalia grafana - r 1537 A3 Y2 NUOVA ERA A3 SOFT che diventa STRONG"
                     action = "buy"
                     percentage = 90
 
                     # 10 nov 2024 non e' ancora una situazione di crollo ma 
                     # 10 nov 2024 intervengono le condizioni zia amalia
+                    # 15 nov 2024 SOFT diventa STRONG
+
+
 
                 elif (     
                     ma3_last > ma18_last
