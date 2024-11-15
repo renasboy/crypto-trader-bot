@@ -14583,7 +14583,37 @@ class maddog:
 
                 elif (
                     ma3_last > ma20_last
+                    and ma100_last > ma100_120_min_ago
+                    and ma100_last > ma300_last
+
+                    and ma450_last < ma450_180_min_ago
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_120_min_ago
+
+                    and ma10_last > ma20_last
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma5_sopra_ma28 > -0.03
+
+                    and deviation_ma100_sopra_ma300 > -0.60
+                    and deviation_ma200_sopra_ma300 > -0.60
+                   
+                    and ma2_last >= ma2_2_min_ago
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.010
+                    and macd > -40
+                    and macd_differenza_2_min_ago > -1.50
+                ):
+               
+                    buy = "BUY 2 con 3-20 che ci riprova quando se ne va lateralmente > crollo CON 10>20 E CON 100>300 - r 5445 A2 X1"
+                    action = "buy"
+                    percentage = 80
+
+                    # 15 nov 2024 se 100>300 anticipo ndecchia
+
+
+                elif (
+                    ma3_last > ma20_last
                     and ma100_last > ma100_60_min_ago
+                    and ma100_last < ma300_last
 
                     and ma450_last < ma450_180_min_ago
                     and ma200_last < ma200_120_min_ago
@@ -14603,7 +14633,7 @@ class maddog:
                     and macd_differenza_2_min_ago > -1.25
                 ):
                
-                    buy = "BUY 2 con 3-20 che ci riprova quando se ne va lateralmente > crollo CON 10>20 - r 5445 A2 x"
+                    buy = "BUY 2 con 3-20 che ci riprova quando se ne va lateralmente > crollo CON 10>20 MA con 100<300 - r 5445 A2 X2"
                     action = "buy"
                     percentage = 80
 
@@ -45563,6 +45593,8 @@ class maddog:
                 # 15 gen 2024 se ma10_last > ma10_2_min_ago aumentato dev sell a -0.03 da -0.01
                 # 21 feb 2024 dev_sell a -0.04 da -0.03
                 # 15 nov 2024 se 39>100 allora dev sell a -0.05 da -0.04
+
+
 
             elif (
                 ma78_last > ma78_120_min_ago
