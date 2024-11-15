@@ -5903,37 +5903,49 @@ class maddog:
 
                     #  5 nov 2024 aggiunto cano staf
 
+
+
                 elif (    
                     ma3_last > ma20_last
-                   
-                    and ma450_last < ma450_120_min_ago
                     
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.50
-                    and deviation_ma39 < -0.05
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
+                    and ma100_last < ma100_10_min_ago
 
-                    and deviation_ma54_sopra_o_sotto_ma72 < -0.015
-                    and deviation_ma39_sotto_ma200 < -0.01
-                    and deviation_ma300_sopra_ma450 > -0.60
+                    and deviation_ma25_sotto_ma300 < -0.36
+                    and deviation_ma50_sotto_ma300 < -0.30
+                    and deviation_ma39 < 0.03
+                    and deviation_ma3_sotto_ma50 < 0.01
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.39
+                    and deviation_ma5_sopra_ma200 < -0.49
+                    and deviation_ma5_sotto_ma300 < -0.59
+                    and deviation_ma5_sotto_ma450 < -0.30
+
+
+                    
+                    and ma200_last < ma200_60_min_ago
+                    and ma300_last < ma300_60_min_ago
+                    and ma450_last < ma450_120_min_ago
+                    and ma450_last < ma450_360_min_ago
+                    
+                    and deviation_ma50_sopra_o_sotto_ma100 < -0.01
+                    and deviation_ma100_sopra_ma300 < -0.10
                     
                     and deviation_ma3_sopra_ma10 > 0.017
                     and deviation_ma3_sopra_ma16 > -0.01
                     and deviation_ma3_sopra_ma18 > -0.03
 
-                    and ma2_last > ma5_last
-                    and ma2_last >= ma20_last
                     
                     and ma2_last >= ma2_2_min_ago
-                    and ma2_differenza_2_min_ago > 3
-                    
                     and macd_differenza_2_min_ago > -1.50
                     and macd > -50
-                   
+                    and ma2_last > ma5_last
                 ):    
-                    buy = "BUY 1 CF - con 18> CON 300 vicina 450 (anche sotto !) + diff macd > 1.50 - r 1537 A3 Y1 X1 NUOVA ERA A3 SOFT"
+                    buy = "BUY 1 CF - con 18> - r 1537 A3 Y1 X1 NUOVA ERA A3 SOFT che diventa strong"
                     action = "buy"
                     percentage = 90
 
                     #  4 ott 2024 modificata radicalmente prima di cancellare
+                    # 15 nov 2024 soft diventa strong ma forse no (perche' non riesco a capire il segmento temporale giusto per prendere i dati)
               
 
                 elif (    
@@ -6239,9 +6251,9 @@ class maddog:
                     and deviation_ma50_sotto_ma300 < -0.30
                     and deviation_ma39 < 0.03
                     and deviation_ma3_sotto_ma50 < 0.01
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.52
-                    and deviation_ma5_sopra_ma200 < -0.30
-                    and deviation_ma5_sotto_ma300 < -0.35
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.39
+                    and deviation_ma5_sopra_ma200 < -0.49
+                    and deviation_ma5_sotto_ma300 < -0.59
 
                     and deviation_ma5_sotto_ma450 < -0.30
                     and deviation_ma39_sotto_ma200 < -0.01
@@ -12354,6 +12366,7 @@ class maddog:
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
 
                     and ma100_last < ma100_10_min_ago
+
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.52
                   
                     and ma450_last < ma450_360_min_ago
