@@ -4198,18 +4198,20 @@ class maddog:
                 
                 elif (    
                     ma3_last > ma15_last
+                    
+                    and ma39_last < ma100_last
+                    and deviation_ma25_sotto_ma300 < -0.40
+                    and deviation_ma50_sotto_ma300 < -0.30
+                    and deviation_ma39 < -0.05
+                    and deviation_ma3_sotto_ma50 < -0.10
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.27
+                    and deviation_ma5_sotto_ma200 < -0.36
+                    and deviation_ma5_sotto_ma300 < -0.45
+
                     and ma450_last > ma450_120_min_ago
-
-                    and ma100_last < ma100_60_min_ago
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.35
-                    and deviation_ma5_sotto_ma200 < -0.15
-
                     
-                    
-                  
-                    and deviation_ma39_sotto_ma200 < 0.20
                     and deviation_ma300_sopra_ma450 > -0.45
-                    
+
                     and deviation_ma3_sopra_ma10 > -0.005
                     and deviation_ma3_sopra_ma16 > -0.01
                     and deviation_ma3_sopra_ma18 > -0.03
@@ -4217,18 +4219,19 @@ class maddog:
                     and ma2_last >= ma20_last
                   
                     and ma2_last >= ma2_2_min_ago
-                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.01
                     
                     and macd_differenza_2_min_ago > -3.25
                     and macd > -50
                    
                 ):    
-                    buy = "BUY 1 CF CON ma450> MA ma100< + OSSO E CON 300 ancora vicina alla 450 ( anche un poco sotto! ) - r 1537 A2 Y2 A"
+                    buy = "BUY 1 CF CON ma450> MA ma39 < ma100 + E CON 300 ancora vicina alla 450 E CON zia amalia grafana - r 1537 A2 Y2 A"
                     action = "buy"
                     percentage = 90
 
                     #  8 ott 2024 se ma100_last < ma100_120_min_ago allora il cane vuole l' osso (and deviation_ma5_sopra_o_sotto_ma100 < -0.35)
                     # 15 ott 2024 ma100< 60 min ago invece di ma100< 120 min ago
+                    # 17 nov 2024 se 39<100 interviene zia amalia grafana
+
 
                 elif (    
                     ma3_last > ma15_last
