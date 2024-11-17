@@ -24880,9 +24880,10 @@ class maddog:
                     # 15 gen 2024 5-28 > -0.02 da 0.02
 
 
-                
                 elif (    
                     ma3_last > ma10_last
+                    and ma39_last > ma100_last
+
                     and (ma3_prev < ma425_prev and ma3_last > ma425_last)
                     and ma50_differenza_ma59 < -5
                     and ma10_last < ma30_last
@@ -24898,13 +24899,49 @@ class maddog:
                     and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.01
                     and macd_differenza_2_min_ago > -1.30
                 ):
-                    buy = "BUY 5 con inrocio al rialzo 3-425 and 450_last >= 450_120_min_ago and 5-28 > -0.02 CON 50 > 450 - r 7144 A1 Y3"
+                    buy = "BUY 5 con inrocio al rialzo 3-425 and 450_last >= 450_120_min_ago and 5-28 > -0.02 CON 50 > 450 - r 7144 A1 Y3 X"
                     action = "buy"
                     percentage = 70
 
                     # 29 set 2024 anticipata cazzo
                     # 29 set 2024 tolta and ma2_last >= ma2_2_min_ago e vaffanculo.
 
+
+                elif (    
+                    ma3_last > ma10_last
+                    and ma39_last < ma100_last
+
+                    and ma39_last < ma100_last
+                    and deviation_ma25_sotto_ma300 < -1.70
+                    and deviation_ma50_sotto_ma300 < -1.10
+                    and deviation_ma39 < -0.20
+                    and deviation_ma3_sotto_ma50 < -0.40
+                    and deviation_ma5_sopra_o_sotto_ma100 < -1.30
+                    and deviation_ma5_sotto_ma200 < -1.60
+                    and deviation_ma5_sotto_ma300 < -1.80
+
+                    and (ma3_prev < ma425_prev and ma3_last > ma425_last)
+                    and ma50_differenza_ma59 < -5
+                    and ma10_last < ma30_last
+                    
+                    and ma2_differenza_ma5 > 5
+                    
+                    and ma450_last >= ma450_120_min_ago
+                    
+                   
+                    and deviation_ma3_sopra_ma10 > 0.01
+                  
+                    
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.01
+                    and macd_differenza_2_min_ago > -1.30
+                ):
+                    buy = "BUY 5 con inrocio al rialzo 3-425 and 450_last >= 450_120_min_ago and 5-28 > -0.02 CON 50 > 450 - r 7144 A1 Y3 Y"
+                    action = "buy"
+                    percentage = 70
+
+                    # 29 set 2024 anticipata cazzo
+                    # 29 set 2024 tolta and ma2_last >= ma2_2_min_ago e vaffanculo.
+                    # 17 nov 2024 se 39<100 interviene zia amalia grafana
 
 
 
@@ -26190,15 +26227,22 @@ class maddog:
 
                 elif (
                     ma69_last < ma69_2_min_ago
+                    
+                    and ma39_last < ma100_last
+                    and deviation_ma25_sotto_ma300 < -1.70
+                    and deviation_ma50_sotto_ma300 < -1.10
+                    and deviation_ma39 < -0.20
+                    and deviation_ma3_sotto_ma50 < -0.40
+                    and deviation_ma5_sopra_o_sotto_ma100 < -1.30
+                    and deviation_ma5_sotto_ma200 < -1.60
+                    and deviation_ma5_sotto_ma300 < -1.80
+
                     and ma100_last > ma200_last
                     and ma200_last > ma300_last
-
-                    and ma100_last < ma100_10_min_ago
-                    and deviation_ma5_sopra_o_sotto_ma5_30_min_ago > -0.08
-
+                    
                     and ma300_last > ma300_60_min_ago
                     and ma450_last > ma450_120_min_ago
-                    and deviation > -0.30
+                    
                     
                     and ma3_last > ma8_last
                   
@@ -26206,7 +26250,7 @@ class maddog:
                     and macd > -40
                     and macd_differenza_2_min_ago > -2
                 ):
-                    buy = "BUY 5 con 69< MA TUTTE LE ma IN CRESCITA MA ma100< E ma5 last non scende molto dalla ma5 di 30 min ago - r 7352 b1"
+                    buy = "BUY 5 con 69< MA TUTTE LE ma IN CRESCITA MA ma39<100 E zia amalia grafana - r 7352 b1"
                     action = "buy"
                     percentage = 70
                     
@@ -26216,7 +26260,7 @@ class maddog:
                     # 14 ott 2024 aggiunto MACD e diff macd
 
                     # 28 ott 2024 se ma100 scende MA se ma5 last non scende molto dalla ma5 di 30 min ago ok cosi
-
+                    # 17 nov 2024 se 39<100 interviene zia amalia grafana
 
                 elif (
                     ma69_last < ma69_2_min_ago
@@ -26372,6 +26416,37 @@ class maddog:
                     #  10 nov 2024 anticipata ancora di una ndecchiecella
                     # 17 nov 2024 se 39<100 allora interviene zia amalia grafana
 
+
+
+
+                elif (
+                    ma3_last > ma13_last
+                    and deviation_ma39 < -0.17
+                    
+                    and ma39_last < ma100_last
+                    and deviation_ma25_sotto_ma300 < -1.70
+                    and deviation_ma50_sotto_ma300 < -1.10
+                    and deviation_ma39 < -0.20
+                    and deviation_ma3_sotto_ma50 < -0.40
+                    and deviation_ma5_sopra_o_sotto_ma100 < -1.30
+                    and deviation_ma5_sotto_ma200 < -1.60
+                    and deviation_ma5_sotto_ma300 < -1.80
+                    
+                    and ma100_last > ma100_60_min_ago
+                    and ma450_last > ma450_360_min_ago
+                    and ma300_last > ma450_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > -0.01
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd > -40
+                    and macd_differenza_2_min_ago > -2
+                ):
+                    buy = "BUY 5A con ma450_last > ma450_360_min_ago MA 39<100 E zia amalia grafana - r 7384 A2xx2"
+                    action = "buy"
+                    percentage = 70
+                    # 17 nov 2024 se 39<100 zia amalia grafana
 
                 elif (
                     ma3_last > ma13_last
