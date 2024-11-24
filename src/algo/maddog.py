@@ -20267,13 +20267,14 @@ class maddog:
 
 
                 
-                elif (    
-                    ma3_last > ma28_last
-                    and delta_1 < delta_2
-
-                    and ma10_last >= ma20_last
-                    and deviation_ma5_sotto_ma300 > -0.62
+                elif (
                     
+                    ma3_last > ma15_last
+                    and ma78_last < ma150_last
+                    and deviation_ma39 > -0.30
+                    and deviation_ma5_sopra_ma59 < -0.10
+
+                    and ma100_last < ma100_60_min_ago
                     and ma100_last < ma100_180_min_ago
                     and ma200_last < ma200_180_min_ago
                     and ma300_last < ma300_180_min_ago
@@ -20281,21 +20282,26 @@ class maddog:
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
                     
-                    and deviation_ma3_sopra_ma10 > 0.01
-                    and deviation_ma5_sopra_ma28 > -0.03
+                    and deviation_ma5_sopra_ma28 < 0.08
+                    and deviation_ma3_sopra_ma16 > 0.03
+                    and deviation_ma3_sopra_ma18 > 0.093
                     
                     and ma2_last >= ma2_2_min_ago
-                    
-                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.010
+                    and ma2_differenza_2_min_ago > 7
+                    and ma2_differenza_ma5 > 10
                     and macd > -20
-                    and macd_differenza_2_min_ago > -1.25
-                    
+                    and macd_differenza_2_min_ago > 1.25
+                    and ma2_last >= ma10_last
+
                 ):
-                    buy = "BUY 3 29 ago 2022 > 180 min di ribasso MA GIORNO con 4-28 and macd_differenza_2_min_ago > 1.00 - r 6572 A1 xa"
+                    buy = "BUY 3 modificato importando un vecchio pensiero laterale - r 6572 A1 xa"
                     action = "buy"
                     percentage = 90
 
                     #  8 ott 2024 se GIORNO se cioe' all' appuntamento con il BUY 3 la ma100 si avvicina alla BUY 2 allora anticipo ndechiecella
+                    # 24 nov 2024 modificato importando un vecchio pensiero laterale.
+
+
 
 
                 elif (    
@@ -22719,25 +22725,32 @@ class maddog:
 
                 
                 elif (
-              
-                    ma3_last >= ma28_last
-                    and ma3_last > ma8_last
-                    and ma3_last >= ma15_last
-
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.20
-                    and ma300_last < ma300_120_min_ago
-                    and ma100_last < ma100_60_min_ago
+                    ma3_last > ma15_last
+                    and ma78_last < ma150_last
+                    and deviation_ma39 > -0.30
+                    and deviation_ma5_sopra_ma59 < -0.10
                     
-                    and deviation > -0.30
+                    and ma100_last < ma100_180_min_ago
+                    and ma200_last < ma200_180_min_ago
+                    and ma300_last < ma300_180_min_ago
                     
-                    and ma2_last > ma5_last
-                    and ma3_last > ma8_last
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and deviation_ma5_sopra_ma28 < 0.08
+                    and deviation_ma3_sopra_ma16 > 0.03
+                    and deviation_ma3_sopra_ma18 > 0.093
+                    
                     and ma2_last >= ma2_2_min_ago
-                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.020
-                    
+                    and ma2_differenza_2_min_ago > 7
+                    and ma2_differenza_ma5 > 10
+                    and macd > -20
                     and macd_differenza_2_min_ago > 1.25
+                    and ma2_last >= ma10_last
+
+
                 ):    
-                    buy = "BUY 4B importato da BUY 3 RCCR con 300 < E 100 < 100 60 min ago AND dev ma2 and diff macd - r 6756 BY 1"
+                    buy = "BUY 4B modificato importando un vecchio pensiero laterale da RCCR - r 6756 BY 1"
                     action = "buy"
                     percentage = 70
                     
@@ -22747,7 +22760,9 @@ class maddog:
                     # 18 gen 2024 10-39 da and ma10_last >= ma39_last
                     # 27 gen 2024 aggiunta 2>5 (e' necessaria !) vedi 27 gen 2024 ore 9:51
                     # 12 set 2024 aggiunta and deviation_ma5_sopra_o_sotto_ma100 < -0.20
-              
+                    # 24 nov 2024 modificao importando un vecchio pensiero laterale da RCCR
+
+
                 
                 elif (
                     deviation_ma4_sopra_ma30 > 0.15
@@ -26623,33 +26638,36 @@ class maddog:
                     #  9 nov 2024 se 450 sale da 6 ore non devi spezzare la catena !
 
 
-                elif (    
-                    ma450_last < ma450_360_min_ago
+                elif (
+                    ma3_last > ma15_last
+                    and ma78_last < ma150_last
+                    and deviation_ma39 > -0.30
+                    and deviation_ma5_sopra_ma59 < -0.10
+                    
+                    and ma100_last < ma100_180_min_ago
+                    and ma200_last < ma200_180_min_ago
+                    and ma300_last < ma300_180_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and deviation_ma5_sopra_ma28 < 0.08
+                    and deviation_ma3_sopra_ma16 > 0.03
+                    and deviation_ma3_sopra_ma18 > 0.093
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and ma2_differenza_2_min_ago > 7
+                    and ma2_differenza_ma5 > 10
+                    and macd > -20
+                    and macd_differenza_2_min_ago > 1.25
+                    and ma2_last >= ma10_last
 
-                    and ma78_last > ma150_last
-
-                    and ma300_last < ma450_last
-
-                    and deviation_ma4_sopra_ma100 > 0.25
-                    
-                    and deviation_ma3_sopra_ma10 > 0.07
-                    
-                    and deviation_buy3 > 0.03
-                    and deviation_bellissima > 0.17
-                    and delta_buy3_incrocio_ma3_ma8 > 0.05
-                    and deviation_ma4_sopra_ma30 > 0.13
-                    and ma3_last > ma8_last
-                    and ma3_last > ma78_last
-                    and ma4_last > ma4_2_min_ago
-                    and ma7_last > ma25_last
-                    
-                    and ma2_last > ma2_2_min_ago
-                    
                 ):
-                    buy = "BUY 5C RIVOLUZIONARIO con ma78 > and deviation_bellissima > 0.163 (PER SPEZZARE LA CATENA - effetti laterali) - r 7441 B2"
+                    buy = "BUY 5C modificato importando un vecchio pensiero laterale da RCCR - r 7441 B2"
                     action = "buy"
                     percentage = 70
-                    
+
+                    # 24 nov 2024 modificato importando un vecchio pensiero laterale da RCCR
                     
                     
               
