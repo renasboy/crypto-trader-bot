@@ -3,6 +3,25 @@
 # sono 20 anni compa !
 
 
+"""
+
+and ma39_last < ma100_last
+
+and deviation_ma25_sotto_ma300 < -0.50
+and deviation_ma50_sotto_ma300 < -0.60
+
+and deviation_ma39 < -0.01
+and deviation_ma3_sotto_ma50 < -0.10
+
+and deviation_ma5_sopra_o_sotto_ma100 < -0.27
+and deviation_ma5_sotto_ma200 < -0.45
+and deviation_ma5_sotto_ma300 < -0.65
+and deviation_ma5_sotto_ma450 < -1.20
+
+"""
+      
+
+
 class maddog:
   
     def __init__(self, helper, buy_percentage, sell_percentage):
@@ -4200,13 +4219,17 @@ class maddog:
                     ma3_last > ma15_last
                     
                     and ma39_last < ma100_last
-                    and deviation_ma25_sotto_ma300 < -0.40
-                    and deviation_ma50_sotto_ma300 < -0.30
-                    and deviation_ma39 < -0.05
+
+                    and deviation_ma25_sotto_ma300 < -0.50
+                    and deviation_ma50_sotto_ma300 < -0.60
+
+                    and deviation_ma39 < -0.01
                     and deviation_ma3_sotto_ma50 < -0.10
+
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.27
-                    and deviation_ma5_sotto_ma200 < -0.36
-                    and deviation_ma5_sotto_ma300 < -0.45
+                    and deviation_ma5_sotto_ma200 < -0.45
+                    and deviation_ma5_sotto_ma300 < -0.65
+                    and deviation_ma5_sotto_ma450 < -1.20
 
                     and ma450_last > ma450_120_min_ago
                     
@@ -4224,14 +4247,14 @@ class maddog:
                     and macd > -50
                    
                 ):    
-                    buy = "BUY 1 CF CON ma450> MA ma39 < ma100 + E CON 300 ancora vicina alla 450 E CON zia amalia grafana - r 1537 A2 Y2 A"
+                    buy = "BUY 1 CF CON ma450> MA ma39 < ma100 + E CON 300 ancora vicina alla 450 E CON DNAM - r 1537 A2 Y2 A"
                     action = "buy"
                     percentage = 90
 
                     #  8 ott 2024 se ma100_last < ma100_120_min_ago allora il cane vuole l' osso (and deviation_ma5_sopra_o_sotto_ma100 < -0.35)
                     # 15 ott 2024 ma100< 60 min ago invece di ma100< 120 min ago
                     # 17 nov 2024 se 39<100 interviene zia amalia grafana
-
+                    #  1 dic 2024 and deviation_ma5_sotto_ma450 < -1.20
 
                 elif (    
                     ma3_last > ma15_last
@@ -16476,12 +16499,13 @@ class maddog:
                     and deviation_ma50_sotto_ma300 < -0.36
                     and deviation_ma39 < 0.13
                     and deviation_ma3_sotto_ma50 < -0.02
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.13
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.15
                     and deviation_ma5_sotto_ma200 < -0.25
-                    and deviation_ma5_sotto_ma300 < -0.37
-                    
+                    and deviation_ma5_sotto_ma300 < -0.60
+                    and deviation_ma5_sotto_ma300 < -1.20
+
                     and ma39_last < ma39_15_min_ago
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.40
+                    
                    
                     and ma450_last > ma450_360_min_ago
                     
@@ -17352,7 +17376,7 @@ class maddog:
                         ma3_last > ma20_last
                         and ma100_last < ma100_60_min_ago
 
-                        and deviation_ma5_sopra_o_sotto_ma100 < -0.10
+                        and deviation_ma5_sopra_o_sotto_ma100 < -0.25
                         and deviation_ma5_sotto_ma200 < -0.10
                         and deviation_ma25_sotto_ma300 < -0.11
 
@@ -17364,9 +17388,9 @@ class maddog:
                         
                         and ma2_last > ma2_2_min_ago
                         and macd > macd_2_min_ago
-                        and macd > -20
+                        and macd > -40
                     ):
-                        buy = "BUY 2 novembre 2023 con ma450 > 6 ore E ma100 < ma100 60 min E ma50 < and ma3_last > ma20 + OSSO - r 5999 b"
+                        buy = "BUY 2 novembre 2023 con ma450 > 6 ore E ma100 < ma100 60 min E ma50 < and ma3_last > ma20 + OSSO - r 5999 B"
                         action = "buy"
                         percentage = 70
 
@@ -17374,7 +17398,7 @@ class maddog:
                         # aggiunto prendi il coltello con il piede
                         # la cosa curiosa e' che mancava percentage e faceva acquisti di 3,94 euro
                         # 15 ott 2024 se ma100<ma100 60 min ago allora il cane vuole un osso !
-
+                        #  1 dic 2024 dev 5-100 < -0.25
 
               
                 # BUY 2 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND dev 5-30 CON AGGIUNTA PENSIERO LATERALE
@@ -18739,17 +18763,24 @@ class maddog:
                     
                 elif (
                     ma3_last > ma20_last
-                    
-                    and deviation_ma25_sotto_ma300 < -0.50
-                    and deviation_ma50_sotto_ma300 < -0.60
-                    
+
+                    and ma39_last < ma100_last
+                    and deviation_ma25_sotto_ma300 < -0.60              
+                    and deviation_ma50_sotto_ma300 < -0.70
+                    and deviation_ma39 < -0.05
+                    and deviation_ma3_sotto_ma50 < -0.10   
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.27
+                    and deviation_ma5_sotto_ma200 < -0.45
+                    and deviation_ma5_sotto_ma300 < -0.65
+                    and deviation_ma5_sotto_ma450 < -1.00
+
                     and ma78_last < ma200_last
                     and deviation_ma3_sopra_ma10 > 0.07
                     
                     and ma2_last >= ma2_2_min_ago
                     and macd_differenza_2_min_ago > -3
                 ):
-                    buy = "BUY 3 RIVOLUZIONARIO con 3-20 se ma78 < ma200 + zia amalia - r 6356 B"
+                    buy = "BUY 3 RIVOLUZIONARIO con 3-20 se ma78 < ma200 + DNAM - r 6356 B"
                     action = "buy"
                     percentage = 80
                     
@@ -18757,7 +18788,7 @@ class maddog:
                     # 10 dic 2023 aggiunta and ma2_last > ma2_2_min_ago
                     # 10 dic 2023 aggiunta and macd_differenza_2_min_ago > -3
                     #  5 nov 2024 + zia amalia
-                 
+                    #  1 dic 2024 modificato DNAM
                     
                     
                 # BUY 3 importata da RCCR - AUDI CHE NON E' UN CROLLO ! con 5-16
