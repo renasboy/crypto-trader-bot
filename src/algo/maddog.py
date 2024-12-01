@@ -15955,28 +15955,32 @@ class maddog:
 
                 
                 elif (
-                    ma3_last > ma39_last
+                    ma3_last > ma20_last
                     
-                    and ma100_last > ma100_10_min_ago
+                    
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
-                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
-                    
+
+                    and ma39_last < ma100_last
+                    and deviation_ma25_sotto_ma300 < -0.50
+                    and deviation_ma50_sotto_ma300 < -0.60
+
+                    and deviation_ma39 < -0.01
+                    and deviation_ma3_sotto_ma50 < -0.10
+
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.27
+                    and deviation_ma5_sotto_ma200 < -0.45
+                    and deviation_ma5_sotto_ma300 < -0.65
+                    and deviation_ma5_sotto_ma450 < -1.20
+
                     and ma200_last < ma200_120_min_ago
                     and delta_1 > delta_2
                     
-                    and deviation_ma100_sopra_ma300 < -0.05
-                    and deviation > -0.30
-                    and deviation_ma4_sopra_ma30 > 0.04
-                    and delta_buy3_incrocio_ma3_ma8 >= 0.06
-                    
                     and ma3_last > ma8_last
-                    and ma5_last >= ma15_last
-                    and ma5_last >= ma25_last
                     
                     and ma2_last >= ma2_2_min_ago
-                    and macd >= macd_2_min_ago
+                    and macd >= -50
                 ):    
-                    buy = "BUY 2 RIVOLUZIONARIO con 5-50 e CON delta_1 > delta_2 e con 100 CHE NON E' ATTACCATA ALLA 300 ! e 8>50 and 5>72 - r 5945 A3 Y NUOVA ERA A3 SOFT"
+                    buy = "BUY 2 con 3-20 e CON delta_1 > delta_2 e con DNAM - r 5945 A3 Y DNAM"
                     action = "buy"
                     percentage = 70
 
