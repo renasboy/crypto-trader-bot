@@ -21261,36 +21261,29 @@ class maddog:
                     # 17 mag 2023 riduzione generale dei valori per anticipare se 100 sta vicina alla 300 con aggiunta di macd > macd 2 min ago
                     
                     
-                # BUY 3 IN BASSO con ma69 > and deviation_bellissima > 0.12 IMPORTATA DA BUY 4 RCCR   
+                
                 
                 elif (
-                    ma50_last >= ma50_2_min_ago
+                    ma3_last > ma13_last
+                    and ma300_last > ma300_301_min_ago
+                    and ma50_last >= ma50_2_min_ago
                     and deviation_ma100_sopra_ma300 < -0.25
                     and deviation_ma5_sotto_ma300 > -1.80
                     
-                    and ma300_last > ma300_301_min_ago
+                    and deviation_ma3_sopra_ma10 > 0.01
                     
-                    and deviation_ma3_sopra_ma10 > 0.05
-                    and deviation_ma5_sopra_ma28 > 0.01
-                    
-                    and deviation_bellissima > 0.03
-                    and deviation_buy3 > 0.03
-                    and deviation_ma7_sopra_ma40 > 0.03
-               
                     and ma3_last > ma13_last
-                    and ma4_last > ma9_last
-                    and ma4_last > ma50_last
-                    and ma6_last > ma15_last
-                    and ma7_last > ma25_last
                     
                     and ma2_last > ma2_2_min_ago
-                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
-                    and macd > macd_2_min_ago
-                    and macd_differenza_2_min_ago > 1.20
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.01
+                    and macd > -40
+                    and macd_differenza_2_min_ago > -1.50
                 ):
-                    buy = "BUY 3 IN BASSO con ma300_last > ma300_301_min_ago E con dev_bellissima > 0.04 IMPORTATA DA BUY 4 RCCR - r 6599 A1 z1"
+                    buy = "BUY 3 con ma300_last > ma300_301_min_ago IMPORTATA DA BUY 4 RCCR - r 6599 A1 z1"
                     action = "buy"
                     percentage = 50
+
+                    #  1 dic 2024 anticipata
 
                 
                 # BUY 3 IN BASSO con ma69 > and deviation_bellissima > 0.12 IMPORTATA DA BUY 4 RCCR   
@@ -46926,17 +46919,19 @@ class maddog:
           
             elif (
                 ma78_last < ma78_120_min_ago
+                
+                and ma20_last > ma20_2_min_ago
+                and ma300_last > ma300_301_min_ago
+
                 and ma10_last < ma10_2_min_ago
                 and ma5_last < ma10_last
                 and ma20_last < ma40_last
-                and ma20_last > ma20_2_min_ago
+                
                 and ma50_last <= ma50_2_min_ago
                 and ma2_differenza_2_min_ago < -8
                 
-                and ma300_last > ma300_301_min_ago
-                
                 and deviation_ma39 < 0.13
-                and deviation_sell < 0.02
+                and deviation_sell < -0.02
                 
                 and ma2_last <= ma2_2_min_ago
                 and ma2_last < ma5_last
@@ -46945,7 +46940,7 @@ class maddog:
                 and macd < 25
             
             ):
-                sell = "SELL cond spec con ma20>ma20 2 min ago e con ma 50<= ma 50 2 min ago con ma300 > 5 ore - SALVAGENTE 4 dev 3-39 < 0.08 and dev_sell < 0.01 - r 16047 B1 Y1 Y2y"
+                sell = "SELL CS con ma20>ma20 2 min ago e ma50<= ma50 2 min ago E ma300 > 5 ore e dev 3-39 <0.08 e dev_sell <0.01 - r 16047 B1 Y1 Y2y"
                 action = "sell"
                 
                 # oggi 10 dicembre 2023 ascolta mario ! SE ma20_last > ma20_2_min_ago DEV SELL a 0.02 da 0.05
@@ -46955,7 +46950,7 @@ class maddog:
                 # 19 dic 2023 deviation_sell a -0.03 da 0.01 con ma20 che sta salendo !
                 # 19 dic 2023 se 20 e' ancora sotto 40 esci prima cazzo ! and deviation_sell < 0.01 da < -0.03
                 # 30 dic 2023 5 < 10 and macd < 25 da < 15 !
-
+                #  1 dic 2024 and deviation_sell -0.02 da 0.01
             
             elif (
                 ma78_last < ma78_120_min_ago
