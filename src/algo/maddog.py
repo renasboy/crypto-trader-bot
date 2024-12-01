@@ -5,18 +5,18 @@
 
 """
 
-and ma39_last < ma100_last
 
+and ma39_last < ma100_last
 and deviation_ma25_sotto_ma300 < -0.50
 and deviation_ma50_sotto_ma300 < -0.60
-
 and deviation_ma39 < -0.01
 and deviation_ma3_sotto_ma50 < -0.10
-
 and deviation_ma5_sopra_o_sotto_ma100 < -0.27
 and deviation_ma5_sotto_ma200 < -0.45
 and deviation_ma5_sotto_ma300 < -0.65
 and deviation_ma5_sotto_ma450 < -1.20
+
+
 
 """
       
@@ -15958,19 +15958,19 @@ class maddog:
                     ma3_last > ma20_last
                     
                     
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
 
                     and ma39_last < ma100_last
-                    and deviation_ma25_sotto_ma300 < -0.50
-                    and deviation_ma50_sotto_ma300 < -0.60
+                    and deviation_ma25_sotto_ma300 < -0.15
+                    and deviation_ma50_sotto_ma300 < -0.15
 
-                    and deviation_ma39 < -0.01
-                    and deviation_ma3_sotto_ma50 < -0.10
+                    and deviation_ma39 < 0.03
+                    and deviation_ma3_sotto_ma50 < 0.03
 
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.27
-                    and deviation_ma5_sotto_ma200 < -0.45
-                    and deviation_ma5_sotto_ma300 < -0.65
-                    and deviation_ma5_sotto_ma450 < -1.20
+                    and deviation_ma5_sopra_o_sotto_ma100 < 0.01
+                    and deviation_ma5_sotto_ma200 < -0.01
+                    and deviation_ma5_sotto_ma300 < -0.10
+                    and deviation_ma5_sotto_ma450 < -0.10
 
                     and ma200_last < ma200_120_min_ago
                     and delta_1 > delta_2
@@ -15980,10 +15980,11 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
                     and macd >= -50
                 ):    
-                    buy = "BUY 2 con 3-20 e CON delta_1 > delta_2 e con DNAM - r 5945 A3 Y DNAM"
+                    buy = "BUY 2 con 3-20 e CON delta_1 > delta_2 e con DNAM - r 5945 A3 Y NUOVA ERA A3 SOFT"
                     action = "buy"
                     percentage = 70
 
+                    #  1 dic 2024 aggiunta DNAM SOFT perche' e' presente and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
                 
                 elif (
                     ma3_last > ma39_last
