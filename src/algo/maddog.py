@@ -12436,29 +12436,35 @@ class maddog:
                     
 
                 elif (
-                    ma78_last < ma78_2_min_ago
+                    ma3_last > ma20_last
+                    
+                    and ma39_last < ma100_last
+                    and deviation_ma25_sotto_ma300 < -0.30
+                    and deviation_ma50_sotto_ma300 < -0.20
+                    and deviation_ma39 < -0.025
+                    and deviation_ma3_sotto_ma50 < -0.10
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.13
+                    and deviation_ma5_sotto_ma200 < -0.30
+                    and deviation_ma5_sotto_ma300 < -0.30
+                    and deviation_ma5_sotto_ma450 < -0.30
+
                     and deviation_ma5_sotto_ma300 > -0.59
                     
-                    and deviation_buy2 > 0.07
-                    and deviation_ma3_sopra_ma10 > 0.11
+                    and deviation_ma3_sopra_ma10 > 0.01
                     
-                    and deviation_bellissima > 0.12
-                    and deviation_ma13_sopra_ma25 > 0.06
-                    and deviation_buy_ma3_sopra_ma13 > 0.09
-                    and deviation_ma7_sopra_ma40 > 0.10
-                    and ma2_last > ma2_2_min_ago
+                    and ma2_last >= ma2_2_min_ago
                     and price > price_2_min_ago
-                    and ma3_last > ma40_last
-                    and macd >= macd_2_min_ago
+                    
+                    and macd >= -40
                 ):
-                    buy = "BUY 2B - r 4732 a"
+                    buy = "BUY 2 - r 4732 A con DNAM"
                     action = "buy"
                     percentage = 80
                     
                     # deviation_buy_ma3_sopra_ma13 > x e' fondamentale !
                     # deviation_buy2 = ma8_last/ma50_last
                     # 18 set aggiunta 3-10 ! 0.11
-                    
+                    #  1 dic 2024 aggiunta DNAM
                 
                 
                 elif (
@@ -12473,7 +12479,7 @@ class maddog:
                     and price > price_2_min_ago
                     and macd >= macd_2_min_ago
                 ):
-                    buy = "BUY 2Ba durante crollo - 5 sotto 300 di molto ! PIU' AGGRESSIVO (delta 1 < delta 2) (ma100 sta risalendo) - r 4732 b1"
+                    buy = "BUY 2 durante crollo - 5 sotto 300 di molto ! PIU' AGGRESSIVO (delta 1 < delta 2) (ma100 sta risalendo) - r 4732 b1"
                     action = "buy"
                     percentage = 80
                     
@@ -12500,7 +12506,7 @@ class maddog:
                     and price > price_2_min_ago
                     and macd >= macd_2_min_ago
                 ):
-                    buy = "BUY 2Bb  durante crollo - 5 sotto 300 di molto ! PIU' PRUDENTE (delta 1 > delta 2) (ma100 si allontana verso il basso da ma200)- r 4732 b2"
+                    buy = "BUY 2  durante crollo - 5 sotto 300 di molto ! PIU' PRUDENTE (delta 1 > delta 2) (ma100 si allontana verso il basso da ma200)- r 4732 b2"
                     action = "buy"
                     percentage = 80
                     
