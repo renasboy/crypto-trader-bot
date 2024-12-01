@@ -12092,30 +12092,40 @@ class maddog:
 
               
                     
-                elif (
-                    ma3_last > ma20_last
-                    
+                
+                elif (    
+                    ma3_last > ma15_last
+
                     and ma100_last < ma100_10_min_ago
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.20
+
+                    and ma39_last < ma100_last
+
+                    and deviation_ma25_sotto_ma300 < -0.50
+                    and deviation_ma50_sotto_ma300 < -0.60
+
+                    and deviation_ma39 < -0.01
+                    and deviation_ma3_sotto_ma50 < -0.10
+
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.27
+                    and deviation_ma5_sotto_ma200 < -0.37
+                    and deviation_ma5_sotto_ma300 < -0.57
+                    and deviation_ma5_sotto_ma450 < -0.87
+
+                    and ma450_last > ma450_120_min_ago
                     and ma200_last < ma200_120_min_ago
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.20
-
-                    and deviation_ma25_sotto_ma300 < -0.39
-                    and deviation_ma50_sotto_ma300 < -0.36
-
-                    and deviation_ma100_sopra_ma300 < 0.20
-                    and ma78_last < ma200_last
                     
-                    
-                    and deviation_ma3_sopra_ma10 > 0.02
-                    and deviation_ma5_sopra_ma28 > -0.10
+
+                    and deviation_ma3_sopra_ma10 > -0.005
+                    and deviation_ma3_sopra_ma16 > -0.01
+                    and deviation_ma3_sopra_ma18 > -0.03
                     
                     and ma2_last >= ma2_2_min_ago
-                    and price > price_2_min_ago
-                    
-                    and macd >= macd_2_min_ago
+                    and macd > -50
+                    and macd_differenza_2_min_ago > -3.25
+                      
                 ):
-                    buy = "BUY 2A ribasso o laterale and ma78_last < ma200_last + zia amalia - r 4709 B"
+                    buy = "BUY 2A ribasso o laterale and ma78_last < ma200_last + DNAM - r 4709 B"
                     action = "buy"
                     percentage = 80
 
@@ -12124,7 +12134,7 @@ class maddog:
                     # roma aggiunta 5-28
                     #  3 ott 2024 aggiunto cane STAF
                     #  5 ott 2024 aggiunta zia amalia
-                    
+                    #  1 dic 2024 DNAM
                 
 
                 # BUY 2 CHE MANCAVA con 150-100 GIORNO !
