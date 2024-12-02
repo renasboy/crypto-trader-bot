@@ -23737,8 +23737,9 @@ class maddog:
 
                 elif (
                     ma3_last > ma20_last
+                    and ma100_last > ma100_120_min_ago
+                    
                     and ma100_last > ma100_60_min_ago
-
                     and delta_450_200 < delta_450_200_60_min
                     and ma25_last > ma300_last
                     and ma100_last > ma200_last
@@ -23750,11 +23751,45 @@ class maddog:
                     and macd > -50
                     
                 ):
-                    buy = "BUY 4 con 100>200 E doppio delta GIORNO e 25>300 (non spezzo la catena !) - r 7065 A1"
+                    buy = "BUY 4 con con 100<100 120 min ago E doppio delta GIORNO e 25>300 (non spezzo la catena !) - r 7065 A1x"
                     action = "buy"
                     percentage = 70
 
                     # 14 ott 2024 se 100> 100 60 min ago ok cosi'
+
+
+                elif (
+                    ma3_last > ma20_last
+                    and ma100_last < ma100_120_min_ago
+                    
+                    and deviation_ma25_sotto_ma300 < -0.15
+                    and deviation_ma50_sotto_ma300 < -0.15
+                    and deviation_ma39 < -0.01
+                    and deviation_ma3_sotto_ma50 < -0.01
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.10
+                    and deviation_ma5_sotto_ma200 < -0.12
+                    and deviation_ma5_sotto_ma300 < -0.15
+                    and deviation_ma5_sotto_ma450 < -0.08
+
+                    and ma100_last > ma100_60_min_ago
+                    and ma100_last > ma200_last
+                    and delta_450_200 < delta_450_200_60_min
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    
+                    and ma3_last > ma13_last
+                    and ma2_last > ma2_2_min_ago
+                    and macd > -50
+                    
+                ):
+                    buy = "BUY 4 con 100<100 120 min ago E doppio delta GIORNO e DNAM - r 7065 A1y"
+                    action = "buy"
+                    percentage = 70
+
+                    # 14 ott 2024 se 100> 100 60 min ago ok cosi'
+                    #  2 dic 2024 se ma100_last < ma100_120_min_ago allora interviene DNAM
+
+
 
                 elif (
                     ma3_last > ma20_last
