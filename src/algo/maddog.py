@@ -24881,35 +24881,43 @@ class maddog:
 
                 elif (    
                     ma3_last > ma20_last
-                    and ma10_last > ma20_last
-
-                    and ma100_last > ma100_10_min_ago
-
                     and ma450_last < ma450_120_min_ago
                     and ma200_last < ma300_last
+                    
+                    and ma39_last < ma100_last
+                    and deviation_ma25_sotto_ma300 < -0.20
+                    and deviation_ma50_sotto_ma300 < -0.21
+                    and deviation_ma39 < 0.05
+                    and deviation_ma3_sotto_ma50 < 0.06
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.01
+                    and deviation_ma5_sotto_ma200 < -0.13
+                    and deviation_ma5_sotto_ma300 < -0.20
+                    and deviation_ma5_sotto_ma450 < -0.20
+
                     and ma50_last < ma50_2_min_ago
 
-                    and ma100_last > ma200_last
-                    and ma100_last > ma100_120_min_ago
-
-                    and deviation_ma100_sopra_ma300 < 0.25
-                    and deviation_ma39 < 0.05
                     
+                    
+                    and deviation_ma100_sopra_ma300 < 0.25
+                    
+                    and ma10_last > ma20_last
                     and deviation_ma3_sopra_ma10 > 0.01
                     
                     and ma2_last > ma5_last
-                    and ma3_last > ma13_last
+                    
                     
                     and ma2_last >= ma2_2_min_ago
-                    and macd_differenza_2_min_ago > -0.50
+                    and macd > -50
+                    and macd_differenza_2_min_ago > -1.50
                     
                 ):
-                    buy = "BUY 5 ma450_last < ma450_120_min_ago E ma100_last > ma200_last E 100>200 - r 7144 A2 X1Bx"
+                    buy = "BUY 5 ma450_last < ma450_120_min_ago con DNAM - r 7144 A2 X1Bx"
                     action = "buy"
                     percentage = 70
                     
                     #  5 mar 2024 se ma10 < ma20 
                     # 29 set 2024 anticipata di molto prima di cancellare
+                    #  2 dic 2024 aggiunta DNAM
 
 
                 elif (    
@@ -25732,7 +25740,7 @@ class maddog:
                     percentage = 90
                     
                     #  9 feb 2024 IMPORTANTE ! solo BUY 5 NUOVA ERA A3 SOFT con ma100 > ma100 5 min ago !!!
-              
+                    #  2 dic 2024 aggiunta DNAM
 
                 elif (    
                     ma3_last > ma20_last
@@ -26914,7 +26922,7 @@ class maddog:
                     # 25 gen 2023 5-28 0.15 da 0.12
                     #  1 feb 2023 8-100 da 18-100
                     # 12 set 2023 8-54 da 8-100
-
+                    #  2 dic 2024 aggiunta DNAM
 
                 elif (
                     
