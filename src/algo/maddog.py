@@ -44666,11 +44666,11 @@ class maddog:
                 
                 
                 
+            
             # 4 - SELL ricordo terribile del 21 giugno 2022
             
-            elif (
-                
-                ma3_last < ma100_last
+            elif (    
+                ma39_last < ma100_last
                 and deviation_sell < -0.67
                 and deviation_ma100_sopra_ma300 < 0.20
                 and ma2_last < ma2_2_min_ago 
@@ -44680,8 +44680,9 @@ class maddog:
                 action = "sell"   
              
                 # 21 giugno 2022 RICORDO TERRIBILE del 21 giugno 2022 !  9372 A ha venduto a -2.23% !!!
-                # 17 mar 2021 dev sel -0.67 da -0.68
-                
+                # 17 mar 2021 dev sell -0.67 da -0.68
+                #  2 dic 2024 ho messo 39<100 al posto di 3<100 perche' ha venduto STUPIDAMENTE mentre stava salendo
+                #  2 dic 2024 39<100 significa che entra in azione ma solo in una condizione di ribasso
             
                 
             # 5 - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 > -0.50
