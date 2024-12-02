@@ -25406,37 +25406,38 @@ class maddog:
                   
 
                 elif (
-                    ma5_last >= ma5_2_min_ago
-                    
-                    and ma100_last > ma100_5_min_ago
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
-                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
-                    
-                    and ma300_last > ma300_120_min_ago
-                    and deviation_ma300_sopra_ma450 > 0.10
-                    and ma300_last > ma450_last
-                    
+                    ma3_last > ma20_last
                     and ma78_last < ma150_last
+                    
+                    and deviation_ma25_sotto_ma300 < -0.35
+                    and deviation_ma50_sotto_ma300 < -0.35
+                    and deviation_ma39 < 0.07
+                    and deviation_ma3_sotto_ma50 < 0.03
+                    and deviation_ma5_sopra_o_sotto_ma100 < 0.01
+                    and deviation_ma5_sotto_ma200 < -0.15
+                    and deviation_ma5_sotto_ma300 < -0.20
+                    and deviation_ma5_sotto_ma450 < -0.25
+
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and ma300_last > ma300_120_min_ago
                     
                     and deviation_ma3_sopra_ma10 > 0.01
                     and deviation_ma3_sopra_ma16 > 0.07
                     
                     and ma3_last > ma13_last
-                    and ma4_last > ma9_last
-                    and ma4_last > ma50_last
-                    and ma6_last > ma15_last
-                    and ma7_last > ma25_last
                     
                     and ma2_last > ma2_2_min_ago
-                    and ma2_differenza_2_min_ago > 10
-                    and macd_differenza_2_min_ago > 1.5
-                    and ma2_differenza_ma5 > 3
+                    and macd > -50
+                    and macd_differenza_2_min_ago > -1.5
+                    
                 ):
-                    buy = "BUY 5 con 300 > 450 and ma50 > E 50<100 and 300 > 120 min ago e 5-28 > 0.23 and ma2_diff_2_min_ago > 10 - r 7237 A1 NUOVA ERA A3 SOFT"
+                    buy = "BUY 5 con 300 > 120 min ago MA ma78_last < ma150_last e DNAM - r 7237 A1 NUOVA ERA A3 SOFT"
                     action = "buy"
                     percentage = 70
                     
                     #  9 feb 2024 IMPORTANTE ! solo BUY 5 NUOVA ERA A3 SOFT con ma100> ma100 5 min ago !!!
+                    #  2 dic 2024 aggiunta DNAM
+
 
                 elif (
                     ma5_last >= ma5_2_min_ago
