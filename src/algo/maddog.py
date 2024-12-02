@@ -26878,27 +26878,35 @@ class maddog:
                     # 14 nov 2024 aggiunta di zia amalia grafana
               
               
-                elif (
+                
+                elif (    
+                    ma3_last > ma20_last
+
+                    and ma39_last < ma100_last
+                    and deviation_ma25_sotto_ma300 < -0.16
+                    and deviation_ma50_sotto_ma300 < -0.20
+                    and deviation_ma39 < 0.08
+                    and deviation_ma3_sotto_ma50 < 0.08
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.05
+                    and deviation_ma5_sotto_ma200 < -0.10
+                    and deviation_ma5_sotto_ma300 < -0.10
+                    and deviation_ma5_sotto_ma450 < -0.10
                     
-                    ma8_last > ma54_last
-                    and ma39_last > ma100_last
                     and ma78_last < ma150_last
-                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+
                     and ma100_last < ma100_120_min_ago
                     and ma200_last < ma200_120_min_ago
                     and ma300_last < ma300_120_min_ago
-                  
                     and ma450_last < ma450_480_min_ago
-                  
-                    and ma100_last < ma200_last
-                    and ma200_last < ma300_last
+                   
+                    and deviation_ma3_sopra_ma10 > 0.01
                     
-                    and deviation_ma3_sopra_ma10 > 0.07
-                    and deviation_ma5_sopra_ma28 > 0.15
                     and ma2_last >= ma2_2_min_ago
-                    
+                    and macd > -50
                 ):
-                    buy = "BUY 5 29 ago 2022 > 120 min di ribasso 78<150 CON ma100<120 min ago MA 39>100 senza osso - r 7564 A2yy1"
+                    buy = "BUY 5 29 ago 2022 > 120 min di ribasso 78<150 CON ma100 < 120 min ago + DNAM - r 7564 A2yy1"
                     action = "buy"
                     percentage = 90
                     
