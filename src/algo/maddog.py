@@ -21223,31 +21223,34 @@ class maddog:
                     # 13 set 2023 5-28 a -0.01 da 0.01 ( cioe' un po' prima se ma450 sale da 480 min! )
                     # 17 ott 2023 and deviation_ma100_sopra_ma300 > -0.30 da > -0.30
                     # 31 ott 2023 se 50>59 3-10 0.05
+
+
               
-                elif (
-                    
-                    ma4_last > ma16_last
+                
+                elif (    
+                    ma3_last > ma13_last
+
+                    and ma39_last < ma100_last
+                    and deviation_ma25_sotto_ma300 < -0.35
+                    and deviation_ma50_sotto_ma300 < -0.23
+                    and deviation_ma39 < -0.01
+                    and deviation_ma3_sotto_ma50 < -0.04
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.09
+                    and deviation_ma5_sotto_ma200 < -0.31
+                    and deviation_ma5_sotto_ma300 < -0.33
+                    and deviation_ma5_sotto_ma450 < -0.35
+
+                    and ma450_last > ma450_480_min_ago
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.20
                     and ma50_last < ma59_last
                     
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.20
-                    
-                    and deviation_ma100_sopra_ma300 < 0.25
-                    and deviation_ma100_sopra_ma300 > -0.30
-                    
-                    and ma450_last > ma450_480_min_ago
-                    
-                    and deviation_ma3_sopra_ma10 > 0.077
-                    and deviation_ma5_sopra_ma28 > -0.10
-                  
+                    and deviation_ma3_sopra_ma10 > 0.01
                     and ma3_last > ma13_last
-                    and ma4_last > ma9_last
-                   
-                    and ma2_last >= ma2_2_min_ago
-                    and macd > macd_2_min_ago
+                    and macd > -50
                 ):
-                    buy = "BUY 3 con 450 > 450 480 min MA CONSIDERATA ANCORA LATERALE SE 50<59 and deviation_ma3_sopra_ma10 > 0.077 - r 6599 A1yA3y"
+                    buy = "BUY 3 con 450 > 450 480 min MA CONSIDERATA ANCORA LATERALE SE 50<59 - r 6599 A1 Y A3 Y"
                     action = "buy"
-                    percentage = 60
+                    percentage = 80
                     
                     # 28 set aggiunta 3-10
                     #  2 ott 2022 dev bellissima 0.05 da 0.12
@@ -21260,7 +21263,7 @@ class maddog:
                     # 13 set 2023 5-28 a -0.01 da 0.01 ( cioe' un po' prima se ma450 sale da 480 min! )
                     # 17 ott 2023 and deviation_ma100_sopra_ma300 > -0.30 da > -0.30
                     # 31 ott 2023 se 50<59 3-10 0.077 ! ( comprava continuamente durante il ribasso !
-          
+                    #  9 dic 2024 aggiunta DNAM
 
 
 
