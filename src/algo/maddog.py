@@ -2135,9 +2135,11 @@ class maddog:
 
                 
                 elif (    
-                    ma3_last > ma10_last
-                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.01
-                    and ma2_differenza_2_min_ago > 3
+                    ma3_last > ma11_last
+
+                    and deviation_ma39 < -0.03
+                    and deviation_ma3_sotto_ma50 < -0.06
+                    
                     and ma450_last < ma450_360_min_ago
                     and ma300_last < ma300_60_min_ago
                     and ma200_last < ma200_60_min_ago
@@ -2152,21 +2154,18 @@ class maddog:
                     
                     and deviation_ma3_sopra_ma10 > -0.01
                     and deviation_ma3_sopra_ma16 > -0.13
-                    and deviation_ma5_sopra_ma28 > -0.16
                     
-                    and ma2_last >= ma2_2_min_ago
-                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.01
-                    and macd > -40
-                    and macd_differenza_2_min_ago > 0.50
+                    and macd > -50
+                    and macd_differenza_2_min_ago > -1.50
                 ):
-                    buy = "BUY 1 migliore con distanza 5-300 e distanza 5-100 E dev TRIADE e dev ma2 e diff macd - r 1043 B1y"
+                    buy = "BUY 1 migliore con distanza 5-300 e distanza 5-100 and dev 39 and 3 sotto 50 - r 1043 B1 Y"
                     action = "buy"
                     percentage = 80
                     
                     #  8 mar 2024 anticipata ndecchiecella
-
-
-
+                    #  9 dic 2024 tolto ma2 > ma2 2 min ago !
+                    #  9 dic 2024 aggiunto and deviation_ma39 < -0.03
+                    #  9 dic 2024 aggiunto and deviation_ma3_sotto_ma50 < -0.06
 
                 
                 elif (    
@@ -9763,7 +9762,7 @@ class maddog:
                     percentage = 80
 
                     # compare prega per me !
-                    #  8 dic 2024 modificato
+                    #  9 dic 2024 modificato
                     
                     
                 # BUY 1 che ci riprova quando se ne va lateralmente dopo il crollo
