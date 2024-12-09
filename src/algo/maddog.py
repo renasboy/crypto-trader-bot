@@ -21706,7 +21706,8 @@ class maddog:
                     and ma7_last > ma25_last
                     
                     and ma2_last > ma2_2_min_ago
-                    and macd < macd_2_min_ago
+                    and macd > macd_2_min_ago
+                    and macd_differenza_2_min_ago > -1.25
                 ):
                     buy = "BUY 4A GIORNO con ma 78> e 300> E ma100>ma200 con macd < macd 2 min ago and ma2_differenza_2_min_ago > 5 - r 6668 A1y"
                     action = "buy"
@@ -21714,29 +21715,35 @@ class maddog:
                     
                     # 21 ott 2023 and macd < macd_2_min_ago - SE MACD DISCENDENTE IL BUY LO FACCIO PIU' ALTO ! - C'E' MA NON SI VEDE
                     # 15 nov 2022 aggiunta and ma2_differenza_2_min_ago > 5 ( ma2 > ma2 min non l' ha letta !) ( allora metto un rafforzativo )
-              
+                    
                 
 
               
-                  
                 elif (
-                    ma50_last >= ma50_2_min_ago
-                    and delta_450_300 > delta_450_300_60_min
+                    ma3_last > ma13_last
                     
+                    and ma39_last >= ma100
+                    and deviation_ma25_sotto_ma300 < -0.17
+                    and deviation_ma50_sotto_ma300 < -0.20
+                    and deviation_ma39 < -0.12
+                    and deviation_ma3_sotto_ma50 < -0.10
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.09
+                    and deviation_ma5_sotto_ma200 < -0.20
+                    and deviation_ma5_sotto_ma300 < -0.27
+                    and deviation_ma5_sotto_ma450 < -0.32
+
+                    and delta_450_300 > delta_450_300_60_min
+
                     and ma300_last > ma300_301_min_ago
                     and ma100_last > ma200_last
                    
-                    and deviation_ma3_sopra_ma10 > 0.045
-                    and deviation_ma5_sopra_ma16 > 0.05
+                    and deviation_ma3_sopra_ma10 > 0.01
                     
                     and ma3_last > ma13_last
-                    and ma4_last > ma9_last
-                    and ma4_last > ma50_last
-                    and ma7_last > ma25_last
-                    
-                    and ma2_last > ma2_2_min_ago
+                    and macd > -50
+                    and macd_differenza_2_min_ago > -1.25
                 ):
-                    buy = "BUY 4 con ma300_last > 5 ore MA NOTTE ! e con 50> e 300> E 100 > 200 and 3-16 > 0.05 - r 6668 A2"
+                    buy = "BUY 4 con ma300_last > 5 ore MA NOTTE ! e con 50> e 300> E 100 > 200 and DNAM - r 6668 A2 x"
                     action = "buy"
                     percentage = 70
           
@@ -21747,8 +21754,47 @@ class maddog:
                     # 10 nov 2023 aggiunta FINALMENTE and deviation_ma3_sopra_ma16 > 0.045
 
                     #  6 mar 2024 anticipato ndecchiecella
-                  
-                  
+                    #  9 dic 2024 aggiunta DNAM
+                    #  9 dic 2024 tolta ma2 > ma2 2 min ago
+
+                     
+                elif (
+                    ma3_last > ma13_last
+                    
+                    and ma39_last < ma100
+                    and deviation_ma25_sotto_ma300 < -0.17
+                    and deviation_ma50_sotto_ma300 < -0.20
+                    and deviation_ma39 < -0.12
+                    and deviation_ma3_sotto_ma50 < -0.10
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.09
+                    and deviation_ma5_sotto_ma200 < -0.20
+                    and deviation_ma5_sotto_ma300 < -0.27
+                    and deviation_ma5_sotto_ma450 < -0.32
+
+                    and delta_450_300 > delta_450_300_60_min
+                    
+                    and ma300_last > ma300_301_min_ago
+                    and ma100_last > ma200_last
+                   
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    
+                    and macd > -50
+                    and macd_differenza_2_min_ago > -1.25
+                ):
+                    buy = "BUY 4 con ma300_last > 5 ore MA NOTTE ! e con 50> e 300> E 100 > 200 and DNAM - r 6668 A2 y"
+                    action = "buy"
+                    percentage = 70
+          
+                    # se al BUY 4 ha ma100 < ma200 evidentemente c'e' qualche cosa di strano 
+                    # il trend, evidentemente, e' LATERALE.
+                    # E ALLORA AGGIUNGO UN BEL 6-30 > 0.15 - TREND LATERALE
+                    # 28 ott 2022 dev buy 3 a 0.08 da 0.11
+                    # 10 nov 2023 aggiunta FINALMENTE and deviation_ma3_sopra_ma16 > 0.045
+
+                    #  6 mar 2024 anticipato ndecchiecella
+                    #  9 dic 2024 aggiunta DNAM
+                    #  9 dic 2024 tolta ma2 > ma2 2 min ago
+                    
                   
                   
                     
