@@ -7286,34 +7286,31 @@ class maddog:
                     
                 
                 
-                ############################################################################### compra durante un rialzo improvviso ! PER ADESSO SOLO SUL BUY 1
-                ############################################################################### con ma30 che ha 30 min di andamento laterale
                 
                 
                 elif (
-                    ma200_last > ma200_20_min_ago
-                    and macd >= macd_2_min_ago
+                    ma3_last > ma18_last
+
                     and ma300_last > ma300_120_min_ago
                     and deviation_ma100_sopra_ma300 > 0.50
                     
-                    and deviation_rialzo_improvviso_sopra > 0.45
-                    and deviation_rialzo_improvviso_1 > 0.45
-                    and deviation_rialzo_improvviso_2 > 0.19
-                    and deviation_rialzo_improvviso_3 > 0.19
-                    and deviation_range_1 < 0.22
-                    and deviation_range_1 > -0.22
-                    and deviation_range_2 < 0.22
-                    and deviation_range_2 > -0.22
-                    and deviation_range_x < 0.22
-                    and deviation_range_x > -0.22
+                    and deviation_ma5_sotto_ma200 < -0.31
+                    and deviation_ma5_sotto_ma300 < -0.41
+                    
+                    and macd >= -50
                 ):
              
-                    buy = "BUY 1 RIALZO IMPROVVISO con ma200 > E 300 > 120 min ago e con > 0.45 SE MA100 MOLTO IN ALTO DA MA300 - r 2216 AA"
+                    buy = "BUY 1 durante un TREND IN RIALZO 300 > 120 min ago - r 2216 AA"
                     action = "buy"
                     percentage = 90
+
+                    #  9 dic 2024 modificata
+
+                
                     
-                    
-                    
+                ################################################  compra durante un rialzo improvviso ! PER ADESSO SOLO SUL BUY 1
+                ################################################  con ma30 che ha 30 min di andamento laterale  
+                
                 elif (
                     ma200_last > ma200_20_min_ago
                     and macd >= macd_2_min_ago
@@ -7332,7 +7329,7 @@ class maddog:
                     and deviation_range_x > -0.22
                 ):
              
-                    buy = "BUY 1 RIALZO IMPROVVISO con ma200 > E 300 > 120 min ago e con > 0.46 - r 2239 AB"
+                    buy = "BUY 1 RIALZO IMPROVVISO durante movimento laterale con ma200 > E 300 > 120 min ago e con > 0.46 - r 2239 AB"
                     action = "buy"
                     percentage = 90
                  
@@ -7365,7 +7362,7 @@ class maddog:
                     and deviation_range_x > -0.22
                 ):
              
-                    buy = "BUY 1 RIALZO IMPROVVISO con ma200 > E 300 > 120 min ago e con > 0.50 - r 2280 B"
+                    buy = "BUY 1 RIALZO IMPROVVISO durante movimento laterale con ma200 > E 300 > 120 min ago e con > 0.50 - r 2280 B"
                     action = "buy"
                     percentage = 90
                  
