@@ -9736,30 +9736,34 @@ class maddog:
                 elif (
                     
                     ma3_last > ma20_last
+
+                    and deviation_ma39 < -0.13
+                    and deviation_ma3_sotto_ma50 < -0.19
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.30
                     
+                    
+                    and deviation_ma5_sotto_ma450 < -0.01
+                    and deviation_ma5_sotto_ma450 > -0.33
+
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_120_min_ago
+
+                    and delta_300_100 < delta_300_100_60_min
+
                     
                     and deviation_ma3_sopra_ma10 > 0.01
                     
-                    
-                    and ma200_last < ma200_120_min_ago
-                    and ma300_last < ma300_120_min_ago
-                    
-                    and delta_300_100 < delta_300_100_60_min
-                    
-                    and deviation_ma100_sopra_ma300 > -0.40
-                    and deviation_ma200_sopra_ma300 > -0.40
-                    
-                    and ma2_last > ma2_2_min_ago
+                    and ma2_last >= ma2_2_min_ago
                     and macd > -50
                     and macd_differenza_2_min_ago > -2
                 ):
                
-                    buy = "BUY 1 che ci riprova quando se ne va lateralmente dopo il crollo and macd_differenza >= 2 - r 4082 A1"
+                    buy = "BUY 1 che ci riprova quando se ne va lateralmente - r 4082 A1"
                     action = "buy"
                     percentage = 80
 
                     # compare prega per me !
-                    #  8 dic 2024 da aggiungere qualche modifica
+                    #  8 dic 2024 modificato
                     
                     
                 # BUY 1 che ci riprova quando se ne va lateralmente dopo il crollo
