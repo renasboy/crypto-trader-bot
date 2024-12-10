@@ -27948,25 +27948,23 @@ class maddog:
                     percentage = 90
 
                 
-                elif (     
-                    
+                   
+                elif (      
                     ma3_last >= ma30_last
-                    
-                    and ma100_last < ma100_10_min_ago
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.57
-                    
-                    
-                    and ma2_differenza_2_min_ago > 8
-                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
-                    and ma3_differenza_2_min_ago > 7
-                    
-                    and ma100_last < ma100_30_min_ago
+                
+                    and ma39_last < ma100_last
+                    and deviation_ma25_sotto_ma300 < -1.30
+                    and deviation_ma50_sotto_ma300 < -1.00
+                    and deviation_ma39 < -0.15
+                    and deviation_ma3_sotto_ma50 < -0.20
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.60
+                    and deviation_ma5_sotto_ma200 < -1.00
+                    and deviation_ma5_sotto_ma300 < -1.20
+                    and deviation_ma5_sotto_ma450 < -1.50
+
                     and ma450_last > ma450_360_min_ago
                     
                     and deviation_ma54_sopra_o_sotto_ma72 < -0.015
-                    
-                    and deviation_ma39_sotto_ma200 < -0.01
-                    and deviation_ma300_sopra_ma450 > -0.50
                     
                     and deviation_ma3_sopra_ma10 > 0.01
                     and deviation_ma3_sopra_ma16 > -0.025
@@ -27974,13 +27972,15 @@ class maddog:
                     
                     and ma2_last > ma5_last
                     and ma2_last >= ma2_2_min_ago
-                    and macd_differenza_2_min_ago > 1.10
+                    and macd > -60
+                    and macd_differenza_2_min_ago > -1.50
                     
                 ):    
-                    buy = "BUY 5 compare forever - con 3-30 E CON 300 ancora vicina alla 450 ( anche un poco sotto ! ) and 3-18 > -0.01 + diff macd > - r 7600 NUOVA ERA 4"
+                    buy = "BUY 5 CF - con 3-30 and ma450_last > ma450_360_min_ago + DNAM - r 7600 NUOVA ERA 4"
                     action = "buy"
                     percentage = 90
-                    
+
+                    # 10 dic 2024 aggiunta DNAM
                 
                 
                 
