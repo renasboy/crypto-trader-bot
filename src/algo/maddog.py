@@ -26965,18 +26965,18 @@ class maddog:
 
                 
                 elif (    
-                    ma3_last > ma20_last
+                    ma3_last > ma13_last
 
-                    and ma100_last < ma100_30_min_ago
+                    and ma39_last < ma100_last
                     and deviation_ma25_sotto_ma300 < -1.55
                     and deviation_ma50_sotto_ma300 < -1.55
-                    and deviation_ma39 < 0.13
-                    and deviation_ma3_sotto_ma50 < 0.12
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.35
-                    and deviation_ma5_sotto_ma200 < -0.60
+                    and deviation_ma39 < -0.05
+                    and deviation_ma3_sotto_ma50 < -0.05
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.55
+                    and deviation_ma5_sotto_ma200 < -0.80
                     and deviation_ma5_sotto_ma300 < -1.50
 
-                    and ma450_last > ma450_480_min_ago
+                    
                     and ma100_last < ma100_120_min_ago
                     and ma200_last < ma200_120_min_ago
                     and ma300_last < ma300_120_min_ago
@@ -26986,14 +26986,11 @@ class maddog:
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
                     
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.12
-                    
                     and deviation_ma3_sopra_ma10 > 0.01
                     
-                    
                     and ma2_last >= ma2_2_min_ago
-                    and macd_differenza_2_min_ago > -40
-                    
+                    and macd > -60
+                    and macd_differenza_2_min_ago > -2.00
                 ):
                     buy = "BUY 5 29 ago 2022 > 120 min di ribasso 78<150 CON aggiunta zia amalia grafana - r 7564 A2 YX1 NUOVA ERA A3 STRONG"
                     action = "buy"
@@ -27001,7 +26998,7 @@ class maddog:
                     
                     #  2 feb 2024 tolto 39>78
                     # 14 nov 2024 aggiunta di zia amalia grafana
-              
+                    # 10 dic 2024 and macd > -60 and macd_differenza_2_min_ago > -2.00
               
                 
                 elif (    
