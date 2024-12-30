@@ -2135,28 +2135,32 @@ class maddog:
 
                 
                 elif (    
-                    ma3_last > ma11_last
+                    
+                    ma50_last < ma50_2_min_ago
+                    and deviation_ma25_sotto_ma300 < -0.70
+                    and deviation_ma50_sopra_o_sotto_ma300 < -0.70
 
-                    and deviation_ma39 < -0.03
-                    and deviation_ma3_sotto_ma50 < -0.06
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.25
+                    and deviation_ma5_sotto_ma200 < -0.20
+                  
+                    and ma3_last > ma18_last
                     
-                    and ma450_last < ma450_360_min_ago
-                    and ma300_last < ma300_60_min_ago
-                    and ma200_last < ma200_60_min_ago
                     
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.60
-                    and deviation_ma5_sopra_ma200 < -0.30
-                    and deviation_ma5_sotto_ma300 < -0.30
-                    and deviation_ma5_sotto_ma450 < -0.30
+                    and ma2_last >= ma2_2_min_ago
+                        
+                    and delta_1 > delta_2
+                    and ma100_last < ma100_60_min_ago
+                        
+                    and ma100_last < ma100_120_min_ago
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_120_min_ago
+                        
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
                     
-                    and deviation_ma50_sopra_o_sotto_ma100 < -0.01
-                    and deviation_ma100_sopra_ma300 < -0.10
-                    
-                    and deviation_ma3_sopra_ma10 > -0.01
-                    and deviation_ma3_sopra_ma16 > -0.13
-                    
+
                     and macd > -50
-                    and macd_differenza_2_min_ago > -1.50
+
                 ):
                     buy = "BUY 1 migliore con distanza 5-300 e distanza 5-100 and dev 39 and 3 sotto 50 - r 1043 B1 Y"
                     action = "buy"
@@ -2166,7 +2170,7 @@ class maddog:
                     #  9 dic 2024 tolto ma2 > ma2 2 min ago !
                     #  9 dic 2024 aggiunto and deviation_ma39 < -0.03
                     #  9 dic 2024 aggiunto and deviation_ma3_sotto_ma50 < -0.06
-
+                    # 30 dic 2024 anticipata 
                 
                 elif (    
                     ma3_last > ma18_last
@@ -9551,44 +9555,11 @@ class maddog:
                     
                     
                     
-                # BUY 1 CHE MANCAVA DOPO BUY-SELL CROLLO ! 150-100 GIORNO ! E 50 > 100
-
                 
-                elif (    
-                    ma78_last < ma200_last
-                    
-                    and ma100_last < ma100_10_min_ago
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.27
-                    and deviation_ma5_sotto_ma300 < -0.20
-                    and deviation_ma10_sopra_ma200 < -0.20
 
-                    and deviation_ma25_sotto_ma300 < -0.39
-                    and deviation_ma50_sotto_ma300 < -0.36
-                    
-                    and ma100_last < ma200_last
-                    and ma200_last < ma300_last
-                    
-                    and ma100_last < ma100_120_min_ago
-                    and ma200_last < ma200_120_min_ago
-                    and ma300_last < ma300_120_min_ago
-                    
-                    and deviation_ma3_sopra_ma10 > 0.01
-                    
-                    
-                    and ma5_last > ma10_last
-                    and ma2_last >= ma2_2_min_ago
-                    and macd > macd_2_min_ago
-                ):
-                    buy = "BUY 1 78<200 pensiero laterale - PRENDI IL COLTELLO CON IL PIEDE - r 4050 CANE STAF + zia amalia"
-                    action = "buy"
-                    percentage = 80
+                # 30 dic 2024 cancellata r 4050 CANE STAF + zia amalia
 
-                    # modificata aggiungendo prendi il coltello con il piede
-                    #  2 ott 2024 E' ANDATA BENISSIMO
-                    # 13 ott 2024 e' andata benissimo !
-                    #  4 nov 2024 aggiunta and deviation_ma25_sotto_ma300 < -0.39
-                    #  4 nov 2024 aggiunta and deviation_ma50_sotto_ma300 < -0.36
+
 
                 elif (    
                     ma78_last < ma200_last
@@ -13336,7 +13307,7 @@ class maddog:
                     and ma200_last < ma300_last
                     
 
-                    and macd > -40
+                    and macd > -50
                 ):
                     buy = "BUY 2 ORIGINALE CHE CI RIPROVA IMPORTATO DA SELL 1 !  - NOTTE - prende il coltello con il piede + OSSO - r 4887"
                     action = "buy"
@@ -23786,38 +23757,9 @@ class maddog:
               
 
                 
+                # 30 dic 2024 cancellata r 7064
+
                 
-                elif (    
-                    ma3_last > ma20_last
-                    
-                    and ma78_last > ma100_last
-                    
-                    and ma100_last < ma100_180_min_ago
-                    and ma200_last < ma200_180_min_ago
-                    and ma300_last < ma300_180_min_ago
-                    
-                    and ma100_last < ma200_last
-                    and ma200_last < ma300_last
-                    
-                    and deviation_ma5_sopra_ma28 > -0.02
-                    
-                    
-                    and ma2_last >= ma2_2_min_ago
-                    
-                    and macd > -40
-                    and macd_differenza_2_min_ago > -1.25
-                    
-                ):
-                    buy = "BUY 4 ex 7063 RCCR con ma tutte discendenti MA ma78 > ma100 - r 7064"
-                    action = "buy"
-                    percentage = 90
-                  
-                    #  1 ago 2023 importato buy 4 da buy 5
-                    # 27 set 2023 78-100 da 78-150
-                    # 27 set 2023 5-54 da 8-59
-                    #  7 nov 2023 se ma28_last > ma50_last puoi comprare !
-                    # 11 nov 2024 e' un BUY 4 ma78 e' andata sopra ma100 : anticipata ndecchiecella. sono relativamente fiducioso.
-              
                 
                 # BUY 4 se 100>200 non devi spezzare proprio un cazzo
 
@@ -26999,44 +26941,11 @@ class maddog:
                     #  2 feb 2024 tolto 39>78
                     # 14 nov 2024 aggiunta di zia amalia grafana
                     # 10 dic 2024 and macd > -60 and macd_differenza_2_min_ago > -2.00
+
               
+                # 30 dic 2024 cancellata r 7564 A2yy1
+
                 
-                elif (    
-                    ma3_last > ma20_last
-
-                    and ma39_last < ma100_last
-                    and deviation_ma25_sotto_ma300 < -0.16
-                    and deviation_ma50_sotto_ma300 < -0.20
-                    and deviation_ma39 < 0.08
-                    and deviation_ma3_sotto_ma50 < 0.08
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.05
-                    and deviation_ma5_sotto_ma200 < -0.10
-                    and deviation_ma5_sotto_ma300 < -0.10
-                    and deviation_ma5_sotto_ma450 < -0.10
-                    
-                    and ma78_last < ma150_last
-                    and ma100_last < ma200_last
-                    and ma200_last < ma300_last
-
-                    and ma100_last < ma100_120_min_ago
-                    and ma200_last < ma200_120_min_ago
-                    and ma300_last < ma300_120_min_ago
-                    and ma450_last < ma450_480_min_ago
-                   
-                    and deviation_ma3_sopra_ma10 > 0.01
-                    
-                    and ma2_last >= ma2_2_min_ago
-                    and macd > -50
-                ):
-                    buy = "BUY 5 29 ago 2022 > 120 min di ribasso 78<150 CON ma100 < 120 min ago + DNAM - r 7564 A2yy1"
-                    action = "buy"
-                    percentage = 90
-                    
-                    # 19 set 2022 aggiunta 3-10 0.07 
-                    # 25 gen 2023 5-28 0.15 da 0.12
-                    #  1 feb 2023 8-100 da 18-100
-                    # 12 set 2023 8-54 da 8-100
-                    #  2 dic 2024 aggiunta DNAM
 
                 elif (
                     
@@ -35421,16 +35330,16 @@ class maddog:
                         and ma100_last < ma100_60_min_ago
                         and ma200_last < ma200_120_min_ago
                         
-                        and ma3_last < ma25_last
+                        and ma3_last < ma39_last
                         and deviation_sell > 0.57 and deviation_sell < 0.90
                         and ma2_last < ma2_2_min_ago
                       
                     ):
-                        sell = "SELL 2 (21-60 min) con ma50 > AND 200>120min and 100< and 3<25 and deviation_sell 0.57 - 0.90 ELASTICO ALLA RONALDO - r 11538 b"
+                        sell = "SELL 2 (21-60 min) con ma50 > e 200>120 min e 100< e 3<39 and dev_sell 0.57 - 0.90 ELASTICO RONALDO - r 11538 B"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
-                        
+                        # 30 dic 2024 sell con 3-39 da 3-25
                         
                     
                     ##############################################################################################################
@@ -45794,7 +45703,7 @@ class maddog:
                 and ma20_last <= ma20_2_min_ago
                 
                 and deviation_ma39 < 0.07
-                and deviation_sell < -0.02
+                and deviation_sell < -0.03
                 
                 and ma50_last < ma50_2_min_ago
                 and deviation_ma100_sopra_ma300 < 0.40
@@ -45806,10 +45715,10 @@ class maddog:
                 and macd_differenza_2_min_ago < -1.30
                 
             ):
-                sell = "SELL CS - SALVAGENTE dev 3-39 < 0.05 e dev_sell < -0.02 e ma50 < e macd_diff_2_min_ago < -0.20 - r 16047 A1 Y1 Y2 bx"
+                sell = "SELL CS - SALVAGENTE dev 3-39 < 0.05 e dev_sell < -0.03 e ma50 < e macd_diff_2_min_ago < -0.20 - r 16047 A1 Y1 Y2 bx"
                 action = "sell"
 
-                # 21 set 2024 and deviation_sell < -0.01 da  < -0.005 se 300 > 450
+                # 30 dic 2024 and deviation_sell < -0.03 da < -0.02 se 300 > 450
 
 
             elif (
@@ -45950,18 +45859,18 @@ class maddog:
                 and macd_differenza_3_min_ago < 0.10
                 
                 and deviation_ma39 < 0.09
-                and deviation_sell < -0.02
+                and deviation_sell < -0.03
                 
                 and deviation_ma100_sopra_ma300 < 0.40
                 and deviation_ma5_sotto_ma200 > -0.80
                 
             ):
-                sell = "SELL CS con ma10<ma10 2 min ago e 50<59 e dev 3-39 < 0.09 e dev_sell < -0.02 e ma50< E 39<69 ! - r 16047 A1 Y2 YA2 y"
+                sell = "SELL CS con ma10<ma10 2 min ago e 50<59 e dev 3-39 < 0.09 e dev_sell < -0.03 e ma50< E 39<69 ! - r 16047 A1 Y2 YA2 y"
                 action = "sell"
                 
                 # 30 gen 2024 se ma20> aumento sell a -0.02 da -0.01
                 # 30 gen 2024 se ma20> and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.02 da -0.018
-
+                # 30 dic 2024 se ma20> aumento sell a -0.03 da -0.02
 
 
             elif (
