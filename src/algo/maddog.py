@@ -15,7 +15,7 @@ and deviation_ma5_sopra_o_sotto_ma100 < -0.22
 and deviation_ma5_sotto_ma200 < -0.31
 and deviation_ma5_sotto_ma300 < -0.41
 and deviation_ma5_sotto_ma450 < -0.51
-
+and deviation_ma300_sopra_ma450 < -0.072
 
 
 """
@@ -668,6 +668,7 @@ class maddog:
         
         
         # formula deviation_ma100_sopra_ma450
+
         deviation_ma100_sopra_ma450 = (ma100_last / ma450_last - 1) * 100 if ma450_last else 0
         self.algo_helper.info("deviation_ma100_sopra_ma450: {}".format(deviation_ma100_sopra_ma450))
         
@@ -24942,19 +24943,20 @@ class maddog:
 
 
                 elif (    
-                    ma3_last > ma20_last
+                    ma3_last > ma18_last
                     and ma450_last < ma450_120_min_ago
                     and ma200_last < ma300_last
                     
                     and ma39_last < ma100_last
-                    and deviation_ma25_sotto_ma300 < -0.20
-                    and deviation_ma50_sotto_ma300 < -0.21
+                    and deviation_ma25_sotto_ma300 < -0.22
+                    and deviation_ma50_sotto_ma300 < -0.22
                     and deviation_ma39 < 0.05
                     and deviation_ma3_sotto_ma50 < 0.06
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.01
                     and deviation_ma5_sotto_ma200 < -0.13
                     and deviation_ma5_sotto_ma300 < -0.20
-                    and deviation_ma5_sotto_ma450 < -0.20
+                    and deviation_ma5_sotto_ma450 < -0.21
+                    and deviation_ma300_sopra_ma450 < -0.072
 
                     and ma50_last < ma50_2_min_ago
 
@@ -24967,8 +24969,6 @@ class maddog:
                     
                     and ma2_last > ma5_last
                     
-                    
-                    and ma2_last >= ma2_2_min_ago
                     and macd > -50
                     and macd_differenza_2_min_ago > -1.50
                     
@@ -24980,6 +24980,8 @@ class maddog:
                     #  5 mar 2024 se ma10 < ma20 
                     # 29 set 2024 anticipata di molto prima di cancellare
                     #  2 dic 2024 aggiunta DNAM
+                    #  5 gen 2025 aggiunta and deviation_ma300_sopra_ma450 < -0.072
+                    #  5 gen 2025 tolta ma2 > ma2 2 min ago
 
 
                 elif (    
@@ -26998,6 +27000,8 @@ class maddog:
                     and deviation_ma5_sotto_ma200 < -0.23
                     and deviation_ma5_sotto_ma300 < -0.27
                     and deviation_ma5_sotto_ma450 < -0.33
+                    and deviation_ma300_sopra_ma450 < -0.072
+
                     
                     and ma100_last < ma100_180_min_ago
                     and ma200_last < ma200_180_min_ago
@@ -27006,8 +27010,8 @@ class maddog:
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
                     
-                    and ma2_last >= ma2_2_min_ago
-                    and macd > -50
+                    
+                    and macd > -60
                     and macd_differenza_2_min_ago > -1.50
                 ):
                     buy = "BUY 5 13 apr 2023 zia pina > 180 min di ribasso + DNAM - r 7564 B1 X"
@@ -27020,8 +27024,8 @@ class maddog:
                     #  5 nov 2024 se ma39_last > ma100_last fai un BUY
                     #  2 dic 2024 aggiunta DNAM
                     #  8 dic 2024 DNAM piu' aggressivo
-
-
+                    #  5 gen 2025 aggiunto and deviation_ma300_sopra_ma450 < -0.072
+                    #  5 gen 2025 tolta ma2 > ma2 2 min ago
 
                 
                 elif (    
@@ -44912,9 +44916,36 @@ class maddog:
                 # 15 set 2024 and deviation_ma39 < 0.15 da  < 0.13
                 # 14 set 2024 tolta and macd_differenza_2_min_ago < -0.35 (il macd saliva!) e aggiunta and ma3_last < ma100_last
 
-            
+
+
             elif (
                 ma78_last < ma78_120_min_ago
+                and ma39_last > ma100_last
+                and ma300_last < ma300_301_min_ago
+                and deviation_ma100_sopra_ma300 < 0.40
+                and deviation_ma5_sotto_ma200 > -0.70
+                and ma40_last <= ma50_last
+                and ma50_last > ma50_2_min_ago
+                
+                and delta_150_100 <= delta_150_100_60_min
+                
+                and deviation_ma39 < 0.13
+                and deviation_sell < -0.01
+            
+                and ma2_last < ma2_2_min_ago
+                and ma2_differenza_2_min_ago < -15
+                and macd_differenza_2_min_ago < -0.35
+                
+            ):
+                sell = "SELL CS GIORNO con ma300 <5 ore con ma50 > e dev_sell < -0.01 e dev 3-39 < 0.13 e ma78 < - r 16045 B1 Y1"
+                action = "sell"
+
+                # 16 set 2024 and deviation_sell < 0.01 da 0.03
+                #  5 gen 2025 se 39>100 allora deviation_sell < -0.01 da 0.01
+
+            elif (
+                ma78_last < ma78_120_min_ago
+                and ma39_last < ma100_last
                 and ma300_last < ma300_301_min_ago
                 and deviation_ma100_sopra_ma300 < 0.40
                 and deviation_ma5_sotto_ma200 > -0.70
@@ -44931,7 +44962,7 @@ class maddog:
                 and macd_differenza_2_min_ago < -0.35
                 
             ):
-                sell = "SELL CS GIORNO con ma300 <5 ore con ma50 > e dev_sell < 0.01 e dev 3-39 < 0.13 e ma78 < - r 16045 B1Y"
+                sell = "SELL CS GIORNO con ma300 <5 ore con ma50 > e dev_sell < 0.01 e dev 3-39 < 0.13 e ma78 < - r 16045 B1 Y2"
                 action = "sell"
 
                 # 16 set 2024 and deviation_sell < 0.01 da 0.03
