@@ -17380,7 +17380,7 @@ class maddog:
 
                 elif (     
                         ma3_last > ma20_last
-                        and ma100_last > ma100_60_min_ago
+                        
                         and ma39_last > ma100_last
 
                         and deviation_ma5_sopra_o_sotto_ma100 < -0.09
@@ -17394,7 +17394,7 @@ class maddog:
                         and macd > macd_2_min_ago
                         and macd > -20
                     ):
-                        buy = "BUY 2 novembre 2023 con ma450 > 6 ore E ma100 > ma100 60 min E ma50 < and ma3_last > ma20_last - r 5999 a1"
+                        buy = "BUY 2 novembre 2023 con ma450 > 6 ore E ma100 > ma100 60 min E ma50 < and ma3_last > ma20_last - r 5999 A1"
                         action = "buy"
                         percentage = 70
 
@@ -17402,7 +17402,7 @@ class maddog:
 
                 elif (     
                         ma3_last > ma20_last
-                        and ma100_last > ma100_60_min_ago
+                        
                         and ma39_last < ma100_last
 
                         and deviation_ma25_sotto_ma300 < -0.37
@@ -17427,7 +17427,7 @@ class maddog:
                         and macd > macd_2_min_ago
                         and macd > -20
                     ):
-                        buy = "BUY 2 novembre 2023 con ma450 > 6 ore E ma100 > ma100 60 min E ma50 < and ma3_last > ma20_last - r 5999 a2"
+                        buy = "BUY 2 novembre 2023 con ma450 > 6 ore E ma100 > ma100 60 min E ma50 < and ma3_last > ma20_last - r 5999 A2"
                         action = "buy"
                         percentage = 70
 
