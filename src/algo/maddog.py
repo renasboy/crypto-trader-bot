@@ -7,6 +7,7 @@
 
 
 and ma39_last < ma100_last
+and deviation_ma300_sopra_ma450 < -0.072
 and deviation_ma25_sotto_ma300 < -0.37
 and deviation_ma50_sotto_ma300 < -0.27
 and deviation_ma39 < -0.12
@@ -17377,10 +17378,10 @@ class maddog:
               
 
 
-
                 elif (     
                         ma3_last > ma20_last
                         and ma100_last > ma100_60_min_ago
+                        and ma39_last > ma100_last
 
                         and deviation_ma5_sopra_o_sotto_ma100 < -0.09
                         and ma200_last > ma300_last
@@ -17393,7 +17394,40 @@ class maddog:
                         and macd > macd_2_min_ago
                         and macd > -20
                     ):
-                        buy = "BUY 2 novembre 2023 con ma450 > 6 ore E ma100 > ma100 60 min E ma50 < and ma3_last > ma20_last - r 5999 a"
+                        buy = "BUY 2 novembre 2023 con ma450 > 6 ore E ma100 > ma100 60 min E ma50 < and ma3_last > ma20_last - r 5999 a1"
+                        action = "buy"
+                        percentage = 70
+
+
+
+                elif (     
+                        ma3_last > ma20_last
+                        and ma100_last > ma100_60_min_ago
+                        and ma39_last < ma100_last
+
+                        and deviation_ma25_sotto_ma300 < -0.37
+                        and deviation_ma50_sotto_ma300 < -0.27
+                        and deviation_ma39 < -0.12
+                        and deviation_ma3_sotto_ma50 < -0.15
+                        and deviation_ma5_sopra_o_sotto_ma100 < -0.22
+                        and deviation_ma5_sotto_ma200 < -0.31
+                        and deviation_ma5_sotto_ma300 < -0.41
+                        and deviation_ma5_sotto_ma450 < -0.51
+                        and deviation_ma300_sopra_ma450 < -0.072
+
+
+                        and deviation_ma5_sopra_o_sotto_ma100 < -0.09
+                        and ma200_last > ma300_last
+                        and ma300_last > ma300_120_min_ago
+                  
+                        and ma50_last < ma50_2_min_ago
+                        and ma450_last < ma450_360_min_ago
+                        
+                        and ma2_last > ma2_2_min_ago
+                        and macd > macd_2_min_ago
+                        and macd > -20
+                    ):
+                        buy = "BUY 2 novembre 2023 con ma450 > 6 ore E ma100 > ma100 60 min E ma50 < and ma3_last > ma20_last - r 5999 a2"
                         action = "buy"
                         percentage = 70
 
@@ -17401,6 +17435,11 @@ class maddog:
                         # aggiunto prendi il coltello con il piede
                         # la cosa curiosa e' che mancava percentage e faceva acquisti di 3,94 euro
                         # 15 ott 2024 anticipata ndecchiecella
+                        #  5 gen 2025 se 39<100 allora DNAM
+
+
+
+
 
                 elif (     
                         ma3_last > ma20_last
@@ -24908,17 +24947,25 @@ class maddog:
                     percentage = 70
 
 
+
+
                 elif (    
                     ma3_last > ma20_last
                     and ma450_last < ma450_120_min_ago
-                    and ma100_last < ma100_60_min_ago
+                    
+                    and ma39_last < ma100_last
+                    
+                    and deviation_ma25_sotto_ma300 < -0.27
+                    and deviation_ma50_sotto_ma300 < -0.15
+                    and deviation_ma39 < -0.03
+                    and deviation_ma3_sotto_ma50 < -0.05
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.20
+                    and deviation_ma5_sotto_ma200 < -0.25
+                    and deviation_ma5_sotto_ma300 < -0.25
+                    and deviation_ma5_sotto_ma450 < -0.55
+                    
                     and ma50_last < ma50_2_min_ago
 
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.10
-                    and deviation_ma5_sotto_ma200 < -0.10
-                    and deviation_ma25_sotto_ma300 < -0.11
-                    
-                    and ma10_last > ma20_last
                     and ma200_last > ma300_last
                     
                     and deviation_ma100_sopra_ma300 < 0.40
@@ -24928,11 +24975,11 @@ class maddog:
                     and ma2_last > ma5_last
                     and ma3_last > ma13_last
                     
-                    and ma2_last >= ma2_2_min_ago
+                    and macd > -60
                     and macd_differenza_2_min_ago > -3.50
                     
                 ):
-                    buy = "BUY 5 con ma450_last<ma450_120_min_ago E ma200>ma300 MA SE ma100<ma100 60 min ago IL CANE VUOLE L' OSSO ! - r 7144 A2 X1Ab"
+                    buy = "BUY 5 con ma450_last<ma450 120_min E ma200>ma300 MA SE ma100<ma100 60 min ago IL CANE VUOLE L' OSSO ! - r 7144 A2 X1 AB"
                     action = "buy"
                     percentage = 70
                     
@@ -24940,6 +24987,8 @@ class maddog:
                     # 29 set 2024 anticipata di molto prima di cancellare
                     #  6 ott 2024 con 200>300 anticipata ancora NON FARTI TROPPI PROBLEMI !
                     #  8 ott 2024 SE ma100<ma100 60 min ago IL CANE VUOLE L' OSSO !
+                    #  5 gen 2024 aggiunta DNAM
+
 
 
                 elif (    
@@ -25224,18 +25273,30 @@ class maddog:
 
                     # 14 ott 2024 gli ho dato un osso - prima di cancellare
 
+                
+
 
                 elif (
                     ma50_last >= ma50_2_min_ago
                     and ma300_last > ma450_last
+
                     and ma100_last < ma100_120_min_ago
-                    and deviation_ma5_sotto_ma450 < -0.33
+                    and ma39_last < ma100_last
+                    and deviation_ma25_sotto_ma300 < -0.37
+                    and deviation_ma50_sotto_ma300 < -0.27
+                    and deviation_ma39 < -0.12
+                    and deviation_ma3_sotto_ma50 < -0.15
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.22
+                    and deviation_ma5_sotto_ma200 < -0.31
+                    and deviation_ma5_sotto_ma300 < -0.41
+                    and deviation_ma5_sotto_ma450 < -0.51
+                    and deviation_ma300_sopra_ma450 < -0.072
 
                     and ma28_last < ma28_30_min_ago
                     and ma3_last < ma28_last
                     and deviation_ma39 < 0.10
                     
-                    and deviation_ma5_sotto_ma200 > -0.70
+                    
                     and deviation_ma100_sopra_ma300 < 0.40
                 
                     and deviation_ma3_sopra_ma10 > 0.01
@@ -25244,12 +25305,10 @@ class maddog:
                     
                     and ma3_last > ma13_last
                     
-                    and ma2_last >= ma2_2_min_ago
-                    
                     and macd > -50
 
                 ):
-                    buy = "BUY 5 con ma3000 >ma450 AND ma28_last < ma28_30_min_ago - r 7203 A2y"
+                    buy = "BUY 5 con 300>450 AND ma28_last < ma28_30_min_ago + DNAM- r 7203 A2y"
                     action = "buy"
                     percentage = 70
                     
@@ -25263,6 +25322,8 @@ class maddog:
                     #  4 ott 2024 anticipata ndecchia prendendo ispirazione da un precedente sell CON 300 > 400 !
                     #  6 ott 2024 se 100 > 100 120 min ago ok come precedente
                     #  6 ott 2024 MA SE 100 < 100 120 min ago allora mi devi dare un osso (and deviation_ma5_sotto_ma450 < -0.33)
+
+
 
                     
                 elif (
@@ -26952,11 +27013,19 @@ class maddog:
                 elif (
                     
                     ma8_last > ma54_last
+                    
                     and ma39_last < ma100_last
+                    and deviation_ma25_sotto_ma300 < -0.37
+                    and deviation_ma50_sotto_ma300 < -0.27
+                    and deviation_ma39 < -0.12
+                    and deviation_ma3_sotto_ma50 < -0.15
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.22
+                    and deviation_ma5_sotto_ma200 < -0.31
+                    and deviation_ma5_sotto_ma300 < -0.41
+                    and deviation_ma5_sotto_ma450 < -0.51
+                    and deviation_ma300_sopra_ma450 < -0.072
 
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.10
-                    and deviation_ma5_sotto_ma200 < -0.10
-                    and deviation_ma25_sotto_ma300 < -0.11
+                    
 
                     and ma78_last < ma150_last
                     
@@ -26974,7 +27043,7 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
                     
                 ):
-                    buy = "BUY 5 29 ago 2022 > 120 min di ribasso E 78<150 CON ma100<120 min ago E 39<100 aggiunta OSSO - r 7564 A2yy2"
+                    buy = "BUY 5 29 ago 2022 > 120 min di ribasso E 78<150 CON ma100<120 min ago E 39<100 aggiunta dnam - r 7564 A2yy2"
                     action = "buy"
                     percentage = 90
                     
@@ -26983,7 +27052,9 @@ class maddog:
                     #  1 feb 2023 8-100 da 18-100
                     # 12 set 2023 8-54 da 8-100
                     # 14 ott 2024 se anche 39<100 allora diamogli un osso !
-                    
+                    #  5 gen 2025 aggiunta DNAM
+
+
                     
                 # BUY 5 13 apr 2023 zia pina > 180 min di ribasso MA 39>100
 
@@ -27564,6 +27635,8 @@ class maddog:
               
 
                 # 22 set 2024 cancellata r 7589 B1
+
+
                
                 elif (      
                     ma3_last > ma13_last
@@ -27585,7 +27658,7 @@ class maddog:
                     
                     and ma2_last >= ma20_last
                   
-                    and ma2_last >= ma2_2_min_ago
+                    
                     and macd >= macd_2_min_ago
                     and macd > -40
                     
