@@ -1603,28 +1603,26 @@ class maddog:
                 
                 
                 if (    
-                    ma20_last > ma200_last
-                    
-                    and macd >= macd_2_min_ago
-                    and ma10_last > ma100_last
-                    and deviation_ma3_sopra_ma10 > 0.13
+                    ma39_last > ma100_last
                     
                     and ma300_last > ma300_120_min_ago
-                    and ma78_last > ma78_2_min_ago
+
+                    and ma10_last > ma100_last
+                    and deviation_ma3_sopra_ma10 > 0.01
                     
-                    and ma69_last > ma100_last
                     and ma3_last > ma8_last
-                    and deviation_bellissima > 0.14
-                    and ma6_last > ma39_last
+                    
+                    and macd >= macd_2_min_ago
 
                     # and adx > -0.90
                 ):    
               
-                    buy = "BUY 1 con 20>200 AND 10 > 100 AND 3-10 > 0.13 and 69 > 100 and deviation_bellissima > 0.14 and ma78 > - r 916A"
+                    buy = "BUY 1 con 20>200 and 10 > 100 AND 3-10 > 0.01 and 69 > 100 - r 916 A"
                     action = "buy"
                     percentage = 90
 
                     # 11 nov 2024 prova adx
+                    #  5 dic 2025 anticipata ndecchia
                     
                 elif (    
                     ma20_last > ma200_last
