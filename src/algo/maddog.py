@@ -15464,7 +15464,6 @@ class maddog:
 
                     #  6 ott 2024 aggiunto anche incrocio al rialzo 3-150
 
-
                 elif (
                     ma5_last >= ma5_2_min_ago
                     and ma450_last > ma450_120_min_ago
@@ -15487,7 +15486,32 @@ class maddog:
                     percentage = 70
 
                     #  6 ott 2024 aggiunto anche incrocio al rialzo 3-150
+                    #  6 gen 2025 3-200 al rialzo
+
+                elif (
+                    ma5_last >= ma5_2_min_ago
+                    and ma450_last > ma450_120_min_ago
+                    and ma200_last > ma200_60_min_ago
                     
+                    and ma39_last < ma39_15_min_ago
+                    and (ma3_prev < ma50_prev and ma3_last > ma50_last)
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.15
+
+                    and ma33_last < ma78_last
+               
+                    and ma3_last > ma13_last
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    
+                    and macd_differenza_2_min_ago > -1.25
+                ):  
+                
+                    buy = "BUY 2 incr al rialzo 3-50 MA 5-100 < -0.15 con ma450 > 2 ore e ma200 che sale da 1 ora e 33<78 - r 5860 B4 B3"
+                    action = "buy"
+                    percentage = 70
+
+                    #  6 ott 2024 aggiunto anche incrocio al rialzo 3-150
+                    #  6 gen 2025 3-50 al rialzo ma 3-100 MA 5-100 < -0.15 altrimenti prende molto prima.
                   
                     
                     
