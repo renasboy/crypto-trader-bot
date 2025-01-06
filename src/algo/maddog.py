@@ -6,6 +6,7 @@
 """
 
 
+
 and ma39_last < ma100_last
 and deviation_ma300_sopra_ma450 < -0.072
 and deviation_ma25_sotto_ma300 < -0.37
@@ -16,7 +17,7 @@ and deviation_ma5_sopra_o_sotto_ma100 < -0.22
 and deviation_ma5_sotto_ma200 < -0.31
 and deviation_ma5_sotto_ma300 < -0.41
 and deviation_ma5_sotto_ma450 < -0.51
-and deviation_ma300_sopra_ma450 < -0.072
+
 
 
 """
@@ -21238,24 +21239,25 @@ class maddog:
                 
                 elif (    
                     ma3_last > ma13_last
-
+               
                     and ma39_last < ma100_last
+                    and deviation_ma300_sopra_ma450 < -0.03
                     and deviation_ma25_sotto_ma300 < -0.35
                     and deviation_ma50_sotto_ma300 < -0.23
-                    and deviation_ma39 < -0.01
+                    and deviation_ma39 < -0.02
                     and deviation_ma3_sotto_ma50 < -0.04
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.09
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.18
                     and deviation_ma5_sotto_ma200 < -0.31
                     and deviation_ma5_sotto_ma300 < -0.33
                     and deviation_ma5_sotto_ma450 < -0.35
 
                     and ma450_last > ma450_480_min_ago
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.20
+                    
                     and ma50_last < ma59_last
                     
                     and deviation_ma3_sopra_ma10 > 0.01
-                    and ma3_last > ma13_last
-                    and macd > -50
+                    
+                    and macd > -60
                 ):
                     buy = "BUY 3 con 450 > 450 480 min MA CONSIDERATA ANCORA LATERALE SE 50<59 - r 6599 A1 Y A3 Y"
                     action = "buy"
@@ -21273,7 +21275,7 @@ class maddog:
                     # 17 ott 2023 and deviation_ma100_sopra_ma300 > -0.30 da > -0.30
                     # 31 ott 2023 se 50<59 3-10 0.077 ! ( comprava continuamente durante il ribasso !
                     #  9 dic 2024 aggiunta DNAM
-
+                    #  6 gen 2024 anticipata ndecchiecella
 
 
 
@@ -45296,7 +45298,7 @@ class maddog:
                 and delta_150_100 <= delta_150_100_60_min
                 
                 and deviation_ma39 < 0.13
-                and deviation_sell < 0.03
+                and deviation_sell < 0.01
                 
                 and deviation_ma100_sopra_ma300 < 0.40
                 and deviation_ma5_sotto_ma200 > -0.50
@@ -45305,7 +45307,7 @@ class maddog:
                 and macd_differenza_2_min_ago < -1.35
                 
             ):
-                sell = "SELL CS GIORNO con ma300 < 5 ore E ma50 <= E 30<78 e dev 3-39 < 0.13 E dev_sell < 0.03 - r 16045 B2 Y2 Y1"
+                sell = "SELL CS GIORNO con ma300 < 5 ore E ma50 <= E 30<78 e dev 3-39 < 0.13 E dev_sell < 0.01 - r 16045 B2 Y2 Y1"
                 action = "sell"
 
                 # 15 set 2023 quando 300 scende da 5 ore non devi vendere in perdita ! a ricomprare ci penseranno altre condizioni !
@@ -45321,6 +45323,7 @@ class maddog:
                 #  6 dic 2023 diff ma2 da -7 a -15
                 # 23 dic 2023 dev_sell < 0.03 se ma20 scende da 10 min
                 # 16 set 2024 macd_differenza_2_min_ago < -1.35 da -0.35
+                #  6 gen 2025 se e' giorno dev_sell < 0.01 da < 0.03
 
 
             elif (
