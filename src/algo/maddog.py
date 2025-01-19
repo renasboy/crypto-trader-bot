@@ -49082,7 +49082,7 @@ class maddog:
                 and ma100_last > ma100_301_min_ago
                 and deviation_ma10__diviso_ma10_5_ore_ago > 1.50
                 
-                and ma3_last < ma30_last
+                and ma3_last < ma39_last
                 and deviation_ma3_di_adesso_diviso_ma3_di_90_min_ago < 1.40
                 
                 and deviation_sell > 0.70
@@ -49092,12 +49092,12 @@ class maddog:
                 and macd < macd_2_min_ago
                 and macd_differenza_2_min_ago < -2
             ):    
-                sell = "SELL cond PMS da 0 a 120 min con ma100> 5 ore e 3-30 E con dev_sell 0.70 - 1.50 e macd <  - PRENDILI ! - r 16750 A1X"
+                sell = "SELL cond PMS da 0 a 120 min con ma100> 5 ore e 3-39 E con dev_sell 0.70 - 1.50 e macd <  - PRENDILI ! - r 16750 A1X"
                 action = "sell"
                 
                 # 24 ago 2023 and macd < -5
                 # 10 set 2024 AGGIUNTA and macd_differenza_2_min_ago < -2 AL POSTO DI MACD deve essere <-5
-
+                # 19 gen 2025 3-39 da 3-30 
             
             elif (
                 seconds_since_last_trade > 0 and seconds_since_last_trade < 7200
