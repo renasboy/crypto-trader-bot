@@ -23864,8 +23864,8 @@ class maddog:
                     and deviation_ma3_sopra_ma28 > -0.10
                     
                     and ma3_last > ma13_last
-                    and ma2_last > ma2_2_min_ago
-                    and macd > -50
+                    
+                    and macd > -60
                     
                 ):
                     buy = "BUY 4 con con 100<100 120 min ago E doppio delta GIORNO e 25>300 (non spezzo la catena !) - r 7065 A1x"
@@ -23873,7 +23873,7 @@ class maddog:
                     percentage = 70
 
                     # 14 ott 2024 se 100> 100 60 min ago ok cosi'
-
+                    # 20 gen 2025 anticipata ndecchiecella
 
                 elif (
                     ma3_last > ma20_last
@@ -36177,14 +36177,14 @@ class maddog:
                     elif (
                         ma50_last > ma50_2_min_ago
                         and deviation_ma100_sopra_ma300 < 0.30
-                        and (ma4_prev > ma33_prev and ma4_last < ma33_last)
+                        and (ma4_prev > ma39_prev and ma4_last < ma39_last)
                         and deviation_sell > 0.57 and deviation_sell < 0.80
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 2 (60-90 min) con ma50> and incrocio 4-33 con 100-300 < 0.30 and dev_sell 0.57-0.80 FINTA ALLA RONALDO - r 11906 B"
+                        sell = "SELL 2 (60-90 min) con ma50> e incrocio 4-39 con 100-300 < 0.30 e dev_sell 0.57-0.80 FINTA ALLA RONALDO - r 11906 B"
                         action = "sell"
 
-                        # 19 gen 2025 4-33 da 4-25
+                        # 19 gen 2025 4-39 da 4-25
                     
                     
                     elif (
