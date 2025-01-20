@@ -1907,39 +1907,45 @@ class maddog:
                     percentage = 50
 
                 
+
                 elif (    
                     ma3_last > ma18_last
-                    and ma100_last > ma100_10_min_ago
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
-                    and deviation_ma5_sopra_o_sotto_ma100 > -0.52
+                  
+                    and delta_1 < delta_2
+
+                    and deviation_ma5_sotto_ma300 < -0.40
+                    and deviation_ma10_sopra_ma200 < -0.30
                     
-                    and ma450_last < ma450_360_min_ago
                     and ma300_last < ma300_60_min_ago
                     and ma200_last < ma200_60_min_ago
                     
-                    and deviation_ma5_sopra_ma200 < -0.30
-                    and deviation_ma5_sotto_ma300 < -0.30
-                    and deviation_ma5_sotto_ma450 < -0.30
-                    
-                    and deviation_ma50_sopra_o_sotto_ma100 < -0.01
-                    and deviation_ma100_sopra_ma300 < -0.10
-                    
-                    and deviation_ma3_sopra_ma10 > 0.081
-                    and deviation_ma3_sopra_ma16 > -0.125
-                    and deviation_ma5_sopra_ma28 > -0.155
-                    
-                    and ma2_last >= ma2_2_min_ago
-                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
-                    and ma2_differenza_2_min_ago > 3
-                    
-                    and macd > -40
-                    and macd_differenza_2_min_ago > 0.50
-                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.020
-                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma5_sopra_ma28 > -0.03
+                   
+                    and macd_differenza_2_min_ago > -1.25
+                 
                 ):
-                    buy = "BUY 1 migliore con distanza 5-300 E dev TRIADE e dev ma2 e diff macd - r 1043 B1 NUOVA ERA A3 SOFT"
+                    buy = "BUY 1 che considera 5-300 AND dev 10-200 < -0.30 AND 3-39 E dif MACD - formula MY COMPA - r 1043 B1 NUOVA ERA A3 SOFT"
                     action = "buy"
-                    percentage = 50
+                    percentage = 80
+
+                    # importante : ma100 sta sotto la ma200 non le e' troppo lontana
+                    
+                    # 21 ottobre 2022  aggiunta di 3-10 e 5-28
+                    # 21 ottobre 2022 3-10 = 0.01
+                    # 21 ottobre 2022 5-28 = 0.05
+                    # 28 ottobre 2022 5-28 = 0.04
+                    # ave comba
+                    # 31 ottobre aggiunta dev 10-200 - formula MY COMPA
+                    # 19 gen 2023 doppio delta 200 100 giorno
+                    # 11 ott 2023 5-39 da 8-50
+                    # 11 ott 2023 5-28 a 0.02 da 0.04
+                    #  6 dic 2023 and deviation_ma5_sopra_ma28 > -0.02 da 0.02
+                    #  6 dic 2023 ma4_last > ma39_last da 5-39
+                    # 10 set 2024 MODIFICATA
+                    # 20 gen 2025 tolta and ma2_last >= ma2_2_min_ago
+                    # 20 gen 2025 and macd_differenza_2_min_ago > -1.25 da 1.25
+
 
                 
                 elif (    
@@ -12661,9 +12667,8 @@ class maddog:
                     
                     and deviation_ma3_sopra_ma10 > 0.01
                     and deviation_ma5_sopra_ma28 > -0.03
-                    
-                    and ma2_last >= ma2_2_min_ago
-                    and macd_differenza_2_min_ago > 1.25
+                   
+                    and macd_differenza_2_min_ago > -1.25
                 ):
                     buy = "BUY 2 che considera distanza 5-300 AND dev 10-200 < -0.30 AND 3-39 E dif MACD - formula MY COMPA - r 4743 A"
                     action = "buy"
@@ -12683,7 +12688,8 @@ class maddog:
                     #  6 dic 2023 and deviation_ma5_sopra_ma28 > -0.02 da 0.02
                     #  6 dic 2023 ma4_last > ma39_last da 5-39
                     # 10 set 2024 MODIFICATA
-
+                    # 20 gen 2025 tolta and ma2_last >= ma2_2_min_ago
+                    # 20 gen 2025 and macd_differenza_2_min_ago > -1.25 da 1.25
               
                 elif (
                     
