@@ -36019,7 +36019,7 @@ class maddog:
                         and deviation_ma100_sopra_ma300 > 0.70
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 2 da 60 a 90 min con ma50 > and deviation_ma39 < -0.18 SE 100 MOLTO ALTA RISPETTO ALLA 300 OK COSI' - r 11828 a1"
+                        sell = "SELL 2 (60-90 min) con ma50 > and deviation_ma39 < -0.18 SE 100 MOLTO ALTA RISPETTO ALLA 300 OK COSI' - r 11828 a1"
                         action = "sell"
                       
                         
@@ -36030,7 +36030,7 @@ class maddog:
                         
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 2 da 60 a 90 min con ma50 > and 5 < 39 SE 100 MOLTO ALTA RISPETTO ALLA 300 OK COSI' - r 11828 A2x"
+                        sell = "SELL 2 (60-90 min) con ma50 > and 5 < 39 SE 100 MOLTO ALTA RISPETTO ALLA 300 OK COSI' - r 11828 A2x"
                         action = "sell"
                         
                         # 20 ott 2023 5-39 da 3-39
@@ -36044,7 +36044,7 @@ class maddog:
                         
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 2 da 60 a 90 min con ma50 > and 3<28 SE 100 MOLTO ALTA RISPETTO ALLA 300 OK COSI' and macd_differenza_2_min_ago < -13 - r 11828 A2y"
+                        sell = "SELL 2 (60-90 min) con ma50 > and 3<28 SE 100 MOLTO ALTA RISPETTO ALLA 300 OK COSI' and macd_differenza_2_min_ago < -13 - r 11828 A2y"
                         action = "sell"
                         
                         # 20 ott 2023 5-39 da 3-39
@@ -36059,7 +36059,7 @@ class maddog:
                         and deviation_sell < -0.10
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 2 da 60 a 90 min con ma50 > and deviation_ma39 < -0.18 SE 100 VICINA ALLA 300 C'E' DEV SELL < -0.10  - r 11839 b"
+                        sell = "SELL 2 (60-90 min) con ma50 > and deviation_ma39 < -0.18 SE 100 VICINA ALLA 300 C'E' DEV SELL < -0.10  - r 11839 b"
                         action = "sell"
                         
                         
@@ -36071,7 +36071,7 @@ class maddog:
                         and ma3_last < ma50_last
                         and ma2_last < ma2_2_min_ago 
                     ):
-                        sell = "SELL 2 da 60 a 90 min con ma50 > and (deviation_sell < -0.215 and ma3_last < ma50_last)  - r 11853 A"
+                        sell = "SELL 2 (60-90 min) con ma50 > and (deviation_sell < -0.215 and ma3_last < ma50_last)  - r 11853 A"
                         action = "sell"
                         
                         # 20 feb 2023 aggiunta se 200>450
@@ -36085,7 +36085,7 @@ class maddog:
                         and ma3_last < ma50_last
                         and ma2_last < ma2_2_min_ago 
                     ):
-                        sell = "SELL 2 da 60 a 90 min con ma50 > and (deviation_sell < -0.18 and ma3_last < ma50_last)  - r 11853 B"
+                        sell = "SELL 2 (60-90 min) con ma50 > and (deviation_sell < -0.18 and ma3_last < ma50_last)  - r 11853 B"
                         action = "sell"
                         
                         # 20 feb 2023 aggiunta se 300<450
@@ -36100,7 +36100,7 @@ class maddog:
                         and ma200_last > ma200_60_min_ago
                         and ma300_last > ma300_301_min_ago
                     ):
-                        sell = "SELL 2 da 60 a 90 min con ma50 > and deviation_ma39 <-0.23 - r 11864 A"
+                        sell = "SELL 2 (60-90 min) con ma50 > and deviation_ma39 <-0.23 - r 11864 A"
                         action = "sell"
                         
                         # 21 gen 2023 con 300> 5 ore dev ma39 <-0.23 da -0.22 
@@ -36113,7 +36113,7 @@ class maddog:
                         and ma200_last > ma200_60_min_ago
                         and ma300_last < ma300_301_min_ago
                     ):
-                        sell = "SELL 2 da 60 a 90 min con ma50 > and deviation_ma39 <-0.22 - r 11864 B"
+                        sell = "SELL 2 (60-90 min) con ma50 > and deviation_ma39 <-0.22 - r 11864 B"
                         action = "sell"
                         
                         
@@ -36126,7 +36126,7 @@ class maddog:
                         and ma200_last > ma200_60_min_ago
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 2 da 60 a 90 min con ma50 > and (deviation_sell < -0.21 and ma3_last < ma50_last)  - r 11876"
+                        sell = "SELL 2 (60-90 min) con ma50 > and (deviation_sell < -0.21 and ma3_last < ma50_last)  - r 11876"
                         action = "sell"
                         
                        
@@ -36142,7 +36142,7 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                        
                     ):
-                        sell = "SELL 2 da 60 a 90 min con ma50 > and 5-78 and deviation_sell 0.25-0.56 - FINTA ALLA MARADONA - r 11892"
+                        sell = "SELL 2 (60-90 min) con ma50 > and 5-78 and deviation_sell 0.25-0.56 - FINTA ALLA MARADONA - r 11892"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
@@ -36160,7 +36160,7 @@ class maddog:
                         and deviation_sell > 0.57 and deviation_sell < 0.80
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 2 da 60 a 90 min con ma50> and incrocio 4-78 CON 100-300 > 0.30 and deviation_sell 0.57-0.80 FINTA ALLA RONALDO - r 11906 A"
+                        sell = "SELL 2 (60-90 min) con ma50> and incrocio 4-78 CON 100-300 > 0.30 and deviation_sell 0.57-0.80 FINTA ALLA RONALDO - r 11906 A"
                         action = "sell"
                         
                         
@@ -36171,7 +36171,7 @@ class maddog:
                         and deviation_sell > 0.57 and deviation_sell < 0.80
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 2 da 60 a 90 min con ma50> and incrocio 4-33 con 100-300 < 0.30 and dev_sell 0.57-0.80 FINTA ALLA RONALDO - r 11906 B"
+                        sell = "SELL 2 (60-90 min) con ma50> and incrocio 4-33 con 100-300 < 0.30 and dev_sell 0.57-0.80 FINTA ALLA RONALDO - r 11906 B"
                         action = "sell"
 
                         # 19 gen 2025 4-33 da 4-25
@@ -36185,7 +36185,7 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                     ):
 
-                        sell = "SELL 2 da 60 a 90 min con ma50 > and incrocio 5-39 and deviation_sell 0.81 - 1.49 RABONA ALLA RONALDO con 450 > 720 min - r 11919 a"
+                        sell = "SELL 2 (60-90 min) con ma50 > and incrocio 5-39 and deviation_sell 0.81 - 1.49 RABONA ALLA RONALDO con 450 > 720 min - r 11919 a"
                         action = "sell"
 
                         # ma ricordati che in diverse occasioni 3-48 mi ha evitato la ricompra e la rivendita conseguente con perdita !
@@ -36200,7 +36200,7 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                     ):
 
-                        sell = "SELL 2 da 60 a 90 min con ma50 > and incrocio 5-28 and deviation_sell 0.81 - 1.49 RABONA ALLA RONALDO con 450 < 720 min  - r 11919 b"
+                        sell = "SELL 2 (60-90 min) con ma50 > and incrocio 5-28 and deviation_sell 0.81 - 1.49 RABONA ALLA RONALDO con 450 < 720 min  - r 11919 b"
                         action = "sell"
 
                         # ma ricordati che in diverse occasioni 3-48 mi ha evitato la ricompra e la rivendita conseguente con perdita !
@@ -36218,7 +36218,7 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                     ):
 
-                        sell = "SELL 2 da 60 a 90 min con ma50 > CON 100>200 > 0.45 incrocio 3-34 (!) and dev_sell 1.50 - 2.70 DOPPIO PASSO RONALDO - r 11943"
+                        sell = "SELL 2 (60-90 min) con ma50 > CON 100>200 > 0.45 incrocio 3-34 (!) and dev_sell 1.50 - 2.70 DOPPIO PASSO RONALDO - r 11943"
                         action = "sell"
                         
                         # 6 giu 2022 3-34 da 3-13
@@ -36234,7 +36234,7 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                     ):
 
-                        sell = "SELL 2 da 60 a 90 min con ma50 > CON 100>200 < 0.45 incrocio 3-16 and dev_sell 1.50 - 2.70 DOPPIO PASSO RONALDO - r 11959"
+                        sell = "SELL 2 (60-90 min) con ma50 > CON 100>200 < 0.45 incrocio 3-16 and dev_sell 1.50 - 2.70 DOPPIO PASSO RONALDO - r 11959"
                         action = "sell"
                         
                         # 6 giu 2022 3-16 da 3-13
@@ -36249,7 +36249,7 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                     ):
 
-                        sell = "SELL 2 da 60 a 90 min con ma50 > incrocio 3-20 and dev_sell > 2.71 STIAMO TRA GLI ANGELI, compa ! - r 11983"
+                        sell = "SELL 2 (60-90 min) con ma50 > incrocio 3-20 and dev_sell > 2.71 STIAMO TRA GLI ANGELI, compa ! - r 11983"
                         action = "sell"
                         
                         
@@ -36265,7 +36265,7 @@ class maddog:
                         and deviation_sell < -0.10
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 2 da 60 a 90 min TREND < con PERDITA BASE con ma50 < con deviation_ma39 < -0.17 and dev_sell < -0.12 - r 11999 A"
+                        sell = "SELL 2 (60-90 min) TREND < con PERDITA BASE con ma50 < con deviation_ma39 < -0.17 and dev_sell < -0.12 - r 11999 A"
                         action = "sell"
                         
                         # and ma3_last < ma39_last
@@ -36286,7 +36286,7 @@ class maddog:
                         and deviation_sell < -0.11
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 2 da 60 a 90 min TREND < con PERDITA BASE con ma50 < con deviation_ma39 < -0.01 and dev_sell < -0.11 - r 11999 B"
+                        sell = "SELL 2 (60-90 min) con TREND< con PERDITA BASE con ma50 < con deviation_ma39 < -0.01 and dev_sell < -0.11 - r 11999 B"
                         action = "sell"
                         
                         # and ma3_last < ma39_last
@@ -36306,7 +36306,7 @@ class maddog:
                         and deviation_sell < -0.13
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 2 da 60 a 90 min TREND < con PERDITA BASE  con ma50 < con incrocio 3-78 and dev_sell < -0.13 - r 12018"
+                        sell = "SELL 2 (60-90 min) con TREND < con PERDITA BASE  con ma50 < con incrocio 3-78 and dev_sell < -0.13 - r 12018"
                         action = "sell"
                         
                        
@@ -36324,7 +36324,7 @@ class maddog:
                         and deviation_sell < -0.22
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 2 da 60 a 90 min TREND < con POCA PERDITA TOLLERATA con ma50 < con deviation_ma39 <-0.17 and dev_sell < -0.22 - r 12037 a"
+                        sell = "SELL 2 (60-90 min) con TREND < con POCA PERDITA TOLLERATA con ma50 < con deviation_ma39 <-0.17 and dev_sell < -0.22 - r 12037 a"
                         action = "sell"
                         
                         # and ma3_last < ma39_last
@@ -36348,7 +36348,7 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                         and macd < -5
                     ):
-                        sell = "SELL 2 da 60 a 90 min TREND < con POCA PERDITA TOLLERATA con ma50 < con deviation_ma39 < -0.01 and dev_sell < -0.10 - r 12037 B"
+                        sell = "SELL 2 (60-90 min) con TREND < con POCA PERDITA TOLLERATA con ma50 < con deviation_ma39 < -0.01 and dev_sell < -0.10 - r 12037 B"
                         action = "sell"
                         
                         # and ma3_last < ma39_last
@@ -36371,7 +36371,7 @@ class maddog:
                         and deviation_sell < -0.20
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 2 da 60 a 90 min TREND < con POCA PERDITA TOLLERATA con ma50 < con deviation_ma39 <-0.17 and dev_sell < -0.20 - r 12037 c"
+                        sell = "SELL 2 (60-90 min) con TREND < con POCA PERDITA TOLLERATA con ma50 < con deviation_ma39 <-0.17 and dev_sell < -0.20 - r 12037 c"
                         action = "sell"
                         
                         # and ma3_last < ma39_last
@@ -36391,7 +36391,7 @@ class maddog:
                         and deviation_sell < -0.15
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 2 da 60 a 90 min TREND < con POCA PERDITA TOLLERATA con ma50 < con deviation_ma39 <-0.17 and dev_sell < -0.15 - r 12060"
+                        sell = "SELL 2 (60-90 min) con TREND < con POCA PERDITA TOLLERATA con ma50 < con deviation_ma39 <-0.17 and dev_sell < -0.15 - r 12060"
                         action = "sell"
                         
                         # and ma3_last < ma39_last
@@ -36410,7 +36410,7 @@ class maddog:
                         and deviation_sell < -0.14
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 2 da 60 a 90 min con POCA PERDITA TOLLERATA con ma50 < con incrocio 3-78 and deviation_sell < -0.14 - r 12087"
+                        sell = "SELL 2 (60-90 min) con POCA PERDITA TOLLERATA con ma50 < con incrocio 3-78 and deviation_sell < -0.14 - r 12087"
                         action = "sell"
                         
                         
@@ -36430,7 +36430,7 @@ class maddog:
                         
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 2 da 60 a 90 min con MOLTA PERDITA TOLLERATA con ma50 < con 5<90 con 100 sopra 300 < 0.50 - r 12105 A"
+                        sell = "SELL 2 (60-90 min) con MOLTA PERDITA TOLLERATA con ma50 < con 5<90 con 100 sopra 300 < 0.50 - r 12105 A"
                         action = "sell"
                         
                         # questa anticipa di una ndecchia la prossima
@@ -36448,7 +36448,7 @@ class maddog:
                         and ma200_last > ma300_last
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 2 da 60 a 90 min con MOLTA PERDITA TOLLERATA con ma50 < con 3 < 59 con 100 sopra 300 < 0.50 - r 12123 b"
+                        sell = "SELL 2 (60-90 min) con MOLTA PERDITA TOLLERATA con ma50 < con 3 < 59 con 100 sopra 300 < 0.50 - r 12123 b"
                         action = "sell"
                         
                         # questa anticipa di una ndecchia la prossima
@@ -36465,7 +36465,7 @@ class maddog:
                         and ma200_last > ma300_last
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 2 da 60 a 90 min con MOLTA PERDITA TOLLERATA con ma50 < con deviation_ma39 < -0.22 - r 12140"
+                        sell = "SELL 2 (60-90 min) con MOLTA PERDITA TOLLERATA con ma50 < con deviation_ma39 < -0.22 - r 12140"
                         action = "sell"
                         
                         # and ma3_last < ma33_last
@@ -36487,7 +36487,7 @@ class maddog:
                         and ma200_last > ma300_last
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 2 da 60 a 90 min con MOLTA PERDITA TOLLERATA con ma50 < con incrocio 3-78 and deviation_sell < -0.15 - r 12169"
+                        sell = "SELL 2 (60-90 min) con MOLTA PERDITA TOLLERATA con ma50 < con incrocio 3-78 and deviation_sell < -0.15 - r 12169"
                         action = "sell"
                         
                         
@@ -36509,7 +36509,7 @@ class maddog:
                         and deviation_sell < -0.118
                         and ma2_last <= ma2_2_min_ago
                     ):
-                        sell = "SELL 2 da 60 a 90 min AGGIUNTA TARDIVA MA FORSE NECESSARIA ! delta 300-100 < and deviation_sell < -0.12 - r 12191 A"
+                        sell = "SELL 2 (60-90 min) AGGIUNTA TARDIVA MA FORSE NECESSARIA ! delta 300-100 < and deviation_sell < -0.12 - r 12191 A"
                         action = "sell"
                         
                         # 20 feb 2023 dev_sell a -0.115 da -0.12
@@ -36534,7 +36534,7 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                         and macd < macd_2_min_ago
                     ):
-                        sell = "SELL 2 da 60 a 90 min AGGIUNTA TARDIVA MA FORSE NECESSARIA ! delta 300-100 > and deviation_sell < -0.123 and macd < macd 2 min ago - r 12191 B"
+                        sell = "SELL 2 (60-90 min) AGGIUNTA TARDIVA MA FORSE NECESSARIA ! delta 300-100 > and deviation_sell < -0.123 and macd < macd 2 min ago - r 12191 B"
                         action = "sell"
                         
                         # 17 mar 2023 dev sell a -0.12 da -0.10
@@ -36562,7 +36562,7 @@ class maddog:
                         and deviation_ma5_sotto_ma200 > -0.80
                 
                     ):
-                        sell = "SELL 2 (60 -90 min) EX cond spec r 16047 A1Y CON 50<59 E dev 3-39 < 0.05 e dev_sell < 0.02 e ma50 < e diff macd < -0.30 e macd < macd 2 min - r 12230"
+                        sell = "SELL 2 (60-90 min) EX cond spec r 16047 A1Y CON 50<59 E dev 3-39 < 0.05 e dev_sell < 0.02 e ma50 < e diff macd < -0.30 e macd < macd 2 min - r 12230"
                         action = "sell"
                         
                         # 20 nov 2023 and macd < macd_2_min_ago
@@ -36589,7 +36589,7 @@ class maddog:
                         and deviation_ma39 < -0.22
                         and ma200_last > ma200_60_min_ago
                     ):    
-                        sell = "SELL 2 90-110 min con ma50 > and deviation_ma39 <-0.22 (no ma3<ma39) - r 12237"
+                        sell = "SELL 2 (90-110 min) con ma50 > and deviation_ma39 <-0.22 (no ma3<ma39) - r 12237"
                         action = "sell"
                         
                    
