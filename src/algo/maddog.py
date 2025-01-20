@@ -48490,9 +48490,10 @@ class maddog:
 
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
-                and ma200_last < ma200_120_min_ago
-                and ma25_last <= ma25_2_min_ago
+                and ma5_last < ma39_last
 
+                and ma200_last < ma200_120_min_ago
+                
                 and delta_1_69_39 > delta_2_69_39
 
                 and ma450_last < ma450_10_min_ago
@@ -48511,19 +48512,19 @@ class maddog:
             
             ):
 
-                sell = "SELL CS - DOLCE ATTESA 270 sec and ma13 < E MA25< and con 450 < - r 16694 B2 Y2 Bby"
+                sell = "SELL CS - DOLCE ATTESA 270 sec and ma13< con 450< - r 16694 B2 Y2 BB Y"
                 action = "sell"
-
-
-                # 4 feb 2022 con <-0.26 ha fatto -0.88% (dopo +4.29%)
-                # 7 feb 2022 con <-0.345 e 270 sec ha fatto -0.38% - aumenta a 0.355 ! - eventualmente ci pensa la condizione CROLLO IMPROVVISO CHE FUNZIONA !
+                
+                #  4 feb 2022 con <-0.26 ha fatto -0.88% (dopo +4.29%)
+                #  7 feb 2022 con <-0.345 e 270 sec ha fatto -0.38% - aumenta a 0.355 ! 
+                #  7 feb 2022 eventualmente ci pensa la condizione CROLLO IMPROVVISO CHE FUNZIONA !
                 # 17 set -0.57 da -0.47
 
                 #  7 set 2004 ro cano e' tornato ! questa condizione interviene solo quando ma100 < ma100 30 min ago
                 #  8 set 2024 aggiunta ma3 < ma3 2 min ago and ma2_last < ma2_2_min_ago
                 # 17 set 2024  questa e' SENZA dev_sell CAZZO con 100<300 ! 
-                
-                
+                # 20 gen 2025 aggiunta 5<39
+                # 20 gen 2025 tolta and ma25_last <= ma25_2_min_ago
                 
                 
                 
