@@ -8,9 +8,12 @@
 
 
 and ma39_last < ma100_last
-and deviation_ma300_sopra_ma450 < -0.072
+and deviation_ma100_sopra_ma300 < -0.59
 and deviation_ma25_sotto_ma300 < -0.37
+
+and deviation_ma300_sopra_ma450 < -0.072
 and deviation_ma50_sotto_ma300 < -0.27
+
 and deviation_ma39 < -0.12
 and deviation_ma3_sotto_ma50 < -0.15
 and deviation_ma5_sopra_o_sotto_ma100 < -0.22
@@ -5941,6 +5944,7 @@ class maddog:
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
                     and ma100_last < ma100_10_min_ago
 
+                    and deviation_ma100_sopra_ma300 < -0.59
                     and deviation_ma25_sotto_ma300 < -0.36
                     and deviation_ma50_sotto_ma300 < -0.30
                     and deviation_ma39 < 0.03
@@ -5958,7 +5962,7 @@ class maddog:
                     and ma450_last < ma450_360_min_ago
                     
                     and deviation_ma50_sopra_o_sotto_ma100 < -0.01
-                    and deviation_ma100_sopra_ma300 < -0.10
+                    
                     
                     and deviation_ma3_sopra_ma10 > 0.017
                     and deviation_ma3_sopra_ma16 > -0.01
@@ -48491,7 +48495,7 @@ class maddog:
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
                 and ma5_last < ma39_last
-
+                
                 and ma200_last < ma200_120_min_ago
                 
                 and delta_1_69_39 > delta_2_69_39
@@ -48524,6 +48528,7 @@ class maddog:
                 #  8 set 2024 aggiunta ma3 < ma3 2 min ago and ma2_last < ma2_2_min_ago
                 # 17 set 2024  questa e' SENZA dev_sell CAZZO con 100<300 ! 
                 # 20 gen 2025 aggiunta 5<39
+                
                 # 20 gen 2025 tolta and ma25_last <= ma25_2_min_ago
                 
                 
