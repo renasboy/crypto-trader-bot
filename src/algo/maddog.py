@@ -19074,10 +19074,36 @@ class maddog:
                    
                     
                     
-                # BUY 3 nuovo RIALZO IMPROVVISO ma trend gia' in rialzo da 120 min and 0.27 sopra ultimo sell se 300>120 min e 100 sopra 300> 0.40 
+                # BUY 3 nuovo RIALZO IMPROVVISO ma trend gia' in rialzo da 120 min and 0.27 sopra ultimo sell se 300>120 min e 100 sopra 300> 0.40
+
                 
+                elif (    
+                    ma3_last > ma20_last
+                    and delta_1 < delta_2
+
+                    and ma100_last > ma200_last
+                    and deviation_ma100_sopra_ma300 > 0.40
+                    and ma300_last > ma300_120_min_ago
+                    
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    
+                    and ma150_last > ma150_60_min_ago
+                    and ma2_last >= ma2_2_min_ago
+              
+                ):
+             
+                    buy = "BUY 3 RIALZO con 300>120 min e GIORNO e 100 sopra 300> 0.40 - r 6470 A"
+                    action = "buy"
+                    percentage = 70
+
+                    # 21 gen 2025 se delta_1 < delta_2 anticipato BUY
+
+
                 elif (
-                    ma200_last > ma200_20_min_ago
+                    
+                    ma3_last > ma20_last
+                    and delta_1 > delta_2
                     and ma100_last > ma200_last
                     and deviation_ma100_sopra_ma300 > 0.40
                     and ma300_last > ma300_120_min_ago
@@ -19090,12 +19116,12 @@ class maddog:
               
                 ):
              
-                    buy = "BUY 3 nuovo RIALZO IMPROVVISO ma trend gia' in rialzo da 120 min and 0.27 sopra ultimo sell se 300>120 min e 100 sopra 300> 0.40 - r 6470"
+                    buy = "BUY 3 RIALZO con 300>120 min and 0.27 sopra ultimo sell SE NOTTE e 100 sopra 300> 0.40 - r 6470 B"
                     action = "buy"
                     percentage = 70
                     
                     # 31 lug 2023 aggiunta and deviation_ma3_sopra_ma10 > 0.10
-
+                    # 21 gen 2025 SE delta_1 > delta_2 allora and deviation_buy > 0.27 sopra ultimo sell
               
                   
                 # BUY 3 RIALZO IMPROVVISO ! con ma200 > and ma100_last > ma200_last
