@@ -49449,18 +49449,41 @@ class maddog:
 
             elif (
                 deviation_sell > 0.80
+                and ma300_last > ma300_120_min_ago
+                and ma5_last < ma200_last
+
                 and ma39_last > ma39_15_min_ago
                 and seconds_since_last_trade > 7200
                 and ma5_last < ma5_12_min_ago
-                
-                and ma3_last < ma36_last
                 
                 and ma2_last < ma2_2_min_ago
                 and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.018
                 and macd < macd_2_min_ago
                 and macd_differenza_2_min_ago < -1.50
             ):    
-                sell = "SELL C.S. 3-36 - PMS (ma non troppo !) (> 120 min) e dev > 0.80 e ma5_12_min_ago E macd_diff_2_min_ago < -1.50 - r 16873 C1x"
+                sell = "SELL C.S. PMS (ma non troppo!) con 300>300 120 min ago e dev>0.80 E macd_diff_2_min_ago < -1.50 - r 16873 C1 X1"
+                action = "sell"
+
+                # 21 gen 2025 lascia correre perdio se 300>300 120 min ago !
+
+
+            elif (
+                deviation_sell > 0.80
+                and ma300_last < ma300_120_min_ago
+                and ma3_last < ma36_last
+
+                and ma39_last > ma39_15_min_ago
+                and seconds_since_last_trade > 7200
+                and ma5_last < ma5_12_min_ago
+                
+                
+                
+                and ma2_last < ma2_2_min_ago
+                and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.018
+                and macd < macd_2_min_ago
+                and macd_differenza_2_min_ago < -1.50
+            ):    
+                sell = "SELL C.S. PMS con 300 < 300 120 min ago e dev > 0.80 E macd_diff_2_min_ago < -1.50 - r 16873 C1 X2"
                 action = "sell"
                 
                 # 27 set 2023 macd < macd 2 min ago 
@@ -49471,6 +49494,16 @@ class maddog:
                 
                 #  6 mar 2024 se ma39_last > ma39_15_min_ago allora vende con ma5_last < ma5_12_min_ago ( dico 12 min invece di 11 )
                 #  3 ott 2024 and macd_differenza_2_min_ago < -1.50 da <-1.00
+
+
+
+
+
+
+
+
+
+
 
             elif (
                 deviation_sell > 0.80
