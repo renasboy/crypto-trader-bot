@@ -5,7 +5,8 @@
 
 """
 
-
+and delta_1 < delta_2 GIORNO ! 100-200 vs 100-200 di 60 min ago
+and delta_1_200_78 < delta_2_200_78_60_min
 
 and ma39_last < ma100_last
 and deviation_ma100_sopra_ma300 < -0.59
@@ -11151,33 +11152,29 @@ class maddog:
             
             elif self.session == 2:
 
-                if (
-                    ma69_last > ma69_2_min_ago
-                    and ma39_last > ma100_last
-                    and ma39_last > ma39_30_min_ago
-                    and ma2_differenza_2_min_ago > 5
-                    and macd_differenza_2_min_ago > 0.5
-                    
+                if (    
+                    ma3_last > ma20_last
                     and ma300_last > ma300_120_min_ago
+                    
                     and deviation_ma100_sopra_ma300 > 0.20
-                    and ma78_last > ma200_last
+                    
                     and delta_1_200_78 < delta_2_200_78_60_min
                     
                     and deviation_ma3_sopra_ma10 > 0.01
-                    and deviation_ma3_sopra_ma16 > 0.07
-                    and deviation_ma5_sopra_ma28 > -0.03
+                    and deviation_ma3_sopra_ma16 > -0.07
+                    and deviation_ma5_sopra_ma28 > -0.10
                     
-                    and deviation_buy_ma3_sopra_ma13 > 0.09
-                    
-                    and ma2_last > ma2_2_min_ago
                     and price > price_2_min_ago
-                    and macd >= macd_2_min_ago
+                    
+                    and macd > -60
+                    and macd_differenza_2_min_ago > -1.5
                 
                 ):
-                    buy = "BUY 2A rialzo o laterale con 78 > 200 AND 300 >300 120 min ago ! - r 4639 A1 X1 x"
+                    buy = "BUY 2A rialzo o laterale con 78 > 200 AND 300 >300 120 min ago ! - r 4639 A1 X1 X"
                     action = "buy"
                     percentage = 80
 
+                    # 21 gen 2025 anticipata ndecchia con 300 > 300 120 min ago !
 
 
                 elif (
