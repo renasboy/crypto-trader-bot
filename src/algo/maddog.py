@@ -8,6 +8,8 @@
 and delta_1 < delta_2 GIORNO ! (100-200 last vs 100-200 di 60 min ago)
 and delta_1 > delta_2 NOTTE !
 
+and delta_300_200 < delta_300_200_60_min GIORNO ! fai una prova quando torni a circello !
+
 and ma39_last < ma100_last
 and deviation_ma100_sopra_ma300 < -0.59
 and deviation_ma25_sotto_ma300 < -0.37
@@ -814,6 +816,9 @@ class maddog:
         
         
         
+
+
+
         # formula delta_450_200
         
         delta_450_200 = (ma450_last / ma200_last - 1) * 100 if ma200_last else 0
@@ -826,6 +831,32 @@ class maddog:
         self.algo_helper.info("delta_450_200_60_min: {}".format(delta_450_200_60_min))
 
         # SE delta_450_200 < delta_450_200_60_min ..........GIORNO !
+
+
+
+
+
+        # formula delta_300_200
+        
+        delta_300_200 = (ma300_last / ma200_last - 1) * 100 if ma200_last else 0
+        self.algo_helper.info("delta_300_200: {}".format(delta_300_200))
+        
+        
+        # formula delta_300_200_60_min
+        
+        delta_300_200_60_min = (ma300_60_min_ago / ma200_60_min_ago - 1) * 100 if ma200_60_min_ago else 0
+        self.algo_helper.info("delta_300_200_60_min: {}".format(delta_300_200_60_min))
+
+        # SE delta_300_200 < delta_300_200_60_min ..........GIORNO !
+
+
+
+
+
+
+
+
+
 
 
 
