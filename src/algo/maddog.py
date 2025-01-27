@@ -45520,18 +45520,18 @@ class maddog:
 
             elif (
                 ma78_last < ma78_120_min_ago
+                and delta_150_100 <= delta_150_100_60_min
+
                 and ma10_last < ma100_last
 
-                
                 and ma20_last <= ma20_10_min_ago
-                
                 and ma50_last <= ma50_2_min_ago
                 
                 and ma300_last < ma300_301_min_ago
-                and delta_150_100 <= delta_150_100_60_min
+                
                 
                 and deviation_ma39 < 0.13
-                and deviation_sell < 0.03
+                and deviation_sell < -0.01
                 
                 and deviation_ma100_sopra_ma300 < 0.40
                 and deviation_ma5_sotto_ma200 > -0.50
@@ -45540,11 +45540,11 @@ class maddog:
                 and macd_differenza_2_min_ago < -1.35
                 
             ):
-                sell = "SELL CS GIORNO con ma300 < 5 ore E ma50 <= E 30<78 e dev 3-39 < 0.13 E dev_sell < 0.03 - r 16046"
+                sell = "SELL CS GIORNO con ma300 < 5 ore E ma50 <= E 30<78 e dev 3-39 < 0.13 E dev_sell < -0.01 - r 16046"
                 action = "sell"
 
                 #  4 nov 2024 aggiunta. se 10<100 vende !
-                
+                # 27 gen 2025 dev_sell < -0.01 da < 0.03
 
             
 
