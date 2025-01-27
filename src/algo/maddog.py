@@ -26649,7 +26649,7 @@ class maddog:
                     
                     and ma3_last > ma8_last
                     
-                    and ma2_last >= ma2_2_min_ago
+                    
                     and macd > -60
 
                 ):   
@@ -26663,7 +26663,7 @@ class maddog:
                     # 14 ott 2022 aggiunto 3-10 !
                     # 20 gen 2025 anticipata ndecchia
                     # 27 gen 2025 se giorno anticipata ndecchia - e' GIORNO !
-
+                    # 27 gen 2025 quando e' giorno tolto and ma2_last >= ma2_2_min_ago
 
 
                 elif (
