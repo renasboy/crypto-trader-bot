@@ -5702,9 +5702,13 @@ class maddog:
 
 
               
+                  
                 elif (     
-                    
                     ma3_last > ma15_last
+
+                    and delta_300_200 > delta_300_200_30_min
+                    and deviation_ma25_sotto_ma300 < -1.20
+
                     and ma2_last >= ma10_last
                     and deviation_ma39 <= -0.45
                     
@@ -5721,14 +5725,14 @@ class maddog:
                     and deviation_ma3_sopra_ma18 > -0.04
                     
                     and ma2_last >= ma2_2_min_ago
-                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.017
-                    and ma2_differenza_2_min_ago > 7
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.01
+                    
                     
                     and macd > -50
                     and macd_differenza_2_min_ago > -1.25
                     
                 ):    
-                    buy = "BUY 1 condizione DNA IPERVENDUTO con 3-15 E MACD > -50 - r 1537 A3X 4A Y x"
+                    buy = "BUY 1 NOTTE condizione DNA IPERVENDUTO con 3-15 E MACD > -50 - r 1537 A3X 4A Y x"
                     action = "buy"
                     percentage = 90
                     
@@ -5741,7 +5745,7 @@ class maddog:
                     # 19 feb 2024 aggiunta 
                     # 11 set 2024 and deviation_ma39 <= -0.40 da -0.30
                     # 16 set 2024 anticipata ndecchiecella. mantienila ! mantieni DNA !
-
+                    # 27 gen 2025 se NOTTE and deviation_ma25_sotto_ma300 < -1.20
 
                 elif (    
                     ma3_last > ma20_last
@@ -12556,6 +12560,9 @@ class maddog:
                 
                 elif (    
                     ma3_last > ma18_last
+                    and delta_300_200 > delta_300_200_30_min
+                    and deviation_ma25_sotto_ma300 < -1.20
+
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
 
                     and ma100_last < ma100_10_min_ago
@@ -12579,11 +12586,11 @@ class maddog:
                     and deviation_ma5_sopra_ma28 > -0.16
                     
                     and ma2_last >= ma2_2_min_ago
-                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
-                    and macd > -30
-                    and macd_differenza_2_min_ago > 1.25
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.01
+                    and macd > -60
+                    and macd_differenza_2_min_ago > -1.25
                 ):
-                    buy = "BUY 2 che considera distanza 5-300 AND dev 10-200 < -0.24 AND cano STAF - r 4713 NUOVA ERA A2 STRONG"
+                    buy = "BUY 2 NOTTE che considera distanza 5-300 AND dev 10-200 < -0.24 AND cano STAF - r 4713 NUOVA ERA A2 STRONG"
                     action = "buy"
                     percentage = 70
                     
@@ -12593,7 +12600,7 @@ class maddog:
                     # 11 set 2024 anticipata ndecchiecella
                     #  2 ott 2024 se 300< allora aggiunta solo sul BUY 2 and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15 da cano STAF
                     #  2 ott 2024 cioe' ma100 decresce ma non cosi' tanto ! 
-              
+                    # 27 gen 2025 se NOTTE aggiungo and deviation_ma25_sotto_ma300 < -1.20
                     
                 elif (
                     
