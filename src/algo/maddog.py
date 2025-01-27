@@ -26634,19 +26634,26 @@ class maddog:
                 
                 
                 
+
+
+
                 elif (
                     ma200_last >= ma200_120_min_ago
                     and ma300_last >= ma300_60_min_ago
+
+                    and delta_1 < delta_2
                   
                     and deviation_ma3_sopra_ma10 > 0.01
-                    and deviation_ma5_sopra_ma28 > -0.10
+                    and deviation_ma5_sopra_ma28 > -0.12
                     
-                    and ma3_last > ma15_last
+                    
                     and ma3_last > ma8_last
                     
-                    and ma2_last > ma2_2_min_ago
+                    and ma2_last >= ma2_2_min_ago
+                    and macd > -60
+
                 ):   
-                    buy = "BUY 5 che NON SPEZZA LA CATENA SE ma200> 120 min con 3-10 > 0.01 e 5-28 > -0.10 - r 7410"
+                    buy = "BUY 5 che NON SPEZZA LA CATENA - GIORNO - SE ma200> 120 min con 3-10 > 0.01 e 5-28 > -0.10 - r 7410 A"
                     action = "buy"
                     percentage = 70
                     
@@ -26655,6 +26662,45 @@ class maddog:
                     # ma per essere un BUY 5 devi avere almeno ma13>ma50 cazzo !
                     # 14 ott 2022 aggiunto 3-10 !
                     # 20 gen 2025 anticipata ndecchia
+                    # 27 gen 2025 se giorno anticipata ndecchia - e' GIORNO !
+
+
+
+                elif (
+                    ma200_last >= ma200_120_min_ago
+                    and ma300_last >= ma300_60_min_ago
+
+                    and delta_1 > delta_2
+                    and deviation_ma200_sotto_ma300 > -0.07
+                    
+                    and ma20_last <= ma20_2_min_ago
+                    and ma5_last > ma10_last
+
+
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma5_sopra_ma28 > -0.12
+                    
+                    and ma3_last > ma15_last
+                    and ma3_last > ma8_last
+                    
+                    and ma2_last > ma2_2_min_ago
+                ):   
+                    buy = "BUY 5 che NON SPEZZA LA CATENA - NOTTE ! - SE ma200> 120 min con 3-10 > 0.01 e 5-28 > -0.12 - r 7410 B"
+                    action = "buy"
+                    percentage = 70
+                    
+                    # deviation_buy3 = ma4_last/ma30_last
+                    # ok tu non voi spezzare la catena.
+                    # ma per essere un BUY 5 devi avere almeno ma13>ma50 cazzo !
+                    # 14 ott 2022 aggiunto 3-10 !
+                    # 20 gen 2025 anticipata ndecchia
+
+                    # 27 gen 2025 e' NOTTE pero' 
+                    # 27 gen 2025 and ma200_last >= ma200_120_min_ago
+                    # 27 gen 2025 and ma300_last >= ma300_60_min_ago
+                    # 27 gen 2025 and deviation_ma200_sotto_ma300 > -0.07 (ma200 e' ancora vicina alla ma300 !)
+
+
                     
                     
                 elif (
@@ -47294,12 +47340,13 @@ class maddog:
                 and macd < 16
                 
             ):
-                sell = "SELL CS con ma50 <= ma 50 2 min ago E ma300 > 5 ore E dev 3-39 < 0.08 E dev_sell < 0.01 - r 16047 B1 Y2"
+                sell = "SELL CS con ma50 <= ma50 2 min ago E ma300 > 5 ore E dev 3-39 < 0.08 E dev_sell < 0.01 - r 16047 B1 Y2"
                 action = "sell"
                 
                 # 24 dic 2023 se 10>20 dev sell a 0.02 da 0.04
                 # 22 set 2024 aggiunta and ma2_last < ma6_last 
                 # 22 set 2024 and deviation_sell < 0.01 da < 0.02
+
           
             elif (
                 ma78_last < ma78_120_min_ago
