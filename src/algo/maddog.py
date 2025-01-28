@@ -18266,7 +18266,8 @@ class maddog:
                     
                     
                 elif (
-                    ma2_last > ma2_2_min_ago
+
+                    deviation_buy_ma2_sopra_ma13 > -0.01
                     and ma300_last > ma300_301_min_ago
                     
                     and ma28_last < ma78_last
@@ -18275,12 +18276,12 @@ class maddog:
                     and ma200_last > ma200_60_min_ago
                     and deviation > -0.30
 
-                    and deviation_buy_ma2_sopra_ma13 > 0.01
-                    and macd_differenza_2_min_ago > -0.15
+                    and ma2_last >= ma2_2_min_ago
+                    and macd_differenza_2_min_ago > -1.25
                       
                 ):  
                 
-                    buy = "BUY 3A con 300 > 300 301 min ago con ma200 che sale da 60 min and ma28_last < ma78_last and macd_dif_2_min_ago > 0.15 - r 6121 A"
+                    buy = "BUY 3A con 300 > 300 301 min ago con ma200 che sale da 60 min MA 28<78 E macd_diff_2_min_ago > -1.25 - r 6121 A"
                     action = "buy"
                     percentage = 80
 
@@ -18290,7 +18291,8 @@ class maddog:
                     # 23 feb 2023 5>5 2 min ago invece di 10> 10 2 min ago
                     # 300 sale da 5 ore NON DIMENTICARLO !
                     # 19 gen 2025 anticipata di molto
-                    
+                    # 28 gen 2025 anticipata ancora ma di una ndecchiecella. ma e' andata bene.
+
                     
                 elif (    
                     ma4_last > ma50_last
@@ -45021,6 +45023,7 @@ class maddog:
                 # 19 set 2024 se ma 200> ma200 180 min ago allora aumento tolleranza dev sell a -0.045 da -0.03
                 # 28 gen 2025 dev sell a -0.05 da -0.045
                 # 28 gen 2025 aggiunto and delta_300_200 < delta_300_200_60_min per confortare l' aumento del dev sell a -0.05
+
 
             elif (
                 ma50_last <= ma50_2_min_ago
