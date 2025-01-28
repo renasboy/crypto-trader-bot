@@ -49964,21 +49964,21 @@ class maddog:
 
 
 
-
             elif (
                 deviation_sell > 0.80
+                and ma300_last > ma450_last
+                and ma3_last < ma49_last
+
                 and ma39_last < ma39_15_min_ago
                 and seconds_since_last_trade > 7200
                 and ma5_last < ma5_11_min_ago
-                
-                and ma3_last < ma36_last
                 
                 and ma2_last < ma2_2_min_ago
                 and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.018
                 and macd < macd_2_min_ago
                 and macd_differenza_2_min_ago < -1
             ):    
-                sell = "SELL C.S. 3-36 - P M e S (ma non troppo !) (> 120 min ) con dev > 0.80 e ma5_11_min_ago - r 16873 C1y"
+                sell = "SELL P M e S (ma non troppo !) con 3-49 (> 120 min ) e con dev > 0.80 e ma5_11_min_ago - r 16873 C1 Y1"
                 action = "sell"
                 
                 # 27 set 2023 macd < macd 2 min ago 
@@ -49988,9 +49988,39 @@ class maddog:
                 # 11 gen 2024 3-36 da 3-33 dopo 2 ore di rialzo non e' proprio un pochi maledetti e SUBITO !
 
                 #  6 mar 2024 se ma39_last < ma39_15_min_ago allora vende con ma5_last < ma5_11_min_ago ( dico 11 min )
+                # 27 gen 2025 sell con 3-49 da 3-36 se ma300_last > ma450_last
 
 
-            # 14 
+
+            elif (
+                deviation_sell > 0.80
+                and ma300_last < ma450_last
+                and ma3_last < ma39_last
+
+                and ma39_last < ma39_15_min_ago
+                and seconds_since_last_trade > 7200
+                and ma5_last < ma5_11_min_ago
+                
+                and ma2_last < ma2_2_min_ago
+                and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.018
+                and macd < macd_2_min_ago
+                and macd_differenza_2_min_ago < -1
+            ):    
+                sell = "SELL P M e S (ma non troppo !) con 3-39 (> 120 min ) e con dev > 0.80 e ma5_11_min_ago - r 16873 C1 Y2"
+                action = "sell"
+                
+                # 27 set 2023 macd < macd 2 min ago 
+                # 27 set 2023 and macd_differenza_2_min_ago < -1
+                #  1 nov 2023 ma5_11_min_ago da ma5_12_min_ago
+                # 11 gen 2024 aggiunta and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.018
+                # 11 gen 2024 3-36 da 3-33 dopo 2 ore di rialzo non e' proprio un pochi maledetti e SUBITO !
+
+                #  6 mar 2024 se ma39_last < ma39_15_min_ago allora vende con ma5_last < ma5_11_min_ago ( dico 11 min )
+                # 27 gen 2025 sell con 3-39 da 3-36 se ma300_last < ma450_last
+
+
+
+            
             
             elif (
                 deviation_sell > 0.80
