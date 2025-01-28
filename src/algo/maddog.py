@@ -11368,7 +11368,8 @@ class maddog:
                     and deviation_ma100_sopra_ma300 > 0.20
                     
                     and delta_1_200_78 < delta_2_200_78_60_min
-                    
+                    and delta_300_200 < delta_300_200_60_min
+
                     and deviation_ma3_sopra_ma10 > 0.01
                     and deviation_ma3_sopra_ma16 > -0.07
                     and deviation_ma5_sopra_ma28 > -0.10
@@ -11379,11 +11380,42 @@ class maddog:
                     and macd_differenza_2_min_ago > -1.5
                 
                 ):
-                    buy = "BUY 2A rialzo o laterale con 78 > 200 AND 300 >300 120 min ago ! - r 4639 A1 X1 X"
+                    buy = "BUY 2A GIORNO con 78 > 200 AND 300 >300 120 min ago ! - r 4639 A1 X1 X1"
                     action = "buy"
                     percentage = 80
 
                     # 21 gen 2025 anticipata ndecchia con 300 > 300 120 min ago !
+                    # 28 gen 2025 aggiunto and delta_300_200 < delta_300_200_60_min GIORNO
+
+
+                elif (    
+                    ma3_last > ma20_last
+                    and ma300_last > ma300_120_min_ago
+                    
+                    and deviation_ma100_sopra_ma300 > 0.20
+                    
+                    and delta_1_200_78 < delta_2_200_78_60_min
+                    and delta_300_200 > delta_300_200_60_min
+
+                    and deviation_ma3_sopra_ma10 > 0.02
+                    and deviation_ma3_sopra_ma16 > -0.07
+                    and deviation_ma5_sopra_ma28 > -0.10
+                    
+                    and price > price_2_min_ago
+                    
+                    and macd > -60
+                    and macd_differenza_2_min_ago > -1.5
+                
+                ):
+                    buy = "BUY 2A GIORNO con 78 > 200 AND 300 >300 120 min ago ! - r 4639 A1 X1 X2"
+                    action = "buy"
+                    percentage = 80
+
+                    # 21 gen 2025 anticipata ndecchia con 300 > 300 120 min ago !
+                    # 28 gen 2025 aggiunto and delta_300_200 > delta_300_200_60_min NOTTE
+                    # 28 gen 2025 and deviation_ma3_sopra_ma10 > 0.02 da > 0.01 ( ha comprato prestissimo quasi attaccato al sell precedente.)
+
+
 
 
                 elif (
@@ -11414,7 +11446,7 @@ class maddog:
                     and macd > -40
                     and macd_differenza_2_min_ago > -1.25
                 ):
-                    buy = "BUY 2A rialzo o laterale con 78 > 200 AND 300 >300 120 min ago ! - r 4639 A1 X1 y"
+                    buy = "BUY 2A rialzo o laterale con 78 > 200 AND 300 >300 120 min ago ! - r 4639 A1 X1 Y"
                     action = "buy"
                     percentage = 80
 
@@ -32309,17 +32341,34 @@ class maddog:
                         action = "sell"
                       
                         # 28 giu 2023 5-100 da 5-50
-                        # 28 giu 2023 aggiunta macd <
-                    
+                        # 28 giu 2023 aggiunta macd<
+
+
                     
                     elif (
                         ma50_last > ma50_2_min_ago
+                        and ma300_last > ma450_last
+                        and (ma5_prev > ma100_prev and ma5_last < ma100_last)
+                        and deviation_sell > 0.65 and deviation_sell < 1.49
+                        and ma2_last < ma2_2_min_ago
+                        
+                    ):
+                        sell = "SELL 1 (90 - 110 min) con ma50 > incrocio 5-78 (!) and deviation_sell 0.65 - 1.49 RABONA ALLA RONALDO - r 10084 A"
+                        action = "sell"
+                        
+                        # > estate 5-78 da 5-42
+                        # 28 gen 2025 se 300>450 sell con 5-100 da 5-78
+
+
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and ma300_last < ma450_last
                         and (ma5_prev > ma78_prev and ma5_last < ma78_last)
                         and deviation_sell > 0.65 and deviation_sell < 1.49
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 (90 - 110 min) con ma50 > incrocio 5-78 (!) and deviation_sell 0.65 - 1.49 RABONA ALLA RONALDO - r 10084"
+                        sell = "SELL 1 (90 - 110 min) con ma50 > incrocio 5-78 (!) and deviation_sell 0.65 - 1.49 RABONA ALLA RONALDO - r 10084 B"
                         action = "sell"
                         
                         # > estate 5-78 da 5-42
