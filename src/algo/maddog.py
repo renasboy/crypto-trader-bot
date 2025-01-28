@@ -22412,30 +22412,31 @@ class maddog:
 
 
                     
-                elif (
-                    deviation_ma4_sopra_ma30 > 0.01
-                    and ma39_last < ma100_last
-                    and deviation_ma39 > 0.192
+                
+                elif (    
+                    ma3_last > ma15_last
+                    and ma300_last > ma450_last
+                    and ma450_last > ma450_720_min_ago
 
-                    and ma450_last > ma450_120_min_ago
                     and ma300_last > ma300_120_min_ago
+                    and ma450_last > ma450_120_min_ago
+                    
+                    and ma39_last < ma100_last
                     and ma100_last < ma100_60_min_ago
                     
-                    and deviation > -0.30
-                
                     and ma3_last > ma8_last
-                    and ma5_last >= ma15_last
                     
-                    and ma2_last >= ma2_2_min_ago
-                    and macd > macd_2_min_ago
+                    and macd > -70
+                    and macd_differenza_2_min_ago > -1.50
                 ):    
-                    buy = "BUY 4 importato da BUY 3 RCCR con 4-30 con 300 > e 100 < - r 6736 A1 Z2x"
+                    buy = "BUY 4 con 3-15 se ma450> 12 ore e con 300>450 E 100 < - r 6736 A1 Z2 X"
                     action = "buy"
                     percentage = 70
                     
                     #  5 mar 2024 se 39 < 100 pugno fantasma
-
-
+                    # 28 gen 2025 bella l' idea del pugno fantasma ma con 300>450 e 450 > 12 ore devi pungere come un' ape !
+                    # 28 gen 2025 tolto ma2 > ma2 2 min ago
+                    # 28 gen 2024 tolto macd > macd 2 min ago e sostituito con macd > -60
                 
                 elif (    
                     ma3_last > ma20_last
