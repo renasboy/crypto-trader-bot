@@ -10849,30 +10849,62 @@ class maddog:
                     # 23 set 2024 aggiunta di prendi il coltello con il piede SE e' cresciuta tanto e ma28 SCENDE !
 
 
-                elif (  
-                    ma100_last > ma150_last
+
+
+                elif (
+                    ma3_last > ma11_last
+                    and ma450_last > ma450_720_min_ago
+
+                    and ma28_last < ma28_10_min_ago
+                    and deviation_ma50_sopra_o_sotto_ma50_90_min_ago > -0.025
+
+                    and deviation_ma5_sopra_o_sotto_ma5_120_min_ago < 0.80
+                    
+                    and deviation_ma100_laterale > -0.04
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    
+                    and macd >= -60
+                    and macd_differenza_2_min_ago > -1.50
+                ):
+
+                    buy = "BUY 1 con ma450_last > ma450_720_min_ago e 28< con aggiunta di prendi il coltello e ma100 > ma150 - r 4355 B2 X1"
+                    action = "buy"
+                    percentage = 80
+
+                    # 24 ago 2023 and deviation_ma100_laterale > 0.05 da 0.07 con 200>300
+                    # 28 ago 2023 100>150
+                    # 31 ott 2023 aggiunto and macd_differenza_2_min_ago > 0.25
+                    #  8 ott 2024 anticipata ! deviation_ma50_sopra_o_sotto_ma50_90_min_ago > -0.015 RICORDA IL BUY 2 CHE RICOMPRA
+                    #  8 ott 2024 ma l' ultimo minimo e' superiore al penultimo minimo e quasi uguale al suo precedente (del penultimo)
+                    #  8 ott 2024 cioe' crescono i minimi !!!
+
+                    # 29 gen 2025 sto cercando di risolvere il problema del trend laterale dopo un grande RIALZO
+                    
+
+
+                elif (
+                    ma3_last > ma11_last
+                    and ma450_last < ma450_720_min_ago
+
+                    and ma100_last > ma150_last
                     and ma28_last < ma28_10_min_ago
                     and deviation_ma50_sopra_o_sotto_ma50_90_min_ago > -0.015
 
                     and deviation_ma5_sopra_o_sotto_ma5_120_min_ago < 0.80
                     
-                    
-                    and ma3_last > ma11_last
-                    
                     and deviation_ma100_laterale > -0.03
                     
                     and deviation_ma3_sopra_ma10 > 0.01
                     and deviation_ma5_sopra_ma28 > -0.05
-                   
                     
-                    and macd >= -50
-                    and macd_differenza_2_min_ago > -1.25
+                    and macd >= -60
+                    and macd_differenza_2_min_ago > -1.50
                 ):
 
-                    buy = "BUY 1 forever young 2 con 28< con aggiunta di prendi il coltello e ma100 > ma150 - r 4355 b2X"
+                    buy = "BUY 1 con ma450_last < ma450_720_min_ago e 28< con aggiunta di prendi il coltello e ma100 > ma150 - r 4355 B2 X2"
                     action = "buy"
                     percentage = 80
-                    
                     
                     # 24 ago 2023 and deviation_ma100_laterale > 0.05 da 0.07 con 200>300
                     # 28 ago 2023 100>150
@@ -10880,6 +10912,11 @@ class maddog:
                     #  8 ott 2024 anticipata ! deviation_ma50_sopra_o_sotto_ma50_90_min_ago > -0.015 RICORDA IL BUY 2 CHE RICOMPRA
                     #  8 ott 2024 ma l' ultimo minimo e' superiore al penultimo minimo e quasi uguale al suo precedente (del penultimo)
                     #  8 ott 2024 cioe' crescono i minimi !!!
+                    # 29 gen 2025 sto cercando di risolvere il problema del trend laterale dopo un grande RIBASSO
+                    
+
+
+
 
                 elif (  
                     ma100_last > ma150_last
