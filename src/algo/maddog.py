@@ -25834,9 +25834,44 @@ class maddog:
 
 
 
-                    
                 elif (
                     ma50_last >= ma50_2_min_ago
+                    and ma450_last > ma450_720_min_ago
+
+                    and ma100_last >= ma100_60_min_ago
+                    and (ma3_prev < ma90_prev and ma3_last > ma90_last)
+                    
+                    and ma300_last < ma450_last
+                    
+                    and ma28_last < ma28_30_min_ago
+                    and ma78_last > ma150_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > 0.077
+                    
+                    and ma3_last > ma13_last
+                    and ma4_last > ma9_last
+                    and ma6_last > ma15_last
+                    
+                    and macd > -60
+                    and macd_differenza_2_min_ago > -1.50
+                ):
+                    buy = "BUY 5 con ma450_last > ma450_720_min_ago e ma50> e 50>100 e ma28_last < ma28_30_min_ago e 5-28 > 0.17 - r 7203 B1 X"
+                    action = "buy"
+                    percentage = 70
+                    
+                    # 25 gen 2024 se ma100_last >= ma100_60_min_ago compra anche con 3-90
+                    # 29 gen 2025 incomincio a risolvere il problema del trend laterale dopo un grande RIALZO
+                    # 29 gen 2025 aggiunto and ma450_last > ma450_720_min_ago
+                    # 29 gen 2025 tolto and ma2_last >= ma2_2_min_ago
+                    # 29 gen 2025 aggiunto and macd > -60 e and macd_differenza_2_min_ago > -1.50
+                    # 29 gen 2025 and ma7_last > ma25_last
+
+                       
+                elif (
+                    ma50_last >= ma50_2_min_ago
+                    and ma450_last < ma450_720_min_ago
+
                     and ma100_last >= ma100_60_min_ago
                     and (ma3_prev < ma90_prev and ma3_last > ma90_last)
                     
@@ -25857,11 +25892,14 @@ class maddog:
                     
                     and ma2_last >= ma2_2_min_ago
                 ):
-                    buy = "BUY 5 con ma50 > AND 50>100 and ma28_last < ma28_30_min_ago and 5-28 > 0.17 - r 7203 B1"
+                    buy = "BUY 5 con ma450_last > ma450_720_min_ago e ma50 > AND 50>100 e ma28_last < ma28_30_min_ago e 5-28 > 0.17 - r 7203 B1 Y"
                     action = "buy"
                     percentage = 70
                     
                     # 25 gen 2024 se ma100_last >= ma100_60_min_ago compra anche con 3-90
+                    # 29 gen 2025 incomincio a risolvere il problema del trend laterale dopo un grande RIBASSO
+
+
                 
                 
                 elif (
@@ -25963,8 +26001,8 @@ class maddog:
                     and ma7_last > ma25_last
                     
                     and ma2_last > ma2_2_min_ago
-                    and ma2_differenza_2_min_ago > 10
-                    and macd_differenza_2_min_ago > 1.5
+                    
+                    and macd_differenza_2_min_ago > -1.50
                     and ma2_differenza_ma5 > 3
                 ):
                     buy = "BUY 5 con 300 > 450 and ma50 > E 50<100 and 300 > 120 min ago e 5-28 > 0.23 and ma2_diff_2_min_ago > 10 - r 7237 A1 NUOVA ERA A2 SOFT 1"
