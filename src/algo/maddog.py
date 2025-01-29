@@ -14863,9 +14863,46 @@ class maddog:
                 # 24 nov 2024 cancellata r 5445 A1  
                 
 
+                elif (
+                    ma3_last > ma20_last
+                    and ma450_last > ma450_720_min_ago
+
+
+                    and ma100_last > ma100_120_min_ago
+                    and ma100_last > ma300_last
+
+                    and ma450_last < ma450_180_min_ago
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_120_min_ago
+
+                    and ma10_last > ma20_last
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma5_sopra_ma28 > -0.03
+
+                    and deviation_ma100_sopra_ma300 > -0.60
+                    and deviation_ma200_sopra_ma300 > -0.60
+                   
+                    
+                    
+                    and macd > -60
+                    and macd_differenza_2_min_ago > -1.50
+                ):
+               
+                    buy = "BUY 2 con ma450_last > ma450_720_min_ago e con 100>300 e 3-20 e con 10>20 E CON 100>300 - r 5445 A2 X1 A"
+                    action = "buy"
+                    percentage = 80
+
+                    # 15 nov 2024 se 100>300 anticipo ndecchia
+                    # 29 gen 2025 sto cercando di risolvere il problema del trend laterale dopo un grande RIALZO
+                    # 29 gen 2025 tolta and ma2_last >= ma2_2_min_ago
+
+
 
                 elif (
                     ma3_last > ma20_last
+                    and ma450_last < ma450_720_min_ago
+
+
                     and ma100_last > ma100_120_min_ago
                     and ma100_last > ma300_last
 
@@ -14886,11 +14923,14 @@ class maddog:
                     and macd_differenza_2_min_ago > -1.50
                 ):
                
-                    buy = "BUY 2 con 3-20 che ci riprova quando se ne va lateralmente > crollo CON 10>20 E CON 100>300 - r 5445 A2 X1"
+                    buy = "BUY 2 con ma450_last < ma450_720_min_ago MA CON 100>300 e 3-20 e con 10>20 - r 5445 A2 X1 B"
                     action = "buy"
                     percentage = 80
 
                     # 15 nov 2024 se 100>300 anticipo ndecchia
+                    # 29 gen 2025 sto cercando di risolvere il problema del trend laterale dopo un grande RIBASSO
+                    
+
 
 
                 elif (
