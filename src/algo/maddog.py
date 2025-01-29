@@ -7026,13 +7026,11 @@ class maddog:
                     # 28 apr 2023  5-50 da 5-100 con aggiunta macd >= 2 min ago
 
 
-
                 elif (  
                     ma450_last > ma450_720_min_ago
                     and ma100_last < ma100_90_min_ago
                     and ma200_last < ma200_20_min_ago
                     and ma300_last < ma450_last
-
 
                     # CANO STAF
                     and ma100_last < ma100_10_min_ago
@@ -7046,7 +7044,41 @@ class maddog:
                     and deviation_ma5_sotto_ma200 < -0.25
                     and deviation_ma25_sotto_ma300 < -0.29
 
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma18 > -0.08
+                    and deviation_ma5_sopra_ma28 > -0.10
 
+                    and macd > -60
+                    and macd_differenza_2_min_ago > -2
+                ):    
+        
+                    buy = "BUY 1 CON 450 > 720 min MA ma100< e con dev 5-200 < -0.25 E CON dev 25-300 < -0.29 (osso) + CANO STAF - r 1720 A"
+                    action = "buy"
+                    percentage = 90
+
+                    # 29 gen 2025 e' andata bene 
+                    # 29 gen 2025 sto cercando di risolvere il problema del trend laterale dopo un grande RIALZO
+                    # 29 gen 2025 tolta and ma2_last >= ma2_2_min_ago
+
+
+
+                elif (  
+                    ma450_last > ma450_720_min_ago
+                    and ma100_last < ma100_90_min_ago
+                    and ma200_last < ma200_20_min_ago
+                    and ma300_last < ma450_last
+
+                    # CANO STAF
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.27
+                    and deviation_ma10_sopra_ma200 < -0.20
+                    and deviation_ma5_sotto_ma300 < -0.20
+                    # CANO STAF
+
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.15
+                    and deviation_ma5_sotto_ma200 < -0.25
+                    and deviation_ma25_sotto_ma300 < -0.29
 
                     and deviation_ma3_sopra_ma10 > 0.01
                     and deviation_ma3_sopra_ma18 > -0.08
@@ -7058,7 +7090,7 @@ class maddog:
                
                 ):    
         
-                    buy = "BUY 1 CON 450> MA ma100< 100 90 min ago CON dev 5-200 < -0.25 E CON dev 25-300 < -0.29 (osso) + CANO STAF - r 1720"
+                    buy = "BUY 1 CON 450 < 720 min E ma100< e con dev 5-200 < -0.25 E CON dev 25-300 < -0.29 (osso) + CANO STAF - r 1720 B"
                     action = "buy"
                     percentage = 90
                     
@@ -7066,7 +7098,9 @@ class maddog:
                     #  7 ott 2024 DATEMI UN OSSO (and deviation_ma25_sotto_ma300 < -0.60)
                     #  7 ott 2024 aggiunta and deviation_ma5_sopra_o_sotto_ma100 < -0.15
                     # 15 ott 2024 entra il CANO STAF !
-              
+
+                    # 29 gen 2025 e' andata bene 
+                    # 29 gen 2025 sto cercando di risolvere il problema del trend laterale dopo un grande RIBASSO
                
                 
                     
@@ -22998,10 +23032,12 @@ class maddog:
                     and macd > -60
                     and macd_differenza_2_min_ago > -2
                 ):
-                    buy = "BUY 4 - ANDATA BENISSIMO - con 450 > 450 720 +++++ùùùùàERATA ANCORA LATERALE - r 6740 NUOVA ERA A3 SOFT 1"
+                    buy = "BUY 4 - ANDATA BENISSIMO - con 450 > 450 720 min MA CONSIDERATA ANCORA LATERALE - r 6740 NUOVA ERA A3 SOFT 1"
                     action = "buy"
                     percentage = 70
 
+                    # 29 gen 2025 sto cercando di risolvere il problema del trend laterale dopo un grande RIALZO
+                    # 29 gen 2025 tolta and ma2_last >= ma2_2_min_ago
                     
 
                 
@@ -23033,7 +23069,7 @@ class maddog:
                     percentage = 70
                     
                     # questa condizione importata da RCCR e' arrivata un po' prima.
-
+                    # 29 gen 2025 sto cercando di risolvere il problema del trend laterale dopo un grande RIBASSO
 
 
 
