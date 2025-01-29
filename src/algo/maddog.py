@@ -19307,9 +19307,35 @@ class maddog:
                     
                     
                 # BUY 3 NUOVO che ci riprova TORNANDO ALLE ORIGINI con ma200< and ma300<
-                
+
                 elif (
-                    deviation_buy2 > 0.05
+                    ma3_last > ma13_last
+                    and ma450_last > ma450_720_min_ago
+
+                    and ma100_last > ma200_last
+                    and ma200_last > ma200_60_min_ago
+
+                    and ma3_last > ma7_last
+                    
+                    and deviation_ma4_sopra_ma25 > -0.05
+
+                    and macd > -60
+                    and macd_differenza_2_min_ago > -1.50
+                ):
+                    buy = "BUY 3 con ma450_last > ma450_720_min_ago e con ma200> e con ma100 che e' andata sopra ma200 ! - r 6447 A1"
+                    action = "buy"
+                    percentage = 90
+
+                    # 29 gen 2025 sto cercando di risolvere il problema del trend laterale dopo un grande RIALZO
+                    # 29 gen 2025 cancellato and ma2_last > ma2_2_min_ago e anticipato ndecchiecella
+
+
+
+                elif (
+                    ma3_last > ma13_last
+                    and ma450_last < ma450_720_min_ago
+
+                    and deviation_buy2 > 0.05
                     and deviation_ma3_sopra_ma28 > 0.15
                     and ma100_last > ma200_last
                     and ma200_last > ma200_60_min_ago
@@ -19317,21 +19343,22 @@ class maddog:
                     and ma8_last > ma8_2_min_ago
                     and ma2_last > ma2_2_min_ago
                     and ma3_last > ma7_last
-                    and ma3_last > ma13_last
+                    
                     and deviation_buy_ma3_sopra_ma20 > 0.05
                     and deviation_ma4_sopra_ma25 > 0.05
-                 
                 ):
-               
-                    buy = "BUY 3 NUOVO che ci riprova TORNANDO ALLE ORIGINI MA SOLO SE ma200 >  MA 100 e' andata sopra 200 ! - r 6447 a"
+                    buy = "BUY 3 con ma450_last < ma450_720_min_ago e con ma200> e con ma100 che e' andata sopra 200 ! - r 6447 A2"
                     action = "buy"
                     percentage = 90
-
+                    
                     # compare prega per me !
                     # se ma200< MA 100 e' andata sopra 200 ! si torna alle origini ! 8-50 ! (con ma2 > ma2 2 min ago)
                     # deviation_buy2 = ma8_last / ma50_last
                     # 20 set 2024 questa condizione si deve attivare SOLO SE and ma200_last > ma200_60_min_ago
                     # 20 set 2024 per evitare di cancellarla. e vafanculo.
+
+                    # 29 gen 2025 sto cercando di risolvere il problema del trend laterale dopo un grande RIBASSO
+
 
 
 
@@ -22943,15 +22970,51 @@ class maddog:
                     
                     # questa condizione importata da RCCR e' arrivata un po' prima.
 
-                elif (
-                    
+
+
+
+
+                
+                elif (    
                     ma4_last > ma20_last
-                    
+                    and ma450_last > ma450_720_min_ago
+
+                    and ma450_last > ma450_480_min_ago
                     and ma100_last > ma100_10_min_ago
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
                     and deviation_ma5_sopra_o_sotto_ma100 > -0.40
                    
+                    
+                    
+                    and deviation_ma100_sopra_ma300 < 0.27
+                    and deviation_ma100_sopra_ma300 > -0.27
+                    
+                    and deviation_ma3_sopra_ma10 > 0.05
+                    and deviation_ma5_sopra_ma28 > -0.02
+                  
+                    and ma3_last > ma13_last
+                    and ma4_last > ma9_last
+                    
+                    and macd > -60
+                    and macd_differenza_2_min_ago > -2
+                ):
+                    buy = "BUY 4 - ANDATA BENISSIMO - con 450 > 450 720 +++++ùùùùàERATA ANCORA LATERALE - r 6740 NUOVA ERA A3 SOFT 1"
+                    action = "buy"
+                    percentage = 70
+
+                    
+
+                
+                elif (    
+                    ma4_last > ma20_last
+                    and ma450_last < ma450_720_min_ago
+
                     and ma450_last > ma450_480_min_ago
+                    and ma100_last > ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.40
+                   
+                    
                     
                     and deviation_ma100_sopra_ma300 < 0.27
                     and deviation_ma100_sopra_ma300 > -0.27
@@ -22965,11 +23028,14 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                     and macd > macd_2_min_ago
                 ):
-                    buy = "BUY 4 importata da RCCR BUY3 r 6599 A1yA2 - ANDATA BENISSIMO - con 450 > 450 480 min MA CONSIDERATA ANCORA LATERALE - r 6740 NUOVA ERA A3 SOFT"
+                    buy = "BUY 4 - ANDATA BENISSIMO - con 450 < 450 720 min MA CONSIDERATA ANCORA LATERALE - r 6740 NUOVA ERA A3 SOFT 2"
                     action = "buy"
-                    percentage = 60
+                    percentage = 70
                     
                     # questa condizione importata da RCCR e' arrivata un po' prima.
+
+
+
 
                 elif (
                     
@@ -22993,7 +23059,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                     and macd > macd_2_min_ago
                 ):
-                    buy = "BUY 4 importata da RCCR BUY3 r 6599 A1yA2 - ANDATA BENISSIMO - con 450 > 450 480 min MA CONSIDERATA ANCORA LATERALE - r 6740 NUOVA ERA A4 SOFT"
+                    buy = "BUY 4 - ANDATA BENISSIMO - con 450 > 450 480 min MA CONSIDERATA ANCORA LATERALE - r 6740 NUOVA ERA A4 SOFT"
                     action = "buy"
                     percentage = 60
                     
