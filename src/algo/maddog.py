@@ -25031,8 +25031,51 @@ class maddog:
                     percentage = 70
 
 
+
+
                 elif (    
                     ma3_last > ma20_last
+                    and ma450_last > ma450_720_min_ago
+
+
+
+                    and ma39_last < ma39_20_min_ago
+                    and deviation_ma39 < -0.17
+
+                    and ma450_last >= ma450_120_min_ago
+                    and ma100_last > ma450_last
+                    
+                    and ma10_last < ma30_last
+                   
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > -0.02
+                    
+                    
+                    and ma3_last > ma13_last
+                    and ma3_last > ma5_last
+                    
+                    
+                    and macd > -40
+                    and macd_differenza_2_min_ago > -3.25
+                
+                ):
+                    buy = "BUY 5 con 450_last >= 450_720_min_ago E ma100>ma450 MA ma39 < ma39 20 min ago ! - r 7144 A1 Y2 NUOVA ERA A3 SOFT XY 1"
+                    action = "buy"
+                    percentage = 70
+
+                    # 29 gen 2025 INCOMINCIO A RISOLVERE IL PROBLEMA DEL TREND LATERALE dopo un grande RIALZO !
+                    # 29 gen 2025 AGGIUNTA and ma450_last > ma450_720_min_ago
+                    # 29 gen 2025 tolto and ma2_last > ma2_2_min_ago
+
+
+
+                elif (    
+                    ma3_last > ma20_last
+                    and ma450_last < ma450_720_min_ago
+
+
+
                     and ma39_last < ma39_20_min_ago
                     and deviation_ma39 < -0.17
 
@@ -25054,12 +25097,17 @@ class maddog:
                     and macd_differenza_2_min_ago > -3.25
                 
                 ):
-                    buy = "BUY 5 con 450_last >= 450_120_min_ago E ma100>ma450 MA ma39 < ma39 20 min ago ! - r 7144 A1 Y2 NUOVA ERA A3 SOFT xY"
+                    buy = "BUY 5 con 450_last >= 450_720_min_ago E ma100>ma450 MA ma39 < ma39 20 min ago ! - r 7144 A1 Y2 NUOVA ERA A3 SOFT XY 2"
                     action = "buy"
                     percentage = 70
 
                     # 14 ott 2024 anticipata con 450 che sale da 120 min NON FARTI TROPPI PROBLEMI. PROVACI.
                     # 29 ott 2024 se ma39_last < ma39_20_min_ago allora aggiungi UNA SPECIE DI OSSO (and deviation_ma39 < -0.17)
+
+                    # 29 gen 2025 INCOMINCIO A RISOLVERE IL PROBLEMA DEL TREND LATERALE dopo un grande RIBASSO !
+
+
+
 
 
                 elif (    
