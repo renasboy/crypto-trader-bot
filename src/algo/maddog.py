@@ -27145,24 +27145,52 @@ class maddog:
 
 
 
-                
-                elif (    
-                    ma450_last > ma450_360_min_ago
+                elif (
+                    ma3_last > ma8_last
+                    and ma450_last > ma450_720_min_ago
+
+                    and ma450_last > ma450_360_min_ago
                     and ma78_last > ma150_last
 
                     and ma300_last < ma450_last
 
                     and deviation_ma3_sopra_ma10 > 0.07
                     
-                    and ma3_last > ma8_last
                     and ma2_last > ma2_2_min_ago
                     
                 ):
-                    buy = "BUY 5C RIVOLUZIONARIO con ma450 > ma450 360 min ago - r 7441 B1"
+                    buy = "BUY 5C RIVOLUZIONARIO con ma450 > ma450 720 min ago e ma300_last < ma450_last - r 7441 B1 X"
                     action = "buy"
                     percentage = 70
 
                     #  9 nov 2024 se 450 sale da 6 ore non devi spezzare la catena !
+                    # 29 gen 2025 comincio a risolvere il problema del trend laterale dopo un grande RIALZO
+                    # 29 gen 2025 ma questa e' andata bene
+
+
+                elif (
+                    ma3_last > ma8_last
+                    and ma450_last < ma450_720_min_ago
+
+                    and ma450_last > ma450_360_min_ago
+                    and ma78_last > ma150_last
+
+                    and ma300_last < ma450_last
+
+                    and deviation_ma3_sopra_ma10 > 0.07
+                    
+                    and ma2_last > ma2_2_min_ago
+                    
+                ):
+                    buy = "BUY 5C RIVOLUZIONARIO con ma450 < ma450 720 min ago e ma300_last < ma450_last - r 7441 B1 Y"
+                    action = "buy"
+                    percentage = 70
+
+                    #  9 nov 2024 se 450 sale da 6 ore non devi spezzare la catena !
+                    # 29 gen 2025 comincio a risolvere il problema del trend laterale dopo un grande RIBASSO
+                    # 29 gen 2025 ma questa e' andata bene
+
+
 
 
                 elif (
@@ -28455,6 +28483,8 @@ class maddog:
                     # 29 gen 2025 comincio a risolvere il problema del trend laterale dopo un grande RIALZO
                     # 29 gen 2025 and ma450_last > ma450_720_min_ago
                     # 29 gen 2025 tolto and ma2_last >= ma2_2_min_ago
+
+
 
                 elif (        
                     ma3_last >= ma30_last
