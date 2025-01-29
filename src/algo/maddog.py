@@ -3614,17 +3614,50 @@ class maddog:
                     # 18 gen 2024 300 sale da 3 ore ma ma100 scende da 2 ore ! metto dev 5-100 > 0.28 come NUOVA ERA SOFT !
 
 
-              
+
+
                 elif (    
-                    ma3_last > ma54_last
-                    
+                    ma3_last > ma20_last
+                    and ma450_last > ma450_720_min_ago
+
+                    and ma300_last < ma300_180_min_ago
                     and ma100_last < ma100_10_min_ago
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
-                    and deviation_ma5_sopra_o_sotto_ma100 > -0.33
-                    and deviation_ma5_sopra_o_sotto_ma100 > 0.20
+
+                    and deviation_ma250_sopra_ma300 < 0.12
+                    and deviation_ma250_sopra_ma300 > -0.12
                     
+                    and deviation_ma300_sopra_ma450 < 0.18
+                    and deviation_ma300_sopra_ma450 > -0.18
+                    
+                    and deviation_ma100_sopra_ma300 < 0.29
+                    and deviation_ma100_sopra_ma300 > -0.29
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > -0.01
+                    
+                    and macd > -60
+                    and macd_differenza_2_min_ago > -1.50
+                    
+                    and ma2_differenza_ma5 > 10
+                ):
+                    buy = "BUY 1 CONSOLIDATO TREND LATERALE con ma450_last > ma450_720_min_ago MA con ma300 < 3 ore - r 1205 B NUOVA ERA A1 SOFT X"
+                    action = "buy"
+                    percentage = 80
+
+                    # 29 gen 2025 sto cercando di risolvere il problema del trend laterale dopo un grande RIALZO
+                    # 29 gen 2025 tolta and ma2_last >= ma2_2_min_ago
+                    #c29 gen 2025 3-20 da 3-54
+
+
+                elif (    
+                    ma3_last > ma54_last
+                    and ma450_last < ma450_720_min_ago
+
                     and ma300_last < ma300_180_min_ago
-                    
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+
                     and deviation_ma250_sopra_ma300 < 0.12
                     and deviation_ma250_sopra_ma300 > -0.12
                     
@@ -3646,13 +3679,18 @@ class maddog:
                     
                     and ma2_differenza_ma5 > 10
                 ):
-                    buy = "BUY 1 CONSOLIDATO TREND LATERALE con ma300_last < 3 ore e 3-10 > 0.01 e macd > -20 and ma2_diff_2_min_ago > 7 - r 1205 B NUOVA ERA A1 SOFT"
+                    buy = "BUY 1 CONSOLIDATO TREND LATERALE con ma450_last < ma450_720_min_ago e con ma300 < 3 ore - r 1205 B NUOVA ERA A1 SOFT Y"
                     action = "buy"
-                    percentage = 50
+                    percentage = 80
+
+                    # 29 gen 2025 sto cercando di risolvere il problema del trend laterale dopo un grande RIBASSO
+
 
 
 
                 # 12 set 2024 cancellata r 1205 B NUOVA ERA A2 SOFT 1
+
+
 
                 
 
@@ -14881,8 +14919,6 @@ class maddog:
 
                     and deviation_ma100_sopra_ma300 > -0.60
                     and deviation_ma200_sopra_ma300 > -0.60
-                   
-                    
                     
                     and macd > -60
                     and macd_differenza_2_min_ago > -1.50
