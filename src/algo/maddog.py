@@ -7026,8 +7026,10 @@ class maddog:
                     # 28 apr 2023  5-50 da 5-100 con aggiunta macd >= 2 min ago
 
 
-                elif (  
-                    ma450_last > ma450_720_min_ago
+                elif (
+                    ma3_last > ma10_last
+                    and ma450_last > ma450_720_min_ago
+
                     and ma100_last < ma100_90_min_ago
                     and ma200_last < ma200_20_min_ago
                     and ma300_last < ma450_last
@@ -7056,14 +7058,16 @@ class maddog:
                     action = "buy"
                     percentage = 90
 
-                    # 29 gen 2025 e' andata bene 
+                    # 29 gen 2025 e' andata bene !
                     # 29 gen 2025 sto cercando di risolvere il problema del trend laterale dopo un grande RIALZO
                     # 29 gen 2025 tolta and ma2_last >= ma2_2_min_ago
 
 
 
-                elif (  
-                    ma450_last > ma450_720_min_ago
+                elif (
+                    ma3_last > ma10_last
+                    and ma450_last > ma450_720_min_ago
+
                     and ma100_last < ma100_90_min_ago
                     and ma200_last < ma200_20_min_ago
                     and ma300_last < ma450_last
@@ -7099,7 +7103,7 @@ class maddog:
                     #  7 ott 2024 aggiunta and deviation_ma5_sopra_o_sotto_ma100 < -0.15
                     # 15 ott 2024 entra il CANO STAF !
 
-                    # 29 gen 2025 e' andata bene 
+                    # 29 gen 2025 e' andata bene !
                     # 29 gen 2025 sto cercando di risolvere il problema del trend laterale dopo un grande RIBASSO
                
                 
@@ -11908,10 +11912,41 @@ class maddog:
                     # 18 nov 2022 5-28 0.11
                     # 11 gen 2023 5-28 a 0.10 da 0.11
                     # 11 gen 2023 3-10 a 0.04 da 0.05
-                    
-                elif (
-                    
+
+
+
+                
+                elif (    
                     ma8_last > ma54_last
+                    and ma450_last > ma450_720_min_ago
+
+                    and ma450_last > ma450_480_min_ago
+                    
+                    and deviation_ma300_sopra_ma450 < 0.20
+                    and deviation_ma300_sopra_ma450 > -0.20
+                    
+                    
+                    and deviation_ma100_sopra_ma300 < 0.20
+                    and ma100_last < ma125_last
+                    
+                    and deviation_ma3_sopra_ma10 > -0.01
+                    and deviation_ma3_sopra_ma16 > -0.01
+                    
+                    and macd > -60
+                    and macd_differenza_2_min_ago > -2
+                ):
+                    buy = "BUY 2 LATERALE con ma450_last > ma450_720_min_ago and ma69_last > ma200_last - r 4685 BY 2A X"
+                    action = "buy"
+                    percentage = 80
+
+                    # 29 gen 2025 sto cercando di risolvere il problema del trend laterale dopo un grande RIALZO
+                    # 29 gen 2025 tolta and ma2_last >= ma2_2_min_ago
+
+
+                
+                elif (    
+                    ma8_last > ma54_last
+                    and ma450_last < ma450_720_min_ago
                     
                     and ma450_last > ma450_480_min_ago
                     and ma59_last >= ma59_2_min_ago
@@ -11931,7 +11966,7 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
                     and macd >= macd_2_min_ago
                 ):
-                    buy = "BUY 2A ribasso o laterale  and ma69_last > ma200_last - r 4685 BY 2A"
+                    buy = "BUY 2 LATERALE con ma450_last < ma450_720_min_ago and ma69_last > ma200_last - r 4685 BY 2A Y"
                     action = "buy"
                     percentage = 80
 
@@ -11944,7 +11979,8 @@ class maddog:
                     # 11 gen 2023 5-28 a 0.10 da 0.11
                     # 11 gen 2023 3-10 a 0.04 da 0.05
 
-
+                    # 29 gen 2025 sto cercando di risolvere il problema del trend laterale dopo un grande RIBASSO
+                    
 
                     
                 elif (    
