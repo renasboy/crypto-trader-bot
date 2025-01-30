@@ -3647,7 +3647,7 @@ class maddog:
 
                     # 29 gen 2025 sto cercando di risolvere il problema del trend laterale dopo un grande RIALZO
                     # 29 gen 2025 tolta and ma2_last >= ma2_2_min_ago
-                    #c29 gen 2025 3-20 da 3-54
+                    # 29 gen 2025 3-20 da 3-54
 
 
                 elif (    
@@ -7066,7 +7066,10 @@ class maddog:
 
                 elif (
                     ma3_last > ma10_last
+
                     and ma450_last > ma450_720_min_ago
+                    and deviation_ma300_sopra_ma450 < 0.085
+                    and deviation_ma300_sopra_ma450 > -0.085
 
                     and ma100_last < ma100_90_min_ago
                     and ma200_last < ma200_20_min_ago
@@ -7099,7 +7102,7 @@ class maddog:
                     # 29 gen 2025 e' andata bene !
                     # 29 gen 2025 sto cercando di risolvere il problema del trend laterale dopo un grande RIALZO
                     # 29 gen 2025 tolta and ma2_last >= ma2_2_min_ago
-
+                    # 30 gen 2025 nel corridoio 300-450 puo' comprare prima
 
 
                 elif (
@@ -14940,8 +14943,10 @@ class maddog:
 
                 elif (
                     ma3_last > ma20_last
-                    and ma450_last > ma450_720_min_ago
 
+                    and ma450_last > ma450_720_min_ago
+                    and deviation_ma300_sopra_ma450 < 0.085
+                    and deviation_ma300_sopra_ma450 > -0.085
 
                     and ma100_last > ma100_120_min_ago
                     and ma100_last > ma300_last
@@ -14968,14 +14973,14 @@ class maddog:
                     # 15 nov 2024 se 100>300 anticipo ndecchia
                     # 29 gen 2025 sto cercando di risolvere il problema del trend laterale dopo un grande RIALZO
                     # 29 gen 2025 tolta and ma2_last >= ma2_2_min_ago
-
+                    # 30 gen 2025 nel corridoio 300-450 puo' comprare prima
 
 
                 elif (
                     ma3_last > ma20_last
+
                     and ma450_last < ma450_720_min_ago
-
-
+                    
                     and ma100_last > ma100_120_min_ago
                     and ma100_last > ma300_last
 
@@ -14983,16 +14988,15 @@ class maddog:
                     and ma200_last < ma200_120_min_ago
                     and ma300_last < ma300_120_min_ago
 
-                    and ma10_last > ma20_last
                     and deviation_ma3_sopra_ma10 > 0.01
                     and deviation_ma5_sopra_ma28 > -0.03
 
                     and deviation_ma100_sopra_ma300 > -0.60
                     and deviation_ma200_sopra_ma300 > -0.60
                    
-                    and ma2_last >= ma2_2_min_ago
-                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.010
-                    and macd > -40
+                    
+                    
+                    and macd > -60
                     and macd_differenza_2_min_ago > -1.50
                 ):
                
@@ -15038,6 +15042,11 @@ class maddog:
 
                 elif (
                     ma3_last > ma20_last
+
+                    and ma450_last < ma450_720_min_ago
+                    and deviation_ma300_sopra_ma450 < 0.085
+                    and deviation_ma300_sopra_ma450 > -0.085
+
                     and ma100_last < ma100_60_min_ago
 
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.10
@@ -15048,24 +15057,25 @@ class maddog:
                     and ma200_last < ma200_120_min_ago
                     and ma300_last < ma300_120_min_ago
 
-                    and ma10_last > ma20_last
-                    and deviation_ma3_sopra_ma10 > 0.08
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
                     and deviation_ma5_sopra_ma28 > -0.03
 
                     and deviation_ma100_sopra_ma300 > -0.60
                     and deviation_ma200_sopra_ma300 > -0.60
                     
-                    and ma2_last >= ma2_2_min_ago
-                    
-                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.010
+                    and macd > -60
                     and macd_differenza_2_min_ago > -1.25
                 ):
                
-                    buy = "BUY 2 con 3-20 che ci riprova quando se ne va lateralmente > crollo CON 10>20 E 100 < 100 60 min + OSSO - r 5445 A2 y"
+                    buy = "BUY 2 con 3-20 che ci riprova quando se ne va lateralmente > crollo CON 10>20 E 100 < 100 60 min + OSSO - r 5445 A2 Y"
                     action = "buy"
                     percentage = 80
 
                     # 15 ott 2024 SE 100<100 60 min ago + OSSO
+                    # 29 gen 205 st cercando di risolvere il problema del trend laterale dopo un grande RIALZO
+                    # 30 gen 2025 nel corridoio 300-450 puo' comprare prima
+
 
 
                 elif (
@@ -19493,15 +19503,15 @@ class maddog:
 
                 elif (
                     ma3_last > ma13_last
-                    and ma450_last > ma450_720_min_ago
 
-                    and ma100_last > ma200_last
+                    and ma450_last > ma450_720_min_ago
+                    and deviation_ma300_sopra_ma450 < 0.085
+                    and deviation_ma300_sopra_ma450 > -0.085
+
                     and ma200_last > ma200_60_min_ago
 
                     and ma3_last > ma7_last
                     
-                    and deviation_ma4_sopra_ma25 > -0.05
-
                     and macd > -60
                     and macd_differenza_2_min_ago > -1.50
                 ):
@@ -19511,7 +19521,7 @@ class maddog:
 
                     # 29 gen 2025 sto cercando di risolvere il problema del trend laterale dopo un grande RIALZO
                     # 29 gen 2025 cancellato and ma2_last > ma2_2_min_ago e anticipato ndecchiecella
-
+                    # 30 gen 2025 nel corridoio 300-450 puo' comprare prima
 
 
                 elif (
@@ -23159,24 +23169,24 @@ class maddog:
 
                 
                 elif (    
-                    ma4_last > ma20_last
+                    ma3_last > ma20_last
+
                     and ma450_last > ma450_720_min_ago
+                    and deviation_ma300_sopra_ma450 < 0.085
+                    and deviation_ma300_sopra_ma450 > -0.085
 
                     and ma450_last > ma450_480_min_ago
-                    and ma100_last > ma100_10_min_ago
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
-                    and deviation_ma5_sopra_o_sotto_ma100 > -0.40
-                   
                     
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.13
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.40
                     
                     and deviation_ma100_sopra_ma300 < 0.27
                     and deviation_ma100_sopra_ma300 > -0.27
                     
-                    and deviation_ma3_sopra_ma10 > 0.05
+                    and deviation_ma3_sopra_ma10 > 0.01
                     and deviation_ma5_sopra_ma28 > -0.02
                   
                     and ma3_last > ma13_last
-                    and ma4_last > ma9_last
                     
                     and macd > -60
                     and macd_differenza_2_min_ago > -2
@@ -23187,7 +23197,7 @@ class maddog:
 
                     # 29 gen 2025 sto cercando di risolvere il problema del trend laterale dopo un grande RIALZO
                     # 29 gen 2025 tolta and ma2_last >= ma2_2_min_ago
-                    
+                    # 30 gen 2025 nel corridoio 300-450 puo' comprare prima
 
                 
                 elif (    
@@ -25286,9 +25296,10 @@ class maddog:
 
                 elif (    
                     ma3_last > ma20_last
+
                     and ma450_last > ma450_720_min_ago
-
-
+                    and deviation_ma300_sopra_ma450 < 0.085
+                    and deviation_ma300_sopra_ma450 > -0.085
 
                     and ma39_last < ma39_20_min_ago
                     and deviation_ma39 < -0.17
@@ -25307,7 +25318,7 @@ class maddog:
                     and ma3_last > ma5_last
                     
                     
-                    and macd > -40
+                    and macd > -60
                     and macd_differenza_2_min_ago > -3.25
                 
                 ):
@@ -25318,15 +25329,13 @@ class maddog:
                     # 29 gen 2025 INCOMINCIO A RISOLVERE IL PROBLEMA DEL TREND LATERALE dopo un grande RIALZO !
                     # 29 gen 2025 AGGIUNTA and ma450_last > ma450_720_min_ago
                     # 29 gen 2025 tolto and ma2_last > ma2_2_min_ago
-
+                    # 30 gen 2025 IN QUEL CORRIDOIO 300-450 posso comprare prima
 
 
                 elif (    
                     ma3_last > ma20_last
                     and ma450_last < ma450_720_min_ago
-
-
-
+                    
                     and ma39_last < ma39_20_min_ago
                     and deviation_ma39 < -0.17
 
@@ -25866,8 +25875,10 @@ class maddog:
         
                 elif (
                     ma50_last < ma50_2_min_ago
-                    and ma450_last > ma450_720_min_ago
 
+                    and ma450_last > ma450_720_min_ago
+                    and deviation_ma300_sopra_ma450 < 0.085
+                    and deviation_ma300_sopra_ma450 > -0.085
                     
                     and ma300_last > ma300_301_min_ago
                     and ma100_last > ma300_last
@@ -25891,7 +25902,7 @@ class maddog:
 
                     # 29 gen 2025 and ma450_last > ma450_720_min_ago (problema trend laterale dopo un grande RIALZO)
                     # 29 gen 2025 tolto and ma2_last > ma2_2_min_ago
-
+                    # 30 gen 2025 IN QUEL CORRIDOIO 300-450 posso comprare prima
 
 
                 elif (
@@ -26087,7 +26098,10 @@ class maddog:
 
                 elif (
                     ma50_last >= ma50_2_min_ago
+
                     and ma450_last > ma450_720_min_ago
+                    and deviation_ma300_sopra_ma450 < 0.085
+                    and deviation_ma300_sopra_ma450 > -0.085
 
                     and ma100_last >= ma100_60_min_ago
                     and (ma3_prev < ma90_prev and ma3_last > ma90_last)
@@ -26095,19 +26109,17 @@ class maddog:
                     and ma300_last < ma450_last
                     
                     and ma28_last < ma28_30_min_ago
-                    and ma78_last > ma150_last
+                    
                     
                     and deviation_ma3_sopra_ma10 > 0.01
-                    and deviation_ma3_sopra_ma16 > 0.077
+                    and deviation_ma3_sopra_ma16 > -0.02
                     
                     and ma3_last > ma13_last
-                    and ma4_last > ma9_last
-                    and ma6_last > ma15_last
                     
                     and macd > -60
                     and macd_differenza_2_min_ago > -1.50
                 ):
-                    buy = "BUY 5 con ma450_last > ma450_720_min_ago e ma50> e 50>100 e ma28_last < ma28_30_min_ago e 5-28 > 0.17 - r 7203 B1 X"
+                    buy = "BUY 5 con ma450_last > ma450_720_min_ago e ma50> e 50>100 e ma28_last < ma28_30_min_ago - r 7203 B1 X"
                     action = "buy"
                     percentage = 70
                     
@@ -26117,7 +26129,7 @@ class maddog:
                     # 29 gen 2025 tolto and ma2_last >= ma2_2_min_ago
                     # 29 gen 2025 aggiunto and macd > -60 e and macd_differenza_2_min_ago > -1.50
                     # 29 gen 2025 and ma7_last > ma25_last
-
+                    # 30 gen 2025 nel corridoio 300-450 puo' comprare prima
                        
                 elif (
                     ma50_last >= ma50_2_min_ago
@@ -26944,8 +26956,10 @@ class maddog:
 
                 elif (
                     ma69_last < ma69_2_min_ago
-                    and ma450_last > ma450_720_min_ago
 
+                    and ma450_last > ma450_720_min_ago
+                    and deviation_ma300_sopra_ma450 < 0.085
+                    and deviation_ma300_sopra_ma450 > -0.085
 
                     and ma39_last > ma39_20_min_ago
 
@@ -26971,7 +26985,8 @@ class maddog:
                     # 29 gen 2025 incomincio a risolvere il problema del trend laterale dopo un grande RIALZO
                     # 29 gen 2025 AGGIUNTA and ma450_last > ma450_720_min_ago
                     # 29 gen 2025 tolto and ma2_last > ma2_2_min_ago
-                    
+                    # 30 gen 2025 nel corridoio 300-450 puo' comprare prima
+
 
                 elif (
                     ma69_last < ma69_2_min_ago
@@ -27436,7 +27451,10 @@ class maddog:
 
                 elif (
                     ma3_last > ma8_last
+
                     and ma450_last > ma450_720_min_ago
+                    and deviation_ma300_sopra_ma450 < 0.085
+                    and deviation_ma300_sopra_ma450 > -0.085
 
                     and ma450_last > ma450_360_min_ago
                     and ma78_last > ma150_last
@@ -27444,8 +27462,6 @@ class maddog:
                     and ma300_last < ma450_last
 
                     and deviation_ma3_sopra_ma10 > 0.07
-                    
-                    and ma2_last > ma2_2_min_ago
                     
                 ):
                     buy = "BUY 5C RIVOLUZIONARIO con ma450 > ma450 720 min ago e ma300_last < ma450_last - r 7441 B1 X"
@@ -27455,7 +27471,7 @@ class maddog:
                     #  9 nov 2024 se 450 sale da 6 ore non devi spezzare la catena !
                     # 29 gen 2025 comincio a risolvere il problema del trend laterale dopo un grande RIALZO
                     # 29 gen 2025 ma questa e' andata bene
-
+                    # 30 gen 2025 nel corridoio 300-450 puo' comprare prima
 
                 elif (
                     ma3_last > ma8_last
@@ -28738,15 +28754,17 @@ class maddog:
 
                 elif (        
                     ma3_last >= ma30_last
+
                     and ma450_last > ma450_720_min_ago
+                    and deviation_ma300_sopra_ma450 < 0.085
+                    and deviation_ma300_sopra_ma450 > -0.085
 
-
-                    and ma100_last > ma100_10_min_ago
+                    
                     and deviation_ma5_sopra_o_sotto_ma100 > -0.57
                     
-                    and ma2_differenza_2_min_ago > 8
-                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
-                    and ma3_differenza_2_min_ago > 7
+                    
+                    
+                    
                     
                     and ma100_last < ma100_30_min_ago
                     and ma450_last > ma450_360_min_ago
@@ -28756,9 +28774,9 @@ class maddog:
                     and deviation_ma39_sotto_ma200 < -0.01
                     and deviation_ma300_sopra_ma450 > -0.50
                     
-                    and deviation_ma3_sopra_ma10 > 0.027
-                    and deviation_ma3_sopra_ma16 > -0.01
-                    and deviation_ma3_sopra_ma18 > -0.02
+                    and deviation_ma3_sopra_ma10 > -0.01
+                    and deviation_ma3_sopra_ma16 > -0.02
+                    and deviation_ma3_sopra_ma18 > -0.03
                     
                     and ma2_last > ma5_last
                     and macd > -60
@@ -28772,7 +28790,7 @@ class maddog:
                     # 29 gen 2025 comincio a risolvere il problema del trend laterale dopo un grande RIALZO
                     # 29 gen 2025 and ma450_last > ma450_720_min_ago
                     # 29 gen 2025 tolto and ma2_last >= ma2_2_min_ago
-
+                    # 30 gen 2025 nel corridoio 300-450 puo' comprare prima
 
 
                 elif (        
