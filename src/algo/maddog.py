@@ -151,7 +151,7 @@ class maddog:
         ma20_30_min_ago = self.algo_helper.ma_minutes_ago(20, 30)
         ma20_60_min_ago = self.algo_helper.ma_minutes_ago(20, 60)
         ma25_2_min_ago = self.algo_helper.ma_minutes_ago(25, 2)
-        
+        ma25_60_min_ago = self.algo_helper.ma_minutes_ago(25, 60)
         ma28_2_min_ago = self.algo_helper.ma_minutes_ago(28, 2)
         ma28_10_min_ago = self.algo_helper.ma_minutes_ago(28, 10)
         ma28_20_min_ago = self.algo_helper.ma_minutes_ago(28, 20)
@@ -20765,10 +20765,35 @@ class maddog:
                     
                     
                 # BUY 3 29 ago 2022 > 120 min di ribasso
-                
+
+                elif (
+                    
+                    ma8_last > ma54_last
+                    and ma25_last > ma25_60_min_ago
+                    and deviation_ma5_sotto_ma300 > -0.40
+                    
+                    and ma100_last < ma100_120_min_ago
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_30_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and deviation_ma3_sopra_ma16 > 0.01
+                    and deviation_ma5_sopra_ma28 > 0.01
+                    
+                    and macd > -60
+                ):
+                    buy = "BUY 3 29 ago 2022 > 120 min di ribasso AND 8>78 - r 6570 Ax"
+                    action = "buy"
+                    percentage = 90
+
+                    # 31 gen 2025 se and ma25_last > ma25_60_min_ago anticipato ndecchiecella
+
                 elif (
                     
                     ma8_last > ma78_last
+                    and ma25_last < ma25_60_min_ago
                     and deviation_ma5_sotto_ma300 > -0.40
                     
                     and ma100_last < ma100_120_min_ago
@@ -20784,15 +20809,16 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
                     and macd > macd_2_min_ago
                 ):
-                    buy = "BUY 3 29 ago 2022 > 120 min di ribasso AND 8>78 - r 6570 A"
+                    buy = "BUY 3 29 ago 2022 > 120 min di ribasso AND 8>78 - r 6570 Ay"
                     action = "buy"
                     percentage = 90
                     
                     # 14 set 2022 18-78 da 18-100
-                    #  8 nov 2022 300 con 120 min faceva arrivare tardi il buy. cosi' ho ridotto a 30 min. (non era la 18-78 che faceva arrivare tardi il buy)
+                    #  8 nov 2022 300 con 120 min faceva arrivare tardi il buy. 
+                    #  8 nov 2022 cosi' ho ridotto a 30 min. (non era la 18-78 che faceva arrivare tardi il buy)
                     # 17 mar 2023 aggiunta 3-16 >0.12
                     # 14 set 2023 8-78 da 18-78
-                    
+                    # 31 gen 2025 se and ma25_last < ma25_60_min_ago ok cosi'
                     
                 # BUY 3 29 ago 2022 > 120 min di ribasso
                 
@@ -46962,7 +46988,7 @@ class maddog:
                 and ma50_last < ma50_2_min_ago
                 
                 and deviation_ma39 < 0.08
-                and deviation_sell < -0.05
+                and deviation_sell < -0.06
                 
                 and deviation_ma100_sopra_ma300 < 0.40
                 and deviation_ma5_sotto_ma200 > -0.80
@@ -46973,13 +46999,15 @@ class maddog:
                 
                 and macd_differenza_3_min_ago < -1.25
             ):
-                sell = "SELL CS con ma10>ma10 2 min ago CON 50<59 e dev 3-39 < 0.08 e dev_sell < -0.05 e ma50< e diff macd < -1.25 - r 16047 A1 Y2 XX"
+                sell = "SELL CS con ma10>ma10 2 min ago CON 50<59 e dev 3-39 < 0.08 e dev_sell < -0.06 e ma50< e diff macd < -1.25 - r 16047 A1 Y2 XX"
                 action = "sell"
                 
                 # 22 dic 2023 aggiunta and ma10_last > ma10_2_min_ago (precedentemente ha venduto mentre saliva)
                 #  8 gen 2024 deviation_sell a -0.04 da 0.02
                 # 31 gen 2025 sopra il limite inferiore del corridoio 300-450 aumenta la tolleranza !
                 # 31 gen 2025 and deviation_sell < -0.05 da -0.04
+                # 31 gen 2025 and deviation_sell < -0.06 da -0.05
+                # 31 gen 2025 in futuro potrai mettere se ma100>ma300 vende quando ma100 comincia a curvare verso il basso 
 
 
             elif (
