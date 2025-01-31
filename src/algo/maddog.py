@@ -36009,12 +36009,14 @@ class maddog:
                     
                     elif (
                         ma50_last < ma50_2_min_ago
+                        and ma5_last <= ma40_last
+
                         and ma100_last < ma100_10_min_ago
                         
                         and ma20_last <= ma40_last
                         and deviation_ma5_sotto_ma300 < 0.50
                         and deviation_ma39 < 0.05
-                        and deviation_sell < 0.03
+                        and deviation_sell < 0.04
                         
                         and ma2_last < ma2_2_min_ago
                         and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.018
@@ -36035,6 +36037,9 @@ class maddog:
                         # 24 dic 2023 aggiunta and macd_differenza_2_min_ago < -0.50
                         # 24 dic 2023 con 20<=40 deviation_sell < -0.12
                         # 14 gen 2024 con ma 100< 100 10 min ago and deviation_sell < 0.03 da < -0.12
+                        # 31 gen 2025 aggiunta and ma5_last <= ma40_last
+
+
                   
                     elif (
                         ma50_last < ma50_2_min_ago
