@@ -47852,9 +47852,42 @@ class maddog:
                 # 19 gen 2025 dev sell a -0.01 da 0.01
 
 
-            elif (
-                
+
+            elif (    
                 ma50_last < ma50_2_min_ago
+
+                and deviation_ma300_sopra_ma450 > -0.085
+
+                and deviation_ma5_sopra_o_sotto_ma100 > -0.25
+                and ma20_last <= ma20_2_min_ago
+                
+                and deviation_ma39 < 0.08
+                and deviation_sell < -0.01
+                
+                and deviation_ma5_sopra_ma200 < -0.30
+                and deviation_ma5_sotto_ma300 < -0.30
+                and deviation_ma5_sotto_ma450 < -0.30
+                
+                and deviation_ma100_sopra_ma300 < 0.40
+                
+                and ma2_last < ma2_2_min_ago 
+                and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.018
+                and macd < 13
+                and macd_differenza_2_min_ago < -3
+            ):
+                sell = "SELL NCS con ma20 <= ma20 2 min ago e dev 3-39 < 0.08 e dev_sell < -0.02 e ma50 < e diff macd - r 16047 A3 Y1 A"
+                action = "sell"
+
+                # 31 gen 2025 sopra il limite inferiore del corridoio 300-450 aumenta la tolleranza !
+                # 31 gen 2025 and deviation_sell < -0.02 da -0.01
+
+
+
+            elif (    
+                ma50_last < ma50_2_min_ago
+
+                and deviation_ma300_sopra_ma450 < -0.085
+
                 and deviation_ma5_sopra_o_sotto_ma100 > -0.25
                 and ma20_last <= ma20_2_min_ago
                 
@@ -47872,7 +47905,7 @@ class maddog:
                 and macd < 13
                 and macd_differenza_2_min_ago < -3
             ):
-                sell = "SELL NCS con ma20 <= ma20 2 min ago e dev 3-39 < 0.10 e dev_sell < -0.01 e ma50 < e diff macd - r 16047 A3 Y1"
+                sell = "SELL NCS con ma20 <= ma20 2 min ago e dev 3-39 < 0.10 e dev_sell < -0.01 e ma50 < e diff macd - r 16047 A3 Y1 B"
                 action = "sell"
                 
                 # 30 nov 2023 dev 39 a 0.10 da 0.03
@@ -47881,6 +47914,8 @@ class maddog:
                 # MINGHIA il 26 dic ha fatto -0.73 ! e ho fatto delle modifiche meravigliose
                 # 29 dic 2023 and macd a 13 da 7
                 # 19 gen 2025 dev sell a -0.01 da 0.05
+                # 31 gen 2025 stiamo sotto al limite inferiore del corridoio 300-450 per adesso il dev sell va bene cosi'.
+
 
 
             elif (
@@ -47903,7 +47938,7 @@ class maddog:
                 and macd < 13
                 and macd_differenza_2_min_ago < -3
             ):
-                sell = "SELL nuova condizione speciale CON ma20 <= ma20 2 min ago e dev 3-39 < 0.10 e dev_sell < 0.05 - con ma50 < and diff ma2 e diff macd - r 16047 A3 Y2a"
+                sell = "SELL NCS con ma20 <= ma20 2 min ago e dev 3-39 < 0.10 e dev_sell < 0.05 e ma50 < e diff ma2 e diff macd - r 16047 A3 Y2a"
                 action = "sell"
                 
                 # 30 nov 2023 dev 39 a 0.10 da 0.03
