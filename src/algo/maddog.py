@@ -3622,13 +3622,13 @@ class maddog:
 
                     and ma300_last < ma300_180_min_ago
                     and ma100_last < ma100_10_min_ago
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
 
                     and deviation_ma250_sopra_ma300 < 0.12
                     and deviation_ma250_sopra_ma300 > -0.12
                     
-                    and deviation_ma300_sopra_ma450 < 0.18
-                    and deviation_ma300_sopra_ma450 > -0.18
+                    and deviation_ma300_sopra_ma450 < 0.085
+                    and deviation_ma300_sopra_ma450 > -0.085
                     
                     and deviation_ma100_sopra_ma300 < 0.29
                     and deviation_ma100_sopra_ma300 > -0.29
@@ -3639,7 +3639,6 @@ class maddog:
                     and macd > -60
                     and macd_differenza_2_min_ago > -1.50
                     
-                    and ma2_differenza_ma5 > 10
                 ):
                     buy = "BUY 1 CONSOLIDATO TREND LATERALE con ma450_last > ma450_720_min_ago MA con ma300 < 3 ore - r 1205 B NUOVA ERA A1 SOFT X"
                     action = "buy"
@@ -3648,7 +3647,7 @@ class maddog:
                     # 29 gen 2025 sto cercando di risolvere il problema del trend laterale dopo un grande RIALZO
                     # 29 gen 2025 tolta and ma2_last >= ma2_2_min_ago
                     # 29 gen 2025 3-20 da 3-54
-
+                    # 31 gen 2025 CONSOLIDATO TREND LATERALE !
 
                 elif (    
                     ma3_last > ma54_last
