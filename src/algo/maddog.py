@@ -27414,12 +27414,33 @@ class maddog:
                     # 27 gen 2025 quando e' giorno tolto and ma2_last >= ma2_2_min_ago
 
 
+
+
+
+
+
                 elif (
                     ma200_last >= ma200_120_min_ago
                     and ma300_last >= ma300_60_min_ago
-
                     and delta_1 > delta_2
-                    and deviation_ma200_sotto_ma300 > -0.07
+
+                    and ma39_last < ma100_last
+                    and deviation_ma100_sopra_ma300 < -0.07
+                    and deviation_ma25_sotto_ma300 < -0.20
+
+                    and deviation_ma300_sopra_ma450 < -0.072
+                    and deviation_ma50_sotto_ma300 < -0.20
+
+                    and deviation_ma39 < 0.01
+                    and deviation_ma3_sotto_ma50 < 0.01
+
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.03
+                    and deviation_ma5_sotto_ma200 < -0.05
+                    and deviation_ma5_sotto_ma300 < -0.07
+                    and deviation_ma5_sotto_ma450 < -0.09
+
+
+                    and deviation_ma200_sotto_ma300 > -0.20
                     
                     and ma20_last <= ma20_2_min_ago
                     and ma5_last > ma10_last
@@ -27428,12 +27449,12 @@ class maddog:
                     and deviation_ma3_sopra_ma10 > 0.01
                     and deviation_ma5_sopra_ma28 > -0.12
                     
-                    and ma3_last > ma15_last
-                    and ma3_last > ma8_last
                     
-                    and ma2_last > ma2_2_min_ago
+                    and ma3_last > ma8_last
+                    and macd > -60
+                    
                 ):   
-                    buy = "BUY 5 che NON SPEZZA LA CATENA - NOTTE ! - SE ma200> 120 min con 3-10 > 0.01 e 5-28 > -0.12 - r 7410 B"
+                    buy = "BUY 5 che NON SPEZZA LA CATENA - NOTTE ! - con OSSO - r 7410 B"
                     action = "buy"
                     percentage = 70
                     
