@@ -126,6 +126,7 @@ class maddog:
         ma5_10_min_ago = self.algo_helper.ma_minutes_ago(5, 10)
         ma5_11_min_ago = self.algo_helper.ma_minutes_ago(5, 11)
         ma5_12_min_ago = self.algo_helper.ma_minutes_ago(5, 12)
+        ma5_22_min_ago = self.algo_helper.ma_minutes_ago(5, 22)
         ma5_30_min_ago = self.algo_helper.ma_minutes_ago(5, 30)
         ma5_50_min_ago = self.algo_helper.ma_minutes_ago(5, 50)
         ma5_60_min_ago = self.algo_helper.ma_minutes_ago(5, 60)
@@ -47858,9 +47859,41 @@ class maddog:
                 # 14 ott 2024 se 39>100 dev_sell < -0.02 da < 0.01
 
 
+            elif (    
+                ma50_last < ma50_2_min_ago
+                and ma5_last > ma5_22_min_ago 
+
+                and ma39_last < ma50_last
+                and ma20_last > ma20_2_min_ago
+                and ma5_last < ma5_2_min_ago
+                
+                and deviation_ma39 < 0.08
+                and deviation_sell < -0.03
+                
+                
+                and deviation_ma5_sotto_ma200 > -0.60
+                and deviation_ma100_sopra_ma300 < 0.40
+                
+                and ma2_last < ma2_2_min_ago 
+                and macd < macd_2_min_ago
+                and macd < -16
+                and macd_differenza_2_min_ago < -3
+            ):
+                sell = "SELL NCS CON ma20 > ma20 2 min ago e dev 3-39 < 0.10 e dev_sell < 0.01 E ma50 > e ma5 sotto ma200 > -0.60 - r 16047 A3 x2 B1"
+                action = "sell"
+                
+                # 30 nov 2023 dev 39 a 0.10 da 0.03
+                # 30 nov 2023 dev sell a -0.05 da -0.14
+                #  5 dic 2023 dev sell a 0.05 da -0.05
+                # 19 gen 2025 dev sell a -0.01 da 0.01
+                # 31 gen 2025 se ma5 > ma5 di 22 min ago allora aumento la tolleranza
+                # 31 gen 2025 dev sell a -0.03 da -0.01
+
 
             elif (    
                 ma50_last < ma50_2_min_ago
+                and ma5_last < ma5_22_min_ago 
+
                 and ma39_last < ma50_last
                 and ma20_last > ma20_2_min_ago
                 and ma5_last < ma5_2_min_ago
@@ -47877,7 +47910,7 @@ class maddog:
                 and macd < -16
                 and macd_differenza_2_min_ago < -3
             ):
-                sell = "SELL NCS CON ma20 > ma20 2 min ago e dev 3-39 < 0.10 e dev_sell < 0.01 E ma50 > e ma5 sotto ma200 > -0.60 - r 16047 A3x2B"
+                sell = "SELL NCS CON ma20 > ma20 2 min ago e dev 3-39 < 0.10 e dev_sell < 0.01 E ma50 > e ma5 sotto ma200 > -0.60 - r 16047 A3 x2 B2"
                 action = "sell"
                 
                 # 30 nov 2023 dev 39 a 0.10 da 0.03
