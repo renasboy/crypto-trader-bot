@@ -46918,9 +46918,42 @@ class maddog:
                 
                 #  8 mar 2024 se ma450_last < ma450_360_min_ago dev_sell a -0.005
 
-            
+
             elif (
                 ma78_last > ma78_120_min_ago
+                and deviation_ma300_sopra_ma450 > -0.085
+
+                and ma10_last > ma10_2_min_ago
+                and ma2_last < ma8_last
+                
+                and ma50_last < ma59_last
+                and ma50_last < ma50_2_min_ago
+                
+                and deviation_ma39 < 0.08
+                and deviation_sell < -0.05
+                
+                and deviation_ma100_sopra_ma300 < 0.40
+                and deviation_ma5_sotto_ma200 > -0.80
+                
+                and ma2_last < ma2_2_min_ago
+                and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.018
+                and ma2_differenza_2_min_ago < -8
+                
+                and macd_differenza_3_min_ago < -1.25
+            ):
+                sell = "SELL CS con ma10>ma10 2 min ago CON 50<59 e dev 3-39 < 0.08 e dev_sell < -0.05 e ma50< e diff macd < -1.25 - r 16047 A1 Y2 XX"
+                action = "sell"
+                
+                # 22 dic 2023 aggiunta and ma10_last > ma10_2_min_ago (precedentemente ha venduto mentre saliva)
+                #  8 gen 2024 deviation_sell a -0.04 da 0.02
+                # 31 gen 2025 sopra il limite inferiore del corridoio 300-450 aumenta la tolleranza !
+                # 31 gen 2025 and deviation_sell < -0.05 da -0.04
+
+
+            elif (
+                ma78_last > ma78_120_min_ago
+                and deviation_ma300_sopra_ma450 < -0.085
+
                 and ma10_last > ma10_2_min_ago
                 and ma2_last < ma8_last
                 
@@ -46939,11 +46972,13 @@ class maddog:
                 
                 and macd_differenza_3_min_ago < -1.25
             ):
-                sell = "SELL CS con ma10>ma10 2 min ago CON 50<59 e dev 3-39 < 0.09 e dev_sell < -0.04 e ma50< e macd_diff_3_min_ago < -0.20 e diff macd < -1.25 - r 16047 A1 Y2 X"
+                sell = "SELL CS con ma10>ma10 2 min ago CON 50<59 e dev 3-39 < 0.09 e dev_sell < -0.04 e ma50< e diff macd < -1.25 - r 16047 A1 Y2 XY"
                 action = "sell"
                 
                 # 22 dic 2023 aggiunta and ma10_last > ma10_2_min_ago (precedentemente ha venduto mentre saliva)
                 #  8 gen 2024 deviation_sell a -0.04 da 0.02
+                # 31 gen 2025 sotto il limite inferiore del corridoio 300-450 la tolleranza per adesso resta uguale
+
             
 
             elif (
