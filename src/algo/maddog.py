@@ -30125,13 +30125,52 @@ class maddog:
                         action = "sell"
                         
                         # 12 feb 2024 se 10>20 and deviation_sell a -0.01 da 0.02
-                        # # 17 set 2024 dev_sell < -0.02 da <-0.01 
+                        # # 17 set 2024 dev_sell < -0.02 da <-0.01
+
+
 
                     elif (
                         ma78_last < ma78_120_min_ago
+
+                        and deviation_ma300_sopra_ma450 > -0.085
+
                         and ma300_last < ma300_301_min_ago
                         and ma10_last > ma30_last
                         and ma10_last < ma20_last
+
+                        and deviation_ma39 < 0.10
+                        and deviation_sell < -0.01
+                        
+                        and ma50_last <= ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 < 0.40
+                
+                        and deviation_ma5_sotto_ma200 > -0.90
+                
+                        and ma2_last <= ma2_2_min_ago 
+                        and macd < macd_2_min_ago
+                        and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.015
+                    ):
+                        sell = "SELL 1 (12-21 min) con ma300> 5 ore E dev 3-39 < 0.13 e dev_sell < 0.005 e ma50 < - r 8552 y1 x"
+                        action = "sell"
+                        
+                        # 25 ott 2023 and deviation_sell < -0.069 da < -0.06
+                        
+                        # 27 nov 2023 dev sell a 0.02 da -0.069
+                        # 27 nov 2023 dev 39 a 0.13 da 0.05 INCREDIBILE ! 3-39 STAVA A 0.13 ! quando doveva vendere ! nonno mario.
+                        # 11 dic 2023 aggiunta and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.015 che sarebbero 6 pts !
+                        # 21 feb 2024 se 10 > 30 aumento dev sell a 0.05 da 0.02
+                        # 31 gen 2025 se sta sopra il limite inferiore del corridoio 300-340 aumenta la dev sell a < -0.01 ! cazzo
+
+
+                    elif (
+                        ma78_last < ma78_120_min_ago
+
+                        and deviation_ma300_sopra_ma450 < -0.085
+
+                        and ma300_last < ma300_301_min_ago
+                        and ma10_last > ma30_last
+                        and ma10_last < ma20_last
+
                         and deviation_ma39 < 0.13
                         and deviation_sell < 0.005
                         
@@ -30144,7 +30183,7 @@ class maddog:
                         and macd < macd_2_min_ago
                         and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.015
                     ):
-                        sell = "SELL 1 (12-21 min) EX cond.spec. r 16047 B2 con ma300> 5 ore E dev 3-39 < 0.13 e dev_sell < 0.005 e ma50 < e ma5 sotto ma200 > -0.90 - r 8552 y1"
+                        sell = "SELL 1 (12-21 min) con ma300> 5 ore E dev 3-39 < 0.13 e dev_sell < 0.005 e ma50 < - r 8552 y1 y"
                         action = "sell"
                         
                         # 25 ott 2023 and deviation_sell < -0.069 da < -0.06
@@ -30153,6 +30192,8 @@ class maddog:
                         # 27 nov 2023 dev 39 a 0.13 da 0.05 INCREDIBILE ! 3-39 STAVA A 0.13 ! quando doveva vendere ! nonno mario.
                         # 11 dic 2023 aggiunta and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.015 che sarebbero 6 pts !
                         # 21 feb 2024 se 10 > 30 aumento dev sell a 0.05 da 0.02
+                        # 31 gen 2025 se sta SOTTO il limite inferiore del corridoio 300-340 dev sell a < 0.005
+
 
 
                     elif (
@@ -30172,7 +30213,7 @@ class maddog:
                         and macd < macd_2_min_ago
                         and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.015
                     ):
-                        sell = "SELL 1 (12-21 min) EX cond.spec. r 16047 B2 con ma300> 5 ore E dev 3-39 < 0.13 e dev_sell < 0.02 e ma50 < e ma5 sotto ma200 > -0.90 - r 8552 y2"
+                        sell = "SELL 1 (12-21 min) con ma300> 5 ore E dev 3-39 < 0.13 e dev_sell < 0.02 e ma50 < - r 8552 y2"
                         action = "sell"
                         
                         # 25 ott 2023 and deviation_sell < -0.069 da < -0.06
