@@ -49249,27 +49249,74 @@ class maddog:
                 #  2 ott 2024 CON ma10_last > ma30_last and deviation_crollo_24_aprile < -0.14 da < -0.13
 
 
+
+
+            
+
+
+
+
+
+
             elif (    
                 ma2_last <= ma4_last
-                and ma10_last < ma30_last
-
                 and ma300_last < ma300_301_min_ago
                 and ma2_last <= ma5_last
                 and deviation_crollo_24_aprile < -0.13
                 
                 and delta_1 > delta_2
-                and deviation_ma5_sotto_ma200 < -0.40
                 
+                and ma39_last < ma100_last
+                and deviation_ma5_sotto_ma200 < -1.50
+                and deviation_ma100_sopra_ma300 < -1.20
+                and deviation_ma25_sotto_ma300 < -1.80
+
                 and deviation_ma2_sopra_o_sotto_ma2_2_min_ago <= -0.015
                 and macd_differenza_2_min_ago < -0.50
                 
                 and macd > 1
             ): 
                 
-                sell = "SELL CS Bocelli - CROLLO IMPROVVISO E delta_1 > delta_2 e dev_crollo_24_aprile < -0.13 E ma10 < ma30 - r 16480 BYaB"
+                sell = "SELL CROLLO IMPROVVISO dev_crollo_24_aprile < -0.13 E dev_ma2 < -0.015 e diff macd - r 16480 BY AB1"
                 action = "sell"
 
                 #  8 mar 2024 con macd > 1 deviation_crollo_24_aprile < -0.13
+                #  3 feb 2025 questa e' andata benissimo su RCCR -0.29 mentre MADDOG HA FATTO -1.40 !
+                #  3 feb 2025 io ho imposto che deve entrare in azione solo quando la situazione si sta facendo critica.
+
+
+            elif (    
+                ma78_last < ma300_last
+                and (ma3_prev > ma10_prev and ma3_last < ma10_last)
+                and deviation_crollo_24_aprile < -0.13
+
+                and ma10_last < ma30_last
+                
+                and deviation_ma39 < -1.00
+                and deviation_buy_crollo_1 < -1.61
+                and deviation_ma25_sotto_ma300 < -2.00
+                
+                and delta_1 > delta_2
+                
+    
+            ): 
+                
+                sell = "SELL DURANTE RIBASSO FERRARI con INCROCIO 3-10 E delta_1 > delta_2 e dev_crollo_24_aprile < -0.13 - r 16480 BY AB2"
+                action = "sell"
+
+                #  8 mar 2024 con macd > 1 deviation_crollo_24_aprile < -0.13
+                #  3 feb 2025 deviation_crollo_24_aprile = ma2_last / last_trade_price !
+                #  3 feb 2025 si attiva se deviation_ma39 < -1.00
+                #  3 feb 2025 si attiva se deviation_buy_crollo_1 < -1.61
+                #  3 feb 2025 si attiva se deviation_ma25_sotto_ma300 < -2.00
+                #  3 feb 2025 SELL r 16480 BYa de RCCR E' ANDATA BENISSIMO -0.29% maddog ha fatto -1.40 !
+
+
+
+
+
+
+
 
 
 
