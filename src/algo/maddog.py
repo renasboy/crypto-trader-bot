@@ -39751,15 +39751,33 @@ class maddog:
                     
                     
                     
-                    
                     elif (
                         ma50_last >= ma50_2_min_ago
+                        and ma25_last > ma100_last
+
+                        and ma5_last < ma49_last
+                        and deviation_sell > 0.25 and deviation_sell < 0.54
+                        and ma2_last < ma2_2_min_ago
+                       
+                    ):
+                        sell = "SELL 3 (12-21 min) con ma50> and 5-49 and deviation_sell 0.25-0.54 - FINTA ALLA MARADONA - r 13209 x"
+                        action = "sell"
+                        
+                        # deviation_sell = ma3_last/last_trade_price
+                        #  3 feb 2025 5-49 da 5-25 se ma25_last > ma100_last
+
+
+
+                    elif (
+                        ma50_last >= ma50_2_min_ago
+                        and ma25_last < ma100_last
+
                         and ma5_last < ma25_last
                         and deviation_sell > 0.25 and deviation_sell < 0.54
                         and ma2_last < ma2_2_min_ago
                        
                     ):
-                        sell = "SELL 3 (12-21 min) con ma50 > and 5-25 and deviation_sell 0.25-0.54 - FINTA ALLA MARADONA - r 13209"
+                        sell = "SELL 3 (12-21 min) con ma50> and 5-25 and deviation_sell 0.25-0.54 - FINTA ALLA MARADONA - r 13209 y"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
