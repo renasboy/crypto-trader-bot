@@ -32128,16 +32128,18 @@ class maddog:
                     elif (
                         ma50_last > ma50_2_min_ago
                         and deviation_ma50_sotto_ma200 > 0.30
-                        and (ma3_prev > ma39_prev and ma3_last < ma39_last)
+                        and (ma3_prev > ma59_prev and ma3_last < ma59_last)
                         and deviation_sell > 1.50 and deviation_sell < 2.70
                         and ma2_last < ma2_2_min_ago
                     ):    
-                        sell = "SELL 1 da 50 a 90 min con ma50 > incrocio 3-33 and deviation_sell > 1.50 DOPPIO PASSO ALLA RONALDO se 50-200 > 0.30 - r 9559"
+                        sell = "SELL 1 (50-90 min) con ma50 > incrocio 3-59 and dev_sell > 1.50 DOPPIO PASSO RONALDO se 50-200 > 0.30 - r 9559"
                         action = "sell"
                         
                         # deviation_ma50_sotto_ma200 = 50/200 quindi non farti ingannare dalla parola sotto.
                         # 31 maggio 2022 3-39 da 3-33
-                        
+                        #  3 feb 2025 3-59 da 3-33 se deviation_ma50_sotto_ma200 > 0.30
+
+
                         
                     # SELL 1 da 50 a 90 min DOPPIO PASSO ALLA RONALDO 2 se 50-200 < 0.30 
                     
