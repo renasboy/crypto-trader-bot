@@ -9611,6 +9611,23 @@ class maddog:
                 
                 # BUY 1 CROLLO FERRARI ok - RCCR - questa condizione mi e' sembrata ben fatta !
 
+
+                elif (
+                    ma3_last > ma8_last
+                    and deviation_ma39 < -1.00
+                    and deviation_buy_crollo_1 < -1.61
+                    and deviation_ma25_sotto_ma300 < -2.00
+                    and ma78_last < ma300_last
+
+                ):
+                    buy = "BUY 1 CROLLO FERRARI senza sovrastrutture con 3-8 and macd > - modo 2 and ma78_last < ma300_last - r 3812"
+                    action = "buy"
+                    percentage = 80
+
+                    #  3 feb 2025 nuova condizione crollo ferrari senza sovrastrutture !
+
+
+
                 elif (
                     ma2_last > ma2_2_min_ago
                     and deviation_buy_crollo_1 < -1.61
@@ -9627,6 +9644,13 @@ class maddog:
                     # fondamentale aggiunta 3-10 perche' anche ferrari NE HA BISOGNO ma non 5-28 ! CHE COMINCIA AD ESSERE INAPPROPRIATA
                     # 27 giu 2022 3-10 0.155 NON MENO DI QUESTA PERDIO !
                     # 15 gen 2023 3-10 0.22
+
+
+
+
+
+
+
                     
                 # BUY 1 SUL SUPPORTO 300 !
           
@@ -13681,26 +13705,28 @@ class maddog:
                     # deviation_buy2 = ma8_last / ma50
 
 
-                
-                elif (
-                    ma4_last > ma11_last
-                    and deviation_buy_crollo_1 < -1.61
 
+                elif (
+                    ma3_last > ma8_last
+                    and deviation_ma39 < -1.00
+                    and deviation_buy_crollo_1 < -1.61
+                    and deviation_ma25_sotto_ma300 < -2.00
                     and ma78_last < ma300_last
 
-                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
-                    and macd_differenza_2_min_ago > -12
-
                 ):
-                    buy = "BUY 2 CROLLO FERRARI importato da BUY 1 3543 B con 5-11 and macd > - modo 2 and ma78_last < ma300_last and macd_differenza_2_min_ago > -12 - r 4880"
+                    buy = "BUY 2 CROLLO FERRARI senza sovrastrutture con 3-8 and macd > - modo 2 and ma78_last < ma300_last - r 4880"
                     action = "buy"
                     percentage = 80
 
-              
+                    #  3 feb 2025 nuova condizione crollo ferrari senza sovrastrutture !
 
-              
-                
-                    
+                    #  3 feb 2025 con 3-39 < -1.00 compra con 3-8 da 4-11
+                    #  3 feb 2025 deviation_buy_crollo_1 = ma8_last / ma78_last
+                    #  3 feb 2025 BUY in purezza in uno scenario drammatico il macd scendeva ma il prezzo saliva !!!
+                    #  3 feb 2025 devi dare un paio di colpitogliendo tutte le sovrastrutture ma2 e macd
+                    #  3 feb 2025 and deviation_ma39 < -1.00
+                    #  3 feb 2025 and deviation_buy_crollo_1 < -1.61
+                    #  3 feb 2025 and deviation_ma25_sotto_ma300 < -2.00
                     
                 
              
@@ -19205,7 +19231,30 @@ class maddog:
                     
                     
                     
+                elif (
+                    ma3_last > ma8_last
+                    and deviation_ma39 < -1.00
+                    and deviation_buy_crollo_1 < -1.61
+                    and deviation_ma25_sotto_ma300 < -2.00
+                    and ma78_last < ma300_last
+
+                ):
+                    buy = "BUY 3 CROLLO FERRARI senza sovrastrutture con 3-8 - r 6299"
+                    action = "buy"
+                    percentage = 80
+
+                    #  3 feb 2025 nuova condizione crollo ferrari senza sovrastrutture !
+
+                    #  3 feb 2025 con 3-39 < -1.00 compra con 3-8 da 4-11
+                    #  3 feb 2025 deviation_buy_crollo_1 = ma8_last / ma78_last
+                    #  3 feb 2025 BUY in purezza in uno scenario drammatico il macd scendeva ma il prezzo saliva !!!
+                    #  3 feb 2025 devi dare un paio di colpitogliendo tutte le sovrastrutture ma2 e macd
+                    #  3 feb 2025 and deviation_ma39 < -1.00
+                    #  3 feb 2025 and deviation_buy_crollo_1 < -1.61
+                    #  3 feb 2025 and deviation_ma25_sotto_ma300 < -2.00
+                    #  3 feb 2025 C SONO 3 CROLLI FERRARI SENZA SOVRASTRUTTURE !
                     
+
                 # BUY 3C RIVOLUZIONARIO
                 
                 elif (
@@ -45437,17 +45486,19 @@ class maddog:
                 sell = "SELL cond. special 3 - SALVAGENTE 3 - con dev 3-39 < 0.05 e dev sell < -0.02 con ma50< e dev_ma3_sotto_ma200 > -1.20 and price < ma3 - r 15985 A1 ok 4Y 2A"
                 action = "sell"
 
+
+
             elif (
                 ma50_last < ma50_2_min_ago
+                and deviation_ma100_sopra_ma300 > 0.20
+                and delta_450_300 < delta_450_300_60_min
+
                 and delta_50_39 > delta_50_39_30_min
                 and ma10_last <= ma20_last
                 and ma5_last <= ma100_last
                 
-                and deviation_ma39 < 0.07
-                and deviation_sell < 0.02
-                
-                and deviation_ma100_sopra_ma300 > 0.20
-                and delta_450_300 < delta_450_300_60_min
+                and deviation_ma39 < 0.05
+                and deviation_sell < -0.01
                 
                 and deviation_ma3_sotto_ma150 > -1.20
                 
@@ -45456,7 +45507,7 @@ class maddog:
                 and ma2_last < ma5_last
                 and price < ma3_last
             ):
-                sell = "SELL CS - SALVAGENTE - con dev 3-39 < 0.05 e dev sell < 0.02 con ma50< e dev_ma3_sotto_ma200 > -1.20 - r 15985 A1 ok 4Y 2BX"
+                sell = "SELL CS - SALVAGENTE - con dev 3-39 < 0.05 e dev sell < -0.01 con ma50 < e dev_ma3_sotto_ma200 > -1.20 - r 15985 A1 ok 4Y 2BX"
                 action = "sell"
 
                 # 27 set 2023 dev sell -0.11 da -0.10
@@ -45472,7 +45523,7 @@ class maddog:
                 # 12 dic 2023 aggiunta and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.02
                 # 27 dic 2023 con 10<=20
                 #  8 feb 2024 aggiunto and ma5_last <= ma100_last
-
+                # 31 gen 2025 and deviation_sell < -0.01 da < 0.02 GIORNO !
 
             elif (
                 ma50_last < ma50_2_min_ago
@@ -50400,7 +50451,7 @@ class maddog:
                 and macd < macd_2_min_ago
                 and macd < -12
               
-                and ma3_last < ma28_last
+                and ma3_last < ma39_last
                 and deviation_ma3_di_adesso_diviso_ma3_di_90_min_ago < 1.30
                 and ma450_last < ma450_720_min_ago
                 
@@ -50408,7 +50459,7 @@ class maddog:
                 and deviation_sell < 1.10
                 
             ):    
-                sell = "SELL condizione POCHI MALEDETTI E SUBITO dopo 120 min con 3-28 E con dev_sell 0.75 - 1.10 and macd < - INTANTO TE LI PRENDI - r 16750 B"
+                sell = "SELL PMS dopo 120 min con 3-39 E con dev_sell 0.75 - 1.10 and macd < - INTANTO TE LI PRENDI - r 16750 B"
                 action = "sell"
                 
                 # pochi 0.80 - 1.20
@@ -50418,7 +50469,7 @@ class maddog:
                 # importante
                 # con aggiunta deviation_ma3_di_adesso_diviso_ma3_di_90_min_ago < 1.30 che cosa fa ?
                 # compra pochi maledetti e subito la prima volta
-                # ma se continua a salire dopo che ha fatto il primo pochi maledetti e subito non interviene piu' ed entrano in azione altre medie piu' lunghe
+                # se continua a salire dopo entrano in azione altre medie piu' lunghe
                 # altrimenti e' un continuo 3-10
                 # 15 mag 2023 3-13 da 3-11 
                 # 15 mag 2023 0.80 - 1.05 da 0.70 - 1.20
@@ -50430,7 +50481,7 @@ class maddog:
                 #  8 lug 2023 aggiunto and macd < -12
                 #  11 ago 2023 3-28 da 3-20 dopo 3 ore cazzo (non e' piu' subito)
                 #  17 nov 2023 aggiunta and ma2_differenza_ma4 < -10
-                
+                # 31 gen 2025  3-39 da 3-28
                 
                 
                 
