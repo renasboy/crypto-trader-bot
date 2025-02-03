@@ -40623,14 +40623,29 @@ class maddog:
                     
                  
                     # -------------------------------------------------------------------------------------- guadagno durante il crollo
-                  
+
+
                     elif (
                         ma50_last < ma50_2_min_ago
+                        and ma300_last > ma300_180_min_ago
+                        and (ma3_prev > ma49_prev and ma3_last < ma49_last)
+                        and deviation_sell > 0.23
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 3 (21-60 min) eventuale guadagno se 300> 3 ore con ma50< incrocio 3-49 and dev_sell > 0.23 - r 13831 x"
+                        action = "sell"
+
+                        #  3 feb 2025 se 300> 3 ore vende con 3-49 da 3-18
+
+
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and ma300_last < ma300_180_min_ago
                         and (ma3_prev > ma18_prev and ma3_last < ma18_last)
                         and deviation_sell > 0.23
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 3 (21-60 min) eventuale guadagno durante il crollo  con ma50 < incrocio 3 - 18 and deviation_sell > 0.23 - r 13831"
+                        sell = "SELL 3 (21-60 min) eventuale guadagno durante il crollo con ma50< incrocio 3-18 and dev_sell > 0.23 - r 13831 y"
                         action = "sell"
 
 
