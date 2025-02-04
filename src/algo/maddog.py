@@ -16150,32 +16150,27 @@ class maddog:
 
                 
                 elif (
-                    ma8_last > ma50_last
-                    and ma450_last < ma450_120_min_ago
+                    ma3_last > ma20_last
+                    and ma25_last > ma100_last
                     
                     and ma200_last > ma250_last
-                    and ma78_last > ma78_20_min_ago
                     and ma200_last > ma200_120_min_ago
-                    
-                    and deviation > -0.30
-                    and deviation_bellissima > 0.02
-                    and deviation_ma4_sopra_ma30 > 0.15
-                    and delta_buy3_incrocio_ma3_ma8 >= 0.06
-                    
+
+                    and ma450_last < ma450_120_min_ago
+
                     and ma3_last > ma8_last
-                    and ma3_last >= ma69_last
-                    and ma5_last >= ma15_last
-                    and ma5_last >= ma25_last
                     
                     and ma2_last >= ma2_2_min_ago
-                    and macd >= macd_2_min_ago
+                    and macd >= -60
                 ):    
-                    buy = "BUY 2 RIVOLUZIONARIO CON ma450_last > ma450_120_min_ago E con 78 > 78 20 min ago - r 5892 A1y"
+                    buy = "BUY 2 RIVOLUZIONARIO CON ma450_last < ma450_120_min_ago MA con 25>100 - r 5892 A1 Y"
                     action = "buy"
                     percentage = 70
                     
                     # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
-                    # 2 ott dev bellissima 0.06 da 0.07
+                    #  2 ott dev bellissima 0.06 da 0.07
+                    #  4 feb 2025 se 25>100 anticipata !
+
 
               
                 elif (
@@ -27849,7 +27844,34 @@ class maddog:
                     
                     
                     
+                elif (
                     
+                    ma18_last > ma100_last
+                    
+                    and ma100_last < ma100_120_min_ago
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_120_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and deviation_ma5_sotto_ma450 < -0.35
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma5_sopra_ma28 > -0.08
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    
+                ):
+                    buy = "BUY 5 29 ago 2022 > 120 min di ribasso - deviation_ma5_sotto_ma300 - r 7562"
+                    action = "buy"
+                    percentage = 90
+                    
+                    # vuoi comprare dopo 120 min di ribasso ? deve essere 5-300 < -0.35 ! voglio uno sconto ulteriore dello 0.35% ! PENSIERO LATERALE
+                    #  4 feb 2025 aggiunta da RCCR che era andata bene
+                    
+
+
                 # RIALZO IMPROVVISO 200> DOPO TANTO TEMPO DI TREND LATERALE - POTREBBE SUCCEDERE !
                 
                 elif (
@@ -27866,7 +27888,7 @@ class maddog:
                     and deviation_range_x > -0.22
                 ):
              
-                    buy = "BUY 5 RIALZO IMPROVVISO con 200 > e con > 0.60 DOPO TANTO TEMPO DI TREND LATERALE - POTREBBE SUCCEDERE e' successo ! - r 7563"
+                    buy = "BUY 5 RIALZO IMPROVVISO con 200> DOPO TANTO TEMPO DI TREND LATERALE - POTREBBE SUCCEDERE e' successo ! - r 7563"
                     action = "buy"
                     percentage = 70
                     
@@ -45909,13 +45931,14 @@ class maddog:
             
             elif (    
                 ma50_last <= ma50_2_min_ago
-                and ma10_last < ma20_last
-                and deviation_ma39 < 0.11
-                and deviation_sell < -0.01
-                
-                and delta_450_300 < delta_450_300_60_min
-                
                 and deviation_ma100_sopra_ma300 > 0.20
+                and delta_450_300 < delta_450_300_60_min
+
+                and ma10_last < ma20_last
+
+                and deviation_ma39 < 0.10
+                and deviation_sell < -0.02
+
                 and deviation_ma3_sotto_ma150 > -1.20
                 
                 and ma2_last <= ma2_2_min_ago
@@ -45924,7 +45947,7 @@ class maddog:
                 and macd_differenza_2_min_ago < -2
                 
             ):
-                sell = "SELL C.S. con ma50_last <= ma50_2_min_ago MA CON 10>20 con 3-39 < 0.11 and dev_sell < -0.01 - r 15985 A1 Y2"
+                sell = "SELL C.S. con ma50_last <= ma50_2_min_ago MA CON 10>20 con 3-39 < 0.10 and dev_sell < -0.02 - r 15985 A1 Y2"
                 action = "sell"
                 
                 # 27 giu 2022 dev sell a 0.305 da 0.31
@@ -45951,7 +45974,7 @@ class maddog:
                 
                 #  6 mar 2024 and deviation_sell < -0.01 da 0.01
                 #  6 mar 2024 and delta_450_300 < delta_450_300_60_min significa che sta salendo molto - statte calmo - GIORNO !
-
+                #  4 feb 2025 se deviation_ma100_sopra_ma300 > 0.20 dev sell < -0.02 da < -0.01
 
 
             elif (
