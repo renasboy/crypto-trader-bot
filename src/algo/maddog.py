@@ -1678,6 +1678,9 @@ class maddog:
                     # 28 gen 2025 3-90 per anticipare di una ndecchiecella il 4-100
 
 
+
+
+
                 elif (    
                     ma200_last > ma300_last
                     and ma300_last > ma300_120_min_ago
@@ -1726,7 +1729,44 @@ class maddog:
                     #  5 dic 2025 anticipata ndecchia
 
 
+                
                     
+                
+                elif (    
+                    
+                    ma3_last > ma13_last
+                    
+                    and ma300_last > ma450_last
+                    and ma300_last > ma300_120_min_ago
+
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.33
+                    
+                    and deviation_ma10_sotto_ma100 < -0.06
+                 
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > -0.02
+                    
+                 
+                    and ma2_last >= ma2_2_min_ago
+                    
+                    and macd > -70
+                    and macd_differenza_2_min_ago > -2.50
+                    and macd_differenza_2_min_ago > 8.00
+
+                    and ma3_last > ma8_last
+                    
+                ):    
+              
+                    buy = "BUY 1 con ma300_last > ma450_last ma ribasso improvviso e rialzo veloce - r 920"
+                    action = "buy"
+                    percentage = 90
+
+                    #  4 feb 2025 il trend e' ancora positivo (and ma300_last > ma450_last)
+                    #  4 feb 2025 ma sende all' improvviso (and deviation_ma5_sopra_o_sotto_ma100 < -0.33)
+                    #  4 feb 2025 ma si rialza velocemente il macd mostra un rialzo evidente (and macd_differenza_2_min_ago > 8.00)
+
+
+
                 elif (    
                     ma20_last > ma200_last
                     and macd >= macd_2_min_ago
@@ -1742,7 +1782,7 @@ class maddog:
                     and ma6_last > ma39_last
                 ):    
               
-                    buy = "BUY 1 con 20>200 AND 10 > 100 AND 3-10 > 0.15 and 69 > 100 and deviation_bellissima > 0.14 and ma78 > - r 935B"
+                    buy = "BUY 1 con 20>200 AND 10 > 100 AND 3-10 > 0.15 and 69 > 100 and deviation_bellissima > 0.14 and ma78 > - r 935"
                     action = "buy"
                     percentage = 90
                     
@@ -1773,7 +1813,7 @@ class maddog:
                     
                 ):    
                     
-                    buy = "BUY 1 piccola CORREZIONE FIAT = r 1226 RCCR medie mobili lunghe TUTTE IN RIALZO ! ma si verifica una correzione fiat ! - r 965 A"
+                    buy = "BUY 1 piccola CORREZIONE FIAT = r 1226 RCCR medie mobili lunghe TUTTE IN RIALZO ! ma si verifica una correzione fiat ! - r 965"
                     action = "buy"
                     percentage = 80
                     
@@ -1803,7 +1843,7 @@ class maddog:
                     
                 ):    
                     
-                    buy = "BUY 1 piccola CORREZIONE FIAT = r 1226 RCCR medie mobili lunghe TUTTE IN RIALZO ! ma si verifica una correzione fiat ! - r 994 B"
+                    buy = "BUY 1 piccola CORREZIONE FIAT = r 1226 RCCR medie mobili lunghe TUTTE IN RIALZO ! ma si verifica una correzione fiat ! - r 994"
                     action = "buy"
                     percentage = 80
                     
@@ -29981,10 +30021,17 @@ class maddog:
                         sell = "SELL 1 (5-12 min) EX cond. spec 15985 A1 ok 2B - CON ma8 < ma8 2 min ago e dev 3-39 < 0.02 e dev sell < -0.02 e macd_dif_2_min_ago < -0.25 - r 8263"
                         action = "sell"
 
-                  
+
+
+
                     elif (    
                         ma2_last < ma4_last
                         and ma2_last < ma6_last
+                        and ma300_last > ma450_last
+                        and ma300_last > ma300_120_min_ago
+
+                        and ma3_last < ma39_last
+
                         and delta_1_200_30 > delta_2_200_30_30_min
                 
                         and deviation_crollo_24_aprile < -0.33
@@ -29992,7 +30039,27 @@ class maddog:
                         and deviation_ma5_sotto_ma200 > -1.00
                     ): 
                 
-                        sell = "SELL 1 (5-12 min) EX cond. spec r 16427 B - > CROLLO IMPROVVISO del 24 apr 2022 < -0.33 - and dev_ma5_sotto_ma200 > -1.00 - notte - r 8264"
+                        sell = "SELL 1 (5-12 min) EX CS > CROLLO IMPROVVISO del 24 apr 2022 < -0.33 - notte MA 300>450 E 300> 2 ore - r 8264 X"
+                        action = "sell"
+                        
+                        #  9 nov 2023 and deviation_crollo_24_aprile a < -0.35 da < -0.45
+                        #  5 dic 2023 and deviation_crollo_24_aprile a < -0.33 da < -0.35
+                        #  4 feb 2025 se ma300_last > ma450_last sell con 3-39
+
+
+                    elif (    
+                        ma2_last < ma4_last
+                        and ma2_last < ma6_last
+                        and ma300_last < ma450_last
+
+                        and delta_1_200_30 > delta_2_200_30_30_min
+                
+                        and deviation_crollo_24_aprile < -0.33
+                
+                        and deviation_ma5_sotto_ma200 > -1.00
+                    ): 
+                
+                        sell = "SELL 1 (5-12 min) EX CS > CROLLO IMPROVVISO del 24 apr 2022 < -0.33 - notte - r 8264 Y"
                         action = "sell"
                         
                         #  9 nov 2023 and deviation_crollo_24_aprile a < -0.35 da < -0.45
