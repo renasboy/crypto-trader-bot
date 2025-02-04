@@ -24500,12 +24500,43 @@ class maddog:
                     buy = "BUY 4 con 5-54 importato da buy 5 rccr con 50>59 and macd > macd_2_min_ago - r 7063 NUOVA ERA A2 SOFT 2"
                     action = "buy"
                     percentage = 90
+
+
+
                     
+                elif (    
+                    ma3_last > ma20_last
+                    and ma25_last > ma100_last
+
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
+                    
+                    and ma100_last < ma100_180_min_ago
+                    and ma200_last < ma200_180_min_ago
+                    and ma300_last < ma300_180_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > -0.02
+                    
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd > -60
+                    
+                ):
+                    buy = "BUY 4 con 3-20 se ma25_last > ma100_last - r 7063 NUOVA ERA A3 SOFT 1"
+                    action = "buy"
+                    percentage = 90
+
+                    #  4 feb 2025 se ma25_last > ma100_last ANTICIPATO ndecchiecella
+
 
                 elif (    
                     ma5_last > ma54_last
-                    
-                    and ma100_last > ma100_10_min_ago
+                    and ma25_last < ma100_last
+
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
                     and deviation_ma5_sopra_o_sotto_ma100 > -0.50
                     
@@ -24524,9 +24555,13 @@ class maddog:
                     and macd > macd_2_min_ago
                     
                 ):
-                    buy = "BUY 4 con 5-54 importato da buy 5 rccr con 50>59 and macd > macd_2_min_ago - r 7063 NUOVA ERA A3 SOFT"
+                    buy = "BUY 4 con 5-54 importato da buy 5 rccr con 50>59 and macd > macd_2_min_ago - r 7063 NUOVA ERA A3 SOFT 2"
                     action = "buy"
                     percentage = 90
+
+
+
+
                   
 
                 elif (    
@@ -47587,8 +47622,49 @@ class maddog:
                 #  9 nov 2024 se deviation_ma50_sopra_o_sotto_ma300 > 0.10 allora and deviation_sell < -0.02 da < 0.01
 
 
+
             elif (    
                 ma50_last > ma50_2_min_ago
+                and ma39_last > ma100_last
+
+                and deviation_ma50_sopra_o_sotto_ma300 < 0.10
+                and ma100_last > ma100_60_min_ago
+                and ma3_last < ma39_last
+                
+                and deviation_ma39 < 0.10
+                and deviation_sell < -0.02
+                
+                and deviation_ma5_sotto_ma200 > -0.70
+                and deviation_ma100_sopra_ma300 < 0.40
+                
+                and ma2_last < ma5_last
+                and ma2_last < ma2_2_min_ago
+                and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.017
+                
+                and macd < 1
+                and macd_differenza_2_min_ago < -1.00
+            ):
+                sell = "SELL CS se 39>100 vende con 3-39 e dev 3-39 < 0.10 and dev_sell < -0.02 e ma50 > con DIFF MACD < -1 - r 16047 A2 X2 Y2 x"
+                action = "sell"
+                
+                # 29 nov 2023 vende con 3-28 se ma 100 > 100 60 min
+                #  5 dic 2023 aggiunto and ma2_last < ma5_last
+                #  5 dic 2023 aggiunto and ma2_differenza_2_min_ago < -3
+                
+                # 29 dic 2023 tolto macd < macd 2 min ago che faceva arrivare in ritardo la vendita
+                # 29 dic 2023 ATTENZIONE ! macd diff < -1 significa CHE HA PIU' FORZA mentre scende ! scende piu' con vigore !
+                # 30 dic 2023 situazione MACD in territorio negativo
+                # 16 set 2024 and dev_sell < 0.01 da < 0.02
+                #  9 nov 2024 dev sell a -0.01 da 0.01
+                #  4 feb 2025 se ma39_last > ma100_last sell con ma3_last < ma39_last
+                #  4 feb 2025 dev_sell < -0.02 da < -0.01
+
+
+
+            elif (    
+                ma50_last > ma50_2_min_ago
+                and ma39_last < ma100_last
+
                 and deviation_ma50_sopra_o_sotto_ma300 < 0.10
                 and ma100_last > ma100_60_min_ago
                 and ma3_last < ma28_last
@@ -47606,7 +47682,7 @@ class maddog:
                 and macd < 1
                 and macd_differenza_2_min_ago < -1.00
             ):
-                sell = "SELL CS se 100> vende con 3-28 e dev 3-39 < 0.13 and dev_sell < -0.01 e ma50 > con DIFF MACD < -1 - r 16047 A2 X2 Y2"
+                sell = "SELL CS se 100> vende con 3-28 e dev 3-39 < 0.13 and dev_sell < -0.01 e ma50 > con DIFF MACD < -1 - r 16047 A2 X2 Y2 y"
                 action = "sell"
                 
                 # 29 nov 2023 vende con 3-28 se ma 100 > 100 60 min
