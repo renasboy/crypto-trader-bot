@@ -5873,7 +5873,7 @@ class maddog:
                     and deviation_ma39_sotto_ma200 < -0.01
                     and deviation_ma300_sopra_ma450 > -0.60
                     
-                    and deviation_ma3_sopra_ma10 > 0.015
+                    and deviation_ma3_sopra_ma10 > 0.010
                     and deviation_ma3_sopra_ma16 > -0.02
                     and deviation_ma3_sopra_ma18 > -0.04
                     
@@ -5881,11 +5881,11 @@ class maddog:
                     and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.01
                     
                     
-                    and macd > -50
-                    and macd_differenza_2_min_ago > -1.25
+                    and macd > -70
+                    and macd_differenza_2_min_ago > -1.50
                     
                 ):    
-                    buy = "BUY 1 NOTTE condizione DNA IPERVENDUTO con 3-15 E MACD > -50 - r 1537 A3X 4A Y x"
+                    buy = "BUY 1 NOTTE condizione DNA IPERVENDUTO con 3-15 E MACD > -70 - r 1537 A3X 4A Y x"
                     action = "buy"
                     percentage = 90
                     
@@ -5899,6 +5899,8 @@ class maddog:
                     # 11 set 2024 and deviation_ma39 <= -0.40 da -0.30
                     # 16 set 2024 anticipata ndecchiecella. mantienila ! mantieni DNA !
                     # 27 gen 2025 se NOTTE and deviation_ma25_sotto_ma300 < -1.20
+                    #  5 feb 2025 la tengo anche se avrei quasi voluto mettere 3-20 invece di 3-15
+
 
                 elif (    
                     ma3_last > ma20_last
@@ -34179,7 +34181,7 @@ class maddog:
                         
                         #  5 nov 2023 and deviation_ma39 < -0.19 da < -0.194
                         #  5 nov 2023 aggiunta and ma2_differenza_2_min_ago < -8
-                        #  5 nov 2023 and deviation_ma39 < -0.185 da < -0.19
+                        #  5 feb 2025 and deviation_ma39 < -0.185 da < -0.19
 
                         
                     elif (    
