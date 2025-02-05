@@ -7495,32 +7495,81 @@ class maddog:
                     percentage = 80
                     
                     
-                    
+
                     
                 elif (
                     ma5_last > ma300_last
-                    and macd >= macd_2_min_ago
-                    and ma8_last > ma50_last
+                    
+                    and ma5_last > ma50_last
                     
                     and delta_300_225 < delta_300_225_60_min
                     
                     and ma300_last < ma300_120_min_ago
                     
-                    and deviation_ma5_sopra_ma28 > 0.13
-                    and deviation_ma3_sopra_ma7 > 0.05
-                    and deviation_ma13_sopra_ma25 > 0.04
+                    and deviation_ma3_sopra_ma7 > 0.01
+                    and deviation_ma13_sopra_ma25 > -0.01
                   
                     and price >= price_2_min_ago
-                    
+                    and macd > -60
                 ):
-                    buy = "BUY 1 con ma20_last > ma200_last e con 11 > 59 e ma69> 2 min ago (!) con DOPPIO DELTA 300-225 GIORNO ! - r 2065 A"
+                    buy = "BUY 1 con ma5 > ma300 e con 5>50 con DOPPIO DELTA 300-225 GIORNO ! - r 2065 A"
                     action = "buy"
                     percentage = 80
                     
                     # > estate anticipato buy di una ndecchia
                     #  3 lug 2023 tolto dev bellissima
                     #  3 lug 2023 tolto ma100_last > ma150_last
-                
+                    #  5 feb 2025 modificata - anticipata ndecchiecella - niente di speciale
+                    
+
+                elif (    
+                    
+                    ma5_last > ma50_last
+                    and ma450_last > ma450_90_min_ago
+
+                    and delta_300_225 < delta_300_225_60_min
+                    
+                    and ma300_last < ma300_120_min_ago
+                    
+                    and deviation_ma3_sopra_ma7 > 0.01
+                    
+                  
+                    and price >= price_2_min_ago
+                    and macd > -60
+                ):
+                    buy = "BUY 1 con 5>50 se ma450 > ma 450 90 min ago and DOPPIO DELTA 300-225 GIORNO ! - r 2065 Bx"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # > estate anticipato buy di una ndecchia
+                    #  3 lug 2023 tolto dev bellissima
+                    #  3 lug 2023 tolto ma100_last > ma150_last
+                    #  5 feb 2025 aggiunta questa - niente di speciale
+
+
+
+                elif (    
+                    ma5_last > ma100_last
+                    and ma450_last < ma450_90_min_ago
+                    
+                    and delta_300_225 < delta_300_225_60_min
+                    
+                    and ma300_last < ma300_120_min_ago
+                    
+                    and deviation_ma3_sopra_ma7 > 0.01
+                    and deviation_ma13_sopra_ma25 > -0.01
+                  
+                    and price >= price_2_min_ago
+                    and macd > -60
+                ):
+                    buy = "BUY 1 con ma5 > ma200 e con 5>50 con DOPPIO DELTA 300-225 GIORNO ! - r 2065 By"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # > estate anticipato buy di una ndecchia
+                    #  3 lug 2023 tolto dev bellissima
+                    #  3 lug 2023 tolto ma100_last > ma150_last
+                    #  5 feb 2025 aggiunta questa - niente di speciale
                     
                     
                     
@@ -32098,7 +32147,7 @@ class maddog:
                         and deviation_sell > 0.32 and deviation_sell < 0.52
                         and ma2_last < ma2_2_min_ago
                     ):    
-                        sell = "SELL 1 da 50 a 90 min con ma50 > and incrocio 5-78 and deviation_sell 0.31-0.52 la prima FINTA ALLA MARADONA RAFFORZATO - r 9493 Ay"
+                        sell = "SELL 1 (50-90 min) con ma50 > and incrocio 5-78 and dev_sell 0.31-0.52 la prima FINTA ALLA MARADONA RAFFORZATO - r 9493 Ay"
                         action = "sell"
                         
                         # MARADONA RAFFORZATO accompagna nelle prime fasi di crescita. poi interviene RONALDO se il rialzo comincia a farsi piu' consistente.
@@ -32119,7 +32168,7 @@ class maddog:
                         and deviation_sell > 0.32 and deviation_sell < 0.52
                         and ma2_last < ma2_2_min_ago
                     ):    
-                        sell = "SELL 1 da 50 a 90 min con ma50 > and incrocio 5-59 and deviation_sell 0.31-0.52 la prima FINTA ALLA MARADONA - r 9493 B1"
+                        sell = "SELL 1 (50-90 min) con ma50 > and incrocio 5-59 and dev_sell 0.31-0.52 la prima FINTA ALLA MARADONA - r 9493 B1"
                         action = "sell"
                         
                         # MARADONA accompagna nelle prime fasi di crescita il titolo. poi interviene RONALDO se il rialzo comincia a farsi piu' consistente.
@@ -32139,7 +32188,7 @@ class maddog:
                         and deviation_sell > 0.32 and deviation_sell < 0.52
                         and ma2_last < ma2_2_min_ago
                     ):    
-                        sell = "SELL 1 da 50 a 90 min con ma50 > and incrocio 5-125 and deviation_sell 0.31-0.52 la prima FINTA ALLA MARADONA - r 9493 B2"
+                        sell = "SELL 1 (50-90 min) con ma50 > and incrocio 5-125 and dev_sell 0.31-0.52 la prima FINTA ALLA MARADONA - r 9493 B2"
                         action = "sell"
                         
                         # MARADONA accompagna nelle prime fasi di crescita il titolo. poi interviene RONALDO se il rialzo comincia a farsi piu' consistente.
@@ -32160,7 +32209,7 @@ class maddog:
                         and deviation_sell > 0.32 and deviation_sell < 0.52
                         and ma2_last < ma2_2_min_ago
                     ):    
-                        sell = "SELL 1 da 50 a 90 min con ma50 > and incrocio 5-59 and deviation_sell 0.31-0.52 la prima FINTA ALLA MARADONA - r 9493 B3"
+                        sell = "SELL 1 (50-90 min) con ma50 > and incrocio 5-59 and dev_sell 0.31-0.52 la prima FINTA ALLA MARADONA - r 9493 B3"
                         action = "sell"
                         
                         # MARADONA accompagna nelle prime fasi di crescita il titolo. poi interviene RONALDO se il rialzo comincia a farsi piu' consistente.
@@ -32177,7 +32226,7 @@ class maddog:
                         and deviation_sell > 0.32 and deviation_sell < 0.52
                         and ma2_last < ma2_2_min_ago
                     ):    
-                        sell = "SELL 1 da 50 a 90 min con ma50 > and incrocio 5-59 and deviation_sell 0.31-0.52 la prima FINTA ALLA MARADONA - r 9493 B"
+                        sell = "SELL 1 (50-90 min) con ma50 > and incrocio 5-59 and dev_sell 0.31-0.52 la prima FINTA ALLA MARADONA - r 9493 B"
                         action = "sell"
                         
                         # MARADONA accompagna nelle prime fasi di crescita il titolo. poi interviene RONALDO se il rialzo comincia a farsi piu' consistente.
@@ -32196,7 +32245,7 @@ class maddog:
                         and deviation_sell > 0.53 and deviation_sell < 0.90
                         and ma2_last < ma2_2_min_ago
                     ):    
-                        sell = "SELL 1 da 50 a 90 min con ma50> and incrocio 5-78 se 300 > 120 min ago and deviation_sell 0.51-0.90 RONALDO - r 9514a"
+                        sell = "SELL 1 (50-90 min) con ma50> and incrocio 5-78 se 300 > 120 min ago and dev_sell 0.51-0.90 RONALDO - r 9514a"
                         action = "sell"
                         
                         # 5-125 da 4-50 dopo le dolomiti
@@ -32211,7 +32260,7 @@ class maddog:
                         and deviation_sell > 0.53 and deviation_sell < 0.90
                         and ma2_last < ma2_2_min_ago
                     ):    
-                        sell = "SELL 1 da 50 a 90 min con ma50> and incrocio 4-59 se 300 < 120 min ago and deviation_sell 0.51-0.90 RONALDO - r 9514 B"
+                        sell = "SELL 1 (50-90 min) con ma50> and incrocio 4-59 se 300 < 120 min ago and dev_sell 0.51-0.90 RONALDO - r 9514 B"
                         action = "sell"
                         
                         # 6 apr 4-59 da 4-50
@@ -32229,7 +32278,7 @@ class maddog:
                         and deviation_sell > 0.53 and deviation_sell < 0.90
                         and ma2_last < ma2_2_min_ago
                     ):    
-                        sell = "SELL 1 da 50 a 90 min con ma50> and incrocio 4-39 and deviation_sell 0.51-0.90 RONALDO - r 9529 a"
+                        sell = "SELL 1 (50-90 min) con ma50> and incrocio 4-39 and dev_sell 0.51-0.90 RONALDO - r 9529 a"
                         action = "sell"
                         
                         
@@ -32242,7 +32291,7 @@ class maddog:
                         and deviation_sell > 0.53 and deviation_sell < 0.90
                         and ma2_last < ma2_2_min_ago
                     ):    
-                        sell = "SELL 1 da 50 a 90 min con ma50> and incrocio 4-100 ! GUARDANDO LE COSE DA LONTANO and deviation_sell 0.51-0.90 RONALDO - r 9529 b"
+                        sell = "SELL 1 (50-90 min) con ma50> and incrocio 4-100 ! GUARDANDO LE COSE DA LONTANO and dev_sell 0.51-0.90 RONALDO - r 9529 b"
                         action = "sell"
                         
                         # se 5 non e' distante dalla 300 movimento laterale e 4-100 ritornando dalle dolomiti e guardando le cose da lontano !
@@ -32257,7 +32306,7 @@ class maddog:
                         and deviation_sell > 0.91 and deviation_sell < 1.49
                         and ma2_last < ma2_2_min_ago
                     ):    
-                        sell = "SELL 1 da 50 a 90 min con ma50 > and incrocio 5-78 and dev_sell 0.91 - 1.49 RABONA DI RONALDO  5-300 > 0.99 - r 9543 A1"
+                        sell = "SELL 1 (50-90 min) con ma50 > and incrocio 5-78 and dev_sell 0.91 - 1.49 RABONA DI RONALDO  5-300 > 0.99 - r 9543 A1"
                         action = "sell"
                   
                         # ricordati che in diverse occasioni 3-48 mi ha evitato la ricompra e la rivendita conseguente con perdita !
@@ -32272,7 +32321,7 @@ class maddog:
                         and deviation_sell > 0.91 and deviation_sell < 1.49
                         and ma2_last < ma2_2_min_ago
                     ):    
-                        sell = "SELL 1 da 50 a 90 min con ma50 > and incrocio 5-45 and dev_sell 0.91 - 1.49 RABONA DI RONALDO  5-300 > 0.40 ma < 0.99 - r 9543 A2"
+                        sell = "SELL 1 (50-90 min) con ma50 > and incrocio 5-45 and dev_sell 0.91 - 1.49 RABONA DI RONALDO se 5-300 > 0.40 ma < 0.99 - r 9543 A2"
                         action = "sell"
                   
                         # ricordati che in diverse occasioni 3-48 mi ha evitato la ricompra e la rivendita conseguente con perdita !
@@ -32287,21 +32336,42 @@ class maddog:
                         and deviation_sell > 0.91 and deviation_sell < 1.49
                         and ma2_last < ma2_2_min_ago
                     ):    
-                        sell = "SELL 1 da 50 a 90 min con ma50 > and incrocio 3-33 and deviation_sell 0.91 - 1.49 RABONA DI RONALDO  5-300 0.01 - 0.40 - r 9543 B"
+                        sell = "SELL 1 (50-90 min) con ma50 > e incrocio 3-33 e dev_sell 0.91 - 1.49 RABONA RONALDO 5-300 0.01 - 0.40 - r 9543 B"
                         action = "sell"
                   
                         # ricordati che in diverse occasioni 3-48 mi ha evitato la ricompra e la rivendita conseguente con perdita !
-                    
+
+
                     
                     elif (
                         ma50_last > ma50_2_min_ago
+                        and ma100_last > ma300_last
+
+                        and deviation_ma5_sotto_ma300 < 0.01
+                        and deviation_ma5_sotto_ma300 > -2.00
+                        and (ma4_prev > ma59_prev and ma4_last < ma59_last)
+                        and deviation_sell > 0.91 and deviation_sell < 1.49
+                        and ma2_last < ma2_2_min_ago
+                        and macd_differenza_2_min_ago < -1.00
+                    ):    
+                        sell = "SELL 1 (50-90 min) con ma50 > e incrocio 4-59 e dev_sell 0.91 - 1.49 RABONA RONALDO 5-300 -2.00 - 0.01 - r 9543 Cx"
+                        action = "sell"
+                  
+                        # ricordati che in diverse occasioni 3-48 mi ha evitato la ricompra e la rivendita conseguente con perdita !
+                        #  5 feb 2025 4-59 da 4-48 se 100 > 300
+                        #  5 feb 2025 aggiunta and macd_differenza_2_min_ago < -1.00
+
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and ma100_last < ma300_last
+
                         and deviation_ma5_sotto_ma300 < 0.01
                         and deviation_ma5_sotto_ma300 > -2.00
                         and (ma4_prev > ma48_prev and ma4_last < ma48_last)
                         and deviation_sell > 0.91 and deviation_sell < 1.49
                         and ma2_last < ma2_2_min_ago
                     ):    
-                        sell = "SELL 1 da 50 a 90 min con ma50 > and incrocio 4-48 and deviation_sell 0.91 - 1.49 RABONA DI RONALDO 5-300 -2.00 - 0.01 - r 9543 C"
+                        sell = "SELL 1 (50-90 min) con ma50 > and incrocio 4-48 and dev_sell 0.91 - 1.49 RABONA DI RONALDO 5-300 -2.00 - 0.01 - r 9543 Cy"
                         action = "sell"
                   
                         # ricordati che in diverse occasioni 3-48 mi ha evitato la ricompra e la rivendita conseguente con perdita !
@@ -32316,7 +32386,7 @@ class maddog:
                         and deviation_sell > 0.91 and deviation_sell < 1.49
                         and ma2_last < ma2_2_min_ago
                     ):    
-                        sell = "SELL 1 da 50 a 90 min con ma50 > and incrocio 3-33 and deviation_sell 0.91 - 1.49 RABONA DI RONALDO 5-300 < -2.00 - r 9543 D"
+                        sell = "SELL 1 (50-90 min) con ma50 > and incrocio 3-33 and dev_sell 0.91 - 1.49 RABONA DI RONALDO 5-300 < -2.00 - r 9543 D"
                         action = "sell"
                   
                         # ricordati che in diverse occasioni 3-48 mi ha evitato la ricompra e la rivendita conseguente con perdita !
