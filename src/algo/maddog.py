@@ -5867,20 +5867,18 @@ class maddog:
                     
                     and ma100_last < ma100_60_min_ago
                     
-                  
                     and deviation_ma54_sopra_o_sotto_ma72 < -0.015
                     
                     and deviation_ma39_sotto_ma200 < -0.01
-                    and deviation_ma300_sopra_ma450 > -0.60
+                    and deviation_ma300_sopra_ma450 > -0.70
                     
                     and deviation_ma3_sopra_ma10 > 0.010
                     and deviation_ma3_sopra_ma16 > -0.02
                     and deviation_ma3_sopra_ma18 > -0.04
                     
-                    and ma2_last >= ma2_2_min_ago
+                    
                     and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.01
-                    
-                    
+                   
                     and macd > -70
                     and macd_differenza_2_min_ago > -1.50
                     
@@ -5900,7 +5898,7 @@ class maddog:
                     # 16 set 2024 anticipata ndecchiecella. mantienila ! mantieni DNA !
                     # 27 gen 2025 se NOTTE and deviation_ma25_sotto_ma300 < -1.20
                     #  5 feb 2025 la tengo anche se avrei quasi voluto mettere 3-20 invece di 3-15
-
+                    #  5 feb 2025 tolta ma2 > ma2 2 min ago
 
                 elif (    
                     ma3_last > ma20_last
