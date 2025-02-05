@@ -34158,26 +34158,29 @@ class maddog:
                         
                     elif (    
                         ma50_last < ma50_2_min_ago
-                        and deviation_ma39 < -0.19
+                        and deviation_ma39 < -0.185
                         and deviation_sell > 0.40
                         and ma5_last < ma5_2_min_ago
                         and ma300_last > ma300_120_min_ago
                         and ma100_last > ma100_60_min_ago
                         
                         and ma2_last < ma2_2_min_ago
-                        and ma2_differenza_2_min_ago < -8
+                        and ma2_differenza_2_min_ago < -7
                     ):
-                        sell = "SELL 1 da 110 a 239 min con ma50 < MA ma100 > E ma300 > e con deviation_ma39 < -0.19 - r 10264 A2y"
+                        sell = "SELL 1 da 110 a 239 min con ma50 < MA ma100 > E ma300 > e con deviation_ma39 < -0.185 - r 10264 A2y"
                         action = "sell"
                         
                         # ma39 NON DEVE VENDERE in fase laterale ma in alto
                         # 17 gen 2023 ma39 <-0.197 da <-0.195
                         #  5 mar 2023 ma39 <-0.194 da <-0.197 ma con dev sell > 0.40 prendi e porta a casa
-                        # ho aggiunto questa ma la precedente condizone rappresenta "la base" - poi condizione speciale pochi maledetti e subito tra 0.80 e 1.20
+                        # ho aggiunto questa ma la precedente condizone rappresenta "la base" - 
+                        # poi condizione speciale pochi maledetti e subito tra 0.80 e 1.20
                         # vedi 5 marzo 2023 ore 3:38 NON HA PRESO IL GUADAGNO !
                         
                         #  5 nov 2023 and deviation_ma39 < -0.19 da < -0.194
                         #  5 nov 2023 aggiunta and ma2_differenza_2_min_ago < -8
+                        #  5 nov 2023 and deviation_ma39 < -0.185 da < -0.19
+
                         
                     elif (    
                         ma50_last < ma50_2_min_ago
@@ -45802,14 +45805,15 @@ class maddog:
                 
                 and deviation_ma3_sotto_ma150 > -1.20
                 
-                and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.02
+                and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.01
                 and macd_differenza_2_min_ago < -0.5
                 and ma2_last < ma5_last
                 and price < ma3_last
             ):
-                sell = "SELL cond. special 3 - SALVAGENTE 3 - con dev 3-39 < 0.05 e dev sell < -0.02 con ma50< e dev_ma3_sotto_ma200 > -1.20 and price < ma3 - r 15985 A1 ok 4Y 2A"
+                sell = "SELL CS con dev 3-39 < 0.05 e dev sell < -0.02 con ma50< e dev_ma3_sotto_ma200 > -1.20 and price < ma3 - r 15985 A1 ok 4Y 2A"
                 action = "sell"
 
+                
 
 
             elif (
