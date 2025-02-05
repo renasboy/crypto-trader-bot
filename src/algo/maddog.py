@@ -1732,10 +1732,10 @@ class maddog:
                 
                     
                 
-                elif (    
-                    
+                
+                elif (
                     ma3_last > ma13_last
-                    
+                    and ma100_last > ma450_last
                     and ma300_last > ma450_last
                     and ma300_last > ma300_120_min_ago
 
@@ -1746,10 +1746,7 @@ class maddog:
                     and deviation_ma3_sopra_ma10 > 0.01
                     and deviation_ma3_sopra_ma16 > -0.02
                     
-                 
-                    and ma2_last >= ma2_2_min_ago
-                    
-                    and macd > -70
+                    and macd > -100
                     and macd_differenza_2_min_ago > -2.50
                     and macd_differenza_2_min_ago > 8.00
 
@@ -1764,8 +1761,8 @@ class maddog:
                     #  4 feb 2025 il trend e' ancora positivo (and ma300_last > ma450_last)
                     #  4 feb 2025 ma sende all' improvviso (and deviation_ma5_sopra_o_sotto_ma100 < -0.33)
                     #  4 feb 2025 ma si rialza velocemente il macd mostra un rialzo evidente (and macd_differenza_2_min_ago > 8.00)
-
-
+                    #  5 feb 2025 tolto ma2 > ma2 2 min ago
+                    #  5 feb 2025 aggiunta and 100>450 altrimenti comincia a comprare durante il ribasso
 
                 elif (    
                     ma20_last > ma200_last
@@ -45907,29 +45904,64 @@ class maddog:
                 action = "sell"
 
                 # 19 set 2024 se macd -40 vende con 3-300
+
+
+
                 
-          
             elif (
-                deviation_ma39 < -0.01
-                and deviation_sell < -0.015
+                deviation_ma100_sopra_ma300 > 0.20
+                and ma25_last > ma25_2_min_ago
+
+                and deviation_ma39 < -0.01
+                and deviation_sell < -0.025
                 
                 and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago < -1.50
                 and deviation_ma10_sopra_o_sotto_ma10_30_min_ago < 0.10
                 
                 and delta_450_300 < delta_450_300_60_min
                 and ma50_last < ma50_2_min_ago
-                and deviation_ma100_sopra_ma300 > 0.20
+                
                 
                 and deviation_ma3_sotto_ma150 > -1.20
                 
                 and ma2_last <= ma2_2_min_ago 
                 and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.018
             ):
-                sell = "SELL cond. special 3 - SALVAGENTE 3 3-39 < -0.20 e dev sell < -0.31 and dev_sell< -0.308 con ma50< e dev_ma3_sotto_ma200 > -1.20 - r 15985 A1 prova 5"
+                sell = "SELL CS con dev sell < -0.025 con ma50< MA ma25 > ma25 2 min_ago e dev_ma3_sotto_ma200 > -1.20 - r 15985 A1 prova 5x"
                 action = "sell"
                 
                 # 19 gen 2024 aggiunta and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.018
                 # 19 gen 2024 and deviation_sell a -0.015 da a -0.015
+                #  5 feb 2025 se ma25_last > ma25_2_min_ago allora dev sell a < -0.025 da < -0.015
+
+
+            elif (
+                deviation_ma100_sopra_ma300 > 0.20
+                and ma25_last < ma25_2_min_ago
+
+                and deviation_ma39 < -0.01
+                and deviation_sell < -0.017
+                
+                and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago < -1.50
+                and deviation_ma10_sopra_o_sotto_ma10_30_min_ago < 0.10
+                
+                and delta_450_300 < delta_450_300_60_min
+                and ma50_last < ma50_2_min_ago
+                
+                
+                and deviation_ma3_sotto_ma150 > -1.20
+                
+                and ma2_last <= ma2_2_min_ago 
+                and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.018
+            ):
+                sell = "SELL CS con dev sell < -0.015 con ma50< E ma25 < ma25 2 min ago e dev_ma3_sotto_ma200 > -1.20 - r 15985 A1 prova 5y"
+                action = "sell"
+                
+                # 19 gen 2024 aggiunta and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.018
+                # 19 gen 2024 and deviation_sell a -0.015 da a -0.015
+                #  5 feb 2025 se ma25_last < ma25_2_min_ago allora dev sell a < -0.017 da < -0.015
+
+
           
             elif (
                 deviation_ma39 < -0.01
