@@ -1735,6 +1735,7 @@ class maddog:
                 
                 elif (
                     ma3_last > ma13_last
+                    and deviation_ma25_sotto_ma300 > -0.70
                     and ma100_last > ma450_last
                     and ma300_last > ma450_last
                     and ma300_last > ma300_120_min_ago
@@ -1743,12 +1744,12 @@ class maddog:
                     
                     and deviation_ma10_sotto_ma100 < -0.06
                  
-                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma10 > -0.01
                     and deviation_ma3_sopra_ma16 > -0.02
                     
                     and macd > -100
                     and macd_differenza_2_min_ago > -2.50
-                    and macd_differenza_2_min_ago > 8.00
+                    and macd_differenza_2_min_ago > 7.00
 
                     and ma3_last > ma8_last
                     
@@ -1763,6 +1764,8 @@ class maddog:
                     #  4 feb 2025 ma si rialza velocemente il macd mostra un rialzo evidente (and macd_differenza_2_min_ago > 8.00)
                     #  5 feb 2025 tolto ma2 > ma2 2 min ago
                     #  5 feb 2025 aggiunta and 100>450 altrimenti comincia a comprare durante il ribasso
+                    #  5 feb 2025 aggiunta and deviation_ma25_sotto_ma300 > -0.70 cioe' quando comincia a scendere basta comprare cosi' !
+
 
                 elif (    
                     ma20_last > ma200_last
@@ -48791,7 +48794,8 @@ class maddog:
           
             elif (
                 ma78_last < ma78_120_min_ago
-                
+                and ma50_last <= ma50_2_min_ago
+
                 and ma20_last > ma20_2_min_ago
                 and ma300_last > ma300_301_min_ago
 
@@ -48799,11 +48803,11 @@ class maddog:
                 and ma5_last < ma10_last
                 and ma20_last < ma40_last
                 
-                and ma50_last <= ma50_2_min_ago
+                
                 and ma2_differenza_2_min_ago < -8
                 
-                and deviation_ma39 < 0.13
-                and deviation_sell < -0.02
+                and deviation_ma39 < 0.10
+                and deviation_sell < -0.025
                 
                 and ma2_last <= ma2_2_min_ago
                 and ma2_last < ma5_last
@@ -48812,7 +48816,7 @@ class maddog:
                 and macd < 25
             
             ):
-                sell = "SELL CS con ma20>ma20 2 min ago e ma50<= ma50 2 min ago E ma300 > 5 ore e dev 3-39 <0.08 e dev_sell <0.01 - r 16047 B1 Y1 Y2y"
+                sell = "SELL CS con ma20>ma20 2 min ago e ma50<= ma50 2 min ago E ma300 > 5 ore e dev 3-39 <0.10 e dev_sell <0.025 - r 16047 B1 Y1 Y2y"
                 action = "sell"
                 
                 # oggi 10 dicembre 2023 ascolta mario ! SE ma20_last > ma20_2_min_ago DEV SELL a 0.02 da 0.05
@@ -48823,6 +48827,7 @@ class maddog:
                 # 19 dic 2023 se 20 e' ancora sotto 40 esci prima cazzo ! and deviation_sell < 0.01 da < -0.03
                 # 30 dic 2023 5 < 10 and macd < 25 da < 15 !
                 #  1 dic 2024 and deviation_sell -0.02 da 0.01
+                #  5 feb 2025 and deviation_sell a -0.025 da -0.02
             
             elif (
                 ma78_last < ma78_120_min_ago
