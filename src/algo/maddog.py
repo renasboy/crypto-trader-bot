@@ -12024,15 +12024,19 @@ class maddog:
                 elif (
                     
                     ma3_last > ma20_last
-                    and deviation_ma25_sotto_ma300 > -0.50
+                    and deviation_ma200_sotto_ma300 < -0.17
+                    and ma300_last < ma300_60_min_ago
+                    and deviation_ma39 < -0.02
+
+                    
 
                     and ma450_last > ma450_300_min_ago
 
                     and ma100_last < ma100_60_min_ago
 
-                    and deviation_ma25_sotto_ma300 < -0.20
+                    and deviation_ma25_sotto_ma300 < -0.50
                     and deviation_ma50_sotto_ma300 < -0.20
-                    and deviation_ma39 < 0.02
+                    
                     and deviation_ma3_sotto_ma50 < -0.02
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.10
                     and deviation_ma5_sotto_ma200 < -0.25
@@ -12044,9 +12048,9 @@ class maddog:
                     and deviation_ma5_sopra_ma28 > -0.10
                     
                     and price >= price_2_min_ago
-                    and macd >= -40
+                    and macd >= -70
                 ):
-                    buy = "BUY 2A ribasso ma soltanto nella parte alta and ma3_last > ma20_last con 450 > 450 300 min ago - r 4685 Bx 1y"
+                    buy = "BUY 2 con ma3_last > ma20_last con 450 > 450 300 min ago - r 4685 BX 1Y"
                     action = "buy"
                     percentage = 80
                     
@@ -12055,7 +12059,10 @@ class maddog:
                     # 10 nov 2024 aggiunte NUOVE CONDIZIONI GRAFANA - ZIA AMALIA
                     #  5 feb 2025 aggiunta and deviation_ma25_sotto_ma300 > -0.50 significa che la smette di comprare se continua il ribasso
 
-
+                    #  6 feb 2025 aggiunta importantissima ! deviation_ma200_sotto_ma300 < -0.17
+                    #  6 feb 2025 aggiunta importantissima ! and deviation_ma39 < -0.02
+                    #  6 feb 2025 aggiunta and deviation_ma25_sotto_ma300 < -0.50 da > -0.50 con dev39 <-0.02 mi assumo la responsabilita' !
+                    #  6 feb 2025 and macd >= -70 da >-40
 
                 # 22 set 2024 CANCELLATA r 4685 BX 2x
                 
