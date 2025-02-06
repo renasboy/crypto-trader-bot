@@ -51407,12 +51407,16 @@ class maddog:
 
           
             # 16 POCHI MALEDETTI E SUBITO con deviation > 1.01 e macd < -10 e MACD DIFFERENZA < -25
-                
+
+
             elif (
                 deviation_sell > 0.81
                 and deviation_sell < 1.25
+
+                and ma300_last > ma450_last
                 and ma300_last > ma300_301_min_ago
-                
+                and delta_1 > delta_2
+
                 and ma3_last < ma50_last
                 and ma3_last < ma18_last
                 and ma2_last < ma5_last
@@ -51425,12 +51429,19 @@ class maddog:
                 and macd_differenza_3_min_ago < -7
                 
             ):    
-                sell = "SELL CS - P M e S con 3-50 e ma300 > 5 ore e dev 0.81 - 1.25 e macd < 16 e MACD diff_5_min_ago < -9 - r 16875 A1"
+                sell = "SELL CS - PMS + NOTTE con 3-50 e ma300 > 5 ore e dev 0.81 - 1.25 e macd < 16 e MACD diff_5_min_ago < -9 - r 16875 A1X"
                 action = "sell"
                 
                 #  7 mar 2024 fatta modifica
                 #  8 mar 2024 tolto dev 3-18 < -0.056 solo tra dev sell > 0.81 e dev sell < 1.25 e aggiunto sell con 3-39
                 #  9 set 2024 modificato da 3-39 a 3-50
+                #  6 feb 2025 aggiunta NOTTE ! 
+                #  6 feb 2025 se 300 sale da 5 ore vendi quando la ma100 comincia a curvare verso il basso ! lasciala correre !
+                
+
+
+
+
 
             elif (
                 deviation_sell > 1.25
