@@ -6509,21 +6509,23 @@ class maddog:
                 elif (     
                     
                     ma3_last > ma20_last
-                    and ma100_last < ma100_60_min_ago
+                    and deviation_ma200_sotto_ma300 < -0.17
+                    and ma300_last < ma300_60_min_ago
+                    and deviation_ma39 < -0.02
 
+
+                    and ma450_last < ma450_120_min_ago
+                    
                     and ma100_last < ma100_10_min_ago
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
-                    and ma200_last < ma200_120_min_ago
+                    and ma100_last < ma200_last
+                    
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.30
 
                     and ma18_last <= ma18_10_min_ago
-                    and ma50_differenza_ma59 >= -14
-                    
                     
                     and deviation_ma54_sopra_o_sotto_ma72 < -0.015
                     
                     and deviation_ma39_sotto_ma200 < -0.01
-                    and deviation_ma300_sopra_ma450 > -0.55
                     
                     and deviation_ma3_sopra_ma10 > 0.025
                     and deviation_ma3_sopra_ma16 > -0.01
@@ -6533,11 +6535,11 @@ class maddog:
                     
                     and ma2_last > ma5_last
                     and ma2_last >= ma2_2_min_ago
-                    and macd > -50
+                    and macd > -70
                     and macd_differenza_2_min_ago > -1.50
                  
                 ):    
-                    buy = "BUY 1 compare forever - con 18 < e con 3-20 E CON 300 ancora vicina alla 450 ( anche un poco sotto ! ) - r 1537 A3 Y1Y"
+                    buy = "BUY 1 compare forever - con 18 < e con 3-20 E CON deviation_ma200_sotto_ma300 < -0.17 - r 1537 A3 Y1Y"
                     action = "buy"
                     percentage = 80
                     
@@ -6549,7 +6551,7 @@ class maddog:
                     # 20 set 2024 anticipata ndecchiecella e aggiunto prendi coltello con il piede
 
                     #  3 ott 2024 modificata con ma200_last < ma200_120_min_ago aggiunto deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
-
+                    #  6 feb 2025 anticipata ndecchia
 
                   
                 elif (     
@@ -7497,10 +7499,12 @@ class maddog:
                     
                     
 
-                    
                 elif (
-                    ma5_last > ma300_last
                     
+                    ma3_last > ma20_last
+                    and deviation_ma200_sotto_ma300 < -0.17
+                    and ma300_last < ma300_60_min_ago
+                    and deviation_ma39 < -0.02
                     and ma5_last > ma50_last
                     
                     and delta_300_225 < delta_300_225_60_min
@@ -7513,7 +7517,31 @@ class maddog:
                     and price >= price_2_min_ago
                     and macd > -60
                 ):
-                    buy = "BUY 1 con ma5 > ma300 e con 5>50 con DOPPIO DELTA 300-225 GIORNO ! - r 2065 A"
+                    buy = "BUY 1 GIORNO con 3>20 - r 2065 AX"
+                    action = "buy"
+                    percentage = 80
+
+                    #  6 feb 2025 modificata - GIORNO
+
+                
+                elif (    
+                    ma3_last > ma25_last
+                    and deviation_ma200_sotto_ma300 < -0.17
+                    and ma300_last < ma300_60_min_ago
+                    and deviation_ma39 < -0.02
+                    and ma5_last > ma50_last
+                    
+                    and delta_300_225 > delta_300_225_60_min
+                    
+                    and ma300_last < ma300_120_min_ago
+                    
+                    and deviation_ma3_sopra_ma7 > 0.01
+                    and deviation_ma13_sopra_ma25 > -0.01
+                  
+                    and price >= price_2_min_ago
+                    and macd > -60
+                ):
+                    buy = "BUY 1 NOTTE con 3>25 ! - r 2065 AY"
                     action = "buy"
                     percentage = 80
                     
@@ -7521,6 +7549,8 @@ class maddog:
                     #  3 lug 2023 tolto dev bellissima
                     #  3 lug 2023 tolto ma100_last > ma150_last
                     #  5 feb 2025 modificata - anticipata ndecchiecella - niente di speciale
+                    #  6 feb 2025 modificata - NOTTE
+
                     
 
                 elif (    
