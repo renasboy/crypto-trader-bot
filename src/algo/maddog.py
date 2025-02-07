@@ -2348,14 +2348,12 @@ class maddog:
                     and delta_300_200 > delta_300_200_60_min
                     and deviation_ma25_sotto_ma300 < -1.20
 
-                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.01
-                    
                     and ma450_last < ma450_360_min_ago
                     and ma300_last < ma300_60_min_ago
                     and ma200_last < ma200_60_min_ago
                     
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.30
-                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.60
                     and deviation_ma5_sopra_ma200 < -0.30
                     and deviation_ma5_sotto_ma300 < -0.30
                     and deviation_ma5_sotto_ma450 < -0.30
@@ -2363,21 +2361,23 @@ class maddog:
                     and deviation_ma50_sopra_o_sotto_ma100 < -0.01
                     and deviation_ma100_sopra_ma300 < -0.10
                     
-                    and deviation_ma3_sopra_ma10 > 0.04
+                    and deviation_ma3_sopra_ma10 > 0.01
                     and deviation_ma3_sopra_ma16 > -0.125
                     and deviation_ma5_sopra_ma28 > -0.155
                     
-                    and ma2_last >= ma2_2_min_ago
-                    
-                    and macd > -60
-                    and macd_differenza_2_min_ago > -1.50
+                    and macd > -70
+                    and macd_differenza_2_min_ago > -2.50
                 ):
-                    buy = "BUY 1 - NOTTE - migliore con distanza 5-300 e distanza 5-100 con 3-16 E dev TRIADE e dev ma2 e diff macd - r 1043 B1x1"
+                    buy = "BUY 1 - NOTTE - migliore con distanza 5-300 e distanza 5-100 con 3-16 E dev TRIADE e diff macd - r 1043 B1x1"
                     action = "buy"
                     percentage = 70
 
                     # 24 feb 2024  3-16 da 3-18
                     # 27 gen 2025 se NOTTE aggiunta and deviation_ma25_sotto_ma300 < -1.20
+                    #  7 feb 2025 tolta and ma2_last >= ma2_2_min_ago
+                    #  7 feb 2025 vedo che comincia ad andare bene and deviation_ma5_sopra_o_sotto_ma100 > -0.60 da > -0.50
+
+
 
                 elif (
                     
