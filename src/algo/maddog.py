@@ -44370,18 +44370,45 @@ class maddog:
                         #  8 dic 2023 aggiunta and macd_last < macd_2_min_ago
                         #  8 dic 2023 aggiunta and macd_differenza_2_min_ago < 2
 
-                  
+
+
+
                     elif ( 
                         ma50_last > ma50_2_min_ago
                         and ma450_last < ma450_360_min_ago
+
+                        and deviation_sell > 0.80
+                        and deviation_ma25 < -0.20
+                        and ma3_last < ma33_last
+                        and ma200_last > ma200_60_min_ago
+                        
                         
                         and ma2_last < ma2_2_min_ago 
-                        and deviation_ma25 < -0.25
-                        and ma200_last > ma200_60_min_ago
                     ):
-                        sell = "SELL 4-5-x da 60 a 90 min con ma50 > and deviation_ma25 < -0.25 and ma450_last < ma450_360_min_ago - r 15538 b"
+                        sell = "SELL 4-5-x (60-90 min) CON ma450 < ma450 360 min ago E dev sell >0.80 e dev_ma25 < -0.20 E 3<33 - r 15538 B1"
                         action = "sell"
+
+                        #  7 feb 2025 se 450 < quindi ribasso e guadagna con una fiammata >0.80 prendi i soldi
+
+
+                    elif ( 
+                        ma50_last > ma50_2_min_ago
+                        and ma450_last < ma450_360_min_ago
+
+                        and deviation_sell > 0.40
+                        and deviation_sell < 0.80
+
+                        and deviation_ma25 < -0.25
+                        and ma5_last < ma100_last
+                        and ma200_last > ma200_60_min_ago
                         
+                        
+                        and ma2_last < ma2_2_min_ago 
+                    ):
+                        sell = "SELL 4-5-x (60-90 min) CON ma450 < ma450 360 min ago E dev sell 0.40-0.80 E dev_ma25 < -0.25 E 5<100  - r 15538 B2"
+                        action = "sell"
+
+                        #  7 feb 2025 se 450 < quindi ribasso e guadagna 0.40-0.80 stai calmo
                         
                         
                     
