@@ -37084,9 +37084,42 @@ class maddog:
                         
                         # 17 dic 2023 MARIO se ma30> aggiunta and ma2_differenza_2_min_ago < -10 and ma2_differenza_ma5 < -9 (c'e' un segno di ripresa!)
 
-                  
+                    
+
+
+
+                    elif (        
+                        ma50_last > ma50_2_min_ago
+                        and ma78_last < ma78_120_min_ago
+                        and ma100_last < ma300_last
+
+                        and ma20_last <= ma20_2_min_ago
+                        and ma300_last < ma300_120_min_ago
+                        and ma200_last < ma200_60_min_ago
+                
+                        and deviation_ma39 < 0.10
+                        and deviation_sell < -0.03
+                
+                
+                        and deviation_ma100_sopra_ma300 < 0.40
+                        and deviation_ma5_sotto_ma200 > -0.90
+                        
+                
+                        and ma2_last <= ma2_2_min_ago 
+                        and macd < macd_2_min_ago
+
+
+                    ):
+                        sell = "SELL 2 (21-60 min) con ma50> e ma20_last <= ma20_2_min_ago e dev_ma39 < 0.10 e dev_sell < -0.03 - r 11633 Y1"
+                        action = "sell"
+
+                        #  7 feb 2025  aggiunta questa perche' e' andata benissimo durante il ribasso !
+                        #  7 feb 2025 se vedi bene 50> !
+
+
                     elif (        
                         ma50_last < ma50_2_min_ago
+
                         and ma20_last <= ma20_2_min_ago
                         
                         and ma300_last < ma300_120_min_ago
@@ -37099,7 +37132,7 @@ class maddog:
                         and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.02
                         and macd_differenza_2_min_ago < -0.40
                     ):
-                        sell = "SELL 2 (21-60 min) con ma50 < and ma20_last <= ma20_2_min_ago and deviation_ma39 < 0.13 and deviation_sell < 0.02 - r 11633 Y"
+                        sell = "SELL 2 (21-60 min) con ma50< e ma20_last <= ma20_2_min_ago e dev_ma39 < 0.13 e dev_sell < 0.02 - r 11633 Y2"
                         action = "sell"
                         
                         # durante il crollo non devi pensare ai centesimi !
