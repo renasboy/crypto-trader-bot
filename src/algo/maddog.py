@@ -5,10 +5,25 @@
 
 """
 
-and delta_1 < delta_2 GIORNO ! (100-200 last vs 100-200 di 60 min ago)
-and delta_1 > delta_2 NOTTE !
+GIORNO e NOTTE !
 
-and delta_300_200 < delta_300_200_60_min GIORNO ! 
+and delta_1 < delta_2  ...........................GIORNO (100-200 last vs 100-200 di 60 min ago)
+and delta_1 > delta_2 NOTTE
+
+and delta_300_200 < delta_300_200_60_min  ....... GIORNO ! 
+
+
+
+INCOMINCIA A SCENDERE !
+
+ma3_last > ma20_last
+and deviation_ma200_sotto_ma300 < -0.17
+and ma300_last < ma300_60_min_ago
+and deviation_ma39 < -0.02
+
+
+
+OSSO !
 
 and ma39_last < ma100_last
 and deviation_ma100_sopra_ma300 < -0.59
@@ -25591,12 +25606,48 @@ class maddog:
                     action = "buy"
                     percentage = 70
 
-                
+
+
+
                 elif (    
                     ma3_last > ma20_last
-
+                    and ma200_last > ma300_last
+                    
                     and ma39_last > ma39_20_min_ago
+                    
+                    and ma450_last >= ma450_120_min_ago
+                    and ma300_last > ma300_60_min_ago
+                    and ma100_last > ma450_last
+                    
+                    and ma10_last < ma30_last
                    
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > -0.02
+                    
+                    
+                    and ma3_last > ma13_last
+                    and ma3_last > ma5_last
+                    
+                    and ma2_last > ma2_2_min_ago
+                    and macd > -70
+                    and macd_differenza_2_min_ago > -3.25
+                
+                ):
+                    buy = "BUY 5 con 450_last >= 450_120_min_ago E ma200>ma300 E ma39 > ma39 20 min ago ! - r 7144 A1 Y2 NUOVA ERA A3 SOFT xX 1"
+                    action = "buy"
+                    percentage = 70
+
+                    #  7 feb 2025 aggiunta 200>300
+
+
+                elif (    
+                    ma3_last > ma20_last
+                    
+                    and deviation_ma200_sotto_ma300 < -0.17
+                    and ma300_last < ma300_60_min_ago
+                    and deviation_ma39 < -0.02
+
                     and ma450_last >= ma450_120_min_ago
                     and ma100_last > ma450_last
                     
@@ -25611,14 +25662,15 @@ class maddog:
                     and ma3_last > ma5_last
                     
                     and ma2_last > ma2_2_min_ago
-                    and macd > -40
+                    and macd > -70
                     and macd_differenza_2_min_ago > -3.25
                 
                 ):
-                    buy = "BUY 5 con 450_last >= 450_120_min_ago E ma100>ma450 E ma39 > ma39 20 min ago ! - r 7144 A1 Y2 NUOVA ERA A3 SOFT xX"
+                    buy = "BUY 5 con 450_last >= 450_120_min_ago MA ma200<ma300 E ma39 > ma39 20 min ago ! - r 7144 A1 Y2 NUOVA ERA A3 SOFT xX 2"
                     action = "buy"
                     percentage = 70
 
+                    #  7 feb 2025 aggiunta questa condizione. attenzione ! COMINCIA LA DISCESA !
 
 
 
