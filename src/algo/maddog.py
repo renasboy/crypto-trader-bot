@@ -2948,31 +2948,33 @@ class maddog:
                 
                     
                     
-                # ------------------------------------------------------------ BUY 1 MOLTO RISCHIOSO modo 2 ! quando incomincia il ribasso MA ma300 > E MA 200<300
+                # --------------------------- BUY 1 quando incomincia il ribasso MA ma300 > ma300_120_min_ago
                 
-                
-                elif (     
-                    ma300_last > ma300_120_min_ago
-                    and macd >= macd_2_min_ago
-                    and ma200_last < ma300_last
-                    and ma5_last < ma300_last
-                    and ma5_last > ma100_last
-                    
-                    and deviation_ma3_sopra_ma10 > 0.135
+                elif (       
+                    ma3_last > ma20_last
+                    and deviation_ma200_sotto_ma300 < -0.17
+                    and ma300_last < ma300_60_min_ago
+                    and deviation_ma39 < -0.02
+
+                    and ma300_last > ma300_120_min_ago
                     
                     and ma200_last < ma200_60_min_ago
                     and ma100_last < ma100_60_min_ago
-              
-                    and ma2_last > ma2_2_min_ago
+
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    
+                    and ma5_last < ma300_last
+                    and macd > -60
+                    
                 ):     
                   
-                    buy = "BUY 1 quando incomincia il ribasso MA ma300> MA 200<300 CON 5 SOTTO 300 ! E COMPRA CON 5 SOPRA 100 ! - r 1184 B1"
+                    buy = "BUY 1 quando incomincia il ribasso MA ma300 > ma300_120_min_ago  - r 1184 B1"
                     action = "buy"
                     percentage = 90
                     
                     # 20 set 2022 aggiunto 3-10 > 0.11
                     #  1 ott 2022 3-10 > 0.135
-                    
+                    #  7 feb 2025 dopo quasi 3 anni aggiunta quando comincia il ribasso come si deve !
                 
                
                     
