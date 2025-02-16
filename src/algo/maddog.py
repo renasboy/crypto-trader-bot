@@ -14,12 +14,37 @@ and delta_300_200 < delta_300_200_60_min  ....... GIORNO !
 
 
 
-INCOMINCIA A SCENDERE !
 
-ma3_last > ma20_last
+
+
+
+COMINCIA A SCENDERE roma !
+
+and ma3_last > ma20_last
 and deviation_ma200_sotto_ma300 < -0.17
 and ma300_last < ma300_60_min_ago
 and deviation_ma39 < -0.02
+
+
+
+
+CONTINUA A SCENDERE circello
+
+and deviation_ma39_di_adesso_diviso_ma39_di_180_min_ago < -1.20
+and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.13
+and deviation_ma39_sotto_ma100 > -0.15
+
+
+
+CUSPIDE VERSO DESTRA ( > ) circello
+
+and ma3_last > ma20_last
+and ma100_last > ma100_300_min_ago
+and ma100_last < ma100_120_min_ago
+
+
+
+
 
 
 
@@ -38,6 +63,9 @@ and deviation_ma5_sopra_o_sotto_ma100 < -0.22
 and deviation_ma5_sotto_ma200 < -0.31
 and deviation_ma5_sotto_ma300 < -0.41
 and deviation_ma5_sotto_ma450 < -0.51
+
+
+
 
 
 
@@ -186,7 +214,8 @@ class maddog:
         ma39_20_min_ago = self.algo_helper.ma_minutes_ago(39, 20)
         ma39_30_min_ago = self.algo_helper.ma_minutes_ago(39, 30)
         ma39_70_min_ago = self.algo_helper.ma_minutes_ago(39, 70)
-        
+        ma39_180_min_ago = self.algo_helper.ma_minutes_ago(39, 180)
+
         ma40_30_min_ago = self.algo_helper.ma_minutes_ago(40, 30)
         
         ma50_2_min_ago = self.algo_helper.ma_minutes_ago(50, 2)
@@ -648,7 +677,12 @@ class maddog:
         self.algo_helper.info("deviation_ma10_sotto_ma100: {}".format(deviation_ma10_sotto_ma100))
         
         
+        # formula DEVIATION_ma39_sotto_ma100 - FORMULA circello!
         
+        deviation_ma39_sotto_ma100 = (ma39_last / ma100_last - 1) * 100 if ma100_last else 0
+        self.algo_helper.info("deviation_ma39_sotto_ma100: {}".format(deviation_ma39_sotto_ma100))
+
+
         # formula DEVIATION_ma39_sotto_ma200 - FORMULA cv!
         
         deviation_ma39_sotto_ma200 = (ma39_last / ma200_last - 1) * 100 if ma200_last else 0
@@ -1057,11 +1091,16 @@ class maddog:
         
         
         
-        
         # formula deviation_ma3 di adesso / ma3 di 90 min ago
         
         deviation_ma3_di_adesso_diviso_ma3_di_90_min_ago = (ma3_last / ma3_90_min_ago - 1) * 100 if ma3_90_min_ago else 0
         self.algo_helper.info("deviation_ma3_di_adesso_diviso_ma3_di_90_min_ago: {}".format(deviation_ma3_di_adesso_diviso_ma3_di_90_min_ago))
+
+
+        # formula deviation_ma39 di adesso / ma39 di 180 min ago
+        
+        deviation_ma39_di_adesso_diviso_ma39_di_180_min_ago = (ma39_last / ma39_180_min_ago - 1) * 100 if ma39_180_min_ago else 0
+        self.algo_helper.info("deviation_ma39_di_adesso_diviso_ma39_di_180_min_ago: {}".format(deviation_ma39_di_adesso_diviso_ma39_di_180_min_ago))
         
         
         
@@ -1072,6 +1111,8 @@ class maddog:
         
         
         
+
+
         # formula deviation_ma50
         
         deviation_ma50 = (ma50_last / ma50_60_min_ago - 1) * 100 if ma50_60_min_ago else 0
@@ -1751,7 +1792,7 @@ class maddog:
                 
                 elif (
                     ma3_last > ma13_last
-                    and deviation_ma25_sotto_ma300 > -0.70
+                    and deviation_ma25_sotto_ma300 > -0.75
 
                     and ma100_last > ma450_last
                     and ma300_last > ma450_last
@@ -1764,9 +1805,9 @@ class maddog:
                     and deviation_ma3_sopra_ma10 > -0.01
                     and deviation_ma3_sopra_ma16 > -0.02
                     
-                    and macd > -100
+                    and macd > -110
                     and macd_differenza_2_min_ago > -2.50
-                    and macd_differenza_2_min_ago > 7.00
+                    and macd_differenza_2_min_ago > 6.00
 
                     and ma3_last > ma8_last
                     
@@ -1782,6 +1823,9 @@ class maddog:
                     #  5 feb 2025 tolto ma2 > ma2 2 min ago
                     #  5 feb 2025 aggiunta and 100>450 altrimenti comincia a comprare durante il ribasso
                     #  5 feb 2025 aggiunta and deviation_ma25_sotto_ma300 > -0.70 cioe' quando comincia a scendere basta comprare cosi' !
+                    # 16 feb 2025 modificata ndecchiecella
+                    # 16 feb 2025 and macd > -110 da > -100
+                    # 16 feb 2025 and macd_differenza_2_min_ago > 6.00 da > 7.00
 
 
                 elif (    
@@ -24840,22 +24884,26 @@ class maddog:
                     and ma25_last > ma300_last
                     and ma100_last > ma200_last
                     
-                    and deviation_ma3_sopra_ma28 > -0.10
+                    and deviation_ma3_sopra_ma28 > -0.12
                     
                     and ma3_last > ma13_last
                     
-                    and macd > -60
+                    and macd > -70
                     
                 ):
-                    buy = "BUY 4 con con 100<100 120 min ago E doppio delta GIORNO e 25>300 (non spezzo la catena !) - r 7065 A1x"
+                    buy = "BUY 4 con con 100>100 120 min ago E doppio delta GIORNO e 25>300 (non spezzo la catena !) - r 7065 A1x"
                     action = "buy"
                     percentage = 70
 
                     # 14 ott 2024 se 100> 100 60 min ago ok cosi'
                     # 20 gen 2025 anticipata ndecchiecella
+                    # 16 feb 2025 macd a -70 da -60
+
+
+
 
                 elif (
-                    ma3_last > ma20_last
+ma3_last > ma20_last
                     and ma100_last < ma100_120_min_ago
                     
                     and deviation_ma25_sotto_ma300 < -0.15
@@ -26686,6 +26734,8 @@ class maddog:
                     buy = "BUY 5 con 300 > 450 and ma50 > E 50<100 and 300 > 120 min ago e 5-28 > 0.23 and ma2_diff_2_min_ago > 10 - r 7237 A1 NUOVA ERA A2 SOFT 2"
                     action = "buy"
                     percentage = 70
+
+
                   
 
                 elif (
