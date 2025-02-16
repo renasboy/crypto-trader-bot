@@ -16283,6 +16283,8 @@ class maddog:
 
                 elif (
                     ma3_last > ma39_last
+
+                    and ma100_last > ma100_120_min_ago
                     and ma450_last > ma450_120_min_ago
                     and ma300_last > ma300_60_min_ago
                     
@@ -16291,23 +16293,54 @@ class maddog:
                     
                     and deviation > -0.30
                     
-                    and deviation_ma4_sopra_ma30 > 0.15
-                    and delta_buy3_incrocio_ma3_ma8 >= 0.06
-                    
                     and ma3_last > ma8_last
-                    and ma3_last >= ma39_last
-                    and ma5_last >= ma15_last
-                    
                     
                     and ma2_last >= ma2_2_min_ago
-                    and macd >= macd_2_min_ago
+                    and macd > -70
                 ):    
-                    buy = "BUY 2 con ma450_last > ma450_120_min_ago E con 3-39 e con 300>300 60 min ago  - r 5892 A1x1"
+                    buy = "BUY 2 con ma450_last > ma450_120_min_ago E con 3-39 e con 300>300 60 min ago  - r 5892 A1x1 x"
                     action = "buy"
                     percentage = 70
 
                     # 11 set 2024 forse e' da cancellare
+                    # 16 feb 2025 se anche ma100_last > ma100_120_min_ago anticipata ndecchiecella
 
+
+                elif (
+                    ma3_last > ma39_last
+
+                    and ma100_last > ma100_300_min_ago
+                    and ma100_last < ma100_120_min_ago
+
+                    and ma300_last > ma300_120_min_ago
+                    and ma78_last < ma150_last
+                    
+
+                    and deviation_ma25_sotto_ma300 < -0.35
+                    and deviation_ma50_sotto_ma300 < -0.35
+                    and deviation_ma39 < 0.07
+                    and deviation_ma3_sotto_ma50 < 0.03
+                    and deviation_ma5_sopra_o_sotto_ma100 < 0.01
+                    and deviation_ma5_sotto_ma200 < -0.15
+                    and deviation_ma5_sotto_ma300 < -0.20
+                    and deviation_ma5_sotto_ma450 < -0.25
+
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+
+                    and ma450_last > ma450_120_min_ago
+                    and ma300_last > ma300_60_min_ago
+                    
+                    and ma3_last > ma8_last
+                   
+                    and ma2_last >= ma2_2_min_ago
+                    and macd > -70
+                ):    
+                    buy = "BUY 2 con ma450_last > ma450_120_min_ago E con 3-39 e con 300>300 60 min ago  - r 5892 A1x1 y"
+                    action = "buy"
+                    percentage = 70
+
+                    # 11 set 2024 forse e' da cancellare
+                    # 16 feb 2025 aggiunta osso e cuspide 
 
 
                 elif (
@@ -18748,15 +18781,30 @@ class maddog:
                     
                 elif (
 
-                    deviation_buy_ma2_sopra_ma13 > -0.01
-                    and ma300_last > ma300_301_min_ago
-                    
-                    and ma28_last < ma78_last
-                    and ma100_last < ma100_60_min_ago
-                    
-                    and ma200_last > ma200_60_min_ago
-                    and deviation > -0.30
+                    ma3_last > ma20_last
+                    and ma100_last > ma100_300_min_ago
+                    and ma100_last < ma100_120_min_ago
 
+                    and ma300_last > ma300_120_min_ago
+                    and ma78_last < ma150_last
+                    
+
+                    and deviation_ma25_sotto_ma300 < -0.35
+                    and deviation_ma50_sotto_ma300 < -0.35
+                    and deviation_ma39 < 0.07
+                    and deviation_ma3_sotto_ma50 < 0.03
+                    and deviation_ma5_sopra_o_sotto_ma100 < 0.01
+                    and deviation_ma5_sotto_ma200 < -0.15
+                    and deviation_ma5_sotto_ma300 < -0.20
+                    and deviation_ma5_sotto_ma450 < -0.25
+
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+
+                    and ma300_last > ma300_301_min_ago
+                    and ma100_last < ma100_60_min_ago
+
+                    and ma28_last < ma78_last
+                    
                     and ma2_last >= ma2_2_min_ago
                     and macd_differenza_2_min_ago > -1.25
                       
@@ -18773,7 +18821,7 @@ class maddog:
                     # 300 sale da 5 ore NON DIMENTICARLO !
                     # 19 gen 2025 anticipata di molto
                     # 28 gen 2025 anticipata ancora ma di una ndecchiecella. ma e' andata bene.
-
+                    # 16 feb 2025 aggiunta osso e cuspide che gia' era presente in forma embrionale
                     
                 elif (    
                     ma4_last > ma50_last
@@ -22990,9 +23038,33 @@ class maddog:
                 
                 elif (    
                     ma3_last > ma15_last
-                    and ma300_last > ma450_last
-                    and ma450_last > ma450_720_min_ago
 
+                    and ma3_last > ma20_last
+                    and ma100_last > ma100_300_min_ago
+                    and ma100_last < ma100_120_min_ago
+
+                    and ma300_last > ma300_120_min_ago
+                    and ma78_last < ma150_last
+                    
+
+                    and deviation_ma25_sotto_ma300 < -0.35
+                    and deviation_ma50_sotto_ma300 < -0.35
+                    and deviation_ma39 < 0.07
+                    and deviation_ma3_sotto_ma50 < 0.03
+                    and deviation_ma5_sopra_o_sotto_ma100 < 0.01
+                    and deviation_ma5_sotto_ma200 < -0.15
+                    and deviation_ma5_sotto_ma300 < -0.20
+                    and deviation_ma5_sotto_ma450 < -0.25
+
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > 0.07
+                    
+                    
+
+                    and ma450_last > ma450_720_min_ago
                     and ma300_last > ma300_120_min_ago
                     and ma450_last > ma450_120_min_ago
                     
@@ -23000,11 +23072,14 @@ class maddog:
                     and ma100_last < ma100_60_min_ago
                     
                     and ma3_last > ma8_last
+                    and ma3_last > ma13_last
                     
-                    and macd > -70
-                    and macd_differenza_2_min_ago > -1.50
+                    and ma2_last > ma2_2_min_ago
+                    and macd > -60
+                    and macd_differenza_2_min_ago > -1.5
+                    
                 ):    
-                    buy = "BUY 4 con 3-15 se ma450> 12 ore e con 300>450 E 100 < - r 6736 A1 Z2 X"
+                    buy = "BUY 4 con 3-15 se ma450> 12 ore e con 300>450 E 100 < con aggiunta osso e cuspide - r 6736 A1 Z2 X"
                     action = "buy"
                     percentage = 70
                     
@@ -23012,6 +23087,9 @@ class maddog:
                     # 28 gen 2025 bella l' idea del pugno fantasma ma con 300>450 e 450 > 12 ore devi pungere come un' ape !
                     # 28 gen 2025 tolto ma2 > ma2 2 min ago
                     # 28 gen 2024 tolto macd > macd 2 min ago e sostituito con macd > -60
+                    # 16 feb 2025 aggiunto osso e cuspide che gia' c' era in forma embrionale
+
+
                 
                 elif (    
                     ma3_last > ma20_last
@@ -26739,9 +26817,16 @@ ma3_last > ma20_last
                   
 
                 elif (
-                    ma3_last > ma20_last
+                    ma3_last > ma18_last
+
+                    and ma3_last > ma20_last
+                    and ma100_last > ma100_300_min_ago
+                    and ma100_last < ma100_120_min_ago
+
+                    and ma300_last > ma300_120_min_ago
                     and ma78_last < ma150_last
                     
+
                     and deviation_ma25_sotto_ma300 < -0.35
                     and deviation_ma50_sotto_ma300 < -0.35
                     and deviation_ma39 < 0.07
@@ -26752,7 +26837,7 @@ ma3_last > ma20_last
                     and deviation_ma5_sotto_ma450 < -0.25
 
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
-                    and ma300_last > ma300_120_min_ago
+                    
                     
                     and deviation_ma3_sopra_ma10 > 0.01
                     and deviation_ma3_sopra_ma16 > 0.07
@@ -26764,13 +26849,14 @@ ma3_last > ma20_last
                     and macd_differenza_2_min_ago > -1.5
                     
                 ):
-                    buy = "BUY 5 con 300 > 120 min ago MA ma78_last < ma150_last e DNAM - r 7237 A1 NUOVA ERA A3 SOFT"
+                    buy = "BUY 5 con 300 > 120 min ago MA ma78_last < ma150_last e DNAM + cuspide - r 7237 A1 NUOVA ERA A3 SOFT"
                     action = "buy"
                     percentage = 70
                     
                     #  9 feb 2024 IMPORTANTE ! solo BUY 5 NUOVA ERA A3 SOFT con ma100> ma100 5 min ago !!!
                     #  2 dic 2024 aggiunta DNAM
-
+                    # 16 feb 2024 e' andata bene.
+                    # 16 feb 2025 aggiunta cuspide - che se vedi c' era gia' in forma embrionale. 
 
                 elif (
                     ma5_last >= ma5_2_min_ago
