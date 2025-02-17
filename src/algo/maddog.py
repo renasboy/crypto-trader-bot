@@ -31,6 +31,8 @@ and deviation_ma39 < -0.02
 CONTINUA A SCENDERE circello
 
 and deviation_ma39_di_adesso_diviso_ma39_di_180_min_ago < -1.20
+and deviation_ma300_sopra_ma450 < -0.22
+and delta_1 > delta_2
 and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.13
 and deviation_ma39_sotto_ma100 > -0.15
 
@@ -6571,6 +6573,12 @@ class maddog:
                 elif (     
                     
                     ma3_last > ma20_last
+
+                    and deviation_ma300_sopra_ma450 < -0.20
+                    and deviation_ma39_di_adesso_diviso_ma39_di_180_min_ago < -1.20
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.13
+                    and deviation_ma39_sotto_ma100 > -0.15
+
                     and deviation_ma200_sotto_ma300 < -0.17
                     and ma300_last < ma300_60_min_ago
                     and deviation_ma39 < -0.02
@@ -6578,7 +6586,7 @@ class maddog:
 
                     and ma450_last < ma450_120_min_ago
                     
-                    and ma100_last < ma100_10_min_ago
+                    
                     and ma100_last < ma200_last
                     
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.30
@@ -6596,7 +6604,7 @@ class maddog:
                     and ma2_last >= ma20_last
                     
                     and ma2_last > ma5_last
-                    and ma2_last >= ma2_2_min_ago
+                    
                     and macd > -70
                     and macd_differenza_2_min_ago > -1.50
                  
@@ -6614,7 +6622,7 @@ class maddog:
 
                     #  3 ott 2024 modificata con ma200_last < ma200_120_min_ago aggiunto deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
                     #  6 feb 2025 anticipata ndecchia
-
+                    # 16 feb 2025 aggiunto continua a scendere circello
                   
                 elif (     
                     ma3_last > ma18_last
@@ -16771,11 +16779,16 @@ class maddog:
                 elif (
                     ma3_last > ma20_last
 
-                    and deviation_ma5_sotto_ma300 < -0.40
-                    and deviation_ma10_sopra_ma200 < -0.30
+                    and deviation_ma300_sopra_ma450 < -0.22
+                    and deviation_ma39_di_adesso_diviso_ma39_di_180_min_ago < -1.10
+                    and delta_1 > delta_2
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.14
+                    and deviation_ma39_sotto_ma100 > -0.15
                     
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
 
+                    and deviation_ma5_sotto_ma300 < -0.30
+                    and deviation_ma10_sopra_ma200 < -0.20
+                   
                     and ma39_last < ma100_last
                     and deviation_ma25_sotto_ma300 < -0.15
                     and deviation_ma50_sotto_ma300 < -0.15
@@ -16792,18 +16805,16 @@ class maddog:
                     and delta_1 > delta_2
                     
                     and ma3_last > ma8_last
-                    
-                    and ma2_last >= ma2_2_min_ago
-                    and macd >= -50
+                    and macd >= -70
                 ):    
-                    buy = "BUY 2 con 3-20 e CON delta_1 > delta_2 e con DNAM - r 5945 A3 Y NUOVA ERA A3 SOFT"
+                    buy = "BUY 2 con 3-20 e CON delta_1 > delta_2 e con DNAM e continua a scendere circello - r 5945 A3 Y NUOVA ERA A3 SOFT"
                     action = "buy"
                     percentage = 70
 
                     #  1 dic 2024 aggiunta DNAM SOFT perche' e' presente and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
                     #  3 feb 2025 aggiunta and deviation_ma5_sotto_ma300 < -0.40
                     #  3 feb 2025 aggiunta and deviation_ma10_sopra_ma200 < -0.30
-
+                    # 17 feb 2025 aggiunta continua a scendere circello
 
                 
                 elif (
@@ -19709,27 +19720,32 @@ class maddog:
                     
                 elif (
                     ma3_last > ma20_last
+
+                    and deviation_ma300_sopra_ma450 < -0.22
+                    and deviation_ma39_di_adesso_diviso_ma39_di_180_min_ago < -1.00
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.14
+                    and deviation_ma39_sotto_ma100 > -0.15
+
+
                     and delta_300_200 < delta_300_200_30_min
-                    and deviation_ma25_sotto_ma300 < -0.49
+                    and deviation_ma25_sotto_ma300 < -0.20
 
 
                     and ma39_last < ma100_last
                             
-                    and deviation_ma50_sotto_ma300 < -0.70
+                    
                     and deviation_ma39 < -0.05
                     and deviation_ma3_sotto_ma50 < -0.10   
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.27
-                    and deviation_ma5_sotto_ma200 < -0.45
-                    and deviation_ma5_sotto_ma300 < -0.65
-                    and deviation_ma5_sotto_ma450 < -1.00
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.10
+                    and deviation_ma5_sotto_ma200 < -0.10
+                    
 
                     and ma78_last < ma200_last
-                    and deviation_ma3_sopra_ma10 > 0.07
+                    and deviation_ma3_sopra_ma10 > 0.01
                     
-                    and ma2_last >= ma2_2_min_ago
                     and macd_differenza_2_min_ago > -3
                 ):
-                    buy = "BUY 3 - GIORNO - RIVOLUZIONARIO con 3-20 se ma78 < ma200 + DNAM - r 6356 B2"
+                    buy = "BUY 3 - GIORNO - RIVOLUZIONARIO con 3-20 se ma78 < ma200 + DNAM + continua a scendere circello - r 6356 B2"
                     action = "buy"
                     percentage = 80
                     
@@ -19739,7 +19755,7 @@ class maddog:
                     #  5 nov 2024 + zia amalia
                     #  1 dic 2024 modificato DNAM
                     # 27 gen 2025 se GIORNO aggiunta and deviation_ma25_sotto_ma300 < -0.49
-                    
+                    # 17 feb 2025 se deviation_ma300_sopra_ma450 < -0.22 allora aggiungo continua a scendere circello
                     
 
                 elif (
@@ -21446,30 +21462,37 @@ class maddog:
                     # 13 dic 2023 4-18 da 5-39
                     # 13 dic 2023 aggiunta and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02 = 8 pts
 
+
+
+                 
                 elif (
-                    deviation_ma78_sopra_o_sotto_ma78_30_min_ago > -0.03
-                    and ma3_last > ma39_last
-                    and ma2_differenza_2_min_ago > 5
-                    
-                    and ma50_differenza_ma59 < -5
-                    and macd > macd_2_min_ago
-                    and deviation_ma5_sotto_ma300 < -0.42
-                    
+                    ma3_last > ma20_last
+
                     and ma100_last < ma100_180_min_ago
                     and ma200_last < ma200_180_min_ago
                     and ma300_last < ma300_180_min_ago
-                    
+
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
+
+                    and deviation_ma300_sopra_ma450 < -0.22
+                    and deviation_ma39_di_adesso_diviso_ma39_di_180_min_ago < -1.00
+                    and delta_1 > delta_2
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.14
+                    and deviation_ma39_sotto_ma100 > -0.15
+
+
+                    and deviation_ma78_sopra_o_sotto_ma78_30_min_ago > -0.10
                     
-                    and deviation_ma3_sopra_ma10 > 0.02
-                    and deviation_ma5_sopra_ma28 > 0.02
+                    and deviation_ma5_sotto_ma300 < -0.22
                     
-                    and ma2_last >= ma2_2_min_ago
-                    and macd > macd_2_min_ago
-                    and macd > 5
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma5_sopra_ma28 > -0.02
+                    
+                    and macd > -70
+                    and macd_differenza_2_min_ago > -2.50
                 ):
-                    buy = "BUY 3 29 ago 2022 > 180 min di ribasso con 3-39 E ma2_differenza_2_min_ago > 5 - r 6572 A2Y1"
+                    buy = "BUY 3 > 180 min di ribasso + continua a scendere circello - r 6572 A2Y1"
                     action = "buy"
                     percentage = 80
                     
@@ -21532,7 +21555,7 @@ class maddog:
                     
                     and macd_differenza_2_min_ago > -1.25
                 ):
-                    buy = "BUY 3 con ma78 TREND CHIARAMENTE RIBASSISTA 29 ago 2022 > 180 min di ribasso con macd dif > 1.25 - r 6572 A2 Y3"
+                    buy = "BUY 3 con ma78 TREND CHIARAMENTE RIBASSISTA 29 ago 2022 > 180 min di ribasso con macd diff > 1.25 - r 6572 A2 Y3"
                     action = "buy"
                     percentage = 80
                     
@@ -48983,9 +49006,12 @@ ma3_last > ma20_last
                 #  3 ott 2024 anticipata vendita (ha fatto -0.62)
                 #  5 nov 2024 se deviation_ma50_sopra_o_sotto_ma300 > -0.70
 
-            elif (
-                
+
+            
+            elif (    
                 ma50_last < ma50_2_min_ago
+                and deviation_ma300_sopra_ma450 > -0.22
+
                 and deviation_ma50_sopra_o_sotto_ma300 < -0.70
                 and deviation_ma5_sopra_o_sotto_ma100 < -0.10
                 and ma20_last <= ma20_2_min_ago
@@ -49004,7 +49030,66 @@ ma3_last > ma20_last
                 and macd < 20
                 and macd_differenza_2_min_ago < -1.30
             ):
-                sell = "SELL NCS con ma20 <= ma20 2 min ago e dev 3-39 < 0.10 e dev_sell < -0.019 and diff ma2 e diff macd - r 16047 A3 Y2 b2"
+                sell = "SELL NCS con ma20 <= ma20 2 min ago e dev 3-39 < 0.10 e dev_sell < -0.019 and diff ma2 e diff macd - r 16047 A3 Y2 b2x"
+                action = "sell"
+
+
+
+            elif (    
+                ma50_last < ma50_2_min_ago
+                and deviation_ma300_sopra_ma450 < -0.22
+                and ma28_last > ma100_last
+
+                and deviation_ma50_sopra_o_sotto_ma300 < -0.70
+                and deviation_ma5_sopra_o_sotto_ma100 < -0.10
+                and ma20_last <= ma20_2_min_ago
+                
+                and deviation_ma39 < 0.12
+                and deviation_sell < -0.021
+                
+                and deviation_ma5_sopra_ma200 < -0.30
+                and deviation_ma5_sotto_ma300 < -0.30
+                and deviation_ma5_sotto_ma450 < -0.30
+                
+                and deviation_ma100_sopra_ma300 < 0.40
+                
+                and ma2_last < ma2_2_min_ago 
+                
+                and macd < 20
+                and macd_differenza_2_min_ago < -1.30
+            ):
+                sell = "SELL NCS con ma20 <= ma20 2 min ago MA 28 >100 e dev 3-39 < 0.10 e dev_sell < -0.021 - r 16047 A3 Y2 b2 Y1"
+                action = "sell"
+
+                # 17 feb 2025 se deviation_ma300_sopra_ma450 < -0.22 MA ma28_last > ma100_last ALLORA dev sell a -0.021 da -0.019
+                # 17 feb 2025 deviation_ma300_sopra_ma450 < -0.22 significa che siamo in presenza di un forte ribasso
+
+
+
+            elif (    
+                ma50_last < ma50_2_min_ago
+                and deviation_ma300_sopra_ma450 < -0.22
+                and ma28_last < ma100_last
+
+                and deviation_ma50_sopra_o_sotto_ma300 < -0.70
+                and deviation_ma5_sopra_o_sotto_ma100 < -0.10
+                and ma20_last <= ma20_2_min_ago
+                
+                and deviation_ma39 < 0.12
+                and deviation_sell < -0.019
+                
+                and deviation_ma5_sopra_ma200 < -0.30
+                and deviation_ma5_sotto_ma300 < -0.30
+                and deviation_ma5_sotto_ma450 < -0.30
+                
+                and deviation_ma100_sopra_ma300 < 0.40
+                
+                and ma2_last < ma2_2_min_ago 
+                
+                and macd < 20
+                and macd_differenza_2_min_ago < -1.30
+            ):
+                sell = "SELL NCS con ma20 <= ma20 2 min ago e dev 3-39 < 0.10 e dev_sell < -0.019 and diff ma2 e diff macd - r 16047 A3 Y2 b2 Y2"
                 action = "sell"
                 
                 # 30 nov 2023 dev 39 a 0.10 da 0.03
