@@ -30,7 +30,7 @@ and deviation_ma39 < -0.02
 
 CONTINUA A SCENDERE circello
 
-and deviation_ma39_di_adesso_diviso_ma39_di_180_min_ago < -1.20
+and deviation_ma39_di_adesso_diviso_ma39_di_180_min_ago < -1.00
 and deviation_ma300_sopra_ma450 < -0.22
 and delta_1 > delta_2
 and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.13
@@ -37939,21 +37939,42 @@ ma3_last > ma20_last
                         # ma ricordati che in diverse occasioni 3-48 mi ha evitato la ricompra e la rivendita conseguente con perdita !
                         # 5-28 da 3-18 dopo dolomiti
 
-                  
+
+
                     elif (
                         ma50_last > ma50_2_min_ago
+                        and ma300_last > ma450_last
+
                         and ma450_last < ma450_720_min_ago
-                        and (ma5_prev > ma28_prev and ma5_last < ma28_last)
+                        and (ma5_prev > ma69_prev and ma5_last < ma69_last)
                         and deviation_sell > 0.81 and deviation_sell < 1.49
                         and ma2_last < ma2_2_min_ago
                     ):
 
-                        sell = "SELL 2 (60-90 min) con ma50 > and incrocio 5-28 and deviation_sell 0.81 - 1.49 RABONA ALLA RONALDO con 450 < 720 min  - r 11919 b"
+                        sell = "SELL 2 (60-90 min) se ma50 > e incr 5-69 e dev_sell 0.81 - 1.49 RABONA RONALDO con 450 < 720 min  - r 11919 B1"
                         action = "sell"
 
                         # ma ricordati che in diverse occasioni 3-48 mi ha evitato la ricompra e la rivendita conseguente con perdita !
                         # 5-28 da 3-18 dopo dolomiti
-                        
+                        # 17 feb 2025 sell con 5-69 da 5-28 se ma300_last > ma450_last
+
+
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and ma300_last < ma450_last
+
+                        and ma450_last < ma450_720_min_ago
+                        and (ma5_prev > ma50_prev and ma5_last < ma50_last)
+                        and deviation_sell > 0.81 and deviation_sell < 1.49
+                        and ma2_last < ma2_2_min_ago
+                    ):
+
+                        sell = "SELL 2 (60-90 min) se ma50 > e incrocio 5-50 e dev_sell 0.81 - 1.49 RABONA RONALDO con 450 < 720 min  - r 11919 B2"
+                        action = "sell"
+
+                        # ma ricordati che in diverse occasioni 3-48 mi ha evitato la ricompra e la rivendita conseguente con perdita !
+                        # 5-28 da 3-18 dopo dolomiti
+                        # 17 feb 2025 sell con 5-50 da 5-28 ma300_last < ma450_last
                     
                     
                     
