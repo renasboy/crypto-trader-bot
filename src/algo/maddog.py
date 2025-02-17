@@ -28546,7 +28546,6 @@ ma3_last > ma20_last
                     
                 # BUY 5 13 apr 2023 zia pina > 180 min di ribasso MA 39>100
 
-                
                 elif (    
                     ma3_last > ma20_last
                     
@@ -28554,7 +28553,7 @@ ma3_last > ma20_last
                     and deviation_ma25_sotto_ma300 < -0.25
                     and deviation_ma50_sotto_ma300 < -0.17
                     and deviation_ma39 < -0.07
-                    and deviation_ma3_sotto_ma50 < -0.10
+                    and deviation_ma3_sotto_ma50 < -0.13
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.13
                     and deviation_ma5_sotto_ma200 < -0.23
                     and deviation_ma5_sotto_ma300 < -0.27
@@ -28570,7 +28569,7 @@ ma3_last > ma20_last
                     and ma200_last < ma300_last
                     
                     
-                    and macd > -60
+                    and macd > -70
                     and macd_differenza_2_min_ago > -1.50
                 ):
                     buy = "BUY 5 13 apr 2023 zia pina > 180 min di ribasso + DNAM - r 7564 B1 X"
@@ -28585,6 +28584,9 @@ ma3_last > ma20_last
                     #  8 dic 2024 DNAM piu' aggressivo
                     #  5 gen 2025 aggiunto and deviation_ma300_sopra_ma450 < -0.072
                     #  5 gen 2025 tolta ma2 > ma2 2 min ago
+                    # 17 feb 2025 macd a -70 da -60
+                    # 17 feb 2025 and deviation_ma3_sotto_ma50 < -0.13 da < -0.10
+
 
                 
                 elif (    
@@ -29318,9 +29320,9 @@ ma3_last > ma20_last
 
 
 
-
                 elif (        
                     ma3_last >= ma30_last
+                    and deviation_ma25_sotto_ma300 > -0.22
 
                     and ma450_last > ma450_720_min_ago
                     and deviation_ma300_sopra_ma450 < 0.085
@@ -29328,10 +29330,6 @@ ma3_last > ma20_last
 
                     
                     and deviation_ma5_sopra_o_sotto_ma100 > -0.57
-                    
-                    
-                    
-                    
                     
                     and ma100_last < ma100_30_min_ago
                     and ma450_last > ma450_360_min_ago
@@ -29350,7 +29348,49 @@ ma3_last > ma20_last
                     and macd_differenza_2_min_ago > -1.50
                     
                 ):    
-                    buy = "BUY 5 CF - con 3-30 E CON 300 ancora vicina alla 450 ( anche un poco sotto ! ) + diff macd > - r 7600 NUOVA ERA 1X"
+                    buy = "BUY 5 CF - con 3-30 E CON 300 ancora vicina alla 450 ( anche un poco sotto ! ) + diff macd > - r 7600 NUOVA ERA 1Xx"
+                    action = "buy"
+                    percentage = 90
+
+                    # 17 feb 2025 anche 25 deve stare vicina alla 300 ! 
+
+
+
+                elif (        
+                    ma3_last >= ma20_last
+                    and deviation_ma25_sotto_ma300 < -0.22
+
+                    and ma39_last < ma100_last
+                    and ma100_last < ma100_30_min_ago
+                    and deviation_ma54_sopra_o_sotto_ma72 < -0.015
+
+                    and deviation_ma50_sotto_ma300 < -0.17
+                    and deviation_ma39 < -0.07
+                    and deviation_ma3_sotto_ma50 < -0.10
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.13
+                    and deviation_ma5_sotto_ma200 < -0.55
+                    and deviation_ma5_sotto_ma300 < -0.59
+                    and deviation_ma5_sotto_ma450 < -0.69
+                    and deviation_ma300_sopra_ma450 < -0.072
+
+
+                    and ma450_last > ma450_720_min_ago
+                    and ma450_last > ma450_360_min_ago
+                    
+                    
+                    and deviation_ma39_sotto_ma200 < -0.01
+                    
+                    
+                    and deviation_ma3_sopra_ma10 > -0.01
+                    and deviation_ma3_sopra_ma16 > -0.02
+                    and deviation_ma3_sopra_ma18 > -0.03
+                    
+                    and ma2_last > ma5_last
+                    and macd > -60
+                    and macd_differenza_2_min_ago > -1.50
+                    
+                ):    
+                    buy = "BUY 5 CF - con 3-30 E CON 300 ancora vicina alla 450 ( anche un poco sotto ! ) + diff macd > - r 7600 NUOVA ERA 1Xy"
                     action = "buy"
                     percentage = 90
 
@@ -29358,6 +29398,8 @@ ma3_last > ma20_last
                     # 29 gen 2025 and ma450_last > ma450_720_min_ago
                     # 29 gen 2025 tolto and ma2_last >= ma2_2_min_ago
                     # 30 gen 2025 nel corridoio 300-450 puo' comprare prima
+                    # 17 feb 2025 se 25 ha cominciato a scendere si allontana dalla 300 allora osso
+
 
 
                 elif (        
