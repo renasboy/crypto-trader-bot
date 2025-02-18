@@ -30,27 +30,15 @@ and deviation_ma39 < -0.02
 
 CONTINUA A SCENDERE circello
 
-and deviation_ma39_di_adesso_diviso_ma39_di_180_min_ago < -1.00
+and ma100_last < ma450_last
+and deviation_ma39_di_adesso_diviso_ma39_di_120_min_ago < -0.78
 and deviation_ma300_sopra_ma450 < -0.22
 and delta_1 > delta_2
 and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.13
 and deviation_ma39_sotto_ma100 > -0.15
 
 
-
-CONTINUA A SCENDERE roma
-
-and deviation_ma39_di_adesso_diviso_ma39_di_60_min_ago < -1.00
-and deviation_ma300_sopra_ma450 < -0.22
-and delta_1_69_39 > delta_2_69_39 
-and deviation_ma25_sopra_o_sotto_ma25_10_min_ago > -0.13
-
-
-
-
-
-
-and deviation_ma39_sotto_ma100 > -0.15
+# and delta_100_50 > delta_100_50_30_min NOTTE !
 
 
 
@@ -968,6 +956,34 @@ class maddog:
         
         
         
+
+
+
+
+
+
+        # formula delta_100_50
+        
+        delta_100_50 = (ma100_last / ma50_last - 1) * 100 if ma50_last else 0
+        self.algo_helper.info("delta_100_50: {}".format(delta_100_50))
+
+        
+        # formula delta_100_50_30_min
+        
+        delta_100_50_30_min = (ma100_30_min_ago / ma50_30_min_ago - 1) * 100 if ma50_30_min_ago else 0
+        self.algo_helper.info("delta_100_50_30_min: {}".format(delta_100_50_30_min))
+
+
+        # and delta_100_50 > delta_100_50_30_min NOTTE !
+
+
+
+
+
+
+
+
+
         # formula delta_50_39
         
         delta_50_39 = (ma50_last / ma39_last - 1) * 100 if ma39_last else 0
@@ -997,6 +1013,24 @@ class maddog:
         
         delta_100_59_60_min = (ma100_60_min_ago / ma59_60_min_ago - 1) * 100 if ma59_60_min_ago else 0
         self.algo_helper.info("delta_100_59_60_min: {}".format(delta_100_59_60_min))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         
         
         
@@ -1838,6 +1872,7 @@ class maddog:
 
                     and ma100_last > ma450_last
                     and ma300_last > ma450_last
+                    and ma300_last > ma300_30_min_ago
                     and ma300_last > ma300_120_min_ago
 
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.33
@@ -1868,7 +1903,8 @@ class maddog:
                     # 16 feb 2025 modificata ndecchiecella
                     # 16 feb 2025 and macd > -110 da > -100
                     # 16 feb 2025 and macd_differenza_2_min_ago > 6.00 da > 7.00
-
+                    # 18 feb 2025 se il ribasso e' improvviso anche ma300_last > ma300_30_min_ago
+                    # 18 feb 2025 perche' se ma300 scende da 30 minuti, e' chiaro, non e' piu' improvviso !
 
                 elif (    
                     ma20_last > ma200_last
@@ -46208,7 +46244,7 @@ ma3_last > ma20_last
                 # 11 set 2024 deviation_sell < -0.001 da < 0.001
                 # 24 set 2024 con ma28_last > ma100_last dev sell a -0.01 da < -0.001
                 #  6 feb 2025 se ma10_last > ma20_last e and ma200_last > ma450_last - deviation_sell a -0.017 da -0.01
-                # 18 feb 2025 se ma10_last > ma20_last sell a  -0.021 da -0.017
+                # 18 feb 2025 se ma10_last > ma20_last sell a -0.021 da -0.017
 
 
                 
@@ -46273,11 +46309,14 @@ ma3_last > ma20_last
                 # 11 set 2024 deviation_sell < -0.001 da < 0.001
 
 
+
             elif (
-                ma50_last < ma50_2_min_ago
+                ma50_last > ma50_2_min_ago
+                and ma5_last <= ma110_last
+
                 and delta_50_39 < delta_50_39_30_min
                 and ma10_last <= ma20_last
-                and ma5_last <= ma100_last
+                
                 
                 and deviation_ma39 < 0.07
                 and deviation_sell < -0.02
@@ -46292,8 +46331,38 @@ ma3_last > ma20_last
                 and ma2_last < ma5_last
                 and price < ma3_last
             ):
-                sell = "SELL CS con dev 3-39 < 0.05 e dev sell < -0.02 con ma50< e dev_ma3_sotto_ma200 > -1.20 and price < ma3 - r 15985 A1 ok 4Y 2A"
+                sell = "SELL CS con ma50> e 5-110 e dev_ma3_sotto_ma200 > -1.20 and price < ma3 - r 15985 A1 ok 4Y 2Ax"
                 action = "sell"
+
+                # 18 feb 2025 se ma50_last > ma50_2_min_ago vende con 5-110
+
+
+            elif (
+                ma50_last < ma50_2_min_ago
+                and ma5_last <= ma100_last
+
+                and delta_50_39 < delta_50_39_30_min
+                and ma10_last <= ma20_last
+                
+                
+                and deviation_ma39 < 0.07
+                and deviation_sell < -0.02
+                
+                and deviation_ma100_sopra_ma300 > 0.20
+                and delta_450_300 < delta_450_300_60_min
+                
+                and deviation_ma3_sotto_ma150 > -1.20
+                
+                and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.01
+                and macd_differenza_2_min_ago < -0.5
+                and ma2_last < ma5_last
+                and price < ma3_last
+            ):
+                sell = "SELL CS con ma50< e 5-100 e dev_ma3_sotto_ma200 > -1.20 and price < ma3 - r 15985 A1 ok 4Y 2Ay"
+                action = "sell"
+
+                # 18 feb 2025 ha fatto -0.33%
+                # 18 feb 2025 se ma50_last < ma50_2_min_ago vende con 5-100
 
                 
 
