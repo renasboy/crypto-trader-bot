@@ -31,7 +31,7 @@ and deviation_ma39 < -0.02
 CONTINUA A SCENDERE circello
 
 and ma100_last < ma450_last
-and deviation_ma39_di_adesso_diviso_ma39_di_120_min_ago < -0.78
+and deviation_ma39_di_adesso_diviso_ma39_di_120_min_ago < -0.75
 and deviation_ma300_sopra_ma450 < -0.22
 and delta_1 > delta_2
 and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.13
@@ -201,6 +201,7 @@ class maddog:
         ma20_30_min_ago = self.algo_helper.ma_minutes_ago(20, 30)
         ma20_60_min_ago = self.algo_helper.ma_minutes_ago(20, 60)
         ma25_2_min_ago = self.algo_helper.ma_minutes_ago(25, 2)
+        ma25_10_min_ago = self.algo_helper.ma_minutes_ago(25, 10)
         ma25_60_min_ago = self.algo_helper.ma_minutes_ago(25, 60)
         ma28_2_min_ago = self.algo_helper.ma_minutes_ago(28, 2)
         ma28_10_min_ago = self.algo_helper.ma_minutes_ago(28, 10)
@@ -264,7 +265,7 @@ class maddog:
         ma100_90_min_ago = self.algo_helper.ma_minutes_ago(100, 90)
         ma100_120_min_ago = self.algo_helper.ma_minutes_ago(100, 120)
         ma100_180_min_ago = self.algo_helper.ma_minutes_ago(100, 180)
-        
+        ma100_300_min_ago = self.algo_helper.ma_minutes_ago(100, 300)
         ma100_301_min_ago = self.algo_helper.ma_minutes_ago(100, 301)
         ma150_20_min_ago = self.algo_helper.ma_minutes_ago(150, 20)
         ma150_60_min_ago = self.algo_helper.ma_minutes_ago(150, 60)
