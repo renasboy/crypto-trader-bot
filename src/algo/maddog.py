@@ -27793,7 +27793,7 @@ ma3_last > ma20_last
 
                 elif (    
                     ma3_last > ma13_last
-                    and ma450_last >= ma450_180_min_ago
+                    and ma450_last >= ma450_360_min_ago
                     and deviation_ma200_sotto_ma300 > -0.05
 
 
@@ -27820,7 +27820,7 @@ ma3_last > ma20_last
                     
                     and macd_differenza_2_min_ago > -2.50
                 ):
-                    buy = "BUY 5 con 3-13 and 450_last >= 450_180_min_ago and 5-28 > 0.02 CON 50 > 450 and ma2_differenza_ma5 > 8 - r 7384 A1"
+                    buy = "BUY 5 con 3-13 and 450_last >= 450_360_min_ago and 5-28 > 0.02 CON 50 > 450 and ma2_differenza_ma5 > 8 - r 7384 A1"
                     action = "buy"
                     percentage = 70
 
