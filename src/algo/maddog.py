@@ -7,8 +7,13 @@
 
 GIORNO e NOTTE !
 
-and delta_1 < delta_2  ...........................GIORNO (100-200 last vs 100-200 di 60 min ago)
+and delta_1 < delta_2  ...........................GIORNO 
 and delta_1 > delta_2 NOTTE
+
+
+delta_1 = (ma200_last / ma100_last)
+delta_2 = (ma200_60_min_ago / ma100_60_min_ago)
+
 
 and delta_300_200 < delta_300_200_60_min  ....... GIORNO ! 
 
@@ -43739,16 +43744,20 @@ ma3_last > ma20_last
                         
                         # deviation_sell = ma3_last/last_trade_price
                         # 22 set se 300 > 120 min ago 5-100 !
-                        
+
+
                         
                     elif (
                         ma50_last >= ma50_2_min_ago
-                        
+
+                        and ma100_last > ma450_last
+                        and ma300_last < ma300_120_min_ago
+
                         and delta_1 < delta_2
                         and ma100_last > ma100_60_min_ago
-                        and ma300_last < ma300_120_min_ago
                         
-                        and (ma4_prev > ma39_prev and ma4_last < ma39_last)
+                        
+                        and (ma5_prev > ma78_prev and ma5_last < ma78_last)
                         and deviation_sell > 0.25 and deviation_sell < 0.56
                         
                         and ma2_last < ma2_2_min_ago
@@ -43756,7 +43765,7 @@ ma3_last > ma20_last
                         and ma2_last < ma5_last
                         and macd_differenza_2_min_ago < -0.50
                     ):
-                        sell = "SELL 4-5-x (21-60 min) 300< 120 min CON ma50> e incr 4-39 E dev_sell 0.25-0.56 - GIORNO- MARADONA - r 15110 B"
+                        sell = "SELL 4-5-x (21-60 min) con 300 < 120 min e incr 5-78 E dev_sell 0.25-0.56 - GIORNO - MARADONA - r 15110 B1"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
@@ -43765,6 +43774,44 @@ ma3_last > ma20_last
                         # 12 dic 2023 aggiunta and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.02 = -8 pts
                         # 26 dic 2023 aggiunta and macd_differenza_2_min_ago < -0.50
                         # 12 set 2024 4-39 da 4-30
+
+                        # 19 feb 2025 e' giorno ! cioe' 100 divarica da 200 verso l' alto ! 
+                        # 19 feb 2025 sell con 5-78 da 4-39 se anche ma100_last > ma450_last
+
+                        
+                          
+                    elif (
+                        ma50_last >= ma50_2_min_ago
+
+                        and ma100_last < ma450_last
+                        and ma300_last < ma300_120_min_ago
+
+                        and delta_1 < delta_2
+                        and ma100_last > ma100_60_min_ago
+                        
+                        
+                        and (ma5_prev > ma49_prev and ma5_last < ma49_last)
+                        and deviation_sell > 0.25 and deviation_sell < 0.56
+                        
+                        and ma2_last < ma2_2_min_ago
+                        and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.020
+                        and ma2_last < ma5_last
+                        and macd_differenza_2_min_ago < -0.50
+                    ):
+                        sell = "SELL 4-5-x (21-60 min) con 300 < 120 min e incr 5-78 E dev_sell 0.25-0.56 - GIORNO - MARADONA - r 15110 B2"
+                        action = "sell"
+                        
+                        # deviation_sell = ma3_last/last_trade_price
+                        #  4 nov 2023 4-28 da 5-33
+                        # 12 dic 2023 4-30 da 4-28 
+                        # 12 dic 2023 aggiunta and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.02 = -8 pts
+                        # 26 dic 2023 aggiunta and macd_differenza_2_min_ago < -0.50
+                        # 12 set 2024 4-39 da 4-30
+
+                        # 19 feb 2025 e' giorno ! cioe' 100 divarica da 200 verso l' alto ! 
+                        # 19 feb 2025 sell con 5-49 da 4-39
+
+
                      
                     ##################################################################### and rapporto_delta_1_delta_2 < 1 tramonto
                     
