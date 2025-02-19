@@ -43777,7 +43777,7 @@ ma3_last > ma20_last
 
                         # 19 feb 2025 e' giorno ! cioe' 100 divarica da 200 verso l' alto ! 
                         # 19 feb 2025 sell con 5-78 da 4-39 se anche ma100_last > ma450_last
-
+                        # 19 feb 2025 avrei dovuto mettere vendi con 39-100 ! ma non me la sono sentita !
                         
                           
                     elif (
@@ -48110,9 +48110,13 @@ ma3_last > ma20_last
                 # 30 gen 2024 se ma20> and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.02 da -0.018
                 #  2 ott 2024 se 39>69 deviation_ma39 < 0.08 da < 0.09 and deviation_sell < -0.03 da -0.02
 
+
+
             elif (
                 ma78_last > ma78_120_min_ago
+                and ma100_last > ma200_last
                 and ma200_last > ma300_last
+
                 and ma10_last <= ma10_2_min_ago
                 and ma20_last >= ma20_2_min_ago
 
@@ -48121,22 +48125,57 @@ ma3_last > ma20_last
                 and ma50_last < ma59_last
                 and ma50_last < ma50_2_min_ago
                 
-                and ma2_last < ma2_2_min_ago
-                and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.02
-                and ma2_differenza_2_min_ago < -8
-                and macd_differenza_3_min_ago < 0.10
-                
                 and deviation_ma39 < 0.09
-                and deviation_sell < -0.03
+                and deviation_sell < -0.035
                 
                 and deviation_ma100_sopra_ma300 < 0.40
                 and deviation_ma5_sotto_ma200 > -0.80
-                
+
+                and ma2_last < ma2_2_min_ago
+                and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.02
+                and macd_differenza_3_min_ago < -6.00
             ):
-                sell = "SELL CS con ma10<ma10 2 min ago e 50<59 e dev 3-39 < 0.09 e dev_sell < -0.03 e ma50< E 39<69 ! - r 16047 A1 Y2 YA2 x"
+                sell = "SELL CS con ma10<ma10 2 min e dev 3-39 < 0.09 e dev_sell < -0.04 e diff macd 3 min a -6.00 da 0.10 ! - r 16047 A1 Y2 YA2 Xx"
                 action = "sell"
 
                 # 15 ott 2024 dev_sell < -0.03 da < -0.02
+                # 19 feb 2025 macd_differenza_3_min_ago (dico 3 min) a -6.00 da 0.10 se ma100_last > ma200_last
+                # 19 feb 2025 dev_sell < -0.04 da < -0.03
+
+
+
+            elif (
+                ma78_last > ma78_120_min_ago
+                and ma100_last < ma200_last
+                and ma200_last > ma300_last
+
+                and ma10_last <= ma10_2_min_ago
+                and ma20_last >= ma20_2_min_ago
+
+                and ma39_last < ma69_last
+
+                and ma50_last < ma59_last
+                and ma50_last < ma50_2_min_ago
+                
+                and deviation_ma39 < 0.09
+                and deviation_sell < -0.035
+                
+                and deviation_ma100_sopra_ma300 < 0.40
+                and deviation_ma5_sotto_ma200 > -0.80
+
+                and ma2_last < ma2_2_min_ago
+                and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.02
+                and macd_differenza_2_min_ago < -2.60
+            ):
+                sell = "SELL CS con ma10<ma10 2 min e dev 3-39 < 0.09 e dev_sell < -0.035 e diff macd 2 min a -2.60 da 0.10 ! - r 16047 A1 Y2 YA2 Xy"
+                action = "sell"
+
+                # 15 ott 2024 dev_sell < -0.03 da < -0.02
+                # 19 feb 2025 macd_differenza_2_min_ago (dico 2 min) a -2.60 da 0.10 se ma100_last < ma200_last
+                # 19 feb 2025 dev_sell < -0.035 da < -0.03
+
+
+
 
             elif (
                 ma78_last > ma78_120_min_ago
