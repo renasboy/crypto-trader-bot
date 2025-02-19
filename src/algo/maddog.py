@@ -27793,33 +27793,40 @@ ma3_last > ma20_last
 
                 elif (    
                     ma3_last > ma13_last
-                    and ma300_last < ma300_120_min_ago
-                    and ma3_last > ma28_last
-                  
-                    and ma100_last < ma100_10_min_ago
-                    
+                    and ma450_last >= ma450_180_min_ago
+                    and deviation_ma200_sotto_ma300 > -0.05
 
-                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
-                    and deviation_ma5_sopra_o_sotto_ma100 > 0.20
+
+                    and ma39_last < ma100_last
                     
-                    and ma450_last >= ma450_120_min_ago
-                    and ma50_last > ma450_last
+                    and deviation_ma25_sotto_ma300 < -0.37
+                    and deviation_ma50_sotto_ma300 < -0.43
+                    
+                    and deviation_ma39 < 0.02
+                    and deviation_ma3_sotto_ma50 < -0.05
+
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.22
+                    and deviation_ma5_sotto_ma200 < -0.37
+                    and deviation_ma5_sotto_ma300 < -0.39
+                    and deviation_ma5_sotto_ma450 < -0.41
+
+                    and ma300_last < ma300_120_min_ago
+                    and ma100_last < ma100_10_min_ago
+
+                    
                     
                     and deviation_ma3_sopra_ma10 > 0.01
-                    and deviation_ma3_sopra_ma16 > 0.02
+                    and deviation_ma3_sopra_ma16 > -0.02
                     
-                    and ma2_last > ma2_2_min_ago
-                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
-                    and ma2_differenza_ma5 > 5
-                    and macd_differenza_2_min_ago > 0.10
+                    and macd_differenza_2_min_ago > -2.50
                 ):
-                    buy = "BUY 5 con 3-20 and 450_last >= 450_120_min_ago and 5-28 > 0.02 CON 50 > 450 and ma2_differenza_ma5 > 8 - r 7384 A1"
+                    buy = "BUY 5 con 3-13 and 450_last >= 450_180_min_ago and 5-28 > 0.02 CON 50 > 450 and ma2_differenza_ma5 > 8 - r 7384 A1"
                     action = "buy"
                     percentage = 70
 
                     # 12 set 2024 aggiunta questa condizione che compra quando ma300 curva al ribasso GIA' DA UN PO'. NO se comincia a curvare !
-                    
-                    
+                    # 19 feb 2025 and deviation_ma200_sotto_ma300 > -0.05 cioe' 200 non si e' ancora allontanata dalla 300 !
+                    # 19 feb 2025 aggiunto un osso MA ma200 DEVE STARE ANCORA VICINA alla ma300 (altrimenti continua a comprare !)
 
 
                 # 24 nov 2024 cancellata r 7384 A2xx1X
