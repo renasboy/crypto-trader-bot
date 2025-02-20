@@ -1888,20 +1888,19 @@ class maddog:
                     and deviation_ma3_sopra_ma10 > -0.01
                     and deviation_ma3_sopra_ma16 > -0.02
                     
-                    and macd > -110
+                    and macd > -125
                     and macd_differenza_2_min_ago > -2.50
                     and macd_differenza_2_min_ago > 6.00
-
                     and ma3_last > ma8_last
                     
                 ):    
               
-                    buy = "BUY 1 con ma300_last > ma450_last ma ribasso improvviso e rialzo veloce - r 920"
+                    buy = "BUY 1 con ma300_last > ma450_last ma ribasso improvviso e rialzo veloce and macd > -125 - r 920"
                     action = "buy"
                     percentage = 90
 
                     #  4 feb 2025 il trend e' ancora positivo (and ma300_last > ma450_last)
-                    #  4 feb 2025 ma sende all' improvviso (and deviation_ma5_sopra_o_sotto_ma100 < -0.33)
+                    #  4 feb 2025 ma scende all' improvviso (and deviation_ma5_sopra_o_sotto_ma100 < -0.33)
                     #  4 feb 2025 ma si rialza velocemente il macd mostra un rialzo evidente (and macd_differenza_2_min_ago > 8.00)
                     #  5 feb 2025 tolto ma2 > ma2 2 min ago
                     #  5 feb 2025 aggiunta and 100>450 altrimenti comincia a comprare durante il ribasso
@@ -1911,6 +1910,9 @@ class maddog:
                     # 16 feb 2025 and macd_differenza_2_min_ago > 6.00 da > 7.00
                     # 18 feb 2025 se il ribasso e' improvviso anche ma300_last > ma300_30_min_ago
                     # 18 feb 2025 perche' se ma300 scende da 30 minuti, e' chiaro, non e' piu' improvviso !
+                    # 20 feb 2025 macd -125 da -110
+                    # 20 feb 2025 and macd_differenza_2_min_ago > 6.00 significa che deve dare anche una botta al rialzo !
+                    # 20 feb 2025 non basta che smette di crollare verticalmente ! ( and macd_differenza_2_min_ago > -2.50 )
 
                 elif (    
                     ma20_last > ma200_last
