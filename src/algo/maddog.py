@@ -1165,6 +1165,12 @@ class maddog:
         self.algo_helper.info("deviation_ma3_di_adesso_diviso_ma3_di_90_min_ago: {}".format(deviation_ma3_di_adesso_diviso_ma3_di_90_min_ago))
 
 
+        # formula deviation_ma39 di adesso / ma39 di 120 min ago
+        
+        deviation_ma39_di_adesso_diviso_ma39_di_120_min_ago = (ma39_last / ma39_120_min_ago - 1) * 100 if ma39_120_min_ago else 0
+        self.algo_helper.info("deviation_ma39_di_adesso_diviso_ma39_di_120_min_ago: {}".format(deviation_ma39_di_adesso_diviso_ma39_di_120_min_ago))
+
+
         # formula deviation_ma39 di adesso / ma39 di 180 min ago
         
         deviation_ma39_di_adesso_diviso_ma39_di_180_min_ago = (ma39_last / ma39_180_min_ago - 1) * 100 if ma39_180_min_ago else 0
