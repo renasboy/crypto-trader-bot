@@ -16114,9 +16114,38 @@ class maddog:
                     percentage = 70
                     
                     
-                elif (
-                    
+                elif (    
                     ma5_last > ma50_last
+                    and ma100_last > ma200_last
+                    and ma200_last > ma200_20_min_ago
+                    and ma300_last < ma450_last
+                    
+                    and deviation > -0.60
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+
+                    and deviation_ma39 < -0.02
+                    and deviation_ma3_sotto_ma50 < -0.05
+                    
+                    and ma3_last > ma13_last
+                    
+                    and macd > -70
+                ):  
+                
+                    buy = "BUY 2 con ma300 < ma450 e con ma200 che sale da 20 min 5>50 and 3-10 > 0.10 - r 5829 B1"
+                    action = "buy"
+                    percentage = 70
+                    
+                    # 21 mag 2023 5-50 da 33-78 !
+                    # 21 mag 2023 aggiunta macd > macd 2 min ago
+                    # 27 set 2023 5-28 0.13 da 0.14
+                    # 27 set 2023 and ma200_last > ma200_20_min_ago da ma200_last > ma200_20_min_ago
+                    # 22 feb 2025 anticipata ndecchiecella 
+
+
+                elif (    
+                    ma5_last > ma50_last
+                    and ma100_last < ma200_last
                     and ma300_last < ma450_last
                     and ma200_last > ma200_20_min_ago
                     
@@ -16135,7 +16164,7 @@ class maddog:
                     and macd >= macd_2_min_ago
                 ):  
                 
-                    buy = "BUY 2 con ma300 < ma450 e con ma200 che sale da 20 min 5>50 and 3-10 > 0.10 - r 5829 B"
+                    buy = "BUY 2 con ma300 < ma450 e con ma200 che sale da 20 min 5>50 and 3-10 > 0.10 - r 5829 B2"
                     action = "buy"
                     percentage = 70
                     
@@ -16143,6 +16172,8 @@ class maddog:
                     # 21 mag 2023 aggiunta macd > macd 2 min ago
                     # 27 set 2023 5-28 0.13 da 0.14
                     # 27 set 2023 and ma200_last > ma200_20_min_ago da ma200_last > ma200_20_min_ago
+
+
 
 
                     
@@ -22549,25 +22580,28 @@ class maddog:
                     
                 # BUY 3 con ma69 > and deviation_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali) IMPORTATA DA BUY 4 RCCR
 
-                elif (    
-                    ma300_last < ma300_301_min_ago
-                    and deviation_ma50_sopra_o_sotto_ma50_90_min_ago > -0.015
+                elif (
+                    ma3_last > ma20_last
                     and ma100_last > ma300_last
 
+                    and ma300_last < ma300_301_min_ago
+                    and deviation_ma50_sopra_o_sotto_ma50_90_min_ago > -0.015
+                    
                     and deviation_ma3_sopra_ma10 > 0.01
                     and deviation_ma5_sopra_ma28 > -0.03
-                    
-                    and ma3_last > ma20_last
-                 
-                    and ma2_differenza_2_min_ago > 0.01
-                    and macd_differenza_2_min_ago > -1.25
+
+                    and deviation_ma39 < -0.015
+                    and deviation_ma3_sotto_ma50 < -0.015
+
+                    and macd > -70
+                    and macd_differenza_2_min_ago > -2.50
                 ):
-                    buy = "BUY 3 con 100>300 E CON i minimi che crescono and macd_differenza_2_min_ago > -1.25 - r 6599 A2x1"
+                    buy = "BUY 3 con 100>300 E CON i minimi che crescono and macd_differenza_2_min_ago > -2.50 - r 6599 A2x1"
                     action = "buy"
                     percentage = 70
 
                     #  8 ott 2024 se i minimi crescono allora anticipo ndecchia !
-
+                    # 22 feb 2025 anticipata ndecchiecella
 
 
                 elif (
@@ -28011,6 +28045,82 @@ ma3_last > ma20_last
                 
                 
 
+                elif (
+                    ma200_last >= ma200_120_min_ago
+                    and ma300_last >= ma300_60_min_ago
+                    and ma300_last > ma450_last
+
+                    and delta_1 < delta_2
+                  
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma5_sopra_ma28 > -0.12
+                    
+                    and ma3_last > ma8_last
+                   
+                    and macd > -70
+
+                ):   
+                    buy = "BUY 5 che NON SPEZZA LA CATENA - GIORNO - SE ma200> 120 min con 3-10 > 0.01 e 5-28 > -0.10 - r 7410 A1 x"
+                    action = "buy"
+                    percentage = 70
+
+                    # 22 feb 2025 aggiunta and ma300_last > ma450_last
+                    # 22 feb 2025 and delta_1 < delta_2
+
+
+
+
+                elif (
+                    ma3_last > ma8_last
+                    and ma450_last >= ma450_360_min_ago
+                    and deviation_ma300_sopra_ma450 < -0.22
+
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma5_sopra_ma28 > -0.12
+
+                    and deviation_ma39 < -0.03
+                    and deviation_ma3_sotto_ma50 < -0.04
+                    
+                    and macd > -70
+
+                ):   
+                    buy = "BUY 5 con ma450_last >= ma450_360_min_ago e ma200> 120 min - r 7410 A1 y1"
+                    action = "buy"
+                    percentage = 70
+
+                    # 22 feb 2025 aggiunta and ma300_last > ma450_last
+                    # 22 feb 2025 and delta_1 > delta_2 notte 
+                    # 22 feb 2025 se notte aggiunte 3-39 e 3-50
+
+
+
+
+                elif (
+                    ma3_last > ma8_last
+                    and ma450_last < ma450_360_min_ago
+                    and deviation_ma300_sopra_ma450 < -0.22
+                  
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma5_sopra_ma28 > -0.12
+
+                    and deviation_ma39 < -0.02
+                    and deviation_ma3_sotto_ma50 < -0.03
+                    and deviation_ma25_sotto_ma300 < -0.15
+
+                    and macd > -70
+
+                ):   
+                    buy = "BUY 5 con ma450_last < ma450_360_min_ago con deviation_ma300_sopra_ma450 < -0.22 - r 7410 A1 y2"
+                    action = "buy"
+                    percentage = 70
+
+                    # 22 feb 2025 aggiunta and ma300_last > ma450_last
+                    # 22 feb 2025 and delta_1 > delta_2 notte 
+                    # 22 feb 2025 se notte aggiunte 3-39 e 3-50
+                    # 22 feb 2025 and deviation_ma300_sopra_ma450 < -0.22 significa che deve restare dentro i limiti.
+
+
+
 
 
                 elif (
@@ -28022,14 +28132,12 @@ ma3_last > ma20_last
                     and deviation_ma3_sopra_ma10 > 0.01
                     and deviation_ma5_sopra_ma28 > -0.12
                     
-                    
                     and ma3_last > ma8_last
-                    
-                    
-                    and macd > -60
+                   
+                    and macd > -70
 
                 ):   
-                    buy = "BUY 5 che NON SPEZZA LA CATENA - GIORNO - SE ma200> 120 min con 3-10 > 0.01 e 5-28 > -0.10 - r 7410 A"
+                    buy = "BUY 5 che NON SPEZZA LA CATENA - GIORNO - SE ma200> 120 min con 3-10 > 0.01 e 5-28 > -0.10 - r 7410 A2"
                     action = "buy"
                     percentage = 70
                     
@@ -29275,14 +29383,16 @@ ma3_last > ma20_last
                
                 elif (      
                     ma3_last > ma13_last
-                    and ma39_last > ma100_last
+                    and ma450_last > ma450_360_min_ago
                     
                     and deviation_ma78_sopra_o_sotto_ma200 < -0.028
                     and ma2_differenza_2_min_ago > 10
                     
                     and ma100_last < ma100_120_min_ago
                     and ma100_last < ma100_60_min_ago
-                    
+
+                    and deviation_ma39 < -0.015
+                    and deviation_ma3_sotto_ma50 < -0.015
                     
                     and deviation_ma54_sopra_o_sotto_ma72 < 0.015
                     and deviation_ma54_sopra_o_sotto_ma72 > -0.015
@@ -29292,20 +29402,18 @@ ma3_last > ma20_last
                     and deviation_ma3_sopra_ma18 > -0.03
                     
                     and ma2_last >= ma20_last
-                  
                     
-                    and macd >= macd_2_min_ago
-                    and macd > -40
-                    
+                    and macd > -70
+                    and macd_differenza_2_min_ago > -2.50
                     
                 ):    
-                    buy = "BUY 5 CF con 100<120 min ago E 100<60 min ago e 5-20 E + MACD > - r 7589 B2x1"
+                    buy = "BUY 5 CF con 100<120 min ago E 100<60 min ago MA 450 > 450 350 min ago ! - r 7589 B2 x1"
                     action = "buy"
                     percentage = 90
                     
                     #  10 gen 2023 se 5 e' vicina alla 300 E STIAMO AL BUY 5 deve essere almeno 3-39
                     #  8 dic 2024 39 e' andata sopra 100 con ma100_last < ma100_120_min_ago
-
+                    # 22 feb 2025 se ma450_last > ma450_360_min_ago anticipo ndecchiecella
 
                 elif (     
                     
@@ -29466,31 +29574,28 @@ ma3_last > ma20_last
 
 
                 elif (        
-                    ma3_last >= ma30_last
+                    ma3_last >= ma20_last
                     and deviation_ma25_sotto_ma300 > -0.22
 
                     and ma450_last > ma450_720_min_ago
-                    and deviation_ma300_sopra_ma450 < 0.085
-                    and deviation_ma300_sopra_ma450 > -0.085
-
                     
+                    and deviation_ma300_sopra_ma450 > -0.22
+
                     and deviation_ma5_sopra_o_sotto_ma100 > -0.57
                     
                     and ma100_last < ma100_30_min_ago
                     and ma450_last > ma450_360_min_ago
                     
                     and deviation_ma54_sopra_o_sotto_ma72 < -0.015
-                    
                     and deviation_ma39_sotto_ma200 < -0.01
-                    and deviation_ma300_sopra_ma450 > -0.50
                     
                     and deviation_ma3_sopra_ma10 > -0.01
                     and deviation_ma3_sopra_ma16 > -0.02
                     and deviation_ma3_sopra_ma18 > -0.03
                     
                     and ma2_last > ma5_last
-                    and macd > -60
-                    and macd_differenza_2_min_ago > -1.50
+                    and macd > -70
+                    and macd_differenza_2_min_ago > -2.50
                     
                 ):    
                     buy = "BUY 5 CF - con 3-30 E CON 300 ancora vicina alla 450 ( anche un poco sotto ! ) + diff macd > - r 7600 NUOVA ERA 1Xx"
@@ -29498,7 +29603,7 @@ ma3_last > ma20_last
                     percentage = 90
 
                     # 17 feb 2025 anche 25 deve stare vicina alla 300 ! 
-
+                    # 22 feb 2025 anticipata ndecchiecella
 
 
                 elif (        
@@ -50862,20 +50967,21 @@ ma3_last > ma20_last
                 and ma3_last <= ma3_2_min_ago
                 and ma2_last < last_trade_price
                 and ma2_last <= ma2_2_min_ago
+                and macd_differenza_2_min_ago < -1.50
                 
-                and deviation_sell < -0.02
+                and deviation_sell < -0.025
             ):    
             
-                sell = "SELL CS - DOLCE ATTESA 270 sec con ma13 < and con 450 > E 100<100 30 min ago e 100 sopra 300 < 0.50 - r 16694 B1y"
+                sell = "SELL CS - DOLCE ATTESA 270 sec con ma13 < and con 450 > E 100<100 30 min ago - r 16694 B1y"
                 action = "sell"
              
-                # 4 feb 2022 con <-0.26 ha fatto -0.88% (dopo +4.29%)
-                # 7 feb 2022 con <-0.345 e 270 sec ha fatto -0.38% - aumenta a 0.355 ! - eventualmente ci pensa la condizione CROLLO IMPROVVISO CHE FUNZIONA !
+                # 4 feb 2022 con < -0.26 ha fatto -0.88% (dopo +4.29%)
+                # 7 feb 2022 con < -0.345 e 270 sec ha fatto -0.38% - aumenta a 0.355 ! - eventualmente ci pensa la condizione CROLLO IMPROVVISO CHE FUNZIONA !
                 # 17 set -0.57 da -0.47
 
                 #  7 set 2004 ro cano e' tornato ! questa condizione interviene solo quando ma100 < ma100 30 min ago
                 #  8 set 2024 aggiunta ma3 < ma3 2 min ago and ma2_last < ma2_2_min_ago
-
+                # 22 feb 2025 aggiunta and macd_differenza_2_min_ago < -1.50
 
 
 
