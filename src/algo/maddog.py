@@ -4,6 +4,8 @@
 
 
 """
+non compare gira la versione di 8 secondi fa 
+
 
 GIORNO e NOTTE !
 
