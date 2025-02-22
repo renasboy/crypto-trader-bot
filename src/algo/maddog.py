@@ -43,6 +43,7 @@ and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.13
 and deviation_ma39_sotto_ma100 > -0.15
 
 
+# no 100-50
 # and delta_100_50 > delta_100_50_30_min NOTTE !
 
 
@@ -23898,6 +23899,14 @@ class maddog:
                 
                 elif (
                     ma3_last > ma15_last
+
+                    and ma100_last < ma450_last
+                    and deviation_ma39_di_adesso_diviso_ma39_di_120_min_ago < -0.75
+                    and deviation_ma300_sopra_ma450 < -0.22
+                    and delta_1 > delta_2
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.13
+                    and deviation_ma39_sotto_ma100 > -0.15
+
                     and ma78_last < ma150_last
                     and deviation_ma39 > -0.30
                     and deviation_ma5_sopra_ma59 < -0.10
@@ -23910,19 +23919,16 @@ class maddog:
                     and ma200_last < ma300_last
                     
                     and deviation_ma5_sopra_ma28 < 0.08
-                    and deviation_ma3_sopra_ma16 > 0.03
-                    and deviation_ma3_sopra_ma18 > 0.093
+                    and deviation_ma3_sopra_ma16 > -0.02
+                    and deviation_ma3_sopra_ma18 > -0.03
                     
-                    and ma2_last >= ma2_2_min_ago
-                    and ma2_differenza_2_min_ago > 7
-                    and ma2_differenza_ma5 > 10
-                    and macd > -20
-                    and macd_differenza_2_min_ago > 1.25
+                    and macd > -60
+                    and macd_differenza_2_min_ago > -2.50
                     and ma2_last >= ma10_last
 
 
                 ):    
-                    buy = "BUY 4B modificato importando un vecchio pensiero laterale da RCCR - r 6756 BY 1"
+                    buy = "BUY 4B modificato importando un vecchio pensiero laterale da RCCR + circello - r 6756 BY 1"
                     action = "buy"
                     percentage = 70
                     
@@ -23933,7 +23939,7 @@ class maddog:
                     # 27 gen 2024 aggiunta 2>5 (e' necessaria !) vedi 27 gen 2024 ore 9:51
                     # 12 set 2024 aggiunta and deviation_ma5_sopra_o_sotto_ma100 < -0.20
                     # 24 nov 2024 modificao importando un vecchio pensiero laterale da RCCR
-
+                    # 22 feb 2025 aggiunta continua a scendere circello
 
                 
                 elif (
@@ -28671,18 +28677,24 @@ ma3_last > ma20_last
 
                 elif (    
                     ma3_last > ma20_last
+
+                    and ma100_last < ma450_last
+                    and deviation_ma39_di_adesso_diviso_ma39_di_120_min_ago < -0.75
+                    and deviation_ma300_sopra_ma450 < -0.22
+                    and delta_1 > delta_2
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.13
+                    and deviation_ma39_sotto_ma100 > -0.15
+
                     
                     and ma39_last < ma100_last
                     and deviation_ma25_sotto_ma300 < -0.25
                     and deviation_ma50_sotto_ma300 < -0.17
-                    and deviation_ma39 < -0.07
+                    and deviation_ma39 < -0.03
                     and deviation_ma3_sotto_ma50 < -0.13
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.13
+                    
                     and deviation_ma5_sotto_ma200 < -0.23
                     and deviation_ma5_sotto_ma300 < -0.27
                     and deviation_ma5_sotto_ma450 < -0.33
-                    and deviation_ma300_sopra_ma450 < -0.072
-
                     
                     and ma100_last < ma100_180_min_ago
                     and ma200_last < ma200_180_min_ago
@@ -28693,9 +28705,9 @@ ma3_last > ma20_last
                     
                     
                     and macd > -70
-                    and macd_differenza_2_min_ago > -1.50
+                    and macd_differenza_2_min_ago > -2.50
                 ):
-                    buy = "BUY 5 13 apr 2023 zia pina > 180 min di ribasso + DNAM - r 7564 B1 X"
+                    buy = "BUY 5 13 apr 2023 zia pina > 180 min di ribasso + DNAM + circello - r 7564 B1 X"
                     action = "buy"
                     percentage = 90
                     
@@ -28709,7 +28721,7 @@ ma3_last > ma20_last
                     #  5 gen 2025 tolta ma2 > ma2 2 min ago
                     # 17 feb 2025 macd a -70 da -60
                     # 17 feb 2025 and deviation_ma3_sotto_ma50 < -0.13 da < -0.10
-
+                    # 22 feb 2025 aggiunta continua a scendere circello
 
                 
                 elif (    
@@ -29108,11 +29120,17 @@ ma3_last > ma20_last
               
                 
                 elif ( 
-                    ma78_last < ma150_last
+                    ma3_last > ma10_last
+                    
+                    and ma100_last < ma450_last
+                    and deviation_ma39_di_adesso_diviso_ma39_di_120_min_ago < -0.75
+                    and deviation_ma300_sopra_ma450 < -0.22
+                    and delta_1 > delta_2
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.14
+                    and deviation_ma39_sotto_ma100 > -0.15
 
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.27
-
+                    
+                    and ma78_last < ma150_last
                     and deviation_ma5_sotto_ma300 < -1.20
                     
                     and deviation_ma3_sopra_ma10 > 0.01
@@ -29126,12 +29144,10 @@ ma3_last > ma20_last
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
                     
-                    and ma2_last >= ma2_2_min_ago
-                    and ma2_differenza_2_min_ago > 8
-                    and macd >= macd_2_min_ago
-                    and ma2_last > ma5_last
+                    and macd >= -70
+                    and macd_differenza_2_min_ago > -2.50
                 ):
-                    buy = "BUY 5 29 ago 2022 > 180 min ribasso CON 5-300 < -1.20 E 78<150 + cano STAF - r 7564 B2 Y2 y"
+                    buy = "BUY 5 29 ago 2022 > 180 min ribasso CON 5-300 < -1.20 E 78<150 + cano STAF + circello- r 7564 B2 Y2 y"
                     action = "buy"
                     percentage = 90
                     
@@ -29154,7 +29170,7 @@ ma3_last > ma20_last
                     #  2 ott 2024 aggiunta da CANO STAF and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
                     #  2 ott 2024 aggiunta da CANO STAF and deviation_ma5_sopra_o_sotto_ma100 < -0.27
                     #  2 ott 2024 e' una condizione che ha continuato a comprare diverse volte durante il ribasso !
-
+                    # 22 feb 2025 aggiunta continua a scendere circello
 
                 
               
