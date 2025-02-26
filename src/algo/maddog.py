@@ -35,7 +35,7 @@ and deviation_ma39 < -0.02
 
 
 
-CONTINUA A SCENDERE circello
+CONTINUA A SCENDERE
 
 and ma100_last < ma450_last
 and deviation_ma39_di_adesso_diviso_ma39_di_120_min_ago < -0.75
@@ -45,8 +45,17 @@ and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.13
 and deviation_ma39_sotto_ma100 > -0.15
 
 
-# no 100-50
-# and delta_100_50 > delta_100_50_30_min NOTTE !
+
+
+evitare il BUY durante un RITRACCIAMENTO !
+
+and ma39_last < ma50_last
+and ma200_last > ma200_60_min_ago
+and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > 0.72
+and ma39_last < ma39_10_min_ago
+and deviation_ma5_sopra_o_sotto_ma100 < -0.05
+
+
 
 
 
