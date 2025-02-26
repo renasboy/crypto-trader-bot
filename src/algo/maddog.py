@@ -28719,6 +28719,9 @@ ma3_last > ma20_last
                     action = "buy"
                     percentage = 90
 
+
+
+
                 elif (    
                     ma3_last > ma39_last
                     
@@ -28738,7 +28741,7 @@ ma3_last > ma20_last
                     and ma200_last < ma300_last
                     
                     and deviation_ma3_sopra_ma10 > 0.01
-                    and deviation_ma5_sopra_ma28 > 0.01
+                    and deviation_ma5_sopra_ma28 > -0.01
                     
                     and ma2_last >= ma2_2_min_ago
                     and macd_differenza_2_min_ago > 1
@@ -28958,16 +28961,19 @@ ma3_last > ma20_last
 
               
                 elif (
-                 
-                    ma78_last < ma150_last
-                    and ma39_last > ma39_13_min_ago
-                    and ma20_last > ma20_2_min_ago
-                    and ma2_differenza_2_min_ago > 7
+                    ma3_last > ma18_last
+                    and ma78_last < ma150_last
+                    
+                    and deviation_ma300_sopra_ma450 < -0.22
+                    
                     and deviation_ma5_sotto_ma300 < -0.10
                     
-                    and deviation_ma3_sopra_ma10 > 0.057
-                    and deviation_ma3_sopra_ma16 > 0.06
-                    and deviation_ma5_sopra_ma28 < 0.03
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > -0.06
+                    
+                    and deviation_ma39 < -0.20
+                    and deviation_ma3_sotto_ma50 < -0.22
+
                     
                     and ma100_last < ma100_180_min_ago
                     and ma200_last < ma200_180_min_ago
@@ -28976,13 +28982,15 @@ ma3_last > ma20_last
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
                     
-                    and ma2_last >= ma2_2_min_ago
-                    and macd >= macd_2_min_ago
+                    and macd > -70
                     and ma2_last > ma5_last
                 ):
-                    buy = "BUY 5 29 ago 2022 > 180 min di ribasso CON ma20>ma20 2 min ago E 78<150 and 3-16 > 0.06 e ma2_differenza_2_min_ago > 7 - r 7564 B2Y1x"
+                    buy = "BUY 5 29 ago 2022 > 180 min di ribasso E 78<150 - r 7564 B2 Y1 X"
                     action = "buy"
                     percentage = 90
+
+                    # 26 feb 2025 anticipato ndecchiecella
+
 
                 
                 elif (
