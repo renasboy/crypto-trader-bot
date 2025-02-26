@@ -16545,9 +16545,10 @@ class maddog:
                     # 11 set 2024 aggiunta coltello con il piede se ma300<300 60 min ago
 
 
-                
                 elif (
                     ma3_last > ma20_last
+                    and ma39_last > ma50_last
+
                     and ma25_last > ma100_last
                     
                     and ma200_last > ma250_last
@@ -16560,14 +16561,44 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
                     and macd >= -60
                 ):    
-                    buy = "BUY 2 RIVOLUZIONARIO CON ma450_last < ma450_120_min_ago MA con 25>100 - r 5892 A1 Y"
+                    buy = "BUY 2 CON ma450_last < ma450_120_min_ago MA con 25>100 - r 5892 A1 Y1"
+                    action = "buy"
+                    percentage = 70
+
+                    # 26 feb 2025 se 39 continua a stare sopra 50 NESSUN PROBLEMA !
+
+
+
+                elif (
+                    ma3_last > ma20_last
+
+                    and ma39_last < ma50_last
+                    and ma200_last > ma200_60_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > 0.72
+                    and ma39_last < ma39_10_min_ago
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.05
+
+
+                    and ma25_last > ma200_last
+                    and ma200_last > ma250_last
+                    and ma200_last > ma200_120_min_ago
+
+                    and ma450_last < ma450_120_min_ago
+
+                    and ma3_last > ma8_last
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= -60
+                ):    
+                    buy = "BUY 2 CON ma450_last < ma450_120_min_ago MA con 200>200 120 min ago - RITRACCIAMENTO ! - r 5892 A1 Y2"
                     action = "buy"
                     percentage = 70
                     
                     # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
                     #  2 ott dev bellissima 0.06 da 0.07
                     #  4 feb 2025 se 25>100 anticipata !
-
+                    # 26 feb 2025 MA se 39 VA SOTTO 50 allora :
+                    # 26 feb 2025 ritracciamento !
 
               
                 elif (
@@ -20161,9 +20192,9 @@ class maddog:
                     ma3_last > ma20_last
 
 
-
-                    and ma200_last > ma200_60_min_ago
                     and ma39_last > ma50_last
+                    and ma200_last > ma200_60_min_ago
+                    
 
 
 
@@ -20182,14 +20213,14 @@ class maddog:
               
                 ):
              
-                    buy = "BUY 3 RIALZO con 300>120 min e GIORNO e 100 sopra 300> 0.40 - r 6470 Ax"
+                    buy = "BUY 3 RIALZO con 300>120 min e GIORNO e 100 sopra 300> 0.40 - r 6470 AX"
                     action = "buy"
                     percentage = 70
 
                     # 21 gen 2025 se delta_1 < delta_2 anticipato BUY
 
                     # 26 feb 2025 sempre con ma200_last > ma200_60_min_ago
-                    # 26 feb 2025 se 39 > 50 ok cosi'
+                    # 26 feb 2025 se 39 > 50 ok cosi'- nessun problema !
 
 
 
@@ -20197,11 +20228,12 @@ class maddog:
                 elif (    
                     ma3_last > ma20_last
 
+                    and ma39_last < ma50_last
                     and ma200_last > ma200_60_min_ago
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > 0.72
-                    and ma39_last < ma50_last
                     and ma39_last < ma39_10_min_ago
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.05
+                    
                     
                     and delta_1 < delta_2
 
@@ -20215,7 +20247,7 @@ class maddog:
                    
                 ):
              
-                    buy = "BUY 3 con 200>60 min ago e dev ma100-ma100 10 min ago > 0.72 MA 39<50 E 39<39 10 min ago E 5-100 < -0.05 - r 6470 AY"
+                    buy = "BUY 3 con 200> e dev ma100-ma100 10 min ago>0.72 MA 39<50 E 39<39 10 min ago E 5-100 < -0.05 - RITRACCIAMENTO - r 6470 AY"
                     action = "buy"
                     percentage = 70
 
@@ -20223,6 +20255,7 @@ class maddog:
 
                     # 26 feb 2025 sempre con ma200_last > ma200_60_min_ago
                     # 26 feb 2025 MA se 39 < 50 allora :
+                    # 26 feb 2025 RITRACCIAMENTO !
                     # 26 feb 2025 and ma39_last < ma39_10_min_ago
                     # 26 feb 2025 and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > 0.72
                     # 26 feb 2025 and deviation_ma5_sopra_o_sotto_ma100 < -0.05
