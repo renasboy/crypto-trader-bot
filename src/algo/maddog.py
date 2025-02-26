@@ -20157,13 +20157,21 @@ class maddog:
                     
                 # BUY 3 nuovo RIALZO IMPROVVISO ma trend gia' in rialzo da 120 min and 0.27 sopra ultimo sell se 300>120 min e 100 sopra 300> 0.40
 
-                
                 elif (    
                     ma3_last > ma20_last
+
+
+
+                    and ma200_last > ma200_60_min_ago
+                    and ma39_last > ma50_last
+
+
+
                     and delta_1 < delta_2
 
                     and ma100_last > ma200_last
                     and deviation_ma100_sopra_ma300 > 0.40
+
                     and ma300_last > ma300_120_min_ago
                     
                     
@@ -20174,11 +20182,51 @@ class maddog:
               
                 ):
              
-                    buy = "BUY 3 RIALZO con 300>120 min e GIORNO e 100 sopra 300> 0.40 - r 6470 A"
+                    buy = "BUY 3 RIALZO con 300>120 min e GIORNO e 100 sopra 300> 0.40 - r 6470 Ax"
                     action = "buy"
                     percentage = 70
 
                     # 21 gen 2025 se delta_1 < delta_2 anticipato BUY
+
+                    # 26 feb 2025 sempre con ma200_last > ma200_60_min_ago
+                    # 26 feb 2025 se 39 > 50 ok cosi'
+
+
+
+
+                elif (    
+                    ma3_last > ma20_last
+
+                    and ma200_last > ma200_60_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > 0.72
+                    and ma39_last < ma50_last
+                    and ma39_last < ma39_10_min_ago
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.05
+                    
+                    and delta_1 < delta_2
+
+                    and ma100_last > ma200_last
+                    and deviation_ma100_sopra_ma300 > 0.40
+                    and ma150_last > ma150_60_min_ago
+                    and ma300_last > ma300_120_min_ago
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and ma2_last >= ma2_2_min_ago
+                   
+                ):
+             
+                    buy = "BUY 3 con 200>60 min ago e dev ma100-ma100 10 min ago > 0.72 MA 39<50 E 39<39 10 min ago E 5-100 < -0.05 - r 6470 AY"
+                    action = "buy"
+                    percentage = 70
+
+                    # 21 gen 2025 se delta_1 < delta_2 anticipato BUY
+
+                    # 26 feb 2025 sempre con ma200_last > ma200_60_min_ago
+                    # 26 feb 2025 MA se 39 < 50 allora :
+                    # 26 feb 2025 and ma39_last < ma39_10_min_ago
+                    # 26 feb 2025 and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > 0.72
+                    # 26 feb 2025 and deviation_ma5_sopra_o_sotto_ma100 < -0.05
+
 
 
                 elif (
