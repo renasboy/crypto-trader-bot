@@ -2812,7 +2812,7 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
                     and macd >= macd_2_min_ago
                 ):
-                    buy = "BUY 1 migliore che considera distanza 5-300 E dev 10-200 < -0.24 AND dev 3-18 and dev_ma3_sopra_ma16 > -0.125 - r 1043 B2 NUOVA ERA A2 STRONG"
+                    buy = "BUY 1 distanza 5-300 E dev 10-200 < -0.24 AND dev 3-18 and dev_ma3_sopra_ma16 > -0.125 - r 1043 B2 NUOVA ERA A2 STRONG"
                     action = "buy"
                     percentage = 50
                     
@@ -2830,36 +2830,34 @@ class maddog:
                 
                 elif (
                     
-                    ma8_last > ma150_last
-                    and macd >= macd_2_min_ago
-                    and deviation_ma100_sopra_ma200 < -0.40
-                    
+                    ma3_last > ma20_last
                     and delta_1_200_78 < delta_2_200_78_60_min
                     
+                    and deviation_ma100_sopra_ma200 < -0.40
                     and deviation_ma5_sotto_ma300 < -0.75
+
+                    and deviation_ma39 < -0.13
+                    and deviation_ma3_sotto_ma50 < -0.17
                     
-                    
-                    and ma100_last > ma100_2_min_ago
+                    and ma39_last > ma100_last
                     and ma300_last < ma300_60_min_ago
                     and ma200_last < ma200_60_min_ago
                     
-                    and ma72_last >= ma72_2_min_ago
-                    and ma13_last > ma69_last
-                    and deviation_bellissima > 0.17
-                    and deviation_ma13_sopra_ma25 > 0.07
-                    and deviation_ma3_sopra_ma7 > 0.05
-                    and ma3_last > ma3_3_min_ago
                     and ma2_last > ma2_2_min_ago
+                    and macd > -70
+                    and macd_differenza_2_min_ago > -2.50
               
                 ):
-                    buy = "BUY 1 5-300 - riga 1043 C"
+                    buy = "BUY 1 5-300 - r 1043 C"
                     action = "buy"
                     percentage = 50
                     
                     # importante : ma100 sta sotto la ma200 non le e' troppo lontana
-                    
-                    
-                 
+                    # 26 feb 2025 anticipato ndecchia
+                    # 26 feb 2025 aggiunta and deviation_ma39 < -0.13
+                    # 26 feb 2025 aggiunta and deviation_ma3_sotto_ma50 < -0.17
+
+
                      
                 elif (    
                     ma20_last > ma200_last
@@ -2879,7 +2877,7 @@ class maddog:
                     and ma6_last > ma39_last
                 ):    
               
-                    buy = "BUY 1 con 28>200 and 69 > 100 e 200< and dev_bellissima > 0.12 and 5-28 > 0.16 and 3-10 > 0.10 CON 300 vicina o sopra alla 450 - r 1061"
+                    buy = "BUY 1 con 28>200 and 69 > 100 e 200< and 5-28 > 0.16 and 3-10 > 0.10 CON 300 vicina o sopra alla 450 - r 1061"
                     action = "buy"
                     percentage = 90
                     
