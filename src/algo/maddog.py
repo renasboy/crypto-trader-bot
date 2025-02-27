@@ -21606,12 +21606,23 @@ class maddog:
 
 
                 
-                elif (
-                    
+                
+                elif (    
                     ma3_last > ma15_last
+
+                    and ma100_last < ma450_last
+                    and deviation_ma39_di_adesso_diviso_ma39_di_120_min_ago < -0.75
+                    and deviation_ma300_sopra_ma450 < -0.22
+                    and delta_1 > delta_2
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.14
+                    and deviation_ma39_sotto_ma100 > -0.15
+
+
                     and ma78_last < ma150_last
-                    and deviation_ma39 > -0.30
-                    and deviation_ma5_sopra_ma59 < -0.10
+
+                    and deviation_ma39 < -0.02
+                    and deviation_ma3_sotto_ma50 < -0.08
 
                     and ma100_last < ma100_60_min_ago
                     and ma100_last < ma100_180_min_ago
@@ -21621,19 +21632,15 @@ class maddog:
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
                     
-                    and deviation_ma5_sopra_ma28 < 0.08
-                    and deviation_ma3_sopra_ma16 > 0.03
-                    and deviation_ma3_sopra_ma18 > 0.093
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > -0.03
                     
-                    and ma2_last >= ma2_2_min_ago
-                    and ma2_differenza_2_min_ago > 7
-                    and ma2_differenza_ma5 > 10
-                    and macd > -20
-                    and macd_differenza_2_min_ago > 1.25
+                    
                     and ma2_last >= ma10_last
-
+                    and macd_differenza_2_min_ago > -2.50
+                 
                 ):
-                    buy = "BUY 3 modificato importando un vecchio pensiero laterale - r 6572 A1 xa"
+                    buy = "BUY 3 modificato importando un vecchio pensiero laterale - CONTIUNA A SCENDERE ! - r 6572 A1 xa"
                     action = "buy"
                     percentage = 90
 
