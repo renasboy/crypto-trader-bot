@@ -16380,7 +16380,7 @@ class maddog:
                     and macd >= macd_2_min_ago
                 ):  
                 
-                    buy = "BUY 2 con ma300<ma450 E ma450_last > ma450_180_min_ago MA ma200 sale da 20 min 3>50 - r 5829 B2y"
+                    buy = "BUY 2 con ma300<ma450 E ma450_last > ma450_180_min_ago MA ma200 sale da 20 min - r 5829 B2y"
                     action = "buy"
                     percentage = 80
                     
@@ -37607,25 +37607,57 @@ ma3_last > ma20_last
                         
                         #  8 mar 2024 aggiunta and ma450_last > ma450_360_min_ago
 
-
                     elif (
                         ma50_last > ma50_2_min_ago
                         and ma450_last < ma450_360_min_ago
+
+                        and ma300_last > ma450_last
                         and deviation_ma5_sotto_ma300 > 0.40
-                        and ma5_last < ma69_last
+                        and ma5_last < ma100_last
                         and deviation_sell > 0.25 and deviation_sell < 0.56
                         
                         and ma2_last < ma2_2_min_ago
-                       
+                        and macd < macd_2_min_ago
+                        and macd_differenza_2_min_ago < -2.50
                     ):
-                        sell = "SELL 2 (21-60 min) con ma50 > and 5 < 69 and dev_sell 0.25 - 0.56 MARADONA e' piu' stanco e paziente - r 11477 Ay"
+                        sell = "SELL 2 (21-60 min) con ma50 > and 5<100 and dev_sell 0.25 - 0.56 MARADONA e' piu' paziente - r 11477 AY1"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
                         # 5-69 da 5-39 dopo dolomiti
                         
                         #  8 mar 2024 aggiunta and ma450_last > ma450_360_min_ago
+                        # 27 feb 2025 aggiunta and ma300_last > ma450_last
+                        # 27 feb 2025 5-100 da 5-69
+                        # 27 feb 2025 and macd < macd_2_min_ago
+                        # 27 feb 2025 aggiunta and macd_differenza_2_min_ago < -2.50
 
+
+
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and ma450_last < ma450_360_min_ago
+
+                        and ma300_last < ma450_last
+                        and deviation_ma5_sotto_ma300 > 0.40
+                        and ma5_last < ma78_last
+                        and deviation_sell > 0.25 and deviation_sell < 0.56
+                        
+                        and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
+                        and macd_differenza_2_min_ago < -2.50
+                    ):
+                        sell = "SELL 2 (21-60 min) con ma50 > and 5<78 and dev_sell 0.25 - 0.56 MARADONA e' piu' paziente - r 11477 AY2"
+                        action = "sell"
+                        
+                        # deviation_sell = ma3_last/last_trade_price
+                        # 5-69 da 5-39 dopo dolomiti
+                        
+                        #  8 mar 2024 aggiunta and ma450_last > ma450_360_min_ago
+                        # 27 feb 2025 aggiunta and ma300_last < ma450_last
+                        # 27 feb 2025 5-78 da 5-69
+                        # 27 feb 2025 and macd < macd_2_min_ago
+                        # 27 feb 2025 aggiunta and macd_differenza_2_min_ago < -2.50
 
                         
                     elif (
