@@ -10915,7 +10915,7 @@ class maddog:
                     and macd >= macd_2_min_ago
                 ):    
                     
-                    buy = "BUY 1 TREND LATERALE che mancava con ma300 < - SOPRA RIALZO RIALZO - GIORNO ! and 5-28 > 0.17 - r 4301 Bx"
+                    buy = "BUY 1 TREND LATERALE con 300>450 ma con ma300 < - GIORNO ! - r 4301 Bx"
                     action = "buy"
                     percentage = 80
                     
@@ -10950,7 +10950,7 @@ class maddog:
                     and macd >= macd_2_min_ago
                 ):    
                     
-                    buy = "BUY 1 TREND LATERALE che mancava con ma300 < - SOPRA RIALZO RIALZO - GIORNO ! - r 4301 By"
+                    buy = "BUY 1 TREND LATERALE con 300>450 ma con ma300 < - NOTTE ! - r 4301 By"
                     action = "buy"
                     percentage = 80
                     
