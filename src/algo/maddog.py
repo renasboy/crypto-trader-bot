@@ -83,6 +83,7 @@ and deviation_ma50_sotto_ma300 < -0.27
 
 and deviation_ma39 < -0.12
 and deviation_ma3_sotto_ma50 < -0.15
+
 and deviation_ma5_sopra_o_sotto_ma100 < -0.22
 and deviation_ma5_sotto_ma200 < -0.31
 and deviation_ma5_sotto_ma300 < -0.41
@@ -12167,41 +12168,40 @@ class maddog:
 
                     
                     
-                elif (  
-                    ma450_last > ma450_720_min_ago
+                elif (
+                    ma3_last < ma18_last
+                    and ma450_last > ma450_720_min_ago
+
+                    and ma100_last < ma450_last
+                    and deviation_ma39_di_adesso_diviso_ma39_di_120_min_ago < -0.75
+                    and deviation_ma300_sopra_ma450 < -0.22
+                    and delta_1 > delta_2
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.14
+                    and deviation_ma39_sotto_ma100 > -0.15
+
+
                     and ma100_last < ma100_90_min_ago
                     and ma200_last < ma200_20_min_ago
                     and ma300_last < ma450_last
 
-                    # CANO STAF + zia amalia
-
-                    and ma100_last < ma100_10_min_ago
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.27
-                    and deviation_ma10_sopra_ma200 < -0.20
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.05
+                    and deviation_ma5_sotto_ma200 < -0.25
                     and deviation_ma5_sotto_ma300 < -0.20
                     and deviation_ma25_sotto_ma300 < -0.39
                     and deviation_ma50_sotto_ma300 < -0.36
 
-                    # CANO STAF + zia amalia
-
-
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.13
-                    and deviation_ma5_sotto_ma200 < -0.25
-                    
-
+                    and deviation_ma39 < -0.01
+                    and deviation_ma3_sotto_ma50 < -0.02
 
                     and deviation_ma3_sopra_ma10 > 0.01
                     and deviation_ma3_sopra_ma18 > -0.08
                     and deviation_ma5_sopra_ma28 > -0.10
 
-                    and macd >= macd_2_min_ago
-                    and macd > -50
-                    and ma2_last >= ma2_2_min_ago
-               
+                    and macd_differenza_2_min_ago > -2.50
                 ):    
         
-                    buy = "BUY 2 CON 450> MA ma100< 100 90 min ago CON dev 5-200 < -0.25 + CANO STAF + zia amalia - r 4670"
+                    buy = "BUY 2 CON 450> MA ma100< 100 90 min ago CON dev 5-200 < -0.25 + CANO STAF + zia amalia + CONTINUA A SCENDERE - r 4670"
                     action = "buy"
                     percentage = 90
                     
@@ -12211,6 +12211,7 @@ class maddog:
                     # 15 ott 2024 inervento del CANO STAF che forse ha un piccolo segreto 
                     # 15 ott 2024 che forse e' prorio questo ! and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
 
+                    # 27 feb 2025 CONTINUA A SCENDERE ! - MODELLO -
 
                         
                 elif (
