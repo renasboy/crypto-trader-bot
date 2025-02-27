@@ -16325,39 +16325,70 @@ class maddog:
                     # 21 mag 2023 aggiunta macd > macd 2 min ago
                     # 27 set 2023 5-28 0.13 da 0.14
                     # 27 set 2023 and ma200_last > ma200_20_min_ago da ma200_last > ma200_20_min_ago
-                    # 22 feb 2025 anticipata ndecchiecella 
+                    # 22 feb 2025 anticipata ndecchiecella
+
+
+
 
 
                 elif (    
-                    ma5_last > ma50_last
+                    ma3_last > ma18_last
+
+                    and ma450_last > ma450_180_min_ago
+                    and ma200_last > ma200_20_min_ago
+
                     and ma100_last < ma200_last
                     and ma300_last < ma450_last
-                    and ma200_last > ma200_20_min_ago
+                    
                     
                     and deviation > -0.50
                     
-                    and deviation_ma3_sopra_ma10 > 0.10
-                    and deviation_ma5_sopra_ma28 > 0.13
-                    and deviation_buy_ma2_sopra_ma13 > 0.10
+                    and deviation_ma3_sopra_ma10 > 0.01
                     
                     and ma3_last > ma13_last
-                    and ma4_last > ma9_last
-                    and ma4_last > ma50_last
-                    and ma7_last > ma25_last
-                  
+                    and ma2_last > ma9_last
+                    
                     and ma2_last >= ma2_2_min_ago
                     and macd >= macd_2_min_ago
                 ):  
                 
-                    buy = "BUY 2 con ma300 < ma450 e con ma200 che sale da 20 min 5>50 and 3-10 > 0.10 - r 5829 B2"
+                    buy = "BUY 2 con ma300<ma450 MA ma450_last > ma450_180_min_ago E 200 sale da 20 min - r 5829 B2x"
                     action = "buy"
-                    percentage = 70
+                    percentage = 80
+
+                    # 27 feb 2025 se ma450_last > ma450_180_min_ago anticipato ndecchiecella
+
+
+
+                elif (    
+                    ma3_last > ma50_last
+
+                    and ma450_last < ma450_180_min_ago
+                    and ma100_last < ma200_last
+                    and ma300_last < ma450_last
+
+                    and ma200_last > ma200_20_min_ago
+                    
+                    and deviation > -0.50
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    
+                    and ma3_last > ma13_last
+                    and ma2_last > ma9_last
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                ):  
+                
+                    buy = "BUY 2 con ma300<ma450 E ma450_last > ma450_180_min_ago MA ma200 sale da 20 min 3>50 - r 5829 B2y"
+                    action = "buy"
+                    percentage = 80
                     
                     # 21 mag 2023 5-50 da 33-78 !
                     # 21 mag 2023 aggiunta macd > macd 2 min ago
                     # 27 set 2023 5-28 0.13 da 0.14
                     # 27 set 2023 and ma200_last > ma200_20_min_ago da ma200_last > ma200_20_min_ago
-
+                    # 27 feb 2025 se anche ma450_last < ma450_180_min_ago ok cosi'
 
 
 
