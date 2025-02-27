@@ -26235,14 +26235,17 @@ ma3_last > ma20_last
                 elif (    
                     ma3_last > ma20_last
                     and ma200_last > ma300_last
-                    
+
+                    and ma10_last < ma30_last
+                    and delta_1 < delta_2
+
                     and ma39_last > ma39_20_min_ago
                     
                     and ma450_last >= ma450_120_min_ago
                     and ma300_last > ma300_60_min_ago
                     and ma100_last > ma450_last
                     
-                    and ma10_last < ma30_last
+                    
                    
                     
                     and deviation_ma3_sopra_ma10 > 0.01
@@ -26257,11 +26260,15 @@ ma3_last > ma20_last
                     and macd_differenza_2_min_ago > -3.25
                 
                 ):
-                    buy = "BUY 5 con 450_last >= 450_120_min_ago E ma200>ma300 E ma39 > ma39 20 min ago ! - r 7144 A1 Y2 NUOVA ERA A3 SOFT xX 1"
+                    buy = "BUY 5 con 450_last >= 450_120_min_ago E ma200>ma300 E ma39 > ma39 20 min ago ! - r 7144 A1 Y2 NUOVA ERA A3 SOFT xX 1x"
                     action = "buy"
                     percentage = 70
 
                     #  7 feb 2025 aggiunta 200>300
+                    # 27 feb 2025 se ma10_last < ma30_last vuol dire che sta curcando verso il basso
+                    # 27 feb 2025 con aggiunta di delta_1 < delta_2 (giorno) non faccio comprare !
+
+
 
 
                 elif (    
@@ -44966,20 +44973,45 @@ ma3_last > ma20_last
                         # 17 mar 2023 3-20 da 3-18 vedi 3 mar 2023 ore 3:43 madonna ! c'e' stato un crollo spaventoso e si e' comportato benissimo !
 
 
+
                     elif (
                         ma50_last < ma50_2_min_ago
+                        and ma33_last > ma100_last
                         and deviation_ma10_sopra_ma200 < 0.20
-                        and (ma3_prev > ma20_prev and ma3_last < ma20_last)
+                        
+                        and (ma3_prev > ma33_prev and ma3_last < ma33_last)
                         and deviation_sell > 0.23
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 4-5-x eventuale guadagno durante il crollo (21-60 min) con ma50 < incrocio 3 - 20 and deviation_sell > 0.23 - r 15487b"
+                        sell = "SELL 4-5-x eventuale guadagno durante il crollo (21-60 min) con ma50 < incrocio 3-33 and dev_sell > 0.23 - r 15487 A"
+                        action = "sell"
+                        
+                        # 17 mar 2023 3-20 da 3-18 vedi 3 mar 2023 ore 3:43 madonna ! c'e' stato un crollo spaventoso e si e' comportato benissimo !
+                        
+                        # 27 feb 2025 se 33>100 allora vende con 3-33
+                        # 27 feb 2025 3-33 da 3-20
+
+
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and ma33_last < ma100_last
+                        and deviation_ma10_sopra_ma200 < 0.20
+                        
+                        and (ma3_prev > ma28_prev and ma3_last < ma28_last)
+                        and deviation_sell > 0.23
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 4-5-x eventuale guadagno durante il crollo (21-60 min) con ma50 < incrocio 3-28 and dev_sell > 0.23 - r 15487 B"
                         action = "sell"
                         
                         # 17 mar 2023 3-20 da 3-18 vedi 3 mar 2023 ore 3:43 madonna ! c'e' stato un crollo spaventoso e si e' comportato benissimo !
 
+                        # 27 feb 2025 se 33<100 allora vende con 3-28
+                        # 27 feb 2025 3-28 da 3-20
 
                   
+
+
 
                     ############################################################################################################ CONDIZIONI SPECIALI IMPORTATE RIDOTTE
 
@@ -52820,7 +52852,7 @@ ma3_last > ma20_last
                 deviation_sell > 1.25
                 and ma300_last > ma300_301_min_ago
                 and deviation_ma100_sopra_ma450 < 1.75
-                and ma5_last < ma78_last
+                and ma5_last < ma100_last
                 
                 and deviation_ma3_sopra_ma18 < -0.056
                 
@@ -52834,7 +52866,7 @@ ma3_last > ma20_last
                 and macd_differenza_3_min_ago < -7
                 
             ):    
-                sell = "SELL CS - PMS ma se ma300>5 ore non troppo ! e con 3-78 e dev > 1.25 e macd < 16 e MACD diff_5_min_ago < -9 - r 16875 A2 Y"
+                sell = "SELL CS - PMS ma se ma300>5 ore non troppo ! e con 5-100 e dev > 1.25 e macd < 16 e MACD diff_5_min_ago < -9 - r 16875 A2 Y"
                 action = "sell"
                 
                 #  1 set 2023 se per es macd passa da 18 a -11 vendi     
@@ -52861,7 +52893,10 @@ ma3_last > ma20_last
                 #  6 mar 2024 vediamo come va una volta e' arrivata in anticipo un' altra volta in ritardo
                 #  7 mar 2024 fatta modifica vedi and deviation_ma100_sopra_ma450 < 1.75
                 #  7 ott 2024 vendita con 3-48 da 3-30 statte tranquillo
-                # 27 feb 2025 5-78 da 3-48 dopo 5 ore NON E' PIU' pochi maledetti e SUBITO !
+                # 27 feb 2025 5-100 da 3-48 dopo 5 ore NON E' PIU' pochi maledetti e SUBITO !
+                # 27 feb 2025 5-100 e vaffanculo !
+
+
             
             elif (
                 deviation_sell > 0.81
