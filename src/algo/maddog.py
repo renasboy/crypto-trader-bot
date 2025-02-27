@@ -47273,23 +47273,25 @@ ma3_last > ma20_last
                 #  4 feb 2025 se deviation_ma100_sopra_ma300 > 0.20 dev sell < -0.02 da < -0.01
 
 
+
             elif (
                 ma50_last <= ma50_2_min_ago
                 and ma450_last > ma450_180_min_ago
-                
+                and ma100_last > ma450_last
+
                 and ma100_last > ma100_10_min_ago
                 and deviation_ma100_sopra_ma300 > 0.20
                 and deviation_ma3_sotto_ma150 > -1.20
                 
                 and deviation_ma39 < 0.05
-                and deviation_sell < -0.025
+                and deviation_sell < -0.035
                 
                 and delta_450_300 > delta_450_300_60_min
                 
                 and ma2_last <= ma2_2_min_ago
                 and macd_differenza_2_min_ago < -4
             ):
-                sell = "SELL CS - SALVAGENTE 3-39 < 0.05 e dev sell < -0.025 con ma50 <= e dev_ma3_sotto_ma200 > -1.20 - r 15985 A2 X1"
+                sell = "SELL CS - SALVAGENTE 3-39 < 0.05 e dev sell < -0.035 con ma50 <= e dev_ma3_sotto_ma200 > -1.20 - r 15985 A2 X1x"
                 action = "sell"
                 
                 #  2 feb 2024 se ma 100 sale da 10 min dev sell a 0.05 da 0.05 aspetta un po' prima di vendere se 100 cresce.
@@ -47297,6 +47299,38 @@ ma3_last > ma20_last
                 #  6 mar 2024 aggiunto and ma450_last > ma450_180_min_ago
                 #  6 mar 2024 and deviation_sell < -0.02 da 0.005
                 # 12 set 2024 and deviation_sell < -0.025 da and deviation_sell < -0.02
+                # 27 feb 2025 and deviation_sell < -0.035 da -0.025
+
+
+            elif (
+                ma50_last <= ma50_2_min_ago
+                and ma450_last > ma450_180_min_ago
+                and ma100_last < ma450_last
+
+                and ma100_last > ma100_10_min_ago
+                and deviation_ma100_sopra_ma300 > 0.20
+                and deviation_ma3_sotto_ma150 > -1.20
+                
+                and deviation_ma39 < 0.05
+                and deviation_sell < -0.03
+                
+                and delta_450_300 > delta_450_300_60_min
+                
+                and ma2_last <= ma2_2_min_ago
+                and macd_differenza_2_min_ago < -4
+            ):
+                sell = "SELL CS - SALVAGENTE 3-39 < 0.05 e dev sell < -0.03 con ma50 <= e dev_ma3_sotto_ma200 > -1.20 - r 15985 A2 X1y"
+                action = "sell"
+                
+                #  2 feb 2024 se ma 100 sale da 10 min dev sell a 0.05 da 0.05 aspetta un po' prima di vendere se 100 cresce.
+                
+                #  6 mar 2024 aggiunto and ma450_last > ma450_180_min_ago
+                #  6 mar 2024 and deviation_sell < -0.02 da 0.005
+                # 12 set 2024 and deviation_sell < -0.025 da and deviation_sell < -0.02
+                # 27 feb 2025 and deviation_sell < -0.03 da -0.025
+
+
+
 
             elif (
                 ma50_last <= ma50_2_min_ago
@@ -52778,14 +52812,18 @@ ma3_last > ma20_last
                 
                 #  7 mar 2024 fatta modifica vedi and deviation_ma100_sopra_ma450 > 1.75
 
+
+
+
+
             elif (
                 deviation_sell > 1.25
                 and ma300_last > ma300_301_min_ago
                 and deviation_ma100_sopra_ma450 < 1.75
-                and ma3_last < ma28_last
+                and ma5_last < ma78_last
                 
                 and deviation_ma3_sopra_ma18 < -0.056
-                and ma3_last < ma48_last
+                
                 and ma2_last < ma5_last
                 
                 and ma2_last < ma2_2_min_ago
@@ -52796,7 +52834,7 @@ ma3_last > ma20_last
                 and macd_differenza_3_min_ago < -7
                 
             ):    
-                sell = "SELL CS - PMS con ma300 > 5 ore 3-48 e dev > 1.25 e macd < 16 e MACD diff_5_min_ago < -9 e dev 3-18 < -0.056 - r 16875 A2y"
+                sell = "SELL CS - PMS ma se ma300>5 ore non troppo ! e con 3-78 e dev > 1.25 e macd < 16 e MACD diff_5_min_ago < -9 - r 16875 A2 Y"
                 action = "sell"
                 
                 #  1 set 2023 se per es macd passa da 18 a -11 vendi     
@@ -52823,7 +52861,7 @@ ma3_last > ma20_last
                 #  6 mar 2024 vediamo come va una volta e' arrivata in anticipo un' altra volta in ritardo
                 #  7 mar 2024 fatta modifica vedi and deviation_ma100_sopra_ma450 < 1.75
                 #  7 ott 2024 vendita con 3-48 da 3-30 statte tranquillo
-
+                # 27 feb 2025 5-78 da 3-48 dopo 5 ore NON E' PIU' pochi maledetti e SUBITO !
             
             elif (
                 deviation_sell > 0.81
