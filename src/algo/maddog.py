@@ -78,18 +78,20 @@ and ma100_last < ma100_120_min_ago
 
 DNA 28 FEB 2025
 
-SE DOPO UN LUNGO RIALZO COMINCIA A CURVARE VERSO IL BASSO
+SE DOPO UN LUNGO RIALZO COMINCIA A CURVARE VERSO IL BASSO !
 
-delta_DNA_1 < delta_DNA_2 GIORNO !
-delta_DNA_1 > delta_DNA_2 NOTTE !
+and ma450_last > ma450_360_min_ago
+
+and delta_DNA_1 < delta_DNA_2                .........GIORNO !
+and delta_DNA_1 > delta_DNA_2                .........NOTTE !
         
 se GIORNO ok cosi'
 se NOTTE osso 3-50
 
 sempre con 
-and ma450_last > ma450_360_min_ago
-and deviation_ma3_sotto_ma50 < -0.02
 
+and deviation_ma3_sotto_ma50 < -0.02
+and macd_differenza_2_min_ago > -2.50
 
 
 
@@ -1947,29 +1949,61 @@ class maddog:
                     # 28 gen 2025 4-100 da 5-100
 
 
-                elif (    
-                    ma200_last > ma300_last
+
+
+
+                elif (
+                    ma3_last > ma18_last
+
+                    and ma200_last > ma300_last
+                    and ma450_last > ma450_360_min_ago
+                    and delta_DNA_1 < delta_DNA_2
+
                     and ma300_last > ma300_120_min_ago
                     
-                    and ma5_last > ma180_last
                     and deviation_ma3_sopra_ma10 > 0.01
                     
-                    and ma3_last > ma8_last
-                    
-                    and macd > -60
-                    and macd_differenza_2_min_ago > -1.50
+                    and macd_differenza_2_min_ago > -2.50
 
                     # and adx > -0.90
                 ):  
               
-                    buy = "BUY 1 con ma300_last > ma300_120_min_ago e 200>300 e 5>180 AND 3-10 > 0.01 - r 916 A2"
+                    buy = "BUY 1 con ma300_last > ma300_120_min_ago e 200>300 AND 3-10 > 0.01 - r 916 A2x"
                     action = "buy"
                     percentage = 90
 
                     # 11 nov 2024 prova adx
                     #  5 dic 2025 anticipata ndecchia
+                    # 28 feb 2025 tolto 5>180
 
 
+                elif (
+                    ma3_last > ma18_last
+
+                    and ma200_last > ma300_last
+                    and ma450_last > ma450_360_min_ago
+                    and delta_DNA_1 > delta_DNA_2
+                    and deviation_ma3_sotto_ma50 < -0.03
+
+                    and ma300_last > ma300_120_min_ago
+                    
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    
+                    
+                    and macd_differenza_2_min_ago > -2.50
+
+                    # and adx > -0.90
+                ):  
+              
+                    buy = "BUY 1 con ma300_last > ma300_120_min_ago e 200>300 AND 3-10 > 0.01 - DNA - NOTTE - r 916 A2y"
+                    action = "buy"
+                    percentage = 90
+
+                    # 11 nov 2024 prova adx
+                    #  5 dic 2025 anticipata ndecchia
+                    # 28 feb 2025 aggiunta DNA - NOTTE
+                    # 28 feb 2025 tolto 5>180
                 
                     
                 
@@ -16727,8 +16761,12 @@ class maddog:
 
                 # BUY 2 RIVOLUZIONARIO se ma39 > ma50
 
+
                 elif (
-                    ma3_last > ma39_last
+                    ma3_last > ma18_last
+                    and ma450_last > ma450_360_min_ago
+                    and delta_DNA_1 < delta_DNA_2
+
 
                     and ma100_last > ma100_120_min_ago
                     and ma450_last > ma450_120_min_ago
@@ -16737,19 +16775,48 @@ class maddog:
                     and ma200_last > ma250_last
                     and ma200_last > ma200_120_min_ago
                     
-                    and deviation > -0.30
-                    
                     and ma3_last > ma8_last
-                    
-                    and ma2_last >= ma2_2_min_ago
-                    and macd > -70
+
+                    and macd_differenza_2_min_ago > -2.50
+                  
                 ):    
-                    buy = "BUY 2 con ma450_last > ma450_120_min_ago E con 3-39 e con 300>300 60 min ago  - r 5892 A1x1 x"
+                    buy = "BUY 2 con ma450_last > ma450_120_min_ago e con 300>300 60 min ago - GIORNO - r 5892 A1x1 x1"
                     action = "buy"
                     percentage = 70
 
                     # 11 set 2024 forse e' da cancellare
                     # 16 feb 2025 se anche ma100_last > ma100_120_min_ago anticipata ndecchiecella
+                    # 28 feb 2025 GIORNO !
+
+
+                elif (
+                    ma3_last > ma18_last
+                    and ma450_last > ma450_360_min_ago
+                    and delta_DNA_1 > delta_DNA_2
+                    and deviation_ma3_sotto_ma50 < -0.15
+                    
+
+                    and ma100_last > ma100_120_min_ago
+                    and ma450_last > ma450_120_min_ago
+                    and ma300_last > ma300_60_min_ago
+                    
+                    and ma200_last > ma250_last
+                    and ma200_last > ma200_120_min_ago
+                    
+                    and ma3_last > ma8_last
+                    and macd_differenza_2_min_ago > -2.50
+                    
+                ):    
+                    buy = "BUY 2 con ma450_last > ma450_120_min_ago e con 300>300 60 min ago + DNA - NOTTE  - r 5892 A1x1 x2"
+                    action = "buy"
+                    percentage = 70
+
+                    # 11 set 2024 forse e' da cancellare
+                    # 16 feb 2025 se anche ma100_last > ma100_120_min_ago anticipata ndecchiecella
+                    # 28 feb 2025 aggiunta DNA - NOTTE !
+
+
+
 
 
                 elif (
