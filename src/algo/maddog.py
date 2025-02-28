@@ -45315,9 +45315,10 @@ ma3_last > ma20_last
                         # 17 mar 2023 3-20 da 3-18 vedi 3 mar 2023 ore 3:43 madonna ! c'e' stato un crollo spaventoso e si e' comportato benissimo !
 
 
-
                     elif (
                         ma50_last < ma50_2_min_ago
+                        and delta_DNA_1 < delta_DNA_2
+
                         and ma33_last > ma100_last
                         and deviation_ma10_sopra_ma200 < 0.20
                         
@@ -45325,7 +45326,7 @@ ma3_last > ma20_last
                         and deviation_sell > 0.23
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 4-5-x eventuale guadagno durante il crollo (21-60 min) con ma50 < incrocio 3-50 and dev_sell > 0.23 - r 15487 A"
+                        sell = "SELL 4-5-x (21-60 min) eventuale guadagno durante crollo con ma50< e incr 3-50 e dev_sell > 0.23 - GIORNO - r 15487 Ax"
                         action = "sell"
                         
                         # 17 mar 2023 3-20 da 3-18 vedi 3 mar 2023 ore 3:43 madonna ! c'e' stato un crollo spaventoso e si e' comportato benissimo !
@@ -45334,8 +45335,34 @@ ma3_last > ma20_last
                         # 27 feb 2025 3-33 da 3-20
                         # 28 feb 2025 3-50 da 3-33
 
+
                     elif (
                         ma50_last < ma50_2_min_ago
+                        and delta_DNA_1 > delta_DNA_2
+
+                        and ma33_last > ma100_last
+                        and deviation_ma10_sopra_ma200 < 0.20
+                        
+                        and (ma3_prev > ma50_prev and ma3_last < ma50_last)
+                        and deviation_sell > 0.23
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 4-5-x (21-60 min) eventuale guadagno durante crollo con ma50< e incr 3-50 e dev_sell > 0.23 - NOTTE - r 15487 Ay"
+                        action = "sell"
+                        
+                        # 17 mar 2023 3-20 da 3-18 vedi 3 mar 2023 ore 3:43 madonna ! c'e' stato un crollo spaventoso e si e' comportato benissimo !
+                        
+                        # 27 feb 2025 se 33 > 100 allora vende con 3-33
+                        # 27 feb 2025 3-33 da 3-20
+                        # 28 feb 2025 3-50 da 3-33
+
+
+
+
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and delta_DNA_1 < delta_DNA_2
+
                         and ma33_last < ma100_last
                         and deviation_ma10_sopra_ma200 < 0.20
                         
@@ -45343,13 +45370,37 @@ ma3_last > ma20_last
                         and deviation_sell > 0.23
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 4-5-x eventuale guadagno durante il crollo (21-60 min) con ma50 < incrocio 3-28 and dev_sell > 0.23 - r 15487 B"
+                        sell = "SELL 4-5-x (21-60 min) eventuale guadagno durante crollo con ma50< e incr 3-28 e dev_sell > 0.23 - GIORNO - r 15487 Bx"
                         action = "sell"
                         
                         # 17 mar 2023 3-20 da 3-18 vedi 3 mar 2023 ore 3:43 madonna ! c'e' stato un crollo spaventoso e si e' comportato benissimo !
 
                         # 27 feb 2025 se 33<100 allora vende con 3-28
                         # 27 feb 2025 3-28 da 3-20
+
+
+
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and delta_DNA_1 > delta_DNA_2
+
+                        and ma33_last < ma100_last
+                        and deviation_ma10_sopra_ma200 < 0.20
+                        
+                        and (ma3_prev > ma28_prev and ma3_last < ma28_last)
+                        and deviation_sell > 0.23
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 4-5-x (21-60 min) eventuale guadagno durante crollo con ma50< e incr 3-28 e dev_sell > 0.23 - NOTTE - r 15487 By"
+                        action = "sell"
+                        
+                        # 17 mar 2023 3-20 da 3-18 vedi 3 mar 2023 ore 3:43 madonna ! c'e' stato un crollo spaventoso e si e' comportato benissimo !
+
+                        # 27 feb 2025 se 33<100 allora vende con 3-28
+                        # 27 feb 2025 3-28 da 3-20
+
+
+
 
                   
 
