@@ -75,6 +75,28 @@ and ma100_last < ma100_120_min_ago
 
 
 
+DNA 28 FEB 2025
+
+SE DOPO UN LUNGO RIALZO COMINCIA A CURVARE VERSO IL BASSO
+
+delta_DNA_1 < delta_DNA_2 GIORNO !
+delta_DNA_1 > delta_DNA_2 NOTTE !
+        
+se GIORNO ok cosi'
+se NOTTE osso 3-50
+
+sempre con 
+and ma450_last > ma450_360_min_ago
+and deviation_ma3_sotto_ma50 < -0.02
+
+
+
+
+
+
+
+
+
 
 
 
@@ -294,8 +316,10 @@ class maddog:
         ma100_180_min_ago = self.algo_helper.ma_minutes_ago(100, 180)
         ma100_300_min_ago = self.algo_helper.ma_minutes_ago(100, 300)
         ma100_301_min_ago = self.algo_helper.ma_minutes_ago(100, 301)
+
         ma150_20_min_ago = self.algo_helper.ma_minutes_ago(150, 20)
         ma150_60_min_ago = self.algo_helper.ma_minutes_ago(150, 60)
+
         ma200_15_min_ago = self.algo_helper.ma_minutes_ago(200, 15)
         ma200_20_min_ago = self.algo_helper.ma_minutes_ago(200, 20)
         ma200_30_min_ago = self.algo_helper.ma_minutes_ago(200, 30)
@@ -307,6 +331,7 @@ class maddog:
         ma200_301_min_ago = self.algo_helper.ma_minutes_ago(200, 301)
         
         ma225_60_min_ago = self.algo_helper.ma_minutes_ago(225, 60)
+        ma250_60_min_ago = self.algo_helper.ma_minutes_ago(250, 60)
 
         ma300_10_min_ago = self.algo_helper.ma_minutes_ago(300, 10)
         ma300_20_min_ago = self.algo_helper.ma_minutes_ago(300, 20)
@@ -844,7 +869,6 @@ class maddog:
 
 
 
-
         # formula delta_1
         
         delta_1 = (ma200_last / ma100_last - 1) * 100 if ma100_last else 0
@@ -858,7 +882,36 @@ class maddog:
         
         
         # delta_1 < delta_2 GIORNO !
+
+
+
+
+        # formula delta_DNA_curva_verso_il_basso dopo un lungo rialzo !
+        # se GIORNO ok cosi'
+        # se NOTTE osso 3-50
+        # delta_DNA_1 < delta_DNA_2 GIORNO !
+        # delta_DNA_1 > delta_DNA_2 NOTTE !
+
+        # formula delta_DNA_1
         
+        delta_DNA_1 = (ma250_last / ma150_last - 1) * 100 if ma150_last else 0
+        self.algo_helper.info("delta_DNA_1: {}".format(delta_DNA_1))
+        
+        
+        # formula delta_DNA_2
+        
+        delta_DNA_2 = (ma250_60_min_ago / ma150_60_min_ago - 1) * 100 if ma150_60_min_ago else 0
+        self.algo_helper.info("delta_DNA_2: {}".format(delta_DNA_2))
+        
+        
+        # delta_DNA_1 < delta_DNA_2 GIORNO !
+        # delta_DNA_1 > delta_DNA_2 NOTTE !
+
+
+        
+
+
+
 
 
         # formula delta_x
