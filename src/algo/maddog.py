@@ -90,7 +90,7 @@ se NOTTE osso 3-50
 
 sempre con 
 
-and deviation_ma3_sotto_ma50 < -0.02
+and deviation_ma3_sotto_ma50 < -0.20
 and macd_differenza_2_min_ago > -2.50
 
 
@@ -20414,24 +20414,60 @@ class maddog:
                 elif (
                     ma3_last > ma13_last
 
+                    and ma450_last > ma450_360_min_ago
+                    and delta_DNA_1 < delta_DNA_2
+                    
+
                     and ma450_last > ma450_720_min_ago
-                    and deviation_ma300_sopra_ma450 < 0.085
-                    and deviation_ma300_sopra_ma450 > -0.085
+                    and deviation_ma300_sopra_ma450 < 0.10
+                    and deviation_ma300_sopra_ma450 > -0.10
 
                     and ma200_last > ma200_60_min_ago
 
                     and ma3_last > ma7_last
                     
-                    and macd > -60
-                    and macd_differenza_2_min_ago > -1.50
+                    
+                    and macd_differenza_2_min_ago > -2.50
                 ):
-                    buy = "BUY 3 con ma450_last > ma450_720_min_ago e con ma200> e con ma100 che e' andata sopra ma200 ! - r 6447 A1"
+                    buy = "BUY 3 con ma450_last > ma450_720_min_ago e con ma200> - GIORNO - r 6447 A1x"
                     action = "buy"
                     percentage = 90
 
                     # 29 gen 2025 sto cercando di risolvere il problema del trend laterale dopo un grande RIALZO
                     # 29 gen 2025 cancellato and ma2_last > ma2_2_min_ago e anticipato ndecchiecella
                     # 30 gen 2025 nel corridoio 300-450 puo' comprare prima
+                    # 28 feb 2025 GIORNO !
+
+
+                elif (
+                    ma3_last > ma13_last
+
+                    and ma450_last > ma450_360_min_ago
+                    and delta_DNA_1 > delta_DNA_2
+                    and deviation_ma3_sotto_ma50 < -0.02
+
+                    and ma450_last > ma450_720_min_ago
+                    and deviation_ma300_sopra_ma450 < 0.10
+                    and deviation_ma300_sopra_ma450 > -0.10
+
+                    and ma200_last > ma200_60_min_ago
+
+                    and ma3_last > ma7_last
+                    
+                    
+                    and macd_differenza_2_min_ago > -2.50
+                ):
+                    buy = "BUY 3 con ma450_last > ma450_720_min_ago e con ma200> e con ma100 che e' andata sopra ma200 + DNA - NOTTE - r 6447 A1y"
+                    action = "buy"
+                    percentage = 90
+
+                    # 29 gen 2025 sto cercando di risolvere il problema del trend laterale dopo un grande RIALZO
+                    # 29 gen 2025 cancellato and ma2_last > ma2_2_min_ago e anticipato ndecchiecella
+                    # 30 gen 2025 nel corridoio 300-450 puo' comprare prima
+                    # 28 feb 2025 aggiunta DNA NOTTE
+
+
+
 
 
                 elif (
@@ -24243,19 +24279,18 @@ class maddog:
 
 
 
-                
                 elif (    
                     ma3_last > ma20_last
 
-                    and ma450_last > ma450_720_min_ago
-                    and deviation_ma300_sopra_ma450 < 0.085
-                    and deviation_ma300_sopra_ma450 > -0.085
+                    and ma450_last > ma450_360_min_ago
+                    and delta_DNA_1 < delta_DNA_2
 
                     and ma450_last > ma450_480_min_ago
-                    
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.13
-                    and deviation_ma5_sopra_o_sotto_ma100 > -0.40
-                    
+                    and ma450_last > ma450_720_min_ago
+
+                    and deviation_ma300_sopra_ma450 < 0.10
+                    and deviation_ma300_sopra_ma450 > -0.10
+
                     and deviation_ma100_sopra_ma300 < 0.27
                     and deviation_ma100_sopra_ma300 > -0.27
                     
@@ -24264,16 +24299,50 @@ class maddog:
                   
                     and ma3_last > ma13_last
                     
-                    and macd > -60
-                    and macd_differenza_2_min_ago > -2
+                    and macd_differenza_2_min_ago > -2.50
                 ):
-                    buy = "BUY 4 - ANDATA BENISSIMO - con 450 > 450 720 min MA CONSIDERATA ANCORA LATERALE - r 6740 NUOVA ERA A3 SOFT 1"
+                    buy = "BUY 4 con 450 > 450 720 min MA CONSIDERATA ANCORA LATERALE - GIORNO - r 6740 NUOVA ERA A3 SOFT 1x"
                     action = "buy"
                     percentage = 70
 
                     # 29 gen 2025 sto cercando di risolvere il problema del trend laterale dopo un grande RIALZO
                     # 29 gen 2025 tolta and ma2_last >= ma2_2_min_ago
                     # 30 gen 2025 nel corridoio 300-450 puo' comprare prima
+
+
+
+                elif (    
+                    ma3_last > ma20_last
+
+                    and ma450_last > ma450_360_min_ago
+                    and delta_DNA_1 > delta_DNA_2
+                    and deviation_ma3_sotto_ma50 < -0.25
+
+                    and ma450_last > ma450_480_min_ago
+                    and ma450_last > ma450_720_min_ago
+
+                    and deviation_ma300_sopra_ma450 < 0.10
+                    and deviation_ma300_sopra_ma450 > -0.10
+
+                    and deviation_ma100_sopra_ma300 < 0.27
+                    and deviation_ma100_sopra_ma300 > -0.27
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma5_sopra_ma28 > -0.02
+                  
+                    and ma3_last > ma13_last
+                    
+                    and macd_differenza_2_min_ago > -2.50
+                ):
+                    buy = "BUY 4 con 450 > 450 720 min MA CONSIDERATA ANCORA LATERALE + DNA - NOTTE - r 6740 NUOVA ERA A3 SOFT 1y"
+                    action = "buy"
+                    percentage = 70
+
+                    # 29 gen 2025 sto cercando di risolvere il problema del trend laterale dopo un grande RIALZO
+                    # 29 gen 2025 tolta and ma2_last >= ma2_2_min_ago
+                    # 30 gen 2025 nel corridoio 300-450 puo' comprare prima
+                    # 28 feb 2025 aggiunta DNA - NOTTE
+
 
                 
                 elif (    
@@ -26389,43 +26458,73 @@ ma3_last > ma20_last
 
 
 
-
                 elif (    
                     ma3_last > ma20_last
+
+                    and ma450_last > ma450_360_min_ago
+                    and delta_DNA_1 < delta_DNA_2
+
                     and ma200_last > ma300_last
 
                     and ma10_last < ma30_last
                     and delta_1 < delta_2
 
-                    and ma39_last > ma39_20_min_ago
-                    
                     and ma450_last >= ma450_120_min_ago
                     and ma300_last > ma300_60_min_ago
                     and ma100_last > ma450_last
                     
-                    
-                   
-                    
                     and deviation_ma3_sopra_ma10 > 0.01
                     and deviation_ma3_sopra_ma16 > -0.02
-                    
                     
                     and ma3_last > ma13_last
                     and ma3_last > ma5_last
                     
-                    and ma2_last > ma2_2_min_ago
-                    and macd > -70
                     and macd_differenza_2_min_ago > -3.25
                 
                 ):
-                    buy = "BUY 5 con 450_last >= 450_120_min_ago E ma200>ma300 E ma39 > ma39 20 min ago ! - r 7144 A1 Y2 NUOVA ERA A3 SOFT xX 1x"
+                    buy = "BUY 5 con 450_last >= 450_120_min_ago E ma200>ma300 - GIORNO - r 7144 A1 Y2 NUOVA ERA A3 SOFT xX 1 xX"
                     action = "buy"
                     percentage = 70
 
                     #  7 feb 2025 aggiunta 200>300
                     # 27 feb 2025 se ma10_last < ma30_last vuol dire che sta curcando verso il basso
                     # 27 feb 2025 con aggiunta di delta_1 < delta_2 (giorno) non faccio comprare !
+                    # 28 feb 2025 GIORNO
 
+
+                elif (    
+                    ma3_last > ma20_last
+
+                    and ma450_last > ma450_360_min_ago
+                    and delta_DNA_1 > delta_DNA_2
+                    and deviation_ma3_sotto_ma50 < -0.20
+
+                    and ma200_last > ma300_last
+
+                    and ma10_last < ma30_last
+                    and delta_1 < delta_2
+
+                    and ma450_last >= ma450_120_min_ago
+                    and ma300_last > ma300_60_min_ago
+                    and ma100_last > ma450_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > -0.02
+                    
+                    and ma3_last > ma13_last
+                    and ma3_last > ma5_last
+                    
+                    and macd_differenza_2_min_ago > -3.25
+                
+                ):
+                    buy = "BUY 5 con 450_last >= 450_120_min_ago E ma200>ma300 +DNA - NOTTE - r 7144 A1 Y2 NUOVA ERA A3 SOFT xX 1 xY"
+                    action = "buy"
+                    percentage = 70
+
+                    #  7 feb 2025 aggiunta 200>300
+                    # 27 feb 2025 se ma10_last < ma30_last vuol dire che sta curcando verso il basso
+                    # 27 feb 2025 con aggiunta di delta_1 < delta_2 (giorno) non faccio comprare !
+                    # 28 feb 2025 aggiunta DNA - NOTTE
 
 
 
