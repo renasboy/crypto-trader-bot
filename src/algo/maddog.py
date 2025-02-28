@@ -26497,7 +26497,7 @@ ma3_last > ma20_last
 
                     and ma450_last > ma450_360_min_ago
                     and delta_DNA_1 > delta_DNA_2
-                    and deviation_ma3_sotto_ma50 < -0.20
+                    and deviation_ma3_sotto_ma50 < -0.22
 
                     and ma200_last > ma300_last
 
@@ -29997,13 +29997,15 @@ ma3_last > ma20_last
                 # 22 set 2024 cancellata r 7589 B1
 
 
-               
+
+
                 elif (      
                     ma3_last > ma13_last
+
                     and ma450_last > ma450_360_min_ago
-                    
+                    and delta_DNA_1 < delta_DNA_2 
+
                     and deviation_ma78_sopra_o_sotto_ma200 < -0.028
-                    and ma2_differenza_2_min_ago > 10
                     
                     and ma100_last < ma100_120_min_ago
                     and ma100_last < ma100_60_min_ago
@@ -30011,8 +30013,39 @@ ma3_last > ma20_last
                     and deviation_ma39 < -0.015
                     and deviation_ma3_sotto_ma50 < -0.015
                     
-                    and deviation_ma54_sopra_o_sotto_ma72 < 0.015
-                    and deviation_ma54_sopra_o_sotto_ma72 > -0.015
+                    and deviation_ma3_sopra_ma10 > -0.01
+                    and deviation_ma3_sopra_ma16 > -0.01
+                    and deviation_ma3_sopra_ma18 > -0.03
+                    
+                    and ma2_last >= ma20_last
+                    
+                    and macd_differenza_2_min_ago > -2.50
+                    
+                ):    
+                    buy = "BUY 5 CF con 100<120 min ago E 100<60 min ago MA 450 > 450 350 min ago ! - r 7589 B2 x1 x"
+                    action = "buy"
+                    percentage = 90
+                    
+                    #  10 gen 2023 se 5 e' vicina alla 300 E STIAMO AL BUY 5 deve essere almeno 3-39
+                    #  8 dic 2024 39 e' andata sopra 100 con ma100_last < ma100_120_min_ago
+                    # 22 feb 2025 se ma450_last > ma450_360_min_ago anticipo ndecchiecella
+                    # 28 feb 2025 tolta ma2 > ma2 2 min ago
+                    # 28 feb 2025 tolta macd > -60
+
+
+                elif (      
+                    ma3_last > ma13_last
+
+                    and ma450_last > ma450_360_min_ago
+                    and delta_DNA_1 > delta_DNA_2
+                    and deviation_ma3_sotto_ma50 < -0.40
+
+                    and deviation_ma78_sopra_o_sotto_ma200 < -0.028
+                    
+                    and ma100_last < ma100_120_min_ago
+                    and ma100_last < ma100_60_min_ago
+
+                    and deviation_ma39 < -0.30
                     
                     and deviation_ma3_sopra_ma10 > -0.01
                     and deviation_ma3_sopra_ma16 > 0.01
@@ -30020,17 +30053,20 @@ ma3_last > ma20_last
                     
                     and ma2_last >= ma20_last
                     
-                    and macd > -70
                     and macd_differenza_2_min_ago > -2.50
                     
                 ):    
-                    buy = "BUY 5 CF con 100<120 min ago E 100<60 min ago MA 450 > 450 350 min ago ! - r 7589 B2 x1"
+                    buy = "BUY 5 CF con 100<120 min ago E 100<60 min ago MA 450 > 450 350 min ago + DNA - NOTTE - r 7589 B2 x1 y"
                     action = "buy"
                     percentage = 90
                     
                     #  10 gen 2023 se 5 e' vicina alla 300 E STIAMO AL BUY 5 deve essere almeno 3-39
                     #  8 dic 2024 39 e' andata sopra 100 con ma100_last < ma100_120_min_ago
                     # 22 feb 2025 se ma450_last > ma450_360_min_ago anticipo ndecchiecella
+                    # 28 feb 2025 aggiunta DNA - NOTTE
+                    # 28 feb 2025 tolta ma2 > ma2 2 min ago
+                    # 28 feb 2025 tolta macd > -60
+
 
                 elif (     
                     
