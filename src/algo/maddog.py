@@ -27914,9 +27914,11 @@ ma3_last > ma20_last
                     percentage = 90
 
               
-
                 elif (    
                     ma3_last > ma20_last
+
+                    and ma450_last > ma450_360_min_ago
+                    and delta_DNA_1 < delta_DNA_2
 
                     and ma39_last < ma100_last
                     and deviation_ma25_sotto_ma300 < -0.37
@@ -27939,17 +27941,64 @@ ma3_last > ma20_last
                     and deviation_ma3_sopra_ma16 > -0.01
                     and deviation_ma3_sopra_ma18 > -0.03
                     
-                    and macd > -50
-                    and macd >= macd_2_min_ago
+                    and macd_differenza_2_min_ago > -2.50
                     
                 ):    
-                    buy = "BUY 5 CF + 300 > 180 min con 3-20 + DNAM - r 7270 NUOVA ERA A3 SOFT"
+                    buy = "BUY 5 CF + 300 > 180 min con 3-20 + DNAM - GIORNO - r 7270 NUOVA ERA A3 SOFT x"
                     action = "buy"
                     percentage = 90
                     
                     #  9 feb 2024 IMPORTANTE ! solo BUY 5 NUOVA ERA A3 SOFT con ma100 > ma100 5 min ago !!!
                     #  2 dic 2024 aggiunta DNAM
                     #  8 dic 2024 DNAM piu' agressiva
+                    # 28 feb 2025 anticipata ndecchiecella
+
+
+
+
+                elif (    
+                    ma3_last > ma20_last
+                     
+                    and ma450_last > ma450_360_min_ago
+                    and delta_DNA_1 > delta_DNA_2
+
+                    and ma39_last < ma100_last
+                    and deviation_ma25_sotto_ma300 < -0.37
+                    and deviation_ma50_sotto_ma300 < -0.27
+
+                    and deviation_ma39 < -0.22
+                    and deviation_ma3_sotto_ma50 < -0.35
+
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.22
+                    and deviation_ma5_sotto_ma200 < -0.31
+                    and deviation_ma5_sotto_ma300 < -0.41
+                    and deviation_ma5_sotto_ma450 < -0.51
+
+                    and ma100_last < ma100_120_min_ago
+                    
+                    and deviation_ma54_sopra_o_sotto_ma72 < -0.015
+                    and deviation_ma39_sotto_ma200 < -0.01
+
+                    and ma300_last > ma300_180_min_ago
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > -0.01
+                    and deviation_ma3_sopra_ma18 > -0.03
+                    
+                    and macd_differenza_2_min_ago > -2.50
+                    
+                ):    
+                    buy = "BUY 5 CF + 300 > 180 min con 3-20 + DNAM + DNA - NOTTE - r 7270 NUOVA ERA A3 SOFT y"
+                    action = "buy"
+                    percentage = 90
+                    
+                    #  9 feb 2024 IMPORTANTE ! solo BUY 5 NUOVA ERA A3 SOFT con ma100 > ma100 5 min ago !!!
+                    #  2 dic 2024 aggiunta DNAM
+                    #  8 dic 2024 DNAM piu' agressiva
+                    # 28 feb 2025 anticipata ndecchiecella
+                    # 28 feb 2025 aggiunta DNA - NOTTE
+
+
 
                 elif (    
                     ma3_last > ma20_last
