@@ -32,7 +32,7 @@ and (ma300_last < ma300_60_min_ago or ma300_last < ma300_120_min_ago)
 and delta_1 > delta_2
 
 and deviation_ma39 < -0.03
-and deviation_ma3_sotto_ma50 < -0.02
+and deviation_ma3_sotto_ma50 < -0.03
 
 and macd_differenza_2_min_ago > -2.50
 
@@ -3332,36 +3332,35 @@ class maddog:
                 elif (
                     ma3_last > ma20_last
                     
-                    and ma3_last > ma20_last
+                    and ma100_last < ma100_60_min_ago
                     and ma100_last < ma100_10_min_ago
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.60 
 
-                    and ma100_last < ma100_60_min_ago
-                    and ma5_last >= ma10_last
-                    and ma450_last >= ma450_360_min_ago
-               
+                    
                     and deviation_ma54_sopra_o_sotto_ma72 < -0.015
+
+                    and ma450_last >= ma450_360_min_ago
                     
                     and deviation_ma39_sotto_ma200 < -0.01
                     and deviation_ma300_sopra_ma450 > -0.50
                     
+                    and deviation_ma39 < -0.08
+                    and deviation_ma3_sotto_ma50 < -0.10
+
                     and deviation_ma3_sopra_ma10 > -0.01
-                    and deviation_ma3_sopra_ma16 > 0.001
+                    and deviation_ma3_sopra_ma16 > -0.01
                     and deviation_ma3_sopra_ma18 > -0.01
                     
-                    and ma2_last >= ma2_2_min_ago
-                    and macd >= macd_2_min_ago
-                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
-                    and macd_differenza_2_min_ago > 0.50
+                    and macd_differenza_2_min_ago > -2.50
                     
                 ):    
-                    buy = "BUY 1 compare forever - ex 1537 A3y RCCR con 3-30 E CON 300 vicina alla 450 ( anche un poco sotto ! ) and 3-18 > 0.001 + MACD > - r 1204 NUOVA ERA A2 SOFT 2"
+                    buy = "BUY 1 con 3-20 E 300 vicina alla 450 + macd diff > -2.50 - r 1204 NUOVA ERA A2 SOFT 2"
                     action = "buy"
                     percentage = 90
                     
                     # 8 gen 2024 incrocio 3-30 piu' veloce di 10>20 !
-
+                    #  2 mar 2025 ho voluto tenerla ma anticipando ndecchiecella !
                   
                 
                 # 10 set 2024 cancellata r 1204 NUOVA ERA A3 SOFT
@@ -50185,10 +50184,36 @@ ma3_last > ma20_last
                 # 31 gen 2025 stiamo sotto al limite inferiore del corridoio 300-450 per adesso il dev sell va bene cosi'.
 
 
-
-            elif (
-                
+            
+            elif (    
                 ma50_last < ma50_2_min_ago
+                and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                and deviation_ma5_sopra_o_sotto_ma100 < -0.21
+                and ma20_last > ma20_2_min_ago
+                
+                and deviation_ma39 < 0.10
+                and deviation_sell < -0.02
+                
+                and deviation_ma5_sopra_ma200 < -0.30
+                and deviation_ma5_sotto_ma300 < -0.30
+                and deviation_ma5_sotto_ma450 < -0.30
+                
+                and deviation_ma100_sopra_ma300 < 0.40
+                
+                and ma2_last < ma2_2_min_ago 
+                and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.018
+                and macd < 13
+                and macd_differenza_2_min_ago < -3
+            ):
+                sell = "SELL NCS con ma20 <= ma20 2 min ago e dev 3-39 < 0.10 e dev_sell < -0.02 e ma50 < e diff ma2 e diff macd - r 16047 A3 Y2aX"
+                action = "sell"
+
+                #  2 mar 2025 se ma100 comincia a scendere di meno allora and deviation_sell < -0.02 da -0.01
+
+            
+            elif (    
+                ma50_last < ma50_2_min_ago
+                and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.12
                 and deviation_ma5_sopra_o_sotto_ma100 < -0.21
                 and ma20_last > ma20_2_min_ago
                 
@@ -50206,7 +50231,7 @@ ma3_last > ma20_last
                 and macd < 13
                 and macd_differenza_2_min_ago < -3
             ):
-                sell = "SELL NCS con ma20 <= ma20 2 min ago e dev 3-39 < 0.10 e dev_sell < 0.05 e ma50 < e diff ma2 e diff macd - r 16047 A3 Y2a"
+                sell = "SELL NCS con ma20 <= ma20 2 min ago e dev 3-39 < 0.10 e dev_sell < -0.01 e ma50 < e diff ma2 e diff macd - r 16047 A3 Y2aY"
                 action = "sell"
                 
                 # 30 nov 2023 dev 39 a 0.10 da 0.03
@@ -50215,7 +50240,7 @@ ma3_last > ma20_last
                 # MINGHIA il 26 dic ha fatto -0.73 ! e ho fatto delle modifiche meravigliose
                 # 29 dic 2023 and macd a 13 da 7
                 # 19 gen 2024 ha fatto -0.60 HO NOTATO CHE ma20 era in crescita ! e ho aggiunto questa
-
+                #  2 mar 2025 se ma100 continua a scendere pesantemente allora ok cosi'
 
             elif (
                 
