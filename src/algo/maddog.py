@@ -14610,21 +14610,24 @@ class maddog:
 
 
                     
+                
                 elif (
-
                     ma3_last > ma18_last
-                    and deviation_ma200_sotto_ma300 < -0.17
-                    and ma300_last < ma300_60_min_ago
-                    and deviation_ma39 < -0.02
+
+                    and ma3_last > ma20_last
+                    and deviation_ma200_sotto_ma300 < -0.25
+                    and (ma300_last < ma300_60_min_ago or ma300_last < ma300_120_min_ago)
+                    and delta_1 > delta_2
+
+                    and deviation_ma39 < -0.10
+                    and deviation_ma3_sotto_ma50 < -0.07
 
                     and ma78_last < ma200_last
 
                     and deviation_ma3_sopra_ma10 > 0.01
                     and deviation_ma5_sopra_ma16 > -0.05
                     
-                    and ma2_last > ma2_2_min_ago
-                    
-                    and macd >= -70
+                    and macd_differenza_2_min_ago > -2.50
                 ):
                     buy = "BUY 2 con 3-18 comincia a scendere - r 5019 B"
                     action = "buy"
@@ -14634,8 +14637,9 @@ class maddog:
                     # questa cosa che 78 deve essere < 200 ha dell' incredibile. MA NON TOCCARE !
                     # 16 mar 2023 aggiunta 3-10 > 0.125 3-10 deve stare sopra 0.115
                     # 6 apr 2023 4-15 da 5-16
-                    # 26 feb 2025 tolto ribasso audi ! aggiunta comincia a scendere ! 
-                    
+                    # 26 feb 2025 tolto ribasso audi ! aggiunta comincia a scendere !
+                    #  2 mar 2025 aggiunto comincia a scendere con and deviation_ma200_sotto_ma300 < -0.25
+
                     
                 elif (
                     
@@ -19903,25 +19907,37 @@ class maddog:
                 # BUY 3 RCCR PORTATA MADDOG maria callas core 'ngrato - 2 sett 2022 ore 5:03 - ma300 che SCENDE
                 
                 elif (     
+                    ma3_last > ma18_last
+
+                    and ma3_last > ma20_last
+                    and deviation_ma200_sotto_ma300 < -0.27
+                    and (ma300_last < ma300_60_min_ago or ma300_last < ma300_120_min_ago)
+                    and delta_1 > delta_2
+
                     
-                    deviation_callas < -0.10
-                    and deviation_ma50_sotto_ma300 < -0.29
-                    and deviation_ma78_sotto_ma300 < -0.23
-                    and deviation_ma78_sotto_ma200 < -0.30
+                    and deviation_callas < -0.10
+
+                    and ma39_last < ma100_last
+                    and deviation_ma100_sopra_ma300 < -0.49
+                    and deviation_ma25_sotto_ma300 < -0.80
+                    and deviation_ma50_sotto_ma300 < -0.70
+                    
+                    
+                    and deviation_ma5_sotto_ma200 < -0.50
                     and deviation_ma5_sotto_ma300 < -0.60
-                    
-                    and ma300_last < ma300_301_min_ago
-                    
+                    and deviation_ma5_sotto_ma450 < -0.70
+
+
                     and ma100_last < ma200_last
                     and ma200_last < ma200_120_min_ago
-                    
-                    and deviation_ma3_sopra_ma10 > 0.03
-                    and deviation_ma5_sopra_ma28 > 0.02
+                    and ma300_last < ma300_301_min_ago
+
+                    and deviation_ma3_sopra_ma10 > 0.01
                     
                     and ma2_last >= ma20_last
-                    and ma2_last >= ma2_2_min_ago
+                    and macd_differenza_2_min_ago > -2.50
                 ):    
-                    buy = "BUY 3 maria callas core 'ngrato 5-59 PORTATA DA RCCR- con 5 sotto 300 < -0.60 - 2 sett 2022 ore 5:03 - ma300 che SCENDE - r 6244"
+                    buy = "BUY 3 maria callas core 'ngrato con ma300 che SCENDE da 6 ore + osso + comincia a scendere - r 6244"
                     action = "buy"
                     percentage = 80
                     
@@ -19936,8 +19952,8 @@ class maddog:
                     #  16 nov ho tolto ma5_last > ma59_last e ho messo dev callas = 5/54 <-0.10 PENSIERO LATERALE - VEDI 16 NOV ore 15 :33
                     # 20 apr 2023 5-28 a 0.07 da 0.10
                     # 20 apr 2023 5-28 a 0.03 da 0.07
-
-
+                    #  2 mar 2025 aggiunta comincia a scendere
+                    #  2 mar 2025 ATTENZIONE ! ho tolto 3-39 e 3-50 perche' essendo BUY 3 la ma3 e' gia' sopra alla ma39 e alla ma50 !
 
                 # 10 set 2024 CANCELLATA r 6260 a
 
@@ -22204,7 +22220,7 @@ class maddog:
                     and ma2_differenza_2_min_ago > 5
                     and macd > macd_2_min_ago
                     
-                    and macd_differenza_2_min_ago > -1.25
+                    and macd_differenza_2_min_ago > -2.50
                 ):
                     buy = "BUY 3 con ma78 TREND CHIARAMENTE RIBASSISTA 29 ago 2022 > 180 min di ribasso con macd diff > 1.25 - r 6572 A2 Y3"
                     action = "buy"
