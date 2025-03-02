@@ -24,19 +24,22 @@ and delta_300_200 < delta_300_200_60_min  ....... GIORNO !
 
 
 
-
 COMINCIA A SCENDERE !
 
 and ma3_last > ma20_last
-and deviation_ma200_sotto_ma300 < -0.17
-and ma300_last < ma300_60_min_ago
-and deviation_ma39 < -0.02
+and deviation_ma200_sotto_ma300 < -0.25
+and ma300_last < ma300_60_min_ago or and ma300_last < ma300_120_min_ago
+and delta_1 > delta_2
+
+and deviation_ma39 < -0.03
+and deviation_ma3_sotto_ma50 < -0.02
 
 
 
 
 CONTINUA A SCENDERE
 
+and ma3_last > ma18_last
 and ma100_last < ma450_last
 and deviation_ma39_di_adesso_diviso_ma39_di_120_min_ago < -0.75
 and deviation_ma300_sopra_ma450 < -0.22
@@ -25544,7 +25547,8 @@ class maddog:
                     action = "buy"
                     percentage = 90
 
-
+                    #  2 mar 2025 NON TOCCARLA MAI ! QUESTA SI E' ATTIVATA IN UN RIALZO SPAVENTOSO E IMPROVVISO DOPO ANNUNCIO DI TRUMP
+                    #  2 mar 2025 puoi studiare anche un NUOVO rialzo improvviso tra le condizioni speciali !
 
 
                   
