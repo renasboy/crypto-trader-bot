@@ -10344,27 +10344,33 @@ class maddog:
 
                 
                 elif (
-                    ma3_last < ma39_last
-                    and delta_1 < delta_2
-                    
-                    and ma100_last < ma300_last
-                    
-                    and deviation_ma3_sopra_ma10 > 0.01
-                    and deviation_ma100_laterale > -0.80
-                    
-                    and ma100_last < ma200_last
-                    and ma200_last < ma300_last
-                    
+                    ma3_last < ma18_last
+                    and ma3_last < ma39_last
+
+                    and ma3_last > ma20_last
+                    and deviation_ma200_sotto_ma300 < -0.25
+                    and (ma300_last < ma300_60_min_ago or ma300_last < ma300_120_min_ago)
+                    and delta_1 > delta_2
+
+                    and deviation_ma39 < -0.03
+                    and deviation_ma3_sotto_ma50 < -0.03
+
+                    and deviation_ma300__diviso_ma300_5_ore_ago < -0.25
+                    and deviation_ma5_sotto_ma300 < -0.43
+
                     and ma100_last < ma100_301_min_ago
                     and ma200_last < ma200_301_min_ago
                     and ma300_last < ma300_301_min_ago
                     
-                    and deviation_ma300__diviso_ma300_5_ore_ago < -0.25
-                    and deviation_ma5_sotto_ma300 < -0.43
+                    and ma100_last < ma300_last
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+
+                    and deviation_ma3_sopra_ma10 > 0.01
                     
-                    and macd >= macd_2_min_ago
+                    and macd_differenza_2_min_ago > -2.50
                 ):
-                    buy = "BUY 1 DOPO 5 ore di ribasso MA GIORNO ma 100<300 - r 4040 Ay"
+                    buy = "BUY 1 con COMINCIA A SCENDERE ( anche se 5 ore di ribasso ) - r 4040 Ay"
                     action = "buy"
                     percentage = 80
                     
@@ -10372,7 +10378,7 @@ class maddog:
                     # aggiunta 3-10 > 0.07
                     # 5-28 0.16 da 0.17 (adesso c'e' anche 3-10)
                     # 17 nov 2022 HO MESSO 5 < 54 ! vedi 16 nov ore 13:47 e ore 17:16
-                    
+                    #  2 mar 2025 aggiunta senza pieta' COMINCIA A SCENDERE !
                     
                   
                     
@@ -17694,12 +17700,12 @@ class maddog:
                 # LA MIA OPERA D' ARTE - prendi il coltello con il piede + vendita bocelli
 
                 elif (
-                    deviation_ma78_sopra_o_sotto_ma78_30_min_ago < -0.10
+                    ma3_last > ma20_last
+                    and deviation_ma78_sopra_o_sotto_ma78_30_min_ago < -0.10
                     and ma300_last < ma300_301_min_ago
                     and deviation_ma5_sotto_ma200 < -0.40
                     and delta_1 > delta_2
-                    and ma3_last > ma20_last
-
+                    
                     and ma50_differenza_ma59 < -5
                     
                     and deviation_ma5_sotto_ma300 < -0.42
@@ -17711,17 +17717,17 @@ class maddog:
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
 
-                    and ma2_last >= ma5_last
                     and deviation_ma3_sopra_ma10 > 0.02
                     and deviation_ma5_sopra_ma28 > -0.02
-                    
-                    and ma2_last >= ma2_2_min_ago
-                    and ma2_differenza_2_min_ago > 2
-                    
-                    and macd_differenza_2_min_ago > -1.50
+
+                    and deviation_ma39 < -0.05
+                    and deviation_ma3_sotto_ma50 < -0.05
+
+                    and ma2_last >= ma5_last
+                    and macd_differenza_2_min_ago > -2.50
  
                 ):
-                    buy = "BUY 2 con TREND RIBASSISTA 18 set 2024 LA MIA OPERA D' ARTE - prendi il coltello con il piede + vendita bocelli - r 5983"
+                    buy = "BUY 2 durante un TREND RIBASSISTA LA MIA OPERA D' ARTE - prendi il coltello con il piede + vendita bocelli - r 5983"
                     action = "buy"
                     percentage = 80
                     
@@ -17736,7 +17742,8 @@ class maddog:
                     # 30 nov 2023 IL TITOLO SEMBRA AVER INTRAPRESO UN VERO E PRORIO TREND RIBASSISTA !
                     # 18 set 2024 aggiunta perche' non aveva comprato come, invece, aveva fatto RCCR ma con l' avvento di prendi il coltello con il piede !
                     # 18 set 2024 E DELLA VENDITA BOCELLI. perche' mi e' sembrato giusto comprare quando ha venduto !!!
-                    
+                    #  2 mar 2025 la mia opera d' arte ho voluto tenerla anche se avrei potuto modificarla con COMINCIA A SCENDERE !
+                    #  2 mar 2025 ma io sono un romantico e poi le commissioni di binance mi consentono di provarci.
                         
                 elif (
                     
@@ -22284,7 +22291,7 @@ class maddog:
 
                 
                 elif (    
-                    ma3_last > ma30_last
+                    ma3_last > ma20_last
                     and ma30_last > ma50_last
                     
                     and ma50_last > ma59_last
@@ -22298,19 +22305,20 @@ class maddog:
                     and ma200_last < ma300_last
                     
                     and deviation_ma3_sopra_ma10 > 0.005
-                    and deviation_ma3_sopra_ma16 > 0.077
+                    and deviation_ma3_sopra_ma16 > -0.077
                     
-                    and ma2_last >= ma2_2_min_ago
-                    and macd > macd_2_min_ago
+                    and macd_differenza_2_min_ago > -2.50
+                    
                 ):
-                    buy = "BUY 3 29 ago 2022 > 180 min di ribasso MA SE and ma30_last > ma50_last E 50>59 compra con 3-30 - r 6572 Bx A"
+                    buy = "BUY 3 29 ago 2022 > 180 min di ribasso MA SE and ma30_last > ma50_last E 50>59 compra con 3-20 - r 6572 Bx A"
                     action = "buy"
                     percentage = 90
                     
-                    # 11 ott 2022 mentre scende dopo 3 ore se accelera al ribasso (5 si allontana da 300) interviene prima con 5-28 and macd > macd 2 min ago !
+                    # 11 ott 2022 mentre scende dopo 3 ore accelera al ribasso (5 si allontana da 300)
                     # 10 ott 2023 and macd > macd 2 min ago
                     # 18 dic 2023 SE ma50_last > ma59_last compra con 8-50
-
+                    #  2 mar 2025 ho voluto tenerla - ma avrei potuto modificare con COMINCIA A SCENDERE !
+                    #  2 mar 2025 intanto ho anticipato di una ndecchiecella
                  
                 
                 elif (    
@@ -23427,11 +23435,9 @@ class maddog:
                     and ma4_last > ma50_last
                     and ma7_last > ma25_last
                     
-                    and ma2_last > ma2_2_min_ago
-                    and macd > macd_2_min_ago
-                    and macd_differenza_2_min_ago > -1.25
+                    and macd_differenza_2_min_ago > -2.50
                 ):
-                    buy = "BUY 4A GIORNO con ma 78> e 300> E ma100>ma200 con macd < macd 2 min ago and ma2_differenza_2_min_ago > 5 - r 6668 A1y"
+                    buy = "BUY 4A GIORNO con ma 78> e 300> E ma100>ma200 and ma2_differenza_2_min_ago > 5 - r 6668 A1y"
                     action = "buy"
                     percentage = 70
                     
