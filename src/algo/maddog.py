@@ -28,12 +28,13 @@ COMINCIA A SCENDERE !
 
 and ma3_last > ma20_last
 and deviation_ma200_sotto_ma300 < -0.25
-and ma300_last < ma300_60_min_ago or and ma300_last < ma300_120_min_ago
+and (ma300_last < ma300_60_min_ago or ma300_last < ma300_120_min_ago)
 and delta_1 > delta_2
 
 and deviation_ma39 < -0.03
 and deviation_ma3_sotto_ma50 < -0.02
 
+and macd_differenza_2_min_ago > -2.50
 
 
 
@@ -50,7 +51,7 @@ and deviation_ma39_sotto_ma100 > -0.15
 
 and deviation_ma39 < -0.01
 and deviation_ma3_sotto_ma50 < -0.02
-
+and macd_differenza_2_min_ago > -2.50
 
 
 
@@ -7943,18 +7944,24 @@ class maddog:
                 elif (    
                     ma3_last > ma16_last
 
-                    and deviation_ma39 < -0.01
-                    and deviation_ma3_sotto_ma50 < -0.04
+                    and ma3_last > ma20_last
+                    and deviation_ma200_sotto_ma300 < -0.25
+                    and (ma300_last < ma300_60_min_ago or ma300_last < ma300_120_min_ago)
+                    and delta_1 > delta_2
 
+                    and deviation_ma39 < -0.03
+                    and deviation_ma3_sotto_ma50 < -0.03
+
+                    
                     and ma450_last < ma450_90_min_ago
-                    and ma300_last < ma300_120_min_ago
+                    
                     and delta_300_225 < delta_300_225_60_min
                    
                     and deviation_ma3_sopra_ma7 > 0.01
                     
-                    and macd > -60
+                    and macd_differenza_2_min_ago > -2.50
                 ):
-                    buy = "BUY 1 con ma5 > ma200 e con 3>16 con DOPPIO DELTA 300-225 GIORNO ! - r 2065 BY"
+                    buy = "BUY 1 comincia a scendere e con 3>16 e DOPPIO DELTA 300-225 GIORNO ! - r 2065 BY"
                     action = "buy"
                     percentage = 80
                     
@@ -7964,8 +7971,8 @@ class maddog:
                     #  5 feb 2025 aggiunta questa - niente di speciale
                     # 17 feb 2025 aggiunta and deviation_ma39 < -0.01
                     # 17 feb 2025 aggiunta and deviation_ma3_sotto_ma50 < -0.04
+                    #  2 mar 2025 aggiunta COMINCIA A SCENDERE !
                     
-                
                     
                     
                     
