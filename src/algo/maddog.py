@@ -39,8 +39,11 @@ and macd_differenza_2_min_ago > -2.50
 
 
 
-
+                     and ma450_last > ma450_480_min_ago
 CONTINUA A SCENDERE 
+                     and (ma450_last < ma450_480_min_ago or ma450_last < ma450_720_min_ago)
+
+
 ho cambiato!  DEVE ESSERE GIORNO 200-100 e ho tolto 39 troppo vicina alla 100 (perche' puo' allontanarsi verso il basso e c'e' gia' il giorno !)
 al continua a scendere devo aggiungere osso
 tolta 3-39 !
@@ -52064,10 +52067,12 @@ ma3_last > ma20_last
                 #  3 ott 2024 aggiunta 3<10 ma bene cosi' !
                 # 17 feb 2025 aggiunta and ma5_last < ma5_3_min_ago
 
-
+            
 
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
+                and ma450_last > ma450_480_min_ago
+
                 and ma200_last > ma200_120_min_ago
 
                 and delta_1_69_39 > delta_2_69_39
@@ -52087,9 +52092,43 @@ ma3_last > ma20_last
                 and ma2_last <= ma2_2_min_ago
             
             ):
-
-                sell = "SELL CS - DOLCE ATTESA 270 sec and ma13 < and con 450 < E 100<100 30 min ago e 100 sopra 300 < 0.50 - r 16694 B2 Y2 Ba"
+                sell = "SELL CS - DOLCE ATTESA 270 sec and ma13 < and con 450 < E 100<100 30 min ago e 100 sopra 300 < 0.50 - r 16694 B2 Y2 Bax"
                 action = "sell"
+                
+                #  3 mar 2025 aggiunta and ma450_last > ma450_480_min_ago
+
+
+            elif (
+                seconds_since_last_trade > max_hold_time_in_seconds
+                and (ma450_last < ma450_480_min_ago or ma450_last < ma450_720_min_ago)
+                and deviation_ma39 < -0.005
+
+                and ma200_last > ma200_120_min_ago
+
+                and delta_1_69_39 > delta_2_69_39
+
+                and ma450_last < ma450_10_min_ago
+                and ma100_last < ma300_last
+                and ma100_last < ma200_last
+
+                and ma100_last < ma100_30_min_ago
+                and ma13_last <= ma13_2_min_ago
+
+                and deviation_ma100_sopra_ma200 > -0.70
+                and deviation_ma100_sopra_ma300 < 0.50
+
+                and ma3_last <= ma3_2_min_ago
+                and ma2_last < last_trade_price
+                and ma2_last <= ma2_2_min_ago
+            
+            ):
+                sell = "SELL CS - DOLCE ATTESA 270 sec and ma13 < and con 450 < E 100<100 30 min ago e 100 sopra 300 < 0.50 - r 16694 B2 Y2 Bay"
+                action = "sell"
+                
+                #  3 mar 2025 aggiunta and (ma450_last < ma450_480_min_ago or ma450_last < ma450_720_min_ago)
+                #  3 mar 2025 aggiunta and deviation_ma39 < -0.005
+
+
 
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
