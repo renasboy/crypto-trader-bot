@@ -10581,34 +10581,53 @@ class maddog:
                     # 27 feb 2025 anticipata ndecchiecella
 
                 
+
+
                 elif (
-                    ma3_last < ma18_last
-                    and ma3_last < ma39_last
+                    ma3_last > ma18_last
+                    and (ma450_last < ma450_480_min_ago or ma450_last < ma450_720_min_ago)
 
-                    and ma3_last > ma20_last
-                    and deviation_ma200_sotto_ma300 < -0.25
-                    and (ma300_last < ma300_60_min_ago or ma300_last < ma300_120_min_ago)
-                    and delta_1 > delta_2
+                    and deviation_ma200_sotto_ma300 < -1.40
+                    and ma100_last < ma450_last
+                    and ma39_last < ma100_last
+                    and deviation_ma39_di_adesso_diviso_ma39_di_120_min_ago < -0.75
 
-                    and deviation_ma39 < -0.03
-                    and deviation_ma3_sotto_ma50 < -0.03
+                    and deviation_ma25_sotto_ma300 < -2.30
+                    and deviation_ma50_sotto_ma300 < -2.20
+                    and deviation_ma100_sopra_ma300 < -2.00
+                    and deviation_ma300_sopra_ma450 < -0.80
+
+                    and delta_1 < delta_2
+                    and delta_300_200 < delta_300_200_30_min
+
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.13
+
+                    and deviation_ma39 < -0.02
+                    and deviation_ma3_sotto_ma50 < -0.10
+
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.45
+                    and deviation_ma5_sotto_ma200 < -1.20
+                    and deviation_ma5_sotto_ma300 < -2.00
+                    and deviation_ma5_sotto_ma450 < -3.00
 
                     and deviation_ma300__diviso_ma300_5_ore_ago < -0.25
-                    and deviation_ma5_sotto_ma300 < -0.43
+                    
+                    and ma100_last < ma200_last
+                    and ma100_last < ma300_last
+                    and ma200_last < ma300_last
 
                     and ma100_last < ma100_301_min_ago
                     and ma200_last < ma200_301_min_ago
                     and ma300_last < ma300_301_min_ago
                     
-                    and ma100_last < ma300_last
-                    and ma100_last < ma200_last
-                    and ma200_last < ma300_last
+                    
 
                     and deviation_ma3_sopra_ma10 > 0.01
                     
                     and macd_differenza_2_min_ago > -2.50
                 ):
-                    buy = "BUY 1 con COMINCIA A SCENDERE ( anche se 5 ore di ribasso ) - r 4040 Ay"
+                    buy = "BUY 1 CONTINUA A SCENDERE DNA - r 4040 Ay"
                     action = "buy"
                     percentage = 80
                     
@@ -10617,7 +10636,7 @@ class maddog:
                     # 5-28 0.16 da 0.17 (adesso c'e' anche 3-10)
                     # 17 nov 2022 HO MESSO 5 < 54 ! vedi 16 nov ore 13:47 e ore 17:16
                     #  2 mar 2025 aggiunta senza pieta' COMINCIA A SCENDERE !
-                    
+                    #  3 mar 2025 comincia a scendere e' diventato CONTINUA A SCENDERE DNA
                   
                     
                     
@@ -25760,9 +25779,9 @@ class maddog:
                 
                 # BUY 4 29 ago 2022 > 180 min di ribasso
                 
-                elif (
-                    
-                    ma3_last > ma39_last
+                
+                elif (    
+                    ma3_last > ma20_last
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.30
                     
                     and ma100_last < ma100_180_min_ago
@@ -25774,8 +25793,6 @@ class maddog:
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
                     
-                    
-                    and ma2_last >= ma2_2_min_ago
                     and macd_differenza_2_min_ago > -2.50
                 ):
                     buy = "BUY 4 29 ago 2022 > 180 min di ribasso - r 7039 B2x"
@@ -25788,7 +25805,7 @@ class maddog:
 
                     # 10 set 2024 and macd_differenza_2_min_ago > -2 
                     # 10 set 2024 significa che la differenza del MACD di adesso E del MACD di 2 min ago NON E' TANTA cioe' STA SMETTENDO DI CROLLARE
-
+                    #  3 mar 2025 tolta ma2 > ma2 2 min ago e me la tengo
 
               
                 # BUY 4 29 ago 2022 > 180 min di ribasso
