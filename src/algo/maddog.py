@@ -4551,6 +4551,8 @@ class maddog:
 
                 elif (     
                     ma3_last > ma13_last
+                    and ma450_last > ma450_480_min_ago
+
                     and deviation_ma39 < -0.10
                     and deviation_ma3_sotto_ma50 < -0.13
 
@@ -4572,13 +4574,72 @@ class maddog:
                     and macd_differenza_2_min_ago > -1.25
                     
                 ):    
-                    buy = "BUY 1 pericolosa ma GIORNO ! con 3-39 and 39< AND 78<200  - r 1486 B1"
+                    buy = "BUY 1 pericolosa ma GIORNO ! con 3-39 and 39< AND 78<200  - r 1486 B1x"
                     action = "buy"
                     percentage = 90
 
                     #  3 feb 2025 SE GIORNO ANTICIPO BUY 3-39 da 8-54
                     # 17 feb 2025 aggiunto and deviation_ma39 < -0.10
                     # 17 feb 2025 aggiunto and deviation_ma3_sotto_ma50 < -0.13
+                    #  3 mar 2025 aggiunta and ma450_last > ma450_480_min_ago
+
+
+                elif (     
+                    ma3_last > ma13_last
+                    and (ma450_last < ma450_480_min_ago or ma450_last < ma450_720_min_ago)
+
+                    and deviation_ma200_sotto_ma300 < -1.40
+                    and ma100_last < ma450_last
+                    and ma39_last < ma100_last
+                    and deviation_ma39_di_adesso_diviso_ma39_di_120_min_ago < -0.75
+
+                    and deviation_ma25_sotto_ma300 < -2.30
+                    and deviation_ma50_sotto_ma300 < -2.20
+                    and deviation_ma100_sopra_ma300 < -2.00
+                    and deviation_ma300_sopra_ma450 < -0.80
+
+                    and delta_1 < delta_2
+
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.13
+
+                    and deviation_ma39 < -0.17
+                    and deviation_ma3_sotto_ma50 < -0.25
+
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.45
+                    and deviation_ma5_sotto_ma200 < -1.20
+                    and deviation_ma5_sotto_ma300 < -2.00
+                    and deviation_ma5_sotto_ma450 < -3.00
+
+                    and deviation_ma39 < -0.01
+                    and deviation_ma3_sotto_ma50 < -0.10
+
+                    and ma100_last < ma100_60_min_ago
+                    and ma200_last < ma200_120_min_ago
+
+                    and ma100_last < ma200_last
+                    
+                    and deviation_ma54_sopra_o_sotto_ma72 < -0.015
+
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > -0.02
+                    and deviation_ma3_sopra_ma18 > -0.04
+
+                    and deviation_ma3_sopra_ma10 > 0.01
+
+                    and macd_differenza_2_min_ago > -2.50
+      
+                ):    
+                    buy = "BUY 1 CONTINUA A SCENDERE DNA - GIORNO ! - r 1486 B1y"
+                    action = "buy"
+                    percentage = 90
+
+                    #  3 feb 2025 SE GIORNO ANTICIPO BUY 3-39 da 8-54
+                    # 17 feb 2025 aggiunto and deviation_ma39 < -0.10
+                    # 17 feb 2025 aggiunto and deviation_ma3_sotto_ma50 < -0.13
+                    #  3 mar 2025 aggiunta CONTINUA A SCENDERE DNA
+
+
 
                 elif (     
                     ma8_last > ma54_last
