@@ -20375,9 +20375,14 @@ class maddog:
                     # 26 feb 2025 contiuna a scendere - vediamo -
                     # 26 feb 2025 tolto delta_300_200 < delta_300_200_30_min perche' 30 minuti sono pochi. seembra giorno ma e' notte !
 
+                
+
 
                 elif (
                     ma3_last > ma20_last
+                    and ma450_last > ma450_480_min_ago
+
+
                     and delta_300_200 > delta_300_200_30_min
                     and deviation_ma25_sotto_ma300 < -1.20
 
@@ -20393,12 +20398,56 @@ class maddog:
                     and deviation_ma5_sotto_ma450 < -1.00
 
                     and ma78_last < ma200_last
-                    and deviation_ma3_sopra_ma10 > 0.07
+                    and deviation_ma3_sopra_ma10 > 0.01
                     
-                    and ma2_last >= ma2_2_min_ago
                     and macd_differenza_2_min_ago > -3
                 ):
-                    buy = "BUY 3 - NOTTE - RIVOLUZIONARIO con 3-20 se ma78 < ma200 + DNAM - r 6356 B2"
+                    buy = "BUY 3 - NOTTE - RIVOLUZIONARIO con 3-20 se ma78 < ma200 + DNAM - r 6356 B2x"
+                    action = "buy"
+                    percentage = 80
+
+                    #  3 mar 2025 aggiunta and ma450_last > ma450_480_min_ago
+
+
+
+                elif (
+                    ma3_last > ma18_last
+                    and (ma450_last < ma450_480_min_ago or ma450_last < ma450_720_min_ago)
+
+                    and deviation_ma200_sotto_ma300 < -1.40
+                    and ma100_last < ma450_last
+                    and ma39_last < ma100_last
+                    and deviation_ma39_di_adesso_diviso_ma39_di_120_min_ago < -0.75
+
+                    and deviation_ma25_sotto_ma300 < -2.30
+                    and deviation_ma50_sotto_ma300 < -2.20
+                    and deviation_ma100_sopra_ma300 < -2.00
+                    and deviation_ma300_sopra_ma450 < -0.80
+
+
+                    and delta_1 < delta_2
+
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.13
+
+
+                    and deviation_ma39 < -0.17
+                    and deviation_ma3_sotto_ma50 < -0.25
+
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.45
+                    and deviation_ma5_sotto_ma200 < -1.20
+                    and deviation_ma5_sotto_ma300 < -2.00
+                    and deviation_ma5_sotto_ma450 < -3.00
+
+                    and deviation_ma39 < -0.01
+                    and deviation_ma3_sotto_ma50 < -0.10
+                    and macd_differenza_2_min_ago > -2.50
+
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    
+                    and macd_differenza_2_min_ago > -3
+                ):
+                    buy = "BUY 3 - NOTTE - RIVOLUZIONARIO con 3-20 se ma78 < ma200 + DNAM - r 6356 B2y"
                     action = "buy"
                     percentage = 80
                     
@@ -20408,7 +20457,7 @@ class maddog:
                     #  5 nov 2024 + zia amalia
                     #  1 dic 2024 modificato DNAM
                     # 27 gen 2025 se NOTTE aggiunta and deviation_ma25_sotto_ma300 < -1.20
-
+                    #  3 mar 2025 aggiunta and (ma450_last < ma450_480_min_ago or ma450_last < ma450_720_min_ago)
 
                     
                     
