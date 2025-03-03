@@ -3020,10 +3020,12 @@ class maddog:
               
                     
                 # BUY 1 zona inferiore 1043 C
-                
+
                 elif (
                     
                     ma3_last > ma20_last
+                    and ma450_last > ma450_480_min_ago
+
 
                     and delta_1 < delta_2
                     and delta_1_200_78 < delta_2_200_78_60_min
@@ -3045,15 +3047,56 @@ class maddog:
                     and macd_differenza_2_min_ago > -2.50
               
                 ):
-                    buy = "BUY 1 con ma450_last < ma450_360_min_ago and delta_1 < delta_2 and delta_1_200_78 < delta_2_200_78_60_min - r 1043 C"
+                    buy = "BUY 1 con ma450_last < ma450_360_min_ago and delta_1 < delta_2 and delta_1_200_78 < delta_2_200_78_60_min - r 1043 C1"
                     action = "buy"
-                    percentage = 50
+                    percentage = 80
+
+                    #  3 mar 2025 aggiunta and ma450_last > ma450_480_min_ago
+
+
+                elif (
+                    
+                    ma3_last > ma20_last
+                    and (ma450_last < ma450_480_min_ago or ma450_last < ma450_720_min_ago)
+
+                    and deviation_ma200_sotto_ma300 < -1.40
+                    and ma100_last < ma450_last
+                    and ma39_last < ma100_last
+                    and deviation_ma39_di_adesso_diviso_ma39_di_120_min_ago < -0.75
+
+                    and deviation_ma25_sotto_ma300 < -2.30
+                    and deviation_ma50_sotto_ma300 < -2.20
+                    and deviation_ma100_sopra_ma300 < -2.00
+                    and deviation_ma300_sopra_ma450 < -0.80
+
+                    and delta_1 < delta_2
+
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.13
+
+                    and deviation_ma39 < -0.17
+                    and deviation_ma3_sotto_ma50 < -0.25
+
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.45
+                    and deviation_ma5_sotto_ma200 < -1.20
+                    and deviation_ma5_sotto_ma300 < -2.00
+                    and deviation_ma5_sotto_ma450 < -3.00
+
+                    and ma300_last < ma300_60_min_ago
+                    and ma200_last < ma200_60_min_ago
+                    
+                    and macd_differenza_2_min_ago > -2.50
+              
+                ):
+                    buy = "BUY 1 CONTINUA A SCENDERE DNA - r 1043 C2"
+                    action = "buy"
+                    percentage = 80
                     
                     # importante : ma100 sta sotto la ma200 non le e' troppo lontana
                     # 26 feb 2025 anticipato ndecchia
                     # 26 feb 2025 aggiunta and deviation_ma39 < -0.13
                     # 26 feb 2025 aggiunta and deviation_ma3_sotto_ma50 < -0.17
-
+                    #  3 mar 2025 aggiunta CONTINUA A SCENDERE DNA
 
                      
                 elif (    
