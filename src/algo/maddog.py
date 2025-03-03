@@ -14851,23 +14851,37 @@ class maddog:
                 
                 elif (
                     ma3_last > ma18_last
+                    and (ma450_last < ma450_480_min_ago or ma450_last < ma450_720_min_ago)
 
-                    and ma3_last > ma20_last
-                    and deviation_ma200_sotto_ma300 < -0.25
-                    and (ma300_last < ma300_60_min_ago or ma300_last < ma300_120_min_ago)
-                    and delta_1 > delta_2
+                    and deviation_ma200_sotto_ma300 < -1.40
+                    and ma100_last < ma450_last
+                    and ma39_last < ma100_last
+                    and deviation_ma39_di_adesso_diviso_ma39_di_120_min_ago < -0.75
 
-                    and deviation_ma39 < -0.10
-                    and deviation_ma3_sotto_ma50 < -0.07
+                    and deviation_ma25_sotto_ma300 < -2.30
+                    and deviation_ma50_sotto_ma300 < -2.20
+                    and deviation_ma100_sopra_ma300 < -2.00
+                    and deviation_ma300_sopra_ma450 < -0.80
 
-                    and ma78_last < ma200_last
+                    and delta_1 < delta_2
 
-                    and deviation_ma3_sopra_ma10 > 0.01
-                    and deviation_ma5_sopra_ma16 > -0.05
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.13
+
+                    and deviation_ma39 < -0.17
+                    and deviation_ma3_sotto_ma50 < -0.25
+
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.45
+                    and deviation_ma5_sotto_ma200 < -1.20
+                    and deviation_ma5_sotto_ma300 < -2.00
+                    and deviation_ma5_sotto_ma450 < -3.00
+
+                    and deviation_ma39 < -0.01
+                    and deviation_ma3_sotto_ma50 < -0.10
                     
                     and macd_differenza_2_min_ago > -2.50
                 ):
-                    buy = "BUY 2 con 3-18 comincia a scendere - r 5019 B"
+                    buy = "BUY 2 COMINCIA A SCENDERE DNA - r 5019 B"
                     action = "buy"
                     percentage = 50
                     
@@ -14877,6 +14891,13 @@ class maddog:
                     # 6 apr 2023 4-15 da 5-16
                     # 26 feb 2025 tolto ribasso audi ! aggiunta comincia a scendere !
                     #  2 mar 2025 aggiunto comincia a scendere con and deviation_ma200_sotto_ma300 < -0.25
+                    #  3 mar 2025 aggiunta COMINCIA A SCENDERE DNA
+
+
+
+
+
+
 
                     
                 elif (
@@ -22255,13 +22276,14 @@ class maddog:
 
 
                 # BUY 3 migliore che considera distanza 5-100
-                
+
                 elif (    
-                    ma3_last > ma28_last
+                    ma3_last > ma18_last
+                    and ma450_last > ma450_480_min_ago
+
                     and delta_1 < delta_2
                     and delta_300_200 < delta_300_200_30_min
                     and deviation_ma25_sotto_ma300 < -0.40
-
 
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.30
                     
@@ -22270,14 +22292,64 @@ class maddog:
                     
                     and deviation_ma3_sopra_ma10 > 0.01
                   
-                    and ma2_last >= ma2_2_min_ago
                     and macd >= macd_2_min_ago
                 ):
-                    buy = "BUY 3 GIORNO - GIORNO - che considera distanza 10-200 - r 6571 A"
+                    buy = "BUY 3 GIORNO - GIORNO - che considera distanza 10-200 - r 6571 A1"
                     action = "buy"
                     percentage = 80
                     
                     # importante : ma5 sta sotto la ma100 almeno di -0.30
+                    #  3 mar 2025 aggiunta and ma450_last > ma450_480_min_ago
+
+
+
+                elif (    
+                    ma3_last > ma18_last
+                    and (ma450_last < ma450_480_min_ago or ma450_last < ma450_720_min_ago)
+
+                    and deviation_ma200_sotto_ma300 < -1.40
+                    and ma100_last < ma450_last
+                    and ma39_last < ma100_last
+                    and deviation_ma39_di_adesso_diviso_ma39_di_120_min_ago < -0.75
+
+                    and deviation_ma25_sotto_ma300 < -2.30
+                    and deviation_ma50_sotto_ma300 < -2.20
+                    and deviation_ma100_sopra_ma300 < -2.00
+                    and deviation_ma300_sopra_ma450 < -0.80
+
+                    and delta_1 < delta_2
+
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.13
+
+                    and deviation_ma39 < -0.17
+                    and deviation_ma3_sotto_ma50 < -0.25
+
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.45
+                    and deviation_ma5_sotto_ma200 < -1.20
+                    and deviation_ma5_sotto_ma300 < -2.00
+                    and deviation_ma5_sotto_ma450 < -3.00
+
+                    and ma300_last < ma300_60_min_ago
+                    and delta_300_200 < delta_300_200_30_min
+
+                    and deviation_ma39 < -0.01
+                    and deviation_ma3_sotto_ma50 < -0.10
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+
+                    and macd_differenza_2_min_ago > -2.50
+                     
+                ):
+                    buy = "BUY 3 CONTINUA A SCENDERE DNA - r 6571 A2"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # importante : ma5 sta sotto la ma100 almeno di -0.30
+                    #  3 mar 2025 aggiunta CONTINUA A SCENDERE DNA
+
+
+
 
 
                 elif (    
