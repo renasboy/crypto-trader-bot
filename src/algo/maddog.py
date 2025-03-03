@@ -38,21 +38,65 @@ and macd_differenza_2_min_ago > -2.50
 
 
 
-CONTINUA A SCENDERE
+
+
+CONTINUA A SCENDERE 
+ho cambiato!  DEVE ESSERE GIORNO 200-100 e ho tolto 39 troppo vicina alla 100 (perche' puo' allontanarsi verso il basso e c'e' gia' il giorno !)
+al continua a scendere devo aggiungere osso
+tolta 3-39 !
+
 
 and ma3_last > ma18_last
+
+and (ma450_last < ma450_480_min_ago or ma450_last < ma450_720_min_ago)
+and deviation_ma200_sotto_ma300 < -1.40
 and ma100_last < ma450_last
+and ma39_last < ma100_last
 and deviation_ma39_di_adesso_diviso_ma39_di_120_min_ago < -0.75
-and deviation_ma300_sopra_ma450 < -0.22
-and delta_1 > delta_2
+
+and deviation_ma25_sotto_ma300 < -2.30
+and deviation_ma50_sotto_ma300 < -2.20
+and deviation_ma100_sopra_ma300 < -2.00
+and deviation_ma300_sopra_ma450 < -0.80
+
+
+and delta_1 < delta_2
+
 and ma100_last < ma100_10_min_ago
-and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.14
-and deviation_ma39_sotto_ma100 > -0.15
+and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.13
+
+
+and deviation_ma39 < -0.17
+and deviation_ma3_sotto_ma50 < -0.25
+
+and deviation_ma5_sopra_o_sotto_ma100 < -0.45
+and deviation_ma5_sotto_ma200 < -1.20
+and deviation_ma5_sotto_ma300 < -2.00
+and deviation_ma5_sotto_ma450 < -3.00
 
 and deviation_ma39 < -0.01
-and deviation_ma3_sotto_ma50 < -0.02
+and deviation_ma3_sotto_ma50 < -0.10
 and macd_differenza_2_min_ago > -2.50
 
+
+
+
+OSSO !
+
+and ma39_last < ma100_last
+and deviation_ma100_sopra_ma300 < -0.59
+and deviation_ma25_sotto_ma300 < -0.37
+
+and deviation_ma300_sopra_ma450 < -0.072
+and deviation_ma50_sotto_ma300 < -0.27
+
+and deviation_ma39 < -0.12
+and deviation_ma3_sotto_ma50 < -0.15
+
+and deviation_ma5_sopra_o_sotto_ma100 < -0.22
+and deviation_ma5_sotto_ma200 < -0.31
+and deviation_ma5_sotto_ma300 < -0.41
+and deviation_ma5_sotto_ma450 < -0.51
 
 
 
@@ -107,22 +151,7 @@ and macd_differenza_2_min_ago > -2.50
 
 
 
-OSSO !
 
-and ma39_last < ma100_last
-and deviation_ma100_sopra_ma300 < -0.59
-and deviation_ma25_sotto_ma300 < -0.37
-
-and deviation_ma300_sopra_ma450 < -0.072
-and deviation_ma50_sotto_ma300 < -0.27
-
-and deviation_ma39 < -0.12
-and deviation_ma3_sotto_ma50 < -0.15
-
-and deviation_ma5_sopra_o_sotto_ma100 < -0.22
-and deviation_ma5_sotto_ma200 < -0.31
-and deviation_ma5_sotto_ma300 < -0.41
-and deviation_ma5_sotto_ma450 < -0.51
 
 
 
@@ -17815,19 +17844,38 @@ class maddog:
                     # 10 nov 2024 aggiunta ZIA AMALIA 
                     # 10 nov 2024 ho tenuto and deviation_ma5_sotto_ma300 > -0.60 perche' non e' una condizione di crollo
                     # 10 nov 2024 durante il crollo intervengono altre condizioni
+
+
+
               
 
                 # BUY 2 crollo MISSILE COMPA ! modo 2
-                 
                 elif (    
                     ma3_last > ma4_last
+                    and (ma450_last > ma450_480_min_ago)
                     and ma78_last < ma300_last
                     and macd < -245
                 ):
-                    buy = "BUY 2 crollo MISSILE COMPA modo 2 con 3>4 AND MACD < -245 ! and ma78_last < ma300_last - AGOSTO 2023 - r 5985"
+                    buy = "BUY 2 crollo MISSILE COMPA modo 2 con 3>4 AND MACD < -245 ! and ma78_last < ma300_last - AGOSTO 2023 - r 5985 x"
                     action = "buy"
                     percentage = 80
 
+                    #  3 mar 2025 e' andata benissimo ! resta !
+                    #  3 mar 2025 aggiunta and (ma450_last > ma450_480_min_ago)
+
+                      
+                elif (    
+                    ma3_last > ma4_last
+                    and (ma450_last < ma450_480_min_ago or ma450_last < ma450_720_min_ago)
+                    and ma78_last < ma300_last
+                    and macd < -245
+                ):
+                    buy = "BUY 2 crollo MISSILE COMPA modo 2 con 3>4 AND MACD < -245 ! and ma78_last < ma300_last - AGOSTO 2023 - r 5985 y"
+                    action = "buy"
+                    percentage = 80
+
+                    #  3 mar 2025 e' andata benissimo ! resta !
+                    #  3 mar 2025 aggiunta and (ma450_last < ma450_480_min_ago or ma450_last < ma450_720_min_ago)
 
 
                 elif (    
