@@ -42774,7 +42774,7 @@ ma3_last > ma20_last
                         # non toccare ! INCROCIO 3-100 CUSCINO DI SANT' ANTONIO !
                     
                  
-                    # -------------------------------------------------------------------------------------- guadagno durante il crollo
+                    
 
 
                     elif (
@@ -42789,20 +42789,43 @@ ma3_last > ma20_last
 
                         #  3 feb 2025 se 300> 3 ore vende con 3-49 da 3-18
 
+                    # -------------------------------------------------------------------------------------- guadagno durante il crollo
 
                     elif (
                         ma50_last < ma50_2_min_ago
+
                         and ma300_last < ma300_180_min_ago
                         and (ma3_prev > ma18_prev and ma3_last < ma18_last)
                         and deviation_sell > 0.23
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 3 (21-60 min) eventuale guadagno durante il crollo con ma50< incrocio 3-18 and dev_sell > 0.23 - r 13831 y"
+                        sell = "SELL 3 (21-60 min) eventuale guadagno durante il crollo con ma50< incrocio 3-18 and dev_sell > 0.23 - r 13831 y1"
                         action = "sell"
 
 
                     
-                    # -------------------------------------------------------------------------------------------------------------------------- condizioni speciali importate
+                    elif (   
+                        ma450_last < ma450_360_min_ago
+                        and deviation_ma5_sotto_ma450 < -0.30
+                        and ma300_last < ma300_60_min_ago
+                        and ma200_last < ma200_60_min_ago
+                        
+                        and ma300_last < ma300_180_min_ago
+
+                        and (ma3_prev > ma7_prev and ma3_last < ma7_last)
+                        and deviation_sell > 0.70
+
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 3 (21-60 min) eventuale guadagno durante il crollo con incrocio 3-7 and dev_sell > 0.70 - r 13831 y2"
+                        action = "sell"
+
+                        #  9 mar 2025 aggiunta questa condizione che e' una specie di PMS
+                        #  9 mar 2025 tolta ma50_last < ma50_2_min_ago cazzo ! ma50 (gira molto tempo dopo in questa situazione di ribasso)
+
+
+                    
+                    # --------------------------------------------------------------------------------- condizioni speciali importate
                     
                     elif (
                         ma78_last < ma78_120_min_ago
