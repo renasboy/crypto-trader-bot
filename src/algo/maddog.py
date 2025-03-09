@@ -52603,7 +52603,7 @@ ma3_last > ma20_last
                 seconds_since_last_trade > max_hold_time_in_seconds
                 and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.14
                 and deviation_sell < -0.02
-                and ma3_last < ma50_last
+                and ma3_last < ma6_last
                 and ma5_last < ma39_last
                 
                 and ma200_last < ma200_120_min_ago
@@ -52642,7 +52642,10 @@ ma3_last > ma20_last
                 # 20 gen 2025 tolta and ma25_last <= ma25_2_min_ago
                 #  2 mar 2025 se deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.14 cioe' ma100 comincia a perdere di meno allora
                 #  2 mar 2025 aggiunta and deviation_sell < -0.02
-                #  9 mar 2025 aggiunto 3 < 50
+                #  9 mar 2025 aggiunto 3 < 6 (e' fondamentale !)
+
+
+
 
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
