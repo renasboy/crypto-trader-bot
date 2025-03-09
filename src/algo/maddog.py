@@ -2363,6 +2363,7 @@ class maddog:
                     percentage = 50
 
                 
+
                 elif (    
                     ma3_last > ma15_last
                   
@@ -16140,22 +16141,19 @@ class maddog:
                 # BUY 2 che ci riprova TORNANDO ALLE ORIGINI (TREND RIBASSO !) con ma200< and ma300< AND 5 molto sotto 300
                 
                 elif (
-                    deviation_buy2 > 0.07
-                    
-                    and deviation_ma100_sopra_ma300 < -0.20
-                    and deviation_ma5_sotto_ma300 < -0.70
-                    and deviation_ma5_sopra_ma28 > 0.19
-                    and deviation_bellissima > 0.145
-                    and ma8_last > ma8_2_min_ago
-                    and ma2_last > ma2_2_min_ago
-                    and ma3_last > ma7_last
-                    and ma3_last > ma13_last
-                    and deviation_buy_ma3_sopra_ma20 > 0.05
-                    and deviation_ma4_sopra_ma25 > 0.05
-                    
+                    ma3_last > ma13_last
+
                     and ma200_last < ma200_120_min_ago
                     and ma300_last < ma300_120_min_ago
-                    and macd >= macd_2_min_ago
+
+                    and delta_1 < delta_2
+
+                    and deviation_ma100_sopra_ma300 < -0.20
+                    and deviation_ma5_sotto_ma300 < -0.70
+                    
+                    and ma3_last > ma10_last
+                    
+                    and macd_differenza_2_min_ago > -2.50
                 ):
                
                     buy = "BUY 2 che ci riprova TORNANDO ALLE ORIGINI (TREND RIBASSO !) con ma200< and ma300< AND 5 molto sotto 300 - r 5531 B"
@@ -16170,6 +16168,9 @@ class maddog:
                     # 9 giu 2022 dev_bellissima a 0.15 da 0.16
                     
                     # > estate aumentato un po' il buy
+                    #  4 mar 2025 anticipato con aggiunta GIORNO !
+
+
               
                 
                 # BUY 2 con ma200> e ma300> DURANTE UNA piccola CORREZIONE che NON E' un forte ribasso e NON E' un crollo !  
@@ -52602,7 +52603,7 @@ ma3_last > ma20_last
                 seconds_since_last_trade > max_hold_time_in_seconds
                 and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.14
                 and deviation_sell < -0.02
-
+                and ma3_last < ma50_last
                 and ma5_last < ma39_last
                 
                 and ma200_last < ma200_120_min_ago
@@ -52625,7 +52626,7 @@ ma3_last > ma20_last
             
             ):
 
-                sell = "SELL CS - DOLCE ATTESA 270 sec and ma13< con 450< - r 16694 B2 Y2 BB Yx"
+                sell = "SELL CS - DOLCE ATTESA 270 sec and ma13 < con 450 < - r 16694 B2 Y2 BB Yx"
                 action = "sell"
                 
                 #  4 feb 2022 con <-0.26 ha fatto -0.88% (dopo +4.29%)
@@ -52641,7 +52642,7 @@ ma3_last > ma20_last
                 # 20 gen 2025 tolta and ma25_last <= ma25_2_min_ago
                 #  2 mar 2025 se deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.14 cioe' ma100 comincia a perdere di meno allora
                 #  2 mar 2025 aggiunta and deviation_sell < -0.02
-
+                #  9 mar 2025 aggiunto 3 < 50
 
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
