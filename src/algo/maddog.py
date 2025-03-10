@@ -6828,7 +6828,8 @@ class maddog:
 
                 elif (    
                     ma3_last > ma20_last
-                    
+                    and delta_1 < delta_2
+
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
                     and ma100_last < ma100_10_min_ago
 
@@ -6842,8 +6843,6 @@ class maddog:
                     and deviation_ma5_sotto_ma300 < -0.59
                     and deviation_ma5_sotto_ma450 < -0.30
 
-
-                    
                     and ma200_last < ma200_60_min_ago
                     and ma300_last < ma300_60_min_ago
                     and ma450_last < ma450_120_min_ago
@@ -6851,24 +6850,21 @@ class maddog:
                     
                     and deviation_ma50_sopra_o_sotto_ma100 < -0.01
                     
-                    
                     and deviation_ma3_sopra_ma10 > 0.017
                     and deviation_ma3_sopra_ma16 > -0.01
                     and deviation_ma3_sopra_ma18 > -0.03
 
-                    
-                    and ma2_last >= ma2_2_min_ago
-                    and macd_differenza_2_min_ago > -1.50
-                    and macd > -50
                     and ma2_last > ma5_last
+                    and macd_differenza_2_min_ago > -2.50
+                   
                 ):    
-                    buy = "BUY 1 CF - con 18> - r 1537 A3 Y1 X1 NUOVA ERA A3 SOFT che diventa strong"
+                    buy = "BUY 1 CF GIORNO - con 3-20 - r 1537 A3 Y1 X1 NUOVA ERA A3 SOFT che diventa strong"
                     action = "buy"
                     percentage = 90
 
                     #  4 ott 2024 modificata radicalmente prima di cancellare
                     # 15 nov 2024 soft diventa strong ma forse no (perche' non riesco a capire il segmento temporale giusto per prendere i dati)
-              
+                    # 10 mar 2025 aggiunto GIORNO
 
                 elif (    
                     ma3_last > ma20_last
@@ -16962,6 +16958,9 @@ class maddog:
 
                     #  6 ott 2024 aggiunto anche incrocio al rialzo 3-150
 
+
+
+
                 elif (
                     ma5_last >= ma5_2_min_ago
                     and ma450_last > ma450_120_min_ago
@@ -16985,6 +16984,9 @@ class maddog:
 
                     #  6 ott 2024 aggiunto anche incrocio al rialzo 3-150
                     #  6 gen 2025 3-200 al rialzo
+
+
+
 
                 elif (
                     ma5_last >= ma5_2_min_ago
