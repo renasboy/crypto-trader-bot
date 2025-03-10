@@ -1991,7 +1991,9 @@ class maddog:
 
                     and ma200_last > ma300_last
                     and ma450_last > ma450_360_min_ago
+
                     and delta_DNA_1 < delta_DNA_2
+                    and delta_1 < delta_2
 
                     and ma300_last > ma300_120_min_ago
                     
@@ -2002,14 +2004,14 @@ class maddog:
                     # and adx > -0.90
                 ):  
               
-                    buy = "BUY 1 con ma300_last > ma300_120_min_ago e 200>300 AND 3-10 > 0.01 - r 916 A2x"
+                    buy = "BUY 1 GIORNO con ma300_last > ma300_120_min_ago e 200>300 AND 3-10 > 0.01 - r 916 A2x"
                     action = "buy"
                     percentage = 90
 
                     # 11 nov 2024 prova adx
                     #  5 dic 2025 anticipata ndecchia
                     # 28 feb 2025 tolto 5>180
-
+                    # 10 mar 2025 aggiunto GIORNO
 
                 elif (
                     ma3_last > ma18_last
@@ -16965,17 +16967,16 @@ class maddog:
                     ma5_last >= ma5_2_min_ago
                     and ma450_last > ma450_120_min_ago
                     and ma200_last > ma200_60_min_ago
-                    
-                    and ma39_last < ma39_15_min_ago
+
                     and (ma3_prev < ma200_prev and ma3_last > ma200_last)
-                    
+
+                    and ma39_last < ma39_15_min_ago
                     and ma33_last < ma78_last
-               
+                    and delta_1 < delta_2
+
                     and ma3_last > ma13_last
                     
-                    and ma2_last >= ma2_2_min_ago
-                    
-                    and macd_differenza_2_min_ago > -1.25
+                    and macd_differenza_2_min_ago > -2.50
                 ):  
                 
                     buy = "BUY 2 incrocio al rialzo 3-200 con ma450 > 2 ore e ma200 che sale da 1 ora con 33<78 ! - r 5860 B4 B2"
@@ -16984,7 +16985,7 @@ class maddog:
 
                     #  6 ott 2024 aggiunto anche incrocio al rialzo 3-150
                     #  6 gen 2025 3-200 al rialzo
-
+                    # 10 mar 2025 se and ma33_last < ma78_last and ma39_last < ma39_15_min_ago ho aggiunto GIORNO invece di cancellare
 
 
 
