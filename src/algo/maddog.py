@@ -13588,10 +13588,7 @@ class maddog:
                     and deviation_ma3_sopra_ma16 > 0.07
                     and deviation_ma5_sopra_ma28 > -0.15
                     
-                    and ma2_last >= ma2_2_min_ago
-                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
-                    and macd > -30
-                    and macd_differenza_2_min_ago > 1.30
+                    and macd_differenza_2_min_ago > -2.50
                 ):
                     buy = "BUY 2 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND dev 4-18 and deviation_ma3_sopra_ma16 > 0.12 - r 4713 NUOVA ERA A3 SOFT"
                     action = "buy"
@@ -14613,10 +14610,7 @@ class maddog:
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.25
                     and deviation_ma5_sotto_ma200 < -0.20
                   
-                    and ma3_last > ma20_last
-                    
-                    and ma2_last >= ma2_2_min_ago
-                        
+                    and ma3_last > ma18_last
                     
                     and ma100_last < ma100_60_min_ago
                         
@@ -14627,7 +14621,7 @@ class maddog:
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
                     
-                    and macd > -50
+                    and macd_differenza_2_min_ago > -2.50
                 ):
                     buy = "BUY 2 ORIGINALE CHE CI RIPROVA IMPORTATO DA SELL 1 ! - NOTTE - prende il coltello con il piede + OSSO - r 4887"
                     action = "buy"
@@ -14638,7 +14632,7 @@ class maddog:
                     # 15 ott 2024 aggiunto osso (anche 5 sotto 200 ! e 25 sotto 300)
                     #  5 nov 2024 aggiunta zia amalia
                     # 27 gen 2025 se NOTTE and deviation_ma25_sotto_ma300 < -1.20 da < -0.70
-
+                    # 11 mar 2025 anticipata ndecchiecella togliendo ma2 > ma2 2 min ago e macd > -50
 
 
 
@@ -22138,11 +22132,16 @@ class maddog:
                 # BUY 3 secondo modo che ci riprova DURANTE IL CROLLO !
                 
                 elif (
-                    ma2_last > ma2_2_min_ago
+                    ma3_last > ma16_last
+
                     and deviation_buy_crollo_1 < -1.70
                     and deviation_buy_crollo_1 > -2.29
-                    and deviation_buy_crollo_2 > 0.11
-                    and deviation_ma5_sopra_ma28 > 0.03
+                    and deviation_buy_crollo_2 > 0.05
+
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma5_sopra_ma28 > -0.02
+                    
+                    and macd_differenza_2_min_ago > -2.50
                 ):
                     buy = "BUY 3 che ci riprova DURANTE IL CROLLO - modo 2 - r 6538"
                     action = "buy"
@@ -22150,7 +22149,7 @@ class maddog:
                     
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     # deviation_buy_crollo_2 = ma3_last / ma13_last
-                    
+                    # 11 mar 2025 anticipata ndecchiecella togliendo sovrastrutture
                     
                     
                 # BUY 3 che ci riprova DURANTE IL CROLLO - modo 3
@@ -22527,6 +22526,8 @@ class maddog:
                     # 26 dic 2023 and ma2_differenza_2_min_ago > 12 da 7 se BUY 3 con 10<20 e SOPRATTUTTO ma300_last < ma300_180_min_ago
                     # 13 gen 2024 aggiunto 2>5
                     # 16 set 2024 3-22 da 3-28
+
+
                 
                 elif (
                     
@@ -53263,7 +53264,7 @@ ma3_last > ma20_last
                 and ma100_last > ma100_301_min_ago
                 and deviation_ma10__diviso_ma10_5_ore_ago > 1.50
                 
-                and ma3_last < ma39_last
+                and ma3_last < ma49_last
                 and deviation_ma3_di_adesso_diviso_ma3_di_90_min_ago < 1.40
                 
                 and deviation_sell > 0.70
@@ -53273,12 +53274,14 @@ ma3_last > ma20_last
                 and macd < macd_2_min_ago
                 and macd_differenza_2_min_ago < -2
             ):    
-                sell = "SELL cond PMS da 0 a 120 min con ma100> 5 ore e 3-39 E con dev_sell 0.70 - 1.50 e macd <  - PRENDILI ! - r 16750 A1X"
+                sell = "SELL cond PMS da 0 a 120 min con ma100> 5 ore e 3-49 E con dev_sell 0.70 - 1.50 e macd <  - PRENDILI ! - r 16750 A1X"
                 action = "sell"
                 
                 # 24 ago 2023 and macd < -5
                 # 10 set 2024 AGGIUNTA and macd_differenza_2_min_ago < -2 AL POSTO DI MACD deve essere <-5
-                # 19 gen 2025 3-39 da 3-30 
+                # 19 gen 2025 3-39 da 3-30
+                # 11 mar 2025 3-49 da 3-39 ( ma100 cresce da 5 ore! - non e' SUBITO !)
+
             
             elif (
                 seconds_since_last_trade > 0 and seconds_since_last_trade < 7200
@@ -53329,7 +53332,7 @@ ma3_last > ma20_last
                 seconds_since_last_trade > 0 and seconds_since_last_trade < 3600
                 and deviation_ma10__diviso_ma10_5_ore_ago < 1.50
 
-                and ma3_last < ma28_last
+                and ma3_last < ma33_last
                 and ma100_last < ma200_last
 
                 and deviation_ma3_di_adesso_diviso_ma3_di_90_min_ago < 1.30
@@ -53341,7 +53344,7 @@ ma3_last > ma20_last
                 and macd < macd_2_min_ago
                 and ma2_differenza_2_min_ago < -3
             ):    
-                sell = "SELL PMS con 3-28 da 0 a 60 min se 100<200 E con dev_sell 0.70 - 1.05 and macd < - INTANTO TE LI PRENDI - r 16750 A2Xy"
+                sell = "SELL PMS con 3-33 da 0 a 60 min se 100<200 E con dev_sell 0.70 - 1.05 and macd < - INTANTO TE LI PRENDI - r 16750 A2Xy"
                 action = "sell"
                 
                 # pochi 0.80 - 1.20
@@ -53361,7 +53364,7 @@ ma3_last > ma20_last
                 #  7 lug 2023 3-28 da 3-13
                 # 10 ago 2023 aggiunta and ma2_differenza_2_min_ago < -3
                 # 20 nov 2023 and deviation_sell > 0.70 da > 0.75
-
+                # 11 mar 2025 3-33 da 3-28
           
             # 3
             
