@@ -23630,7 +23630,7 @@ class maddog:
 
                     and macd_differenza_2_min_ago > -2.50
                 ):
-                    buy = "BUY 3 con 100>300 and macd_differenza_2_min_ago > -2.50 - r 6599 A2x1"
+                    buy = "BUY 3 con 100>300 and macd_differenza_2_min_ago > -2.50 - r 6599 A2 x1"
                     action = "buy"
                     percentage = 70
 
@@ -47850,15 +47850,14 @@ class maddog:
                 # 18 feb 2025 se ma10_last > ma20_last sell a -0.021 da -0.017
 
 
-                
             elif (
-                ma50_last < ma50_2_min_ago
+                ma50_last > ma50_2_min_ago
                 and ma200_last > ma450_last
                 and ma28_last < ma100_last
                 and ma10_last > ma20_last
                 
                 and deviation_ma39 < 0.05
-                and deviation_sell < -0.002
+                and deviation_sell < 0.001
                 
                 and deviation_ma100_sopra_ma300 > 0.20
                 and delta_450_300 < delta_450_300_60_min
@@ -47869,18 +47868,53 @@ class maddog:
                 and deviation_ma10_sopra_o_sotto_ma10_30_min_ago < 0.10
                 and deviation_ma3_sotto_ma150 > -1.20
                 
-                
-                and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.02
                 and macd_differenza_2_min_ago < -0.5
                 and ma2_last < ma5_last
                 and price < ma3_last
             ):
-                sell = "SELL CS con dev 3-39 < 0.05 e dev sell < -0.001 con ma50< MA 200>450 e price < ma3 - r 15985 A1 ok 4y1aY"
+                sell = "SELL CS con dev 3-39 < 0.05 e dev sell < 0.001 con ma50< MA 200>450 e price < ma3 - r 15985 A1 ok 4y 1a Y1"
                 action = "sell"
                 
                 # 27 dic 2023 con 10>20 deviation_sell a 0.001 da 0.02
                 # 11 set 2024 deviation_sell < -0.001 da < 0.001
                 # 24 set 2024 and ma28_last > ma100_last
+                # 12 mar 2025 aggiunta opzione ma50_last > ma50_2_min_ago (ha fatto -0.60)
+                # 12 mar 2025 and deviation_sell < 0.001 da < -0.002 (ha fatto -0.60)
+
+
+
+
+            elif (
+                ma50_last < ma50_2_min_ago
+                and ma200_last > ma450_last
+                and ma28_last < ma100_last
+                and ma10_last > ma20_last
+                
+                and deviation_ma39 < 0.05
+                and deviation_sell < -0.001
+                
+                and deviation_ma100_sopra_ma300 > 0.20
+                and delta_450_300 < delta_450_300_60_min
+                
+                and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago < 1.50
+                and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago > -1.50
+                
+                and deviation_ma10_sopra_o_sotto_ma10_30_min_ago < 0.10
+                and deviation_ma3_sotto_ma150 > -1.20
+                
+                and macd_differenza_2_min_ago < -0.5
+                and ma2_last < ma5_last
+                and price < ma3_last
+            ):
+                sell = "SELL CS con dev 3-39 < 0.05 e dev sell < -0.001 con ma50< MA 200>450 e price < ma3 - r 15985 A1 ok 4y 1a Y2"
+                action = "sell"
+                
+                # 27 dic 2023 con 10>20 deviation_sell a 0.001 da 0.02
+                # 11 set 2024 deviation_sell < -0.001 da < 0.001
+                # 24 set 2024 and ma28_last > ma100_last
+                # 12 mar 2025 and deviation_sell < -0.001 da < -0.002
+
+
 
             elif (
                 ma50_last < ma50_2_min_ago
