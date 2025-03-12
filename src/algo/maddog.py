@@ -6,6 +6,14 @@
 """
 
 
+and ma450_last < ma450_480_min_ago
+and deviation_ma39_sotto_ma100 < -0.27
+and ma39_last < ma39_30_min_ago
+and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.025
+
+and deviation_ma39 < -0.03
+and deviation_ma3_sotto_ma50 < -0.03
+
 
 GIORNO e NOTTE !
 
@@ -27426,35 +27434,33 @@ ma3_last > ma20_last
                     percentage = 70
 
 
+
+
                 elif (    
                     ma3_last > ma20_last
 
+                    and ma450_last < ma450_480_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.025
                     and ma39_last < ma39_30_min_ago
+                    and deviation_ma39_sotto_ma100 < -0.27
+                    
                     and deviation_ma39 < -0.17
+                    and deviation_ma3_sotto_ma50 < -0.25
 
                     and ma450_last < ma450_120_min_ago
-                    and ma100_last > ma100_60_min_ago
                     and ma50_last < ma50_2_min_ago
                     
-                    and ma10_last > ma20_last
-                    and ma200_last > ma300_last
-
-                    
-                  
-                    and deviation_ma100_sopra_ma300 < 0.40
-                   
                     and deviation_ma3_sopra_ma10 > 0.01
                     
                     and ma2_last > ma5_last
                     and ma3_last > ma13_last
-                    
-                    and ma2_last >= ma2_2_min_ago
+                   
                     and macd_differenza_2_min_ago > -3.50
                     
                 ):
-                    buy = "BUY 5 CON ma450_last<ma450_120_min_ago E 200>300 E 100>200 MA 39<39 30 min ago + specie di osso - r 7144 A2 X1Aa 2"
+                    buy = "BUY 5 con ma450_last < ma450_480_min_ago e ma39 < ma39 30 min ago + specie di osso - r 7144 A2 X1 AA 2"
                     action = "buy"
-                    percentage = 70
+                    percentage = 80
 
 
 
@@ -29256,17 +29262,23 @@ ma3_last > ma20_last
 
                 elif (
                     ma3_last > ma8_last
+
                     and ma450_last < ma450_360_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.023
+                    and ma39_last < ma100_last
+                    
                     and deviation_ma300_sopra_ma450 < -0.22
-                  
+                    and deviation_ma25_sotto_ma300 < -1.00
+                    and deviation_ma5_sotto_ma200 < -1.50
+
                     and deviation_ma3_sopra_ma10 > 0.01
                     and deviation_ma5_sopra_ma28 > -0.12
 
-                    and deviation_ma39 < -0.02
+                    and deviation_ma39 < -0.01
                     and deviation_ma3_sotto_ma50 < -0.03
-                    and deviation_ma25_sotto_ma300 < -0.15
+                    
 
-                    and macd > -70
+                    and macd_differenza_2_min_ago > -2.50
 
                 ):   
                     buy = "BUY 5 con ma450_last < ma450_360_min_ago con deviation_ma300_sopra_ma450 < -0.22 - r 7410 A1 y2"
@@ -29278,6 +29290,8 @@ ma3_last > ma20_last
                     # 22 feb 2025 se notte aggiunte 3-39 e 3-50
                     # 22 feb 2025 and deviation_ma300_sopra_ma450 < -0.22 significa che deve restare dentro i limiti.
 
+                    # 12 mar 2025 aggiunta and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.023
+                    # 12 mar 2025 aggiunta and macd_differenza_2_min_ago > -2.50
 
 
 
