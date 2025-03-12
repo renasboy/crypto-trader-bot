@@ -8185,28 +8185,25 @@ class maddog:
                     #  5 feb 2025 aggiunta questa - niente di speciale
 
 
-
                 elif (    
                     ma3_last > ma16_last
-
-                    and ma3_last > ma20_last
+                    and ma450_last > ma450_720_min_ago
                     and deviation_ma200_sotto_ma300 < -0.25
+
+                    
+                    and ma450_last < ma450_90_min_ago
                     and (ma300_last < ma300_60_min_ago or ma300_last < ma300_120_min_ago)
                     and delta_1 > delta_2
 
                     and deviation_ma39 < -0.03
                     and deviation_ma3_sotto_ma50 < -0.03
 
-                    
-                    and ma450_last < ma450_90_min_ago
-                    
                     and delta_300_225 < delta_300_225_60_min
-                   
-                    and deviation_ma3_sopra_ma7 > 0.01
                     
+                    and ma3_last > ma7_last
                     and macd_differenza_2_min_ago > -2.50
                 ):
-                    buy = "BUY 1 comincia a scendere e con 3>16 e DOPPIO DELTA 300-225 GIORNO ! - r 2065 BY"
+                    buy = "BUY 1 COMINCIA A SCENDERE e con 3>16 e DOPPIO DELTA 300-225 GIORNO ! - r 2065 BY 1"
                     action = "buy"
                     percentage = 80
                     
@@ -8217,7 +8214,57 @@ class maddog:
                     # 17 feb 2025 aggiunta and deviation_ma39 < -0.01
                     # 17 feb 2025 aggiunta and deviation_ma3_sotto_ma50 < -0.04
                     #  2 mar 2025 aggiunta COMINCIA A SCENDERE !
+                    # 12 mar 2025 se ma450_last > ma450_720_min_ago e deviation_ma200_sotto_ma300 < -0.25 COMINCIA A SCENDERE  
+
+                elif (    
+                    ma3_last > ma16_last
+
+                    and ma450_last < ma450_720_min_ago
+                    and ma450_last < ma450_90_min_ago
                     
+                    and deviation_ma200_sotto_ma300 < -1.40
+                    and ma100_last < ma450_last
+                    and ma39_last < ma100_last
+                    and deviation_ma39_di_adesso_diviso_ma39_di_120_min_ago < -0.75
+
+                    and deviation_ma25_sotto_ma300 < -2.30
+                    and deviation_ma50_sotto_ma300 < -2.20
+                    and deviation_ma100_sopra_ma300 < -2.00
+                    and deviation_ma300_sopra_ma450 < -0.80
+
+                    and delta_1 < delta_2
+
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.13
+
+
+                    and deviation_ma39 < -0.17
+                    and deviation_ma3_sotto_ma50 < -0.25
+
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.45
+                    and deviation_ma5_sotto_ma200 < -1.20
+                    and deviation_ma5_sotto_ma300 < -2.00
+                    and deviation_ma5_sotto_ma450 < -3.00
+
+                    and deviation_ma39 < -0.01
+                    and deviation_ma3_sotto_ma50 < -0.10
+
+                    and deviation_ma3_sopra_ma7 > 0.01
+                    and macd_differenza_2_min_ago > -2.50
+                   
+                ):
+                    buy = "BUY 1 CONTINUA A SCENDERE - r 2065 BY 2"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # > estate anticipato buy di una ndecchia
+                    #  3 lug 2023 tolto dev bellissima
+                    #  3 lug 2023 tolto ma100_last > ma150_last
+                    #  5 feb 2025 aggiunta questa - niente di speciale
+                    # 17 feb 2025 aggiunta and deviation_ma39 < -0.01
+                    # 17 feb 2025 aggiunta and deviation_ma3_sotto_ma50 < -0.04
+                    #  2 mar 2025 aggiunta COMINCIA A SCENDERE !
+                    # 12 mar 2025 se ma 450 < 450 720 min ago e' un CONTINUA A SCENDERE !
                     
                     
                     
@@ -14611,6 +14658,9 @@ class maddog:
                 elif (
                     ma50_last < ma50_2_min_ago
 
+                    and ma450_last < ma450_480_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.023
+
                     and delta_1 > delta_2
                     and deviation_ma25_sotto_ma300 < -1.20
                     and deviation_ma50_sopra_o_sotto_ma300 < -0.70
@@ -14641,7 +14691,7 @@ class maddog:
                     #  5 nov 2024 aggiunta zia amalia
                     # 27 gen 2025 se NOTTE and deviation_ma25_sotto_ma300 < -1.20 da < -0.70
                     # 11 mar 2025 anticipata ndecchiecella togliendo ma2 > ma2 2 min ago e macd > -50
-
+                    # 12 mar 2025 se ma450_last < ma450_480_min_ago allora and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.023
 
 
 
@@ -20205,11 +20255,13 @@ class maddog:
                 elif (     
                     ma3_last > ma18_last
 
+                    and ma300_last < ma300_301_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.025
+
                     and ma3_last > ma20_last
                     and deviation_ma200_sotto_ma300 < -0.27
                     and (ma300_last < ma300_60_min_ago or ma300_last < ma300_120_min_ago)
                     and delta_1 > delta_2
-
                     
                     and deviation_callas < -0.10
 
@@ -20226,7 +20278,7 @@ class maddog:
 
                     and ma100_last < ma200_last
                     and ma200_last < ma200_120_min_ago
-                    and ma300_last < ma300_301_min_ago
+                    
 
                     and deviation_ma3_sopra_ma10 > 0.01
                     
@@ -20250,6 +20302,8 @@ class maddog:
                     # 20 apr 2023 5-28 a 0.03 da 0.07
                     #  2 mar 2025 aggiunta comincia a scendere
                     #  2 mar 2025 ATTENZIONE ! ho tolto 3-39 e 3-50 perche' essendo BUY 3 la ma3 e' gia' sopra alla ma39 e alla ma50 !
+                    # 12 mar 2025 se BUY 3 con ma300_last < ma300_301_min_ago allora  aggiungo and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.025
+
 
                 # 10 set 2024 CANCELLATA r 6260 a
 
@@ -23562,11 +23616,11 @@ class maddog:
                 # BUY 3 con ma69 > and deviation_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali) IMPORTATA DA BUY 4 RCCR
 
                 elif (
-                    ma3_last > ma20_last
+                    ma3_last > ma18_last
                     and ma100_last > ma300_last
 
                     and ma300_last < ma300_301_min_ago
-                    and deviation_ma50_sopra_o_sotto_ma50_90_min_ago > -0.015
+                    and deviation_ma50_sopra_o_sotto_ma50_90_min_ago > -0.017
                     
                     and deviation_ma3_sopra_ma10 > 0.01
                     and deviation_ma5_sopra_ma28 > -0.03
@@ -23574,16 +23628,15 @@ class maddog:
                     and deviation_ma39 < -0.015
                     and deviation_ma3_sotto_ma50 < -0.015
 
-                    and macd > -70
                     and macd_differenza_2_min_ago > -2.50
                 ):
-                    buy = "BUY 3 con 100>300 E CON i minimi che crescono and macd_differenza_2_min_ago > -2.50 - r 6599 A2x1"
+                    buy = "BUY 3 con 100>300 and macd_differenza_2_min_ago > -2.50 - r 6599 A2x1"
                     action = "buy"
                     percentage = 70
 
                     #  8 ott 2024 se i minimi crescono allora anticipo ndecchia !
                     # 22 feb 2025 anticipata ndecchiecella
-
+                    # 12 mar 2012 anticipata ndecchiecella
 
                 elif (
                     
@@ -25778,9 +25831,15 @@ class maddog:
                 # BUY 4 29 ago 2022 > 180 min di ribasso
                 
                 
-                elif (    
+                elif (
                     ma3_last > ma20_last
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.30
+
+                    and ma450_last < ma450_480_min_ago
+                    
+                    and ma39_last < ma39_30_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.025
+
                     
                     and ma100_last < ma100_180_min_ago
                     and ma200_last < ma200_180_min_ago
@@ -25804,6 +25863,7 @@ class maddog:
                     # 10 set 2024 and macd_differenza_2_min_ago > -2 
                     # 10 set 2024 significa che la differenza del MACD di adesso E del MACD di 2 min ago NON E' TANTA cioe' STA SMETTENDO DI CROLLARE
                     #  3 mar 2025 tolta ma2 > ma2 2 min ago e me la tengo
+                    # 12 mar 2025 se e' BUY 4 deve essere almeno and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.025
 
               
                 # BUY 4 29 ago 2022 > 180 min di ribasso
@@ -26205,12 +26265,10 @@ class maddog:
                     and ma25_last > ma300_last
                     and ma100_last > ma200_last
                     
-                    and deviation_ma3_sopra_ma28 > -0.12
-                    
                     and ma3_last > ma13_last
-                    
-                    and macd > -70
-                    
+
+                    and macd_differenza_2_min_ago > -2.50
+                  
                 ):
                     buy = "BUY 4 con con 100>100 120 min ago E doppio delta GIORNO e 25>300 (non spezzo la catena !) - r 7065 A1x"
                     action = "buy"
@@ -26219,12 +26277,12 @@ class maddog:
                     # 14 ott 2024 se 100> 100 60 min ago ok cosi'
                     # 20 gen 2025 anticipata ndecchiecella
                     # 16 feb 2025 macd a -70 da -60
-
+                    # 12 mar 2025 and macd_differenza_2_min_ago > -2.50 invece di macd > -70
 
 
 
                 elif (
-ma3_last > ma20_last
+                    ma3_last > ma20_last
                     and ma100_last < ma100_120_min_ago
                     
                     and deviation_ma25_sotto_ma300 < -0.15
