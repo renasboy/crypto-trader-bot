@@ -1881,7 +1881,7 @@ class maddog:
 
 
 
-        if deviation_ma200_sotto_ma300 < -0.06 or deviation_ma200_sotto_ma300 > -0.01:
+        if deviation_ma200_sotto_ma300 < -0.06 and ma39_last < ma100_last or deviation_ma200_sotto_ma300 > -0.01:
 
 
         # 22 mar 2025 NUOVA APERTURA GABBIA
