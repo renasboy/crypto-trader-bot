@@ -1858,31 +1858,23 @@ class maddog:
         
         # if deviation_1_gabbia > -0.27 or deviation_buy_crollo_1 < -1.51 or deviation_buy_crollo_1 > -1.50 and deviation_buy_crollo_1 < -0.60 or deviation_buy_crollo_1 > -0.59 and deviation_buy_crollo_1 < -0.27:
 
-
-
-
         # if ((deviation_ma300_sopra_ma450 > -0.01 and deviation_ma300_sopra_ma450 < -0.20) and delta_1 > delta_2) or ((deviation_ma300_sopra_ma450 > -0.20 and deviation_ma300_sopra_ma450 < -0.20) and delta_1 < delta_2):
         # QUESTA HA FATTO BLOCCARE IL SISTEMA !
 
-
-
-
         # if (deviation_ma300_sopra_ma450 > -0.01 and deviation_ma300_sopra_ma450 < -0.20 and delta_1 > delta_2) or (deviation_ma300_sopra_ma450 >= -0.20 and deviation_ma300_sopra_ma450 < -0.20 and delta_1 < delta_2):
-
-
-
-
-
-
-
 
 
         #if deviation_1_gabbia > -0.27 or deviation_buy_crollo_1 < -1.51 or deviation_buy_crollo_1 > -1.50 and deviation_buy_crollo_1 < -0.60 or deviation_buy_crollo_1 > -0.59 and deviation_buy_crollo_1 < -0.27:
 
 
 
-        if deviation_ma200_sotto_ma300 < -0.06 and ma39_last < ma100_last or deviation_ma200_sotto_ma300 > -0.01:
 
+
+
+        if deviation_ma200_sotto_ma300 < -0.06 or deviation_ma200_sotto_ma300 > -0.01:
+
+        # if (ma39_last < ma100_last and (deviation_ma200_sotto_ma300 < -0.06 or deviation_ma200_sotto_ma300 > -0.01)) or (ma39_last > ma100_last and (deviation_ma200_sotto_ma300 < -0.01 or deviation_ma200_sotto_ma300 > -0.01)):
+        
 
         # 22 mar 2025 NUOVA APERTURA GABBIA
         # oggi che santo e' ? santa LEA.
