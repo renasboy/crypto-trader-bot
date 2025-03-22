@@ -1871,7 +1871,19 @@ class maddog:
 
 
 
+
+
+
+
+        # questo FUNZIONA !
+
         if deviation_ma200_sotto_ma300 < -0.06 or deviation_ma200_sotto_ma300 > -0.01:
+
+
+
+
+
+
 
 
         # POSSO SCRIVERE QUESTO ? chiedi al compa
@@ -1880,28 +1892,9 @@ class maddog:
 
 
 
-        # POSSO SCRIVERE QUESTO ? chiedi al compa
-
-      # if (
-      #     ma39_last < ma100_last 
-      #     and (deviation_ma200_sotto_ma300 < -0.06 or deviation_ma200_sotto_ma300 > -0.01)
-      # ):
-
-      # elif (
-      #     ma39_last > ma100_last 
-      #     and (deviation_ma200_sotto_ma300 < -0.01 or deviation_ma200_sotto_ma300 > -0.01)
-      # ):
 
 
-
-        # 22 mar 2025 NUOVA APERTURA GABBIA
-        # oggi che santo e' ? santa LEA.
-        # e SANTO COMPARE ! 
-
-
-
-
-
+        # POSSO SCRIVERE QUESTO ? chiedi al compa - FACCIO UNA PROVA ! ma mi da errore !
 
 
 
