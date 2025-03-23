@@ -3851,7 +3851,6 @@ class maddog:
                     and deviation_ma3_sopra_ma10 > 0.01
                     and deviation_ma3_sopra_ma16 > -0.02
                     
-                    and macd > -70
                     and macd_differenza_2_min_ago > -2.50
                    
                 ):  
@@ -24069,36 +24068,79 @@ class maddog:
                     # 21 ott 2023 and macd > macd_2_min_ago
 
                 
+
                 elif (
-                    ma59_last >= ma59_2_min_ago
-                    and ma2_differenza_2_min_ago > 5
-                    and delta_450_300 < delta_450_300_60_min
+                    ma3_last > ma13_last
+
                     and ma300_last > ma300_301_min_ago
                     and ma100_last > ma200_last
-                    
-                    and ma10_last > ma100_last
-                    
-                    and deviation_ma5_sopra_ma28 > 0.05
+
+                    and delta_1 < delta_2
                     
                     
-                    and ma3_last > ma13_last
-                    
-                    and ma4_last > ma9_last
-                    and ma4_last > ma50_last
-                    and ma7_last > ma25_last
+                    and ma3_last > ma9_last
                     
                     and macd_differenza_2_min_ago > -2.50
                 ):
-                    buy = "BUY 4A GIORNO con ma 78> e 300> E ma100>ma200 and ma2_differenza_2_min_ago > 5 - r 6668 A1y"
+                    buy = "BUY 4 GIORNO con 300> E ma100>ma200 - r 6668 A1 Y1 X"
                     action = "buy"
                     percentage = 70
                     
                     # 21 ott 2023 and macd < macd_2_min_ago - SE MACD DISCENDENTE IL BUY LO FACCIO PIU' ALTO ! - C'E' MA NON SI VEDE
                     # 15 nov 2022 aggiunta and ma2_differenza_2_min_ago > 5 ( ma2 > ma2 min non l' ha letta !) ( allora metto un rafforzativo )
+                    # 23 mar 2025 aggiunta and delta_1 < delta_2
+
+
+                elif (
+                    ma3_last > ma13_last
+
+                    and ma300_last > ma300_301_min_ago
+                    and ma100_last > ma200_last
+
+                    and delta_1 > delta_2
+                    and deviation_ma3_sotto_ma50 < -0.04
                     
+                    and ma3_last > ma9_last
+                    
+                    and macd_differenza_2_min_ago > -2.50
+                ):
+                    buy = "BUY 4 NOTTE con 300> E ma100>ma200 - r 6668 A1 Y1 Y"
+                    action = "buy"
+                    percentage = 70
+                    
+                    # 21 ott 2023 and macd < macd_2_min_ago - SE MACD DISCENDENTE IL BUY LO FACCIO PIU' ALTO ! - C'E' MA NON SI VEDE
+                    # 15 nov 2022 aggiunta and ma2_differenza_2_min_ago > 5 ( ma2 > ma2 min non l' ha letta !) ( allora metto un rafforzativo )
+                    # 23 mar 2025 aggiunta se delta_1 > delta_2 allora deviation_ma3_sotto_ma50 < -0.04
+
+
                 
 
-              
+                elif (
+                    ma3_last > ma13_last
+
+                    and ma300_last > ma300_301_min_ago
+                    and ma100_last > ma200_last
+                    
+                    and delta_450_300 < delta_450_300_60_min
+
+                    and deviation_ma3_sotto_ma50 < -0.04
+
+                    and ma3_last > ma9_last
+                    
+                    and macd_differenza_2_min_ago > -2.50
+                ):
+                    buy = "BUY 4 GIORNO con 300> E ma100>ma200 - r 6668 A1 Y2"
+                    action = "buy"
+                    percentage = 70
+                    
+                    # 21 ott 2023 and macd < macd_2_min_ago - SE MACD DISCENDENTE IL BUY LO FACCIO PIU' ALTO ! - C'E' MA NON SI VEDE
+                    # 15 nov 2022 aggiunta and ma2_differenza_2_min_ago > 5 ( ma2 > ma2 min non l' ha letta !) ( allora metto un rafforzativo )
+                    # 23 mar 2025 aggiunta and deviation_ma3_sotto_ma50 < -0.04
+                
+
+                
+
+
                 elif (
                     ma3_last > ma13_last
                     
