@@ -29451,27 +29451,58 @@ class maddog:
                 
                 
 
+
                 elif (
                     ma200_last >= ma200_120_min_ago
-                    and ma300_last >= ma300_60_min_ago
                     and ma300_last > ma450_last
-
+                    and ma300_last >= ma300_60_min_ago
+                    
                     and delta_1 < delta_2
-                  
+
+                    and deviation_ma3_sotto_ma50 < -0.03
+
                     and deviation_ma3_sopra_ma10 > 0.01
-                    and deviation_ma5_sopra_ma28 > -0.12
                     
                     and ma3_last > ma8_last
                    
-                    and macd > -70
-
+                    and macd_differenza_2_min_ago > -2.50
                 ):   
-                    buy = "BUY 5 che NON SPEZZA LA CATENA - GIORNO - SE ma200> 120 min con 3-10 > 0.01 e 5-28 > -0.10 - r 7410 A1 x"
+                    buy = "BUY 5 che NON SPEZZA LA CATENA - GIORNO - SE ma200> 120 min con 3-50 < -0.03 - r 7410 A1 X1"
                     action = "buy"
                     percentage = 70
 
                     # 22 feb 2025 aggiunta and ma300_last > ma450_last
                     # 22 feb 2025 and delta_1 < delta_2
+                    # 23 mar 2025 and deviation_ma3_sotto_ma50 < -0.03
+
+
+
+                elif (
+                    ma200_last >= ma200_120_min_ago
+                    and ma300_last > ma450_last
+                    and ma300_last >= ma300_60_min_ago
+                   
+                    and delta_1 > delta_2
+
+                    and deviation_ma3_sotto_ma50 < -0.06
+
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    
+                    and ma3_last > ma8_last
+                   
+                    and macd_differenza_2_min_ago > -2.50
+                ):   
+                    buy = "BUY 5 che NON SPEZZA LA CATENA - NOTTE - SE ma200> 120 min con 3-50 < -0.06 - r 7410 A1 X2"
+                    action = "buy"
+                    percentage = 70
+
+                    # 22 feb 2025 aggiunta and ma300_last > ma450_last
+                    # 22 feb 2025 and delta_1 < delta_2
+                    # 23 mar 2025 and deviation_ma3_sotto_ma50 < -0.06
+
+
+
+
 
 
 
