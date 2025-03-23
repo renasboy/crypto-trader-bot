@@ -3832,15 +3832,16 @@ class maddog:
                   
                 elif (    
                     ma3_last > ma13_last
+                    and deviation_ma200_sotto_ma300 > -0.01
+
+                    and ma100_last > ma100_120_min_ago
+                    and ma300_last > ma300_180_min_ago
 
                     and deviation_ma39 < -0.05
                     and deviation_ma3_sotto_ma50 < -0.09
                     
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
                     and deviation_ma5_sopra_o_sotto_ma100 > -0.50
-                    
-                    and ma100_last > ma100_120_min_ago
-                    and ma300_last > ma300_180_min_ago
                     
                     and deviation_ma300_sopra_ma450 < 0.18
                     and deviation_ma300_sopra_ma450 > -0.18
@@ -3855,7 +3856,7 @@ class maddog:
                    
                 ):  
                     
-                    buy = "BUY 1 TREND LAT con ma300 > 3 ore e 3-10 > 0.01 e macd > -70 - r 1205 AX NUOVA ERA A3 SOFT x"
+                    buy = "BUY 1 TREND LAT con ma300 > 3 ore e 3-10 > 0.01 e macd_differenza_2_min_ago > -2.50 - r 1205 AX NUOVA ERA A3 SOFT x"
                     action = "buy"
                     percentage = 70
 
@@ -3864,7 +3865,8 @@ class maddog:
                     # 17 feb 2025 and macd > -70 da -20
                     # 17 feb 2025 aggiunta and deviation_ma39 < -0.05
                     # 17 feb 2025 aggiunta and deviation_ma3_sotto_ma50 < -0.09
-
+                    # 23 mar 2025 anticipata ndecchiecella
+                    # 23 mar 2025 per adesso la tengo
 
                 elif (    
                     ma3_last > ma13_last
