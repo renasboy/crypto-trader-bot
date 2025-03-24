@@ -47285,24 +47285,72 @@ class maddog:
                         action = "sell"
                         
                         # 29 ott 2022 4-125 da 4-20 con 5-300 > 0.40
-                        
-                        
+
+
                         
                     elif (
                         ma50_last > ma50_2_min_ago
+
+                        and ma450_last > ma450_720_min_ago
+                        and deviation_ma39 > 0.40
+
                         and deviation_ma5_sotto_ma300 < 0.40
-                        and ma4_last < ma49_last
+                        and ma3_last < ma13_last
                         and deviation_sell > 0.57 and deviation_sell < 0.90
                         
                         and ma2_last < ma2_2_min_ago
                         and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.018
                         and macd_differenza_2_min_ago < -1.25
                     ):
-                        sell = "SELL 4-5-x >90 min con ma50 > con 4 < 49 and deviation_sell 0.35 - 0.90 FINTA ALLA RONALDO and dev ma2 and diff macd - r 15839 B"
+                        sell = "SELL 4-5-x >90 min con ma50> con 4<49 and dev_sell 0.35 - 0.90 FINTA ALLA RONALDO - r 15839 B1 x"
                         action = "sell"
                         
                         # 12 apr 2023 4-49 da 4-20
+                        # 24 mar 2025 se 450 sale da 720 min e dev 3-39 si impenna vendi con 3-13
                         
+
+                            
+                    elif (
+                        ma50_last > ma50_2_min_ago
+
+                        and ma450_last > ma450_720_min_ago
+                        and deviation_ma39 < 0.40
+
+                        and deviation_ma5_sotto_ma300 < 0.40
+                        and ma5_last < ma59_last
+                        and deviation_sell > 0.57 and deviation_sell < 0.90
+                        
+                        and ma2_last < ma2_2_min_ago
+                        and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.018
+                        and macd_differenza_2_min_ago < -1.25
+                    ):
+                        sell = "SELL 4-5-x >90 min con ma50> con 5<59 and dev_sell 0.35 - 0.90 FINTA ALLA RONALDO - r 15839 B1 y"
+                        action = "sell"
+                        
+                        # 12 apr 2023 4-49 da 4-20
+                        # 24 mar 2025 se 450 sale da 720 min e dev 3-39 non se ngricca allora lascia correre
+                        # 24 mar 2025 dev sell a 5-59 da 4-49
+
+
+                    
+                    elif (
+                        ma50_last > ma50_2_min_ago
+
+                        and ma450_last < ma450_720_min_ago
+
+                        and deviation_ma5_sotto_ma300 < 0.40
+                        and ma5_last < ma49_last
+                        and deviation_sell > 0.57 and deviation_sell < 0.90
+                        
+                        and ma2_last < ma2_2_min_ago
+                        and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.018
+                        and macd_differenza_2_min_ago < -1.25
+                    ):
+                        sell = "SELL 4-5-x >90 min con ma50> con 5<49 and dev_sell 0.35 - 0.90 FINTA ALLA RONALDO - r 15839 B2"
+                        action = "sell"
+                        
+                        # 12 apr 2023 4-49 da 4-20
+                        # 24 mar 2025 5-49 da 4-49
                         
                         
                     
@@ -53874,7 +53922,7 @@ class maddog:
                 and macd < macd_2_min_ago
                 and macd_differenza_2_min_ago < -0.75
             ):    
-                sell = "SELL PMS ma non troppo (60-120 min) con 3-39 E dev_sell 0.75 - 1.05 e macd < - INTANTO TE LI PRENDI - r 16750 A2y"
+                sell = "SELL PMS ma non troppo (60-120 min) con 3-39 E dev_sell 0.75 - 1.05 e macd < - INTANTO TE LI PRENDI - r 16750 A2 Y"
                 action = "sell"
 
                 #  9 set 2024 aggiunta diff macd < -0.75
