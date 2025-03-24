@@ -24093,6 +24093,7 @@ class maddog:
                     # 23 mar 2025 aggiunta and delta_1 < delta_2
                     # 24 mar and macd_differenza_2_min_ago > -5.00 da -2.50
                 
+                
 
                 elif (
                     ma3_last > ma13_last
@@ -28027,7 +28028,30 @@ class maddog:
 
               
                     
+                elif (
+                    ma3_last > ma13_last
+
+                    and ma300_last > ma300_301_min_ago
+                    and ma100_last > ma200_last
+
+                    and delta_1 > delta_2
+                    and deviation_ma3_sotto_ma50 < -0.01
                     
+                    and ma3_last > ma9_last
+                    
+                    and macd_differenza_2_min_ago > -2.50
+                ):
+                    buy = "BUY 5 NOTTE con 300> E ma100>ma200 - r 7150"
+                    action = "buy"
+                    percentage = 70
+                    
+                    # 21 ott 2023 and macd < macd_2_min_ago - SE MACD DISCENDENTE IL BUY LO FACCIO PIU' ALTO ! - C'E' MA NON SI VEDE
+                    # 15 nov 2022 aggiunta and ma2_differenza_2_min_ago > 5 ( ma2 > ma2 min non l' ha letta !) ( allora metto un rafforzativo )
+                    # 23 mar 2025 aggiunta se delta_1 > delta_2 allora deviation_ma3_sotto_ma50 < -0.04
+                    # 24 mar 2025 aggiunta questa ! ma300 sale da 6 ore ! e ma100 > ma200 !
+                    
+
+
                 elif (
                     ma78_last < ma150_last
                     and ma5_last > ma200_last
