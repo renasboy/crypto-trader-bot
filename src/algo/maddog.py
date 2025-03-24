@@ -23041,7 +23041,7 @@ class maddog:
                     and ma450_last > ma450_480_min_ago
                     and ma300_last > ma450_last
                     
-                    and deviation_ma3_sotto_ma50 < -0.15
+                    and deviation_ma3_sotto_ma50 < -0.07
                     
                     and deviation_ma250_sopra_ma300 < 0.16
                     and deviation_ma250_sopra_ma300 > -0.16
@@ -23064,6 +23064,8 @@ class maddog:
                     # 24 mar 2025 tolta and ma100_last > ma100_60_min_ago
                     # 24 mar 2025 aggiunta and deviation_ma3_sotto_ma50 < -0.15
                     # 24 mar 2025 macd diff > -5.00 da > -2.50
+
+
                 
                 # 24 nov 2024 cancellata r 6574 a1xy
                 
