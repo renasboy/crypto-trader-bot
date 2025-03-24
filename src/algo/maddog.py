@@ -47728,24 +47728,51 @@ class maddog:
                     ################################################################################### CONDIZIONI SPECIALI IMPORTATE RIDOTTE
 
                     elif (
-                        deviation_sell > 0.80
+                        ma5_last < ma69_last
                         and ma300_last > ma450_last
+                        and deviation_ma200_sotto_ma300 > 0.10
 
+                        and deviation_sell > 0.80
+                        
                         and ma39_last > ma39_15_min_ago
                         and ma5_last < ma5_12_min_ago
                         
-                        and ma3_last < ma49_last
-                
                         and ma2_last < ma2_2_min_ago
                         and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.018
                         and macd < macd_2_min_ago
                         and macd_differenza_2_min_ago < -1.50
                     ):    
-                        sell = "SELL 4-5-x (>90 min) C.S. 3-49 - PMS (ma non troppo !) e dev>0.80 e ma5_12_min_ago - r 15908 x"
+                        sell = "SELL 4-5-x (>90 min) C.S. 3-49 - PMS (ma non troppo !) e dev>0.80 e ma5_12_min_ago - r 15908 x1"
                         action = "sell"
 
                         #  6 ottobre 2024 aggiuta perche' sul BUY 5 E' MEGLIO COMINCIARE A PRENDERE !
                         # 14 mar 2025 se 300>450 sell con 3-49 da 3-36
+                        # 24 mar 2025 se deviation_ma200_sotto_ma300 > 0.10 (E 300>450) dev sell con 5-69 da 3-49
+                        
+
+                    elif (
+                        ma3_last < ma59_last
+                        and ma300_last > ma450_last
+                        and deviation_ma200_sotto_ma300 < 0.10
+
+                        and deviation_sell > 0.80
+                        
+                        and ma39_last > ma39_15_min_ago
+                        and ma5_last < ma5_12_min_ago
+                        
+                        and ma2_last < ma2_2_min_ago
+                        and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.018
+                        and macd < macd_2_min_ago
+                        and macd_differenza_2_min_ago < -1.50
+                    ): 
+                        sell = "SELL 4-5-x (>90 min) C.S. 3-59 - PMS (ma non troppo !) e dev>0.80 e ma5_12_min_ago - r 15908 x2"
+                        action = "sell"
+
+                        #  6 ottobre 2024 aggiuta perche' sul BUY 5 E' MEGLIO COMINCIARE A PRENDERE !
+                        # 14 mar 2025 se 300>450 sell con 3-49 da 3-36
+                        # 24 mar 2025 se deviation_ma200_sotto_ma300 < 0.10 (MA 300>450) dev sell con 5-59 da 3-49
+
+
 
 
                     elif (
