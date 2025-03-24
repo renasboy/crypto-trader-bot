@@ -23034,27 +23034,26 @@ class maddog:
                 
                 # BUY 3 del 2 ottobre 2023 NON COMPRAVA !
 
-                elif (
-                    
-                    ma3_last > ma28_last
+                
+                elif (    
+                    ma3_last > ma18_last
+
                     and ma450_last > ma450_480_min_ago
                     and ma300_last > ma450_last
                     
-                    and ma100_last > ma100_60_min_ago
+                    and deviation_ma3_sotto_ma50 < -0.15
                     
                     and deviation_ma250_sopra_ma300 < 0.16
                     and deviation_ma250_sopra_ma300 > -0.16
                     
                     and deviation_ma3_sopra_ma10 > 0.01
-                    and deviation_ma5_sopra_ma28 > -0.02
-                  
                     
                     and ma3_last > ma13_last
                     and ma2_last > ma5_last
                     
-                    and macd_differenza_2_min_ago > -2.50
+                    and macd_differenza_2_min_ago > -5.00
                 ):
-                    buy = "BUY 3 del 2 ottobre 2023 NON COMPRAVA ! con 450 > 450 480 min MA LATERALE - r 6574 a1xx"
+                    buy = "BUY 3 con 3-18 - NON COMPRAVA ! - con 450 > 450 480 min - LE MEDIE LUNGHE SONO ANCORA VICINE - r 6574 a1 XX"
                     action = "buy"
                     percentage = 70
 
@@ -23062,7 +23061,9 @@ class maddog:
                     # 13 mar 2025 tolta ma2 > ma2 2 min ago
                     # 13 mar 2025 tolta macd > -50
                     # 13 mar 2025 aggiunta macd_differenza_2_min_ago > 1.50
-
+                    # 24 mar 2025 tolta and ma100_last > ma100_60_min_ago
+                    # 24 mar 2025 aggiunta and deviation_ma3_sotto_ma50 < -0.15
+                    # 24 mar 2025 macd diff > -5.00 da > -2.50
                 
                 # 24 nov 2024 cancellata r 6574 a1xy
                 
@@ -24079,10 +24080,9 @@ class maddog:
 
                     and delta_1 < delta_2
                     
-                    
                     and ma3_last > ma9_last
                     
-                    and macd_differenza_2_min_ago > -2.50
+                    and macd_differenza_2_min_ago > -5.0
                 ):
                     buy = "BUY 4 GIORNO con 300> E ma100>ma200 - r 6668 A1 Y1 X"
                     action = "buy"
@@ -24091,7 +24091,8 @@ class maddog:
                     # 21 ott 2023 and macd < macd_2_min_ago - SE MACD DISCENDENTE IL BUY LO FACCIO PIU' ALTO ! - C'E' MA NON SI VEDE
                     # 15 nov 2022 aggiunta and ma2_differenza_2_min_ago > 5 ( ma2 > ma2 min non l' ha letta !) ( allora metto un rafforzativo )
                     # 23 mar 2025 aggiunta and delta_1 < delta_2
-
+                    # 24 mar and macd_differenza_2_min_ago > -5.00 da -2.50
+                
 
                 elif (
                     ma3_last > ma13_last
@@ -47306,7 +47307,7 @@ class maddog:
                         action = "sell"
                         
                         # 12 apr 2023 4-49 da 4-20
-                        # 24 mar 2025 se 450 sale da 720 min e dev 3-39 si impenna vendi con 3-13
+                        # 24 mar 2025 se 450 sale da 720 min e dev 3-39 se ngricca vendi con 3-13
                         
 
                             
