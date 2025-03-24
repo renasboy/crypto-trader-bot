@@ -53837,7 +53837,7 @@ class maddog:
                 and macd < macd_2_min_ago
                 and ma2_differenza_2_min_ago < -3
             ):    
-                sell = "SELL PMS con 3-33 da 0 a 60 min se 100<200 E con dev_sell 0.70 - 1.05 and macd < - INTANTO TE LI PRENDI - r 16750 A2Xy"
+                sell = "SELL PMS (0-60 min) con 3-33 se 100<200 E con dev_sell 0.70 - 1.05 and macd < - INTANTO TE LI PRENDI - r 16750 A2Xy"
                 action = "sell"
                 
                 # pochi 0.80 - 1.20
@@ -53847,7 +53847,7 @@ class maddog:
                 # importante
                 # con aggiunta deviation_ma3_di_adesso_diviso_ma3_di_90_min_ago <1.30 che cosa fa ?
                 # compra pochi maledetti e subito la prima volta
-                # ma se continua a salire dopo che ha fatto il primo pochi maledetti e subito non interviene piu' ed entrano in azione altre medie piu' lunghe
+                # ma se continua a salire dopo che ha fatto il primo PMS non interviene piu' ed entrano in azione altre medie piu' lunghe
                 # altrimenti e' un continuo 3-10
                 # 15 mag 2023 3-13 da 3-11 
                 # 15 mag 2023 0.80 - 1.05 da 0.80 - 1.20
@@ -53864,7 +53864,7 @@ class maddog:
             elif (
                 seconds_since_last_trade > 3601 and seconds_since_last_trade < 7200
                 and deviation_ma10__diviso_ma10_5_ore_ago < 1.50
-                and ma3_last < ma39_last
+                and ma3_last < ma49_last
                 and deviation_ma3_di_adesso_diviso_ma3_di_90_min_ago < 1.30
                 
                 and deviation_sell > 0.75
@@ -53874,11 +53874,11 @@ class maddog:
                 and macd < macd_2_min_ago
                 and macd_differenza_2_min_ago < -0.75
             ):    
-                sell = "SELL condizione PMS da 60 a 120 min con 3-39 E con dev_sell 0.75 - 1.05 and macd < E diff MACD < -0.75 - INTANTO TE LI PRENDI - r 16750 A2y"
+                sell = "SELL PMS ma non troppo (60-120 min) con 3-39 E dev_sell 0.75 - 1.05 e macd < - INTANTO TE LI PRENDI - r 16750 A2y"
                 action = "sell"
 
                 #  9 set 2024 aggiunta diff macd < -0.75
-                
+                # 24 mar 2025 3-49 da 3-39 
 
           
             # 4
@@ -53899,7 +53899,7 @@ class maddog:
                 and deviation_sell < 1.10
                 
             ):    
-                sell = "SELL PMS dopo 120 min con 3-39 E con dev_sell 0.75 - 1.10 and macd < - INTANTO TE LI PRENDI - r 16750 B"
+                sell = "SELL PMS >120 min con 3-39 E con dev_sell 0.75 - 1.10 and macd < - INTANTO TE LI PRENDI - r 16750 B"
                 action = "sell"
                 
                 # pochi 0.80 - 1.20
@@ -53941,7 +53941,7 @@ class maddog:
                 and ma2_last > ma100_last
                 and ma2_last < ma2_2_min_ago
             ):    
-                sell = "SELL CS - POCHI MALEDETTI E SUBITO QUANDO SALE FORTE 3-28 ( cerca di inibirlo ) con ma200> e con dev_sell > 0.70 - r 16767 a"
+                sell = "SELL CS - PMS QUANDO SALE FORTE 3-28 ( cerca di inibirlo ) con ma200> e con dev_sell > 0.70 - r 16767 a"
                 action = "sell"
 
                 #  7 mar 2024 aggiunto and ma450_last > ma450_360_min_ago
