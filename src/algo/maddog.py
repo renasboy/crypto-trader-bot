@@ -802,12 +802,25 @@ class maddog:
         
         deviation_ma10_sotto_ma100 = (ma10_last / ma100_last - 1) * 100 if ma100_last else 0
         self.algo_helper.info("deviation_ma10_sotto_ma100: {}".format(deviation_ma10_sotto_ma100))
-        
+
+
+
         
         # formula DEVIATION_ma39_sotto_ma100 - FORMULA circello!
         
         deviation_ma39_sotto_ma100 = (ma39_last / ma100_last - 1) * 100 if ma100_last else 0
         self.algo_helper.info("deviation_ma39_sotto_ma100: {}".format(deviation_ma39_sotto_ma100))
+
+
+
+        # formula DEVIATION_ma50_sotto_ma100 
+        
+        deviation_ma50_sotto_ma100 = (ma50_last / ma100_last - 1) * 100 if ma100_last else 0
+        self.algo_helper.info("deviation_ma50_sotto_ma100: {}".format(deviation_ma50_sotto_ma100))
+
+
+
+
 
 
 
