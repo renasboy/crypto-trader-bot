@@ -2480,8 +2480,20 @@ class maddog:
                     percentage = 80
 
 
+
+
                 elif (
                     ma3_last > ma18_last
+
+                    and ma450_last > ma450_480_min_ago
+                    and ma78_last < ma150_last
+
+
+                    and deviation_ma100_sopra_ma200 < -0.25
+                    and deviation_ma25_sotto_ma300 < -0.70
+                    and deviation_ma50_sotto_ma100 < -0.25
+                    and deviation_ma3_sotto_ma50 < -0.30
+
 
                     and ma450_last > ma450_720_min_ago
                     and ma100_last < ma100_90_min_ago
@@ -2495,31 +2507,28 @@ class maddog:
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.27
                     and deviation_ma10_sopra_ma200 < -0.20
                     and deviation_ma5_sotto_ma300 < -0.20
-                    and deviation_ma25_sotto_ma300 < -0.39
+                    
                     and deviation_ma50_sotto_ma300 < -0.36
 
                     # CANO STAF + zia amalia
 
-
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.13
                     and deviation_ma5_sotto_ma200 < -0.25
                     
-
-
                     and deviation_ma3_sopra_ma10 > 0.01
                     and deviation_ma3_sopra_ma18 > -0.08
-                    and deviation_ma5_sopra_ma28 > -0.10
+                    
 
-                    and macd >= macd_2_min_ago
-                    and macd > -60
-                    and ma2_last >= ma2_2_min_ago
-
+                    and macd_differenza_2_min_ago > -5.50
                 ):
-                    buy = "BUY 1 formula MY COMPA + cano staf + zia amalia - r 1043 B1 NUOVA ERA A3 SOFT y2"
+                    buy = "BUY 1 formula MY COMPA + cano staf + zia amalia + DISTANZA AL RIBASSO - r 1043 B1 NUOVA ERA A3 SOFT y2"
                     action = "buy"
                     percentage = 80
 
-                    #  4 feb 2025 aggiunta 
+                    #  4 feb 2025 aggiunta
+                    # 25 mar 2025 tolte sovrastrutture
+                    # 25 mar 2025 aggiunta distanza al ribasso
+
 
 
                 elif (    
@@ -3545,7 +3554,7 @@ class maddog:
                     and deviation_ma3_sopra_ma16 > -0.01
                     and deviation_ma3_sopra_ma18 > -0.01
                     
-                    and macd_differenza_2_min_ago > -2.50
+                    and macd_differenza_2_min_ago > -5.50
                     
                 ):    
                     buy = "BUY 1 con 3-20 E 300 vicina alla 450 + macd diff > -2.50 - r 1204 NUOVA ERA A2 SOFT 2"
