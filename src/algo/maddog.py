@@ -23064,17 +23064,18 @@ class maddog:
                 
                 # BUY 3 del 2 ottobre 2023 NON COMPRAVA !
 
-                
                 elif (    
                     ma3_last > ma18_last
 
                     and ma450_last > ma450_480_min_ago
+                    and ma78_last > ma150_last
+                    
                     and ma300_last > ma450_last
                     
                     and deviation_ma3_sotto_ma50 < -0.07
                     
-                    and deviation_ma250_sopra_ma300 < 0.16
-                    and deviation_ma250_sopra_ma300 > -0.16
+                    and deviation_ma250_sopra_ma300 < 0.20
+                    and deviation_ma250_sopra_ma300 > -0.20
                     
                     and deviation_ma3_sopra_ma10 > 0.01
                     
@@ -23083,7 +23084,40 @@ class maddog:
                     
                     and macd_differenza_2_min_ago > -5.00
                 ):
-                    buy = "BUY 3 con 3-18 - NON COMPRAVA ! - con 450 > 450 480 min - LE MEDIE LUNGHE SONO ANCORA VICINE - r 6574 a1 XX"
+                    buy = "BUY 3 con 3-18 - NON COMPRAVA ! - con 450 > 450 480 min E 78 > 150 - MEDIE LUNGHE ANCORA VICINE - r 6574 a1 XX1"
+                    action = "buy"
+                    percentage = 70
+
+                    # 25 mar 2025 con ma78_last > ma150_last
+
+
+
+                elif (    
+                    ma3_last > ma18_last
+
+                    and ma450_last > ma450_480_min_ago
+                    and ma78_last < ma150_last
+
+                    and deviation_ma100_sopra_ma200 < -0.25
+                    and deviation_ma25_sotto_ma300 < -0.70
+                    and deviation_ma50_sotto_ma100 < -0.25
+                    and deviation_ma3_sotto_ma50 < -0.30
+
+                    and ma300_last > ma450_last
+                    
+                    and deviation_ma3_sotto_ma50 < -0.07
+                    
+                    and deviation_ma250_sopra_ma300 < 0.20
+                    and deviation_ma250_sopra_ma300 > -0.20
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    
+                    and ma3_last > ma13_last
+                    and ma2_last > ma5_last
+                    
+                    and macd_differenza_2_min_ago > -5.00
+                ):
+                    buy = "BUY 3 con 3-18 - NON COMPRAVA ! - con 450 > 450 480 min MA 78 < 150 - MEDIE LUNGHE ANCORA VICINE - r 6574 a1 XX2"
                     action = "buy"
                     percentage = 70
 
@@ -23095,6 +23129,9 @@ class maddog:
                     # 24 mar 2025 aggiunta and deviation_ma3_sotto_ma50 < -0.15
                     # 24 mar 2025 macd diff > -5.00 da > -2.50
                     # 24 mar 2025 and deviation_ma3_sotto_ma50 < -0.07
+                    # 25 mar 2025 con ma78_last < ma150_last
+
+
 
                 
                 # 24 nov 2024 cancellata r 6574 a1xy
