@@ -50773,7 +50773,7 @@ class maddog:
                 and ma100_last < ma100_60_min_ago
                 
                 and deviation_ma39 < 0.13
-                and deviation_sell < -0.08
+                and deviation_sell < -0.09
                 
                 
                 and deviation_ma5_sotto_ma200 > -0.60
@@ -50788,11 +50788,14 @@ class maddog:
                 and ma2_differenza_ma5 < -8
                 
             ):
-                sell = "SELL nuova condizione speciale - dev 3-39 < 0.13 and dev_sell < -0.08 con ma50 > e con ma5 sotto ma200 > -0.60 and MACD < and macd < 15 - r 16047 A2 Y1 X1a"
+                sell = "SELL NCS - dev 3-39 < 0.13 E dev_sell < -0.09 con ma50 > e con ma5 sotto ma200 > -0.60 and MACD < - r 16047 A2 Y1 X1a"
                 action = "sell"
                 
                 # 21 feb 2024 se ANCHE 10>30 dev sell a -0.07 da -0.05
                 # 21 feb 2024 se ANCHE 10>30 dev sell a -0.08 da -0.07
+                # 21 feb 2024 se ANCHE 10>30 dev sell a -0.09 da -0.08
+
+
                 
             
             elif (    
@@ -51431,7 +51434,7 @@ class maddog:
                 and ma20_last > ma20_2_min_ago
                 
                 and deviation_ma39 < 0.10
-                and deviation_sell < -0.02
+                and deviation_sell < -0.03
                 
                 and deviation_ma5_sopra_ma200 < -0.30
                 and deviation_ma5_sotto_ma300 < -0.30
@@ -51444,10 +51447,11 @@ class maddog:
                 and macd < 13
                 and macd_differenza_2_min_ago < -3
             ):
-                sell = "SELL NCS con ma20 <= ma20 2 min ago e dev 3-39 < 0.10 e dev_sell < -0.02 e ma50 < e diff ma2 e diff macd - r 16047 A3 Y2aX"
+                sell = "SELL NCS con ma20 > ma20 2 min ago e dev 3-39 < 0.10 e dev_sell < -0.03 e ma50 < e diff macd - r 16047 A3 Y2 AX"
                 action = "sell"
 
                 #  2 mar 2025 se ma100 comincia a scendere di meno allora and deviation_sell < -0.02 da -0.01
+                # 25 mar 2025 deviation_sell < -0.03 da -0.02
 
             
             elif (    
