@@ -6,6 +6,16 @@
 
 """
 
+
+
+
+and deviation_ma100_sopra_ma200 < -0.25
+and deviation_ma25_sotto_ma300 < -0.70
+and deviation_ma50_sotto_ma100 < -0.25
+and deviation_ma3_sotto_ma50 < -0.30
+
+
+
 DISTANZE AL RIBASSO se ma450_last < ma450_300_min_ago - ma tenendo ferrari e missile compa
 
 and ma3_last > ma18_last
@@ -19560,13 +19570,20 @@ class maddog:
                 
                 elif (    
                     ma3_last > ma15_last
-                    and ma450_last > ma450_720_min_ago
 
+                    and ma450_last > ma450_720_min_ago
                     and ma78_last < ma150_last
+
+                    and deviation_ma100_sopra_ma200 < -0.25
+                    and deviation_ma25_sotto_ma300 < -0.70
+                    and deviation_ma50_sotto_ma100 < -0.25
+                    and deviation_ma3_sotto_ma50 < -0.30
+
+
+                    
                     and deviation_ma5_sopra_ma59 < -0.10
 
                     and ma39_last < ma100_last
-                    and deviation_ma3_sotto_ma50 < -0.28
                     
                     and ma100_last < ma100_60_min_ago
                     and ma100_last < ma100_180_min_ago
@@ -19579,7 +19596,7 @@ class maddog:
                     and deviation_ma3_sopra_ma10 > 0.01
                     
                     and ma2_last > ma10_last
-                    and macd_differenza_2_min_ago > -2.50
+                    and macd_differenza_2_min_ago > -5.50
                     
                 ):
                     buy = "BUY 2 modificato importando un vecchio pensiero laterale + distanza al ribasso - r 6002"
@@ -19588,7 +19605,7 @@ class maddog:
 
                     #  4 feb 2025 aggiunta
                     # 21 mar 2025 se ma39_last < ma100_last aggiunta dstanza al ribasso
-
+                    # 25 mar 2025 articolando distanza al ribasso
 
                 
 
