@@ -30006,6 +30006,9 @@ class maddog:
                     # 1 luglio a 0.72 da 0.82
                     # > estate 0.69 da 0.72
                     #  3 lug 2023 0.60 da 0.69
+
+
+
                 
                 # BUY 5 29 ago 2022 > 120 min di ribasso 78>150
                 
@@ -50487,17 +50490,22 @@ class maddog:
                 #  6 mar 2024 and deviation_sell < -0.02 da -0.01
                 # 28 gen 2025 and deviation_sell < -0.03 da < -0.02
 
-          
+
+
+
+
             elif (    
                 ma50_last > ma50_2_min_ago
                 and ma450_last < ma450_180_min_ago
-                
-                and ma20_last < ma20_2_min_ago
+                and ma100_last > ma200_last
+
                 and ma100_last > ma100_60_min_ago
+
+                and ma20_last < ma20_2_min_ago
                 and ma3_last < ma28_last
                 
                 and deviation_ma39 < 0.13
-                and deviation_sell < -0.01
+                and deviation_sell < -0.02
                 
                 and deviation_ma5_sotto_ma200 > -0.60
                 and deviation_ma100_sopra_ma300 < 0.40
@@ -50509,11 +50517,46 @@ class maddog:
                 and ma2_last < ma5_last
                 and ma2_differenza_2_min_ago < -3
             ):
-                sell = "SELL N C S - con 450 > 3 ore e dev 3-39 < 0.13 e dev_sell < -0.01 e ma50 > e ma5 sotto ma200 > -0.60 - r 16047 A2 X1 Y2"
+                sell = "SELL N C S - con 450 > 3 ore e dev 3-39 < 0.13 e dev_sell < -0.02 e ma50 > E con 100>200 - r 16047 A2 X1 Y2 X"
                 action = "sell"
                 
                 #  7 feb 2024 and deviation_sell < -0.01 da 0.02
                 #  6 mar 2024 aggiunto and ma450_last < ma450_180_min_ago
+                #  7 mar 2025 con 100 che e' andata sopra 200 aumento tolleranza
+                #  7 mar 2025 and deviation_sell < -0.02 da -0.01
+
+
+            elif (    
+                ma50_last > ma50_2_min_ago
+                and ma450_last < ma450_180_min_ago
+                and ma100_last < ma200_last
+
+                and ma100_last > ma100_60_min_ago
+
+                and ma20_last < ma20_2_min_ago
+                and ma3_last < ma28_last
+                
+                and deviation_ma39 < 0.13
+                and deviation_sell < -0.015
+                
+                and deviation_ma5_sotto_ma200 > -0.60
+                and deviation_ma100_sopra_ma300 < 0.40
+                
+                and ma2_last < ma2_2_min_ago 
+                and macd < macd_2_min_ago
+                and macd < 15
+                and macd_differenza_2_min_ago < -2
+                and ma2_last < ma5_last
+                and ma2_differenza_2_min_ago < -3
+            ):
+                sell = "SELL N C S - con 450 > 3 ore e dev 3-39 < 0.13 e dev_sell < -0.015 e ma50 > MA con 100>200 - r 16047 A2 X1 Y2 Y"
+                action = "sell"
+                
+                #  7 feb 2024 and deviation_sell < -0.01 da 0.02
+                #  6 mar 2024 aggiunto and ma450_last < ma450_180_min_ago
+                #  7 mar 2025 and deviation_sell < -0.015 da -0.01
+
+
 
           
             elif (    
