@@ -36263,10 +36263,10 @@ class maddog:
                         # 7 lug 2023 dev sell 4-140 da 5-150
 
 
-                        
                     elif (
-                        ma3_last < ma100_last
-                        
+                        ma8_last < ma100_last
+                        and delta_1 < delta_2
+
                         and ma50_last < ma50_2_min_ago
                         
                         and ma100_last > ma150_last
@@ -36276,6 +36276,33 @@ class maddog:
                         and deviation_sell < 0.10
                         and deviation_ma39 < 0.05
                         
+                        and ma2_last < ma5_last
+                        
+                        and ma2_last < ma2_2_min_ago
+                        and macd_differenza_2_min_ago < -0.25
+                        and ma2_differenza_ma5 < -6
+                    ):
+                        sell = "SELL 1 (110-239 min) GIORNO con 8<100 e con ma50 < MA ma100 > E ma300 > E dev_sell < 0.10 - r 10262 A1 Y1"
+                        action = "sell"
+
+                        # 25 mar 2025 8-100 da 3-100 se GIORNO
+
+
+
+                        
+
+                    elif (
+                        ma5_last < ma100_last
+                        and delta_1 > delta_2
+
+                        and ma50_last < ma50_2_min_ago
+                        
+                        and ma100_last > ma150_last
+                        and ma300_last > ma300_120_min_ago
+                        and ma100_last > ma100_60_min_ago
+                        
+                        and deviation_sell < 0.10
+                        and deviation_ma39 < 0.05
                         
                         and ma2_last < ma5_last
                         
@@ -36283,7 +36310,7 @@ class maddog:
                         and macd_differenza_2_min_ago < -0.25
                         and ma2_differenza_ma5 < -6
                     ):
-                        sell = "SELL 1 da 110 a 239 min con ma50 < MA ma100 > E ma300 > E dev_sell < 0.10 - r 10262 A1 Y"
+                        sell = "SELL 1 (110-239 min) NOTTE con 5-100 e con ma50 < MA ma100 > E ma300 > E dev_sell < 0.10 - r 10262 A1 Y2"
                         action = "sell"
                         
                         # ma39 NON DEVE VENDERE in fase laterale ma in alto
@@ -36306,7 +36333,7 @@ class maddog:
                         # 20 NOV 2023 TOLTO ma5 < ma5 2 min ago ( LA VENDITA E' ARRIVATA TARDI !)  
                         # 20 NOV 2023 aggiunta and ma2_differenza_ma5 < -6
                         # 29 set 2024 and deviation_sell < 0.10 da < 0.15
-
+                        # 25 mar 2025 5-100 da 3-100 se NOTTE
                   
                     
                     elif (
