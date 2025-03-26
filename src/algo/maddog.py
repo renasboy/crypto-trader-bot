@@ -2292,7 +2292,7 @@ class maddog:
                     
                 
                 # BUY 1 con 28>300 and 69 > 100 e 200> and deviation_bellissima > 0.12 and 5-28>0.18
-                
+
                 elif (    
                     ma28_last > ma300_last
                     and macd >= macd_2_min_ago
@@ -2310,7 +2310,27 @@ class maddog:
                     buy = "BUY 1 con 28>300 and 69 > 100 e 200> and deviation_bellissima > 0.12 and 5-28>0.18 - r 1041"
                     action = "buy"
                     percentage = 90
+
+
+
+                elif (
+                    ma3_last > ma8_last
                     
+                    and ma300_last > ma300_301_min_ago
+
+                    and deviation_ma200_sotto_ma300 < -0.30
+                    and deviation_ma25_sotto_ma300 < -0.70
+                    
+                    and deviation_ma3_sotto_ma50 < -0.33
+
+                    and macd_differenza_2_min_ago > -5.50
+                ):    
+              
+                    buy = "BUY 1 che mancava 26 mar 2025 - r 1042"
+                    action = "buy"
+                    percentage = 90
+
+                    # 26 mar 2025 aggiunta questa condizione che mancava
                     
                  
                     
@@ -31216,6 +31236,27 @@ class maddog:
                     #  2 ott 2024 lasciala per il momento (ha comprato appena ha ripreso a scendere e con 450 che scendeva da gia' da tanto...)
                     #  2 ott 2024 se e' un BUY 5 e 450 scende da tanto tempo la ma100 NON DEVE STARE TROPPO LONTANA DALLA ma450 ! 
                     #  2 ott 2024 perche' altrimenti sta scendendo ed e' inutile andare contro il mercato. lasciala scendere !
+
+
+                elif (
+                    ma3_last > ma8_last
+                    
+                    and ma300_last > ma300_301_min_ago
+
+                    and deviation_ma200_sotto_ma300 < -0.30
+                    and deviation_ma25_sotto_ma300 < -0.70
+                    
+                    and deviation_ma3_sotto_ma50 < -0.30
+
+                    and macd_differenza_2_min_ago > -5.50
+                ):    
+              
+                    buy = "BUY 5 che mancava 26 mar 2025 - r 7591"
+                    action = "buy"
+                    percentage = 90
+
+                    # 26 mar 2025 aggiunta questa condizione che mancava
+
 
 
 
