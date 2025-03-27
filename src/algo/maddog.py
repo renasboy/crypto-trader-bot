@@ -49039,25 +49039,30 @@ class maddog:
 
             elif (
                 ma39_last <= ma100_last
-                
+
+                and ma3_last < ma39_last
+
                 and ma200_last > ma200_60_min_ago
 
-                and macd_differenza_2_min_ago < -1
                 and deviation_ma39 < 0.08
                 and deviation_sell < 0.04
-                and ma2_last <= ma2_2_min_ago 
+                
                 and delta_450_300 > delta_450_300_60_min
                 
                 and deviation_ma100_sopra_ma300 > 0.20
                 and deviation_ma3_sotto_ma150 > -1.20
-                
+
+                and ma2_last <= ma2_2_min_ago
+                and macd_differenza_2_min_ago < -1
             ):
-                sell = "SELL cond. special 3 - SALVAGENTE 3 3-39 < 0.05 e dev sell < 0.05 con m39<100 e dev_ma3_sotto_ma200 > -1.20 - r 15985 A2yy1"
+                sell = "SELL CS - SALVAGENTE 3-39 < 0.05 e dev sell < 0.05 con m39<100 e dev_ma3_sotto_ma200 > -1.20 - r 15985 A2yy1"
                 action = "sell"
 
                 #  5 ott 2024 se mentre 200 sale ma crolla allora stai piu' attento !
                 #  5 ott 2024 3-39 < 0.08 da <0.05
                 # 19 gen 2025 39<100 invece di ma50_last <= ma50_2_min_ago
+                # 27 mar 2025 aggiunta 3<39
+
 
 
             elif (
