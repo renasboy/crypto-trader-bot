@@ -295,13 +295,14 @@ class maddog:
         ma10_2_min_ago = self.algo_helper.ma_minutes_ago(10, 2)
         ma10_30_min_ago = self.algo_helper.ma_minutes_ago(10, 30)
         ma10_300_min_ago = self.algo_helper.ma_minutes_ago(10, 300)
+
         ma13_2_min_ago = self.algo_helper.ma_minutes_ago(13, 2)
         ma13_10_min_ago = self.algo_helper.ma_minutes_ago(13, 10)
         ma18_2_min_ago = self.algo_helper.ma_minutes_ago(18, 2)
         ma18_10_min_ago = self.algo_helper.ma_minutes_ago(18, 10)
         ma18_30_min_ago = self.algo_helper.ma_minutes_ago(18, 30)
+
         ma20_2_min_ago = self.algo_helper.ma_minutes_ago(20, 2)
-        
         ma20_10_min_ago = self.algo_helper.ma_minutes_ago(20, 10)
         ma20_22_min_ago = self.algo_helper.ma_minutes_ago(20, 22)
         ma20_30_min_ago = self.algo_helper.ma_minutes_ago(20, 30)
@@ -313,13 +314,13 @@ class maddog:
         ma28_10_min_ago = self.algo_helper.ma_minutes_ago(28, 10)
         ma28_20_min_ago = self.algo_helper.ma_minutes_ago(28, 20)
         ma28_30_min_ago = self.algo_helper.ma_minutes_ago(28, 30)
+
         ma30_2_min_ago = self.algo_helper.ma_minutes_ago(30, 2)
         ma30_10_min_ago = self.algo_helper.ma_minutes_ago(30, 10)
         ma30_20_min_ago = self.algo_helper.ma_minutes_ago(30, 20)
         ma30_30_min_ago = self.algo_helper.ma_minutes_ago(30, 30)
         ma30_40_min_ago = self.algo_helper.ma_minutes_ago(30, 40)
-      
-        
+        ma33_3_min_ago = self.algo_helper.ma_minutes_ago(33, 3)
         ma36_2_min_ago = self.algo_helper.ma_minutes_ago(36, 2)
         ma39_2_min_ago = self.algo_helper.ma_minutes_ago(39, 2)
         ma39_5_min_ago = self.algo_helper.ma_minutes_ago(39, 5)
@@ -331,7 +332,7 @@ class maddog:
         ma39_70_min_ago = self.algo_helper.ma_minutes_ago(39, 70)
         ma39_120_min_ago = self.algo_helper.ma_minutes_ago(39, 120)
         ma39_180_min_ago = self.algo_helper.ma_minutes_ago(39, 180)
-
+        
         ma40_30_min_ago = self.algo_helper.ma_minutes_ago(40, 30)
         
         ma50_2_min_ago = self.algo_helper.ma_minutes_ago(50, 2)
@@ -342,8 +343,8 @@ class maddog:
         ma54_15_min_ago = self.algo_helper.ma_minutes_ago(54, 15)
         ma59_2_min_ago = self.algo_helper.ma_minutes_ago(59, 2)
         ma59_30_min_ago = self.algo_helper.ma_minutes_ago(59, 30)
-        
         ma59_60_min_ago = self.algo_helper.ma_minutes_ago(59, 60)
+        
         
         ma69_2_min_ago = self.algo_helper.ma_minutes_ago(69, 2)
         ma69_15_min_ago = self.algo_helper.ma_minutes_ago(69, 15)
@@ -2086,21 +2087,26 @@ class maddog:
                     # 28 feb 2025 tolto 5>180
                     # 10 mar 2025 aggiunto GIORNO
 
+
+
+
                 elif (
                     ma3_last > ma18_last
+
+                    and ma5_last < ma150_last
+                    and ma3_last < ma20_last or ma20_last < ma20_2_min_ago
+                    and deviation_ma39 < -0.30
+                    and deviation_ma3_sotto_ma50 < -0.05
 
                     and ma200_last > ma300_last
                     and ma450_last > ma450_360_min_ago
                     and delta_DNA_1 > delta_DNA_2
-                    and deviation_ma3_sotto_ma50 < -0.03
-
-                    and ma300_last > ma300_120_min_ago
                     
+                    and ma300_last > ma300_120_min_ago
                     
                     and deviation_ma3_sopra_ma10 > 0.01
                     
-                    
-                    and macd_differenza_2_min_ago > -2.50
+                    and macd_differenza_2_min_ago > -5.50
 
                     # and adx > -0.90
                 ):  
@@ -2113,7 +2119,7 @@ class maddog:
                     #  5 dic 2025 anticipata ndecchia
                     # 28 feb 2025 aggiunta DNA - NOTTE
                     # 28 feb 2025 tolto 5>180
-                
+                    # 27 mar 2025 se 5 STA SOTTO 150 e ritraccia (vedi ma3<ma20 o ma20<ma20 2 min ago)  allora deve essere deviation_ma39 < -0.30
                     
                 
                 
@@ -2342,8 +2348,13 @@ class maddog:
                 # BUY 1 5-300 in alto
                 
                 elif (
-                    ma3_last > ma20_last
-                    
+                    ma3_last > ma18_last
+
+                    and ma5_last < ma150_last
+                    and ma20_last < ma20_2_min_ago or ma33_last < ma33_3_min_ago
+                    and deviation_ma39 < -0.30
+                    and deviation_ma3_sotto_ma50 < -0.05
+
                     and ma450_last > ma450_360_min_ago
 
                     and deviation_ma100_sopra_ma200 < -0.25
@@ -2351,22 +2362,22 @@ class maddog:
                     
                     and deviation_ma5_sotto_ma300 < 0.45
                     
-                    and ma300_last < ma300_60_min_ago
+                    
                     and ma200_last < ma200_60_min_ago
                     
                     and deviation_ma3_sopra_ma10 > 0.01
                     
                     and ma3_last > ma7_last
-                    and macd_differenza_2_min_ago > -2.50
+                    and macd_differenza_2_min_ago > -18.50
                   
                 ):
-                    buy = "BUY 1 che considera distanza 5-300 - riga 1043 A"
+                    buy = "BUY 1 con 450 > 6 ore ma ritracciando ( vedi ma20 < or ma33 < ) compra con 3-39 < -0.30 - riga 1043 A"
                     action = "buy"
                     percentage = 50
                     
                     # importante : ma100 sta sotto la ma200 ma non le e' troppo lontana
                     # 21 mar 2025 anticipata ndecchia
-                    
+                    # 27 mar 2025 se ma5 STA SOTTO ma150 ritracciando ( vedi ma20< or ma33< ) compra con 3-39 < -0.30
                     
                     
                     
@@ -3883,31 +3894,30 @@ class maddog:
                   
                 elif (    
                     ma3_last > ma13_last
+
+                    and ma5_last < ma150_last
+                    and ma3_last < ma20_last or ma20_last < ma20_2_min_ago
+                    and deviation_ma39 < -0.30
+                    and deviation_ma3_sotto_ma50 < -0.09
+
+
+
                     and deviation_ma200_sotto_ma300 > -0.01
 
                     and ma100_last > ma100_120_min_ago
                     and ma300_last > ma300_180_min_ago
 
-                    and deviation_ma39 < -0.05
-                    and deviation_ma3_sotto_ma50 < -0.09
-                    
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
                     and deviation_ma5_sopra_o_sotto_ma100 > -0.50
-                    
-                    and deviation_ma300_sopra_ma450 < 0.18
-                    and deviation_ma300_sopra_ma450 > -0.18
-                    
-                    and deviation_ma100_sopra_ma300 < 0.29
-                    and deviation_ma100_sopra_ma300 > -0.29
                     
                     and deviation_ma3_sopra_ma10 > 0.01
                     and deviation_ma3_sopra_ma16 > -0.02
                     
-                    and macd_differenza_2_min_ago > -2.50
+                    and macd_differenza_2_min_ago > -5.50
                    
                 ):  
                     
-                    buy = "BUY 1 TREND LAT con ma300 > 3 ore e 3-10 > 0.01 e macd_differenza_2_min_ago > -2.50 - r 1205 AX NUOVA ERA A3 SOFT x"
+                    buy = "BUY 1 con ma300 > 3 ore se 5 SOTTO 150 ritracciando deve essere dev 3-39 < -0.30 - r 1205 AX NUOVA ERA A3 SOFT x"
                     action = "buy"
                     percentage = 70
 
@@ -3918,6 +3928,9 @@ class maddog:
                     # 17 feb 2025 aggiunta and deviation_ma3_sotto_ma50 < -0.09
                     # 23 mar 2025 anticipata ndecchiecella
                     # 23 mar 2025 per adesso la tengo
+                    # 27 mar 2025 se 5 SOTTO 150 ritracciando deve essere dev 3-39 < -0.30
+
+
 
                 elif (    
                     ma3_last > ma13_last
@@ -16852,25 +16865,23 @@ class maddog:
 
                     and ma300_last > ma450_last
                     
-                    and ma100_last > ma100_60_min_ago
                     and ma200_last > ma200_30_min_ago
                    
                     and deviation_ma5_sotto_ma200 > -0.70
                     and deviation_ma100_sopra_ma300 < 0.40
                     
-
                     and deviation_ma3_sopra_ma10 > 0.01
                   
                     and ma3_last > ma13_last
                     
-                    and macd_differenza_2_min_ago > -2.50
-                    
+                    and macd_differenza_2_min_ago > -5.50
                 ):  
                 
                     buy = "BUY 2 ma300_last > ma450_last e con ma200 che sale da 30 min - GIORNO - r 5829 AX"
                     action = "buy"
                     percentage = 70
 
+                    # 27 mar 2025 and macd_differenza_2_min_ago > -5.50 da > -2.50
 
 
 
@@ -18246,7 +18257,7 @@ class maddog:
                 
                 elif (
                     
-                    ma3_last > ma20_last
+                    ma3_last > ma18_last
                     and ma78_last < ma200_last
 
                     and ma100_last < ma100_60_min_ago
@@ -18270,9 +18281,8 @@ class maddog:
                     
                     and deviation_ma5_sopra_ma28 > -0.02
                     
-                    and ma2_last >= ma2_2_min_ago
-                    and macd >= macd_2_min_ago
-                    and macd > -40
+                    and macd_differenza_2_min_ago > -18.50
+                    
                 ):
                     buy = "BUY 2 > 180 min di ribasso 26 luglio 2023 CON 78<200 - r 5984 B"
                     action = "buy"
@@ -18283,7 +18293,7 @@ class maddog:
                     # 10 nov 2024 aggiunta ZIA AMALIA 
                     # 10 nov 2024 ho tenuto and deviation_ma5_sotto_ma300 > -0.60 perche' non e' una condizione di crollo
                     # 10 nov 2024 durante il crollo intervengono altre condizioni
-
+                    # 27 mar 2025 ok solo macd diff > -18.50
 
 
               
@@ -21127,7 +21137,11 @@ class maddog:
 
                 elif (
                     ma3_last > ma13_last
-                    and ma5_last > ma39_last
+
+                    and ma5_last > ma150_last
+                    and (ma3_last < ma20_last or ma20_last < ma20_2_min_ago or ma33_last < ma33_3_min_ago)
+                    and deviation_ma39 < -0.12
+                    and deviation_ma3_sotto_ma50 < -0.05
 
                     and ma450_last < ma450_720_min_ago
 
@@ -21140,9 +21154,12 @@ class maddog:
                     and macd_differenza_2_min_ago > -2.50
                    
                 ):
-                    buy = "BUY 3 con ma450_last < ma450_720_min_ago e con ma200> e GIORNO - r 6447 A2x"
+                    buy = "BUY 3 con ma5_last > ma150_last ma RITRACCIA E ma450_last < ma450_720_min_ago e con ma200> e GIORNO - r 6447 A2x"
                     action = "buy"
                     percentage = 90
+
+                    # 27 mar 2025 se ma5_last > ma150_last ritracciando compra con deviation_ma39 < -0.12
+
 
 
                 elif (
@@ -39079,20 +39096,20 @@ class maddog:
                         and deviation_ma5_sotto_ma300 < 0.40
                         and deviation_ma5_sotto_ma300 > -0.40
 
-                        and ma5_last < ma45_last
+                        and ma5_last < ma59_last
 
                         and deviation_sell > 0.25 and deviation_sell < 0.56
                         and ma2_last < ma2_2_min_ago
                        
                     ):
-                        sell = "SELL 2 (21-60 min) con ma50 > e 5 < 45 e deviation_sell 0.25 - 0.56 MARADONA e' piu' stanco e paziente - r 11477 B2"
+                        sell = "SELL 2 (21-60 min) con ma50 > e 5<59 e dev_sell 0.25 - 0.56 MARADONA e' piu' stanco - r 11477 B2"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
                         # 5-69 da 5-39 dopo dolomiti
                         # 29 set 5-39 fascia mediana 5-300
                         # 17 mar 2023 5-45 da 5-39
-
+                        # 27 mar 2025 5-59 da 5-45
 
 
                         
