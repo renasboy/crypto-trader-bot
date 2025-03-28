@@ -6,7 +6,8 @@
 
 """
 
-
+and deviation_ma5_sotto_ma200 < -1.20
+and deviation_ma3_sotto_ma50 < -0.30
 
 
 and deviation_ma100_sopra_ma200 < -0.25
@@ -20579,14 +20580,21 @@ class maddog:
 
 
 
-                elif (    
-                    ma450_last > ma450_120_min_ago
+
+
+                elif (  
+                    ma3_last > ma11_last
+                    and ma300_last > ma450_last or ma100_last > ma300_last
+                    and ma20_last < ma50_last
+                    and deviation_ma5_sotto_ma200 < -0.15
+                    and deviation_ma3_sotto_ma50 < -0.04
+                    and macd_differenza_2_min_ago > -18.50
+
+                    and ma450_last > ma450_120_min_ago
                     and (ma5_prev < ma90_prev and ma5_last > ma90_last)
-                    and ma100_last > ma300_last
-                    and ma28_last > ma28_30_min_ago
                     
-                    and ma2_last >= ma2_2_min_ago
-                    and macd >= macd_2_min_ago
+                    and ma28_last > ma28_30_min_ago
+                   
                 ):    
                     buy = "BUY 3 con ma450_last > ma450_120_min_ago E incrocio 5-90 - r 6270"
                     action = "buy"
@@ -20594,6 +20602,8 @@ class maddog:
                     
                     # 13 feb 2023 aggiunta questa
                     #  3 ott 2024 compra solo se and ma28_last > ma28_30_min_ago
+                    # 28 mar 2025 quando ritraccia ! vedi ma20 sotto ma50 !
+
 
                     
 
