@@ -52219,7 +52219,7 @@ class maddog:
                 and ma300_last > ma300_301_min_ago
                 
                 and deviation_ma39 < 0.08
-                and deviation_sell < 0.012
+                and deviation_sell < 0.001
                 
                 and deviation_ma5_sotto_ma200 > -0.64
                 
@@ -52232,14 +52232,14 @@ class maddog:
                 and macd < 30
                 
             ):
-                sell = "SELL CS con ma50 <= ma50 2 min ago E ma300 > 5 ore E dev 3-39 < 0.08 E dev_sell < 0.01 - r 16047 B1 Y2y"
+                sell = "SELL CS con ma50 <= ma50 2 min ago E ma300 > 5 ore E dev 3-39 < 0.08 E dev_sell < 0.001 - r 16047 B1 Y2y"
                 action = "sell"
                 
                 # 24 dic 2023 se 10>20 dev sell a 0.02 da 0.04
                 # 22 set 2024 aggiunta and ma2_last < ma6_last 
                 # 22 set 2024 and deviation_sell < 0.01 da < 0.02
                 # 27 mar 2025 anticipato ma proprio di una ndecchiecella
-
+                # 28 mar 2025 and deviation_sell < 0.001 da < 0.012
 
 
           
