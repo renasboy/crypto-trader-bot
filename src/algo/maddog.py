@@ -3526,8 +3526,67 @@ class maddog:
                     
                     
                 # ------------------------------------------------------------ BUY 1 LATERALE 2
-                
-                   
+
+
+                elif (    
+                    ma3_last > ma11_last
+                    and deviation_ma39 < -0.14
+                    and deviation_ma3_sotto_ma50 < -0.22
+                    and delta_450_300 < delta_450_300_60_min
+
+                    and ma100_last < ma100_10_min_ago
+                    and ma300_last < ma300_180_min_ago
+
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
+                    
+                    and deviation_ma300_sopra_ma450 < 0.25
+                    and deviation_ma300_sopra_ma450 > -0.25
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    
+                    and macd_differenza_2_min_ago > -18.50
+                    
+                ):
+                    buy = "BUY 1 GIORNO mentre la 300 si avvicina alla 300 e durante correzione improvvisa ! con ma300_last < 3 ore  - r 1200 a"
+                    action = "buy"
+                    percentage = 80
+
+                    # 19 feb 2024 3-15 ! da 5-50
+                    # 21 feb 2024 anticipato ndecchiecella
+                    # 29 mar 2025 aggiunta questa nuova condizione
+                    # 29 mar 2025 considera che oltre ad essere GIORNO ma100 comincia a perdere di meno.
+
+                elif (    
+                    ma3_last > ma11_last
+                    and deviation_ma39 < -0.14
+                    and deviation_ma3_sotto_ma50 < -0.22
+                    and delta_450_300 > delta_450_300_60_min
+
+                    and ma100_last < ma100_10_min_ago
+                    and ma300_last < ma300_180_min_ago
+
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
+                    
+                    and deviation_ma300_sopra_ma450 < 0.25
+                    and deviation_ma300_sopra_ma450 > -0.25
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    
+                    and macd_differenza_2_min_ago > -18.50
+                    
+                    
+                ):
+                    buy = "BUY 1 NOTTE mentre la 300 si avvicina alla 300 e durante correzione improvvisa ! con ma300_last < 3 ore  - r 1200 b"
+                    action = "buy"
+                    percentage = 80
+
+                    # 19 feb 2024 3-15 ! da 5-50
+                    # 21 feb 2024 anticipato ndecchiecella
+                    # 29 mar 2025 aggiunta questa nuova condizione
+                    # 29 mar 2025 considera che anche se e' NOTTE ma100 comincia a perdere di meno.
+                    
+                    
+
                 elif (
                     ma3_last > ma20_last
                     
