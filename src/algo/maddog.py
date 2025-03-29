@@ -41758,9 +41758,10 @@ class maddog:
                         # 25 gen 2023 -0.168 da -0.16
                     
                     
-
                     elif (    
                         ma3_last < ma78_last
+                        and ma450_last > ma450_300_min_ago
+
                         and deviation_sell > 0.50
                         
                         and ma2_last < ma2_2_min_ago
@@ -41769,10 +41770,33 @@ class maddog:
                         and macd_differenza_2_min_ago < -0.25
                     ):
                    
-                        sell = "SELL 2 110-240 min con 3-78 vedi 25 luglio 2023 ore 16:28 NON AVEVA VENDUTO NULLA ! and macd_differenza_2_min_ago < -0.25 - r 12474"
+                        sell = "SELL 2 110-240 min con 3-78 vedi 25 luglio 2023 ore 16:28 NON AVEVA VENDUTO NULLA ! - r 12474 a"
                         action = "sell"
                         
                         # 16 ago 2023 3-78 da 3-39
+                        # 29 mar 2025 se ma450_last > ma450_300_min_ago ok cosi'
+
+
+
+                    elif (    
+                        ma3_last < ma59_last
+                        and ma450_last < ma450_300_min_ago
+
+                        and deviation_sell > 0.50
+                        
+                        and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
+                        
+                        and macd_differenza_2_min_ago < -0.25
+                    ):
+                   
+                        sell = "SELL 2 110-240 min con 3-78 vedi 25 luglio 2023 ore 16:28 NON AVEVA VENDUTO NULLA ! - r 12474 b"
+                        action = "sell"
+                        
+                        # 16 ago 2023 3-78 da 3-39
+                        # 29 mar 2025 se ma450_last < ma450_300_min_ago sell con ma3_last < ma59_last invece di 3-78
+
+
 
                     ################################################################################## importate condizioni speciali
                   
