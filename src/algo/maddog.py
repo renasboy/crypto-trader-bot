@@ -436,9 +436,19 @@ class maddog:
 
 
 
+        # rsi
+
+        # rsi = self.algo_helper.rsi
+
+
+
+
+
+
+
         # ADX
 
-        # adx = self.algo_helper.adx()
+        # adx = self.algo_helper.adx
         
 
         ################################################################################################# CONFORTABLY NUMB
