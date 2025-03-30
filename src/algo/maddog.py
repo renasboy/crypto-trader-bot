@@ -6,12 +6,21 @@
 
 """
 
+and deviation_ma200_sotto_ma300 > -0.07
+and deviation_ma25_sotto_ma300 < -0.22
+and deviation_ma39 < -0.05
+and deviation_ma3_sotto_ma50 < -0.06
+
+
+
+
+
 and deviation_ma5_sotto_ma200 < -1.20
 and deviation_ma3_sotto_ma50 < -0.30
 
-
+and deviation_ma200_sotto_ma300 < -0.32
 and deviation_ma100_sopra_ma200 < -0.25
-and deviation_ma25_sotto_ma300 < -0.70
+
 and deviation_ma50_sotto_ma100 < -0.25
 and deviation_ma3_sotto_ma50 < -0.30
 
@@ -2357,14 +2366,17 @@ class maddog:
                 # BUY 1 5-300 in alto
 
                 elif (
-                    ma3_last > ma18_last
+                    ma3_last > ma13_last
                     and delta_1 < delta_2
+
+                    and deviation_ma200_sotto_ma300 > -0.07 or deviation_ma25_sotto_ma300 < -0.22
+                    
+                    and deviation_ma39 < -0.05
+                    and deviation_ma3_sotto_ma50 < -0.06
 
                     and ma5_last < ma150_last
                     and ma20_last < ma20_2_min_ago or ma33_last < ma33_3_min_ago
-                    and deviation_ma39 < -0.30
-                    and deviation_ma3_sotto_ma50 < -0.05
-
+                    
                     and ma450_last > ma450_360_min_ago
 
                     and deviation_ma100_sopra_ma200 < -0.25
@@ -2381,7 +2393,7 @@ class maddog:
                     and macd_differenza_2_min_ago > -18.50
                   
                 ):
-                    buy = "BUY 1 con 450 > 6 ore ma ritracciando ( vedi ma20 < or ma33 < ) compra con 3-39 < -0.30 - riga 1043 Ax"
+                    buy = "BUY 1 con 450 > 6 ore ma ritracciando ( vedi ma20 < or ma33 < ) compra con 3-39 < -0.30 - r 1043 Ax"
                     action = "buy"
                     percentage = 50
                     
@@ -2389,6 +2401,8 @@ class maddog:
                     # 21 mar 2025 anticipata ndecchia
                     # 27 mar 2025 se ma5 STA SOTTO ma150 ritracciando ( vedi ma20< or ma33< ) compra con 3-39 < -0.30
                     # 27 mar 2025 se GIORNO and deviation_ma39 < -0.30
+                    # 30 mar 2025 and deviation_ma200_sotto_ma300 > -0.07 significa che sotto questa soglia non e' piu' un ritracciamento
+
 
 
                 elif (
@@ -17488,17 +17502,19 @@ class maddog:
 
                 # BUY 2 RIVOLUZIONARIO se ma39 > ma50
 
-
-                elif (
-                    
+                elif (    
                     ma3_last > ma11_last
                     and ma300_last > ma450_last or ma100_last > ma300_last
+
                     and ma20_last < ma50_last
+                    and deviation_ma200_sotto_ma300 > -0.07 or deviation_ma25_sotto_ma300 < -0.22
+                    
+                    and deviation_ma39 < -0.05
+                    and deviation_ma3_sotto_ma50 < -0.06
+
+
                     and deviation_ma5_sotto_ma200 < -0.15
-                    and deviation_ma3_sotto_ma50 < -0.04
-                    and macd_differenza_2_min_ago > -18.50
-
-
+                    
                     and ma450_last > ma450_360_min_ago
                     and delta_DNA_1 < delta_DNA_2
 
@@ -17523,6 +17539,9 @@ class maddog:
                     # 16 feb 2025 se anche ma100_last > ma100_120_min_ago anticipata ndecchiecella
                     # 28 feb 2025 GIORNO !
                     # 28 mar 2025 quando ritraccia vedi 20<50
+                    # 30 mar 2025 and deviation_ma200_sotto_ma300 > -0.07 ignifica che sotto questa soglia non si tratta piu' di ritracciamento.
+
+
 
                 elif (
                     ma3_last > ma18_last
@@ -20843,16 +20862,19 @@ class maddog:
 
                 elif (  
                     ma3_last > ma11_last
-                    and ma300_last > ma450_last or ma100_last > ma300_last
-                    and ma20_last < ma50_last
-                    and deviation_ma5_sotto_ma200 < -0.15
-                    and deviation_ma39 < -0.09
-                    and deviation_ma3_sotto_ma50 < -0.10
-                    and macd_differenza_2_min_ago > -18.50
-                    
 
+                    and ma300_last > ma450_last or ma100_last > ma300_last
+
+                    and ma20_last < ma50_last
+                    and deviation_ma200_sotto_ma300 > -0.07 or deviation_ma25_sotto_ma300 < -0.22
+                    
+                    and deviation_ma39 < -0.05
+                    and deviation_ma3_sotto_ma50 < -0.06
+
+                    and deviation_ma5_sotto_ma200 < -0.15
+                    
                     and ma450_last > ma450_120_min_ago
-                   
+                    and macd_differenza_2_min_ago > -18.50
                 ):    
                     buy = "BUY 3 con ma450_last > ma450_120_min_ago quando ritraccia vedi 20<50 - r 6270"
                     action = "buy"
@@ -20862,7 +20884,7 @@ class maddog:
                     #  3 ott 2024 compra solo se and ma28_last > ma28_30_min_ago
                     # 28 mar 2025 quando ritraccia ! vedi ma20 sotto ma50 !
                     # 30 mar 2025 tolto incrocio al rialzo 5-90 arrivava tardi ! ed era in contrasto con il buy durante il ritracciamento
-
+                    # 30 mar 2025 deviation_ma200_sotto_ma300 > -0.07 significa che sotto questo limite non e' piu' un ritracciamento !
                     
 
                 elif (
@@ -24550,7 +24572,7 @@ class maddog:
                     
                     and macd_differenza_2_min_ago > -18.50
                 ):
-                    buy = "BUY 4 GIORNO con 300> E ma100>ma200 squando ritraccia vedi 20<50 - r 6668 A1 Y1 Xx"
+                    buy = "BUY 4 GIORNO con 300> E ma100>ma200 quando ritraccia vedi 20<50 - r 6668 A1 Y1 Xx"
                     action = "buy"
                     percentage = 70
                     
@@ -26791,6 +26813,12 @@ class maddog:
                     
                 elif (    
                     ma3_last > ma18_last
+
+                    and ma20_last < ma50_last
+                    and deviation_ma200_sotto_ma300 > -0.07 or deviation_ma25_sotto_ma300 < -0.22
+                    
+                    and deviation_ma39 < -0.05
+                    and deviation_ma3_sotto_ma50 < -0.06
                     
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
                     and deviation_ma5_sopra_o_sotto_ma100 > -0.50
@@ -26808,12 +26836,14 @@ class maddog:
                     and macd_differenza_2_min_ago > -18.50
                  
                 ):
-                    buy = "BUY 4 con 3-20 se ma25_last > ma100_last - r 7063 NUOVA ERA A3 SOFT 1"
+                    buy = "BUY 4 con 3-20 - r 7063 NUOVA ERA A3 SOFT 1"
                     action = "buy"
                     percentage = 90
 
                     #  4 feb 2025 se ma25_last > ma100_last ANTICIPATO ndecchiecella
                     # 26 mar 2025 and macd_differenza_2_min_ago > -18.50
+                    # 30 mar 2025 se 20<50 allora deve essere deviation_ma39 < -0.05 and deviation_ma3_sotto_ma50 < -0.06
+
 
 
                 elif (
@@ -30124,7 +30154,13 @@ class maddog:
                     and ma450_last > ma450_720_min_ago
                     and ma20_last < ma50_last
                     and delta_1 > delta_2
+
+                    and deviation_ma200_sotto_ma300 > -0.07 or deviation_ma25_sotto_ma300 < -0.22
+                    
+                    and deviation_ma39 < -0.05
                     and deviation_ma3_sotto_ma50 < -0.06
+
+
                     and deviation_ma50_sopra_o_sotto_ma100 < -0.05
 
                     and ma200_last >= ma200_120_min_ago
@@ -30139,12 +30175,15 @@ class maddog:
                 ):   
                     buy = "BUY 5 che NON SPEZZA LA CATENA - NOTTE - SE ma200> 120 min con 3-50 < -0.06 - SE RITRACCIA - r 7410 A1 X2x"
                     action = "buy"
-                    percentage = 70
+                    percentage = 80
 
                     # 22 feb 2025 aggiunta and ma300_last > ma450_last
                     # 22 feb 2025 and delta_1 < delta_2
                     # 23 mar 2025 and deviation_ma3_sotto_ma50 < -0.06
                     # 29 mar 2025 SE RITRACCIA vedi ma20_last < ma50_last con ma450_last > ma450_720_min_ago
+                    # 30 mar 2025 se 200-300 < -0.07 NON E' PIU' UN RITRACCIAMENTO ! quindi devo dare un limite !
+                    # 30 mar 2025 PER QUESTA RAGIONE ho dovuto aggiungere and deviation_ma200_sotto_ma300 > -0.07
+
 
 
 
