@@ -50302,6 +50302,10 @@ class maddog:
                 action = "sell"
 
                 # 30 ott 2024 se 30 > 78 statte calmo
+            
+
+
+
 
             elif (
                 ma78_last < ma78_120_min_ago
@@ -50325,7 +50329,25 @@ class maddog:
                 and macd_differenza_2_min_ago < -1.35
                 
             ):
-                sell = "SELL CS GIORNO con ma300 < 5 ore E ma50 <= E 30<78 e dev 3-39 < 0.13 E dev_sell < 0.01 - r 16045 B2 Y2 Y1"
+                sell = "SELL CS GIORNO con ma300 < 5 ore E ma50 <= E 30<78 e dev 3-39 < 0.13 E dev_sell < 0.01 - r 16045 B2 Y2 Y1x"
+                action = "sell"
+
+
+            
+            elif (    
+                ma3_last < ma39_last
+                
+                and ma300_last < ma300_301_min_ago
+                and ma25_last < ma300_last
+                and deviation_sell > 0.70
+                
+                and ma20_last <= ma20_2_min_ago
+                
+                and ma2_last < ma2_2_min_ago 
+                
+                
+            ):
+                sell = "SELL CS con ma300 < 5 ore prenditi i soldi se sta guadagnando almeno 0.70 - r 16045 B2 Y2 Y1y"
                 action = "sell"
 
                 # 15 set 2023 quando 300 scende da 5 ore non devi vendere in perdita ! a ricomprare ci penseranno altre condizioni !
@@ -50342,6 +50364,12 @@ class maddog:
                 # 23 dic 2023 dev_sell < 0.03 se ma20 scende da 10 min
                 # 16 set 2024 macd_differenza_2_min_ago < -1.35 da -0.35
                 #  6 gen 2025 se e' giorno dev_sell < 0.01 da < 0.03
+
+
+
+
+
+
 
 
             elif (
