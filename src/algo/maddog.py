@@ -34598,9 +34598,27 @@ class maddog:
                         # 20 apr 2023 5-39 da 5-33
                         #  8 giu 2023 deviation_sell < -0.15 da < -0.13
                         
+                    
+                    #-------------------------------------------- nuova condizione 31 mar 2025
+
+                    elif (    
+                        ma50_last > ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 > 0.30
+                        and ma2_last < ma2_2_min_ago 
+                        and deviation_ma25 < -0.19
+                        and ma200_last > ma200_60_min_ago
+                    ):
+                        sell = "SELL 1 (21-50 min) con ma50 > and deviation_ma25 < -0.20 - r 9320"
+                        action = "sell"
+
+                        # 25 nov 2023 and deviation_ma100_sopra_ma300 > 0.30
+                        # 25 nov 2023 and deviation_ma25 < -0.19 da -0.20
+                        # 31 mar 2025 aggiunta questa nuova condizione
+
+
+
                     # -------------------------------------------------------------------------------------- guadagno durante il crollo LEGGERO
 
-                  
                     elif (
                         ma50_last < ma50_2_min_ago
                         and deviation_ma5_sotto_ma300 > -1.20
@@ -35123,9 +35141,29 @@ class maddog:
                         
                     
                     
-                    ############################################################################ ronaldo 60-90 min dal buy se ma200 > somiglia a maradona
                     
                     
+                    #-------------------------------------------- nuova condizione 31 mar 2025
+
+                    elif (    
+                        ma50_last > ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 > 0.30
+                        and ma2_last < ma2_2_min_ago 
+                        and deviation_ma25 < -0.19
+                        and ma200_last > ma200_60_min_ago
+                    ):
+                        sell = "SELL 1 (50-90 min) con ma50 > and deviation_ma25 < -0.20 - r 9500"
+                        action = "sell"
+
+                        # 25 nov 2023 and deviation_ma100_sopra_ma300 > 0.30
+                        # 25 nov 2023 and deviation_ma25 < -0.19 da -0.20
+                        # 31 mar 2025 aggiunta questa nuova condizione
+
+
+
+
+                    ######################################################## ronaldo 60-90 min dal buy se ma200 > somiglia a maradona
+
                     elif (
                         ma50_last > ma50_2_min_ago
                         and ma300_last > ma300_120_min_ago
