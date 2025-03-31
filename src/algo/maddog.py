@@ -1,4 +1,6 @@
 
+
+
 # A.D. 2024 
 # sono 20 anni compa !
 # ave compa !
@@ -174,8 +176,11 @@ SE DOPO UN LUNGO RIALZO COMINCIA A CURVARE VERSO IL BASSO !
 
 and ma450_last > ma450_360_min_ago
 
-and delta_DNA_1 < delta_DNA_2                .........GIORNO !
-and delta_DNA_1 > delta_DNA_2                .........NOTTE !
+and delta_DNA_1 < delta_DNA_2                .........GIORNO ! 
+and delta_DNA_1 > delta_DNA_2                .........NOTTE !  
+
+delta_DNA_1 = ma250_last / ma150_last
+delta_DNA_2 = ma250_60_min_ago / ma150_60_min_ago
         
 se GIORNO ok cosi'
 se NOTTE osso 3-50
@@ -30657,6 +30662,38 @@ class maddog:
                     
                     
                 
+                elif (    
+                    ma3_last > ma15_last
+                    and ma450_last < ma450_480_min_ago
+
+                    and deviation_ma5_sotto_ma450 < -0.49
+                    and delta_DNA_1 < delta_DNA_2
+                    and deviation_ma200_sotto_ma300 > -0.10
+                    and deviation_ma39 < -0.06
+                    and deviation_ma3_sotto_ma50 < -0.09
+                    
+                    and ma78_last < ma150_last
+                    and ma200_last < ma300_last
+                    
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_120_min_ago
+                  
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    
+                    and macd_differenza_2_min_ago > -18.50
+                ):
+                    buy = "BUY 5 - condizione 31 mar 2025 ! > 480 min di ribasso ma finalmente cominciano a migliorare le condizioni - r 7550"
+                    action = "buy"
+                    percentage = 90
+                    
+                    # 31 mar 2025 aggiunta questa condizione MA DEVO SPIEGARTELA !
+                    # and ma450_last < ma450_480_min_ago stiamo in un CHIARO ED EVIDENTE trend ribassista 
+                    
+                    # and delta_DNA_1 < delta_DNA_2 significa CHE STANNO COMINCIANDO AD AVVICINARSI DOPO TANTO TEMPO 150-250
+                    # and deviation_ma200_sotto_ma300 > -0.10 significa CHE ANCHE LA ma200 finalmente NON E' DISTANTE DALLA ma300 !
+
+
+
                 elif (    
                     ma3_last > ma18_last
 
