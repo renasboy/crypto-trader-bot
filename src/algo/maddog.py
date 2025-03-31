@@ -2031,10 +2031,9 @@ class maddog:
 
                 if (  
                     ma3_last > ma8_last
-                    and ma39_last > ma450_last
-                    and ma100_last > ma300_last
-                    and ma300_last > ma300_120_min_ago
                     
+                    and ma100_last > ma200_last
+                    and ma300_last > ma300_301_min_ago
                     
                     and deviation_ma3_sopra_ma10 > 0.01
                     
@@ -2043,7 +2042,7 @@ class maddog:
                     # and adx > -0.90
                 ):    
               
-                    buy = "BUY 1 con ma300_last > ma300_120_min_ago e 100>300 - r 916 A1 x"
+                    buy = "BUY 1 con ma300_last > ma300_301_min_ago e 100>200 - r 916 A1 x"
                     action = "buy"
                     percentage = 90
 
@@ -2051,7 +2050,7 @@ class maddog:
                     #  5 dic 2025 anticipata ndecchia
                     # 28 gen 2025 3-90 per anticipare di una ndecchiecella il 4-100
                     # 30 mar 2025 anticipata visto che 300 sale da 2 ore !
-
+                    # 31 mar 2025 anticipata ndecchiecella
 
 
 
