@@ -452,7 +452,7 @@ class maddog:
 
         # rsi
 
-        rsi = self.algo_helper.rsi
+        # rsi = self.algo_helper.rsi
 
 
 
