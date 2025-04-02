@@ -2410,12 +2410,13 @@ class maddog:
 
 
                 elif (
-                    ma3_last > ma18_last
+                    ma3_last > ma13_last
                     and delta_1 > delta_2
                     and ma5_last < ma150_last
                     and ma20_last < ma20_2_min_ago or ma33_last < ma33_3_min_ago
+
                     and deviation_ma39 < -0.45
-                    and deviation_ma3_sotto_ma50 < -0.05
+                    and deviation_ma3_sotto_ma50 < -0.25
 
                     and ma450_last > ma450_360_min_ago
 
@@ -2433,7 +2434,7 @@ class maddog:
                     and macd_differenza_2_min_ago > -18.50
                   
                 ):
-                    buy = "BUY 1 con 450 > 6 ore ma ritracciando ( vedi ma20 < or ma33 < ) compra con 3-39 < -0.30 - riga 1043 Ay"
+                    buy = "BUY 1 con 450 > 6 ore ma ritracciando ( vedi ma20 < or ma33 < ) compra con 3-50 < -0.25 - riga 1043 Ay"
                     action = "buy"
                     percentage = 50
                     
@@ -2441,7 +2442,7 @@ class maddog:
                     # 21 mar 2025 anticipata ndecchia
                     # 27 mar 2025 se ma5 STA SOTTO ma150 ritracciando ( vedi ma20< or ma33< ) compra con 3-39 < -0.30
                     # 27 mar 2025 se NOTTE and deviation_ma39 < -0.45
-                    
+                    #  2 apr 2025 and deviation_ma3_sotto_ma50 < -0.25
                     
                     
                 
@@ -7863,6 +7864,8 @@ class maddog:
                     buy = "BUY 1 INVERNO che considera passare tempo con 100 < 100 30 min ago + NUOVE CONDIZIONI GRAFANA - r 1688"
                     action = "buy"
                     percentage = 90
+
+
                     
                     
                 # BUY 1 con ma200< e 300< MA doppio delta < and ma100 >60_min_ago STA RISALENDO !
@@ -14408,8 +14411,8 @@ class maddog:
                 
                 elif (
                     
-                    ma8_last > ma50_last
-                    
+                    ma3_last > ma13_last
+                    and deviation_ma3_sotto_ma50 < -0.25
                     
                     and deviation_ma10_sopra_ma200 < -0.25
                     and deviation_ma10_sopra_ma200 > -0.40
@@ -14423,20 +14426,17 @@ class maddog:
                     and ma200_last < ma200_60_min_ago
                     
                     and deviation_ma3_sopra_ma10 > 0.01
-                    and deviation_ma5_sopra_ma28 > 0.04
+                    and deviation_ma5_sopra_ma28 > -0.03
                     
-                    and ma2_last >= ma2_2_min_ago
-                    and macd >= macd_2_min_ago
-                    and macd >= macd_3_min_ago
-                    and macd > 1
+                    and macd_differenza_2_min_ago > -18.50
                 ):
-                    buy = "BUY 2 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-50 - formula MY COMPA and macd >= macd_3_min_ago and macd > 1 - r 4743 C"
+                    buy = "BUY 2 con distanza 5-300 e dev 10-200 < -0.24 AND 8-50 - formula MY COMPA - r 4743 C"
                     action = "buy"
                     percentage = 80
                     
                     # 30 ago 2023 and macd > 3 min ago
                     # 30 ago 2023 and macd > 1
-    
+                    #  2 apr 2025 and deviation_ma3_sotto_ma50 < -0.25
 
                 
                 elif (    
@@ -23400,7 +23400,8 @@ class maddog:
                     and delta_1 < delta_2
                    
                     and deviation_ma5_sotto_ma300 < -0.40
-                    
+                    and deviation_ma3_sotto_ma50 < -0.25
+
                     and ma100_last < ma100_180_min_ago
                     and ma200_last < ma200_180_min_ago
                     and ma300_last < ma300_180_min_ago
@@ -23411,7 +23412,7 @@ class maddog:
                     and deviation_ma3_sopra_ma10 > 0.005
                     and deviation_ma3_sopra_ma16 > -0.077
                     
-                    and macd_differenza_2_min_ago > -2.50
+                    and macd_differenza_2_min_ago > -18.50
                     
                 ):
                     buy = "BUY 3 GIORNO > 180 min di ribasso - r 6572 Bx A"
@@ -23424,6 +23425,8 @@ class maddog:
                     #  2 mar 2025 ho voluto tenerla - ma avrei potuto modificare con COMINCIA A SCENDERE !
                     #  2 mar 2025 intanto ho anticipato di una ndecchiecella
                     # 11 mar 2025 anticipata ndecchiecella e aggiunta GIORNO
+                    #  2 apr 2025 and deviation_ma3_sotto_ma50 < -0.25 cazzo
+
                 
                 elif (    
                     ma5_last > ma50_last
@@ -26822,7 +26825,7 @@ class maddog:
                     and deviation_ma200_sotto_ma300 > -0.07 or deviation_ma25_sotto_ma300 < -0.22
                     
                     and deviation_ma39 < -0.05
-                    and deviation_ma3_sotto_ma50 < -0.06
+                    and deviation_ma3_sotto_ma50 < -0.25
                     
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
                     and deviation_ma5_sopra_o_sotto_ma100 > -0.50
@@ -26847,7 +26850,7 @@ class maddog:
                     #  4 feb 2025 se ma25_last > ma100_last ANTICIPATO ndecchiecella
                     # 26 mar 2025 and macd_differenza_2_min_ago > -18.50
                     # 30 mar 2025 se 20<50 allora deve essere deviation_ma39 < -0.05 and deviation_ma3_sotto_ma50 < -0.06
-
+                    #  2 apr 2025 and deviation_ma3_sotto_ma50 < -0.25 da -0.05
 
 
                 elif (
@@ -30188,8 +30191,10 @@ class maddog:
                     and ma39_last < ma100_last
                     and deviation_ma25_sotto_ma300 < -1.70
                     and deviation_ma50_sotto_ma300 < -1.10
+
                     and deviation_ma39 < -0.20
                     and deviation_ma3_sotto_ma50 < -0.40
+
                     and deviation_ma5_sopra_o_sotto_ma100 < -1.30
                     and deviation_ma5_sotto_ma200 < -1.60
                     and deviation_ma5_sotto_ma300 < -1.80
@@ -30200,8 +30205,6 @@ class maddog:
                     
                     and deviation_ma3_sopra_ma10 > 0.01
                     and deviation_ma3_sopra_ma16 > -0.01
-
-
 
                     and delta_1 > delta_2
 
