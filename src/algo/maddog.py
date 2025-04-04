@@ -19949,20 +19949,26 @@ class maddog:
                     ma3_last > ma15_last
 
                     and ma450_last > ma450_720_min_ago
-                    and ma78_last < ma150_last
-
-                    and deviation_ma100_sopra_ma200 < -0.25
-                    and deviation_ma25_sotto_ma300 < -0.70
-                    and deviation_ma50_sotto_ma100 < -0.25
-                    and deviation_ma3_sotto_ma50 < -0.30
-
-
-                    
-                    and deviation_ma5_sopra_ma59 < -0.10
 
                     and ma39_last < ma100_last
+                    and ma78_last < ma150_last
                     
-                    and ma100_last < ma100_60_min_ago
+                    and deviation_ma300_sopra_ma450 < -0.22
+
+                    and deviation_ma50_sotto_ma100 < -0.25
+                    and deviation_ma100_sopra_ma200 < -0.75
+                    and deviation_ma25_sotto_ma300 < -1.25
+                    
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > -0.06
+                    
+                    and deviation_ma39 < -0.30
+                    and deviation_ma3_sotto_ma50 < -0.30
+
+                    and deviation_ma5_sopra_ma59 < -0.10
+                    and deviation_ma5_sotto_ma300 < -0.10
+
                     and ma100_last < ma100_180_min_ago
                     and ma200_last < ma200_180_min_ago
                     and ma300_last < ma300_180_min_ago
@@ -19970,11 +19976,13 @@ class maddog:
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
                     
-                    and deviation_ma3_sopra_ma10 > 0.01
                     
+                    and ma2_last > ma5_last
                     and ma2_last > ma10_last
-                    and macd_differenza_2_min_ago > -5.50
                     
+                    
+
+                    and macd_differenza_2_min_ago > -18.50
                 ):
                     buy = "BUY 2 modificato importando un vecchio pensiero laterale + distanza al ribasso - r 6002"
                     action = "buy"
@@ -19983,7 +19991,7 @@ class maddog:
                     #  4 feb 2025 aggiunta
                     # 21 mar 2025 se ma39_last < ma100_last aggiunta dstanza al ribasso
                     # 25 mar 2025 articolando distanza al ribasso
-
+                    #  4 apr 2025 modificata
                 
 
 
@@ -20893,8 +20901,8 @@ class maddog:
                     and ma20_last < ma50_last
                     and deviation_ma200_sotto_ma300 > -0.07 or deviation_ma25_sotto_ma300 < -0.22
                     
-                    and deviation_ma39 < -0.05
-                    and deviation_ma3_sotto_ma50 < -0.07
+                    and deviation_ma39 < -0.75
+                    and deviation_ma3_sotto_ma50 < -0.75
 
                     and deviation_ma5_sotto_ma200 < -0.15
                     
@@ -20911,6 +20919,10 @@ class maddog:
                     # 30 mar 2025 tolto incrocio al rialzo 5-90 arrivava tardi ! ed era in contrasto con il buy durante il ritracciamento
                     # 30 mar 2025 deviation_ma200_sotto_ma300 > -0.07 significa che sotto questo limite non e' piu' un ritracciamento !
                     #  3 apr 2025 and deviation_ma3_sotto_ma50 < -0.07 da -0.06
+                    #  4 apr 2025 and deviation_ma3_sotto_ma50 < -0.75 da -0.07
+                    #  4 apr 2025 and deviation_ma39 < -0.75 da -0.06
+
+
 
                 elif (
                     deviation_ma4_sopra_ma30 > 0.15
@@ -24580,21 +24592,18 @@ class maddog:
                 
                 elif (
                     ma3_last > ma11_last
+                    and ma5_last > ma300_last or delta_DNA_1 < delta_DNA_2 or ma100_last > ma200_last or ma200_last > ma300_last
+                    and ma300_last > ma450_last or ma100_last > ma300_last
 
-                    and ma450_last > ma450_720_min_ago
                     and ma20_last < ma50_last
-                    and delta_1 > delta_2
+                    and ma450_last > ma450_720_min_ago
+                    and ma300_last > ma300_301_min_ago
+                    
 
                     and deviation_ma39 < -0.07
                     and deviation_ma3_sotto_ma50 < -0.09
 
                     and deviation_ma50_sopra_o_sotto_ma100 < -0.05
-                    
-                    and ma300_last > ma450_last or ma100_last > ma300_last
-                    
-                    and deviation_ma5_sotto_ma200 < -0.15
-                    
-                    and ma300_last > ma300_301_min_ago
                     
                     and ma3_last > ma9_last
                     
@@ -24613,6 +24622,13 @@ class maddog:
                     # 30 mar 2025 ho aumentato 3-39 e 3-50
                     #  3 apr 2025 and deviation_ma39 < -0.07 da 0.06
                     #  3 apr 2025 and deviation_ma3_sotto_ma50 < -0.09 da 0.08
+                    #  4 apr 2025 and ma5_last > ma300_last or delta_DNA_1 < delta_DNA_2 or ma100_last > ma200_last or ma200_last > ma300_last
+
+                    #  4 apr 2025 RIPETO : e' un ritracciamento se ma5_last > ma300_last
+                    #  4 apr 2025 RIPETO : e' un ritracciamento se delta_DNA_1 < delta_DNA_2
+                    #  4 apr 2025 RIPETO : e' un ritracciamento se ma100_last > ma200_last
+                    #  4 apr 2025 RIPETO : e' un ritracciamento se ma200_last > ma300_last
+
 
 
                 elif (
