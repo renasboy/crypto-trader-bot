@@ -7,6 +7,15 @@
 
 
 """
+and deviation_ma200_sotto_ma300 < -1.00
+and deviation_ma25_sotto_ma300 < -2.00
+and deviation_ma50_sotto_ma300 < -2.20
+and deviation_ma5_sotto_ma450 < -3.00
+
+
+
+
+
 
 importante ! da r 7063 NUOVA ERA A3 SOFT 1 in poi ore 3:05 del 4 apr 2025
 
@@ -29,11 +38,11 @@ OR SE ma200_last < ma300_last ...............non e' piu' un ritracciamento
 
 
 
-and deviation_ma200_sotto_ma300 > -0.07
-and deviation_ma25_sotto_ma300 < -0.22
+
+
+
 and deviation_ma39 < -0.05
 and deviation_ma3_sotto_ma50 < -0.06
-
 
 
 
@@ -28592,7 +28601,7 @@ class maddog:
                     #  5 gen 2025 tolta ma2 > ma2 2 min ago
                     # 21 mar 2025 aggiunta distanza al ribasso
                     #  7 apr 2025 e' andata BENISSIMO !
-                    #  7 apr 2025 ma ho portato 3-50 < -1.00 da -0.30 era -1.63 !
+                    #  7 apr 2025 ma ho portato 3-50 < -1.00 da -0.30 ( sul mercato era -1.63 !)
 
 
 
@@ -31888,10 +31897,9 @@ class maddog:
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
                     
-                    and macd >= -70
-                    and macd_differenza_2_min_ago > -2.50
+                    and macd_differenza_2_min_ago > -18.50
                 ):
-                    buy = "BUY 5 29 ago 2022 > 180 min ribasso CON 5-300 < -1.20 E 78<150 + cano STAF + circello- r 7564 B2 Y2 y"
+                    buy = "BUY 5 29 ago 2022 > 180 min ribasso CON 5-300 < -1.20 E 78<150 + cano STAF + circello - r 7564 B2 Y2 y"
                     action = "buy"
                     percentage = 90
                     
@@ -31916,12 +31924,52 @@ class maddog:
                     #  2 ott 2024 e' una condizione che ha continuato a comprare diverse volte durante il ribasso !
                     # 22 feb 2025 aggiunta continua a scendere circello
 
+
+
+
+
                 
               
+                
+                elif ( 
+                    ma3_last > ma10_last
+
+                    and ma78_last < ma150_last
+                    and ma100_last < ma450_last
+
+                    and deviation_ma5_sotto_ma300 < -2.00
+                    and deviation_ma25_sotto_ma300 < -2.00
+                    and deviation_ma50_sotto_ma300 < -2.20
+                    and deviation_ma200_sotto_ma300 < -1.00
+                    and deviation_ma5_sotto_ma450 < -3.00
+                    and deviation_ma300_sopra_ma450 < -0.22
+
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > -0.08
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    and ma200_last < ma200_180_min_ago
+                    and ma300_last < ma300_180_min_ago
+                    
+                    and macd_differenza_2_min_ago > -18.50
+                ):
+                    buy = "BUY 7 apr 2025 in pieno ribasso con 78<150 + cano STAF + roma - r 7580"
+                    action = "buy"
+                    percentage = 90
+
+                    #  7 apr 2025 nuova condizione che mancava !
+
+
+
+
+                
                 # NELLA CORREZIONE EVENTUALE (SIAMO AL BUY 5 !) qui NON HO messo and ma50_last > ma100_last
                 
                 # BUY 5 DURANTE UNA piccola CORREZIONE che NON E' un forte ribasso e NON E' un crollo ! (compare stammi vicino!)
-                
+
                 elif (    
                     ma3_last > ma39_last
                         
@@ -54071,10 +54119,51 @@ class maddog:
             ################################################################################# dopo crollo improvviso del 24 aprile 2022
 
             # 17 - SELL condizione speciale dopo crollo improvviso del 24 aprile 2022 ! and deviation_ma5_sotto_ma200 > -1.00
-                  
+
+
             elif (    
                 ma2_last < ma4_last
                 and ma2_last < ma6_last
+                and ma3_last > ma39_last
+
+                and ma33_last > ma78_last
+                
+                and delta_1_200_30 < delta_2_200_30_30_min
+                
+                and deviation_crollo_24_aprile < -0.225
+                
+                and deviation_ma5_sotto_ma200 > -1.00
+            ): 
+                
+                sell = "SELL CS - DOPO CROLLO IMPROVVISO del 24 aprile 2022 con 3>39 and dev_ma5_sotto_ma200 > -1.00 - giorno - r 16369 A1x"
+                action = "sell"
+
+                # ho aggiunto anche questa vendita speciale dopo il 24 aprile -1%
+                # deviation_crollo_24_aprile = ma2_last / last_trade_price        
+                # -0.58 ha generato perdita -0.82 il 10 maggio 2022 cosi' ho ridotto a -0.575
+                # -0.575 ha generato perdita -1.12 il 10 maggio 2022 cosi' ho ridotto a -0.57
+                # -0.57 ha generato perdita -1.37 il 12 maggio 2022 cosi' ho ridotto a -0.56
+                # -0.56 ha generato perdita -1.19 il 13 maggio 2022 cosi' ho ridotto a -0.55
+                
+                # con delta_1_200_30 < delta_2_200_30_30_min ho aumentato a -0.56
+                # -0.56 HA GENERATO PERDITA DI -1.42 il 22 luglio 2022 ! cazzo !
+                
+                # 21 giu 2022 a -0.56 da -0.57
+                # 22 lug 2022 a -0.55 da -0.56 dopo grande perdita !
+                # ATTENZIONE ! 22 lug 2022 questa condizione ha fatto -1.42 % !!! per fortuna RCCR ha fatto -0.52 e l' ho portata in MADDOG
+                # 25 GEN 2023 a -0.54 da -0.55 dopo grande perdita -1.43 % ore 16:00 del 23 gennaio 2023 !
+                # 10 gen 2024 and deviation_crollo_24_aprile < -0.24 da -0.54 dopo che ha fatto -1.13% il giorno 10 genn 2024 alle ore 22:17
+                # 11 feb 2024 and deviation_crollo_24_aprile < -0.23 da -0.24 va tutto bene
+                # 12 nov 2024 and deviation_crollo_24_aprile < -0.22 da -0.23
+                #  7 apr 2025 SE 3>39 OPPURE SE 3<39
+
+                
+
+            elif (    
+                ma2_last < ma4_last
+                and ma2_last < ma6_last
+                and ma3_last < ma39_last
+
                 and ma33_last > ma78_last
                 
                 and delta_1_200_30 < delta_2_200_30_30_min
@@ -54084,7 +54173,7 @@ class maddog:
                 and deviation_ma5_sotto_ma200 > -1.00
             ): 
                 
-                sell = "SELL CS - DOPO CROLLO IMPROVVISO del 24 aprile 2022 - and dev_ma5_sotto_ma200 > -1.00 - giorno E 33>78 - r 16369 A1"
+                sell = "SELL CS - DOPO CROLLO IMPROVVISO del 24 aprile 2022 con 3<39 and dev_ma5_sotto_ma200 > -1.00 - giorno - r 16369 A1x"
                 action = "sell"
                         
                 # ho aggiunto anche questa vendita speciale dopo il 24 aprile -1%
@@ -54104,7 +54193,7 @@ class maddog:
                 # 10 gen 2024 and deviation_crollo_24_aprile < -0.24 da -0.54 dopo che ha fatto -1.13% il giorno 10 genn 2024 alle ore 22:17
                 # 11 feb 2024 and deviation_crollo_24_aprile < -0.23 da -0.24 va tutto bene
                 # 12 nov 2024 and deviation_crollo_24_aprile < -0.22 da -0.23
-
+                #  7 apr 2025 SE 3>39 OPPURE SE 3<39
 
 
 
