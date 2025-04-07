@@ -14665,14 +14665,16 @@ class maddog:
 
                     #  3 feb 2025 anticipata ndecchiecella
                     #  3 feb 2025 and deviation_ma5_sotto_ma300 < -0.40 da < -0.30
+
+
                 
                 elif (    
-                    ma3_last > ma18_last
+                    ma3_last > ma13_last
                     
                     and ma100_last < ma100_10_min_ago
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.12
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.60
-                    and ma3_last > ma39_last
+                    
                     
                     and ma450_last < ma450_360_min_ago
                     and ma300_last < ma300_60_min_ago
@@ -14684,20 +14686,18 @@ class maddog:
                     and deviation_ma50_sopra_o_sotto_ma100 < -0.01
                     and deviation_ma100_sopra_ma300 < -0.10
                     
-                    and deviation_ma3_sopra_ma10 > 0.081
+                    and deviation_ma3_sopra_ma10 > 0.01
                     and deviation_ma3_sopra_ma16 > -0.125
-                    and deviation_ma5_sopra_ma28 > -0.155
                     
-                    and ma2_last >= ma2_2_min_ago
-                    and ma2_differenza_2_min_ago > 7
-                    and macd >= macd_2_min_ago
+                    and macd_differenza_2_min_ago > -18.50
+                    
                 ):
-                    buy = "BUY 2 IMPORTATA da BUY 1 r 1043 B2 considera distanza 5-300 E dev 10-200 < -0.24 E dev 3-18 and dev_ma3_sopra_ma16 > -0.125 - r 4760 NUOVA ERA A3 STRONG"
+                    buy = "BUY 2 che considera 5-300 E dev 10-200 < -0.24 - r 4760 NUOVA ERA A3 STRONG"
                     action = "buy"
                     percentage = 50
                     
                     #  7 dic 2023 aggiunta and ma2_differenza_2_min_ago
-                
+                    #  7 apr 2025 tolte sovrastrutture per anticipare
                 
                     
                 
@@ -16527,22 +16527,34 @@ class maddog:
                     
                     
                     
+
+
+
+
+
                 # BUY 2 che ci riprova TORNANDO ALLE ORIGINI (TREND RIBASSO !) con ma200< and ma300< AND 5 molto sotto 300
                 
                 elif (
                     ma3_last > ma13_last
 
+                    and ma39_last < ma100_last
+                    and ma78_last < ma200_last
+                    
+                    and deviation_ma3_sotto_ma50 < -1.20
+
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                  
+                    and ma100_last < ma100_120_min_ago
                     and ma200_last < ma200_120_min_ago
                     and ma300_last < ma300_120_min_ago
-
-                    and delta_1 < delta_2
-
+                    
                     and deviation_ma100_sopra_ma300 < -0.20
                     and deviation_ma5_sotto_ma300 < -0.70
                     
                     and ma3_last > ma10_last
                     
-                    and macd_differenza_2_min_ago > -2.50
+                    and macd_differenza_2_min_ago > -12.50
                 ):
                
                     buy = "BUY 2 che ci riprova TORNANDO ALLE ORIGINI (TREND RIBASSO !) con ma200< and ma300< AND 5 molto sotto 300 - r 5531 B"
@@ -24892,10 +24904,51 @@ class maddog:
                     # se al BUY 4 ha ma100 < ma200 evidentemente c'e' qualche cosa di strano 
                     # il trend, evidentemente, e' LATERALE.
                     # E ALLORA AGGIUNGO UN BEL 6-30 > 0.15 - TREND LATERALE
+
+
+
+
              
                 
                 
-                
+                elif (    
+                    ma3_last > ma18_last
+
+                    and deviation_ma3_sotto_ma50 < -0.30
+
+                    and ma450_last < ma450_120_min_ago
+                    and ma200_last < ma300_last
+                    
+                    and ma39_last < ma100_last
+                    and deviation_ma25_sotto_ma300 < -0.22
+                    and deviation_ma50_sotto_ma300 < -0.22
+
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.01
+                    and deviation_ma5_sotto_ma200 < -0.13
+                    and deviation_ma5_sotto_ma300 < -0.20
+                    and deviation_ma5_sotto_ma450 < -0.21
+                    and deviation_ma300_sopra_ma450 < -0.072
+
+                    and ma50_last < ma50_2_min_ago
+
+                    and deviation_ma100_sopra_ma300 < 0.25
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    
+                    and ma2_last > ma5_last
+                    and ma3_last > ma8_last
+                    
+                    and macd_differenza_2_min_ago > -8.50
+                    
+                ):
+                    buy = "BUY 4 ma450_last < ma450_120_min_ago con DNAM + distanza al ribasso - r 6669"
+                    action = "buy"
+                    percentage = 80
+
+                    # 7 apr 2025 nuova condizione
+
+
+
                 elif (
                     ma3_last > ma18_last
 
@@ -26729,7 +26782,47 @@ class maddog:
                     #  5 ott 2023 and deviation_ma5_sopra_o_sotto_ma100 < -0.05 ( per comprare meglio, perche' la precedente 7039 B2 comprava tardi !) 
                     #  5 ott 2023 and macd >= macd_2_min_ago
                     
-                # BUY 4 DURANTE UNA CORREZIONE FIAT importata da buy 1 r 2575 che non e' un forte ribasso e non e' un crollo ! (MA ma3 > ma150 mi protegge un po')
+                
+
+
+                elif (    
+                    ma3_last > ma18_last
+
+                    and ma39_last < ma100_last
+                    and deviation_ma3_sotto_ma50 < -1.20
+
+                    and ma450_last < ma450_120_min_ago
+                    and ma200_last < ma300_last
+                    
+                    
+                    and deviation_ma25_sotto_ma300 < -0.22
+                    and deviation_ma50_sotto_ma300 < -0.22
+
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.01
+                    and deviation_ma5_sotto_ma200 < -0.13
+                    and deviation_ma5_sotto_ma300 < -0.20
+                    and deviation_ma5_sotto_ma450 < -0.21
+                    and deviation_ma300_sopra_ma450 < -0.072
+
+                    and ma50_last < ma50_2_min_ago
+
+                    and deviation_ma100_sopra_ma300 < 0.25
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    
+                    and ma2_last > ma5_last
+                    and ma3_last > ma8_last
+                    
+                    and macd_differenza_2_min_ago > -18.50
+                    
+                ):
+                    buy = "BUY 4 con ma450_last < ma450_120_min_ago con DNAM + distanza al ribasso vedi 3-50 < -1.20 ! - r 7045"
+                    action = "buy"
+                    percentage = 80
+
+                    #  7 apr 2025 NUOVA CONDIZIONE cazzo vedi che bello quel 3-50 < -1.20 ! HA FUNZIONATO BENISIMO NEL BUY 5
+
+
 
                 elif (
 
