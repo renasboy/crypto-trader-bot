@@ -28554,7 +28554,7 @@ class maddog:
                 elif (    
                     ma3_last > ma18_last
 
-                    and deviation_ma3_sotto_ma50 < -0.30
+                    and deviation_ma3_sotto_ma50 < -1.00
 
                     and ma450_last < ma450_120_min_ago
                     and ma200_last < ma300_last
@@ -28578,7 +28578,7 @@ class maddog:
                     and ma2_last > ma5_last
                     and ma3_last > ma8_last
                     
-                    and macd_differenza_2_min_ago > -2.50
+                    and macd_differenza_2_min_ago > -8.50
                     
                 ):
                     buy = "BUY 5 ma450_last < ma450_120_min_ago con DNAM + distanza al ribasso - r 7144 A2 X1Bx"
@@ -28591,6 +28591,8 @@ class maddog:
                     #  5 gen 2025 aggiunta and deviation_ma300_sopra_ma450 < -0.072
                     #  5 gen 2025 tolta ma2 > ma2 2 min ago
                     # 21 mar 2025 aggiunta distanza al ribasso
+                    #  7 apr 2025 e' andata BENISSIMO !
+                    #  7 apr 2025 ma ho portato 3-50 < -1.00 da -0.30 era -1.63 !
 
 
 
