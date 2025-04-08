@@ -20968,7 +20968,11 @@ class maddog:
                     ma3_last > ma11_last
                     
                     and ma20_last < ma50_last
+                    and deviation_ma3_sotto_ma50 < -0.30
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.15
+
                     and ma3_last < ma100_last
+
                     and ma5_last > ma300_last or delta_DNA_1 < delta_DNA_2 or ma100_last > ma200_last or deviation_ma200_sotto_ma300 > -0.10
 
                     and deviation_ma5_sotto_ma200 < -0.15
@@ -20984,7 +20988,7 @@ class maddog:
                 ):    
                     buy = "BUY 3 con ma450_last > ma450_120_min_ago con 20<50 vedi condizioni ritracciamento - r 6270"
                     action = "buy"
-                    percentage = 70
+                    percentage = 80
                     
                     # 13 feb 2023 aggiunta questa
                     #  3 ott 2024 compra solo se and ma28_last > ma28_30_min_ago
@@ -21000,7 +21004,7 @@ class maddog:
                     #  6 apr 2025 aggiunto and deviation_ma100_sopra_ma300 < -0.30 
                     #  6 apr 2025 aggiunto and deviation_ma25_sotto_ma300 < -0.30
                     #  8 apr 2025 se ritraccia 3 DEVE STARE SOTTO 100 non c'e' niente da fare !
-
+                    #  8 apr 2025 aggiunto basi del ritracciamento
 
 
                 elif (
@@ -24681,7 +24685,11 @@ class maddog:
                 
                 elif (
                     ma3_last > ma11_last
+
                     and ma20_last < ma50_last
+                    and deviation_ma3_sotto_ma50 < -0.30
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.15
+
                     and ma3_last < ma100_last
 
                     and ma5_last > ma300_last or delta_DNA_1 < delta_DNA_2 or ma100_last > ma200_last or ma200_last > ma300_last
@@ -24722,6 +24730,8 @@ class maddog:
                     #  7 apr 2025 and deviation_ma39 < -0.30 da 0.07
                     #  7 apr 2025 and deviation_ma3_sotto_ma50 < -0.30 da 0.09
                     #  8 apr 2025 se ritraccia 3 DEVE STARE SOTTO 100 non c'e' niente da fare !
+                    #  8 apr 2025 aggiunto le basi del ritracciamento
+
 
                 elif (
                     ma3_last > ma11_last
@@ -30644,8 +30654,11 @@ class maddog:
                     #  7 apr 2025 aggiunta questa che mancava !
 
 
+
+
                 elif (
                     ma3_last > ma8_last
+                    and ma20_last > ma50_last
 
                     and ma200_last >= ma200_120_min_ago
                     and ma300_last >= ma300_60_min_ago
@@ -30657,13 +30670,38 @@ class maddog:
                     
                     and macd_differenza_2_min_ago > -18.50
                 ):   
-                    buy = "BUY 5 che NON SPEZZA LA CATENA - GIORNO - SE ma200> 120 min con 3-10 > 0.01 e 5-28 > -0.10 - r 7410 A2 x2"
+                    buy = "BUY 5 che NON SPEZZA LA CATENA - GIORNO - SE ma200> 120 min con 3-10 > 0.01 e 5-28 > -0.10 - r 7410 A2 x2x"
                     action = "buy"
                     percentage = 80
 
                     # 27 mar 2025 se GIORNO ok cosi'
+                    #  8 apr 2025 con 20>50
 
 
+                elif (
+                    ma3_last > ma8_last
+
+                    and ma20_last < ma50_last
+                    and deviation_ma3_sotto_ma50 < -0.30
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.15
+
+                    and ma200_last >= ma200_120_min_ago
+                    and ma300_last >= ma300_60_min_ago
+
+                    and delta_1 < delta_2
+                  
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma5_sopra_ma28 > -0.12
+                    
+                    and macd_differenza_2_min_ago > -18.50
+                ):   
+                    buy = "BUY 5 che NON SPEZZA LA CATENA - GIORNO - SE ma200> 120 min con 3-10 > 0.01 e 5-28 > -0.10 - r 7410 A2 x2y"
+                    action = "buy"
+                    percentage = 80
+
+                    # 27 mar 2025 se GIORNO ok cosi'
+                    #  8 apr 2025 con 20<50 ritracciamento
+                    #  8 apr 2025 aggiunto le basi del ritracciamento
 
 
 
