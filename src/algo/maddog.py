@@ -7,6 +7,8 @@
 
 
 """
+il sistema sembra rotto.
+
 
 #  8 apr 2025 se ritraccia (20<50) ma3 DEVE STARE SOTTO ma100 non c'e' niente da fare !
 
