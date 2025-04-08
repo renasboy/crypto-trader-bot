@@ -17743,7 +17743,7 @@ class maddog:
                     #  3 apr 2025 and deviation_ma3_sotto_ma50 < -0.25 da -0.06
                     #  6 apr 2025 aggiunto and deviation_ma100_sopra_ma300 < -0.30
                     #  6 apr 2025 aggiunto and deviation_ma25_sotto_ma300 < -0.30
-                    #  8 apr 2025 le basi del ritracciamento ci sono perche' anche 100< 100 60 min ago
+                    #  8 apr 2025 le basi del ritracciamento ci sono perche' anche 100 < 100 60 min ago
 
 
                 elif (
@@ -50259,7 +50259,7 @@ class maddog:
                 
                 
                 and deviation_ma39 < 0.07
-                and deviation_sell < -0.02
+                and deviation_sell < -0.01
                 
                 and deviation_ma100_sopra_ma300 > 0.20
                 and delta_450_300 < delta_450_300_60_min
@@ -50276,7 +50276,7 @@ class maddog:
 
                 # 18 feb 2025 ha fatto -0.33%
                 # 18 feb 2025 se ma50_last < ma50_2_min_ago vende con 5-100
-
+                #  8 apr 2025 and deviation_sell < -0.01 da <-0.02
                 
             
 
@@ -51369,32 +51369,32 @@ class maddog:
             
 
             elif (
-                ma78_last < ma78_120_min_ago
+                ma300_last < ma300_301_min_ago
+                and ma78_last < ma78_120_min_ago
                 and ma30_last > ma78_last
 
                 and ma20_last <= ma20_2_min_ago
                 and ma20_last <= ma20_10_min_ago
-                
                 and ma50_last <= ma50_2_min_ago
-                and ma2_differenza_2_min_ago < -15
-                and ma300_last < ma300_301_min_ago
+                
+                
                 and delta_150_100 <= delta_150_100_60_min
                 
                 and deviation_ma39 < 0.13
-                and deviation_sell < -0.03
+                and deviation_sell < -0.02
                 
                 and deviation_ma100_sopra_ma300 < 0.40
                 and deviation_ma5_sotto_ma200 > -0.50
                 
-                and ma2_last < ma2_2_min_ago 
-                and macd_differenza_2_min_ago < -1.35
+                and ma2_last <= ma2_2_min_ago 
+                
                 
             ):
-                sell = "SELL CS GIORNO con ma300 < 5 ore E ma50 <= MA 30>78 e dev 3-39 < 0.13 E dev_sell < -0.03 - r 16045 B2 Y2 X"
+                sell = "SELL CS GIORNO con ma300 < 5 ore E ma50 <= MA 30>78 e dev 3-39 < 0.13 E dev_sell < -0.02 - r 16045 B2 Y2 X"
                 action = "sell"
 
                 # 30 ott 2024 se 30 > 78 statte calmo
-            
+                #  8 apr 2025 dev sell a -0.02 da -0.03
 
 
 
