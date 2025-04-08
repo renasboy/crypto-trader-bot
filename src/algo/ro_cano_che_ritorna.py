@@ -12439,9 +12439,9 @@ class ro_cano_che_ritorna:
                     and ma2_differenza_2_min_ago > 7
                     and macd >= macd_2_min_ago
                 ):
-                    buy = "BUY 2 IMPORTATA da BUY 1 r 1043 B2 considera distanza 5-300 E dev 10-200 < -0.24 E dev 3-18 and dev_ma3_sopra_ma16 > -0.125 - r 4760 NUOVA ERA A3 STRONG"
+                    buy = "BUY 2 distanza 5-300 E dev 10-200 < -0.24 E dev 3-18 and dev_ma3_sopra_ma16 > -0.125 - r 4760 NUOVA ERA A3 STRONG"
                     action = "buy"
-                    percentage = 50
+                    percentage = 80
                     
                     #  7 dic 2023 aggiunta and ma2_differenza_2_min_ago
                 
