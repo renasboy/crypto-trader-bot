@@ -34078,11 +34078,29 @@ class maddog:
                         
                         
                         
-                    ###################################################################### doppio delta < 1 TREND COMINCIA A SCENDERE ! vendi con ma50 !
-                    
+                    #################################################### doppio delta < 1 TREND COMINCIA A SCENDERE ! vendi con ma50 !
+
                     elif (
                         ma50_last > ma50_2_min_ago
+                        and ma39_last > ma200_last
                         
+                        and delta_1 > delta_2
+                        and ma100_last > ma100_60_min_ago
+                        
+                        and deviation_ma100_sopra_ma200 > -0.10
+                        and ma5_last < ma78_last
+                        and deviation_sell > 0.34 and deviation_sell < 0.56
+                        and ma2_last < ma2_2_min_ago
+                        
+                    ):
+                        sell = "SELL 1 (21-50 min) con 39>200 and 3-50 and dev_sell 0.34-0.56 FINTA ALLA MARADONA - - CREPUSCOLO - r 8703 x"
+                        action = "sell"
+                        #  8 apr 2025 5-78 da 3-50 se 39>200 cazzo lascialo stare !
+
+
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and ma39_last < ma200_last
                         
                         and delta_1 > delta_2
                         and ma100_last > ma100_60_min_ago
@@ -34093,16 +34111,18 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 (21-50 min) con ma50 > and 3-50 and deviation_sell 0.34-0.56 FINTA ALLA MARADONA - - CREPUSCOLO - r 8703"
+                        sell = "SELL 1 (21-50 min) con 39<200 and 3-50 and dev_sell 0.34-0.56 FINTA ALLA MARADONA - - CREPUSCOLO - r 8703 y"
                         action = "sell"
                         
                         # 100 deve stare sopra 200 cosi' non vende con ma 50 durante il crollo o un forte ribasso !
+
+
                         
                         ###########################################################################################################
                         
                    
                     
-                    ############################################################################## doppio delta > 1 TREND CONTINUA AL RIALZO vendi cosi'
+                    ########################################################## doppio delta > 1 TREND CONTINUA AL RIALZO vendi cosi'
                     
                     
                     
