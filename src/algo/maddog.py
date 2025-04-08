@@ -47453,11 +47453,15 @@ class maddog:
                         # 27 nov 2023 and deviation_ma78_sopra_o_sotto_ma78_600_min_ago < 0.15 da < 0.10
                         # 27 nov 2023 ma50_last <= da ma50_last <
                         # 27 nov 2023 and deviation_sell < 0.03 da < 0.02
-                    
+
+
+
+
                     
                     elif (    
                         ma50_last <= ma50_2_min_ago
-                        
+                        and deviation_ma3_sotto_ma50 > -0.70
+
                         and ma300_last < ma300_301_min_ago
                         and ma200_last < ma200_60_min_ago
                         and ma50_last < ma100_last
@@ -47471,11 +47475,74 @@ class maddog:
                         and ma2_last < ma2_2_min_ago 
                         
                     ):
-                        sell = "SELL 4-5-x (21-60 min) con ma50 < and deviation_sell < -0.27 se 300 < 300 301 min ago - r 15349 B prova 5"
+                        sell = "SELL 4-5-x (21-60 min) con ma50< E dev_sell < -0.01 se 300 < 300 301 min E 3-50 > -0.70 - r 15349 B prova 5 x"
                         action = "sell"
                         
                         # 27 nov 2023 and deviation_ma78_sopra_o_sotto_ma78_600_min_ago < 0.15 da < 0.10
                         # 27 nov 2023 ma50_last <= da ma50_last <
+
+
+
+
+                    elif (    
+                        ma50_last <= ma50_2_min_ago
+                        and deviation_ma3_sotto_ma50 < -0.70
+                        and ma5_last > ma5_30_min_ago
+
+                        and ma300_last < ma300_301_min_ago
+                        and ma200_last < ma200_60_min_ago
+                        and ma50_last < ma100_last
+                        
+                        and deviation_sell < -0.025
+                        and ma3_last < ma39_last
+                        
+                        and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago < -1.50
+                        and deviation_ma78_sopra_o_sotto_ma78_600_min_ago < 0.15
+                        
+                        and ma2_last < ma2_2_min_ago 
+                        
+                    ):
+                        sell = "SELL 4-5-x (21-60 min) con ma50< E dev_sell < -0.025 se 300 < 300 301 min E 3-50 < -0.70 - r 15349 B prova 5 y1"
+                        action = "sell"
+                        
+                        # 27 nov 2023 and deviation_ma78_sopra_o_sotto_ma78_600_min_ago < 0.15 da < 0.10
+                        # 27 nov 2023 ma50_last <= da ma50_last <
+
+                        #  8 apr 2025 se deviation_ma3_sotto_ma50 < -0.70 allora dev sell a -0.02 da -0.01
+                        #  8 apr 2025 se and ma5_last > ma5_30_min_ago allora dev sell a -0.025
+
+
+
+                    elif (    
+                        ma50_last <= ma50_2_min_ago
+                        and deviation_ma3_sotto_ma50 < -0.70
+                        and ma5_last < ma5_30_min_ago
+
+                        and ma300_last < ma300_301_min_ago
+                        and ma200_last < ma200_60_min_ago
+                        and ma50_last < ma100_last
+                        
+                        and deviation_sell < -0.02
+                        and ma3_last < ma39_last
+                        
+                        and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago < -1.50
+                        and deviation_ma78_sopra_o_sotto_ma78_600_min_ago < 0.15
+                        
+                        and ma2_last < ma2_2_min_ago 
+                        
+                    ):
+                        sell = "SELL 4-5-x (21-60 min) con ma50 < E dev_sell < -0.02 se 300 < 300 301 min E 3-50 < -0.70 - r 15349 B prova 5 y2"
+                        action = "sell"
+                        
+                        # 27 nov 2023 and deviation_ma78_sopra_o_sotto_ma78_600_min_ago < 0.15 da < 0.10
+                        # 27 nov 2023 ma50_last <= da ma50_last <
+
+                        #  8 apr 2025 se deviation_ma3_sotto_ma50 < -0.70 allora dev sell a -0.02 da -0.01
+
+
+
+
+
                     
                   
                     elif (    
