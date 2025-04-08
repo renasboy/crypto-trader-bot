@@ -10,6 +10,13 @@
 
 #  8 apr 2025 se ritraccia (20<50) ma3 DEVE STARE SOTTO ma100 non c'e' niente da fare !
 
+                    and ma20_last < ma50_last
+                    and deviation_ma3_sotto_ma50 < -0.30
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.15
+
+
+
+
 
 and deviation_ma200_sotto_ma300 < -1.00
 and deviation_ma25_sotto_ma300 < -2.00
@@ -17583,7 +17590,10 @@ class maddog:
 
                 elif (
                     ma3_last > ma11_last
+
                     and ma20_last < ma50_last
+                    and deviation_ma3_sotto_ma50 < -0.30
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.15
 
                     and ma300_last > ma450_last or ma100_last > ma300_last
                     and ma450_last > ma450_360_min_ago
@@ -17594,7 +17604,7 @@ class maddog:
                     and deviation_ma25_sotto_ma300 < -0.30
 
                     and deviation_ma39 < -0.05
-                    and deviation_ma3_sotto_ma50 < -0.25
+                    
 
                     and deviation_ma5_sotto_ma200 < -0.15
                     
@@ -17621,7 +17631,7 @@ class maddog:
                     #  3 apr 2025 and deviation_ma3_sotto_ma50 < -0.25 da -0.06
                     #  6 apr 2025 aggiunto and deviation_ma100_sopra_ma300 < -0.30
                     #  6 apr 2025 aggiunto and deviation_ma25_sotto_ma300 < -0.30
-
+                    #  8 apr 2025 le basi del ritracciamento !
 
 
                 elif (
