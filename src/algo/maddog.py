@@ -31895,21 +31895,21 @@ class maddog:
                     and deviation_ma300_sopra_ma450 < -0.22
                     and delta_1 > delta_2
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.14
-                    and deviation_ma39_sotto_ma100 > -0.15
+                    
 
                     
-                    and ma78_last < ma150_last
+                    and ma39_last > ma100_last
                     and deviation_ma5_sotto_ma300 < -1.20
                     
                     and deviation_ma3_sopra_ma10 > 0.01
                     and deviation_ma3_sopra_ma16 > -0.08
                     
                     
-                    and ma100_last < ma100_180_min_ago
+                    
                     and ma200_last < ma200_180_min_ago
                     and ma300_last < ma300_180_min_ago
                     
-                    and ma100_last < ma200_last
+                    
                     and ma200_last < ma300_last
                     
                     and macd_differenza_2_min_ago > -18.50
@@ -31938,7 +31938,7 @@ class maddog:
                     #  2 ott 2024 aggiunta da CANO STAF and deviation_ma5_sopra_o_sotto_ma100 < -0.27
                     #  2 ott 2024 e' una condizione che ha continuato a comprare diverse volte durante il ribasso !
                     # 22 feb 2025 aggiunta continua a scendere circello
-
+                    #  8 apr 2025 anticipata ndecchiecella
 
 
 
@@ -31951,7 +31951,7 @@ class maddog:
                     and ma100_last < ma100_10_min_ago
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.12
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.60
-                    and ma3_last > ma39_last
+                    
                     
                     and ma450_last < ma450_360_min_ago
                     and ma300_last < ma300_60_min_ago
@@ -31962,7 +31962,9 @@ class maddog:
                     
                     and deviation_ma50_sopra_o_sotto_ma100 < -0.01
                     and deviation_ma100_sopra_ma300 < -0.10
-                    
+
+                    and deviation_ma3_sotto_ma50 < -0.06
+
                     and deviation_ma3_sopra_ma10 > -0.01
                     and deviation_ma3_sopra_ma16 > -0.125
                     
@@ -31973,6 +31975,7 @@ class maddog:
                     percentage = 80
 
                     # aggiunta 8 apr 2025 e' andata benissimo su RCCR durante un lungo crollo !
+
 
 
                 elif ( 
@@ -33512,22 +33515,42 @@ class maddog:
                         # deviation_sell = ma3_last/last_trade_price
                         
                         
-                        
                     elif (
                         ma50_last >= ma50_2_min_ago
                         and ma3_last < ma300_last
-                        
-                        and ma3_last < ma13_last
+                        and ma20_last > ma50_last
+
+                        and ma3_last < ma39_last
+
                         and deviation_sell > 0.57 and deviation_sell < 0.90
                         and ma2_last < ma2_2_min_ago
                       
                     ):
-                        sell = "SELL 1 (12-21 min) con ma50> and 3<13 con 3 soto 300 (NO INCROCIO 3-13) and dev_sell 0.57-0.90 - DOPPIO PASSO RONALDO - r 8362 b"
+                        sell = "SELL 1 (12-21 min) con ma50> and 3<39 con 20>50 and dev_sell 0.57 - 0.90 - DOPPIO PASSO RONALDO - r 8362 bx"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
+                        #  8 apr 2025 sell 3-39 da 3-13 se 20>50 lascialo correre !
+
+
+                           
+                    elif (
+                        ma50_last >= ma50_2_min_ago
+                        and ma3_last < ma300_last
+                        and ma20_last < ma50_last
+
+                        and ma3_last < ma25_last
+
+                        and deviation_sell > 0.57 and deviation_sell < 0.90
+                        and ma2_last < ma2_2_min_ago
+                      
+                    ):
+                        sell = "SELL 1 (12-21 min) con ma50> and 3<39 con 20>50 and dev_sell 0.57 - 0.90 - DOPPIO PASSO RONALDO - r 8362 by"
+                        action = "sell"
                         
-                        
+                        # deviation_sell = ma3_last/last_trade_price
+                        #  8 apr 20253-39 da 3-13
+                        #  8 apr 2025 se 20<50 sell 3-25
                        
 
                     elif (
