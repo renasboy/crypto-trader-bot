@@ -30368,8 +30368,44 @@ class maddog:
                 
                 
 
+
+
                 elif (
                     ma200_last >= ma200_120_min_ago
+                    and ma20_last > ma50_last
+                    and ma100_last > ma300_last
+                    
+
+
+                    and ma300_last > ma450_last
+                    and ma300_last >= ma300_60_min_ago
+                    
+                    and delta_1 < delta_2
+
+                    and deviation_ma3_sotto_ma50 < -0.03
+
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    
+                    and ma3_last > ma8_last
+                   
+                    and macd_differenza_2_min_ago > -18.50
+                ):   
+                    buy = "BUY 5 che NON SPEZZA LA CATENA - GIORNO - E 20>50 E ma200> 120 min con 3-50 < -0.03 - r 7410 A1 X1 x1"
+                    action = "buy"
+                    percentage = 80
+
+                    # 22 feb 2025 aggiunta and ma300_last > ma450_last
+                    # 22 feb 2025 and delta_1 < delta_2
+                    # 23 mar 2025 and deviation_ma3_sotto_ma50 < -0.03
+                    #  3 apr 2025 se 100>300 and deviation_ma3_sotto_ma50 < -0.03
+                    #  8 apr 2025 con 20>50 va bene cosi'
+
+                
+
+                elif (
+                    ma200_last >= ma200_120_min_ago
+                    and ma20_last < ma50_last
+
                     and ma100_last > ma300_last
 
                     and ma300_last > ma450_last
@@ -30385,7 +30421,7 @@ class maddog:
                    
                     and macd_differenza_2_min_ago > -18.50
                 ):   
-                    buy = "BUY 5 che NON SPEZZA LA CATENA - GIORNO - SE ma200> 120 min con 3-50 < -0.03 - r 7410 A1 X1x"
+                    buy = "BUY 5 che NON SPEZZA LA CATENA - GIORNO - MA 20<50 MA ma200> 120 min con 3-50 < -0.03 - r 7410 A1 X1 x2"
                     action = "buy"
                     percentage = 80
 
@@ -30393,6 +30429,9 @@ class maddog:
                     # 22 feb 2025 and delta_1 < delta_2
                     # 23 mar 2025 and deviation_ma3_sotto_ma50 < -0.03
                     #  3 apr 2025 se 100>300 and deviation_ma3_sotto_ma50 < -0.03
+                    #  8 apr 2025 con 20<50 siamo in presenza, probabilmente, di un RITRACCIAMENTO.
+                    #  8 apr 2025 al momento lascio. avrei dovuto mettere che 3 deve stare sotto 100
+
 
 
                 elif (
@@ -47319,20 +47358,43 @@ class maddog:
                     ):
                         sell = "SELL 4-5-x (21-60 min) con ma50 > and 3-25 and deviation_sell 1.41 -2.70 - r 15250"
                         action = "sell"
-                        
-                        
+
+
+
                         
                         
                     elif (
                         ma50_last > ma50_2_min_ago
+                        
+                        and (ma3_prev > ma11_prev and ma3_last < ma11_last)
+                        and deviation_sell > 3.00
+                        and deviation_ma39 > 1.80
+
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 4-5-x (21-60 min) con ma50 > and incrocio 3-11 and deviation_sell > 3.00 and 3-39 > 1.80 - r 15261"
+                        action = "sell"
+
+                        #  8 apr 2025 ok cosi' potrai in futuro pensare a 3-39 > 2.00 and dev sell > 3.00 con 3-11
+                        #  8 apr 2025 fatto ! male che va VENDE SOPRA IL 3%
+
+                        
+
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        
                         and (ma3_prev > ma13_prev and ma3_last < ma13_last)
                         and deviation_sell > 2.71
                         and ma2_last < ma2_2_min_ago
                     ):
                         sell = "SELL 4-5-x (21-60 min) con ma50 > and incrocio 3-13 and deviation_sell > 2.71 - r 15262"
                         action = "sell"
-                    
-                    
+
+                        #  8 apr 2025 ok cosi' 
+
+
+                        
+
                     
                     ################################################################################################# con trend discendente
                     
