@@ -7,6 +7,10 @@
 
 
 """
+
+#  8 apr 2025 se ritraccia (20<50) ma3 DEVE STARE SOTTO ma100 non c'e' niente da fare !
+
+
 and deviation_ma200_sotto_ma300 < -1.00
 and deviation_ma25_sotto_ma300 < -2.00
 and deviation_ma50_sotto_ma300 < -2.20
@@ -20952,8 +20956,9 @@ class maddog:
 
                 elif (  
                     ma3_last > ma11_last
-
+                    
                     and ma20_last < ma50_last
+                    and ma3_last < ma100_last
                     and ma5_last > ma300_last or delta_DNA_1 < delta_DNA_2 or ma100_last > ma200_last or deviation_ma200_sotto_ma300 > -0.10
 
                     and deviation_ma5_sotto_ma200 < -0.15
@@ -20984,7 +20989,7 @@ class maddog:
                     #  6 apr 2025 and deviation_ma3_sotto_ma50 < -0.15 da -0.75 (aggiunto GIORNO)
                     #  6 apr 2025 aggiunto and deviation_ma100_sopra_ma300 < -0.30 
                     #  6 apr 2025 aggiunto and deviation_ma25_sotto_ma300 < -0.30
-
+                    #  8 apr 2025 se ritraccia 3 DEVE STARE SOTTO 100 non c'e' niente da fare !
 
 
 
@@ -24666,10 +24671,13 @@ class maddog:
                 
                 elif (
                     ma3_last > ma11_last
+                    and ma20_last < ma50_last
+                    and ma3_last < ma100_last
+
                     and ma5_last > ma300_last or delta_DNA_1 < delta_DNA_2 or ma100_last > ma200_last or ma200_last > ma300_last
                     and ma300_last > ma450_last or ma100_last > ma300_last
 
-                    and ma20_last < ma50_last
+                    
                     and ma450_last > ma450_720_min_ago
                     and ma300_last > ma300_301_min_ago
                     
@@ -24703,7 +24711,7 @@ class maddog:
                     #  4 apr 2025 RIPETO : e' un ritracciamento se ma200_last > ma300_last
                     #  7 apr 2025 and deviation_ma39 < -0.30 da 0.07
                     #  7 apr 2025 and deviation_ma3_sotto_ma50 < -0.30 da 0.09
-
+                    #  8 apr 2025 se ritraccia 3 DEVE STARE SOTTO 100 non c'e' niente da fare !
 
                 elif (
                     ma3_last > ma11_last
@@ -33520,17 +33528,17 @@ class maddog:
                         and ma3_last < ma300_last
                         and ma20_last > ma50_last
 
-                        and ma3_last < ma39_last
+                        and ma3_last < ma50_last
 
                         and deviation_sell > 0.57 and deviation_sell < 0.90
                         and ma2_last < ma2_2_min_ago
                       
                     ):
-                        sell = "SELL 1 (12-21 min) con ma50> and 3<39 con 20>50 and dev_sell 0.57 - 0.90 - DOPPIO PASSO RONALDO - r 8362 bx"
+                        sell = "SELL 1 (12-21 min) con ma50> and 3<50 con 20>50 and dev_sell 0.57 - 0.90 - DOPPIO PASSO RONALDO - r 8362 bx"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
-                        #  8 apr 2025 sell 3-39 da 3-13 se 20>50 lascialo correre !
+                        #  8 apr 2025 sell 3-50 da 3-13 se 20>50 lascialo correre !
 
 
                            
