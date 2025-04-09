@@ -2409,10 +2409,8 @@ class maddog:
                     
                     
                     
-                    
-                    
-                # BUY 1 5-300 in alto
-
+                 
+                
                 elif (
                     ma3_last > ma13_last
                     and ma5_last > ma300_last or delta_DNA_1 < delta_DNA_2 or ma100_last > ma200_last or ma200_last > ma300_last
