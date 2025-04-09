@@ -1984,6 +1984,9 @@ class maddog:
         # if (ma39_last < ma100_last and (deviation_ma200_sotto_ma300 < -0.06 or deviation_ma200_sotto_ma300 > -0.01)) or (ma39_last > ma100_last and (deviation_ma200_sotto_ma300 < -0.01 or deviation_ma200_sotto_ma300 > -0.01)):
 
 
+        #
+        #
+
 
 
 
@@ -2413,7 +2416,7 @@ class maddog:
                 
                 elif (
                     ma3_last > ma13_last
-                    and ma5_last > ma300_last or delta_DNA_1 < delta_DNA_2 or ma100_last > ma200_last or ma200_last > ma300_last
+                    and (ma5_last > ma300_last or delta_DNA_1 < delta_DNA_2 or ma100_last > ma200_last or ma200_last > ma300_last)
 
                     and ma20_last < ma50_last
                     and deviation_ma3_sotto_ma50 < -0.30
@@ -2428,7 +2431,7 @@ class maddog:
                     and deviation_ma39 < -0.05
                     
                     and ma5_last < ma150_last
-                    and ma20_last < ma20_2_min_ago or ma33_last < ma33_3_min_ago
+                    and (ma20_last < ma20_2_min_ago or ma33_last < ma33_3_min_ago)
                     and ma200_last < ma200_60_min_ago
 
                     and deviation_ma3_sopra_ma10 > 0.01
@@ -2437,7 +2440,7 @@ class maddog:
                     and macd_differenza_2_min_ago > -18.50
                   
                 ):
-                    buy = "BUY 1 con 450 > 6 ore ma ritracciando ( vedi ma20 < or ma33 < ) compra con 3-39 < -0.30 - r 1043 Ax"
+                    buy = f"BUY 1 {ma450_last} {ma450_360_min_ago} con 450 > 6 ore ma ritracciando ( vedi ma20 < or ma33 < ) compra con 3-39 < -0.30 - r 1043 Ax"
                     action = "buy"
                     percentage = 50
                     
