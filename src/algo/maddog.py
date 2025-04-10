@@ -4118,7 +4118,7 @@ class maddog:
                     # 27 mar 2025 se 5 SOTTO 150 ritracciando deve essere dev 3-39 < -0.30
                     # 27 mar 2025 aggiunto and deviation_ma200_sotto_ma300 < -0.05
                     #  7 apr 2025 per adesso lo lascio cosi' senza imporre le condizioni del ritracciamento.
-                    # 10 apr 2025 buy = f"BUY 1 {ma300_last} {ma300_180_min_ago} con 450>6 ore MA ritracciando ( vedi ma20 < or ma33 < ) - r 1043 Ax"
+                    # 10 apr 2025 buy = f"BUY 1 {ma300_last} {ma300_180_min_ago} con 450>6 ore MA ritracciando r 1205 AX NUOVA ERA A3 SOFT x"
                     # 10 apr 2025 and (ma3_last < ma20_last or ma20_last < ma20_2_min_ago)
 
 
