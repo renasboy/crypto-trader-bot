@@ -37891,16 +37891,13 @@ class maddog:
                     elif (    
                         ma50_last < ma50_2_min_ago
                         and ma10_last < ma450_last
-
+                        and (ma10_prev > ma450_prev and ma10_last < ma450_last)
                         and deviation_ma39 < 0.06
-                        and deviation_sell < 0.20
-                        and deviation_ma5_sotto_ma300 < 0.30
-
+                        
                         and ma450_last < ma450_120_min_ago
                         and ma300_last < ma300_120_min_ago
                         and ma20_last < ma50_last
                         
-                      
                         and ma5_last < ma5_2_min_ago
                         and ma2_last < ma2_2_min_ago
                         
@@ -37913,8 +37910,9 @@ class maddog:
                         # 10 apr 2025 ha fatto -0.40 non vendeva e ma5 era andata abbondantemente sotto la ma450
                         # 10 apr 2025 aggiunta questa nuova condizione con ma10_last < ma450_last
                         # 10 apr 2025 tolto and macd_differenza_2_min_ago < -0.50 e aggiunto and macd < -0.10
-
-
+                        # 10 apr 2025 tolto and deviation_sell < 0.20
+                        # 10 apr 2025 aggiunto vendi con incrocio al ribasso 10-450 (altrimenti avrebbe venduto come 10 stava sotto 450)
+                        
 
 
                     elif (    
