@@ -9,6 +9,15 @@
 """
 il sistema sembra rotto.
 
+e queste sono le 2 cose da fare !
+
+and (ma5_last > ma300_last or delta_DNA_1 < delta_DNA_2 or ma100_last > ma200_last or ma200_last > ma300_last)
+buy = f"BUY 1 {ma450_last} {ma450_360_min_ago} con 450>6 ore MA ritracciando ( vedi ma20 < or ma33 < ) - r 1043 Ax"
+
+
+
+
+
 
 #  8 apr 2025 se ritraccia (20<50) ma3 DEVE STARE SOTTO ma100 non c'e' niente da fare !
 
@@ -2442,7 +2451,7 @@ class maddog:
                 ):
                     buy = f"BUY 1 {ma450_last} {ma450_360_min_ago} con 450>6 ore MA ritracciando ( vedi ma20 < or ma33 < ) - r 1043 Ax"
                     action = "buy"
-                    percentage = 50
+                    percentage = 80
                     
                     # importante : ma100 sta sotto la ma200 ma non le e' troppo lontana
                     # 21 mar 2025 anticipata ndecchia
@@ -4071,17 +4080,19 @@ class maddog:
 
                 elif (    
                     ma3_last > ma13_last
+                    and ma300_last > ma300_180_min_ago
+
                     and deviation_ma200_sotto_ma300 < -0.05
 
                     and ma5_last < ma150_last
-                    and ma3_last < ma20_last or ma20_last < ma20_2_min_ago
+                    and (ma3_last < ma20_last or ma20_last < ma20_2_min_ago)
                     and deviation_ma39 < -0.40
                     and deviation_ma3_sotto_ma50 < -0.09
 
                     and deviation_ma200_sotto_ma300 > -0.01
 
                     and ma100_last > ma100_120_min_ago
-                    and ma300_last > ma300_180_min_ago
+                    
 
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
                     and deviation_ma5_sopra_o_sotto_ma100 > -0.50
@@ -4093,7 +4104,7 @@ class maddog:
                    
                 ):  
                     
-                    buy = "BUY 1 con ma300 > 3 ore se 5 SOTTO 150 ritracciando deve essere dev 3-39 < -0.40 - r 1205 AX NUOVA ERA A3 SOFT x"
+                    buy = f"BUY 1 {ma300_last} {ma300_180_min_ago} con ma300 > 3 ore ritracciando - r 1205 AX NUOVA ERA A3 SOFT x"
                     action = "buy"
                     percentage = 70
                     
@@ -4107,6 +4118,9 @@ class maddog:
                     # 27 mar 2025 se 5 SOTTO 150 ritracciando deve essere dev 3-39 < -0.30
                     # 27 mar 2025 aggiunto and deviation_ma200_sotto_ma300 < -0.05
                     #  7 apr 2025 per adesso lo lascio cosi' senza imporre le condizioni del ritracciamento.
+                    # buy = f"BUY 1 {ma450_last} {ma450_360_min_ago} con 450>6 ore MA ritracciando ( vedi ma20 < or ma33 < ) - r 1043 Ax"
+
+
 
                 elif (    
                     ma3_last > ma13_last
