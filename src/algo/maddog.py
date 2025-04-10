@@ -2440,7 +2440,7 @@ class maddog:
                     and macd_differenza_2_min_ago > -18.50
                   
                 ):
-                    buy = f"BUY 1 {ma450_last} {ma450_360_min_ago} con 450 > 6 ore ma ritracciando ( vedi ma20 < or ma33 < ) compra con 3-39 < -0.30 - r 1043 Ax"
+                    buy = f"BUY 1 {ma450_last} {ma450_360_min_ago} con 450>6 ore MA ritracciando ( vedi ma20 < or ma33 < ) - r 1043 Ax"
                     action = "buy"
                     percentage = 50
                     
@@ -2454,7 +2454,7 @@ class maddog:
                     #  6 apr 2025 aggiunto and deviation_ma100_sopra_ma300 < -0.30 continuava a comprare male
                     #  6 apr 2025 aggiunto and deviation_ma25_sotto_ma300 < -0.30 continuava a comprare male
                     #  8 apr 2025 se 20<50 aggiungo le basi del ritracciamento
-
+                    #  9 apr 2025 QUESTA CONDIZIONE E' STATA CORRETTA DAL MAESTRO COMPA ! AVE COMPA
 
 
                 elif (
