@@ -2468,18 +2468,16 @@ class maddog:
 
                 elif (
                     ma3_last > ma13_last
-                    and ma5_last > ma300_last or delta_DNA_1 < delta_DNA_2 or ma100_last > ma200_last or ma200_last > ma300_last 
 
-                    and ma20_last < ma20_2_min_ago or ma33_last < ma33_3_min_ago
+                    and (ma5_last > ma300_last or delta_DNA_1 < delta_DNA_2 or ma100_last > ma200_last or ma200_last > ma300_last)
+                    and (ma20_last < ma20_2_min_ago or ma33_last < ma33_3_min_ago)
+
+                    and ma450_last > ma450_360_min_ago
+                    and delta_1_200_78 < delta_2_200_78_60_min
 
                     and deviation_ma39 < -0.45
                     and deviation_ma3_sotto_ma50 < -0.25
 
-                    and ma450_last > ma450_360_min_ago
-
-                    
-                    and delta_1_200_78 < delta_2_200_78_60_min
-                    
                     and ma200_last < ma200_60_min_ago
                     
                     and deviation_ma3_sopra_ma10 > 0.01
@@ -2488,7 +2486,7 @@ class maddog:
                     and macd_differenza_2_min_ago > -18.50
                   
                 ):
-                    buy = "BUY 1 con 450 > 6 ore ma ritracciando ( vedi ma20 < or ma33 < ) compra con 3-50 < -0.25 - riga 1043 Ay"
+                    buy = f"BUY 1 {ma450_last} {ma450_360_min_ago} con 450 > 6 ore ma ritracciando ( vedi ma20 < or ma33 < ) - riga 1043 AY"
                     action = "buy"
                     percentage = 50
                     
@@ -2499,8 +2497,10 @@ class maddog:
                     #  2 apr 2025 and deviation_ma3_sotto_ma50 < -0.25
 
                     #  3 apr 2025 and ma5_last > ma300_last or delta_DNA_1 < delta_DNA_2 or ma100_last > ma200_last or ma200_last > ma300_last 
+                    # 10 apr 2025 correzione or e aggiunta f
 
 
+                    
                     
                 
                 # BUY 1 migliore che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-59 - r 1043 B
@@ -53501,9 +53501,13 @@ class maddog:
                 # 19 gen 2024 ha fatto -0.60 HO NOTATO CHE ma20 era in crescita ! e ho aggiunto questa
                 #  2 mar 2025 se ma100 continua a scendere pesantemente allora ok cosi'
 
-            elif (
-                
+
+
+            
+            elif (    
                 ma50_last < ma50_2_min_ago
+                and ma450_last > ma450_360_min_ago
+
                 and deviation_ma50_sopra_o_sotto_ma300 > -0.70
                 and deviation_ma5_sopra_o_sotto_ma100 < -0.10
                 and ma20_last <= ma20_2_min_ago
@@ -53522,7 +53526,64 @@ class maddog:
                 and macd < 20
                 and macd_differenza_2_min_ago < -1.30
             ):
-                sell = "SELL NCS con ma20 <= ma20 2 min ago e dev 3-39 < 0.10 e dev_sell < -0.016 and diff ma2 e diff macd - r 16047 A3 Y2 b1"
+                sell = "SELL NCS con ma20 <= ma20 2 min ago e dev 3-39 < 0.10 e dev_sell < -0.016 and diff ma2 e diff macd - r 16047 A3 Y2 b1 x"
+                action = "sell"
+
+                # 10 apr 2025 modificata
+
+
+            elif (    
+                ma50_last < ma50_2_min_ago
+                and ma450_last < ma450_360_min_ago
+                and ma100_last > ma100_60_min_ago
+
+                and deviation_ma50_sopra_o_sotto_ma300 > -0.70
+                and deviation_ma5_sopra_o_sotto_ma100 < -0.10
+                and ma20_last <= ma20_2_min_ago
+                
+                and deviation_ma39 < 0.12
+                and deviation_sell < -0.016
+                
+                and deviation_ma5_sopra_ma200 < -0.20
+                and deviation_ma5_sotto_ma300 < -0.20
+                and deviation_ma5_sotto_ma450 < -0.10
+                
+                and deviation_ma100_sopra_ma300 < 0.40
+                
+                and ma2_last < ma2_2_min_ago 
+                
+                and macd < 20
+                and macd_differenza_2_min_ago < -1.30
+            ):
+                sell = "SELL NCS con ma20 <= ma20 2 min ago e dev 3-39 < 0.10 e dev_sell < -0.016 and diff ma2 e diff macd - r 16047 A3 Y2 b1 y1"
+                action = "sell"
+
+                # 10 apr 2025 modificata
+
+
+
+            elif (    
+                ma50_last < ma50_2_min_ago
+                and ma450_last < ma450_360_min_ago
+                and ma100_last < ma100_60_min_ago
+
+                and deviation_ma50_sopra_o_sotto_ma300 > -0.70
+                and deviation_ma5_sopra_o_sotto_ma100 < -0.10
+                and ma20_last <= ma20_2_min_ago
+                
+                and deviation_ma39 < 0.12
+                and deviation_sell < -0.016
+                
+                and deviation_ma5_sotto_ma450 < -0.10
+                
+                and ma20_last < ma50_last
+                
+                and ma2_last < ma2_2_min_ago 
+                
+                and macd < 40
+                and macd_differenza_2_min_ago < -0.30
+            ):
+                sell = "SELL NCS con ma20 <= ma20 2 min ago e dev 3-39 < 0.10 e dev_sell < -0.016 and diff ma2 e diff macd - r 16047 A3 Y2 b1 y2"
                 action = "sell"
                 
                 # 30 nov 2023 dev 39 a 0.10 da 0.03
@@ -53535,7 +53596,7 @@ class maddog:
                 #  3 ott 2024 and deviation_sell < -0.015 da -0.017
                 #  3 ott 2024 anticipata vendita (ha fatto -0.62)
                 #  5 nov 2024 se deviation_ma50_sopra_o_sotto_ma300 > -0.70
-
+                # 10 apr 2025 modificata
 
             
             elif (    
