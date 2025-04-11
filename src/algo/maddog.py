@@ -1,6 +1,12 @@
 
 
 
+
+
+
+
+
+
 # A.D. 2024 
 # sono 20 anni compa !
 # ave compa !
@@ -18624,7 +18630,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                     and macd >= macd_2_min_ago
                 ):
-                    buy = "BUY 2 CHE MANCAVA DOPO 5 ore di ribasso buy con 5-28>0.30 perdio se entra dopo 5 ore deve essere piu' sicuro ! - r 5979 B"
+                    buy = "BUY 2 CHE MANCAVA DOPO 5 ore di ribasso buy con 5-28>0.30 perdio se entra >5 ore deve essere piu' sicuro ! - r 5979 B"
                     action = "buy"
                     percentage = 80
                     
@@ -20268,7 +20274,7 @@ class maddog:
                     and macd_differenza_2_min_ago > 1.30
                 ):  
                 
-                    buy = "BUY 3A con ma200 che sale da 60 min and ma300_last > ma450_last and ma8_last > ma39_last and macd_differenza_2_min_ago > 1.30 - r 6016 A1"
+                    buy = "BUY 3 con ma200 che sale da 60 min and ma300_last > ma450_last and ma8_last > ma39_last and macd_differenza_2_min_ago > 1.30 - r 6016 A1"
                     action = "buy"
                     percentage = 80
                     
@@ -20299,7 +20305,7 @@ class maddog:
                     
                 ):  
                 
-                    buy = "BUY 3A con ma200 che sale da 60 min and ma300_last > ma450_last and ma8_last > ma39_last - r 6016 A2"
+                    buy = "BUY 3 con ma200 che sale da 60 min and ma300_last > ma450_last and ma8_last > ma39_last - r 6016 A2"
                     action = "buy"
                     percentage = 80
 
@@ -20329,7 +20335,7 @@ class maddog:
                     
                 ):  
                 
-                    buy = "BUY 3A con ma200 che sale da 60 min and ma28_last > ma69_last - r 6016 B"
+                    buy = "BUY 3 con ma200 che sale da 60 min and ma28_last > ma69_last - r 6016 B"
                     action = "buy"
                     percentage = 80
 
@@ -20370,7 +20376,7 @@ class maddog:
                     
                 ):  
                 
-                    buy = "BUY 3A con ma200 che sale da 60 min and ma28_last < ma78_last MA 100> 60 min ago CON 100 MOLTO SOPRA 300 - r 6056 a"
+                    buy = "BUY 3 con ma200 che sale da 60 min and ma28_last < ma78_last MA 100> 60 min ago CON 100 MOLTO SOPRA 300 - r 6056 a"
                     action = "buy"
                     percentage = 80
 
@@ -20404,7 +20410,7 @@ class maddog:
                     
                 ):  
                 
-                    buy = "BUY 3A con ma200 che sale da 60 min and ma28_last < ma78_last MA 100> 60 min ago CON 100 POCO SOPRA 300 - r 6090 b"
+                    buy = "BUY 3 con ma200 che sale da 60 min and ma28_last < ma78_last MA 100> 60 min ago CON 100 POCO SOPRA 300 - r 6090 b"
                     action = "buy"
                     percentage = 80
 
@@ -20444,7 +20450,7 @@ class maddog:
                       
                 ):  
                 
-                    buy = "BUY 3A con 300 > 300 301 min ago con ma200 che sale da 60 min MA 28<78 E macd_diff_2_min_ago > -1.25 - r 6121 A"
+                    buy = "BUY 3 con 300 > 300 301 min ago con ma200 che sale da 60 min MA 28<78 E macd_diff_2_min_ago > -1.25 - r 6121 A"
                     action = "buy"
                     percentage = 80
 
@@ -20480,7 +20486,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                 ):    
                 
-                    buy = "BUY 3A con ma200 che sale da 60 min and ma28_last < ma78_last - r 6121 B NUOVA ERA A1 SOFT"
+                    buy = "BUY 3 con ma200 che sale da 60 min and ma28_last < ma78_last - r 6121 B NUOVA ERA A1 SOFT"
                     action = "buy"
                     percentage = 80
 
@@ -20508,7 +20514,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                 ):    
                 
-                    buy = "BUY 3A con ma200 che sale da 60 min and ma28_last < ma78_last - r 6121 B NUOVA ERA A2 SOFT 1"
+                    buy = "BUY 3 con ma200 che sale da 60 min and ma28_last < ma78_last - r 6121 B NUOVA ERA A2 SOFT 1"
                     action = "buy"
                     percentage = 80
 
@@ -20535,7 +20541,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                 ):    
                 
-                    buy = "BUY 3A con ma200 che sale da 60 min and ma28_last < ma78_last - r 6121 B NUOVA ERA A2 SOFT 2"
+                    buy = "BUY 3 con ma200 che sale da 60 min and ma28_last < ma78_last - r 6121 B NUOVA ERA A2 SOFT 2"
                     action = "buy"
                     percentage = 80
 
@@ -20561,7 +20567,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                 ):    
                 
-                    buy = "BUY 3A con ma200 che sale da 60 min and ma28_last < ma78_last - r 6121 B NUOVA ERA A3 SOFT"
+                    buy = "BUY 3 con ma200 che sale da 60 min and ma28_last < ma78_last - r 6121 B NUOVA ERA A3 SOFT"
                     action = "buy"
                     percentage = 80
 
@@ -20588,7 +20594,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                 ):    
                 
-                    buy = "BUY 3A con ma200 che sale da 60 min and ma28_last < ma78_last - r 6121 B NUOVA ERA A4 SOFT"
+                    buy = "BUY 3 con ma200 che sale da 60 min and ma28_last < ma78_last - r 6121 B NUOVA ERA A4 SOFT"
                     action = "buy"
                     percentage = 80
 
@@ -20616,7 +20622,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                 ):    
                 
-                    buy = "BUY 3A con ma200 che sale da 60 min and ma28_last < ma78_last - r 6121 B NUOVA ERA A1 STRONG"
+                    buy = "BUY 3 con ma200 che sale da 60 min and ma28_last < ma78_last - r 6121 B NUOVA ERA A1 STRONG"
                     action = "buy"
                     percentage = 80
 
@@ -20644,7 +20650,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                 ):    
                 
-                    buy = "BUY 3A con ma200 che sale da 60 min and ma28_last < ma78_last - r 6121 B NUOVA ERA A2 STRONG"
+                    buy = "BUY 3 con ma200 che sale da 60 min and ma28_last < ma78_last - r 6121 B NUOVA ERA A2 STRONG"
                     action = "buy"
                     percentage = 80
 
@@ -20672,7 +20678,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                 ):    
                 
-                    buy = "BUY 3A con ma200 che sale da 60 min and ma28_last < ma78_last - r 6121 B NUOVA ERA A3 STRONG"
+                    buy = "BUY 3 con ma200 che sale da 60 min and ma28_last < ma78_last - r 6121 B NUOVA ERA A3 STRONG"
                     action = "buy"
                     percentage = 80
 
@@ -20705,7 +20711,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                 ):      
               
-                    buy = "BUY 3A con ma69 > MA ma200 scende da 60 min ! e CON ma300 < 60 min ago - r 6163"
+                    buy = "BUY 3 con ma69 > MA ma200 scende da 60 min ! e CON ma300 < 60 min ago - r 6163"
                     action = "buy"
                     percentage = 80
                     
@@ -20837,7 +20843,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                 ):      
               
-                    buy = "BUY 3A con ma69 > MA ma200 scende da 60 min ! and ma300_last > ma300_60_min_ago - r 6225"
+                    buy = "BUY 3 con ma69 > MA ma200 scende da 60 min ! and ma300_last > ma300_60_min_ago - r 6225"
                     action = "buy"
                     percentage = 80
                     
@@ -20935,18 +20941,20 @@ class maddog:
 
                 elif (
                     ma3_last > ma11_last
-
+                    and (ma300_last > ma450_last or ma100_last > ma300_last)
                     and ma450_last > ma450_720_min_ago
+                    and ma300_last > ma300_301_min_ago
+                    and ma100_last > ma200_last
+
                     and ma20_last < ma50_last
                     and delta_1 > delta_2
                     and deviation_ma3_sotto_ma50 < -1.20
                     and deviation_ma50_sopra_o_sotto_ma100 < -0.05
                     and deviation_ma5_sotto_ma200 < -0.15
 
-                    and ma300_last > ma450_last or ma100_last > ma300_last
-                    and ma300_last > ma300_301_min_ago
-                    and ma100_last > ma200_last
-
+                    and ma300_last < ma300_60_min_ago
+                    and ma200_last < ma200_60_min_ago
+                    
                     and delta_100_59 < delta_100_59_60_min
                     
                     and deviation_ma10_sopra_ma200 > -0.40
@@ -20955,15 +20963,12 @@ class maddog:
                     and deviation_ma5_sotto_ma300 < 0.45
                     and deviation_ma5_sotto_ma300 > -0.75
                     
-                    and ma300_last < ma300_60_min_ago
-                    and ma200_last < ma200_60_min_ago
-                    
                     and deviation_ma3_sopra_ma10 > 0.01
                     
                     and macd_differenza_2_min_ago > -18.50
               
                 ):
-                    buy = "BUY 3 migliore formula MY COMPA quando ritraccia con 450> - r 6243 Bx"
+                    buy = f"BUY 3 {ma450_last} {ma450_720_min_ago} migliore formula MY COMPA quando ritraccia con 450> - r 6243 Bx1"
                     action = "buy"
                     percentage = 80
                     
@@ -20980,22 +20985,29 @@ class maddog:
                     # 28 mar 2025 quando ritraccia vedi 20<50
                     # 29 mar 2025 quando ritraccia con 450>
                     #  7 apr 2025 and deviation_ma3_sotto_ma50 < -1.20 e vafangulo ! 
+                    # 10 apr 2025 correzione or e aggiunta f
 
 
                 elif (
                     ma3_last > ma11_last
 
-                    and ma450_last < ma450_720_min_ago
+                    and (ma300_last > ma450_last or ma100_last > ma300_last)
+                    and ma300_last > ma300_301_min_ago
                     and ma20_last < ma50_last
+
+
+                    and ma450_last < ma450_720_min_ago
+                    and ma300_last < ma300_60_min_ago
+                    and ma200_last < ma200_60_min_ago
                     and delta_1 > delta_2
+
+                    
                     and deviation_ma3_sotto_ma50 < -0.15
                     and deviation_ma50_sopra_o_sotto_ma100 < -0.10
                     and deviation_ma5_sotto_ma200 < -0.15
 
-                    and ma300_last > ma450_last or ma100_last > ma300_last
-                    and ma300_last > ma300_301_min_ago
-                    and ma100_last > ma200_last
 
+                    and ma100_last > ma200_last
                     and delta_100_59 < delta_100_59_60_min
                     
                     and deviation_ma10_sopra_ma200 > -0.40
@@ -21004,15 +21016,12 @@ class maddog:
                     and deviation_ma5_sotto_ma300 < 0.45
                     and deviation_ma5_sotto_ma300 > -0.75
                     
-                    and ma300_last < ma300_60_min_ago
-                    and ma200_last < ma200_60_min_ago
-                    
                     and deviation_ma3_sopra_ma10 > 0.01
                     
                     and macd_differenza_2_min_ago > -18.50
               
                 ):
-                    buy = "BUY 3 migliore formula MY COMPA quando ritraccia con 450< - r 6243 Bx"
+                    buy = f"BUY 3 {ma450_last} {ma450_720_min_ago} formula MY COMPA quando ritraccia con 300> 5 ore MA 450<12 ore - r 6243 Bx2"
                     action = "buy"
                     percentage = 80
                     
@@ -21028,7 +21037,7 @@ class maddog:
                     # 25 mar 2025 tolte sovrastrutture
                     # 28 mar 2025 quando ritraccia vedi 20<50
                     # 29 mar 2025 quando ritraccia con 450>
-
+                    # 11 apr 2025 correzione or e aggiunta f
 
 
 
@@ -21040,38 +21049,34 @@ class maddog:
                 
                 elif (     
                     ma3_last > ma18_last
+                    and (ma39_last < ma100_last or ma20_last < ma50_last)
 
+                    and (ma300_last < ma300_60_min_ago or ma300_last < ma300_120_min_ago)
                     and ma300_last < ma300_301_min_ago
+                    and delta_1 > delta_2
+
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.025
 
-                    and ma3_last > ma20_last
-                    and deviation_ma200_sotto_ma300 < -0.27
-                    and (ma300_last < ma300_60_min_ago or ma300_last < ma300_120_min_ago)
-                    and delta_1 > delta_2
-                    
                     and deviation_callas < -0.10
 
-                    and ma39_last < ma100_last
+                    and deviation_ma200_sotto_ma300 < -0.27
                     and deviation_ma100_sopra_ma300 < -0.49
-                    and deviation_ma25_sotto_ma300 < -0.80
                     and deviation_ma50_sotto_ma300 < -0.70
-                    
+                    and deviation_ma25_sotto_ma300 < -0.80
                     
                     and deviation_ma5_sotto_ma200 < -0.50
                     and deviation_ma5_sotto_ma300 < -0.60
                     and deviation_ma5_sotto_ma450 < -0.70
 
-
                     and ma100_last < ma200_last
                     and ma200_last < ma200_120_min_ago
                     
-
                     and deviation_ma3_sopra_ma10 > 0.01
                     
-                    and ma2_last >= ma20_last
-                    and macd_differenza_2_min_ago > -2.50
+                    and ma2_last >= ma18_last
+                    and macd_differenza_2_min_ago > -6.50
                 ):    
-                    buy = "BUY 3 maria callas core 'ngrato con ma300 che SCENDE da 6 ore + osso + comincia a scendere - r 6244"
+                    buy = "BUY 3 maria callas core 'ngrato con ma300<6 ore +osso + comincia a scendere - r 6244"
                     action = "buy"
                     percentage = 80
                     
@@ -21089,6 +21094,8 @@ class maddog:
                     #  2 mar 2025 aggiunta comincia a scendere
                     #  2 mar 2025 ATTENZIONE ! ho tolto 3-39 e 3-50 perche' essendo BUY 3 la ma3 e' gia' sopra alla ma39 e alla ma50 !
                     # 12 mar 2025 se BUY 3 con ma300_last < ma300_301_min_ago allora  aggiungo and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.025
+                    # 11 apr 2025 correzione or qua non ho messo f perche' non voglio sacrificare maria callas.
+
 
 
                 # 10 set 2024 CANCELLATA r 6260 a
@@ -21126,27 +21133,27 @@ class maddog:
 
                 elif (  
                     ma3_last > ma11_last
-                    
+
+                    and (ma5_last > ma300_last or delta_DNA_1 < delta_DNA_2 or ma100_last > ma200_last or deviation_ma200_sotto_ma300 > -0.10)
                     and ma20_last < ma50_last
+                    
+                    and delta_1 < delta_2
+                    and ma300_last > ma450_last
+                    and ma450_last > ma450_120_min_ago
+
                     and deviation_ma3_sotto_ma50 < -0.30
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.15
 
                     and ma3_last < ma100_last
 
-                    and ma5_last > ma300_last or delta_DNA_1 < delta_DNA_2 or ma100_last > ma200_last or deviation_ma200_sotto_ma300 > -0.10
-
                     and deviation_ma5_sotto_ma200 < -0.15
-
-                    and delta_1 < delta_2
-                    and ma300_last > ma450_last
-                    and ma450_last > ma450_120_min_ago
 
                     and deviation_ma39 < -0.15
                     and deviation_ma3_sotto_ma50 < -0.15
                     
                     and macd_differenza_2_min_ago > -18.50
                 ):    
-                    buy = "BUY 3 con ma450_last > ma450_120_min_ago con 20<50 vedi condizioni ritracciamento - r 6270"
+                    buy = f"BUY 3 {ma450_last} {ma450_120_min_ago} con ma450 > ma450 2 ore e 20<50 - vedi condizioni ritracciamento - r 6270"
                     action = "buy"
                     percentage = 80
                     
@@ -21165,6 +21172,8 @@ class maddog:
                     #  6 apr 2025 aggiunto and deviation_ma25_sotto_ma300 < -0.30
                     #  8 apr 2025 se ritraccia 3 DEVE STARE SOTTO 100 non c'e' niente da fare !
                     #  8 apr 2025 aggiunto basi del ritracciamento
+                    # 11 apr 2025 correzione or e aggiunta f
+                   
 
 
                 elif (
@@ -21792,27 +21801,26 @@ class maddog:
                     ma3_last > ma13_last
 
                     and ma5_last > ma150_last
+                    and ma100_last > ma200_last
                     and (ma3_last < ma20_last or ma20_last < ma20_2_min_ago or ma33_last < ma33_3_min_ago)
-                    and deviation_ma39 < -0.12
-                    and deviation_ma3_sotto_ma50 < -0.05
+
+                    and delta_1 < delta_2
 
                     and ma450_last < ma450_720_min_ago
 
-                    and delta_1 < delta_2
-                    and ma100_last > ma200_last
-                    
-                    and ma5_last > ma5_2_min_ago
-                    
+                    and deviation_ma39 < -0.12
+                    and deviation_ma3_sotto_ma50 < -0.05
+
                     and ma3_last > ma7_last
-                    and macd_differenza_2_min_ago > -2.50
+                    and macd_differenza_2_min_ago > -6.50
                    
                 ):
-                    buy = "BUY 3 con ma5_last > ma150_last ma RITRACCIA E ma450_last < ma450_720_min_ago e con ma200> e GIORNO - r 6447 A2x"
+                    buy = f"BUY 3 {ma450_last} {ma450_120_min_ago} con ma5_last > ma150_last ma RITRACCIA E ma450<720 min MA GIORNO - r 6447 A2x"
                     action = "buy"
                     percentage = 90
 
                     # 27 mar 2025 se ma5_last > ma150_last ritracciando compra con deviation_ma39 < -0.12
-
+                    # 11 apr 2025 correzione or e aggiunta f
 
 
                 elif (
@@ -21950,26 +21958,24 @@ class maddog:
                 elif (    
                     ma3_last > ma20_last
 
-                    and ma39_last < ma50_last
                     and ma200_last > ma200_60_min_ago
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > 0.72
+                    and (ma39_last < ma50_last or ma20_last < ma50_last)
                     and ma39_last < ma39_10_min_ago
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.05
-                    
-                    
-                    and delta_1 < delta_2
 
+                    and ma300_last > ma300_120_min_ago
+                    and delta_1 < delta_2
                     and ma100_last > ma200_last
                     and deviation_ma100_sopra_ma300 > 0.40
                     and ma150_last > ma150_60_min_ago
-                    and ma300_last > ma300_120_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > 0.72
                     
                     and deviation_ma3_sopra_ma10 > 0.01
-                    and ma2_last >= ma2_2_min_ago
-                   
+
+                    and macd_differenza_2_min_ago > -6.25
                 ):
              
-                    buy = "BUY 3 con 200> e dev ma100-ma100 10 min ago>0.72 MA 39<50 E 39<39 10 min ago E 5-100 < -0.05 - RITRACCIAMENTO - r 6470 AY"
+                    buy = f"BUY 3 {ma300_last} {ma300_120_min_ago} con 300> MA RITRACCIAMENTO E 5-100 < -0.05 - r 6470 AY"
                     action = "buy"
                     percentage = 70
 
@@ -21981,7 +21987,7 @@ class maddog:
                     # 26 feb 2025 and ma39_last < ma39_10_min_ago
                     # 26 feb 2025 and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > 0.72
                     # 26 feb 2025 and deviation_ma5_sopra_o_sotto_ma100 < -0.05
-
+                    # 11 apr 2025 correzione or e aggiunta f
 
 
                 elif (
@@ -24846,19 +24852,17 @@ class maddog:
                 elif (
                     ma3_last > ma11_last
 
+                    and (ma5_last > ma300_last or delta_DNA_1 < delta_DNA_2 or ma100_last > ma200_last or ma200_last > ma300_last)
+                    and (ma300_last > ma450_last or ma100_last > ma300_last)
                     and ma20_last < ma50_last
+
+                    and ma450_last > ma450_720_min_ago
+                    and ma300_last > ma300_301_min_ago
+
+                    and ma3_last < ma100_last
                     and deviation_ma3_sotto_ma50 < -0.30
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.15
 
-                    and ma3_last < ma100_last
-
-                    and ma5_last > ma300_last or delta_DNA_1 < delta_DNA_2 or ma100_last > ma200_last or ma200_last > ma300_last
-                    and ma300_last > ma450_last or ma100_last > ma300_last
-
-                    
-                    and ma450_last > ma450_720_min_ago
-                    and ma300_last > ma300_301_min_ago
-                    
                     and deviation_ma39 < -0.30
                     and deviation_ma3_sotto_ma50 < -0.30
 
@@ -24868,7 +24872,7 @@ class maddog:
                     
                     and macd_differenza_2_min_ago > -18.50
                 ):
-                    buy = "BUY 4 GIORNO con 300> E ma100>ma200 quando ritraccia vedi 20<50 - r 6668 A1 Y1 Xx"
+                    buy = f"BUY 4 {ma450_last} {ma450_720_min_ago} GIORNO con 300> E ma100>ma200 quando ritraccia vedi 20<50 - r 6668 A1 Y1 Xx"
                     action = "buy"
                     percentage = 70
                     
@@ -24891,6 +24895,8 @@ class maddog:
                     #  7 apr 2025 and deviation_ma3_sotto_ma50 < -0.30 da 0.09
                     #  8 apr 2025 se ritraccia 3 DEVE STARE SOTTO 100 non c'e' niente da fare !
                     #  8 apr 2025 aggiunto le basi del ritracciamento
+                    # 11 apr 2025 correzione or e aggiunta f
+
 
 
                 elif (
