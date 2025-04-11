@@ -2090,18 +2090,18 @@ class maddog:
                 
             
                 # ------------------------------------------------------------ BUY 1 DURANTE IL RIALZO con INCROCIO CLASSICO 69-100 and ma78 >
-
                 if (  
                     ma3_last > ma8_last
-                    
+
+                    and ma20_last > ma50_last
+
                     and ma100_last > ma200_last
                     and ma300_last > ma300_301_min_ago
-                    
+
                     and deviation_ma3_sopra_ma10 > 0.01
                     
                     and macd_differenza_2_min_ago > -18.50
 
-                    # and adx > -0.90
                 ):    
               
                     buy = "BUY 1 con ma300_last > ma300_301_min_ago e 100>200 - r 916 A1 x"
@@ -2113,7 +2113,35 @@ class maddog:
                     # 28 gen 2025 3-90 per anticipare di una ndecchiecella il 4-100
                     # 30 mar 2025 anticipata visto che 300 sale da 2 ore !
                     # 31 mar 2025 anticipata ndecchiecella
+                    # 11 apr 2025 ipotesi 20>50 stai tranquillo. non sta ritracciando
 
+
+                elif (  
+                    ma3_last > ma8_last
+
+                    and ma20_last < ma50_last
+                    and deviation_ma39 < -0.15
+                    and deviation_ma3_sotto_ma50 < -0.15
+
+                    and ma100_last > ma200_last
+                    and ma300_last > ma300_301_min_ago
+
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    
+                    and macd_differenza_2_min_ago > -18.50
+                ):        
+                    buy = f"BUY 1 {ma300_last} {ma300_301_min_ago} con ma300_last > ma300_301_min_ago MA ritracciamento - r 916 A1 x"
+                    action = "buy"
+                    percentage = 90
+
+                    # 11 nov 2024 prova adx
+                    #  5 dic 2025 anticipata ndecchia
+                    # 28 gen 2025 3-90 per anticipare di una ndecchiecella il 4-100
+                    # 30 mar 2025 anticipata visto che 300 sale da 2 ore !
+                    # 31 mar 2025 anticipata ndecchiecella
+                    # 11 apr 2025 sta ritracciando cazzo !
+                    # 11 apr 2025 aggiungo, allora, and deviation_ma39 < -0.12
+                    # 11 apr 2025 aggiungo, allora, and deviation_ma3_sotto_ma50 < -0.25
 
 
                 elif (    
