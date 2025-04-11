@@ -24902,27 +24902,22 @@ class maddog:
                 elif (
                     ma3_last > ma11_last
 
-                    and ma450_last < ma450_720_min_ago
-                    and ma20_last < ma50_last
-                    and delta_1 > delta_2
-                    and deviation_ma3_sotto_ma50 < -0.15
-                    and deviation_ma50_sopra_o_sotto_ma100 < -0.10
-                    
-                    and ma300_last > ma450_last or ma100_last > ma300_last
-                    
-                    and deviation_ma5_sotto_ma200 < -0.15
-                    
-
-                    
                     and ma300_last > ma300_301_min_ago
                     and ma100_last > ma200_last
-                    and delta_1 < delta_2
+                    and (ma300_last > ma450_last or ma100_last > ma300_last)
+                    and ma20_last < ma50_last
+
+                    and ma450_last < ma450_720_min_ago
+                    
+                    and deviation_ma3_sotto_ma50 < -0.15
+                    and deviation_ma5_sotto_ma200 < -0.15
+                    and deviation_ma50_sopra_o_sotto_ma100 < -0.10
                     
                     and ma3_last > ma9_last
                     
                     and macd_differenza_2_min_ago > -18.50
                 ):
-                    buy = "BUY 4 GIORNO con 300> E ma100>ma200 squando ritraccia vedi 20<50 - r 6668 A1 Y1 Xy"
+                    buy = f"BUY 4 {ma450_last} {ma450_720_min_ago} con 450< MA 300> e RITRACCIAMENTO - r 6668 A1 Y1 Xy"
                     action = "buy"
                     percentage = 70
                     
@@ -24932,7 +24927,7 @@ class maddog:
                     # 24 mar and macd_differenza_2_min_ago > -5.00 da -2.50
                     # 28 mar 2025 se ritraccia
                     # se ritraccia con 450 <
-
+                    # 11 apr 2025 correzione or e aggiunta f
 
 
                 
@@ -24940,14 +24935,15 @@ class maddog:
                 elif (
                     ma3_last > ma13_last
 
-                    and ma5_last > ma150_last
-                    and (ma3_last < ma20_last or ma20_last < ma20_2_min_ago or ma33_last < ma33_3_min_ago)
-                    and deviation_ma39 < -0.12
-                    and deviation_ma3_sotto_ma50 < -0.05
-
-
                     and ma300_last > ma300_301_min_ago
                     and ma100_last > ma200_last
+
+                    and ma20_last < ma50_last
+                    and (ma3_last < ma20_last or ma20_last < ma20_2_min_ago or ma33_last < ma33_3_min_ago)
+                    and ma5_last > ma150_last
+
+                    and deviation_ma39 < -0.12
+                    and deviation_ma3_sotto_ma50 < -0.05
 
                     and delta_1 > delta_2
                     
@@ -24955,7 +24951,7 @@ class maddog:
                     
                     and macd_differenza_2_min_ago > -18.50
                 ):
-                    buy = "BUY 4 NOTTE con 300> E ma100>ma200 and deviation_ma3_sotto_ma50 < -0.04 - r 6668 A1 Y1 Y"
+                    buy = f"BUY 4 {ma300_last} {ma300_301_min_ago} NOTTE con 300> E ritracciamento - r 6668 A1 Y1 Y"
                     action = "buy"
                     percentage = 70
                     
@@ -24964,7 +24960,7 @@ class maddog:
                     # 23 mar 2025 aggiunta se delta_1 > delta_2 allora deviation_ma3_sotto_ma50 < -0.04
                     # 24 mar 2025 deviation_ma3_sotto_ma50 < -0.05 da -0.04
                     # 27 mar 2025 con ma5 ancora sopra ma150 ma se ritraccia (vedi ma20 e ma33) allora compra con deviation_ma39 < -0.12
-
+                    # 11 apr 2025 correzione or e aggiunta f
 
 
                 
@@ -27749,31 +27745,36 @@ class maddog:
                     # 02 SET 2024 RO CANO E' TORNATO
 
 
+
                 elif (    
                     ma3_last > ma13_last
-                    and ma39_last < ma39_5_min_ago
-                    and deviation_ma39 > 0.10
-                    and ma3_last > ma30_last
-                    and ma100_last > ma100_5_min_ago
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
-                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
-                    
+
                     and ma450_last >= ma450_120_min_ago
                     and ma50_last > ma450_last
+                    and ma100_last > ma100_5_min_ago
+
+                    and ma39_last < ma39_5_min_ago
+
+                    and deviation_ma39 < -0.12
+                    and deviation_ma3_sotto_ma50 < -0.05
+                   
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
+
                     
                     and deviation_ma3_sopra_ma10 > 0.005
-                    and deviation_ma3_sopra_ma16 > 0.005
                     
-                    and ma2_last >= ma2_2_min_ago
-                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.017
-                    and ma2_differenza_ma5 > 5
-                    and macd_differenza_2_min_ago > 0.10
+                    and macd_differenza_2_min_ago > -5.00
                 ):
-                    buy = "BUY 5 con 3-20 and 450_last >= 450_120_min_ago e 50 > 450 and ma2_differenza_ma5 > 8 - r 7144 A1 X NUOVA ERA A3 SOFT y"
+                    buy = "BUY 5 con 3-13 and 450_last >= 450 2 ore MA and ma39_last < ma39_5_min_ago - r 7144 A1 X NUOVA ERA A3 SOFT y"
                     action = "buy"
                     percentage = 70
                     
-                    # 24 feb 2024 se ma39 < ma39 5 min ago BUY con deviation_ma39 > 0.10 CAZZO sta ritracciando dopo il rialzo
+                    # 24 feb 2024 se ma39 < ma39 5 min ago sta ritracciando CAZZO
+                    # 11 apr 2025 anticipato ndecchiecella
+
+
+
 
                 # 24 nov 2024 cancellata r 7144 A1 X NUOVA ERA A3 SOFT z1
                 
@@ -28388,43 +28389,37 @@ class maddog:
                 elif (    
                     ma3_last > ma15_last
 
-                    and ma20_last < ma50_last
+                    and (ma20_last < ma50_last or ma10_last < ma30_last or ma39_last < ma39_20_min_ago)
+                    
+                    and ma450_last >= ma450_120_min_ago
+                    and ma100_last > ma450_last
+
                     and deviation_ma3_sotto_ma50 < -0.30
+                    and deviation_ma39 < -0.17
+
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.15
 
                     and ma450_last < ma450_720_min_ago
-                    
-                    and ma39_last < ma39_20_min_ago
-                    and deviation_ma39 < -0.17
-
-                    and ma450_last >= ma450_120_min_ago
-                    and ma100_last > ma450_last
-                    
-                    and ma10_last < ma30_last
-                   
                     
                     and deviation_ma3_sopra_ma10 > 0.01
                     and deviation_ma3_sopra_ma16 > -0.02
                     
                     
-                    and ma3_last > ma13_last
+                    and ma2_last > ma10_last
                     and ma3_last > ma5_last
                     
-                    and ma2_last > ma2_2_min_ago
-                    and macd > -40
-                    and macd_differenza_2_min_ago > -3.25
-                
+                    and macd_differenza_2_min_ago > -6.25
                 ):
-                    buy = "BUY 5 con 450_last < 450_720_min_ago E ma100>ma450 MA 20 < 50 ritracciamento ! - r 7144 A1 Y2 NUOVA ERA A3 SOFT XY 2"
+                    buy = f"BUY 5 {ma450_last} {ma450_120_min_ago} con 450<720 MA 450> 120 min - RITRACCIA - r 7144 A1 Y2 NUOVA ERA A3 SOFT XY 2"
                     action = "buy"
                     percentage = 70
-
+                    
                     # 14 ott 2024 anticipata con 450 che sale da 120 min NON FARTI TROPPI PROBLEMI. PROVACI.
                     # 29 ott 2024 se ma39_last < ma39_20_min_ago allora aggiungi UNA SPECIE DI OSSO (and deviation_ma39 < -0.17)
 
                     # 29 gen 2025 INCOMINCIO A RISOLVERE IL PROBLEMA DEL TREND LATERALE dopo un grande RIBASSO !
                     #  8 apr 2025 se 20<50 aggiungo le basi del ritracciamento
-
+                    # 11 apr 2025 correzione or e aggiunta f
 
 
 
