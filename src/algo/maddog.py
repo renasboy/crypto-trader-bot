@@ -2177,25 +2177,24 @@ class maddog:
                 elif (
                     ma3_last > ma18_last
 
+                    and (ma20_last < ma50_last or ma3_last < ma20_last or ma20_last < ma20_2_min_ago)
+                    and ma450_last > ma450_360_min_ago
+                    and ma300_last > ma300_120_min_ago
+                    and ma200_last > ma300_last
                     and ma5_last < ma150_last
-                    and (ma3_last < ma20_last or ma20_last < ma20_2_min_ago)
+                    
                     and deviation_ma39 < -0.30
                     and deviation_ma3_sotto_ma50 < -0.05
 
-                    and ma200_last > ma300_last
-                    and ma450_last > ma450_360_min_ago
                     and delta_DNA_1 > delta_DNA_2
-                    
-                    and ma300_last > ma300_120_min_ago
                     
                     and deviation_ma3_sopra_ma10 > 0.01
                     
                     and macd_differenza_2_min_ago > -5.50
 
-                    # and adx > -0.90
                 ):  
               
-                    buy = f"BUY 1 {ma450_last} {ma450_360_min_ago} con ma450_last > ma450_360_min_ago - DNA - NOTTE - r 916 A2y"
+                    buy = f"BUY 1 {ma450_last} {ma450_360_min_ago} con ma450_last > ma450_360_min_ago - DNA - RITRACCIAMENTO - r 916 A2y"
                     action = "buy"
                     percentage = 90
 
@@ -2204,7 +2203,7 @@ class maddog:
                     # 28 feb 2025 aggiunta DNA - NOTTE
                     # 28 feb 2025 tolto 5>180
                     # 27 mar 2025 se 5 STA SOTTO 150 e ritraccia (vedi ma3<ma20 o ma20<ma20 2 min ago)  allora deve essere deviation_ma39 < -0.30
-                    # 10 apr 2025 correzione errore or
+                    # 10 apr 2025 correzione errore or e aggiunta f
                 
                 
                 elif (
@@ -2431,9 +2430,11 @@ class maddog:
                 
                 elif (
                     ma3_last > ma13_last
-                    and (ma5_last > ma300_last or delta_DNA_1 < delta_DNA_2 or ma100_last > ma200_last or ma200_last > ma300_last)
 
                     and ma20_last < ma50_last
+                    and (ma5_last > ma300_last or delta_DNA_1 < delta_DNA_2 or ma100_last > ma200_last or ma200_last > ma300_last)
+
+                    
                     and deviation_ma3_sotto_ma50 < -0.30
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.15
 
@@ -2475,9 +2476,9 @@ class maddog:
                 elif (
                     ma3_last > ma13_last
 
-                    and (ma5_last > ma300_last or delta_DNA_1 < delta_DNA_2 or ma100_last > ma200_last or ma200_last > ma300_last)
                     and (ma20_last < ma20_2_min_ago or ma33_last < ma33_3_min_ago)
-
+                    and (ma5_last > ma300_last or delta_DNA_1 < delta_DNA_2 or ma100_last > ma200_last or ma200_last > ma300_last)
+                    
                     and ma450_last > ma450_360_min_ago
                     and delta_1_200_78 < delta_2_200_78_60_min
 
@@ -4086,19 +4087,18 @@ class maddog:
 
                 elif (    
                     ma3_last > ma13_last
+                    and (ma3_last < ma20_last or ma20_last < ma20_2_min_ago)
+
                     and ma300_last > ma300_180_min_ago
+                    and ma100_last > ma100_120_min_ago
 
                     and deviation_ma200_sotto_ma300 < -0.05
-
-                    and ma5_last < ma150_last
-                    and (ma3_last < ma20_last or ma20_last < ma20_2_min_ago)
-                    and deviation_ma39 < -0.40
-                    and deviation_ma3_sotto_ma50 < -0.09
-
                     and deviation_ma200_sotto_ma300 > -0.01
 
-                    and ma100_last > ma100_120_min_ago
+                    and ma5_last < ma150_last
                     
+                    and deviation_ma39 < -0.40
+                    and deviation_ma3_sotto_ma50 < -0.09
 
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
                     and deviation_ma5_sopra_o_sotto_ma100 > -0.50
@@ -12786,11 +12786,11 @@ class maddog:
 
                 if (    
                     ma3_last > ma18_last
+
+                    and (ma3_last < ma20_last or ma20_last < ma20_2_min_ago or ma33_last < ma33_3_min_ago)
                     and ma300_last > ma300_120_min_ago
                     and ma5_last > ma150_last
-                    and (ma3_last < ma20_last or ma20_last < ma20_2_min_ago or ma33_last < ma33_3_min_ago)
-
-
+                    
                     and deviation_ma39 < -0.12
                     and deviation_ma3_sotto_ma50 < -0.05
 
@@ -17484,15 +17484,15 @@ class maddog:
                     
                 elif (    
                     ma450_last > ma450_720_min_ago
-                    and ma20_last > ma50_last
-                    
                     and ma450_last > ma450_120_min_ago
+                    and ma100_last > ma300_last
+                    and ma20_last > ma50_last
                     
                     and delta_1 > delta_2
                     
                     and ma100_last >= ma100_10_min_ago
                     and (ma3_prev < ma90_prev and ma3_last > ma90_last)
-                    and ma100_last > ma300_last
+                    
                     
                     and macd_differenza_2_min_ago > -18.50
                 ):    
@@ -17505,21 +17505,23 @@ class maddog:
                     # 17 set 2024 3-90 invece di 5-90
                     # 29 mar 2025 se ritraccia con 450> and ma3_last > ma39_last
                     # 29 mar 2025 attenzione 3>39 vuol dire che forse non sta ancora ritracciando (sta al posto di 20>50)
-                    # 10 apr 2025 con 20>50 non dovrebbe essere ritracciamento
+                    # 10 apr 2025 con 20>50 non dovrebbe essere ritracciamento - bravo mario !
                     
 
-                elif (    
-                    ma450_last > ma450_720_min_ago
-                    and ma450_last > ma450_120_min_ago
-
+                elif (
+                    ma3_last > ma18_last
+                    
                     and (ma20_last < ma50_last or ma3_last < ma39_last)
+                    and ma450_last > ma450_720_min_ago
+                    and ma450_last > ma450_120_min_ago
+                    and ma100_last > ma300_last
+
                     and deviation_ma3_sotto_ma50 < -0.30
                     
                     and delta_1 > delta_2
                     
                     and ma100_last >= ma100_10_min_ago
                     and (ma3_prev < ma90_prev and ma3_last > ma90_last)
-                    and ma100_last > ma300_last
                     
                     and macd_differenza_2_min_ago > -18.50
                 ):    
@@ -17537,11 +17539,14 @@ class maddog:
                     
 
 
-                elif (    
-                    ma450_last > ma450_720_min_ago
-                    and ma450_last > ma450_120_min_ago
-
+                elif (
+                    ma3_last > ma18_last
+                    
                     and (ma20_last < ma50_last or ma3_last < ma39_last)
+                    and ma450_last > ma450_720_min_ago
+                    and ma450_last > ma450_120_min_ago
+                    and ma100_last > ma300_last
+
                     and deviation_ma3_sotto_ma50 < -0.30
 
                     and delta_1 > delta_2
@@ -17551,7 +17556,6 @@ class maddog:
 
                     and ma100_last >= ma100_10_min_ago
                     and (ma3_prev < ma90_prev and ma3_last > ma90_last)
-                    and ma100_last > ma300_last
                     
                     and macd_differenza_2_min_ago > -18.50
                 ):    
@@ -17567,17 +17571,17 @@ class maddog:
                     # 10 apr 2025 ritracciamento con and (ma20_last < ma50_last or ma3_last < ma39_last)
                     
 
-                elif (    
-                    ma450_last < ma450_720_min_ago
-                    and ma3_last > ma39_last
-                    
+                elif (
+                    ma3_last > ma18_last
+
                     and ma450_last > ma450_120_min_ago
-                    
+                    and ma100_last >= ma100_10_min_ago
+                    and ma100_last > ma300_last
+
+                    and ma450_last < ma450_720_min_ago
                     and delta_1 > delta_2
 
-                    and ma100_last >= ma100_10_min_ago
                     and (ma3_prev < ma90_prev and ma3_last > ma90_last)
-                    and ma100_last > ma300_last
                     
                     and macd_differenza_2_min_ago > -18.50
                 ):    
@@ -17589,23 +17593,27 @@ class maddog:
                     # 22 feb 2024 aggiunta and ma100_last > ma100_10_min_ago
                     # 17 set 2024 3-90 invece di 5-90
                     # 29 mar 2025 se ritraccia con 450< and ma3_last > ma39_last
-                    # 29 mar 2025 attenzione 3>39 vuol dire che forse non sta ancora ritracciando (sta al posto di 20>50)
+                    # 29 mar 2025 attenzione 3>39 vuol dire che forse non sta ancora ritracciando (20<50)
+                    # 11 apr 2025 tolto 3-39
+                    # 11 apr 2025 questa condizione con incrocio al rialzo 3-90 per adesso la tengo.
 
 
-                elif (    
-                    ma450_last < ma450_720_min_ago
+                elif (
+                    ma3_last > ma13_last
+                    
                     and (ma20_last < ma50_last or ma3_last < ma39_last)
-                    
                     and ma450_last > ma450_120_min_ago
-                    
+                    and ma100_last > ma300_last
+                    and ma100_last >= ma100_10_min_ago
+
+                    and ma450_last < ma450_720_min_ago
                     and delta_1 > delta_2
+
                     and deviation_ma3_sotto_ma50 < -0.07
                     and deviation_ma50_sopra_o_sotto_ma100 < -0.05
                     and deviation_ma5_sotto_ma200 < -0.15
 
-                    and ma100_last >= ma100_10_min_ago
                     and (ma3_prev < ma90_prev and ma3_last > ma90_last)
-                    and ma100_last > ma300_last
                     
                     and macd_differenza_2_min_ago > -18.50
                 ):    
@@ -17619,7 +17627,7 @@ class maddog:
                     # 29 mar 2025 se ritraccia con 450< and ma3_last < ma39_last
                     # 29 mar 2025 attenzione 3<39 vuol dire che forse sta cominciando a ritracciare (sta al posto di 20<50)
                     # 10 apr 2025 RITRACCIAMENTO scritto cosi' and (ma20_last < ma50_last or ma3_last < ma39_last)
-
+                    # 11 apr 2025 ordine e progresso
 
 
                 
@@ -17648,33 +17656,29 @@ class maddog:
 
                 elif (
                     ma3_last > ma11_last
-                    and ma450_last > ma450_360_min_ago
-
-                    and ma100_last > ma100_60_min_ago
-                    and ma50_last > ma100_last
 
                     and ma20_last < ma50_last
-                    and deviation_ma3_sotto_ma50 < -0.01
                     
+                    and ma450_last > ma450_360_min_ago
+                    and ma450_last > ma450_120_min_ago
+                    and ma300_last > ma300_60_min_ago
+                    and ma200_last > ma200_120_min_ago
+                    and ma100_last > ma100_60_min_ago
+                    and ma200_last > ma250_last
+                    and ma50_last > ma100_last
+
+                    and delta_DNA_1 < delta_DNA_2
+                    and delta_1 < delta_2
+
+                    and deviation_ma3_sotto_ma50 < -0.01
+                    and deviation_ma39 < -0.05
 
                     and (ma300_last > ma450_last or ma100_last > ma300_last)
                     
-                    and delta_DNA_1 < delta_DNA_2
-
-                    and delta_1 < delta_2
+                    
                     and deviation_ma100_sopra_ma300 < -0.30
                     and deviation_ma25_sotto_ma300 < -0.30
-
-                    and deviation_ma39 < -0.05
-                    
                     and deviation_ma5_sotto_ma200 < -0.15
-                    
-                    
-                    and ma450_last > ma450_120_min_ago
-                    and ma300_last > ma300_60_min_ago
-                    
-                    and ma200_last > ma250_last
-                    and ma200_last > ma200_120_min_ago
                     
                     and ma3_last > ma8_last
                     and macd_differenza_2_min_ago > -18.50
@@ -17695,49 +17699,44 @@ class maddog:
                     #  8 apr 2025 le basi del ritracciamento non ci sono se 100>100 60 min ago
                     #  8 apr 2025 se 50 sta SOPRA 100 non ci sono ancora le basi del ritracciamento
                     # 10 apr 2025 correzione or e aggiunta f
+                    # 11 apr 2025 ordine e progresso
+
 
 
                 elif (
                     ma3_last > ma11_last
 
-                    and ma20_last < ma50_last
-                    and ma50_last < ma100_last
-                    and deviation_ma3_sotto_ma50 < -0.30
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.15
-                    
-                    and ma100_last > ma100_60_min_ago
-
-                    and deviation_ma3_sotto_ma50 < -0.01
-                    
-
-                    and ma300_last > ma450_last or ma100_last > ma300_last
+                    and (ma20_last < ma50_last or ma50_last < ma100_last)
                     and ma450_last > ma450_360_min_ago
-
+                    and ma450_last > ma450_120_min_ago
+                    and ma300_last > ma300_60_min_ago
+                    and ma200_last > ma200_120_min_ago
+                    and ma100_last > ma100_60_min_ago
+                    and ma300_last > ma450_last
+                    and ma200_last > ma250_last
+                    and ma100_last > ma300_last
+                    and delta_1 < delta_2
                     and delta_DNA_1 < delta_DNA_2
 
-                    and delta_1 < delta_2
+                    and deviation_ma3_sotto_ma50 < -0.30
+                    and deviation_ma39 < -0.05
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.15
+                    
+                    and deviation_ma3_sotto_ma50 < -0.01
+                    
                     and deviation_ma100_sopra_ma300 < -0.30
                     and deviation_ma25_sotto_ma300 < -0.30
 
-                    and deviation_ma39 < -0.05
-                    
                     and deviation_ma5_sotto_ma200 < -0.15
-                    
-                    
-                    and ma450_last > ma450_120_min_ago
-                    and ma300_last > ma300_60_min_ago
-                    
-                    and ma200_last > ma250_last
-                    and ma200_last > ma200_120_min_ago
                     
                     and ma3_last > ma8_last
                     and macd_differenza_2_min_ago > -18.50
                   
                 ):    
-                    buy = "BUY 2 con ma450_last > ma450_120_min_ago e con 300>300 60 min ago - GIORNO - con 20<50 ! - r 5892 A1x1 x1x2"
+                    buy = f"BUY 2 {ma450_last} {ma450_360_min_ago} con ma450_last > 120 min - GIORNO - MA RITRACCIAMENTO ! - r 5892 A1x1 x1x2"
                     action = "buy"
                     percentage = 70
-
+                    
                     # 11 set 2024 forse e' da cancellare
                     # 16 feb 2025 se anche ma100_last > ma100_120_min_ago anticipata ndecchiecella
                     # 28 feb 2025 GIORNO !
@@ -30870,51 +30869,48 @@ class maddog:
                 elif (
                     ma3_last > ma8_last
 
-                    and ma100_last < ma100_10_min_ago
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.13
-                    and delta_1 < delta_2
-
-                    and ma450_last > ma450_720_min_ago
                     and ma20_last < ma50_last
-
-                    and deviation_ma3_sotto_ma50 < -0.06
-                    and deviation_ma50_sopra_o_sotto_ma100 < -0.05
-
+                    and ma450_last > ma450_720_min_ago
                     and ma200_last > ma200_120_min_ago
                     and ma300_last > ma300_60_min_ago
-
+                    and delta_1 < delta_2
                     
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.13
+                    
+                    and deviation_ma3_sotto_ma50 < -0.06
                     and deviation_ma39 < -0.01
-                    and deviation_ma3_sotto_ma50 < -0.01
+                    and deviation_ma50_sopra_o_sotto_ma100 < -0.05
 
                     and deviation_ma3_sopra_ma10 > 0.01
                     
                     and macd_differenza_2_min_ago > -18.50
                 ):   
-                    buy = "BUY 5 che NON SPEZZA LA CATENA - NOTTE - SE ma200> 120 min con 3-10 > 0.01 - r 7410 A2 Y1x"
+                    buy = f"BUY 5 {ma450_last} {ma450_720_min_ago} con ma450> 720 min MA ritracciamento - r 7410 A2 Y1x"
                     action = "buy"
                     percentage = 80
-
+                    
                     #  6 apr 2025 se e' buy 5 deve essere and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.13
+                    # 11 apr 2025 aggiunta f
+
 
 
                 elif (
                     ma3_last > ma8_last
 
-                    and ma100_last < ma100_10_min_ago
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.13
-                    and delta_1 < delta_2
-
-                    and ma450_last > ma450_720_min_ago
                     and ma20_last < ma50_last
 
+                    and ma450_last > ma450_720_min_ago
+                    and ma300_last > ma300_60_min_ago
+                    and ma200_last > ma200_120_min_ago
+                    and delta_1 < delta_2
+
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.13
+                    
                     and deviation_ma3_sotto_ma50 < -0.06
                     and deviation_ma50_sopra_o_sotto_ma100 < -0.05
 
-                    and ma200_last > ma200_120_min_ago
-                    and ma300_last > ma300_60_min_ago
-
-                    
                     and deviation_ma39 < -0.01
                     and deviation_ma3_sotto_ma50 < -0.01
 
@@ -30922,7 +30918,7 @@ class maddog:
                     
                     and macd_differenza_2_min_ago > -18.50
                 ):   
-                    buy = "BUY 5 che NON SPEZZA LA CATENA - NOTTE - SE ma200> 120 min con 3-10 > 0.01 - r 7410 A2 Y1y"
+                    buy = f"BUY 5 {ma450_last} {ma450_720_min_ago} con ma450> 720 min MA ritracciamento - r 7410 A2 Y1y"
                     action = "buy"
                     percentage = 80
                     
@@ -30938,31 +30934,29 @@ class maddog:
                     #  3 apr 2025 e' andata bene
                     #  3 apr 2025 aggiunta and deviation_ma3_sotto_ma50 < -0.01
                     #  6 apr 2025 se e' buy 5 deve essere and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.13
-
+                    # 11 apr 2025 aggiunto f
 
 
                 elif (
                     ma3_last > ma8_last
 
-                    and ma450_last < ma450_720_min_ago
                     and ma20_last < ma50_last
-                    and delta_1 > delta_2
+                    and ma300_last >= ma300_60_min_ago
+                    and ma200_last >= ma200_120_min_ago
+                    
                     and deviation_ma3_sotto_ma50 < -0.15
+                    and deviation_ma39 < -0.01
                     and deviation_ma50_sopra_o_sotto_ma100 < -0.10
 
-
-                    and ma200_last >= ma200_120_min_ago
-                    and ma300_last >= ma300_60_min_ago
-
+                    and ma450_last < ma450_720_min_ago
                     and delta_1 > delta_2
-                    and deviation_ma39 < -0.01
-
+                    
                     and deviation_ma3_sopra_ma10 > 0.01
                     and deviation_ma5_sopra_ma28 > -0.12
                     
                     and macd_differenza_2_min_ago > -18.50
                 ):   
-                    buy = "BUY 5 che NON SPEZZA LA CATENA - NOTTE - SE ma200> 120 min con 3-10 > 0.01 e 5-28 > -0.10 - r 7410 A2 y2"
+                    buy = f"BUY 5 {ma300_last} {ma300_60_min_ago} SE ma200> 120 min MA ritracciamento - r 7410 A2 y2"
                     action = "buy"
                     percentage = 80
                     
@@ -30975,7 +30969,7 @@ class maddog:
                     # 27 gen 2025 quando e' giorno tolto and ma2_last >= ma2_2_min_ago
                     # 27 mar 2025 se NOTTE and deviation_ma39 < -0.01
                     # 29 mar 2025 se ritraccia con 450 >
-
+                    # 11 apr 2025 aggiunto f
 
 
 
