@@ -2201,7 +2201,6 @@ class maddog:
 
 
 
-
                 elif (
                     ma3_last > ma18_last
 
@@ -2209,6 +2208,8 @@ class maddog:
                     and ma450_last > ma450_360_min_ago
                     and ma300_last > ma300_120_min_ago
                     and ma200_last > ma300_last
+                    and ma100_last > ma200_last
+
                     and ma5_last < ma150_last
                     
                     and deviation_ma39 < -0.30
@@ -2222,7 +2223,7 @@ class maddog:
 
                 ):  
               
-                    buy = f"BUY 1 {ma450_last} {ma450_360_min_ago} con ma450_last > ma450_360_min_ago - DNA - RITRACCIAMENTO - r 916 A2y"
+                    buy = f"BUY 1 {ma450_last} {ma450_360_min_ago} con ma450_last > ma450_360_min_ago - DNA - RITRACCIAMENTO - r 916 A2y1"
                     action = "buy"
                     percentage = 90
 
@@ -2232,6 +2233,48 @@ class maddog:
                     # 28 feb 2025 tolto 5>180
                     # 27 mar 2025 se 5 STA SOTTO 150 e ritraccia (vedi ma3<ma20 o ma20<ma20 2 min ago)  allora deve essere deviation_ma39 < -0.30
                     # 10 apr 2025 correzione errore or e aggiunta f
+                    # 13 apr 2025 con 100>200
+
+
+                elif (
+                    ma3_last > ma18_last
+
+                    and (ma20_last < ma50_last or ma3_last < ma20_last or ma20_last < ma20_2_min_ago)
+                    and ma450_last > ma450_360_min_ago
+                    and ma300_last > ma300_120_min_ago
+                    and ma200_last > ma300_last
+
+                    and ma100_last < ma200_last
+                    and ma5_last < ma150_last
+
+                    and deviation_ma5_sotto_ma300 < -0.40
+                    and deviation_ma10_sopra_ma200 < -0.30
+
+                    and deviation_ma39 < -0.30
+                    and deviation_ma3_sotto_ma50 < -0.05
+
+                    and delta_DNA_1 > delta_DNA_2
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    
+                    and macd_differenza_2_min_ago > -5.50
+
+                ):  
+              
+                    buy = f"BUY 1 {ma450_last} {ma450_360_min_ago} con ma450_last > ma450_360_min_ago - DNA -   MA RITRACCIAMENTO - r 916 A2y2"
+                    action = "buy"
+                    percentage = 90
+
+                    # 11 nov 2024 prova adx
+                    #  5 dic 2025 anticipata ndecchia
+                    # 28 feb 2025 aggiunta DNA - NOTTE
+                    # 28 feb 2025 tolto 5>180
+                    # 27 mar 2025 se 5 STA SOTTO 150 e ritraccia (vedi ma3<ma20 o ma20<ma20 2 min ago)  allora deve essere deviation_ma39 < -0.30
+                    # 10 apr 2025 correzione errore or e aggiunta f
+                    # 13 apr 2025 con 100<200
+                    # 13 apr 2025 aggiunto and deviation_ma5_sotto_ma300 < -0.40
+                    # 13 apr 2025 aggiunto and deviation_ma10_sopra_ma200 < -0.30
+
                 
                 
                 elif (
@@ -14744,17 +14787,18 @@ class maddog:
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.12
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.60
                     
-                    
                     and ma450_last < ma450_360_min_ago
                     and ma300_last < ma300_60_min_ago
                     
                     and deviation_ma5_sopra_ma200 < -0.30
-                    and deviation_ma5_sotto_ma300 < -0.30
+                    and deviation_ma5_sotto_ma300 < -0.35
                     and deviation_ma5_sotto_ma450 < -0.30
-                    
+
+                    and deviation_ma10_sopra_ma200 < -0.30
+
                     and deviation_ma50_sopra_o_sotto_ma100 < -0.01
                     and deviation_ma100_sopra_ma300 < -0.10
-                    
+
                     and deviation_ma3_sopra_ma10 > 0.01
                     and deviation_ma3_sopra_ma16 > -0.125
                     
@@ -14763,11 +14807,11 @@ class maddog:
                 ):
                     buy = "BUY 2 che considera 5-300 E dev 10-200 < -0.24 - r 4760 NUOVA ERA A3 STRONG"
                     action = "buy"
-                    percentage = 50
+                    percentage = 80
                     
                     #  7 dic 2023 aggiunta and ma2_differenza_2_min_ago
                     #  7 apr 2025 tolte sovrastrutture per anticipare
-                
+                    # 13 apr 2025 piccola modifica - aggiunto anche and deviation_ma10_sopra_ma200 < -0.30
                     
                 
                     
@@ -24746,8 +24790,10 @@ class maddog:
                     # 31 ott 2023 3-39 da 5-39
                     # 31 ott 2023 and deviation_ma3_sopra_ma10 > 0.03 da > 0.07
                     # 27 dic 2023 se ma10 < ma20 aggiunta dev ma2 e diff macd
-                    # 
-                    #     #   
+
+
+                    
+                    
                 elif (    
                     ma5_last > ma54_last
                     and ma100_last < ma100_10_min_ago
@@ -55058,13 +55104,14 @@ class maddog:
 
 
 
-
             elif (    
                 ma2_last <= ma4_last
 
                 and ma3_last > ma39_last
                 and ma2_last < ma6_last
-                
+
+                and ma2_last < ma8_last
+                and deviation_sell > 0.02
 
                 and ma300_last < ma300_301_min_ago
                 and ma2_last <= ma5_last
@@ -55083,13 +55130,50 @@ class maddog:
                 and macd > 1
             ): 
                 
-                sell = "SELL CROLLO IMPROVVISO dev_crollo_24_aprile < -0.13 con 2<6 SE 3>39 - r 16480 BY AB 1x"
+                sell = "SELL CROLLO IMPROVVISO dev_crollo_24_aprile < -0.13 con 2<6 SE 3>39 - r 16480 BY AB 1xx"
                 action = "sell"
 
                 #  8 mar 2024 con macd > 1 deviation_crollo_24_aprile < -0.13
                 #  3 feb 2025 questa e' andata benissimo su RCCR -0.29 mentre MADDOG HA FATTO -1.40 !
                 #  3 feb 2025 io ho imposto che deve entrare in azione solo quando la situazione si sta facendo critica.
                 # 10 apr 2025 and ma3_last > ma39_last
+                # 13 apr 2023 se deviation_sell > 0.02 sell con ma2_last < ma8_last
+
+
+
+            elif (    
+                ma2_last <= ma4_last
+
+                and ma3_last > ma39_last
+                and ma2_last < ma6_last
+                and deviation_sell < 0.02
+
+                and ma300_last < ma300_301_min_ago
+                and ma2_last <= ma5_last
+                and deviation_crollo_24_aprile < -0.13
+                
+                and delta_1 > delta_2
+                
+                and ma39_last < ma100_last
+                and deviation_ma5_sotto_ma200 < -1.50
+                and deviation_ma100_sopra_ma300 < -1.20
+                and deviation_ma25_sotto_ma300 < -1.80
+
+                and deviation_ma2_sopra_o_sotto_ma2_2_min_ago <= -0.015
+                and macd_differenza_2_min_ago < -0.50
+                
+                and macd > 1
+            ): 
+                
+                sell = "SELL CROLLO IMPROVVISO dev_crollo_24_aprile < -0.13 con 2<6 SE 3>39 - r 16480 BY AB 1xy"
+                action = "sell"
+
+                #  8 mar 2024 con macd > 1 deviation_crollo_24_aprile < -0.13
+                #  3 feb 2025 questa e' andata benissimo su RCCR -0.29 mentre MADDOG HA FATTO -1.40 !
+                #  3 feb 2025 io ho imposto che deve entrare in azione solo quando la situazione si sta facendo critica.
+                # 10 apr 2025 and ma3_last > ma39_last
+                # 13 apr 2023 se deviation_sell < 0.02 sell con ma2_last < ma6_last
+
 
             
             elif (      
