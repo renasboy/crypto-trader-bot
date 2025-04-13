@@ -30865,9 +30865,10 @@ class maddog:
 
 
 
-
                 elif (
                     ma3_last > ma8_last
+
+                    and ma20_last > ma50_last
 
                     and ma30_last > ma100_last
                     and ma100_last > ma200_last
@@ -30879,13 +30880,39 @@ class maddog:
                     
                     and macd_differenza_2_min_ago > -18.50
                 ):   
-                    buy = "BUY 5 che NON SPEZZA LA CATENA - GIORNO - r 7410 A2 x1"
+                    buy = "BUY 5 che NON SPEZZA LA CATENA - GIORNO E 20>50 - r 7410 A2 X1 x"
                     action = "buy"
                     percentage = 80
 
                     # 27 mar 2025 se GIORNO ok cosi'
                     #  7 apr 2025 aggiunta questa che mancava !
+                    # 13 apr 2025 con ma20_last > ma50_last ok cosi'
 
+
+                elif (
+                    ma3_last > ma8_last
+                    and ma20_last < ma50_last
+
+                    and deviation_ma39 < -0.10
+                    and deviation_ma3_sotto_ma50 < -0.10
+
+                    and ma30_last > ma100_last
+                    and ma100_last > ma200_last
+                    
+                    and delta_1 < delta_2
+                  
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma5_sopra_ma28 > -0.12
+                    
+                    and macd_differenza_2_min_ago > -18.50
+                ):   
+                    buy = "BUY 5 che NON SPEZZA LA CATENA - GIORNO MA 20<50 - r 7410 A2 X1 y"
+                    action = "buy"
+                    percentage = 80
+
+                    # 27 mar 2025 se GIORNO ok cosi'
+                    #  7 apr 2025 aggiunta questa che mancava !
+                    # 13 apr 2025 con and ma20_last < ma50_last 
 
 
 
@@ -51062,9 +51089,15 @@ class maddog:
                 # 26 dic 2023 con 10>=20 vendi dopo a -0.09 da -0.10
                 #  8 gen 2024 dev sell a -0.12 da -0.09
                 #  9 gen 2024 3>20 sostituisce 10>20 ! (CHE E' ARRIVATO TARDI)
-             
+
+
+
+
             elif (
                 ma78_last > ma78_120_min_ago
+                and delta_150_100 <= delta_150_100_60_min
+                and ma300_last > ma450_last
+
                 and ma3_last < ma20_last
                 and ma50_last <= ma50_2_min_ago
                 
@@ -51072,16 +51105,15 @@ class maddog:
                 and ma2_differenza_2_min_ago < -7
                 
                 and ma300_last < ma300_301_min_ago
-                and delta_150_100 <= delta_150_100_60_min
                 
                 and deviation_ma39 < 0.10
-                and deviation_sell < -0.03
+                and deviation_sell > 0.25
                 
                 and deviation_ma100_sopra_ma300 < 0.40
                 and deviation_ma5_sotto_ma200 > -0.50
                 
             ):
-                sell = "SELL CS GIORNO con ma300 < 5 ore e 10<20 e dev 3-39 < 0.10 and dev_sell < -0.03 e con ma50 < e con ma78 > - r 16045 AY"
+                sell = "SELL CS GIORNO E CON 300>450 e 10<20 e dev 3-39 < 0.10 e dev_sell > 0.25 e ma50 < MA ma78 > - r 16045 AYx"
                 action = "sell"
                 
                 # 20 nov 2023 aggiunta and diff ma2 < -5 
@@ -51090,6 +51122,44 @@ class maddog:
                 #  9 gen 2024 questa ha fatto -0.86 ! ALLORA FACCIO LA PROSSIMA r 16045 AZ1 e AZ2
                 #  9 gen 2024 3<20 sostituisce 10<20 ! (CHE E' ARRIVATO TARDI)
                 # 20 set 2024 dev_sell < 0.03 da < -0.03
+                # 13 apr 2025 se ma300_last > ma450_last and deviation_sell > 0.25 da < -0.03 LASCIALO STARE ! LASCIALO CORRERE !
+
+                
+
+            elif (
+                ma78_last > ma78_120_min_ago
+                and delta_150_100 <= delta_150_100_60_min
+
+                and ma300_last < ma450_last
+                and ma300_last < ma300_301_min_ago
+
+                and ma3_last < ma20_last
+                and ma50_last <= ma50_2_min_ago
+                
+                and ma2_last < ma2_2_min_ago 
+                and ma2_differenza_2_min_ago < -7
+                
+                and deviation_ma39 < 0.10
+                and deviation_sell < -0.033
+                
+                and deviation_ma100_sopra_ma300 < 0.40
+                and deviation_ma5_sotto_ma200 > -0.50
+                
+            ):
+                sell = "SELL CS GIORNO MA CON 300<450 e 10<20 e dev 3-39 < 0.10 e dev_sell < -0.033 e ma50 < MA ma78 > - r 16045 AYy"
+                action = "sell"
+                
+                # 20 nov 2023 aggiunta and diff ma2 < -5 
+                # 10 dic 2023 and deviation_sell a -0.10 da -0.0107
+                # 26 dic 2023 con 10<20 vendi prima a -0.03 da -0.10
+                #  9 gen 2024 questa ha fatto -0.86 ! ALLORA FACCIO LA PROSSIMA r 16045 AZ1 e AZ2
+                #  9 gen 2024 3<20 sostituisce 10<20 ! (CHE E' ARRIVATO TARDI)
+                # 20 set 2024 dev_sell < 0.03 da < -0.03
+                # 13 apr 2025 se ma300_last < ma450_last and deviation_sell < -0.033 da < -0.03
+                
+
+
+
             
             elif (
                 ma78_last > ma78_120_min_ago
@@ -55137,7 +55207,7 @@ class maddog:
                 #  3 feb 2025 questa e' andata benissimo su RCCR -0.29 mentre MADDOG HA FATTO -1.40 !
                 #  3 feb 2025 io ho imposto che deve entrare in azione solo quando la situazione si sta facendo critica.
                 # 10 apr 2025 and ma3_last > ma39_last
-                # 13 apr 2023 se deviation_sell > 0.02 sell con ma2_last < ma8_last
+                # 13 apr 2023 se deviation_sell > 0.02 sell con ma2_last < ma8_last SEMPRE CON 3>39
 
 
 
@@ -55172,7 +55242,7 @@ class maddog:
                 #  3 feb 2025 questa e' andata benissimo su RCCR -0.29 mentre MADDOG HA FATTO -1.40 !
                 #  3 feb 2025 io ho imposto che deve entrare in azione solo quando la situazione si sta facendo critica.
                 # 10 apr 2025 and ma3_last > ma39_last
-                # 13 apr 2023 se deviation_sell < 0.02 sell con ma2_last < ma6_last
+                # 13 apr 2023 se deviation_sell < 0.02 sell con ma2_last < ma6_last SEMPRE CON 3>39
 
 
             
