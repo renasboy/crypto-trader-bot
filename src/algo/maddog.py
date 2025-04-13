@@ -42166,18 +42166,45 @@ class maddog:
                         sell = "SELL 2 90-110 min con ma50 > incrocio 3-28 con ma300 > 120_min_ago and deviation_sell 1.50 - 2.70 - r 12343a"
                         action = "sell"
 
-                  
+
+
+
+
                     elif (
                         ma50_last > ma50_2_min_ago
+                        and ma100_last > ma300_last
+
                         and ma300_last < ma300_120_min_ago
-                        and (ma3_prev > ma18_prev and ma3_last < ma18_last)
+                        and (ma3_prev > ma33_prev and ma3_last < ma33_last)
                         and deviation_sell > 1.50 and deviation_sell < 2.70
                         and ma2_last < ma2_2_min_ago
                     ):
 
-                        sell = "SELL 2 90-110 min con ma50 > incrocio 3-18 con ma300 < 120_min_ago and deviation_sell 1.50 - 2.70 - r 12343b"
+                        sell = "SELL 2 90-110 min con ma50 > incrocio 3-33 con ma300 < 120_min_ago and deviation_sell 1.50 - 2.70 - r 12343 B1"
                         action = "sell"
-                        
+
+                        # 13 apr 2025 se ma100_last > ma300_last
+                        # 13 apr 2025 sell a 3-33 da 3-18
+
+
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and ma100_last < ma300_last
+
+                        and ma300_last < ma300_120_min_ago
+                        and (ma3_prev > ma25_prev and ma3_last < ma25_last)
+                        and deviation_sell > 1.50 and deviation_sell < 2.70
+                        and ma2_last < ma2_2_min_ago
+                    ):
+
+                        sell = "SELL 2 90-110 min con ma50 > incrocio 3-18 con ma300 < 120_min_ago and deviation_sell 1.50 - 2.70 - r 12343 B2"
+                        action = "sell"
+
+                        # 13 apr 2025 se ma100_last < ma300_last
+                        # 13 apr 2025 sell a 3-25 da 3-18
+
+
+
                         
                         
                     elif (
