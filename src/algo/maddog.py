@@ -48382,12 +48382,16 @@ class maddog:
                         
                         # 23 ott 2023 dev 3-39 a 0.06 da 0.05
                         # 23 ott 2023 dev sell -0.03 da -0.07
-                        
 
+
+
+                        
                     elif (
                         ma50_last < ma50_2_min_ago
-                        and deviation_ma39 < 0.07
-                        and deviation_sell < 0.03
+                        and ma39_last > ma100_last
+
+                        and deviation_ma39 < 0.05
+                        and deviation_sell < 0.01
                         
                         and deviation_ma5_sopra_o_sotto_ma5_60_min_ago > -0.40
                         and delta_450_300 > delta_450_300_60_min
@@ -48398,7 +48402,7 @@ class maddog:
                         and ma2_last <= ma2_2_min_ago 
                         and ma2_differenza_2_min_ago < -6
                     ):
-                        sell = "SELL 4-5-x (21-60 min) EX cond. spec 15985 A2 - con 3-39 < 0.07 e dev sell < 0.03 e con ma50 < e dev_ma3_sotto_ma200 > -1.20 - r 15500 a"
+                        sell = "SELL 4-5-x (21-60 min) EX CS con 3-39 < 0.07 e dev sell < 0.01 MA ma50< e 39>100 - r 15500 A1"
                         action = "sell"
                 
                         # 27 giu 2022 dev sell a 0.305 da 0.31
@@ -48418,7 +48422,52 @@ class maddog:
                         
                         # 19 dic 2023 dev 39 a 0.07 da -0.05
                         # 19 dic 2023 dev sell 0.03 da -0.10
-                        # 19 dic 2023 aggiunta and deviation_ma5_sopra_o_sotto_ma5_60_min_ago > -0.40 cioe' ma5 dopo NON sta scendendo molto dal massimo di 60 min ago. 
+                        # 19 dic 2023 aggiunta and deviation_ma5_sopra_o_sotto_ma5_60_min_ago > -0.40 
+                        # cioe' ma5 dopo NON sta scendendo molto dal massimo di 60 min ago. 
+                        # 13 apr 2025 se anche 39>100 deviation_sell < 0.01 da < 0.03
+
+
+
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and ma39_last < ma100_last
+
+                        and deviation_ma39 < 0.07
+                        and deviation_sell < 0.03
+                        
+                        and deviation_ma5_sopra_o_sotto_ma5_60_min_ago > -0.40
+                        and delta_450_300 > delta_450_300_60_min
+                        
+                        and deviation_ma100_sopra_ma300 > 0.20
+                        and deviation_ma3_sotto_ma150 > -1.20
+                        
+                        and ma2_last <= ma2_2_min_ago 
+                        and ma2_differenza_2_min_ago < -6
+                    ):
+                        sell = "SELL 4-5-x (21-60 min) EX CS con 3-39 < 0.07 e dev sell < 0.03 MA ma50< e 39<100  - r 15500 A2"
+                        action = "sell"
+                
+                        # 27 giu 2022 dev sell a 0.305 da 0.31
+                        # deviation_ma39 = ma4_last / ma39_last QUESTA HA VENDUTO NEL CROLLO IMPROVVISO DI 1 MINUTO (con -2.06% !)
+                        # 21 giugno 2022 RICORDO TREMENDO 9372 ha venduto a -2.23% !!!
+                        # COME PRIMA COSA HO NOTATO CHE AVEVA DEVIATION INVECE DI DEVIATON SELL 
+                        # ma non sapendo se era questo il problema ho creato la prossima condizione speciale.
+                        
+                        # > estate dev 39 -0.24 da -0.25 dev sell -0.30 da -0.31 
+                        # 13 set -3% !!! deviation_ma3_sotto_ma200 > -1.20 da deviation_ma3_sotto_ma200 > -1.20 
+                        # 21 gen 2023 dev sell -0.303 da -0.30
+                        # 20 feb 2023 -0.304 da -0.303 con doppio delta 450-300 NOTTE !
+                        # 25 ott 2023 dev 39 -0.10
+                        # 25 ott 2023 dev sell -0.20 da -0.304
+                        # 25 nov 2023 dev sell -0.10 da -0.20
+                        # 25 nov 2023 dev 39 a -0.05 da -0.10
+                        
+                        # 19 dic 2023 dev 39 a 0.07 da -0.05
+                        # 19 dic 2023 dev sell 0.03 da -0.10
+                        # 19 dic 2023 aggiunta and deviation_ma5_sopra_o_sotto_ma5_60_min_ago > -0.40 
+                        # cioe' ma5 dopo NON sta scendendo molto dal massimo di 60 min ago. 
+                        # 13 apr 2025 se 39<100 deviation_sell ok cosi'
+
 
                     
                     elif (
