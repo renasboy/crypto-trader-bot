@@ -31094,11 +31094,11 @@ class maddog:
                     
                     and ma100_last < ma100_10_min_ago
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.13
-                    
-                    and deviation_ma3_sotto_ma50 < -0.06
-                    and deviation_ma39 < -0.01
-                    and deviation_ma50_sopra_o_sotto_ma100 < -0.05
 
+                    and deviation_ma39 < -0.06
+                    and deviation_ma3_sotto_ma50 < -0.08
+                    and deviation_ma50_sopra_o_sotto_ma100 < -0.05
+                    
                     and deviation_ma3_sopra_ma10 > 0.01
                     
                     and macd_differenza_2_min_ago > -18.50
@@ -31109,6 +31109,9 @@ class maddog:
                     
                     #  6 apr 2025 se e' buy 5 deve essere and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.13
                     # 11 apr 2025 aggiunta f
+                    # 14 apr 2025 ma450 e' vero che e' > ma 450 720 min ago ! viva ro combaro meo !
+                    # 14 apr 2025 and deviation_ma39 < -0.06 da < -0.01
+                    # 14 apr 2025 and deviation_ma3_sotto_ma50 < -0.08 da < -0.06
 
 
 
