@@ -57314,7 +57314,7 @@ class maddog:
             elif (
                 deviation_sell > 0.80
                 and ma300_last > ma450_last
-                and ma3_last < ma49_last
+                and ma4_last < ma49_last
 
                 and ma39_last < ma39_15_min_ago
                 and seconds_since_last_trade > 7200
@@ -57325,7 +57325,7 @@ class maddog:
                 and macd < macd_2_min_ago
                 and macd_differenza_2_min_ago < -1
             ):    
-                sell = "SELL P M e S (ma non troppo !) con 3-49 (> 120 min ) e con dev > 0.80 e ma5_11_min_ago - r 16873 C1 Y1"
+                sell = "SELL P M e S (ma non troppo !) con 4-49 (> 120 min ) e con dev > 0.80 e ma5_11_min_ago - r 16873 C1 Y1"
                 action = "sell"
                 
                 # 27 set 2023 macd < macd 2 min ago 
@@ -57336,6 +57336,8 @@ class maddog:
 
                 #  6 mar 2024 se ma39_last < ma39_15_min_ago allora vende con ma5_last < ma5_11_min_ago ( dico 11 min )
                 # 27 gen 2025 sell con 3-49 da 3-36 se ma300_last > ma450_last
+                # 14 apr 2025 ok cosi'. sempre per adesso. ma forse sarebbe meglio 3-59
+                # 14 apr 2025 in ogni caso modificato, sempre per adesso, a 4-49 da 3-39
 
 
 
