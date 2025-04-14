@@ -13,9 +13,9 @@
 
 
 """
-il sistema sembra rotto.
 
-e queste sono le 2 cose da fare !
+and deviation_ma39 < -0.05
+and deviation_ma3_sotto_ma50 < -0.06
 
 and (ma5_last > ma300_last or delta_DNA_1 < delta_DNA_2 or ma100_last > ma200_last or ma200_last > ma300_last)
 buy = f"BUY 1 {ma450_last} {ma450_360_min_ago} con 450>6 ore MA ritracciando ( vedi ma20 < or ma33 < ) - r 1043 Ax"
@@ -70,8 +70,7 @@ OR SE ma200_last < ma300_last ...............non e' piu' un ritracciamento
 
 
 
-and deviation_ma39 < -0.05
-and deviation_ma3_sotto_ma50 < -0.06
+
 
 
 
@@ -8063,7 +8062,7 @@ class maddog:
                     # 21 mar 2025 anticipato ndecchiecella
                     # 30 mar 2025 anticipata. ho tolto doppio delta < GIORNO !
                     # 30 mar 2025 se e' notte MA SEMPRE CON 450> aggiungo dev ma39< -0.06 e dev 3-50 < -0.08
-
+                    # 14 apr 2025 e' andata benissimo !
 
 
 
@@ -24576,9 +24575,10 @@ class maddog:
                     
                     
                 
-                
                 elif (
                     ma3_last > ma13_last
+                    and ma20_last > ma50_last
+
                     and ma300_last > ma300_301_min_ago
                     and ma50_last >= ma50_2_min_ago
                     and deviation_ma100_sopra_ma300 < -0.25
@@ -24586,18 +24586,44 @@ class maddog:
                     
                     and deviation_ma3_sopra_ma10 > 0.01
                     
-                    and ma3_last > ma13_last
-                    
-                    and ma2_last > ma2_2_min_ago
-                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.01
-                    and macd > -40
-                    and macd_differenza_2_min_ago > -1.50
+                    and macd_differenza_2_min_ago > -18.50
                 ):
-                    buy = "BUY 3 con ma300_last > ma300_301_min_ago IMPORTATA DA BUY 4 RCCR - r 6599 A1 z1"
+                    buy = "BUY 3 con ma300_last > ma300_301_min_ago and 20>50 MA 100-300 < -0.25 - importata da RCCR - r 6599 A1 z1 X"
                     action = "buy"
                     percentage = 50
 
                     #  1 dic 2024 anticipata
+                    # 14 apr 2015 and ma20_last > ma50_last
+
+
+
+                elif (
+                    ma3_last > ma13_last
+                    and ma20_last < ma50_last
+
+                    and ma300_last > ma300_301_min_ago
+                    and ma50_last >= ma50_2_min_ago
+
+                    and deviation_ma100_sopra_ma300 < -0.25
+                    and deviation_ma5_sotto_ma300 > -1.80
+
+                    and deviation_ma39 < -0.04
+                    and deviation_ma3_sotto_ma50 < -0.04
+
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    
+                    and macd_differenza_2_min_ago > -18.50
+                ):
+                    buy = "BUY 3 con ma300_last > ma300_301_min_ago MA 20<50 AND 100-300 < -0.25 - importata da RCCR - r 6599 A1 z1 Y"
+                    action = "buy"
+                    percentage = 50
+
+                    #  1 dic 2024 anticipata
+
+                    # 14 apr 2015 and ma20_last < ma50_last
+                    # 14 apr 2015 and deviation_ma39 < -0.04
+                    # 14 apr 2015 and deviation_ma3_sotto_ma50 < -0.04
+
 
                 
                 # BUY 3 IN BASSO con ma69 > and deviation_bellissima > 0.12 IMPORTATA DA BUY 4 RCCR   
@@ -26447,27 +26473,31 @@ class maddog:
                     
                
                     
-                # BUY 4A con ma 78> e 300< e 100<200
+                # BUY 4 con 300< e 100<200
                 
                 elif (
                     ma3_last > ma13_last
-                    
-                    and ma100_last < ma200_last
-                    and ma300_last < ma300_60_min_ago
-                    and ma300_last < ma300_120_min_ago
 
+                    and ma300_last < ma300_120_min_ago
+                    and ma300_last < ma300_60_min_ago
+                    and ma100_last < ma200_last
+
+                    and deviation_ma39 < -0.04
+                    and deviation_ma3_sotto_ma50 < -0.04
+                    
                     and delta_DNA_1 < delta_DNA_2
                     and ma100_last < ma100_10_min_ago
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.13
                     
                     and macd_differenza_2_min_ago > -5.00
                 ):
-                    buy = "BUY 4 con 300< e 100<200 MA GIORNO E ma100 comincia a perdere di meno - r 6836"
+                    buy = "BUY 4 con 300< e 100<200 MA GIORNO E ma100 comincia a perdere di meno ma sembra un RITRACCIAMENTO - r 6836"
                     action = "buy"
                     percentage = 80
 
                     #  6 apr 205 tolte sovrastrutture 
-
+                    # 14 apr 2025 aggiunta 3-39 < -0.04
+                    # 14 apr 2025 aggiunta 3-50 < -0.04
 
 
                     
