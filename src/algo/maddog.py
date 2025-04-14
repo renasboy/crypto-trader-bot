@@ -2251,7 +2251,7 @@ class maddog:
                     
                     and deviation_ma3_sopra_ma10 > 0.01
                     
-                    and macd_differenza_2_min_ago > -5.50
+                    and macd_differenza_2_min_ago > -18.50
 
                 ):  
               
@@ -3570,30 +3570,9 @@ class maddog:
                     
                  
                     
-                # ------------------------------------------------------------ BUY 1 MOLTO RISCHIOSO modo 1 ! quando incomincia il ribasso MA ma300 > MA ma200 120 <
-                  
-                elif (     
-                    ma300_last > ma300_120_min_ago
-                    and macd >= macd_2_min_ago
-                    and deviation_ma5_sotto_ma300 < -0.40
-                    
-                    and ma200_last < ma200_120_min_ago
-                    
-                    and ma200_last < ma200_60_min_ago
-                    and ma100_last < ma100_60_min_ago
-                    
-                    and ma5_last > ma48_last
-                    
-                    and deviation_ma3_sopra_ma10 > 0.10
-                    and deviation_ma5_sopra_ma28 > 0.10
-                    
-                    and ma2_last >= ma2_2_min_ago
-                ):     
-                  
-                    buy = "BUY 1 MOLTO RISCHIOSO modo 1 ! quando incomincia il ribasso MA ma300 ANCORA IN RIALZO MA ma200 120 < con 3-10 > 0.13 - r 1139 B2"
-                    action = "buy"
-                    percentage = 90
-                    
+                # BUY 1 MOLTO RISCHIOSO modo 1 ! quando incomincia il ribasso MA ma300 > MA ma200 120 <
+                # oggi 14 apr 2025 cancellato r 1139 B2
+                
                     
                   
                     
@@ -24775,35 +24754,12 @@ class maddog:
                     # 18 dic 2023 aggiunta and ma2_differenza_2_min_ago > 0.02
                     # 18 dic 2023 aggiunta and macd_differenza_2_min_ago > 1.10
                     # 27 mar 2025 anticipata ndecchiecella togliendo sovrastrutture
+
+
+
+                # oggi 14 apr 2025 cancellata riga 6599 A2y
+
                 
-                elif (
-                    ma69_last >= ma69_2_min_ago
-                    and ma39_last < ma150_last
-                    and ma300_last < ma300_301_min_ago
-                    and ma78_last > ma100_last
-                    and deviation_ma3_sopra_ma10 > 0.05
-                    and deviation_ma5_sopra_ma28 > 0.01
-                    
-                    and deviation_bellissima > 0.12
-                    and deviation_buy3 > 0.12
-                    and deviation_ma7_sopra_ma40 > 0.09
-               
-                    and ma3_last > ma13_last
-                    and ma4_last > ma9_last
-                    and ma4_last > ma50_last
-                    and ma6_last > ma15_last
-                    and ma7_last > ma25_last
-                    
-                    and ma2_last > ma2_2_min_ago
-             
-                ):
-                    buy = "BUY 3 con 78>100 and 39<150 E con ma69 > and dev_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali) - r 6599 A2y"
-                    action = "buy"
-                    percentage = 50
-                    
-                    # 28 set aggiunta 3-10
-                    
-                    
                     
                 # BUY 3 con ma69 > and deviation_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali) IMPORTATA DA BUY 4 RCCR   
                 
@@ -51674,14 +51630,14 @@ class maddog:
                 and ma450_last < ma450_180_min_ago
                 and ma3_last < ma100_last
 
-                and ma40_last > ma50_last
+                and (ma20_last > ma50_last or ma40_last > ma50_last)
                 and ma50_last > ma50_2_min_ago
                 and ma2_differenza_2_min_ago < -15
                 and ma300_last < ma300_301_min_ago
                 and delta_150_100 <= delta_150_100_60_min
                 
                 and deviation_ma39 < 0.15
-                and deviation_sell < -0.025
+                and deviation_sell < -0.027
                 
                 and deviation_ma100_sopra_ma300 < 0.40
                 and deviation_ma5_sotto_ma200 > -0.50
@@ -51689,7 +51645,7 @@ class maddog:
                 and ma2_last < ma2_2_min_ago
               
             ):
-                sell = "SELL C S GIORNO con ma450 < e ma300 < 5 ore e ma50> E 40>50 e dev 3-39 < 0.13 e dev_sell < -0.025 e ma78 < - r 16045 B1 x2"
+                sell = "SELL C S GIORNO con ma450< e ma300< 5 ore e ma50> E 20>50 OR 40>50 e dev_sell < -0.027 e ma78 < - r 16045 B1 x2"
                 action = "sell"
                 
                 # 28 dic 2023 se anche 40>50 dev sell a 0.01 da 0.03
@@ -51700,6 +51656,10 @@ class maddog:
                 # 15 set 2024 and deviation_ma39 < 0.15 da  < 0.13
                 # 14 set 2024 tolta and macd_differenza_2_min_ago < -0.35 (il macd saliva!) e aggiunta and ma3_last < ma100_last
                 # 13 apr 2025 and deviation_sell a < -0.025 da < -0.02
+
+                # 13 apr 2025 and deviation_sell a < -0.027 da < -0.025
+                # 13 apr 2025 aggiunta and (ma20_last > ma50_last or ma40_last > ma50_last)
+
 
 
             elif (
