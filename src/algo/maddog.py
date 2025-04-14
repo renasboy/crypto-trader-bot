@@ -56945,10 +56945,36 @@ class maddog:
                 # 20 nov 2023 and deviation_sell > 0.70 da > 0.75
                 # 11 mar 2025 3-33 da 3-28
           
-            # 3
             
+
             elif (
                 seconds_since_last_trade > 3601 and seconds_since_last_trade < 7200
+                and delta_1 < delta_2
+
+                and deviation_ma10__diviso_ma10_5_ore_ago < 1.50
+                and ma3_last < ma59_last
+                and deviation_ma3_di_adesso_diviso_ma3_di_90_min_ago < 1.30
+                
+                and deviation_sell > 0.75
+                and deviation_sell < 1.05
+                
+                and ma2_last < ma2_2_min_ago
+                and macd < macd_2_min_ago
+                and macd_differenza_2_min_ago < -0.75
+            ):    
+                sell = "SELL PMS ma non troppo (60-120 min) con 3-59 E dev_sell 0.75 - 1.05 e macd < - INTANTO TE LI PRENDI - r 16750 A2 Y1"
+                action = "sell"
+
+                #  9 set 2024 aggiunta diff macd < -0.75
+                # 24 mar 2025 3-49 da 3-39 
+                # 14 apr 2025 3-59 da 3-49 se delta_1 < delta_2
+
+
+
+            elif (
+                seconds_since_last_trade > 3601 and seconds_since_last_trade < 7200
+                and delta_1 > delta_2
+
                 and deviation_ma10__diviso_ma10_5_ore_ago < 1.50
                 and ma3_last < ma49_last
                 and deviation_ma3_di_adesso_diviso_ma3_di_90_min_ago < 1.30
@@ -56960,14 +56986,15 @@ class maddog:
                 and macd < macd_2_min_ago
                 and macd_differenza_2_min_ago < -0.75
             ):    
-                sell = "SELL PMS ma non troppo (60-120 min) con 3-39 E dev_sell 0.75 - 1.05 e macd < - INTANTO TE LI PRENDI - r 16750 A2 Y"
+                sell = "SELL PMS ma non troppo (60-120 min) con 3-39 E dev_sell 0.75 - 1.05 e macd < - INTANTO TE LI PRENDI - r 16750 A2 Y2"
                 action = "sell"
 
                 #  9 set 2024 aggiunta diff macd < -0.75
-                # 24 mar 2025 3-49 da 3-39 
+                # 24 mar 2025 3-49 da 3-39
+                # 14 apr 2025 se delta_1 > delta_2 ok cosi'. sempre per adesso.
 
           
-            # 4
+            
             
             elif (
                 seconds_since_last_trade > 7200
