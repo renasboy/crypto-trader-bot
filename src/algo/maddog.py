@@ -8584,7 +8584,8 @@ class maddog:
                     
                     
                 elif (       
-                    ma3_last > ma39_last
+                    ma3_last > ma20_last
+                    and ma10_last > ma10_300_min_ago
 
                     and ma300_last > ma450_last
                     and ma200_last > ma300_last
@@ -8593,7 +8594,7 @@ class maddog:
                     
                     and macd_differenza_2_min_ago > -8.50
                 ):
-                    buy = "BUY 1 con 5>50 se ma450 > ma 450 90 min ago and DOPPIO DELTA 300-225 GIORNO ! - r 2065 Bx 2"
+                    buy = "BUY 1 con 3>20 se ma450 > ma 450 90 min ago  ! - r 2065 Bx 2"
                     action = "buy"
                     percentage = 80
                     
@@ -8603,6 +8604,9 @@ class maddog:
                     #  5 feb 2025 aggiunta questa - niente di speciale
                     # 14 apr 2025 aggiunta questa per anticipare di una ndecchiecella la precedente
                     # 14 apr 2025 200>300 sostituisce and delta_300_225 < delta_300_225_60_min. cazzo.
+                    # 15 apr 2025 3-20 da 3-39
+                    # 15 apr 2025 ma10_last > ma10_300_min_ago ho dovuto metterla altrimenti avrebbe comprato durante il ribasso
+
 
 
                 elif (    
