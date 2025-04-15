@@ -2144,12 +2144,12 @@ class maddog:
 
 
                 elif (
-                    ma3_last > ma8_last
-
+                    ma3_last > ma18_last
+                    
                     and ma200_last > ma300_last
                     and ma300_last > ma300_120_min_ago
                     
-                    and ma4_last > ma78_last
+                    and ma3_last > ma8_last
                     and deviation_ma3_sopra_ma10 > 0.01
                     
                     and macd_differenza_2_min_ago > -18.50
@@ -2163,7 +2163,7 @@ class maddog:
                     #  5 dic 2025 anticipata ndecchia
                     # 28 gen 2025 4-100 da 5-100
                     # 14 apr 2025 4-78 da 4-100
-
+                    # 15 apr 2025 3-18 da 4-78
 
 
 
@@ -16833,36 +16833,34 @@ class maddog:
                     
                     
                     
-                elif (
-                    
+                
+                elif (    
                     ma78_last < ma200_last
+
                     and ma450_last > ma450_720_min_ago
                     and deviation_ma10_sopra_ma200 > -0.16
                     
                     and deviation_ma3_sopra_ma10 > 0.01
-                    and deviation_ma5_sopra_ma28 > 0.01
                     
-                    and ma5_last > ma100_last
+                    and ma5_last > ma54_last
                     
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
                   
-                    and ma59_last > ma59_30_min_ago
-                    
                     and ma100_last < ma100_120_min_ago
                     and ma200_last < ma200_120_min_ago
                     and ma300_last < ma300_120_min_ago
                     
                     and delta_150_100 <= delta_150_100_60_min
-                    and ma100_last >= ma100_2_min_ago
                     
-                    and ma2_last >= ma2_2_min_ago
-                    and macd >= macd_2_min_ago
-                
+                    and macd_differenza_2_min_ago > -8.50
                 ):
-                    buy = "BUY 2 laterale con 450>6 ore and 50 > 100 AND 150-100 GIORNO ! and 3-10 > 0.15 and 5-28 > 0.18 - r 5630"
+                    buy = "BUY 2 laterale con 450>6 ore and 5>54 AND 150-100 GIORNO ! and 3-10 > 0.01 - r 5630"
                     action = "buy"
                     percentage = 80
+
+                    # 15 apr 2025 anticipata ndecchiecella
+
                     
                     
                 # --------------------------------------- BUY 2 che considera il passare del tempo con TREND IN RIBASSO ! sempre 20 > 200
@@ -17990,26 +17988,26 @@ class maddog:
 
                 elif (
                     ma3_last > ma20_last
-                    and ma39_last > ma50_last
+                    and ma450_last < ma450_120_min_ago
 
-                    and ma25_last > ma100_last
+                    and deviation_ma3_sotto_ma50 < -0.15
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.05
                     
                     and ma200_last > ma250_last
                     and ma200_last > ma200_120_min_ago
 
-                    and ma450_last < ma450_120_min_ago
-
                     and ma3_last > ma8_last
                     
-                    and ma2_last >= ma2_2_min_ago
-                    and macd >= -60
+                    
+                    and macd_differenza_2_min_ago > -8.50
                 ):    
-                    buy = "BUY 2 CON ma450_last < ma450_120_min_ago MA con 25>100 - r 5892 A1 Y1"
+                    buy = "BUY 2 CON ma450_last < ma450_120_min_ago MA  - r 5892 A1 Y1"
                     action = "buy"
                     percentage = 70
 
                     # 26 feb 2025 se 39 continua a stare sopra 50 NESSUN PROBLEMA !
-
+                    # 15 apr 2025 aggiunta and deviation_ma3_sotto_ma50 < -0.15
+                    # 15 apr 2025 aggiunta and deviation_ma5_sopra_o_sotto_ma100 < -0.05
 
 
                 elif (
