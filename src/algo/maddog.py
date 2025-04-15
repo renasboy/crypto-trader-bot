@@ -22732,6 +22732,35 @@ class maddog:
                 ################################################################### condizioni che mancavano !!!
                 
                 # ------------------------------------------------------------ BUY 3 laterale
+                elif (    
+                    ma3_last > ma18_last
+
+                    and ma20_last < ma50_last
+
+                    and ma200_last > ma450_last
+                    and ma300_last > ma300_120_min_ago
+                    
+                    and deviation_ma100_sopra_ma300 > 0.20
+
+                    and deviation_ma39 < -0.05
+                    and deviation_ma3_sotto_ma50 < -0.05
+                    
+                    and deviation_ma3_sopra_ma10 > 0.02
+                    and deviation_ma3_sopra_ma16 > -0.07
+                    and deviation_ma5_sopra_ma28 > -0.10
+                    
+                    and macd_differenza_2_min_ago > -18.50
+                
+                ):
+                    buy = "BUY 3 GIORNO con 78 > 200 AND 300 >300 120 min ago ! - r 6505"
+                    action = "buy"
+                    percentage = 80
+
+                    # 21 gen 2025 anticipata ndecchia con 300 > 300 120 min ago !
+                    # 28 gen 2025 aggiunto and delta_300_200 > delta_300_200_60_min NOTTE
+                    # 28 gen 2025 and deviation_ma3_sopra_ma10 > 0.02 da > 0.01 ( ha comprato prestissimo quasi attaccato al sell precedente.)
+                    # 15 apr 2025 importata da BUY 2 e modificata
+
 
                 elif (
                     
@@ -22768,8 +22797,14 @@ class maddog:
                     # 22 set 2024 aggiunta questa condizione + prendi il coltello con il piede
 
 
+
+
+
+
                 elif (    
                     ma3_last > ma20_last
+                    and ma20_last > ma50_last
+
                     and ma100_last > ma100_60_min_ago
 
                     and ma50_last > ma59_last
@@ -22792,12 +22827,13 @@ class maddog:
                     and ma2_last > ma5_last 
                 ):  
                 
-                    buy = "BUY 3 laterale IMPORTATA dal BUY 2 con 300 > 450 and 3-20 and macd > -24 and macd_differenza_2_min_ago > 0.30 - r 6510 A1"
+                    buy = "BUY 3 con 300>450 and 20>50 and macd > -24 and macd_differenza_2_min_ago > 0.30 - r 6510 A1"
                     action = "buy"
                     percentage = 80
                     
                     # 29 dic 2023 3-20 da 3-28 se 50>59
                     # 22 set 20234 questa la faccio entrare in azione soltanto se 100> 100 60 min
+                    # 15 apr 2025 va bene solo se 20>50
 
 
                 elif (    
