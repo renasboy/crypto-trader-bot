@@ -17213,26 +17213,24 @@ class maddog:
                 
                 
                 
-                # BUY 2 con ma200 che sale da 60 min etc. importata dal BUY 3 RCCR
+                # BUY 2 15 apr 2025
 
                 elif (
 
-                    ma3_last > ma20_last
+                    ma3_last > ma13_last
                     and ma450_last > ma450_360_min_ago
                     and delta_DNA_1 < delta_DNA_2
 
                     and ma300_last > ma450_last
+                    and (ma3_prev < ma300_prev and ma3_last > ma300_last)
                     
-                    and ma200_last > ma200_30_min_ago
-                   
-                    and deviation_ma5_sotto_ma200 > -0.70
-                    and deviation_ma100_sopra_ma300 < 0.40
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.60
                     
                     and deviation_ma3_sopra_ma10 > 0.01
                   
-                    and ma3_last > ma13_last
+                    and ma3_last > ma8_last
                     
-                    and macd_differenza_2_min_ago > -5.50
+                    and macd_differenza_2_min_ago > -18.50
                 ):  
                 
                     buy = "BUY 2 ma300_last > ma450_last e con ma200 che sale da 30 min - GIORNO - r 5829 AX"
@@ -17240,6 +17238,9 @@ class maddog:
                     percentage = 70
 
                     # 27 mar 2025 and macd_differenza_2_min_ago > -5.50 da > -2.50
+                    # 15 apr 2025 modifiche per anticipare BUY
+
+
 
 
 
@@ -27195,7 +27196,7 @@ class maddog:
 
                     and (ma450_last >= ma450_120_min_ago or ma300_last > ma300_360_min_ago)
 
-                    and ma3_prev < ma140_prev and ma3_last > ma140_last
+                    and (ma3_prev < ma140_prev and ma3_last > ma140_last)
                     
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.13
                     and deviation_ma5_sopra_o_sotto_ma100 > -0.50
@@ -27213,6 +27214,7 @@ class maddog:
 
 
 
+                
                 elif (
                     ma3_last > ma15_last
 
@@ -27226,7 +27228,7 @@ class maddog:
                     
                     and macd_differenza_2_min_ago > -8.50
                 ):    
-                    buy = "BUY 5 nuova condizione che mancava e che ci deve stare con 300> e 200> - r 7040 b"
+                    buy = "BUY 5 nuova condizione che mancava e che ci deve stare con 300> e 200> - r 7040 B"
                     action = "buy"
                     percentage = 80
 
@@ -51264,22 +51266,20 @@ class maddog:
 
             elif (
                 ma50_last <= ma50_2_min_ago
+                and (ma5_last < ma100_last or ma5_last < ma200_last)
                 and ma450_last > ma450_180_min_ago
                 and ma100_last > ma450_last
 
-                and ma100_last > ma100_10_min_ago
-                and deviation_ma100_sopra_ma300 > 0.20
-                and deviation_ma3_sotto_ma150 > -1.20
+                and (ma100_last > ma100_10_min_ago or ma100_last > ma100_5_min_ago)
+                and deviation_ma100_sopra_ma300 > 0.10
                 
-                and deviation_ma39 < 0.05
-                and deviation_sell < -0.035
-                
-                and delta_450_300 > delta_450_300_60_min
+                and deviation_ma39 < 0.055
+                and deviation_sell < -0.033
                 
                 and ma2_last <= ma2_2_min_ago
                 and macd_differenza_2_min_ago < -4
             ):
-                sell = "SELL CS - SALVAGENTE 3-39 < 0.05 e dev sell < -0.035 con ma50 <= e dev_ma3_sotto_ma200 > -1.20 - r 15985 A2 X1x"
+                sell = "SELL CS - SALVAGENTE 3-39 < 0.055 e dev sell < -0.033 con ma50<= - r 15985 A2 X1x"
                 action = "sell"
                 
                 #  2 feb 2024 se ma 100 sale da 10 min dev sell a 0.05 da 0.05 aspetta un po' prima di vendere se 100 cresce.
@@ -51288,7 +51288,8 @@ class maddog:
                 #  6 mar 2024 and deviation_sell < -0.02 da 0.005
                 # 12 set 2024 and deviation_sell < -0.025 da and deviation_sell < -0.02
                 # 27 feb 2025 and deviation_sell < -0.035 da -0.025
-
+                # 15 apr 2025 and deviation_sell < -0.033 da -0.035 ha fatto -0.75 ma e' andata bene.
+                # 15 apr 2025 questa entra in azione durante un crollo improvviso mentre and ma450>ma450_180_min e 100>450 !
 
             elif (
                 ma50_last <= ma50_2_min_ago
