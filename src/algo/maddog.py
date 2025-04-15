@@ -27190,6 +27190,28 @@ class maddog:
 
                     
                 
+                elif (    
+                    ma3_last > ma13_last
+
+                    and (ma450_last >= ma450_120_min_ago or ma300_last > ma300_360_min_ago)
+
+                    and ma3_prev < ma140_prev and ma3_last > ma140_last
+                    
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.13
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    
+                    and macd_differenza_2_min_ago > -8.50
+                ):
+                    buy = "BUY 5 nuova condizione che mancava e che ci deve stare con incrocio 3-140 - r 7040 A"
+                    action = "buy"
+                    percentage = 70
+
+                    # 15 apr 2025 aggiunta questa nuova condizione ! BTC si e' impennato e non e' partita neanche una condizione !
+                    # 15 apr 2025 e' andata benissimo su RCCR
+
+
 
                 elif (
                     ma3_last > ma15_last
@@ -27204,7 +27226,7 @@ class maddog:
                     
                     and macd_differenza_2_min_ago > -8.50
                 ):    
-                    buy = "BUY 5 nuova condizione che mancava e che ci deve stare con 300> e 200> - r 7040"
+                    buy = "BUY 5 nuova condizione che mancava e che ci deve stare con 300> e 200> - r 7040 b"
                     action = "buy"
                     percentage = 80
 
