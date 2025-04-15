@@ -2273,7 +2273,7 @@ class maddog:
                 
                 elif (
                     ma3_last > ma13_last
-                    and deviation_ma25_sotto_ma300 > -0.75
+                    and deviation_ma25_sotto_ma300 > -1.00
 
                     and ma100_last > ma450_last
                     and ma300_last > ma450_last
@@ -2287,14 +2287,13 @@ class maddog:
                     and deviation_ma3_sopra_ma10 > -0.01
                     and deviation_ma3_sopra_ma16 > -0.02
                     
-                    and macd > -125
-                    and macd_differenza_2_min_ago > -2.50
-                    and macd_differenza_2_min_ago > 6.00
                     and ma3_last > ma8_last
                     
+                    and macd > -200
+                    and macd_differenza_2_min_ago > -18.00
                 ):    
               
-                    buy = "BUY 1 con ma300_last > ma450_last ma ribasso improvviso e rialzo veloce and macd > -125 - r 920"
+                    buy = "BUY 1 con 300>450 ma ribasso improvviso e, FORSE, rialzo veloce - r 920"
                     action = "buy"
                     percentage = 90
 
@@ -2311,7 +2310,9 @@ class maddog:
                     # 18 feb 2025 perche' se ma300 scende da 30 minuti, e' chiaro, non e' piu' improvviso !
                     # 20 feb 2025 macd -125 da -110
                     # 20 feb 2025 and macd_differenza_2_min_ago > 6.00 significa che deve dare anche una botta al rialzo !
-                    # 20 feb 2025 non basta che smette di crollare verticalmente ! ( and macd_differenza_2_min_ago > -2.50 )
+                    # 20 feb 2025 non basta che smette di crollare verticalmente ! (and macd_differenza_2_min_ago > -2.50)
+                    # 15 apr 2025 modificato. per adesso la tengo. poi domani, chissa'.
+
 
                 elif (    
                     ma20_last > ma200_last
@@ -5508,15 +5509,15 @@ class maddog:
 
 
                 elif (    
-                    ma3_last > ma20_last
+                    ma3_last > ma18_last
                     
                     and ma39_last < ma39_15_min_ago
                     
                     and ma100_last < ma100_120_min_ago
                     and ma200_last < ma200_120_min_ago
                     
-                    and deviation_ma54_sopra_o_sotto_ma72 < 0.015
-                    and deviation_ma54_sopra_o_sotto_ma72 > -0.015
+                    and deviation_ma54_sopra_o_sotto_ma72 < 0.017
+                    and deviation_ma54_sopra_o_sotto_ma72 > -0.017
                     
                     and deviation_ma39_sotto_ma200 < 0.20
                     and deviation_ma300_sopra_ma450 > -0.45
@@ -5535,7 +5536,7 @@ class maddog:
                     
                     #  5 mar 2024 se ma39 < ma39 15 min ago pugno fantasma di mohammad ali'
                     # 14 apr 2025 anticipata ndecchiecella togliendo sovrastrutture
-
+                    # 15 apr 2025 anticipata ndecchiecella
 
 
                 elif (    
