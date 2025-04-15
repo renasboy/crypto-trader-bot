@@ -27187,8 +27187,32 @@ class maddog:
                     # 31 lug ma8_last > ma54_last da 18-100
                     #  5 ott 2023 and deviation_ma5_sopra_o_sotto_ma100 < -0.05 ( per comprare meglio, perche' la precedente 7039 B2 comprava tardi !) 
                     #  5 ott 2023 and macd >= macd_2_min_ago
+
                     
                 
+
+                elif (
+                    ma3_last > ma15_last
+
+                    and ma39_last > ma50_last
+                    
+                    and ma300_last > ma300_360_min_ago
+                    and ma200_last > ma200_360_min_ago
+                    and deviation_ma200_sotto_ma300 > -0.05
+                    
+                    and ma3_last > ma8_last
+                    
+                    and macd_differenza_2_min_ago > -8.50
+                ):    
+                    buy = "BUY 5 nuova condizione che mancava e che ci deve stare con 300> e 200> - r 7040"
+                    action = "buy"
+                    percentage = 80
+
+                    # 15 apr 2025 aggiunta questa nuova condizione ! BTC si e' impennato e non e' partita neanche una condizione !
+                    # 15 apr 2025 and deviation_ma200_sotto_ma300 > -0.05 per non farla comprare quando comincia il ribasso
+                    # 15 apr 2025 and ma39_last > ma50_last per non farla comprare quando comincia il ribasso.
+
+
 
 
                 elif (    
