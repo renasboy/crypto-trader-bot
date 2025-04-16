@@ -16305,7 +16305,7 @@ class maddog:
 
                     
                 elif (    
-                    ma5_last > ma39_last
+                    ma3_last > ma20_last
                     and ma450_last < ma450_480_min_ago
                     
                     and ma300_last > ma450_last
@@ -16317,9 +16317,9 @@ class maddog:
                     and deviation_ma100_sopra_ma300 > -0.30
                   
                     
-                    and deviation_ma3_sopra_ma10 > 0.07
-                    and deviation_ma3_sopra_ma18 > 0.16
-                    and macd >= macd_2_min_ago
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    
+                    and macd_differenza_2_min_ago > -12.50
                 ):  
                 
                     buy = "BUY 2 piu' o meno laterale con 450 < 450 480 min ago MA 300>450 MA 50<59 ! - r 5412 X2b"
@@ -16334,7 +16334,9 @@ class maddog:
                     # 27 set 2023 and deviation_ma100_sopra_ma300 > -0.30 da -0.20
                     # 27 set 2023 and deviation_ma3_sopra_ma18 > 0.16 da 0.169
                     # 29 nov 2023 sostituito 78< con 50<59
-                    
+                    # 15 apr 2025 ma3_last > ma20_last
+
+
                     
                 elif (    
                     ma8_last > ma59_last
@@ -16514,14 +16516,18 @@ class maddog:
                     # 15 ott 2024 con 100>100 60 min ago
                     # 11 mar 2025 anticipata ndecchiecella con aggiunta GIORNOal posto di 100 > 100 60 min ago
 
+
+
+
                 elif (
                     ma3_last > ma20_last
 
                     and ma450_last < ma450_720_min_ago
-                    and deviation_ma300_sopra_ma450 < 0.085
-                    and deviation_ma300_sopra_ma450 > -0.085
-
                     and ma100_last < ma100_60_min_ago
+                    and deviation_ma100_sopra_ma200 < -0.13
+
+                    and deviation_ma300_sopra_ma450 < 0.12
+                    and deviation_ma300_sopra_ma450 > -0.12
 
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.10
                     and deviation_ma5_sotto_ma200 < -0.10
@@ -16535,21 +16541,17 @@ class maddog:
                     and deviation_ma3_sopra_ma10 > 0.01
                     and deviation_ma5_sopra_ma28 > -0.03
 
-                    and deviation_ma100_sopra_ma300 > -0.60
-                    and deviation_ma200_sopra_ma300 > -0.60
-                    
-                    and macd > -60
-                    and macd_differenza_2_min_ago > -1.25
+                    and macd_differenza_2_min_ago > -18.25
                 ):
                
-                    buy = "BUY 2 con 3-20 che ci riprova quando se ne va lateralmente > crollo CON 10>20 E 100 < 100 60 min + OSSO - r 5445 A2 Y"
+                    buy = "BUY 2 con 3-20 che ci riprova quando se ne va lateralmente + OSSO - r 5445 A2 Y"
                     action = "buy"
                     percentage = 80
 
                     # 15 ott 2024 SE 100<100 60 min ago + OSSO
                     # 29 gen 205 st cercando di risolvere il problema del trend laterale dopo un grande RIALZO
                     # 30 gen 2025 nel corridoio 300-450 puo' comprare prima
-
+                    # 16 apr 2025 se ma450_last < ma450_720_min_ago aggiunta deviation_ma100_sopra_ma200 < -0.13
 
 
                 elif (
@@ -23298,9 +23300,10 @@ class maddog:
                     # 14 apr 2025 aggiunta and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.13
 
 
-                elif (
-                    
-                    ma8_last > ma78_last
+                
+                elif (    
+                    ma5_last > ma54_last
+
                     and ma25_last < ma25_60_min_ago
                     and deviation_ma5_sotto_ma300 > -0.40
                     
@@ -23311,13 +23314,11 @@ class maddog:
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
                     
-                    and deviation_ma3_sopra_ma16 > 0.12
-                    and deviation_ma5_sopra_ma28 > 0.08
+                    and deviation_ma3_sopra_ma10 > 0.01
                     
-                    and ma2_last >= ma2_2_min_ago
-                    and macd > macd_2_min_ago
+                    and macd_differenza_2_min_ago > -12.50
                 ):
-                    buy = "BUY 3 29 ago 2022 > 120 min di ribasso AND 8>78 - r 6570 Ay"
+                    buy = "BUY 3 29 ago 2022 > 120 min di ribasso AND 5>54 - r 6570 Ay"
                     action = "buy"
                     percentage = 90
                     
@@ -23327,6 +23328,10 @@ class maddog:
                     # 17 mar 2023 aggiunta 3-16 >0.12
                     # 14 set 2023 8-78 da 18-78
                     # 31 gen 2025 se and ma25_last < ma25_60_min_ago ok cosi'
+                    # 15 apr 2025 anticipato ndecchiecella 
+
+
+
                     
                 # BUY 3 29 ago 2022 > 120 min di ribasso
                 
