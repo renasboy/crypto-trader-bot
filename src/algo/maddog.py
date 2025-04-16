@@ -30882,7 +30882,7 @@ class maddog:
                     
                     and deviation_ma3_sopra_ma10 > 0.01
                     
-                    and macd_differenza_2_min_ago > -2.50
+                    and macd_differenza_2_min_ago > -18.50
                 ):
                     buy = "BUY 5A con ma450_last > ma450_360_min_ago MA 39< 39 20 min ago + distanza al ribasso - r 7384 A2xx2y"
                     action = "buy"
@@ -30891,6 +30891,8 @@ class maddog:
                     # 14 ott 2024 se 450 sale da 6 ore NON FARTI TROPPI PROBLEMI !
                     # 29 ott 2024 se 39 scende da 20 min allora una specie di osso (and deviation_ma39 < -0.17)
                     # 21 mar 2025 distanza al ribasso se 30 ma39_last < ma39_20_min_ago
+                    # 16 apr 2025 and macd_differenza_2_min_ago a -18.50 da -2.50
+
 
 
                 elif (
@@ -56197,9 +56199,12 @@ class maddog:
 
                 # 15 ott 2024 se 39>100 deviation_sell < -0.03 da < -0.02
 
+            
 
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
+                and ma10_last > ma39_last
+
                 and ma450_last > ma450_10_min_ago
                 and ma39_last < ma100_last
 
@@ -56217,16 +56222,53 @@ class maddog:
                 and deviation_sell < -0.025
             ):    
             
-                sell = "SELL CS - DOLCE ATTESA 270 sec con ma13 < and con 450 > E 100<100 30 min ago - r 16694 B1y"
+                sell = "SELL CS - DOLCE ATTESA 270 sec con ma13 < and con 450 > E 100<100 30 min ago and ma10_last > ma39_last - r 16694 B1 yx"
+                action = "sell"
+
+                # 15 apr 2025 aggiunta and ma10_last > ma39_last 
+                # 15 apr 2025 forse qua dovro' mettere sell con 3<39 !
+
+
+
+
+            elif (
+                seconds_since_last_trade > max_hold_time_in_seconds
+                and ma10_last < ma39_last
+
+                and ma450_last > ma450_10_min_ago
+                and ma39_last < ma100_last
+
+                and ma100_last < ma100_30_min_ago
+                and ma13_last <= ma13_2_min_ago
+
+                and deviation_ma100_sopra_ma200 > -0.70
+                and deviation_ma100_sopra_ma300 < 0.50
+
+                and ma3_last <= ma3_2_min_ago
+                and ma2_last < last_trade_price
+                and ma2_last <= ma2_2_min_ago
+                and macd_differenza_2_min_ago < -1.50
+                
+                and deviation_sell < -0.025
+            ):    
+            
+                sell = "SELL CS - DOLCE ATTESA 270 sec con ma13 < and con 450 > E 100<100 30 min ago and ma10_last < ma39_last - r 16694 B1 yy"
                 action = "sell"
              
                 # 4 feb 2022 con < -0.26 ha fatto -0.88% (dopo +4.29%)
-                # 7 feb 2022 con < -0.345 e 270 sec ha fatto -0.38% - aumenta a 0.355 ! - eventualmente ci pensa la condizione CROLLO IMPROVVISO CHE FUNZIONA !
+                # 7 feb 2022 con < -0.345 e 270 sec ha fatto -0.38% - aumenta a 0.355 !
+                # 7 feb 2022 eventualmente ci pensa la condizione CROLLO IMPROVVISO CHE FUNZIONA !
                 # 17 set -0.57 da -0.47
 
                 #  7 set 2004 ro cano e' tornato ! questa condizione interviene solo quando ma100 < ma100 30 min ago
                 #  8 set 2024 aggiunta ma3 < ma3 2 min ago and ma2_last < ma2_2_min_ago
                 # 22 feb 2025 aggiunta and macd_differenza_2_min_ago < -1.50
+                # 16 apr 2025 ha fatto +0.15
+                # 15 apr 2025 aggiunta and ma10_last < ma39_last
+
+
+
+
 
 
 
