@@ -32640,7 +32640,7 @@ class maddog:
                     ma3_last > ma13_last
 
                     and delta_1 < delta_2
-                    and (ma3_last > ma100_last or ma3_last > ma150 or ma3_last > ma200)
+                    and (ma3_last > ma100_last or ma3_last > ma150_last or ma3_last > ma200_last)
                     and deviation_ma100_sopra_ma200 > -0.13
 
                     and ma300_last < ma300_180_min_ago
