@@ -13,12 +13,20 @@ def run():
 
     algo_helper.info("price: {} fee: {}".format(price, fee))
 
+    trend_up = algo_helper.rsi_trend_up
+    trend_down = algo_helper.rsi_trend_down
+
     algo_helper.write(
         [
             dict(
                 measurement="price_volume",
                 tags=dict(exchange=EXCHANGE, symbol_1=SYMBOL_1, symbol_2=SYMBOL_2),
-                fields=dict(price=float(price), fee=float(fee)),
+                fields=dict(
+                    price=float(price),
+                    fee=float(fee),
+                    trend_up=float(trend_up),
+                    trend_down=float(trend_down),
+                ),
             )
         ]
     )
