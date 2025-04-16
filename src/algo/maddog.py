@@ -32633,37 +32633,33 @@ class maddog:
                     # aggiunta 8 apr 2025 e' andata benissimo su RCCR durante un lungo crollo !
 
 
+
                 # 16 apr 2025 nuova condizione che mancava e che ci deve essere
 
                 elif (
                     ma3_last > ma13_last
 
-                    and (ma5_last > ma100_last or ma5_last > ma200_last)
+                    and delta_1 < delta_2
+                    and (ma3_last > ma100_last or ma3_last > ma150 or ma3_last > ma200)
+                    and deviation_ma100_sopra_ma200 > -0.13
+
                     and ma300_last < ma300_180_min_ago
                     and deviation_ma200_sotto_ma300 < -0.06
+                    and deviation_ma25_sotto_ma300 < -0.05
+                    and deviation_ma100_sopra_ma300 < -0.15
                     
-
-                    and deviation_ma25_sotto_ma300 < -0.50
-                    and deviation_ma100_sopra_ma300 < -0.25
-                    and deviation_ma5_sotto_ma450 < -0.72
-                    and deviation_ma5_sotto_ma200 < -0.30
-                    and deviation_ma5_sotto_ma300 < -0.40
-                    and deviation_ma300_sopra_ma450 < -0.15
-
-                    
-
                     and ma3_last > ma10_last
                     
                     and macd_differenza_2_min_ago > -18.50
              
                 ):
-                    buy = "BUY 4 nuova condizione con distanza al ribasso ma GIORNO - CAZZO - r 7575"
+                    buy = "BUY 5 nuova condizione 16 apr 2025 - GIORNO - CAZZO - r 7575"
                     action = "buy"
                     percentage = 70
 
-                    # IN QUESTA CIRCOSTANZA TOLTO and deviation_ma39 < -0.02
-                    # and deviation_ma3_sotto_ma50 < -0.03
-
+                    # 16 apr 2025 attenzione ! IN QUESTA CIRCOSTANZA TOLTO and deviation_ma39 < -0.02
+                    # 16 apr 2025 attenzione ! and deviation_ma100_sopra_ma200 > -0.13 significa che 100 si sta avvicinando alla 200 
+                    # 16 apr 2025 ha smesso di crollare e sta risalendo !
 
 
                 elif ( 
@@ -32691,7 +32687,7 @@ class maddog:
                     
                     and macd_differenza_2_min_ago > -18.50
                 ):
-                    buy = "BUY 7 apr 2025 in pieno ribasso con 78<150 + cano STAF + roma - r 7580"
+                    buy = "BUY 5 apr 2025 in pieno ribasso con 78<150 + cano STAF + roma - r 7580"
                     action = "buy"
                     percentage = 90
 
