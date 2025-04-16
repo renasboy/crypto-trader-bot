@@ -511,7 +511,7 @@ class maddog:
 
         # rsi
 
-        # rsi = self.algo_helper.rsi
+        rsi = self.algo_helper.rsi
 
 
 
@@ -26906,13 +26906,53 @@ class maddog:
                     
                     # deviation_buy3 = ma4_last/ma30_last
                     # deviation_ma4_sopra_ma100 > 0.25 arrivati al buy 4 DEVE AVERE UNA CERTA FORZA !
+
+
+
+
+
                     
                 
                     
                 
                 
+                # 16 apr 2025 nuova condizione che mancava e che ci deve essere
+
+                elif (
+                    ma3_last > ma13_last
+
+                    and ma300_last < ma300_180_min_ago
+                    and deviation_ma200_sotto_ma300 < -0.06
+                    
+
+                    and deviation_ma25_sotto_ma300 < -0.50
+                    and deviation_ma100_sopra_ma300 < -0.25
+                    and deviation_ma5_sotto_ma450 < -0.72
+                    and deviation_ma5_sotto_ma200 < -0.30
+                    and deviation_ma5_sotto_ma300 < -0.40
+                    and deviation_ma300_sopra_ma450 < -0.15
+
+                    and deviation_ma39 < -0.02
+                    and deviation_ma3_sotto_ma50 < -0.03
+
+                    and ma3_last > ma10_last
+                    
+                    and macd_differenza_2_min_ago > -18.50
+             
+                ):
+                    buy = "BUY 4 nuova condizione con distanza al ribasso - r 7000"
+                    action = "buy"
+                    percentage = 70
+
+
+
+
+
+
+
+
                 # BUY 4 se 11 > 200 e con ma69 > and deviation_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali) IMPORTATA DA BUY 5
-              
+
                 elif (
                     ma5_last > ma200_last
                     and ma300_last > ma300_180_min_ago
@@ -26960,7 +27000,7 @@ class maddog:
                     and macd_differenza_2_min_ago > 0.50
              
                 ):
-                    buy = "BUY 4 se 11 > 200 e con ma69 > and dev_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali) DA BUY 5 RCCR and diff ma2 e diff macd - r 7008 B"
+                    buy = "BUY 4 se 11>200 e con ma69> and dev_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali) - r 7008 B"
                     action = "buy"
                     percentage = 70
                     
@@ -32591,6 +32631,38 @@ class maddog:
                     percentage = 80
 
                     # aggiunta 8 apr 2025 e' andata benissimo su RCCR durante un lungo crollo !
+
+
+                # 16 apr 2025 nuova condizione che mancava e che ci deve essere
+
+                elif (
+                    ma3_last > ma13_last
+
+                    and (ma5_last > ma100_last or ma5_last > ma200_last)
+                    and ma300_last < ma300_180_min_ago
+                    and deviation_ma200_sotto_ma300 < -0.06
+                    
+
+                    and deviation_ma25_sotto_ma300 < -0.50
+                    and deviation_ma100_sopra_ma300 < -0.25
+                    and deviation_ma5_sotto_ma450 < -0.72
+                    and deviation_ma5_sotto_ma200 < -0.30
+                    and deviation_ma5_sotto_ma300 < -0.40
+                    and deviation_ma300_sopra_ma450 < -0.15
+
+                    
+
+                    and ma3_last > ma10_last
+                    
+                    and macd_differenza_2_min_ago > -18.50
+             
+                ):
+                    buy = "BUY 4 nuova condizione con distanza al ribasso ma GIORNO - CAZZO - r 7575"
+                    action = "buy"
+                    percentage = 70
+
+                    # IN QUESTA CIRCOSTANZA TOLTO and deviation_ma39 < -0.02
+                    # and deviation_ma3_sotto_ma50 < -0.03
 
 
 
