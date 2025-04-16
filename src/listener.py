@@ -13,6 +13,7 @@ def run():
 
     algo_helper.info("price: {} fee: {}".format(price, fee))
 
+    algo_helper.price = price
     trend_up = algo_helper.rsi_trend_up
     trend_down = algo_helper.rsi_trend_down
 
