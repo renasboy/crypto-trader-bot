@@ -28530,17 +28530,16 @@ class maddog:
                     percentage = 70
 
 
-
                 elif (    
-                    ma3_last > ma20_last
+                    ma3_last > ma18_last
+
+                    and (ma10_last < ma30_last or ma20_last < ma50_last)
+                    and deviation_ma3_sotto_ma50 < -0.05
 
                     and ma450_last > ma450_360_min_ago
                     and delta_DNA_1 < delta_DNA_2
 
                     and ma200_last > ma300_last
-
-                    and ma10_last < ma30_last
-                    and delta_1 < delta_2
 
                     and ma450_last >= ma450_120_min_ago
                     and ma300_last > ma300_60_min_ago
@@ -28550,12 +28549,11 @@ class maddog:
                     and deviation_ma3_sopra_ma16 > -0.02
                     
                     and ma3_last > ma13_last
-                    and ma3_last > ma5_last
                     
-                    and macd_differenza_2_min_ago > -3.25
+                    and macd_differenza_2_min_ago > -13.25
                 
                 ):
-                    buy = "BUY 5 con 450_last >= 450_120_min_ago E ma200>ma300 - GIORNO - r 7144 A1 Y2 NUOVA ERA A3 SOFT xX 1 xX"
+                    buy = "BUY 5 con 450_last >= 450_360_min_ago E ma200>ma300 - GIORNO - r 7144 A1 Y2 NUOVA ERA A3 SOFT xX 1 xX 1"
                     action = "buy"
                     percentage = 70
 
@@ -28563,19 +28561,24 @@ class maddog:
                     # 27 feb 2025 se ma10_last < ma30_last vuol dire che sta curcando verso il basso
                     # 27 feb 2025 con aggiunta di delta_1 < delta_2 (giorno) non faccio comprare !
                     # 28 feb 2025 GIORNO
+                    # 16 apr 2025 and deviation_ma3_sotto_ma50 < -0.01
+
+
+
+
 
 
                 elif (    
-                    ma3_last > ma20_last
+                    ma3_last > ma18_last
+
+                    and (ma10_last < ma30_last or ma20_last < ma50_last)
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.01
+                    and deviation_ma3_sotto_ma50 < -0.05
 
                     and ma450_last > ma450_360_min_ago
                     and delta_DNA_1 > delta_DNA_2
-                    and deviation_ma3_sotto_ma50 < -0.22
 
                     and ma200_last > ma300_last
-
-                    and ma10_last < ma30_last
-                    and delta_1 < delta_2
 
                     and ma450_last >= ma450_120_min_ago
                     and ma300_last > ma300_60_min_ago
@@ -28585,12 +28588,51 @@ class maddog:
                     and deviation_ma3_sopra_ma16 > -0.02
                     
                     and ma3_last > ma13_last
-                    and ma3_last > ma5_last
                     
-                    and macd_differenza_2_min_ago > -3.25
+                    and macd_differenza_2_min_ago > -13.25
                 
                 ):
-                    buy = "BUY 5 con 450_last >= 450_120_min_ago E ma200>ma300 +DNA - NOTTE - r 7144 A1 Y2 NUOVA ERA A3 SOFT xX 1 xY"
+                    buy = "BUY 5 con 450_last >= 450_360_min_ago E ma200>ma300 - NOTTE - r 7144 A1 Y2 NUOVA ERA A3 SOFT xX 1 xX 2"
+                    action = "buy"
+                    percentage = 70
+
+                    #  7 feb 2025 aggiunta 200>300
+                    # 27 feb 2025 se ma10_last < ma30_last vuol dire che sta curcando verso il basso
+                    # 27 feb 2025 con aggiunta di delta_1 < delta_2 (giorno) non faccio comprare !
+                    # 28 feb 2025 GIORNO
+                    # 16 apr 2025 se ritraccia allora and deviation_ma5_sopra_o_sotto_ma100 < -0.01 and deviation_ma3_sotto_ma50 < -0.05
+
+
+
+
+
+                elif (    
+                    ma3_last > ma18_last
+
+                    and (ma10_last < ma30_last or ma20_last < ma50_last)
+                    
+                    and ma450_last > ma450_360_min_ago
+                    and delta_DNA_1 < delta_DNA_2
+
+                    and deviation_ma3_sotto_ma50 < -0.05
+
+                    and ma200_last > ma300_last
+                    and ma100_last > ma450_last
+
+                    and ma450_last >= ma450_120_min_ago
+                    and ma300_last > ma300_60_min_ago
+                    
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > -0.02
+                    
+                    and ma3_last > ma13_last
+                    and ma2_last > ma8_last
+                    
+                    and macd_differenza_2_min_ago > -13.25
+                
+                ):
+                    buy = "BUY 5 con 450_last >= 450_360_min_ago E ma200>ma300 + DNA - GIORNO - r 7144 A1 Y2 NUOVA ERA A3 SOFT xX 1 xY 1"
                     action = "buy"
                     percentage = 70
 
@@ -28598,6 +28640,50 @@ class maddog:
                     # 27 feb 2025 se ma10_last < ma30_last vuol dire che sta curcando verso il basso
                     # 27 feb 2025 con aggiunta di delta_1 < delta_2 (giorno) non faccio comprare !
                     # 28 feb 2025 aggiunta DNA - NOTTE
+                    # 16 apr 2025 tolta and delta_1 < delta_2
+                    # 16 apr 2025 se and delta_DNA_1 < delta_DNA_2 tolgo and deviation_ma5_sopra_o_sotto_ma100 < -0.01
+                    # 16 apr 2025 se and delta_DNA_1 < delta_DNA_2 and deviation_ma3_sotto_ma50 a -0.05 da -0.22
+
+
+
+
+                elif (    
+                    ma3_last > ma18_last
+
+                    and (ma10_last < ma30_last or ma20_last < ma50_last)
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.01
+
+                    and ma450_last > ma450_360_min_ago
+
+                    and delta_DNA_1 > delta_DNA_2
+                    and deviation_ma3_sotto_ma50 < -0.22
+
+                    and ma200_last > ma300_last
+
+
+                    and ma450_last >= ma450_120_min_ago
+                    and ma300_last > ma300_60_min_ago
+                    and ma100_last > ma450_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > -0.02
+                    
+                    and ma3_last > ma13_last
+                    and ma2_last > ma8_last
+                    
+                    and macd_differenza_2_min_ago > -13.25
+                
+                ):
+                    buy = "BUY 5 con 450_last >= 450_360_min_ago E ma200>ma300 + DNA - NOTTE - r 7144 A1 Y2 NUOVA ERA A3 SOFT xX 1 xY 2"
+                    action = "buy"
+                    percentage = 70
+
+                    #  7 feb 2025 aggiunta 200>300
+                    # 27 feb 2025 se ma10_last < ma30_last vuol dire che sta curcando verso il basso
+                    # 27 feb 2025 con aggiunta di delta_1 < delta_2 (giorno) non faccio comprare !
+                    # 28 feb 2025 aggiunta DNA - NOTTE
+                    # 16 apr 2025 tolta and delta_1 < delta_2
+
 
 
 
