@@ -56470,8 +56470,15 @@ class maddog:
                 #  3 mar 2025 aggiunta and ma450_last > ma450_480_min_ago
 
 
+
+
+
+
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
+                and ma3_last > ma20_last
+                and deviation_sell < -0.02
+
                 and (ma450_last < ma450_480_min_ago or ma450_last < ma450_720_min_ago)
                 and deviation_ma39 < -0.005
 
@@ -56494,11 +56501,53 @@ class maddog:
                 and ma2_last <= ma2_2_min_ago
             
             ):
-                sell = "SELL CS - DOLCE ATTESA 270 sec and ma13 < and con 450 < E 100<100 30 min ago e 100 sopra 300 < 0.50 - r 16694 B2 Y2 Bay"
+                sell = f"SELL CS {ma3_last} {ma20_last} DOLCE ATTESA 270 sec and ma13< con 450< E 100<100 30 min MA 3>20 - r 16694 B2 Y2 Bayx"
                 action = "sell"
                 
                 #  3 mar 2025 aggiunta and (ma450_last < ma450_480_min_ago or ma450_last < ma450_720_min_ago)
                 #  3 mar 2025 aggiunta and deviation_ma39 < -0.005
+                # 17 apr 2025 se ma3_last > ma20_last aggiungo deviation_sell < -0.02 ! (se 3 sta ancora sopra 20 statte calmo !)
+                # 17 apr 2025 riprto ! se 3 sta ancora sopra 20 statte calmo !
+                
+
+            elif (
+                seconds_since_last_trade > max_hold_time_in_seconds
+                and ma3_last < ma20_last
+
+                and (ma450_last < ma450_480_min_ago or ma450_last < ma450_720_min_ago)
+                and deviation_ma39 < -0.005
+
+                and ma200_last > ma200_120_min_ago
+
+                and delta_1_69_39 > delta_2_69_39
+
+                and ma450_last < ma450_10_min_ago
+                and ma100_last < ma300_last
+                and ma100_last < ma200_last
+
+                and ma100_last < ma100_30_min_ago
+                and ma13_last <= ma13_2_min_ago
+
+                and deviation_ma100_sopra_ma200 > -0.70
+                and deviation_ma100_sopra_ma300 < 0.50
+
+                and ma3_last <= ma3_2_min_ago
+                and ma2_last < last_trade_price
+                and ma2_last <= ma2_2_min_ago
+            
+            ):
+                sell = "SELL CS - DOLCE ATTESA 270 sec and ma13 < and con 450 < E 100<100 30 min E 3<20 - r 16694 B2 Y2 Bayy"
+                action = "sell"
+                
+                #  3 mar 2025 aggiunta and (ma450_last < ma450_480_min_ago or ma450_last < ma450_720_min_ago)
+                #  3 mar 2025 aggiunta and deviation_ma39 < -0.005
+                # 17 apr 2025 se ma3_last < ma20_last
+
+
+
+
+
+
 
 
 
