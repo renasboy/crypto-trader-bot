@@ -3632,9 +3632,12 @@ class maddog:
                     
                     
                 # --------------------------- BUY 1 quando incomincia il ribasso MA ma300 > ma300_120_min_ago
-                
+
+
                 elif (       
                     ma3_last > ma20_last
+                    and ma20_last > ma40_last
+                    
                     and deviation_ma200_sotto_ma300 < -0.17
                     and ma300_last < ma300_60_min_ago
                     and deviation_ma39 < -0.02
@@ -3647,19 +3650,48 @@ class maddog:
                     and deviation_ma3_sopra_ma10 > 0.01
                     
                     and ma5_last < ma300_last
-                    and macd > -60
                     
+                    and macd_differenza_2_min_ago > -18.50
                 ):     
                   
-                    buy = "BUY 1 quando incomincia il ribasso MA ma300 > ma300_120_min_ago  - r 1184 B1"
+                    buy = "BUY 1 quando incomincia il ribasso MA ma300 > ma300_120_min_ago  - r 1184 B1 x"
+                    action = "buy"
+                    percentage = 90
+
+                    # 17 apr 2025 SE 20>40
+                    # 17 apr 2025 aggiunta and macd_differenza_2_min_ago > -18.50 e tolta macd > -60
+
+
+                elif (       
+                    ma3_last > ma20_last
+                    and ma20_last < ma40_last
+                    and deviation_ma3_sotto_ma50 < -0.05
+
+                    and deviation_ma200_sotto_ma300 < -0.17
+                    and ma300_last < ma300_60_min_ago
+                    and deviation_ma39 < -0.02
+
+                    and ma300_last > ma300_120_min_ago
+                    
+                    and ma200_last < ma200_60_min_ago
+                    and ma100_last < ma100_60_min_ago
+
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    
+                    and ma5_last < ma300_last
+                    
+                    and macd_differenza_2_min_ago > -18.50
+                ):     
+                  
+                    buy = "BUY 1 quando incomincia il ribasso MA ma300 > ma300_120_min_ago  - r 1184 B1 y"
                     action = "buy"
                     percentage = 90
                     
                     # 20 set 2022 aggiunto 3-10 > 0.11
                     #  1 ott 2022 3-10 > 0.135
                     #  7 feb 2025 dopo quasi 3 anni aggiunta quando comincia il ribasso come si deve !
-                
-               
+                    # 17 apr 2025 SE 20<40 allora aggiungo and deviation_ma3_sotto_ma50 < -0.05
+                    # 17 apr 2025 aggiunta and macd_differenza_2_min_ago > -18.50 e tolta macd > -60
                     
                     
                 # ------------------------------------------------------------ BUY 1 LATERALE 2
