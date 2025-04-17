@@ -55121,9 +55121,10 @@ class maddog:
 
             elif (
                 ma78_last < ma78_120_min_ago
+
                 and ma5_last > ma100_last
                 and ma10_last <= ma20_last
-                and ma2_differenza_2_min_ago < -7
+                
                 
                 and ma300_last > ma300_301_min_ago
                 and delta_150_100 <= delta_150_100_60_min
@@ -55135,34 +55136,35 @@ class maddog:
                 and deviation_ma100_sopra_ma300 < 0.40
                 
                 and deviation_ma5_sotto_ma200 > -0.90
+                and macd_differenza_2_min_ago < -1.0
                 
-                and ma2_last <= ma2_2_min_ago 
-                and macd < macd_2_min_ago
             ):
                 sell = "SELL CS 6 NOTTE con ma300> 5 ore - dev 3-39 < 0.05 e dev_sell < -0.083 e ma50 < e e ma5 > ma 100 - r 16047 B3 y1"
                 action = "sell"
 
                 # 22 feb 2025 ti ricordo che ma5 sotto ma200 > -0.90 significa che non e' una situazione crollo !
 
+
             elif (
                 ma78_last < ma78_120_min_ago
+
                 and ma5_last <= ma100_last
                 and ma10_last <= ma20_last
-                and ma2_differenza_2_min_ago < -7
+                
                 
                 and ma300_last > ma300_301_min_ago
                 and delta_150_100 <= delta_150_100_60_min
                 
                 and deviation_ma39 < 0.05
-                and deviation_sell < -0.023
+                and deviation_sell < -0.022
                 
                 and ma50_last <= ma50_2_min_ago
                 and deviation_ma100_sopra_ma300 < 0.40
                 
                 and deviation_ma5_sotto_ma200 > -0.90
                 
-                and ma2_last <= ma2_2_min_ago 
-                and macd < macd_2_min_ago
+                and macd_differenza_2_min_ago < -1.0
+                
             ):
                 sell = "SELL CS 6 NOTTE con ma300> 5 ore - dev 3-39 < 0.05 e dev_sell < -0.023 e ma50 < e ma5 < ma 100 - r 16047 B3 y2"
                 action = "sell"
@@ -55173,13 +55175,51 @@ class maddog:
                 # 24 nov 203 dev sell 0.083 da -0.079
                 # 22 feb 2025 se 5 e' andata sotto 100 allora deviation_sell a -0.023 da -0.083
                 # 22 feb 2025 ti ricordo che ma5 sotto ma200 > -0.90 significa che non e' una situazione crollo !
+                # 17 apr 2025 tolto ma2 < ma2 2 min ago
+                # 17 apr 2025 aggiunto and macd_differenza_2_min_ago < -1.0
+                # 17 apr 2025 and deviation_sell < -0.022 da -0.023
+
+
+
+            elif (
+                ma5_last <= ma100_last
+
+                and ma78_last < ma78_120_min_ago
+                and ma100_last < ma200_last
+                and ma200_last < ma300_last
+                
+                
+                and ma20_last > ma50_last
+                and ma50_last > ma50_2_min_ago
+
+                and ma300_last > ma300_301_min_ago
+                and delta_150_100 <= delta_150_100_60_min
+                
+                and deviation_ma39 < 0.05
+                and deviation_sell < -0.021
+                
+                and deviation_ma100_sopra_ma300 < 0.40
+                
+                and deviation_ma5_sotto_ma200 > -0.90
+                
+                and macd_differenza_2_min_ago < -1.0
+                
+            ):
+                sell = "SELL CS con ma300> 5 ore MA 78< 78 2 ore e dev 3-39 < 0.05 e dev_sell < -0.023  CON 5<100 - r 16050"
+                action = "sell"
+                
+                # 17 apr 2025 aggiunta questa nuova condizione di vendita
+                # 17 apr 2025 mentre 78 scende da 2 ore 5 e' andata sotto 100. statte accorto. vendi. MA VA TUTTO BENE.
+                # 17 apr 2025 da notare che ma20 sta ancora sopra ma50 e ma50 e' > a ma50 di 2 min ago
+
+
 
                 #########################################################################################################################
                 
                 
               
             
-            ############################################################################## SALVAGENTE con deviation_ma5_sotto_ma200 < -1.00 and > -1.50
+            ############################################ SALVAGENTE con deviation_ma5_sotto_ma200 < -1.00 and > -1.50
             
             
             
