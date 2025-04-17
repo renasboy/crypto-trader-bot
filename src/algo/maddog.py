@@ -12448,7 +12448,7 @@ class maddog:
                     and macd >= macd_2_min_ago
                 ):
 
-                    buy = "BUY 1 forever young 1 con 50 > 59 e se ma 200 > e se ma200 > ma300 MA 78 < 200 e MA 300 < 120 min ago AND 3-10 > 0.07  - r 4379 B2y"
+                    buy = "BUY 1 forever young 1 con 50 > 59 e se ma 200 > e se ma200 > ma300 MA 78 < 200 e MA 300 < 120 min - r 4379 B2y"
                     action = "buy"
                     percentage = 70
                     
@@ -12459,34 +12459,30 @@ class maddog:
                 ################################################################################################
                 
                 
-                # BUY 1 FOREVER YOUNG PIU' AGGRESSIVO con doppio delta < 1 E MA100> (rialzo) se ma 200 > e se ma250 > ma300  and deviation_ma5_sopra_ma28 > 0.10
+                # BUY 1 FOREVER YOUNG 
                 
                 elif (  
-                    ma8_last > ma54_last
+                    ma3_last > ma18_last
+
                     and ma450_last > ma450_240_min_ago
+                    and ma300_last > ma300_301_min_ago
+                    and ma100_last > ma450_last
+                    and ma200_last > ma450_last
                     
-                    and macd > macd_2_min_ago
+                    and deviation_ma3_sopra_ma10 > 0.01
                     
-                    and delta_1 < delta_2
-                    and ma100_last > ma100_30_min_ago
-                    
-                    and deviation_ma3_sopra_ma10 > 0.02
-                    and deviation_ma3_sopra_ma18 > 0.055
-                    and deviation_ma5_sopra_ma28 > 0.01
-               
-                    and ma2_last > ma2_2_min_ago
-                    and macd >= macd_2_min_ago
-                    and macd > 3
+                    and macd_differenza_2_min_ago > -15.25
                 ):
                     
-                    buy = "BUY 1 FOREVER YOUNG PIU' AGGRESSIVO (doppio delta < 1 E 100> ) (SOPRA RIALZO RIALZO) - GIORNO - se ma 200 > and macd > 2 min and macd >3 - r 4410a"
+                    buy = "BUY 1 FOREVER YOUNG - GIORNO - con ma450_last > ma450_240_min_ago - r 4410 A"
                     action = "buy"
                     percentage = 80
                     
                     # 12 giu 2023 aggiunta 3-18 > 0.055
                     # 11 ago 2023 tolta ma5 > ma5 2 min ago
-                    # 24 ago 2023 macd>3
-
+                    # 24 ago 2023 macd> 3
+                    # 17 apr 2025 and macd_differenza_2_min_ago > -15.25
+                    # 17 apr 2025 con ma450_last > ma450_240_min_ago anticipata ndecchiecella 
 
 
 
