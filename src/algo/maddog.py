@@ -4494,17 +4494,14 @@ class maddog:
                     
                     and ma450_last > ma450_720_min_ago
 
-                    and deviation_ma250_sopra_ma300 < 0.12
-                    and deviation_ma250_sopra_ma300 > -0.12
+                    and deviation_ma300_sopra_ma450 < 0.010
+                    and deviation_ma300_sopra_ma450 > -0.010
                     
-                    and deviation_ma300_sopra_ma450 < 0.085
-                    and deviation_ma300_sopra_ma450 > -0.085
-                    
-                    and deviation_ma100_sopra_ma300 < 0.29
-                    and deviation_ma100_sopra_ma300 > -0.29
+                    and deviation_ma100_sopra_ma300 < 0.33
+                    and deviation_ma100_sopra_ma300 > -0.33
                     
                     and deviation_ma3_sopra_ma10 > 0.01
-                    and deviation_ma3_sopra_ma16 > -0.01
+                    and deviation_ma3_sopra_ma16 > -0.02
                     
                     and macd > -100
                     and macd_differenza_2_min_ago > -10.50
@@ -4520,6 +4517,7 @@ class maddog:
                     # 31 gen 2025 CONSOLIDATO TREND LATERALE !
                     # 18 apr 2025 se ma39_last < ma100_last or ma100_last < ma100_10_min_ago forse sta ritracciando !
                     # 18 apr 2025 aggiunto and deviation_ma3_sotto_ma50 < -0.10
+
 
 
                 elif (    
