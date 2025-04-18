@@ -17929,9 +17929,14 @@ class maddog:
                 
                 elif (
                     ma3_last > ma18_last
+
+                    and ma20_last < ma50_last
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.15
+                    and deviation_ma3_sotto_ma50 < -0.15
+
                     and ma450_last > ma450_360_min_ago
                     and delta_DNA_1 > delta_DNA_2
-                    and deviation_ma3_sotto_ma50 < -0.15
+                    
                     
 
                     and ma100_last > ma100_120_min_ago
@@ -17942,10 +17947,10 @@ class maddog:
                     and ma200_last > ma200_120_min_ago
                     
                     and ma3_last > ma8_last
-                    and macd_differenza_2_min_ago > -2.50
+                    and macd_differenza_2_min_ago > -10.50
                     
                 ):    
-                    buy = "BUY 2 con ma450_last > ma450_120_min_ago e con 300>300 60 min ago + DNA - NOTTE  - r 5892 A1x1 x2"
+                    buy = "BUY 2 con ma450 > ma450 120 min e 300>300 60 min + DNA - NOTTE E se 20<50 ritracciamento - r 5892 A1x1 X2"
                     action = "buy"
                     percentage = 70
 
@@ -17953,7 +17958,8 @@ class maddog:
                     # 16 feb 2025 se anche ma100_last > ma100_120_min_ago anticipata ndecchiecella
                     # 28 feb 2025 aggiunta DNA - NOTTE !
 
-
+                    # 18 apr 2025 se 20<50 ritracciamento
+                    # 18 apr 2025 SE ritracciamento allora and deviation_ma5_sopra_o_sotto_ma100 < -0.15
 
 
 
