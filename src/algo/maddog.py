@@ -13,6 +13,12 @@
 
 
 """
+                    and ma20_last < ma50_last
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.15
+
+                    and ma50_last < ma100_last
+                    and deviation_ma3_sotto_ma50 < -0.30
+
 
 and deviation_ma39 < -0.05
 and deviation_ma3_sotto_ma50 < -0.06
@@ -27,10 +33,8 @@ oggi 11 apr 2025 fatto.
 
 #  8 apr 2025 se ritraccia (20<50) ma3 DEVE STARE SOTTO ma100 non c'e' niente da fare !
 
-                    and ma20_last < ma50_last
-                    and ma50_last < ma100_last
-                    and deviation_ma3_sotto_ma50 < -0.30
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.15
+                    
+                    
                     
 
 
@@ -4480,12 +4484,15 @@ class maddog:
 
 
                 elif (    
-                    ma3_last > ma20_last
-                    and ma450_last > ma450_720_min_ago
+                    ma3_last > ma18_last
+
+                    and (ma39_last < ma100_last or ma100_last < ma100_10_min_ago)
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.13
+                    and deviation_ma3_sotto_ma50 < -0.10
 
                     and ma300_last < ma300_180_min_ago
-                    and ma100_last < ma100_10_min_ago
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
+                    
+                    and ma450_last > ma450_720_min_ago
 
                     and deviation_ma250_sopra_ma300 < 0.12
                     and deviation_ma250_sopra_ma300 > -0.12
@@ -4499,11 +4506,11 @@ class maddog:
                     and deviation_ma3_sopra_ma10 > 0.01
                     and deviation_ma3_sopra_ma16 > -0.01
                     
-                    and macd > -60
-                    and macd_differenza_2_min_ago > -1.50
+                    and macd > -100
+                    and macd_differenza_2_min_ago > -10.50
                     
                 ):
-                    buy = "BUY 1 CONSOLIDATO TREND LATERALE con ma450_last > ma450_720_min_ago MA con ma300 < 3 ore - r 1205 B NUOVA ERA A1 SOFT X"
+                    buy = "BUY 1 TREND LATERALE MA 39<100 or 100 scende da 10 min - ritracciamento - r 1205 B NUOVA ERA A1 SOFT X"
                     action = "buy"
                     percentage = 80
 
@@ -4511,6 +4518,9 @@ class maddog:
                     # 29 gen 2025 tolta and ma2_last >= ma2_2_min_ago
                     # 29 gen 2025 3-20 da 3-54
                     # 31 gen 2025 CONSOLIDATO TREND LATERALE !
+                    # 18 apr 2025 se ma39_last < ma100_last or ma100_last < ma100_10_min_ago forse sta ritracciando !
+                    # 18 apr 2025 aggiunto and deviation_ma3_sotto_ma50 < -0.10
+
 
                 elif (    
                     ma3_last > ma18_last
@@ -55983,12 +55993,39 @@ class maddog:
 
 
 
+            elif (    
+                ma2_last <= ma4_last
+                
+                and ma2_last <= ma5_last
+                and ma3_last > ma10_last
+
+                and deviation_crollo_24_aprile < -0.155
+                and ma300_last < ma300_301_min_ago
+
+                and delta_1 > delta_2
+                and deviation_ma5_sotto_ma200 < -0.40
+                
+                and deviation_ma2_sopra_o_sotto_ma2_2_min_ago <= -0.015
+                and macd_differenza_2_min_ago < -0.50
+                and macd > -40
+                and macd < 1
+            ): 
+                
+                sell = "SELL CS 21 Bocelli - core 'ngrato - CROLLO IMPROVVISO con dev_crollo_24_aprile < -0.155 MA 3>10 - r 16480 BYbX"
+                action = "sell"
+
+                # 18 apr 2025 MA se ma3_last > ma10_last allora deviation_crollo_24_aprile < -0.155 da < -0.15
+
+
 
             elif (    
                 ma2_last <= ma4_last
-                and ma300_last < ma300_301_min_ago
+
                 and ma2_last <= ma5_last
+                and ma3_last < ma10_last
+
                 and deviation_crollo_24_aprile < -0.15
+                and ma300_last < ma300_301_min_ago
                 
                 and delta_1 > delta_2
                 and deviation_ma5_sotto_ma200 < -0.40
@@ -55999,7 +56036,7 @@ class maddog:
                 and macd < 1
             ): 
                 
-                sell = "SELL cond spec 21 Bocelli - core 'ngrato - CROLLO IMPROVVISO E delta_1 > delta_2 e dev_crollo_24_aprile < -0.13 E dev_ma2 < -0.015 e diff macd - r 16480 BYb"
+                sell = "SELL CS 21 Bocelli - core 'ngrato - CROLLO IMPROVVISO con dev_crollo_24_aprile < -0.13 E 3<10 - r 16480 BYbY"
                 action = "sell"
                         
                 # ho aggiunto anche questa vendita speciale dopo il 24 aprile -1%
