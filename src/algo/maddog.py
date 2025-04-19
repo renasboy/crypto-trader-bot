@@ -14,7 +14,7 @@
 
 """
                     and ma20_last < ma50_last
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.15
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.10
 
                     and ma50_last < ma100_last
                     and deviation_ma3_sotto_ma50 < -0.30
@@ -4487,7 +4487,7 @@ class maddog:
                     ma3_last > ma18_last
 
                     and (ma39_last < ma100_last or ma100_last < ma100_10_min_ago)
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.15
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.13
                     and deviation_ma3_sotto_ma50 < -0.11
 
                     and ma300_last < ma300_180_min_ago
@@ -17284,34 +17284,35 @@ class maddog:
 
 
 
+               
                 elif (
-
-                    ma3_last > ma20_last
+                    ma3_last > ma18_last
                     and ma450_last > ma450_360_min_ago
-                    and delta_DNA_1 > delta_DNA_2
+                    and (ma20_last < ma50_last or delta_DNA_1 > delta_DNA_2)
 
-                    
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.10
+                    and deviation_ma3_sotto_ma50 < -0.03
+
                     and ma300_last > ma450_last
-                    and ma100_last > ma100_60_min_ago
-                    and ma200_last > ma200_30_min_ago
-                   
+                    and ma100_last > ma100_120_min_ago
+                    
                     and deviation_ma5_sotto_ma200 > -0.70
                     and deviation_ma100_sopra_ma300 < 0.40
-                    
 
                     and deviation_ma3_sopra_ma10 > 0.01
                     and ma3_last > ma13_last 
                     
-                    
-                    and deviation_ma3_sotto_ma50 < -0.03
-                    and macd_differenza_2_min_ago > -2.50
+                    and macd_differenza_2_min_ago > -12.50
                 ):  
                 
-                    buy = "BUY 2 ma300_last > ma450_last e con ma200 che sale da 30 min + DNA - NOTTE - r 5829 AY"
+                    buy = "BUY 2 ma300_last > ma450_last e con ma200 che sale da 30 min + DNA - NOTTE - ritracciamento - r 5829 AY"
                     action = "buy"
                     percentage = 70
 
                     # 28 feb 2025 DOPO UN LUNGO RIALZO se comincia a curvare verso il basso ALLORA deviation_ma3_sotto_ma50 < -0.03
+                    # 19 apr 2025 se 20<50 ritracciamento
+                    # 19 apr 2025 se ritracciamento aggiunto and deviation_ma5_sopra_o_sotto_ma100 < -0.10
+
 
 
                     
