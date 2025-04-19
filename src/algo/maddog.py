@@ -2148,11 +2148,26 @@ class maddog:
                     # 11 apr 2025 aggiungo, allora, and deviation_ma3_sotto_ma50 < -0.25
 
 
+
+
+
+
                 elif (
                     ma3_last > ma18_last
+
+                    and ma20_last > ma50_last
+                    and deviation_ma200_sotto_ma300 > -0.05
+
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
                     
-                    and ma200_last > ma300_last
-                    and ma300_last > ma300_120_min_ago
+                    and deviation_ma300_sopra_ma450 > -0.18
+                    and deviation_ma100_sopra_ma300 > -0.29
+
+                    and ma300_last < ma300_180_min_ago
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > -0.01
                     
                     and ma3_last > ma8_last
                     and deviation_ma3_sopra_ma10 > 0.01
@@ -2160,7 +2175,7 @@ class maddog:
                     and macd_differenza_2_min_ago > -18.50
                 ):  
               
-                    buy = "BUY 1 con ma300_last > ma300_120_min_ago e 200>300 e 4>100 AND 3-10 > 0.01 - r 916 A1 y"
+                    buy = "BUY 1 con 20-50 AND 3-10 > 0.01 - r 916 A1 y"
                     action = "buy"
                     percentage = 90
 
@@ -2169,7 +2184,8 @@ class maddog:
                     # 28 gen 2025 4-100 da 5-100
                     # 14 apr 2025 4-78 da 4-100
                     # 15 apr 2025 3-18 da 4-78
-
+                    # 19 apr 2025 modificata per anticipare
+                    # 19 apr 2025 deviation_ma200_sotto_ma300 > -0.05 significa che 200 sta vicina alla 300 - altrimenti compra durante il ribasso
 
 
                 elif (
