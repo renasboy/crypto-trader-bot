@@ -51557,7 +51557,7 @@ class maddog:
                 and ma10_last < ma20_last
 
                 and deviation_ma39 < 0.10
-                and deviation_sell < -0.02
+                and deviation_sell < -0.022
 
                 and deviation_ma3_sotto_ma150 > -1.20
                 
@@ -51567,7 +51567,7 @@ class maddog:
                 and macd_differenza_2_min_ago < -2
                 
             ):
-                sell = "SELL C.S. con ma50_last <= ma50_2_min_ago MA CON 10>20 con 3-39 < 0.10 and dev_sell < -0.02 - r 15985 A1 Y2"
+                sell = "SELL C.S. con ma50_last <= ma50_2_min_ago MA CON 10<20 con 3-39 < 0.10 and dev_sell < -0.022 - r 15985 A1 Y2"
                 action = "sell"
                 
                 # 27 giu 2022 dev sell a 0.305 da 0.31
@@ -51595,7 +51595,7 @@ class maddog:
                 #  6 mar 2024 and deviation_sell < -0.01 da 0.01
                 #  6 mar 2024 and delta_450_300 < delta_450_300_60_min significa che sta salendo molto - statte calmo - GIORNO !
                 #  4 feb 2025 se deviation_ma100_sopra_ma300 > 0.20 dev sell < -0.02 da < -0.01
-
+                # 26 apr 2025 dev sell < -0.022 da < -0.02
 
 
             elif (
