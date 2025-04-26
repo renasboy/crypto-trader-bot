@@ -12199,33 +12199,31 @@ class maddog:
 
 
           
-                # BUY 1 forever young 2 un po' meno PRUDENTE se 150 > 300
+                
 
 
                 elif (  
-                    ma100_last > ma150_last
-                    and ma28_last >= ma28_10_min_ago
-                    and ma5_last > ma200_last
-                    and ma3_last > ma11_last
+                    ma3_last > ma11_last
                     
-                    and deviation_ma100_laterale > 0.03
+                    and ma39_last > ma100_last
+                    and ma100_last > ma450_last
+                    and deviation_ma100_laterale > -0.03
                     
-                    and deviation_ma3_sopra_ma10 > 0.035
-                    and deviation_ma5_sopra_ma28 > 0.05
-                   
-                    and ma2_last >= ma2_2_min_ago
-                    and macd >= macd_2_min_ago
-                    and macd_differenza_2_min_ago > 0.25
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    
+                    and macd_differenza_2_min_ago > -18.25
                 ):
 
-                    buy = "BUY 1 forever young 2 con 28> se ma100 > ma150 and macd_differenza_2_min_ago > 0.25 - r 4355 a"
+                    buy = "BUY 1 forever young 2 con 39>100 and macd_differenza_2_min_ago > -18.25 - r 4355 a"
                     action = "buy"
                     percentage = 80
-                    
                     
                     # 24 ago 2023 and deviation_ma100_laterale > 0.05 da 0.07 con 200>300
                     # 28 ago 2023 100>150
                     # 31 ott 2023 aggiunto and macd_differenza_2_min_ago > 0.25
+                    # 26 apr 2025 anticipata ndecchia
+
+
 
                 elif (  
                     ma100_last > ma150_last
@@ -13390,29 +13388,23 @@ class maddog:
                     # 11 gen 2023 5-28 a 0.10 da 0.11
                     # 11 gen 2023 3-10 a 0.04 da 0.05
                     # 11 gen 2024 aggiunta and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
+
+
+
+
                     
-                elif (
+                
+                elif (    
+                    ma3_last > ma18_last
+
+                    and ma39_last > ma100_last 
+                    and (ma100_last > ma450_last or deviation_ma100_sopra_ma300 > -0.05)
                     
-                    ma8_last > ma59_last
-                    and ma100_last > ma125_last
-                    and deviation_ma300_sopra_ma450 < 0.20
-                    and deviation_ma300_sopra_ma450 > -0.20
+                    and deviation_ma3_sopra_ma10 > 0.01
                     
-                    and ma59_last >= ma59_2_min_ago
-                    and deviation_ma100_sopra_ma300 < 0.20
-                    
-                    and deviation_buy2 > 0.01
-                    and deviation_ma5_sopra_ma28 > 0.10
-                    and deviation_ma3_sopra_ma10 > 0.04
-                    
-                    and deviation_ma7_sopra_ma40 > 0.04
-                    and deviation_buy_ma3_sopra_ma13 > 0.08
-                    
-                    and ma3_last > ma40_last
-                    and price >= price_2_min_ago
-                    and macd >= macd_2_min_ago
+                    and macd_differenza_2_min_ago > -18.50
                 ):
-                    buy = "BUY 2A ribasso o laterale  and ma69_last > ma200_last - r 4685 By1"
+                    buy = "BUY 2 con 100>450 and 39>100 - r 4685 BY 1"
                     action = "buy"
                     percentage = 80
 
@@ -13424,7 +13416,7 @@ class maddog:
                     # 18 nov 2022 5-28 0.11
                     # 11 gen 2023 5-28 a 0.10 da 0.11
                     # 11 gen 2023 3-10 a 0.04 da 0.05
-
+                    # 26 apr 2026 anticipato ndecchia
 
 
                 elif (    
@@ -23362,10 +23354,10 @@ class maddog:
 
                 
                 elif (    
-                    ma5_last > ma54_last
+                    ma3_last > ma18_last
 
                     and ma25_last < ma25_60_min_ago
-                    and deviation_ma5_sotto_ma300 > -0.40
+                    and deviation_ma5_sotto_ma300 > -0.50
                     
                     and ma100_last < ma100_120_min_ago
                     and ma200_last < ma200_120_min_ago
@@ -23376,9 +23368,9 @@ class maddog:
                     
                     and deviation_ma3_sopra_ma10 > 0.01
                     
-                    and macd_differenza_2_min_ago > -12.50
+                    and macd_differenza_2_min_ago > -18.50
                 ):
-                    buy = "BUY 3 29 ago 2022 > 120 min di ribasso AND 5>54 - r 6570 Ay"
+                    buy = "BUY 3 29 ago 2022 > 120 min di ribasso AND 3>18 - r 6570 Ay"
                     action = "buy"
                     percentage = 90
                     
@@ -23389,8 +23381,8 @@ class maddog:
                     # 14 set 2023 8-78 da 18-78
                     # 31 gen 2025 se and ma25_last < ma25_60_min_ago ok cosi'
                     # 15 apr 2025 anticipato ndecchiecella 
-
-
+                    # 26 apr 2025 3-18 da 5-54 perche' da questo buy un po' piu' basso e' dipeso il rialzo successivo
+                    # 26 apr 2026 questa ci deve stare si tratta di aggiungere un po' di distanza al ribasso
 
                     
                 # BUY 3 29 ago 2022 > 120 min di ribasso
@@ -36490,11 +36482,32 @@ class maddog:
                         
                         # MARADONA accompagna nelle prime fasi di crescita il titolo. poi interviene RONALDO se il rialzo comincia a farsi piu' consistente.
                         # 30 set 5-59 da 5-52 se 300 > 300 120 min ago
-                        
+
                         
                         
                     elif (
                         ma50_last > ma50_2_min_ago
+                        and ma39_last > ma100_last
+
+                        and ma100_last < ma150_last
+                        and ma300_last < ma300_120_min_ago
+                        
+                        and (ma5_prev > ma69_prev and ma5_last < ma69_last)
+                        and deviation_sell > 0.32 and deviation_sell < 0.52
+                        and ma2_last < ma2_2_min_ago
+                    ):    
+                        sell = "SELL 1 (50-90 min) con ma50> e incr 5-69 and dev_sell 0.31-0.52 and 39>100 - finta alla maradona - r 9495 a"
+                        action = "sell"
+                        
+                        # poi interviene RONALDO se il rialzo comincia a farsi piu' consistente.
+                        # 18 nov 2022 5-59 da 5-52
+                        # 26 apr 2025 se 39>100 vende con 5-69 da 5-59 stai tranquillo !
+                        
+
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and ma39_last < ma100_last
+
                         and ma100_last < ma150_last
                         and ma300_last < ma300_120_min_ago
                         
@@ -36502,12 +36515,12 @@ class maddog:
                         and deviation_sell > 0.32 and deviation_sell < 0.52
                         and ma2_last < ma2_2_min_ago
                     ):    
-                        sell = "SELL 1 (50-90 min) con ma50 > and incrocio 5-59 and dev_sell 0.31-0.52 la prima FINTA ALLA MARADONA - r 9493 B"
+                        sell = "SELL 1 (50-90 min) con ma50> e incr 5-59 and dev_sell 0.31-0.52 and 39<100 - finta alla maradona - r 9495 b"
                         action = "sell"
                         
-                        # MARADONA accompagna nelle prime fasi di crescita il titolo. poi interviene RONALDO se il rialzo comincia a farsi piu' consistente.
+                        # poi interviene RONALDO se il rialzo comincia a farsi piu' consistente.
                         # 18 nov 2022 5-59 da 5-52
-                        
+                        # 26 apr 2025 se 39<100 vende con 5-59 ok cosi' per adesso
                     
                     
                     
