@@ -3758,6 +3758,8 @@ class maddog:
                     and deviation_ma3_sotto_ma50 < -0.22
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
 
+                    and (deviation_ma5_sopra_o_sotto_ma100 < -0.50 or deviation_ma5_sopra_o_sotto_ma100 > -0.22)
+
                     and delta_450_300 > delta_450_300_60_min
 
                     and ma100_last < ma100_10_min_ago
@@ -3769,10 +3771,9 @@ class maddog:
                     and deviation_ma3_sopra_ma10 > 0.01
                     
                     and macd_differenza_2_min_ago > -18.50
-                    
-                    
+                   
                 ):
-                    buy = "BUY 1 NOTTE mentre la 300 si avvicina alla 300 e durante correzione improvvisa ! con ma300_last < 3 ore  - r 1200 b"
+                    buy = "BUY 1 NOTTE mentre la 300 si allontana dalla 450 e durante correzione improvvisa ! con ma300_last < 3 ore  - r 1200 B"
                     action = "buy"
                     percentage = 80
 
@@ -3780,8 +3781,10 @@ class maddog:
                     # 21 feb 2024 anticipato ndecchiecella
                     # 29 mar 2025 aggiunta questa nuova condizione
                     # 29 mar 2025 considera che anche se e' NOTTE ma100 comincia a perdere di meno.
-                    
-                    
+                    # 28 apr 2025 aggiunta and (deviation_ma5_sopra_o_sotto_ma100 < -0.50 or deviation_ma5_sopra_o_sotto_ma100 > -0.22)
+                    # 28 apr 2025 significa che se devi comprare 
+                    # 28 apr 2025 ma5 deve stare piu' giu' della 100 (vuole un osso) oppure ma5 deve stare vicina alla 100 (sta girando al rialzo)
+
 
                 elif (
                     ma3_last > ma20_last
