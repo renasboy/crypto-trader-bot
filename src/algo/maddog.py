@@ -31349,7 +31349,9 @@ class maddog:
 
                 elif (
                     ma3_last > ma8_last
+
                     and ma20_last < ma50_last
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.05
 
                     and deviation_ma39 < -0.10
                     and deviation_ma3_sotto_ma50 < -0.10
@@ -31364,14 +31366,14 @@ class maddog:
                     
                     and macd_differenza_2_min_ago > -18.50
                 ):   
-                    buy = "BUY 5 che NON SPEZZA LA CATENA - GIORNO MA 20<50 - r 7410 A2 X1 y"
+                    buy = "BUY 5 che NON SPEZZA LA CATENA - GIORNO MA 20<50 e con dev 5-100 < -0.05 - r 7410 A2 X1 y"
                     action = "buy"
                     percentage = 80
 
                     # 27 mar 2025 se GIORNO ok cosi'
                     #  7 apr 2025 aggiunta questa che mancava !
                     # 13 apr 2025 con and ma20_last < ma50_last 
-
+                    # 28 apr 2025 se 20<50 aggiungo dev 5-100 < -0.05
 
 
                 elif (
