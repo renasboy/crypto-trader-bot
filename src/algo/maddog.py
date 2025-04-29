@@ -5288,15 +5288,15 @@ class maddog:
 
                 elif (     
                     ma3_last > ma13_last
-                    and ma100_last > ma200_last
+                    and (ma100_last > ma200_last or ma100_last > ma450_last)
                     
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
                     and deviation_ma5_sopra_o_sotto_ma100 > -0.40
                     
                     and ma100_last < ma100_180_min_ago
                     
-                    and deviation_ma54_sopra_o_sotto_ma72 < 0.03
-                    and deviation_ma54_sopra_o_sotto_ma72 > -0.03
+                    and deviation_ma54_sopra_o_sotto_ma72 < 0.04
+                    and deviation_ma54_sopra_o_sotto_ma72 > -0.04
                     
                     and deviation_ma39_sotto_ma200 < 0.20
                     and deviation_ma300_sopra_ma450 > -0.45
@@ -5306,21 +5306,18 @@ class maddog:
                     and deviation_ma3_sopra_ma18 > -0.02
                     
                     and ma2_last >= ma20_last
-                    and ma50_differenza_ma59 > -10
+                    and ma50_differenza_ma59 > -15
 
-                    and ma2_last >= ma2_2_min_ago
-                    and macd >= macd_2_min_ago
-                    and macd > -40
-
-                    and macd_differenza_2_min_ago > 0.50
+                    and macd_differenza_2_min_ago > -18.50
                   
-                    
                 ):    
-                    buy = "BUY 1 compare forever - con 5-20 E CON 300 vicina alla 450 ( anche poco sotto! ) + MACD >  - r 1537 A2 Y1 NUOVA ERA A3 SOFT"
+                    buy = "BUY 1 CF - con 5-20 E CON 300 vicina alla 450 ( anche poco sotto! ) + diff MACD - r 1537 A2 Y1 NUOVA ERA A3 SOFT"
                     action = "buy"
                     percentage = 90
 
                     # 16 set 2024 modificata - anticipato buy
+                    # 29 apr 2025 perfezionata aggiungendo or ma100_last > ma450_last
+
 
 
                 elif (     
@@ -13403,7 +13400,6 @@ class maddog:
                 elif (    
                     ma3_last > ma18_last
 
-                    and ma39_last > ma100_last 
                     and (ma100_last > ma450_last or deviation_ma100_sopra_ma300 > -0.05)
                     
                     and deviation_ma3_sopra_ma10 > 0.01
@@ -13423,6 +13419,9 @@ class maddog:
                     # 11 gen 2023 5-28 a 0.10 da 0.11
                     # 11 gen 2023 3-10 a 0.04 da 0.05
                     # 26 apr 2026 anticipato ndecchia
+                    # 29 apr 2025 tolto 39>100
+
+
 
 
                 elif (    
