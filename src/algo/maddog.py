@@ -15169,7 +15169,35 @@ class maddog:
                 
 
                 
-                
+                elif (
+                    ma50_last < ma50_2_min_ago
+                    and ma3_last > ma20_last
+
+                    and (deviation_ma5_sopra_o_sotto_ma100 < -0.50 or deviation_ma5_sopra_o_sotto_ma100 > -0.20)
+                    and deviation_ma200_sotto_ma300 < -0.03
+                    
+                    and ma2_last > ma2_2_min_ago
+                        
+                    and delta_1 > delta_2
+                    and ma100_last < ma100_60_min_ago
+                        
+                    and ma100_last < ma100_120_min_ago
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_120_min_ago
+                        
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    and macd_differenza_2_min_ago > -12.50
+                ):
+                    buy = "BUY 2 - NOTTE - IMPORTATO DA SELL 2 RCCR - modificato - osso or avvicinamento - r 4887 a"
+                    action = "buy"
+                    percentage = 80
+
+                    # 29 apr 2025 aggiunta osso or avvicinamento 
+                    # 29 apr 2025 aggiunta and deviation_ma200_sotto_ma300 < -0.03
+
+
+
                 elif (
                     ma50_last < ma50_2_min_ago
 
@@ -15196,7 +15224,7 @@ class maddog:
                     
                     and macd_differenza_2_min_ago > -2.50
                 ):
-                    buy = "BUY 2 ORIGINALE CHE CI RIPROVA IMPORTATO DA SELL 1 ! - NOTTE - prende il coltello con il piede + OSSO - r 4887"
+                    buy = "BUY 2 ORIGINALE CHE CI RIPROVA IMPORTATO DA SELL 1 ! - NOTTE - prende il coltello con il piede + OSSO - r 4887b"
                     action = "buy"
                     percentage = 80
 
