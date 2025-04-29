@@ -12260,6 +12260,9 @@ class maddog:
                     ma3_last > ma11_last
                     and ma450_last > ma450_720_min_ago
 
+                    and ma20_last < ma50_last
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.10
+
                     and ma28_last < ma28_10_min_ago
                     and deviation_ma50_sopra_o_sotto_ma50_90_min_ago > -0.025
 
@@ -12269,8 +12272,7 @@ class maddog:
                     
                     and deviation_ma3_sopra_ma10 > 0.01
                     
-                    and macd >= -60
-                    and macd_differenza_2_min_ago > -1.50
+                    and macd_differenza_2_min_ago > -18.50
                 ):
 
                     buy = "BUY 1 con ma450_last > ma450_720_min_ago e 28< con aggiunta di prendi il coltello e ma100 > ma150 - r 4355 B2 X1"
@@ -12285,7 +12287,8 @@ class maddog:
                     #  8 ott 2024 cioe' crescono i minimi !!!
 
                     # 29 gen 2025 sto cercando di risolvere il problema del trend laterale dopo un grande RIALZO
-                    
+                    # 29 apr 2025 se 20<50 aggiungo deviation_ma5_sopra_o_sotto_ma100 < -0.10
+
 
 
                 elif (
@@ -17327,10 +17330,11 @@ class maddog:
                 elif (
                     ma3_last > ma18_last
                     and ma450_last > ma450_360_min_ago
-                    and (ma20_last < ma50_last or delta_DNA_1 > delta_DNA_2)
+                    and (ma20_last < ma50_last or delta_DNA_1 > delta_DNA_2 or ma50_last < ma100_last)
 
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.10
                     and deviation_ma3_sotto_ma50 < -0.03
+                    and deviation_ma39 < -0.05
 
                     and ma300_last > ma450_last
                     and ma100_last > ma100_120_min_ago
@@ -17351,7 +17355,7 @@ class maddog:
                     # 28 feb 2025 DOPO UN LUNGO RIALZO se comincia a curvare verso il basso ALLORA deviation_ma3_sotto_ma50 < -0.03
                     # 19 apr 2025 se 20<50 ritracciamento
                     # 19 apr 2025 se ritracciamento aggiunto and deviation_ma5_sopra_o_sotto_ma100 < -0.10
-
+                    # 28 apr 2025 se anche 50<100 dev 39 < -0.05
 
 
                     
@@ -27396,6 +27400,40 @@ class maddog:
                     # 15 apr 2025 aggiunta questa nuova condizione ! BTC si e' impennato e non e' partita neanche una condizione !
                     # 15 apr 2025 and deviation_ma200_sotto_ma300 > -0.05 per non farla comprare quando comincia il ribasso
                     # 15 apr 2025 and ma39_last > ma50_last per non farla comprare quando comincia il ribasso.
+
+
+
+
+
+
+
+
+                elif (    
+                    ma3_last > ma30_last
+                    
+                    and ma100_last > ma100_5_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
+                    
+                    and ma450_last > ma450_480_min_ago
+                    
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_120_min_ago
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    
+                    and macd_differenza_2_min_ago > -18.50
+                    
+                ):
+                    buy = "BUY 5 >120 min di ribasso  ma la situazione sta migliorando - r 7041"
+                    action = "buy"
+                    percentage = 90
+                    
+                    #  9 feb 2024 IMPORTANTE ! solo BUY 5 NUOVA ERA A3 SOFT con ma100 > ma100 5 min ago !!!
+                    # 26 feb 2024 piccola modifica per anticipare ndecchiecella
+                    # 29 apr 2025 aggiunta questa che mancava dopo 50000 righe
+
+
 
 
 
