@@ -25079,23 +25079,22 @@ class maddog:
                 # BUY 3 PAZZA piccola CORREZIONE FIAT
                 
                 elif (
-                    ma2_last > ma2_2_min_ago
+                    ma5_last > ma20_last
 
                     and deviation_ma5_sotto_ma300 < -0.40
                     and deviation_ma10_sopra_ma200 < -0.30
 
-                    and deviation > -0.30
+                    and deviation > -0.70
                     
                     and deviation_buy_crollo_1 < -0.29
-                    and deviation_buy_crollo_1 > -0.59
+                    and deviation_ma39 < -0.05
                     
-                    and deviation_correzione > -0.02
                     and deviation_buy_ma5_sopra_ma20 > -0.10
                     and deviation_ma5_sotto_ma200 > -1.00
                     
                 ):
 
-                    buy = "BUY 3 CORREZIONE FIAT che non e' un forte ribasso e non e' un crollo ! con deviation_correzione > -0.02 - r 6623"
+                    buy = "BUY 3 CORREZIONE FIAT che non e' un forte ribasso e non e' un crollo and deviation_ma39 < -0.05 - r 6623"
                     action = "buy"
                     percentage = 80
 
@@ -25109,7 +25108,7 @@ class maddog:
                     # 19 gen 2025 deviation_buy_ma5_sopra_ma20 > -0.10 da 0.15 ( ho anticipato il buy)
                     #  3 feb 2025 aggiunta and deviation_ma5_sotto_ma300 < -0.40
                     #  3 feb 2025 aggiunta and deviation_ma10_sopra_ma200 < -0.30
-
+                    # 29 apr 2029 aggiunta and deviation_ma39 < -0.05
 
 
 
