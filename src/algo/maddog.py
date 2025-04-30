@@ -1106,7 +1106,17 @@ class maddog:
         
         delta_300_100 = (ma300_last / ma100_last - 1) * 100 if ma100_last else 0
         self.algo_helper.info("delta_300_100: {}".format(delta_300_100))
+
+
+        # formula delta_300_100_30_min
         
+        delta_300_100_30_min = (ma300_30_min_ago / ma100_30_min_ago - 1) * 100 if ma100_30_min_ago else 0
+        self.algo_helper.info("delta_300_100_30_min: {}".format(delta_300_100_30_min))
+
+
+
+
+
         # formula delta_300_100_60_min
         
         delta_300_100_60_min = (ma300_60_min_ago / ma100_60_min_ago - 1) * 100 if ma100_60_min_ago else 0
@@ -11476,37 +11486,35 @@ class maddog:
                     
                 # BUY 1 che ci riprova quando se ne va lateralmente dopo il crollo
                 
-                elif (
-                    
+                
+                elif (    
                     ma5_last > ma200_last
-                    and ma450_last > ma450_180_min_ago
+                    and ma450_last > ma450_300_min_ago
                     
-                    and deviation_ma300_sopra_ma450 < 0.25
-                    and deviation_ma300_sopra_ma450 > -0.05
+                    and deviation_ma300_sopra_ma450 > -0.10
                     
                     and deviation_ma3_sopra_ma10 > 0.01
-                    and deviation_ma3_sopra_ma16 > 0.057
-                    and deviation_ma5_sopra_ma28 > -0.01
                     
                     and ma200_last < ma200_120_min_ago
                     and ma300_last < ma300_120_min_ago
                     
-                    and delta_300_100 < delta_300_100_60_min
+                    and (delta_300_100 < delta_300_100_30_min or delta_300_100 < delta_300_100_60_min)
                     
                     and deviation_ma100_sopra_ma300 > -0.40
                     and deviation_ma200_sopra_ma300 > -0.40
                     
-                    and ma2_last >= ma2_2_min_ago
-                    and macd >= macd_2_min_ago
+                    and macd_differenza_2_min_ago > -5.00
                 ):
                
-                    buy = "BUY 1 che ci riprova con 13-300 quando se ne va lateralmente AND MACD > MACD 2 min ago ! - r 4138 B1"
+                    buy = "BUY 1 che ci riprova con ma200_last < ma200_120_min_ago MA delta_300_100 < delta_300_100_30_min - r 4138 B1"
                     action = "buy"
                     percentage = 80
                     
                     # provo delta 39-69
                     #  1 ago 2023 ma13_last > ma200_last invece di 28-300
                     # 11 ago 2023 ma5_last > ma200_last invece di 13-200
+                    # 30 apr 2025 anticipata ndecchiecella aggiungendo delta_300_100 < delta_300_100_30_min
+
 
 
                 # BUY 1 che ci riprova quando se ne va lateralmente dopo il crollo
