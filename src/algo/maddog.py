@@ -18,7 +18,7 @@
 
                     and ma50_last < ma100_last
                     and deviation_ma3_sotto_ma50 < -0.30
-
+                    and macd_differenza_2_min_ago > -5.00
 
 and deviation_ma39 < -0.05
 and deviation_ma3_sotto_ma50 < -0.06
@@ -100,7 +100,7 @@ and deviation_ma3_sotto_ma50 < -0.28
 and deviation_ma200_sotto_ma300 < -0.32
 
 
-and macd_differenza_2_min_ago > -2.50
+
 
 
 
@@ -23786,15 +23786,12 @@ class maddog:
 
               
                 elif (
-                    deviation_ma78_sopra_o_sotto_ma78_30_min_ago < -0.03
-                    and deviation_ma78_sopra_o_sotto_ma78_30_min_ago > -0.11
-                    and ma10_last > ma78_last
-                    and ma2_differenza_2_min_ago > 5
+                    ma3_last > ma18_last
+                    and deviation_ma78_sopra_o_sotto_ma78_30_min_ago > -0.15
                     
-                    and ma50_differenza_ma59 < -5
-                    and macd > macd_2_min_ago
                     and deviation_ma5_sotto_ma300 < -0.42
-                    
+                    and deviation_ma39 < -0.01
+
                     and ma100_last < ma100_180_min_ago
                     and ma200_last < ma200_180_min_ago
                     and ma300_last < ma300_180_min_ago
@@ -23802,18 +23799,19 @@ class maddog:
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
                     
-                    and deviation_ma3_sopra_ma10 > 0.02
-                    and deviation_ma5_sopra_ma28 > 0.02
+                    and deviation_ma3_sopra_ma10 > 0.01
                     
-                    and ma2_last >= ma2_2_min_ago
-                    and macd > macd_2_min_ago
-                    and macd > 5
+                    and ma50_differenza_ma59 < -5
+
+                    and macd_differenza_2_min_ago > -5.00
                 ):
-                    buy = "BUY 3 29 ago 2022 > 180 min di ribasso con 3-39 E ma2_differenza_2_min_ago > 5 - r 6572 A2Y2"
+                    buy = "BUY 3 29 ago 2022 > 180 min di ribasso - r 6572 A2Y2"
                     action = "buy"
                     percentage = 80
                     
-                    # 30 nov 2023 ma 78 leggermente ribassista TREND PERICOLOSISSIMO compra tardi ! 
+                    # 30 apr 2025 anticipato ndecchiecella
+                    # 30 apr 2025 aggiunto finalmente and deviation_ma39 < -0.01
+                    # 30 apr 2025 tolto and ma10_last > ma78_last
               
               
                 elif (
@@ -27101,35 +27099,32 @@ class maddog:
                     #  6 set 2023 and deviation_bellissima > 0.10 da 0.12
                     #  6 set 2023 and deviation_ma7_sopra_ma40 > 0.10 da 0.12
 
+
               
                 elif (
-                    ma69_last >= ma69_2_min_ago
+                    ma3_last > ma13_last
+
+                    and ma50_last > ma100_last
                     and ma11_last > ma200_last
+
                     and ma300_last < ma300_180_min_ago
                     
-                    and deviation_buy3 > 0.12
-                    and deviation_bellissima > 0.14
-                    and deviation_ma7_sopra_ma40 > 0.12
+                    and ma3_last > ma10_last
                     
-                    and ma3_last > ma13_last
-                    and ma4_last > ma9_last
-                    and ma4_last > ma50_last
-                    and ma6_last > ma15_last
-                    and ma7_last > ma25_last
-                    
-                    and ma2_last > ma2_2_min_ago
-                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
-                    and macd_differenza_2_min_ago > 0.50
+                    and macd_differenza_2_min_ago > -5.00
              
                 ):
-                    buy = "BUY 4 se 11>200 e con ma69> and dev_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali) - r 7008 B"
+                    buy = "BUY 4 se 11>200 - r 7008 B"
                     action = "buy"
-                    percentage = 70
+                    percentage = 80
                     
                     # > estate 7-40 0.12 da 0.09 and dev bellissima 0.14 da 0.12
                     # 11 ago 2023 aggiunta se 300 scende da 3 ore
                     # 26 dic 2023 aggiunta and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
                     # 26 dic 2023 aggiunta and macd_differenza_2_min_ago > 0.50
+                    # 30 apr 2025 se al BUY 4 ma50 sta sopra ma100 che cazzo mi spezzi la catena ! devi anticipare, invece !
+
+
                     
                     
                 # BUY 4 NUOVA (trend laterale) con ma8_last > ma100_last AND and ma300_last > ma300_120_min_ago
