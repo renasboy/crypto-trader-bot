@@ -5607,7 +5607,7 @@ class maddog:
                     #  5 mar 2024 se ma39 < ma39 15 min ago pugno fantasma di mohammad ali'
                     # 14 apr 2025 anticipata ndecchiecella togliendo sovrastrutture
                     # 15 apr 2025 anticipata ndecchiecella
-                    # 30 apr 2025 aggiunta and deviation_ma39 < -0.25
+                    # 30 apr 2025 aggiunta and deviation_ma39 < -0.22
 
                 elif (    
                     ma3_last > ma50_last
@@ -15290,31 +15290,34 @@ class maddog:
                     and macd >= macd_2_min_ago
                 ):
                
-                    buy = "BUY 2C con INCROCIO 8-50 con 100< and 200< MA 300 > 300 301 min ago - r 4906 A"
+                    buy = "BUY 2 con INCROCIO 8-50 con 100< and 200< MA 300 > 300 301 min ago - r 4906 A"
                     action = "buy"
                     percentage = 70
                     
                     # deviation_buy2 = ma8_last / ma50
                     # incrocio va bene nel trend laterale NON TOCCARLO ! ho messo incrocio per evitare punti sopvrapposti
                     # 1 feb 2023 aggiunto 5-28 > 0.12
+
+
                     
                     
-                # IL BUY 2 CI RIPROVA CON INCROCIO 8-50
+                # BUY 2 CHE CI RIPROVA
                 
                 elif (
-                    deviation_buy2 > 0.01
+                    ma3_last > ma20_last
+                    and (ma3_prev < ma18_prev and ma3_last > ma18_last)
+
                     and ma100_last < ma100_50_min_ago
                     and ma200_last < ma200_120_min_ago
                     and ma300_last > ma300_301_min_ago
-                    
-                    and deviation_ma5_sopra_ma28 > 0.12
-                    
-                    and (ma8_prev < ma50_prev and ma8_last > ma50_last)
-                    and ma2_last > ma2_2_min_ago
-                    and macd >= macd_2_min_ago
+
+                    and deviation_ma39 < -0.05
+                    and deviation_ma3_sopra_ma10 > 0.01
+                   
+                    and macd_differenza_2_min_ago > -18.50
                 ):
                
-                    buy = "BUY 2C con INCROCIO 8-50 con 100< and 200< MA 300 > 300 301 min ago - r 4906 B"
+                    buy = "BUY 2 con INCROCIO 3-20 con 100< and 200< MA 300 > 300 301 min ago - r 4906 B"
                     action = "buy"
                     percentage = 70
                     
@@ -15342,7 +15345,7 @@ class maddog:
                     and macd >= macd_2_min_ago
                 ):
                
-                    buy = "BUY 2C con 100< and 200< con INCROCIO 7-50 100 NON DISTANTE DA 300 - r 4934 A"
+                    buy = "BUY 2 con 100< and 200< con INCROCIO 7-50 100 NON DISTANTE DA 300 - r 4934 A"
                     action = "buy"
                     percentage = 80
                     
@@ -15373,7 +15376,7 @@ class maddog:
                   
             
             
-                # BUY 2C con 100< and 200< con INCROCIO 7-50 PIU' FORTE (SOPRA -CRESCE-DIMINUISCE) aurora
+                # BUY 2 con 100< and 200< con INCROCIO 7-50 PIU' FORTE (SOPRA -CRESCE-DIMINUISCE) aurora
                 
                 elif (
                     deviation_buy2 > 0.01
@@ -15395,7 +15398,7 @@ class maddog:
                     and macd >= macd_2_min_ago
                 ):
                
-                    buy = "BUY 2C con 100< and 200< con INCROCIO 7-50 and 5-28 > 0.10 (SOPRA - aurora - r 4989"
+                    buy = "BUY 2 con 100< and 200< con INCROCIO 7-50 and 5-28 > 0.10 (SOPRA - aurora - r 4989"
                     action = "buy"
                     percentage = 80
                     
@@ -15404,7 +15407,7 @@ class maddog:
                     
                     
                     
-                # BUY 2C con 100< and 200< con INCROCIO 7-50 PIU' FRAGILE (SOPRA DIMINUISCE DIMINUISCE) notte
+                # BUY 2 con 100< and 200< con INCROCIO 7-50 PIU' FRAGILE (SOPRA DIMINUISCE DIMINUISCE) notte
                 
                 elif (
                     deviation_buy2 > 0.01
@@ -15425,7 +15428,7 @@ class maddog:
                     and macd >= macd_2_min_ago
                 ):
                
-                    buy = "BUY 2C con 100< and 200< con INCROCIO 7-50 and 5-28 > 0.29 - NOTTE! - r 5018"
+                    buy = "BUY 2 con 100< and 200< con INCROCIO 7-50 and 5-28 > 0.29 - NOTTE! - r 5018"
                     action = "buy"
                     percentage = 80
                     
