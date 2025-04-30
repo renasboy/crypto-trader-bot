@@ -51950,9 +51950,11 @@ class maddog:
 
 
             elif (
-                ma78_last > ma78_120_min_ago
-                and delta_150_100 <= delta_150_100_60_min
+                ma5_last < ma100_last
                 and ma300_last > ma450_last
+                
+                and delta_150_100 <= delta_150_100_60_min
+                and ma78_last > ma78_120_min_ago
 
                 and ma3_last < ma20_last
                 and ma50_last <= ma50_2_min_ago
@@ -51969,7 +51971,7 @@ class maddog:
                 and deviation_ma5_sotto_ma200 > -0.50
                 
             ):
-                sell = "SELL CS GIORNO E CON 300>450 e 10<20 e dev 3-39 < 0.10 e dev_sell > 0.25 e ma50 < MA ma78 > - r 16045 AYx"
+                sell = "SELL CS GIORNO con 5-100 e 300>450 e 10<20 e dev 3-39 < 0.10 e dev_sell > 0.25 e ma50 < MA ma78 > - r 16045 AYx"
                 action = "sell"
                 
                 # 20 nov 2023 aggiunta and diff ma2 < -5 
@@ -51979,7 +51981,7 @@ class maddog:
                 #  9 gen 2024 3<20 sostituisce 10<20 ! (CHE E' ARRIVATO TARDI)
                 # 20 set 2024 dev_sell < 0.03 da < -0.03
                 # 13 apr 2025 se ma300_last > ma450_last and deviation_sell > 0.25 da < -0.03 LASCIALO STARE ! LASCIALO CORRERE !
-
+                # 30 apr 2025 aggiunta 5-100 perche' vendeva male mentre saliva. lascialo stare !
                 
 
             elif (
@@ -56709,7 +56711,7 @@ class maddog:
                 and deviation_ma25_sotto_ma200 > -2.00
 
                 and delta_1_69_39 < delta_2_69_39
-                and deviation_sell < -0.055
+                and deviation_sell < -0.06
                 and ma3_last < ma10_last
 
                 and ma450_last < ma450_10_min_ago
@@ -56728,11 +56730,11 @@ class maddog:
                 and ma2_last <= ma2_2_min_ago
             ):
 
-                sell = "SELL CS - DOLCE ATTESA 270 sec E dev sell < -0.055 and ma13 < and con 450 < MA GIORNO ! - r 16694 B2 Y2 Ax1"
+                sell = "SELL CS - DOLCE ATTESA 270 sec E dev sell < -0.06 and ma13 < and con 450 < MA GIORNO ! - r 16694 B2 Y2 Ax1"
                 action = "sell"
 
-                ## 20 mar 2025 deviation_sell a -0.055 da -0.05
-
+                # 20 mar 2025 deviation_sell a -0.055 da -0.05
+                # 29 apr 2025 deviation_sell a -0.06 da -0.055
 
 
             elif (
