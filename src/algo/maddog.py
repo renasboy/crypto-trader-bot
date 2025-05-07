@@ -3734,6 +3734,8 @@ class maddog:
                 elif (    
                     ma3_last > ma11_last
 
+                    and delta_450_300 < delta_450_300_60_min
+
                     and ma300_last < ma300_180_min_ago
                     and ma150_last < ma250_last
                     and deviation_ma39 < -0.17
@@ -3744,17 +3746,15 @@ class maddog:
                     and deviation_ma5_sotto_ma200 < -0.10
                     and deviation_ma25_sotto_ma300 < -0.11
 
-                    and delta_450_300 < delta_450_300_60_min
-                    
-                    and deviation_ma300_sopra_ma450 < 0.25
-                    and deviation_ma300_sopra_ma450 > -0.25
+                    and deviation_ma300_sopra_ma450 < 0.45
+                    and deviation_ma300_sopra_ma450 > -0.45
                     
                     and deviation_ma3_sopra_ma10 > 0.01
                     
                     and macd_differenza_2_min_ago > -18.50
                     
                 ):
-                    buy = "BUY 1 GIORNO mentre la 300 si avvicina alla 300 e durante correzione improvvisa ! con ma300_last < 3 ore  - r 1200 a"
+                    buy = "BUY 1 GIORNO mentre la 300 si avvicina alla 450 MA con ma300_last < 3 ore  - r 1200 a"
                     action = "buy"
                     percentage = 80
 
@@ -3765,29 +3765,61 @@ class maddog:
                     # 14 apr 2025 aggiunta and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.13
 
 
+
+
                 elif (    
                     ma3_last > ma11_last
 
-                    and deviation_ma39 < -0.14
-                    and deviation_ma3_sotto_ma50 < -0.22
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
+                    and ma300_last < ma300_180_min_ago
+                    and (deviation_ma50_sotto_ma100 < -0.45 and deviation_ma3_sotto_ma50 < -0.30)
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.50
 
-                    and (deviation_ma5_sopra_o_sotto_ma100 < -0.50 or deviation_ma5_sopra_o_sotto_ma100 > -0.22)
+                    and deviation_ma39 < -0.14
+                    
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
 
                     and delta_450_300 > delta_450_300_60_min
 
                     and ma100_last < ma100_10_min_ago
-                    and ma300_last < ma300_180_min_ago
-
-                    and deviation_ma300_sopra_ma450 < 0.25
-                    and deviation_ma300_sopra_ma450 > -0.25
+                    
+                    and deviation_ma300_sopra_ma450 < 0.45
+                    and deviation_ma300_sopra_ma450 > -0.45
                     
                     and deviation_ma3_sopra_ma10 > 0.01
                     
                     and macd_differenza_2_min_ago > -18.50
                    
                 ):
-                    buy = "BUY 1 NOTTE mentre la 300 si allontana dalla 450 e durante correzione improvvisa ! con ma300_last < 3 ore  - r 1200 B"
+                    buy = "BUY 1 NOTTE mentre la 300 si allontana dalla 450 e con ma300_last < 3 ore  - r 1200 Bx"
+                    action = "buy"
+                    percentage = 80
+
+                    #  7 mag 2025 COMPRA SE 50<100 DI MOLTO e ANCHE 3<50 DI MOLTO (e va bene cosi')
+
+
+
+                elif (    
+                    ma3_last > ma11_last
+
+                    and ma300_last < ma300_180_min_ago
+                    and (deviation_ma50_sotto_ma100 > -0.15 and deviation_ma3_sotto_ma50 < -0.50)
+                    and deviation_ma39 < -0.14
+                    
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
+
+                    and delta_450_300 > delta_450_300_60_min
+
+                    and ma100_last < ma100_10_min_ago
+                    
+                    and deviation_ma300_sopra_ma450 < 0.45
+                    and deviation_ma300_sopra_ma450 > -0.45
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    
+                    and macd_differenza_2_min_ago > -18.50
+                   
+                ):
+                    buy = "BUY 1 NOTTE mentre la 300 si allontana dalla 450 e con ma300_last < 3 ore  - r 1200 BY"
                     action = "buy"
                     percentage = 80
 
@@ -3798,6 +3830,8 @@ class maddog:
                     # 28 apr 2025 aggiunta and (deviation_ma5_sopra_o_sotto_ma100 < -0.50 or deviation_ma5_sopra_o_sotto_ma100 > -0.22)
                     # 28 apr 2025 significa che se devi comprare 
                     # 28 apr 2025 ma5 deve stare piu' giu' della 100 (vuole un osso) oppure ma5 deve stare vicina alla 100 (sta girando al rialzo)
+                    #  7 mag 2025 COMPRA ANCHE SE 50<100 NON DI MOLTO MA 3<50 (deve essere) DI MOLTO ! (ro cano vuole l' osso !)
+
 
 
                 elif (
