@@ -13405,17 +13405,67 @@ class maddog:
 
 
                     
-                
                 elif (    
                     ma3_last > ma18_last
-
+                    and ma450_last > ma450_300_min_ago
                     and (ma100_last > ma450_last or deviation_ma100_sopra_ma300 > -0.05)
                     
                     and deviation_ma3_sopra_ma10 > 0.01
                     
                     and macd_differenza_2_min_ago > -18.50
                 ):
-                    buy = "BUY 2 con 100>450 and 39>100 - r 4685 BY 1"
+                    buy = "BUY 2 con 100>450 - r 4685 BY 1x"
+                    action = "buy"
+                    percentage = 80
+
+
+                
+                elif (    
+                    ma3_last > ma18_last
+                    and ma450_last < ma450_300_min_ago
+                    and (ma100_last > ma450_last or deviation_ma100_sopra_ma300 > -0.05)
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    
+                    and macd_differenza_2_min_ago > -18.50
+                ):
+                    buy = "BUY 2 con 100>450 - r 4685 BY 1yx"
+                    action = "buy"
+                    percentage = 80
+
+
+
+                elif (    
+                    ma3_last > ma18_last
+                    and (ma450_last < ma450_300_min_ago or ma100_last < ma450_last)
+
+                    and (deviation_ma50_sotto_ma100 < -0.45 and deviation_ma3_sotto_ma50 < -0.30)
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    
+                    and macd_differenza_2_min_ago > -18.50
+                ):
+                    buy = "BUY 2 con 450 < or 100<450 - r 4685 BY 1y Y1"
+                    action = "buy"
+                    percentage = 80
+
+                    #  7 mag 2025 aggiunta questa
+                    #  7 mag 2025 COMPRA SE 50<100 DI MOLTO e 3-50 ANCHE DI MOLTO (e va bene cosi')
+
+
+
+
+                elif (    
+                    ma3_last > ma18_last
+                    and (ma450_last < ma450_300_min_ago or ma100_last < ma450_last)
+
+                    and (deviation_ma50_sotto_ma100 > -0.15 and deviation_ma3_sotto_ma50 < -0.50)
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    
+                    and macd_differenza_2_min_ago > -18.50
+                ):
+                    buy = "BUY 2 con 450 < or 100<450 - r 4685 BY 1y Y2"
                     action = "buy"
                     percentage = 80
 
@@ -13429,6 +13479,11 @@ class maddog:
                     # 11 gen 2023 3-10 a 0.04 da 0.05
                     # 26 apr 2026 anticipato ndecchia
                     # 29 apr 2025 tolto 39>100
+
+                    #  7 mag 2025 aggiunta questa
+                    #  7 mag 2025 COMPRA SE 50<100 ANCHE SE NON di molto MA 3-50 di molto - IL CANE VUOLE L' OSSO !
+                    #  7 mag 2025 questo e' un modo per evitare BUY non appena comincia a scendere ! cazzo ! 
+
 
 
 
