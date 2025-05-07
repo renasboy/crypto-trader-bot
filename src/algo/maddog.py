@@ -42743,7 +42743,7 @@ class maddog:
                         
                     elif (
                         ma50_last < ma50_2_min_ago
-                        and deviation_ma39 < -0.22
+                        and (deviation_ma39 < -0.22 or ma5_last < ma450_last)
                         
                         and deviation_trend_ma200 > -0.12
                         and ma200_last > ma300_last
@@ -42760,6 +42760,8 @@ class maddog:
                         
                         # > vacanza -0.29 da -0.19
                         # 13 set 2023 dev 39 -0.22 da -0.29
+                        #  7 mag 2025 aggiunta or ma5_last < ma450_last
+
                         
                     
                     elif (
