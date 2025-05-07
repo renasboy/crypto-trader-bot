@@ -28453,7 +28453,7 @@ class maddog:
                     and ma450_last >= ma450_120_min_ago
 
                     and deviation_ma39 < -0.13
-                    and deviation_ma3_sotto_ma50 < -0.13
+                    and deviation_ma3_sotto_ma50 < -0.40
                     
                     and ma50_last > ma450_last
                     
@@ -28464,7 +28464,7 @@ class maddog:
                     
                     and macd_differenza_2_min_ago > -18.00
                 ):
-                    buy = f"BUY 5 {ma450_last} {ma450_120_min_ago} con 3-13 E 450_last > 450 2 ore MA RITRACCIA - r 7144 A1 X NUOVA ERA A3 SOFT y"
+                    buy = f"BUY 5 {ma450_last} {ma450_120_min_ago} con 3-13 E 450_last > 450 2 ore MA RITRACCIA e con 3-50 < -0.40 - r 7144 A1 X NUOVA ERA A3 SOFT y"
                     action = "buy"
                     percentage = 70
                     
@@ -28473,7 +28473,7 @@ class maddog:
                     # 14 apr 2025 RITRACCIAMENTO
                     # 14 apr 2025 aumentata 3-50 e 3-39
                     # 14 apr 2025 correzione or e aggiunta f
-
+                    #  7 mag 2025 dev 3-50 a -0.40 da -0.13
 
 
                 # 24 nov 2024 cancellata r 7144 A1 X NUOVA ERA A3 SOFT z1
