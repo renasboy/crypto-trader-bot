@@ -12529,10 +12529,11 @@ class maddog:
                 ################################################################################################
                 
                 
-                # BUY 1 FOREVER YOUNG 
-                
+                # BUY 1 FOREVER YOUNG
+
                 elif (  
                     ma3_last > ma18_last
+                    and ma39_last > ma100_last
 
                     and ma450_last > ma450_240_min_ago
                     and ma300_last > ma300_301_min_ago
@@ -12543,7 +12544,7 @@ class maddog:
                     and macd_differenza_2_min_ago > -15.25
                 ):
                     
-                    buy = "BUY 1 FOREVER YOUNG - GIORNO - con ma450_last > ma450_240_min_ago - r 4410 A"
+                    buy = "BUY 1 FOREVER YOUNG - GIORNO - con ma450_last > ma450_240_min_ago e con 39>100 - r 4410 A1"
                     action = "buy"
                     percentage = 80
                     
@@ -12552,7 +12553,37 @@ class maddog:
                     # 24 ago 2023 macd> 3
                     # 17 apr 2025 and macd_differenza_2_min_ago > -15.25
                     # 17 apr 2025 con ma450_last > ma450_240_min_ago anticipata ndecchiecella 
-                    # 30 apr 2025 piccolissima modifica. niene di importante.
+                    # 30 apr 2025 piccolissima modifica. niente di importante.
+                    #  7 mag 2025 aggiunto ma39_last > ma100_last
+
+
+
+                elif (  
+                    ma3_last > ma18_last
+                    and ma39_last < ma100_last
+                    and deviation_ma3_sotto_ma50 < -0.40
+
+                    and ma450_last > ma450_240_min_ago
+                    and ma300_last > ma300_301_min_ago
+                    and (ma100_last > ma450_last or ma200_last > ma450_last)
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    
+                    and macd_differenza_2_min_ago > -15.25
+                ):
+                    
+                    buy = "BUY 1 FY - GIORNO - con ma450_last > ma450_240_min_ago MA SE ma39_last < ma100_last and dev 3-50 < -0.30 - r 4410 A2"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # 12 giu 2023 aggiunta 3-18 > 0.055
+                    # 11 ago 2023 tolta ma5 > ma5 2 min ago
+                    # 24 ago 2023 macd> 3
+                    # 17 apr 2025 and macd_differenza_2_min_ago > -15.25
+                    # 17 apr 2025 con ma450_last > ma450_240_min_ago anticipata ndecchiecella 
+                    # 30 apr 2025 piccolissima modifica. niente di importante.
+                    #  7 mag 2025 SE ma39_last < ma100_last AGGIUNGO and deviation_ma3_sotto_ma50 < -0.40
+
 
 
                 # BUY 1 FOREVER YOUNG AGGRESSIVO 
@@ -25509,7 +25540,7 @@ class maddog:
                     and ma3_last > ma9_last
                     
                 ):
-                    buy = "BUY 4 GIORNO con 300> E ma100>ma450 durante un ritracciamento - r 6668 A1 Y2y"
+                    buy = f"BUY 4 {deviation_ma39} {deviation_ma3_sotto_ma50} {deviation_ma5_sopra_o_sotto_ma100} {deviation_ma25_sotto_ma300} {deviation_ma100_sopra_o_sotto_ma100_10_min_ago} GIORNO con 300> E ma100>ma450 durante un ritracciamento - r 6668 A1 Y2y"
                     action = "buy"
                     percentage = 70
                     
@@ -25517,7 +25548,7 @@ class maddog:
                     # 15 nov 2022 aggiunta and ma2_differenza_2_min_ago > 5 ( ma2 > ma2 min non l' ha letta !) ( allora metto un rafforzativo )
                     # 23 mar 2025 aggiunta and deviation_ma3_sotto_ma50 < -0.04
                     # 30 mar 2025 durante il ritracciamento
-
+                    #  7 mag 2025 e' andata benissimo vediamo i valori !
                 
 
 
@@ -26821,13 +26852,13 @@ class maddog:
                     and ma100_last < ma200_last
 
                     and deviation_ma39 < -0.04
-                    and deviation_ma3_sotto_ma50 < -0.04
+                    and deviation_ma3_sotto_ma50 < -0.25
                     
                     and delta_DNA_1 < delta_DNA_2
                     and ma100_last < ma100_10_min_ago
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.13
                     
-                    and macd_differenza_2_min_ago > -5.00
+                    and macd_differenza_2_min_ago > -15.00
                 ):
                     buy = "BUY 4 con 300< e 100<200 MA GIORNO E ma100 comincia a perdere di meno ma sembra un RITRACCIAMENTO - r 6836"
                     action = "buy"
@@ -26836,7 +26867,7 @@ class maddog:
                     #  6 apr 205 tolte sovrastrutture 
                     # 14 apr 2025 aggiunta 3-39 < -0.04
                     # 14 apr 2025 aggiunta 3-50 < -0.04
-
+                    #  6 mag 2025 deviation_ma3_sotto_ma50 a -0.25 da -0.04
 
                     
                     #####################################################################
