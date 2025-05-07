@@ -8136,15 +8136,15 @@ class maddog:
                     and macd_differenza_2_min_ago > -18.50
                 ):    
         
-                    buy = "BUY 1 CON 450> E 300> E  MA ma200 < - r 1712 Ay"
+                    buy = f"BUY 1 {deviation_ma39} {deviation_ma3_sotto_ma50} {deviation_ma5_sopra_o_sotto_ma100} {deviation_ma25_sotto_ma300} {deviation_ma100_sopra_o_sotto_ma100_10_min_ago} CON 450> E 300> E  MA ma200 < - r 1712 Ay"
                     action = "buy"
                     percentage = 90
-
+                    
                     # 21 mar 2025 anticipato ndecchiecella
                     # 30 mar 2025 anticipata. ho tolto doppio delta < GIORNO !
                     # 30 mar 2025 se e' notte MA SEMPRE CON 450> aggiungo dev ma39< -0.06 e dev 3-50 < -0.08
                     # 14 apr 2025 e' andata benissimo !
-
+                    #  7 mag 2025 e' andata benissimo - metto parentesi graffe per conoscere i valori !
 
 
                 elif (
