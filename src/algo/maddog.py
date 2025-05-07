@@ -13450,7 +13450,7 @@ class maddog:
                     percentage = 80
 
                     #  7 mag 2025 aggiunta questa
-                    #  7 mag 2025 COMPRA SE 50<100 DI MOLTO e 3-50 ANCHE DI MOLTO (e va bene cosi')
+                    #  7 mag 2025 COMPRA SE 50<100 DI MOLTO e ANCHE 3<50 DI MOLTO (e va bene cosi')
 
 
 
@@ -13481,7 +13481,7 @@ class maddog:
                     # 29 apr 2025 tolto 39>100
 
                     #  7 mag 2025 aggiunta questa
-                    #  7 mag 2025 COMPRA SE 50<100 ANCHE SE NON di molto MA 3-50 di molto - IL CANE VUOLE L' OSSO !
+                    #  7 mag 2025 COMPRA ANCHE SE 50<100 NON DI MOLTO MA 3<50 (deve essere) DI MOLTO ! (ro cano vuole l' osso !)
                     #  7 mag 2025 questo e' un modo per evitare BUY non appena comincia a scendere ! cazzo ! 
 
 
@@ -25152,11 +25152,16 @@ class maddog:
                     # 27 dic 2023 se ma10 < ma20 aggiunta dev ma2 e diff macd
                     # 20 feb 2024 prendi il coltello che cade con il piede ! grazie compa
 
+
+
+
+
                 
-                # BUY 3 PAZZA piccola CORREZIONE FIAT
-                
+                # BUY 3 CORREZIONE FIAT
+
                 elif (
                     ma5_last > ma20_last
+                    and ma450_last > ma450_300_min_ago 
 
                     and deviation_ma5_sotto_ma300 < -0.40
                     and deviation_ma10_sopra_ma200 < -0.30
@@ -25170,11 +25175,60 @@ class maddog:
                     and deviation_ma5_sotto_ma200 > -1.00
                     
                 ):
-
-                    buy = "BUY 3 CORREZIONE FIAT che non e' un forte ribasso e non e' un crollo and deviation_ma39 < -0.05 - r 6623"
+                    buy = "BUY 3 CORREZIONE FIAT -che non e' un forte ribasso e non e' un crollo- con 450> - r 6623 A"
                     action = "buy"
                     percentage = 80
 
+                    #  7 mag 2025 aggiunta questa con 450>
+
+
+
+                elif (
+                    ma3_last > ma18_last
+
+                    and (ma450_last < ma450_300_min_ago or ma100_last < ma450_last)
+                    and (deviation_ma50_sotto_ma100 < -0.45 and deviation_ma3_sotto_ma50 < -0.30)
+
+                    and deviation_ma5_sotto_ma300 < -0.40
+                    and deviation_ma10_sopra_ma200 < -0.30
+
+                    and deviation > -0.70
+                    
+                    and deviation_buy_crollo_1 < -0.29
+                    and deviation_ma39 < -0.05
+                    
+                    and deviation_ma5_sotto_ma200 > -1.50
+                    
+                ):
+                    buy = "BUY 3 CORREZIONE FIAT con 450< and dev 50-100 < -0.45 and dev 3-50 <-0.30 - r 6623 BX"
+                    action = "buy"
+                    percentage = 80
+
+                    #  7 mag 2025 COMPRA SE 50<100 DI MOLTO e ANCHE 3<50 DI MOLTO (e va bene cosi')
+
+
+
+                elif (
+                    ma3_last > ma18_last
+
+                    and (ma450_last < ma450_300_min_ago or ma100_last < ma450_last)
+                    and (deviation_ma50_sotto_ma100 > -0.15 and deviation_ma3_sotto_ma50 < -0.50)
+
+                    and deviation_ma5_sotto_ma300 < -0.40
+                    and deviation_ma10_sopra_ma200 < -0.30
+
+                    and deviation > -0.70
+                    
+                    and deviation_buy_crollo_1 < -0.29
+                    and deviation_ma39 < -0.05
+                    
+                    and deviation_ma5_sotto_ma200 > -1.50
+                    
+                ):
+                    buy = "BUY 3 CORREZIONE FIAT con 450< and dev 50-100 > -0.15 MA dev 3-50 < -0.50 - r 6623 BY"
+                    action = "buy"
+                    percentage = 80
+                    
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     # deviation_correzione = ma3_last / ma25_last
                     # ma5 non deve allontanarsi troppo dalla ma200 !
@@ -25187,6 +25241,8 @@ class maddog:
                     #  3 feb 2025 aggiunta and deviation_ma10_sopra_ma200 < -0.30
                     # 29 apr 2029 aggiunta and deviation_ma39 < -0.05
 
+                    #  7 mag 2025 COMPRA ANCHE SE 50<100 NON DI MOLTO MA 3<50 (deve essere) DI MOLTO ! (ro cano vuole l' osso !)
+                    #  7 mag 2025 questo e' un modo per evitare BUY non appena comincia a scendere ! cazzo ! 
 
 
          
