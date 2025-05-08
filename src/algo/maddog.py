@@ -22972,7 +22972,6 @@ class maddog:
                     
                     and deviation_ma3_sopra_ma10 > 0.02
                     and deviation_ma3_sopra_ma16 > -0.07
-                    and deviation_ma5_sopra_ma28 > -0.10
                     
                     and macd_differenza_2_min_ago > -18.50
                 
@@ -29025,7 +29024,7 @@ class maddog:
                     ma3_last > ma18_last
 
                     and (ma10_last < ma30_last or ma20_last < ma50_last)
-                    and deviation_ma3_sotto_ma50 < -0.05
+                    and deviation_ma3_sotto_ma50 < -0.12
 
                     and ma450_last > ma450_360_min_ago
                     and delta_DNA_1 < delta_DNA_2
@@ -29044,7 +29043,7 @@ class maddog:
                     and macd_differenza_2_min_ago > -13.25
                 
                 ):
-                    buy = "BUY 5 con 450_last >= 450_360_min_ago E ma200>ma300 - GIORNO - r 7144 A1 Y2 NUOVA ERA A3 SOFT xX 1 xX 1"
+                    buy = "BUY 5 con 450_last >= 450_360_min_ago E ma200>ma300 - GIORNO - and 20<50 - r 7144 A1 Y2 NUOVA ERA A3 SOFT xX 1 xX 1"
                     action = "buy"
                     percentage = 70
 
@@ -29053,7 +29052,7 @@ class maddog:
                     # 27 feb 2025 con aggiunta di delta_1 < delta_2 (giorno) non faccio comprare !
                     # 28 feb 2025 GIORNO
                     # 16 apr 2025 and deviation_ma3_sotto_ma50 < -0.01
-
+                    #  8 mag 2025 deviation_ma3_sotto_ma50 a -0.12 da -0.05
 
 
 
@@ -29064,7 +29063,7 @@ class maddog:
 
                     and (ma10_last < ma30_last or ma20_last < ma50_last)
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.01
-                    and deviation_ma3_sotto_ma50 < -0.05
+                    and deviation_ma3_sotto_ma50 < -0.20
 
                     and ma450_last > ma450_360_min_ago
                     and delta_DNA_1 > delta_DNA_2
@@ -29080,7 +29079,7 @@ class maddog:
                     
                     and ma3_last > ma13_last
                     
-                    and macd_differenza_2_min_ago > -13.25
+                    and macd_differenza_2_min_ago > -18.25
                 
                 ):
                     buy = "BUY 5 con 450_last >= 450_360_min_ago E ma200>ma300 - NOTTE - r 7144 A1 Y2 NUOVA ERA A3 SOFT xX 1 xX 2"
@@ -29092,7 +29091,7 @@ class maddog:
                     # 27 feb 2025 con aggiunta di delta_1 < delta_2 (giorno) non faccio comprare !
                     # 28 feb 2025 GIORNO
                     # 16 apr 2025 se ritraccia allora and deviation_ma5_sopra_o_sotto_ma100 < -0.01 and deviation_ma3_sotto_ma50 < -0.05
-
+                    #  8 mag 2025 deviation_ma3_sotto_ma50 a -0.20 da -0.05
 
 
 
@@ -54668,8 +54667,11 @@ class maddog:
 
 
 
+
             elif (    
                 ma50_last > ma50_2_min_ago
+                and ma39_last > ma100_last
+
                 and delta_1 > delta_2
                 and ma100_last < ma100_10_min_ago
                 
@@ -54677,8 +54679,7 @@ class maddog:
                 and ma100_last < ma100_60_min_ago
                 
                 and deviation_ma39 < 0.13
-                and deviation_sell < 0.01
-                
+                and deviation_sell < -0.01
                 
                 and deviation_ma5_sotto_ma200 > -0.60
                 and deviation_ma100_sopra_ma300 < 0.40
@@ -54688,7 +54689,35 @@ class maddog:
                 and macd < 15
                 and macd_differenza_2_min_ago < -2
             ):
-                sell = "SELL NCS NOTTE - 3-39 < 0.13 and dev_sell < 0.01 con ma50 > e con ma5 sotto ma200 > -0.60 - r 16047 A2 Y2 Y2"
+                sell = "SELL NCS NOTTE - 3-39 < 0.13 and dev_sell < -0.01 con ma50 > e con ma5 sotto ma200 > -0.60 - r 16047 A2 Y2 Y2x"
+                action = "sell"
+                
+                #  8 mag 2025 aggiunto and ma39_last > ma100_last
+                #  8 mag 2025 and deviation_sell a -0.01 da 0.01
+
+
+            elif (    
+                ma50_last > ma50_2_min_ago
+                and ma39_last < ma100_last
+
+                and delta_1 > delta_2
+                and ma100_last < ma100_10_min_ago
+                
+                and ma13_last < ma50_last
+                and ma100_last < ma100_60_min_ago
+                
+                and deviation_ma39 < 0.13
+                and deviation_sell < 0.01
+                
+                and deviation_ma5_sotto_ma200 > -0.60
+                and deviation_ma100_sopra_ma300 < 0.40
+                
+                and ma2_last < ma2_2_min_ago 
+                and macd < macd_2_min_ago
+                and macd < 15
+                and macd_differenza_2_min_ago < -2
+            ):
+                sell = "SELL NCS NOTTE - 3-39 < 0.13 and dev_sell < 0.01 con ma50 > e con ma5 sotto ma200 > -0.60 - r 16047 A2 Y2 Y2y"
                 action = "sell"
                 
                 # 25 nov 2023 and deviation_sell < -0.10 da < -0.14
@@ -54699,14 +54728,13 @@ class maddog:
                 # 27 nov 2023 and deviation_sell < 0.02  !
                 # 27 nov 2023 nonno mario
                 #  1 dic 2023 and deviation_sell < -0.01 da 0.02  !
-                # 14 gen 2024 con 100< 100 10 min ago dev_sell a 0.01 da -0.01 
-
+                # 14 gen 2024 con 100 < 100 10 min ago dev_sell a 0.01 da -0.01 
+                #  8 mag 2025 dev_sell a 0.01
           
 
             # nuova condizione AUDI RUBATA
 
-            elif (
-                
+            elif (    
                 ma50_last < ma50_2_min_ago
                 and ma20_last > ma20_2_min_ago
                 and ma5_last >= ma5_2_min_ago
