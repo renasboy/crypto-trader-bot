@@ -27435,7 +27435,7 @@ class maddog:
                     and macd_differenza_2_min_ago > -15.00
              
                 ):
-                    buy = "BUY 4 se 100>200 con 3-50 < - 0.27 - r 7020"
+                    buy = "BUY 4 se 100>200 con 3-50 < -0.27 - r 7020"
                     action = "buy"
                     percentage = 80
 
