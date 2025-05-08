@@ -27393,7 +27393,6 @@ class maddog:
                     #  6 set 2023 and deviation_ma7_sopra_ma40 > 0.10 da 0.12
 
 
-              
                 elif (
                     ma3_last > ma13_last
 
@@ -27410,13 +27409,38 @@ class maddog:
                     buy = "BUY 4 se 11>200 - r 7008 B"
                     action = "buy"
                     percentage = 80
-                    
+
                     # > estate 7-40 0.12 da 0.09 and dev bellissima 0.14 da 0.12
                     # 11 ago 2023 aggiunta se 300 scende da 3 ore
                     # 26 dic 2023 aggiunta and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
                     # 26 dic 2023 aggiunta and macd_differenza_2_min_ago > 0.50
                     # 30 apr 2025 se al BUY 4 ma50 sta sopra ma100 che cazzo mi spezzi la catena ! devi anticipare, invece !
+                    #  8 mag 2025 questa la tengo anche se non e' andata bene.
 
+
+
+
+                # condizione villeneuve - and deviation_ma3_sotto_ma50 < -0.27
+
+                elif (
+                    ma3_last > ma13_last
+
+                    and ma100_last > ma200_last
+                    and deviation_ma3_sotto_ma50 < -0.27
+
+                    and ma300_last < ma300_180_min_ago
+                    
+                    and ma3_last > ma10_last
+                    
+                    and macd_differenza_2_min_ago > -15.00
+             
+                ):
+                    buy = "BUY 4 se 100>200 con 3-50 < - 0.27 - r 7020"
+                    action = "buy"
+                    percentage = 80
+
+                    #  8 mag 2025 aggiunta condizione villeneuve - and deviation_ma3_sotto_ma50 < -0.27
+                    #  8 mag 2025 nelle varie oscillazioni 100 si trova sopra 200 ma c'e' una correzione.
 
                     
                     
