@@ -27689,9 +27689,36 @@ class maddog:
 
 
 
-                
                 elif (
                     ma3_last > ma15_last
+                    and ma20_last > ma50_last
+                    and ma39_last > ma50_last
+                    
+                    and ma300_last > ma300_360_min_ago
+                    and ma200_last > ma200_360_min_ago
+                    and deviation_ma200_sotto_ma300 > -0.05
+                    
+                    and ma3_last > ma8_last
+                    
+                    and macd_differenza_2_min_ago > -8.50
+                ):    
+                    buy = "BUY 5 nuova condizione che mancava e che ci deve stare con 300> e 200> CON 20>50 - r 7040 B1"
+                    action = "buy"
+                    percentage = 80
+                    
+                    # 15 apr 2025 aggiunta questa nuova condizione ! BTC si e' impennato e non e' partita neanche una condizione !
+                    # 15 apr 2025 and deviation_ma200_sotto_ma300 > -0.05 per non farla comprare quando comincia il ribasso
+                    # 15 apr 2025 and ma39_last > ma50_last per non farla comprare quando comincia il ribasso.
+                    #  8 mag 2025 se 20>50 ok cosi'.
+
+
+
+                elif (
+                    ma3_last > ma15_last
+
+                    and ma20_last < ma50_last
+                    and deviation_ma3_sotto_ma50 < -0.15
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.01
 
                     and ma39_last > ma50_last
                     
@@ -27703,14 +27730,11 @@ class maddog:
                     
                     and macd_differenza_2_min_ago > -8.50
                 ):    
-                    buy = "BUY 5 nuova condizione che mancava e che ci deve stare con 300> e 200> - r 7040 B"
+                    buy = "BUY 5 nuova condizione che mancava e che ci deve stare con 300> e 200> CON 20<50 - r 7040 B2"
                     action = "buy"
                     percentage = 80
 
-                    # 15 apr 2025 aggiunta questa nuova condizione ! BTC si e' impennato e non e' partita neanche una condizione !
-                    # 15 apr 2025 and deviation_ma200_sotto_ma300 > -0.05 per non farla comprare quando comincia il ribasso
-                    # 15 apr 2025 and ma39_last > ma50_last per non farla comprare quando comincia il ribasso.
-
+                    #  8 mag 2025 se 20<50 aggiungo 3-50 < -0.15 e 5-100 < -0.01
 
 
 
