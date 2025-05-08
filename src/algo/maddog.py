@@ -332,6 +332,7 @@ class maddog:
         ma130_last, ma130_prev = self.algo_helper.ma_last_prev(130)
         ma140_last, ma140_prev = self.algo_helper.ma_last_prev(140)
         ma150_last, ma150_prev = self.algo_helper.ma_last_prev(150)
+        ma160_last, ma160_prev = self.algo_helper.ma_last_prev(160)
         ma180_last, ma180_prev = self.algo_helper.ma_last_prev(180)
         ma200_last, ma200_prev = self.algo_helper.ma_last_prev(200)
         ma225_last, ma225_prev = self.algo_helper.ma_last_prev(225)
@@ -38940,10 +38941,11 @@ class maddog:
                   
                     
                     elif (
-                        ma5_last < ma150_last
-                        
-                        and deviation_ma39 < -0.01
+                        ma5_last < ma160_last
+
                         and deviation_sell > 0.20
+                        and deviation_ma39 < -0.01
+                        
                         and ma5_last < ma5_2_min_ago
                       
                         and ma50_last <= ma50_2_min_ago
@@ -38954,7 +38956,7 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                         and ma2_differenza_2_min_ago < -0.05
                     ):
-                        sell = "SELL 1 da 110 a 239 min con ma50 <= MA ma100 > E ma300 > e con deviation_ma39 < -0.15 and ma2_differenza_2_min_ago < -0.05 - r 10263 A2 x1"
+                        sell = "SELL 1 (110-239 min) con 5-160 and ma50 <= MA ma100 > E ma300 > e con dev_ma39 < -0.15 - r 10263 A2 x1"
                         action = "sell"
                         
                         # ma39 NON DEVE VENDERE in fase laterale ma in alto
@@ -38964,6 +38966,8 @@ class maddog:
                         #  9 nov 2023 aggiunta and ma2_differenza_2_min_ago < -0.05
                         # 24 dic 2023 ma39 a -0.05 da -0.15
                         # 24 dic 2023 and ma50_last <= ma50_2_min_ago da ma50_last < ma50_2_min_ago
+                        #  8 mag 2025 sell con 5-160 da 5-150
+
 
                     
                     elif (    
@@ -54696,7 +54700,7 @@ class maddog:
                 #  8 mag 2025 and deviation_sell a -0.01 da 0.01
 
 
-            elif (    
+            elif (
                 ma50_last > ma50_2_min_ago
                 and ma39_last < ma100_last
 
