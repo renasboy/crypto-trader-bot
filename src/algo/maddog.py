@@ -23,6 +23,18 @@ sell = f"SELL 1 {deviation_ma39} {deviation_ma3_sotto_ma50} {deviation_ma5_sopra
                     # GRAZIE COMPARE MIO !
 
 
+
+                    ritracciamento in alto !
+
+                    and deviation_ma50_sotto_ma100 < -0.15
+                    and deviation_ma5_sotto_ma300 < -0.30
+                    and deviation_ma25_sotto_ma300 < -0.22
+                    and deviation_ma100_sopra_ma200 < -0.15
+
+
+
+
+
                     RITRACCIAMENTO
 
                     and ma20_last < ma50_last
@@ -773,12 +785,20 @@ class maddog:
         deviation_ma5_sotto_ma450 = (ma5_last / ma450_last - 1) * 100 if ma450_last else 0
         self.algo_helper.info("deviation_ma5_sotto_ma450: {}".format(deviation_ma5_sotto_ma450))
 
-        
 
-        # formula DEVIATION_ma10_sopra_o_sotto_ma10_10_min_ago !
+
+        
+        # formula DEVIATION_ma100_sopra_o_sotto_ma100_10_min_ago !
         
         deviation_ma100_sopra_o_sotto_ma100_10_min_ago = (ma100_last / ma100_10_min_ago - 1) * 100 if ma100_10_min_ago else 0
         self.algo_helper.info("deviation_ma100_sopra_o_sotto_ma100_10_min_ago: {}".format(deviation_ma100_sopra_o_sotto_ma100_10_min_ago))
+
+
+
+        # formula DEVIATION_ma100_sopra_o_sotto_ma100_300_min_ago !
+        
+        deviation_ma100_sopra_o_sotto_ma100_300_min_ago = (ma100_last / ma100_300_min_ago - 1) * 100 if ma100_300_min_ago else 0
+        self.algo_helper.info("deviation_ma100_sopra_o_sotto_ma100_300_min_ago: {}".format(deviation_ma100_sopra_o_sotto_ma100_300_min_ago))
 
         
         # formula DEVIATION_ma10_sopra_o_sotto_ma10_30_min_ago !
@@ -22962,17 +22982,22 @@ class maddog:
                 
                 ################################################################### condizioni che mancavano !!!
                 
-                # ------------------------------------------------------------ BUY 3 laterale
+                # ------------------------------------------------------------ BUY 3 ritracciamento in alto !
+
                 elif (    
                     ma3_last > ma18_last
 
-                    and ma20_last < ma50_last
+                    and (deviation_ma100_sopra_o_sotto_ma100_300_min_ago > 1.25 or deviation_ma100_sopra_ma300 > 0.20)
+                    and (ma20_last < ma50_last or ma50_last < ma100_last or ma39_last < ma39_20_min_ago)
+                    
+                    and deviation_ma50_sotto_ma100 < -0.15
+                    and deviation_ma5_sotto_ma300 < -0.30
+                    and deviation_ma25_sotto_ma300 < -0.22
+                    and deviation_ma100_sopra_ma200 < -0.15
 
                     and ma200_last > ma450_last
                     and ma300_last > ma300_120_min_ago
                     
-                    and deviation_ma100_sopra_ma300 > 0.20
-
                     and deviation_ma39 < -0.05
                     and deviation_ma3_sotto_ma50 < -0.05
                     
@@ -22982,7 +23007,7 @@ class maddog:
                     and macd_differenza_2_min_ago > -18.50
                 
                 ):
-                    buy = "BUY 3 GIORNO con 78 > 200 AND 300 >300 120 min ago ! - r 6505"
+                    buy = "BUY 3 RITRACCIAMENTO IN ALTO ! - r 6505"
                     action = "buy"
                     percentage = 80
 
@@ -22990,6 +23015,7 @@ class maddog:
                     # 28 gen 2025 aggiunto and delta_300_200 > delta_300_200_60_min NOTTE
                     # 28 gen 2025 and deviation_ma3_sopra_ma10 > 0.02 da > 0.01 ( ha comprato prestissimo quasi attaccato al sell precedente.)
                     # 15 apr 2025 importata da BUY 2 e modificata
+                    #  9 mag 2025 RITRACCIAMENTO IN ALTO !
 
 
                 elif (
