@@ -25587,7 +25587,8 @@ class maddog:
 
                 elif (
                     ma3_last > ma13_last
-                    
+                    and deviation_ma100_sopra_o_sotto_ma100_300_min_ago < 1.00
+
                     and ma20_last < ma50_last
                     and deviation_ma5_sotto_ma200 < -0.15
                     and deviation_ma39 < -0.09
@@ -25602,7 +25603,7 @@ class maddog:
                     and ma3_last > ma9_last
                     
                 ):
-                    buy = f"BUY 4 {deviation_ma39} {deviation_ma3_sotto_ma50} {deviation_ma5_sopra_o_sotto_ma100} {deviation_ma25_sotto_ma300} {deviation_ma100_sopra_o_sotto_ma100_10_min_ago} GIORNO con 300> E ma100>ma450 durante un ritracciamento - r 6668 A1 Y2y"
+                    buy = f"BUY 4 {deviation_ma39} {deviation_ma3_sotto_ma50} {deviation_ma5_sopra_o_sotto_ma100} {deviation_ma25_sotto_ma300} {deviation_ma100_sopra_o_sotto_ma100_10_min_ago} GIORNO con 300> E ma100>ma450 durante un ritracciamento in basso - r 6668 A1 Y2 yX"
                     action = "buy"
                     percentage = 70
                     
@@ -25612,6 +25613,40 @@ class maddog:
                     # 30 mar 2025 durante il ritracciamento
                     #  7 mag 2025 e' andata benissimo vediamo i valori !
                 
+
+                elif (    
+                    ma3_last > ma18_last
+
+                    and (deviation_ma100_sopra_o_sotto_ma100_300_min_ago > 1.00 or deviation_ma100_sopra_ma300 > 0.20)
+                    and (ma20_last < ma50_last or ma50_last < ma100_last or ma39_last < ma39_20_min_ago)
+                    
+                    and deviation_ma50_sotto_ma100 < -0.15
+                    and deviation_ma5_sotto_ma300 < -0.30
+                    and deviation_ma25_sotto_ma300 < -0.22
+                    and deviation_ma100_sopra_ma200 < -0.15
+
+                    and ma200_last > ma450_last
+                    and ma300_last > ma300_120_min_ago
+                    
+                    and deviation_ma39 < -0.05
+                    and deviation_ma3_sotto_ma50 < -0.05
+                    
+                    and deviation_ma3_sopra_ma10 > 0.02
+                    and deviation_ma3_sopra_ma16 > -0.07
+                    
+                    and macd_differenza_2_min_ago > -18.50
+                
+                ):
+                    buy = "BUY 4 RITRACCIAMENTO IN ALTO ! - r 6668 A1 Y2 yY"
+                    action = "buy"
+                    percentage = 80
+
+                    # 21 gen 2025 anticipata ndecchia con 300 > 300 120 min ago !
+                    # 28 gen 2025 aggiunto and delta_300_200 > delta_300_200_60_min NOTTE
+                    # 28 gen 2025 and deviation_ma3_sopra_ma10 > 0.02 da > 0.01 ( ha comprato prestissimo quasi attaccato al sell precedente.)
+                    # 15 apr 2025 importata da BUY 2 e modificata
+                    #  9 mag 2025 RITRACCIAMENTO IN ALTO !
+
 
 
                 elif (
