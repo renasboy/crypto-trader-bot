@@ -7,8 +7,10 @@
 
 
 """
+chiedi al compare come posso mettere in colonna questa riga lunga !
 
 buy = f"BUY 1 {deviation_ma39} {deviation_ma3_sotto_ma50} {deviation_ma5_sopra_o_sotto_ma100} {deviation_ma25_sotto_ma300} {deviation_ma100_sopra_o_sotto_ma100_10_min_ago} con 450>6 ore MA ritracciando ( vedi ma20 < or ma33 < ) - r 1043 Ax"
+
 sell = f"SELL 1 {deviation_ma39} {deviation_ma3_sotto_ma50} {deviation_ma5_sopra_o_sotto_ma100} {deviation_ma25_sotto_ma300} {deviation_ma100_sopra_o_sotto_ma100_10_min_ago} con 100> 3 ore MA ritracciando - r 12648 BY"
 
 # 30 APR 2025 ATTENZIONE ! DATA STORICA ! nei punti piu' importanti ho messo :
@@ -2116,7 +2118,7 @@ class maddog:
                     and ma20_last > ma40_last
 
                     and ma100_last > ma200_last
-                    and ma300_last > ma300_301_min_ago
+                    and (ma300_last > ma300_301_min_ago or ma39_last > ma200_last)
 
                     and deviation_ma3_sopra_ma10 > 0.01
                     
@@ -2134,6 +2136,9 @@ class maddog:
                     # 30 mar 2025 anticipata visto che 300 sale da 2 ore !
                     # 31 mar 2025 anticipata ndecchiecella
                     # 11 apr 2025 ipotesi 20>40 stai tranquillo. non sta ritracciando
+                    #  9 mag 2025 forse 300> 5 ore faceva arrivare tardi allora proprio accanto a questa condizione ho messo or 39>200
+                    #  9 mag 2025 tenendo comunque ferma la 100>200
+
 
 
                 elif (  
@@ -38356,7 +38361,7 @@ class maddog:
                         ma50_last < ma50_2_min_ago
                         and delta_DNA_1 < delta_DNA_2
 
-                        and deviation_ma39 < -0.05
+                        and (deviation_ma39 < -0.05 or ma3_last < ma250_last)
                         and deviation_sell > 0.20
                         and ma5_last < ma5_2_min_ago
                         and ma100_last > ma100_60_min_ago
@@ -38368,6 +38373,7 @@ class maddog:
                         # ma39 NON DEVE VENDERE in fase laterale ma in alto
                         # 30 nov 2023 dev 39 -0.05 da -0.20
                         #  7 apr 2025 GIORNO
+                        #  9 mag 2025 aggiunta or 3-250 perche' effettivamente aveva venduto troppo tardi.
 
 
                     elif (    
@@ -54127,7 +54133,7 @@ class maddog:
                 and ma3_last < ma28_last
                 
                 and deviation_ma39 < 0.13
-                and deviation_sell < -0.02
+                and deviation_sell < -0.025
                 
                 and deviation_ma5_sotto_ma200 > -0.70
                 and deviation_ma100_sopra_ma300 < 0.40
@@ -54139,11 +54145,11 @@ class maddog:
                 and macd < 1
                 and macd_differenza_2_min_ago < -1.00
             ):
-                sell = "SELL CS se 100> vende con 3-28 e dev 3-39 < 0.13 and dev_sell < -0.02 e ma50 > con DIFF MACD < -1 - r 16047 A2 X2 Y1"
+                sell = "SELL CS se 100> vende con 3-28 e dev 3-39 < 0.13 and dev_sell < -0.025 e ma50 > con DIFF MACD < -1 - r 16047 A2 X2 Y1"
                 action = "sell"
 
                 #  9 nov 2024 se deviation_ma50_sopra_o_sotto_ma300 > 0.10 allora and deviation_sell < -0.02 da < 0.01
-
+                #  9 mag 2025 deviation_sell < -0.025 da < 0.02
 
 
             elif (    
