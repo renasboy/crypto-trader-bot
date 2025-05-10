@@ -50918,9 +50918,11 @@ class maddog:
                         # 27 mar 2023 dev sell -0.05 da -0.23 (stiamo al sell 4-5-x e pure dopo 90 min ! esci !)
                         #  8 nov 2023 dev sell -0.03 da -0.05 (stiamo al sell 4-5-x e pure dopo 90 min ! esci !)
 
-                    
+
+
                     elif (    
                         ma50_last < ma50_2_min_ago
+                        and ma150_last > ma250_last
                         and deviation_ma5_sotto_ma300 < 0.10
                         
                         and deviation_sell < -0.01
@@ -50928,14 +50930,33 @@ class maddog:
                         
                         and ma2_last < ma2_2_min_ago 
                     ):
-                        sell = "SELL 4-5-x dopo 90 min con 5-300 < 0.10 E ma50 < and (deviation_sell < -0.01 and ma3_last < ma33_last) - r 15906 B2"
+                        sell = "SELL 4-5-x >90 min con 5-300 < 0.10 E ma50 < e dev_sell < -0.01 SE 150>250 - r 15906 B2 x"
                         action = "sell"
                         
                         #  7 feb 2023 -0.23 da -0.21
                         # 17 mar 2023 3-33 da 3-39 vedi 3 mar 2023 ore 14:46 sembra che 3-39 sia arrivata tardi.
                         # 27 mar 2023 dev sell -0.05 da -0.23 (stiamo al sell 4-5-x e pure dopo 90 min ! esci !)
                         #  8 nov 2023 dev sell -0.01 da -0.05 (stiamo al sell 4-5-x e pure dopo 90 min ! esci !)
+                        # 10 mag 2025 se 150>250 ok cosi'
 
+                    elif (    
+                        ma50_last < ma50_2_min_ago
+                        and ma150_last < ma250_last
+                        and deviation_ma5_sotto_ma300 < 0.10
+                        
+                        and (deviation_sell < -0.01 or ma20_last < ma50_last)
+                        and ma3_last < ma33_last
+                        
+                        and ma2_last < ma2_2_min_ago 
+                    ):
+                        sell = "SELL 4-5-x >90 min con 5-300 < 0.10 E ma50 < e dev_sell < -0.01 or 20<50 SE 150<250 - r 15906 B2 y"
+                        action = "sell"
+                        
+                        #  7 feb 2023 -0.23 da -0.21
+                        # 17 mar 2023 3-33 da 3-39 vedi 3 mar 2023 ore 14:46 sembra che 3-39 sia arrivata tardi.
+                        # 27 mar 2023 dev sell -0.05 da -0.23 (stiamo al sell 4-5-x e pure dopo 90 min ! esci !)
+                        #  8 nov 2023 dev sell -0.01 da -0.05 (stiamo al sell 4-5-x e pure dopo 90 min ! esci !)
+                        # 10 mag 2025 se 150<250 vende con dev_sell < -0.01 OR 20<50 ! CAZZO.
 
                   
                   
