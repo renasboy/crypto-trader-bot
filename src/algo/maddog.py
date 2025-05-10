@@ -8723,11 +8723,11 @@ class maddog:
                     and ma10_last > ma10_300_min_ago
 
                     and ma300_last > ma450_last
-                    and ma200_last > ma300_last
+                    and (ma200_last > ma300_last or ma5_last > ma78_last)
                     
                     and deviation_ma3_sopra_ma7 > 0.01
                     
-                    and macd_differenza_2_min_ago > -8.50
+                    and macd_differenza_2_min_ago > -18.50
                 ):
                     buy = "BUY 1 con 3>20 se ma450 > ma 450 90 min ago  ! - r 2065 Bx 2"
                     action = "buy"
@@ -8741,7 +8741,7 @@ class maddog:
                     # 14 apr 2025 200>300 sostituisce and delta_300_225 < delta_300_225_60_min. cazzo.
                     # 15 apr 2025 3-20 da 3-39
                     # 15 apr 2025 ma10_last > ma10_300_min_ago ho dovuto metterla altrimenti avrebbe comprato durante il ribasso
-
+                    #  9 mag 2025 aggiunta or ma5_last > ma78_last. ma gia' andava bene.
 
 
                 elif (    
@@ -51764,7 +51764,7 @@ class maddog:
 
                 and delta_50_39 > delta_50_39_30_min
                 and ma10_last <= ma20_last
-                and ma5_last <= ma100_last
+                and (ma5_last <= ma100_last or ma5_last <= ma450_last)
                 
                 and deviation_ma39 < 0.05
                 and deviation_sell < -0.001
@@ -51776,7 +51776,7 @@ class maddog:
                 and ma2_last < ma5_last
                 and price < ma3_last
             ):
-                sell = "SELL CS SALVAGENTE - con dev sell < -0.001 con ma50 < e dev_ma3_sotto_ma200 > -1.20 - r 15985 A1 ok 4Y 2B X2"
+                sell = "SELL CS SALVAGENTE - con dev sell < -0.001 con ma50< e dev_ma3_sotto_ma200 > -1.20 - r 15985 A1 ok 4Y 2B X2"
                 action = "sell"
 
                 # 27 set 2023 dev sell -0.11 da -0.10
@@ -51795,6 +51795,7 @@ class maddog:
                 # 31 gen 2025 and deviation_sell < -0.01 da < 0.02 GIORNO !
                 #  8 apr 2025 dev sell < -0.001 da < -0.01
                 #  8 apr 2025 attenzione qua 50<
+                #  10 mag 2025 aggiunta or ma5_last <= ma450_last
 
 
 
