@@ -2135,7 +2135,7 @@ class maddog:
                 if (  
                     ma3_last > ma8_last
 
-                    and ma20_last > ma40_last
+                    and (ma20_last > ma40_last or ma50_last > ma100_last)
 
                     and ma100_last > ma200_last
                     and (ma300_last > ma300_301_min_ago or ma39_last > ma200_last)
@@ -2143,7 +2143,6 @@ class maddog:
                     and deviation_ma3_sopra_ma10 > 0.01
                     
                     and macd_differenza_2_min_ago > -18.50
-
                 ):    
               
                     buy = "BUY 1 con ma300_last > ma300_301_min_ago e 100>200 - r 916 A1 x1"
@@ -2158,6 +2157,7 @@ class maddog:
                     # 11 apr 2025 ipotesi 20>40 stai tranquillo. non sta ritracciando
                     #  9 mag 2025 forse 300> 5 ore faceva arrivare tardi allora proprio accanto a questa condizione ho messo or 39>200
                     #  9 mag 2025 tenendo comunque ferma la 100>200
+                    # 11 mag 2025 ho aggiunto anche or 50>100 per evitare che compri durante il ribasso
 
 
 
@@ -31794,21 +31794,50 @@ class maddog:
 
 
 
+
                 elif (
-                    ma3_last > ma8_last
-                    and ma5_last > ma39_last
+                    
+                    ma3_last > ma20_last
+                    and ma50_last > ma100_last
+                    
+                    and ma20_last > ma50_last
+                    
+                    and ma100_last > ma200_last
+                    and ma200_last > ma450_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma5_sopra_ma28 > -0.12
+
+                    and ma3_last > ma8_last
+                    and macd_differenza_2_min_ago > -18.50
+                ):   
+                    buy = "BUY 5 che NON SPEZZA LA CATENA - con 20>50 and 50>100 E 3>20 - r 7410 A2 X1 Xx1"
+                    action = "buy"
+                    percentage = 80
+
+                    # 11 mag 2025 se 50 >100 ok cosi'
+
+
+
+                elif (
+                    
+                    ma3_last > ma20_last
+                    and ma50_last < ma100_last
+                    and deviation_ma3_sotto_ma50 < -0.08
 
                     and ma20_last > ma50_last
+                    
 
                     and ma100_last > ma200_last
                     and ma200_last > ma450_last
                     
                     and deviation_ma3_sopra_ma10 > 0.01
                     and deviation_ma5_sopra_ma28 > -0.12
-                    
+
+                    and ma3_last > ma8_last
                     and macd_differenza_2_min_ago > -18.50
                 ):   
-                    buy = "BUY 5 che NON SPEZZA LA CATENA - con 20>50 E 5>39 - r 7410 A2 X1 Xx"
+                    buy = "BUY 5 che NON SPEZZA LA CATENA - con 20>50 E 3>20 ma 50<100 and 3-50 < -0.08 - r 7410 A2 X1 Xx2"
                     action = "buy"
                     percentage = 80
 
@@ -31817,6 +31846,8 @@ class maddog:
                     # 13 apr 2025 con ma20_last > ma50_last ok cosi'
                     # 26 apr 2025 anticipato ndecchia
                     # 26 apr 2025 con ma5_last > ma39_last
+                    # 11 mag 2025 se 50<100 aggiungo 3-50 < -0.08
+
 
 
                 elif (
@@ -54245,7 +54276,7 @@ class maddog:
                 and ma3_last < ma28_last
                 
                 and deviation_ma39 < 0.13
-                and deviation_sell < -0.025
+                and deviation_sell < -0.026
                 
                 and deviation_ma5_sotto_ma200 > -0.70
                 and deviation_ma100_sopra_ma300 < 0.40
@@ -54257,11 +54288,12 @@ class maddog:
                 and macd < 1
                 and macd_differenza_2_min_ago < -1.00
             ):
-                sell = "SELL CS se 100> vende con 3-28 e dev 3-39 < 0.13 and dev_sell < -0.025 e ma50 > con DIFF MACD < -1 - r 16047 A2 X2 Y1"
+                sell = "SELL CS se 100> vende con 3-28 e dev 3-39 < 0.13 and dev_sell < -0.026 e ma50 > con DIFF MACD < -1 - r 16047 A2 X2 Y1"
                 action = "sell"
 
                 #  9 nov 2024 se deviation_ma50_sopra_o_sotto_ma300 > 0.10 allora and deviation_sell < -0.02 da < 0.01
-                #  9 mag 2025 deviation_sell < -0.025 da < 0.02
+                #  9 mag 2025 deviation_sell < -0.026 da < 0.02
+
 
 
             elif (    
