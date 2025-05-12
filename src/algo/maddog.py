@@ -22165,16 +22165,18 @@ class maddog:
                     
                 # BUY 3 NUOVO che ci riprova TORNANDO ALLE ORIGINI con ma200< and ma300<
 
+
                 elif (
                     ma3_last > ma13_last
+                    and ma100_last > ma100_60_min_ago
 
                     and ma450_last > ma450_360_min_ago
                     and delta_DNA_1 < delta_DNA_2
                     
 
                     and ma450_last > ma450_720_min_ago
-                    and deviation_ma300_sopra_ma450 < 0.10
-                    and deviation_ma300_sopra_ma450 > -0.10
+                    and deviation_ma300_sopra_ma450 < 0.15
+                    and deviation_ma300_sopra_ma450 > -0.15
 
                     and ma200_last > ma200_60_min_ago
 
@@ -22183,7 +22185,34 @@ class maddog:
                     
                     and macd_differenza_2_min_ago > -2.50
                 ):
-                    buy = "BUY 3 con ma450_last > ma450_720_min_ago e con ma200> - GIORNO - r 6447 A1x"
+                    buy = "BUY 3 con ma450_last > ma450_720_min_ago e con ma200> - GIORNO - r 6447 A1 x1"
+                    action = "buy"
+                    percentage = 90
+
+                    # 12 mag 2025 se 100> ok cosi'.
+
+
+                elif (
+                    ma3_last > ma13_last
+                    and ma100_last < ma100_60_min_ago
+                    and deviation_ma3_sotto_ma50 < -0.05
+
+                    and ma450_last > ma450_360_min_ago
+                    and delta_DNA_1 < delta_DNA_2
+                    
+
+                    and ma450_last > ma450_720_min_ago
+                    and deviation_ma300_sopra_ma450 < 0.15
+                    and deviation_ma300_sopra_ma450 > -0.15
+
+                    and ma200_last > ma200_60_min_ago
+
+                    and ma3_last > ma7_last
+                    
+                    
+                    and macd_differenza_2_min_ago > -2.50
+                ):
+                    buy = "BUY 3 con ma450_last > ma450_720_min_ago e con ma200> - GIORNO - r 6447 A1 x2"
                     action = "buy"
                     percentage = 90
 
@@ -22191,6 +22220,8 @@ class maddog:
                     # 29 gen 2025 cancellato and ma2_last > ma2_2_min_ago e anticipato ndecchiecella
                     # 30 gen 2025 nel corridoio 300-450 puo' comprare prima
                     # 28 feb 2025 GIORNO !
+                    # 12 mag 2025 se 100< aggiungo and deviation_ma3_sotto_ma50 < -0.05
+
 
 
                 elif (
