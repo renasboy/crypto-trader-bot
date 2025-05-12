@@ -13664,11 +13664,11 @@ class maddog:
                     and ma450_last > ma450_480_min_ago
                     
                     and deviation_ma39 < -0.14
-                    and deviation_ma3_sotto_ma50 < -0.22
+                    and deviation_ma3_sotto_ma50 < -0.50
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.13
 
-                    and deviation_ma300_sopra_ma450 < 0.20
-                    and deviation_ma300_sopra_ma450 > -0.20
+                    and deviation_ma300_sopra_ma450 < 0.40
+                    and deviation_ma300_sopra_ma450 > -0.40
                     
                     
                     and deviation_ma100_sopra_ma300 < 0.20
@@ -13686,6 +13686,8 @@ class maddog:
                     # 14 apr 2025 aggiunta and deviation_ma39 < -0.14
                     # 14 apr 2025 aggiunta and deviation_ma3_sotto_ma50 < -0.22
                     # 14 apr 2025 aggiunta and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.13 
+                    # 12 mag 2025 3-50 a -0.50 da -0.22
+
 
 
                 elif (    
@@ -25464,17 +25466,18 @@ class maddog:
                     
                     and deviation_buy_crollo_1 < -0.29
                     and deviation_ma39 < -0.05
-                    
+                    and deviation_ma3_sotto_ma50 < -0.40
+
                     and deviation_buy_ma5_sopra_ma20 > -0.10
                     and deviation_ma5_sotto_ma200 > -1.00
                     
                 ):
-                    buy = "BUY 3 CORREZIONE FIAT -che non e' un forte ribasso e non e' un crollo- con 450> - r 6623 A"
+                    buy = "BUY 3 CORREZIONE FIAT - che non e' un forte ribasso e non e' un crollo - con 450> - r 6623 A"
                     action = "buy"
                     percentage = 80
 
                     #  7 mag 2025 aggiunta questa con 450>
-
+                    # 12 mag 2025 and deviation_ma3_sotto_ma50 a -0.40 da -0.30
 
 
                 elif (
