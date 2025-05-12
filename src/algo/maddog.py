@@ -14292,10 +14292,42 @@ class maddog:
                     # 21 set 2024 fatta altra modifica forse da cancellare
 
 
-                # BUY 2 migliore che considera distanza 5-300 AND dev 10-200 < -0.24
+                
 
                 
-                
+                elif (    
+                    ma3_last > ma18_last
+
+                    and (ma39_last < ma100_last or ma100_last < ma100_10_min_ago)
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.12
+                    and deviation_ma3_sotto_ma50 < -0.10
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.13
+
+                    and ma300_last < ma300_180_min_ago
+                    
+                    and ma450_last > ma450_720_min_ago
+
+                    and deviation_ma300_sopra_ma450 < 0.02
+                    and deviation_ma300_sopra_ma450 > -0.02
+                    
+                    and deviation_ma100_sopra_ma300 < 0.35
+                    and deviation_ma100_sopra_ma300 > -0.35
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    
+                    and macd > -100
+                    and macd_differenza_2_min_ago > -18.50
+                    
+                ):
+                    buy = "BUY 2 TREND LATERALE MA 39<100 or 100 scende da 10 min - ritracciamento - r 4711"
+                    action = "buy"
+                    percentage = 80
+
+                    # 12 mag 2025 aggiunta questa che mancava
+
+
+
+
                 elif (    
                     ma3_last > ma18_last
                   
