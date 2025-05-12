@@ -57493,12 +57493,16 @@ class maddog:
                 # 17 set 2024 and deviation_sell < -0.04 da < -0.03
 
 
+
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
+                and ma100_last > ma200_last
+                and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.07
+                and deviation_sell < -0.01
+
                 and ma450_last < ma450_10_min_ago
                 and ma100_last < ma300_last
-                and ma100_last > ma200_last
-
+                
                 and ma100_last < ma100_30_min_ago
                 and ma13_last <= ma13_2_min_ago
 
@@ -57512,11 +57516,44 @@ class maddog:
             
             ):
 
-                sell = "SELL CS - DOLCE ATTESA 270 sec and ma13 < and con 450 < E 100<100 30 min ago MA 100>200 - r 16694 B2y1"
+                sell = "SELL CS - DA 270 sec E ma13< E 450< E 100<100 30 min ago MA 100>200 E 100-100 10 min ago > -0.07 - r 16694 B2y1 y1"
                 action = "sell"
 
                 # 19 set 2024 con 100>200 aggiunto and ma2_last < ma5_last cioe' aspetta ancora un pochino
                 # 19 set 2024 forse in futuro dovrai mettere and ma2_last < ma6_last cioe' aspetta un pochino di piu'
+                # 12 mag 2025 se 100 non scende di molto allora aggiungo deviation_sell < -0.01
+                # DA = DOLCE ATTESA
+
+
+            elif (
+                seconds_since_last_trade > max_hold_time_in_seconds
+                and ma100_last > ma200_last
+                and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.07
+
+                and ma450_last < ma450_10_min_ago
+                and ma100_last < ma300_last
+                
+                and ma100_last < ma100_30_min_ago
+                and ma13_last <= ma13_2_min_ago
+
+                and deviation_ma100_sopra_ma200 > -0.70
+                and deviation_ma100_sopra_ma300 < 0.50
+
+                and ma3_last <= ma3_2_min_ago
+                and ma2_last < ma5_last
+                and ma2_last < last_trade_price
+                and ma2_last <= ma2_2_min_ago
+            
+            ):
+
+                sell = "SELL CS - DA 270 sec and ma13< E 450< E 100<100 30 min ago E 100-100 10 min ago < -0.07 MA 100>200 - r 16694 B2y1 y2"
+                action = "sell"
+
+                # 19 set 2024 con 100>200 aggiunto and ma2_last < ma5_last cioe' aspetta ancora un pochino
+                # 19 set 2024 forse in futuro dovrai mettere and ma2_last < ma6_last cioe' aspetta un pochino di piu'
+                # 12 mag 2025 aggiunto and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.07
+
+
 
 
 
