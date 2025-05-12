@@ -2155,8 +2155,8 @@ class maddog:
 
                     and (ma20_last > ma40_last or ma50_last > ma100_last)
 
-                    and ma100_last > ma200_last
-                    and (ma300_last > ma300_301_min_ago or ma39_last > ma200_last)
+                    and (ma100_last > ma200_last or deviation_ma50_sotto_ma100 > -0.10)
+                    and (ma300_last > ma300_301_min_ago or ma39_last > ma100_last or ma39_last > ma200_last)
 
                     and deviation_ma3_sopra_ma10 > 0.01
                     
@@ -2176,7 +2176,7 @@ class maddog:
                     #  9 mag 2025 forse 300> 5 ore faceva arrivare tardi allora proprio accanto a questa condizione ho messo or 39>200
                     #  9 mag 2025 tenendo comunque ferma la 100>200
                     # 11 mag 2025 ho aggiunto anche or 50>100 per evitare che compri durante il ribasso
-
+                    # 12 mag 2025 aggiunta or deviation_ma50_sotto_ma100 > -0.10
 
 
                 elif (  
