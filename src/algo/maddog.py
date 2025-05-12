@@ -803,10 +803,20 @@ class maddog:
 
 
 
+
+        # formula DEVIATION_ma100_sopra_o_sotto_ma100_60_min_ago !
+        
+        deviation_ma100_sopra_o_sotto_ma100_60_min_ago = (ma100_last / ma100_60_min_ago - 1) * 100 if ma100_60_min_ago else 0
+        self.algo_helper.info("deviation_ma100_sopra_o_sotto_ma100_60_min_ago: {}".format(deviation_ma100_sopra_o_sotto_ma100_60_min_ago))
+
+
+
         # formula DEVIATION_ma100_sopra_o_sotto_ma100_300_min_ago !
         
         deviation_ma100_sopra_o_sotto_ma100_300_min_ago = (ma100_last / ma100_300_min_ago - 1) * 100 if ma100_300_min_ago else 0
         self.algo_helper.info("deviation_ma100_sopra_o_sotto_ma100_300_min_ago: {}".format(deviation_ma100_sopra_o_sotto_ma100_300_min_ago))
+
+
 
         
         # formula DEVIATION_ma10_sopra_o_sotto_ma10_30_min_ago !
@@ -42966,8 +42976,35 @@ class maddog:
                         
                        
                         
-                    ######################################################################################## trend discendente con POCA PERDITA TOLLERATA
                     
+                    elif (
+                        ma78_last > ma78_120_min_ago
+                        and deviation_ma100_sopra_o_sotto_ma100_60_min_ago > 0.20
+                        and ma5_last < ma300_last
+                        
+
+                        and ma50_last < ma50_2_min_ago
+                        and ma50_last < ma59_last 
+                        
+                        
+                        and deviation_ma39 < 0.08
+                        
+                        and deviation_ma5_sotto_ma200 > -0.80
+                
+                        and ma2_last < ma2_2_min_ago
+                        and macd_differenza_2_min_ago < -0.30
+                    ):
+                        sell = "SELL 2 (60-90 min) con 50<59 e 5<300 con 100 che se ngricca no poco - r 12020"
+                        action = "sell"
+
+                        # 12 mag 2025 aggiunta questa.
+                        # 12 mag 2025 se 100 se ngricca no poco e 5 va sotto 300 vendi.
+
+
+
+
+                    ######################################################## trend discendente con POCA PERDITA TOLLERATA
+
                     elif (
                         ma50_last < ma50_2_min_ago
                         and deviation_ma100_sopra_ma300 > 0.25
