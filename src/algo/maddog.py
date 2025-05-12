@@ -23692,6 +23692,8 @@ class maddog:
                     ma3_last > ma18_last
 
                     and ma25_last < ma25_60_min_ago
+                    and deviation_ma3_sotto_ma50 < -0.13
+
                     and deviation_ma5_sotto_ma300 > -0.50
                     
                     and ma100_last < ma100_120_min_ago
@@ -23718,8 +23720,8 @@ class maddog:
                     # 15 apr 2025 anticipato ndecchiecella 
                     # 26 apr 2025 3-18 da 5-54 perche' da questo buy un po' piu' basso e' dipeso il rialzo successivo
                     # 26 apr 2026 questa ci deve stare si tratta di aggiungere un po' di distanza al ribasso
-
-
+                    # 12 mag 2025 e' andata benissimo
+                    # 12 mag 2025 aggiunto, comunque, and deviation_ma3_sotto_ma50 < -0.13
 
 
                     
@@ -25276,6 +25278,8 @@ class maddog:
                 elif (    
                     ma300_last < ma300_301_min_ago
                     and deviation_ma50_sopra_o_sotto_ma50_90_min_ago < -0.015
+                    and deviation_ma3_sotto_ma50 < -0.13
+
                     and ma100_last > ma300_last
                     
                     and deviation_ma3_sopra_ma10 > 0.01
@@ -25284,7 +25288,7 @@ class maddog:
                     
                     and macd_differenza_2_min_ago > -18.50
                 ):
-                    buy = "BUY 3 con 100>300 and macd_differenza_2_min_ago > -18.50 - r 6599 A2x2"
+                    buy = "BUY 3 con 100>300 and macd_differenza_2_min_ago > -18.50 and 3-50 < -0.13 - r 6599 A2x2"
                     action = "buy"
                     percentage = 80
                     
@@ -25292,6 +25296,8 @@ class maddog:
                     # 18 dic 2023 aggiunta and ma2_differenza_2_min_ago > 0.02
                     # 18 dic 2023 aggiunta and macd_differenza_2_min_ago > 1.10
                     # 27 mar 2025 anticipata ndecchiecella togliendo sovrastrutture
+                    # 12 mag 2025 aggiunta and deviation_ma3_sotto_ma50 < -0.13
+
 
 
 
@@ -27387,20 +27393,22 @@ class maddog:
                     # 28 set 2023 tolto 5-54
                     # 12 dic 2023 4-39 con aggiunta 3-10 and 3-16
 
-              
+
+
+
+
                 elif (
                     ma3_last > ma18_last
                     
-                    and ma5_last > ma20_last
-                    
                     and ma450_last < ma450_300_min_ago
+                    and deviation_ma50_sopra_o_sotto_ma50_90_min_ago > -0.015
+                    
                     and (ma300_last > ma300_60_min_ago or delta_1 < delta_2)
                     
-                    and deviation_ma250_sopra_ma300 < 0.20
-                    and deviation_ma250_sopra_ma300 > -0.20
+                    and deviation_ma250_sopra_ma300 < 0.25
+                    and deviation_ma250_sopra_ma300 > -0.25
                     
                     and deviation_ma3_sopra_ma10 > 0.01
-                    and deviation_ma3_sopra_ma16 > -0.077
                     
                     and ma2_last > ma5_last
                     and ma3_last > ma8_last
@@ -27408,9 +27416,36 @@ class maddog:
                     and macd_differenza_2_min_ago > -18.50
                     
                 ):
-                    buy = "BUY 4 RIVOLUZIONARIO situazione laterale con ma10_last > ma20_last - r 6859 B2 X"
+                    buy = "BUY 4 situazione laterale con ma10_last > ma20_last and 3-50 < -0.13 - r 6859 B2 X1"
                     action = "buy"
-                    percentage = 70
+                    percentage = 80
+
+
+
+
+                elif (
+                    ma3_last > ma18_last
+                    
+                    and ma450_last < ma450_300_min_ago
+                    and deviation_ma50_sopra_o_sotto_ma50_90_min_ago < -0.015
+                    and deviation_ma3_sotto_ma50 < -0.13
+
+                    and (ma300_last > ma300_60_min_ago or delta_1 < delta_2)
+                    
+                    and deviation_ma250_sopra_ma300 < 0.25
+                    and deviation_ma250_sopra_ma300 > -0.25
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    
+                    and ma2_last > ma5_last
+                    and ma3_last > ma8_last
+                    
+                    and macd_differenza_2_min_ago > -18.50
+                    
+                ):
+                    buy = "BUY 4 situazione laterale con ma10_last > ma20_last and 3-50 < -0.13 - r 6859 B2 X2"
+                    action = "buy"
+                    percentage = 80
                     
                     # deviation_buy3 = ma4_last/ma30_last
                     # deviation_ma4_sopra_ma100 > 0.25 arrivati al buy 4 DEVE AVERE UNA CERTA FORZA !
@@ -27430,6 +27465,10 @@ class maddog:
                     # 16 set 2024 and deviation_ma250_sopra_ma300 > -0.15 da > -0.13
                     # 27 mar 2025 anticipata ndecchiecella
                     # 30 apr 2025 aggiunto or delta_1 < delta_2 nel tentativo modesto di anticipare ancora un po'.
+                    # 12 mag 2025 aggiunto and deviation_ma50_sopra_o_sotto_ma50_90_min_ago < -0.015 
+                    # 12 mag 2025 aggiunto and deviation_ma3_sotto_ma50 < -0.13
+
+
 
 
                 elif (
@@ -39602,7 +39641,7 @@ class maddog:
 
                         and ma450_last < ma450_360_min_ago
 
-                        and ma3_last < ma49_last
+                        and ma3_last < ma59_last
                         and deviation_sell > 0.30
                         
                         and deviation_trend_ma200 > -0.15
@@ -39611,10 +39650,12 @@ class maddog:
                         and macd < macd_2_min_ago
                         and macd < -3
                     ):
-                        sell = "SELL 1 (110-239 min) con ma450 < 6 ore MA DNA GIORNO E 300 > 120 min e ma50< e dev_sell > 0.30 - r 10274 A1 Y1"
+                        sell = "SELL 1 (110-239 min) con 3-59 e con 450<6 ore MA DNA GIORNO E 300>120 min e ma50< e dev_sell>0.30 - r 10274 A1 Y1"
                         action = "sell"
 
                         #  7 apr 2025 aggiunta DNA GIORNO - lascialo correre !
+                        # 12 mag 2025 3-59 da 3-49
+
 
 
                     elif (     
