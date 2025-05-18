@@ -2166,13 +2166,32 @@ class maddog:
             # BUY 1 con "percentage" 20 -30 - x
             
             if self.session == 1:
-                
-            
-                # ------------------------------------------------------------ BUY 1 DURANTE IL RIALZO con INCROCIO CLASSICO 69-100 and ma78 >
-
+               
                 if (  
-                    ma3_last > ma8_last
+                    ma3_last > ma16_last
+                    
+                    and ma450_last > ma450_360_min_ago
+                    and ma78_last > ma150_last
+                    
+                    and deviation_ma3_sotto_ma100 > -0.01
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    
+                    and ma3_last > ma9_last
+                    
+                    and ma2_last >= ma2_2_min_ago
+                ):    
+              
+                    buy = "BUY 1 con ma450_last > ma450_360_min_ago e 78>150 del 18 mag 2025 - r 915"
+                    action = "buy"
+                    percentage = 90
 
+                    # 18 mag 2025 aggiunta da RCCR e aggiunta anche in buy 5
+
+
+                elif (  
+                    
+                    ma3_last > ma8_last
                     and ma50_last > ma100_last
 
                     and ma100_last > ma200_last
@@ -2181,6 +2200,7 @@ class maddog:
                     and deviation_ma3_sopra_ma10 > 0.01
                     
                     and macd_differenza_2_min_ago > -18.50
+
                 ):    
               
                     buy = "BUY 1 con ma300_last > ma300_301_min_ago e 100>200 - r 916 A1 x1 X1 x"
@@ -34471,6 +34491,28 @@ class maddog:
                     
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     # questa cosa che 78 deve essere < 200 ha dell' incredibile. MA NON TOCCARE !
+
+
+                if (  
+                    ma3_last > ma16_last
+                    
+                    and ma450_last > ma450_360_min_ago
+                    and ma78_last > ma150_last
+                    
+                    and deviation_ma3_sotto_ma100 > -0.01
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    
+                    and ma3_last > ma9_last
+                    
+                    and ma2_last >= ma2_2_min_ago
+                ):    
+              
+                    buy = "BUY 5 con ma450_last > ma450_360_min_ago e 78>150 del 18 mag 2025 - r 7594"
+                    action = "buy"
+                    percentage = 90
+
+                    # 18 mag 2025 aggiunta da RCCR
 
 
 
