@@ -28244,9 +28244,9 @@ class maddog:
                     #  5 ott 2023 and macd >= macd_2_min_ago
 
                     
-                
                 elif (    
                     ma3_last > ma13_last
+                    and ma50_last > ma100_last
 
                     and (ma450_last >= ma450_120_min_ago or ma300_last > ma300_360_min_ago)
 
@@ -28257,14 +28257,41 @@ class maddog:
                     
                     and deviation_ma3_sopra_ma10 > 0.01
                     
-                    and macd_differenza_2_min_ago > -8.50
+                    and macd_differenza_2_min_ago > -18.50
                 ):
-                    buy = "BUY 5 nuova condizione che mancava e che ci deve stare con incrocio 3-140 - r 7040 A"
+                    buy = "BUY 5 nuova condizione che mancava e che ci deve stare con incrocio 3-140 CON 50>100 - r 7040 Ax"
                     action = "buy"
                     percentage = 70
 
                     # 15 apr 2025 aggiunta questa nuova condizione ! BTC si e' impennato e non e' partita neanche una condizione !
                     # 15 apr 2025 e' andata benissimo su RCCR
+
+
+                elif (    
+                    ma3_last > ma13_last
+                    and ma50_last < ma100_last
+                    and deviation_ma3_sotto_ma50 < -0.10
+
+                    and (ma450_last >= ma450_120_min_ago or ma300_last > ma300_360_min_ago)
+
+                    and (ma3_prev < ma140_prev and ma3_last > ma140_last)
+                    
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.13
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    
+                    and macd_differenza_2_min_ago > -18.50
+                ):
+                    buy = "BUY 5 nuova condizione che mancava e che ci deve stare con incrocio 3-140 CON 50<100 ritracciamento - r 7040 Ay"
+                    action = "buy"
+                    percentage = 70
+
+                    # 15 apr 2025 aggiunta questa nuova condizione ! BTC si e' impennato e non e' partita neanche una condizione !
+                    # 15 apr 2025 e' andata benissimo su RCCR
+                    # 18 mag 2025 non e' andata bene e ho fatto questa modifica
+                    # 18 mag 2025 se 50<100 ritracciamento 3-50 < -0.10
+
 
 
 
@@ -52288,9 +52315,13 @@ class maddog:
                 #  6 apr 2025 aggiunta questa con 50>
                 
 
+
+
             elif (
                 ma8_last <= ma8_2_min_ago
-                
+                and ma3_last < ma33_last
+                and ma20_last > ma50_last
+
                 and deviation_ma39 < 0.05
                 and deviation_sell < -0.04
                 
@@ -52302,10 +52333,29 @@ class maddog:
                 
                 and deviation_ma3_sotto_ma150 > -1.20
 
+            ):
+                sell = "SELL C.S. con ma50 < MA ma100 sopra ma300 > 0.10 e dev 3-39 < 0.05 e dev sell < -0.04 con 20>50 - r 15985 A1 ok 2B Y2x"
+                action = "sell"
+
+
+            elif (
+                ma8_last <= ma8_2_min_ago
                 and ma3_last < ma33_last
+                and ma20_last < ma50_last
+
+                and deviation_ma39 < 0.05
+                and deviation_sell < -0.037
+                
+                and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago > 1.50
+                
+                and delta_450_300 < delta_450_300_60_min
+                and ma50_last <= ma50_2_min_ago
+                and deviation_ma100_sopra_ma300 > 0.10
+                
+                and deviation_ma3_sotto_ma150 > -1.20
 
             ):
-                sell = "SELL C.S. con ma50 < MA ma100 sopra ma300 > 0.10 e dev 3-39 < 0.05 e dev sell < -0.04 - r 15985 A1 ok 2B Y2"
+                sell = "SELL C.S. con ma50 < MA ma100 sopra ma300 > 0.10 e dev 3-39 < 0.05 e dev sell < -0.037 con 20<50 - r 15985 A1 ok 2B Y2y"
                 action = "sell"
                 
                 # 18 set 2023 dev sell -0.02 da -0.01
@@ -52325,6 +52375,10 @@ class maddog:
                 # 24 mar 2025 tolto ma2 < ma2 2 min ago
                 # 24 mar 2025 and deviation_sell < -0.043 da -0.045
                 #  6 apr 2025 and deviation_sell < -0.04 da -0.043
+                # 18 mag 2025 se anche 20<50 dev sell a -0.037 da -0.04
+
+
+
 
 
 
