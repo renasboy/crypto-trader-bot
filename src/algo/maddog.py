@@ -52337,6 +52337,26 @@ class maddog:
                 sell = "SELL C.S. con ma50 < MA ma100 sopra ma300 > 0.10 e dev 3-39 < 0.05 e dev sell < -0.04 con 20>50 - r 15985 A1 ok 2B Y2x"
                 action = "sell"
 
+                # 18 set 2023 dev sell -0.02 da -0.01
+                # 18 set 2023 dev 39 da 0.01 da -0.01
+                # 17 OTT 2023 NON METTERE MACD <  MACD 2 MIN AGO
+                # 17 ott 2023 and macd_differenza_2_min_ago < -0.25
+                #  9 nov 2023 and deviation_ma10_sopra_o_sotto_ma10_30_min_ago < 0.12 da < 0.10
+                # 15 nov 2023 dev 39 a 0.05 da 0.01
+                # 15 nov 2023 ma50 <
+
+                #  6 mar 2024 and delta_450_300 < delta_450_300_60_min significa che e' GIORNO
+                #  6 mar 2024 and deviation_sell < -0.04 da -0.03
+                #  9 set 2024 aggiunta 3<33
+                # 10 set 2024 and deviation_sell < -0.045 da -0.04
+                # 10 set 2024 and macd_differenza_2_min_ago < -1.25 da < -0.25
+                # 24 mar 2025 ha fatto -0.81% il giorno 19 mar 2025
+                # 24 mar 2025 tolto ma2 < ma2 2 min ago
+                # 24 mar 2025 and deviation_sell < -0.043 da -0.045
+                #  6 apr 2025 and deviation_sell < -0.04 da -0.043
+                # 18 mag 2025 se 20>50 dev sell ok cosi' - per adesso -
+
+
 
             elif (
                 ma8_last <= ma8_2_min_ago
@@ -52358,23 +52378,6 @@ class maddog:
                 sell = "SELL C.S. con ma50 < MA ma100 sopra ma300 > 0.10 e dev 3-39 < 0.05 e dev sell < -0.037 con 20<50 - r 15985 A1 ok 2B Y2y"
                 action = "sell"
                 
-                # 18 set 2023 dev sell -0.02 da -0.01
-                # 18 set 2023 dev 39 da 0.01 da -0.01
-                # 17 OTT 2023 NON METTERE MACD <  MACD 2 MIN AGO
-                # 17 ott 2023 and macd_differenza_2_min_ago < -0.25
-                #  9 nov 2023 and deviation_ma10_sopra_o_sotto_ma10_30_min_ago < 0.12 da < 0.10
-                # 15 nov 2023 dev 39 a 0.05 da 0.01
-                # 15 nov 2023 ma50 <
-
-                #  6 mar 2024 and delta_450_300 < delta_450_300_60_min significa che e' GIORNO
-                #  6 mar 2024 and deviation_sell < -0.04 da -0.03
-                #  9 set 2024 aggiunta 3<33
-                # 10 set 2024 and deviation_sell < -0.045 da -0.04
-                # 10 set 2024 and macd_differenza_2_min_ago < -1.25 da < -0.25
-                # 24 mar 2025 ha fatto -0.81% il giorno 19 mar 2025
-                # 24 mar 2025 tolto ma2 < ma2 2 min ago
-                # 24 mar 2025 and deviation_sell < -0.043 da -0.045
-                #  6 apr 2025 and deviation_sell < -0.04 da -0.043
                 # 18 mag 2025 se anche 20<50 dev sell a -0.037 da -0.04
 
 
@@ -60090,8 +60093,9 @@ class maddog:
                 # 20 set 2022 ho aumentato SOLO LA dev sell a -0.23 !
                 # 15 nov 2022 dev sell -0.24 da -0.23
                 # 18 nov 2022 dev sell -0.26 da -0.24
-                
-                
+
+
+
                 
             # 47 SELL condizione speciale RIMBALZO CHE ARRIVA FINO ALLA ma300 MA LA 100 E' MOLTO DISTANTE quindi non vende mentre si riavvicinano 
                      
@@ -60111,8 +60115,61 @@ class maddog:
                 # questa condizione e' un capolavoro
                 # prima era incrocio verso l' alto 3-300 durante un ribasso
                 # 14 ottobre 2022 incrocio verso il basso 3-285 e ma3 < ma8
-                # 16 mar 2023 5-39 da 3-8      
+                # 16 mar 2023 5-39 da 3-8  
+
+
+
+
+            # 48 SELL 18 mag 2025 GP II condizione speciale vendita dopo 8 min con guadagno durante consolidato trend ribassista
+
+            elif (
+                seconds_since_last_trade > max_hold_time_in_seconds
+
+                and ma20_last < ma50_last
+                and (ma5_prev > ma20_prev and ma5_last < ma20_last)
+                and deviation_sell < 0.10
+
+                and ma300_last < ma300_120_min_ago
+                and deviation_ma5_sopra_o_sotto_ma5_120_min_ago < -0.50
+                and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.03
+                and ma5_last < ma100_last
+                and ma5_last < ma200_last
+                and ma5_last < ma300_last
+                and ma100_last < ma200_last
+                and ma200_last < ma300_last
+
+            ):
+                sell = "SELL CS 18 mag 2025 GP II vendita dopo 8 min con guadagno durante consolidato trend ribassista SE 20 STA ANCORA SOTTO 50 - r 16937 A"
+                action = "sell"
                 
+                # questa condizione e' un capolavoro
+                # 18 mag 2025 GP II
+                # interviene dopo 270 secondi (4 min e 1/2)
+
+                
+                      
+            elif (
+                seconds_since_last_trade > max_hold_time_in_seconds
+
+                and (ma20_prev > ma50_prev and ma20_last < ma50_last)
+                and deviation_sell < 0.10
+
+                and ma300_last < ma300_120_min_ago
+                and deviation_ma5_sopra_o_sotto_ma5_120_min_ago < -0.50
+                and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.03
+                and ma5_last < ma100_last
+                and ma5_last < ma200_last
+                and ma5_last < ma300_last
+                and ma100_last < ma200_last
+                and ma200_last < ma300_last
+
+            ):
+                sell = "SELL CS 18 mag 2025 GP II vendita dopo 8 min con guadagno durante consolidato trend ribassista SE 20 INCROCIA AL RIBASSO 50  - r 16937 B"
+                action = "sell"
+                
+                # questa condizione e' un capolavoro
+                # 18 mag 2025 GP II
+                # interviene dopo 270 secondi (4 min e 1/2)
                 
                 
                 
