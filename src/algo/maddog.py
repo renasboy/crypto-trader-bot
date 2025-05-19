@@ -1560,9 +1560,12 @@ class maddog:
         
         
         # formula deviation trend ma100
-        
         deviation_trend_ma100_180_min_ago = (ma100_last / ma100_180_min_ago - 1) * 100 if ma100_180_min_ago else 0
         self.algo_helper.info("deviation_trend_ma100_180_min_ago: {}".format(deviation_trend_ma100_180_min_ago))
+
+
+        deviation_trend_ma100_300_min_ago = (ma100_last / ma100_300_min_ago - 1) * 100 if ma100_300_min_ago else 0
+        self.algo_helper.info("deviation_trend_ma100_300_min_ago: {}".format(deviation_trend_ma100_300_min_ago))
         
         
         # formula deviation trend ma200
@@ -18002,8 +18005,10 @@ class maddog:
 
                     and (ma200_last > ma200_20_min_ago or delta_1 < delta_2)
                     
-                    and deviation > -0.50
-                    and deviation_ma39 < -0.05
+                    and deviation_ma39 < -0.123
+                    and deviation_ma3_sotto_ma50 < -0.15
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.25
+                    and deviation_ma25_sotto_ma300 < -0.25
 
                     and deviation_ma3_sopra_ma10 > 0.01
                     
@@ -18012,7 +18017,7 @@ class maddog:
                     and macd_differenza_2_min_ago > -18.50
                 ):  
                 
-                    buy = "BUY 2 con ma300<ma450 MA ma450_last > ma450_180_min_ago MA ma200 sale da 20 min - r 5829 B2y"
+                    buy = "BUY 2 con 300<450 MA ma450 > ma450_180_min MA ma200 sale da 20 min con dev39 < -0.123 e 3-50 < -0.15 - r 5829 B2y"
                     action = "buy"
                     percentage = 80
                     
@@ -18023,6 +18028,11 @@ class maddog:
                     # 27 feb 2025 se anche ma450_last < ma450_180_min_ago ok cosi'
                     # 30 apr 2025 aggiunta and deviation_ma39 < -0.05
                     # 30 apr 2025 aggiunta or delta_1 < delta_2
+                    # 19 mag 2025 and deviation_ma39 < -0.123
+                    # 19 mag 2025 and deviation_ma3_sotto_ma50 < -0.15
+                    # 19 mag 2025 and deviation_ma5_sopra_o_sotto_ma100 < -0.25
+                    # 19 mag 2025 and deviation_ma25_sotto_ma300 < -0.25
+
 
                     
                 # BUY 2 con ma200 che sale da 60 min etc. importata dal BUY 3 RCCR
@@ -44375,7 +44385,6 @@ class maddog:
                     
                     ########################################################################################## AUMENTA PERDITA TOLLERATA e divido in 2 il compa
                     
-                    
                     elif (  
                         ma50_last < ma50_2_min_ago 
                         and ma2_last < ma2_2_min_ago 
@@ -44386,6 +44395,23 @@ class maddog:
                     ):
                         sell = "SELL 2 compa 90-110 min  con ma50 < con deviation_ma39 <-0.235 con > PERDITA TOLLERATA - r 12425"
                         action = "sell"
+
+
+
+                    elif (  
+                        ma50_last < ma50_2_min_ago 
+                        
+                        and deviation_trend_ma100_300_min_ago > 1.00
+                        and ma5_last < ma200_last
+                        
+                        and ma200_last > ma300_last
+                        and ma200_last > ma450_last
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 2 compa 90-110 min con ma50< e 5<200 durante un trend al rialzo - r 12426"
+                        action = "sell"
+
+                        # 19 mag 2025 aggiunta questa perche' la precedente aveva venduto troppo tardi.
                         
                         
                     elif (    
