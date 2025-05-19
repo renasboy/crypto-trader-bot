@@ -28068,7 +28068,7 @@ class maddog:
                     
                     and ma3_last > ma10_last
                     
-                    and macd_differenza_2_min_ago > -5.00
+                    and macd_differenza_2_min_ago > -15.00
              
                 ):
                     buy = "BUY 4 se 11>200 - r 7008 B"
