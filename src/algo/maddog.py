@@ -44,7 +44,7 @@ sell = f"SELL 4 deviation_ma39 {deviation_ma39} deviation_ma3_sotto_ma50 {deviat
 
                     SE VENDE MENTRE 20 E' ANCORA SOTTO 50 nei primi minuti intervengono le altre. per adesso non ho altra soluzione.
 
-
+                    and deviation_ma3_sotto_ma50 < -0.127
                     and deviation_ma50_sotto_ma100 > -0.15
                     and deviation_ma20_sotto_ma50 > -0.10
                     and (delta_1 < delta_2 or delta_DNA_1 < delta_DNA_2)
@@ -2915,32 +2915,67 @@ class maddog:
                     percentage = 50
 
                 
-
                 elif (    
                     ma3_last > ma15_last
                   
                     and delta_1 < delta_2
-                    
-                    and deviation_ma25_sotto_ma300 < -0.49
+                    and deviation_ma50_sotto_ma100 > -0.05
 
+                    and deviation_ma25_sotto_ma300 < -0.49
                     and deviation_ma5_sotto_ma300 < -0.40
                     and deviation_ma10_sopra_ma200 < -0.30
                     
                     and ma300_last < ma300_60_min_ago
                     and ma200_last < ma200_60_min_ago
+
+                    and deviation_ma39 < -0.10
+                    and deviation_ma3_sotto_ma50 < -0.10
                     
                     and deviation_ma3_sopra_ma10 > 0.01
                     
                     and macd_differenza_2_min_ago > -2.50
                  
                 ):
-                    buy = "BUY 1 GIORNO - che considera 5-300 e dev 10-200 < -0.30 - formula MY COMPA - r 1043 B1 NUOVA ERA A3 SOFT x"
+                    buy = "BUY 1 GIORNO - che considera 5-300 e dev 10-200 < -0.30 - formula MY COMPA - r 1043 B1 NUOVA ERA A3 SOFT x1"
                     action = "buy"
                     percentage = 80
 
                     # 27 gen 2025 se GIORNO-GIORNO aggiunta and deviation_ma25_sotto_ma300 < -0.49
                     # 11 mar 2025 anticipato ndecchiecella ma forse cancellare
+                    # 19 mag 2025 sto cercando di non cancellare. mi dispiace.
+                    # 19 mag 2025 e' giorno MA la ma50 deve stare piu' vicina alla ma100 !
+                    # 19 mag 2025 aggiunto ma39 < -0.10 
+                    # 19 mag 2025 aggiunto 3-50 < -0.10
 
+
+                elif (    
+                    ma3_last > ma15_last
+                  
+                    and delta_1 > delta_2
+                    
+                    and deviation_ma25_sotto_ma300 < -0.49
+                    and deviation_ma5_sotto_ma300 < -0.40
+                    and deviation_ma10_sopra_ma200 < -0.30
+                    
+                    and ma300_last < ma300_60_min_ago
+                    and ma200_last < ma200_60_min_ago
+
+                    and deviation_ma39 < -0.22
+                    and deviation_ma3_sotto_ma50 < -0.20
+                    and deviation_ma50_sotto_ma100 < -0.15
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    
+                    and macd_differenza_2_min_ago > -2.50
+                 
+                ):
+                    buy = "BUY 1 NOTTE ! - che considera 5-300 e dev 10-200 < -0.30 - formula MY COMPA - r 1043 B1 NUOVA ERA A3 SOFT x2"
+                    action = "buy"
+                    percentage = 80
+
+                    # 27 gen 2025 se GIORNO-GIORNO aggiunta and deviation_ma25_sotto_ma300 < -0.49
+                    # 11 mar 2025 anticipato ndecchiecella ma forse cancellare
+                    # 19 mag 2025 aggiunta questa con NOTTE che secondo me andra' meglio della precedente. che sto cercando di non cancellare.
 
 
                 elif (    
@@ -15786,7 +15821,10 @@ class maddog:
                     and ma200_last < ma200_120_min_ago
                     and ma300_last > ma300_301_min_ago
 
-                    and deviation_ma39 < -0.05
+                    and deviation_ma39 < -0.22
+                    and deviation_ma3_sotto_ma50 < -0.20
+                    and deviation_ma50_sotto_ma100 < -0.15
+
                     and deviation_ma3_sopra_ma10 > 0.01
                    
                     and macd_differenza_2_min_ago > -18.50
@@ -15798,8 +15836,10 @@ class maddog:
                     
                     # deviation_buy2 = ma8_last / ma50
                     # incrocio va bene nel trend laterale NON TOCCARLO ! ho messo incrocio per evitare punti sopvrapposti
-                    # 1 feb 2023 aggiunto 5-28 > 0.12
-                    
+                    #  1 feb 2023 aggiunto 5-28 > 0.12
+                    # 19 mag 2025 3-39 < -0.22
+                    # 19 mag 2025 3-50 < -0.20
+                    # 19 mag 2025 dev 50-100 < -0.15
                     
                     
                 # IL BUY 2 CI RIPROVA CON INCROCIO 8-50
