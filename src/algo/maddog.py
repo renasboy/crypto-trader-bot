@@ -21090,17 +21090,16 @@ class maddog:
 
                     
                 elif (
-                    ma3_last < ma20_last
+                    ma3_last > ma20_last
                    
                     and ma300_last < ma450_last
-                    
+                    and deviation_ma39 < -0.03
                     and (ma200_last > ma200_60_min_ago or delta_1 < delta_2)
-                    and deviation > -0.50
-
-                    and ma10_last >= ma10_2_min_ago
+                    and deviation > -0.70
 
                     and deviation_ma3_sopra_ma10 > 0.01
-                    
+
+                    and ma5_last > ma10_last
                     and ma3_last > ma13_last
                     and ma3_last > ma9_last
 
@@ -21114,7 +21113,7 @@ class maddog:
                     # deviation_buy3 = ma4_last/ma30_last
                     # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
                     # 30 apr 2025 anticipata ndecchiecella
-
+                    # 19 mag 2025 aggiunta and deviation_ma39 < -0.03
 
 
                 # 22 set 2024 CANCELLATA r 6017
