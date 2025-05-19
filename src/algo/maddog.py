@@ -60226,7 +60226,7 @@ class maddog:
                 and ma200_last < ma300_last
 
             ):
-                sell = "SELL CS 18 mag 2025 GP II vendita dopo 8 min con guadagno durante consolidato trend ribassista SE 20 STA ANCORA SOTTO 50 - r 16937 A"
+                sell = f"SELL delta_GPII_1 {delta_GPII_1} delta_GPII_2 {delta_GPII_2} delta_MC_1 {delta_MC_1} delta_MC_2 {delta_MC_2} CS 18 mag 2025 GP II vendita dopo x min con guadagno durante consolidato trend ribassista SE 20 STA ANCORA SOTTO 50 - r 16937 A"
                 action = "sell"
                 
                 # questa condizione e' un capolavoro
@@ -60237,6 +60237,8 @@ class maddog:
                 # 19 mag 2025 aggiunta and delta_MC_1 > delta_MC_2 notte. - 10 min -
                 # 19 mag 2025 DEVE ESSERE NOTTE ! se e' giorno statte fermo !
                 # 19 mag 2025 vedi r 1160 r
+                # 19 mag 2025 aggiungo parentesi graffe !
+
 
                       
             elif (
