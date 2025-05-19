@@ -34,6 +34,16 @@ sell = f"SELL 4 deviation_ma39 {deviation_ma39} deviation_ma3_sotto_ma50 {deviat
 
 
 
+
+
+
+
+
+
+
+
+
+
 # 16 MAG 2025 ATTENZIONE ! DATA STORICA ! vendita in guadagno mentre scende r 11633 Y2
 
                     dopo 20 minuti dall'ultimo BUY - LAST TRADE
@@ -1084,7 +1094,7 @@ class maddog:
         self.algo_helper.info("deviation_ma180_sopra_ma200: {}".format(deviation_ma180_sopra_ma200))
         
         
-        ######################################################################################################################### FORMULE D E L T A
+        ######################################################################################### FORMULE D E L T A
         
 
         # formula delta_100_200_last
@@ -1140,6 +1150,41 @@ class maddog:
         
         # delta_DNA_1 < delta_DNA_2 GIORNO !
         # delta_DNA_1 > delta_DNA_2 NOTTE !
+
+
+
+
+        # formula delta_GPII_1
+        
+        delta_GPII_1 = (ma100_last / ma50_last - 1) * 100 if ma50_last else 0
+        self.algo_helper.info("delta_GPII_1: {}".format(delta_GPII_1))
+        
+        
+        # formula delta_GPII_2
+        
+        delta_GPII_2 = (ma100_10_min_ago / ma50_10_min_ago - 1) * 100 if ma50_10_min_ago else 0
+        self.algo_helper.info("delta_GPII_2: {}".format(delta_GPII_2))
+        
+        
+        # delta_GPII_1 < delta_GPII_2 GIORNO !
+        # delta_GPII_1 > delta_GPII_2 NOTTE !
+
+
+
+        # formula delta_MC_1
+        
+        delta_MC_1 = (ma100_last / ma25_last - 1) * 100 if ma25_last else 0
+        self.algo_helper.info("delta_MC_1: {}".format(delta_MC_1))
+        
+        
+        # formula delta_MC_2
+        
+        delta_MC_2 = (ma100_10_min_ago / ma25_10_min_ago - 1) * 100 if ma25_10_min_ago else 0
+        self.algo_helper.info("delta_MC_2: {}".format(delta_MC_2))
+        
+        
+        # delta_MC_1 < delta_MC_2 GIORNO !
+        # delta_MC_1 > delta_MC_2 NOTTE !
 
 
         
@@ -60166,8 +60211,9 @@ class maddog:
                 seconds_since_last_trade > max_hold_time_in_seconds
 
                 and ma20_last < ma50_last
-                and (ma5_prev > ma20_prev and ma5_last < ma20_last)
+                and (ma5_prev > ma18_prev and ma5_last < ma18_last)
                 and deviation_sell < 0.10
+                and (delta_GPII_1 > delta_GPII_2 or delta_MC_1 > delta_MC_2)
 
                 and ma300_last < ma300_120_min_ago
                 and deviation_ma5_sopra_o_sotto_ma5_120_min_ago < -0.50
@@ -60185,8 +60231,12 @@ class maddog:
                 # questa condizione e' un capolavoro
                 # 18 mag 2025 GP II
                 # interviene dopo 270 secondi (4 min e 1/2)
+                # 19 mag 2025 5-18 da 5-20
+                # 19 mag 2025 aggiunta and delta_GPII_1 > delta_GPII_2 notte. - 10 min -
+                # 19 mag 2025 aggiunta and delta_MC_1 > delta_MC_2 notte. - 10 min -
+                # 19 mag 2025 DEVE ESSERE NOTTE ! se e' giorno statte fermo !
+                # 19 mag 2025 vedi r 1160 r
 
-                
                       
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
