@@ -6,12 +6,34 @@
 # ave compa !
 
 
-"""
+'''
+
 chiedi al compare come posso mettere in colonna questa riga lunga !
 
 buy = f"BUY 4 deviation_ma39 {deviation_ma39} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago} GIORNO con 300> E ma100>ma450 durante un ritracciamento in basso - r 6668 A1 Y2 yX"
 
-sell = f"SELL 4 deviation_ma39 {deviation_ma39} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago} GIORNO con 300> E ma100>ma450 durante un ritracciamento in basso - r 15898 X"
+0.12567896545774577
+
+sell = f"""SELL 4 GIORNO con 300> E ma100>ma450 durante un ritracciamento in basso - r 15898 X
+deviation_ma39 {deviation_ma39:.2f}
+deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.2f} 
+deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.2f} 
+deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.2f} 
+deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.2f} 
+"""
+
+
+
+
+sell = f"""SELL 4 
+deviation_ma39 {deviation_ma39:.2f}
+deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.2f} 
+deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.2f} 
+deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.2f} 
+deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.2f} 
+GIORNO con 300> E ma100>ma450 durante un ritracciamento in basso - r 15898 X"""
+
+
 
 
 
@@ -306,9 +328,9 @@ and macd_differenza_2_min_ago > -2.50
 
 
 
+'''
 
 
-"""
       
 
 
@@ -712,7 +734,11 @@ class maddog:
         # vedi SELL dolce attesa
         
         max_hold_time_in_seconds = 255
+
+
+        # vedi SELL PAPA GPII E PAPA RATZINGER
         
+        max_hold_time_in_seconds_papa = 300
         
         
         # vedi BUY 2 con il passare del tempo
@@ -22587,17 +22613,16 @@ class maddog:
                     and deviation_ma3_sotto_ma50 < -0.02
 
                     and ma450_last > ma450_720_min_ago
-                    and deviation_ma300_sopra_ma450 < 0.10
-                    and deviation_ma300_sopra_ma450 > -0.10
+                    and deviation_ma300_sopra_ma450 < 0.11
+                    and deviation_ma300_sopra_ma450 > -0.11
 
                     and ma200_last > ma200_60_min_ago
 
                     and ma3_last > ma7_last
                     
-                    
-                    and macd_differenza_2_min_ago > -2.50
+                    and macd_differenza_2_min_ago > -12.50
                 ):
-                    buy = "BUY 3 con ma450_last > ma450_720_min_ago e con ma200> e con ma100 che e' andata sopra ma200 + DNA - NOTTE - r 6447 A1y"
+                    buy = "BUY 3 con ma450_last > ma450_720_min_ago e con ma200> + DNA NOTTE - r 6447 A1y"
                     action = "buy"
                     percentage = 90
 
@@ -22605,7 +22630,7 @@ class maddog:
                     # 29 gen 2025 cancellato and ma2_last > ma2_2_min_ago e anticipato ndecchiecella
                     # 30 gen 2025 nel corridoio 300-450 puo' comprare prima
                     # 28 feb 2025 aggiunta DNA NOTTE
-
+                    # 21 mag 2025 e' andata bene
 
 
 
@@ -27485,8 +27510,37 @@ class maddog:
                
                 ##############################################################################################
                 
-                # BUY 4A con ma 78> e 300< ma 100>200
                 
+                elif (
+                    ma3_last > ma13_last
+
+                    and ma450_last > ma450_360_min_ago
+                    and delta_DNA_1 > delta_DNA_2
+                    and deviation_ma3_sotto_ma50 < -0.02
+
+                    and ma450_last > ma450_720_min_ago
+                    and deviation_ma300_sopra_ma450 < 0.11
+                    and deviation_ma300_sopra_ma450 > -0.11
+
+                    and ma200_last > ma200_60_min_ago
+
+                    and ma3_last > ma7_last
+                    
+                    and macd_differenza_2_min_ago > -12.50
+                ):
+                    buy = "BUY 4 con ma450_last > ma450_720_min_ago e con ma200> + DNA NOTTE - r 6800"
+                    action = "buy"
+                    percentage = 90
+
+                    # 29 gen 2025 sto cercando di risolvere il problema del trend laterale dopo un grande RIALZO
+                    # 29 gen 2025 cancellato and ma2_last > ma2_2_min_ago e anticipato ndecchiecella
+                    # 30 gen 2025 nel corridoio 300-450 puo' comprare prima
+                    # 28 feb 2025 aggiunta DNA NOTTE
+                    # 21 mag 2025 e' andata bene sul BUY 3 e pe ro 2 botte e' stata portata anche qui.
+
+
+                # BUY 4A con ma 78> e 300< ma 100>200
+
                 elif (
                     ma78_last >= ma78_2_min_ago
                     and ma300_last < ma300_60_min_ago
@@ -31714,7 +31768,7 @@ class maddog:
                     # se e' arrivato il buy 5 e' molto probabile che il trend sia consolidato
                     # e, a questo punto, non importa se compra con un + 0.10 piu' in alto. NON FA UNA GRANDE DIFFERENZA !
                     #  4 apr 2025 rallenta la discesa
-                    
+                    # 20 mag 2025 e' andata bene
                    
                 
                 
@@ -34635,6 +34689,34 @@ class maddog:
                     percentage = 90
 
                     # 18 mag 2025 aggiunta da RCCR
+
+
+                elif (
+                    ma3_last > ma13_last
+
+                    and ma450_last > ma450_360_min_ago
+                    and delta_DNA_1 > delta_DNA_2
+                    and deviation_ma3_sotto_ma50 < -0.02
+
+                    and ma450_last > ma450_720_min_ago
+                    and deviation_ma300_sopra_ma450 < 0.11
+                    and deviation_ma300_sopra_ma450 > -0.11
+
+                    and ma200_last > ma200_60_min_ago
+
+                    and ma3_last > ma7_last
+                    
+                    and macd_differenza_2_min_ago > -12.50
+                ):
+                    buy = "BUY 5 con ma450_last > ma450_720_min_ago e con ma200> + DNA NOTTE - r 7598"
+                    action = "buy"
+                    percentage = 90
+
+                    # 29 gen 2025 sto cercando di risolvere il problema del trend laterale dopo un grande RIALZO
+                    # 29 gen 2025 cancellato and ma2_last > ma2_2_min_ago e anticipato ndecchiecella
+                    # 30 gen 2025 nel corridoio 300-450 puo' comprare prima
+                    # 28 feb 2025 aggiunta DNA NOTTE
+                    # 21 mag 2025 e' andata bene sul BUY 3 e pe ro 2 botte e' stata portata anche qui.
 
 
 
@@ -60231,10 +60313,11 @@ class maddog:
 
 
 
-            # 48 SELL 18 mag 2025 GP II condizione speciale vendita dopo 8 min con guadagno durante consolidato trend ribassista
+            # 48 SELL papa GP II 18 mag 2025 - condizione speciale vendita dopo 5 min con guadagno durante consolidato trend ribassista
+            # max_hold_time_in_seconds_papa = 300
 
             elif (
-                seconds_since_last_trade > max_hold_time_in_seconds
+                seconds_since_last_trade > max_hold_time_in_seconds_papa
 
                 and ma20_last < ma50_last
                 and (ma5_prev > ma18_prev and ma5_last < ma18_last)
@@ -60251,12 +60334,17 @@ class maddog:
                 and ma200_last < ma300_last
 
             ):
-                sell = f"SELL delta_GPII_1 {delta_GPII_1} delta_GPII_2 {delta_GPII_2} delta_MC_1 {delta_MC_1} delta_MC_2 {delta_MC_2} CS 18 mag 2025 GP II vendita dopo x min con guadagno durante consolidato trend ribassista SE 20 STA ANCORA SOTTO 50 - r 16937 A"
+                sell = f"""SELL papa GP II 18 mag 2025 > 5 min con guadagno durante trend ribassista SE 20 STA ANCORA SOTTO 50 - r 16937 A
+                delta_GPII_1 {delta_GPII_1} 
+                delta_GPII_2 {delta_GPII_2}
+                delta_MC_1 {delta_MC_1} 
+                delta_MC_2 {delta_MC_2}
+                """
                 action = "sell"
                 
                 # questa condizione e' un capolavoro
-                # 18 mag 2025 GP II
-                # interviene dopo 270 secondi (4 min e 1/2)
+                # 18 mag 2025 papa GP II
+                # interviene dopo 300 secondi (5 min)
                 # 19 mag 2025 5-18 da 5-20
                 # 19 mag 2025 aggiunta and delta_GPII_1 > delta_GPII_2 notte. - 10 min -
                 # 19 mag 2025 aggiunta and delta_MC_1 > delta_MC_2 notte. - 10 min -
@@ -60264,10 +60352,17 @@ class maddog:
                 # 19 mag 2025 vedi r 1160 r
                 # 19 mag 2025 aggiungo parentesi graffe !
 
+                # 20 maggio spezzata la riga lunga - grazie compa !
 
-                      
+
+
+
+
+            # 49 SELL papa RATZINGER 18 mag 2025 - condizione speciale vendita dopo 5 min con guadagno durante consolidato trend ribassista
+            # max_hold_time_in_seconds_papa = 300
+            
             elif (
-                seconds_since_last_trade > max_hold_time_in_seconds
+                seconds_since_last_trade > max_hold_time_in_seconds_papa
 
                 and (ma20_prev > ma50_prev and ma20_last < ma50_last)
                 and deviation_sell < 0.10
@@ -60282,13 +60377,17 @@ class maddog:
                 and ma200_last < ma300_last
 
             ):
-                sell = "SELL CS 18 mag 2025 GP II vendita dopo 8 min con guadagno durante consolidato trend ribassista SE 20 INCROCIA AL RIBASSO 50  - r 16937 B"
+                sell = f"""SELL papa RATZINGER 18 mag 2025 > 5 min con guadagno trend ribassista SE 20 INCROCIA AL RIBASSO 50  - r 16937 B
+                ma20_last {ma20_last}
+                ma50_last {ma50_last}
+                """
                 action = "sell"
                 
                 # questa condizione e' un capolavoro
-                # 18 mag 2025 GP II
-                # interviene dopo 270 secondi (4 min e 1/2)
-                
+                # 18 mag 2025 papa RATZINGER
+                # interviene dopo 300 secondi (5 min)
+
+                # 20 maggio spezzata la riga lunga - grazie compa !
                 
                 
                
