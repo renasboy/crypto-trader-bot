@@ -46845,23 +46845,49 @@ class maddog:
                         # deviation_sell = ma3_last/last_trade_price
                         # 14 giu 2022 3-28 da 3-30
                         # 18 nov 2022 4-33 da 3-30 ( ho aggiunto se 10-200 > 1.00 )
+
+
+
                         
-                        
-                    elif (
-                        
+                    
+                    elif (    
                         ma50_last > ma50_2_min_ago
+                        and ma20_last > ma100_last
+
+                        and deviation_ma10_sopra_ma200 < 1.00
+                        and (ma3_prev > ma39_prev and ma3_last < ma39_last)
+                        and deviation_sell > 0.91 and deviation_sell < 1.20
+                        and ma2_last < ma2_2_min_ago
+                       
+                    ):
+                        sell = "SELL 3 (21-60 min) se 20>100 con ma50 > and incrocio 3-39 and deviation_sell 0.91 - 1.20 CON 10-200 < 1.00 !- r 13609 Bx"
+                        action = "sell"
+                        
+                        # deviation_sell = ma3_last/last_trade_price
+                        # 14 giu 2022 3-28 da 3-30
+                        # 18 nov 2022 3-28 resta uguale se 10-200<1.00
+                        # 21 mag 2025 se 20>100 cioe' non e' una situazione di trend ribassista allora sell con 3-39 da 3-28
+
+
+                    
+                    elif (    
+                        ma50_last > ma50_2_min_ago
+                        and ma20_last < ma100_last
+
                         and deviation_ma10_sopra_ma200 < 1.00
                         and (ma3_prev > ma28_prev and ma3_last < ma28_last)
                         and deviation_sell > 0.91 and deviation_sell < 1.20
                         and ma2_last < ma2_2_min_ago
                        
                     ):
-                        sell = "SELL 3 (21-60 min) con ma50 > and incrocio 3-28 and deviation_sell 0.91 - 1.20 CON 10-200 < 1.00 !- r 13609 B"
+                        sell = "SELL 3 (21-60 min) se 20<100 con ma50 > and incrocio 3-28 and deviation_sell 0.91 - 1.20 CON 10-200 < 1.00 !- r 13609 By"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
                         # 14 giu 2022 3-28 da 3-30
                         # 18 nov 2022 3-28 resta uguale se 10-200<1.00
+                        # 21 mag 2025 se 20<100 cioe' e' una situazione di trend ribassista allora sel con 3-28
+
                         
                         
                     
