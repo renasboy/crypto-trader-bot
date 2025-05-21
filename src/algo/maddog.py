@@ -13868,24 +13868,53 @@ class maddog:
 
 
 
-                
                 elif (    
                     ma3_last > ma18_last
-                    and ma100_last > ma100_60_min_ago
-
+                    
+                    and deviation_ma250_sopra_ma300 < 0.15
+                    and deviation_ma250_sopra_ma300 > -0.15
+                    
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.33
                     and (ma450_last > ma450_300_min_ago or ma200_last > ma450_last)
-                    and (ma100_last > ma450_last or deviation_ma100_sopra_ma300 > -0.05)
+                    and (ma100_last > ma450_last or ma100_last > ma100_60_min_ago or deviation_ma100_sopra_ma300 > -0.05)
                     
                     and deviation_ma3_sopra_ma10 > 0.01
                     
                     and macd_differenza_2_min_ago > -18.50
                 ):
-                    buy = "BUY 2 con 100>450 - r 4685 BY 1 xx"
+                    buy = "BUY 2 con 100>450 and 5-100 < -0.30 - r 4685 BY 1 xx1"
                     action = "buy"
                     percentage = 80
 
                     # 10 mag 2025 aggiunta and ma100_last > ma100_60_min_ago
                     # 11 mag 2025 aggiunta or ma200_last > ma450_last
+                    # 21 mag 2025 and 5-100 < -0.30
+
+
+
+
+                elif (    
+                    ma3_last > ma18_last
+                    
+                    and deviation_ma250_sopra_ma300 < 0.15
+                    and deviation_ma250_sopra_ma300 > -0.15
+                    
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.25
+                    and (ma450_last > ma450_300_min_ago or ma200_last > ma450_last)
+                    and (ma100_last > ma450_last or ma100_last > ma100_60_min_ago or deviation_ma100_sopra_ma300 > -0.05)
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    
+                    and macd_differenza_2_min_ago > -18.50
+                ):
+                    buy = "BUY 2 con 250 vicino alla 300 and 5-100 < -0.25 - r 4685 BY 1 xx2"
+                    action = "buy"
+                    percentage = 80
+
+                    # 10 mag 2025 aggiunta and ma100_last > ma100_60_min_ago
+                    # 11 mag 2025 aggiunta or ma200_last > ma450_last
+                    # 21 mag 2025 and 5-100 < -0.25
+
 
 
 
@@ -24838,8 +24867,8 @@ class maddog:
                 
                 # 24 nov 2024 cancellata r 6574 a1xy
                 
-                elif (
-                    
+                
+                elif (    
                     ma3_last > ma28_last
                     and ma450_last > ma450_60_min_ago
                     and ma300_last > ma450_last
@@ -24865,6 +24894,8 @@ class maddog:
                     percentage = 70
 
                     # 23 set 2024 se anche 300 > 450 compra anche quando cade il coltello. ma lo prendi con il piede.
+
+
 
 
                 elif (
@@ -39625,12 +39656,14 @@ class maddog:
                         
                         
                     # MARADONA 3
-                    
+
                     elif (
                         ma50_last > ma50_2_min_ago
+
+                        and deviation_ma200_sotto_ma300 > 0.02
+
                         and ma5_last < ma200_last
                         and ma3_last < ma10_last
-                        
                         
                         and deviation_ma100_sopra_ma300 < 0.30
                         
@@ -39638,11 +39671,61 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 (110 - 239 min) con 5-100 and dev_sell 0.32 - 0.64 - FINTA MARADONA CON 100 sopra 300 < 0.30 - r 10253 B"
+                        sell = "SELL 1 (110-239 min) con 5-200 se 200>300 e dev_sell 0.32 - 0.64 - FINTA MARADONA - r 10253 B1"
                         action = "sell"
                         
                         # 3 set ho aggiunto 3<10 incredibile ma vero vendeva mentre saliva !
                         # 12 gen 2023 5-200 da 5-50 vedi 12 gen 2023 ore 00:07
+                        # 21 mag 2025 se 200 sta sopra alla 300 allora sell con 5-200
+
+
+
+                    elif (
+                        ma50_last > ma50_2_min_ago
+
+                        and deviation_ma200_sotto_ma300 < 0.02
+                        and deviation_ma200_sotto_ma300 > -0.02
+
+                        and ma5_last < ma250_last
+                        and ma3_last < ma10_last
+                        
+                        and deviation_ma100_sopra_ma300 < 0.30
+                        
+                        and deviation_sell > 0.32 and deviation_sell < 0.64
+                        and ma2_last < ma2_2_min_ago
+                        
+                    ):
+                        sell = "SELL 1 (110-239 min) con 5-250 se 200 vicinissima alla 300 e dev_sell 0.32 - 0.64 - FINTA MARADONA - r 10253 B2"
+                        action = "sell"
+                        
+                        # 3 set ho aggiunto 3<10 incredibile ma vero vendeva mentre saliva !
+                        # 12 gen 2023 5-200 da 5-50 vedi 12 gen 2023 ore 00:07
+                        # 21 mag 2025 se 200 sta e' coincidente alla 300 allora sell con 5-250 da 5-200
+
+
+
+                    elif (
+                        ma50_last > ma50_2_min_ago
+
+                        and deviation_ma200_sotto_ma300 < -0.02
+                        
+                        and ma5_last < ma150_last
+                        and ma3_last < ma10_last
+                        
+                        and deviation_ma100_sopra_ma300 < 0.30
+                        
+                        and deviation_sell > 0.32 and deviation_sell < 0.64
+                        and ma2_last < ma2_2_min_ago
+                        
+                    ):
+                        sell = "SELL 1 (110-239 min) con 5-150 se 200<300 e dev_sell 0.32 - 0.64 - FINTA MARADONA - r 10253 B3"
+                        action = "sell"
+                        
+                        # 3 set ho aggiunto 3<10 incredibile ma vero vendeva mentre saliva !
+                        # 12 gen 2023 5-200 da 5-50 vedi 12 gen 2023 ore 00:07
+                        # 21 mag 2025 se 200 sta sotto alla 300 allora sell con 5-150
+
+
                     
                     
                     #################################################################################################
