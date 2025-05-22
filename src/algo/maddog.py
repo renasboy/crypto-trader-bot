@@ -32901,25 +32901,25 @@ class maddog:
                 elif (
                     ma3_last > ma10_last
                     
-                    and ma50_last > ma50_2_min_ago
                     and ma450_last > ma450_360_min_ago
                     and ma200_last > ma200_60_min_ago
                     and ma300_last > ma450_last
+
                     and deviation_ma25 < -0.17
-                    
-                    and deviation_ma3_sopra_ma10 > 0.02
+                    and deviation_ma3_sotto_ma100 < -0.01
+
+                    and deviation_ma3_sopra_ma10 > 0.01
                   
                     and ma3_last > ma8_last
-                    and ma2_last >= ma2_2_min_ago
                     
-                    and macd > -50
+                    and macd > -80
                 ):
                     buy = "BUY 5 con 300>450 NON C'E' proprio NIENTE DA SPEZZARE ! (la catena) - r 7441 a"
                     action = "buy"
                     percentage = 70
 
                     #  4 ott 2924 ho preso da un sell precedente e ho modificato questa anticipandola !
-
+                    # 22 mag 2025 con deviation_ma25 < -0.17 aggiungo deviation_ma3_sotto_ma100 < -0.01
 
 
                 elif (
@@ -34700,19 +34700,19 @@ class maddog:
                     # questa cosa che 78 deve essere < 200 ha dell' incredibile. MA NON TOCCARE !
 
 
-                if (  
+                elif (  
                     ma3_last > ma16_last
                     
                     and ma450_last > ma450_360_min_ago
-                    and ma78_last > ma150_last
+                    and (ma78_last > ma150_last or ma100_last > ma450_last)
                     
-                    and deviation_ma3_sotto_ma100 > -0.01
+                    and deviation_ma3_sotto_ma100 < -0.01
                     
                     and deviation_ma3_sopra_ma10 > 0.01
                     
                     and ma3_last > ma9_last
+                    and macd_differenza_2_min_ago > -12.50
                     
-                    and ma2_last >= ma2_2_min_ago
                 ):    
               
                     buy = "BUY 5 con ma450_last > ma450_360_min_ago e 78>150 del 18 mag 2025 - r 7594"
@@ -34720,6 +34720,7 @@ class maddog:
                     percentage = 90
 
                     # 18 mag 2025 aggiunta da RCCR
+                    # 22 mag aggiunta or ma100_last > ma450_last
 
 
                 elif (
@@ -51853,8 +51854,26 @@ class maddog:
                         
 
                     
+                    
+                    elif (    
+                        ma50_last > ma50_2_min_ago
+                        and deviation_ma100_sopra_ma300 > 0.25
+                        and ma100_last > ma100_120_min_ago
+
+                        and deviation_sell > 1.00
+                        and deviation_ma25_sotto_ma300 > 0.85
+                        and (ma20_prev > ma40_prev and ma20_last < ma40_last)
+
+                        and ma2_last < ma2_2_min_ago
+                        
+                    ):
+                        sell = "SELL 4-5-x >90 min se dev sell > 1.00 e 25-300 > 0.85 vendi con incr al ribasso 20-40 - r 15890"
+                        action = "sell"
+
+                        # 22 mag 2025 aggiunta questa nuova condizione. impennata durante il rialzo ! no 3-39 o 3-50 ma 25-300 !
+
+
                     # con 50>
-                
                     elif (    
                         ma50_last > ma50_2_min_ago
                         
@@ -55566,8 +55585,8 @@ class maddog:
                 #  9 nov 2024 dev sell a -0.01 da 0.01
 
 
-            elif (
-                
+            
+            elif (    
                 ma50_last > ma50_2_min_ago
                 and ma10_last > ma30_last
                 and ma20_last > ma20_2_min_ago
@@ -55577,8 +55596,7 @@ class maddog:
                 and ma100_last < ma100_60_min_ago
                 
                 and deviation_ma39 < 0.13
-                and deviation_sell < -0.09
-                
+                and deviation_sell < -0.10
                 
                 and deviation_ma5_sotto_ma200 > -0.60
                 and deviation_ma100_sopra_ma300 < 0.40
@@ -55592,13 +55610,13 @@ class maddog:
                 and ma2_differenza_ma5 < -8
                 
             ):
-                sell = "SELL NCS - dev 3-39 < 0.13 E dev_sell < -0.09 con ma50 > e con ma5 sotto ma200 > -0.60 and MACD < - r 16047 A2 Y1 X1a"
+                sell = "SELL NCS - dev 3-39 < 0.13 E dev_sell < -0.10 con ma50 > e con ma5 sotto ma200 > -0.60 and MACD < - r 16047 A2 Y1 X1a"
                 action = "sell"
                 
                 # 21 feb 2024 se ANCHE 10>30 dev sell a -0.07 da -0.05
                 # 21 feb 2024 se ANCHE 10>30 dev sell a -0.08 da -0.07
                 # 21 feb 2024 se ANCHE 10>30 dev sell a -0.09 da -0.08
-
+                # 22 mag 2024 se ANCHE 10>30 dev sell a -0.10 da -0.09
 
                 
             
