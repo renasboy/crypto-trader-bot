@@ -34699,7 +34699,6 @@ class maddog:
                     # deviation_buy_crollo_1 = ma8_last / ma78_last
                     # questa cosa che 78 deve essere < 200 ha dell' incredibile. MA NON TOCCARE !
 
-
                 elif (  
                     ma3_last > ma16_last
                     
@@ -34721,6 +34720,32 @@ class maddog:
 
                     # 18 mag 2025 aggiunta da RCCR
                     # 22 mag aggiunta or ma100_last > ma450_last
+
+
+                elif (  
+                    ma3_last > ma16_last
+                    and (ma100_last < ma200_last or ma78_last < ma150_last)
+
+                    and ma450_last > ma450_360_min_ago
+                    and ma100_last > ma450_last
+                    
+                    and deviation_ma3_sotto_ma100 < -0.02
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    
+                    and ma3_last > ma9_last
+                    and macd_differenza_2_min_ago > -12.50
+                    
+                ):    
+              
+                    buy = "BUY 5 con ma450_last > ma450_360_min_ago MA CHE COMINCIA A CURVARE VERSO IL BASSO (78<150) del 18 mag 2025 - r 7595"
+                    action = "buy"
+                    percentage = 90
+
+                    # 18 mag 2025 aggiunta da RCCR
+                    # 22 mag 2025 aggiunta or ma78_last < ma150_last
+                    # 22 mag 2025 aggiunta and deviation_ma3_sotto_ma100 < -0.02
+
 
 
                 elif (
