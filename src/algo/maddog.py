@@ -4,7 +4,7 @@
 # A.D. 2024 
 # sono 20 anni compa !
 # ave compa !
-# oggi 26 mag 2025
+# oggi 26 mag 2025 ti voglio bene compa - comfortably numb - Pink Floyd -
 
 '''
 
