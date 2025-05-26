@@ -2302,7 +2302,7 @@ class maddog:
                     and ma50_last > ma100_last
 
                     and deviation_ma50_sotto_ma100 > -0.10
-                    and (ma300_last > ma300_301_min_ago or ma39_last > ma100_last or ma39_last > ma200_last)
+                    and (ma300_last > ma300_301_min_ago or ma25_last > ma100_last or ma25_last > ma200_last)
 
                     and deviation_ma3_sopra_ma10 > 0.01
                     
@@ -2314,7 +2314,7 @@ class maddog:
                     percentage = 90
 
                     # 17 mag 2025 sto spezzando tutti questi or
-                    
+                    # 26 mag 2025 piccola modifica tentando di anticipare di una ndecchiecella
 
 
                 elif (  
@@ -27753,32 +27753,39 @@ class maddog:
                   
 
                 elif (
-                    ma5_last >= ma5_2_min_ago
-                    and ma4_last > ma39_last
-                    and deviation_ma39 > 0.10
+                    ma3_last > ma8_last
+                    and ma50_last < ma50_2_min_ago
+                    and delta_DNA_1 < delta_DNA_2
+                    
+                    and delta_50_39 < delta_50_39_30_min
+                    and delta_450_300 < delta_450_300_60_min
 
-                    and ma100_last > ma100_10_min_ago
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
-                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
+                    and ma10_last < ma30_last
+                
+                    and deviation_ma39 < 0.07
+                    and deviation_sell < -0.01
+                    and deviation_ma3_sotto_ma50 < -0.08
+                    and deviation_ma50_sopra_o_sotto_ma100 < -0.05
+                    and ma5_last <= ma100_last
+                    and deviation_ma100_sopra_ma300 > 0.20
                     
-                    and ma300_last > ma300_60_min_ago
-                    and ma450_last > ma450_300_min_ago
+                
+                    and deviation_ma3_sotto_ma150 > -1.20
                     
-                    and deviation_ma250_sopra_ma300 < 0.10
-                    and deviation_ma250_sopra_ma300 > -0.10
-                    
-                    and deviation_ma3_sopra_ma10 > 0.02
-                    and deviation_ma3_sopra_ma16 > 0.03
-                    
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
+                    and deviation_ma3_sopra_ma10 > 0.01
                     and ma3_last > ma8_last
-                    and delta_buy3_incrocio_ma3_ma8 > 0.01
-                    and ma2_last > ma2_2_min_ago
+                    and macd_differenza_2_min_ago > -18.50
+                    
                 ):
-                    buy = "BUY 4 RIVOLUZIONARIO con ma78 > - r 6859 B1x NUOVA ERA A3 SOFT"
+                    buy = "BUY 4 con delta DNA 1 < DNA 2 - GIORNO - r 6859 B1x NUOVA ERA A3 SOFT"
                     action = "buy"
                     percentage = 70
 
                     # 15 set 2024 aggiunto and deviation_ma39 > 0.10 MA forse la condizione e' da cancellare
+                    # 26 mag 2025 modificata per non cancellare. mi dispiacerebbe.
+
+
 
 
                 elif (
@@ -29862,30 +29869,37 @@ class maddog:
                     percentage = 70
 
 
-                elif (    
-                    ma3_last > ma18_last
-
-                    and (ma10_last < ma30_last or ma20_last < ma50_last)
-                    and deviation_ma3_sotto_ma50 < -0.12
-
-                    and ma450_last > ma450_360_min_ago
+                 
+                elif (
+                    ma3_last > ma8_last
+                    and ma50_last < ma50_2_min_ago
                     and delta_DNA_1 < delta_DNA_2
+                    
+                    and delta_50_39 < delta_50_39_30_min
+                    and delta_450_300 < delta_450_300_60_min
 
-                    and ma200_last > ma300_last
+                    and ma10_last <= ma20_last
+                
+                
+                    and deviation_ma39 < 0.07
+                    and deviation_sell < -0.01
+                    and deviation_ma3_sotto_ma50 < -0.08
 
-                    and ma450_last >= ma450_120_min_ago
-                    and ma300_last > ma300_60_min_ago
-                    and ma100_last > ma450_last
+                    and deviation_ma50_sopra_o_sotto_ma100 < -0.05
+                    and ma5_last <= ma100_last
+                    and deviation_ma100_sopra_ma300 > 0.20
+                    
+                
+                    and deviation_ma3_sotto_ma150 > -1.20
+                
+                    and (ma10_last < ma30_last or ma20_last < ma50_last)
+                    
                     
                     and deviation_ma3_sopra_ma10 > 0.01
-                    and deviation_ma3_sopra_ma16 > -0.02
+                    and macd_differenza_2_min_ago > -18.50
                     
-                    and ma3_last > ma13_last
-                    
-                    and macd_differenza_2_min_ago > -13.25
-                
                 ):
-                    buy = "BUY 5 con 450_last >= 450_360_min_ago E ma200>ma300 - GIORNO - and 20<50 - r 7144 A1 Y2 NUOVA ERA A3 SOFT xX 1 xX 1"
+                    buy = "BUY 5 con delta DNA 1< DNA 2 - GIORNO - and 20<50 RITRACCIAMENTO - r 7144 A1 Y2 NUOVA ERA A3 SOFT xX 1 xX 1"
                     action = "buy"
                     percentage = 70
 
@@ -29895,7 +29909,7 @@ class maddog:
                     # 28 feb 2025 GIORNO
                     # 16 apr 2025 and deviation_ma3_sotto_ma50 < -0.01
                     #  8 mag 2025 deviation_ma3_sotto_ma50 a -0.12 da -0.05
-
+                    # 26 mag 2025 modificata 
 
 
 
@@ -32715,25 +32729,28 @@ class maddog:
 
                 elif (
                     ma3_last > ma8_last
-
-                    and ma20_last < ma50_last
-                    and ma450_last > ma450_720_min_ago
-                    and ma200_last > ma200_120_min_ago
-                    and ma300_last > ma300_60_min_ago
-                    and delta_1 < delta_2
+                    and ma50_last < ma50_2_min_ago
+                    and delta_DNA_1 < delta_DNA_2
                     
-                    and ma100_last < ma100_10_min_ago
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.13
+                    and delta_50_39 < delta_50_39_30_min
+                    and delta_450_300 < delta_450_300_60_min
 
-                    and deviation_ma39 < -0.06
+                    and ma10_last <= ma20_last
+                
+                
+                    and deviation_ma39 < 0.07
+                    and deviation_sell < -0.01
                     and deviation_ma3_sotto_ma50 < -0.08
                     and deviation_ma50_sopra_o_sotto_ma100 < -0.05
+                    and ma5_last <= ma100_last
+                    and deviation_ma100_sopra_ma300 > 0.20
                     
-                    and deviation_ma3_sopra_ma10 > 0.01
-                    
+                
+                    and deviation_ma3_sotto_ma150 > -1.20
+                
                     and macd_differenza_2_min_ago > -18.50
                 ):   
-                    buy = f"BUY 5 {ma450_last} {ma450_720_min_ago} con ma450> 720 min MA ritracciamento - r 7410 A2 Y1 x"
+                    buy = f"BUY 5 {ma450_last} {ma450_720_min_ago} con delta 450-300 giorno MA ritracciamento - r 7410 A2 Y1 x"
                     action = "buy"
                     percentage = 80
                     
@@ -32742,7 +32759,7 @@ class maddog:
                     # 14 apr 2025 ma450 e' vero che e' > ma 450 720 min ago ! viva ro combaro meo !
                     # 14 apr 2025 and deviation_ma39 < -0.06 da < -0.01
                     # 14 apr 2025 and deviation_ma3_sotto_ma50 < -0.08 da < -0.06
-
+                    # 26 mag 2025 modificata
 
 
                 elif (
