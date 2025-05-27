@@ -31005,12 +31005,10 @@ class maddog:
                        
                 
                 elif (
-                    ma3_last < ma18_last
+                    ma3_last > ma16_last
                     
                     and deviation_buy_crollo_1 < -0.29
                     and deviation_buy_crollo_1 > -0.79
-                    
-                    and deviation_correzione > 0.017
                     
                     and deviation_ma5_sotto_ma200 > -1.20
                     
@@ -31018,10 +31016,9 @@ class maddog:
                     and ma300_last < ma450_last
                     
                     and ma28_last < ma28_30_min_ago
-                    
+                    and deviation_ma5_sotto_ma450 < -0.99
                     
                     and deviation_ma3_sopra_ma10 > 0.01
-                    
                     
                     and ma3_last > ma13_last
                     and macd_differenza_2_min_ago > -18.30
