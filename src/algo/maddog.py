@@ -2354,10 +2354,9 @@ class maddog:
                     # 17 mag 2025 sto spezzando tutti questi or
 
 
-
                 elif (  
                     ma3_last > ma8_last
-
+                    and ma450_last > ma450_301_min_ago
                     and ma20_last > ma40_last
 
                     and deviation_ma50_sotto_ma100 > -0.10
@@ -2368,12 +2367,39 @@ class maddog:
                     and macd_differenza_2_min_ago > -18.50
                 ):    
               
-                    buy = "BUY 1 con ma300_last > ma300_301_min_ago e 100>200 - r 916 A1 x1 X2 y"
+                    buy = "BUY 1 con ma300_last > ma300_301_min_ago e 100>200 e 450> - r 916 A1 x1 X2 y1"
                     action = "buy"
                     percentage = 90
 
                     # 17 mag 2025 sto spezzando tutti questi or
+
+
+
+                elif (  
+                    ma3_last > ma8_last
+
+                    and ma450_last < ma450_301_min_ago
+                    and deviation_ma39 -0.25
+                    and deviation_ma3_sotto_ma50 -0.27
+                    and deviation_ma5_sopra_o_sotto_ma100 -0.44
+                    and deviation_ma25_sotto_ma300 -0.53
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago -0.067
+
+                    and ma20_last > ma40_last
+
+                    and deviation_ma50_sotto_ma100 > -0.10
                     
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    
+                    and macd_differenza_2_min_ago > -18.50
+                ):    
+              
+                    buy = "BUY 1 con 450< + OSSO- r 916 A1 x1 X2 y2"
+                    action = "buy"
+                    percentage = 90
+
+                    # 17 mag 2025 sto spezzando tutti questi or
+                    # 27 MAG 2025 con 450< OSSO !
 
 
 
@@ -18069,9 +18095,9 @@ class maddog:
                     # 27 feb 2025 se ma450_last > ma450_180_min_ago anticipato ndecchiecella
 
 
-
                 elif (    
                     ma3_last > ma20_last
+                    and delta_1_50_20 < delta_2_50_20
 
                     and ma450_last < ma450_180_min_ago
                     and ma100_last < ma200_last
@@ -18091,7 +18117,35 @@ class maddog:
                     and macd_differenza_2_min_ago > -18.50
                 ):  
                 
-                    buy = "BUY 2 con 300<450 MA ma450 > ma450_180_min MA ma200 sale da 20 min con dev39 < -0.123 e 3-50 < -0.15 - r 5829 B2y"
+                    buy = "BUY 2 con 300<450 MA ma450 > ma450_180_min MA ma200 sale da 20 min con dev39 < -0.123 e 3-50 < -0.15 - 50-20 GIORNO - r 5829 B2yx"
+                    action = "buy"
+                    percentage = 80
+
+
+
+                elif (    
+                    ma3_last > ma20_last
+                    and delta_1_50_20 > delta_2_50_20
+
+                    and ma450_last < ma450_180_min_ago
+                    and ma100_last < ma200_last
+                    and ma300_last < ma450_last
+
+                    and (ma200_last > ma200_20_min_ago or delta_1 < delta_2)
+                    
+                    and deviation_ma39 < -0.22
+                    and deviation_ma3_sotto_ma50 < -0.24
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.41
+                    and deviation_ma25_sotto_ma300 < -0.50
+
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    
+                    and ma3_last > ma13_last
+                    and ma2_last > ma9_last
+                    and macd_differenza_2_min_ago > -18.50
+                ):  
+                
+                    buy = "BUY 2 con 300<450 MA ma450 > ma450_180_min MA ma200 sale da 20 min con dev39 < -0.123 e 3-50 < -0.15 - 50-20 NOTTE - r 5829 B2yy"
                     action = "buy"
                     percentage = 80
                     
@@ -18106,7 +18160,7 @@ class maddog:
                     # 19 mag 2025 and deviation_ma3_sotto_ma50 < -0.15
                     # 19 mag 2025 and deviation_ma5_sopra_o_sotto_ma100 < -0.25
                     # 19 mag 2025 and deviation_ma25_sotto_ma300 < -0.25
-
+                    # 27 mag 2025 se 50-20 notte allora OSSO
 
                     
                 # BUY 2 con ma200 che sale da 60 min etc. importata dal BUY 3 RCCR
@@ -22774,26 +22828,28 @@ class maddog:
                     # 15 ott 2024 se 200>300 anticipato ndecchiecella
 
 
-                elif (
-                    deviation_buy2 > 0.05
-                    and ma100_last > ma200_last
-                    and ma200_last < ma300_last
 
-                    and deviation_ma3_sopra_ma28 > 0.15
-                    
+
+                elif (
+                    ma3_last > ma13_last
+
                     and ma450_last < ma450_300_min_ago
                     and ma300_last < ma300_60_min_ago
 
-                    and ma8_last > ma8_2_min_ago
-                    and ma2_last > ma2_2_min_ago
+                    and deviation_ma39 -0.21
+                    and deviation_ma3_sotto_ma50 -0.22
+                    and deviation_ma5_sopra_o_sotto_ma100 -0.40
+                    and deviation_ma25_sotto_ma300 -0.49
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.10
+                    
+                    and ma100_last > ma200_last
+                    and ma200_last < ma300_last
+
                     and ma3_last > ma7_last
-                    and ma3_last > ma13_last
-                    and deviation_buy_ma3_sopra_ma20 > 0.05
-                    and deviation_ma4_sopra_ma25 > 0.05
-                 
+                    and macd_differenza_2_min_ago > -18.50
                 ):
                
-                    buy = "BUY 3 NUOVO che ci riprova TORNANDO ALLE ORIGINI MA SOLO SE ma450 scende da almeno 5 ore ! cazzo MA 200 < 300 - r 6447 by"
+                    buy = "BUY 3 con ma450 che scende da almeno 5 ore ! + osso cazzo - r 6447 by"
                     action = "buy"
                     percentage = 90
 
@@ -22802,7 +22858,7 @@ class maddog:
                     # deviation_buy2 = ma8_last / ma50_last
                     # 20 set 2024 questa condizione si deve attivare SOLO SE and ma200_last > ma200_60_min_ago
                     # 20 set 2024 per evitare di cancellarla. e vafanculo.
-                    
+                    # 27 mag 2025 osso ! dopo parentesi graffe !
                    
                     
                     
