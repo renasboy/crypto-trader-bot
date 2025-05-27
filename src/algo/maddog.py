@@ -21193,6 +21193,8 @@ class maddog:
                     # 27 mag 2025 aggiunto and delta_1_50_20 < delta_2_50_20 - giorno ! - ha comprato durante un forte ribasso
 
 
+
+
                 # 22 set 2024 CANCELLATA r 6017
 
                 
@@ -30996,38 +30998,42 @@ class maddog:
                     # 29 gen 2025 aggiunto and macd > -60 e and macd_differenza_2_min_ago > -1.50
                     # 29 gen 2025 and ma7_last > ma25_last
                     # 30 gen 2025 nel corridoio 300-450 puo' comprare prima
-                       
-                elif (
-                    ma50_last >= ma50_2_min_ago
-                    and ma450_last < ma450_720_min_ago
 
-                    and ma100_last >= ma100_60_min_ago
-                    and (ma3_prev < ma90_prev and ma3_last > ma90_last)
+
+
+
+                       
+                
+                elif (
+                    ma3_last < ma18_last
                     
+                    and deviation_buy_crollo_1 < -0.29
+                    and deviation_buy_crollo_1 > -0.79
+                    
+                    and deviation_correzione > 0.017
+                    
+                    and deviation_ma5_sotto_ma200 > -1.20
+                    
+                    and ma450_last < ma450_720_min_ago
                     and ma300_last < ma450_last
                     
                     and ma28_last < ma28_30_min_ago
-                    and ma78_last > ma150_last
+                    
                     
                     and deviation_ma3_sopra_ma10 > 0.01
-                    and deviation_ma3_sopra_ma16 > 0.077
+                    
                     
                     and ma3_last > ma13_last
-                    and ma4_last > ma9_last
-                    and ma4_last > ma50_last
-                    
-                    and ma6_last > ma15_last
-                    and ma7_last > ma25_last
-                    
-                    and ma2_last >= ma2_2_min_ago
+                    and macd_differenza_2_min_ago > -18.30
+                   
                 ):
-                    buy = "BUY 5 con ma450_last > ma450_720_min_ago e ma50 > AND 50>100 e ma28_last < ma28_30_min_ago e 5-28 > 0.17 - r 7203 B1 Y"
+                    buy = "BUY 5 con ma450_last < ma450_720_min_ago e ma28_last < ma28_30_min_ago - r 7203 B1 Y"
                     action = "buy"
                     percentage = 70
                     
                     # 25 gen 2024 se ma100_last >= ma100_60_min_ago compra anche con 3-90
                     # 29 gen 2025 incomincio a risolvere il problema del trend laterale dopo un grande RIBASSO
-
+                    # 27 mag 2025 modificata per anticipare ndecchia
 
                 
                 
@@ -59996,26 +60002,28 @@ class maddog:
                 action = "sell"
                     
                 # and ma2_last > ma100_last (altrimenti vende durante il crollo con la ma3-ma9)
+
+
                 
                 
             # 13 POCHI MALEDETTI E SUBITO ma non troppo mentre scende > ESTATE 2022
             
             elif (
-                ma5_last < ma33_last
+                ma5_last < ma39_last
                 and ma300_last < ma300_120_min_ago
                 
                 and (ma3_prev > ma300_prev and ma3_last < ma300_last)
                 
                 and deviation_sell > 0.90
                 
-                and ma2_last > ma100_last
+                and ma3_last > ma100_last
                 and ma2_last < ma2_2_min_ago
             ):    
-                sell = "SELL condizione speciale 39 5-33 - POCHI MALEDETTI E SUBITO ma non troppo mentre scende > ESTATE 2022 e con deviation > 0.90 - r 16873 B"
+                sell = "SELL condizione speciale 39 5-39 - POCHI MALEDETTI E SUBITO ma non troppo mentre scende > ESTATE 2022 e con deviation > 0.90 - r 16873 B"
                 action = "sell"
                     
-                # and ma2_last > ma100_last (altrimenti vende durante il crollo con la ma3-ma9)
-
+                # and ma3_last > ma100_last (altrimenti vende durante il crollo con la ma3-ma9)
+                # 27 mag 2025 5-39 da 5-33
           
 
 
