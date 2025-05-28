@@ -2432,7 +2432,7 @@ class maddog:
                     percentage = 90
 
                     # 17 mag 2025 sto spezzando tutti questi or
-                    # 27 MAG 2025 con 450< OSSO !
+                    # 27 mag 2025 con 450< OSSO !
 
 
 
@@ -2497,7 +2497,7 @@ class maddog:
 
                     # 16 mag 2025 in questa circostanza 3-10 e 3-50 non hanno profondita' ! vedi doppio delta 250-150
                     # 28 mag 2025 aggiunta questa per anticipare di una ndecchiecella
-
+                    # 28 mag 2025 aggiunte 3-39 e 3-50 
 
 
                 elif (  
@@ -19790,6 +19790,8 @@ class maddog:
                     percentage = 90
 
                     # 27 mar 2025 se GIORNO and deviation_ma39 < -0.20
+
+
 
                 
                 elif (    
@@ -54581,11 +54583,20 @@ class maddog:
                 and macd_differenza_2_min_ago < -1.35
                 
             ):
-                sell = "SELL CS GIORNO con ma300 < 5 ore E ma50 <= E 30<78 e dev 3-39 < 0.13 E dev_sell < -0.01 - r 16046"
+                sell = f"""SELL CS GIORNO con ma300 < 5 ore E ma50 <= E 30<78 e dev 3-39 < 0.13 E dev_sell < -0.01 - r 16046
+                
+                deviation_ma39 {deviation_ma39:.2f}
+                deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.2f} 
+                deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.2f} 
+                deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.2f} 
+                deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.2f} 
+                """
+
                 action = "sell"
 
                 #  4 nov 2024 aggiunta. se 10<100 vende !
                 # 27 gen 2025 dev_sell < -0.01 da < 0.03
+                # 28 mag 2025 aggiunta parentesi graffe
 
             
 
