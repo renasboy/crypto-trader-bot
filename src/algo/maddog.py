@@ -2443,10 +2443,10 @@ class maddog:
 
 
 
-
                 elif (
                     ma3_last > ma20_last
                     and (deviation_ma200_sotto_ma300 > -0.13 or delta_DNA_1 < delta_DNA_2)
+                    
                     and deviation_ma5_sotto_ma450 < -0.30
                     
                     and ma50_last < ma50_2_min_ago
@@ -2460,14 +2460,44 @@ class maddog:
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
 
-                    and ma2_last > ma2_2_min_ago
-                    and macd >= macd_2_min_ago
+                    and macd_differenza_2_min_ago > -18.50
                 ):
-                    buy = "BUY 1 IMPORTATO DA RCCR e modificato dopo 50000 righe - r 916 A1 x1Y"
+                    buy = "BUY 1 IMPORTATO DA RCCR e modificato dopo 50000 righe - r 916 A1 x1 Y1"
                     action = "buy"
                     percentage = 80
 
                     # 16 mag 2025 in questa circostanza 3-10 e 3-50 non hanno profondita' ! vedi doppio delta 250-150
+
+
+                elif (
+                    ma3_last > ma16_last
+
+                    and delta_DNA_1 < delta_DNA_2
+                    and deviation_ma39 -0.05
+                    and deviation_ma3_sotto_ma50 -0.05
+
+                    and deviation_ma5_sotto_ma450 < -0.30
+                    
+                    and ma50_last < ma50_2_min_ago
+                    
+                    and ma100_last < ma100_60_min_ago
+                        
+                    and ma100_last < ma100_120_min_ago
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_120_min_ago
+                        
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+
+                    and macd_differenza_2_min_ago > -18.50
+                ):
+                    buy = "BUY 1 del 28 mag 2025 dopo 50000 righe - r 916 A1 X1 Y2"
+                    action = "buy"
+                    percentage = 80
+
+                    # 16 mag 2025 in questa circostanza 3-10 e 3-50 non hanno profondita' ! vedi doppio delta 250-150
+                    # 28 mag 2025 aggiunta questa per anticipare di una ndecchiecella
+
 
 
                 elif (  
