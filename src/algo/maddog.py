@@ -18589,11 +18589,11 @@ class maddog:
                     and ma450_last < ma450_720_min_ago
                     and delta_1 > delta_2
 
-                    and (ma3_prev < ma90_prev and ma3_last > ma90_last)
+                    and ((ma3_prev < ma90_prev and ma3_last > ma90_last) or (ma3_prev < ma200_prev and ma3_last > ma200_last))
                     
                     and macd_differenza_2_min_ago > -18.50
                 ):    
-                    buy = "BUY 2 con 450< and ma3_last > ma39_last e ma450_last > ma450_120_min_ago E incrocio 3-90 - r 5870 Ay1"
+                    buy = "BUY 2 con 450> and ma3_last > ma39_last e ma450_last > ma450_120_min_ago E incrocio 3-90 or 3-200 - r 5870 Ay1"
                     action = "buy"
                     percentage = 70
                     
@@ -18604,6 +18604,8 @@ class maddog:
                     # 29 mar 2025 attenzione 3>39 vuol dire che forse non sta ancora ritracciando (20<50)
                     # 11 apr 2025 tolto 3-39
                     # 11 apr 2025 questa condizione con incrocio al rialzo 3-90 per adesso la tengo.
+                    # 31 mag 2025 aggiunta or incrocio al rialzo 3-200
+
 
 
                 elif (
@@ -40725,6 +40727,8 @@ class maddog:
                   
                     elif (     
                         ma50_last < ma50_2_min_ago
+                        and ma3_last < ma78_last
+                        and deviation_sell > 0.30
 
                         and delta_DNA_1 < delta_DNA_2 
                         and ma200_last > ma300_last
@@ -40732,21 +40736,18 @@ class maddog:
 
                         and ma450_last < ma450_360_min_ago
 
-                        and ma3_last < ma59_last
-                        and deviation_sell > 0.30
-                        
                         and deviation_trend_ma200 > -0.15
                         
                         and ma2_last <= ma2_2_min_ago
                         and macd < macd_2_min_ago
                         and macd < -3
                     ):
-                        sell = "SELL 1 (110-239 min) con 3-59 e con 450<6 ore MA DNA GIORNO E 300>120 min e ma50< e dev_sell>0.30 - r 10274 A1 Y1"
+                        sell = "SELL 1 (110-239 min) con 3-78 e con 450<6 ore MA DNA GIORNO E 300>120 min e ma50< e dev_sell>0.30 - r 10274 A1 Y1"
                         action = "sell"
 
                         #  7 apr 2025 aggiunta DNA GIORNO - lascialo correre !
                         # 12 mag 2025 3-59 da 3-49
-
+                        # 30 mag 2025 3-78 da 3-59
 
 
                     elif (     
@@ -60329,18 +60330,20 @@ class maddog:
             
             elif (
                 deviation_sell > 0.80
+                and ma3_last < ma78_last
+
                 and seconds_since_last_trade < 7200
                 and ma5_last < ma5_11_min_ago
 
                 and ma100_last > ma300_last
 
-                and ma3_last < ma50_last
+                
                 and ma2_last < ma2_2_min_ago
                 
                 and macd < macd_2_min_ago
                 and macd_differenza_2_min_ago < -1
             ):    
-                sell = "SELL CS PMS (ma non troppo !) con 3-50 se 100>300 e con dev > 0.80 e con ma5_11_min_ago - r 16873 C2 a"
+                sell = "SELL CS PMS (ma non troppo !) con 3-78 se 100>300 e con dev > 0.80 e con ma5_11_min_ago - r 16873 C2 a"
                 action = "sell"
                 
                 # 27 set 2023 macd < macd 2 min ago 
@@ -60349,6 +60352,8 @@ class maddog:
                 
                 #  8 mar 2024 3-39 da 3-28
                 #  3 feb 2025 3-50 da 3-39 se 100<300
+                # 30 mag  2025 3-78 da 3-50
+
 
 
             elif (
