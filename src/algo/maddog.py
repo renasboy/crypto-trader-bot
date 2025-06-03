@@ -8,7 +8,7 @@
 
 '''
 
-and delta_1_50_20 < delta_2_50_20 GIORNO !
+and delta_1_50_20 < delta_2_50_20 GIORNO ! a 30 min !
 
 
 chiedi al compare come posso mettere in colonna questa riga lunga !
@@ -32941,8 +32941,11 @@ class maddog:
                     # 28 apr 2025 se 20<50 aggiungo dev 5-100 < -0.05
 
 
+
+
                 elif (
                     ma3_last > ma8_last
+                    and delta_1_50_20 < delta_2_50_20
                     and ma20_last > ma50_last
 
                     and ma200_last >= ma200_120_min_ago
@@ -32955,13 +32958,39 @@ class maddog:
                     
                     and macd_differenza_2_min_ago > -18.50
                 ):   
-                    buy = "BUY 5 che NON SPEZZA LA CATENA - GIORNO - SE ma200> 120 min con 3-10 > 0.01 e 5-28 > -0.10 - r 7410 A2 x2x"
+                    buy = "BUY 5 che NON SPEZZA LA CATENA con 20-50 giorno and GIORNO - SE ma200> 120 min con 3-10 > 0.01 e 5-28 > -0.10 - r 7410 A2 x2 x1"
                     action = "buy"
                     percentage = 80
 
                     # 27 mar 2025 se GIORNO ok cosi'
                     #  8 apr 2025 con 20>50
+                    #  3 giu 2025 se 20-50 GIORNO ok cosi'
 
+
+
+                elif (
+                    ma3_last > ma8_last
+                    and delta_1_50_20 > delta_2_50_20
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.05
+                    and ma20_last > ma50_last
+
+                    and ma200_last >= ma200_120_min_ago
+                    and ma300_last >= ma300_60_min_ago
+
+                    and delta_1 < delta_2
+                  
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma5_sopra_ma28 > -0.12
+                    
+                    and macd_differenza_2_min_ago > -18.50
+                ):   
+                    buy = "BUY 5 che NON SPEZZA LA CATENA con 20-50 NOTTE and GIORNO - SE ma200> 120 min con 3-10 > 0.01 e 5-28 > -0.10 - r 7410 A2 x2 x2"
+                    action = "buy"
+                    percentage = 80
+
+                    # 27 mar 2025 se GIORNO ok cosi'
+                    #  8 apr 2025 con 20>50
+                    #  3 giu 2025 se 20-50 NOTTE allora deve essere 5-100 < -0.05 cazzo.
 
 
 
