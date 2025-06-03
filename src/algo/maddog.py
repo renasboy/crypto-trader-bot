@@ -21377,8 +21377,45 @@ class maddog:
                     
                 
                 
-                ######################################################### raddoppiate con 100> o con 100<
                 
+                
+                elif (   
+                    ma3_last > ma28_last
+                    and ma39_last < ma100_last
+                    and ma10_last < ma20_last
+                    and deviation_ma5_sotto_ma300 > -0.57
+
+                    and deviation_ma300_sopra_ma450 > -0.06
+                    and deviation_ma200_sotto_ma300 > -0.05
+                    
+                    and ma100_last < ma100_180_min_ago
+                    and ma200_last < ma200_180_min_ago
+                    and ma300_last < ma300_180_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.02
+                    and deviation_ma5_sopra_ma28 > -0.02
+                    
+                    and ma2_last > ma5_last
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and ma2_differenza_2_min_ago > 12
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
+                    and macd > -11
+                    and macd_differenza_2_min_ago > 1.00
+                    
+                ):
+                    buy = "BUY 3 > 180 min di ribasso CON ma10<ma20 con 3-28 MA LE MEDIE LUNGHE SONO VICINISSIME - r 6050"
+                    action = "buy"
+                    percentage = 80
+
+                    #  3 giu 2025 aggiunta ma modificata 300 vicinissima alla 450 e 200 vicinissima alla 300 anche se sembra che cominci un ribasso. 
+                    #  3 giu 2025 e' andata benissimo sul RCCR e io ho aggiunto questa piccola ma importante modifica
+
+
+
                 elif (
                     ma10_last > ma10_2_min_ago
                     and ma28_last < ma78_last
@@ -27805,8 +27842,44 @@ class maddog:
                     
                
                     
-                # BUY 4 con 300< e 100<200
-                
+                elif (   
+                    ma3_last > ma28_last
+                    and ma39_last < ma100_last
+                    and ma10_last < ma20_last
+                    and deviation_ma5_sotto_ma300 > -0.57
+
+                    and deviation_ma300_sopra_ma450 > -0.06
+                    and deviation_ma200_sotto_ma300 > -0.05
+                    
+                    and ma100_last < ma100_180_min_ago
+                    and ma200_last < ma200_180_min_ago
+                    and ma300_last < ma300_180_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.02
+                    and deviation_ma5_sopra_ma28 > -0.02
+                    
+                    and ma2_last > ma5_last
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and ma2_differenza_2_min_ago > 12
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.02
+                    and macd > -11
+                    and macd_differenza_2_min_ago > 1.00
+                    
+                ):
+                    buy = "BUY 4 > 180 min di ribasso CON ma10<ma20 con 3-28 MA LE MEDIE LUNGHE SONO VICINISSIME - r 6830"
+                    action = "buy"
+                    percentage = 80
+
+                    #  3 giu 2025 aggiunta ma modificata 300 vicinissima alla 450 e 200 vicinissima alla 300 anche se sembra che cominci un ribasso. 
+                    #  3 giu 2025 e' andata benissimo sul RCCR e io ho aggiunto questa piccola ma importante modifica
+
+
+
+
                 elif (
                     ma3_last > ma13_last
 
