@@ -30218,19 +30218,18 @@ class maddog:
                     ma3_last > ma18_last
 
                     and (ma10_last < ma30_last or ma20_last < ma50_last)
-                    
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.06
+                    and deviation_ma3_sotto_ma50 < -0.06
+
                     and ma450_last > ma450_360_min_ago
                     and delta_DNA_1 < delta_DNA_2
-
-                    and deviation_ma3_sotto_ma50 < -0.05
 
                     and ma200_last > ma300_last
                     and ma100_last > ma450_last
 
                     and ma450_last >= ma450_120_min_ago
                     and ma300_last > ma300_60_min_ago
-                    
-                    
+                   
                     and deviation_ma3_sopra_ma10 > 0.01
                     and deviation_ma3_sopra_ma16 > -0.02
                     
@@ -30240,7 +30239,7 @@ class maddog:
                     and macd_differenza_2_min_ago > -13.25
                 
                 ):
-                    buy = "BUY 5 con 450_last >= 450_360_min_ago E ma200>ma300 + DNA - GIORNO - r 7144 A1 Y2 NUOVA ERA A3 SOFT xX 1 xY 1"
+                    buy = "BUY 5 con 450_last >= 450_360_min_ago E ma200>ma300 + DNA - GIORNO ma ritracciamento - r 7144 A1 Y2 NUOVA ERA A3 SOFT xX 1 xY 1"
                     action = "buy"
                     percentage = 70
 
@@ -30251,7 +30250,7 @@ class maddog:
                     # 16 apr 2025 tolta and delta_1 < delta_2
                     # 16 apr 2025 se and delta_DNA_1 < delta_DNA_2 tolgo and deviation_ma5_sopra_o_sotto_ma100 < -0.01
                     # 16 apr 2025 se and delta_DNA_1 < delta_DNA_2 and deviation_ma3_sotto_ma50 a -0.05 da -0.22
-
+                    #  3 giu 2025 se ritracciamento deviation_ma5_sopra_o_sotto_ma100 < -0.06
 
 
 
@@ -32990,7 +32989,7 @@ class maddog:
 
                     # 27 mar 2025 se GIORNO ok cosi'
                     #  8 apr 2025 con 20>50
-                    #  3 giu 2025 se 20-50 NOTTE allora deve essere 5-100 < -0.05 cazzo.
+                    #  3 giu 2025 se 20-50 NOTTE deve essere 5-100 < -0.05 cazzo.
 
 
 
