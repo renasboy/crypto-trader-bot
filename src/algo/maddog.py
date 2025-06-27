@@ -58970,6 +58970,8 @@ class maddog:
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
                 and ma20_last < ma50_last
+                and ma8_last <= ma8_2_min_ago
+
                 and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.07
 
                 and deviation_sell < -0.001
@@ -58990,14 +58992,14 @@ class maddog:
                 and ma2_last <= ma2_2_min_ago
             ):
 
-                sell = "SELL CS - DOLCE ATTESA 270 sec E dev sell < -0.001 and ma13 < and con 450 < MA GIORNO and ma100 non scende molto - r 16694 B2 Y2 Ax 2x"
+                sell = "SELL CS - D.A. 270 sec E dev sell < -0.001 e ma13 < and con 450 < MA GIORNO e ma100 non scende molto e 8 <= ma8 2 min ago - r 16694 B2 Y2 Ax 2x"
                 action = "sell"
 
                 # 20 mar 2025 deviation_sell a -0.055 da -0.05
                 # 14 apr 2025 se 20<50 and deviation_sell < 0.01 da -0.055
                 # 12 mag 2025 aggiunta and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.07
                 # 12 mag 2025 se ma100 non scende molto dev sell a -0.001 da 0.01
-
+                # 27 giu 2025 and ma8_last <= ma8_2_min_ago
 
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
