@@ -59239,6 +59239,8 @@ class maddog:
             
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
+                and ma8_last <= ma8_2_min_ago
+
                 and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.14
                 and deviation_sell < -0.025
                 and ma3_last < ma6_last
@@ -59283,6 +59285,9 @@ class maddog:
                 #  9 mar 2025 aggiunto 3 < 6 (e' fondamentale !)
                 #  7 mag 2025 deviation_sell a -0.025 da -0.02
                 # 15 mag 2025 aggiunte parentesi graffe per capire meglio.
+
+                # 27 giu 2025 CHE BELLI I VALORI NELLE PARENTESI GRAFFE ! grazie compa caro !
+                # 27 giu 2025 aggiunta and ma8_last <= ma8_2_min_ago perche' ha venduto mentre risaliva
 
 
             elif (
