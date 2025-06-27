@@ -57318,24 +57318,22 @@ class maddog:
 
             
             elif (
-                ma78_last < ma78_120_min_ago
-                and ma5_differenza_2_min_ago < -6
-                and ma10_last < ma20_last
-                and ma20_last <= ma20_2_min_ago
+                ma300_last > ma300_301_min_ago
+                and ma78_last < ma78_120_min_ago
                 
+                and ma10_last < ma20_last
                 and ma39_last < ma100_last
-                and ma300_last > ma300_301_min_ago
+                and ma20_last <= ma20_2_min_ago
                 
                 and deviation_ma5_sotto_ma200 > -0.64
                 
-                and ma2_last <= ma2_2_min_ago
-                and ma2_last < ma5_last
-                and ma2_differenza_2_min_ago < -10
-                
-                and macd < 16
-                and macd_differenza_2_min_ago < -4.2
                 and deviation_ma39 < 0.08
                 and deviation_sell < 0.01
+
+                and ma2_last < ma5_last
+                
+                and ma2_last <= ma2_2_min_ago
+                and macd_differenza_2_min_ago < -3.20
             ):
                 sell = "SELL CS con 39<100 E ma300 > 5 ore e dev 3-39 < 0.06 e dev_sell < 0.01 - r 16047 B1 Y2 Y2 z"
                 action = "sell"   
@@ -57379,6 +57377,9 @@ class maddog:
                 
                 # oggi 10 dicembre 2023 ascolta mario ! SE ma20_last <= ma20_2_min_ago DEV SELL a 0.05
                 #  5 nov 2024 ho sostituito ma50<ma50 2min ago (che e' arrivata tardi) con 39<100
+
+
+
             
             elif (
                 ma78_last < ma78_120_min_ago
@@ -57642,6 +57643,20 @@ class maddog:
                 # 16 mag 2025 aggiunto parentesi. deve essere riferimento per il BUY.
                 
 
+
+            elif (
+                ma300_last > ma300_301_min_ago
+                
+                and (ma100_last < ma300_last or ma100_last < ma450_last)
+                and ma8_last <= ma8_2_min_ago
+
+                and ma2_last < ma5_last
+               
+            ):
+                sell = "SELL CS 27 giu 2025 - r 16048"
+                action = "sell"
+
+                # 27 giu 2025 aggiunta questa semplice condizione
 
 
             elif (
