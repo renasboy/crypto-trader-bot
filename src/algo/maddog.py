@@ -28395,19 +28395,17 @@ class maddog:
 
                 # BUY 4 se 11 > 200 e con ma69 > and deviation_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali) IMPORTATA DA BUY 5
 
+
                 elif (
-                    ma5_last > ma200_last
+                    ma5_last > ma100_last
                     and ma300_last > ma300_180_min_ago
                     
-                    and deviation_buy3 > 0.10
-                    and deviation_bellissima > 0.10
-                    and deviation_ma7_sopra_ma40 > 0.12
+                    and deviation_buy3 > 0.08
+                    and deviation_bellissima > 0.08
+                    and deviation_ma7_sopra_ma40 > 0.08
                     
                     and ma3_last > ma13_last
-                    and ma4_last > ma9_last
-                    and ma4_last > ma50_last
-                    and ma6_last > ma15_last
-                    and ma7_last > ma25_last
+                    and ma3_last > ma39_last
                     
                     and ma2_last > ma2_2_min_ago
              
@@ -28420,6 +28418,9 @@ class maddog:
                     #  6 set 2023 and deviation_buy3 > 0.10 da 0.12
                     #  6 set 2023 and deviation_bellissima > 0.10 da 0.12
                     #  6 set 2023 and deviation_ma7_sopra_ma40 > 0.10 da 0.12
+                    # 27 giu 2025 and deviation_buy3 a 0.08 da 0.10
+                    # 27 giu 2025 and deviation_bellissima a 0.08 da 0.10
+                    # 27 giu 2025 and deviation_ma7_sopra_ma40 a 0.08 da 0.10
 
 
                 elif (
