@@ -559,6 +559,7 @@ class maddog:
         ma300_300_min_ago = self.algo_helper.ma_minutes_ago(300, 300)
         ma300_301_min_ago = self.algo_helper.ma_minutes_ago(300, 301)
         ma300_360_min_ago = self.algo_helper.ma_minutes_ago(300, 360)
+        ma300_480_min_ago = self.algo_helper.ma_minutes_ago(300, 480)
         ma300_720_min_ago = self.algo_helper.ma_minutes_ago(300, 720)
 
         ma450_10_min_ago = self.algo_helper.ma_minutes_ago(450, 10)
@@ -2312,22 +2313,24 @@ class maddog:
                     # 17 mag 2025 sto spezzando tutti questi or
 
 
+
                 elif (  
                     ma3_last > ma8_last
-                    
-                    and ma50_last > ma100_last
 
+                    and ma300_last > ma300_480_min_ago
+                   
                     and deviation_ma50_sotto_ma100 > -0.10
-                    and (ma25_last > ma100_last or ma25_last > ma200_last)
-
+                    
                     and deviation_ma3_sopra_ma10 > 0.01
                     
                     and macd_differenza_2_min_ago > -18.50
                 ):    
               
-                    buy = "BUY 1 con ma300_last > ma300_301_min_ago e 100>200 - r 916 A1 x1 X1 y1"
+                    buy = "BUY 1 con ma300_last > ma300_480_min_ago - r 916 A1 x1 X1 y1"
                     action = "buy"
                     percentage = 90
+
+                    # 27 giu 2025 aggiunta and ma300_last > ma300_480_min_ago
 
 
 
