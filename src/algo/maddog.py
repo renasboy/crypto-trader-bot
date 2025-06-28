@@ -59170,6 +59170,9 @@ class maddog:
 
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
+                and ma13_last <= ma13_2_min_ago
+                and ma8_last <= ma8_2_min_ago
+
                 and ma3_last < ma20_last
 
                 and (ma450_last < ma450_480_min_ago or ma450_last < ma450_720_min_ago)
@@ -59184,8 +59187,7 @@ class maddog:
                 and ma100_last < ma200_last
 
                 and ma100_last < ma100_30_min_ago
-                and ma13_last <= ma13_2_min_ago
-
+                
                 and deviation_ma100_sopra_ma200 > -0.70
                 and deviation_ma100_sopra_ma300 < 0.50
 
@@ -59200,7 +59202,7 @@ class maddog:
                 #  3 mar 2025 aggiunta and (ma450_last < ma450_480_min_ago or ma450_last < ma450_720_min_ago)
                 #  3 mar 2025 aggiunta and deviation_ma39 < -0.005
                 # 17 apr 2025 se ma3_last < ma20_last
-
+                # 28 giu 2025 aggiunta and ma8_last <= ma8_2_min_ago
 
 
 
