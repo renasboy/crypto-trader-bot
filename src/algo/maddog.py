@@ -21894,29 +21894,29 @@ class maddog:
                 
                 elif (  
                     ma3_last > ma15_last
-                    
-                    and (ma200_last > ma200_120_min_ago or ma300_last > ma300_60_min_ago or ma300_last > ma450_last)
 
                     and ma100_last < ma100_120_min_ago
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.07
+
+                    and (ma200_last > ma200_120_min_ago or ma300_last > ma300_60_min_ago or ma300_last > ma450_last)
+
                     and deviation_ma54_sopra_o_sotto_ma72 < 0.015
-                    and deviation_ma54_sopra_o_sotto_ma72 > -0.015
+                    
                     
                     and deviation_ma39_sotto_ma200 < 0.20
                     and deviation_ma300_sopra_ma450 > -0.45
                     
                     and deviation_ma3_sopra_ma10 > -0.005
                     
-                    and ma2_last >= ma18_last
-                    
                     and macd_differenza_2_min_ago > -12.25 
                 ):      
               
-                    buy = "BUY 3 da RCCR and ma300_last > ma300_60_min_ago - r 6225"
+                    buy = "BUY 3 da RCCR and ma300_last > ma300_60_min_ago MA ma100_last < ma100_120_min_ago - r 6225"
                     action = "buy"
                     percentage = 80
 
                     # 16 mag 2025 aggiunta questa
-                    
+                    # 28 giu 2025 se ma100_last < ma100_120_min_ago aggiungo deviation_ma5_sopra_o_sotto_ma100 < -0.07
                     
                     
                 
