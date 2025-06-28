@@ -28400,18 +28400,16 @@ class maddog:
 
 
                 elif (
-                    ma5_last > ma100_last
+                    ma3_last > ma18_last
                     and ma300_last > ma300_180_min_ago
                     
-                    and deviation_buy3 > 0.08
-                    and deviation_bellissima > 0.08
-                    and deviation_ma7_sopra_ma40 > 0.08
+                    and deviation_buy3 > 0.04
+                    and deviation_bellissima > 0.04
+                    and deviation_ma7_sopra_ma40 > 0.04
                     
                     and ma3_last > ma13_last
-                    and ma3_last > ma39_last
                     
                     and ma2_last > ma2_2_min_ago
-             
                 ):
                     buy = "BUY 4 con ma300_last > ma300_180_min_ago and dev_bellissima > 0.10 - r 7008 A"
                     action = "buy"
@@ -28424,6 +28422,11 @@ class maddog:
                     # 27 giu 2025 and deviation_buy3 a 0.08 da 0.10
                     # 27 giu 2025 and deviation_bellissima a 0.08 da 0.10
                     # 27 giu 2025 and deviation_ma7_sopra_ma40 a 0.08 da 0.10
+                    # 28 giu 2025 and deviation_buy3 a 0.04 da 0.08
+                    # 28 giu 2025 and deviation_bellissima a 0.04 da 0.08
+                    # 28 giu 2025 and deviation_ma7_sopra_ma40 a 0.04 da 0.08
+
+
 
 
                 elif (
