@@ -30986,7 +30986,29 @@ class maddog:
               
                 
 
-              
+                elif (
+                    ma3_last > ma13_last
+
+                    and ma450_last > ma450_720_min_ago
+                    and deviation_ma100_sopra_ma300 > -0.10
+                    and deviation_ma300_sopra_ma450 > -0.11
+
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.10
+                    and deviation_ma3_sotto_ma50 < -0.02
+
+                    and ma3_last > ma7_last
+                    
+                    and macd_differenza_2_min_ago > -12.50
+                ):
+                    buy = "BUY 5 con ma450_last > ma450_720_min_ago e con ma200> + DNA NOTTE - r 7145"
+                    action = "buy"
+                    percentage = 90
+
+                    # 28 giu 2025 aggiunta questa. 450 sale da 720 min scende  ma la 100 sta ancora vicina alla 300
+                    
+
+
+
                 elif (
                     ma3_last > ma13_last
 
