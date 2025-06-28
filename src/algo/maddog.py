@@ -27787,12 +27787,13 @@ class maddog:
                 elif (
                     ma3_last > ma13_last
 
+                    and ma450_last > ma450_720_min_ago
                     and ma450_last > ma450_360_min_ago
+
                     and delta_DNA_1 > delta_DNA_2
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.10
                     and deviation_ma3_sotto_ma50 < -0.02
 
-                    and ma450_last > ma450_720_min_ago
-                    and deviation_ma300_sopra_ma450 < 0.11
                     and deviation_ma300_sopra_ma450 > -0.11
 
                     and ma200_last > ma200_60_min_ago
@@ -27810,6 +27811,8 @@ class maddog:
                     # 30 gen 2025 nel corridoio 300-450 puo' comprare prima
                     # 28 feb 2025 aggiunta DNA NOTTE
                     # 21 mag 2025 e' andata bene sul BUY 3 e pe ro 2 botte e' stata portata anche qui.
+                    # 28 giu 2025 se delta_DNA_1 > delta_DNA_2 aggiungo deviation_ma5_sopra_o_sotto_ma100 < -0.10
+
 
 
                 # BUY 4A con ma 78> e 300< ma 100>200
