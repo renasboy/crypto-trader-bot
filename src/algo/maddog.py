@@ -18410,6 +18410,8 @@ class maddog:
                     #  9 dic 2024 tolto incrocio 3-180 e aggiunta DNAM. cazzo.
 
 
+
+
                 elif (
                     ma5_last >= ma5_2_min_ago
                     and ma450_last > ma450_120_min_ago
@@ -18420,12 +18422,8 @@ class maddog:
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.10
 
                     and (ma3_prev < ma150_prev and ma3_last > ma150_last)
-                    
-                    
-               
+                   
                     and ma3_last > ma13_last
-                    
-                    
                     
                     and macd_differenza_2_min_ago > -18.25
                 ):  
@@ -22880,6 +22878,7 @@ class maddog:
 
                     and ma450_last > ma450_360_min_ago
                     and delta_DNA_1 > delta_DNA_2
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.05
                     and deviation_ma3_sotto_ma50 < -0.02
 
                     and ma450_last > ma450_720_min_ago
@@ -22901,7 +22900,7 @@ class maddog:
                     # 30 gen 2025 nel corridoio 300-450 puo' comprare prima
                     # 28 feb 2025 aggiunta DNA NOTTE
                     # 21 mag 2025 e' andata bene
-
+                    # 28 mag 2025 aggiunto and deviation_ma5_sopra_o_sotto_ma100 < -0.05
 
 
                 elif (
