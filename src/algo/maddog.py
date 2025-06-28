@@ -14079,11 +14079,17 @@ class maddog:
                 elif (
                     ma3_last > ma13_last
 
-                    and delta_1_50_20 > delta_2_50_20
-                    and deviation_ma3_sotto_ma50 < -0.05
+                    and deviation_ma39 < -0.31
+                    and deviation_ma3_sotto_ma50 < -0.42
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.80
+                    and deviation_ma25_sotto_ma300 < -1.45
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.186
 
+
+                    and delta_1_50_20 > delta_2_50_20
+                    
                     and ma450_last < ma450_300_min_ago
-                    and (ma100_last > ma450_last or deviation_ma100_sopra_ma300 > -0.05)
+                    and deviation_ma100_sopra_ma300 > -0.20
                     
                     and deviation_ma3_sopra_ma10 > 0.01
                     
@@ -14095,6 +14101,7 @@ class maddog:
 
                     # 27 mag 2025 3-13 da 3-18
                     # 28 mag 2025 se doppio delta 50-20 notte aggiungo and deviation_ma3_sotto_ma50 < -0.05
+                    # 28 giu 2025 aggiunto un po' di distanza al ribasso.
 
 
 
@@ -24992,10 +24999,10 @@ class maddog:
                 elif (    
                     ma3_last > ma11_last
 
-                    and deviation_ma39 < -0.32
-                    and deviation_ma3_sotto_ma50 < -0.43
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.80
-                    and deviation_ma25_sotto_ma300 < -1.45
+                    and deviation_ma39 < -0.33
+                    and deviation_ma3_sotto_ma50 < -0.44
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.82
+                    and deviation_ma25_sotto_ma300 < -1.48
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.186
 
                     and ma100_last < ma200_last
@@ -25006,7 +25013,7 @@ class maddog:
                     percentage = 90
 
                     # 27 giu 2025 deviation_ma100_sopra_o_sotto_ma100_10_min_ago a -0.186 da -0.176
-
+                    # 28 giu 2025 mi piace.
 
 
 
@@ -28333,9 +28340,26 @@ class maddog:
                 
                     
                 
-                
-                # 16 apr 2025 nuova condizione che mancava e che ci deve essere
+                elif (    
+                    ma3_last > ma11_last
 
+                    and deviation_ma39 < -0.33
+                    and deviation_ma3_sotto_ma50 < -0.44
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.82
+                    and deviation_ma25_sotto_ma300 < -1.48
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.186
+
+                    and ma100_last < ma200_last
+                    and ma100_last < ma300_last
+                ):
+                    buy = "BUY 4 > grande ribasso 29 mag 2025 aggiunta da un sell con parentesi graffe - grazie compa ! - r 6870"
+                    action = "buy"
+                    percentage = 90
+
+                    # 28 giu 2025 aggiunta al BUY 4 
+
+
+                # 16 apr 2025 nuova condizione che mancava e che ci deve essere
 
                 elif (
                     ma3_last > ma13_last
