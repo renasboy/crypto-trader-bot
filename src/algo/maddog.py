@@ -57699,22 +57699,59 @@ class maddog:
                 # 17 apr 2025 aggiunto and macd_differenza_2_min_ago < -1.0
                 # 17 apr 2025 and deviation_sell < -0.022 da -0.023
                 # 16 mag 2025 aggiunto parentesi. deve essere riferimento per il BUY.
+
+
                 
+
+            elif (
+                ma300_last > ma300_301_min_ago
+                
+                and (ma100_prev > ma300_prev and ma100_last < ma300_last)
+                and (ma3_prev > ma10_prev and ma3_last < ma10_last)
+
+                and ma5_last <= ma5_3_min_ago
+                and ma8_last <= ma8_2_min_ago
+                
+                and ma2_last < ma5_last
+               
+            ):
+                sell = "SELL CS 27 giu 2025 - r 16048 a"
+                action = "sell"
+
+                # 27 giu 2025 aggiunta questa semplice condizione
+                #  9 lug 2025 aggiunto ma5_last <= ma5_3_min_ago
+                #  9 lug 2025 aggiunto incrocio al ribasso 100-300 invece di 100<300
+
 
 
             elif (
                 ma300_last > ma300_301_min_ago
                 
-                and (ma100_last < ma300_last or ma100_last < ma450_last)
-                and ma8_last <= ma8_2_min_ago
+                and (ma100_prev > ma450_prev and ma100_last < ma450_last)
+                and (ma3_prev > ma10_prev and ma3_last < ma10_last)
 
+                and ma5_last <= ma5_3_min_ago
+                and ma8_last <= ma8_2_min_ago
+                
                 and ma2_last < ma5_last
                
             ):
-                sell = "SELL CS 27 giu 2025 - r 16048"
+                sell = "SELL CS 27 giu 2025 - r 16048 b"
                 action = "sell"
 
                 # 27 giu 2025 aggiunta questa semplice condizione
+                #  9 lug 2025 aggiunto ma5_last <= ma5_3_min_ago
+                #  9 lug 2025 aggiunto incrocio al ribasso 100-450 invece di 100<450
+
+
+
+
+
+
+
+
+
+
 
 
             elif (
