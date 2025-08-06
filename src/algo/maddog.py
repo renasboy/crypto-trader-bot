@@ -2470,6 +2470,7 @@ class maddog:
                     percentage = 80
 
                     # 16 mag 2025 in questa circostanza 3-10 e 3-50 non hanno profondita' ! vedi doppio delta 250-150
+                    #  6 ago 2025 ok
 
 
                 elif (
@@ -2698,7 +2699,7 @@ class maddog:
                     percentage = 90
 
                     # 12 mag 2025 aggiunta questa perche' NON AVEVA COMPRATO. cazzo.
-
+                    #  6 ago 2025 ok
 
 
 
@@ -15671,6 +15672,7 @@ class maddog:
                     action = "buy"
                     percentage = 90
 
+                    #  6 ago 2025 ok
 
 
 
@@ -34881,6 +34883,8 @@ class maddog:
                     # 22 feb 2025 se ma450_last > ma450_360_min_ago anticipo ndecchiecella
                     # 28 feb 2025 tolta ma2 > ma2 2 min ago
                     # 28 feb 2025 tolta macd > -60
+                    #  6 ago 2025 ok
+
 
 
                 elif (      
