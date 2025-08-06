@@ -39901,19 +39901,45 @@ class maddog:
                         ma50_last < ma50_2_min_ago
                         and delta_DNA_1 < delta_DNA_2
 
-                        and (deviation_ma39 < -0.05 or ma3_last < ma250_last)
+                        and deviation_ma39 < -0.06
                         and deviation_sell > 0.20
                         and ma5_last < ma5_2_min_ago
                         and ma100_last > ma100_60_min_ago
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 (90-110 min) GIORNO con ma50 < MA ma100 > con deviation_ma39 <-0.20 - r 10193 B1"
+                        sell = "SELL 1 (90-110 min) GIORNO con ma50 < MA ma100 > con deviation_ma39 < -0.06 - r 10193 B1 X"
                         action = "sell"
                         
                         # ma39 NON DEVE VENDERE in fase laterale ma in alto
                         # 30 nov 2023 dev 39 -0.05 da -0.20
                         #  7 apr 2025 GIORNO
                         #  9 mag 2025 aggiunta or 3-250 perche' effettivamente aveva venduto troppo tardi.
+                        #  6 ago 2025 dev 39 -0.06 da -0.05
+                        #  6 AGO 2025 3-39 SEPARATO DALL' INCROCIO AL RIBASSO 3-250
+
+
+
+                    elif (    
+                        ma50_last < ma50_2_min_ago
+                        and delta_DNA_1 < delta_DNA_2
+
+                        and (ma3_prev > ma250_prev and ma3_last < ma250_last)
+                        and deviation_sell > 0.20
+                        and ma5_last < ma5_2_min_ago
+                        and ma100_last > ma100_60_min_ago
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 1 (90-110 min) GIORNO con ma50 < MA ma100 > con deviation_ma39 < -0.06 - r 10193 B1 Y"
+                        action = "sell"
+                        
+                        # ma39 NON DEVE VENDERE in fase laterale ma in alto
+                        # 30 nov 2023 dev 39 -0.05 da -0.20
+                        #  7 apr 2025 GIORNO
+                        #  9 mag 2025 aggiunta or 3-250 perche' effettivamente aveva venduto troppo tardi.
+                        #  6 ago 2025 dev 39 -0.06 da -0.05
+                        #  6 ago 2025 separato 3-250 che deve essere INCROCIO AL RIBASSO 3-250
+
+
 
 
                     elif (    
