@@ -2157,7 +2157,7 @@ class maddog:
 
         # questo FUNZIONA !
 
-        if deviation_ma200_sotto_ma300 < -0.06 or deviation_ma200_sotto_ma300 > -0.01:
+        if deviation_ma200_sotto_ma300 < -0.03 or deviation_ma200_sotto_ma300 > -0.01:
 
 
 
@@ -2736,6 +2736,8 @@ class maddog:
                     # 12 mag 2025 aggiunta questa perche' NON AVEVA COMPRATO. cazzo.
                     #  6 ago 2025 ok
                     #  7 AGO 2025 QUESTA E' ANDATA BENISSIMO
+
+
 
 
                 elif (
@@ -34956,7 +34958,7 @@ class maddog:
                     # 22 feb 2025 se ma450_last > ma450_360_min_ago anticipo ndecchiecella
                     # 28 feb 2025 tolta ma2 > ma2 2 min ago
                     # 28 feb 2025 tolta macd > -60
-                    #  6 ago 2025 ok
+                    #  6 ago 2025 ok - E' ANDATO BENISSIMO
 
 
 
@@ -52858,9 +52860,31 @@ class maddog:
 
 
 
+
+
                     elif (
                         ma78_last > ma78_120_min_ago
+                        and ma300_last > ma300_120_min_ago
+
+                        and ma50_last < ma50_2_min_ago
+                        and (ma50_last < ma78_last or ma5_last < ma200_last)
                         
+                        and deviation_ma39 < 0.08
+                        
+                        and ma2_last < ma2_2_min_ago
+                        and macd_differenza_2_min_ago < -0.30
+                    ):
+                        sell = "SELL 4-5-x CON 50<78 and dev 3-39 < 0.05 e ma50 < - r 15909 a"
+                        action = "sell"
+
+                        #  8 ago 2025 con 300> 120 min sell con 50-78 da 50-59
+
+
+
+                    elif (
+                        ma78_last > ma78_120_min_ago
+                        and ma300_last < ma300_120_min_ago
+
                         and ma50_last < ma50_2_min_ago
                         and (ma50_last < ma59_last or ma5_last < ma200_last)
                         
@@ -52869,7 +52893,7 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                         and macd_differenza_2_min_ago < -0.30
                     ):
-                        sell = "SELL 4-5-x CON 50<59 - SALVAGENTE dev 3-39 < 0.05 e ma50 < - r 15909"
+                        sell = "SELL 4-5-x CON 50<59 - SALVAGENTE dev 3-39 < 0.05 e ma50 < - r 15909 b"
                         action = "sell"
 
                         # 12 mag 2025 aggiunta questa per farla vendere prima di una generica CS che era intervenuta troppo tardi.
