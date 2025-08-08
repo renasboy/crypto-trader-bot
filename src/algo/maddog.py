@@ -57553,14 +57553,16 @@ class maddog:
             elif (
                 ma78_last < ma78_120_min_ago
                 and ma10_last > ma20_last
+
+
                 and ma20_last <= ma20_2_min_ago
                 and ma50_last <= ma50_2_min_ago
-                
+                and (ma5_prev > ma25_prev and ma5_last < ma25_last)
                 
                 and ma300_last > ma300_301_min_ago
                 
-                and deviation_ma39 < 0.08
-                and deviation_sell < 0.001
+                
+                and deviation_sell > 0.001
                 
                 and deviation_ma5_sotto_ma200 > -0.64
                 
@@ -57573,7 +57575,7 @@ class maddog:
                 and macd < 30
                 
             ):
-                sell = "SELL CS con ma50 <= ma50 2 min ago E ma300 > 5 ore E dev 3-39 < 0.08 E dev_sell < 0.001 - r 16047 B1 Y2y"
+                sell = "SELL CS con ma50 <= ma50 2 min ago E ma300 > 5 ore E dev_sell > 0.001 - r 16047 B1 Y2y"
                 action = "sell"
                 
                 # 24 dic 2023 se 10>20 dev sell a 0.02 da 0.04
@@ -57581,7 +57583,7 @@ class maddog:
                 # 22 set 2024 and deviation_sell < 0.01 da < 0.02
                 # 27 mar 2025 anticipato ma proprio di una ndecchiecella
                 # 28 mar 2025 and deviation_sell < 0.001 da < 0.012
-
+                #  8 ago 2025 aggiunto and (ma5_prev > ma25_prev and ma5_last < ma25_last) ha venduto mentre saliva
 
           
             elif (
