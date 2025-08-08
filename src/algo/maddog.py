@@ -2347,7 +2347,8 @@ class maddog:
                     and ma100_last < ma100_120_min_ago
 
                     and (deviation_ma200_sotto_ma300 > -0.13 or delta_DNA_1 < delta_DNA_2)
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.176
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.156
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.25
 
                     and deviation_ma50_sotto_ma100 > -0.10
                     
@@ -2363,6 +2364,9 @@ class maddog:
                     # 27 giu 2025 aggiunta and ma300_last > ma300_480_min_ago
                     #  6 ago 2025 ma se 100 scende da 2 ore allora deve dare un piccolo segno. comprava male. 
                     #  6 ago 2025 ho messo un po' di cose dalle condizioni migliori.
+                    #  8 ago 2025 ho aggiunto and (deviation_ma5_sopra_o_sotto_ma100 < -0.25
+
+
 
                 elif (  
                     ma3_last > ma8_last
@@ -11185,7 +11189,7 @@ class maddog:
 
                     and ma78_last < ma300_last
                     
-                    and macd_differenza_2_min_ago > -12
+                    and macd_differenza_2_min_ago > -18
                     
                 ):
                     buy = "BUY 1 CROLLO FERRARI 3-11 and ma78_last < ma300_last and macd_diff > -12 - r 3543 B"
@@ -17094,23 +17098,21 @@ class maddog:
 
                 elif (    
                     ma3_last > ma18_last
+                    and delta_100_59 > delta_100_59_30_min
+
+                    and (deviation_ma200_sotto_ma300 > -0.13 or delta_DNA_1 < delta_DNA_2)
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.176
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.25
 
                     and ma50_last > ma100_last
-                    
                     and (ma300_last > ma300_120_min_ago or ma450_last > ma450_480_min_ago)
-                    
-
-                    and delta_100_59 > delta_100_59_30_min
-                    
-                    and deviation_ma100_sopra_ma300 < 0.20
-                    and deviation_ma100_sopra_ma300 > -0.30
                     
                     and ma2_last > ma5_last
 
                     and macd_differenza_2_min_ago > -18.50
                 
                 ):
-                    buy = "BUY 2 con 300>300 2 ore and 3-18 and macd_diff_2_min_ago > -18.50 - NOTTE - r 5412 X1 AX 2x1"
+                    buy = "BUY 2 con 300 > 2 ore MA NOTTE and 3-18 and macd_diff_2_min_ago > -18.50 - r 5412 X1 AX 2x1"
                     action = "buy"
                     percentage = 80
 
@@ -17118,6 +17120,7 @@ class maddog:
                     #  9 nov 2024 anticipata ndecchiecella
                     # 11 nov 2024 con 100 > 100 30 min ago
                     # 27 mag 2025 anticipata ndecchiecella
+                    #  8 ago 2025 con delta_100_59 > delta_100_59_30_min deve dare un accenno di risalita perche' continua a comprare mentre scende
 
 
                 elif (    
@@ -24917,11 +24920,14 @@ class maddog:
 
 
               
-                elif (
-                    
-                    ma5_last > ma78_last
-                    and deviation_ma5_sotto_ma300 > -0.45
-                    
+                
+                elif (    
+                    ma5_last > ma18_last
+
+                    and (deviation_ma200_sotto_ma300 > -0.13 or delta_DNA_1 < delta_DNA_2)
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.156
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.25
+
                     and ma100_last < ma100_180_min_ago
                     and ma200_last < ma200_180_min_ago
                     and ma300_last < ma300_180_min_ago
@@ -24929,14 +24935,13 @@ class maddog:
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
                     
-                    and deviation_ma3_sopra_ma10 > 0.02
-                    and deviation_ma5_sopra_ma28 > 0.02
+                    and deviation_ma3_sopra_ma10 > 0.01
                     
-                    and ma2_last >= ma2_2_min_ago
-                    and macd > macd_2_min_ago
-                    and macd > 5
+                    and macd_differenza_2_min_ago > -18
+                    and macd > -100
+                    
                 ):
-                    buy = "BUY 3 29 ago 2022 > 180 min di ribasso con 5-78 - r 6572 A originario"
+                    buy = "BUY 3 29 ago 2022 > 180 min di ribasso - r 6572 A originario"
                     action = "buy"
                     percentage = 90
                     
@@ -24945,7 +24950,9 @@ class maddog:
                     # 24 ago 2023 and macd > macd_2_min_ago
                     # 24 ago 2023 and macd > 5
                     # 16 set 2023 5-78 invece di 5-200
-                
+                    #  8 ago 2025 modificato aggiungendo parti dalle condizioni migliori
+
+
                     
                 # BUY 3 29 ago 2022 > 180 min di ribasso
 
@@ -28915,6 +28922,29 @@ class maddog:
 
 
 
+                elif (    
+                    ma3_last > ma18_last
+
+                    and deviation_ma200_sotto_ma300 > -0.13
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.20
+
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.15
+                    
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_120_min_ago
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    
+                    and macd_differenza_2_min_ago > -18.50
+                    
+                ):
+                    buy = "BUY 5 >120 min di ribasso ma la situazione sta migliorando - r 7041 x"
+                    action = "buy"
+                    percentage = 90
+
+                    #  8 ago 2025 ho aggiunto questa condizione perche' BUY 5 non aveva comprato e BUY 1 CONDIZIONE MIGLIORE aveva comprato tardissimo
+                    #  8 ago 2025 stai tranquillo. vedi che 200 e' vicinissima alla 300 e 100 non scende tantissimo.
+
 
                 elif (    
                     ma3_last > ma30_last
@@ -28934,7 +28964,7 @@ class maddog:
                     and macd_differenza_2_min_ago > -18.50
                     
                 ):
-                    buy = "BUY 5 >120 min di ribasso ma la situazione sta migliorando - r 7041"
+                    buy = "BUY 5 >120 min di ribasso ma la situazione sta migliorando - r 7041 y"
                     action = "buy"
                     percentage = 90
                     
