@@ -28925,6 +28925,7 @@ class maddog:
                 elif (    
                     ma3_last > ma18_last
 
+                    and delta_300_200 < delta_300_200_60_min
                     and deviation_ma200_sotto_ma300 > -0.13
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.20
 
@@ -28944,6 +28945,7 @@ class maddog:
 
                     #  8 ago 2025 ho aggiunto questa condizione perche' BUY 5 non aveva comprato e BUY 1 CONDIZIONE MIGLIORE aveva comprato tardissimo
                     #  8 ago 2025 stai tranquillo. vedi che 200 e' vicinissima alla 300 e 100 non scende tantissimo.
+                    #  8 ago 2025 and delta_300_200 < delta_300_200_60_min
 
 
                 elif (    
