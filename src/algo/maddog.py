@@ -8,6 +8,11 @@
 
 '''
 
+# formula delta CM
+        # deve essere GIORNO
+        # delta_CM_300_25_last < delta_CM_300_225_2_min_ago
+
+
 and delta_1_50_20 < delta_2_50_20 GIORNO ! a 30 min !
 
 
@@ -1144,6 +1149,26 @@ class maddog:
 
 
 
+        # formula delta CM
+        # deve essere GIORNO
+        # delta_CM_300_25_last < delta_CM_300_225_2_min_ago
+
+
+        # formula delta_CM_300_25_last
+        
+        delta_CM_300_25_last = (ma300_last / ma25_last - 1) * 100 if ma25_last else 0
+        self.algo_helper.info("delta_CM_300_25_last: {}".format(delta_CM_300_25_last))
+        
+        
+        # formula delta_CM_300_225_2_min_ago
+        
+        delta_CM_300_225_2_min_ago = (ma300_2_min_ago / ma25_2_min_ago - 1) * 100 if ma25_2_min_ago else 0
+        self.algo_helper.info("delta_CM_300_25_2_min_ago: {}".format(delta_CM_300_25_2_min_ago))
+
+
+
+
+
         # formula delta_1
         
         delta_1 = (ma200_last / ma100_last - 1) * 100 if ma100_last else 0
@@ -1414,18 +1439,6 @@ class maddog:
         
         delta_100_59_60_min = (ma100_60_min_ago / ma59_60_min_ago - 1) * 100 if ma59_60_min_ago else 0
         self.algo_helper.info("delta_100_59_60_min: {}".format(delta_100_59_60_min))
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -31144,6 +31157,44 @@ class maddog:
 
                     # 28 giu 2025 aggiunta questa. 450 sale da 720 min scende  ma la 100 sta ancora vicina alla 300
                     
+
+
+                   
+                elif (     
+                    ma3_last > ma13_last
+                    and deviation_ma78_sopra_o_sotto_ma200 > -0.028
+                    and ma2_differenza_2_min_ago > 3
+                    
+                    and ma100_last < ma100_120_min_ago
+                    and ma100_last < ma100_60_min_ago
+                    
+                    
+                    and deviation_ma54_sopra_o_sotto_ma72 < 0.015
+                    and deviation_ma54_sopra_o_sotto_ma72 > -0.015
+                    
+                    and deviation_ma39_sotto_ma200 < 0.10
+                    and deviation_ma300_sopra_ma450 > -0.37
+                    
+                    and deviation_ma3_sopra_ma10 > -0.01
+                    and deviation_ma3_sopra_ma16 > 0.01
+                    and deviation_ma3_sopra_ma18 > -0.03
+                    
+                    and ma2_last >= ma20_last
+                  
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= macd_2_min_ago
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.018
+                    and macd_differenza_2_min_ago > 0.50
+                    and macd > -40
+                    and ma50_differenza_ma59 > -5
+                    
+                ):    
+                    buy = "BUY 5 compare forever con 100<120 min ago E 100<60 min ago con 5-20 MA CON 300 vicina alla 450 + MACD > E ma50_diff_ma59 > -5 - r 7146"
+                    action = "buy"
+                    percentage = 90
+
+                    #  10 ago 2025 importata da ro cano che ritorna perche' e' andata benissimo. mentre maddog non aveva comprato proprio.
+
 
 
 
