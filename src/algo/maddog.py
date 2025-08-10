@@ -553,6 +553,7 @@ class maddog:
         ma225_60_min_ago = self.algo_helper.ma_minutes_ago(225, 60)
         ma250_60_min_ago = self.algo_helper.ma_minutes_ago(250, 60)
 
+        ma300_2_min_ago = self.algo_helper.ma_minutes_ago(300, 2)
         ma300_10_min_ago = self.algo_helper.ma_minutes_ago(300, 10)
         ma300_20_min_ago = self.algo_helper.ma_minutes_ago(300, 20)
         ma300_30_min_ago = self.algo_helper.ma_minutes_ago(300, 30)
@@ -27875,6 +27876,7 @@ class maddog:
                     and ma450_last > ma450_360_min_ago
 
                     and delta_DNA_1 > delta_DNA_2
+
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.10
                     and deviation_ma3_sotto_ma50 < -0.02
 
