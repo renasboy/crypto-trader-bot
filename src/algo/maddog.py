@@ -10,7 +10,7 @@
 
 # formula delta CM
         # deve essere GIORNO
-        # and delta_CM_300_25_last < delta_CM_300_225_2_min_ago
+        # and delta_CM_300_25_last < delta_CM_300_25_2_min_ago
 
 
 
@@ -31178,7 +31178,7 @@ class maddog:
                     ma3_last > ma13_last
 
                     and ma100_last < ma100_120_min_ago
-                    and delta_CM_300_25_last < delta_CM_300_225_2_min_ago
+                    and delta_CM_300_25_last < delta_CM_300_25_2_min_ago
 
                     and ma450_last > ma450_720_min_ago
                     and deviation_ma100_sopra_ma300 > -0.10
