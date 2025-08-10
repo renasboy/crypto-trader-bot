@@ -27871,7 +27871,7 @@ class maddog:
                 
                 elif (
                     ma3_last > ma13_last
-                    and delta_CM_300_25_last < delta_CM_300_225_2_min_ago
+                    and delta_CM_300_25_last < delta_CM_300_25_2_min_ago
 
                     and ma450_last > ma450_720_min_ago
                     and ma450_last > ma450_360_min_ago
