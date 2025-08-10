@@ -36366,10 +36366,11 @@ class maddog:
                     elif (
                         ma78_last < ma78_120_min_ago
                         and ma300_last < ma300_301_min_ago
-                        and ma2_differenza_2_min_ago < -9
+                        
+                        and delta_1 < delta_2
                         
                         and deviation_ma39 < 0.05
-                        and deviation_sell < -0.08
+                        and deviation_sell < -0.09
                         
                         and ma50_last <= ma50_2_min_ago
                         and deviation_ma100_sopra_ma300 < 0.40
@@ -36378,17 +36379,19 @@ class maddog:
                 
                         and ma2_last <= ma2_2_min_ago 
                         and macd < macd_2_min_ago
-                        and macd < 17
-                        and macd_differenza_2_min_ago < -0.25
+                        
+                        and macd_differenza_2_min_ago < -3.25
                         and ma2_differenza_2_min_ago < -9
-                        and ma50_differenza_ma59 > -6
+                        
                     ):
-                        sell = "SELL 1 (5-12 min) EX cond. spec. r 16047 B2 con ma300> 5 ore - dev 3-39 < 0.05 E dev_sell < -0.08 con ma50 < e con macd < 2 min e macd < 17 - r 8261a"
+                        sell = "SELL 1 (5-12 min) EX CS con ma300< 5 ore ma delta1 < delta2 - dev 3-39 < 0.05 E dev_sell < -0.09 con ma50 < - r 8261 a"
                         action = "sell"
                         
                         # 12 nov 2023 ho messo 2 volte and ma2_differenza_2_min_ago < -9 perche' non l' ha presa !
                         # 12 nov 2023 aggiunta and ma50_differenza_ma59 > -6 se ma 50 sta VICINO alla ma59 allora aumento di una ndecchia la perdita.
                         # 12 nov 2023 and deviation_sell < -0.08
+                        # 10 ago 2025 se giorno deviation_sell a -0.09 da -0.08
+
                         
                     elif (
                         ma78_last < ma78_120_min_ago
