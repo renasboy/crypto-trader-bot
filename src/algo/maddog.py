@@ -10,7 +10,7 @@
 
 # formula delta CM
         # deve essere GIORNO
-        # delta_CM_300_25_last < delta_CM_300_225_2_min_ago
+        # and delta_CM_300_25_last < delta_CM_300_225_2_min_ago
 
 
 and delta_1_50_20 < delta_2_50_20 GIORNO ! a 30 min !
@@ -27869,6 +27869,7 @@ class maddog:
                 
                 elif (
                     ma3_last > ma13_last
+                    and delta_CM_300_25_last < delta_CM_300_225_2_min_ago
 
                     and ma450_last > ma450_720_min_ago
                     and ma450_last > ma450_360_min_ago
@@ -27896,6 +27897,7 @@ class maddog:
                     # 21 mag 2025 e' andata bene sul BUY 3 e pe ro 2 botte e' stata portata anche qui.
                     # 28 giu 2025 se delta_DNA_1 > delta_DNA_2 aggiungo deviation_ma5_sopra_o_sotto_ma100 < -0.10
 
+                    #  10 ago 2025 INCOMINCIAMO A FARE SUL SERIO. aggiunta and delta_CM_300_25_last < delta_CM_300_225_2_min_ago
 
 
                 # BUY 4A con ma 78> e 300< ma 100>200
