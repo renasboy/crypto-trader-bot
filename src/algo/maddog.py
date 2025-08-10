@@ -31149,9 +31149,10 @@ class maddog:
                     # 11 apr 2025 correzione or e aggiunta f
               
                 
-
                 elif (
                     ma3_last > ma13_last
+
+                    and ma100_last > ma100_120_min_ago
 
                     and ma450_last > ma450_720_min_ago
                     and deviation_ma100_sopra_ma300 > -0.10
@@ -31164,12 +31165,38 @@ class maddog:
                     
                     and macd_differenza_2_min_ago > -12.50
                 ):
-                    buy = "BUY 5 con ma450_last > ma450_720_min_ago e con ma200> + DNA NOTTE - r 7145"
+                    buy = "BUY 5 con ma450_last > ma450_720_min_ago e con ma200> + e 100 > ore- r 7145 a"
                     action = "buy"
                     percentage = 90
 
                     # 28 giu 2025 aggiunta questa. 450 sale da 720 min scende  ma la 100 sta ancora vicina alla 300
+                    # 10 ago 2025 con 100> 2 ore
+
+
+
+                elif (
+                    ma3_last > ma13_last
+
+                    and ma100_last < ma100_120_min_ago
+                    and delta_CM_300_25_last < delta_CM_300_225_2_min_ago
+
+                    and ma450_last > ma450_720_min_ago
+                    and deviation_ma100_sopra_ma300 > -0.10
+                    and deviation_ma300_sopra_ma450 > -0.11
+
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.10
+                    and deviation_ma3_sotto_ma50 < -0.02
+
+                    and ma3_last > ma7_last
                     
+                    and macd_differenza_2_min_ago > -12.50
+                ):
+                    buy = "BUY 5 con ma450_last > ma450_720_min_ago e con ma200> MA 100 < ore and CM GIORNO - r 7145 b"
+                    action = "buy"
+                    percentage = 90
+
+                    # 28 giu 2025 aggiunta questa. 450 sale da 720 min scende  ma la 100 sta ancora vicina alla 300
+                    # 10 ago 2025 se 100< 2 ore allora CM deve eesere GIORNO
 
 
                    
