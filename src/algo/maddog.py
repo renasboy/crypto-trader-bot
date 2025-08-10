@@ -13,6 +13,10 @@
         # and delta_CM_300_25_last < delta_CM_300_225_2_min_ago
 
 
+
+
+
+
 and delta_1_50_20 < delta_2_50_20 GIORNO ! a 30 min !
 
 
@@ -27889,7 +27893,7 @@ class maddog:
                     
                     and macd_differenza_2_min_ago > -12.50
                 ):
-                    buy = "BUY 4 con ma450_last > ma450_720_min_ago e con ma200> + DNA NOTTE - r 6800"
+                    buy = "BUY 4 con ma450_last > ma450_720_min_ago e con ma200> MA DNA NOTTE E CM GIORNO- r 6800"
                     action = "buy"
                     percentage = 90
 
@@ -27901,6 +27905,10 @@ class maddog:
                     # 28 giu 2025 se delta_DNA_1 > delta_DNA_2 aggiungo deviation_ma5_sopra_o_sotto_ma100 < -0.10
 
                     #  10 ago 2025 INCOMINCIAMO A FARE SUL SERIO. aggiunta and delta_CM_300_25_last < delta_CM_300_225_2_min_ago
+
+
+
+
 
 
                 # BUY 4A con ma 78> e 300< ma 100>200
