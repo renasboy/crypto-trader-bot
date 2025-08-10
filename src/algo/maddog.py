@@ -1161,9 +1161,10 @@ class maddog:
         self.algo_helper.info("delta_CM_300_25_last: {}".format(delta_CM_300_25_last))
         
         
+
         # formula delta_CM_300_225_2_min_ago
         
-        delta_CM_300_225_2_min_ago = (ma300_2_min_ago / ma25_2_min_ago - 1) * 100 if ma25_2_min_ago else 0
+        delta_CM_300_25_2_min_ago = (ma300_2_min_ago / ma25_2_min_ago - 1) * 100 if ma25_2_min_ago else 0
         self.algo_helper.info("delta_CM_300_25_2_min_ago: {}".format(delta_CM_300_25_2_min_ago))
 
 
