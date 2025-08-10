@@ -35355,9 +35355,12 @@ class maddog:
 
 
 
+
+
                 elif (  
                     ma3_last > ma16_last
                     and (ma100_last < ma200_last or ma78_last < ma150_last)
+                    and delta_CM_300_25_last < delta_CM_300_25_2_min_ago
 
                     and ma450_last > ma450_360_min_ago
                     and ma100_last > ma450_last
@@ -35371,14 +35374,14 @@ class maddog:
                     
                 ):    
               
-                    buy = "BUY 5 con ma450_last > ma450_360_min_ago MA CHE COMINCIA A CURVARE VERSO IL BASSO (78<150) del 18 mag 2025 - r 7595"
+                    buy = "BUY 5 con ma450_last > ma450_360_min_ago MA CHE COMINCIA A CURVARE VERSO IL BASSO (78<150) and CM GIORNO - r 7595"
                     action = "buy"
                     percentage = 90
 
                     # 18 mag 2025 aggiunta da RCCR
                     # 22 mag 2025 aggiunta or ma78_last < ma150_last
                     # 22 mag 2025 aggiunta and deviation_ma3_sotto_ma100 < -0.02
-
+                    # 10 ago 2025 con 100<200 or 78<150 aggiunto CM GIORNO !
 
 
                 elif (
