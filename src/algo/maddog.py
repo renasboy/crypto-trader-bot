@@ -50320,10 +50320,47 @@ class maddog:
                         # 23 nov 2023 and deviation_sell < -0.10 da -0.31
                         # 23 nov 2023 and deviation_ma39 < -0.05 da -0.20
 
-                    
+
+
+
+
                     elif (    
                         ma50_last <= ma50_2_min_ago
+                        and delta_CM_300_25_last < delta_CM_300_25_2_min_ago
+
+                        and ma300_last < ma300_301_min_ago
+                        and ma200_last < ma200_60_min_ago
+                        and ma50_last < ma100_last
                         
+                        and deviation_ma39 < 0.13
+                        and deviation_sell < -0.01
+                        
+                        and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago < 1.50
+                        and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago > -1.50
+                        
+                        and deviation_ma78_sopra_o_sotto_ma78_600_min_ago < 0.15
+                        
+                        and ma2_last < ma2_2_min_ago 
+                        and macd_differenza_2_min_ago < -0.10
+                        and ma2_differenza_2_min_ago < -7
+                    ):
+                        sell = "SELL 4-5-x (12-21 min) se ma50<= e dev_sell < 0.03 E 300 < 300 301 min ago e macd_diff_2_min_ago < -0.10 - GIORNO - r 15014 A"
+                        action = "sell"
+                        
+                        # 18 nov 2023 and deviation_sell < 0.02 da < -0.01
+                        # 27 nov 2023 and deviation_ma78_sopra_o_sotto_ma78_600_min_ago < 0.15 da < 0.10
+                        # 27 nov 2023 ma50_last <= da ma50_last <
+                        
+                        # 27 nov 2023 and dev 39 < 0.03 da 3<39
+                        # 27 nov 2023 and deviation_sell < 0.03 da < -0.01
+                        # 11 ago 2025 se CM GIORNO dev sell a -0.01 da 0.03
+
+
+
+                    elif (    
+                        ma50_last <= ma50_2_min_ago
+                        and delta_CM_300_25_last > delta_CM_300_25_2_min_ago
+
                         and ma300_last < ma300_301_min_ago
                         and ma200_last < ma200_60_min_ago
                         and ma50_last < ma100_last
@@ -50340,7 +50377,7 @@ class maddog:
                         and macd_differenza_2_min_ago < -0.10
                         and ma2_differenza_2_min_ago < -7
                     ):
-                        sell = "SELL 4-5-x (12-21 min) r 15349 B PROVA 4 se ma50<= e dev_sell < 0.03 E 300 < 300 301 min ago e macd_diff_2_min_ago < -0.10 e diff ma2 < -7 - r 15014"
+                        sell = "SELL 4-5-x (12-21 min) se ma50<= e dev_sell < 0.03 E 300 < 300 301 min ago e macd_diff_2_min_ago < -0.10 - NOTTE - r 15014 B"
                         action = "sell"
                         
                         # 18 nov 2023 and deviation_sell < 0.02 da < -0.01
@@ -50349,7 +50386,7 @@ class maddog:
                         
                         # 27 nov 2023 and dev 39 < 0.03 da 3<39
                         # 27 nov 2023 and deviation_sell < 0.03 da < 0.02
-                        
+                        # 11 ago 2025 se CM NOTTE dev sell a -0.01. (inalterato)
                     
                     
 
