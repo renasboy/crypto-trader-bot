@@ -8,9 +8,24 @@
 
 '''
 
+
+# ASCOLTA MARIO
+
+per il BUY
+SE 100 < 60 min
+and delta CV 25-300 45 min NOTTE or 300<450
+deve essere CM 25-300 2 min GIORNO or 25-300 < -0.35
+
+
+
 # formula delta CM
         # deve essere GIORNO
         # and delta_CM_300_25_last < delta_CM_300_25_2_min_ago
+
+
+# formula delta CV
+        # quando e' notte
+        # and delta_CV_300_25_last > delta_CV_300_25_45_min_ago
 
 
 
@@ -471,6 +486,8 @@ class maddog:
         ma20_60_min_ago = self.algo_helper.ma_minutes_ago(20, 60)
         ma25_2_min_ago = self.algo_helper.ma_minutes_ago(25, 2)
         ma25_10_min_ago = self.algo_helper.ma_minutes_ago(25, 10)
+        ma25_30_min_ago = self.algo_helper.ma_minutes_ago(25, 30)
+        ma25_45_min_ago = self.algo_helper.ma_minutes_ago(25, 45)
         ma25_60_min_ago = self.algo_helper.ma_minutes_ago(25, 60)
         ma28_2_min_ago = self.algo_helper.ma_minutes_ago(28, 2)
         ma28_10_min_ago = self.algo_helper.ma_minutes_ago(28, 10)
@@ -560,7 +577,9 @@ class maddog:
         ma300_2_min_ago = self.algo_helper.ma_minutes_ago(300, 2)
         ma300_10_min_ago = self.algo_helper.ma_minutes_ago(300, 10)
         ma300_20_min_ago = self.algo_helper.ma_minutes_ago(300, 20)
+        ma300_25_min_ago = self.algo_helper.ma_minutes_ago(300, 25)
         ma300_30_min_ago = self.algo_helper.ma_minutes_ago(300, 30)
+        ma300_45_min_ago = self.algo_helper.ma_minutes_ago(300, 45)
         ma300_50_min_ago = self.algo_helper.ma_minutes_ago(300, 50)
         ma300_60_min_ago = self.algo_helper.ma_minutes_ago(300, 60)
         ma300_120_min_ago = self.algo_helper.ma_minutes_ago(300, 120)
@@ -1154,9 +1173,14 @@ class maddog:
 
 
 
+
+
+
+
+
         # formula delta CM
         # deve essere GIORNO
-        # delta_CM_300_25_last < delta_CM_300_225_2_min_ago
+        # delta_CM_300_25_last < delta_CM_300_25_2_min_ago
 
 
         # formula delta_CM_300_25_last
@@ -1170,6 +1194,32 @@ class maddog:
         
         delta_CM_300_25_2_min_ago = (ma300_2_min_ago / ma25_2_min_ago - 1) * 100 if ma25_2_min_ago else 0
         self.algo_helper.info("delta_CM_300_25_2_min_ago: {}".format(delta_CM_300_25_2_min_ago))
+
+
+
+
+        # formula delta CV
+        # QUANDO E' NOTTE
+        # delta_CV_300_25_last > delta_CV_300_25_45_min_ago
+
+        # formula delta_CV_300_25_last
+        
+        delta_CV_300_25_last = (ma300_last / ma25_last - 1) * 100 if ma25_last else 0
+        self.algo_helper.info("delta_CV_300_25_last: {}".format(delta_CV_300_25_last))
+        
+        
+
+        # formula delta_CV_300_225_45_min_ago
+        
+        delta_CV_300_25_45_min_ago = (ma300_45_min_ago / ma25_45_min_ago - 1) * 100 if ma25_45_min_ago else 0
+        self.algo_helper.info("delta_CV_300_25_45_min_ago: {}".format(delta_CV_300_25_45_min_ago))
+
+
+
+
+
+
+
 
 
 
