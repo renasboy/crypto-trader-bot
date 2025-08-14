@@ -11,7 +11,7 @@
 
 # ASCOLTA MARIO - IL MIO CAPOLAVORO
 
-and (ma100_last < ma100_60_min_ago or delta_CV_300_45_last > delta_CV_300_25_45_min_ago)
+and (ma100_last < ma100_60_min_ago or delta_CV_300_25_last > delta_CV_300_25_45_min_ago)
 and (delta_CM_300_25_last < delta_CM_300_25_2_min_ago or deviation_ma25_sotto_ma300 < -0.35)
 
 
@@ -20,14 +20,14 @@ and (delta_CM_300_25_last < delta_CM_300_25_2_min_ago or deviation_ma25_sotto_ma
 
 per il BUY DURANTE UN RIBASSO.
 
-SE 100 < 60 min OR delta CV 25-300 45 min NOTTE 
+SE 100 < 60 min OR delta CV 25-300 NOTTE 
 
 deve essere CM 25-300 2 min GIORNO or 25-300 < -0.35
 
 
 
         # SE e' NOTTE - CV
-        # and delta_CV_300_45_last > delta_CV_300_25_45_min_ago
+        # and delta_CV_300_25_last > delta_CV_300_25_45_min_ago
         
 
         # deve essere GIORNO - CM
@@ -32827,7 +32827,7 @@ class maddog:
                 elif (
                     ma3_last > ma13_last
 
-                    and (ma100_last < ma100_60_min_ago or delta_CV_300_45_last > delta_CV_300_25_45_min_ago)
+                    and (ma100_last < ma100_60_min_ago or delta_CV_300_25_last > delta_CV_300_25_45_min_ago)
                     and (delta_CM_300_25_last < delta_CM_300_25_2_min_ago or deviation_ma25_sotto_ma300 < -0.35)
 
 
