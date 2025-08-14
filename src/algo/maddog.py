@@ -32846,7 +32846,7 @@ class maddog:
                     
                     and macd_differenza_2_min_ago > -18.50
                 ):
-                    buy = "BUY 5 con ma450_last > ma450_360_min_ago + distanza al ribasso MA ma100_last > ma100_60_min_ago + CM + CV - r 7384 A2 XX 2Y Y"
+                    buy = "BUY 5 IL MIO CAPOLAVORO ! con ma450_last > ma450_360_min_ago + distanza al ribasso MA ma100_last > ma100_60_min_ago + CM + CV - r 7384 A2 XX 2Y Y"
                     action = "buy"
                     percentage = 70
 
