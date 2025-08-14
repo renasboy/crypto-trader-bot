@@ -22058,16 +22058,18 @@ class maddog:
                     percentage = 80
                     
                     # SE ma100 E' cosi' VICINA A ma200 E ma300 vuo dire che non c'e' un grande rialzo in atto ma un TREND LATERALE !
+
+
                     
                     
                    
                 
                 #  BUY 3A con ma69 > MA ma200 scende da 60 min ! and ma300_last > ma300_60_min_ago
                 
-                
                 elif (  
                     ma3_last > ma15_last
-                    and ma100_last < ma100_120_min_ago
+
+                    and ma100_last > ma100_60_min_ago
 
                     and (deviation_ma200_sotto_ma300 > -0.13 or delta_DNA_1 < delta_DNA_2)
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.156
@@ -22086,7 +22088,36 @@ class maddog:
                     and macd_differenza_2_min_ago > -12.25 
                 ):      
               
-                    buy = "BUY 3 da RCCR and ma300 > ma450 MA ma100_last < ma100_120_min_ago - r 6225"
+                    buy = "BUY 3 da RCCR and ma300 > ma450 MA ma100_last < ma100_120_min_ago E 100 > 60 min - r 6225 X"
+                    action = "buy"
+                    percentage = 80
+
+
+
+                elif (  
+                    ma3_last > ma15_last
+
+                    and (ma100_last < ma100_60_min_ago or delta_CV_300_25_last > delta_CV_300_25_45_min_ago)
+                    and (delta_CM_300_25_last < delta_CM_300_25_2_min_ago or deviation_ma25_sotto_ma300 < -0.35)
+
+                    and (deviation_ma200_sotto_ma300 > -0.13 or delta_DNA_1 < delta_DNA_2)
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.156
+
+                    and ma100_last < ma100_120_min_ago
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.07
+
+                    and (ma200_last > ma200_120_min_ago or ma300_last > ma300_60_min_ago or ma300_last > ma450_last)
+
+                    and deviation_ma54_sopra_o_sotto_ma72 < 0.015
+                    and deviation_ma39_sotto_ma200 < 0.20
+                    and deviation_ma300_sopra_ma450 > -0.45
+                    
+                    and deviation_ma3_sopra_ma10 > -0.005
+                    
+                    and macd_differenza_2_min_ago > -12.25 
+                ):      
+              
+                    buy = "BUY 3 da RCCR and ma300 > ma450 MA ma100_last < ma100_120_min_ago E 100 < 60 min + IL MIO CAPOLAVORO - r 6225 Y"
                     action = "buy"
                     percentage = 80
 
@@ -22095,6 +22126,9 @@ class maddog:
                     #  6 ago 2025 aggiunta and (deviation_ma200_sotto_ma300 > -0.13 or delta_DNA_1 < delta_DNA_2)
                     #  6 ago 2025 aggiunta and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.156
                     #  6 ago 2025 continuava a comprare durante il ribasso. aggiunto dalle condizioni migliori. deve dare un segno !
+                    # 14 ago 2025 con 100< 60 OR delta_CV_300_25 NOTTE aggiungo IL MIO CAPOLAVORO
+
+
 
                 
                 ####################################################################################
