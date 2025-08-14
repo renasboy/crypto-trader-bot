@@ -32820,8 +32820,7 @@ class maddog:
                     # 21 mar 2025 distanza al ribasso se 30 ma39_last < ma39_20_min_ago
                     # 16 apr 2025 and macd_differenza_2_min_ago a -18.50 da -2.50
 
-                    # 14 ago 2025 IL MIO CAPOLAVORO.
-                    # 14 ago 2025 SE E' NOTTE (CV) DEVE ESSERE GIORNO (CM)
+                    
 
 
                 elif (
@@ -32847,7 +32846,7 @@ class maddog:
                     
                     and macd_differenza_2_min_ago > -18.50
                 ):
-                    buy = "BUY 5 con ma450_last > ma450_360_min_ago + distanza al ribasso MA ma100_last > ma100_60_min_ago + CM + CV - r 7384 A2 xx 2y Y"
+                    buy = "BUY 5 con ma450_last > ma450_360_min_ago + distanza al ribasso MA ma100_last > ma100_60_min_ago + CM + CV - r 7384 A2 XX 2Y Y"
                     action = "buy"
                     percentage = 70
 
@@ -32856,6 +32855,8 @@ class maddog:
                     # 21 mar 2025 distanza al ribasso se 30 ma39_last < ma39_20_min_ago
                     # 16 apr 2025 and macd_differenza_2_min_ago a -18.50 da -2.50
 
+                    # 14 ago 2025 IL MIO CAPOLAVORO.
+                    # 14 ago 2025 SE E' NOTTE (CV) DEVE ESSERE GIORNO (CM)
 
 
 
