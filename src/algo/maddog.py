@@ -9,23 +9,32 @@
 '''
 
 
-# ASCOLTA MARIO
+# ASCOLTA MARIO - IL MIO CAPOLAVORO
 
-per il BUY
-SE 100 < 60 min
-and delta CV 25-300 45 min NOTTE or 300<450
+and (ma100_last < ma100_60_min_ago or delta_CV_300_45_last > delta_CV_300_25_45_min_ago)
+and (delta_CM_300_25_last < delta_CM_300_25_2_min_ago or deviation_ma25_sotto_ma300 < -0.35)
+
+
+
+
+
+per il BUY DURANTE UN RIBASSO.
+
+SE 100 < 60 min OR delta CV 25-300 45 min NOTTE 
+
 deve essere CM 25-300 2 min GIORNO or 25-300 < -0.35
 
 
 
-# formula delta CM
-        # deve essere GIORNO
+        # SE e' NOTTE - CV
+        # and delta_CV_300_45_last > delta_CV_300_25_45_min_ago
+        
+
+        # deve essere GIORNO - CM
         # and delta_CM_300_25_last < delta_CM_300_25_2_min_ago
+        
 
 
-# formula delta CV
-        # quando e' notte
-        # and delta_CV_300_25_last > delta_CV_300_25_45_min_ago
 
 
 
@@ -32782,9 +32791,9 @@ class maddog:
 
 
 
-
                 elif (
                     ma3_last > ma13_last
+                    and ma100_last > ma100_60_min_ago
 
                     and (ma450_last > ma450_360_min_ago or ma300_last > ma450_last)
                     and deviation_ma300_sopra_ma450 > -0.18
@@ -32802,7 +32811,7 @@ class maddog:
                     
                     and macd_differenza_2_min_ago > -18.50
                 ):
-                    buy = "BUY 5 con ma450_last > ma450_360_min_ago + distanza al ribasso - r 7384 A2xx2y"
+                    buy = "BUY 5 con ma450_last > ma450_360_min_ago + distanza al ribasso E ma100_last > ma100_60_min_ago - r 7384 A2 xx 2y X"
                     action = "buy"
                     percentage = 70
 
@@ -32810,6 +32819,44 @@ class maddog:
                     # 29 ott 2024 se 39 scende da 20 min allora una specie di osso (and deviation_ma39 < -0.17)
                     # 21 mar 2025 distanza al ribasso se 30 ma39_last < ma39_20_min_ago
                     # 16 apr 2025 and macd_differenza_2_min_ago a -18.50 da -2.50
+
+                    # 14 ago 2025 IL MIO CAPOLAVORO.
+                    # 14 ago 2025 SE E' NOTTE (CV) DEVE ESSERE GIORNO (CM)
+
+
+                elif (
+                    ma3_last > ma13_last
+
+                    and (ma100_last < ma100_60_min_ago or delta_CV_300_45_last > delta_CV_300_25_45_min_ago)
+                    and (delta_CM_300_25_last < delta_CM_300_25_2_min_ago or deviation_ma25_sotto_ma300 < -0.35)
+
+
+                    and (ma450_last > ma450_360_min_ago or ma300_last > ma450_last)
+                    and deviation_ma300_sopra_ma450 > -0.18
+                    and deviation_ma100_sopra_ma300 > -0.29
+
+
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.33
+                    and deviation_ma10_sotto_ma100 < -0.06
+                    
+                    and deviation_ma3_sotto_ma50 < -0.123
+                    and deviation_ma39 < -0.127
+                 
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > -0.01
+                    
+                    and macd_differenza_2_min_ago > -18.50
+                ):
+                    buy = "BUY 5 con ma450_last > ma450_360_min_ago + distanza al ribasso MA ma100_last > ma100_60_min_ago + CM + CV - r 7384 A2 xx 2y Y"
+                    action = "buy"
+                    percentage = 70
+
+                    # 14 ott 2024 se 450 sale da 6 ore NON FARTI TROPPI PROBLEMI !
+                    # 29 ott 2024 se 39 scende da 20 min allora una specie di osso (and deviation_ma39 < -0.17)
+                    # 21 mar 2025 distanza al ribasso se 30 ma39_last < ma39_20_min_ago
+                    # 16 apr 2025 and macd_differenza_2_min_ago a -18.50 da -2.50
+
+
 
 
 
@@ -33713,7 +33760,7 @@ class maddog:
                     # 24 nov 2024 modificato importando un vecchio pensiero laterale da RCCR
                     #  8 mag 2025 anticipata ndecchia
                     # 16 mag 2025 con 25-300 < -0.50
-
+                    # 14 ago 2025 e' andata bene. ha fatto la doppietta.
 
 
 
