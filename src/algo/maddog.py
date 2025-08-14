@@ -29092,7 +29092,7 @@ class maddog:
                     and macd_differenza_2_min_ago > -18.50
                     
                 ):
-                    buy = "BUY 5 >120 min di ribasso ma la situazione sta migliorando - r 7041 Y1"
+                    buy = "BUY 5 >120 min di ribasso ma DICE CHE la situazione sta migliorando E 100< - r 7041 Y1"
                     action = "buy"
                     percentage = 90
 
@@ -29121,7 +29121,7 @@ class maddog:
                     and macd_differenza_2_min_ago > -18.50
                     
                 ):
-                    buy = "BUY 5 >120 min di ribasso ma la situazione sta migliorando - r 7041 Y2"
+                    buy = "BUY 5 >120 min di ribasso ma DICE CHE la situazione sta migliorando MA 100< + IL MIO CAPOLAVORO - r 7041 Y2"
                     action = "buy"
                     percentage = 90
                     
