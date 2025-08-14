@@ -19348,10 +19348,13 @@ class maddog:
                     
                     
                     
-                # BUY 2 RIVOLUZIONARIO A3x (100 NON E' ATTACCATA ALLA 300 !) e 39>50 E 8>200 and deviation_ma100_sopra_ma300 > 0.05 
-                
+                # BUY 2 RIVOLUZIONARIO A3x (100 NON E' ATTACCATA ALLA 300 !) e 39>50 E 8>200 and deviation_ma100_sopra_ma300 > 0.05
+
                 elif (
                     ma3_last > ma8_last
+
+                    and ma100_last > ma100_60_min_ago
+
                     and ma300_last > ma300_301_min_ago
                     and ma200_last < ma200_120_min_ago
                     
@@ -19359,12 +19362,12 @@ class maddog:
                     and delta_1 < delta_2
                     
                     and deviation_ma100_sopra_ma300 < -0.05
-                    and deviation_ma3_sopra_ma18 > 0.01
+                    and deviation_ma3_sopra_ma10 > 0.01
                     
                     and ma2_last >= ma2_2_min_ago
                     and macd >= -60
                 ):    
-                    buy = "BUY 2 CON ma300_last > ma300_301_min_ago e con delta_1 < delta_2 - r 5945 A3 X1"
+                    buy = "BUY 2 CON ma300_last > ma300_301_min_ago e con delta_1 < delta_2 E 100< - r 5945 A3 X1 X"
                     action = "buy"
                     percentage = 70
                     
@@ -19373,6 +19376,39 @@ class maddog:
                     # 23 feb 2023 aggiunta 3-18 > 0.10
                     # 22 mag 2023 se ma300_last > ma300_301_min_agovbuy con 5-50 da 5-200
                     # 28 gen 2025 se GIORNO anticipata ndecchia
+                    # 14 ago 2025 se 100 > 60 min ok cosi'
+
+
+
+                elif (
+                    ma3_last > ma8_last
+
+                    and (ma100_last < ma100_60_min_ago or delta_CV_300_25_last > delta_CV_300_25_45_min_ago)
+                    and (delta_CM_300_25_last < delta_CM_300_25_2_min_ago or deviation_ma25_sotto_ma300 < -0.35)
+
+                    and ma300_last > ma300_301_min_ago
+                    and ma200_last < ma200_120_min_ago
+                    
+                    and ma5_last > ma50_last
+                    and delta_1 < delta_2
+                    
+                    and deviation_ma100_sopra_ma300 < -0.05
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    and macd >= -60
+                ):    
+                    buy = "BUY 2 CON ma300_last > ma300_301_min_ago e con delta_1 < delta_2 MA 100< + IL MIO CAPOLAVORO - r 5945 A3 X1 Y"
+                    action = "buy"
+                    percentage = 70
+                    
+                    # 26 set 100-300 se stanno attaccate e' molto rischioso ! vedi ore 22:48 24 set 2022
+                    # 15 dic 2022 8-28 da 28-50
+                    # 23 feb 2023 aggiunta 3-18 > 0.10
+                    # 22 mag 2023 se ma300_last > ma300_301_min_agovbuy con 5-50 da 5-200
+                    # 28 gen 2025 se GIORNO anticipata ndecchia
+                    # 14 ago 2025 se 100 < 60 min OR delta CV 25-300 NOTTE aggiunto IL MIO CAPOLAVORO
+
                     
                     
                     
