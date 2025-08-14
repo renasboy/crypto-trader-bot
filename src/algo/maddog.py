@@ -11,6 +11,10 @@
 
 # ASCOLTA MARIO - IL MIO CAPOLAVORO
 
+SE 
+and ma100_last > ma100_60_min_ago OK COSI'
+
+MA SE
 and (ma100_last < ma100_60_min_ago or delta_CV_300_25_last > delta_CV_300_25_45_min_ago)
 and (delta_CM_300_25_last < delta_CM_300_25_2_min_ago or deviation_ma25_sotto_ma300 < -0.35)
 
@@ -29032,8 +29036,10 @@ class maddog:
                     #  8 ago 2025 and delta_300_200 < delta_300_200_60_min
 
 
+
                 elif (    
-                    ma3_last > ma30_last
+                    ma3_last > ma20_last
+                    and ma100_last > ma100_60_min_ago
 
                     and (deviation_ma200_sotto_ma300 > -0.13 or delta_DNA_1 < delta_DNA_2)
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.176
@@ -29050,7 +29056,36 @@ class maddog:
                     and macd_differenza_2_min_ago > -18.50
                     
                 ):
-                    buy = "BUY 5 >120 min di ribasso ma la situazione sta migliorando - r 7041 y"
+                    buy = "BUY 5 >120 min di ribasso ma la situazione sta migliorando - r 7041 Y1"
+                    action = "buy"
+                    percentage = 90
+
+                    # 14 ago 2025 aggiunto se 100> ok cosi' (comprava durante un ribasso)
+
+
+
+                elif (    
+                    ma3_last > ma20_last
+
+                    and (ma100_last < ma100_60_min_ago or delta_CV_300_25_last > delta_CV_300_25_45_min_ago)
+                    and (delta_CM_300_25_last < delta_CM_300_25_2_min_ago or deviation_ma25_sotto_ma300 < -0.35)
+
+                    and (deviation_ma200_sotto_ma300 > -0.13 or delta_DNA_1 < delta_DNA_2)
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.176
+
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
+                    
+                    and ma450_last > ma450_480_min_ago
+                    
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_120_min_ago
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    
+                    and macd_differenza_2_min_ago > -18.50
+                    
+                ):
+                    buy = "BUY 5 >120 min di ribasso ma la situazione sta migliorando - r 7041 Y2"
                     action = "buy"
                     percentage = 90
                     
@@ -29059,6 +29094,9 @@ class maddog:
                     # 29 apr 2025 aggiunta questa che mancava dopo 50000 righe
                     #  6 ago 2025 aggiunta and (deviation_ma200_sotto_ma300 > -0.13 or delta_DNA_1 < delta_DNA_2)
                     #  6 ago 2025 aggiunta and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.176
+                    # 14 ago 2025 IL MIO CAPOLAVORO
+
+
 
 
                 
