@@ -33652,8 +33652,14 @@ class maddog:
                     # 26 mag 2025 modificata
 
 
+
+
+
+
+
                 elif (
                     ma3_last > ma8_last
+                    and ma100_last > ma100_60_min_ago
 
                     and ma20_last < ma50_last
 
@@ -33675,10 +33681,18 @@ class maddog:
                     
                     and macd_differenza_2_min_ago > -18.50
                 ):   
-                    buy = f"BUY 5 {ma450_last} {ma450_720_min_ago} con ma450> 720 min MA ritracciamento - r 7410 A2 Y1 y"
+                    buy = f"""BUY 5 con ma450> 720 min MA ritracciamento MA 100 > 1 ora - r 7410 A2 Y1 y1
+                    ma450_last {ma450_last:.2f} 
+                    ma450_720_min_ago {ma450_720_min_ago:.2f} 
+                    deviation_ma39 {deviation_ma39:.2f}
+                    deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.2f} 
+                    deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.2f}
+                    deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.2f} 
+                    deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.2f}
+                    """
                     action = "buy"
                     percentage = 80
-                    
+
                     # deviation_buy3 = ma4_last/ma30_last
                     # ok tu non voi spezzare la catena.
                     # ma per essere un BUY 5 devi avere almeno ma13>ma50 cazzo !
@@ -33692,6 +33706,67 @@ class maddog:
                     #  3 apr 2025 aggiunta and deviation_ma3_sotto_ma50 < -0.01
                     #  6 apr 2025 se e' buy 5 deve essere and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.13
                     # 11 apr 2025 aggiunto f
+                    # 17 ago 2025 aggiunti valori deviation
+                    # 17 ago 2025 se 100> ok cosi'
+
+
+
+                elif (
+                    ma3_last > ma8_last
+
+                    and (ma100_last < ma100_60_min_ago or delta_CV_300_25_last > delta_CV_300_25_45_min_ago)
+                    and (delta_CM_300_25_last < delta_CM_300_25_2_min_ago or deviation_ma25_sotto_ma300 < -0.35)
+
+                    and ma20_last < ma50_last
+
+                    and ma450_last > ma450_720_min_ago
+                    and ma300_last > ma300_60_min_ago
+                    and ma200_last > ma200_120_min_ago
+                    and delta_1 < delta_2
+
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.13
+                    
+                    and deviation_ma3_sotto_ma50 < -0.06
+                    and deviation_ma50_sopra_o_sotto_ma100 < -0.05
+
+                    and deviation_ma39 < -0.01
+                    and deviation_ma3_sotto_ma50 < -0.01
+
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    
+                    and macd_differenza_2_min_ago > -18.50
+                ):   
+                    buy = f"""BUY 5 con ma450> 720 min MA ritracciamento + IL MIO CAPOLAVORO - r 7410 A2 Y1 y2
+                    ma450_last {ma450_last:.2f} 
+                    ma450_720_min_ago {ma450_720_min_ago:.2f} 
+                    deviation_ma39 {deviation_ma39:.2f}
+                    deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.2f} 
+                    deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.2f}
+                    deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.2f} 
+                    deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.2f}
+                    """
+                    action = "buy"
+                    percentage = 80
+
+                    # deviation_buy3 = ma4_last/ma30_last
+                    # ok tu non voi spezzare la catena.
+                    # ma per essere un BUY 5 devi avere almeno ma13>ma50 cazzo !
+                    # 14 ott 2022 aggiunto 3-10 !
+                    # 20 gen 2025 anticipata ndecchia
+                    # 27 gen 2025 se giorno anticipata ndecchia - e' GIORNO !
+                    # 27 gen 2025 quando e' giorno tolto and ma2_last >= ma2_2_min_ago
+                    # 27 mar 2025 se NOTTE and deviation_ma39 < -0.01
+                    # 29 mar 2025 se ritraccia con 450 >
+                    #  3 apr 2025 e' andata bene
+                    #  3 apr 2025 aggiunta and deviation_ma3_sotto_ma50 < -0.01
+                    #  6 apr 2025 se e' buy 5 deve essere and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.13
+                    # 11 apr 2025 aggiunto f
+                    # 17 ago 2025 aggiunti valori deviation
+                    # 17 ago 2025 aggiunto IL MIO CAPOLAVORO
+
+
+
 
 
 
