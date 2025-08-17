@@ -28687,9 +28687,13 @@ class maddog:
                     
                 
                     
-                
                 elif (    
                     ma3_last > ma11_last
+
+                    and ma100_last > ma100_60_min_ago
+
+                    and ma100_last < ma200_last
+                    and ma100_last < ma300_last
 
                     and deviation_ma39 < -0.33
                     and deviation_ma3_sotto_ma50 < -0.44
@@ -28697,14 +28701,48 @@ class maddog:
                     and deviation_ma25_sotto_ma300 < -1.48
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.186
 
-                    and ma100_last < ma200_last
-                    and ma100_last < ma300_last
+                    
                 ):
-                    buy = "BUY 4 > grande ribasso 29 mag 2025 aggiunta da un sell con parentesi graffe - grazie compa ! - r 6870"
+                    buy = "BUY 4 > grande ribasso 29 mag 2025 aggiunta da un sell con parentesi graffe - grazie compa ! MA ma100 > 1 ora - r 6870 a"
                     action = "buy"
                     percentage = 90
 
+                    # 28 giu 2025 aggiunta al BUY 4
+
+
+
+                elif (    
+                    ma3_last > ma11_last
+
+                    and (ma100_last < ma100_60_min_ago or delta_CV_300_25_last > delta_CV_300_25_45_min_ago)
+                    and (delta_CM_300_25_last < delta_CM_300_25_2_min_ago or deviation_ma25_sotto_ma300 < -1.58)
+
+                    and ma100_last < ma200_last
+                    and ma100_last < ma300_last
+
+                    and deviation_ma39 < -0.33
+                    and deviation_ma3_sotto_ma50 < -0.44
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.82
+                    and deviation_ma25_sotto_ma300 < -1.48
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.186
+
+                    
+                ):
+                    buy = f"""BUY 4 > grande ribasso 29 mag 2025 aggiunta da un sell con parentesi graffe - grazie compa ! E 100 < 1 ORA + IL MIO CAPOLAVORO - r 6870 b
+                    deviation_ma39 {deviation_ma39:.2f}
+                    deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.2f} 
+                    deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.2f} 
+                    deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.2f} 
+                    deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.2f} 
+                    """
+                    action = "buy"
+                    percentage = 90
+                    
+
                     # 28 giu 2025 aggiunta al BUY 4 
+                    # 17 ago 2025 se 100< or cv notte AGGIUNTO IL MIO CAPOLAVORO
+                    # 17 AGO 2025 AGGIUNTO VALORI DELLE DEVIATION
+                    # 17 AGO 2025 25-300 era -1.57 io ho messo -1.58 (continuava a scendere ! per questo e' stato necessario CM )
 
 
                 # 16 apr 2025 nuova condizione che mancava e che ci deve essere
