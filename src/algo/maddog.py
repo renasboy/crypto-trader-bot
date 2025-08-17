@@ -28722,7 +28722,7 @@ class maddog:
 
                     and deviation_ma39 < -0.10
                     and deviation_ma3_sotto_ma50 < -0.30
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.80
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.50
                     and deviation_ma25_sotto_ma300 < -1.48
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.186
 
@@ -34113,15 +34113,15 @@ class maddog:
 
                 elif (
                     ma3_last > ma15_last
-                    
-                    and (ma78_last < ma150_last or ma100_last < ma100_120_min_ago)
-                    and deviation_ma39 < -0.08
-                    and deviation_ma3_sotto_ma50 < -0.08
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.20
-                    and deviation_ma25_sotto_ma300 < -0.50
 
+                    and (ma100_last < ma100_60_min_ago or delta_CV_300_25_last > delta_CV_300_25_45_min_ago)
+                    and (delta_CM_300_25_last < delta_CM_300_25_2_min_ago or deviation_ma25_sotto_ma300 < -1.50)
 
-                    and deviation_ma39 < -0.12
+                    and deviation_ma39 < -0.10
+                    and deviation_ma3_sotto_ma50 < -0.30
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.50
+                    and deviation_ma25_sotto_ma300 < -1.50
+
                     and deviation_ma5_sopra_ma59 < -0.10
                     
                     and ma100_last < ma100_180_min_ago
@@ -34137,7 +34137,13 @@ class maddog:
                     
                     and macd_differenza_2_min_ago > -18.50
                 ):
-                    buy = "BUY 5 con ma78_last < ma150_last or ma100_last < ma100_120_min_ago e 25-300 < -0.50 - r 7441 B2y"
+                    buy = f"""BUY 5 con ma78_last < ma150_last or ma100_last < ma100_120_min_ago e 25-300 < -0.50 - r 7441 B2 Y
+                    deviation_ma39 {deviation_ma39:.2f}
+                    deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.2f} 
+                    deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.2f} 
+                    deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.2f} 
+                    deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.2f} 
+                    """
                     action = "buy"
                     percentage = 70
 
@@ -34145,6 +34151,11 @@ class maddog:
                     #  8 mag 2025 anticipata ndecchia
                     # 16 mag 2025 con 25-300 < -0.50
                     # 14 ago 2025 e' andata bene. ha fatto la doppietta.
+                    # 17 AGO 2025 aggiunto IL MIO CAPOLAVORO.
+                    # 17 AGO 2025 N.B. 25-300 < -1.50
+                    # 17 AGO 2025 N.B. 3-39 < -0.10
+                    # 17 AGO 2025 N.B. 3-50 < -0.30
+                    # 17 ago 2025 aggiunti valori deviation.
 
 
 
