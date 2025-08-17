@@ -28720,9 +28720,9 @@ class maddog:
                     and ma100_last < ma200_last
                     and ma100_last < ma300_last
 
-                    and deviation_ma39 < -0.33
-                    and deviation_ma3_sotto_ma50 < -0.44
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.82
+                    and deviation_ma39 < -0.10
+                    and deviation_ma3_sotto_ma50 < -0.30
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.80
                     and deviation_ma25_sotto_ma300 < -1.48
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.186
 
@@ -28738,11 +28738,12 @@ class maddog:
                     action = "buy"
                     percentage = 90
                     
-
                     # 28 giu 2025 aggiunta al BUY 4 
                     # 17 ago 2025 se 100< or cv notte AGGIUNTO IL MIO CAPOLAVORO
                     # 17 AGO 2025 AGGIUNTO VALORI DELLE DEVIATION
                     # 17 AGO 2025 25-300 era -1.57 io ho messo -1.58 (continuava a scendere ! per questo e' stato necessario CM )
+                    # 17 AGO 2025 IMPORTANTE ! 3-10 <-0.10 and 3-50 < -0.30 ! SONO STATI DIMINUITI PERCHE' SE 25-300 CM GIORNO questi sono gia' scattati al rialzo.
+
 
 
                 # 16 apr 2025 nuova condizione che mancava e che ci deve essere
