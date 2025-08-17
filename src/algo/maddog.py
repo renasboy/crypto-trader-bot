@@ -20144,21 +20144,25 @@ class maddog:
 
                 elif (    
                     ma3_last > ma4_last
-                    and (ma450_last > ma450_480_min_ago)
-                    and ma78_last < ma300_last
+                    
+                    and (ma450_last > ma450_480_min_ago or ma78_last < ma300_last)
 
                     and deviation_ma39 < -0.05
                     and deviation_ma3_sotto_ma50 < -0.05
 
                     and macd < -245
                 ):
-                    buy = "BUY 2 crollo MISSILE COMPA modo 2 con 3>4 AND MACD < -245 ! and ma78_last < ma300_last - AGOSTO 2023 - r 5985 x"
+                    buy = "BUY 2 crollo MISSILE COMPA modo 2 con 3>4 AND MACD < -245 ! - AGOSTO 2023 - r 5985 x"
                     action = "buy"
                     percentage = 80
 
                     #  3 mar 2025 e' andata benissimo ! resta !
                     #  3 mar 2025 aggiunta and (ma450_last > ma450_480_min_ago)
                     #  3 apr 2025 aggiunta 3-39 e 3-50
+                    # 17 ago 2025 MISSILE COMPA e' andato bene. voglio tenerlo. (anche se il trend ha continuato a scendere)
+
+
+
                       
                 elif (    
                     ma3_last > ma4_last
@@ -21653,7 +21657,23 @@ class maddog:
                 
                 
                 
-                
+                # BUY 3 crollo MISSILE COMPA ! modo 2
+                 
+                elif (    
+                    ma3_last > ma4_last
+                    and ma78_last < ma300_last
+                    and macd < -245
+                ):
+                    buy = "BUY 3 crollo MISSILE COMPA modo 2 con 3>4 AND MACD < -245 ! and ma78_last < ma300_last - AGOSTO 2023 - r 6020"
+                    action = "buy"
+                    percentage = 80
+
+                    # 17 ago 2025 aggiunto sul BUY 3 perche' e' andato bene su RCCR invece maddog stava a guardare - MISSILE COMPA
+
+
+
+
+
                 elif (   
                     ma3_last > ma28_last
                     and ma39_last < ma100_last
@@ -21884,6 +21904,9 @@ class maddog:
                     action = "buy"
                     percentage = 80
 
+
+
+
                 elif (    
                     ma3_last > ma30_last
                     
@@ -21909,6 +21932,9 @@ class maddog:
                     buy = "BUY 3 con ma200 che sale da 60 min and ma28_last < ma78_last - r 6121 B NUOVA ERA A3 SOFT"
                     action = "buy"
                     percentage = 80
+
+
+
 
                 elif (    
                     ma3_last > ma28_last
@@ -21936,6 +21962,8 @@ class maddog:
                     buy = "BUY 3 con ma200 che sale da 60 min and ma28_last < ma78_last - r 6121 B NUOVA ERA A4 SOFT"
                     action = "buy"
                     percentage = 80
+
+
 
                 elif (    
                     ma4_last > ma54_last
