@@ -4309,21 +4309,23 @@ class maddog:
                 # ------------------------------------------------------------ BUY 1 LATERALE 2
 
 
+
                 elif (    
                     ma3_last > ma11_last
+                    and ma100_last > ma100_60_min_ago
 
                     and delta_450_300 < delta_450_300_60_min
 
                     and ma300_last < ma300_180_min_ago
                     and ma150_last < ma250_last
+
                     and deviation_ma39 < -0.17
                     and deviation_ma3_sotto_ma50 < -0.22
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.14
-
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.10
-                    and deviation_ma5_sotto_ma200 < -0.10
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.14
                     and deviation_ma25_sotto_ma300 < -0.11
 
+                    and deviation_ma5_sotto_ma200 < -0.10
                     and deviation_ma300_sopra_ma450 < 0.50
                     and deviation_ma300_sopra_ma450 > -0.50
                     
@@ -4338,7 +4340,44 @@ class maddog:
                     deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.2f} 
                     deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.2f} 
                     deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.2f} 
-                    GIORNO mentre la 300 si avvicina alla 450 MA con ma300_last < 3 ore  - r 1200 a"""
+                    GIORNO mentre la 300 si avvicina alla 450 MA con ma300_last < 3 ore MA 100 > 1 ora - r 1200 aX"""
+                    action = "buy"
+                    percentage = 80
+
+
+
+                elif (    
+                    ma3_last > ma11_last
+
+                    and (ma100_last < ma100_60_min_ago or delta_CV_300_25_last > delta_CV_300_25_45_min_ago)
+                    and (delta_CM_300_25_last < delta_CM_300_25_2_min_ago or deviation_ma25_sotto_ma300 < -0.35)
+
+
+                    and delta_450_300 < delta_450_300_60_min
+
+                    and ma300_last < ma300_180_min_ago
+                    and ma150_last < ma250_last
+
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.10
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.14
+                    
+
+                    and deviation_ma5_sotto_ma200 < -0.10
+                    and deviation_ma300_sopra_ma450 < 0.50
+                    and deviation_ma300_sopra_ma450 > -0.50
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    
+                    and macd_differenza_2_min_ago > -18.50
+                    
+                ):
+                    buy = f"""BUY 1 
+                    deviation_ma39 {deviation_ma39:.2f} 
+                    deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.2f} 
+                    deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.2f} 
+                    deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.2f} 
+                    deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.2f} 
+                    GIORNO mentre la 300 si avvicina alla 450 MA con ma300_last < 3 ore E 100 < 1 ora + IL MIO CAPOLAVORO - r 1200 aY"""
                     action = "buy"
                     percentage = 80
 
@@ -4350,7 +4389,7 @@ class maddog:
                     # 16 mag 2025 e' andata bene
                     # 16 mag 2025 aggiungo parentesi per capire meglio
                     # 16 mag 2025 and deviation_ma100_sopra_o_sotto_ma100_10_min_ago a -0.14 da -0.13
-
+                    # 17 ago 2025 aggiungendo il mio capolavoro ho tolto 3-39 e 3-50 - vedi i valori quando si verifichera' questa condizione.
      
 
 
