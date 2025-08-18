@@ -36,7 +36,25 @@ deve essere CM 25-300 2 min GIORNO or 25-300 < -0.35
 
         # deve essere GIORNO - CM
         # and delta_CM_300_25_last < delta_CM_300_25_2_min_ago
+
+
+
+
+
         
+        MA 
+        ANCHE SE CM GIORNO
+        DOPO TANTISSIMO TEMPO INTERVIENE DNA !!! + DOPPIO DELTA 450-100 + 150-250 > -0.62
+
+
+and delta_DNA_1 < delta_DNA_2                .........GIORNO ! 
+and delta_DNA_1 > delta_DNA_2                .........NOTTE !  
+
+delta_DNA_1 = ma250_last / ma150_last
+delta_DNA_2 = ma250_60_min_ago / ma150_60_min_ago
+
+
+
 
 
 
@@ -25497,9 +25515,9 @@ class maddog:
                     ma3_last > ma18_last
                     and ma450_last > ma450_60_min_ago
                     and ma300_last > ma450_last
-                    and ma100_last > ma450_last
+                    and ma200_last > ma450_last
                     
-                    and deviation_ma250_sopra_ma300 > -0.12
+                    and deviation_ma250_sopra_ma300 > -0.13
                     
                     and deviation_ma3_sopra_ma10 > 0.01
                     
@@ -25520,7 +25538,7 @@ class maddog:
                     #  7 dic 2023 aggiunta and ma2_differenza_2_min_ago > 7
                     #  9 set 2024 anticipata ndecchiecella
                     #  3 giu 2025 anticipata ndecchiecella
-
+                    # 18 ago 2025 anticipata ndecchiecella - vai compa !
 
 
                 elif (
@@ -31930,7 +31948,7 @@ class maddog:
                     # 10 gen 2023 dev buy 3 a 0.06 da 0.07
                     # 10 gen 2023 dev 7-40 a 0.08 da 0.09
                     # aggiunta 3-10 a 0.05
-                    # # 6 apr 2023 aggiunta 3-16 > 0.165
+                    #  6 apr 2023 aggiunta 3-16 > 0.165
                     
                     
                     
