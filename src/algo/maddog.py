@@ -8,6 +8,20 @@
 
 '''
 
+ASCOLTA MARIO !
+
+sono 4 condizioni
+durante il ribasso - CV notte ! - vede nero !
+
+1 - MC GIORNO con 3-39< -0.10 e 3-50< -0.30 basse perche' e' gia' risalito
+2 - PRENDO IL COLTELLO CON IL PIEDE - OSSO - 25-300 <-1.50 E 3-10 E 3-50 E 3-100 PESANTI ! VEDI VALORI DELLE DEVIATION CON PARENTESI GRAFFE
+3 - INTERVIENE DNA ! DOPPIO DELTA 250-150 GIORNO + DEV 150-250 > -0.62 STA RISALENDO - CM puo' essere giorno o notte. DNA INTERVIENE !
+4 - INTERVIENE MB -l' ultimo - ALLA FINE ! quando il ribasso e' lunghissimo con DOPPIO DELTA 450 - 300 GIORNO
+
+
+
+
+
 
 # ASCOLTA MARIO - IL MIO CAPOLAVORO
 
