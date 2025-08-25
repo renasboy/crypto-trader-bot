@@ -45756,18 +45756,40 @@ class maddog:
                         
 
                     ######################################################################################## con trend discendente
-                    
+
+
                     elif (
                         ma50_last > ma50_2_min_ago
+                        and ma25_last > ma300_last
+
                         and deviation_ma100_sopra_ma300 < 0.30
-                        and (ma4_prev > ma39_prev and ma4_last < ma39_last)
+                        and (ma4_prev > ma59_prev and ma4_last < ma59_last)
                         and deviation_sell > 0.57 and deviation_sell < 0.80
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 2 (90-110 min) con ma50> e 4-39 e 100-300 < 0.30 and deviation_sell 0.57-0.80 FINTA ALLA RONALDO - r 12370 A1"
+                        sell = "SELL 2 (90-110 min) con ma50> e 4-59 e 25>300 e 100-300 < 0.30 and deviation_sell 0.57-0.80 FINTA ALLA RONALDO - r 12370 A1 x"
                         action = "sell"
 
                         # 20 gen 2025 4-39 da 4-25
+                        # 25 ago 2025 4-59 da 4-39 se 25>300
+
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and ma25_last < ma300_last
+
+                        and deviation_ma100_sopra_ma300 < 0.30
+                        and (ma4_prev > ma49_prev and ma4_last < ma49_last)
+                        and deviation_sell > 0.57 and deviation_sell < 0.80
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 2 (90-110 min) con ma50> e 4-49 e 25<300 e 100-300 < 0.30 and deviation_sell 0.57-0.80 FINTA ALLA RONALDO - r 12370 A1 y"
+                        action = "sell"
+
+                        # 20 gen 2025 4-39 da 4-25
+                        # 25 ago 2025 4-49 da 4-39 se 25<300
+
+
+
                     
                     elif (  
                         ma50_last < ma50_2_min_ago
