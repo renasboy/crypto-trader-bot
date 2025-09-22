@@ -3291,7 +3291,7 @@ class maddog:
 
 
                 elif (    
-                    ma3_last > ma15_last
+                    ma3_last > ma13_last
                   
                     and delta_1 > delta_2
                     
@@ -3308,7 +3308,7 @@ class maddog:
                     
                     and deviation_ma3_sopra_ma10 > 0.01
                     
-                    and macd_differenza_2_min_ago > -2.50
+                    and macd_differenza_2_min_ago > -18.50
                  
                 ):
                     buy = "BUY 1 NOTTE ! - che considera 5-300 e dev 10-200 < -0.30 - formula MY COMPA - r 1043 B1 NUOVA ERA A3 SOFT x2"
@@ -3318,6 +3318,8 @@ class maddog:
                     # 27 gen 2025 se GIORNO-GIORNO aggiunta and deviation_ma25_sotto_ma300 < -0.49
                     # 11 mar 2025 anticipato ndecchiecella ma forse cancellare
                     # 19 mag 2025 aggiunta questa con NOTTE che secondo me andra' meglio della precedente. che sto cercando di non cancellare.
+                    # 22 set 2025 3-13 da 3-15 e macd diff a -18.50 da -2.50
+                    # 22 set 2025 la tengo perche' e' intervenuta dove altre non lo hanno fatto.
 
 
                 elif (    
