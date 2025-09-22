@@ -14,9 +14,9 @@ sono 4 condizioni
 durante il ribasso - CV notte ! - vede nero !
 
 1 - MC GIORNO con 3-39< -0.10 e 3-50< -0.30 basse perche' e' gia' risalito
-2 - PRENDO IL COLTELLO CON IL PIEDE - OSSO - 25-300 <-1.50 E 3-10 E 3-50 E 3-100 PESANTI ! VEDI VALORI DELLE DEVIATION CON PARENTESI GRAFFE
+2 - PRENDO IL COLTELLO CON IL PIEDE - OSSO - 25-300 < -1.50 E 3-10 E 3-50 E 3-100 PESANTI ! VEDI VALORI DELLE DEVIATION CON PARENTESI GRAFFE
 3 - INTERVIENE DNA ! DOPPIO DELTA 250-150 GIORNO + DEV 150-250 > -0.62 STA RISALENDO - CM puo' essere giorno o notte. DNA INTERVIENE !
-4 - INTERVIENE MB -l' ultimo - ALLA FINE ! quando il ribasso e' lunghissimo con DOPPIO DELTA 450 - 300 GIORNO
+4 - INTERVIENE MB - l' ultimo - ALLA FINE ! quando il ribasso e' lunghissimo con DOPPIO DELTA 450 - 300 GIORNO
 
 
 
@@ -14026,7 +14026,7 @@ class maddog:
                     and macd_differenza_2_min_ago > -2.50
                 ):    
         
-                    buy = "BUY 2 CON 450> MA ma100< 100 90 min ago + CANO STAF + zia amalia + MODELLO CONTINUA A SCENDERE - r 4670"
+                    buy = "BUY 2 con 450> MA ma100< 100 90 min ago + CANO STAF + zia amalia + MODELLO CONTINUA A SCENDERE - r 4670"
                     action = "buy"
                     percentage = 90
                     
@@ -14038,7 +14038,34 @@ class maddog:
 
                     # 27 feb 2025 CONTINUA A SCENDERE ! - MODELLO -
 
-                        
+
+
+                elif (    
+                    ma4_last > ma50_last
+                    and ma450_last < ma450_120_min_ago
+                    and ma100_last <= ma200_last
+                    
+                    and ma50_last > ma59_last
+                    and ma100_last > ma300_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and deviation_ma3_sopra_ma16 > 0.077
+                    and deviation_ma5_sopra_ma28 > -0.01
+                    
+                    and ma3_last > ma13_last
+                    
+                    and ma2_last > ma2_2_min_ago
+                    and macd_differenza_2_min_ago > 0.20
+                    and macd >= macd_2_min_ago
+                ):
+                    buy = "BUY 2 con 50>59 AND and ma450_last < ma450_120_min_ago CON ma100_last > ma300_last MA 100<200 and macd > macd_2_min_ago - r 4675"
+                    action = "buy"
+                    percentage = 80
+
+                    # 22 set 2025 aggiunta da RCCR - maddog ha comprato con molto ritardo
+
+                    
+
                 elif (
                     
                     ma3_last > ma100_last
