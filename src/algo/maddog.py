@@ -10,10 +10,15 @@
 
 ASCOLTA MARIO !
 
+delta_CM_300_25_last < delta_CM_300_25_2_min_ago
+delta_CV_300_25_last > delta_CV_300_25_45_min_ago
+
+
+
 sono 4 condizioni
 durante il ribasso - CV notte ! - vede nero !
 
-1 - MC GIORNO con 3-39< -0.10 e 3-50< -0.30 basse perche' e' gia' risalito
+1 - MC GIORNO con 3-39 < -0.10 e 3-50 < -0.30 basse perche' e' gia' risalito
 2 - PRENDO IL COLTELLO CON IL PIEDE - OSSO - 25-300 < -1.50 E 3-10 E 3-50 E 3-100 PESANTI ! VEDI VALORI DELLE DEVIATION CON PARENTESI GRAFFE
 3 - INTERVIENE DNA ! DOPPIO DELTA 250-150 GIORNO + DEV 150-250 > -0.62 STA RISALENDO - CM puo' essere giorno o notte. DNA INTERVIENE !
 4 - INTERVIENE MB - l' ultimo - ALLA FINE ! quando il ribasso e' lunghissimo con DOPPIO DELTA 450 - 300 GIORNO
@@ -24739,13 +24744,13 @@ class maddog:
 
 
                 elif (    
-                    ma3_last > ma18_last
+                    ma3_last > ma15_last
 
                     and ma25_last < ma25_60_min_ago
+                    and delta_CM_300_25_last <= delta_CM_300_25_2_min_ago
+
                     and deviation_ma3_sotto_ma50 < -0.13
 
-                    and deviation_ma5_sotto_ma300 > -0.50
-                    
                     and ma100_last < ma100_120_min_ago
                     and ma200_last < ma200_120_min_ago
                     and ma300_last < ma300_30_min_ago
@@ -24772,7 +24777,7 @@ class maddog:
                     # 26 apr 2026 questa ci deve stare si tratta di aggiungere un po' di distanza al ribasso
                     # 12 mag 2025 e' andata benissimo
                     # 12 mag 2025 aggiunto, comunque, and deviation_ma3_sotto_ma50 < -0.13
-
+                    # 23 set 2025 aggiunto and delta_CM_300_25_last <= delta_CM_300_25_2_min_ago
 
                     
                 # BUY 3 29 ago 2022 > 120 min di ribasso
@@ -28908,10 +28913,8 @@ class maddog:
 
                 elif (
                     ma3_last > ma13_last
-
-                    and ma50_last > ma100_last
-                    and ma11_last > ma200_last
-
+                    and delta_CM_300_25_last <= delta_CM_300_25_2_min_ago
+                    
                     and ma300_last < ma300_180_min_ago
                     
                     and ma3_last > ma10_last
@@ -28929,7 +28932,7 @@ class maddog:
                     # 26 dic 2023 aggiunta and macd_differenza_2_min_ago > 0.50
                     # 30 apr 2025 se al BUY 4 ma50 sta sopra ma100 che cazzo mi spezzi la catena ! devi anticipare, invece !
                     #  8 mag 2025 questa la tengo anche se non e' andata bene.
-
+                    # 23 set 2025 anticipata con CM
 
 
 
