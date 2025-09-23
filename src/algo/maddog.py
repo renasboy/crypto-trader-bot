@@ -61760,11 +61760,12 @@ class maddog:
 
 
             
+
             elif (
                 deviation_sell > 0.81
                 and ma300_last < ma300_301_min_ago
                 and ma300_last > ma450_last
-                and ma3_last < ma50_last
+                and ma3_last < ma59_last
 
                 and macd < macd_2_min_ago
                 and macd < -9
@@ -61784,7 +61785,7 @@ class maddog:
                 # 19 gen 2024 deviation_sell a 0.81 da 0.91
                 # 21 feb 2024 aggunta 2-18
                 # 12 nov 2024 se 300>450 aggiunto and ma3_last < ma50_last - stai calmo
-
+                # 23 set 2025 3-59 da 3-50 (ma avrei potuto mettere 3<100)
 
 
 
