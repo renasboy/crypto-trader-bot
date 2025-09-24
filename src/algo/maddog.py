@@ -25268,6 +25268,8 @@ class maddog:
                 elif (    
                     ma5_last > ma18_last
 
+                    and delta_CM_300_25_last <= delta_CM_300_25_2_min_ago
+
                     and (deviation_ma200_sotto_ma300 > -0.13 or delta_DNA_1 < delta_DNA_2)
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.156
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.25
@@ -25285,7 +25287,7 @@ class maddog:
                     and macd > -100
                     
                 ):
-                    buy = "BUY 3 29 ago 2022 > 180 min di ribasso - r 6572 A originario"
+                    buy = "BUY 3 29 ago 2022 > 180 min di ribasso con CM GIORNO ! - r 6572 A originario"
                     action = "buy"
                     percentage = 90
                     
@@ -25295,12 +25297,12 @@ class maddog:
                     # 24 ago 2023 and macd > 5
                     # 16 set 2023 5-78 invece di 5-200
                     #  8 ago 2025 modificato aggiungendo parti dalle condizioni migliori
+                    # 24 set 2025 aggiunta and delta_CM_300_25_last <= delta_CM_300_25_2_min_ago
 
 
                     
                 # BUY 3 29 ago 2022 > 180 min di ribasso
 
-                
                 elif (    
                     ma3_last > ma20_last
                     and delta_1 < delta_2
