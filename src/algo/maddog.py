@@ -10,8 +10,8 @@
 
 ASCOLTA MARIO !
 
-delta_CM_300_25_last < delta_CM_300_25_2_min_ago
-delta_CV_300_25_last > delta_CV_300_25_45_min_ago
+and delta_CM_300_25_last < delta_CM_300_25_2_min_ago
+and delta_CV_300_25_last > delta_CV_300_25_45_min_ago
 
 
 
@@ -31995,10 +31995,38 @@ class maddog:
                     # 10 gen 2023 dev 7-40 a 0.08 da 0.09
                     # aggiunta 3-10 a 0.05
                     #  6 apr 2023 aggiunta 3-16 > 0.165
+
+
+
+
+
                     
                     
                     
-                    
+                elif (
+                        ma50_last >= ma50_2_min_ago
+
+                        and delta_CM_300_25_last < delta_CM_300_25_2_min_ago
+                        
+                        and delta_1 < delta_2
+                        and ma100_last > ma100_60_min_ago
+                        and ma300_last < ma300_120_min_ago
+                        and deviation_ma10_sopra_ma200 < -0.25
+                        and (ma4_prev < ma30_prev and ma4_last > ma30_last)
+                        
+                        and ma2_last > ma5_last
+                        
+                    ):
+                        sell = "BUY 5 con 300 < 120 min E CON ma50> e incr 4-30 E GIORNO E dev_ma2_sopra_o_sotto_ma2_2_min < -0.02 - r 7215"
+                        action = "sell"
+                        
+                        # 24 set 2025 aggiunto da un sell de RCCR perche' maddog non aveva comprato.
+                        
+
+
+
+
+                          
                 elif (
                     ma5_last >= ma5_2_min_ago
                     
