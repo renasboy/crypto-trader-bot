@@ -31932,9 +31932,17 @@ class maddog:
                 
                 elif (
                     ma3_last > ma16_last
-                    
+                    and delta_1_69_39 < delta_2_69_39
+
+                    and deviation_ma39 < -0.15
+                    and deviation_ma3_sotto_ma50 < -0.18
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.30
+                    and deviation_ma25_sotto_ma300 < -0.65
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.07 
+
+
                     and deviation_buy_crollo_1 < -0.29
-                    and deviation_buy_crollo_1 > -0.79
+                    and deviation_buy_crollo_1 > -0.99
                     
                     and deviation_ma5_sotto_ma200 > -1.20
                     
@@ -31950,13 +31958,24 @@ class maddog:
                     and macd_differenza_2_min_ago > -18.30
                    
                 ):
-                    buy = "BUY 5 con ma450_last < ma450_720_min_ago e ma28_last < ma28_30_min_ago - r 7203 B1 Y"
+                    buy = f"""BUY 5 con ma450_last < ma450_720_min_ago e ma28_last < ma28_30_min_ago and delta_1_69_39 < delta_2_69_39 - r 7203 B1 Y
+                    deviation_ma39 {deviation_ma39:.2f} 
+                    deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.2f} 
+                    deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.2f} 
+                    deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.2f} 
+                    deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.2f} 
+                    deviation_buy_crollo_1 {deviation_buy_crollo_1:.2f} 
+                    """
+                    
                     action = "buy"
                     percentage = 70
                     
                     # 25 gen 2024 se ma100_last >= ma100_60_min_ago compra anche con 3-90
                     # 29 gen 2025 incomincio a risolvere il problema del trend laterale dopo un grande RIBASSO
                     # 27 mag 2025 modificata per anticipare ndecchia
+                    # 24 set 2025 aggiunta and delta_1_69_39 < delta_2_69_39
+                    # 24 set 2024 deviation_buy_crollo_1 a -0.99 da > -0.80
+
 
                 
                 
@@ -60171,6 +60190,9 @@ class maddog:
                 # 12 mag 2025 se ma100 non scende molto dev sell a -0.001 da 0.01
                 # 27 giu 2025 and ma8_last <= ma8_2_min_ago
 
+
+
+
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
                 and ma20_last < ma50_last
@@ -60194,14 +60216,20 @@ class maddog:
                 and ma2_last <= ma2_2_min_ago
             ):
 
-                sell = f"SELL CS deviation_ma39 {deviation_ma39} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago} - DOLCE ATTESA 270 sec E dev sell < 0.01 and ma13 < and con 450 < MA GIORNO ! - r 16694 B2 Y2 Ax 2y"
+                sell = f"""SELL CS - DOLCE ATTESA 270 sec E dev sell < 0.01 and ma13 < and con 450 < MA GIORNO ! - r 16694 B2 Y2 Ax 2y
+                deviation_ma39 {deviation_ma39:.2f} 
+                deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.2f} 
+                deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.2f} 
+                deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.2f} 
+                deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.2f} 
+                """
                 action = "sell"
-                
+
                 # 20 mar 2025 deviation_sell a -0.055 da -0.05
                 # 14 apr 2025 se 20<50 and deviation_sell < 0.01 da -0.055
                 # 12 mag 2025 aggiunta and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.07
                 # 12 mag 2025 se ma100 scende molto dev sell ok cosi'
-                
+                # 24 set 2025 messo ordine parentesi graffe e 2 numeri dopo la virgola
 
 
 
@@ -60229,8 +60257,16 @@ class maddog:
                 and ma2_last <= ma2_2_min_ago
             ):
 
-                sell = "SELL CS - DOLCE ATTESA 270 sec E dev sell < -0.06 and ma13 < and con 450 < MA GIORNO ! - r 16694 B2 Y2 Ay"
+                sell = f"""SELL CS - DOLCE ATTESA 270 sec E dev sell < -0.06 and ma13 < and con 450 < MA GIORNO ! - r 16694 B2 Y2 Ay
+                deviation_ma25_sotto_ma200 {deviation_ma25_sotto_ma200:.2f}
+                deviation_ma39 {deviation_ma39:.2f} 
+                deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.2f} 
+                deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.2f} 
+                deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.2f} 
+                deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.2f} 
+                """
                 action = "sell"
+                
 
                 # 4 feb 2022 con <-0.26 ha fatto -0.88% (dopo +4.29%)
                 # 7 feb 2022 con <-0.345 e 270 sec ha fatto -0.38% - aumenta a 0.355 ! - eventualmente ci pensa la condizione CROLLO IMPROVVISO CHE FUNZIONA !
@@ -60245,7 +60281,7 @@ class maddog:
                 #  3 ott 2024 aggiunta 3<10 ma bene cosi' !
                 # 17 feb 2025 aggiunta and ma5_last < ma5_3_min_ago
                 # 20 mar 2025 deviation_sell a -0.06 da -0.05 se deviation_ma25_sotto_ma200 < -2.00
-
+                # 24 set 2025 messe parentesi graffe
 
 
             
