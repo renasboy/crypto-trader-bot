@@ -14376,18 +14376,24 @@ class maddog:
 
                 elif (    
                     ma3_last > ma13_last
+
                     and ma450_last < ma450_300_min_ago
+                    and delta_1_50_20 < delta_2_50_20
+
+                    and deviation_ma39 < -0.10
+                    and deviation_ma3_sotto_ma50 < -0.13
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.20
+                    and deviation_ma25_sotto_ma300 < -0.25
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
 
                     and (deviation_ma200_sotto_ma300 > -0.13 or delta_DNA_1 < delta_DNA_2)
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.176
-                    
-                    and delta_1_50_20 < delta_2_50_20
                     
                     and deviation_ma3_sopra_ma10 > 0.01
                     
                     and macd_differenza_2_min_ago > -18.50
                 ):
                     buy = f"""BUY 2 con condizioni che sono andate bene durante il ribasso - r 4685 BY 1Y X1
+
                     deviation_ma39 {deviation_ma39:.2f} 
                     deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.2f} 
                     deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.2f} 
@@ -14403,7 +14409,7 @@ class maddog:
                     #  7 ago 2025 aggiunta and (deviation_ma200_sotto_ma300 > -0.13 or delta_DNA_1 < delta_DNA_2)
                     #  7 ago 2025 aggiuntaand deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.176
                     # 25 set 2025 aggiunte parentesi graffe
-
+                    # 25 set 2025 aggiunte le deviation delle parentesi graffe
 
 
 
