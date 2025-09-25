@@ -23588,11 +23588,54 @@ class maddog:
                     
                     # 31 lug 2023 aggiunta and deviation_ma3_sopra_ma10 > 0.10
                     # 21 gen 2025 SE delta_1 > delta_2 allora and deviation_buy > 0.27 sopra ultimo sell
+
+
+
+
               
                   
-                # BUY 3 RIALZO IMPROVVISO ! con ma200 > and ma100_last > ma200_last
                 
+
                 elif (
+                    ma300_last < ma300_301_min_ago
+                    and ma78_last < ma78_120_min_ago
+
+                    and ma20_last <= ma20_2_min_ago
+                    and ma50_last <= ma50_2_min_ago
+                    
+                    and delta_150_100 <= delta_150_100_60_min
+                
+                    and deviation_ma39 < 0.13
+                    and deviation_ma3_sotto_ma50 < -0.01
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.02
+                    and deviation_ma25_sotto_ma300 < -0.03
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.13
+
+                    and deviation_ma100_sopra_ma300 < 0.40
+                    and deviation_ma5_sotto_ma200 > -0.70
+                
+                    and ma2_last > ma2_2_min_ago 
+                ):
+                    buy = f"""BUY 3 del 25 set 2025 da un sell ! - r 6475
+
+                    deviation_ma39 {deviation_ma39:.2f} 
+                    deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.2f} 
+                    deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.2f} 
+                    deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.2f} 
+                    deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.2f} 
+                    """
+                    action = "buy"
+                    percentage = 80
+
+                    # 25 set 2025 ti ricordo che deviation_sell = ma3_last/last_trade_price
+                    # 25 set 2025 aggiunte parentesi graffe
+
+
+
+                # BUY 3 RIALZO IMPROVVISO ! con ma200 > and ma100_last > ma200_last
+
+                elif (
+                    
                     ma200_last > ma200_20_min_ago
                     and ma78_last > ma150_last
                     and deviation_rialzo_improvviso_sopra > 0.28
@@ -23605,7 +23648,7 @@ class maddog:
                     and deviation_range_2 > -0.21
                     and deviation_range_x < 0.21
                     and deviation_range_x > -0.21
-                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.088
+                    and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.01
                 ):
              
                     buy = "BUY 3 RIALZO IMPROVVISO ! con ma200 > and 78>150 (solo per il buy 2 e per il buy 3) - r 6479"
@@ -23616,6 +23659,7 @@ class maddog:
                     #  8 gen 2024 and deviation_rialzo_improvviso_sopra > 0.24 da 0.47
                     #  9 gen 2024 and deviation_rialzo_improvviso_sopra > 0.28 da 0.24
                     #  9 gen 2024 aggiunta and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.088
+                    # 25 set 2025 ti ricordo chedeviation_sell = ma3_last/last_trade_price
 
                 
                     
@@ -37153,8 +37197,8 @@ class maddog:
                         # 12 nov 2023 ho messo 2 volte and ma2_differenza_2_min_ago < -9 perche' non l' ha presa !
                         # 12 nov 2023 and deviation_sell < -0.07
                         # 12 nov 2023 aggiunta and ma50_differenza_ma59 < -6 se ma 50 sta LONTANA alla ma59 allora DIMINUISCO la perdita.
-                        # 17 dic  2023 and deviation_ma39 a 0.08 da 0.05
-                        # 17 dic  2023 and deviation_sell a -0.05 da -0.07
+                        # 17 dic 2023 and deviation_ma39 a 0.08 da 0.05
+                        # 17 dic 2023 and deviation_sell a -0.05 da -0.07
 
                   
                     elif (
@@ -55789,8 +55833,10 @@ class maddog:
                 action = "sell"
                 
                 # 23 dic 2023 dev_sell < 0.01 se ma20 cresce da 10 min
-            
 
+
+            
+            
             elif (
                 ma300_last < ma300_301_min_ago
 
@@ -55801,7 +55847,6 @@ class maddog:
                 
                 and ma50_last <= ma50_2_min_ago
                 
-                
                 and delta_150_100 <= delta_150_100_60_min
                 
                 and deviation_ma39 < 0.13
@@ -55811,8 +55856,7 @@ class maddog:
                 and deviation_ma5_sotto_ma200 > -0.50
                 
                 and ma2_last <= ma2_2_min_ago 
-                
-                
+               
             ):
                 sell = "SELL CS GIORNO con ma300 < 5 ore E ma50 <= MA 30>78 e dev 3-39 < 0.13 E dev_sell < -0.01 - r 16045 B2 Y2 X"
                 action = "sell"
@@ -55820,6 +55864,7 @@ class maddog:
                 # 30 ott 2024 se 30 > 78 statte calmo
                 #  8 apr 2025 dev sell a -0.02 da -0.03
                 #  7 ago 2025 dev sell a -0.01 da -0.02
+
 
 
 
