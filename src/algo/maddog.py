@@ -18028,7 +18028,7 @@ class maddog:
                     and ma3_last > ma20_last
 
                     and ma450_last > ma450_720_min_ago
-                    and deviation_ma10_sopra_ma200 > -0.16
+                    and deviation_ma10_sopra_ma200 > -0.17
                     
                     and deviation_ma3_sopra_ma10 > 0.01
                     
@@ -18050,6 +18050,8 @@ class maddog:
                     # 15 apr 2025 anticipata ndecchiecella
                     # 24 set 2025 e' andata male mentre scende
                     # 24 set 2025 3-20 da 5-54 provo ad anticipare ma sarebbe quasi ora di toglierla. non e', non sembra, situazione laterale.
+                    # 25 set 2025 per adesso la tengo.
+
                     
                     
                 # --------------------------------------- BUY 2 che considera il passare del tempo con TREND IN RIBASSO ! sempre 20 > 200
