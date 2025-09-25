@@ -34406,6 +34406,7 @@ class maddog:
                     ma3_last > ma15_last
 
                     and ma150_last > ma250_last
+
                     and deviation_ma39 < -0.12
 
                     and ma100_last < ma100_180_min_ago
@@ -34423,13 +34424,24 @@ class maddog:
                     
                     and macd_differenza_2_min_ago > -18.50
                 ):
-                    buy = "BUY 5 8 mag 2025 - r 7470 a"
+                    buy = f"""BUY 5 8 mag 2025 - r 7470 a
+
+                    deviation_ma39 {deviation_ma39:.2f} 
+                    deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.2f} 
+                    deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.2f} 
+                    deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.2f} 
+                    deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.2f} 
+                    """
+                    
                     action = "buy"
                     percentage = 70
 
                     # 24 nov 2024 modificato importando un vecchio pensiero laterale da RCCR
                     #  8 mag 2025 ho modificato anche la precedente. e ho aggiunto ANCHE questa nuova condizione. va tutto bene. 
                     # 25 set 2025 con 150>250 lasco
+
+
+
 
 
                 elif (
@@ -34459,6 +34471,7 @@ class maddog:
                     and macd_differenza_2_min_ago > -18.50
                 ):
                     buy = f"""BUY 5 modificato radicalmente il 25 set 2025 ex 8 mag 2025 - r 7470 b
+
                     deviation_ma39 {deviation_ma39:.2f} 
                     deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.2f} 
                     deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.2f} 
