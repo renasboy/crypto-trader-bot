@@ -34040,6 +34040,7 @@ class maddog:
                     and macd_differenza_2_min_ago > -18.50
                 ):   
                     buy = f"""BUY 5 con ma450> 720 min MA ritracciamento + IL MIO CAPOLAVORO - r 7410 A2 Y1 y2
+
                     ma450_last {ma450_last:.2f} 
                     ma450_720_min_ago {ma450_720_min_ago:.2f} 
                     deviation_ma39 {deviation_ma39:.2f}
@@ -34048,6 +34049,7 @@ class maddog:
                     deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.2f} 
                     deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.2f}
                     """
+
                     action = "buy"
                     percentage = 80
 
@@ -34589,32 +34591,41 @@ class maddog:
                 elif (    
                     ma3_last > ma15_last
                     and ma450_last < ma450_480_min_ago
-
-                    and deviation_ma5_sotto_ma450 < -0.49
-                    and delta_DNA_1 < delta_DNA_2
-                    and deviation_ma200_sotto_ma300 > -0.10
-                    and deviation_ma39 < -0.06
-                    and deviation_ma3_sotto_ma50 < -0.09
-                    
                     and ma78_last < ma150_last
                     and ma200_last < ma300_last
                     
                     and ma200_last < ma200_120_min_ago
                     and ma300_last < ma300_120_min_ago
-                  
+
+                    and deviation_ma5_sotto_ma450 < -0.49
+                    
+                    and delta_DNA_1 < delta_DNA_2
+                    and deviation_ma200_sotto_ma300 > -0.10
+
+                    and deviation_ma39 < -0.06
+                    and deviation_ma3_sotto_ma50 < -0.09
+                    
                     and deviation_ma3_sopra_ma10 > 0.01
                     
                     and macd_differenza_2_min_ago > -18.50
                 ):
-                    buy = "BUY 5 - condizione 31 mar 2025 ! > 480 min di ribasso ma finalmente cominciano a migliorare le condizioni - r 7550"
+                    buy = f"""BUY 5 - condizione 31 mar 2025 ! > 480 min di ribasso ma finalmente cominciano a migliorare le condizioni - r 7550
+
+                    deviation_ma39 {deviation_ma39:.2f}
+                    deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.2f} 
+                    deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.2f}
+                    deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.2f} 
+                    deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.2f}
+                    """
+
                     action = "buy"
                     percentage = 90
                     
                     # 31 mar 2025 aggiunta questa condizione MA DEVO SPIEGARTELA !
                     # and ma450_last < ma450_480_min_ago stiamo in un CHIARO ED EVIDENTE trend ribassista 
-                    
                     # and delta_DNA_1 < delta_DNA_2 significa CHE STANNO COMINCIANDO AD AVVICINARSI DOPO TANTO TEMPO 150-250
                     # and deviation_ma200_sotto_ma300 > -0.10 significa CHE ANCHE LA ma200 finalmente NON E' DISTANTE DALLA ma300 !
+                    # 25 set 2025 aggiunte parentesi graffe
 
 
 
