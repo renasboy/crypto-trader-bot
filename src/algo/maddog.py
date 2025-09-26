@@ -2887,7 +2887,7 @@ class maddog:
                     # 25 set 2025 tolta and deviation_ma3_sopra_ma10 > 0.01 perche' e' arrivata con un po' di ritardo.
                     # 25 set 2025 aggiunte parentesi graffe
                     # 25 set 2025 and deviation_ma100_sopra_o_sotto_ma100_10_min_ago a -0.045 da -0.035
-
+                    # 26 set 2025 NON COMPAIONO I VALORI DENTRO LE PARENTESI GRAFFE
 
 
                 elif (
@@ -20081,9 +20081,17 @@ class maddog:
                     
                 # BUY 2 ultima condizione ! ma tutte negative MA BUY con 50-100 (integra r2505)
                 
-                elif (     
-               
-                    ma50_last > ma100_last
+                   
+                
+                elif (    
+                    ma13_last > ma50_last
+                    
+                    and ma100_last < ma100_10_min_ago
+                    and ma100_last < ma100_60_min_ago
+                
+                    and deviation_ma39 < 0.13
+
+                    and ma39_last < ma100_last
                     and ma78_last < ma100_last
                     and ma100_last < ma100_60_min_ago
                     and ma200_last < ma200_60_min_ago
@@ -20091,18 +20099,23 @@ class maddog:
                     
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
-                    and deviation_ma5_sopra_ma28 > 0.12
-                    and deviation_buy_ma5_sopra_ma20 > 0.05
                     
-                    and ma2_last > ma2_2_min_ago
-                    and macd >= macd_2_min_ago
+                    and macd_differenza_2_min_ago > -18.5
                 ):    
-                    buy = "BUY 2 ULTIMA CONDIZIONE ! ma tutte negative MA 50 > 100 (integra r2505) con 78<100 - r 5980 b"
+                    buy = f"""BUY 2 ULTIMA CONDIZIONE ! ma tutte negative e con 78<100 MA 13 > 50 - r 5980 b
+                    
+                    deviation_ma39 {deviation_ma39:.2f} 
+                    deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.2f} 
+                    deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.2f} 
+                    deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.2f} 
+                    deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.2f} 
+                    """
+
                     action = "buy"
                     percentage = 70
                     
-                    # aggiunta di 5-28 < 0.12
-
+                    # aggiunta di 5-28 > 0.12
+                    # 26 set 2025 anticipata e aggiunte parentesi graffe
 
 
                 # LA MIA OPERA D' ARTE - prendi il coltello con il piede + vendita bocelli
@@ -22032,31 +22045,38 @@ class maddog:
 
 
                 elif (    
-                    ma3_last > ma30_last
-                    
-                    and ma100_last > ma100_10_min_ago
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
-                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
+                    ma3_last > ma20_last
+
+                    and ma20_last > ma50_last
+                    and delta_1_69_39 < delta_2_69_39
+                
+                    and ma450_last < ma450_10_min_ago
+                    and ma100_last < ma300_last
+                    and ma100_last < ma200_last
+
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.17
                     
                     and ma300_last < ma300_301_min_ago
                     and ma100_last < ma100_60_min_ago
-                    and ma28_last < ma78_last
                     
-                    and ma200_last > ma200_60_min_ago
-                    and deviation > -0.30
+                    and deviation_ma3_sopra_ma10 > 0.001
                     
-                    and deviation_ma3_sopra_ma10 > 0.01
-                    and deviation_ma3_sopra_ma16 > 0.077
-                  
-                    and ma3_last > ma13_last
-                    and ma4_last > ma9_last
-                    and ma2_last > ma2_2_min_ago
                 ):    
                 
-                    buy = "BUY 3 con ma200 che sale da 60 min and ma28_last < ma78_last - r 6121 B NUOVA ERA A3 SOFT"
+                    buy = f"""BUY 3 del 26 set 2025 che riprende un precedente sell - r 6121 B NUOVA ERA A3 SOFT
+
+                    deviation_ma39 {deviation_ma39:.2f} 
+                    deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.2f} 
+                    deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.2f} 
+                    deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.2f} 
+                    deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.2f} 
+                    """
+
                     action = "buy"
                     percentage = 80
 
+                    # 26 set 2025 anticipata riprendendo un precedente sell
+                    # 26 set 2025 aggiunta parentesi graffe ( che al momento non stanno funzionando.)
 
 
 
