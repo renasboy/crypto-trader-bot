@@ -2751,6 +2751,8 @@ class maddog:
                     # 19 apr 2025 deviation_ma200_sotto_ma300 > -0.05 significa che 200 sta vicina alla 300 - altrimenti compra durante il ribasso
                     # 30 apr 2025 aggiunta and deviation_ma39 < -0.05
 
+
+
                 elif (
                     ma3_last > ma18_last
 
@@ -4405,13 +4407,13 @@ class maddog:
                     and macd_differenza_2_min_ago > -18.50
                     
                 ):
-                    buy = f"""BUY 1 
+                    buy = f"""BUY 1 GIORNO mentre la 300 si avvicina alla 450 MA con ma300_last < 3 ore MA 100 > 1 ora - r 1200 AX
                     deviation_ma39 {deviation_ma39:.2f} 
                     deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.2f} 
                     deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.2f} 
                     deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.2f} 
                     deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.2f} 
-                    GIORNO mentre la 300 si avvicina alla 450 MA con ma300_last < 3 ore MA 100 > 1 ora - r 1200 AX"""
+                    """
                     action = "buy"
                     percentage = 80
 
@@ -4441,13 +4443,13 @@ class maddog:
                     and macd_differenza_2_min_ago > -18.50
                     
                 ):
-                    buy = f"""BUY 1 
+                    buy = f"""BUY 1 GIORNO mentre la 300 si avvicina alla 450 MA con ma300_last < 3 ore E 100 < 1 ora + CM GIORNO - r 1200 AY 1
                     deviation_ma39 {deviation_ma39:.2f} 
                     deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.2f} 
                     deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.2f} 
                     deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.2f} 
                     deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.2f} 
-                    GIORNO mentre la 300 si avvicina alla 450 MA con ma300_last < 3 ore E 100 < 1 ora + CM GIORNO - r 1200 AY 1"""
+                    """
                     action = "buy"
                     percentage = 80
 
@@ -4479,13 +4481,13 @@ class maddog:
                     and macd_differenza_2_min_ago > -18.50
                     
                 ):
-                    buy = f"""BUY 1 
+                    buy = f"""BUY 1 GIORNO mentre la 300 si avvicina alla 450 MA con ma300_last < 3 ore E 100 < 1 ora + 25-300 E 3-39 E 3-50  - r 1200 AY 2
                     deviation_ma39 {deviation_ma39:.2f} 
                     deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.2f} 
                     deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.2f} 
                     deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.2f} 
                     deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.2f} 
-                    GIORNO mentre la 300 si avvicina alla 450 MA con ma300_last < 3 ore E 100 < 1 ora + 25-300 E 3-39 E 3-50  - r 1200 AY 2"""
+                    """
                     action = "buy"
                     percentage = 80
 
@@ -4707,7 +4709,7 @@ class maddog:
                     and macd_differenza_2_min_ago > 0.50
                     
                 ):    
-                    buy = "BUY 1 compare forever - ex 1537 A3y RCCR con 3-30 E CON 300 vicina alla 450 ( anche un poco sotto ! ) and 3-18 > 0.001 + MACD > - r 1204 NUOVA ERA A4 SOFT"
+                    buy = "BUY 1 CF - ex 1537 A3y RCCR con 3-30 E CON 300 vicina alla 450 ( anche un poco sotto ! ) and 3-18 > 0.001 + MACD > - r 1204 NUOVA ERA A4 SOFT"
                     action = "buy"
                     percentage = 90
                     
@@ -4742,7 +4744,7 @@ class maddog:
                     and macd_differenza_2_min_ago > 0.50
                     
                 ):    
-                    buy = "BUY 1 compare forever - ex 1537 A3y RCCR con 3-30 E CON 300 vicina alla 450 ( anche poco sotto ! ) and 3-18 > 0.001 + MACD > - r 1204 NUOVA ERA A1 STRONG"
+                    buy = "BUY 1 CF - ex 1537 A3y RCCR con 3-30 E CON 300 vicina alla 450 ( anche poco sotto ! ) and 3-18 > 0.001 + MACD > - r 1204 NUOVA ERA A1 STRONG"
                     action = "buy"
                     percentage = 90
                     
@@ -4777,7 +4779,7 @@ class maddog:
                     and macd_differenza_2_min_ago > 0.50
                     
                 ):    
-                    buy = "BUY 1 compare forever - ex 1537 A3y RCCR con 3-30 E CON 300 vicina alla 450 ( anche poco sotto ! ) and 3-18 > 0.001 + MACD > - r 1204 NUOVA ERA A2 STRONG"
+                    buy = "BUY 1 CF - ex 1537 A3y RCCR con 3-30 E CON 300 vicina alla 450 ( anche poco sotto ! ) and 3-18 > 0.001 + MACD > - r 1204 NUOVA ERA A2 STRONG"
                     action = "buy"
                     percentage = 90
 
@@ -4812,7 +4814,7 @@ class maddog:
                     and macd_differenza_2_min_ago > -1.50
                     
                 ):    
-                    buy = "BUY 1 compare forever - con 3-18 + ZIA AMALIA GRAFANA - r 1204 NUOVA ERA A3 STRONG"
+                    buy = "BUY 1 CF - con 3-18 + ZIA AMALIA GRAFANA - r 1204 NUOVA ERA A3 STRONG"
                     action = "buy"
                     percentage = 90
                     
@@ -4931,7 +4933,7 @@ class maddog:
                     #  9 set 2024 tolta diff macd in questa situazione (and deviation_ma5_sopra_o_sotto_ma100 < -0.60)
                     #  9 set 2024 aggiunta and macd_differenza_2_min_ago > -2 (cioe' il MACD SMETTE DI DECRESCERE BRUSCAMENTE)
                     # 17 set 2024 con 450 > 3h (anticipato ndecchiecella)
-
+                    # 26 set 2025 TL = trend laterale
 
                 elif (    
                     ma3_last > ma13_last
@@ -22366,13 +22368,13 @@ class maddog:
 
 
                 elif (  
-                    ma3_last > ma15_last
+                    ma3_last > ma10_last
 
                     and (ma100_last < ma100_60_min_ago or delta_CV_300_25_last > delta_CV_300_25_45_min_ago)
                     and (delta_CM_300_25_last < delta_CM_300_25_2_min_ago or deviation_ma25_sotto_ma300 < -0.35)
 
-                    and (deviation_ma200_sotto_ma300 > -0.13 or delta_DNA_1 < delta_DNA_2)
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.156
+                    and (deviation_ma200_sotto_ma300 > -0.15 or delta_DNA_1 < delta_DNA_2)
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.176
 
                     and ma100_last < ma100_120_min_ago
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.07
@@ -22383,9 +22385,7 @@ class maddog:
                     and deviation_ma39_sotto_ma200 < 0.20
                     and deviation_ma300_sopra_ma450 > -0.45
                     
-                    and deviation_ma3_sopra_ma10 > -0.005
-                    
-                    and macd_differenza_2_min_ago > -12.25 
+                    and macd_differenza_2_min_ago > -18.00
                 ):      
               
                     buy = "BUY 3 da RCCR and ma300 > ma450 MA ma100_last < ma100_120_min_ago E 100 < 60 min + IL MIO CAPOLAVORO - r 6225 Y"
@@ -22398,7 +22398,7 @@ class maddog:
                     #  6 ago 2025 aggiunta and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.156
                     #  6 ago 2025 continuava a comprare durante il ribasso. aggiunto dalle condizioni migliori. deve dare un segno !
                     # 14 ago 2025 con 100< 60 OR delta_CV_300_25 NOTTE aggiungo IL MIO CAPOLAVORO
-
+                    # 26 set 2025 anticipata ndecchiecella
 
 
                 
