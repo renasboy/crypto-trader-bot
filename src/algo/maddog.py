@@ -7,6 +7,8 @@
 # oggi 26 mag 2025 ti voglio bene compa - comfortably numb - Pink Floyd -
 
 '''
+# 30 set 2025 aggiunta and delta_50_25_last < delta_50_25_30_min_ago GIORNO
+
 
 ASCOLTA MARIO !
 
@@ -1649,7 +1651,6 @@ class maddog:
         # delta_1_40_20 < delta_2_40_20 GIORNO !
 
 
-
         # formula delta_1_50_20
         
         delta_1_50_20 = (ma50_last / ma20_last - 1) * 100 if ma20_last else 0
@@ -1662,6 +1663,26 @@ class maddog:
         self.algo_helper.info("delta_2_50_20: {}".format(delta_2_50_20))
 
         # delta_1_50_20 < delta_2_50_20 GIORNO !
+
+
+
+
+        # formula delta_1_50_25
+        
+        delta_50_25_last = (ma50_last / ma25_last - 1) * 100 if ma25_last else 0
+        self.algo_helper.info("delta_50_25_last: {}".format(delta_50_25_last))
+        
+        
+        # formula delta_50_25_30_min_ago
+        
+        delta_50_25_30_min_ago = (ma50_30_min_ago / ma25_30_min_ago - 1) * 100 if ma25_30_min_ago else 0
+        self.algo_helper.info("delta_50_25_30_min_ago: {}".format(delta_50_25_30_min_ago))
+
+        # delta_50_25_last < delta_50_25_30_min_ago GIORNO !
+
+
+
+
 
 
         
@@ -29526,26 +29547,34 @@ class maddog:
 
                 elif (    
                     ma3_last > ma20_last
+                    and ma450_last > ma450_480_min_ago
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_120_min_ago
 
+
+                    and delta_50_25_last < delta_50_25_30_min_ago
+
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
+                    
                     and (ma100_last < ma100_60_min_ago or delta_CV_300_25_last > delta_CV_300_25_45_min_ago)
                     and (delta_CM_300_25_last < delta_CM_300_25_2_min_ago or deviation_ma25_sotto_ma300 < -0.35)
 
                     and (deviation_ma200_sotto_ma300 > -0.13 or delta_DNA_1 < delta_DNA_2)
+
+
+                    and deviation_ma39 < -0.01
+                    and deviation_ma3_sotto_ma50 < -0.01
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.01
+                    and deviation_ma25_sotto_ma300 < -0.01
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.176
 
-                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
-                    
-                    and ma450_last > ma450_480_min_ago
-                    
-                    and ma200_last < ma200_120_min_ago
-                    and ma300_last < ma300_120_min_ago
-                    
                     and deviation_ma3_sopra_ma10 > 0.01
                     
                     and macd_differenza_2_min_ago > -18.50
                     
                 ):
-                    buy = "BUY 5 >120 min di ribasso ma DICE CHE la situazione sta migliorando MA 100< + IL MIO CAPOLAVORO - r 7041 Y2"
+                    buy = f"BUY 5 > 120 min di ribasso ma DICE CHE la situazione sta migliorando MA 100< + IL MIO CAPOLAVORO - r 7041 Y2 - {deviation_ma39} {deviation_ma3_sotto_ma50} {deviation_ma5_sopra_o_sotto_ma100} {deviation_ma25_sotto_ma300} {deviation_ma100_sopra_o_sotto_ma100_10_min_ago}"
+                    
                     action = "buy"
                     percentage = 90
                     
@@ -29555,8 +29584,8 @@ class maddog:
                     #  6 ago 2025 aggiunta and (deviation_ma200_sotto_ma300 > -0.13 or delta_DNA_1 < delta_DNA_2)
                     #  6 ago 2025 aggiunta and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.176
                     # 14 ago 2025 IL MIO CAPOLAVORO
-
-
+                    # 30 set 2025 aggiunta and delta_50_25_last < delta_50_25_30_min_ago GIORNO
+                    # 30 set 2025 aggiunte parentesi graffe
 
 
                 
