@@ -2889,7 +2889,6 @@ class maddog:
 
                     and (ma200_last > ma200_120_min_ago or ma300_last > ma300_120_min_ago)
                     
-
                     and deviation_ma50_sotto_ma100 > -0.17
                     and deviation_ma20_sotto_ma50 > -0.12
                     and (delta_1 < delta_2 or delta_DNA_1 < delta_DNA_2)
@@ -2917,7 +2916,7 @@ class maddog:
                     # 25 set 2025 and deviation_ma100_sopra_o_sotto_ma100_10_min_ago a -0.045 da -0.035
                     # 26 set 2025 NON COMPAIONO I VALORI DENTRO LE PARENTESI GRAFFE
                     # 30 set 2025 ho messo sulla stessa riga di f""" BUY 1 una parentesi graffa. per cercare di risolvere.
-
+                    # 30 set 2025 se 200 > 120 min or 300 > 120 min ok cosi'
 
 
                 elif (  
@@ -2953,7 +2952,7 @@ class maddog:
                     # 25 set 2025 and deviation_ma100_sopra_o_sotto_ma100_10_min_ago a -0.045 da -0.035
                     # 26 set 2025 NON COMPAIONO I VALORI DENTRO LE PARENTESI GRAFFE
                     # 30 set 2025 ho messo sulla stessa riga di f""" BUY 1 una parentesi graffa. per cercare di risolvere.
-
+                    # 30 set 2025 se 200 < 120 min or 300 < 120 min allora delta_50_25_last < delta_50_25_30_min_ago deve essere GIORNO. 
 
 
 
