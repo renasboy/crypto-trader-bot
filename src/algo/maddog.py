@@ -8863,8 +8863,14 @@ class maddog:
                     
                     and ma200_last < ma200_20_min_ago
                     and delta_1 > delta_2
+
+
                     and deviation_ma39 < -0.06
                     and deviation_ma3_sotto_ma50 < -0.08
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.22
+                    and deviation_ma25_sotto_ma300 < -0.38
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.035
+
 
                     and deviation_ma3_sopra_ma10 > 0.01
                     and deviation_ma3_sopra_ma18 > -0.02
@@ -8881,6 +8887,8 @@ class maddog:
                     # 30 mar 2025 se e' notte MA SEMPRE CON 450> aggiungo dev ma39< -0.06 e dev 3-50 < -0.08
                     # 14 apr 2025 e' andata benissimo !
                     #  7 mag 2025 e' andata benissimo - metto parentesi graffe per conoscere i valori !
+                    # 30 set 2025 le parentesi graffe hanno funzionato (stanno sulla stessa riga)
+
 
 
                 elif (
@@ -16303,8 +16311,16 @@ class maddog:
                     ma50_last < ma50_2_min_ago
                     and ma3_last > ma18_last
 
-                    and (deviation_ma5_sopra_o_sotto_ma100 < -0.50 or deviation_ma5_sopra_o_sotto_ma100 > -0.25)
                     and deviation_ma200_sotto_ma300 < -0.03
+
+
+                    and deviation_ma39 < -0.06
+                    and deviation_ma3_sotto_ma50 < -0.08
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.22
+                    and deviation_ma25_sotto_ma300 < -0.38
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.035
+
+
                      
                     and delta_1 > delta_2
                     and ma100_last < ma100_60_min_ago
@@ -16317,14 +16333,15 @@ class maddog:
                     and ma200_last < ma300_last
                     and macd_differenza_2_min_ago > -18.50
                 ):
-                    buy = "BUY 2 - NOTTE - IMPORTATO DA SELL 2 RCCR - modificato - osso or avvicinamento - r 4887 a"
+                    buy = f"BUY 2 - NOTTE - IMPORTATO DA SELL 2 RCCR - modificato - osso or avvicinamento - r 4887 a - {deviation_ma39} {deviation_ma3_sotto_ma50} {deviation_ma5_sopra_o_sotto_ma100} {deviation_ma25_sotto_ma300} {deviation_ma100_sopra_o_sotto_ma100_10_min_ago}"
+                    
                     action = "buy"
                     percentage = 80
 
                     # 29 apr 2025 aggiunta osso or avvicinamento 
                     # 29 apr 2025 aggiunta and deviation_ma200_sotto_ma300 < -0.03
                     # 10 ago 2025 anticipato ndecchiecella
-
+                    # 30 set 2025 aggiunte parentesi graffe vediamo se funzionano (stanno tutte sulla stessa riga)
 
 
                 elif (
@@ -16353,7 +16370,7 @@ class maddog:
                     
                     and macd_differenza_2_min_ago > -2.50
                 ):
-                    buy = "BUY 2 ORIGINALE CHE CI RIPROVA IMPORTATO DA SELL 1 ! - NOTTE - prende il coltello con il piede + OSSO - r 4887b"
+                    buy = "BUY 2 ORIGINALE CHE CI RIPROVA IMPORTATO DA SELL 1 ! - NOTTE - prende il coltello con il piede + OSSO - r 4887 b"
                     action = "buy"
                     percentage = 80
 
@@ -22049,7 +22066,13 @@ class maddog:
                     and ma100_last < ma300_last
                     and ma100_last < ma200_last
 
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.17
+
+                    and deviation_ma39 < -0.01
+                    and deviation_ma3_sotto_ma50 < -0.01
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.01
+                    and deviation_ma25_sotto_ma300 < -0.38
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.035
+                    
                     
                     and ma300_last < ma300_301_min_ago
                     and ma100_last < ma100_60_min_ago
@@ -22059,20 +22082,20 @@ class maddog:
                 ):    
                 
                     buy = f"""BUY 3 del 26 set 2025 che riprende un precedente sell - r 6121 B NUOVA ERA A3 SOFT
-
-                    deviation_ma39 {deviation_ma39:.2f} 
+                    deviation_ma39 {deviation_ma39} 
                     deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.2f} 
                     deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.2f} 
                     deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.2f} 
                     deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.2f} 
                     """
-
+                    
                     action = "buy"
                     percentage = 80
 
                     # 26 set 2025 anticipata riprendendo un precedente sell
                     # 26 set 2025 aggiunta parentesi graffe ( che al momento non stanno funzionando.)
-
+                    # 30 set 2025 le parentesi graffe non hanno funzionato ! ho tolto la riga vuota proprio sotto buy = f"""BUY 3 etc.
+                    # 30 set 2025 tolto :.2f dentro la parentesi graffa della deviation_ma39
 
 
                 elif (    
