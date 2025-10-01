@@ -55969,9 +55969,41 @@ class maddog:
 
 
             
-            
             elif (
                 ma300_last < ma300_301_min_ago
+
+                and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.03
+                and ma78_last < ma78_120_min_ago
+                and ma30_last > ma78_last
+
+                and ma20_last <= ma20_2_min_ago
+                
+                and ma50_last <= ma50_2_min_ago
+                
+                and delta_150_100 <= delta_150_100_60_min
+                
+                and deviation_ma39 < 0.13
+                and deviation_sell < -0.02
+                
+                and deviation_ma100_sopra_ma300 < 0.40
+                and deviation_ma5_sotto_ma200 > -0.50
+                
+                and ma2_last <= ma2_2_min_ago 
+               
+            ):
+                sell = f"SELL CS GIORNO e dev_ma100_sopra_o_sotto_ma100_10_min > -0.03 con ma300 < 5 ore MA 30>78 e dev 3-39 < 0.13 E dev_sell < -0.02 - r 16045 B2 Y2 X1 deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago}"
+                action = "sell"
+
+                # 30 ott 2024 se 30 > 78 statte calmo
+                #  8 apr 2025 dev sell a -0.02 da -0.03
+                #  7 ago 2025 dev sell a -0.01 da -0.02
+                #  1 ott 2025 se deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.03 allora dev sell a -0.02 da -0.01
+                #  1 ott 2025 aggiunta parentesi graffa sulla stessa linea.
+
+
+            elif (
+                ma300_last < ma300_301_min_ago
+                and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.03
 
                 and ma78_last < ma78_120_min_ago
                 and ma30_last > ma78_last
@@ -55983,7 +56015,7 @@ class maddog:
                 and delta_150_100 <= delta_150_100_60_min
                 
                 and deviation_ma39 < 0.13
-                and deviation_sell < -0.01
+                and deviation_sell < -0.001
                 
                 and deviation_ma100_sopra_ma300 < 0.40
                 and deviation_ma5_sotto_ma200 > -0.50
@@ -55991,14 +56023,14 @@ class maddog:
                 and ma2_last <= ma2_2_min_ago 
                
             ):
-                sell = "SELL CS GIORNO con ma300 < 5 ore E ma50 <= MA 30>78 e dev 3-39 < 0.13 E dev_sell < -0.01 - r 16045 B2 Y2 X"
+                sell = "SELL CS GIORNO e dev_ma100_sopra_o_sotto_ma100_10_min < -0.03 con ma300 < 5 ore MA 30>78 e dev 3-39 < 0.13 E dev_sell < -0.01 - r 16045 B2 Y2 X2 deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago}"
                 action = "sell"
 
                 # 30 ott 2024 se 30 > 78 statte calmo
                 #  8 apr 2025 dev sell a -0.02 da -0.03
                 #  7 ago 2025 dev sell a -0.01 da -0.02
-
-
+                #  1 ott 2025 se deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.03 allora dev sell a -0.01
+                #  1 ott 2025 aggiunta parentesi graffa sulla stessa linea.
 
 
             elif (
