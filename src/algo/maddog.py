@@ -2659,6 +2659,8 @@ class maddog:
                     #  7 AGO 2025 QUESTA E' LA MIGLIORE
                     # 25 set 2025 aggiunte parentesi graffe
                     # 25 set 2025 aggiunta and delta_1_50_20 <= delta_2_50_20
+                    #  7 ott 2025 e' andata benissimo MA ovviamente non ha preso le parentesi graffe.
+
 
 
                 elif (
@@ -6416,8 +6418,8 @@ class maddog:
                     action = "buy"
                     percentage = 90
 
-                    # 26 Sset 2025 anticipata ndecchiecella
-
+                    # 26 set 2025 anticipata ndecchiecella
+                    #  7 ott 2025 e' andata benissimo
 
 
                 elif (    
