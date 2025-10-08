@@ -680,7 +680,7 @@ class maddog:
         # rsi
 
         # rsi = self.algo_helper.rsi
-
+        # rsi_2_min_ago = self.algo_helper.rsi_minutes_ago(2)
 
 
 
@@ -6412,8 +6412,8 @@ class maddog:
                 elif (    
                     ma3_last > ma15_last
                     
-                    and deviation_ma54_sopra_o_sotto_ma72 < 0.017
-                    and deviation_ma54_sopra_o_sotto_ma72 > -0.017
+                    and deviation_ma54_sopra_o_sotto_ma72 < 0.018
+                    and deviation_ma54_sopra_o_sotto_ma72 > -0.018
 
                     and ma100_last < ma100_120_min_ago
                     and ma200_last < ma200_120_min_ago
@@ -6427,13 +6427,14 @@ class maddog:
                     and macd > -100
                   
                 ):    
-                    buy = "BUY 1 CF - con 3-15 E CON 300 vicina alla 450 - r 1537 A2 Y3 x"
+                    buy = f"BUY 1 CF - con 3-15 E CON 300 vicina alla 450 - r 1537 A2 Y3 x - deviation_ma39 {deviation_ma39:.2f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.2f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.2f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.2f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.2f}"
                     action = "buy"
                     percentage = 90
 
                     # 26 set 2025 anticipata ndecchiecella
                     #  7 ott 2025 e' andata benissimo
-
+                    #  8 ott 2025 aggiunte parentesi graffe sulla stessa riga.
+                    #  8 ott 2025 and deviation_ma54_sopra_o_sotto_ma72 a 0.018 da < 0.017
 
                 elif (    
                     ma3_last > ma15_last
@@ -17834,8 +17835,7 @@ class maddog:
                     
                     and macd_differenza_2_min_ago > -18.50
                 ):
-               
-                    buy = f"BUY 2 che ci riprova quando se ne va lateralmente - GIORNO - r 5445 A2 X2 - deviation_ma39 {deviation_ma39} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago}"
+                    buy = f"BUY 2 che ci riprova quando se ne va lateralmente - GIORNO - r 5445 A2 X2 - deviation_ma39 {deviation_ma39:.2f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.2f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.2f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.2f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.2f}"
                     
                     action = "buy"
                     percentage = 80
@@ -58880,7 +58880,7 @@ class maddog:
                 and ma2_last <= ma2_2_min_ago
                 and macd_differenza_2_min_ago < -3.20
             ):
-                sell = "SELL CS con 39<100 E ma300 > 5 ore e dev 3-39 < 0.06 e dev_sell < 0.01 - r 16047 B1 Y2 Y2 z"
+                sell = f"SELL CS con 39<100 E ma300 > 5 ore e dev 3-39 < 0.06 e dev_sell < 0.01 - r 16047 B1 Y2 Y2 z - deviation_ma39 {deviation_ma39} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300}"
                 action = "sell"   
                 
 
@@ -58922,7 +58922,7 @@ class maddog:
                 
                 # oggi 10 dicembre 2023 ascolta mario ! SE ma20_last <= ma20_2_min_ago DEV SELL a 0.05
                 #  5 nov 2024 ho sostituito ma50<ma50 2min ago (che e' arrivata tardi) con 39<100
-
+                #  7 ott 2025 aggiunte parentesi graffe sulla stessa riga ! ma dopo il trattino - (speriamo che funzioni)
 
 
             
