@@ -10,6 +10,9 @@
 # 30 set 2025 aggiunta and delta_50_25_last < delta_50_25_30_min_ago GIORNO
 
 
+
+
+
 ASCOLTA MARIO !
 
 and delta_CM_300_25_last < delta_CM_300_25_2_min_ago
@@ -14395,13 +14398,18 @@ class maddog:
 
 
 
+
+
                 elif (    
                     ma3_last > ma18_last
-                    
-                    and deviation_ma250_sopra_ma300 < 0.15
-                    and deviation_ma250_sopra_ma300 > -0.15
+
+                    and (delta_CM_300_25_last < delta_CM_300_25_2_min_ago or deviation_ma25_sotto_ma300 < -0.35)
                     
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.25
+
+                    and deviation_ma250_sopra_ma300 < 0.17
+                    and deviation_ma250_sopra_ma300 > -0.17
+                    
                     and (ma450_last > ma450_300_min_ago or ma200_last > ma450_last)
                     and (ma100_last > ma450_last or ma100_last > ma100_60_min_ago or deviation_ma100_sopra_ma300 > -0.05)
                     
@@ -14409,15 +14417,15 @@ class maddog:
                     
                     and macd_differenza_2_min_ago > -18.50
                 ):
-                    buy = "BUY 2 con 250 vicino alla 300 and 5-100 < -0.25 - r 4685 BY 1 xx2"
+                    buy = "BUY 2 con 250 vicino alla 300 + CM + delta_50_25_last < delta_50_25_30_min_ago - r 4685 BY 1 xx2"
                     action = "buy"
                     percentage = 80
 
                     # 10 mag 2025 aggiunta and ma100_last > ma100_60_min_ago
                     # 11 mag 2025 aggiunta or ma200_last > ma450_last
                     # 21 mag 2025 and 5-100 < -0.25
-
-
+                    #  7 ott 2025 aggiunta and (delta_CM_300_25_last < delta_CM_300_25_2_min_ago or deviation_ma25_sotto_ma300 < -0.35)
+                    #  7 ott 2025 aggiunta and delta_50_25_last < delta_50_25_30_min_ago
 
 
 
@@ -31984,6 +31992,38 @@ class maddog:
 
 
                     
+
+                
+                elif (
+                    ma8_last > ma8_2_min_ago
+
+                    and ma100_last < ma100_30_min_ago
+                    and ma200_last < ma200_120_min_ago
+                    and ma450_last < ma450_10_min_ago
+                    
+                    and ma100_last < ma300_last
+                    and ma100_last < ma200_last
+
+                    and delta_1_69_39 > delta_2_69_39
+
+                    and deviation_ma100_sopra_ma200 > -0.70
+                    and deviation_ma100_sopra_ma300 < 0.50
+
+                    and deviation_ma25_sotto_ma300 < -0.25
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.083
+
+                    and ma3_last > ma6_last
+                    and ma2_last > ma2_2_min_ago
+              
+                ):
+
+                    buy = f"BUY 5 con 450 < and dev_sell < -0.025 ex CS - r 7170 - deviation_ma39 {deviation_ma39} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago}"
+                    action = "buy"
+                    percentage = 80
+
+                    #  8 ott 2025 aggiunta questa da un sell con aggiunta dei dati preziosi delle parentesi graffe
+
+
 
 
                 elif (
@@ -60833,6 +60873,9 @@ class maddog:
 
                 # 27 giu 2025 CHE BELLI I VALORI NELLE PARENTESI GRAFFE ! grazie compa caro !
                 # 27 giu 2025 aggiunta and ma8_last <= ma8_2_min_ago perche' ha venduto mentre risaliva
+
+
+
 
 
             elif (
