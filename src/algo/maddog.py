@@ -13,7 +13,20 @@
 
 
 
-ASCOLTA MARIO !
+# SE CV e' GIORNO ok cosi'
+        # and delta_CV_300_25_last < delta_CV_300_25_45_min_ago
+        
+
+
+# SE CV e' NOTTE interviene CM GIORNO or 25-300< -0.50
+        # and delta_CV_300_25_last > delta_CV_300_25_45_min_ago
+        # and (delta_CM_300_25_last < delta_CM_300_25_2_min_ago or deviation_ma25_sotto_ma300)
+
+
+
+
+
+NONNO MARIO !
 
 and delta_CM_300_25_last < delta_CM_300_25_2_min_ago
 and delta_CV_300_25_last > delta_CV_300_25_45_min_ago
@@ -2907,11 +2920,12 @@ class maddog:
                     and macd_differenza_2_min_ago > -18.50
                 ):    
               
-                    buy = f"""BUY 1 che mancava > 50 000 righe - r 918 A - deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.2f} 
+                    buy = f"""BUY 1 che mancava > 50 000 righe - r 918 A - deviation_ma39 {deviation_ma39:.2f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.2f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.2f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.2f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.2f} 
                     deviation_ma39 {deviation_ma39:.2f} 
                     deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.2f} 
                     deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.2f} 
-                    deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.2f} 
+                    deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.2f}
+                    deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.2f}
                     """
                     
                     action = "buy"
@@ -2927,7 +2941,8 @@ class maddog:
                     # 26 set 2025 NON COMPAIONO I VALORI DENTRO LE PARENTESI GRAFFE
                     # 30 set 2025 ho messo sulla stessa riga di f""" BUY 1 una parentesi graffa. per cercare di risolvere.
                     # 30 set 2025 se 200 > 120 min or 300 > 120 min ok cosi'
-
+                    #  8 ott 2025 ha funzionato sulla stessa riga e anche il 2f ! e addirittura, con le """ iniziali non ci sono le " alla fine della riga !
+                    #  8 ott 2025 ho aggiunto altre parentesi graffe, sulla stessa riga, ovviamente.
 
                 elif (  
                     ma3_last > ma8_last
@@ -14456,8 +14471,11 @@ class maddog:
                     ma3_last > ma18_last
 
                     and (ma100_last < ma100_60_min_ago or ma20_last < ma50_last)
+
+                    and deviation_ma39 < -0.08
                     and deviation_ma3_sotto_ma50 < -0.15
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.01
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.13
+
 
                     and ma450_last > ma450_300_min_ago
                     and (ma100_last > ma450_last or deviation_ma100_sopra_ma300 > -0.05)
@@ -14466,7 +14484,8 @@ class maddog:
                     
                     and macd_differenza_2_min_ago > -18.50
                 ):
-                    buy = "BUY 2 con 100>450 - r 4685 BY 1X y"
+                    buy = f"BUY 2 con 100>450 - r 4685 BY 1X y - deviation_ma39 {deviation_ma39} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago}"
+                    
                     action = "buy"
                     percentage = 80
 
@@ -14474,7 +14493,10 @@ class maddog:
                     # 10 mag 2025 aggiunta and deviation_ma3_sotto_ma50 < -0.13
                     # 22 mag 2025 and deviation_ma3_sotto_ma50 a -0.15 da -0.13
                     # 22 mag 2025 aggiunta and deviation_ma5_sopra_o_sotto_ma100 < -0.01
-
+                    #  8 ott 2025 ko compra mentre scende dopo un rialzo. aggiungo parentesi graffe per capire
+                    #  8 ott 2025 intanto metto and deviation_ma39 < -0.08
+                    #  8 ott 2025 intanto metto and deviation_ma3_sotto_ma50 < -0.15
+                    #  8 ott 2025 intanto metto and deviation_ma5_sopra_o_sotto_ma100 < -0.13
 
 
 
@@ -23423,9 +23445,11 @@ class maddog:
                     
                 # BUY 3 NUOVO che ci riprova TORNANDO ALLE ORIGINI con ma200< and ma300<
 
-
                 elif (
-                    ma3_last > ma13_last
+                    ma3_last > ma10_last
+
+                    and delta_CV_300_25_last < delta_CV_300_25_45_min_ago
+
                     and ma100_last > ma100_60_min_ago
 
                     and ma450_last > ma450_360_min_ago
@@ -23438,16 +23462,57 @@ class maddog:
 
                     and ma200_last > ma200_60_min_ago
 
-                    and ma3_last > ma7_last
                     
-                    
-                    and macd_differenza_2_min_ago > -2.50
+                    and ma3_last > ma5_last
+                    and macd_differenza_2_min_ago > -18.50
                 ):
-                    buy = "BUY 3 con ma450_last > ma450_720_min_ago e con ma200> - GIORNO - r 6447 A1 x1"
+                    buy = "BUY 3 con ma450_last > ma450_720_min_ago e con ma200> - GIORNO - r 6447 A1 x1 X"
                     action = "buy"
                     percentage = 90
 
                     # 12 mag 2025 se 100> ok cosi'.
+                    #  8 ott 2025 se CV giorno OK COSI'
+
+
+
+                elif (
+                    ma3_last > ma10_last
+
+                    and delta_CV_300_25_last > delta_CV_300_25_45_min_ago
+                    and (delta_CM_300_25_last < delta_CM_300_25_2_min_ago or deviation_ma25_sotto_ma300 < -0.50)
+
+                    and deviation_ma39 < -0.05
+                    and deviation_ma3_sotto_ma50 < -0.10
+                    and deviation_ma5_sopra_o_sotto_ma100 < - 0.20
+
+                    
+                    and ma100_last > ma100_60_min_ago
+                    and ma450_last > ma450_360_min_ago
+                    and delta_DNA_1 < delta_DNA_2
+                    
+
+                    and ma450_last > ma450_720_min_ago
+                    and deviation_ma300_sopra_ma450 < 0.15
+                    and deviation_ma300_sopra_ma450 > -0.15
+
+                    and ma200_last > ma200_60_min_ago
+
+                    
+                    and ma3_last > ma5_last
+                    and macd_differenza_2_min_ago > -18.50
+                ):
+                    buy = f"BUY 3 con ma450_last > ma450_720_min_ago e con ma200> - GIORNO - r 6447 A1 x1 Y - deviation_ma39 {deviation_ma39} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago}"
+                    action = "buy"
+                    percentage = 90
+
+                    # 12 mag 2025 se 100> ok cosi'.
+                    #  8 ott 2025 se CV notte INTERVIENE CM GIORNO or deviation 25-300 < -0.50
+                    #  8 ott 2025 aggiungo le parentesi graffe su una riga
+                    #  8 ott 2025 aggiunto and deviation_ma39 < -0.05
+                    #  8 ott 2025 aggiunto and deviation_ma3_sotto_ma50 < -0.10
+                    #  8 ott 2025 aggiunto and deviation_ma5_sopra_o_sotto_ma100 < - 0.20
+
+
 
 
                 elif (
