@@ -2430,9 +2430,11 @@ class maddog:
                 elif (  
                     
                     ma3_last > ma10_last
-                    
-                    and (ma100_last > ma200_last or ma39_last > ma100_last)
-                    and (ma300_last > ma300_301_min_ago or ma39_last > ma200_last)
+
+                    and delta_CM_300_25_last < delta_CM_300_25_2_min_ago
+
+                    and (delta_1 < delta_2 or ma100_last > ma200_last or ma300_last > ma300_301_min_ago)
+                    and (ma39_last > ma100_last or ma39_last > ma200_last)
 
                     and macd_differenza_2_min_ago > -18.50
 
@@ -2454,7 +2456,7 @@ class maddog:
                     # 12 mag 2025 aggiunta or deviation_ma50_sotto_ma100 > -0.10
                     # 17 mag 2025 sto spezzando tutti questi or
                     #  8 ott 2025 provato ad anticipare con aggiunta or
-                
+                    #  9 ott 2025 provato ad anticipare ancora un po'
 
 
                 elif (  
@@ -32041,25 +32043,30 @@ class maddog:
                     and ma100_last < ma200_last
 
                     and delta_1_69_39 > delta_2_69_39
+                    
+                    and deviation_ma39 < -0.03
+                    and deviation_ma3_sotto_ma50 < -0.05
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.30
+                    and deviation_ma25_sotto_ma300 < -0.80
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.083
 
                     and deviation_ma100_sopra_ma200 > -0.70
                     and deviation_ma100_sopra_ma300 < 0.50
-
-                    and deviation_ma25_sotto_ma300 < -0.25
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.083
 
                     and ma3_last > ma6_last
                     and ma2_last > ma2_2_min_ago
               
                 ):
 
-                    buy = f"BUY 5 con 450 < and dev_sell < -0.025 ex CS - r 7170 - deviation_ma39 {deviation_ma39} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago}"
+                    buy = f"BUY 5 con 450 < and dev_sell < -0.025 ex CS - r 7170 - deviation_ma39 {deviation_ma39:.2f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago}"
                     action = "buy"
                     percentage = 80
 
                     #  8 ott 2025 aggiunta questa da un sell con aggiunta dei dati preziosi delle parentesi graffe
-
-
+                    #  9 OTT 2025 CHE BELLO ! POSSO CONOSCERE I VALORI DENTRO LE PARENTESI GRAFFE !
+                    #  9 ott 2025 and deviation_ma25_sotto_ma300 < -0.80 ! e' questa che ha fatto la differenza !
+                    #  9 ott 2025 ho messo :.2f nella SOLO nella prima parentesi graffa per vedere se funziona.
+                    #  9 ott 2025 ho messo :.3f nella SOLO nella seconda parentesi graffa per vedere se funziona.
 
 
                 elif (
