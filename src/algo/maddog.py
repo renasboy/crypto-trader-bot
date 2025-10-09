@@ -30346,9 +30346,13 @@ class maddog:
                 
                 # se ma100 dopo 90 min e' orizzontale PARTE QUESTA CONDIZIONE QUA che e' andata benissimo !
                 
-                elif (
-                    
-                    ma78_last < ma150_last
+                elif (   
+                    ma3_last < ma13_last
+
+                    and ma78_last < ma150_last
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+
                     and deviation_trend_ma100_90_min_ago < 0.055
                     and deviation_trend_ma100_90_min_ago > -0.055
                     
@@ -30357,19 +30361,15 @@ class maddog:
                     and ma100_last < ma100_180_min_ago
                     and ma200_last < ma200_180_min_ago
                     and ma300_last < ma300_180_min_ago
-                    
-                    and ma100_last < ma200_last
-                    and ma200_last < ma300_last
-                    and deviation_ma3_sopra_ma10 > 0.01
-                    
+                   
                     and macd_differenza_2_min_ago > -18.50
                 ):
-                    buy = "BUY 4 LATERALE > 180 min di ribasso 78<150 and 3-16 > 0.06 and macd > macd 2 min ago - r 7075"
+                    buy = f"BUY 4 LATERALE > 180 min di ribasso 78<150 and 3-16 > 0.06 and macd > macd 2 min ago - r 7075 - deviation_ma39 {deviation_ma39:.2f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago}"
                     action = "buy"
                     percentage = 90
 
                     # 28 mag 2025 anticipata ndecchiecella
-
+                    #  9 ott 2025 per adesso la tengo. ma intanto metto parentesi graffe
 
 
 
