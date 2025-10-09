@@ -62540,7 +62540,7 @@ class maddog:
                 seconds_since_last_trade > max_hold_time_in_seconds_papa
 
                 and ma20_last < ma50_last
-                and (ma5_prev > ma18_prev and ma5_last < ma18_last)
+                and (ma5_prev > ma20_prev and ma5_last < ma20_last)
                 and deviation_sell < 0.10
                 and (delta_GPII_1 > delta_GPII_2 or delta_MC_1 > delta_MC_2)
 
@@ -62554,7 +62554,7 @@ class maddog:
                 and ma200_last < ma300_last
 
             ):
-                sell = f"""SELL papa GP II 18 mag 2025 > 5 min con guadagno durante trend ribassista SE 20 STA ANCORA SOTTO 50 - r 16937 A
+                sell = f"""SELL papa GP II 18 mag 2025 > 5 min con guadagno durante trend ribassista SE 20 STA ANCORA SOTTO 50 e incrocio al ribasso 5-20 - r 16937 A
                 delta_GPII_1 {delta_GPII_1} 
                 delta_GPII_2 {delta_GPII_2}
                 delta_MC_1 {delta_MC_1} 
@@ -62573,7 +62573,7 @@ class maddog:
                 # 19 mag 2025 aggiungo parentesi graffe !
 
                 # 20 maggio spezzata la riga lunga - grazie compa !
-
+                #  8 ott 2025 (ma5_prev > ma20_prev and ma5_last < ma20_last) da (ma5_prev > ma18_prev and ma5_last < ma18_last)
 
 
 
