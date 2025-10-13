@@ -29224,7 +29224,7 @@ class maddog:
 
                     and deviation_ma7_sopra_ma40 > 0.01
                     and deviation_buy3 > 0.02
-                    and deviation_bellissima > 0.03
+                    and deviation_bellissima > 0.02
                     
                     and ma2_last > ma2_2_min_ago
                 ):
@@ -29774,6 +29774,22 @@ class maddog:
                     #  7 ago 2025 ho portato questa condizione poiche' il BUY 5 NON SI E' ATTIVATO PROPRIO. d' altronde 300 > 3 ore !
 
 
+
+
+                elif (
+                    ma3_last > ma18_last
+                    and (ma300_last > ma300_180_min_ago or ma300_last > ma450_last)
+                    
+                    and deviation_buy3 > 0.01
+                    and deviation_bellissima > 0.02
+                    
+                    and ma2_last > ma2_2_min_ago
+                ):
+                    buy = "BUY 5 del 13 ottobre 2025 che mancava con ma300_last > ma300_180_min_ago and dev_bellissima > 0.02 - r 7043"
+                    action = "buy"
+                    percentage = 70
+                    
+                    # 13 ott 2025 aggiunta al BUY 5 
 
 
 
