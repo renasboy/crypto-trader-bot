@@ -42013,7 +42013,7 @@ class maddog:
                         and ma300_last < ma300_120_min_ago
 
                         and deviation_ma39 < 0.06
-                        and deviation_sell < 0.20
+                        and (deviation_sell < 0.20 or ma25_last < ma100_last)
                         and deviation_ma5_sotto_ma300 < 0.30
                         
                         
@@ -42054,7 +42054,7 @@ class maddog:
                         # 24 dic 2023 aggiunta and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.018
                         # 24 dic 2023 aggiunta and macd_differenza_2_min_ago < -0.50
                         # 24 dic 2023 tolta macd < macd 2 min ago
-
+                        # 13 ott 2025 aggiunto or ma25_last < ma100_last
 
 
                     
@@ -60537,12 +60537,13 @@ class maddog:
                 and deviation_ma100_sopra_ma200 > -0.70
                 and deviation_ma100_sopra_ma300 < 0.50
 
-                and ma3_last <= ma3_2_min_ago
+                
                 and ma2_last < last_trade_price
                 and ma2_last <= ma2_2_min_ago
+                and ma3_last <= ma3_2_min_ago
                 and macd_differenza_2_min_ago < -1.50
                 
-                and deviation_sell < -0.025
+                and deviation_sell < -0.027
             ):    
             
                 sell = "SELL CS - DOLCE ATTESA 270 sec con ma13 < and con 450 > E 100<100 30 min ago and ma10_last < ma39_last - r 16694 B1 yy"
@@ -60558,7 +60559,7 @@ class maddog:
                 # 22 feb 2025 aggiunta and macd_differenza_2_min_ago < -1.50
                 # 16 apr 2025 ha fatto +0.15
                 # 15 apr 2025 aggiunta and ma10_last < ma39_last
-
+                # 13 ott 2025 and deviation_sell a -0.027 da -0.025
 
 
 
