@@ -13410,23 +13410,20 @@ class maddog:
                     
                 
                 elif (  
-                    
-                    ma5_last > ma200_last
+                    ma3_last > ma13_last
+
                     and ma50_last < ma59_last
+                    and (ma78_last < ma100_last or ma78_last < ma200_last)
                     
+                    and ma300_last < ma300_120_min_ago
+
+                    and (ma3_last > ma100_last or ma3_last > ma200_last)
                     and deviation_ma100_laterale > 0.08
                     
                     and ma200_last > ma300_last
                     
-                    and ma78_last < ma100_last
-                    and ma78_last < ma200_last
-                    and ma300_last < ma300_120_min_ago
-                    
                     and deviation_ma3_sopra_ma10 > 0.01
-                    and deviation_ma5_sopra_ma28 > 0.07
                     
-                    and ma2_last > ma2_2_min_ago
-                    and macd >= macd_2_min_ago
                 ):
 
                     buy = "BUY 1 forever young 1 con 50 > 59 e se ma 200 > e se ma200 > ma300 MA 78 < 200 e MA 300 < 120 min - r 4379 B2y"
@@ -32798,30 +32795,30 @@ class maddog:
                     
                     
                 elif (    
-                    ma3_last > ma18_last
+                    ma3_last > ma15_last
                     
                     and ma100_last < ma100_10_min_ago
                     and ma100_last < ma100_120_min_ago
+
+                    and (ma300_last > ma300_180_min_ago or ma200_last > ma450_last or deviation_ma300_sopra_ma450 > -0.50 )
+
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.60
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+
                     and deviation_ma39_sotto_ma200 < -0.01
                     and deviation_ma54_sopra_o_sotto_ma72 < -0.015
 
-                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
-                    
-                    
-                    and (ma300_last > ma300_180_min_ago or ma200_last > ma450_last or deviation_ma300_sopra_ma450 > -0.50 )
-                    
-                    and deviation_ma3_sopra_ma10 > 0.017
-                    
                     and ma2_last >= ma2_2_min_ago
                     
                 ):    
-                    buy = "BUY 5 CF + 300>180 min con 3-18 - r 7270 NUOVA ERA A1 SOFT"
+                    buy = f"BUY 5 CF + 300>180 or 200>450 or 300-450>-0.50 - r 7270 NUOVA ERA A1 SOFT - deviation_ma39 {deviation_ma39} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago}"
+                    
                     action = "buy"
                     percentage = 90
 
                     # 13 ott 2025 anticipata ndecchiecella
-
+                    # 14 ott 205 ok
+                    # 14 ott 2025 aggiunte parentesi graffe (sulla stessa riga MA ALLA FINE)(speriamo che funzionino)
                   
 
                 elif (    
