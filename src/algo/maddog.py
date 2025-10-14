@@ -9,7 +9,7 @@
 '''
 # 30 set 2025 aggiunta and delta_50_25_last < delta_50_25_30_min_ago GIORNO
 
-
+# 14 OTT 2025 ma3_last > ma8_last
 
 
 
@@ -23159,6 +23159,8 @@ class maddog:
                     #  1 giu 2023 ma2 > ma3 !
                     #  7 ott 2025 anticipata ndecchia
 
+
+
                     
                 elif (
                     ma3_last > ma18_last
@@ -32795,7 +32797,7 @@ class maddog:
                     
                     
                 elif (    
-                    ma3_last > ma15_last
+                    ma3_last > ma8_last
                     
                     and ma100_last < ma100_10_min_ago
                     and ma100_last < ma100_120_min_ago
@@ -32819,6 +32821,9 @@ class maddog:
                     # 13 ott 2025 anticipata ndecchiecella
                     # 14 ott 205 ok
                     # 14 ott 2025 aggiunte parentesi graffe (sulla stessa riga MA ALLA FINE)(speriamo che funzionino)
+                    # 14 OTT 2025 HANNO FUNZIONATO !
+                    # 14 ott 2025 3-8 da 3-15
+
                   
 
                 elif (    
@@ -34767,7 +34772,7 @@ class maddog:
                     # 24 nov 2024 modificato importando un vecchio pensiero laterale da RCCR
                     #  8 mag 2025 ho modificato anche la precedente. e ho aggiunto ANCHE questa nuova condizione. va tutto bene. 
                     # 25 set 2025 se delta_DNA_1 > delta_DNA_2 aggiungo osso con parentesi graffe
-
+                    # 14 OTT 2025 AGGIUNTE PARENTESI GRAFFE SULLA STESSA RIGA ma senza virgolette finale ( se ci sono le 3 virgolette iniziali.)
 
 
 
