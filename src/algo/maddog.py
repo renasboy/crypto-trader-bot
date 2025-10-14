@@ -34009,29 +34009,60 @@ class maddog:
 
 
 
-
                 elif (
                     
                     ma3_last > ma20_last
-                    
-                    
+                    and ma100_last > ma300_last
+
                     and (ma20_last > ma50_last or delta_50_25_last < delta_50_25_30_min_ago)
                     
                     and (ma50_last > ma100_last or ma100_last > ma200_last or ma200_last > ma450_last)
                     
-                    
                     and deviation_ma3_sopra_ma10 > 0.01
                     
-
                     and ma3_last > ma8_last
                     and macd_differenza_2_min_ago > -18.50
                 ):   
-                    buy = "BUY 5 che NON SPEZZA LA CATENA - r 7410 A2 X1 Xx1"
+                    buy = "BUY 5 che NON SPEZZA LA CATENA - r 7410 A2 X1 Xx1 X"
                     action = "buy"
                     percentage = 80
 
                     # 11 mag 2025 se 50 >100 ok cosi'
                     # 13 ott 2025 anticipata ndecchiecella
+                    # 14 ott 2025 se ma100_last > ma300_last ok cosi'
+
+                elif (
+                    
+                    ma3_last > ma20_last
+
+                    and ma100_last < ma300_last
+
+                    and deviation_ma39 < -0.19
+                    and deviation_ma3_sotto_ma50 < -0.25
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.56
+                    and deviation_ma25_sotto_ma300 < -0.72
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.11
+
+
+                    and (ma20_last > ma50_last or delta_50_25_last < delta_50_25_30_min_ago)
+                    
+                    and (ma50_last > ma100_last or ma100_last > ma200_last or ma200_last > ma450_last)
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    
+                    and ma3_last > ma8_last
+                    and macd_differenza_2_min_ago > -18.50
+                ):   
+                    buy = "BUY 5 che NON SPEZZA LA CATENA - r 7410 A2 X1 Xx1 Y"
+                    action = "buy"
+                    percentage = 80
+
+                    # 11 mag 2025 se 50 >100 ok cosi'
+                    # 13 ott 2025 anticipata ndecchiecella
+                    # 14 ott 2025 se ma100_last < ma300_last allora aggiungo valori parentesi graffe
+
+
+
 
 
                 elif (
