@@ -34752,8 +34752,8 @@ class maddog:
                     
                     and macd_differenza_2_min_ago > -18.50
                 ):
-                    buy = f"""BUY 5 modificato radicalmente il 25 set 2025 ex 8 mag 2025 - r 7470 b
-
+                    buy = f"""BUY 5 modificato radicalmente il 25 set 2025 ex 8 mag 2025 - r 7470 b - deviation_ma39 {deviation_ma39} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago}
+                    
                     deviation_ma39 {deviation_ma39:.2f} 
                     deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.2f} 
                     deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.2f} 
@@ -34767,6 +34767,8 @@ class maddog:
                     # 24 nov 2024 modificato importando un vecchio pensiero laterale da RCCR
                     #  8 mag 2025 ho modificato anche la precedente. e ho aggiunto ANCHE questa nuova condizione. va tutto bene. 
                     # 25 set 2025 se delta_DNA_1 > delta_DNA_2 aggiungo osso con parentesi graffe
+
+
 
 
 
