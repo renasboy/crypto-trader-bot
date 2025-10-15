@@ -61873,7 +61873,7 @@ class maddog:
                 seconds_since_last_trade > 0 and seconds_since_last_trade < 3600
                 and deviation_ma10__diviso_ma10_5_ore_ago < 1.50
 
-                and ma3_last < ma33_last
+                and ma3_last < ma39_last
                 and ma100_last < ma200_last
 
                 and deviation_ma3_di_adesso_diviso_ma3_di_90_min_ago < 1.30
@@ -61885,7 +61885,7 @@ class maddog:
                 and macd < macd_2_min_ago
                 and ma2_differenza_2_min_ago < -3
             ):    
-                sell = "SELL PMS (0-60 min) con 3-33 se 100<200 E con dev_sell 0.70 - 1.05 and macd < - INTANTO TE LI PRENDI - r 16750 A2Xy"
+                sell = "SELL PMS (0-60 min) con 3-39 se 100<200 E con dev_sell 0.70 - 1.05 and macd < - INTANTO TE LI PRENDI - r 16750 A2Xy"
                 action = "sell"
                 
                 # pochi 0.80 - 1.20
@@ -61906,7 +61906,9 @@ class maddog:
                 # 10 ago 2023 aggiunta and ma2_differenza_2_min_ago < -3
                 # 20 nov 2023 and deviation_sell > 0.70 da > 0.75
                 # 11 mar 2025 3-33 da 3-28
-          
+                # 15 ott 2025 3-39 da 3-33
+
+
             
 
             elif (
