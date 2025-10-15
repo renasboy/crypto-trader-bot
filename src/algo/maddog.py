@@ -9,7 +9,10 @@
 '''
 
 
-# 14 ott 2025 fare dev ma3_last > ma8_last
+# 14 ott 2025 fare dev ma3_last > ma8_last perche' ha venduto mentre saliva
+
+# 15 ott 2025 aggiunta quando 25-300< -1.60 and ma8_last >= ma8_2_min_ago (buy durante il crollo del 10 ottobre 2025)
+
 # 30 set 2025 aggiunta and delta_50_25_last < delta_50_25_30_min_ago GIORNO
 
 
