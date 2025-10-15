@@ -23200,6 +23200,7 @@ class maddog:
                     # 15 ott 2025 ok !
                     # 15 ott 2025 aggiunte pg
 
+
                     
                 elif (
                     ma3_last > ma18_last
@@ -35045,7 +35046,7 @@ class maddog:
                     
                 
                 elif (    
-                    ma3_last > ma15_last
+                    ma3_last > ma10_last
                     and ma450_last < ma450_480_min_ago
                     and ma78_last < ma150_last
                     and ma200_last < ma300_last
@@ -35055,17 +35056,15 @@ class maddog:
 
                     and deviation_ma5_sotto_ma450 < -0.49
                     
-                    and delta_DNA_1 < delta_DNA_2
+                    and (delta_DNA_1 < delta_DNA_2 or delta_50_25_last < delta_50_25_30_min_ago)
                     and deviation_ma200_sotto_ma300 > -0.10
 
                     and deviation_ma39 < -0.06
                     and deviation_ma3_sotto_ma50 < -0.09
                     
-                    and deviation_ma3_sopra_ma10 > 0.01
-                    
                     and macd_differenza_2_min_ago > -18.50
                 ):
-                    buy = f"""BUY 5 - condizione 31 mar 2025 ! > 480 min di ribasso ma finalmente cominciano a migliorare le condizioni - r 7550
+                    buy = f"""BUY 5 - condizione 31 mar 2025 ! > 480 min di ribasso ma finalmente cominciano a migliorare le condizioni - r 7550 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}
 
                     deviation_ma39 {deviation_ma39:.2f}
                     deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.2f} 
@@ -35082,7 +35081,7 @@ class maddog:
                     # and delta_DNA_1 < delta_DNA_2 significa CHE STANNO COMINCIANDO AD AVVICINARSI DOPO TANTO TEMPO 150-250
                     # and deviation_ma200_sotto_ma300 > -0.10 significa CHE ANCHE LA ma200 finalmente NON E' DISTANTE DALLA ma300 !
                     # 25 set 2025 aggiunte parentesi graffe
-
+                    # 15 ott 2025 aggiunte pg sulla stessa riga (se ci sono 3 virgolette NON HO CHIUSO CON ")
 
 
 
