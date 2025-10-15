@@ -9,12 +9,34 @@
 '''
 
 
-
+# 14 ott 2025 fare dev ma3_last > ma8_last
 # 30 set 2025 aggiunta and delta_50_25_last < delta_50_25_30_min_ago GIORNO
 
-# 14 OTT 2025 farev dev ma3_last > ma8_last
 
 
+
+
+
+
+ok per vendere durante un ribasso - questo e' il mio capolavoro !
+
+elif (   
+    ma20_last < ma50_last
+    and deviation_ma5_sopra_o_sotto_ma5_120_min_ago < -0.50
+    and ma5_last < ma100_last
+    and ma5_last < ma200_last
+    and ma5_last < ma300_last
+    and ma100_last < ma200_last
+    and ma200_last < ma300_last
+    and ma300_last < ma300_120_min_ago
+
+    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.03
+    and (delta_GPII_1 > delta_GPII_2 or delta_MC_1 > delta_MC_2)
+
+    and (ma5_prev > ma20_prev and ma5_last < ma20_last)
+    and deviation_sell < 0.10
+
+    
 
 
 # 1 SE CV e' GIORNO ok cosi'
