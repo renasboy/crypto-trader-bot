@@ -23189,7 +23189,7 @@ class maddog:
                     and ma2_last > ma3_last
                     and ma2_last > ma5_last
                 ):
-                    buy = "BUY 3D RIVOLUZIONARIO con 300 < 120 min ago e se ma69 < AND ma78_last > ma200_last - r 6329 a2"
+                    buy = f"BUY 3D RIVOLUZIONARIO con 300 < 120 min ago e se ma69 < AND ma78_last > ma200_last - r 6329 a2 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     action = "buy"
                     percentage = 80
                     
@@ -23197,8 +23197,8 @@ class maddog:
                     # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
                     #  1 giu 2023 ma2 > ma3 !
                     #  7 ott 2025 anticipata ndecchia
-
-
+                    # 15 ott 2025 ok !
+                    # 15 ott 2025 aggiunte pg
 
                     
                 elif (
@@ -55860,7 +55860,7 @@ class maddog:
                 and deviation_ma5_sotto_ma200 > -0.50
                 
             ):
-                sell = "SELL CS GIORNO con 5-100 e 300>450 e 10<20 e dev 3-39 < 0.10 e dev_sell > 0.25 e ma50 < MA ma78 > - r 16045 AYx"
+                sell = f"SELL CS GIORNO con 5-100 e 300>450 e 10<20 e dev 3-39 < 0.10 e dev_sell > 0.25 e ma50 < MA ma78 > - r 16045 AYx - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
                 
                 # 20 nov 2023 aggiunta and diff ma2 < -5 
@@ -55871,7 +55871,9 @@ class maddog:
                 # 20 set 2024 dev_sell < 0.03 da < -0.03
                 # 13 apr 2025 se ma300_last > ma450_last and deviation_sell > 0.25 da < -0.03 LASCIALO STARE ! LASCIALO CORRERE !
                 # 30 apr 2025 aggiunta 5-100 perche' vendeva male mentre saliva. lascialo stare !
-                
+                # 15 ott 2025 aggiunte pg
+
+
 
             elif (
                 ma78_last > ma78_120_min_ago
