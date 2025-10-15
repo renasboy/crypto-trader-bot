@@ -7,22 +7,35 @@
 # oggi 26 mag 2025 ti voglio bene compa - comfortably numb - Pink Floyd -
 
 '''
+
+
+
 # 30 set 2025 aggiunta and delta_50_25_last < delta_50_25_30_min_ago GIORNO
 
-# 14 OTT 2025 ma3_last > ma8_last
+# 14 OTT 2025 farev dev ma3_last > ma8_last
 
 
 
-# SE CV e' GIORNO ok cosi'
+
+# 1 SE CV e' GIORNO ok cosi'
         # and delta_CV_300_25_last < delta_CV_300_25_45_min_ago
         
 
 
-# SE CV e' NOTTE interviene CM GIORNO or 25-300< -0.50
-        # and delta_CV_300_25_last > delta_CV_300_25_45_min_ago
-        # and (delta_CM_300_25_last < delta_CM_300_25_2_min_ago or deviation_ma25_sotto_ma300 < -0.50)
+# 2 SE CV e' NOTTE interviene CM GIORNO !
+
+                            # and delta_CV_300_25_last > delta_CV_300_25_45_min_ago
+                            # and (delta_CM_300_25_last < delta_CM_300_25_2_min_ago 
 
 
+# 3 SE CV e' NOTTE interviengono le condizioni delle parentesi graffe !
+                               
+                                 deviation_ma39 {deviation_ma39:.2f}
+                                 deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.2f} 
+                                 deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.2f}
+                                 deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.2f} 
+                                 deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.2f} 
+                                 
 
 
 
@@ -52695,18 +52708,18 @@ class maddog:
                         and ma33_last < ma100_last
                         and deviation_ma10_sopra_ma200 < 0.20
                         
-                        and (ma3_prev > ma28_prev and ma3_last < ma28_last)
+                        and (ma3_prev > ma25_prev and ma3_last < ma25_last)
                         and deviation_sell > 0.23
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 4-5-x (21-60 min) eventuale guadagno durante crollo con ma50< e incr 3-28 e dev_sell > 0.23 - GIORNO - r 15487 Bx"
+                        sell = "SELL 4-5-x (21-60 min) eventuale guadagno durante crollo con ma50< e incr 3-25 e dev_sell > 0.23 - GIORNO - r 15487 Bx"
                         action = "sell"
                         
                         # 17 mar 2023 3-20 da 3-18 vedi 3 mar 2023 ore 3:43 madonna ! c'e' stato un crollo spaventoso e si e' comportato benissimo !
 
                         # 27 feb 2025 se 33<100 allora vende con 3-28
                         # 27 feb 2025 3-28 da 3-20
-
+                        # 15 ott 2025 e' andata bene. modificata a 3-25 da 3-28
 
 
                     elif (
