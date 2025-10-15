@@ -61242,10 +61242,57 @@ class maddog:
                 # 20 gen 2025 tolta and ma25_last <= ma25_2_min_ago
                 #  2 mar 2025 se deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.14 cioe' ma100 continua a perdere pesantemente allora
                 #  2 mar 2025 ok cosi' - senza dev sell !
-
+                # 15 ott 2025 crollo del 10 ottobre 2025 ! e' intervenuta questa e ha fatto -2.33
 
 
                 
+
+            elif (
+                ma3_last < ma25_last
+                and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.13
+                
+                and (delta_1_69_39 > delta_2_69_39 or ma100_last < ma100_30_min_ago or ma200_last < ma200_120_min_ago)
+
+                and ma450_last < ma450_10_min_ago
+                and ma100_last < ma300_last
+                and ma100_last < ma200_last
+
+                and deviation_ma100_sopra_ma200 > -0.80
+                
+                and ma2_last < last_trade_price
+                and deviation_sell < -0.50
+            
+            ):
+
+                sell = "SELL crollo 1 - dopo crollo del 10 ottobre 2025 - r 16700"
+                action = "sell"
+
+                # 25 ott 2025 aggiunta dopo il crollo del 10 ottobre 2025 !
+
+
+
+            elif (
+                ma3_last < ma15_last
+                
+                and delta_1_69_39 > delta_2_69_39
+
+                and ma100_last < ma300_last
+                and ma100_last < ma200_last
+
+                and ma2_last < last_trade_price
+                and deviation_sell < -0.60
+            
+            ):
+
+                sell = "SELL crollo 2 - dopo crollo del 10 ottobre 2025 - r 16701"
+                action = "sell"
+
+                # 25 ott 2025 aggiunta dopo il crollo del 10 ottobre 2025 !
+
+
+
+
+
             # 31 - SELL condizione speciale ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma13 <
             
             elif (
