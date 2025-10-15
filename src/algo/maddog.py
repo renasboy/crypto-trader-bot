@@ -25145,6 +25145,8 @@ class maddog:
                 elif (    
                     ma3_last > ma15_last
 
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.07
+
                     and ma25_last < ma25_60_min_ago
                     and delta_CM_300_25_last <= delta_CM_300_25_2_min_ago
 
@@ -25161,7 +25163,7 @@ class maddog:
                     
                     and macd_differenza_2_min_ago > -18.50
                 ):
-                    buy = f"BUY 3 29 ago 2022 > 120 min di ribasso AND 3>18 - r 6570 Ay2 - deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago}"
+                    buy = f"BUY 3 29 ago 2022 > 120 min di ribasso AND 3>18 - r 6570 Ay2 - deviation_ma39 {deviation_ma39} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago}"
                     
                     action = "buy"
                     percentage = 90
@@ -25180,8 +25182,8 @@ class maddog:
                     # 23 set 2025 aggiunto and delta_CM_300_25_last <= delta_CM_300_25_2_min_ago
                     #  8 ott 2025 e' andata bene
                     #  8 ho aggiunto parentesi graffa sulla stessa riga
-
-
+                    # 15 ott 2025 ha funzionato. ho aggiunto, quindi, altre parentesi graffe
+                    # 15 ott 2025 aggiunta and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.07
 
                     
                 # BUY 3 29 ago 2022 > 120 min di ribasso
