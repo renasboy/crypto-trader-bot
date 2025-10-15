@@ -34810,12 +34810,12 @@ class maddog:
                     # 16 mag 2025 con 25-300 tra -0.50 e -0.20 dev39 < -0.18 e 3-50 < -0.18
                     # 25 set 2025 aggiunte parentesi graffe !
 
-
+                
                 elif (
                     ma3_last > ma15_last
 
                     and (ma100_last < ma100_60_min_ago or delta_CV_300_25_last > delta_CV_300_25_45_min_ago)
-                    and (delta_CM_300_25_last < delta_CM_300_25_2_min_ago or deviation_ma25_sotto_ma300 < -1.50)
+                    and delta_CM_300_25_last < delta_CM_300_25_2_min_ago
 
                     and deviation_ma39 < -0.10
                     and deviation_ma3_sotto_ma50 < -0.30
@@ -34837,7 +34837,7 @@ class maddog:
                     
                     and macd_differenza_2_min_ago > -18.50
                 ):
-                    buy = f"""BUY 5 con ma78_last < ma150_last or ma100_last < ma100_120_min_ago e 25-300 < -0.50 - r 7441 B2 Y
+                    buy = f"""BUY 5 con ma78_last < ma150_last or ma100_last < ma100_120_min_ago e 25-300 < -0.50 - r 7441 B2 Yx - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}
                     deviation_ma39 {deviation_ma39:.2f}
                     deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.2f} 
                     deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.2f} 
@@ -34856,6 +34856,61 @@ class maddog:
                     # 17 AGO 2025 N.B. 3-39 < -0.10
                     # 17 AGO 2025 N.B. 3-50 < -0.30
                     # 17 ago 2025 aggiunti valori deviation.
+                    # 15 ott 2025 i valori deviation NON SONO COMPARSI. metto sulla stessa riga !
+
+
+
+
+                elif (
+                    ma3_last > ma15_last
+
+                    and (ma100_last < ma100_60_min_ago or delta_CV_300_25_last > delta_CV_300_25_45_min_ago)
+                    and deviation_ma25_sotto_ma300 < -1.60
+                    and ma8_last >= ma8_2_min_ago 
+
+
+                    and deviation_ma39 < -0.10
+                    and deviation_ma3_sotto_ma50 < -0.30
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.50
+                    
+
+                    and deviation_ma5_sopra_ma59 < -0.10
+                    
+                    and ma100_last < ma100_180_min_ago
+                    and ma200_last < ma200_180_min_ago
+                    and ma300_last < ma300_180_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    
+                    and ma2_last >= ma10_last
+                    
+                    and macd_differenza_2_min_ago > -18.50
+                ):
+                    buy = f"""BUY 5 con ma78_last < ma150_last or ma100_last < ma100_120_min_ago e 25-300 < -1.60 - r 7441 B2 Yy - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}
+                    deviation_ma39 {deviation_ma39:.2f}
+                    deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.2f} 
+                    deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.2f} 
+                    deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.2f} 
+                    deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.2f} 
+                    """
+                    action = "buy"
+                    percentage = 70
+
+                    # 24 nov 2024 modificato importando un vecchio pensiero laterale da RCCR
+                    #  8 mag 2025 anticipata ndecchia
+                    # 16 mag 2025 con 25-300 < -0.50
+                    # 14 ago 2025 e' andata bene. ha fatto la doppietta.
+                    # 17 AGO 2025 aggiunto IL MIO CAPOLAVORO.
+                    # 17 AGO 2025 N.B. 25-300 < -1.50
+                    # 17 AGO 2025 N.B. 3-39 < -0.10
+                    # 17 AGO 2025 N.B. 3-50 < -0.30
+                    # 17 ago 2025 aggiunti valori deviation.
+                    # 15 ott 2025 i valori deviation NON SONO COMPARSI. metto sulla stessa riga !
+                    # 15 ott 2025 aggiunto and ma8_last >= ma8_2_min_ago
+
 
 
 
