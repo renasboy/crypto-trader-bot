@@ -32509,7 +32509,7 @@ class maddog:
                     and macd_differenza_2_min_ago > -18.30
                    
                 ):
-                    buy = f"""BUY 5 con ma450_last < ma450_720_min_ago e ma28_last < ma28_30_min_ago and delta_1_69_39 < delta_2_69_39 - r 7203 B1 Y
+                    buy = f"""BUY 5 con ma450_last < ma450_720_min_ago e ma28_last < ma28_30_min_ago and delta_1_69_39 < delta_2_69_39 - r 7203 B1 Y - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}
                     deviation_ma39 {deviation_ma39:.2f} 
                     deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.2f} 
                     deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.2f} 
@@ -32526,7 +32526,7 @@ class maddog:
                     # 27 mag 2025 modificata per anticipare ndecchia
                     # 24 set 2025 aggiunta and delta_1_69_39 < delta_2_69_39
                     # 24 set 2024 deviation_buy_crollo_1 a -0.99 da > -0.80
-
+                    # 16 ott 2025 aggiunte parentesi graffe - e' andata bene e voglio conoscere i valori delle deviation.
 
                 
                 
