@@ -54487,9 +54487,29 @@ class maddog:
 
 
 
+                    elif (
+                        deviation_sell > 0.80
+                        and delta_50_25_last < delta_50_25_30_min_ago
+                        and ma5_last < ma5_10_min_ago
+
+                        and ma300_last < ma450_last
+                        and ma3_last < ma39_last
+                
+                        and ma2_last < ma2_2_min_ago
+                        and macd < macd_2_min_ago
+                        and macd_differenza_2_min_ago < -1
+                    ):    
+                        sell = "SELL 4-5-x dopo 90 min PMS con ma5 < ma5_10_min_ago e dev > 0.80 and macd < macd 2 min ago - r 15910 x"
+                        action = "sell"
+                
+                        # 27 set 2023 macd < macd 2 min ago 
+                        # 27 set 2023 and macd_differenza_2_min_ago < -1
+                        # 16 ott 2025 se 50-25 giorno aumento a 3-39 da 3-28
+
 
                     elif (
                         deviation_sell > 0.80
+                        and delta_50_25_last > delta_50_25_30_min_ago
                         and ma5_last < ma5_10_min_ago
 
                         and ma300_last < ma450_last
@@ -54504,7 +54524,7 @@ class maddog:
                 
                         # 27 set 2023 macd < macd 2 min ago 
                         # 27 set 2023 and macd_differenza_2_min_ago < -1
-
+                        # 16 ott 2025 se 50-25 notte ok cosi'
               
                     
                     
