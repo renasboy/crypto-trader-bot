@@ -34758,16 +34758,14 @@ class maddog:
                     and ma39_last < ma39_30_min_ago
                     and deviation_ma3_sotto_ma50 < -0.28
 
-                    and ma300_last < ma450_last
-                    and ma450_last < ma450_720_min_ago
+                    and (ma300_last < ma450_last or ma450_last < ma450_720_min_ago or ma450_last > ma450_360_min_ago)
+                    
 
                     and ma450_last > ma450_360_min_ago
                     
-                    and deviation_ma3_sopra_ma10 > 0.01
-                    
-                    and macd_differenza_2_min_ago > -2.50
+                    and macd_differenza_2_min_ago > -18.50
                 ):
-                    buy = "BUY 5 con ma450 < ma450 720 min ago MA ma450_last > ma450_360_min_ago + distanza al ribasso - r 7441 B1 Yb"
+                    buy = f"BUY 5 con ma450 < ma450 720 min ago MA ma450_last > ma450_360_min_ago + distanza al ribasso - r 7441 B1 Yb - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     action = "buy"
                     percentage = 70
 
@@ -34775,7 +34773,9 @@ class maddog:
                     # 29 gen 2025 comincio a risolvere il problema del trend laterale dopo un grande RIBASSO
                     # 29 gen 2025 ma questa e' andata bene
                     # 21 mar 2025 se ma39_last < ma39_30_min_ago allora aggiungo and deviation_ma3_sotto_ma50 < -0.28
-
+                    # 16 ott 2025 aggiunte parentesi graffe (ha comprato molto tardi dopo un rialzo improvviso)
+                    # 16 ott 2025 and macd_differenza_2_min_ago > -18.50
+                    # 16 ott 2025 ho tenuto or ma450_last > ma450_360_min_ago perche' potrebbe essere un buy veloce durante un trend in rialzo.
 
 
                 elif (
