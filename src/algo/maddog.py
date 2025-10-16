@@ -61105,7 +61105,7 @@ class maddog:
                 # 24 set 2025 messo ordine parentesi graffe e 2 numeri dopo la virgola
                 # 16 ott 2025 aggiunte parentesi graffe sulla stessa riga
                 # 16 ott 2025 se ci sono le 3 virgolette iniziali NON E' NECESSARIO AGGIUNGERE LE VIRGOLETTE FINALI !
-                # 16 ott 2025 aggiunto 3<20
+                # 16 ott 2025 aggiunto 3<20 (ha venduto non appena ha comprato)
 
 
 
