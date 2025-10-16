@@ -30563,7 +30563,7 @@ class maddog:
                     ma3_last < ma13_last
 
                     and delta_CV_300_25_last > delta_CV_300_25_45_min_ago
-                    and (delta_CM_300_25_last < delta_CM_300_25_2_min_ago or deviation_ma25_sotto_ma300 < -0.56)
+                    and (delta_CM_300_25_last <= delta_CM_300_25_2_min_ago or deviation_ma25_sotto_ma300 < -0.56)
 
                     and ma78_last < ma150_last
                     and ma100_last < ma200_last
@@ -30592,7 +30592,7 @@ class maddog:
                     # 28 mag 2025 anticipata ndecchiecella
                     #  9 ott 2025 per adesso la tengo. ma intanto metto parentesi graffe
                     # 14 ott 2025 aggiunto and delta_CV_300_25_last > delta_CV_300_25_45_min_ago
-
+                    # 16 ott 2025 delta_CM_300_25_last <= delta_CM_300_25_2_min_ago da delta_CM_300_25_last < delta_CM_300_25_2_min_ago
 
 
               
