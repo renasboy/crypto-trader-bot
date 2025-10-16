@@ -56395,30 +56395,29 @@ class maddog:
                 # 23 dic 2023 dev_sell < 0.01 se ma20 cresce da 10 min
 
 
-            
+
+
             elif (
-                ma300_last < ma300_301_min_ago
+                ma3_last < ma15_last
 
-                and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.03
+                and (ma5_last < ma100_last or ma5_last < ma200_last or ma5_last < ma300_last)
+                
+                and (ma300_last < ma300_301_min_ago or ma300_last < ma300_120_min_ago)
                 and ma78_last < ma78_120_min_ago
-                and ma30_last > ma78_last
+                
+                and deviation_ma5_sopra_o_sotto_ma5_120_min_ago < -0.50
+                
+                and ma100_last < ma200_last
+                and ma200_last < ma300_last
 
-                and ma20_last <= ma20_2_min_ago
+                and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.03
+                and (delta_GPII_1 > delta_GPII_2 or delta_MC_1 > delta_MC_2)
+
+                and (ma5_prev > ma20_prev and ma5_last < ma20_last)
+                and deviation_sell < 0.40
                 
-                and ma50_last <= ma50_2_min_ago
-                
-                and delta_150_100 <= delta_150_100_60_min
-                
-                and deviation_ma39 < 0.13
-                and deviation_sell < -0.02
-                
-                and deviation_ma100_sopra_ma300 < 0.40
-                and deviation_ma5_sotto_ma200 > -0.50
-                
-                and ma2_last <= ma2_2_min_ago 
-               
             ):
-                sell = f"SELL CS GIORNO e dev_ma100_sopra_o_sotto_ma100_10_min > -0.03 con ma300 < 5 ore MA 30>78 e dev 3-39 < 0.13 E dev_sell < -0.02 - r 16045 B2 Y2 X1 deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago}"
+                sell = f"SELL CS guadagno durante un forte ribasso del 15 ott 2025 - r 16045 B2 Y2 X1 x - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
 
                 # 30 ott 2024 se 30 > 78 statte calmo
@@ -56426,6 +56425,54 @@ class maddog:
                 #  7 ago 2025 dev sell a -0.01 da -0.02
                 #  1 ott 2025 se deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.03 allora dev sell a -0.02 da -0.01
                 #  1 ott 2025 aggiunta parentesi graffa sulla stessa linea.
+                # 15 ott 2025 aggiunta guadagno durante un forte ribasso
+
+
+
+
+            elif (
+                ma3_last < ma50_last
+                and (ma5_prev > ma20_prev and ma5_last < ma20_last)
+
+                and (ma5_last < ma100_last or ma5_last < ma200_last or ma5_last < ma300_last)
+                
+                and (ma300_last < ma300_301_min_ago or ma300_last < ma300_120_min_ago)
+                and ma78_last < ma78_120_min_ago
+                
+                and deviation_ma5_sopra_o_sotto_ma5_120_min_ago < -0.50
+                and deviation_ma5_sotto_ma200 > -0.50
+
+                and ma100_last < ma200_last
+                and ma200_last < ma300_last
+
+                and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.02
+                
+                and ma30_last > ma78_last
+                and delta_150_100 <= delta_150_100_60_min
+                
+                and deviation_ma39 < 0.13
+                and deviation_sell < 0.02
+                
+                and ma2_last <= ma2_2_min_ago 
+               
+            ):
+                sell = f"SELL CS GIORNO e dev_ma100_sopra_o_sotto_ma100_10_min > -0.02 con ma300 < 5 ore MA 30>78 e dev 3-39 < 0.13 E dev_sell < -0.02 - r 16045 B2 Y2 X1 y - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                action = "sell"
+
+                # 30 ott 2024 se 30 > 78 statte calmo
+                #  8 apr 2025 dev sell a -0.02 da -0.03
+                #  7 ago 2025 dev sell a -0.01 da -0.02
+                #  1 ott 2025 se deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.03 allora dev sell a -0.02 da -0.01
+                #  1 ott 2025 aggiunta parentesi graffa sulla stessa linea.
+                # 15 ott 2025 modificata per cercare di vendere con un piccolo guadagno durante un forte ribasso
+
+
+
+
+
+
+
+
 
 
             elif (
