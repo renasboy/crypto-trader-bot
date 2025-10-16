@@ -623,6 +623,7 @@ class maddog:
         ma40_30_min_ago = self.algo_helper.ma_minutes_ago(40, 30)
         
         ma50_2_min_ago = self.algo_helper.ma_minutes_ago(50, 2)
+        ma50_3_min_ago = self.algo_helper.ma_minutes_ago(50, 3)
         ma50_10_min_ago = self.algo_helper.ma_minutes_ago(50, 10)
         ma50_30_min_ago = self.algo_helper.ma_minutes_ago(50, 30)
         ma50_50_min_ago = self.algo_helper.ma_minutes_ago(50, 50)
@@ -48902,14 +48903,14 @@ class maddog:
                         and (ma300_last < ma300_360_min_ago or ma450_last < ma450_360_min_ago)
                         and ma2_last < ma2_2_min_ago
                         
-                        and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.02
-    
+                        and ma50_last >= ma50_3_min_ago
+                        
                     ):
                         sell = "SELL 3 del 16 ott 2025  - r 13500"
                         action = "sell"
 
                         # 16 ott 2025 aggiunta questa per vendere con guadagno durante il trend discendente
-
+                        # 16 ott 2025 and ma50_last >= ma50_3_min_ago da ma50_last >= ma50_2_min_ago (per essere piu' sicuro)
 
 
                     elif (    
