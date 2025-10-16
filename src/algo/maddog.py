@@ -14459,7 +14459,7 @@ class maddog:
                     
                     and macd_differenza_2_min_ago > -18.50
                 ):
-                    buy = "BUY 2 con 100>450 and 5-100 < -0.30 - r 4685 BY 1 xx1"
+                    buy = f"BUY 2 con 100>450 and 5-100 < -0.30 - r 4685 BY 1 xx1 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     action = "buy"
                     percentage = 80
 
@@ -14467,7 +14467,8 @@ class maddog:
                     # 11 mag 2025 aggiunta or ma200_last > ma450_last
                     # 21 mag 2025 and 5-100 < -0.30
                     # 29 mag 2025 modificata per farla comprare piu' giu'
-
+                    # 16 ott 2025 ok !
+                    # 16 ott 2025 aggiunte parentesi graffe
 
 
 
@@ -39540,23 +39541,56 @@ class maddog:
                         sell = "SELL 1 eventuale GAIN nel crollo LEGGERO (21-50 min) con ma50 < incr 3 -30 and dev_sell 0.30 - 0.54 and dev 5-300 > -1.20- r 9327 A1"
                         action = "sell"
 
-                  
+
+
                     elif (
-                        ma50_last < ma50_2_min_ago
-                        and deviation_ma5_sotto_ma300 > -1.20
-                        and (ma3_prev > ma25_prev and ma3_last < ma25_last)
+                        ma3_last < ma10_last
+                        and (ma50_last < ma50_2_min_ago or ma50_last < ma50_50_min_ago)
+              
+                        
+                        and (ma3_prev > ma20_prev and ma3_last < ma20_last)
+
                         and deviation_sell > 0.30 
-                        and deviation_sell < 0.54
+                        and deviation_sell < 0.60
+
+                        and deviation_ma5_sotto_ma300 > -1.20
                         and ma2_last < ma2_2_min_ago
-                        and macd < macd_2_min_ago
+                        
                         and macd_differenza_2_min_ago < -11
-                        and macd < 60
+                        and macd < 80
                     ):
-                        sell = "SELL 1 eventuale GAIN nel crollo LEGGERO (21-50 min) con ma50 < incr 3 -25 con diff macd < -11 e dev_sell 0.30 - 0.54 and dev 5-300 > -1.20 - r 9327 A2"
+                        sell = "SELL 1 eventuale GAIN nel crollo LEGGERO (21-50 min) con ma50 < incr 3 -20 con diff macd < -11 e dev_sell 0.30 - 0.54 and dev 5-300 > -1.20 - r 9327 A2x"
                         action = "sell"
                         
                         #  7 dic 2023 se macd da una botta al ribasso allora vende con un ma 25
                         
+
+
+                    elif (
+                        ma3_last < ma10_last
+                        and (ma50_last < ma50_2_min_ago or ma50_last < ma50_50_min_ago)
+              
+                        
+                        and (ma3_prev > ma50_prev and ma3_last < ma50_last)
+                        and deviation_sell > 0.30 
+                        and deviation_sell < 0.60
+
+                        and deviation_ma5_sotto_ma300 > -1.20
+                        and ma2_last < ma2_2_min_ago
+                        
+                        and macd_differenza_2_min_ago < -11
+                        and macd < 80
+                    ):
+                        sell = "SELL 1 eventuale GAIN nel crollo LEGGERO (21-50 min) con ma50 < incr 3 -25 con diff macd < -11 e dev_sell 0.30 - 0.54 and dev 5-300 > -1.20 - r 9327 A2y"
+                        action = "sell"
+                        
+                        #  7 dic 2023 se macd da una botta al ribasso allora vende con un ma 25
+                        # 16 ott 2025 aggiunto incrocio al ribasso 3-50 per farlo vendere un po' prima (strano, ma la ma50 sta sopra la ma25 !)
+
+
+
+
+
                         
                     # -------------------------------------------------------------------------------------- guadagno durante il crollo PESANTE
 
