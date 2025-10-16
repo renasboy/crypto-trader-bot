@@ -61063,13 +61063,16 @@ class maddog:
 
 
             elif (
-                seconds_since_last_trade > max_hold_time_in_seconds
+                ma3_last < ma20_last
+                and deviation_sell < 0.01
+                and delta_1_69_39 < delta_2_69_39
+
+                and seconds_since_last_trade > max_hold_time_in_seconds
+                
                 and ma20_last < ma50_last
                 and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.07
 
-                and deviation_sell < 0.01
-
-                and delta_1_69_39 < delta_2_69_39
+                
 
                 and deviation_ma25_sotto_ma200 > -2.00
 
@@ -61085,7 +61088,8 @@ class maddog:
                 and ma2_last <= ma2_2_min_ago
             ):
 
-                sell = f"""SELL CS - DOLCE ATTESA 270 sec E dev sell < 0.01 and ma13 < and con 450 < MA GIORNO ! - r 16694 B2 Y2 Ax 2y
+                sell = f"""SELL CS - DOLCE ATTESA 270 sec E dev sell < 0.01 and ma13 < and con 450 < MA GIORNO ! - r 16694 B2 Y2 Ax 2y - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}
+
                 deviation_ma39 {deviation_ma39:.2f} 
                 deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.2f} 
                 deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.2f} 
@@ -61099,6 +61103,9 @@ class maddog:
                 # 12 mag 2025 aggiunta and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.07
                 # 12 mag 2025 se ma100 scende molto dev sell ok cosi'
                 # 24 set 2025 messo ordine parentesi graffe e 2 numeri dopo la virgola
+                # 16 ott 2025 aggiunte parentesi graffe sulla stessa riga
+                # 16 ott 2025 se ci sono le 3 virgolette iniziali NON E' NECESSARIO AGGIUNGERE LE VIRGOLETTE FINALI !
+                # 16 ott 2025 aggiunto 3<20
 
 
 
