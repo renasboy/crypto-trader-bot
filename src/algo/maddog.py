@@ -48978,6 +48978,8 @@ class maddog:
                         deviation_sell < 0.60
                         and (ma3_prev > ma20_prev and ma3_last < ma20_last)
                         and (ma300_last < ma300_360_min_ago or ma450_last < ma450_360_min_ago)
+                        and delta_50_25_last > delta_50_25_30_min_ago
+
                         and ma2_last < ma2_2_min_ago
                         
                         and ma50_last >= ma50_3_min_ago
@@ -48988,6 +48990,8 @@ class maddog:
 
                         # 16 ott 2025 aggiunta questa per vendere con guadagno durante il trend discendente
                         # 16 ott 2025 and ma50_last >= ma50_3_min_ago da ma50_last >= ma50_2_min_ago (per essere piu' sicuro)
+                        # 16 ott 2025 aggiunto and delta_50_25_last < delta_50_25_30_min_ago NOTTE per definire meglio anche nel breve il trend discendente.
+
 
 
                     elif (    
