@@ -28843,16 +28843,22 @@ class maddog:
                     and ma300_last < ma300_60_min_ago
                     and ma100_last < ma200_last
 
-                    and deviation_ma39 < -0.04
+                    and delta_DNA_1 <= delta_DNA_2
+
+                    and ma8_last >= ma8_2_min_ago 
+
+                    and deviation_ma39 < -0.10
                     and deviation_ma3_sotto_ma50 < -0.25
-                    
-                    and delta_DNA_1 < delta_DNA_2
-                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.40
+                    and deviation_ma25_sotto_ma300 < -1.40
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.13
+
+                    and ma100_last < ma100_10_min_ago
                     
-                    and macd_differenza_2_min_ago > -15.00
+                    
+                    and macd_differenza_2_min_ago > -18.00
                 ):
-                    buy = "BUY 4 con 300< e 100<200 MA GIORNO E ma100 comincia a perdere di meno ma sembra un RITRACCIAMENTO - r 6836"
+                    buy = f"BUY 4 con 300< e 100<200 MA GIORNO E ma100 comincia a perdere di meno ma sembra un RITRACCIAMENTO - r 6836 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     action = "buy"
                     percentage = 80
 
@@ -28860,7 +28866,8 @@ class maddog:
                     # 14 apr 2025 aggiunta 3-39 < -0.04
                     # 14 apr 2025 aggiunta 3-50 < -0.04
                     #  6 mag 2025 deviation_ma3_sotto_ma50 a -0.25 da -0.04
-
+                    # 17 ott 2025 aggiunte dev pg
+                    # 17 ott 2025 aggiunte pg
                     
                     #####################################################################
                     
@@ -35035,6 +35042,7 @@ class maddog:
                     # 17 ago 2025 aggiunti valori deviation.
                     # 15 ott 2025 i valori deviation NON SONO COMPARSI. metto sulla stessa riga !
                     # 15 ott 2025 aggiunto and ma8_last >= ma8_2_min_ago
+                    # 17 ott 2025 ok !
 
 
 
