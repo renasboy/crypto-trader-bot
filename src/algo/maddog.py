@@ -31,7 +31,8 @@ per COMPRARE durante un ribasso
 
 
 # 3 SE CV e' NOTTE interviengono le condizioni delle parentesi graffe con deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.11 piu' ripida ! + ma8_last >= ma8_2_min_ago !
-
+                                 
+                                 and delta_CV_300_25_last > delta_CV_300_25_45_min_ago
                                  and deviation_ma39
                                  and deviation_ma3_sotto_ma50
                                  and deviation_ma5_sopra_o_sotto_ma100
@@ -23674,8 +23675,14 @@ class maddog:
 
 
 
+
+
                 elif (
                     ma3_last > ma13_last
+
+                    and delta_CV_300_25_last < delta_CV_300_25_45_min_ago
+
+
                     and ma100_last < ma100_60_min_ago
                     and deviation_ma3_sotto_ma50 < -0.05
 
@@ -23684,17 +23691,17 @@ class maddog:
                     
 
                     and ma450_last > ma450_720_min_ago
-                    and deviation_ma300_sopra_ma450 < 0.15
-                    and deviation_ma300_sopra_ma450 > -0.15
+                    and deviation_ma300_sopra_ma450 < 0.25
+                    and deviation_ma300_sopra_ma450 > -0.25
 
                     and ma200_last > ma200_60_min_ago
 
                     and ma3_last > ma7_last
                     
                     
-                    and macd_differenza_2_min_ago > -2.50
+                    and macd_differenza_2_min_ago > -18.50
                 ):
-                    buy = "BUY 3 con ma450_last > ma450_720_min_ago e con ma200> - GIORNO - r 6447 A1 x2"
+                    buy = f"BUY 3 CON CV GIORNO e con ma450_last > ma450_720_min_ago e con ma200> - GIORNO - r 6447 A1 x2 X - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     action = "buy"
                     percentage = 90
 
@@ -23703,6 +23710,94 @@ class maddog:
                     # 30 gen 2025 nel corridoio 300-450 puo' comprare prima
                     # 28 feb 2025 GIORNO !
                     # 12 mag 2025 se 100< aggiungo and deviation_ma3_sotto_ma50 < -0.05
+                    # 18 OTT 2025 SE and delta_CV_300_25_last < delta_CV_300_25_45_min_ago (GIORNO) OK COSI'
+                    # 18 ott 2025 aggiunte pg
+
+
+                elif (
+                    ma3_last > ma13_last
+
+                    and delta_CV_300_25_last > delta_CV_300_25_45_min_ago
+                    and delta_CM_300_25_last < delta_CM_300_25_2_min_ago 
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.07
+                    and ma8_last >= ma8_2_min_ago
+
+
+                    and ma100_last < ma100_60_min_ago
+                    and deviation_ma3_sotto_ma50 < -0.05
+
+                    and ma450_last > ma450_360_min_ago
+                    and delta_DNA_1 < delta_DNA_2
+                    
+
+                    and ma450_last > ma450_720_min_ago
+                    and deviation_ma300_sopra_ma450 < 0.25
+                    and deviation_ma300_sopra_ma450 > -0.25
+
+                    and ma200_last > ma200_60_min_ago
+
+                    and ma3_last > ma7_last
+                    
+                    
+                    and macd_differenza_2_min_ago > -18.50
+                ):
+                    buy = f"BUY 3 CON CV NOTTE E CM GIORNO e con ma450_last > ma450_720_min_ago e con ma200> - GIORNO - r 6447 A1 x2 Y - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    action = "buy"
+                    percentage = 90
+
+                    # 29 gen 2025 sto cercando di risolvere il problema del trend laterale dopo un grande RIALZO
+                    # 29 gen 2025 cancellato and ma2_last > ma2_2_min_ago e anticipato ndecchiecella
+                    # 30 gen 2025 nel corridoio 300-450 puo' comprare prima
+                    # 28 feb 2025 GIORNO !
+                    # 12 mag 2025 se 100< aggiungo and deviation_ma3_sotto_ma50 < -0.05
+                    # 18 OTT 2025 SE CV NOTTE INTERVIENE CM E ANCHE ma100 SCENDE PIU' DOLCEMENTE
+                    # 18 ott 2025 aggiunte pg
+
+
+                elif (
+                    ma3_last > ma13_last
+
+                    and delta_CV_300_25_last > delta_CV_300_25_45_min_ago
+                    and deviation_ma39 < -0.10
+                    and deviation_ma3_sotto_ma50 < -0.12
+                    and deviation_ma5_sopra_o_sotto_ma100 < - 0.20
+                    and deviation_ma25_sotto_ma300 < -1.50
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.11
+                    and ma8_last >= ma8_2_min_ago
+
+
+                    and ma100_last < ma100_60_min_ago
+                    
+                    and ma450_last > ma450_360_min_ago
+                    and delta_DNA_1 < delta_DNA_2
+                    
+
+                    and ma450_last > ma450_720_min_ago
+                    and deviation_ma300_sopra_ma450 < 0.25
+                    and deviation_ma300_sopra_ma450 > -0.25
+
+                    and ma200_last > ma200_60_min_ago
+
+                    and ma3_last > ma7_last
+                    
+                    
+                    and macd_differenza_2_min_ago > -18.50
+                ):
+                    buy = f"BUY 3 con CV NOTTE E  DEVIATION PROFONDE e con ma450_last > ma450_720_min_ago e con ma200> - GIORNO - r 6447 A1 x2 Z - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    action = "buy"
+                    percentage = 90
+
+                    # 29 gen 2025 sto cercando di risolvere il problema del trend laterale dopo un grande RIALZO
+                    # 29 gen 2025 cancellato and ma2_last > ma2_2_min_ago e anticipato ndecchiecella
+                    # 30 gen 2025 nel corridoio 300-450 puo' comprare prima
+                    # 28 feb 2025 GIORNO !
+                    # 12 mag 2025 se 100< aggiungo and deviation_ma3_sotto_ma50 < -0.05
+                    # 18 ott 2025 aggiunte pg
+
+
+
+
+
 
 
 
@@ -62311,7 +62406,7 @@ class maddog:
                 and delta_1 < delta_2
 
                 and deviation_ma10__diviso_ma10_5_ore_ago < 1.50
-                and ma3_last < ma59_last
+                and ma3_last < ma69_last
                 and deviation_ma3_di_adesso_diviso_ma3_di_90_min_ago < 1.30
                 
                 and deviation_sell > 0.75
@@ -62327,7 +62422,7 @@ class maddog:
                 #  9 set 2024 aggiunta diff macd < -0.75
                 # 24 mar 2025 3-49 da 3-39 
                 # 14 apr 2025 3-59 da 3-49 se delta_1 < delta_2
-
+                # 18 ott 2025 3-69 da 3-59
 
 
             elif (
