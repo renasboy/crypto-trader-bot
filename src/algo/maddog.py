@@ -22677,25 +22677,32 @@ class maddog:
                     ma3_last > ma10_last
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.05
 
+                    and deviation_ma39 < -0.02
+                    and deviation_ma3_sotto_ma50 < -0.10
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.17
+                    and deviation_ma25_sotto_ma300 < -0.15
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.04
+                    and ma8_last >= ma8_2_min_ago
+
                     and (ma100_last < ma100_60_min_ago or delta_CV_300_25_last > delta_CV_300_25_45_min_ago)
-                    and (delta_CM_300_25_last < delta_CM_300_25_2_min_ago or deviation_ma25_sotto_ma300 < -0.35)
+                    and (delta_CM_300_25_last < delta_CM_300_25_2_min_ago or deviation_ma25_sotto_ma300 < -0.15)
 
                     and (deviation_ma200_sotto_ma300 > -0.15 or delta_DNA_1 < delta_DNA_2)
                     
 
                     and ma100_last < ma100_120_min_ago
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.07
+                    
 
                     and (ma200_last > ma200_120_min_ago or ma300_last > ma300_60_min_ago or ma300_last > ma450_last)
 
                     and deviation_ma54_sopra_o_sotto_ma72 < 0.015
-                    and deviation_ma39_sotto_ma200 < 0.20
+                    
                     and deviation_ma300_sopra_ma450 > -0.45
                     
                     and macd_differenza_2_min_ago > -18.00
                 ):      
               
-                    buy = f"BUY 3 da RCCR and ma300 > ma450 MA ma100_last < ma100_120_min_ago E 100 < 60 min + IL MIO CAPOLAVORO - r 6225 Y - deviation_ma39 {deviation_ma39} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago}"
+                    buy = f"BUY 3 da RCCR and ma300 > ma450 MA ma100_last < ma100_120_min_ago E 100 < 60 min + IL MIO CAPOLAVORO - r 6225 Y - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     action = "buy"
                     percentage = 80
 
@@ -22708,6 +22715,8 @@ class maddog:
                     # 26 set 2025 anticipata ndecchiecella
                     #  8 ott 2025 aggiunta and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.05
                     #  8 ott 2025 aggiunte parentesi graffe sulla stessa riga 
+                    # 18 ott 2025 aggiunte deviation pg + and ma8_last >= ma8_2_min_ago
+
                 
                 ####################################################################################
                 ####################################################################################
