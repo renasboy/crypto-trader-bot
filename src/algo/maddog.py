@@ -18546,20 +18546,27 @@ class maddog:
                     
                 elif (
                     ma5_last >= ma5_2_min_ago
-                    and ma8_last > ma8_2_min_ago
+                    and ma8_last >= ma8_2_min_ago
+
+                    and deviation_ma39 < -0.257 
+                    and deviation_ma3_sotto_ma50 < -0.246 
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.25
+                    and deviation_ma25_sotto_ma300 < 0.10
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.007
+
 
                     and ma450_last < ma450_300_min_ago
                     and ma300_last > ma300_60_min_ago
                     
-                    and deviation_ma250_sopra_ma300 < 0.20
-                    and deviation_ma250_sopra_ma300 > -0.20
+                    and deviation_ma250_sopra_ma300 < 0.25
+                    and deviation_ma250_sopra_ma300 > -0.25
                     
                     and deviation_ma3_sopra_ma10 > 0.001
                     
                     and ma2_last > ma5_last
                     and ma3_last > ma8_last
                     
-                    and macd_differenza_2_min_ago > -1.25
+                    and macd_differenza_2_min_ago > -18.25
                     
                 ):
                     buy = f"BUY 2 da RCCR - r 5687 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
@@ -18568,6 +18575,7 @@ class maddog:
 
                     # 17 ott 2025 aggiunta questa
                     # 17 ott 2025 aggiunte pg
+                    # 18 ott 2025 aggiunte deviation pg
 
 
                 # BUY 2 RIALZO IMPROVVISO ! con ma200 > and ma100_last > ma200_last
