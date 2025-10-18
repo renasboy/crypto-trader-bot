@@ -23682,8 +23682,8 @@ class maddog:
 
                     and delta_CV_300_25_last < delta_CV_300_25_45_min_ago
 
-
-                    and ma100_last < ma100_60_min_ago
+                    and (ma100_last < ma100_60_min_ago or ma20_last < ma50_last)
+                    
                     and deviation_ma3_sotto_ma50 < -0.05
 
                     and ma450_last > ma450_360_min_ago
@@ -23723,7 +23723,7 @@ class maddog:
                     and ma8_last >= ma8_2_min_ago
 
 
-                    and ma100_last < ma100_60_min_ago
+                    and (ma100_last < ma100_60_min_ago or ma20_last < ma50_last)
                     and deviation_ma3_sotto_ma50 < -0.05
 
                     and ma450_last > ma450_360_min_ago
@@ -23766,7 +23766,7 @@ class maddog:
                     and ma8_last >= ma8_2_min_ago
 
 
-                    and ma100_last < ma100_60_min_ago
+                    and (ma100_last < ma100_60_min_ago or ma20_last < ma50_last)
                     
                     and ma450_last > ma450_360_min_ago
                     and delta_DNA_1 < delta_DNA_2
