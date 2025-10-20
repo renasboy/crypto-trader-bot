@@ -20674,7 +20674,7 @@ class maddog:
                     and ma2_last > ma2_2_min_ago
                     and macd > macd_2_min_ago
                 ):
-                    sell = "BUY 2 ZIA MARIA con ma50 < MA ma100 > E ma300 < e con 5-39 - r 5987"
+                    buy = "BUY 2 ZIA MARIA con ma50 < MA ma100 > E ma300 < e con 5-39 - r 5987"
                     action = "sell"
 
               
@@ -52016,6 +52016,9 @@ class maddog:
 
                         # AGGIUNTA PER SICUREZZA SE CONTINUA A PRECIPITARE
 
+
+
+
                     # ----------------------------------------------------------------------------- guadagno con crollo
                     
                     elif (
@@ -52024,8 +52027,12 @@ class maddog:
                         and deviation_sell > 0.23
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 4-5-x eventuale guadagno con crollo (12-21 min) con ma50 < and incrocio 3 - 18 and deviation_sell > 0.23 - r 15011"
+                        sell = f"SELL 4-5-x eventuale guadagno con crollo (12-21 min) con ma50 < and incrocio 3 - 18 and deviation_sell > 0.23 - r 15011 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                         action = "sell"
+
+                        # 20 ott 2025 ok !
+                        # 20 ott 2025 aggiunte pg
+
 
                   
                     # --------------------------------------------------------------------------------- EX CONDIZIONI SPECIALI IMPORTATE ridotte
@@ -55283,7 +55290,7 @@ class maddog:
                 and deviation_ma3_sotto_ma150 > -1.20
 
             ):
-                sell = "SELL C.S. con ma50 < MA ma100 sopra ma300 > 0.10 e dev 3-39 < 0.05 e dev sell < -0.04 con 20>50 - r 15985 A1 ok 2B Y2x"
+                sell = f"SELL C.S. con ma50 < MA ma100 sopra ma300 > 0.10 e dev 3-39 < 0.05 e dev sell < -0.04 con 20>50 - r 15985 A1 ok 2B Y2x - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
 
                 # 18 set 2023 dev sell -0.02 da -0.01
@@ -55304,7 +55311,7 @@ class maddog:
                 # 24 mar 2025 and deviation_sell < -0.043 da -0.045
                 #  6 apr 2025 and deviation_sell < -0.04 da -0.043
                 # 18 mag 2025 se 20>50 dev sell ok cosi' - per adesso -
-
+                # 20 ott 2025 aggiunte pg
 
 
             elif (
@@ -56440,7 +56447,7 @@ class maddog:
                 
                 and macd_differenza_2_min_ago < -0.5
             ):
-                sell = "SELL CS GIORNO con ma300 < 5 ore e con 10<20 and dev 3-39 < 0.07 and dev_sell < -0.03 e con ma50> - r 16045 AZ 2A"
+                sell = f"SELL CS GIORNO con ma300 < 5 ore e con 10<20 and dev 3-39 < 0.07 and dev_sell < -0.03 e con ma50> - r 16045 AZ 2A - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
                 
                 # 20 nov 2023 aggiunta and diff ma2 < -5 
@@ -56451,7 +56458,7 @@ class maddog:
                 # 11 gen 2024 and ma2_differenza_2_min_ago < -8 da -7
                 # 11 gen 2024 and macd_differenza_2_min_ago < -0.5 (sperando che non faccia arrivare tardi il sell)
                 # 28 apr 2025 questa e' stata ritoccata di una nullita'. attenzione ! vedi le note relative al 9 gen 2024
-
+                # 20 ott 2025 aggiunte pg
 
             
             elif (
@@ -56831,7 +56838,7 @@ class maddog:
                 and deviation_ma39 < 0.068
                 and deviation_ma3_sotto_ma50 < 0.069
 
-                and (ma5_prev > ma20_prev and ma5_last < ma20_last)
+                and (ma5_prev > ma22_prev and ma5_last < ma22_last)
                 and (ma5_last < ma200_last or ma5_last < ma300_last)
                 
                 and (ma300_last < ma300_301_min_ago or ma300_last < ma300_120_min_ago)
@@ -56856,6 +56863,9 @@ class maddog:
 
                 # 20 ott 2025 aggiunta and deviation_ma39 < 0.068 (ho conosciuto la deviation grazie alla pg)
                 # 20 ott 2025 aggiunta and deviation_ma3_sotto_ma50 < 0.069 (ho conosciuto la deviation grazie alla pg)
+                # 20 ott 2025 5-22 da 5-20
+
+
 
 
             elif (
@@ -57311,11 +57321,13 @@ class maddog:
                 and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.018
                 and macd_differenza_2_min_ago < -0.20
             ):
-                sell = "SELL CS con 50>59 and ma50> - SALVAGENTE dev 3-39 < 0.07 e dev_sell < -0.01 - r 16047 A1 X1 B1x"
+                sell = f"SELL CS con 50>59 and ma50> - SALVAGENTE dev 3-39 < 0.07 e dev_sell < -0.01 - r 16047 A1 X1 B1x - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
 
                 # 28 apr 2025 anticipato ma di una ndecchiecella proprio.
                 # 28 apr 2025 aggiunto and ma50_last > ma50_2_min_ago
+                # 20 ott 2025 aggiunte pg
+
 
 
             elif (
@@ -57420,7 +57432,7 @@ class maddog:
                 and ma2_differenza_2_min_ago < -9
                 and macd_differenza_2_min_ago < -0.30
             ):
-                sell = "SELL cond spec 6 CON 50<59 - SALVAGENTE dev 3-39 < 0.05 e dev_sell < -0.06 e ma50< - r 16047 A1 Y1 X1"
+                sell = f"SELL cond spec 6 CON 50<59 - SALVAGENTE dev 3-39 < 0.05 e dev_sell < -0.06 e ma50< - r 16047 A1 Y1 X1 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
                 
                 # oggi 10 dicembre 2023 ascolta mario ! SE ma20_last > ma20_2_min_ago DEV SELL a -0.01 da 0.01
@@ -57429,7 +57441,7 @@ class maddog:
                 # oggi 12 gen 2024 ascolta mario ! SE ma20_last > ma20_2_min_ago DEV SELL a -0.04 da -0.03
                 # 17 gen 2024 SE ma10_last > ma10_2_min_ago DEV SELL a -0.05 da -0.04
                 # 22 mag 2025 SE ma10_last > ma10_2_min_ago DEV SELL a -0.06 da -0.05
-
+                # 20 ott 2025 aggiunte pg
 
             
             elif (
