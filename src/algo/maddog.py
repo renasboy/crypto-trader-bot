@@ -56828,6 +56828,9 @@ class maddog:
                 
                 and deviation_sell < 0.40
 
+                and deviation_ma39 < 0.068
+                and deviation_ma3_sotto_ma50 < 0.069
+
                 and (ma5_prev > ma20_prev and ma5_last < ma20_last)
                 and (ma5_last < ma200_last or ma5_last < ma300_last)
                 
@@ -56851,6 +56854,8 @@ class maddog:
                 # 15 ott 2025 aggiunta guadagno durante un forte ribasso
                 # 16 ott 2025 modificata perche' ha fatto -0.48
 
+                # 20 ott 2025 aggiunta and deviation_ma39 < 0.068 (ho conosciuto la deviation grazie alla pg)
+                # 20 ott 2025 aggiunta and deviation_ma3_sotto_ma50 < 0.069 (ho conosciuto la deviation grazie alla pg)
 
 
             elif (
