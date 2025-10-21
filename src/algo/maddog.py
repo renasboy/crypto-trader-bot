@@ -36461,7 +36461,6 @@ class maddog:
 
 
                 
-              
                 elif (    
                     ma3_last > ma18_last
                     
@@ -36487,11 +36486,46 @@ class maddog:
                     
                     and macd_differenza_2_min_ago > -18.50
                 ):
-                    buy = "BUY 5 che mancava 8 apr 2025 - r 7570"
+                    buy = f"BUY 5 che mancava 8 apr 2025 - r 7570 a - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     action = "buy"
                     percentage = 80
 
                     # aggiunta 8 apr 2025 e' andata benissimo su RCCR durante un lungo crollo !
+                    # 21 ott 2025 aggiunte pg
+
+
+
+                elif (    
+                    ma3_last > ma13_last
+
+                    and ma300_last < ma300_60_min_ago
+                    and ma450_last < ma450_360_min_ago
+
+                    and ma100_last < ma100_10_min_ago
+
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.045
+
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.60
+                    and deviation_ma5_sopra_ma200 > -0.30
+                    and deviation_ma5_sotto_ma300 > -0.30
+                    and deviation_ma5_sotto_ma450 > -0.30
+
+                    and deviation_ma50_sopra_o_sotto_ma100 > -0.20
+                    and deviation_ma100_sopra_ma300 > -0.20
+
+                    and deviation_ma3_sotto_ma50 < -0.05
+
+                    and macd_differenza_2_min_ago > -18.50
+                ):
+                    buy = f"BUY 5 che mancava 21 ott 2025 - r 7570 b - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    action = "buy"
+                    percentage = 80
+
+                    # aggiunta 8 apr 2025 e' andata benissimo su RCCR durante un lungo crollo !
+                    # 21 ott 2025 aggiunte pg
+                    # 21 ott 2025 aggiunta questa nuova condizione che deriva dalla precedente
+                    # 21 ott 2025 trend decrescente consolidato ma tutte le medie lunghe cominciano a risalire !
+                    # 21 ott 2025 and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.045 (e' una garanzia)
 
 
 
