@@ -26312,11 +26312,11 @@ class maddog:
                     and ma300_last > ma450_last
                     and ma200_last > ma450_last
                     
-                    and deviation_ma250_sopra_ma300 > -0.13
+                    and deviation_ma250_sopra_ma300 > -0.15
                     
                     and ma2_last > ma5_last
                     
-                    and macd_differenza_2_min_ago > -18.50
+                    and macd_differenza_2_min_ago > -28.50
                 ):
                     buy = "BUY 3 del 2 ottobre 2023 NON COMPRAVA ! con 450 > 450 60 min - r 6574 A2"
                     action = "buy"
@@ -26332,7 +26332,7 @@ class maddog:
                     # 18 ago 2025 anticipata ndecchiecella - vai compa !
                     #  8 ott 2025 anticipate ndecchiecella
                     #  8 ott 2025 forse in futuro aggiungere and delta_50_25_last < delta_50_25_30_min_ago
-
+                    # 21 ott 2025 piccolissima modifica and deviation_ma250_sopra_ma300 a -0.15 da -0.13
 
 
                 elif (
