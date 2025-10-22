@@ -32391,32 +32391,108 @@ class maddog:
                     # 11 apr 2025 correzione or e aggiunta f
 
 
-              
                 elif (
                     ma3_last > ma13_last
 
-                    and ma100_last > ma100_60_min_ago
-
-                    and ma100_last > ma100_120_min_ago
+                    and ma20_last > ma40_last
 
                     and ma450_last > ma450_720_min_ago
+                    and ma100_last > ma100_60_min_ago
+                    and ma100_last > ma100_120_min_ago
+                    
+                    
                     and deviation_ma100_sopra_ma300 > -0.10
                     and deviation_ma300_sopra_ma450 > -0.11
 
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.10
                     and deviation_ma3_sotto_ma50 < -0.02
 
-                    and ma3_last > ma7_last
                     
+                    and ma3_last > ma7_last
                     and macd_differenza_2_min_ago > -12.50
                 ):
-                    buy = "BUY 5 con ma450_last > ma450_720_min_ago e con ma200> + e 100 > 2 ore E 100> 1 ora - r 7145 AX"
+                    buy = "BUY 5 con ma450_last > ma450_720_min_ago e con ma200> e MA 20<40- r 7145 AX 1 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     action = "buy"
                     percentage = 90
 
                     # 28 giu 2025 aggiunta questa. 450 sale da 720 min scende  ma la 100 sta ancora vicina alla 300
                     # 10 ago 2025 con 100> 2 ore
                     # 14 ago 2025 se 100 > 1 ora ok cosi'
+                    # 21 ott 2025 se ma20_last > ma40_last ok cosi'
+                    # 21 ott 2025 AGGIUNGO PG
+
+
+
+                elif (
+                    ma3_last > ma13_last
+
+                    and ma20_last < ma40_last
+
+                    and deviation_ma39 < -0.50 
+                    and deviation_ma3_sotto_ma50 < -0.58
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.80
+                    
+                    and ma450_last > ma450_720_min_ago
+                    and ma100_last > ma100_60_min_ago
+                    and ma100_last > ma100_120_min_ago
+                    
+                    
+                    and deviation_ma100_sopra_ma300 > -0.10
+                    and deviation_ma300_sopra_ma450 > -0.11
+
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.10
+                    and deviation_ma3_sotto_ma50 < -0.02
+
+                    
+                    and ma3_last > ma7_last
+                    and macd_differenza_2_min_ago > -18.50
+                ):
+                    buy = "BUY 5 con ma450_last > ma450_720_min_ago e con ma200> MA 20<40 + deviation profonde - r 7145 AX 2x - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    action = "buy"
+                    percentage = 90
+
+                    # 28 giu 2025 aggiunta questa. 450 sale da 720 min scende  ma la 100 sta ancora vicina alla 300
+                    # 10 ago 2025 con 100> 2 ore
+                    # 14 ago 2025 se 100 > 1 ora ok cosi'
+                    # 21 ott 2025 se ma20_last < ma40_last aggiungo deviation profonde
+                    # 21 ott 2025 AGGIUNGO PG
+
+
+
+                elif (
+                    ma3_last > ma13_last
+
+                    and ma20_last < ma40_last
+
+                    and deviation_ma39 < -0.10 
+                    and deviation_ma3_sotto_ma50 < -0.10
+                    and delta_CM_300_25_last < delta_CM_300_25_2_min_ago
+                    
+                    and ma450_last > ma450_720_min_ago
+                    and ma100_last > ma100_60_min_ago
+                    and ma100_last > ma100_120_min_ago
+                    
+                    
+                    and deviation_ma100_sopra_ma300 > -0.10
+                    and deviation_ma300_sopra_ma450 > -0.11
+
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.10
+                    and deviation_ma3_sotto_ma50 < -0.02
+
+                    
+                    and ma3_last > ma7_last
+                    and macd_differenza_2_min_ago > -18.50
+                ):
+                    buy = "BUY 5 con ma450_last > ma450_720_min_ago e con ma200> MA 20<40 + CM GIORNO - r 7145 AX 2y - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    action = "buy"
+                    percentage = 90
+
+                    # 28 giu 2025 aggiunta questa. 450 sale da 720 min scende  ma la 100 sta ancora vicina alla 300
+                    # 10 ago 2025 con 100> 2 ore
+                    # 14 ago 2025 se 100 > 1 ora ok cosi'
+                    # 21 ott 2025 se ma20_last < ma40_last aggiungo CM GIORNO !
+                    # 21 ott 2025 AGGIUNGO PG
+
 
 
 
