@@ -23808,7 +23808,7 @@ class maddog:
                     and deviation_ma25_sotto_ma300 < -0.14 
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.01
 
-                    and (ma450_last > ma450_360_min_ago or and ma450_last > ma450_720_min_ago)
+                    and (ma450_last > ma450_360_min_ago or ma450_last > ma450_720_min_ago)
                     and (ma200_last > ma200_60_min_ago or delta_DNA_1 < delta_DNA_2)
                     
                     and deviation_ma300_sopra_ma450 < 0.40
@@ -26318,7 +26318,7 @@ class maddog:
                     
                     and macd_differenza_2_min_ago > -28.50
                 ):
-                    buy = "BUY 3 del 2 ottobre 2023 NON COMPRAVA ! con 450 > 450 60 min - r 6574 A2"
+                    buy = f"BUY 3 del 2 ottobre 2023 NON COMPRAVA ! con 450 > 450 60 min - r 6574 A2 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     action = "buy"
                     percentage = 60
                     
@@ -26333,7 +26333,7 @@ class maddog:
                     #  8 ott 2025 anticipate ndecchiecella
                     #  8 ott 2025 forse in futuro aggiungere and delta_50_25_last < delta_50_25_30_min_ago
                     # 21 ott 2025 piccolissima modifica and deviation_ma250_sopra_ma300 a -0.15 da -0.13
-
+                    # 21 ott 2025 aggiunte pg - vedi in particolare 5-100
 
                 elif (
                     
