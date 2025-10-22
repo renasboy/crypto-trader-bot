@@ -54311,7 +54311,8 @@ class maddog:
                     elif (
                         ma50_last > ma50_2_min_ago
                         and deviation_ma59_sopra_ma300 > 0.50
-                        and (ma3_prev > ma20_prev and ma3_last < ma20_last)
+                        and (ma3_prev > ma30_prev and ma3_last < ma30_last)
+                        and delta_CM_300_25_last > delta_CM_300_25_2_min_ago
                         and deviation_sell > 2.71
                         and ma2_last < ma2_2_min_ago
                     ):
@@ -54320,6 +54321,8 @@ class maddog:
                         action = "sell"
                         
                         # 23 feb 2023 3-20 da 3-13 se 59 sopra 300 di molto
+                        # 22 ott 2025 3-30 da 3-20
+                        # 22 ott 2025 aggiunta and delta_CM_300_25_last > delta_CM_300_25_2_min_ago notte
                         
                         
                     elif (
