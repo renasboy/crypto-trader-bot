@@ -34325,12 +34325,12 @@ class maddog:
 
 
                 elif (
-                    ma200_last >= ma200_120_min_ago
+                    ma3_last > ma13_last
+
+                    and ma200_last >= ma200_120_min_ago
                     and ma20_last > ma50_last
-                    and ma100_last > ma300_last
                     
-
-
+                    and ma100_last > ma300_last
                     and ma300_last > ma450_last
                     and ma300_last >= ma300_60_min_ago
                     
@@ -34338,13 +34338,9 @@ class maddog:
 
                     and deviation_ma3_sotto_ma50 < -0.03
 
-                    and deviation_ma3_sopra_ma10 > 0.01
-                    
-                    and ma3_last > ma8_last
-                   
                     and macd_differenza_2_min_ago > -18.50
                 ):   
-                    buy = "BUY 5 che NON SPEZZA LA CATENA - GIORNO - E 20>50 E ma200> 120 min con 3-50 < -0.03 - r 7410 A1 X1 x1"
+                    buy = "BUY 5 che NON SPEZZA LA CATENA - GIORNO - E 20>50 E ma200> 120 min con 3-50 < -0.03 - r 7410 A1 X1 x1 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     action = "buy"
                     percentage = 80
 
@@ -34353,6 +34349,8 @@ class maddog:
                     # 23 mar 2025 and deviation_ma3_sotto_ma50 < -0.03
                     #  3 apr 2025 se 100>300 and deviation_ma3_sotto_ma50 < -0.03
                     #  8 apr 2025 con 20>50 va bene cosi'
+                    # 22 ott 2025 per adesso non la modifico. ma aggiungo pg.
+
 
                 
 
