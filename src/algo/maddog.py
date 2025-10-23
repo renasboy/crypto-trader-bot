@@ -39743,8 +39743,36 @@ class maddog:
                         # da 0.33 a 0.36 perche' durante il crollo ferrari non devi guardare i centesimi.
                         
                         
+
+
                     elif (        
                         ma50_last < ma50_2_min_ago
+                        and delta_CM_300_25_last < delta_CM_300_25_2_min_ago 
+
+                        and ma100_last < ma100_60_min_ago
+                        and ma300_last < ma300_120_min_ago
+                        
+                        and deviation_sell < -0.34
+                        and deviation_ma50_sotto_ma300 < 0.50
+                        
+                        and ma2_last < ma2_2_min_ago
+                        
+                    ):
+                        sell = "SELL 1 maestro parte 2 (21-50 min) con ma50 < and deviation_sell < -0.36 - r 9110 Bx1"
+                        action = "sell"
+                        
+                        # da 0.33 a 0.36 perche' durante il crollo ferrari non devi guardare i centesimi.
+                        # 23 ott 2025 strano che abbia venduto mentre CM GIORNO con + 0.23% (io ho messo and deviation_sell < -0.36 !)
+                        # 23 ott 2025 aggiunto cm giorno
+                        # 23 ott 2025 vediamo.
+                        # deviation_sell = ma3_last/last_trade_price
+
+
+
+                    elif (        
+                        ma50_last < ma50_2_min_ago
+                        and delta_CM_300_25_last > delta_CM_300_25_2_min_ago
+
                         and ma100_last < ma100_60_min_ago
                         and ma300_last < ma300_120_min_ago
                         
@@ -39752,12 +39780,18 @@ class maddog:
                         and deviation_ma50_sotto_ma300 < 0.50
                         
                         and ma2_last < ma2_2_min_ago
-                        and macd >= macd_2_min_ago
+                        
                     ):
-                        sell = "SELL 1 maestro parte 2 (21-50 min) con ma50 < and deviation_sell < -0.36 and macd >= macd_2_min_ago - r 9110 Bx"
+                        sell = "SELL 1 maestro parte 2 (21-50 min) con ma50 < and deviation_sell < -0.36 - r 9110 Bx2"
                         action = "sell"
                         
                         # da 0.33 a 0.36 perche' durante il crollo ferrari non devi guardare i centesimi.
+                        # 23 ott 2025 strano che abbia venduto mentre CM GIORNO con + 0.23% (io ho messo and deviation_sell < -0.36 !)
+                        # 23 ott 2025 aggiunto cm notte
+                        # 23 ott 2025 vediamo.
+                        # deviation_sell = ma3_last/last_trade_price
+
+
 
                     
                     elif (        
@@ -63925,10 +63959,7 @@ class maddog:
                 and ma200_last < ma300_last
 
             ):
-                sell = f"""SELL papa RATZINGER 18 mag 2025 > 5 min con guadagno trend ribassista SE 20 INCROCIA AL RIBASSO 50  - r 16937 B
-                ma20_last {ma20_last}
-                ma50_last {ma50_last}
-                """
+                sell = f"SELL papa RATZINGER 18 mag 2025 > 5 min con guadagno trend ribassista SE 20 INCROCIA AL RIBASSO 50  - r 16937 B - ma20_last {ma20_last} ma50_last {ma50_last} deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
                 
                 # questa condizione e' un capolavoro
@@ -63936,7 +63967,7 @@ class maddog:
                 # interviene dopo 300 secondi (5 min)
 
                 # 20 maggio spezzata la riga lunga - grazie compa !
-                
+                # 23 ott 2025 aggiunte pg
                 
                
                     
