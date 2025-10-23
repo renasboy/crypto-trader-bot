@@ -36767,14 +36767,18 @@ class maddog:
                 
 
                 
-                   
                 elif (
                     ma3_last > ma8_last
+                    and ma20_last < ma50_last
+                    and delta_1 > delta_2
+
+                    and delta_CM_300_25_last < delta_CM_300_25_2_min_ago 
+
 
                     and ma450_last > ma450_720_min_ago
-                    and ma20_last < ma50_last
+                    
                     and deviation_ma50_sopra_o_sotto_ma100 < -0.05
-                    and delta_1 > delta_2
+                    
 
                     and deviation_ma39 < -0.02
                     and deviation_ma3_sotto_ma50 < -0.07
@@ -36790,7 +36794,42 @@ class maddog:
                     and macd_differenza_2_min_ago > -18.50
                 ):    
               
-                    buy = "BUY 5 DURANTE UNA CORREZIONE che non e' un forte ribasso e non e' un crollo ! - r 7588"
+                    buy = f"BUY 5 DURANTE UNA CORREZIONE che non e' un forte ribasso e non e' un crollo ! - r 7588 a - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    action = "buy"
+                    percentage = 80
+
+                    # 23 ott 2023 se CM GIORNO ok cosi'
+                    # 23 ott 2025 aggiunte pg
+
+
+                    
+
+                elif (
+                    ma3_last > ma8_last
+                    and ma20_last < ma50_last
+                    and delta_1 > delta_2
+
+
+                    and delta_CM_300_25_last > delta_CM_300_25_2_min_ago
+                    and deviation_ma39 < -0.23
+                    and deviation_ma3_sotto_ma50 < -0.25
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.35
+
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.10
+
+                    and deviation_buy_crollo_1 < -0.29
+                    and deviation_ma50_sopra_o_sotto_ma100 < -0.05
+                    
+                    and ma450_last > ma450_720_min_ago
+                    and ma200_last >= ma200_120_min_ago
+                    and ma300_last >= ma300_60_min_ago
+
+                    and deviation_ma3_sopra_ma10 > 0.01
+                   
+                    and macd_differenza_2_min_ago > -18.50
+                ):    
+              
+                    buy = f"BUY 5 DURANTE UNA CORREZIONE che non e' un forte ribasso e non e' un crollo ! - r 7588 b - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     action = "buy"
                     percentage = 80
 
@@ -36800,8 +36839,8 @@ class maddog:
                     # 27 mar 2025 anticipata ndecchiecella
                     #  3 apr 2025 perfezionata
                     #  4 apr 2025 perfezionata con 3-39 e 3-50
-
-
+                    # 23 ott 2025 se CV notte aggiungo deviation da una condizione successiva che e' andata bene
+                    # 23 ott 2025 aggiunte pg
 
                 
                
