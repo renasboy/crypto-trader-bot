@@ -59621,9 +59621,10 @@ class maddog:
                 # 21 ott 2025 aggiunte pg
 
 
-            
             elif (    
-                ma3_last < ma8_last
+                ma3_last < ma9_last
+                and ma8_last > ma8_2_min_ago
+
                 and (ma10_last < ma20_last or ma3_last < ma100_last)
                 and deviation_ma300_sopra_ma450 > -0.22
 
@@ -59640,10 +59641,43 @@ class maddog:
                 and macd < 100
                 
             ):
-                sell = "SELL NCS con ma20 <= ma20 2 min ago e dev 3-39 < 0.10 e dev_sell < -0.019 and diff ma2 e diff macd - r 16047 A3 Y2 b2x"
+                sell = f"SELL NCS con ma20 <= ma20 2 min ago e dev 3-39 < 0.10 e dev_sell < -0.019 and diff ma2 e diff macd - r 16047 A3 Y2 b2 x1 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
 
                 # 16 ott 2025 anticipato ndecchiecella (ha fatto -0.50%)
+                # 23 ott 2025 se ma8_last > ma8_2_min_ago vende con 3-9 ha venduto mentre saliva
+                # 23 ott 2025 aggiunte pg
+
+
+
+            elif (    
+                ma3_last < ma8_last
+                and ma8_last <= ma8_2_min_ago
+
+
+                and (ma10_last < ma20_last or ma3_last < ma100_last)
+                and deviation_ma300_sopra_ma450 > -0.22
+
+                and deviation_ma50_sopra_o_sotto_ma300 < -0.50
+                and deviation_ma5_sopra_o_sotto_ma100 < -0.10
+                
+                and deviation_ma39 < 0.12
+                and deviation_sell < 0.019
+                
+                and deviation_ma5_sopra_ma200 < -0.30
+                and deviation_ma5_sotto_ma300 < -0.30
+                and deviation_ma5_sotto_ma450 < -0.30
+                
+                and macd < 100
+                
+            ):
+                sell = f"SELL NCS con ma20 <= ma20 2 min ago e dev 3-39 < 0.10 e dev_sell < -0.019 and diff ma2 e diff macd - r 16047 A3 Y2 b2 x2 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                action = "sell"
+
+                # 16 ott 2025 anticipato ndecchiecella (ha fatto -0.50%)
+                # 23 ott 2025 se ma8_last <= ma8_2_min_ago ok cosi'
+                # 23 ott 2025 aggiunte pg
+
 
 
 
@@ -61000,19 +61034,21 @@ class maddog:
                 
 
 
-
             elif (    
                 ma2_last < ma4_last
-                
                 and ma2_last < ma6_last
+
+                and ma8_last > ma8_2_min_ago
+                
+                
                 and delta_1_200_30 > delta_2_200_30_30_min
                 
-                and deviation_crollo_24_aprile < -0.30
+                and deviation_crollo_24_aprile < -0.29
                 
                 and deviation_ma5_sotto_ma200 > -0.90
             ): 
                 
-                sell = "SELL CS - NOTTE - DOPO IL CROLLO IMPROVVISO del 24 aprile 2022 - and deviation_ma5_sotto_ma200 > -0.90 - r 16427 B"
+                sell = f"SELL CS - NOTTE - DOPO IL CROLLO IMPROVVISO del 24 aprile 2022 - and deviation_ma5_sotto_ma200 > -0.90 - r 16427 B1 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
                         
                 # ho aggiunto anche questa vendita speciale dopo il 24 aprile -1%
@@ -61029,8 +61065,44 @@ class maddog:
                 #  5 dic 2023 aggiunta and ma2_differenza_2_min_ago < -21 ! 
                 #  6 apr 2025 HA FATTO -1.06 - tolto immediatamente and ma2_differenza_2_min_ago < -21
                 #  6 apr 2025 dev crollo 24 apr a -0.30 da -0.35
+                # 23 ott 2025 se ma8 > ma8 2 min ago -0.29 da -0.30
+                # 23 ott 2025 aggiunte pg per conoscere i prossimi BUY !
 
 
+
+
+            elif (    
+                ma2_last < ma4_last
+                and ma2_last < ma6_last
+
+                and ma8_last < ma8_2_min_ago
+
+                and delta_1_200_30 > delta_2_200_30_30_min
+                
+                and deviation_crollo_24_aprile < -0.28
+                
+                and deviation_ma5_sotto_ma200 > -0.90
+            ): 
+                
+                sell = f"SELL CS - NOTTE - DOPO IL CROLLO IMPROVVISO del 24 aprile 2022 - and deviation_ma5_sotto_ma200 > -0.90 - r 16427 B2 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                action = "sell"
+                        
+                # ho aggiunto anche questa vendita speciale dopo il 24 aprile -1%
+                # deviation_crollo_24_aprile = ma2_last / last_trade_price        
+                # -0.58 ha generato perdita -0.82 il 10 maggio 2022 cosi' ho ridotto a -0.575
+                # -0.575 ha generato perdita -1.12 il 10 maggio 2022 cosi' ho ridotto a -0.57
+                # -0.57 ha generato perdita -1.37 il 12 maggio 2022 cosi' ho ridotto a -0.56
+                # -0.56 ha generato perdita -1.19 il 13 maggio 2022 cosi' ho ridotto a -0.55
+                # MA VA BENE !
+                # 0.55 ha generato una perdita di -1.00 % il 7 ott 2022 cosi' ho ridotto a -0.548
+                #  5 nov 2023 dev crollo 24 apr a -0.45 da -0.548 (su RCCR ha generato perdita di -0.79) (io ho voluto cambiare anche su maddog)
+                #  5 dic 2023 dev crollo 24 apr a -0.35 da -0.45 ( su MADDOG ha generato perdita di -0.81) VEDI 4 DICEMBRE 2023
+
+                #  5 dic 2023 aggiunta and ma2_differenza_2_min_ago < -21 ! 
+                #  6 apr 2025 HA FATTO -1.06 - tolto immediatamente and ma2_differenza_2_min_ago < -21
+                #  6 apr 2025 dev crollo 24 apr a -0.30 da -0.35
+                # 23 ott 2025 se ma8 < ma8 2 min ago -0.28 da -0.30
+                # 23 ott 2025 aggiunte pg per conoscere i prossimi BUY !
 
 
 
