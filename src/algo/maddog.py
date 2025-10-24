@@ -56441,7 +56441,7 @@ class maddog:
                 and ma2_last < ma5_last
                 and price < ma3_last
             ):
-                sell = "SELL CS SALVAGENTE - con dev sell < -0.001 con ma50< e dev_ma3_sotto_ma200 > -1.20 - r 15985 A1 ok 4Y 2B X2"
+                sell = f"SELL CS SALVAGENTE - con dev sell < -0.001 con ma50< e dev_ma3_sotto_ma200 > -1.20 - r 15985 A1 ok 4Y 2B X2 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
 
                 # 27 set 2023 dev sell -0.11 da -0.10
@@ -56461,6 +56461,7 @@ class maddog:
                 #  8 apr 2025 dev sell < -0.001 da < -0.01
                 #  8 apr 2025 attenzione qua 50<
                 #  10 mag 2025 aggiunta or ma5_last <= ma450_last
+                # 24 ott 2025 aggiunte pg
 
 
 
