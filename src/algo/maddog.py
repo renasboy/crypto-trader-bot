@@ -52966,7 +52966,7 @@ class maddog:
                         and ma100_last > ma100_60_min_ago
                         
                         
-                        and (ma5_prev > ma49_prev and ma5_last < ma49_last)
+                        and (ma5_prev > ma69_prev and ma5_last < ma69_last)
                         and deviation_sell > 0.25 and deviation_sell < 0.56
                         
                         and ma2_last < ma2_2_min_ago
@@ -52974,7 +52974,7 @@ class maddog:
                         and ma2_last < ma5_last
                         and macd_differenza_2_min_ago < -0.50
                     ):
-                        sell = "SELL 4-5-x (21-60 min) con 300 < 120 min e incr 5-78 E dev_sell 0.25-0.56 - GIORNO - MARADONA - r 15110 B2"
+                        sell = "SELL 4-5-x (21-60 min) con 300 < 120 min e incr 5-69 E dev_sell 0.25-0.56 - GIORNO - MARADONA - r 15110 B2"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
@@ -52986,6 +52986,9 @@ class maddog:
 
                         # 19 feb 2025 e' giorno ! cioe' 100 divarica da 200 verso l' alto ! 
                         # 19 feb 2025 sell con 5-49 da 4-39
+                        # 24 ott 2025 sell con 5-69 da 4-49
+
+
 
 
                      
