@@ -18980,7 +18980,6 @@ class maddog:
 
 
 
-
                 elif (    
                     ma3_last > ma18_last
 
@@ -19002,11 +19001,42 @@ class maddog:
                     and macd >= macd_2_min_ago
                 ):  
                 
-                    buy = "BUY 2 con ma300<ma450 MA ma450_last > ma450_180_min_ago E 200 sale da 20 min - r 5829 B2x"
+                    buy = "BUY 2 con ma300<ma450 MA ma450_last > ma450_180_min_ago E 200 sale da 20 min - r 5829 B2 x1"
                     action = "buy"
                     percentage = 80
 
                     # 27 feb 2025 se ma450_last > ma450_180_min_ago anticipato ndecchiecella
+
+
+
+
+                elif (    
+                    ma3_last > ma11_last
+
+                    and ma450_last > ma450_180_min_ago
+                    and ma200_last > ma200_20_min_ago
+
+                    and (ma100_last < ma200_last or ma300_last < ma450_last)
+                    
+                    and deviation_ma39 < -0.09
+                    and deviation_ma3_sotto_ma50 < -0.115
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.10
+                    and deviation_ma25_sotto_ma300 < -0.022
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.039
+                    
+                    and ma2_last > ma6_last
+                    
+                ):  
+                
+                    buy = f"BUY 2 da un sell con pg del 24 ott 2025 - r 5829 B2 x2 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    action = "buy"
+                    percentage = 80
+
+                    # 27 feb 2025 se ma450_last > ma450_180_min_ago anticipato ndecchiecella
+                    # 23 ott 2025 aggiunta questa condizione
+
+
+
 
 
                 elif (    
@@ -58443,6 +58473,8 @@ class maddog:
                 # 27 mar 2025 se ma5_last < ma150_last and dev_sell < -0.016
                 # 24 ott 2025 aggiunte pg
                 # 24 ott 2025 ha fatto -0.42 e allora ho modificato come ho potuto per farla vendere prima.
+
+
 
 
             elif (
