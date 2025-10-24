@@ -26385,9 +26385,9 @@ class maddog:
 
 
 
-                
                 elif (    
                     ma3_last > ma13_last
+                    and delta_CV_300_25_last < delta_CV_300_25_45_min_ago
 
                     and ma450_last > ma450_60_min_ago
                     and ma300_last > ma450_last
@@ -26399,7 +26399,7 @@ class maddog:
                     
                     and macd_differenza_2_min_ago > -28.50
                 ):
-                    buy = f"BUY 3 del 2 ottobre 2023 NON COMPRAVA ! con 450 > 450 60 min - r 6574 A2 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    buy = f"BUY 3 del 2 ottobre 2023 NON COMPRAVA ! CV GIORNO con 450 > 450 60 min - r 6574 A2 x - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     action = "buy"
                     percentage = 60
                     
@@ -26415,6 +26415,85 @@ class maddog:
                     #  8 ott 2025 forse in futuro aggiungere and delta_50_25_last < delta_50_25_30_min_ago
                     # 21 ott 2025 piccolissima modifica and deviation_ma250_sopra_ma300 a -0.15 da -0.13
                     # 21 ott 2025 aggiunte pg - vedi in particolare 5-100
+                    # 24 OTT 2025 CV GIORNO OK COSI
+
+
+
+                elif (    
+                    ma3_last > ma13_last
+                    and delta_CV_300_25_last > delta_CV_300_25_45_min_ago
+
+                    and delta_CM_300_25_last < delta_CM_300_25_2_min_ago 
+                    and ma8_last > ma8_2_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.045
+
+                    and ma450_last > ma450_60_min_ago
+                    and ma300_last > ma450_last
+                    and ma200_last > ma450_last
+                    
+                    and deviation_ma250_sopra_ma300 > -0.15
+                    
+                    and ma2_last > ma5_last
+                    
+                    and macd_differenza_2_min_ago > -28.50
+                ):
+                    buy = f"BUY 3 del 2 ottobre 2023 NON COMPRAVA ! con 450 > 450 60 min - r 6574 A2 y1 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    action = "buy"
+                    percentage = 60
+                    
+                    #  2 ottobre 2023 aggiunta perche' BUY 3 NON ENTRAVA IN AZIONE
+                    # 25 ottobre 2023 and deviation_ma5_sopra_o_sotto_ma100 > -0.15 da > -0.11
+                    # 25 ottobre 2023 and deviation_ma100_sopra_ma300 < 0.35 da < 0.30
+                    # 25 ottobre 2023 and deviation_ma100_sopra_ma300 > -0.35 da > -0.30
+                    #  7 dic 2023 aggiunta and ma2_differenza_2_min_ago > 7
+                    #  9 set 2024 anticipata ndecchiecella
+                    #  3 giu 2025 anticipata ndecchiecella
+                    # 18 ago 2025 anticipata ndecchiecella - vai compa !
+                    #  8 ott 2025 anticipate ndecchiecella
+                    #  8 ott 2025 forse in futuro aggiungere and delta_50_25_last < delta_50_25_30_min_ago
+                    # 21 ott 2025 piccolissima modifica and deviation_ma250_sopra_ma300 a -0.15 da -0.13
+                    # 21 ott 2025 aggiunte pg - vedi in particolare 5-100
+                    # 24 OTT 2025 CV NOTTE CM GIORNO and ma8_last > ma8_2_min_ago and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.045
+
+
+                elif (    
+                    ma3_last > ma13_last
+                    and delta_CV_300_25_last > delta_CV_300_25_45_min_ago
+
+                    and deviation_ma39 < -0.10
+                    and deviation_ma3_sotto_ma50 < -0.11
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.25
+                    and deviation_ma25_sotto_ma300 < -0.33
+
+
+                    and ma450_last > ma450_60_min_ago
+                    and ma300_last > ma450_last
+                    and ma200_last > ma450_last
+                    
+                    and deviation_ma250_sopra_ma300 > -0.15
+                    
+                    and ma2_last > ma5_last
+                    
+                    and macd_differenza_2_min_ago > -28.50
+                ):
+                    buy = f"BUY 3 del 2 ottobre 2023 NON COMPRAVA ! con 450 > 450 60 min - r 6574 A2y2 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    action = "buy"
+                    percentage = 60
+                    
+                    #  2 ottobre 2023 aggiunta perche' BUY 3 NON ENTRAVA IN AZIONE
+                    # 25 ottobre 2023 and deviation_ma5_sopra_o_sotto_ma100 > -0.15 da > -0.11
+                    # 25 ottobre 2023 and deviation_ma100_sopra_ma300 < 0.35 da < 0.30
+                    # 25 ottobre 2023 and deviation_ma100_sopra_ma300 > -0.35 da > -0.30
+                    #  7 dic 2023 aggiunta and ma2_differenza_2_min_ago > 7
+                    #  9 set 2024 anticipata ndecchiecella
+                    #  3 giu 2025 anticipata ndecchiecella
+                    # 18 ago 2025 anticipata ndecchiecella - vai compa !
+                    #  8 ott 2025 anticipate ndecchiecella
+                    #  8 ott 2025 forse in futuro aggiungere and delta_50_25_last < delta_50_25_30_min_ago
+                    # 21 ott 2025 piccolissima modifica and deviation_ma250_sopra_ma300 a -0.15 da -0.13
+                    # 21 ott 2025 aggiunte pg - vedi in particolare 5-100
+                    # 24 OTT 2025 CV NOTTE and dev profonde NO deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.045
+
 
                 elif (
                     
