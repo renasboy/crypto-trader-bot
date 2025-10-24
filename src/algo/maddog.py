@@ -53090,25 +53090,47 @@ class maddog:
                     
                     
                     ######################################################################## and rapporto_delta_1_delta_2 > 1 AND 100> SORGERE
-                    
+
+
                     elif (
                         ma50_last > ma50_2_min_ago
-                        
+                        and delta_CM_300_25_last < delta_CM_300_25_2_min_ago 
                         
                         and delta_1 < delta_2
                         and ma100_last > ma100_60_min_ago
                         
-                        and ma3_last < ma39_last
+                        and ma4_last < ma50_last
                         and deviation_sell > 0.57 and deviation_sell < 0.90
                         and ma2_last < ma2_2_min_ago
                       
                     ):
-                        sell = "SELL 4-5-x (21-60 min) con ma50 > and 3-39 (no incrocio 3-15) and deviation_sell 0.57 - 0.90 FINTA RONALDO - GIORNO - r 15185"
+                        sell = "SELL 4-5-x (21-60 min) con cm giorno con ma50 > and 4-50 (no incrocio 3-15) and deviation_sell 0.57 - 0.90 FINTA RONALDO - GIORNO - r 15185 a"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
                         # > estate 3-39 da 3-28
+                        # 24 ott 2025 se cm giorno 4-50 da 3-39
+
+
+
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and delta_CM_300_25_last > delta_CM_300_25_2_min_ago 
                         
+                        and delta_1 < delta_2
+                        and ma100_last > ma100_60_min_ago
+                        
+                        and ma5_last < ma39_last
+                        and deviation_sell > 0.57 and deviation_sell < 0.90
+                        and ma2_last < ma2_2_min_ago
+                      
+                    ):
+                        sell = "SELL 4-5-x (21-60 min) con cm notte con ma50 > and 5-39 (no incrocio 3-15) and deviation_sell 0.57 - 0.90 FINTA RONALDO - GIORNO - r 15185 b"
+                        action = "sell"
+                        
+                        # deviation_sell = ma3_last/last_trade_price
+                        # > estate 3-39 da 3-28
+                        # 24 ott 2025 se cm notte 5-39 da 3-39
                         
                         
                     ######################################################## and rapporto_delta_1_delta_2 < 1 tramonto
