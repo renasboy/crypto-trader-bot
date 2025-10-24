@@ -58419,27 +58419,20 @@ class maddog:
                 
 
             elif (
-                ma78_last > ma78_120_min_ago
-                and ma100_last < ma200_last
-                and ma5_last < ma150_last
-
-
+                ma78_last > ma78_120_min_ago 
                 and ma450_last > ma450_360_min_ago
+
+                and (ma100_last < ma200_last or ma5_last < ma150_last)
                 
-                and ma10_last < ma10_2_min_ago
+                and (ma10_last < ma10_2_min_ago or ma20_last <= ma20_2_min_ago)
                 and ma50_last < ma59_last
-                and ma20_last <= ma20_2_min_ago
                 
                 and deviation_ma39 < 0.07
                 and deviation_sell < -0.016
                 
-                and ma50_last < ma50_2_min_ago
-                and deviation_ma100_sopra_ma300 < 0.40
                 and deviation_ma5_sotto_ma200 > -0.80
                 
-                and ma2_last < ma2_2_min_ago
-                
-                and macd_differenza_2_min_ago < -1.30
+                and macd_differenza_2_min_ago < -0.50
                 
             ):
                 sell = f"SELL SALVAGENTE dev 3-39 < 0.05 e dev_sell < -0.016 e ma50 < e macd_diff_2_min_ago < -0.20 - r 16047 A1 Y1 Y2 AX 1 y2 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
@@ -58449,7 +58442,7 @@ class maddog:
                 # 27 mar 2025 se ma100_last < ma200_last allora deviation_sell < -0.017
                 # 27 mar 2025 se ma5_last < ma150_last and dev_sell < -0.016
                 # 24 ott 2025 aggiunte pg
-
+                # 24 ott 2025 ha fatto -0.42 e allora ho modificato come ho potuto per farla vendere prima.
 
 
             elif (
