@@ -43133,13 +43133,13 @@ class maddog:
                         # 7 lug 2023 dev sell 4-140 da 5-150
 
 
-                    elif (
-                        ma10_last < ma100_last
-                        and ma10_last < ma30_last
-                        
+                    
+                    elif (    
+                        ma10_last < ma30_last
+                        and ma10_last < ma90_last
                         and delta_1 < delta_2
                         
-                        and ma50_last < ma50_2_min_ago
+                        and ma50_last <= ma50_2_min_ago
                         
                         and ma100_last > ma150_last
                         and ma300_last > ma300_120_min_ago
@@ -43148,18 +43148,15 @@ class maddog:
                         and deviation_sell > 0.10
                         
                         and ma2_last < ma5_last
-                        
-                        and ma2_last < ma2_2_min_ago
-                        
-                        and ma2_differenza_ma5 < -6
+                           
                     ):
-                        sell = "SELL 1 (110-239 min) GIORNO con 10<100 e con ma50< MA ma100 > E ma300 > E dev_sell < 0.10 - r 10262 A1 Y1"
+                        sell = "SELL 1 (110-239 min) GIORNO con 10<90 e con ma50<= MA ma100 > E ma300 > E dev_sell > 0.10 - r 10262 A1 Y1"
                         action = "sell"
 
                         # 25 mar 2025 8-100 da 3-100 se GIORNO
                         #  8 ott 2025 10-100 da 8-100
                         # 18 ott 2025 aggiunta and ma10_last < ma30_last
-
+                        # 25 ott 2025 10-90 da 10-100
                         
 
                     elif (
