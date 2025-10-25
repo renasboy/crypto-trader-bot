@@ -3351,7 +3351,7 @@ class maddog:
                     and (ma100_last > ma100_60_min_ago or ma300_last > ma300_120_min_ago)
                         
                     and ma2_last > ma5_last
-                    and ma8_last  ma8_2_min_ago
+                    and ma8_last > ma8_2_min_ago
                         
                 ):
                     buy = "BUY 1 del 25 ott 2025 da un SELL GIORNO con ma100> E ma300> - r 1030"
