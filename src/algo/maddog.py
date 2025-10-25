@@ -8,7 +8,7 @@
 
 '''
 
-deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}
+             deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}          
 
 
 # 14 ott 2025 fare dev ma3_last > ma8_last perche' ha venduto mentre saliva
@@ -43150,13 +43150,15 @@ class maddog:
                         and ma2_last < ma5_last
                            
                     ):
-                        sell = "SELL 1 (110-239 min) GIORNO con 10<90 e con ma50<= MA ma100 > E ma300 > E dev_sell > 0.10 - r 10262 A1 Y1"
+                        sell = f"SELL 1 (110-239 min) GIORNO con 10<90 e con ma50<= MA ma100 > E ma300 > E dev_sell > 0.10 - r 10262 A1 Y1 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                         action = "sell"
 
                         # 25 mar 2025 8-100 da 3-100 se GIORNO
                         #  8 ott 2025 10-100 da 8-100
                         # 18 ott 2025 aggiunta and ma10_last < ma30_last
                         # 25 ott 2025 10-90 da 10-100
+                        # 25 ott 2025 aggiunte pg
+
                         
 
                     elif (
@@ -44709,7 +44711,7 @@ class maddog:
                         and macd < macd_2_min_ago
                         and macd_differenza_2_min_ago < -2
                     ):
-                        sell = "SELL 1 > 240 min con 3-69 SE 300 > 120 min e con ma50 < and dev 3-39 < 0.03 - r 10572 A2"
+                        sell = f"SELL 1 > 240 min con 3-69 SE 300 > 120 min e con ma50 < and dev 3-39 < 0.03 - r 10572 A2 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                         action = "sell"
                         
                         # deviation_ma39 = ma4_last / ma39
@@ -44719,6 +44721,8 @@ class maddog:
                         #  8 ott 2023 deviation_ma39 < 0.03 da < -0.17
                         # 14 apr 2024 sell con ma3<49 da 3-39
                         #  7 ago 2025 sell con ma3<69 da 3-49
+                        # 25 ott 2025 aggiunte pg
+
 
                   
                     elif (     
@@ -60481,11 +60485,14 @@ class maddog:
                 and macd < 25
             
             ):
-                sell = "SELL CS con ma20>ma20 2 min e ma50<= ma50 2 min E ma300 > 5 ore e dev 3-39 <0.10 e dev_sell < -0.027 - r 16047 B1 Y1 Y2yx"
+                sell = f"SELL CS con ma20>ma20 2 min e ma50<= ma50 2 min E ma300 > 5 ore e dev 3-39 <0.10 e dev_sell < -0.027 - r 16047 B1 Y1 Y2yx - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
 
                 #  5 feb 2025 and deviation_sell a -0.027 da -0.025 se ci troviamo ancora nella parte alta
                 #  5 feb 2025 and deviation_ma25_sotto_ma300 > -0.70 significa che non ci troviamo durante un crollo ! stai piu' tranquillo.
+                # 25 ott 2025 aggiunte pg
+
+
 
 
             elif (
