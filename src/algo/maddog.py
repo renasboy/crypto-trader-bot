@@ -3335,7 +3335,7 @@ class maddog:
                     and ma6_last > ma39_last
                 ):    
               
-                    buy = "BUY 1 con 300> 120 min MA 39<39 20 min ago E 69> 100 E dev_bellissima > 0.14 and ma78 < AND 5-28 > 0.11 - r 1021y"
+                    buy = "BUY 1 con 300> 120 min MA 39<39 20 min ago E 69> 100 E dev_bellissima > 0.14 and ma78 < AND 5-28 > 0.11 - r 1021 y"
                     action = "buy"
                     percentage = 90
 
@@ -3344,6 +3344,26 @@ class maddog:
                     
                     
                 
+                elif (      
+                    ma3_last < ma11_last
+                        
+                    and (ma100_last > ma150_last or delta_1 < delta_2)
+                    and (ma100_last > ma100_60_min_ago or ma300_last > ma300_120_min_ago)
+                        
+                    and ma2_last > ma5_last
+                    and ma8_last  ma8_2_min_ago
+                        
+                ):
+                    buy = "BUY 1 del 25 ott 2025 da un SELL GIORNO con ma100> E ma300> - r 1030"
+                    action = "sell"
+
+                    # 25 mar 2025 8-100 da 3-100 se GIORNO
+                    #  8 ott 2025 10-100 da 8-100
+                    # 18 ott 2025 aggiunta and ma10_last < ma30_last
+                    # 25 ott 2025 aggiunta questa
+
+
+
                 # BUY 1 con 28>300 and 69 > 100 e 200> and deviation_bellissima > 0.12 and 5-28>0.18
 
                 elif (    
@@ -35462,7 +35482,27 @@ class maddog:
 
 
                     
+                elif (      
+                    ma3_last < ma11_last
+                        
+                    and (ma100_last > ma150_last or delta_1 < delta_2)
+                    and (ma100_last > ma100_60_min_ago or ma300_last > ma300_120_min_ago)
+                        
+                    and ma2_last > ma5_last
+                    and ma8_last  ma8_2_min_ago
+                        
+                ):
+                    buy = "BUY 5 del 25 ott 2025 da un SELL GIORNO con ma100> E ma300> - r 7430"
+                    action = "sell"
+
+                    # 25 mar 2025 8-100 da 3-100 se GIORNO
+                    #  8 ott 2025 10-100 da 8-100
+                    # 18 ott 2025 aggiunta and ma10_last < ma30_last
+                    # 25 ott 2025 aggiunta questa
+
+
                     
+                      
                 elif (
                     ma3_last > ma10_last
                     
