@@ -3345,7 +3345,7 @@ class maddog:
                     
                 
                 elif (      
-                    ma3_last < ma11_last
+                    ma3_last > ma11_last
                         
                     and (ma100_last > ma150_last or delta_1 < delta_2)
                     and (ma100_last > ma100_60_min_ago or ma300_last > ma300_120_min_ago)
@@ -35483,7 +35483,7 @@ class maddog:
 
                     
                 elif (      
-                    ma3_last < ma11_last
+                    ma3_last > ma11_last
                         
                     and (ma100_last > ma150_last or delta_1 < delta_2)
                     and (ma100_last > ma100_60_min_ago or ma300_last > ma300_120_min_ago)
