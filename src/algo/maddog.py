@@ -22318,9 +22318,14 @@ class maddog:
 
 
 
-                    
+
+
+
                 elif (
                     ma3_last > ma10_last
+
+                    and delta_CV_300_25_last < delta_CV_300_25_45_min_ago
+
 
                     and deviation_ma25_sotto_ma300 < -0.25
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.05
@@ -22336,7 +22341,7 @@ class maddog:
                     and macd_differenza_2_min_ago > -18.50
                 ):  
                 
-                    buy = "BUY 3 con ma200 che sale da 60 min OR GIORNO and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.05 - r 6016 B"
+                    buy = f"BUY 3 con ma200 che sale da 60 min OR GIORNO and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.05 - r 6016 Bx - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     action = "buy"
                     percentage = 80
 
@@ -22347,6 +22352,95 @@ class maddog:
                     
                     # 27 mag 2025 aggiunto and delta_1_50_20 < delta_2_50_20 - giorno ! - ha comprato durante un forte ribasso
                     #  7 ott 2025 aggiunta deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.05
+                    # 26 ott 2025 aggiunte pg
+                    # 26 ott 2025 se cv giorno ok cosi'
+
+
+
+                elif (
+                    ma3_last > ma10_last
+
+                    and delta_CV_300_25_last > delta_CV_300_25_45_min_ago
+                    and delta_CM_300_25_last < delta_CM_300_25_2_min_ago 
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.05
+                    and ma8_last >= ma8_2_min_ago
+
+
+                    and deviation_ma25_sotto_ma300 < -0.25
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.05
+
+                    and delta_1_50_20 < delta_2_50_20
+                    
+                    and ma300_last < ma450_last
+                    and deviation_ma39 < -0.03
+                    and (ma200_last > ma200_60_min_ago or delta_1 < delta_2)
+                    
+                    and ma3_last > ma9_last
+
+                    and macd_differenza_2_min_ago > -18.50
+                ):  
+                
+                    buy = f"BUY 3 con ma200 che sale da 60 min OR GIORNO and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.05 - r 6016 By - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    action = "buy"
+                    percentage = 80
+
+                    # deviation_buy3 = ma4_last/ma30_last
+                    # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
+                    # 30 apr 2025 anticipata ndecchiecella
+                    # 19 mag 2025 aggiunta and deviation_ma39 < -0.03
+                    
+                    # 27 mag 2025 aggiunto and delta_1_50_20 < delta_2_50_20 - giorno ! - ha comprato durante un forte ribasso
+                    #  7 ott 2025 aggiunta deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.05
+                    # 26 ott 2025 aggiunte pg
+                    # 26 ott 2025 se cv notte cm giorno and ma8 and ma100
+                    
+
+
+
+
+                elif (
+                    ma3_last > ma10_last
+
+                    and delta_CV_300_25_last > delta_CV_300_25_45_min_ago
+                    and deviation_ma39 -0.10
+                    and deviation_ma3_sotto_ma50 -0.15
+                    and deviation_ma5_sopra_o_sotto_ma100 -0.25
+                    
+             
+                    and deviation_ma25_sotto_ma300 < -0.25
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.05
+
+                    and delta_1_50_20 < delta_2_50_20
+                    
+                    and ma300_last < ma450_last
+                    and deviation_ma39 < -0.03
+                    and (ma200_last > ma200_60_min_ago or delta_1 < delta_2)
+                    
+                    and ma3_last > ma9_last
+
+                    and macd_differenza_2_min_ago > -18.50
+                ):  
+                
+                    buy = f"BUY 3 con ma200 che sale da 60 min OR GIORNO and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.05 - r 6016 Bz - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    action = "buy"
+                    percentage = 80
+
+                    # deviation_buy3 = ma4_last/ma30_last
+                    # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
+                    # 30 apr 2025 anticipata ndecchiecella
+                    # 19 mag 2025 aggiunta and deviation_ma39 < -0.03
+                    
+                    # 27 mag 2025 aggiunto and delta_1_50_20 < delta_2_50_20 - giorno ! - ha comprato durante un forte ribasso
+                    #  7 ott 2025 aggiunta deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.05
+                    # 26 ott 2025 aggiunte pg
+                    # 26 ott 2025 se cv notte dev profonde
+
+
+
+
+
+
+
 
 
 
