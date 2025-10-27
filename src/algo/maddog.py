@@ -62120,7 +62120,7 @@ class maddog:
                 #  6 apr 2025 dev crollo 24 apr a -0.30 da -0.35
                 # 23 ott 2025 se ma8 < ma8 2 min ago -0.28 da -0.30
                 # 23 ott 2025 aggiunte pg per conoscere i prossimi BUY !
-
+                
 
 
 
@@ -62149,7 +62149,7 @@ class maddog:
                 # -0.60 ha generato perdita -0.84 il 13 maggio 2022 cosi' ho ridotto a -0.59
                 # MA VA BENE !
                 # 13 ott 2022 -0.60 ha generato perdita di -1.43 % ! quindi -0.587 da 0.60
-                
+                # 27 ott 2025 aggiunte pg
                 
                 
                 
@@ -62170,7 +62170,7 @@ class maddog:
                 action = "sell"
                 
                 # 11 gen 2024 -0.37 da -0.57
-
+                # 27 ott 2025 aggiunte pg
 
 
             elif (    
@@ -62198,7 +62198,7 @@ class maddog:
                 #  2 ott 2024 CON ma10_last > ma30_last and deviation_crollo_24_aprile < -0.14 da < -0.13
                 # 27 feb 2025 aggiunto se anche 20>50
                 # 27 feb 2025 se anche 20>50 deviation_crollo_24_aprile < -0.15 da < -0.14
-
+                # 27 ott 2025 aggiunte pg
 
             elif (    
                 ma2_last <= ma4_last
@@ -62225,7 +62225,7 @@ class maddog:
                 #  2 ott 2024 CON ma10_last > ma30_last and deviation_crollo_24_aprile < -0.14 da < -0.13
                 # 27 feb 2025 aggiunto se 20<50
                 # 27 feb 2025 CON 20<50 and deviation_crollo_24_aprile < -0.145 da < -0.14
-
+                # 27 ott 2025 aggiunte pg
 
 
             
@@ -62267,7 +62267,7 @@ class maddog:
                 #  3 feb 2025 io ho imposto che deve entrare in azione solo quando la situazione si sta facendo critica.
                 # 10 apr 2025 and ma3_last > ma39_last
                 # 13 apr 2023 se deviation_sell > 0.02 sell con ma2_last < ma8_last SEMPRE CON 3>39
-
+                # 27 ott 2025 aggiunte pg
 
 
             elif (    
@@ -62302,7 +62302,7 @@ class maddog:
                 #  3 feb 2025 io ho imposto che deve entrare in azione solo quando la situazione si sta facendo critica.
                 # 10 apr 2025 and ma3_last > ma39_last
                 # 13 apr 2023 se deviation_sell < 0.02 sell con ma2_last < ma6_last SEMPRE CON 3>39
-
+                # 27 ott 2025 aggiunte pg
 
             
             elif (      
@@ -62334,7 +62334,7 @@ class maddog:
                 #  3 feb 2025 questa e' andata benissimo su RCCR -0.29 mentre MADDOG HA FATTO -1.40 !
                 #  3 feb 2025 io ho imposto che deve entrare in azione solo quando la situazione si sta facendo critica.
                 # 10 apr 2025 and ma3_last > ma39_last
-
+                # 27 ott 2025 aggiunte pg
 
 
 
@@ -62363,7 +62363,7 @@ class maddog:
                 #  3 feb 2025 si attiva se deviation_buy_crollo_1 < -1.61
                 #  3 feb 2025 si attiva se deviation_ma25_sotto_ma300 < -2.00
                 #  3 feb 2025 SELL r 16480 BYa de RCCR E' ANDATA BENISSIMO -0.29% maddog ha fatto -1.40 !
-
+                # 27 ott 2025 aggiunte pg
 
 
 
@@ -62394,7 +62394,7 @@ class maddog:
                 action = "sell"
 
                 # 18 apr 2025 MA se ma3_last > ma10_last allora deviation_crollo_24_aprile < -0.155 da < -0.15
-
+                # 27 ott 2025 aggiunte pg
 
 
             elif (    
@@ -62445,6 +62445,8 @@ class maddog:
                 # 19 gen 2024 and deviation_crollo_24_aprile a -0.13 da -0.14
                 
                 #  8 mar 2024 con macd tra -40 e 1 deviation_crollo_24_aprile a -0.135 da -0.13
+                # 27 ott 2025 aggiunte pg
+
 
                 ######################################################################################### fine dopo il crollo improvviso del 24 aprile 2022
                 
@@ -62469,7 +62471,7 @@ class maddog:
                 # cosi' ho aggiunto la deviation che dice che se ma3 e' piu' giu' della ma30 IL RIBASSO IMPROVVISO NON E' GIA' PIU' !
                 # INTERVERRANNO ALTRE CONDIZIONI
                 # ho dovuto mettere and deviation_sell < -0.30 (ha fatto vendita strana con -0.20 ore 00:10 del 9 maggio 2022)
-                
+                # 27 ott 2025 aggiunte pg
                 
                 
             
@@ -62490,7 +62492,7 @@ class maddog:
                 # cosi' ho aggiunto la deviation che dice che se ma3 e' piu' giu' della ma30 IL RIBASSO IMPROVVISO NON E' GIA' PIU' !
                 # INTERVERRANNO ALTRE CONDIZIONI    
                 # anche qua ho dovuto mettere and deviation_sell < -0.18    
-            
+                # 27 ott 2025 aggiunte pg
             
             
             
@@ -62514,6 +62516,8 @@ class maddog:
                 
                 #  5 dic 2023 aggiunto and ma2_differenza_2_min_ago < -5
                 #  5 dic 2023 dev sell a -0.25 da -0.35 
+                # 27 ott 2025 aggiunte pg
+
             
             
             # 25 - SELL condizione speciale ro cano VENDE " DOPO x MINUTI " "max hold time" - DOLCE ATTESA con ma100 > e ma13 <
@@ -62530,7 +62534,8 @@ class maddog:
 
                 sell = f"SELL condizione speciale 25 - DOLCE ATTESA con ma100 > e ma13 < and deviation < -0.37 - r 16574 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
-                
+
+                # 27 ott 2025 aggiunte pg
             
             
             
@@ -62548,7 +62553,8 @@ class maddog:
 
                 sell = f"SELL condizione speciale 26 - DOLCE ATTESA con ma100 < e con ma13 > and deviation < -0.41 - r 16592 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
-                
+
+                # 27 ott 2025 aggiunte pg
             
             
             
@@ -62570,7 +62576,8 @@ class maddog:
 
                 sell = f"SELL condizione speciale 27 - DOLCE ATTESA con ma100 < e con ma13 < and dev_sell < -0.355 ( and 20 > 100 ! ) - r 16614 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
-                
+
+                # 27 ott 2025 aggiunte pg
             
             
             
@@ -62604,7 +62611,7 @@ class maddog:
                 # IMPORTANTE ! HO deviation < -0.355 MA VENDE CON SOLI - 0.25 cosi' ovviamente e' impossibile !
                 # allora ho provato con un rafforzativo and ma20_last < ma100_last
                 # per distinguerla da quella precedente che aveva dato il problema. ( e che ha and ma20_last < ma100_last )
-                
+                # 27 ott 2025 aggiunte pg
                 
                 
                 
@@ -62629,6 +62636,7 @@ class maddog:
                 sell = f"SELL condizione speciale 29 - DOLCE ATTESA 300 < con ma100 < e con ma13 < and deviation < -0.42 ( and 20 < 100 ) - r 16670 b - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
 
+                # 27 ott 2025 aggiunte pg
                 
                 
                 
@@ -62657,7 +62665,7 @@ class maddog:
                 # 4 feb 2022 con <-0.26 ha fatto -0.88% (dopo +4.29%)
                 # 7 feb 2022 con <-0.345 e 270 sec ha fatto -0.38% - aumenta a 0.355 ! - eventualmente ci pensa la condizione CROLLO IMPROVVISO CHE FUNZIONA !
                 # 30 ago 2023 and deviation_sell -0.36 da -0.43
-                
+                # 27 ott 2025 aggiunte pg
                 
                 
                 
@@ -62690,7 +62698,7 @@ class maddog:
 
                 # 15 ott 2024 se 39>100 deviation_sell < -0.03 da < -0.02
                 # 22 mag 2025 se 39>100 deviation_sell < -0.035 da < -0.03
-            
+                # 27 ott 2025 aggiunte pg
 
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
@@ -62718,7 +62726,7 @@ class maddog:
 
                 # 15 apr 2025 aggiunta and ma10_last > ma39_last 
                 # 15 apr 2025 forse qua dovro' mettere sell con 3<39 !
-
+                # 27 ott 2025 aggiunte pg
 
 
 
@@ -62758,7 +62766,7 @@ class maddog:
                 # 16 apr 2025 ha fatto +0.15
                 # 15 apr 2025 aggiunta and ma10_last < ma39_last
                 # 13 ott 2025 and deviation_sell a -0.027 da -0.025
-
+                # 27 ott 2025 aggiunte pg
 
 
 
@@ -62796,7 +62804,7 @@ class maddog:
                 #  8 set 2024 aggiunta ma3 < ma3 2 min ago and ma2_last < ma2_2_min_ago
                 # 17 set 2024 aggiunto and deviation_sell < -0.03 CON 100 > 300 
                 # 17 set 2024 and deviation_sell < -0.04 da < -0.03
-
+                # 27 ott 2025 aggiunte pg
 
 
             elif (
@@ -62828,7 +62836,7 @@ class maddog:
                 # 19 set 2024 forse in futuro dovrai mettere and ma2_last < ma6_last cioe' aspetta un pochino di piu'
                 # 12 mag 2025 se 100 non scende di molto allora aggiungo deviation_sell < -0.01
                 # DA = DOLCE ATTESA
-
+                # 27 ott 2025 aggiunte pg
 
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
@@ -62858,7 +62866,7 @@ class maddog:
                 # 19 set 2024 forse in futuro dovrai mettere and ma2_last < ma6_last cioe' aspetta un pochino di piu'
                 # 12 mag 2025 aggiunto and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.07
                 # 18 ott 2025 aggiunte parentesi graffe
-
+                # 27 ott 2025 aggiunte pg
 
 
 
@@ -62894,7 +62902,7 @@ class maddog:
                 # 20 mar 2025 deviation_sell a -0.055 da -0.05
                 # 29 apr 2025 deviation_sell a -0.06 da -0.055
                 # 16 ott 2025 aggiunte parentesi graffe (se ci sono le virgolette all' inizio ci devono essere le virgolette alla fine !)
-
+                # 27 ott 2025 aggiunte pg
 
 
             
@@ -62932,7 +62940,7 @@ class maddog:
                 # 12 mag 2025 se ma100 non scende molto dev sell a -0.001 da 0.01
                 # 27 giu 2025 and ma8_last <= ma8_2_min_ago
                 # 13 ott 2025 aggiunte parentesi graffe
-
+                # 27 ott 2025 aggiunte pg
 
 
             elif (
@@ -62973,7 +62981,7 @@ class maddog:
                 # 16 ott 2025 aggiunte parentesi graffe sulla stessa riga
                 # 16 ott 2025 se ci sono le 3 virgolette iniziali NON E' NECESSARIO AGGIUNGERE LE VIRGOLETTE FINALI !
                 # 16 ott 2025 aggiunto 3<20 (ha venduto non appena ha comprato)
-
+                # 27 ott 2025 aggiunte pg
 
 
             elif (
@@ -63019,7 +63027,7 @@ class maddog:
                 # 17 feb 2025 aggiunta and ma5_last < ma5_3_min_ago
                 # 20 mar 2025 deviation_sell a -0.06 da -0.05 se deviation_ma25_sotto_ma200 < -2.00
                 # 24 set 2025 messe parentesi graffe
-
+                # 27 ott 2025 aggiunte pg
 
             
 
@@ -63051,7 +63059,7 @@ class maddog:
                 
                 #  3 mar 2025 aggiunta and ma450_last > ma450_480_min_ago
                 # 18 ott 2025 aggiunte parentesi graffe 
-
+                # 27 ott 2025 aggiunte pg
 
 
 
@@ -63090,6 +63098,9 @@ class maddog:
                 #  3 mar 2025 aggiunta and deviation_ma39 < -0.005
                 # 17 apr 2025 se ma3_last > ma20_last aggiungo deviation_sell < -0.02 ! (se 3 sta ancora sopra 20 statte calmo !)
                 # 17 apr 2025 riprto ! se 3 sta ancora sopra 20 statte calmo !
+                # 27 ott 2025 aggiunte pg
+
+
                 
 
             elif (
@@ -63127,7 +63138,7 @@ class maddog:
                 #  3 mar 2025 aggiunta and deviation_ma39 < -0.005
                 # 17 apr 2025 se ma3_last < ma20_last
                 # 28 giu 2025 aggiunta and ma8_last <= ma8_2_min_ago
-
+                # 27 ott 2025 aggiunte pg
 
 
 
@@ -63164,7 +63175,7 @@ class maddog:
 
                 #  8 ott 2024 se ma200_last < ma200_120_min_ago MA ma25_last > ma25_2_min_ago and deviation_sell < -0.09 ! statti calmo
                 #  8 ott 2024 durante il crollo aggiunto dev sell < -0.0942 che prima non c' era.
-
+                # 27 ott 2025 aggiunte pg
             
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
@@ -63218,7 +63229,7 @@ class maddog:
                 # 27 giu 2025 CHE BELLI I VALORI NELLE PARENTESI GRAFFE ! grazie compa caro !
                 # 27 giu 2025 aggiunta and ma8_last <= ma8_2_min_ago perche' ha venduto mentre risaliva
                 # 26 ott 2025 pg con 3 decimali
-
+                # 27 ott 2025 aggiunte pg
 
 
 
@@ -63264,7 +63275,7 @@ class maddog:
                 #  2 mar 2025 se deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.14 cioe' ma100 continua a perdere pesantemente allora
                 #  2 mar 2025 ok cosi' - senza dev sell !
                 # 15 ott 2025 crollo del 10 ottobre 2025 ! e' intervenuta questa e ha fatto -2.33
-
+                # 27 ott 2025 aggiunte pg
 
                 
 
@@ -63289,7 +63300,7 @@ class maddog:
                 action = "sell"
 
                 # 25 ott 2025 aggiunta dopo il crollo del 10 ottobre 2025 !
-
+                # 27 ott 2025 aggiunte pg
 
 
             elif (
@@ -63309,7 +63320,7 @@ class maddog:
                 action = "sell"
 
                 # 25 ott 2025 aggiunta dopo il crollo del 10 ottobre 2025 !
-
+                # 27 ott 2025 aggiunte pg
 
 
 
@@ -63331,7 +63342,7 @@ class maddog:
                 action = "sell"
                 
                 # durante il crollo sono un po' piu' tollerante - paradossalmente ! HO ATTESO MOLTO QUESTO MOMENTO !
-
+                # 27 ott 2025 aggiunte pg
                 
                         
             
@@ -63355,7 +63366,7 @@ class maddog:
                         
                 # ma13 troppo lenta !
                 # max_hold_time_in_seconds = 360 = 6 min (con 8 min perdita di 0.70 %)
-                
+                # 27 ott 2025 aggiunte pg
                 
                 
                 
@@ -63389,7 +63400,7 @@ class maddog:
                 action = "sell"
                 
                 # 24 set 2022 ore 17:23
-                
+                # 27 ott 2025 aggiunte pg
                 
                 
                 
@@ -63416,7 +63427,7 @@ class maddog:
                 # 24 set 2022 ore 17:23
                 #  3 nov 2022 5-125 da 5-100
                 # 15 gen 2023 5-150 da 5-125
-                
+                # 27 ott 2025 aggiunte pg
                 
                 
                 
@@ -63445,7 +63456,7 @@ class maddog:
                 # 11 ott 2022 dev sell 0.10 da 0.15
                 # 21 ott 2022 dev sell 0.11 da 0.10
                 #  3 lug 2023 5-100 da 5-90
-                
+                # 27 ott 2025 aggiunte pg
                 
                 
                 
@@ -63477,7 +63488,7 @@ class maddog:
                 #  3 gen 2023 dev sell <-0.09 da <0.05
                 # 1 lug 2023 5-100 da 5-90
                 # 1 lug 2023 dev sell <-0.11 da <0.09
-                
+                # 27 ott 2025 aggiunte pg
                 
                 
             # 32 SELL condizione speciale ROOT DOWN DEEP - ro cano VENDE dopo 150 min e fino a 240 min con 5-90
@@ -63507,7 +63518,7 @@ class maddog:
                 # 21 ott 2022 dev sell 0.11 da 0.10
                 # 20 feb 2023 18 < 18 2 min ago
                 # 21 ott 2023 and macd_differenza_2_min_ago < -0.25
-
+                # 27 ott 2025 aggiunte pg
 
                 
             # 32 SELL condizione speciale ROOT DOWN DEEP - ro cano VENDE dopo 150 min e fino a 240 min con 5-90
@@ -63535,7 +63546,7 @@ class maddog:
                 # 21 ott 2022 dev sell 0.11 da 0.10
                 # 20 feb 2023 18 < 18 2 min ago
                 #  8 OTT 2025 piccolissima modifica
-                
+                # 27 ott 2025 aggiunte pg
                
                 
                 
@@ -63565,7 +63576,9 @@ class maddog:
                 # dopo 150 min faccio cominciare i binari !
                 # 29 mag 2023 20-300 da 22-300 !
                 # 29 mag 2023 dev_sell < -0.10 da < -0.12
-                
+                # 27 ott 2025 aggiunte pg
+
+
                 
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds_sell_5_90
@@ -63585,7 +63598,7 @@ class maddog:
                 # 24 set 2022 ore 17:23
                 #  3 nov 2022 5-300 da 5-90
                 # 24 apr 2023 8-300 da 5-300
-                
+                # 27 ott 2025 aggiunte pg
                 
                 
             # SELL condizione speciale 32 B ROOT DOWN DEEP - maddog VENDE dopo 150 min = 9000 sec e fino a 240 min con 5-300 GIORNO ! cazzo
@@ -63611,7 +63624,7 @@ class maddog:
                 #  3 nov 2022 5-300 da 5-200
                 
                 # 27 set 2023 se macd > -10 vende con 5-300 !
-
+                # 27 ott 2025 aggiunte pg
 
 
 
@@ -63638,7 +63651,7 @@ class maddog:
                 #  3 nov 2022 5-300 da 5-200
                 
                 # 27 set 2023 se macd < -10 vende con 5-200 !
-                
+                # 27 ott 2025 aggiunte pg
                 
                 
                 
@@ -63670,7 +63683,7 @@ class maddog:
                 # 18 nov 2022 13-78
                 # 31 lug 2023 5-300 da 5-200
                 # 11 ago 2022 aggiunta macd <
-            
+                # 27 ott 2025 aggiunte pg
             
             # SELL condizione speciale 32 B ROOT DOWN DEEP - SELL> 150 min = 9000 sec SE GUADAGNA > 0.50 e fino a 240 min con 5-200 NOTTE !
             
@@ -63693,7 +63706,7 @@ class maddog:
                 action = "sell"
                         
                 # vedi RCCR 19 GEN 2023 ore 8:35
-                
+                # 27 ott 2025 aggiunte pg
                 
                 
                 
@@ -63724,7 +63737,7 @@ class maddog:
                 #  4 gen 2023 aggiunta dev sell < -0.10 vedi 4 gen 2023 ore 1:16
                 # 21 mag 2023 8-300 da 8-250
                 # 31 lug 2023 -0.12 da -0.10
-
+                # 27 ott 2025 aggiunte pg
 
 
                 
@@ -63750,7 +63763,7 @@ class maddog:
                         
                 # 24 set 2022 ore 17:23
                 # 26 ottobre 2022 dev sell -0.15 da -0.10 vedi 15:40 del 25 ottobre !
-                
+                # 27 ott 2025 aggiunte pg
                 
                 
                 
@@ -63772,7 +63785,8 @@ class maddog:
 
                 sell = f"SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 150 min = 9000 sec e fino a 240 min - r 16734 B - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
-                
+
+                # 27 ott 2025 aggiunte pg
                 
                 
                 
@@ -63832,7 +63846,7 @@ class maddog:
                 # 11 ott 2022 dev sell 0.10 da 0.15
                 # 21 ott 2022 dev sell 0.11 da 0.10
                 # prendi e porta a casa cazzo se 300 scende da 5 ore ! e stai guadagnando > 0.80 % - potrebbe essere un rimbalzo.
-                
+                # 27 ott 2025 aggiunte pg
                 
                 
             # 32 B 
@@ -63859,7 +63873,7 @@ class maddog:
                 #  1 ago 2023 dev sell -0.10 da +0.10
                 # 11 ago 2023 macd < 2 min ago
                 # 11 ago macd < -6
-                
+                # 27 ott 2025 aggiunte pg
                 
             
             
@@ -63899,7 +63913,7 @@ class maddog:
                 # 10 set 2024 AGGIUNTA and macd_differenza_2_min_ago < -2 AL POSTO DI MACD deve essere <-5
                 # 19 gen 2025 3-39 da 3-30
                 # 11 mar 2025 3-49 da 3-39 ( ma100 cresce da 5 ore! - non e' SUBITO !)
-
+                # 27 ott 2025 aggiunte pg
             
             elif (
                 seconds_since_last_trade > 0 and seconds_since_last_trade < 7200
@@ -63919,7 +63933,7 @@ class maddog:
                 action = "sell"
                 
                 # 24 ago 2023 and macd < -5
-          
+                # 27 ott 2025 aggiunte pg
           
             # 2
 
@@ -63939,11 +63953,11 @@ class maddog:
                 and macd < macd_2_min_ago
                 and ma2_differenza_2_min_ago < -3
             ):    
-                sell = "SELL PMS con 3-39 da 0 a 60 min se 100>200 E con dev_sell 0.70 - 1.05 and macd < - INTANTO TE LI PRENDI - r 16750 A2Xx"
+                sell = f"SELL PMS con 3-39 da 0 a 60 min se 100>200 E con dev_sell 0.70 - 1.05 and macd < - INTANTO TE LI PRENDI - r 16750 A2Xx - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
 
                 #  3 feb 2025 3-39 da 3-28 se 100>200
-
+                # 27 ott 2025 aggiunte pg
 
 
             elif (
@@ -63962,7 +63976,7 @@ class maddog:
                 and macd < macd_2_min_ago
                 and ma2_differenza_2_min_ago < -3
             ):    
-                sell = "SELL PMS (0-60 min) con 3-39 se 100<200 E con dev_sell 0.70 - 1.05 and macd < - INTANTO TE LI PRENDI - r 16750 A2Xy"
+                sell = f"SELL PMS (0-60 min) con 3-39 se 100<200 E con dev_sell 0.70 - 1.05 and macd < - INTANTO TE LI PRENDI - r 16750 A2Xy - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
                 
                 # pochi 0.80 - 1.20
@@ -63984,7 +63998,7 @@ class maddog:
                 # 20 nov 2023 and deviation_sell > 0.70 da > 0.75
                 # 11 mar 2025 3-33 da 3-28
                 # 15 ott 2025 3-39 da 3-33
-
+                # 27 ott 2025 aggiunte pg
 
             
 
@@ -64003,14 +64017,14 @@ class maddog:
                 and macd < macd_2_min_ago
                 and macd_differenza_2_min_ago < -0.75
             ):    
-                sell = "SELL PMS ma non troppo (60-120 min) con 3-59 E dev_sell 0.75 - 1.05 e macd < - INTANTO TE LI PRENDI - r 16750 A2 Y1"
+                sell = f"SELL PMS ma non troppo (60-120 min) con 3-59 E dev_sell 0.75 - 1.05 e macd < - INTANTO TE LI PRENDI - r 16750 A2 Y1 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
 
                 #  9 set 2024 aggiunta diff macd < -0.75
                 # 24 mar 2025 3-49 da 3-39 
                 # 14 apr 2025 3-59 da 3-49 se delta_1 < delta_2
                 # 18 ott 2025 3-69 da 3-59
-
+                # 27 ott 2025 aggiunte pg
 
             elif (
                 seconds_since_last_trade > 3601 and seconds_since_last_trade < 7200
@@ -64027,13 +64041,13 @@ class maddog:
                 and macd < macd_2_min_ago
                 and macd_differenza_2_min_ago < -0.75
             ):    
-                sell = "SELL PMS ma non troppo (60-120 min) con 3-39 E dev_sell 0.75 - 1.05 e macd < - INTANTO TE LI PRENDI - r 16750 A2 Y2"
+                sell = f"SELL PMS ma non troppo (60-120 min) con 3-39 E dev_sell 0.75 - 1.05 e macd < - INTANTO TE LI PRENDI - r 16750 A2 Y2 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
 
                 #  9 set 2024 aggiunta diff macd < -0.75
                 # 24 mar 2025 3-49 da 3-39
                 # 14 apr 2025 se delta_1 > delta_2 ok cosi'. sempre per adesso.
-
+                # 27 ott 2025 aggiunte pg
           
             
             elif (
@@ -64054,12 +64068,12 @@ class maddog:
                 and deviation_sell < 1.10
                 
             ):    
-                sell = "SELL PMS >120 min con 300>450 e con 5-59 E con dev_sell 0.75 - 1.10 and macd < - INTANTO TE LI PRENDI - r 16750 B1"
+                sell = f"SELL PMS >120 min con 300>450 e con 5-59 E con dev_sell 0.75 - 1.10 and macd < - INTANTO TE LI PRENDI - r 16750 B1 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
 
                 # 28 apr 2025 se ma300_last > ma450_last lascia correre ! stai tranquillo
                 # 28 apr 2025 se ma300_last > ma450_last dev sell a 5-59 da 3-39
-
+                # 27 ott 2025 aggiunte pg
 
 
             elif (
@@ -64080,7 +64094,7 @@ class maddog:
                 and deviation_sell < 1.10
                 
             ):    
-                sell = "SELL PMS >120 min con 300<450 e con 3-59 E con dev_sell 0.75 - 1.10 and macd < - INTANTO TE LI PRENDI - r 16750 B2"
+                sell = f"SELL PMS >120 min con 300<450 e con 3-59 E con dev_sell 0.75 - 1.10 and macd < - INTANTO TE LI PRENDI - r 16750 B2 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
                 
                 # pochi 0.80 - 1.20
@@ -64106,7 +64120,7 @@ class maddog:
                 # 31 gen 2025  3-39 da 3-28
                 # 28 apr 2025 se anche ma300_last < ma450_last ok cosi'.
                 # 14 mag 2025 3-59 da 3-39 dopo 120 min non e' subito !
-                
+                # 27 ott 2025 aggiunte pg
                 
                 
             # 5 - SELL condizione speciale POCHI MALEDETTI E SUBITO QUANDO SALE FORTE ( cerca di inibirlo ) - dedicated to comparo meo
@@ -64123,11 +64137,14 @@ class maddog:
                 and ma2_last > ma100_last
                 and ma2_last < ma2_2_min_ago
             ):    
-                sell = "SELL CS - PMS QUANDO SALE FORTE 3-28 ( cerca di inibirlo ) con ma200> e con dev_sell > 0.70 - r 16767 a"
+                sell = f"SELL CS - PMS QUANDO SALE FORTE 3-28 ( cerca di inibirlo ) con ma200> e con dev_sell > 0.70 - r 16767 a - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
 
                 #  7 mar 2024 aggiunto and ma450_last > ma450_360_min_ago
                 #  7 mar 2024 3-33 da 3-28 LASCIA CORRERE ! vattene a pescare.
+                # 27 ott 2025 aggiunte pg
+
+
 
             elif (
                 ma3_last < ma28_last
@@ -64142,14 +64159,14 @@ class maddog:
                 and ma2_last > ma100_last
                 and ma2_last < ma2_2_min_ago
             ):    
-                sell = "SELL CS - POCHI MALEDETTI E SUBITO QUANDO SALE FORTE 3-28 ( cerca di inibirlo ) con ma200> e con dev_sell > 0.70 - r 16767 b"
+                sell = f"SELL CS - POCHI MALEDETTI E SUBITO QUANDO SALE FORTE 3-28 ( cerca di inibirlo ) con ma200> e con dev_sell > 0.70 - r 16767 b - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
                     
                 # and ma2_last > ma100_last (altrimenti vende durante il crollo con la ma3-ma9)
                 # incredibile questa and deviation_trend_ma100 < 1.00 - se ma100 sale "forte" da 60 min non deve intervenire sell 3-9
 
                 #  7 mar 2024 aggiunto and ma450_last < ma450_360_min_ago
-
+                # 27 ott 2025 aggiunte pg
                 
                 
             # 6 - SELL condizione speciale POCHI MALEDETTI E SUBITO QUANDO SALE PIANO con ma200 > MA ma100 NON DEVE SALIRE TROPPO ! - dedicated to comparo meo
@@ -64166,13 +64183,13 @@ class maddog:
                 and ma2_last > ma100_last
                 
             ):    
-                sell = "SELL condizione speciale 34 b - POCHI MALEDETTI E SUBITO 3-39 QUANDO SALE PIANO quando ma200 > e con dev_sell > 0.70 and < 0.99 - r 16789"
+                sell = f"SELL condizione speciale 34 b - POCHI MALEDETTI E SUBITO 3-39 QUANDO SALE PIANO quando ma200 > e con dev_sell > 0.70 and < 0.99 - r 16789 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
                     
                 # and ma2_last > ma100_last (altrimenti vende durante il crollo con la ma3-ma9)
                 # incredibile questa and deviation_trend_ma100 < 1.00 - se ma100 sale "forte" da 60 min non deve intervenire sell 3-9
                 # > estate 3-39 da 3-25    
-                
+                # 27 ott 2025 aggiunte pg
                 
             
             # 7 SELL condizione speciale POCHI MALEDETTI E SUBITO con ma200 < - dedicated to comparo meo
@@ -64186,11 +64203,11 @@ class maddog:
                 and ma2_last > ma100_last
                 and ma2_last < ma2_2_min_ago
             ):    
-                sell = "SELL cond. special 35 - POCHI MALEDETTI E SUBITO 3-20 quando ma200 < e con dev_sell > 0.90 and < 1.30 - dedicated to comparo meo - r 16809"
+                sell = f"SELL cond. special 35 - POCHI MALEDETTI E SUBITO 3-20 quando ma200 < e con dev_sell > 0.90 and < 1.30 - dedicated to comparo meo - r 16809 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
                     
                 # and ma2_last > ma100_last (altrimenti vende durante il crollo con la ma3-ma9)
-                
+                # 27 ott 2025 aggiunte pg
                 
                 
                 
@@ -64205,12 +64222,12 @@ class maddog:
                 and ma2_last > ma100_last
                 and ma2_last < ma2_2_min_ago
             ):    
-                sell = "SELL condizione speciale 36 - POCHI MALEDETTI E SUBITO ma non troppo ! 3-18 quando ma200 < e con dev_sell > 1.31 and < 2.50 - r 16828"
+                sell = f"SELL condizione speciale 36 - POCHI MALEDETTI E SUBITO ma non troppo ! 3-18 quando ma200 < e con dev_sell > 1.31 and < 2.50 - r 16828 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
                     
                 # and ma2_last > ma100_last (altrimenti vende durante il crollo con la ma3-ma9)
                 # 14 giu 2022 3-18 da 3-9
-                
+                # 27 ott 2025 aggiunte pg
                 
             
             
