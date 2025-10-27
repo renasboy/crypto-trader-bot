@@ -2454,12 +2454,13 @@ class maddog:
             # BUY 1 con "percentage" 20 -30 - x
             
             if self.session == 1:
-               
+
                 if (  
                     ma3_last > ma11_last
                     
-                    and ma450_last > ma450_360_min_ago
-                    and (ma78_last > ma150_last or delta_50_25_last < delta_50_25_30_min_ago)
+                    and (ma450_last > ma450_360_min_ago or ma78_last > ma150_last)
+
+                    and delta_50_25_last < delta_50_25_30_min_ago
                     
                     and deviation_ma3_sotto_ma100 > -0.10
                     
@@ -2468,14 +2469,42 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
                 ):    
               
-                    buy = f"BUY 1 con ma450_last > ma450_360_min_ago e 78>150 del 18 mag 2025 - r 915 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    buy = f"BUY 1 con ma450_last > ma450_360_min_ago e 78>150 del 18 mag 2025 - r 915 x - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     action = "buy"
                     percentage = 90
 
                     # 18 mag 2025 aggiunta da RCCR e aggiunta anche in buy 5
                     # 25 ott 2025 anticipata ndecchiecella
                     # 25 ott 2025 aggiunte pg
+                    # 27 ott 2025 se delta 50-25 giorno ok cosi
 
+
+
+                elif (  
+                    ma3_last > ma11_last
+                    
+                    and (ma450_last > ma450_360_min_ago or ma78_last > ma150_last)
+
+                    and delta_50_25_last > delta_50_25_30_min_ago
+                    and deviation_ma39 < -0.10
+                    and deviation_ma3_sotto_ma50 < -0.10
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.10
+                    
+                    and deviation_ma3_sotto_ma100 > -0.10
+                    
+                    and ma3_last > ma9_last
+                    
+                    and ma2_last >= ma2_2_min_ago
+                ):    
+              
+                    buy = f"BUY 1 con ma450_last > ma450_360_min_ago e 78>150 del 18 mag 2025 - r 915 y - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    action = "buy"
+                    percentage = 90
+
+                    # 18 mag 2025 aggiunta da RCCR e aggiunta anche in buy 5
+                    # 25 ott 2025 anticipata ndecchiecella
+                    # 25 ott 2025 aggiunte pg
+                    # 27 ott 2025 se delta 50-25 notte aggiungo deviation - non cosi' profonda.
 
 
 
