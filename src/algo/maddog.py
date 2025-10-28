@@ -2786,18 +2786,18 @@ class maddog:
 
 
 
-
                 elif (
-                    ma3_last > ma20_last
-                    and (deviation_ma200_sotto_ma300 > -0.13 or delta_DNA_1 < delta_DNA_2)
-                    and delta_1_50_20 <= delta_2_50_20
+                    ma3_last > ma13_last
 
-                    and deviation_ma5_sotto_ma450 < -0.30
+                    and delta_CV_300_25_last > delta_CV_300_25_45_min_ago
+                    and delta_CM_300_25_last < delta_CM_300_25_2_min_ago 
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.04
+                    and ma8_last >= ma8_2_min_ago
+
+                    and deviation_ma200_sotto_ma300 > -0.13
                     
                     and ma50_last < ma50_2_min_ago
-                    and delta_1 > delta_2
                     and ma100_last < ma100_60_min_ago
-                        
                     and ma100_last < ma100_120_min_ago
                     and ma200_last < ma200_120_min_ago
                     and ma300_last < ma300_120_min_ago
@@ -2805,17 +2805,13 @@ class maddog:
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
 
+                    and deviation_ma5_sotto_ma450 < -0.30
+
+
                     and macd_differenza_2_min_ago > -18.50
                 ):
-                    buy = f"""BUY 1 IMPORTATO DA RCCR e modificato dopo 50000 righe - r 916 A1 x1 Y1
+                    buy = f"BUY 1 CV NOTTE + CM GIORNO IMPORTATO DA RCCR e modificato dopo 50000 righe - r 916 A1 x1 Y1 x - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     
-                    deviation_ma39 {deviation_ma39:.2f} 
-                    deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.2f} 
-                    deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.2f} 
-                    deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.2f} 
-                    deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.2f} 
-                    """
-
                     action = "buy"
                     percentage = 80
 
@@ -2825,7 +2821,49 @@ class maddog:
                     # 25 set 2025 aggiunte parentesi graffe
                     # 25 set 2025 aggiunta and delta_1_50_20 <= delta_2_50_20
                     #  7 ott 2025 e' andata benissimo MA ovviamente non ha preso le parentesi graffe.
+                    # 28 ott 2025 aggiunte pg sulla stessa riga !
 
+
+
+                elif (
+                    ma3_last > ma13_last
+
+                    and delta_CV_300_25_last > delta_CV_300_25_45_min_ago
+
+                    and delta_CM_300_25_last > delta_CM_300_25_2_min_ago
+                    and deviation_ma39 < -0.06
+                    and deviation_ma3_sotto_ma50 < -0.112
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.24
+                    and deviation_ma25_sotto_ma300 < -0.70
+
+                    and deviation_ma200_sotto_ma300 > -0.13
+                    
+                    and ma50_last < ma50_2_min_ago
+
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+
+                    and ma100_last < ma100_60_min_ago
+                    and ma100_last < ma100_120_min_ago
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_120_min_ago
+                    
+                    and deviation_ma5_sotto_ma450 < -0.30
+
+                    and macd_differenza_2_min_ago > -18.50
+                ):
+                    buy = f"BUY 1 CV NOTTE + DEV PROFONDE IMPORTATO DA RCCR e modificato dopo 50000 righe - r 916 A1 x1 Y1 y - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    
+                    action = "buy"
+                    percentage = 80
+
+                    # 16 mag 2025 in questa circostanza 3-10 e 3-50 non hanno profondita' ! vedi doppio delta 250-150
+                    #  6 ago 2025 ok
+                    #  7 AGO 2025 QUESTA E' LA MIGLIORE
+                    # 25 set 2025 aggiunte parentesi graffe
+                    # 25 set 2025 aggiunta and delta_1_50_20 <= delta_2_50_20
+                    #  7 ott 2025 e' andata benissimo MA ovviamente non ha preso le parentesi graffe.
+                    # 28 ott 2025 aggiunte pg sulla stessa riga !
 
 
                 elif (
@@ -22655,39 +22693,24 @@ class maddog:
                     # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
                     
                     
-                    
                 elif (
 
-                    ma3_last > ma20_last
-                    and ma100_last > ma100_300_min_ago
-                    and ma100_last < ma100_120_min_ago
-
-                    and ma300_last > ma300_120_min_ago
-                    and ma78_last < ma150_last
+                    ma3_last > ma13_last
+                    and delta_CV_300_25_last > delta_CV_300_25_45_min_ago
+                    and delta_CM_300_25_last < delta_CM_300_25_2_min_ago 
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.04
+                    and ma8_last >= ma8_2_min_ago
                     
 
-                    and deviation_ma25_sotto_ma300 < -0.35
-                    and deviation_ma50_sotto_ma300 < -0.35
-                    and deviation_ma39 < 0.07
-                    and deviation_ma3_sotto_ma50 < 0.03
-                    and deviation_ma5_sopra_o_sotto_ma100 < 0.01
-                    and deviation_ma5_sotto_ma200 < -0.15
-                    and deviation_ma5_sotto_ma300 < -0.20
-                    and deviation_ma5_sotto_ma450 < -0.25
+                    and (ma100_last > ma100_300_min_ago or ma300_last > ma300_120_min_ago or ma300_last > ma300_301_min_ago)
+                    and (ma100_last < ma100_120_min_ago or ma78_last < ma150_last)
+                    and (ma100_last < ma100_60_min_ago or ma28_last < ma78_last)
 
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
-
-                    and ma300_last > ma300_301_min_ago
-                    and ma100_last < ma100_60_min_ago
-
-                    and ma28_last < ma78_last
-                    
-                    and ma2_last >= ma2_2_min_ago
-                    and macd_differenza_2_min_ago > -1.25
+                    and macd_differenza_2_min_ago > -18.50
                       
                 ):  
                 
-                    buy = "BUY 3 con 300 > 300 301 min ago con ma200 che sale da 60 min MA 28<78 E macd_diff_2_min_ago > -1.25 - r 6121 A"
+                    buy = f"BUY 3 CV NOTTE ma CM GIORNO e con 300 > 300 301 min ago con ma200 che sale da 60 min MA 28<78 E macd_diff_2_min_ago > -1.25 - r 6121 A1 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     action = "buy"
                     percentage = 80
 
@@ -22699,6 +22722,54 @@ class maddog:
                     # 19 gen 2025 anticipata di molto
                     # 28 gen 2025 anticipata ancora ma di una ndecchiecella. ma e' andata bene.
                     # 16 feb 2025 aggiunta osso e cuspide che gia' era presente in forma embrionale
+                    # 28 ott 2025 se cv notte cm giorno and 100 10 min > and ma8>
+                    
+
+                
+                elif (
+                    ma3_last > ma13_last
+
+                    and delta_CV_300_25_last > delta_CV_300_25_45_min_ago
+                    and delta_CM_300_25_last > delta_CM_300_25_2_min_ago
+
+                    and (ma100_last > ma100_300_min_ago or ma300_last > ma300_120_min_ago or ma300_last > ma300_301_min_ago)
+                    and (ma100_last < ma100_120_min_ago or ma78_last < ma150_last)
+                    and (ma100_last < ma100_60_min_ago or ma28_last < ma78_last)
+
+                    
+                    
+                    and deviation_ma39 < -0.06
+                    and deviation_ma3_sotto_ma50 < -0.112
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.24
+                    and deviation_ma25_sotto_ma300 < -0.70
+                    
+                    
+                    and deviation_ma5_sotto_ma200 < -0.15
+                    and deviation_ma5_sotto_ma300 < -0.20
+                    and deviation_ma5_sotto_ma450 < -0.25
+  
+                ):  
+                
+                    buy = f"BUY 3 con CV NOTTE and DEV PFONDE e con 300 > 300 301 min ago con ma200 che sale da 60 min MA 28<78 E macd_diff_2_min_ago > -1.25 - r 6121 A2 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    action = "buy"
+                    percentage = 80
+
+                    # deviation_buy3 = ma4_last/ma30_last
+                    # and deviation > -0.30 perche' se va un po' troppo giu' dal SELL 2 (last_trade_price) DEVE RICOMINCIARE dal BUY 1 !
+                    # 28 set con 300 > 301 min ago anticipa ndecchia
+                    # 23 feb 2023 5>5 2 min ago invece di 10> 10 2 min ago
+                    # 300 sale da 5 ore NON DIMENTICARLO !
+                    # 19 gen 2025 anticipata di molto
+                    # 28 gen 2025 anticipata ancora ma di una ndecchiecella. ma e' andata bene.
+                    # 16 feb 2025 aggiunta osso e cuspide che gia' era presente in forma embrionale
+                    # 28 ott 2025 se cv notte dev profonde
+                    
+
+
+
+
+
+
                     
                 elif (    
                     ma4_last > ma50_last
