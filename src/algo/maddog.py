@@ -3736,12 +3736,16 @@ class maddog:
                     and macd_differenza_2_min_ago > -18.00
                  
                 ):
-                    buy = f"BUY 1 formula MY COMPA + parentesi graffe - r 1043 B1 NUOVA ERA A3 SOFT y1 - deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.2f}"
+                    buy = f"BUY 1 formula MY COMPA + parentesi graffe - r 1043 B1 NUOVA ERA A3 SOFT y1 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     action = "buy"
                     percentage = 80
 
                     #  7 ott 2025 aggiunti i valori che ho ricavato dalle parentesi graffe di una condizione successiva che e' andata bene.
                     #  7 ott 2025 aggiunta parentesi graffa sulla stessa riga
+                    # 28 ott 2025 le pg sulla stessa riga funzionano.
+                    # 28 ott 2025 aggiunte pg
+
+
 
 
                 elif (
@@ -9405,7 +9409,7 @@ class maddog:
                   
                 ):    
         
-                    buy = f"BUY 1 con 100 < 90 min E ma200 < 20 min + CANO STAF - r 1720 B - {deviation_ma39} {deviation_ma3_sotto_ma50} {deviation_ma5_sopra_o_sotto_ma100} {deviation_ma25_sotto_ma300} {deviation_ma100_sopra_o_sotto_ma100_10_min_ago}"
+                    buy = f"BUY 1 con 100 < 90 min E ma200 < 20 min + CANO STAF - r 1720 B - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     
                     action = "buy"
                     percentage = 90
@@ -9418,7 +9422,7 @@ class maddog:
                     # 29 gen 2025 e' andata bene !
                     # 29 gen 2025 sto cercando di risolvere il problema del trend laterale dopo un grande RIBASSO
                     # 30 set 2025 aggiunti valori parentesi graffe sulla stessa righe.
-                
+                    # 28 ott 2025 pg con 3 decimali sempre sulla stessa riga !
                     
                     
                     
@@ -58214,7 +58218,7 @@ class maddog:
                 and macd_differenza_2_min_ago < -0.35
                 
             ):
-                sell = "SELL cond spec 6 GIORNO con ma300 < 5 ore con ma50 <= e dev 3-39 < 0.13 and dev_sell < -0.06 e con ma78 < and macd_differenza_2_min_ago < -0.35 - r 16045 B2 X2"
+                sell = f"SELL cond spec 6 GIORNO con ma300 < 5 ore con ma50 <= e dev 3-39 < 0.13 and dev_sell < -0.06 e con ma78 < and macd_differenza_2_min_ago < -0.35 - r 16045 B2 X2 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
                 
                 # 17 dic 2023 mario se ma20>ma20 2 min ago dev sell a 0.005 da 0.03 vedi 17 di 2023 ore 9:33
@@ -58223,6 +58227,8 @@ class maddog:
                 
                 #  9 gen 2024 and deviation_sell < -0.05 SE ANDAMENTO LATERALE CONSOLIDATO
                 # 12 gen 2024 and deviation_sell < -0.06 da -0.05 SE ANDAMENTO LATERALE CONSOLIDATO
+                # 28 ott 2025 aggiunte pg
+
 
             
             elif (
@@ -58247,10 +58253,12 @@ class maddog:
                 and macd_differenza_2_min_ago < -0.35
                 
             ):
-                sell = "SELL C.S. GIORNO con ma300 < 5 ore con ma50 <= e dev 3-39 < 0.13 and dev_sell < -0.01 e con ma78 < and macd_differenza_2_min_ago < -0.35 - r 16045 B2 X3 x"
+                sell = f"SELL C.S. GIORNO con ma300 < 5 ore con ma50 <= e dev 3-39 < 0.13 and dev_sell < -0.01 e con ma78 < and macd_differenza_2_min_ago < -0.35 - r 16045 B2 X3 x - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
                 
                 # 15 gen 2024 and deviation_sell < -0.03 da -0.01 se ma5_last > ma100_last stai piu' tranquillo
+                # 28 ott 2025 aggiunte pg
+
             
             
             elif (
@@ -60855,7 +60863,7 @@ class maddog:
 
 
             elif (    
-                ma3_last < ma9_last
+                ma3_last < ma11_last
                 and ma8_last > ma8_2_min_ago
 
                 and (ma10_last < ma20_last or ma3_last < ma100_last)
@@ -60880,6 +60888,9 @@ class maddog:
                 # 16 ott 2025 anticipato ndecchiecella (ha fatto -0.50%)
                 # 23 ott 2025 se ma8_last > ma8_2_min_ago vende con 3-9 ha venduto mentre saliva
                 # 23 ott 2025 aggiunte pg
+                # 28 ott 2025 3-11 da 3-9
+
+
 
 
             elif (    
@@ -61559,7 +61570,7 @@ class maddog:
                 # 19 feb 2024 dev sell a -0.03 da -0.02 con ma30_last > ma50_last. 
                 # 28 gen 2025 and deviation_sell a -0.045 da < 0.03
                 #  6 ago 2025 and deviation_sell a -0.015 da -0.045 
-
+                # 28 ott 2025 aggiunte pg
 
             
             elif (
