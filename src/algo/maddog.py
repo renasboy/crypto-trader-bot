@@ -43822,7 +43822,7 @@ class maddog:
                         # 25 ott 2025 10-90 da 10-100
                         # 25 ott 2025 aggiunte pg
                         #  3 nov 2025 grazie alle pg ho potuto aggiunger and deviation_ma39 < -0.06 (vendere una ndecchiecella prima)
-                        #  3 nov 2025 vende con 5-90 da 10-90
+                        #  3 nov 2025 se CV GIORNO vende con 5-90 vende con 10-90
 
 
 
@@ -43854,7 +43854,7 @@ class maddog:
                         # 25 ott 2025 10-90 da 10-100
                         # 25 ott 2025 aggiunte pg
                         #  3 nov 2025 grazie alle pg ho potuto aggiunger and deviation_ma39 < -0.06 (vendere una ndecchiecella prima)
-                        #  3 nov 2025 vende con 5-90 da 10-90
+                        #  3 nov 2025 se CV NOTTE vende con 5-90 da 10-90
                         
 
                     elif (
@@ -48146,16 +48146,17 @@ class maddog:
                         
                         
                         
-                        
                     elif (
-                        ma50_last < ma50_2_min_ago
+                        ma50_last > ma50_2_min_ago
+                        and delta_CM_300_25_last < delta_CM_300_25_2_min_ago 
+
                         and (deviation_ma39 < -0.22 or ma5_last < ma450_last)
                         
                         and deviation_trend_ma200 > -0.12
                         and ma200_last > ma300_last
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 2 (60-90 min) con MOLTA PERDITA TOLLERATA con ma50 < con dev_ma39 < -0.22 or 5<450  - r 12140"
+                        sell = "SELL 2 (60-90 min) con MOLTA PERDITA TOLLERATA con ma50 < con dev_ma39 < -0.22 or 5<450  - r 12140 A"
                         action = "sell"
                         
                         # and ma3_last < ma33_last
@@ -48167,7 +48168,62 @@ class maddog:
                         # > vacanza -0.29 da -0.19
                         # 13 set 2023 dev 39 -0.22 da -0.29
                         #  7 mag 2025 aggiunta or ma5_last < ma450_last
+                        #  3 nov 2025 con 50> e CM GIORNO
 
+                        
+
+                    elif (
+                        ma50_last < ma50_2_min_ago
+
+                        and delta_CM_300_25_last < delta_CM_300_25_2_min_ago 
+                        and deviation_sell > 0.15
+
+                        and ma5_last < ma100_last
+                        
+                        and deviation_trend_ma200 > -0.12
+                        and ma200_last > ma300_last
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 2 (60-90 min) con MOLTA PERDITA TOLLERATA con ma50 < con dev_ma39 < -0.22 or 5<450  - r 12140 B1"
+                        action = "sell"
+                        
+                        # and ma3_last < ma33_last
+                        # and deviation_sell < 0.10
+                        # se non ha forza dopo 1 ora e' inutile continuare a sperare !
+                        # qui non ho messo il crollo perche' dopo 40 min o gia' ha venduto o e' gia' risalita
+                        # cuscino dell' angelo custode
+                        
+                        # > vacanza -0.29 da -0.19
+                        # 13 set 2023 dev 39 -0.22 da -0.29
+                        #  7 mag 2025 aggiunta or ma5_last < ma450_last
+                        #  3 nov 2025 con 50< e CM GIORNO
+
+
+                    elif (
+                        ma50_last < ma50_2_min_ago
+
+                        and delta_CM_300_25_last > delta_CM_300_25_2_min_ago 
+                        and deviation_sell > 0.10
+
+                        and ma5_last < ma100_last
+                        
+                        and deviation_trend_ma200 > -0.12
+                        and ma200_last > ma300_last
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = "SELL 2 (60-90 min) con MOLTA PERDITA TOLLERATA con ma50 < con dev_ma39 < -0.22 or 5<450  - r 12140 B2"
+                        action = "sell"
+                        
+                        # and ma3_last < ma33_last
+                        # and deviation_sell < 0.10
+                        # se non ha forza dopo 1 ora e' inutile continuare a sperare !
+                        # qui non ho messo il crollo perche' dopo 40 min o gia' ha venduto o e' gia' risalita
+                        # cuscino dell' angelo custode
+                        
+                        # > vacanza -0.29 da -0.19
+                        # 13 set 2023 dev 39 -0.22 da -0.29
+                        #  7 mag 2025 aggiunta or ma5_last < ma450_last
+                        #  3 nov 2025 con 50< e CM NOTTE
                         
                     
                     elif (
