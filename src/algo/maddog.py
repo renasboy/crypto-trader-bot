@@ -49004,6 +49004,8 @@ class maddog:
                     ):
                         sell = "SELL 2 110-240 min con ma50 < MA ma100 < con deviation_ma39 <-0.22 and 150 > 300 - r 12462 A"
                         action = "sell"
+
+
                         
                         
                     elif (  
@@ -49011,17 +49013,20 @@ class maddog:
                         and ma150_last < ma300_last
                         and deviation_trend_ma100 < 0.10
                         
-                        and deviation_ma39 < 0.05
+                        and deviation_ma39 < 0.04
                         and ma2_last < ma2_2_min_ago
                         and macd < macd_2_min_ago
                     ):
-                        sell = "SELL 2 110-240 min con ma50 < MA ma100 < con deviation_ma39 <-0.215 and 150 < 300 and deviation_sell < -0.01 - r 12462 B"
+                        sell = f"SELL 2 110-240 min con ma50 < MA ma100 < con deviation_ma39 < 0.05 and 150 < 300 - r 12462 B - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                         action = "sell"
                         
                         # 25 gen 2023 dev_39 0.215 da 0.22
                         # 18 dic 2023 aggiunta and deviation_sell < -0.01
                         # 18 dic 2023 and deviation_ma39 a 0.05 da -0.21 ( ma39 va da sola soltanto con grande rialzo cioe' con ma100 molto sopra ma300 )
                         # 18 dic 2023 aggiunta and macd < macd_2_min_ago
+                        #  3 nov 2025 aggiunte pg
+                        #  3 nov 2025 and deviation_ma39 a 0.04 da 0.05 ( ha venduto un po' in anticipo. ma va bene cosi'.)
+
                 
                     elif (    
                         ma50_last < ma50_2_min_ago 
