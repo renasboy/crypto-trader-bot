@@ -3138,31 +3138,65 @@ class maddog:
                     # 21 ott 2025 se cv giorno ok cosi' 
 
 
-
                 elif (  
                     ma3_last > ma8_last
 
+                    and (ma200_last > ma200_120_min_ago or ma300_last > ma300_120_min_ago)
+                    and (delta_1 < delta_2 or delta_DNA_1 < delta_DNA_2)
+
                     and delta_CV_300_25_last > delta_CV_300_25_45_min_ago
-                    and delta_CM_300_25_last < delta_CM_300_25_2_min_ago 
-                    
+                    and (delta_CM_300_25_last < delta_CM_300_25_2_min_ago)
+
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.04
                     and ma8_last >= ma8_2_min_ago
 
-                    and (ma200_last > ma200_120_min_ago or ma300_last > ma300_120_min_ago)
-                    
-                    and deviation_ma50_sotto_ma100 > -0.17
-                    and deviation_ma20_sotto_ma50 > -0.12
-                    and (delta_1 < delta_2 or delta_DNA_1 < delta_DNA_2)
+                    and deviation_ma20_sotto_ma50 > -0.15
+                    and deviation_ma50_sotto_ma100 > -0.20
                     
                     and macd_differenza_2_min_ago > -28.50
                 ):    
               
-                    buy = f"BUY 1 che mancava > 50 000 righe - r 918 A2 x - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    buy = f"BUY 1 che mancava > 50 000 righe - r 918 A2 x1 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     
                     action = "buy"
                     percentage = 90
 
                     # 21 ott 2025 se cv notte allora interviene CM and ma8_last >= ma8_2_min_ago
+                    #  3 nov 2025 probabilmente cm ha fatto arrivare in ritardo.
+                    #  3 nov 2025 mario ascolta se 200> 120 min o 300 > 120 min MA cv NOTTE ho aggiunto la prossima condizione per anticipare. CM RESTA !
+
+
+
+
+                elif (  
+                    ma3_last > ma8_last
+
+                    and (ma200_last > ma200_120_min_ago or ma300_last > ma300_120_min_ago)
+                    and (delta_1 < delta_2 or delta_DNA_1 < delta_DNA_2)
+
+                    and delta_CV_300_25_last > delta_CV_300_25_45_min_ago
+                    and deviation_ma39 -0.01
+                    and deviation_ma3_sotto_ma50 -0.04
+                    
+
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.04
+                    and ma8_last >= ma8_2_min_ago
+
+                    and deviation_ma20_sotto_ma50 > -0.15
+                    and deviation_ma50_sotto_ma100 > -0.20
+                    
+                    and macd_differenza_2_min_ago > -28.50
+                ):    
+              
+                    buy = f"BUY 1 che mancava > 50 000 righe - r 918 A2 x2 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    
+                    action = "buy"
+                    percentage = 90
+
+                    # 21 ott 2025 se cv notte allora interviene CM and ma8_last >= ma8_2_min_ago
+                    #  3 nov 2025 probabilmente cm ha fatto arrivare in ritardo.
+                    #  3 nov 2025 mario ascolta se 200> 120 min o 300 > 120 min e cv NOTTE aggiungi and deviation_ma39 -0.01
+                    #  3 nov 2025 mario ascolta se 200> 120 min o 300 > 120 min e cv NOTTE aggiungi deviation_ma3_sotto_ma50 -0.05
 
 
 
@@ -29001,36 +29035,33 @@ class maddog:
 
 
                 elif (
-                    ma3_last > ma30_last
-                    
-                    and ma100_last > ma100_10_min_ago
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
-                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
-                    
+                    ma3_last > ma13_last
+
                     and ma50_last < ma59_last
+                    and deviation_ma39 < -0.10
+                    and deviation_ma3_sotto_ma50 < -0.11
+                    
+                    
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > 0.01
 
-                    and ma250_last > ma300_last
-                    and ma300_last > ma450_last
-                    and ma300_last > ma300_120_min_ago
 
+                    and (ma250_last > ma300_last or ma300_last > ma450_last or ma300_last > ma300_120_min_ago)
+                    
                     and deviation_ma100_sopra_ma300 < 0.30
-                    and deviation_ma100_sopra_ma300 > -0.30
+                    and deviation_ma100_sopra_ma300 > -0.50
 
-                    and deviation_ma3_sopra_ma10 > 0.03
-                    
-                    and deviation > -0.30
-                    
-                    and ma2_last >= ma2_2_min_ago
-                    and ma2_differenza_2_min_ago > 8
-                    and macd >= macd_2_min_ago
-                    and macd > -11
-                    and macd_differenza_2_min_ago > 0.25
+                    and macd_differenza_2_min_ago > -18.50
                     
                 ):    
-                    buy = "BUY 4B CON 50<59 MA 250>300 e con 3-30 e 300> e ma2_diff_2_min_ago > 8 - r 6737 B NUOVA ERA A3 SOFT"
+                    buy = f"BUY 4 CON 50<59 MA 250>300 e con 3-30 e 300> e ma2_diff_2_min_ago > 8 - r 6737 B NUOVA ERA A3 SOFT - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     action = "buy"
                     percentage = 70
 
+                    #  3 nov 2025 aggiunte pg
+                    #  3 nov 2025 anticipata ndecchiecella
+                    #  3 nov 2025 se ma50_last < ma59_last aggiungo and deviation_ma39 < -0.10
+                    #  3 nov 2025 se ma50_last < ma59_last aggiungo and deviation_ma3_sotto_ma50 < -0.11
 
 
                 elif (
