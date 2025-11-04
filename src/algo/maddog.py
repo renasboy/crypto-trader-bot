@@ -24847,24 +24847,28 @@ class maddog:
                     # 11 apr 2025 correzione or e aggiunta f
 
 
+
+
                 elif (
                     ma3_last > ma13_last
 
-                    and ma5_last < ma39_last
-                    and deviation_ma3_sotto_ma50 < -0.22
+                    and ma20_last > ma50_last
+                    and deviation_ma39 < -0.01
+                    and deviation_ma3_sotto_ma50 < -0.01
+                    
 
                     and ma450_last < ma450_720_min_ago
 
-                    and delta_1 < delta_2
-                    and ma100_last > ma200_last
+                     
+                    and (ma100_last > ma200_last or delta_1 < delta_2)
                     
                     and ma5_last > ma5_2_min_ago
                     
                     and ma3_last > ma7_last
-                    and macd_differenza_2_min_ago > -2.50
+                    and macd_differenza_2_min_ago > -12.50
                    
                 ):
-                    buy = "BUY 3 con ma450_last < ma450_720_min_ago MA con ma200> e GIORNO + distanza al ribasso - r 6447 A2y"
+                    buy = f"BUY 3 con 20>50 e con ma450_last < ma450_720_min_ago MA 100>200 and GIORNO + distanza al ribasso - r 6447 A2 y1 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     action = "buy"
                     percentage = 90
                     
@@ -24876,6 +24880,45 @@ class maddog:
 
                     # 29 gen 2025 sto cercando di risolvere il problema del trend laterale dopo un grande RIBASSO
                     # 20 mar 2025 se 5<39 allora compra con distanza al ribasso
+                    #  4 nov 2025 aggiunte pg
+                    #  4 nov 2025 aggiunte dev da un seguente sell
+                    #  4 nov 2025 se 20>50 ok cosi' (per adesso.)
+
+
+                elif (
+                    ma3_last > ma13_last
+
+                    and ma20_last < ma50_last
+                    and deviation_ma39 < -0.17 
+                    and deviation_ma3_sotto_ma50 < -0.23
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.25
+
+                    and ma450_last < ma450_720_min_ago
+
+                     
+                    and (ma100_last > ma200_last or delta_1 < delta_2)
+                    
+                    and ma5_last > ma5_2_min_ago
+                    
+                    and ma3_last > ma7_last
+                    and macd_differenza_2_min_ago > -12.50
+                   
+                ):
+                    buy = f"BUY 3 con 20<50 e ma450_last < ma450_720_min_ago MA 100>200 and GIORNO + distanza al ribasso - r 6447 A2 y2 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    action = "buy"
+                    percentage = 90
+                    
+                    # compare prega per me !
+                    # se ma200< MA 100 e' andata sopra 200 ! si torna alle origini ! 8-50 ! (con ma2 > ma2 2 min ago)
+                    # deviation_buy2 = ma8_last / ma50_last
+                    # 20 set 2024 questa condizione si deve attivare SOLO SE and ma200_last > ma200_60_min_ago
+                    # 20 set 2024 per evitare di cancellarla. e vafanculo.
+
+                    # 29 gen 2025 sto cercando di risolvere il problema del trend laterale dopo un grande RIBASSO
+                    # 20 mar 2025 se 5<39 allora compra con distanza al ribasso
+                    #  4 nov 2025 aggiunte pg
+                    #  4 nov 2025 aggiunte dev da un seguente sell
+                    #  4 nov 2025 se 20<50 ritracciamento quindi dev piu' profonde
 
 
 
@@ -61611,22 +61654,19 @@ class maddog:
 
 
             elif (    
-                ma50_last < ma50_2_min_ago
+                ma3_last < ma20_last
+                and (ma50_last < ma50_2_min_ago or ma20_last < ma50_last)
                 and ma450_last < ma450_360_min_ago
                 and ma100_last < ma100_60_min_ago
 
                 and deviation_ma50_sopra_o_sotto_ma300 > -0.70
                 and deviation_ma5_sopra_o_sotto_ma100 < -0.10
-                and ma20_last <= ma20_2_min_ago
+                and (delta_CM_300_25_last > delta_CM_300_25_2_min_ago or ma20_last <= ma20_2_min_ago)
                 
                 and deviation_ma39 < 0.12
                 and deviation_sell < -0.016
                 
                 and deviation_ma5_sotto_ma450 < -0.10
-                
-                and ma20_last < ma50_last
-                
-                and ma2_last < ma2_2_min_ago 
                 
                 and macd < 40
                 and macd_differenza_2_min_ago < -0.30
@@ -61646,7 +61686,7 @@ class maddog:
                 #  5 nov 2024 se deviation_ma50_sopra_o_sotto_ma300 > -0.70
                 # 10 apr 2025 modificata
                 # 21 ott 2025 aggiunte pg
-
+                #  4 nov 2025 anticipato ndecchiecella mettendo or ma20_last < ma50_last
             
 
 
