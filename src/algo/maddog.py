@@ -3244,6 +3244,35 @@ class maddog:
 
 
                 
+
+                elif (
+                    ma3_last > ma28_last
+                    and ma39_last < ma100_last
+                    and ma10_last < ma20_last
+                    and deviation_ma5_sotto_ma300 > -0.57
+                    
+                    and ma100_last < ma100_180_min_ago
+                    and ma200_last < ma200_180_min_ago
+                    and ma300_last < ma300_180_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and ma2_last > ma5_last
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    
+                    and macd > -100
+                    and macd_differenza_2_min_ago > -18.50
+
+                ):
+
+                    buy = f"BUY 1 del 4 nov 2025 ! da rccr + pg - r 917 - deviation_ma39 {deviation_ma39:.2f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    action = "buy"
+                    percentage = 80
+                    
+
+
                 elif (  
                     ma3_last > ma8_last
                     and delta_CV_300_25_last < delta_CV_300_25_45_min_ago
@@ -15498,20 +15527,18 @@ class maddog:
 
        
                 elif (    
-                    ma3_last > ma13_last
+                    ma3_last > ma11_last
+
+                    and (ma450_last < ma450_180_min_ago or ma450_last < ma450_480_min_ago)
+                    and (ma100_last < ma100_10_min_ago or ma100_last < ma125_last)
+                    and deviation_ma5_sopra_o_sotto_ma100 -0.30
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.05
+
 
                     and delta_150_100 <= delta_150_100_60_min
 
-                    and ma100_last < ma100_10_min_ago
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.10
-                    
-                    
-                    and ma450_last < ma450_180_min_ago
-                    and ma450_last < ma450_480_min_ago
-                    and ma100_last < ma125_last
-                    
                     and deviation_ma5_sopra_o_sotto_ma100 > -0.50
-                    and deviation_ma300_sopra_ma450 > -0.30
+                    and deviation_ma300_sopra_ma450 > -0.50
                     
                     and deviation_ma100_sopra_ma300 < 0.20
                     
@@ -15528,6 +15555,8 @@ class maddog:
                     # 15 ott 2025 aggiunte and delta_150_100 <= delta_150_100_60_min
                     #  2 nov 2025 ma3_last > ma13_last 
                     #  2 nov 2025 ok !
+                    #  4 nov 2025 se and (ma100_last < ma100_10_min_ago or ma100_last < ma125_last) siamo in presenza di un RITRACCAIMENTO !
+                    #  4 nov 2025 ho aggiunto and deviation_ma5_sopra_o_sotto_ma100 -0.30
 
 
 
@@ -33792,6 +33821,35 @@ class maddog:
 
                 
                 elif (
+                    ma3_last > ma28_last
+                    and ma39_last < ma100_last
+                    and ma10_last < ma20_last
+                    and deviation_ma5_sotto_ma300 > -0.57
+                    
+                    and ma100_last < ma100_180_min_ago
+                    and ma200_last < ma200_180_min_ago
+                    and ma300_last < ma300_180_min_ago
+                    
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+                    
+                    and ma2_last > ma5_last
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    
+                    and macd > -100
+                    and macd_differenza_2_min_ago > -18.50
+
+                ):
+
+                    buy = f"BUY 5 del 4 nov 2025 ! da rccr + pg - r 7160 - deviation_ma39 {deviation_ma39:.2f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    action = "buy"
+                    percentage = 80
+
+
+
+
+                elif (
                     ma8_last > ma8_2_min_ago
 
                     and ma100_last < ma100_30_min_ago
@@ -33828,6 +33886,9 @@ class maddog:
                     #  9 ott 2025 ho messo :.3f nella SOLO nella seconda parentesi graffa per vedere se funziona.
                     # 15 ott 2025 e' andata benissimo
                     # 15 ott 2025 madonna compa ! funziona :.2f e :.3f ! grazie compa !
+
+
+
 
 
                 elif (
@@ -59022,13 +59083,13 @@ class maddog:
                 and macd_differenza_2_min_ago < -0.35
                 and deviation_ma2_sopra_o_sotto_ma5 < -0.064
             ):
-                sell = "SELL C.S. GIORNO-NOTTE con ma300 < 5 ore e 30>50 e ma50 <= e dev 3-39 < 0.13 e dev_sell < -0.01 e ma78 < - r 16045 B2 Y1 x2"
+                sell = f"SELL C.S. GIORNO-NOTTE con ma300 < 5 ore e 30>50 e ma50 <= e dev 3-39 < 0.13 e dev_sell < -0.01 e ma78 < - r 16045 B2 Y1 x2 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
                 
                 # 23 dic 2023 dev_sell < 0.01 se ma20 cresce da 10 min
                 # 18 gen 2024 dev_sell < a -0.01 da 0.01 (ma30 e' andata sopra ma50 sembra una chiara inversione di tendenza !)
                 # 18 gen 2024 ho aggiunto and deviation_ma2_sopra_o_sotto_ma5 < -0.064 MA SOLO QUI
-
+                #  4 nov 2025 aggiunte pg
 
             
             elif (
