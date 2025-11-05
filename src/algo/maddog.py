@@ -30375,13 +30375,13 @@ class maddog:
                     and macd_differenza_2_min_ago > -18.50
                     
                 ):
-                    buy = "BUY 4 con delta DNA 1 < DNA 2 - GIORNO - r 6859 B1x NUOVA ERA A3 SOFT"
+                    buy = f"BUY 4 con delta DNA 1 < DNA 2 - GIORNO - r 6859 B1x NUOVA ERA A3 SOFT - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     action = "buy"
                     percentage = 70
 
                     # 15 set 2024 aggiunto and deviation_ma39 > 0.10 MA forse la condizione e' da cancellare
                     # 26 mag 2025 modificata per non cancellare. mi dispiacerebbe.
-
+                    #  5 nov 2025 aggiunte pg 
 
 
 
@@ -42114,13 +42114,13 @@ class maddog:
                         and deviation_ma25 < -0.19
                         and ma200_last > ma200_60_min_ago
                     ):
-                        sell = "SELL 1 (50-90 min) con ma50 > and deviation_ma25 < -0.20 - r 9500"
+                        sell = f"SELL 1 (50-90 min) con ma50 > and deviation_ma25 < -0.20 - r 9500 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                         action = "sell"
 
                         # 25 nov 2023 and deviation_ma100_sopra_ma300 > 0.30
                         # 25 nov 2023 and deviation_ma25 < -0.19 da -0.20
                         # 31 mar 2025 aggiunta questa nuova condizione
-
+                        #  5 nov 2025 aggiunte pg
 
 
 
