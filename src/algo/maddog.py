@@ -978,6 +978,11 @@ class maddog:
 
 
 
+        # formula DEVIATION_ma150_sopra_o_sotto_ma250 !
+        
+        deviation_ma150_sopra_o_sotto_ma250 = (ma150_last / ma250_last - 1) * 100 if ma250_last else 0
+        self.algo_helper.info("deviation_ma150_sopra_o_sotto_ma250: {}".format(deviation_ma150_sopra_o_sotto_ma250))
+
 
         # formula DEVIATION_ma78_sopra_o_sotto_ma200 !
         
@@ -2484,7 +2489,6 @@ class maddog:
 
 
 
-
                 elif (  
                     ma3_last > ma11_last
 
@@ -2506,12 +2510,27 @@ class maddog:
                     action = "buy"
                     percentage = 90
 
-                    # 18 mag 2025 aggiunta da RCCR e aggiunta anche in buy 5
-                    # 25 ott 2025 anticipata ndecchiecella
-                    # 25 ott 2025 aggiunte pg
-                    # 27 ott 2025 se delta 50-25 giorno ok cosi
-                    #  5 nov 2025 se ma3 < 4 min aggiungo and deviation_ma39 < -0.10
-                    #  5 nov 2025 se ma3 < 4 min aggiungo and deviation_ma3_sotto_ma50 < -0.12
+
+
+
+                elif (  
+                    ma3_last > ma11_last
+
+                    and (ma100_last < ma100_60_min_ago or ma100_last < ma100_120_min_ago)
+
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.01
+
+                    and deviation_ma150_sopra_o_sotto_ma250 > -0.03
+
+                    and ma3_last > ma9_last
+                   
+                ):    
+              
+                    buy = f"BUY 1 del 5 nov 2025 ! - r 915 x3 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    action = "buy"
+                    percentage = 90
+
+                    #  5 nov 2025 aggiunto questa condizione che mancava !
                     
 
 
