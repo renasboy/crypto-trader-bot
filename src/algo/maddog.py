@@ -9,8 +9,10 @@
 '''
 
           deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}          
-
-
+          
+          
+          # and delta_450_300 < delta_450_300_60_min
+          # delta_450_300 > -0.50
 
           I M P O R T A N T E !
 
@@ -97,7 +99,7 @@ durante il ribasso - CV notte ! - vede nero !
 1 - MC GIORNO con 3-39 < -0.10 e 3-50 < -0.30 basse perche' e' gia' risalito
 2 - PRENDO IL COLTELLO CON IL PIEDE - OSSO - 25-300 < -1.50 E 3-10 E 3-50 E 3-100 PESANTI ! VEDI VALORI DELLE DEVIATION CON PARENTESI GRAFFE
 3 - INTERVIENE DNA ! DOPPIO DELTA 250-150 GIORNO + DEV 150-250 > -0.62 STA RISALENDO - CM puo' essere giorno o notte. DNA INTERVIENE !
-4 - INTERVIENE MB - l' ultimo - ALLA FINE ! quando il ribasso e' lunghissimo con DOPPIO DELTA 450 - 300 GIORNO
+4 - INTERVIENE MB - l' ultimo - ALLA FINE ! quando il ribasso e' lunghissimo con DOPPIO DELTA 450 - 300 GIORNO ............and delta_450_300 < delta_450_300_60_min
 
 
 
@@ -4432,7 +4434,7 @@ class maddog:
                     
                     and macd_differenza_2_min_ago > -2.50
                 ):
-                    buy = "BUY 1 - NOTTE - migliore con distanza 5-300 e distanza 5-100 con 3-16 E dev TRIADE e diff macd - r 1043 B1x1 x"
+                    buy = f"BUY 1 - NOTTE - migliore con distanza 5-300 e distanza 5-100 con 3-16 E dev TRIADE e diff macd - r 1043 B1x1 x - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     action = "buy"
                     percentage = 70
 
@@ -4441,7 +4443,7 @@ class maddog:
                     #  7 feb 2025 tolta and ma2_last >= ma2_2_min_ago
                     #  7 feb 2025 vedo che comincia ad andare bene and deviation_ma5_sopra_o_sotto_ma100 > -0.60 da > -0.50
                     #  3 mar 2025 aggiunta and ma450_last > ma450_480_min_ago
-
+                    #  7 nov 2025 aggiunte pg
 
 
                 elif (    
@@ -4484,7 +4486,7 @@ class maddog:
                     
                     and macd_differenza_2_min_ago > -2.50
                 ):
-                    buy = "BUY 1 CONTINUA A SCENDERE DNA - r 1043 B1x1 y"
+                    buy = f"BUY 1 CONTINUA A SCENDERE DNA - r 1043 B1x1 y - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     action = "buy"
                     percentage = 70
 
@@ -4493,6 +4495,47 @@ class maddog:
                     #  7 feb 2025 tolta and ma2_last >= ma2_2_min_ago
                     #  7 feb 2025 vedo che comincia ad andare bene and deviation_ma5_sopra_o_sotto_ma100 > -0.60 da > -0.50
                     #  3 mar 2025 aggiunta CONTINUA A SCENDERE DNA
+                    #  7 nov 2025 aggiunte pg
+
+
+                # BUY 1 migliore che considera distanza 5-300
+
+                elif (    
+                    ma3_last > ma16_last
+
+                    and delta_450_300 < delta_450_300_60_min
+                    and delta_450_300 > -0.50
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.10
+
+
+                    and ma450_last < ma450_360_min_ago
+                    and (ma300_last < ma300_60_min_ago or ma200_last < ma200_60_min_ago)
+                    
+                    
+                    and deviation_ma5_sopra_ma200 < -0.15
+                    and deviation_ma5_sotto_ma300 < -0.20
+                    and deviation_ma5_sotto_ma450 < -0.30
+                    
+                    and deviation_ma50_sopra_o_sotto_ma100 < -0.01
+                    and deviation_ma100_sopra_ma300 < -0.10
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    
+                    and macd > -100
+                    and macd_differenza_2_min_ago > -18.50
+                ):
+                    buy = f"BUY 1 DEL 7 NOV 2025 CON MB GIORNO - cazzo e' necessaria ! - r 1043 B1x1 Z - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    action = "buy"
+                    percentage = 70
+
+                    # 24 feb 2024  3-16 da 3-18
+                    
+                    #  7 NOV 2025 HO RIMESSO QUESTA presa da rccr PERCHE' sul maddog NON SI E' ATTIVATO proprio NULLA ! dev 300-450 giorno ! e < -0.50
+                    #  7 nov 2025 interviene MB GIORNO (l' ultimo !) + 300 non distante da 450
+                    #  7 nov 2025 NON METTERE 3-39 3 3-50 al massimo 5-100 < -0.10
+                    #  7 nov 2025 aggiunte pg
+                    
+
 
 
                 elif (
