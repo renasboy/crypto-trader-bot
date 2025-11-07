@@ -4532,7 +4532,7 @@ class maddog:
                     
                     #  7 NOV 2025 HO RIMESSO QUESTA presa da rccr PERCHE' sul maddog NON SI E' ATTIVATO proprio NULLA ! dev 300-450 giorno ! e < -0.50
                     #  7 nov 2025 interviene MB GIORNO (l' ultimo !) + 300 non distante da 450
-                    #  7 nov 2025 NON METTERE 3-39 3 3-50 al massimo 5-100 < -0.10
+                    #  7 nov 2025 IN QUESTA CONDIZIONE NON METTERE 3-39 3 3-50 al massimo 5-100 < -0.10
                     #  7 nov 2025 aggiunte pg
                     
 
@@ -21565,7 +21565,45 @@ class maddog:
                     action = "sell"
 
               
+                elif (    
+                    ma3_last > ma16_last
+
+                    and delta_450_300 < delta_450_300_60_min
+                    and delta_450_300 > -0.50
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.10
+
+
+                    and ma450_last < ma450_360_min_ago
+                    and (ma300_last < ma300_60_min_ago or ma200_last < ma200_60_min_ago)
                     
+                    
+                    and deviation_ma5_sopra_ma200 < -0.15
+                    and deviation_ma5_sotto_ma300 < -0.20
+                    and deviation_ma5_sotto_ma450 < -0.30
+                    
+                    and deviation_ma50_sopra_o_sotto_ma100 < -0.01
+                    and deviation_ma100_sopra_ma300 < -0.10
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    
+                    and macd > -100
+                    and macd_differenza_2_min_ago > -18.50
+                ):
+                    buy = f"BUY 2 DEL 7 NOV 2025 CON MB GIORNO - cazzo e' necessaria ! - r 5990 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    action = "buy"
+                    percentage = 70
+
+                    # 24 feb 2024  3-16 da 3-18
+                    
+                    #  7 NOV 2025 HO RIMESSO QUESTA presa da rccr PERCHE' sul maddog NON SI E' ATTIVATO proprio NULLA ! dev 300-450 giorno ! e < -0.50
+                    #  7 nov 2025 interviene MB GIORNO (l' ultimo !) + 300 non distante da 450
+                    #  7 nov 2025 IN QUESTA CONDIZIONE NON METTERE 3-39 3 3-50 al massimo 5-100 < -0.10
+                    #  7 nov 2025 aggiunte pg
+                    
+                    
+
+
+
                 elif (     
                     ma3_last > ma18_last
                     and ma39_last > ma39_15_min_ago
@@ -23674,7 +23712,43 @@ class maddog:
                     
                     
                 
-                
+                elif (    
+                    ma3_last > ma16_last
+
+                    and delta_450_300 < delta_450_300_60_min
+                    and delta_450_300 > -0.50
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.10
+
+
+                    and ma450_last < ma450_360_min_ago
+                    and (ma300_last < ma300_60_min_ago or ma200_last < ma200_60_min_ago)
+                    
+                    
+                    and deviation_ma5_sopra_ma200 < -0.15
+                    and deviation_ma5_sotto_ma300 < -0.20
+                    and deviation_ma5_sotto_ma450 < -0.30
+                    
+                    and deviation_ma50_sopra_o_sotto_ma100 < -0.01
+                    and deviation_ma100_sopra_ma300 < -0.10
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    
+                    and macd > -100
+                    and macd_differenza_2_min_ago > -18.50
+                ):
+                    buy = f"BUY 3 DEL 7 NOV 2025 CON MB GIORNO - cazzo e' necessaria ! - r 6170 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    action = "buy"
+                    percentage = 70
+
+                    # 24 feb 2024  3-16 da 3-18
+                    
+                    #  7 NOV 2025 HO RIMESSO QUESTA presa da rccr PERCHE' sul maddog NON SI E' ATTIVATO proprio NULLA ! dev 300-450 giorno ! e < -0.50
+                    #  7 nov 2025 interviene MB GIORNO (l' ultimo !) + 300 non distante da 450
+                    #  7 nov 2025 IN QUESTA CONDIZIONE NON METTERE 3-39 3 3-50 al massimo 5-100 < -0.10
+                    #  7 nov 2025 aggiunte pg
+
+
+
                 # BUY 3 nuovo TREND LATERALE !
                 
                 elif (
@@ -23698,7 +23772,7 @@ class maddog:
                     percentage = 80
                     
                     # SE ma100 E' cosi' VICINA A ma200 E ma300 vuo dire che non c'e' un grande rialzo in atto ma un TREND LATERALE !
-                # BUY 3 nuovo TREND LATERALE !
+                    # BUY 3 nuovo TREND LATERALE !
                 
                 
                 
@@ -30976,6 +31050,42 @@ class maddog:
                     # 17 AGO 2025 IMPORTANTE ! 3-10 <-0.10 and 3-50 < -0.30 ! SONO STATI DIMINUITI PERCHE' SE 25-300 CM GIORNO questi sono gia' scattati al rialzo.
 
 
+                elif (    
+                    ma3_last > ma16_last
+
+                    and delta_450_300 < delta_450_300_60_min
+                    and delta_450_300 > -0.50
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.10
+
+
+                    and ma450_last < ma450_360_min_ago
+                    and (ma300_last < ma300_60_min_ago or ma200_last < ma200_60_min_ago)
+                    
+                    
+                    and deviation_ma5_sopra_ma200 < -0.15
+                    and deviation_ma5_sotto_ma300 < -0.20
+                    and deviation_ma5_sotto_ma450 < -0.30
+                    
+                    and deviation_ma50_sopra_o_sotto_ma100 < -0.01
+                    and deviation_ma100_sopra_ma300 < -0.10
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    
+                    and macd > -100
+                    and macd_differenza_2_min_ago > -18.50
+                ):
+                    buy = f"BUY 4 DEL 7 NOV 2025 CON MB GIORNO - cazzo e' necessaria ! - r 6890 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    action = "buy"
+                    percentage = 70
+
+                    # 24 feb 2024  3-16 da 3-18
+                    
+                    #  7 NOV 2025 HO RIMESSO QUESTA presa da rccr PERCHE' sul maddog NON SI E' ATTIVATO proprio NULLA ! dev 300-450 giorno ! e < -0.50
+                    #  7 nov 2025 interviene MB GIORNO (l' ultimo !) + 300 non distante da 450
+                    #  7 nov 2025 IN QUESTA CONDIZIONE NON METTERE 3-39 3 3-50 al massimo 5-100 < -0.10
+                    #  7 nov 2025 aggiunte pg
+
+
 
                 # 16 apr 2025 nuova condizione che mancava e che ci deve essere
 
@@ -33401,6 +33511,9 @@ class maddog:
                     action = "buy"
                     percentage = 70
 
+
+
+
               
                 elif (    
                     ma3_last > ma20_last
@@ -34041,6 +34154,43 @@ class maddog:
                     percentage = 90
 
                     #  10 ago 2025 importata da ro cano che ritorna perche' e' andata benissimo. mentre maddog non aveva comprato proprio.
+
+
+
+                elif (    
+                    ma3_last > ma16_last
+
+                    and delta_450_300 < delta_450_300_60_min
+                    and delta_450_300 > -0.50
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.10
+
+
+                    and ma450_last < ma450_360_min_ago
+                    and (ma300_last < ma300_60_min_ago or ma200_last < ma200_60_min_ago)
+                    
+                    
+                    and deviation_ma5_sopra_ma200 < -0.15
+                    and deviation_ma5_sotto_ma300 < -0.20
+                    and deviation_ma5_sotto_ma450 < -0.30
+                    
+                    and deviation_ma50_sopra_o_sotto_ma100 < -0.01
+                    and deviation_ma100_sopra_ma300 < -0.10
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    
+                    and macd > -100
+                    and macd_differenza_2_min_ago > -18.50
+                ):
+                    buy = f"BUY 5 DEL 7 NOV 2025 CON MB GIORNO - cazzo e' necessaria ! - r 7148 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    action = "buy"
+                    percentage = 70
+
+                    # 24 feb 2024  3-16 da 3-18
+                    
+                    #  7 NOV 2025 HO RIMESSO QUESTA presa da rccr PERCHE' sul maddog NON SI E' ATTIVATO proprio NULLA ! dev 300-450 giorno ! e < -0.50
+                    #  7 nov 2025 interviene MB GIORNO (l' ultimo !) + 300 non distante da 450
+                    #  7 nov 2025 IN QUESTA CONDIZIONE NON METTERE 3-39 3 3-50 al massimo 5-100 < -0.10
+                    #  7 nov 2025 aggiunte pg
 
 
 
