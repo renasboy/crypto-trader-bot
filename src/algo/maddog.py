@@ -27436,24 +27436,26 @@ class maddog:
 
 
                 elif (    
-                    ma3_last > ma11_last
+                    ma3_last > ma10_last
 
                     and deviation_ma39 < -0.33
                     and deviation_ma3_sotto_ma50 < -0.44
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.82
                     and deviation_ma25_sotto_ma300 < -1.48
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.186
+                    
 
                     and ma100_last < ma200_last
                     and ma100_last < ma300_last
                 ):
-                    buy = "BUY 3 > grande ribasso 29 mag 2025 aggiunta da un sell con parentesi graffe - grazie compa ! - r 6573"
+                    buy = f"BUY 3 > grande ribasso 29 mag 2025 aggiunta da un sell con parentesi graffe - grazie compa ! - r 6573 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     action = "buy"
                     percentage = 90
 
                     # 27 giu 2025 deviation_ma100_sopra_o_sotto_ma100_10_min_ago a -0.186 da -0.176
                     # 28 giu 2025 mi piace.
-
+                    #  7 nov 2025 aggiunte pg
+                    #  7 nov 2025 tolto and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.186
+                    #  7 nov 2025 3-10 da 3-11
 
 
                 # BUY 3 del 2 ottobre 2023 NON COMPRAVA !
@@ -59608,13 +59610,14 @@ class maddog:
                 # 23 dic 2023 dev_sell < 0.01 se ma20 cresce da 10 min
 
 
-
             elif (
-                ma3_last < ma15_last
+                ma3_last < ma20_last
+                and (deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.06 or ma25_last > ma450_last)
+
                 and delta_CM_300_25_last < delta_CM_300_25_2_min_ago
                 and deviation_sell < 0.40
 
-                and deviation_ma39 < 0.068
+                and deviation_ma39 < -0.062
                 and deviation_ma3_sotto_ma50 < 0.069
 
                 and (ma5_prev > ma25_prev and ma5_last < ma25_last)
@@ -59626,7 +59629,7 @@ class maddog:
                 and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.03
                 
             ):
-                sell = f"SELL CS guadagno durante un forte ribasso del 15 ott 2025 - r 16045 B2 Y2 X1 xx - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                sell = f"SELL CS guadagno durante un forte ribasso del 15 ott 2025 - r 16045 B2 Y2 X1 xx1 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
 
                 # 30 ott 2024 se 30 > 78 statte calmo
@@ -59642,7 +59645,48 @@ class maddog:
                 # 20 ott 2025 5-22 da 5-20
                 #  1 nov 2025 ho accorpato con un po' di or
                 #  1 nov 2025 con cm giorno 5-25
+                #  7 nov 2025 se and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.06 NON E' FORTE RIBASSO
+                #  7 nov 2025 sell con 3-20 da 3-15 and deviation_ma39 a -0.062 da 0.068 (grazie a pg) (aveva venduto mentre risaliva convindamende)
 
+
+
+
+            elif (
+                ma3_last < ma15_last
+                and (deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.06 or ma25_last < ma450_last)
+
+                and delta_CM_300_25_last < delta_CM_300_25_2_min_ago
+                and deviation_sell < 0.40
+
+                and deviation_ma39 < 0.068
+                and deviation_ma3_sotto_ma50 < 0.069
+
+                and (ma5_prev > ma25_prev and ma5_last < ma25_last)
+                and (ma5_last < ma100_last or ma5_last < ma200_last or ma5_last < ma300_last)
+                
+                and (ma300_last < ma300_301_min_ago or ma300_last < ma300_120_min_ago or ma78_last < ma78_120_min_ago)
+                
+                and (ma100_last < ma200_last or ma200_last < ma300_last)
+                and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.03
+                
+            ):
+                sell = f"SELL CS guadagno durante un forte ribasso del 15 ott 2025 - r 16045 B2 Y2 X1 xx2 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                action = "sell"
+
+                # 30 ott 2024 se 30 > 78 statte calmo
+                #  8 apr 2025 dev sell a -0.02 da -0.03
+                #  7 ago 2025 dev sell a -0.01 da -0.02
+                #  1 ott 2025 se deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.03 allora dev sell a -0.02 da -0.01
+                #  1 ott 2025 aggiunta parentesi graffa sulla stessa linea.
+                # 15 ott 2025 aggiunta guadagno durante un forte ribasso
+                # 16 ott 2025 modificata perche' ha fatto -0.48
+
+                # 20 ott 2025 aggiunta and deviation_ma39 < 0.068 (ho conosciuto la deviation grazie alla pg)
+                # 20 ott 2025 aggiunta and deviation_ma3_sotto_ma50 < 0.069 (ho conosciuto la deviation grazie alla pg)
+                # 20 ott 2025 5-22 da 5-20
+                #  1 nov 2025 ho accorpato con un po' di or
+                #  1 nov 2025 con cm giorno 5-25
+                #  7 nov 2025 se and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.06 ok cosi'
 
 
             elif (
