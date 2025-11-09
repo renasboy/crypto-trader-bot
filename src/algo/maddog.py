@@ -57412,15 +57412,18 @@ class maddog:
 
                         and deviation_sell > 1.00
                         and deviation_ma25_sotto_ma300 > 0.85
-                        and (ma20_prev > ma40_prev and ma20_last < ma40_last)
+                        and (ma20_prev > ma50_prev and ma20_last < ma50_last)
 
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 4-5-x >90 min se dev sell > 1.00 e 25-300 > 0.85 vendi con incr al ribasso 20-40 - r 15890"
+                        sell = f"SELL 4-5-x >90 min se dev sell > 1.00 e 25-300 > 0.85 vendi con incr al ribasso 20-40 - r 15890 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                         action = "sell"
 
                         # 22 mag 2025 aggiunta questa nuova condizione. impennata durante il rialzo ! no 3-39 o 3-50 ma 25-300 !
+                        #  9 nov 2025 aggiunte pg
+                        #  9 nov 2025 sell con 20<50 da 20<40
+
 
 
                     # con 50>
