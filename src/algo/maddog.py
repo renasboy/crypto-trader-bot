@@ -45182,28 +45182,32 @@ class maddog:
                   
                     elif (     
                         ma50_last < ma50_2_min_ago
-                        and ma3_last < ma78_last
-                        and deviation_sell > 0.30
+                        and ma3_last < ma69_last
+
+                        and deviation_sell > 0.20
 
                         and delta_DNA_1 < delta_DNA_2 
-                        and ma200_last > ma300_last
-                        and ma300_last > ma300_120_min_ago
+                        and (ma200_last > ma300_last or ma300_last > ma300_120_min_ago)
+                        
 
                         and ma450_last < ma450_360_min_ago
 
                         and deviation_trend_ma200 > -0.15
                         
+                        
                         and ma2_last <= ma2_2_min_ago
-                        and macd < macd_2_min_ago
                         and macd < -3
                     ):
-                        sell = "SELL 1 (110-239 min) con 3-78 e con 450<6 ore MA DNA GIORNO E 300>120 min e ma50< e dev_sell>0.30 - r 10274 A1 Y1"
+                        sell = f"SELL 1 (110-239 min) con 3-78 e con 450<6 ore MA DNA GIORNO E 300>120 min e ma50< e dev_sell>0.30 - r 10274 A1 Y1 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                         action = "sell"
 
                         #  7 apr 2025 aggiunta DNA GIORNO - lascialo correre !
                         # 12 mag 2025 3-59 da 3-49
                         # 30 mag 2025 3-78 da 3-59
-
+                        #  9 nov 2025 3-69 da 3-78
+                        #  9 nov 2025 dev_sell a -0.20 da -0.30
+                        #  9 nov 2025 cercato di anticipare ndecchiecella
+                        #  9 nov 2025 aggiunte pg
 
 
 
