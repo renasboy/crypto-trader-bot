@@ -3196,13 +3196,14 @@ class maddog:
                     and delta_CV_300_25_last > delta_CV_300_25_45_min_ago
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago >= -0.07
 
-                    and ma20_last < ma50_last
+                    and (ma20_last < ma50_last or ma3_last < ma200_last or ma3_last < ma100_last)
                     
-                    and deviation_ma39 < -0.16
+                    and deviation_ma39 < -0.18
                     and deviation_ma3_sotto_ma50 < -0.19
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.22
 
-                    and ma100_last > ma200_last
-                    and (ma300_last > ma300_301_min_ago or ma100_last > ma300_last)
+                    
+                    and (ma300_last > ma300_301_min_ago or ma100_last > ma300_last ma100_last > ma200_last)
 
                     and deviation_ma3_sopra_ma10 > 0.01
                     
@@ -3213,7 +3214,7 @@ class maddog:
                     percentage = 90
 
                     #  5 nov 2025 se cv notte and ma100 10 min >= -0.07 dev poco profonde (ok cosi)
-
+                    # 10 nov 2025 per anticipare ndecchiecella se in presenza di ritracciamento ho aggiunto deviation_ma5_sopra_o_sotto_ma100 < -0.22
 
 
 
@@ -18227,26 +18228,23 @@ class maddog:
 
 
 
-
                 elif (    
                     ma3_last > ma11_last
-                    and ma25_last > ma50_last
-
                     and (ma300_last > ma300_120_min_ago or ma450_last > ma450_480_min_ago)
 
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
-                    
-                    and deviation_ma5_sopra_o_sotto_ma100 > -0.50
+                    and (ma25_last >= ma50_last or delta_50_25_last < delta_50_25_30_min_ago or deviation_ma100_sopra_o_sotto_ma100_10_min_ago > 0.02)
+
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.99
                     and deviation_ma100_sopra_ma300 > -0.30
 
-                    and ma8_last > ma8_2_min_ago
+                    and ma8_last >= ma8_2_min_ago
                     and ma2_last > ma3_last
                     and ma2_last > ma5_last
                     
                     and macd_differenza_2_min_ago > -18.50
                 ):  
                 
-                    buy = f"BUY 2 laterale con 300>450 - r 5412 X1 AX 1 NUOVA ERA A3 SOFT 1 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    buy = f"BUY 2 laterale con 450> or 300> - r 5412 X1 AX 1 NUOVA ERA A3 SOFT 1x - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     action = "buy"
                     percentage = 80
 
@@ -18255,6 +18253,44 @@ class maddog:
                     # 27 ott 2025 and ma8_last > ma8_2_min_ago
                     # 27 ott 2025 se 20>40 ok cosi'
                     # 28 ott 2025 se 25>50 ok cosi'
+                    # 10 nov 2025 and deviation_ma5_sopra_o_sotto_ma100 a -0.99 da -0.50
+                    # 10 nov 2025 tentando di anticipare ndecchiecella ho aggiunto or deviation_ma100_sopra_o_sotto_ma100_10_min_ago > 0.02
+                    # perche' era proprio 25>50 che ha fatto maturare il ritardo di entrata. c'e' 100 10 min > 0.02 stai calmo. sul pg era 0.06 !
+
+
+
+
+                elif (    
+                    ma3_last > ma11_last
+                    and (ma300_last > ma300_120_min_ago or ma450_last > ma450_480_min_ago)
+
+                    and (ma25_last < ma50_last or delta_50_25_last > delta_50_25_30_min_ago or deviation_ma100_sopra_o_sotto_ma100_10_min_ago < 0.02)
+                    and deviation_ma39 < -0.01 
+                    and deviation_ma3_sotto_ma50 < -0.01
+
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.99
+                    and deviation_ma100_sopra_ma300 > -0.30
+
+                    and ma8_last >= ma8_2_min_ago
+                    and ma2_last > ma3_last
+                    and ma2_last > ma5_last
+                    
+                    and macd_differenza_2_min_ago > -18.50
+                ):  
+                
+                    buy = f"BUY 2 con 450> or 300> ma ritracciamento - r 5412 X1 AX 1 NUOVA ERA A3 SOFT 1y - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    action = "buy"
+                    percentage = 80
+
+                    # 25 ott 2025 aggiunte pg
+                    # 25 ott 2025 tentato di anticipare ndecchiecella - non aveno ancora a disposizione i valori nelle pg
+                    # 27 ott 2025 and ma8_last > ma8_2_min_ago
+                    # 27 ott 2025 se 20>40 ok cosi'
+                    # 28 ott 2025 se 25>50 ok cosi'
+                    # 10 nov 2025 and deviation_ma5_sopra_o_sotto_ma100 a -0.99 da -0.50
+                    # 10 nov 2025 tentando di anticipare ndecchiecella ho aggiunto or deviation_ma100_sopra_o_sotto_ma100_10_min_ago > 0.03
+                    # 10 nov 2025 se ma25_last < ma50_last ritracciamento e allora fanno la loro comparsa le dev non ancora profonde 
+                    
 
 
                 elif (    
@@ -25791,16 +25827,15 @@ class maddog:
 
 
                 elif (    
-                    ma3_last > ma13_last
+                    ma3_last > ma11_last
 
-                    and delta_CM_300_25_last < delta_CM_300_25_2_min_ago
-                    and deviation_ma100_sopra_ma300 < 0.50
+                    and delta_CM_300_25_last <= delta_CM_300_25_2_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.02
                     
                     and (ma100_last > ma200_last or ma200_last > ma300_last)
                     and (ma100_last > ma100_60_min_ago or ma200_last > ma200_60_min_ago)
                     
                     and (ma300_last > ma300_60_min_ago or ma300_last > ma300_120_min_ago)
-                    
                 ):    
                     
                     buy = f"BUY 3 con 100> and 200> and 300> - r 6480 B2 x1 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
@@ -25812,6 +25847,8 @@ class maddog:
                     #  2 nov 2025 anticipata ulteriormente.
                     #  2 nov 2025 aggiunte pg
                     #  3 nov 2025 se CM GIORNO ok cosi'
+                    # 10 nov 2025 tentato di anticipare ndecchiecella ma ok cosi'.
+
 
 
                 elif (    
