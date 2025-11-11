@@ -31454,7 +31454,7 @@ class maddog:
                     
                     and deviation_ma39 < -0.30
                     and deviation_ma3_sotto_ma50 < -0.42
-                    and deviation_ma5_sotto_ma100 < -0.52
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.52
                     and deviation_ma25_sotto_ma300 < -0.93
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.10
                     
