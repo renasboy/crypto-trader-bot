@@ -31464,7 +31464,7 @@ class maddog:
                     and macd_differenza_2_min_ago > -18.50
              
                 ):
-                    buy = "BUY 4 nuova condizione con distanza al ribasso se 50-100 > -0.15 and dev_ma3_sotto_ma50 < -0.40 - r 7000 b"
+                    buy = f"BUY 4 nuova condizione con distanza al ribasso se 50-100 > -0.15 and dev_ma3_sotto_ma50 < -0.40 - r 7000 b - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     action = "buy"
                     percentage = 70
 
@@ -62515,7 +62515,7 @@ class maddog:
                 and macd < 13
                 and macd_differenza_2_min_ago < -3
             ):
-                sell = "SELL NCS con ma20 > ma20 2 min ago e dev 3-39 < 0.10 e dev_sell < -0.03 e ma50 < e diff macd - r 16047 A3 Y2 AX"
+                sell = f"SELL NCS con ma20 > ma20 2 min ago e dev 3-39 < 0.10 e dev_sell < -0.03 e ma50 < e diff macd - r 16047 A3 Y2 AX - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
 
                 #  2 mar 2025 se ma100 comincia a scendere di meno allora and deviation_sell < -0.02 da -0.01
