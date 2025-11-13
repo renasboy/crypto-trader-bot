@@ -60340,22 +60340,26 @@ class maddog:
                 #  7 nov 2025 se and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.06 ok cosi'
 
 
+
+
+
+            # leggi le ultime note !
+
             elif (
-                ma3_last < ma15_last
-                and delta_CM_300_25_last > delta_CM_300_25_2_min_ago
-                and deviation_sell < 0.40
+                ma3_last < ma18_last or ma3_last < ma15_last
+                and (ma3_prev > ma20_prev and ma3_last < ma20_last)
 
                 and deviation_ma39 < 0.068
                 and deviation_ma3_sotto_ma50 < 0.069
+                and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.03
 
-                and (ma5_prev > ma22_prev and ma5_last < ma22_last)
+                and delta_CM_300_25_last > delta_CM_300_25_2_min_ago
+                
                 and (ma5_last < ma100_last or ma5_last < ma200_last or ma5_last < ma300_last)
                 
                 and (ma300_last < ma300_301_min_ago or ma300_last < ma300_120_min_ago or ma78_last < ma78_120_min_ago)
                 
                 and (ma100_last < ma200_last or ma200_last < ma300_last)
-                and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.03
-                
             ):
                 sell = f"SELL CS guadagno durante un forte ribasso del 15 ott 2025 - r 16045 B2 Y2 X1 xy - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
@@ -60373,6 +60377,23 @@ class maddog:
                 # 20 ott 2025 5-22 da 5-20
                 #  1 nov 2025 ho accorpato con un po' di or
                 #  1 nov 2025 con cm notte ok cosi'
+
+                # 13 nov 2025 il guadagno durante un forte ribasso ha fatto - 0.68% !
+                # questi i valori :
+
+                # deviation_ma39 -0.079 
+                # deviation_ma3_sotto_ma50 -0.199 
+                # deviation_ma5_sopra_o_sotto_ma100 -0.278 
+                # deviation_ma25_sotto_ma300 -0.523 
+                # deviation_ma100_sopra_o_sotto_ma100_10_min_ago -0.079
+
+                # 13 nov 2025 tolto and deviation_sell < 0.40
+                # incrocio al ribasso 3-20 da 5-22
+                # 3-18 da 3-15 ATTENZIONE ma18 sta piu' sopra di ma15 ! quindi per vendere prima ho messo 3-18 ! cazzo !
+                # anzi sai che faccio ? metto 3-18 or 3-15
+
+
+
 
 
             elif (
