@@ -23083,8 +23083,6 @@ class maddog:
                     # 20 mar 2025 distanza al ribasso se 450<450 5 ore
 
 
-
-                
                 elif (    
                     ma3_last > ma15_last
 
@@ -23132,6 +23130,39 @@ class maddog:
                     # 21 mar 2025 se ma39_last < ma100_last aggiunta dstanza al ribasso
                     # 25 mar 2025 articolando distanza al ribasso
                     #  4 apr 2025 modificata
+
+
+
+                elif (    
+                    ma3_last > ma9_last
+                    and delta_CM_300_25_last > delta_CM_300_25_2_min_ago
+
+                    and deviation_ma39 -0.05
+                    and deviation_ma3_sotto_ma50 -0.17
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.23
+                    and deviation_ma25_sotto_ma300 < -0.40
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.010
+
+                    and (ma5_last < ma100_last or ma5_last < ma200_last or ma5_last < ma300_last)
+
+                    and (ma300_last < ma300_301_min_ago or ma300_last < ma300_120_min_ago or ma78_last < ma78_120_min_ago)
+
+                    and (ma100_last < ma200_last or ma200_last < ma300_last)
+
+                    and macd < 5
+                    and macd_differenza_2_min_ago > 40
+                  
+                ):
+                    buy = f"BUY 2 del 13 nov 2025 - scatto in alto EVIDENZIATO DAL MACD - r 6003 - macd {macd:.3f} macd_differenza_2_min_ago {macd_differenza_2_min_ago:.3f} deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    action = "buy"
+                    percentage = 50
+
+                    # 13 NOV 2024 HO CREATO QUESTA CONDIZIONE.
+                    # 13 nov 2024 AGGIUNTE PG + macd e macd_differenza_2_min_ago !
+
+
+
+                
                 
 
 
@@ -28855,7 +28886,7 @@ class maddog:
 
                 
                     
-                # BUY 3 con ma69 > and deviation_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali) IMPORTATA DA BUY 4 RCCR   
+                # BUY 3 con ma69 > and deviation_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali) IMPORTATA DA BUY 4 RCCR  
                 
                 elif (
                     ma69_last >= ma69_2_min_ago
@@ -28878,8 +28909,43 @@ class maddog:
                     buy = "BUY 3 78<100 E con ma69 > and deviation_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali) IMPORTATA DA BUY 4 RCCR - r 6599 B"
                     action = "buy"
                     percentage = 50
-                    
-                    
+
+
+
+
+                
+                elif (    
+                    ma3_last > ma9_last
+                    and delta_CM_300_25_last > delta_CM_300_25_2_min_ago
+
+                    and deviation_ma39 -0.05
+                    and deviation_ma3_sotto_ma50 -0.17
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.23
+                    and deviation_ma25_sotto_ma300 < -0.40
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.010
+
+                    and (ma5_last < ma100_last or ma5_last < ma200_last or ma5_last < ma300_last)
+
+                    and (ma300_last < ma300_301_min_ago or ma300_last < ma300_120_min_ago or ma78_last < ma78_120_min_ago)
+
+                    and (ma100_last < ma200_last or ma200_last < ma300_last)
+
+                    and macd < 5
+                    and macd_differenza_2_min_ago > 40
+                  
+                ):
+                    buy = f"BUY 3 del 13 nov 2025 - scatto in alto EVIDENZIATO DAL MACD - r 6600 - macd {macd:.3f} macd_differenza_2_min_ago {macd_differenza_2_min_ago:.3f} deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    action = "buy"
+                    percentage = 50
+
+                    # 13 NOV 2024 HO CREATO QUESTA CONDIZIONE.
+                    # 13 nov 2024 AGGIUNTE PG + macd e macd_differenza_2_min_ago !
+
+
+
+
+
+
                 # CONDIZIONE IPERVENDUTO DNA
                 
                     
@@ -29551,7 +29617,35 @@ class maddog:
 
 
 
-                
+                elif (    
+                    ma3_last > ma9_last
+                    and delta_CM_300_25_last > delta_CM_300_25_2_min_ago
+
+                    and deviation_ma39 -0.05
+                    and deviation_ma3_sotto_ma50 -0.17
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.23
+                    and deviation_ma25_sotto_ma300 < -0.40
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.010
+
+                    and (ma5_last < ma100_last or ma5_last < ma200_last or ma5_last < ma300_last)
+
+                    and (ma300_last < ma300_301_min_ago or ma300_last < ma300_120_min_ago or ma78_last < ma78_120_min_ago)
+
+                    and (ma100_last < ma200_last or ma200_last < ma300_last)
+
+                    and macd < 5
+                    and macd_differenza_2_min_ago > 40
+                  
+                ):
+                    buy = f"BUY 4 del 13 nov 2025 - scatto in alto EVIDENZIATO DAL MACD - r 6680 - macd {macd:.3f} macd_differenza_2_min_ago {macd_differenza_2_min_ago:.3f} deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    action = "buy"
+                    percentage = 50
+
+                    # 13 NOV 2024 HO CREATO QUESTA CONDIZIONE.
+                    # 13 nov 2024 AGGIUNTE PG + macd e macd_differenza_2_min_ago !
+
+
+
                 # BUY 4 di emergenza CROLLO FERRARI - modo 1
                 
                 elif (
@@ -57973,15 +58067,17 @@ class maddog:
                         ma50_last < ma50_2_min_ago
                         and delta_1 > delta_2
 
+                        and ma3_last < ma33_last
+
                         and ma150_last < ma250_last
                         and deviation_ma5_sotto_ma300 < 0.10
                         
                         and (deviation_sell < -0.01 or ma20_last < ma50_last)
-                        and ma3_last < ma33_last
+                        
                         
                         and ma2_last < ma2_2_min_ago 
                     ):
-                        sell = "SELL 4-5-x >90 min con 5-300 < 0.10 E ma50 < e dev_sell < -0.01 or 20<50 SE 150<250 - r 15906 B2 Y2"
+                        sell = f"SELL 4-5-x >90 min con 5-300 < 0.10 E ma50 < e dev_sell < -0.01 or 20<50 SE 150<250 - r 15906 B2 Y2 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                         action = "sell"
                         
                         #  7 feb 2023 -0.23 da -0.21
@@ -57990,7 +58086,8 @@ class maddog:
                         #  8 nov 2023 dev sell -0.01 da -0.05 (stiamo al sell 4-5-x e pure dopo 90 min ! esci !)
                         # 10 mag 2025 se 150<250 vende con dev_sell < -0.01 OR 20<50 ! CAZZO.
                         # 17 mag 2025 se NOTTE ok cosi'
-
+                        # 13 nov 2025 aggiunte pg
+                        # 13 nov 2025 aggiungere 3-50 e 3-39 in futuro. avrebbe anche potuto aspettare un po' prima di vendere.
 
 
 
