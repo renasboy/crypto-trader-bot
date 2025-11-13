@@ -28885,34 +28885,10 @@ class maddog:
                 # oggi 14 apr 2025 cancellata riga 6599 A2y
 
                 
-                    
-                # BUY 3 con ma69 > and deviation_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali) IMPORTATA DA BUY 4 RCCR  
+                # cancellata r 6599 dispiace sempre. e' come quando muore una stella. 
+                # 
+                #   
                 
-                elif (
-                    ma69_last >= ma69_2_min_ago
-                    and ma78_last < ma100_last
-                    and deviation_ma5_sopra_ma28 > 0.30
-                    
-                    and deviation_bellissima > 0.12
-                    and deviation_buy3 > 0.13
-                    and deviation_ma7_sopra_ma40 > 0.09
-               
-                    and ma3_last > ma13_last
-                    and ma4_last > ma9_last
-                    and ma4_last > ma50_last
-                    and ma6_last > ma15_last
-                    and ma7_last > ma25_last
-                    
-                    and ma2_last > ma2_2_min_ago
-             
-                ):
-                    buy = "BUY 3 78<100 E con ma69 > and deviation_bellissima > 0.12 (PER SPEZZARE LA CATENA - effetti laterali) IMPORTATA DA BUY 4 RCCR - r 6599 B"
-                    action = "buy"
-                    percentage = 50
-
-
-
-
                 
                 elif (    
                     ma3_last > ma9_last
@@ -60343,7 +60319,7 @@ class maddog:
 
 
 
-            # leggi le ultime note !
+            # LEGGI LE NOTE !
 
             elif (
                 ma3_last < ma18_last or ma3_last < ma15_last
@@ -60392,7 +60368,7 @@ class maddog:
                 # 3-18 da 3-15 ATTENZIONE ma18 sta piu' sopra di ma15 ! quindi per vendere prima ho messo 3-18 ! cazzo !
                 # anzi sai che faccio ? metto 3-18 or 3-15
 
-
+                # LEGGI LE NOTE !
 
 
 
