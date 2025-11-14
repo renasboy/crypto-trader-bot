@@ -21771,11 +21771,9 @@ class maddog:
                     and ma450_last < ma450_360_min_ago
 
                     and delta_450_300 < delta_450_300_60_min
-                    and delta_450_300 > -0.50
                     and (ma300_last > ma300_60_min_ago or ma200_last > ma200_60_min_ago)
-
+                    and delta_450_300 > -0.50
                     
-
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.10
                     and deviation_ma25_sotto_ma300 < -0.25
 
@@ -21788,10 +21786,11 @@ class maddog:
                     
                     and macd_differenza_2_min_ago > -18.50
                 ):
-                    buy = f"BUY 2 DEL 7 NOV 2025 CON MB GIORNO - cazzo e' necessaria ! - r 5990 b - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    buy = f"BUY 2 DEL 7 NOV 2025 CON MB GIORNO - cazzo e' necessaria ! - r 5990 bx - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     action = "buy"
                     percentage = 70
 
+                    # 14 nov 2025 se delta_450_300 < delta_450_300_60_min e (ma300_last > ma300_60_min_ago or ma200_last > ma200_60_min_ago) ok cosi'
 
 
 
@@ -21800,8 +21799,9 @@ class maddog:
 
                     and ma450_last < ma450_360_min_ago
                     and delta_450_300 < delta_450_300_60_min
-                    and delta_450_300 > -0.50
                     and (ma300_last < ma300_60_min_ago or ma200_last < ma200_60_min_ago)
+                    and delta_450_300 > -0.50
+                    
 
                     and deviation_ma39 < -0.50
                     and deviation_ma3_sotto_ma50 < -0.60
@@ -21822,7 +21822,7 @@ class maddog:
                     
                     and macd_differenza_2_min_ago > -18.50
                 ):
-                    buy = f"BUY 2 DEL 7 NOV 2025 CON MB GIORNO - cazzo e' necessaria ! - r 5990 b - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    buy = f"BUY 2 DEL 7 NOV 2025 CON MB GIORNO - cazzo e' necessaria ! - r 5990 by - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     action = "buy"
                     percentage = 70
 
@@ -21833,7 +21833,7 @@ class maddog:
                     #  7 nov 2025 IN QUESTA CONDIZIONE NON METTERE 3-39 3 3-50 al massimo 5-100 < -0.10
                     #  7 nov 2025 aggiunte pg
                     # 11 nov 2025 piccola modifica. questa condizione mi piace. and delta_450_300 < delta_450_300_60_min 
-
+                    # 14 nov 2025 se delta_450_300 < delta_450_300_60_min e (ma300_last > ma300_60_min_ago or ma200_last > ma200_60_min_ago) allora dev profonde.
 
 
 
