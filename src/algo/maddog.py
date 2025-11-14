@@ -28885,9 +28885,8 @@ class maddog:
                 # oggi 14 apr 2025 cancellata riga 6599 A2y
 
                 
-                # cancellata r 6599 dispiace sempre. e' come quando muore una stella. 
-                # 
-                #   
+                # cancellata r 6599 
+                # dispiace sempre. e' come quando muore una stella. 
                 
                 
                 elif (    
@@ -60325,6 +60324,8 @@ class maddog:
                 ma3_last < ma18_last or ma3_last < ma15_last
                 and (ma3_prev > ma20_prev and ma3_last < ma20_last)
 
+                and ma50_last < ma50_60_min_ago
+
                 and deviation_ma39 < 0.068
                 and deviation_ma3_sotto_ma50 < 0.069
                 and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.03
@@ -60367,6 +60368,8 @@ class maddog:
                 # incrocio al ribasso 3-20 da 5-22
                 # 3-18 da 3-15 ATTENZIONE ma18 sta piu' sopra di ma15 ! quindi per vendere prima ho messo 3-18 ! cazzo !
                 # anzi sai che faccio ? metto 3-18 or 3-15
+                # 14 nov 2025 aggiunta and ma50_last < ma50_60_min_ago significa che se ma50 sale da 60 min QUESTA CONDIZIONE NON DEVE ENTRARE IN AZIONE. 
+                # 14 nov 2025 (ha venduto mentre ma50 saliva da 60 min !) (non e' stata concepita per questo)
 
                 # LEGGI LE NOTE !
 
