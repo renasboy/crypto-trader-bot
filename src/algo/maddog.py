@@ -60520,7 +60520,7 @@ class maddog:
                 and (ma300_last < ma300_301_min_ago or ma300_last < ma300_120_min_ago or ma78_last < ma78_120_min_ago)
 
 
-                and ma3_last < ma18_last or ma3_last < ma15_last
+                and (ma3_last < ma18_last or ma3_last < ma18_last)
                 and (ma3_prev > ma20_prev and ma3_last < ma20_last)
 
                 and ma50_last < ma50_60_min_ago
@@ -60533,11 +60533,8 @@ class maddog:
                 
                 and (ma5_last < ma100_last or ma5_last < ma200_last or ma5_last < ma300_last)
                 
-                
-                
-                
             ):
-                sell = f"SELL CS guadagno durante un forte ribasso del 15 ott 2025 - r 16045 B2 Y2 X1 xy 1 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                sell = f"SELL CS guadagno durante un forte ribasso del 15 ott 2025 da 0 a 30 min - r 16045 B2 Y2 X1 xy 1 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
 
                 # 13 nov 2025 il guadagno durante un forte ribasso ha fatto - 0.68% !
@@ -60566,9 +60563,8 @@ class maddog:
 
 
             elif (
-                seconds_since_last_trade > 0 and seconds_since_last_trade < 3000
+                seconds_since_last_trade > 1801 and seconds_since_last_trade < 3000
 
-                and ma3_last < ma18_last or ma3_last < ma15_last
                 and (ma3_prev > ma20_prev and ma3_last < ma20_last)
 
                 and ma50_last < ma50_60_min_ago
@@ -60585,7 +60581,7 @@ class maddog:
                 
                 and (ma100_last < ma200_last or ma200_last < ma300_last)
             ):
-                sell = f"SELL CS guadagno durante un forte ribasso del 15 ott 2025 - r 16045 B2 Y2 X1 xy 2 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                sell = f"SELL CS guadagno durante un forte ribasso del 15 ott 2025 da 30 a 50 min - r 16045 B2 Y2 X1 xy 2 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
 
 
