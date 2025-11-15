@@ -60514,6 +60514,7 @@ class maddog:
             # LEGGI LE NOTE !
             elif (
                 seconds_since_last_trade > 0 and seconds_since_last_trade < 1800
+                and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.03
 
                 and ma3_last < ma18_last or ma3_last < ma15_last
                 and (ma3_prev > ma20_prev and ma3_last < ma20_last)
@@ -60522,7 +60523,7 @@ class maddog:
 
                 and deviation_ma39 < 0.068
                 and deviation_ma3_sotto_ma50 < 0.069
-                and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.03
+                
 
                 and delta_CM_300_25_last > delta_CM_300_25_2_min_ago
                 
