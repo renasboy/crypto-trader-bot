@@ -60554,6 +60554,7 @@ class maddog:
                 # 14 nov 2025 (ha venduto mentre ma50 saliva da 60 min !) (non e' stata concepita per questo)
                 # 14 NOV 2025 seconds_since_last_trade > 0 and seconds_since_last_trade < 1800 SIGNIFICA CHE HA 30 MINUTI DI TEMPO PER ENTRARE IN AZIONE 
                 # 14 nov 2025 vediamo se funziona
+                # 15 nov 2025 HA FUNZIONATO ! anche troppo !
                 # parte continuamente ANCHE DURANTE UN RIALZO !
 
 
@@ -60565,6 +60566,7 @@ class maddog:
             elif (
                 seconds_since_last_trade > 1801 and seconds_since_last_trade < 3000
 
+                and (ma50_last < ma100_last or ma100_last < ma200_last or ma200_last < ma300_last)
                 and (ma3_prev > ma20_prev and ma3_last < ma20_last)
 
                 and ma50_last < ma50_60_min_ago
@@ -60579,7 +60581,6 @@ class maddog:
                 
                 and (ma300_last < ma300_301_min_ago or ma300_last < ma300_120_min_ago or ma78_last < ma78_120_min_ago)
                 
-                and (ma100_last < ma200_last or ma200_last < ma300_last)
             ):
                 sell = f"SELL CS guadagno durante un forte ribasso del 15 ott 2025 da 30 a 50 min - r 16045 B2 Y2 X1 xy 2 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
@@ -60606,48 +60607,7 @@ class maddog:
                 # LEGGI LE NOTE !
 
  
-            elif (
-                ma3_last < ma18_last or ma3_last < ma15_last
-                and (ma3_prev > ma20_prev and ma3_last < ma20_last)
-
-                and ma50_last < ma50_60_min_ago
-
-                and deviation_ma39 < 0.068
-                and deviation_ma3_sotto_ma50 < 0.069
-                and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.03
-
-                and delta_CM_300_25_last > delta_CM_300_25_2_min_ago
-                
-                and (ma5_last < ma100_last or ma5_last < ma200_last or ma5_last < ma300_last)
-                
-                and (ma300_last < ma300_301_min_ago or ma300_last < ma300_120_min_ago or ma78_last < ma78_120_min_ago)
-                
-                and (ma100_last < ma200_last or ma200_last < ma300_last)
-            ):
-                sell = f"SELL CS guadagno durante un forte ribasso del 15 ott 2025 - r 16045 B2 Y2 X1 xy 3 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
-                action = "sell"
-
-
-                # 13 nov 2025 il guadagno durante un forte ribasso ha fatto - 0.68% !
-                # questi i valori :
-
-                # deviation_ma39 -0.079 
-                # deviation_ma3_sotto_ma50 -0.199 
-                # deviation_ma5_sopra_o_sotto_ma100 -0.278 
-                # deviation_ma25_sotto_ma300 -0.523 
-                # deviation_ma100_sopra_o_sotto_ma100_10_min_ago -0.079
-
-                # 13 nov 2025 tolto and deviation_sell < 0.40
-                # incrocio al ribasso 3-20 da 5-22
-                # 3-18 da 3-15 ATTENZIONE ma18 sta piu' sopra di ma15 ! quindi per vendere prima ho messo 3-18 ! cazzo !
-                # anzi sai che faccio ? metto 3-18 or 3-15
-                # 14 nov 2025 aggiunta and ma50_last < ma50_60_min_ago significa che se ma50 sale da 60 min QUESTA CONDIZIONE NON DEVE ENTRARE IN AZIONE. 
-                # 14 nov 2025 (ha venduto mentre ma50 saliva da 60 min !) (non e' stata concepita per questo)
-                # 14 NOV 2025 seconds_since_last_trade > 0 and seconds_since_last_trade < 1800 SIGNIFICA CHE HA 50 MINUTI DI TEMPO PER ENTRARE IN AZIONE 
-                # 14 nov 2025 vediamo se funziona
-                # 14 nov 2025 questa e' stata tenuta senza segmenti temporali perche' non se se le precedenti 2 funzioneranno.
-
-                # LEGGI LE NOTE !
+            
 
 
 
