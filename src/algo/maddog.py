@@ -65414,6 +65414,7 @@ class maddog:
                 and ma39_last > ma100_last
 
                 and deviation_sell < -0.035
+                and deviation_ma39 < -0.099
 
                 and ma100_last < ma100_30_min_ago
                 and ma13_last <= ma13_2_min_ago
@@ -65433,6 +65434,10 @@ class maddog:
                 # 15 ott 2024 se 39>100 deviation_sell < -0.03 da < -0.02
                 # 22 mag 2025 se 39>100 deviation_sell < -0.035 da < -0.03
                 # 27 ott 2025 aggiunte pg
+                # 15 nov 2025 aggiunta and deviation_ma39 < -0.099 grazie alle pg (per vendere una ndecchiecella piu' sotto)
+
+
+
 
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
