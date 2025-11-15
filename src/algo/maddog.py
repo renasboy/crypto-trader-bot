@@ -35909,13 +35909,13 @@ class maddog:
 
                     and macd_differenza_2_min_ago > -18.50
                 ):
-                    buy = "BUY 5 del 9 nov 2025 aggiunta per sicurezza - r 7300 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    buy = f"BUY 5 del 9 nov 2025 aggiunta per sicurezza - r 7300 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     action = "buy"
                     percentage = 90
 
                     #  9 nov 2025 aggiunta questa condizione.
                     # 13 nov 2025 aggiunte nuovamente le pg (sembra che qualche volta il sistema non prene i valori all' interno della parentesi)
-
+                    # 15 nov 2025 mancava la f davanti !
 
 
 
@@ -60514,7 +60514,11 @@ class maddog:
             # LEGGI LE NOTE !
             elif (
                 seconds_since_last_trade > 0 and seconds_since_last_trade < 1800
+
                 and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.03
+                and (ma50_last < ma100_last or ma100_last < ma200_last or ma200_last < ma300_last)
+                and (ma300_last < ma300_301_min_ago or ma300_last < ma300_120_min_ago or ma78_last < ma78_120_min_ago)
+
 
                 and ma3_last < ma18_last or ma3_last < ma15_last
                 and (ma3_prev > ma20_prev and ma3_last < ma20_last)
@@ -60529,9 +60533,9 @@ class maddog:
                 
                 and (ma5_last < ma100_last or ma5_last < ma200_last or ma5_last < ma300_last)
                 
-                and (ma300_last < ma300_301_min_ago or ma300_last < ma300_120_min_ago or ma78_last < ma78_120_min_ago)
                 
-                and (ma100_last < ma200_last or ma200_last < ma300_last)
+                
+                
             ):
                 sell = f"SELL CS guadagno durante un forte ribasso del 15 ott 2025 - r 16045 B2 Y2 X1 xy 1 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
@@ -60553,6 +60557,9 @@ class maddog:
                 # 14 nov 2025 (ha venduto mentre ma50 saliva da 60 min !) (non e' stata concepita per questo)
                 # 14 NOV 2025 seconds_since_last_trade > 0 and seconds_since_last_trade < 1800 SIGNIFICA CHE HA 30 MINUTI DI TEMPO PER ENTRARE IN AZIONE 
                 # 14 nov 2025 vediamo se funziona
+                # parte continuamente ANCHE DURANTE UN RIALZO !
+
+
 
                 # LEGGI LE NOTE !
 
