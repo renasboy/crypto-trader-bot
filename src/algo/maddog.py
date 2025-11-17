@@ -19099,25 +19099,25 @@ class maddog:
                 # BUY 2 che ci riprova TORNANDO ALLE ORIGINI (TREND RIBASSO !) con ma200< and ma300< AND 5 NON MOLTO SOTTO 300
                 
                 elif (
-                    deviation_buy2 > 0.05
+                    ma3_last > ma7_last
+
+                    and delta_CM_300_25_last <= delta_CM_300_25_2_min_ago
+                    and ma8_last >= ma8_2_min_ago
+
+                    and ma8_last > ma25_last
+                    and ma8_last >= ma13_last
+
+
               
                     and deviation_ma100_sopra_ma300 < -0.20
                     and deviation_ma5_sotto_ma300 > -0.70
-                    and deviation_ma5_sopra_ma28 > 0.29
-                    and deviation_bellissima > 0.14
-                    and ma8_last > ma8_2_min_ago
-                    and ma2_last > ma2_2_min_ago
-                    and ma3_last > ma7_last
-                    and ma3_last > ma13_last
-                    and deviation_buy_ma3_sopra_ma20 > 0.05
-                    and deviation_ma4_sopra_ma25 > 0.05
                     
                     and ma200_last < ma200_120_min_ago
                     and ma300_last < ma300_120_min_ago
-                    and macd >= macd_2_min_ago
+                    
                 ):
                
-                    buy = "BUY 2 che ci riprova TORNANDO ALLE ORIGINI (TREND RIBASSO !) con ma200< and ma300< AND 5 NON MOLTO SOTTO 300 - r 5531 A"
+                    buy = f"BUY 2 che ci riprova TORNANDO ALLE ORIGINI (TREND RIBASSO !) con ma200< and ma300< AND 5 NON MOLTO SOTTO 300 - r 5531 A - and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     action = "buy"
                     percentage = 70
 
@@ -35932,12 +35932,14 @@ class maddog:
                     
                     
                     
-                    
                 elif (    
-                    ma3_last > ma13_last
+                    ma3_last > ma10_last
+
+                    and ma25_last > ma100_last
 
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.03
                     and ma5_last > ma5_2_min_ago
+                    
 
                     and (ma100_last > ma100_120_min_ago or delta_DNA_1 < delta_DNA_2 or delta_CM_300_25_last < delta_CM_300_25_2_min_ago)
                     and (ma450_last > ma450_360_min_ago or ma450_last > ma450_480_min_ago or ma450_last > ma450_720_min_ago or ma200_last > ma450_last)
@@ -35947,13 +35949,48 @@ class maddog:
 
                     and macd_differenza_2_min_ago > -18.50
                 ):
-                    buy = f"BUY 5 del 9 nov 2025 aggiunta per sicurezza - r 7300 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    buy = f"BUY 5 del 9 nov 2025 aggiunta per sicurezza - r 7300 x - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     action = "buy"
                     percentage = 90
 
                     #  9 nov 2025 aggiunta questa condizione.
                     # 13 nov 2025 aggiunte nuovamente le pg (sembra che qualche volta il sistema non prene i valori all' interno della parentesi)
                     # 15 nov 2025 mancava la f davanti !
+                    # 17 nov 2025 aggiunta and ma5_last >= ma5_2_min_ago
+                    # 17 nov 2025 se 25>100 aggiungo and ma5_last > ma5_2_min_ago
+                   
+                    
+
+                elif (    
+                    ma3_last > ma10_last
+
+                    and ma25_last < ma100_last
+                    and deviation_ma39 < -0.05 
+                    and deviation_ma3_sotto_ma50 < -0.07
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.10
+
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.03
+                    and ma8_last >= ma8_2_min_ago
+                    
+
+                    and (ma100_last > ma100_120_min_ago or delta_DNA_1 < delta_DNA_2 or delta_CM_300_25_last < delta_CM_300_25_2_min_ago)
+                    and (ma450_last > ma450_360_min_ago or ma450_last > ma450_480_min_ago or ma450_last > ma450_720_min_ago or ma200_last > ma450_last)
+                    
+                    and deviation_ma300_sopra_ma450 > -0.50
+                    and deviation_ma100_sopra_ma300 > -0.50
+
+                    and macd_differenza_2_min_ago > -18.50
+                ):
+                    buy = f"BUY 5 del 9 nov 2025 aggiunta per sicurezza - r 7300 y - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    action = "buy"
+                    percentage = 90
+
+                    #  9 nov 2025 aggiunta questa condizione.
+                    # 13 nov 2025 aggiunte nuovamente le pg (sembra che qualche volta il sistema non prene i valori all' interno della parentesi)
+                    # 15 nov 2025 mancava la f davanti !
+                    # 17 nov 2025 aggiunta and ma5_last >= ma5_2_min_ago
+                    # 17 nov 2025 se 25<100 aggiungo and ma8_last >= ma8_2_min_ago
+                    # 17 nov 2025 se 25<100 aggiungo dev non ancora profonde grazie alle pg ! 
 
 
 
@@ -67616,6 +67653,8 @@ class maddog:
                 # 23 ott 2025 aggiunte pg
 
 
+
+
             elif (
                 seconds_since_last_trade > 0 and seconds_since_last_trade < 3600
 
@@ -67624,14 +67663,14 @@ class maddog:
                 and ma300_last < ma300_180_min_ago
                 and ma300_last < ma450_last
 
-                and ma2_last < ma8_last
+                and ma2_last < ma9_last
                 
                 and deviation_sell > 0.55
                 and deviation_sell < 1.20
                 
                 
             ):    
-                sell = f"SELL condizione PMS da 0 a 60 min con 2-8 - INTANTO TE LI PRENDI - r 16888 ax - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                sell = f"SELL condizione PMS da 0 a 60 min con 2-9 COMPLEANNO COMPARE MIO ! - INTANTO TE LI PRENDI - r 16888 ax - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
                 
                 # 24 ago 2023 and macd < -5
@@ -67640,6 +67679,9 @@ class maddog:
                 # 15 ott 2025 3-33 da 3-28
                 # 23 ott 2025 aggiunte pg
                 # 17 nov 2025 devi togliere il macd per questa condizione !!! auguri compare mio !
+                # 17 NOV 2025 COMPLEANNO COMPARE MIO ! 2-9 DA 2-8
+
+
 
 
             elif (
