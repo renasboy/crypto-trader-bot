@@ -67588,7 +67588,32 @@ class maddog:
                 # 23 ott 2025 aggiunte pg
 
 
-            
+            elif (
+                seconds_since_last_trade > 0 and seconds_since_last_trade < 3600
+
+                and ma50_last < ma100_last
+                and ma100_last < ma200_last
+                and ma300_last < ma300_180_min_ago
+                and ma300_last < ma450_last
+
+                and ma2_last < ma8_last
+                
+                and deviation_sell > 0.55
+                and deviation_sell < 1.20
+                
+                
+            ):    
+                sell = f"SELL condizione PMS da 0 a 60 min con 2-8 - INTANTO TE LI PRENDI - r 16888 ax - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                action = "sell"
+                
+                # 24 ago 2023 and macd < -5
+                # 18 dic 203 3-20 da 3-25
+                # 15 gen 2024 con 3-28 se sta sopra ma100 ! stai piu' tranquillo
+                # 15 ott 2025 3-33 da 3-28
+                # 23 ott 2025 aggiunte pg
+                # 17 nov 2025 devi togliere il macd per questa condizione !!! auguri compare mio !
+
+
             elif (
                 seconds_since_last_trade > 0 and seconds_since_last_trade < 3000
                 and ma5_last > ma100_last
@@ -67605,7 +67630,7 @@ class maddog:
                 and macd < -20
                 
             ):    
-                sell = f"SELL condizione PMS da 0 a 50 min con 3-33 se sta sopra ma100 E con dev_sell 0.60 - 1.05 e macd < -20 - INTANTO TE LI PRENDI - r 16888 a - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                sell = f"SELL condizione PMS da 0 a 50 min con 3-33 se sta sopra ma100 E con dev_sell 0.60 - 1.05 e macd < -20 - INTANTO TE LI PRENDI - r 16888 ay - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
                 
                 # 24 ago 2023 and macd < -5
@@ -67613,6 +67638,13 @@ class maddog:
                 # 15 gen 2024 con 3-28 se sta sopra ma100 ! stai piu' tranquillo
                 # 15 ott 2025 3-33 da 3-28
                 # 23 ott 2025 aggiunte pg
+
+
+
+
+
+
+
 
 
                
