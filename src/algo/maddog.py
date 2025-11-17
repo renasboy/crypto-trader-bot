@@ -11,6 +11,13 @@
           and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}          
           
 
+          delta !
+          # and delta_100_50 > delta_100_50_30_min NOTTE !
+
+
+
+
+
           # 16 nov 2025 forse le dev profonde nNON SONO SUFFICIENTI ma3_last >= ma9_last
           # 16 NOV 2025 BUY CON ma3_last >= ma9_last
           # 16 NOV 2025 BUY CON ma3_last >= ma3_2_min_ago
@@ -2780,24 +2787,29 @@ class maddog:
                     # 21 ott 2025 aggiunto deviation (da abbassare)
 
 
+
+
                 elif (  
                     ma3_last > ma8_last
 
-                    and ma300_last > ma300_480_min_ago
                     and ma100_last < ma100_120_min_ago
+                    and ma50_last > ma100_last
+
+                    and ma300_last > ma300_480_min_ago
+                    
 
                     and (deviation_ma200_sotto_ma300 > -0.13 or delta_DNA_1 < delta_DNA_2)
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.156
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.25
 
-                    and deviation_ma50_sotto_ma100 > -0.10
+                    and deviation_ma50_sotto_ma100 > -0.20
                     
                     and deviation_ma3_sopra_ma10 > 0.01
                     
                     and macd_differenza_2_min_ago > -18.50
                 ):    
               
-                    buy = f"BUY 1 con ma300_last > ma300_480_min_ago ma ma100 < 2 ore - r 916 A1 x1 X1 y1y - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    buy = f"BUY 1 con ma300_last > ma300_480_min_ago ma ma100 < 2 ore - r 916 A1 x1 X1 y1 Y1 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     action = "buy"
                     percentage = 90
 
@@ -2805,7 +2817,42 @@ class maddog:
                     #  6 ago 2025 ma se 100 scende da 2 ore allora deve dare un piccolo segno. comprava male. 
                     #  6 ago 2025 ho messo un po' di cose dalle condizioni migliori.
                     #  8 ago 2025 ho aggiunto and (deviation_ma5_sopra_o_sotto_ma100 < -0.25
-                    # 10 nov 2025 aggiunte pg 
+                    # 10 nov 2025 aggiunte pg
+
+
+
+                elif (  
+                    ma3_last > ma8_last
+
+                    and ma100_last < ma100_120_min_ago
+                    and (ma50_last < ma100_last or delta_100_50 > delta_100_50_30_min)
+                    and ma8_last >= ma8_2_min_ago
+
+                    and ma300_last > ma300_480_min_ago
+                    
+
+                    and (deviation_ma200_sotto_ma300 > -0.13 or delta_DNA_1 < delta_DNA_2)
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.156
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.25
+
+                    and deviation_ma50_sotto_ma100 > -0.20
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    
+                    and macd_differenza_2_min_ago > -18.50
+                ):    
+              
+                    buy = f"BUY 1 con ma300_last > ma300_480_min_ago ma ma100 < 2 ore - r 916 A1 x1 X1 y1 Y2 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    action = "buy"
+                    percentage = 90
+
+                    # 27 giu 2025 aggiunta and ma300_last > ma300_480_min_ago
+                    #  6 ago 2025 ma se 100 scende da 2 ore allora deve dare un piccolo segno. comprava male. 
+                    #  6 ago 2025 ho messo un po' di cose dalle condizioni migliori.
+                    #  8 ago 2025 ho aggiunto and (deviation_ma5_sopra_o_sotto_ma100 < -0.25
+                    # 10 nov 2025 aggiunte pg
+                    # 17 nov 2025 se (ma50_last < ma100_last or delta_100_50 > delta_100_50_30_min) aggiungo and ma8_last >= ma8_2_min_ago
+
 
 
                 elif (  
