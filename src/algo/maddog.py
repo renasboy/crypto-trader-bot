@@ -48582,22 +48582,50 @@ class maddog:
                         # 27 mar 2025 5-59 da 5-45
 
 
-                        
                     elif (
                         ma50_last > ma50_2_min_ago
                         and deviation_ma5_sotto_ma300 < -0.40
-                        and ma5_last < ma78_last
+
+                        and (ma5_prev > ma78_prev and ma5_last < ma78_last)
+                        and ma8_last < ma8_2_min_ago
+
                         and deviation_sell > 0.25 and deviation_sell < 0.56
                         and ma2_last < ma2_2_min_ago
                        
                     ):
-                        sell = "SELL 2 (21-60 min) con ma50 > and 5 < 78 and deviation_sell 0.25 - 0.56 MARADONA e' piu' stanco e paziente - r 11477 C"
+                        sell = "SELL 2 (21-60 min) con ma50 > and 5 < 78 and deviation_sell 0.25 - 0.56 MARADONA e' piu' stanco e paziente - r 11477 Cx"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
                         # > estate 5-78 da 5-48 
+                        # 17 nov 2025 ha venduto mentre stava risalendo bello bello
+                        # 17 nov 2025 sell con 5<78 e' stato modificato con incrocio al ribasso 5-78 (ma per precauzione ho aggiunto la condizione seguente !)
+
                         
                         
+
+                    elif (
+                        ma50_last > ma50_2_min_ago
+                        and deviation_ma5_sotto_ma300 < -0.40
+
+                        and ma5_last < ma78_last
+                        and (ma8_last < ma8_2_min_ago or delta_CM_300_25_last > delta_CM_300_25_2_min_ago)
+
+                        and deviation_sell > 0.25 and deviation_sell < 0.56
+                        and ma2_last < ma2_2_min_ago
+                       
+                    ):
+                        sell = "SELL 2 (21-60 min) con ma50 > and 5 < 78 and deviation_sell 0.25 - 0.56 MARADONA e' piu' stanco e paziente - r 11477 Cy"
+                        action = "sell"
+                        
+                        # deviation_sell = ma3_last/last_trade_price
+                        # > estate 5-78 da 5-48 
+                        # 17 nov 2025 ha venduto mentre stava risalendo bello bello
+                        # 17 nov 2025 aggiunta and (ma8_last < ma8_2_min_ago or delta_CM_300_25_last > delta_CM_300_25_2_min_ago)
+
+
+
+
                         
                         
                     ############################################################################################################################
