@@ -31449,18 +31449,17 @@ class maddog:
 
 
                 elif (
-                    ma3_last > ma13_last
-                    
+                    ma3_last > ma9_last
+                    and price >= price_2_min_ago
+                    and ma8_last >= ma8_2_min_ago
+
                     and (ma78_last < ma150_last or ma100_last < ma100_120_min_ago)
 
-                    and deviation_ma25_sotto_ma300 < -0.50
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.083
-
-                    and deviation_ma39 < -0.10
-                    and deviation_ma3_sotto_ma50 < -0.13
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.20
-                    and deviation_ma25_sotto_ma300 < -0.50
-                    and ma8_last >= ma8_2_min_ago
+                    and deviation_ma39 < -0.27 
+                    and adeviation_ma3_sotto_ma50 < -0.30
+                    nd deviation_ma5_sopra_o_sotto_ma100 < -0.72
+                    and deviation_ma25_sotto_ma300 < -1.20
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
 
                     and deviation_ma50_sopra_o_sotto_ma50_90_min_ago < -0.015
                     and deviation_ma5_sopra_ma59 < -0.10
@@ -31473,7 +31472,6 @@ class maddog:
                     and ma200_last < ma300_last
                     and ma450_last < ma450_300_min_ago
                     
-                    and ma2_last >= ma10_last
                     and macd_differenza_2_min_ago > -28.50
                
                 ):
@@ -31488,6 +31486,9 @@ class maddog:
                     # 21 ott 2025 aggiunta and ma8_last >= ma8_2_min_ago
                     # 21 ott 2025 aggiunte pg
                     # 26 ott 2025 ingresso dev da precedenti sell
+                    # 18 nov 2025 aggiunte dev piu' profonde ! grazie alle pg
+                    # 18 nov 2025 aggiunta and price >= price_2_min_ago
+
 
 
 
