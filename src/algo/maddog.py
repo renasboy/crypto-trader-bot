@@ -625,6 +625,7 @@ class maddog:
         ma20_30_min_ago = self.algo_helper.ma_minutes_ago(20, 30)
         ma20_60_min_ago = self.algo_helper.ma_minutes_ago(20, 60)
         ma25_2_min_ago = self.algo_helper.ma_minutes_ago(25, 2)
+        ma25_5_min_ago = self.algo_helper.ma_minutes_ago(25, 5)
         ma25_10_min_ago = self.algo_helper.ma_minutes_ago(25, 10)
         ma25_30_min_ago = self.algo_helper.ma_minutes_ago(25, 30)
         ma25_45_min_ago = self.algo_helper.ma_minutes_ago(25, 45)
@@ -16582,16 +16583,15 @@ class maddog:
 
 
                 elif (   
-                    ma3_last > ma11_last
+                    ma3_last > ma9_last
+                    and ma5_last >= ma5_2_min_ago
+                    and ma8_last >= ma8_2_min_ago
 
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > 0.02
 
                     and ma300_last > ma300_360_min_ago
                     and (ma90_last > ma110_last or ma100_last > ma200_last or ma200_last > ma300_last)
                     and (ma100_last > ma100_60_min_ago or ma200_last > ma200_20_min_ago or ma200_last > ma200_60_min_ago)
-                    
-                    and ma5_last >= ma5_2_min_ago
-                    
                     
                     and macd_differenza_2_min_ago > -18.25
                 ):    
@@ -16602,7 +16602,8 @@ class maddog:
 
                     # 10 nov 2025 aggiunte pg
                     # 10 nov 2025 con deviation_ma100_sopra_o_sotto_ma100_10_min_ago > 0.02 anticipo ndecchiecella
-
+                    # 18 nov 2025 3-9 da 3-11 
+                    # 18 nov 2025 aggiunta ma8 >= ma8 2 min ago
 
 
 
