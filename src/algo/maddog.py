@@ -67932,7 +67932,6 @@ class maddog:
 
 
 
-            
             elif (
                 deviation_sell > 0.80
                 and ma3_last < ma78_last
@@ -67948,7 +67947,7 @@ class maddog:
                 and macd < macd_2_min_ago
                 and macd_differenza_2_min_ago < -1
             ):    
-                sell = f"SELL CS PMS (ma non troppo !) con 3-78 se 100>300 e con dev > 0.80 e con ma5_11_min_ago - r 16873 C2 a - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                sell = f"SELL CS PMS (ma non troppo !) con 3-78 se 100>300 e con dev > 0.80 e con ma5_11_min_ago - r 16873 C2 aA - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
                 
                 # 27 set 2023 macd < macd 2 min ago 
@@ -67960,6 +67959,36 @@ class maddog:
                 # 30 mag  2025 3-78 da 3-50
                 # 23 ott 2025 aggiunte pg
 
+
+            elif (
+                deviation_sell > 0.80
+
+                and ma3_last < ma50_last
+                and delta_CM_300_25_last < delta_CM_300_25_2_min_ago 
+
+                and seconds_since_last_trade < 7200
+                and ma5_last < ma5_11_min_ago
+
+                and ma100_last > ma300_last
+
+                
+                and ma2_last < ma2_2_min_ago
+                
+                and macd < macd_2_min_ago
+                and macd_differenza_2_min_ago < -1
+            ):    
+                sell = f"SELL CS PMS (ma non troppo !) con 3-78 se 100>300 e con dev > 0.80 e con ma5_11_min_ago - r 16873 C2 aB - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                action = "sell"
+                
+                # 27 set 2023 macd < macd 2 min ago 
+                # 27 set 2023 and macd_differenza_2_min_ago < -1
+                #  1 nov 2023 ma5_11_min_ago da ma5_12_min_ago
+                
+                #  8 mar 2024 3-39 da 3-28
+                #  3 feb 2025 3-50 da 3-39 se 100<300
+                # 30 mag  2025 3-78 da 3-50
+                # 23 ott 2025 aggiunte pg
+                # 19 nov 2025 aggiunta questa che anticipa di una ndecchiecella la vendita della precedente condizione.
 
 
 
