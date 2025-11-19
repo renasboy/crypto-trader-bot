@@ -31779,7 +31779,34 @@ class maddog:
 
                     
                 
+                elif (    
+                    ma3_last > ma13_last
+
+                    and ma300_last < ma300_301_min_ago
+                    and ma300_last < ma450_last
+
+                    and ma100_last > ma100_3_min_ago
+                    and deviation_ma5_sopra_o_sotto_ma100 > -0.60
+                    and (deviation_ma25_sotto_ma300 > -0.89 or delta_CV_300_25_last <= delta_CV_300_25_45_min_ago or delta_CM_300_25_last <= delta_CM_300_25_2_min_ago)
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.07
+                        
+                    and ma100_last < ma100_60_min_ago
+                    and ma100_last < ma100_120_min_ago
                     
+                    and deviation_ma39_sotto_ma200 < -0.01
+                    and deviation_ma54_sopra_o_sotto_ma72 < -0.015
+                        
+                    and ma2_last >= ma2_2_min_ago
+                        
+                ):    
+                    buy = "BUY 4 del 19 nov 2025 > grandissimo ribasso - r 6865"
+                    action = "buy"
+                    percentage = 90
+
+                    # 19 nov 2025 questa e' NECESSARIA ! MADDOG NON AVEVA COMPRATO !
+                        
+                        
+
                 elif (    
                     ma3_last > ma11_last
 
@@ -40772,7 +40799,10 @@ class maddog:
                    
                     elif (    
                         ma3_last > ma13_last
-                        
+
+                        and ma300_last < ma300_301_min_ago
+                        and ma300_last < ma450_last
+
                         and ma100_last > ma100_3_min_ago
                         and deviation_ma5_sopra_o_sotto_ma100 > -0.60
                         and (deviation_ma25_sotto_ma300 > -0.89 or delta_CV_300_25_last <= delta_CV_300_25_45_min_ago or delta_CM_300_25_last <= delta_CM_300_25_2_min_ago)
