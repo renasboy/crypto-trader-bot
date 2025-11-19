@@ -40766,11 +40766,35 @@ class maddog:
                         sell = "SELL 1 (0-3 min) con ma50 < and incrocio 3-28 - r 7764"
                         action = "sell"
 
-                    # incrocio 3 -28 e' fondamentale per evitare punto rosso sovrapposto al punto verde !
+                        # incrocio 3 -28 e' fondamentale per evitare punto rosso sovrapposto al punto verde !
                     
                     
                    
+                    elif (    
+                        ma3_last > ma13_last
+                        
+                        and ma100_last > ma100_3_min_ago
+                        and deviation_ma5_sopra_o_sotto_ma100 > -0.60
+                        and (deviation_ma25_sotto_ma300 > -0.89 or delta_CV_300_25_last <= delta_CV_300_25_45_min_ago or delta_CM_300_25_last <= delta_CM_300_25_2_min_ago)
+                        and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.07
+                        
+                        and ma100_last < ma100_60_min_ago
+                        and ma100_last < ma100_120_min_ago
                     
+                        and deviation_ma39_sotto_ma200 < -0.01
+                        and deviation_ma54_sopra_o_sotto_ma72 < -0.015
+                        
+                        and ma2_last >= ma2_2_min_ago
+                        
+                    ):    
+                        buy = "BUY 5 del 19 nov 2025 > grandissimo ribasso - r 7780"
+                        action = "buy"
+                        percentage = 90
+
+                        # 19 nov 2025 questa e' NECESSARIA ! MADDOG NON AVEVA COMPRATO !
+
+
+
                     # SELL 1 (0-3 min) con ma50 < and incrocio 3-33 and deviation_sell -0.23 and rapporto_delta_1_delta_2 < 1
                     
                     elif (
