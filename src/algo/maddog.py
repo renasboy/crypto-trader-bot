@@ -39631,7 +39631,7 @@ class maddog:
                 elif (    
                     ma3_last > ma13_last
 
-                    and delta_CM_300_25_last < delta_CM_300_25_2_min_ago
+                    and delta_CM_300_25_last <= delta_CM_300_25_2_min_ago
 
                     and ma300_last < ma300_60_min_ago
                     and ma450_last < ma450_360_min_ago
@@ -39662,7 +39662,7 @@ class maddog:
                     # 21 ott 2025 trend decrescente consolidato ma tutte le medie lunghe cominciano a risalire !
                     # 21 ott 2025 and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.045 (e' una garanzia)
                     #  9 nov 2025 se cm giorno anticipato ndecchiecella
-
+                    # 20 nov 2025 anticipata di meno di una ndecchiecella
 
 
                 elif (    
@@ -60587,6 +60587,7 @@ class maddog:
 
             elif (
                 ma39_last <= ma100_last
+                and price < price_2_min_ago
 
                 and delta_450_300 > delta_450_300_60_min
                 and ma200_last > ma200_60_min_ago
@@ -60609,7 +60610,8 @@ class maddog:
                 # 27 mar 2025 aggiunta 3<39
                 # 20 ott 2025 aggiunte pg
                 # 10 nov 2025 and deviation_ma39 < -0.015 (sulle pg -0.013) (ha venduto mentre sale)
-
+                # 20 nov 2025 aggiunta and price < price_2_min_ago
+                # 20 nov 2025 tienila pe la madonna ! anche se ha venduto mentre poco poco stava risalendo.
 
 
 
