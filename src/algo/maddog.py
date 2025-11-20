@@ -3018,6 +3018,7 @@ class maddog:
 
                 elif (  
                     ma3_last > ma8_last
+                    and ma5_last >= ma5_2_min_ago
 
                     and (ma450_last > ma450_300_min_ago or ma300_last > ma300_301_min_ago or ma39_last > ma100_last or ma39_last > ma200_last)
 
@@ -3025,9 +3026,6 @@ class maddog:
 
                     and (delta_CM_300_25_last <= delta_CM_300_25_2_min_ago or delta_50_25_last <= delta_50_25_30_min_ago)
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.07
-                    and ma8_last >= ma8_2_min_ago
-
-                    
                     
                     and ma2_last > ma5_last
                     and macd_differenza_2_min_ago > -18.50
@@ -3043,7 +3041,7 @@ class maddog:
                     # 17 ott 2025 se cv notte cm giorno and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.07
                     # 17 ott 2025 aggiunte pg
                     # 15 nov 2025 aggiunta and ma8_last >= ma8_2_min_ago
-
+                    # 20 nov 2025 ma5 2 min invece di ma8 2 min (ma e' andata bene)
 
 
 
@@ -15174,6 +15172,10 @@ class maddog:
 
                 elif (
                     ma3_last > ma10_last
+                    and price >= price_2_min_ago
+                    and ma5_last > ma5_2_min_ago
+                    
+
                     and (ma8_last < ma25_last or delta_CM_300_25_last > delta_CM_300_25_2_min_ago)
                     and deviation_ma39 < -0.08 
                     and deviation_ma3_sotto_ma50 < -0.11
@@ -15186,7 +15188,7 @@ class maddog:
                     
                     and deviation_ma100_sopra_ma300 < 0.20
                     
-                    and price >= price_2_min_ago
+                    
                     and macd_differenza_2_min_ago > -18.50
                 ):
                     buy = f"BUY 2 con 200> or 450> - r 4685 AY1 A2 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
@@ -15195,7 +15197,7 @@ class maddog:
 
                     # 19 nov 2025 se (delta_CV_300_25_last < delta_CV_300_25_45_min_ago or ma50_last > ma100_last) ok cosi'
                     # 20 nov 2025 se (ma8_last < ma25_last or delta_CM_300_25_last > delta_CM_300_25_2_min_ago) aggiungo pochissima dev + ma3 > ma3 2 min ago
-
+                    # 20 nov 2025 ma3_last > ma3_2_min_ago diventa and ma5_last > ma5_2_min_ago cazzo (ha comprato mentre ma3 scende)
 
 
 
