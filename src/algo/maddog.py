@@ -68041,14 +68041,16 @@ class maddog:
 
 
             elif (
-                deviation_sell > 0.81
+                ma8_last < ma50_last
+
+                and deviation_sell > 0.81
                 and deviation_sell < 1.25
 
                 and ma300_last > ma450_last
                 and ma300_last > ma300_301_min_ago
                 and delta_1 > delta_2
 
-                and ma3_last < ma50_last
+                
                 and ma3_last < ma18_last
                 and ma2_last < ma5_last
                 
@@ -68069,7 +68071,7 @@ class maddog:
                 #  6 feb 2025 aggiunta NOTTE ! 
                 #  6 feb 2025 se 300 sale da 5 ore vendi quando la ma100 comincia a curvare verso il basso ! lasciala correre !
                 # 23 ott 2025 aggiunte pg
-
+                # 20 nov 2025 8-50 da 3-50 lasciala andare ! (and ma300_last > ma300_301_min_ago)
 
 
 
