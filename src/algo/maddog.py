@@ -1018,6 +1018,12 @@ class maddog:
         deviation_ma150_sopra_o_sotto_ma250 = (ma150_last / ma250_last - 1) * 100 if ma250_last else 0
         self.algo_helper.info("deviation_ma150_sopra_o_sotto_ma250: {}".format(deviation_ma150_sopra_o_sotto_ma250))
 
+        # formula DEVIATION_ma78_sopra_o_sotto_ma200 !
+        
+        deviation_ma78_sotto_ma100 = (ma78_last / ma100_last - 1) * 100 if ma100_last else 0
+        self.algo_helper.info("deviation_ma78_sotto_ma100: {}".format(deviation_ma78_sotto_ma100))
+
+
 
         # formula DEVIATION_ma78_sopra_o_sotto_ma200 !
         
@@ -1245,11 +1251,18 @@ class maddog:
         self.algo_helper.info("deviation_ma20_sotto_ma59: {}".format(deviation_ma20_sotto_ma59))
         
         
-        
+        # formula deviation_ma100_sotto_ma200
+
+        deviation_ma100_sotto_ma200 = (ma100_last / ma200_last - 1) * 100 if ma200_last else 0
+        self.algo_helper.info("deviation_ma100_sotto_ma200: {}".format(deviation_ma100_sotto_ma200))
+
+
         # formula deviation_ma100_sopra_ma450
 
         deviation_ma100_sopra_ma450 = (ma100_last / ma450_last - 1) * 100 if ma450_last else 0
         self.algo_helper.info("deviation_ma100_sopra_ma450: {}".format(deviation_ma100_sopra_ma450))
+
+
         
         
         
@@ -31837,8 +31850,48 @@ class maddog:
 
 
 
+                  
                     
+
                 
+                elif (    
+                    ma3_last > ma13_last
+
+                    and ma300_last < ma300_301_min_ago
+                    and ma100_last < ma100_120_min_ago
+
+                    and deviation_ma78_sotto_ma100 > -0.11
+                    and deviation_ma50_sotto_ma100 > -0.30
+                    and deviation_ma100_sotto_ma200 > -0.30
+                    
+
+                    and (deviation_ma5_sopra_o_sotto_ma100 > -0.50 or delta_CV_300_25_last <= delta_CV_300_25_45_min_ago)
+                    
+                    and ma5_last < ma50_last
+                    and ma5_last < ma100_last
+
+                    and ma100_last < ma450_last
+                    and ma200_last < ma300_last
+                    and ma200_last < ma450_last
+                    and ma300_last < ma450_last
+
+                    and deviation_ma5_sotto_ma300 < -0.90
+                    and deviation_ma300_sotto_ma450 < -0.09
+
+                ):    
+                    buy = "BUY 4 SORELLE del 20 nov 2025 > grandissimo ribasso - r 6860"
+                    action = "buy"
+                    percentage = 90
+
+                    # 20 nov 2025 questa condizione e' NECESSARIA NON TOCCARLA ! MADDOG NON AVEVA COMPRATO !
+
+
+
+
+
+
+
+
                 elif (    
                     ma3_last > ma13_last
 
@@ -31863,7 +31916,11 @@ class maddog:
                     action = "buy"
                     percentage = 90
 
-                    # 19 nov 2025 questa e' NECESSARIA ! MADDOG NON AVEVA COMPRATO !
+                    # 19 nov 2025 questa condizione e' NECESSARIA ! MADDOG NON AVEVA COMPRATO !
+
+
+
+
                         
                         
 
