@@ -31876,8 +31876,7 @@ class maddog:
                     and ma300_last < ma450_last
 
                     and deviation_ma5_sotto_ma300 < -0.90
-                    and deviation_ma300_sotto_ma450 < -0.09
-
+                 
                 ):    
                     buy = "BUY 4 SORELLE del 20 nov 2025 > grandissimo ribasso - r 6860"
                     action = "buy"
