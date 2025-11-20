@@ -15073,6 +15073,7 @@ class maddog:
 
                 elif (    
                     ma3_last > ma13_last
+                    and price > price_2_min_ago
 
                     and delta_CV_300_25_last < delta_CV_300_25_45_min_ago
 
@@ -15092,7 +15093,7 @@ class maddog:
                     # 22 set 2025 aggiunta da RCCR - maddog ha comprato con molto ritardo
                     #  5 nov 2025 SE CV GIORNO OK COSI
                     #  5 nov 2025 aggiunte pg
-
+                    # 20 nov 2025 aggiunta and price > price_2_min_ago forse dovro' mettere ma3 > ma3 2 min ago
 
                     
                 elif (
