@@ -36,13 +36,17 @@
 
           RIBASSO
           
-          se 8<325 or 275 < 275 60 min ago
-          and 8<69
-          aggiungi dev !
+          se
+          and (ma8_last < ma325_last or ma275_last < ma275_60_min_ago)
+          and ma8_last < ma69_last
 
-          3-39 < -0.01
-          3-50 < -0.10
-          5-100 < -0.25
+          aggiungi dev gemelle CA+CL !
+
+          and deviation_ma39 < -0.02
+          and deviation_ma3_sotto_ma50 < -0.13
+          and adeviation_ma5_sopra_o_sotto_ma100 < -0.90
+          and deviation_ma25_sotto_ma300 < -0.45
+          and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.13
 
           ############################################
 
@@ -25318,7 +25322,7 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
                     
                 ):    
-                    buy = f"BUY 3B da RCCR - se ma39 > ma50 - r 6280 bA2 Y - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    buy = f"BUY 3 DEV GEMELLE CA+CL - r 6280 bA2 Y - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     action = "buy"
                     percentage = 80
 
