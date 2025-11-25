@@ -4342,10 +4342,16 @@ class maddog:
                     #  8 ott 2025 aggiunta and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.05
                     #  8 ott 2025 ( le parentesi graffe cosi' non funzionano )
                     # 26 ott 2025 aggiunte pg (tutte sulla stessa riga)
-                     
 
+
+
+
+                     
                 elif (    
                     ma3_last > ma10_last
+
+                    and (ma8_last > ma325_last or ma275_last > ma275_60_min_ago)
+                    and ma8_last > ma69_last
 
                     and ma300_last < ma300_60_min_ago
                     and ma200_last < ma200_60_min_ago
@@ -4366,7 +4372,38 @@ class maddog:
                     and macd_differenza_2_min_ago > -18.00
                  
                 ):
-                    buy = f"BUY 1 formula MY COMPA + parentesi graffe - r 1043 B1 NUOVA ERA A3 SOFT y1 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    buy = f"BUY 1 formula MY COMPA + parentesi graffe - r 1043 B1 NUOVA ERA A3 SOFT y1 X - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    action = "buy"
+                    percentage = 80
+
+                    # 25 nov 2025 se (ma8_last > ma325_last or ma275_last > ma275_60_min_ago) and ma8_last > ma69_last ok cosi'
+
+
+                elif (    
+                    ma3_last > ma10_last
+
+                    and (ma8_last < ma325_last or ma275_last < ma275_60_min_ago)
+                    and ma8_last < ma69_last
+
+                    deviation_ma39 < -0.17
+                    deviation_ma3_sotto_ma50 < -0.36
+                    deviation_ma5_sopra_o_sotto_ma100 < -0.60
+                    deviation_ma25_sotto_ma300 < -1.25
+                    deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.015
+
+                    and ma300_last < ma300_60_min_ago
+                    and ma200_last < ma200_60_min_ago
+
+                    and delta_1 < delta_2
+                    and delta_300_200 < delta_300_200_30_min
+                    
+                    and deviation_ma5_sotto_ma300 < -0.40
+                    and deviation_ma10_sopra_ma200 < -0.30
+                    
+                    and macd_differenza_2_min_ago > -18.00
+                 
+                ):
+                    buy = f"BUY 1 formula MY COMPA + parentesi graffe - r 1043 B1 NUOVA ERA A3 SOFT y1 Y - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     action = "buy"
                     percentage = 80
 
@@ -4374,7 +4411,7 @@ class maddog:
                     #  7 ott 2025 aggiunta parentesi graffa sulla stessa riga
                     # 28 ott 2025 le pg sulla stessa riga funzionano.
                     # 28 ott 2025 aggiunte pg
-
+                    # 25 nov 2025 se (ma8_last < ma325_last or ma275_last < ma275_60_min_ago) and ma8_last < ma69_last aggiunte DEV GEMELLE CA+CL
 
 
 
@@ -36071,10 +36108,14 @@ class maddog:
                     # 25 nov 2025 se delta 300-100 giorno ok cosi'
 
 
-
                 elif (      
                     ma3_last < ma9_last
-                    and delta_300_100 > delta_300_100_50_min
+
+                    and (ma8_last > ma325_last or ma275_last > ma275_60_min_ago)
+                    and ma8_last > ma69_last
+
+                    
+                    and delta_300_100 > delta_300_100_50_min 
 
                     and deviation_ma39 < -0.06 
                     and deviation_ma3_sotto_ma50 < -0.16
@@ -36088,7 +36129,40 @@ class maddog:
                     and macd_differenza_2_min_ago > -18.50
                 ):    
               
-                    buy = f"BUY 5 con cv giorno e cm giorno - r 7210 A2 y - and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    buy = f"BUY 5 con cv giorno e cm giorno - r 7210 A2 yX - and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    action = "buy"
+                    percentage = 90
+
+                    # 25 nov 2025 se (ma8_last > ma325_last or ma275_last > ma275_60_min_ago) and ma8_last > ma69_last OK COSI'
+
+
+
+
+                elif (      
+                    ma3_last < ma9_last
+
+                    and (ma8_last < ma325_last or ma275_last < ma275_60_min_ago)
+                    and ma8_last < ma69_last
+
+                    and deviation_ma39 < -0.17
+                    and deviation_ma3_sotto_ma50 < -0.35
+                    and adeviation_ma5_sopra_o_sotto_ma100 < -0.50
+                    and deviation_ma25_sotto_ma300 < -0.85
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.13
+
+
+                    and delta_300_100 > delta_300_100_50_min
+
+
+                    and price >= price_2_min_ago
+                    and (deviation_ma78_sotto_ma100 > -0.11 or deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.037)
+                    
+                    and (delta_CV_300_25_last <= delta_CV_300_25_45_min_ago or delta_CM_300_25_last <= delta_CM_300_25_2_min_ago) 
+                    
+                    and macd_differenza_2_min_ago > -18.50
+                ):    
+              
+                    buy = f"BUY 5 con cv giorno e cm giorno - r 7210 A2 yY - and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     action = "buy"
                     percentage = 90
 
@@ -36105,7 +36179,7 @@ class maddog:
                     # 18 nov 2025 se ma25_last > ma100_last or ma25_last >= ma25_5_min_ago ok cosi'
                     # 20 nov 2025 se 3<9 piccola dev
                     # 25 nov 2025 se delta 300-100 notte aggiunte dev grazie alle pg
-
+                    # 25 nov 2025 se (ma8_last < ma325_last or ma275_last < ma275_60_min_ago) and ma8_last < ma69_last aggiungo DEV GEMELLE CA+CL
 
 
 
@@ -39205,6 +39279,10 @@ class maddog:
                     # 20 nov 2025 per adesso la lascio ma ricorda che con deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.051 devi aumentare la profondita' delle dev
 
 
+
+
+
+
                 elif (    
                     ma3_last > ma11_last
 
@@ -39239,17 +39317,20 @@ class maddog:
                     #  1 nov 2025 se cm giorno aggiungo and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.07 + ma8
 
 
+
                 elif (    
                     ma3_last >= ma9_last
                     and ma3_last >= ma3_2_min_ago
 
-                    and ma39_last < ma100_last
+                    and (ma39_last < ma100_last or ma8_last < ma325_last or ma275_last < ma275_60_min_ago)
+                    and ma8_last < ma69_last
+
+                    and deviation_ma39 < -0.42
+                    and deviation_ma3_sotto_ma50 < -0.59
+                    and deviation_ma5_sopra_o_sotto_ma100 < -1.13
+                    and deviation_ma25_sotto_ma300 < -2.30
 
                     and delta_CM_300_25_last > delta_CM_300_25_2_min_ago 
-                    and deviation_ma39 < -0.30
-                    and deviation_ma3_sotto_ma50 < -0.42
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.49
-                    and deviation_ma25_sotto_ma300 < -0.95
 
                     and ma100_last < ma100_120_min_ago
                     and ma200_last < ma200_120_min_ago
@@ -39279,6 +39360,11 @@ class maddog:
                     # 16 NOV 2025 BUY CON ma3_last >= ma9_last
                     # 16 NOV 2025 BUY CON ma3_last >= ma3_2_min_ago
                     # 25 nov 2025 ok
+                    # 25 nov 2025 aggiunte dev GEMELLE
+
+
+
+
 
 
 
@@ -62255,6 +62341,8 @@ class maddog:
 
             elif (
                 ma8_last < ma50_last
+                and (ma3_prev > ma10_prev and ma3_last < ma10_last)
+
                 and ma300_last < ma300_301_min_ago
 
                 and deviation_ma39 < 0.13
@@ -62275,7 +62363,9 @@ class maddog:
                 # 20 nov 2025 anticipata di una ndecchiecella la vendita.
                 # 25 NOV 2025 adesso DOVREI POSTICIPARE DI UNA NDECCHIECELLA LA VENDITA...
                 # 25 NOV 2025 LA LASCIO. COSI' COM'E'.
-
+                # 25 nov 2025 e' vero che 8 stava sotto 50 per questo vendeva subito mentre saliva !
+                # 25 nov 2025 aggiunto and (ma3_prev > ma10_prev and ma3_last < ma10_last)
+                
 
 
 
