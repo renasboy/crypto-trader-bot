@@ -4386,11 +4386,11 @@ class maddog:
                     and (ma8_last < ma325_last or ma275_last < ma275_60_min_ago)
                     and ma8_last < ma69_last
 
-                    deviation_ma39 < -0.17
-                    deviation_ma3_sotto_ma50 < -0.36
-                    deviation_ma5_sopra_o_sotto_ma100 < -0.60
-                    deviation_ma25_sotto_ma300 < -1.25
-                    deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.015
+                    and deviation_ma39 < -0.17
+                    and deviation_ma3_sotto_ma50 < -0.36
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.60
+                    and deviation_ma25_sotto_ma300 < -1.25
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.015
 
                     and ma300_last < ma300_60_min_ago
                     and ma200_last < ma200_60_min_ago
