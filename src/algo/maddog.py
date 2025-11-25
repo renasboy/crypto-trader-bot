@@ -12,8 +12,68 @@
 
 
 
-          and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}                    
+          and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}
+          
                                                                                                                                                                                                             and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}
+
+          
+          ##########
+
+          LUNGHISSIMO RIBASSO.
+
+          and ma300_last < ma300_301_min_ago
+
+          se dev 78-100 > -0.11 or 100 > 100 10 min ago > -0.05 condizione sorelle
+
+          se dev 78-100 < -0.11 or 100 < 100 10 min ago < -0.05 dev profondissime ! GEMELLE !
+
+          #########
+
+
+          #############################################
+
+          ############################################
+
+          RIBASSO
+          
+          se 8<325 or 275 < 275 60 min ago
+          and 8<69
+          aggiungi dev !
+
+          3-39 < -0.01
+          3-50 < -0.10
+          5-100 < -0.25
+
+          ############################################
+
+
+          se 8<325 or 275 < 275 60 min ago
+          and 8>69
+          ok cosi'
+
+          se 8>325 or 275 > 275 60 min ago
+          and 8>69
+          ok cosi'
+
+          se 8>325 or 275 > 275 60 min ago
+          and 8<69
+          ok cosi'
+
+          ##############################################
+          ##############################################
+
+
+          DELTA !
+
+          # and delta_100_50 > delta_100_50_30_min NOTTE !
+          # and delta_450_300 < delta_450_300_60_min
+          # and delta_GPII_1 < delta_GPII_2 GIORNO ! 100-50 last - 10 min ago
+          # and delta_300_100 < delta_300_100_50_min
+
+
+          ##############################################
+          ##############################################
+
 
 
           and price >= price_2_min_ago
@@ -27,10 +87,7 @@
 
 
 
-          # and delta_100_50 > delta_100_50_30_min NOTTE !
-          # and delta_450_300 < delta_450_300_60_min
-          # and delta_GPII_1 < delta_GPII_2 GIORNO ! 100-50 last - 10 min ago
-          # and delta_300_100 < delta_300_100_50_min
+          
 
 
 
@@ -596,7 +653,10 @@ class maddog:
         ma240_last, ma240_prev = self.algo_helper.ma_last_prev(240)
         ma250_last, ma250_prev = self.algo_helper.ma_last_prev(250)
         ma285_last, ma285_prev = self.algo_helper.ma_last_prev(285)
+
         ma300_last, ma300_prev = self.algo_helper.ma_last_prev(300)
+        ma325_last, ma325_prev = self.algo_helper.ma_last_prev(325)
+
         ma425_last, ma425_prev = self.algo_helper.ma_last_prev(425)
         ma450_last, ma450_prev = self.algo_helper.ma_last_prev(450)
         
@@ -739,6 +799,7 @@ class maddog:
 
         ma225_60_min_ago = self.algo_helper.ma_minutes_ago(225, 60)
         ma250_60_min_ago = self.algo_helper.ma_minutes_ago(250, 60)
+        ma275_60_min_ago = self.algo_helper.ma_minutes_ago(275, 60)
 
         ma300_2_min_ago = self.algo_helper.ma_minutes_ago(300, 2)
         ma300_10_min_ago = self.algo_helper.ma_minutes_ago(300, 10)
