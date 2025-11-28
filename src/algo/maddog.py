@@ -24407,9 +24407,20 @@ class maddog:
                     #  3 nov 2025 aggiunta questa !
 
 
-
                 elif (   
-                    ma3_last > ma13_last
+                    ma3_last > ma11_last
+
+                    and (ma8_last > ma275_last or ma8_last > ma325_last or ma275_last > ma275_60_min_ago)
+                    and ma8_last > ma69_last
+
+                    and ma10_last < ma20_last
+                    and ma39_last < ma100_last
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+
+                    and ma100_last < ma100_180_min_ago
+                    and ma200_last < ma200_180_min_ago
+                    and ma300_last < ma300_180_min_ago
 
                     and delta_CM_300_25_last < delta_CM_300_25_2_min_ago 
                     and ma8_last >= ma8_2_min_ago
@@ -24417,22 +24428,52 @@ class maddog:
                     and deviation_ma300_sopra_ma450 > -0.10
                     and deviation_ma200_sotto_ma300 > -0.10
 
-                    and ma10_last < ma20_last
-                    and ma39_last < ma100_last
-                    
                     and deviation_ma5_sotto_ma300 > -0.60
 
+                    and ma2_last > ma5_last
+                    
+                ):
+                    buy = f"BUY 3 > 180 min di ribasso con MC GIORNO e CON ma10<ma20 con 3-20 MA LE MEDIE LUNGHE SONO VICINISSIME - r 6050 aX - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    action = "buy"
+                    percentage = 80
+
+                    # 28 nov 2025 se (ma8_last > ma275_last or ma8_last > ma325_last or ma275_last > ma275_60_min_ago) ok cosi'
+                    # 28 nov 2025 se ma8_last > ma69_last ok cosi'
+
+
+                elif (   
+                    ma3_last > ma11_last
+
+                    and (ma8_last < ma275_last or ma8_last < ma325_last or ma275_last < ma275_60_min_ago)
+                    and ma8_last < ma69_last
+                    and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.009
+                    and deviation_ma39 < -0.05
+                    and deviation_ma3_sotto_ma50 < -0.07
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.15
+                    and deviation_ma25_sotto_ma300 < -0.35
+
+
+                    and ma10_last < ma20_last
+                    and ma39_last < ma100_last
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
 
                     and ma100_last < ma100_180_min_ago
                     and ma200_last < ma200_180_min_ago
                     and ma300_last < ma300_180_min_ago
-                    
+
+                    and delta_CM_300_25_last < delta_CM_300_25_2_min_ago 
+                    and ma8_last >= ma8_2_min_ago
+
+                    and deviation_ma300_sopra_ma450 > -0.10
+                    and deviation_ma200_sotto_ma300 > -0.10
+
+                    and deviation_ma5_sotto_ma300 > -0.60
+
                     and ma2_last > ma5_last
-                    and ma2_last >= ma2_2_min_ago
+                    
                 ):
-                    buy = f"BUY 3 > 180 min di ribasso con MC GIORNO e CON ma10<ma20 con 3-20 MA LE MEDIE LUNGHE SONO VICINISSIME - r 6050 a - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    buy = f"BUY 3 > 180 min di ribasso con MC GIORNO e CON ma10<ma20 con 3-20 MA LE MEDIE LUNGHE SONO VICINISSIME - r 6050 aY - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     action = "buy"
                     percentage = 80
 
@@ -24441,6 +24482,8 @@ class maddog:
                     # 25 set 2025 la lascio
                     # 23 ott 2025 se cm giorno ok cosi'
                     # 23 ott 2025 aggiungo pg
+                    # 28 nov 2025 se (ma8_last < ma275_last or ma8_last < ma325_last or ma275_last < ma275_60_min_ago) aggiungo dev GEMELLE CA+CL
+                    # 28 nov 2025 se ma8_last < ma69_last aggiungo dev GEMELLE CA+CL
 
 
 
@@ -32056,23 +32099,25 @@ class maddog:
 
                
                 elif (
-                    ma3_last > ma13_last
+                    ma3_last > ma10_last
+                    and ma300_last > ma300_360_min_ago
 
+                    and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.009
+                    and deviation_ma39 < -0.105 
+                    and deviation_ma3_sotto_ma50 < -0.107
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.21
+                    and deviation_ma25_sotto_ma300 < -0.285
+                    
                     and (ma25_last < ma50_last or delta_50_25_last > delta_50_25_30_min_ago or ma100_last < ma100_120_min_ago)
-                    and deviation_ma25_sotto_ma300 < -0.27
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.055
-
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.06
+                    
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
 
                     and ma100_last < ma100_180_min_ago
                     and ma200_last < ma200_180_min_ago
                     and ma300_last < ma300_180_min_ago
-                    
-                    and ma300_last > ma300_360_min_ago
-
-                    
-                    and ma8_last >= ma8_2_min_ago
+                   
                 ):
                     buy = f"BUY 4 23 ott 2025 > 180 min di ribasso con deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.055 - r 6820 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     action = "buy"
@@ -32080,8 +32125,8 @@ class maddog:
 
                     # 23 ott 2025 aggiunte pg
                     #  9 nov 2025 se anche 25<50 or delta_50_25_last > delta_50_25_30_min_ago aggiungo and deviation_ma25_sotto_ma300 < -0.27
-
-
+                    # 28 nov 2025 aggiunta and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.009
+                    # 28 nov 2025 dev piu' profonde di una ndecchiecella. per adesso la tengo cosi'.
 
 
 
@@ -66668,13 +66713,13 @@ class maddog:
             elif (    
                 ma2_last < ma4_last
                 and ma2_last < ma6_last
+                
                 and ma3_last > ma39_last
-
                 and ma33_last > ma78_last
                 
                 and delta_1_200_30 < delta_2_200_30_30_min
                 
-                and deviation_crollo_24_aprile < -0.225
+                and deviation_crollo_24_aprile < -0.21
                 
                 and deviation_ma5_sotto_ma200 > -1.00
             ): 
@@ -66698,9 +66743,9 @@ class maddog:
                 # 25 GEN 2023 a -0.54 da -0.55 dopo grande perdita -1.43 % ore 16:00 del 23 gennaio 2023 !
                 # 10 gen 2024 and deviation_crollo_24_aprile < -0.24 da -0.54 dopo che ha fatto -1.13% il giorno 10 genn 2024 alle ore 22:17
                 # 11 feb 2024 and deviation_crollo_24_aprile < -0.23 da -0.24 va tutto bene
-                # 12 nov 2024 and deviation_crollo_24_aprile < -0.22 da -0.23
+                # 12 nov 2024 and deviation_crollo_24_aprile < -0.225 da -0.23
                 #  7 apr 2025 SE 3>39 OPPURE SE 3<39
-
+                # 28 nov 2025 and deviation_crollo_24_aprile < -0.21 da -0.225
                 
 
             elif (    
@@ -67749,30 +67794,27 @@ class maddog:
             
             elif (
                 seconds_since_last_trade > max_hold_time_in_seconds
+
                 and ma20_last < ma50_last
+                and deviation_sell > -0.001
+
                 and ma8_last <= ma8_2_min_ago
-
-                and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.07
-
-                and deviation_sell < -0.001
 
                 and delta_1_69_39 < delta_2_69_39
 
                 and deviation_ma25_sotto_ma200 > -2.00
 
-                and ma450_last < ma450_10_min_ago
-                and ma100_last < ma300_last
-                and ma100_last < ma200_last
-
+                and (ma450_last < ma450_10_min_ago or ma450_last < ma450_60_min_ago)
+                and (ma100_last < ma200_last or ma100_last < ma300_last)
+                
                 and deviation_ma100_sopra_ma200 > -0.70
-                and deviation_ma100_sopra_ma300 < 0.50
-
+                
                 and ma3_last < ma10_last
                 and ma2_last < last_trade_price
-                and ma2_last <= ma2_2_min_ago
+                
             ):
 
-                sell = f"SELL CS - D.A. 270 sec E dev sell < -0.001 e ma13 < and con 450 < MA GIORNO e ma100 non scende molto e 8 <= ma8 2 min ago - r 16694 B2 Y2 Ax 2x - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                sell = f"SELL CS - D.A. 270 sec E dev sell < -0.001 e ma13 < and con 450 < MA GIORNO e ma100 non scende molto e 8 <= ma8 2 min ago - r 16694 B2 Y2 Ax 2x - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.3f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
                 
                 # 20 mar 2025 deviation_sell a -0.055 da -0.05
@@ -67783,7 +67825,7 @@ class maddog:
                 # 13 ott 2025 aggiunte parentesi graffe
                 # 27 ott 2025 aggiunte pg
                 #  9 nov 2025 aggiunte :.3f alle pg (che hanno funzionato)
-
+                # 28 nov 2025 anticipata ndecchiecella 20 e' andata sotto 50 e 450 < 60 min !
 
 
 
