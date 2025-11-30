@@ -39200,7 +39200,7 @@ class maddog:
                     ma3_last > ma8_last
                     and ma8_last >= ma8_2_min_ago
 
-                    and ma50_last < ma100_last
+                    and (ma50_last < ma100_last or ma5_last < ma50_last)
                     and deviation_ma39 < -0.015 
                     and deviation_ma3_sotto_ma50 < -0.017 
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.069
@@ -39232,6 +39232,9 @@ class maddog:
                     # 30 nov 2025 ko
                     # 30 nov 2025 aggiunte delle dev poco profonde grazie alle pg ! 
                     # 30 nov 2025 aggiunta and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f}
+                    # 30 nov 2025 ricordati questa : se (ma50_last < ma100_last or ma5_last < ma50_last) + dev (poco profonde)
+
+
 
 
                 elif (
