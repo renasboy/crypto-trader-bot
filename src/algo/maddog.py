@@ -39202,7 +39202,7 @@ class maddog:
 
                     and (ma50_last < ma100_last or ma5_last < ma50_last)
                     and deviation_ma39 < -0.015 
-                    and deviation_ma3_sotto_ma50 < -0.017 
+                    and deviation_ma3_sotto_ma50 < -0.016
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.069
 
                     and (ma20_last > ma50_last or delta_1_50_20 < delta_2_50_20 or delta_1 < delta_2 or delta_CM_300_25_last < delta_CM_300_25_2_min_ago )
