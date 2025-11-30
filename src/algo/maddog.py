@@ -39173,8 +39173,8 @@ class maddog:
                     and ma50_last > ma100_last 
 
                     and delta_1_50_20 < delta_2_50_20
-                    and (ma20_last > ma50_last or delta_1 < delta_2)
-
+                    
+                    and (ma20_last > ma50_last or delta_1_50_20 < delta_2_50_20 or delta_1 < delta_2 or delta_CM_300_25_last < delta_CM_300_25_2_min_ago)
                     and ma200_last >= ma200_120_min_ago
                     and ma300_last >= ma300_60_min_ago
 
@@ -39192,7 +39192,7 @@ class maddog:
                     # 10 nov 2025 ok
                     # 10 nov 2025 aggiunte pg
                     # 13 nov 2025 se ma50_last > ma100_last ok cosi'
-
+                    # 30 nov 2025 confortato il buy con altre condizioni di rinforzo !
 
 
 
@@ -39205,7 +39205,7 @@ class maddog:
                     and deviation_ma3_sotto_ma50 < -0.016
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.069
 
-                    and (ma20_last > ma50_last or delta_1_50_20 < delta_2_50_20 or delta_1 < delta_2 or delta_CM_300_25_last < delta_CM_300_25_2_min_ago )
+                    and (ma20_last > ma50_last or delta_1_50_20 < delta_2_50_20 or delta_1 < delta_2 or delta_CM_300_25_last < delta_CM_300_25_2_min_ago)
 
                     and ma200_last >= ma200_120_min_ago
                     and ma300_last >= ma300_60_min_ago
