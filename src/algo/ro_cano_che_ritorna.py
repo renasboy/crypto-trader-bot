@@ -1,5 +1,3 @@
-# A.D. 2024 
-# sono 20 anni compa !
 
 class ro_cano_che_ritorna:
   
