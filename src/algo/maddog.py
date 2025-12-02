@@ -56035,17 +56035,28 @@ class maddog:
                         
                         # 14 ott 2023 and dev_ma25 a < -0.20 da < -0.21
                         #  9 nov 2023 aggiunta and ma2_differenza_2_min_ago < -5
+
+
+
                     
                     elif (
                         ma50_last > ma50_2_min_ago
-                        and (ma3_prev > ma13_prev and ma3_last < ma13_last)
+                        and (ma3_prev > ma15_prev and ma3_last < ma15_last)
                         and deviation_sell > 2.71
+
+                        and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.001
                         and ma2_last < ma2_2_min_ago
+
                     ):
 
-                        sell = "SELL 3 dopo 90 min (dopo 110 min RCCR) con ma50 > incrocio 3-13 (!) and deviation_sell > 2.71 - r 14094"
+                        sell = f"SELL 3 dopo 90 min (dopo 110 min RCCR) con ma50 > incrocio 3-13 (!) and deviation_sell > 2.71 - r 14094 - and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                         action = "sell"
-                        
+
+                        #  2 dic 2025 aggiunte pg
+                        #  2 dic 2025 sell con 3-15 da 3-13
+                        #  2 dic 2025 aggiunto and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.001
+
+
                         
                     elif (     
                         ma50_last > ma50_2_min_ago 
@@ -56053,7 +56064,7 @@ class maddog:
                         and deviation_sell < -0.20 
                         and ma3_last < ma50_last
                     ):
-                        sell = "SELL 3 dopo 90 min con ma50> and (deviation_sell < 0.10 and ma3_last < ma50_last)- r 14105"
+                        sell = "SELL 3 dopo 90 min con ma50> and (deviation_sell < 0.10 and ma3_last < ma50_last) - r 14105"
                         action = "sell"
                         
                     
@@ -70245,37 +70256,21 @@ class maddog:
         return action, percentage
 
         ############### FINE ALGORITH ###################
+
+
+
+
+
+
+
+
+
+        """
+
+        and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f}
+
+        buy = f"BUY 5 compare forever  - r 7589 B2y B - and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+
+        """
         
-        # viva ro combaro meo.
-        # questi miei sacrifici io li dedico a te.
-        # grazie.
-        # niente altro.
         
-        # roma 5 maggio 2022
-        
-        # 15 giugno 2022 INGRESSO DELLE 2 SORELLE 3-10 and 5-28
-        
-        # in futuro
-            # MACD e RSI
-            # TOGLIERE TUTTI GLI INCROCI AL BUY ! se 13 > 100 NON INCROCERA' MAI ! INCROCIO 13-100 DIVENTA 13>100 !
-            # analisi dei dati !
-            
-            
-            # 5 luglio 2022 fine ordine e progresso.
-            # combaro meo, grazie di tutto !
-            
-            
-            # i know how to speak- manchester orchestra 
-            # core 'ngrato - enrico caruso
-            # not dark yet (nyc)(bd) 
-            # ti voglio bene, compa.
-            # non siamo non siamo non siamo !
-            
-            # con il mio affetto piu' grande.
-            # penso sempre a te.
-            # grazie sempre.
-            # grazie.
-            # compa
-            # compa torna !
-            # ave compa caro
-            #
