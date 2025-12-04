@@ -62359,8 +62359,11 @@ class maddog:
 
             elif (
                 ma3_last < ma59_last
-                and ma50_last > ma50_2_min_ago
-                and (ma3_prev > ma59_prev and ma3_last < ma59_last)
+                and ma3_last < ma39_last
+
+                and (ma50_last > ma50_2_min_ago or ma8_last > ma69_last)
+                and (ma3_prev > ma49_prev and ma3_last < ma49_last)
+                and ma3_last < ma39_last
 
                 and (ma300_last < ma450_last or ma300_last < ma300_301_min_ago)
                 and (ma50_last < ma300_last or ma100_last < ma100_60_min_ago or ma100_last < ma100_120_min_ago)
@@ -62389,7 +62392,8 @@ class maddog:
                 #  3 DIC 2025 modificato per ANTICIPARE NDECCHIA
                 #  4 dic 2025 e' questa che adesso STA PARTENDO CONTINUAMENTE !
                 #  4 dic 2025 incrocio al ribasso 3-59 and deviation_sell > -0.10 !
-
+                #  4 dic 2025 incrocio al ribasso 3-49 per precauzione
+                #  4 dic 2025 aggiungo anche and ma3_last < ma39_last perche' sembra che, quando e' impazzita, abbia venduto quando stava sopra 39 - SI E' VERO !
 
 
 
