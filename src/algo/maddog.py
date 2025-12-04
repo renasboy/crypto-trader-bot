@@ -14881,22 +14881,20 @@ class maddog:
 
 
                 elif (
-                    ma3_last > ma13_last
+                    ma3_last > ma11_last
 
                     and ma300_last < ma300_120_min_ago
+                    and deviation_ma39 < -0.10
+                    and deviation_ma3_sotto_ma50 < -0.10
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.10
 
-                    and (ma78_last > ma200_last or ma69_last > ma69_2_min_ago or ma50_last > ma200_last or deviation_ma100_sopra_ma300 > 0.20)
-
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < 0.01
-                    and deviation_ma39 < -0.01
-                    and deviation_ma3_sotto_ma50 < -0.01
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.01
-
+                    and (ma78_last > ma100_last or ma78_last > ma200_last or ma69_last > ma69_2_min_ago or ma50_last > ma200_last or deviation_ma100_sopra_ma300 > 0.20)
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.02
                     
                     and price > price_2_min_ago
                     
                 ):
-                    buy = f"BUY 2 rialzo con 78 > 200 - r 4639 A2y - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    buy = f"BUY 2 rialzo con 78 > 200 - r 4639 A2y - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     action = "buy"
                     percentage = 80
 
@@ -14905,6 +14903,8 @@ class maddog:
                     #  6 giu 2023 aggiunto macd >
                     #  9 nov 2025 aggiunte pg
                     #  9 nov 2025 se and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > 0.01 aggiunte dev minime. per adesso
+                    #  4 dic 2025 dev un poco piu' profonde
+                    #  4 dic 2025 aggiunta and deviation_ma8_sopra_o_sotto_ma8_2_min_ago
                     
                     
                 elif (
@@ -47512,6 +47512,9 @@ class maddog:
                         ma5_last < ma30_last
                         and ma5_last < ma90_last
 
+                        and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.001
+                        and deviation_ma39 < -0.021
+
                         and delta_CV_300_25_last > delta_CV_300_25_45_min_ago
                         and delta_1 < delta_2
                         
@@ -47527,7 +47530,7 @@ class maddog:
                         and ma2_last < ma5_last
                            
                     ):
-                        sell = f"SELL 1 (110-239 min) CV NOTTE ma ma300 > E dev_sell > 0.10 - r 10262 A1 Y1 y - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                        sell = f"SELL 1 (110-239 min) CV NOTTE ma ma300 > E dev_sell > 0.10 - r 10262 A1 Y1 y - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                         action = "sell"
 
                         # 25 mar 2025 8-100 da 3-100 se GIORNO
@@ -47538,6 +47541,10 @@ class maddog:
                         #  3 nov 2025 grazie alle pg ho potuto aggiunger and deviation_ma39 < -0.06 (vendere una ndecchiecella prima)
                         #  3 nov 2025 se CV NOTTE vende con 5-90 da 10-90
                         # 30 nov 2025 che bello ! deviation_ma39 a -0.02 da -0.06 grazie alle pg
+                        #  4 dic 2025 aggiunto and deviation_ma8_sopra_o_sotto_ma8_2_min_ago
+                        #  4 dic 2025 aggiunto and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.001
+                        #  4 dic 2025 aggiunto and deviation_ma39 < -0.021 grazie alle pg. 
+
 
                     elif (
                         ma5_last < ma100_last
@@ -62464,15 +62471,13 @@ class maddog:
           
             elif (
                 ma78_last > ma78_120_min_ago
-                and (ma3_last < ma20_last or ma3_last < ma50_last)
+                and (ma3_last < ma20_last or ma3_last < ma39_last or ma3_last < ma50_last)
                 and ma50_last >= ma50_2_min_ago
                 
                 and (ma300_last < ma300_301_min_ago or delta_150_100 <= delta_150_100_60_min)
                 
-                and deviation_ma39 < 0.07
-                and deviation_sell < -0.01
                 
-                and deviation_ma5_sotto_ma200 > -0.50
+                and deviation_sell < -0.005
                 
                 and ma2_last <= ma2_2_min_ago
                 
@@ -62490,6 +62495,8 @@ class maddog:
                 # 11 gen 2024 and macd_differenza_2_min_ago < -0.5 (sperando che non faccia arrivare tardi il sell)
                 # 28 apr 2025 questa e' stata ritoccata di una nullita'. attenzione ! vedi le note relative al 9 gen 2024
                 # 20 ott 2025 modificata per anticipare di una ndecchiecella la vendita.
+                #  4 dic 2025 modificata ndecchiecella per anticipare la vendita.
+
 
             
             elif (
