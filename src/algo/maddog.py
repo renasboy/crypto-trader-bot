@@ -62332,7 +62332,7 @@ class maddog:
                 and (ma50_last < ma300_last or ma100_last < ma100_60_min_ago or ma100_last < ma100_120_min_ago)
 
                 and deviation_ma39 < 0.10
-                and deviation_sell < -0.02
+                and deviation_sell > -0.10
 
                 and ma2_last <= ma2_2_min_ago 
             ):
@@ -62354,7 +62354,9 @@ class maddog:
                 #  3 dic 2025 tolto and deviation_ma5_sotto_ma200 > -0.50
                 #  3 DIC 2025 modificato per ANTICIPARE NDECCHIA
                 #  4 dic 2025 e' questa che adesso STA PARTENDO CONTINUAMENTE !
-                #  4 dic 2025 incrocio al ribasso 3-59
+                #  4 dic 2025 incrocio al ribasso 3-59 and deviation_sell > -0.10 !
+
+
 
 
             elif (
@@ -62366,7 +62368,7 @@ class maddog:
                 and (ma50_last < ma300_last or ma100_last < ma100_60_min_ago or ma100_last < ma100_120_min_ago)
 
                 and deviation_ma39 < 0.10
-                and deviation_sell < -0.018
+                and deviation_sell > -0.10
 
                 and ma3_last < ma20_last
                 and ma50_last <= ma50_2_min_ago
@@ -62390,7 +62392,7 @@ class maddog:
                 #  3 dic 2025 tolto and deviation_ma100_sopra_ma300 < 0.40
                 #  3 dic 2025 tolto and deviation_ma5_sotto_ma200 > -0.50
                 #  3 DIC 2025 modificato per ANTICIPARE NDECCHIA
-                #  4 dic 2025 incrocio al ribasso 3-54
+                #  4 dic 2025 incrocio al ribasso 3-54 and deviation_sell > -0.10
 
 
             
