@@ -62324,9 +62324,9 @@ class maddog:
 
 
             elif (
-                ma3_last < ma18_last
+                ma3_last < ma59_last
                 and ma50_last > ma50_2_min_ago
-                and (ma3_prev > ma20_prev and ma3_last < ma20_last)
+                and (ma3_prev > ma59_prev and ma3_last < ma59_last)
 
                 and (ma300_last < ma450_last or ma300_last < ma300_301_min_ago)
                 and (ma50_last < ma300_last or ma100_last < ma100_60_min_ago or ma100_last < ma100_120_min_ago)
@@ -62334,9 +62334,6 @@ class maddog:
                 and deviation_ma39 < 0.10
                 and deviation_sell < -0.02
 
-                
-                
-               
                 and ma2_last <= ma2_2_min_ago 
             ):
                 sell = f"SELL CS GIORNO MA CON 300<450 e 10<20 e dev 3-39 < 0.10 e dev_sell < -0.032 e ma50 < MA ma78 > - r 16045 AYy A - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
@@ -62357,11 +62354,13 @@ class maddog:
                 #  3 dic 2025 tolto and deviation_ma5_sotto_ma200 > -0.50
                 #  3 DIC 2025 modificato per ANTICIPARE NDECCHIA
                 #  4 dic 2025 e' questa che adesso STA PARTENDO CONTINUAMENTE !
-
+                #  4 dic 2025 incrocio al ribasso 3-59
 
 
             elif (
-                ma3_last < ma16_last
+                ma3_last < ma54_last
+                and ma50_last <= ma50_2_min_ago
+                and (ma3_prev > ma54_prev and ma3_last < ma54_last)
 
                 and (ma300_last < ma450_last or ma300_last < ma300_301_min_ago)
                 and (ma50_last < ma300_last or ma100_last < ma100_60_min_ago or ma100_last < ma100_120_min_ago)
@@ -62391,7 +62390,7 @@ class maddog:
                 #  3 dic 2025 tolto and deviation_ma100_sopra_ma300 < 0.40
                 #  3 dic 2025 tolto and deviation_ma5_sotto_ma200 > -0.50
                 #  3 DIC 2025 modificato per ANTICIPARE NDECCHIA
-
+                #  4 dic 2025 incrocio al ribasso 3-54
 
 
             
