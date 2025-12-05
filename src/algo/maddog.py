@@ -41916,6 +41916,8 @@ class maddog:
 
                 elif (  
                     ma3_last > ma9_last
+                    and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > 0.0028
+
                     and (ma8_last > ma39_last or ma3_last > ma50_last)
                     and ma10_last > ma300_last
 
@@ -41933,7 +41935,7 @@ class maddog:
 
                     # 29 nov 2025 se 10 sta sopra 300 ok cosi''
                     # 30 nov 2025 se (ma8_last > ma39_last or ma3_last > ma50_last) ok cosi'
-                    
+                    #  5 dic 2025 aggiunto and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > 0.0028 grazie alle pg ! grazie compa !
 
 
                 elif (  
@@ -62618,7 +62620,7 @@ class maddog:
             elif (
                 ma3_last < ma59_last
                 and ma3_last < ma39_last
-
+                
                 and (ma50_last > ma50_2_min_ago or ma8_last > ma69_last)
                 and (ma3_prev > ma49_prev and ma3_last < ma49_last)
                 and ma3_last < ma39_last
@@ -62652,6 +62654,9 @@ class maddog:
                 #  4 dic 2025 incrocio al ribasso 3-59 and deviation_sell > -0.10 !
                 #  4 dic 2025 incrocio al ribasso 3-49 per precauzione
                 #  4 dic 2025 aggiungo anche and ma3_last < ma39_last perche' sembra che, quando e' impazzita, abbia venduto quando stava sopra 39 - SI E' VERO !
+                #  5 dic 2025 stai attento qua ! sii prudente !
+
+
 
 
 
