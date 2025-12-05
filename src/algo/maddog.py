@@ -19120,27 +19120,59 @@ class maddog:
                     # 17 ott 2025 aggiunte pg
                     # 17 ott 2025 aggiunta and deviation_ma3_sotto_ma50 < -0.05
                     # 17 ott 2025 aggiunta deviation_ma5_sopra_o_sotto_ma100 < -0.05
-                    # 21 ott 2025 aggiunta and delta_CM_300_25_last <= delta_CM_300_25_2_min_ago 
+                    # 21 ott 2025 aggiunta and delta_CM_300_25_last <= delta_CM_300_25_2_min_ago
 
-                    
+
+
+
+
+
                 elif (    
-                    ma8_last > ma59_last
-                    and ma300_last < ma450_last
-                    and deviation_ma100_sopra_ma300 < 0.20
-                    and deviation_ma100_sopra_ma300 > -0.20
+                    ma3_last > ma11_last
+                    and ma450_last < ma450_120_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.05
+                    and (ma100_last > ma200_last or ma100_last > ma300_last)
                     
-                    and deviation_ma3_sopra_ma10 > 0.113
-                 
-                    and ma300_last > ma300_120_min_ago
+                    and ma2_last > ma5_last
+                    
+                    and macd_differenza_2_min_ago > -18.50
+                    
+                ):
+                    buy = f"BUY 2 importato da RCCR con ma450_last < 120_min_ago CON ma100_last > ma300_last E 100>200 - r 5412 Y1 - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    action = "buy"
+                    percentage = 90
+
+                    #  5 dic 2025 importata da RCCR
+                    #  5 dic 2025 aggiunte pg
+
+
+
+
+                elif (    
+                    ma8_last > ma39_last
+
+                    and ma300_last < ma450_last
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.05
+                    and deviation_ma100_sopra_ma300 < 0.30
+                    and deviation_ma100_sopra_ma300 > -0.30
+                    
+                    and deviation_ma3_sopra_ma10 > 0.01
+                    and (ma100_last > ma200_last or ma100_last > ma300_last or ma300_last > ma300_120_min_ago)
+                    
                     and macd >= macd_2_min_ago
                 ):  
                 
-                    buy = "BUY 2 laterale con 300<450 - r 5412 y"
+                    buy = f"BUY 2 laterale con 300<450 - r 5412 Y2 - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     action = "buy"
                     percentage = 80
                     
                     # 19 set 2022 aggiunta 3-10 > 0.07
                     #  3 ott 2022 3-10 0.113 da 0.07
+                    #  5 dic 2025 anticipata ndecchia
+                    #  5 dic 2025 aggiunte pg (e' arrivata tardi durante un rialzo)
+
+
+
                     
                     
                     
