@@ -24274,7 +24274,7 @@ class maddog:
                     # 15 ott 2025 aggiunte p.g.
                     # 15 ott 2025 aggiunte and delta_150_100 <= delta_150_100_60_min
                     #  3 nov 2025 aggiunta questa !
-
+                    # 10 dic 2025 ok !
 
 
 
@@ -56611,7 +56611,71 @@ class maddog:
                         # qui non ho messo il crollo perche' dopo 40 min o gia' ha venduto o e' gia' risalita
                         # cuscino dell' angelo custode
                         # 10 gen 2024 aggiunto and deviation_sell < 0.10
+
+
+
+
+
+
+                    elif (        
+                        ma50_last > ma50_2_min_ago
+                        and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.009
+
+                        and (ma20_last <= ma20_2_min_ago or ma10_last < ma20_last or ma20_last < ma50_last)
                         
+                        and ma300_last < ma300_120_min_ago
+                        and ma200_last < ma200_60_min_ago
+                        
+                        and deviation_ma39 < 0.13
+                        and deviation_sell > 0.10
+                        
+                    ):
+                        sell = f"SELL 3 (60-90 min) con ma50< and ma20_last <= ma20_2_min_ago and deviation_ma39 < 0.13 and deviation_sell < 0.02 - r 14060 a - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                        action = "sell"
+                        
+                        # durante il crollo non devi pensare ai centesimi !
+                        # cazzo oggi 13 dic 2013 and deviation_ma39 < 0.13 da -0.31 !
+                        # 17 dic 2023 and ma2_differenza_2_min_ago < -10
+                        # 17 dic 2023 and ma2_differenza_ma5 < -9
+                        # 24 dic 2023 a 0.10 da 0.02
+                        # 24 dic 2023 and ma20_last <= ma20_2_min_ago da ma30 < 30 2 min ago
+                        # 25 gen 2024 aggiunta and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.02
+                        # 25 gen 2024 aggiunta and macd_differenza_2_min_ago < -0.40
+                        # 28 ott 2025 aggiunta questa da rccr per vendere con guadagno durante lungo ribasso
+                        # 10 dic 2025 aggiunte pg
+                        # 10 dic 2025 dev sell a > 0.10 da < 0.10 (per vendere con guadagno durante lungo ribasso)
+                        # 10 dic 2025 aggiunta and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.009
+
+
+
+
+                    elif (        
+                        ma50_last < ma50_2_min_ago
+                        and (ma20_last <= ma20_2_min_ago or ma10_last < ma20_last or ma20_last < ma50_last)
+                        
+                        and ma300_last < ma300_120_min_ago
+                        and ma200_last < ma200_60_min_ago
+                        
+                        and deviation_ma39 < 0.13
+                        and deviation_sell > 0.10
+                        
+                    ):
+                        sell = f"SELL 3 (60-90 min) con ma50< and ma20_last <= ma20_2_min_ago and deviation_ma39 < 0.13 and deviation_sell < 0.02 - r 14150 Bb - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                        action = "sell"
+                        
+                        # durante il crollo non devi pensare ai centesimi !
+                        # cazzo oggi 13 dic 2013 and deviation_ma39 < 0.13 da -0.31 !
+                        # 17 dic 2023 and ma2_differenza_2_min_ago < -10
+                        # 17 dic 2023 and ma2_differenza_ma5 < -9
+                        # 24 dic 2023 a 0.10 da 0.02
+                        # 24 dic 2023 and ma20_last <= ma20_2_min_ago da ma30 < 30 2 min ago
+                        # 25 gen 2024 aggiunta and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.02
+                        # 25 gen 2024 aggiunta and macd_differenza_2_min_ago < -0.40
+                        # 28 ott 2025 aggiunta questa da rccr per vendere con guadagno durante lungo ribasso
+                        # 10 dic 2025 aggiunte pg
+                        # 10 dic 2025 dev sell a > 0.10 da < 0.10 (per vendere con guadagno durante lungo ribasso)
+                        
+                           
                     elif (
                         deviation_trend_ma200 > -0.10
                         and ma200_last > ma300_last
@@ -56620,7 +56684,7 @@ class maddog:
                         and deviation_sell < -0.10
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 3 da 60 a 90 min con ma50 < con incrocio 3-78 and deviation_sell < -0.10 con > perdita tollerata - r 14072"
+                        sell = "SELL 3 da 60 a 90 min con ma50 < con incrocio 3-78 and deviation_sell < -0.10 con > perdita tollerata - r 14060 b"
                         action = "sell"
 
                   
@@ -56643,7 +56707,7 @@ class maddog:
                         and ma2_last <= ma2_2_min_ago 
                         and macd < macd_2_min_ago
                     ):
-                        sell = "SELL EX condizione speciale 6 GIORNO con ma300> 5 ore - dev 3-39 < 0.05 and dev_sell < -0.102 - con ma50 < e con ma5 sotto ma200 > -0.90 - r 14073"
+                        sell = "SELL 3 da 60 a 90 min EX condizione speciale 6 GIORNO con ma300> 5 ore - dev 3-39 < 0.05 and dev_sell < -0.102 - con ma50 < e con ma5 sotto ma200 > -0.90 - r 14073"
                         action = "sell"
                 
                         # 15 set 2023 quando 300 scende da 5 ore non devi vendere in perdita ! a ricomprare ci penseranno altre condizioni !
@@ -56778,19 +56842,20 @@ class maddog:
 
 
 
-
                     elif (        
-                        ma50_last < ma50_2_min_ago
-                        and (ma20_last <= ma20_2_min_ago or ma10_last < ma20_last)
+                        ma50_last > ma50_2_min_ago
+                        and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.009
+
+                        and (ma20_last <= ma20_2_min_ago or ma10_last < ma20_last or ma20_last < ma50_last)
                         
                         and ma300_last < ma300_120_min_ago
                         and ma200_last < ma200_60_min_ago
                         
                         and deviation_ma39 < 0.13
-                        and deviation_sell < 0.10
+                        and deviation_sell > 0.10
                         
                     ):
-                        sell = "SELL 3 (>90 min) con ma50< and ma20_last <= ma20_2_min_ago and deviation_ma39 < 0.13 and deviation_sell < 0.02 - r 14150 B"
+                        sell = f"SELL 3 (>90 min) con ma50< and ma20_last <= ma20_2_min_ago and deviation_ma39 < 0.13 and deviation_sell < 0.02 - r 14150 Ba - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                         action = "sell"
                         
                         # durante il crollo non devi pensare ai centesimi !
@@ -56802,8 +56867,38 @@ class maddog:
                         # 25 gen 2024 aggiunta and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.02
                         # 25 gen 2024 aggiunta and macd_differenza_2_min_ago < -0.40
                         # 28 ott 2025 aggiunta questa da rccr per vendere con guadagno durante lungo ribasso
+                        # 10 dic 2025 aggiunte pg
+                        # 10 dic 2025 dev sell a > 0.10 da < 0.10 (per vendere con guadagno durante lungo ribasso)
+                        # 10 dic 2025 aggiunta and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.009
 
 
+
+
+                    elif (        
+                        ma50_last < ma50_2_min_ago
+                        and (ma20_last <= ma20_2_min_ago or ma10_last < ma20_last or ma20_last < ma50_last)
+                        
+                        and ma300_last < ma300_120_min_ago
+                        and ma200_last < ma200_60_min_ago
+                        
+                        and deviation_ma39 < 0.13
+                        and deviation_sell > 0.10
+                        
+                    ):
+                        sell = f"SELL 3 (>90 min) con ma50< and ma20_last <= ma20_2_min_ago and deviation_ma39 < 0.13 and deviation_sell < 0.02 - r 14150 Bb - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                        action = "sell"
+                        
+                        # durante il crollo non devi pensare ai centesimi !
+                        # cazzo oggi 13 dic 2013 and deviation_ma39 < 0.13 da -0.31 !
+                        # 17 dic 2023 and ma2_differenza_2_min_ago < -10
+                        # 17 dic 2023 and ma2_differenza_ma5 < -9
+                        # 24 dic 2023 a 0.10 da 0.02
+                        # 24 dic 2023 and ma20_last <= ma20_2_min_ago da ma30 < 30 2 min ago
+                        # 25 gen 2024 aggiunta and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.02
+                        # 25 gen 2024 aggiunta and macd_differenza_2_min_ago < -0.40
+                        # 28 ott 2025 aggiunta questa da rccr per vendere con guadagno durante lungo ribasso
+                        # 10 dic 2025 aggiunte pg
+                        # 10 dic 2025 dev sell a > 0.10 da < 0.10 (per vendere con guadagno durante lungo ribasso)
 
 
 
