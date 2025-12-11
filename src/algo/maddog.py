@@ -33066,7 +33066,8 @@ class maddog:
                     action = "buy"
                     percentage = 90
 
-                    # 11 dic 2025 questa condizione cerca di anticipare la seguente. vedi che la 300 si avvicina alla 450. stai tranquillo. ma succede una piccola correzione.
+                    # 11 dic 2025 questa condizione cerca di anticipare la seguente
+
 
 
                 elif (    
@@ -65578,6 +65579,8 @@ class maddog:
 
             elif (    
                 ma50_last > ma50_2_min_ago
+                and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.009
+
                 and ma450_last < ma450_180_min_ago
                 and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.01
                 and (ma100_last > ma200_last or ma100_last > ma100_60_min_ago)
@@ -65587,7 +65590,7 @@ class maddog:
 
                 and deviation_ma3_sotto_ma50 < 0.11
                 and deviation_ma39 < 0.13
-                and deviation_sell < -0.025
+                and deviation_sell < -0.026
                 
                 and deviation_ma5_sotto_ma200 > -0.60
                 and deviation_ma100_sopra_ma300 < 0.40
@@ -65599,7 +65602,7 @@ class maddog:
                 and ma2_last < ma5_last
                 
             ):
-                sell = f"SELL N C S - con 450 < 3 ore and dev_sell < -0.025 e ma50 > E con 100>200 - r 16047 A2 X1 Y2 Xx - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                sell = f"SELL N C S - con 450 < 3 ore and dev_sell < -0.025 e ma50 > E con 100>200 - r 16047 A2 X1 Y2 Xx - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
                 
                 #  7 feb 2024 and deviation_sell < -0.01 da 0.02
@@ -65610,6 +65613,10 @@ class maddog:
                 #  9 nov 2025 se and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.01 allora aumento tolleranza cazzo!
                 #  9 nov 2025 and deviation_sell a -0.025 da -0.02
                 #  9 nov 2025 la cosa bella e' che ho visto da pg a che valore ha venduto 3-50 ! e dev 100 10 min ! grazie compa ! 
+                # 11 dic 2025 and deviation_sell a -0.026 da -0.025
+                # 11 dic 2025 aggiunta and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.009
+
+
 
 
             elif (    
