@@ -36994,7 +36994,7 @@ class maddog:
                     ma3_last > ma9_last
                     and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > 0.0069
 
-                    and ma5_last > ma100_last
+                    and (ma5_last > ma100_last or ma5_last > ma78_last)
 
                     and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > 0.007
 
@@ -37020,7 +37020,7 @@ class maddog:
                     #  4 dic 2025 SE ma8_last > ma69_last ok cosi'
                     #  5 dic 2025 se ma8_last > ma69_last or ma100_last > ma100_60_min_ago ok cosi'
                     # 11 dic 2025 aggiunta and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > 0.0069 grazie alle pg
-
+                    # 11 dic 2025 AVE COMPA
 
 
                 elif (      
