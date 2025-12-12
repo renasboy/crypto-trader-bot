@@ -1933,7 +1933,7 @@ class maddog:
 
         # questo FUNZIONA !
 
-        if deviation_ma200_sotto_ma300 < -0.02 or deviation_ma200_sotto_ma300 > -0.01:
+        if deviation_ma200_sotto_ma300 < -0.016 or deviation_ma200_sotto_ma300 > -0.014:
 
 
 
