@@ -41975,7 +41975,7 @@ class maddog:
                     #  4 apr 2025 perfezionata con 3-39 e 3-50
                     # 23 ott 2025 se CV notte aggiungo deviation da una condizione successiva che e' andata bene
                     # 23 ott 2025 aggiunte pg
-
+                    # 12 DIC 2025 OK !
                 
                
                 
@@ -70967,23 +70967,29 @@ class maddog:
                 # 23 ott 2025 aggiunte pg
                 # 19 nov 2025 aggiunta questa che anticipa di una ndecchiecella la vendita della precedente condizione.
 
+            
 
             elif (
                 deviation_sell > 0.80
                 and seconds_since_last_trade < 7200
                 and ma69_last > ma100_last
+
                 and (ma3_last < ma39_last or ma5_last < ma5_11_min_ago)
+                and deviation_ma39 < 0.055
+                and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.0111
 
                 and ma100_last < ma300_last
 
-                
                 and ma2_last < ma2_2_min_ago
                 
             ):    
-                sell = f"SELL CS PMS (ma non troppo !) con 3-39 se 100<300 e con dev > 0.80 e con ma5_11_min_ago - r 16873 C2 bA - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                sell = f"SELL CS PMS (ma non troppo !) con 3-39 se 100<300 e con dev > 0.80 e con ma5_11_min_ago - r 16873 C2 bA - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
 
                 # 25 nov 2025 se 69>100 stai piu' calmo
+                # 12 dic 2025 aggiunto and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f}
+                # 12 dic 2025 aggiunto and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.0111 grazie ad una seguente pg
+                # 12 dic 2025 aggiunto and deviation_ma39 < 0.055 grazie alle pg
 
 
 
