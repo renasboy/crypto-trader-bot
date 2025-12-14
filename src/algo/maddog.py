@@ -37186,7 +37186,7 @@ class maddog:
                     ma3_last > ma9_last
                     and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > 0.0069
 
-                    and (deviation_ma100_sopra_ma300 > -0.09 or deviation_ma100_sopra_o_sotto_ma100_10_min_ago > 0.015 or ma5_last > ma100_last or ma5_last > ma78_lastor or ma10_last > ma125_last)
+                    and (deviation_ma100_sopra_ma300 > -0.09 or deviation_ma100_sopra_o_sotto_ma100_10_min_ago > 0.015 or ma5_last > ma100_last or ma5_last > ma78_last or ma10_last > ma125_last)
 
                     and (delta_CV_300_25_last <= delta_CV_300_25_45_min_ago or delta_CM_300_25_last <= delta_CM_300_25_2_min_ago or delta_DNA_1 < delta_DNA_2) 
                     
