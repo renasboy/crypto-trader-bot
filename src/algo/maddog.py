@@ -42018,7 +42018,7 @@ class maddog:
                     and (ma3_last >= ma3_2_min_ago or deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.0092)
 
                     and ma100_last < ma100_10_min_ago
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.05
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.07
 
                     and deviation_ma39 < -0.13 
                     and deviation_ma3_sotto_ma50 < -0.20
@@ -42045,23 +42045,22 @@ class maddog:
                     # 21 ott 2025 aggiunte pg
                     # 14 nov 2025 dev piu' profonde grazie alle pg 
                     # 14 nov 2025 aggiunta and ma3_last >= ma3_2_min_ago (deve dare un piccolo segno !)
-                    # 16 dic 2025 se deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.05 and ma100_last < ma100_10_min_ago AGGIUNGO DEV POCO PROFONDE
+                    # 16 dic 2025 se deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.07 and ma100_last < ma100_10_min_ago AGGIUNGO DEV POCO PROFONDE
 
 
 
 
                 elif (    
                     ma3_last > ma10_last
-                    and (ma3_last >= ma3_2_min_ago or deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.0092)
-
-
-                    and ma100_last < ma100_10_min_ago
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.05
+                    and (ma3_last >= ma3_2_min_ago or deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.0019)
                     
-                    and deviation_ma39 < -0.29
-                    and deviation_ma3_sotto_ma50 < -0.33
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.59
-                    and deviation_ma25_sotto_ma300 < -1.80
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.07
+                    
+                    and deviation_ma39 < -0.22
+                    and deviation_ma3_sotto_ma50 < -0.25
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.56
+                    and deviation_ma25_sotto_ma300 < -1.99
                     
                     and ma450_last < ma450_360_min_ago
                     and ma300_last < ma300_60_min_ago
@@ -42083,7 +42082,7 @@ class maddog:
                     # 21 ott 2025 aggiunte pg
                     # 14 nov 2025 dev piu' profonde grazie alle pg 
                     # 14 nov 2025 aggiunta and ma3_last >= ma3_2_min_ago (deve dare un piccolo segno !)
-                    # 16 dic 2025 se deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.05 and ma100_last < ma100_10_min_ago AGGIUNGO DEV PROFONDE grazie alle pg
+                    # 16 dic 2025 se deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.07 and ma100_last < ma100_10_min_ago AGGIUNGO DEV PROFONDE grazie alle pg
 
 
 
