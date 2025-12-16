@@ -67377,6 +67377,7 @@ class maddog:
 
             elif (   
                 ma3_last < ma13_last
+                and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.0118
 
                 and (ma50_last < ma50_2_min_ago or ma39_last < ma50_last)
                 and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.001
@@ -67403,7 +67404,7 @@ class maddog:
                 # 19 gen 2025 dev sell a -0.01 da 0.01
                 # 15 DIC 2025 AGGIUNTE PG
                 # 15 dic 2025 se sta durante un chiaro ribasso anticipato ndecchiecella
-
+                # 16 dic 2025 aggiunta and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.0118 grazie alle pg
 
 
             elif (    
