@@ -533,11 +533,20 @@ class maddog:
         self.algo_helper.info("deviation_ma78_sotto_ma100: {}".format(deviation_ma78_sotto_ma100))
 
 
-
         # formula DEVIATION_ma78_sopra_o_sotto_ma200 !
         
         deviation_ma78_sopra_o_sotto_ma200 = (ma78_last / ma200_last - 1) * 100 if ma200_last else 0
         self.algo_helper.info("deviation_ma78_sopra_o_sotto_ma200: {}".format(deviation_ma78_sopra_o_sotto_ma200))
+
+
+
+        # formula DEVIATION_ma100_sopra_o_sotto_ma325 !
+        
+        deviation_ma100_sopra_o_sotto_ma325 = (ma100_last / ma325_last - 1) * 100 if ma325_last else 0
+        self.algo_helper.info("deviation_ma100_sopra_o_sotto_ma325: {}".format(deviation_ma100_sopra_o_sotto_ma325))
+
+
+
       
 
         # formula DEVIATION_ma5_sotto_ma450
@@ -42412,7 +42421,7 @@ class maddog:
                     and ma2_last >= ma2_2_min_ago
                         
                 ):    
-                   buy = "BUY 5 del 19 nov 2025 > grandissimo ribasso - r 7586 - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                   buy = f"BUY 5 del 19 nov 2025 > grandissimo ribasso - r 7586 - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                    action = "buy"
                    percentage = 90
 
@@ -42421,6 +42430,8 @@ class maddog:
                    # 16 dic 2025 buy a 3-9 da 3-13
                    # 16 dic 2025 aggiunto and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.0091
                    # 16 dic 2025 tentando di anticipare ndecchiecella
+                   # 17 dic 2025 mancava la f davanti alle pg e non prendeva i dati.
+
 
 
 
