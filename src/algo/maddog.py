@@ -25288,7 +25288,7 @@ class maddog:
                     #  9 nov 2025 aggiunte pg
                     # 15 nov 2025 aggiunte dev piu' profonde grazie alle pg
                     # 15 nov 2025 se cm notte aggiungo ma8 >= ma8 2 min ago
-
+                    # 17 nov 2025 OK !
 
                 
 
