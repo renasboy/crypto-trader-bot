@@ -274,8 +274,8 @@ class maddog:
 
         # rsi
 
-        # rsi = self.algo_helper.rsi
-        # rsi_2_min_ago = self.algo_helper.rsi_minutes_ago(2)
+        rsi = self.algo_helper.rsi
+        rsi_2_min_ago = self.algo_helper.rsi_minutes_ago(2)
 
 
 
@@ -72548,7 +72548,7 @@ class maddog:
 
 
             elif (
-                seconds_since_last_trade > 0 and seconds_since_last_trade < 1800
+                seconds_since_last_trade > 0 and seconds_since_last_trade < 2700
                 and deviation_sell > 0.90
 
                 and (ma3_last < ma6_last or deviation_ma39 > 0.81 or deviation_ma3_sotto_ma50 > 0.73)
@@ -72559,7 +72559,7 @@ class maddog:
                 and ma300_last > ma450_last
  
             ):    
-                sell = f"SELL condizione PMS da 0 a 30 min con 3-6 and rsi > 54 and rsi < rsi_2_min_ago ! WITH FRIEND SURROUNDED ! - INTANTO TE LI PRENDI - r 16880 - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                sell = f"SELL condizione PMS da 0 a 45 min con 3-6 and rsi > 54 and rsi < rsi_2_min_ago ! WITH FRIEND SURROUNDED ! - INTANTO TE LI PRENDI - r 16880 - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
 
                 # 19 dic 2025 aggiunta questa condizione che vende quando c'e' una botta al rialzo. che dopo 70 000 righe non ha venduto
