@@ -34177,7 +34177,7 @@ class maddog:
                     # 13 dic 2025 anticipata ndecchiecella
                     # 19 dic 2025 se deviation_ma100_sotto_ma200 > 0.15 
                     # 19 dic 2025 aggiungo and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.001 al posto di ma8_last >= ma8_2_min_ago (per anticipare ndecchiecella)
-
+                    # 19 dic 2025 in futuro, se dolce ribasso della ma100, aumentare dev. per adesso ok cosi' 
 
 
                 elif (
@@ -34208,7 +34208,7 @@ class maddog:
                     # 13 dic 2025 aggiunte pg
                     # 13 dic 2025 anticipata ndecchiecella
                     # 19 dic 2025 se deviation_ma100_sotto_ma200 < 0.15 ok cosi'
-
+                    # 19 dic 2025 in futuro, se dolce ribasso della ma100, aumentare dev. per adesso ok cosi' 
 
 
                 elif (
