@@ -34149,11 +34149,42 @@ class maddog:
 
 
 
+                elif (
+                    ma3_last > ma8_last
+                    and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.001
+
+                    and ma300_last > ma300_180_min_ago
+                    and deviation_ma100_sotto_ma200 > 0.15
+
+                    and (ma50_last < ma100_last or delta_1 > delta_2)
+
+                    and deviation_ma39 < -0.04
+                    and deviation_ma3_sotto_ma50 < -0.04
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.04
+
+                    and ma2_last > ma2_2_min_ago
+                ):
+                    buy = f"BUY 5 con ma300_last > ma300_180_min_ago - r 7042 yA - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    action = "buy"
+                    percentage = 80
+
+                    #  7 ago 2025 ho portato questa condizione poiche' il BUY 5 NON SI E' ATTIVATO PROPRIO. d' altronde 300 > 3 ore !
+                    #  5 nov 2025 anticipata ndecchiecella
+                    # 13 nov 2025 se (ma50_last < ma100_last or and delta_1 > delta_2) aggiungo and ma8_last >= ma8_2_min_ago
+                    # 13 nov 2025 aggiungo pg
+                    # 18 nov 2025 3-9 da 3-11 tentando di anticipare ndecchiecella
+                    # 13 dic 2025 aggiunte pg
+                    # 13 dic 2025 anticipata ndecchiecella
+                    # 19 dic 2025 se deviation_ma100_sotto_ma200 > 0.15 
+                    # 19 dic 2025 aggiungo and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.001 al posto di ma8_last >= ma8_2_min_ago (per anticipare ndecchiecella)
+
+
 
                 elif (
                     ma3_last > ma9_last
                     
                     and ma300_last > ma300_180_min_ago
+                    and deviation_ma100_sotto_ma200 < 0.15
 
                     and (ma50_last < ma100_last or delta_1 > delta_2)
 
@@ -34165,7 +34196,7 @@ class maddog:
 
                     and ma2_last > ma2_2_min_ago
                 ):
-                    buy = f"BUY 5 con ma300_last > ma300_180_min_ago - r 7042 y - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    buy = f"BUY 5 con ma300_last > ma300_180_min_ago - r 7042 yB - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     action = "buy"
                     percentage = 80
 
@@ -34176,6 +34207,7 @@ class maddog:
                     # 18 nov 2025 3-9 da 3-11 tentando di anticipare ndecchiecella
                     # 13 dic 2025 aggiunte pg
                     # 13 dic 2025 anticipata ndecchiecella
+                    # 19 dic 2025 se deviation_ma100_sotto_ma200 < 0.15 ok cosi'
 
 
 
