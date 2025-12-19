@@ -2608,12 +2608,12 @@ class maddog:
               
                     buy = f"BUY 1 con ma300_last > ma300_301_min_ago e 100>200 - r 916 A1 x1 X2 x - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} deviation_ma39 {deviation_ma39} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago}"
                     action = "buy"
-                    percentage = 90
+                    percentage = 100
 
                     # 17 mag 2025 sto spezzando tutti questi or
                     # 13 dic 2025 anticipata ndecchiecella
                     # 13 dic 2025 aggiunte pg
-
+                    # 19 dic 2025 ok ! 
 
 
                 elif (  
@@ -27335,8 +27335,8 @@ class maddog:
 
                 elif (    
                     ma3_last > ma11_last
-                    and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.014
-
+                    and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.0113
+                    
                     and (ma300_last > ma300_60_min_ago or ma300_last > ma300_120_min_ago)
                     and ma8_last < ma8_20_min_ago
 
@@ -27368,7 +27368,7 @@ class maddog:
                     # 12 dic 2025 aggiunte pg
                     # 16 dic 2025 aggiunto and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.014 grazie alle pg
                     # 16 dic 2025 anticipato di una ndecchiecella (ok)
-
+                    # 19 dic 2025 and deviation_ma8_sopra_o_sotto_ma8_2_min_ago a -0.0113 da -0.014
 
 
 
@@ -36904,7 +36904,7 @@ class maddog:
 
                     and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.023
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.05
-                    and deviation_ma25_sotto_ma300 < -0.816 and ma69_last < ma100_last and deviation_ma100_sopra_o_sotto_ma325 > -0.05
+                    and (deviation_ma25_sotto_ma300 < -0.816 and ma69_last < ma100_last and deviation_ma100_sopra_o_sotto_ma325 > -0.05)
 
                     and deviation_ma78_sotto_ma100 < -0.10
                     and deviation_ma50_sotto_ma100 < -0.22
@@ -43204,6 +43204,7 @@ class maddog:
 
                 elif (  
                     ma3_last > ma9_last
+                    and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.0116
                     and deviation_ma25_sotto_ma300 < 1.25
                     and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.0173
                     and (ma8_last < ma39_last or ma3_last < ma50_last)
@@ -43227,7 +43228,7 @@ class maddog:
 
                     # 29 nov 2025 se 10 sta sopra 300 ok cosi''
                     # 30 nov 2025 se (ma8_last < ma39_last or ma3_last < ma50_last) + dev pg
-
+                    # 19 dic 2025 aggiunta and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.0116 grazie alle pg
 
 
 
@@ -64232,11 +64233,10 @@ class maddog:
 
             elif (
                 ma3_last < ma45_last
-                and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < 0.005
-
+                and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.017
+                
                 and (ma300_last < ma450_last or ma300_last < ma300_301_min_ago)
 
-                and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < 0.012
                 and ma3_last < ma39_last
                 
                 and (ma50_last > ma50_2_min_ago or ma8_last > ma69_last)
@@ -64276,6 +64276,9 @@ class maddog:
                 # 10 dic 2025 aggiunta and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < 0.012
                 # 14 dic 2025 sell con 4-45 da 3-49
                 # 14 dic 2025 and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < 0.005
+                # 19 dic 2025 and deviation_ma8_sopra_o_sotto_ma8_2_min_ago a -0.017 da 0.005 grazie alle pg
+
+
 
             elif (
                 ma3_last < ma54_last
