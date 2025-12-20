@@ -274,7 +274,7 @@ class ro_cano_che_ritorna:
 
         # rsi
 
-        rsi = self.algo_helper.rsi
+        # rsi = self.algo_helper.rsi
         rsi_2_min_ago = self.algo_helper.rsi_minutes_ago(2)
 
 
@@ -72054,8 +72054,8 @@ class ro_cano_che_ritorna:
                 and deviation_sell > 0.90
 
                 and (ma3_last < ma6_last or deviation_ma39 > 0.81 or deviation_ma3_sotto_ma50 > 0.73)
-                and rsi > 54
-                and rsi < rsi_2_min_ago
+                
+                and rsi_2_min_ago > 54
                 and deviation_ma25_sotto_ma300 > 0.75
 
                 and ma300_last > ma450_last
