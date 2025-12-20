@@ -274,8 +274,8 @@ class ro_cano_che_ritorna:
 
         # rsi
 
-        # rsi = self.algo_helper.rsi
-        # rsi_2_min_ago = self.algo_helper.rsi_minutes_ago(2)
+        rsi = self.algo_helper.rsi
+        rsi_2_min_ago = self.algo_helper.rsi_minutes_ago(2)
 
 
 
