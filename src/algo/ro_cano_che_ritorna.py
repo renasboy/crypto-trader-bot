@@ -275,7 +275,7 @@ class ro_cano_che_ritorna:
         # rsi
 
         # rsi = self.algo_helper.rsi
-        rsi_2_min_ago = self.algo_helper.rsi_minutes_ago(2)
+        # rsi_2_min_ago = self.algo_helper.rsi_minutes_ago(2)
 
 
 
@@ -72046,6 +72046,7 @@ class ro_cano_che_ritorna:
 
 
 
+            """
 
             # condizione che fa bloccare il sistema MA CHE DEVO METTERE
 
@@ -72065,6 +72066,12 @@ class ro_cano_che_ritorna:
                 action = "sell"
 
                 # 19 dic 2025 aggiunta questa condizione che vende quando c'e' una botta al rialzo. che dopo 70 000 righe non ha venduto
+
+
+
+            """
+
+
 
             
 
