@@ -42872,9 +42872,11 @@ class maddog:
 
                 elif (
                     ma3_last > ma8_last
+
                     and ma20_last < ma50_last
                     and delta_1 > delta_2
 
+                    and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.069
                     and ma100_last < ma100_120_min_ago
                     and deviation_ma39 < -0.17
                     and deviation_ma3_sotto_ma50 < -0.27
@@ -42909,7 +42911,7 @@ class maddog:
                     # 12 DIC 2025 OK !
                     # 16 dic 2025 ok
                     # 22 dic 2025 aumentate dev grazie alle pg (ma100_last < ma100_120_min_ago !)
-
+                    # 22 dic 2025 aggiunto and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.069
 
 
                 
