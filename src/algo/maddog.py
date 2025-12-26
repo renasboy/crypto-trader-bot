@@ -20218,17 +20218,17 @@ class maddog:
 
 
                 elif (
-                    ma3_last > ma10_last
-                    and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.001
+                    ma3_last > ma9_last
+                    and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.002
 
                     and (ma39_last < ma39_20_min_ago or deviation_ma50_sotto_ma100 < -0.063)
-                    and deviation_ma39 < -0.22
-                    and deviation_ma3_sotto_ma50 < -0.27 
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.39
+                    and deviation_ma39 < -0.33
+                    and deviation_ma3_sotto_ma50 < -0.39
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.45
 
 
-                    and (ma300_last > ma300_120_min_ago or ma150_last > ma150_60_min_ago)
-                    and (ma200_last > ma200_20_min_ago or deviation_ma100_sopra_ma300 > 0.40 or ma100_last > ma200_last)
+                    and (ma300_last > ma300_120_min_ago or ma150_last > ma150_60_min_ago or ma200_last > ma200_20_min_ago)
+                    and (deviation_ma100_sopra_ma300 > 0.30 or ma100_last > ma200_last)
 
                     and (ma2_last >= ma2_2_min_ago or ma3_last > ma6_last)
                     and macd_differenza_2_min_ago > -18.50
@@ -20248,6 +20248,10 @@ class maddog:
                     # 15 dic 2025 aggiunte aggiunta and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.0009 grazie alle pg
                     # 15 dic 2025 anticipato ndecchiecella
                     # 16 dic 2025 dev piu' profonde grazie alle pg
+                    # 26 dic 2025 anticipata ndecchiecella ma ok
+
+
+
               
                 elif (
                     ma200_last > ma200_20_min_ago
