@@ -25999,12 +25999,12 @@ class maddog:
 
                     and (delta_CV_300_25_last > delta_CV_300_25_45_min_ago or ma50_last < ma100_last)
                     and deviation_ma39 < -0.39
-                    and deviation_ma3_sotto_ma50 < -0.45
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.60
-                    and deviation_ma25_sotto_ma300 < -0.37
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.09
+                    and deviation_ma3_sotto_ma50 < -0.53
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.70
+                    and deviation_ma25_sotto_ma300 < -0.43
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.08
 
-                    and (ma5_last >= ma5_2_min_ago or ma5_last >= ma15_last or ma5_last >= ma25_last or ma39_last > ma50_last)
+                    and (ma5_last >= ma5_2_min_ago or ma5_last >= ma15_last or ma5_last >= ma25_last or deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.0020)
                     
                     and ma2_last >= ma2_2_min_ago
                 ):    
@@ -26018,7 +26018,7 @@ class maddog:
                     # 15 nov 2025 aggiunta cv giorno !
                     # 15 nov 2025 aggiunte pg
                     #  3 dic 2025 dev piu' profonde grazie alle pg
-
+                    # 26 dic 2025 dev piu' profonde grazie alle pg
 
 
 
