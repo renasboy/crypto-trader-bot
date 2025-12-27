@@ -21987,6 +21987,11 @@ class maddog:
                     ma3_last > ma8_last
 
                     and (ma100_last < ma100_60_min_ago or delta_CV_300_25_last > delta_CV_300_25_45_min_ago or ma78_last < ma78_120_min_ago)
+                    and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.003
+                    and deviation_ma39 < -0.02
+                    and deviation_ma3_sotto_ma50 < -0.02
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.03
+
                     and (delta_CM_300_25_last < delta_CM_300_25_2_min_ago or deviation_ma25_sotto_ma300 < -0.35 or ma300_last > ma300_301_min_ago)
 
                     and ma200_last < ma200_120_min_ago
@@ -22002,7 +22007,7 @@ class maddog:
                     percentage = 80
 
                     # 26 dic 2025 aggiunta questa condizione
-
+                    # 27 dic 2025 aggiunte dev grazie alle pg (vedi che ma100 scende da 60 min)
 
 
 
