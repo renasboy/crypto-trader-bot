@@ -56862,8 +56862,8 @@ class maddog:
                         
                     elif (        
                         ma50_last > ma50_2_min_ago
-
-                        and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.001
+                        and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.0090
+                        
                         and (ma20_last <= ma20_2_min_ago or ma10_last < ma20_last)
                         
                         and ma300_last < ma300_120_min_ago
@@ -56886,7 +56886,7 @@ class maddog:
                         # 25 gen 2024 aggiunta and macd_differenza_2_min_ago < -0.40
                         # 28 ott 2025 aggiunta questa da rccr per vendere con guadagno durante lungo ribasso
                         #  1 dic 2025 aggiunte pg (voglio conoscere deviation_ma8_sopra_o_sotto_ma8_2_min_ago)
-
+                        # 27 dic 2025 aggiunta and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.0090 grazie alle pg
 
 
                     elif (        
@@ -66073,6 +66073,8 @@ class maddog:
             
             elif (
                 ma78_last > ma78_120_min_ago
+                and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.0051
+
                 and ma200_last > ma300_last
                 and ma3_last < ma200_last
 
@@ -66098,7 +66100,7 @@ class maddog:
                 # 15 gen 2024 and deviation_sell < -0.03 da -0.01 se 100>125 stai piu' tranquillo
                 # 15 ott 2024 se 200>300 and deviation_sell < -0.05 da < -0.03
                 # 14 mar 2025 con 3 che e' andato sotto 200 anticipo vendita di una ndecchiecella -0.04 da -0.05
-
+                # 27 dic 2025 aggiunto and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.0051
 
 
 
