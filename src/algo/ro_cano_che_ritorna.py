@@ -34202,7 +34202,7 @@ class ro_cano_che_ritorna:
                     # 21 ott 2025 aggiunte pg
                     # 14 nov 2025 dev piu' profonde grazie alle pg 
                     # 14 nov 2025 aggiunta and ma8_last >= ma8_2_min_ago (deve dare un piccolo segno !)
-                    # 20 nov 2020 se deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.05 dev piu' profonde'
+                    # 20 nov 2020 se deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.05 dev piu' profonde
 
 
                 elif (
