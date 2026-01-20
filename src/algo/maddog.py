@@ -68505,7 +68505,7 @@ class maddog:
                 ma3_last < ma13_last
                 and delta_CV_300_25_last > delta_CV_300_25_45_min_ago
                 
-                and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.009
+                and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.039
 
                 and (ma10_last < ma20_last or ma3_last < ma100_last)
                 and deviation_ma300_sopra_ma450 > -0.22
@@ -68533,7 +68533,7 @@ class maddog:
                 #  1 nov 2025 se cv notte ok cosi'
                 # 11 nov 2025 3-13 da 3-11
                 # 12 dic 2025 aggiunto and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.009
-
+                # 20 gen 2026 deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.039 da < -0.009 SONO TORNATO !
 
 
             elif (    
