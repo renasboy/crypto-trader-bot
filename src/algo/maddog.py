@@ -69893,26 +69893,29 @@ class maddog:
             # 8 - SELL condizione speciale ro cano VENDE CON UN SALVAGENTE con deviation_ma5_sotto_ma200 < -1.00 and > -1.50
             
             elif (
-                deviation_ma39 < -0.25
+                ma3_last < ma69_last
+
+                and deviation_ma39 < -0.25
                 and deviation_sell < -0.40
+                and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.07
                 
-                and ma50_last < ma50_2_min_ago
+                and ma50_last <= ma50_2_min_ago
                 and deviation_ma100_sopra_ma300 > 0.40
                 
-                and deviation_ma5_sotto_ma200 < -1.00
+                and (deviation_ma5_sotto_ma200 < -0.50 or ma5_last < ma200_last)
                 and deviation_ma5_sotto_ma200 > -1.50
                 
-                and ma2_last < ma2_2_min_ago 
+                and ma2_last <= ma2_2_min_ago 
                 
             ):
-                sell = f"SELL condizione speciale 9 - SALVAGENTE 3 3-39 con ma50 < - con deviation_ma5_sotto_ma200 < -1.00 and > -1.50 - r 16129 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                sell = f"SELL CS 9 - SALVAGENTE 3 3-39 con ma50 < - con deviation_ma5_sotto_ma200 < -1.00 and > -1.50 - r 16129 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"   
                 
 
-                # deviation_ma39 = ma4_last / ma39_last QUESTA HA VENDUTO NEL CROLLO IMPROVVISO DI 1 MINUTO (con -2.06% !!!)!
-                
-                
-                
+                # deviation_ma39 = ma3_last / ma39_last QUESTA HA VENDUTO NEL CROLLO IMPROVVISO DI 1 MINUTO (con -2.06% !!!)
+                # 21 GEN 2026 HA VENDUTO CON -0.90 !
+                # 21 gen 2026 p.g. deviation_ma39 -0.906 deviation_ma3_sotto_ma50 -1.232 deviation_ma5_sopra_o_sotto_ma100 -1.650 deviation_ma25_sotto_ma300 -0.642 deviation_ma100_sopra_o_sotto_ma100_10_min_ago -0.200
+                # 21 gen 2026 aggiunta or ma5_last < ma200_last
                 
                 
             
