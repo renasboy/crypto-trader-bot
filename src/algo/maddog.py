@@ -68712,21 +68712,22 @@ class maddog:
                 and delta_CV_300_25_last > delta_CV_300_25_45_min_ago
                 
                 and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.039
+                
 
                 and (ma10_last < ma20_last or ma3_last < ma100_last)
                 and deviation_ma300_sopra_ma450 > -0.22
 
-                and deviation_ma50_sopra_o_sotto_ma300 < -0.50
+                and (deviation_ma50_sopra_o_sotto_ma300 < -0.20 or deviation_ma78_sotto_ma100 < -0.13)
                 and deviation_ma5_sopra_o_sotto_ma100 < -0.10
                 
                 and deviation_ma39 < 0.12
                 and deviation_sell < 0.019
                 
-                and deviation_ma5_sopra_ma200 < -0.30
-                and deviation_ma5_sotto_ma300 < -0.30
-                and deviation_ma5_sotto_ma450 < -0.30
+                and deviation_ma5_sopra_ma200 < -0.25
+                and deviation_ma5_sotto_ma300 < -0.25
+                and deviation_ma5_sotto_ma450 < -0.25
                 
-                and macd < 100
+                and macd < 120
                 
             ):
                 sell = f"SELL NCS con ma20 <= ma20 2 min ago e dev 3-39 < 0.10 e dev_sell < -0.019 and diff ma2 e diff macd - r 16047 A3 Y2 b2 x1 y - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
@@ -68740,6 +68741,9 @@ class maddog:
                 # 11 nov 2025 3-13 da 3-11
                 # 12 dic 2025 aggiunto and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.009
                 # 20 gen 2026 deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.039 da < -0.009 SONO TORNATO !
+                # 21 GEN 2026 HA FATTO -0.46% !
+                # 21 gen 2026 anticipata ndecchiecella
+
 
 
             elif (    
