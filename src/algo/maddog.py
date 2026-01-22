@@ -53088,6 +53088,8 @@ class maddog:
                     
                     elif (        
                         ma50_last < ma50_2_min_ago
+                        and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < 0.001
+
                         and ma30_last > ma30_2_min_ago
                         and ma2_differenza_2_min_ago < -10
                         and ma2_differenza_ma5 < -9
@@ -53100,11 +53102,12 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 2 (21-60 min) con ma50 < and deviation_ma39 < 0.13 and deviation_sell < 0.02 - r 11633x"
+                        sell = "SELL 2 (21-60 min) con ma50 < and deviation_ma39 < 0.13 and deviation_sell < 0.02 - r 11633x - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f}"
                         action = "sell"
                         
                         # 17 dic 2023 MARIO se ma30> aggiunta and ma2_differenza_2_min_ago < -10 and ma2_differenza_ma5 < -9 (c'e' un segno di ripresa!)
-
+                        # 22 gen 2026 aggiunte PG
+                        # 22 gen 2026 aggiunta and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < 0.001
                     
 
 
