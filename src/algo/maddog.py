@@ -12379,8 +12379,9 @@ class maddog:
                 elif (    
                     ma3_last > ma9_last
                     and price >= price_2_min_ago
+
                     and ma8_last > ma8_2_min_ago
-                    
+                    and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.02
 
                     and (ma39_last > ma100_last or ma25_last > ma100_last)
                     
@@ -12402,12 +12403,12 @@ class maddog:
                     
                     and macd_differenza_2_min_ago > -18.5
                 ):    
-                    buy = f"BUY 1 CONDIZIONE DEL 22 GEN 2026 con 78<100 MA 13 > 50 - r 3460 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    buy = f"BUY 1 CONDIZIONE DEL 22 GEN 2026 con 78<100 MA 13 > 50 - r 3460 - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     action = "buy"
                     percentage = 90
 
                     # 22 gen 2026 aggiunta questa
-
+                    # 22 gen 2026 incomincio a considerare ma8 aggiungendo and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.02
 
 
 
@@ -39432,12 +39433,13 @@ class maddog:
                     # 17 nov 2025 se 25<100 aggiungo dev non ancora profonde grazie alle pg ! 
                     # 20 nov 2025 aumentata un po' la profondita' delle pg
 
-
+               
                 elif (    
                     ma3_last > ma9_last
                     and price >= price_2_min_ago
+
                     and ma8_last > ma8_2_min_ago
-                    
+                    and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.02
 
                     and (ma39_last > ma100_last or ma25_last > ma100_last)
                     
@@ -39459,12 +39461,12 @@ class maddog:
                     
                     and macd_differenza_2_min_ago > -18.5
                 ):    
-                    buy = f"BUY 5 CONDIZIONE DEL 22 GEN 2026 con 78<100 MA 13 > 50 - r 7310 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    buy = f"BUY 5 CONDIZIONE DEL 22 GEN 2026 con 78<100 MA 13 > 50 - r 7310 - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     action = "buy"
                     percentage = 90
 
                     # 22 gen 2026 aggiunta questa
-
+                    # 22 gen 2026 incomincio a considerare ma8 aggiungendo and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.02
 
 
                 elif (
