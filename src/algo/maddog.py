@@ -24913,7 +24913,8 @@ class maddog:
                     and deviation_ma78_sotto_ma100 < -0.07
                     and deviation_ma50_sotto_ma100 < -0.08
                     and deviation_ma100_sotto_ma200 < -0.33
-                    and deviation_ma39 -0.049 deviation_ma3_sotto_ma50 < -0.05
+                    and deviation_ma39 -0.03
+                    and deviation_ma3_sotto_ma50 < -0.04
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.15
                     and deviation_ma25_sotto_ma300 < -0.80
 
