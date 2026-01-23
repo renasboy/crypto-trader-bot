@@ -2323,16 +2323,13 @@ class maddog:
                     ma3_last > ma10_last
                     and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.009
 
-                    and (deviation_ma100_sopra_ma300 > -0.09 or deviation_ma100_sopra_o_sotto_ma100_10_min_ago > 0.015 or ma10_last > ma125_last)
+                    and (deviation_ma100_sopra_ma300 > -0.13 or deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.015 or ma10_last > ma125_last)
 
                     and (delta_1 <= delta_2 or ma100_last >= ma200_last or ma300_last >= ma300_301_min_ago or delta_100_200_last <= delta_100_200_120_min_ago)
 
-                    and delta_50_25_last <= delta_50_25_30_min_ago
+                    and (delta_50_25_last <= delta_50_25_30_min_ago or and delta_x < delta_y)
 
-                    and delta_CV_300_25_last <= delta_CV_300_25_45_min_ago
-                    and delta_CM_300_25_last <= delta_CM_300_25_2_min_ago
-                    
-                    
+                    and (delta_CV_300_25_last <= delta_CV_300_25_45_min_ago or delta_CM_300_25_last <= delta_CM_300_25_2_min_ago)
                     
                     and macd_differenza_2_min_ago > -18.50
                 ):    
@@ -2347,7 +2344,7 @@ class maddog:
                     # 14 nov 2025 anticipata ancora ndecchiecella.
                     # 29 nov 2025 se (deviation_ma100_sopra_ma300 > -0.08 or deviation_ma100_sopra_o_sotto_ma100_10_min_ago > 0.015 or ma10_last > ma125_last) ok cosi'
                     # 29 nov 2025 aggiungo and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.009
-
+                    # 23 gen 2026 cercando di anticipare ndecchiecella. forse togliere. per adesso la tengo.
 
 
                 elif (      
@@ -39414,20 +39411,22 @@ class maddog:
 
                 elif (    
                     ma3_last > ma10_last
-                    and (ma8_last > ma39_last or ma3_last > ma50_last)
+                    and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.001
 
-                    and (ma25_last > ma100_last or ma8_last > ma69_last)
+                    and (ma3_last > ma39_last or ma3_last > ma50_last)
+
+                    and (ma25_last > ma100_last or ma8_last > ma54_last)
 
                     and deviation_ma25_sotto_ma300 < 1.75
                     and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.005
-                    and ma5_last > ma5_2_min_ago
+                    
                     
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.05
                     
                     and (ma100_last > ma100_120_min_ago or delta_DNA_1 < delta_DNA_2 or delta_CM_300_25_last < delta_CM_300_25_2_min_ago)
                     and (ma450_last > ma450_360_min_ago or ma450_last > ma450_480_min_ago or ma450_last > ma450_720_min_ago or ma200_last > ma450_last)
                     
-                    and (deviation_ma300_sopra_ma450 > -0.50 or deviation_ma100_sopra_ma300 > -0.50)
+                    and (deviation_ma300_sopra_ma450 > -0.70 or deviation_ma100_sopra_ma300 > -0.70)
                     
                     and macd_differenza_2_min_ago > -18.50
                 ):
@@ -39436,7 +39435,7 @@ class maddog:
                     percentage = 90
 
                     # 22 dic 2025 se (ma8_last > ma39_last or ma3_last > ma50_last) ok cosi'. per adesso.
-
+                    # 23 GEN 2026 cercando di anticipare ndecchiecella
 
                 
 
@@ -39926,6 +39925,8 @@ class maddog:
                     # 18 dic 2025 aggiunta and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.035
                     # 23 GEN 2026 and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.01 DA > -0.035
                     # 23 GEN 2026 AGGIUNTA ALTRE DEV grazie alle PG
+
+
 
                 elif (
                     ma3_last > ma9_last
@@ -69450,12 +69451,13 @@ class maddog:
 
             elif (
                 ma78_last < ma78_120_min_ago
-                and ma10_last > ma20_last
                 and ma20_last <= ma20_2_min_ago
-                and ma50_last > ma50_2_min_ago
-                
-                
+
+                and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.001
+
                 and ma300_last > ma300_301_min_ago
+                and ma10_last > ma20_last
+                and ma50_last > ma50_2_min_ago
                 
                 and deviation_ma39 < 0.08
                 and deviation_sell < 0.013
@@ -69468,10 +69470,10 @@ class maddog:
                 and ma2_differenza_2_min_ago < -5
                 and macd_differenza_2_min_ago < -1.0
                 
-                and macd < 30
+                and macd < 40
                 
             ):
-                sell = f"SELL CS con ma50 <= ma50 2 min ago E ma300 > 5 ore E dev 3-39 < 0.08 E dev_sell < 0.01 - r 16047 B1 Y2x - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                sell = f"SELL CS con ma50 <= ma50 2 min ago E ma300 > 5 ore E dev_sell < 0.01 - r 16047 B1 Y2x - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
                 
                 # 24 dic 2023 se 10>20 dev sell a 0.02 da 0.04
@@ -69480,7 +69482,8 @@ class maddog:
                 # 27 mar 2025 aggiunto anche se 50>
                 # 27 mar 2025 anticipato ma proprio di una ndecchiecella
                 # 24 ott 2025 aggiunte pg
-
+                # 23 gen 2026 aggiunte PG
+                # 23 gen 2026 aggiunta and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.001
 
 
 
