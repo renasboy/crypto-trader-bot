@@ -34811,16 +34811,18 @@ class maddog:
                     #  4 nov 2025 se 8>69 ok cosi'
 
 
+
+
                 elif (
-                    ma3_last > ma13_last
+                    ma3_last > ma10_last
                     and (deviation_ma78_sotto_ma100 > -0.014 or deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.022)
 
                     and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > 0.0055
 
                     and (ma8_last < ma69_last or ma39_last < ma69_last)
-                    and deviation_ma39 < -0.022
-                    and deviation_ma3_sotto_ma50 < -0.026 
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.16
+                    and deviation_ma39 < -0.03
+                    and deviation_ma3_sotto_ma50 < -0.05
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.17
 
                     and (ma300_last > ma300_180_min_ago or ma300_last > ma450_last)
 
@@ -34836,6 +34838,7 @@ class maddog:
                     #  4 nov 2025 se 8>69 aggiunte dev grazie alle pg
                     #  8 dic 2025 and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > 0.0055 da > -0.009 grazie alle pg
                     #  8 dic 2025 se deviation_ma78_sotto_ma100 > -0.014 ok cosi'
+                    # 23 GEN 2026 3-10 DA 3-13
 
 
 
@@ -39883,27 +39886,34 @@ class maddog:
 
                 elif (
                     ma3_last > ma9_last
+ 
+                    and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.01
 
-                    and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.035
                     and ma100_last < ma100_10_min_ago
                     and deviation_ma5_sopra_o_sotto_ma5_30_min_ago < -0.08
                     and deviation_ma5_sopra_o_sotto_ma5_30_min_ago > -0.50
 
-                    and ma69_last < ma69_2_min_ago
-
-                    and ma100_last > ma200_last
-                    and ma200_last > ma300_last
-
-                    and ma100_last < ma100_10_min_ago
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.27
                     and deviation_ma10_sopra_ma200 < -0.20
                     and deviation_ma5_sotto_ma300 < -0.20
+                    and deviation_ma25_sotto_ma300 < -0.233
 
+
+                    and ma69_last < ma69_2_min_ago
+                    and deviation_ma39 < -0.06
+                    and deviation_ma3_sotto_ma50 < -0.11
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.25
+
+
+                    and ma100_last > ma200_last
+                    and ma200_last > ma300_last
                     and ma300_last > ma300_60_min_ago
                     and ma450_last > ma450_120_min_ago
-                    
-                    
+
+
+                    and ma100_last < ma100_10_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.15
+
                     and ma3_last > ma8_last
                   
                     and macd > -100
@@ -39914,8 +39924,8 @@ class maddog:
                     percentage = 90
 
                     # 18 dic 2025 aggiunta and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.035
-
-
+                    # 23 GEN 2026 and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.01 DA > -0.035
+                    # 23 GEN 2026 AGGIUNTA ALTRE DEV grazie alle PG
 
                 elif (
                     ma3_last > ma9_last
