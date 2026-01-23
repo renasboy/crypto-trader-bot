@@ -2327,7 +2327,7 @@ class maddog:
 
                     and (delta_1 <= delta_2 or ma100_last >= ma200_last or ma300_last >= ma300_301_min_ago or delta_100_200_last <= delta_100_200_120_min_ago)
 
-                    and (delta_50_25_last <= delta_50_25_30_min_ago or and delta_x < delta_y)
+                    and (delta_50_25_last <= delta_50_25_30_min_ago or delta_x < delta_y)
 
                     and (delta_CV_300_25_last <= delta_CV_300_25_45_min_ago or delta_CM_300_25_last <= delta_CM_300_25_2_min_ago)
                     
