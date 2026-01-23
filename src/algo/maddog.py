@@ -65285,18 +65285,17 @@ class maddog:
             
             elif (
                 ma3_last < ma22_last
-                and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.015
                 
+                and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.001
+                and deviation_sell > -0.03
+
                 and ma300_last < ma300_301_min_ago
                 
                 and delta_150_100 <= delta_150_100_60_min
                 and ma78_last > ma78_120_min_ago
 
-                and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.001
+                
                 and ma50_last < ma50_2_min_ago
-                
-                and deviation_sell > -0.03
-                
                 
                 and deviation_ma5_sotto_ma200 > -0.50
                 
@@ -66320,15 +66319,16 @@ class maddog:
                 and ma50_last > ma50_30_min_ago
                 
                 and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.0204
+                and deviation_sell > 0.01
 
                 and ma100_last > ma450_last
                 and ma100_last > ma125_last
 
-                and (ma5_last < ma150_last or ma3_last < ma275_last)
+                and (ma5_last < ma59_last or ma5_last < ma150_last or ma3_last < ma275_last)
                 and (delta_CV_300_25_last > delta_CV_300_25_45_min_ago or delta_CM_300_25_last > delta_CM_300_25_2_min_ago)
                 and (ma10_last < ma30_last or ma50_last < ma50_2_min_ago)
                 
-                and deviation_sell > 0.01
+                
                 
                 and deviation_ma100_sopra_ma300 < 0.50
                 
@@ -68815,18 +68815,19 @@ class maddog:
 
             elif (    
                 ma50_last <= ma50_2_min_ago
-                and ma450_last > ma450_360_min_ago
+                and ma39_last < ma100_last
 
-                and deviation_ma50_sopra_o_sotto_ma300 > -0.99
-                and deviation_ma5_sopra_o_sotto_ma100 < -0.10
                 and (ma20_last <= ma20_2_min_ago or ma10_last < ma20_last)
-                
                 and deviation_ma39 < 0.12
                 and deviation_sell < -0.013
                 
-                and deviation_ma5_sopra_ma200 < -0.30
-                and deviation_ma5_sotto_ma300 < -0.30
-                and deviation_ma5_sotto_ma450 < -0.30
+                and ma450_last > ma450_360_min_ago
+                and deviation_ma50_sopra_o_sotto_ma300 > -0.99
+                
+                and deviation_ma5_sopra_o_sotto_ma100 < -0.10
+                and deviation_ma5_sopra_ma200 < -0.10
+                and deviation_ma5_sotto_ma300 < -0.10
+                and deviation_ma5_sotto_ma450 < -0.10
                 
                 and deviation_ma100_sopra_ma300 < 0.40
                 
@@ -68842,7 +68843,7 @@ class maddog:
                 # 16 nov 2025 aggiunte ordinatamente pg
                 # 12 dic 2025 anticipata ndecchiecella
                 # 12 dic 2025 aggiunte pg complete
-
+                # 23 gen 2026 modificata per farla vendere prima (se DEVE ASPETTARE CHE and deviation_ma5_sotto_ma450 < -0.30 NON VENDE PRIMA !)
 
 
 
