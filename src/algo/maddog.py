@@ -13865,6 +13865,8 @@ class maddog:
                     # 23 gen 2026 dev piu' profonde grazie alle pg
 
 
+
+
                 # BUY 1 forever young 1 PIU' PRUDENTE se ma200 > e se ma200 > ma300
 
                 elif (  
@@ -17288,28 +17290,28 @@ class maddog:
 
                     # 29 nov 2025 se (deviation_ma100_sopra_ma300 > -0.08 or deviation_ma100_sopra_o_sotto_ma100_10_min_ago > 0.015 or ma10_last > ma125_last) ok cosi'
 
-                elif (
-                    
+                
+                elif (    
                     ma3_last > ma9_last
+                    and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > 0.003
 
                     and (deviation_ma100_sopra_ma300 < -0.08 or deviation_ma100_sopra_o_sotto_ma100_10_min_ago < 0.015 or ma10_last < ma125_last)
                     and deviation_ma39 < -0.061
                     and deviation_ma3_sotto_ma50 < -0.092
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.183
                     and deviation_ma25_sotto_ma300 < -0.26
-                    and (delta_1 < delta_2 or delta_CM_300_25_last <= delta_CM_300_25_2_min_ago)
-
+                    and (delta_1 <= delta_2 or delta_CM_300_25_last <= delta_CM_300_25_2_min_ago)
 
                     and ma300_last < ma300_60_min_ago
                     and ma200_last < ma200_60_min_ago
 
-                    
                     and macd_differenza_2_min_ago > -18.50
                 ):
-                    buy = f"BUY 2 che considera distanza 5-300 AND dev 10-200 < -0.30 AND 3-39 E dif MACD - formula MY COMPA - r 4743 AYA - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    buy = f"BUY 2 che considera distanza 5-300 AND dev 10-200 < -0.30 AND 3-39 - formula MY COMPA - r 4743 AYA - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     action = "buy"
                     percentage = 80
 
+                    # 23 gen 2026 aggiunto and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > 0.003 grazie alle pg
 
                 
 
