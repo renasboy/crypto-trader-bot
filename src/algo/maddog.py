@@ -2097,7 +2097,7 @@ class maddog:
                     # 23 GEN 2026 and delta_x < delta_y GIORNO 
                     # delta_x = ma200_last / ma59_last
                     # delta_y = ma200_60_min_ago / ma59_60_min_ago
-
+                    # bloccato 24 gen 2026
 
                 elif (  
                     ma3_last > ma9_last
