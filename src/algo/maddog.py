@@ -27706,7 +27706,33 @@ class maddog:
 
               
                   
-                
+                elif (    
+                    ma3_last > ma11_last
+                    and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.0025
+                    and deviation_ma39 < -0.07 
+                    and deviation_ma3_sotto_ma50 < -0.07
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.07
+
+                    and ma450_last < ma450_120_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.05
+                    and (ma100_last > ma200_last or ma100_last > ma300_last)
+                    
+                    and ma2_last > ma5_last
+                    
+                    and macd_differenza_2_min_ago > -18.50
+                    
+                ):
+                    buy = f"BUY 3 DEL 25 GEN 2026 importato da RCCR con ma450_last < 120_min_ago CON ma100_last > ma300_last E 100>200 - r 6473 - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    action = "buy"
+                    percentage = 90
+
+                    #  5 dic 2025 importata da RCCR
+                    #  5 dic 2025 aggiunte pg
+                    # 10 dic 2025 aggiunta and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.0025
+                    # 10 dic 2025 se deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.0025 aggiungo dev grazie alle pg
+                    # 25 GEN 2025 AGGIUNTA QUESTA ! perche' maddog ha comprato con molto ritardo !
+
+
                 elif (
                     ma3_last > ma11_last
 
@@ -31825,6 +31851,35 @@ class maddog:
                     # 14 nov 2025 aggiunte pg (mettendeo prima della pg and deviation_ma39)
                     # 14 nov 2025 aggiunta and ma3_last >= ma3_2_min_ago
                     # 14 nov 2025 aggiunta and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.035 stiamo al buy 4 !
+
+                
+
+
+                elif (    
+                    ma3_last > ma11_last
+                    and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.0025
+                    and deviation_ma39 < -0.07 
+                    and deviation_ma3_sotto_ma50 < -0.07
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.07
+
+                    and ma450_last < ma450_120_min_ago
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.05
+                    and (ma100_last > ma200_last or ma100_last > ma300_last)
+                    
+                    and ma2_last > ma5_last
+                    
+                    and macd_differenza_2_min_ago > -18.50
+                    
+                ):
+                    buy = f"BUY 4 DEL 25 GEN 2026 importato da RCCR con ma450_last < 120_min_ago CON ma100_last > ma300_last E 100>200 - r 6675 - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    action = "buy"
+                    percentage = 90
+
+                    #  5 dic 2025 importata da RCCR
+                    #  5 dic 2025 aggiunte pg
+                    # 10 dic 2025 aggiunta and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.0025
+                    # 10 dic 2025 se deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.0025 aggiungo dev grazie alle pg
+                    # 25 GEN 2025 AGGIUNTA QUESTA ! perche' maddog ha comprato con molto ritardo !
 
 
                 elif (    
