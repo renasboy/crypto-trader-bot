@@ -71803,7 +71803,7 @@ class maddog:
                 and deviation_sell < -0.027
             ):    
             
-                sell = f"SELL CS - DOLCE ATTESA 270 sec con ma13 < and con 450 > E 100<100 30 min ago and ma10_last < ma39_last - r 16694 B1 yy - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                sell = f"SELL CS - DOLCE ATTESA 270 sec con ma13 < and con 450 > E 100<100 30 min ago and ma10_last < ma39_last - r 16694 B1 yy - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
              
                 # 4 feb 2022 con < -0.26 ha fatto -0.88% (dopo +4.29%)
@@ -71844,7 +71844,7 @@ class maddog:
             
             ):
 
-                sell = f"SELL CS - DOLCE ATTESA 270 sec and ma13 < and con 450 < E 100<100 30 min ago e 100 sopra 300 < 0.50 - r 16694 B2x - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                sell = f"SELL CS - DOLCE ATTESA 270 sec and ma13 < and con 450 < E 100<100 30 min ago e 100 sopra 300 < 0.50 - r 16694 B2x - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
              
                 # 4 feb 2022 con <-0.26 ha fatto -0.88% (dopo +4.29%)
@@ -71916,7 +71916,7 @@ class maddog:
             
             ):
 
-                sell = f"SELL CS - DA 270 sec and ma13< E 450< E 100<100 30 min ago E 100-100 10 min ago < -0.07 MA 100>200 - r 16694 B2y1 y2 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                sell = f"SELL CS - DA 270 sec and ma13< E 450< E 100<100 30 min ago E 100-100 10 min ago < -0.07 MA 100>200 - r 16694 B2y1 y2 - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
 
                 # 19 set 2024 con 100>200 aggiunto and ma2_last < ma5_last cioe' aspetta ancora un pochino
@@ -71953,7 +71953,7 @@ class maddog:
                 and ma2_last <= ma2_2_min_ago
             ):
 
-                sell = f"SELL CS - DOLCE ATTESA 270 sec E dev sell < -0.06 and ma13 < and con 450 < MA GIORNO ! - r 16694 B2 Y2 Ax1 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                sell = f"SELL CS - DOLCE ATTESA 270 sec E dev sell < -0.06 and ma13 < and con 450 < MA GIORNO ! - r 16694 B2 Y2 Ax1 - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
 
                 # 20 mar 2025 deviation_sell a -0.055 da -0.05
@@ -72071,7 +72071,7 @@ class maddog:
                 and ma2_last <= ma2_2_min_ago
             ):
 
-                sell = f"SELL CS - DOLCE ATTESA 270 sec E dev sell < -0.06 and ma13 < and con 450 < MA GIORNO ! - r 16694 B2 Y2 Ay - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                sell = f"SELL CS - DOLCE ATTESA 270 sec E dev sell < -0.06 and ma13 < and con 450 < MA GIORNO ! - r 16694 B2 Y2 Ay - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 
                 action = "sell"
                 
@@ -72117,7 +72117,7 @@ class maddog:
                 and ma2_last <= ma2_2_min_ago
             
             ):
-                sell = f"SELL CS - DOLCE ATTESA 270 sec and ma13 < and con 450 < E 100<100 30 min ago e 100 sopra 300 < 0.50 - r 16694 B2 Y2 Bax - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                sell = f"SELL CS - DOLCE ATTESA 270 sec and ma13 < and con 450 < E 100<100 30 min ago e 100 sopra 300 < 0.50 - r 16694 B2 Y2 Bax - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
                 
                 #  3 mar 2025 aggiunta and ma450_last > ma450_480_min_ago
@@ -72154,7 +72154,7 @@ class maddog:
                 and ma2_last <= ma2_2_min_ago
             
             ):
-                sell = f"SELL CS {ma3_last} {ma20_last} DOLCE ATTESA 270 sec and ma13< con 450< E 100<100 30 min MA 3>20 - r 16694 B2 Y2 Bayx - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                sell = f"SELL CS {ma3_last} {ma20_last} DOLCE ATTESA 270 sec and ma13< con 450< E 100<100 30 min MA 3>20 - r 16694 B2 Y2 Bayx - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
                 
                 #  3 mar 2025 aggiunta and (ma450_last < ma450_480_min_ago or ma450_last < ma450_720_min_ago)
@@ -72194,7 +72194,7 @@ class maddog:
                 and ma2_last <= ma2_2_min_ago
             
             ):
-                sell = f"SELL CS - DOLCE ATTESA 270 sec and ma13 < and con 450 < E 100<100 30 min E 3<20 - r 16694 B2 Y2 Bayy - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                sell = f"SELL CS - DOLCE ATTESA 270 sec and ma13 < and con 450 < E 100<100 30 min E 3<20 - r 16694 B2 Y2 Bayy - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
                 
                 #  3 mar 2025 aggiunta and (ma450_last < ma450_480_min_ago or ma450_last < ma450_720_min_ago)
@@ -72233,7 +72233,7 @@ class maddog:
             
             ):
 
-                sell = f"SELL CS ZIA AMALIA ! - DOLCE ATTESA 270 sec and ma13 < MA ma25> and con 450< E dev_sell < -0.0942 - r 16694 B2 Y2 Bbx - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                sell = f"SELL CS ZIA AMALIA ! - DOLCE ATTESA 270 sec and ma13 < MA ma25> and con 450< E dev_sell < -0.0942 - r 16694 B2 Y2 Bbx - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
 
                 #  8 ott 2024 se ma200_last < ma200_120_min_ago MA ma25_last > ma25_2_min_ago and deviation_sell < -0.09 ! statti calmo
@@ -72274,7 +72274,7 @@ class maddog:
             
             ):
 
-                sell = f"SELL CS - DOLCE ATTESA 270 sec and ma13 < con 450 < and dev_sell < -0.025 - r 16694 B2 Y2 BB Yx - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                sell = f"SELL CS - DOLCE ATTESA 270 sec and ma13 < con 450 < and dev_sell < -0.025 - r 16694 B2 Y2 BB Yx - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
 
                 #  4 feb 2022 con <-0.26 ha fatto -0.88% (dopo +4.29%)
@@ -72549,7 +72549,7 @@ class maddog:
             
             ):
 
-                sell = f"SELL crollo 1 - dopo crollo del 10 ottobre 2025 - r 16700 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                sell = f"SELL crollo 1 - dopo crollo del 10 ottobre 2025 - r 16700 - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
 
                 # 25 ott 2025 aggiunta dopo il crollo del 10 ottobre 2025 !
@@ -72569,7 +72569,7 @@ class maddog:
             
             ):
 
-                sell = f"SELL crollo 2 - dopo crollo del 10 ottobre 2025 - r 16701 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                sell = f"SELL crollo 2 - dopo crollo del 10 ottobre 2025 - r 16701 - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
 
                 # 25 ott 2025 aggiunta dopo il crollo del 10 ottobre 2025 !
@@ -72591,7 +72591,7 @@ class maddog:
                 and ma2_last < ma2_2_min_ago
             ):
 
-                sell = f"SELL condizione speciale 31 - DOLCE ATTESA 270 sec con ma13 < and deviation < -0.50 con 100 sotto di molto 200 durante crollo ! - r 16719 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                sell = f"SELL condizione speciale 31 - DOLCE ATTESA 270 sec con ma13 < and deviation < -0.50 con 100 sotto di molto 200 durante crollo ! - r 16719 - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
                 
                 # durante il crollo sono un po' piu' tollerante - paradossalmente ! HO ATTESO MOLTO QUESTO MOMENTO !
@@ -72614,7 +72614,7 @@ class maddog:
                 and ma2_last < ma2_2_min_ago
             ):
 
-                sell = f"SELL condizione speciale 32 - TEMPO e se ma8 < ma50 and deviation_sell < -0.49 - r 16720 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                sell = f"SELL condizione speciale 32 - TEMPO e se ma8 < ma50 and deviation_sell < -0.49 - r 16720 - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
                         
                 # ma13 troppo lenta !
@@ -72649,7 +72649,7 @@ class maddog:
                 and ma2_last < ma2_2_min_ago
           
             ):
-                sell = f"SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 150 min = 9000 sec e fino a 14400 sec = 240 min con 5-50 - r 16721 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                sell = f"SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 150 min = 9000 sec e fino a 14400 sec = 240 min con 5-50 - r 16721 - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
                 
                 # 24 set 2022 ore 17:23
@@ -72674,7 +72674,7 @@ class maddog:
                 and macd < macd_2_min_ago
             ):
 
-                sell = f"SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 150 min = 9000 sec e fino a 14400 sec = 240 min con 5-150 - r 16722 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                sell = f"SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 150 min = 9000 sec e fino a 14400 sec = 240 min con 5-150 - r 16722 - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
                         
                 # 24 set 2022 ore 17:23
@@ -72702,7 +72702,7 @@ class maddog:
            
             ):
 
-                sell = f"SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 150 min e fino a 240 min con 5-90 - r 16723 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                sell = f"SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 150 min e fino a 240 min con 5-90 - r 16723 - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
                         
                 # 24 set 2022 ore 17:23
@@ -72731,7 +72731,7 @@ class maddog:
            
             ):
 
-                sell = f"SELL condizione speciale 32 ROOT DOWN DEEP - ro cano VENDE dopo 150 min e fino a 240 min con 5-100 - r 16724 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                sell = f"SELL condizione speciale 32 ROOT DOWN DEEP - ro cano VENDE dopo 150 min e fino a 240 min con 5-100 - r 16724 - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
                         
                 # 24 set 2022 ore 17:23
@@ -72763,7 +72763,7 @@ class maddog:
                 and macd_differenza_2_min_ago < -0.25
             ):
 
-                sell = f"SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 150 min e fino a 240 min con 4-86 and macd_differenza_2_min_ago < -0.25 - r 16725 X - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                sell = f"SELL condizione speciale 32 B ROOT DOWN DEEP - ro cano VENDE dopo 150 min e fino a 240 min con 4-86 and macd_differenza_2_min_ago < -0.25 - r 16725 X - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
                         
                 # 24 set 2022 ore 17:23
