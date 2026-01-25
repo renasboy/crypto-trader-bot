@@ -44176,7 +44176,7 @@ class maddog:
                    
                     and macd_differenza_2_min_ago > -18.50
                 ):    
-                    buy = f"BUY 5 compare forever  - 100<120 min ago E 100<60 min ago con 5-20 E CON 300 vicina alla 450 + MACD > E ma50_diff_ma59 > -5 - r 7589 B2y B - and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    buy = f"BUY 5 compare forever  - 100<120 min ago E 100<60 min ago con 5-20 E CON 300 vicina alla 450 + MACD > E ma50_diff_ma59 > -5 - r 7589 B2y B - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     action = "buy"
                     percentage = 90
                     
@@ -44194,30 +44194,36 @@ class maddog:
                 
                 elif (
                     
-                    ma3_last > ma18_last
-                
+                    ma3_last > ma11_last
+                    and deviation_ma100_sopra_ma450 > -0.50
+
+                    and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.024 
+                    and deviation_ma78_sotto_ma100 < -0.08
+                    and deviation_ma50_sotto_ma100 < -0.25
+                    and deviation_ma100_sotto_ma200 < -0.15
+                    and deviation_ma39 < -0.12
+                    and deviation_ma3_sotto_ma50 < -0.27
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.49
+                    and deviation_ma25_sotto_ma300 < -0.70 
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.10
+
                     and ma450_last < ma450_360_min_ago
-                    and deviation_ma100_sopra_ma450 > -0.27
+                    and ma300_last < ma300_60_min_ago
+                    and ma200_last < ma200_60_min_ago
+
+                    
 
                     and deviation_ma5_sopra_ma200 < -0.30
                     and deviation_ma5_sotto_ma300 < -0.30
                     and deviation_ma5_sotto_ma450 < -0.30
-                    and deviation_ma50_sopra_o_sotto_ma100 < -0.01
+                    
                     
                     and deviation_ma100_sopra_ma300 < -0.10
                     
-                    and ma300_last < ma300_60_min_ago
-                    and ma200_last < ma200_60_min_ago
-                    
-                    and deviation_ma3_sopra_ma10 > 0.081
-                    
-                    and deviation_ma5_sopra_ma28 > -0.15
-                    and deviation_ma3_sopra_ma16 > -0.12
-                    
                     and ma2_last >= ma2_2_min_ago
-                    and macd >= macd_2_min_ago
+                    
                 ):
-                    buy = "BUY 5 EX BUY 1 1043 B considera distanza 5-300 AND dev 10-200 < -0.24 AND dev 4-18 - r 7590"
+                    buy = f"BUY 5 EX BUY 1 1043 B considera distanza 5-300 AND dev 10-200 < -0.24 AND dev 4-18 - r 7590 - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     action = "buy"
                     percentage = 90
                     
@@ -44225,6 +44231,10 @@ class maddog:
                     #  2 ott 2024 lasciala per il momento (ha comprato appena ha ripreso a scendere e con 450 che scendeva da gia' da tanto...)
                     #  2 ott 2024 se e' un BUY 5 e 450 scende da tanto tempo la ma100 NON DEVE STARE TROPPO LONTANA DALLA ma450 ! 
                     #  2 ott 2024 perche' altrimenti sta scendendo ed e' inutile andare contro il mercato. lasciala scendere !
+                    # 25 gen 2026 aggiunte dev grazie alle pg di un sell successivo.
+                    # 25 gen 2026 aggiunte pg
+
+
 
 
                 elif (
