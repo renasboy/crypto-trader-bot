@@ -66821,25 +66821,24 @@ class maddog:
 
             elif (
                 ma78_last < ma78_120_min_ago
+                and ma300_last < ma300_301_min_ago
 
                 and delta_150_100 <= delta_150_100_60_min
-                and ma8_last < ma8_2_min_ago 
+
+                and ma8_last <= ma8_2_min_ago 
+                and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.005
 
                 and ma10_last < ma100_last
 
-                and ma20_last <= ma20_10_min_ago
-                and ma50_last <= ma50_2_min_ago
-                
-                and ma300_last < ma300_301_min_ago
-                
-                
+                and (ma20_last <= ma20_10_min_ago or ma50_last <= ma50_2_min_ago)
+                 
                 and deviation_ma39 < 0.13
                 and deviation_sell < -0.01
                 
                 and deviation_ma100_sopra_ma300 < 0.40
-                and deviation_ma5_sotto_ma200 > -0.50
+                and deviation_ma5_sotto_ma200 > -0.80
                 
-                and ma2_last < ma2_2_min_ago 
+                and ma2_last <= ma2_2_min_ago 
                 and macd_differenza_2_min_ago < -1.35
                 
             ):
@@ -66852,6 +66851,7 @@ class maddog:
                 # 28 mag 2025 aggiunta parentesi graffe
                 # 26 ott 2025 aggiunte pg sulla stessa riga e con 3 numeri decimali
                 # 26 ott 2025 se delta_150_100 giorno allora per vendere deve essere ma8_last < ma8_2_min_ago (ha venduto mentre saliva)
+                # 25 gen 2026 anticipata ndecchiecella HA FATTO -0.46
 
             
 
