@@ -61495,7 +61495,7 @@ class maddog:
                         ###################################################################################################
                         
                         
-                       
+                    
                     elif (    
                         ma50_last >= ma50_2_min_ago
                         and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.005
@@ -61508,7 +61508,7 @@ class maddog:
                         
                         and ma200_last > ma200_60_min_ago
                     ):
-                        sell = f"SELL 4-5-x (21-60 min) con ma50 > and deviation_sell < 0.04 - r 15209 - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                        sell = f"SELL 4-5-x (21-60 min) con ma50 > and deviation_sell < 0.04 - r 15209 - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                         action = "sell"
                         
                         # 30 ott 2023 and deviation_ma25 a -0.25 da -0.30
@@ -61520,6 +61520,37 @@ class maddog:
                         # 26 ott 2025 deviation_sell a 0.04 da -0.02
                         # 10 dic 2025 aggiunto and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f}
                         # 26 GEN 2026 AGGIUNTA QUESTA 
+
+
+                    elif (
+                        seconds_since_last_trade > max_hold_time_in_seconds
+                        and ma10_last > ma39_last
+
+                        and ma450_last > ma450_10_min_ago
+                        and ma39_last < ma100_last
+
+                        and ma100_last < ma100_30_min_ago
+                        and ma13_last <= ma13_2_min_ago
+
+                        and deviation_ma100_sopra_ma200 > -0.70
+                        and deviation_ma100_sopra_ma300 < 0.50
+
+                        and ma3_last <= ma3_2_min_ago
+                        and ma2_last < last_trade_price
+                        and ma2_last <= ma2_2_min_ago
+                        and macd_differenza_2_min_ago < -1.50
+                
+                        and deviation_sell < -0.025
+                ):    
+            
+                        sell = f"SELL 4-5-x (21-60 min) - DOLCE ATTESA 270 sec con ma13 < and con 450 > E 100<100 30 min ago and ma10_last > ma39_last - r 15210 - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                        action = "sell"
+
+                        # 15 apr 2025 aggiunta and ma10_last > ma39_last 
+                        # 15 apr 2025 forse qua dovro' mettere sell con 3<39 !
+                        # 27 ott 2025 aggiunte pg
+                        # 26 GEN 2026 AGGIUNTA QUESTA 
+
 
 
 
