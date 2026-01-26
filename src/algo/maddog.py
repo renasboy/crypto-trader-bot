@@ -3589,6 +3589,7 @@ class maddog:
 
                 elif (  
                     ma3_last > ma8_last
+                    and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > 0.005
 
                     and (ma200_last > ma200_120_min_ago or ma300_last > ma300_120_min_ago)
                     and (delta_1 < delta_2 or delta_DNA_1 < delta_DNA_2)
@@ -3616,7 +3617,7 @@ class maddog:
                     # 10 nov 2025 con ma300_last > ma300_120_min_ago se (ma25_last > ma50_last or delta_50_25_last < delta_50_25_30_min_ago) no dev 39 and 3-50 !
                     # 29 nov 2025 ok !
                     # 29 nov 2025 aggiunto and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} per vedere in futuro.
-
+                    # 26 gen 2026 and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > 0.0021
 
 
                 elif (  
@@ -22368,7 +22369,8 @@ class maddog:
 
                 elif (
                     ma3_last > ma8_last
-                    and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.02
+                    
+                    and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.0040
 
                     and (ma100_last < ma100_60_min_ago or delta_CV_300_25_last > delta_CV_300_25_45_min_ago)
                     and (delta_CM_300_25_last <= delta_CM_300_25_2_min_ago or ma300_last >= ma300_301_min_ago)
@@ -22393,7 +22395,9 @@ class maddog:
                     # 26 dic 2025 anticipata ndecchiecella
                     # 26 GEN 2026 ANTICIPATA NDECCHIECELLA
                     # 26 GEN 2026 AGGIUNTA and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.02
-                    
+                    # 26 gen 2026 and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.0040 da > -0.02
+
+
                     
                 # BUY 2 RIVOLUZIONARIO A3x (100 NON E' ATTACCATA ALLA 300 !) e 39>50 E 8>200 and deviation_ma100_sopra_ma300 > 0.05 
                 
@@ -28130,6 +28134,7 @@ class maddog:
                     ma3_last > ma11_last
                     
                     and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.001
+                    
                     and (ma300_last > ma300_60_min_ago or ma300_last > ma300_120_min_ago)
                     and ma8_last < ma8_20_min_ago
 
