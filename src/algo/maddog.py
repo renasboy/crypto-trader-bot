@@ -17177,8 +17177,7 @@ class maddog:
                 elif (   
                     ma3_last > ma9_last
 
-                    and deviation_ma8_sopra_o_sotto_ma8_2_min_ago
-
+                    and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > 0.0049
                     
                     and deviation_ma50_sotto_ma100 < -0.05
                     and deviation_ma39 < -0.06
@@ -17200,6 +17199,8 @@ class maddog:
                     # 26 gen 2026 importante ! in tutti gli altri casi ( quindi anche se ma8 scende da 4 min oppure da 3 min ) deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.008 grazie alle pg
                     # 27 gen 2026 and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > 0.017 da > -0.0080
                     # 27 gen 2026 aggiunte dev grazie alle pg
+                    # 27 gen 2026 and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > 0.0049
+
 
 
                 elif (   
