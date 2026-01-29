@@ -34338,6 +34338,8 @@ class maddog:
                 elif (    
                     ma3_last > ma11_last
 
+                    and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > 0.001
+
                     and deviation_ma54_sopra_o_sotto_ma72 < -0.015
                     and ma300_last < ma300_301_min_ago
                     and ma300_last < ma450_last
@@ -34357,12 +34359,12 @@ class maddog:
                     and ma100_last < ma100_120_min_ago
                            
                 ):    
-                    buy = "BUY 4 del 19 nov 2025 > grandissimo ribasso - r 6861 - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    buy = f"BUY 4 del 19 nov 2025 > grandissimo ribasso - r 6861 - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     action = "buy"
                     percentage = 90
 
                     # 19 nov 2025 questa condizione e' NECESSARIA ! MADDOG NON AVEVA COMPRATO !
-
+                    # 29 gen 2026 mancava la parentesi graffa
 
 
 
@@ -41229,6 +41231,8 @@ class maddog:
                 elif (
                     ma3_last > ma8_last
 
+                    and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > 0.009
+
                     and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.001
                     and deviation_ma39 < -0.05
                     and deviation_ma3_sotto_ma50 < -0.05
@@ -41250,6 +41254,8 @@ class maddog:
                     percentage = 80
 
                     # 21 gen 2026 aggiunto questa che stava su RCCR perche' MADDOG NON AVEVA COMPRATO PROPRIO
+                    # 29 gen 2026 and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > 0.009 da > -0.001
+
 
 
                 elif (
@@ -70074,7 +70080,8 @@ class maddog:
 
             elif (    
                 ma3_last < ma20_last
-                and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.0091 
+                
+                and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.016
 
                 and (ma50_last < ma50_2_min_ago or ma20_last < ma50_last)
                 and ma450_last < ma450_360_min_ago
@@ -70108,7 +70115,9 @@ class maddog:
                 # 10 apr 2025 modificata
                 # 21 ott 2025 aggiunte pg
                 #  4 nov 2025 anticipato ndecchiecella mettendo or ma20_last < ma50_last
-                # 14 dic 2025 aggiunto and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.0091 
+                # 14 dic 2025 aggiunto and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.0091
+                # 26 gen 2026 and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.016 da < -0.0091
+
 
 
             elif (    
