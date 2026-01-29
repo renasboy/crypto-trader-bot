@@ -65405,15 +65405,13 @@ class maddog:
 
             elif (
                 ma3_last < ma33_last
+                and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.004
 
                 and (ma300_last < ma300_301_min_ago or ma300_last < ma300_120_min_ago or ma78_last < ma78_120_min_ago)
 
                 and delta_450_300 < delta_450_300_60_min
                 and deviation_sell > 0.01
                 and deviation_ma39 < -0.01
-
-                and ma8_last <= ma8_2_min_ago
-                
 
                 and delta_CV_300_25_last > delta_CV_300_25_45_min_ago 
                 
@@ -65436,6 +65434,8 @@ class maddog:
                 #  4 nov 2025 aggiunte pg
                 #  5 nov 2025 aggiunta cv notte anticipata ndecchiecella (and deviation_sell a 0.01 da -0.019)
                 # 21 nov 2025 modificata per anticipare di una ndecchiecella il sell. (non dimenticare che 300< 5 ore !)
+                # 29 gen 2026 aggiunta and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.004
+
 
           
             elif (
