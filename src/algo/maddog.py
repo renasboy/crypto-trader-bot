@@ -68965,6 +68965,10 @@ class maddog:
 
             elif (    
                 ma50_last > ma50_2_min_ago
+
+                and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < 0.008
+                and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.001
+
                 and ma39_last > ma100_last
 
                 and deviation_ma50_sopra_o_sotto_ma300 < 0.10
@@ -68984,7 +68988,7 @@ class maddog:
                 and macd < 1
                 and macd_differenza_2_min_ago < -1.00
             ):
-                sell = f"SELL CS se 39>100 vende con 3-39 e dev 3-39 < 0.10 and dev_sell < -0.02 e ma50 > con DIFF MACD < -1 - r 16047 A2 X2 Y2 x - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                sell = f"SELL CS se 39>100 vende con 3-39 e dev 3-39 < 0.10 and dev_sell < -0.02 e ma50 > con DIFF MACD < -1 - r 16047 A2 X2 Y2 x - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
                 
                 # 29 nov 2023 vende con 3-28 se ma 100 > 100 60 min
@@ -68999,7 +69003,9 @@ class maddog:
                 #  4 feb 2025 se ma39_last > ma100_last sell con ma3_last < ma39_last
                 #  4 feb 2025 dev_sell < -0.02 da < -0.01
                 # 24 ott 2025 aggiunte pg
-
+                # 29 gen 2026 aggiunte PG
+                # 29 gen 2026 aggiunta and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < 0.008
+                # 29 gen 2026 aggiunta and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.001
 
 
 
@@ -69433,6 +69439,8 @@ class maddog:
                 # 29 gen 2026 aggiunte PG
                 # 29 gen 2026 aggiunta and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.005 grazie alle pg
                 # 29 gen 2026 aggiunta and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.001
+
+
 
 
             elif (    
