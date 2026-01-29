@@ -36105,8 +36105,10 @@ class maddog:
                 
                 
                 # BUY 4 se 100>200 non devi spezzare proprio un cazzo
+
                 elif (
-                    ma3_last > ma18_last
+                    ma3_last > ma11_last
+                    and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > 0.001
 
                     and ma20_last > ma50_last
                     and ma100_last > ma200_last
@@ -36114,11 +36116,9 @@ class maddog:
                     and ma100_last > ma100_120_min_ago
                     and (delta_450_200 < delta_450_200_60_min or delta_DNA_1 < delta_DNA_2)
                     
-                    and ma3_last > ma13_last
-
                     and macd_differenza_2_min_ago > -18.50
                 ):
-                    buy = "BUY 4 con con 100>100 120 min ago E doppio delta GIORNO e 20>50 E 100 > 60 min - r 7065 A1 x1 x"
+                    buy = f"BUY 4 con con 100>100 120 min ago E doppio delta GIORNO e 20>50 E 100 > 60 min - r 7065 A1 x1 x - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     action = "buy"
                     percentage = 80
 
@@ -36127,6 +36127,10 @@ class maddog:
                     # 14 apr 2025 20>50 sostituisce and ma39_last > ma39_30_min_ago
                     # 28 apr 2025 aggiunta or delta_DNA_1 < delta_DNA_2
                     # 12 mag 2025 aggiunta ma100_last > ma100_60_min_ago
+                    # 29 gen 2026 aggiunte PG
+                    # 29 gen 2026 aggiunta and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > 0.001
+
+
 
 
                 elif (
