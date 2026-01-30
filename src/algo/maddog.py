@@ -38364,32 +38364,32 @@ class maddog:
 
 
                 elif (    
-                    ma3_last > ma10_last
+                    ma3_last > ma9_last
+
                     and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.001
-                    
+
+                    and (ma450_last > ma450_360_min_ago or ma450_last > ma450_480_min_ago or ma450_last > ma450_720_min_ago)
+                    and (delta_DNA_1 <= delta_DNA_2 or ma100_last >= ma100_120_min_ago or or ma200_last >= ma200_120_min_ago)
 
                     and deviation_ma25_sotto_ma300 > -0.15 
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.033
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.043
                     
                     and deviation_ma39 < -0.10
                     and deviation_ma3_sotto_ma50 < -0.13
                     
-                    and (ma450_last > ma450_360_min_ago or ma450_last > ma450_480_min_ago or ma450_last > ma450_720_min_ago)
-                    and (delta_DNA_1 < delta_DNA_2 or ma100_last > ma100_120_min_ago)
-
                     and deviation_ma300_sopra_ma450 < 0.99
                     and deviation_ma300_sopra_ma450 > -0.50
 
                     and deviation_ma100_sopra_ma300 < 0.99
                     and deviation_ma100_sopra_ma300 > -0.50
 
-                    and macd_differenza_2_min_ago > -18.50
                 ):
                     buy = f"BUY 5 con 450 > 450 720 min - GIORNO - r 7149 a - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     action = "buy"
                     percentage = 100
 
                     # 26 gen 2026 con ma8 in tutti gli altri modi deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.001
+                    # 30 gen 2026 anticipata ndecchiecella.
 
 
 
@@ -66593,6 +66593,8 @@ class maddog:
                 
                 # 23 gen 2026 se deviation_ma100_sotto_ma200 > 0.08 or doppio delta 300-200 giorno vende con incrocio al ribasso 5-200
                 # 30 gen 2026 attenzione ! se anche deviation_ma78_sotto_ma100 > 0.01 vendi con incrocio al ribasso 7-200 let it be !
+
+
 
 
             elif (
