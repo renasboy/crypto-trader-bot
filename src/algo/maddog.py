@@ -38369,7 +38369,7 @@ class maddog:
                     and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.001
 
                     and (ma450_last > ma450_360_min_ago or ma450_last > ma450_480_min_ago or ma450_last > ma450_720_min_ago)
-                    and (delta_DNA_1 <= delta_DNA_2 or ma100_last >= ma100_120_min_ago or or ma200_last >= ma200_120_min_ago)
+                    and (delta_DNA_1 <= delta_DNA_2 or ma100_last >= ma100_120_min_ago or ma200_last >= ma200_120_min_ago)
 
                     and deviation_ma25_sotto_ma300 > -0.15 
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.043
