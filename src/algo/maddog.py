@@ -22453,8 +22453,8 @@ class maddog:
 
                 elif (
                     ma3_last > ma8_last
-                    
-                    and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.002
+                    and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > 0.0010
+                    and deviation_ma8_sopra_o_sotto_ma8_2_min_ago 
 
                     and (ma100_last < ma100_60_min_ago or delta_CV_300_25_last > delta_CV_300_25_45_min_ago)
                     and (delta_CM_300_25_last <= delta_CM_300_25_2_min_ago or ma300_last >= ma300_301_min_ago)
@@ -22481,6 +22481,8 @@ class maddog:
                     # 26 GEN 2026 AGGIUNTA and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.02
                     # 26 gen 2026 and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.0040 da > -0.02
                     # 26 gen 2026 and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.0020
+                    # 31 gen 2026 and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > 0.0010 da > -0.002
+
 
                     
                 # BUY 2 RIVOLUZIONARIO A3x (100 NON E' ATTACCATA ALLA 300 !) e 39>50 E 8>200 and deviation_ma100_sopra_ma300 > 0.05 
@@ -68559,8 +68561,9 @@ class maddog:
 
             elif (
                 ma78_last > ma78_120_min_ago
-                and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.01
                 
+                and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.015
+
                 and ma450_last > ma450_360_min_ago
 
                 and (ma100_last < ma200_last or ma5_last < ma150_last)
@@ -68585,7 +68588,7 @@ class maddog:
                 # 24 ott 2025 aggiunte pg
                 # 24 ott 2025 ha fatto -0.42 e allora ho modificato come ho potuto per farla vendere prima.
                 # 22 dic 2022 aggiunto and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.01
-                
+                # 30 gen 2027 and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.015 da < -0.01
 
 
             elif (
