@@ -4221,9 +4221,16 @@ class maddog:
                     and deviation_ma2_sopra_o_sotto_ma2_2_min_ago > 0.020
                     
                 ):
-                    buy = "BUY 1 migliore con distanza 5-300 E dev TRIADE e dev ma2 e diff macd - r 1043 B1 - NUOVA ERA A1 SOFT"
+                    buy = "BUY 1 migliore con distanza 5-300 E dev TRIADE e dev ma2 e diff macd - r 1043 B1 - NUOVA ERA A1 SOFT - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     action = "buy"
                     percentage = 80
+
+                    #  3 feb 2026 INCREDIBILE ! dopo un lungo ribasso e' andata benissimo. NON TOCCARE !
+                    #  3 FEB 2026 aggiunte PG 
+
+
+
+
 
                 
                 elif (    
@@ -57783,15 +57790,36 @@ class maddog:
                         
 
                     # ------------------------------------------------------------------------------- guadagno con crollo
-                    
+
                     elif (
                         ma50_last < ma50_2_min_ago
+                        and (ma78_last > ma200_last or delta_CV_300_25_last < delta_CV_300_25_45_min_ago)
+                        and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.01
+
                         and (ma3_prev > ma23_prev and ma3_last < ma23_last)
                         and deviation_sell > 0.23
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 3 guadagno con crollo (5-12 min) con ma50 < and incrocio 3-23 - r 13138"
+                        sell = f"SELL 3 guadagno con crollo (5-12 min) con ma50 < and incrocio 3-23 - r 13138 a - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                         action = "sell"
+
+                        #  4 feb 2026 ok !
+                        #  4 feb 2026 aggiunte PG
+                        #  4 feb 2026 se (ma78_last > ma200_last or delta_CV_300_25_last < delta_CV_300_25_45_min_ago) aggiungo deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.01
+
+
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and (ma78_last < ma200_last or delta_CV_300_25_last > delta_CV_300_25_45_min_ago)
+                        and (ma3_prev > ma23_prev and ma3_last < ma23_last)
+                        and deviation_sell > 0.23
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = f"SELL 3 guadagno con crollo (5-12 min) con ma50 < and incrocio 3-23 - r 13138 b - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                        action = "sell"
+
+                        #  4 feb 2026 ok !
+                        #  4 feb 2026 aggiunte PG
                         
                     
                     # ------------------------------------------------------------------------------------------------------------ PARACADUTE crollo
@@ -66728,6 +66756,9 @@ class maddog:
 
                 and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.081
 
+                and deviation_sell > -0.03
+                and (deviation_ma3_sotto_ma50 < -0.006 or deviation_ma39 < -0.105)
+
                 and (delta_150_100 <= delta_150_100_60_min or ma78_last > ma78_120_min_ago)
                 and ma50_last > ma50_2_min_ago
 
@@ -66735,8 +66766,6 @@ class maddog:
 
                 and deviation_ma78_sotto_ma100 < 0.02
                 
-                and deviation_sell > -0.03
-
                 and deviation_ma5_sotto_ma200 > -0.60
                 
                 and ma2_last < ma2_2_min_ago 
@@ -66745,8 +66774,8 @@ class maddog:
                 sell = f"SELL CS GIORNO con ma300 < 5 ore and dev_sell < -0.03 e con ma50 < e con ma78 > - r 16045 AZ1 xy 1 - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
 
-                # 1 feb 2026 con deviation_ma100_sopra_o_sotto_ma100_10_min_ago > 0.015 aggiungo and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.081 grazie alle pg
-
+                #  1 feb 2026 con deviation_ma100_sopra_o_sotto_ma100_10_min_ago > 0.015 aggiungo and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.081 grazie alle pg
+                #  4 feb 2026 aggiunto (deviation_ma3_sotto_ma50 < -0.006 or deviation_ma39 < -0.105) grazie alle pg
 
 
 
