@@ -41974,6 +41974,8 @@ class maddog:
                     
                     and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > 0.009
 
+                    and not (ma8_last < ma8_5_min_ago)
+
                     and (ma200_last >= ma200_120_min_ago or ma300_last >= ma300_60_min_ago or ma20_last > ma78_last)
                     
 
