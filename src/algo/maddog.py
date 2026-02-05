@@ -43186,11 +43186,18 @@ class maddog:
                     # 23 ott 2025 aggiunto ma8 > ma8 2 min ago
                     # 23 ott 2025 aggiunto cm notte
 
-
                 elif (
                     ma3_last > ma9_last
-
+                    
                     and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > 0.001
+
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.05
+
+                    and deviation_ma39 < -0.10
+                    and deviation_ma3_sotto_ma50 < -0.20
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.40
+                    and deviation_ma100_sotto_ma200 < -0.50
+
 
                     and price >= price_2_min_ago
                     and ma5_last > ma5_2_min_ago
@@ -43209,14 +43216,99 @@ class maddog:
                     and ma100_last < ma200_last
                     and ma200_last < ma300_last
 
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.18
                     and deviation_ma25_sotto_ma300 < -0.90
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.10
+                    
+                    and ma2_last > ma6_last
+                    
+                ):
+                    buy = f"BUY 5 IMPORTATO DA RCCR e modificato dopo 50000 righe - r 7555 A - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    action = "buy"
+                    percentage = 80
+
+
+
+                elif (
+                    ma3_last > ma9_last
+                    
+                    and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > 0.001
+
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.05
+
+                    and deviation_ma39 < -0.430 
+                    and deviation_ma3_sotto_ma50 < -0.248 
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.881
+                    and deviation_ma100_sotto_ma200 < -0.50
+
+
+                    and price >= price_2_min_ago
+                    and ma5_last > ma5_2_min_ago
+
+                    and (deviation_ma200_sotto_ma300 > -0.60 or delta_DNA_1 <= delta_DNA_2)
+                    and deviation_ma5_sotto_ma450 < -0.30
+                    
+                    and ma50_last < ma50_2_min_ago
+                    and delta_1 > delta_2
+                    and ma100_last < ma100_60_min_ago
+                        
+                    and ma100_last < ma100_120_min_ago
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_120_min_ago
+                        
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+
+                    and deviation_ma25_sotto_ma300 < -0.90
+                    
 
                     and ma2_last > ma6_last
                     
                 ):
-                    buy = f"BUY 5 IMPORTATO DA RCCR e modificato dopo 50000 righe - r 7555 - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    buy = f"BUY 5 IMPORTATO DA RCCR e modificato dopo 50000 righe - r 7555 B - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    action = "buy"
+                    percentage = 80
+
+
+
+
+
+                elif (
+                    ma3_last > ma9_last
+                    
+                    and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > 0.001
+
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.12
+                    
+                    and deviation_ma39 < -0.48
+                    and deviation_ma3_sotto_ma50 < -0.53
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.78
+                    and deviation_ma100_sotto_ma200 < -0.50
+
+
+                    and price >= price_2_min_ago
+                    and ma5_last > ma5_2_min_ago
+
+                    and (deviation_ma200_sotto_ma300 > -0.60 or delta_DNA_1 <= delta_DNA_2)
+                    and deviation_ma5_sotto_ma450 < -0.30
+                    
+                    and ma50_last < ma50_2_min_ago
+                    and delta_1 > delta_2
+                    and ma100_last < ma100_60_min_ago
+                        
+                    and ma100_last < ma100_120_min_ago
+                    and ma200_last < ma200_120_min_ago
+                    and ma300_last < ma300_120_min_ago
+                        
+                    and ma100_last < ma200_last
+                    and ma200_last < ma300_last
+
+                    and deviation_ma25_sotto_ma300 < -0.90
+                    
+
+                    and ma2_last > ma6_last
+                    
+                ):
+                    buy = f"BUY 5 IMPORTATO DA RCCR e modificato dopo 50000 righe con deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.12 E SONO CAZZI - r 7555 C - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     action = "buy"
                     percentage = 80
 
