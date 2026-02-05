@@ -43189,6 +43189,9 @@ class maddog:
 
                 elif (
                     ma3_last > ma9_last
+
+                    and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > 0.001
+
                     and price >= price_2_min_ago
                     and ma5_last > ma5_2_min_ago
 
@@ -43213,7 +43216,7 @@ class maddog:
                     and ma2_last > ma6_last
                     
                 ):
-                    buy = f"BUY 5 IMPORTATO DA RCCR e modificato dopo 50000 righe - r 7555 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    buy = f"BUY 5 IMPORTATO DA RCCR e modificato dopo 50000 righe - r 7555 - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     action = "buy"
                     percentage = 80
 
@@ -43228,7 +43231,8 @@ class maddog:
                     # 18 nov 2025 aggiunta and ma5_last > ma5_2_min_ago
                     # 18 nov 2025 aggiunta and price >= price_2_min_ago
                     # 20 nov 2025 per adesso la lascio ma ricorda che con deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.051 devi aumentare la profondita' delle dev
-
+                    #  5 feb 2026 aggiunte PG
+                    #  5 feb 2026 and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > 0.001
 
 
 
@@ -45036,14 +45040,18 @@ class maddog:
 
 
 
-                   
                 elif (        
                     ma3_last > ma8_last
+                    and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.0600
 
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.051
-                    and deviation_ma39 < -0.18
-                    and deviation_ma3_sotto_ma50 < -0.25
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.24 
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.05
+
+                    and deviation_ma39 < -0.08
+                    and deviation_ma3_sotto_ma50 < -0.10
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.40
+                    and deviation_ma100_sotto_ma200 < -0.53
+
                     and deviation_ma25_sotto_ma300 < -1.10
                     
                     and deviation_ma5_sotto_ma300 < -1.00
@@ -45061,7 +45069,7 @@ class maddog:
                    
                     and macd_differenza_2_min_ago > -18.50
                 ):    
-                    buy = f"BUY 5 compare forever  - 100<120 min ago E 100<60 min ago con 5-20 E CON 300 vicina alla 450 + MACD > E ma50_diff_ma59 > -5 - r 7589 B2y B - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    buy = f"BUY 5 compare forever  - 100<120 min ago E 100<60 min ago con 5-20 E CON 300 vicina alla 450 + MACD > E ma50_diff_ma59 > -5 - r 7589 B2y B1 - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     action = "buy"
                     percentage = 90
                     
@@ -45071,10 +45079,55 @@ class maddog:
                     # 10 gen 2023 se 5 molto sotto alla 300 E STIAMO AL BUY 5 e' comunque un crollo e sono aggressivo ! e' una occasione.
                     # 20 nov 2025 se deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.051 dev piu' profonde
                     # 20 nov 2025 aggiunte pg
+                    #  5 FEB 2026 AGGIUNTA and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.0600
+                    #  5 FEB 2026 OK !
+                    #  5 feb 2026 aggiunta and deviation_ma100_sotto_ma200 < -0.50
+                    #  5 feb 2026 and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12 and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.05
+                    #  5 feb 2026 and deviation_ma100_sotto_ma200 < -0.53
 
 
+                elif (        
+                    ma3_last > ma8_last
+                    and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.0600
 
-                  
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.12
+                    and deviation_ma39 < -0.47
+                    and deviation_ma3_sotto_ma50 < -0.52
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.75
+                    and deviation_ma100_sotto_ma200 < -0.50
+                    and deviation_ma25_sotto_ma300 < -1.10
+                    
+                    and deviation_ma5_sotto_ma300 < -1.00
+                   
+                    and deviation_ma78_sopra_o_sotto_ma200 < -0.028
+                    
+                    and ma100_last < ma100_60_min_ago
+                    and ma100_last < ma100_120_min_ago
+                    
+                    and deviation_ma54_sopra_o_sotto_ma72 < 0.03
+                    and deviation_ma54_sopra_o_sotto_ma72 > -0.03
+                    
+                    and deviation_ma39_sotto_ma200 < 0.10
+                    and deviation_ma300_sopra_ma450 > -0.70
+                   
+                    and macd_differenza_2_min_ago > -18.50
+                ):    
+                    buy = f"BUY 5 compare forever  - 100<120 min ago E 100<60 min ago con 5-20 E CON 300 vicina alla 450 + MACD > E ma50_diff_ma59 > -5 - r 7589 B2y B2 - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    action = "buy"
+                    percentage = 90
+                    
+                    # 27 nov 2023 aggiunta and ma2_differenza_2_min_ago > 3
+                    
+                    # ATTENZIONE 8 dic 2023 se 78 sotto 200 allora aggiunto diff ma2 > 10 e diff macd >2 CIOE' basta BUY 5 continui ! (se 78 molto sotto 200)
+                    # 10 gen 2023 se 5 molto sotto alla 300 E STIAMO AL BUY 5 e' comunque un crollo e sono aggressivo ! e' una occasione.
+                    # 20 nov 2025 se deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.051 dev piu' profonde
+                    # 20 nov 2025 aggiunte pg
+                    #  5 FEB 2026 AGGIUNTA and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.0600
+                    #  5 FEB 2026 OK !
+                    #  5 feb 2026 aggiunta and deviation_ma100_sotto_ma200 < -0.50
+                    #  5 feb 2026 and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.12
+
+
                 # BUY 5 migliore EX r 1043 B che considera distanza 5-300 AND dev 10-200 < -0.24 AND 8-59
                 
                 elif (
