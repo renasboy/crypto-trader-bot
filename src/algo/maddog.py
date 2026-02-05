@@ -27894,32 +27894,28 @@ class maddog:
                 # BUY 3 NUOVO che ci riprova TORNANDO ALLE ORIGINI MA on ma200 < da ALMENO 5 ore ! and ma300<
 
                 elif (
-                    deviation_buy2 > 0.01
-
-                    and ma100_last > ma200_last
-                    and ma200_last > ma300_last
-
-                    and deviation_ma3_sopra_ma28 > 0.01
+                    ma3_last > ma11_last
                     
-                    and ma450_last < ma450_300_min_ago
-                    and ma300_last < ma300_60_min_ago
-
+                    and (ma100_last > ma200_last or ma200_last > ma300_last or delta_x < delta_y)
+                    
+                    and deviation_buy2 > -0.01
+                    and deviation_ma3_sopra_ma28 > -0.01
+                    
+                    and (ma450_last < ma450_300_min_ago or ma300_last < ma300_60_min_ago)
                     
                     and ma2_last > ma2_2_min_ago
                     
-                    and ma3_last > ma13_last
-                    and deviation_buy_ma3_sopra_ma20 > 0.01
-                    and deviation_ma4_sopra_ma25 > 0.01
-                 
                 ):
                
-                    buy = "BUY 3 che ci riprova MA SOLO SE ma450 scende da almeno 5 ore ! cazzo E 200 > 300 - r 6447 bx"
+                    buy = f"BUY 3 che ci riprova MA SOLO SE ma450 scende da almeno 5 ore ! cazzo E 200 > 300 - r 6447 bx - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     action = "buy"
                     percentage = 90
 
                     # 15 ott 2024 se 200>300 anticipato ndecchiecella
-
-
+                    #  5 feb 2026 e' una vecchia condizione che per il momento voglio tenere come souvenir.
+                    #  5 feb 2026 anticipata ndecchiecella
+                    #  5 feb 2026 aggiunte PG
+                    #  5 feb 2026 aggiunto or delta_x < delta_y
 
 
                 elif (
@@ -41852,7 +41848,7 @@ class maddog:
 
                     # 21 gen 2026 aggiunto questa che stava su RCCR perche' MADDOG NON AVEVA COMPRATO PROPRIO
                     # 29 gen 2026 and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > 0.009 da > -0.001
-
+                    #  5 FEB 2026 OK !
 
 
                 elif (
@@ -45354,29 +45350,32 @@ class maddog:
 
                 elif (      
                     ma3_last >= ma9_last
+
+                    and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.001
+
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.049
+
                     and price >= price_2_min_ago
 
                     and (ma100_last < ma100_120_min_ago or deviation_ma78_sopra_o_sotto_ma200 < -0.028)
-                    and delta_CV_300_25_last < delta_CV_300_25_45_min_ago
+                    and delta_CV_300_25_last <= delta_CV_300_25_45_min_ago
                     and delta_CM_300_25_last <= delta_CM_300_25_2_min_ago 
 
-                    and deviation_ma39 < 0.14
-                    and deviation_ma3_sotto_ma50 < 0.12
-                    and deviation_ma5_sopra_o_sotto_ma100 < -0.06
-                    
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.049
+                    and deviation_ma39 < -0.071 
+                    and deviation_ma3_sotto_ma50 < -0.017
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.18 
+                    and deviation_ma25_sotto_ma300 < -1.13
 
+                    
+                    and deviation_ma39_sotto_ma200 < 0.10
                     and deviation_ma25_sotto_ma300 < -0.80
                     and deviation_ma5_sotto_ma450 < -0.90
 
-                    and deviation_ma54_sopra_o_sotto_ma72 < 0.20
-                    and deviation_ma54_sopra_o_sotto_ma72 > -0.20
-                    
-                    and deviation_ma39_sotto_ma200 < 0.10
-                    
+                    and deviation_ma54_sopra_o_sotto_ma72 < 0.25
+                    and deviation_ma54_sopra_o_sotto_ma72 > -0.25
                    
                 ):    
-                    buy = f"BUY 5 del 16 nov 2025 - r 7589 a2 yA - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    buy = f"BUY 5 del 16 nov 2025 - r 7589 a2 yA - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     action = "buy"
                     percentage = 90
                     
@@ -45386,6 +45385,7 @@ class maddog:
                     #  1 nov 2025 aggiunte le dev riducendo quelle reali - che sono risultate dalle pg
                     # 16 nov 2025 aggiunta questa condizione che anticipa di poco la precedente.
                     # 16 nov 2025 se anche cm giorno ok cosi'
+                    #  5 FEB 2025 AGGIUNTE PG
 
 
 
