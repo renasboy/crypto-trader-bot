@@ -39583,10 +39583,13 @@ class maddog:
                     # 30 gen 2026 and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.025 da > -0.013
                     # 30 GEN 2026 MANDRAKATA grazie alle pg di un sell seguente.
 
+
+
                 elif (      
                     ma3_last > ma9_last
 
                     and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.053
+
                     and deviation_ma78_sotto_ma100 > -0.10
 
                     and ma300_last < ma450_last
@@ -39624,10 +39627,13 @@ class maddog:
                     #  5 feb 2025 ok
                     #  5 FEB 2026 HO DIVISO OR PER SAPERE CHI E' STATO.
 
+
+
                 elif (      
                     ma3_last > ma9_last
 
                     and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.053
+
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.040
 
                     and ma300_last < ma450_last
@@ -39664,16 +39670,18 @@ class maddog:
                     #  1 dic 2025 aggiunte DEV SOFT grazie alle pg !
                     #  5 feb 2025 ok
                     #  5 FEB 2026 HO DIVISO OR PER SAPERE CHI E' STATO.
+                    #  5 FEB 2025 IN FUTURO DEV PIU' PROFONDE QUANDO MA100 E' < -0.12 E SONO CAZZI
 
 
                 elif (      
                     ma3_last > ma9_last
 
-                    and ma300_last < ma450_last
-                    and deviation_ma78_sotto_ma100 < -0.10
-                    
                     and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.053
 
+                    and ma300_last < ma450_last
+
+                    and deviation_ma78_sotto_ma100 < -0.10
+                    
                     and deviation_ma78_sotto_ma100 < -0.082
                     and deviation_ma50_sotto_ma100 < -0.092
                     and deviation_ma100_sotto_ma200 < -0.39
@@ -39709,11 +39717,12 @@ class maddog:
                 elif (      
                     ma3_last > ma9_last
 
-                    and ma300_last < ma450_last
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.040
-                    
                     and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.053
 
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.040
+
+                    and ma300_last < ma450_last
+                    
                     and deviation_ma78_sotto_ma100 < -0.082
                     and deviation_ma50_sotto_ma100 < -0.092
                     and deviation_ma100_sotto_ma200 < -0.39
@@ -44189,6 +44198,8 @@ class maddog:
                     #  5 FEB 2025 IPOTESI B
 
 
+
+
                 elif (
                     ma3_last >= ma9_last
 
@@ -44199,7 +44210,7 @@ class maddog:
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.78
                     and deviation_ma100_sotto_ma200 < -0.50
 
-                    and deviation_ma25_sotto_ma300 < -1.00
+                    and deviation_ma25_sotto_ma300 < -1.25
 
                     and ma78_last < ma150_last
 
@@ -44224,7 +44235,9 @@ class maddog:
                     # 16 nov 2025 aggiunte dev profonde da un sell seguente grazie alle pg. per anticipare ndecchiecella MA...
                     # 16 NOV 2025 AGGIUNTA ma3 >= ma3 2 min ago 
                     #  5 FEB 2025 IPOTESI C e sono cazzi !
-                    
+                    #  5 FEB 2026 OK !
+
+
                 
                 elif (
                  
