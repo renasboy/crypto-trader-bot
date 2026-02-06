@@ -48974,7 +48974,7 @@ class maddog:
                         
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 NON GRANDE PERDITA dopo BUY AUDI E crollo SUCCESSIVO (21-50 min) and dev sell < -0.17 - r 9312 A"
+                        sell = "SELL 1 (21-50 min) NON GRANDE PERDITA dopo BUY AUDI E crollo SUCCESSIVO and dev sell < -0.17 - r 9312 A"
                         action = "sell"
                         
                         # in questa circostanza drammatica di crollo AUDI INTANTO TE LI PRENDI poi, eventualmente, ci pensa BUY 2
@@ -49011,7 +49011,7 @@ class maddog:
                         
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 NON GRANDE PERDITA dopo BUY AUDI E crollo SUCCESSIVO (21-50 min) and deviation_sell < -0.15 - r 9312 B"
+                        sell = "SELL 1 (21-50 min) NON GRANDE PERDITA dopo BUY AUDI E crollo SUCCESSIVO and deviation_sell < -0.15 - r 9312 B"
                         action = "sell"
                         
                         # in questa circostanza drammatica di crollo AUDI INTANTO TE LI PRENDI poi, eventualmente, ci pensa BUY 2
@@ -49054,7 +49054,7 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 eventuale GAIN nel crollo LEGGERO (21-50 min) con ma50 < incr 3 -30 and dev_sell 0.30 - 0.54 and dev 5-300 > -1.20- r 9327 A1"
+                        sell = "SELL 1 (21-50 min) eventuale GAIN nel crollo LEGGERO con ma50 < incr 3 -30 and dev_sell 0.30 - 0.54 and dev 5-300 > -1.20- r 9327 A1"
                         action = "sell"
 
 
@@ -49075,7 +49075,7 @@ class maddog:
                         and macd_differenza_2_min_ago < -11
                         and macd < 80
                     ):
-                        sell = "SELL 1 eventuale GAIN nel crollo LEGGERO (21-50 min) con ma50 < incr 3 -20 con diff macd < -11 e dev_sell 0.30 - 0.54 and dev 5-300 > -1.20 - r 9327 A2x"
+                        sell = "SELL 1 (21-50 min) eventuale GAIN nel crollo LEGGERO con ma50 < incr 3 -20 con diff macd < -11 e dev_sell 0.30 - 0.54 and dev 5-300 > -1.20 - r 9327 A2x"
                         action = "sell"
                         
                         #  7 dic 2023 se macd da una botta al ribasso allora vende con un ma 25
@@ -49097,7 +49097,7 @@ class maddog:
                         and macd_differenza_2_min_ago < -11
                         and macd < 80
                     ):
-                        sell = "SELL 1 eventuale GAIN nel crollo LEGGERO (21-50 min) con ma50 < incr 3 -25 con diff macd < -11 e dev_sell 0.30 - 0.54 and dev 5-300 > -1.20 - r 9327 A2y"
+                        sell = "SELL 1 (21-50 min) eventuale GAIN nel crollo LEGGERO con ma50 < incr 3 -25 con diff macd < -11 e dev_sell 0.30 - 0.54 and dev 5-300 > -1.20 - r 9327 A2y"
                         action = "sell"
                         
                         #  7 dic 2023 se macd da una botta al ribasso allora vende con un ma 25
@@ -49122,7 +49122,7 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 eventuale GAIN nel crollo (21-50 min) con ma50< e incr 3-90 (ma39 e' andata sopra ma100) E dev_sell 0.25-0.60 - r 9327 Bx"
+                        sell = "SELL 1 (21-50 min) eventuale GAIN nel crollo con ma50< e incr 3-90 (ma39 e' andata sopra ma100) E dev_sell 0.25-0.60 - r 9327 Bx"
                         action = "sell"
                         
                         # 14 set 3-30 da 3-28
@@ -49141,23 +49141,42 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                         
                     ):
-                        sell = "SELL 1 eventuale GAIN nel crollo (21-50 min) con ma50< E incr 3-30 (ma39 sta ancora sotto ma100) E dev_sell 0.30-0.54 - r 9327 By"
+                        sell = "SELL 1 (21-50 min) eventuale GAIN nel crollo con ma50< E incr 3-30 (ma39 sta ancora sotto ma100) E dev_sell 0.30-0.54 - r 9327 By"
                         action = "sell"
                         
                         # 14 set 3-30 da 3-28
                         
                        
-                        
                     elif (
                         ma50_last < ma50_2_min_ago
-                        and (ma3_prev > ma11_prev and ma3_last < ma11_last)
+                        and (ma3_prev > ma13_prev and ma3_last < ma13_last)
+
+                        and delta_1_200_78 < delta_2_200_78_60_min
+
                         and deviation_sell > 0.55
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 eventuale guadagno durante il crollo (21-50 min) con ma50 < incrocio 3 - 11 and deviation_sell > 0.55 - r 9338"
+                        sell = f"SELL 1 (21-50 min) eventuale guadagno durante il crollo con ma50 < incrocio 3 - 11 and deviation_sell > 0.55 - r 9338 X - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                         action = "sell"
+
+                        #  6 feb 2026 aggiunte PG
+                        #  6 FEB 2026 SE delta_1_200_78 < delta_2_200_78_60_min = GIORNO SELL con 3-13 da 3-11
                         
-                        
+
+                    elif (
+                        ma50_last < ma50_2_min_ago
+                        and (ma3_prev > ma11_prev and ma3_last < ma11_last)
+
+                        and delta_1_200_78 > delta_2_200_78_60_min
+
+                        and deviation_sell > 0.55
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = f"SELL 1 (21-50 min) eventuale guadagno durante il crollo con ma50 < incrocio 3 - 11 and deviation_sell > 0.55 - r 9338 Y - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                        action = "sell"
+
+                        #  6 feb 2026 aggiunte PG
+                        #  6 FEB 2026 SE delta_1_200_78 > delta_2_200_78_60_min = NOTTE OK COSI'
                         
                     
                     
@@ -49170,7 +49189,7 @@ class maddog:
                         and deviation_sell < -0.27
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 1 piccola perdita durante il crollo (21-50 min) con ma50 < incrocio 3 - 18 and dev_sell < -0.27 non e' crollo ! - r 9353 A"
+                        sell = "SELL 1 (21-50 min) piccola perdita durante il crollo con ma50 < incrocio 3 - 18 and dev_sell < -0.27 non e' crollo ! - r 9353 A"
                         action = "sell"
                         
                         # 21 apr 2023 aggiunto macd < macd_2_min_ago
@@ -49206,7 +49225,7 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                         and macd < macd_2_min_ago
                     ):
-                        sell = "SELL 1 (21-50 min)  piccola perdita durante il crollo - AGGIUNTA TARDIVA MA FORSE NECESSARIA ! and delta_1 > delta_2 and dev_sell < -0.1155 - r 9354 A1"
+                        sell = "SELL 1 (21-50 min) piccola perdita durante il crollo - AGGIUNTA TARDIVA MA FORSE NECESSARIA ! and delta_1 > delta_2 and dev_sell < -0.1155 - r 9354 A1"
                         action = "sell" 
 
                   
@@ -49226,7 +49245,7 @@ class maddog:
                         and macd_differenza_2_min_ago < -7
                         and macd < -20
                     ):
-                        sell = "SELL 1 (21-50 min)  piccola perdita durante il crollo - AGGIUNTA TARDIVA MA forse NECESSARIA ! and delta_1>delta_2 and dev_sell < -0.05 - r 9354 A2"
+                        sell = "SELL 1 (21-50 min) piccola perdita durante il crollo - AGGIUNTA TARDIVA MA forse NECESSARIA ! and delta_1>delta_2 and dev_sell < -0.05 - r 9354 A2"
                         action = "sell"
                         
                         
@@ -49253,7 +49272,7 @@ class maddog:
                         and ma2_last < ma2_2_min_ago
                         and macd < macd_2_min_ago
                     ):
-                        sell = "SELL 1 (21-50 min)  piccola perdita durante il crollo - AGGIUNTA TARDIVA MA FORSE NECESSARIA ! and delta_1 > delta_2 and dev_sell < -0.1145 - r 9354b"
+                        sell = "SELL 1 (21-50 min) piccola perdita durante il crollo - AGGIUNTA TARDIVA MA FORSE NECESSARIA ! and delta_1 > delta_2 and dev_sell < -0.1145 - r 9354b"
                         action = "sell"
                         
                         
@@ -76504,9 +76523,8 @@ class maddog:
 
             elif (
                 seconds_since_last_trade > 0 and seconds_since_last_trade < 3600
-                 
-                and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < 0.007
-
+                
+                and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.0033
                 and ma50_last < ma100_last
                 and ma100_last < ma200_last
                 and ma300_last < ma300_180_min_ago
@@ -76535,7 +76553,7 @@ class maddog:
                 # 22 GEN 2025 AGGIUNTA and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < 0.03 grazie compa !
                 # 26 gen 2026 and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < 0.0090 da < 0.03
                 #  3 feb 2026 and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < 0.007 da < 0.0090
-
+                #  6 feb 2026 and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.0033 da < 0.007
 
             elif (
                 seconds_since_last_trade > 0 and seconds_since_last_trade < 3000
