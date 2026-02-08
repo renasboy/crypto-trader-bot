@@ -42011,36 +42011,158 @@ class maddog:
                 
                 
                 
-
-
                 elif (
                     ma3_last > ma8_last
 
                     and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > 0.009
+                    
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.10
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.05
 
-                    and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.001
-                    and deviation_ma39 < -0.05
-                    and deviation_ma3_sotto_ma50 < -0.05
+                    and deviation_ma39 < -0.08
+                    and deviation_ma3_sotto_ma50 < -0.10
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.30
+                    and deviation_ma100_sotto_ma200 < -0.40
                     and deviation_ma25_sotto_ma300 < -0.50
                     
                     and ma450_last < ma450_120_min_ago
                     
+                    
                     and (ma8_last > ma25_last or delta_CM_300_25_last <= delta_CM_300_25_2_min_ago)
-
                     and (delta_CV_300_25_last < delta_CV_300_25_45_min_ago or ma50_last > ma100_last)
-
                     and (ma5_last >= ma5_2_min_ago or ma5_last >= ma15_last or ma5_last >= ma25_last or ma39_last > ma50_last)
                     
                     and ma2_last >= ma2_2_min_ago
                     
                 ):    
-                    buy = f"BUY 5 da RCCR - se ma39 > ma50 - r 7400 - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    buy = f"BUY 5 da RCCR - se ma39 > ma50 - r 7400 IPOTESI B - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     action = "buy"
                     percentage = 80
 
                     # 21 gen 2026 aggiunto questa che stava su RCCR perche' MADDOG NON AVEVA COMPRATO PROPRIO
                     # 29 gen 2026 and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > 0.009 da > -0.001
                     #  5 FEB 2026 OK !
+                    #  8 feb 2026 IPOTESI B
+
+
+
+
+                elif (
+                    ma3_last > ma8_last
+
+                    and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > 0.009
+                    
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.25
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.10
+
+                    and deviation_ma39 < -0.40
+                    and deviation_ma3_sotto_ma50 < -0.50
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.50
+                    and deviation_ma100_sotto_ma200 < -0.50
+                    and deviation_ma25_sotto_ma300 < -2.30
+                    
+                    
+                    and ma450_last < ma450_120_min_ago
+                    
+                    and (ma8_last > ma25_last or delta_CM_300_25_last <= delta_CM_300_25_2_min_ago)
+                    and (delta_CV_300_25_last <= delta_CV_300_25_45_min_ago or ma20_last > ma100_last)
+                    and (ma5_last >= ma5_2_min_ago or ma5_last >= ma15_last or ma5_last >= ma25_last)
+
+                    and ma2_last >= ma2_2_min_ago
+                    
+                ):    
+                    buy = f"BUY 5 da RCCR - se ma39 > ma50 - r 7400 IPOTESI C - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    action = "buy"
+                    percentage = 80
+
+                    # 21 gen 2026 aggiunto questa che stava su RCCR perche' MADDOG NON AVEVA COMPRATO PROPRIO
+                    # 29 gen 2026 and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > 0.009 da > -0.001
+                    #  5 FEB 2026 OK !
+                    #  8 feb 2026 IPOTESI C
+
+
+                elif (
+                    ma3_last > ma8_last
+
+                    and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.085
+
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.25
+
+                    and deviation_ma39 < -0.50
+                    and deviation_ma3_sotto_ma50 < -0.60
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.52
+                    and deviation_ma100_sotto_ma200 < -1.10
+
+                    and deviation_ma25_sotto_ma300 < -2.35
+
+                    and deviation_ma78_sotto_ma100 < -0.001
+                    and deviation_ma50_sotto_ma100 < 0.03
+
+
+                    and ma450_last < ma450_120_min_ago
+                    
+                    and (ma8_last > ma25_last or delta_CM_300_25_last <= delta_CM_300_25_2_min_ago)
+                    and (delta_CV_300_25_last < delta_CV_300_25_45_min_ago or ma50_last > ma100_last)
+                    
+
+                    and (ma5_last >= ma5_2_min_ago or ma5_last >= ma15_last or ma5_last >= ma25_last or ma39_last > ma50_last)
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    
+                ):    
+                    buy = f"BUY 5 da RCCR - se ma39 > ma50 - r 7400 IPOTESI D1 e SONO CAZZI - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    action = "buy"
+                    percentage = 80
+
+                    # 21 gen 2026 aggiunto questa che stava su RCCR perche' MADDOG NON AVEVA COMPRATO PROPRIO
+                    # 29 gen 2026 and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > 0.009 da > -0.001
+                    #  5 FEB 2026 OK !
+                    #  8 feb 2026 IPOTESI D1 E SONO CAZZI
+
+
+
+
+                elif (
+                    ma3_last > ma8_last
+
+                    and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.089
+
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.27
+
+                    and deviation_ma39 < -0.50
+                    and deviation_ma3_sotto_ma50 < -0.60
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.52
+                    and deviation_ma100_sotto_ma200 < -1.12
+
+                    and deviation_ma25_sotto_ma300 < -2.36
+
+                    and deviation_ma78_sotto_ma100 > -0.11
+                    and deviation_ma50_sotto_ma100 > -0.17
+
+
+                    and ma450_last < ma450_120_min_ago
+                    
+                    and (ma8_last > ma25_last or delta_CM_300_25_last <= delta_CM_300_25_2_min_ago)
+                    and (delta_CV_300_25_last < delta_CV_300_25_45_min_ago or ma50_last > ma100_last)
+                    
+
+                    and (ma5_last >= ma5_2_min_ago or ma5_last >= ma15_last or ma5_last >= ma25_last or ma39_last > ma50_last)
+                    
+                    and ma2_last >= ma2_2_min_ago
+                    
+                ):    
+                    buy = f"BUY 5 da RCCR - se ma39 > ma50 - r 7400 IPOTESI D2 e SONO CAZZI AMARI - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    action = "buy"
+                    percentage = 80
+
+                    # 21 gen 2026 aggiunto questa che stava su RCCR perche' MADDOG NON AVEVA COMPRATO PROPRIO
+                    # 29 gen 2026 and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > 0.009 da > -0.001
+                    #  5 FEB 2026 OK !
+                    #  8 FEB 2026 IPOTESI D2 E SONO CAZZI AMARI !
+
+
+
+
 
 
                 elif (
@@ -43348,6 +43470,8 @@ class maddog:
                     percentage = 90
 
                     #  6 FEB 2026 OPZIONE C
+
+
 
 
 
