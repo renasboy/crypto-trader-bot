@@ -30402,9 +30402,12 @@ class maddog:
 
 
 
-
                 elif (    
                     ma3_last > ma9_last
+
+                    and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.001
+
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.10
 
                     and deviation_ma39 < -0.33
                     and deviation_ma3_sotto_ma50 < -0.44
@@ -30415,7 +30418,7 @@ class maddog:
                     and ma100_last < ma200_last
                     and ma100_last < ma300_last
                 ):
-                    buy = f"BUY 3 > grande ribasso 29 mag 2025 aggiunta da un sell con parentesi graffe - grazie compa ! - r 6573 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    buy = f"BUY 3 > grande ribasso 29 mag 2025 aggiunta da un sell con parentesi graffe - grazie compa ! - r 6573 x - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     action = "buy"
                     percentage = 90
 
@@ -30426,8 +30429,38 @@ class maddog:
                     #  7 nov 2025 3-10 da 3-11
                     # 14 nov 2025 ok !
                     # 18 nov 2025 ok ! ma 3-9 da 3-10
+                    #  8 feb 2026 aggiungo PG
+                    #  8 feb 2026 se deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.10 ok cosi' per adesso
 
 
+                elif (    
+                    ma3_last > ma9_last
+
+                    and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.001
+
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.10
+
+                    and deviation_ma39 < -0.45
+                    and deviation_ma3_sotto_ma50 < -0.78
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.90
+                    and deviation_ma25_sotto_ma300 < -2.00 
+                    
+                    and ma100_last < ma200_last
+                    and ma100_last < ma300_last
+                ):
+                    buy = f"BUY 3 > grande ribasso 29 mag 2025 aggiunta da un sell con parentesi graffe - grazie compa ! - r 6573 y - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    action = "buy"
+                    percentage = 90
+
+                    # 27 giu 2025 deviation_ma100_sopra_o_sotto_ma100_10_min_ago a -0.186 da -0.176
+                    # 28 giu 2025 mi piace.
+                    #  7 nov 2025 aggiunte pg
+                    #  7 nov 2025 tolto and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.186
+                    #  7 nov 2025 3-10 da 3-11
+                    # 14 nov 2025 ok !
+                    # 18 nov 2025 ok ! ma 3-9 da 3-10
+                    #  8 feb 2026 aggiungo PG
+                    #  8 feb 2026 se deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.10 dev piu' profonde. grazie alle pg
 
 
                 # BUY 3 del 2 ottobre 2023 NON COMPRAVA !
