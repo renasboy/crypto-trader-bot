@@ -68603,7 +68603,7 @@ class maddog:
 
 
             elif (
-                ma3_last < ma25_last
+                ma3_last < ma39_last
                 and delta_CV_300_25_last < delta_CV_300_25_45_min_ago
                 and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.033
 
@@ -68629,7 +68629,7 @@ class maddog:
                 # 30 gen 2026 and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.027 da -0.017
                 #  9 feb 2026 and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.033 da < -0.027 
                 #  9 feb 2026 se cv notte ok cosi'
-
+                #  9 feb 2026 vende con 3-39
 
 
             elif (
