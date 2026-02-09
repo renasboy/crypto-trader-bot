@@ -68271,14 +68271,17 @@ class maddog:
 
             elif (
                 ma3_last < ma25_last
+
+                and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.033
+
+                and (delta_150_100 <= delta_150_100_60_min or ma78_last > ma78_120_min_ago)
                 and deviation_ma78_sotto_ma100 > 0.02
-                and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.027  
                 
                 and deviation_sell > -0.03
 
                 and ma300_last < ma300_301_min_ago
                 
-                and (delta_150_100 <= delta_150_100_60_min or ma78_last > ma78_120_min_ago)
+                
                 and ma50_last > ma50_2_min_ago
 
                 and deviation_ma5_sotto_ma200 > -0.50
@@ -68291,7 +68294,7 @@ class maddog:
 
                 # 25 gen 2025 se deviation_ma78_sotto_ma100 > 0.02 allora vendo con 3-25 grazie alle pg
                 # 30 gen 2026 and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.027 da -0.017
-
+                #  9 feb 2026 and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.033 da < -0.027 
 
 
             elif (
