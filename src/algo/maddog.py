@@ -28207,7 +28207,42 @@ class maddog:
                     #  5 feb 2026 aggiungo PG
 
 
-                # BUY 3 NUOVO che ci riprova TORNANDO ALLE ORIGINI MA on ma200 < da ALMENO 5 ore ! and ma300<
+                
+
+
+                elif (
+                    ma3_last > ma11_last
+
+                    and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > 0.01
+
+                    and ma450_last > ma450_300_min_ago 
+                    and ma200_last < ma200_120_min_ago
+                    and (ma100_last > ma450_last or ma200_last > ma450_last)
+
+
+                    and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > 0.01
+
+                    and deviation_ma78_sotto_ma100 < -0.001
+                    and deviation_ma50_sotto_ma100 < 0.12 
+                    and deviation_ma100_sotto_ma200 < -0.464
+
+                    and deviation_ma39 < 0.06
+                    and deviation_ma3_sotto_ma50 < 0.05
+
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.37
+                    and deviation_ma25_sotto_ma300 < -0.60
+
+                ):
+               
+                    buy = f"BUY 3 aggiunta per capire - r 6447 bx1 - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    action = "buy"
+                    percentage = 90
+
+                    # 10 feb 2026 aggiunta perche' la condizione successiva e' arrivata tardissimo !
+                    # 10 feb 2026 vedi and deviation_ma39 < 0.06 and deviation_ma3_sotto_ma50 < 0.05 ! strano ma e' cosi'. e non ho messo di proposito ma100 10 min
+                    # 10 feb 2026 proprio il vuoto. non ho riferimenti in prossimita'
+
+
 
                 elif (
                     ma3_last > ma11_last
@@ -28223,7 +28258,7 @@ class maddog:
                     
                 ):
                
-                    buy = f"BUY 3 che ci riprova MA SOLO SE ma450 scende da almeno 5 ore ! cazzo E 200 > 300 - r 6447 bx - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    buy = f"BUY 3 che ci riprova MA SOLO SE ma450 scende da almeno 5 ore ! cazzo E 200 > 300 - r 6447 bx2 - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     action = "buy"
                     percentage = 90
 
