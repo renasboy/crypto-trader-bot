@@ -20180,18 +20180,19 @@ class maddog:
                     # 12 dic 2025 se and ma8_last < ma8_20_min_ago statte accorto. aggiunto dev poco profonde.
 
 
-
                 elif (    
                     ma3_last > ma11_last
                     and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.011
-                    
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.05
 
-                    and deviation_ma39 < -0.07 
-                    and deviation_ma3_sotto_ma50 < -0.07
+                    and deviation_ma39 < -0.05
+                    and deviation_ma3_sotto_ma50 < -0.6
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.07
 
                     and ma450_last < ma450_120_min_ago
-                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.05
+                    
+
+                    ma50_last > ma100_last
                     and (ma100_last > ma200_last or ma100_last > ma300_last)
                     
                     and ma2_last > ma5_last
@@ -20199,13 +20200,38 @@ class maddog:
                     and macd_differenza_2_min_ago > -18.50
                     
                 ):
-                    buy = f"BUY 2 importato da RCCR con ma450_last < 120_min_ago CON ma100_last > ma300_last E 100>200 - r 5412 Y1 A4 - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    buy = f"BUY 2 importato da RCCR con ma450_last < 120_min_ago CON ma100_last > ma300_last E 100>200 E 50 sta ancora sopra 100 - r 5412 Y1 A4 X - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    action = "buy"
+                    percentage = 90
+
+
+
+                elif (    
+                    ma3_last > ma11_last
+                    and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.011
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.05
+                    and deviation_ma39 < -0.09
+                    and deviation_ma3_sotto_ma50 < -0.10
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.13
+
+                    and ma450_last < ma450_120_min_ago
+                    
+
+                    ma50_last < ma100_last
+                    and (ma100_last > ma200_last or ma100_last > ma300_last)
+                    
+                    and ma2_last > ma5_last
+                    
+                    and macd_differenza_2_min_ago > -18.50
+                    
+                ):
+                    buy = f"BUY 2 importato da RCCR con ma450_last < 120_min_ago CON ma100_last > ma300_last E 100>200 MA 50 e' andata sotto 100 - r 5412 Y1 A4 Y - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     action = "buy"
                     percentage = 90
 
                     #  5 dic 2025 importata da RCCR
                     #  5 dic 2025 aggiunte pg
-                    # 10 dic 2025 aggiunta and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.0025
+                    
                     # 10 dic 2025 se deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.0025 aggiungo dev grazie alle pg
 
 
