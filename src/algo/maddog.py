@@ -68678,10 +68678,13 @@ class maddog:
                 # 22 dic 2025 se ma5 e' ancora distante dalla ma100 vende con deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.005 grazie alle pg
                 #  4 feb 2026 and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.0055 da < -0.005
 
+
+
             elif (
                 ma3_last < ma33_last
                 and delta_CV_300_25_last < delta_CV_300_25_45_min_ago
-                and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.039
+
+                and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.059
 
                 and (delta_150_100 <= delta_150_100_60_min or ma78_last > ma78_120_min_ago)
                 and deviation_ma78_sotto_ma100 > 0.02
@@ -68706,7 +68709,7 @@ class maddog:
                 #  9 feb 2026 and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.033 da < -0.027 
                 #  9 feb 2026 se anche cv giorno 3-33 da 3-25 
                 #  9 feb 2026 se anche cv giorno allora deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.039 da < -0.033 (sulle pg -0.0465) (ma voglio cambiare dolcemente)
-
+                # 10 feb 2026 and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.059 da < -0.039
 
 
 
