@@ -3909,7 +3909,7 @@ class maddog:
                     
                     and (ma8_last > ma25_last or delta_CM_300_25_last <= delta_CM_300_25_2_min_ago)
 
-                    and (delta_CV_300_25_last < delta_CV_300_25_45_min_ago or ma50_last > ma100_last)
+                    and (delta_CV_300_25_last <= delta_CV_300_25_45_min_ago or ma50_last > ma100_last)
 
                     and (ma5_last >= ma5_2_min_ago or ma5_last >= ma15_last or ma5_last >= ma25_last or ma39_last > ma50_last)
                     
@@ -40909,7 +40909,6 @@ class maddog:
                     # 27 nov 2025 aggiunto FINALMENTE and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.3f}
                     #  9 feb 2026 modificata
                     # 11 feb 2026 and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.05 da > -0.13
-
 
 
 
