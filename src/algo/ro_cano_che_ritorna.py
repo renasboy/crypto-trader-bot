@@ -2155,6 +2155,8 @@ class ro_cano_che_ritorna:
                     #  8 dic 2025 se la situazione generale buona ok cosi'
 
 
+
+
                 elif (  
                     ma3_last > ma11_last
 
