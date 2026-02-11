@@ -78366,10 +78366,13 @@ class maddog:
                 #  3 feb 2026 and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < 0.007 da < 0.0090
                 #  6 feb 2026 and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.0033 da < 0.007
 
+
+
             elif (
                 seconds_since_last_trade > 0 and seconds_since_last_trade < 3000
-                and ma5_last > ma100_last
                 and ma300_last < ma300_180_min_ago
+                and ma5_last > ma100_last
+                
                 and ma3_last < ma33_last
                 
                 and deviation_sell > 0.60
@@ -78379,7 +78382,7 @@ class maddog:
                 and deviation_ma2_sopra_o_sotto_ma2_2_min_ago < -0.02
                 and macd < macd_2_min_ago
                 and macd_differenza_2_min_ago < -0.40
-                and macd < -20
+                and macd < -5
                 
             ):    
                 sell = f"SELL condizione PMS da 0 a 50 min con 3-33 se sta sopra ma100 E con dev_sell 0.60 - 1.05 e macd < -20 - INTANTO TE LI PRENDI - r 16888 ay - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
@@ -78390,7 +78393,7 @@ class maddog:
                 # 15 gen 2024 con 3-28 se sta sopra ma100 ! stai piu' tranquillo
                 # 15 ott 2025 3-33 da 3-28
                 # 23 ott 2025 aggiunte pg
-
+                # 11 feb 2026 macd <-5 da -20 per anticipare ndecchiecella la vendita. (ma300_last < ma300_180_min_ago)
 
 
 
