@@ -27723,6 +27723,8 @@ class maddog:
 
                     
                     
+
+
                 # BUY 3 importata da RCCR - AUDI CHE NON E' UN CROLLO ! con 5-16
 
                 elif (
@@ -27730,7 +27732,7 @@ class maddog:
 
                     and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.0207
 
-                    and (ma450_last > ma450_300_min_ago or delta_1_69_39 < delta_2_69_39)
+                    and ma450_last > ma450_300_min_ago
 
                     and deviation_buy_crollo_1 < -0.60
                     and deviation_buy_crollo_1 > -2.00
@@ -27746,7 +27748,83 @@ class maddog:
                     and macd_differenza_2_min_ago > -18.00
                     
                 ):
-                    buy = f"BUY 3 importata da RCCR - AUDI CHE NON E' UN CROLLO ! con 3-18 con DOPPIO DELTA 69-39 GIORNO - r 6388 A1 - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    buy = f"BUY 3 importata da RCCR - AUDI CHE NON E' UN CROLLO ! con 3-18 con DOPPIO DELTA 69-39 GIORNO - r 6388 A1x - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    action = "buy"
+                    percentage = 90
+                    
+                    # deviation_buy_crollo_1 = ma8_last / ma78_last
+                    # questa cosa che 78 deve essere < 200 ha dell' incredibile. MA NON TOCCARE !   
+                    # 15 nov 2022 AGGIUNTA 3-10 vedi 8 nov ore 21:23
+                    # 12 set 2023 dev sell 5-13 da 5-16 con aggiunta di macd > macd 2 min ago
+                    # 20 mar 2025 aggiunta se ma450_last > ma450_300_min_ago ok cosi'
+                    # 24 ott 2024 aggiunta con dev sell successivo preso da pg
+                    # 24 ott 2025 aggiunte pg
+                    # 11 feb 2026 aggiunte PG
+                    # 11 feb 2026 aggiunta and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.0207
+
+
+
+
+                elif (
+                    ma3_last > ma11_last
+
+                    and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.0207
+
+                    and delta_1_69_39 < delta_2_69_39
+                    and ma450_last > ma450_300_min_ago
+
+                    and deviation_buy_crollo_1 < -0.60
+                    and deviation_buy_crollo_1 > -2.00
+                    
+                    and ma78_last < ma200_last
+
+                    and deviation_ma39 < -0.23
+                    and deviation_ma3_sotto_ma50 < -0.36
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.60 
+                    and deviation_ma25_sotto_ma300 < -0.93 
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.13
+                    
+                    and macd_differenza_2_min_ago > -18.00
+                    
+                ):
+                    buy = f"BUY 3 importata da RCCR - AUDI CHE NON E' UN CROLLO ! con 3-18 con DOPPIO DELTA 69-39 GIORNO - r 6388 A1ya - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    action = "buy"
+                    percentage = 90
+                    
+                    # deviation_buy_crollo_1 = ma8_last / ma78_last
+                    # questa cosa che 78 deve essere < 200 ha dell' incredibile. MA NON TOCCARE !   
+                    # 15 nov 2022 AGGIUNTA 3-10 vedi 8 nov ore 21:23
+                    # 12 set 2023 dev sell 5-13 da 5-16 con aggiunta di macd > macd 2 min ago
+                    # 20 mar 2025 aggiunta se ma450_last > ma450_300_min_ago ok cosi'
+                    # 24 ott 2024 aggiunta con dev sell successivo preso da pg
+                    # 24 ott 2025 aggiunte pg
+                    # 11 feb 2026 aggiunte PG
+                    # 11 feb 2026 aggiunta and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.0207
+
+
+                elif (
+                    ma3_last > ma11_last
+
+                    and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.0207
+
+                    and delta_1_69_39 < delta_2_69_39
+                    and ma450_last < ma450_300_min_ago
+
+                    and deviation_buy_crollo_1 < -0.60
+                    and deviation_buy_crollo_1 > -2.00
+                    
+                    and ma78_last < ma200_last
+
+                    and deviation_ma39 < -0.50
+                    and deviation_ma3_sotto_ma50 < -0.60
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.60 
+                    and deviation_ma25_sotto_ma300 < -0.93 
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.13
+                    
+                    and macd_differenza_2_min_ago > -18.00
+                    
+                ):
+                    buy = f"BUY 3 importata da RCCR - AUDI CHE NON E' UN CROLLO ! con 3-18 con DOPPIO DELTA 69-39 GIORNO - r 6388 A1yb - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     action = "buy"
                     percentage = 90
                     
