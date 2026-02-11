@@ -43504,7 +43504,8 @@ class maddog:
                     and deviation_ma78_sotto_ma100 < -0.153
                     and deviation_ma50_sotto_ma100 < -0.25
                     and deviation_ma100_sotto_ma200 < -0.503 
-                    and deviation_ma39 0.186 and deviation_ma3_sotto_ma50 < 0.22 
+                    and deviation_ma39 < 0.19
+                    and deviation_ma3_sotto_ma50 < 0.23 
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.13
                     and deviation_ma25_sotto_ma300 < -1.30 
                     and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.12
@@ -43534,8 +43535,8 @@ class maddog:
                     # 13 dic 2025 tentando di anticipare ndecchiecella
 
                     # 11 FEB 2026 QUESTA CONDIZIONE che e' andata benissimo su  RCCR ANTICIPA LA SEGUENTE DOPO UN GRANDISSIMO E LUNGHISSIMO RIBASSO ! CON AGGIUNTA DI DEV GRAZIE ALLE PG
-
-
+                    # DA NOTARE and deviation_ma39 < 0.19 !
+                    # DA NOTARE and deviation_ma3_sotto_ma50 < 0.23 !
 
 
                 elif (
