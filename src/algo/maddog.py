@@ -68763,9 +68763,13 @@ class maddog:
                 # 26 gen 2026 and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.030 da < -0.017
 
 
+
+
             elif (
                 ma3_last < ma54_last
-                and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.0041
+
+                and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.0199
+                
                 and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > 0.0001
 
                 and ma50_last <= ma50_2_min_ago
@@ -68786,7 +68790,7 @@ class maddog:
                 action = "sell"
 
                 # 21 dic 2025 se deviation_ma100_sopra_o_sotto_ma100_10_min_ago > 0.0001 aggiunto and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.0041 grazie alle pg
-
+                # 11 FEB 2026 and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.0199 da < -0.0041
 
 
             elif (
