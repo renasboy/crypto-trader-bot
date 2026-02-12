@@ -69115,7 +69115,7 @@ class maddog:
 
             elif (
                 ma3_last < ma48_last
-                and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.025
+                and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.0252
 
                 and ma3_last < ma20_last
 
@@ -69141,7 +69141,7 @@ class maddog:
                 action = "sell"
 
                 # 11 feb 2026 tentando di anticipare il sell durante la discesa
-                # 12 feb 2025 and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.025 da < -0.0055
+                # 12 feb 2025 and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.0252 da < -0.0055
 
 
 
