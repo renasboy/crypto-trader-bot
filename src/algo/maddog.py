@@ -70331,23 +70331,17 @@ class maddog:
             elif (
                 seconds_since_last_trade > 0 and seconds_since_last_trade < 1800
                 and ma100_last < ma300_last
-
-                and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < 0.0033
-
-                and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.03
-                and (ma50_last < ma100_last or ma200_last < ma300_last)
-                and (ma300_last < ma300_301_min_ago or ma300_last < ma300_120_min_ago or ma78_last < ma78_120_min_ago)
-
-
+                
                 and (ma3_prev > ma20_prev and ma3_last < ma20_last)
                 and (ma3_prev > ma22_prev and ma3_last < ma22_last)
 
+                and deviation_sell > -0.15
+                and (deviation_ma39 < 0.068 or deviation_ma3_sotto_ma50 < 0.069 or ma50_last < ma50_60_min_ago)
+                and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < 0.0033
 
-                and ma50_last < ma50_60_min_ago
-
-                and deviation_ma39 < 0.068
-                and deviation_ma3_sotto_ma50 < 0.069
-                
+                and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.02
+                and (ma50_last < ma100_last or ma200_last < ma300_last)
+                and (ma300_last < ma300_301_min_ago or ma300_last < ma300_120_min_ago or ma78_last < ma78_120_min_ago)
 
                 and delta_CM_300_25_last > delta_CM_300_25_2_min_ago
                 
@@ -70389,7 +70383,7 @@ class maddog:
                 # 28 nov 2025 forse un domani potrai anche pensare di aggiungere and deviation_ma8_sopra_o_sotto_ma8_2_min_ago <= -0.001 
                 # 28 nov 2025 cioe' NON APPENA ma8 COMINCIA A CURVARE VERSO IL BASSO ! ma forse ma8 2 min arriva tardi
                 # 16 dic 2025 aggiunto and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < 0.0033 grazie alle pg
-
+                # 12 feb 2026 tentando di vendere con guadagno durante il forte ribasso (and deviation_sell > -0.15)
 
 
 
