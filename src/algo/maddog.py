@@ -60872,22 +60872,41 @@ class maddog:
                     
                     
                     
-                    elif (
-                        
+                    elif (   
                         ma50_last > ma50_2_min_ago
+
+                        and deviation_ma10_sopra_ma200 > 1.00
+                        and (ma4_prev > ma28_prev and ma4_last < ma28_last)
+                        and deviation_sell > 0.91 and deviation_sell < 1.30
+                        and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.0234
+                       
+                    ):
+                        sell = f"SELL 3 (21-60 min) con ma50 > and incrocio 4-33 and deviation_sell 0.91 - 1.20 CON 10-200 > 1.00 !- r 13609 A1 - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                        action = "sell"
+                        
+                        # deviation_sell = ma3_last/last_trade_price
+                        # 14 giu 2022 3-28 da 3-30
+                        # 18 nov 2022 4-33 da 3-30 ( ho aggiunto se 10-200 > 1.00 )
+                        # 12 feb 2026 aggiunte PG
+                        # 12 feb 2026 anticipata la vendita della condizione seguente imponendo deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.0234 grazie alle pg
+
+                    
+                    elif (    
+                        ma50_last > ma50_2_min_ago
+
                         and deviation_ma10_sopra_ma200 > 1.00
                         and (ma4_prev > ma33_prev and ma4_last < ma33_last)
                         and deviation_sell > 0.91 and deviation_sell < 1.20
                         and ma2_last < ma2_2_min_ago
                        
                     ):
-                        sell = "SELL 3 (21-60 min) con ma50 > and incrocio 4-33 and deviation_sell 0.91 - 1.20 CON 10-200 > 1.00 !- r 13609 A"
+                        sell = f"SELL 3 (21-60 min) con ma50 > and incrocio 4-33 and deviation_sell 0.91 - 1.20 CON 10-200 > 1.00 !- r 13609 A2 - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                         action = "sell"
                         
                         # deviation_sell = ma3_last/last_trade_price
                         # 14 giu 2022 3-28 da 3-30
                         # 18 nov 2022 4-33 da 3-30 ( ho aggiunto se 10-200 > 1.00 )
-
+                        # 12 feb 2026 aggiunte PG
 
 
                         
