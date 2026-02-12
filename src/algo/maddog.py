@@ -49144,7 +49144,23 @@ class maddog:
                         
                         
                     # --------------------------------------------------------------------------------- PARACADUTE crollo
-                    
+
+                    elif (
+                        ma50_last < ma50_2_min_ago
+
+                        and (ma3_prev > ma18_prev and ma3_last < ma18_last)
+                        and deviation_sell > 0.15
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = f"SELL 1 (12-21 min) eventuale guadagno con crollo con ma50 < and incrocio 3 - 18 and deviation_sell > 0.23 - r 8490 - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                        action = "sell"
+
+                        # 20 ott 2025 ok !
+                        # 20 ott 2025 aggiunte pg
+                        # 12 feb 2026 aggiunta questa 
+                        # 12 feb 2026 aggiunte PG
+
+
                     elif (
                         ma50_last < ma50_2_min_ago
                         and ma3_last < ma16_last
@@ -50605,6 +50621,24 @@ class maddog:
 
 
                     # -------------------------------------------------------------------------------------- guadagno durante il crollo LEGGERO
+
+                    elif (
+                        ma50_last < ma50_2_min_ago
+
+                        and (ma3_prev > ma18_prev and ma3_last < ma18_last)
+                        and deviation_sell > 0.15
+                        and ma2_last < ma2_2_min_ago
+                    ):
+                        sell = f"SELL 1 (21-50 min) eventuale guadagno con crollo con ma50 < and incrocio 3 - 18 and deviation_sell > 0.23 - r 9325 - deviation_ma39 {deviation_ma39:.3f} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                        action = "sell"
+
+                        # 20 ott 2025 ok !
+                        # 20 ott 2025 aggiunte pg
+                        # 12 feb 2026 aggiunta questa 
+
+
+
+
 
                     elif (
                         ma50_last < ma50_2_min_ago
