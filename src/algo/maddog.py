@@ -2204,7 +2204,8 @@ class maddog:
 
 
                 elif (  
-                    ma3_last > ma11_last
+                    ma3_last > ma10_last
+                    and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > 0.01
 
                     and ma450_last > ma450_360_min_ago 
 
@@ -2213,10 +2214,11 @@ class maddog:
                     and (deviation_ma78_sotto_ma100 < -0.014 or deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.022)
                     and (ma8_last < ma69_last or ma39_last < ma69_last or ma50_last < ma100_last or ma5_last > ma50_last)
 
-                    and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > 0.015
+                    
                     and deviation_ma39 < -0.22 
                     and deviation_ma3_sotto_ma50 < -0.37
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.90
+                    and deviation_ma50_sotto_ma100 < -0.55 
                     and deviation_ma25_sotto_ma300 < -1.49
 
                     and ma3_last > ma9_last
@@ -2235,8 +2237,8 @@ class maddog:
                     #  9 nov 2025 se cv notte
                     # 29 nov 2025 se (deviation_ma100_sopra_ma300 > -0.08 or deviation_ma100_sopra_o_sotto_ma100_10_min_ago > 0.015 or ma10_last > ma125_last) ok cosi'
                     #  8 dic 2025 condizioni generali in peggioramento aggiungo dev profonde
-
-
+                    # 12 feb 2026 and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > 0.01 da > 0.015
+                    # 12 feb aggiunta and deviation_ma50_sotto_ma100 < -0.55
 
 
 
