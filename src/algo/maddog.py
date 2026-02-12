@@ -4004,6 +4004,35 @@ class maddog:
 
 
                 elif (
+                    ma3_last > ma10_last
+
+                    and delta_1 <= delta_2
+                    
+                    and ma300_last > ma450_last
+                    and ma300_last >= ma300_60_min_ago
+                    and ma200_last >= ma200_120_min_ago
+
+                    and ma100_last < ma300_last
+
+                    and deviation_ma3_sotto_ma50 < -0.25
+
+                    and ma3_last > ma8_last
+                   
+                    and macd_differenza_2_min_ago > -18.50
+                ):   
+                    buy = "BUY 1 del 12 feb 2026 - GIORNO - SE ma200> 120 min con 3-50 < -0.03 - r 920 b1"
+                    action = "buy"
+                    percentage = 80
+
+                    # 22 feb 2025 aggiunta and ma300_last > ma450_last
+                    # 22 feb 2025 and delta_1 < delta_2
+                    # 23 mar 2025 and deviation_ma3_sotto_ma50 < -0.03
+                    #  3 apr 2025 se 100>300 and deviation_ma3_sotto_ma50 < -0.25
+                    # 12 FEB 2026 AGGIUNTA QUESTA DA UN BUY 5 DE RO CANO CHE RITORNA
+
+
+
+                elif (
                     ma3_last > ma13_last
 
                     and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > 0.02
@@ -4028,7 +4057,7 @@ class maddog:
                     and macd_differenza_2_min_ago > -18.00
                 ):    
               
-                    buy = f"BUY 1 con 300>450 ma ribasso improvviso e, FORSE, rialzo veloce - r 920 b - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    buy = f"BUY 1 con 300>450 ma ribasso improvviso e, FORSE, rialzo veloce - r 920 b2 - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     action = "buy"
                     percentage = 90
 
