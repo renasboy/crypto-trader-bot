@@ -73587,8 +73587,7 @@ class maddog:
                 ma3_last < ma13_last
                 and delta_CV_300_25_last > delta_CV_300_25_45_min_ago
                 
-                and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.039
-                
+                and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.0557
 
                 and (ma10_last < ma20_last or ma3_last < ma100_last)
                 and deviation_ma300_sopra_ma450 > -0.22
@@ -73619,7 +73618,7 @@ class maddog:
                 # 20 gen 2026 deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.039 da < -0.009 SONO TORNATO !
                 # 21 GEN 2026 HA FATTO -0.46% !
                 # 21 gen 2026 anticipata ndecchiecella
-
+                # 12 feb 2026 and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.0557 da < -0.039
 
 
             elif (    
