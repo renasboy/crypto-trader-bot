@@ -74147,8 +74147,13 @@ class maddog:
                 # 12 dic 2025 vedi deviation_ma8_sopra_o_sotto_ma8_2_min_ago
                 #  9 feb 2025 and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.012 da < -0.009
 
+
+
+
+
             elif (    
                 ma3_last < ma10_last
+                and (ma3_prev > ma8_prev and ma3_last < ma8_last)
 
                 and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.008
                 and (deviation_ma25_sotto_ma300 < -2.15 and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.23)
@@ -74172,7 +74177,7 @@ class maddog:
                 and deviation_ma5_sotto_ma450 < -0.30
                 
             ):
-                sell = f"SELL NCS con 3-10 e ma20 <= ma20 2 min ago e dev 3-39 < 0.10 e dev_sell < -0.019 and diff ma2 e diff macd - r 16047 A3 Y2 b2 x2 yyB - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                sell = f"SELL NCS con 3-10 e ma20 <= ma20 2 min ago e dev 3-39 < 0.10 e dev_sell < -0.019 and diff ma2 e diff macd - r 16047 A3 Y2 b2 x2 yyBx - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
 
                 # 16 ott 2025 anticipato ndecchiecella (ha fatto -0.50%)
@@ -74184,6 +74189,51 @@ class maddog:
                 # 12 dic 2025 aggiunte pg complete
                 # 12 dic 2025 come si deve comportare se (deviation_ma25_sotto_ma300 < -2.15 and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.23) ?
                 # 12 dic 2025 vedi deviation_ma8_sopra_o_sotto_ma8_2_min_ago
+                # 23 feb 2026 aggiunto incrocio al ribasso 3-8 (chiaro che non appena vedeva 3<10 vendeva)
+                # 23 feb 2026 questa considera incrocio al ribasso 3-8 (con deviation_ma8_sopra_o_sotto_ma8_2_min_ago piu' soft)
+
+
+
+            elif (    
+                ma3_last < ma10_last
+                
+                and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.0346    
+                and (deviation_ma25_sotto_ma300 < -2.15 and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.23)
+                and deviation_ma39 < 0.12
+                and deviation_sell < 0.018
+
+
+                and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.04
+                and delta_CM_300_25_last > delta_CM_300_25_2_min_ago 
+                and ma8_last <= ma8_2_min_ago
+
+
+                and (ma10_last < ma20_last or ma3_last < ma100_last)
+                and deviation_ma300_sopra_ma450 > -0.22
+
+                and deviation_ma50_sopra_o_sotto_ma300 < -0.50
+                and deviation_ma5_sopra_o_sotto_ma100 < -0.10
+                
+                and deviation_ma5_sopra_ma200 < -0.30
+                and deviation_ma5_sotto_ma300 < -0.30
+                and deviation_ma5_sotto_ma450 < -0.30
+                
+            ):
+                sell = f"SELL NCS con 3-10 e ma20 <= ma20 2 min ago e dev 3-39 < 0.10 e dev_sell < -0.019 and diff ma2 e diff macd - r 16047 A3 Y2 b2 x2 yyBy - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                action = "sell"
+
+                # 16 ott 2025 anticipato ndecchiecella (ha fatto -0.50%)
+                # 23 ott 2025 se ma8_last <= ma8_2_min_ago ok cosi'
+                # 23 ott 2025 aggiunte pg
+                # 31 ott 2025 sell con 3-10 da 3-8 se deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.04
+                # 31 ott 2025 and deviation_ma39 < -0.082 da and deviation_ma39 < 0.12
+                # 31 ott 2025 cm notte ok cosi'
+                # 12 dic 2025 aggiunte pg complete
+                # 12 dic 2025 come si deve comportare se (deviation_ma25_sotto_ma300 < -2.15 and deviation_ma100_sopra_o_sotto_ma100_10_min_ago < -0.23) ?
+                # 12 dic 2025 vedi deviation_ma8_sopra_o_sotto_ma8_2_min_ago
+                # 23 feb 2026 aggiunto incrocio al ribasso 3-8 (chiaro che non appena vedeva 3<10 vendeva)
+                # 23 feb 2026 and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.0346 da < -0.008 grazie alle pg
+                # 23 feb 2026 questa considera deviation_ma8_sopra_o_sotto_ma8_2_min_ago
 
 
 
