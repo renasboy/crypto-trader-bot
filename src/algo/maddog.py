@@ -44246,20 +44246,16 @@ class maddog:
 
                 elif (
                     ma3_last >= ma8_last
-                    and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > 0.013
-
+                    
+                    and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > 0.015
                     and ma8_last < ma8_5_min_ago
                    
-
                     and deviation_ma39 < -0.07 
                     and deviation_ma3_sotto_ma50 < -0.07
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.04
 
-                    
-
                     and (ma200_last >= ma200_120_min_ago or ma300_last >= ma300_60_min_ago or ma20_last > ma78_last)
                     
-
                     and (ma50_last >= ma100_last or delta_1_50_20 <= delta_2_50_20)
 
                     and (ma20_last >= ma40_last or delta_1_50_20 <= delta_2_50_20 or delta_1 <= delta_2 or delta_CM_300_25_last <= delta_CM_300_25_2_min_ago)
@@ -44287,6 +44283,9 @@ class maddog:
                     # 31 gen 2026 and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > 0.009 da 0.0045
                     #  4 feb 2026 MA SE ma8_last < ma8_5_min_ago AGGIUNGO PICCOLE DEV
                     #  4 feb 2026 and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > 0.013 da > 0.009
+                    # 23 feb 2026 and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > 0.015 da > 0.013
+
+
 
 
                 elif (
