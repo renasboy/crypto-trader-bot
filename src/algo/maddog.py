@@ -15773,7 +15773,8 @@ class maddog:
 
                 elif (
                     ma3_last > ma11_last
-                    and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.002
+                    
+                    and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > 0.0039
 
                     and ma300_last < ma300_120_min_ago
                     and deviation_ma39 < -0.10
@@ -15786,7 +15787,7 @@ class maddog:
                     and price > price_2_min_ago
                     
                 ):
-                    buy = f"BUY 2 rialzo con 78 > 200 - r 4639 A2y - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    buy = f"BUY 2 rialzo con 78 > 200 - r 4639 A2y - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     action = "buy"
                     percentage = 80
 
@@ -15798,6 +15799,8 @@ class maddog:
                     #  4 dic 2025 dev un poco piu' profonde
                     #  4 dic 2025 aggiunta and deviation_ma8_sopra_o_sotto_ma8_2_min_ago
                     # 22 gen 2026 aggiunta and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.002
+                    # 23 feb 2026 and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > 0.0039 da > -0.002
+                    # 23 feb 2026 aggiunte PG
 
 
                     
@@ -44195,13 +44198,13 @@ class maddog:
                     and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.009
 
                     and not (ma8_last < ma8_5_min_ago)
-                    and (ma200_last >= ma200_120_min_ago or ma300_last >= ma300_60_min_ago or ma20_last > ma78_last)
+                    and (ma200_last >= ma200_120_min_ago or ma300_last >= ma300_60_min_ago or ma10_last >= ma78_last)
                     
                     
 
                     and (ma5_last >= ma25_last or ma50_last >= ma100_last or delta_1_50_20 <= delta_2_50_20)
 
-                    and (ma10_last >= ma40_last or delta_1_50_20 <= delta_2_50_20 or delta_1 <= delta_2 or delta_CM_300_25_last <= delta_CM_300_25_2_min_ago)
+                    and (ma10_last >= ma30_last or delta_1_50_20 <= delta_2_50_20 or delta_1 <= delta_2 or delta_CM_300_25_last <= delta_CM_300_25_2_min_ago)
                     
                     and macd_differenza_2_min_ago > -18.50
                     
@@ -44214,7 +44217,7 @@ class maddog:
                     #  4 feb 2025 and not (ma8_last < ma8_5_min_ago)
                     # 13 feb 2026 5-25 da 8-25 per anticipare ma proprio di una ndecchiecella
                     # 13 feb 2026 10-40 da 20-40 per anticipare ma proprio di una ndecchiecella
-
+                    # 23 feb 2026 anticipata ma proprio di una ndecchiecella
 
 
 
@@ -44251,7 +44254,7 @@ class maddog:
                 elif (
                     ma3_last >= ma8_last
                     
-                    and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > 0.015
+                    and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > 0.0155
                     and ma8_last < ma8_5_min_ago
                    
                     and deviation_ma39 < -0.07 
@@ -44288,7 +44291,7 @@ class maddog:
                     #  4 feb 2026 MA SE ma8_last < ma8_5_min_ago AGGIUNGO PICCOLE DEV
                     #  4 feb 2026 and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > 0.013 da > 0.009
                     # 23 feb 2026 and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > 0.015 da > 0.013
-
+                    # 23 feb 2026 and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > 0.0155 da > 0.015
 
 
 
@@ -74271,11 +74274,13 @@ class maddog:
                 # 17 feb 2025 deviation_ma300_sopra_ma450 < -0.22 significa che siamo in presenza di un forte ribasso
 
 
-
             elif (   
                 ma3_last < ma18_last
-                
-                and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.0099
+                and ma8_last > ma20_last
+
+
+                and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.012
+                                                             
 
                 and deviation_ma300_sopra_ma450 < -0.20
                 and (ma28_last < ma100_last or ma20_last <= ma20_2_min_ago or ma50_last < ma50_2_min_ago)
@@ -74295,7 +74300,7 @@ class maddog:
                 and macd < 20
                 and macd_differenza_2_min_ago < -1.30
             ):
-                sell = f"SELL NCS con ma20 <= ma20 2 min ago e dev 3-39 < 0.10 e dev_sell < -0.019 and diff ma2 e diff macd - r 16047 A3 Y2 b2 Y2 - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                sell = f"SELL NCS con ma20 <= ma20 2 min ago e dev 3-39 < 0.10 e dev_sell < -0.019 and diff ma2 e diff macd - r 16047 A3 Y2 b2 Y2 x - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
                 
                 # 30 nov 2023 dev 39 a 0.10 da 0.03
@@ -74312,7 +74317,54 @@ class maddog:
                 # 31 gen 2026 aggiunta and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.0099
                 # 31 gen 2026 aggiunte PG
                 #  9 feb 2026 ha fatto -0.67% e ho anticipato ndecchiecella ma diciamo pure ndecchia
+                # 23 feb 2026 se 8 e' andato sopra 20  dadeviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.012 da < -0.0099 
+                # 23 feb 2026 ( vedi che la pg mi dava deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.0244 ma ho paura.) (preferisco anticipare di una ndecchiecella il buy precedente)
 
+
+
+            elif (   
+                ma3_last < ma18_last
+                and ma8_last < ma20_last
+
+                and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.0099
+                
+
+                and deviation_ma300_sopra_ma450 < -0.20
+                and (ma28_last < ma100_last or ma20_last <= ma20_2_min_ago or ma50_last < ma50_2_min_ago)
+
+                and deviation_ma50_sopra_o_sotto_ma300 < -0.30
+                and deviation_ma5_sopra_o_sotto_ma100 < -0.05
+                
+                and deviation_ma39 < 0.12
+                and deviation_sell < -0.019
+                
+                and deviation_ma5_sopra_ma200 < -0.30
+                and deviation_ma5_sotto_ma300 < -0.30
+                and deviation_ma5_sotto_ma450 < -0.30
+                
+                and ma2_last < ma2_2_min_ago 
+                
+                and macd < 20
+                and macd_differenza_2_min_ago < -1.30
+            ):
+                sell = f"SELL NCS con ma20 <= ma20 2 min ago e dev 3-39 < 0.10 e dev_sell < -0.019 and diff ma2 e diff macd - r 16047 A3 Y2 b2 Y2 y - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                action = "sell"
+                
+                # 30 nov 2023 dev 39 a 0.10 da 0.03
+                # 30 nov 2023 dev sell a -0.05 da -0.14
+                #  5 dic 2023 dev sell a 0.05 da -0.05
+                # MINGHIA il 26 dic ha fatto -0.73 ! e ho fatto delle modifiche meravigliose
+                # 29 dic 2023 macd a 13 da 7
+                #  7 mar 2024 dev sell a -0.017 da -0.01
+                #  3 ott 2024 and deviation_ma39 < 0.12 da 0.10
+                #  3 ott 2024 and deviation_sell < -0.015 da -0.017
+                #  3 ott 2024 anticipata vendita (ha fatto -0.62)
+                #  5 nov 2024 se deviation_ma50_sopra_o_sotto_ma300 < -0.70 sta crollando e cerca di stare calmo !
+                # 21 ott 2025 aggiunte pg
+                # 31 gen 2026 aggiunta and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.0099
+                # 31 gen 2026 aggiunte PG
+                #  9 feb 2026 ha fatto -0.67% e ho anticipato ndecchiecella ma diciamo pure ndecchia
+                # 23 feb 2026 se 8 sta sotto 20 ok cosi'
 
 
 
