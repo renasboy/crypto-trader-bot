@@ -65462,37 +65462,39 @@ class maddog:
                     elif (
                         ma50_last > ma50_2_min_ago
                         
-                        and (ma3_prev > ma11_prev and ma3_last < ma11_last)
+                        and (ma3_prev > ma13_prev and ma3_last < ma13_last)
                         and deviation_sell > 3.00
                         and deviation_ma39 > 1.80
 
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 4-5-x (21-60 min) con ma50 > and incrocio 3-11 and deviation_sell > 3.00 and 3-39 > 1.80 - r 15261"
+                        sell = f"SELL 4-5-x (21-60 min) con ma50 > and incrocio 3-11 and deviation_sell > 3.00 and 3-39 > 1.80 - r 15261 - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                         action = "sell"
 
                         #  8 apr 2025 ok cosi' potrai in futuro pensare a 3-39 > 2.00 and dev sell > 3.00 con 3-11
                         #  8 apr 2025 fatto ! male che va VENDE SOPRA IL 3%
-
+                        # 25 feb 2026 sell con 3-13 da 3-11
+                        # 25 feb 2026 aggiungo PG
                         
 
                     elif (
                         ma50_last > ma50_2_min_ago
-                        
+                        and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.01345
+
                         and (ma3_prev > ma13_prev and ma3_last < ma13_last)
                         and deviation_sell > 2.71
                         and ma2_last < ma2_2_min_ago
                     ):
-                        sell = "SELL 4-5-x (21-60 min) con ma50 > and incrocio 3-13 and deviation_sell > 2.71 - r 15262"
+                        sell = f"SELL 4-5-x (21-60 min) con ma50 > and incrocio 3-13 and deviation_sell > 2.71 - r 15262 - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                         action = "sell"
 
                         #  8 apr 2025 ok cosi' 
-
-
-                        
+                        # 25 feb 2026 aggiungo PG
+                        # 25 feb 2026 aggiungo and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.01345
+                        # 25 feb 2026 sell con 3-15 da 3-13
 
                     
-                    ################################################################################################# con trend discendente
+                    
                     
                     
                     elif (
