@@ -74482,8 +74482,7 @@ class maddog:
             elif (    
                 ma3_last < ma10_last
 
-                and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.012
-
+                and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.01345
                 and (deviation_ma25_sotto_ma300 > -2.15 and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.23)
                 and deviation_ma39 < 0.12
                 and deviation_sell < 0.016
@@ -74516,7 +74515,7 @@ class maddog:
                 # 12 dic 2025 aggiunte pg complete
                 # 12 dic 2025 vedi deviation_ma8_sopra_o_sotto_ma8_2_min_ago
                 #  9 feb 2025 and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.012 da < -0.009
-
+                # 25 feb 2025 and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.01345 da < -0.012
 
 
 
